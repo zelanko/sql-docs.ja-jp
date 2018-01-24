@@ -24,13 +24,13 @@ ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 caps.latest.revision: "50"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 61c067e2ece8cc222a281e48ebfa9026c48f9ae9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 93d9b6b359098577dfec9f7ba02b3c0e4d0de46d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッション中の役割の交代 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] データベース ミラーリング セッションでは、"*役割の交代*" という処理により、一般的にプリンシパルとミラーの役割を相互交換できます。 役割の交代では、ミラー サーバーはプリンシパル サーバーに対する *フェールオーバー パートナー* として機能します。プリンシパルの役割を引き継ぎ、サーバー内のデータベースのコピーを復旧し、それを新しいプリンシパル データベースとしてオンラインにします。 以前のプリンシパル サーバーは利用可能であればミラーの役割を担い、サーバー内のデータベースを新しいミラー データベースにします。 場合によっては、複数のエラーに対する対応として、または管理目的のために、役割を何度も交代できます。  
@@ -73,9 +73,9 @@ ms.lasthandoff: 11/20/2017
   
 ||高パフォーマンス|ミラーリング監視サーバーを伴わない高い安全性モード|ミラーリング監視サーバーを伴う高い安全性モード|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|自動フェールオーバー|いいえ|いいえ|はい|  
-|手動フェールオーバー|いいえ|はい|はい|  
-|サービスの強制|はい|可|いいえ|  
+|自動フェールオーバー (automatic failover)|いいえ|いいえ|はい|  
+|手動フェールオーバー (manual failover)|いいえ|はい|はい|  
+|サービスの強制|はい|はい|いいえ|  
   
  役割の交代後、すべてのデータベース ユーザーが新しいプリンシパル データベースにアクセスできるようにするには、特定のメタデータが両方のパートナーに存在する必要があります。 また、データベースが定期的にバックアップされ続けるようにするには、新しいプリンシパル サーバーでバックアップ ジョブを作成する必要があります。 詳細については、「[役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)」を参照してください。  
   

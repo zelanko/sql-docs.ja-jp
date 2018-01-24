@@ -19,13 +19,13 @@ ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d59c828615b0bb21b1f8661b030368fcc3c64ee4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 734a0e6e42282eed62416cc0d360b6d7bc53f6a7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-a-solution"></a>ソリューションを削除する
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] ソリューションを完全に削除すると、ソリューションのファイル項目だけでなく、物理的な記憶域のファイルも完全に消去されます。  

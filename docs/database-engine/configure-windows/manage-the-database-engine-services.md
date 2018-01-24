@@ -27,15 +27,15 @@ helpviewer_keywords:
 - SQL Server services
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 77501642cb7f3cf7067d8ea51bcb5a7beed9eaa0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5de386c4e2e8525205078627bb2d3e50e0beddd3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-the-database-engine-services"></a>データベース エンジン サービスの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、オペレーティング システム上でサービスとして動作します。 サービスとは、システムのバックグラウンドで実行されるアプリケーションの一種です。 通常は、Web サーバー、イベント ログ、ファイル サーバーなど、オペレーティング システムの中核的な機能をサービスによって提供します。 サービスは、コンピューターのデスクトップにユーザー インターフェイスを表示することなく実行できます。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント、およびその他のいくつかの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントはサービスとして実行されます。 これらのサービスは、オペレーティング システムの起動時に開始されるのが一般的です。 起動時のサービスの状態は、セットアップ中に行った指定に依存します。一部のサービスは既定では開始されません。 ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各種サービスの管理について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスにログインする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを開始、停止、一時停止、再開、および再起動する方法を知っておく必要があります。 ログイン後には、サーバーの管理やデータベースに対するクエリなどのタスクを実行することができます。  

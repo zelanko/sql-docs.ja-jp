@@ -26,15 +26,15 @@ helpviewer_keywords:
 - transactional replication, subscribing
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4613a7ee6306ba86b5748377f20c1cf48117815
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8f88fca63abe24ce7093d628062c4ae90b40733
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscribe-to-publications"></a>パブリケーションのサブスクライブ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] サブスクリプションとは、パブリケーションのデータとデータベース オブジェクトのコピーを要求することです。 サブスクリプションでは、受信するパブリケーションおよびパブリケーションの受信場所と受信時間が定義されます。 サブスクリプションを設計する場合は、エージェント処理を実行する場所を考慮してください。 選択するサブスクリプションの種類によって、エージェントが実行される場所が決まります。 プッシュ サブスクリプションではマージ エージェントまたはディストリビューション エージェントがディストリビューターで実行されるのに対し、プル サブスクリプションではサブスクライバーでエージェントが実行されます。 サブスクリプションの作成後にその種類を変更することはできません。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="merge-replication-subscription-types"></a>マージ レプリケーション サブスクリプションの種類  
  すべての種類のレプリケーションでプッシュ サブスクリプションとプル サブスクリプションが使用できます。 マージ レプリケーションでは、2 つのサブスクリプションを区別するために、クライアント サブスクリプションとサーバー サブスクリプションという語を使用します。 クライアント サブスクリプションとサーバー サブスクリプションのどちらの種類も、プッシュ サブスクリプションとプル サブスクリプションで使用できます。 クライアント サブスクリプションはほとんどのサブスクライバーに適していますが、サーバー サブスクリプションは通常、データを他のサブスクライバーに再パブリッシュするサブスクライバーで使用されます。 サブスクリプションの選択は、競合の解決にも影響します。  
   
-## <a name="non-sql-server-subscribers"></a>SQL Server 以外のサブスクライバー  
+## <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
  Oracle および IBM DB2 は、プッシュ サブスクリプションを使用してスナップショット パブリケーションとトランザクション パブリケーションをサブスクライブできます。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。  
   
 ## <a name="creating-subscriptions"></a>サブスクリプションの作成  
@@ -96,6 +96,6 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>参照  
  [サブスクライバーのセキュリティ保護](../../relational-databases/replication/security/secure-the-subscriber.md)   
- [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
+ [サブスクリプションの有効期限と非アクティブ化](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   

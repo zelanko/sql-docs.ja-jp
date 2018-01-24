@@ -16,13 +16,13 @@ ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43ecb337ed0e54282b7347287481fd4ce7a84f5a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 247af1bcdb8e3d3293792fb52a5d0e8149ce6ccc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-2---subscribe-to-and-check-the-finance-name-policy"></a>レッスン 2-2 - Finance の名前ポリシーのサブスクライブおよび確認
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ここでは、Finance データベースを構成し、Finance ポリシー カテゴリをサブスクライブします。 その後で、Finance の名前ポリシーをテストします。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] これで Finance カテゴリがすべてのデータベースに適用されるようになります。ただし、作成した条件により、Finance の名前ポリシーは Finance データベースにのみ適用されることになります。 これは、条件を複雑に組み合わせることで、多数のサーバーに対して適切な方法でポリシーを適用できるということを示しています。  
   
-## <a name="summary"></a>概要  
+## <a name="summary"></a>[概要]  
 このチュートリアルでは、ポリシー ベースの管理の条件、ポリシー、およびポリシー グループを作成する方法と、フィルターを適用してポリシー ベースの管理対象がポリシーに準拠しているかどうかを調べる方法について学習しました。  
   
 ## <a name="next"></a>Next  

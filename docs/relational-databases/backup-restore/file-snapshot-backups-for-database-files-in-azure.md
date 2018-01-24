@@ -15,15 +15,15 @@ ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6546a08f4d45f8104a752ed8ba578b3b82f97be9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8970c703cc7b2af93cb29466f0b06c3d83cc1f56
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure でのデータベース ファイルのファイル スナップショット バックアップ
+# <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure でのデータベース ファイルのスナップショット バックアップ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイル スナップショット バックアップは、Azure BLOB ストレージ サービスを使用して格納したデータベース ファイルを、Azure スナップショットを使用してほぼ瞬時にバックアップし、迅速に復元できます。 この機能により、バックアップと復元のポリシーを簡素化することができます。 ライブ デモについては、 [特定の時点での復元に関するデモ](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)を参照してください。 Azure BLOB ストレージ サービスを使用してデータベース ファイルを格納する方法の詳細については、「 [Microsoft Azure 内の SQL Server データ ファイル](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)」を参照してください。  
   
  ![スナップショット バックアップのアーキテクチャの図](../../relational-databases/backup-restore/media/snapshotbackups.PNG "スナップショット バックアップのアーキテクチャの図")  

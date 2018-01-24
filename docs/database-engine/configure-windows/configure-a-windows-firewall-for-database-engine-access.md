@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7058a9dc394b10c5b938d1a7d827fd2aaa4459d9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 49a59b9225ffff183e537025de7f503ba58429d6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **データベース エンジン アクセスのための Windows ファイアウォールを構成する方法:**  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  **[規則の種類]** ダイアログ ボックスで、 **[ポート]**をクリックし、 **[次へ]**をクリックします。  
   
-4.  **[プロトコルおよびポート]** ダイアログ ボックスで、 **[TCP]**をクリックします。 **[特定のローカル ポート]**をクリックし、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスのポート番号を入力します。たとえば、既定のインスタンスの場合は「 **1433** 」と入力します。 **[次へ]**をクリックします。  
+4.  **[プロトコルおよびポート]** ダイアログ ボックスで、 **[TCP]**をクリックします。 **[特定のローカル ポート]**をクリックし、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスのポート番号を入力します。たとえば、既定のインスタンスの場合は「 **1433** 」と入力します。 **[次へ]** をクリックします。  
   
 5.  **[操作]** ダイアログ ボックスで、 **[接続を許可する]**をクリックし、 **[次へ]**をクリックします。  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  **[規則の種類]** ダイアログ ボックスで、 **[プログラム]**をクリックし、 **[次へ]**をクリックします。  
   
-4.  **[プログラム]** ダイアログ ボックスで、 **[このプログラムのパス]**をクリックします。 **[参照]**をクリックし、ファイアウォール経由でアクセスする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに移動して、 **[開く]**をクリックします。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**にあります。 **[次へ]**をクリックします。  
+4.  **[プログラム]** ダイアログ ボックスで、 **[このプログラムのパス]**をクリックします。 **[参照]**をクリックし、ファイアウォール経由でアクセスする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに移動して、 **[開く]**をクリックします。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**にあります。 **[次へ]** をクリックします。  
   
 5.  **[操作]** ダイアログ ボックスで、 **[接続を許可する]**をクリックし、 **[次へ]**をクリックします。  
   

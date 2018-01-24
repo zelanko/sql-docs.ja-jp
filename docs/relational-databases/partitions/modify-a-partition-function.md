@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4e8ba40ef0b4c224620a1d01f27bd712403c118
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: b2466c376c36403ec9f529e6dfb6b9242c10a7a3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modify-a-partition-function"></a>パーティション関数の変更
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してパーティション テーブルまたはパーティション インデックスのパーティション関数で、指定するパーティションの数を 1 つずつ増減させることにより、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でのテーブルまたはインデックスのパーティション分割方法を変更できます。 パーティションを追加するには、既存のパーティションを 2 つのパーティションに分割し、新しいパーティションの境界を再定義します。 パーティションを削除するには、2 つのパーティションの境界を 1 つのパーティションにマージします。 この最後の操作により、1 つのパーティションが再作成され、もう 1 つのパーティションは未割り当てのままになります。  

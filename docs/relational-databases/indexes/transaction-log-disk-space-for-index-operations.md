@@ -19,15 +19,15 @@ helpviewer_keywords:
 - space [SQL Server], transaction logs
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9b1a0e72a794e702428cbadc9a813cca17447c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 964e94f9eed81eabd86cf56c781ae1defde0303b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>インデックス操作用のトランザクション ログのディスク領域
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 大規模なインデックス操作では、大量のデータが読み込まれるためにトランザクション ログがすぐにいっぱいになることがあります。 インデックス操作を確実にロールバックできるようにするには、インデックス操作が完了するまでトランザクション ログを切り捨てることができません。ただし、インデックス操作中にログをバックアップすることはできます。 このため、トランザクション ログには、インデックス操作中のインデックス操作によるトランザクションと同時実行ユーザーによるトランザクションの両方を格納できるだけの十分な空き領域が必要です。 これは、インデックス操作がオフラインでもオンラインでも同じです。 オフライン インデックス操作中は基になるテーブルにアクセスできないので、ユーザー トランザクションはそれほど多くなく、ログの増大もそれほど速くない可能性があります。 オンライン インデックス操作では同時実行ユーザーによる操作を防ぐことができないので、大規模なオンライン インデックス操作で同時実行ユーザーによる膨大なトランザクションが発生すると、ログの切り捨てオプションが使用されずに、トランザクション ログが増大し続けることがあります。  

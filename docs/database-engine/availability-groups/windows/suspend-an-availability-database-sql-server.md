@@ -21,13 +21,13 @@ ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 caps.latest.revision: "51"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a6db5b2ab4f3992b286eb2b0faff37e3d91d4381
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1ca99d049a5df8788c220a2a582539426c6488f0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>可用性データベースの中断 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の可用性データベースを中断できます。 中断コマンドは、中断または再開するデータベースをホストするサーバー インスタンス上で実行する必要があります。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
      [推奨事項](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **データベースを中断するために使用するもの:**  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  SUSPEND コマンドは、対象のデータベースをホストするレプリカによって受け付けられるとすぐに戻りますが、実際にはデータベースの中断が非同期に行われます。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  データベースに対する ALTER 権限が必要です。  
   
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  オブジェクト エクスプローラーで、データベースを中断する可用性レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。 詳細については、このトピックの「 [前提条件](#Prerequisites)」をご覧ください。  
   
-2.  **[Always On 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
+2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
 3.  可用性グループを展開します。  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 11/20/2017
 -   [可用性データベースの再開 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性データベースの再開 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   
   

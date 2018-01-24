@@ -22,13 +22,13 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b605fdc999d3b0bb8937428e7b158322d182d839
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dd664120017d7e498fd2930281380c718e98aaa9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>フェールオーバー クラスタリングと Always On 可用性グループ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="cross-cluster-migration-of-always-on-availability-groups-for-os-upgrade"></a>OS アップグレードのための Always On 可用性グループのクラスター間での移行  
  [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)]から、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] では、新しい Windows Server フェールオーバー クラスタリング (WSFC) クラスターに配置するために行う可用性グループのクラスター間での移行が新たにサポートされています。 クラスター間の移行では、ダウンタイムを最小限に抑えながら、1 つの可用性グループを (または複数の可用性グループを一括して) 新しい移行先 WSFC クラスターに移行します。 クラスター間の移行プロセスを使用すると、 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] クラスターへのアップグレード時にサービス レベル契約 (SLA) を維持できます。 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 移行先の WSFC クラスターに、(またはそれ以降のバージョン) をインストールし、Always On 用に有効にする必要があります。 クラスター間での移行を成功させるには、移行先 WSFC クラスターを綿密に計画し、準備することが必要です。  
   
- 詳細については、「 [OS アップグレードのための Always On 可用性グループのクラスター間での移行](http://msdn.microsoft.com/library/jj873730.aspx)」を参照してください。  
+ 詳細については、「 [OS アップグレードのための AlwaysOn 可用性グループのクラスター間での移行](http://msdn.microsoft.com/library/jj873730.aspx)」を参照してください。  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) と可用性グループ  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスタリングを WSFC クラスターと共に実装することにより、サーバー インスタンス レベルで第 2 のフェールオーバー レイヤーをセットアップできます。 可用性レプリカは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスまたは FCI インスタンスでホストできます。 特定の可用性グループのレプリカをホストできる FCI パートナーは 1 つに限られます。 可用性レプリカが FCI で実行されている場合、可用性グループの有効な所有者の一覧には、アクティブな FCI ノードだけが含まれます。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/20/2017
 ||FCI 内のノード|可用性グループ内のレプリカ|  
 |-|-------------------------|-------------------------------------------|  
 |**WSFC クラスターを使用する**|はい|はい|  
-|**保護レベル**|インスタンス|データベース|  
+|**保護レベル**|Instance|[データベース]|  
 |**ストレージの種類**|Shared|非共有<br /><br /> 可用性グループ内のレプリカがストレージを共有しない一方、FCI によってホストされるレプリカは、FCI によって必要とされたときに共有ストレージ ソリューションを使用します。 ストレージ ソリューションは、可用性グループのレプリカ間ではなく、FCI 内のノードでのみ共有されます。|  
 |**ストレージ ソリューション**|直接接続、SAN、マウント ポイント、SMB|ノードの種類によって異なる|  
 |**読み取り可能なセカンダリ**|なし*|はい|  

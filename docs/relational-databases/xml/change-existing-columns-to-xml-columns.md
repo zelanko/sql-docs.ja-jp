@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: tables [XML]
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1773816e8d536415d83a09afc0995f46ceb0b17a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6ad32b6c56b01be8b31d6be358faf158248b3fa4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>既存の列を XML 列に変更する方法
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] **xml** データ型は ALTER TABLE ステートメントでサポートされています。 たとえば、文字列型の列を **xml** データ型に変更できます。 このような場合、列に格納されるドキュメントは正しい形式でなければなりません。 また、列の型を文字列から型指定された xml に変更する場合、列内のドキュメントは指定した XSD スキーマに対して検証されます。  
@@ -38,7 +38,7 @@ ALTER COLUMN Col2 xml
 GO  
 ```  
   
- `xml` 型の列は、型指定されていない XML から型指定された XML に変更できます。 例:  
+ `xml` 型の列は、型指定されていない XML から型指定された XML に変更できます。 例 :  
   
 ```  
 CREATE TABLE T (Col1 int primary key, Col2 xml)  

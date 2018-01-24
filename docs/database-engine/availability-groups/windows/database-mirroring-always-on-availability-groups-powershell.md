@@ -19,13 +19,13 @@ ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 caps.latest.revision: "9"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b2c400a14396baa167a412b0f34aeed185826ea
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ce4947edb16c35414de9fe537e359856f3fc8ccb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring---always-on-availability-groups--powershell"></a>データベース ミラーリング - AlwaysOn 可用性グループ- PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ ms.lasthandoff: 11/20/2017
 > [!IMPORTANT]  
 >  RC4 アルゴリズムは推奨されません。 [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。  
   
-####  <a name="Permissions"></a> アクセス許可  
- CREATE ENDPOINT 権限、または sysadmin 固定サーバー ロールのメンバーシップが必要です。 詳細については、「[GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
+####  <a name="Permissions"></a> Permissions  
+ CREATE ENDPOINT 権限、または sysadmin 固定サーバー ロールのメンバーシップが必要です。 詳細については、「 [GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
  **データベース ミラーリング エンドポイントを作成するには**  

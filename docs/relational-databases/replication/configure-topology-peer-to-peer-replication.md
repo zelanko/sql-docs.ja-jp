@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc8f91a4da3bfa31f6eab0bcb492e16c9bccba0d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba3f308aaa3e5eea99a7cae23630c8462414a1fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>[トポロジの構成] (ピア ツー ピア レプリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[トポロジの構成]** ページを使用すると、新しいノードの追加、ノードの削除、既存のノード間の新しい接続の追加など、一般的な構成タスクを実行できます。 このウィザードの **[パブリケーション]** ページで選択したノードがデザイン画面に表示されます。 構成オプションを指定するには、ノード、接続、またはデザイン画面を右クリックします。  
@@ -30,10 +30,10 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  ピア ツー ピア トポロジ構成ウィザードでは、ウィザードの終了時にトポロジ情報が要求されます。 すべてのノードが情報の要求に応答する前にウィザードを閉じて再度開くと、ウィザードに不完全なネットワークが表示される場合があります。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[トポロジの構成]** ページには、要素を右クリックすると表示されるインターフェイス要素およびオプションがあります。 次の表では、各インターフェイス要素を説明します。  
   
-|インターフェイス要素|説明|  
+|インターフェイス要素|Description|  
 |-----------------------|-----------------|  
 |デザイン画面|その他のインターフェイス要素を表示します。 要素を追加するには、デザイン画面を右クリックします。|  
 |![トポロジ内の最初のノード](../../relational-databases/replication/media/p2pwizard-firstnode.gif "トポロジ内の最初のノード")|トポロジの元のノード。 元のノードのパブリケーション データベースのコピーを使用して、新しいノードが初期化されます。|  
@@ -88,6 +88,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>参照  
  [パブリッシングとディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [ピア ツー ピア トポロジの管理 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [@loopback_detection](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

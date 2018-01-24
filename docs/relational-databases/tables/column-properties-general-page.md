@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.columnproperties.general.f1
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 141f7fb3b0645ccc32fbee78fa40c403afad5726
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3087497e8c3757002bc6b80556499ad7c096d51c
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="column-properties-general-page"></a>[列のプロパティ] \([全般] ページ)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -31,11 +31,11 @@ ms.lasthandoff: 11/17/2017
   
  このページの情報は読み取り専用です。 列を変更するには、 **[列のプロパティ]** ダイアログ ボックスを閉じて、オブジェクト エクスプローラーでそのテーブルを展開して [列] を展開します。次に、列を右クリックして、 **[デザイン]**をクリックします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **名前**  
  列の名前です。  
   
- **データ型**  
+ **[データ型]**  
  列が保持できるデータ型です。 データ型がユーザー定義データ型である場合は、ユーザー定義データ型が表示されます。 データ型がユーザー定義データ型でない場合は、システム データ型が表示されます。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
   
  **[システム型]**  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
  **[ルール スキーマ]**  
  参照される列にバインドされたルールを所有する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース スキーマを表示します。 ルールがバインドされていない場合、このオプションは空白になります。  
   
- **長さ**  
+ **[データ型]**  
  列によって許容される文字またはバイトの最大数を示します。  
   
  **[照合順序]**  

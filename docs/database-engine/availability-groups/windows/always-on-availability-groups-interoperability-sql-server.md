@@ -18,13 +18,13 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5b02338f5f8aaef958db4f7505341a7f13a8ce9f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: aa1bea69751b23b14c35a93f8e832f390f71e3a2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性グループの相互運用性 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 |機能|詳細情報|  
 |-------------|----------------------|  
 |変更データ キャプチャ|[レプリケーション、変更の追跡、変更データ キャプチャ、および Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)|  
-|変更の追跡|[レプリケーション、変更の追跡、変更データ キャプチャ、および Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)|  
+|変更の追跡|[レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)|  
 |包含データベース|[包含データベースと Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/contained-databases-with-always-on-availability-groups-sql-server.md)|  
 |データベース暗号化|[暗号化されたデータベースと Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/encrypted-databases-with-always-on-availability-groups-sql-server.md)|  
 |データベース スナップショット|[Always On 可用性グループを含むデータベース スナップショット &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)|  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
 |フルテキスト検索|注: フルテキスト インデックスは、Always On セカンダリ データベースと同期されます。|  
 |ログ配布|[ログ配布から Always On 可用性グループへの移行の前提条件 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)|  
 |リモート BLOB ストア (RBS)|[リモート BLOB ストア &#40;RBS&#41; と Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)|  
-|レプリケーション|[Always On 可用性グループ用のレプリケーションの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)<br /><br /> [Always On パブリケーション データベースのメンテナンス &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)<br /><br /> [レプリケーション、変更の追跡、変更データ キャプチャ、および Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)<br /><br /> [レプリケーション サブスクライバーと Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)|  
+|のレプリケーション|[Always On 可用性グループ用のレプリケーションの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)<br /><br /> [Always On パブリケーション データベースのメンテナンス &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)<br /><br /> [レプリケーション、変更の追跡、変更データ キャプチャ、および Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)<br /><br /> [レプリケーション サブスクライバーと Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)|  
 |Analysis Services|[Analysis Services と Always On 可用性グループ](../../../database-engine/availability-groups/windows/analysis-services-with-always-on-availability-groups.md)|  
 |Reporting Services|読み取り専用セカンダリ レプリカをレポート データ ソースとして使用し、読み取り/書き込み可能なプライマリ レプリカの負荷を軽減します。<br /><br /> [Reporting Services と Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)|  
 |Service Broker|[Service Broker と Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md)|  
@@ -65,13 +65,13 @@ ms.lasthandoff: 11/20/2017
   
 -   **ブログ:**  
   
-     [移行ガイド：以前のクラスタリングおよびミラーリングの展開によるSQL Server 2012フェールオーバークラスタリングおよび可用性グループへの移行](https://blogs.msdn.microsoft.com/sqlalwayson/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments/)  
+     [Migration Guide: Migrating to SQL Server 2012 Failover Clustering and Availability Groups from Prior Clustering and Mirroring Deployments](https://blogs.msdn.microsoft.com/sqlalwayson/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments/)  
   
      [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server エンジニアのブログ](http://blogs.msdn.com/b/psssql/)  
   
--   **ホワイトペーパー:**  
+-   **ホワイト ペーパー:**  
   
      [移行ガイド: 以前の配置の結合データベース ミラーリングとログ配布から Always On 可用性グループに移行する](http://msdn.microsoft.com/library/jj635217)  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/20/2017
      [SQL Server ユーザー諮問チームのホワイト ペーパー](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>参照  
- [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

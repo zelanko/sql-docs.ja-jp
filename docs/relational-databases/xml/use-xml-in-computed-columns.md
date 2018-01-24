@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 65a30335d23497b2af1d8a075d84873b565abe79
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 825a0a87683ec6913a6985804c6111af0543dc79
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-xml-in-computed-columns"></a>計算列での XML の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] XML インスタンスは、計算列のソースとして、または計算列の一種として使用できます。 このトピックでは、計算列で XML を使用する方法を示す例を紹介します。  
@@ -91,7 +91,7 @@ FROM T
   
 ### <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|説明|  
+|トピック|Description|  
 |-----------|-----------------|  
 |[計算列を使用した使用頻度の高い XML 値の昇格](../../relational-databases/xml/promote-frequently-used-xml-values-with-computed-columns.md)|計算列やプロパティ テーブルでプロパティの昇格を使用する方法について説明します。|  
   

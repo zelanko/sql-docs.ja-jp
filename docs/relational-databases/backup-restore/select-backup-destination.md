@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.selectbackupdest.f1
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddf5610c86220c08a17f6d830959623d9c80775d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08a629ac319f874312d6bb3878c721d783a5fe12
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="select-backup-destination"></a>[バックアップ先の選択]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  このダイアログ ボックスのオプションは、ディスクまたはテープのどちらをバックアップ先として選択しているかによって異なります。  
   
  **[ディスクのバックアップ先]**  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 |||  
 |-|-|  
-|**ファイル名**|ローカル ファイルまたはリモート ファイルをバックアップ先としてテキスト ボックスに入力するには、このオプションを選択します。<br /><br /> ローカル ファイルを指定するには、テキスト ボックスの右側にある参照ボタンをクリックし、サーバーを実行しているコンピューターの固定ディスク上のファイルに移動するか、完全なパスとファイル名を直接入力します (例 : `C:\Program Files\Microsoft SQL Server\MSSQL\Backup\AdventureWorksBackup.bak`)。<br /><br /> バックアップ先としてリモート ファイルを指定するには、完全修飾の汎用名前付け規則 (UNC) 名を入力します。 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md))。<br /><br /> <br /><br /> **\*\* 重要 \*\*** ネットワークを経由してデータをバックアップすると、ネットワーク エラーが発生する可能性があります。バックアップ終了後にバックアップ操作を確認することをお勧めします。 詳細については、「[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)」をご覧ください。|  
+|**[ファイル名]**|ローカル ファイルまたはリモート ファイルをバックアップ先としてテキスト ボックスに入力するには、このオプションを選択します。<br /><br /> ローカル ファイルを指定するには、テキスト ボックスの右側にある参照ボタンをクリックし、サーバーを実行しているコンピューターの固定ディスク上のファイルに移動するか、完全なパスとファイル名を直接入力します (例 : `C:\Program Files\Microsoft SQL Server\MSSQL\Backup\AdventureWorksBackup.bak`)。<br /><br /> バックアップ先としてリモート ファイルを指定するには、完全修飾の汎用名前付け規則 (UNC) 名を入力します。 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md))。<br /><br /> <br /><br /> **\*\* 重要 \*\*** ネットワークを経由してデータをバックアップすると、ネットワーク エラーが発生する可能性があります。バックアップ終了後にバックアップ操作を確認することをお勧めします。 詳細については、「[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)」をご覧ください。|  
 |**バックアップ デバイス**|論理バックアップ デバイスを選択するには、このオプションを選択します。<br /><br /> 注: ディスク バックアップ デバイスを作成する方法の詳細については、「[ディスク ファイルの論理バックアップ デバイスの定義 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)」を参照してください。|  
   
  **[テープのバックアップ先]**  

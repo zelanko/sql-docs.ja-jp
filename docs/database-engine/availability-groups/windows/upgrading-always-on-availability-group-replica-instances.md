@@ -15,15 +15,15 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 caps.latest.revision: "14"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 831e5b4aa94ed320440e81afdd5234aea1ee6109
-ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
+ms.openlocfilehash: 8a620eefb1d9c679083cdafb67dfba27f5414826
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="upgrading-always-on-availability-group-replica-instances"></a>Always On 可用性グループのレプリカ インスタンスのアップグレード
+# <a name="upgrading-always-on-availability-group-replica-instances"></a>AlwaysOn 可用性グループのレプリカ インスタンスのアップグレード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Always On 可用性グループ (AG) をホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを新しい [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] バージョン、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービス パックまたは累積更新プログラムにアップグレードしている場合、または新しい Windows サービス パックまたは累積更新プログラムにインストールしている場合、ローリング アップグレードを実行して、単一の手動フェールオーバー (または、元のプライマリにフェールバックする場合は、2 回の手動フェールオーバー) におけるプライマリ レプリカのダウンタイムを減らすことができます。 アップグレード プロセス中に、セカンダリ レプリカはフェールオーバーや読み取り専用操作を行うことができなくなります。また、アップグレード後は、プライマリ レプリカ ノード上のアクティビティ量に応じて、プライマリ レプリカ ノードを検出するセカンダリ レプリカの時間がかかる場合があります (そのため、高いネットワーク トラフィック量が予想されます)。  

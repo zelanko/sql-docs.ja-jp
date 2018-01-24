@@ -17,15 +17,15 @@ helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], without snapshots
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a167cafa6eb45198d27b48712c445eb36f6a75b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0c8e0d600647d81dde027bb053cfeabb83518ae7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>スナップショットを使用しないトランザクション サブスクリプションの初期化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] トランザクション パブリケーションへのサブスクリプションは、既定ではスナップショットを使用して初期化されます。このスナップショットはスナップショット エージェントによって生成され、ディストリビューション エージェントによって適用されます。 初期データセットが大規模な場合など、状況によっては、別の方法でサブスクリプションを初期化するのが望ましい場合があります。 サブスクライバーを初期化する他の方法としては、以下のものがあります。  

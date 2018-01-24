@@ -19,15 +19,15 @@ helpviewer_keywords:
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b6239b8e7ad2f4383eac1764a211880325eedf3c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e2f902b7afaadf936102b90c542d97d5450c7995
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>フィールド ターミネータと行ターミネータの指定 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 文字列データ フィールドでは、省略可能なターミネータ文字を使用して、データ ファイルの各フィールドの末尾 ("*フィールド ターミネータ*" を使用) と各行の末尾 ("*行ターミネータを使用*") を示すことができます。 ターミネータ文字は、フィールドや行の終了位置と次のフィールドや行の開始位置を、データ ファイルを読み取るプログラムに示す方法の 1 つです。  
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/17/2017
         >  **bcp** コマンドですべてのフィールドを対話形式で指定すると、各フィールドへの応答を XML 形式以外のファイルに保存するように要求するプロンプトが表示されます。 XML 以外のフォーマット ファイルの詳細については、「[XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)」を参照してください。  
   
 ### <a name="guidelines-for-using-terminators"></a>ターミネータ使用のガイドライン  
- 状況によっては、 **char** データ フィールドまたは **nchar** データ フィールドには、ターミネータが役に立つ場合があります。 例:  
+ 状況によっては、 **char** データ フィールドまたは **nchar** データ フィールドには、ターミネータが役に立つ場合があります。 例 :  
   
 -   プレフィックス長がわからないプログラムにインポートされるデータ ファイル内で NULL 値が含まれるデータ列。  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/17/2017
   
  **bcp** コマンドには、次のスイッチがあります。  
   
-|スイッチ|説明|  
+|スイッチ|Description|  
 |------------|-----------------|  
 |**-t**|データ フィールドが文字データとして読み込まれることを指定します。|  
 |**-t** `,`|コンマ (,) をフィールド ターミネータとして指定します。|  
@@ -131,7 +131,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      次の表に示す修飾子を使用して、フォーマット ファイル内の個別のフィールドまたはデータ ファイル全体にターミネータを指定できます。  
   
-    |Qualifier|説明|  
+    |Qualifier|Description|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***field_terminator***'**|文字データ ファイルや Unicode 文字データ ファイルに使用されるフィールド ターミネータを指定します。<br /><br /> 既定値は \t (タブ文字) です。|  
     |ROWTERMINATOR **='***row_terminator***'**|文字データ ファイルや Unicode 文字データ ファイルに使用される行ターミネータを指定します。<br /><br /> 既定値は \n (改行記号) です。|  
@@ -142,7 +142,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      OPENROWSET 一括行セット プロバイダーでは、ターミネータを指定できるのはフォーマット ファイルのみです (Large Object データ型を除き、これは必須です)。 文字データ ファイルで既定以外のターミネータが使用されている場合、フォーマット ファイルで定義する必要があります。 詳細については、「[フォーマット ファイルの作成 &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md) および [データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)」を参照してください。  
   
-     OPENROWSET BULK 句の詳細については、「[OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)」を参照してください。  
+     OPENROWSET BULK 句の詳細については、「 [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)を使用) を示すことができます。  
   
 ### <a name="examples"></a>使用例  
  この例では、前述の例で作成された `Department-c-t.txt` データ ファイルから、 `myDepartment` サンプル データベースの [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] テーブルに、文字データを一括インポートします。 このテーブルを作成しないと、例を実行できません。 **dbo** スキーマでこのテーブルを作成するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターで次のコードを実行します。  

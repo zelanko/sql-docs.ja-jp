@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72e1970bf68219376f3f2a9d16d03e133ec0832b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50e8f4fdae89572403ec8e5b7a5575b6ea61b132
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="how-query-store-collects-data"></a>クエリ ストアがデータを収集するしくみ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
  **ビューの説明**  
   
-|表示|説明|  
+|表示|Description|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|データベースに対して実行された一意のクエリ テキストを表示します。 クエリ テキストの前後のコメントとスペースは無視されます。 テキスト内のコメントとスペースは無視されません。 バッチ内のすべてのステートメントが、個別のクエリ テキスト エントリを生成します。|  
 |**sys.query_context_settings**|クエリが実行される設定に影響するプランの一意の組み合わせを表示します。 `context_settings_id` はクエリ キーの一部であるため、設定に影響する異なるプランで実行された同じクエリ テキストが、クエリ ストアでは個別のクエリ エントリを生成します。|  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
  ![query-store-process-2processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor")  
   
- I/O のオーバーヘッドを最小限に抑えるため、新しいデータはメモリ内にキャプチャされます。 書き込み操作はキューに登録され、その後、ディスクにフラッシュされます。 クエリとプランの情報 (下図のプラン ストア) は最小の待機時間でフラッシュされます。 `DATA_FLUSH_INTERVAL_SECONDS` ステートメントの `SET QUERY_STORE` オプションで定義された一定期間、ランタイム統計 (Runtime Stats) がメモリに保存されます。 SSMS Query Store (SSMS クエリ ストア) ダイアログ ボックスで  **データのフラッシュ間隔 (分)** を入力できます。これは秒に変換されます。  
+ I/O のオーバーヘッドを最小限に抑えるため、新しいデータはメモリ内にキャプチャされます。 書き込み操作はキューに登録され、その後、ディスクにフラッシュされます。 クエリとプランの情報 (下図のプラン ストア) は最小の待機時間でフラッシュされます。 `DATA_FLUSH_INTERVAL_SECONDS` ステートメントの `SET QUERY_STORE` オプションで定義された一定期間、ランタイム統計 (Runtime Stats) がメモリに保存されます。 [SSMS Query Store (SSMS クエリ ストア)] ダイアログ ボックスで **[データのフラッシュ間隔 (分)]** を入力できます。これは秒に変換されます。  
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   

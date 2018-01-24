@@ -16,15 +16,15 @@ helpviewer_keywords:
 - full recovery model [SQL Server], planning restore sequences
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aeaff84574eaa0f535596efe8c03b2b14b640ba1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: df70e2b5fce0983fa3501b6bd53376f75d10d900
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>復元シーケンスの計画と実行 (完全復旧モデル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  必要に応じて、これらの完全バックアップを基にした最新の差分バックアップを復元します。  
   
-     復元する各完全バックアップがいずれかの差分バックアップのベースであるかどうかを確認します。 その場合は、最新の差分バックアップを (復元できる場合は) 復元します。 詳細については、「[差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)」を参照してください。  
+     復元する各完全バックアップがいずれかの差分バックアップのベースであるかどうかを確認します。 その場合は、最新の差分バックアップを (復元できる場合は) 復元します。 詳細については、「 [差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)」を参照してください。  
   
 3.  ログ バックアップを順番に復元することによって、データベースをロールフォワードします。最後に復旧ポイントを含むログ バックアップを復元します。 すべてのログ バックアップを適用する必要があるかどうかは、どのログ バックアップに目的の復旧ポイントが含まれているかによって、次のように異なります。  
   

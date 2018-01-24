@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb7b93313a278db10ecffa7efd61e971b418868d
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: 49eb5705e77b8ebe69af42addd95d9d59abdb082
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modify-a-partition-scheme"></a>パーティション構成の変更
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でパーティション構成を変更するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、パーティション テーブルに追加される次のパーティションを保持するファイル グループを指定します。 この操作は、NEXT USED プロパティをファイル グループに割り当てることで実行できます。 NEXT USED プロパティは、空のファイル グループか、またはパーティションを既に保持しているファイル グループに割り当てることができます。 つまり、ファイル グループでは、複数のパーティションを保持することができます。  

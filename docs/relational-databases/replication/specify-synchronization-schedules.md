@@ -18,15 +18,15 @@ helpviewer_keywords:
 - replication [SQL Server], synchronization
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 678388534668972d3a1cd520c4f352c17a52f4ec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85455c6b48ed6670c4d93c7ebf07e55345de0a80
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-synchronization-schedules"></a>同期スケジュールの指定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、同期スケジュールを指定する方法について説明します。 サブスクリプションを作成するときに、サブスクリプションのレプリケーション エージェントをいつ実行するかを制御する同期スケジュールを定義できます。 スケジュール設定のパラメーターを指定しなかった場合、サブスクリプションは既定のスケジュールを使用します。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  サブスクリプションの新規作成ウィザードの **[同期スケジュール]** ページで同期スケジュールを指定します。 このウィザードへのアクセスの詳細については、「 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md) 」および「 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)」を参照してください。  
   
- **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスで同期スケジュールを変更します。このダイアログ ボックスは、 **の** [ジョブ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] フォルダーおよびレプリケーション モニターのエージェントの詳細ウィンドウから使用できます。 レプリケーション モニターの開始の詳細については、「[レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)」を参照してください。  
+ **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスで同期スケジュールを変更します。このダイアログ ボックスは、 **の** [ジョブ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] フォルダーおよびレプリケーション モニターのエージェントの詳細ウィンドウから使用できます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
  **[ジョブ]** フォルダーからスケジュールを指定する場合は、次の表でエージェントのジョブ名を確認してください。  
   
@@ -183,7 +183,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプル サブスクリプションの同期スケジュールを定義するには  
   
-1.  マージ パブリケーションに対して新しいプル サブスクリプションを作成します。 詳細については、「 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)」を参照してください。  
+1.  マージ パブリケーションに対して新しいプル サブスクリプションを作成します。 詳細については、「 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)」をご覧ください。  
   
 2.  サブスクライバーで、 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)を実行します。 **@publisher**、**@publisher_db**、**@publication**、およびサブスクライバーのマージ エージェントが **@job_name** と **@password** で実行するときの Windows 資格情報を指定します。 サブスクリプションを同期するマージ エージェント ジョブのスケジュールを定義する、上述の同期のパラメーターを指定します。  
   
@@ -232,7 +232,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-transactional-publication"></a>トランザクション パブリケーションに対するプル サブスクリプションを作成するレプリケーション エージェント スケジュールを定義するには  
   
-1.  作成するサブスクリプションに対して <xref:Microsoft.SqlServer.Replication.TransPullSubscription> クラスのインスタンスを作成します。 詳細については、「 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)」を参照してください。  
+1.  作成するサブスクリプションに対して <xref:Microsoft.SqlServer.Replication.TransPullSubscription> クラスのインスタンスを作成します。 詳細については、「 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)」をご覧ください。  
   
 2.  <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>を呼び出す前に、 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> プロパティの次のフィールドを 1 つ以上設定します。  
   
@@ -263,7 +263,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプル サブスクリプションを作成するレプリケーション エージェント スケジュールを定義するには  
   
-1.  作成するサブスクリプションに対して <xref:Microsoft.SqlServer.Replication.MergePullSubscription> クラスのインスタンスを作成します。 詳細については、「 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)」を参照してください。  
+1.  作成するサブスクリプションに対して <xref:Microsoft.SqlServer.Replication.MergePullSubscription> クラスのインスタンスを作成します。 詳細については、「 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)」をご覧ください。  
   
 2.  <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>を呼び出す前に、 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> プロパティの次のフィールドを 1 つ以上設定します。  
   
@@ -331,8 +331,8 @@ ms.lasthandoff: 11/17/2017
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション セキュリティの推奨事項](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [プッシュ サブスクリプションの同期](../../relational-databases/replication/synchronize-a-push-subscription.md)   
  [プル サブスクリプションの同期](../../relational-databases/replication/synchronize-a-pull-subscription.md)   
  [データの同期](../../relational-databases/replication/synchronize-data.md)  

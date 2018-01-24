@@ -20,13 +20,13 @@ ms.assetid: 541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee6f0fc99f3355dab6d1e2ad0508543f19e1505c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 703ca35dbe6059f3519d286c93926c7f63892a27
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>管理タスクの自動化 (SQL Server エージェント)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] では、管理タスクを自動化することができます。 管理を自動化するには、予想される管理タスクを明確にして、それぞれのタスクが発生する条件を指定します。 定型的なタスクやイベントを自動管理によって処理することで、ユーザーは他の管理業務に時間を充てることができます。  

@@ -16,13 +16,13 @@ ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c06fd5ffe8a889b1decb3083f517c5ecae86bc0b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3e3bf2700f9570a41f07d18d376332080daa99cd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-history"></a>[データベース ミラーリングの履歴]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このダイアログ ボックスは、指定したサーバー インスタンスでミラー化されたデータベースについて、ミラーリング状態の履歴を表示するために使用します。  
@@ -31,11 +31,11 @@ ms.lasthandoff: 11/20/2017
   
 -   [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **サーバー インスタンス**  
  履歴レポートの対象となるサーバー インスタンスの名前です。  
   
- **データベース**  
+ **[データベース]**  
  履歴レポートの対象となるデータベースの名前です。  
   
  **[一覧のフィルター]**  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/20/2017
  **履歴**  
  履歴一覧を表示します。 列のヘッダーをクリックすると、その列のデータを使用してグリッドが並べ替えられます。 一覧には次の列があります。  
   
-|列名|説明|  
+|列名|Description|  
 |-----------------|-----------------|  
 |**[記録された日時]**|履歴行のタイムスタンプです。|  
 |**ロール**|このデータベースに対するサーバー インスタンスの現在のミラーリング ロールです。[プリンシパル] または [ミラー] のいずれかになります。|  

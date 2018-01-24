@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c818d77760101fd289deb97d519b61c565adf9ac
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 069bf210891435de0cdd60e5c715ebbdd16ecc19
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="example-retrieving-employee-information"></a>例 : 従業員情報の取得
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] この例では、各従業員の従業員 ID と名前を取得します。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの場合、employeeID は Employee テーブルの BusinessEntityID 列から取得できます。 従業員名は、Person テーブルから取得できます。 これらのテーブルを結合する際には、BusinessEntityID 列を使用します。  

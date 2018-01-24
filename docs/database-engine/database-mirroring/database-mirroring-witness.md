@@ -19,13 +19,13 @@ ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 caps.latest.revision: "72"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8fecac050a6b6be1ff2605d1926d975647e84a3a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 81c8212ce3e85c15e6015e64474b50be394f7869
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-witness"></a>データベース ミラーリング監視サーバー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 自動フェールオーバーをサポートするには、データベース ミラーリング セッションが高い安全性モードで構成されている必要があります。また、このセッションに "*監視サーバー*" と呼ばれる 3 番目のサーバー インスタンスを配置する必要もあります。 ミラーリング監視サーバーは、必要に応じて配置できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスです。ミラーリング監視サーバーを使用することにより、高い安全性モードのセッションのミラー サーバーが、自動フェールオーバーを開始するかどうかを決定できるようになります。 2 つのパートナーとは異なり、ミラーリング監視サーバーではデータベースの操作は行いません。 ミラーリング監視サーバーの唯一の役割は、自動フェールオーバーをサポートすることです。  

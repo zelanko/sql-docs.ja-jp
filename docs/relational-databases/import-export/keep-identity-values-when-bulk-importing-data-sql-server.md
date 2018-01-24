@@ -17,15 +17,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], identity values
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 95788f86ca16782ed8e51f888004926bf174e950
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 483471ce594ba3ae2c2b731e197290d2059af049
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>データの一括インポート時の ID 値の保持 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] ID 値を含んでいるデータ ファイルを Microsoft SQL Server のインスタンスに一括インポートできます。  既定では、インポートされたデータ ファイルの ID 列の値は無視され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって固有の値が自動的に割り当てられます。  固有の値は、テーブル作成時に指定されたシード値と増分値に基づいています。
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 ## ID 値を維持する <a name="keep_identity"></a>  
 テーブルにデータ行を一括インポートするときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が ID 値を割り当てないようにするには、適切な keep-identity コマンド修飾子を使用します。  keep-identity 修飾子を指定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではデータ ファイルの ID 値を使用します。  このような修飾子は次のとおりです。
 
-|Command|Keep-identity 修飾子|修飾子の種類|  
+|コマンド|Keep-identity 修飾子|修飾子の種類|  
 |-------------|------------------------------|--------------------|  
 |bcp|-E|スイッチ|  
 |BULK INSERT|KEEPIDENTITY|引数|  

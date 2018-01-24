@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: HierarchyID
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2a0435c35cbf2d4f3907e44dffe01676694ba32
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a6a17f0c1773063b30821a2458b8c408e85fb7e1
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>レッスン 1:テーブルの階層構造への変換
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] 階層リレーションシップを表すために自己結合を使っているテーブルがある場合、このレッスンの説明に従って、それらのテーブルを階層構造に変換できます。 現在の表示から、 **hierarchyid**を使用した表示に移行するのは比較的簡単です。 移行後は、コンパクトで理解しやすい階層表示が可能になるため、ユーザーはさまざまな方法でインデックスを作成して効率的なクエリを実現できます。  
@@ -38,14 +38,14 @@ ms.lasthandoff: 11/17/2017
   
 -   [まとめ : テーブルの階層構造への変換](../../relational-databases/tables/lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 このレッスンを学習するには、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースが必要です。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [Employee テーブルの現在の構造の確認](../../relational-databases/tables/lesson-1-1-examining-the-current-structure-of-the-employee-table.md)  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 2 : 階層テーブルでのデータの作成と管理](../../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+[レッスン 2: 階層テーブルでのデータの作成と管理](../../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
   
   
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - unique particle attribution constraint rule
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 70b8b9db058307afb2036b12b6c49c839211092b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 712668f3b495017765205b939c390db0f0d75456
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="unique-particle-attribution-constraint"></a>一意のパーティクル属性の制約
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] XSD では、UPA (一意のパーティクル属性) 制約の規則によって、複雑なコンテンツ モデルが制約を受けます。 この規則では、あいまいさを排除し、インスタンス ドキュメント内の各要素が、その親のコンテンツ モデル内の `<xsd:element>` パーティクルまたは `<xsd:any>` パーティクルの 1 つに正確に対応することが必要です。 あいまいなコンテンツ モデルになる可能性のある型を含むスキーマは拒否されます。  

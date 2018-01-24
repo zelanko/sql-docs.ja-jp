@@ -4,7 +4,7 @@ description: "最近変更されたデータベース エンジンに関する�
 services: na
 documentationcenter: 
 author: MightyPen
-manager: jhubbard
+manager: craigg
 editor: barbkess
 ms.service: na
 ms.topic: updart-autogen
@@ -15,11 +15,11 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
 ms.author: genemi
-ms.openlocfilehash: a0b847d4f0e848105be50a06f93abbbbc6f67dc9
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: cbf472ba2b8d2d7abad095992895b56940a82d92
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="new-and-recently-updated-database-engine-docs"></a>新規ドキュメントと最近更新されたドキュメント: データベース エンジン ドキュメント
 

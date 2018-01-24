@@ -16,19 +16,19 @@ helpviewer_keywords:
 - index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: Inactive
-ms.openlocfilehash: 5c4b0e6d0830e1addce4f3bc586aa4c09029314c
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 3a06dc9f01b2cf889605770beb57940b7f10558b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="how-online-index-operations-work"></a>オンライン インデックス操作の動作原理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/28/2017
 |-----------|---------------------|------------------|  
 |準備|新しいインデックスが作成され、書き込み専用に設定されます。|IS|  
 |ビルド|ソースからデータが挿入されます。<br /><br /> ソースに適用されたユーザーの変更 (挿入、更新、削除) が適用されます。<br /><br /> この処理は、ユーザーが意識することはありません。|IS|  
-|最終工程|インデックス メタデータが更新されます。<br /><br /> インデックスが、読み取りと書き込みが可能な状態に設定されます。|S<br /><br /> または<br /><br /> SCH-M|  
+|最終工程|インデックス メタデータが更新されます。<br /><br /> インデックスが、読み取りと書き込みが可能な状態に設定されます。|S<br /><br /> 内の複数の<br /><br /> SCH-M|  
   
  インデックス操作が完了するまでは、ユーザーによって実行された SELECT ステートメントがターゲットにアクセスすることはありません。  
   

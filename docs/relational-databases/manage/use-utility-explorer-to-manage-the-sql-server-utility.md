@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f586f008a1a646698e01e75f3175f7b56f8a311
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 663d8b3a7f8dbb27813ecbdd3f2aafdb64ed94d5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>ユーティリティ エクスプローラーを使用した SQL Server ユーティリティの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ユーティリティ エクスプローラーは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のコンポーネントで、[!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスに接続して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ内のすべてのオブジェクトのツリー ビューを表示します。 ユーティリティ エクスプローラーのコンテンツ ウィンドウには、SQL Server のマネージ インスタンスの正常性状態について、いくつかの方法で概要データと詳細データを表示できます。 ユーティリティ エクスプローラーには、ポリシー定義の表示と管理を行うためのユーザー インターフェイスも用意されています。 ユーティリティ エクスプローラーの機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ内のオブジェクトによって多少異なりますが、一般に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティによって管理されるオブジェクト、データ、およびポリシーが含まれます。 詳細については、「 [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。  

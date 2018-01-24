@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 711aaff1e0692bcf377117026692f508fd881798
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 757b2b72fe2066f452e53087e2ae73ea67d45aa8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server: Transactions オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **Transactions** オブジェクトは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスでアクティブになっているトランザクションの数を監視するカウンターと、スナップショット分離による **tempdb** への行バージョン ストアなど、アクティブなトランザクションによるリソースへの影響を監視するためのカウンターを提供します。 トランザクションは、論理的な 1 つの作業単位です。つまり、一連の操作であり、すべて成功するか、データの論理的な整合性を維持するためにデータベースからすべて消去されるかのいずれかの結果になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内のデータへの変更は、すべてトランザクションで行われます。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  次の表では、 **SQLServer:Transactions** のカウンターについて説明します。  
   
-|SQL Server Transactions のカウンター|説明|  
+|SQL Server Transactions のカウンター|Description|  
 |--------------------------------------|-----------------|  
 |**Free Space in tempdb (KB)**|**tempdb**の使用可能な領域 (KB)。 スナップショット分離レベルのバージョン ストアと、この [!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスで作成された新しいすべての一時オブジェクトの両方を保持するには、十分な空き領域が必要です。|  
 |**Longest Transaction Running Time**|現在のトランザクションの中で最も長くアクティブになっているトランザクションが開始してから現在までの継続時間 (秒)。 このカウンターがアクティビティを示すのは、データベースが READ COMMITTED スナップショット分離レベルの場合のみです。 データベースが他の分離レベルの場合、アクティビティはログに記録されません。|  

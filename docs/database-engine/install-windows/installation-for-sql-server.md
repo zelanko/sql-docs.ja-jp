@@ -20,12 +20,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 5a37ff592c7ee2bc997d85bf98ad728b485f9c8d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 8b8a7d9783111cff136b2ac576da7ccb2705c57a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-installation"></a>SQL Server のインストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの 1 つの機能ツリーから、次のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをインストールできます。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
 [SQL Server セットアップのユーザー インターフェイス リファレンス](http://msdn.microsoft.com/library/183b5cdd-962e-41ca-8064-ea44f622c77d)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードのインストール オプションについて説明します。  
   
-[SQL Server をアップグレードする](../../database-engine/install-windows/upgrade-sql-server.md)  
+[SQL Server のアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にアップグレードするためのオプションについて説明します。  
   
 [SQL Server のアンインストール](../../sql-server/install/uninstall-sql-server.md)  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/20/2017
 [SQL Server のビジネス インテリジェンス機能のインストール](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で Microsoft BI プラットフォームに含まれる機能には、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、および分析データの作成または操作に使用されるいくつかのクライアント アプリケーションがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ ドキュメントのこのセクションでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のインストール方法について説明します。  
   
-## <a name="more-information"></a>その他の情報
+## <a name="more-information"></a>詳細情報
 [SharePoint を使用した SQL Server の BI 機能のインストール &#40;Power Pivot と Reporting Services&#41;](http://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
  このセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能を SharePoint 環境でインストールする方法について説明します。 ここでは、特定のバージョンとエディションの SharePoint で使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能を示します。 また、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint と Reporting Services を SharePoint モードでインストールする手順についても説明します。  
   

@@ -18,13 +18,13 @@ ms.assetid: 1f15ef88-6f02-4cfc-8327-3408233619b1
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ebf89f25956ed529ffb75c6f9d92f15c9e95a5c3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d6287138ff84e1604539b346eb67ef95ac532740
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>[説明のプロパティ] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[説明のプロパティ]** ダイアログ ボックスには編集可能な領域が用意されており、ユーザーは、テーブル、列、外部キー制約などのデータベース オブジェクトの詳細な説明を記述できます。 このダイアログ ボックスを表示するには、テーブルやビューなどのオブジェクトがデザイナーで選択されている場合はオブジェクトのプロパティ ウィンドウ、インデックス、CHECK 制約などのオブジェクトの場合はダイアログ ボックス、テーブル列の場合はテーブル デザイナーの **[列のプロパティ]** タブを使用します。 説明は、オブジェクトの拡張プロパティとして保存されます。  

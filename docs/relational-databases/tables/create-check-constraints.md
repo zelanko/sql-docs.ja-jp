@@ -19,15 +19,15 @@ helpviewer_keywords:
 - CHECK constraints, attaching
 ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 985ad5303608fd44c8d43fb2017d633ff8ea469f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a7fb39dd90a2df6a7567fecaaa9638f855c405c4
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-check-constraints"></a>CHECK 制約の作成
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **新しい CHECK 制約を作成する方法:**  
   
@@ -46,11 +46,11 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  テーブルに対する ALTER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  数値以外の制約値は、必ず単一引用符 (') で囲んでください。  
   
-4.  クリックして **OK**です。  
+4.  **[OK]** をクリックします。  
   
 5.  **[ID]** カテゴリでは、CHECK 制約の名前を変更し、制約の説明 (拡張プロパティ) を追加できます。  
   

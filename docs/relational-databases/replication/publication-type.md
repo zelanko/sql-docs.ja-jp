@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.publicationtype.f1
 ms.assetid: 1b77a466-479c-4356-b539-a644cec507b5
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 716c64923b3de5d3287ddbf7bc52aa22055d6233
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a347afd82d3251c1bcadac8b77939c6afdc68ed6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-type"></a>[パブリケーションの種類]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] レプリケーションにより、次の種類のパブリケーションが提供されます。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  アプリケーションに対してどの種類のレプリケーションを選択するかは、物理レプリケーション環境、レプリケートするデータの種類と量、およびデータがサブスクライバーで更新されるかどうかに依存します。 物理環境には、レプリケーションに関連するコンピューターの台数と場所、およびこれらのコンピューターがクライアント (ワークステーション、ラップトップ コンピューター、またはハンドヘルド デバイス) かサーバーかということが含まれます。 詳細については、「[Types of Replication](../../relational-databases/replication/types-of-replication.md)」 (レプリケーションの種類) を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **Publication type**  
  このパブリケーションにとって適切なレプリケーションの種類を選択します。  
   

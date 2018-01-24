@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 771047d7d21f79827c9ca073d22f2094f8603f0f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dfbbfd6ac0e746fc8165186745006a1834f5aebe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server の Access Methods オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **Access Methods** オブジェクトには、データベース内の論理データへのアクセス方法を監視するためのカウンターがあります。 ディスク上のデータベース ページへの物理アクセスは、 **Buffer Manager** カウンターを使用して監視します。 データベースに格納されているデータへのアクセス方法を監視すれば、インデックスの追加や変更、パーティションの追加や移動、ファイルまたはファイル グループの追加、インデックスのデフラグ、クエリの書き直しなど、どのような措置によってクエリ パフォーマンスが向上するかを判断する際に役立ちます。 **Access Methods** カウンターを使用して、データベース内のデータ、インデックス、および空き領域サイズを監視し、各サーバー インスタンスのデータ量と断片化状況を確認することもできます。 インデックスが過度に断片化されると、パフォーマンスの低下につながります。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **の** カウンターを使用して監視します。  
   
-|SQL Server の Access Methods カウンター|説明|  
+|SQL Server の Access Methods カウンター|Description|  
 |----------------------------------------|-----------------|  
 |**AU cleanup batches/sec**|遅延および削除済みアロケーション ユニットをクリーンアップするバックグラウンド タスクによって正常に完了した 1 秒あたりのバッチの数。|  
 |**AU cleanups/sec**|遅延および削除済みアロケーション ユニットをクリーンアップするバックグラウンド タスクによって正常に削除された 1 秒あたりのアロケーション ユニットの数。 各アロケーション ユニットの削除には複数のバッチが必要です。|  

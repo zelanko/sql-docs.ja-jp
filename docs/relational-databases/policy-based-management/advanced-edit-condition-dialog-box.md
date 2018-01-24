@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbb1759fcdf89686498698c4bd77ce529da4ed1d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f7d494c40e02e96d53f827e9553c743d72660d0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>[高度な編集] \(条件) ダイアログ ボックス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[高度な編集]** ダイアログ ボックスでは、ポリシー ベースの管理条件に使用する複雑な式を作成できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[セル値]**  
  セル値に使用するために作成した関数または式が表示されます。 **[OK]**をクリックすると、 **[新しい条件の作成]** ダイアログ ボックスまたは **[条件を開く]** ダイアログ ボックスの **[全般]** ページにある条件式ボックスの **[フィールド]** セルまたは **[値]** セルにセル値が表示されます。  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
 > **重要:** ポリシー ベースの管理条件の作成に使用できる関数は、必ずしも [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文を使用しません。 例に示されている構文に必ず従ってください。 たとえば、 **DateAdd** 関数または **DatePart** 関数を使用する場合は、 *datepart* 引数を単一引用符で囲む必要があります。  
   
-|関数|署名|説明|引数|戻り値|例|  
+|機能|署名|Description|引数|戻り値|例|  
 |--------------|---------------|-----------------|---------------|------------------|-------------|  
 |**Add()**|Numeric Add (Numeric *expression1*, Numeric *expression2*)|2 つの値を加算します。|*expression1* および *expression2* - **bit** データ型を除く、数値カテゴリのデータ型のいずれかに属する任意の有効な式です。 定数、プロパティ、または数値型を返す関数を指定できます。|最も優先順位の高い引数のデータ型を返します。|`Add(Property1, 5)`|  
 |**Array()**|Array Array (VarArgs *expression*)|値のリストから配列を作成します。 Sum() や Count() などの集計関数で使用できます。|*expression* - 配列に変換される式です。|配列|`Array(2,3,4,5,6)`|  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 |**DateAdd()**|DateTime DateAdd (String *datepart*, Numeric *number*, DateTime *date*)|指定された日付に期間を加えた新しい **datetime** の値を返します。|*datepart* - 新しい値を返す日付の要素を指定するパラメーターです。 year(yy, yyyy)、month(mm, m)、dayofyear(dy, y) などの型がサポートされています。 詳細については、「[DATEADD &#40;Transact-SQL&#41;](../../t-sql/functions/dateadd-transact-sql.md)」を参照してください。<br /><br /> *number* - *datepart* に加算される値です。<br /><br /> *date* - **datetime** 型の値を返す式、または日付形式の文字列です。|指定された日付に期間を加えた新しい **datetime** の値です。|**例:** `DateAdd('day', 21, DateTime('2007-08-06 14:21:50'))` は `'2007-08-27 14:21:50'` を返します。<br /><br /> この関数でサポートされている *dateparts* とその省略形は、次のとおりです。<br /><br /> **year**: yy, yyyy<br /><br /> **month**: mm, m<br /><br /> **dayofyear**: dy, y<br /><br /> **day**: dd, d<br /><br /> **week**: wk, ww<br /><br /> **weekday**: dw, w<br /><br /> **hour**: hh<br /><br /> **minute**: mi, n<br /><br /> **second**: ss, s<br /><br /> **millisecond**: ms|  
 |**DatePart()**|Numeric DatePart (String *datepart*, DateTime *date*)|指定された日付の特定の *datepart* を表す整数を返します。|*datepart* - 返す対象となる日付要素を指定するパラメーターです。 year(yy, yyyy)、month(mm, m)、dayofyear(dy, y) などの型がサポートされています。 詳細については、「[DATEPART &#40;Transact-SQL&#41;](../../t-sql/functions/datepart-transact-sql.md)」を参照してください。<br /><br /> *date* - **datetime** 型の値を返す式、または日付形式の文字列です。|指定された日付の特定の *datepart* を表す、整数のデータ型カテゴリの値を返します。|`DatePart('month', DateTime('2007-08-06 14:21:50.620'))` は `8` を返します。|  
 |**DateTime()**|DateTime DateTime (String *dateString*)|文字列から datetime 値を作成します。|*dateString* - 文字列としての datetime 値です。|入力文字列から作成された datetime 値を返します。|`DateTime('3/12/2006')`|  
-|**Divide()**|Numeric Divide (Numeric *expression_dividend*, Numeric *expression_divisor*)|ある数値を別の数値で除算します。|*expression_dividend* - 除算される数値式です。 被除数には、数値型に分類されるデータ型を持つ有効な式を指定できます。ただし、 **datetime** データ型は除きます。<br /><br /> *expression_divisor* - 被除数を除算する数値式です。 除数には、数値型に分類されるデータ型を持つ有効な式を指定できます。ただし、 **datetime** データ型は除きます。|最も優先順位の高い引数のデータ型を返します。|**例:** `Divide(Property1, 2)`<br /><br /> 注: これは double 型の演算になります。 整数との比較を行う場合は、 `Round()`で結果を結合する必要があります。 たとえば、 `Round(Divide(10, 3), 0) = 3`のようにします。|  
+|**Divide()**|Numeric Divide (Numeric *expression_dividend*, Numeric *expression_divisor*)|ある数値を別の数値で除算します。|*expression_dividend* - 除算される数値式です。 被除数には、数値型に分類されるデータ型を持つ有効な式を指定できます。ただし、 **datetime** データ型は除きます。<br /><br /> *expression_divisor* - 被除数を除算する数値式です。 除数には、数値型に分類されるデータ型を持つ有効な式を指定できます。ただし、 **datetime** データ型は除きます。|最も優先順位の高い引数のデータ型を返します。|**例:** `Divide(Property1, 2)`<br /><br /> 注: これは double 型の演算になります。 整数との比較を行う場合は、 `Round()`で結果を結合する必要があります。 例: `Round(Divide(10, 3), 0) = 3`」を参照してください。|  
 |**Enum()**|Numeric Enum (String *enumTypeName*, String *enumValueName*)|文字列から列挙値を作成します。|*enumTypeName* - 列挙型の名前です。<br /><br /> *enumValueName* - 列挙の値です。|列挙値を数値として返します。|`Enum('CompatibilityLevel','Version100')`|  
 |**Escape()**|String Escape (String *replaceString*, String *stringToEscape*, String *escapeString*)|指定したエスケープ文字列で入力文字列のサブストリングをエスケープします。|*replaceString* – 入力文字列です。<br /><br /> *stringToEscape* – *replaceString*のサブストリングです。 この文字列の前にエスケープ文字列が追加されます。<br /><br /> *escapeString* – *stringToEscape*の各インスタンスの前に追加するエスケープ文字列です。|
                  *stringToEscape* の各インスタンスの前に *escapeString* が付いた変更後の *replaceString*を返します。|`Escape("Hello", "l", "[")` は、"`He[l[lo`" を返します。|  

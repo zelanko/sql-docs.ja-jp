@@ -17,15 +17,15 @@ helpviewer_keywords:
 - viewing foreign keys attributes
 ms.assetid: b0e57cb7-9b26-4b96-b76a-1f59f5f498c5
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 66d34a121d5bb70ae13a7b08554c77fcf1e436a9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0e54db0e05a9ce157a394a882338cae2eab7210e
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-foreign-key-properties"></a>外部キーのプロパティの表示
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用して特定のテーブルの外部キーの属性を表示するには:**  
   
@@ -44,11 +44,11 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> 権限  
+####  <a name="Permissions"></a> Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  

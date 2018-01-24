@@ -18,13 +18,13 @@ ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 caps.latest.revision: "7"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eeb5f355fcf3acec748c09616377d2a0bf9f0c83
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 810cddb24b5f37ff61316e2249a98300e45b40c1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="connect-to-existing-secondary-replicas-page"></a>既存のセカンダリ レプリカ ページへの接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このヘルプ トピックでは、**[既存のセカンダリ レプリカへの接続]** ページのオプションについて説明します。 このトピックでは、 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] の [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] および [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を使用します。  

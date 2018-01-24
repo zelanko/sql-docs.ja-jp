@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SQLAgent:Alerts
 ms.assetid: e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e3ea50bd513ac40995ac4ff0fc9d7eea906b0a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c411f3cf4621eb352f6bfc34793e46511cf65187
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-agent-alerts-object"></a>SQL Server エージェントの Alerts オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server エージェントの **Alerts** パフォーマンス オブジェクトには、SQL Server エージェントの警告に関する情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターを示します。  
   
  次の表では、 **SQLAgent:Alerts** オブジェクトのカウンターを示します。  
   
-|名前|説明|  
+|[オブジェクト名]|Description|  
 |----------|-----------------|  
 |**Activated alerts**|最後に SQL Server エージェントが再起動されてから SQL Server エージェントによってアクティブ化された警告の合計数が報告されます。|  
 |**Alerts activated/minute**|1 分間に SQL Server エージェントによってアクティブ化された警告の数が報告されます。|  

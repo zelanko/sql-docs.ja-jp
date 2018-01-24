@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Memory Manager object
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c4994f77321278c9f923cb5899e70c10a688d95
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e385362666a573b97579a3f0e99924152b1bcdd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server: Memory Manager オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **Memory Manager** オブジェクトには、全体的なサーバー メモリの使用状況を監視するためのカウンターが用意されています。 全体的なサーバー メモリの使用状況を監視して、ユーザーの利用状況やリソースの使用状況を計測すると、パフォーマンスのボトルネックを突き止めるのに役立つ可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで使用されるメモリを監視すると、次のことを判断する際に役立ちます。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="memory-manager-counters"></a>Memory Manager カウンター  
  次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Manager** カウンターについて説明します。  
   
-|SQL Server Memory Manager カウンター|説明|  
+|SQL Server Memory Manager カウンター|Description|  
 |----------------------------------------|-----------------|  
 |**Connection Memory (KB)**|接続を維持するためにサーバーが使用している動的メモリの合計サイズを指定します。|  
 |**Database Cache Memory (KB)**|サーバーがデータベース ページ キャッシュに現在使用しているメモリの量を指定します。|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 |**Total Server Memory (KB)**|Memory Manager を使用してサーバーがコミットしたメモリの量を指定します。|  
   
 ## <a name="see-also"></a>参照  
- [リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
+ [リソースの利用状況の監視 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server: Buffer Manager オブジェクト](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)   
 [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
   

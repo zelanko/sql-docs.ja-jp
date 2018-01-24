@@ -18,15 +18,15 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], push
 ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a1e4f6f5ba879008c9a390846b35a829d62c687
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3b551fe093df2bbb838b63f54a013b670f054eae
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-a-push-subscription"></a>プッシュ サブスクリプションの削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、プッシュ サブスクリプションを削除する方法について説明します。  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  パブリッシャーで、**@publication**、**@subscriber**、**@subscriber_db** を指定して、[sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md) を実行します。 (省略可) ディストリビューターにアクセスできない場合、 **@ignore_distributor** に **@ignore_distributor** を指定して、ディストリビューターの関連オブジェクトを削除せずにサブスクリプションを削除します。  
   
-2.  サブスクライバー側のサブスクリプション データベースに対して、[sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md) を実行します。 **@publisher**、**@publisher_db**、**@publication** を指定します。 これにより、サブスクリプション データベースのマージ メタデータが削除されます。  
+2.  サブスクライバー側のサブスクリプション データベースに対して、[sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md) を実行します。 **@publisher**、 **@publisher_db**、および **@publication**を指定します。 これにより、サブスクリプション データベースのマージ メタデータが削除されます。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  この例では、トランザクション パブリケーションへのプッシュ サブスクリプションを削除します。  

@@ -14,26 +14,26 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.subscription.disttosub.f1
 ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b916eccd05ff75d8809c6f3934af7db9b0eab242
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e975b4d43532fe7f9aa8219570c9e8869dab4805
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴] (トランザクション サブスクリプション)
+# <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴]\(トランザクション サブスクリプション)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **[ディストリビューターからサブスクライバーまでの履歴]** タブでは、ステータス、履歴、情報メッセージ、およびすべてのエラー メッセージを含む、ディストリビューション エージェントの詳細情報が表示されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  表示するディストリビューション エージェントのセッションを **[表示]** メニューで選択した後、 **[ディストリビューション エージェントのセッション]**というラベルのグリッドで特定のセッションを選択します。 このセッションの詳細情報は、 **[選択されたセッションのアクション]**というラベルのグリッドに表示されます。 選択したセッションがエラーで終了した場合は、 **[選択されたセッションのエラーの詳細またはメッセージ]** というラベルのテキスト領域も表示されます。  
   
  **[表示]**  
  表示するディストリビューション エージェントのセッションを選択します。 一般的に、ディストリビューション エージェントは継続的に実行されるため、表示されるセッションが 1 つのみである場合もあります。  
   
- **[状態]**  
+ **ステータス**  
  ディストリビューション エージェントの状態です。 表示される状態の種類を、次に示します。  
   
 -   [エラー]  
@@ -69,6 +69,6 @@ ms.lasthandoff: 11/17/2017
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [レプリケーション エージェントの概要](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

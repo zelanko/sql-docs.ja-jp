@@ -16,24 +16,24 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a680f3d08dcc3cc9e6cb196e02bc3429ac526a6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 19b09b99c30e0dffd81b1778c3df25596d455110
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="cdc-splitter"></a>CDC スプリッター
   CDC スプリッターは、CDC ソース データの変更行の単一フローを、挿入、更新、削除の各操作のための個別のデータ フローに分割します。 データベースは、必須の列 `__$operation` と、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 変更テーブル内のその標準の値に基づいて分割されます。  
   
-|操作の値|出力|Description|  
+|操作の値|[出力]|Description|  
 |------------------------|------------|-----------------|  
-|1|Del|削除された行|  
+|@shouldalert|DELETE|削除された行|  
 |2|Insert|挿入された行 ( **"結合を含む差分"** CDC モードを使用する場合は使用不可)|  
-|3|Update|更新前の行 ( **"古い値を含むすべて"** CDC モードの場合のみ使用可)|  
-|4|Update|更新後の行 (更新前と同じ)|  
-|5|Update|マージ行 ( **"結合を含む差分"** CDC モードを使用する場合のみ使用可)|  
+|3|更新|更新前の行 ( **"古い値を含むすべて"** CDC モードの場合のみ使用可)|  
+|4|更新|更新後の行 (更新前と同じ)|  
+|5|更新|マージ行 ( **"結合を含む差分"** CDC モードを使用する場合のみ使用可)|  
 |その他|[エラー]||  
   
  スプリッターを使用して、定義済みの挿入、削除、更新の各出力に接続し、さらに処理を実行することができます。  

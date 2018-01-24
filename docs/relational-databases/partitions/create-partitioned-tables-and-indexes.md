@@ -31,15 +31,15 @@ helpviewer_keywords:
 - partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 416bba81433e35e34c053aafc5412cca3875b4ae
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: df57d6fa660d806b38deb6730dd2152099873f15
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、パーティション テーブルまたはパーティション インデックスを作成できます。 パーティション テーブルとパーティション インデックスのデータは、データベース内の複数のファイル グループに分散できるように、行方向に複数の単位に分割されています。 パーティション分割により、大規模なテーブルとインデックスの管理の可能性と拡張性が向上します。  

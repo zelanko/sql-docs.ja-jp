@@ -15,12 +15,12 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 14843789252f1e18a728edd13327f28428c7061c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: d31efaf4118ec4b73195b8ee47f35d8d65611af1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>失敗した SQL Server のインストールの修復
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 修復操作は、以下のシナリオで使用できます。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/20/2017
   
 - 修復は個々のクラスター ノードで実行する必要があります。 
   
-- 準備操作に失敗した後でフェールオーバー クラスター ノードを修復するには、**[ノードの削除]** を使用してから準備手順をもう一度実行します。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;セットアップ&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」をご覧ください。 
+- 準備操作に失敗した後でフェールオーバー クラスター ノードを修復するには、**[ノードの削除]** を使用してから準備手順をもう一度実行します。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;Setup&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。 
   
 ## <a name="repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-from-the-installation-center"></a>インストール センターから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の失敗したインストールを修復する 
   

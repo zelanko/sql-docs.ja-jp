@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 906150705dabca37cfee4eae1d0e19cecc641e4c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 64065e9cf9ce2429ba98b8ca46bac3b000020d6b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-engine-instances-sql-server"></a>データベース エンジンのインスタンス (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスは、オペレーティング システム サービスとして実行される **sqlservr.exe** 実行可能ファイルのコピーです。 各インスタンスは、いくつかのシステム データベースと、1 つまたは複数のユーザー データベースを管理します。 各コンピューターは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の複数のインスタンスを実行できます。 アプリケーションはインスタンスに接続して、インスタンスに管理されているデータベースでの作業を実行します。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
   
  1 台のコンピューター上で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の複数のインスタンスを実行できます。 1 つのインスタンスを既定のインスタンスにすることができます。 既定のインスタンスには名前がありません。 接続要求にコンピューター名しか指定されていない場合、接続は既定のインスタンスに対して確立されます。 名前付きインスタンスは、インスタンスをインストールするときに名前を指定するインスタンスです。 このインスタンスに対する接続要求では、コンピューター名とインスタンス名の両方を指定する必要があります。 既定のインスタンスのインストールは必須ではありません。コンピューターで実行されているすべてのインスタンスが名前付きインスタンスであってもかまいません。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

@@ -18,13 +18,13 @@ ms.assetid: 269ad9c5-3261-4526-badf-7be3c869f229
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6168fec36beba851fea3850b688dedc3958ebf0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 643aa62419885e2708a084cb37d23c95b38305ae
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>グループの条件を指定する方法 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] グループ全体に適用する条件を HAVING 句で指定すると、クエリに出力するグループを制限できます。 データをグループ化し、集計した後、HAVING 句で条件を適用します。 条件を満たすグループだけがクエリに表示されます。  

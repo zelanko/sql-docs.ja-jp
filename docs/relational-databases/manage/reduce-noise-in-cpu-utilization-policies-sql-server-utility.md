@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.SWB.UE.ReduceNoise.F1
 ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb9460eb2dee21369bac8920dcc77a64e98b9857
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a391598d304ce2566d35b806e2a9894a81555b50
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>CPU 使用率のポリシーにおけるノイズの軽減 (SQL Server ユーティリティ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのリソース使用率のポリシーでは、レポート ノイズや不要な違反を軽減するために、次の方法を使用します。  

@@ -16,13 +16,13 @@ ms.assetid:
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52fc22dc74afa25194dcf6c0883a2ae3aec26a27
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 61014dfd6113a16e37b4be9a1a06e6901abba37f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="domain-independent-availability-groups"></a>ドメインに依存しない可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
 GO
 ```
 10. プライマリになる可能性があるレプリカでは、関連するすべてのセカンダリ レプリカでログインとユーザーを作成します。
-11. 各インスタンスで、作成されたログインとユーザーがある他のインスタンスに証明書を復元します。 プライマリ レプリカで、すべてのセカンダリ レプリカの証明書を復元します。 各セカンダリで、プライマリ レプリカの証明書を復元します。また、プライマリになる可能性があるその他のレプリカにも復元します。 例:
+11. 各インスタンスで、作成されたログインとユーザーがある他のインスタンスに証明書を復元します。 プライマリ レプリカで、すべてのセカンダリ レプリカの証明書を復元します。 各セカンダリで、プライマリ レプリカの証明書を復元します。また、プライマリになる可能性があるその他のレプリカにも復元します。 例 :
 ```
 CREATE CERTIFICATE [InstanceB_Cert]
 AUTHORIZATION InstanceB_User

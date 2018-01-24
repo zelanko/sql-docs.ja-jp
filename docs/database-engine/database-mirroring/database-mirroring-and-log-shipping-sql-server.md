@@ -18,13 +18,13 @@ ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 55051d755bb2fb2abec5668fb21328905c0dbf82
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 092a000b7b942a3b26a7bafedcc65ed2b19944f7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>データベース ミラーリングとログ配布 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 特定のデータベースをミラーリングまたはログ配布することができます。また、ミラーリングとログ配布を同時に行うこともできます。 使用する方法を選択するには、次の点を検討します。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/20/2017
   
  ![ログ配布とデータベース ミラーリング](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "ログ配布とデータベース ミラーリング")  
   
- ミラーリング フェールオーバー後も、セカンダリ サーバーで定義されているプライマリ サーバーの名前は変わりません。 」を参照してください。  
+ ミラーリング フェールオーバー後も、セカンダリ サーバーで定義されているプライマリ サーバーの名前は変わりません。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>リモート監視インスタンスでのデータベース ミラーリングの影響  
  ログ配布をリモート監視インスタンスと共に使用しているときは、ログ配布セッションとデータベース ミラーリングを組み合わせることでモニター テーブルの情報に影響が及びます。 プライマリに関する情報は、プリンシパル/プライマリで構成されたモニターと各セカンダリで構成されたモニターの組み合わせです。  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/20/2017
   
      バックアップ ディレクトリ (バックアップ共有) として使用する共有を 1 つ設定します。 これにより、プリンシパル サーバーとミラー サーバーの間で役割を交代した後も、引き続き前と同一のディレクトリにバックアップ ジョブによる書き込みが行われます。 ベスト プラクティスは、この共有の場所をミラーリングとログ配布に関与しているデータベースをホストするサーバーとは異なる物理サーバー上にすることです。  
   
-     詳細については、「[ログ配布の構成 &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)」を参照してください。  
+     詳細については、「 [ログ配布の構成 &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)で導入されました。  
   
 5.  プリンシパルからミラーへ手動でフェールオーバーします。  
   

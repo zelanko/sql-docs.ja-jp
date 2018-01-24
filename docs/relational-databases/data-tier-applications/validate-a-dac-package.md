@@ -20,15 +20,15 @@ helpviewer_keywords:
 - view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a5824fa73a1c869eb1376fca9b9d0d11ecfb223
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c8eba0d38c9a36f9f66009283126e34f55f38202
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="validate-a-dac-package"></a>DAC パッケージの検証
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] DAC パッケージを運用環境に配置する前にパッケージの内容を確認し、既存の DAC をアップグレードする前にアップグレード処理を検証するようにしてください。 これは、特に、外部で開発されたパッケージを配置する場合に当てはまります。  
@@ -177,7 +177,7 @@ $fileStream.Close()
  または、DAC を別々のフォルダーにアンパックします。 その後、WinDiff ユーティリティなどの比較ツールを使用して、相違を分析できます。  
   
 ## <a name="see-also"></a>参照  
- [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [データ層アプリケーションの配置](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [データ層アプリケーションのアップグレード](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  
   

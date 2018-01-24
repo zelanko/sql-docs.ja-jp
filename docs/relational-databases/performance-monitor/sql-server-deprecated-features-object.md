@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4ed295cab6b932ba39a2a6417b8977dc5791e6e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 336fea7b5f3ea9fec4dc559933477086f4cca5ed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server:Deprecated Features オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -151,7 +151,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |SET FMTONLY ON|SET FMTONLY 構文が見つかりました。 この非推奨の構文を削除してください。 コンパイルごとに 1 回発生します。|  
 |SET OFFSETS|SET OFFSETS 構文が見つかりました。 この非推奨の構文を削除してください。 コンパイルごとに 1 回発生します。|  
 |SET REMOTE_PROC_TRANSACTIONS|SET REMOTE_PROC_TRANSACTIONS 構文が見つかりました。 この非推奨の構文を削除してください。 代わりに、リンク サーバーと sp_serveroption を使用してください。|  
-|[SET ROWCOUNT]|DELETE、INSERT、または UPDATE ステートメントで SET ROWCOUNT 構文が見つかりました。 TOP を使用してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
+|SET ROWCOUNT|DELETE、INSERT、または UPDATE ステートメントで SET ROWCOUNT 構文が見つかりました。 TOP を使用してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
 |SETUSER|SET USER ステートメントが見つかりました。 代わりに EXECUTE AS を使用してください。 クエリごとに 1 回発生します。|  
 |sp_addapprole|sp_addapprole プロシージャが見つかりました。 代わりに CREATE APPLICATION ROLE を使用してください。 クエリごとに 1 回発生します。|  
 |sp_addextendedproc|sp_addextendedproc プロシージャが見つかりました。 代わりに CLR を使用してください。 コンパイルごとに 1 回発生します。|  
@@ -273,7 +273,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Text in row テーブル オプション|'text in row' テーブル オプションへの参照が見つかりました。 代わりに sp_tableoption 'large value types out of row' を使用してください。 クエリごとに 1 回発生します。|  
 |TEXTPTR|TEXTPTR 関数への参照が見つかりました。 **varchar(max)** データ型を使うようにアプリケーションを書き直し、 **text**、 **ntext**、 **image** データ型の構文は削除してください。 クエリごとに 1 回発生します。|  
 |TEXTVALID|TEXTVALID 関数への参照が見つかりました。 **varchar(max)** データ型を使うようにアプリケーションを書き直し、 **text**、 **ntext**、 **image** データ型の構文は削除してください。 クエリごとに 1 回発生します。|  
-|TIMESTAMP|非推奨の **timestamp** データ型が DDL ステートメントで見つかった合計回数。 代わりに **rowversion** データ型を使用してください。|  
+|timestamp|非推奨の **timestamp** データ型が DDL ステートメントで見つかった合計回数。 代わりに **rowversion** データ型を使用してください。|  
 |UPDATETEXT または WRITETEXT|UPDATETEXT または WRITETEXT ステートメントが見つかりました。 **varchar(max)** データ型を使うようにアプリケーションを書き直し、 **text**、 **ntext**、 **image** データ型の構文は削除してください。 クエリごとに 1 回発生します。|  
 |USER_ID|USER_ID 関数への参照が見つかりました。 代わりに、DATABASE_PRINCIPAL_ID 関数を使用してください。 コンパイルごとに 1 回発生します。|  
 |リンク サーバーに対する OLEDB の使用||  

@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a9c11a4593e3712083513d5edc9374edd392022
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d68409591b5243ecf56b8c5707c61a5a7c33493
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-files-page"></a>[データベースのプロパティ] ([ファイル] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、新しいデータベースを作成したり、選択したデータベースのプロパティを表示または変更したりできます。 このトピックは、既存のデータベースの **[データベースのプロパティ] ([ファイル] ページ)** 、および **[新しいデータベース] ([全般] ページ)**に該当します。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
  FILESTREAM データ ファイル グループにファイル (コンテナー) を追加するには、FILESTREAM を有効にする必要があります。 FILESTREAM を有効にするには、 [[サーバーのプロパティ] ([詳細設定] ページ)](../../database-engine/configure-windows/server-properties-advanced-page.md) ダイアログ ボックスを使用します。  
   
- **ファイル グループ**  
+ **[ファイル グループ]**  
  ファイルのファイル グループを一覧から選択します。 既定のファイル グループは PRIMARY です。 新しいファイル グループを作成するには、**[\<新しいファイル グループ>]** を選択し、ファイル グループに関する情報を **[新しいファイル グループ]** ダイアログ ボックスに入力します。 また、 **[ファイル グループ]** ページで新しいファイル グループを作成することもできます。 既存のファイルのファイル グループは変更できません。  
   
  メモリ最適化ファイル グループにファイル (コンテナー) を追加すると、データベースのメモリ最適化ファイル グループ名が **[ファイル グループ]** フィールドに表示されます。  

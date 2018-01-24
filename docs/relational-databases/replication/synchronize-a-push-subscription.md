@@ -17,15 +17,15 @@ helpviewer_keywords:
 - push subscriptions [SQL Server replication], synchronizing
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41040dbb6c399f45f3aebdb961640910742162d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 00becd2c1e202ec06aa3f47b2d8bc2f9325c44ab
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="synchronize-a-push-subscription"></a>プッシュ サブスクリプションの同期
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [レプリケーション エージェント](../../relational-databases/replication/agents/replication-agents-overview.md)、またはレプリケーション管理オブジェクト (RMO) を使用して、プッシュ サブスクリプションを同期する方法について説明します。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  サブスクリプションは、ディストリビューション エージェント (スナップショット レプリケーションおよびトランザクション レプリケーションの場合) またはマージ エージェント (マージ レプリケーションの場合) で同期されます。 エージェントは継続的に実行、要求時に実行、またはスケジュールで実行できます。 同期スケジュールの指定の詳細については、「[同期スケジュールの指定](../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ローカル パブリケーション]** フォルダーと **[ローカル サブスクリプション]** フォルダー、およびレプリケーション モニターの **[すべてのサブスクリプション]** タブからは、要求時にサブスクリプションを同期します。 Oracle パブリケーションに対するサブスクリプションは、サブスクライバーから要求時に同期することはできません。 レプリケーション モニターの開始の詳細については、「[レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)」を参照してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ローカル パブリケーション]** フォルダーと **[ローカル サブスクリプション]** フォルダー、およびレプリケーション モニターの **[すべてのサブスクリプション]** タブからは、要求時にサブスクリプションを同期します。 Oracle パブリケーションに対するサブスクリプションは、サブスクライバーから要求時に同期することはできません。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-publisher"></a>Management Studio で要求時にプッシュ サブスクリプションを同期するには (パブリッシャー側)  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  同期するサブスクリプションを右クリックし、 **[同期の状態の表示]**をクリックします。  
   
-4.  ディストリビューターへの接続の確立に関するメッセージが表示されます。 **[OK]**をクリックします。  
+4.  ディストリビューターへの接続の確立に関するメッセージが表示されます。 **[OK]** をクリックします。  
   
 5.  **[同期の状態の表示 - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、**[開始]** をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
   

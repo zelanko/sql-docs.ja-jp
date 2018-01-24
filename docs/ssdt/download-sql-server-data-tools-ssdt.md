@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 554993ec4b6b687a2335c3ea6192c40ead327820
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 36b87035d4a578622d9bff9bb2b4aea159cf55b2
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) のダウンロード
 無料でダウンロードできる最新の開発ツールである [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -149,13 +149,13 @@ SSDT をインストールした後、次のチュートリアルを使用して
 -   [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 
 ## <a name="see-also"></a>参照  
 [Visual Studio の SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [SSDT MSDN フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [SSDT チーム ブログ](http://blogs.msdn.com/b/ssdt/)  
-[SSDT Connect フィードバック](https://connect.microsoft.com/SQLServer/Feedback)  
 [SSDT のドキュメント](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [DACFx API リファレンス](https://msdn.microsoft.com/library/dn645454.aspx)  
 [SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)  

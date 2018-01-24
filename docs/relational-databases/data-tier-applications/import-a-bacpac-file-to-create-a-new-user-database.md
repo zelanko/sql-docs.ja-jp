@@ -29,15 +29,15 @@ helpviewer_keywords:
 - DAC
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b105471806865b78a07c5478f08d7a1bf6cf49f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d92da3c51843ee10b0c781bb400109abf04fefab
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC ファイルのインポートによる新しいユーザー データベースの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] データ層アプリケーション (DAC) ファイル (.bacpac ファイル) をインポートすると、データを含んだ元のデータベースのコピーを、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の新しいインスタンス上または [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] に作成することができます。 エクスポートとインポートという操作を組み合わせることで、DAC またはデータベースをインスタンス間で移行したり論理バックアップを作成したりすることが可能です。たとえば、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に配置されているデータベースの社内用コピーを作成することもできます。  
@@ -60,10 +60,10 @@ ms.lasthandoff: 11/17/2017
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  DAC は、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]にインポートできるほか、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 4 (SP4) 以降を実行する [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のインスタンスにインポートすることができます。 新しいバージョンから DAC をエクスポートした場合、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ではサポートされないオブジェクトが DAC に含まれている可能性があります。 このような DAC を [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のインスタンスに配置することはできません。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  ソースが不明または信頼されていない DAC エクスポート ファイルはインポートしないことをお勧めします。 こうしたファイルには、意図しない Transact-SQL コードを実行したり、スキーマを変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 エクスポート ファイルのソースが不明または信頼されていない場合は、使用する前に、DAC をアンパックして、ストアド プロシージャやその他のユーザー定義コードなどのコードも確認してください。 これらのチェックの実行方法の詳細については、「 [Validate a DAC Package](https://msdn.microsoft.com/library/ee633948(SQL.130).aspx)」をご覧ください。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
  セキュリティを強化するために、SQL Server 認証のログインは、パスワードなしで DAC エクスポート ファイルに格納されます。 ファイルがインポートされると、ログインは、生成されたパスワードを伴う無効なログインとして作成されます。 ログインを有効にするには、ALTER ANY LOGIN 権限を持つユーザーとしてログインし、ALTER LOGIN を使用してログインを有効にします。さらに、新しいパスワードを割り当て、そのパスワードを該当ユーザーに通知します。 Windows 認証ログインの場合、ログインのパスワードは SQL Server で管理されていないため、この操作は必要ありません。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -150,7 +150,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>参照  
 [BACPAC ファイルをインポートして新しい Azure SQL Database を作成する](https://azure.microsoft.com/en-us/documentation/articles/sql-database-import/)  
- [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [データ層アプリケーションのエクスポート](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   
   

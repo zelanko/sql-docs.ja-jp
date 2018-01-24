@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.main.f1
 ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 390fc9dbb3202793d1dcd80e253586adf193b6a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 384e72c84aedde0ecbeaf88e1345c6e2c175e36e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-monitor-main-page"></a>レプリケーション モニター、メイン ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] レプリケーション モニターを使用すると、レプリケーション トポロジにおけるパブリケーションとサブスクリプションの状態およびパフォーマンスを追跡できます。 以降のトピックで詳しく説明します。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
     -   [サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
   
-    -   [トランザクション レプリケーションの待機時間の計測および接続の検証](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+    -   [Measure Latency and Validate Connections for Transactional Replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
     -   [レプリケーション モニターのしきい値と警告の設定](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   

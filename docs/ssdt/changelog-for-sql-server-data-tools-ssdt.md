@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 98c27d595b2cb849bdca3ccd72bd51cc8378a8b7
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: e516b5d29e975236e9fa002a7d258caca706663d
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] この変更ログは、[SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) のものです。  
@@ -251,7 +251,6 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
 - SSIS はローカライズされていません。
 - *ExecuteOutofProcess* が *True* に設定されると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
 - 詳細な変更一覧については、[変更ログ](changelog-for-sql-server-data-tools-ssdt.md)を参照してください。
-- [SSDT Connect フィードバック](https://connect.microsoft.com/SQLServer/Feedback) サイトで問題を報告します。
 - サード パーティの拡張機能を含む SSIS パッケージは、その他のサーバー バージョンを対象にするように切り替えることはできません。
 
 

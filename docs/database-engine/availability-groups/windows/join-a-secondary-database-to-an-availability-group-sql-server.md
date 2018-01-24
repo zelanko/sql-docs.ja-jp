@@ -22,13 +22,13 @@ ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 caps.latest.revision: "39"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9d3168c015e5039a153a0eac504d1fd92612efec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 651e5f7cba6415f793d535735aa1f8ed9d73721e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>可用性グループへのセカンダリ データベースの参加 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]で、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループにセカンダリ データベースを参加させる方法について説明します。 セカンダリ レプリカのセカンダリ データベースを準備したら、できるだけ早くそのデータベースを可用性グループに参加させる必要があります。 これによって、対応するプライマリ データベースからセカンダリ データベースへのデータの移動が開始されます。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
   
      [前提条件](#Prerequisites)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してセカンダリ データベースを準備するには:**  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  セカンダリ データベースをグループに参加させた後の動作については、「 [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)、または PowerShell を使用して、AlwaysOn 可用性グループにセカンダリ データベースを参加させる方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  オブジェクト エクスプローラーで、セカンダリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
   
-2.  **[Always On 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
+2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
 3.  変更する可用性グループを展開し、 **[可用性データベース]** ノードを展開します。  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
  **セカンダリ データベースを可用性グループに参加させるには**  
   
-1.  ディレクトリ変更コマンド (**cd**) を使用して、セカンダリ レプリカをホストするサーバー インスタンスに移動します。  
+1.  ディレクトリ変更コマンド (**cd**) を使用して、セカンダリ レプリカがホストされているサーバー インスタンスに移動します。  
   
 2.  **Add-SqlAvailabilityDatabase** コマンドレットを使用して、セカンダリ データベース (複数可) を可用性グループに参加させます。  
   

@@ -26,15 +26,15 @@ helpviewer_keywords:
 - checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8bf78aac25b2d9ab927dfe822f140c8dac7bcb9d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7422aabdffd7985332c669964f0eb518a210ec07
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>バックアップ中および復元中に発生する可能性があるメディア エラー (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、エラーが検出されてもデータベースを復旧するオプションを選択できるようになりました。 エラー検出の重要なメカニズムとして、バックアップ チェックサムを任意で作成できるようになりました。バックアップ チェックサムは、バックアップ操作で生成して、復元操作で検証できます。 操作中にエラーを検出するかどうかと、エラー発生時に操作を停止するか続行するかを制御できます。 バックアップにバックアップ チェックサムが含まれている場合、RESTORE ステートメントおよび RESTORE VERIFYONLY ステートメントでエラーを検査できます。  

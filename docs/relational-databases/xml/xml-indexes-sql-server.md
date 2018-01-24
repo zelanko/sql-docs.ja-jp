@@ -36,15 +36,15 @@ helpviewer_keywords:
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b9dccca2e644bf5d02d47165b02d75241e40695
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ca2fd82971fa8d4eb8c874b809961f5052d5fbf5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-indexes-sql-server"></a>XML インデックス (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] **xml** データ型の列には xml インデックスを作成できます。 列に保存されている XML インスタンスのすべてのタグ、値、およびパスにインデックスが設定されるので、クエリのパフォーマンスが向上します。 次のような場合、XML インデックスの効果が得られる可能性があります。  
@@ -99,11 +99,11 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   ベース テーブルの主キー。 ベース テーブルとの逆結合のため、ベース テーブルの主キーがプライマリ XML インデックスにコピーされます。ベース テーブルの主キーの最大列数は 15 です。  
   
- このノード情報は、指定されたクエリに対して XML の結果を評価し構築するために使用されます。 最適化のために、タグ名とノード型の情報は整数値でエンコードされるので、パス列でも同じエンコードを使用します。 また、パスのサフィックスが既知の場合にのみパスを照合できるように、パスは逆の順序で格納されます。 例:  
+ このノード情報は、指定されたクエリに対して XML の結果を評価し構築するために使用されます。 最適化のために、タグ名とノード型の情報は整数値でエンコードされるので、パス列でも同じエンコードを使用します。 また、パスのサフィックスが既知の場合にのみパスを照合できるように、パスは逆の順序で格納されます。 例 :  
   
 -   `//ContactRecord/PhoneNumber` 最後の 2 つのロケーション ステップだけが既知です。  
   
- または  
+ スイッチまたは  
   
 -   `/Book/*/Title` 式の中間でワイルドカード文字 (`*`) が指定されています。  
   
@@ -147,7 +147,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   `/root/Location` パスだけを指定しています。  
   
- または  
+ スイッチまたは  
   
 -   `/root/Location/@LocationID[.="10"]` パスとノード値の両方を指定しています。  
   
@@ -221,6 +221,6 @@ WHERE ProductModelID = 19
   
 ## <a name="see-also"></a>参照  
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
- [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
+ [XML データ &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

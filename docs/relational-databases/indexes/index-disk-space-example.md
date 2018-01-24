@@ -20,15 +20,15 @@ helpviewer_keywords:
 - offline index disk space [SQL Server]
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3a9fb062940b786528ea4e0f19395391a2b84b19
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 518387e552f754ecb6be3b43772255c45d32ed03
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="index-disk-space-example"></a>インデックスのディスク領域の例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] インデックスを作成、再構築、または削除する場合は、古い (基になる) 構造と新しい (対象となる) 構造の両方を格納するディスク領域が、それぞれ適切なファイルとファイル グループで必要になります。 古い構造の割り当ては、インデックス作成トランザクションがコミットされるまで解除されません。 並べ替え操作用に一時ディスク領域が追加で必要になる場合もあります。 詳細については、「 [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)」をご参照ください。  

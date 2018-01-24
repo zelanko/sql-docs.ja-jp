@@ -18,17 +18,17 @@ f1_keywords:
 helpviewer_keywords: Shrink Database Task dialog box
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 977d851af5e4b044527a196417ea32504a44a65f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0b71a3f5cf438b4ac5f3cce071329a81cff88d25
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="shrink-database-task-maintenance-plan"></a>[データベースの圧縮タスク] (メンテナンス プラン)
+# <a name="shrink-database-task-maintenance-plan"></a>[データベースの圧縮タスク]\(メンテナンス プラン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[データベースの圧縮タスク]** ダイアログを使用すると、選択されているデータベースのサイズを小さくするタスクを作成できます。 次に示すオプションを使用して、データベースを圧縮する際に残す未使用領域の割合をパーセント比率で指定します (指定値を大きくするほど、データベースは少ししか圧縮されなくなります)。 残される未使用領域の大きさは、データベースに格納されているデータの量に対する比率で決められます。 たとえば、60 MB のデータと 40 MB の空き領域を含む 100 MB のデータベースに対して 50% の値を指定した場合、そのデータベースは、60 MB のデータと (60 MB の 50% に当たる) 30 MB の空き領域から成る 90 MB のデータベースに圧縮されます。 削除されるのは、指定の割合を超える分の未使用領域だけです。 有効値は、0 ～ 100 です。  
   
  ファイルの末尾にあるデータのページを、ファイルの先頭に近い占有されていない領域に移動することにより、データ ファイルが圧縮され、領域が回復されます。 ファイル末尾に十分な空き領域が作成された場合は、ファイル末尾のデータ ページの割り当てを解除して、ファイル システムに戻すことができます。  
@@ -38,11 +38,11 @@ ms.lasthandoff: 11/17/2017
   
  このタスクでは、DBCC SHRINKDATABASE ステートメントが実行されます。  
   
-## <a name="options"></a>オプション  
- **接続**  
+## <a name="options"></a>および  
+ **[接続]**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
- **新規**  
+ **[新規作成]**  
  このタスクを実行するときに使用する新しいサーバー接続を作成します。 **[新しい接続]** ダイアログ ボックスについては、後で説明します。  
   
  **データベース**  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
  **[特定のユーザー名とパスワードを使用する]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
   
- **ユーザー名**  
+ **User name**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  
   
  **Password**  

@@ -16,13 +16,13 @@ ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85ecfe90f8821623156f5a343197cc7b20ce8802
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3d3f5dd740387c0ba38cf9ad54f915ef2fd1f5eb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>レッスン 1 : "既定でオフ" ポリシーの作成と適用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ポリシー ベースの管理ポリシーを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス、複数のインスタンス オブジェクト、1 つのサーバー インスタンス、複数のデータベース、または複数のデータベース オブジェクトを管理できます。 データベース管理者は、特定のサーバーでデータベース メールが有効化されないようにすることができます。 このレッスンでは、このようなサーバー オプションを設定する条件およびポリシーを作成し、 サーバーがこのポリシーに準拠しているかどうかを確認するためにサーバーをテストします。 次に、このポリシーを使用してサーバーを再構成し、サーバーがポリシーに準拠するようにします。  

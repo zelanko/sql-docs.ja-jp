@@ -21,15 +21,15 @@ helpviewer_keywords:
 - database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6c8389b3c37b71df9e49a75c45b667cc4575192c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f888c404cf4342e23965d421fcb7855b918b7e25
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-snapshots-sql-server"></a>データベース スナップショット (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] データベース スナップショットは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ("*ソース データベース*") の読み取り専用の静的ビューです。 データベース スナップショットには、そのスナップショットを作成した時点でのソース データベースに対するトランザクションが反映されています。 データベース スナップショットは、常にそのソース データベースと同じサーバー インスタンス上に存在します。 ソース データベースが更新されると、データベース スナップショットが更新されます。 したがって、データベース スナップショットが長期間にわたって存在するほど、使用可能なディスク領域が使い尽くされる可能性が高くなります。  

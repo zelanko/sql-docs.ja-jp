@@ -21,15 +21,15 @@ helpviewer_keywords:
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e0b7f3b2064b37cecffb2ae84532731ee742e5ea
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e02bc6a0a8392ea2860697a71a8e20135c31c92f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="generate-an-inline-xsd-schema"></a>インライン XSD スキーマの生成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] FOR XML 句では、クエリからクエリ結果と共にインライン スキーマを返すように要求できます。 XDR スキーマが必要な場合は、FOR XML 句に XMLDATA キーワードを指定します。 XSD スキーマが必要な場合は、XMLSCHEMA キーワードを指定します。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  FOR XML クエリに XMLSCHEMA を指定すると、クエリ結果としてスキーマと XML データの両方が返されます。 データの最上位レベルの各要素が既定の名前空間宣言を使用して前のスキーマを参照し、次に、既定の名前空間宣言がインライン スキーマの対象の名前空間を参照します。  
   
- 例:  
+ 例 :  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  

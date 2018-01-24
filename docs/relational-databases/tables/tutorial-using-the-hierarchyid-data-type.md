@@ -17,15 +17,15 @@ helpviewer_keywords:
 - hierarchyid [Database Engine], tutorial
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed9d79b4dacf83513a41b4d33cd13ed7852be184
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 668177022a6032c906a97c1787ddac3b9a6771dc
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>チュートリアル : hierarchyid データ型の使用
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] このチュートリアルは、[!INCLUDE[tsql](../../includes/tsql-md.md)] については理解しているが、**hierarchyid** データ型は初めて使用するユーザーを対象としています。  
@@ -33,10 +33,10 @@ ms.lasthandoff: 11/17/2017
 ## <a name="what-you-will-learn"></a>学習する内容  
 このチュートリアルは、次の 2 つのレッスンで構成されています。  
   
-[レッスン 1:テーブルの階層構造への変換](../../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
+[レッスン 1: テーブルの階層構造への変換](../../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
 このレッスンでは、親子階層として構成されている既存の従業員テーブルを使用し、 **hierarchyid** データ型を使用して階層を表す新しいテーブルにデータを移動します。 このレッスンを学習するには、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースが必要です。  
   
-[レッスン 2 : 階層テーブルでのデータの作成と管理](../../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+[レッスン 2: 階層テーブルでのデータの作成と管理](../../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
 このレッスンでは、 **hierarchyid** データ型を使用して階層構造を表すテーブルを作成します。 その後、階層的な手法を使用して、テーブル内のデータを操作します。  
   
 ## <a name="requirements"></a>必要条件  

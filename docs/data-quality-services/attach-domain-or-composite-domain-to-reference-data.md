@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e5ed6d30db3643d9e027d7d7c2a537a9deb72d60
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d87911a70dd4f1c891fade863804af7c7f5fd3ea
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>参照データへのドメインまたは複合ドメインのアタッチ
   このトピックでは、データ品質ナレッジ ベースのドメインと複合ドメインを Windows Azure Marketplace の参照データ サービスにアタッチして、高品質参照データに対するナレッジを構築する方法について説明します。 各参照データ サービスには、スキーマ (データ列) が含まれています。 ドメインまたは複合ドメインを参照データ サービスにアタッチしたら、アタッチしたドメインまたはアタッチした複合ドメイン内の個々のドメインを参照データ サービス スキーマの適切な列にマップする必要があります。 複合ドメインを参照データ サービスにアタッチすると、参照データ サービスに 1 つだけドメインをアタッチして、複合ドメイン内の個々のドメインを参照データ サービス スキーマの適切な列にマップできます。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  **[ドメイン管理]** 画面で、 **[ドメインの作成]** アイコンをクリックしてドメインを作成します。 作成するドメインは、 **Address Line**、 **City**、 **State**、および **Zip**の 4 つです。  
   
-5.  **[複合ドメインの作成]** アイコンをクリックして複合ドメインを作成します。 **[複合ドメインの作成]** ダイアログ ボックスで、 **[複合ドメイン名]** ボックスに「 **Address Verification** 」と入力し、手順 3. で作成したすべてのドメインを複合ドメインに含めます。 クリックして **OK**です。  
+5.  **[複合ドメインの作成]** アイコンをクリックして複合ドメインを作成します。 **[複合ドメインの作成]** ダイアログ ボックスで、 **[複合ドメイン名]** ボックスに「 **Address Verification** 」と入力し、手順 3. で作成したすべてのドメインを複合ドメインに含めます。 **[OK]** をクリックします。  
   
 6.  左側の **[ドメイン]** ペインで、 **[Address Verification]**をクリックして複合ドメインを選択し、右側の **[参照データ]** タブをクリックします。  
   

@@ -15,12 +15,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 caps.latest.revision: "27"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 1b9a66523d0d56a8e357ef31ee29545ec2fea3c0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 58b90e91e05c20716faa72063090696f88af4076
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>SQL Server の別のエディションへのアップグレード (セットアップ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 > **フェールオーバー クラスター インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのノードのいずれかで、エディションのアップグレードを実行するだけです。 このノードはアクティブとパッシブのいずれかになります。エディションのアップグレード中にリソースがオフラインになることはありません。 エディションをアップグレードした後は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動するか、別のノードにフェールオーバーする必要があります。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 ローカル インストールの場合は、セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限を持つドメイン アカウントを使用する必要があります。  
   
 > [!IMPORTANT]  

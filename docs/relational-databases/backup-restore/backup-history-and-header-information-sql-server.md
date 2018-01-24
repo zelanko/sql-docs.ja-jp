@@ -36,15 +36,15 @@ helpviewer_keywords:
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c7f10d27faf1c0fc658550f962c71c2419ff8607
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a44dc24eff94398ce3c33bab9d38ba58ab79ccaa
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>バックアップの履歴とヘッダーの情報 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **msdb** データベースには、サーバー インスタンスで行われた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのバックアップ操作および復元操作の完全な履歴が格納されます。 このトピックでは、バックアップと復元の履歴テーブルに加え、バックアップ履歴へのアクセスに使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントについても説明します。 また、データベース ファイルとトランザクション ログ ファイルの一覧表示が役立つ状況について説明し、メディア ヘッダー情報を使用する状況とバックアップ ヘッダー情報を使用する状況の比較についても説明します。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="BnRHistoryTables"></a> バックアップと復元の履歴テーブル  
  ここでは、 **msdb** システム データベース内のバックアップ メタデータおよび復元メタデータが保存される履歴テーブルについて説明します。  
   
-|履歴テーブル|説明|  
+|履歴テーブル|Description|  
 |-------------------|-----------------|  
 |[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|バックアップされるデータ ファイルまたはログ ファイルごとに 1 行のデータを格納します。|  
 |[backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)|バックアップ セットのファイル グループごとに 1 行のデータを格納します。|  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、および RESTORE VERIFYONLY の各 Transact-SQL ステートメントを実行するために CREATE DATABASE 権限が必要です。 この要件により、以前のバージョンよりも、バックアップ ファイルの安全性が高くなり、バックアップ情報が十分保護されます。 このアクセス許可の詳細については、「[データベースの権限の許可&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)」を参照してください。  
   
-|情報ステートメント|バックアップ履歴テーブル|説明|  
+|情報ステートメント|バックアップ履歴テーブル|Description|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|指定したバックアップ セットに含まれるデータベース ファイルとログ ファイルの一覧を含む結果セットを返します。<br /><br /> 詳細については、このトピックの「データベース ファイルとトランザクション ログ ファイルの一覧表示」を参照してください。|  
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|特定のバックアップ デバイス上のすべてのバックアップ セットについて、バックアップ ヘッダーに関するすべての情報を取得します。 RESTORE HEADERONLY を実行して得られる結果は、結果セットです。<br /><br /> 詳細については、このトピックの「バックアップ ヘッダー情報の表示」を参照してください。|  

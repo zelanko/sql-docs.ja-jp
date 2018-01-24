@@ -18,15 +18,15 @@ helpviewer_keywords:
 - column filters [SQL Server replication]
 ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 703402f2956fcc2a5ab84cd8da7e570b58a624f9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 40a9767d36457ca4ade31ab77b15f8f1bbe2d4f0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="define-and-modify-a-column-filter"></a>列フィルターの定義および変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して、列フィルターを定義および変更する方法について説明します。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-define-a-column-filter-for-an-article-published-in-a-merge-publication"></a>スナップショットまたはマージ パブリケーションでパブリッシュされたアーティクルの列フィルターを定義するには  
   
-1.  フィルターを適用するアーティクルを定義します。 詳細については、「 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+1.  フィルターを適用するアーティクルを定義します。 詳しくは、「 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
 2.  パブリッシャー側のパブリケーション データベースで、 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)を実行します。 これにより、アーティクルに含める列、またはアーティクルから削除する列を定義します。  
   

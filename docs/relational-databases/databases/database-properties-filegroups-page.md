@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.filegroups.f1
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12c30e38d6f10e519cb4c635a5a23c561dc3ad93
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b5059c901a9b2dc517b765a642ddbe16bb926471
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-filegroups-page"></a>[データベースのプロパティ] ([ファイル グループ] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、ファイル グループを表示したり、選択したデータベースに新しいファイル グループを追加したりできます。 ファイル グループの種類は、 *Row* ファイル グループ、FILESTREAM データ、およびメモリ最適化ファイル グループに分けられます。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
  **読み取り専用です。**  
  ファイル グループを読み取り専用ステータスに設定します。  
   
- **既定値**  
+ **[Default]**  
  このファイル グループを既定のファイル グループにします。 行と FILESTREAM データに対して、既定のファイル グループをそれぞれ 1 つずつ指定できます。  
   
  **[追加]**  

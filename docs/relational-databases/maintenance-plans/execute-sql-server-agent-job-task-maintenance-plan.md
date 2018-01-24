@@ -15,26 +15,26 @@ f1_keywords: sql13.swb.maint.executejob.f1
 helpviewer_keywords: Execute SQL Server Agent Job Task dialog box
 ms.assetid: 4ed75956-ebb8-4d8c-9c16-fc0eb00bd3a0
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ae392ca01c8db0118a1657622416e7baf7d382f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8584dfcef019988a8b95bf1297cfe059d5b7e59a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>[SQL Server エージェント ジョブの実行タスク] (メンテナンス プラン)
+# <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>[SQL Server エージェント ジョブの実行タスク] \(メンテナンス プラン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[SQL Server エージェント ジョブの実行タスク]** ダイアログを使用すると、メンテナンス プラン内で Microsoft SQL Server エージェント ジョブを実行できます。 選択されている接続に SQL Server エージェント ジョブが存在しない場合は、このオプションを利用できません。  
   
  このタスクでは、 **.sp_start_job** ステートメントを使用します。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
- **接続**  
+ **[接続]**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
- **新規**  
+ **[新規作成]**  
  このタスクを実行するときに使用する新しいサーバー接続を作成します。 **[新しい接続]** ダイアログ ボックスについては、後で説明します。  
   
  **[使用できる SQL Server エージェント ジョブ]**  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
  **[特定のユーザー名とパスワードを使用する]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
   
- **ユーザー名**  
+ **User name**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  
   
  **Password**  

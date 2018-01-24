@@ -24,13 +24,13 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 caps.latest.revision: "151"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d54b7d77cb265f2ba8ee79ce993ce30ce8fdf441
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d127b3479e6bb38483d39556884d1498d9c662c2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>前提条件、制限事項、推奨事項 - Always On 可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -188,7 +188,7 @@ ms.lasthandoff: 11/20/2017
   
 |タスク|必要な権限|  
 |----------|--------------------------|  
-|データベース ミラーリング エンドポイントを作成する|CREATE ENDPOINT 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  また、CONTROL ON ENDPOINT 権限も必要です。 詳細については、「[GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。|  
+|データベース ミラーリング エンドポイントを作成する|CREATE ENDPOINT 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  また、CONTROL ON ENDPOINT 権限も必要です。 詳細については、「 [GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。|  
 |有効にする [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]|ローカル コンピューターの **Administrator** グループのメンバーシップおよび WSFC に対するフル コントロール権限が必要です。|  
   
 ###  <a name="RelatedTasksSI"></a> 関連タスク (サーバー インスタンス)  
@@ -196,7 +196,7 @@ ms.lasthandoff: 11/20/2017
 |タスク|トピック|  
 |----------|-----------|  
 |データベース ミラーリング エンドポイントが存在するかどうかを確認する|[sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)|  
-|データベース ミラーリング エンドポイントを作成する (まだ存在しない場合)|[Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)<br /><br /> [Always On 可用性グループのデータベース ミラーリング エンドポイントの作成 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)|  
+|データベース ミラーリング エンドポイントを作成する (まだ存在しない場合)|[Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)<br /><br /> [AlwaysOn 可用性グループのデータベース ミラーリング エンドポイントの作成 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)|  
 |可用性グループを有効にする|[Always On 可用性グループの有効化と無効化 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)|  
   
 ###  <a name="RelatedContentSI"></a> 関連コンテンツ (サーバー インスタンス)  
@@ -281,7 +281,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **フェールオーバー クラスター マネージャーを使用して可用性グループを操作しないでください。**  
   
-     例:  
+     例 :  
   
     -   可用性グループのプロパティ (たとえば、有効な所有者) を変更しないでください。  
   
@@ -314,7 +314,7 @@ ms.lasthandoff: 11/20/2017
   
 |タスク|必要な権限|  
 |----------|--------------------------|  
-|可用性グループの作成|**sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限のいずれかが必要です。|  
+|可用性グループの作成|**sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、CONTROL SERVER 権限のいずれかが必要です。|  
 |可用性グループの変更|可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。<br /><br /> さらに、データベースを可用性グループに参加させるには、 **db_owner** 固定データベース ロールのメンバーシップが必要です。|  
 |可用性グループの削除|可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。 ローカル レプリカの場所でホストされていない可用性グループを削除するには、その可用性グループ上の CONTROL SERVER 権限または CONTROL 権限が必要です。|  
   
@@ -397,10 +397,10 @@ ms.lasthandoff: 11/20/2017
   
 -   [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Always On - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [AlwaysOn - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>参照  
- [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [フェールオーバー クラスタリングと Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [Always On クライアント接続 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)  
   

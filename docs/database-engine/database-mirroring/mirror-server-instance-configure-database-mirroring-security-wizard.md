@@ -16,13 +16,13 @@ ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 caps.latest.revision: "42"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f88d0c71337f7b4c4fc1e26c2c483b26723c073
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6440acda92e77b3558cf60ba3c54cb5b8b3c042
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>[ミラー サーバー インスタンス] (データベース ミラーリング セキュリティ構成ウィザード)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、ミラー データベースを持つサーバー インスタンスに関する情報を指定できます。  
@@ -36,13 +36,13 @@ ms.lasthandoff: 11/20/2017
   
 -   [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[ミラー サーバー インスタンス]**  
  **[データベースのプロパティ]** ダイアログ ボックスの **[ミラー化]** ページで、ミラー サーバー インスタンスが既に指定されている場合、そのインスタンスが表示されます。詳細については、「[[データベースのプロパティ] &#40;[ミラーリング] ページ&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)」を参照してください。  
   
  まだ指定されていない場合は、ミラー サーバー インスタンスの名前を入力します。 プリンシパル サーバー インスタンスと同じ名前をミラー サーバー インスタンスに指定しないように注意してください。  
   
- **Connect**  
+ **のインスタンスに接続するときには、**  
  ミラー サーバー インスタンスが指定されていない場合、 **[接続]**をクリックします。 **[サーバーへの接続]** ダイアログ ボックスが表示されます。ここでサーバー インスタンスを指定し、接続を確立できます。  
   
  インスタンスが指定されていても、エンドポイントが存在するかどうかをチェックできる権限を持つ接続がない場合には、 **[接続]**をクリックします。 **[サーバーへの接続]** ダイアログ ボックスが表示されます。この場合、サーバー インスタンスは選択されており、変更できません。 十分な権限を持つドメイン アカウントを指定して、サーバー インスタンスに接続します。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
 -   サーバー インスタンスに対するリスナー ポートが存在しない場合、 **[リスナー ポート]** テキスト ボックスにポート番号 5022 が表示されます。 使用可能な任意のポート番号を入力できます (7022 など)。  
   
--   ミラーリング エンドポイントが既に存在する場合、そのエンドポイントからのポート番号が表示されます。 ポートを変更する必要がある場合は、ALTER ENDPOINT コマンドを使用します。 詳細については、「[ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)」を参照してください。  
+-   ミラーリング エンドポイントが既に存在する場合、そのエンドポイントからのポート番号が表示されます。 ポートを変更する必要がある場合は、ALTER ENDPOINT コマンドを使用します。 詳細については、「 [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)」を参照してください。  
   
     > [!NOTE]  
     >  ポート番号は必須です。  

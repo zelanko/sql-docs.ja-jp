@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 889780ede86e06d81145609b30949e33d602664a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 239642c8f742192db94c6131411bf1bfa047fbcd
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>例 : ID ディレクティブと IDREFS ディレクティブの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 要素の属性は、**ID** 型の属性として指定することができます。さらに、この属性を参照する **IDREFS** 属性を使用できます。 これにより、ドキュメント内のリンク作成が可能になります。これは、リレーショナル データベースにおける主キーと外部キーのリレーションシップに似ています。  

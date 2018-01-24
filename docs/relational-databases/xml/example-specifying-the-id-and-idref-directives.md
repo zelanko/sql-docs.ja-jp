@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 07d914dcef815b50aeafc6e278d025f28df09bb6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 878e82dc8b2b36922983511aeafa8c69138c4d26
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>例 : ID ディレクティブと IDREF ディレクティブの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] この例は、「[ELEMENTXSINIL ディレクティブの指定](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)」の例とほぼ同じで、 クエリで **ID** ディレクティブと **IDREF** ディレクティブを指定している点のみが異なります。 これらのディレクティブは、<`OrderHeader`> 要素と <`OrderDetail`> 要素の **SalesPersonID** 属性の型を上書きします。 これにより、ドキュメント内のリンクが形成されます。 上書きされた型を確認するには、スキーマが必要です。 そのため、このクエリでは、FOR XML 句に **XMLDATA** オプションを指定して、スキーマを取得しています。  

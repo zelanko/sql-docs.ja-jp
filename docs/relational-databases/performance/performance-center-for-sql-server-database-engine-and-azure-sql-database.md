@@ -25,13 +25,13 @@ ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 caps.latest.revision: "14"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8dee082c3a77c230616492823c6df889d0f3fc1a
-ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
+ms.openlocfilehash: a4f769cf73abdb85749cd7104a74602dd5863e9a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページでは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] でのパフォーマンスに関して必要になる情報の検索に役立つリンクを示します。  

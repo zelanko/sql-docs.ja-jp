@@ -18,15 +18,15 @@ helpviewer_keywords:
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8c204e1ed53a4969b903d7821e151dd6cb183848
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c267615cb7970d7833821662cfd97662093a2edb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="rebuild-system-databases"></a>システム データベースの再構築
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [master](../../relational-databases/databases/master-database.md)、[model](../../relational-databases/databases/model-database.md)、[msdb](../../relational-databases/databases/msdb-database.md)、または [resource](../../relational-databases/databases/resource-database.md) の各システム データベースの損傷による問題を解決するか、既定のサーバー レベルの照合順序を変更するには、システム データベースを再構築する必要があります。 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でシステム データベースを再構築する手順について説明します。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
      [再構築エラーのトラブルシューティング](#Troubleshoot)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  master、model、msdb、および tempdb の各システム データベースを再構築する場合は、元の場所からデータベースを削除して再作成する必要があります。 再構築ステートメントに新しい照合順序を指定する場合は、その照合順序の設定でシステム データベースが作成されます。 これらのデータベースに対するユーザーの変更はすべて失われます。 たとえば、master データベースのユーザー定義オブジェクト、msdb にスケジュールされたジョブ、または model データベースの既定のデータベース設定に対する変更が対象になります。  
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName /SQLSYSADMINACCOUNTS=accounts [ /SAPWD= StrongPassword ] [ /SQLCOLLATION=CollationName]**  
   
-    |[パラメーター名]|説明|  
+    |[パラメーター名]|Description|  
     |--------------------|-----------------|  
     |/QUIET または /Q|セットアップがユーザー インターフェイスなしで実行されるように指定します。|  
     |/ACTION=REBUILDDATABASE|セットアップでシステム データベースを再作成することを指定します。|  

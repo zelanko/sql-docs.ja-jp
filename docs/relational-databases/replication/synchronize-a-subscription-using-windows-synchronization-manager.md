@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Windows Synchronization Manager
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 202347a7f949b382ccc1fa9f635c09c1679475d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a50dbf98515a00a947ba54207d3688d24417b7f3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したサブスクリプションの同期
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同期マネージャーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が同期マネージャーと同じコンピューターで実行されている場合には、サブスクリプションを Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションに同期させるためだけに使用できます (オフライン ファイルや Web ページを同期するためにも使用できます)。 同期マネージャーを使用するには、以下の手順を実行します。  

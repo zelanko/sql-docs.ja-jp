@@ -20,15 +20,15 @@ helpviewer_keywords:
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d146aaae7ef0a3e033deb1fb3a3cc51b49663abc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a31fed7f22953170b443c42b6394786e6fa9a60e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>トランザクション レプリケーションの更新可能なサブスクリプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +131,7 @@ ms.lasthandoff: 11/17/2017
     -   競合が予想され、"サブスクライバー優先" の競合解決方法を使用する場合は、パブリッシャーまたはサブスクライバーで外部キーの制約は使用しないでください。"パブリッシャー優先" の競合解決方法を使用する場合は、サブスクライバーで外部キーの制約は使用しないでください。  
   
 ## <a name="see-also"></a>参照  
- [ピア ツー ピア トランザクション レプリケーション](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [トランザクション レプリケーションで使用するパブリケーションの種類](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [パブリケーションのサブスクライブ](../../../relational-databases/replication/subscribe-to-publications.md)  

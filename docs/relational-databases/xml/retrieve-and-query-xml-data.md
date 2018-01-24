@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 013f7f8de93cdeb172200a969a17152657b514ab
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bbf1758426b38100a75c889936185e2e152691a3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="retrieve-and-query-xml-data"></a>XML データの取得および XML データに対するクエリの実行
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] このトピックでは、XML データのクエリを実行するために指定する必要があるクエリ オプションについて説明します。 また、XML インスタンスをデータベースに格納するときに保持されない部分についても説明します。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XML インスタンスの内容は保持されますが、XML データ モデルで重要と見なされない側面は保持されません。 つまり、取得した XML インスタンスは、サーバーに格納されたインスタンスと同一とは限りませんが、含まれている情報は同じです。  
   
 ### <a name="xml-declaration"></a>XML 宣言  
- インスタンスをデータベースに格納する場合は、そのインスタンスの XML 宣言は保持されません。 例:  
+ インスタンスをデータベースに格納する場合は、そのインスタンスの XML 宣言は保持されません。 例 :  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -85,7 +85,7 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- 結果の名前空間プレフィックスは、異なる可能性があります。 例:  
+ 結果の名前空間プレフィックスは、異なる可能性があります。 例 :  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  

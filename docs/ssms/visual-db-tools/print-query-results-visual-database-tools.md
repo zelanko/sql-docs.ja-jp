@@ -20,13 +20,13 @@ ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f3633d69465df3d595d9145dfada1f80bf14d04
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 60759d9fb81b6602665325dc8f5c9f5fba702d99
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="print-query-results-visual-database-tools"></a>クエリ結果の印刷 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] クエリの結果を印刷するには、[結果ペイン](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)の内容をワード プロセッシング プログラムなど、他の Windows プログラムにコピーし、書式を設定してから印刷します。  

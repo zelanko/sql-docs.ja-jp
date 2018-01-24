@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5fd105a2da0e4822ee3da0b2f8929f70d0185cb5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca0bca9210691a4c53cc2c39cb0110159994192b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Unicode 文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 拡張文字や DBCS 文字を含むデータ ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送する場合は、Unicode 文字形式を使用することをお勧めします。 Unicode 文字データ形式を使用すると、操作を実行するクライアントで使用しているコード ページとは異なるコード ページを使用して、サーバーからデータをエクスポートできます。 このような場合、Unicode 文字形式を使用すると、次の利点があります。  
@@ -47,7 +47,7 @@ Unicode 文字形式を使用するときは、以下の点をご考慮くださ
 
 * 既定では、[bcp ユーティリティ](../../tools/bcp-utility.md)は、文字データ フィールド間の区切りにはタブ文字を、レコードの終わりには改行文字を使用します。  別のターミネータの指定方法の詳細については、「[フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。
 
-* Unicode 文字形式のデータ ファイルに格納されている [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) データの動作は、[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) データではなく [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) データとして格納されている点を除いて、文字形式のデータ ファイルの場合と同様になります。 文字形式の詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
+* Unicode 文字形式のデータ ファイルに格納されている [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) データの動作は、 [char](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) データではなく [nchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) データとして格納されている点を除いて、文字形式のデータ ファイルの場合と同様になります。 文字形式の詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
 
 ## Unicode 文字形式、bcp、フォーマット ファイルの使用に関する特別な注意点<a name="special_considerations"></a>
 Unicode 文字形式のデータ ファイルは、Unicode ファイルの規則に従います。  ファイルの先頭の 2 バイトは、16 進数の 0xFFFE です。  これらのバイトは、バイト順マーク (BOM) としての役割を果たし、高位のバイトをファイルの先頭に格納するか、最後に格納するかを指定します。  [bcp ユーティリティ](../../tools/bcp-utility.md) が BOM の解釈を間違えてインポート プロセスの一部が失敗し、次のようなエラー メッセージが表示される場合があります。
@@ -86,7 +86,7 @@ Unicode 文字形式のデータは [bcp](../../tools/bcp-utility.md)、[BULK IN
   
 Unicode 文字形式は、次のコマンド オプションでサポートされています。  
   
-|Command|オプション|説明|  
+|コマンド|オプション|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-w**|Unicode 文字形式を使用します。|  
 |BULK INSERT|DATAFILETYPE **='widechar'**|データの一括インポート時に Unicode 文字形式を使用します。|  

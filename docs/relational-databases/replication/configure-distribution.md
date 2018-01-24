@@ -23,15 +23,15 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], configuring distribution
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2aa81e571c53a0271b1c795198f206735abb3f32
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dfc635f07a64fdb9c4055e402407b7a70bf3329d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-distribution"></a>ディストリビューションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ディストリビューターは、ディストリビューション データベースを含むサーバーです。ディストリビューション データベースには、すべての種類のレプリケーションのメタデータと履歴データ、およびトランザクション レプリケーションに対するトランザクションが格納されます。 レプリケーションを設定するには、ディストリビューターを構成する必要があります。 パブリッシャーはそれぞれ 1 つのディストリビューター インスタンスにしか割り当てることができませんが、複数のパブリッシャーで 1 つのディストリビューターを共有できます。 サーバーがディストリビューターとして指定されると、次のようなリソースが新たに消費されることになります。  

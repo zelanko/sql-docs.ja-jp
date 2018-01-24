@@ -17,15 +17,15 @@ f1_keywords:
 helpviewer_keywords: Backup Timeline
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0bb6bf985317fc594ddf6feadf17c7beee857de1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d3a58978a14d96a772675db69ab2fe425608987e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-timeline"></a>バックアップ タイムライン
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**[バックアップ タイムライン]** ダイアログ ボックスを使用して、特定の時点のデータベースを復元するためのバックアップを検索および指定します。 **[バックアップのタイムライン]** ダイアログ ボックスにアクセスするには、 **[データベースの復元] ([全般] ページ)** ペイン上の **[タイムライン]** をクリックします。 このダイアログ ボックスで、データベースで実行される復元操作のタイムラインを表示できます。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
  **日付**  
  日付を入力するか、ボックスの一覧から選択します。  
   
- **[時刻]**  
+ **Time**  
  復元を停止する特定の時点を指定する日付を入力または選択します。  
   
  **[タイムラインの間隔]**  

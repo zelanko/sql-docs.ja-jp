@@ -16,15 +16,15 @@ helpviewer_keywords:
 - replication, SQL Database
 ms.assetid: e8484da7-495f-4dac-b38e-bcdc4691f9fa
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8733b33aa97e33daf1a7394d5e0df8fb2d97a6d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c06ca9a84504ca2ce9958e39e352a7ad93c9a56d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-to-sql-database"></a>SQL Database へのレプリケーション
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -156,7 +156,7 @@ ms.lasthandoff: 11/17/2017
  -  
  -## 参照  
  - [パブリケーションの作成](../../relational-databases/replication/publish/create-a-publication.md)   
- - [プッシュ サブスクリプションの作成](../../relational-databases/replication/create-a-push-subscription.md)   
+ - [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  - [レプリケーションの種類](../../relational-databases/replication/types-of-replication.md)   
  - [監視 &#40;レプリケーション&#41;](../../relational-databases/replication/monitor/monitoring-replication.md)   
  - [サブスクリプションの初期化](../../relational-databases/replication/initialize-a-subscription.md)  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data formats [SQL Server], Unicode native
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8301c9cf1b0e3494a6a146f16b4f9a86ba0926e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b3217ebde3a1d9b3424b2fcb9c53954504a853a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Unicode ネイティブ形式は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール環境間で情報をコピーする必要がある場合に役立ちます。 非文字データに対してネイティブ形式を使用すると、時間を節約でき、文字形式との間でデータ型の不要な変換が行われなくなります。 すべての文字データに対して Unicode 文字形式を使用すると、異なるコード ページを使用している複数のサーバー間でデータを一括転送するときに、拡張文字の損失を防ぐことができます。 Unicode ネイティブ形式のデータ ファイルは、すべての一括インポート方法で読み取ることができます。  
@@ -45,7 +45,7 @@ Unicode ネイティブ形式のデータは、[bcp](../../tools/bcp-utility.md)
   
 Unicode ネイティブ形式は、次のコマンド オプションでサポートされています。  
   
-|Command|オプション|説明|  
+|コマンド|オプション|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-N**|**bcp** ユーティリティで Unicode ネイティブ形式が使用されるようにします。Unicode ネイティブ形式では、すべての非文字データに対してネイティブ (データベース) データ型が使用され、すべての文字 (**char**、 **nchar**、 **varchar**、 **nvarchar**、 **text**、 **ntext**) データに対して Unicode 文字データ形式が使用されます。|  
 |BULK INSERT|DATAFILETYPE **='widenative'**|データの一括インポート時に Unicode ネイティブ形式を使用します。|  

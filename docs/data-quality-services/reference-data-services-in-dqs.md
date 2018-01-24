@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4aa8dd433a02aff0dbca1b2d6e3843b7f9cf64d5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1c8ff28a3194600f1783158deb5e56d96b036963
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS の参照データ サービス
   参照データとは、信頼されたパブリック ドメインで使用できる、またはプレミアム商用コンテンツ プロバイダーから提供される、関連または項目別のグローバル データ (エンタープライズの境界を超えるデータ) の正確で完全なセットを表します。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  **データ品質プロジェクトでマップされたドメインをクレンジング アクティビティに使用する**: **クレンジング** アクティビティのデータ品質プロジェクトを作成しているときに、手順 2. で参照データ サービスにマップされたドメインまたは複合ドメインを含むナレッジ ベースを選択し、クレンジング アクティビティを実行します。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

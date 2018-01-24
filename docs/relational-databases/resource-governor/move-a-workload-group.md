@@ -17,38 +17,38 @@ helpviewer_keywords:
 - Resource Governor, workload group move
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1dd84ba40afa6cfaa6edee527c07d0418446d1d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9059139e5ccdc4327095a913752d55a84443d810
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="move-a-workload-group"></a>ワークロード グループの移動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Resource Governor のワークロード グループを別のリソース プールに移動するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
   
--   **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)、 [権限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
 -   **ワークロード グループの移動に使用するもの:**  [SQL Server Management Studio](#MoveWGSSMS)、 [Transact-SQL](#MoveWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
- Resource Governor の保留中の構成操作がある場合、ワークロード グループを移動できません。  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+ リソース ガバナーの保留中の構成操作がある場合、ワークロード グループを移動できません。  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
- Resource Governor の保留中の構成操作がある場合、ワークロード グループを移動できません。 [sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) 動的管理ビューにクエリを実行して is_configuration_pending の現在の状態を取得することにより、構成が保留中かどうかを確認できます。  
+ リソース ガバナーの保留中の構成操作がある場合、ワークロード グループを移動できません。 [sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) 動的管理ビューにクエリを実行して is_configuration_pending の現在の状態を取得することにより、構成が保留中かどうかを確認できます。  
   
-###  <a name="Permissions"></a> アクセス許可  
+###  <a name="Permissions"></a> Permissions  
  ワークロード グループを移動するには、CONTROL SERVER 権限が必要です。  
   
 ##  <a name="MoveWGSSMS"></a> SQL Server Management Studio を使用してワークロード グループを移動する  
  **を使用してワークロード グループを移動するには [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**  
   
-1.  オブジェクト エクスプローラーで、 **[管理]** ノードを **[Resource Governor]**ノードまで再帰的に展開します。  
+1.  オブジェクト エクスプローラーで、 **[管理]** ノードを **[リソース ガバナー]**ノードまで再帰的に展開します。  
   
-2.  **[Resource Governor]** を右クリックし、 **[プロパティ]**をクリックすると、 **[Resource Governor のプロパティ]** ページが開きます。  
+2.  **[リソース ガバナー]** を右クリックし、 **[プロパティ]**をクリックすると、 **[リソース ガバナーのプロパティ]** ページが開きます。  
   
 3.  **[リソース プール]** ウィンドウで、移動するワークロード グループを含むリソース プールをクリックします。 **[ワークロード グループ]** ウィンドウに、対象リソース プール内のワークロード グループが表示されます。  
   
@@ -79,8 +79,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [[Resource Governor]](../../relational-databases/resource-governor/resource-governor.md)   
- [Resource Governor の有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   
+ [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
+ [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [リソース プールの作成](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [ワークロード グループの作成](../../relational-databases/resource-governor/create-a-workload-group.md)   
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   

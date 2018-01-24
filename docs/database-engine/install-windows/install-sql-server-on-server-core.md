@@ -15,12 +15,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 caps.latest.revision: "43"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 701ae800a3f3d91429db8726359032f34c9991e8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 23e5a84e7bff05edf16ff232fe18289abc33019e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core への SQL Server のインストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Server Core インストールにインストールできます。   
@@ -29,7 +29,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
  現在サポートされているオペレーティング システムの一覧については、「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を参照してください。
 
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
   
 |要件|インストール方法|  
 |-----------------|--------------------|  
@@ -43,14 +43,14 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
 |機能|Supported|追加情報|  
 |-------------|---------------|----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービス|可||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション|可||  
-|フルテキスト検索|可||  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|可||  
-|[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|可||  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービス|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション|はい||  
+|フルテキスト検索|はい||  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|はい||  
+|[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|はい||  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|いいえ||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|いいえ||  
-|クライアント ツール接続|可||  
+|クライアント ツール接続|はい||  
 |Integration Services サーバー|はい|新しい Integration Services サーバーとその機能の詳細については、[!INCLUDE[ssCurrent](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md) を参照してください。|  
 |クライアント ツールの旧バージョンとの互換性|いいえ||  
 |クライアント ツール SDK|いいえ||  
@@ -59,10 +59,10 @@ Server Core インストール オプションでは、特定のサーバー ロ
 |管理ツール - 完全|リモートのみ|Server Core へのこれらの機能のインストールはサポートされていません。 これらのコンポーネントは、Server Core ではない別のサーバーにインストールし、Server Core にインストールされている [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスに接続できます。|  
 |分散再生コントローラー|いいえ||  
 |分散再生クライアント|リモートのみ|Server Core へのこれらの機能のインストールはサポートされていません。 これらのコンポーネントは、Server Core ではない別のサーバーにインストールし、Server Core にインストールされている [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスに接続できます。|  
-|SQL クライアント接続 SDK|可||  
-|Microsoft Sync Framework|可|Microsoft Sync Framework は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール パッケージに含まれていません。 適切なバージョンの Sync Framework は、この [Microsoft ダウンロード センター ページ](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) からダウンロードして、Server Core を実行しているコンピューターにインストールできます。|  
-|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|不可||  
-|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|不可||  
+|SQL クライアント接続 SDK|はい||  
+|Microsoft Sync Framework|はい|Microsoft Sync Framework は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール パッケージに含まれていません。 適切なバージョンの Sync Framework は、この [Microsoft ダウンロード センター ページ](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) からダウンロードして、Server Core を実行しているコンピューターにインストールできます。|  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|いいえ||  
+|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|いいえ||  
   
 ## <a name="supported-scenarios"></a>サポートされるシナリオ  
  次の表では、Server Core に [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] をインストールする場合のサポートされるシナリオのマトリックスを示します。  
@@ -74,7 +74,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
 |OS の言語とロケール (組み合わせ) での[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の言語|JPN (日本語) Windows への ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> GER (ドイツ語) Windows への ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> CHS (中国語 - 中国) Windows への ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> ARA (アラビア語 (SA)) Windows への ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> THA (タイ語) Windows への ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> TRK (トルコ語) Windows への ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> pt-PT (ポルトガル語 - ポルトガル) Windows への ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> ENG (英語) Windows への ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Windows のエディション|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
   
-## <a name="upgrade"></a>アップグレード 
+## <a name="upgrade"></a>UPGRADE 
  Server Core インストールでは、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] へのアップグレードがサポートされています。  
   
 ## <a name="install"></a>Install  
@@ -91,7 +91,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
 ### <a name="feature-parameters"></a>機能パラメーター  
   
-|機能パラメーター|説明|  
+|機能パラメーター|Description|  
 |-----------------------|-----------------|  
 |SQLENGINE|[!INCLUDE[ssDE](../../includes/ssde-md.md)]のみをインストールします。|  
 |レプリケーション|[!INCLUDE[ssDE](../../includes/ssde-md.md)]と共にレプリケーション コンポーネントをインストールします。|  
@@ -104,7 +104,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
 
  機能パラメーターの使い方の例を参照してください。  
   
-|パラメーターおよび値|説明|  
+|パラメーターおよび値|Description|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|[!INCLUDE[ssDE](../../includes/ssde-md.md)]のみをインストールします。|  
 |/FEATURES=SQLEngine,FullText|[!INCLUDE[ssDE](../../includes/ssde-md.md)] とフルテキストをインストールします。|  

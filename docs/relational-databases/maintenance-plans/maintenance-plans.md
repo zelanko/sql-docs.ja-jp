@@ -18,15 +18,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server]
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7db2ba76a3be5099075ef56871794b59066eb538
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 62c07a1aacaf0d2cc30808b41d0f58360144acff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plans"></a>メンテナンス プラン
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] メンテナンス プランでは、データベースを最適化したり、データベースを定期的にバックアップしたり、データベースの不整合をなくしたりするために必要なタスクのワークフローを作成します。 メンテナンス プラン ウィザードでも主要なメンテナンス プランを作成できますが、プランを手動で作成するとより柔軟性が高くなります。  
@@ -63,12 +63,12 @@ ms.lasthandoff: 11/17/2017
   
  メンテナンス タスクで生成される結果は、レポートとしてテキスト ファイルに書き込むことや、**msdb** 内のメンテナンス プラン用のテーブル (**sysmaintplan_log** や **sysmaintplan_logdetail**) に書き込むことができます。 ログ ファイル ビューアーで結果を参照するには、**[メンテナンス プラン]** を右クリックし、**[履歴の表示]** をクリックします。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  メンテナンス プランの基礎知識については、次の各トピックを参照してください。  
   
 |||  
 |-|-|  
-|**Description**|**トピック**|  
+|**[説明]**|**トピック**|  
 |**Agent XP** サーバー構成オプションを構成し、SQL Server エージェントの拡張ストアド プロシージャを有効にします。|[Agent XP サーバー構成オプション](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してメンテナンス プランを作成する方法について説明します。|[メンテナンス プランの作成](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |メンテナンス プラン デザイン画面を使用してメンテナンス プランを作成する方法について説明します。|[メンテナンス プランの作成 &#40;メンテナンス プラン デザイン画面&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  

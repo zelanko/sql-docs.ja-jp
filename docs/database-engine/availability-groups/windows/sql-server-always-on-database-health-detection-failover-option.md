@@ -22,13 +22,13 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 caps.latest.revision: "4"
 author: JasonWHowell
 ms.author: jasonh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c9f10162900579bcf871b2a1bf63d8aa5cc4ac6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fe422c7445debc085f9d610550f365ccc4f1b8f2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性グループのデータベース レベルの正常性検出フェールオーバー オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server 2016 以降、Always On 可用性グループを構成するときに、データベース レベルの正常性検出 (DB_FAILOVER) オプションを使用できます。 何らかの問題が発生し、データベースがオンライン状態でなくなると、このデータベース レベルの正常性検出によって検知され、可用性グループの自動フェールオーバーがトリガーされます。 
@@ -102,9 +102,9 @@ select name, db_failover from sys.availability_groups
 
 dmv 出力の例:
 
-name  |  db_failover  
+NAME  |  db_failover  
 ---------|---------
-| Contoso-ag |  1  |
+| Contoso-ag |  @shouldalert  |
 
 ### <a name="errorlog"></a>ErrorLog 
 データベース レベルの正常性検出チェックが原因で、可用性グループがフェールオーバーした場合、SQL Server エラー ログ (または sp_readerrorlog のテキスト) にはエラー メッセージ 41653 が表示されます。 
@@ -172,7 +172,7 @@ SQL Server Management Studio を使用して、プライマリ SQL Server に接
 
 この出力例は、AutoHa-Sample2 という名前のデータベースで "fault_type 2 シャットダウン" が発生したため、SQLSERVER-1 という名前のレプリカの、可用性グループ Contoso-ag で、重大なイベントが発生したことを示しています。
 
-|フィールド  | 値
+|フィールド  | ReplTest1
 |---------|---------
 |availability_group_id |    24E6FE58-5EE8-4C4E-9746-491CFBB208C1
 |availability_group_name |  Contoso-ag
@@ -180,7 +180,7 @@ SQL Server Management Studio を使用して、プライマリ SQL Server に接
 |availability_replica_name |    SQLSERVER-1
 |database_name |    AutoHa-Sample2
 |database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
-|failover_ready_replicas |  1
+|failover_ready_replicas |  @shouldalert
 |fault_type |   2
 |is_critical    | True
 

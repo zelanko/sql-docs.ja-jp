@@ -16,33 +16,33 @@ helpviewer_keywords:
 - resource pools [SQL Server], alter
 ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76c42556718a5bafc6305190c8491f62e90b8bea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 65a7fc8f9fc9a911ab60c2051d4bf785c964132c
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-resource-pool-settings"></a>リソース プールの設定の変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   リソース プールの設定を変更するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。  
   
--   **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)、 [権限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
 -   **リソース プールの設定変更に使用するもの:**  [SQL Server Management Studio](#ChgRPProp)、 [Transact-SQL](#ChgRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  CPU の割合の最大値は、CPU の割合の最小値以上にする必要があります。 メモリの割合の最大値は、メモリの割合の最小値以上にする必要があります。  
   
  すべてのリソース プールの CPU の割合の最小値の合計およびメモリの割合の最小値の合計が、それぞれ 100 を超えないようにしてください。  
   
-###  <a name="Permissions"></a> 権限  
+###  <a name="Permissions"></a> Permissions  
  リソース プールの設定を変更するには、CONTROL SERVER 権限が必要です。  
   
 ##  <a name="ChgRPProp"></a> SQL Server Management Studio を使用してリソース プールの設定を変更する  

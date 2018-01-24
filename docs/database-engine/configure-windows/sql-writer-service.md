@@ -24,15 +24,15 @@ helpviewer_keywords:
 - VSS
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4c8ba5cd5b5b2ad9d18668d8c6d4065391160e13
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ee2c7079b0ef44294585c8b8aaa4548fdf12892f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-writer-service"></a>SQL ライター サービス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL ライター サービスは、ボリューム シャドウ コピー サービス フレームワークを通じて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元に関する追加機能を提供します。  
@@ -52,10 +52,10 @@ ms.lasthandoff: 11/20/2017
 ## <a name="virtual-backup-device-interface-vdi"></a>Virtual Backup Device Interface (VDI)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、Virtual Backup Device Interface (VDI) と呼ばれる API が用意されています。これにより、独立系ソフトウェア ベンダーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を独自の製品に統合して、バックアップおよび復元操作のサポートを提供できます。 これらの API は、最高の信頼性とパフォーマンスを提供するほか、ホット バックアップ機能やスナップショット バックアップ機能など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のあらゆるバックアップおよび復元機能をサポートするように設計されています。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  SQL ライター サービスは、 **ローカル システム** アカウントで実行する必要があります。 SQL ライター サービスは、 **に接続するために** NT Service\SQLWriter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインを使用します。 **NT Service\SQLWriter** ログインを使用すると、SQL ライター プロセスは **ログインなし**と指定されたアカウントを通じた低い特権レベルで実行され、その結果、脆弱性を制限することになります。 SQL ライター サービスが無効になっている場合は、System Center Data Protection Manager や他のいくつかのサード パーティ製品のように VSS スナップショットに依存する任意のユーティリティは動作に失敗するか、より悪い場合は、一貫性のないデータベースのバックアップを取得するリスクが生じます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行するシステムと、ホスト システム (仮想マシンの場合) のどちらも、 [!INCLUDE[tsql](../../includes/tsql-md.md)] によるバックアップのみを必要とし、それ以外のバックアップを何も必要としない場合は、SQL ライター サービスを無効にしてログインを削除しても安全です。  バックアップが直接的なスナップショット ベースであるかどうかにかかわりなく、SQL ライター サービスはシステム レベルとボリューム レベルどちらのバックアップからも開始できることに注意してください。 いくつかのシステム バックアップ製品は、開いているファイルやロックされているファイルがブロックされることを防止するために VSS を使用します。 SQL ライター サービスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのすべての I/O を短時間にわたって停止するため、自らが動作する目的で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内で昇格された権限を必要とします。  
   
-## <a name="features"></a>機能  
+## <a name="features"></a>[機能]  
  SQL ライターは次の機能をサポートしています。  
   
 -   フルテキスト カタログなど、データベースの完全バックアップおよび復元  

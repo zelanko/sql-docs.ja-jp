@@ -23,13 +23,13 @@ ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8655f18aec310a10ac133fb79ee2230cc119f712
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4399ef7bef888655c6c69926b622612ba9bb84d8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>ログ配布の監視 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ログ配布を構成すると、すべてのログ配布サーバーの状態に関する情報を監視できます。 ログ配布操作の履歴と状態は、ログ配布ジョブにより、常にローカルに保存されます。 バックアップ操作の履歴と状態はプライマリ サーバーに格納され、コピー操作と復元操作の履歴と状態はセカンダリ サーバーに格納されます。 リモートの監視サーバーを実装している場合、この情報はリモートの監視サーバーにも格納されます。  
@@ -37,14 +37,14 @@ ms.lasthandoff: 11/20/2017
  ログ配布操作がスケジュールどおりに実行されなかった場合に警告を発生させることができます。 エラーは、バックアップ操作と復元操作の状態を監視する警告ジョブによって発生します。 これらのエラーの発生をオペレーターに通知する警告を定義できます。 監視サーバーを構成している場合、警告ジョブは、ログ配布構成に関するすべての操作に対してエラーを発生させる監視サーバーで実行されます。 監視サーバーが指定されていない場合、警告ジョブは、バックアップ操作を監視しているプライマリ サーバー インスタンスで実行されます。 監視サーバーが指定されていない場合、警告ジョブは、ローカルのコピー操作と復元操作を監視している各セカンダリ サーバー インスタンスでも実行されます。  
   
 > [!IMPORTANT]  
->  ログ配布構成を監視するには、ログ配布を有効にするときに監視サーバーを追加する必要があります。 監視サーバーを後で追加する場合は、ログ配布構成を削除して、代わりに監視サーバーを含む新しい構成を用意します。 詳細については、「[ログ配布の構成 &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)」を参照してください。 監視サーバーは、一度構成すると、最初にログ配布を削除しない限り変更できません。  
+>  ログ配布構成を監視するには、ログ配布を有効にするときに監視サーバーを追加する必要があります。 監視サーバーを後で追加する場合は、ログ配布構成を削除して、代わりに監視サーバーを含む新しい構成を用意します。 詳細については、「 [ログ配布の構成 &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)で導入されました。 監視サーバーは、一度構成すると、最初にログ配布を削除しない限り変更できません。  
   
 ## <a name="history-tables-containing-monitoring-information"></a>監視情報を含む履歴テーブル  
  監視の履歴テーブルには、監視サーバーに格納されているメタデータが含まれています。 また、指定されているプライマリ サーバーやセカンダリ サーバーに固有の情報のコピーもローカルに格納されています。  
   
  これらのテーブルでクエリを実行して、ログ配布セッションの状態を監視できます。 たとえば、ログ配布の状態を参照するには、バックアップ ジョブ、コピー ジョブ、および復元ジョブの状態と履歴を確認します。 以下の監視テーブルをクエリすることにより、特定のログ配布の履歴とエラーの詳細を参照できます。  
   
-|テーブル|説明|  
+|テーブル|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|警告ジョブ ID を格納します。|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|ログ配布ジョブのエラーの詳細を格納します。 このテーブルをクエリして、あるエージェント セッションのエラーを参照することができます。 必要に応じて、エラーが記録された日付と時刻でエラーを並べ替えることができます。 各エラーは一連の例外として記録されるので、1 つのエージェント セッションで複数のエラー (シーケンス) が記録されることがあります。|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="stored-procedures-for-monitoring-log-shipping"></a>ログ配布を監視するためのストアド プロシージャ  
  監視情報と履歴情報は、 **msdb**のテーブルに格納されます。このテーブルには、ログ配布ストアド プロシージャを使用してアクセスできます。 次の表に示すサーバーで、これらのストアド プロシージャを実行します。  
   
-|ストアド プロシージャ|説明|プロシージャを実行するサーバー|  
+|ストアド プロシージャ|Description|プロシージャを実行するサーバー|  
 |----------------------|-----------------|---------------------------|  
 |[sp_help_log_shipping_monitor_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)|**log_shipping_monitor_primary** テーブルから、指定したプライマリ データベースの監視レコードを返します。|監視サーバーまたはプライマリ サーバー|  
 |[sp_help_log_shipping_monitor_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)|**log_shipping_monitor_secondary** テーブルから、指定したセカンダリ データベースの監視レコードを返します。|監視サーバーまたはセカンダリ サーバー|  

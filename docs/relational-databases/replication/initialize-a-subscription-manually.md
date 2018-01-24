@@ -17,21 +17,21 @@ helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], without snapshots
 ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7980b66b7393febf503bb8aa0681bee4c124cb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 95d4fe2141ef61a866865c4e07d1bd2eab8397d5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="initialize-a-subscription-manually"></a>手動によるサブスクリプションの初期化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、サブスクリプションを手動で初期化する方法について説明します。 サブスクリプションを初期化する場合、一般には、初期スナップショットが使用されます。ただし、スキーマおよび初期データがサブスクライバー側に既に存在していれば、パブリケーションのサブスクリプションをスナップショットを使用せずに初期化できます。  
   
 
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -91,9 +91,9 @@ ms.lasthandoff: 11/17/2017
   
 2.  パブリッシャー側のパブリケーション データベースに対し、 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)を実行します。 **@subscriber_db** にパブリッシュされたデータを格納するサブスクライバー側データベースの名前、**@subscription_type** に **push** 値、**@sync_type** に **none** 値を指定します。  
   
-3.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)を実行します。 詳細については、「 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)」をご覧ください。  
+3.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)を実行します。 詳細については、「 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)」を参照してください。  
   
-4.  マージ エージェントを起動して、パブリッシャーからレプリケーション オブジェクトを転送し、最新の変更をダウンロードします。 詳しくは、「 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)」をご覧ください。  
+4.  マージ エージェントを起動して、パブリッシャーからレプリケーション オブジェクトを転送し、最新の変更をダウンロードします。 詳細については、「 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)   

@@ -24,12 +24,12 @@ ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 caps.latest.revision: "31"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: fdac38824bdab5723c42435e5321f1a124fc397c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: a6a5cbbe3366a14878086d24b1bddd52ec83ee13
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行するコンピューターの名前を変更した場合、変更後の名前は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に認識されます。 コンピューター名を再設定するためにセットアップを再度実行する必要はありません。 代わりに次の手順を実行して、sys.servers に格納され、システム関数 @@SERVERNAME でレポートされるシステム メタデータを更新します。 @@SERVERNAME を使用するか、sys.servers からサーバー名のクエリを実行するリモート接続およびリモート アプリケーションのコンピューター名の変更を反映するには、システム メタデータを更新します。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターに含まれている場合、コンピューターの名前変更のプロセスは、スタンドアロン インスタンスをホストするコンピューターとは異なります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションでログ配布を使用する場合を除き、レプリケーションに関連するコンピューターの名前は変更できません。 プライマリ コンピューターが完全に存在しなくなった場合は、ログ配布のセカンダリ コンピューターの名前を変更できます。 詳細については、「[ログ配布とレプリケーション &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)」 を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションでログ配布を使用する場合を除き、レプリケーションに関連するコンピューターの名前は変更できません。 プライマリ コンピューターが完全に存在しなくなった場合は、ログ配布のセカンダリ コンピューターの名前を変更できます。 詳細については、[ログ配布とレプリケーション &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md) を参照してください。  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を使用するように構成されたコンピューターの名前を変更すると、コンピューター名の変更後、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を使用できないことがあります。 詳細については、「 [Server Web Service の名前の変更](../../reporting-services/report-server/rename-a-report-server-computer.md)」を参照してください。  
   

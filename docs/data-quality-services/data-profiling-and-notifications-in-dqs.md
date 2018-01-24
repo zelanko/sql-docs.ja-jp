@@ -13,17 +13,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 94e8301b0df36349494fbfc9e900957dee5e8852
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5ba77e475bd530b362b4a2f918c6ee7c0b901443
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="data-profiling-and-notifications-in-dqs"></a>DQS でのデータ プロファイルと通知
+# <a name="data-profiling-and-notifications-in-dqs"></a>DQS のデータ プロファイルと通知
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のデータ プロファイルは、既存のデータ ソースのデータを分析し、DQS のアクティビティでデータに関する統計情報を表示するプロセスです。 このプロセスでは、データ品質が自動的に測定されます。 DQS のプロファイルは、DQS のナレッジ マネージメントおよびデータ品質プロジェクトに統合されており、 動的に調整が可能です。 プロファイルの主な目的は、一連のデータ品質プロセスを通じて意思決定を支援すること、およびプロセスの有効性を評価することの 2 つです。 DQS のプロファイル プロセスには次の利点があります。  
   
 -   ソース データの品質について調べることができ、データ品質の問題を特定するのに役立ちます。  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [照合プロジェクトを実行する](../data-quality-services/run-a-matching-project.md)  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

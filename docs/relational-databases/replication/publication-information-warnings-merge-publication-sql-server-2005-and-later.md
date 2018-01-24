@@ -14,17 +14,17 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.publicationinfo.warningsandagents.merge.f1
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2279101f9df937685e3f2828b251edeb1a015939
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d91cf40c9a6835e4df5c9a720740b398a471e84
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>パブリケーション情報、[警告] (マージ パブリケーション、SQL Server 2005 以降)
+# <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>パブリケーション情報、[警告] \(マージ パブリケーション、SQL Server 2005 以降)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降を実行しているディストリビューターでは、**[警告]** タブを使用できます。 **[警告]** タブでは、選択されているパブリケーションに対して次の操作を実行できます。  
   
 -   警告を有効にする。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
  しきい値に到達した場合は、レプリケーション モニターに警告を表示でき、さらに通知を発行することができます。 通知を定義するには、 **[警告の構成]** をクリックし、 **[レプリケーションの警告の構成]** ダイアログ ボックスに情報を入力します。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **有効**  
  警告を有効にする場合に選択します。その場合は、しきい値を指定します。  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [パブリケーションの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [パブリケーションの情報の表示とタスクの実行 &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
  [レプリケーション モニターを使用したパフォーマンスの監視](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)   
  [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
  [レプリケーション モニターのしきい値と警告の設定](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  

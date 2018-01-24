@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c58756989760d56c2f7906c0493cefb2b30d2b0d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f4618510f90d373aaba8a602b3f473cd6ed3a4a7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-encryption"></a>バックアップの暗号化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの暗号化オプションについて概説します。 バックアップ時の暗号化の使用、利点、および推奨される操作の詳細が含まれています。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
 -   [既存のバックアップ セットに追加する] オプションは、暗号化されたバックアップに対してはサポートされません。  
   
   
-##  <a name="Permissions"></a> 権限  
+##  <a name="Permissions"></a> Permissions  
  **バックアップの暗号化または暗号化されたバックアップからの復元を行うには:**  
   
  データベース バックアップの暗号化に使用する証明書または非対称キーに対する**VIEW DEFINITION** 権限。  
@@ -138,7 +138,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
-|トピック/タスク|説明|  
+|トピック/タスク|Description|  
 |-----------------|-----------------|  
 |[暗号化されたバックアップの作成](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|暗号化されたバックアップを作成するために必要な基本手順について説明します。|  
 |[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Azure Key Vault のキーで保護される暗号化されたバックアップを作成する例を示します。|  

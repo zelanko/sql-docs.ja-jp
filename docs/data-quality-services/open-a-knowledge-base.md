@@ -14,27 +14,27 @@ ms.topic: article
 f1_keywords: sql13.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 693a38d7a92f7dc6728452e721716e89b366feb9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f01519c6ddbeb4a137f6f9ec5bf6cc2d0f84d6f4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="open-a-knowledge-base"></a>ナレッジ ベースを開く
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で既存のナレッジ ベースを開き、ドメイン管理、ナレッジ検出、または照合ポリシーの追加の準備を行う方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  ナレッジ ベースを開くには、ナレッジ ベースが既に作成されていて、発行済みであるか (他のユーザーが作成した場合) または閉じられている (自分で作成した場合) 必要があります。  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  ナレッジ ベースを開くには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールを所有している必要があります。  
   
 ##  <a name="Open"></a> Open a knowledge base  

@@ -14,24 +14,24 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.viewfacet.f1
 ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3e73a3a40fa2ef43a04fafdecd6c4f7798a81ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: abbe4aa8bc606437662fb92bb25f8d80002e70e8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-facets-dialog-box"></a>[ファセットの表示] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このダイアログ ボックスを使用すると、ポリシー ベースの管理ファセットのプロパティを表示できます。 ファセットのプロパティは、ファセットの作成時に定義され、このダイアログ ボックスでは変更できません。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **ファセット**  
  現在選択されているファセットの名前。  
   
- **説明**  
+ **[説明]**  
  ファセットの概要を説明します。  
   
  **[ファセットのプロパティ]**  

@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.evalpoliciesresults.f1
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee1bbf3e515fb5da1b5186fbe4d4ad9c37f00034
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc11b243f15c6046a342aec2279a86cd1ec2c69c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>[ポリシーの評価] ダイアログ ボックスの [評価の結果] ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このダイアログ ボックスを使用すると、ポリシーの評価結果を表示したり、ポリシーに準拠していない対象セットにポリシー ベースの管理ポリシーを適用したりできます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[結果: ポリシー]**  
  評価されるポリシーの名前。 このボックスは読み取り専用です。  
   

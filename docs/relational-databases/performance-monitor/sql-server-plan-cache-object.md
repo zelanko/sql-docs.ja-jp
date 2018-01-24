@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SQLServer:Plan Cache
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec7f470e35734361e5c4fe5fab126bbb544344d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 68fafc8b215fa71f07cae30b0c19839fdd7261ab
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server の Plan Cache オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **Plan Cache** オブジェクトには、ストアド プロシージャ、アドホックおよび準備済みの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、トリガーなどのオブジェクトを保存するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がどのようにメモリを使用しているかを監視するためのカウンターがあります。 **Plan Cache** オブジェクトの複数のインスタンスを同時に監視できます。各インスタンスは、監視される異なる種類のクエリ プランを表します。  
   
  次の表では、 **SQLServer:Plan Cache**カウンターについて説明します。  
   
-|SQL Server Plan Cache のカウンター|説明|  
+|SQL Server Plan Cache のカウンター|Description|  
 |------------------------------------|-----------------|  
 |**Cache Hit Ratio**|キャッシュ ヒットとキャッシュ参照の比率。|  
 |**Cache Hit Ratio Base**|内部使用のみです。| 
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|Plan Cache インスタンス|説明|  
+|Plan Cache インスタンス|Description|  
 |-------------------------|-----------------|  
 |**_Total**|すべての種類のキャッシュ インスタンスの情報。|  
 |**Sql Plans**|自動パラメーター化クエリを含むアドホック [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリから作成されたクエリ プランか、 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_prepare **または** sp_cursorprepare **を使用して準備された**ステートメントから作成されたクエリ プラン。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、後で同一の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが実行された場合の再利用に備えて、アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのプランをキャッシュに格納します。 ユーザーによるパラメーター化クエリも、明示的に準備されていない場合も含めて Prepared SQL Plans として監視されます。|  

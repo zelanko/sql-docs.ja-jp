@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.newsubwizard.subproperties.publisher.f1
 helpviewer_keywords: Subscription Properties dialog box
 ms.assetid: d4b2bc8b-0431-4331-8305-8992c96d0d34
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f971a24eaa58022a12a139bc6a6bd960b0dec76
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: baba517b574179be16ef1376d0b1eff113c6338d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-properties---publisher"></a>[サブスクリプションのプロパティ - パブリッシャー]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] パブリッシャーの **[サブスクリプションのプロパティ]** ダイアログ ボックスを使用すると、プッシュ サブスクリプションのプロパティを表示したり設定したりできます。 プル サブスクリプションのいくつかのプロパティを表示することもできますが、サブスクリプションの **[サブスクリプションのプロパティ]** ダイアログ ボックスではさらに多くのプロパティが表示され、プロパティを変更することができます。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
  読み取り専用として表示されているオプションの場合、サブスクリプションが作成されている場合にのみ設定できます。 サブスクリプションの新規作成ウィザードで使用することのできないオプションを設定する場合は、サブスクリプションをストアド プロシージャで作成します。 詳細については、「 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) 」および「 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)」を参照してください。  
   
 ## <a name="options-for-all-subscriptions"></a>すべてのサブスクリプションに対するオプション  
- **セキュリティ**  
+ **Security**  
  **[エージェント プロセス アカウント]** 行をクリックしてプロパティ ボタン (**[...]**) をクリックし、ディストリビューション エージェントまたはマージ エージェントがディストリビューターで実行されるアカウントを変更します。 ディストリビューション エージェントまたはマージ エージェントがサブスクライバーへの接続を作成するアカウントを変更するには、 **[サブスクライバー接続]**をクリックしてプロパティ ボタン (**[...]**) をクリックします。  
   
  各エージェントに必要な権限の詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  

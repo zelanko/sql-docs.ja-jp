@@ -17,15 +17,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], encrypted columns
 ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 caps.latest.revision: "8"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b3c900a757a6d298194866d1f7d59d95585cc70
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae4163bea6d32db0c14b5d319dde44c7848950f2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>暗号化された列のデータをレプリケートする (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] レプリケーションでは、暗号化された列データをパブリッシュできます。 このデータの暗号化を解除してサブスクライバーで使用するには、パブリッシャーでのデータの暗号化に使用されたキーがサブスクライバーにも存在する必要があります。 レプリケーションでは、暗号化キーを送信する安全なメカニズムは提供されません。 このため、暗号化キーはサブスクライバーで手動で再作成する必要があります。 このトピックでは、パブリッシャーで列を暗号化し、暗号化キーをサブスクライバーで使用できるようにする方法について説明します。  

@@ -25,13 +25,13 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c790f0a159366986a193bbfd4509f92d65ec5492
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 26565d1078d8fcb813cc634ce5d3cee05d151f4a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>メニューとショートカット キーのカスタマイズ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] キーボード アクセス キーを使用すると、Alt キーを押しながら *<single letter>* キーを押すことでメニュー コマンドやボタンを選択できます。 たとえば、 **[編集]** メニューを開くには、ALT + E キーを押します。 ツール バーのボタン、メニュー、メニュー コマンドの並べ替えや変更を行うには、 **[ユーザー設定]** ダイアログ ボックスを使用します。 マウスを使用して設定を変更する方法と、キーボードだけを使用して設定を変更する方法を以下に示します。  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - renaming databases
 ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8bc8f0154f8da5ecbbfc5d45e1ab1ee7ff974c69
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 7660b2175a9f854567dd8e168171b0909a151957
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="rename-a-database"></a>データベースの名前変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、ユーザー定義のデータベースの名前を変更する方法について説明します。 識別子の規則に従っていれば、データベースの名前にはいずれの文字も使用できます。  

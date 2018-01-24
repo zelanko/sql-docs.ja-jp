@@ -16,13 +16,13 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: "22"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 664c1bf039edfafe035752ef9a8cfaa196074c28
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8c716fa65c68b44c6a4eb53e9c63bbe378298633
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-operating-modes"></a>データベース ミラーリングの動作モード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、データベース ミラーリング セッションの同期動作モードおよび非同期動作モードについて説明します。  
@@ -251,7 +251,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="ViewWitness"></a> 安全性設定とミラーリング監視サーバーの状態の表示  
  安全性設定やデータベースのミラーリング監視サーバーの状態を表示するには、 **sys.database_mirroring** カタログ ビューを使用します。 関連する列は次のとおりです。  
   
-|要素|列|説明|  
+|要素|[列]|Description|  
 |------------|-------------|-----------------|  
 |トランザクションの安全性|**mirroring_safety_level** または **mirroring_safety_level_desc**|ミラー データベース上での更新に関するトランザクションの安全性設定。次のいずれかになります。<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL= データベースがオンラインではありません。|  
 |ミラーリング監視サーバーの有無|**mirroring_witness_name**|データベース ミラーリングのミラーリング監視サーバー名または NULL。NULL はミラーリング監視サーバーが存在しないことを示します。|  

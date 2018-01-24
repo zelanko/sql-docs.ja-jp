@@ -16,17 +16,17 @@ helpviewer_keywords:
 - row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe41947778c33988b354f2ed61643e8dd39893f4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c6e9c100866e8a73e890d3c32e9abf7ad560aa18
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="row-compression-implementation"></a>行の圧縮の実装
+# <a name="row-compression-implementation"></a>「行の圧縮の実装」
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] に実装されている行の圧縮方法の概要を説明します。 この概要では、データに必要なストレージ領域の計画に役立つ基本的な情報を提供します。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="how-row-compression-affects-storage"></a>行の圧縮によるストレージへの影響  
  次の表では、行の圧縮が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]の既存の型に与える影響について説明します。 この表では、ページの圧縮を使用して実現可能な節約は示されていません。  
   
-|データ型|ストレージへの影響の有無|説明|  
+|データ型|ストレージへの影響の有無|Description|  
 |---------------|--------------------------|-----------------|  
 |**tinyint**|いいえ|1 バイトの最小ストレージが必要です。|  
 |**smallint**|はい|値が 1 バイトに収まる場合は、1 バイトしか使用されません。|  

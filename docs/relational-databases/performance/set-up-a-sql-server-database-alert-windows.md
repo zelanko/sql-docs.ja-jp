@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: alerts [SQL Server], creating
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 459c324ac13d950f99643e839026d5090e99df78
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 447c615f57a71a321a85315cb9de40df5fca8cfc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>SQL Server データベースの警告のセットアップ (Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] システム モニターでは、システム モニターのカウンターがしきい値に達したときに発生する警告を作成できます。 システム モニターは、この警告に応答して、警告状況を処理するために記述されたカスタム アプリケーションなどのアプリケーションを起動できます。 たとえば、デッドロックの数が特定の値を超えたときに生成される警告を作成できます。 

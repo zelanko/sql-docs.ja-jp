@@ -15,26 +15,26 @@ f1_keywords: sql13.swb.maint.notifyoperator.f1
 helpviewer_keywords: Notify Operator Task dialog box
 ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e8e10a98a1d2ee8328d4124b9949abf33943821
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b272b5d52fc3bcfadfee095f03b061c436f4508d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>[オペレーターへの通知タスク] (メンテナンス プラン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[オペレーターへの通知タスク]** ダイアログ ボックスを使用すると、このメンテナンス プランに自動通知を追加できます。 このタスクを使用するには、[データベース メール] が有効になっていて、MSDB がメール ホスト データベースとして適切に構成され、有効な電子メール アドレスを持つ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのオペレーターが存在している必要があります。  
   
  このタスクでは、sp_notify_operator ストアド プロシージャを使用します。  
   
-## <a name="options"></a>オプション  
- **接続**  
+## <a name="options"></a>および  
+ **[接続]**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
- **新規**  
+ **[新規作成]**  
  このタスクを実行するときに使用する新しいサーバー接続を作成します。 **[新しい接続]** ダイアログ ボックスについては、後で説明します。  
   
  **[通知するオペレーター]**  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
  **[特定のユーザー名とパスワードを使用する]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
   
- **ユーザー名**  
+ **User name**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  
   
  **Password**  

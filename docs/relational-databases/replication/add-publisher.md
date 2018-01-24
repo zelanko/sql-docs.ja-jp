@@ -15,20 +15,20 @@ f1_keywords: sql13.rep.monitor.addpublisher.f1
 helpviewer_keywords: Add Publisher dialog box
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e03e3af1548fa02ab81a310130b326a6f5aa21d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c506f5e41f4a4bb88712d1e6dcb1d1b0ee62253
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-publisher"></a>[パブリッシャーの追加]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[パブリッシャーの追加]** ダイアログ ボックスを使用すると、レプリケーション モニターの左ペインに 1 つまたは複数のパブリッシャーを追加できます。 パブリッシャーを追加した後、左ペインでパブリッシャーを選択すると、そのパブリッシャーに関する情報が右ペインに表示されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[追加]**  
  クリックすると、追加するパブリッシャーの種類を選択するための **[サーバーへの接続]** ダイアログ ボックスが表示されます。 使用可能なオプションは次のとおりです。  
   

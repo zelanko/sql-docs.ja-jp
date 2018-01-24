@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7290b3701425411f0ba7d05e6790737057274762
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ab8c2fa693b264707e89f4438d408f4c513e565
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server: SQL Statistics オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **SQLServer:SQL Statistics** オブジェクトには、コンパイルの動作や、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに送信された要求の種類を監視するためのカウンターが用意されています。 クエリのコンパイルと再コンパイルの回数、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが受信するバッチの数を監視すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がユーザー クエリを処理する速度や、クエリ オプティマイザーによるクエリ処理の効果がわかります。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics** カウンターを次に示します。  
   
-|SQL Server SQL Statistics カウンター|説明|  
+|SQL Server SQL Statistics カウンター|Description|  
 |----------------------------------------|-----------------|  
 |**Auto-Param Attempts/sec**|1 秒あたりの自動パラメーター化が実行された数。 総数は、失敗した試行、安全な試行、および安全ではない試行の合計でなければなりません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにより、いくつかのリテラルをパラメーターに置き換えることによって [!INCLUDE[tsql](../../includes/tsql-md.md)] 要求のパラメーター化が試行されると、自動パラメーター化が発生します。複数の類似した要求で、結果としてキャッシュされた実行プランの再使用を可能にするためです。 自動パラメーター化は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいバージョンでは簡易パラメーター化とも呼ばれています。 このカウンターには、強制パラメーター化は含まれません。|  
 |**Batch Requests/sec**|1 秒あたりに受信した [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドのバッチの数。 この統計値はすべての制約の影響を受けます。制約とは、I/O、ユーザー数、キャッシュ サイズ、要求の複雑さなどです。 バッチ要求の数が多いことは、スループットが優れていることを意味します。|  

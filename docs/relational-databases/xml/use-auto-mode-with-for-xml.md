@@ -18,15 +18,15 @@ helpviewer_keywords:
 - AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2e830183ed89e7d9496809fd7545219b1b978079
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 23c8ca2f784e6893ddd5af0a65a8387ee2778dde
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-auto-mode-with-for-xml"></a>FOR XML での AUTO モードの使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 「[FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)」で説明したように、AUTO モードを使用すると、入れ子構造の XML 要素としてクエリ結果が返されます。 AUTO モードでは、クエリ結果から生成される XML の構造はあまり制御されません。 AUTO モードのクエリは、単純な階層を生成する場合に役立ちます。 ただし、 [FOR XML での EXPLICIT モードの使用](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) や [FOR XML での PATH モードの使用](../../relational-databases/xml/use-path-mode-with-for-xml.md) により、クエリ結果から XML の構造を決定するときに、より厳密な制御や高い柔軟性を実現できます。  

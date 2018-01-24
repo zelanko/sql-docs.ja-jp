@@ -16,13 +16,13 @@ ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec8f86fbb4056c950cae3a7aa9e6572bb6f98ace
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8aeb2b008412f8e9f40ba1879047c5f0e0b280b9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>ダイアグラムで選択したテーブルの保存 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] データベース ダイアグラムで加えた変更のすべてを保存する必要がない場合は、特定のまたは複数のテーブルを保存できます。  

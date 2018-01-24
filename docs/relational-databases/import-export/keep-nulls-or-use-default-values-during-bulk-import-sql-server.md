@@ -23,15 +23,15 @@ helpviewer_keywords:
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 645f300a349a9b34533f247dcabebf8f116c3eb7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d65ee60ef2e855501bab43f2d1f6d697960b5e3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>一括インポート中の NULL の保持または既定値の使用 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 ## Null 値を維持する<a name="keep_nulls"></a>  
 以下の修飾子は、一括インポート操作中、テーブル列の既定値がある場合にその既定値を継承するのではなく、データ ファイルの空のフィールドにそのフィールドの NULL 値を保持することを指定しています。  [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)の場合、既定では、一括読み込み操作で指定されていないすべての列が NULL に設定されます。
   
-|Command|Qualifier|修飾子の種類|  
+|コマンド|Qualifier|修飾子の種類|  
 |-------------|---------------|--------------------|  
 |bcp|-k|スイッチ|  
 |BULK INSERT|KEEPNULLS**\***|引数|  
@@ -356,7 +356,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ## <a name="see-also"></a>参照  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  
   

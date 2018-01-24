@@ -17,15 +17,15 @@ helpviewer_keywords:
 - bulk exporting [SQL Server], examples
 ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c7c82b62908b8004c9ef93c77b5d980cb65b0787
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d1175f8be3cdd8ebf15227ea46ceca7180a44e7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam サンプル テーブル (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 「[一括データのインポートおよびエクスポート](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)」のコード例の大部分では、**myTeam** という名前の特殊なテスト用テーブルが必要になります。 これらのコード例を実行する前に、 **データベースの** HumanResources **スキーマに** myTeam [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルを作成する必要があります。  
@@ -35,11 +35,11 @@ ms.lasthandoff: 11/17/2017
   
  **myTeam** には、次の列が含まれています。  
   
-|列|データ型|NULL 値の許容|説明|  
+|[列]|データ型|NULL 値の許容|Description|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|不可|行の主キー。 チーム メンバーの従業員 ID。|  
 |**名前**|**nvarchar (50)**|不可|チーム メンバーの名前。|  
-|**[タイトル]**|**nvarchar (50)**|[可]|チームにおける従業員の肩書き。|  
+|**Title**|**nvarchar (50)**|[可]|チームにおける従業員の肩書き。|  
 |**背景情報**|**nvarchar (50)**|不可|行が最後に更新された日時 (既定値)。|  
   
 **HumanResources.myTeam テーブルを作成するには**  

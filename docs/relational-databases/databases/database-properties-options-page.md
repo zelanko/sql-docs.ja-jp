@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 caps.latest.revision: "67"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 367562c82bd9ed041dbd12e2fa195f75fcf99f05
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 342f7d2f57d8832ca0188ceea9112673746690b7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-options-page"></a>[データベースのプロパティ] \([オプション] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   このページを使用すると、選択されているデータベースのオプションを表示または変更できます。 このページで利用できるオプションの詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」と「[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」をご覧ください。  
   
 ## <a name="page-header"></a>ページ ヘッダー  
- **[照合順序]**  
+ **照合順序**  
  データベースの照合順序を一覧から選択して指定します。 詳細については、「 [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)」を参照してください。  
   
  **復旧モデル**  
@@ -53,13 +53,13 @@ ms.lasthandoff: 11/17/2017
  パーティションごとの統計を作成するときに増分オプションを使用するかどうかを指定します。 増分統計の詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。  
   
  **[統計の自動作成]**  
- 不足している最適化統計をデータベースで自動的に作成するかどうかを指定します。 指定できる値は、 **[True]** および **[False]**です。 **[True]**を指定すると、クエリの最適化に必要な統計が不足している場合、最適化時に自動的に構築されます。 詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。  
+ 不足している最適化統計をデータベースで自動的に作成するかどうかを指定します。 指定できる値は、 **[True]** および **[False]**です。 **[True]**を指定すると、クエリの最適化に必要な統計が不足している場合、最適化時に自動的に構築されます。 詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」を参照してください。  
   
  **[自動圧縮]**  
  データベース ファイルを定期的な圧縮に使用できるかどうかを指定します。 指定できる値は、 **[True]** および **[False]**です。 詳細については、「 [Shrink a Database](../../relational-databases/databases/shrink-a-database.md)」を参照してください。  
   
  **[統計の自動更新]**  
- データベースで古い最適化統計を自動的に更新するかどうかを指定します。 指定できる値は、 **[True]** および **[False]**です。 **[True]** を指定すると、クエリの最適化に必要な統計が期限切れの場合、最適化時に自動的に構築されます。 詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。  
+ データベースで古い最適化統計を自動的に更新するかどうかを指定します。 指定できる値は、 **[True]** および **[False]**です。 **[True]** を指定すると、クエリの最適化に必要な統計が期限切れの場合、最適化時に自動的に構築されます。 詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」を参照してください。  
   
  **[統計の非同期的自動更新]**  
  **[True]** が指定された場合、古い統計の自動更新を開始するクエリは、統計が更新されるのを待たずにコンパイルを開始します。 後続のクエリは、更新された統計が使用可能になった時点で、その統計を使用します。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
  このオプションを **[True]** に設定しても、 **[統計の自動更新]** も **[True]**に設定しない限り、効力はありません。  
   
-## <a name="containment"></a>コンテインメント  
+## <a name="containment"></a>Containment  
  包含データベースでは、通常サーバー レベルで構成する設定の一部をデータベース レベルで構成できます。  
   
  **[既定のフルテキスト言語の LCID]**  
@@ -220,7 +220,7 @@ Service Broker の読み取り専用プロパティです。
  データベースの現在の状態を表示します。 編集することはできません。 **[データベース状態]**の詳細については、「 [Database States](../../relational-databases/databases/database-states.md)」を参照してください。  
 
  **[暗号化有効]**  
- **[True]**の場合、このデータベースはデータベース暗号化に対応しています。 暗号化ではデータベース暗号化キーが必要です。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」をご覧ください。  
+ **[True]**の場合、このデータベースはデータベース暗号化に対応しています。 暗号化ではデータベース暗号化キーが必要です。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。  
  
  **[アクセスの制限]**  
  データベースにアクセスできるユーザーを指定します。 有効な値は次のとおりです。  

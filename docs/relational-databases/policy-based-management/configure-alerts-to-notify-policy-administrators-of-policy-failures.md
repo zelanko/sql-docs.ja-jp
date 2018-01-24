@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Policy-Based Management, configure alerts
 ms.assetid: e8e60159-d5b0-49d5-91f3-af8e9cb994c1
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10112a53641de916431546ef0d25ef1f32d2fd81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 235dd81e7a742635c0e289d06fa951e3965844cb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>ポリシー管理者にポリシー エラーを通知する警告の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ポリシー ベースの管理ポリシーが 3 つの自動評価モードのいずれかで実行された場合にポリシー違反が発生すると、メッセージがイベント ログに書き込まれます。 このメッセージがイベント ログに書き込まれたときに通知を受けるには、メッセージを検出してアクションを実行する警告を作成します。 警告は、次の表に示すようにメッセージを検出します。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [オペレーターへの警告の割り当て](http://msdn.microsoft.com/library/aa818155-6fa2-4565-a09f-5c7e31c89754)  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  要求時に評価されるポリシーは、ユーザーのセキュリティ コンテキストで実行されます。 エラー ログに書き込むには、ALTER TRACE 権限を持っているか、固定サーバー ロール sysadmin のメンバーである必要があります。 権限が不十分なユーザーがポリシーを評価した場合、イベント ログへの書き込みは行われず、警告は発生しません。  
   
  自動実行モードは、sysadmin ロールのメンバーとして実行されます。 これにより、エラー ログへの書き込みと警告の生成が可能になります。  

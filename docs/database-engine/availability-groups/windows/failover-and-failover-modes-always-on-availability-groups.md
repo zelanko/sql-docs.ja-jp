@@ -20,13 +20,13 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: "75"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d521b60320fc490d2ba7e824e85bb2eabe1e9bb3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e688f4c428df93491b2f6e449022a447504b5e3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>フェールオーバーとフェールオーバー モード (AlwaysOn 可用性グループ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/20/2017
 -   [関連コンテンツ](#RelatedContent)  
   
 ##  <a name="TermsAndDefinitions"></a> 用語と定義  
- 自動フェールオーバー  
+ 自動フェールオーバー (automatic failover)  
  プライマリ レプリカの喪失によって自動的に発生するフェールオーバー。 自動フェールオーバーは、現在のプライマリ レプリカと 1 つのセカンダリ レプリカのフェールオーバー モードがどちらも AUTOMATIC に設定され、セカンダリ レプリカが現在同期されている場合のみサポートされます。  プライマリ レプリカまたはセカンダリ レプリカのフェールオーバー モードが MANUAL に設定されている場合、自動フェールオーバーは実行されません。  
   
  計画的な手動フェールオーバー (データ損失なし)  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/20/2017
   
 ||非同期コミット モード|手動フェールオーバー モードを指定した同期コミット モード|自動フェールオーバーを指定した同期コミット モード|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|自動フェールオーバー|いいえ|いいえ|はい|  
+|自動フェールオーバー (automatic failover)|いいえ|いいえ|はい|  
 |計画的な手動フェールオーバー|いいえ|はい|はい|  
 |強制フェールオーバー|はい|はい|可**\***|  
   

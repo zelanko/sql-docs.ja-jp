@@ -18,13 +18,13 @@ ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8acff0ca01947c905615542de85bd2da9b0c5be6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0371541072278482e26b2e7487ff9641ab62aeed
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>[挿入先のテーブル選択] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] INSERT RESULTS クエリの結果として、どのテーブルにデータ行を追加するかを指定できます。 このダイアログ ボックスは、INSERT RESULTS クエリを開始すると表示されます。  

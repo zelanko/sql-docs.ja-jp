@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ONLINE option
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 396d1cb8149f718a43f0931010a3b51a04e2666c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 351514dddb4e1491465192e1e535ec104d578a95
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="perform-index-operations-online"></a>オンラインでのインデックス操作の実行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **インデックスをオンラインで再構築するために使用するもの:**  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  **[DML のオンライン処理を許可する]**を選択し、一覧から **[True]** を選択します。  
   
-8.  クリックして **OK**です。  
+8.  **[OK]** をクリックします。  
   
 9. オンラインで再構築するインデックスを右クリックし、 **[再構築]**を選択します。  
   

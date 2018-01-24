@@ -19,13 +19,13 @@ ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fde99df0bca010b8920267b1b41de87fbe38e2bf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e1532ade775800e7688fca8efa844ba535b95bab
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>可用性レプリカ間のセッション中に発生する可能性のあるエラー (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 物理的な問題、オペレーティング システムの問題、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の問題により、2 つの可用性レプリカ間のセッションが失敗する場合があります。 可用性レプリカでは、Sqlservr.exe が依存しているコンポーネントを定期的にチェックして、それらのコンポーネントが正常に機能しているのか失敗したのかを確認する処理は行われません。 ただし、失敗の種類によっては、影響を受けたコンポーネントからエラーが Sqlservr.exe に報告されます。 他のコンポーネントから報告されるエラーを *ハード エラー*といいます。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] では、通知されないその他の失敗を検出するために、独自のセッション タイムアウト メカニズムを実装しています。 セッション タイムアウト期間を秒単位で指定します。 このタイムアウト時間は、別のインスタンスからの PING メッセージを受信するために、サーバー インスタンスが待機する最大時間です。この時間を過ぎると、待機していたインスタンスは接続解除されたものと見なされます。 2 つの可用性レプリカ間でセッション タイムアウトが発生すると、可用性レプリカはエラーが発生したと想定し、 *ソフト エラー*を宣言します。  
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="responding-to-an-error"></a>エラーへの対応  
  エラーを検出したサーバー インスタンスは、エラーの種類に関係なく、インスタンスのロール、セッションの可用性モード、およびセッション内の他のすべての接続の状態に基づいて、適切な応答を行います。 パートナーの損失による影響については、「[可用性モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)」を参照してください。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  **タイムアウト値を変更するには (同期コミット可用性モードのみ)**  
   
 -   [可用性レプリカのセッション タイムアウト期間の変更 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - parallel index operations [SQL Server]
 ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53114677b0aa3635e4c031c4b24309bcb7b4ab9d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8f6d408cdf02885ce9d3ec56a228bc9341cc7776
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-parallel-index-operations"></a>並列インデックス操作の構成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **並列処理の最大限度を設定するために使用するもの:**  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -59,10 +59,10 @@ ms.lasthandoff: 11/17/2017
   
 -   MAXDOP インデックス オプションは、このオプションを指定しているクエリに関してのみ、max degree of parallelism 構成オプションよりも優先されます。 次の表に、max degree of parallelism 構成オプションと MAXDOP インデックス オプションで指定できる有効な整数値を示します。  
   
-    |値|説明|  
+    |ReplTest1|Description|  
     |-----------|-----------------|  
     |0|現在のシステム ワークロードに応じて、使用する CPU 数をサーバーが決定するように指定します。 この値は既定値であり、推奨の設定です。|  
-    |1|並列プラン生成を抑制します。 操作は順番に実行されます。|  
+    |@shouldalert|並列プラン生成を抑制します。 操作は順番に実行されます。|  
     |2～64|プロセッサ数が指定値まで制限されます。 現在のワークロードによっては、使用されるプロセッサ数が少なくなる場合があります。 使用できる CPU 数よりも大きな値を指定した場合は、実際に使用できる CPU 数が使用されます。|  
   
 -   インデックスの並列実行と MAXDOP インデックス オプションは、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに適用されます。  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -104,7 +104,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  **[並列処理の最大限度]**を選択し、1 ～ 64 の範囲の値を入力します。  
   
-8.  クリックして **OK**です。  
+8.  **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

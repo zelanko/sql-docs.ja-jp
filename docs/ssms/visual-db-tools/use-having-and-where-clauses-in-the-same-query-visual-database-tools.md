@@ -25,13 +25,13 @@ ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 89c20b9ce8f4789a9be80efd8bd95a3763ba8800
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ab0f50e4144fa734290adf39d3de11c709208ddc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>同一クエリ内で HAVING 句および WHERE 句を使用する (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 場合によっては、HAVING を使用してグループ全体に条件を適用する前に、WHERE 句を使用してグループから個別の行を除外する必要があります。  

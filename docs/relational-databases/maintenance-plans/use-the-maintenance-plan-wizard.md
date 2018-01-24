@@ -37,15 +37,15 @@ helpviewer_keywords:
 - Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 21c05a6f8d841bc32cbcebd0830042c8b17c2421
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f389187e628fde1bca50542449230264055a49f4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>メンテナンス プラン ウィザードの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でメンテナンス プラン ウィザードを使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。 メンテナンス プラン ウィザードを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって定期的に実行されるメンテナンス プランを作成できます。 これにより、バックアップ、データベースの整合性のチェック、データベース統計の更新など、さまざまなデータベース管理タスクを指定した間隔で実行できます。  
@@ -135,9 +135,9 @@ ms.lasthandoff: 11/17/2017
   
         6.  **[概要]**の **[説明]**で、すべてのジョブ スケジュール設定が適切であることを確認します。  
   
-        7.  クリックして **OK**です。  
+        7.  **[OK]** をクリックします。  
   
-    6.  **[次へ]**をクリックします。  
+    6.  **[次へ]** をクリックします。  
   
 6.  **[対象サーバーの選択]** ページで、メンテナンス プランを実行するサーバーを選択します。 このページは、マスター サーバーとして構成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのみで表示されます。  
   
@@ -327,7 +327,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="define-backup-tasks"></a>バックアップ タスクを定義する  
   
-1.  **[データベースのバックアップ (完全) タスクの定義]** ページで、完全バックアップを実行する 1 つまたは複数のデータベースを選択します。 このタスクでは `BACKUP DATABASE` ステートメントを使用します。 詳細については、「[BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)」を参照してください。 完了したら、 **[次へ]**をクリックします。  
+1.  **[データベースのバックアップ (完全) タスクの定義]** ページで、完全バックアップを実行する 1 つまたは複数のデータベースを選択します。 このタスクでは `BACKUP DATABASE` ステートメントを使用します。 詳細については、「 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)」を参照してください。 完了したら、 **[次へ]**をクリックします。  
   
      このページで使用できるオプションを次に示します。  
   
@@ -424,12 +424,12 @@ ms.lasthandoff: 11/17/2017
     |||  
     |-|-|  
     |**[既定のサーバー設定を使用する]**|オンにすると、サーバー レベルの既定値が使用されます。 この既定値は、 **backup compression default** サーバー構成オプションで設定されます。 このオプションの現在の設定を表示する方法については、「 [backup compression default サーバー構成オプションの表示または構成](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)」を参照してください。|  
-    |**[バックアップを圧縮する]**|オンにすると、サーバー レベルの既定値に関係なく、バックアップが圧縮されます。<br /><br /> **\*\* 重要 \*\*** 既定の設定では、圧縮によって CPU 使用率が著しく増加し、圧縮処理によって CPU がさらに消費されるために、同時に実行される操作が悪影響を受ける場合があります。 このため、リソース ガバナーによって CPU 使用率が制限されるセッションで、優先度の低い圧縮バックアップを作成することができます。 詳細については、このトピックの「 [リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)によって CPU 使用率が制限されるセッションでは、優先度の低い圧縮バックアップを作成することができます。|  
+    |**[バックアップを圧縮する]**|オンにすると、サーバー レベルの既定値に関係なく、バックアップが圧縮されます。<br /><br /> **\*\* 重要 \*\*** 既定の設定では、圧縮によって CPU 使用率が著しく増加し、圧縮処理によって CPU がさらに消費されるために、同時に実行される操作が悪影響を受ける場合があります。 このため、リソース ガバナーによって CPU 使用率が制限されるセッションで、優先度の低い圧縮バックアップを作成することができます。 詳細については、[「リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;」](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)を参照してください。|  
     |**[バックアップを圧縮しない]**|オンにすると、サーバー レベルの既定値に関係なく、圧縮されていないバックアップが作成されます。|  
   
-2.  **[データベースのバックアップ (差分) タスクの定義]** ページで、部分バックアップを実行する 1 つまたは複数のデータベースを選択します。 このページで利用可能なオプションの詳細については、上の手順 16. の定義リストを参照してください。 このタスクでは `BACKUP DATABASE … WITH DIFFERENTIAL` ステートメントを使用します。 詳細については、「[BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)」を参照してください。  完了したら、 **[次へ]**をクリックします。  
+2.  **[データベースのバックアップ (差分) タスクの定義]** ページで、部分バックアップを実行する 1 つまたは複数のデータベースを選択します。 このページで利用可能なオプションの詳細については、上の手順 16. の定義リストを参照してください。 このタスクでは `BACKUP DATABASE … WITH DIFFERENTIAL` ステートメントを使用します。 詳細については、「 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)」を参照してください。  完了したら、 **[次へ]**をクリックします。  
   
-3.  **[データベースのバックアップ (トランザクション ログ) タスクの定義]** ページで、(トランザクション ログのバックアップを実行する 1 つまたは複数のデータベースを選択します。 このページで利用可能なオプションの詳細については、上の手順 16. の定義リストを参照してください。 このタスクでは `BACKUP LOG` ステートメントを使用します。 詳細については、「[BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)」を参照してください。 完了したら、 **[次へ]**をクリックします。  
+3.  **[データベースのバックアップ (トランザクション ログ) タスクの定義]** ページで、(トランザクション ログのバックアップを実行する 1 つまたは複数のデータベースを選択します。 このページで利用可能なオプションの詳細については、上の手順 16. の定義リストを参照してください。 このタスクでは `BACKUP LOG` ステートメントを使用します。 詳細については、「 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)」を参照してください。 完了したら、 **[次へ]**をクリックします。  
   
 #### <a name="define-maintenance-cleanup-tasks"></a>メンテナンス クリーンアップ タスクを定義する  
   
@@ -507,7 +507,7 @@ ms.lasthandoff: 11/17/2017
      **操作**  
      各アクションの種類と名前を指定します。  
   
-     **[状態]**  
+     **ステータス**  
      全体としてウィザードのアクションが **[成功]** または **[失敗]**のいずれの値を返したかを示します。  
   
      **メッセージ**  

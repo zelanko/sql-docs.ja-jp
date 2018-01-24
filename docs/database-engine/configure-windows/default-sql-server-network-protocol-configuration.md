@@ -16,15 +16,15 @@ helpviewer_keywords:
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 caps.latest.revision: "4"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d56a9141ce472f9419eca3504dae859dab886689
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5549947b718e1303d1c6a065cb5790b7af5dabe7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>SQL Server の既定のネットワーク プロトコル構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、セキュリティ強化のため、一部の新規インストールではネットワーク接続を無効にします。 Enterprise エディション、Standard エディション、Evaluation エディション、または Workgroup エディションを使っている場合、または以前からインストールされている [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] が存在する場合は、TCP/IP を使うネットワーク接続は無効になりません。 すべてのインストールについて、サーバーへのローカル接続を許可する共有メモリ プロトコルは有効化されています。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser サービスは、インストール状態とインストール オプションに応じて、停止される場合があります。
@@ -41,11 +41,11 @@ ms.lasthandoff: 11/20/2017
 Enterprise  | 新規インストール  | 有効   | 有効   | ネットワーク接続に対して無効です。
 Standard    | 新規インストール  | 有効   | 有効   | ネットワーク接続に対して無効です。
 Web | 新規インストール  | 有効   | 有効   | ネットワーク接続に対して無効です。
-開発者   | 新規インストール  | 有効   | Disabled  | ネットワーク接続に対して無効です。
+Developer   | 新規インストール  | 有効   | Disabled  | ネットワーク接続に対して無効です。
 Evaluation  | 新規インストール  | 有効   | 有効   | ネットワーク接続に対して無効です。
 SQL Server Express  | 新規インストール  | 有効   | Disabled  | ネットワーク接続に対して無効です。
 全エディション    | 以前のインストールがありますが、アップグレードされていません。   | 新規インストールと同じ  | 新規インストールと同じ  | 新規インストールと同じ
-全エディション    | アップグレード   | 有効   | 以前のインストールの設定が維持されます。    | 以前のインストールの設定が維持されます。
+全エディション    | UPGRADE   | 有効   | 以前のインストールの設定が維持されます。    | 以前のインストールの設定が維持されます。
 
 
 >[!NOTE]

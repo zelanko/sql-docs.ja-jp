@@ -18,13 +18,13 @@ ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c63d20ce0e494c3f21c6e3e1b5a786b1a1dd530a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eba82fd5cbff225b5c80153036f35150de7db48a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-environment---keyboard-page"></a>[オプション] ([環境]/[キーボード] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] のキーボード スキームをカスタマイズできます。 このオプションを使用して、キーボード スキームを選択します。 このページにアクセスするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを選択して、 **[キーボード]**をクリックします。  

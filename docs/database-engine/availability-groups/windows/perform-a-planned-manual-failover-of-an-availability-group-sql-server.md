@@ -19,13 +19,13 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e5bb5c28e35464ef46641d33600a53c2d4cb79cc
-ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
+ms.openlocfilehash: f4df88a913bd97cfdc632fe8e1fb365c5d8e81c2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>可用性グループの計画的な手動フェールオーバーの実行 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループ上でデータを失わずに手動フェールオーバー (*計画的な手動フェールオーバー*) を実行する方法について説明します。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 AlwaysOn 可用性グループのフェールオーバーのように、計画的な手動フェールオーバーではセカンダリ レプリカがプライマリ ロールに移行します。 同時に、フェールオーバーによって元のプライマリ レプリカがセカンダリ ロールに移行します。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/28/2017
   
 ###  <a name="Security"></a> セキュリティ 
   
-####  <a name="Permissions"></a> アクセス許可 
+####  <a name="Permissions"></a> Permissions 
  可用性グループに ALTER AVAILABILITY GROUP のアクセス許可が必要です。 CONTROL AVAILABILITY GROUP アクセス許可、ALTER ANY AVAILABILITY GROUP アクセス許可、または CONTROL SERVER アクセス許可も必要です。 
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用 

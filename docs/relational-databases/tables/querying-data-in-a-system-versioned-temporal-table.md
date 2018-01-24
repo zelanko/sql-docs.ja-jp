@@ -15,20 +15,20 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 caps.latest.revision: "7"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bdac67ec17d4dd47ce413822833db543cbbe6043
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5bd4678f0a17e570f089f3c532df5a32e284787d
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルのデータのクエリ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   テンポラル テーブルのデータの最新 (実際) の状態を取得するときは、テンポラル以外のテーブルをクエリするときとまったく同じ方法でクエリできます。 PERIOD 列が非表示ではない場合は、それらの値が SELECT \* クエリで表示されます。 **PERIOD** 列が非表示として指定されている場合は、それらの値は SELECT \* クエリでは表示されません。 **PERIOD** 列が非表示の場合は、SELECT 句で **PERIOD** 列を明示的に参照すると、これらの列の値が返されます。  
   
- 任意の種類の時間ベースの分析を実行するには、新しい  **FOR SYSTEM_TIME** 句を使用し、テンポラル固有の 4 つのサブ句を指定して、現在のテーブルと履歴テーブルのデータをクエリします。 これらの句の詳細については、「 [テンポラル テーブル](../../relational-databases/tables/temporal-tables.md) 」と「 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
+ 任意の種類の時間ベースの分析を実行するには、新しい  **FOR SYSTEM_TIME** 句を使用し、テンポラル固有の 4 つのサブ句を指定して、現在のテーブルと履歴テーブルのデータをクエリします。 これらの句の詳細については、「[テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)」と「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
   
 -   AS OF <date_time>  
   

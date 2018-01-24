@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.condition.referencingpolicies.f1
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 364f5748287606dd71f5b528e4ac7f273997f281
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 946ceab0604c116ded08cfd2c0aa096ead20867e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>[条件を開く] ダイアログ ボックスの [依存ポリシー] ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このダイアログ ボックスを使用すると、このポリシー ベースの管理条件を現在参照しているポリシーの一覧を表示できます。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **名前**  
  この現在の条件を参照している各ポリシーの名前を一覧表示します。  
   

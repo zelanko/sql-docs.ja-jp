@@ -20,12 +20,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 caps.latest.revision: "148"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: cd0b3b84613720d825102f2676c2c07fb49a7cfc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 81810a418fd7f36dcadabdac5c535fa8bdaadcd3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>SQL Server 2017 のサポートされているバージョンとエディションのアップグレード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、および [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] からアップグレードできます。 このトピックでは、これらの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンからのサポートされているアップグレード パスと、サポートされている [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]へのエディションのアップグレードを示します。  
@@ -149,7 +149,7 @@ ms.lasthandoff: 11/20/2017
 - [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のサード パーティのカスタム Integration Services コンポーネントに対するサポート (実行とアップグレードなど)。  
   
 ## <a name="includesssqlv14-mdincludessssqlv14-mdmd-edition-upgrade"></a>[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] エディションのアップグレード  
-次の表に示すのは、[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] でサポートされるエディションのアップグレード シナリオです。  
+次の表に示すのは、 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]でサポートされるエディションのアップグレード シナリオです。  
   
 エディションのアップグレードを実行する手順については、「[Upgrade to a Different Edition of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)」 (SQL Server の別のエディションへのアップグレード &#40;セットアップ&#41;) を参照してください。  
   

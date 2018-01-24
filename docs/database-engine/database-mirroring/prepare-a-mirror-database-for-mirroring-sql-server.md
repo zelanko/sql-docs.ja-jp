@@ -19,13 +19,13 @@ ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 caps.latest.revision: "43"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 869a784fe82f1a142fd2a9792bd79784b5fe3959
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6a14d697865f099b584e3f8f7132f0bfc6a0cf49
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>ミラーリングのためのミラー データベースの準備 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] データベース ミラーリング セッションを開始する前に、データベース所有者またはシステム管理者は、ミラー データベースを作成し、ミラーリング用に準備しておく必要があります。 新しいミラー データベースを作成するには、少なくとも、プリンシパル データベースの完全バックアップとそれ以降のログ バックアップを作成し、その両方をミラー サーバーのインスタンスに (WITH NORECOVERY を使用して) 復元する必要があります。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
      [推奨事項](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   [ミラーリングを再開するために既存のミラー データベースを準備するには](#PrepareToRestartMirroring)  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Requirements"></a> 必要条件  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/20/2017
   
  データベース マスター キーの自動暗号化解除を有効にする方法については、「 [暗号化されたミラー データベースの設定](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)」を参照してください。  
   
-####  <a name="Permissions"></a> 権限  
+####  <a name="Permissions"></a> Permissions  
  データベース所有者またはシステム管理者。  
   
 ##  <a name="PrepareToRestartMirroring"></a> ミラーリングを再開するために既存のミラー データベースを準備するには  

@@ -23,15 +23,15 @@ helpviewer_keywords:
 - DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f5c13f332469856a9467e1694e59024a3222d5b1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7ba445a69a1bbb019b73676bf843a1dafc0884e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +113,7 @@ GO
   
 |10 進値|2 進ビット マスク|SQL Server スレッドを有効にするプロセッサ|  
 |-------------------|---------------------|--------------------------------------------|  
-|1|00000001|0|  
+|@shouldalert|00000001|0|  
 |3|00000011|0 と 1|  
 |7|00000111|0、1、および 2|  
 |15|00001111|0、1、2、および 3|  
@@ -139,7 +139,7 @@ GO
  [!INCLUDE[tsql](../../includes/tsql-md.md)] の RECONFIGURE コマンドの実行時に、指定された関係マスクがライセンス ポリシーに違反する場合は、エラー メッセージがクライアント セッションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに報告されます。データベース管理者による関係マスクの再構成作業が必要になります。 この場合、RECONFIGURE WITH OVERRIDE コマンドの実行が許可されません。  
   
 ## <a name="see-also"></a>参照  
- [リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
+ [リソースの利用状況の監視 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

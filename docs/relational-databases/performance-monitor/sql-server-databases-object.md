@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 03d12d8216ce6b92251355c41b1f0bdc90303003
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c92dc55eedaf801ad283ecb18bb55a25ba49f4b1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server の **SQLServer:Databases** オブジェクトには、一括コピー操作、バックアップと復元のスループット、およびトランザクション ログの利用状況を監視するためのカウンターがあります。 トランザクションとトランザクション ログを監視すると、データベースで発生しているユーザーの利用状況と、トランザクション ログの空き容量を調べることができます。 ユーザーの利用状況は、データベースのパフォーマンスを決定し、ログ サイズ、ロック、およびレプリケーションに影響を与えます。 下位レベルのログの利用状況を監視して、ユーザーの利用状況やリソースの利用状況を計測すると、パフォーマンスのボトルネックを突き止めるのに役立ちます。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  次の表で、SQL Server **Databases** カウンターについて説明します。  
   
-|SQL Server Databases カウンター|説明|  
+|SQL Server Databases カウンター|Description|  
 |-----------------------------------|-----------------|  
 |**Active Transactions**|データベースのアクティブなトランザクション数。|  
 |**Avg Dist From EOL/LP Request**|最新の VLF 内の要求における、ログ プール要求ごとの、ログの終端からのバイト単位での平均距離。| 
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/17/2017
 |**XTP Memory Used (KB)**|データベースの XTP により使用されるメモリ容量です。| 
   
 ## <a name="see-also"></a>参照  
- [リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
+ [リソースの利用状況の監視 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server、Database Replica](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
   

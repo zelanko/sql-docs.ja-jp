@@ -20,13 +20,13 @@ ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 caps.latest.revision: "13"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 222e727dbfea11ecd334bd6d88f01ce7294359e0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 80fad41153c117a5b76c3e7023bb9eb40b268d4b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>[進行状況] ページ (AlwaysOn 可用性グループ ウィザード)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,14 @@ ms.lasthandoff: 11/20/2017
  **名前**  
  各手順についての説明が表示されます。  
   
- **[状態]**  
+ **ステータス**  
  完了した手順の結果と、現在の手順の完了の割合を次のように示します。  
   
-|結果|説明|  
+|[結果]|Description|  
 |------------|-----------------|  
 |**[エラー]**|この手順の操作がエラーになったことを示します。 リンクをクリックすると、エラーを説明するメッセージ ダイアログ ボックスが表示されます。|  
 |**[実行中 (** *完了の割合* **)]**|操作が現在実行中であることを示し、この手順の進行状況をパーセンテージで示します。|  
-|**Success**|この手順の操作が正常に完了したことを示します。|  
+|**成功**|この手順の操作が正常に完了したことを示します。|  
   
  **[詳細の非表示]**  
  進行状況グリッドを非表示にします。  

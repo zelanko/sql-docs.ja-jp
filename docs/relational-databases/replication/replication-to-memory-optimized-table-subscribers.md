@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 118668a688f14cf725e573cc29f1185088faeeb6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8c69235ed7926219dc306764b3b2ba80a2c35bb1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>メモリ最適化テーブル サブスクライバーへのレプリケーション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 2.  パブリケーションにアーティクルを追加します。 詳しくは、「 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
      [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addarticle** ストアド プロシージャの **@schema_option** パラメーターを    
-    **0x40000000000** に設定します。  
+    **0x40000000000**以降のバージョンで使用できます。  
   
 3.  [アーティクルのプロパティ] ウィンドウで **[Enable Memory optimization]** (メモリ最適化を有効にする) を **true**に設定します。  
   

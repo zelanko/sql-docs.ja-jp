@@ -16,13 +16,13 @@ ms.assetid: 59e23ff3-d7ee-4e32-9629-0b54d3a258f7
 caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ba31bacc6b6172218e915e598063ac079c3a55b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 27a9b06d3afb1f0a5bd6e94907becbbaa7592950
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="choose-servers-to-configure-configure-database-mirroring-security-wizard"></a>[構成するサーバーを選択する] (データベース ミラーリング セキュリティ構成ウィザード)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、構成するサーバー インスタンスを指定できます。 ウィザードを進めるには、少なくとも 1 つのサーバー インスタンスを選択する必要があります。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[プリンシパル サーバー インスタンス]**  
  プリンシパル サーバーのセキュリティを構成する場合に選択します。  
   

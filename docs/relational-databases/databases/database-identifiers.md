@@ -22,15 +22,15 @@ helpviewer_keywords:
 - database objects [SQL Server], names
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e65cd74dd93228a722395eac56a120a4c64e0bd2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 35570e23edbec76e06c58a0756c6850024d371ea
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-identifiers"></a>データベース識別子
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] データベース オブジェクトの名前は識別子と呼ばれます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、すべてのオブジェクトに識別子を設定できます。 サーバーやデータベース、またはテーブル、ビュー、列、インデックス、トリガー、プロシージャ、制約、規則などのデータベース オブジェクトに対して識別子を割り当てることができます。 ほとんどのオブジェクトには識別子が必要です。ただし、制約などの一部のオブジェクトについては、識別子は省略可能です。  
@@ -62,7 +62,7 @@ WHERE KeyCol = 124
 ```  
   
  区切られた識別子  
- 二重引用符 (") または角かっこ ([ ]) で囲まれています。 識別子の形式に関する規則に従っている識別子は、区切らなくてもかまいません。 例:  
+ 二重引用符 (") または角かっこ ([ ]) で囲まれています。 識別子の形式に関する規則に従っている識別子は、区切らなくてもかまいません。 例 :  
   
 ```  
 SELECT *  
@@ -70,7 +70,7 @@ FROM [TableX]         --Delimiter is optional.
 WHERE [KeyCol] = 124  --Delimiter is optional.  
 ```  
   
- 識別子の規則に従わない識別子を [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで使用する場合は、必ず区切らなければなりません。 例:  
+ 識別子の規則に従わない識別子を [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで使用する場合は、必ず区切らなければなりません。 例 :  
   
 ```  
 SELECT *  

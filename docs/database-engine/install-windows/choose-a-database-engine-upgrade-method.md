@@ -15,12 +15,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c568ec23e5f64e65afb794a7e0c60a0eeb693622
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: fef7f02b15fee27e3e18a5eac23e0ee6ab97959c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>データベース エンジンのアップグレード方法の選択
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md.md)]のアップグレードを計画している場合、ダウンタイムとリスクを最小限に抑えるために、考慮すべきいくつかのアプローチがあります。 インプレース アップグレードの実行、新規インストールへの移行、またはローリング アップグレードの実行が可能です。 次の図は、これらのアプローチから選択する場合に役立ちます。 図の各アプローチについては、下でも説明しています。 図の意思決定ポイントに役立てるため、「 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)」も参照してください。  

@@ -19,13 +19,13 @@ ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 caps.latest.revision: "38"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 58accac84c6516967231b8c0803afe569689d069
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e92e9180de7f3a0e5d845a702f3851fef2542ad4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>可用性グループからのセカンダリ レプリカの削除 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループからセカンダリ レプリカを削除する方法について説明します。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
   
      [前提条件](#Prerequisites)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **セカンダリ レプリカを削除する方法:**  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **補足情報:**  [セカンダリ レプリカの削除後](#PostBestPractices)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  削除するレプリカが複数であるか単独であるかによって、次のように実行する手順が異なります。  
   
-    -   複数のレプリカを削除するには、 **[オブジェクト エクスプローラーの詳細]** ペインを使用して、削除するレプリカを表示してすべて選択します。 詳細については、「[[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)」を参照してください。  
+    -   複数のレプリカを削除するには、 **[オブジェクト エクスプローラーの詳細]** ペインを使用して、削除するレプリカを表示してすべて選択します。 詳細については、「[[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md) を参照してください。  
   
     -   単独のレプリカを削除するには、 **[オブジェクト エクスプローラー]** ペインまたは **[オブジェクト エクスプローラーの詳細]** ペインで選択します。  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
  **セカンダリ レプリカを削除するには**  
   
-1.  プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更します (**cd**)。  
+1.  プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更 (**cd**) します 。  
   
 2.  **Remove-SqlAvailabilityReplica** コマンドレットを使用します。  
   

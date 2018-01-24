@@ -14,22 +14,22 @@ ms.topic: article
 f1_keywords: sql13.swb.jobactivitymon.refresh.f1
 ms.assetid: 413a368e-fd2b-4e1f-b370-002cdbc85bab
 caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb9ae6930bdb4172b7a1a71e234e8367903983fc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c9202a51fa6f6b551f379e0308b92cb45bd64b13
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="job-activity-monitor-refresh"></a>ジョブの利用状況モニターの更新
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[更新の設定]** ダイアログ ボックスを使用すると、ジョブの利用状況モニターでサーバーの利用状況に関する新しい情報を取得する頻度を構成できます。 ジョブの利用状況モニターは、監視対象のサーバーに対してクエリを実行して、[ジョブの利用状況モニター] グリッドの情報を取得する必要があります。 自動更新の間隔を 30 秒未満に設定すると、これらのクエリを実行する時間がサーバーのパフォーマンスに影響を与える可能性があります。  
   
  このダイアログを開くには、ジョブの利用状況モニターの **[状態]**セクションの **[更新の設定を表示します]** をクリックします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[次の間隔で自動更新する]**  
  オンにすると、ジョブの利用状況モニターの情報の自動更新が有効になります。 既定では、このオプションはオフになっています。  
   

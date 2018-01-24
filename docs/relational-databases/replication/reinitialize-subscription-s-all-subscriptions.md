@@ -15,20 +15,20 @@ f1_keywords: sql13.rep.reinit.all.f1
 helpviewer_keywords: Reinitialize Subscription(s) dialog box
 ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3aa8eaf14f556f7b8e0808ea8be652b27444cdb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a0556ec4bd0cfdb40bb5db48b871731b6ebc37dd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="reinitialize-subscriptions---all-subscriptions"></a>[サブスクリプションの再初期化] - [すべてのサブスクリプション]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[サブスクリプションの再初期化]** ダイアログ ボックスを使用すると、パブリケーションに対してすべてのサブスクリプションを再初期化するように設定できます。 再初期化には各サブスクライバーへのスナップショットの適用が伴います。再初期化は、トランザクション パブリケーションに対するサブスクリプションではディストリビューション エージェントによって実行され、マージ パブリケーションに対するサブスクリプションではマージ エージェントによって実行されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[現在のスナップショットを使用する]**  
  サブスクリプションに対してディストリビューション エージェントまたはマージ エージェントが次回実行されるとき、各サブスクライバーに現在のスナップショットを適用します。 有効なスナップショットが使用できない場合、このオプションは選択できません。  
   

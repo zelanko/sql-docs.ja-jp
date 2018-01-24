@@ -16,13 +16,13 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 caps.latest.revision: "52"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 446a47fcf08111ba390f17c1a2844b639a4678f9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3f35c284eea57bff3eb97a85575f08d8663aee51
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-an-availability-group-transact-sql"></a>可用性グループの作成 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]機能を有効にする [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のインスタンス上で可用性グループを作成および構成するために [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用する方法について説明します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/20/2017
   
      [前提条件](#PrerequisitesRestrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
      [作業の概要および対応する Transact-SQL ステートメント](#SummaryTsqlStatements)  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../../includes/tsql-md.md)]の代わりに、可用性グループの作成ウィザードまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell コマンドレットを使用する方法もあります。 詳細については、「 [可用性グループ ウィザードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)」、「 [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)」、または「 [可用性グループの作成 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)」を参照してください。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
  可用性グループを初めて作成する場合は、あらかじめこのセクションに目を通しておくことを強くお勧めします。  
   
 ###  <a name="PrerequisitesRestrictions"></a> 前提条件、制限事項、および推奨事項  
@@ -58,8 +58,8 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
- **sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限のいずれかが必要です。  
+####  <a name="Permissions"></a> Permissions  
+ **sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、CONTROL SERVER 権限のいずれかが必要です。  
   
 ###  <a name="SummaryTsqlStatements"></a> 作業の概要および対応する Transact-SQL ステートメント  
  次の表は、可用性グループの作成と構成に伴う基本的な作業と、これらの作業に使用する [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントの一覧です。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に関連したこれらの作業は、この表に示されている順に実行する必要があります。  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  可用性グループは、[CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md) という [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを使用して作成します。  
   
-3.  新しいセカンダリ レプリカを可用性グループに参加させます。 詳細については、「 [可用性グループへのセカンダリ レプリカの参加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)の Always On 可用性グループを PowerShell コマンドレットで作成および構成する方法について説明します。  
+3.  新しいセカンダリ レプリカを可用性グループに参加させます。 詳細については、「 [可用性グループへのセカンダリ レプリカの参加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)、または PowerShell を使用して、既存の AlwaysOn 可用性グループにセカンダリ レプリカを追加する方法について説明します。  
   
 4.  可用性グループ内の各データベースについて、セカンダリ データベースを作成します。これは、プライマリ データベースの最新のバックアップを、RESTORE WITH NORECOVERY で復元することによって行います。 詳細については、「 [例: Windows 認証を使用した可用性グループの構成 (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)」で、データベース バックアップの復元手順をまず参照してください。  
   
@@ -315,7 +315,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="CompleteCodeExample"></a> サンプル構成プロシージャの完全なコード例  
  以下のコードは、すべての手順のコード例を総合したサンプル構成プロシージャの全体像です。 このコード例で使用されているプレースホルダーの値については次の表にまとめました。 このコード例の手順の詳細については、このトピックの「 [サンプル構成プロシージャを使用するうえでの前提条件](#PrerequisitesForExample) 」および「 [サンプル構成プロシージャ](#SampleProcedure)」を参照してください。  
   
-|プレースホルダー|説明|  
+|プレースホルダー|Description|  
 |-----------------|-----------------|  
 |\\\\*FILESERVER*\\*SQLbackups*|架空のバックアップ共有。|  
 |\\\\*FILESERVER*\\*SQLbackups\MyDb1.bak*|MyDb1 のバックアップ ファイル。|  
@@ -523,7 +523,7 @@ GO
   
  **AlwaysOn 可用性グループの構成のトラブルシューティング方法**  
   
--   [Always On 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [AlwaysOn 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
 -   [失敗したファイルの追加操作のトラブルシューティング &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   

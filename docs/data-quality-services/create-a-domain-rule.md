@@ -16,27 +16,27 @@ f1_keywords:
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b9bdf255f25c8b23dc4a34e882716fe87a14a1c0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d5c7e6f027352d3d8fbd79304d6454340a438d9b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-domain-rule"></a>ドメイン ルールの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメイン ルールを作成する方法について説明します。 ドメイン ルールとは、ドメイン値の検証、修正、および標準化のために使用される条件です。 ドメイン値が正確で、ビジネス要件に準拠していると見なされるためには、ドメイン ルールがドメイン全体に当てはまる必要があります。 ドメイン ルールには検証規則を含めることができます。検証規則は、データ品質プロジェクトでドメイン値の検証に使用され、データの修正には使用されません。 また、標準化規則を含めることもできます。標準化規則は、有効なデータに対して適用され、データ修正で使用されます。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  ドメイン ルールを作成するには、ドメイン管理アクティビティでナレッジ ベースとドメインを開いておく必要があります。  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  ドメイン ルールを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
 ##  <a name="Build"></a> ドメイン ルールの作成  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  ドメイン ルールに加えた変更を削除して、以前に適用したルールに戻すには、 **[すべての変更の破棄]** をクリックします。これにより、前回ルールを適用した後に加えた変更は適用されなくなります。 ドメインの値の妥当性は、破棄された変更ではなく、以前に適用したルールに従って更新されます。  
   
-3.  **[完了]** をクリックし、「 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
+3.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
   
 ##  <a name="FollowUp"></a> 補足情報: ドメイン ルールの作成後  
  ドメイン ルールを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/20/2017
   
  ドメイン ルールを作成するときには、いくつかの選択肢があります。 たとえば、値が A、B、C のいずれかの文字で始まるかどうかを検証するには、複雑な条件を含む単純なルール (パイプ文字を含む正規表現など) を作成することも、複数の単純な条件を含む複雑なルールを作成することもできます。 たとえば、"Value contains regular expression (^A|^B|^C)" は前者の例、 "'Value begins with A' OR 'Value begins with B' OR 'Value begins with C'" は後者の例になります。  
   
-|条件|説明|例|  
+|条件|Description|例|  
 |---------------|-----------------|-------------|  
 |長さが次の値と等しい|オペランドで指定された文字数の文字で構成される値のみが有効になります。|オペランドの例: 3<br /><br /> 有効な値: BB1<br /><br /> 無効な値: AA|  
 |長さが次の値以上|オペランドで指定された文字数以上の文字で構成される値のみが有効になります。|オペランドの例: 3<br /><br /> 有効な値: BB1、BBAA<br /><br /> 無効な値: AA|  

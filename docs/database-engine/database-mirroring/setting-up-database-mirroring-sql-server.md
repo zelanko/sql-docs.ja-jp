@@ -16,13 +16,13 @@ ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 caps.latest.revision: "62"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d7056cfd99338221679acbb9eee74de203546a72
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 72ba23869786b5d1351279a586b51aa2ffc5d11f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>データベース ミラーリングの設定 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ここでは、データベース ミラーリングを設定するための前提条件、推奨事項、および手順について説明します。 データベース ミラーリングの概要については、「 [データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  すべてのデータベース ユーザーのログインが、ミラー サーバーに存在するようにします。 詳細については、「 [データベース ミラーリングまたは Always On 可用性グループのログイン アカウントの設定 &#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)」を参照してください。  
   
-3.  ミラー データベースをホストするサーバー インスタンスで、ミラー化されたデータベースで必要な残りの環境を設定します。 詳細については、「[データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  
+3.  ミラー データベースをホストするサーバー インスタンスで、ミラー化されたデータベースで必要な残りの環境を設定します。 詳細については、「 [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  
   
 ##  <a name="EstablishUsingWinAuthentication"></a> 概要: データベース ミラーリング セッションの確立  
  ミラーリング セッションを確立するための基本手順を次に示します。  
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/20/2017
 >  [!INCLUDE[tsql](../../includes/tsql-md.md)] での証明書ベースのセキュリティを使用したデータベース ミラーリングの完全な設定例については、「[証明書を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)」を参照してください。  
   
   
-##  <a name="InThisSection"></a> このセクションの内容  
+##  <a name="InThisSection"></a> トピックの内容  
  [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
  中断されたセッションを再開する前に、ミラー データベースを作成したりミラー データベースを準備するための手順についてまとめています。 また、操作方法に関するトピックへのリンクも示します。  
   

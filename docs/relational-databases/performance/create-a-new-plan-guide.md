@@ -17,15 +17,15 @@ helpviewer_keywords:
 - plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67925edbbf7a3e914f598fc3532e2571d928fe76
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9baac19391b76e916bd317f3836cde0d083432fa
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-new-plan-guide"></a>新しいプラン ガイドの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] プラン ガイドは、クエリ ヒントまたは固定クエリ プランをクエリにアタッチすることにより、クエリの最適化を促します。 プラン ガイドでは、最適化するステートメントと、使用するクエリ ヒントを含む OPTION 句 またはクエリの最適化に使用する特定のクエリ プランのいずれかを指定します。 クエリが実行されると、クエリ オプティマイザーにより [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがプラン ガイドと照合され、実行時にクエリに OPTION 句がアタッチされるか、指定されたクエリ プランが使用されます。  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/17/2017
   
 10. **ステートメントに適用されるクエリ ヒントまたはクエリ プランを** [ヒント] [!INCLUDE[tsql](../../includes/tsql-md.md)] ボックスに入力します。 1 つまたは複数のクエリ ヒントを指定するには、有効な OPTION 句を入力します。  
   
-11. **[OK]**をクリックします。  
+11. **[OK]** をクリックします。  
 
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
 

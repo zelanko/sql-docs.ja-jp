@@ -15,24 +15,24 @@ f1_keywords: sql13.rep.monitor.DistributorSettings.f1
 helpviewer_keywords: Distributor Settings dialog box
 ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70367b69beb543b6d43b28ebbd6e5e15891b074e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29a5ba0a5fa0d731938c8d62fc53e209ab979b95
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-settings"></a>ディストリビューターの設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[ディストリビューターの設定]** ダイアログ ボックスを使用すると、レプリケーション モニターの左ペインに追加されているディストリビューターの設定を変更できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[レプリケーション モニターが起動したときに自動的に接続する]**  
  レプリケーション モニターでディストリビューターに接続して状態情報を取得する場合に選択します。  
   
- **接続**  
+ **[接続]**  
  クリックすると、 **[サーバーへの接続]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、レプリケーション モニターがディストリビューターに接続するときに使用する接続プロパティおよび資格情報を表示および変更できます。  
   
  **[このディストリビューターとパブリケーションのステータスを自動的に更新する]**  

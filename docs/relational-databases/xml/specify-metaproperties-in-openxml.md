@@ -19,15 +19,15 @@ helpviewer_keywords:
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e1d8a0a29b6d92aeab9c1c6e4afa01a2665add6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ffde4891d1481b628012a64d58b73f904e131f7e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML 内でのメタプロパティの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] XML ドキュメントに含まれるメタプロパティ属性は、XML アイテム (要素、属性、その他の DOM ノードなど) のプロパティを示す属性です。 これらの属性は、物理的に XML ドキュメントのテキスト内に存在するものではありません。 ただし、OPENXML では、すべての XML アイテムに、これらのメタプロパティが提供されます。 これらのメタプロパティを使用すると、XML ノードの情報 (ローカルの位置や名前空間の情報など) を抽出できます。 これらの情報からは、テキストで表現されている情報よりも詳細な情報を得られます。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  これらのメタプロパティは、XPath による位置指定では参照できません。  
   
-|メタプロパティ属性|説明|  
+|メタプロパティ属性|Description|  
 |----------------------------|-----------------|  
 |**@mp:id**|DOM ノードに対して、システムによって生成されたドキュメント レベルの識別子を提供します。 この ID は、ドキュメントが再解析されない限り、同じ XML ノードを参照します。<br /><br /> XML ID が **0** の場合、その要素はルート要素です。 その親要素の XML ID は NULL になります。|  
 |**@mp:localname**|ノードの名前のローカル部分を格納します。 要素ノードや属性ノードの名前付けの際に、プレフィックスおよび名前空間 URI と共に使用します。|  

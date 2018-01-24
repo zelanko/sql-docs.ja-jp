@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deployment security [SQL Server replication]
 ms.assetid: 9c8c284a-e497-48b7-b2e2-c96a0e940e67
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0740e86a27b4da29a54b90b45d4264ecf7ba88a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 91887cd8440fbe7427d4bdba3c50fda151e80ee3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-deployment-replication"></a>セキュリティで保護された配置 (レプリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ここでは、レプリケーションのセキュリティを強化するために役立つ情報を示します。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
  [スナップショット フォルダーのセキュリティ保護](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
  スナップショット フォルダーへのアクセスに必要な権限、フォルダーの場所を定義する際の推奨事項、および FTP によるスナップショット配信の注意点について説明します。  
   
- [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
+ [インターネット経由のレプリケーションのセキュリティ](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
  仮想プライベート ネットワークと Web 同期に関する情報が含まれています。  
   
  [SQL Server Compact レプリケーションのセキュリティに関する注意点](../../../relational-databases/replication/security/security-considerations-for-sql-server-compact-replication.md)  

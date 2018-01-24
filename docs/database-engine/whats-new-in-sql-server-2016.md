@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], what's new
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 caps.latest.revision: "431"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0ca847dd4e836fbfd350a8c92df263f50347ae99
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0e5018b6b111790d2ff0415180e0608798da44ac
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>データベース エンジンの新機能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -284,7 +284,7 @@ Insert select ステートメントで挿入では、マルチ スレッドは�
 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] では、Microsoft Azure Blob ストレージ サービスを使用した SQL Server Backup to URL がブロック BLOB によるストライプ バックアップ セットをサポートするようになり、最大バックアップ サイズ 12.8 TB をサポートするようになりました。 例については、「 [Code Examples](../relational-databases/backup-restore/sql-server-backup-to-url.md#Examples)」を参照してください。
 
 ####  <a name="FileSnapshotBackup"></a> Microsoft Azure BLOB Storage へのファイル スナップショット バックアップ
- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] では、SQL Server Backup to URL で、Microsoft Azure BLOB ストレージ サービスによりすべてのデータベース ファイルが格納されたデータベースをバックアップする際に Azure スナップショットを使用できるようになりました。 詳細については、「[Azure でのデータベース ファイルのファイル スナップショット バックアップ](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。
+ [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] では、SQL Server Backup to URL で、Microsoft Azure BLOB ストレージ サービスによりすべてのデータベース ファイルが格納されたデータベースをバックアップする際に Azure スナップショットを使用できるようになりました。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。
 
 ####  <a name="ManagedBackup"></a> 管理対象のバックアップ
 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] では、SQL Server Managed Backup to Microsoft Azure でバックアップ ファイルに新しいブロック BLOB ストレージが使用されます。 また、管理対象のバックアップはいくつかの点が変更され、機能が強化されています。
@@ -390,7 +390,7 @@ Always Encrypted により、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.m
 
 
 ####  <a name="Masking"></a> 動的なデータ マスキング
-動的データ マスクは、特権のないユーザーに対してデリケートなデータをマスクし、データの公開を制限します。 動的なデータ マスキングは、顧客がアプリケーション層への影響を最小限に抑えて公開する機微なデータの量を指定できるようにすることで、機微なデータへの不正アクセスを防ぐのに役立ちます。 これはポリシー ベースのセキュリティ機能です。これにより、データベース内のデータはそのままで、指定されたデータベース フィールドに対するクエリの結果セットで機微なデータを非表示にすることができます。 詳細については、「 [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md)」を参照してください。
+動的データ マスクは、特権のないユーザーに対してデリケートなデータをマスクし、データの公開を制限します。 動的データ マスクでは、公開するデリケートなデータの量を指定することで、そのようなデータに対する未承認のアクセスを防ぎ、アプリケーション レイヤーへの影響が最小限に抑えられます。 これはポリシー ベースのセキュリティ機能です。これにより、データベース内のデータはそのままで、指定されたデータベース フィールドに対するクエリの結果セットで機微なデータを非表示にすることができます。 詳細については、「 [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md)」を参照してください。
 
 
 ####  <a name="Perms"></a> 新しい権限

@@ -22,13 +22,13 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 caps.latest.revision: "40"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba4368ce9a1557d8cd199f0bad59fb3d40a2cdf4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 01d279d30860e0e10cf3a76b447aaec245541fcc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>ミラーリング パフォーマンス基準の警告しきい値および警告の使用 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、データベース ミラーリング用に警告しきい値を構成および管理できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントについて説明します。 データベース ミラーリング モニター、または **sp_dbmmonitorchangealert**、 **sp_dbmmonitorhelpalert**、および **sp_dbmmonitordropalert** の各ストアド プロシージャを使用できます。 また、データベース ミラーリング イベントの警告の構成についても説明します。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/20/2017
   
      次のシステム ストアド プロシージャを使用すると、管理者は、一度に 1 つのパートナーのミラー化されたデータベースで警告しきい値を設定および管理できます。  
   
-    |手順|説明|  
+    |手順|Description|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)|指定したミラーリングのパフォーマンス基準に対する警告しきい値を追加または変更します。|  
     |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|データベース ミラーリング監視の主要なパフォーマンス基準の 1 つまたはすべてについて、警告しきい値に関する情報を返します。|  

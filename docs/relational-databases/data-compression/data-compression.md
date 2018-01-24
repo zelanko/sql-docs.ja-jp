@@ -25,15 +25,15 @@ helpviewer_keywords:
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 996f547876031c29f975d85949d2ff300afdee5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d999c313752ccbb23f31b9763463fc69e10ac20b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ REBUILD PARTITION = ALL WITH (
 ) ;  
 ```  
   
-### <a name="performance"></a>パフォーマンス  
+### <a name="performance"></a>[パフォーマンス]  
  保存用圧縮を使用して列ストア インデックスを圧縮すると、列ストア インデックスに保存用圧縮がない場合に比べて実行速度が遅くなります。 保存用圧縮は、データを圧縮および取得する時間と CPU リソースに余裕がある場合にのみ使用します。  
   
  記憶域を削減するデータ圧縮の利点は、頻繁にアクセスしないデータに便利です。 たとえば、各月のデータ用のパーティションがある場合、ほとんどアクティビティは最新の月のデータに対して実行されるため、古い月のデータをアーカイブして必要なストレージを削減できます。  
@@ -209,7 +209,7 @@ REBUILD PARTITION = ALL WITH (
  [Unicode 圧縮の実装](../../relational-databases/data-compression/unicode-compression-implementation.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
+ [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 75047e413cbc55d5e5a9431a6c6ab7cc7b92b017
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c9a7ebf0d795639f59106afc0573f42d088926fa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="managing-a-composite-domain"></a>複合ドメインの管理
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) での複合ドメインの使用について説明します。 単一ドメインでは 1 つのフィールド内のデータを十分に表せないことがあります。また、単一ドメインをグループ化しないとデータを表すことはできません。 これを行うには、複合ドメインを作成します。 複合ドメインは 2 つ以上の単一ドメインで構成され、解析されないが単一の複合値に含まれる複数の関連用語で構成されるデータ フィールドにマップされます。 値の各用語は、それぞれ異なる単一ドメインで表されます。 単一ドメインを複合ドメインに含めた後に、複合ドメインをデータ フィールドにマップすると、単一ドメインでナレッジを構築して、そのフィールド内のデータに関するナレッジ ベースにナレッジを構築できます。 複合ドメインは、単一ドメインと同様に、1 つのデータ フィールド内のデータのセマンティック表現です。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
 |複合ドメイン内の 1 つのドメインの値が別のドメインの値に影響する場合は、クロス ドメイン ルールを作成します。|[クロス ドメイン ルールを作成する](../data-quality-services/create-a-cross-domain-rule.md)|  
 |DQS で周波数が報告されるように値の組み合わせを指定します。|[複合ドメインで値のリレーションを使用する](../data-quality-services/use-value-relations-in-a-composite-domain.md)|  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

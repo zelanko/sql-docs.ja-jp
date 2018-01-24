@@ -27,15 +27,15 @@ helpviewer_keywords:
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 caps.latest.revision: "84"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5cd69a363f823d5d5ef197524d2fe5a3f393d438
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d12b4ae5ef18aadaf580945f5326dc08f00c11ac
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>サーバー上の XML スキーマ コレクションの要件と制限
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] XSD (XML Schema Definition Language) の検証には、**xml** データ型を使用する SQL 列に関して制限事項がいくつかあります。 次の表は、このような制限事項に関する詳細と、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で機能するように XSD スキーマを変更するためのガイドラインを示しています。 このセクションのトピックでは、具体的な制限事項の詳細とその対処方法について説明します。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|説明|  
+|トピック|Description|  
 |-----------|-----------------|  
 |[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|正規の形式とパターン制限について説明します。|  
 |[ワイルドカード コンポーネントと内容検証](../../relational-databases/xml/wildcard-components-and-content-validation.md)|XML スキーマ コレクションでのワイルドカード文字、lax 検証、および anyType 要素の使用に関する制限について説明します。|  

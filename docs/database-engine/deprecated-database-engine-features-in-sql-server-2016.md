@@ -17,15 +17,15 @@ helpviewer_keywords:
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 caps.latest.revision: "215"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea0efb1cf326d03a2b45ff6a6f2566c93afc500b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2c85ec6c5975b8053dfd5c87a575fe79f61d5170
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 データベース エンジンの非推奨機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -112,23 +112,23 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |ネイティブ XML Web サービス|FOR SOAP オプションを指定した CREATE ENDPOINT または ALTER ENDPOINT ステートメント<br /><br /> sys.endpoint_webmethods<br /><br /> sys.soap_endpoints|代わりに Windows Communications Foundation (WCF) または ASP.NET を使用してください。|CREATE/ALTER ENDPOINT<br /><br /> sys.endpoint_webmethods<br /><br /> EXT_soap_endpoints<br /><br /> sys.soap_endpoints|21<br /><br /> 22<br /><br /> 23|  
 |リムーバブル データベース|sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable|74<br /><br /> 75|  
 |リムーバブル データベース|sp_dbremove|DROP DATABASE|sp_dbremove|76|  
-|セキュリティ|ALTER LOGIN WITH SET CREDENTIAL 構文|新しい ALTER LOGIN ADD および DROP CREDENTIAL 構文に置き換えられます。|ALTER LOGIN WITH SET CREDENTIAL|230|  
-|セキュリティ|sp_addapprole<br /><br /> sp_dropapprole|CREATE APPLICATION ROLE<br /><br /> DROP APPLICATION ROLE|sp_addapprole<br /><br /> sp_dropapprole|53<br /><br /> 54|  
-|セキュリティ|sp_addlogin<br /><br /> sp_droplogin|CREATE LOGIN<br /><br /> DROP LOGIN|sp_addlogin<br /><br /> sp_droplogin|39<br /><br /> 40|  
-|セキュリティ|sp_adduser<br /><br /> sp_dropuser|CREATE USER<br /><br /> DROP USER|sp_adduser<br /><br /> sp_dropuser|49<br /><br /> 50|  
-|セキュリティ|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
-|セキュリティ|sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
-|セキュリティ|sp_approlepassword<br /><br /> sp_password|ALTER APPLICATION ROLE<br /><br /> ALTER LOGIN|sp_approlepassword<br /><br /> sp_password|55<br /><br /> 46|  
-|セキュリティ|sp_changeobjectowner|ALTER SCHEMA または ALTER AUTHORIZATION|sp_changeobjectowner|58|  
-|セキュリティ|sp_control_dbmasterkey_password|マスター キーが存在し、パスワードが正しくなければなりません。|sp_control_dbmasterkey_password|274|  
-|セキュリティ|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
-|セキュリティ|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
-|セキュリティ|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
-|セキュリティ|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|これらのストアド プロシージャは、 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]で正しかった情報を返します。 出力には、 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]に実装された権限階層への変更が反映されません。 詳細については、「 [固定サーバー ロールの権限](http://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx)」を参照してください。|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
-|セキュリティ|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|特定の権限に対する GRANT、DENY、および REVOKE を使用してください。|ALL 権限|35|  
-|セキュリティ|PERMISSIONS 組み込み関数|代わりに sys.fn_my_permissions をクエリしてください。|PERMISSIONS|170|  
-|セキュリティ|SETUSER|EXECUTE AS|SETUSER|165|  
-|セキュリティ|RC4 および DESX 暗号化アルゴリズム|AES など、別のアルゴリズムを使用してください。|DESX アルゴリズム|238|  
+|Security|ALTER LOGIN WITH SET CREDENTIAL 構文|新しい ALTER LOGIN ADD および DROP CREDENTIAL 構文に置き換えられます。|ALTER LOGIN WITH SET CREDENTIAL|230|  
+|Security|sp_addapprole<br /><br /> sp_dropapprole|CREATE APPLICATION ROLE<br /><br /> DROP APPLICATION ROLE|sp_addapprole<br /><br /> sp_dropapprole|53<br /><br /> 54|  
+|Security|sp_addlogin<br /><br /> sp_droplogin|CREATE LOGIN<br /><br /> DROP LOGIN|sp_addlogin<br /><br /> sp_droplogin|39<br /><br /> 40|  
+|Security|sp_adduser<br /><br /> sp_dropuser|CREATE USER<br /><br /> DROP USER|sp_adduser<br /><br /> sp_dropuser|49<br /><br /> 50|  
+|Security|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
+|Security|sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
+|Security|sp_approlepassword<br /><br /> sp_password|ALTER APPLICATION ROLE<br /><br /> ALTER LOGIN|sp_approlepassword<br /><br /> sp_password|55<br /><br /> 46|  
+|Security|sp_changeobjectowner|ALTER SCHEMA または ALTER AUTHORIZATION|sp_changeobjectowner|58|  
+|Security|sp_control_dbmasterkey_password|マスター キーが存在し、パスワードが正しくなければなりません。|sp_control_dbmasterkey_password|274|  
+|Security|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
+|Security|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
+|Security|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
+|Security|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|これらのストアド プロシージャは、 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]で正しかった情報を返します。 出力には、 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]に実装された権限階層への変更が反映されません。 詳細については、「 [固定サーバー ロールの権限](http://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx)」を参照してください。|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
+|Security|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|特定の権限に対する GRANT、DENY、および REVOKE を使用してください。|ALL 権限|35|  
+|Security|PERMISSIONS 組み込み関数|代わりに sys.fn_my_permissions をクエリしてください。|PERMISSIONS|170|  
+|Security|SETUSER|EXECUTE AS|SETUSER|165|  
+|Security|RC4 および DESX 暗号化アルゴリズム|AES など、別のアルゴリズムを使用してください。|DESX アルゴリズム|238|  
 |SET オプション|SET FMTONLY|[sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)、[sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)、[sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)、[sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)。|SET FMTONLY|250|  
 |サーバー構成オプション|c2 audit オプション<br /><br /> default trace enabled オプション|[common criteria compliance enabled サーバー構成オプション](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [拡張イベント](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |SMO クラス|**Microsoft.SQLServer.Management.Smo.Information** クラス<br /><br /> **Microsoft.SQLServer.Management.Smo.Settings** クラス<br /><br /> **Microsoft.SQLServer.Management.Smo.DatabaseOptions** クラス<br /><br /> **Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication** プロパティ|**Microsoft.SqlServer.Management.Smo.Server** クラス<br /><br /> **Microsoft.SqlServer.Management.Smo.Server** クラス<br /><br /> **Microsoft.SqlServer.Management.Smo.Database** クラス<br /><br /> なし|なし|なし|  
@@ -142,7 +142,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |テーブル圧縮|vardecimal ストレージ形式の使用|Vardecimal ストレージ形式は推奨されません。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のデータ圧縮では、decimal 型の値も他のデータ型と同様に圧縮されます。 vardecimal ストレージ形式ではなくデータ圧縮を使用することをお勧めします。|vardecimal ストレージ形式|200|  
 |テーブル圧縮|sp_db_vardecimal_storage_format プロシージャの使用|Vardecimal ストレージ形式は推奨されません。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のデータ圧縮では、decimal 型の値も他のデータ型と同様に圧縮されます。 vardecimal ストレージ形式ではなくデータ圧縮を使用することをお勧めします。|sp_db_vardecimal_storage_format|201|  
 |テーブル圧縮|sp_estimated_rowsize_reduction_for_vardecimal プロシージャの使用|代わりにデータ圧縮と sp_estimate_data_compression_savings プロシージャを使用してください。|sp_estimated_rowsize_reduction_for_vardecimal|202|  
-|テーブル ヒント|UPDATE または DELETE ステートメントの FROM 句での NOLOCK または READUNCOMMITTED の指定|FROM 句から NOLOCK または READUNCOMMITTED のテーブル ヒントを削除します。|NOLOCK or READUNCOMMITTED in UPDATE or DELETE|1|  
+|テーブル ヒント|UPDATE または DELETE ステートメントの FROM 句での NOLOCK または READUNCOMMITTED の指定|FROM 句から NOLOCK または READUNCOMMITTED のテーブル ヒントを削除します。|NOLOCK or READUNCOMMITTED in UPDATE or DELETE|@shouldalert|  
 |テーブル ヒント|WITH キーワードを使用しないテーブル ヒントの指定|WITH を使用します。|Table hint without WITH|8|  
 |テーブル ヒント|INSERT_HINTS||INSERT_HINTS|34|  
 |テキスト ポインター|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|なし|UPDATETEXT または WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  

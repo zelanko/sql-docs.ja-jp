@@ -23,12 +23,12 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 caps.latest.revision: "47"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: b5a8152042d85f7e3025c0f1cdfc5acc534bfbad
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 58b7a7ba954159974f60e58ff6b8bbbd07017fef
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>可用性グループに対するデータベースの手動準備 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、[!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] で AlwaysOn 可用性グループのデータベースを準備する方法について説明します。 データベースの準備には、2 つの手順が必要です。 
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="Security"></a> セキュリティ  
  データベースをバックアップするときに、 [TRUSTWORTHY データベース プロパティ](../../../relational-databases/security/trustworthy-database-property.md) は OFF に設定されます。 したがって、新たに復元されたデータベースでは TRUSTWORTHY は常に OFF です。  
   
-####  <a name="Permissions"></a> 権限  
+####  <a name="Permissions"></a> Permissions  
  BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられています。 詳細については、「 [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)」を参照してください。  
   
  復元するデータベースがサーバー インスタンスに存在しない場合、RESTORE ステートメントに CREATE DATABASE 権限が必要です。 詳細については、「 [RESTORE &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-transact-sql.md)で復元することはできません。  

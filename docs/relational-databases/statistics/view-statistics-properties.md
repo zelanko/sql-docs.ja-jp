@@ -17,15 +17,15 @@ helpviewer_keywords:
 - statistics [SQL Server], viewing properties
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4928ecf4b276072b7b8ad4e68deeb4bace7fc672
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 38296de8aadb898c9d33be159a9931470d37d20a
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-statistics-properties"></a>統計のプロパティの表示
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のテーブルまたはインデックス付きビューについての、現在のクエリの最適化に関する統計を表示します。 統計オブジェクトには、統計に関するメタデータが含まれるヘッダー、統計オブジェクトの最初のキー列の値の分布が含まれるヒストグラム、および列間の相関関係を測定する密度ベクトルが格納されています。 ヒストグラムと密度ベクトルの詳細については、「[DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)」を参照してください。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **統計のプロパティを表示するために使用するもの:**  
   
@@ -42,11 +42,11 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> 権限  
+####  <a name="Permissions"></a> Permissions  
  統計オブジェクトを表示するには、テーブルを所有しているか、固定サーバー ロール **sysadmin** 、固定データベース ロール **db_owner** 、または固定データベース ロール **db_ddladmin** のメンバーである必要があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  [ **統計のプロパティ -** *statistics_name* ] ダイアログ ボックスの **[ページの選択]** ウィンドウで **[詳細]**を選びます。  
   
-      **統計のプロパティ -**  **statistics_name** *statistics_name* ページで次のプロパティが表示されます。  
+     **統計のプロパティ -**  **statistics_name** *statistics_name* ページで次のプロパティが表示されます。  
   
      **テーブル名**  
      統計の対象となるテーブルの名前が表示されます。  
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/17/2017
      **[平均の長さ]**  
      列プレフィックスの列値のリストを格納する平均の長さ (バイト単位)。 たとえば、リスト (3, 5, 6) の値ごとに 4 バイト必要な場合は、長さは 12 バイトになります。  
   
-     **列**  
+     **[列]**  
      [すべての密度] および [平均の長さ] を表示するプレフィックスの列の名前。  
   
      以下に、ヒストグラムを指定した場合に結果セットに返される列を示します。  
@@ -136,7 +136,7 @@ ms.lasthandoff: 11/17/2017
      **AVG_RANGE_ROWS**  
      ヒストグラム区間内 (上限は除く) にある重複する列値を持つ行の平均数 (DISTINCT_RANGE_ROWS > 0 の場合 RANGE_ROWS / DISTINCT_RANGE_ROWS)  
   
-7.  クリックして **OK**です。  
+7.  **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

@@ -23,20 +23,20 @@ helpviewer_keywords:
 - delete DAC
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7181ebd6219df4a3b016ea0b366fae7c883399d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d54016fe377d7ed10fffd8831bfe07d5c26e1ce8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-a-data-tier-application"></a>データ層アプリケーションの削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] データ層アプリケーションの削除ウィザードまたは Windows PowerShell スクリプトを使用して、データ層アプリケーションを削除できます。 関連付けられたデータベースの保持、デタッチ、または削除を指定することができます。  
   
--   **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)、 [権限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
 -   **DAC のアップグレード:**  [データ層アプリケーションの登録ウィザードの使用](#UsingDeleteDACWizard)、 [PowerShell の使用](#DeleteDACPowerShell)  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/17/2017
   
  **[< 戻る]**: **[説明]** ページに戻ります。  
   
- **[次へ >]**: **[概要]** ページに進みます。  
+ **[次へ]** : **[概要]** ページに進みます。  
   
  **[キャンセル]** : DAC もデータベースも削除することなくウィザードを終了します。  
   

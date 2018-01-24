@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55f89b361e4c210c252a0fc629f7b5664390c056
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fef7b422366598e1974a07e4ee36e0100157dfa2
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-term-based-relations"></a>用語ベースのリレーションの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメインの用語ベースのリレーションを作成する方法について説明します。 用語ベースのリレーション (TBR) を使用して、ドメインの値の一部になっている用語を修正できます。 用語ベースのリレーションでは、共通する部分のスペルを除いても同一である複数の値は同一のシノニムと見なすことができます。 たとえば、"Inc." という用語を "Incorporated" に変更する用語ベースのリレーションを設定できます。 という用語を “Incorporated” に変更する用語ベースのリレーションを設定できます。 "Inc." という用語は、ドメインで発生するたびに変更されます。 "Contoso, Inc." のインスタンスは "Contoso, Incorporated" に変更され、2 つの値はまったく同じシノニムと見なされます。  
@@ -55,14 +55,14 @@ ms.lasthandoff: 11/20/2017
   
  クレンジング プロセス中に収集されるデータ品質ナレッジをドメインにインポートする場合、TBR によって変更された値が正しい値としてインポートされます。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  用語ベースのリレーションを作成するには、ドメイン管理アクティビティでドメインを開いておく必要があります。  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  用語ベースのリレーションを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
 ##  <a name="Create"></a> 用語ベースのリレーションの作成  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/20/2017
   
     6.  **[検索]** ボックスに 1 つ以上の数字を入力し、リレーション テーブルで値を検索します。 一致する文字列が強調表示されます。 上矢印と下矢印を使用して、テーブル内の文字列の異なるインスタンスに移動します。  
   
-    7.  **スペル チェック**: **[値]** 列または **[次に修正]** 列の値に赤い波線の下線が付いている場合は、スペル チェックで値の修正が提案されています。 下線が付いている値を右クリックし、スペル チェックで提案された値の 1 つを選択します。 または、ショートカット メニューの **[追加]** をクリックすると、元の値を反映できます。 詳細については、「 [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) 」および「 [Set Domain Properties](../data-quality-services/set-domain-properties.md)」を参照してください。  
+    7.  **スペル チェック**: **[値]** 列または **[次に修正]** 列の値に赤い波線の下線が付いている場合は、スペル チェックで値の修正が提案されています。 下線が付いている値を右クリックし、スペル チェックで提案された値の 1 つを選択します。 または、ショートカット メニューの **[追加]** をクリックすると、元の値を反映できます。 詳細については、「 [DQS のスペル チェックの使用](../data-quality-services/use-the-dqs-speller.md) 」および「 [ドメインのプロパティを設定する](../data-quality-services/set-domain-properties.md)」を参照してください。  
   
         > [!NOTE]  
         >  スペル チェックを使用するには、 **[ドメインのプロパティ]** ページで有効にする必要があります。 **[ドメインのプロパティ]** ページで無効になっている場合は、 **[用語ベースのリレーション]** ページで **[スペル チェックを有効/無効にします]** アイコンをクリックして有効にすることもできます。  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 204c9ecf128f9aea3b520a63f4d001c09e9e9b19
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 71657218912add2fd3b44297e0a4b82cb7b655a5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML データ型の変数と列の作成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] **xml** データ型は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での組み込みデータ型の 1 つであり、**int**、**varchar**などの他の組み込みデータ型といくつかの点で似ている部分があります。 他の組み込みの型と同じく、 **xml** データ型はテーブルを作成するときに列の型として変数の型、パラメーターの型、および関数の戻り値の型と同様に使用したり、 [CAST および CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)で使用できます。  
@@ -72,7 +72,7 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** 型の列に対する NULL 制約および NOT NULL 制約もサポートされます。 例:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** 型の列に対する NULL 制約および NOT NULL 制約もサポートされます。 例 :  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  

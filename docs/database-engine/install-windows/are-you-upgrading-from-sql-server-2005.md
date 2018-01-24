@@ -15,12 +15,12 @@ ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
 caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 0d0f68c51cfc99f8ff6b6af2e048fbbb7f951ae9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: eae5931014a84ff1169412b830a20e217627918c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>SQL Server 2005 からアップグレードしますか?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server 2005 の延長サポートの終了は、新しいバージョンの SQL Server や Azure SQL Database への早めのアップグレードをお勧めする 1 つの理由です。 アップグレードすると、セキュリティとコンプライアンスを維持し、パフォーマンスを大きく改善し、データ プラットフォームのインフラストラクチャを最適化できます。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="get-sql-server"></a>SQL Server を入手する  
  SQL Server の評価版コピーをダウンロードするには、[こちら](http://www.microsoft.com/evalcenter/evaluate-sql-server-2016)をクリックします。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
  [SQL Server 2017](http://www.microsoft.com/sql-server/sql-server-2017)   
  [SQL Server 2005 のサポート終了](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
   

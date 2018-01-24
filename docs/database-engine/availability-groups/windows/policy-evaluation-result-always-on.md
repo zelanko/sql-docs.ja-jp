@@ -18,13 +18,13 @@ ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 caps.latest.revision: "9"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b0bd0ff787235f331a614b3766f99b215b13fcd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b1820f927883befa7acb15fded38f5eb6463f374
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="policy-evaluation-result-always-on"></a>ポリシー評価の結果 (AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
 |![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|重大|  
 |![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|警告|  
   
- **説明**  
+ **[説明]**  
  このグリッドには、選択した問題の簡単な説明が表示されます。  
   
  **その他の情報**  
@@ -54,9 +54,9 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
--   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Always On ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
--   [AlwaysOn ポリシーを使用した可用性グループの正常性の確認 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [Always On ポリシーを使用した可用性グループの正常性の確認 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

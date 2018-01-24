@@ -18,13 +18,13 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc1923dcca1052c3c0bcdc2d1ba9abfb7935803a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ac44c00dd2ffb0a37a4a7a53a33dbddb54df49f9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>テーブル以外のアイテムを使用したクエリの作成 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 検索クエリを作成するときは常に、必要な列、必要な行、およびクエリ プロセッサが基になるデータを検索する場所を明示します。 通常、この基になるデータは 1 つのテーブル、または相互に結合された複数のテーブルで構成されています。 ただし、基になるデータは、テーブル以外のソースを使用してもかまいません。 実際、ビュー、クエリ、シノニム、またはテーブルを返すユーザー定義関数のデータを使用できます。  

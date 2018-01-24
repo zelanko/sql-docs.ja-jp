@@ -24,13 +24,13 @@ ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 caps.latest.revision: "39"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4321216ddefa8ac3a3e6335a2432244f342c12da
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 014784893728eb72edd754e270330e287fa8d364
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="mirroring-states-sql-server"></a>ミラーリング状態 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] データベース ミラーリング セッションの間、ミラーリングされるデータベースは常に特定の状態 ("*ミラーリング状態*") になります。 データベースの状態は、通信状態、データ フロー、およびパートナー間のデータの違いを反映します。 データベース ミラーリング セッションには、プリンシパル データベースと同じ状態が採用されます。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
   
  次の表に、考えられるミラーリング状態を示します。  
   
-|ミラーリング状態|説明|  
+|ミラーリング状態|Description|  
 |---------------------|-----------------|  
 |SYNCHRONIZING|ミラー データベースの内容が、プリンシパル データベースの内容に遅れています。 プリンシパル サーバーからミラー サーバーにログ レコードを送信しています。ミラー サーバーでは、ミラー データベースをロールフォワードするために変更を適用しています。<br /><br /> データベース ミラーリング セッションの開始時、データベースは同期中状態にあります。 プリンシパル サーバーはデータベースとして機能しており、ミラー サーバーは遅延を解消しようとしています。|  
 |SYNCHRONIZED|ミラー サーバーがプリンシパル サーバーとの遅延を解消すると、ミラーリング状態が同期状態になります。 プリンシパル サーバーがミラー サーバーに変更を送信し、ミラー サーバーがミラー データベースに変更を適用する、という処理が継続されている限り、データベースはこの状態のままです。<br /><br /> トランザクションの安全性が FULL に設定されている場合、同期状態では自動フェールオーバーと手動フェールオーバーの両方がサポートされます。フェールオーバー後のデータの損失はありません。<br /><br /> トランザクションの安全性が無効な場合は、同期状態の場合でも、一部データの損失の可能性が常にあります。|  

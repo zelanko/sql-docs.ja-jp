@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQLServer:Buffer Manager
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5e2ac02420b0ca701c1de5a70b54a1cedc628bec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 492c60be544246d0f94e5a8eba4198bca2815e95
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server: Buffer Manager オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **Buffer Manager** オブジェクトには、次に示す項目の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] による使用状況を監視するためのカウンターが用意されています。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
  [SQL Server: Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)   
  [サーバー メモリに関するサーバー構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [SQL Server の Plan Cache オブジェクト](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   
- [リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
+ [リソースの利用状況の監視 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [バッファー プール拡張](../../database-engine/configure-windows/buffer-pool-extension.md)  
   

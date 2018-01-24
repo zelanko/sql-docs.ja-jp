@@ -19,22 +19,22 @@ helpviewer_keywords:
 - articles [SQL Server replication], properties
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d43da2c0314c2b724a7d5b04db3a56ff5ceb664f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2322ccf6cb2543f772aa72218ab0dcddce876223
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-publication-and-article-properties"></a>パブリケーションおよびアーティクルのプロパティの変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] パブリケーションが作成された後は、ほとんどのパブリケーションおよびアーティクルのプロパティを変更できますが、スナップショットの再生成およびサブスクリプションの再初期化、またはそのいずれかが必要になる場合もあります。 このトピックでは、変更された場合に、これらの操作のいずれかまたは両方を必要とするすべてのプロパティについて説明します。  
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>スナップショット レプリケーションおよびトランザクション レプリケーションのパブリケーションのプロパティ  
   
-|説明|ストアド プロシージャ|プロパティ|必要条件|  
+|Description|ストアド プロシージャ|[プロパティ]|必要条件|  
 |-----------------|----------------------|----------------|------------------|  
 |スナップショットの形式を変更します。|**sp_changepublication**|**sync_method**|新しいスナップショット。|  
 |スナップショットの場所を変更します。|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|新しいスナップショット。|  
@@ -48,9 +48,9 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>スナップショット レプリケーションおよびトランザクション レプリケーションのアーティクルのプロパティ  
   
-|説明|ストアド プロシージャ|プロパティ|必要条件|  
+|Description|ストアド プロシージャ|[プロパティ]|必要条件|  
 |-----------------|----------------------|----------------|------------------|  
-|アーティクルを削除します。|**sp_droparticle**|すべてのパラメーター。|アーティクルは、サブスクリプションを作成する前に削除できます。 ストアド プロシージャを使用して、アーティクルに対するサブスクリプションを削除できます。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使用して、サブスクリプション全体を削除、再作成、および同期する必要があります。 詳細については、「[既存のパブリケーションでのアーティクルの追加および削除](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」を参照してください。|  
+|アーティクルを削除します。|**sp_droparticle**|すべてのパラメーター。|アーティクルは、サブスクリプションを作成する前に削除できます。 ストアド プロシージャを使用して、アーティクルに対するサブスクリプションを削除できます。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使用して、サブスクリプション全体を削除、再作成、および同期する必要があります。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。|  
 |列フィルターを変更します。|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |行フィルターを追加します。|**sp_articlefilter**|すべてのパラメーター。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |行フィルターを削除します。|**sp_articlefilter**|**@article**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="publication-properties-for-merge-replication"></a>マージ レプリケーションのパブリケーションのプロパティ  
   
-|説明|ストアド プロシージャ|プロパティ|必要条件|  
+|Description|ストアド プロシージャ|[プロパティ]|必要条件|  
 |-----------------|----------------------|----------------|------------------|  
 |スナップショットの形式を変更します。|**sp_changemergepublication**|**sync_mode**|新しいスナップショット。|  
 |スナップショットの場所を変更します。|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|新しいスナップショット。|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="article-properties-for-merge-replication"></a>マージ レプリケーションのアーティクルのプロパティ  
   
-|説明|ストアド プロシージャ|プロパティ|必要条件|  
+|Description|ストアド プロシージャ|[プロパティ]|必要条件|  
 |-----------------|----------------------|----------------|------------------|  
 |アーティクルがパブリケーション内に最新のパラメーター化されたフィルターを持つ場合に、そのアーティクルを削除します。|**sp_dropmergearticle**|すべてのパラメーター。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |アーティクルが結合フィルターまたは論理レコード内で親である場合に、そのアーティクルを削除します (この操作の副作用として、結合が削除されます)。|**sp_dropmergearticle**|すべてのパラメーター。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
@@ -99,7 +99,7 @@ ms.lasthandoff: 11/17/2017
 |レプリケーション先のテーブルの所有者を変更します。|**sp_changemergearticle**|**destination_owner**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
   
 ## <a name="see-also"></a>参照  
- [管理 (レプリケーション)](../../../relational-databases/replication/administration/administration-replication.md)   
+ [管理 &#40;レプリケーション&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
  [スナップショットの作成および適用](../../../relational-databases/replication/create-and-apply-the-snapshot.md)   
  [サブスクリプションの再初期化](../../../relational-databases/replication/reinitialize-subscriptions.md)   
  [sp_addmergefilter (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   

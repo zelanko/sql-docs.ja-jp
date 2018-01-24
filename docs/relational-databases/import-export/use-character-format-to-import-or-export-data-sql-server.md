@@ -16,15 +16,15 @@ helpviewer_keywords:
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53a3bd656302c47c1ccd69fa484a4d87b050c41f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9c15b0e22e91fb3a478a7b91a14292609b81a22
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 後で別のプログラムで使われるテキスト ファイルにデータを一括エクスポートする場合や、別のプログラムにより生成されたテキスト ファイルからデータを一括インポートする場合は、文字形式の使用をお勧めします。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 ## 文字形式の使用に関する注意点<a name="considerations"></a>
 文字形式を使用するときは、以下の点を考慮してください。  
   
--   既定では、[bcp ユーティリティ](../../tools/bcp-utility.md)は、文字データ フィールド間の区切りにはタブ文字を、レコードの終わりには改行文字を使用します。  別のターミネータの指定方法の詳細については、「[フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。  
+-   既定では、 [bcp ユーティリティ](../../tools/bcp-utility.md) は、文字データ フィールド間の区切りにはタブ文字を、レコードの終わりには改行文字を使用します。  別のターミネータの指定方法の詳細については、「[フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。  
   
 -   既定では、キャラクター モードのデータの一括エクスポートまたは一括インポートを行う前に、次の変換が実行されます。  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 文字形式は、次のコマンド オプションでサポートされています。  
   
-|Command|オプション|説明|  
+|コマンド|オプション|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|bcp ユーティリティが文字データを使用するようにします。*|  
 |BULK INSERT|DATAFILETYPE **='char'**|データの一括インポート時に文字形式を使用します。|  

@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e86cd34a6a4a2f51b86a84bd6eaa1f123fb6ea8
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: 00a724d305e55a58b257b699f298cbd5044a3510
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="contained-database-collations"></a>包含データベースの照合順序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 大文字と小文字の区別、アクセント記号の区別、使用されるベース言語など、さまざまなプロパティがテキスト データの並べ替え順序と等値セマンティクスに影響します。 これらの性質の指定は、データの照合順序の選択を通じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に示されます。 照合順序の詳細については、「[照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  

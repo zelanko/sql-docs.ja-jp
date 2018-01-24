@@ -42,17 +42,17 @@ f1_keywords:
 helpviewer_keywords: New Publication Wizard
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80994381f27306e178ac85b942d544e49c28433b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1be53dfe84e9731339dabdc68c67cf9d161fae69
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="new-publication-wizard"></a>パブリケーションの新規作成ウィザード
+# <a name="new-publication-wizard"></a>New Publication Wizard
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ここでは、パブリケーションの新規作成ウィザードの以下のページについて説明します。  
   
 -   [Oracle パブリッシャー](../../relational-databases/replication/oracle-publisher.md)  
@@ -84,6 +84,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>参照  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [プロパティ リファレンス (レプリケーション)](../../relational-databases/replication/properties-reference-replication.md)  
+ [プロパティ リファレンス &#40;レプリケーション&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   
   

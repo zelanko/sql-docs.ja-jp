@@ -17,15 +17,15 @@ helpviewer_keywords:
 - replication [SQL Server], interoperability
 ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fff6d14c8303b4f627492c258177331f8d7db2a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5a1b9183f8a9cf1c60bd399baf43825c4a3949f6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-features-and-tasks"></a>レプリケーション機能とタスク
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 以下のトピックには、デザイナー、開発者、アナリスト、管理者など、レプリケーション ソリューションを設計および実装する必要のあるあらゆるユーザーを対象とした情報が記載されています。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [インターネット経由のレプリケーション](../../relational-databases/replication/replication-over-the-internet.md)  
   
--   [セキュリティと保護 (レプリケーション)](../../relational-databases/replication/security/security-and-protection-replication.md)  
+-   [セキュリティと保護 &#40;レプリケーション&#41;](../../relational-databases/replication/security/security-and-protection-replication.md)  
   
 -   [監視 &#40;レプリケーション&#41;](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Always On パブリケーション データベースのメンテナンス &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [レプリケーション、変更の追跡、変更データ キャプチャ、および Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
+-   [レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
 -   [ログ配布とレプリケーション &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - statistics [SQL Server], live query statistics
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e81e49b14a91f809c4c3452369069ff4d856a99f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bff144ba100fe72dcc036299138e656362977b96
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="live-query-statistics"></a>[ライブ クエリ統計]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、アクティブ クエリのライブ実行プランを表示できます。 このライブ クエリ プランでは、クエリ プラン演算子間の制御フローとして、クエリ実行プロセスをリアルタイムで洞察できます。 ライブ クエリ プランには、全体的なクエリ進捗状況と演算子レベルのランタイム実行統計が表示されます。生成された行の数、経過時間、演算子の進捗状況などです。このデータはクエリの完了を待つことなくリアルタイムで利用できるため、これらの実行統計はクエリ パフォーマンス問題のデバッグで非常に役立ちます この機能は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] から利用できますが、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] でも動作します。  
@@ -54,14 +54,14 @@ ms.lasthandoff: 11/17/2017
   
  ![利用状況モニターの [ライブ クエリ統計] ボタン](../../relational-databases/performance/media/livequerystatsactmon.png "利用状況モニターの [ライブ クエリ統計] ボタン")  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ライブ クエリ統計でクエリの進捗状況に関する情報を記録するには、この統計プロファイル インフラストラクチャを有効にする必要があります。 **で** [ライブ クエリ統計を含める] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を指定すると、現在のクエリ セッションの統計インフラストラクチャが有効になります。 
  
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]までは、他のセッションから (たとえば、利用状況モニターから) ライブ クエリ統計を表示するための統計インフラストラクチャを有効にする方法が他に 2 つあります。  
   
 -   ターゲット セッションで `SET STATISTICS XML ON;` または `SET STATISTICS PROFILE ON;` を実行します。  
   
- または  
+ 内の複数の  
   
 -   **query_post_execution_showplan** 拡張イベントを有効にします。 これはサーバー全体の設定であり、すべてのセッションでライブ クエリ統計が有効になります。 拡張イベントを有効にする方法については、「 [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)」を参照してください。  
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 
 -   グローバル トレース フラグ 7412 を使用する。  
   
- または  
+ 内の複数の  
   
 -   **query_thread_profile** 拡張イベントを有効にする。 これはサーバー全体の設定であり、すべてのセッションでライブ クエリ統計が有効になります。 拡張イベントを有効にする方法については、「 [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)」を参照してください。
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
  [パフォーマンス監視およびチューニング ツール](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)   
  [利用状況モニターを開く方法 &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)   
  [利用状況モニター](../../relational-databases/performance-monitor/activity-monitor.md)   
- [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [関連するビュー、関数、プロシージャ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)   
  [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)   
  [トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)

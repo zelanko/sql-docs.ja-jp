@@ -21,13 +21,13 @@ ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 caps.latest.revision: "61"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c592601cb86184e7ed47bab2e77ed61c9f3a3c24
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 212e131c50570b14ef574b4ea24371fd6ae0b048
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Windows 認証でのデータベース ミラーリング エンドポイントの作成 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に、Windows 認証を使用するデータベース ミラーリング エンドポイントを [!INCLUDE[tsql](../../includes/tsql-md.md)] で作成する方法について説明します。 データベース ミラーリングまたは [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] をサポートするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスにデータベース ミラーリング エンドポイントが必要となります。 サーバー インスタンスは、単一のポートを備えたデータベース ミラーリング エンドポイントを 1 つだけ持つことができます。 データベース ミラーリング エンドポイントは、作成される際に、ローカル システムで利用できる任意のポートを使用できます。 サーバー インスタンス上のすべてのデータベース ミラーリング セッションはそのポートでリッスンし、データベース ミラーリングに対するすべての着信接続はそのポートを使用します。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **以下を使用してデータベース ミラーリング エンドポイントを作成するには:** [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Security"></a> セキュリティ  
  サーバー インスタンスの認証方法と暗号化方法は、システム管理者が設定します。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/20/2017
 > [!IMPORTANT]  
 >  RC4 アルゴリズムは推奨されません。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  CREATE ENDPOINT 権限、または sysadmin 固定サーバー ロールのメンバーシップが必要です。 詳細については、「 [GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/20/2017
   
     -   既定では、ENCRYPTION は REQUIRED に設定されます。 これは、このエンドポイントへのすべての接続に暗号化を使用する必要があることを意味します。 ただし、エンドポイントで暗号化を無効にしたり、オプションにできます。 選択肢は次のとおりです。  
   
-        |値|定義|  
+        |ReplTest1|定義|  
         |-----------|----------------|  
         |DISABLED|接続を経由して送信されたデータが暗号化されないことを指定します。|  
         |SUPPORTED|反対側のエンドポイントで SUPPORTED または REQUIRED が指定されている場合に限り、データを暗号化することを指定します。|  

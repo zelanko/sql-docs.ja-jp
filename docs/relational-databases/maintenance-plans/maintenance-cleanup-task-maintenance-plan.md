@@ -15,15 +15,15 @@ f1_keywords: sql13.swb.maint.cleanup.f1
 helpviewer_keywords: Maintenance Cleanup Task dialog box
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a2339a873b593f3c9fc689212739ab1f66adfba7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d083329514a3e8a12362bc7277ee50bd34add7d3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>[メンテナンス クリーンアップ タスク] (メンテナンス プラン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[メンテナンス クリーンアップ タスク]** を使用すると、メンテナンス プランで作成されたテキスト レポートやデータベースのバックアップ ファイルなど、メンテナンス プランに関連する古いファイルを削除できます。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  メンテナンス クリーンアップ タスクでは、指定したディレクトリのサブフォルダーにあるファイルは自動的に削除されません。 この機能によって、メンテナンス クリーンアップ タスクを使ってファイルを削除するなど、悪意のある攻撃を受ける危険性を最小限に抑えることができます。 直下のサブフォルダーにあるファイルを削除する場合は、 **[直下のサブフォルダーを含める]**を選択する必要があります。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **接続**  
  現在の接続を表示します。  
   
@@ -93,13 +93,13 @@ ms.lasthandoff: 11/17/2017
  **[特定のユーザー名とパスワードを使用する]**  
  SQL Server 認証を使用して [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
   
- **ユーザー名**  
+ **User name**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  
   
  **Password**  
  認証に使用するパスワードを指定します。 このオプションは利用できません。  
   
 ## <a name="see-also"></a>参照  
- [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+ [のオブジェクト エクスプローラーの](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

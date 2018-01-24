@@ -17,15 +17,15 @@ f1_keywords:
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 284e081f53fe047a257d22020d0792897c8623ed
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9874323ad1bef8199d2ebc969bb3673826b946fb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="run-a-matching-project"></a>照合プロジェクトの実行
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でデータ照合を実行する方法について説明します。 照合プロセスでは、照合ポリシーの照合ルールに基づいて一致レコードのクラスターを特定し、サバイバーシップ ルールに基づいて各クラスターで保持するレコードを 1 つ特定し、結果をエクスポートします。 照合プロセス (重複除去とも呼ばれます) はコンピューター支援型のプロセスで実行されますが、照合ルールを対話形式で作成し、いくつかの選択肢の中からサバイバーシップ ルールを選択することで、照合プロセスを制御します。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/20/2017
   
  照合を実行する準備として、1 つ以上の照合ルールを含む照合ポリシーを作成し、そのポリシーをサンプル データに対して実行する必要があります。 照合プロジェクトは照合ポリシー プロセスとは別のプロセスであり、照合プロジェクトから得られた照合のナレッジはナレッジ ベースに取り込まれません。 照合ポリシーの作成の詳細については、「 [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)」を参照してください。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  照合プロジェクトを実行するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
 ##  <a name="StartingaMatchingProject"></a> 最初の手順: 照合プロジェクトの開始  

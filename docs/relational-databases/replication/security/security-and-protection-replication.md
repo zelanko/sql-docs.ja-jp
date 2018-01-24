@@ -20,15 +20,15 @@ helpviewer_keywords:
 - transactional replication, security
 ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53e3c9e5da3240ec81b4cf64cc89361f0ef67926
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: baa793a3d82a7420af7ceb1ddfdb30d23b91c3b8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-and-protection-replication"></a>セキュリティと保護 (レプリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に配置するレプリケーション シナリオを悪意のある攻撃から保護し、データのセキュリティを強化することができます。  

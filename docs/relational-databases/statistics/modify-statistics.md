@@ -16,15 +16,15 @@ helpviewer_keywords:
 - modifying statistics
 ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb017ca80969ddedbb53ea107308583d7e15dff2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 00114f6c9d691ed00b71c9d640fa57d7676c3426
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modify-statistics"></a>統計の変更
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して既存の統計を変更できます。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **統計を変更するために使用するもの:**  
   
@@ -41,11 +41,11 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  以下の条件が必要です:  
   
 -   ユーザーは、テーブルまたはビューに対する ALTER 権限が必要です。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  **[統計のプロパティ -** *statistics_name* ] ダイアログ ボックスの **[全般]** ページで **[追加]**, **[削除]**, **[上へ移動]**、 **[下へ移動]**、 any combination, to alter the properties of the statistics. **[統計の列]** グリッド内の列の位置は、統計の使いやすさに影響する可能性があることに注意してください。  
   
-7.  クリックして **OK**です。  
+7.  **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **統計を変更するには**  

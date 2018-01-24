@@ -17,26 +17,26 @@ f1_keywords:
 helpviewer_keywords: Check Database Integrity Task dialog box
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5f4193b616fe1a333f95301356980b6f5f991245
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 60f26433932c754a5aadbd79d9527d4e2638f75d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>[データベースの整合性確認タスク]\(メンテナンス プラン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   **[データベースの整合性確認タスク]** ダイアログを使用すると、 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することにより、ユーザーおよびシステム テーブルの割り当ておよび構造の整合性、データベース内のインデックスを確認できます。 `DBCC` を実行することにより、データベース整合性に問題があった場合にレポートし、システム管理者またはデータベースの所有者によって対処できます。  
   
-## <a name="options"></a>オプション  
- **接続**  
+## <a name="options"></a>および  
+ **[接続]**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
- **新規**  
+ **[新規作成]**  
  このタスクを実行するときに使用する新しいサーバー接続を作成します。 **[新しい接続]** ダイアログ ボックスについては、後で説明します。  
   
  **データベース**  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/17/2017
  **[特定のユーザー名とパスワードを使用する]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
   
- **ユーザー名**  
+ **User name**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  
   
  **Password**  

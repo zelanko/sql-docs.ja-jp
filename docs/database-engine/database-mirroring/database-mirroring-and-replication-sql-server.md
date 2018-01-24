@@ -18,13 +18,13 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 caps.latest.revision: "39"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3c54a32f33bb5c74218f597c04451bd4d194a980
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3e4757ca79a259ac4d7ddbc554954d139828f0f9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>データベース ミラーリングとレプリケーション (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] データベース ミラーリングとレプリケーションを組み合わせて使用すると、パブリケーション データベースの可用性を高めることができます。 データベース ミラーリングでは単一データベースの 2 つのコピーを使用します。通常、これらのコピーは異なるコンピューターに配置されます。 クライアントが任意の時点において使用できるデータベースのコピーは 1 つだけです。 このコピーはプリンシパル データベースと呼ばれます。 クライアントがプリンシパル データベースに対して加えた更新は、ミラー データベースと呼ばれるもう一方のコピー データベースに適用されます。 プリンシパル データベースに対して行われた挿入、更新、および削除はすべてトランザクション ログに記録され、ミラーリングによってこのトランザクション ログがミラー データベースに適用されます。  

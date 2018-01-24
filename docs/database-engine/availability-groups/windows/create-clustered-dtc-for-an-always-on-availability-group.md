@@ -15,13 +15,13 @@ ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 caps.latest.revision: "2"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76913433e0cfe08d316c668a79d452959ebbee3b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a6d456f5197522bdd9f936f468645f1cbd9bc377
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>AlwaysOn 可用性グループのクラスター化された DTC を作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、SQL Server の AlwaysOn 可用性グループのためにクラスター化された DTC を完全に構成する方法について説明します。 完全構成の完了には最大 1 時間かかることがあります。 

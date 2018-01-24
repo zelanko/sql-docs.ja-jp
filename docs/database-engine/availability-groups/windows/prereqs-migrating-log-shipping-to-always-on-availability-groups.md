@@ -18,13 +18,13 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 caps.latest.revision: "24"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6482dc03f3cabd437e61ce739c25aae10cf19633
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6ece38125379a739b1e4bfc10171b61487e37bbc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prereqs-migrating-log-shipping-to-always-on-availability-groups"></a>Always On 可用性グループにログ配布を移行する前提条件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,13 +103,13 @@ ms.lasthandoff: 11/20/2017
   
      [可用性グループへのログ配布構成の変換](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/)  
   
-     [ログ配布プライマリ データベースとセカンダリ データベースを既存の可用性グループの追加します。](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/01/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group/)  
+     [Add a Log Shipping Primary Database and Secondary Database(s) to an Existing Availability Group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/01/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group/)  
   
      [SQL Server AlwaysOn チームのブログ: SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server エンジニアのブログ](http://blogs.msdn.com/b/psssql/)  
   
--   **ホワイトペーパー:**  
+-   **ホワイト ペーパー:**  
   
      [移行ガイド: 以前の配置の結合データベース ミラーリングとログ配布から AlwaysOn 可用性グループに移行する](http://msdn.microsoft.com/library/jj635217)  
   

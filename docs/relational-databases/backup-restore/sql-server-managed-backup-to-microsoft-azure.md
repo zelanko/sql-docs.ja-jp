@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: "44"
-author: MightyPen
-ms.author: genemi
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 826f59f9b61e95091edf8a0c47c528f8cc83b488
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bfca544879559953ed3c70d5137edd17ae9d89e1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージ バックアップ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="Prereqs"></a> 前提条件  
  Microsoft Azure Storage は、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] がバックアップ ファイルを格納するために使用されます。 次の前提条件を満たす必要があります。  
   
-|前提条件|説明|  
+|前提条件|Description|  
 |------------------|-----------------|  
 |**Microsoft Azure アカウント**|[購入オプション](http://azure.microsoft.com/pricing/free-trial/) を調べる前に、 [無料評価版](http://azure.microsoft.com/pricing/purchase-options/)で Azure を使用することができます。|  
 |**Azure ストレージ アカウント**|バックアップは、Azure ストレージ アカウントに関連付けられている Azure BLOB ストレージに格納されます。 ストレージ アカウントの詳しい作成手順については、「 [Azure ストレージ アカウントについて](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/)」を参照してください。|  
@@ -51,14 +51,14 @@ ms.lasthandoff: 11/17/2017
 |**Shared Access Signature (SAS)**|ターゲット コンテナーへのアクセスは Shared Access Signature (SAS) で制御されます。 SAS の概要については、「 [Shared Access Signature、第 1 部: SAS モデルについて](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」を参照してください。 SAS トークンは、コードで、または **New-AzureStorageContainerSASToken** PowerShell  コマンドを使用して作成することができます。 このプロセスを簡素化する PowerShell スクリプトについては、「 [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with PowerShell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (PowerShell を使用する Azure ストレージにおける共有アクセス署名 (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。 **で使用するために SAS トークンを** SQL Credential [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に格納することができます。|  
 |**SQL Server エージェント**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を機能させるには、SQL Server エージェントを実行する必要があります。 スタートアップ オプションを自動に設定することを検討してください。|  
   
-## <a name="components"></a>コンポーネント  
+## <a name="components"></a>Components  
  Transact-SQL は、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を操作するためのメイン インターフェイスです。 システム ストアド プロシージャは、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の有効化、構成、および監視に使用します。 システム関数は、既存の構成設定、パラメーター値、およびバックアップ ファイル情報を取得するために使用します。 拡張イベントは、エラーと警告を表示するために使用します。 警告メカニズムを有効にするには、SQL エージェント ジョブと SQL Server のポリシー ベースの管理を使用します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に関連するオブジェクトとその機能の説明の一覧を次に示します。  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を構成するには、PowerShell コマンドレットも使用できます。 SQL Server Management Studio では、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] によって作成されたバックアップを **[データベースの復元]** タスクを使用して復元することがサポートされています。  
   
 |||  
 |-|-|  
-|システム オブジェクト|説明|  
+|システム オブジェクト|Description|  
 |**MSDB**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]によって作成されたすべてのバックアップに対するメタデータとバックアップ履歴を格納します。|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にします。|  
 |[managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|暗号化など、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の詳細設定を構成します。|  

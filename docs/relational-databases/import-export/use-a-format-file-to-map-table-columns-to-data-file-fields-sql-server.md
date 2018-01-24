@@ -16,15 +16,15 @@ helpviewer_keywords:
 - format files [SQL Server], mapping columns to fields
 ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4173b586c90346e31f2a03833e3a37bc2ddbce7c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8a1bf24416a17e5e6b13b09b35a640aa7a56bcf9
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] データ ファイルに含めるフィールドは、対応するテーブル内の列とは異なる順序に並べ替えることができます。 このトピックでは、テーブル列とは異なる順序にフィールドを並べ替えたデータ ファイルを格納できるように変更した XML フォーマット ファイルと XML 以外のフォーマット ファイルについて説明します。 変更したフォーマット ファイルのデータ フィールドは、対応するテーブル列にマッピングされます。  詳細については、「 [フォーマット ファイルの作成 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) 」を参照してください。
@@ -253,7 +253,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
   
 ## <a name="see-also"></a>参照  
-[bcp Utility](../../tools/bcp-utility.md)   
+[bcp ユーティリティ](../../tools/bcp-utility.md)   
  [フォーマット ファイルを使用したテーブル列のスキップ &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [フォーマット ファイルを使用したデータ フィールドのスキップ &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   

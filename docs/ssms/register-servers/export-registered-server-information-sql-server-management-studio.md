@@ -20,13 +20,13 @@ ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
 caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e7f96a7298d67a10bfee5847f8647915a595d975
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f65431cfdc98981e8bf4bcd6ae3fe2cd592a3e0e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>登録済みサーバー情報のエクスポート (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で登録済みサーバーの情報を保存およびエクスポートして、他の従業員またはサーバーに配布する方法について説明します。 このエクスポート機能を使用すると、複数のコンピューターに一貫性のあるユーザー インターフェイスを提供できます。  

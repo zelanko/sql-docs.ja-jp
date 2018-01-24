@@ -19,13 +19,13 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9b60a27e5ec79b4f9d73546d1a379ddc2ba2fe5a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4f529dde783f53e5bafd46c729ea8660eb546949
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group---add-a-database"></a>可用性グループ - データベースの追加
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループにデータベースを追加する方法について説明します。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/20/2017
   
      [前提条件と制限](#Prerequisites)  
   
-     [アクセス許可](#Permissions)  
+     [権限](#Permissions)  
   
 -   **可用性グループにデータベースを追加する方法:**  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Prerequisites"></a> 前提条件と制限  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-###  <a name="Permissions"></a> アクセス許可  
+###  <a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
  **可用性グループにデータベースを追加するには**  
   
-1.  プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更します (**cd**)。  
+1.  プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更 (**cd**) します 。  
   
 2.  **Add-SqlAvailabilityDatabase** コマンドレットを使用します。  
   

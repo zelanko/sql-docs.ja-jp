@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Subscribers [SQL Server replication], republishing data
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0db0fb6d7469e431b9248a173a3cf2606fbdefb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f560429493fe0182159ad66e89535ff017739678
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="republish-data"></a>データの再パブリッシュ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 再パブリッシュ モデルでは、パブリッシャーがデータをサブスクライバーに送信し、このサブスクライバーがそのデータを任意の数の他のサブスクライバーに再パブリッシュします。 これは、パブリッシャーが、低速、またはコストが高い通信リンクを使用してサブスクライバーにデータを送信する必要がある場合に役立ちます。 多数のサブスクライバーがそのリンクの端末に接続されている場合には、リパブリッシャーの使用によりディストリビューションの負荷の大部分がそのリンク側に移ります。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
  \*マージ パブリケーションの **@published_in_tran_pub** プロパティを設定する必要があります。 既定では、トランザクション レプリケーションにより、サブスクライバーでテーブルが読み取り専用として処理されることが予測されます。 マージ レプリケーションにより、トランザクション サブスクリプションのテーブルでデータの変更が行われる場合、データが集約できなくなる可能性があります。 このリスクを回避するため、マージ パブリケーションではこのようなテーブルをダウンロードのみとして指定することをお勧めします。 これはマージ サブスクライバーがテーブルにデータの変更をアップロードすることを防ぎます。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md)   
+ [[ディストリビューションの構成]](../../relational-databases/replication/configure-distribution.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [サブスクリプションの初期化](../../relational-databases/replication/initialize-a-subscription.md)   

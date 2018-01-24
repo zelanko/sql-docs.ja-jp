@@ -23,15 +23,15 @@ helpviewer_keywords:
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 04a9fcb300f3c3f374a3ee940df34c77d2516db0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a0414a27a14e937e7c58ca6ba74de3b6bfd6a2b0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="plan-guides"></a>プラン ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の実際のクエリのテキストを直接変更することが不可能な場合や望ましくない場合に、プラン ガイドを使用してクエリのパフォーマンスを最適化することができます。 プラン ガイドは、クエリ ヒントまたは固定クエリ プランをクエリにアタッチすることにより、クエリの最適化を促します。 プラン ガイドは、サード パーティ ベンダーが提供するデータベース アプリケーションのクエリの小さなサブセットで、期待どおりのパフォーマンスが得られない場合に役に立ちます。 プラン ガイドでは、最適化する Transact-SQL ステートメントのほか、使用するクエリ ヒントを含む OPTION 句またはクエリの最適化に使用する特定のクエリ プランのいずれかを指定します。 クエリが実行されると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により Transact-SQL ステートメントがプラン ガイドと照合され、実行時にクエリに OPTION 句がアタッチされるか、指定されたクエリ プランが使用されます。  

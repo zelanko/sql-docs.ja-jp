@@ -35,15 +35,15 @@ helpviewer_keywords:
 - Web synchronization, configuring
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 caps.latest.revision: "74"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4da5fe724a52ec84a6177db09f58f1cbe97e0b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1d8ae90df79860b503830c9881fecd5f26b252e3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-web-synchronization"></a>Web 同期の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナー (Replisapi.dll) の実行に使用するアカウントは、同期の際にパブリッシャーとディストリビューターに接続するアカウントでもあります。 したがって、パブリッシャーとディストリビューターで SQL ログイン アカウントにマップされている必要があります。 詳細については、「[Configure IIS for Web Synchronization](../../relational-databases/replication/configure-iis-for-web-synchronization.md)」(Web 同期用の IIS の構成) の「Setting Permissions for the SQL Server Replication Listener」(SQL Server レプリケーション リスナーの権限の設定) セクションをご覧ください。  
   
--   IIS を実行しているコンピューターにパブリッシャーからスナップショットを配信するときに、FTP を使用できます。 IIS を実行しているコンピューターからサブスクライバーにスナップショットを配信するときには、常に HTTPS が使用されます。 詳細については、「[Transfer Snapshots Through FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md)」(FTP によるスナップショットの転送) をご覧ください。  
+-   IIS を実行しているコンピューターにパブリッシャーからスナップショットを配信するときに、FTP を使用できます。 IIS を実行しているコンピューターからサブスクライバーにスナップショットを配信するときには、常に HTTPS が使用されます。 詳細については、「[FTP によるスナップショットの転送](../../relational-databases/replication/transfer-snapshots-through-ftp.md)」を参照してください。  
   
 -   レプリケーション トポロジ内のサーバーがファイアウォールの内側にあるとき、Web 同期を有効にするために、ファイアウォールのポートを開くことが必要になる場合があります。  
   

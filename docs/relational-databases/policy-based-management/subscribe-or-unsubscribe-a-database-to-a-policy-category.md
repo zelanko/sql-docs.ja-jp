@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.groupsubscription.f1
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb2c538987a02719bc35b605a4183a7edfa9b93c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 747b220659484754677428226d5eb7467a8bf443
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>ポリシー カテゴリへのデータベースのサブスクライブまたはアンサブスクライブ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、ポリシー カテゴリにデータベースをサブスクライブまたはアンサブスクライブする方法について説明します。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **ポリシー カテゴリにデータベースをサブスクライブまたはアンサブスクライブするために使用するもの:**  
   
@@ -39,11 +39,11 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
