@@ -14,13 +14,13 @@ ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
 caps.latest.revision: "21"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 27ecbb2ca677523d6bcb97af8ee9c0c961ae718f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f8a886e48067c80f112e86c9d7ba07da79502691
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>Machine Learning のサービスの高度な構成オプション
 
@@ -99,7 +99,7 @@ SQL Server サービスの実行に必要なアクセス許可の詳細につい
 
 |**設定名**|**型**|**Description**|
 |----|----|----|
-|ジョブ\_クリーンアップ\_ON\_終了|Integer |これは内部でのみ設定 – この値は変更しないでください。 </br></br>セッションが完了した後はかどうか外部のランタイム セッションごとに作成された一時作業フォルダーをクリーンアップにする必要がありますを指定します。 この設定はデバッグに便利です。 </br></br>サポートされる値は**0** (無効) または**1** (有効) です。 </br></br>既定値は 1、意味のログ ファイルは、終了時に削除されます。|
+|JOB\_CLEANUP\_ON\_EXIT|Integer |これは内部でのみ設定 – この値は変更しないでください。 </br></br>セッションが完了した後はかどうか外部のランタイム セッションごとに作成された一時作業フォルダーをクリーンアップにする必要がありますを指定します。 この設定はデバッグに便利です。 </br></br>サポートされる値は**0** (無効) または**1** (有効) です。 </br></br>既定値は 1、意味のログ ファイルは、終了時に削除されます。|
 |トレース\_レベル|Integer |デバッグの目的で、MSSQLLAUNCHPAD のトレースの詳細レベルを構成します。 これにより、LOG_DIRECTORY 設定で指定されたパス内のトレース ファイルが影響します。 </br></br>サポートされる値: **1** (エラー)、 **2** (パフォーマンス)、 **3** (警告)、 **4** (情報)。 </br></br>既定値は 1、出力警告のみを意味します。|
 
 すべての設定が、キーと値のペアの形をとり、各設定は個別の行に表示されます。 たとえば、トレース レベルを変更するには行を追加する`Default: TRACE_LEVEL=4`です。

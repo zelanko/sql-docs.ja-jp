@@ -1,5 +1,5 @@
 ---
-title: "外部データ ソース (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
@@ -23,13 +23,13 @@ ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
 caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 283971bbd1bfe04b26860f56601c315ac5244717
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8e5f0a03ef6efa09218cc6740df4439a25eb7265
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-data-source-transact-sql"></a>外部データ ソース (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -135,10 +135,10 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 ## <a name="arguments"></a>引数  
  *data_source_name*データ ソースのユーザー定義名を指定します。 名前は、SQL Server、Azure SQL データベース、および Azure SQL Data Warehouse でのデータベース内で一意にする必要があります。 名前は、Parallel Data Warehouse ではサーバー内で一意である必要があります。
   
- 種類 = [HADOOP |SHARD_MAP_MANAGER |RDBMS |BLOB_STORAGE]  
+ TYPE = [ HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
  データ ソースの種類を指定します。 HADOOP を使用して、外部データ ソースが Hadoop または Azure ストレージ blob の Hadoop のです。 Azure SQL Database でシャーディングの柔軟なデータベース クエリの外部データ ソースを作成する場合は、SHARD_MAP_MANAGER を使用します。 RDBMS を外部データ ソースと Azure SQL データベースでエラスティック データベース クエリを使用してデータベースにまたがるクエリを使用します。  使用して一括操作を実行するときに、BLOB_STORAGE を使用して[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)または[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)で[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]です。
   
-場所 = \<location_path > **HADOOP**    
+LOCATION = \<location_path> **HADOOP**    
 Hadoop, Hadoop クラスターの Uniform Resource Indicator (URI) を指定します。  
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
 NameNode_URI: マシン名または IP アドレスの Hadoop クラスター Namenode です。  
@@ -202,7 +202,7 @@ RDBMS のステップ バイ ステップ チュートリアルでは、次を�
 使用して、使用する資格情報を作成する必要があります`SHARED ACCESS SIGNATURE`id として。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。 Blob ストレージへのアクセスの例は、の例 F を参照してください。 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)です。 
 
   
- RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*ポート*]'  
+ RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  
  Hadoop のリソース マネージャーの場所を指定します。 指定した場合、クエリ オプティマイザーは MapReduce で Hadoop の計算の機能を使用して、PolyBase クエリのデータを事前処理コストベースの判断になります。 述語のプッシュ ダウンが呼び出されると、この Hadoop と SQL の間で転送されるデータ量を大幅に削減し、クエリのパフォーマンス向上します。  
   
  これは、指定しない場合、PolyBase クエリの計算を Hadoop にプッシュが無効です。  
@@ -211,7 +211,7 @@ RDBMS のステップ バイ ステップ チュートリアルでは、次を�
 
 |Hadoop 接続|リソース マネージャーの既定のポート|
 |-------------------|-----------------------------|
-|@shouldalert|50300|
+|1|50300|
 |2|50300|
 |3|8021|
 |4|8032|
@@ -256,7 +256,7 @@ Hadoop ディストリビューションと各接続値でサポートされて�
     RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8032'  
     ```  
   
- 資格情報 = *credential_name*  
+ CREDENTIAL = *credential_name*  
  外部データ ソースへの認証の資格情報をデータベース スコープを指定します。 例については、次を参照してください。 [C. が Azure blob ストレージの外部データ ソースを作成する](../../t-sql/statements/create-external-data-source-transact-sql.md#credential)です。 資格情報を作成するを参照してください。[資格情報の作成 (TRANSACT-SQL)](../../t-sql/statements/create-credential-transact-sql.md)です。 資格情報が匿名アクセスを許可するパブリック データ セットに必要ないことに注意してください。 
   
  DATABASE_NAME = *'QueryDatabaseName'*  
@@ -276,7 +276,7 @@ Hadoop ディストリビューションと各接続値でサポートされて�
   
 -   外部データ ソースと外部のファイル形式を参照する外部テーブルです。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  SQL データ ウェアハウス、SQL Server、AP 2016 および SQL DB 内のデータベースに対する CONTROL 権限が必要です。
 
 > [!IMPORTANT]  

@@ -25,15 +25,15 @@ helpviewer_keywords:
 - services [Service Broker], permissions
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c63c3d62d0104642953545da75b0f7fa1b988eb0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 100c447d3a258ecf8a590173a7c0ef161f0fad3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY (Service Broker の権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,22 +59,22 @@ DENY permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>引数  
- *アクセス許可*  
+ *permission*  
  拒否できる権限を示す、[!INCLUDE[ssSB](../../includes/sssb-md.md)]セキュリティ保護可能な。 権限の一覧については、後の「解説」を参照してください。  
   
- コントラクト**::***contract_name*  
+ コントラクト **:: * * * contract_name*  
  権限を拒否するコントラクトを指定します。 スコープ修飾子**::**が必要です。  
   
- メッセージの種類**::***message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  権限を拒否するメッセージ型を指定します。 スコープ修飾子**::**が必要です。  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **:: * * * remote_binding_name*  
  権限を拒否するリモート サービス バインドを指定します。 スコープ修飾子**::**が必要です。  
   
- ルート**::***route_name*  
+ ROUTE **::***route_name*  
  権限を拒否するルートを指定します。 スコープ修飾子**::**が必要です。  
   
- サービス**::***message_type_name*  
+ サービス **:: * * * message_type_name*  
  権限を拒否するサービスを指定します。 スコープ修飾子**::**が必要です。  
   
  *database_principal*  
@@ -159,7 +159,7 @@ CASCADE
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  に対する CONTROL 権限が必要です、[!INCLUDE[ssSB](../../includes/sssb-md.md)]コントラクト、メッセージの種類、リモート サービス バインド、ルート、またはサービス。 AS 句を使用する場合、指定されるプリンシパルは、権限の拒否対象となるセキュリティ保護可能なリソースを所有している必要があります。  
   
 ## <a name="see-also"></a>参照  

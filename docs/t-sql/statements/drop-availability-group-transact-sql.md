@@ -24,13 +24,13 @@ ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
 caps.latest.revision: "44"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d097f90cfabc250921c3212ed0a89e85362c0f6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 82fdb4b104a0be0aa0d6469ccdd23f361f55618b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  可能であれば、プライマリ レプリカをホストするサーバー インスタンスに接続しているときにのみ可用性グループを削除してください。 可用性グループをプライマリ レプリカから削除すると、元のプライマリ データベースで変更が許可されます (高可用性の保護なし)。 プライマリ レプリカでセカンダリ レプリカから可用性グループの削除が離れる、 **RESTORING**状態、および変更がデータベースで許可されていません。  
   
- 可用性グループを削除する別の方法については、次を参照してください[可用性グループ &#40; を削除します。。SQL Server &#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md).  
+ 可用性グループを削除する別の方法については、次を参照してください[可用性グループ &#40; を削除します。SQL Server &#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,7 +71,7 @@ DROP AVAILABILITY GROUP group_name
   
 ## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>権限  
  必要があります**ALTER AVAILABILITY GROUP**可用性グループの権限**CONTROL AVAILABILITY GROUP**権限、 **ALTER ANY AVAILABILITY GROUP**権限、または**CONTROL SERVER**権限です。 必要があるローカル サーバー インスタンスによってホストされていない可用性グループを削除する**CONTROL SERVER**権限または**コントロール**その可用性グループに対する権限。  
   
 ## <a name="examples"></a>使用例  
@@ -87,7 +87,7 @@ DROP AVAILABILITY GROUP AccountsAG;
   
 ## <a name="see-also"></a>参照  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [可用性グループの削除 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
+ [可用性グループ &#40;Transact SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [可用性グループと &#40; 削除する します。SQL Server と &#41; です。](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
   
   

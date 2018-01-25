@@ -25,15 +25,15 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2774da9a0a75c4645a4bd64237ec99a7cf92d771
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7f97bd0a341ecc5e960c94c4c8bdabe30b572fd9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,10 +90,10 @@ WITH
 ```  
   
 ## <a name="arguments"></a>引数  
- *database_name* (オブジェクト)  
+ *database_name* (object)  
  変更するキューを含むデータベースの名前を指定します。 ない場合*database_name*は提供された場合、既定値は、現在のデータベースです。  
   
- *schema_name* (オブジェクト)  
+ *schema_name* (object)  
  新しいキューが所属するスキーマの名前を指定します。 ない場合*schema_name*は提供された場合、既定値は、現在のユーザーの既定のスキーマです。  
   
  *queue_name*  
@@ -114,12 +114,12 @@ WITH
  STATUS (Activation)   
  キューがストアド プロシージャをアクティブにするかどうかを指定します。 STATUS = ON の場合は、現在実行中のプロシージャの数が MAX_QUEUE_READERS より少なく、ストアド プロシージャによるメッセージの受信よりも早くメッセージがキューに到着する場合に、PROCEDURE_NAME で指定されるストアド プロシージャがキューによって開始されます。 STATUS = OFF の場合は、キューによってストアド プロシージャはアクティブになりません。  
   
- 再構築 [WITH \<queue_rebuild_options >]  
+ REBUILD [ WITH \<queue_rebuild_options> ]  
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  キューの内部テーブルのすべてのインデックスを再構築します。 負荷が高いため、断片化の問題が発生した場合は、この機能を使用します。 MAXDOP は、唯一サポートされているキューの rebuild オプションです。 再構築は、常にオフライン操作です。  
   
- REORGANIZE [で (LOB_COMPACTION = {ON |オフ})]  
+ REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  キューの内部テーブルのすべてのインデックスを再編成します。   
@@ -128,12 +128,12 @@ WITH
 > [!TIP]  
 >  インデックスの断片化に関する一般的なガイダンス断片化が 5% ~ 30% には、インデックスが再編成します。 断片化が 30% を超える場合、インデックスを再構築します。 ただし、これらの番号、専用環境の開始点として一般的なガイダンスです。 インデックスの断片化の量を調べるには使用[sys.dm_db_index_physical_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) -例については、該当するアーティクル内の例 G を参照してください。  
   
- MOVE TO { *file_group* |"default"}  
+ MOVE TO { *file_group* | "default" }  
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  (インデックス) のキューの内部テーブルをユーザー指定のファイル グループに移動します。  読み取り専用のファイル グループにはできません。  
   
- PROCEDURE_NAME =\<手順 >  
+ PROCEDURE_NAME = \<procedure>  
  処理するメッセージがキューに含まれているときにアクティブにするストアド プロシージャの名前を指定します。 この値である必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別子。  
   
  *database_name* (プロシージャ)  
@@ -179,7 +179,7 @@ WITH
   
  RECEIVE ステートメントまたは GET CONVERSATION GROUP ステートメントが使用できないキューを指定する場合、ステートメントは失敗し、[!INCLUDE[tsql](../../includes/tsql-md.md)]エラーです。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  既定では、キューを変更する権限は、キューの所有者、db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。  
   
 ## <a name="examples"></a>使用例  

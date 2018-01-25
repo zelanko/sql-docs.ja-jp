@@ -23,15 +23,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 877e72a18d11fbf31a6ea61f6abed515f5b746f6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 07509e36b76aad995297cfae0147df7e8db41c20
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *aggregate_name*  
  作成する集計関数の名前です。  
   
- **@***param_name*  
+ **@** *param_name*  
  ユーザー定義集計で定義された 1 つまたは複数のパラメーター。 パラメーターの値は、集計関数の実行時にユーザーが指定する必要があります。 「アット」マークを使用して、パラメーター名を指定 (**@**) 最初の文字として。 パラメーター名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。 パラメーターは関数に対してローカルです。  
   
  *system_scalar_type*  
@@ -83,7 +83,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  現在のデータベースに既に作成されている CLR ユーザー定義型の名前です。 場合*udt_schema_name*が指定されていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型が現在のユーザーのスキーマに属していると仮定します。  
   
- *アセンブリ名*[ **.***class_name* ]  
+ *assembly_name* [ **.***class_name* ]  
  ユーザー定義集計関数にバインドするアセンブリ、および必要に応じて、アセンブリが所属するスキーマの名前とユーザー定義集計を実装するアセンブリ内のクラス名を指定します。 アセンブリは、CREATE ASSEMBLY ステートメントを使用してデータベース内に作成されている必要があります。 *class_name*は有効な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別子と一致するアセンブリ内に存在するクラスの名前。 *class_name*クラスの記述に使用するプログラミング言語は、c# などの名前空間を使用している場合、名前空間で修飾された名前があります。 場合*class_name*が指定されていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と同じであると仮定*aggregate_name*です。  
   
 ## <a name="remarks"></a>解説  
@@ -91,7 +91,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
  参照されるアセンブリのクラス*assembly_name* 、そのメソッドのインスタンスで、ユーザー定義集計関数を実装するためのすべての要件を満たす必要がありますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 詳細については、次を参照してください。 [clr ユーザー定義集計](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  EXTERNAL NAME 句で指定されているアセンブリ上に CREATE AGGREGATE 権限と REFERENCES 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -121,6 +121,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [DROP AGGREGATE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-aggregate-transact-sql.md)  
+ [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
   
   

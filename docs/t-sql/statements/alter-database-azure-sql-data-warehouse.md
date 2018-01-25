@@ -16,12 +16,12 @@ ms.assetid: da712a46-5f8a-4888-9d33-773e828ba845
 caps.latest.revision: "20"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 758f303efd228d806db53075f92cc8dd4664d40b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: 71737beb817cfeebed195c90d056768aef678a3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-azure-sql-data-warehouse"></a>ALTER DATABASE (Azure SQL データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -74,7 +74,7 @@ MAXSIZE
 SERVICE_OBJECTIVE  
 パフォーマンス レベルを指定します。 サービス目標の詳細については[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]を参照してください[パフォーマンス層](https://azure.microsoft.com/documentation/articles/performance-tiers/)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 これらのアクセス許可が必要です。  
   
 -   サーバー レベル プリンシパル ログイン (プロビジョニング処理で作成されたもの) または  

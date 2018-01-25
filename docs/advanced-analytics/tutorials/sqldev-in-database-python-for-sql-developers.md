@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 970298c59b7b48c5579125ef163785801db676ee
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 6d7e49a6074e342f51595e9b1cdb10227761f670
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>SQL 開発者のためのデータベースでの Python の分析
 
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/08/2018
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>前提条件
 
 + Machine Learning のサービスと有効になっている Python には、SQL Server 2017 のインスタンスをインストールします。 詳細については、次を参照してください。 [Python の SQL Server マシン ラーニング Services セットアップ](../python/setup-python-machine-learning-services.md)です。
 + このチュートリアルで使用するログインでは、データベースやその他のオブジェクトを作成し、データをアップロードし、データを選択し、ストアド プロシージャを実行するためのアクセス許可が付与されている必要があります。
@@ -121,6 +121,6 @@ PowerShell の知識をお勧めします。
 |トレーニングし、T-SQL を使用してモデルを保存します。|0:15|
 |モデルを操作可能します。|0:40|
 
-## <a name="get-started"></a>作業を開始します。
+## <a name="get-started"></a>概要します。
 
   [手順 1: サンプル データのダウンロード](sqldev-py1-download-the-sample-data.md)

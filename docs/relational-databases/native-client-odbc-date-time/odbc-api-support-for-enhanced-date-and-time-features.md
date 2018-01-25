@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: date/time [ODBC], API support
 ms.assetid: 430c029d-f8c1-4de7-a9dd-330e9b6bfc20
 caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7dfa1929eec6c99baffcc78e6eff06a3764d37d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 67f5d2ba64bef4d23710312ef2f360c4916fd4b9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>ODBC API による機能強化された日付と時刻のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [SQLGetDescField](../../relational-databases/native-client-odbc-api/sqlgetdescfield.md)  
   
--   [SQLGetDescRec](../../relational-databases/native-client-odbc-api/sqlgetdescrec.md)  
+-   [Sqlgetdescrec による](../../relational-databases/native-client-odbc-api/sqlgetdescrec.md)  
   
 -   [SQLGetTypeInfo](../../relational-databases/native-client-odbc-api/sqlgettypeinfo.md)  
   
@@ -58,9 +58,9 @@ ms.lasthandoff: 01/08/2018
   
 -   [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md)  
   
--   [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)  
+-   [Sqlsetdescfield による](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)  
   
--   [SQLSetDescRec](../../relational-databases/native-client-odbc-api/sqlsetdescrec.md)  
+-   [Sqlsetdescrec による](../../relational-databases/native-client-odbc-api/sqlsetdescrec.md)  
   
 -   [SQLSpecialColumns](../../relational-databases/native-client-odbc-api/sqlspecialcolumns.md)  
   

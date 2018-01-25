@@ -15,13 +15,13 @@ ms.assetid: 40cacde4-ac72-45f7-9564-d76e2b4a741a
 caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 622dd3433ad5cb900dbbcb23777add948ea5474b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4e9ff76a4d260604a93f59baa3b61f5c37b4952f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-database-parallel-data-warehouse"></a>データベース (並列データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -55,7 +55,7 @@ WITH (
   
  いずれかのすべてのサイズのオンまたはオフにすべてのサイズが自動拡張します。 たとえば、自動拡張 ON に設定することはない*log_size*、に対して設定されていませんが、 *replicated_size*です。  
   
- *replicated_size* [GB]  
+ *replicated_size* [ GB ]  
  正の数値。 レプリケートされたテーブルと対応するデータに割り当てられた合計領域の整数または 10 進数ギガバイト単位でサイズを設定*各コンピューティング ノードで*です。 最小値と最大の*replicated_size*要件を参照してください「最小値と最大値」、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
   
  自動拡張が ON の場合は、この制限を超えるレプリケートされたテーブルが許可されます。  
@@ -78,7 +78,7 @@ WITH (
   
  アクション以外の個々 のコンピューティング ノードでログのサイズが増加するためにユーザーにエラーが返されます自動拡張がオフの場合は、 *log_size*です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  必要があります、 **CREATE ANY DATABASE**メンバーシップまたは、master データベースの権限、 **sysadmin**固定サーバー ロール。  
   
  次の例は、データベース ユーザー Fay にデータベースを作成する権限を与えます。  

@@ -18,13 +18,13 @@ ms.assetid: 3c5b5145-fa57-455a-b153-0400fc062dc0
 caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 720ef1ea70566b2b18febef3146aab9755a7ac5c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b526c291fe101210188554b872ace0577670f3fa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-2-import-data-to-sql-server-using-powershell"></a>レッスン 2: PowerShell を使用して SQL server のデータをインポートします。
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
     - インスタンス上のアカウントのユーザー名とパスワード。 アカウントは、データベースを作成、テーブルおよびストアド プロシージャを作成し、テーブルにデータをアップロードする権限が必要です。 ユーザー名とパスワードを指定しない場合、Windows id は SQL Server へのサインインに使用されます。
   
-    - ダウンロードしたばかりのサンプル データ ファイルのパスとファイル名。 例 :
+    - ダウンロードしたばかりのサンプル データ ファイルのパスとファイル名。 例:
   
         `C:\tempRSQL\nyctaxi1pct.csv`
   

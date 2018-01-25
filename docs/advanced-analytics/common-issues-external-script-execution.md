@@ -14,13 +14,13 @@ ms.topic: article
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6ce80d7ca50b9410120bdb61a347d4b8a90c39b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2920cfae6e23845a9ac1643a17d6f133adaaf70d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>SQL Server の外部スクリプトの実行に関する一般的な問題
 
@@ -191,9 +191,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 4. Machine learning のスクリプトを実行できるように、問題を修正通常、サービスを再起動します。 再起動に問題が解決しない場合、パスおよび引数を注意してください。、**バイナリ パス**プロパティ、および、次の操作。
 
-    A. 起動の .config ファイルを確認し、作業ディレクトリが有効であることを確認します。
+    a. 起動の .config ファイルを確認し、作業ディレクトリが有効であることを確認します。
 
-    B. スタート パッドで使用される Windows グループが、SQL Server インスタンスに接続できることを確認してください」の説明に従って、[前のセクション](#bkmk_LaunchpadTS)です。
+    b. スタート パッドで使用される Windows グループが、SQL Server インスタンスに接続できることを確認してください」の説明に従って、[前のセクション](#bkmk_LaunchpadTS)です。
 
     c. サービスのプロパティを変更する場合は、スタート パッド サービスを再起動します。
 

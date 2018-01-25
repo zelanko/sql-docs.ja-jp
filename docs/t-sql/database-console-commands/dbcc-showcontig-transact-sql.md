@@ -26,15 +26,15 @@ helpviewer_keywords:
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 caps.latest.revision: "78"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 85822d9351e0f0ce5a8c5a7542fbd7df57d13d74
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fb7faf36132e131c0fd771480e89318492c71372
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -118,11 +118,11 @@ TABLERESULTS を指定した場合、DBCC SHOWCONTIG は次の列に加え、前
   
 |統計情報|Description|  
 |---|---|
-|**[オブジェクト名]**|処理されるテーブルまたはビューの名前です。|  
+|**Object Name**|処理されるテーブルまたはビューの名前です。|  
 |**ObjectId**|オブジェクト名の ID です。|  
 |**IndexName**|処理されるインデックスの名前です。 ヒープの場合は NULL です。|  
 |**IndexId**|インデックスの ID。 ヒープの場合は 0 です。|  
-|**Level**|インデックスのレベルです。 レベル 0 は、インデックスのリーフ レベルまたはデータ レベルです。<br /><br /> ヒープの場合、レベルは 0 です。|  
+|**レベル**|インデックスのレベルです。 レベル 0 は、インデックスのリーフ レベルまたはデータ レベルです。<br /><br /> ヒープの場合、レベルは 0 です。|  
 |**[ページ]**|インデックスまたはヒープ全体のレベルを構成するページ数です。|  
 |**行数**|指定したインデックスのレベルのデータまたはインデックス レコードの数です。 ヒープの場合は、ヒープ全体のデータ レコードの数です。<br /><br /> ヒープでは、この関数から返されるレコード数が、ヒープに対して SELECT COUNT(*) を実行したときに返される行数と一致しない場合があります。 これは、1 行に複数のレコードが含まれる場合があるためです。 たとえば、更新の状況によっては、更新操作の結果として転送元レコードと転送先レコードが 1 つのヒープ行に含まれることがあります。 また、大きな LOB 行のほとんどは、LOB_DATA ストレージ内で複数のレコードに分割されます。|  
 |**MinimumRecordSize**|指定したインデックスのレベルまたはヒープ全体のレコードの最小サイズです。|  
@@ -141,7 +141,7 @@ TABLERESULTS を指定した場合、DBCC SHOWCONTIG は次の列に加え、前
   
 WITH TABLERESULTS および FAST を指定した場合の結果セットは WITH TABLERESULTS を指定した場合と同じです。ただし、次の列が NULL 値になります。
 
-| 行数| Extents |
+| [行]| Extents |
 |---|---|
 |**MinimumRecordSize**|**AverageFreeBytes**|  
 |**MaximumRecordSize**|**AveragePageDensity**|  
@@ -190,7 +190,7 @@ DBCC SHOWCONTIG は、テーブルに著しい断片化が生じているかど�
     > [!NOTE]  
     >  **エクステント スキャンの断片化**値は、インデックスが複数のファイルにわたる場合に大きくなります。 これらの値を小さくするには、インデックスの断片化を削減する必要があります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 ユーザーが、テーブルを所有またはのメンバーである必要があります、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、または**db_ddladmin**固定データベース ロール。
   
 ## <a name="examples"></a>使用例  

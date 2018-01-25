@@ -15,13 +15,13 @@ dev_langs: TSQL
 caps.latest.revision: "11"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2561b5658e87e2d33f4ccd7649ede7d7fa2857d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d06917a784e507ab5568e28b4d34273f5fe71063
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-shrinklog-azure-sql-data-warehouse"></a>DBCC SHRINKLOG (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ DBCC SHRINKLOG
 ```  
   
 ## <a name="arguments"></a>引数  
-サイズ = { *target_size* [MB |**GB** |TB]} |**既定**です。  
+SIZE = { *target_size* [ MB | **GB** | TB ]  } | **DEFAULT**.  
 *target_size* DBCC SHRINKLOG が完了した後、すべてのコンピューティング ノードで、目的のトランザクション ログのサイズがします。 0 より大きい整数することをお勧めします。  
 ログのサイズは、メガバイト (MB)、ギガバイト (GB)、またはテラバイト (TB) で測定されます。 すべてのコンピューティング ノードの上のトランザクション ログの合計サイズすることをお勧めします。  
 既定では、DBCC SHRINKLOG がトランザクション ログをデータベースのメタデータに格納されているログのサイズに縮小されます。 メタデータでログのサイズは LOG_SIZE パラメーターによって決まります[CREATE DATABASE &#40;です。Azure SQL Data Warehouse &#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md)または[ALTER DATABASE &#40;Azure SQL Data Warehouse &#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md). DBCC SHRINKLOG は、既定値にトランザクション ログのサイズを削減する場合のサイズ`SIZE=DEFAULT`が指定されている場合や、`SIZE`句を省略するとします。
@@ -48,7 +48,7 @@ DBCC SHRINKLOG
 WITH NO_INFOMSGS  
 情報メッセージは、DBCC SHRINKLOG 結果には表示されません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 ALTER SERVER STATE 権限が必要です。
   
 ## <a name="general-remarks"></a>全般的な解説  

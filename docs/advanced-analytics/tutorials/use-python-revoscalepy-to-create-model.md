@@ -13,12 +13,12 @@ ms.topic: tutorial
 caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: e4fb52ba8597b2499cc3ea094ae1c4b0c9421237
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: b85213fee582bc240f83446f911c4d16056f997e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Revoscalepy で Python を使用してモデルを作成するには
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 01/08/2018
 
 詳細については、次を参照してください[revoscalepy は何ですか?](../python/what-is-revoscalepy.md)と[Python 関数リファレンス。](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 > [!IMPORTANT]
 > SQL Server での Python コードを実行する必要がありますがインストールした SQL Server 2017 CTP 2.0 以降、およびインストールし、機能を有効にする必要があります**Machine Learning サービス**Python のです。 その他のバージョンの SQL Server は、Python の統合をサポートしていません。

@@ -30,15 +30,15 @@ helpviewer_keywords:
 - CREATE MESSAGE TYPE statement
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78606c8f9f058acec660a7fe20a392f93c8dee49
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ab3cf42da615c6ec303abb80b3a5d3f961edf888
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ CREATE MESSAGE TYPE message_type_name
  *message_type_name*  
  作成するメッセージ型の名前を指定します。 新しいメッセージ型が現在のデータベースで作成され、AUTHORIZATION 句で指定されるプリンシパルによって所有されます。 サーバー名、データベース名、スキーマ名は指定できません。 *Message_type_name*には最大 128 文字にすることができます。  
   
- 承認*owner_name*  
+ AUTHORIZATION *owner_name*  
  メッセージ型の所有者を、指定したデータベース ユーザーまたはロールに設定します。 現在のユーザーの場合は**dbo**または**sa**、 *owner_name*任意の有効なユーザーまたはロールの名前を指定できます。 それ以外の場合、 *owner_name*現在のユーザーの名前、現在のユーザーが、IMPERSONATE 権限を持つユーザーの名前または現在のユーザーが所属するロールの名前にする必要があります。 この句を省略すると、メッセージ型は現在のユーザーに属します。  
   
  VALIDATION   
@@ -89,7 +89,7 @@ CREATE MESSAGE TYPE message_type_name
   
  メッセージ型は一時オブジェクトとして指定できません。 メッセージ型名で始まる **#** 許可されますが、パーマネント オブジェクト。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メッセージの種類のメンバーに既定値を作成するためのアクセス許可、 **db_ddladmin**または**db_owner**固定データベース ロールおよび**sysadmin**固定サーバー ロール。  
   
  メッセージ型に対する REFERENCES 権限の既定では、メッセージの種類のメンバーの所有者、 **db_owner**固定データベース ロールのメンバー、 **sysadmin**固定サーバー ロール。  

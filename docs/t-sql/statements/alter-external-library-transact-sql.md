@@ -18,12 +18,12 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: e679664f02ffcb08d811a66229a21f1bdaf08077
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: d0fe9adc1907d773bdfddda38b5900774ec97deb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER 外部ライブラリ (TRANSACT-SQL)  
 
@@ -73,7 +73,7 @@ WITH ( LANGUAGE = 'R' )
 
 必要に応じて、ファイルの OS プラットフォームを指定できます。 1 ファイルのみの成果物またはコンテンツについては、特定の言語や実行時の OS プラットフォームごとに許可します。
 
-**DATA_SOURCE external_data_source_name を =**
+**DATA_SOURCE = external_data_source_name**
 
 ライブラリ ファイルの場所を含む外部データ ソースの名前を指定します。 この場所は、Azure blob ストレージ パスを参照する必要があります。 外部データ ソースを作成するには、使用[外部データ ソースの作成 (TRANSACT-SQL)](create-external-data-source-transact-sql.md)です。
 
@@ -84,7 +84,7 @@ WITH ( LANGUAGE = 'R' )
 
 アセンブリのような 16 進数のリテラルとして、パッケージのコンテンツを指定します。 このオプションが必要なアクセス許可が、サーバーがアクセスできる任意のフォルダーにファイルのパスへのアクセスはありません、ライブラリを変更するライブラリを作成することができます。
 
-**プラットフォーム WINDOWS を =**
+**PLATFORM = WINDOWS**
 
 コンテンツ ライブラリのプラットフォームを指定します。 この値は、さまざまなプラットフォームを追加する既存のライブラリを変更する場合に必要です。 Windows は、唯一サポートされているプラットフォームです。
 
@@ -94,7 +94,7 @@ R 言語用には、zip 形式のアーカイブ ファイルの形式でパッ�
 
 `ALTER EXTERNAL LIBRARY`ステートメントがデータベースにのみライブラリ ビットをアップロードします。 変更したライブラリが実際にインストールされていないユーザーが実行されるまで外部のスクリプトは、その後を実行して[sp_execute_external_script (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)です。
 
-## <a name="permissions"></a>アクセス許可
+## <a name="permissions"></a>権限
 
 必要があります、`ALTER ANY EXTERNAL LIBRARY`権限です。 外部のライブラリを作成したユーザーは、その外部のライブラリを変更できます。
 

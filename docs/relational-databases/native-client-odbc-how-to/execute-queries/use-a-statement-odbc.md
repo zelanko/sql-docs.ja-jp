@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: statements [ODBC]
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0122ee0c8436bd2c597fc73e901287154d56bad7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3ff3c37923f2b4d6d81f8e7e1e61c39d030b7168
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-a-statement-odbc"></a>ステートメントの使用 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,11 +43,11 @@ ms.lasthandoff: 01/08/2018
   
 5.  SQLExecDirect を使用してステートメントを直接実行します。  
   
-     \- - または -  
+     \- または -  
   
      ステートメントが準備されている場合は、[SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) を使用してそのステートメントを複数回実行します。  
   
-     \- - または -  
+     \- または -  
   
      カタログ関数を呼び出すと、結果が返されます。  
   
@@ -55,11 +55,11 @@ ms.lasthandoff: 01/08/2018
   
      ステートメントの結果セットを一度に 1 行ずつフェッチします。  
   
-     \- - または -  
+     \- または -  
   
      ブロック カーソルを使用して一度に複数行の結果セットをフェッチします。  
   
-     \- - または -  
+     \- または -  
   
      [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md) を呼び出して、INSERT、UPDATE、または DELETE ステートメントの影響を受ける行数を確認します。  
   

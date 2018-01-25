@@ -18,13 +18,13 @@ ms.assetid: 3282e8ed-b515-4ed5-8543-fcef68629a92
 caps.latest.revision: "10"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 41176650541844b835505a6805f5437b2ea061b1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2ef4f1ee437a2999d8fa8c1aac27bb4fa64f5c76
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-5-train-and-save-a-model-using-t-sql"></a>レッスン 5: トレーニングおよび T-SQL を使用してモデルを保存します。
 
@@ -94,7 +94,7 @@ ms.lasthandoff: 01/08/2018
 
 2. ウォッチ、**メッセージ**のウィンドウ[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]r のパイプ、メッセージの**stdout**このが正しくありませんと同様に、ストリーム。 
 
-    "外部スクリプトからの STDOUT メッセージ: Rows Read: 1193025、合計行が処理: 1193025、チャンク時間の合計: 0.093 秒"
+    "STDOUT message(s) from external script: Rows Read: 1193025, Total Rows Processed: 1193025, Total Chunk Time: 0.093 seconds"
 
     また、個々 の関数に固有のメッセージを表示することも可能性があります。`rxLogit`変数を表示し、モデルの作成の一部として生成されたメトリックをテストします。
 

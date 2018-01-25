@@ -15,12 +15,12 @@ dev_langs: Python
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 6b481e5e65616f70f1b66c9be2517a2da747b1dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 2812e9529a9cdb4dc5fd8019a28ccc060ba68d1a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="run-python-using-t-sql"></a>T-SQL を使用して実行の Python
 
@@ -131,14 +131,14 @@ GO
 |DayOfWeek (変更前) に、| Amount|DayOfWeek (変更後) |
 |-----|-----|-----|
 |日曜日|10|7|
-|月曜日|11.1|@shouldalert|
+|月曜日|11.1|1|
 |火曜日|12.2|2|
 |水曜日|13.3|3|
 |木曜日|14.4|4|
 |金曜日|15.5|5|
 |土曜日|16.6|6|
 |金曜日|17.7|5|
-|月曜日|18.8|@shouldalert|
+|月曜日|18.8|1|
 |日曜日|19.9|7|
 
 内のメッセージとして返されるステータス メッセージ、または Python コンソールに返されるエラー、**クエリ**ウィンドウです。 次に表示される出力の抜粋を示します。

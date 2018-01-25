@@ -23,15 +23,15 @@ helpviewer_keywords:
 - message types [Service Broker], contracts
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 caps.latest.revision: "48"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b77fba7800b8533793f9b26574d442bb0c087b8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 26a8d2c2826e091322a1cec35d6ffe1d9ca379e0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ CREATE CONTRACT contract_name
 > [!NOTE]  
 >  作成しないキーワードを使用するコントラクトのいずれか、 *contract_name*です。 CREATE BROKER PRIORITY でコントラクト名に ANY を指定した場合、優先度はすべてのコントラクトに適用されます。 名前が ANY であるコントラクトに限定されません。  
   
- 承認*owner_name*  
+ AUTHORIZATION *owner_name*  
  コントラクトの所有者を、指定したデータベース ユーザーまたはロールに設定します。 現在のユーザーの場合は**dbo**または**sa**、 *owner_name*任意の有効なユーザーまたはロールの名前を指定できます。 それ以外の場合、 *owner_name*現在のユーザーの名前、現在のユーザーが持つ、権限を借用するユーザーの名前または現在のユーザーが所属するロールの名前にする必要があります。 この句を省略すると、コントラクトは現在のユーザーに属します。  
   
  *message_type_name*  
@@ -91,7 +91,7 @@ CREATE CONTRACT contract_name
   
  コントラクトは一時オブジェクトとして指定できません。 # で始まるコントラクト名は許可されますが、パーマネント オブジェクトになります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  既定では、メンバー、 **db_ddladmin**または**db_owner**固定データベース ロールおよび**sysadmin**固定サーバー ロールは、コントラクトを作成できます。  
   
  既定では、メンバーは、コントラクトの所有者、 **db_ddladmin**または**db_owner**固定データベース ロールのメンバー、 **sysadmin**固定サーバー ロールの参照があります。コントラクトの権限です。  

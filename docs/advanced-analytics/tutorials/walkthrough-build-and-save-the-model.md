@@ -16,13 +16,13 @@ ms.assetid: 69b374c1-2042-4861-8f8b-204a6297c0db
 caps.latest.revision: "21"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e187d5d503448a48f4fd36e5d99ea8ff98df72bc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e2fc182a273a9b6adee4a59729b023d3113507a8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>R モデルを構築して、SQL Server に保存
 
@@ -50,19 +50,19 @@ ms.lasthandoff: 01/08/2018
 
      *ロジスティック回帰結果: その先端 ~ passenger_count trip_distance + trip_time_in_secs +*
      <br/>*direct_distance*
-     <br/>*データ: featureDataSource (RxSqlServerData データ ソース)*
+     <br/>*Data: featureDataSource (RxSqlServerData Data Source)*
      <br/>*Dependent variable(s): 先が*
      <br/>*独立変数の合計: 5*
      <br/>*有効な値: 17068*
      <br/>*不足している観測数: 0*
-     <br/>*-2\*LogLikelihood: 23540.0602 (残存偏差 17063 自由度の)*
+     <br/>*-2\*LogLikelihood: 23540.0602 (Residual deviance on 17063 degrees of freedom)*
      <br/>*係数。*
-     <br/>*Estimate Std.エラー z 値 Pr (> | z |)*
-     <br/>*(受信) - 2.509e-03 3.223e-02-0.078 0.93793*
-     <br/>*passenger_count-5.753e-02 1.088e-02-5.289 1.23 e-07\*\*\**
-     <br/>*trip_distance-3.896e-02 1.466e-02-2.658 0.00786\*\**
-     <br/>*trip_time_in_secs 2.115e-04 4.336e-05 4.878 1.07e-06\*\*\**
-     <br/>*direct_distance 6.156e-02 2.076e-02 2.966 0.00302\*\**
+     <br/>*Estimate Std.Error z value Pr(>|z|)*
+     <br/>*(Intercept)       -2.509e-03  3.223e-02  -0.078  0.93793*
+     <br/>*passenger_count   -5.753e-02  1.088e-02  -5.289 1.23e-07 \*\*\**
+     <br/>*trip_distance     -3.896e-02  1.466e-02  -2.658  0.00786 \*\**
+     <br/>*trip_time_in_secs  2.115e-04  4.336e-05   4.878 1.07e-06 \*\*\**
+     <br/>*direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
      <br/>*---*
      <br/>*Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’0.1 ‘ ’ 1*
      <br/>*条件の最終的な差異共分散マトリックスの数: 48.3933*

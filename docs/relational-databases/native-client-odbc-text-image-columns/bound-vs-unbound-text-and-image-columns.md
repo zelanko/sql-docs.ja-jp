@@ -23,15 +23,15 @@ helpviewer_keywords:
 - image columns [ODBC]
 ms.assetid: ffd3442e-d880-46e9-b848-2365a09a2406
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e511e9861b851f08080752f1d85b75c8887db5df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: faaf7ed4d573f3d8ba5ca08594211e682a18e482
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bound-vs-unbound-text-and-image-columns"></a>Vs をバインドします。バインドされない Text、Image 列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,6 +43,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>参照  
  [テキストとイメージの列を管理します。](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)   
- [カーソル動作](../../relational-databases/native-client-odbc-cursors/cursor-behaviors.md)  
+ [カーソルの動作](../../relational-databases/native-client-odbc-cursors/cursor-behaviors.md)  
   
   

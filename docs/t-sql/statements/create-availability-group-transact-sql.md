@@ -28,13 +28,13 @@ ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 caps.latest.revision: "196"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35ccffcfbdce2c10b20c8459e59a1c2d41962088
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e0a4792974ec9aa78678aec74dc390e992471e64
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ CREATE AVAILABILITY GROUP group_name
  *group_name*  
  新しい可用性グループの名前を指定します。 *group_name*は有効な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][識別子](../../relational-databases/databases/database-identifiers.md)、および、WSFC クラスター内のすべての可用性グループ間で一意である必要があります。 可用性グループ名の最大文字数は 128 文字です。  
   
- AUTOMATED_BACKUP_PREFERENCE  **=**  {プライマリ |SECONDARY_ONLY |セカンダリ |[なし]}  
+ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
  バックアップを実行する場所を選択するときにバックアップ ジョブがプライマリ レプリカを評価する方法についての優先設定を指定します。 自動バックアップの優先設定を考慮して、特定のバックアップ ジョブのスクリプトを作成できます。 優先順位がによって適用されませんを理解することが重要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ので、アドホック バックアップに影響を与えません。  
   
  サポートされる値は次のとおりです。  
@@ -147,7 +147,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  既存の可用性グループの自動バックアップ設定を表示するには、選択、 **automated_backup_preference**または**automated_backup_preference_desc**の列、 [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)カタログ ビューです。 さらに、 [sys.fn_hadr_backup_is_preferred_replica &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)優先されるバックアップ レプリカを決定するために使用できます。  この関数は、少なくとも 1 つで、レプリカの 1 を返す場合でも、`AUTOMATED_BACKUP_PREFERENCE = NONE`です。  
   
- FAILURE_CONDITION_LEVEL  **=**  {1 | 2 |**3** | 4 | 5}  
+ FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
  この可用性グループの自動フェールオーバーを実行するエラー条件を指定します。 FAILURE_CONDITION_LEVEL はグループ レベルで設定されていますが、同期コミット可用性モードが構成されている可用性レプリカにのみ (AVAILIBILITY_MODE  **=**  SYNCHRONOUS_COMMIT)。 さらに、エラー状態が自動フェールオーバーをトリガー プライマリとセカンダリの両方のレプリカが自動フェールオーバー モードで構成されている場合にのみ (FAILOVER_MODE  **=** 自動) セカンダリ レプリカが、現在プライマリ レプリカと同期されています。  
   
  エラー状態レベルの範囲は 1 ～ 5 で、レベル 1 が最も制限が緩く、レベル 5 が最も制限の厳しい指定です。 任意の状態レベルは、それより制限が緩いすべてのレベルを含みます。 したがって、最も厳しい状態レベル 5 にはそれより制限が緩い状態レベル (1 ～ 4) が含まれ、レベル 4 にはレベル 1 ～ 3 が含まれます。以下同様です。 次の表では、各レベルに対応するエラー状態について説明します。  
@@ -173,12 +173,12 @@ CREATE AVAILABILITY GROUP group_name
 > [!IMPORTANT]  
 >  **sp_server_diagnostics** では、データベース レベルでの正常性チェックは実行されません。  
   
- DB_FAILOVER  **=**  {ON |オフ}  
+ DB_FAILOVER  **=** { ON | OFF }  
  プライマリ レプリカでのデータベースがオフラインのときに実行する応答を指定します。 ON に設定すると、可用性グループ内のデータベースのオンライン以外のすべての状態は、自動フェールオーバーをトリガーします。 このオプションが OFF に設定されている場合は、インスタンスのヘルスだけが自動フェールオーバーをトリガーに使用されます。  
   
   この設定に関する詳細については、次を参照してください[データベース レベルの正常性の検出のオプション。](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) 
   
- DTC_SUPPORT  **=**  {PER_DB |[なし]}  
+ DTC_SUPPORT  **=** { PER_DB | NONE }  
  データベースにまたがるトランザクションは分散トランザクション コーディネーター (DTC) ではサポートするかどうかを指定します。 データベースにまたがるトランザクションは、以降でのみサポートされます[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。 PER_DB では、これらのトランザクションのサポートを可用性グループを作成します。 詳細については、「[Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」を参照してください。  
   
  BASIC  
@@ -193,7 +193,7 @@ CREATE AVAILABILITY GROUP group_name
  CLUSTER_TYPE  
  SQL Server 2017 年 1 で導入されました。 場合は、可用性グループで、Windows Server フェールオーバー クラスター (WSFC) を識別するために使用します。  Windows Server フェールオーバー クラスターでフェールオーバー クラスター インスタンス上の可用性グループがある場合は、WSFC に設定されます。 クラスターは、Linux ペースのように、Windows Server フェールオーバー クラスターではないクラスター マネージャーで管理されている場合は、外部に設定します。 可用性グループの WSFC をクラスターの調整を使用していない場合は、NONE に設定します。 たとえば、ときに、可用性グループを含む Linux サーバー クラスター マネージャーがありません。 
 
- データベース*database_name*  
+ DATABASE *database_name*  
  ローカル [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス (つまり可用性グループを作成するサーバー インスタンス) 上の 1 つ以上のユーザー データベースのリストを指定します。 1 つの可用性グループに対して複数のデータベースを指定できますが、各データベースが所属できる可用性グループは 1 つだけです。 可用性グループでサポートされるデータベースの種類については、次を参照してください[前提条件、制限事項、および Always On 可用性グループ &#40; ための推奨事項。SQL Server &#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). ローカル データベースが可用性グループに属しているを参照してください、 **replica_id**内の列、 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)カタログ ビューです。  
   
  DATABASE 句は省略可能です。 を省略した場合、新しい可用性グループが空です。  
@@ -231,12 +231,12 @@ CREATE AVAILABILITY GROUP group_name
   
  WSFC ノードとサーバー インスタンスの前提条件については、次を参照してください[前提条件、制限事項、および Always On 可用性グループ &#40; ための推奨事項。SQL Server &#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- ENDPOINT_URL **='**TCP**://***システム アドレス***:***ポート***'**  
+ ENDPOINT_URL **='**TCP**://***system-address***:***port***'**  
  URL パスを指定します、[データベース ミラーリング エンドポイント](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)のインスタンスで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]現在の REPLICA ON 句で定義している可用性レプリカをホストします。  
   
- ENDPOINT_URL 句は必須です。 詳細については、「 [可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)の構成に関する一般的な問題のトラブルシューティングに役立つ情報を提供します。  
+ ENDPOINT_URL 句は必須です。 詳細については、「[可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)」を参照してください。  
   
- **'**TCP**://***システム アドレス***:***ポート***'**  
+ **'**TCP**://***system-address***:***port***'**  
  エンドポイントの URL または読み取り専用のルーティングの URL を指定するための URL を指定します。 URL のパラメーターは次のとおりです。  
   
  *system-address*  
@@ -245,8 +245,8 @@ CREATE AVAILABILITY GROUP group_name
  *port*  
  ポート番号 (ENDPOINT_URL オプションの場合) のパートナー サーバー インスタンスのミラーリング エンドポイントに関連付けられているかによって使用されるポート番号、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のサーバー インスタンスの (READ_ONLY_ROUTING_URL オプションの場合)。  
   
- AVAILABILITY_MODE  **=**  {{SYNCHRONOUS_COMMIT |ASYNCHRONOUS_COMMIT |CONFIGURATION_ONLY}  
- SYNCHRONOUS_COMMIT または ASYNCHRONOUS_COMMIT は、プライマリ レプリカがセカンダリ レプリカをプライマリ レプリカは、特定のプライマリでトランザクションをコミットできる前にディスクにログ レコードの固定 (書き込み) を確認するを待っているかどうかを指定しますデータベースです。 同じプライマリ レプリカに対する異なるデータベースでのトランザクションは個別にコミットできます。 SQL Server 2017 CU 1 には、CONFIGURATION_ONLY が導入されています。 CONFIGURATION_ONLY レプリカは CLUSTER_TYPE を含む可用性グループにのみ適用されます = 外部または CLUSTER_TYPE = NONE です。 
+ AVAILABILITY_MODE **=** { {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY }  
+ SYNCHRONOUS_COMMIT or ASYNCHRONOUS_COMMIT specifies whether the primary replica has to wait for the secondary replica to acknowledge the hardening (writing) of the log records to disk before the primary replica can commit the transaction on a given primary database. 同じプライマリ レプリカに対する異なるデータベースでのトランザクションは個別にコミットできます。 SQL Server 2017 CU 1 には、CONFIGURATION_ONLY が導入されています。 CONFIGURATION_ONLY レプリカは CLUSTER_TYPE を含む可用性グループにのみ適用されます = 外部または CLUSTER_TYPE = NONE です。 
   
  SYNCHRONOUS_COMMIT  
  プライマリ レプリカがトランザクションをコミットがこのセカンダリ レプリカ (同期コミット モード) に書き込まれるまで待機するを指定します。 SYNCHRONOUS_COMMIT は、プライマリ レプリカを含む最大 3 つのレプリカに対して指定できます。  
@@ -263,9 +263,9 @@ CREATE AVAILABILITY GROUP group_name
 
    詳細については、次を参照してください。[構成のみのレプリカ](../../linux/sql-server-linux-availability-group-ha.md)です。
   
- AVAILABILITY_MODE 句は必須です。 詳細については、「 [可用性モード &#40;AlwaysOn 可用性グループ&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)、または PowerShell を使用して、AlwaysOn 可用性グループ上で計画的な手動フェールオーバーまたは強制手動フェールオーバー (強制フェールオーバー) を実行する方法について説明します。  
+ AVAILABILITY_MODE 句は必須です。 詳細については、「[可用性モード &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)」を参照してください。  
   
- FAILOVER_MODE  **=**  {自動 |手動}  
+ FAILOVER_MODE **=** { AUTOMATIC | MANUAL }  
  定義している可用性レプリカのフェールオーバー モードを指定します。  
   
  AUTOMATIC  
@@ -279,7 +279,7 @@ CREATE AVAILABILITY GROUP group_name
   
  FAILOVER_MODE 句は必須です。 2 種類の手動フェールオーバー、つまりデータ損失のない手動フェールオーバーと強制フェールオーバー (データ損失の可能性あり) は、異なる条件の下でサポートされます。 詳細については、「 [フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)、または PowerShell を使用して、AlwaysOn 可用性グループ上で計画的な手動フェールオーバーまたは強制手動フェールオーバー (強制フェールオーバー) を実行する方法について説明します。  
   
- SEEDING_MODE  **=**  {自動 |手動}  
+ SEEDING_MODE **=** { AUTOMATIC | MANUAL }  
  セカンダリ レプリカが最初にシード処理方法を指定します。  
   
  AUTOMATIC  
@@ -291,21 +291,21 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  手動によるシード (既定値) を指定します。 このメソッドでは、プライマリ レプリカで、データベースのバックアップを作成し、セカンダリ レプリカでバックアップを手動で復元する必要があります。  
   
- BACKUP_PRIORITY  **=** *n*  
+ BACKUP_PRIORITY **=** *n*  
  同じ可用性グループ内の他のレプリカと比較して、このレプリカでバックアップを実行する優先順位を指定します。 値は 0 ～ 100 の範囲の整数です。 これらの値には次の意味があります。  
   
 -   1 ～ 100 は、その可用性レプリカがバックアップの実行に対して選択される可能性があることを示します。 1 は最も低い優先順位を示し、100 は最も高い優先順位を示します。 たとえば、BACKUP_PRIORITY = 1 の場合、現在使用可能な可用性レプリカにそれより高い優先順位のものがない場合にのみ、その可用性レプリカがバックアップの実行に対して選択されます。  
   
 -   0 は、この可用性レプリカがバックアップの実行時であることを示します。 これは、たとえば、バックアップをフェールオーバーすることがないリモート可用性レプリカのような場合に便利です。  
   
- 詳細については、「[アクティブなセカンダリ: セカンダリ レプリカでのバックアップ &#40;AlwaysOn 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+ 詳細については、「 [アクティブなセカンダリ: セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
- SECONDARY_ROLE **(** . **)**  
+ SECONDARY_ROLE **(** … **)**  
  この可用性レプリカが現在セカンダリ ロールを所有している場合に効果を実行する役割に固有の設定を指定します (つまり、常にセカンダリ レプリカである)。 かっこの中では、いずれか一方または両方のセカンダリ ロール オプションを指定します。 両方を指定する場合は、コンマ区切りのリストを使用します。  
   
  セカンダリ ロール オプションは次のとおりです。  
   
- ALLOW_CONNECTIONS  **=**  {なし |READ_ONLY |すべて}  
+ ALLOW_CONNECTIONS **=** { NO | READ_ONLY | ALL }  
  セカンダリ ロールを実行している (つまりセカンダリ レプリカとして機能している) 特定の可用性レプリカのデータベースがクライアントから接続を受け入れることができるかどうかを指定します。以下のいずれかになります。  
   
  いいえ  
@@ -319,7 +319,7 @@ CREATE AVAILABILITY GROUP group_name
   
  詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
- READ_ONLY_ROUTING_URL **='**TCP**://***システム アドレス***:***ポート***'**  
+ READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***'**  
  読み取りを目的とした接続要求をこの可用性レプリカにルーティングするために使用する URL を指定します。 これは、SQL Server データベース エンジンがリッスンしている URL です。 通常、SQL Server データベース エンジンの既定のインスタンスは、TCP ポート 1433 でリッスンします。  
   
  名前付きインスタンスの場合は、クエリを実行してポート番号を取得できます、**ポート**と**type_desc**の列、 [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)動的管理ビュー。 サーバー インスタンスは TRANSACT-SQL リスナーを使用 (**type_desc ="TSQL"**)。  
@@ -329,12 +329,12 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスの場合は、特定のポートを使用するように Transact-SQL リスナーを構成する必要があります。 詳細については、「[特定の TCP ポートで受信待ちするようにサーバーを構成する方法 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)」を参照してください。  
   
- PRIMARY_ROLE **(** . **)**  
+ PRIMARY_ROLE **(** … **)**  
  この可用性レプリカが現在プライマリ ロールを所有している場合に効果を実行する役割に固有の設定を指定します (つまり、常にプライマリ レプリカである)。 かっこの中では、いずれか一方または両方のプライマリ ロール オプションを指定します。 両方を指定する場合は、コンマ区切りのリストを使用します。  
   
  プライマリ ロール オプションは次のとおりです。  
   
- ALLOW_CONNECTIONS  **=**  {READ_WRITE |すべて}  
+ ALLOW_CONNECTIONS **=** { READ_WRITE | ALL }  
  プライマリ ロールを実行している (つまりプライマリ レプリカとして機能している) 特定の可用性レプリカのデータベースが受け入れることのできるクライアントからの接続の種類を指定します。以下のいずれかになります。  
   
  READ_WRITE  
@@ -343,7 +343,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  プライマリ レプリカのデータベースに対するすべての接続が許可されます。 これは既定の動作です。  
   
- READ_ONLY_ROUTING_LIST  **=**  { **('**\<server_instance >**'** [ **、**.*n* ] **)** |[なし]} セカンダリ ロールで実行されている場合は、次の要件を満たしているこの可用性グループの可用性レプリカをホストするサーバー インスタンスのコンマ区切りの一覧を指定します。  
+ READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE } Specifies a comma-separated list of server instances that host availability replicas for this availability group that meet the following requirements when running under the secondary role:  
   
 -   すべての接続または読み取り専用の接続を許可するように構成されていること (前に示した SECONDARY_ROLE オプションの ALLOW_CONNECTIONS 引数を参照)。  
   
@@ -360,7 +360,7 @@ CREATE AVAILABILITY GROUP group_name
  なし  
  この可用性レプリカがプライマリ レプリカの場合は、読み取り専用ルーティングはサポートされていないことを指定します。 これは既定の動作です。  
   
- SESSION_TIMEOUT  **=**  *整数*  
+ SESSION_TIMEOUT **=** *integer*  
  セッション タイムアウト期間を秒単位で指定します。 このオプションを指定しない場合、この時間は既定で 10 秒に設定されます。 最小値は 5 秒です。  
   
 > [!IMPORTANT]  
@@ -375,12 +375,12 @@ CREATE AVAILABILITY GROUP group_name
   
  \<ag_name > いずれかを構成する可用性グループの名前を指定、分散型可用性グループの半分です。  
   
- リスナー **='**TCP**://***システム アドレス***:***ポート***'**  
+ LISTENER **='**TCP**://***system-address***:***port***'**  
  可用性グループに関連付けられているリスナーの URL パスを指定します。  
   
  リスナー句が必要です。  
   
- **'**TCP**://***システム アドレス***:***ポート***'**  
+ **'**TCP**://***system-address***:***port***'**  
  可用性グループに関連付けられているリスナーの URL を指定します。 URL のパラメーターは次のとおりです。  
   
  *system-address*  
@@ -389,7 +389,7 @@ CREATE AVAILABILITY GROUP group_name
  *port*  
  可用性グループのデータベース ミラーリング エンドポイントに関連付けられているポート番号です。 リスナーのポートではないことに注意してください。  
   
- AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT |ASYNCHRONOUS_COMMIT |CONFIGURATION_ONLY}  
+ AVAILABILITY_MODE **=** { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY }  
  プライマリ レプリカがセカンダリ可用性グループ プライマリ レプリカは、特定のプライマリ データベースでトランザクションをコミットできる前にディスクにログ レコードの固定 (書き込み) を確認するを待っているかどうかを指定します。  
   
  SYNCHRONOUS_COMMIT  
@@ -400,7 +400,7 @@ CREATE AVAILABILITY GROUP group_name
   
  AVAILABILITY_MODE 句は必須です。  
   
- FAILOVER_MODE  **=**  {手動}  
+ FAILOVER_MODE **=** { MANUAL }  
  分散型可用性グループのフェールオーバー モードを指定します。  
   
  MANUAL  
@@ -408,7 +408,7 @@ CREATE AVAILABILITY GROUP group_name
   
  FAILOVER_MODE 句が必要であり、唯一のオプションは MANUAL です。 セカンダリ可用性グループへの自動フェールオーバーはサポートされていません。  
   
- SEEDING_MODE  **=**  {自動 |手動}  
+ SEEDING_MODE **=** { AUTOMATIC | MANUAL }  
  セカンダリ可用性グループが最初にシード処理方法を指定します。  
   
  AUTOMATIC  
@@ -417,7 +417,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  手動によるシード (既定値) を指定します。 このメソッドでは、プライマリ レプリカで、データベースのバックアップを作成し、セカンダリ可用性グループのレプリカでバックアップを手動で復元する必要があります。  
   
- リスナー **'***dns_name***' (** \<listener_option > **)**この新しい可用性グループ リスナーを定義します可用性グループです。 LISTENER は省略可能な引数です。  
+ LISTENER **‘***dns_name***’(** \<listener_option> **)** Defines a new availability group listener for this availability group. LISTENER は省略可能な引数です。  
   
 > [!IMPORTANT]  
 >  初めてリスナーを作成する前に強くお勧めお読みになる[作成または構成する可用性グループ リスナーと #40 です。SQL Server &#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
@@ -439,7 +439,7 @@ CREATE AVAILABILITY GROUP group_name
   
  \<listener_option > LISTENER には、次のいずれかの\<listener_option > オプション。 
   
- DHCP と [ON { **('***four_part_ipv4_address***'、'***four_part_ipv4_mask***')** }]  
+ WITH DHCP [ ON { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** } ]  
  可用性グループ リスナーが動的ホスト構成プロトコル (DHCP) を使用するように指定します。  必要に応じて、ON 句を使用して、このリスナーが作成されたネットワークを識別します。 DHCP は、1 つのサブネットすべてのサーバー インスタンスに使用される、可用性グループのレプリカをホストするに限定されます。  
   
 > [!IMPORTANT]  
@@ -449,7 +449,7 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- IP による**(** { **('***four_part_ipv4_address***'、'***four_part_ipv4_mask* **')** | **('***ipv6_address***')** } [ **、** . *n*  ] **)** [ **、**ポート **=**  *listener_port*]  
+ WITH IP **(** { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘***ipv6_address***’)** } [ **,** ...*n* ] **)** [ **,** PORT **=***listener_port* ]  
  、DHCP を使用する代わりに、可用性グループ リスナーは 1 つまたは複数の静的 IP アドレスを指定します。 複数のサブネットにわたる可用性グループを作成するには、各サブネットのリスナー構成に静的 IP アドレスが 1 つ必要です。 サブネットの静的 IP アドレスには、IPv4 アドレスまたは IPv6 アドレスを使用できます。 新しい可用性グループのレプリカをホストする各サブネットの静的 IP アドレスを取得する、ネットワーク管理者に問い合わせてください。  
   
  例:  
@@ -465,7 +465,7 @@ CREATE AVAILABILITY GROUP group_name
  *ipv6_address*  
  可用性グループ リスナーに対する IPv6 アドレスを指定します。 たとえば、 `2001::4898:23:1002:20f:1fff:feff:b3a3`のようにします。  
   
- ポート **=**  *listener_port*  
+ PORT **=** *listener_port*  
  ポート番号を指定します:*listener_port*— WITH IP 句で指定されている可用性グループ リスナーで使用します。 PORT は省略できます。  
   
  既定のポート番号 1433 がサポートされます。 ただし、セキュリティ上の問題がある場合は、別のポート番号を使用することをお勧めします。  
@@ -479,8 +479,8 @@ CREATE AVAILABILITY GROUP group_name
   
 ## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>アクセス許可  
- **sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、CONTROL SERVER 権限のいずれかが必要です。  
+### <a name="permissions"></a>権限  
+ **sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限のいずれかが必要です。  
   
 ## <a name="examples"></a>使用例  
   
@@ -497,7 +497,7 @@ CREATE AVAILABILITY GROUP group_name
   
 |レプリカ オプション|設定`COMPUTER01`|設定`COMPUTER02`|設定`COMPUTER03`|Description|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
-|ENDPOINT_URL|TCP://*COMPUTER 01: 5022*|TCP://*COMPUTER 02: 5022*|TCP://*COMPUTER 03: 5022*|この例では、いずれのシステムも同じドメインに存在するため、エンドポイントの URL には、コンピューター システムの名前をシステム アドレスとして使用できます。|  
+|ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|この例では、いずれのシステムも同じドメインに存在するため、エンドポイントの URL には、コンピューター システムの名前をシステム アドレスとして使用できます。|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|2 つのレプリカが同期コミット モードを使用できます。 同期されているレプリカは、データ損失のないフェールオーバーをサポートします。 3 番目のレプリカには、非同期コミットの可用性モードが使用されます。|  
 |FAILOVER_MODE|AUTOMATIC|AUTOMATIC|MANUAL|同期コミット レプリカは、自動フェールオーバーおよび計画的な手動フェールオーバーをサポートします。 同期コミット可用性モードのレプリカは、強制手動フェールオーバーのみサポートします。|  
 |BACKUP_PRIORITY|30|30|90|非同期コミット レプリカには、同期コミット レプリカよりも高い優先度 (90) が割り当てられます。 バックアップは、非同期コミット レプリカをホストするサーバー インスタンスで発生する傾向があります。|  
@@ -564,13 +564,13 @@ GO
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
--   [可用性グループの作成 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)  
+-   [可用性グループ &#40; です。Transact SQL と &#41; です。](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)  
   
--   [可用性グループ ウィザードの使用 &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [可用性グループ ウィザード &#40; です。SQL Server Management Studio と &#41; です。](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [新しい可用性グループ ダイアログ ボックス &#40; です。SQL Server Management Studio と &#41; です。](../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [可用性グループ ウィザードの使用 &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [可用性グループ ウィザード &#40; です。SQL Server Management Studio と &#41; です。](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>参照  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
@@ -578,7 +578,7 @@ GO
  [DROP AVAILABILITY GROUP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-availability-group-transact-sql.md)   
  [Always On 可用性グループの構成 &#40; のトラブルシューティングします。SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server &#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
 

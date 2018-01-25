@@ -14,13 +14,13 @@ ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
 caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7630d06085eaff3c5e255bacc4103dc1d9962189
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8017e0a54bef6885a6622d46ee9d2cf92af247ba
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>SQL Server で R のアーキテクチャの概要
 
@@ -48,7 +48,7 @@ SQL Server 2016 で導入された extensibility framework は SQL Server 2017 �
 
 ように、R をサポートするコンポーネントの詳細については、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]と RLauncher を参照してください[新しいコンポーネント](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md)です。
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 Machine Learning のサービスまたは SQL Server R Services を使用して R コードを実行すると、セキュリティと管理容易性を提供する、SQL Server プロセスの外部のすべての R スクリプトが実行されます。 このようなプロセスの分離は、ストアド プロシージャの一部として、R スクリプトを実行またはリモート コンピューターから SQL Server コンピューターのジョブへの接続し、計算コンテキストとしてサーバーを使用するジョブを開始するかどうかに関係なく true を保持します。
 

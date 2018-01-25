@@ -16,13 +16,13 @@ ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
 caps.latest.revision: "18"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 2a7234bf2dee6ad601a10c718427b045aa3221e3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 09d5c7243f519a3ddf2cb0380e7a9f9f65c5a350
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>SQL で使用して、R モデルの配置
 
@@ -200,7 +200,7 @@ ms.lasthandoff: 01/08/2018
     >[!TIP]
     > SQL Server と R. の両方の優れた統合を提供する R ツールの Visual Studio (RTVS)SQL Server 接続 RODBC の併用の例については、この記事を参照してください: [SQL Server と R を使用します。](https://docs.microsoft.com/en-us/visualstudio/rtvs/sql-server)
 
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>概要
 
 操作する方法を習得する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データをトレーニング済みの R モデルを永続化と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、このデータ セットに基づく新しいモデルを作成するには比較的簡単にする必要があります。 たとえば、これらの追加のモデルを作成してみてください可能性があります。
 

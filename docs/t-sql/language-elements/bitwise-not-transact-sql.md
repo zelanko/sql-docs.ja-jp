@@ -26,13 +26,13 @@ ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
 caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5bd0f8234088fbb358740d5c9b4e753d9ecaa11d
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: bc129a0a62c393cb8aee03edca3e0c2b567f9488
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-bitwise-not-transact-sql"></a>~ (ビット演算子 NOT) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 01/19/2018
  **ビット**場合は、入力値**ビット**です。  
   
 ## <a name="remarks"></a>解説  
-  **~** ビットごとの演算子が論理否定演算を実行用、*式*、さらに、各ビットです。 場合*式*値が 0 の場合の結果セット内のビットが 1 に設定されます。 それ以外の場合、結果のビットがオフになって値の 0 にします。 つまり、1 は 0 に、0 は 1 に変更されます。  
+ **~** ビットごとの演算子が論理否定演算を実行用、*式*、さらに、各ビットです。 場合*式*値が 0 の場合の結果セット内のビットが 1 に設定されます。 それ以外の場合、結果のビットがオフになって値の 0 にします。 つまり、1 は 0 に、0 は 1 に変更されます。  
   
 > [!IMPORTANT]  
 >  どのような種類のビットごとの演算を実行する場合でも、演算の中で使用される式の記憶域の長さが重要になります。 値を格納するときは、式のデータ型と同じバイト数を使用するようにしてください。 たとえば、同様の 5 つの 10 進値を格納する、 **tinyint**、 **smallint**、または**int**バイト数が異なると共に格納されている値を生成: **tinyint** 1 バイトを使用してデータの格納**smallint** 2 (バイト単位) を使用してデータを格納および**int** 4 バイトを使用してデータを格納します。 したがってでビットごとの演算を実行する、 **int** 10 進値は、直接バイナリまたは 16 進数の変換を使用して異なる結果を生成できる場合は特に、  **~**  (ビットごとの NOT) 演算子を使用します。 また、長さが短い方の変数に対してビットごとの NOT 演算が実行される場合があります。 この場合は、短い長さが長いデータ型の変数に変換するときに、上位 8 ビットのビット可能性がありますしない設定適切な値にします。 短いデータ型を長いデータ型に変換し、その結果に対して NOT 演算を実行するようにしてください。  

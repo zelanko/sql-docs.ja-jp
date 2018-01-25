@@ -23,13 +23,13 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b1fb1d28c4bddb679bd4aab8ce6cb11f21caca5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f5b32c99393bb5b7f31423df840f7f0069dd3518
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *rowpattern*  
  ノードを識別するために使用する XPath パターン (ハンドルが渡された XML ドキュメントで、 *idoc*パラメーター) 行として処理されるためです。  
   
- *フラグ*  
+ *flags*  
  XML データとリレーショナル行セットとの間で使用するマッピング、およびオーバーフローした列の処理方法を指定します。 *フラグ*オプションの入力パラメーターは、次の値のいずれかになります。  
   
 |バイト値|Description|  
@@ -64,7 +64,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|XML_ATTRIBUTES または XML_ELEMENTS と組み合わせる (論理和) ことができます。 このフラグがオーバーフロー プロパティを使用したデータをコピーしないことを示すコンテキストでは、取得できるように、  **@mp:xmltext**です。|  
   
  *SchemaDeclaration*  
- フォームのスキーマ定義です: *ColName**ColType* [*ColPattern* | *メタプロパティ*] [**、***ColNameColType* [*ColPattern* | *メタプロパティ*]...]  
+ フォームのスキーマ定義です: *ColName * * ColType* [*ColPattern* | *メタプロパティ*] [**、* * *ColNameColType* [*ColPattern * |*メタプロパティ*]...]  
   
  *ColName*  
  行セット内の列名を指定します。  
@@ -79,10 +79,10 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  として指定する標準 XPath パターン*ColPattern*メタプロパティもサポートします。  
   
- *メタ プロパティ*  
+ *MetaProperty*  
  OPENXML で提供されるメタプロパティの 1 つを指定します。 場合*メタプロパティ*が指定されている列には、メタプロパティで提供される情報が含まれています。 これらのメタプロパティによって、XML ノードの情報 (相対的な位置や名前空間の情報など) を抽出でき、 これにより、テキストとして表示されている情報だけでなく、さらに多くの情報を取得することができます。  
   
- *テーブル名*  
+ *TableName*  
  テーブル名を指定できます (の代わりに*SchemaDeclaration*) 目的のスキーマを持つテーブルが既に存在し、列パターンが必要ないかどうか。  
   
 ## <a name="remarks"></a>解説  
@@ -90,7 +90,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  次の表の構造、**エッジ**テーブル。  
   
-|列名|データ型|説明|  
+|列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|ドキュメント ノードの一意の ID。<br /><br /> ルート要素には、ID 値 0 があります。 負の ID 値は予約済みです。|  
 |**parentid**|**bigint**|ノードの親の識別子。 この ID によって識別される親のノードは、必ずしも要素ではなく、この ID によって親が識別されるノードの NodeType に依存します。 たとえば、ノードがテキスト ノードである場合、その親は属性ノードである場合もあります。<br /><br /> ノードが XML ドキュメントの最上位にある場合、その **ParentID** は NULL になります。|  

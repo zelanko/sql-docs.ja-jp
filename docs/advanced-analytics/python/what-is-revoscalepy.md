@@ -12,12 +12,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: aa07f181ef8a17b79bd978ffd58174bf28d870f0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: dd64f680a288f144e14104aedc99d4c6eda85934
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="introducing-revoscalepy"></a>Revoscalepy の概要
 
@@ -81,7 +81,7 @@ SQL Server での Python の機械学習のサポートされるデータ ソー
 
 CTP 2.0 以降で、SQL Server 2017 には、次の機械学習アルゴリズムと RevoScaleR から集計関数が含まれます。
 
-| 機能| Description|注|
+| 関数| Description|注|
 | ------ | ------ |------ |
 |`rx_btrees` | 確率的勾配ブースト デシジョン ツリーに合わせて|`rx_btrees_ex`CTP 2.0 で|
 |`rx_dforest` | 適合するように分類と回帰のデシジョン フォレスト|`rx_dforest_ex`CTP 2.0 で|
@@ -93,7 +93,7 @@ CTP 2.0 以降で、SQL Server 2017 には、次の機械学習アルゴリズ�
 
 Python のバージョンので新しい機械学習アルゴリズムが指定されても[MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
-| 機能| Description|
+| 関数| Description|
 | ------ | ------ |
 |`rx_fast_forest` |デシジョン フォレスト モデルを作成します。|
 |`rx_fast_linear` | 確率的デュアル座標アセントを使用した線形回帰|
@@ -162,7 +162,7 @@ SQL Server での Python コードを実行する必要がありますがイン�
 
 製品がリリースされたときに、これらの Api に関する完全なドキュメントは使用可能になります。 その間は、RevoScaleR または MicrosoftML ライブラリ内の対応する関数を参照していることをお勧めします。
 
-+ [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler)です。
++ [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
 + [MicrosoftML](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml)
 
 インポートして、モジュールを呼び出すことで、任意の Python 関数に関するヘルプを表示できる`help()`です。 たとえば、実行している`help(revoscalepy)`Python IDE から revoscalepy モジュールでの署名付きで、すべての関数の一覧を返します。

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - commands [OLE DB]
 ms.assetid: de03b27e-8c5a-4060-b650-f77279be01df
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d4e4f86bf4b678e3946f16b63f8dc71499be1c0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 596133acdd06a91f6235cfc0b342a562ac0eceb3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="commands"></a>コマンド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,11 +34,11 @@ ms.lasthandoff: 01/08/2018
   
 -   [コマンドの構文](../../relational-databases/native-client-ole-db-commands/command-syntax.md)  
   
--   [コマンド パラメーター](../../relational-databases/native-client-ole-db-commands/command-parameters.md)  
+-   [コマンドのパラメーター](../../relational-databases/native-client-ole-db-commands/command-parameters.md)  
   
 -   [コマンドの準備](../../relational-databases/native-client-ole-db-commands/preparing-commands.md)  
   
--   [複数行セットの結果を生成するコマンド](../../relational-databases/native-client-ole-db-commands/commands-generating-multiple-rowset-results.md)  
+-   [複数の行セットの結果を生成するコマンド](../../relational-databases/native-client-ole-db-commands/commands-generating-multiple-rowset-results.md)  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

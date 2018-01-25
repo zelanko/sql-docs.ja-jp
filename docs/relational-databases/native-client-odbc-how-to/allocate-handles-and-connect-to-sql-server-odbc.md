@@ -17,15 +17,15 @@ helpviewer_keywords:
 - handles [ODBC], about handles
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87e3ab58220fd3b24a9e47c68bfa6a23de61f7a1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 23caae895e778c67dc3b18f3e76f9c0d0c4c9f8a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>ハンドルの割り当てと SQL Server への接続 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 8.  接続する既存のデータ ソースを使用する SQLConnect を呼び出す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
-     スイッチまたは  
+     または  
   
      呼び出す[SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)に接続する接続文字列を使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/08/2018
   
      接続文字列が完了していない場合**SQLDriverConnect**必要な情報の入力を求めることができます。 指定された値によって制御されます、 *DriverCompletion*パラメーター。  
   
-     \- - または -  
+     \- または -  
   
      呼び出す[SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)反復的な接続文字列を作成しに接続する方法で複数回[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   

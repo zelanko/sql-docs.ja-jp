@@ -22,15 +22,15 @@ helpviewer_keywords:
 - contracts [Service Broker], permissions
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fc317c36ae0cc14891be3a4f3a9c17c7a41fc3e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0383e0b5446537b77e02ce4b8e4d3e54c850bdd1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT (Service Broker の権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,22 +57,22 @@ GRANT permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>引数  
- *アクセス許可*  
+ *permission*  
  Service Broker のセキュリティ保護可能なリソースに対して許可できる権限を指定します。  下の表をご覧ください。  
   
- コントラクト**::***contract_name*  
+ コントラクト **:: * * * contract_name*  
  権限を許可するコントラクトを指定します。 スコープ修飾子"::"が必要です。  
   
- メッセージの種類**::***message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  権限を許可するメッセージ型を指定します。 スコープ修飾子 "::" が必要です。  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **:: * * * remote_binding_name*  
  権限を許可するリモート サービス バインドを指定します。 スコープ修飾子 "::" が必要です。  
   
- ルート**::***route_name*  
+ ROUTE **::***route_name*  
  権限を許可するルートを指定します。 スコープ修飾子 "::" が必要です。  
   
- サービス**::***service_name*  
+ サービス **:: * * * service_name*  
  権限を許可するサービスを指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  
@@ -171,7 +171,7 @@ GRANT permission  [ ,...n ] ON
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  権限の許可者 (または AS オプションで指定されたプリンシパル) は、GRANT OPTION によって与えられた権限を保持しているか、権限が暗黙的に与えられる上位の権限を保持している必要があります。  
   
  AS オプションを使用する場合は、次の追加要件があります。  

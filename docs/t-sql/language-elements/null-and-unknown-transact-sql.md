@@ -16,13 +16,13 @@ ms.assetid: 9d491846-4730-4740-a680-77c69fae4a58
 caps.latest.revision: "5"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a581045af3d5ed73e9cf9736c60588d87733369
-ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.openlocfilehash: c26004fdfa5f2607235ffe7dddb7826a77f38b31
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL および不明 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/03/2018
   
  次の表は、1 つの式に UNKNOWN が返されます次の 2 つのブール式を AND 演算子を適用した結果を示します。  
   
-|1 の式|Expression 2|[結果]|  
+|1 の式|Expression 2|結果|  
 |---------------|---------------|------------|  
 |TRUE|UNKNOWN|UNKNOWN|  
 |UNKNOWN|UNKNOWN|UNKNOWN|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/03/2018
   
  次の表は、1 つの式に UNKNOWN が返されます次の 2 つのブール式に OR 演算子を適用した結果を示します。  
   
-|1 の式|Expression 2|[結果]|  
+|1 の式|Expression 2|結果|  
 |---------------|---------------|------------|  
 |TRUE|UNKNOWN|TRUE|  
 |UNKNOWN|UNKNOWN|UNKNOWN|  

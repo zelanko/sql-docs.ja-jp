@@ -20,13 +20,13 @@ ms.assetid:
 caps.latest.revision: "1"
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8089e82d6e6bb04c8e25af3603c4522a820a7a83
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6bac7f1d7da67f319a9c84425b370bb61a35ca19
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="insert-sql-graph"></a>挿入 (SQL グラフ)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ INSERT
 エッジ テーブルに挿入する一括、前にノード テーブルをインポートする必要があります。 値を`$from_id`と`$to_id`から抽出できます、`$node_id`ノード テーブルの列およびエッジとして挿入します。 
 
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>権限  
  対象のテーブルに対する INSERT 権限が必要です。  
   
  メンバーにアクセス許可の既定値の挿入、 **sysadmin**固定サーバー ロール、 **db_owner**と**db_datawriter**固定データベース ロール、およびテーブル所有者です。 メンバー、 **sysadmin**、 **db_owner**、および**db_securityadmin**ロール、およびテーブル所有者は、他のユーザーに権限を譲渡できます。  

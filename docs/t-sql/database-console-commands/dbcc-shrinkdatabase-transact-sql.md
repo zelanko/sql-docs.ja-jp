@@ -1,5 +1,5 @@
 ---
-title: "DBCC SHRINKDATABASE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC SHRINKDATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - reducing database size
 ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 caps.latest.revision: "62"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3a4ce958ed481b33f4785af2f0d7b32fb5baf519
-ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
+ms.openlocfilehash: b8ca8cceddccd4066b7c1762bc75dffee02be842
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -86,7 +86,7 @@ DBCC SHRINKDATABASE
 |-----------------|-----------------|  
 |**DbId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]で圧縮が試行されたファイルのデータベース識別番号。|  
 |**FileId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]で圧縮が試行されたファイルのファイル識別番号。|  
-|**現在**|ファイルが現在占有する 8 KB ページの数。|  
+|**CurrentSize**|ファイルが現在占有する 8 KB ページの数。|  
 |**MinimumSize**|ファイルが占有できる 8 KB ページの最小数。 この値は、ファイルの最小サイズまたは最初に作成されたサイズと一致します。|  
 |**UsedPages**|ファイルが現在使用している 8 KB ページの数。|  
 |**EstimatedPages**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]で推定されるファイル圧縮後の 8 KB ページの数。|  
@@ -150,7 +150,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 -   圧縮操作を終了します。 完了済みの作業は保持されます。  
 -   何もせず、ブロックしているトランザクションが完了するまで圧縮操作を待機状態にしておきます。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

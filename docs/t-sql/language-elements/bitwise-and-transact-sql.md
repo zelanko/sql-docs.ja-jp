@@ -24,13 +24,13 @@ ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
 caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0f81606a64480990a2f511a9820672c2cf1bb5c8
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 094c127434f2339a4a3e977c4455ca6ce904ab01
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp;(ビット演算 AND)(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ expression & expression
  **tinyint**場合は、入力値**tinyint**または**ビット**です。  
   
 ## <a name="remarks"></a>解説  
-  **&** ビットごとの演算子は、対応する各ビット両方の式の 2 つの式の間でビットごとの論理 AND を実行します。 入力式の中で現在処理の対象にあるビットについて、両方のビットが 1 という値を持つ場合だけ、結果セットのビットは 1 に設定されます。それ以外の場合、結果は 0 に設定されます。  
+ **&** ビットごとの演算子は、対応する各ビット両方の式の 2 つの式の間でビットごとの論理 AND を実行します。 入力式の中で現在処理の対象にあるビットについて、両方のビットが 1 という値を持つ場合だけ、結果セットのビットは 1 に設定されます。それ以外の場合、結果は 0 に設定されます。  
   
  左と右の式が異なる整数データ型を持つかどうか (たとえば、左側*式*は**smallint**と右*式*は**int**)、小さいデータ型の引数が大きいデータ型に変換します。 ここで、**smallint * * * 式*に変換されます、 **int**です。  
   

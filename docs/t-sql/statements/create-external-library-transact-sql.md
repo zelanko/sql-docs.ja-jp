@@ -20,12 +20,12 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: f52205803e3ab44e7c72808255dbe93fd61de336
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: fe1cb90bce5717d194defd2c684d7b20fc29a061
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-library-transact-sql"></a>外部ライブラリ (TRANSACT-SQL) を作成します。  
 
@@ -85,7 +85,7 @@ WITH ( LANGUAGE = 'R' )
 
 アセンブリのような 16 進数のリテラルとして、パッケージのコンテンツを指定します。 このオプションが必要なアクセス許可が、サーバーがアクセスできる任意のフォルダーにファイルのパスへのアクセスはありません、ライブラリを変更するライブラリを作成することができます。
 
-**プラットフォーム WINDOWS を =**
+**PLATFORM = WINDOWS**
 
 コンテンツ ライブラリのプラットフォームを指定します。 SQL Server が実行されているホスト プラットフォームの既定値。 そのため、ユーザーは、値を指定がありません。 複数のプラットフォームがサポートされている場合、またはユーザーが別のプラットフォームを指定する必要がある場合に必要です。 Windows は、唯一サポートされているプラットフォームです。
 
@@ -99,7 +99,7 @@ Zip アーカイブ ファイルの形式で、R 言語用、ファイルを使�
 
 SQL Server 2017 リリースのデータ ソースとして blob を使用することはできません。
 
-## <a name="permissions"></a>アクセス許可
+## <a name="permissions"></a>権限
 
 必要があります、`CREATE ANY EXTERNAL LIBRARY`権限です。
 

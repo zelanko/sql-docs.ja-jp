@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: d39e391e494e37c63731431579e82900ef3dbeeb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 80b40209f7287a7710a9dcd8022a3dd203aa8305
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>手順 2: PowerShell を使用して SQL server のデータをインポートします。
 
@@ -56,7 +56,7 @@ PowerShell スクリプトでは、表示、ダウンロードしたファイル
     - 名前またはアドレスの[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Python の Machine Learning のサービスがインストールされているインスタンス。
     - インスタンス上のアカウントのユーザー名とパスワード。 データベースを作成し、テーブルおよびストアド プロシージャを作成してデータの一括読み込みのテーブルに機能を使用するアカウントが必要です。 
     - ユーザー名とパスワードを指定しない場合は、SQL Server へのサインインに使用される、Windows id れ、パスワードの入力に昇格されます。
-    - ダウンロードしたばかりのサンプル データ ファイルのパスとファイル名。 たとえば、IPv4 アドレスの場合、「 `C:\temp\pysql\nyctaxi1pct.csv`
+    - ダウンロードしたばかりのサンプル データ ファイルのパスとファイル名。 例を次に示します。 `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
     > データを正常に読み込むには、ライブラリ xmlrw.dll は bcp.exe と同じフォルダーでなければなりません。

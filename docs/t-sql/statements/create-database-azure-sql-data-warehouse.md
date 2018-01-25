@@ -14,12 +14,12 @@ ms.topic: language-reference
 dev_langs: TSQL
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 7406a538eb4c0f236f2e0d444e96fd2c4fa5d585
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: 51db5c7cbaa2932cfcb819538d743fe1368f6442
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-database-azure-sql-data-warehouse"></a>データベース (Azure SQL データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -57,7 +57,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 Windows と SQL 照合順序名の詳細については、次を参照してください。 [COLLATE (TRANSACT-SQL)](http://msdn.microsoft.com/library/ms184391.aspx)です。  
   
-*エディション*  
+*EDITION*  
 データベースのサービス層を指定します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 'データ ウェアハウス' を使用します。  
   
 *MAXSIZE*  
@@ -81,7 +81,7 @@ SERVICE_OBJECTIVE
 
 SQL データ ウェアハウスは、COMPATIBILITY_LEVEL 130 に設定されているし、変更できません。 詳細については、次を参照してください。 [Azure SQL データベースの互換性レベル 130 でのクエリ パフォーマンスの向上](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)です。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 必要なアクセスを許可します。  
   
 -   サーバー レベル プリンシパル ログイン、プロビジョニングのプロセスによって作成されたか、  
