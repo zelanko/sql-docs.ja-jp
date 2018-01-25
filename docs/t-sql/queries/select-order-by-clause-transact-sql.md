@@ -40,17 +40,17 @@ helpviewer_keywords:
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 caps.latest.revision: "68"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e718c2d35b1627abee53c3214294372fb23d61a8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.openlocfilehash: 322bca602925cd959ca5de076fcbbdeacd7ba63a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="select---order-by-clause-transact-sql"></a>選択 - ORDER BY 句 (TRANSACT-SQL)
+# <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   クエリによって返されるデータを並べ替えます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 この句は次の場合に使用します。  
@@ -106,10 +106,10 @@ ORDER BY order_by_expression
  COLLATE *collation_name*  
  指定された照合順序に従って ORDER BY 操作を実行する必要がありますを指定*collation_name*、テーブルまたはビューで定義されている列の照合順序ではなくです。 *collation_name* Windows 照合順序名または SQL 照合順序名のいずれかを指定できます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。 COLLATE は型の列に対してのみ適用**char**、 **varchar**、 **nchar**、および**nvarchar**です。  
   
- **ASC** |DESC  
+ **ASC** | DESC  
  指定した列の値を昇順と降順のどちらで並べ替えるかを指定します。 ASC を指定した場合、最小値から最大値の順序で並べ替えられます。 DESC を指定した場合、最大値から最小値の順序で並べ替えられます。 ASC が既定の並べ替え順序です。 NULL 値は最小値として扱われます。  
   
- オフセット { *integer_constant* | *offset_row_count_expression* } {行 |行}  
+ OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  クエリ式から行を取得する前にスキップする行の数を指定します。 0 以上の整数の定数か式を指定できます。  
   
 **適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
@@ -136,7 +136,7 @@ ORDER BY order_by_expression
 ## <a name="best-practices"></a>ベスト プラクティス  
  選択リスト内の列の位置を表すために、ORDER BY 句で整数を指定しないでください。 たとえば、`SELECT ProductID, Name FROM Production.Production ORDER BY 2` などのステートメントは有効ですが、実際の列名を指定した場合と比べて理解が難しくなります。 さらに、列の順序を変更するなど、選択リストに変更したり、新しい列を追加すると、予期しない結果を回避するために、ORDER BY 句を変更する必要があります。  
   
- SELECT top (*N*) ステートメントでは、常に ORDER BY 句を使用します。 これは、TOP の処理対象の行を指定するための唯一の方法です。 詳細については、次を参照してください。 [TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
+ SELECT top (*N*) ステートメントでは、常に ORDER BY 句を使用します。 これは、TOP の処理対象の行を指定するための唯一の方法です。 詳細については、次を参照してください。 [TOP &#40;です。TRANSACT-SQL と #41 です](../../t-sql/queries/top-transact-sql.md)。  
   
 ## <a name="interoperability"></a>相互運用性  
  別のソースから行を挿入するときに、ORDER BY 句を SELECT…INTO ステートメントと共に使用する場合、行が指定した順序で挿入されるかどうかは保証されません。  
@@ -148,7 +148,7 @@ ORDER BY order_by_expression
   
  型の列**ntext**、**テキスト**、**イメージ**、 **geography**、 **geometry**、および**xml** ORDER BY 句では使用できません。  
   
- 整数または定数にすることはできない時に指定された*order_by_expression*に順位付け関数が表示されます。 詳細については、次を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ 整数または定数にすることはできない時に指定された*order_by_expression*に順位付け関数が表示されます。 詳細については、次を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
  FROM 句でテーブルの別名を指定している場合、ORDER BY 句でその列を修飾する際に使用できるのは別名だけです。  
   
@@ -185,13 +185,13 @@ ORDER BY order_by_expression
   
  ページング ソリューションとして OFFSET と FETCH を使用する場合は、クライアント アプリケーションに返されるデータの "ページ" ごとにクエリを 1 回実行する必要があります。 たとえば、10 行単位でクエリの結果を取得するには、クエリを 1 回実行して行 1 から行 10 を取得した後、クエリをもう一度実行して行 11 から行 20 を取得する必要があります。これ以降も、同様の処理が必要です。 各クエリは独立しており、相互に関連付けられることはありません。 つまり、クエリを 1 回実行してサーバーで状態を維持するカーソルを使用する場合とは異なり、状態の追跡はクライアント アプリケーションで行われます。 OFFSET と FETCH を使用してクエリ要求の結果に一貫性を持たせるためには、次の条件を満たす必要があります。  
   
-1.  クエリで使用される基になるデータが変更されていない。 つまり、クエリで処理される行が更新されていないか、クエリからのすべてのページ要求が、スナップショットまたはシリアル化可能なトランザクション分離を使用して単一のトランザクションで実行される必要があります。 これらのトランザクション分離レベルの詳細については、次を参照してください。 [SET TRANSACTION ISOLATION LEVEL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+1.  クエリで使用される基になるデータが変更されていない。 つまり、クエリで処理される行が更新されていないか、クエリからのすべてのページ要求が、スナップショットまたはシリアル化可能なトランザクション分離を使用して単一のトランザクションで実行される必要があります。 これらのトランザクション分離レベルの詳細については、次を参照してください。 [SET TRANSACTION ISOLATION LEVEL &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
 2.  ORDER BY 句に、一意であることが保証されている列または列の組み合わせが含まれている。  
   
  例については、このトピックの「例」セクションの「単一のトランザクションで複数のクエリを実行する」を参照してください。  
   
- ページング ソリューションにおいて、一貫性のある実行プランが重要な場合は、OFFSET および FETCH のパラメーターに OPTIMIZE FOR クエリ ヒントを使用することを検討してください。 例については、このトピックの「例」セクションの「OFFSET と FETCH の値として式を指定する」を参照してください。 Optimze FOR のに関する詳細については、次を参照してください。[クエリ ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-query.md).  
+ ページング ソリューションにおいて、一貫性のある実行プランが重要な場合は、OFFSET および FETCH のパラメーターに OPTIMIZE FOR クエリ ヒントを使用することを検討してください。 例については、このトピックの「例」セクションの「OFFSET と FETCH の値として式を指定する」を参照してください。 Optimze FOR のに関する詳細については、次を参照してください。[クエリ ヒント &#40;です。TRANSACT-SQL と #41 です](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="examples"></a>使用例  
   

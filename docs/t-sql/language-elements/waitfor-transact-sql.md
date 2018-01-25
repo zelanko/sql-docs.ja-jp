@@ -28,15 +28,15 @@ helpviewer_keywords:
 - timing executions
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a434aeca7601637ae5e0231497ad07293d6d83ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 75a3c1d272d39d17fbd35f10a797ce52a9310241
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,19 +75,19 @@ WAITFOR
  有効な RECEIVE ステートメントです。  
   
 > [!IMPORTANT]  
->  指定された WAITFOR、 *receive_statement*にのみ適用[!INCLUDE[ssSB](../../includes/sssb-md.md)]メッセージ。 詳細については、次を参照してください。[受信 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/receive-transact-sql.md).  
+>  指定された WAITFOR、 *receive_statement*にのみ適用[!INCLUDE[ssSB](../../includes/sssb-md.md)]メッセージ。 詳細については、次を参照してください。[受信 &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/receive-transact-sql.md)。  
   
  *get_conversation_group_statement*  
  有効な GET CONVERSATION GROUP ステートメントです。  
   
 > [!IMPORTANT]  
->  指定された WAITFOR、 *get_conversation_group_statement*にのみ適用[!INCLUDE[ssSB](../../includes/sssb-md.md)]メッセージ。 詳細については、次を参照してください。 [GET CONVERSATION GROUP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/get-conversation-group-transact-sql.md).  
+>  指定された WAITFOR、 *get_conversation_group_statement*にのみ適用[!INCLUDE[ssSB](../../includes/sssb-md.md)]メッセージ。 詳細については、次を参照してください。 [GET CONVERSATION GROUP &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/get-conversation-group-transact-sql.md)。  
   
  タイムアウト*タイムアウト*  
  キューでメッセージの到着を待機する時間を、ミリ秒単位で指定します。  
   
 > [!IMPORTANT]  
->  TIMEOUT が指定された WAITFOR は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージに対してのみ適用できます。 詳細については、次を参照してください。[受信 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/receive-transact-sql.md)と[GET CONVERSATION GROUP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/get-conversation-group-transact-sql.md).  
+>  TIMEOUT が指定された WAITFOR は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージに対してのみ適用できます。 詳細については、次を参照してください。[受信 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/receive-transact-sql.md)と[GET CONVERSATION GROUP &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/get-conversation-group-transact-sql.md)。  
   
 ## <a name="remarks"></a>解説  
  WAITFOR ステートメントを実行している間は、トランザクションが実行され、その他のリクエストは同じトランザクションの下で実行することはできません。  

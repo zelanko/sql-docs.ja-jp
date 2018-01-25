@@ -40,11 +40,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dd3db7627c4190a51db01082138677bc2b6d40d9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 56326d7862c004ac056e329e6cc05f7bbe056aea
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST および CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,10 +84,10 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 *data_type*  
 対象のデータ型です。 これが含まれます**xml**、 **bigint**、および**sql_variant**です。 別名データ型は使用できません。
   
-*length*  
+*長さ*  
 対象のデータ型の長さを指定する整数です (省略可能)。 既定値は、30 です。
   
-*スタイル*  
+*style*  
 CONVERT 関数は、変換する方法を指定する整数式です*式*です。 スタイルが NULL の場合は、NULL が返されます。 範囲はによって決まります*data_type*です。 
   
 ## <a name="return-types"></a>戻り値の型
@@ -147,7 +147,7 @@ CONVERT 関数は、変換する方法を指定する整数式です*式*です�
 ## <a name="float-and-real-styles"></a>float 型と real 型スタイル
 ときに*式*は**float**または**実際**、*スタイル*次の表に示すように値のいずれかになります。 その他の値は 0 として処理されます。
   
-|値|出力|  
+|[値]|出力|  
 |---|---|
 |**0** (既定値)|最高 6 桁。 該当する場合は、科学的表記法で使用します。|  
 |**1**|常に 8 桁。 常に科学的表記法で使用します。|  
@@ -158,7 +158,7 @@ CONVERT 関数は、変換する方法を指定する整数式です*式*です�
 ## <a name="money-and-smallmoney-styles"></a>money および smallmoney スタイル
 ときに*式*は**money**または**smallmoney**、*スタイル*次の表に示すように値のいずれかになります。 その他の値は 0 として処理されます。
   
-|値|出力|  
+|[値]|出力|  
 |---|---|
 |**0** (既定値)|小数点位置から左へ 3 桁ごとの位置にはコンマを挿入しません。また、小数点右側には 2 桁をとります。たとえば 4235.98 のようになります。|  
 |**1**|小数点位置から左へ 3 桁ごとにコンマを挿入し、小数点右側には 2 桁をとります。たとえば 3,510.92 のようになります。|  
@@ -166,9 +166,9 @@ CONVERT 関数は、変換する方法を指定する整数式です*式*です�
 |**126**|char(n) または varchar(n) に変換する場合はスタイル 2 に相当します。|  
   
 ## <a name="xml-styles"></a>xml スタイル
-ときに*式*は**xml***、スタイル*次の表に示すように値のいずれかになります。 その他の値は 0 として処理されます。
+ときに*式*は **xml * * *、スタイル*次の表に示すように値のいずれかになります。 その他の値は 0 として処理されます。
   
-|値|出力|  
+|[値]|出力|  
 |---|---|
 |**0** (既定値)|既定の解析動作を使用します。つまり、余分な空白を破棄し、内部の DTD サブセットを許可しません。<br /> **注:**に変換する場合、 **xml**データ型、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]意味のない空白よりも XML 1.0 では異なる方法で処理します。 詳細については、次を参照してください。 [XML データのインスタンスを作成する](../../relational-databases/xml/create-instances-of-xml-data.md)です。|  
 |**1**|余分な空白を保持します。 このスタイル設定、既定**xml:space**同じ動作を行う処理として**xml:space ="preserve"**が代わりに指定されています。|  
@@ -178,7 +178,7 @@ CONVERT 関数は、変換する方法を指定する整数式です*式*です�
 ## <a name="binary-styles"></a>バイナリ スタイル
 ときに*式*は**binary (n)**、 **varbinary (n)**、 **char (n)**、または**varchar (n)**、 *スタイル*次の表に示すように値のいずれかになります。 表に記載されていないスタイル値の場合は、エラーが返されます。
   
-|値|出力|  
+|[値]|出力|  
 |---|---|
 |**0** (既定値)|ASCII 文字をバイナリ バイトに変換するか、バイナリ バイトを ASCII 文字に変換します。 各文字またはバイトは 1:1 で変換されます。<br /> 場合、 *data_type*がバイナリ型で、文字 0x が結果の左側に追加されます。|  
 |**1**, **2**|場合、 *data_type*バイナリ型では、式は文字式である必要があります。 *式*が偶数の 16 進数字で構成する必要があります (0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f)。 場合、*スタイル*1 に設定されて、文字 0x にする必要があります最初の 2 つの文字式です。 式に奇数桁の文字が含まれているか、いずれかの文字が無効な場合は、エラーが発生します。<br /> 変換された式の長さがの長さより大きいかどうか、 *data_type*結果は、右側が切り捨てられました。<br /> 固定長*data_types*はより大きく、変換結果があるゼロの結果の右側に追加します。<br /> data_type が文字型である場合、式はバイナリ式であることが必要です。 各バイナリ文字は、16 進値を表す 2 桁の英数文字に変換されます。 変換された式の長さがより大きいかどうか、 *data_type*の長さに右側が切り捨てられます。<br /> 場合、 *data_type*は固定サイズの文字型であり、変換された結果の長さがの長さよりも小さい、 *data_type*;、でも維持するために変換された式の右側に空白を追加16 進数字の数。<br /> 文字の変換の結果の左側に 0x を追加、*スタイル*1 です。|  
@@ -213,7 +213,7 @@ CONVERT 関数は、変換する方法を指定する整数式です*式*です�
 データの自動型変換はサポートされていません、**テキスト**と**イメージ**データ型。 明示的に変換することができます**テキスト**データを文字データ、および**イメージ**データ**バイナリ**または**varbinary**が、最大の長さが 8000バイト数です。 文字を含む文字式を変換するなど、不適切な変換しようとすると、 **int**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー メッセージが返されます。
   
 ## <a name="output-collation"></a>出力の照合順序  
-CAST または CONVERT の入出力が文字列である場合、出力では入力と同じ照合順序および照合順序ラベルが使用されます。 入力が文字列ではない場合、出力ではデータベースの既定の照合順序、および強制可能な既定照合順序の照合順序ラベルが使用されます。 詳細については、次を参照してください。[照合の優先順位 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/collation-precedence-transact-sql.md).
+CAST または CONVERT の入出力が文字列である場合、出力では入力と同じ照合順序および照合順序ラベルが使用されます。 入力が文字列ではない場合、出力ではデータベースの既定の照合順序、および強制可能な既定照合順序の照合順序ラベルが使用されます。 詳細については、次を参照してください。[照合の優先順位 &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/collation-precedence-transact-sql.md)。
   
 出力に別の照合順序を割り当てるには、CAST 関数または CONVERT 関数の結果式に COLLATE 句を適用します。 例:
   
@@ -711,8 +711,10 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ```  
   
 ## <a name="see-also"></a>参照
-[データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
-[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-[システム関数 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
-[国際化に対応した Transact-SQL ステートメントの記述](../../relational-databases/collations/write-international-transact-sql-statements.md)
+ [データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+ [形式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/format-transact-sql.md)  
+ [STR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/str-transact-sql.md)  
+ [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+ [システム関数 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [国際化に対応した Transact-SQL ステートメントの記述](../../relational-databases/collations/write-international-transact-sql-statements.md)
   

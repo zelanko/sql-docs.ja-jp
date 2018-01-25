@@ -24,15 +24,15 @@ helpviewer_keywords:
 - range to test [SQL Server]
 ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8ff77a998bba76af8a1fdfb728e613158a5c478b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 05971c739eec2137e8a4acd213a322a37d60d054
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,16 +48,16 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
 ```  
   
 ## <a name="arguments"></a>引数  
- *な任意*  
+ *test_expression*  
  [式](../../t-sql/language-elements/expressions-transact-sql.md)で定義された範囲内でテストする*で有効*と*式*です。 *な任意*両方と同じデータ型にする必要があります*で有効*と*式*です。  
   
  [NOT]  
  述語の結果を否定することを指定します。  
   
- *有効*  
+ *begin_expression*  
  有効な式を指定します。 *有効*両方と同じデータ型にする必要があります*な任意*と*式*です。  
   
- *式*  
+ *end_expression*  
  有効な式を指定します。 *式*両方と同じデータ型にする必要があります*な任意*と*で有効*です。  
   
  [AND]  
@@ -69,7 +69,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
 ## <a name="result-value"></a>結果の値  
  リターンの間で**TRUE**場合の値*な任意*より大きいかの値に等しい*で有効*の値以下*式*です。  
   
- 返します間ではなく**TRUE**場合の値*な任意*がの値より小さい*で有効*かの値より大きい*式。*.  
+ 返します間ではなく**TRUE**場合の値*な任意*がの値より小さい*で有効*かの値より大きい*式*。  
   
 ## <a name="remarks"></a>解説  
  両端を除いた範囲を指定するには、より大きいことを表す演算子 (>) と、より小さいことを表す演算子 (<) を使用します。 BETWEEN または NOT BETWEEN の述語に対する入力が NULL の場合、結果は UNKNOWN になります。  

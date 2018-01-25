@@ -25,15 +25,15 @@ helpviewer_keywords:
 - data updates [SQL Server], WRITETEXT statement
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 534fa1494ec97efb8258222f512902d15efa1f36
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d8c66e4a785fd1d731bd55730a8439f5e796b01f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,16 +61,16 @@ WRITETEXT [BULK]
 > [!IMPORTANT]  
 >  BULK オプションで使用しないことをお勧め[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-ベースのアプリケーションです。 このオプションを変更またはの将来のバージョンで削除された可能性があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
- *テーブル* **.column**  
+ *table* **.column**  
  テーブルの名前を指定および**テキスト**、 **ntext**、または**イメージ**列が更新されます。 テーブルおよび列名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。 データベース名と所有者名の指定は省略可能です。  
   
  *text_ptr*  
- ポインターを格納する値は、**テキスト**、 **ntext**、または**イメージ**データ。 *text_ptr*する必要があります**binary (16)**です。テキスト ポインターを作成するには、実行、[挿入](../../t-sql/statements/insert-transact-sql.md)または[更新](../../t-sql/queries/update-transact-sql.md)ステートメントがの null でないデータを**テキスト**、 **ntext**、または**イメージ**列です。  
+ ポインターを格納する値は、**テキスト**、 **ntext**、または**イメージ**データ。 *text_ptr* must be **binary(16)**.To create a text pointer, execute an [INSERT](../../t-sql/statements/insert-transact-sql.md) or [UPDATE](../../t-sql/queries/update-transact-sql.md) statement with data that is not null for the **text**, **ntext**, or **image** column.  
   
  WITH LOG  
  によって無視[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 ログ記録は、データベースで有効になっている復旧モデルによって異なります。  
   
- *データ*  
+ *data*  
  実際は**テキスト**、 **ntext**または**イメージ**格納するデータ。 *データ*リテラルまたはパラメーターを指定できます。 WRITETEXT を使用して対話的に挿入できるテキストの最大長は約 120 KB です**テキスト**、 **ntext**、および**イメージ**データ。  
   
 ## <a name="remarks"></a>解説  
@@ -89,9 +89,9 @@ WRITETEXT [BULK]
   
  ODBC SQLPutData 関数は高速であり、WRITETEXT よりも小さい動的メモリを使用します。 この関数の 2 ギガバイトを挿入できる**テキスト**、 **ntext**、または**イメージ**データ。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の行内テキスト ポインター**テキスト**、 **ntext**、または**イメージ**データが存在しても、有効なことができない可能性があります。 Text in row オプションの詳細については、次を参照してください。 [sp_tableoption &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). テキスト ポインターを無効になります。 詳細については、次を参照してください。 [sp_invalidate_textptr (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の行内テキスト ポインター**テキスト**、 **ntext**、または**イメージ**データが存在しても、有効なことができない可能性があります。 Text in row オプションの詳細については、次を参照してください。 [sp_tableoption &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。 テキスト ポインターを無効になります。 詳細については、次を参照してください。 [sp_invalidate_textptr (& a) #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  指定したテーブルの UPDATE 権限が必要です。 UPDATE 権限が転送されるときに、この権限は譲渡できます。  
   
 ## <a name="examples"></a>使用例  

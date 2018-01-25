@@ -23,15 +23,15 @@ helpviewer_keywords:
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b6ea6be0d745ca5ce61a540e9a1e299671d8c7fd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 2e65fc9cacbcfe868c072713f282c42c95839e48
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  { = | <> | != | > | >= | !> | < | <= | !< }  
  比較演算子です。  
   
- *サブクエリ*  
+ *subquery*  
  1 つの列の結果を返すサブクエリが設定されています。 返される列のデータ型は、データと同じ型のデータ型である必要があります*scalar_expression*です。  
   
  制限された SELECT ステートメントです。ORDER BY 句および INTO キーワードは使用できません。  
@@ -63,12 +63,12 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **ブール値**  
   
 ## <a name="result-value"></a>結果の値  
- 指定された比較が TRUE の場合は TRUE を返しますのすべてのペアの (*scalar_expression***、***x)*、 *x*内の値は、単一列セットです。それ以外の場合、FALSE を返します。  
+ 指定された比較が TRUE の場合は TRUE を返しますのすべてのペア (*scalar_expression***、***x)*、 *x*単一列セット内の値です。 それ以外の場合は FALSE を返します。  
   
 ## <a name="remarks"></a>解説  
  すべてが必要、 *scalar_expression*サブクエリによって返されるすべての値に対し肯定的な比較します。 インスタンスのサブクエリは 2 および 3 の値を返す場合は、 *scalar_expression* < = ALL (subquery) は TRUE と評価、 *scalar_expression* 2 のです。 サブクエリは 2 および 3 の値を返す場合*scalar_expression* = ALL (subquery) はサブクエリ (値 3) の値の一部は、式の条件を満たさないために、FALSE と評価します。  
   
- ステートメントを必要とする、 *scalar_expression* 、サブクエリによって返される 1 つだけの値に対し肯定的な比較を参照してください。[一部 &#124;です。いずれかと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/some-any-transact-sql.md).  
+ ステートメントを必要とする、 *scalar_expression* 、サブクエリによって返される 1 つだけの値に対し肯定的な比較を参照してください。[一部 &#124;です。いずれかと #40 です。TRANSACT-SQL と #41 です](../../t-sql/language-elements/some-any-transact-sql.md)。  
   
  このトピックでは、ALL をサブクエリと共に使用する場合を想定しています。 すべてでも使用できます[共用体](../../t-sql/language-elements/set-operators-union-transact-sql.md)と[選択](../../t-sql/queries/select-transact-sql.md)です。  
   

@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: BufferWithCurves method (geometry)
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d68384a06978c598754d96752cfa26449549cc93
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 2651ae4e2a4d245f61115438e959a6881ff1935f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>引数  
- *距離*  
+ *distance*  
  **Float**からするバッファーを形成する地点最大距離を示すことができます、 **geometry**インスタンス。  
   
 ## <a name="return-types"></a>戻り値の型  
@@ -70,7 +70,7 @@ SQL Server 型の戻り値:**ジオメトリ**
 |distance > 0|すべてのディメンション|**CurvePolygon**または**GeometryCollection**インスタンス|  
   
 > [!NOTE]  
->  *距離*は、 **float**、非常に小さい値が、計算でゼロに時と見なされます。 その場合、呼び出し元のコピー **geometry**インスタンスが返されます。 参照してください[float、real および #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/float-and-real-transact-sql.md).  
+>  *距離*は、 **float**、非常に小さい値が、計算でゼロに時と見なされます。 その場合、呼び出し元のコピー **geometry**インスタンスが返されます。 参照してください[float、real および #40 です。TRANSACT-SQL と #41 です](../../t-sql/data-types/float-and-real-transact-sql.md)。  
   
  バッファーが負の値は、ジオメトリの境界の指定した距離の地点がすべてを削除します。 次の図には、負の値のバッファーを薄い網掛けがある円の領域として示しています。 点線は元の多角形の境界を示しており、実線は結果として得られる多角形の境界を示しています。  
   

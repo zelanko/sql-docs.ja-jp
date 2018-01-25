@@ -35,15 +35,15 @@ helpviewer_keywords:
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 caps.latest.revision: "97"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cafa4381c52b3b884883f61e6e5f232ac894ee8a
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.openlocfilehash: 9ddc3ee291d4e3b498dd6dfd9bbb49ca4299bea6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -161,7 +161,7 @@ FROM { <table_source> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>引数  
-\<table_source >  
+\<table_source>  
  使用する別名の有無は、テーブル、ビュー、テーブル変数、または派生テーブル ソースを指定します、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 1 つのステートメント内で 256 個までのテーブル ソースを使用できますが、この上限値は、使用可能なメモリとクエリ内の他の式の複雑さに応じて変化します。 個別のクエリは、256 個までのテーブル ソースをサポートできません。  
   
 > [!NOTE]  
@@ -176,12 +176,12 @@ FROM { <table_source> [ ,...n ] }
   
  インスタンスの外部にテーブルまたはビューが存在するかどうかは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l、4 部構成の名前を使用して、フォームで*linked_server*.*カタログ*.*スキーマ*.*オブジェクト*です。 詳細については、「 [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)からデータにアクセスする方法について説明します。 使用して作成されますが、4 部構成の名前、 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md)関数のように、名前のサーバー部分は、リモート テーブル ソースを指定するも使用できます。 OPENDATASOURCE を指定すると、 *database_name*と*schema_name*がすべてのデータ ソースに適用し、は、リモート オブジェクトにアクセスする OLE DB プロバイダーの機能の対象になります。  
   
- [と]*table_alias*  
+ [AS] *table_alias*  
  エイリアス*table_source*利便性のために、またはテーブルまたはビューで、自己結合を区別またはサブクエリを使用できます。 別名にはテーブル名を短縮したものが指定されることが多く、結合されたテーブルの特定の列を参照するために使用されます。 同じ列名が、結合の 1 つ以上のテーブルに存在する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列名は、テーブル名、ビューの名前または別名で修飾する必要があります。 別名が定義されている場合、テーブル名は使用できません。  
   
  派生テーブル、行セットまたはテーブル値関数または演算子句 (PIVOT や UNPIVOT) を使用する場合、必要な*table_alias*句の末尾には、グループ化列を含むすべての列に関連付けられているテーブル名返されます。  
   
- 使用 (\<table_hint >)  
+ WITH (\<table_hint> )  
  クエリ オプティマイザーが、このテーブルを使用して、このステートメントに対し最適化またはロックを使用することを指定します。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
  *rowset_function*  
@@ -189,7 +189,7 @@ FROM { <table_source> [ ,...n ] }
 **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
 
   
- OPENROWSET など、テーブル参照の代わりに使用できるオブジェクトを返す行セット関数のいずれかを指定します。 行セット関数の一覧の詳細については、次を参照してください。[行セット関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rowset-functions-transact-sql.md).  
+ OPENROWSET など、テーブル参照の代わりに使用できるオブジェクトを返す行セット関数のいずれかを指定します。 行セット関数の一覧の詳細については、次を参照してください。[行セット関数 &#40;です。TRANSACT-SQL と #41 です](../../t-sql/functions/rowset-functions-transact-sql.md)。  
   
  OPENROWSET 関数および OPENQUERY 関数を使用したリモート オブジェクトの指定は、そのオブジェクトにアクセスする OLE DB プロバイダーの機能に依存します。  
   
@@ -206,17 +206,17 @@ FROM { <table_source> [ ,...n ] }
  *user_defined_function*  
  テーブル値関数を指定します。  
   
- OPENXML \<openxml_clause >  
+ OPENXML \<openxml_clause>  
 
 **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
 
   
- XML ドキュメントに対して行セット ビューを提供します。 詳細については、次を参照してください。 [OPENXML &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/openxml-transact-sql.md).  
+ XML ドキュメントに対して行セット ビューを提供します。 詳細については、次を参照してください。 [OPENXML &#40;です。TRANSACT-SQL と #41 です](../../t-sql/functions/openxml-transact-sql.md)。  
   
  *derived_table*  
  データベースから行を取得するサブクエリです。 *derived_table*外側のクエリに入力として使用されます。  
   
- *派生* *_table*使用できる、[!INCLUDE[tsql](../../includes/tsql-md.md)]テーブル値コンス トラクター機能を複数の行を指定します。 たとえば、 `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`のようにします。 詳細については、次を参照してください。[テーブル値コンス トラクターと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/table-value-constructor-transact-sql.md).  
+ *派生* *_table*使用できる、[!INCLUDE[tsql](../../includes/tsql-md.md)]テーブル値コンス トラクター機能を複数の行を指定します。 たとえば、 `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`のようにします。 詳細については、次を参照してください。[テーブル値コンス トラクターと #40 です。TRANSACT-SQL と #41 です](../../t-sql/queries/table-value-constructor-transact-sql.md)。  
   
  *column_alias*  
  派生テーブルの結果セット内の列名に対する別名です。このパラメーターは省略可能です。 選択リストの各列の別名を 1 つずつ含みます。列の別名リスト全体をかっこで囲みます。  
@@ -228,7 +228,7 @@ FROM { <table_source> [ ,...n ] }
   
  データの特定のバージョンが、指定された時間的なテーブルとそのシステムのバージョン情報のリンクの履歴テーブルから返されることを指定します。  
   
-\<tablesample_clause >  
+\<tablesample_clause>  
  テーブルからのデータのサンプルが返されることを指定します。 サンプルは、概数になる可能性があります。 この句は、SELECT、UPDATE、または DELETE ステートメント内の主テーブルまたは結合テーブルで使用できます。 TABLESAMPLE はビューを使用して指定できません。  
   
 > [!NOTE]  
@@ -252,10 +252,10 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  によって使用される整数の定数式は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]乱数を生成します。 *repeat_seed*は**bigint**です。 場合*repeat_seed*が指定されていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]値をランダムに割り当てます。 特定の*repeat_seed*値、サンプルの結果は常に同じテーブルに変更が適用されていない場合。 *Repeat_seed*式は、0 より大きい整数に評価される必要があります。  
   
- \<joined_table >  
+ \<joined_table>  
  2 つ以上のテーブルが組み合わされた結果セットです。 複数の結合については、かっこを使って結合の順序を変更できます。  
   
-\<join_type >  
+\<join_type>  
  結合操作の種類を指定します。  
   
  **内部**  
@@ -270,8 +270,8 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [OUTER]  
  内部結合によって返されるすべての行に加えて、結合条件に合わない右側のテーブルのすべての行も結果セットに含まれます。左側のテーブルからの出力列は NULL に設定されることを指定します。  
   
-\<join_hint >  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、ことを指定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クエリ オプティマイザーがクエリの FROM 句で指定される結合ごと、1 つの結合ヒントまたは実行アルゴリズムを使用します。 詳細については、次を参照してください。[結合ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-join.md).  
+\<join_hint>  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、ことを指定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クエリ オプティマイザーがクエリの FROM 句で指定される結合ごと、1 つの結合ヒントまたは実行アルゴリズムを使用します。 詳細については、次を参照してください。[結合ヒント &#40;です。TRANSACT-SQL と #41 です](../../t-sql/queries/hints-transact-sql-join.md)。  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、2 つのディストリビューションの互換性のない列上の内部結合にこれらの結合ヒントを適用します。 クエリの処理中に発生するデータの移動量を制限することでクエリのパフォーマンスを向上することができます。 許容される結合のヒント:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]とおりです。  
   
@@ -287,7 +287,7 @@ FROM { <table_source> [ ,...n ] }
  JOIN  
  指定されたテーブル ソースまたはビューの間で、指定された結合操作が行われることを指定します。  
   
- ON \<search_condition >  
+ ON \<search_condition>  
  結合するときの条件を指定します。 列と比較演算子はよく使用されますが、条件で任意の結合述語を指定できます。たとえば、次のようになります。  
   
 ```sql
@@ -307,7 +307,7 @@ ON (p.ProductID = v.ProductID);
  CROSS JOIN  
  2 つのテーブルの結合を指定します。 SQL-92 形式でない旧形式の結合で WHERE 句が指定されていない場合と同じ行が返されます。  
   
- *left_table_source* {クロス |OUTER} APPLY *right_table_source*  
+ *left_table_source* { CROSS | OUTER } APPLY *right_table_source*  
  指定する、 *right_table_source*適用の演算子がすべての行に対して評価されます、 *left_table_source*です。 この機能が便利な場合に、 *right_table_source*から列の値を受け取るテーブル値関数を含む、 *left_table_source*引数の 1 つとしてです。  
   
  CROSS または OUTER は、APPLY を使用して指定する必要があります。 行は生成されません CROSS を指定したときに、 *right_table_source*の指定された行に対して評価される、 *left_table_source*し、空の結果セットを返します。  
@@ -322,7 +322,7 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  前の引数で定義されたテーブル ソースです。 詳細については、「解説」を参照してください。  
   
- *table_source* PIVOT \<pivot_clause >  
+ *table_source* PIVOT \<pivot_clause>  
  指定する、 *table_source*に基づいてピボットされる、 *pivot_column*です。 *table_source*はテーブルまたはテーブル式。 出力は次のすべての列を含むテーブル、 *table_source*を除く、 *pivot_column*と*value_column*です。 列、 *table_source*、を除き、 *pivot_column*と*value_column*、pivot 演算子のグループ化列と呼ばれます。 PIVOT および UNPIVOT の詳細については、次を参照してください。[を使用して PIVOT および UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)です。  
   
  PIVOT は、グループ化列に関する入力テーブルに対してグループ化の操作を実行し、各グループごとに 1 行のデータを返します。 さらに、出力がで指定された値ごとに 1 つの列を含む、 *column_list*に表示される、 *pivot_column*の*input_table*です。  
@@ -337,7 +337,7 @@ ON (p.ProductID = v.ProductID);
  *value_column*  
  PIVOT 演算子の値列です。 UNPIVOT を使用すると*value_column*入力内の既存の列の名前にすることはできません*table_source*です。  
   
- *Pivot_column*  
+ FOR *pivot_column*  
  PIVOT 演算子のピボット列です。 *pivot_column*暗黙的または明示的に変換できる型にする必要があります**nvarchar()**です。 この列にすることはできません**イメージ**または**rowversion**です。  
   
  UNPIVOT が使用されるときに*pivot_column*から絞り込まれる出力列の名前を指定します、 *table_source*です。 既存の列が存在することはできません*table_source*その名前を持つ。  
@@ -353,14 +353,14 @@ ON (p.ProductID = v.ProductID);
  UNPIVOT \< unpivot_clause >  
  入力テーブルが複数の列から絞り込まれることを示す*column_list*と呼ばれる 1 つの列に*pivot_column*です。 PIVOT および UNPIVOT の詳細については、次を参照してください。[を使用して PIVOT および UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)です。  
   
- \<日付 _ 時刻 >  
+ AS OF \<date_time>  
 
 **適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
 
   
  これまでの時間内には、指定位置で行ごとに実際の値を含む (現在) の 1 つのレコードを含むテーブルを返します。 内部的には、共用体は、テンポラル テーブルとその履歴テーブルの間で実行し、結果はフィルター処理が有効であった時点で指定された時間内の行に値を返しますが、 *\<日付 _ 時刻 >*パラメーター。 行の値が有効と見なされます場合、 *system_start_time_column_name*値より小さいかと等しい、 *\<日付 _ 時刻 >*パラメーター値、および*system_end_time_column_name*値がより大きい、 *\<日付 _ 時刻 >*パラメーターの値。   
   
- \<Start_date_time > TO \<end_date_time >
+ FROM \<start_date_time> TO \<end_date_time>
 
 **適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。
 
@@ -427,7 +427,7 @@ ON (p.ProductID = v.ProductID);
   
  PIVOT および UNPIVOT の例を含む詳細については、次を参照してください。[を使用して PIVOT および UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)です。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  DELETE、SELECT、または UPDATE ステートメントに対する権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -857,7 +857,7 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [挿入 &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/insert-transact-sql.md)   
  [OPENQUERY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   

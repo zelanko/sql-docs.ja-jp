@@ -30,15 +30,15 @@ helpviewer_keywords:
 - CATCH block
 ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
 caps.latest.revision: "79"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d344044a5ce4a0cd995cc1695b69ac9312d4db74
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.openlocfilehash: 034ed99318f64661d351c7a42377a2e0cdedce82
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -204,7 +204,7 @@ END CATCH;
 ## <a name="uncommittable-transactions-and-xactstate"></a>コミット不可能なトランザクションと XACT_STATE  
  TRY ブロックで生成されたエラーによって現在のトランザクションの状態が無効になる場合、トランザクションはコミット不可能なトランザクションとして分類されます。 通常は TRY ブロックの外部でトランザクションを終了させるエラーが、TRY ブロックの内部で発生すると、トランザクションはコミット不可能な状態になります。 コミット不可能なトランザクションでは、読み取り操作または ROLLBACK TRANSACTION のみを実行できます。 このトランザクションで、書き込み操作または COMMIT TRANSACTION を生成する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することはできません。 XACT_STATE 関数は、トランザクションがコミット不可能なトランザクションと分類されている場合、値 -1 を返します。 バッチが完了すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によってコミット不可能なトランザクションがロールバックされます。 トランザクションがコミット不可能な状態になったときにエラー メッセージが送信されなかった場合、バッチが完了すると、エラー メッセージがクライアント アプリケーションに送信されます。 これは、コミット不可能なトランザクションが検出され、ロールバックされたことを示します。  
   
- コミット不可能なトランザクションと XACT_STATE 関数の詳細については、次を参照してください。 [XACT_STATE (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/xact-state-transact-sql.md).  
+ コミット不可能なトランザクションと XACT_STATE 関数の詳細については、次を参照してください。 [XACT_STATE (& a) #40 です。TRANSACT-SQL と #41 です](../../t-sql/functions/xact-state-transact-sql.md)。  
   
 ## <a name="examples"></a>使用例  
   
@@ -357,7 +357,7 @@ GO
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
  [GOTO &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/goto-transact-sql.md)   
- [作業を開始してください.END &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
  [XACT_STATE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/xact-state-transact-sql.md)   
  [SET XACT_ABORT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   

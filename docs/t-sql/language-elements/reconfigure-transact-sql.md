@@ -24,15 +24,15 @@ helpviewer_keywords:
 - RECONFIGURE, WITH OVERRIDE statement
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 363a7f12b0be75dd73a2a72402c82be4ba403ed6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 80e8f951e053441b15716c8fc1f8c79abbe026b9
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,9 +62,9 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  RECONFIGURE は、明示的または暗黙的なトランザクションでは使用できません。 複数のオプションを同時に再構成すると、いずれかの再構成オプションが失敗した場合に、すべての再構成オプションが無効になります。    
     
- リソース ガバナーを再構成する際にの再構成オプションを参照してください[ALTER RESOURCE GOVERNOR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-resource-governor-transact-sql.md).    
+ リソース ガバナーを再構成する際にの再構成オプションを参照してください[ALTER RESOURCE GOVERNOR &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/alter-resource-governor-transact-sql.md)。    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>権限    
  RECONFIGURE 権限は、既定では ALTER SETTINGS 権限が与えられているユーザーに与えられます。 **Sysadmin**と**serveradmin**固定サーバー ロールが暗黙的にこのアクセス許可を保持します。    
     
 ## <a name="examples"></a>使用例    

@@ -23,15 +23,15 @@ helpviewer_keywords:
 - augmented operators, %=
 ms.assetid: 45e35516-1f4c-406b-a580-70a14b087847
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 06b2992236f5d1705c10249ca07793e5fe01dff6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2ef05813539b4de8d4e6e12f4d83453167e76abd
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-modulus-assignment-transact-sql"></a>% = (剰余代入) (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ expression %= expression
  優先順位が高い引数のデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
 ## <a name="remarks"></a>解説  
- 詳細については、次を参照してください。 [% &#40;です。剰余&#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/modulo-transact-sql.md).  
+ 詳細については、次を参照してください。 [% &#40;です。剰余&#41;&#40;です。TRANSACT-SQL と #41 です](../../t-sql/language-elements/modulo-transact-sql.md)。  
   
 ## <a name="see-also"></a>参照  
  [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)   

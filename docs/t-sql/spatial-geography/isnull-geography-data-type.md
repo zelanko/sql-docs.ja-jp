@@ -16,15 +16,15 @@ dev_langs: TSQL
 helpviewer_keywords: IsNull method
 ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3873babae0514b35626872b1b592f287a884be1c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 79b35adec55e9a029335e5f4f402bb86e5afc688
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="isnull-geography-data-type"></a>IsNull (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>解説  
  `IsNull`テストに使用できるかどうか、 **geography**インスタンスが null です。 このテストの結果は若干複雑であるため注意してください。インスタンスが NULL でなければ 0 を返し、インスタンスが NULL であれば NULL を返します。  
   
- このメソッドは、主に使用、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インフラストラクチャをテストする T-SQL 述語の IS NULL を使用することをお勧めするかどうか、 **geography**インスタンスが null です。 T-SQL ステートメントの詳細については、IS NULL 述語は、「 [IS NULL と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/is-null-transact-sql.md).  
+ このメソッドは、主に使用、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インフラストラクチャをテストする T-SQL 述語の IS NULL を使用することをお勧めするかどうか、 **geography**インスタンスが null です。 T-SQL ステートメントの詳細については、IS NULL 述語は、「 [IS NULL と #40 です。TRANSACT-SQL と #41 です](../../t-sql/queries/is-null-transact-sql.md)。  
   
 ## <a name="examples"></a>使用例  
   

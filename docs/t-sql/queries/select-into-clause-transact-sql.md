@@ -30,20 +30,20 @@ helpviewer_keywords:
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 caps.latest.revision: "63"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5501732e0551a1142ea5bf1a8bc48122aaff6a25
-ms.sourcegitcommit: 5763d63a3c455ec8743b75c057a2254a96a1d4fe
-ms.translationtype: MT
+ms.openlocfilehash: da5481a06a3f1e02ea1f0e1ab3429e2d02c238d3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="select---into-clause-transact-sql"></a>SELECT の INTO 句 (TRANSACT-SQL)
+# <a name="select---into-clause-transact-sql"></a>SELECT - INTO Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  SELECT...INTO は、既定のファイル グループに新しいテーブルを作成し、クエリの結果得られた行をそのテーブルに挿入します。 SELECT の完全な構文を表示するには、次を参照してください[SELECT &#40;。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-transact-sql.md).  
+  SELECT...INTO は、既定のファイル グループに新しいテーブルを作成し、クエリの結果得られた行をそのテーブルに挿入します。 SELECT の完全な構文を表示するには、次を参照してください[SELECT &#40;。TRANSACT-SQL と #41 です](../../t-sql/queries/select-transact-sql.md)。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/10/2018
  *new_table*  
  新しいテーブルの名前を指定します。このテーブルは選択リストで指定した列とデータ ソースから選択された行を基に作成されます。  
  
-  *ファイル グループ*
+  *filegroup*
  
  新しいテーブルが作成されるファイル グループの名前を指定します。 指定されたファイル グループは存在他のデータベースで SQL Server エンジンがスローされますエラーです。 このオプションは、以降でのみサポートされます[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]です。
  

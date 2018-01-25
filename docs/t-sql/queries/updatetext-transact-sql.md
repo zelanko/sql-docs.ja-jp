@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UPDATETEXT statement
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 97d10776082f3e4aaa80bfc3f09c662838087518
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 2561f089f8982bfed4e0b48c673dea17be22de89
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,11 +61,11 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!IMPORTANT]  
 >  BULK オプションで使用しないことをお勧め[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-ベースのアプリケーションです。 このオプションを変更またはの将来のバージョンで削除された可能性があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
- *table_name* **です。** *dest_column_name*  
+ *table_name* **.** *dest_column_name*  
  テーブルの名前を指定し、**テキスト**、 **ntext**、または**イメージ**を更新する列。 テーブル名と列名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。 データベース名と所有者名の指定は省略可能です。  
   
  *dest_text_ptr*  
- テキスト ポインター値 (TEXTPTR 関数から返される) を指す、**テキスト**、 **ntext**、または**イメージ**にデータを更新します。 *dest_text_ptr*する必要があります**バイナリ (**16**)**です。  
+ テキスト ポインター値 (TEXTPTR 関数から返される) を指す、**テキスト**、 **ntext**、または**イメージ**にデータを更新します。 *dest_text_ptr* must be **binary(**16**)**.  
   
  *insert_offset*  
  更新の開始位置を 0 を起点として指定します。 **テキスト**または**イメージ**列、 *insert_offset*新しいデータを挿入する前に、既存の列の先頭からスキップするバイト数です。 **Ntext**列、 *insert_offset*文字の数です (各**ntext**文字は 2 バイト)。 既存の**テキスト**、 **ntext**、または**イメージ**この 0 から始まる開始位置以降にあるデータが新しいデータを確保するために右にシフトします。 値 0 を指定した場合、新しいデータは既存のデータの先頭に挿入されます。 NULL の場合、新しいデータは既存のデータの最後に追加されます。  
@@ -99,11 +99,11 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
   
  最適なパフォーマンスをことをお勧め**テキスト**、 **ntext**と**イメージ**データを挿入または 8,040 バイトの倍数である単位で更新します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、行内テキスト ポインターを**テキスト**、 **ntext**、または**イメージ**データが存在しても、有効なことができない可能性があります。 Text in row オプションの詳細については、次を参照してください。 [sp_tableoption &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). テキスト ポインターを無効になります。 詳細については、次を参照してください。 [sp_invalidate_textptr (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、行内テキスト ポインターを**テキスト**、 **ntext**、または**イメージ**データが存在しても、有効なことができない可能性があります。 Text in row オプションの詳細については、次を参照してください。 [sp_tableoption &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。 テキスト ポインターを無効になります。 詳細については、次を参照してください。 [sp_invalidate_textptr (& a) #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)。  
   
  初期化するために**テキスト**列を NULL、WRITETEXT; を使用します。UPDATETEXT を初期化します**テキスト**列が空の文字列。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  指定したテーブルの UPDATE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

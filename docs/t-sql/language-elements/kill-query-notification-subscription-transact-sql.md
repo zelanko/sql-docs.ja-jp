@@ -22,15 +22,15 @@ helpviewer_keywords:
 - query notifications [SQL Server], subscriptions
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bcb57bef390c6aa6e3debd5592ee7030c5c6b645
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: e9c1a2a3af3ce113573fe743aa2325ae0b49cc18
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="kill-query-notification-subscription-transact-sql"></a>KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,11 +57,11 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
 ## <a name="remarks"></a>解説  
  KILL QUERY NOTIFICATION SUBSCRIPTION ステートメントでクエリ通知サブスクリプションを削除する際、通知メッセージは生成されません。  
   
- *subscription_id*動的管理ビューで示すように、サブスクリプションの id は、 [sys.dm_qn_subscriptions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md).  
+ *subscription_id*動的管理ビューで示すように、サブスクリプションの id は、 [sys.dm_qn_subscriptions &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md)。  
   
  指定したサブスクリプション ID が存在しない場合は、エラーが発生します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  このステートメントを実行するアクセス許可がのメンバーに制限されます、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  

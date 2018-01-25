@@ -31,15 +31,15 @@ helpviewer_keywords:
 - starting transactions
 ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
 caps.latest.revision: "56"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d1e327dc8e5ce590ee3d2123b6049bbfc470d7b6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 968c0b5e8a35f6175ed739da716273e7231c6298
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ BEGIN { TRAN | TRANSACTION }
 
   
 ## <a name="arguments"></a>引数  
- *では無視*  
+ *transaction_name*  
  **適用対象:** SQL Server (2008年以降)、Azure SQL Database
  
  トランザクションに割り当てられた名前を指定します。 *では無視*識別子は 32 文字は使用できないよりも長い識別子の規則に従う必要があります。 トランザクション名は、入れ子にされた BEGIN...COMMIT ステートメントまたは BEGIN...ROLLBACK ステートメントの最も外側の組だけに使用します。 *では無視*は常に大文字と小文字、場合でも、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大文字小文字は区別されません。  
@@ -105,12 +105,12 @@ BEGIN TRANSACTION では、ステートメントを実行する接続のロー�
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル コピーはトランザクションのコントローラーになり、[!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) を使用して分散トランザクションを管理します。  
   
- BEGIN DISTRIBUTED TRANSACTION を使用して、トランザクションを分散トランザクションとして明示的に実行できます。 詳細については、次を参照してください。 [BEGIN DISTRIBUTED TRANSACTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
+ BEGIN DISTRIBUTED TRANSACTION を使用して、トランザクションを分散トランザクションとして明示的に実行できます。 詳細については、次を参照してください。 [BEGIN DISTRIBUTED TRANSACTION &#40;です。TRANSACT-SQL と #41 です](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)。  
   
  SET IMPLICIT_TRANSACTIONS が ON に設定されている場合、BEGIN TRANSACTION ステートメントは 2 つの入れ子構造のトランザクションを作成します。 詳細については、「 [SET IMPLICIT_TRANSACTIONS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
   
 ## <a name="marked-transactions"></a>マーク付きのトランザクション  
- WITH MARK オプションを使用すると、トランザクション名がトランザクション ログに挿入されます。 データベースを以前の状態に復元する場合は、日付や時刻の代わりにマークが付いたトランザクションを使用できます。 詳細については、次を参照してください[関連のデータベースを一貫して復旧 &#40; を使用してマークされたトランザクション。完全復旧モデル &#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)と[復元 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-transact-sql.md).  
+ WITH MARK オプションを使用すると、トランザクション名がトランザクション ログに挿入されます。 データベースを以前の状態に復元する場合は、日付や時刻の代わりにマークが付いたトランザクションを使用できます。 詳細については、次を参照してください[関連のデータベースを一貫して復旧 &#40; を使用してマークされたトランザクション。完全復旧モデル &#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)と[復元 &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/restore-statements-transact-sql.md)。  
   
  さらに、関連するデータベースのセットを論理的に一貫した状態に復元する必要がある場合は、トランザクション ログ マークが必要です。 分散トランザクションによって、関連するデータベースのトランザクション ログにマークを設定できます。 関連するデータベースのセットをこれらのマークに復元すると、トランザクションとして一貫性のあるデータベースのセットが作成されます。 関連するデータベースにマークを設定するには、特別な手順が必要です。  
   
@@ -143,7 +143,7 @@ COMMIT TRAN T1;
   
  "オプションは無視されます。"  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

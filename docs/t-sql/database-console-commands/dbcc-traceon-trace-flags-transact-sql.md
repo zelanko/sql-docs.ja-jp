@@ -26,11 +26,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4dcffcd589d6ff9bd2b32aa618611dc78e98edea
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
-ms.translationtype: MT
+ms.openlocfilehash: c58386532c06b5143f7462357d161d2683b1cbbb
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/09/2018
 |**834**|バッファー プールに大きなページ割り当ては Microsoft Windows を使用します。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/3210239)です。<br /><br />**注:**の列ストア インデックス機能を使用している場合[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]に[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、オンにするトレース フラグ 834 勧めしません。<br /><br />**スコープ**: グローバルのみ|
 |**845**|標準の Sku でロックされたページを有効に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のサービス アカウントはときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory 特権が有効になっているが、ページのロック。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/970070)とのドキュメント ページ[サーバー メモリに関するサーバー構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)です。<br /><br />**注:**で始まる[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Standard Sku は、既定ではこの動作が有効になり、トレース フラグ 845 を使用しないでください。<br /><br />**スコープ**: グローバルのみ|
 |**902**|累積更新プログラムまたは Service Pack をインストールするときに、データベース アップグレード スクリプトの実行をバイパスします。 スクリプト アップグレード モード中にエラーが発生した場合は、ガイダンスについてはさらに Microsoft SQL のカスタマー サービスおよびサポート (CSS) にお問い合わせくださいすることをお勧めします。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/2163980)です。<br /><br />**警告:**このトレース フラグがスクリプト アップグレード モード中に障害が発生した更新プログラムのトラブルシューティングの目的し、して、実稼働環境で継続的に実行することはできません。 データベースのアップグレード スクリプトの累積的な更新プログラムおよびサービス パックの完全なインストールが正常に実行する必要があります。 そうしないで予期しない問題が発生することができます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。<br /><br />**スコープ**: グローバルのみ|
-|**1117**|グループ内のファイルが自動拡張のしきい値を満たさない場合に、ファイル グループ内のすべてのファイルが拡大されます。<br /><br />**注:**で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]ALTER DATABASE の AUTOGROW_SINGLE_FILE および AUTOGROW_ALL_FILES オプションによってこの動作を制御し、トレース フラグ 1117 が影響を与えません。 詳細については、次を参照してください[ALTER DATABASE の File および Filegroup オプション &#40;。TRANSACT-SQL と #41 です](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。<br /><br />**スコープ:**グローバルのみ|
+|**1117**|グループ内のファイルが自動拡張のしきい値を満たさない場合に、ファイル グループ内のすべてのファイルが拡大されます。<br /><br />**注:**で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]ALTER DATABASE の AUTOGROW_SINGLE_FILE および AUTOGROW_ALL_FILES オプションによってこの動作を制御し、トレース フラグ 1117 が影響を与えません。 詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。<br /><br />**スコープ:**グローバルのみ|
 |**1118**|サーバー上のほとんどの単一ページの割り当てが解除され、SGAM ページでの競合が減少します。 既定では、新しいオブジェクトの作成時に、最初の 8 ページが異なるエクステント (混合エクステント) から割り当てられます。 後でページを追加する必要が生じる場合、それらのページは同じエクステント (単一エクステント) から割り当てられます。 SGAM ページはこれらの混合エクステントを追跡するのに使用されます。これは、混合ページの割り当てが多く発生した場合に、それらの混合エクステントが即座にボトルネックとなる可能性があるためです。 新しいオブジェクトを作成する際、このトレース フラグにより 8 ページすべてが同じエクステントから割り当てられるため、SGAM ページをスキャンする必要性が最小限に抑えられます。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/328551)です。<br /><br />**注:**で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]ALTER DATABASE の SET MIXED_PAGE_ALLOCATION オプションによってこの動作を制御し、トレース フラグ 1118 は影響を与えません。 詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。<br /><br />**スコープ:**グローバルのみ|  
 |**1204**|デッドロックに関係しているロックのリソースと種類、および影響を受けている現在のコマンドを返します。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/832524)です。<br /><br />**スコープ:**グローバルのみ|  
 |**1211**|メモリの負荷またはロック数に基づいて、ロックのエスカレーションを無効にします。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]において、行ロックまたはページ ロックはテーブル ロックにエスカレートされません。<br /><br />トレース フラグを使用すると、過剰な数のロックが生成されることがあり、 これが原因で[!INCLUDE[ssDE](../../includes/ssde-md.md)]のパフォーマンスが悪化したり、メモリ不足によって 1204 エラー (ロック リソース割り当て不能) が発生する可能性があります。<br /><br />トレース フラグ 1211 と 1224 の両方を設定した場合、1224 よりも 1211 が優先されます。 ただし、トレース フラグ 1211 では、メモリに負荷がかかっていたとしてもすべての場合のエスカレーションが無効になるわけではないので、1224 の使用をお勧めします。 1224 を使用すると、多数のロックが使用中でも "ロック不足" エラーを回避することができます。<br /><br />**スコープ**: グローバルまたはセッション|  
@@ -146,8 +146,8 @@ ms.lasthandoff: 01/09/2018
 |**9939**|内の DML 操作のターゲットされない限り有効並列プランとメモリ最適化テーブルおよびメモリ最適化テーブルまたはテーブル変数を参照する DML 操作でテーブル変数の並列スキャン[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/4013877)です。<br /><br />**注:**トレース フラグ 4199 が明示的に有効になっている場合、トレース フラグ 9939 は必要ありません。<br /><br />**スコープ**: グローバルまたはセッションまたはクエリ|   
 |**10204**|無効にマージ/列ストア インデックスの再構成中に取り消してです。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]列ストア インデックスを再構成すると、ときより大きな圧縮行グループに、同様に削除された行の数が多い行グループを再圧縮、小規模の圧縮行グループを自動的にマージする新しい機能があります。<br /><br />**注:**トレース フラグ 10204 は、列ストア インデックスはメモリ最適化テーブル上に作成するには適用されません。<br /><br />**スコープ**: グローバルまたはセッション|   
 |**10316**|追加のインデックスの作成を有効に[内部メモリ最適化のステージング テンポラル テーブル](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)、いずれかの既定値の横にあります。 既定のインデックスで対応されていない列を含んでいる特定のクエリ パターンがある場合は、その他の値を追加することを検討できます。<br /><br />**注:**システム バージョン管理されたテンポラル テーブルは、メモリ最適化テーブルは、高いトランザクション スループットを提供するように設計されています。 追加のインデックスの作成と更新するか、現在のテーブルの行を削除 DML 操作のオーバーヘッドが生じる可能性があることに注意してください。 追加のインデックスでは、テンポラル クエリのパフォーマンスとオーバーヘッドを増やさずに DML の間でバランスが適切に目指す必要があります。<br /><br />**スコープ**: グローバルまたはセッション|
-|**11023**|サンプル レートがの一部として明示的に指定されていないすべての後続の統計の更新の最後の永続化のサンプル速度の使用を無効になります、 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)ステートメントです。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/4039284)です。<br /><br />**スコープ**: グローバル|    
-|**11024**|により、任意のパーティションの変更の数が、ローカルを超えた場合に、統計の自動更新をトリガーする[しきい値](../../relational-databases/statistics/statistics.md#AutoUpdateStats)です。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/4041811)です。<br /><br />**スコープ**: グローバル| 
+|**11023**|サンプル レートがの一部として明示的に指定されていないすべての後続の統計の更新の最後の永続化のサンプル速度の使用を無効になります、 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)ステートメントです。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/4039284)です。<br /><br />**スコープ**: グローバルまたはセッション|    
+|**11024**|により、任意のパーティションの変更の数が、ローカルを超えた場合に、統計の自動更新をトリガーする[しきい値](../../relational-databases/statistics/statistics.md#AutoUpdateStats)です。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/4041811)です。<br /><br />**スコープ**: グローバルまたはセッション| 
   
 ## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、トレース フラグの 3 種類があります。 クエリ、セッションとグローバルです。 クエリ トレース フラグは、特定のクエリのコンテキストに対してアクティブにします。 セッション トレース フラグは、接続のアクティブなし、その接続にのみ表示されます。 グローバル トレース フラグは、サーバー レベルで設定され、サーバー上のすべての接続に対して表示可能です。 フラグには、グローバルとしてのみ有効化できるフラグと、グローバルまたはセッション スコープのどちらかで有効化できるフラグがあります。  

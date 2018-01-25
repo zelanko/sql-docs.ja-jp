@@ -23,20 +23,20 @@ helpviewer_keywords:
 - not less than operator (!<)
 ms.assetid: ecbb598e-58a2-4b6c-90b4-3ad5bdfcae39
 caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 72275fdc65d349c4afcd7e0c21454510efbb1f40
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d58f155894bf119caa5fc8fb7635a7f2c7cc6aaf
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="lt-not-less-than-transact-sql"></a>!&lt;(より小さくない)(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  2 つの式を比較します (比較演算子)。 NULL でない式を比較したときに、左側のオペランドが右側のオペランドよりも小さい値ではない場合、結果は TRUE です。それ以外の場合、結果は FALSE です。 いずれかまたは両方のオペランドが NULL の場合は、トピックを参照してください。 [SET ANSI_NULLS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
+  2 つの式を比較します (比較演算子)。 NULL でない式を比較したときに、左側のオペランドが右側のオペランドよりも小さい値ではない場合、結果は TRUE です。それ以外の場合、結果は FALSE です。 いずれかまたは両方のオペランドが NULL の場合は、トピックを参照してください。 [SET ANSI_NULLS &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/set-ansi-nulls-transact-sql.md)。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

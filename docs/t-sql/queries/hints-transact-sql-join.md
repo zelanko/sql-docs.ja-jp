@@ -24,20 +24,20 @@ helpviewer_keywords:
 - hints [SQL Server], join
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 44b5dde989c0c40c2afc9202921d5a80c33fdc99
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 84f00c9acef803cd84be1c2be2fadf417d3b9bff
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hints-transact-sql---join"></a>ヒント (TRANSACT-SQL) の参加します。
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  結合ヒントにより、クエリ オプティマイザーで、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の 2 つのテーブル間の結合方法を設定します。 結合および結合の構文の詳細については、次を参照してください。 [FROM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/from-transact-sql.md).  
+  結合ヒントにより、クエリ オプティマイザーで、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の 2 つのテーブル間の結合方法を設定します。 結合および結合の構文の詳細については、次を参照してください。 [FROM &#40;です。TRANSACT-SQL と #41 です](../../t-sql/queries/from-transact-sql.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通常、クエリ オプティマイザーがクエリの最適な実行プランを選択、ヒントを含むことをお勧め\<join_hint >、経験を積んだ開発者、最後の手段としてのみ使用して、データベース管理者です。

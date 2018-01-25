@@ -18,15 +18,15 @@ helpviewer_keywords:
 - math operations [Transact-SQL]
 ms.assetid: a41b92a5-1061-4e4d-bb3b-a180b73c88fa
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d6446d1e4850ca8f50a666c5c8a0fea58c57b1b6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 15ab9c387221a0afba7535514681d6d89af60ab3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="arithmetic-operators-transact-sql"></a>算術演算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,12 +38,12 @@ ms.lasthandoff: 11/17/2017
 |[+ (加算)](../../t-sql/language-elements/add-transact-sql.md)|追加|  
 |[- (減算)](../../t-sql/language-elements/subtract-transact-sql.md)|減算|  
 |[* (乗算)](../../t-sql/language-elements/multiply-transact-sql.md)|乗算|  
-|[/(除算)](../../t-sql/language-elements/divide-transact-sql.md)|除算|  
+|[/ (Divide)](../../t-sql/language-elements/divide-transact-sql.md)|除算|  
 |[% (剰余)](../../t-sql/language-elements/modulo-transact-sql.md)|除算による整数の剰余を返します。 たとえば、12 % 5 の場合、12 を 5 で割ると余りは 2 なので、12 % 5 = 2 となります。|  
   
  プラス記号 (+) マイナス記号 (-) 演算子も使用できますで算術演算を実行して**datetime**と**smalldatetime**値。  
   
- 有効桁数と小数点以下桁数、算術演算の結果の詳細については、次を参照してください[有効桁数、小数点以下桁数、および長さ &#40;。TRANSACT-SQL と #41 です。](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+ 有効桁数と小数点以下桁数、算術演算の結果の詳細については、次を参照してください[有効桁数、小数点以下桁数、および長さ &#40;。TRANSACT-SQL と #41 です](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
 ## <a name="see-also"></a>参照  
  [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)   

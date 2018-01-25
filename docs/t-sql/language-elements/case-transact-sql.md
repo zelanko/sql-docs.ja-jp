@@ -22,15 +22,15 @@ helpviewer_keywords:
 - searched CASE expression
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 283484ce00b3f0c19dea00b47826926a2b86df43
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.openlocfilehash: df29d72722d665e9595105a01a3a89841ec2b4ac
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,16 +79,16 @@ END
  *input_expression*  
  単純 CASE 形式を使用した場合に評価される式です。 *input_expression*は任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
- ときに*when_expression*  
+ WHEN *when_expression*  
  単純な式は、 *input_expression*単純 CASE 形式を使用する場合と比較されます。 *when_expression*有効な式です。 データ型*input_expression*とは、それぞれ*when_expression*同じである必要がありますか、暗黙的な変換をする必要があります。  
   
-  *Result_expression*  
+ THEN *result_expression*  
  返される式の場合に*input_expression* equals *when_expression*を TRUE に評価または*Boolean_expression*を TRUE に評価します。 *式の結果*は任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
- ELSE*戻り値*  
+ ELSE *else_result_expression*  
  比較操作の評価がいずれも TRUE でなかった場合に返される式です。 この引数を省略し、比較操作のいずれも TRUE でなかった場合、CASE は NULL を返します。 *戻り値*有効な式です。 データ型*戻り値*と任意*result_expression*同じである必要がありますか、暗黙的な変換をする必要があります。  
   
- ときに*Boolean_expression*  
+ WHEN *Boolean_expression*  
  検索 CASE 形式で評価するブール式です。 *Boolean_expression*有効なブール式です。  
   
 ## <a name="return-types"></a>戻り値の型  
@@ -118,7 +118,7 @@ END
 ## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Case 式に入れ子にできるのは 10 レベルまでです。  
   
- CASE 式を使用して、Transact-SQL ステートメント、ステートメント ブロック、ユーザー定義関数、およびストアド プロシージャの実行フローを制御することはできません。 フロー制御のメソッドの一覧は、次を参照してください。[フロー制御言語 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md).  
+ CASE 式を使用して、Transact-SQL ステートメント、ステートメント ブロック、ユーザー定義関数、およびストアド プロシージャの実行フローを制御することはできません。 フロー制御のメソッドの一覧は、次を参照してください。[フロー制御言語 &#40;です。TRANSACT-SQL と #41 です](~/t-sql/language-elements/control-of-flow.md)。  
   
  CASE ステートメントは条件を順に評価していき、最初に条件が満たされた時点で評価を止めます。 CASE ステートメントには、評価された式の結果が入力として渡されることがあります。 こうした式の評価中にエラーが発生する可能性もあります。 CASE ステートメントの WHEN 引数に指定された集計式は、あらかじめ評価されて CASE ステートメントに渡されます。 たとえば、次のクエリでは、MAX 集計値を生成する際に 0 除算エラーが発生します。 このエラーが発生するのは、CASE 式が評価される前です。  
   

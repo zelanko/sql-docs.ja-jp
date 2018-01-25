@@ -26,15 +26,15 @@ helpviewer_keywords:
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f962702faec170262f50c3c2ca5c328af3bc266d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 0f99a9d507b74dfd12bbdaf273683f857ceec881
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,17 +61,17 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  SOME | ANY  
  比較を行うことを指定します。  
   
- *サブクエリ*  
+ *subquery*  
  1 列の結果セットを返すサブクエリです。 返される列のデータ型が同じデータ型にする必要があります*scalar_expression*です。  
   
 ## <a name="result-types"></a>戻り値の型  
  **ブール値**  
   
 ## <a name="result-value"></a>結果の値  
- SOME または ANY を返します**TRUE**指定された比較が TRUE の場合、ペアに対して (*scalar_expression***、***x*)、 *x*単一列セット内の値です。 それ以外の場合、 **FALSE**です。  
+ SOME または ANY を返します**TRUE**指定された比較が TRUE の場合、ペアに対して (*scalar_expression***、***x*) 場所*x*内の値は、単一列セットです。返しますそれ以外の場合、 **FALSE**です。  
   
 ## <a name="remarks"></a>解説  
- いくつかが必要、 *scalar_expression*サブクエリによって返されるには、少なくとも 1 つの値に対し肯定的な比較をします。 ステートメントを必要とする、 *scalar_expression* 、サブクエリによって返されるすべての値に対し肯定的な比較を参照してください。 [ALL と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/all-transact-sql.md). たとえば、サブクエリは 2 および 3 の値を返す場合は、 *scalar_expression* = SOME (subquery) は TRUE と評価、 *scalar_express* 2 のです。 サブクエリは 2 および 3 の値を返す場合*scalar_expression* = ALL (subquery) はサブクエリ (値 3) の値の一部は、式の条件を満たさないために、FALSE と評価します。  
+ いくつかが必要、 *scalar_expression*サブクエリによって返されるには、少なくとも 1 つの値に対し肯定的な比較をします。 ステートメントを必要とする、 *scalar_expression* 、サブクエリによって返されるすべての値に対し肯定的な比較を参照してください。 [ALL と #40 です。TRANSACT-SQL と #41 です](../../t-sql/language-elements/all-transact-sql.md)。 たとえば、サブクエリは 2 および 3 の値を返す場合は、 *scalar_expression* = SOME (subquery) は TRUE と評価、 *scalar_express* 2 のです。 サブクエリは 2 および 3 の値を返す場合*scalar_expression* = ALL (subquery) はサブクエリ (値 3) の値の一部は、式の条件を満たさないために、FALSE と評価します。  
   
 ## <a name="examples"></a>使用例  
   

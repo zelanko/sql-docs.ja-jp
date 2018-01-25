@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a6a932ffe43e978bdc9e06f96cac300d45a035b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d929476cd48275249c5ac78a75ed22d6822fb21a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>引数  
- *距離*  
+ *distance*  
  **Float**からの距離を指定する式、 **geometry**バッファー計算の対象となるインスタンスです。  
   
  *許容範囲*  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
  たとえば、ある地点の理想のバッファー距離は円ですが、多角形によって近似された形状になる必要があります。 許容範囲が小さいほど、多角形の頂点の数は多くなります。つまり、計算結果の複雑性が増しますが、元の図形との差が小さくなります。  
   
- *相対*  
+ *relative*  
  **ビット**を指定するかどうか、*トレランス*値が相対パスまたは絶対です。 かどうかは 'TRUE' または 1 の場合、許容範囲は相対値との積として計算されます、*トレランス*パラメーターとインスタンスの境界ボックスの直径します。 'FALSE' または 0 の場合、tolerance は絶対値の場合、*トレランス*値は、返された線形近似の理想的なバッファー距離の最大幅。  
   
 ## <a name="return-types"></a>戻り値の型  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
  ときに*距離*> 0 次のいずれか、**多角形**または**MultiPolygon**インスタンスが返されます。  
   
 > [!NOTE]  
->  距離であるため、 **float**、非常に小さい値を計算でゼロと同じことができます。 これが発生すると、呼び出し元のコピー **geometry**インスタンスが返されます。 参照してください[float、real および #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/float-and-real-transact-sql.md).  
+>  距離であるため、 **float**、非常に小さい値を計算でゼロと同じことができます。 これが発生すると、呼び出し元のコピー **geometry**インスタンスが返されます。 参照してください[float、real および #40 です。TRANSACT-SQL と #41 です](../../t-sql/data-types/float-and-real-transact-sql.md)。  
   
  ときに*距離*= 0 は、呼び出し元のコピー **geometry**インスタンスが返されます。  
   

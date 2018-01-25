@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: aeb292cac514b2f9253fa35369ddea190176538e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
-ms.translationtype: MT
+ms.openlocfilehash: b86535eabd6b351127bbab1eb03c97234f8b4b39
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -165,7 +165,7 @@ MAXDOP
 [データベースの互換性レベルの表示または変更](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>内部データベース スナップショット    
-DBCC CHECKTABLE は、内部データベースのスナップショットを使用して、これらのチェックを実行するために必要なトランザクションの一貫性を確保します。 詳細については、次を参照してください[データベース スナップショット &#40; のスパース ファイルのサイズを表示。TRANSACT-SQL と #41 です。](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 「DBCC 内部データベース スナップショットの使用」」、および[DBCC &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+DBCC CHECKTABLE は、内部データベースのスナップショットを使用して、これらのチェックを実行するために必要なトランザクションの一貫性を確保します。 詳細については、次を参照してください[データベース スナップショット &#40; のスパース ファイルのサイズを表示。TRANSACT-SQL と #41 です。](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 「DBCC 内部データベース スナップショットの使用」」、および[DBCC &#40;です。TRANSACT-SQL と #41 です](../../t-sql/database-console-commands/dbcc-transact-sql.md)。
 スナップショットを作成できない場合や、TABLOCK が指定されている場合は、DBCC CHECKTABLE は共有テーブル ロックを取得して必要な一貫性を実現します。
     
 > [!NOTE]    
@@ -205,7 +205,7 @@ DBCC CHECKTABLE は、内部データベースのスナップショットを使�
 ## <a name="result-sets"></a>結果セット    
 DBCC CHECKTABLE は次の結果セットを返します。 テーブル名のみを指定した場合もその他のオプションを指定した場合も、同じ結果セットを返します。
     
-```sql
+```
 DBCC results for 'HumanResources.Employee'.    
 There are 288 rows in 13 pages for object 'Employee'.    
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.    

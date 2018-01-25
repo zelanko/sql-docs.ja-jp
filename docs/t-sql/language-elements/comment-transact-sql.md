@@ -23,15 +23,15 @@ helpviewer_keywords:
 - comments [SQL Server]
 ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a5615aa149b6f7a36b962550fa6094d3badae0a2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 132d4dc19112858df5fbab33961b5ad99c70dd1c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="---comment-transact-sql"></a>-- (コメント) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/18/2017
   
  キーボード ショートカットの詳細については、次を参照してください。 [SQL Server Management Studio のキーボード ショートカット](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)です。  
   
- 複数行のコメントを参照してください。[スラッシュ スター &#40;です。ブロック コメント &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
+ 複数行のコメントを参照してください。[スラッシュ スター &#40;です。ブロック コメント &#41;&#40;です。TRANSACT-SQL と #41 です](../../t-sql/language-elements/slash-star-comment-transact-sql.md)。  
   
 ## <a name="examples"></a>使用例  
  次の例では、-- コメント文字を使用します。  

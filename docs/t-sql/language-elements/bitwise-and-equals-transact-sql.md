@@ -22,15 +22,15 @@ helpviewer_keywords:
 - '&= (bitwise AND equals)'
 ms.assetid: f374c885-3fee-434a-93fb-dfe6e0bcd100
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2abeab8180dcc59db7abc07a379355941a414e2d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 75ba21340a0d874dbd6cba0931134a51a7c44614
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="amp-bitwise-and-assignment-transact-sql"></a>&amp;= (ビットごとの AND 代入) (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ expression &= expression
  優先順位が高い引数のデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
 ## <a name="remarks"></a>解説  
- 詳細については、次を参照してください。 [& &#40;です。ビットごとの AND &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-and-transact-sql.md).  
+ 詳細については、次を参照してください。 [& &#40;です。ビットごとの AND &#41;&#40;です。TRANSACT-SQL と #41 です](../../t-sql/language-elements/bitwise-and-transact-sql.md)。  
   
 ## <a name="see-also"></a>参照  
  [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)   

@@ -29,11 +29,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7c554f15df3eae68ea3b5cda1ba5bb316f5dcc17
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 1b1608f86abf8605b707f8b72e7baac3b9b794e7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 DBCC CHECKCATALOG   
 [   
     (   
@@ -74,31 +73,31 @@ DBCC CHECKCATALOG
 |4|アサートまたはアクセス違反が検出されました。|  
 |5|不明なエラーが発生し、DBCC コマンドが終了しました。|  
   
-DBCC CHECKCATALOG は、システム メタデータ テーブル間でさまざまな一貫性チェックを実行します。 DBCC CHECKCATALOG は、内部データベース スナップショットを使用してこれらのチェックを実行するために必要なトランザクション一貫性を確保します。 詳細については、次を参照してください[データベース スナップショット &#40; のスパース ファイルのサイズを表示。TRANSACT-SQL と #41 です。](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 「DBCC 内部データベース スナップショットの使用」」、および[DBCC &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+DBCC CHECKCATALOG は、システム メタデータ テーブル間でさまざまな一貫性チェックを実行します。 DBCC CHECKCATALOG は、内部データベース スナップショットを使用してこれらのチェックを実行するために必要なトランザクション一貫性を確保します。 詳細については、次を参照してください[データベース スナップショット &#40; のスパース ファイルのサイズを表示。TRANSACT-SQL と #41 です。](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 「DBCC 内部データベース スナップショットの使用」」、および[DBCC &#40;です。TRANSACT-SQL と #41 です](../../t-sql/database-console-commands/dbcc-transact-sql.md)。
 スナップショットが作成できない場合、DBCC CHECKCATALOG は排他データベース ロックを獲得して必要な一貫性を取得します。 不一致が検出された場合、これらは修復できず、データベースをバックアップから復元する必要があります。
   
 > [!NOTE]  
->  に対して DBCC CHECKCATALOG を実行している**tempdb**もチェックは実行されません。 これは、パフォーマンス上の理由から、データベース スナップショットでは使用できないため**tempdb**です。 つまり、必要なトランザクションの一貫性を実現できないためです。 いずれかを解決するのには、サーバーをリサイクル**tempdb**メタデータの問題です。  
+> に対して DBCC CHECKCATALOG を実行している**tempdb**もチェックは実行されません。 これは、パフォーマンス上の理由から、データベース スナップショットでは使用できないため**tempdb**です。 つまり、必要なトランザクションの一貫性を実現できないためです。 いずれかを解決するのには、サーバーをリサイクル**tempdb**メタデータの問題です。  
   
 > [!NOTE]  
->  DBCC CHECKCATALOG では、FILESTREAM データはチェックされません。 FILESTREAM はバイナリ ラージ オブジェクト (BLOB) をファイル システムに格納します。  
+> DBCC CHECKCATALOG では、FILESTREAM データはチェックされません。 FILESTREAM はバイナリ ラージ オブジェクト (BLOB) をファイル システムに格納します。  
   
 一部として DBCC CHECKCATALOG を実行しても[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)です。
   
 ## <a name="result-sets"></a>結果セット  
 データベースが指定されていない場合、DBCC CHECKCATALOG は次の値を返します。
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] がデータベース名として指定されていない場合、DBCC CHECKCATALOG は次の値を返します。
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーシップが必要、 **sysadmin**固定サーバー ロール、または**db_owner**固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  
