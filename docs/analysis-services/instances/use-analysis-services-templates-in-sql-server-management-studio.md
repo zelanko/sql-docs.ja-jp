@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2ad2bc8a5d6d440f9f8c06f17d2857e5343adfce
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2b13acc5ac8947e4e97509764f648f8c31da1fa6
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio での Analysis Services テンプレートの使用
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] XMLA スクリプトをすばやく作成するためにテンプレートのセットは、DMX または MDX クエリでは、キューブまたは表形式モデル、スクリプトのバックアップで Kpi を作成および復元操作、およびその他の多くのタスクを実行します。 テンプレートは、 **の** テンプレート エクスプローラー [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]にあります。  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、XMLA スクリプト、DMX クエリ、または MDX クエリの迅速な作成、キューブまたはテーブル モデルの KPI の作成、バックアップ操作および復元操作のスクリプト作成、および他の多数のタスクを実行するためのテンプレートのセットを提供します。 テンプレートは、 **の** テンプレート エクスプローラー [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]にあります。  
   
  このトピックでは、多次元モデルとテーブル モデルのテンプレートの一覧を示し、メタデータ エクスプローラーとテンプレート エクスプローラーを使用して MDX クエリと XMLA ステートメントを構築する方法の例を示します。  
   
@@ -214,14 +216,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |XMLA\管理|バックアップ|XMLA の **Backup** コマンドを使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをファイルにバックアップする方法を示します。|  
 ||キャンセル|XMLA の **Cancel** コマンドを使用して、現在のセッション、データベース、またはインスタンス上で実行しているすべての操作を取り消す方法を示します。現在のセッションは管理者またはサーバーの管理者以外のユーザー、データベースは管理者、インスタンスはサーバー管理者がキャンセルできます。|  
 ||リモート パーティション データベースの作成|XMLA の **Create** コマンドを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] スクリプト言語 (ASSL) データベース要素と共に使用して、リモート パーティションを保存する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースおよびデータ ソースを作成する方法を示します。|  
-||DELETE|XMLA の **Delete** コマンドを使用して、既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを削除する方法を示します。|  
+||Del|XMLA の **Delete** コマンドを使用して、既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを削除する方法を示します。|  
 ||ディメンションの処理|XMLA の **Batch** コマンドを **Parallel** 要素および **Process** コマンドと組み合わせ、並列バッチ操作を使用してディメンションの属性を更新する方法を示します。|  
 ||パーティションの処理|XMLA の **Batch** コマンドを **Parallel** 要素および **Process** コマンドと組み合わせ、並列バッチ操作を使用してパーティションを完全に処理する方法を示します。|  
-||[復元]|XMLA の **Restore** コマンドを使用して、既存のバックアップ ファイルから [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元する方法を示します。|  
+||復元|XMLA の **Restore** コマンドを使用して、既存のバックアップ ファイルから [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元する方法を示します。|  
 ||同期|XMLA の **Synchronize** コマンドで、SynchronizeSecurity タグの SkipMembership オプションを使用して別の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを現在の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースと同期させる方法を示します。|  
 |XMLA\スキーマ行セット|スキーマ行セットの検出|XMLA の **Discover** メソッドを使用して、DISCOVER_SCHEMA_ROWSETS スキーマ行セットの内容を取得する方法を示します。|  
 |XMLA\サーバー ステータス|接続|XMLA の **Discover** メソッドを使用して、DISCOVER_CONNECTIONS スキーマ行セットの内容を取得する方法を示します。|  
-||の|XMLA の **Discover** メソッドを使用して、DISCOVER_JOBS スキーマ行セットの内容を取得する方法を示します。|  
+||ジョブ|XMLA の **Discover** メソッドを使用して、DISCOVER_JOBS スキーマ行セットの内容を取得する方法を示します。|  
 ||[場所]|XMLA の **Discover** メソッドを使用して、場所バックアップ ファイルのパスを指定して DISCOVER_LOCATIONS スキーマ行セットの内容を取得する方法を示します。|  
 ||Locks|XMLA の **Discover** メソッドを使用して、DISCOVER_LOCKS スキーマ行セットの内容を取得する方法を示します。|  
 ||メモリ許可|XMLA の **Discover** メソッドを使用して、DISCOVER_MEMORYGRANT スキーマ行セットの内容を取得する方法を示します。|  
@@ -232,7 +234,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 ## <a name="see-also"></a>参照  
  [多次元式 (MDX) リファレンス](../../mdx/multidimensional-expressions-mdx-reference.md)   
- [データ マイニング拡張機能 (DMX) リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41;参照](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services スクリプト言語 &#40;XMLA 用 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Analysis Services スクリプト言語 &#40;です。ASSL を XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   

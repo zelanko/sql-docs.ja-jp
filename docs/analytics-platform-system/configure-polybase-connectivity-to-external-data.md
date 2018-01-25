@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
 caps.latest.revision: "43"
-ms.openlocfilehash: 391b088af58f7c231d9d95e6940332f8f78dd1d5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 65a10ada824b291e37e61a421882cf012c7b8ddc
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>外部データへの接続を PolyBase を構成します。
 外部 Hadoop または Microsoft Azure ストレージ blob のデータ ソースへの接続に SQL Server PDW で PolyBase を構成する方法について説明します。 PolyBase を使用して、Hadoop や Azure blob ストレージ、SQL Server PDW など、複数のソースからデータを統合するクエリを実行します。  
@@ -132,7 +132,35 @@ ms.lasthandoff: 12/21/2017
 10. WASB に接続すると、DNS 転送アプライアンスでの構成も必要です。 DNS の転送を構成するのを参照してください[非アプライアンス DNS 名を解決する &#40; を DNS フォワーダーを使用。Analytics Platform System &#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 承認されたユーザーには、外部データ ソース、外部ファイル形式、および外部テーブルを作成できますようになりました。 これらを使用するとして Hadoop, を含む複数のソースからデータを統合するが、Microsoft Azure blob ストレージ、および SQL Server PDW です。  
+
+## <a name="kerberos-configuration"></a>Kerberos の構成  
+Kerberos でセキュリティが強化されているクラスターに PolyBase が認証するとき、hadoop.rpc.protection を認証に設定する必要があります。 それにより、Hadoop ノード間のデータ通信が暗号化されません。 
+
+ Kerberos でセキュリティ保護された Hadoop クラスターに接続します [MIT KDC を使用]。
+   
   
+1.  [管理] ノードでのインストール パスで Hadoop 構成ディレクトリを検索します。  
+  
+    ```  
+    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf
+    ```  
+  
+2.  次の表に示す構成キーの Hadoop 側の構成値を検索します (Hadoop コンピューター上の Hadoop 構成ディレクトリ内でファイルを検索します)。  
+  
+3.  これらの構成値を、SQL Server コンピューター上の対応するファイル内の値プロパティにコピーします。  
+  
+    |**#**|**構成ファイル**|**構成キー**|**操作**|  
+    |------------|----------------|---------------------|----------|   
+    |1|core-site.xml|polybase.kerberos.kdchost|KDC のホスト名を指定します。 例: kerberos.your-realm.com.|  
+    |2|core-site.xml|polybase.kerberos.realm|Kerberos 領域を指定します。 例: YOUR-REALM.COM|  
+    |3|core-site.xml|hadoop.security.authentication|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: KERBEROS<br></br>**セキュリティに関する注意:** KERBEROS は大文字で記述する必要があります。 小文字の場合、機能しない可能性があります。|   
+    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: hdfs/_HOST@YOUR-REALM.COM|  
+    |5|mapred-site.xml|mapreduce.jobhistory.principal|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: mapred/_HOST@YOUR-REALM.COM|  
+    |6|mapred-site.xml|mapreduce.jobhistory.address|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: 10.193.26.174:10020|  
+    |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: yarn/_HOST@YOUR-REALM.COM|  
+  
+4.  各 Hadoop ユーザーの認証情報を指定するデータベース スコープ資格情報オブジェクトを作成します。 「 [PolyBase T-SQL オブジェクト](../relational-databases/polybase/polybase-t-sql-objects.md)」を参照してください。  
+ 
 ## <a name="see-also"></a>参照  
 [アプライアンスの構成 &#40;です。Analytics Platform System &#41;](appliance-configuration.md)  
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  

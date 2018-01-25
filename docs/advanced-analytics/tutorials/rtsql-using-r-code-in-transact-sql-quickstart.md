@@ -18,11 +18,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3e1562fc0cf2cd1c3f037dab1ee275beeaeffeea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9c0896ca67df3d8000fae8f3cd3d336b047ee481
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>TRANSACT-SQL (SQL のクイック スタートで R) での R コードの使用
 
@@ -39,18 +39,18 @@ ms.lasthandoff: 01/08/2018
 
 30 分 (セットアップを含まない)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 既にインストールされている、次のいずれかの SQL Server のインスタンスへのアクセスが必要です。
 
 + SQL Server 2017 マシン ラーニング サービス、インストールされている R 言語を使用
-+ SQL Server 2016 R サービス
++ SQL Server 2016 R Services
 
 SQL Server のインスタンスは、Azure の仮想マシンまたは内部設置型にできます。 だけ、外部のスクリプト機能が無効である既定では、正常に動作させるための追加手順を実行する必要がありますので注意してください。
 
 R スクリプトを含む SQL クエリを実行するには、データベースへの接続および T-SQL コードを実行できるその他のアプリケーションを使用できます。 SQL の専門家には、SQL Server Management Studio (SSMS) または Visual Studio を使用できます。
 
-このチュートリアルでは、SQL Server の内部の R を実行するは簡単な方法を表示したを使用して、新しい**Visual Studio Code の mssql 拡張子**です。 VS Code は、Linux、macOS、または Windows を実行できる無料の開発環境です。 **Mssql*** 拡張機能は SLq クエリを実行するための軽量な拡張機能です。 これをインストールするには、[Visual Studio Code 用の mssql 拡張機能の使用](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)に関する記事をご覧ください。
+このチュートリアルでは、SQL Server の内部の R を実行するは簡単な方法を表示したを使用して、新しい**Visual Studio Code の mssql 拡張子**です。 VS Code は、Linux、macOS、または Windows を実行できる無料の開発環境です。 **Mssql**拡張子は、T-SQL クエリを実行するための軽量な拡張子です。 これをインストールするには、[Visual Studio Code 用の mssql 拡張機能の使用](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)に関する記事をご覧ください。
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>データベースに接続して Hello World テスト スクリプトを実行する
 
