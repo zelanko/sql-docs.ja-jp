@@ -19,15 +19,15 @@ helpviewer_keywords:
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 caps.latest.revision: "74"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14680465db9798d198685b3e9a556816a33057a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 402675d8725ca5e571261e700b9eb8ec2a035a90
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 サブスクライバー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/17/2017
 |**char(1-254)**|CHAR(1-254)|  
 |**char(255-8000)**|VARCHAR(255-8000)|  
 |**date**|[DATE]|  
-|**datetime**|TIMESTAMP|  
+|**datetime**|timestamp|  
 |**datetime2(0-7)**|VARCHAR(27)|  
 |**datetimeoffset(0-7)**|VARCHAR(34)|  
 |**decimal(1-31, 0-31)**|DECIMAL(1-31, 0-31)|  
@@ -134,8 +134,8 @@ ms.lasthandoff: 11/17/2017
 |**numeric(32-38, 0-38)**|VARCHAR(41)|  
 |**nvarchar(1-4000)**|VARCHAR(1-4000)|  
 |**nvarchar(max)**|VARCHAR(0)*|  
-|**real**|REAL|  
-|**smalldatetime**|TIMESTAMP|  
+|**real**|real|  
+|**smalldatetime**|timestamp|  
 |**smallint**|SMALLINT|  
 |**smallmoney**|DECIMAL(10,4)|  
 |**sql_variant**|なし|  

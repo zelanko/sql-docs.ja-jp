@@ -16,31 +16,31 @@ helpviewer_keywords:
 - replication [SQL Server], agents and profiles
 ms.assetid: e257186c-4af4-4d02-bd4d-712264a9dace
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a7babcda35d372a5b3eee67919f6884dd7b12de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 306304e967336f428bece315b0e36651afe1d668
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="replication-agents"></a>レプリケーション エージェント
+# <a name="replication-agents"></a>Replication Agents
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] レプリケーションでは、"エージェント" と呼ばれる多数のスタンドアロン プログラムを使用して、変更の追跡とデータの配布に関連するタスクを実行します。 ここでは、次のレプリケーション エージェントのパラメーター リファレンスを示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [レプリケーション エージェントの概要](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
- [レプリケーション ディストリビューション エージェント](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
+ [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
  [レプリケーション ログ リーダー エージェント](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
- [レプリケーション マージ エージェント](../../../relational-databases/replication/agents/replication-merge-agent.md)  
+ [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
  [レプリケーション キュー リーダー エージェント](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
- [レプリケーション スナップショット エージェント](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
  [レプリケーション エージェントの管理](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   

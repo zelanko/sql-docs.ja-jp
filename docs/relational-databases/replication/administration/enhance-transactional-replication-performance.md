@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Log Reader Agent, performance
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac5c385cfdff8c4c024c02534d8c040534c400ca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 63a14e8eb3342d0d03f61028d20aea9ba018f3a8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-transactional-replication-performance"></a>トランザクション レプリケーションのパフォーマンスの向上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 「[レプリケーションの全般的パフォーマンスの向上](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)」で説明した全般的なパフォーマンス向上のヒントを検討した後、トランザクション レプリケーションに固有なこれらの項目を併せて検討してください。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 -   ディストリビューション専用サーバーを構成する。  
   
-     リモート ディストリビューターを構成することにより、パブリッシャーの処理オーバーヘッドを減らすことができます。 詳細については、「[ディストリビューションの構成](../../../relational-databases/replication/configure-distribution.md)」を参照してください。  
+     リモート ディストリビューターを構成することにより、パブリッシャーの処理オーバーヘッドを減らすことができます。 詳しくは、「 [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)」を参照してください。  
   
 -   ディストリビューション データベースのサイズを適切に設定する。  
   
@@ -106,6 +106,6 @@ ms.lasthandoff: 11/17/2017
   
 -   [レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

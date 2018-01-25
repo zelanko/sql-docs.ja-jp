@@ -17,15 +17,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02e8f1043c8b3337953dd300c67ad0d94343eb88
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1312413f12476c9be36ed3595fed82a75fd375fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>マージ レプリケーションの競合の詳細 - 競合回避モジュールの選択
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 競合回避モジュールを選択するときには、アプリケーションでの競合解決の重要性、および既定の優先度ベースの競合回避モジュールを使用できるかどうか、アーティクル競合回避モジュールを使用する必要があるかどうかを考慮します。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
 |競合解決に際して考慮すべき問題|推奨|  
 |-------------------------------|--------------------|  
-|異なるジョブ カテゴリのユーザーに対して異なる優先度が必要な場合|既定の競合回避モジュールを使用して、異なる優先度値を持つサーバー サブスクリプションを作成する。<br /><br /> または<br /><br /> アーティクル内の権限値の列を認識するアーティクル競合回避モジュールを使用して、競合を解決する。|  
+|異なるジョブ カテゴリのユーザーに対して異なる優先度が必要な場合|既定の競合回避モジュールを使用して、異なる優先度値を持つサーバー サブスクリプションを作成する。<br /><br /> スイッチまたは<br /><br /> アーティクル内の権限値の列を認識するアーティクル競合回避モジュールを使用して、競合を解決する。|  
 |最初に変更されたデータが優先される競合解決方法が必要な場合|既定の競合回避モジュールを使用して、クライアント サブスクリプションを作成する。|  
 |同じ行に対する変更の競合がない限り、複数のユーザーが同じデータ行を変更することを認める場合|既定の競合回避モジュール、または列レベルの追跡を有効にしたアーティクル競合回避モジュールを使用する。|  
 |行の値に対して複数の変更が発生したときに競合のフラグを付ける場合|既定の競合回避モジュール、または行レベルの追跡を有効にしたアーティクル競合回避モジュールを使用する。|  

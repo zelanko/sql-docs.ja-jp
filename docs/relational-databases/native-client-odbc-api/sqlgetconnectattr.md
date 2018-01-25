@@ -1,5 +1,5 @@
 ---
-title: "SQLGetConnectAttr |Microsoft ドキュメント"
+title: SQLGetConnectAttr | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ec92c6f38bec112705e29cda021ab6e5a7b49d0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4a075d06b4425a5f07e3e805fdefe73b1c5eabba
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  標準の ODBC 接続属性 SQL_ATTR_CONNECTION_DEAD は、接続の最新の状態を返します。 これは現在の接続状態と異なる場合があります。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|サーバーへの接続が失われました。|  
 |SQL_CD_FALSE|接続が開かれており、ステートメントの処理に使用できます。|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/08/2018
   
  詳細については、次を参照してください。[へのアクセス ログの診断情報、拡張イベント](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)です。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |SQL_ERROR|接続に失敗しました。|  
 |SQL_SUCCESS|接続に成功しました。 クライアント接続 ID は出力バッファーで見つかります。|  
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
  SQL_COPT_SS_PERF_DATA 属性は、現在のドライバーのパフォーマンス統計情報を保持する SQLPERF 構造体へのポインターを返します。 **SQLGetConnectAttr**パフォーマンスのログ記録が有効でない場合は NULL を返します。 SQLPERF 構造体内の統計情報がドライバーで動的に更新されることはありません。 呼び出す**SQLGetConnectAttr**たびにパフォーマンス統計を更新する必要があります。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |NULL|パフォーマンスのログ記録が無効です。|  
 |その他の値|SQLPERF 構造体へのポインター。|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 属性は、ユーザー データ ポインターを取得します。 ユーザー データはクライアントのメモリに格納され、接続ごとに記録されます。 ユーザー データ ポインターが設定されていない場合、SQL_UD_NOTSET という NULL ポインターが返されます。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|ユーザー データ ポインターが設定されていません。|  
 |その他の値|ユーザー データへのポインターです。|  

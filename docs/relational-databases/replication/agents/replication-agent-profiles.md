@@ -23,15 +23,15 @@ helpviewer_keywords:
 - Log Reader Agent, profiles
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88f88d0a47ec41c18382d4247051156d65dfcf99
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 97d62a00f1d59bd71eb27e55fac11890821940ec
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agent-profiles"></a>レプリケーション エージェント プロファイル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] レプリケーションを構成すると、エージェント プロファイルのセットがディストリビューターにインストールされます。 エージェント プロファイルには、エージェントが実行されるたびに使用されるパラメーターのセットが含まれています。スタートアップ処理中に各エージェントはディストリビューターにログインし、各エージェントのプロファイルのパラメーターをクエリします。 Web 同期を使用するマージ サブスクリプションの場合、プロファイルはダウンロードされてサブスクライバーに格納されます。 プロファイルが変更されると、次回マージ エージェントが実行されたときにサブスクライバーのプロファイルが更新されます。 Web 同期の詳細については、「 [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)」を参照してください。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
 ||既定値 (default)|詳細履歴|  
 |-|-------------|---------------------|  
-|**-HistoryVerboseLevel**|1|2|  
+|**-HistoryVerboseLevel**|@shouldalert|2|  
 |**-LoginTimeout**|15|15|  
 |**-LogScanThreshold**|500000|500000|  
 |**-PollingInterval**|5|5|  
@@ -77,10 +77,10 @@ ms.lasthandoff: 11/17/2017
 |**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
 |**-CommitBatchThreshold**|1000|1000|1000|1000|1000|  
-|**-HistoryVerboseLevel**|1|2|1|1|1|  
+|**-HistoryVerboseLevel**|@shouldalert|2|@shouldalert|@shouldalert|@shouldalert|  
 |**-KeepAliveMessageInterval**|300|300|300|300|300|  
 |**-LoginTimeout**|15|15|15|15|15|  
-|**-MaxBcpThreads**|1|1|1|1|1|  
+|**-MaxBcpThreads**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
 |**-MaxDeliveredTransactions**|0|0|0|0|0|  
 |**-OledbStreamThreshold**|NULL|NULL|NULL|NULL|32768|  
 |**-PacketSize**|NULL|NULL|NULL|NULL|32768|  
@@ -97,28 +97,28 @@ ms.lasthandoff: 11/17/2017
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
 |**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
-|**-DestThreads**|2|1|1|1|1|1|4|  
-|**-DownloadGenerationsPerBatch**|50|50|50|50|50|1|500|  
+|**-DestThreads**|2|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|4|  
+|**-DownloadGenerationsPerBatch**|50|50|50|50|50|@shouldalert|500|  
 |**-DownloadReadChangesPerBatch**|100|100|100|100|100|100|100|  
 |**-DownloadWriteChangesPerBatch**|100|100|100|100|100|100|100|  
-|**-FastRowCount**|1|1|1|1|1|1|1|  
-|**-HistoryVerboseLevel**|2|3|1|1|2|1|2|  
+|**-FastRowCount**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
+|**-HistoryVerboseLevel**|2|3|@shouldalert|@shouldalert|2|@shouldalert|2|  
 |**-KeepAliveMessageInterval**|300|300|300|300|300|300|300|  
 |**-LoginTimeout**|15|15|15|15|15|15|15|  
 |**-MaxDownloadChanges**|0|0|0|0|0|0|0|  
 |**-MaxUploadChanges**|0|0|0|0|0|0|0|  
-|**-MetadataRetentionCleanup**|1|1|1|1|1|1|1|  
+|**-MetadataRetentionCleanup**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
 |**-NumDeadlockRetries**|5|5|5|5|5|5|5|  
-|**-ParallelUploadDownload**|NULL|NULL|NULL|NULL|NULL|NULL|1|  
+|**-ParallelUploadDownload**|NULL|NULL|NULL|NULL|NULL|NULL|@shouldalert|  
 |**-PollingInterval**|60|60|60|60|60|60|60|  
 |**-QueryTimeout**|300|300|300|300|300|300|600|  
 |**-QueueSizeMultiplier**|NULL|NULL|NULL|NULL|NULL|NULL|5|  
-|**-SrcThreads**|2|2|2|2|2|1|3|  
+|**-SrcThreads**|2|2|2|2|2|@shouldalert|3|  
 |**-StartQueueTimeout**|0|0|0|0|0|0|0|  
-|**-UploadGenerationsPerBatch**|50|50|50|50|50|1|500|  
+|**-UploadGenerationsPerBatch**|50|50|50|50|50|@shouldalert|500|  
 |**-UploadReadChangesPerBatch**|100|100|100|100|100|100|100|  
 |**-UploadWriteChangesPerBatch**|100|100|100|100|100|100|100|  
-|**-Validate**|0|0|0|1|3|0|0|  
+|**-Validate**|0|0|0|@shouldalert|3|0|0|  
 |**-ValidateInterval**|60|60|60|60|60|60|60|  
   
 ## <a name="queue-reader-agent-profiles"></a>キュー リーダー エージェント プロファイル  
@@ -126,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
 ||既定値 (default)|  
 |-|-------------|  
-|**-HistoryVerboseLevel**|1|  
+|**-HistoryVerboseLevel**|@shouldalert|  
 |**-LoginTimeout**|15|  
 |**-PollingInterval**|5|  
 |**-QueryTimeout**|1800|  

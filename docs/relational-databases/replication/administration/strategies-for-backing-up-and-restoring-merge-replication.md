@@ -18,15 +18,15 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], backup and restore
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e93e06006d649fac0046a2e2df8953d9356acfa5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5690ea80bfe12a6995e80987e11bdaa59a30d150
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>マージ レプリケーションのバックアップと復元の方式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] マージ レプリケーションでは、次のデータベースを定期的にバックアップします。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
  これらのいずれかの方法を使用すると、復元の実行後にパブリッシャーとすべてのサブスクライバーが同期されます。  
   
 > [!NOTE]  
->  ID 列を含むテーブルを使用している場合は、復元後、正しい ID 範囲を割り当てる必要があります。 詳細については、「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」を参照してください。  
+>  ID 列を含むテーブルを使用している場合は、復元後、正しい ID 範囲を割り当てる必要があります。 詳細については、「[Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。  
   
 ### <a name="synchronizing-the-publication-database"></a>パブリケーション データベースの同期  
  パブリケーション データベースとサブスクリプション データベースを同期すると、パブリケーション データベースで以前に変更され、復元されたバックアップに表示されていない変更を  1 つ以上のサブスクリプション データベースからアップロードできます。 アップロードできるデータは、パブリケーションのフィルター選択方法によって次のように異なります。  

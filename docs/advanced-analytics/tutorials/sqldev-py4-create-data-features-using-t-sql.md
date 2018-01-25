@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: e8b5ef877bb57ddab397da0bf15750a7e89c8f51
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: a6899cdec3051908094b2c4a5e87678113204580
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="step-4-create-data-features-using-t-sql"></a>手順 4: T-SQL を使用してデータ機能を作成する
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/08/2018
     END
     GO
     ```
-**注**
+**Notes:**
 
 - この関数はスカラー値関数であり、事前定義されている種類の単一データ値を返します。
 - 乗車場所と降車場所から取得した緯度値と経度値を入力値として受け取ります。 Haversine 式は場所をラジアンに変換し、その値を利用して 2 場所間の直接距離をマイルで計算します。

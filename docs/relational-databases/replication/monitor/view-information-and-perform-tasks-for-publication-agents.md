@@ -17,15 +17,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], tasks in Replication Monitor
 ms.assetid: 2a420da2-66f4-4650-9bdd-1992221ed3fd
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dbe419ea1a8042a607045d60873794252378406
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f23a88fa322ef64be50c02c5c1b73eb685163fb4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-information-and-perform-tasks-for-publication-agents"></a>パブリケーション エージェントの情報の表示とタスクの実行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] レプリケーション モニターの **[エージェント]** タブには、選択したパブリケーションに関連付けられているエージェントの情報が含まれています。 ディストリビューション エージェントとマージ エージェントは、サブスクリプションに関連付けられいます。詳細については、[サブスクリプションに関連付けられているエージェントに関する情報の表示とタスクの実行 &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md) に関するページをご覧ください。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
 -   キュー更新サブスクリプションに有効なトランザクション パブリケーションで使用されるキュー リーダー エージェント  
   
- このタブの各オプションに関する情報を表示するには、メニュー バーの **[ヘルプ]** をクリックしてください。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」(レプリケーション モニターの開始) をご覧ください。  
+ このタブの各オプションに関する情報を表示するには、メニュー バーの **[ヘルプ]** をクリックしてください。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
 ### <a name="to-view-information-and-perform-tasks-for-the-agents-associated-with-a-publication"></a>パブリケーションに関連付けられているエージェントの情報を表示したりタスクを実行するには  
   

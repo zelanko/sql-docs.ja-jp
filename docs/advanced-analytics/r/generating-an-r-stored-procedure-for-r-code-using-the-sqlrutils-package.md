@@ -15,13 +15,13 @@ ms.assetid: d8739f16-ac26-4f69-870c-51c77cf286d3
 caps.latest.revision: "8"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7f906136e7e948c7b4cbe2da2f60cc4c488b71e9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4948cdd841c2b97e50623dac7b9d6ba9ef923220
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>sqlrutils パッケージを使用した R コード用の R ストアド プロシージャの生成
 **sqlrutils** パッケージは R ユーザーに、R スクリプトを T-SQL ストアド プロシージャに配置し、そのストアド プロシージャをデータベースに登録し、R 開発環境からそのストアド プロシージャを実行するメカニズムを提供します。 

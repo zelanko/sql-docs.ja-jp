@@ -25,15 +25,15 @@ helpviewer_keywords:
 - independent agents [SQL Server replication]
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 634f38525ab7809da0ade7f002312cb203b767ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 86cebd3ab2286cc34ff25d45ec1837d75716c16f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agent-administration"></a>レプリケーション エージェントの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] レプリケーション エージェントは、レプリケーションに関連した数多くのタスクを実行します。たとえば、スキーマとデータのコピーの作成、パブリッシャーまたはサブスクライバーでの更新の検出、およびサーバー間での変更の反映などを行います。 既定では、レプリケーション エージェントは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントのジョブ ステップで実行されます。 エージェントは単なる実行可能ファイルであるため、コマンド ラインやバッチ スクリプトから直接呼び出すこともできます。 各レプリケーション エージェントでは、ランタイム パラメーターのセットを使用して実行方法を制御できます。このパラメーターはエージェント プロファイルまたはコマンド ラインで指定します。  
@@ -46,10 +46,10 @@ ms.lasthandoff: 11/17/2017
 |エージェント実行可能ファイル|[ファイル名]|  
 |----------------------|---------------|  
 |[レプリケーション スナップショット エージェント](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
-|[レプリケーション ディストリビューション エージェント](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
+|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
 |[レプリケーション ログ リーダー エージェント](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|logread.exe|  
 |[レプリケーション キュー リーダー エージェント](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  
-|[レプリケーション マージ エージェント](../../../relational-databases/replication/agents/replication-merge-agent.md)|replmerg.exe|  
+|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|replmerg.exe|  
   
  レプリケーション エージェントに加え、レプリケーションには定期的なメンテナンスおよび要求時メンテナンスを実行するさまざまなジョブがあります。  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/17/2017
   
     -   ディストリビューション エージェント  
   
-    -   マージ エージェント  
+    -   [マージ エージェント]  
   
      これらのエージェントに関連付けられている情報およびタスクにアクセスするには、 **[サブスクリプション ウォッチ リスト]** タブ (各パブリッシャーで利用可能) または **[すべてのサブスクリプション]** タブ (各パブリケーションで利用可能) を使用します。 詳細については、「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="replication-maintenance-jobs"></a>レプリケーション メンテナンス ジョブ  
  レプリケーションでは、次のジョブを使用して定期的なメンテナンスおよび要求時メンテナンスを実行します。  
   
-|クリーンアップ ジョブ|説明|既定のスケジュール|  
+|クリーンアップ ジョブ|Description|既定のスケジュール|  
 |------------------|-----------------|----------------------|  
 |エージェント履歴のクリーンアップ: ディストリビューション|ディストリビューション データベースからレプリケーション エージェントの履歴を削除します。|10 分おきに実行されます。|  
 |ディストリビューションのクリーンアップ: ディストリビューション|ディストリビューション データベースからレプリケートされたトランザクションを削除します。 ディストリビューションの最大保有期間内に同期されなかったサブスクリプションを非アクティブ化します。|10 分おきに実行されます。|  

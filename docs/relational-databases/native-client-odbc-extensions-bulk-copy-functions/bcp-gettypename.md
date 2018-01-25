@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f452b3c5e12b76ba2d1327b59f1cfa17f16bb46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ccb5d8652421aa0d52fd941e99cbcd01a0cfb6b2
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,10 +43,10 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>引数  
- *トークン*  
+ *token*  
  BCP 型トークンを示す値です。  
   
- *フィールド*  
+ *field*  
  要求されたトークンが max 型かどうかを示します。  
   
 ## <a name="returns"></a>返します。  
@@ -67,22 +67,22 @@ RETCODE bcp_gettypename (
 |**SQLMONEY**|接続前/接続後|**money**|  
 |**SQLFLT8**|接続前/接続後|**float**|  
 |**SQLDATETIME**|接続前/接続後|**datetime**|  
-|**SQLBITN**|接続前/接続後|**ビット null**|  
+|**SQLBITN**|接続前/接続後|**bit-null**|  
 |**SQLBIT**|接続前/接続後|**bit**|  
-|**SQLBIGCHAR**|不可|**char**|  
-|**SQLCHARACTER**|不可|**char**|  
-|**SQLBIGVARCHAR**|不可|**varchar**|  
-|**SQLVARCHAR**|不可|**varchar**|  
+|**SQLBIGCHAR**|いいえ|**char**|  
+|**SQLCHARACTER**|いいえ|**char**|  
+|**SQLBIGVARCHAR**|いいえ|**varchar**|  
+|**SQLVARCHAR**|いいえ|**varchar**|  
 |**SQLTEXT**|接続前/接続後|**text**|  
-|**SQLBIGBINARY**|不可|**[バイナリ]**|  
-|**SQLBINARY**|不可|**Binary**|  
-|**SQLBIGVARBINARY**|不可|**Varbinary**|  
-|**SQLVARBINARY**|不可|**Varbinary**|  
+|**SQLBIGBINARY**|いいえ|**[バイナリ]**|  
+|**SQLBINARY**|いいえ|**Binary**|  
+|**SQLBIGVARBINARY**|いいえ|**Varbinary**|  
+|**SQLVARBINARY**|いいえ|**Varbinary**|  
 |**SQLIMAGE**|接続前/接続後|**[イメージ]**|  
-|**SQLINTN**|接続前/接続後|**int null**|  
-|**SQLDATETIMN**|接続前/接続後|**datetime null**|  
-|**SQLMONEYN**|接続前/接続後|**money null**|  
-|**SQLFLTN**|接続前/接続後|**float null**|  
+|**SQLINTN**|接続前/接続後|**int-null**|  
+|**SQLDATETIMN**|接続前/接続後|**datetime-null**|  
+|**SQLMONEYN**|接続前/接続後|**money-null**|  
+|**SQLFLTN**|接続前/接続後|**float-null**|  
 |**SQLAOPSUM**|接続前/接続後|**Sum**|  
 |**SQLAOPAVG**|接続前/接続後|**Avg**|  
 |**SQLAOPCNT**|接続前/接続後|**Count**|  
@@ -92,22 +92,22 @@ RETCODE bcp_gettypename (
 |**SQLMONEY4**|接続前/接続後|**Smallmoney**|  
 |**SQLFLT4**|接続前/接続後|**本当の**|  
 |**SQLUNIQUEID**|接続前/接続後|**uniqueidentifier**|  
-|**SQLNCHAR**|不可|**Nchar**|  
-|**SQLNVARCHAR**|不可|**Nvarchar**|  
+|**SQLNCHAR**|いいえ|**Nchar**|  
+|**SQLNVARCHAR**|いいえ|**Nvarchar**|  
 |**SQLNTEXT**|接続前/接続後|**Ntext**|  
 |**SQLVARIANT**|接続前/接続後|**sql_variant**|  
 |**SQLINT8**|接続前/接続後|**Bigint**|  
-|**SQLCHARACTER**|可|**varchar(max)**|  
-|**SQLBIGCHAR**|可|**varchar(max)**|  
-|**SQLBIGVARCHAR**|可|**varchar(max)**|  
-|**SQLVARCHAR**|可|**varchar(max)**|  
-|**SQLBINARY**|可|**varbinary(max)**|  
-|**SQLBIGBINARY**|可|**varbinary(max)**|  
-|**SQLBIGVARBINARY**|可|**varbinary(max)**|  
-|**SQLVARBINARY**|可|**varbinary(max)**|  
-|**SQLNCHAR**|可|**nvarchar(max)**|  
-|**SQLNVARCHAR**|可|**nvarchar(max)**|  
-|**SQLXML**|可|**Xml**|  
+|**SQLCHARACTER**|はい|**varchar(max)**|  
+|**SQLBIGCHAR**|はい|**varchar(max)**|  
+|**SQLBIGVARCHAR**|はい|**varchar(max)**|  
+|**SQLVARCHAR**|はい|**varchar(max)**|  
+|**SQLBINARY**|はい|**varbinary(max)**|  
+|**SQLBIGBINARY**|はい|**varbinary(max)**|  
+|**SQLBIGVARBINARY**|はい|**varbinary(max)**|  
+|**SQLVARBINARY**|はい|**varbinary(max)**|  
+|**SQLNCHAR**|はい|**nvarchar(max)**|  
+|**SQLNVARCHAR**|はい|**nvarchar(max)**|  
+|**SQLXML**|はい|**Xml**|  
 |**SQLUDT**|接続前/接続後|**Udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename による機能強化された日付と時刻のサポート  

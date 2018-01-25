@@ -16,15 +16,15 @@ helpviewer_keywords:
 - troubleshooting [SQL Server replication], Oracle publishing
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 caps.latest.revision: "62"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1878b377957022e672dfec13f51e8f54e009c36b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 115bdbf97a35d4035c00a8e547a2c38125ce6970
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle パブリッシャーのトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、Oracle パブリッシャーを構成および使用する際に発生する可能性のあるいくつかの問題を示します。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Oracle データベースがオンラインになっており、SQL*Plus などのツールを使用して Oracle データベースに接続できるかどうか。  
   
--   レプリケーションが Oracle パブリッシャーに接続する際に使用するログインに十分な権限があるかどうか。 詳細については、「[Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」を参照してください。  
+-   レプリケーションが Oracle パブリッシャーに接続する際に使用するログインに十分な権限があるかどうか。 詳細については、「[Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」(Oracle パブリッシャーの構成) をご覧ください。  
   
 -   Oracle パブリッシャーの構成中に定義された TNS 名が tnsnames.ora ファイルに記載されているかどうか。  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  開いている各ダイアログ ボックスで **[OK]** をクリックして作業を終了し、変更を保存します。  
   
- ディストリビューターで sqlplus.exe が見つからない場合は、Oracle クライアント ソフトウェアの現在のバージョンをディストリビューターにインストールします。 詳細については、「[Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」を参照してください。  
+ ディストリビューターで sqlplus.exe が見つからない場合は、Oracle クライアント ソフトウェアの現在のバージョンをディストリビューターにインストールします。 詳細については、「[Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」(Oracle パブリッシャーの構成) をご覧ください。  
   
 ## <a name="sql-server-error-21620-is-raised"></a>SQL Server エラー 21620 が発生する  
  Oracle データベースのバージョン 8.1 よりも前のバージョンに接続している場合、Oracle パブリッシングでは、ディストリビューターにインストールされている Oracle クライアント ソフトウェアが、バージョン 9 からのものである必要があります。 Oracle データベースのバージョン 8.1 以降に接続している場合は、Oracle クライアント ソフトウェアのバージョン 10 以降を使用することをお勧めします。  
@@ -135,7 +135,7 @@ ms.lasthandoff: 11/17/2017
   
 -   "Oracle 用の Oracle OLEDB プロバイダー OraOLEDB.Oracle が登録されていることを示す CLSID レジストリ キーがディストリビューターに存在しません。 ディストリビューターに Oracle OLEDB プロバイダーがインストールおよび登録されていることを確認してください。"  
   
- Oracle クライアント ソフトウェア バージョン 10g を使用している場合、プロバイダーは OraOLEDB10.dll です。バージョン 9i の場合、プロバイダーは OraOLEDB.dll です。 プロバイダーは %ORACLE_HOME%\BIN (たとえば、C:\oracle\product\10.1.0\Client_1\bin) にインストールされます。 ディストリビューターに Oracle OLEDB プロバイダーがインストールされていない場合は、Oracle が提供する Oracle クライアント ソフトウェア インストール ディスクからインストールしてください。 詳細については、「[Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」を参照してください。  
+ Oracle クライアント ソフトウェア バージョン 10g を使用している場合、プロバイダーは OraOLEDB10.dll です。バージョン 9i の場合、プロバイダーは OraOLEDB.dll です。 プロバイダーは %ORACLE_HOME%\BIN (たとえば、C:\oracle\product\10.1.0\Client_1\bin) にインストールされます。 ディストリビューターに Oracle OLEDB プロバイダーがインストールされていない場合は、Oracle が提供する Oracle クライアント ソフトウェア インストール ディスクからインストールしてください。 詳細については、「[Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」(Oracle パブリッシャーの構成) をご覧ください。  
   
  Oracle OLEDB プロバイダーがインストールされている場合は、そのプロバイダーが登録されていることを確認してください。 プロバイダーの DLL を登録するには、DLL がインストールされているディレクトリから次のコマンドを実行し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを停止して再起動します。  
   
@@ -245,7 +245,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  **[ディストリビューターのプロパティ]** ダイアログ ボックスの **[パブリッシャー]** ページで、Oracle パブリッシャーのチェック ボックスをオフにします。  
   
-4.  クリックして **OK**です。  
+4.  **[OK]** をクリックします。  
   
  **Oracle パブリッシャーを削除するには (Transact-SQL)**  
   
@@ -253,6 +253,6 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>参照  
  [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Oracle パブリッシングの概要](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

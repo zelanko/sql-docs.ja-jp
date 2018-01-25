@@ -22,15 +22,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c9b6f552ef52af748dcce74977bfc74806c9546
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 10bc53216b65298837a5086adf89550ad97606a7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-merge-replication-performance"></a>マージ レプリケーション パフォーマンスの向上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]「[レプリケーションの全般的パフォーマンスの向上](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)」で説明した全般的なパフォーマンスのヒントを検討した後、マージ レプリケーションに固有なこれらの項目を併せて検討してください。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
      パブリケーションの保有期間は、サブスクリプションが同期されるまでの最長期間を示し、この期間によって追跡メタデータを保存する期間が決定されます。 この値を大きくすると、ストレージと処理のパフォーマンスが影響を受ける可能性があります。 パブリケーションの保有期間の設定の詳細については、「 [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)」を参照してください。  
   
--   パブリッシャーでのみ変更されるテーブルについては、ダウンロード専用アーティクルを使用する。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンスの最適化](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
+-   パブリッシャーでのみ変更されるテーブルについては、ダウンロード専用アーティクルを使用する。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
   
 ### <a name="filter-design-and-use"></a>フィルターの設計および使用方法  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/17/2017
   
     -   [レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 -   特に同期でサブスクライバーにダウンロードするよりもサブスクライバーからダウンロードすることが多い場合は、 **-MakeGenerationInterval** パラメーターの値を大きくすることを検討する。  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 11/17/2017
   
 -   スナップショットを事前に生成するか、最初の同期時にサブスクライバーからスナップショットの生成および適用を要求できるようにする。  
   
-     これらのオプションの両方またはどちらかを使用して、パラメーター化されたフィルターを使用するパブリケーションに対するスナップショットを提供します。 これらのオプションのどちらかを指定しないと、 **bcp** ユーティリティを使用するのではなく、一連の SELECT ステートメントおよび INSERT ステートメントを使用してサブスクリプションが初期化されます。この処理は、かなり低速で実行されます。 詳細については、「 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」を参照してください。  
+     これらのオプションの両方またはどちらかを使用して、パラメーター化されたフィルターを使用するパブリケーションに対するスナップショットを提供します。 これらのオプションのどちらかを指定しないと、 **bcp** ユーティリティを使用するのではなく、一連の SELECT ステートメントおよび INSERT ステートメントを使用してサブスクリプションが初期化されます。この処理は、かなり低速で実行されます。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」をご覧ください。  
   
 ## <a name="maintenance-and-monitoring-considerations"></a>メンテナンスおよび監視に関する注意点  
   

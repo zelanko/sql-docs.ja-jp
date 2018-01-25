@@ -17,15 +17,15 @@ helpviewer_keywords:
 - download-only articles
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9af82e7051c7dae3a16bd420dfe923d88a08cfac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7cf9009385126a41283ce8044acba2bd35d08867
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] マージ レプリケーションには、異なるアプリケーション ニーズに対応する 2 種類のアーティクルが用意されています。 アプリケーションでの必要に応じて、パブリケーションにはこれら 2 種類のアーティクルを 1 つ以上格納できます。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
  アプリケーションの要件を理解することにより、柔軟性の最大化とパフォーマンスの最適化の間でアプリケーションを調整できます。 たとえば、パブリッシャーとサブスクライバーの両方で多数の競合と変更が発生するアプリケーションでは、標準アーティクルから構成されるパブリケーションを使用します。 セールス フォース オートメーションなど一部のアプリケーションでは、競合の可能性のあるアーティクルと、それ以外にダウンロード専用に指定できる参照テーブル用のアーティクルが使用されることがあります。 POS システムやフィールド フォース オートメーションなどのデータ入力アプリケーションでは、競合を排除するように厳密にデータがパーティション分割されている場合が多く、あるサブスクライバーから他のサブスクライバーにデータが送信されることは決してありません。 このような状況では、重複しないパーティション、ダウンロード専用アーティクル、および事前計算済みパーティションを組み合わせて使用することで、パフォーマンスとスケーラビリティを最大化することができます。 重複しないパーティションおよび事前計算済みパーティションの詳細については、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [マージ レプリケーションのアーティクルのオプション](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
+ [マージ レプリケーションのアーティクル オプション](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
  [条件付き削除の追跡によるマージ レプリケーション パフォーマンスの最適化](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
   
   

@@ -23,15 +23,15 @@ helpviewer_keywords:
 - backups [SQL Server replication], transactional replication
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69c0da57bc8bf51162dcc26771726bf2e9f6091d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5d7e9c5e24951afe3a997dce86f10b63b6fcfdf4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>スナップショット レプリケーションおよびトランザクション レプリケーションのバックアップと復元の方式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] スナップショット レプリケーションおよびトランザクション レプリケーションのバックアップと復元の方式を計画する場合には、以下の 3 点を考慮する必要があります。  
@@ -167,7 +167,7 @@ ms.lasthandoff: 11/17/2017
 3.  キュー更新サブスクリプションを使用している場合は、各サブスクライバーに接続して、サブスクリプション データベースの [MSreplication_queue &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msreplication-queue-transact-sql.md) テーブルからすべての行を削除します。 手順 4 に進みます。  
   
     > [!NOTE]  
-    >  キュー更新サブスクリプションおよび ID 列を含むテーブルを使用している場合は、復元後に正しい ID 範囲が割り当てられていることを確認する必要があります。 詳細については、「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」を参照してください。  
+    >  キュー更新サブスクリプションおよび ID 列を含むテーブルを使用している場合は、復元後に正しい ID 範囲が割り当てられていることを確認する必要があります。 詳細については、「[Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。  
   
 4.  サブスクライバーで未実行のコマンドがすべてディストリビューション データベースに存在することを確認し、復元されたバックアップに含まれないすべてのトランザクションをパブリケーション データベースに手動で適用する必要があります。  
   
@@ -354,7 +354,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>参照  
  [SQL Server データベースのバックアップと復元](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [レプリケートされたデータベースのバックアップと復元](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
- [ディストリビューションの構成](../../../relational-databases/replication/configure-distribution.md)   
+ [[ディストリビューションの構成]](../../../relational-databases/replication/configure-distribution.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
  [サブスクリプションの初期化](../../../relational-databases/replication/initialize-a-subscription.md)   

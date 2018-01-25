@@ -16,15 +16,15 @@ helpviewer_keywords:
 - custom resolvers [SQL Server replication]
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 198d50f997ae034c1377dfb1d340a1e0d46949f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 409a397589bd7add43ffcb29e9bcf1a9c9e67f59
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>マージ レプリケーションの競合の詳細 - COM ベースの競合回避モジュール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のすべての COM ベースの競合回避モジュールでは、更新の競合が処理され、指定した場所で挿入および削除の競合が処理されます。 すべての競合回避モジュールで列追跡処理が可能です。また、ほとんどのモジュールで行追跡処理を行うこともできます。 この競合回避モジュール、および他の COM ベースの競合回避モジュールで処理可能な競合の種類が宣言され、それ以外の競合に対してはマージ  エージェントで既定の競合回避モジュールが使用されます。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  次の表は、特定の競合回避モジュールの属性を示しています。  
   
-|名前|必要な入力|説明|コメント|  
+|[オブジェクト名]|必要な入力|Description|コメント|  
 |----------|--------------------|-----------------|--------------|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 追加競合回避モジュール|合計する列の名前。 **int**、 **smallint**、 **numeric**などの算術データ型である必要があります。|優先される競合データは優先度値によって決まります。 指定された列の値は、変換元の列の値と変換先の列の値を合計した値に設定されます。 1 つを NULL に設定した場合、他の列の値に設定されます。|更新の競合を対象とし、列追跡のみを行います。|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 平均競合回避モジュール|平均をとる列の名前。 **int**、 **smallint**、 **numeric**などの算術データ型である必要があります。|優先される競合データは優先度値によって決まります。 結果の列の値は、変換元の列の値と変換先の列の値の平均値に設定されます。 1 つを NULL に設定した場合、他の列の値に設定されます。|更新の競合を対象とし、列追跡のみを行います。|  

@@ -14,13 +14,13 @@ ms.assetid: 132db249-b9f1-48f5-a63e-c9806cacc4af
 caps.latest.revision: "6"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dc8dfabd3c88bb93012a8d4cd10aaf35573c2782
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f7f613516ce1cdad72c9bb07c6201e5f19421b36
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-r-code-profiling-functions"></a>R コード プロファイル関数の使用
 SQL Server のリソースとツールを使用して R スクリプトの実行を監視できるほか、他の R パッケージが提供するパフォーマンス ツールを使用して、内部関数の呼び出しに関する情報を取得できます。 このトピックでは、始めるための基本的なリソースの一覧を提供します。 専門的なガイダンスについては、Hadley Wickham 著 "Advanced R" の、[Performance](http://adv-r.had.co.nz/Performance.html) の章をお勧めします。

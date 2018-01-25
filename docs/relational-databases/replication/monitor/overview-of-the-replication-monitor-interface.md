@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Replication Monitor, about Replication Monitor
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 977bcf0ef4265e3864fee580dd2a8bced177b334
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dedf784414d1eda02bd650bd46051950f22629ad
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>レプリケーション モニターのインターフェイスの概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターでは、レプリケーションのすべての利用状況について、パブリッシャー関連の情報またはディストリビューター関連の情報が 2 つのペインで表示されます。 左ペインにパブリッシャーを追加すると、パブリッシャーとそのパブリケーション、パブリケーションのサブスクリプション、およびさまざまなレプリケーション エージェントに関する情報が右ペインに表示されます。 レプリケーション モニターでは、レプリケーション トポロジに関する情報の表示に加えて、エージェントの開始や停止、データの検証などさまざまなタスクを実行できます。  
@@ -225,7 +225,7 @@ ms.lasthandoff: 11/17/2017
  詳細については、「[サブスクリプションの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)」および「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する (レプリケーション モニター)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>情報の表示とエージェント プロファイル関連のタスクの実行  
- レプリケーション モニターには、エージェント プロファイルを管理するためのさまざまなダイアログ ボックスが用意されています。 エージェント プロファイルとは、エージェントのパラメーターのセットであり、これらのパラメーターによってエージェントの動作が決定されます。 詳細については、「 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。 これらのダイアログ ボックスには以下のものがあります。  
+ レプリケーション モニターには、エージェント プロファイルを管理するためのさまざまなダイアログ ボックスが用意されています。 エージェント プロファイルとは、エージェントのパラメーターのセットであり、これらのパラメーターによってエージェントの動作が決定されます。 詳しくは、「 [レプリケーション エージェント プロファイル](../../../relational-databases/replication/agents/replication-agent-profiles.md)」をご覧ください。 これらのダイアログ ボックスには以下のものがあります。  
   
 -   **[エージェント プロファイル]**  
   

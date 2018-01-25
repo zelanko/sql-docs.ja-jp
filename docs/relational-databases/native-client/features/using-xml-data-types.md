@@ -35,13 +35,13 @@ ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55415758711cb93b7c0da560a5935df679e36096
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 075cce0d10d02d5566f4a370b28466a4f79ab9c0
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="using-xml-data-types"></a>XML データ型の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,13 +91,13 @@ ms.lasthandoff: 01/08/2018
 |データ型|SQL Server の<br /><br /> **XML**|SQL Server の<br /><br /> **非 XML**|サーバーから<br /><br /> **XML**|サーバーから<br /><br /> **非 XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|パススルー<sup>6、7</sup>|エラー<sup>1</sup>|[OK]<sup>11、6</sup>|エラー<sup>8</sup>|  
-|DBTYPE_BYTES|パススルー<sup>6、7</sup>|該当なし<sup>2</sup>|[OK] <sup>11、6</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_WSTR|パススルー<sup>6、10</sup>|該当なし<sup>2</sup>|[OK]<sup>4、6、12</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_BSTR|パススルー<sup>6、10</sup>|該当なし<sup>2</sup>|[OK] <sup>3</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_STR|[OK]<sup>6、9、10</sup>|該当なし<sup>2</sup>|[OK]<sup>5、6、12</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|経由のバイト ストリーム**ISequentialStream**<sup>7</sup>|該当なし<sup>2</sup>|経由のバイト ストリーム**ISequentialStream**<sup>11</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 & #124 です。VT_ARRAY)|パススルー<sup>6、7</sup>|該当なし<sup>2</sup>|なし|該当なし<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|パススルー<sup>6、10</sup>|該当なし<sup>2</sup>|[OK]<sup>3</sup>|該当なし<sup>2</sup>|  
+|DBTYPE_BYTES|パススルー<sup>6、7</sup>|N/A<sup>2</sup>|[OK] <sup>11、6</sup>|N/A <sup>2</sup>|  
+|DBTYPE_WSTR|パススルー<sup>6、10</sup>|N/A <sup>2</sup>|[OK]<sup>4、6、12</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BSTR|パススルー<sup>6、10</sup>|N/A <sup>2</sup>|OK <sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_STR|[OK]<sup>6、9、10</sup>|N/A <sup>2</sup>|[OK]<sup>5、6、12</sup>|N/A <sup>2</sup>|  
+|DBTYPE_IUNKNOWN|経由のバイト ストリーム**ISequentialStream**<sup>7</sup>|N/A <sup>2</sup>|経由のバイト ストリーム**ISequentialStream**<sup>11</sup>|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|パススルー<sup>6、7</sup>|N/A <sup>2</sup>|なし|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|パススルー<sup>6、10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
   
  <sup>1</sup>サーバー以外の型に dbtype_xml 型が指定された場合**icommandwithparameters::setparameterinfo**アクセサーの型が dbtype_xml 型、およびステートメントが実行されたときにエラーが発生した (DB_E_ERRORSOCCURRED、パラメーターの状態は dbstatus_e_badaccessor になります)。 データを、サーバーに送信するそれ以外の場合は、サーバーには、XML からパラメーターのデータ型への暗黙的な変換がないことを示すエラーが返されます。  
   
@@ -176,7 +176,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER プロパティ セット  
  サポートするために、 **xml** OLE DB 経由でデータ型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client は、次の値を含む新しい DBPROPSET_SQLSERVERPARAMETER プロパティ セットを実装します。  
   
-|[オブジェクト名]|型|Description|  
+|名前|型|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML スキーマ コレクションを定義しているカタログ (データベース) の名前。 SQL の 3 部構成の名前識別子の一部です。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|スキーマ コレクションに含まれている XML スキーマの名前。 SQL の 3 部構成による名前の識別子の一部になります。|  
@@ -185,7 +185,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN プロパティ セット  
  内のテーブルの作成をサポートする、 **ITableDefinition**インターフェイス、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、DBPROPSET_SQLSERVERCOLUMN プロパティ セットに 3 つの新しい列を追加します。  
   
-|[オブジェクト名]|型|Description|  
+|名前|型|Description|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|型指定された XML 列の場合、このプロパティは XML スキーマが格納されているカタログ名を指定する文字列です。 他のデータ型の列の場合、このプロパティでは空文字列が返されます。|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|型指定された XML 列の場合、このプロパティはこの列を定義している XML スキーマ名を指定する文字列です。|  
@@ -278,6 +278,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [ISSCommandWithParameters (&) #40";"OLE DB"&"#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

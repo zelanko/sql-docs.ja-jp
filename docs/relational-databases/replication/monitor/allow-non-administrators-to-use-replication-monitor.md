@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Replication Monitor, non-administrators access
 ms.assetid: 1cf21d9e-831d-41a1-a5a0-83ff6d22fa86
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f4bca1cbe7dbf8b77a6cbf6855c5b874035e541
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9bdafa7caba4b043f53c365f51646da7c9343f8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="allow-non-administrators-to-use-replication-monitor"></a>管理者以外のユーザーがレプリケーション モニターを使用できるようにする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して、管理者以外のユーザーにレプリケーション モニターの使用を許可する方法について説明します。 レプリケーション モニターは、次のロールのメンバーになっているユーザーが使用できます。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **管理者以外のユーザーがレプリケーション モニターを使用できるようにするために使用するもの:**  
   
@@ -47,11 +47,11 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  管理者以外のユーザーがレプリケーション モニターを使用できるようにするには、 **sysadmin** 固定サーバー ロールのメンバーがディストリビューション データベースにユーザーを追加して、そのユーザーを **replmonitor** ロールに割り当てる必要があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  

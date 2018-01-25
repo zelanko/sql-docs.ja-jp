@@ -14,13 +14,13 @@ ms.assetid: ffbdb114-e7a5-4145-bb8f-2eb97720ea96
 caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c45a6525ef9fa63141ddc4c594d84e4f9e118ee3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c5852461b21566ea90fa884f0e94e53d52fba210
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="monitoring-r-services"></a>R Services の監視
   このセクションでは、[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] を使用するときの一般的な次の監視タスクについて説明します。  

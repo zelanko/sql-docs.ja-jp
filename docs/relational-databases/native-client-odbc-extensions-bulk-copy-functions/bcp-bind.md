@@ -1,5 +1,5 @@
 ---
-title: "bcp_bind |Microsoft ドキュメント"
+title: bcp_bind | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_bind function
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3f6005104620c3a55d34c39b114517dab6750d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9efa0570e0ffe698fccb7decb6eafbf5877842db
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -129,12 +129,12 @@ bcp_bind(hdbc, szName, 0,
  データベース テーブル内にある、データのコピー先となる列の序数位置です。 テーブル内の最初の列は列 1 です。 列の序数位置がによって報告された[SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)です。  
   
 ## <a name="returns"></a>返します。  
- 成功または失敗します。  
+ SUCCEED または FAIL。  
   
 ## <a name="remarks"></a>解説  
  使用して**bcp_bind**迅速で効率的な方法で、プログラム変数からのテーブルにデータをコピーする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
- 呼び出す[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)これ、またはその他の一括コピー関数を呼び出す前にします。 呼び出す**bcp_init**設定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一括コピーの対象のテーブルです。 呼び出すときに**bcp_init**で使用するため**bcp_bind**と[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)、 **bcp_init** *szDataFile*データ ファイルを示すパラメーターが NULL に設定されています。**bcp_init***eDirection*パラメーターが DB_IN に設定します。  
+ 呼び出す[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)これ、またはその他の一括コピー関数を呼び出す前にします。 呼び出す**bcp_init**設定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一括コピーの対象のテーブルです。 呼び出すときに**bcp_init**で使用するため**bcp_bind**と[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)、 **bcp_init** *szDataFile*データ ファイルを示すパラメーターが NULL に設定されています。**bcp_init * * * eDirection*パラメーターが DB_IN に設定します。  
   
  個別**bcp_bind**の各列に対して呼び出し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をコピーするテーブル。 後、必要な**bcp_bind**呼び出しが行われているし、呼び出す**bcp_sendrow**をプログラム変数からのデータの行を送信する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 列の再バインドはサポートされていません。  
   
@@ -156,7 +156,7 @@ bcp_bind(hdbc, szName, 0,
   
 -   0xFFFFFFFFFFFFFFFE は、データをチャンク単位でサーバーに効率的に送信するために使用する特別なプレフィックスの値として処理されます。 この特別なプレフィックス値を含むデータは、次のような形式になります。  
   
--   < SPECIAL_PREFIX > \<0 または以上のデータ チャンク >< ZERO_CHUNK > 場所。  
+-   <SPECIAL_PREFIX> \<0 or more  DATA CHUNKS> <ZERO_CHUNK> where:  
   
 -   SPECIAL_PREFIX には 0xFFFFFFFFFFFFFFFE を指定します。  
   

@@ -16,12 +16,12 @@ ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
 caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 5ff7287937e2bddd57d4b155c254bcd29bfc0d68
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 2fc213534da32bf529acdb85fd5b0288bf686068
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>R と SQL Server のエンド ツー エンドのデータ サイエンスのチュートリアル
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/08/2018
 + すべての SQL と R スクリプトが含まれます。
 + 環境内で実行するには、スクリプト内の文字列を変更する必要があります。 これを行う任意のコード エディターなど[Visual Studio Code](https://code.visualstudio.com/Download)です。
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>前提条件
 
 + SQL Server 2016 のインスタンスまたは SQL Server 2017 の評価版へのアクセスが必要です。
 + SQL Server コンピューターの少なくとも 1 つのインスタンスに [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] がインストールされている必要があります。

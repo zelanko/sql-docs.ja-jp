@@ -25,11 +25,11 @@
 
 # [SSIS パッケージを Azure にリフト アンド シフトする](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
 ## [チュートリアル - Azure でのパッケージを配置、実行、監視する](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-## [Azure で SSIS カタログに接続する](lift-shift/ssis-azure-connect-to-catalog-database.md)
-## [Azure でのパッケージ実行をスケジュールする](lift-shift/ssis-azure-schedule-packages.md)
-## [Azure に配置されたパッケージの検証](lift-shift/ssis-azure-validate-packages.md)
 ## [Windows 認証でデータ ソースに接続する](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [ファイルとファイル共有への接続](lift-shift/ssis-azure-files-file-shares.md)
+## [Azure に配置されたパッケージの検証](lift-shift/ssis-azure-validate-packages.md)
+## [Azure で SSIS カタログに接続する](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Azure でのパッケージ実行をスケジュールする](lift-shift/ssis-azure-schedule-packages.md)
 
 # [インストールまたはアップグレード](../integration-services/install-windows/install-integration-services.md)
 
@@ -175,11 +175,8 @@
 #### [レッスン 3-3 - 配置したパッケージのテスト](lesson-3-3-testing-the-deployed-packages.md)
 
 # リソース
-## ブログをフォロー
-### [SSIS チーム ブログ](https://blogs.msdn.microsoft.com/ssis/)
-## ヘルプの参照
-### [MSDN の SSIS フォーラム](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
-### [Stack Overflow の SSIS](http://stackoverflow.com/questions/tagged/ssis)  
-## フィードバックの送信
-### [SQL Server フィードバック フォーラム](https://feedback.azure.com/forums/908035-sql-server)  
+## [SSIS フォーラムのヘルプの表示](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+## [Stack Overflow のヘルプの表示](http://stackoverflow.com/questions/tagged/ssis)  
+## [SSIS チーム ブログのフォロー](https://blogs.msdn.microsoft.com/ssis/)
+## [問題と要求の報告機能](https://feedback.azure.com/forums/908035-sql-server)
 ## [PC のドキュメントを入手](../sql-server/sql-server-help-installation.md)

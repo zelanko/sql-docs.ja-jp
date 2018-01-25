@@ -1,5 +1,5 @@
 ---
-title: "bcp_setcolfmt |Microsoft ドキュメント"
+title: bcp_setcolfmt | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_setcolfmt function
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c01a4e7098524e14c8198894a4f282b602cb1166
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 553681c7e0e56978f5df44b23041e52a66f129a9
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,13 +53,13 @@ RETCODE bcp_setcolfmt (
  *hdbc*  
  一括コピーが有効な ODBC 接続ハンドルです。  
   
- *フィールド*  
+ *field*  
  プロパティを設定する列の序数です。  
   
  *プロパティ*  
  プロパティ定数のいずれかを指定します。 次の表に、プロパティ定数を示します。  
   
-|プロパティ|値|Description|  
+|プロパティ|[値]|Description|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|ユーザー ファイル内にある列のデータ型です。 データベース テーブル内の対応する列のデータ型と異なる場合は、一括コピーでは可能な限りデータを変換します。<br /><br /> BCP_FMT_TYPE パラメーターは、ODBC C データ型の列挙子ではなく、sqlncli.h 内の SQL Server データ型トークンで列挙されます。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の SQLCHARACTER 型を使用して、ODBC の SQL_C_CHAR 型の文字列を指定できます。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型に対して既定のデータ表現を指定するには、このパラメーターに 0 を設定します。<br /><br /> SQL Server からが BCP_FMT_TYPE SQLDECIMAL または SQLNUMERIC を基になる列がない場合、ファイルへの一括コピーの**10 進**または**数値**、既定の有効桁数と小数点以下桁数が使用されます。 それ以外の場合、ソース列が**decimal**または**数値**、有効桁数と基になる列の小数点以下桁数を使用します。|  
 |BCP_FMT_INDICATOR_LEN|INT|インジケーター (プレフィックス) のバイト単位の長さです。<br /><br /> これは、列データ内にある長さのインジケーターや NULL インジケーターのバイト単位の長さです。 インジケーターの長さの有効値は、0 (インジケーターを使用しない)、1、2、または 4 です。<br /><br /> 一括コピーのインジケーターの既定の使用方法を指定するには、このパラメーターに SQL_VARLEN_DATA を設定します。<br /><br /> インジケーターは、メモリ内ではすべてのデータの直前に、データ ファイル内ではインジケーターを適用するデータの直前に配置します。<br /><br /> 複数の方法 (インジケーターと列の最大長、インジケーターとターミネータ シーケンスなど) を使用してデータ ファイルの列長を指定すると、一括コピーではコピーするデータの量が最も少なくなる方法が使用されます。<br /><br /> ユーザーの操作でデータの形式が調整されずに一括コピーで生成されたデータ ファイルには、列データの長さが異なる場合や、列の値に NULL が許容される場合にインジケーターが含まれます。|  
@@ -75,7 +75,7 @@ RETCODE bcp_setcolfmt (
  プロパティ バッファーのバイト単位の長さです。  
   
 ## <a name="returns"></a>返します。  
- 成功または失敗します。  
+ SUCCEED または FAIL。  
   
 ## <a name="remarks"></a>解説  
  この関数は、 **bcp_colfmt**関数。 すべての機能**bcp_colfmt**で提供される**bcp_setcolfmt**関数。 さらに、列の照合順序もサポートされます。 列形式属性は、次に示した順番で設定することをお勧めします。  

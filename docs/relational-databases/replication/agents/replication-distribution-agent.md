@@ -18,15 +18,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 caps.latest.revision: "64"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32e48df7831764259bd9f05d53a2d8b4e3ca29d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b3a92cdd309e4bc4c60ff922b8444d810a2981cf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-distribution-agent"></a>レプリケーション ディストリビューション エージェント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] レプリケーション ディストリビューション エージェントは、ディストリビューション データベース テーブルに登録されたスナップショット (スナップショット レプリケーションの場合) とトランザクション (トランザクション レプリケーションの場合) を、サブスクライバーのレプリケーション先のテーブルに移動する実行可能ファイルです。  
@@ -97,13 +97,13 @@ distrib [-?]
  使用できるすべてのパラメーターを表示します。  
   
  **-Publisher** *server_name*[**\\***i**nstance_name*]  
- パブリッシャーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
+ パブリッシャーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。  
   
  **-PublisherDB** *publisher_database*  
  パブリッシャー データベースの名前です。  
   
  **-Subscriber** *server_name*[**\\***instance_name*]  
- サブスクライバーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
+ サブスクライバーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。  
   
  **-SubscriberDB** *subscriber_database*  
  サブスクライバー データベースの名前です。  
@@ -141,13 +141,13 @@ distrib [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  接続確立時にディストリビューション エージェントが使用する SSL (Secure Sockets Layer) の暗号化レベルです。  
   
-|EncryptionLevel の値|説明|  
+|EncryptionLevel の値|Description|  
 |---------------------------|-----------------|  
 |**0**|SSL は使用されません。|  
 |**1**|SSL は使用されますが、信頼できる発行者によって SSL サーバー証明が署名されているかどうかを検証しません。|  
 |**2**|SSL が使用され、証明書の確認が行われます。|  
   
- 詳細については、「[Security Overview &#40;Replication&#41;](../../../relational-databases/replication/security/security-overview-replication.md)」(セキュリティの概要 (レプリケーション)) を参照してください。  
+ 詳細については、「[セキュリティの概要 &#40;レプリケーション&#41;](../../../relational-databases/replication/security/security-overview-replication.md)」を参照してください。  
   
  **-ErrorFile** *error_path_and_file_name*  
  ディストリビューション エージェントが作成するエラー ファイルのパスとファイル名です。 このファイルは、サブスクライバーでレプリケーション トランザクションを適用しているときに、エラーが発生すると生成されます。パブリッシャーまたはディストリビューターで発生したエラーについては、このファイルには記録されません。 このファイルには、障害が発生したレプリケーション トランザクションおよび関連するエラー メッセージが含まれます。 指定しない場合は、エラー ファイルはディストリビューション エージェントの現在のディレクトリに作成されます。 エラー ファイル名は、ディストリビューション エージェントの名前に .err 拡張子を付けた名前です。 指定したファイル名が既存の場合、エラー メッセージはこのファイルに追加されます。 このパラメーターには最大 256 個の Unicode 文字を指定できます。  
@@ -173,7 +173,7 @@ distrib [-?]
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
  ディストリビューション操作中にログに記録する履歴の量を指定します。 **1**を選択すれば、ログへの履歴の記録がパフォーマンスに与える影響を最小限に抑えることができます。  
   
-|HistoryVerboseLevel の値|説明|  
+|HistoryVerboseLevel の値|Description|  
 |-------------------------------|-----------------|  
 |**0**|進行状況メッセージがコンソールまたは出力ファイルに書き込まれます。 履歴レコードは、ディストリビューション データベースのログに記録されません。|  
 |**1**|既定値です。 同じ状態 (startup、progress、success など) を示している以前の履歴メッセージを常に更新します。 前回の記録に同じ状態がない場合は、新しい記録を挿入します。|  
@@ -252,7 +252,7 @@ distrib [-?]
  **-SubscriberType** [ **0**| **1**| **3**]  
  ディストリビューション エージェントが使用するサブスクライバー接続の種類を指定します。  
   
-|サブスクライバーの種類|説明|  
+|サブスクライバーの種類|Description|  
 |--------------------------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**1**|ODBC データ ソース (ODBC data source)|  
@@ -277,7 +277,7 @@ distrib [-?]
  ディストリビューションのサブスクリプションの種類を指定します。 値 **0** はプッシュ サブスクリプションを、値 **1** はプル サブスクリプションを、値 **2** は匿名サブスクリプションを示します。  
   
  **-TransactionsPerHistory** [ **0**| **1**|...**10000**]  
- 履歴をログに記録するトランザクション間隔を指定します。 最後に履歴をログに記録してからコミットしたトランザクションの数がこのオプションより多い場合、履歴メッセージがログに記録されます。 既定値は、100 です。 値 **0** は、 **TransactionsPerHistory**が無制限であることを指定します。 上記の **-MessageInterval**パラメーターを参照してください。  
+ 履歴をログに記録するトランザクション間隔を指定します。 最後に履歴をログに記録してからコミットしたトランザクションの数がこのオプションより多い場合、履歴メッセージがログに記録されます。 既定値は、100 です。 値 **0** は、 **TransactionsPerHistory**が無制限であることを指定します。 See the preceding **–MessageInterval**parameter.  
   
  **-UseDTS**  
  データ変換を許可するパブリケーションでは、このパラメーターを指定する必要があります。  
@@ -288,7 +288,7 @@ distrib [-?]
  **-UseOledbStreaming**  
  指定した場合、BLOB データをストリームとしてバインドできるようになります。 ストリームが使用されるしきい値 (バイト サイズ) を指定するには、 **-OledbStreamThreshold** を使用します。 **UseOledbStreaming** は既定で有効になっています。 **UseOledbStreaming** は、**C:\Program Files\Microsoft SQL Server\\<version\>\COM** フォルダーに書き込みます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  ドメイン ユーザー アカウント (既定値) ではなくローカル システム アカウントで実行するように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントをインストールした場合、サービスはローカル コンピューターにのみアクセスできます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスへのログイン時に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]エージェントの下で実行するディストリビューション エージェントで、Windows 認証モードを使用するように構成すると、ディストリビューション エージェントは失敗します。 既定の設定は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証です。 セキュリティ アカウント変更の詳細については、「 [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  

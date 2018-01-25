@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a7a7599ab507710f900a2dba3b0034cbad52008
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bf27150c9e6c0da3f32cd3295c358c80da44b767
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
 |SQLSTATE|[エラー]|Description|  
 |--------------|-----------|-----------------|  
-|22026|文字列データの長さが合致しません|送信するバイトのデータの長さが指定されている場合、アプリケーションによってなどを SQL_LEN_DATA_AT_EXEC で (*n*)、 * n *の合計数、0 より大きいSQLPutData を使用してアプリケーションによって指定されたバイトは、指定した長さと一致する必要があります。|  
+|22026|文字列データの長さが合致しません|送信するバイトのデータの長さが指定されている場合、アプリケーションによってなどを SQL_LEN_DATA_AT_EXEC で (*n*)、  *n* の合計数、0 より大きいSQLPutData を使用してアプリケーションによって指定されたバイトは、指定した長さと一致する必要があります。|  
   
 ## <a name="sqlputdata-and-table-valued-parameters"></a>SQLPutData とテーブル値パラメーター  
  テーブル値パラメーターを可変の行バインドを使用すると、SQLPutData はアプリケーションによって使用されます。 *StrLen_Or_Ind*パラメーターは、次の行またはテーブル値パラメーターのデータの行のデータを収集するドライバーの準備ができて、こと、またはそれ以上の行が使用できることを示します。  
@@ -60,15 +60,15 @@ ms.lasthandoff: 01/08/2018
   
  場合*StrLen_Or_Ind* SQL_DEFAULT_PARAM または 0 から SQL_PARAMSET_SIZE までの数値以外の値を持つ (つまり、 *ColumnSize* SQLBindParameter のパラメーター) はエラーです。 このエラーが発生すると、SQLPutData は、"文字列長またはバッファー長が正しくありません" というメッセージで SQLSTATE=HY090 の SQL_ERROR を返します。  
   
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター (&) #40";"ODBC"&"#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)です。  
+ テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)です。  
   
 ## <a name="sqlputdata-support-for-enhanced-date-and-time-features"></a>SQLPutData による機能強化された日付と時刻のサポート  
  」の説明に従って、日付/時刻型のパラメーターの値は変換は[C から SQL への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)です。  
   
- 詳細については、次を参照してください。[日付と時刻の強化 (&) #40";"ODBC"&"#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)です。  
+ 詳細については、次を参照してください。[日付と時刻の強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)です。  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>SQLPutData による大きな CLR UDT のサポート  
- **SQLPutData**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型 (&) #40";"ODBC"&"#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)です。  
+ **SQLPutData**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)です。  
   
 ## <a name="see-also"></a>参照  
  [SQLPutData 関数](http://go.microsoft.com/fwlink/?LinkId=59365)   
