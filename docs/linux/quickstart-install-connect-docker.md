@@ -30,11 +30,11 @@ ms.lasthandoff: 12/04/2017
 このイメージは、Ubuntu 16.04 の Linux で動作する SQL Server で構成されます。 Linux の Docker エンジン 1.8 + または Docker for Mac/Windows から使用できます。
 
 > [!NOTE]
-> このクイック スタートは mssql-server-**linux** イメージの使用に特にフォーカスしています。 Windows イメージは含まれていませんが、それについては [mssql-server-windows-developer Docker Hub ページ](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/) でさらに理解することができます。
+> このクイック スタートは mssql-server-**linux** イメージの使用に特にフォーカスしています。 Windows イメージについては触れていませんが、[mssql-server-windows-developer Docker Hub ページ](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/) で詳細情報を得ることができます。
 
 ## <a id="requirements"></a> 前提条件
 
-- サポートされている任意の Linux ディストリビューションの Docker エンジン 1.8 + または Docker for Mac/windows。さらに詳しい情報は [インストール Docker](https://docs.docker.com/engine/installation/) を見てください。
+- サポートされている任意の Linux ディストリビューションの Docker エンジン 1.8 + または Docker for Mac/Windows。詳細については「[Install Docker](https://docs.docker.com/engine/installation/)」(Docker のインストール) を参照してください。
 - 2 GB 以上のディスク領域
 - 2 GB 以上の RAM
 - [SQL Server on Linux のシステム要件](sql-server-linux-setup.md#system)。
