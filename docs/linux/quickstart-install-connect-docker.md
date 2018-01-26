@@ -1,4 +1,4 @@
----
+﻿---
 title: "SQL Server 2017 Docker を使ってみる |Microsoft ドキュメント"
 description: "この クイックスタートでは、Docker を使用して、SQL Server 2017 コンテナー イメージ をプルして実行します。その次に、sqlcmd に接続して、最初のデータベースを作成し、クエリを実行します。"
 author: rothja
@@ -21,23 +21,23 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/04/2017
 ---
-# <a name="run-the-sql-server-2017-container-image-with-docker"></a>Docker を使用した SQL Server 2017 コンテナー イメージを実行します。
+# <a name="run-the-sql-server-2017-container-image-with-docker"></a>Docker を使用して SQL Server 2017 コンテナー イメージを実行する
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-このクイック スタート チュートリアルでのプルし、SQL Server 2017 コンテナー イメージを実行に Docker を使用する[mssql サーバー linux](https://hub.docker.com/r/microsoft/mssql-server-linux/)です。 接続し、 **sqlcmd**を最初にデータベースを作成し、クエリを実行します。
+このクイックスタートでは、 SQL Server 2017 コンテナー イメージ, [mssql-sever-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) をプルし、実行するために Docker を使用します。その次に **sqlcmd** を使用して、最初のデータベースへ接続し、クエリを実行します。
 
-このイメージは、Ubuntu 16.04 に基づいて Linux で実行されている SQL Server で構成されます。 Mac/Windows 用の Docker エンジン 1.8 + Linux または Docker を使用できます。
+このイメージは、Ubuntu 16.04 の Linux で動作する SQL Server で構成されます。 Linux の Docker エンジン 1.8 + または Docker for Mac/Windows から使用できます。
 
 > [!NOTE]
-> このクイック スタート特に焦点を mssql を使用して、サーバーの**linux**イメージ。 Windows イメージが含まれていないが、詳細情報を入手するには上、 [mssql server windows 開発者 Docker Hub ページ](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)です。
+> このクイック スタートは mssql-server-**linux** イメージの使用に特にフォーカスしています。 Windows イメージについては触れていませんが、[mssql-server-windows-developer Docker Hub ページ](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/) で詳細情報を得ることができます。
 
 ## <a id="requirements"></a> 前提条件
 
-- Docker エンジン 1.8 + 任意の Linux ディストリビューションまたは Docker は Mac/windows のサポート。 詳細については、次を参照してください。[インストール Docker](https://docs.docker.com/engine/installation/)です。
-- 2 GB のディスク領域の最小値
-- 2 GB の RAM の最小値
-- [Linux 上の SQL Server のシステム要件](sql-server-linux-setup.md#system)です。
+- サポートされている任意の Linux ディストリビューションの Docker エンジン 1.8 + または Docker for Mac/Windows。詳細については「[Install Docker](https://docs.docker.com/engine/installation/)」(Docker のインストール) を参照してください。
+- 2 GB 以上のディスク領域
+- 2 GB 以上の RAM
+- [SQL Server on Linux のシステム要件](sql-server-linux-setup.md#system)。
 
 ## <a name="pull-and-run-the-container-image"></a>プルし、コンテナー イメージを実行
 
