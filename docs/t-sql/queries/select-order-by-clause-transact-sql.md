@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - BY_TSQL
 - ORDER
 - ORDER BY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ad-hoc query paging
 - OFFSET clause
@@ -39,16 +41,16 @@ helpviewer_keywords:
 - sort orders [SQL Server], ORDER BY clause
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-caps.latest.revision: "68"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 322bca602925cd959ca5de076fcbbdeacd7ba63a
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
-ms.translationtype: HT
+ms.openlocfilehash: 08805ce7f01b11d9b87c587e543f5dae91734e68
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -136,7 +138,7 @@ ORDER BY order_by_expression
 ## <a name="best-practices"></a>ベスト プラクティス  
  選択リスト内の列の位置を表すために、ORDER BY 句で整数を指定しないでください。 たとえば、`SELECT ProductID, Name FROM Production.Production ORDER BY 2` などのステートメントは有効ですが、実際の列名を指定した場合と比べて理解が難しくなります。 さらに、列の順序を変更するなど、選択リストに変更したり、新しい列を追加すると、予期しない結果を回避するために、ORDER BY 句を変更する必要があります。  
   
- SELECT top (*N*) ステートメントでは、常に ORDER BY 句を使用します。 これは、TOP の処理対象の行を指定するための唯一の方法です。 詳細については、次を参照してください。 [TOP &#40;です。TRANSACT-SQL と #41 です](../../t-sql/queries/top-transact-sql.md)。  
+ SELECT top (*N*) ステートメントでは、常に ORDER BY 句を使用します。 これは、TOP の処理対象の行を指定するための唯一の方法です。 詳細については、次を参照してください。 [TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
   
 ## <a name="interoperability"></a>相互運用性  
  別のソースから行を挿入するときに、ORDER BY 句を SELECT…INTO ステートメントと共に使用する場合、行が指定した順序で挿入されるかどうかは保証されません。  
@@ -148,7 +150,7 @@ ORDER BY order_by_expression
   
  型の列**ntext**、**テキスト**、**イメージ**、 **geography**、 **geometry**、および**xml** ORDER BY 句では使用できません。  
   
- 整数または定数にすることはできない時に指定された*order_by_expression*に順位付け関数が表示されます。 詳細については、次を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+ 整数または定数にすることはできない時に指定された*order_by_expression*に順位付け関数が表示されます。 詳細については、次を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  FROM 句でテーブルの別名を指定している場合、ORDER BY 句でその列を修飾する際に使用できるのは別名だけです。  
   
@@ -185,13 +187,13 @@ ORDER BY order_by_expression
   
  ページング ソリューションとして OFFSET と FETCH を使用する場合は、クライアント アプリケーションに返されるデータの "ページ" ごとにクエリを 1 回実行する必要があります。 たとえば、10 行単位でクエリの結果を取得するには、クエリを 1 回実行して行 1 から行 10 を取得した後、クエリをもう一度実行して行 11 から行 20 を取得する必要があります。これ以降も、同様の処理が必要です。 各クエリは独立しており、相互に関連付けられることはありません。 つまり、クエリを 1 回実行してサーバーで状態を維持するカーソルを使用する場合とは異なり、状態の追跡はクライアント アプリケーションで行われます。 OFFSET と FETCH を使用してクエリ要求の結果に一貫性を持たせるためには、次の条件を満たす必要があります。  
   
-1.  クエリで使用される基になるデータが変更されていない。 つまり、クエリで処理される行が更新されていないか、クエリからのすべてのページ要求が、スナップショットまたはシリアル化可能なトランザクション分離を使用して単一のトランザクションで実行される必要があります。 これらのトランザクション分離レベルの詳細については、次を参照してください。 [SET TRANSACTION ISOLATION LEVEL &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
+1.  クエリで使用される基になるデータが変更されていない。 つまり、クエリで処理される行が更新されていないか、クエリからのすべてのページ要求が、スナップショットまたはシリアル化可能なトランザクション分離を使用して単一のトランザクションで実行される必要があります。 これらのトランザクション分離レベルの詳細については、次を参照してください。 [SET TRANSACTION ISOLATION LEVEL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 2.  ORDER BY 句に、一意であることが保証されている列または列の組み合わせが含まれている。  
   
  例については、このトピックの「例」セクションの「単一のトランザクションで複数のクエリを実行する」を参照してください。  
   
- ページング ソリューションにおいて、一貫性のある実行プランが重要な場合は、OFFSET および FETCH のパラメーターに OPTIMIZE FOR クエリ ヒントを使用することを検討してください。 例については、このトピックの「例」セクションの「OFFSET と FETCH の値として式を指定する」を参照してください。 Optimze FOR のに関する詳細については、次を参照してください。[クエリ ヒント &#40;です。TRANSACT-SQL と #41 です](../../t-sql/queries/hints-transact-sql-query.md)。  
+ ページング ソリューションにおいて、一貫性のある実行プランが重要な場合は、OFFSET および FETCH のパラメーターに OPTIMIZE FOR クエリ ヒントを使用することを検討してください。 例については、このトピックの「例」セクションの「OFFSET と FETCH の値として式を指定する」を参照してください。 Optimze FOR のに関する詳細については、次を参照してください。[クエリ ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="examples"></a>使用例  
   

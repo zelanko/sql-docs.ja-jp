@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
@@ -17,21 +18,22 @@ applies_to:
 f1_keywords:
 - ALL_TSQL
 - ALL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - single-column set of values [SQL Server]
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2e65fc9cacbcfe868c072713f282c42c95839e48
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
-ms.translationtype: HT
+ms.openlocfilehash: 142fbd5b352a73e382f89a61f60fba6373902172
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +70,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
 ## <a name="remarks"></a>解説  
  すべてが必要、 *scalar_expression*サブクエリによって返されるすべての値に対し肯定的な比較します。 インスタンスのサブクエリは 2 および 3 の値を返す場合は、 *scalar_expression* < = ALL (subquery) は TRUE と評価、 *scalar_expression* 2 のです。 サブクエリは 2 および 3 の値を返す場合*scalar_expression* = ALL (subquery) はサブクエリ (値 3) の値の一部は、式の条件を満たさないために、FALSE と評価します。  
   
- ステートメントを必要とする、 *scalar_expression* 、サブクエリによって返される 1 つだけの値に対し肯定的な比較を参照してください。[一部 &#124;です。いずれかと #40 です。TRANSACT-SQL と #41 です](../../t-sql/language-elements/some-any-transact-sql.md)。  
+ ステートメントを必要とする、 *scalar_expression* 、サブクエリによって返される 1 つだけの値に対し肯定的な比較を参照してください。[一部 &#124;です。いずれかと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/some-any-transact-sql.md).  
   
  このトピックでは、ALL をサブクエリと共に使用する場合を想定しています。 すべてでも使用できます[共用体](../../t-sql/language-elements/set-operators-union-transact-sql.md)と[選択](../../t-sql/queries/select-transact-sql.md)です。  
   

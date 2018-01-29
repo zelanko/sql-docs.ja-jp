@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,26 +19,27 @@ f1_keywords:
 - Less
 - <
 - Less Than
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - less than (<)
 - < (less than operator)
 ms.assetid: 54f50bdd-bb62-4593-9af9-4c49edecab75
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0731fe421fb8c369130dfc56125bf912e6b61058
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
-ms.translationtype: HT
+ms.openlocfilehash: 8c53c2508345e6db7e8fbdb1c02d8ac8a13c5567
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lt-less-than-transact-sql"></a>&lt;(より小さい)(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  2 つの式を比較します (比較演算子)。 NULL でない式を比較したときに、左側のオペランドの値が右側のオペランドの値よりも小さい場合、結果は TRUE です。それ以外の場合、結果は FALSE です。 いずれかまたは両方のオペランドが NULL の場合は、トピックを参照してください。 [SET ANSI_NULLS &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/set-ansi-nulls-transact-sql.md)。  
+  2 つの式を比較します (比較演算子)。 NULL でない式を比較したときに、左側のオペランドの値が右側のオペランドの値よりも小さい場合、結果は TRUE です。それ以外の場合、結果は FALSE です。 いずれかまたは両方のオペランドが NULL の場合は、トピックを参照してください。 [SET ANSI_NULLS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -8,29 +8,31 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - +=
 - +=_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - += (add equals)
 - compound operators, +=
 - assignment operators, +=
 - augmented operators, +=
 ms.assetid: 9ea52519-80d1-473f-b988-0572f0e2c92f
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9547d1225f6081da609f7ce28412a8ad88ccdc90
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
-ms.translationtype: HT
+ms.openlocfilehash: 138f19c545c5d2ea8f8998e476e8af29d5919852
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-addition-assignment-transact-sql"></a>+ = (加算代入) (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +55,7 @@ expression += expression
  優先順位が高い引数のデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
 ## <a name="remarks"></a>解説  
- 詳細については、次を参照してください。 [+ &#40;です。加算 &#41;&#40;です。TRANSACT-SQL と #41 です](../../t-sql/language-elements/add-transact-sql.md)。  
+ 詳細については、次を参照してください。 [+ &#40;です。加算 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/add-transact-sql.md).  
   
 ## <a name="see-also"></a>参照  
  [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)   

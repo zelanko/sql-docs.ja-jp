@@ -8,29 +8,31 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DECLARE
 - DECLARE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - table-valued parameters
 - variables [SQL Server], declaring
 - DECLARE statement
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
-caps.latest.revision: "76"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 70bfea2777f5f96769d4296c8fbb7f2acbd20e4f
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
-ms.translationtype: HT
+ms.openlocfilehash: 6e56a4895dc5ec1ba03489ffc60e9f9e7b441d18
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="declare-localvariable-transact-sql"></a>宣言@local_variable(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -93,7 +95,7 @@ DECLARE
 *data_type*  
  システム提供の共通言語ランタイム (CLR) ユーザー定義テーブル型または別名データ型を指定します。 変数は指定できません**テキスト**、 **ntext**、または**イメージ**データ型。  
   
- システム データ型の詳細については、次を参照してください。[データ型 &#40;です。TRANSACT-SQL と #41 です](../../t-sql/data-types/data-types-transact-sql.md)。 CLR ユーザー定義型または別名データ型の詳細については、次を参照してください。[の種類の作成 &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/create-type-transact-sql.md)。  
+ システム データ型の詳細については、次を参照してください。[データ型 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/data-types-transact-sql.md). CLR ユーザー定義型または別名データ型の詳細については、次を参照してください。[の種類の作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-type-transact-sql.md).  
   
  =*value*  
  インラインで値を変数に代入します。 値には定数または式を指定できますが、変数宣言の型と同じであるか、その型に暗黙的に変換できる必要があります。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
@@ -127,7 +129,7 @@ CURSOR
  [ COLLATE *collation_name*]  
  列の照合順序を指定します。 *collation_name* Windows 照合順序名または SQL 照合順序名のいずれかを指定できますの列に対してのみ、 **char**、 **varchar**、**テキスト**、 **nchar**、 **nvarchar**、および**ntext**データ型。 collation_name を指定しないと、列がユーザー定義データ型である場合はユーザー定義データ型の照合順序、または現在のデータベースの照合順序が列に割り当てられます。  
   
- Windows と SQL 照合順序名の詳細については、次を参照してください。 [COLLATE &#40;です。TRANSACT-SQL と #41 です](~/t-sql/statements/collations.md)。  
+ Windows と SQL 照合順序名の詳細については、次を参照してください。 [COLLATE &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/statements/collations.md).  
   
  DEFAULT  
  挿入の際に明示的な値を指定しない場合に、列に入力される値を指定します。 として定義されているものを除くすべての列に DEFAULT 定義を適用できる**タイムスタンプ**または IDENTITY プロパティを持つ。 テーブルが削除されると、DEFAULT 定義も削除されます。 既定値として使用できるのは、文字列などの定数値、SYSTEM_USER() などのシステム関数、または NULL だけです。 旧バージョンとの互換性を維持する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]制約の名前は、既定値に割り当てることができます。  
@@ -189,7 +191,7 @@ CURSOR
   
  カーソル変数には、次の特徴があります。  
   
--   カーソルの種類または別のカーソル変数の対象になります。 詳細については、次を参照してください。[設定@local_variable&#40;です。TRANSACT-SQL と #41 です](../../t-sql/language-elements/set-local-variable-transact-sql.md)。  
+-   カーソルの種類または別のカーソル変数の対象になります。 詳細については、次を参照してください。[設定@local_variable&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
   
 -   カーソル変数に現在カーソルが割り当てられていない場合、EXECUTE ステートメント内の出力カーソル パラメーターの対象として参照できます。  
   
@@ -245,7 +247,7 @@ WHERE TerritoryGroup = @Group and SalesYTD >= @Sales;
 ```  
   
 ### <a name="c-declaring-a-variable-of-type-table"></a>C. table 型の変数を宣言する  
- 次の例では、UPDATE ステートメントの OUTPUT 句で指定される値を格納する `table` 変数を作成します。 この後に、`SELECT` 内の値、および `@MyTableVar` テーブルの更新操作の結果を返す 2 つの `Employee` ステートメントが続きます。 なおで結果、`INSERTED.ModifiedDate`列の値と異なる、`ModifiedDate`内の列、`Employee`テーブル。 これは、`AFTER UPDATE` の値を現在の日付に更新する `ModifiedDate` トリガーが、`Employee` テーブルで定義されるためです。 ただし、`OUTPUT` が返す列には、トリガーが起動される前の値が反映されています。 詳細については、次を参照してください。 [OUTPUT 句と #40 です。TRANSACT-SQL と #41 です](../../t-sql/queries/output-clause-transact-sql.md)。  
+ 次の例では、UPDATE ステートメントの OUTPUT 句で指定される値を格納する `table` 変数を作成します。 この後に、`SELECT` 内の値、および `@MyTableVar` テーブルの更新操作の結果を返す 2 つの `Employee` ステートメントが続きます。 なおで結果、`INSERTED.ModifiedDate`列の値と異なる、`ModifiedDate`内の列、`Employee`テーブル。 これは、`AFTER UPDATE` の値を現在の日付に更新する `ModifiedDate` トリガーが、`Employee` テーブルで定義されるためです。 ただし、`OUTPUT` が返す列には、トリガーが起動される前の値が反映されています。 詳細については、次を参照してください。 [OUTPUT 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/output-clause-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  
@@ -275,7 +277,7 @@ GO
 ```  
   
 ### <a name="d-declaring-a-variable-of-user-defined-table-type"></a>D. ユーザー定義テーブル型の変数を宣言する  
- 次の例では、`@LocationTVP` というテーブル値パラメーターまたはテーブル変数を作成します。 呼ばれる対応するユーザー定義テーブル型が必要です`LocationTableType`です。 ユーザー定義テーブル型を作成する方法の詳細については、次を参照してください。[の種類の作成 &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/create-type-transact-sql.md)。 テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)です。  
+ 次の例では、`@LocationTVP` というテーブル値パラメーターまたはテーブル変数を作成します。 呼ばれる対応するユーザー定義テーブル型が必要です`LocationTableType`です。 ユーザー定義テーブル型を作成する方法の詳細については、次を参照してください。[の種類の作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-type-transact-sql.md). テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)です。  
   
 ```  
 DECLARE @LocationTVP   

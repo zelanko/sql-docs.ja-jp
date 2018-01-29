@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - External, table create as select
 - PolyBase, create table as select
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5742453b2465aa06c425e81d2e8c45d79e0c5e72
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f2ca379cf30fe2e7d359a294a18804f0b5e6faeb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>外部テーブルとして選択 (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -78,19 +79,19 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ```  
   
 ## <a name="arguments"></a>引数  
- [ *database_name*です。 [ *schema_name* ] です。 ] |*schema_name*です。 *table_name*  
+ [ [ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name*  
  1 つを 3 つの部分の名前でデータベースを作成するテーブル。 外部テーブルのリレーショナル データベースのテーブルのメタデータのみが格納されます。  
   
- 場所 = '*hdfs_folder*'  
+ LOCATION =  '*hdfs_folder*'  
  外部データ ソースに関する SELECT ステートメントの結果の書き込み先を指定します。 場所は、フォルダー名であり、Hadoop クラスターまたは Azure Storage の Blob のルート フォルダーに対応するパスを含めることができます必要に応じて。  PolyBase が既に存在しない場合、パスとフォルダーが作成されます。  
   
  外部ファイルに書き込まれます*hdfs_folder*と名前付き*QueryID_date_time_ID.format*ここで、 *ID*増分識別子と*形式*エクスポートされたデータ形式です。 たとえば、QID776_20160130_182739_0.orc です。  
   
  DATA_SOURCE = *external_data_source_name*  
- 外部のデータが格納されているまたはを格納する場所を含む外部データ ソース オブジェクトの名前を指定します。 場所は、Hadoop クラスターまたは Azure Storage の Blob のいずれか。 外部データ ソースを作成するには、使用[外部データ ソースの作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+ 外部のデータが格納されているまたはを格納する場所を含む外部データ ソース オブジェクトの名前を指定します。 場所は、Hadoop クラスターまたは Azure Storage の Blob のいずれか。 外部データ ソースを作成するには、使用[外部データ ソースの作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
  FILE_FORMAT = *external_file_format_name*  
- 外部データ ファイルの形式を含む外部ファイル形式オブジェクトの名前を指定します。 外部ファイル形式を作成するには使用[CREATE EXTERNAL FILE FORMAT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-file-format-transact-sql.md).  
+ 外部データ ファイルの形式を含む外部ファイル形式オブジェクトの名前を指定します。 外部ファイル形式を作成するには使用[CREATE EXTERNAL FILE FORMAT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-file-format-transact-sql.md)  
   
  オプションを拒否します。  
  拒否するオプションは、この CREATE EXTERNAL TABLE AS SELECT ステートメントの実行時に適用されません。 代わりに、それらは、ここで指定したデータベースが、外部テーブルからデータをインポートする場合、後で使用できるようにします。 後で、CREATE TABLE AS SELECT ステートメントを外部テーブルからデータを選択すると、データベース オプションを使用して、拒否数またはインポートを停止する前にインポートに失敗した行の割合を決定します。  
@@ -131,12 +132,12 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   読み込みに失敗失敗 50% の行を含む 200 の行をロードしようとした後は、指定された 30% 制限よりも大きいです。  
   
- *Common_table_expression*  
- 共通テーブル式 (CTE) と呼ばれる一時的な名前付き結果セットを指定します。 詳細については、次を参照してください。[で common_table_expression と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ WITH *common_table_expression*  
+ 共通テーブル式 (CTE) と呼ばれる一時的な名前付き結果セットを指定します。 詳細については、次を参照してください。[で common_table_expression と #40 です。TRANSACT-SQL と #41 です](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
  選択\<select_criteria > によって、SELECT ステートメントの結果を新しいテーブルを作成します。 *select_criteria*新しいテーブルにコピーするデータを決定する SELECT ステートメントの本文です。 SELECT ステートメントの概要については、次を参照してください[SELECT &#40;。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  このコマンドを実行する、**データベース ユーザー**すべてこれらの権限またはメンバーシップ必要があります。  
   
 -   **ALTER SCHEMA**のメンバーシップまたは新しいテーブルを格納するローカルのスキーマに対する権限、 **db_ddladmin**固定データベース ロール。  

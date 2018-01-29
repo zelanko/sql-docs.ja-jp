@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - WITH_TSQL
 - WITH
 - common table expression
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - WITH common_table_expression clause
 - CTEs
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - MAXRECURSION hint
 - clauses [SQL Server], WITH common_table_expression
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3b0f259b51b993c777b27fe8c43c58268ca3dace
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
-ms.translationtype: HT
+ms.openlocfilehash: 8c77e9c97fd3d31b63e6e3938cbdab134554dd1c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +66,7 @@ ms.lasthandoff: 01/19/2018
  共通テーブル式の列名を指定します。 1 つの CTE 定義の中で、列名の重複は許可されません。 指定した列名の数がの結果セット内の列の数に一致する必要があります、 *CTE_query_definition*です。 クエリ定義内で、結果セットのすべての列に対して異なる列名が指定されている場合にのみ、列名リストをオプションで使用できます。  
   
  *CTE_query_definition*  
- 共通テーブル式を設定した結果セットを持つ SELECT ステートメントを指定します。 SELECT ステートメントの*CTE_query_definition* CTE が別の CTE を定義することはできません以外に、ビューを作成する場合と同じ要件を満たす必要があります。 詳細については、「解説」セクションを参照してください。 および[CREATE VIEW &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/create-view-transact-sql.md)。  
+ 共通テーブル式を設定した結果セットを持つ SELECT ステートメントを指定します。 SELECT ステートメントの*CTE_query_definition* CTE が別の CTE を定義することはできません以外に、ビューを作成する場合と同じ要件を満たす必要があります。 詳細については、「解説」セクションを参照してください。 および[CREATE VIEW &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-view-transact-sql.md).  
   
  複数ある場合*CTE_query_definition*が定義されている、クエリの定義が参加しているこれらのいずれかで set 演算子: UNION ALL、UNION、EXCEPT、または INTERSECT です。  
   

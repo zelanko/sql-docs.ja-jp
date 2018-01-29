@@ -8,21 +8,23 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42b3f397fa93b2134594e10476138d5d30e0015f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>テーブル (Azure SQL データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -109,7 +111,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
    
 ### <a name="ColumnOptions"></a>列のオプション
 
- `COLLATE`*Windows_collation_name*  
+ `COLLATE` *Windows_collation_name*  
  式の照合順序を指定します。 照合順序でサポートされている Windows 照合順序のいずれかを指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 サポートされている Windows 照合順序の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[Windows 照合順序名 (TRANSACT-SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/)です。  
   
  `NULL` | `NOT NULL`  
@@ -133,7 +135,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  `HEAP`   
   テーブルをヒープとして格納します。 これは、既定の[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]します。  
   
- `CLUSTERED INDEX`( *index_column_name* [,...*n* ] )  
+ `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
  1 つまたは複数のキー列を含むクラスター化インデックスとしてテーブルを格納します。 これは、行によって、データを格納します。 使用して*index_column_name*をインデックスに 1 つまたは複数のキー列の名前を指定します。  詳細については、全般的な解説内の行ストア テーブルを参照してください。
  
  `LOCATION = USER_DB`   
@@ -142,7 +144,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="TableDistributionOptions"></a>テーブルの配布オプション
 最適な配布方法を選択して、分散テーブルを使用する方法を理解するを参照してください[Azure SQL データ ウェアハウス内のテーブルを配布する](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)です。
 
-`DISTRIBUTION = HASH`( *distribution_column_name* )   
+`DISTRIBUTION = HASH` ( *distribution_column_name* )   
 1 つの配布に各行を割り当てに格納された値をハッシュして*distribution_column_name*です。 つまり、同じディストリビューションに同じ値を常にハッシュ アルゴリズムは決定的です。  ディストリビューション列は、NULL が同じ配布に割り当てられるあるすべての行から NOT NULL として定義する必要があります。
 
 `DISTRIBUTION = ROUND_ROBIN`   
@@ -154,7 +156,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="TablePartitionOptions"></a>テーブル パーティションのオプション
 テーブルのパーティションを使用する方法の詳細については、次を参照してください。 [SQL データ ウェアハウス内のテーブルをパーティション分割](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)です。
 
- `PARTITION`( *partition_column_name* `RANGE` [ `LEFT`  |  `RIGHT` ] `FOR VALUES` ([ *boundary_value* [,...*n*] ] ))   
+ `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
 1 つまたは複数のテーブルのパーティションを作成します。 これらは、テーブルがヒープ、クラスター化インデックスまたはクラスター化列ストア インデックスとして格納されているかどうかに関係なく行のサブセットに対して操作を実行することは横方向のテーブルのスライスです。 配布 列とは異なりテーブルのパーティションは、各行が格納されている配布を特定できません。 代わりに、テーブルのパーティションは、行をグループ化し、各配布内に格納する方法を決定します。  
  
 | 引数 | 説明 |
@@ -162,7 +164,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 |*partition_column_name*| 列を指定する[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]行をパーティション分割に使用されます。 このコラムでは、任意のデータ型を指定できます。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]パーティション列の値で昇順に並べ替えられます。 低-高に順序付けがから`LEFT`に`RIGHT`の目的、`RANGE`仕様です。 |  
 | `RANGE LEFT` | (低い値) の左側にある、パーティションに属する境界値を指定します。 既定値は LEFT です。 |
 | `RANGE RIGHT` | 右 (値を大きく) 上のパーティションに属する境界値を指定します。 | 
-| `FOR VALUES`( *boundary_value* [,...*n*] ) | パーティションの境界値を指定します。 *boundary_value*定数式です。 NULL は指定できません。 必要がありますかと一致かのデータ型に暗黙的に変換できる*partition_column_name*です。 サイズと値の小数点以下桁数でのデータ型が一致しないようにには、暗黙の変換中に切り捨てられることはできません*partition_column_name*<br></br><br></br>指定した場合、`PARTITION`句、境界値を指定しないで[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]1 つのパーティション分割されたテーブルが作成されます。 該当する場合、後で 2 つのパーティションにテーブルを分割します。<br></br><br></br>結果のテーブルに 2 つのパーティションに 1 つの境界値を指定する場合境界値よりも大きい値のいずれかの境界値と下限の値のいずれかです。 非パーティション テーブルにパーティションを移動する場合、非パーティション テーブル、データを受け取るがそのメタデータでパーティション境界はありませんに注意してください。| 
+| `FOR VALUES` ( *boundary_value* [,...*n*] ) | パーティションの境界値を指定します。 *boundary_value*定数式です。 NULL は指定できません。 必要がありますかと一致かのデータ型に暗黙的に変換できる*partition_column_name*です。 サイズと値の小数点以下桁数でのデータ型が一致しないようにには、暗黙の変換中に切り捨てられることはできません*partition_column_name*<br></br><br></br>指定した場合、`PARTITION`句、境界値を指定しないで[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]1 つのパーティション分割されたテーブルが作成されます。 該当する場合、後で 2 つのパーティションにテーブルを分割します。<br></br><br></br>結果のテーブルに 2 つのパーティションに 1 つの境界値を指定する場合境界値よりも大きい値のいずれかの境界値と下限の値のいずれかです。 非パーティション テーブルにパーティションを移動する場合、非パーティション テーブル、データを受け取るがそのメタデータでパーティション境界はありませんに注意してください。| 
  
  参照してください[パーティション テーブルを作成](#PartitionedTable)例」のセクションでします。
 
@@ -274,7 +276,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  16 バイトの GUID です。  
    
 <a name="Permissions"></a>  
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  テーブルを作成するには、権限が必要です、`db_ddladmin`固定データベース ロール、または。
  - `CREATE TABLE`データベースに対する権限
  - `ALTER SCHEMA`テーブルを含むスキーマの権限。 
@@ -447,7 +449,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a>G. レプリケートされたテーブルを作成します。  
+### <a name="Replicated"></a> G. レプリケートされたテーブルを作成します。  
  次の例では、前の例のようなレプリケートされたテーブルを作成します。 レプリケートされたテーブルは、各計算ノードに完全にコピーされます。 各コンピューティング ノードでこのコピーでは、クエリのデータ移動が小さくなります。 この例には、クラスター化インデックス、ヒープより優れたデータ圧縮を提供し、適切なクラスター化列ストア インデックスの圧縮を実現するために十分な行を含めることはできませんが作成されます。  
   
 ```  
@@ -467,7 +469,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>テーブル パーティションの例
 
-###  <a name="PartitionedTable"></a>H. パーティション テーブルを作成します。  
+###  <a name="PartitionedTable"></a> H. パーティション テーブルを作成します。  
  例 A を追加すると、RANGE LEFT パーティションで示すように、次の例は、同じテーブルを作成、`id`列です。 その結果は 5 つのパーティションに 4 つのパーティションの境界値を指定します。  
   
 ```  
@@ -501,7 +503,7 @@ WITH
 -   パーティション 4時 30分 < = col < 40   
 -   パーティション 5時 40分 < = col  
   
-### <a name="OnePartition"></a>私。 1 つのパーティションを持つパーティション テーブルを作成します。  
+### <a name="OnePartition"></a> I. 1 つのパーティションを持つパーティション テーブルを作成します。  
  次の例では、1 つのパーティションをパーティション テーブルを作成します。 指定しません任意の境界値では、1 つのパーティションになります。  
   
 ```  
@@ -517,7 +519,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a>J. 日付でパーティション分割テーブルを作成します。  
+### <a name="DatePartition"></a> J. 日付でパーティション分割テーブルを作成します。  
  次の例は、という名前の新しいテーブルを作成`myTable`にパーティション分割、`date`列です。 境界値の範囲の右側と日付を使用するは、各パーティション内の月のデータを格納します。  
   
 ```  

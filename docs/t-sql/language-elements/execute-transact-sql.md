@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - EXECUTE_TSQL
 - EXECUTE
 - EXEC_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - remote stored procedures [SQL Server]
 - command strings [SQL Server]
@@ -31,16 +33,16 @@ helpviewer_keywords:
 - switching execution context
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-caps.latest.revision: "104"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5c9081d53346bda14d507688547f37589bd153da
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
-ms.translationtype: HT
+ms.openlocfilehash: e974faeb95631f73cd8f902194329c6eb54e825f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -219,7 +221,7 @@ Execute a character string
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- プロシージャ グループの詳細については、次を参照してください。 [CREATE PROCEDURE &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/create-procedure-transact-sql.md)。  
+ プロシージャ グループの詳細については、次を参照してください。 [CREATE PROCEDURE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-procedure-transact-sql.md).  
   
  @*module_name_var*  
  モジュール名を表すローカル変数の名前を指定します。  
@@ -302,7 +304,7 @@ Execute a character string
   
 |項目|定義|  
 |----------|----------------|  
-|RECOMPILE|モジュール実行後に、新しいプランを強制的にコンパイル、使用、および破棄します。 モジュールに既存のクエリ プランがある場合、このプランはキャッシュに残ります。<br /><br /> 指定するパラメーターが一定しない場合であったり、データが大きく変更されたときにこのオプションを使用してください。 このオプションは、拡張ストアド プロシージャには使用しません。 このオプションは負荷を伴うので、あまり使用しないことをお勧めします。<br /><br /> **注:**は使用できません WITH RECOMPILE OPENDATASOURCE 構文を使用するストアド プロシージャを呼び出すときにします。 4 部構成のオブジェクト名が指定されている場合、WITH RECOMPILE オプションは無視されます。<br /><br /> **注:** RECOMPILE は、ネイティブ コンパイル、スカラー ユーザー定義関数ではサポートされません。 再コンパイルする必要がある場合を使用して[sp_recompile &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)。|  
+|RECOMPILE|モジュール実行後に、新しいプランを強制的にコンパイル、使用、および破棄します。 モジュールに既存のクエリ プランがある場合、このプランはキャッシュに残ります。<br /><br /> 指定するパラメーターが一定しない場合であったり、データが大きく変更されたときにこのオプションを使用してください。 このオプションは、拡張ストアド プロシージャには使用しません。 このオプションは負荷を伴うので、あまり使用しないことをお勧めします。<br /><br /> **注:**は使用できません WITH RECOMPILE OPENDATASOURCE 構文を使用するストアド プロシージャを呼び出すときにします。 4 部構成のオブジェクト名が指定されている場合、WITH RECOMPILE オプションは無視されます。<br /><br /> **注:** RECOMPILE は、ネイティブ コンパイル、スカラー ユーザー定義関数ではサポートされません。 再コンパイルする必要がある場合を使用して[sp_recompile &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
 |**結果セットが定義されていません**|**適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。<br /><br /> このオプションを使用した場合、返される結果の種類は保証されず、定義は指定されません。 ステートメントは、何かの結果が返される場合でも、結果が返されない場合でも、問題なく実行されます。 result_sets_option を指定しない場合は、RESULT SETS UNDEFINED が既定の動作となります。<br /><br /> スカラー ユーザー定義の関数では、およびネイティブ コンパイルのスカラー ユーザー定義関数を解釈された、このオプションが機能していないため、関数は、結果セットを返すことはありません。|  
 |RESULT SETS NONE|**適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。<br /><br /> 実行ステートメントによって結果が一切返されなくなります。 結果が返された場合、バッチは中断されます。<br /><br /> スカラー ユーザー定義の関数では、およびネイティブ コンパイルのスカラー ユーザー定義関数を解釈された、このオプションが機能していないため、関数は、結果セットを返すことはありません。|  
 |*\<result_sets_definition>*|**適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。<br /><br /> result_sets_definition で指定されたとおりに結果が返されるようになります。 複数の結果セットを返すステートメントが複数指定して*result_sets_definition*セクションです。 各*result_sets_definition*でかっこ、コンマで区切られます。 詳細については、次を参照してください。 \<result_sets_definition > このトピックで後述します。<br /><br /> このオプションは常には、ネイティブ コンパイル済みのスカラー ユーザー定義関数のエラーが発生するため、関数は、結果セットを返すことはありません。|
@@ -334,7 +336,7 @@ Execute a character string
   
  1 つのモジュールで、別のモジュールが呼び出されるか、共通言語ランタイム (CLR) モジュール、ユーザー定義型、または集計の参照によりマネージ コードが実行されるとき、入れ子が発生します。 入れ子のレベルは、呼び出されたモジュールまたはマネージ コード参照の実行開始時に増加し、呼び出されたモジュールやマネージ コード参照の終了時に減少します。 入れ子のレベルが最大値 32 を超えると、呼び出しチェーン全体が失敗します。 現在の入れ子レベルは、@@NESTLEVELシステム関数です。  
   
- リモート プロシージャと拡張ストアド プロシージャは、BEGIN DISTRIBUTED TRANSACTION ステートメントの中で実行されない限り、または各種の構成オプションと共に使用されない限り、トランザクションのスコープ外となります。したがって、これらのプロシージャを呼び出して実行したコマンドはロールバックできません。 詳細については、次を参照してください。[システム ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)と[分散トランザクション &#40; を開始TRANSACT-SQL と #41 です](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)。  
+ リモート プロシージャと拡張ストアド プロシージャは、BEGIN DISTRIBUTED TRANSACTION ステートメントの中で実行されない限り、または各種の構成オプションと共に使用されない限り、トランザクションのスコープ外となります。したがって、これらのプロシージャを呼び出して実行したコマンドはロールバックできません。 詳細については、次を参照してください。[システム ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)と[分散トランザクション &#40; を開始TRANSACT-SQL と #41 です。](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
   
  カーソル変数を使用するとき、カーソル変数にカーソルを渡すプロシージャを実行し、このカーソルがプロシージャに割り当てられているカーソルであった場合は、エラーが発生します。  
   
@@ -382,7 +384,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
   
  モジュールで他のデータベース オブジェクトにアクセスする場合は、モジュールに対する EXECUTE 権限があり、次のいずれかに該当する場合にのみ、実行は成功します。  
   
--   モジュールが EXECUTE AS USER または SELF としてマークされており、モジュール所有者が、参照されるオブジェクトに対して必要な権限を保持している。 モジュール内で権限借用の詳細については、次を参照してください。 [EXECUTE AS 句 &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
+-   モジュールが EXECUTE AS USER または SELF としてマークされており、モジュール所有者が、参照されるオブジェクトに対して必要な権限を保持している。 モジュール内で権限借用の詳細については、次を参照してください。 [EXECUTE AS 句 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
 -   モジュールが EXECUTE AS CALLER としてマークされており、オブジェクトに対して必要な権限を保持している。  
   

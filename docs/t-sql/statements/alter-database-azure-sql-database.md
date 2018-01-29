@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6fc5fd95-2045-4f20-a914-3598091bc7cc
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e8d0df617bef08305166f4112fcb4f4d371137d2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a5c22e2ce58189f396835f65748fdbab7ef8f9d5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -201,7 +202,7 @@ ALTER DATABASE { database_name }
  CURRENT  
  使用中の現在のデータベースを変更することを指定します。  
   
- MODIFY NAME  **=**  *new_database_name*  
+ MODIFY NAME **=***new_database_name*  
  として指定された名前のデータベースの名前を変更*new_database_name*です。 次の例は、データベースの名前を変更`db1`に`db2`:   
 
 ```  
@@ -209,7 +210,7 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;  
 ```    
 
- MODIFY (EDITION  **=**  ['basic' |'standard' |'premium' |premiumrs'])    
+ MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' | 'premiumrs'])    
  データベースのサービス階層を変更します。 次の例の変更するにはエディション`premium`:
   
 ```  
@@ -222,7 +223,7 @@ ALTER DATABASE current
  変更 (MAXSIZE  **=**  [100 MB | 500 MB | 1 | 1024.4096] GB)  
  データベースの最大サイズを指定します。 最大サイズは、データベースの EDITION プロパティの有効な値セットに準拠している必要があります。 データベースの最大サイズを変更すると、データベースの EDITION も変更される場合があります。 次の表のサポートされる MAXSIZE 値と既定値 (D) の一覧、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]サービス層です。  
   
-|**MAXSIZE**|**基本**|**S0 S2**|**S3 S12**|**P1 P6 と PRS1 PRS6**|**P11 P15**|  
+|**MAXSIZE**|**基本**|**S0-S2**|**S3-S12**|**P1 P6 と PRS1 PRS6**|**P11-P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  
@@ -270,22 +271,22 @@ ALTER DATABASE current
  変更 (SERVICE_OBJECTIVE 柔軟なを =\_プール (名前 = \<elastic_pool_name >)  
  柔軟なプールには、既存のデータベースを追加するには、ELASTIC_POOL にデータベースの SERVICE_OBJECTIVE を設定し、柔軟なプールの名前を指定します。 同じサーバー内の別の柔軟なプールにデータベースを変更するのに、このオプションを使用することもできます。 詳細については、次を参照してください。[作成し、SQL Database の弾力性プールの管理](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)です。 柔軟なプールからデータベースを削除するには、ALTER DATABASE を使用して、SERVICE_OBJECTIVE を 1 つのデータベースのパフォーマンス レベルに設定します。  
 
- セカンダリにサーバーの追加\<partner_server_name >  
+ ADD SECONDARY ON SERVER \<partner_server_name>  
  主キー、地理的レプリケーションにローカルのデータベースを作成して、パートナー サーバーで同じ名前での地理的レプリケーションのセカンダリ データベースを作成し、非同期的に新しいセカンダリへのプライマリからのデータのレプリケーションを開始します。 セカンダリ上と同じ名前のデータベースが既に存在する場合、コマンドは失敗します。 コマンドは、プライマリとなるローカル データベースをホストしているサーバー上の master データベースで実行されます。  
   
- ALLOW_CONNECTIONS で {すべて |**いいえ**}  
+ WITH ALLOW_CONNECTIONS { ALL | **NO** }  
  ALLOW_CONNECTIONS が指定されていない場合は、既定では NO に設定されます。 設定されている場合すべては、読み取り専用データベースを接続する適切なアクセス許可を持つすべてのログインを許可します。  
   
- SERVICE_OBJECTIVE の {'S0' |'S1' |'S2' |' S3"|'S4' |'S6' |'S7' |'S9' |'S12' |'P1' |'P2' |'P4' |'P6' |'P11' |'P15' |'PRS1' |'PRS2' |'PRS4' |PRS6'}  
+ WITH SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3" | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' }  
  SERVICE_OBJECTIVE が指定されていない場合、セカンダリ データベースがプライマリ データベースと同じサービス レベルで作成されます。 SERVICE_OBJECTIVE が指定されている場合は、指定されたレベルで、セカンダリ データベースが作成されます。 このオプションは、低価格のサービス レベルで地理的レプリケーションのセカンダリの作成をサポートします。 指定した SERVICE_OBJECTIVE がソースと同じエディション内になければなりません。 たとえば場合は、edition が premium S0 を指定することはできません。  
   
- ELASTIC_POOL (名前 = \<elastic_pool_name)  
+ ELASTIC_POOL (name = \<elastic_pool_name)  
  ELASTIC_POOL が指定されていない場合、セカンダリ データベースは弾力性プールには作成されません。 ELASTIC_POOL が指定されている場合は、指定されたプールで、セカンダリ データベースが作成されます。  
   
 > [!IMPORTANT]  
 >  セカンダリを追加のコマンドを実行するユーザーは、DBManager をプライマリ サーバー上にある、セカンダリ サーバー上でローカルのデータベースでは、および DBManager db_owner のメンバーシップがある必要があります。  
   
- セカンダリにサーバーの削除\<partner_server_name >  
+ REMOVE SECONDARY ON SERVER  \<partner_server_name>  
  指定した地理的レプリケーションのセカンダリ データベースに、指定したサーバーを削除します。 コマンドは、プライマリ データベースをホストしているサーバーの master データベースで実行されます。  
   
 > [!IMPORTANT]  
@@ -345,7 +346,7 @@ ALTER DATABASE current
 ## <a name="viewing-database-information"></a>データベース情報の表示  
  カタログ ビュー、システム関数、およびシステム ストアド プロシージャを使用して、データベース、ファイルおよびファイル グループについての情報を返すことができます。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  データベースを変更できるのは、(準備プロセスによって作成される) サーバーレベルのプリンシパルのログイン、または `dbmanager` データベース ロールのメンバーだけです。  
   
 > [!IMPORTANT]  

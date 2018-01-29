@@ -8,12 +8,14 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.selectsourcetablesandviews.f1
+f1_keywords:
+- sql13.dts.impexpwizard.selectsourcetablesandviews.f1
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
-caps.latest.revision: "96"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
@@ -24,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2017
 ---
-# <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>[コピー元のテーブルおよびビューを選択] (SQL Server インポートおよびエクスポート ウィザード)
+# <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>[コピー元のテーブルおよびビューを選択]\(SQL Server インポートおよびエクスポート ウィザード)
   テーブル全体をコピーするか、クエリを入力するかを指定した後に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードには **[コピー元のテーブルおよびビューを選択]**が表示されます。 このページでは、コピーする既存のテーブルとビューを選択します。 それから、新規または既存のコピー先テーブルにコピー元テーブルをマッピングします。 必要に応じて、個々の列のマッピングも確認し、サンプル データをプレビューします。
 
 > [!TIP]

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - ALTER BROKER PRIORITY
 - ALTER BROKER
 - ALTER_BROKER_PRIORITY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ALTER BROKER PRIORITY statement
 - ssbdiagnose
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bd2cfd04ccc1de66fab7c518fdc31191955b24b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 833c0bed38d02905b3a260f50824825c9859484f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +92,7 @@ FOR CONVERSATION
   
  LOCAL_SERVICE_NAME を指定しない場合、メッセージ交換の優先度のローカル サービス プロパティは変更されません。  
   
- REMOTE_SERVICE_NAME = {'*RemoteServiceName*' |**ANY**}  
+ REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  メッセージ交換の優先度をメッセージ交換のエンドポイントに適用するかどうかを決定するための条件として使用するサービスの名前を指定します。  
   
  *RemoteServiceName*型のリテラルは、 **nvarchar (256)**です。 [!INCLUDE[ssSB](../../includes/sssb-md.md)]一致するように、バイトごとの比較を使用して、 *RemoteServiceName*文字列。 この比較では、大文字と小文字が区別され、現在の照合順序は考慮されません。 現在のインスタンスで、ターゲット サービスができる、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、またはリモート インスタンス、[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。  
@@ -117,7 +119,7 @@ FOR CONVERSATION
   
  詳細については、次を参照してください。 [CREATE BROKER PRIORITY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-broker-priority-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メッセージ交換の優先度のメンバに既定値を作成するためのアクセス許可、 **db_ddladmin**または**db_owner**固定データベース ロール、および、 **sysadmin**固定サーバー ロール。 データベースに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

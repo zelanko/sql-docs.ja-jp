@@ -11,9 +11,10 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
@@ -104,7 +105,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
        'SLR Camera' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-10. クエリ デザイナーのツール バーで、[実行] (**!**) をクリックします。
+10. クエリ デザイナーのツール バーで、[実行]\(**!**) をクリックします。
 
 11. **[次へ]** をクリックします。  
   

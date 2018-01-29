@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,23 +22,24 @@ f1_keywords:
 - CREATE XML INDEX
 - XML_INDEX_TSQL
 - FOR_XML_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE XML INDEX statement
 - CREATE INDEX statement
 - index creation [SQL Server], XML indexes
 - XML indexes [SQL Server], creating
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7949376e26e184013b9a31258ff757991f4bdd19
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 133c957937d1c05cd108eeb2deb0847cd7944771
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -118,7 +120,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  FOR { VALUE | PATH | PROPERTY }   
  セカンダリ XML インデックスの種類を指定します。  
   
- Value  
+ VALUE  
  キー列がプライマリ XML インデックス (ノード値とパス) となっている列に、セカンダリ XML インデックスを作成します。  
   
  PATH  
@@ -127,7 +129,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  PROPERTY  
  PK がベース テーブルの主キーとなっているプライマリ XML インデックスの列 (PK、パスおよびノード値) に、セカンダリ XML インデックスを作成します。  
   
- **\<オブジェクト >:: =**  
+ **\<object>::=**  
   
  インデックスを作成するオブジェクトを、完全修飾または完全修飾ではない形式で指定します。  
   
@@ -140,11 +142,11 @@ CREATE [ PRIMARY ] XML INDEX index_name
  *table_name*  
  インデックスを作成するテーブルの名前を指定します。  
   
- **\<xml_index_option >:: =** 
+ **\<xml_index_option> ::=** 
   
  インデックスを作成するときに使用するオプションを指定します。  
   
- PAD_INDEX  **=**  {ON |**OFF** }  
+ PAD_INDEX **=** { ON | **OFF** }  
  インデックスの埋め込みを指定します。 既定値は OFF です。  
   
  ON  
@@ -155,7 +157,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  PAD_INDEX では FILLFACTOR で指定されるパーセンテージが使用されるので、PAD_INDEX オプションは、FILLFACTOR が指定されている場合にのみ有効です。 FILLFACTOR で指定されるパーセンテージが 1 つの行を許可するのに十分な大きさがない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]内部的に最小値を許可する比率をオーバーライドします。 中間インデックス ページ上の行の番号 2 にはなりません未満の値をどのように低に関係なく*fillfactor*です。  
   
- FILLFACTOR  **=**  *fillfactor*  
+ FILLFACTOR **= * * * fillfactor*  
  インデックスの作成時または再構築時に、[!INCLUDE[ssDE](../../includes/ssde-md.md)] が各インデックス ページのリーフ レベルをどの程度まで埋めるかを、パーセント値で指定します。 *fillfactor* 1 から 100 までの整数値にする必要があります。 既定値は 0 です。 場合*fillfactor*が 100 または 0 の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]全容量リーフ ページを含むインデックスを作成します。  
   
 > [!NOTE]  
@@ -168,7 +170,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  詳細については、「 [インデックスの FILL FACTOR の指定](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)」を参照してください。  
   
- SORT_IN_TEMPDB  **=**  {ON |**OFF** }  
+ SORT_IN_TEMPDB **=** { ON | **OFF** }  
  一時的な並べ替え結果を格納するかどうかを示す**tempdb**です。 既定値は OFF です。  
   
  ON  
@@ -179,10 +181,10 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  ユーザー データベースで、インデックスを作成するために必要な容量に加えて**tempdb**について、一定の並べ替えの中間結果を格納する追加の領域がある必要があります。 詳細については、次を参照してください。[インデックスの SORT_IN_TEMPDB オプション](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)です。  
   
- IGNORE_DUP_KEY **= OFF**  
+ IGNORE_DUP_KEY **=OFF**  
  インデックスの種類が一意になることはないので、XML インデックスでは無効です。 このオプションを ON に設定すると、エラーが発生します。  
   
- DROP_EXISTING  **=**  {ON |**OFF** }  
+ DROP_EXISTING **=** { ON | **OFF** }  
  名前付きの、既存の XML インデックスを削除および再構築することを指定します。 既定値は OFF です。  
   
  ON  
@@ -193,7 +195,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  DROP_EXISTING を使用してインデックスの種類を変更することはできません。 また、プライマリ XML インデックスをセカンダリ XML インデックスに、またはその逆に再定義することもできません。  
   
- オンライン**= OFF**  
+ ONLINE **=OFF**  
  インデックス操作中に、基となるテーブルとそれに関連する各インデックスに対してクエリやデータ変更を行えないことを指定します。 このバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XML インデックスに対するオンラインのインデックス構築操作はサポートされていません。 XML インデックスに対してこのオプションを ON に設定すると、エラーが発生します。 ONLINE オプションを省略するか、ONLINE を OFF に設定してください。  
   
  オフラインのインデックス操作で、XML インデックスの作成、再構築、または削除を行う場合は、テーブルで Sch-M (スキーマ修正) ロックが取得されます。 このため、操作中は、すべてのユーザーは基になるテーブルにアクセスできません。  
@@ -201,7 +203,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 > [!NOTE]  
 >  オンラインでのインデックス操作は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
- ALLOW_ROW_LOCKS  **=**  { **ON** |オフ}  
+ ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
  行ロックを許可するかどうかを指定します。 既定値は ON です。  
   
  ON  
@@ -210,7 +212,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  行ロックは使用されません。  
   
- ALLOW_PAGE_LOCKS  **=**  { **ON** |オフ}  
+ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
  ページ ロックを許可するかどうかを指定します。 既定値は ON です。  
   
  ON  
@@ -219,7 +221,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  ページ ロックは使用されません。  
   
- MAXDOP  **=**  *max_degree_of_parallelism*  
+ MAXDOP **=***max_degree_of_parallelism*  
  上書き、 [max degree of parallelism サーバー構成オプションを構成する](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)インデックス操作の実行中の構成オプション。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
   
 > [!IMPORTANT]  
@@ -227,7 +229,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  *max_degree_of_parallelism*を指定できます。  
   
- @shouldalert  
+ 1  
  並列プラン生成を抑制します。  
   
  \>1  
@@ -293,7 +295,7 @@ GO
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
  [空間インデックス &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-spatial-index-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-index-transact-sql.md)   

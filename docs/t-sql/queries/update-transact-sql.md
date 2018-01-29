@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
 - UPDATE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DML [SQL Server], UPDATE statement
 - data updates [SQL Server], UPDATE statement
@@ -38,16 +40,16 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: "91"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d30edc04b6b78ae1ccff83028433c4a25e25ca33
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
-ms.translationtype: HT
+ms.openlocfilehash: 227cafdd68eddac2ff6a515853f0fcded0c07f63
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -129,7 +131,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  INSERT、UPDATE、または DELETE を使用する TOP 式で参照される行は、順序付けされません。  
   
- 区切るかっこ*式*INSERT、UPDATE、および DELETE ステートメントで TOP が必要です。 詳細については、次を参照してください。 [TOP &#40;です。TRANSACT-SQL と #41 です](../../t-sql/queries/top-transact-sql.md)。  
+ 区切るかっこ*式*INSERT、UPDATE、および DELETE ステートメントで TOP が必要です。 詳細については、次を参照してください。 [TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
   
  *table_alias*  
  FROM 句で指定される別名です。行を更新するテーブルまたはビューを表します。  
@@ -144,13 +146,13 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  テーブルまたはビューが属するスキーマの名前を指定します。  
   
  *table_or view_name*  
- 行を更新するテーブルまたはビューの名前です。 によって参照されるビュー *table_or_view_name*可能にし、ビューの FROM 句内のただ 1 つのベース テーブルを参照する必要があります。 更新可能なビューの詳細については、次を参照してください。 [CREATE VIEW &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/create-view-transact-sql.md)。  
+ 行を更新するテーブルまたはビューの名前です。 によって参照されるビュー *table_or_view_name*可能にし、ビューの FROM 句内のただ 1 つのベース テーブルを参照する必要があります。 更新可能なビューの詳細については、次を参照してください。 [CREATE VIEW &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
  いずれかが、 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)または[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)関数、プロバイダーの機能です。  
   
  WITH **(** \<Table_Hint_Limited> **)**  
- 対象のテーブルに設定可能なテーブル ヒントを 1 つ以上指定します。 キーワード WITH とかっこが必要です。 NOLOCK および READUNCOMMITTED は指定できません。 テーブル ヒントの詳細については、次を参照してください。[テーブル ヒント &#40;です。TRANSACT-SQL と #41 です](../../t-sql/queries/hints-transact-sql-table.md)。  
+ 対象のテーブルに設定可能なテーブル ヒントを 1 つ以上指定します。 キーワード WITH とかっこが必要です。 NOLOCK および READUNCOMMITTED は指定できません。 テーブル ヒントの詳細については、次を参照してください。[テーブル ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-table.md).  
   
  @*table_variable*  
  指定します、[テーブル](../../t-sql/data-types/table-transact-sql.md)変数テーブル ソースとして。  
@@ -207,7 +209,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  SET **@***variable* = *column* = *expression* sets the variable to the same value as the column. これは、セットと異なる **@ * * * 変数* = *列*、*列* = *式*、設定する、列の更新前の値を変数です。  
   
  \<OUTPUT_Clause>  
- 更新されたデータまたはそれに基づく式を、UPDATE 操作の一部として返します。 OUTPUT 句は、リモート テーブルまたはリモート ビューを対象とした DML ステートメントではサポートされません。 詳細については、次を参照してください。 [OUTPUT 句と #40 です。TRANSACT-SQL と #41 です](../../t-sql/queries/output-clause-transact-sql.md)。  
+ 更新されたデータまたはそれに基づく式を、UPDATE 操作の一部として返します。 OUTPUT 句は、リモート テーブルまたはリモート ビューを対象とした DML ステートメントではサポートされません。 詳細については、次を参照してください。 [OUTPUT 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/output-clause-transact-sql.md).  
   
  FROM \<table_source>  
  別のテーブル、ビュー、または派生テーブルのソースを使用して更新操作の基になる値を提供することを指定します。 詳細については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
@@ -227,7 +229,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
 -   位置指定更新では、CURRENT OF 句を使用してカーソルを指定します。 更新操作は、カーソルの現在位置で行われます。  
   
 \<search_condition>  
- 更新の対象となる行の条件を指定します。 検索条件を結合の基準条件にすることもできます。 検索条件に含まれる述語の数に制限はありません。 述語および検索条件の詳細については、次を参照してください。[検索条件 &#40;です。TRANSACT-SQL と #41 です](../../t-sql/queries/search-condition-transact-sql.md)。  
+ 更新の対象となる行の条件を指定します。 検索条件を結合の基準条件にすることもできます。 検索条件に含まれる述語の数に制限はありません。 述語および検索条件の詳細については、次を参照してください。[検索条件 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md).  
   
 CURRENT OF  
  指定したカーソルの現在位置で更新を行うことを指定します。  
@@ -247,7 +249,7 @@ OPTION **(** \<query_hint> [ **,**... *n* ] **)**
  オプティマイザー ヒントを使用して、[!INCLUDE[ssDE](../../includes/ssde-md.md)]がステートメントを処理する方法をカスタマイズすることを指定します。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
- 使用して、@@ROWCOUNT関数の数を返しますが、クライアント アプリケーションに行を挿入します。 詳細については、次を参照してください。 [@@ROWCOUNT &#40;です。TRANSACT-SQL と #41 です](../../t-sql/functions/rowcount-transact-sql.md)。  
+ 使用して、@@ROWCOUNT関数の数を返しますが、クライアント アプリケーションに行を挿入します。 詳細については、次を参照してください。 [@@ROWCOUNT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rowcount-transact-sql.md).  
   
  影響を受ける古い値と新しい値を示すために、UPDATE ステートメントの中で変数名を使用することは可能です。ただし、これは UPDATE ステートメントによって影響を受けるのが単一のレコードである場合のみに限定されています。 UPDATE ステートメントが各レコードの新旧の値を返す、複数のレコードに影響する場合を使用して、 [OUTPUT 句](../../t-sql/queries/output-clause-transact-sql.md)です。  
   
@@ -348,7 +350,7 @@ GO
   
 によって、列が変更された場合、 **.**書き込み句がいずれかの列の完全な値が OUTPUT 句で参照されて前のイメージに、**を削除します * * * column_name*または後のイメージで **挿入します。 * * * column_name*、が返されます。指定された列に、テーブル変数にします。 次の R の例を参照してください。  
   
-同じ機能を実現するために**.**他の文字またはバイナリ データ型と書き込みを使用して、 [STUFF &#40;です。TRANSACT-SQL と #41 です](../../t-sql/functions/stuff-transact-sql.md)。  
+同じ機能を実現するために**.**他の文字またはバイナリ データ型と書き込みを使用して、 [STUFF &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/stuff-transact-sql.md).  
   
 ### <a name="updating-user-defined-type-columns"></a>ユーザー定義型の列を更新する  
  ユーザー定義型の列の値を更新するには、次のいずれかの方法を使用します。  
@@ -395,10 +397,10 @@ GO
 ## <a name="interoperability"></a>相互運用性  
  UPDATE ステートメントをユーザー定義関数の本文で使用できるのは、変更対象のテーブルがテーブル変数の場合だけです。  
   
- INSTEAD OF トリガーが、テーブルに対する UPDATE 操作で定義されている場合は、UPDATE ステートメントの代わりにそのトリガーが実行されます。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、UPDATE およびその他のデータ変更ステートメントでサポートされているのは AFTER トリガーのみです。 FROM 句は、INSTEAD OF トリガーが定義されているビューを直接または間接的に参照する UPDATE ステートメントでは指定できません。 INSTEAD of トリガーの詳細については、次を参照してください。 [CREATE TRIGGER &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/create-trigger-transact-sql.md)。  
+ INSTEAD OF トリガーが、テーブルに対する UPDATE 操作で定義されている場合は、UPDATE ステートメントの代わりにそのトリガーが実行されます。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、UPDATE およびその他のデータ変更ステートメントでサポートされているのは AFTER トリガーのみです。 FROM 句は、INSTEAD OF トリガーが定義されているビューを直接または間接的に参照する UPDATE ステートメントでは指定できません。 INSTEAD of トリガーの詳細については、次を参照してください。 [CREATE TRIGGER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- 、直接的または間接的に定義された INSTEAD OF トリガーが設定されているビューを参照する UPDATE ステートメントの FROM 句を指定することはできません。 INSTEAD of トリガーの詳細については、次を参照してください。 [CREATE TRIGGER &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/create-trigger-transact-sql.md)。  
+ 、直接的または間接的に定義された INSTEAD OF トリガーが設定されているビューを参照する UPDATE ステートメントの FROM 句を指定することはできません。 INSTEAD of トリガーの詳細については、次を参照してください。 [CREATE TRIGGER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  共通テーブル式 (CTE) が UPDATE ステートメントの対象である場合、ステートメント内の CTE に対するすべての参照を一致させる必要があります。 たとえば、FROM 句で CTE に別名を割り当てた場合、CTE に対するすべての参照で別名を使用する必要があります。 CTE はオブジェクト ID を持たないため、CTE の参照は明確にする必要があります。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、オブジェクト ID を使用して、オブジェクトと別名の暗黙的なリレーションシップを識別します。 このリレーションシップがない場合、クエリ プランで予期しない結合動作やクエリ結果が生成される可能性があります。 次の例では、更新操作の対象オブジェクトとして CTE を指定するときの、適切な方法と不適切な方法を示します。  
   
@@ -982,7 +984,7 @@ EXEC Production.uspProductUpdate 'BK-%';
 #### <a name="aa-using-update-with-the-output-clause"></a>AA. UPDATE ステートメントを OUTPUT 句と共に使用する  
  次の例では、最初の 10 行について `VacationHours` テーブルの列 `Employee` を 1.25 倍に更新し、列 `ModifiedDate` の値を現在の日付に設定します。 `OUTPUT` 句は、`VacationHours` を適用する前の `UPDATE` 列の `deleted.VacationHours` の値と、`inserted.VacationHours` 列の更新後の値を `@MyTableVar` テーブル変数に返します。  
   
- この後に、`SELECT` 内の値、および `@MyTableVar` テーブルの更新操作の結果を返す 2 つの `Employee` ステートメントが続きます。 例については、OUTPUT 句を使用して、次を参照してください。 [OUTPUT 句と #40 です。TRANSACT-SQL と #41 です](../../t-sql/queries/output-clause-transact-sql.md)。  
+ この後に、`SELECT` 内の値、および `@MyTableVar` テーブルの更新操作の結果を返す 2 つの `Employee` ステートメントが続きます。 例については、OUTPUT 句を使用して、次を参照してください。 [OUTPUT 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/output-clause-transact-sql.md).  
   
 ```sql  
 USE AdventureWorks2012;  

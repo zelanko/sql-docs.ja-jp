@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FREETEXT
 - FREETEXT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], meaning matches
 - meaning matches [full-text search]
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - words in predicate [full-text search]
 - column searches [full-text search]
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 24bac6096c75d46805492a4991614ff95c9fa872
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
-ms.translationtype: HT
+ms.openlocfilehash: e6687946e13dd6c801fcd256a0e463bdacb3779f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +127,7 @@ FREETEXT を使用するフルテキスト クエリは、CONTAINS を使用す�
  フルテキスト述語は使用できません、 [OUTPUT 句](../../t-sql/queries/output-clause-transact-sql.md)データベースの互換性レベルを 100 に設定するとします。  
   
 > [!NOTE]  
->  FREETEXTTABLE 関数は、FREETEXT 述語と同様の検索に役立ちます。 通常のテーブル名のようにこの関数を参照することができます、[句から](../../t-sql/queries/from-transact-sql.md)SELECT ステートメントのです。 詳細については、次を参照してください。 [FREETEXTTABLE &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-functions/freetexttable-transact-sql.md)。  
+>  FREETEXTTABLE 関数は、FREETEXT 述語と同様の検索に役立ちます。 通常のテーブル名のようにこの関数を参照することができます、[句から](../../t-sql/queries/from-transact-sql.md)SELECT ステートメントのです。 詳細については、次を参照してください。 [FREETEXTTABLE &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
   
 ## <a name="querying-remote-servers"></a>リモート サーバーのクエリ  
  4 部構成の名前を使用することができます、 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)または FREETEXT 述語をフルテキスト クエリには、リンク サーバー上の対象テーブルの列がインデックス付きです。 フルテキスト クエリを受け取るようリモート サーバーを準備するには、リモート サーバー上の検索対象のテーブルおよび列にフルテキスト インデックスを作成し、リモート サーバーをリンク サーバーとして追加します。  

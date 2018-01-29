@@ -8,29 +8,31 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ^=
 - ^=_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ^= (bitwise exclusive OR equals)
 - compound operators, ^=
 - assignment operators, ^=
 - augmented operators, ^=
 ms.assetid: ce524b0f-a24d-44e7-bd5b-b6943793cd48
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f6e2385c6a47174cd2b8e8b0ad7e519228b3159e
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
-ms.translationtype: HT
+ms.openlocfilehash: 4da8f3df7201794db31bfff09927c97c128f82b0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-bitwise-exclusive-or-assignment-transact-sql"></a>^ = (ビットごとの排他的 OR 代入) (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +55,7 @@ expression ^= expression
  優先順位が高い引数のデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
 ## <a name="remarks"></a>解説  
- 詳細については、次を参照してください。 [^ &#40;です。ビットごとの排他的 OR &#41;&#40;です。TRANSACT-SQL と #41 です](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)。  
+ 詳細については、次を参照してください。 [^ &#40;です。ビットごとの排他的 OR &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md).  
   
 ## <a name="see-also"></a>参照  
  [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)   

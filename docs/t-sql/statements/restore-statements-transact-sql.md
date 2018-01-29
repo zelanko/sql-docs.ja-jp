@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - RESTORE
 - RESTORE_LOG_TSQL
 - RESTORE LOG
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - RESTORE DATABASE, see RESTORE statement
 - full backups [SQL Server]
@@ -40,16 +42,16 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-caps.latest.revision: "248"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b5f6424589d13652095b43ffcefa63e8916ecf39
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: edafff7cc70224c67ef970ca4c13e47cce113f23
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE ステートメント (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -250,7 +252,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   段階的な部分復元  
   
-     プライマリ ファイル グループと、1 つ以上のセカンダリ ファイル グループの復元から始めて、データベースを段階的に復元します。 段階的な部分復元の最初の段階では、RESTORE DATABASE を PARTIAL オプションで実行し、このとき 1 つ以上のセカンダリ ファイル グループを指定します。 詳細については、「[段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)」を参照してください。  
+     プライマリ ファイル グループと、1 つ以上のセカンダリ ファイル グループの復元から始めて、データベースを段階的に復元します。 段階的な部分復元の最初の段階では、RESTORE DATABASE を PARTIAL オプションで実行し、このとき 1 つ以上のセカンダリ ファイル グループを指定します。 詳細については、「[段階的な部分復元の実行 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)」を参照してください。  
   
 -   復旧のみ  
   
@@ -262,11 +264,11 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   Always On 可用性グループの可用性データベースを準備します。  
   
-     詳細については、「[可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)」を参照してください。  
+     詳細については、「 [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。  
   
 -   データベース ミラーリングのためのミラー データベースの準備  
   
-     詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)を使用します。  
+     詳細については、「[ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)」を参照してください。  
   
 -   オンライン復元  
   
@@ -404,10 +406,10 @@ Note: URL is the format used to specify the location and the file name for the W
 >   
 >  SQL Server のバックアップと復元、Windows Azure Blob ストレージに固有の情報を参照してください。 [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)です。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>権限  
  復元するデータベースが存在しない場合、ユーザーは RESTORE を実行できる CREATE DATABASE 権限を使用する必要があります。 データベースが存在する場合、既定では、RESTORE 権限は **sysadmin** 固定サーバー ロールおよび **dbcreator** 固定サーバー ロールのメンバーと、データベースの所有者 (**dbo**) に与えられています (FROM DATABASE_SNAPSHOT オプションを使用する場合、データベースは常に存在します)。  
   
- RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、 **db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
+ RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で破損していないことが必ずしも保証されないため、 **db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
   
 ##  <a name="examples"></a> 使用例  
  次の例ではすべて、データベース全体のバックアップが既に実行されていることが前提です。  
@@ -538,7 +540,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
   
  [& #91。上部の例 &#93;](#examples)  
   
-###  <a name="restoring_transaction_log_to_mark"></a>G. トランザクション ログをマークまで復元する  
+###  <a name="restoring_transaction_log_to_mark"></a> G. トランザクション ログをマークまで復元する  
  次の例では、トランザクション ログを `ListPriceUpdate`というマーク付きトランザクションのマークまで復元します。  
   
 ```  
@@ -576,7 +578,7 @@ RESTORE LOG AdventureWorks2012
   
  [& #91。上部の例 &#93;](#examples)  
   
-###  <a name="restoring_using_TAPE"></a>H. TAPE 構文を使用して復元する  
+###  <a name="restoring_using_TAPE"></a> H. TAPE 構文を使用して復元する  
  次の例からデータベースの完全バックアップの復元、`TAPE`バックアップ デバイス。  
   
 ```  
@@ -586,7 +588,7 @@ RESTORE DATABASE AdventureWorks2012
   
  [& #91。上部の例 &#93;](#examples)  
   
-###  <a name="restoring_using_FILE_n_FG"></a>私。 FILE および FILEGROUP 構文を使用して復元する  
+###  <a name="restoring_using_FILE_n_FG"></a> I. FILE および FILEGROUP 構文を使用して復元する  
  次の例は、という名前のデータベースを復元`MyDatabase`を持つ 2 つのファイル、1 つのセカンダリ ファイル グループ、および 1 つのトランザクション ログです。 このデータベースは、完全復旧モデルを使用しています。  
   
  データベースのバックアップは、という名前の論理バックアップ デバイス上のメディア セットで、9 番目のバックアップ`MyDatabaseBackups`です。 次に、3 つのログ バックアップは、次の 3 つのバックアップ セット (`10`、 `11`、および`12`) で、`MyDatabaseBackups`デバイスを使用して復元`WITH NORECOVERY`です。 最後のログ バックアップを復元した後、データベースを復旧します。  
@@ -628,7 +630,7 @@ GO
   
  [& #91。上部の例 &#93;](#examples)  
   
-###  <a name="reverting_from_db_snapshot"></a>J. データベース スナップショットに戻す  
+###  <a name="reverting_from_db_snapshot"></a> J. データベース スナップショットに戻す  
  次の例では、データベースをデータベース スナップショットに戻します。 この例では、現在、データベースに 1 つだけスナップショットが存在することを想定しています。 このデータベース スナップショットを作成する方法の例は、次を参照してください[データベース スナップショット &#40; を作成しますTRANSACT-SQL と #41 です。](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 > **注:**スナップショットに戻す際は、すべてのフルテキスト カタログを削除します。  
@@ -642,10 +644,10 @@ GO
 
  [& #91。上部の例 &#93;](#examples)  
   
-###  <a name="Azure_Blob"></a>K. Microsoft Azure Blob ストレージ サービスからの復元  
+###  <a name="Azure_Blob"></a> K. Microsoft Azure Blob ストレージ サービスからの復元  
 次の 3 つの例には、Microsoft Azure ストレージ サービスの使用が含まれます。  ストレージ アカウント名は `mystorageaccount`です。  データ ファイル用のコンテナーが呼び出された`myfirstcontainer`です。  バックアップ ファイルのコンテナーが呼び出された`mysecondcontainer`です。  各コンテナーの読み取り、書き込み、削除、および一覧は、権限を持つは、保存されているアクセス ポリシーが用意されています。  SQL Server 資格情報は、格納されているアクセス ポリシーに関連付けられている Shared Access Signature を使用して作成されました。  SQL Server のバックアップと復元、Microsoft Azure Blob ストレージに固有の情報を参照してください。 [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)です。  
 
-**K1 です。Microsoft Azure ストレージ サービスからのデータベースの完全バックアップを復元します。**  
+**K1.Microsoft Azure ストレージ サービスからのデータベースの完全バックアップを復元します。**  
 データベースの完全バックアップがある`mysecondcontainer`の`Sales`に復元されます`myfirstcontainer`です。  `Sales`サーバーに現在存在しません。 
 ```
 RESTORE DATABASE Sales
@@ -655,7 +657,7 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
 
-**K2 です。Microsoft Azure ストレージ サービスからローカル ストレージにデータベースの完全バックアップを復元します。**  
+**K2.Microsoft Azure ストレージ サービスからローカル ストレージにデータベースの完全バックアップを復元します。**  
 データベースの完全バックアップがある`mysecondcontainer`の`Sales`はローカル ストレージに復元されます。  `Sales`サーバーに現在存在しません。
 ```
 RESTORE DATABASE Sales
@@ -665,7 +667,7 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
   
-**K3 です。Microsoft Azure ストレージ サービスへのローカル ストレージからデータベースの完全バックアップを復元します。**  
+**K3.Microsoft Azure ストレージ サービスへのローカル ストレージからデータベースの完全バックアップを復元します。**  
 ```
 RESTORE DATABASE Sales
   FROM DISK = 'E:\BAK\Sales.bak'

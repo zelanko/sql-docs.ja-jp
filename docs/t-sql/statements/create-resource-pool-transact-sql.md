@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - RESOURCE POOL
 - CREATE_RESOURCE_POOL_TSQL
 - RESOURCE_POOL_TSQL
-dev_langs: TSQL
-helpviewer_keywords: CREATE RESOURCE POOL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CREATE RESOURCE POOL
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0d6f56e80b0a28dffab2311df3ecce3b2ac76cd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6da47e346606170b29798b0301c10c5adeeed055
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,22 +73,22 @@ CREATE RESOURCE POOL pool_name
  *pool_name*  
  リソース プールのユーザー定義名を指定します。 *pool_name*は、英数字、最大 128 文字を使用できますがのインスタンス内で一意である必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、規則に従う必要がありますと[識別子](../../relational-databases/databases/database-identifiers.md)です。  
   
- MIN_CPU_PERCENT =*値*  
+ MIN_CPU_PERCENT =*value*  
  CPU の競合がある場合に、リソース プールのすべての要求に保証される平均 CPU 帯域幅を指定します。 *値*整数で、既定の設定は 0 です。 許容範囲*値*は 0 ~ 100 です。  
   
- MAX_CPU_PERCENT =*値*  
+ MAX_CPU_PERCENT =*value*  
  CPU の競合がある場合に、リソース プールのすべての要求に割り当てられる最大平均 CPU 帯域幅を指定します。 *値*で、既定の設定 100 の整数です。 許容範囲*値*は 1 ~ 100 です。  
   
- CAP_CPU_PERCENT =*値*  
+ CAP_CPU_PERCENT =*value*  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  リソース プールのすべての要求に割り当てられる、CPU 帯域幅のハード キャップを指定します。 CPU の最大帯域幅レベルを、指定した値と同じレベルに制限します。 *値*で、既定の設定 100 の整数です。 許容範囲*値*は 1 ~ 100 です。  
   
- アフィニティ {スケジューラ = 自動 |( \<scheduler_range_spec >) |NUMANODE = (\<NUMA_node_range_spec >)}**対象**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。  
+ AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  リソース プールを特定のスケジューラにアタッチします。 既定値は AUTO です。  
   
- AFFINITY SCHEDULER = **(** \<scheduler_range_spec > **)**リソース プールをマップする、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定した Id によって識別されます。 これらの Id の値にマップがの scheduler_id column 内[sys.dm_os_schedulers &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
+ AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** maps the resource pool to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schedules identified by the given IDs. これらの Id の値にマップがの scheduler_id column 内[sys.dm_os_schedulers &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
   
  使用する場合に、AFFINITY NUMANODE = **(** \<NUMA_node_range_spec > **)**、リソース プールが関連付けられ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対応する物理 Cpu にマップされたスケジューラ指定した NUMA ノードまたはノードの範囲です。 以下を使用することができます[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリを物理 NUMA 構成の間のマッピングを検出して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スケジューラ Id。 
   
@@ -97,18 +100,18 @@ INNER JOIN sys.dm_os_schedulers AS sc
     AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*値*  
+ MIN_MEMORY_PERCENT =*value*  
  他のリソース プールとは共有できないこのリソース プール用に予約されるメモリの最小量を指定します。 *値*で既定の設定は 0、整数の許容範囲は、*値*は 0 ~ 100 です。  
   
- MAX_MEMORY_PERCENT =*値*  
+ MAX_MEMORY_PERCENT =*value*  
  このリソース プールの要求で使用できる合計サーバー メモリを指定します。 *値*で、既定の設定 100 の整数です。 許容範囲*値*は 1 ~ 100 です。  
   
- MIN_IOPS_PER_VOLUME =*値*  
+ MIN_IOPS_PER_VOLUME =*value*  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  リソース プール用に確保するために、ディスク ボリュームごとに、1 秒あたりの最小 I/O 操作 (IOPS) を指定します。 許容範囲*値*は 0 ~ 2 ^31-1 (2,147, 483,647) です。 プールに最小しきい値を指定しない場合は 0 を指定します。 既定値は 0 です。  
   
- MAX_IOPS_PER_VOLUME =*値*  
+ MAX_IOPS_PER_VOLUME =*value*  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  リソース プールに許された、ディスク ボリュームごとの 1 秒あたりの最大 I/O 操作 (IOPS) 回数を指定します。 許容範囲*値*は 0 ~ 2 ^31-1 (2,147, 483,647) です。 プールに無制限のしきい値を設定する場合は 0 を指定します。 既定値は 0 です。  
@@ -124,7 +127,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
   
  関連付けられた各コンポーネント (スケジューラまたは NUMA ノード) の CPU 使用率の合計が 100% を超えることはできません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

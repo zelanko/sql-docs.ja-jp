@@ -8,29 +8,31 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - KILL QUERY NOTIFICATION SUBSCRIPTION
 - KILL_QUERY_NOTIFICATION_SUBSCRIPTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - KILL QUERY NOTIFICATION SUBSCRIPTION statement
 - removing subscriptions
 - subscriptions [SQL Server query notifications], stopping
 - query notifications [SQL Server], subscriptions
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9c1a2a3af3ce113573fe743aa2325ae0b49cc18
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
-ms.translationtype: HT
+ms.openlocfilehash: 9cec802ec4402716a8d24f7720664e4db856ca1a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="kill-query-notification-subscription-transact-sql"></a>KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +59,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
 ## <a name="remarks"></a>解説  
  KILL QUERY NOTIFICATION SUBSCRIPTION ステートメントでクエリ通知サブスクリプションを削除する際、通知メッセージは生成されません。  
   
- *subscription_id*動的管理ビューで示すように、サブスクリプションの id は、 [sys.dm_qn_subscriptions &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md)。  
+ *subscription_id*動的管理ビューで示すように、サブスクリプションの id は、 [sys.dm_qn_subscriptions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md).  
   
  指定したサブスクリプション ID が存在しない場合は、エラーが発生します。  
   

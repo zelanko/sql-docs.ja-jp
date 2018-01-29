@@ -18,16 +18,16 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], vs. MDAC
 - SQL Server Native Client, updating applications
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
-caps.latest.revision: "81"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2c72e6ab626db31ec329dce777f17e04774b01d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 72bd7a56555da46acacf9431fc82fe006f55cbb6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>MDAC から SQL Server Native Client へのアプリケーションの更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,13 +115,13 @@ ms.lasthandoff: 01/08/2018
   
 -   ODBC または OLE DB 呼び出しを使用してトランザクションを開始した場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client と MDAC とでは動作が異なります。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ではトランザクションがすぐに開始されますが、MDAC では最初のデータベース アクセスの後にトランザクションが開始されます。 ストアド プロシージャとバッチの動作に影響するためできますこの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]@ 必要があります@TRANCOUNTバッチまたはストアド プロシージャが終了すると、バッチやストアド プロシージャの開始時と同じであります。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client、ITransactionLocal::BeginTransaction でトランザクションが即座に開始します。 MDAC では、暗黙のトランザクション モードを必要とするステートメントをアプリケーションが実行するまで、トランザクションの開始が遅延されました。 詳細については、次を参照してください。 [SET IMPLICIT_TRANSACTIONS &#40;です。TRANSACT-SQL と #41 です](../../../t-sql/statements/set-implicit-transactions-transact-sql.md)。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client、ITransactionLocal::BeginTransaction でトランザクションが即座に開始します。 MDAC では、暗黙のトランザクション モードを必要とするステートメントをアプリケーションが実行するまで、トランザクションの開始が遅延されました。 詳細については、次を参照してください。 [SET IMPLICIT_TRANSACTIONS &#40;です。TRANSACT-SQL と #41 です。](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   
 -   使用する場合に、エラーが発生する可能性があります[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ドライバー System.Data.Odbc にアクセスすると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、新しい公開サーバー コンピューター [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-特定のデータ型または機能します。 System.Data.Odbc は、ODBC の汎用実装を提供し、後では公開しませんベンダー固有の機能または拡張機能です。 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ドライバーは最新の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能をネイティブでサポートするように更新されます)。回避策をこの問題、MDAC に戻すか、System.Data.SqlClient に移行します。  
   
  行のバージョン管理機能を使用した Read Committed トランザクション分離は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client と MDAC の両方でサポートされていますが、スナップショット トランザクション分離は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client のみでサポートされています  (プログラミング用語では、「行のバージョン管理機能を使用した Read Committed トランザクション分離」は「Read Committed トランザクション」と同義語です)。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client を使用したアプリケーションのビルド](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [SQL Server Native Client でアプリケーションの構築](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

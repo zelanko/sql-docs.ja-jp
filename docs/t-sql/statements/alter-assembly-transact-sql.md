@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_ASSEMBLY_TSQL
 - ALTER ASSEMBLY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - assemblies [CLR integration], modifying
 - refreshing assemblies
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - adding files
 - ALTER ASSEMBLY statement
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
-caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b1a0a6da27bc534e22da2995fa592d6b430d418
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8b8918d653d6d9ff5f26588ad1626bfc62e3679d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,10 +75,10 @@ ALTER ASSEMBLY assembly_name
 ```  
   
 ## <a name="arguments"></a>引数  
- *アセンブリ名*  
+ *assembly_name*  
  変更するアセンブリの名前を指定します。 *アセンブリ名*データベースに既に存在する必要があります。  
   
- \<Client_assembly_specifier > |\<assembly_bits >  
+ FROM \<client_assembly_specifier> | \<assembly_bits>  
  最新のコピーにアセンブリを更新、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]実装を保持するモジュールです。 このオプションを使用できるのは、指定したアセンブリに関連付けられているファイルが存在しない場合だけです。  
   
  \<client_assembly_specifier > ネットワークまたは更新するアセンブリが配置されているローカルの場所を指定します。 ネットワーク上の場所を指定する場合は、コンピューター名、共有名、および共有内のパスを指定します *manifest_file_name*アセンブリのマニフェストを含むファイルの名前を指定します。  
@@ -115,13 +117,13 @@ ALTER ASSEMBLY assembly_name
   
  詳細については、次を参照してください。[を実装するアセンブリ](../../relational-databases/clr-integration/assemblies-implementing.md)です。  
   
- [DROP FILE { *file_name*[ **、***.. .n*] |ALL}]  
+ [ DROP FILE { *file_name*[ **,***...n*] | ALL } ]  
  アセンブリに関連付けられているファイル名、またはアセンブリに関連付けられているすべてのファイルを、データベースから削除します。 続けて ADD FILE を指定する場合は、最初に DROP FILE が実行されます。 このため、同じファイル名でファイルを置き換えることができます。  
   
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
- [ADD FILE FROM { *client_file_specifier* [AS *file_name*] |*file_bits*AS *file_name*}  
+ [ ADD FILE FROM { *client_file_specifier* [ AS *file_name*] | *file_bits*AS *file_name*}  
  デバッグ ファイルをソース コードなど、アセンブリに関連付けられているファイルをアップロードや他の関連サーバーへの情報に表示される、 **sys.assembly_files**カタログ ビューです。 *client_file_specifier*ファイルをアップロードする場所を指定します。 *file_bits*ファイルを構成するバイナリ値の一覧を指定する代わりに使用されることができます。 *file_name*のインスタンスにするファイルを保存するか名前を示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 *file_name*場合に指定する必要があります*file_bits*を指定すると、省略可能な場合は*client_file_specifier*を指定します。 場合*file_name*が指定されていないの file_name 部分*client_file_specifier*として使用される*file_name*です。  
   
 > [!NOTE]  
@@ -169,7 +171,7 @@ ALTER ASSEMBLY assembly_name
   
  UNCHECKED データ句を指定せずに ALTER ASSEMBLY を実行した場合は、新しいバージョンのアセンブリがテーブル内の既存のデータに影響しないかどうかを検証するためのチェックが行われます。 チェックの対象となるデータ量によっては、パフォーマンスが影響を受ける場合があります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  アセンブリに対する ALTER 権限が必要です。 その他、次の追加要件があります。  
   
 -   アセンブリが既存のアクセス許可を変更するセットが EXTERNAL_ACCESS は、必要があります**EXTERNAL ACCESS ASSEMBLY**サーバーに対する権限。  

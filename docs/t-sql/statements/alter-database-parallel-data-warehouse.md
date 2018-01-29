@@ -8,20 +8,21 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5751656b-7aae-4152-a314-4c631bea4fc4
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 522f8c8404e80943e093ebeb0a56698fa790b6c9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7db44d9c9f02618e4d95a9d3eb9dfc581438dea5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (並列データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -54,22 +55,22 @@ ALTER DATABASE database_name
  *database_name*  
  変更するデータベースの名前。 アプライアンス上のデータベースの一覧を表示する使用[sys.databases &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
- 自動拡張 = {ON |オフ}  
+ AUTOGROW = { ON | OFF }  
  自動拡張オプションを更新します。 自動拡張が ON の場合、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]記憶域の要件の増大に対応するために必要とレプリケートされたテーブル、分散テーブル、およびトランザクション ログに割り当てられた領域を自動的に増加します。 自動拡張が OFF の場合、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]エラーを返します、テーブルをレプリケートされた場合に分散テーブル、またはトランザクション ログが最大サイズの設定を超えています。  
   
- REPLICATED_SIZE =*サイズ*[GB]  
+ REPLICATED_SIZE = *size* [GB]  
  変更されているデータベース内のすべてのレプリケートされたテーブルを格納するためのコンピューティング ノードごとの新しい最大ギガバイト単位を指定します。 アプライアンスの記憶域スペースを計画している場合は、アプライアンスにコンピューティング ノードの数によって REPLICATED_SIZE を乗算する必要があります。  
   
- DISTRIBUTED_SIZE =*サイズ*[GB]  
+ DISTRIBUTED_SIZE = *size* [GB]  
  変更されているデータベース内のすべての分散テーブルを格納するためのデータベースあたり最大ギガバイト単位の新しいを指定します。 サイズは、すべてのアプライアンスにコンピューティング ノードに分散されます。  
   
- LOG_SIZE =*サイズ*[GB]  
+ LOG_SIZE = *size* [GB]  
  変更されているデータベース内のすべてのトランザクション ログを格納するためのデータベースあたり最大ギガバイト単位の新しいを指定します。 サイズは、すべてのアプライアンスにコンピューティング ノードに分散されます。  
   
  暗号化 {ON |オフ}  
  データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 暗号化のみに対して設定できる[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]とき[sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e)に設定されている**1**です。 透過的なデータ暗号化を構成する前に、データベース暗号化キーを作成する必要があります。 データベース暗号化の詳細については、次を参照してください。 [Transparent Data Encryption &#40;です。TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  データベースに対する ALTER 権限が必要です。  
   
 ## <a name="general-remarks"></a>全般的な解説  

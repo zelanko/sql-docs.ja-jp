@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,7 +21,8 @@ f1_keywords:
 - CROSS_APPLY_TSQL
 - APPLY_TSQL
 - CROSS_JOIN_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - OUTER APPLY operator
 - hints [SQL Server], FROM clause
@@ -34,16 +36,16 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-caps.latest.revision: "97"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9ddc3ee291d4e3b498dd6dfd9bbb49ca4299bea6
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
-ms.translationtype: HT
+ms.openlocfilehash: c1abc4a060dd275ba2f8500e88d634a5ba9244ee
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -189,7 +191,7 @@ FROM { <table_source> [ ,...n ] }
 **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
 
   
- OPENROWSET など、テーブル参照の代わりに使用できるオブジェクトを返す行セット関数のいずれかを指定します。 行セット関数の一覧の詳細については、次を参照してください。[行セット関数 &#40;です。TRANSACT-SQL と #41 です](../../t-sql/functions/rowset-functions-transact-sql.md)。  
+ OPENROWSET など、テーブル参照の代わりに使用できるオブジェクトを返す行セット関数のいずれかを指定します。 行セット関数の一覧の詳細については、次を参照してください。[行セット関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rowset-functions-transact-sql.md).  
   
  OPENROWSET 関数および OPENQUERY 関数を使用したリモート オブジェクトの指定は、そのオブジェクトにアクセスする OLE DB プロバイダーの機能に依存します。  
   
@@ -211,12 +213,12 @@ FROM { <table_source> [ ,...n ] }
 **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
 
   
- XML ドキュメントに対して行セット ビューを提供します。 詳細については、次を参照してください。 [OPENXML &#40;です。TRANSACT-SQL と #41 です](../../t-sql/functions/openxml-transact-sql.md)。  
+ XML ドキュメントに対して行セット ビューを提供します。 詳細については、次を参照してください。 [OPENXML &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/openxml-transact-sql.md).  
   
  *derived_table*  
  データベースから行を取得するサブクエリです。 *derived_table*外側のクエリに入力として使用されます。  
   
- *派生* *_table*使用できる、[!INCLUDE[tsql](../../includes/tsql-md.md)]テーブル値コンス トラクター機能を複数の行を指定します。 たとえば、 `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`のようにします。 詳細については、次を参照してください。[テーブル値コンス トラクターと #40 です。TRANSACT-SQL と #41 です](../../t-sql/queries/table-value-constructor-transact-sql.md)。  
+ *派生* *_table*使用できる、[!INCLUDE[tsql](../../includes/tsql-md.md)]テーブル値コンス トラクター機能を複数の行を指定します。 たとえば、 `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`のようにします。 詳細については、次を参照してください。[テーブル値コンス トラクターと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
  *column_alias*  
  派生テーブルの結果セット内の列名に対する別名です。このパラメーターは省略可能です。 選択リストの各列の別名を 1 つずつ含みます。列の別名リスト全体をかっこで囲みます。  

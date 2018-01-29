@@ -8,21 +8,23 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a21ee8a4a525e2b8c522de140a3f482915cdb361
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c46d4df3d19b2c548b203f62a14ea4ebc0226296
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>アクセス許可: GRANT、DENY、REVOKE (Azure SQL Data Warehouse、並列データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -86,15 +88,15 @@ REVOKE
   
  ON [ \<class_type >::]*セキュリティ保護可能な*、 **ON**句は、セキュリティ保護可能なパラメーターをすると、付与、拒否、または revoke 権限の取り消しを説明します。  
   
- \<class_type > のセキュリティ保護可能なクラス型。 これは、**ログイン**、**データベース**、**オブジェクト**、**スキーマ**、**ロール**、または**ユーザー**. またに権限を付与できる、**サーバー***class_type*が**サーバー**これらのアクセス許可が指定されていません。 **データベース**、アクセス許可がという単語を含む場合が指定されていない**データベース**(たとえば**ALTER ANY DATABASE**)。 ない場合*class_type*が指定されているアクセス許可の種類は、サーバーまたはデータベース クラスに制限は、クラスを想定して**オブジェクト**です。  
+ \<class_type > のセキュリティ保護可能なクラス型。 これは、**ログイン**、**データベース**、**オブジェクト**、**スキーマ**、**ロール**、または**ユーザー**. またに権限を付与できる、**サーバー * * * class_type*が**サーバー**これらのアクセス許可が指定されていません。 **データベース**、アクセス許可がという単語を含む場合が指定されていない**データベース**(たとえば**ALTER ANY DATABASE**)。 ない場合*class_type*が指定されているアクセス許可の種類は、サーバーまたはデータベース クラスに制限は、クラスを想定して**オブジェクト**です。  
   
- *セキュリティ保護可能です*  
+ *securable*  
  ログイン、データベース、テーブル、ビュー、スキーマ、プロシージャ、ロール、またはを与えるには、ユーザーの名前は、拒否、または、アクセス許可を取り消します。 説明されている 3 部構成の名前付け規則では、オブジェクト名を指定できます[TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  *プリンシパル*[ **、**.*n* ]  
  許可するには、1 つまたは複数のプリンシパルでは、拒否、または、アクセス許可を取り消します。 プリンシパルは、ログイン、データベース ユーザー、またはデータベース ロールの名前です。  
   
- *プリンシパル*[ **、**.*n* ]  
+ FROM *principal* [ **,**...*n* ]  
  アクセス許可を取り消すの 1 つまたは複数のプリンシパル。  プリンシパルは、ログイン、データベース ユーザー、またはデータベース ロールの名前です。 **でのみ使用できます** 、 **取り消す** ステートメントです。 **で使用できる**  **GRANT** 、 **DENY** 、または **取り消す** です。  
   
  WITH GRANT OPTION  
@@ -109,7 +111,7 @@ REVOKE
 > [!IMPORTANT]  
 >  プリンシパルがなく、指定した権限を持っている場合、 **GRANT**オプション、権限自体が取り消されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  アクセス許可を付与する権限の許可者が必要か、権限自体で、 **WITH GRANT OPTION**、上位の権限が与えられるアクセス許可のことを意味する必要がありますか。  オブジェクトの所有者は、所有するオブジェクトの権限を許可できます。 持つプリンシパル**コントロール**に対するセキュリティ保護可能な権限が権限を許可できますをセキュリティ保護可能な。  メンバー、 **db_owner**と**db_securityadmin**固定データベース ロールがデータベースにアクセス許可を付与できます。  
   
 ## <a name="general-remarks"></a>全般的な解説  

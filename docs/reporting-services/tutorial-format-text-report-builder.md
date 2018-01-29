@@ -11,9 +11,10 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
@@ -325,7 +326,7 @@ ms.lasthandoff: 01/09/2018
   
 7.  **[OK]** をクリックします。  
   
-8.  [実行] (**!**) をクリックして、レポートをプレビューします。  
+8.  [実行]\(**!**) をクリックして、レポートをプレビューします。  
   
 テキスト ボックス内のテキストが、見出し、段落、箇条書きとして表示されます。  
   

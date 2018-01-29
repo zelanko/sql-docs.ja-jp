@@ -8,30 +8,32 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - --_TSQL
 - Comment
 - --
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - nonexecuting text strings [SQL Server]
 - remarks [SQL Server]
 - -- (comment character)
 - comments [SQL Server]
 ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 132d4dc19112858df5fbab33961b5ad99c70dd1c
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
-ms.translationtype: HT
+ms.openlocfilehash: 2cae636f23fc166246b3cf6cb755fde570b3d19c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="---comment-transact-sql"></a>-- (コメント) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +63,7 @@ ms.lasthandoff: 01/19/2018
   
  キーボード ショートカットの詳細については、次を参照してください。 [SQL Server Management Studio のキーボード ショートカット](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)です。  
   
- 複数行のコメントを参照してください。[スラッシュ スター &#40;です。ブロック コメント &#41;&#40;です。TRANSACT-SQL と #41 です](../../t-sql/language-elements/slash-star-comment-transact-sql.md)。  
+ 複数行のコメントを参照してください。[スラッシュ スター &#40;です。ブロック コメント &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
   
 ## <a name="examples"></a>使用例  
  次の例では、-- コメント文字を使用します。  

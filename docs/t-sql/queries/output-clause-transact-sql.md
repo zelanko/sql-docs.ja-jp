@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OUTPUT_TSQL
 - OUTPUT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - displaying updated rows
 - INSERT statement [SQL Server], OUTPUT clause
@@ -31,16 +33,16 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-caps.latest.revision: "94"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a709097e12b435cbf32f88e13c067135aa3e77ad
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
-ms.translationtype: HT
+ms.openlocfilehash: 6a28059e6a30657a67275d317c70bdb26d2507a2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -86,7 +88,7 @@ ms.lasthandoff: 01/19/2018
   
  場合*column_list*が指定されていない、**テーブル**変数は OUTPUT の結果セットと同数の列を持つ必要があります。 ただし、ID 列と計算列はスキップされるため、同じである必要はありません。 場合*column_list*指定は省略された列の null 値を許可するか既定値がある必要がありますに値を代入します。  
   
- 詳細については**テーブル**変数を参照してください[テーブル &#40;です。TRANSACT-SQL と #41 です](../../t-sql/data-types/table-transact-sql.md)。  
+ 詳細については**テーブル**変数を参照してください[テーブル &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/table-transact-sql.md).  
   
  *output_table*  
  返される行を呼び出し元に返さずにテーブルに挿入する場合に、挿入先となるテーブルを指定します。 *output_table*一時テーブルを指定することがあります。  

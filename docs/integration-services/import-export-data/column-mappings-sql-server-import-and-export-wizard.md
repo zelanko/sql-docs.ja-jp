@@ -8,12 +8,14 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.columnmapandtransform.f1
+f1_keywords:
+- sql13.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
@@ -24,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2017
 ---
-# <a name="column-mappings-sql-server-import-and-export-wizard"></a>[列マッピング] (SQL Server インポートおよびエクスポート ウィザード)
+# <a name="column-mappings-sql-server-import-and-export-wizard"></a>[列マッピング]\(SQL Server インポートおよびエクスポート ウィザード)
   指定したクエリをコピーまたは確認する既存のテーブルやビューを選択した後、 **[マッピングの編集]**をクリックすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインポートおよびエクスポート ウィザードに **[列マッピング]** ダイアログ ボックスが表示されます。 このページでは、コピー元の列からコピーしたデータを受け取るためのコピー先列を指定し、構成します。 多くの場合、このページでは何も変更する必要はありません。
   
 選択したテーブル内のすべての列をコピーしない場合、このページでできることは、不要な列を除外することだけです。 コピーしない列については、**[マッピング]** リストの **[変換先]** 列で **[無視]** を選択します。

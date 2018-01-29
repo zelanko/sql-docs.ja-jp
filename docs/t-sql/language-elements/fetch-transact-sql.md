@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FETCH
 - FETCH_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - FETCH statement
 - cursors [SQL Server], fetching
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3b4bf41cecb0c99a38e340c6596d99dde3da8319
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
-ms.translationtype: HT
+ms.openlocfilehash: fae1e085c26c2bcbc6b2605187b4554dba414642
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,7 +101,7 @@ FETCH
   
 -   DYNAMIC SCROLL カーソルは、ABSOLUTE 以外のすべての FETCH オプションをサポートします。  
   
- @@FETCH_STATUS関数が最後にフェッチ ステートメントの状態を報告します。 sp_describe_cursor で返されるカーソル内の fetch_status 列に、同じ情報が記録されます。 FETCH ステートメントで返されたデータに対して操作を行う前に、このステータス情報を使用してデータの妥当性を判断する必要があります。 詳細については、次を参照してください。 [@@FETCH_STATUS &#40;です。TRANSACT-SQL と #41 です](../../t-sql/functions/fetch-status-transact-sql.md)。  
+ @@FETCH_STATUS関数が最後にフェッチ ステートメントの状態を報告します。 sp_describe_cursor で返されるカーソル内の fetch_status 列に、同じ情報が記録されます。 FETCH ステートメントで返されたデータに対して操作を行う前に、このステータス情報を使用してデータの妥当性を判断する必要があります。 詳細については、次を参照してください。 [@@FETCH_STATUS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/fetch-status-transact-sql.md).  
   
 ## <a name="permissions"></a>権限  
  FETCH 権限は、特に指定のない限り有効なすべてのユーザーに与えられます。  

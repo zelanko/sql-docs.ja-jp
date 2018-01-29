@@ -1,5 +1,5 @@
 ---
-title: "選択的 XML インデックス (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE SELECTIVE XML INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -8,21 +8,23 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 411d0242510752d82e85425634f057cc3ac2cbb3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 77bbad8b312de3bf5657bebbad834e80bcbe842a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -116,7 +118,7 @@ identifier
  *xml_column_name*  
  インデックスへのパスを含む XML 列の名前です。  
   
- [WITH XMLNAMESPACES **(**\<xmlnamespace_list >**)**] インデックスを作成するパスで使用される名前空間の一覧を示します。 WITH XMLNAMESPACES 句の構文の詳細については、次を参照してください。 [WITH XMLNAMESPACES &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(**\<xmlnamespace_list>**)**] Is the list of namespaces used by the paths to index. WITH XMLNAMESPACES 句の構文の詳細については、次を参照してください。 [WITH XMLNAMESPACES &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/xml/with-xmlnamespaces.md).  
   
  **(**\<Promoted_node_path_list >**)**省略可能な最適化ヒントを使用してインデックスへのパスの一覧を示します。 パスと、CREATE または ALTER ステートメントで指定できる最適化のヒントについては、次を参照してください。[パスを指定し、選択的 XML インデックスの最適化ヒント](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)です。  
   
@@ -134,7 +136,7 @@ identifier
   
 ## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>アクセス許可  
+### <a name="permissions"></a>権限  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
 ## <a name="examples"></a>使用例  

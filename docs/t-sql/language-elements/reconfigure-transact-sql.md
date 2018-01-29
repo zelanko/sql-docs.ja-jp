@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RECONFIGURE
 - RECONFIGURE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - reconfiguring configuration options
 - configuration options [SQL Server], reconfiguring
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - RECONFIGURE
 - RECONFIGURE, WITH OVERRIDE statement
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 80e8f951e053441b15716c8fc1f8c79abbe026b9
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
-ms.translationtype: HT
+ms.openlocfilehash: 432e5157969a10f36273db3bbd8990fa9e332b68
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +64,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  RECONFIGURE は、明示的または暗黙的なトランザクションでは使用できません。 複数のオプションを同時に再構成すると、いずれかの再構成オプションが失敗した場合に、すべての再構成オプションが無効になります。    
     
- リソース ガバナーを再構成する際にの再構成オプションを参照してください[ALTER RESOURCE GOVERNOR &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/alter-resource-governor-transact-sql.md)。    
+ リソース ガバナーを再構成する際にの再構成オプションを参照してください[ALTER RESOURCE GOVERNOR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-resource-governor-transact-sql.md).    
     
 ## <a name="permissions"></a>権限    
  RECONFIGURE 権限は、既定では ALTER SETTINGS 権限が与えられているユーザーに与えられます。 **Sysadmin**と**serveradmin**固定サーバー ロールが暗黙的にこのアクセス許可を保持します。    

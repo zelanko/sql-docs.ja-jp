@@ -8,14 +8,16 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT Clause
 - SELECT_Clause_TSQL
 - DISTINCT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - parentheses [SQL Server]
 - identity columns [SQL Server], SELECT clause
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - $ROWGUID keyword
 - queries [SQL Server], results
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8aa26314b450d859760f69b61887827b73b456fc
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
-ms.translationtype: HT
+ms.openlocfilehash: 34a1dee420dd8e409df2043f3278a32235656ace
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +80,7 @@ SELECT [ ALL | DISTINCT ]
  上部 (*式*) [PERCENT] [WITH TIES]  
  クエリの結果セットから、指定された最初の行セットまたは比率 (%) に相当する行だけが返されることを示します。 *expression* は行数または行の比率 (%) にすることができます。  
   
- 旧バージョンとの互換性のためには、上部を使用して*式*SELECT の中かっこなしステートメントはサポートしますが、お勧めしません。 詳細については、次を参照してください。 [TOP &#40;です。TRANSACT-SQL と #41 です](../../t-sql/queries/top-transact-sql.md)。  
+ 旧バージョンとの互換性のためには、上部を使用して*式*SELECT の中かっこなしステートメントはサポートしますが、お勧めしません。 詳細については、次を参照してください。 [TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
   
 \<select_list > 列を結果セットを選択します。 選択リストは、コンマで区切られた一連の式です。 選択リストに指定できる式の最大数は、4,096 です。  
   
@@ -95,7 +97,7 @@ SELECT [ ALL | DISTINCT ]
  定数、関数、または列名、定数、関数を演算子で組み合わせたもの、あるいはサブクエリを指定します。  
   
  $IDENTITY  
- ID 列を返します。 詳細については、次を参照してください。 [IDENTITY &#40;です。プロパティ&#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql-identity-property.md)、 [ALTER TABLE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-transact-sql.md)、および[テーブルを作成する &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/create-table-transact-sql.md)。  
+ ID 列を返します。 詳細については、次を参照してください。 [IDENTITY &#40;です。プロパティ&#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql-identity-property.md)、 [ALTER TABLE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-transact-sql.md)、および[テーブルを作成する &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql.md).  
   
  FROM 句内の複数のテーブルが IDENTITY プロパティを備えた列を持つ場合は、T1.$IDENTITY などのように、$IDENTITY を指定のテーブル名で修飾する必要があります。  
   
