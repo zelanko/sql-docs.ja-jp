@@ -8,23 +8,24 @@ ms.service:
 ms.component: ssms-menu
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Fonts_And_Colors
 - VS.TOOLSOPTIONSPAGES.ENVIRONMENT.FONTS_AND_COLORS
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b25286172071a980e96ead35ffef81a6b5cf19d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dce7af8a58cd0cfc486f21846df7a7bcb887b034
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>[オプション] ([環境] - [フォントおよび色] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[オプション]** ダイアログ ボックスを使用して、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] のさまざまなユーザー インターフェイス要素にカスタム フォントや配色を設定できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して、 **[フォントおよび色]**を選択します。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |--------|--------------|  
 |[テキスト エディター]|[テキスト エディター] のフォント スタイル、フォント サイズ、フォント色を変更すると、既定のテキスト エディターに表示されるテキストの外観が変更されます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] の外部のテキスト エディターで開いたドキュメントは、この設定の影響を受けません。|  
 |[プリンター]|[プリンター] のフォント スタイル、フォント サイズ、色の表示設定を変更すると、印刷されるドキュメント内のテキストの外観が変更されます。<br /><br />注: テキスト エディターでの表示に使用されるフォントと異なる既定フォントを印刷用に選択できます。 これは、1 バイト文字と 2 バイト文字の両方を含むコードを印刷する場合に役立ちます。|  
-|[すべてのテキスト ツール ウィンドウ **]**|この項目のフォント スタイル、フォント サイズ、色の表示設定を変更すると、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]で出力ペインを持つツール ウィンドウ内のテキストの外観が変更されます。 これには、たとえば [出力] ウィンドウや [結果のテキスト表示] ウィンドウなどが該当します。<br /><br />注: [すべてのテキスト ツール ウィンドウ] 項目のテキストを変更するセッション中は、変更は適用されません。 変更を確認するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]の別のインスタンスを開きます。|  
+|[すべてのテキスト ツール ウィンドウ] ****|この項目のフォント スタイル、フォント サイズ、色の表示設定を変更すると、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]で出力ペインを持つツール ウィンドウ内のテキストの外観が変更されます。 これには、たとえば [出力] ウィンドウや [結果のテキスト表示] ウィンドウなどが該当します。<br /><br />注: [すべてのテキスト ツール ウィンドウ] 項目のテキストを変更するセッション中は、変更は適用されません。 変更を確認するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]の別のインスタンスを開きます。|  
 |[検索結果ウィンドウ]|この項目のフォント スタイル、フォント サイズ、色の表示設定を変更すると、検索結果ウィンドウ内のテキストの外観が変更されます。|  
 |[出力ウィンドウ]|この項目のフォント スタイル、フォント サイズ、色の表示設定を変更すると、[出力] ウィンドウ内のテキストの外観が変更されます。|  
 |[結果のグリッド表示]|この項目のフォント スタイル、フォント サイズ、色の表示設定を変更すると、クエリ ウィンドウの **[結果のグリッド表示]** 領域のテキストの外観が変更されます。|  
@@ -60,11 +61,11 @@ ms.lasthandoff: 12/21/2017
 文字色と背景色を変更できる項目が一覧表示されます。  
   
 > [!NOTE]  
-> 既定の表示項目は、**[テキスト形式]** です。 [テキスト形式] に割り当てたプロパティよりも、他の表示項目に割り当てられたプロパティの方が優先されます。 たとえば **[テキスト形式]** に青色を割り当て、[識別子] に緑色を割り当てると、識別子はすべて緑色で表示されます。 この例では、[テキスト形式] プロパティよりも [識別子] プロパティが優先されています。  
+> ****既定の表示項目は、[テキスト形式] です。 [テキスト形式] に割り当てたプロパティよりも、他の表示項目に割り当てられたプロパティの方が優先されます。 たとえば **[テキスト形式]** に青色を割り当て、[識別子] に緑色を割り当てると、識別子はすべて緑色で表示されます。 この例では、[テキスト形式] プロパティよりも [識別子] プロパティが優先されています。  
   
 次のような表示項目があります。  
   
--   「インジケーター マージン」: コード エディターの左端で、ブレークポイントとブックマークのアイコンが表示される余白の部分。  
+-   [インジケーター マージン]: コード エディターの左端で、ブレークポイントとブックマークのアイコンが表示される余白の部分。  
   
 -   「縮小可能テキスト」: コード エディターで、表示と非表示を切り替えられるテキストまたはコードのブロック (XML のみ)。  
   

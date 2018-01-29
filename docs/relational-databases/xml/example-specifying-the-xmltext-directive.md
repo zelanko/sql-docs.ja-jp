@@ -8,21 +8,23 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: XMLTEXT directive
+helpviewer_keywords:
+- XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ed147121ef70cf969d5d961665e21a948df7195
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ca56c87a2bf4e1744d5ef3527c559595bc988dd8
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>例: XMLTEXT ディレクティブの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] この例では、EXPLICIT モードを使用した `SELECT` ステートメントで、**XMLTEXT** ディレクティブによりオーバーフロー列のデータを指定する方法を示します。  
@@ -156,7 +158,7 @@ FOR XML EXPLICIT;
  </Parent>
  ```  
   
- `XMLTEXT` 列のデータにルート要素の属性が含まれている場合、これらの属性は XML データ スキーマに反映されません。結果の XML ドキュメントのその部分に関して、MSXML パーサーによる検証は行われません。 例:  
+ `XMLTEXT` 列のデータにルート要素の属性が含まれている場合、これらの属性は XML データ スキーマに反映されません。結果の XML ドキュメントのその部分に関して、MSXML パーサーによる検証は行われません。 例 :  
   
 ```  
 SELECT 1 AS Tag,  
