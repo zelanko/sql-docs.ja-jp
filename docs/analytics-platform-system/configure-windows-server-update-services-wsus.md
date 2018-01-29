@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: "41"
-ms.openlocfilehash: 234c1ee3b13f3440e3f8a0377f3423ccf937acbc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 
+ms.openlocfilehash: cc95a4f26970b91f2346e3edfcfa937190694b43
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>Windows Server Update Services (WSUS) を構成します。
 これらの手順では、Windows Server Update Services (WSUS) の構成ウィザードを使用して、Analytics Platform System の WSUS を構成するための手順について説明します。 アプライアンスにソフトウェア更新プログラムを適用する前に、WSUS を構成する必要があります。 WSUS は、アプライアンスの VMM のバーチャル マシンに既にインストールされています。  
@@ -61,7 +61,7 @@ WSUS を構成する必要があります。
   
     1.  **サーバー マネージャー ダッシュ ボード**の**ツール** メニューのをクリックして**Windows Server Update Services**です。  
   
-    2.  左側のウィンドウで、 **Update Services**ウィンドウをクリックして仮想マシンの管理ノードのサーバーの展開 (***appliance_domain*VMM**)、をクリックして**オプション**です。  
+    2.  左側のウィンドウで、 **Update Services**ウィンドウをクリックして仮想マシンの管理ノードのサーバーを展開 (***appliance_domain *-VMM**)、をクリックして**オプション**です。  
   
     3.  **オプション** ウィンドウで、をクリックして**WSUS サーバーの構成ウィザード**構成ウィザードを起動します。  
   
@@ -89,7 +89,7 @@ WSUS を構成する必要があります。
   
     #### <a name="to-update-by-using-microsoft-update"></a>Microsoft Update を使用して更新するには  
   
-    1.  Microsoft Update と同期するために選択する場合は何も変更する必要はありません、**上流サーバーの選択**ページ。 **[次へ]** をクリックします。  
+    1.  Microsoft Update と同期するために選択する場合は何も変更する必要はありません、**上流サーバーの選択**ページ。 **[次へ]**をクリックします。  
   
         ![WSUS: 上流サーバーの同期](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
@@ -148,7 +148,7 @@ WSUS を構成する必要があります。
   
     選択したすべての更新プログラムの選択を解除します。  
   
-    選択**SQL Server 2014**、 **Windows Server 2012 R2**と**System Center 2012 R2 の Virtual Machine Manager**、順にクリック**次**です。  
+    選択**SQL Server 2014**、 **SQL Server 2016**、 **Windows Server 2012 R2**、および**System Center 2012 R2 の Virtual Machine Manager**、およびをクリックして**次**です。  
   
 9. 分類を選択します。  
   

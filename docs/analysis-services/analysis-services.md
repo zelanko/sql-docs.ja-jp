@@ -1,6 +1,6 @@
 ---
 title: "Analysis Services |Microsoft ドキュメント"
-ms.date: 05/11/2017
+ms.date: 01/26/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services]
 - SSAS, about Analysis Services - Multidimensional Data
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 00b88b320118df9649b546b35259ec1c8acdc7cf
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: d4bdda48d7518d0560e3b5dff8d0a7139de700ae
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="what-is-analysis-services"></a>Analysis Services とは
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -59,7 +59,7 @@ Analysis Services がクラウドで Azure のサービスとして使用でき�
 一般的な Azure Analysis Services に関するドキュメントは、Azure のドキュメントに含まれて。 また、SQL Server Analysis Services のドキュメントが SQL のドキュメントに含まれる。 、には、少なくとも、表形式モデルの作成方法と、プロジェクトの配置が使用しているどのようなプラットフォームに関係なくほとんど同じです。  
    
 *  [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/)
-*  [SQL Server Analysis Services の新機能](../analysis-services/what-s-new-in-analysis-services.md)   
+*  [SQL Server Analysis Services の新機能](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)   
 *  [テーブル ソリューションと多次元ソリューションの比較](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
 *  [テーブル モデル](../analysis-services/tabular-models/tabular-models-ssas.md)  
 *  [多次元モデル](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)  
