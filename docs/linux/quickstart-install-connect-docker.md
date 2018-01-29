@@ -51,7 +51,7 @@ ms.lasthandoff: 12/04/2017
    docker pull microsoft/mssql-server-linux:2017-latest
    ```
 
-   前のコマンドは、最新の SQL Server 2017 コンテナー イメージを取得します。特定のイメージを取得するには、コロンとタグ名を追加します (たとえば、 `microsoft/mssql-server-linux:2017-GA`)。 利用可能なすべてのイメージを表示するには [mssql-server-linux Docker hub ページ](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/) を参照してください。
+   前のコマンドは、最新の SQL Server 2017 コンテナー イメージをプルします。特定のイメージをプルするには、コロンとタグ名を追加します (たとえば、 `microsoft/mssql-server-linux:2017-GA`)。 利用可能なすべてのイメージを表示するには [mssql-server-linux Docker hub ページ](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/) を参照してください。
 
 1. Docker でコンテナー イメージを実行するには、bash シェル (Linux/macOS) または管理者特権の PowerShell コマンド プロンプトから次のコマンドを使用できます。
 
@@ -68,15 +68,15 @@ ms.lasthandoff: 12/04/2017
    ```
 
    > [!NOTE]
-   > 既定では、これは SQL Server 2017 の Developer エディションのコンテナーを作成します。コンテナーで実稼働のエディションを実行するためのプロセスは若干異なります。さらに詳しい情報は [実稼働環境のコンテナー イメージを実行する](sql-server-linux-configure-docker.md#production) を参照してください。
+   > 既定では、これは SQL Server 2017 の Developer エディションのコンテナーを作成します。コンテナーで実稼働のエディションを実行するためのプロセスは若干異なります。詳細については「[実稼働環境のコンテナー イメージを実行する](sql-server-linux-configure-docker.md#production)」を参照してください。
 
-   次の表は、以前の `docker run` におけるパラメーターの例を説明を示しています。
+   次の表では、前述の `docker run` の例におけるパラメーターを説明しています。
 
    | パラメーター | 説明 |
    |-----|-----|
    | **e ' ACCEPT_EULA = Y'** | **ACCEPT_EULA** 変数に [使用許諾契約書](http://go.microsoft.com/fwlink/?LinkId=746388) の同意を確認するための任意の値を設定します。 SQL Server イメージの設定が必要です。 |
-   | **e ' MSSQL_SA_PASSWORD =\<YourStrong!Passw0rd\>'** | 8 文字以上で、 [SQL Server のパスワード要件](../relational-databases/security/password-policy.md) を満たす強力なパスワードを指定します。 SQL Server イメージの設定が必要です。 |
-   | **-p 1401:1433** | ホスト環境の TCP ポート (最初の値) を コンテナーの TCP ポート (2 番目の値) に割り当てます。この例では、 SQL Server はコンテナーの TCP 1433 でリッスンし、これはホストのポート 1401 で受け付けられます。 |
+   | **e ' MSSQL_SA_PASSWORD =\<YourStrong!Passw0rd\>'** | 8 文字以上で、 [SQL Server のパスワード要件](../relational-databases/security/password-policy.md) を満たす強力なパスワードを指定します。 SQL Server イメージに必須の設定です。 |
+   | **-p 1401:1433** | ホスト環境の TCP ポート (最初の値) を コンテナーの TCP ポート (2 番目の値) にマップします。この例では、 SQL Server はコンテナーの TCP 1433 でリッスンし、これがホストのポート 1401 に公開されます。 |
    | **--name sql1** | ランダムに生成されたものではなく、コンテナーのカスタム名を指定します。 2 つ以上のコンテナーを実行する場合、同じ名前を再利用することはできません。 |
    | **microsoft/mssql-server-linux:2017-latest** | SQL Server 2017 Linux コンテナー イメージ。 |
 
