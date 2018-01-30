@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], filtered
 - indexes [SQL Server], filtered
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
-caps.latest.revision: "73"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 19c5b3d78399908472a7cd97f0dbbd2e0708ecc4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 91697492aa2cde2d1356e70e753ee4e3f84371bb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-filtered-indexes"></a>フィルター選択されたインデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してフィルター選択されたインデックスを作成するには:**  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Design"></a> デザインに関する考慮事項  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。 フィルター選択されたインデックスの式を変更するには、CREATE INDEX WITH DROP_EXISTING を使用します。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -121,13 +122,13 @@ ms.lasthandoff: 11/17/2017
   
 6.  **[インデックス キー列]**で、 **[追加]**をクリックします。  
   
-7.  **table_name***から列を選択* ダイアログ ボックスで、一意のインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
+7.  *[<テーブル名> から列を選択]* ダイアログ ボックスで、一意のインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
-8.  クリックして **OK**です。  
+8.  **[OK]** をクリックします。  
   
 9. **[フィルター]** ページで、 **[フィルター式]**に、フィルター選択されたインデックスの作成に使用する SQL 式を入力します。  
   
-10. クリックして **OK**です。  
+10. **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

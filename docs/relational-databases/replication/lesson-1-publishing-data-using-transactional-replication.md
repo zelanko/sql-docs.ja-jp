@@ -8,22 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6d053d9a0e80785e375fdb1f796ddf01894d993
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 49a9b7290e5f3253995f7bef0efd1390f74de5bf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>レッスン 1 : トランザクション レプリケーションを使用したデータのパブリッシュ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このレッスンでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してトランザクション パブリケーションを作成し、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースの **Product** テーブルからフィルター選択したサブセットをパブリッシュします。 また、ディストリビューション エージェントにより使用される SQL Server ログインをパブリケーション アクセス リスト (PAL) に追加します。 このチュートリアルを行うには、前のチュートリアル「 [レプリケーションに備えたサーバーの準備](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)」を完了している必要があります。  
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  [パブリケーションの種類] ページで **[トランザクション パブリケーション]**を選択し、 **[次へ]**をクリックします。  
   
-5.  [アーティクル] ページで、 **[テーブル]** ノードを展開して **[Product]** チェック ボックスをオンにします。次に、 **[Product]** を展開して、 **[ListPrice]** チェック ボックスと **[StandardCost]** チェック ボックスをオフにします。 **[次へ]**をクリックします。  
+5.  [アーティクル] ページで、 **[テーブル]** ノードを展開して **[Product]** チェック ボックスをオンにします。次に、 **[Product]** を展開して、 **[ListPrice]** チェック ボックスと **[StandardCost]** チェック ボックスをオフにします。 **[次へ]** をクリックします。  
   
 6.  [テーブル行のフィルター選択] ページで、 **[追加]**をクリックします。  
   
@@ -80,11 +83,11 @@ ms.lasthandoff: 11/17/2017
   
     **[パブリケーションのプロパティ]** ダイアログ ボックスが表示されます。  
   
-3.  **[パブリケーション アクセス リスト]** ページを選択して、**[追加]** をクリックします。  
+3.  **[パブリケーション アクセス リスト]** ページを選択して、 **[追加]**をクリックします。  
   
-4.  **[パブリケーション アクセスの追加]** ダイアログ ボックスで、*<コンピューター名>***\repl_distribution** を選択して **[OK]** をクリックし、 **[OK]**をクリックします。  
+4.  **[パブリケーション アクセスの追加]** ダイアログ ボックスで、*<コンピューター名>***\repl_distribution** を選択して **[OK]** をクリックします。 **[OK]** をクリックします。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 ここでは、トランザクション パブリケーションを作成しました。 次は、このパブリケーションをサブスクライブします。 「 [レッスン 2: トランザクション パブリケーションへのサブスクリプションの作成](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

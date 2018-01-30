@@ -1,14 +1,15 @@
 ---
 title: "コマンド プロンプトからの SQL Server のインストール | Microsoft Docs"
 ms.custom: 
-ms.date: 09/07/2017
+ms.date: 01/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -86,15 +87,15 @@ helpviewer_keywords:
 - nodes [Faillover Clustering], command prompt
 - INSTALLSQLSHAREDDIR parameter
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
-caps.latest.revision: "255"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: dcb4878399af227359b995d43fbc83b96b168194
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+manager: craigg
+ms.openlocfilehash: 1c275c5f9df33587f18eb791e92012d7aefa13c1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server のインストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server のセットアップを実行する前に、「[SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)」を参照してください。  
@@ -273,7 +274,7 @@ ms.lasthandoff: 01/16/2018
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **必須**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の開始アカウントを指定します。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必須](#Accounts)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスの開始アカウントのパスワードを指定します。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **省略可**|[の](#Accounts) スタートアップ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]モードを指定します。|  
-|R Services (データベース内)|MRCACHEDIRECTORY|このパラメーターを使用して、 [このセクション](https://msdn.microsoft.com/library/mt695942.aspx)で説明されている Microsoft R Open コンポーネントと Microsoft R Server コンポーネント用のキャッシュ ディレクトリを指定します。 通常、この設定を使用するのは、インターネット アクセスを使用していないコンピューターでコマンド ラインから SQL Server R Services をインストールする場合です。|  
+|R Services (データベース内)|MRCACHEDIRECTORY|このパラメーターを使用し、Microsoft R Open コンポーネントと Microsoft R Server コンポーネントまたは Microsoft Machine Learning Server コンポーネントのキャッシュ ディレクトリを指定します。詳細は[この記事](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)にあります。 通常、この設定を使用するのは、インターネット アクセスのないコンピューターでコマンド ラインから SQL Server Machine Learning をインストールする場合です。|  
   
 ###### <a name="sample-syntax"></a>サンプル構文:  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、レプリケーション、フルテキスト検索の各コンポーネントが配置された新しいスタンドアロン インスタンスをインストールし、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のファイルの瞬時初期化を有効にするには、次の構文を使用します。 
@@ -542,7 +543,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/SQMREPORTING<br /><br /> **省略可**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] には影響しません。 <br/><br/>エラーのフィードバックを Microsoft に送信する方法を管理するには、「[フィードバックをマイクロソフトに送信するように [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] を構成する方法](http://support.microsoft.com/kb/3153756)」を参照してください。 <br/><br/>以前のバージョンでは、これにより SQL Server の機能の使用状況レポートが指定されます。<br /><br />サポートされる値:<br /><br /> 1 = 有効<br /><br /> 0 = 無効|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/HIDECONSOLE<br /><br /> **省略可**|コンソール ウィンドウを非表示にするか閉じる場合に指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/FAILOVERCLUSTERDISKS<br /><br /> **省略可**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスター リソース グループに含まれる共有ディスクの一覧を指定します。<br /><br /> 既定値: 最初のドライブが、すべてのデータベースの既定のドライブとして使用されます。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必須**|エンコードされた IP アドレスを指定します。 エンコードはセミコロン (;) で区切り、\<IP の種類>;\<アドレス>;\<ネットワーク名>;\<サブネット マスク> という形式に従います。 サポートされている IP の種類には、DHCP、IPv4、および IPv6 があります。<br />フェールオーバー クラスターの IP アドレスを複数指定するには、間にスペースを入れます。 次の例を参照してください。<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必須**|エンコードされた IP アドレスを指定します。 エンコードはセミコロン (;) で区切り、\<IP の種類>;\<アドレス>;\<ネットワーク名>;\<サブネット マスク> という形式に従います。 サポートされている IP の種類には、DHCP、IPv4、および IPv6 があります。<br />フェールオーバー クラスターの IP アドレスを複数指定するには、間にスペースを入れます。 次の例を参照してください。<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **必須**|新しい [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスターのネットワーク名を指定します。 このネットワーク名は、ネットワーク上で新しい [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスター インスタンスを識別するために使用されます。|  
 |SQL Server エージェント|/AGTSVCACCOUNT<br /><br /> **必須**|SQL Server エージェント サービスのアカウントを指定します。|  
 |SQL Server エージェント|/AGTSVCPASSWORD<br /><br /> [必須](#Accounts)|SQL Server エージェント サービス アカウントのパスワードを指定します。|  
@@ -680,7 +681,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/SQMREPORTING<br /><br /> **省略可**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] には影響しません。 <br/><br/>エラーのフィードバックを Microsoft に送信する方法を管理するには、「[フィードバックをマイクロソフトに送信するように [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] を構成する方法](http://support.microsoft.com/kb/3153756)」を参照してください。 <br/><br/>以前のバージョンでは、これにより [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能の使用状況レポートが指定されます。<br /><br />サポートされる値:<br /><br /> 1 = 有効<br /><br /> 0 = 無効|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/HIDECONSOLE<br /><br /> **省略可**|コンソール ウィンドウを非表示にするか閉じる場合に指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/FAILOVERCLUSTERDISKS<br /><br /> **省略可**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスター リソース グループに含まれる共有ディスクの一覧を指定します。<br /><br /> 既定値:<br /><br /> 最初のドライブは、すべてのデータベースに対して既定のドライブとして使用されます。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必須**|エンコードされた IP アドレスを指定します。 エンコードはセミコロン (;) で区切り、\<IP の種類>;\<アドレス>;\<ネットワーク名>;\<サブネット マスク> という形式に従います。 サポートされている IP の種類には、DHCP、IPv4、および IPv6 があります。<br />フェールオーバー クラスターの IP アドレスを複数指定するには、間にスペースを入れます。 次の例を参照してください。<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必須**|エンコードされた IP アドレスを指定します。 エンコードはセミコロン (;) で区切り、\<IP の種類>;\<アドレス>;\<ネットワーク名>;\<サブネット マスク> という形式に従います。 サポートされている IP の種類には、DHCP、IPv4、および IPv6 があります。<br />フェールオーバー クラスターの IP アドレスを複数指定するには、間にスペースを入れます。 次の例を参照してください。<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **必須**|新しい [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスターのネットワーク名を指定します。 このネットワーク名は、ネットワーク上で新しい [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスター インスタンスを識別するために使用されます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/CONFIRMIPDEPENDENCYCHANGE|マルチサブネット フェールオーバー クラスターについて、IP アドレス リソースの依存関係を OR に設定することを示します。 詳細については、「[新しい SQL Server フェールオーバー クラスターの作成 &#40;セットアップ&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)」をご覧ください。 サポートされる値: <br /><br /> 0 = False (既定値)<br /><br /> 1 = True|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **省略可**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] バックアップ ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|  
@@ -777,7 +778,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/Q<br /><br /> **省略可**|セットアップが、ユーザー インターフェイスなしで、非表示モードで実行されるように指定します。 このパラメーターは、自動インストールに使用されます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/QS<br /><br /> **省略可**|セットアップが UI を使用して実行され、UI を使用して進捗状況が表示されるように指定します。さらに、セットアップで入力ができないように、またはエラー メッセージが表示されないように指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/HIDECONSOLE<br /><br /> **省略可**|コンソール ウィンドウを非表示にするか閉じる場合に指定します。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必須**|エンコードされた IP アドレスを指定します。 エンコードはセミコロン (;) で区切り、\<IP の種類>;\<アドレス>;\<ネットワーク名>;\<サブネット マスク> という形式に従います。 サポートされている IP の種類には、DHCP、IPv4、および IPv6 があります。<br />フェールオーバー クラスターの IP アドレスを複数指定するには、間にスペースを入れます。 次の例を参照してください。<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1<br /><br /> <br /><br /> 詳細については、「[[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスターでのノードの追加または削除 &#40;セットアップ&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必須**|エンコードされた IP アドレスを指定します。 エンコードはセミコロン (;) で区切り、\<IP の種類>;\<アドレス>;\<ネットワーク名>;\<サブネット マスク> という形式に従います。 サポートされている IP の種類には、DHCP、IPv4、および IPv6 があります。<br />フェールオーバー クラスターの IP アドレスを複数指定するには、間にスペースを入れます。 次の例を参照してください。<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`<br /><br /> <br /><br /> 詳細については、「[[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスターでのノードの追加または削除 &#40;セットアップ&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/CONFIRMIPDEPENDENCYCHANGE<br /><br /> **必須**|マルチサブネット フェールオーバー クラスターについて、IP アドレス リソースの依存関係を OR に設定することを示します。 詳細については、「[[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスターでのノードの追加または削除 &#40;セットアップ&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。 サポートされる値:<br /><br /> 0 = False (既定値)<br /><br /> 1 = True|  
 |SQL Server エージェント|/AGTSVCACCOUNT<br /><br /> **必須**|SQL Server エージェント サービスのアカウントを指定します。|  
 |SQL Server エージェント|/AGTSVCPASSWORD<br /><br /> [必須](#Accounts)|SQL Server エージェント サービス アカウントのパスワードを指定します。|  

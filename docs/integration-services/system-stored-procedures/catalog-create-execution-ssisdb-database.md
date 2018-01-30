@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 883d6283f191827caf4de79e3f148f4680ccfe8a
-ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
+ms.openlocfilehash: 5c557108a98a0063cb0dad14e0d40f10deb03698
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,9 +66,9 @@ catalog.create_execution [@folder_name = folder_name
 [@useanyworker =] *useanyworker*  
 任意の Scale Out Worker の実行が許可されるかどうかを示します。
 
--   任意の Scale Out Worker を使用してパッケージを実行するには、値 1 を使用します。 `@useanyworker` を True に設定すると、(Worker 構成ファイルに指定されている) 最大タスク数に到達していない Worker でパッケージを実行できます。
+-   任意の Scale Out Worker を使用してパッケージを実行するには、値 1 を使用します。 `@useanyworker` を True に設定すると、(Worker 構成ファイルに指定されている) 最大タスク数に到達していない Worker でパッケージを実行できます。 Worker 構成ファイルについては、「[Integration Services (SSIS) Scale Out Worker](../scale-out/integration-services-ssis-scale-out-worker.md)」を参照してください。
 
--   すべての Scale Out Worker にパッケージの実行を許可しないことを示すには、値 0 を使用します。 `@useanyworker` を False に設定すると、Scale Out Manager を使用するか、ストアド プロシージャ `[catalog].[add_execution_worker]` を呼び出し、パッケージの実行が許可される Worker を指定する必要があります。
+-   すべての Scale Out Worker にパッケージの実行を許可しないことを示すには、値 0 を使用します。 `@useanyworker` を False に設定すると、Scale Out Manager を使用するか、ストアド プロシージャ `[catalog].[add_execution_worker]` を呼び出し、パッケージの実行が許可される Worker を指定する必要があります。 別のパッケージを既に実行している Worker を指定した場合、その Worker は現在のパッケージの実行を完了してから別の実行を要求します。
 
 このパラメーターはオプションです。 指定しない場合、その値は 1 に設定されます。 *useanyworker* は **bit** です。 
   

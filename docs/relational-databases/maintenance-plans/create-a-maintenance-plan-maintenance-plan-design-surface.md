@@ -8,21 +8,23 @@ ms.service:
 ms.component: maintenance-plans
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Maintenance Plan Design Surface
+helpviewer_keywords:
+- Maintenance Plan Design Surface
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9368c1af9cc0288868523d413d698816c7babc18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 30a9e1d1a02e44de418a7d6d8de4acfe694e83f2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>メンテナンス プランの作成 (メンテナンス プラン デザイン画面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でメンテナンス プラン デザイン画面を使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。 基本的なメンテナンス プランを作成する場合は、 **メンテナンス プラン ウィザード** が最適です。それに対して、デザイン画面を使用してプランを作成すると、高度なワークフローを利用できます。  
@@ -33,11 +35,11 @@ ms.lasthandoff: 11/17/2017
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   [メンテナンス プラン デザイン画面を使用したメンテナンス プランの作成](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  メンテナンス プランを作成または管理するには、 **sysadmin** 固定サーバー ロールのメンバーである必要があります。 ユーザーが **sysadmin** 固定サーバー ロールのメンバーである場合のみ、オブジェクト エクスプローラーに **[メンテナンス プラン]** ノードが表示されます。  
   
 ##  <a name="SSMSProcedure"></a> メンテナンス プラン デザイン画面の使用  
@@ -91,7 +93,7 @@ ms.lasthandoff: 11/17/2017
      **名前**  
      メンテナンス プランの名前が表示されます。 新しいメンテナンス プランの名前は、メンテナンス プラン デザイナーを開く前にダイアログ ボックスで指定します。 メンテナンス プランの名前を変更するには、オブジェクト エクスプローラーでプランを右クリックし、 **[名前の変更]**をクリックします。  
   
-     **説明**  
+     **[説明]**  
      メンテナンス プランの説明を表示または指定します。 説明の長さは最大 512 文字です。  
   
      **デザイナー画面**  
@@ -103,10 +105,10 @@ ms.lasthandoff: 11/17/2017
   
      **[サブプランのプロパティ]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
-     **[名前]**  
+     **名前**  
      サブプランの名前です。  
   
-     **説明**  
+     **[説明]**  
      サブプランの簡潔な説明です。  
   
      **スケジュール**  
@@ -220,7 +222,7 @@ ms.lasthandoff: 11/17/2017
   
         1.  **[テキスト ファイルのレポートを生成する]**で、 **[新しいファイルの作成]** または **[ファイルに追加]**を選択します。  
   
-        2.  上記の選択内容に応じて、 **[フォルダー]** または **[ファイル名]** ボックスに情報を入力することにより、新しいファイルまたは追加されるファイルの名前および完全なパスを入力します。 または、参照ボタン **([...])** をクリックし、 **[フォルダーの検索 –***server_name* ] または **[データベース ファイルの検索 –***server_name* ] ダイアログ ボックスで、フォルダーへのパスまたはファイル名を選びます。  
+        2.  上記の選択内容に応じて、 **[フォルダー]** または **[ファイル名]** ボックスに情報を入力することにより、新しいファイルまたは追加されるファイルの名前および完全なパスを入力します。 または、参照ボタン **([...])** をクリックし、*[フォルダーの検索 - <サーバー名>]* または *[データベース ファイルの検索 - <サーバー名>]* ダイアログ ボックスで、フォルダーへのパスまたはファイル名を選びます。  
   
         3.  **[エージェント オペレーター]**一覧で **[電子メール受信者にレポートを送信する]** を選択した場合は、電子メール レポートの受信者を選択します。  
   
@@ -235,7 +237,7 @@ ms.lasthandoff: 11/17/2017
   
 12. ログ ファイル ビューアーで結果を参照するには、 **オブジェクト エクスプローラー**で **[メンテナンス プラン]** フォルダーを右クリックするか、特定のメンテナンス プランを右クリックして **[履歴の表示]**を選択します。  
   
-     **[ログ ファイルの表示 –***server_name* ] ダイアログ ボックスでは、次のオプションを使用できます。  
+     *[ログ ファイルの表示 - <サーバー名>]* ダイアログ ボックスでは、次のオプションを使用できます。  
   
      **[ログの読み込み]**  
      読み込むログ ファイルを指定できるダイアログ ボックスが開きます。  

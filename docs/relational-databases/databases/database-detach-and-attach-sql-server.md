@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,16 +30,16 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
-caps.latest.revision: "98"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: df36f7e602f85000e2254b1bffa3d240ab7321a8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7338e364e970aaccc6c24cdba04e1b43a188c8c9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-detach-and-attach-sql-server"></a>データベースのデタッチとアタッチ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] データベースのデータ ファイルおよびトランザクション ログ ファイルは、デタッチして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の同一または別のインスタンスに再度アタッチすることができます。 同一コンピューターの別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにデータベースを変更したり、データベースを移動したりする場合、データベースをデタッチしてアタッチする操作が便利です。  
@@ -69,14 +70,14 @@ ms.lasthandoff: 11/17/2017
   
 -   データベースがデータベース ミラーリング セッションでミラー化される。  
   
-     セッションが終了するまでは、データベースはデタッチできません。 詳細については、「[データベース ミラーリングを削除する &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)」を参照してください。  
+     セッションが終了するまでは、データベースはデタッチできません。 詳細については、「 [データベース ミラーリングの削除 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)」を参照してください。  
   
 -   データベースに問題がある。 問題のあるデータベースはデタッチできません。デタッチするには緊急モードにする必要があります。 データベースを緊急モードに設定する方法の詳細については、「 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
 -   データベースがシステム データベースである。  
   
 ### <a name="backup-and-restore-and-detach"></a>バックアップと復元およびデタッチ  
- 読み取り専用のデータベースをデタッチすると、差分バックアップの差分ベースに関する情報が失われます。 詳細については、「[差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)」を参照してください。  
+ 読み取り専用のデータベースをデタッチすると、差分バックアップの差分ベースに関する情報が失われます。 詳細については、「 [差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)」を参照してください。  
   
 ### <a name="responding-to-detach-errors"></a>デタッチ エラーへの対応  
  データベースのデタッチ中にエラーが発生すると、データベースがクリーンに閉じず、トランザクション ログが再構築されないことがあります。 エラー メッセージが表示される場合は、次の修正操作を実行してください。  
@@ -95,7 +96,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  アタッチ中のプライマリ データ ファイルが読み取り専用の場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ではデータベースが読み取り専用であると想定されます。  
   
- 暗号化されたデータベースが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに最初にアタッチされている場合、データベース所有者は、OPEN MASTER KEY DECRYPTION BY PASSWORD = **'***パスワード***'**というステートメントを実行してデータベースのマスター キーを開く必要があります。 ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY ステートメントを実行してマスター キーの自動暗号化解除を有効にすることをお勧めします。 詳細については、「[CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。  
+ 暗号化されたデータベースが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに最初にアタッチされている場合、データベース所有者は、OPEN MASTER KEY DECRYPTION BY PASSWORD = **'***パスワード***'** というステートメントを実行してデータベースのマスター キーを開く必要があります。 ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY ステートメントを実行してマスター キーの自動暗号化解除を有効にすることをお勧めします。 詳細については、「[CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。  
   
  次に示すように、ログ ファイルをアタッチするための要件の一部は、データベースが読み書き可能か読み取り専用かによって異なります。  
   

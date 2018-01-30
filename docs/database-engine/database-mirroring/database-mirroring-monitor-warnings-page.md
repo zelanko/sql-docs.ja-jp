@@ -8,21 +8,23 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.warningsandalerts.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.warningsandalerts.f1
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c99baee0acea3b6a05f15b5c2ae33cdb347ee1bb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f150d44a28915741ffd45b4e8c4506deb41a5a51
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>データベース ミラーリング モニター ([警告] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] データベース ミラーリングのイベントでサポートされている警告の読み取り専用の一覧と指定された警告しきい値 (存在する場合) を表示します。  
@@ -31,7 +33,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="columns"></a>列  
+## <a name="columns"></a>[列]  
  **警告**  
  しきい値を定義可能な警告には、次のものがあります。  
   
@@ -52,8 +54,8 @@ ms.lasthandoff: 11/20/2017
   
  詳細については、後の「解説」を参照してください。  
   
-## <a name="remarks"></a>解説  
- サーバー インスタンスの情報が現在表示できない場合、対応している **['<server_instance>' でのしきい値]** 列のセルには、背景が灰色のウォーターマーク テキストが表示されます。 モニターがサーバー インスタンスに接続されていない場合、グリッドの各セルには、既定のインスタンスか名前付きインスタンスかに応じて、"***<システム名>* に接続していません**" または "***<システム名>***\\***<インスタンス名>***" と表示されます。 モニターがクエリの応答を待機している場合、グリッドの各セルに "**データを待機しています...**" と 表示されます。  
+## <a name="remarks"></a>Remarks  
+ サーバー インスタンスの情報が現在表示できない場合、対応している **['<server_instance>' でのしきい値]** 列のセルには、背景が灰色のウォーターマーク テキストが表示されます。 モニターがサーバー インスタンスに接続されていない場合、グリッドの各セルには、既定のインスタンスか名前付きインスタンスかに応じて、**[***<システム名> に接続していません]* または **[***<システム名>***\\***<インスタンス名> に接続されていません]* と表示されます。 モニターがクエリの応答を待機している場合、グリッドの各セルに "**データを待機しています...**" と 表示されます。  
   
  情報を表示できる場合、各警告のセルには、指定されたしきい値が表示されるか、または " **有効になっていません**" と表示されます。  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 11/20/2017
 |**[最も古い未送信のトランザクションの経過期間がしきい値を超えた場合に警告する]**|最も古い未送信のトランザクション|32044|  
 |**[ミラー コミットのオーバーヘッドがしきい値を超えた場合に警告する]**|ミラー コミットのオーバーヘッド|32045|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  フル アクセスの場合、 **sysadmin** 固定サーバー ロールのメンバーシップが必要です。 **sysadmin** のメンバーだけが主要なパフォーマンス基準の警告しきい値を構成および表示できます。  
   
  **dbm_monitor** ロールのメンバーシップを使用して、 **[警告]** ページに最新の状態行のみを表示できます。  

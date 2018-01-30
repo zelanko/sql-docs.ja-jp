@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - ALLOW_PAGE_LOCKS option
 - ONLINE
 ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
-caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1306c568bd2f15d5972371b33ebee8be05920dec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f8aa22b11ed563a2a9bf657db53ca0b0136c81cb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-index-options"></a>インデックス オプションの設定
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してインデックスのプロパティを変更するには:**  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  **[閉じる]**をクリックします。  
   
-8.  **[ファイル]** メニューの [ **table_name***を保存*] を選びます。  
+8.  **[ファイル]** メニューの *[<テーブル名> を保存]* を選択します。  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>インデックスのプロパティをオブジェクト エクスプローラーで変更するには  
   

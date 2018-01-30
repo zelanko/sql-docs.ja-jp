@@ -8,20 +8,21 @@ ms.service:
 ms.component: sql-trace
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e664c24d37f41986789998bdd20db49232b05609
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b035b11167895581588de96db1c1db3f65931307
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-trace"></a>SQL トレース (SQL Trace)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL トレースでは、トレース定義に一覧表示されているイベント クラスのインスタンスであるイベントが収集されます。 このようなイベントは、フィルターによってトレースから除外したり、対象のキューに登録したりすることができます。 イベントの対象には、ファイルまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を指定できます。SMO では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を管理するアプリケーションでトレース情報を使用できます。  
@@ -119,7 +120,7 @@ ms.lasthandoff: 11/17/2017
 |**OwnerID**|58|ロック イベントの場合にのみ該当します。 ロックを所有するオブジェクトの種類。|  
 |**OwnerName**|37|オブジェクト所有者のデータベース ユーザー名。|  
 |**ParentName**|59|オブジェクトが存在するスキーマ名。|  
-|**アクセス許可**|19|チェックされた権限の種類を表す整数値。 値は次のとおりです。<br /><br /> **1** = SELECT ALL<br /><br /> **2** = UPDATE ALL<br /><br /> **4** = REFERENCES ALL<br /><br /> **8** = INSERT<br /><br /> **16** = DELETE<br /><br /> **32** = EXECUTE (プロシージャのみ)<br /><br /> **4096** = SELECT ANY (1 列以上)<br /><br /> **8192** = UPDATE ANY<br /><br /> **16384** = REFERENCES ANY|  
+|**権限**|19|チェックされた権限の種類を表す整数値。 値は次のとおりです。<br /><br /> **1** = SELECT ALL<br /><br /> **2** = UPDATE ALL<br /><br /> **4** = REFERENCES ALL<br /><br /> **8** = INSERT<br /><br /> **16** = DELETE<br /><br /> **32** = EXECUTE (プロシージャのみ)<br /><br /> **4096** = SELECT ANY (1 列以上)<br /><br /> **8192** = UPDATE ANY<br /><br /> **16384** = REFERENCES ANY|  
 |**ProviderName**|46|OLEDB プロバイダーの名前。|  
 |**Reads**|16|論理ディスク上の読み取り操作の回数。この操作は、イベントの代わりにサーバーによって実行されます。 これらの読み取り操作には、ステートメントの実行中に行われるテーブルやバッファーからのすべての読み取り操作が含まれます。|  
 |**RequestID**|49|ステートメントを含んでいる要求の ID。|  
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/17/2017
 |**TargetLoginName**|42|ログインを対象とする操作 (新規ログインの追加など) の場合の対象ログインの名前。|  
 |**TargetLoginSid**|43|ログインを対象とする操作 (新規ログインの追加など) の場合の対象ログインの SID。|  
 |**TargetUserName**|39|データベース ユーザーを対象とした操作 (ユーザーへの権限の許可など) を行う場合の対象となるユーザーの名前。|  
-|**TextData**|1|トレースにキャプチャされるイベント クラスに依存するテキスト値。 ただし、パラメーター化クエリをトレースする場合は、変数は **TextData** 列のデータ値と共には表示されません。|  
+|**TextData**|@shouldalert|トレースにキャプチャされるイベント クラスに依存するテキスト値。 ただし、パラメーター化クエリをトレースする場合は、変数は **TextData** 列のデータ値と共には表示されません。|  
 |**Transaction ID**|4|トランザクションに対してシステムが割り当てた ID。|  
 |**型**|57|トレースにキャプチャされるイベント クラスに依存する整数値。|  
 |**Writes**|17|イベントの代わりにサーバーによって実行される物理ディスクの書き込み操作回数。|  

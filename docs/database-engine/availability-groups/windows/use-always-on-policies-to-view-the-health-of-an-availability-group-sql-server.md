@@ -8,21 +8,23 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Availability Groups [SQL Server], policies
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9c9c56119d0de3f13cc44622d312cb1b64142c78
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 15ce6e641cf6c5e8f060910a6eb38aa0f2e97587
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>AlwaysOn ポリシーを使用した可用性グループの正常性の確認 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +42,11 @@ ms.lasthandoff: 11/20/2017
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  CONNECT、VIEW SERVER STATE、および VIEW ANY DEFINITION 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> AlwaysOn ダッシュボードの使用  
@@ -101,7 +103,7 @@ ms.lasthandoff: 11/20/2017
   
      これらのコマンドレットでは、次のオプションを使用できます。  
   
-    |オプション|説明|  
+    |オプション|Description|  
     |------------|-----------------|  
     |**AllowUserPolicies**|AlwaysOn ポリシーのカテゴリにあるユーザー ポリシーを実行します。|  
     |**InputObject**|可用性グループ、可用性レプリカ、または可用性データベースの状態 (使用するコマンドレットに応じて異なります) を表すオブジェクトのコレクションです。 コマンドレットを実行すると、指定されたオブジェクトの正常性が計算されます。|  

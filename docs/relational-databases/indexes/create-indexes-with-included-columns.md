@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - designing indexes [SQL Server], included columns
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 064df7a689cbb3da0323448eb5efc8d0fdace5be
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6cdd414e056c08b3a7b539baa36f4cdde2a68180
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-indexes-with-included-columns"></a>付加列インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -94,13 +95,13 @@ ms.lasthandoff: 01/02/2018
   
 6.  **[インデックス キー列]** タブで、 **[追加]**をクリックします。  
   
-7.  **テーブル名***から列を選択* ダイアログ ボックスで、インデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
+7.  *[テーブル名から列を選択]* ダイアログ ボックスで、インデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 8.  **[OK]** をクリックします。  
   
 9. **[付加列]** タブで、 **[追加]**をクリックします。  
   
-10. **テーブル名***から列を選択* ダイアログ ボックスで、非キー列としてインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
+10. *[<テーブル名> から列を選択]* ダイアログ ボックスで、非キー列としてインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 11. **[OK]** をクリックします。  
   

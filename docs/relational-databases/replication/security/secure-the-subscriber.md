@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Subscribers [SQL Server replication], security
 - security [SQL Server replication], Subscribers
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eab9cb8f16911076421ac1c230de2a7d3f176f84
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1c12d1c2ed7f777d147c6cb94c93bb5c7e8b4e1e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-the-subscriber"></a>サブスクライバーのセキュリティ保護
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] マージ エージェントとディストリビューション エージェントはサブスクライバーに接続します。 これらの接続は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインまたは Windows ログインのコンテキスト下で行われます。 最低限必要な権限のみを与え、かつ、すべてのパスワードの格納を保護するという原則に従って、これらの各エージェントに対し適切なログインを提供することが重要です。 各エージェントに必要な権限の詳細については、「 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
  プル サブスクリプションの接続情報を指定する場合は、「[プル サブスクリプションの作成](../../../relational-databases/replication/create-a-pull-subscription.md)」を参照してください。  
   
-## <a name="merge-agent"></a>マージ エージェント  
+## <a name="merge-agent"></a>[マージ エージェント]  
  マージ サブスクリプションごとにマージ エージェントがあり、パブリッシャーとサブスクライバーの両方に接続し、更新します。  
   
  プッシュ サブスクリプションの接続情報を指定する場合は、「[プッシュ サブスクリプションの作成](../../../relational-databases/replication/create-a-push-subscription.md)」を参照してください。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/17/2017
  詳細については、「[トランザクション パブリケーションの更新可能なサブスクリプションの作成](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md)」および「[レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  接続用に指定するアカウントには、レプリケーションによってパブリケーション データベース内に作成されるビューのデータの挿入、更新、および削除だけを実行できる権限を与える必要があります。それ以外の権限は与えないでください。 各サブスクライバーで構成したアカウントに、**syncobj_***\<HexadecimalNumber>* の形式で名前が指定されたパブリケーション データベース内のビューに対する権限を与えます。  
+>  接続用に指定するアカウントには、レプリケーションによってパブリケーション データベース内に作成されるビューのデータの挿入、更新、および削除だけを実行できる権限を与える必要があります。それ以外の権限は与えないでください。 各サブスクライバーで構成したアカウントに、**syncobj_***\<HexadecimalNumber>* の形式で名前が指定されたパブリケーション データベース内のビューに対するアクセス許可を与えます。  
   
 ## <a name="queued-updating-subscriptions"></a>キュー更新サブスクリプション  
  キュー更新サブスクリプションを構成する際には、セキュリティに関して、以下の 2 点に注意してください。  

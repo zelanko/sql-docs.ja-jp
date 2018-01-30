@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - startup parameters [SQL Server]
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: "80"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b603e31a37884e7c436a184767f8572412e2ec3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2d73b39465c5f0f05244cd4d1d20b3e2fad6eac9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-engine-service-startup-options"></a>データベース エンジン サービスのスタートアップ オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] スタートアップ オプションは、起動時に必要な特定のファイルの場所およびサーバー全体の状態を指定します。 通常は、スタートアップ オプションを指定する必要はありません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のトラブルシューティングを行う場合や、特殊な問題が発生し、スタートアップ オプションの使用を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カスタマー サポートから指示された場合のみ指定します。  
@@ -53,14 +54,14 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="list-of-startup-options"></a>スタートアップ オプションの一覧  
 ### <a name="default-startup-options"></a>既定のスタートアップ オプション  
-|オプション|Description|  
+|および|Description|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|master データベース ファイルの完全修飾パス (通常は、C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf)。 このオプションを省略すると、レジストリ内にあるパラメーターが使用されます。|  
 |**-e**  *error_log_path*|エラー ログ ファイルの完全修飾パス (通常は、C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\LOG\ERRORLOG) です。 このオプションを省略すると、レジストリ内にあるパラメーターが使用されます。|  
 |**-l**  *master_log_path*|master データベース ログ ファイルの完全修飾パス (通常は、C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf)。 このオプションを指定しない場合は、レジストリ内にあるパラメーターが使用されます。|  
   
 ### <a name="other-startup-options"></a>他のスタートアップ オプション   
-|オプション |Description|   
+|および |Description|   
 |---------------------------|-----------------|  
 |**-c**|コマンド プロンプトから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動する場合に、起動時間を短縮します。 通常、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、サービス コントロール マネージャーを呼び出すことにより、サービスとして起動します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、コマンド プロンプトから起動した場合はサービスとして起動しないため、 **-c** を使用してこの手順を省略します。|  
 |**-f**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを最小構成で起動します。 設定値によりサーバーが起動できないとき (たとえば使用できるメモリが不足している場合) などに便利です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を最小構成モードで起動すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がシングル ユーザー モードになります。 詳細については、後の **-m** の説明を参照してください。|  
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="compatibility-support"></a>互換性サポート  
  **-h**  パラメーターは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ではサポートされていません。 このパラメーターは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 32 ビットのインスタンスで AWE が有効になっている場合に、ホット アド メモリ メタデータ用の仮想メモリ アドレス空間を確保するために使用されていました。 詳細については、「 [SQL Server 2016 で提供が中止された機能](http://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da)」を参照してください。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
 [scan for startup procs サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
 [サーバーのスタートアップ オプションの構成 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)

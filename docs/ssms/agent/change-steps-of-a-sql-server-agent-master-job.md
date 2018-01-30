@@ -8,20 +8,21 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5de8e702c1ba529814ad3ac974e05a25bf6e7771
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5d6a1d661300b777f799bbe43396bcfd5d29b3e6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] または [!INCLUDE[tsql](../../includes/tsql_md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] で SQL Server エージェントのマスター ジョブのステップに変更を加える方法について説明します。  
@@ -62,13 +63,13 @@ ms.lasthandoff: 12/21/2017
   
 4.  ステップを変更するジョブを右クリックし、 **[プロパティ]**をクリックします。  
   
-5.  **[ジョブのプロパティ –***job_name]* ダイアログ ボックスで、 **[ページの選択]**の **[ステップ]**を選択します。  
+5.  *[ジョブのプロパティ - <ジョブ名>]* ダイアログ ボックスで、**[ページの選択]** の **[ステップ]** を選択します。  
   
-6.  **[編集]** をクリックして、**[ジョブ ステップのプロパティ -** *job_step_name]* ダイアログ ボックスを開きます。 このダイアログ ボックスで利用できるオプションの詳細については、「[[ジョブ ステップのプロパティ] - [新しいジョブ ステップ] ([全般] ページ)](../../ssms/agent/job-step-properties-new-job-step-general-page.md)」と「[[ジョブ ステップのプロパティ]/[新しいジョブ ステップ] ([詳細設定] ページ)](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)」を参照してください。  
+6.  **[編集]** をクリックし、*[ジョブ ステップのプロパティ - <ジョブ ステップ名>]* ダイアログ ボックスを開きます。 このダイアログ ボックスで利用できるオプションの詳細については、「[[ジョブ ステップのプロパティ] - [新しいジョブ ステップ] ([全般] ページ)](../../ssms/agent/job-step-properties-new-job-step-general-page.md)」と「[[ジョブ ステップのプロパティ]/[新しいジョブ ステップ] ([詳細設定] ページ)](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)」を参照してください。  
   
 7.  完了したら、 **[OK]**をクリックします。  
   
-8.  **[ジョブのプロパティ -***job_name]* ダイアログ ボックスで、 **[OK]**をクリックします。  
+8.  *[ジョブのプロパティ - <ジョブ名>]* ダイアログ ボックスで、**[OK]** をクリックします。  
   
 ## <a name="TsqlProcedure"></a>Transact-SQL の使用  
   

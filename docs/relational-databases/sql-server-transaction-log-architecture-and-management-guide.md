@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - vlf size
 - transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: dcc274dcde55b2910b96404c2c3a06c647518dc5
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 69637be0ea958bf908210df298b210959e3afc17
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server トランザクション ログのアーキテクチャと管理ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,14 +86,16 @@ ms.lasthandoff: 01/12/2018
 >    -  増加分が 64 MB 以上 1 GB 以下の場合、増加分のサイズに対応する 8 個の VLF を作成します (たとえば、512 MB 増加の場合は 8 個の 64 MB VLF を作成します)
 >    -  増加分が 1 GB を超える場合、増加分のサイズに対応する 16 個の VLF を作成します (たとえば、8 GB 増加の場合は 16 個の 512 MB VLF を作成します)
 
-小さな増加が繰り返されることにより、これらのログ ファイルが大きいサイズに拡張された場合、多くの仮想ログ ファイルが生成されます。 **このような状況では、データベースの起動、ログのバックアップ操作、およびログの復元操作の速度が低下する場合があります。** ログ ファイルの *size* には最終的に必要なサイズに近い値を割り当て、*growth_increment* には比較的大きい値を割り当てることをお勧めします。 下のヒントを参照し、現在のトランザクション ログ サイズに最適な VLF 配布を決定してください。
+小さな増加が繰り返され、ログ ファイルが大きくなった場合、多くの仮想ログ ファイルが生成されます。 **このような状況では、データベースの起動、ログのバックアップ操作、およびログの復元操作の速度が低下する場合があります。** 逆に、増加の回数が少なく、あるいはたった 1 回でログ ファイルが大きなサイズになった場合、非常に大きな仮想ログ ファイルが少しだけ生成されます。 トランザクション ログの**必須サイズ**を正しく見積もる方法や**自動拡張**設定については、「[トランザクション ログ ファイルのサイズの管理](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)」の*推奨事項*セクションを参照してください。
+
+必要な増分を利用し、最終的に必要なサイズに近い*サイズ*値をログ ファイルに割り当て、最適な VLF 配布を達成することと、比較的大きな *growth_increment* 値を設定することをお勧めします。 下のヒントを参照し、現在のトランザクション ログ サイズに最適な VLF 配布を決定してください。 
  - *サイズ*値は `ALTER DATABASE` の `SIZE` 引数で設定されますが、これはログ ファイルの初期サイズとなります。
- - *growth_increment* 値は `ALTER DATABASE` の `FILEGROWTH` 引数で設定されますが、これは新しい領域が必要になるたびにファイルに追加される領域の量です。 
+ - *growth_increment* 値 (自動拡張値とも呼ばれています) は `ALTER DATABASE` の `FILEGROWTH` 引数で設定されますが、これは新しい領域が必要になるたびにファイルに追加される領域の量です。 
  
 `ALTER DATABASE` の `FILEGROWTH` 引数と `SIZE` 引数の詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41; の File および Filegroup オプション](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。
 
 > [!TIP]
-> 指定されたインスタンスにおいて、すべてのデータベースの現在のトランザクション ログ サイズに最適な VLF 配布を決定するには、この[スクリプト](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)をご覧ください。
+> 指定されたインスタンスにおいて、すべてのデータベースの現在のトランザクション ログ サイズに最適な VLF 配布と必要なサイズを得るために必要な増分を決定するには、この[スクリプト](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)をご覧ください。
   
  トランザクション ログは、循環して使用されるファイルです。 たとえば、4 つの VLF に分割された 1 つの物理ログ ファイルが格納されたデータベースがあるとします。 このデータベースの作成時、論理ログ ファイルは物理ログ ファイルの先頭から始まります。 新しいログ レコードは論理ログの末尾に追加され、物理ログの末尾に向かって拡張されます。 ログの切り捨てにより、最小復旧ログ シーケンス番号 (MinLSN) より前にあるすべての仮想ログ レコードが解放されます。 *MinLSN* は、データベース全体を正常にロールバックするために必要な最も古いログ レコードのログ シーケンス番号です。 例として挙げたデータベースのトランザクション ログは、次の図のようになります。  
   

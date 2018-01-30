@@ -8,23 +8,24 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
-caps.latest.revision: "78"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7fd9182030c2be57d0d059a0807b06d24637cbba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c0133d9255da8fd0dfe9d373b717bf813bb17767
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>データベース ミラーリングの監視 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ここでは、データベース ミラーリング モニターと **sp_dbmmonitor** システム ストアド プロシージャ、およびデータベース ミラーリングの監視に伴う作業 (**データベース ミラーリング モニターのジョブ**など) について説明し、データベース ミラーリング セッションについて監視できる情報の概要を示します。 さらに、事前に定義された一連のデータベース ミラーリング イベントに対する警告しきい値を定義する方法、および任意のデータベース ミラーリング イベントでの警告の設定についても説明します。  
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/20/2017
   
      次の表では、データベース ミラーリング モニターとは別にデータベース ミラーリングの監視を管理および使用するためのストアド プロシージャについて説明します。  
   
-    |手順|説明|  
+    |手順|Description|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)|サーバー インスタンス上のミラー化されたデータベースごとに、定期的に状態情報を更新するジョブを作成します。|  
     |[sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)|データベース ミラーリング監視パラメーターの値を変更します。|  

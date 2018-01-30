@@ -8,23 +8,24 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - aliases [SQL Server], creating
 - SQL Server Agent, aliases
 ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: edfacdbd7bcf47191cc3093b620f1c530355b36a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 34ac8dbca47438f2a551a423a72db455d41298d0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssDE](../../includes/ssde_md.md)] への接続時に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントに対して、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] を使用して [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の別名を設定する方法について説明します。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスは、追加のクライアント構成を必要としない動的サーバー名を使用することによって、名前付きパイプを経由して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のインスタンスに接続します。 既定のネットワーク転送を使用しない場合、または、代替の名前付きパイプを使用して受信待ちする [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のインスタンスに接続する場合は、サーバー接続の別名を設定する必要があります。  
@@ -68,9 +69,9 @@ ms.lasthandoff: 12/21/2017
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] のインスタンスに接続して、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]** を右クリックし、**[プロパティ]** をクリックします。  
+2.  **[SQL Server エージェント]**を右クリックし、 **[プロパティ]**をクリックします。  
   
-3.  [**SQL Server エージェントのプロパティ** *server_name*] ダイアログ ボックスの **[ページの選択]** で **[接続]** を選択します。  
+3.  *[SQL Server エージェントのプロパティ - <サーバー名>]* ダイアログ ボックスの **[ページの選択]** で **[接続]** を選択します。  
   
 4.  **[別名ローカル ホスト サーバー]** ボックスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントが接続するサーバーの別名を入力します。  
   

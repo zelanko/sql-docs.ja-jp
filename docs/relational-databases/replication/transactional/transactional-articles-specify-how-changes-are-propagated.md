@@ -8,21 +8,23 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: transactional replication, propagation methods
+helpviewer_keywords:
+- transactional replication, propagation methods
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9cee636f1b2188ddf72d63feeaedc7b955446ea3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d7b807d914d84a818e9ce9cccadde597a163955c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>トランザクション アーティクル - 変更の反映方法の指定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] トランザクション レプリケーションを使用すると、パブリッシャーからサブスクライバーに変更を反映する方法を指定できます。 パブリッシュされた各テーブルに対して、次の 4 つの方法のいずれかを指定して、各操作 (INSERT、UPDATE、または DELETE) をサブスクライバーに反映できます。  
@@ -65,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 -   スキーマの変更をパブリッシュされたテーブルに加える場合は、カスタム プロシージャを再生成する必要があります。 詳細については、「[カスタム トランザクション プロシージャの再生成によるスキーマ変更の反映](../../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)」を参照してください。  
   
--   ディストリビューション エージェントの **-SubscriptionStreams** パラメーターに対して 1 を超える値を使用した場合は、主キー列に対する更新が成功したことを確認する必要があります。 例:  
+-   ディストリビューション エージェントの **-SubscriptionStreams** パラメーターに対して 1 を超える値を使用した場合は、主キー列に対する更新が成功したことを確認する必要があります。 例 :  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  

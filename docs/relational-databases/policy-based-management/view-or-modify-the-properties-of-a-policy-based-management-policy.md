@@ -8,29 +8,30 @@ ms.service:
 ms.component: performance-monitor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Policy-Based Management, modify policies
 - Policy-Based Management, view policies
 ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
-caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bfecfe67bf04c5145c600ce1ce59546aecec73b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d90e4f27ab2ce8d7e33f1b4e83e4f682d8446df9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>ポリシー ベースの管理ポリシーのプロパティの表示または変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でポリシー ベースの管理ポリシーのプロパティを表示または変更する方法について説明します。  
   
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
   
 ####  <a name="Permissions"></a> Permissions  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>オブジェクトのすべてのポリシーのプロパティを表示するには  
   
-1.  オブジェクト エクスプローラーで、サーバー、サーバー オブジェクト、データベース、またはデータベース オブジェクトを右クリックして、 **[ポリシー]** をポイントし、 **[表示]**をクリックします。 **[ポリシーの表示 -***object_name]* ダイアログ ボックスで使用可能なオプションの詳細については、「 [[ポリシーの表示] ダイアログ ボックス](../../relational-databases/policy-based-management/view-policies-dialog-box.md)」を参照してください。  
+1.  オブジェクト エクスプローラーで、サーバー、サーバー オブジェクト、データベース、またはデータベース オブジェクトを右クリックして、 **[ポリシー]** をポイントし、 **[表示]**をクリックします。 *[ポリシーの表示 - <オブジェクト名>]* ダイアログ ボックスで使用可能なオプションの詳細については、「[[ポリシーの表示] ダイアログ ボックス](../../relational-databases/policy-based-management/view-policies-dialog-box.md)」を参照してください。  
   
 2.  完了したら、 **[閉じる]**をクリックします。  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  プラス記号をクリックして **[ポリシー]** フォルダーを展開します。  
   
-5.  表示または変更するポリシーを右クリックし、 **[プロパティ]**をクリックします。 **[ポリシーを開く -***policy_name]* ダイアログ ボックスで使用可能なオプションの詳細については、「 [[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [全般] ページ](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) 」および「 [[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [説明] ページ](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)」を参照してください。  
+5.  表示または変更するポリシーを右クリックし、 **[プロパティ]**をクリックします。 *[ポリシーを開く - <ポリシー名>]* ダイアログ ボックスで使用可能なオプションの詳細については、「[[全般] ページの [新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックス](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md)」と「[[説明] ページの [新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックス](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)」を参照してください。  
   
 6.  完了したら、 **[OK]**をクリックします。  
   

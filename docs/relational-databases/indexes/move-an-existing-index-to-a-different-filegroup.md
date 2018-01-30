@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - indexes [SQL Server], moving
 - filegroups [SQL Server], switching
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
-caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cb9a94e422fffebc132f7ab71c15f44b1f03b804
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6acddc36534c6f2277282e6c8aed3eeafd37d88b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>既存のインデックスの別のファイル グループへの移動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **既存のインデックスを別のファイル グループに移動するために使用するもの:**  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
 8.  **[閉じる]**をクリックします。  
   
-9. **ファイル** メニューの **table_name***を保存*を選びます。  
+9. **[ファイル]** メニューの *[<テーブル名> を保存]* を選択します。  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>オブジェクト エクスプローラーで既存のインデックスを別のファイル グループに移動するには  
   

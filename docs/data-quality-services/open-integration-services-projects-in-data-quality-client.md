@@ -8,25 +8,26 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology: data-quality-services
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
-caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bd05c8515ef6fdc7983c6ffe82168bda2f7014de
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cde79d85987d95fcec471cee6db2f5a07b8d2d86
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Data Quality Client で Integration Services プロジェクトを開く
   Integration Services の DQS クレンジング コンポーネントを使うと、クレンジング プロジェクトをバッチ モードで実行できます。 しかし、DQS のデータ品質プロジェクト内のクレンジング アクティビティの **[結果の管理と表示]** タブでクレンジング結果を確認するのと同様の方法で、Integration Services パッケージ内でクレンジング結果を確認したい場合があります。 DQS では、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] [プロジェクトを開く] **画面から他のデータ品質プロジェクトを開くのと同様に、** で Integration Services プロジェクトを開くことができ、Integration Services プロジェクト内のクレンジング結果について、インタラクティブなクレンジングを操作できます。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  Integration Services プロジェクトを開くためには、DQS_MAIN データベースに対する dqs_kb_editor または dqs_kb_operator ロールが必要です。  
   
   

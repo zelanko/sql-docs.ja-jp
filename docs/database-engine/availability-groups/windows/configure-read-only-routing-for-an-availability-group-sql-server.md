@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +20,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c0dc198b7f7e40bb99c0e019b9172b647f8bda79
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+manager: craigg
+ms.openlocfilehash: 9df48b3e6fb769543e7b5e4248b00c5a4ec2a88c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>可用性グループの読み取り専用ルーティングの構成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] で読み取り専用ルーティングをサポートするように AlwaysOn 可用性グループを構成するには、[!INCLUDE[tsql](../../../includes/tsql-md.md)] または PowerShell を使用します。 *読み取り専用ルーティング* は、対象の読み取り専用接続要求を、AlwaysOn の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 読み取り可能なセカンダリ レプリカ [(セカンダリ ロールで実行されているときに、読み取り専用ワークロードを許可するように構成されているレプリカ) にルーティングする](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) の機能です。 読み取り専用ルーティングをサポートするには、可用性グループに [可用性グループ リスナー](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)が存在する必要があります。 読み取り専用クライアントは、このリスナーに接続要求を送信する必要があります。クライアントの接続文字列では、アプリケーションの目的として "読み取り専用" を指定する必要があります。 つまり、 *読み取りを目的とした接続要求*であることが必要です。  
@@ -192,13 +193,13 @@ GO
   
 2.  可用性グループに可用性レプリカを追加する場合は、 **New-SqlAvailabilityReplica** コマンドレットを使用します。 既存の可用性レプリカを変更する場合は、 **Set-SqlAvailabilityReplica** コマンドレットを使用します。 関連するパラメーターは次のとおりです。  
   
-    -   セカンダリ ロールの読み取り専用ルーティングを構成するには、 **ReadonlyRoutingConnectionUrl"***url***"** パラメーターを指定します。  
+    -   セカンダリ ロールの読み取り専用ルーティングを構成するには、**ReadonlyRoutingConnectionUrl"***url***"** パラメーターを指定します。  
   
          *url* は、読み取り専用接続のためにレプリカにルーティングするときに使用する、接続の完全修飾ドメイン名 (FQDN) およびポートです。 例:  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          詳細については、「 [AlwaysOn の read_only_routing_url の計算](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)」を参照してください。  
   
-    -   プライマリ ロールの接続アクセスを構成するには、 **ReadonlyRoutingList"***server***"** [ **,**...*n* ] を指定します。 *server* は、可用性グループの読み取り専用セカンダリ レプリカをホストするサーバー インスタンスを識別します。 例:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   プライマリ ロールの接続アクセスを構成するには、**ReadonlyRoutingList"***server***"** [ **,**...*n* ] を指定します。*server* は、可用性グループの読み取り専用セカンダリ レプリカをホストするサーバー インスタンスを識別します。 例:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  レプリカの読み取り専用ルーティング リストを構成する前に、レプリカの読み取り専用ルーティング URL を設定する必要があります。  

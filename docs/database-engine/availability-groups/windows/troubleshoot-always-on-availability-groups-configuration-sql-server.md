@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], configuring
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51429ad63e04893c26a6bf9213809060780aebba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fe26c36dc6b8b5c5cdcde7013764246275f5ae6f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Always On 可用性グループの構成のトラブルシューティング (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/20/2017
   
  **このトピックの内容**  
   
-|セクション|説明|  
+|セクション|Description|  
 |-------------|-----------------|  
 |[Always On 可用性グループが有効になっていない](#IsHadrEnabled)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスで [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]が有効になっていない場合、そのインスタンスでは可用性グループの作成がサポートされず、可用性レプリカをホストできません。|  
 |[Accounts](#Accounts)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行しているアカウントを適切に構成するための要件について説明します。|  
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/20/2017
     GO  
     ```  
   
-     詳細については、「[ALTER ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-endpoint-transact-sql.md)」を参照してください。  
+     詳細については、「 [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-endpoint-transact-sql.md)」を参照してください。  
   
 5.  他のサーバーからのログインに、CONNECT 権限があることを確認します。 あるエンドポイントに対して CONNECT 権限のあるユーザーを確認するには、各サーバー インスタンスで、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを使用します。  
   
@@ -169,7 +170,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Get-ClusterLog フェールオーバー クラスター コマンドレット](http://technet.microsoft.com/library/ee461045.aspx)  
   
--   [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server AlwaysOn チームのブログ: SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [データベース ミラーリングと Always On 可用性グループのトランスポート セキュリティ &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

@@ -8,30 +8,31 @@ ms.service:
 ms.component: performance-monitor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Policy-Based Management, view policy conditions
 - Policy-Based Management, modify policy conditions
 ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
-caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e5a878a3a4ee3fc15ce4a30c9ddbdd3bea904d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c490adec850bc14672c9590b0bc4abe3b035320c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>ポリシー ベースの管理条件のプロパティの表示または変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でポリシー ベースの管理条件のプロパティを表示または変更する方法について説明します。  
   
 
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  プラス記号をクリックして **[条件]** フォルダーを展開します。  
   
-5.  表示または編集する条件を右クリックし、**[プロパティ]** をクリックします。 [**条件を開く-***condition_name*] ダイアログ ボックスで使用可能なオプションの詳細については、「[[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [全般] ページ](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)」、「[[条件を開く] ダイアログ ボックス、[依存ポリシー] ページ](../../relational-databases/policy-based-management/open-condition-dialog-box-dependent-policies-page.md)」「[[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [説明] ページ](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md)」、「[[高度な編集] &#40;条件&#41; ダイアログ ボックス](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md)」を参照してください。  
+5.  表示または編集する条件を右クリックし、 **[プロパティ]**をクリックします。 *[条件を開く - <条件名>]* ダイアログ ボックスで使用可能なオプションの詳細については、「[[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [全般] ページ](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)」、「[[条件を開く] ダイアログ ボックス、[依存ポリシー] ページ](../../relational-databases/policy-based-management/open-condition-dialog-box-dependent-policies-page.md)」、「[[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [説明] ページ](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md)」、「[[高度な編集] &#40;条件&#41; ダイアログ ボックス](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md)」を参照してください。  
   
 6.  完了したら、 **[OK]**をクリックします。  
   

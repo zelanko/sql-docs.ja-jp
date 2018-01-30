@@ -8,21 +8,23 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: agents [SQL Server replication], command prompt parameters
+helpviewer_keywords:
+- agents [SQL Server replication], command prompt parameters
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c380a4d550eaa2cb509073b4715dfbbde14bbdaa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3edb80c4a90ede1059481d918506b97cb1669901
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>レプリケーション エージェント コマンド プロンプト パラメーターの表示および変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] レプリケーション エージェントは、コマンド ライン パラメーターを使用できる実行可能ファイルです。 既定では、エージェントは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブ ステップで実行されるため、これらのパラメーターは **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスを使用して表示および変更できます。 このダイアログ ボックスは、 **の** [ジョブ] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] フォルダーおよびレプリケーション モニター内の **[エージェント]** タブからアクセスできます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor (レプリケーション モニターの開始)](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」を参照してください。  
@@ -30,20 +32,20 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  エージェント パラメーターの変更は、エージェントの次回起動時に反映されます。 エージェントを継続して実行している場合は、そのエージェントを停止して再起動する必要があります。  
   
- パラメーターは直接変更することもできますが、エージェント プロファイルを使用して変更する方が一般的です。 詳細については、「 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。  
+ パラメーターは直接変更することもできますが、エージェント プロファイルを使用して変更する方が一般的です。 詳しくは、「 [レプリケーション エージェント プロファイル](../../../relational-databases/replication/agents/replication-agent-profiles.md)」をご覧ください。  
   
  **[ジョブ]** フォルダーからエージェント ジョブにアクセスする場合は、次の表を使用して、各エージェントで使用できるエージェント ジョブ名とパラメーターを決定してください。  
   
 |エージェント|ジョブ名|パラメーターの一覧の参照先|  
 |-----------|--------------|------------------------------------|  
-|スナップショット エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<整数>**|[レプリケーション スナップショット エージェント](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
-|マージ パブリケーション パーティションに対するスナップショット エージェント|**Dyn_\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<GUID>**|[レプリケーション スナップショット エージェント](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
+|スナップショット エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<整数>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
+|マージ パブリケーション パーティションに対するスナップショット エージェント|**Dyn_\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
 |ログ リーダー エージェント (Log Reader Agent)|**\<パブリッシャー>-\<PublicationDatabase>-\<整数>**|[レプリケーション ログ リーダー エージェント](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|  
-|プル サブスクリプションに対するマージ エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<SubscriptionDatabase>-\<整数>**|[レプリケーション マージ エージェント](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|プッシュ サブスクリプションに対するマージ エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|[レプリケーション マージ エージェント](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|プッシュ サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<整数>***|[レプリケーション ディストリビューション エージェント](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|プル サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<SubscriptionDatabase>-\<GUID>***\*|[レプリケーション ディストリビューション エージェント](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|SQL Server 以外のサブスクライバーへのプッシュ サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|[レプリケーション ディストリビューション エージェント](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|プル サブスクリプションに対するマージ エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<SubscriptionDatabase>-\<整数>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
+|プッシュ サブスクリプションに対するマージ エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
+|プッシュ サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<整数>***|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|プル サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<サブスクリプション データベース>-\<GUID>***\*|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|SQL Server 以外のサブスクライバーへのプッシュ サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<パブリケーション データベース>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |キュー リーダー エージェント (Queue Reader Agent)|**[\<ディストリビューター>].\<整数>**|[レプリケーション キュー リーダー エージェント](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
   
  \*Oracle パブリケーションに対するプッシュ サブスクリプションの場合は、**\<Publisher>-\<PublicationDatabase>** ではなく、**\<Publisher>-\<Publisher**> になります  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - quorum [SQL Server]
 - failover clustering [SQL Server], Always On Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5fdd2a6aed90983a38c4a34cd48588d157c036df
-ms.sourcegitcommit: 719bcc010dd1ca6f2acfcdf6f9bd9f73451ca8ca
+ms.openlocfilehash: 520b6480f584fcd26563c675548b0a60fd204e1f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Windows Server フェールオーバー クラスタリングと SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] *Windows Server フェールオーバー クラスター* (WSFC) は、アプリケーションとサービスの可用性を高めるために連携する独立したサーバーのグループです。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] は、WSFC サービスと機能を活用して [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスをサポートします。  
@@ -42,7 +43,8 @@ ms.lasthandoff: 12/20/2017
  クラスター リソース  
  物理的または論理的エンティティです。ノードによる所有、オンライン化またはオフライン化、ノード間での移動、クラスター オブジェクトとしての管理が可能です。 特定の時点でクラスター リソースを所有できるのは 1 つのノードのみです。  
   
- ロール 特定の機能を提供するために単一クラスター オブジェクトとして管理されるクラスター リソースのコレクション。 SQL Server の場合、ロールは AlwaysOn 可用性グループ (AG) または Always On フェールオーバー クラスター インスタンス (FCI) となります。 ロールには、AG または FCI に必要なクラスター リソースがすべて含まれます。 フェールオーバーとフェールバックは常にロールのコンテキストで機能します。 FCI の場合、ロールには IP アドレス リソース、ネットワーク名リソース、SQL Server リソースが含まれます。 AG ロールには AG リソースが含まれ、リスナーが構成されている場合は、ネットワーク名と IP リソースが含まれます。 
+ ロール  
+ 特定の機能を提供するために単一クラスター オブジェクトとして管理されるクラスター リソースのコレクション。 SQL Server の場合、ロールは AlwaysOn 可用性グループ (AG) または Always On フェールオーバー クラスター インスタンス (FCI) となります。 ロールには、AG または FCI に必要なクラスター リソースがすべて含まれます。 フェールオーバーとフェールバックは常にロールのコンテキストで機能します。 FCI の場合、ロールには IP アドレス リソース、ネットワーク名リソース、SQL Server リソースが含まれます。 AG ロールには AG リソースが含まれ、リスナーが構成されている場合は、ネットワーク名と IP リソースが含まれます。 
 
  ネットワーク名リソース  
  クラスター リソースとして管理されている論理サーバーの名前です。 ネットワーク名リソースは、IP アドレス リソースと共に使用する必要があります。 これらのエントリでは、Active Directory ドメイン サービスおよび/または DNS 内のオブジェクトが必要な場合があります。 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: statistics
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-statistics
+ms.technology:
+- dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - creating statistics
 - statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f069aa174a9ee4c8e5f7a52fcad09fa709b14496
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9cf772ad4cffd6d992233d4324ce270c884cb06d
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-statistics"></a>統計の作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のテーブルまたはインデックス付きビューの 1 つまたは複数の列で、クエリの最適化に関する統計 (フィルター選択された統計情報を含む) を作成できます。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、最適な結果を得るために追加の統計情報を作成する必要がある場合もあります。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **統計を作成するために使用するもの:**  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> 権限  
+####  <a name="Permissions"></a> Permissions  
  ユーザーがテーブルまたはインデックス付きビューの所有者であるか、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、または **db_ddladmin** 固定データベース ロールのメンバーである必要があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  **[統計]** フォルダーを右クリックし、 **[新しい統計]**をクリックします。  
   
-     **テーブル名**  **ダイアログ ボックスの***全般* ページで次のプロパティが表示されます。  
+     **[全般]** ページの *[テーブルの新しい統計 - <テーブル名>]* ダイアログ ボックスに次のプロパティが表示されます。  
   
      **テーブル名**  
      統計の対象となるテーブルの名前が表示されます。  
@@ -89,16 +90,16 @@ ms.lasthandoff: 11/17/2017
      **名前**  
      統計の対象となる列の名前が表示されます。 表示されるのは、1 つのテーブルの 1 つの列、または列の組み合わせです。  
   
-     **データ型**  
+     **[データ型]**  
      統計の対象となる列のデータ型を表します。  
   
-     **サイズ**  
+     **[サイズ]**  
      各列のデータ型のサイズが表示されます。  
   
      **Identity**  
      オンの場合、ID 列を示します。  
   
-     **Null を許容**  
+     **[NULL を許容]**  
      列で NULL 値が許容されるかどうかを示します。  
   
      **[追加]**  
@@ -119,22 +120,22 @@ ms.lasthandoff: 11/17/2017
      **[この列の統計を更新する]**  
      オンにすると、ダイアログ ボックスを閉じたときに統計を更新します。  
   
-     **テーブル名**  **ダイアログ ボックスの***フィルター* ページで次のプロパティが表示されます。  
+     **[フィルター]** ページの *[テーブルの新しい統計 - <テーブル名>]* ダイアログ ボックスに次のプロパティが表示されます。  
   
      **[フィルター式]**  
-     フィルター処理された統計情報にどのデータ行を含めるかを定義します。 例を次に示します。 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     フィルター処理された統計情報にどのデータ行を含めるかを定義します。 たとえば、IPv4 アドレスの場合、「 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  **[テーブルの新しい統計 - *テーブル名*]** ダイアログ ボックスの **[全般]** ページで **[追加]** をクリックします。  
+5.  **[全般]** ページの *[テーブルの新しい統計 - <テーブル名>]* ダイアログ ボックスで **[追加]** をクリックします。  
   
      **[列の選択]** ダイアログ ボックスに次のプロパティが表示されます。 この情報は読み取り専用です。  
   
      **名前**  
      統計の対象となる列の名前が表示されます。 表示されるのは、1 つのテーブルの 1 つの列、または列の組み合わせです。  
   
-     **データ型**  
+     **[データ型]**  
      統計の対象となる列のデータ型を表します。  
   
-     **サイズ**  
+     **[サイズ]**  
      各列のデータ型のサイズが表示されます。  
   
      **Identity**  
@@ -145,7 +146,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  **[列の選択]** ダイアログ ボックスで、統計を作成する列のチェック ボックスをオンにし、 **[OK]**をクリックします。  
   
-7.  **[テーブルの新しい統計 - *テーブル名*]** ダイアログ ボックスで、**[OK]** をクリックします。  
+7.  *[テーブルの新しい統計 - <テーブル名>]* ダイアログ ボックスで、**[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

@@ -8,21 +8,23 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.registermirroreddb.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.registermirroreddb.f1
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e967a036c5dd230c2ea5c84d0a69b98b368a0ec7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d670b9efc8bcbe67bb12758318fb72cf99c2218f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="register-mirrored-database"></a>[ミラー化されたデータベースの登録]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このダイアログ ボックスを使用すると、特定のサーバー インスタンスに対し、ミラー化されたデータベース (複数可) を登録できます。登録は、データベースをデータベース ミラーリング モニターに追加することによって行います。 データベースを追加すると、データベースとそのパートナーに関する情報、およびパートナーへの接続方法に関する情報が、データベース ミラーリング モニターによってローカルにキャッシュされます。  
@@ -34,14 +36,14 @@ ms.lasthandoff: 11/20/2017
   
 -   [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **サーバー インスタンス**  
  データベース ミラーリング モニターが接続を保持しているサーバー インスタンスが一覧表示されます。この一覧からサーバー インスタンスを選択するか、 **[接続]**をクリックします。 一覧表示されたサーバー インスタンスの資格情報を更新するには、 **[接続]** をクリックして、新しい資格情報を使って接続します。  
   
 > [!NOTE]  
 >  複数のサーバー インスタンスに対してデータベースを登録する場合は、登録対象のデータベースのチェック ボックスをオンにした後、 **[適用]**をクリックし、続けて、別のサーバー インスタンスを選択して同じ作業を繰り返す必要があります。  
   
- **[接続]**  
+ **のインスタンスに接続するときには、**  
  サーバー インスタンスの資格情報を更新するには、 **[接続]** をクリックして、新しい資格情報を使って接続します。 サーバー インスタンスに接続している間、データベース ミラーリング モニターには、 **"データを待機しています"**と表示されます。  
   
  **[ミラー化されたデータベース]**  
@@ -49,10 +51,10 @@ ms.lasthandoff: 11/20/2017
   
  このグリッドには次の列が含まれています。  
   
-|列名|説明|  
+|列名|Description|  
 |-----------------|-----------------|  
 |**[登録]**|登録する各データベースのチェック ボックスをオンにします。 現在監視されているデータベースのチェック ボックスはオンに設定され、変更することはできません。<br /><br /> 注: データベースの登録を解除するには、 **[ミラー化されたデータベースの登録]** ダイアログ ボックスを閉じ、ナビゲーション ツリーでデータベースを選択して、 **[アクション]** メニューから **[登録解除]** を選択します。|  
-|**データベース**|選択されたサーバー インスタンスでミラー化されたデータベースの名前です。|  
+|**[データベース]**|選択されたサーバー インスタンスでミラー化されたデータベースの名前です。|  
 |**[現在のロール]**|選択されているサーバー インスタンスのデータベースについて、現在のミラーリング ロール ([プリンシパル] または [ミラー]) が表示されます。|  
 |**[パートナー (接続するユーザー)]**|データベースのフェールオーバー パートナーの名前です。 **[コンソール ユーザーの Windows 認証]** または **['***\<ログイン名>***' の SQL Server 認証]** が、かっこで囲まれて表示されます。 これは、既に追加されたインスタンスの場合は、現在使用されている認証情報を、まだモニターに追加されていないインスタンスの場合は、これから使用される認証情報を表します。|  
   

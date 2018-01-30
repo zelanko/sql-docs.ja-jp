@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 463309bd69a31ab54458095ef98f591b7474eee2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8c3ee049fdaaee08c9e1e3cf698a52ac8950afef
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-format-files-sql-server"></a>XML フォーマット ファイル (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルにデータを一括インポートする目的で使用する "*XML フォーマット ファイル*" を記述するための構文を定義した XML スキーマが用意されています。 このスキーマは XML Schema Definition Language (XSDL) で定義されています。XML フォーマット ファイルはこのスキーマに準拠している必要があります。 XML フォーマット ファイルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client と共にインストールされている場合のみサポートされます。  
@@ -203,9 +204,9 @@ ms.lasthandoff: 11/17/2017
   
  それぞれの \<FIELD> 要素は、他の要素から独立しています。 フィールドは、次の属性を使用して表現されます。  
   
-|FIELD 要素の属性|説明|省略可能 /<br /><br /> 必須|  
+|FIELD 要素の属性|説明|省略可能 /<br /><br /> Required|  
 |---------------------|-----------------|------------------------------|  
-|ID **="***fieldID***"**|データ ファイル内のフィールドの論理名を指定します。 フィールドの ID は、フィールドを参照する際に使用するキーになります。<br /><br /> \<FIELD ID**="***fieldID***"**/> は \<COLUMN SOURCE**="***fieldID***"**/> にマップします|必須|  
+|ID **="***fieldID***"**|データ ファイル内のフィールドの論理名を指定します。 フィールドの ID は、フィールドを参照する際に使用するキーになります。<br /><br /> \<FIELD ID**="***fieldID***"**/> は \<COLUMN SOURCE**="***fieldID***"**/> にマップします|Required|  
 |xsi:type **="***fieldType***"**|要素のインスタンスの種類を特定する XML コンストラクトです (これは属性のように使用します)。 *fieldType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。|必須 (データ型により異なる)|  
 |LENGTH **="***n***"**|固定長データ型のインスタンスの長さを定義します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
 |PREFIX_LENGTH **="***p***"**|バイナリ データ表現のプレフィックス長を定義します。 PREFIX_LENGTH 値の *p*は、1、2、4、または 8 のいずれかにする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
@@ -256,10 +257,10 @@ ms.lasthandoff: 11/17/2017
   
  フィールドは、次の属性を使用して、対象となるテーブルにマップされます。  
   
-|COLUMN 要素の属性|説明|省略可能 /<br /><br /> 必須|  
+|COLUMN 要素の属性|Description|省略可能 /<br /><br /> Required|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="***fieldID***"**|列にマップされているフィールドの ID を指定します。<br /><br /> \<COLUMN SOURCE**="***fieldID***"**/> maps to \<FIELD ID**="***fieldID***"**/>|必須|  
-|NAME = "*columnName*"|フォーマット ファイルで表している行セットの列の名前を指定します。 この列名は、結果セット内で列名を特定する際に使用されるので、対象のテーブルで使用されている列名に対応する必要はありません。|必須|  
+|SOURCE **="***fieldID***"**|列にマップされているフィールドの ID を指定します。<br /><br /> \<COLUMN SOURCE**="***fieldID***"**/> は \<FIELD ID**="***fieldID***"**/> にマップします|Required|  
+|NAME = "*columnName*"|フォーマット ファイルで表している行セットの列の名前を指定します。 この列名は、結果セット内で列名を特定する際に使用されるので、対象のテーブルで使用されている列名に対応する必要はありません。|Required|  
 |xsi**:**type **="***ColumnType***"**|要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 *ColumnType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。<br /><br /> 注: *ColumnType* に設定できる値と関連する属性値は、「[&lt;COLUMN&gt; 要素の xsi:type 値](#XsiTypeValuesOfCOLUMN)」セクションの \<COLUMN> 要素の表に示します。|省略可|  
 |LENGTH **="***n***"**|固定長データ型のインスタンスの長さを定義します。 LENGTH 属性は、xsi:type が文字列データ型の場合にのみ使用します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type が文字列データ型の場合にのみ使用可能)|  
 |PRECISION **="***n***"**|数値全体の桁数を示します。 たとえば、数字 123.45 の有効桁数は 5 桁です。<br /><br /> この値は、正の整数にする必要があります。|省略可能 (xsi:type が可変数値のデータ型の場合にのみ使用可能)|  

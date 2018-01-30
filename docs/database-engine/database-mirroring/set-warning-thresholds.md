@@ -8,21 +8,23 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.setwarningthreshold.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.setwarningthreshold.f1
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f731b903bf0c8006fb9a36177f8951ac214537b3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b625927cc888ef09f83ada2cae55197d9533ab18
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-warning-thresholds"></a>[警告しきい値の設定]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このダイアログ ボックスでは、**[データベース ミラーリング モニター]** ダイアログ ボックスのナビゲーション ツリーで選択されているデータベースの警告しきい値を有効にしたり構成したりできます。  
@@ -33,9 +35,9 @@ ms.lasthandoff: 11/20/2017
   
 -   [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  *サーバー インスタンスと接続状態*  
- パートナー サーバー インスタンスの名前が *SYSTEM***\\***INSTANCE_NAME*という形式で表示されます。 既定のサーバー インスタンスの場合、システム名だけが表示されます。  
+ パートナー サーバー インスタンスの名前が *SYSTEM***\\***INSTANCE_NAME* という形式で表示されます。 既定のサーバー インスタンスの場合、システム名だけが表示されます。  
   
  このフィールドには、該当のサーバー インスタンスに対して現在モニターが接続されているかどうかも示されます。 次の接続ステータスがあります。  
   
@@ -70,7 +72,7 @@ ms.lasthandoff: 11/20/2017
  **Warnings**  
  サポートされている警告が一覧表示されます。サポートされている警告は次のとおりです。  
   
-|警告|説明|  
+|警告|Description|  
 |-------------|-----------------|  
 |**[未送信のログがしきい値を超えた場合に警告する]**|プリンシパルの送信キューにある未送信ログのキロバイト (KB) 数を示すしきい値です。|  
 |**[復元されていないログがしきい値を超えた場合に警告する]**|ミラー サーバー インスタンスの再実行キューのキロバイト数を示すしきい値です。|  
@@ -88,7 +90,7 @@ ms.lasthandoff: 11/20/2017
  **OK**  
  **[OK]** をクリックすると、このダイアログ ボックスが閉じ、 **[警告]** タブ ページの **[しきい値]**グリッドに、現在指定されている警告しきい値が表示されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  実際にしきい値が適用されるのは一度に 1 パートナーだけです。ただし、データベースのフェールオーバーが発生した場合にも警告が保持されるように、両方のパートナーに対してイベントのしきい値を設定することをお勧めします。 適切なしきい値は、各パートナーのシステムのパフォーマンスによって異なります。  
   
  イベントがパフォーマンスのイベント ログに書き込まれるのは、状態テーブルの更新時に、該当する値がしきい値以上になった場合だけです。 状態が更新されるまでの間に、一時的にピーク値がしきい値に達した場合、そのピーク値は反映されません。  

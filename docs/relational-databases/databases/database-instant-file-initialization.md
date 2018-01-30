@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - IFI [SQL Server]
 - database instant file initialization [SQL Server]
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cf0f0006186bde39228ac9b0039e5a45b42431b7
-ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
+ms.openlocfilehash: 43b4084e91c08bfe870807196261e4be9b934872
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="database-file-initialization"></a>データベース ファイルの初期化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] データおよびログ ファイルの初期化は、ディスクに以前削除したファイルのデータが残っている場合にそれを上書きするために行います。 次のいずれかの操作を実行すると、データとログ ファイルは、まずファイルのゼロイング (ゼロを書き込む処理) で初期化されます。  
@@ -89,6 +90,10 @@ Database Instant File Initialization: disabled. For security and performance con
 
 ## <a name="security-considerations"></a>セキュリティに関する考慮事項  
 ファイルの瞬時初期化 (IFI) を利用するとき、削除されたディスクの内容は、新しいデータがファイルに書き込まれるときにのみ上書きされるため、他のデータがデータ ファイルのその領域に書き込まれるまで、許可されていないプリンシパルが削除された内容にアクセスする可能性があります。 データベース ファイルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスにアタッチされている間は、ファイルに対する随意アクセス制御リスト (DACL) により、このような情報漏えいのリスクは軽減されます。 この DACL により、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントとローカル管理者のみにファイル アクセスが許可されます。 ただし、ファイルがデタッチされると、*SE_MANAGE_VOLUME_NAME* が付与されていないユーザーまたはサービスからアクセスされる可能性があります。 データベースのバックアップ時にも同様の懸案事項があります。バックアップ ファイルが適切な DACL で保護されていない場合、許可されていないユーザーやサービスが削除された内容を利用できるようになることがあります。  
+
+もう 1 つの考慮事項は、IFI を使用してファイルが拡張された場合、SQL Server 管理者が未加工のページ コンテンツにアクセスして、以前削除されたコンテンツを表示する可能性があることです。
+
+データベース ファイルが記憶域ネットワークでホストされている場合、記憶域ネットワークで常に新しいページが事前に初期化されているものとして示される可能性もあり、オペレーティング システムでページが再初期化されると不要なオーバーヘッドが発生する可能性があります。
  
 > [!NOTE]
 > セキュリティで保護された物理環境に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールすると、ファイルの瞬時初期化 (IFI) を有効にしたことによるパフォーマンスの利点が、セキュリティ リスクを上回る可能性があります。それがこの方法をお勧めする理由です。

@@ -1,35 +1,13 @@
----
-title: "Auto Stats イベント クラス | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
-ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Auto Stats event class
-ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c0da505b6535f2c1f8c89ed719b5b0f41f42168a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+title: "Auto Stats イベント クラス | Microsoft Docs" ms.custom: "" ms.date: "03/14/2017" ms.prod: "sql-non-specified" ms.prod_service: "database-engine, sql-database" ms.service: "" ms.component: "event-classes" ms.reviewer: "" ms.suite: "sql" ms.technology: 
+  - "database-engine" ms.tgt_pltfrm: "" ms.topic: "article" helpviewer_keywords: 
+  - "Auto Stats イベント クラス" ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e caps.latest.revision: 34 author: "JennieHubbard" ms.author: "jhubbard" manager: "jhubbard" ms.workload: "Inactive"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Auto Stats** イベント クラスは、インデックス統計と列統計が自動更新されたことを示します。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Auto Stats** イベント クラスは、インデックス統計と列統計が自動更新されたことを示します。  **Auto Stats** は、オプティマイザーで使用するために統計情報が読み込まれるときにも呼び出されます。
   
 ## <a name="auto-stats-event-class-data-columns"></a>Auto Stats イベント クラスのデータ列  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|Description|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  
@@ -51,14 +29,14 @@ ms.lasthandoff: 11/17/2017
 |**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
-|**ObjectID**|**int**|システムによって割り当てられたオブジェクト ID。|22|はい|  
-|**RequestID**|**int**|ステートメントが含まれている要求の ID。|49|可|  
+|**Exchange Spill**|**int**|システムによって割り当てられたオブジェクト ID。|22|はい|  
+|**RequestID**|**int**|ステートメントが含まれている要求の ID。|49|はい|  
 |**ServerName**|**nvarchar**|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**SessionLoginName**|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |**SPID**|**int**|イベントが発生したセッションの ID。|12|はい|  
 |**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |**成功**|**int**|0 = エラー。<br /><br /> 1 = 成功。<br /><br /> 2 = サーバーの絞込みによりスキップ (MSDE)。|23|はい|  
-|**TextData**|**ntext**|この列の内容は、統計が同期的に更新されたのか、または非同期に更新されたのかによって異なります。同期更新の場合**EventSubClass** は 1、非同期更新の場合**EventSubClass** は 2、3、または 4 になります。<br /><br /> 1: 更新または作成された統計をリストで示します。<br /><br /> 2、3、または 4: NULL。 **IndexID** 列には、更新された統計のインデックスまたは統計の ID が格納されます。|1|可|  
+|**TextData**|**ntext**|この列の内容は、統計が同期的に更新されたのか、または非同期に更新されたのかによって異なります。同期更新の場合**EventSubClass** は 1、非同期更新の場合**EventSubClass** は 2、3、または 4 になります。<br /><br /> 1: 更新または作成された統計をリストで示します。<br /><br /> 2、3、または 4: NULL。 **IndexID** 列には、更新された統計のインデックスまたは統計の ID が格納されます。|@shouldalert|はい|  
 |**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
 |**型**|**int**|ジョブの種類。|57|はい|  
   

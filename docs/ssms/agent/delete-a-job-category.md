@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - categories [SQL Server Agent jobs]
 - removing job category
 ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b1e0e46a690917a37e1a51f49c72032e71e5520
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7dffa6ac4140d71fdd8800a6696f48ecb7023799
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-a-job-category"></a>ジョブ カテゴリの削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]、[!INCLUDE[tsql](../../includes/tsql_md.md)]、または SQL Server 管理オブジェクトを使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] で [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブ カテゴリを削除する方法について説明します。  
@@ -68,13 +69,13 @@ ms.lasthandoff: 12/21/2017
   
 3.  **[ジョブ]** フォルダーを右クリックし、 **[ジョブ カテゴリの管理]**をクリックします。  
   
-4.  **&lt;server_name&gt;**** ダイアログ ボックスで、削除するジョブ カテゴリを選択します。  
+4.  *[ジョブ カテゴリの管理 - <サーバー名>]* ダイアログ ボックスで、削除するジョブ カテゴリを選択します。  
   
 5.  **[削除]**をクリックします。  
   
 6.  **[ジョブ カテゴリ]** ダイアログ ボックスで **[はい]**をクリックします。  
   
-7.  **&lt;server_name&gt;**** ダイアログ ボックスを閉じます。  
+7.  *[ジョブ カテゴリの管理 - <サーバー名>]* ダイアログ ボックスを閉じます。  
   
 ## <a name="TSQL"></a>Transact-SQL の使用  
   

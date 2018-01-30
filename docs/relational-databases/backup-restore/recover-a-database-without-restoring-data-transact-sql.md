@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - database restores [SQL Server], recovery-only
 - recovery [SQL Server], without restoring data
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2b9a76bbe5ca5e40b4325973053549bfbb88d5c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9cf307382a1fcf763b80ddf5e4bc2aac87e7cf68
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>データを復元しないデータベースの復旧 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 通常、データベースを復旧する前に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのすべてのデータを復元します。 ただし、実際にバックアップを復元しなくても、復元操作でデータベースを復旧することは可能です。たとえば、データベースと一貫性のある読み取り専用ファイルを復旧する場合などです。 これは、 *復旧のみの復元*と呼ばれます。 オフライン データが既にデータベースと一貫性があり、データを使用可能にするだけでよい場合、復旧のみの復元を実行することで、データベースの復旧が完了し、データがオンラインになります。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
  RESTORE DATABASE *database_name* WITH RECOVERY  
   
 > [!NOTE]  
->  復旧のみの復元にはバックアップは必要ないので、FROM **=**\<*backup_device>* 句は使用しません。  
+>  復旧のみの復元にはバックアップは必要ないので、FROM **=** \<*backup_device>* 句は使用しません。  
   
  **例**  
   
@@ -84,7 +85,7 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
   
 -   [例: データベースの段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
  **完全復旧モデル**  
   
@@ -97,7 +98,7 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
 ## <a name="see-also"></a>参照  
  [Online Restore &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
- [ファイル復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
+ [ファイルの復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [ファイル復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   

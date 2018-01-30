@@ -8,7 +8,8 @@ ms.service:
 ms.component: spatial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-spatial
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17c60845cbb26234bc6c52e7fe0e192973689e86
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11d8454a5862b02e162e22ead3ca46e68b4f1354
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>空間インデックスの作成、変更、および削除
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 空間インデックスは、**geometry** データ型や **geography** データ型の列 ("*空間列*") に対する一部の操作をより効率的に実行できます。 1 つの空間列に対して複数の空間インデックスを指定できます。 たとえば、1 つの列の異なるテセレーション パラメーターのインデックスを作成する場合などに便利です。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
 11. **[空間]** ページで、インデックスの空間プロパティに対して使用する値を指定します。  
   
-     **geometry** 型の列にインデックスを作成する場合は、境界ボックスの座標 **(***X-min***,***Y-min***)** および **(***X-max***,***Y-max***)** を指定する必要があります。 **geography** 型の列のインデックスの場合は、 **[地理グリッド]** テセレーション スキームを指定すると境界ボックスのフィールドが読み取り専用になります。地理グリッド テセレーションでは境界ボックスは使用されません。  
+     **geometry** 型の列にインデックスを作成する場合は、境界ボックスの座標 **(***X-min***,***Y-min***)** と **(***X-max***,***Y-max***)** を指定する必要があります。 **geography** 型の列のインデックスの場合は、 **[地理グリッド]** テセレーション スキームを指定すると境界ボックスのフィールドが読み取り専用になります。地理グリッド テセレーションでは境界ボックスは使用されません。  
   
      また、 **[オブジェクトごとのセル数]** フィールドに既定以外の値を指定したり、テセレーション スキームの任意のレベルのグリッド密度を指定したりすることもできます。 オブジェクトごとのセル数の既定値は、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では 16、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では 8 で、 **のグリッド密度の既定値は** [中] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]です。  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
      これらのプロパティの詳細については、「 [[インデックスのプロパティ] の F1 ヘルプ](../../relational-databases/indexes/index-properties-f1-help.md)」をご覧ください。  
   
-12. クリックして **OK**です。  
+12. **[OK]** をクリックします。  
   
 > [!NOTE]  
 >  同じ空間列または異なる空間列に別の空間インデックスを作成するには、上の手順を繰り返します。  

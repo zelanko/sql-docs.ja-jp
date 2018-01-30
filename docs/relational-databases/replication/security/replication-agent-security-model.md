@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - Merge Agent, security
 - replication [SQL Server], agents and profiles
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
-caps.latest.revision: "72"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b677b08f0643a4e37ca217338187302bae4f1b8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8cebfe2bb8751a2aebff7b71d5b1e661a751014f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agent-security-model"></a>レプリケーション エージェントのセキュリティ モデル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] レプリケーション エージェントのセキュリティ モデルを使用すると、レプリケーション エージェントを実行して接続するアカウントをきめ細かく制御できます。エージェントごとに異なるアカウントを指定できます。 アカウントを指定する方法の詳細については、「[レプリケーションのログインとパスワードの管理](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)」を参照してください。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/17/2017
  エージェントを実行して接続するアカウントには、さまざまな権限が必要です。 これらの権限を次の表に詳しく示します。 各エージェントは異なる Windows アカウントで実行することをお勧めします。また、このアカウントには、必要な権限のみ許可してください。 複数のエージェントに関連するパブリケーション アクセス リスト (PAL) の詳細については、「[Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)」 (パブリッシャーのセキュリティ保護) を参照してください。  
   
 > [!NOTE]  
->  特定の Windows オペレーティング システム内のユーザー アカウント制御 (UAC) により、スナップショット共有への管理アクセスが妨害される場合があります。 このため、スナップショット エージェント、ディストリビューション エージェント、およびマージ エージェントによって使用される Windows アカウントに、スナップショット共有の権限を明示的に与える必要があります。 この操作は、Windows アカウントが Administrators グループのメンバーである場合にも必要です。 詳細については、「[スナップショット フォルダーのセキュリティ保護](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)」を参照してください。  
+>  特定の Windows オペレーティング システム内のユーザー アカウント制御 (UAC) により、スナップショット共有への管理アクセスが妨害される場合があります。 このため、スナップショット エージェント、ディストリビューション エージェント、およびマージ エージェントによって使用される Windows アカウントに、スナップショット共有の権限を明示的に与える必要があります。 この操作は、Windows アカウントが Administrators グループのメンバーである場合にも必要です。 詳細については、「[Secure the Snapshot Folder](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)」(スナップショット フォルダーのセキュリティ保護) をご覧ください。  
   
 |エージェント|アクセス許可|  
 |-----------|-----------------|  
@@ -79,8 +80,8 @@ ms.lasthandoff: 11/17/2017
 |プル サブスクリプションに対するマージ エージェント|**\<パブリッシャー>-\<パブリケーション データベース>-\<パブリケーション>-\<サブスクライバー>-\<SubscriptionDatabase>-\<整数>**|  
 |プッシュ サブスクリプションに対するマージ エージェント|**\<パブリッシャー>-\<パブリケーション データベース>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|  
 |プッシュ サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<整数>***|  
-|プル サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<SubscriptionDatabase>-\<GUID>***\*|  
-|SQL Server 以外のサブスクライバーへのプッシュ サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|  
+|プル サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<サブスクリプション データベース>-\<GUID>***\*|  
+|SQL Server 以外のサブスクライバーへのプッシュ サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<パブリケーション データベース>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|  
 |キュー リーダー エージェント (Queue Reader Agent)|**[\<ディストリビューター>].\<整数>**|  
   
  \*Oracle パブリケーションに対するプッシュ サブスクリプションの場合は、ジョブ名が **\<>-\<PublicationDatabase>** ではなく **\<>-\<**> になります。  

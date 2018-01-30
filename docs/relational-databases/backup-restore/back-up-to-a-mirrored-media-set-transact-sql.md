@@ -8,20 +8,21 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5fc43a5d-dfd6-4c53-a4ef-3c8da23ccc81
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 747f918931944a99d737b21b8a200426f3cf1464
-ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
+ms.openlocfilehash: 1c2704671767a17542e34406c3b73be394048c28
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-to-a-mirrored-media-set-transact-sql"></a>ミラー化メディア セットへのバックアップ (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのバックアップ時に、[!INCLUDE[tsql](../../includes/tsql-md.md)] の [BACKUP](../../t-sql/statements/backup-transact-sql.md) ステートメントを使用して、ミラー化メディア セットを指定する方法を説明します。 BACKUP ステートメントの TO 句で最初のミラーを指定します。 次に、このステートメントの MIRROR TO 句で各ミラーを指定します。 TO 句および MIRROR TO 句では、同じ数と種類のバックアップ デバイスを指定する必要があります。  
@@ -39,7 +40,7 @@ WITH
 GO  
 ```  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  **ミラー化バックアップから復元するには**  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  

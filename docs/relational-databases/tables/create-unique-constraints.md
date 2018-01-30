@@ -8,25 +8,27 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: UNIQUE_TSQL
+f1_keywords:
+- UNIQUE_TSQL
 helpviewer_keywords:
 - UNIQUE constraints [SQL Server], creating
 - constraints [SQL Server], creating
 - constraints [SQL Server], unique
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f910102bc812d065d63632335714c1e4609aecf3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e17b48e1575ba0be09eea74cb96d8f471d67185d
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-unique-constraints"></a>UNIQUE 制約の作成
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **UNIQUE 制約を作成する方法:**  
   
@@ -45,11 +47,11 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  テーブルに対する ALTER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -64,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  **[全般]**の下のグリッドで、 **[型]** をクリックし、プロパティの右にあるドロップダウン リスト ボックスの **[一意キー]** をクリックします。  
   
-5.  **ファイル** メニューの **table name***の保存*をクリックします。  
+5.  **[ファイル]** メニューの *[<テーブル名> を保存]* をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

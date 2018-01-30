@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - ports [SQL Server]
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-caps.latest.revision: "65"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81d35953fbdf67c20e857b3b7e4d29e57f0c1a4b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7b2ada96d38f3653433aca10f15bfb0e87f165ed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>データベース管理者用の診断接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サーバーへの標準の接続が確立できないときに、管理者向けの特殊な診断接続が用意されています。 診断接続を使用することにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が標準の接続要求に応答していない場合でも、管理者は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアクセスして診断クエリを実行し、問題のトラブルシューティングを行うことができるようになります。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/27/2017
   
  DAC を使用して接続できるのは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin ロールのメンバーのみです。  
   
- DAC は、 **sqlcmd** コマンド プロンプト ユーティリティで特殊な管理者スイッチ (**-A**) を指定することによって使用できます。 **sqlcmd** を使用する方法については、「[sqlcmd でのスクリプト変数の使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)」を参照してください。 また、**sqlcmd -S admin:<*instance_name*> **という形式で、インスタンス名に **admin:** というプレフィックスを指定して接続することもできます。また、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターから **admin:\<*instance_name*>** に接続して DAC を開始することもできます。  
+ DAC は、 **sqlcmd** コマンド プロンプト ユーティリティで特殊な管理者スイッチ (**-A**) を指定することによって使用できます。 **sqlcmd** を使用する方法については、「[sqlcmd でのスクリプト変数の使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)」を参照してください。 また、**sqlcmd -S admin:<*instance_name*>** という形式で、インスタンス名に **admin:** というプレフィックスを指定して接続することもできます。 また、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターから **admin:\<*instance_name*>** に接続して DAC を開始することもできます。  
   
 ## <a name="restrictions"></a>制限  
  DAC の唯一の目的は、ごくまれな状況でサーバーの問題を診断することであるので、この接続には次のようないくつかの制限があります。  

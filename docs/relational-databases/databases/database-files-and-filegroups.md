@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - primary files [SQL Server]
 - file types [SQL Server]
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e469edf82ac5c370a77d3870cd180867baf6a401
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 8306f3c4fb55d441eef744ff1ef9a84256b9eb76
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="database-files-and-filegroups"></a>データベース ファイルとファイル グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各データベースには、データ ファイルとログ ファイルという少なくとも 2 つのオペレーティング システム ファイルがあります。 データ ファイルには、テーブル、インデックス、ストアド プロシージャ、およびビューなどのデータおよびオブジェクトが含まれます。 ログ ファイルには、データベース内のすべてのトランザクションを復旧するために必要な情報が含まれます。 データ ファイルは、割り当てと管理の目的でファイル グループにまとめることができます。  
@@ -102,19 +103,29 @@ ms.lasthandoff: 01/09/2018
 ## <a name="filegroups"></a>ファイル グループ  
  各データベースには、1 つのプライマリ ファイル グループがあります。 プライマリ ファイル グループには、プライマリ データ ファイル、および他のファイル グループに配置されていないセカンダリ ファイルが含まれます。 ユーザー定義のファイル グループを作成して、データベースの管理、データの割り当て、および配置をしやすくするために、データ ファイルをグループ化できます。  
   
- たとえば、3 つのディスク ドライブ上に 1 つずつ、合計 3 つのファイル (Data1.ndf、Data2.ndf、Data3.ndf) を作成し、これらのファイルをファイル グループ **fgroup1**にまとめます。 次に、ファイル グループ **fgroup1**上にテーブルを作成します。 このテーブル内にあるデータに対するクエリが 3 つのディスクにわたって分散されるため、パフォーマンスが向上します。 RAID (Redundant Array of Independent Disks) ストライプ セットにファイルを 1 つ作成しても、同じくらいパフォーマンスを向上させることができます。 ただし、ファイルとファイル グループを使用すれば、新しいファイルを新しいディスクに容易に追加できます。  
+ たとえば、3 つのファイル (`Data1.ndf`、`Data2.ndf`、`Data3.ndf`) をそれぞれ 3 つのディスク ドライブ上に作成し、ファイル グループ `fgroup1` に割り当てることができます。 その後、ファイル グループ `fgroup1` にテーブルを作成することができます。 このテーブル内にあるデータに対するクエリが 3 つのディスクにわたって分散されるため、パフォーマンスが向上します。 RAID (Redundant Array of Independent Disks) ストライプ セットにファイルを 1 つ作成しても、同じくらいパフォーマンスを向上させることができます。 ただし、ファイルとファイル グループを使用すれば、新しいファイルを新しいディスクに容易に追加できます。  
   
  すべてのデータ ファイルは、次の表に一覧表示されているファイル グループに格納されます。  
   
 |[ファイル グループ]|Description|  
 |---------------|-----------------|  
 |プライマリ|プライマリ ファイルが含まれているファイル グループ。 すべてのシステム テーブルがプライマリ ファイル グループに割り当てられます。|  
+|メモリ最適化データ|メモリ最適化ファイル グループは filestream ファイル グループに基づきます。|  
+|Filestream||    
 |ユーザー定義|ユーザーがデータベースを最初に作成したとき、または後で変更したときに、ユーザーが特別に作成したファイル グループ。|  
   
-### <a name="default-filegroup"></a>既定のファイル グループ  
+### <a name="default-primary-filegroup"></a>既定の (プライマリ) ファイル グループ  
  所属させるファイル グループを指定せずにデータベース内にオブジェクトを作成すると、そのオブジェクトは既定のファイル グループに割り当てられます。 どのような場合でも、必ず 1 つのファイル グループが既定のファイル グループとして指定されます。 既定のファイル グループ内のファイルは、他のファイル グループに割り当てられない新しいオブジェクトを十分に格納できる大きさである必要があります。  
   
  PRIMARY ファイル グループは、ALTER DATABASE ステートメントを使用して変更しない限り、既定のファイル グループです。 システム オブジェクトとシステム テーブルは、変更後の既定のファイル グループではなく、引き続き PRIMARY ファイル グループに格納されます。  
+ 
+### <a name="memory-optimized-data-filegroup"></a>メモリ最適化データ ファイル グループ
+
+メモリ最適化ファイル グループの詳細については、「[メモリ最適化ファイル グループ](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)」を参照してください。
+
+### <a name="filestream-filegroup"></a>filestream ファイル グループ
+
+filestream ファイル グループの詳細については、「[FILESTREAM](../../relational-databases/blob/filestream-sql-server.md#filestream-storage)」と「[FILESTREAM が有効なデータベースを作成する方法](../../relational-databases/blob/create-a-filestream-enabled-database.md)」を参照してください。
 
 ### <a name="file-and-filegroup-example"></a>ファイルおよびファイル グループの例
  次の例では、SQL Server のインスタンスにデータベースを作成します。 このデータベースにはプライマリ データ ファイル、ユーザー定義のファイル グループ、およびログ ファイルが含まれます。 プライマリ データ ファイルはプライマリ ファイル グループ内にあり、ユーザー定義ファイル グループには 2 つのセカンダリ データ ファイルがあります。 ALTER DATABASE ステートメントにより、このユーザー定義のファイル グループは既定のファイル グループになります。 その後、ユーザー定義のファイル グループを指定してテーブルを作成します。 (この例では、SQL Server のバージョンの指定を回避するため、一般的なパス `c:\Program Files\Microsoft SQL Server\MSSQL.1` を使用しています。)
@@ -123,7 +134,7 @@ ms.lasthandoff: 01/09/2018
 USE master;
 GO
 -- Create the database with the default data
--- filegroup and a log file. Specify the
+-- filegroup, filstream filegroup and a log file. Specify the
 -- growth increment and the max size for the
 -- primary data file.
 CREATE DATABASE MyDB
@@ -146,7 +157,10 @@ FILEGROUP MyDB_FG1
        'c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\data\MyDB_FG1_2.ndf',
     SIZE = 1MB,
     MAXSIZE=10MB,
-    FILEGROWTH=1MB)
+    FILEGROWTH=1MB),
+FILEGROUP FileStreamGroup1 CONTAINS FILESTREAM
+  ( NAME = 'MyDB_FG_FS',
+    FILENAME = 'c:\Data\filestream1')
 LOG ON
   ( NAME='MyDB_log',
     FILENAME =
@@ -166,9 +180,17 @@ CREATE TABLE MyTable
     colb char(8) )
 ON MyDB_FG1;
 GO
+
+-- Create a table in the filestream filegroup
+CREATE TABLE MyFSTable
+(
+    cola int PRIMARY KEY,
+  colb VARBINARY(MAX) FILESTREAM NULL
+)
+GO
 ```
 
-次の図は、上の例を結果をまとめたものです。
+次の図は、上の例の結果をまとめたものです (filestream データを除く)。
 
 ![filegroup_example](../../relational-databases/databases/media/filegroup-example.gif)
 

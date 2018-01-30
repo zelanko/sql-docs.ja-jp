@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords:
@@ -25,16 +26,16 @@ keywords:
 - sql server ssms
 - ssms express
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
-caps.latest.revision: "145"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: efd1e5f85968f90af166a14eb58526b66f20cf3a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0447d74f672398a5c9e242cc43c779e419526b99
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)] SSMS は、SQL Server から SQL Database まで、SQL インフラストラクチャを管理するための統合環境です。 SSMS には、SQL のインスタンスを構成、監視、および管理するためのツールが備わっています。 SSMS を使用して、アプリケーションで使われるデータ層コンポーネントを配置、監視、アップグレードしたり、クエリとスクリプトを作成したりすることもできます。
@@ -174,7 +175,10 @@ SSMS の今回のリリースでは、最新の Service Pack を使用した次�
 
 ## <a name="feedback"></a>フィードバック
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Microsoft Connect で問題や提案を記録](https://connect.microsoft.com/SQLServer/Feedback)
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL クライアント ツール フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)  
+
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 
 

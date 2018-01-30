@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,16 +21,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7bf66d7aa47b9f15428b08943638dac0cd905fde
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 78879ee28a48495c87d63eec7953ece9d4326ed5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="index-properties-f1-help"></a>[インデックスのプロパティ] の F1 ヘルプ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,13 +86,13 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  インデックスの種類が **[プライマリ XML]** または **[空間]**の場合、この列はテーブルに表示されません。  
   
- **データ型**  
+ **[データ型]**  
  データ型情報を表示します。  
   
 > [!NOTE]  
 >  テーブル列が計算列の場合、 **[データ型]** に "計算列" と表示されます。  
   
- **サイズ**  
+ **[サイズ]**  
  列データ型を格納するために必要な最大バイト数を表示します。 空間列または XML 列の場合は、ゼロ (0) が表示されます。  
   
  **Identity**  
@@ -119,7 +120,7 @@ ms.lasthandoff: 11/17/2017
  非キー列を非クラスター化インデックスに含めます。 このオプションを選択すると、列を非キー列として非クラスター化インデックスのリーフ レベルに追加することにより、インデックス キーの合計サイズに対する現在のインデックス制限、およびインデックス キーを構成する列の最大数の制限を無視できます。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。  
   
 ##  <a name="Columns"></a> [<table name> から (インデックス) 列を選択] ダイアログ ボックス  
- このページを使用すると、インデックスを作成または変更するときに **[インデックスのプロパティ] ([全般] ページ)** に列を追加できます。  
+ このページを使用すると、インデックスを作成または変更するときに **[インデックスのプロパティ]\([全般] ページ)** に列を追加できます。  
   
  **チェック ボックス**  
  列を選択する場合にオンにします。  
@@ -127,7 +128,7 @@ ms.lasthandoff: 11/17/2017
  **名前**  
  列の名前です。  
   
- **データ型**  
+ **[データ型]**  
  列のデータ型。  
   
  **バイト**  
@@ -142,7 +143,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="Storage"></a> [ストレージ] ページのオプション  
  このページを使用すると、選択したインデックスのファイル グループ プロパティやパーティション構成プロパティを表示または変更できます。 インデックスの種類に関連するオプションだけが表示されます。  
   
- **ファイル グループ**  
+ **[ファイル グループ]**  
  指定したファイル グループのインデックスを格納します。 一覧には、標準 (ROW) ファイル グループのみが表示されます。 既定で選択されているのは、データベースのプライマリ ファイル グループです。 詳細については、「 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)」を参照してください。  
   
  **[Filestream ファイル グループ]**  

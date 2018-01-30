@@ -8,25 +8,27 @@ ms.service:
 ms.component: ssms-tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - tql
 - templates [Transact-SQL], creating
 - templates [Transact-SQL]
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 159bc72c37ef0da4a862079c77d0bba821878280
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 757a6b2aebe68dc32ddc493c3e6649a8b589be3e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-3-2---create-custom-templates"></a>レッスン 3-2 - カスタム テンプレートの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +77,7 @@ ms.lasthandoff: 12/21/2017
   
 10. クエリ エディターに「 **EXECUTE dbo.WorkOrdersForBlade**」と入力し、F5 キーを押してクエリを実行します。 **結果**ペインに、ブレードに対する作業命令の一覧が返されていることを確認します。  
   
-11. テンプレート スクリプト (手順 7 のスクリプト) を編集します。4 つの場所で、製品名 Blade をパラメーター ***\<*product_name****nvarchar(50)**、**name*>*** に置き換えます。  
+11. テンプレート スクリプト (手順 7 のスクリプト) を編集します。4 つの場所で、製品名 Blade をパラメーター ***\<*product_name**, **nvarchar(50)**, **name*>*** に置き換えます。  
   
     > [!NOTE]  
     > パラメーターには、置き換えるパラメーターの名前、パラメーターのデータ型、パラメーターの既定値の 3 つの要素が必要です。  

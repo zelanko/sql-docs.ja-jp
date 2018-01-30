@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e45f9df8f2356e7dea91fd47d10afd4fea958205
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd6a236b2ead2c5891d1794a7b20ea7a72c4a4de
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="use-tokens-in-job-steps"></a>ジョブ ステップでのトークンの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="understanding-using-tokens"></a>トークンの使用について  
   
 > [!IMPORTANT]  
-> Windows イベント ログに対して書き込みのアクセス許可を持っている Windows ユーザーであればだれでも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの警告または WMI 警告によってアクティブ化されるジョブ ステップにアクセスできます。 このセキュリティ上のリスクを避けるために、警告によってアクティブになるジョブで使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント トークンは、既定で無効になっています。 このようなトークンには、 **A-DBN**、 **A-SVR**、 **A-ERR**、 **A-SEV**、 **A-MSG**、および **WMI(***プロパティ***)**があります。 このリリースでは、トークンの使用はすべての警告に拡張されていることに注意してください。  
+> Windows イベント ログに対して書き込みのアクセス許可を持っている Windows ユーザーであればだれでも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの警告または WMI 警告によってアクティブ化されるジョブ ステップにアクセスできます。 このセキュリティ上のリスクを避けるために、警告によってアクティブになるジョブで使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント トークンは、既定で無効になっています。 このようなトークンには、**A-DBN**、**A-SVR**、**A-ERR**、**A-SEV**、**A-MSG**、**WMI(***property***)** があります。 このリリースでは、トークンの使用はすべての警告に拡張されていることに注意してください。  
 >   
 > これらのトークンを使用する必要がある場合は、まず、Administrators グループなどの信頼されている Windows セキュリティ グループのメンバーのみが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] が存在するコンピューターのイベント ログに対して書き込みのアクセス許可を持っていることを確認してください。 確認したら、[オブジェクト エクスプローラー] で **[SQL Server エージェント]** を右クリックし、 **[プロパティ]**をクリックします。次に、 **[警告システム]** ページで、 **[警告に応答するすべてのジョブのトークンを置き換える]** チェック ボックスをオンにして、これらのトークンを有効にします。  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 12/21/2017
 |**(TIME)**|HHMMSS 形式で表す現在の時刻。|  
 |**(STRTTM)**|HHMMSS 形式で表すジョブの実行開始時刻。|  
 |**(STRTDT)**|YYYYMMDD 形式で表すジョブの実行開始日。|  
-|**(WMI (***プロパティ***))**|WMI 警告に応答して実行されるジョブの場合、 *プロパティ*で指定したプロパティの値。 たとえば、 `$(WMI(DatabaseName))` では、警告が実行される原因となった WMI イベントの **DatabaseName** プロパティの値が得られます。|  
+|**(WMI(***property***))**|WMI 警告に応答して実行されるジョブの場合、 *プロパティ*で指定したプロパティの値。 たとえば、 `$(WMI(DatabaseName))` では、警告が実行される原因となった WMI イベントの **DatabaseName** プロパティの値が得られます。|  
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server エージェントのエスケープ マクロ  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 12/21/2017
   
 |トークンの構文|警告トークンの置換が有効な場合|警告トークンの置換が無効な場合|  
 |----------------|------------------------------|-------------------------------|  
-|ESCAPE マクロを使用する|ジョブ内のすべてのトークンが正常に置き換えられます。|警告によってアクティブ化されるトークンは置き換えられません。 このようなトークンには、 **A-DBN**、 **A-SVR**、 **A-ERR**、 **A-SEV**、 **A-MSG**、および **WMI(***プロパティ***)**があります。 他の静的なトークンは正常に置き換えられます。|  
+|ESCAPE マクロを使用する|ジョブ内のすべてのトークンが正常に置き換えられます。|警告によってアクティブ化されるトークンは置き換えられません。 このようなトークンには、**A-DBN**、**A-SVR**、**A-ERR**、**A-SEV**、**A-MSG**、**WMI(***property***)** があります。 他の静的なトークンは正常に置き換えられます。|  
 |ESCAPE マクロを使用しない|トークンを含んでいるすべてのジョブが失敗します。|トークンを含んでいるすべてのジョブが失敗します。|  
   
 ## <a name="token-syntax-update-examples"></a>トークンの構文の更新例  

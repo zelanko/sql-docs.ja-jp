@@ -9,20 +9,22 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
 manager: craigg
-f1_keywords: sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+f1_keywords:
+- sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.workload: Inactive
-ms.openlocfilehash: 091d67122b07e8787ccfce914236a4ff9f793b27
-ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
+ms.openlocfilehash: 40bc7489efca9139dd83489452610f64b84a90bf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Integration Services (SSIS) Scale Out でパッケージを実行する
 Integration Services サーバーにパッケージを配置すると、次のいずれかの方法を使用して Scale Out でそれらのパッケージを実行できます。
@@ -66,7 +68,7 @@ Integration Services サーバーにパッケージを配置すると、次の�
 
 1.  実行を作成します。
 
-    パッケージごとに `[catalog].[create_execution]` を呼び出します。 パラメーター **@runinscaleout** を `True` に設定します。 一部の Scale Out Worker コンピューターでパッケージを実行できない場合は、パラメーター **@useanyworker** を `False` に設定します。   
+    パッケージごとに `[catalog].[create_execution]` を呼び出します。 パラメーター **@runinscaleout** を `True` に設定します。 一部の Scale Out Worker コンピューターでパッケージを実行できない場合は、パラメーター **@useanyworker** を `False` に設定します。 このストアド プロシージャと **@useanyworker** パラメーターの詳細については、「[catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)」を参照してください。 
 
 2. 実行パラメーターを設定します。
 

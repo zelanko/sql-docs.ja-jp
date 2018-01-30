@@ -8,23 +8,24 @@ ms.service:
 ms.component: spatial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-spatial
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
 - geometry data type [SQL Server], getting started
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e5c41d33b04553a63265313d0f380a98e15b9c79
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ebfebc7ff04a526bd0a6aa7854b1d005dcad5f94
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>geometry インスタンスの作成、構築、およびクエリ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 平面空間データ型の **geometry** は、ユークリッド (平面) 座標系のデータを表します。 この型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では共通言語ランタイム (CLR) のデータ型として実装されています。  
@@ -223,7 +224,7 @@ ms.lasthandoff: 11/17/2017
   
   
 ###  <a name="empty"></a> 空  
- *空*の **geometry** インスタンスには点はありません。 空の **LineString, CircularString**、 **CompoundCurve**、および **MultiLineString** インスタンスの長さは 0 です。 空の **Polygon**、 **CurvePolygon**、および **MultiPolygon** インスタンスの面積は 0 です。  
+ *空の ***geometry* インスタンスには点はありません。 空の **LineString, CircularString**、 **CompoundCurve**、および **MultiLineString** インスタンスの長さは 0 です。 空の **Polygon**、 **CurvePolygon**、および **MultiPolygon** インスタンスの面積は 0 です。  
   
  **インスタンスが空かどうかを調べるには**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md)。  
@@ -278,7 +279,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> 閉鎖性  
- *閉じている* **geometry** インスタンスは、始点と終点が同じである図形です。 **Polygon** インスタンスは閉じていると見なされます。 **Point** インスタンスは閉じていないと見なされます。  
+ *閉じている ***geometry* インスタンスは、始点と終点が同じである図形です。 **Polygon** インスタンスは閉じていると見なされます。 **Point** インスタンスは閉じていないと見なされます。  
   
  リングは、単純な閉じている **LineString** インスタンスです。  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,16 +30,16 @@ helpviewer_keywords:
 - Resource database [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
-caps.latest.revision: "62"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 25802e683974f339f7081d774e531ba8bd0ea5bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3444bc386251013e6dc7e4d81ad408b9a07b971a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="move-system-databases"></a>システム データベースの移動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  ファイルを新しい場所に移動します。  
 
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスまたはサーバーを再起動します。 詳しくは、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」をご覧ください。  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスまたはサーバーを再起動します。 詳細については、「 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
   
 5.  次のクエリを実行して、ファイルが変更されたことを確認します。  
   
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  **[SQL Server のサービス]** ノードで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス (たとえば、 **[SQL Server (MSSQLSERVER)]**) を右クリックし、 **[プロパティ]**をクリックします。  
   
-3.  **[SQL Server (***instance_name***) のプロパティ]** ダイアログ ボックスで、 **[起動時のパラメーター]** タブをクリックします。  
+3.  **[SQL Server (***instance_name***) のプロパティ]** ダイアログ ボックスで、**[起動時のパラメーター]** タブをクリックします。  
   
 4.  **[既存のパラメーター]** ボックスで –d パラメーターを選択して、マスター データ ファイルを移動します。 **[更新]** をクリックして変更を保存します。  
   

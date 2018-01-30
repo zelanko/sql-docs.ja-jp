@@ -8,23 +8,24 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Agent, connections
 - connections [SQL Server], SQL Server Agent service
 ms.assetid: 28b6178b-0a9e-4f2c-8562-7a62d2d2a285
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a70b599aa521e50959e460ef604ca754655caff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c75ea4b77160a1b34bbbfffe32f83aff55081514
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set the SQL Server Connection for the SQL Server Agent Service (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントと [!INCLUDE[ssDE](../../includes/ssde_md.md)] 間の接続を設定する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスでは、Windows 認証を使用して、SQL Server のローカル インスタンスに接続できます。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]**を選択します。  
   
-3.  **[SQL Server エージェントのプロパティ***sever_name* ] ダイアログ ボックスの **[ページの選択]**で **[接続]**をクリックします。  
+3.  *[SQL Server エージェントのプロパティ - <サーバー名>]* ダイアログ ボックスの **[ページの選択]** で **[接続]** をクリックします。  
   
 4.  **[SQL Server 接続]** で、**[Windows 認証を使用する]** を選択して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントが [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssDE](../../includes/ssde_md.md)]のインスタンスに接続できるようにします。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] 以降のデータベースへの接続には Windows 認証が必要です。  
   

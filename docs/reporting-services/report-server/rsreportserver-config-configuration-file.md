@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 312db6c9454c0fca1f50d63d2d5135f2fb20f6db
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 87efa1c9f3fd309ac6b9da150545ac7e08630cd5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RSReportServer Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** ファイルには、レポート サーバー Web サービスおよびバックグラウンド処理で使用される設定が格納されます。 すべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションは、RSReportServer.config ファイルに格納された構成設定を読み取る単一のプロセス内で実行されます。 ネイティブ モードのレポート サーバーと SharePoint モードのレポート サーバーはどちらも RSReportServer.config を使用しますが、両方のモードで構成ファイル内のまったく同じ設定が使用されるわけではありません。 SharePoint モードの設定の多くは、ファイルではなく SharePoint 構成データベースに格納されるため、SharePoint モード バージョンのファイルは、より小さくなります。 このトピックでは、ネイティブ モードおよび SharePoint モード用にインストールされる既定の構成ファイル、いくつかの重要な設定、および構成ファイルによって制御される動作について説明します。  
@@ -72,9 +72,9 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**Dsn**|レポート サーバー データベースをホストするデータベース サーバーへの接続文字列を指定します。 この値は、レポート サーバー データベースの作成時に、暗号化されて構成ファイルに追加されます。 SharePoint では、SharePoint 構成データベースからデータベース接続情報が取得されます。|N、S|  
 |**ConnectionType**|レポート サーバーがレポート サーバー データベースへの接続に使用する資格情報のタイプを指定します。 有効な値は、 **Default** および **Impersonate**です。 **Default** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインまたはサービス アカウントを使用してレポート サーバー データベースに接続するようにレポート サーバーを構成する場合に指定します。 **Impersonate** は、レポート サーバーが Windows アカウントを使用してレポート サーバー データベースに接続する場合に指定します。|×|  
 |**LogonUser、LogonDomain、LogonCred**|レポート サーバーがレポート サーバー データベースに接続するときに使用するドメイン アカウントのドメイン、ユーザー名、およびパスワードを格納します。 **LogonUser**、 **LogonDomain**、および **LogonCred** の値は、レポート サーバー接続がドメイン アカウントを使用するように構成されていると作成されます。 レポート サーバーのデータベース接続の詳細については、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。|×|  
-|**InstanceID**|レポート サーバーのインスタンス用の識別子です。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に基づいています。 この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名を指定します。 既定値は **MSRS12***\<インスタンス名>* です。 この設定は変更しないでください。 完全な値の例を次に示します: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> SharePoint モードの例を次に示します:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N、S|  
+|**InstanceID**|レポート サーバーのインスタンス用の識別子です。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に基づいています。 この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名を指定します。 既定では、この値は **MSRS12***\<インスタンス名>* となります。 この設定は変更しないでください。 完全な値の例を次に示します: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> SharePoint モードの例を次に示します:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N、S|  
 |**InstallationID**|セットアップによって作成されるレポート サーバーのインストール用の識別子です。 この値は GUID に設定されます。 この設定は変更しないでください。|×|  
-|**SecureConnectionLevel**|Web サービス呼び出しにおける SSL (Secure Sockets Layer) の使用レベルを指定します。 この設定は、レポート サーバー Web サービスと Web ポータルの両方で使用されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで、HTTP または HTTPS を使用するように URL を構成すると、この値が設定されます。 有効な値は、0 ～ 3 で、0 はセキュリティ レベルが最も低くなります。 詳細については、「 [セキュリティで保護された Web サービス メソッドの使用](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) 」と「 [ネイティブ モードのレポート サーバーでの SSL 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。|N、S|  
+|**SecureConnectionLevel**|Web サービス呼び出しにおける SSL (Secure Sockets Layer) の使用レベルを指定します。 この設定は、レポート サーバー Web サービスと Web ポータルの両方で使用されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで、HTTP または HTTPS を使用するように URL を構成すると、この値が設定されます。 SQL Server 2008 R2 で、SecureConnectionLevel はオン/オフのスイッチとして使用されます。 SQL Server 2008 R2 より前のバージョンの場合、有効な値の範囲は 0 から 3 で、0 はセキュリティ レベルが最も低くなります。 詳細については、「[ConfigurationSetting メソッド - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md)」、「[セキュリティで保護された Web サービス メソッドの使用](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)」および「[ネイティブ モードのレポート サーバーでの SSL 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。|N、S|
 |**DisableSecureFormsAuthenticationCookie**|既定値は False です。<br /><br /> フォーム認証とカスタム認証をセキュリティで保護されているものとしてマークするために使用するクッキーの強制を無効にするかどうかを指定します。 SQL Server 2012 以降、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によって、カスタム認証拡張機能と共に使用されるフォーム認証クッキーが、クライアントへの送信時にセキュリティで保護されたクッキーとして自動的にマークされます。 このプロパティを変更することで、レポート サーバー管理者およびカスタム セキュリティ拡張機能の作成者は、カスタム セキュリティ拡張機能の作成者がクッキーをセキュリティで保護されたクッキーとしてマークするかどうかを指定できた以前の動作に戻すことができます。 ネットワーク スニッフィングや再生攻撃を防止するため、フォーム認証にはセキュリティで保護されたクッキーを使用することをお勧めします。|×|  
 |**CleanupCycleMinutes**|レポート サーバー データベースから古いセッションと期限切れのスナップショットを削除するまでの保持期間を分単位で指定します。 有効な値は、0 から整数型の最大値までです。 既定値は 10 です。 値を 0 に設定すると、データベースによる処理のクリーンアップが無効になります。|N、S|  
 |**MaxActiveReqForOneUser**|ユーザーが同時に処理できる最大レポート数を指定します。 最大数に達すると、それ以降のレポート処理要求は拒否されます。 有効値は、1 から整数型の最大値までです。 既定値は 20 です。<br /><br /> 要求の大半はきわめて迅速に処理されるため、1 人のユーザーが任意の時点で 20 より多くの接続を開くということはまずありません。 ユーザーが 15 より多い処理集中型のレポートを同時に開く場合は、この値を増やす必要があります。<br /><br /> この設定は、SharePoint 統合モードで動作するレポート サーバーでは無視されます。|N、S|  

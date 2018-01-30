@@ -8,7 +8,8 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-transaction-log
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - manage log size
 - log size, manage
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 23aaaed04bfb552865cf9eb95b3150d520499dd9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 58cbe590d16bba9d74f41dc7499b563a2e0b2499
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>トランザクション ログ ファイルのサイズの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のトランザクション ログ サイズの監視、トランザクション ログの圧縮、トランザクション ログ ファイルの追加と拡大、**tempdb** トランザクション ログ増加率の最適化、トランザクション ログ ファイルのサイズ拡大の管理の方法について説明します。  
@@ -105,9 +106,9 @@ ms.lasthandoff: 01/08/2018
       |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降|データ 1 MB。 ログ ファイル 10%。|  
       |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] の前|データ 10%。 ログ ファイル 10%。|  
 
--   増分が少ないと小さな [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) が過度に生成され、パフォーマンスが低下します。 
+-   増分が少ないと小さな [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) が過度に生成され、パフォーマンスが低下します。 指定されたインスタンスにおいて、すべてのデータベースの現在のトランザクション ログ サイズに最適な VLF 配布と必要なサイズを得るために必要な増分を決定するには、この[スクリプト](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)をご覧ください。
 
--   増分が大きいと大きな [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) が生成される回数が極めて少なく、やはりパフォーマンスに影響が出ます。 
+-   増分が大きいと大きな [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) が生成される回数が極めて少なく、やはりパフォーマンスに影響が出ます。 指定されたインスタンスにおいて、すべてのデータベースの現在のトランザクション ログ サイズに最適な VLF 配布と必要なサイズを得るために必要な増分を決定するには、この[スクリプト](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)をご覧ください。 
 
 -   自動拡張を有効にしても、増加が遅く、クエリのニーズを満たせなければ、トランザクション ログがいっぱいになったというメッセージが表示されます。 増分変更の詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41; の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。
 

@@ -8,23 +8,24 @@ ms.service:
 ms.component: ssms
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - WMI Provider for Server Events, setting permissions
 - WMI permissions [SQL Server]
 ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9f112422687537dadfc5543249576d06f924b598
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 654dfff830fa18a1a38a3ecb3454cfa824e097c9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>SQL Server ツールでサーバーの状態を表示できるようにする WMI の構成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../includes/sscurrent_md.md)] で、SQL Server ツールにサーバーの状態を表示するように WMI を構成する方法について説明します。 サーバーに接続する際には、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]構成マネージャーだけでなく [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] のコンポーネントである登録済みサーバーおよびオブジェクト エクスプローラーの両方で、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] (MSSQLSERVER) サービスおよび [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] エージェント (MSSQLSERVER) サービスの状態を取得するために、WMI (Windows Management Instrumentation) が使用されます。 サービスの状態を表示するには、WMI オブジェクトに対するリモート アクセスの権限が必要です。 このアクセス許可を構成するには、サーバーに WMI をインストールする必要があります。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 6.  **[グループ名またはユーザー名]** ボックスにグループまたはユーザーを追加して選択します。  
   
-7.  **[***<group or user> のアクセス許可]* ボックスで、サービスの状態をリモートから確認できるようにするユーザーの **[リモートの有効化]** の **[許可]** 列にあるチェック ボックスをオンにします。  
+7.  *[***<group or user> のアクセス許可]* ボックスで、サービスの状態をリモートから確認できるようにするユーザーの **[リモートの有効化]** の **[許可]** 列にあるチェック ボックスをオンにします。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server エージェント サービスの開始、停止、または一時停止](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  

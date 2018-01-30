@@ -8,23 +8,24 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - modifying primary keys
 - primary keys [SQL Server], modifying
 ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee0f0825c66c10ba5412a2b5d8ffc3db23077970
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: becb37a9eb7767299706bd354e7801a255b0dc96
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modify-primary-keys"></a>主キーの変更
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **主キーを変更するための方法:**  
   
@@ -43,11 +44,11 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  テーブルに対する ALTER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/17/2017
     |FILL FACTOR を定義する。|**[FILL の指定]** カテゴリを展開して、 **[FILL FACTOR]** ボックスに 0 ～ 100 の整数を入力します。 Fill Factor の詳細とその使用方法については、「 [インデックスの FILL FACTOR の指定](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)」を参照してください。|  
     |列の順序を変更する。|**[列]**をクリックして、プロパティの右にある省略記号 ( **[...]** ) をクリックします。 **[インデックスの列]** ダイアログ ボックスで、主キーから列を削除します。 次に、削除した列を必要な順序で再度追加します。 **[列名]** ボックスの一覧から列名を削除するだけで、キーから列を削除できます。|  
   
-4.  **ファイル** メニューの **table name***の保存*をクリックします。  
+4.  **[ファイル]** メニューの *[<テーブル名> を保存]* をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **主キーを変更するには**  

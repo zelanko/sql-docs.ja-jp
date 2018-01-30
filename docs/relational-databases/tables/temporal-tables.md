@@ -8,20 +8,21 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e7f2945bcceefdd7613a44a292fa5794554607ce
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ba3bc1642b2b266c030f8ec326d001a8fb56b4ab
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="temporal-tables"></a>テンポラル テーブル
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

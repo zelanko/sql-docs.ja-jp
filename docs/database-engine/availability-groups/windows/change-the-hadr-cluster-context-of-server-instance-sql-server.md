@@ -8,28 +8,29 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - Availability replicas [SQL Server], change WSFC cluster context
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 296d664edfdbf31110aab41c140735271920c832
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6d67df05f5cd24b3c5b1f02273708633263f1d0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>サーバー インスタンスの HADR クラスター コンテキストの変更 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 以降のバージョンの [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの HADR クラスター コンテキストを切り替える方法について説明します。 *HADR クラスター コンテキスト* は、サーバー インスタンスによってホストされる可用性レプリカのメタデータを管理する Windows Server フェールオーバー クラスタリング (WSFC) クラスターを決定します。  
   
- HADR クラスター コンテキストの切り替えは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を新しい WSFC クラスター上の [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] インスタンスに移行するクラスター間での移行中にのみ実行します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のクラスター間の移行は、可用性グループの最小限のダウンタイムで [!INCLUDE[win8](../../../includes/win8-md.md)] または [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] への OS のアップグレードをサポートします。 詳細については、「 [OS アップグレードのための Always On 可用性グループのクラスター間での移行](http://msdn.microsoft.com/library/jj873730.aspx)」を参照してください。  
+ HADR クラスター コンテキストの切り替えは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を新しい WSFC クラスター上の [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] インスタンスに移行するクラスター間での移行中にのみ実行します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のクラスター間の移行は、可用性グループの最小限のダウンタイムで [!INCLUDE[win8](../../../includes/win8-md.md)] または [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] への OS のアップグレードをサポートします。 詳細については、「 [OS アップグレードのための AlwaysOn 可用性グループのクラスター間での移行](http://msdn.microsoft.com/library/jj873730.aspx)」を参照してください。  
   
 -   **作業を開始する準備:**  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
      [推奨事項](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **可用性レプリカのクラスター コンテキストを**  [Transact-SQL](#TsqlProcedure)  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [関連コンテンツ](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 > [!CAUTION]  
 >  HADR クラスター コンテキストの切り替えは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 配置のクラスター間での移行中にのみ実行してください。  
@@ -91,7 +92,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
   
 -   **SQL Server ログイン (SQL Server login)**  
   
@@ -170,7 +171,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [SQL Server 2012 技術記事](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server AlwaysOn チームのブログ: SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

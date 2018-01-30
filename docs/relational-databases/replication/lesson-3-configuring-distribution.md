@@ -8,22 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
-caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e7941463e0d36954a0a137be9f003845d9eff1dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2888c3f576159def2fb141802aafc1853ce9b50f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-3-configuring-distribution"></a>レッスン 3 : ディストリビューションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このレッスンでは、パブリッシャー側のディストリビューションを構成し、パブリケーション データベースとディストリビューション データベースに対して必要な権限を設定します。 ディストリビューターを構成済みの場合は、このレッスンを開始する前に、パブリッシングとディストリビューションを無効にする必要があります。 既存のレプリケーション トポロジを維持する必要がある場合は、このレッスンを実行しないでください。  
@@ -43,9 +46,9 @@ ms.lasthandoff: 11/17/2017
   
 3.  **[ディストリビューター]** ページで、['&lt;サーバー名&gt;' を独自のディストリビューターとする (SQL Server はディストリビューション データベースとログを作成します)]を選択し、**[次へ]** をクリックします。  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されていない場合は、[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**エージェントの起動** ] ページで **[はい]**を選択し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスが自動的に起動するように構成します。 **[次へ]**をクリックします。  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されていない場合は、[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**エージェントの起動** ] ページで **[はい]**を選択し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスが自動的に起動するように構成します。 **[次へ]** をクリックします。  
   
-5.  **[スナップショット フォルダー]** ボックスに、「**\\\\**\<*コンピューター名>***\repldata**」と入力します (\<*コンピューター名>* はパブリッシャーの名前)。その後、**[次へ]** をクリックします。  
+5.  **[スナップショット フォルダー]** ボックスに「**\\\\**\<*コンピューター名>***\repldata**」と入力します (\<*コンピューター名>* はパブリッシャーの名前)。その後、**[次へ]** をクリックします。  
   
 6.  ウィザードの残りのページでは、既定値をそのまま使用します。  
   

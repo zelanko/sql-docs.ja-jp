@@ -8,23 +8,24 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - administering replication, frequently asked questions
 - replication [SQL Server], administering
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
-caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 89d5ee0f084b48c48a116bf983770e6dbb55bf94
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c4514baae490912c82b2c8b8b34e7f5f780570a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>レプリケーションの管理者に関してよく寄せられる質問
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ここでは、レプリケートされたデータベースの管理者が行うさまざまな作業についての指針となるような質問と回答を掲載します。  
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/17/2017
   
 -   キャラクター モードのスナップショット ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のバージョンのサブスクライバーや [!INCLUDE[ssEW](../../../includes/ssew-md.md)] サブスクライバーで使用されます) を使用するパブリケーションのアーティクルの場合。既定では、所有者は空白のままになります。 既定の所有者は、サブスクライバーに接続しているディストリビューション エージェントまたはマージ エージェントで使用されるアカウントに関連付けられている所有者になります。  
   
- オブジェクトの所有者は、**[アーティクルのプロパティ - \<***Article***>]** ダイアログ ボックスと、ストアド プロシージャ**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** および **sp_changemergearticle** で変更できます。 詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義)、および「[View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
+ オブジェクトの所有者は、**[アーティクルのプロパティ - \<***Article***>]** ダイアログ ボックスと、ストアド プロシージャの **sp_addarticle**、**sp_addmergearticle**、**sp_changearticle**、**sp_changemergearticle** で変更できます。 詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義)、および「[View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>サブスクリプション データベースの権限をパブリケーション データベースの権限に一致させるには、どのように構成すればよいですか。  
  既定では、レプリケーションではサブスクリプション データベース上で GRANT ステートメントは実行されません。 サブスクリプション データベース上の権限をパブリケーション データベース上の権限に一致させる場合は、次のいずれかの方法を使用します。  
