@@ -8,7 +8,8 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -20,7 +21,7 @@ helpviewer_keywords:
 - Creating script files, script file validation
 - Creating script files, server connection parameters
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 # <a name="creating-script-files-mysqltosql"></a>スクリプト ファイル (MySQLToSQL) を作成します。
 最初の手順とスクリプト ファイルの作成には、SSMA コンソール アプリケーションを起動する前に、変数の値のファイルと、サーバー接続ファイルを作成するために必要な場合は。  
   
-スクリプト ファイルを viz 3 つのセクションに分割できます。。、します。  
+スクリプト ファイルを viz 3 つのセクションに分割できますします..,:  
   
 1.  **config:**コンソール アプリケーションの構成パラメーターを設定することができます。  
   

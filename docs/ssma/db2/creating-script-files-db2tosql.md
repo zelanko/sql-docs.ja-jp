@@ -8,14 +8,15 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
@@ -29,7 +30,7 @@ ms.lasthandoff: 12/21/2017
 # <a name="creating-script-files-db2tosql"></a>スクリプト ファイル (DB2ToSQL) を作成します。
 最初の手順とスクリプト ファイルの作成には、SSMA コンソール アプリケーションを起動する前に、変数の値のファイルと、サーバー接続ファイルを作成するために必要な場合は。  
   
-スクリプト ファイルを viz 3 つのセクションに分割できます。。、します。  
+スクリプト ファイルを viz 3 つのセクションに分割できますします..,:  
   
 1.  **config:**コンソール アプリケーションの構成パラメーターを設定することができます。  
   

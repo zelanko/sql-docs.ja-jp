@@ -12,7 +12,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/09/2018
   
      SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] ウィザードが起動します。  
   
-3.  「 [To install Report Builder from the download site](#download)」の残りの手順を完了します。  
+3.  「 [ダウンロード サイトからレポート ビルダーをインストールするには](#download)」の残りの手順を完了します。  
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-the-command-line"></a>コマンド ラインから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] をインストールするには 
 

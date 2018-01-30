@@ -149,7 +149,7 @@ ms.lasthandoff: 01/08/2018
   
 -   ReportServerTempDB  
   
- Alerting データベースとそれに関連する機能は、ネイティブ モードではサポートされず、使用されません。 ネイティブ モードのレポート サーバーの構成は、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成マネージャーで行います。 SharePoint モードの場合、サービス アプリケーション データベースには、SharePoint 構成の過程で作成した "クライアント アクセス ポイント" の名前を使用します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]と連動する SharePoint の構成の詳細については、「 [SharePoint Server の SQL Server 可用性グループの構成と管理](http://go.microsoft.com/fwlink/?LinkId=245165)」(http://go.microsoft.com/fwlink/?LinkId=245165) を参照してください。  
+ Alerting データベースとそれに関連する機能は、ネイティブ モードではサポートされず、使用されません。 ネイティブ モードのレポート サーバーの構成は、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成マネージャーで行います。 SharePoint モードの場合、サービス アプリケーション データベースには、SharePoint 構成の過程で作成した "クライアント アクセス ポイント" の名前を使用します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]と連動する SharePoint の構成の詳細については、「 [SharePoint Server の SQL Server 可用性グループの構成と管理 (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165)」を参照してください。  
   
 > [!NOTE]  
 >  SharePoint モードのレポート サーバーでは、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービス アプリケーション データベースと SharePoint コンテンツ データベースの同期処理が行われます。 レポート サーバー データベースとコンテンツ データベースは一体で管理することが大切です。 1 つのまとまりとしてフェールオーバーと復元を行うことができるよう、同じ可用性グループで構成することを検討してください。 以下のシナリオについて考えてみます。  

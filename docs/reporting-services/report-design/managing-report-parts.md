@@ -12,7 +12,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/09/2018
  レポート ビルダーなどのレポート作成アプリケーションから SharePoint 統合モードのレポート サーバーにレポート パーツがパブリッシュされると、レポート サーバー カタログも更新されて、ギャラリーから検索するときに新しいレポート パーツまたは更新されたレポート パーツが正確に反映されるようになります。  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>SharePoint フォルダーへのレポート パーツの直接アップロード  
- レポート パーツが、レポート作成アプリケーションからパブリッシュされるのではなく、SharePoint ドキュメント フォルダーに直接アップロードされた場合は、レポート サーバー カタログは更新されません。 レポート パーツ ギャラリーから検索しても、アップロードされたレポート パーツは見つかりません。 SharePoint フォルダーとレポート サーバー カタログの同期を維持するには、SharePoint サーバー上で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ファイル同期機能をアクティブ化します。 詳しくは、「 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)」をご覧ください。  
+ レポート パーツが、レポート作成アプリケーションからパブリッシュされるのではなく、SharePoint ドキュメント フォルダーに直接アップロードされた場合は、レポート サーバー カタログは更新されません。 レポート パーツ ギャラリーから検索しても、アップロードされたレポート パーツは見つかりません。 SharePoint フォルダーとレポート サーバー カタログの同期を維持するには、SharePoint サーバー上で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ファイル同期機能をアクティブ化します。 詳しくは、「 [SharePoint サーバーの全体管理でレポート サーバーのファイル同期機能をアクティブにする](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)」をご覧ください。  
   
  ファイルは、GetProperties や SetProperties などの、一部の Reporting Services 管理 API を呼び出すことによって同期することもできます。  
   
