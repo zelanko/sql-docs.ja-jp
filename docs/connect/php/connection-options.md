@@ -8,11 +8,12 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -35,7 +36,7 @@ ms.lasthandoff: 01/17/2018
 |AttachDBFileName|文字列|サーバーがアタッチするデータベース ファイルを指定します。|値は設定されません。|  
 |[認証]|次の文字列のいずれかです。<br /><br />'SqlPassword'<br /><br />'ActiveDirectoryPassword'|認証モードを指定します。|設定されていません。|  
 |CEKeystoreProvider<br />CEKeystoreName<br />CEKeystoreEncryptKey|文字列|パス、名前と、Always Encrypted 機能のカスタム キー ストア プロバイダーに暗号化キーを指定します。 正しく接続するときにカスタム キー ストア プロバイダーを構成するために 3 つの値を設定する必要があります。 |値は設定されません。|
-|CharacterSet<br /><br />(PDO_SQLSRV ドライバーではサポートされていません)|文字列|サーバーにデータを送信するために使用する文字セットを指定します。<br /><br />可能な値は SQLSRV_ENC_CHAR と UTF-8 です。 詳細については、「 [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)」を参照してください。|SQLSRV_ENC_CHAR|  
+|CharacterSet<br /><br />(PDO_SQLSRV ドライバーではサポートされていません)|文字列|サーバーにデータを送信するために使用する文字セットを指定します。<br /><br />可能な値は SQLSRV_ENC_CHAR と UTF-8 です。 詳細については、「 [方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)」を参照してください。|SQLSRV_ENC_CHAR|  
 |ColumnEncryption|**有効になっている**または**無効になっています。**|Always Encrypted 機能が有効かどうかを指定します。 |Disabled|  
 |ConnectionPooling|接続プールを有効にするには、1 または **true** 。<br /><br />接続プールを無効にするには、0 または **false** 。|接続が接続プールから割り当てられているかどうかを指定します (1 または**true**) か (0 または**false**).<sup>1</sup>|**true** (1)|  
 |データベース|文字列|確立中の接続の使用中で、データベースの名前を指定<sup>2</sup>です。|使用されているログインの既定のデータベース。|  

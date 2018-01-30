@@ -16,7 +16,7 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -61,7 +61,7 @@ ms.lasthandoff: 01/09/2018
   
  サブスクリプションを作成する際には、出力ファイル形式を選択できます。 形式によっては正しく機能しないレポートもあります。 サブスクリプションで形式を選択する前に、レポートを開き、別の形式にエクスポートして、期待どおりに表示されることを確認します。  
   
- ユーザーが **サブスクリプションを作成できるようにする場合は、そのユーザーは SharePoint の** アイテムの編集 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] リスト権限を必要とします。 詳細については、「 [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)」をご覧ください。  
+ ユーザーが **サブスクリプションを作成できるようにする場合は、そのユーザーは SharePoint の** アイテムの編集 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] リスト権限を必要とします。 詳細については、「[レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)」をご覧ください。  
   
 > [!IMPORTANT]  
 >  ライブラリまたは共有フォルダーにレポートを配信するサブスクリプションでは、元のレポートに基づいて新しく静的ファイルが作成されますが、これはレポート ビューアー Web パーツで実行される実際のレポート定義ではありません。 元のレポートに対話機能 (ドリルスルー リンクなど) や動的コンテンツが含まれている場合、対象の場所に配信される静的ファイルでは、これらの機能を使用できません。 "Web ページ" を選択すると、ある程度の対話機能を維持することができます。しかし、このドキュメントはレポート ビューアーで実行される .rdl ファイルではないため、レポートをクリックすると新しいページがブラウザー セッションで作成され、サイトに戻るにはそれらをスクロールする必要があります。  
