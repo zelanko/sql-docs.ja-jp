@@ -8,14 +8,15 @@ ms.custom:
 ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: murato
@@ -29,7 +30,7 @@ ms.lasthandoff: 12/21/2017
 # <a name="creating-script-files-accesstosql"></a>スクリプト ファイル (AccessToSQL) を作成します。
 最初の手順とスクリプト ファイルの作成には、SSMA コンソール アプリケーションを起動する前に、変数の値のファイルと、サーバー接続ファイルを作成するために必要な場合は。  
   
-スクリプト ファイルを viz 3 つのセクションに分割できます。。、します。  
+スクリプト ファイルを viz 3 つのセクションに分割できますします..,:  
   
 1.  **config:**コンソール アプリケーションの構成パラメーターを設定することができます。  
   

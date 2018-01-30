@@ -8,14 +8,15 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
@@ -692,7 +693,7 @@ sql ステートメントの変換
   
 -   `write-summary-report-to`レポートを生成するパスを指定します。 フォルダー パスが示されているだけの場合、ファイルの名前で**ConvertSQLReport.XML**を作成します。 (省略可能な属性)  
   
-    レポートの作成が viz サブカテゴリの一覧をさらに 2。。、します。  
+    レポートの作成が viz サブカテゴリの一覧をさらに 2します..,:  
   
     -   -エラーの報告 (="true または false"、"false"(省略可能な属性) として既定値)。  
   

@@ -8,7 +8,8 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -23,7 +24,7 @@ helpviewer_keywords:
 - Script file commands, Report commands
 - Script file commands, Script generation commands
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
@@ -680,7 +681,7 @@ sql ステートメントの変換
   
 8.  `write-summary-report-to`概要レポートを生成するパスを指定します。 フォルダー パスが示されているだけの場合、ファイルの名前で**ConvertSQLReport.XML**を作成します。 (省略可能な属性)  
   
-    レポートの作成が viz サブカテゴリの一覧をさらに 2。。、します。  
+    レポートの作成が viz サブカテゴリの一覧をさらに 2します..,:  
   
     -   -エラーの報告 (="true または false"、"false"(省略可能な属性) として既定値)。  
   
