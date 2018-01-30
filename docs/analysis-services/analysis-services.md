@@ -1,5 +1,5 @@
 ---
-title: "Analysis Services |Microsoft ドキュメント"
+title: "SQL Server Analysis Services の概要 |Microsoft ドキュメント"
 ms.date: 01/26/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
@@ -25,42 +25,32 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: d4bdda48d7518d0560e3b5dff8d0a7139de700ae
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+ms.openlocfilehash: 66bbbad6d55b8abb5e902e6d44355fc9c6c8cb29
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/29/2018
 ---
-# <a name="what-is-analysis-services"></a>Analysis Services とは
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+# <a name="about-sql-server-analysis-services"></a>SQL Server Analysis Services の概要
 
-  Analysis Services は、意思決定支援とビジネスの分析、Reporting Services レポート、ビジネス レポートおよび Power BI では、Excel などのクライアント アプリケーションの分析データを提供およびその他のデータの視覚化ツールで使用される分析データ エンジンです。  
-  
- 一般的なワークフローには、多次元形式または表形式データ モデル、内部設置型 SQL Server Analysis Services または Azure Analysis Services サーバー インスタンスにデータベースとしてモデルを展開する、定期的なデータの処理を設定する、割り当ての作成が含まれています。エンドユーザーによってデータ アクセスを許可する権限です。 準備完了である場合は、セマンティック データ モデルをデータ ソースとして Analysis Services をサポートする任意のクライアント アプリケーションによってアクセスできます。  
+Analysis Services は、意思決定支援とビジネスの分析で使用される分析データ エンジンです。 提供エンタープ ライス セマンティック データ モデルのビジネス レポートおよび Power BI で Excel、Reporting Services レポート、およびその他のデータの視覚化ツールなどのクライアント アプリケーション。  
+
+一般的なワークフローには、Visual Studio で多次元形式または表形式データ モデル プロジェクトを作成、モデルを展開するサーバー インスタンスにデータベースとして、定期的なデータの処理を設定およびエンドユーザーによってデータ アクセスを許可するアクセス許可の割り当てが含まれています。 準備完了である場合は、セマンティック データ モデルをデータ ソースとして Analysis Services をサポートするクライアント アプリケーションによってアクセスできます。  
+
+Analysis Services は、次の 2 つの異なるプラットフォームで使用できます。 
+
+**Azure Analysis Services** -表形式モデル 1200 以降の互換性レベルをサポートしています。 DirectQuery、パーティション、行レベルのセキュリティ、双方向のリレーションシップ、および翻訳がすべてサポートされます。 詳細については、次を参照してください。 [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/)です。
+
+**SQL Server Analysis Services** -SharePoint のすべての互換性レベル、多次元モデル、データ マイニング、および Power Pivot の表形式モデルをサポートしています。
  
-## <a name="analysis-services-on-premises-and-in-the-cloud"></a>オンプレミスとクラウドの Analysis Services
-Analysis Services がクラウドで Azure のサービスとして使用できるようになりました。 Azure Analysis Services には、表形式モデル 1200 以降の互換性レベルがサポートしています。 DirectQuery、パーティション、行レベルのセキュリティ、双方向のリレーションシップ、および翻訳がすべてサポートされます。 詳細を確認し、無料版をお試しになる場合は、「[Azure Analysis Services](https://azure.microsoft.com/en-us/services/analysis-services/)」を参照してください。 
-  
-## <a name="server-mode"></a>サーバー モード  
- SQL Server セットアップを使用して Analysis Services のインストール、構成時に指定そのインスタンスのサーバー モードします。  各モードには、特定の Analysis Services ソリューションに特有の機能が含まれています。   
-  
--   **表形式モード**- 実装のインメモリ リレーショナル データ モデリング構造 (モデル、テーブル、列、メジャー、階層)。  
+ ## <a name="documentation-by-area"></a>領域別のドキュメント  
+一般に、 [Azure Analysis Services のドキュメント](https://docs.microsoft.com/azure/analysis-services/)Azure のドキュメントに含まれています。 クラウドに、表形式モデルに関心がある場合は、ある開始することをお勧めします。 
 
--   **多次元モードとデータ マイニング モード** - OLAP モデリング構造 (キューブ、ディメンション、メジャー) を実行します。 
+この記事とこのセクションのドキュメントでは、SQL Server Analysis Services のほとんどの場合です。 、には、少なくとも、表形式モデルの作成方法と、プロジェクトの配置がほぼ同じ、使用しているプラットフォームに関係なくです。 詳細については、これらのセクションをご覧ください。
 
--   **Power Pivot モード**-SharePoint の Power Pivot の実装と Excel のデータ モデル (Power Pivot for SharePoint は、読み込み、クエリ、およびデータ モデルを SharePoint でホストされている更新の中間層のデータ エンジンです)。  
-  
- 1 つのインスタンスを構成するとき、利用できるモードは 1 つだけです。後で変更することはできません。  同じサーバーで複数のインスタンスを異なるモードでインストールできますが、セットアップを実行し、インスタンスごとに構成設定を指定する必要があります。 詳細な情報と各モードで提供されるさまざまな機能の比較では、次を参照してください。[を比較する表形式および多次元ソリューション](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)です。
-  
-## <a name="authoring-and-managing-solutions"></a>作成およびソリューションの管理  
- モデルを作成し、サーバーに配置するには、いずれか、テーブルまたは多次元およびデータ マイニング プロジェクト テンプレートを選択する SQL Server Data Tools を使用します。 プロジェクト テンプレートには、モデルで必要とされるすべてのオブジェクトのフォルダーが含まれています。 多くのデータ ソース、リレーションシップ、メジャー、およびロールに接続するなどの基本的な要素を作成するウィザードとデザイナーのヘルプ。 モデル データベースがサーバーに展開した後は、データ処理の構成、監視、およびサーバーとデータベースを管理する SQL Server Management Studio (SSMS) を使用します。 詳細については、次を参照してください。[ツールと Analysis Services で使用されるアプリケーション](../analysis-services/tools-and-applications-used-in-analysis-services.md)です。 
-  
-## <a name="documentation-by-area"></a>領域別のドキュメント  
-一般的な Azure Analysis Services に関するドキュメントは、Azure のドキュメントに含まれて。 また、SQL Server Analysis Services のドキュメントが SQL のドキュメントに含まれる。 、には、少なくとも、表形式モデルの作成方法と、プロジェクトの配置が使用しているどのようなプラットフォームに関係なくほとんど同じです。  
    
-*  [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/)
-*  [SQL Server Analysis Services の新機能](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)   
 *  [テーブル ソリューションと多次元ソリューションの比較](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
+*  [SQL Server Analysis Services をインストールします。](../analysis-services/instances/install-windows/install-analysis-services.md)
 *  [テーブル モデル](../analysis-services/tabular-models/tabular-models-ssas.md)  
 *  [多次元モデル](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)  
 *  [データ マイニング](../analysis-services/data-mining/data-mining-ssas.md)  
@@ -68,4 +58,9 @@ Analysis Services がクラウドで Azure のサービスとして使用でき�
 *  [インスタンス管理](../analysis-services/instances/analysis-services-instance-management.md)    
 *  [チュートリアル](../analysis-services/analysis-services-tutorials-ssas.md)   
 *  [開発者向けドキュメント](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
-*  [テクニカル リファレンス (SSAS)](../analysis-services/powershell/technical-reference-ssas.md)
+*  [テクニカル リファレンス](../analysis-services/powershell/technical-reference-ssas.md)
+
+参照
+
+[Azure Analysis Services のドキュメント](https://docs.microsoft.com/azure/analysis-services/)   
+[SQL Server のドキュメント](../sql-server/sql-server-technical-documentation.md)

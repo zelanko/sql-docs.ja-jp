@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cec454c2fe5dc832879a8a320b3e921c4f71ceb2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1540e9a5422b3a15081b1a25c813ef87ed8d6c0c
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="analysis-services-instance-management"></a>Analysis Services インスタンス管理
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services のインスタンスのコピーである、 **msmdsrv.exe**オペレーティング システム サービスとして実行する実行可能ファイルです。 各インスタンスは同じサーバー上の他のインスタンスから完全に独立しており、固有の構成設定、権限、ポート、開始アカウント、ファイル ストレージ、およびサーバー モード プロパティを持ちます。  
+
+  Analysis Services のインスタンスは、オペレーティング システム サービスとして実行される **msmdsrv.exe** 実行可能ファイルのコピーです。 各インスタンスは同じサーバー上の他のインスタンスから完全に独立しており、固有の構成設定、権限、ポート、開始アカウント、ファイル ストレージ、およびサーバー モード プロパティを持ちます。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の各インスタンスは、定義されているログオン アカウントのセキュリティ コンテキストに従い、Msmdsrv.exe という Windows サービスとして実行されます。  
   
@@ -52,9 +53,9 @@ ms.lasthandoff: 01/08/2018
   
 |リンク|タスクの説明|  
 |----------|----------------------|  
-|[インストール後の構成 (Analysis Services)](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Analysis Services のインストールを完了または変更する必須のタスクとオプションのタスクについて説明します。|  
+|[インストール後の構成 &#40;です。Analysis Services &#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Analysis Services のインストールを完了または変更する必須のタスクとオプションのタスクについて説明します。|  
 |[Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)|接続を確立またはクリアするための接続文字列プロパティ、クライアント ライブラリ、認証方法、および手順について説明します。|  
-|[Analysis Services インスタンスの監視](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|パフォーマンス モニターと SQL Server Profiler の使用方法など、サーバー インスタンスの監視のためのツールと手法について説明します。|  
+|[Analysis Services インスタンスを監視します。](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|パフォーマンス モニターと SQL Server Profiler の使用方法など、サーバー インスタンスの監視のためのツールと手法について説明します。|  
 |[高可用性とスケーラビリティ](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)|Analysis Services データベースの高可用性とスケーラビリティを確保するために最もよく使用される手法について説明します。 |  
 |[Analysis Services のグローバリゼーションのシナリオ](../../analysis-services/globalization-scenarios-for-analysis-services.md)|言語と照合順序のサポート、両方のプロパティの変更手順、および言語と照合順序の動作の設定とテストのヒントについて説明します。|  
 |[Analysis Services でのログ操作](../../analysis-services/instances/log-operations-in-analysis-services.md)|ログについて説明し、その構成方法について解説します。|  

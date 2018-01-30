@@ -11,15 +11,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: a5277d975380f135003bb7f8a11eec8641374f07
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 781622d51b7112d3a501652b7c320ab27e74ae35
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Azure での機械学習の仮想マシンのプロビジョニングします。
 
@@ -85,9 +85,7 @@ Machine Learning のサービスを含む SQL Server 2017 年 1 Enterprise Editi
 
 ### <a name="using-machine-learning-in-azure-sql-database"></a>Azure SQL データベースでの機械学習の使用
 
-以降では、2017 の分類され、Azure SQL データベースは、R を使用してモデルをトレーニングし、それらを使用して予測をサポートしています。 
-
-データベース内に R Services は、プレビュー機能として、のみ、使用可能な SQL Server のオンプレミス エディションと比較していくつかの制限があります。 詳細については、次を参照してください。 [Azure SQL DB](../r/using-r-in-azure-sql-database.md)です。
+現時点では、Azure SQL での R のサポートのプレビューは、継続的な開発作業の中断されています。 詳細については、次を参照してください。 [Azure SQL DB](../r/using-r-in-azure-sql-database.md)です。
 
 ### <a name="can-i-upgrade-the-sql-server-version-on-a-virtual-machine"></a>仮想マシンで SQL Server のバージョンをアップグレードできますか。
 

@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
-caps.latest.revision: "43"
-ms.openlocfilehash: 65a10ada824b291e37e61a421882cf012c7b8ddc
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+caps.latest.revision: 
+ms.openlocfilehash: d9777fb2bbfd9af2598a422fc072877ff0b78959
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>外部データへの接続を PolyBase を構成します。
 外部 Hadoop または Microsoft Azure ストレージ blob のデータ ソースへの接続に SQL Server PDW で PolyBase を構成する方法について説明します。 PolyBase を使用して、Hadoop や Azure blob ストレージ、SQL Server PDW など、複数のソースからデータを統合するクエリを実行します。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/23/2018
     RECONFIGURE;  
     ```  
   
-    RECONFIGURE を実行中の sp_configure では、構成値を設定します。 実行値を設定する領域の再起動が必要です。 再起動が必要なため、[次へ] の停止後も、core-site.xml を変更する次の手順の後にするまで再起動を行う必要はありません。  
+    RECONFIGURE を実行中の sp_configure では、構成値を設定します。 実行値を設定する領域の再起動が必要です。 再起動が必要なため、[次へ] の停止後も、次の手順は、core-site.xml の変更後までに再起動を行う必要はありません。  
   
 4.  外部データ ソースとして Microsoft Azure blob ストレージを有効にするには、PDW core-site.xml ファイルに 1 つまたは複数の Microsoft Azure ストレージ アカウント アクセス キーを追加します。 キーを追加します。  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 01/23/2018
   
         ![Windows Azure ストレージ アカウント名](./media/configure-polybase-connectivity-to-external-data/APS_PDW_AzureStorageAccountName.png "APS_PDW_AzureStorageAccountName")  
   
-    2.  Azure ストレージ アカウント アクセス キーを検索します。 これを行うには、ストレージ アカウント名をクリックし、設定 ブレード をクリックして**キー**です。 アカウント名とストレージ キーが表示されます。  
+    2.  Azure ストレージ アカウント アクセス キーを検索します。 これを行うには、ストレージ アカウント名をクリックし、設定 ブレード をクリックして**キー**です。 これは、アカウント名とストレージ キーを示します。  
   
         ![Windows Azure ストレージ アカウント アクセス キー](./media/configure-polybase-connectivity-to-external-data/APS_PDW_AzureStorageAccountAccessKey.png "APS_PDW_AzureStorageAccountAccessKey")  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 01/23/2018
         ```  
   
         > [!CAUTION]  
-        > セキュリティ予防措置を取って core-site.xml のアクセス キーを格納する前にします。 CONTROL SERVER または ALTER ANY EXTERNAL DATA SOURCE のアクセス許可を持つすべてのユーザーには、このアカウントにアクセスする外部データ ソースを作成できます。 外部データ ソースが作成されると、テーブルを作成する権限を持つすべての SQL Server PDW ユーザーはこのストレージ アカウントにアクセスする外部テーブルを作成できます。 ユーザーは、アカウント データにアクセスし、アカウント内のリソースを消費することができます。  
+        > セキュリティ予防措置を取って core-site.xml のアクセス キーを格納する前にします。 CONTROL SERVER または ALTER ANY EXTERNAL DATA SOURCE のアクセス許可を持つすべてのユーザーには、このアカウントにアクセスする外部データ ソースを作成できます。 外部データ ソースが作成されると、CREATE TABLE 権限を持つすべての SQL Server PDW ユーザーはこのストレージ アカウントにアクセスする外部テーブルを作成できます。 ユーザーは、アカウントのデータにアクセスし、アカウント内のリソースを消費します。  
   
     6.  Core-site.xml に変更を保存します。  
   
@@ -117,13 +117,13 @@ ms.lasthandoff: 01/23/2018
       </property>  
     ```  
   
-    Yarn-site.xml で任意のプロパティを定義すると、PolyBase で HDInsight リージョンに対してクエリを実行するときにこれらのプロパティ設定が使用されます。 Windows 上の HDInsight リージョンと外部の Hadoop 2.0 クラスターの両方に対して PolyBase クエリを実行する場合は、すべての yarn-site.xml ファイル間で一貫性がある必要がありますか、PolyBase クエリは失敗します。  
+    Yarn-site.xml で任意のプロパティを定義すると、PolyBase は、HDInsight リージョンに対してクエリを実行するときにそれらのプロパティ設定を使用します。 Windows 上の HDInsight リージョンと外部の Hadoop 2.0 クラスターの両方に対して PolyBase クエリを実行する場合は、すべての yarn-site.xml ファイル間で一貫性がある必要がありますか、PolyBase クエリは失敗します。  
   
     HDInsight リージョンと外部の Hadoop 2.0 クラスターの両方に対して、PolyBase を実行するには、外部の Hadoop クラスターで yarn-site.xml 既定の設定を使用します。  
   
 6.  PDW 地域を再起動します。 これを行うには、Configuration Manager ツールを使用します。 参照してください[構成マネージャー &#40; を起動Analytics Platform System &#41;](launch-the-configuration-manager.md).  
   
-7.  Hadoop 接続のセキュリティ設定を確認します。 場合、**弱い認証**側を使用して有効になって Hadoop `dfs.permission = true`、Hadoop ユーザーを作成する必要があります**pdw_user**すべて読み取りを許可し、このユーザーに書き込みアクセス許可。 SQL Server PDW と SQL Server PDW から対応する呼び出しとして常に発行**pdw_user**される固定ユーザー名は、このバージョンの Hadoop 接続および SQL Server PDW のリリースでは変更できません。 使用して Hadoop のセキュリティが無効になっている場合`dfs.permission = false`、それ以上の操作を実行する必要はありません。  
+7.  Hadoop 接続のセキュリティ設定を確認します。 場合、**弱い認証**側を使用して有効になって Hadoop `dfs.permission = true`、Hadoop ユーザーを作成する必要があります**pdw_user**すべて読み取りを許可し、このユーザーに書き込みアクセス許可。 SQL Server PDW と SQL Server PDW から対応する呼び出しとして常に発行**pdw_user**です。  これは、固定ユーザー名であり、このバージョンの Hadoop 接続および SQL Server PDW のリリースでは変更できません。 使用して Hadoop のセキュリティが無効になっている場合`dfs.permission = false`、それ以上の操作を実行する必要はありません。  
   
 8.  Microsoft Azure blob ストレージに外部データ ソースを作成できるユーザーを決定します。 これらのユーザーの各ストレージ アカウント名を指定しても**ALTER ANY EXTERNAL DATA SOURCE**または**CONTROL SERVER**権限です。  
   
@@ -134,9 +134,9 @@ ms.lasthandoff: 01/23/2018
 承認されたユーザーには、外部データ ソース、外部ファイル形式、および外部テーブルを作成できますようになりました。 これらを使用するとして Hadoop, を含む複数のソースからデータを統合するが、Microsoft Azure blob ストレージ、および SQL Server PDW です。  
 
 ## <a name="kerberos-configuration"></a>Kerberos の構成  
-Kerberos でセキュリティが強化されているクラスターに PolyBase が認証するとき、hadoop.rpc.protection を認証に設定する必要があります。 それにより、Hadoop ノード間のデータ通信が暗号化されません。 
+Kerberos のセキュリティで保護されたクラスターに PolyBase が認証されると、ときに、hadoop.rpc.protection 設定する必要がありますに設定することの認証に注意してください。 これにより、データ通信が暗号化されていない Hadoop ノード間で残ります。 
 
- Kerberos でセキュリティ保護された Hadoop クラスターに接続します [MIT KDC を使用]。
+ [Using MIT KDC] Kerberos でセキュリティ保護された Hadoop クラスターに接続します。
    
   
 1.  [管理] ノードでのインストール パスで Hadoop 構成ディレクトリを検索します。  
@@ -147,7 +147,7 @@ Kerberos でセキュリティが強化されているクラスターに PolyBas
   
 2.  次の表に示す構成キーの Hadoop 側の構成値を検索します (Hadoop コンピューター上の Hadoop 構成ディレクトリ内でファイルを検索します)。  
   
-3.  これらの構成値を、SQL Server コンピューター上の対応するファイル内の値プロパティにコピーします。  
+3.  コントロールのノード上の対応するファイル内の値プロパティに、構成値をコピーします。  
   
     |**#**|**構成ファイル**|**構成キー**|**操作**|  
     |------------|----------------|---------------------|----------|   
@@ -159,7 +159,9 @@ Kerberos でセキュリティが強化されているクラスターに PolyBas
     |6|mapred-site.xml|mapreduce.jobhistory.address|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: 10.193.26.174:10020|  
     |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: yarn/_HOST@YOUR-REALM.COM|  
   
-4.  各 Hadoop ユーザーの認証情報を指定するデータベース スコープ資格情報オブジェクトを作成します。 「 [PolyBase T-SQL オブジェクト](../relational-databases/polybase/polybase-t-sql-objects.md)」を参照してください。  
+4. 各 Hadoop ユーザーの認証情報を指定するデータベース スコープ資格情報オブジェクトを作成します。 「 [PolyBase T-SQL オブジェクト](../relational-databases/polybase/polybase-t-sql-objects.md)」を参照してください。  
+
+5. PDW 地域を再起動します。 これを行うには、Configuration Manager ツールを使用します。 参照してください[構成マネージャー &#40; を起動Analytics Platform System &#41;](launch-the-configuration-manager.md).
  
 ## <a name="see-also"></a>参照  
 [アプライアンスの構成 &#40;です。Analytics Platform System &#41;](appliance-configuration.md)  
