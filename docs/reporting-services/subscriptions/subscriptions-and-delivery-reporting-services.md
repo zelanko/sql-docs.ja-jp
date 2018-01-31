@@ -23,7 +23,7 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], about subscriptions
 - subscriptions [Reporting Services]
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -63,9 +63,9 @@ ms.lasthandoff: 01/09/2018
   
 -   [Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md) 。レポート サーバーのファイル共有の配信操作および構成について説明します。  
   
--   [Create and Manage Subscriptions for Native Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) ネイティブ モードのレポート サーバーでサブスクリプションを作成するための詳細な手順です。  
+-   [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) ネイティブ モードのレポート サーバーでサブスクリプションを作成するための詳細な手順です。  
   
--   [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) SharePoint モードのレポート サーバーでサブスクリプションを作成するための詳細な手順です。  
+-   [SharePoint モード レポート サーバーのサブスクリプションの作成と管理](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) SharePoint モードのレポート サーバーでサブスクリプションを作成するための詳細な手順です。  
   
 -   [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md) レポート サーバーのファイル共有の配信操作および構成について説明します。  
   
