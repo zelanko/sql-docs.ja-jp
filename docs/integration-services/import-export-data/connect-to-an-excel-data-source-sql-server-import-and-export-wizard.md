@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2aeb225037970b8a77169db18c204ecf6d4c19d6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 16ace15a73d9ef727612c59f8c9329a4d4437312
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Excel データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **Microsoft Excel** データ ソースに接続する方法を説明します。
@@ -36,19 +37,19 @@ Microsoft Excel ブックへの接続例を次のスクリーン ショットに
 > このデータ プロバイダーの接続オプションは、Excel が変換元または変換先の場合でも同じです。 つまり、表示されるオプションは、ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページともに同じです。
 
 **[Excel ファイル パス]**  
- Excel ファイルのパスとファイル名を指定します。 例:
+ Excel ファイルのパスとファイル名を指定します。 例 :
 -   ローカル コンピューター上の上のファイルの場合、**C:\\MyData.xlsx** です。
 -   ネットワーク共有上のファイルの場合、**\\\\Sales\\Database\\Northwind.xlsx** です。
 
 または、**[参照]** をクリックします。  
   
- **参照**  
+ **[参照]**  
  **[ファイルを開く]** ダイアログ ボックスを使用して、ワークシートを検索します。  
 
 > [!NOTE]
 > パスワードで保護された Excel ファイルはウィザードで開くことができません。
 
- **Excel バージョン**  
+ **[Excel バージョン]**  
 ソース ブックで使用される Excel のバージョンを選択します。
 
 > [!IMPORTANT]
@@ -74,7 +75,7 @@ Access と Excel を含む Microsoft Office データ ソース用の接続コ�
 
 コンピューターに 32 ビット バージョンの Office が存在する場合は、32 ビット バージョンのコンポーネントをインストールする必要があるほか、32 ビット モードでパッケージが実行されるようにする必要があります。
 
-Office 365 サブスクリプションがある場合は、Microsoft Access 2016 ランタイムではなく、必ず Access データベース エンジン 2016 再頒布可能パッケージをダウンロードしてください。 インストーラーを実行するときに、ダウンロードを Office のクイック実行コンポーネントとサイド バイ サイドでインストールできないことを示すエラー メッセージが表示される場合があります。 このエラー メッセージを回避するには、コマンド プロンプト ウィンドウを開き、`/quiet` スイッチを使用してダウンロードした .EXE ファイルを実行して、Quiet モードでインストールを実行します。 例:
+Office 365 サブスクリプションがある場合は、Microsoft Access 2016 ランタイムではなく、必ず Access データベース エンジン 2016 再頒布可能パッケージをダウンロードしてください。 インストーラーを実行するときに、ダウンロードを Office のクイック実行コンポーネントとサイド バイ サイドでインストールできないことを示すエラー メッセージが表示される場合があります。 このエラー メッセージを回避するには、コマンド プロンプト ウィンドウを開き、`/quiet` スイッチを使用してダウンロードした .EXE ファイルを実行して、Quiet モードでインストールを実行します。 例 :
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

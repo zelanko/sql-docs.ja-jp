@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4dacb3a2eea675e85b23fc2b05443d14a95983c6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dfeeaa38de94dfe2f1d716cda8eee0e5e5faf6f4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-destination-custom-properties"></a>ODBC 入力先のカスタム プロパティ
   次の表は、ODBC 入力先のカスタム プロパティを示しています。 すべてのプロパティは、SSIS プロパティ式から設定できます。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 |DefaultCodePage|Integer|文字列の列に対して使用するコード ページ。<br /><br /> **注:**このプロパティは、 **ODBC 入力先エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
 |InsertMethod|Integer (列挙)|データの挿入に使用されるメソッド。 有効な値は、行ごと (0) およびバッチ (1) です。 既定値はバッチ (1) です。<br /><br /> これらのオプションの詳細については、「 [ODBC 入力先](../../integration-services/data-flow/odbc-destination.md)」の “読み込みオプション” を参照してください。|  
 |StatementTimeout|Integer|エラーを返してアプリケーションに戻らず、SQL ステートメントが実行されるまで待機する秒数。 既定値は 120 です。|  
-|TableName|文字列|データを挿入する、入力先テーブルの名前。|  
+|TableName|String|データを挿入する、入力先テーブルの名前。|  
 |TransactionSize|Integer|1 つのトランザクションの挿入数。 既定値は 0 で、ODBC 入力先が自動コミット モードで動作します。<br /><br /> ODBC 接続マネージャーでは分散トランザクションがサポートされないので、このプロパティに 0 以外の値を設定することができます。 ただし、接続マネージャーの **RetainSameConnection** プロパティが **true** に設定されている場合、このプロパティを 0 に設定する必要があります。<br /><br /> **注:**このプロパティは、 **ODBC 入力先エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
 |LobChunkSize|Integer|LOB 列のチャンク サイズ割り当て。|  
   

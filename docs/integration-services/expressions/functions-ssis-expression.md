@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 57635218bc2e657b5d6f08076a572fa5caf2a2b3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 836ecde7ff2cb458b2f93aeb239d0ab83c51cb6b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="functions-ssis-expression"></a>関数 (SSIS 式)
   式言語には、式で使用するための関数セットが含まれています。 式で 1 つの関数を使用することもできますが、通常、式は関数と演算子を組み合わせて使用したり、複数の関数を使用します。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
  式言語には、次の数学関数が用意されています。  
   
-|関数|Description|  
+|機能|Description|  
 |--------------|-----------------|  
 |[ABS &#40;SSIS 式&#41;](../../integration-services/expressions/abs-ssis-expression.md)|数値式の正の絶対値を返します。|  
 |[EXP &#40;SSIS 式&#41;](../../integration-services/expressions/exp-ssis-expression.md)|指定した式の e を基数とする指数を返します。|  
@@ -53,14 +54,14 @@ ms.lasthandoff: 11/20/2017
 |[LN &#40;SSIS 式&#41;](../../integration-services/expressions/ln-ssis-expression.md)|数値式の自然対数を返します。|  
 |[LOG &#40;SSIS 式&#41;](../../integration-services/expressions/log-ssis-expression.md)|数値式の常用対数を返します。|  
 |[POWER &#40;SSIS 式&#41;](../../integration-services/expressions/power-ssis-expression.md)|指定された数値式の結果をべき乗値で返します。|  
-|[ROUND &#40;SSIS 式&#41;](../../integration-services/expressions/round-ssis-expression.md)|指定された長さまたは有効桁数に丸めた数値式を返します。 」を参照してください。|  
+|[ROUND &#40;SSIS 式&#41;](../../integration-services/expressions/round-ssis-expression.md)|指定された長さまたは有効桁数に丸めた数値式を返します。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。|  
 |[SIGN &#40;SSIS 式&#41;](../../integration-services/expressions/sign-ssis-expression.md)|数値式の符号として正 (+)、負 (-)、ゼロ (0) のいずれかを返します。|  
 |[SQUARE &#40;SSIS 式&#41;](../../integration-services/expressions/square-ssis-expression.md)|数値式の 2 乗値を返します。|  
 |[SQRT &#40;SSIS 式&#41;](../../integration-services/expressions/sqrt-ssis-expression.md)|数値式の平方根を返します。|  
   
  式エバリュエーターには、次の文字列関数が用意されています。  
   
-|関数|Description|  
+|機能|Description|  
 |--------------|-----------------|  
 |[CODEPOINT &#40;SSIS 式&#41;](../../integration-services/expressions/codepoint-ssis-expression.md)|文字式の左端の文字の Unicode コード値を返します。|  
 |[FINDSTRING &#40;SSIS 式&#41;](../../integration-services/expressions/findstring-ssis-expression.md)|文字式内のある文字列が指定回数目に検出された場所を、1 を基点とするインデックスで返します。|  
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/20/2017
   
  式エバリュエーターには、次の NULL 関数が用意されています。  
   
-|関数|Description|  
+|機能|Description|  
 |--------------|-----------------|  
 |[ISNULL &#40;SSIS 式&#41;](../../integration-services/expressions/isnull-ssis-expression.md)|式が NULL かどうかに基づいてブール型の結果を返します。|  
 |[NULL &#40;SSIS 式&#41;](../../integration-services/expressions/null-ssis-expression.md)|要求されたデータ型の NULL 値を返します。|  

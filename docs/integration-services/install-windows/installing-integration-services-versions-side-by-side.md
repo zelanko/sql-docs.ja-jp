@@ -8,23 +8,24 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - interoperability and coexistence [Integration Services]
 - Integration Services, interoperability and coexistence
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cbd0a16ec79df06780e4156a23c7b8767a6db5e7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b14e919cc180e8934b0cf9435d8d286c6468ccc2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>Integration Services バージョンのサイド バイ サイド インストール
   Integration Services (SSIS) は、   
@@ -38,8 +39,8 @@ ms.lasthandoff: 11/20/2017
 |SQL Server の対象バージョン|SSIS パッケージの開発環境|  
 |----------------------------------|-----------------------------------------------|  
 |2016|Visual Studio 2015 用 SQL Server Data Tools|  
-|2014|Visual Studio 2015 用 SQL Server Data Tools<br /><br /> または<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2013|  
-|2012|Visual Studio 2015 用 SQL Server Data Tools<br /><br /> または<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2012|  
+|2014|Visual Studio 2015 用 SQL Server Data Tools<br /><br /> 内の複数の<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2013|  
+|2012|Visual Studio 2015 用 SQL Server Data Tools<br /><br /> 内の複数の<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2012|  
 |2008|SQL Server 2008 の Business Intelligence Development Studio|  
   
  既存のパッケージを既存のプロジェクトに追加すると、パッケージは、プロジェクトの対象となる形式に変換されます。  

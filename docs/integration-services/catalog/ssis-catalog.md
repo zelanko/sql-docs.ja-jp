@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,16 +17,16 @@ f1_keywords:
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a05b62e5c2ffb8c5a268ac8030e703d3a192742
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: b8812ba8a3a96fc17ab9c9ec5083699ef5a7d03b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
   **SSISDB** カタログは、[!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] サーバーに配置した [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) プロジェクトを操作するための中核となります。 たとえば、プロジェクト パラメーターとパッケージ パラメーターの設定、パッケージに合わせたランタイム値を指定するための環境の構成、パッケージの実行およびトラブルシューティング、 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] サーバー操作の管理を行います。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 12/12/2017
   
 -   [カタログの構成](../../integration-services/catalog/ssis-catalog.md#Configuration)  
   
--   [アクセス許可](../../integration-services/catalog/ssis-catalog.md#Permissions)  
+-   [権限](../../integration-services/catalog/ssis-catalog.md#Permissions)  
   
 -   [フォルダー](../../integration-services/catalog/ssis-catalog.md#Folders)  
   
@@ -178,7 +179,7 @@ ms.lasthandoff: 12/12/2017
 |プロジェクトごとのバージョンの最大数|MAX_PROJECT_VERSIONS|  
 |サーバー全体の既定のログ記録レベル|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> アクセス許可  
+##  <a name="Permissions"></a> Permissions  
  プロジェクト、環境、およびパッケージは、セキュリティ保護可能なオブジェクトであるフォルダーに格納されます。 MANAGE_OBJECT_PERMISSIONS 権限などのフォルダーに対する権限を許可することができます。 MANAGE_OBJECT_PERMISSIONS を許可すると、ユーザーに ssis_admin ロールのメンバーシップを許可しなくても、フォルダー内容の管理をユーザーに委任できます。 プロジェクト、環境、および操作に権限を付与することもできます。 操作には、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]の初期化、プロジェクトの配置、実行の作成および開始、プロジェクトおよびパッケージの検証、 **SSISDB** カタログの構成などがあります。  
   
  データベース ロールの詳細については、「 [データベース レベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)」を参照してください。  
@@ -192,13 +193,13 @@ ms.lasthandoff: 12/12/2017
 ### <a name="managing-permissions"></a>権限の管理  
  権限は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の UI、ストアド プロシージャ、<xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間を使って管理できます。  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の UI を使って権限を管理するには、次のダイアログ ボックスを使用します。 
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の UI を使ってアクセス許可を管理するには、次のダイアログ ボックスを使用します。 
   
 -   フォルダーを使用して、 **権限** のページ、 [Folder Properties Dialog Box](../../integration-services/catalog/folder-properties-dialog-box.md)します。  
   
 -   プロジェクトの場合は、 **権限** の [Project Properties Dialog Box](../../integration-services/catalog/project-properties-dialog-box.md)します。  
 
- Transact-SQL を利用して権限を管理するには、[catalog.grant_permission &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)、[catalog.deny_permission &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md)、[catalog.revoke_permission &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md) を呼び出します。 すべてのオブジェクトの現在のプリンシパルで有効な権限を表示するには、[catalog.effective_object_permissions (SSISDB データベース)](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md) にクエリを実行します。 このトピックでは、さまざまな種類の権限について説明します。 ユーザーに明示的に割り当てられている権限を表示するには、[catalog.explicit_object_permissions (SSISDB データベース)](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md) にクエリを実行します。  
+ Transact-SQL を利用してアクセス許可を管理するには、[catalog.grant_permission (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)、[catalog.deny_permission (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md)、[catalog.revoke_permission (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md) を呼び出します。 すべてのオブジェクトの現在のプリンシパルで有効な権限を表示するには、[catalog.effective_object_permissions (SSISDB データベース)](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md) にクエリを実行します。 このトピックでは、さまざまな種類の権限について説明します。 ユーザーに明示的に割り当てられている権限を表示するには、[catalog.explicit_object_permissions (SSISDB データベース)](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md) にクエリを実行します。  
   
 ##  <a name="Folders"></a> フォルダー  
  フォルダーには、 **SSISDB** カタログ内の 1 つ以上のプロジェクトおよび環境が含まれます。 [catalog.folders (SSISDB データベース)](../../integration-services/system-views/catalog-folders-ssisdb-database.md) ビューを使用して、カタログのフォルダーに関する情報にアクセスできます。 次のストアド プロシージャを使用して、フォルダーを管理することができます。  
@@ -379,7 +380,7 @@ ms.lasthandoff: 12/12/2017
   
 ###  <a name="options"></a> オプションの構成  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>および  
  次の表では、ダイアログ ボックスに示される特定のプロパティと、catalog.catalog_property ビュー内の対応するプロパティについて説明します。  
   
 |プロパティ名 ([カタログのプロパティ] ダイアログ ボックス)|プロパティ名 (catalog.catalog_property ビュー)|Description|  
@@ -388,7 +389,7 @@ ms.lasthandoff: 12/12/2017
 |検証のタイムアウト (秒)|VALIDATION_TIMEOUT|プロジェクトの検証またはパッケージの検証を停止するまで実行できる最大秒数を指定します。 既定値は 300 秒です。<br /><br /> 検証の実行は、非同期操作です。 プロジェクトまたはパッケージのサイズが大きくなるほど、検証に要する時間も長くなります。<br /><br /> プロジェクトとパッケージの検証方法の詳細については、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」を参照してください。|  
 |ログを定期的に消去する|OPERATION_CLEANUP_ENABLED|操作のクリーンアップ SQL Server エージェント ジョブを実行することを示すには、このプロパティを True に設定します。 それ以外の場合は、このプロパティを False に設定します。|  
 |保有期間 (日)|RETENTION_WINDOW|操作データの最大保有期間を日数で指定します。 指定された日数を経過したデータは、操作のクリーンアップ SQL エージェント ジョブによって削除されます。|  
-|プロジェクトごとのバージョンの最大数|MAX_PROJECT_VERSIONS|カタログに格納されるプロジェクトのバージョンの数を指定します。 最大数を超えるプロジェクトのバージョンは、プロジェクト バージョンのクリーンアップ ジョブを実行したときに削除されます。|  
+|プロジェクトごとのバージョンの最大数|MAX_PROJECT_VERSIONS|カタログに格納されるプロジェクトのバージョンの数を指定します。 最大数を超えるプロジェクトの古いバージョンは、プロジェクト バージョンのクリーンアップ ジョブを実行したときに削除されます。|  
 
 ## <a name="back-up-restore-and-move-the-ssis-catalog"></a>SSIS カタログのバックアップ、復元、および移動
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -528,7 +529,7 @@ ms.lasthandoff: 12/12/2017
      Integration Services (SSIS) 関連のオブジェクトが、SSISDB カタログが作成されていない新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに作成されていることを確認します。  
 
 ## <a name="upgrade-the-ssis-catalog-ssisdb"></a>SSIS カタログ (SSISDB) のアップグレード
-  データベースが SQL Server インスタンスの現在のバージョンよりも古い場合、SSISDB アップグレード ウィザードを実行して、SSIS カタログ データベース (SSISDB) をアップグレードします。 データベースは、次のいずれかの条件が該当した場合は古いものである可能性があります。  
+  データベースが SQL Server インスタンスの現在のバージョンよりも古い場合、SSISDB アップグレード ウィザードを実行して、SSIS カタログ データベース (SSISDB) をアップグレードしてください。 データベースは、次のいずれかの条件が該当した場合は古いものである可能性があります。  
   
 -   古いバージョンの SQL Server からデータベースを復元した場合。  
   
@@ -625,7 +626,7 @@ SSISDB データベースを Always On 可用性グループに追加する手�
 ####  <a name="Step3"></a> 手順 3: Always On の SSIS サポートを有効にする  
  Integration Service カタログを作成した後に、**[Integration Service カタログ]** ノードを右クリックし、**[Always On サポートを有効にする]** をクリックします。 次の **[AlwaysOn のサポートを有効にする]** ダイアログ ボックスが表示されます。 このメニュー項目が無効な場合、すべての前提条件がインストールされていることを確認してから、 **[更新]**をクリックします。  
   
- ![Always On の SSIS サポートを有効にする](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
+ ![Always On のサポートを有効にする](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
   
 > [!WARNING]  
 >  SSISDB データベースの自動フェールオーバーをサポートするには、Always On のSSIS のサポートを有効にする必要があります。  

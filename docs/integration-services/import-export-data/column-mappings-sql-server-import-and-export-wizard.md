@@ -18,13 +18,13 @@ ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 350b2694806d617fa81eba1020828816101aceba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d4658903e7454c5a001f27b3bda781be34e6a55b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>[列マッピング]\(SQL Server インポートおよびエクスポート ウィザード)
   指定したクエリをコピーまたは確認する既存のテーブルやビューを選択した後、 **[マッピングの編集]**をクリックすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインポートおよびエクスポート ウィザードに **[列マッピング]** ダイアログ ボックスが表示されます。 このページでは、コピー元の列からコピーしたデータを受け取るためのコピー先列を指定し、構成します。 多くの場合、このページでは何も変更する必要はありません。
@@ -100,13 +100,13 @@ autonumber 列または ID 列があるデータをエクスポートする場�
     
     ソース テーブルからすべての列をコピーする必要はありません。 コピーしない列については、 **[変換先]** を選択すると、列のサブセットのみをコピーできます。 列をマップする前に、マップされないすべての列を無視する必要があります。  
   
--   **種類**  
+-   **型**  
     変換先列のデータ型を確認するか、別のデータ型を選択します。
   
 -   **NULL 値の使用**  
     変換先列に null 値を使用できるかどうかを指定します。  
   
--   **サイズ**  
+-   **[サイズ]**  
     変換先列の文字数を指定します (該当する場合)。  
   
 -    **[精度]**  

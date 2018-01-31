@@ -8,10 +8,12 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.precedenceconstraint.f1
+f1_keywords:
+- sql13.dts.designer.precedenceconstraint.f1
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -20,16 +22,16 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 411d89b90a77bf704dd876b5d6ce0dc5a36233a9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 84b5d39132c85d7aa34dbb1e4bfb53d400d3cfa0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="precedence-constraints"></a>優先順位制約
   優先順位制約は、パッケージ内の実行可能ファイル、コンテナー、およびタスクをリンクして制御フローを作成し、実行可能ファイルを実行するかどうかを決定する条件を指定します。 実行可能ファイルには、For ループ コンテナー、Foreach ループ コンテナー、シーケンス コンテナー、タスク、またはイベント ハンドラーを設定できます。 また、イベント ハンドラーは優先順位制約を使用して実行可能ファイルをリンクし、制御フローを作成します。  
@@ -113,11 +115,11 @@ ms.lasthandoff: 11/20/2017
 ## <a name="precedence-constraint-editor"></a>優先順位制約エディター
 **[優先順位制約エディター]** ダイアログ ボックスを使用すると、優先順位制約を構成できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **[評価操作]**  
  優先順位制約で使用する評価操作を指定します。 操作として、 **[制約]**、 **[式]**、 **[式と制約]**、および **[式または制約]**を指定できます。  
   
- **値**  
+ **[値]**  
  制約値として、 **[成功]**、 **[失敗]**、または **[完了]**を指定します。  
   
 > [!NOTE]  
@@ -157,9 +159,9 @@ ms.lasthandoff: 11/20/2017
     |EvalOp|評価操作を選択します。 **Expression**、 **ExpressionAndConstant**、 **ExpressionOrConstant** のいずれかの操作を選択した場合は、式を指定することができます。|  
     |[式]|評価操作に and 式が含まれる場合は、式を指定します。 式はブール値に評価される必要があります。 式言語の詳細については、「[Integration Services &#40;SSIS&#41; 式](../../integration-services/expressions/integration-services-ssis-expressions.md)」をご覧ください。|  
     |LogicalAnd|**[論理 AND]** を設定し、複数の実行可能ファイルを先に実行して制約付き実行可能ファイルにリンクする場合、優先順位制約を他の優先順位制約と組み合わせて評価するかどうかを指定します。|  
-    |名前|優先順位制約の名前を更新します。|  
+    |[オブジェクト名]|優先順位制約の名前を更新します。|  
     |ShowAnnotation|使用する注釈の種類を指定します。 注釈を無効にするには **[Never]** 、要求時に注釈を有効にするには **[AsNeeded]** 、Name プロパティの値を使用して注釈を自動的に設定するには **[ConstraintName]** 、Description プロパティの値を使用して注釈を自動的に設定するには **[ConstraintDescription]** 、Value プロパティと Expression プロパティの値を使用して注釈を自動的に設定するには **[ConstraintOptions]** をそれぞれ選択します。|  
-    |[値]|EvalOP プロパティで指定された評価操作に制約が含まれる場合は、制約付き実行可能ファイルの実行結果を選択します。|  
+    |ReplTest1|EvalOP プロパティで指定された評価操作に制約が含まれる場合は、制約付き実行可能ファイルの実行結果を選択します。|  
   
 5.  [プロパティ] ウィンドウを閉じます。  
   
@@ -178,7 +180,7 @@ ms.lasthandoff: 11/20/2017
 5.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 
 ## <a name="add-expressions-to-precedence-constraints"></a>優先順位制約に式を追加する
- 優先順位制約では、優先順位付き実行可能ファイルと、制約付き実行可能ファイルの 2 つの実行可能ファイル間の制約を定義するために、式を使用できます。 これらの実行可能ファイルには、タスクまたはコンテナーを設定できます。 式は単独で使用することも、優先順位付き実行可能ファイルの実行結果と組み合わせて使用することもできます。 実行可能ファイルの実行結果は、成功または失敗のどちらかです。 優先順位制約の実行結果を構成する場合、実行結果を **Success**、 **Failure**、または **Completion**に設定できます。 **Success** に設定した場合、優先順位付き実行可能ファイルは成功する必要があります。 **Failure** に設定した場合、優先順位付き実行可能ファイルは失敗する必要があります。 **Completion** は、優先順位付きタスクの成功または失敗にかかわらず、制約つき実行可能ファイルが実行されることを示します。 優先順位制約の詳細については、「[優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」を参照してください。  
+ 優先順位制約では、優先順位付き実行可能ファイルと、制約付き実行可能ファイルの 2 つの実行可能ファイル間の制約を定義するために、式を使用できます。 これらの実行可能ファイルには、タスクまたはコンテナーを設定できます。 式は単独で使用することも、優先順位付き実行可能ファイルの実行結果と組み合わせて使用することもできます。 実行可能ファイルの実行結果は、成功または失敗のどちらかです。 優先順位制約の実行結果を構成する場合、実行結果を **Success**、 **Failure**、または **Completion**に設定できます。 **Success** に設定した場合、優先順位付き実行可能ファイルは成功する必要があります。 **Failure** に設定した場合、優先順位付き実行可能ファイルは失敗する必要があります。 **Completion** は、優先順位付きタスクの成功または失敗にかかわらず、制約つき実行可能ファイルが実行されることを示します。 詳細については、「 [優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」を参照してください。  
   
  式は **True** または **False** に評価される、有効な [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式である必要があります。 式では、リテラル、システム変数とカスタム変数、および [!INCLUDE[ssIS](../../includes/ssis-md.md)] の式文法で用意されている関数と演算子を使用できます。 たとえば、式 `@Count == SQRT(144) + 10` では、変数 **Count**、SQRT 関数、等号 (==) 演算子、および加算 (+) 演算子が使用されています。 詳細については、「[Integration Services (SSIS) の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」を参照してください。  
   
@@ -256,7 +258,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  ドロップダウン リストで、 **[新しい図形に失敗制約を使用]** または **[新しい図形に完了制約を使用]**を選択します。  
   
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
   
 ## <a name="create-a-default-precedence-constraint"></a>既定の優先順位制約を作成する  
   

@@ -16,7 +16,7 @@ helpviewer_keywords:
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -213,7 +213,7 @@ ms.lasthandoff: 01/09/2018
 |レポート サーバーのプロパティを表示|アプリケーション名、個人用レポートの有効/無効、レポート履歴の既定値など、レポート サーバーに適用するプロパティを表示します。<br /><br /> **システム ユーザー** ロールからこのタスクを削除すると、[サイトの設定] ページを利用できなくなります。 また、各ページの上部にアプリケーションのタイトルが表示されません。 既定では、レポート マネージャーのタイトルは "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]" です。|  
 |共有スケジュールの表示|レポートの実行または更新に使用する共有スケジュールを表示します。<br /><br /> **システム ユーザー** ロールからこのタスクを削除すると、ユーザーはサブスクリプションおよびその他のスケジュールに設定された操作に使用する共有スケジュールを選択できなくなります。|  
   
- **システム ユーザー** ロールを使用して、既定のセキュリティを補完できます。 このロールは、レポート サーバーへのアクセスをレポート ユーザーに許可する新しいロールの割り当てに含めることができます。 詳細については、「 [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)」をご覧ください。  
+ **システム ユーザー** ロールを使用して、既定のセキュリティを補完できます。 このロールは、レポート サーバーへのアクセスをレポート ユーザーに許可する新しいロールの割り当てに含めることができます。 詳細については、「 [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [ロールを作成、削除、または変更する (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   

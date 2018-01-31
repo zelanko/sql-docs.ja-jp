@@ -8,21 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: REPLICATE function
+helpviewer_keywords:
+- REPLICATE function
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 551f512e5094a44255da8f5baf4217909ef70a02
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b4826170435f3f70a8530c891d8d797fc4b2691b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE (SSIS 式)
   指定された回数だけレプリケートされた文字式を返します。 *times* 引数は整数に評価される必要があります。  
@@ -47,7 +49,7 @@ REPLICATE(character_expression,times)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *times* が 0 の場合、関数は長さが 0 の文字列を返します。  
   
  *times* が負の値の場合、関数はエラーを返します。  

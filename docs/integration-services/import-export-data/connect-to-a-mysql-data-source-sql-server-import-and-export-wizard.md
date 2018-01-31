@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4fb97dd247146cd2535e4eee72c448fdd94c10de
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d011a5b39f6aded3bc305c922b5d2788026559e2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>MySQL データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **MySQL** データ ソースに接続する方法を説明します。 MySQL への接続に使用できるいくつかのデータ プロバイダーがあります。
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 |必要な情報|.NET Framework Data Provider for MySQL プロパティ|
 |---|---|
 |サーバー名|**[サーバー]**|
-|データベース名|**データベース**|
+|データベース名|**[データベース]**|
 |認証 (ログイン) 情報|**ユーザー ID**と**パスワード**|
 
 リストの **[ConnectionString]** フィールドに接続文字列を入力する必要はありません。 MySQL サーバー名 (**サーバー**) とログイン情報に個別の値を入力すると、ウィザードが個々のプロパティとその値から、接続文字列をアセンブルします。 
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="connect-to-mysql-with-the-mysql-odbc-driver"></a>MySQL ODBC ドライバーを使用して MySQL に接続する
 ODBC ドライバーは、データ ソースのドロップダウン リストに記載されていません。 ODBC ドライバーを使用して接続するには、最初に **[データ ソースの選択]** ページまたは **[変換先の選択]** ページで **[.NET Framework Data Provider for ODBC]** をデータ ソースとして選択します。 このプロバイダーは、ODBC ドライバーのラッパーとして機能します。
 
-下の図は、.NET Framework Data Provider for ODBC を選択した後すぐに表示される一般的な画面です。
+下の図は、.NET Framework Data Provider for ODBC を選んだ直後に表示される一般的な画面です。
 
 ![ODBC を使用して SQL に接続する](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
@@ -67,13 +68,13 @@ MySQL ODBC ドライバーを使用して MySQL に接続するには、次の�
 > [!TIP]
 > 適切な接続文字列をアセンブルするヘルプを参照してください。 または、接続文字列を提供する代わりに、既存の DSN (データ ソース名) を提供するか、新しく作成します。 これらのオプションの詳細については、「[Connect to an ODBC Data Source](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)」 (ODBC データ ソースに接続する) を参照してください。
 
-**Driver**  
+**ドライバー**  
 ODBC ドライバーの名前。
 
 **[サーバー]**  
 MySQL サーバーの名前。 
 
-**データベース**  
+**[データベース]**  
 MySQL データベースの名前。
 
 **UID** と **PWD**   

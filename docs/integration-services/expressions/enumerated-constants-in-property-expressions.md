@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6de3f50f2a0630e2488b33c6fe98c1fe20c1b0d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1ba138c4315bf31efc281aff9a42b0e8a513b756
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>プロパティ式における列挙定数
   プロパティ式に列挙子メンバー リストの値が含まれている場合、この式ではメンバーの表示名ではなく、列挙子メンバーの数値を使用する必要があります。 たとえば、式で **LoggingMode** プロパティを設定する場合、表示名 Disabled ではなく、数値 2 を使用する必要があります。  
@@ -56,8 +57,8 @@ ms.lasthandoff: 11/20/2017
   
 |DTSPackageType の表示名|数値|  
 |-------------------------------------|-------------------|  
-|既定値|0|  
-|DTSWizard|1|  
+|既定|0|  
+|DTSWizard|@shouldalert|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
 |DTSDesigner100|5|  
@@ -68,15 +69,15 @@ ms.lasthandoff: 11/20/2017
 |DTSCheckpointUsage の表示名|数値|  
 |-----------------------------------------|-------------------|  
 |Never|0|  
-|IfExists|1|  
+|IfExists|@shouldalert|  
 |毎回|2|  
   
  **PackagePriorityClass** プロパティ— **DTSPriorityClass** 列挙子の値を使用して設定されます。  
   
 |DTSPriorityClass の表示名|数値|  
 |---------------------------------------|-------------------|  
-|既定値|0|  
-|AboveNormal|1|  
+|既定|0|  
+|AboveNormal|@shouldalert|  
 |標準|2|  
 |BelowNormal|3|  
 |Idle|4|  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/20/2017
 |DTSProtectionLevel の表示名|数値|  
 |-----------------------------------------|-------------------|  
 |DontSaveSensitive|0|  
-|EncryptSensitiveWithUserKey|1|  
+|EncryptSensitiveWithUserKey|@shouldalert|  
 |EncryptSensitiveWithPassword|2|  
 |EncryptAllWithPassword|3|  
 |EncryptAllWithUserKey|4|  
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/20/2017
   
 |DTSPrecedenceEvalOp の表示名|数値|  
 |------------------------------------------|-------------------|  
-|式|1|  
+|式|@shouldalert|  
 |制約|2|  
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
@@ -107,7 +108,7 @@ ms.lasthandoff: 11/20/2017
 |表示名|数値|  
 |-------------------|-------------------|  
 |成功|0|  
-|失敗|1|  
+|失敗|@shouldalert|  
 |Completion|2|  
 |Canceled|3|  
   
@@ -120,7 +121,7 @@ ms.lasthandoff: 11/20/2017
 |ADOEnumerationType の表示名|数値|  
 |-----------------------------------------|-------------------|  
 |EnumerateTables|0|  
-|EnumerateAllRows|1|  
+|EnumerateAllRows|@shouldalert|  
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Foreach Nodelist 列挙子  
@@ -129,7 +130,7 @@ ms.lasthandoff: 11/20/2017
 |SourceType の表示名|数値|  
 |---------------------------------|-------------------|  
 |[FileConnection]|0|  
-|変数|1|  
+|変数|@shouldalert|  
 |DirectInput|2|  
   
  **EnumerationType** プロパティ— **EnumerationType** 列挙子の値を使用して設定されます。  
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/20/2017
 |EnumerationType の表示名|数値|  
 |--------------------------------------|-------------------|  
 |Navigator|0|  
-|ノード|1|  
+|ノード|@shouldalert|  
 |NodeText|2|  
 |ElementCollection|3|  
   
@@ -146,7 +147,7 @@ ms.lasthandoff: 11/20/2017
 |InnerElementType の表示名|数値|  
 |---------------------------------------|-------------------|  
 |Navigator|0|  
-|ノード|1|  
+|ノード|@shouldalert|  
 |NodeText|2|  
   
 ##  <a name="Tasks"></a> 処理手順  
@@ -158,7 +159,7 @@ ms.lasthandoff: 11/20/2017
 |DDLSourceType の表示名|数値|  
 |------------------------------------|-------------------|  
 |DirectInput|0|  
-|[FileConnection]|1|  
+|[FileConnection]|@shouldalert|  
 |変数|2|  
   
 ### <a name="bulk-insert-task"></a>一括挿入タスク  
@@ -167,7 +168,7 @@ ms.lasthandoff: 11/20/2017
 |DTSBulkInsert_DataFileType の表示名|数値|  
 |--------------------------------------------------|-------------------|  
 |DTSBulkInsert_DataFileType_Char|0|  
-|DTSBulkInsert_DataFileType_Native|1|  
+|DTSBulkInsert_DataFileType_Native|@shouldalert|  
 |DTSBulkInsert_DataFileType_WideChar|2|  
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
@@ -176,7 +177,7 @@ ms.lasthandoff: 11/20/2017
   
 |ResultSetType の表示名|数値|  
 |------------------------------------|-------------------|  
-|ResultSetType_None|1|  
+|ResultSetType_None|@shouldalert|  
 |ResultSetType_SingleRow|2|  
 |ResultSetType_Rowset|3|  
 |ResultSetType_XML|4|  
@@ -185,7 +186,7 @@ ms.lasthandoff: 11/20/2017
   
 |SqlStatementSourceType の表示名|数値|  
 |---------------------------------------------|-------------------|  
-|DirectInput|1|  
+|DirectInput|@shouldalert|  
 |[FileConnection]|2|  
 |変数|3|  
   
@@ -195,7 +196,7 @@ ms.lasthandoff: 11/20/2017
 |DTSFileSystemOperation の表示名|数値|  
 |---------------------------------------------|-------------------|  
 |CopyFile|0|  
-|MoveFile|1|  
+|MoveFile|@shouldalert|  
 |DeleteFile|2|  
 |RenameFile|3|  
 |SetAttributes|4|  
@@ -210,7 +211,7 @@ ms.lasthandoff: 11/20/2017
 |DTSFileSystemAttributes の表示名|数値|  
 |----------------------------------------------|-------------------|  
 |標準|0|  
-|Archive|1|  
+|Archive|@shouldalert|  
 |[非表示]|2|  
 |ReadOnly|4|  
 |システム|8|  
@@ -221,7 +222,7 @@ ms.lasthandoff: 11/20/2017
 |DTSFTPOp の表示名|数値|  
 |-------------------------------|-------------------|  
 |Send|0|  
-|Receive|1|  
+|Receive|@shouldalert|  
 |DeleteLocal|2|  
 |DeleteRemote|3|  
 |MakeDirLocal|4|  
@@ -229,13 +230,13 @@ ms.lasthandoff: 11/20/2017
 |RemoveDirLocal|6|  
 |RemoveDirRemote|7|  
   
-### <a name="message-queue-task"></a>メッセージ キュー タスク  
+### <a name="message-queue-task"></a>Message Queue Task  
  **MessageType** プロパティ— **MQMessageType** 列挙子の値を使用して設定されます。  
   
 |MQMessageType の表示名|数値|  
 |------------------------------------|-------------------|  
 |DTSMQMessageType_String|0|  
-|DTSMQMessageType_DataFile|1|  
+|DTSMQMessageType_DataFile|@shouldalert|  
 |DTSMQMessageType_Variables|2|  
 |DTSMQMessagType_StringMessageToVariable|3|  
   
@@ -244,7 +245,7 @@ ms.lasthandoff: 11/20/2017
 |MQStringMessageCompare の表示名|数値|  
 |---------------------------------------------|-------------------|  
 |DTSMQStringMessageCompare_None|0|  
-|DTSMQStringMessageCompare_Exact|1|  
+|DTSMQStringMessageCompare_Exact|@shouldalert|  
 |DTSMQStringMessageCompare_IgnoreCase|2|  
 |DTSMQStringMessageCompare_Contains|3|  
   
@@ -253,7 +254,7 @@ ms.lasthandoff: 11/20/2017
 |MQType の表示名|数値|  
 |-----------------------------|-------------------|  
 |DTSMQType_Sender|0|  
-|DTSMQType_Receiver|1|  
+|DTSMQType_Receiver|@shouldalert|  
   
 ### <a name="send-mail-task"></a>メール送信タスク  
  **MessageSourceType** プロパティ— **SendMailMessageSourceType** 列挙子の値を使用して設定されます。  
@@ -261,14 +262,14 @@ ms.lasthandoff: 11/20/2017
 |SendMailMessageSourceType の表示名|数値|  
 |------------------------------------------------|-------------------|  
 |DirectInput|0|  
-|[FileConnection]|1|  
+|[FileConnection]|@shouldalert|  
 |変数|2|  
   
  **Priority** プロパティ— **MailPriority** 列挙子の値を使用して設定されます。  
   
 |MailPriority の表示名|数値|  
 |-----------------------------------|-------------------|  
-|High|1|  
+|高|@shouldalert|  
 |標準|3|  
 |Low|5|  
   
@@ -278,14 +279,14 @@ ms.lasthandoff: 11/20/2017
 |TransferAction の表示名|数値|  
 |-------------------------------------|-------------------|  
 |[コピー]|0|  
-|[移動]|1|  
+|[詳細ビュー]|@shouldalert|  
   
  **Method** プロパティ— **TransferMethod** 列挙子の値を使用して設定されます。  
   
 |TransferMethod の表示名|数値|  
 |-------------------------------------|-------------------|  
 |DatabaseOffline|0|  
-|DatabaseOnline|1|  
+|DatabaseOnline|@shouldalert|  
   
 ### <a name="transfer-error-messages-task"></a>エラー メッセージ転送タスク  
  **IfObjectExists** プロパティ— **IfObjectExists** 列挙子の値を使用して設定されます。  
@@ -293,7 +294,7 @@ ms.lasthandoff: 11/20/2017
 |IfObjectExists の表示名|数値|  
 |-------------------------------------|-------------------|  
 |[FailTask]|0|  
-|Overwrite|1|  
+|Overwrite|@shouldalert|  
 |Skip|2|  
   
 ### <a name="transfer-jobs-task"></a>ジョブ転送タスク  
@@ -302,7 +303,7 @@ ms.lasthandoff: 11/20/2017
 |IfObjectExists の表示名|数値|  
 |-------------------------------------|-------------------|  
 |[FailTask]|0|  
-|Overwrite|1|  
+|Overwrite|@shouldalert|  
 |Skip|2|  
   
 ### <a name="transfer-logins-task"></a>ログイン転送タスク  
@@ -311,7 +312,7 @@ ms.lasthandoff: 11/20/2017
 |IfObjectExists の表示名|数値|  
 |-------------------------------------|-------------------|  
 |[FailTask]|0|  
-|Overwrite|1|  
+|Overwrite|@shouldalert|  
 |Skip|2|  
   
  **LoginsToTransfer** プロパティ— **LoginsToTransfer** 列挙子の値を使用して設定されます。  
@@ -319,7 +320,7 @@ ms.lasthandoff: 11/20/2017
 |LoginsToTransfer の表示名|数値|  
 |---------------------------------------|-------------------|  
 |[AllLogins]|0|  
-|[SelectedLogins]|1|  
+|[SelectedLogins]|@shouldalert|  
 |[AllLoginsFromSelectedDatabases]|2|  
   
 ### <a name="transfer-master-stored-procedures-task"></a>Master ストアド プロシージャ転送タスク  
@@ -328,7 +329,7 @@ ms.lasthandoff: 11/20/2017
 |IfObjectExists の表示名|数値|  
 |-------------------------------------|-------------------|  
 |[FailTask]|0|  
-|Overwrite|1|  
+|Overwrite|@shouldalert|  
 |Skip|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>SQL Server オブジェクトの転送タスク  
@@ -337,7 +338,7 @@ ms.lasthandoff: 11/20/2017
 |ExistingData の表示名|数値|  
 |-----------------------------------|-------------------|  
 |[置換]|0|  
-|追加|1|  
+|追加|@shouldalert|  
   
 ### <a name="web-service-task"></a>Web サービス タスク  
  **OutputType** プロパティ— **DTSOutputType** 列挙子の値を使用して設定されます。  
@@ -345,7 +346,7 @@ ms.lasthandoff: 11/20/2017
 |DTSOutputType の表示名|数値|  
 |------------------------------------|-------------------|  
 |ファイル|0|  
-|変数|1|  
+|変数|@shouldalert|  
   
 ### <a name="wmi-data-reader-task"></a>WMI データ リーダー タスク  
  **OverwriteDestination** プロパティ— **OverwriteDestination** 列挙子の値を使用して設定されます。  
@@ -353,7 +354,7 @@ ms.lasthandoff: 11/20/2017
 |OverwriteDestination の表示名|数値|  
 |-------------------------------------------|-------------------|  
 |OverwriteDestination|0|  
-|AppendToDestination|1|  
+|AppendToDestination|@shouldalert|  
 |KeepOriginal|2|  
   
  **OutputType** プロパティ— **OutputType** 列挙子の値を使用して設定されます。  
@@ -361,7 +362,7 @@ ms.lasthandoff: 11/20/2017
 |OutputType の表示名|数値|  
 |---------------------------------|-------------------|  
 |DataTable|0|  
-|PropertyValue|1|  
+|PropertyValue|@shouldalert|  
 |PropertyNameAndValue|2|  
   
  **DestinationType** プロパティ— **DestinationType** 列挙子の値を使用して設定されます。  
@@ -369,14 +370,14 @@ ms.lasthandoff: 11/20/2017
 |DestinationType の表示名|数値|  
 |--------------------------------------|-------------------|  
 |[FileConnection]|0|  
-|変数|1|  
+|変数|@shouldalert|  
   
  **WqlQuerySourceType** プロパティ— **QuerySourceType** 列挙子の値を使用して設定されます。  
   
 |QuerySourceType の表示名|数値|  
 |--------------------------------------|-------------------|  
 |[FileConnection]|0|  
-|DirectInput|1|  
+|DirectInput|@shouldalert|  
 |変数|2|  
   
  WMI イベント監視の **ActionAtEvent** プロパティ— **ActionAtEvent** 列挙子の値を使用して設定されます。  
@@ -384,21 +385,21 @@ ms.lasthandoff: 11/20/2017
 |ActionAtEvent の表示名|数値|  
 |------------------------------------|-------------------|  
 |LogTheEventAndFireDTSEvent|0|  
-|LogTheEvent|1|  
+|LogTheEvent|@shouldalert|  
   
  **ActionAtTimeout** プロパティ— **ActionAtTimeout** 列挙子の値を使用して設定されます。  
   
 |ActionAtTimeout の表示名|数値|  
 |--------------------------------------|-------------------|  
 |LogTimeoutAndFireDTSEvent|0|  
-|LogTimeout|1|  
+|LogTimeout|@shouldalert|  
   
  **AfterEvent** プロパティ— **AfterEvent** 列挙子の値を使用して設定されます。  
   
 |AfterEvent の表示名|数値|  
 |---------------------------------|-------------------|  
 |ReturnWithSuccess|0|  
-|ReturnWithFailure|1|  
+|ReturnWithFailure|@shouldalert|  
 |WatchfortheEventAgain|2|  
   
  **AfterTimeout** プロパティ— **AfterTimeout** 列挙子の値を使用して設定されます。  
@@ -406,7 +407,7 @@ ms.lasthandoff: 11/20/2017
 |AfterTimeout の表示名|数値|  
 |-----------------------------------|-------------------|  
 |ReturnWithSuccess|0|  
-|ReturnWithFailure|1|  
+|ReturnWithFailure|@shouldalert|  
 |WatchfortheEventAgain|2|  
   
  **WqlQuerySourceType** プロパティ— **QuerySourceType** 列挙子の値を使用して設定されます。  
@@ -414,7 +415,7 @@ ms.lasthandoff: 11/20/2017
 |QuerySourceType の表示名|数値|  
 |--------------------------------------|-------------------|  
 |[FileConnection]|0|  
-|DirectInput|1|  
+|DirectInput|@shouldalert|  
 |変数|2|  
   
 ### <a name="xml-task"></a>XML タスク  
@@ -423,7 +424,7 @@ ms.lasthandoff: 11/20/2017
 |DTSXMLOperation の表示名|数値|  
 |--------------------------------------|-------------------|  
 |[検証]|0|  
-|XSLT (XSLT)|1|  
+|XSLT (XSLT)|@shouldalert|  
 |[XPath]|2|  
 |Merge|3|  
 |[Diff]|4|  
@@ -434,7 +435,7 @@ ms.lasthandoff: 11/20/2017
 |DTSXMLSourceType の表示名|数値|  
 |---------------------------------------|-------------------|  
 |[FileConnection]|0|  
-|変数|1|  
+|変数|@shouldalert|  
 |DirectInput|2|  
   
  **DestinationType** および **DiffGramDestinationType** プロパティ— **DTSXMLSaveResultTo** 列挙子の値を使用して設定されます。  
@@ -442,21 +443,21 @@ ms.lasthandoff: 11/20/2017
 |DTSXMLSaveResultTo の表示名|数値|  
 |-----------------------------------------|-------------------|  
 |[FileConnection]|0|  
-|変数|1|  
+|変数|@shouldalert|  
   
  **ValidationType** プロパティ— **DTSXMLValidationType** 列挙子の値を使用して設定されます。  
   
 |DTSXMLValidationType の表示名|数値|  
 |-------------------------------------------|-------------------|  
 |[DTD]|0|  
-|[XSD]|1|  
+|[XSD]|@shouldalert|  
   
  **XPathOperation** プロパティ— **DTSXMLXPathOperation** 列挙子の値を使用して設定されます。  
   
 |DTSXMLXPathOperation の表示名|数値|  
 |-------------------------------------------|-------------------|  
 |Evaluation|0|  
-|値|1|  
+|値|@shouldalert|  
 |NodeList|2|  
   
  **DiffOptions** プロパティ— **DTSXMLDiffOptions** 列挙子の値を使用して設定されます。 この列挙子の各オプションは相互排他的ではなく、複数を同時に指定することができます。 複数のオプションを使用するには、適用するオプションをコンマ区切りのリストで指定します。  
@@ -464,7 +465,7 @@ ms.lasthandoff: 11/20/2017
 |DTSXMLDiffOptions の表示名|数値|  
 |----------------------------------------|-------------------|  
 |なし|0|  
-|IgnoreChildOrder|1|  
+|IgnoreChildOrder|@shouldalert|  
 |[IgnoreComments]|2|  
 |IgnorePI|4|  
 |IgnoreWhitespace|8|  
@@ -478,7 +479,7 @@ ms.lasthandoff: 11/20/2017
 |DTSXMLDiffAlgorithm の表示名|数値|  
 |------------------------------------------|-------------------|  
 |Auto|0|  
-|[高速]|1|  
+|[高速]|@shouldalert|  
 |[詳細]|2|  
   
 ##  <a name="MaintenancePlanTasks"></a> メンテナンス プランのタスク  
@@ -494,7 +495,7 @@ ms.lasthandoff: 11/20/2017
 |DatabaseSelection の表示名|数値|  
 |----------------------------------------|-------------------|  
 |なし|0|  
-|すべて|1|  
+|All|@shouldalert|  
 |システム|2|  
 |ユーザー|3|  
 |Specific|4|  
@@ -504,15 +505,15 @@ ms.lasthandoff: 11/20/2017
 |TableSelection の表示名|数値|  
 |-------------------------------------|-------------------|  
 |なし|0|  
-|すべて|1|  
+|All|@shouldalert|  
 |Specific|2|  
   
  **ObjectTypeSelection** プロパティ— **ObjectType** 列挙子の値を使用して設定されます。  
   
 |ObjectType の表示名|数値|  
 |---------------------------------|-------------------|  
-|Table|0|  
-|表示|1|  
+|テーブル|0|  
+|表示|@shouldalert|  
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>データベースのバックアップ タスク  
@@ -521,21 +522,21 @@ ms.lasthandoff: 11/20/2017
 |DestinationType の表示名|数値|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
-|手動|1|  
+|手動|@shouldalert|  
   
  **ExistingBackupsAction** プロパティ— **ActionForExistingBackups** 列挙子の値を使用して設定されます。  
   
 |ActionForExistingBackups の表示名|数値|  
 |-----------------------------------------------|-------------------|  
 |追加|0|  
-|Overwrite|1|  
+|Overwrite|@shouldalert|  
   
  **BackupAction** プロパティ— **BackupTaskType** 列挙子の値を使用して設定されます。 このプロパティは、タスクで実行されるバックアップの種類を定義する際に、 **BackupIsIncremental** プロパティと合わせて使用します。  
   
 |BackupTaskType の表示名|数値|  
 |-------------------------------------|-------------------|  
-|データベース|0|  
-|[ファイル]|1|  
+|[データベース]|0|  
+|[ファイル]|@shouldalert|  
 |Log|2|  
   
  **BackupDevice** プロパティ— [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) の **DeviceType** 列挙子の値を使用して設定されます。  
@@ -543,7 +544,7 @@ ms.lasthandoff: 11/20/2017
 |DeviceType の表示名|数値|  
 |---------------------------------|-------------------|  
 |LogicalDevice|0|  
-|Tape|1|  
+|Tape|@shouldalert|  
 |ファイル|2|  
 |Pipe|3|  
 |VirtualDevice|4|  
@@ -554,14 +555,14 @@ ms.lasthandoff: 11/20/2017
 |FileType の表示名|数値|  
 |-------------------------------|-------------------|  
 |FileBackup|0|  
-|FileReport|1|  
+|FileReport|@shouldalert|  
   
  **OlderThanTimeUnitType** プロパティ— **TimeUnitType** 列挙子の値を使用して設定されます。  
   
 |TimeUnitType の表示名|数値|  
 |-----------------------------------|-------------------|  
 |日|0|  
-|Week|1|  
+|Week|@shouldalert|  
 |Month|2|  
 |年|3|  
   
@@ -570,9 +571,9 @@ ms.lasthandoff: 11/20/2017
   
 |StatisticsTarget の表示名|数値|  
 |---------------------------------------|-------------------|  
-|列|1|  
+|[列]|@shouldalert|  
 |インデックス|2|  
-|すべて|3|  
+|All|3|  
   
 ##  <a name="CommonProperties"></a> 共通プロパティ  
  パッケージ、タスク、Foreach ループ コンテナー、For ループ コンテナー、およびシーケンス コンテナーでは、次の列挙子を使用して、指定されたプロパティを設定できます。  
@@ -583,7 +584,7 @@ ms.lasthandoff: 11/20/2017
 |------------------------------------------|-------------------|  
 |なし|-1|  
 |成功|0|  
-|失敗|1|  
+|失敗|@shouldalert|  
 |Completion|2|  
   
  **IsolationLevel** プロパティ—.NET Framework **IsolationLevel** 列挙子の値を使用して設定されます。 詳細については、 [MSDN ライブラリ](http://go.microsoft.com/fwlink?LinkId=17313)の .NET Framework クラス ライブラリを参照してください。  
@@ -593,7 +594,7 @@ ms.lasthandoff: 11/20/2017
 |DTSLoggingMode の表示名|数値|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|有効|1|  
+|有効|@shouldalert|  
 |Disabled|2|  
   
  **TransactionOption** プロパティ— **DTSTransactionOption** 列挙子の値を使用して設定されます。  
@@ -601,10 +602,10 @@ ms.lasthandoff: 11/20/2017
 |DTSTransactionOption の表示名|数値|  
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
-|Supported|1|  
-|必須|2|  
+|Supported|@shouldalert|  
+|Required|2|  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  [プロパティ式を追加または変更する](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
 ## <a name="see-also"></a>参照  

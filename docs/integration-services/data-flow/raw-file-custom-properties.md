@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e347cdfd00f6e9e06ab8de49a4db3a382ae4eba7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b007bc2aa2f8e8a2b7f9b7d3dfbfbbeece4730cf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="raw-file-custom-properties"></a>RAW ファイルのカスタム プロパティ
   **変換元のカスタム プロパティ**  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/20/2017
 |プロパティ名|データ型|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (列挙)|生データへのアクセスに使用するモード。 可能な値は、 **ファイル名** (0) および **変数からのファイル名** (1) です。 既定値は **ファイル名** (0) です。|  
-|FileName|文字列|ソース ファイルのパスおよびファイル名。|  
+|FileName|String|ソース ファイルのパスおよびファイル名。|  
   
  RAW ファイル ソースの出力および出力列には、カスタム プロパティがありません。  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/20/2017
 |プロパティ名|データ型|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (列挙)|FileName プロパティにファイル名を含めるか、またはファイル名が含まれる変数名を含めるかを指定する値。 オプションは、 **ファイル名** (0) および **変数からのファイル名** (1) です。|  
-|FileName|文字列|RAW ファイル変換先が書き込むファイルの名前。|  
+|FileName|String|RAW ファイル変換先が書き込むファイルの名前。|  
 |WriteOption|Integer (列挙)|RAW ファイル変換先が、同じ名前の既存のファイルを削除するかどうかを指定する値。 オプションは、 **常に作成する** (0)、 **1 回だけ作成する** (1)、 **切り捨てと追加** (3)、 **追加** (2) です。 このプロパティの既定値は、 **常に作成する** (0) です。|  
   
 > [!NOTE]  
@@ -59,6 +60,6 @@ ms.lasthandoff: 11/20/2017
  詳細については、「 [RAW ファイル変換先](../../integration-services/data-flow/raw-file-destination.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   
