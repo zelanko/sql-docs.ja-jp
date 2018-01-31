@@ -8,7 +8,8 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-caps.latest.revision: "73"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b40010fd76da5b1f040ab5e5311ac655d111d660
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 234895749b48f44601cddb76e4ca95783602a6e4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="security-overview-integration-services"></a>セキュリティの概要 (Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、豊富かつ柔軟なセキュリティ環境を提供できるように、複数の階層でセキュリティが構成されています。 このようなセキュリティの階層では、デジタル署名、パッケージのプロパティ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロール、およびオペレーティング システム権限が使用されます。 こうしたセキュリティ機能のほとんどは、ID およびアクセス制御のカテゴリに分類されます。  
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="saving-packages-to-the-msdb-database"></a>msdb データベースへのパッケージの保存  
  パッケージを msdb データベースに保存すると、サーバー レベル、データベース レベル、およびテーブル レベルのセキュリティを実現できます。 msdb データベースでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは sysssispackages テーブルに格納されます。 パッケージは、msdb データベースの sysssispackages テーブルと sysdtspackages テーブルに保存されるため、msdb データベースのバックアップ時に自動的にバックアップされます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb データベースに格納されるパッケージは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータベース レベルのロールを適用して保護することもできます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージへのアクセスを制御するための、db_ssisadmin、db_ssisltduser、および db_ssisoperator というデータベース レベルの 3 つの固定ロールがあります。 各パッケージにはリーダー ロールおよびライター ロールを関連付けることができます。 また、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで使用する、データベース レベルのカスタム ロールを定義することもできます。 ロールは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の msdb データベースに保存されるパッケージにのみ実装できます。 詳細については、「[Integration Services のロール &#40;SSIS サービス&#40;](../../integration-services/security/integration-services-roles-ssis-service.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb データベースに格納されるパッケージは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータベース レベルのロールを適用して保護することもできます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージへのアクセスを制御するための、db_ssisadmin、db_ssisltduser、および db_ssisoperator というデータベース レベルの 3 つの固定ロールがあります。 各パッケージにはリーダー ロールおよびライター ロールを関連付けることができます。 また、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで使用する、データベース レベルのカスタム ロールを定義することもできます。 ロールは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の msdb データベースに保存されるパッケージにのみ実装できます。 詳細については、「[Integration Services のロール &#40;SSIS サービス&#41;](../../integration-services/security/integration-services-roles-ssis-service.md)」を参照してください。  
   
 #### <a name="saving-packages-to-the-file-system"></a>ファイル システムへのパッケージの保存  
  パッケージを msdb データベースではなくファイル システムに格納する場合は、パッケージ ファイル、およびパッケージ ファイルが格納されるフォルダーをセキュリティで保護してください。  
@@ -128,7 +129,7 @@ ms.lasthandoff: 11/20/2017
  同様に、パッケージで使用するチェックポイント ファイルに機密情報が含まれている場合も、アクセス制御リスト (ACL) を使用して、ファイルが格納されている場所またはフォルダーを保護する必要があります。 チェックポイント ファイルは、パッケージの進行状況に関する現在の状態情報と変数の現在の値を格納します。 たとえば、電話番号を格納するカスタム変数がパッケージに含まれることがあります。 詳細については、「 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
 ### <a name="log-files"></a>ログ ファイル  
- ファイル システムに書き込まれるログ エントリも、アクセス制御リスト (ACL) を使用して保護する必要があります。 ログ エントリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティで保護することもできます。 ログ エントリには機密情報が含まれることがあります。たとえば、パッケージに含まれる SQL 実行タスクによって、電話番号を参照する SQL ステートメントが構築される場合、SQL ステートメントのログ エントリにも電話番号が含まれています。 また、SQL ステートメントにより、データベース内のテーブル名や列名に関するプライベートな情報が明らかにされる場合もあります。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
+ ファイル システムに書き込まれるログ エントリも、アクセス制御リスト (ACL) を使用して保護する必要があります。 ログ エントリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティで保護することもできます。 ログ エントリには機密情報が含まれることがあります。たとえば、パッケージに含まれる SQL 実行タスクによって、電話番号を参照する SQL ステートメントが構築される場合、SQL ステートメントのログ エントリにも電話番号が含まれています。 また、SQL ステートメントにより、データベース内のテーブル名や列名に関するプライベートな情報が明らかにされる場合もあります。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
 
 ## <a name="service"></a> Integration Services サービスへのアクセスの制御
   パッケージの保護レベルによって、パッケージを編集および実行できるユーザーを制限できます。 サーバーで現在実行中のパッケージの一覧を表示できるユーザー、および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で現在実行中のパッケージを停止できるユーザーを制限するには、追加の保護が必要です。  
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/20/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス (特に、リモート フォルダーの列挙を行う可能性のある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス) を実行するコンピューターへのアクセスを制限することは重要です。 認証を受けたユーザーであれば、パッケージの列挙を要求できます。 サービスが見つからない場合でも、サービスはフォルダーを列挙します。 これらのフォルダー名が、悪意あるユーザーに悪用される場合があります。 管理者がリモート コンピューターのフォルダーを列挙できるようにサービスを設定した場合、ユーザーも通常は参照できないフォルダー名を参照することができます。  
 
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  セキュリティに関連する特定のタスクを実行する方法を示すトピックへのリンクを次に示します。  
   
 -   [ユーザー定義ロールを作成する](../../integration-services/security/integration-services-roles-ssis-service.md#create)  

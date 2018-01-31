@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 233eed5038eb8a2f63e89cbadc5ea738398b8d8b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3d621273b3b45b25158d494fd9bee3d7241e1d3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,43 +73,43 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  [ @parameter_value = ] *parameter_value*  
  パラメーターの値。 *parameter_value* は **sql_variant** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  特定の実行に使用されたパラメーター値を調べるには、catalog.execution_parameter_values ビューに対してクエリを実行します。  
   
  パッケージの実行中にログに記録される情報のスコープを指定するには、*parameter_name* を LOGGING_LEVEL に設定して、*parameter_value* を次のいずれかの値に設定します。  
   
  *object_type* パラメーターを 50 に設定します。  
   
-|値|説明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |0|なし<br /><br /> ログ記録をオフにします。 パッケージの実行状態のみがログに記録されます。|  
-|1|Basic<br /><br /> カスタム イベントと診断イベントを除く、すべてのイベントをログに記録します。 これが既定値です。|  
-|2|パフォーマンス<br /><br /> パフォーマンス統計、および OnError イベントと OnWarning のイベントのみをログに記録します。|  
-|3|[詳細]<br /><br /> カスタム イベントと診断イベントを含む、すべてのイベントをログに記録されます。 <br />カスタム イベントには、Integration Services タスクによってログに記録されるイベントを含みます。 詳細については、「[ログ記録用のカスタム メッセージ](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages)」を参照してください。|  
+|@shouldalert|Basic<br /><br /> カスタム イベントと診断イベントを除く、すべてのイベントをログに記録します。 これが既定値です。|  
+|2|[パフォーマンス]<br /><br /> パフォーマンス統計、および OnError イベントと OnWarning のイベントのみをログに記録します。|  
+|3|"詳細"<br /><br /> カスタム イベントと診断イベントを含む、すべてのイベントをログに記録されます。 <br />カスタム イベントには、Integration Services タスクによってログに記録されるイベントを含みます。 詳細については、「[ログ記録用のカスタム メッセージ](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages)」を参照してください。|  
 |4|ランタイムの系列<br /><br /> データ フロー内の系列を追跡するために必要なデータを収集します。|  
 |100|カスタムのログ記録レベル<br /><br /> CUSTOMIZED_LOGGING_LEVEL パラメーターの設定を指定します。 指定できる値の詳細については、「[catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md)」を参照してください。<br /><br /> カスタマイズされたログ記録レベルの詳細については、「[SSIS サーバーでのパッケージ実行のログ記録を有効にする](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。|  
   
  パッケージの実行中にエラーが発生した場合に、Integration Services サーバーによりダンプ ファイルが生成されるように指定するには、未実行の実行インスタンスに次のパラメーター値を設定します。  
   
-|パラメーター|値|  
+|パラメーター|ReplTest1|  
 |---------------|-----------|  
 |*execution_id*|実行のインスタンスの一意識別子|  
 |*object_type*|50|  
 |*parameter_name*|‘DUMP_ON_ERROR|  
-|*parameter_value*|1|  
+|*parameter_value*|@shouldalert|  
   
  パッケージの実行中にイベントが発生した場合に、Integration Services サーバーによりダンプ ファイルを生成されるように指定するには、未実行の実行インスタンスに次のパラメーター値を設定します。  
   
-|パラメーター|値|  
+|パラメーター|ReplTest1|  
 |---------------|-----------|  
 |*execution_id*|実行のインスタンスの一意識別子|  
 |*object_type*|50|  
 |*parameter_name*|‘DUMP_ON_EVENT|  
-|*parameter_value*|1|  
+|*parameter_value*|@shouldalert|  
   
  パッケージの実行中に、Integration Services サーバーによるダンプ ファイルの生成が行われる原因となるイベントを指定するには、未実行の実行インスタンスに次のパラメーター値を設定します。 複数のイベント コードは、セミコロンで区切ります。  
   
-|パラメーター|値|  
+|パラメーター|ReplTest1|  
 |---------------|-----------|  
 |*execution_id*|実行のインスタンスの一意識別子|  
 |*object_type*|50|  
@@ -141,7 +142,7 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャには、次の権限のいずれかが必要です。  
   
 -   実行のインスタンスの READ および MODIFY 権限  

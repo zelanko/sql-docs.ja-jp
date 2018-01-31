@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94b0b41b2f6d7e87bccbd53a58a50c44c0ee29e7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 027e2790bc59e3e9839de83c98984c19df1a982e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcreatecustomizedlogginglevel"></a>catalog.create_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @level_name = ] *level_name*  
  新しいの既存の名前は、ログ記録レベルをカスタマイズします。  
   
- *level_name* は **nvarchar (128)** です。  
+ *level_name* は **nvarchar(128)** です。  
   
  [ @level_description = ] *level_description*  
  新しいの既存の説明では、ログ記録レベルをカスタマイズします。  
@@ -78,7 +79,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
  *level_id* は **bigint** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Transact-SQL での複数の値を結合する、*profile_value* または *event_value* 引数では、この例に従って操作します。 OnError (8) と DiagnosticEx (15) イベントを計算する式をキャプチャする *event_value* は `2^8 + 2^15 = 33024`です。  
   
 ## <a name="return-codes"></a>リターン コード  
@@ -89,7 +90,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
 ## <a name="result-set"></a>結果セット  
  なし  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャには、次の権限のいずれかが必要です。  
   
 -   **ssis_admin** データベース ロールのメンバーシップ  

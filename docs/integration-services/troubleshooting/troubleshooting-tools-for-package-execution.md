@@ -8,7 +8,8 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44b2f3e043a672fd5c258c5dd5c73c3e4f00fa5a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c38f451a062f7280413950e89aa482cea2d23125
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>パッケージ実行のトラブルシューティング ツール
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージを完成して配置した後、そのパッケージの実行時のトラブルシューティングに使用できる機能とツールが含まれています。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
  次のヒントや技法を使用して、実行中のパッケージの問題を回避することもできます。  
   
--   **トランザクションを使ってデータの整合性の確認を支援する**。 詳細については、「 [Integration Services のトランザクション](../../integration-services/integration-services-transactions.md)」を参照してください。  
+-   **トランザクションを使ってデータの整合性の確認を支援する**。 詳細については、「 [Integration Services のトランザクション](../../integration-services/integration-services-transactions.md)」をご覧ください。  
   
 -   **チェックポイントを使って、エラーが発生した時点からパッケージを再開する**。 詳細については、「 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/20/2017
      この方法の詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] のホワイト ペーパー「 [プロジェクト REAL: ビジネス インテリジェンス ETL のデザイン方法](http://go.microsoft.com/fwlink/?LinkId=96602)」の「ETL の監査とログ記録」を参照してください。  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>デバッグ ダンプ ファイルを使ったパッケージ実行のトラブルシューティング  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、パッケージの実行に関する情報を提供するデバッグ ダンプ ファイルを作成できます。 詳細については、「 [パッケージ実行用のダンプ ファイルを生成する](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、パッケージの実行に関する情報を提供するデバッグ ダンプ ファイルを作成できます。 詳細については、「[パッケージ実行用のダンプ ファイルを生成する](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)」を参照してください。  
   
 ## <a name="troubleshoot-run-time-validation-issues"></a>実行時検証問題のトラブルシューティング  
  パッケージ内の前のタスクの実行が完了するまで、データ ソースに接続できなかったり、パッケージの一部を検証できなかったりすることがあります。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、こうした状況が原因で発生する検証エラーを回避するための以下の機能が備わっています。  
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="troubleshoot-errors-without-a-description"></a>説明のないエラーのトラブルシューティング  
  説明のない [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エラーが発生した場合は、「 [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md) 」でエラー番号を検索することで、エラーの説明を参照できます。 現時点では、この一覧にトラブルシューティング情報は含まれていません。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  [データ フローのデバッグ](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  

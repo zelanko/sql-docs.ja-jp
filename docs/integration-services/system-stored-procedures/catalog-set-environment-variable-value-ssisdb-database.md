@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1d493dad-9d9c-4f0a-87e2-20a2d4a35f99
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05d356be0d0f3c5327c77653aeed1fde7f6f3ef8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ce6e82da825deeb078b0cb29c7e0e8655fc5c0fa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetenvironmentvariablevalue-ssisdb-database"></a>catalog.set_environment_variable_value (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +40,10 @@ catalog.set_environment_variable_value [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>引数  
  [ @folder_name = ] *folder_name*  
- 環境を含むフォルダーの名前です。 *folder_name* は **nvarchar (128)** です。  
+ 環境を含むフォルダーの名前です。 *folder_name* は **nvarchar(128)** です。  
   
  [ @environment_name = ] *environment_name*  
- 環境の名前。 *environment_name* は **nvarchar (128)** です。  
+ 環境の名前。 *Environment_name* は **nvarchar(128)** です。  
   
  [ @variable _name = ] *variable _name*  
  環境変数の名前。 *variable _name* は **nvarchar (128)** です。  
@@ -56,7 +57,7 @@ catalog.set_environment_variable_value [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャには、次の権限のいずれかが必要です。  
   
 -   環境の READ および MODIFY 権限  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: c1deb31e-b8d1-44ca-b355-570959bc6478
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 388980eede4b88a07c9b726c099133ec5cec039e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2e39fdbf676deb686241c789a45b1fabeecd3a9b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetenvironmentvariableproperty-ssisdb-database"></a>catalog.set_environment_variable_property (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +41,16 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>引数  
  [ @folder_name = ] *folder_name*  
- 環境を含むフォルダーの名前です。 *folder_name* は **nvarchar (128)** です。  
+ 環境を含むフォルダーの名前です。 *folder_name* は **nvarchar(128)** です。  
   
  [ @environment_name = ] *environment_name*  
- 環境の名前。 *environment_name* は **nvarchar (128)** です。  
+ 環境の名前。 *Environment_name* は **nvarchar(128)** です。  
   
  [ @variable_name = ] *variable_name*  
- 環境変数の名前。 *variable_name* は **nvarchar (128)** です。  
+ 環境変数の名前。 *variable_name* は **nvarchar(128)** です。  
   
  [ @property_name = ] *property_name*  
- 環境変数プロパティの名前。 *property_name* は **nvarchar (128)** です。  
+ 環境変数プロパティの名前。 *Property_name* は **nvarchar(128)** です。  
   
  [ @property_value = ] *property_value*  
  環境変数プロパティの値。 *property_value* は **nvarchar (4000)** です。  
@@ -60,7 +61,7 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャには、次の権限のいずれかが必要です。  
   
 -   環境の READ および MODIFY 権限  
@@ -82,7 +83,7 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
   
 -   ユーザーに適切な権限がない  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このリリースで設定できるのは `Description` プロパティだけです。 `Description` プロパティのプロパティ値は 4,000 文字を超えることはできません。  
   
   

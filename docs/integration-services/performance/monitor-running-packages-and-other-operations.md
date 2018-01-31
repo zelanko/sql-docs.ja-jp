@@ -8,32 +8,33 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a23adf907e01dd8c95c5c44a5a57db0aeb807625
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c2254c139d1e93755cd9b3c503ad0bc42f08cb4e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>パッケージとその他の操作を実行するモニター
   次の 1 つ以上のツールを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行、プロジェクトの検証、およびその他の操作を監視できます。 データ タップなどの特定のツールは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されたプロジェクトに対してのみ使用できます。  
   
 -   ログ  
   
-     詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
+     詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
--   レポート  
+-   [レポート]  
   
      詳細については、「 [Reports for the Integration Services Server](#reports)」を参照してください。  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/20/2017
   
 |||  
 |-|-|  
-|Integration Services の初期化|1|  
+|Integration Services の初期化|@shouldalert|  
 |操作のクリーンアップ (SQL エージェント ジョブ)|2|  
 |プロジェクト バージョンのクリーンアップ (SQL エージェント ジョブ)|3|  
 |プロジェクトの配置|101|  
@@ -166,7 +167,7 @@ ms.lasthandoff: 11/20/2017
   
 |セクション|Description|  
 |-------------|-----------------|  
-|[フィルター]|レポートに適用される現在のフィルター (指定した文字列を使用し、 **[前回失敗した日時]** 範囲にある接続など) を示します。<br /><br /> 特定の日付範囲中に発生した接続エラーのみを表示するには、 **[前回失敗した日時]** を設定します。 範囲には、複数の日、月、または年を指定できます。|  
+|Assert|レポートに適用される現在のフィルター (指定した文字列を使用し、 **[前回失敗した日時]** 範囲にある接続など) を示します。<br /><br /> 特定の日付範囲中に発生した接続エラーのみを表示するには、 **[前回失敗した日時]** を設定します。 範囲には、複数の日、月、または年を指定できます。|  
 |詳細|接続文字列、接続中に失敗した実行の回数、および最後に失敗した日付を示します。|  
   
 ### <a name="all-operations-report"></a>"すべての操作" レポート  

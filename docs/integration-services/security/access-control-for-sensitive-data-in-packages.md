@@ -8,7 +8,8 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bd057df624f83e6a43bd7ed13d8f7c98e462c698
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fd094efc965679119e0a15d9fc0fc97be27db4f4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>パッケージ内の機微なデータへのアクセス制御
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内のデータを保護するために、保護レベルを設定できます。保護レベルを使用すると、パッケージ内の機微なデータのみを保護することも、すべてのデータを保護することもできます。 さらに、パスワードまたはユーザー キーでこのデータを暗号化したり、データベースを使用してデータを暗号化したりすることもできます。 また、パッケージに使用する保護レベルは静的である必要はなく、パッケージのライフ サイクルの各段階で変更できます。 多くの場合、開発中に保護レベルを 1 つ設定し、パッケージを配置した時点で別の保護レベルを設定します。  
@@ -65,12 +66,12 @@ ms.lasthandoff: 11/20/2017
   
 |保護レベル|Description|  
 |----------------------|-----------------|  
-|[機微なデータを保存しない] \(**DontSaveSensitive**)|パッケージの保存時、パッケージ内の機微なプロパティの値は出力されません。 この保護レベルでは暗号化は行われません。その代わり、「機微」とマークされたプロパティは、パッケージと一緒に保存されません。その結果、他のユーザーが機微なデータを利用することはできません。 異なるユーザーがパッケージを開いた場合は、機微な情報が空白と置き換えられます。したがって、ユーザーは、機微な情報を指定する必要があります。<br /><br /> **dtutil** ユーティリティ (dtutil.exe) で使用する場合、この保護レベルに対応する値は 0 です。|  
-|[すべてのデータをパスワードで暗号化する] \(**EncryptAllWithPassword**)|パスワードを使用してパッケージ全体を暗号化します。 暗号化処理には、パッケージを作成またはエクスポートしたときにユーザーによって指定されたパスワードが使用されます。 パッケージを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで開くか、 **dtexec** コマンド プロンプト ユーティリティを使用して実行するには、パッケージ パスワードを指定する必要があります。 パスワードを指定しないと、パッケージにアクセスしたりパッケージを実行したりできません。<br /><br /> **dtutil** ユーティリティで使用する場合、この保護レベルに対応する値は 3 です。|  
-|[すべてのデータをユーザー キーで暗号化する] \(**EncryptAllWithUserKey**)|現在のユーザー プロファイルに基づいたキーを使用してパッケージ全体を暗号化します。 パッケージを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで開くか、 **dtexec** コマンド プロンプト ユーティリティを使用して実行できるのは、パッケージを作成またはエクスポートしたユーザーだけです。<br /><br /> **dtutil** ユーティリティで使用する場合、この保護レベルに対応する値は 4 です。<br /><br /> 注: ユーザー キーを使用する保護レベルに対しては、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では DPAPI 標準を使用しています。 DPAPI の詳細については、MSDN ライブラリ [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408) を参照してください。|  
-|[機微なデータをパスワードで暗号化する] \(**EncryptSensitiveWithPassword**)|パスワードを使用して、パッケージ内の機微なプロパティの値だけを暗号化します。 暗号化処理には、DPAPI が使用されます。 機微なデータはパッケージの一部として保存されます。ただし、このデータは、パッケージを作成またはエクスポートしたときに現在のユーザーによって指定されたパスワードを使用して暗号化されます。 パッケージを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで開くには、ユーザーはパッケージ パスワードを指定する必要があります。 ユーザーがパスワードを指定しなかった場合、パッケージは機微なデータが取り除かれて開かれます。したがって、現在のユーザーは、機微なデータの新しい値を指定する必要があります。 パスワードを指定しないでパッケージを実行しようとした場合、パッケージの実行は失敗します。 パスワードとコマンド ラインの実行の詳細については、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」を参照してください。<br /><br /> **dtutil** ユーティリティで使用する場合、この保護レベルに対応する値は 2 です。|  
-|[機微なデータをユーザー キーで暗号化する] \(**EncryptSensitiveWithUserKey**)|現在のユーザー プロファイルに基づいたキーを使用して、パッケージ内の機微なプロパティの値だけを暗号化します。 同じプロファイルを使用している同じユーザーだけがパッケージを読み込むことができます。 異なるユーザーがパッケージを開いた場合は、機微な情報が空白と置き換えられます。したがって、現在のユーザーは、機微なデータの新しい値を指定する必要があります。 ユーザーがパッケージを実行しようとした場合、パッケージの実行は失敗します。 暗号化処理には、DPAPI が使用されます。<br /><br /> **dtutil** ユーティリティで使用する場合、この保護レベルに対応する値は 1 です。<br /><br /> 注: ユーザー キーを使用する保護レベルに対しては、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では DPAPI 標準を使用しています。 DPAPI の詳細については、MSDN ライブラリ ( [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408)) を参照してください。|  
-|[暗号化をサーバー ストレージに依存する] \(**ServerStorage**)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロールを使用して、パッケージ全体を保護します。 このオプションは、パッケージを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb データベースに保存する場合にサポートされます。 また、SSISDB カタログは、 **ServerStorage** 保護レベルを使用します。<br /><br /> このオプションは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からパッケージをファイル システムに保存するときはサポートされません。|  
+|[機微なデータを保存しない] (**DontSaveSensitive**)|パッケージの保存時、パッケージ内の機微なプロパティの値は出力されません。 この保護レベルでは暗号化は行われません。その代わり、「機微」とマークされたプロパティは、パッケージと一緒に保存されません。その結果、他のユーザーが機微なデータを利用することはできません。 異なるユーザーがパッケージを開いた場合は、機微な情報が空白と置き換えられます。したがって、ユーザーは、機微な情報を指定する必要があります。<br /><br /> **dtutil** ユーティリティ (dtutil.exe) で使用する場合、この保護レベルに対応する値は 0 です。|  
+|[すべてのデータをパスワードで暗号化する] (**EncryptAllWithPassword**)|パスワードを使用してパッケージ全体を暗号化します。 暗号化処理には、パッケージを作成またはエクスポートしたときにユーザーによって指定されたパスワードが使用されます。 パッケージを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで開くか、 **dtexec** コマンド プロンプト ユーティリティを使用して実行するには、パッケージ パスワードを指定する必要があります。 パスワードを指定しないと、パッケージにアクセスしたりパッケージを実行したりできません。<br /><br /> **dtutil** ユーティリティで使用する場合、この保護レベルに対応する値は 3 です。|  
+|[すべてのデータをユーザー キーで暗号化する] (**EncryptAllWithUserKey**)|現在のユーザー プロファイルに基づいたキーを使用してパッケージ全体を暗号化します。 パッケージを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで開くか、 **dtexec** コマンド プロンプト ユーティリティを使用して実行できるのは、パッケージを作成またはエクスポートしたユーザーだけです。<br /><br /> **dtutil** ユーティリティで使用する場合、この保護レベルに対応する値は 4 です。<br /><br /> 注: ユーザー キーを使用する保護レベルに対しては、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では DPAPI 標準を使用しています。 DPAPI の詳細については、MSDN ライブラリ ( [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408)) を参照してください。|  
+|[機微なデータをパスワードで暗号化する] (**EncryptSensitiveWithPassword**)|パスワードを使用して、パッケージ内の機微なプロパティの値だけを暗号化します。 暗号化処理には、DPAPI が使用されます。 機微なデータはパッケージの一部として保存されます。ただし、このデータは、パッケージを作成またはエクスポートしたときに現在のユーザーによって指定されたパスワードを使用して暗号化されます。 パッケージを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで開くには、ユーザーはパッケージ パスワードを指定する必要があります。 ユーザーがパスワードを指定しなかった場合、パッケージは機微なデータが取り除かれて開かれます。したがって、現在のユーザーは、機微なデータの新しい値を指定する必要があります。 パスワードを指定しないでパッケージを実行しようとした場合、パッケージの実行は失敗します。 パスワードとコマンド ラインの実行の詳細については、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」を参照してください。<br /><br /> **dtutil** ユーティリティで使用する場合、この保護レベルに対応する値は 2 です。|  
+|[機微なデータをユーザー キーで暗号化する] (**EncryptSensitiveWithUserKey**)|現在のユーザー プロファイルに基づいたキーを使用して、パッケージ内の機微なプロパティの値だけを暗号化します。 同じプロファイルを使用している同じユーザーだけがパッケージを読み込むことができます。 異なるユーザーがパッケージを開いた場合は、機微な情報が空白と置き換えられます。したがって、現在のユーザーは、機微なデータの新しい値を指定する必要があります。 ユーザーがパッケージを実行しようとした場合、パッケージの実行は失敗します。 暗号化処理には、DPAPI が使用されます。<br /><br /> **dtutil** ユーティリティで使用する場合、この保護レベルに対応する値は 1 です。<br /><br /> 注: ユーザー キーを使用する保護レベルに対しては、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では DPAPI 標準を使用しています。 DPAPI の詳細については、MSDN ライブラリ [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408) を参照してください。|  
+|[暗号化をサーバー ストレージに依存する] (**ServerStorage**)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロールを使用して、パッケージ全体を保護します。 このオプションは、パッケージを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb データベースに保存する場合にサポートされます。 また、SSISDB カタログは、 **ServerStorage** 保護レベルを使用します。<br /><br /> このオプションは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からパッケージをファイル システムに保存するときはサポートされません。|  
   
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>保護レベルの設定と SSISDB カタログ  
  SSISDB カタログは、 **ServerStorage** 保護レベルを使用します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置する場合、カタログは自動的にパッケージのデータと機微な値を暗号化します。 また、ユーザーがデータを取得するときには、自動的に暗号化を解除します。  
@@ -143,7 +144,7 @@ ms.lasthandoff: 11/20/2017
   
  パッケージ セキュリティの要件およびオプションを理解するため、「[セキュリティの概要 &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)」を参照しておくと役立つ場合があります。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **Package protection level**  
  一覧から保護レベルを選択します。  
   
@@ -156,7 +157,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="password_dialog"></a> [パッケージ パスワード] ダイアログ ボックス
   **[パッケージ パスワード]** ダイアログ ボックスを使用すると、パスワードによって暗号化されるパッケージのパッケージ パスワードを指定できます。 パッケージで使用される保護レベルが **[機微なデータをパスワードで暗号化する]**または **[すべてのデータをパスワードで暗号化する]** の場合、パスワードを指定する必要があります。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **Password**  
  パスワードを入力します。  
   
