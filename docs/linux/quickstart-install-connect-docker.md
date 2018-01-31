@@ -94,9 +94,10 @@ ms.lasthandoff: 12/04/2017
 
    ![Docker ps コマンドの出力](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-1. **ステータス** 項目が **Up** を示している場合、 SQL Server はコンテナー内で実行状態で、 **PORTS** 項目で示されているポート番号でサービスをリッスンしています。 SQL Server のコンテナーの **STATUS** 項目が **Exited** を示している場合、[構成ガイド」のセクションのトラブルシューティング](sql-server-linux-configure-docker.md#troubleshooting) を参照してください。
+1. 場合、**ステータス**項目のステータスを表示**を**、コンテナー内の SQL Server を実行しとで指定されたポートでリッスンしている、**ポート**列です。 場合、**ステータス**列、SQL Server のコンテナーの番組を**Exited**を参照してください、[構成ガイド」のセクションのトラブルシューティング](sql-server-linux-configure-docker.md#troubleshooting)です。
 
-`-h` パラメーター (ホスト名) も便利なものですが、簡潔さを維持する理由のため、このチュートリアルでは使用されません。 これは、コンテナーの内部名を任意のカスタム値へ変更します。 これは、次の Transact-SQL クエリで返されることになる名前です。
+`-h` (ホスト名) のパラメーターも、役立ちますが、わかりやすくするためには、このチュートリアルでは使用されません。 これは、カスタム値をコンテナーの内部名を変更します。 これは、次の TRANSACT-SQL クエリで返される名前が表示されます。 
+
 
 ```sql
 SELECT @@SERVERNAME,
@@ -125,7 +126,7 @@ SELECT @@SERVERNAME,
    docker exec -it sql1 "bash"
    ```
 
-1. 1 度、コンテナー内で、sqlcmd を使用してローカルに接続します。 既定では　Sqlcmd がパスにないため、フルパスを指定する必要があります。
+1. 1 回、コンテナー内の接続ローカル sqlcmd でします。 Sqlcmd がパスにない、既定では、完全なパスを指定する必要があるようにします。 
 
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>'
@@ -136,7 +137,7 @@ SELECT @@SERVERNAME,
 
 1. 成功すると、**sqlcmd** のコマンド プロンプトである `1>` が表示されます。
 
-## <a name="create-and-query-data"></a>データの作成とデータの問い合わせ
+## <a name="create-and-query-data"></a>データの作成とクエリ 
 
 次のセクションでは、**sqlcmd** と Transact-SQL を使用して新しいデータベースを作成し、データを追加して簡単なクエリを実行します。
 
@@ -192,7 +193,7 @@ SELECT @@SERVERNAME,
 
 ### <a name="select-data"></a>データの取得
 
-ここで、`Inventory` テーブルからデータを問い合わせるクエリを実行します。
+ここで、`Inventory` テーブルからデータを返すクエリを実行します。
 
 1. **sqlcmd** のコマンド プロンプトで、quantity が 152 より大きい `Inventory` テーブルから行を返すクエリを入力します。
 
@@ -220,9 +221,9 @@ SELECT @@SERVERNAME,
 
 コンテナ外の Linux、Windows、または macOS にある任意のSQL 接続ツールから、Docker コンピューターの SQL Server インスタンスへ接続することもできます。
 
-次の手順は、コンテナーの外部にある **sqlcmd** を使用して、コンテナの内部で動作している SQL Server へ接続します。 これらの手順は、コンテナーの外に SQL Server コマンドライン ツールがインストール済みであることを前提としています。 他のツールを使用するときと同じプリンシパルが適用されますが、接続プロセスは各ツールでユニークなものです。
+次の手順を使用して**sqlcmd**コンテナーで実行されている SQL Server に接続するコンテナーの外部でします。 次の手順では、SQL Server コマンド ライン ツールが、コンテナーの外にインストール済みであることを前提としています。 同じプリンシパルが、他のツールを使用するときに適用が、接続するプロセスは、各ツールに固有です。 
 
-1. コンテナーをホストしているコンピューターの IP アドレスを用意してください。 Linux では、 **ifconfig** または **ip addr** を使用します。 Windows では、 **ipconfig** を使用します。
+1. コンテナーをホストしているコンピューターの IP アドレスが見つかりません。 Linux では、次のように使用します。 **ifconfig**または**ip アドレス**です。Windows では、次のように使用します。 **ipconfig**です。 
 
 1. IP アドレスとコンテナーのポート 1433 にマップされたポートを指定して sqlcmd を実行します。 この例では、ホスト マシンのポート 1401 です。
 
@@ -256,10 +257,10 @@ docker rm sql1
 ```
 
 > [!WARNING]
-> コンテナーを停止して完全に削除すると、コンテナー内にあるすべての SQL Server のデータを削除します。 データを保持する必要がある場合 [コンテナーからバックアップ ファイルを作成して、コピーする](tutorial-restore-backup-in-sql-server-container.md) または [コンテナー データの永続化手法](sql-server-linux-configure-docker.md#persist) を参考にしてください。
+> コンテナーの完全に削除を停止して、コンテナー内の任意の SQL Server データを削除します。 データを保持する必要がある場合[を作成し、コンテナーからのバックアップ ファイルをコピー](tutorial-restore-backup-in-sql-server-container.md)か使用して、[コンテナー データの永続化手法](sql-server-linux-configure-docker.md#persist)です。 
 
 ## <a name="next-steps"></a>次のステップ
 
-データベースのバックアップ ファイルをコンテナー内に復元する方法のチュートリアルは、 [Linux Docker コンテナーでの SQL Server データベースを復元](tutorial-restore-backup-in-sql-server-container.md) を参照してください。 複数のコンテナーを実行する、データを永続性させる、およびトラブルシューティング等のような、その他のシナリオを探すには [Docker で SQL Server 2017 のコンテナーのイメージを構成する ](sql-server-linux-configure-docker.md) を参照してください。
+コンテナー内にデータベースのバックアップ ファイルを復元する方法のチュートリアルでは、次を参照してください。 [Linux Docker コンテナーでの SQL Server データベースを復元](tutorial-restore-backup-in-sql-server-container.md)です。 複数のコンテナーを実行するなどその他のシナリオを探索するデータの永続性、およびトラブルシューティングを参照してください[Docker でコンテナーのイメージを構成する SQL Server 2017](sql-server-linux-configure-docker.md)です。
 
 また、その他のリソース、フィードバック、および既知の問題については [mssql-docker GitHub リポジトリ](https://github.com/Microsoft/mssql-docker) を参考にしてください。
