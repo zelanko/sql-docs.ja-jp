@@ -1,12 +1,13 @@
-# [Analysis Services とは](analysis-services.md)
+# [SQL Server Analysis Services の概要](analysis-services.md)
 
 # 概要
 ## [SQL Server Analysis Services 2016 の新機能](what-s-new-in-analysis-services.md)  
 ## [SQL Server Analysis Services 2017 の新機能](what-s-new-in-sql-server-analysis-services-2017.md) 
 ## [新規および更新のアーティクル](new-updated-analysis-services.md)
 ## [ツールとアプリケーション](tools-and-applications-used-in-analysis-services.md)   
+## [クライアント ライブラリ (データ プロバイダー)](../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)
 ## [テーブル ソリューションと多次元ソリューションの比較](comparing-tabular-and-multidimensional-solutions-ssas.md)  
-## [SQL Server 2016 の各エディションがサポートする Analysis Services の機能](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
+## [SQL Server の各エディションがサポートする Analysis Services の機能](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
 ## [旧バージョンとの互換性 (SQL Server 2016 Analysis Services)](analysis-services-backward-compatibility.md)  
 ## [旧バージョンとの互換性 (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)  
 ## [グローバリゼーションと翻訳](globalization-scenarios-for-analysis-services.md)  
@@ -14,9 +15,6 @@
 ### [翻訳](translation-support-in-analysis-services.md)  
 ### [通貨換算](currency-conversions-analysis-services.md)  
 ### [ヒントとベスト プラクティス](globalization-tips-and-best-practices-analysis-services.md) 
-
-# サンプル
-## [Analysis Services のサンプル](analysis-services-samples.md)
 
 # チュートリアル
 ## [表形式のモデリング (1200 互換性レベル)](tabular-modeling-adventure-works-tutorial.md)  
@@ -112,6 +110,8 @@
 ## [スキーマ行セット](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
 ## [Analysis Services スクリプト言語 (XMLA 用 ASSL)](scripting/analysis-services-scripting-language-assl-for-xmla.md)
 
+# サンプル
+## [Analysis Services のサンプル](analysis-services-samples.md)
 
 # リファレンス
 ## [MSDN の Data Analysis Expressions (DAX) の概要](https://msdn.microsoft.com/library/gg413422.aspx)

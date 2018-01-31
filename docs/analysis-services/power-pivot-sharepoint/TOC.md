@@ -1,4 +1,4 @@
-# [概要](power-pivot-for-sharepoint-ssas.md)  
+# [Power Pivot for SharePoint](power-pivot-for-sharepoint-ssas.md)  
 # [サーバーの全体管理での Power Pivot サーバーの管理と構成](power-pivot-server-administration-and-configuration-in-central-administration.md)  
 ## [SharePoint への Power Pivot ソリューションの配置](deploy-power-pivot-solutions-to-sharepoint.md)  
 ## [Power Pivot サービス アプリケーションの作成および構成](create-and-configure-power-pivot-service-application-in-ca.md)  
