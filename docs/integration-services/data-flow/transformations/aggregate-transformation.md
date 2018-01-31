@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c52546eab7dc5c52fb38e03616df648d3d5d67d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7262db9da133a2aa6f82f501e8dab3228de16efb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="aggregate-transformation"></a>集計変換
   集計変換は Average などの集計関数を列の値に適用し、その結果を変換出力にコピーします。 集計変換では、集計関数の他に GROUP BY 句を使用して集計範囲のグループを指定できます。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 |操作|Description|  
 |---------------|-----------------|  
 |グループ化|データセットをグループに分割します。 グループ化には、任意のデータ型の列を使用できます。 詳細については、「[GROUP BY (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md)」を参照してください。|  
-|Sum|列内の値を合計します。 numeric データ型を持つ列のみ、合計することができます。 詳細については、「[SUM (Transact-SQL)](../../../t-sql/functions/sum-transact-sql.md)」を参照してください。|  
+|SUM|列内の値を合計します。 numeric データ型を持つ列のみ、合計することができます。 詳細については、「[SUM (Transact-SQL)](../../../t-sql/functions/sum-transact-sql.md)」を参照してください。|  
 |平均|列内の列値の平均を返します。 numeric データ型を持つ列のみ、平均値を計算することができます。 詳細については、「[AVG (Transact-SQL)](../../../t-sql/functions/avg-transact-sql.md)」を参照してください。|  
 |Count|グループ内のアイテムの数を返します。 詳細については、「[COUNT (Transact-SQL)](../../../t-sql/functions/count-transact-sql.md)」を参照してください。|  
 |個別のカウント|グループ内の NULL でない一意の値の数を返します。|  
@@ -132,7 +133,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [マージ変換およびマージ結合変換用にデータを並べ替える](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  [集計変換を使用してデータセットの値を集計する](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 ## <a name="aggregate-transformation-editor-aggregations-tab"></a>[集計変換エディター] ([集計] タブ)
@@ -143,7 +144,7 @@ ms.lasthandoff: 11/20/2017
 >   
 >  集計変換では、 **[キー]** および **[キー スケール]** は、 **グループ化** 操作の結果として予想されるグループの数を示します。 **[個別カウント キー数]** および **[個別カウント スケール]** は、 **個別のカウント** 操作の結果として予想される個別の値の数を示します。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **[詳細設定]/[基本]**  
  複数の出力用に複数の集計を構成するオプションを表示したり非表示にしたりします。 既定では、[詳細設定] オプションは非表示です。  
   
@@ -156,7 +157,7 @@ ms.lasthandoff: 11/20/2017
  **[キー スケール]**  
  [詳細設定] 画面で、集計によって書き込むことのできるキーの概数をオプションで指定します。 既定では、このオプションの値は **[未指定]**です。 **[キー スケール]** プロパティと **[キー]** プロパティの両方が設定されている場合、 **[キー]** の値が優先されます。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |[未指定]|[キー スケール] プロパティは使用されません。|  
 |Low|集計では約 500,000 キーを書き込むことができます。|  
@@ -194,12 +195,12 @@ ms.lasthandoff: 11/20/2017
  **Count Distinct Scale**  
  集計で書き込むことのできる個別の値の概数をオプションで指定します。 既定では、このオプションの値は **[未指定]**です。 **[CountDistinctScale]** および **[CountDistinctKeys]** の両方が指定されている場合、 **[CountDistinctKeys]** が優先されます。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |[未指定]|**CountDistinctScale** プロパティは使用されません。|  
 |Low|集計では約 500,000 の個別の値を書き込むことができます。|  
 |Medium|集計では約 5,000,000 の個別の値を書き込むことができます。|  
-|High|集計では 25,000,000 を超える個別の値を書き込むことができます。|  
+|高|集計では 25,000,000 を超える個別の値を書き込むことができます。|  
   
  **Count Distinct Keys**  
  集計によって書き込むことのできる個別の値の正確な数をオプションで指定します。 **[CountDistinctScale]** および **[CountDistinctKeys]** の両方が指定されている場合、 **[CountDistinctKeys]** が優先されます。  
@@ -212,11 +213,11 @@ ms.lasthandoff: 11/20/2017
 >   
 >  集計変換では、 **[キー]** および **[キー スケール]** は、 **グループ化** 操作の結果として予想されるグループの数を示します。 **[個別カウント キー数]** および **[個別カウント スケール]** は、 **個別のカウント** 操作の結果として予想される個別の値の数を示します。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **[キー スケール]**  
  集計で予想される、概算のキー数をオプションで指定します。 変換ではこの情報を使用して最初のキャッシュ サイズを最適化します。 既定では、このオプションの値は **[未指定]**です。 **[キー スケール]** と **[キーの数]** の両方が指定されている場合、 **[キーの数]** の方が優先されます。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |[未指定]|**[キー スケール]** プロパティは使用されません。|  
 |Low|集計では約 500,000 キーを書き込むことができます。|  
@@ -229,12 +230,12 @@ ms.lasthandoff: 11/20/2017
  **[個別カウント スケール]**  
  集計で書き込むことのできる個別の値の概数をオプションで指定します。 既定では、このオプションの値は **[未指定]**です。 **[個別カウント スケール]** と **[個別カウント キー数]** の両方が指定されている場合、 **[個別カウント キー数]** の方が優先されます。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |[未指定]|CountDistinctScale プロパティは使用されません。|  
 |Low|集計では約 500,000 の個別の値を書き込むことができます。|  
 |Medium|集計では約 5,000,000 の個別の値を書き込むことができます。|  
-|High|集計では 25,000,000 を超える個別の値を書き込むことができます。|  
+|高|集計では 25,000,000 を超える個別の値を書き込むことができます。|  
   
  **[個別カウント キー数]**  
  集計によって書き込むことのできる個別の値の正確な数をオプションで指定します。 **[個別カウント スケール]** と **[個別カウント キー数]** の両方が指定されている場合、 **[個別カウント キー数]** の方が優先されます。  

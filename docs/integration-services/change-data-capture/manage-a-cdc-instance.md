@@ -8,21 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: manIns
+f1_keywords:
+- manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db85e4aee5ede4a62a660c6adc5d87fde6b89bd7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b61e0362a4b29f1721a08469f8df529861e10174
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="manage-a-cdc-instance"></a>CDC インスタンスの管理
   CDC デザイナー コンソールを使用して、作成したインスタンスに関する情報を表示し、インスタンスの操作を管理することができます。  
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/20/2017
   
  CDC インスタンスをリセットし、変更テーブルに書き込まれた変更を削除することを確認するには、確認のダイアログ ボックスで **[OK]** をクリックします。  
   
- **Del**  
+ **削除**  
  CDC インスタンスを完全に削除するには、 **[削除]** をクリックします。 このオプションは、CDC インスタンスが停止しているときにのみ使用できます。  
   
  CDC インスタンスを削除することを確認するには、確認のダイアログ ボックスで **[OK]** をクリックします。  
@@ -60,14 +62,14 @@ ms.lasthandoff: 11/20/2017
  **[CDC インスタンス配置スクリプト]**  
  このリンクをクリックすると、CDC インスタンス配置スクリプトを表示する [CDC インスタンス配置スクリプト] ダイアログ ボックスが表示されます。 このダイアログ ボックスの詳細については、「 [CDC Instance Deployment Script](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)」を参照してください。  
   
- **プロパティ**  
+ **[プロパティ]**  
  このリンクをクリックすると、プロパティ エディターが表示されます。 CDC インスタンスの構成はプロパティ エディターを使用して編集します。 CDC インスタンスのプロパティの編集の詳細については、「 [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md)」を参照してください。  
   
  **ビューアーのタブ**  
   
  CDC インスタンスの情報を表示するときは、次に示すビューアーのタブを使用できます。 これらのタブに表示される情報は読み取り専用です。  
   
- **[状態]**  
+ **ステータス**  
  このタブには、CDC インスタンスの現在の状態に関する情報と統計が表示されます。 このタブには、次の情報が含まれています。  
   
 -   **[状態]**: CDC インスタンスの現在の状態を示すアイコンです。 これらの状態を次に示します。  
@@ -117,7 +119,7 @@ ms.lasthandoff: 11/20/2017
   
  これらのプロパティとその編集方法については、「 [Edit Tables](../../integration-services/change-data-capture/edit-tables.md)」を参照してください。  
   
- **[詳細設定]**  
+ **詳細設定**  
  CDC インスタンスの詳細プロパティとプロパティ値を表示します。 このタブは読み取り専用です。 これらのプロパティを編集するには、左側のペインでインスタンスを右クリックし、**[プロパティ]** を選択するか、右側のペインで **[プロパティ]** をクリックして [\<インスタンス> のプロパティ] ダイアログ ボックスを開きます。  
   
  これらのプロパティとその編集方法については、「 [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md)」を参照してください。  

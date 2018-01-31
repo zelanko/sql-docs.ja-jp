@@ -8,23 +8,24 @@ ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-caps.latest.revision: "9"
+caps.latest.revision: 
 f1_keywords:
 - sql13.dts.designer.odatasource.connectionmanager.f1
 - sql13.dts.designer.odataconnectionmanager.f1
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38e19fec56bb0392435adb1b6c6313fed59770b1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 331cf4ff00eeda4b1c1d22c021138ae67d6d23b9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odata-connection-manager"></a>OData 接続マネージャー
  OData 接続マネージャーを使用して、OData データ ソースに接続します。 OData ソース コンポーネントは OData 接続マネージャーを使用して OData データ ソースに接続し、サービスから取得したデータを使用します。 詳細については、「 [OData Source](../../integration-services/data-flow/odata-source.md)」を参照してください。  
@@ -68,13 +69,13 @@ Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続�
 |プロパティ|Description|  
 |URL|サービス ドキュメントに対応する URL。|  
 |UserName|認証に使用するユーザー名 (必要な場合)。|  
-|Password|認証に使用するパスワード (必要な場合)。|  
+|パスワード|認証に使用するパスワード (必要な場合)。|  
 |ConnectionString|接続マネージャーの他のプロパティが含まれます。|  
   
 ## <a name="odata-connection-manager-editor"></a>[OData 接続マネージャー エディター]
   **[OData 接続マネージャー エディター]** ダイアログ ボックスを使用して、OData データ ソースへの接続を追加するか、既存の接続を編集します。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **接続マネージャー名**  
  接続マネージャーの名前です。  
   

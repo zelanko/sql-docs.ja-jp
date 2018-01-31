@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c72863715fb807cba939c997da386b93004332f7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 95197ab786c24da00fc87f7788575d5847770c6b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Oracle CDC Service の使用
   ここでは、Oracle CDC Service のいくつかの重要な概念について説明します。 このセクションで説明する概念は次のとおりです。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
 |アイテム|Description|  
 |----------|-----------------|  
-|timestamp|トレース レコードが書き込まれたときの正確な UTC タイムスタンプ。|  
+|TIMESTAMP|トレース レコードが書き込まれたときの正確な UTC タイムスタンプ。|  
 |型|次のいずれかの値が格納されます。<br /><br /> error<br /><br /> INFO<br /><br /> trace|  
 |node|レコードが書き込まれたノードの名前。|  
 |ステータス|状態テーブルで使用される状態コード。|  
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/20/2017
   
 |アイテム|Description|  
 |----------|-----------------|  
-|name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに含まれる Oracle データベースの名前。|  
+|NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに含まれる Oracle データベースの名前。|  
 |config_version|対応する CDC データベースの **xdbcdc_config** テーブルで行われた最後の変更のタイムスタンプ (UTC)、またはこのテーブルの現在の行のタイムスタンプ (UTC)。<br /><br /> UPDATE トリガーでは、このアイテムの GETUTCDATE() の値が適用されます。 CDC サービスでは**config_version** を使用して、構成の変更や有効化/無効化について確認する必要がある CDC インスタンスを識別できます。|  
 |cdc_service_name|選択された Oracle データベースを処理する Oracle CDC Service を示します。|  
 |enabled|Oracle CDC インスタンスがアクティブ (1) か無効 (0) かを示します。 Oracle CDC Service の起動時には、有効 (1) とマークされたインスタンスだけが開始されます。<br /><br /> **注**: Oracle CDC インスタンスは、再試行できないエラーが原因で無効になることがあります。 この場合は、エラーを解決してからインスタンスを手動で再起動する必要があります。|  
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/20/2017
 |ref_count|同じ Oracle CDC Service がインストールされているコンピューターの数を示します。 同じ名前の Oracle CDC Service が追加されるたびに値が増加し、それらのサービスが削除されると減少します。 この行はカウンターが 0 に達すると削除されます。|  
 |active_service_node|CDC サービスを現在処理している Windows ノードの名前。 この列は、サービスが適切に停止されると null に設定され、アクティブなサービスがなくなったことが示されます。|  
 |active_service_heartbeat|現在の CDC サービスがまだアクティブであるかどうかを示します。<br /><br /> このアイテムは、アクティブな CDC サービスに対する現在のデータベースの UTC タイムスタンプに基づいて一定の間隔で更新されます。 既定の間隔は 30 秒ですが、この間隔は構成することも可能です。<br /><br /> 構成された間隔が経過してもハートビートが更新されていないことが保留中の CDC サービスで検出されると、その保留中のサービスで、アクティブな CDC サービスの役割の引き継ぎが試行されます。|  
-|オプション|トレースやチューニングなどの二次的なオプションを指定します。 **name[=value][; ]**の形式で記述されます。 options の文字列では、ODBC 接続文字列と同じセマンティクスを使用します。 オプションがブール値 (value が yes または no) の場合は、name だけでもかまいません。<br /><br /> trace の有効な値は次のとおりです。<br /><br /> **true**<br /><br /> **on**<br /><br /> **オプション**<br /><br /> **off**<br /><br /> **\<クラス名>[,クラス名>]**<br /><br /> <br /><br /> 既定値は **false**です。<br /><br /> **service_heartbeat_interval** は、active_service_heartbeat 列を更新する間隔 (秒) です。 既定値は、 **30**です。 最大値は **3600**です。<br /><br /> **service_config_polling_interval** は、構成の変更を確認するポーリング間隔 (秒) です。 既定値は、 **30**です。 最大値は **3600**です。<br /><br /> **sql_command_timeout** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対するコマンドのタイムアウトです。 既定値は **1**です。 最大値は **3600**です。|  
+|options|トレースやチューニングなどの二次的なオプションを指定します。 **name[=value][; ]**の形式で記述されます。 options の文字列では、ODBC 接続文字列と同じセマンティクスを使用します。 オプションがブール値 (value が yes または no) の場合は、name だけでもかまいません。<br /><br /> trace の有効な値は次のとおりです。<br /><br /> **true**<br /><br /> **on**<br /><br /> **オプション**<br /><br /> **off**<br /><br /> **\<クラス名>[,クラス名>]**<br /><br /> <br /><br /> 既定値は **false**です。<br /><br /> **service_heartbeat_interval** は、active_service_heartbeat 列を更新する間隔 (秒) です。 既定値は、 **30**です。 最大値は **3600**です。<br /><br /> **service_config_polling_interval** は、構成の変更を確認するポーリング間隔 (秒) です。 既定値は、 **30**です。 最大値は **3600**です。<br /><br /> **sql_command_timeout** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対するコマンドのタイムアウトです。 既定値は **1**です。 最大値は **3600**です。|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>MSXDBCDC データベースのストアド プロシージャ  
@@ -161,7 +162,7 @@ ms.lasthandoff: 11/20/2017
  CDC テーブルの詳細については、CDC デザイナー コンソールのヘルプ システムで「CDC データベース」を参照してください。  
   
 ###  <a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
- **dbo.xcbcdc_add_service** プロシージャでは、 **MSXDBCDC.xdbcdc_services** テーブルにエントリを追加し、 **MSXDBCDC.xdbcdc_services** テーブル内の該当するサービスの ref_count 列の値を 1 増やします。 また、 **ref_count** が 0 になると、その行を削除します。  
+ **dbo.xcbcdc_add_service** プロシージャでは、 **MSXDBCDC.xdbcdc_services** テーブルにエントリを追加し、 **MSXDBCDC.xdbcdc_services** テーブル内の該当するサービスの ref_count 列の値を 1 増やします。 また、**ref_count** が 0 になると、その行を削除します。  
   
  **dbo.xcbcdc_add_service\<service name, username>** プロシージャを使用するには、対象の CDC インスタンス データベースの **db_owner** データベース ロールのメンバーであるか、**sysadmin** または **serveradmin** 固定サーバー ロールのメンバーである必要があります。  
   

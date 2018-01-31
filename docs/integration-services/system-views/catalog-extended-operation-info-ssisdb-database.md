@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6eaae27a96c79901693899b2e8730efd87e20864
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: afe4af0fc87a44786e879d1fc86706f30c2e691f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogextendedoperationinfo-ssisdb-database"></a>catalog.extended_operation_info (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +40,10 @@ ms.lasthandoff: 11/20/2017
 |start_time|**datetimeoffset(7)**|操作が開始された日時。|  
 |end_time|**datetimeoffset(7)**|操作が終了した日時。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  1 回の操作で、複数の拡張された情報行を指定できます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  このビューには、次の権限のいずれかが必要です。  
   
 -   この操作の READ 権限  

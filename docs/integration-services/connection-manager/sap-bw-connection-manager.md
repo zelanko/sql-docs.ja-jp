@@ -8,21 +8,23 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06b166a1-a9df-48ea-a0e8-9b8d6979c0a1
-caps.latest.revision: "10"
-f1_keywords: sql13.dts.designer.sapbwconnectionmanager.f1
+caps.latest.revision: 
+f1_keywords:
+- sql13.dts.designer.sapbwconnectionmanager.f1
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e59af9f732448cad7b45650e8c01f383fbc9b46
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 23e7412671010511897e2937301e63942b44b5f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 接続マネージャー
   SAP BW 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の接続マネージャー コンポーネントです。 したがって、SAP BW 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の変換元と変換先コンポーネントが必要とする SAP Netweaver BW version 7 システムへの接続を提供します ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW パッケージの一部の SAP BW 変換元と変換先は、SAP BW 接続マネージャーを使用する唯一の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントです)。  
@@ -77,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
     -   [SAP BW 接続マネージャー] を右クリックし、 **[編集]**を選択します。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
   
 > [!NOTE]  
 >  接続マネージャーを構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
@@ -88,10 +90,10 @@ ms.lasthandoff: 11/20/2017
  **言語**  
  システムが使用する言語を指定します。 たとえば、英語の場合は、 **[EN]** を指定します。  
   
- **ユーザー名**  
+ **User name**  
  システムへの接続に使用するユーザー名を指定します。  
   
- **パスワード**  
+ **Password**  
  そのユーザー名のパスワードを指定します。  
   
  **単一のアプリケーション サーバーを使用する**  

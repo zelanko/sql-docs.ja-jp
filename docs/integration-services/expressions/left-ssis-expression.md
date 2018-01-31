@@ -8,20 +8,21 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88edf86e9f00e890f3e390f801ae208be3bb2799
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c3159eaf47849fc3efd5f2392875217d4aa87a3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="left-ssis-expression"></a>LEFT (SSIS 式)
   指定された文字式の一番左の部分から指定された数の文字を返します。  
@@ -43,7 +44,7 @@ LEFT(character_expression,number)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *number* が *character_expression*より長い場合、関数は *character_expression*を返します。  
   
  *number* が 0 の場合、関数は長さが 0 の文字列を返します。  

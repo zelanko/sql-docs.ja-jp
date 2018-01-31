@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5b2d65941deb00e3c227bea39b14f72c86d08ed
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2823f22fa0396451fbf5de1b5dd3840559ca1e02
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ado-net-custom-properties"></a>ADO NET カスタム プロパティ
   **変換元のカスタム プロパティ**  
@@ -32,8 +33,8 @@ ms.lasthandoff: 11/20/2017
   
 |プロパティ名|データ型|Description|  
 |-------------------|---------------|-----------------|  
-|CommandTimeOut|文字列|SQL コマンドがタイムアウトになる時間を秒数で指定する値です。値が 0 の場合、コマンドはタイムアウトになりません。|  
-|SqlCommand|文字列|ADO NET ソースがデータの抽出に使用する SQL ステートメントです。<br /><br /> パッケージを読み込むときに、ADO NET ソースが使用する SQL ステートメントでこのプロパティを動的に更新できます。 詳しくは、「[Integration Services &#40;SSIS&#41; の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」および「[パッケージでプロパティ式を使用する](../../integration-services/expressions/use-property-expressions-in-packages.md)」をご覧ください。|  
+|CommandTimeOut|String|SQL コマンドがタイムアウトになる時間を秒数で指定する値です。値が 0 の場合、コマンドはタイムアウトになりません。|  
+|SqlCommand|String|ADO NET ソースがデータの抽出に使用する SQL ステートメントです。<br /><br /> パッケージを読み込むときに、ADO NET ソースが使用する SQL ステートメントでこのプロパティを動的に更新できます。 詳しくは、「[Integration Services &#40;SSIS&#41; の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」および「[パッケージでプロパティ式を使用する](../../integration-services/expressions/use-property-expressions-in-packages.md)」をご覧ください。|  
 |AllowImplicitStringConversion|ブール値|次の処理を実行するかどうかを示す値です。<br /><br /> - 外部メタデータの型と文字列型である出力列の型が一致しない場合に、検証エラーを生成しない (DT_WSTR または DT_NTEXT)。<br /><br /> - 外部メタデータの型を、出力列が使用する文字列データ型に暗黙的に変換する。<br /><br /> <br /><br /> 既定値は TRUE です。<br /><br /> 詳しくは、「 [ADO NET ソース](../../integration-services/data-flow/ado-net-source.md)」をご覧ください。|  
   
  ADO NET ソースの出力および出力列には、カスタム プロパティがありません。  
@@ -50,11 +51,11 @@ ms.lasthandoff: 11/20/2017
 |--------------|---------------|-----------------|  
 |BatchSize|Integer|サーバーに送信されるバッチ内の行数です。 値 **0** は、バッチ サイズが内部バッファーのサイズに一致することを示します。 このプロパティの既定値は **0**です。|  
 |CommandTimeOut|Integer|SQL コマンドがタイムアウトになるまでの最大秒数。この値に **0** を指定すると、時間は無制限になります。 このプロパティの既定値は **0**です。|  
-|TableOrViewName|文字列|変換先のテーブルまたはビューの名前。|  
+|TableOrViewName|String|変換先のテーブルまたはビューの名前。|  
   
  詳しくは、「 [ADO NET 変換先](../../integration-services/data-flow/ado-net-destination.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

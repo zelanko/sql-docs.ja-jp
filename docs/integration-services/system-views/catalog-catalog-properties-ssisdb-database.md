@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16fa5f45b6d4368816e7d5ea115d7f4cff6aa9cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ccb26f47a44f02f17cc0b17df078d7daf0b43977
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/20/2017
 |property_name|**nvarchar (256)**|カタログ プロパティの名前。|  
 |property_value|**nvarchar (256)**|カタログ プロパティの値。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このビューは、各カタログ プロパティの行を表示します。
   
 |プロパティ名|Description|  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
 |**VERSION_CLEANUP_ENABLED**|値が `TRUE` の場合は、プロジェクト バージョンの **MAX_PROJECT_VERSIONS** 番号のみがカタログに格納され、その他のプロジェクト バージョンは削除されます。 値が **FALSE** の場合は、すべてのプロジェクトのバージョンがカタログに格納されます。 注: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ジョブでは操作のクリーンアップを実行します。|
 |||
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  このビューには、次の権限のいずれかが必要です。  
   
 -   **ssis_admin** データベース ロールのメンバーシップ  

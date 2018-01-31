@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: "115"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ae247a65d28b039210dcf8d3243ae19ffde504cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 82f72b4696d1169055c5726d9095eff70715b523
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-sql-task"></a>SQL 実行タスク
   SQL 実行タスクは、パッケージ内の SQL ステートメントやストアド プロシージャを実行します。 このタスクには、1 つの SQL ステートメントまたは順に実行される複数の SQL ステートメントを含めることができます。 SQL 実行タスクは、次の目的で使用できます。  
@@ -123,7 +124,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
  **名前**  
  ワークフロー内の SQL 実行タスクに一意な名前を指定します。 指定された名前は [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
- **Description**  
+ **[説明]**  
  SQL 実行タスクの説明です。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、タスクの目的について記述することをお勧めします。  
   
  **[TimeOut]**  
@@ -149,7 +150,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
   
  **関連項目:** [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)」、「 [ODBC 接続マネージャー](../../integration-services/connection-manager/odbc-connection-manager.md)」、「 [ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)」、「 [ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)」、「 [SQL Server Compact Edition 接続マネージャー](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **接続**  
+ **[接続]**  
  定義済みの接続マネージャーの一覧から接続を選択します。 新しい接続を作成するには、[\<**新しい接続...**>] を選択します。  
   
  **[SQLSourceType]**  
@@ -159,7 +160,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
   
  このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[直接入力]**|Transact-SQL ステートメントをソースに設定します。 この値を選択すると、動的オプション **[SQLStatement]**が表示されます。|  
 |**[ファイル接続]**|Transact-SQL ステートメントを含んでいるファイルを選択します。 この値を設定すると、動的オプション **[ファイル接続]**が表示されます。|  
@@ -173,7 +174,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
   
  **関連項目:**  [実行の準備](../../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
- **参照**  
+ **[参照]**  
  **[開く]** ダイアログ ボックスを使用して、SQL ステートメントを含むファイルの場所を指定します。 ファイルを選択して、ファイルの内容を SQL ステートメントとして **[SQLStatement]** プロパティにコピーします。  
   
  **[クエリの作成]**  
@@ -205,7 +206,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>[パラメーター マッピング] ページ - [SQL 実行タスク エディター]
 **[SQL 実行タスク エディター]** ダイアログ ボックスの **[パラメーター マッピング]** ページを使用すると、SQL ステートメント内のパラメーターに変数をマップできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **[変数名]**  
  **[追加]** をクリックしてパラメーター マッピングを追加した後で、システム変数またはユーザー定義変数を一覧から選択するか、[\<**新しい変数...**>] をクリックして **[変数の追加]** ダイアログ ボックスで新しい変数を追加します。  
   
@@ -214,7 +215,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
  **[方向]**  
  パラメーターの方向を選択します。 各変数を入力パラメーター、出力パラメーター、またはリターン コードにマップします。  
   
- **データ型**  
+ **[データ型]**  
  パラメーターのデータ型を選択します。 使用できるデータ型の一覧は、タスクによって使用される接続マネージャーで選択したプロバイダーに固有のものです。  
   
  **[パラメーター名]**  
@@ -236,7 +237,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
 ## <a name="result-set-page---execute-sql-task-editor"></a>[結果セット] ページ - [SQL 実行タスク エディター]
 **[SQL 実行タスク エディター]** ダイアログ ボックスの **[結果セット]** ページを使用すると、SQL ステートメントの結果を新しい変数または既存の変数にマップできます。 このダイアログ ボックスのオプションは、[全般] ページの **[ResultSet]** が **[なし]**に設定されている場合は無効です。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **[結果名]**  
  **[追加]**をクリックして結果セットのマッピング設定を追加した後、結果に名前を付けます。 結果セットの種類によっては、特定の結果名を使用する必要があります。  
   
@@ -464,7 +465,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
     > [!IMPORTANT]  
     >  パラメーター マッピングの順序は、SQL ステートメントで使用されるパラメーターの順序と同じである必要があります。  
   
-14. **[OK]**をクリックします。  
+14. **[OK]** をクリックします。  
 
 ##  <a name="Return_codes"></a> リターン コードの値の取得  
  ストアド プロシージャは、リターン コードという整数値を返してプロシージャの実行状態を表すことができます。 SQL 実行タスクにリターン コードを実装するには、 **ReturnValue** 型のパラメーターを使用します。  
@@ -529,7 +530,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
 |---------------------|---------------------------|--------------------|  
 |単一行|結果セット内の型列と互換性のあるすべての型|適用なし|  
 |完全な結果セット|**オブジェクト**|タスクで ADO、OLE DB、Excel、および ODBC 接続マネージャーを含むネイティブ接続マネージャー使用する場合、返されるオブジェクトは ADO **Recordset**です。<br /><br /> タスクで [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーなどのマネージ接続マネージャーを使用する場合、返されるオブジェクトは **System.Data.DataSet** です。<br /><br /> 次の例に示すように、スクリプト タスクを使用して、 **System.Data.DataSet** オブジェクトにアクセスできます。<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
-|XML|**文字列**|**文字列**|  
+|XML|**String**|**String**|  
 |XML|**オブジェクト**|タスクで ADO、OLE DB、Excel、および ODBC 接続マネージャーを含むネイティブ接続マネージャー使用する場合、返されるオブジェクトは **MSXML6.IXMLDOMDocument**です。<br /><br /> タスクで [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーなどのマネージ接続マネージャーを使用する場合、返されるオブジェクトは **System.Xml.XmlDocument** です。|  
   
  変数は、SQL 実行タスクまたはパッケージのスコープ内で定義できます。 変数にパッケージ スコープがある場合、結果セットはパッケージ内の他のタスクやコンテナーで利用できます。また、パッケージ実行タスクや DTS 2000 パッケージ実行タスクが実行する任意のパッケージでも利用できます。  
@@ -565,10 +566,10 @@ SQL ステートメントとストアド プロシージャでは多くの場合
   
      一般に、列名を結果セット名として使用することも、列リストでの列の序数位置を結果セットとして使用することもできます。 列名を結果セットの名前として使用できるかどうかは、タスクの構成で指定されているプロバイダーによって異なります。 すべてのプロバイダーで列名が使用できるわけではありません。  
   
-11. **[OK]**をクリックします。  
+11. **[OK]** をクリックします。  
 
 ## <a name="troubleshoot-the-execute-sql-task"></a>SQL 実行タスクのトラブルシューティング  
- SQL 実行タスクによる外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、SQL 実行タスクが実行する SQL コマンドに関するトラブルシューティングを行うことができます。 SQL 実行タスクによる外部データ プロバイダーの呼び出しのログを記録するには、パッケージ ログ記録を有効にして、パッケージ レベルで **Diagnostic** イベントを選択します。 詳細については、「 [パッケージ実行のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
+ SQL 実行タスクによる外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、SQL 実行タスクが実行する SQL コマンドに関するトラブルシューティングを行うことができます。 SQL 実行タスクによる外部データ プロバイダーの呼び出しのログを記録するには、パッケージ ログ記録を有効にして、パッケージ レベルで **Diagnostic** イベントを選択します。 詳細については、「[パッケージ実行のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
   
  SQL コマンドまたはストアド プロシージャから、複数の結果セットが返される場合があります。 このような結果セットには、 **SELECT** クエリの結果である行セットだけでなく、 **RAISERROR** ステートメントまたは **PRINT** ステートメントのエラーの結果である単一値も含まれています。 1 つ目以外の結果セット内のエラーがタスクで無視されるかどうかは、使用する接続マネージャーの種類によって異なります。  
   
@@ -577,7 +578,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
 -   ODBC 接続マネージャーおよび ADO.NET 接続マネージャーを使用する場合、1 つ目の結果セット以外も無視されません。 これらの接続マネージャーでは、2 つ目以降の結果セットにエラーが含まれていると、エラーが発生してタスクが失敗します。  
   
 ### <a name="custom-log-entries"></a>カスタム ログ エントリ  
- 次の表では、SQL 実行タスクのカスタム ログ エントリを説明します。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
+ 次の表では、SQL 実行タスクのカスタム ログ エントリを説明します。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
 |ログ エントリ|Description|  
 |---------------|-----------------|  

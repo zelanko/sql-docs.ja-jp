@@ -8,21 +8,23 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Lookup transformation [Integration Services]
+helpviewer_keywords:
+- Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 804b0ab72a0e52c9ddcd10f8261998e0e8847d9f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5669f4f0a0226599b717c4cce5358f5c9ddd7245
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>フル キャッシュ モードの参照変換 - キャッシュ接続マネージャー
   フル キャッシュ モードおよびキャッシュ接続マネージャーを使用するように参照変換を構成できます。 フル キャッシュ モードでは、参照変換の実行前に参照データセットがキャッシュに読み込まれます。  
@@ -85,7 +87,7 @@ ms.lasthandoff: 11/20/2017
      インデックス以外の列の場合、インデックス位置は 0 です。 インデックス列の場合、インデックスの位置は連続した正の数になります。  
   
     > [!NOTE]  
-    >  参照変換がキャッシュ接続マネージャーを使用するように構成されている場合、参照データセット内のインデックス列のみ入力列にマップできます。 また、すべてのインデックス列をマップする必要があります。 詳細については、「 [[キャッシュ接続マネージャー エディター]](../../integration-services/connection-manager/cache-connection-manager-editor.md)」を参照してください。  
+    >  参照変換がキャッシュ接続マネージャーを使用するように構成されている場合、参照データセット内のインデックス列のみ入力列にマップできます。 また、すべてのインデックス列をマップする必要があります。 詳細については、「 [キャッシュ接続マネージャー エディター](../../integration-services/connection-manager/cache-connection-manager-editor.md)」を参照してください。  
   
 6.  キャッシュをファイルに保存するには、 **[キャッシュ接続マネージャー エディター]**の **[全般]** タブで、次のオプションを設定してキャッシュ接続マネージャーを構成します。  
   
@@ -98,7 +100,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  パッケージの保護レベルは、キャッシュ ファイルに適用されません。 キャッシュ ファイルに機密情報が含まれている場合は、アクセス制御リスト (ACL) を使用して、ファイルを格納している場所またはフォルダーへのアクセスを制限します。 特定のアカウントに対してのみアクセスを有効にする必要があります。 詳細については、「 [パッケージで使用されるファイルへのアクセス](../../integration-services/security/security-overview-integration-services.md#files)」を参照してください。  
   
-7.  必要に応じてキャッシュ変換を構成します。 詳細については、「[[キャッシュ変換エディター] ([接続マネージャー] ページ)](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md)」および「[[キャッシュ変換エディター] ([マッピング] ページ)](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md)」を参照してください。  
+7.  必要に応じてキャッシュ変換を構成します。 詳細については、「[キャッシュ変換エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md)」および「[キャッシュ変換エディター &#40;[マッピング] ページ&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md)」を参照してください。  
   
 8.  2 番目のデータ フローで参照変換を追加し、次のタスクを実行して変換を構成します。  
   
@@ -127,7 +129,7 @@ ms.lasthandoff: 11/20/2017
   
     8.  **[使用できる参照列]** 一覧で列を選択します。 次に、 **[参照操作]** 一覧で、参照列の値を入力列の値と置き換えるか、新しい列に書き出すかを指定します。  
   
-    9. エラー出力を構成するには、**[エラー出力]** ページをクリックし、エラー処理オプションを設定します。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)」をご覧ください。  
+    9. エラー出力を構成するには、 **[エラー出力]** ページをクリックし、エラー処理オプションを設定します。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)」をご覧ください。  
   
     10. **[OK]** をクリックして、参照変換への変更を保存します。  
   
@@ -161,7 +163,7 @@ ms.lasthandoff: 11/20/2017
      インデックス以外の列の場合、インデックス位置は 0 です。 インデックス列の場合、インデックスの位置は連続した正の数になります。  
   
     > [!NOTE]  
-    >  参照変換がキャッシュ接続マネージャーを使用するように構成されている場合、参照データセット内のインデックス列のみ入力列にマップできます。 また、すべてのインデックス列をマップする必要があります。 詳細については、「 [[キャッシュ接続マネージャー エディター]](../../integration-services/connection-manager/cache-connection-manager-editor.md)」を参照してください。  
+    >  参照変換がキャッシュ接続マネージャーを使用するように構成されている場合、参照データセット内のインデックス列のみ入力列にマップできます。 また、すべてのインデックス列をマップする必要があります。 詳細については、「 [キャッシュ接続マネージャー エディター](../../integration-services/connection-manager/cache-connection-manager-editor.md)」を参照してください。  
   
 7.  必要に応じてキャッシュ変換を構成します。 詳細については、「[[キャッシュ変換エディター] ([接続マネージャー] ページ)](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md)」および「[[キャッシュ変換エディター] ([マッピング] ページ)](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md)」を参照してください。  
   
@@ -177,7 +179,7 @@ ms.lasthandoff: 11/20/2017
   
 10. **[キャッシュ接続マネージャー エディター]**の **[全般]** タブで、次のオプションを設定して選択したキャッシュ ファイルからデータを読み取るようにキャッシュ接続マネージャーを構成します。  
   
-    -   **[ファイル キャッシュを使用する]**を選択します。  
+    -   **[ファイル キャッシュを使用する]**をオンにします。  
   
     -   **[ファイル名]**にファイル パスを入力するか、 **[参照]** をクリックしてファイルを選択します。  
   
@@ -213,7 +215,7 @@ ms.lasthandoff: 11/20/2017
   
     8.  **[使用できる参照列]** 一覧で列を選択します。 次に、 **[参照操作]** 一覧で、参照列の値を入力列の値と置き換えるか、新しい列に書き出すかを指定します。  
   
-    9. エラー出力を構成するには、**[エラー出力]** ページをクリックし、エラー処理オプションを設定します。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)」をご覧ください。  
+    9. エラー出力を構成するには、 **[エラー出力]** ページをクリックし、エラー処理オプションを設定します。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)」をご覧ください。  
   
     10. **[OK]** をクリックして、参照変換への変更を保存します。  
   
@@ -247,7 +249,7 @@ ms.lasthandoff: 11/20/2017
      インデックス以外の列の場合、インデックス位置は 0 です。 インデックス列の場合、インデックスの位置は連続した正の数になります。  
   
     > [!NOTE]  
-    >  参照変換がキャッシュ接続マネージャーを使用するように構成されている場合、参照データセット内のインデックス列のみ入力列にマップできます。 また、すべてのインデックス列をマップする必要があります。 詳細については、「 [[キャッシュ接続マネージャー エディター]](../../integration-services/connection-manager/cache-connection-manager-editor.md)」を参照してください。  
+    >  参照変換がキャッシュ接続マネージャーを使用するように構成されている場合、参照データセット内のインデックス列のみ入力列にマップできます。 また、すべてのインデックス列をマップする必要があります。 詳細については、「 [キャッシュ接続マネージャー エディター](../../integration-services/connection-manager/cache-connection-manager-editor.md)」を参照してください。  
   
 7.  **[制御フロー]** タブで、データ フロー タスクをパッケージに追加し、参照変換をデータ フローに追加します。  
   
@@ -278,7 +280,7 @@ ms.lasthandoff: 11/20/2017
   
     8.  **[使用できる参照列]** 一覧で列を選択します。 次に、 **[参照操作]** 一覧で、参照列の値を入力列の値と置き換えるか、新しい列に書き出すかを指定します。  
   
-    9. エラー出力を構成するには、**[エラー出力]** ページをクリックし、エラー処理オプションを設定します。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)」をご覧ください。  
+    9. エラー出力を構成するには、 **[エラー出力]** ページをクリックし、エラー処理オプションを設定します。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)」をご覧ください。  
   
     10. **[OK]** をクリックして、参照変換への変更を保存します。  
   

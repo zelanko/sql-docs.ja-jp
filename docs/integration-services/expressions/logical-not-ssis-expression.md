@@ -8,29 +8,30 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - logical Not (!)
 - '! (logical Not)'
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8c6c84a9efe60ffc7d9ebda818ddeabf833d05a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 68cee85e74159fc68783aded9f117c415d1bd15a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-logical-not-ssis-expression"></a>! (論理 Not) (SSIS 式)
   ブール型のオペランドを否定します。  
   
 > [!NOTE]  
->  ! 演算子は、他の演算子と組み合わせて使用することはできません。 たとえば、! 演算子と > 演算子を組み合わせて !> 演算子にすることはできません。  
+>  ! 演算子は、他の演算子と組み合わせて使用することはできません。 たとえば、!  演算子と > 演算子を組み合わせて !> 演算子にすることはできません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="result-types"></a>戻り値の型  
  DT_BOOL  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次の表は、! 指定します。  
   
 |元のブール式|! 演算子の適用後 演算子 (operator)|  

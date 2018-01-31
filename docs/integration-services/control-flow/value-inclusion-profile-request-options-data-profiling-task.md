@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Data Profiling Task Editor
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65a3a26b41981e6dc4c67219a52b76f822e78610
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 180c0ca64cf4619a8ada7a90d45fa0498e2ea87a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>[値包含プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[値包含プロファイル要求]** のオプションを設定できます。 値包含プロファイルは、2 つの列間または列のセット間の値の重複を計算します。 したがって、このプロファイルでは、列または列のセットが、選択したテーブル間の外部キーとして適しているかどうかを判断できます。 また、このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 たとえば、値包含プロファイルで Sales テーブルの ProductID 列をプロファイルするとします。 プロファイルでは、この列に Products テーブルの ProductID 列には存在しない値が含まれていることを検出できます。  
@@ -84,7 +86,7 @@ ms.lasthandoff: 11/20/2017
  詳細については、このトピックの「InclusionColumns プロパティの列の選択について」と「[InclusionColumns] のオプション」を参照してください。  
   
 #### <a name="subsettableorview-and-supersettableorview-options"></a>[SubsetTableOrView] および [SupersetTableOrView] のオプション  
- **スキーマ**  
+ **[スキーマ]**  
  選択したテーブルが属するスキーマを指定します。 このオプションは読み取り専用です。  
   
  **[TableOrView]**  
@@ -102,12 +104,12 @@ ms.lasthandoff: 11/20/2017
  選択した列の名前を表示します。 **[(\*)]** を選択してすべての列をプロファイルする場合、このオプションは空白になります。 このオプションは読み取り専用です。  
   
  **[StringCompareOptions]**  
- 文字列値を比較するためのオプションを選択します。 このプロパティのオプションを次の表に示します。 このオプションの既定値は **[Default]** です。  
+ 文字列値を比較するためのオプションを選択します。 このプロパティのオプションを次の表に示します。 このオプションの既定値は **[Default]**です。  
   
 > [!NOTE]  
 >  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、**[CompareOptions]** は読み取り専用で、**[Default]** に設定されます。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[Default]**|ソース テーブル内の列の照合順序に基づいてデータを並べ替えて比較します。|  
 |**[BinarySort]**|文字ごとに定義されているビット パターンに基づいてデータを並べ替えて比較します。 バイナリ並べ替え順では、大文字と小文字が区別され、アクセントが区別されます。 また、バイナリは最速の並べ替え順です。|  
@@ -115,7 +117,7 @@ ms.lasthandoff: 11/20/2017
   
  **[DictionarySort]**を選択した場合は、次の表に示すオプションの任意の組み合わせも選択できます。 既定では、これらの追加オプションは選択されていません。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|比較時に、大文字と小文字を区別するかどうかを示します。 このオプションを設定した場合、文字列比較で大文字と小文字は区別されません。 たとえば、"ABC" は "abc" と同一になります。|  
 |**IgnoreNonSpace**|比較で、通常の文字と分音文字付きの文字を区別するかどうかを指定します。 このオプションを設定した場合、比較で分音文字は無視されます。 たとえば、"&#xE5;" は "a" と同じ文字になります。|  
@@ -126,11 +128,11 @@ ms.lasthandoff: 11/20/2017
  **RequestID**  
  このプロファイル要求を識別するわかりやすい名前を入力します。 通常、自動生成された値を変更する必要はありません。  
   
-### <a name="options"></a>オプションなど)  
+### <a name="options"></a>および  
  **[None]**  
  プロファイルの出力を絞り込むためのしきい値設定を選択します。 このプロパティの既定値は **[Specified]**です。 詳細については、このトピックの「しきい値設定について」を参照してください。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[InclusionThresholdSetting]**|しきい値を指定しません。 キーの強さは、その値に関係なく報告されます。|  
 |**[Specified]**|**[InclusionStrengthThreshold]**で指定したしきい値を使用します。 包含の強さは、このしきい値より大きい場合にのみ報告されます。|  
@@ -144,7 +146,7 @@ ms.lasthandoff: 11/20/2017
  **[None]**  
  スーパーセットのしきい値を指定します。 このプロパティの既定値は **[Specified]**です。 詳細については、このトピックの「しきい値設定について」を参照してください。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[InclusionThresholdSetting]**|しきい値を指定しません。 包含の強さは、スーパーセット列のキーの強さに関係なく報告されます。|  
 |**[Specified]**|**[SupersetColumnsKeyThreshold]**で指定したしきい値を使用します。 包含の強さは、スーパーセット列のキーの強さがこのしきい値より大きい場合にのみ報告されます。|  

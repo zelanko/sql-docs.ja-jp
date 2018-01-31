@@ -8,26 +8,28 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: cdcServ
+f1_keywords:
+- cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eda4caf15a2c86f541978b49ee7e55c0d89e053c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dace3763da446c75677288d15401a7c749740677
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="work-with-cdc-services"></a>CDC Service の操作
   CDC Service 構成コンソールを使用すると、新しい CDC サービスを作成したり、CDC 用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを準備したりできます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[SQL Server の準備]**  
  CDC Service 構成コンソールの右側にある **[アクション]** ペインで、このオプションを選択します。  
   

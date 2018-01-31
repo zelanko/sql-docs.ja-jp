@@ -8,7 +8,8 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - flat files
 - flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 29a1b62455247f2ba3cbcb17fafb6f0f78865230
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 73ab1f41223d78f627bd13523bf76eb4ab4d19e8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="flat-file-connection-manager"></a>フラット ファイル接続マネージャー
   フラット ファイル接続マネージャーを使用すると、パッケージはフラット ファイルのデータにアクセスできます。 たとえば、フラット ファイルの変換元と変換先は、フラット ファイル接続マネージャーを使用して、データの抽出および読み込みを行うことができます。  
@@ -87,17 +88,17 @@ ms.lasthandoff: 11/20/2017
   
  フラット ファイル接続マネージャーの詳細については、「 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
- **[接続マネージャー名]**  
+### <a name="options"></a>および  
+ **接続マネージャー名**  
  ワークフローにおけるフラット ファイル接続の一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
- **Description**  
+ **[説明]**  
  接続の説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続の目的について記述することをお勧めします。  
   
- **ファイル名**  
+ **[ファイル名]**  
  フラット ファイル接続で使用するパスおよびファイル名を入力します。  
   
- **参照**  
+ **[参照]**  
  フラット ファイル接続で使用するファイル名を探します。  
   
  **ロケール**  
@@ -109,10 +110,10 @@ ms.lasthandoff: 11/20/2017
  **コード ページ**  
  非 Unicode テキストのコード ページを指定します。  
   
- **Format**  
+ **形式**  
  区切り記号形式、固定幅形式、または幅合わせしない形式をファイルで使用するかどうかを示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |[区切り記号]|列は、 **[列]** ページで指定した区切り記号で区切られます。|  
 |[固定幅]|列は固定幅を持ちます。|  
@@ -127,7 +128,7 @@ ms.lasthandoff: 11/20/2017
  **[ヘッダー行区切り記号]**  
  ヘッダー行の区切り記号の一覧から選択するか、区切り記号テキストを入力します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|ヘッダー行は、復帰と改行の組み合わせで区切られます。|  
 |**{CR}**|ヘッダー行は、復帰で区切られます。|  
@@ -149,10 +150,10 @@ ms.lasthandoff: 11/20/2017
  フラット ファイル接続マネージャーの詳細については、「 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)」を参照してください。  
   
 ### <a name="static-options"></a>静的オプション  
- **[接続マネージャー名]**  
+ **接続マネージャー名**  
  ワークフローにおけるフラット ファイル接続マネージャーの一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
- **Description**  
+ **[説明]**  
  接続の説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続の目的について記述することをお勧めします。  
   
 ### <a name="flat-file-format-dynamic-options"></a>フラット ファイル形式の動的オプション  
@@ -161,7 +162,7 @@ ms.lasthandoff: 11/20/2017
  **[行区切り記号]**  
  使用できる行区切り記号の一覧から選択するか、区切り記号テキストを入力します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|行は、復帰と改行の組み合わせで区切られます。|  
 |**{CR}**|行は、復帰で区切られます。|  
@@ -175,7 +176,7 @@ ms.lasthandoff: 11/20/2017
  **列区切り記号**  
  使用できる列区切り記号の一覧から選択するか、区切り記号テキストを入力します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|列は、復帰と改行の組み合わせで区切られます。|  
 |**{CR}**|列は、復帰で区切られます。|  
@@ -222,7 +223,7 @@ ms.lasthandoff: 11/20/2017
  **[行区切り記号]**  
  使用できる行区切り記号の一覧から選択するか、区切り記号テキストを入力します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|行は、復帰と改行の組み合わせで区切られます。|  
 |**{CR}**|行は、復帰で区切られます。|  
@@ -242,11 +243,11 @@ ms.lasthandoff: 11/20/2017
   
  フラット ファイル接続マネージャーの詳細については、「 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **[接続マネージャー名]**  
  ワークフローにおけるフラット ファイル接続マネージャーの一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
- **Description**  
+ **[説明]**  
  接続マネージャーの説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続マネージャーの目的について記述することをお勧めします。  
   
  **[各列のプロパティを構成します。]**  
@@ -264,16 +265,16 @@ ms.lasthandoff: 11/20/2017
 |**[データ精度]**|数値データの精度を指定します。 精度とは、桁数です。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|  
 |**[入力列の幅]**|格納する値をバイト数で指定します。Unicode ファイルの場合、これは文字数として表示されます。 区切られた列の場合、この値は無視されます。<br /><br /> **注** オブジェクト モデルでは、このプロパティの名前は ColumnWidth です。|  
   
- **新規**  
+ **[新規作成]**  
  **[新規作成]**をクリックして新しい列を追加します。 既定では、 **[新規作成]** ボタンをクリックすると、新しい列がリストの末尾に追加されます。 さらにこのボタンのドロップダウン リストには、次のオプションがあります。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[列の追加]**|新しい列をリストの末尾に追加します。|  
 |**[前に挿入]**|選択した列の前に新しい列を追加します。|  
 |**[後に挿入]**|選択した列の後に新しい列を追加します。|  
   
- **Del**  
+ **削除**  
  列を選択して **[削除]**をクリックすると、列が削除されます。  
   
  **[型の推測]**  
@@ -283,11 +284,11 @@ ms.lasthandoff: 11/20/2017
   
  フラット ファイル接続マネージャーの詳細については、「 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
- **[接続マネージャー名]**  
+### <a name="options"></a>および  
+ **接続マネージャー名**  
  ワークフローにおけるフラット ファイル接続マネージャーの一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
- **Description**  
+ **[説明]**  
  接続の説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続の目的について記述することをお勧めします。  
   
  **[スキップするデータ行数]**  

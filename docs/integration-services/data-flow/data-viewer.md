@@ -8,27 +8,30 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.dataviewer.f1
-helpviewer_keywords: Data Viewer dialog box
+f1_keywords:
+- sql13.dts.designer.dataviewer.f1
+helpviewer_keywords:
+- Data Viewer dialog box
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8239be5300412755fa4711dea8523c4a052ab09a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f9541c6d49a6fc4f7a0dea8becdb4022ff53e3f6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-viewer"></a>[データ ビューアー]
   パスがデータ ビューアーを使用するように構成されている場合、データ ビューアーはデータが 2 つのデータ フロー コンポーネントを移動するときに、バッファーによるデータ バッファーを表示します。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **緑色の矢印**  
  クリックすると、次のバッファーのデータが表示されます。 データが 1 つのバッファーに移動される場合、このオプションは使用できません。  
   
