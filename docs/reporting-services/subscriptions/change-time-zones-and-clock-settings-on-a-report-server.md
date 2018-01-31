@@ -17,7 +17,7 @@ helpviewer_keywords:
 - schedules [Reporting Services], clock settings
 - schedules [Reporting Services], time zones
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/09/2018
  プロパティのタイムスタンプ値 (フォルダーまたはリンク レポート アイテムの作成日時など) は、新しいタイム ゾーンの設定に同期されません。 6 月 25 日の午前 9 時にアイテムを作成し、タイム ゾーンまたは時計の設定を変更しても、タイムスタンプは 6 月 25 日の午前 9 時のままです。  
   
 ## <a name="changing-the-time-zone-sharepoint-mode"></a>タイム ゾーンの変更 (SharePoint モード)  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードのタイム ゾーンの構成は、SharePoint の地域設定の一部として管理されます。 詳細については、「 [Regional settings (SharePoint Server 2010) (http://technet.microsoft.com/library/cc824907.aspx)](http://technet.microsoft.com/library/cc824907.aspx)」 (地域の設定 (SharePoint Server 2010) (http://technet.microsoft.com/library/cc824907.aspx)) を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードのタイム ゾーンの構成は、SharePoint の地域設定の一部として管理されます。 詳細については、「 [Regional settings (SharePoint Server 2010) (http://technet.microsoft.com/library/cc824907.aspx)](http://technet.microsoft.com/library/cc824907.aspx)」 (地域の設定 (SharePoint Server 2010)) を参照してください。  
   
 ## <a name="changing-the-clock-settings"></a>時計の設定の変更  
  内蔵時計を変更しても、既存のタイムスタンプ値に影響はありません。たとえば、時計を 1 時間進めても、レポート履歴スナップショットのタイムスタンプは変わりません。 スケジュールおよび配信のプロセッサの設定が新しく切り替わるまでに、10 秒の遅延が発生する場合があります。 構成ファイルのポーリング間隔の設定を変更した場合、実際の遅延時間が異なることがあります。  
