@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
   
 -   **トランザクションを使ってデータの整合性の確認を支援する**。 詳細については、「 [Integration Services のトランザクション](../../integration-services/integration-services-transactions.md)」をご覧ください。  
   
--   **チェックポイントを使って、エラーが発生した時点からパッケージを再開する**。 詳細については、「 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
+-   **チェックポイントを使って、エラーが発生した時点からパッケージを再開する**。 詳細については、「 [チェックポイントを使用してパッケージを再開する](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>イベント ハンドラーを使用したパッケージ エラーのキャッチおよび処理  
  イベント ハンドラーを使用することにより、パッケージやパッケージ内のオブジェクトで発生する多くのイベントに対応できます。  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/25/2018
   
     1.  **パッケージを実行するたびにログを記録する親テーブルを作成する**。 この親テーブルにはパッケージを実行するたびに 1 行だけを記録し、ExecutionID を使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ログ記録テーブルの子レコードにリンクします。 各パッケージの最初に SQL 実行タスクを使用して、この新しい行を作成し、開始時刻を記録します。 次に、パッケージの終了時に別の SQL 実行タスクを使用して、終了時刻、実行時間、状態でその行を更新します。  
   
-    2.  **データ フローに監査情報を追加する**。 監査変換を使用して、各行を作成または変更したパッケージの実行に関する情報を、データ フロー内の行に追加できます。 監査変換は、PackageName や ExecutionInstanceGUID など、9 種類の情報を作成します。 詳細については、「 [Audit Transformation](../../integration-services/data-flow/transformations/audit-transformation.md)」を参照してください。 監査を目的として各行に含めるカスタム情報があれば、派生列変換を使用して、その情報をデータ フロー内の行に追加できます。 詳細については、「 [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md)」を参照してください。  
+    2.  **データ フローに監査情報を追加する**。 監査変換を使用して、各行を作成または変更したパッケージの実行に関する情報を、データ フロー内の行に追加できます。 監査変換は、PackageName や ExecutionInstanceGUID など、9 種類の情報を作成します。 詳細については、「 [監査変換](../../integration-services/data-flow/transformations/audit-transformation.md)」を参照してください。 監査を目的として各行に含めるカスタム情報があれば、派生列変換を使用して、その情報をデータ フロー内の行に追加できます。 詳細については、「 [派生列変換](../../integration-services/data-flow/transformations/derived-column-transformation.md)」を参照してください。  
   
     3.  **行数データのキャプチャを検討する**。 行数情報用に別のテーブルを作成することを検討します。このテーブルでは、パッケージ実行の各インスタンスを ExecutionID で識別します。 行数変換を使用して、データ フロー内の重要な時点の行数を一連の変数に保存します。 データ フローの終了後、SQL 実行タスクを使用してこの一連の値をテーブルの行に挿入すると、後の分析やレポートに役立ちます。  
   
