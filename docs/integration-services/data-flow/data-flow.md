@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 53f945d9efbcc714bbcf3e6498a3d0a984ef95dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0ddc6281b1f0332c4a62af8b6fb787c508d49ba3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow"></a>データ フロー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、変換元、変換、および変換先という 3 種類のデータ フロー コンポーネントが用意されています。 変換元は、リレーショナル データベース、ファイル、および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのテーブルやビューなどのデータ ストアからデータを抽出します。 変換は、データを変更、集約、およびクリーンアップします。 変換先は、データをデータ ストアに読み込んだり、メモリ内のデータセットを作成します。  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/20/2017
  **[データ フロー]** タブがアクティブになっている場合、ツールボックスには、データ フローに追加できる変換元、変換、および変換先が表示されます。  
   
 ## <a name="expressions"></a>式  
- 多くのデータ フロー コンポーネント (変換元、変換、および変換先) では、一部のプロパティでプロパティ式を使用できます。 プロパティ式は、パッケージの読み込み時にプロパティの値を置き換える式です。 実行時に、パッケージは更新されたプロパティ値を使用します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式の構文を使用して式を作成し、その式に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の関数、演算子、識別子、および変数を含めることができます。 詳細については、「[Integration Services (SSIS) の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」、[](../../integration-services/expressions/integration-services-ssis-expressions.md)および「[パッケージでプロパティ式を使用する](../../integration-services/expressions/use-property-expressions-in-packages.md)」を参照してください。  
+ 多くのデータ フロー コンポーネント (変換元、変換、および変換先) では、一部のプロパティでプロパティ式を使用できます。 プロパティ式は、パッケージの読み込み時にプロパティの値を置き換える式です。 実行時に、パッケージは更新されたプロパティ値を使用します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式の構文を使用して式を作成し、その式に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の関数、演算子、識別子、および変数を含めることができます。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」、「[Integration Services &#40;SSIS&#41; の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」および「[パッケージでプロパティ式を使用する](../../integration-services/expressions/use-property-expressions-in-packages.md)」を参照してください。  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でパッケージを構築すると、プロパティ式をサポートするすべてのデータ フロー コンポーネントのプロパティが、そのデータ フロー コンポーネントが属するデータ フロー タスクに表示されます。 データ フロー コンポーネントのプロパティ式を追加、変更、および削除するには、データ フロー タスクをクリックし、[プロパティ] ウィンドウまたはタスク用のエディターを使用してプロパティ式を追加、変更、または削除します。 データ フロー タスク自体のプロパティ式は、[プロパティ] ウィンドウで管理します。  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/20/2017
   
  すべての出力列は、データ フロー内の次のデータ フロー コンポーネントで、入力列として使用できます。  
   
- カスタムの変換元を記述することもできます。 詳細については、「 [カスタム データ フロー コンポーネントの開発](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) 」と「 [特定の種類のデータ フロー コンポーネントの開発](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)」を参照してください。  
+ カスタムの変換元を記述することもできます。 詳しくは、「 [カスタム データ フロー コンポーネントの開発](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) 」と「 [特定の種類のデータ フロー コンポーネントの開発](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)」をご覧ください。  
   
  次の変換元には、プロパティ式で更新できるプロパティがあります。  
   
@@ -103,9 +104,9 @@ ms.lasthandoff: 11/20/2017
 ### <a name="sources-available-for-download"></a>ダウンロード可能な変換元  
  次の表に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] の Web サイトから別途ダウンロード可能な変換元を示します。  
   
-|ソース|Description|  
+|Source|Description|  
 |------------|-----------------|  
-|Oracle 変換元|Oracle 変換元は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity の変換元コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity には、接続マネージャーおよび変換先も含まれます。 詳細については、[Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=789384) のダウンロード ページを参照してください。|  
+|Oracle 変換元|Oracle 変換元は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity の変換元コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity には、接続マネージャーおよび変換先も含まれます。 詳細については、 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=789384)のダウンロード ページを参照してください。|  
 |SAP BI 変換元|SAP BI 変換元は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI の変換元コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI には、接続マネージャーおよび変換先も含まれます。 詳細については、 [Microsoft SQL Server 用 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)のダウンロード ページを参照してください。|  
 |Teradata 変換元|Teradata 変換元は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity の変換元コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity には、接続マネージャーおよび変換先も含まれます。 詳細については、[Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=789384) のダウンロード ページを参照してください。|  
   
@@ -164,7 +165,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="destinations-available-for-download"></a>ダウンロード可能な変換先  
  次の表に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] の Web サイトから別途ダウンロード可能な変換先を示します。  
   
-|ソース|Description|  
+|Source|Description|  
 |------------|-----------------|  
 |Oracle 変換先|Oracle 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity の変換先コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity には、接続マネージャーおよび変換元も含まれます。 詳細については、[Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=789384) のダウンロード ページを参照してください。|  
 |SAP BI 変換先|SAP BI 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI の変換先コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI には、接続マネージャーおよび変換元も含まれます。 詳細については、 [Microsoft SQL Server 用 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)のダウンロード ページを参照してください。|  
@@ -194,7 +195,7 @@ ms.lasthandoff: 11/20/2017
   
  詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。  
   
-### <a name="columns"></a>列  
+### <a name="columns"></a>[列]  
  入力、出力、およびエラー出力は、列の集合です。 各列は構成可能であり、入力、出力、または外部といった列の種類に応じて、列のさまざまなプロパティが[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で用意されています。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、列のプロパティの設定方法として、プログラムによって設定する方法、コンポーネント固有のダイアログ ボックスを使用する方法、および **[詳細エディター]** ダイアログ ボックスを使用する方法の 3 種類が用意されています。  
   
 ## <a name="paths"></a>パス  
@@ -215,7 +216,7 @@ ms.lasthandoff: 11/20/2017
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーを使用してプロパティを設定する方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  [データ フローでコンポーネントを追加または削除する](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
  [データ フロー内でコンポーネントを連結する](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
