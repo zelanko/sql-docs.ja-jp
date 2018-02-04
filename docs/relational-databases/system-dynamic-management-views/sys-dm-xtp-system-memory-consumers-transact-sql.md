@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_xtp_system_memory_consumers_TSQL
 - sys.dm_xtp_system_memory_consumers
 - dm_xtp_system_memory_consumers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_xtp_system_memory_consumers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e48ffede3b2aea0ff69c9dce9fc7abd2fe4bc4f9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a7b5e11f35e5ae6665d32355da60fb7e1e2b5f6d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +49,7 @@ select * from sys.dm_xtp_system_memory_consumers
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|メモリ コンシューマーの内部 ID。|  
 |memory_consumer_type|**int**|次の値のいずれかのメモリ コンシューマーの種類を表す整数。<br /><br /> 0 - 表示することはできません。 複数のコンシューマーのメモリ使用量を集計します。<br /><br /> 1 – ルック アサイド: は、システムのルック アサイドのメモリ消費量を追跡します。<br /><br /> 2-VARHEAP: は、可変長ヒープのメモリ消費量を追跡します。<br /><br /> 4-IO ページ プール: IO 操作に使用するシステム ページ プールのメモリ使用量を追跡します。|  
-|memory_consumer_type_desc|**nvarchar (16)**|メモリ コンシューマーの種類の説明。<br /><br /> 0 - 表示することはできません。<br /><br /> 1 – LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4-PGPOOL|  
+|memory_consumer_type_desc|**nvarchar(16)**|メモリ コンシューマーの種類の説明。<br /><br /> 0 - 表示することはできません。<br /><br /> 1 – LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4-PGPOOL|  
 |memory_consumer_desc|**nvarchar(64)**|メモリ コンシューマー インスタンスの説明。<br /><br /> VARHEAP: <br />システム ヒープ。 汎用的です。 現在、ガベージ コレクションの作業項目の割り当てにのみ使用されています。<br />- または -<br />ルック アサイド ヒープ。 ルック アサイド リストに含まれる項目の数が事前に定義された上限 (通常は約 5,000 個の項目) に達した場合にルック アサイドで使用されます。<br /><br /> PGPOOL: IO システム プールがあるは、次の 3 つの異なるサイズ System 4 K ページ プール、System 64 K ページ プール、および System 256 K ページ プール。|  
 |lookaside_id|**bigint**|スレッド ローカルなルック アサイド メモリ プロバイダーの ID。|  
 |pagepool_id|**bigint**|スレッド ローカルなページ プール メモリ プロバイダーの ID。|  
@@ -59,7 +62,7 @@ select * from sys.dm_xtp_system_memory_consumers
 |max_sizeclass|**int**|内部使用のみです。|  
 |memory_consumer_address|**varbinary**|コンシューマーの内部アドレス。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="user-scenario"></a>ユーザー シナリオ  

@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96f28c9cf92402fcecfc15eb0d527becbc9c3ddd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c0799d00819bade1e0f87fceb916aa649aef150a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxedatabasesessionobjectcolumns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,15 +35,15 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary (8)**|イベント セッションのメモリ アドレス。 Sys.dm_xe_database_sessions.address と多対一の関係があります。 NULL 値は許可されません。|  
-|column_name|**nvarchar (60)**|構成値の名前。 NULL 値は許可されません。|  
+|event_session_address|**varbinary(8)**|イベント セッションのメモリ アドレス。 Sys.dm_xe_database_sessions.address と多対一の関係があります。 NULL 値は許可されません。|  
+|column_name|**nvarchar(60)**|構成値の名前。 NULL 値は許可されません。|  
 |column_id|**int**|列の ID。 オブジェクト内で一意です。 NULL 値は許可されません。|  
-|column_value|**nvarchar (2048)**|列の構成値。 NULL 値が許可されます。|  
-|object_type|**nvarchar (60)**|オブジェクトの古い型。  Nullable.object_type はの 1 つはありません。<br /><br /> イベント<br /><br /> ターゲット (target)|  
-|object_name|**nvarchar (60)**|この列が所属するオブジェクトの名前。 NULL 値は許可されません。|  
+|column_value|**nvarchar(2048)**|列の構成値。 NULL 値が許可されます。|  
+|object_type|**nvarchar(60)**|オブジェクトの古い型。  Nullable.object_type はの 1 つはありません。<br /><br /> イベント<br /><br /> ターゲット (target)|  
+|object_name|**nvarchar(60)**|この列が所属するオブジェクトの名前。 NULL 値は許可されません。|  
 |object_package_guid|**uniqueidentifier**|オブジェクトを含むパッケージの GUID。 NULL 値は許可されません。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  VIEW DATABASE STATE 権限が必要です。  
   
 ### <a name="relationship-cardinalities"></a>リレーションシップの基数  

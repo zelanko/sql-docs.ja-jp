@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_create_snapshot
 - sp_create_snapshot_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - management data warehouse, data collector stored procedures
 - data collector [SQL Server], stored procedures
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 674968b7b981755ea0f67f8657116537d2a5791c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 559eed3c2ae0a5bada1453e21347fee791625eb5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,22 +54,22 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @collection_set_uid =] '*collection_set_uid*'  
+ [ @collection_set_uid = ] '*collection_set_uid*'  
  コレクション セットの GUID を指定します。 *collection_set_uid*は**uniqueidentifier**既定値はありません。 GUID を取得するには、msdb データベースの dbo.syscollector_collection_sets ビューにクエリを実行します。  
   
- [ @collector_type_uid =] '*collector_type_uid*'  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
  コレクター型の GUID です。 *collector_type_uid*は**uniqueidentifier**既定値はありません。 GUID を取得するには、msdb データベースの dbo.syscollector_collector_types ビューにクエリを実行します。  
   
  [ @machine_name=] '*machine_name*'  
  コレクション セットが存在するサーバーの名前を指定します。 *コンピューター名*は**sysname**既定値はありません。  
   
- [ @named_instance=] '*named_instance*'  
+ [ @named_instance= ] '*named_instance*'  
  コレクション セットのインスタンスの名前を指定します。 *named_instance*は**sysname**既定値はありません。  
   
- [ @log_id =] *log_id*  
+ [ @log_id = ] *log_id*  
  データを収集したサーバー上のコレクション セットのイベント ログにマップされた一意の識別子を指定します。 *log_id*は**bigint**既定値はありません。 値を取得する*log_id*、msdb データベースの dbo.syscollector_execution_log ビューをクエリします。  
   
- [ @snapshot_id =] *snapshot_id*  
+ [ @snapshot_id = ] *snapshot_id*  
  Core.snapshots ビューに挿入する行の一意の識別子。 *snapshot_id*は**int**出力として返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -84,7 +86,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
   
  これらの条件が満たされなかった場合、プロシージャは失敗し、エラーが返されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーシップが必要、 **mdw_writer** (EXECUTE 権限) を持つ固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  

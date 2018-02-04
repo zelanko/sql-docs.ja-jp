@@ -1,5 +1,5 @@
 ---
-title: "sys.sp_rda_test_connection (TRANSACT-SQL) |Microsoft ドキュメント"
+title: sys.sp_rda_test_connection (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_test_connection
 - sys.sp_rda_test_connection_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_rda_test_connection stored procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_rda_test_connection stored procedure
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7376d3b6fa4bebac0e0b176bd4144d6bec54b0c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c9cd981a64ea452c64e24f6578e33d171fd51559
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,20 +53,20 @@ EXECUTE sys.sp_rda_test_connection
  @database_name= N'*db_name*'  
  Stretch 対応 SQL Server データベースの名前。 このパラメーターはオプションです。  
   
- @server_address= N'*azure_server_fully_qualified_address*'  
+ @server_address = N'*azure_server_fully_qualified_address*'  
  Azure サーバーの完全修飾アドレスです。  
   
 -   値を指定した場合 **@database_name** 、指定されたデータベースで Stretch 対応はありませんが、その値を指定する必要がある **@server_address**です。  
   
 -   値を指定した場合 **@database_name**の値を指定する必要はありませんし、指定されたデータベースがストレッチが有効な **@server_address**です。 値を指定した場合 **@server_address** 、ストアド プロシージャでは無視し、Stretch 対応データベースに関連付けられている既存の Azure サーバーを既に使用します。  
   
- @azure_username= N'*azure_username*  
+ @azure_username = N'*azure_username*  
  リモートの Azure サーバーのユーザー名。  
   
  @azure_password= N'*azure_password*'  
  リモートの Azure サーバーのパスワード。  
   
- @credential_name= N'*credential_name*'  
+ @credential_name = N'*credential_name*'  
  ユーザー名とパスワードを提供する、代わりには、Stretch 対応データベースに格納されている資格情報の名前を指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -75,12 +78,12 @@ EXECUTE sys.sp_rda_test_connection
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|link_state|ssNoversion|値に対応して、次の値のいずれかの**link_state_desc**です。<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar(32)|上記に対応して、次の値のいずれかの値を**link_state**です。<br /><br /> -正常<br />     SQL Server とリモート Azure サーバーは正常です。<br />-ERROR_AZURE_FIREWALL<br />     Azure のファイアウォールが原因で SQL Server とリモート Azure サーバー間のリンク。<br />-ERROR_NO_CONNECTION<br />     SQL Server では、リモート Azure サーバーへの接続を作成できません。<br />-ERROR_AUTH_FAILURE<br />     認証の失敗が原因で SQL Server とリモート Azure サーバー間のリンク。<br />-エラー<br />     認証の問題、接続の問題またはファイアウォールの問題ではないエラーが原因で SQL Server とリモート Azure サーバー間のリンク。|  
-|error_number|ssNoversion|エラーの数。 エラーがない場合は、このフィールドは NULL です。|  
+|link_state|int|値に対応して、次の値のいずれかの**link_state_desc**です。<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
+|link_state_desc|varchar(32)|上記に対応して、次の値のいずれかの値を**link_state**です。<br /><br /> -正常<br />     SQL Server とリモート Azure サーバーは正常です。<br />-   ERROR_AZURE_FIREWALL<br />     Azure のファイアウォールが原因で SQL Server とリモート Azure サーバー間のリンク。<br />-   ERROR_NO_CONNECTION<br />     SQL Server では、リモート Azure サーバーへの接続を作成できません。<br />-   ERROR_AUTH_FAILURE<br />     認証の失敗が原因で SQL Server とリモート Azure サーバー間のリンク。<br />-エラー<br />     認証の問題、接続の問題またはファイアウォールの問題ではないエラーが原因で SQL Server とリモート Azure サーバー間のリンク。|  
+|error_number|int|エラーの数。 エラーがない場合は、このフィールドは NULL です。|  
 |error_message|nvarchar (1024)|エラー メッセージです。 エラーがない場合は、このフィールドは NULL です。|  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  Db_owner アクセス許可が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -97,7 +100,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|2|ERROR_NO_CONNECTION|*\<接続に関連するエラー番号 >*|*\<接続に関連するエラー メッセージ >*|  
+|2|ERROR_NO_CONNECTION|*\<接続に関連するエラー番号 >*|*\<connection-related error message>*|  
   
 ### <a name="check-the-azure-firewall"></a>Azure ファイアウォールを確認します。  
   
@@ -113,7 +116,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|@shouldalert|ERROR_AZURE_FIREWALL|*\<ファイアウォールに関連するエラー番号 >*|*\<ファイアウォールに関連するエラー メッセージ >*|  
+|1|ERROR_AZURE_FIREWALL|*\<ファイアウォールに関連するエラー番号 >*|*\<ファイアウォールに関連するエラー メッセージ >*|  
   
 ### <a name="check-authentication-credentials"></a>認証の資格情報を確認  
   
@@ -129,7 +132,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|3|ERROR_AUTH_FAILURE|*\<認証に関連するエラー番号 >*|*\<認証に関連するエラー メッセージ >*|  
+|3|ERROR_AUTH_FAILURE|*\<authentication-related error number>*|*\<authentication-related error message>*|  
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>リモートの Azure サーバーの状態を確認します。  
   

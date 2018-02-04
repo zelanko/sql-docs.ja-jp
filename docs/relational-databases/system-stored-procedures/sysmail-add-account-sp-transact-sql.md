@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_account_sp
 - sysmail_add_account_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_add_account_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_add_account_sp
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e24d90b20c91ab6dfb510faad46ceb2b5f8cc19b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 837e8e5035e69b3e8a35d14acce71d02d549d6a7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailaddaccountsp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,13 +61,13 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  [  **@account_name**  =] **'***account_name***'**  
  追加するアカウントの名前を指定します。 *account_name*は**sysname**、既定値はありません。  
   
- [  **@email_address**  =] **'***email_address***'**  
+ [ **@email_address** = ] **'***email_address***'**  
  メッセージ送信元の電子メール アドレスを指定します。 このアドレスにはインターネット電子メール アドレスを指定する必要があります。 *email_address*は**nvarchar (128)**、既定値はありません。 たとえば、アカウントを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、アドレスから電子メールを送信することがあります **SqlAgent@Adventure-Works.com**です。  
   
- [  **@display_name**  =] **'***display_name***'**  
+ [ **@display_name** = ] **'***display_name***'**  
  このアカウントから送信する電子メール メッセージの表示名を指定します。 *display_name*は**nvarchar (128)**、既定値は NULL です。 たとえば、アカウントを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、名前を表示できます**SQL Server Agent Automated Mailer**電子メール メッセージにします。  
   
- [  **@replyto_address**  =] **'***replyto_address***'**  
+ [ **@replyto_address** = ] **'***replyto_address***'**  
  このアカウントから送信するメッセージに対する返信アドレスを指定します。 *replyto_address*は**nvarchar (128)**、既定値は NULL です。 アカウントへの返信など[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、データベース管理者になる可能性がある **danw@Adventure-Works.com**です。  
   
  [  **@description**  =] **'***説明***'**  
@@ -76,7 +79,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  [  **@mailserver_type**  =] '*server_type*'  
  電子メール サーバーの種類を指定します。 *server_type*は**sysname**、既定値は**'SMTP'**.  
   
- [  **@port**  =] *port_number*  
+ [ **@port** = ] *port_number*  
  電子メール サーバーのポート番号を指定します。 *port_number*は**int**、既定値は 25 です。  
   
  [  **@username**  =] **'***username***'**  
@@ -91,7 +94,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  [  **@enable_ssl**  =] enable_ssl  
  データベース メールで Secure Sockets Layer を使用して通信を暗号化するかどうかを指定します。 **Enable_ssl**は bit で、既定値は 0 です。  
   
- [  **@account_id**  =] *account_id*出力  
+ [ **@account_id** = ] *account_id* OUTPUT  
  新しいアカウントのアカウント ID を返します。 *account_id*は**int**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -106,7 +109,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
   
  ストアド プロシージャ**sysmail_add_account_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマです。 現在のデータベースがない場合は、3 部構成の名前を持つプロシージャを実行する必要があります**msdb**です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにこのプロシージャの既定の実行権限、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  

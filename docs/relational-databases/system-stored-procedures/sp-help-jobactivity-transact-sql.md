@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobactivity_TSQL
 - sp_help_jobactivity
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobactivity
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobactivity
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cb0d3d344b97f0ce14e3bd156b5915a1721c8f4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a4b1b81a94f272ffed56c26f4ede9080f80527c7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +47,16 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  ジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  ジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
- [  **@session_id**  =] *session_id*  
+ [ **@session_id** = ] *session_id*  
  情報をレポートするセッション ID を指定します。 *session_id*は**int**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -76,7 +79,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**stop_execution_date**|**datetime**|ジョブが停止した日付。|  
 |**next_scheduled_run_date**|**datetime**|ジョブは、次にスケジュール設定する場合を実行します。|  
 |**job_history_id**|**int**|ジョブ履歴テーブルにあるジョブ履歴の識別子。|  
-|**メッセージ**|**nvarchar (1024)**|前回のジョブ実行中に生成したメッセージ。|  
+|**message**|**nvarchar(1024)**|前回のジョブ実行中に生成したメッセージ。|  
 |**run_status**|**int**|前回のジョブの実行で返されたステータス。<br /><br /> **0** = 失敗エラー<br /><br /> **1** = に成功しました<br /><br /> **3** = キャンセル<br /><br /> **5** = 状態不明|  
 |**operator_id_emailed**|**int**|ジョブの完了時に電子メールの通知を受けたオペレーターの ID 番号。|  
 |**operator_id_netsent**|**int**|経由で通知を受けるオペレーターの ID 番号**net send**でジョブの実行が完了します。|  
@@ -85,13 +88,13 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>解説  
  このプロシージャでは、ジョブに関する現在の状態のスナップショットが生成されます。 返された結果は、要求が処理された時点での情報です。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、エージェント サービスが開始されるたびに、セッション id を作成します。 セッション id は、テーブルに格納される**msdb.dbo.syssessions**です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、エージェント サービスが開始されるたびに、セッション id を作成します。 セッション id は、テーブルに格納される**msdb.dbo.syssessions**です。  
   
  ない場合*session_id*には、最新のセッションに関する情報を表示します。  
   
  ない場合*job_name*または*job_id*には、すべてのジョブの情報を一覧表示します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  既定では、メンバー、 **sysadmin**固定サーバー ロールは、このストアド プロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  

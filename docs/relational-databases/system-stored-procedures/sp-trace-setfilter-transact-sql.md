@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setfilter
 - sp_trace_setfilter_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_setfilter
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 659544a47bc142ed430ac6406e2bfde0f60f6845
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 82c7d580f8ff94e0d7fb4452d1608f93b776fe3b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +53,19 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@traceid=** ] *trace_id*  
+ [ **@traceid=** ] *trace_id*  
  フィルターを適用するトレースの ID を指定します。 *trace_id*は**int**、既定値はありません。 ユーザーが使用してこの*trace_id*識別、変更、およびトレースを制御する値。  
   
- [  **@columnid=** ] *column_id*  
+ [ **@columnid=** ] *column_id*  
  フィルターが適用される列の ID を指定します。 *column_id*は**int**、既定値はありません。 場合*column_id* null、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定されたトレースに対してすべてのフィルターをクリアします。  
   
- [  **@logical_operator**  =] *logical_operator*  
+ [ **@logical_operator** = ] *logical_operator*  
  指定するかどうか AND (**0**) または OR (**1**) 演算子を適用します。 *logical_operator*は**int**、既定値はありません。  
   
- [  **@comparison_operator=** ] *comparison_operator*  
+ [ **@comparison_operator=** ] *comparison_operator*  
  実行される比較の種類を示します。 *comparison_operator*は**int**、既定値はありません。 次の表は、比較演算子と各比較演算子に対応する値の一覧です。  
   
-|値|比較演算子|  
+|[値]|比較演算子|  
 |-----------|-------------------------|  
 |**0**|= (等しい)|  
 |**1**|<> (等しくない)|  
@@ -73,7 +76,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|パターンに一致しない|  
   
- [  **@value=** ]*値*  
+ [ **@value=** ] *value*  
  フィルターの対象となる値を指定します。 データ型*値*をフィルター選択するのには、列のデータ型に一致する必要があります。 たとえば、あるオブジェクトの ID 列にフィルターが設定されている場合、 **int**データ型、*値*する必要があります**int**です。場合*値*は**nvarchar**または**varbinary**8000 の最大長を持つことができます。  
   
  比較演算子が LIKE または NOT LIKE である場合、論理演算子には、"%" または LIKE 演算に適した他のフィルターを含めることができます。  
@@ -107,7 +110,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
   
  ストアド プロシージャのすべての SQL トレースのパラメーター (**sp_trace_xx**) は、厳密に型指定されています。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ユーザーに ALTER TRACE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

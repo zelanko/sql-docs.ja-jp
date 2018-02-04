@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_schedule_TSQL
 - sp_add_schedule
-dev_langs: TSQL
-helpviewer_keywords: sp_add_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_schedule
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
-caps.latest.revision: "53"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d526b94fd95bc3523e3633c8be0617e23357811c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: df04306671a8e2a0f0ded0fc7482e56955102a83
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,16 +61,16 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@schedule_name =** ] **'***schedule_name***'**  
+ [ **@schedule_name =** ] **'***schedule_name***'**  
  スケジュールの名前です。 *schedule_name*は**sysname**、既定値はありません。  
   
  [  **@enabled =** ]*有効になっています。*  
  スケジュールの現在の状態を指定します。 *有効になっている*は**tinyint**、既定値は**1** (有効) です。 場合**0**スケジュールが有効になっていません。 スケジュールが無効な場合、このスケジュールでジョブは実行されません。  
   
- [  **@freq_type =** ] *freq_type*  
+ [ **@freq_type =** ] *freq_type*  
  ジョブが実行されるときを示す値。 *freq_type*は**int**、既定値は**0**、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 回。|  
 |**4**|毎日。|  
@@ -77,7 +80,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**64**|SQL Server エージェント サービスの起動時に実行|  
 |**128**|コンピューターがアイドル状態のときに実行|  
   
- [  **@freq_interval =** ] *freq_interval*  
+ [ **@freq_interval =** ] *freq_interval*  
  ジョブを実行する日です。 *freq_interval*は**int**、既定値は**1**の値に依存して*freq_type*です。  
   
 |値の*freq_type*|影響を与える*freq_interval*|  
@@ -90,23 +93,23 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**64** (SQLServerAgent サービスの起動時)|*freq_interval*は使用されません。|  
 |**128**|*freq_interval*は使用されません。|  
   
- [  **@freq_subday_type =** ] *freq_subday_type*  
+ [ **@freq_subday_type =** ] *freq_subday_type*  
  単位を指定*freq_subday_interval*です。 *freq_subday_type*は**int**、既定値は**0**、これらの値のいずれかを指定できます。  
   
-|値|説明 (単位)|  
+|[値]|説明 (単位)|  
 |-----------|--------------------------|  
 |**0x1**|指定した時間|  
 |**0x2**|Seconds|  
 |**0x4**|Minutes|  
 |**0x8**|Hours|  
   
- [  **@freq_subday_interval =** ] *freq_subday_interval*  
+ [ **@freq_subday_interval =** ] *freq_subday_interval*  
  数*freq_subday_type*ジョブの各実行間に発生する期間。 *freq_subday_interval*は**int**、既定値は**0**します。 注: 間隔は 10 秒より長くしてください。 *freq_subday_interval*そのような場合は無視されます、 *freq_subday_type*と等しい**1**です。  
   
- [  **@freq_relative_interval =** ] *freq_relative_interval*  
+ [ **@freq_relative_interval =** ] *freq_relative_interval*  
  ジョブの発生*freq_interval* 、各月場合*freq_interval* 32 (月単位) です。 *freq_relative_interval*は**int**、既定値は**0**、これらの値のいずれかを指定できます。 *freq_relative_interval*そのような場合は無視されます、 *freq_type*が 32 と等しくありません。  
   
-|値|説明 (単位)|  
+|[値]|説明 (単位)|  
 |-----------|--------------------------|  
 |**1**|First|  
 |**2**|第 2 週|  
@@ -114,35 +117,35 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**8**|第 4 週|  
 |**16**|Last|  
   
- [  **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
+ [ **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
  ジョブを実行する週間隔または月間隔を指定します。 *freq_recurrence_factor*場合にのみ使用*freq_type*は**8**、 **16**、または**32**です。 *freq_recurrence_factor*は**int**、既定値は**0**します。  
   
- [  **@active_start_date =** ] *active_start_date*  
+ [ **@active_start_date =** ] *active_start_date*  
  ジョブの実行を開始できる日付を指定します。 *active_start_date*は**int**の既定値は NULL には、今日の日付を示します。 日付は yyyymmdd です。 場合*active_start_date*が NULL でない日付は 19900101 以上する必要があります。  
   
  スケジュールの作成後は、開始日が正しい日付であることを確認するようにしてください。 詳細については、「開始日のスケジュール設定」セクションを参照してください[作成とジョブにスケジュールをアタッチ](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)です。  
   
  週単位または月単位のスケジュールでは、エージェントは、active_start_date が過去の日付の場合は無視し、代わりに現在の日付を使用します。 SQL エージェントのスケジュールが sp_add_schedule を使用して作成されるときに、ジョブの実行が開始される日付を表す active_start_date パラメーターを指定することができます。 スケジュールの種類が週単位または月単位で、active_start_date パラメーターが過去の日付になっている場合、active_start_date パラメーターは無視され、現在の日付が active_start_date に使用されます。  
   
- [  **@active_end_date =** ] *active_end_date*  
+ [ **@active_end_date =** ] *active_end_date*  
  ジョブの実行を停止できる日付。 *active_end_date*は**int**、既定値は**99991231**、ことを示します年 12 月 31 日から 9999 です。 形式は YYYYMMDD です。  
   
- [  **@active_start_time =** ] *active_start_time*  
+ [ **@active_start_time =** ] *active_start_time*  
  間の日で時間*active_start_date*と*active_end_date*ジョブの実行を開始します。 *active_start_time*は**int**、既定値は**000000**12時 00分: 00 AM を示します を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
- [  **@active_end_time =** ] *active_end_time*  
+ [ **@active_end_time =** ] *active_end_time*  
  間の日で時間*active_start_date*と*active_end_date*ジョブの実行を終了します。 *active_end_time*は**int**、既定値は**235959**、午後 11時 59分: 59 を示します を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
- [  **@owner_login_name** =] **'***owner_login_name***'**  
+ [ **@owner_login_name**= ] **'***owner_login_name***'**  
  スケジュールを所有するサーバー プリンシパルの名前を指定します。 *owner_login_name*は**sysname**の既定値は NULL には、ことを示します、スケジュールの所有者が作成者であります。  
   
- [  **@schedule_uid** =] *schedule_uid***出力**  
+ [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
  スケジュールの一意識別子を指定します。 *schedule_uid*型の変数は、 **uniqueidentifier**です。  
   
- [  **@schedule_id** =] *schedule_id***出力**  
+ [ **@schedule_id**= ] *schedule_id***OUTPUT**  
  スケジュールの識別子を指定します。 *schedule_id*型の変数は、 **int**です。  
   
- [  **@originating_server** =] *server_name*  
+ [ **@originating_server**= ] *server_name*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -154,7 +157,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ## <a name="remarks"></a>解説  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  

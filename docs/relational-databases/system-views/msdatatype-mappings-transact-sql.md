@@ -8,26 +8,30 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSdatatype_mappings
 - MSdatatype_mappings_TSQL
-dev_langs: TSQL
-helpviewer_keywords: MSdatatype_mappings view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSdatatype_mappings view
 ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ad922397a8c2ed6e0b4faf0f92b84ee8d3408af
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f0acbcbf2c70b08b44e0147989fb1f9dcd3e2301
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="msdatatypemappings-transact-sql"></a>MSdatatype_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +40,9 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**dbms_name**|**nvarchar (128)**|DBMS の名前です。 使用可能な値とその説明のとおりです。<br /><br /> **MSSQLSERVER**: 接続先は、SQL Server データベース。<br />**ORACLE**: 接続先は Oracle データベース。<br />**DB2**: 接続先は IBM DB2 データベース。<br />**SYBASE**: 接続先は Sybase データベース。|  
-|**sql_type**|**nvarchar (128)**|SQL Server データ型です。|  
-|**dest_type**|**nvarchar (128)**|SQL Server 以外のデータ型の名前です。|  
+|**dbms_name**|**nvarchar(128)**|DBMS の名前です。 使用可能な値とその説明のとおりです。<br /><br /> **MSSQLSERVER**: 接続先は、SQL Server データベース。<br />**ORACLE**: 接続先は Oracle データベース。<br />**DB2**: 接続先は IBM DB2 データベース。<br />**SYBASE**: 接続先は Sybase データベース。|  
+|**sql_type**|**nvarchar(128)**|SQL Server データ型です。|  
+|**dest_type**|**nvarchar(128)**|SQL Server 以外のデータ型の名前です。|  
 |**dest_prec**|**bigint**|SQL Server 以外のデータ型の有効桁数です。|  
 |**dest_create_params**|**int**|内部使用のみです。|  
 |**dest_nullable**|**bit**|SQL Server 以外のデータ型が NULL 値をサポートするかどうかです。|  

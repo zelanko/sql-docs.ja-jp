@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_category
 - sp_update_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_update_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_category
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fad21c3db995f5eaa57d3f31c6ed057b7c9790b8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: fab5ea9aea708af028114ef59e9274931c8257f9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdatecategory-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +49,19 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@class =**] **'***クラス***'**  
+ [ **@class =**] **'***class***'**  
  更新するカテゴリのクラスを指定します。 *クラス*は**varchar (8)**, で、既定値はありませんはこれらの値のいずれかを指定します。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |**アラートを生成します。**|警告カテゴリを更新します。|  
-|**ジョブ**|ジョブ カテゴリを更新します。|  
-|**演算子**|オペレーター カテゴリを更新します。|  
+|**JOB**|ジョブ カテゴリを更新します。|  
+|**OPERATOR**|オペレーター カテゴリを更新します。|  
   
- [  **@name =**] **'***古い名前***'**  
+ [ **@name =**] **'***old_name***'**  
  カテゴリの現在の名前を指定します。 *古い名前*は**sysname**、既定値はありません。  
   
- [  **@new_name =**] **'***new_name***'**  
+ [ **@new_name =**] **'***new_name***'**  
  カテゴリの新しい名前を指定します。 *新しい名前*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -67,7 +70,7 @@ sp_update_category
 ## <a name="remarks"></a>解説  
  **sp_update_category**から実行する必要があります、 **msdb**データベース。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  このストアド プロシージャを実行するユーザーに付与する必要があります、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  

@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL FILE FORMAT
 - CREATE_EXTERNAL_FILE_FORMAT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - External
 - External, file format
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ab389a5c811f915ff497057a5daf12374f1cedb7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8fd2fa33a8a9107c86cfda7e0a628ab282efa534
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-external-file-format-transact-sql"></a>外部のファイルの形式 (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -106,22 +108,22 @@ WITH (
  *file_format_name*  
  外部のファイル形式の名前を指定します。
   
- FORMAT_TYPE は、外部データの形式を指定します。
+ FORMAT_TYPE = [ PARQUET | ORC | RCFILE | PARQUET] Specifies the format of the external data.
   
- PARQUET は、Parquet 形式を指定します。
+   -   PARQUET は、Parquet 形式を指定します。
   
- ORC  
- 最適化行多桁式 (ORC) 形式を指定します。 このオプションでは、Hive の外部の Hadoop クラスター上 0.11 以降のバージョンが必要です。 Hadoop, ORC ファイルの形式には、圧縮と RCFILE ファイルの形式よりもパフォーマンスの向上が用意されています。
-  
- RCFILE (SERDE_METHOD と組み合わせて = *SERDE_method*) レコード単票形式のファイル形式 (RcFile) を指定します。 このオプションでは、ハイブのシリアライザーとデシリアライザー (SerDe) メソッドを指定する必要があります。 この要件は、rc 版のファイルにクエリを使用して hadoop Hive と HiveQL を使用する場合は同じです。 SerDe メソッドは大文字小文字を区別に注意してください。
-  
- PolyBase をサポートする 2 つの SerDe メソッドで RCFile を指定する例です。
-  
--   FORMAT_TYPE RCFILE、SERDE_METHOD の = = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
-  
--   FORMAT_TYPE RCFILE、SERDE_METHOD の = = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
-  
- DELIMITEDTEXT 指定列区切り記号付きのテキスト形式とも呼ばれますフィールド ターミネータです。
+   -   ORC  
+   最適化行多桁式 (ORC) 形式を指定します。 このオプションでは、Hive の外部の Hadoop クラスター上 0.11 以降のバージョンが必要です。 Hadoop, ORC ファイルの形式には、圧縮と RCFILE ファイルの形式よりもパフォーマンスの向上が用意されています。
+
+   -   RCFILE (SERDE_METHOD と組み合わせて = *SERDE_method*) レコード単票形式のファイル形式 (RcFile) を指定します。 このオプションでは、ハイブのシリアライザーとデシリアライザー (SerDe) メソッドを指定する必要があります。 この要件は、rc 版のファイルにクエリを使用して hadoop Hive と HiveQL を使用する場合は同じです。 SerDe メソッドは大文字小文字を区別に注意してください。
+
+   PolyBase をサポートする 2 つの SerDe メソッドで RCFile を指定する例です。
+
+    -   FORMAT_TYPE RCFILE、SERDE_METHOD の = = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
+
+    -   FORMAT_TYPE RCFILE、SERDE_METHOD の = = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
+
+   -   DELIMITEDTEXT 指定列区切り記号付きのテキスト形式とも呼ばれますフィールド ターミネータです。
   
  FIELD_TERMINATOR = *field_terminator* Applies only to delimited text files. フィールド ターミネータは、テキスト区切りファイル内の各フィールド (列) の末尾を示す 1 つ以上の文字を指定します。 既定では、パイプ文字 ꞌ|ꞌ です。 保証サポートは、1 つまたは複数の ascii 文字を使用することをお勧めします。
   
@@ -152,7 +154,7 @@ WITH (
   
 -   STRING_DELIMITER = '0x7E0x7E'  -- Two tildes (for example, ~~)
   
- 日付\_形式 = *datetime_format*区切られたテキスト ファイルに記述するすべての日付と時刻のデータのカスタム形式を指定します。 ソース ファイルには、datetime の既定の形式が使用されている場合は、このオプションは必要はありません。 1 つだけのカスタム日付/時刻形式は、ファイルあたり許可します。 ファイルごとの複数のカスタム日付/時刻形式を指定することはできません。 ただし、外部テーブルの定義で、それぞれのデータ型の既定の形式がそれぞれ場合は、複数の datetime 形式を使用できます。
+日付\_形式 = *datetime_format*区切られたテキスト ファイルに記述するすべての日付と時刻のデータのカスタム形式を指定します。 ソース ファイルには、datetime の既定の形式が使用されている場合は、このオプションは必要はありません。 1 つだけのカスタム日付/時刻形式は、ファイルあたり許可します。 ファイルごとの複数のカスタム日付/時刻形式を指定することはできません。 ただし、外部テーブルの定義で、それぞれのデータ型の既定の形式がそれぞれ場合は、複数の datetime 形式を使用できます。
 
 PolyBase では、データをインポートするため、カスタムの日付の書式のみ使用します。 外部ファイルにデータを書き込むためのカスタム書式指定は使用しません。
 

@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 01fc6329-5d6b-4186-9565-395f375477bb
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c2dd6c43d22f82a0628d7af0f34d4882819e5ff
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: f74928db1958fbb8ec607bac83b45612a6129e46
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>[SQL Server Agent のプロパティ] ダイアログ ボックス ([ログオン] タブ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用して、**ログオン**のタブ、 **SQL Server エージェントのプロパティ** ダイアログ ボックスで使用されるアカウントを指定する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスの開始、停止、サービスにします。 アカウントのパスワードを変更した場合、サービスを再起動しなくても、すぐにその変更が有効になります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+**[SQL Server Agent のプロパティ]** ダイアログ ボックスの **[ログオン]** タブでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスで使用するアカウントを指定します。また、このサービスの開始と停止も行えます。 アカウントのパスワードを変更した場合、サービスを再起動しなくても、すぐにその変更が有効になります。  
   
 > [!NOTE]  
 >  クラスター化されたインスタンス上のサービスで使用するアカウント名を変更する場合、新しいアカウントは、そのサービスのセットアップ時に指定したドメイン グループに属している必要があります。または、そのグループにメンバーを追加する権限が与えられている必要があります。 グループのメンバーシップを変更する権限がない場合は、ドメイン管理者に問い合わせてください。  

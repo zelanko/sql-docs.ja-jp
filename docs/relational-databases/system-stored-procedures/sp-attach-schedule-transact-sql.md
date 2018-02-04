@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_schedule_TSQL
 - sp_attach_schedule
-dev_langs: TSQL
-helpviewer_keywords: sp_attach_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_attach_schedule
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8359436d7e220c7bef3068ad9e73ded455ea497
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d78d6c73d28325771460a1c055a6fb0b491c264c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +49,19 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  スケジュールを追加するジョブのジョブ識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
- [  **@job_name =** ] **'***job_name***'**  
+ [ **@job_name =** ] **'***job_name***'**  
  スケジュールを追加するジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
- [  **@schedule_id =** ] *schedule_id*  
+ [ **@schedule_id =** ] *schedule_id*  
  ジョブに設定するスケジュールの識別番号を指定します。 *schedule_id*は**int**、既定値は NULL です。  
   
- [  **@schedule_name =** ] **'***schedule_name***'**  
+ [ **@schedule_name =** ] **'***schedule_name***'**  
  ジョブに設定するスケジュールの名前を指定します。 *schedule_name*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
@@ -71,7 +74,7 @@ sp_attach_schedule
   
  このストアド プロシージャを実行する必要があります、 **msdb**データベース。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
@@ -84,7 +87,7 @@ sp_attach_schedule
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)」を参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ユーザーがジョブとスケジュールの両方を所有しているかどうかを確認します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ジョブとスケジュールの両方に、ユーザーが所有するかどうかを確認します。  
   
 ## <a name="examples"></a>使用例  
  次の例は、名前付きのスケジュールを作成`NightlyJobs`です。 このスケジュールを使用するジョブは、毎日、サーバーの時間が `01:00` になると実行されます。 この例では、ジョブにスケジュールをアタッチ`BackupDatabase`とジョブ`RunReports`です。  

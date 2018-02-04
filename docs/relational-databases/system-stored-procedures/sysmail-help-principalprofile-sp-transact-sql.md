@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_principalprofile_sp_TSQL
 - sysmail_help_principalprofile_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_principalprofile_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_principalprofile_sp
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 322984b88e879adb952a1168b17178b8ffe20ae2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 54763594122216c14ef8b74f17fbc83919ea44fc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +48,16 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@principal_id=** ] *principal_id*  
+ [ **@principal_id=** ] *principal_id*  
  データベース ユーザーまたはロールの id を指定します、 **msdb**データベースの関連付けを表示します。 *principal_id*は**int**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定することがあります。  
   
- [  **@principal_name=** ] **'***principal_name***'**  
+ [ **@principal_name=** ] **'***principal_name***'**  
  データベース ユーザーまたはロールの名前を指定します、 **msdb**データベースの関連付けを表示します。 *principal_name*は**sysname**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定することがあります。  
   
- [  **@profile_id=** ] *profile_id*  
+ [ **@profile_id=** ] *profile_id*  
  関連付けを表示するプロファイルの ID を指定します。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定することがあります。  
   
- [  **@profile_name=** ] **'***profile_name***'**  
+ [ **@profile_name=** ] **'***profile_name***'**  
  関連付けを表示するプロファイルの名前を指定します。 *profile_name*は**sysname**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定することがあります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -77,7 +80,7 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
   
  **sysmail_help_principalprofile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマです。 現在のデータベースがない場合は、3 部構成の名前を持つプロシージャを実行する必要があります**msdb**です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

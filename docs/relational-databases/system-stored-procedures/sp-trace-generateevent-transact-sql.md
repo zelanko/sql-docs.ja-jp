@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_generateevent_TSQL
 - sp_trace_generateevent
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_generateevent
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28512a66275000a1d185dabdb1ce96a5ed242165
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8f02fbb7e401740f6720fd8a654a38f3a9408e07
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +51,13 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@eventid=**] *event_id*  
+ [ **@eventid=**] *event_id*  
  有効にするイベントの ID を指定します。 *event_id*は**int**、既定値はありません。 ID は、82 ~ 91 のセットとしてユーザー定義イベントを表すからのイベント番号のいずれかを指定する必要があります[sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)です。  
   
- [  **@userinfo** =] **'***user_info***'**  
+ [ **@userinfo**= ] **'***user_info***'**  
  イベントの理由を示すユーザー定義の文字列を指定します。この引数は省略可能です。 *user_info*は**nvarchar (128)**、既定値は NULL です。  
   
- [  **@userdata** =] *user_data*  
+ [ **@userdata**= ] *user_data*  
  イベントに対するユーザー指定のデータを指定します。この引数は省略可能です。 *user_data*は**varbinary (8000)**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -74,7 +77,7 @@ sp_trace_generateevent [ @eventid = ] event_id
   
  ストアド プロシージャのすべての SQL トレースのパラメーター (**sp_trace_xx**) は、厳密に型指定されています。 これらのパラメーターを、引数の説明で指定されている正しいデータ型で指定しないと、このストアド プロシージャではエラーが返されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ユーザーに ALTER TRACE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

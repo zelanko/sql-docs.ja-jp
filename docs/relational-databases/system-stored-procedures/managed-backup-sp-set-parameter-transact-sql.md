@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sp_set_parameter
 - smart_admin.sp_set_parameter
 - smart_admin.sp_set_parameter_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_set_parameter
 - smart_admin.sp_set_parameter
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31460ed7e3e972d87d9c6461ad78d5560fd67861
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 7c8469b7ddb66198889604af7b0d512166429a0b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -59,13 +61,13 @@ EXEC managed_backup.sp_set_parameter
   
 -   @parameter_name= 'SSMBackup2WANotificationEmailIds': @parameter_value = '電子メール'  
   
--   @parameter_name= 'SSMBackup2WAEnableUserDefinedPolicy': @parameter_value = {'true' |false'}  
+-   @parameter_name = 'SSMBackup2WAEnableUserDefinedPolicy' : @parameter_value  = { 'true' | 'false' }  
   
 -   @parameter_name= 'SSMBackup2WADebugXevent': @parameter_value = {'true' |false'}  
   
--   @parameter_name= 'FileRetentionDebugXevent': @parameter_value = {'true' |false'}  
+-   @parameter_name = 'FileRetentionDebugXevent' : @parameter_value  = { 'true' | 'false' }  
   
--   @parameter_name'StorageOperationDebugXevent' = = {'true' |false'}  
+-   @parameter_name = 'StorageOperationDebugXevent' = { 'true' | 'false' }  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
@@ -73,9 +75,9 @@ EXEC managed_backup.sp_set_parameter
 ## <a name="best-practices"></a>ベスト プラクティス  
  ステートメントまたはルーチンの実行時にユーザーが知っておく必要があるベスト プラクティスを説明するセクション (省略可) です。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>アクセス許可  
+### <a name="permissions"></a>権限  
  必要があります**EXECUTE**に対するアクセス許可**managed_backup.sp_set_parameter**ストアド プロシージャです。  
   
 ## <a name="examples"></a>使用例  

@@ -8,26 +8,28 @@ ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 340fa0342b627cc672ec0ee97fafee63cd5b7ac0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f3b3e5f9acdd5bcdc6b21dee93ce5e63431d8316
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>SQL データ ウェアハウスのストアド プロシージャ
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]データベース ロールに関連する操作の実行に使用できる組み込みの手順を提供します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]次のシステム プロシージャが含まれています。  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] データベース ロールに関連する操作の実行に使用できる組み込みの手順を提供します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]次のシステム プロシージャが含まれています。  
   
 ##  <a name="AggregateFunctions"></a>[sp_datatype_info_90 (& a) #40 です。SQL Data Warehouse &#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
   
@@ -35,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
  [sp_pdw_database_encryption &#40;です。SQL Data Warehouse &#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
   
- [sp_pdw_database_encryption_regenerate_system_keys &#40;です。SQL Data Warehouse &#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
+ [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   
  [sp_pdw_log_user_data_masking &#40;です。SQL Data Warehouse &#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
   

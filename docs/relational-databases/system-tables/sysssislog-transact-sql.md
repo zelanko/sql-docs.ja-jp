@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysdtslog90_TSQL
 - sysdtslog90
-dev_langs: TSQL
-helpviewer_keywords: sysssislog system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysssislog system table
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: spelluru
 ms.author: spelluru
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2073eac1ce40cd735b4fde72744e5bc56f24686f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 479c6158f7c26cde133fae66164dda89b9a39888
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +37,10 @@ ms.lasthandoff: 11/17/2017
   パッケージやパッケージのタスク、およびコンテナーによって実行時に生成される各ログ エントリに対して、1 行のデータを格納します。 このテーブルは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールするときに msdb データベースに作成されます。 ログ記録が別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに記録されるように構成する場合、ここで説明する形式の sysssislog テーブルが、指定されたデータベースに作成されます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]このテーブルにログ エントリを書き込みます**のみ**パッケージを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ プロバイダーです。  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] このテーブルにログ エントリを書き込みます**のみ**パッケージを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ プロバイダーです。  
   
   
-|列名|データ型|説明|  
+|列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |id|**int**|ログ エントリの一意識別子。|  
 |イベント|**sysname**|ログ エントリを生成したイベントの名前。|  
@@ -53,6 +56,6 @@ ms.lasthandoff: 11/17/2017
 |message|**nvarchar**|イベントおよびイベントに関連する情報の説明。|  
   
 ## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)   
+ [Integration Services &#40;です。SSIS &#41;ログ記録](../../integration-services/performance/integration-services-ssis-logging.md)   
   
   

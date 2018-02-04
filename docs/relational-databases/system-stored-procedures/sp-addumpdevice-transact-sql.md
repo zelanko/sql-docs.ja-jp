@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_addumpdevice_TSQL
 - sp_addumpdevice
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa3e7996f56f71b3028022b869b3e3c3a5480fb5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dad0547ea803cfbf709b36f078d552435c848900
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,18 +54,18 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@devtype=** ] **'***device_type***'**  
+ [ **@devtype=** ] **'***device_type***'**  
  バックアップ デバイスの種類を指定します。 *device_type*は**varchar (20)**, で、既定値はありませんは、次の値のいずれかを指定します。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
-|**ディスク**|バックアップ デバイスとしてのハード ディスク ファイル。|  
-|**テープ**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows でサポートされるテープ デバイス。<br /><br /> 注: テープ バックアップ デバイスは、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でサポートされなくなる予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
+|**disk**|バックアップ デバイスとしてのハード ディスク ファイル。|  
+|**tape**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows でサポートされるテープ デバイス。<br /><br /> 注: テープ バックアップ デバイスは、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でサポートされなくなる予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
   
- [  **@logicalname =** ] **'***logical_name***'**  
+ [ **@logicalname =** ] **'***logical_name***'**  
  BACKUP ステートメントおよび RESTORE ステートメントで使用するバックアップ デバイスの論理名を指定します。 *logical_name*は**sysname**、既定値はありません、NULL にすることはできません。  
   
- [  **@physicalname =** ] **'***physical_name***'**  
+ [ **@physicalname =** ] **'***physical_name***'**  
  バックアップ デバイスの物理名を指定します。 物理名にはオペレーティング システムのファイル名の規則またはネットワーク デバイスの UNC (汎用名前付け規則) が適用されます。物理名には完全パスを指定する必要があります。 *physical_name*は**nvarchar (260)**、既定値はありません値に設定して、NULL にすることはできません。  
   
  でリモート ネットワークの場所を、バックアップ デバイスを作成するときにあることを確認する名前、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が開始されたリモート コンピューターの適切な書き込み機能があります。  
@@ -73,10 +75,10 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 > [!NOTE]  
 >  このプロシージャでは、指定された物理名がカタログに入力されます。 プロシージャがデバイスへのアクセスや作成を試みることはありません。  
   
- [  **@cntrltype =** ] **'***controller_type***'**  
+ [ **@cntrltype =** ] **'***controller_type***'**  
  互換性のために残されています。 このパラメーターを指定しても無視されます。 旧バージョンとの互換性のためだけに用意されています。 新しい用途**sp_addumpdevice**このパラメーターを省略する必要があります。  
   
- [  **@devstatus =** ] **'***device_status***'**  
+ [ **@devstatus =** ] **'***device_status***'**  
  互換性のために残されています。 このパラメーターを指定しても無視されます。 旧バージョンとの互換性のためだけに用意されています。 新しい用途**sp_addumpdevice**このパラメーターを省略する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -98,7 +100,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  デバイスを削除するには使用[sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)または[SQL Server Management Studio](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  **diskadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
  ディスクに対する書き込み権限が必要です。  

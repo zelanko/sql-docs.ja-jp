@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 157a9b7e67a16d6c234ec7d5244250e3dc0c761d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 2a1cfb458983a017352384f4074be455ee4994c5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER のプロトコルのプロパティ ([詳細設定] タブ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用して、 **[詳細設定]**タブで、 **MSSQLSERVER プロパティのプロトコル**を構成するダイアログ ボックス**認証の拡張保護**の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]. **拡張保護** とは、オペレーティング システムで実装されているネットワーク コンポーネントの機能です。 **拡張保護** は、Windows 7 および Windows Server 2008 R2 で使用でき、それ以前のオペレーティング システムではサービス パックに含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続を **拡張保護**を使用して確立することで、安全性を高めることができます。 **拡張保護** の利点には、 **[フラグ]** タブで **[強制的に暗号化]** を選択していないと得られないものもあります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+**[MSSQLSERVER のプロトコルのプロパティ]** ダイアログ ボックスの **[詳細設定]** タブを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]の**認証の拡張保護**を構成します。 **拡張保護** とは、オペレーティング システムで実装されているネットワーク コンポーネントの機能です。 **拡張保護** は、Windows 7 および Windows Server 2008 R2 で使用でき、それ以前のオペレーティング システムではサービス パックに含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続を **拡張保護**を使用して確立することで、安全性を高めることができます。 **拡張保護** の利点には、 **[フラグ]** タブで **[強制的に暗号化]** を選択していないと得られないものもあります。  
   
 > [!IMPORTANT]  
 >  既定では、Windows の **拡張保護** は有効になっていません。 Windows で **拡張保護** を有効にする方法の詳細については、サポート技術情報の記事「 [認証に対する保護の強化](http://go.microsoft.com/fwlink/?LinkId=178431)」を参照してください。  

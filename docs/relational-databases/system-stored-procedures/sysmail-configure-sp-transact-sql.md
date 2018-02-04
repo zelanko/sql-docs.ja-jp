@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_configure_sp_TSQL
 - sysmail_configure_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_configure_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_configure_sp
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d56f348ef849e98cf0e9445382d00ec6b66e5b81
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 934f108783b76e070a15723543cafae59b80b705
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,12 +74,12 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 |*DatabaseMailExeMinimumLifeTime*|外部メール処理がアクティブな状態にとどまる最小時間 (秒単位)。 データベース メールで多くのメッセージが送信される場合は、この値を増やしてデータベース メールをアクティブな状態に保ち、頻繁な開始と停止によるオーバーヘッドを回避するようにしてください。|**600**|  
 |*DefaultAttachmentEncoding*|電子メールの添付ファイルに適用する既定のエンコード。|MIME|  
 |*MaxFileSize*|添付ファイルの最大サイズ (バイト単位)。|**1000000**|  
-|*ProhibitedExtensions*|電子メールへの添付ファイルとして送信できない拡張子のコンマ区切りのリスト。|**exe、dll、vbs、js**|  
+|*ProhibitedExtensions*|電子メールへの添付ファイルとして送信できない拡張子のコンマ区切りのリスト。|**exe,dll,vbs,js**|  
 |*LoggingLevel*|データベース メール ログに記録されるメッセージ。 数値の値は次のいずれかです。<br /><br /> 1 - 標準モード。 エラーだけをログに記録します。<br /><br /> 2 - 拡張モード。 エラー、警告、および情報メッセージをログに記録します。<br /><br /> 3 - 詳細モード。 エラー、警告、情報メッセージ、成功のメッセージ、およびその他の内部メッセージをログに記録します。 トラブルシューティングを行うには、このモードを使用してください。|**2**|  
   
  ストアド プロシージャ**sysmail_configure_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマです。 現在のデータベースがない場合は、3 部構成の名前を持つプロシージャを実行する必要があります**msdb**です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにこのプロシージャの既定の実行権限、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
@@ -100,7 +103,7 @@ EXECUTE msdb.dbo.sysmail_configure_sp
   
 ## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [sysmail_help_configure_sp &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
+ [sysmail_help_configure_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
  [データベース メールのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

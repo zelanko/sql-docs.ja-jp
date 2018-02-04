@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_file_recover_suspect_db_TSQL
 - sp_add_log_file_recover_suspect_db
-dev_langs: TSQL
-helpviewer_keywords: sp_add_log_file_recover_suspect_db
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_log_file_recover_suspect_db
 ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44d4e79680160bc294e002bd663578e955f54f41
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1623d485132881e7d4df61926dc425257e3113b3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddlogfilerecoversuspectdb-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,24 +51,24 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@dbName =** ] **'***データベース***'**  
+ [ **@dbName =** ] **'***database***'**  
  データベースの名前です。 *データベース*は**sysname**、既定値はありません。  
   
- [  **@name=** ] **'***logical_file_name***'**  
+ [ **@name=** ] **'***logical_file_name***'**  
  使用される名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ファイルを参照するときにします。 サーバー内で一意な名前を指定する必要があります。 *logical_file_name*は**nvarchar (260)**、既定値はありません。  
   
- [  **@filename =** ] **'***os_file_name***'**  
+ [ **@filename =** ] **'***os_file_name***'**  
  オペレーティング システムが使用するファイルのパスとファイル名を指定します。 先にサーバーで、ファイルが存在する必要があります、[!INCLUDE[ssDE](../../includes/ssde-md.md)]がインストールされています。 *os_file_name*は**nvarchar (260)**、既定値はありません。  
   
- [  **@size=** ] **'***サイズ* **'**  
+ [ **@size=** ] **'***size* **'**  
  ファイルの初期サイズです。 *サイズ*は**nvarchar (20)**、既定値は NULL です。 整数を指定します。小数を含めないでください。 サフィックス MB、KB を使用してメガバイト、キロバイトを指定できます。 既定値は MB です。 最小値は 512 KB です。 場合*サイズ*が指定されていない、既定値は 1 MB です。  
   
- [  **@maxsize=** ] **'***max_size* **'**  
+ [ **@maxsize=** ] **'***max_size* **'**  
  ファイルを拡張できる最大サイズを指定します。 *max_size*は**nvarchar (20)**、既定値は NULL です。 整数を指定します。小数を含めないでください。 サフィックス MB、KB を使用してメガバイト、キロバイトを指定できます。 既定値は MB です。  
   
  場合*max_size*が指定されていない、ディスクがいっぱいになるまで、ファイルが拡張されます。 ディスク容量の上限まで近づくと、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログが管理者に対して警告を発します。  
   
- [  **@filegrowth=** ] **'***growth_increment* **'**  
+ [  **@filegrowth=** ] **' * * * growth_increment* **'**  
  新しい領域が必要とされるたびにファイルに追加される領域の容量を指定します。 *growth_increment*は**nvarchar (20)**、既定値は NULL です。 値に 0 を指定した場合、ファイルの拡張は行われません。 整数を指定します。小数を含めないでください。 値は MB、KB、またはパーセント (%) の単位で指定できます。 % を指定すると、増加量が、増分値の発生時に、ファイルのサイズの比率を指定します。 サフィックス MB、KB、または % を付けないで数値を指定した場合の既定値は MB です。  
   
  場合*growth_increment* null、既定値は 10%、および最小サイズの値は 64 KB です。 指定されたサイズは、最も近い 64 KB 単位の値に切り上げられます。  
@@ -76,7 +79,7 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーに権限は、既定の実行、 **sysadmin**固定サーバー ロール。 この権限は譲渡できません。  
   
 ## <a name="examples"></a>使用例  

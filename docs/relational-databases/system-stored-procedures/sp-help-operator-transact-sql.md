@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_operator
 - sp_help_operator_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_operator
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_operator
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 392586d2f3ea34b6914cb7bf34757d0481e890a9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fc89c5f6689b64aea7be0410850f373d75d876e6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +49,10 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@operator_name=** ] **'***@operator_name***'**  
+ [ **@operator_name=** ] **'***operator_name***'**  
  オペレーター名を指定します。 *@operator_name*は**sysname**です。 場合*@operator_name*が指定されていないすべての演算子に関する情報が返されます。  
   
- [  **@operator_id=** ] *operator_id*  
+ [ **@operator_id=** ] *operator_id*  
  要求する情報の対象となるオペレーターの識別番号を指定します。 *operator_id*は**int**、既定値は NULL です。  
   
 > [!NOTE]  
@@ -60,33 +63,33 @@ sp_help_operator
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|説明|  
+|列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|オペレーター識別番号。|  
 |**name**|**sysname**|演算子の名前。|  
-|**有効になっています。**|**tinyint**|オペレーターが通知を受け取ることが可能かどうか。<br /><br /> **1** = [はい]<br /><br /> **0** = なし|  
-|**email_address**|**nvarchar (100)**|オペレーターの電子メール アドレスです。|  
+|**enabled**|**tinyint**|オペレーターが通知を受け取ることが可能かどうか。<br /><br /> **1** = [はい]<br /><br /> **0** = なし|  
+|**email_address**|**nvarchar(100)**|オペレーターの電子メール アドレスです。|  
 |**last_email_date**|**int**|オペレーターが前回、電子メールによる通知を受け取った日付。|  
 |**last_email_time**|**int**|オペレーターが前回、電子メールによる通知を受け取った時刻。|  
-|**pager_address**|**nvarchar (100)**|オペレーターのポケットベル アドレス。|  
+|**pager_address**|**nvarchar(100)**|オペレーターのポケットベル アドレス。|  
 |**last_pager_date**|**int**|オペレーターが前回、ポケットベルによる通知を受け取った日付。|  
 |**last_pager_time**|**int**|オペレーターが前回、ポケットベルによる通知を受け取った時刻。|  
 |**weekday_pager_start_time**|**int**|平日にオペレーターがポケットベルによる通知を受け取ることのできる開始時刻。|  
-|**エージェント**|**int**|平日にオペレーターがポケットベルによる通知を受け取ることのできる最終時刻。|  
-|**エージェント**|**int**|土曜日にオペレーターがポケットベルによる通知を受け取ることのできる開始時刻。|  
-|**@saturday_pager_end_time**|**int**|土曜日にオペレーターがポケットベルによる通知を受け取ることのできる最終時刻。|  
-|**エージェント**|**int**|日曜日にオペレーターがポケットベルによる通知を受け取ることのできる開始時刻。|  
-|**エージェント**|**int**|日曜日にオペレーターがポケットベルによる通知を受け取ることのできる最終時刻。|  
+|**weekday_pager_end_time**|**int**|平日にオペレーターがポケットベルによる通知を受け取ることのできる最終時刻。|  
+|**saturday_pager_start_time**|**int**|土曜日にオペレーターがポケットベルによる通知を受け取ることのできる開始時刻。|  
+|**saturday_pager_end_time**|**int**|土曜日にオペレーターがポケットベルによる通知を受け取ることのできる最終時刻。|  
+|**sunday_pager_start_time**|**int**|日曜日にオペレーターがポケットベルによる通知を受け取ることのできる開始時刻。|  
+|**sunday_pager_end_time**|**int**|日曜日にオペレーターがポケットベルによる通知を受け取ることのできる最終時刻。|  
 |**pager_days**|**tinyint**|ビットマスク (**1** = 日曜日、 **64** = 土曜日) 日の曜日にオペレーターがポケットベルによる通知の受信に使用できることを示すです。|  
-|**netsend_address**|**nvarchar (100)**|ネットワーク ポップアップ通知のオペレーター アドレス。|  
+|**netsend_address**|**nvarchar(100)**|ネットワーク ポップアップ通知のオペレーター アドレス。|  
 |**last_netsend_date**|**int**|オペレーターが前回、ネットワーク ポップアップによる通知を受け取った日付。|  
 |**last_netsend_time**|**int**|オペレーターが前回、ネットワーク ポップアップによる通知を受け取った時刻。|  
-|**@category_name**|**sysname**|このオペレーターが所属するオペレーター カテゴリの名前。|  
+|**category_name**|**sysname**|このオペレーターが所属するオペレーター カテゴリの名前。|  
   
 ## <a name="remarks"></a>解説  
  **sp_help_operator**から実行する必要があります、 **msdb**データベース。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  

@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a82e0c98-efaa-4b0b-9582-3c879ee42444
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 39ed54ceae41ef4399cdbcaf3c42b077590d180e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 915d8b9b06d30ce7690b177f71f14d3ce8f38ca8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>[SQL Server Analysis Services のプロパティ] ダイアログ ボックス ([ログオン] タブ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用して、**ログオン**のタブ、**分析サーバーのプロパティ** ダイアログ ボックスで使用されるアカウントを指定する、[!INCLUDE[ssAS](../../includes/ssas-md.md)]サービス、および開始、停止、サービス。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+**[SQL Server Analysis Services のプロパティ]** ダイアログ ボックスの **[ログオン]** タブでは、 [!INCLUDE[ssAS](../../includes/ssas-md.md)] サービスが使用するアカウントの指定や、そのサービスの開始、停止を行います。  
   
 > [!NOTE]  
 >  クラスター化されたインスタンス上のサービスで使用する **[アカウント名]** を変更する場合、変更後の新しいアカウントは、そのサービスのセットアップ時に指定したドメイン グループに属している必要があります。または、そのグループにメンバーを追加する権限が与えられている必要があります。 グループのメンバーシップを変更する権限がない場合は、ドメイン管理者に問い合わせてください。  

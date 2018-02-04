@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_resync_targetserver
 - sp_resync_targetserver_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_resync_targetserver
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_resync_targetserver
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be9c9f6346be5ca9fbbec34e8f9eb146cb36e85a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 93125c5747fc6f4b66c18ac6702721aaf4db6806
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spresynctargetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@server_name =**] **'***サーバー***'**  
+ [ **@server_name =**] **'***server***'**  
  再同期化するサーバーの名前を指定します。 *server* のデータ型は **sysname**で、既定値はありません。 場合**すべて**が指定されているすべての対象サーバーが再同期化します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -56,7 +59,7 @@ sp_resync_targetserver
 ## <a name="remarks"></a>解説  
  **sp_resync_targetserver**については、対象サーバーの現在のセットを削除し、ダウンロードする対象サーバーの新しいセットが通知されます。 新しいセットは、すべてのマルチサーバー ジョブを削除する命令が 1 つと、サーバーで対象になっている各ジョブのエージェントで構成されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
 ## <a name="examples"></a>使用例  

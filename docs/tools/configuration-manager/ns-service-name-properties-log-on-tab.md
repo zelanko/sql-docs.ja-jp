@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe580f038bce9676e30249765ccc02fe43696b38
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 512d1281ca516256631845d0283b50f8f58f82d5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;サービス名&gt;プロパティ (ログのタブ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用して、**ログオン**のタブ、 **Notification Services のプロパティ** ダイアログ ボックスで使用されるアカウントを指定する、[!INCLUDE[ssNS](../../includes/ssns-md.md)]サービス、および開始、停止、サービス。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+**[Notification Services のプロパティ]** ダイアログ ボックスの **[ログオン]** タブでは、 [!INCLUDE[ssNS](../../includes/ssns-md.md)] サービスが使用するアカウントの指定や、そのサービスの開始、停止を行います。  
   
 ## <a name="options"></a>オプション  
  **[ローカル システム アカウント]**  

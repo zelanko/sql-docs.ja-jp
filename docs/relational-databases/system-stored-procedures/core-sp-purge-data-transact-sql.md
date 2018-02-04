@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_data_TSQL
 - sp_purge_data
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_purge_data
 - management data warehouse, data collector stored procedures
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b03e5ef5984431f3fe2867e2dc303ca2ba710435
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fb74c4993f7a7d013e56061e3a572052c2939a99
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +77,7 @@ core.sp_purge_data
   
  このプロシージャは、管理データ ウェアハウス データベースのコンテキストで実行してください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーシップが必要、 **mdw_admin** (EXECUTE 権限) を持つ固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  

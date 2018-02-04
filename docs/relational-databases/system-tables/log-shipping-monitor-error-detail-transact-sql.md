@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - log_shipping_monitor_error_detail_TSQL
 - log_shipping_monitor_error_detail
-dev_langs: TSQL
-helpviewer_keywords: log_shipping_monitor_error_detail system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- log_shipping_monitor_error_detail system table
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7a2797659e6f20192a87662700632c399f72763
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c3f30aafc0d201903fab4a5d42e55c38669b70c2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="logshippingmonitorerrordetail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |**sequence_number**|**int**|複数のレコードに関連するエラーの情報を正しい順序で示すための増分番号。|  
 |**log_time**|**datetime**|レコードが作成された日時。|  
 |**log_time_utc**|**datetime**|レコードが作成された日時。協定世界時 (UTC) で表されます。|  
-|**メッセージ**|**nvarchar**|メッセージ テキスト。|  
+|**message**|**nvarchar**|メッセージ テキスト。|  
 |**source**|**nvarchar**|エラー メッセージまたはイベントのソース。|  
 |**help_url**|**nvarchar**|エラーの詳細を確認できる URL (使用可能な場合)。|  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/17/2017
  エージェント セッションを識別するための列を使用して**agent_id**、 **agent_type**、および**session_id**です。 並べ替える**log_time**記録された順序でエラーを表示します。  
   
 ## <a name="see-also"></a>参照  
- [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [ログ配布 &#40; についてSQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_monitor_history_detail &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
  [sp_cleanup_log_shipping_history &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
  [sp_delete_log_shipping_primary_database &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   

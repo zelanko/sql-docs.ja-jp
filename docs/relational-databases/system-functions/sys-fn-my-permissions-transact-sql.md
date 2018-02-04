@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - fn_my_permissions_TSQL
 - sys.fn_my_permissions
 - fn_my_permissions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_my_permissions function
 - sys.fn_my_permissions function
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f2928be2c8d444283e54e4e4b5a305ca8671c02c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9eb23a2de7fda489b205f1eaf89c124068be63b3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +49,7 @@ fn_my_permissions ( securable , 'securable_class' )
 ```  
   
 ## <a name="arguments"></a>引数  
- *セキュリティ保護可能です*  
+ *securable*  
  セキュリティ保護可能なリソースの名前を指定します。 セキュリティ保護可能なリソースがサーバーまたはデータベースの場合、この値は NULL に設定する必要があります。 *セキュリティ保護可能な*型のスカラー式は、 **sysname**です。 *セキュリティ保護可能な*マルチパート名を指定できます。  
   
  '*securable_class*'  

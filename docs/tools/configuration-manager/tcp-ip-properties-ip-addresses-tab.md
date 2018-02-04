@@ -8,26 +8,28 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6f40f56dcf2f46f78ebad2e8095e21cd5e012b3c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 78513a9ebe1a0418a5dac367dc49b790d3197019
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>[TCP/IP のプロパティ]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用して、 **TCP/IP のプロパティ (IP アドレス タブ)**ダイアログ ボックスを特定の IP アドレスの TCP/IP プロトコル オプションを構成します。 **[TCP 動的ポート]** と **[TCP ポート]** だけは、 **[IP All]**を選択することですべてのアドレスを一度に構成できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+**[TCP/IP のプロパティ]** ダイアログ ボックス ([IP アドレス] タブ) では、TCP/IP プロトコルの特定の IP アドレスに関するオプションを構成します。 **[TCP 動的ポート]** と **[TCP ポート]** だけは、 **[IP All]**を選択することですべてのアドレスを一度に構成できます。  
   
  SQL Server を再起動すると変更が有効になります。 SQL Server Browser サービスの開始と停止の詳細については、「[SQL Server Browser サービスの開始および停止](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」をご覧ください。  
   

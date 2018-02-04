@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_primary_database
 - sp_add_log_shipping_primary_database_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_log_shipping_primary_database
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_log_shipping_primary_database
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75e63b606ab3fb2c06a05221a83e8b28ad85bd49
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 24a1158b85bc9c53070c0c6cd16f2b6b36dcfe92
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,56 +62,56 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@database=** ] '*データベース*'  
+ [ **@database=** ] '*database*'  
  ログ配布プライマリ データベースの名前を指定します。 *データベース*は**sysname**、既定値はありません、NULL にすることはできません。  
   
- [  **@backup_directory=** ] '*backup_directory*'  
+ [ **@backup_directory=** ] '*backup_directory*'  
  プライマリ サーバー上のバックアップ フォルダーのパスを指定します。 *backup_directory*は**nvarchar (500)**、既定値はありません、NULL にすることはできません。  
   
- [  **@backup_share=** ] '*backup_share*'  
+ [ **@backup_share=** ] '*backup_share*'  
  プライマリ サーバー上のバックアップ ディレクトリのパスを指定します。 *backup_share*は**nvarchar (500)**、既定値はありません、NULL にすることはできません。  
   
- [  **@backup_job_name=** ] '*backup_job_name*'  
+ [ **@backup_job_name=** ] '*backup_job_name*'  
  プライマリ サーバー上で動作し、バックアップをバックアップ フォルダーにコピーする SQL Server エージェント ジョブの名前を指定します。 *backup_job_name*は**sysname** NULL にすることはできません。  
   
- [  **@backup_retention_period=** ] *backup_retention_period*  
+ [ **@backup_retention_period=** ] *backup_retention_period*  
  プライマリ サーバー上のバックアップ ディレクトリでログ バックアップ ファイルを保持する期間を、分単位で指定します。 *backup_retention_period*は**int**、既定値はありません、NULL にすることはできません。  
   
- [  **@monitor_server=** ] '*monitor_server*'  
+ [ **@monitor_server=** ] '*monitor_server*'  
  監視サーバーの名前を指定します。 *Monitor_server*は**sysname**、既定値はありません、NULL にすることはできません。  
   
- [  **@monitor_server_security_mode=** ] *monitor_server_security_mode*  
+ [ **@monitor_server_security_mode=** ] *monitor_server_security_mode*  
  監視サーバーへの接続に使用されるセキュリティ モード。  
   
  1 = Windows 認証です。  
   
  0 =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 *monitor_server_security_mode*は**ビット**NULL にすることはできません。  
   
- [  **@monitor_server_login=** ] '*monitor_server_login*'  
+ [ **@monitor_server_login=** ] '*monitor_server_login*'  
  監視サーバーへのアクセスに使用するアカウントのユーザー名を指定します。  
   
- [  **@monitor_server_password=** ] '*monitor_server_password*'  
+ [ **@monitor_server_password=** ] '*monitor_server_password*'  
  監視サーバーへのアクセスに使用するアカウントのパスワードを指定します。  
   
- [  **@backup_threshold=** ] *backup_threshold*  
+ [ **@backup_threshold=** ] *backup_threshold*  
  前に最後のバックアップ後の分単位の時間の長さ、 *threshold_alert*エラーが発生します。 *backup_threshold*は**int**で、既定値は 60 分です。  
   
- [  **@threshold_alert=** ] *threshold_alert*  
+ [ **@threshold_alert=** ] *threshold_alert*  
  バックアップのしきい値を超過したときに生成する警告を指定します。 *threshold_alert*は**int**の既定値は 14,420 です。  
   
- [  **@threshold_alert_enabled=** ] *threshold_alert_enabled*  
+ [ **@threshold_alert_enabled=** ] *threshold_alert_enabled*  
  アラートがあるかどうかを示す場合に発生*backup_threshold*を超過します。 値 0 (既定値) を指定すると、警告が無効になり、生成されなくなります。 *threshold_alert_enabled*は**ビット**です。  
   
- [  **@history_retention_period=** ]*ヒストリは削除*  
+ [ **@history_retention_period=** ] *history_retention_period*  
  履歴を保持する期間を分単位で指定します。 *ヒストリは削除*は**int**、既定値は NULL です。 値 14420 は、指定されていない場合に使用されます。  
   
- [  **@backup_job_id=** ] *backup_job_id*出力  
+ [ **@backup_job_id=** ] *backup_job_id* OUTPUT  
  プライマリ サーバー上のバックアップ ジョブに関連付けられている、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ID。 *backup_job_id*は**uniqueidentifier** NULL にすることはできません。  
   
- [  **@primary_id=** ] *primary_id*出力  
+ [ **@primary_id=** ] *primary_id* OUTPUT  
  ログ配布構成におけるプライマリ データベースの ID。 *primary_id*は**uniqueidentifier** NULL にすることはできません。  
   
- [  **@backup_compression** =] *backup_compression_option*  
+ [ **@backup_compression**= ] *backup_compression_option*  
  ログ配布構成を使用するかどうかを示す[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)です。 このパラメーターは [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (またはそれ以降のバージョン) でのみサポートされます。  
   
  0 = 無効。 ログ バックアップは圧縮されません。  
@@ -124,7 +127,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  なし  
   
 ## <a name="remarks"></a>解説  
- **sp_add_log_shipping_primary_database**から実行する必要があります、**マスター**プライマリ サーバー上のデータベースです。 このストアド プロシージャでは、次の関数を実行します。  
+ **sp_add_log_shipping_primary_database** must be run from the **master** database on the primary server. このストアド プロシージャでは、次の関数を実行します。  
   
 1.  プライマリ ID を生成し、テーブルに、プライマリ データベースのエントリを追加**log_shipping_primary_databases**指定された引数を使用します。  
   
@@ -136,7 +139,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 5.  監視サーバーがプライマリ サーバーと異なる場合は、追加の監視レコード**log_shipping_monitor_primary**モニターでサーバーを使用して指定された引数。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールは、この手順を実行できます。  
   
 ## <a name="examples"></a>使用例  
@@ -166,7 +169,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [ログ配布 &#40; についてSQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritytable
 - semanticsimilaritytable_TSQL
-dev_langs: TSQL
-helpviewer_keywords: semanticsimilaritytable function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2944708e70d9cc71cddcad33ff060df8a223530d
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8ba25daf71db106e5ecd8877e83edda6e43a5286
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +81,7 @@ SEMANTICSIMILARITYTABLE
 |**source_column_id**|**int**|ソース ドキュメントを使用して類似したドキュメントを検出したときの、検出元の列の ID。<br /><br /> 列 ID から列名 (または列名から列 ID) を取得する方法の詳細については、COL_NAME 関数と COLUMNPROPERTY 関数のセクションを参照してください。|  
 |**matched_column_id**|**int**|類似したドキュメントの検出元の列の ID。<br /><br /> 列 ID から列名 (または列名から列 ID) を取得する方法の詳細については、COL_NAME 関数と COLUMNPROPERTY 関数のセクションを参照してください。|  
 |**matched_document_key**|**\***<br /><br /> このキーは、ソース テーブル内の一意キーの型と一致します。|クエリで指定したドキュメントに類似していることが判明したドキュメントまたは行の、フルテキストおよびセマンティックな抽出の一意のキー値。|  
-|**スコア**|**本当の**|類似した他のすべてのドキュメントとの関係における、このドキュメントの類似性の相対値。<br /><br /> 値の範囲内の小数値は、[0.0, 1.0] より高いスコアが一致することを表す、1.0 は完全なスコアです。|  
+|**score**|**REAL**|類似した他のすべてのドキュメントとの関係における、このドキュメントの類似性の相対値。<br /><br /> 値の範囲内の小数値は、[0.0, 1.0] より高いスコアが一致することを表す、1.0 は完全なスコアです。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  詳細については、次を参照してください。[よる類似および関連したドキュメント セマンティック検索の](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)します。  
@@ -93,9 +96,9 @@ SEMANTICSIMILARITYTABLE
   
 -   [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>アクセス許可  
+### <a name="permissions"></a>権限  
  フルテキストおよびセマンティック インデックスが作成されたベース テーブルに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

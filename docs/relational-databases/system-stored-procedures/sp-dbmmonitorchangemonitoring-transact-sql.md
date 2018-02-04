@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorchangemonitoring
 - sp_dbmmonitorchangemonitoring_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_dbmmonitorchangemonitoring
 - database mirroring [SQL Server], monitoring
 ms.assetid: 17be755b-673d-4cd4-9544-6ecb4220bed3
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 260200756ccb0451f862b7697c792a888645fa76
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1b876a7eefe1efd8150f587485ed13d0f0a3de23
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdbmmonitorchangemonitoring-transact-sql"></a>sp_dbmmonitorchangemonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +48,7 @@ sp_dbmmonitorchangemonitoring parameter
 ```  
   
 ## <a name="arguments"></a>引数  
- *パラメーター*  
+ *parameter*  
  変更するパラメーターの識別子を指定します。 現時点では、次のパラメーターだけを指定できます。  
   
  1 = 更新期間  
@@ -66,7 +68,7 @@ sp_dbmmonitorchangemonitoring parameter
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -77,7 +79,7 @@ EXEC sp_dbmmonitorchangemonitoring 1, 5 ;
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [データベース ミラーリングと &#40; の監視SQL Server と &#41; です。](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitoraddmonitoring &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
  [sp_dbmmonitordropmonitoring &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
  [sp_dbmmonitorhelpmonitoring &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   

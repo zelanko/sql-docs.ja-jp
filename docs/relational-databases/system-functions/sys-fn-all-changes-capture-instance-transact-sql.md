@@ -8,30 +8,33 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - fn_all_changes
 - sys.fn_all_changes
 - fn_all_changes_TSQL
 - sys.fn_all_changes_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_all_changes_<capture_instance>
 - sys.fn_all_changes_<capture_instance>
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29f9560f7308fef45468c7ce67a6f8a15e120a3b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 381609e65ed354ee61d059da2e92d8fe3b7c114b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,8 +96,8 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|変更に関連付けられているトランザクションのコミット LSN です。 同じトランザクションでコミットされたすべての変更は、同じコミット LSN を共有します。|  
 |__CDC_SEQVAL|**binary(10)**|特定のトランザクションに含まれる行の変更を並べ替えるためのシーケンス値です。|  
-|\<列@column_list>|**異なります**|指定されている列、 *column_list*ラッパー関数を作成するスクリプトを生成することが呼び出されるとため sp_cdc_generate_wrapper_function 際に渡す引数。|  
-|__CDC_OPERATION|**nvarchar (2)**|ターゲット環境に行を適用するための操作を表す操作コードです。 引数の値に基づいてが異なります*row_filter_option*呼び出し時に指定します。<br /><br /> *row_filter_option* = 'all'<br /><br /> 'D' : 削除操作<br /><br /> 'I' : 挿入操作<br /><br /> 'UN' : 新しい値の更新操作<br /><br /> *row_filter_option* 'all は update old' を =<br /><br /> 'D' : 削除操作<br /><br /> 'I' : 挿入操作<br /><br /> 'UN' : 新しい値の更新操作<br /><br /> 'UO' : 古い値の更新操作|  
+|\<列@column_list>|**varies**|指定されている列、 *column_list*ラッパー関数を作成するスクリプトを生成することが呼び出されるとため sp_cdc_generate_wrapper_function 際に渡す引数。|  
+|__CDC_OPERATION|**nvarchar(2)**|ターゲット環境に行を適用するための操作を表す操作コードです。 引数の値に基づいてが異なります*row_filter_option*呼び出し時に指定します。<br /><br /> *row_filter_option* = 'all'<br /><br /> 'D' : 削除操作<br /><br /> 'I' : 挿入操作<br /><br /> 'UN' : 新しい値の更新操作<br /><br /> *row_filter_option* = 'all update old'<br /><br /> 'D' : 削除操作<br /><br /> 'I' : 挿入操作<br /><br /> 'UN' : 新しい値の更新操作<br /><br /> 'UO' : 古い値の更新操作|  
 |\<列@update_flag_list>|**bit**|ビット フラグの名前は、列の名前を _uflag を付加しました。 フラグは常に場合、NULL に設定\__CDC_OPERATION が、'、'I'、または 'UO' のです。 ときに\__CDC_OPERATION が ' UN '、更新によって対応する列が変更される場合に 1 に設定されています。 それ以外の場合は、0 に設定されます。|  
   
 ## <a name="remarks"></a>解説  
@@ -118,6 +121,6 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="see-also"></a>参照  
  [sys.sp_cdc_generate_wrapper_function &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_ &#60; capture_instance &#62;。 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

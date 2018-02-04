@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_schedule
 - sp_delete_schedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_schedule
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b01f4f3c3487fbd9f68c899e2c9e71dae7efd0b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dc8bc8efb8d9382a0e7c1ab1c24b5534ff6786f0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +47,17 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@schedule_id=** ] *schedule_id*  
+ [ **@schedule_id=** ] *schedule_id*  
  削除するスケジュールの識別番号を指定します。 *schedule_id*は**int**、既定値は NULL です。  
   
 > **注:**か*schedule_id*または*schedule_name*指定する必要がありますが両方指定することはできません。  
   
- [  **@schedule_name=** ] **'***schedule_name***'**  
+ [ **@schedule_name=** ] **'***schedule_name***'**  
  削除するスケジュールの名前を指定します。 *schedule_name*は**sysname**、既定値は NULL です。  
   
 > **注:**か*schedule_id*または*schedule_name*指定する必要がありますが両方指定することはできません。  
   
- [  **@force_delete**  =] *force_delete*  
+ [ **@force_delete** = ] *force_delete*  
  スケジュールがジョブに関連付けられている場合にプロシージャを失敗させるかどうかを指定します。 *Force_delete*は bit で、既定値は**0**します。 ときに*force_delete*は**0**、ストアド プロシージャ、スケジュールがジョブにアタッチされている場合は失敗します。 ときに*force_delete*は**1**スケジュールをジョブにアタッチするかどうかに関係なく、スケジュールを削除します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -66,7 +69,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ## <a name="remarks"></a>解説  
  既定では、スケジュールがジョブに関連付けられている場合、スケジュールを削除することはできません。 ジョブに関連付けられているスケジュールを削除するには、値を指定**1**の*force_delete*です。 スケジュールを削除しても、現在実行中のジョブは停止しません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  

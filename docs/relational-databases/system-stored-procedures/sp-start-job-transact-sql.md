@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_start_job
 - sp_start_job_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_start_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_start_job
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 115e4738a6cca1b0578bf2edb86859f2e7b2a7d5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 5939e906cee691c2b6f13ff10677eb4f4129622f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,22 +52,22 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'***job_name***'**  
  開始するジョブの名前を指定します。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。 *job_name*は**sysname**、既定値は NULL です。  
   
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  開始するジョブの識別番号を指定します。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
- [  **@error_flag=** ] *error_flag*  
+ [ **@error_flag=** ] *error_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@server_name=** ] **'***server_name***'**  
+ [ **@server_name=** ] **'***server_name***'**  
  ジョブを開始する対象サーバーを指定します。 *server_name*は**nvarchar (128)**、既定値は NULL です。 *server_name*ジョブが現在対象となる対象サーバーのいずれかを指定する必要があります。  
   
- [  **@step_name=** ] **'***step_name***'**  
+ [ **@step_name=** ] **'***step_name***'**  
  ジョブの実行を開始するステップの名前を指定します。 ローカル ジョブにのみ適用されます。 *step_name*は**sysname**、既定値は NULL  
   
- [  **@output_flag=** ] *output_flag*  
+ [ **@output_flag=** ] *output_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -76,7 +79,7 @@ sp_start_job
 ## <a name="remarks"></a>解説  
  このストアド プロシージャは、 **msdb**データベース。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  

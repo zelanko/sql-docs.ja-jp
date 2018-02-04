@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
 - sp_filestream_force_garbage_collection_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba1b60621e23160ce9e951e17cf4777b016fe90f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d424bb470ac9da5edc6b314e62ffaa2e1e72b923
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="filestream-and-filetable---spfilestreamforcegarbagecollection"></a>Filestream および FileTable - sp_filestream_force_garbage_collection
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,13 +62,13 @@ sp_filestream_force_garbage_collection
   
 |||  
 |-|-|  
-|値|説明|  
+|[値]|説明|  
 |0|操作に成功しました。|  
 |1|操作に失敗しました|  
   
 ## <a name="result-sets"></a>結果セット  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |*file_name*|FILESTREAM コンテナー名を示します。|  
 |*num_collected_items*|このコンテナー内の、ガベージ コレクションが実行 (削除) された FILESTREAM アイテム (ファイルまたはディレクトリ) の数を示します。|  
@@ -87,7 +89,7 @@ sp_filestream_force_garbage_collection
 ガベージ コレクション (GC) は、ログの切り捨てに依存しています。 そのため、ファイルは完全復旧モデルを使用してデータベースで最近削除された場合は GC で連結した後にのみ、トランザクション ログの一部のログ バックアップが作成されたログ部分が非アクティブとマークされます。 単純復旧モデルを使用してデータベースをログの切り捨てが発生した後、`CHECKPOINT`データベースに対して発行されています。  
 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  db_owner データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

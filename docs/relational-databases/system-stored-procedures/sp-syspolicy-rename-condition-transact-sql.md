@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_rename_condition
 - sp_syspolicy_rename_condition_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_rename_condition
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_rename_condition
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8fe50a92fa2a149f7540aa1baba1b59ec3055dc
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 01c2068335e439d5c669447d766a3a5c2a07349c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyrenamecondition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +47,13 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@name=** ] **'***名前***'**  
+ [ **@name=** ] **'***name***'**  
  名前を変更する条件の名前を指定します。 *名前*は**sysname**場合に、指定する必要があります*condition_id*は NULL です。  
   
- [  **@condition_id=** ] *condition_id*  
+ [ **@condition_id=** ] *condition_id*  
  名前を変更する条件の識別子です。 *condition_id*は**int**場合に、指定する必要があります*名前*は NULL です。  
   
- [  **@new_name=** ] **'***new_name***'**  
+ [ **@new_name=** ] **'***new_name***'**  
  条件の新しい名前です。 *新しい名前*は**sysname**が必要とします。 NULL または空の文字列を指定することはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -61,7 +64,7 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
   
  いずれかの値を指定する必要があります*名前*または*condition_id*です。 両方を NULL にすることはできません。 これらの値を取得するには、msdb.dbo.syspolicy_conditions システム ビューに対してクエリを実行します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  PolicyAdministratorRole 固定データベース ロールのメンバーシップが必要です。  
   
 > [!IMPORTANT]  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_notification_TSQL
 - sp_add_notification
-dev_langs: TSQL
-helpviewer_keywords: sp_add_notification
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_notification
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5bd95d4aee45046410211e77213fe4dcbc43fc3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 22e6f2373ba35b24d74b7045350c7cb78a504c05
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +47,19 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@alert_name=** ] **'***アラート***'**  
+ [ **@alert_name=** ] **'***alert***'**  
  この通知で示される警告を指定します。 *アラート*は**sysname**、既定値はありません。  
   
- [  **@operator_name=** ] **'***演算子***'**  
+ [ **@operator_name=** ] **'***operator***'**  
  警告が発生したときに通知を受け取るオペレーターを指定します。 *演算子*は**sysname**、既定値はありません。  
   
- [  **@notification_method=** ] *notification_method*  
+ [ **@notification_method=** ] *notification_method*  
  オペレーターが通知を受ける方法を指定します。 *notification_method*は**tinyint**、既定値はありません。 *notification_method*と共にこれらの値の 1 つ以上にすることができます、 **OR**論理演算子です。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**1**|電子メール|  
-|**2**|ポケットベル|  
+|**1**|[電子メール]|  
+|**2**|[ポケットベル]|  
 |**4**|**net send**|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -74,7 +77,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
   
  電子メールのメッセージやポケットベルによる通知に失敗した場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス エラー ログに失敗がレポートされます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_notification**です。  
   
 ## <a name="examples"></a>使用例  

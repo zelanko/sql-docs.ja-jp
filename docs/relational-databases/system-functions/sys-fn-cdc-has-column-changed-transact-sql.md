@@ -8,30 +8,33 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_has_column_changed_TSQL
 - sys.fn_cdc_has_column_changed
 - fn_cdc_has_column_changed_TSQL
 - fn_cdc_has_column_changed
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.fn_cdc_has_column_changed
 - fn_cdc_has_column_changed
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb905bd7dfeb15f65887009e56ee065a356ff3ad
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b2c8918fe44c6534de5829556754a837752b8cfb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfncdchascolumnchanged-transact-sql"></a>sys.fn_cdc_has_column_changed (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +55,10 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
  キャプチャ インスタンスの名前を指定します。 *capture_instance*は**sysname**です。  
   
  **'** *column_name* **'**  
- 指定したキャプチャ インスタンスのレポート対象となるキャプチャ対象列を指定します。 *column_name*は**sysname**です。  
+ 指定したキャプチャ インスタンスのレポート対象となるキャプチャ対象列を指定します。 *column_name* is **sysname**.  
   
  *update_mask*  
- 関連する変更行の更新済み列を識別するマスクを指定します。 *update_mask*は**varbinary (128)**です。  
+ 関連する変更行の更新済み列を識別するマスクを指定します。 *update_mask* is **varbinary(128)**.  
   
 ## <a name="return-type"></a>戻り値の型  
  **bit**  
@@ -65,7 +68,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
   
  関数を使用することをお勧めときに、この情報は、変更データ クエリの一部として返される、 [sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)と[sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)この関数の代わりにします。 必要な列序数が 1 回しか計算されないようにするために、変更データを照会する前に fn_cdc_get_column_ordinal 関数を使用します。 クエリ内で fn_cdc_is_bit_set を使用して、返された各行の更新マスクから情報を抽出します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  固定サーバー ロール sysadmin または固定データベース ロール db_owner のメンバーシップが必要です。 それ以外のすべてのユーザーについては、ソース テーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。さらに、キャプチャ インスタンスのゲーティング ロールが定義されている場合は、そのデータベース ロールのメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  

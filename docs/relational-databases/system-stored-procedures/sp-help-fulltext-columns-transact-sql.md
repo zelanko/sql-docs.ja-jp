@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_columns
 - sp_help_fulltext_columns_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_fulltext_columns
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_fulltext_columns
 ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cf36ec0c077a41ec3686b2fe33e6bda7adbab7e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 74905280aa6602c4ff2826d564b76ca8769e2dfc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   フルテキスト インデックス作成用として指定された列を返します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用して、 [sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)カタログ ビューを代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して、 [sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)カタログ ビューを代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,10 +50,10 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@table_name=**] **'***table_name***'**  
+ [ **@table_name=**] **'***table_name***'**  
  フルテキスト インデックス情報を要求するテーブル名を指定します。この名前は 1 つまたは 2 つの要素で構成されます。 *table_name*は**nvarchar (517)**既定値は NULL です。 場合*table_name*を省略すると、すべてのフルテキスト インデックス付きテーブルのフルテキスト インデックス列情報を取得します。  
   
- [  **@column_name=**] **'***column_name***'**  
+ [ **@column_name=**] **'***column_name***'**  
  フルテキスト インデックスのメタデータを要求する対象の列の名前です。 *column_name*は**sysname**既定値は NULL です。 場合*column_name*を省略するか、NULL の場合は、すべてのフルテキスト インデックス付き列のフルテキスト列情報が返されます*table_name*です。 場合*table_name*はも省略するか、NULL の場合、データベース内のすべてのテーブルのすべてのフルテキスト インデックス付き列のフルテキスト インデックス列情報が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -69,7 +72,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 |**FULLTEXT_BLOBTP_COLID**|**int**|ドキュメント型列の列 ID。 この値は、フルテキスト インデックス列がときにのみ適用、 **varbinary (max)**または**イメージ**列です。|  
 |**FULLTEXT_LANGUAGE**|**sysname**|列のフルテキスト検索に使用される言語。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーに権限は、既定の実行、**パブリック**ロール。  
   
 ## <a name="examples"></a>使用例  
@@ -83,7 +86,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [COLUMNPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
  [sp_fulltext_column &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-fulltext-column-transact-sql.md)   
  [sp_help_fulltext_columns_cursor &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

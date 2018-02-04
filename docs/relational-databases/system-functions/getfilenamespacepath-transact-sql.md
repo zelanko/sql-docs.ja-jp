@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GetFileNamespacePath
 - GetFileNamespacePath_TSQL
-dev_langs: TSQL
-helpviewer_keywords: GetFileNamespacePath function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- GetFileNamespacePath function
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e7ba6d9582a0eb3660f206dc68087f4fa4852a8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ccab7d6345d49490f936c5080e9e034be7c79855
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +44,7 @@ ms.lasthandoff: 01/02/2018
 ```  
   
 ## <a name="arguments"></a>引数  
- *列名*  
+ *column-name*  
  列名、varbinary (max) の**file_stream** FileTable 内の列です。  
   
  *列名*値が有効な列名にする必要があります。 別のデータ型の列から変換またはキャストされた値や、式は指定できません。  
@@ -49,7 +52,7 @@ ms.lasthandoff: 01/02/2018
  *is_full_path*  
  相対パスと絶対パスのどちらを返すかを指定する整数式です。 *is_full_path*値は次のいずれかを持つことができます。  
   
-|値|Description|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|データベース レベルのディレクトリ内の相対パスを返します。<br /><br /> これは既定値です。|  
 |**1**|以降で、完全な UNC パスを返します、`\\computer_name`です。|  
@@ -57,7 +60,7 @@ ms.lasthandoff: 01/02/2018
  *@option*  
  パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 *@option*次の値のいずれかを持つことができます。  
   
-|値|Description|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|サーバー名を次のような NetBIOS 形式に変換して返します。<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> これが既定値です。|  
 |**1**|次のように、サーバー名を変換せずに返します。<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  

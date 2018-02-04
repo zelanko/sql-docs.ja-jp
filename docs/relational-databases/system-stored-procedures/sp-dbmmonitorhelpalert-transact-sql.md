@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorhelpalert_TSQL
 - sp_dbmmonitorhelpalert
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_dbmmonitorhelpalert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66d80f6b202be75f1e3dd66bf1f9ab48a0829c13
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: aa31d747ebfd9fbf56aee874f477468212bc161b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +56,7 @@ sp_dbmmonitorhelpalert database_name
   
  特定の警告を返すには、次のいずれかの値を指定します。  
   
-|値|パフォーマンス基準|警告しきい値|  
+|[値]|パフォーマンス基準|警告しきい値|  
 |-----------|------------------------|-----------------------|  
 |1|最も古い未送信のトランザクション|送信キュー内にトランザクションを累積できる時間 (分単位) を指定します。この時間を経過すると、プリンシパル サーバー インスタンスで警告が生成されます。 この警告を使用すると、時間的な面からデータ損失の可能性を判断できます。この警告は特に高パフォーマンス モードに関係しますが、 パートナーとの通信が切断されたためにミラーリングが一時停止または中断している場合は、高安全モードにも関係します。|  
 |2|未送信のログ|未送信のログのサイズ (KB) を指定します。このサイズを超えると、プリンシパル サーバー インスタンスで警告が生成されます。 この警告を使用すると、KB の面からデータ損失の可能性を判断できます。この警告は特に高パフォーマンス モードに関係しますが、 パートナーとの通信が切断されたためにミラーリングが一時停止または中断している場合は、高安全モードにも関係します。|  
@@ -73,10 +75,10 @@ sp_dbmmonitorhelpalert database_name
 |列|データ型|Description|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|次の表、 **alert_id**各パフォーマンス基準とに表示されるメトリックの測定単位の値、 **sp_dbmmonitorresults**結果セット。|  
-|**しきい値**|**int**|警告しきい値を指定します。 ミラーリングの状態が更新されたときに、このしきい値より大きな値が返されると、Windows のイベント ログにエントリが作成されます。 この値は、警告に応じて、KB、分、またはミリ秒となります。 現在しきい値が設定されていない場合、値は NULL です。<br /><br /> **注:**を現在の値を表示するには、実行、 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)ストアド プロシージャです。|  
-|**有効になっています。**|**bit**|0 = イベントは無効です。<br /><br /> 1 = イベントは有効です。<br /><br /> **注:**保有期間は常に有効にします。|  
+|**threshold**|**int**|警告しきい値を指定します。 ミラーリングの状態が更新されたときに、このしきい値より大きな値が返されると、Windows のイベント ログにエントリが作成されます。 この値は、警告に応じて、KB、分、またはミリ秒となります。 現在しきい値が設定されていない場合、値は NULL です。<br /><br /> **注:**を現在の値を表示するには、実行、 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)ストアド プロシージャです。|  
+|**enabled**|**bit**|0 = イベントは無効です。<br /><br /> 1 = イベントは有効です。<br /><br /> **注:**保有期間は常に有効にします。|  
   
-|値|パフォーマンス基準|ユニット|  
+|[値]|パフォーマンス基準|ユニット|  
 |-----------|------------------------|----------|  
 |1|最も古い未送信のトランザクション|Minutes|  
 |2|未送信のログ|KB|  
@@ -84,7 +86,7 @@ sp_dbmmonitorhelpalert database_name
 |4|ミラー コミットのオーバーヘッド|ミリ秒|  
 |5|保有期間|Hours|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -101,7 +103,7 @@ EXEC sp_dbmmonitorhelpalert AdventureWorks2012;
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [データベース ミラーリングと &#40; の監視SQL Server と &#41; です。](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangealert &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
  [sp_dbmmonitorchangemonitoring &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitordropalert &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   

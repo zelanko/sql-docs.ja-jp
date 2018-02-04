@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - fn_virtualfilestats_TSQL
 - fn_virtualfilestats
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - I/O [SQL Server], statistics
 - fn_virtualfilestats function
 - sys.fn_virtualfilestats function
 - statistical information [SQL Server], I/O
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f09bc032ffe4de52fcb7d9f46e4fbdd4450c8c14
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ad6314f64509388ac95c9b3ae12c8d7ce8c0f252
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,10 +49,10 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ```  
   
 ## <a name="arguments"></a>引数  
- *database_id* |NULL  
+ *database_id* | NULL  
  データベースの ID です。 *database_id*は**int**、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのすべてのデータベースに関する情報を返すには NULL を指定します。  
   
- *file_id* |NULL  
+ *file_id* | NULL  
  ファイルの ID を指定します。 *file_id*は**int**、既定値はありません。 データベース内のすべてのファイルに関する情報を返すには NULL を指定します。  
   
 ## <a name="table-returned"></a>返されるテーブル  
@@ -59,21 +61,21 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|データベース ID。|  
 |**FileId**|**smallint**|ファイル ID。|  
-|**タイムスタンプ**|**bigint**|データが取り出されたデータベース タイムスタンプです。 **int**より前に、のバージョンで[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]です。 |  
+|**TimeStamp**|**bigint**|データが取り出されたデータベース タイムスタンプです。 **int**より前に、のバージョンで[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]です。 |  
 |**NumberReads**|**bigint**|ファイルで実行された読み取りの数。|  
-|**数**|**bigint**|そのファイルで実行された読み取りバイト数です。|  
+|**BytesRead**|**bigint**|そのファイルで実行された読み取りバイト数です。|  
 |**IoStallReadMS**|**bigint**|そのファイルで、ユーザーが読み取り I/O の完了を待機した時間の合計 (ミリ秒単位) です。|  
 |**NumberWrites**|**bigint**|そのファイルで実行された書き込みの数です。|  
 |**BytesWritten**|**bigint**|そのファイルで実行された書き込みバイト数です。|  
 |**IoStallWriteMS**|**bigint**|そのファイルで、ユーザーが書き込み I/O の完了を待機した時間の合計 (ミリ秒単位) です。|  
 |**IoStallMS**|**bigint**|合計**IoStallReadMS**と**IoStallWriteMS**です。|  
-|**ファイル ハンドル**|**bigint**|ファイル ハンドルの値です。|  
+|**FileHandle**|**bigint**|ファイル ハンドルの値です。|  
 |**BytesOnDisk**|**bigint**|ディスク上の物理ファイル サイズ (バイト数) です。<br /><br /> これと同じ値は、データベース ファイルの**サイズ**で**sys.database_files**ページではなくバイト単位で表されますが、します。<br /><br /> データベース スナップショット スパース ファイルの場合は、オペレーティング システムがこのファイル用に使用する領域です。|  
   
 ## <a name="remarks"></a>解説  
  **fn_virtualfilestats** I/o の合計数などの統計情報は、テーブル値関数が、ファイルに対して実行されるシステムです。 この関数を使用して、ユーザーがファイルに対する読み取りまたは書き込みを待機する時間の長さを追跡できます。 また、この関数は、大量の I/O 利用量が生じたファイルを確認する場合にも役立ちます。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

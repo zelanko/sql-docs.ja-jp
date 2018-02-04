@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_catalogs_TSQL
 - sp_help_fulltext_catalogs
-dev_langs: TSQL
-helpviewer_keywords: sp_help_fulltext_catalogs
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_fulltext_catalogs
 ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bcb3da8450b7cb344573d7920d0d440b97972c6e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 01a0a7337f482de5899d358afc9b0df22fe59a5b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpfulltextcatalogs-transact-sql"></a>sp_help_fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   指定したフルテキスト カタログの ID、名前、ルート ディレクトリ、ステータス、およびフルテキスト インデックスが作成されたテーブルの数を返します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用して、 [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)カタログ ビューを代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して、 [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)カタログ ビューを代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,8 +49,8 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
- フルテキスト カタログの名前を指定します。 *fulltext_catalog_name*は**sysname**です。 このパラメーターを省略するか、NULL 値を指定した場合は、現在のデータベースに関連付けられたすべてのフルテキスト カタログに関する情報が返されます。  
+ [ **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
+ フルテキスト カタログの名前を指定します。 *fulltext_catalog_name* is **sysname**. このパラメーターを省略するか、NULL 値を指定した場合は、現在のデータベースに関連付けられたすべてのフルテキスト カタログに関する情報が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または (1) の失敗  
@@ -58,12 +61,12 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|フルテキスト カタログ識別子。|  
-|**名**|**sysname**|フルテキスト カタログの名前。|  
-|**パス**|**nvarchar (260)**|以降で[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、この句が影響を与えません。|  
-|**状態**|**int**|カタログのフルテキスト インデックスの作成ステータス。<br /><br /> 0 = Idle<br /><br /> 1 = カタログ全体を作成中<br /><br /> 2 = 一時停止<br /><br /> 3 = 絞込み<br /><br /> 4 = 復旧<br /><br /> 5 = シャットダウン<br /><br /> 6 = 増分作成中<br /><br /> 7 = インデックス作成<br /><br /> 8 = ディスク容量不足、 一時停止<br /><br /> 9 = 変更の追跡<br /><br /> NULL = ユーザーがフルテキスト カタログに対する VIEW 権限を持っていない、データベースでフルテキストが有効になっていない。またはフルテキスト コンポーネントがインストールされていない|  
+|**NAME**|**sysname**|フルテキスト カタログの名前。|  
+|**PATH**|**nvarchar(260)**|以降で[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、この句が影響を与えません。|  
+|**STATUS**|**int**|カタログのフルテキスト インデックスの作成ステータス。<br /><br /> 0 = Idle<br /><br /> 1 = カタログ全体を作成中<br /><br /> 2 = 一時停止<br /><br /> 3 = 絞込み<br /><br /> 4 = 復旧<br /><br /> 5 = シャットダウン<br /><br /> 6 = 増分作成中<br /><br /> 7 = インデックス作成<br /><br /> 8 = ディスク容量不足、 一時停止<br /><br /> 9 = 変更の追跡<br /><br /> NULL = ユーザーがフルテキスト カタログに対する VIEW 権限を持っていない、データベースでフルテキストが有効になっていない。またはフルテキスト コンポーネントがインストールされていない|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|カタログに関連付けられた、フルテキスト インデックスが作成されたテーブルの数。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーに権限は、既定の実行、**パブリック**ロール。  
   
 ## <a name="examples"></a>使用例  

@@ -1,5 +1,5 @@
 ---
-title: "sp_delete_targetsvrgrp_member (TRANSACT-SQL) |Microsoft ドキュメント"
+title: sp_delete_targetsvrgrp_member (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_targetsvrgrp_member_TSQL
 - sp_delete_targetsvrgrp_member
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_targetsvrgrp_member
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_targetsvrgrp_member
 ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e59d68e033aeb14a3a2d65547108c6d4c78747ac
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f51a41364e2b7039016e31fc62c332dbc766b2b7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletetargetsvrgrpmember-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +46,10 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@group_name=** ] **'***group_name***'**  
+ [ **@group_name=** ] **'***group_name***'**  
  グループの名前です。 *group_name*は**sysname**、既定値はありません。  
   
- [  **@server_name=** ] **'***server_name***'**  
+ [ **@server_name=** ] **'***server_name***'**  
  指定したグループから削除するサーバーの名前を指定します。 *server_name*は**nvarchar (30)**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -55,7 +58,7 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  このストアド プロシージャを実行するユーザーに付与する必要があります、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  

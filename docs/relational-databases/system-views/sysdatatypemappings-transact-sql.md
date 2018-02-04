@@ -8,26 +8,30 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sysdatatypemappings
 - sysdatatypemappings_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysdatatypemappings view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysdatatypemappings view
 ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60e850e319c4c31c2208448fe29a28acf13a8d45
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 00c57554fbf2cc60a91d1b0a3ae13377630fe099
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 |**destination_scale**|**int**|マップ先 DBMS のデータ型の小数点以下桁数です。|  
 |**destination_nullable**|**bit**|マップ先 DBMS のデータ型が NULL 値をサポートするかどうかを示します。|  
 |**destination_createparams**|**int**|内部使用のみです。|  
-|**データ消失**|**bit**|マップ元 DBMS とマップ先 DBMS のデータ型をマップしたときにデータの損失が発生するかどうかを示します。|  
+|**dataloss**|**bit**|マップ元 DBMS とマップ先 DBMS のデータ型をマップしたときにデータの損失が発生するかどうかを示します。|  
 |**is_default**|**bit**|データ型マッピングが既定で使用されるかどうかを示します。|  
   
 ## <a name="see-also"></a>参照  

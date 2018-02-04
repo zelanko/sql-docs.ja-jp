@@ -8,7 +8,8 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - connection strings [Database Engine], TCP/IP
 - aliases [SQL Server], TCP/IP
 ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 462427bd676d23a3a490d6c04b87c71a716c3a5c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 869aff413da127fac11244e8d2613696c963c323
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>TCP/IP を使用した有効な接続文字列の作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]TCP/IP を使用して有効な接続文字列を作成するには、次の必要があります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+TCP/IP を使用した有効な接続文字列を作成するには、次の操作を行ってください。  
   
 -   **[別名]**を指定します。  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/17/2018
 > [!NOTE]  
 >  既定では、ポート 1433 が [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ファイアウォールによって閉じられます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通信ポート 1433 を経由する必要があります、再度ポートを開く場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]TCP/IP を使用して、着信クライアント接続をリッスンするように構成します。 ファイアウォールの構成方法については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「SQL Server アクセスのためのファイアウォール構成方法」か、またはファイアウォールについてのドキュメンテーションを参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client は、インターネット プロトコル バージョン 4 (IPv4) とインターネット プロトコル バージョン 6 (IPv6) の両方に完全にサポートします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager は、IPv4 と IPv6 の両方を受け入れる形式の IP アドレス。 IPv6 の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「IPv6 を使用した接続」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、インターネット プロトコル バージョン 4 (IPv4) とインターネット プロトコル バージョン 6 (IPv6) の両方が完全にサポートされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager は、IPv4 と IPv6 の両方を受け入れる形式の IP アドレス。 IPv6 の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「IPv6 を使用した接続」を参照してください。  
   
 ## <a name="connecting-to-the-local-server"></a>ローカル サーバーへの接続  
  クライアントと同じコンピューター上で実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する場合は、サーバー名として `(local)` を使用することもできます。 このような指定はあいまいさを残すのでお勧めできませんが、対象のコンピューター上でクライアントを実行していることがわかっている場合には便利な機能です。 たとえば、営業スタッフは、ノート型コンピューター上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行し、プロジェクト データもそのノート型コンピューターに保存しておきます。このように、ネットワークに接続しないモバイル ユーザー用のアプリケーションの場合、 `(local)` に接続するクライアントは、常にそのノート型コンピューターで実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することになります。 `localhost` の代わりに**またはピリオド (**. `(local)`) を使用することもできます。  

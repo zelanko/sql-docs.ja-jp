@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - semantickeyphrasetable
 - semantickeyphrasetable_TSQL
-dev_langs: TSQL
-helpviewer_keywords: semantickeyphrasetable function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- semantickeyphrasetable function
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5b6f184c3ea2a455c59f221f4156e5ab7ce5210
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a88d9739edae602d00ec22123d19eb5861a9f744
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -75,8 +78,8 @@ SEMANTICKEYPHRASETABLE
 |------------------|----------|-----------------|  
 |**column_id**|**int**|現在のキー フレーズが抽出され、インデックスが作成された列の ID です。<br /><br /> 列 ID から列名 (または列名から列 ID) を取得する方法の詳細については、COL_NAME 関数と COLUMNPROPERTY 関数のセクションを参照してください。|  
 |**document_key**|**\***<br /><br /> このキーは、ソース テーブル内の一意キーの型と一致します。|現在のキー フレーズのインデックスが作成されたドキュメントまたは行の一意のキー値です。|  
-|**キー フレーズ**|**NVARCHAR**|column_id で識別された列にあり、document_key で指定されたドキュメントに関係付けられるキー フレーズです。|  
-|**スコア**|**本当の**|インデックスが作成された列の同じドキュメントに含まれる他のすべてのキー フレーズとの関係における、このキー フレーズの相対値です。<br /><br /> この値は [0.0, 1.0] の範囲内の小数値です。スコアの値が大きいほど類似性が高く、1.0 は完全に一致することを表します。|  
+|**keyphrase**|**NVARCHAR**|column_id で識別された列にあり、document_key で指定されたドキュメントに関係付けられるキー フレーズです。|  
+|**score**|**REAL**|インデックスが作成された列の同じドキュメントに含まれる他のすべてのキー フレーズとの関係における、このキー フレーズの相対値です。<br /><br /> この値は [0.0, 1.0] の範囲内の小数値です。スコアの値が大きいほど類似性が高く、1.0 は完全に一致することを表します。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  詳細については、次を参照してください。[セマンティック検索でドキュメント内のキー フレーズの検索](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)です。  
@@ -88,9 +91,9 @@ SEMANTICKEYPHRASETABLE
   
 -   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>アクセス許可  
+### <a name="permissions"></a>権限  
  フルテキストおよびセマンティック インデックスが作成されたベース テーブルに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

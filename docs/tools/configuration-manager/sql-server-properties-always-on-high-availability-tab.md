@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87645b4a48c157c65876ecfad89a4fef4dcd62c2
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: c8ca29178e6465a162f6e19cabb307e6e742ae28
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>SQL Server のプロパティ ([Always On 高可用性] タブ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用して、 **Always On 高可用性**のタブ、 **SQL Server のプロパティ** ダイアログ ボックスで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager を有効にするにまたはでAlwaysOn可用性グループ機能を無効にします。[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Always On 可用性グループの有効化は、高可用性およびディザスター リカバリー ソリューションとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが可用性グループを使用するための前提条件です。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+**構成マネージャーの** [SQL Server のプロパティ] **ダイアログ ボックスの** [Always On 高可用性] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] タブを使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の Always On 可用性グループを有効または無効にします。 Always On 可用性グループの有効化は、高可用性およびディザスター リカバリー ソリューションとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが可用性グループを使用するための前提条件です。  
   
 ##  <a name="Prerequisites"></a> 前提条件  
  Always On 可用性グループを有効にするには、サーバー インスタンスが以下の前提条件を満たしている必要があります。  

@@ -1,5 +1,5 @@
 ---
-title: "sys.sp_rda_reconcile_columns (TRANSACT-SQL) |Microsoft ドキュメント"
+title: sys.sp_rda_reconcile_columns (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_reconcile_columns
 - sys.sp_rda_reconcile_columns_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_rda_reconcile_columns stored procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_rda_reconcile_columns stored procedure
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bae454caa630025bb4470dc69da7fa4a97f6307
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ac447329552758ad6070cf4a22489c9d1ed44e64
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +58,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または >0 (失敗)  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  Db_owner アクセス許可が必要です。  
    
 ## <a name="remarks"></a>解説  

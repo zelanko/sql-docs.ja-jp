@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_rename_policy_category_TSQL
 - sp_syspolicy_rename_policy_category
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_rename_policy_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_rename_policy_category
 ms.assetid: 8a9c4a3a-91e8-435e-b721-e0293c92be3e
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff154fae3a8e89c90ffd832d7f5f12a7d99cef1c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 53a9859c13f198d25bfd392ca3fa40e7a6159ddc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyrenamepolicycategory-transact-sql"></a>sp_syspolicy_rename_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +47,13 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@name =** ] **'***名前***'**  
+ [ **@name =** ] **'***name***'**  
  名前を変更するポリシー カテゴリの名前を指定します。 *名前*は**sysname**場合に、指定する必要があります*policy_category_id*は NULL です。  
   
- [  **@policy_category_id=** ] *policy_category_id*  
+ [ **@policy_category_id=** ] *policy_category_id*  
  名前を変更するポリシー カテゴリの識別子を指定します。 *policy_category_id*は**int**場合に、指定する必要があります*名前*は NULL です。  
   
- [  **@new_name=** ] **'***new_name***'**  
+ [ **@new_name=** ] **'***new_name***'**  
  ポリシー カテゴリに対して新しい名前です。 *新しい名前*は**sysname**が必要とします。 NULL または空の文字列を指定することはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -61,7 +64,7 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
   
  いずれかの値を指定する必要があります*名前*または*policy_category_id*です。 両方を NULL にすることはできません。 これらの値を取得するには、msdb.dbo.syspolicy_policy_categories システム ビューに対してクエリを実行します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  PolicyAdministratorRole 固定データベース ロールのメンバーシップが必要です。  
   
 > [!IMPORTANT]  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - logmarkhistory
 - logmarkhistory_TSQL
-dev_langs: TSQL
-helpviewer_keywords: logmarkhistory system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- logmarkhistory system table
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dde90d07f786f5a9e164b0acc469c4e4552577d0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5d4948a79bfd4b529b87cd0f5c223e302172a26a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +39,10 @@ ms.lasthandoff: 11/17/2017
 
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**nvarchar (128)**|マーク付きのトランザクションが発生したローカル データベース。|  
-|**mark_name**|**nvarchar (128)**|マーク付きのトランザクションに指定されたユーザー定義の名前。|  
-|**説明**|**nvarchar (255)**|マーク付きのトランザクションに指定されたユーザー定義の説明。 NULL にすることができます。|  
-|**user_name**|**nvarchar (128)**|マーク付きのトランザクションを実行したデータベース ユーザー名。 NULL にすることができます。|  
+|**database_name**|**nvarchar(128)**|マーク付きのトランザクションが発生したローカル データベース。|  
+|**mark_name**|**nvarchar(128)**|マーク付きのトランザクションに指定されたユーザー定義の名前。|  
+|**説明**|**nvarchar (255)**|マーク付きのトランザクションに指定されたユーザー定義の説明。 NULL を指定できます。|  
+|**user_name**|**nvarchar(128)**|マーク付きのトランザクションを実行したデータベース ユーザー名。 NULL を指定できます。|  
 |**lsn**|**numeric(25,0)**|マークが発生したトランザクション レコードのログ シーケンス番号。|  
 |**mark_time**|**datetime**|マーク付きトランザクションのコミット時間 (ローカル時間)。|  
   

@@ -8,26 +8,30 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - IHextendedArticleView_TSQL
 - IHextendedArticleView
-dev_langs: TSQL
-helpviewer_keywords: IHextendedArticleView view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- IHextendedArticleView view
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae81693a4b74614bd4cb9024b91ce69ac15f4d09
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 413a95e5d39b5a335381f25a8214df9a0b3be779
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +40,9 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**publisher_id などがあります。**|**smallint**|パブリッシャーの一意識別子です。|  
+|**publisher_id**|**smallint**|パブリッシャーの一意識別子です。|  
 |**publication_id**|**int**|パブリケーションの一意識別子です。|  
-|**アーティクル**|**sysname**|アーティクルの名前|  
+|**article**|**sysname**|アーティクルの名前|  
 |**destination_object**|**sysname**|サブスクライバー側でパブリッシュされたオブジェクトの名前です。|  
 |**source_owner**|**sysname**|パブリッシャー側でパブリッシュされたオブジェクトの所有者です。|  
 |**source_object**|**sysname**|パブリッシュ側でパブリッシュされたオブジェクトの名前です。|  
@@ -50,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 |**ins_cmd**|**nvarchar (255)**|INSERT に対して実行されるコマンドです。|  
 |**pre_creation_cmd**|**tinyint**|DROP TABLE、DELETE TABLE、または TRUNCATE 事前作成コマンド:<br /><br /> **0** = none です。<br /><br /> **1**ドロップを = です。<br /><br /> **2** = 削除します。<br /><br /> **3** = TRUNCATE です。|  
 |**ステータス**|**tinyint**|アーティクル オプションとステータスのビットマスクです。次に示す 1 つ以上の値のビットごとの論理和演算をとります。<br /><br /> **1** = アーティクルはアクティブです。<br /><br /> **8** = INSERT ステートメントに列名を含みます。<br /><br /> **16** = ステートメント パラメーターを使用します。<br /><br /> **24** = 両方の INSERT ステートメントに列名を含めるし、パラメーター化されたステートメントを使用します。<br /><br /> たとえば、パラメーター化されたステートメントを使用するアクティブなアーティクル、値はの**17**この列にします。 値**0**アーティクルがアクティブでないと、追加のプロパティが定義されていないことを意味します。|  
-|**型**|**tinyint**|アーティクルの種類。<br /><br /> **1**ログベースのアーティクルを = です。<br /><br /> **3** = 手動フィルター付きログベースのアーティクルです。<br /><br /> **5** = 手動ビュー付きログベースのアーティクルです。<br /><br /> **7** = 手動フィルターおよび手動ビュー付きログベースのアーティクルです。|  
+|**type**|**tinyint**|アーティクルの種類。<br /><br /> **1**ログベースのアーティクルを = です。<br /><br /> **3** = 手動フィルター付きログベースのアーティクルです。<br /><br /> **5** = 手動ビュー付きログベースのアーティクルです。<br /><br /> **7** = 手動フィルターおよび手動ビュー付きログベースのアーティクルです。|  
 |**upd_cmd**|**nvarchar (255)**|UPDATE に対して実行されるコマンドです。|  
 |**schema_option**|**[バイナリ]**|スクリプト作成の対象です。参照してください[sp_addarticle (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)サポートされるスキーマ オプションの一覧についてはします。|  
 |**dest_owner**|**sysname**|目的のデータベースでパブリッシュされたオブジェクトの所有者です。|  

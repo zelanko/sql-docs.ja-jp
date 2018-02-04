@@ -8,7 +8,8 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 98a5f763d57c6cfb3a6c11d308fbe71e53ded7f4
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5018082d7a9ee06c1015925e3efad92eecc5133b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser サービス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser プログラムは Windows サービスとして実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の受信要求をリッスンし、コンピューター上にインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに関する情報を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser は、次の操作に役立ちます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser プログラムは Windows サービスとして実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の受信要求をリッスンし、コンピューター上にインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに関する情報を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser は、次の操作に役立ちます。  
   
 -   使用可能なサーバーの一覧の参照  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/17/2018
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Browser サービス (sqlbrowser) は、 [!INCLUDE[ssAS](../../includes/ssas-md.md)]と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスに対してインスタンス名とバージョン番号を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ブラウザーがインストールされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップ中に、またはを使用して、ブラウザーを構成できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager です。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスは次の場合に自動的に開始されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は、セットアップ時に、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して構成できます。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスは次の場合に自動的に開始されます。  
   
 -   インストールをアップグレードする場合  
   
@@ -88,7 +90,7 @@ ms.lasthandoff: 01/17/2018
 -   各インスタンスに対して選択したポートがサーバー上の別のサービスまたはアプリケーションによって使用されている場合があります。この場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスは使用できません。  
   
 ## <a name="clustering"></a>クラスター  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ブラウザーでは、クラスター化されたリソースではないと、1 つのクラスター ノードから他方へのフェールオーバーをサポートしていません。 そのため、クラスターの場合は、クラスターのノードごとに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser をインストールして有効にする必要があります。 クラスターでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は IP_ANY で受信待ちします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser はクラスター化されたリソースではなく、クラスター ノード間のフェールオーバーはサポートしません。 そのため、クラスターの場合は、クラスターのノードごとに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser をインストールして有効にする必要があります。 クラスターでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は IP_ANY で受信待ちします。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser では最初に検出された IP とポートのペアが返されるため、IP_ANY で受信待ちのときに特定の IP での受信待ちを有効にする場合は、各 IP に同じ TCP ポートを構成する必要があります。  
@@ -98,7 +100,7 @@ ms.lasthandoff: 01/17/2018
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最後のインスタンスを削除すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスがアンインストールされます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用して、トラブルシューティングのため、コマンド プロンプトからブラウザーを起動することができます、 **-c**スイッチします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は、トラブルシューティングの目的で、コマンド プロンプトから **-c** スイッチを使用して起動できます。  
   
 ```  
 <drive>\<path>\sqlbrowser.exe -c  
@@ -107,7 +109,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="security"></a>セキュリティ  
   
 ### <a name="account-privileges"></a>アカウントの権限  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は UDP ポートでリッスンし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol (SSRP) を使用して、認証されていない要求を受け入れます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ブラウザーは、悪意のある攻撃のリスクを最小限に抑える低特権を持つユーザーのセキュリティ コンテキストで実行する必要があります。 ログオン アカウントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して変更できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser の最小限のユーザー権限は次のとおりです。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は UDP ポートで受信待ちし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol (SSRP) を使用して、認証されていない要求を受け入れます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ブラウザーは、悪意のある攻撃のリスクを最小限に抑える低特権を持つユーザーのセキュリティ コンテキストで実行する必要があります。 ログオン アカウントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して変更できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser の最小限のユーザー権限は次のとおりです。  
   
 -   ネットワークからこのコンピューターへのアクセスを拒否  
   
