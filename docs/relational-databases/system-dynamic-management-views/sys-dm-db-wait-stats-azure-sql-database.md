@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_db_wait_stats
 - sys.dm_db_wait_stats
 - sys.dm_db_wait_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_wait_stats dynamic management view
 - dm_db_wait_stats
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 465c768c9f5636463e4d124d224f9184ebc2dac8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d4d15404469382da4d8ab135e0619f4d6a9360d0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|待機の種類の名前。 詳細については、次を参照してください。[待機の種類](#WaitTypes)、このトピックで後述します。|  
+|wait_type|**nvarchar(60)**|待機の種類の名前。 詳細については、次を参照してください。[待機の種類](#WaitTypes)、このトピックで後述します。|  
 |waiting_tasks_count|**bigint**|この待機の種類における待機の数。 このカウンターは、待機が開始するたび増加します。|  
 |wait_time_ms|**bigint**|この待機の種類 (ミリ秒単位) の合計待機時間。 この時間には signal_wait_time_ms が含まれます。|  
 |max_wait_time_ms|**bigint**|この待機の種類における最大待機時間。|  
@@ -65,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 -   これらの統計は、SQL データベースのフェールオーバー イベントが発生すると消去されます。すべてのデータは、統計が最後にリセットされてからの累積データです。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  サーバーに対する VIEW DATABASE STATE 権限が必要です。  
   
 ##  <a name="WaitTypes"></a>待機の種類  
@@ -198,27 +200,27 @@ ms.lasthandoff: 11/17/2017
 |LATCH_SH |SH (共有) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 LATCH_* 待機の一覧は、sys.dm_os_latch_stats で確認できます。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。|  
 |LATCH_UP |UP (更新) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 LATCH_* 待機の一覧は、sys.dm_os_latch_stats で確認できます。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。|  
 |LAZYWRITER_SLEEP |レイジー ライター タスクが一時中断されるときに発生します。 待機中のバックグラウンド タスクで費やされた時間を測定することができます。 ユーザーの機能停止を検索しているときには、この待機状態は考慮しないでください。|  
-|LCK_M_BU |タスクが一括更新 (BU) ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IS|タスクがインテント共有 (IS) ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IU|タスクがインテント更新 (IU) ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IX |タスクがインテント排他 (IX) ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_NL |タスクが、現在のキー値に対する NULL ロックの取得、および現在のキーから以前のキーまでを対象とした挿入範囲ロックの取得を待機しているときに発生します。 キーの NULL ロックは、すぐに解放されるロックです。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_S |タスクが、現在のキー値に対する共有ロックの取得、および現在のキーから以前のキーまでを対象とした挿入範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_U |タスクが、現在のキー値に対する更新ロックの取得、および現在のキーから以前のキーまでを対象とした挿入範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_X |タスクが、現在のキー値に対する排他ロックの取得、および現在のキーから以前のキーまでを対象とした挿入範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_S |タスクが、現在のキー値に対する共有ロックの取得、および現在のキーから以前のキーまでを対象とした共有範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_U |タスクが、現在のキー値に対する更新ロックの取得、および現在のキーから以前のキーまでを対象とした更新範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_S |タスクが、現在のキー値に対する共有ロックの取得、および現在のキーから以前のキーまでを対象とした排他範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_U |タスクが、現在のキー値に対する更新ロックの取得、および現在のキーから以前のキーまでを対象とした排他範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_X |タスクが、現在のキー値に対する排他ロックの取得、および現在のキーから以前のキーまでを対象とした排他範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_S |タスクが共有ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_M |タスクがスキーマ変更ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_S |タスクがスキーマ共有ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIU |タスクがインテント更新付き共有ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIX |タスクがインテント排他付き共有ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_U |タスクが更新ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_UIX |タスクがインテント排他付き更新ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_X |タスクが排他ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_BU |タスクが一括更新 (BU) ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_IS|タスクがインテント共有 (IS) ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_IU|タスクがインテント更新 (IU) ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_IX |タスクがインテント排他 (IX) ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_RIn_NL |タスクが、現在のキー値に対する NULL ロックの取得、および現在のキーから以前のキーまでを対象とした挿入範囲ロックの取得を待機しているときに発生します。 キーの NULL ロックは、すぐに解放されるロックです。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_RIn_S |タスクが、現在のキー値に対する共有ロックの取得、および現在のキーから以前のキーまでを対象とした挿入範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_RIn_U |タスクが、現在のキー値に対する更新ロックの取得、および現在のキーから以前のキーまでを対象とした挿入範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_RIn_X |タスクが、現在のキー値に対する排他ロックの取得、および現在のキーから以前のキーまでを対象とした挿入範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_RS_S |タスクが、現在のキー値に対する共有ロックの取得、および現在のキーから以前のキーまでを対象とした共有範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_RS_U |タスクが、現在のキー値に対する更新ロックの取得、および現在のキーから以前のキーまでを対象とした更新範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_RX_S |タスクが、現在のキー値に対する共有ロックの取得、および現在のキーから以前のキーまでを対象とした排他範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_RX_U |タスクが、現在のキー値に対する更新ロックの取得、および現在のキーから以前のキーまでを対象とした排他範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_RX_X |タスクが、現在のキー値に対する排他ロックの取得、および現在のキーから以前のキーまでを対象とした排他範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_S |タスクが共有ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_SCH_M |タスクがスキーマ変更ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_SCH_S |タスクがスキーマ共有ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_SIU |タスクがインテント更新付き共有ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_SIX |タスクがインテント排他付き共有ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_U |タスクが更新ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_UIX |タスクがインテント排他付き更新ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
+|LCK_M_X |タスクが排他ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|  
 |LOG_RATE_GOVERNOR|見積もり値がログに書き込まれるのを DB が待機しているときに発生します。|  
 |LOGBUFFER |タスクが、ログ レコードを格納するログ バッファーの領域を待機しているときに発生します。 常に高い値が示される場合は、ログ デバイスで解放される領域よりも、サーバーにより生成されるログ サイズが大きいことを表しています。|  
 |LOGGENERATION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

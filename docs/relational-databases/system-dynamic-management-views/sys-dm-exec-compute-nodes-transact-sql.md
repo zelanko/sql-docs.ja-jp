@@ -8,30 +8,32 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_COMPUTE_NODES_TSQL
 - DM_EXEC_COMPUTE_NODES
 - SYS.DM_EXEC_COMPUTE_NODES_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_exec_compute_nodes management view
 - PolyBase, views
 - PolyBase management views
 - dm_exec_compute_nodes management view
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4affdf5cdcab66ffacab6bb40596855938ad1b98
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cdd765d5f7b46e1189357e588d8b28ddd7acd029
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -43,9 +45,9 @@ ms.lasthandoff: 11/17/2017
 |列名|データ型|Description|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|ノードに関連付けられている一意の数値 id です。 このビューのキーです。|種類に関係なく、スケール アウト クラスター全体にわたって一意です。|  
-|型|**nvarchar (32)**|ノードの型。|' COMPUTE'、'ヘッド'|  
-|name|**nvarchar (32)**|ノードの論理名です。|適切な長さの任意の文字列。|  
-|address|**nvarchar (32)**|このノードの P アドレスです。|IP アドレスの範囲|  
+|型|**nvarchar(32)**|ノードの型。|' COMPUTE'、'ヘッド'|  
+|name|**nvarchar(32)**|ノードの論理名です。|適切な長さの任意の文字列。|  
+|address|**nvarchar(32)**|このノードの P アドレスです。|IP アドレスの範囲|  
   
 ## <a name="see-also"></a>参照  
  [PolyBase 動的管理ビューでのトラブルシューティング](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   

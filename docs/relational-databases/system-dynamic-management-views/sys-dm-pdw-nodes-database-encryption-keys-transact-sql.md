@@ -8,26 +8,28 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fdfeeccb7bbf0ffae44566b46e589c3f90e9c75
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 43b57a1628ff91c37d4667d9bab12f6980958b8c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmpdwnodesdatabaseencryptionkeys-transact-sql"></a>sys.dm_pdw_nodes_database_encryption_keys (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  データベースの暗号化の状態およびデータベースに関連付けられているデータベース暗号化キーに関する情報を返します。 **sys.dm_pdw_nodes_database_encryption_keys**ノードごとにこの情報を提供します。 データベース暗号化の詳細については、次を参照してください。[透過的なデータ暗号化 (SQL Server PDW)](http://msdn.microsoft.com/en-us/b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d)です。  
+  データベースの暗号化の状態およびデータベースに関連付けられているデータベース暗号化キーに関する情報を返します。 **sys.dm_pdw_nodes_database_encryption_keys** provides this information for each node. データベース暗号化の詳細については、次を参照してください。[透過的なデータ暗号化 (SQL Server PDW)](http://msdn.microsoft.com/en-us/b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d)です。  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |percent_complete|**real**|データベース暗号化の状態変更の完了率です。 状態変更がない場合は 0 になります。|  
 |node_id|**int**|ノードに関連付けられている一意の数値 id です。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

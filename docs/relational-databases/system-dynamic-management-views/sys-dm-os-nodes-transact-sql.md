@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_nodes_TSQL
 - dm_os_nodes
 - sys.dm_os_nodes_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_nodes dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_nodes dynamic management view
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cf36f7156f9297231fc232e8fecafee5e77427c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f2abdd42300c8264f87513f428c7c6f4aa22645d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,9 +46,9 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|ノードの ID。|  
 |node_state_desc|**nvarchar (256)**|ノード状態の説明。 相互排他的な値から先に表示され、続けて、組み合わせ可能な値が表示されます。 例:<br /><br /> Online、Thread Resources Low、Lazy Preemptive<br /><br /> 次の 4 つの相互に排他的な node_state_desc 値があります。 これらは、その説明を以下に示します。<br /><br /> ノードがオンラインでオンラインにします。<br /><br /> ノードがオフライン オフラインです。<br /><br /> アイドル状態: ノードは、保留中の作業要求を持たずがアイドル状態になりました。<br /><br /> IDLE_READY: ノードは、保留中の作業要求を持たずをアイドル状態に移行する準備ができました。<br /><br /> その説明を以下に示す 5 つの組み合わせ可能な node_state_desc 値。<br /><br /> DAC: このノードは、専用管理者接続の予約されています。<br /><br /> THREAD_RESOURCES_LOW: 新しいスレッドを作成できませんこのノード上でメモリ不足の状態が原因です。<br /><br /> ホット追加されました。 は、ノードがへの応答に追加されたことを示します、ホット アド CPU イベント。|  
-|memory_object_address|**varbinary (8)**|このノードに関連付けられているメモリ オブジェクトのアドレス。 sys.dm_os_memory_objects.memory_object_address と一対一の関係にあります。|  
-|memory_clerk_address|**varbinary (8)**|このノードに関連付けられているメモリ クラークのアドレス。 sys.dm_os_memory_clerks.memory_clerk_address と一対一の関係にあります。|  
-|io_completion_worker_address|**varbinary (8)**|このノードの IO 完了に割り当てられているワーカーのアドレス。 sys.dm_os_workers.worker_address と一対一の関係にあります。|  
+|memory_object_address|**varbinary(8)**|このノードに関連付けられているメモリ オブジェクトのアドレス。 sys.dm_os_memory_objects.memory_object_address と一対一の関係にあります。|  
+|memory_clerk_address|**varbinary(8)**|このノードに関連付けられているメモリ クラークのアドレス。 sys.dm_os_memory_clerks.memory_clerk_address と一対一の関係にあります。|  
+|io_completion_worker_address|**varbinary(8)**|このノードの IO 完了に割り当てられているワーカーのアドレス。 sys.dm_os_workers.worker_address と一対一の関係にあります。|  
 |memory_node_id|**smallint**|このノードが属しているメモリ ノードの ID。 sys.dm_os_memory_nodes.memory_node_id と多対一の関係にあります。|  
 |cpu_affinity_mask|**bigint**|このノードに関連付けられている CPU を識別するビットマップ。|  
 |online_scheduler_count|**smallint**|このノードによって管理されるオンライン スケジューラの数です。|  
@@ -58,9 +61,9 @@ ms.lasthandoff: 11/17/2017
 |online_scheduler_mask|**bigint**|このノードのプロセス関係マスクを識別します。|  
 |processor_group|**smallint**|このノードのプロセッサ グループを識別します。|  
 |cpu_count |**int** |このノードで利用できる Cpu の数。 |
-|pdw_node_id|**int**|この分布はでは、ノードの識別子。<br /><br /> **適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|pdw_node_id|**int**|この分布はでは、ノードの識別子。<br /><br /> **適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 階層が必要です、`VIEW DATABASE STATE`データベースの権限です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。  
   

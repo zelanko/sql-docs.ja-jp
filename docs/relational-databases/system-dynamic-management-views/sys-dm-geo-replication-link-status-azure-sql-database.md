@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 040c326ca5e4f38a1a6c32ce3ae5fe7ba6ddddea
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: 37bb0b6c2252a213824e24c51178711a704d2e85
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,13 +49,13 @@ ms.lasthandoff: 12/14/2017
 |ロール (role)|**tinyint**|いずれかの地理的レプリケーション ロール:<br /><br /> 0 = プライマリです。 Database_id は、地理的レプリケーション パートナーシップのプライマリ データベースを参照します。<br /><br /> 1 = セカンダリです。  Database_id は、地理的レプリケーション パートナーシップのプライマリ データベースを参照します。|  
 |role_desc|**nvarchar (256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|いずれかのセカンダリ型。<br /><br /> 0 = ダイレクトではありません、セカンダリ データベースに対する接続は許可し、データベースは読み取りアクセスで使用できません。<br /><br /> 2 = all セカンダリ repl; 内のデータベースに接続が許可されている読み取り専用アクセスの ication します。|  
-|secondary_allow_connections_desc|**nvarchar (256)**|不可<br /><br /> All|  
+|secondary_allow_connections_desc|**nvarchar (256)**|いいえ<br /><br /> すべて|  
 |last_commit|**datetimeoffset**|データベースにコミットされた最後のトランザクションの時刻。 プライマリ データベースで取得された場合は、プライマリ データベースで最後のコミット時間を示します。 セカンダリ データベースで取得された場合は、セカンダリ データベースで最後のコミット時間を示します。 取得された場合は、セカンダリ データベースで、レプリケーション リンクのプライマリがダウンした場合は、どの時点で、セカンダリが解消されるまでことを示します。|
   
 > [!NOTE]  
 >  セカンダリ データベース (セクション 4.2) データベースに行を削除することで、レプリケーション関係が終了したかどうか、 **sys.dm_geo_replication_link_status**ビューは表示されなくなります。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  View_database_state のアクセス許可を持つアカウントを照会できます**sys.dm_geo_replication_link_status**です。  
   
 ## <a name="example"></a>例  

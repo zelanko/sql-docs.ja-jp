@@ -10,24 +10,25 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 98c14b05-750e-44f9-8531-1298bf51e8d2
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 576178e53a28f877ac91d99f14ce9ba6a44e506d
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: cebafeabd73260f166244e963754a2bd740bfe0f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="r-package-management-for-sql-server"></a>SQL Server の R パッケージの管理
 
 この記事では、SQL Server 2017 および SQL Server 2016 での R パッケージを管理するための機能について説明します。
 
-+ R パッケージ (および Python パッケージ) を管理するための推奨事項
++ R パッケージを管理するための推奨事項 
 + SQL Server 2016 と 2017 年 1 の間でのパッケージ管理の変更
 
 **適用されます:** SQL Server 2016 の R Services、SQL Server 2017 機械学習のサービス
@@ -148,7 +149,7 @@ SQL Server 2017 でパッケージの管理は、これらの新しいデータ�
 > [!NOTE]
 > ここで説明する機能は、現時点で完全に機能は、今後のリリースには、パッケージのライブラリを準備して依存関係の管理を容易にできるように追加の機能強化が含まれています。 R パッケージのインストールに慣れている場合は、今のところ、R ツールを使用するように続行することをお勧めします。
 
-#### <a name="bkmk_createExternalLibrary"></a>外部ライブラリを作成します。 
+#### <a name="bkmk_createExternalLibrary"></a> CREATE EXTERNAL LIBRARY 
 
 [外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)データベース管理者がユーザーの R ツールをしなくてもパッケージを操作に役立つ SQL Server 2017 に導入された新しい T-SQL ステートメントです。 
 

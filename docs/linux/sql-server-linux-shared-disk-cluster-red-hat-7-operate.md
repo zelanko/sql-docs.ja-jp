@@ -3,7 +3,7 @@ title: "SQL Server の Red Hat Enterprise Linux 共有クラスターを運用 |
 description: "SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを構成することによって高可用性を実装します。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: e0a7c5078526b46a8cfa518eeb1d0b5708343115
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: d3abecd450bbb734304c8c04909c38ae216595ad
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを運用します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このドキュメントでは、Red Hat Enterprise Linux、共有ディスク フェールオーバー クラスターで SQL Server を次のタスクを実行する方法について説明します。
 
@@ -265,7 +265,7 @@ pacemaker: active/enabled
 
     次のポートは、通信できるようにするペースのすべてのノードで開かれている必要があります。
     
-    - * * TCP: 2224 3121、21064
+    - **TCP: 2224, 3121, 21064
 
 - **ペースまたはを実行している Corosync services**
 

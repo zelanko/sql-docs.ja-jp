@@ -3,7 +3,7 @@ title: "SQL Server 用の Red Hat Enterprise Linux 共有クラスターの構�
 description: "SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを構成することによって高可用性を実装します。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: 1d2731e55c9add5cfa06d70297793f4f7d5fef48
-ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
+ms.openlocfilehash: 519728819aa79534a1c8cc3a079164d276924a44
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを構成します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このガイドでは、Red Hat Enterprise Linux 上の SQL Server の 2 つのノードの共有ディスク クラスターを作成する手順を紹介します。 クラスタ リングの層は Red Hat Enterprise Linux (RHEL) に基づいて[HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)の上に構築[ペース](http://clusterlabs.org/)です。 SQL Server のインスタンスは 1 つのノードまたは他の上でアクティブです。
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/06/2018
 
 次のセクションでは、フェールオーバー クラスター ソリューションをセットアップする手順について説明します。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 次のエンド ツー エンド シナリオを完了するには、2 台のコンピューターを 2 つのノードのクラスターと NFS サーバーを構成する別のサーバーを展開する必要があります。 以下の手順には、これらのサーバーを構成する方法を説明します。
 
@@ -143,7 +143,7 @@ NFS サーバー上には、次の操作を行います。
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  編集`/etc/exports`を共有するディレクトリをエクスポートします。 必要な共有フォルダーごとに 1 行を必要があります。 例 : 
+1.  編集`/etc/exports`を共有するディレクトリをエクスポートします。 必要な共有フォルダーごとに 1 行を必要があります。 例: 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)

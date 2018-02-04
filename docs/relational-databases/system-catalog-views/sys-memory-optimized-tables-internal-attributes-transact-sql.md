@@ -1,5 +1,5 @@
 ---
-title: "sys.memory_optimized_tables_internal_attributes (TRANSACT-SQL) |Microsoft ドキュメント"
+title: sys.memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.memory_optimized_tables_internal_attributes_TSQL
 - memory_optimized_tables_internal_attributes
 - memory_optimized_tables_internal_attributes_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.memory_optimized_tables_internal_attributes catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.memory_optimized_tables_internal_attributes catalog view
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jodebrui
 ms.author: jodebrui
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ab05ef27e9687be506db960e628868cb08184d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 97bc9da007e21fd6f686795776b9d96ab53b3c77
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,10 +43,10 @@ ms.lasthandoff: 11/17/2017
 |object_id  |**int**|       ユーザー テーブルの ID。 ユーザー テーブル (hk/列ストアの組み合わせの場合は行外ストレージまたは削除行など) をサポートするために存在する内部メモリ最適化テーブルは、その親と同じ object_id を持ちます。 |
 |xtp_object_id  |**bigint**|    ユーザー テーブルをサポートするために使用される内部メモリ最適化テーブルに対応するインメモリ OLTP オブジェクト ID。 データベース内では一意であり、オブジェクトの有効期間中に変わる可能性があります。 
 |型|  **int** |   内部テーブルの種類。<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
-|type_desc| **nvarchar (60)**|   種類の説明<br/><br/>DELETED_ROWS_TABLE -> 列ストア インデックスの削除行を追跡する内部テーブル<br/>USER_TABLE -> 行内ユーザー データを含むテーブル<br/>DICTIONARIES_TABLE -> 列ストア インデックスの辞書<br/>SEGMENTS_TABLE -> 列ストア インデックスの圧縮セグメント<br/>ROW_GROUPS_INFO_TABLE -> 列ストア インデックスの圧縮行グループに関するメタデータ<br/>INTERNAL OFF-ROW DATA TABLE -> 行外列のストレージに使用される内部テーブル。 この場合、minor_id には column_id が反映されます。<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> ディスク ベース履歴テーブルの末尾。 履歴に挿入された行は、最初にこの内部メモリ最適化テーブルに挿入されます。 この内部テーブルからディスク ベースの履歴テーブルに行を非同期的に移動するバックグラウンド タスクがあります。 |
+|type_desc| **nvarchar(60)**|   種類の説明<br/><br/>DELETED_ROWS_TABLE -> 列ストア インデックスの削除行を追跡する内部テーブル<br/>USER_TABLE -> 行内ユーザー データを含むテーブル<br/>DICTIONARIES_TABLE -> 列ストア インデックスの辞書<br/>SEGMENTS_TABLE -> 列ストア インデックスの圧縮セグメント<br/>ROW_GROUPS_INFO_TABLE -> 列ストア インデックスの圧縮行グループに関するメタデータ<br/>INTERNAL OFF-ROW DATA TABLE -> 行外列のストレージに使用される内部テーブル。 この場合、minor_id には column_id が反映されます。<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> ディスク ベース履歴テーブルの末尾。 履歴に挿入された行は、最初にこの内部メモリ最適化テーブルに挿入されます。 この内部テーブルからディスク ベースの履歴テーブルに行を非同期的に移動するバックグラウンド タスクがあります。 |
 |minor_id|  **int**|    0 は、ユーザー テーブルまたは内部テーブルを示します。<br/><br/>0 以外は、行外に格納されている列の ID を示します。 sys.columns で column_id と結合されます。<br/><br/>このシステム ビューには行外に格納されている各列に対応する行があります。|
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  

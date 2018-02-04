@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_db_objects_disabled_on_compatibility_level_change (TRANSACT-SQL) |Microsoft ドキュメント"
+title: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_objects_disabled_on_compatibility_level_change_TSQL
 - sys.dm_db_objects_disabled_on_compatibility_level_change
 - sys.dm_db_objects_disabled_on_compatibility_level_change_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0f725b1725442ec7853bc4ac130b3d3e1d10fe2
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f52daf2257ac6a2d8ea34d61ed2dd869b0363bce
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空間データは - sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -52,10 +55,10 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**class**|**int**|1 = 制約<br /><br /> 7 = インデックスとヒープ|  
-|**class_desc**|**nvarchar (60)**|制約の場合は OBJECT または COLUMN<br /><br /> インデックスとヒープの場合は INDEX|  
+|**class_desc**|**nvarchar(60)**|制約の場合は OBJECT または COLUMN<br /><br /> インデックスとヒープの場合は INDEX|  
 |**major_id**|**int**|制約の OBJECT ID <br /><br /> インデックスとヒープが含まれたテーブルの OBJECT ID|  
 |**minor_id**|**int**|制約の場合は NULL<br /><br /> インデックスとヒープの場合は Index_id|  
-|**依存関係**|**nvarchar (60)**|制約またはインデックスを無効にするような依存関係の説明。 アップグレード中に発生した警告にも同じ値が使用されます。 次の例に示します。<br /><br /> 組み込みの場合は "space"<br /><br /> システム UDT の場合は "geometry"<br /><br /> システム UDT のメソッドの場合は "geography::Parse"|  
+|**dependency**|**nvarchar(60)**|制約またはインデックスを無効にするような依存関係の説明。 アップグレード中に発生した警告にも同じ値が使用されます。 次の例に示します。<br /><br /> 組み込みの場合は "space"<br /><br /> システム UDT の場合は "geometry"<br /><br /> システム UDT のメソッドの場合は "geography::Parse"|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  互換性レベルを変更すると、一部の組み込み関数を使用している保存される計算列が無効になります。 データベースをアップグレードすると、Geometry メソッドまたは Geography メソッドを使用している保存される計算列も無効になります。  
@@ -114,7 +117,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 -   **Geography:: を減らす**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>無効になったオブジェクトの動作  
- **[インデックス]**  
+ **インデックス**  
   
  クラスター化インデックスが無効になっているか、非クラスター化インデックスが強制された場合、次のエラーが発生する場合:"、クエリ プロセッサは、プランを作成することは、インデックス ' % です。\*'%.*ls' のテーブルまたはビューで ' % です。\*'%.*ls' が無効です"。 これらのオブジェクトを再度有効に、インデックスを再構築のアップグレード後に呼び出すことによって**ALTER INDEX ON しています.再構築**です。  
   
@@ -143,9 +146,9 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  1 つの列を無効にすることはできないので、クラスター化インデックスまたはヒープを無効にすると、テーブル全体が無効になります。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>アクセス許可  
+### <a name="permissions"></a>権限  
  VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="example"></a>例  

@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b10564c7736dce2ab21cc83bed819606230e7b9
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c5982fa99effc211d23c7e92557d96e20d131ad4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,7 +34,7 @@ ms.lasthandoff: 01/02/2018
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|パーティション ID を示します。 データベース内で一意です。|  
-|**hobt_id で**|**bigint**|この列ストア インデックスを保持するテーブルのヒープまたは B ツリー インデックス (hobt) の ID。|  
+|**hobt_id**|**bigint**|この列ストア インデックスを保持するテーブルのヒープまたは B ツリー インデックス (hobt) の ID。|  
 |**column_id**|**int**|列ストアの列の ID。|  
 |**segment_id**|**int**|列セグメントの ID。|  
 |**version**|**int**|列セグメント形式のバージョン。|  
@@ -40,7 +42,7 @@ ms.lasthandoff: 01/02/2018
 |**row_count**|**int**|行グループ内の行の数。|  
 |**has_nulls**|**int**|列セグメントに NULL 値がある場合は 1。|  
 |**base_id**|**bigint**|エンコードの種類 1 が使用されている場合は、id をベース値です。  エンコードの種類 1 が、使用されていない場合、base_id は 1 に設定します。|  
-|**絶対値**|**float**|エンコードの種類 1 が使用されている場合は大きさ。  エンコードの種類 1 が、使用されていない場合は、絶対値が 1 に設定されます。|  
+|**magnitude**|**float**|エンコードの種類 1 が使用されている場合は大きさ。  エンコードの種類 1 が、使用されていない場合は、絶対値が 1 に設定されます。|  
 |**primary__dictionary_id**|**int**|プライマリ辞書の ID。|  
 |**secondary_dictionary_id**|**int**|セカンダリ辞書の ID。 セカンダリ辞書が定義されていない場合は、-1 を返します。|  
 |**min_data_id**|**bigint**|列セグメントの最小データ ID。|  
@@ -81,14 +83,14 @@ JOIN sys.objects AS o
 ORDER BY css.hobt_id, css.column_id;  
 ```  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  必要があります**VIEW SERVER STATE**権限です。  
   
 ## <a name="see-also"></a>参照  
  [SQL Data Warehouse と並列データ ウェアハウスのカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [COLUMNSTORE INDEX &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys.pdw_nodes_column_store_row_groups &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   
 

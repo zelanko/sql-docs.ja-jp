@@ -1,5 +1,5 @@
 ---
-title: "ALTER データベース スコープの資格情報 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/27/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CREDENTIAL statement
 - credentials [SQL Server], ALTER DATABASE SCOPED CREDENTIAL statement
 ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b45b0d87b846c50abc678692021c427006b3152e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0b64dc761f5af95ab913291d6aa488ced8fba8cf
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER データベース スコープ ベースの資格情報 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
   データベースのプロパティの変更には、資格情報がスコープ設定されます。  
   
@@ -52,7 +53,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  サーバーの外部に接続するときに使用するアカウントの名前を指定します。 Azure Blob ストレージからファイルをインポートするユーザー名がある必要があります`SHARED ACCESS SIGNATURE`です。  共有アクセス署名の詳細については、次を参照してください。[を使用して共有アクセス署名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)です。  
     
   
- シークレット**='***シークレット***'**  
+ SECRET **='***secret***'**  
  送信の認証に必要なシークレットを指定します。 *シークレット*Azure Blob ストレージからファイルをインポートするが必要です。 *シークレット*他の目的で省略可能な場合があります。   
 >  [!WARNING]
 >  SAS キーの値が始まる可能性があります、'?'(疑問符)。 SAS キーを使用する場合は、先頭を削除する必要があります '?' です。 それ以外の場合、作業がブロックされる可能性があります。    
@@ -64,7 +65,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
  データベース スコープ資格情報に関する情報は、 [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)カタログ ビューです。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  必要があります`ALTER`資格情報に対する権限。  
   
 ## <a name="examples"></a>使用例  

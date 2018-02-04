@@ -3,7 +3,7 @@ title: "フェールオーバー クラスター インスタンス: Linux 上�
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: aba3ca214a1ea96d18aa17285ed40235bf2f7bdb
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 6f8ba6ed2e56ea4dc97ab68fa85601d94edfe1fc
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>フェールオーバー クラスター インスタンス: Linux 上の SQL Server の動作します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 この記事では、Linux 上の SQL Server のフェールオーバー クラスター インスタンス (FCI) を運用する方法について説明します。 Linux に SQL Server の FCI を作成していない、表示[構成のフェールオーバー クラスター インスタンス: SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)です。 
 
@@ -35,7 +35,7 @@ Fci のフェールオーバーは、Windows Server フェールオーバー ク
 
 フェールオーバーするための方法は、Linux ディストリビューションに依存します。 Linux ディストリビューションの手順に従います。
 
-- [RHEL または Ubuntu](#rhelFailover)
+- [RHEL or Ubuntu](#rhelFailover)
 - [SLES](#slesFailover)
 
 ## <a name = "#rhelFailover"></a>手動フェールオーバー (RHEL または Ubuntu)

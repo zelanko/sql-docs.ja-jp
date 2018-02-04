@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_uncontained_entities_TSQL
 - sys.dm_db_uncontained_entities_TSQL
 - dm_db_uncontained_entities
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_uncontained_entities dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_uncontained_entities dynamic management view
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91f36a8a8070e5f5752acf82bec5305fa4adc021
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 21a11895ad0d618f9466572edc213aa0d217d8ef
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +45,16 @@ ms.lasthandoff: 01/02/2018
 |**列名**|**型**|**Description**|  
 |*class*|**int**|1 = オブジェクトまたは列 (モジュール、XP、ビュー、シノニム、およびテーブルを含む)。<br /><br /> 4 = データベース プリンシパル<br /><br /> 5 = アセンブリ<br /><br /> 6 = 型<br /><br /> 7 = インデックス (フルテキスト インデックス)<br /><br /> 12 = データベース DDL トリガー<br /><br /> 19 = ルート<br /><br /> 30 = 監査の仕様|  
 |*class_desc*|**nvarchar(120)**|エンティティのクラスの説明。 クラスと一致するには、次のいずれか。<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
-|*major_id*|**int**|エンティティの ID。<br /><br /> 場合*クラス*= 1 の場合は、object_id<br /><br /> 場合*クラス*= 4、sys.database_principals.principal_id です。<br /><br /> 場合*クラス*= 5, sys.assemblies.assembly_id です。<br /><br /> 場合*クラス*= 6, sys.types.user_type_id です。<br /><br /> 場合*クラス*= 7、sys.indexes.index_id です。<br /><br /> 場合*クラス*= 12、sys.triggers.object_id です。<br /><br /> 場合*クラス*= 19、sys.routes.route_id。<br /><br /> 場合*クラス*= 30 の場合は、sys です。 database_audit_specifications.databse_specification_id です。|  
+|*major_id*|**int**|エンティティの ID。<br /><br /> 場合*クラス*= 1 の場合は、object_id<br /><br /> 場合*クラス*= 4、sys.database_principals.principal_id です。<br /><br /> 場合*クラス*= 5, sys.assemblies.assembly_id です。<br /><br /> 場合*クラス*= 6, sys.types.user_type_id です。<br /><br /> 場合*クラス*= 7、sys.indexes.index_id です。<br /><br /> 場合*クラス*= 12、sys.triggers.object_id です。<br /><br /> 場合*クラス*= 19、sys.routes.route_id。<br /><br /> 場合*クラス*= 30 の場合は、sys です。 database_audit_specifications.databse_specification_id.|  
 |*statement_line_number*|**int**|クラスがモジュールの場合は、非包含エンティティの使用が見つかった行番号を返します。  それ以外の場合、値は null になります。|  
 |*statement_ offset_begin*|**int**|クラスがモジュールの場合は、非包含エンティティの使用が開始する開始位置 (バイト単位) が 0 で始まることを示します。 それ以外の場合、戻り値は null になります。|  
 |*statement_ offset_end*|**int**|クラスがモジュールの場合は、非包含エンティティの使用の終了位置 (バイト単位) が 0 で始まることを示します。 値 -1 はモジュールの最後を表します。 それ以外の場合、戻り値は null になります。|  
 |*statement_type*|**nvarchar(512)**|ステートメントの種類。|  
-|*feature _ 名*|**nvarchar (256)**|オブジェクトの外部名を返します。|  
+|*feature_ name*|**nvarchar (256)**|オブジェクトの外部名を返します。|  
 |*feature_type_name*|**nvarchar (256)**|機能の種類を返します。|  
   
 ## <a name="remarks"></a>解説  
- sys.dm_db_uncontained_entities は、データベース境界を越える可能性のあるエンティティを示しています。 データベースの外部のオブジェクトを使用する可能性のあるユーザー エンティティが返されます。  
+ sys.dm_db_uncontained_entities shows those entities which can potentially cross the database boundary. データベースの外部のオブジェクトを使用する可能性のあるユーザー エンティティが返されます。  
   
  次の機能の種類が報告されます。  
   
@@ -67,9 +70,9 @@ ms.lasthandoff: 01/02/2018
   
 -   システム組み込み関数  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>アクセス許可  
+### <a name="permissions"></a>権限  
  sys.dm_db_uncontained_entities には、ユーザーが権限のいくつかの種類のオブジェクトのみを返します。 メンバーなど、高い特権を持つユーザーでは、この機能を使用する必要があります、データベースの包含を完全に評価する、 **sysadmin**固定サーバー ロールまたは**db_owner**ロール。  
   
 ## <a name="examples"></a>使用例  

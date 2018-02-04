@@ -3,7 +3,7 @@ title: "VDI のバックアップ Specification - SQL Server on Linux |Microsoft
 description: "SQL Server のバックアップの仮想デバイス インターフェイス仕様です。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
-ms.openlocfilehash: 31fc2a5d96f38cbbcd0c4b616bcfc75c552c1340
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: fc2fa01902fee76b85c4b348d701166845a6d95e
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux VDI クライアント SDK 仕様 SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このドキュメントでは、Linux 仮想デバイス インターフェイス (VDI) クライアント SDK 上の SQL Server によって提供されるインターフェイスについて説明します。 独立系ソフトウェア ベンダー (Isv) は、仮想バックアップ デバイス アプリケーション プログラミング インターフェイス (API) を使用して、各自の製品に SQL Server を統合します。 一般に、Linux での VDI と同様に動作 VDI Windows 上で、次の変更。
 
@@ -110,7 +110,7 @@ Linux では、POSIX プリミティブは、その既定のグループを作�
 
 | パラメーター | 引数 | 説明
 | ----- | ----- | ------ |
-| | **タイムアウト** | これは、ミリ秒単位のタイムアウトです。 タイムアウトを防ぐために無限または負の値の任意の整数を使用します。
+| | **timeout** | これは、ミリ秒単位のタイムアウトです。 タイムアウトを防ぐために無限または負の値の任意の整数を使用します。
 | | **cfg** | 正常に実行すると、サーバーが選択した設定が含まれます。 詳細については、このドキュメントで後述の「構成」を参照してください。
 
 | 戻り値 | 引数 | 説明
@@ -165,14 +165,14 @@ Linux では、POSIX プリミティブは、その既定のグループを作�
 
 | パラメーター | 引数 | 説明
 | ----- | ----- | ------ |
-| |**タイムアウト** |これは、待機する時間 (ミリ秒単位) です。 INFINTE を使用して、無期限に待機します。 コマンドをポーリングするには、0 を使用します。 コマンドが現在使用できない場合は、VD_E_TIMEOUT が返されます。 タイムアウトが発生した場合、クライアントは、次のアクションを決定します。
+| |**timeout** |これは、待機する時間 (ミリ秒単位) です。 INFINTE を使用して、無期限に待機します。 コマンドをポーリングするには、0 を使用します。 コマンドが現在使用できない場合は、VD_E_TIMEOUT が返されます。 タイムアウトが発生した場合、クライアントは、次のアクションを決定します。
 | |**Timeout** |これは、待機する時間 (ミリ秒単位) です。 無期限に待機する INFINTE または負の値を使用します。 コマンドをポーリングするには、0 を使用します。 コマンドが使用できない場合、タイムアウトの有効期限が切れる前に、VD_E_TIMEOUT が返されます。 タイムアウトが発生した場合、クライアントは、次のアクションを決定します。
 | |**ppCmd** |コマンドが正常に返されると、パラメーターは、実行するコマンドのアドレスを返します。 返されるメモリは、読み取り専用です。 コマンドが完了したら、このポインターは CompleteCommand ルーチンに渡されます。 詳細については、各コマンドは、このドキュメントの後半で、「コマンド」を参照してください。
         
 | 戻り値 | 引数 | 説明
 | ----- | ----- | ------ |
 | |**NOERROR** |コマンドがフェッチされました。
-| |**でした** |デバイスがサーバーによって閉じられました。
+| |**VD_E_CLOSE** |デバイスがサーバーによって閉じられました。
 | |**VD_E_TIMEOUT** |コマンドを取得できませんでした、タイムアウトになりました。
 | |**VD_E_ABORT** |クライアントまたはサーバーに、シャット ダウンを強制するのに、SignalAbort が使用します。
 
@@ -199,7 +199,7 @@ Linux では、POSIX プリミティブは、その既定のグループを作�
 | |**pCmd** |これは以前 ClientVirtualDevice::GetCommand から返されたコマンドのアドレスです。
 | |**completionCode** |これは、完了ステータスを示すステータス コードです。 このパラメーターは、すべてのコマンドを返す必要があります。 返されたコードを実行中のコマンドを適切にする必要があります。 すべてのケースでは、error_success を返しますを使用して正常に実行されたコマンドを表すできます。 コードの完全な一覧をファイルを参照してください。 vdierror.h です。 このドキュメントの後半で、「コマンド」に各コマンドの一般的なステータス コードの一覧が表示されます。
 | |**bytesTransferred** |これは、正常に転送されたバイト数です。 これは、コマンドは、読み取りし、書き込みのデータ転送にのみ返されます。
-| |**位置** |これは、GetPosition コマンドのみへの応答です。
+| |**position** |これは、GetPosition コマンドのみへの応答です。
         
 | 戻り値 | 引数 | 説明
 | ----- | ----- | ------ |

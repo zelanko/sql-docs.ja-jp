@@ -3,7 +3,7 @@ title: "Linux 上の SQL Server のパフォーマンスのベスト プラク�
 description: "このトピックでは、Linux で SQL Server 2017 を実行するパフォーマンスのベスト プラクティスとガイドラインを提供します。"
 author: rgward
 ms.author: bobward
-manager: jhubbard
+manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: c4de3f861a994ebe2476008146be810e7a2e2500
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: 565ede5c15f6e4e34a7a5cbbdcd6fa7d145c8ff5
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>パフォーマンスのベスト プラクティスと Linux 上の SQL Server 2017 の構成ガイドライン
 
@@ -64,7 +64,7 @@ SQL Server のインストールのパフォーマンスを最高のエクスペ
 
 次の表は、CPU の設定に関する推奨事項を示します。
 
-| 設定 | 値 | 詳細情報 |
+| 設定 | [値] | 詳細情報 |
 |---|---|---|
 | CPU 頻度ガバナー | パフォーマンス | 参照してください、 **cpupower**コマンド |
 | ENERGY_PERF_BIAS | パフォーマンス | 参照してください、 **x86_energy_perf_policy**コマンド |
@@ -73,10 +73,10 @@ SQL Server のインストールのパフォーマンスを最高のエクスペ
 
 次の表は、ディスクの設定に関する推奨事項を示します。
 
-| 設定 | 値 | 詳細情報 |
+| 設定 | [値] | 詳細情報 |
 |---|---|---|
 | ディスク先行 | 4096 | 参照してください、 **blockdev**コマンド |
-| sysctl 設定 | kernel.sched_min_granularity_ns 10000000 を =<br/>kernel.sched_wakeup_granularity_ns 15000000 を =<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio 10 を =<br/>vm.swappiness=10 | 参照してください、 **sysctl**コマンド |
+| sysctl 設定 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | 参照してください、 **sysctl**コマンド |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>分散マルチノード NUMA システムのカーネル設定自動 numa
 

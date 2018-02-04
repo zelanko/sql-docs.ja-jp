@@ -8,28 +8,32 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server 2014
+applies_to:
+- SQL Server 2014
 f1_keywords:
 - sys.dm_db_incremental_stats_properties
 - sys.dm_db_incremental_stats_properties_TSQL
 - dm_db_incremental_stats_properties
 - dm_db_incremental_stats_properties_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_incremental_stats_properties
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_incremental_stats_properties
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
-caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7885e0ed338ad3691f821593b5ae8c74925297f4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6187179f6599404dac86f92403cba507eb5e5fcc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +81,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 
 統計の更新の日付が格納されている、[統計 blob オブジェクト](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)と共に、[ヒストグラム](../../relational-databases/statistics/statistics.md#histogram)と[密度ベクトル](../../relational-databases/statistics/statistics.md#density)メタデータではなく、します。 統計情報データを生成するデータが読み取られず、統計情報の blob は作成されません、日付が使用できないと、 *last_updated*列は NULL です。 これは、述語返さない行、または新しい空のテーブルのフィルター選択された統計の場合です。
 
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  ユーザーは、統計情報列に対する select 権限を持つテーブルを所有するユーザーまたはユーザーのメンバーである必要があります、`sysadmin`固定サーバー ロール、`db_owner`固定データベース ロール、または`db_ddladmin`固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  
@@ -97,4 +101,4 @@ SELECT * FROM sys.dm_db_incremental_stats_properties (object_id('PartitionTable'
  [オブジェクト関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [動的管理ビューおよび関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
- [sys.dm_db_stats_histogram (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
+ [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 

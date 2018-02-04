@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_wait_stats
 - sys.dm_os_wait_stats
 - sys.dm_os_wait_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_wait_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-caps.latest.revision: "111"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 355aefa1b0cb4d8acbc215a3afc72709d8b811e9
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
-ms.translationtype: MT
+ms.openlocfilehash: c7e4859e69328535a89d0c2abc3122340176eaec
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,12 +43,12 @@ ms.lasthandoff: 01/12/2018
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|待機の種類の名前。 詳細については、次を参照してください。[待機の種類](#WaitTypes)、このトピックで後述します。|  
+|wait_type|**nvarchar(60)**|待機の種類の名前。 詳細については、次を参照してください。[待機の種類](#WaitTypes)、このトピックで後述します。|  
 |waiting_tasks_count|**bigint**|この待機の種類における待機の数。 このカウンターは、待機が開始するたび増加します。|  
 |wait_time_ms|**bigint**|この待機の種類 (ミリ秒単位) の合計待機時間。 この時間には signal_wait_time_ms が含まれます。|  
 |max_wait_time_ms|**bigint**|この待機の種類における最大待機時間。|  
 |signal_wait_time_ms|**bigint**|待機スレッドがシグナルを受け取ってから実行を開始するまでの時間。|  
-|pdw_node_id|**int**|この分布はでは、ノードの識別子。 <br/> **適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|この分布はでは、ノードの識別子。 <br/> **適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>権限  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
@@ -127,7 +130,7 @@ GO
 |BROKER_FORWARDER |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |BROKER_INIT |各アクティブ データベースで Service Broker を初期化するときに発生します。 この待機は、発生頻度の低い待機です。| 
 |BROKER_MASTERSTART |タスクが開始するサービス ブローカーのプライマリ イベント ハンドラーを待機している場合に発生します。 これは非常に簡単に発生する必要があります。| 
-|BROKER_RECEIVE_WAITFOR |RECEIVE WAITFOR が待機しているときに発生します。 これは、メッセージの受信準備ができていない場合によく起こります。| 
+|BROKER_RECEIVE_WAITFOR |RECEIVE WAITFOR が待機しているときに発生します。 キューで受信するメッセージがないかあるロックの競合が原因で、キューからメッセージを受信できない可能性があります。| 
 |BROKER_REGISTERALLENDPOINTS |Service Broker の接続エンドポイントの初期化中に発生します。 これは非常に簡単に発生する必要があります。| 
 |BROKER_SERVICE |対象サービスに関連付けられている、Service Broker ターゲット リストを更新または再優先順位を付けるときに発生します。| 
 |BROKER_SHUTDOWN |Service Broker の計画されたシャット ダウンがある場合に発生します。 この待機は、非常に短い時間の待機です。| 
@@ -169,7 +172,7 @@ GO
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |COUNTRECOVERYMGR |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |CREATE_DATINISERVICE |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|CXCONSUMER |行を送信する、producer スレッド consumer スレッドが待機したときに、並列クエリ プランで発生します。 これは、並列クエリの実行の通常の一部です。 <br /> **適用されます**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 と[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXCONSUMER |行を送信する、producer スレッド consumer スレッドが待機したときに、並列クエリ プランで発生します。 これは、並列クエリの実行の通常の一部です。 <br /> **適用されます**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 と [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
 |CXPACKET |クエリ プロセッサ交換反復子を同期するときに、および生成および行を使用する場合は、並列クエリ プランで発生します。 待機時間が長すぎて、クエリのチューニング (インデックスの追加など) を実行しても短くできない場合は、並列処理のコストしきい値を調整したり並列処理の次数を下げたりすることを検討してください。<br /> **注:**で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3 および[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、クエリ プロセッサ交換反復子を同期するように、コンシューマーのスレッドの行を作成できるようにのみ CXPACKET を参照します。 コンシューマーのスレッドは、CXCONSUMER 待機の種類で個別に追跡されます。| 
 |CXROWSET_SYNC |範囲の並列スキャン中に発生します。| 
 |DAC_INIT |専用管理者接続の初期化中に発生します。| 
@@ -225,7 +228,7 @@ GO
 |EXTERNAL_SCRIPT_NETWORK_IO |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
 |EXTERNAL_SCRIPT_PREPARE_SERVICE |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |EXTERNAL_SCRIPT_SHUTDOWN |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|EXTERNAL_WAIT_ON_LAUNCHER、 |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|EXTERNAL_WAIT_ON_LAUNCHER, |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |FABRIC_HADR_TRANSPORT_CONNECTION |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |FABRIC_REPLICA_CONTROLLER_LIST |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |FABRIC_REPLICA_CONTROLLER_STATE_AND_CONFIG |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 

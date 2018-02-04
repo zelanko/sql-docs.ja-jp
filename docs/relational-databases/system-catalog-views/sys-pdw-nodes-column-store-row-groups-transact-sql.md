@@ -1,5 +1,5 @@
 ---
-title: "sys.pdw_nodes_column_store_row_groups (TRANSACT-SQL) |Microsoft ドキュメント"
+title: sys.pdw_nodes_column_store_row_groups (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: 
@@ -8,26 +8,28 @@ ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31eb71e09e041f6d23c0c88e1ca1423f3693faa7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75e4229fde3cae66cdd2172c0f2bea0cbf63bf10
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (TRANSACT-SQL)
+# <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  管理者が下すシステム管理に役立つセグメント単位でクラスター化列ストア インデックス情報を提供[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]です。 **sys.pdw_nodes_column_store_row_groups**が、(削除済みとしてマークされているを含む) に物理的に格納されている行の合計数と、列の削除済みとしてマークされている行の数。 使用して**sys.pdw_nodes_column_store_row_groups**行を判断するグループが削除された行の割合が高いと、再構築する必要があります。  
+  管理者が下すシステム管理に役立つセグメント単位でクラスター化列ストア インデックス情報を提供[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]です。 **sys.pdw_nodes_column_store_row_groups** has a column for the total number of rows physically stored (including those marked as deleted) and a column for the number of rows marked as deleted. Use **sys.pdw_nodes_column_store_row_groups** to determine which row groups have a high percentage of deleted rows and should be rebuilt.  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
@@ -37,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 |**row_group_id**|**int**|この行グループの ID です。 この番号はパーティション内で一意です。|  
 |**dellta_store_hobt_id**|**bigint**|デルタ行グループの hobt_id で、行グループの種類がデルタではない場合は NULL。 デルタ行グループとは、新しいレコードを受け入れる読み取り/書き込み行グループのことです。 デルタ行グループには、**開く**状態です。 デルタ行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。|  
 |**状態**|**tinyint**|state_description に関連付けられている ID 番号。<br /><br /> 1 = OPEN <br /><br /> 2 = CLOSED <br /><br /> 3 = COMPRESSED|  
-|**state_desccription**|**nvarchar (60)**|行グループの永続的な状態の説明:<br /><br /> OPEN - 新しいレコードを受け入れる読み取り/書き込み行グループ。 OPEN の行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。<br /><br /> CLOSED - いっぱいになったが、組ムーバー プロセスによってまだ圧縮されていない行グループ。<br /><br /> COMPRESSED - いっぱいになり、圧縮された行グループ。|  
+|**state_desccription**|**nvarchar(60)**|行グループの永続的な状態の説明:<br /><br /> OPEN - 新しいレコードを受け入れる読み取り/書き込み行グループ。 OPEN の行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。<br /><br /> CLOSED - いっぱいになったが、組ムーバー プロセスによってまだ圧縮されていない行グループ。<br /><br /> COMPRESSED - いっぱいになり、圧縮された行グループ。|  
 |**total_rows**|**bigint**|行グループに物理的に格納されている行の合計。 削除された行がまだ格納されていることがあります。 1 つの行グループの最大行数は 1,048,576 (16 進数では FFFFF) です。|  
 |**deleted_rows**|**bigint**|削除対象としてマークされた行グループ内に物理的に格納されている行の数。<br /><br /> 常にデルタの場合は 0 の行グループ。|  
 |**size_in_bytes**|**int**|この行グループ内のすべてのページのバイト単位の合計サイズ。 このサイズでは、メタデータと共有辞書の格納に必要なサイズは含まれません。|  
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>解説  
  クラスター化または非クラスター化列ストア インデックスがある各テーブルの列ストア行グループごとに 1 つの行を返します。  
   
- 使用して**sys.pdw_nodes_column_store_row_groups**行グループおよび行グループのサイズに含まれる行の数を決定します。  
+ Use **sys.pdw_nodes_column_store_row_groups** to determine the number of rows included in the row group and the size of the row group.  
   
  行グループ内の削除済みの行の数が合計行数に対して占める割合が高くなると、テーブルの効率が低下します。 テーブルのサイズが小さくなるよう列ストア インデックスを再構築して、テーブルを読み取るために必要なディスク I/O を削減します。 使用して列ストア インデックスを再構築する、**リビルド**のオプション、 **ALTER INDEX**ステートメントです。  
   
@@ -55,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
  列ストア行グループは、いっぱいになると圧縮され、新しい行の受け入れを停止します。 圧縮されたグループから行が削除されると、削除された行は、保持されますが、削除済みとしてマークされます。 圧縮されたグループに対する更新は、圧縮されたグループからの削除、および OPEN 状態のグループへの挿入として実装されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  必要があります**VIEW SERVER STATE**権限です。  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -112,7 +114,7 @@ ORDER BY 1, 2
 ## <a name="see-also"></a>参照  
  [SQL Data Warehouse と並列データ ウェアハウスのカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [COLUMNSTORE INDEX &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys.pdw_nodes_column_store_segments と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

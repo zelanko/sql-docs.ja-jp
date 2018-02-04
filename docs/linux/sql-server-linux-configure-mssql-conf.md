@@ -3,7 +3,7 @@ title: "Linux 上の SQL Server の設定の構成 |Microsoft ドキュメント
 description: "このトピックでは、mssql conf ツールを使用して Linux 上の SQL Server 2017 設定を構成する方法について説明します。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,21 +15,21 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: 9aca5fe7905f06269bd07b7946c3bb6ef4e37492
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: fe0a3bc095e1dcd76f9fdc98e1621974dca6693e
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql conf ツールを使用して Linux 上の SQL Server を構成します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 **mssql conf** Red Hat Enterprise Linux、SUSE Linux Enterprise Server、および Ubuntu Server 2017 年 SQL と共にインストールされる構成スクリプトを示します。 このユーティリティを使用するには、次のパラメーターを設定します。
 
 |||
 |---|---|
-| [照合順序](#collation) | Linux 上の SQL Server の新しい照合順序を設定します。 |
+| [[照合順序]](#collation) | Linux 上の SQL Server の新しい照合順序を設定します。 |
 | [お客様のフィードバック](#customerfeedback) | SQL Server が Microsoft にフィードバックを送信するかどうかを選択します。 |
 | [[データベース メール プロファイル]](#dbmail) | Linux 上の SQL Server の既定のデータベース メール プロファイルを設定します。 |
 | [既定のデータ ディレクトリ](#datadir) | 新しい SQL Server データベース データ ファイル (.mdf) の既定のディレクトリを変更します。 |
@@ -221,10 +221,10 @@ SQL Server では収集するメモリの種類を制御するダンプの 2 つ
 
     | 型 | Description |
     |-----|-----|
-    | **ミニ** | ミニは、最小のダンプ ファイルの種類です。 スレッドとプロセスのモジュールを確認するのに、Linux システム情報を使用します。 ダンプには、ホスト環境のスレッドのスタックとモジュールのみが含まれています。 これは、メモリの間接参照またはグローバル変数には含まれません。 |
+    | **mini** | ミニは、最小のダンプ ファイルの種類です。 スレッドとプロセスのモジュールを確認するのに、Linux システム情報を使用します。 ダンプには、ホスト環境のスレッドのスタックとモジュールのみが含まれています。 これは、メモリの間接参照またはグローバル変数には含まれません。 |
     | **miniplus** | MiniPlus がミニに似ていますが、追加のメモリが含まれています。 SQLPAL とダンプを次のメモリ領域を追加するホスト環境の内部構造を認識します。</br></br> さまざまなグローバル変数</br> -64 TB を超えるすべてのメモリ</br> -すべてのという名前で地域が見つかりません**/proc/$pid/マップ**</br> スレッド ウィンドウとスタックから間接メモリ</br> のスレッド情報</br> 関連付けられている Teb のおよび Peb</br> モジュール情報</br> VMM と VAD ツリー |
-    | **フィルター処理** | 減算に基づくフィルター処理された使用は、ここで、プロセス内のすべてのメモリが含まれる具体的には除外されていない限りをデザインします。 設計は、SQLPAL とダンプから特定の地域を除く、ホスト環境の内部構造を理解しています。
-    | **完全** | 完全をすべての領域を含む完全なプロセス ダンプ内にある**/proc/$pid/マップ**です。 これによって制御されない**coredump.captureminiandfull**設定します。 |
+    | **filtered** | 減算に基づくフィルター処理された使用は、ここで、プロセス内のすべてのメモリが含まれる具体的には除外されていない限りをデザインします。 設計は、SQLPAL とダンプから特定の地域を除く、ホスト環境の内部構造を理解しています。
+    | **full** | 完全をすべての領域を含む完全なプロセス ダンプ内にある**/proc/$pid/マップ**です。 これによって制御されない**coredump.captureminiandfull**設定します。 |
 
 ## <a id="dbmail"></a>Linux 上の SQL Server の既定のデータベース メール プロファイルを設定します。
 
@@ -401,7 +401,7 @@ sudo cat /var/opt/mssql/mssql.conf
 
 このファイルに表示されていないすべての設定が既定値を使用していることに注意してください。 次のセクションでは、サンプルを提供**mssql.conf**ファイル。
 
-## <a name="mssqlconf-format"></a>mssql.conf 形式
+## <a name="mssqlconf-format"></a>mssql.conf format
 
 次**/var/opt/mssql/mssql.conf**ファイルは、各設定の例を示します。 この形式を使用してへの変更を手動で行うことができます、 **mssql.conf**必要に応じてファイルします。 場合は、ファイルを手動で変更しないでください、変更が適用される前に SQL Server を再起動する必要があります。 使用する、 **mssql.conf**ファイル Docker を使用する必要があります Docker [、データを永続化](sql-server-linux-configure-docker.md)です。 最初に完全な追加**mssql.conf**ホスト ディレクトリにファイルし、コンテナーを実行します。 この例は[お客様からのフィードバック](sql-server-linux-customer-feedback.md)です。
 

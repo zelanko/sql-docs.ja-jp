@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - trace flags [SQL Server], about trace flags
 - trace flags [SQL Server]
@@ -21,16 +23,16 @@ helpviewer_keywords:
 - performance [SQL Server], trace
 - debugging [SQL Server], trace flags
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
-caps.latest.revision: "171"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6011c66716e96347b295325ab020739e41c04370
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 396216c00fc4c474164d98e47d0185f479e61b48
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -143,6 +145,7 @@ ms.lasthandoff: 01/25/2018
 |**9567**|Always On 可用性グループの自動シード処理中にデータ ストリームの圧縮を有効にします。 圧縮は、自動シード処理中に転送時間を大幅に短縮することができ、プロセッサの負荷が増加します。 詳細については、次を参照してください。 [Always On 可用性グループを自動的に初期化](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)と[可用性グループの圧縮をチューニング](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)です。<br /><br />**スコープ**: グローバルまたはセッション|
 |**9591**|無効には、ブロック圧縮を Always On 可用性グループにログインします。 ログ ブロック圧縮の同期および非同期の両方のレプリカと使用される既定の動作は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]と[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]です。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]圧縮は、非同期レプリカでのみ使用します。 <br /><br />**スコープ**: グローバルまたはセッション|
 |**9592**|同期の可用性グループのストリームの圧縮を有効にログインします。 圧縮遅延の追加を行うために、同期の可用性グループでは既定でこの機能が無効になります。 詳細については、「 [Tune compression for availability group](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)」(可用性グループの圧縮を調整する) を参照してください。<br /><br />**スコープ**: グローバルまたはセッション| 
+|**9929**|インメモリ チェックポイント ファイルをそれぞれ 1 MB に削減されます。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/3147012)です。<br /><br />**スコープ**: グローバルのみ|  
 |**9939**|内の DML 操作のターゲットされない限り有効並列プランとメモリ最適化テーブルおよびメモリ最適化テーブルまたはテーブル変数を参照する DML 操作でテーブル変数の並列スキャン[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/4013877)です。<br /><br />**注:**トレース フラグ 4199 が明示的に有効になっている場合、トレース フラグ 9939 は必要ありません。<br /><br />**スコープ**: グローバルまたはセッションまたはクエリ|   
 |**10204**|無効にマージ/列ストア インデックスの再構成中に取り消してです。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]列ストア インデックスを再構成すると、ときより大きな圧縮行グループに、同様に削除された行の数が多い行グループを再圧縮、小規模の圧縮行グループを自動的にマージする新しい機能があります。<br /><br />**注:**トレース フラグ 10204 は、列ストア インデックスはメモリ最適化テーブル上に作成するには適用されません。<br /><br />**スコープ**: グローバルまたはセッション|   
 |**10316**|追加のインデックスの作成を有効に[内部メモリ最適化のステージング テンポラル テーブル](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)、いずれかの既定値の横にあります。 既定のインデックスで対応されていない列を含んでいる特定のクエリ パターンがある場合は、その他の値を追加することを検討できます。<br /><br />**注:**システム バージョン管理されたテンポラル テーブルは、メモリ最適化テーブルは、高いトランザクション スループットを提供するように設計されています。 追加のインデックスの作成と更新するか、現在のテーブルの行を削除 DML 操作のオーバーヘッドが生じる可能性があることに注意してください。 追加のインデックスでは、テンポラル クエリのパフォーマンスとオーバーヘッドを増やさずに DML の間でバランスが適切に目指す必要があります。<br /><br />**スコープ**: グローバルまたはセッション|

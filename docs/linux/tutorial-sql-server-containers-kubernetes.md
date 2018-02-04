@@ -3,7 +3,7 @@ title: "Kubernetes で高可用性のため、SQL Server のコンテナーを�
 description: "このチュートリアルでは、Azure コンテナー サービスで Kubernetes で SQL Server の高可用性ソリューションを展開する方法を示します。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: mvc
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 1220c85a539cdaed855d6dfd44ea4afffdd927b2
-ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
+ms.openlocfilehash: 4ada1034b64f710f4eeae995b771ef8be5bf4fe2
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>Kubernetes で高可用性のため、SQL Server のコンテナーを構成します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 高可用性 (HA) の永続的な記憶域を持つ Kubernetes Azure コンテナー サービス (AKS) で SQL Server インスタンスを構成する方法を説明します。 ソリューションでは、回復性を提供します。 SQL Server のインスタンスが失敗した場合、Kubernetes 自動的に再作成、新しい pod で。 AKS は、Kubernetes ノードの障害に対する回復性を提供します。 
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/24/2018
 
 ## <a name="ha-solution-that-uses-kubernetes-running-in-azure-container-service"></a>HA ソリューションを使用する Azure コンテナー サービスで実行されている Kubernetes
 
-Kubernetes 1.6 以降がサポート[ストレージ クラス](http://kubernetes.io/docs/concepts/storage/storage-classes/)、[永続的なボリューム クレーム](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)、および[Azure ディスク ボリューム ドライバー](http://github.com/Azure/azurefile-dockervolumedriver)です。 作成および Kubernetes でネイティブに、SQL Server インスタンスを管理することができます。 この記事の内容の例を作成する方法を示しています、[展開](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)共有ディスク フェールオーバー クラスター インスタンスと同様の高可用性構成を実現するためにします。 この構成では、Kubernetes は、クラスターの orchestrator の役割を果たします。 コンテナー内の SQL Server インスタンスが失敗すると、orchestrator には、同じ永続的な記憶域に接続しているコンテナーの別のインスタンスがブートス トラップします。
+Kubernetes 1.6 およびそれ以降をサポートしている[ストレージ クラス](http://kubernetes.io/docs/concepts/storage/storage-classes/)、[永続的なボリューム クレーム](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)、および[Azure ディスク ボリュームの種類](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)です。 作成および Kubernetes でネイティブに、SQL Server インスタンスを管理することができます。 この記事の内容の例を作成する方法を示しています、[展開](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)共有ディスク フェールオーバー クラスター インスタンスと同様の高可用性構成を実現するためにします。 この構成では、Kubernetes は、クラスターの orchestrator の役割を果たします。 コンテナー内の SQL Server インスタンスが失敗すると、orchestrator には、同じ永続的な記憶域に接続しているコンテナーの別のインスタンスがブートス トラップします。
 
 ![Kubernetes SQL Server クラスターの図](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
@@ -251,6 +251,8 @@ Kubernetes クラスタで SA パスワードを作成します。 Kubernetes �
    Pod の状態を表示するには、入力`kubectl get pod`です。
 
    ![Get pod コマンドのスクリーン ショット](media/tutorial-sql-server-containers-kubernetes/05_get_pod_cmd.png)
+
+   前のイメージで、pod がのステータスを持つ`Running`します。 この状態は、コンテナーができていることを示します。 これは、数分でかかる可能性があります。
 
    >[!NOTE]
    >展開を作成した後は、pod を表示するには数分かかります。 クラスターをプルするための間隔は、 [mssql サーバー linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker hub からイメージ。 イメージの pull が最初に、後続のデプロイなる場合があります高速な場合は、展開では既にキャッシュされていて、イメージであるノード。 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - sys.dm_hadr_auto_page_repair
 - sys.dm_hadr_auto_page_repair_TSQL
 - dm_hadr_auto_page_repair
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - automatic page repair
 - sys.dm_hadr_auto_page_repair dynamic management view
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ec6bf44d2628247af4d132cf06aadd30a19ceaf
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: 72750c250e45c6a3fba647ae212b0a5b63a11abc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmhadrautopagerepair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +51,9 @@ ms.lasthandoff: 12/14/2017
 |**page_status**|**int**|ページ修復の試行ステータスです。<br /><br /> 2 = パートナーからの要求を待機中。<br /><br /> 3 = 要求はパートナーに送信済み。<br /><br /> 4 =  ページの自動修復を待機中 (応答はパートナーから受信済み)。<br /><br /> 5 = ページの自動修復に成功し、ページは使用可能。<br /><br /> 6 = 修復不可能。 パートナー側でもページが破損していた、パートナーと接続されていない、ネットワークの問題が発生したなど、ページ修復を試みているときにエラーが発生したことを示します。 これは最終的な状態ではありません。同じページで再度破損が見つかった場合、そのページが再びパートナーから要求されます。|  
 |**modification_time**|**datetime**|ページ ステータスが最後に変更された日時です。|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>アクセス許可  
+### <a name="permissions"></a>権限  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

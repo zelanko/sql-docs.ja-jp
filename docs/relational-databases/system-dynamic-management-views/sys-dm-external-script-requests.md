@@ -16,19 +16,21 @@ f1_keywords:
 - sys.dm_external_script_requests_TSQL
 - dm_external_script_requests
 - dm_external_script_requests_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_external_script_requests dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_external_script_requests dynamic management view
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
-caps.latest.revision: "4"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cde483c6fab14391f74a52bb9ad5fbcf9fee8d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 55ac900238a49bcad4c0af31b7482b7381b1aadc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +44,12 @@ ms.lasthandoff: 01/08/2018
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**一意識別子**|外部スクリプト要求を送信したプロセスの ID です。 これは、プロセス ID が受信すると[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**unique identifier**|外部スクリプト要求を送信したプロセスの ID です。 これは、 によって受信されたプロセス ID に対応します。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |language|**nvarchar**|サポートされているスクリプト言語を表すキーワードです。 現時点では、 `R` のみサポートされています。|  
 |degree_of_parallelism|**int**|作成された並列処理の数を示す数値です。 この値は、要求された並列処理の数と異なる場合があります。|  
 |external_user_name|**nvarchar**|スクリプトが実行されたときの Windows ワーカー アカウント。|  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 > [!NOTE]
@@ -83,7 +85,7 @@ FROM sys.dm_external_script_requests;
 
 external_script_request_id  |language  |degree_of_parallelism  |external_user_name  
 ---------|---------|---------|---------
-183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |      @shouldalert   |  MSSQLSERVER01       
+183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |      1   |  MSSQLSERVER01       
 
 
   

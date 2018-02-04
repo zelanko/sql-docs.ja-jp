@@ -3,7 +3,7 @@ title: "クラウド内の SQL Server 2017 の概要 |Microsoft ドキュメン�
 description: "このクイック スタート チュートリアルでは、任意のクラウド内の Linux 上の SQL Server 2017 を実行する方法を示します。"
 author: annashres
 ms.author: annashres
-manager: jhubbard
+manager: craigg
 ms.date: 10/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -11,15 +11,15 @@ ms.prod_service: database-engine
 ms.component: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 9fa5f2751b515b86574165e6f6cda8f0b9e6661a
-ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
+ms.openlocfilehash: 645c3e11621b1c9faecffc7edf76df9a6a1eabab
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>SQL Server 2017 をクラウドで実行します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このクイック スタート チュートリアルでは、Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、または任意のクラウドで Ubuntu で SQL Server 2017 をインストールします。 移動して[Azure ポータルでの SQL Server の Linux 仮想マシンをプロビジョニング](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)を Azure での Linux に SQL Server を実行します。
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/13/2017
 
 ## <a name="amazon-web-services"></a>Amazon Web Services
 1.  Linux AMI を作成するには、少なくとも 2 gb のマーケットプ レースからメモリ 
-    * [RHEL 7.3 以降](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
+    * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  接続と AMI ssh
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/13/2017
 
     
 ## <a name="digital-ocean"></a>デジタル オーシャン
-1. ログイン、[コントロール パネルの [](https://cloud.digitalocean.com/login)ドロップレットの作成] をクリック
+1. ログイン、[コントロール パネルの ](https://cloud.digitalocean.com/login) [ドロップレットの作成] をクリック
 1. 少なくとも 2 GB のメモリと Ubuntu 16.04 ドロップレットを選択します。
 1. 接続とドロップレット ssh
 1. 以下の[Ubuntu のクイック スタート](quickstart-install-connect-ubuntu.md)
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/13/2017
     
 ## <a name="google-cloud-platform"></a>Google Cloud Platform
 1.  Linux イメージには、少なくとも 2 GB のクラウド ランチャーからメモリを作成します。 
-    * [RHEL 7.3 以降](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
+    * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  接続のイメージに ssh

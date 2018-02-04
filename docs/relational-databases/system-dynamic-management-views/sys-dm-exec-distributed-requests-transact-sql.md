@@ -8,30 +8,32 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_DISTRIBUTED_REQUESTS
 - DM_EXEC_DISTRIBUTED_REQUESTS_TSQL
 - SYS.DM_EXEC_DISTRIBUTED_REQUESTS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase,views
 - sys.dm_exec_distributed_sql_requests management view
 - PolyBase
 - dm_exec_distributed_sql_requests management view
 ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 39b16d051c3300599a220f4f2ce21904db208571
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 539bf6f6e4df5860977fdd0703a9bc11a5923d31
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecdistributedrequests-transact-sql"></a>sys.dm_exec_distributed_requests (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -42,10 +44,10 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|sql_handle|**varbinary (64)**|このビューのキーです。 要求に関連付けられている一意の数値 id です。|システム内のすべての要求間で一意です。|  
-|execution_id|**nvarchar (32**|このクエリの実行に使用されたセッションに関連付けられた一意の数値 id です。||  
-|ステータス|**nvarchar (32**|要求の現在の状態。|'Pending' 'を承認する'、'AcquireSystemResources'、'初期化'、'プラン'、'解析'、'AquireResources'、'を実行している'、'キャンセルする'、'包括的な」は ' Failed'、「取り消し済み」です。|  
-|error_id|**nvarchar (36)**|存在する場合は、要求に関連付けられているエラーの一意の id。|エラーが発生していない場合は、NULL に設定します。|  
+|sql_handle|**varbinary(64)**|このビューのキーです。 要求に関連付けられている一意の数値 id です。|システム内のすべての要求間で一意です。|  
+|execution_id|**nvarchar(32**|このクエリの実行に使用されたセッションに関連付けられた一意の数値 id です。||  
+|ステータス|**nvarchar(32**|要求の現在の状態。|'Pending' 'を承認する'、'AcquireSystemResources'、'初期化'、'プラン'、'解析'、'AquireResources'、'を実行している'、'キャンセルする'、'包括的な」は ' Failed'、「取り消し済み」です。|  
+|error_id|**nvarchar(36)**|存在する場合は、要求に関連付けられているエラーの一意の id。|エラーが発生していない場合は、NULL に設定します。|  
 |start_time|**datetime**|要求の実行が開始された時刻。|キューに置かれた要求の場合は 0それ以外の場合、有効な datetime 以下に、現在の時刻。|  
 |end_time|**datetime**|エンジンが、要求のコンパイルを完了した時刻。|キューに置かれた、またはアクティブな要求の場合は nullそれ以外の場合、現在の時刻に以下の有効な datetime です。|  
 |total_elapsed_time|**int**|(ミリ秒単位)、要求を開始してから、実行の経過時間です。|0 ～ start_time と end_time の違いです。Total_elapsed_time では、整数の最大値を超えると、total_elapsed_time 引き続き、最大値になります。 この状態が「、最大値を超過しました」警告を生成します。 最大値をミリ秒単位は 24.8 日に相当します。|  

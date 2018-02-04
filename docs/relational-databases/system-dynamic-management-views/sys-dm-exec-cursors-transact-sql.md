@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_cursors
 - dm_exec_cursors_TSQL
 - sys.dm_exec_cursors
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_cursors dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b2978fe15394ed17d63c5c98b562a332a629866
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7e659c10857c8a5248707e592738375fc5c7c483
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,8 +58,8 @@ dm_exec_cursors (session_id | 0 )
 |**session_id**|**int**|カーソルを保持しているセッションの ID。|  
 |**cursor_id**|**int**|カーソル オブジェクトの ID。|  
 |**name**|**nvarchar (256)**|ユーザーによって定義されたカーソルの名前。|  
-|**プロパティ**|**nvarchar (256)**|カーソルのプロパティ。 次のプロパティの値を連結して、この列の値を作成します。<br />宣言インターフェイス<br />カーソルの種類 <br />カーソルの同時実行<br />カーソルのスコープ<br />カーソルの入れ子のレベル<br /><br /> たとえば、この列に返される値があります"TSQL &#124;です。動的 &#124;です。オプティミスティック &#124;です。Global (0)"です。|  
-|**sql_handle**|**varbinary (64)**|カーソルを宣言したバッチのテキストへのハンドル。|  
+|**properties**|**nvarchar (256)**|カーソルのプロパティ。 次のプロパティの値を連結して、この列の値を作成します。<br />宣言インターフェイス<br />カーソルの種類 <br />カーソルの同時実行<br />カーソルのスコープ<br />カーソルの入れ子のレベル<br /><br /> たとえば、この列に返される値があります"TSQL &#124;です。動的 &#124;です。オプティミスティック &#124;です。Global (0)"です。|  
+|**sql_handle**|**varbinary(64)**|カーソルを宣言したバッチのテキストへのハンドル。|  
 |**statement_start_offset**|**int**|現在実行中のバッチまたはストアド プロシージャに含まれる、現在実行中のステートメントが開始されるまでの文字数。 組み合わせて使用することができます、 **sql_handle**、 **statement_end_offset**、および[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)動的管理関数を取得する、現在要求に対してステートメントを実行します。|  
 |**statement_end_offset**|**int**|現在実行中のバッチまたはストアド プロシージャに含まれる、現在実行中のステートメントが終了するまでの文字数。 組み合わせて使用することができます、 **sql_handle**、 **statement_start_offset**、および**sys.dm_exec_sql_text**動的管理関数を取得する、現在要求に対してステートメントを実行します。|  
 |**plan_generation_num**|**bigint**|再コンパイル後、プランのインスタンス間で区別するために使用できるシーケンス番号。|  
@@ -69,11 +72,11 @@ dm_exec_cursors (session_id | 0 )
 |**fetch_buffer_start**|**int**|FAST_FORWARD と DYNAMIC カーソルの場合で、カーソルが開いていないか、カーソルが最初の行より前にあるときは 0 が返され、 それ以外のときは -1 が返されます。<br /><br /> STATIC と KEYSET カーソルの場合で、カーソルが開いていないときは 0 が返され、カーソルが最後の行より後にあるときは -1 が返されます。<br /><br /> それ以外のときは、カーソルがある場所の行番号が返されます。|  
 |**ansi_position**|**int**|フェッチ バッファー内のカーソル位置。|  
 |**worker_time**|**bigint**|カーソルを実行するワーカーによって消費された時間 (ミリ秒単位)。|  
-|**読み取り**|**bigint**|カーソルで実行された読み取りの数。|  
-|**書き込み**|**bigint**|カーソルで実行された書き込みの数。|  
+|**reads**|**bigint**|カーソルで実行された読み取りの数。|  
+|**writes**|**bigint**|カーソルで実行された書き込みの数。|  
 |**dormant_duration**|**bigint**|カーソルの前回のクエリ (開くまたはフェッチ) が開始されてから経過した時間 (ミリ秒単位)。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="remarks"></a>解説  

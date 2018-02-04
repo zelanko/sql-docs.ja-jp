@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_appdomains
 - dm_clr_appdomains_TSQL
 - sys.dm_clr_appdomains_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_appdomains dynamic management dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_appdomains dynamic management dynamic management view
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dfe70d96c7b85d596c3819273acf264ba59e34b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 16f729bc78a42984716d2f30fc2bf30badc1ade5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +44,17 @@ ms.lasthandoff: 11/27/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**appdomain_address**|**varbinary (8)**|アドレス、 **AppDomain**です。 ユーザーが所有するオブジェクトが同じで読み込まれた常にすべてのマネージ データベース**AppDomain**です。 この列を使用するにはこれで現在読み込まれているすべてのアセンブリを検索する**AppDomain**で**sys.dm_clr_loaded_assemblies**です。|  
+|**appdomain_address**|**varbinary(8)**|アドレス、 **AppDomain**です。 ユーザーが所有するオブジェクトが同じで読み込まれた常にすべてのマネージ データベース**AppDomain**です。 この列を使用するにはこれで現在読み込まれているすべてのアセンブリを検索する**AppDomain**で**sys.dm_clr_loaded_assemblies**です。|  
 |**appdomain_id**|**int**|ID、 **AppDomain**です。 各**AppDomain**が一意の id。|  
 |**appdomain_name**|**varchar(386)**|名前、 **AppDomain**によって割り当てられた[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
 |**creation_time**|**datetime**|時刻、 **AppDomain**作成されました。 **AppDomains**はキャッシュされ、パフォーマンスを向上させるには、再使用**creation_time**必ずしもコードが実行された時間ではありません。|  
 |**db_id**|**int**|このデータベースの ID **AppDomain**作成されました。 2 つの異なるデータベースに格納されているコードは、1 つを共有できません**AppDomain**です。|  
 |**user_id**|**int**|これで実行できるオブジェクトを持つユーザーの ID **AppDomain**です。|  
-|**状態**|**nvarchar (128)**|現在の状態の記述子、 **AppDomain**です。 AppDomain には作成から削除まで、さまざまな状態があります。 詳細については、このトピックの「解説」を参照してください。|  
+|**状態**|**nvarchar(128)**|現在の状態の記述子、 **AppDomain**です。 AppDomain には作成から削除まで、さまざまな状態があります。 詳細については、このトピックの「解説」を参照してください。|  
 |**strong_refcount**|**int**|強参照数**AppDomain**です。 これは、現在これを使用するバッチの実行の数を反映して**AppDomain**です。 このビューの実行を作成することに注意してください、**強力な参照カウント**以外の場合でも、現在実行されてコードがない**strong_refcount** 1 の値になります。|  
 |**weak_refcount**|**int**|弱参照数**AppDomain**です。 これは、内部オブジェクトの数を示します、 **AppDomain**キャッシュされます。 マネージ データベース オブジェクトを実行するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キャッシュ内で、 **AppDomain**後で再使用します。 これにより、パフォーマンスが向上します。|  
-|**コスト**|**int**|コスト、 **AppDomain**です。 コストが高いほど、この**AppDomain**がメモリ不足でアンロードされます。 通常、コストはメモリの量がこれを再作成するために必要な異なります**AppDomain**です。|  
-|**値**|**int**|値、 **AppDomain**です。 値が低いほど、可能性が高くなりますこの**AppDomain**がメモリ不足でアンロードされます。 値は通常の接続またはバッチの数を使用しているこの異なります**AppDomain**です。|  
+|**cost**|**int**|コスト、 **AppDomain**です。 コストが高いほど、この**AppDomain**がメモリ不足でアンロードされます。 通常、コストはメモリの量がこれを再作成するために必要な異なります**AppDomain**です。|  
+|**value**|**int**|値、 **AppDomain**です。 値が低いほど、可能性が高くなりますこの**AppDomain**がメモリ不足でアンロードされます。 値は通常の接続またはバッチの数を使用しているこの異なります**AppDomain**です。|  
 |**total_processor_time_ms**|**bigint**|プロセスの開始後、現在のアプリケーション ドメインでの実行中にすべてのスレッドによって使用された、ミリ秒単位の合計プロセッサ時間です。 これに相当**System.AppDomain.MonitoringTotalProcessorTime**です。|  
 |**total_allocated_memory_kb**|**bigint**|アプリケーション ドメインの作成後、それによって行われたすべてのメモリ割り当ての、KB 単位の合計サイズです。収集されたメモリ量も差し引かれません。 これに相当**System.AppDomain.MonitoringTotalAllocatedMemorySize**です。|  
 |**survived_memory_kb**|**bigint**|最後の完全なブロッキング コレクションで残った、現在のアプリケーション ドメインによって参照されていることが判明しているキロバイト数です。 これに相当**System.AppDomain.MonitoringSurvivedMemorySize**です。|  
@@ -79,13 +82,13 @@ ms.lasthandoff: 11/27/2017
   
 |状態|Description|  
 |-----------|-----------------|  
-|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CLR がアンロードする要求が、 **AppDomain**普通、マネージ データベース オブジェクトを含むアセンブリが変更または削除されたため、します。|  
+|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR がアンロードする要求が、 **AppDomain**普通、マネージ データベース オブジェクトを含むアセンブリが変更または削除されたため、します。|  
 |E_APPDOMAIN_UNLOADED|CLR がアンロードした、 **AppDomain**です。 これは、によるエスカレーション プロシージャの結果では通常**ThreadAbort**、 **OutOfMemory**、またはユーザー コードで未処理の例外。|  
 |E_APPDOMAIN_ENQUEUE_DESTROY|**AppDomain**が CLR でアンロードおよび設定を破棄する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
 |E_APPDOMAIN_DESTROY|**AppDomain**によって破棄されているが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
 |E_APPDOMAIN_ZOMBIE|**AppDomain**によって破棄された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 ただし、すべてのを参照、 **AppDomain**クリーンアップされています。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  データベースに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

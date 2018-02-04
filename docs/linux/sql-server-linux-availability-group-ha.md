@@ -12,20 +12,20 @@ ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7131eec581f973738d1cacb45dd355e2b7168aeb
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 8d0f5fe75b65efbea49df143e573316b50675a93
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性グループの構成の高可用性とデータの保護
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 この記事では、Linux サーバー上の SQL Server Always On 可用性グループのサポートされる展開構成を表示します。 可用性グループには、高可用性とデータ保護がサポートしています。 障害の自動検出、自動フェールオーバー、およびフェールオーバー後に透過的な再接続は、高可用性を実現します。 同期されたレプリカは、データ保護を提供します。 
 
@@ -65,7 +65,7 @@ SQL Server 2017 が導入されています、`REQUIRED_SYNCHRONIZED_SECONDARIES
 
 次の 3 つの同期レプリカがある可用性グループには、読み取りのスケール、高可用性、およびデータ保護を提供できます。 次の表では、可用性の動作について説明します。 
 
-| |読み取りのスケール|高可用性 (& a) </br> データの保護 | データの保護
+| |read-scale|高可用性 (& a) </br> データの保護 | データの保護
 |:---|---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
 |プライマリ停止 | 手動フェールオーバー。 データが失われる可能性があります。 新しいプライマリが R が付けられます。 |自動フェールオーバー。 新しいプライマリが R が付けられます。 |自動フェールオーバー。 前のプライマリが復旧し、セカンダリとして可用性グループに参加するまでは、新しいプライマリをユーザー トランザクションで使用できません。 
@@ -82,7 +82,7 @@ SQL Server 2017 が導入されています、`REQUIRED_SYNCHRONIZED_SECONDARIES
 
 2 つの同期レプリカがある可用性グループは、読み取りのスケールとデータ保護を提供します。 次の表では、可用性の動作について説明します。 
 
-| |読み取りのスケール |データの保護
+| |read-scale |データの保護
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |プライマリ停止 | 手動フェールオーバー。 データが失われる可能性があります。 新しいプライマリが R が付けられます。| 自動フェールオーバー。 前のプライマリが復旧し、セカンダリとして可用性グループに参加するまでは、新しいプライマリをユーザー トランザクションで使用できません。

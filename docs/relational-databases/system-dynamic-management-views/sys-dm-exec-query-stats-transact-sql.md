@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_query_stats
 - sys.dm_exec_query_stats
 - sys.dm_exec_query_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_stats dynamic management view
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-caps.latest.revision: "64"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 26cc8e4ea520560452b59b9a08da198882ba96cd
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 8874b5ba3eca2f3e9d72874af7440934fc2ec20f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,11 +46,11 @@ ms.lasthandoff: 01/12/2018
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**sql_handle**|**varbinary (64)**  |クエリが含まれているバッチまたはストアド プロシージャを参照するトークンを指定します。<br /><br /> **sql_handle**と連携して、 **statement_start_offset**と**statement_end_offset**、呼び出すことによって、クエリの SQL テキストを取得するために使用する、 **sys.dm_exec_sql_text**動的管理関数です。|  
+|**sql_handle**|**varbinary(64)**  |クエリが含まれているバッチまたはストアド プロシージャを参照するトークンを指定します。<br /><br /> **sql_handle**と連携して、 **statement_start_offset**と**statement_end_offset**、呼び出すことによって、クエリの SQL テキストを取得するために使用する、 **sys.dm_exec_sql_text**動的管理関数です。|  
 |**statement_start_offset**|**int**|バッチまたは保存されるオブジェクトのテキスト内での、行が示すクエリの開始位置 (バイト単位)。0 で始まります。|  
 |**statement_end_offset**|**int**|バッチまたは保存されるオブジェクトのテキスト内での、行が示すクエリの終了位置 (バイト単位)。0 で始まります。 前に、のバージョンの[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、値-1 はバッチの終わりを示します。 末尾のコメントは含まれません。|  
 |**plan_generation_num**|**bigint**|再コンパイル後、プランのインスタンスを区別するために使用できるシーケンス番号。|  
-|**plan_handle**|**varbinary (64)**|クエリが含まれているコンパイル済みのプランを参照するトークン。 この値に渡されることができます、 [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)動的管理関数をクエリ プランを取得します。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
+|**plan_handle**|**varbinary(64)**|クエリが含まれているコンパイル済みのプランを参照するトークン。 この値に渡されることができます、 [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)動的管理関数をクエリ プランを取得します。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
 |**creation_time**|**datetime**|プランがコンパイルされた時刻。|  
 |**last_execution_time**|**datetime**|前回プランの実行が開始された時刻。|  
 |**execution_count**|**bigint**|前回のコンパイル時以降に、プランが実行された回数。|  
@@ -55,7 +58,7 @@ ms.lasthandoff: 01/12/2018
 |**last_worker_time**|**bigint**|プランを前回実行したときに使用された CPU 時間 (マイクロ秒単位)。ただし、精度はミリ秒単位までです。 <sup>1</sup>|  
 |**min_worker_time**|**bigint**|プランの 1 回の実行で使用された最小 CPU 時間 (マイクロ秒単位)。ただし、精度はミリ秒単位までです。 <sup>1</sup>|  
 |**max_worker_time**|**bigint**|プランの 1 回の実行で使用された最大 CPU 時間 (マイクロ秒単位)。ただし、精度はミリ秒単位までです。 <sup>1</sup>|  
-|**トリガー**|**bigint**|コンパイル後にこのプランの実行で行われた物理読み取りの合計数。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
+|**total_physical_reads**|**bigint**|コンパイル後にこのプランの実行で行われた物理読み取りの合計数。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
 |**last_physical_reads**|**bigint**|プランを前回実行したときに行われた物理読み取りの数。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
 |**min_physical_reads**|**bigint**|プランの 1 回の実行で行われた物理読み取りの最小数。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
 |**max_physical_reads**|**bigint**|プランの 1 回の実行で行われた物理読み取りの最大数。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
@@ -75,13 +78,13 @@ ms.lasthandoff: 01/12/2018
 |**last_elapsed_time**|**bigint**|このプランの前回の実行完了までの経過時間 (マイクロ秒単位)。ただし、精度はミリ秒単位までです。|  
 |**min_elapsed_time**|**bigint**|任意のプランの実行完了までの最小経過時間 (マイクロ秒単位)。ただし、精度はミリ秒単位までです。|  
 |**max_elapsed_time**|**bigint**|任意のプランの実行完了までの最大経過時間 (マイクロ秒単位)。ただし、精度はミリ秒単位までです。|  
-|**query_hash**|**Binary (8)**|クエリで計算され、同様のロジックを持つクエリを識別するために使用される、バイナリのハッシュ値です。 クエリ ハッシュを使用して、リテラル値だけが異なるクエリの全体的なリソース使用率を決定できます。|  
-|**query_plan_hash**|**binary (8)**|クエリ実行プランで計算され、同様のクエリ実行プランを識別するために使用される、バイナリのハッシュ値です。 クエリ プラン ハッシュを使用して、同様の実行プランを持つクエリの累積コストを確認できます。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
+|**query_hash**|**Binary(8)**|クエリで計算され、同様のロジックを持つクエリを識別するために使用される、バイナリのハッシュ値です。 クエリ ハッシュを使用して、リテラル値だけが異なるクエリの全体的なリソース使用率を決定できます。|  
+|**query_plan_hash**|**binary(8)**|クエリ実行プランで計算され、同様のクエリ実行プランを識別するために使用される、バイナリのハッシュ値です。 クエリ プラン ハッシュを使用して、同様の実行プランを持つクエリの累積コストを確認できます。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
 |**total_rows**|**bigint**|クエリによって返される行の合計数。 null にすることはできません。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
 |**last_rows**|**bigint**|クエリの前回の実行で返された行数。 null にすることはできません。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
 |**min_rows**|**bigint**|1 つの実行中に、クエリによって返された行の最小数。 null にすることはできません。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
 |**max_rows**|**bigint**|1 つの実行中に、クエリによって返された行の最大数。 null にすることはできません。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
-|**statement_sql_handle**|**varbinary (64)**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> クエリ ストアがオンになっている場合にのみ NULL 以外の値に設定され、その特定のクエリの統計情報を収集します。|  
+|**statement_sql_handle**|**varbinary(64)**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> クエリ ストアがオンになっている場合にのみ NULL 以外の値に設定され、その特定のクエリの統計情報を収集します。|  
 |**statement_context_id**|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> クエリ ストアがオンになっている場合にのみ NULL 以外の値に設定され、その特定のクエリの統計情報を収集します。|  
 |**total_dop**|**bigint**|並列処理の次数の合計の合計このプランは、コンパイルされた後に使用されます。 これは常に、メモリ最適化テーブルのクエリを実行する場合は 0 です。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |**last_dop**|**bigint**|このプランの前回の実行時に並列処理の次数。 これは常に、メモリ最適化テーブルのクエリを実行する場合は 0 です。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
@@ -119,7 +122,7 @@ ms.lasthandoff: 01/12/2018
 |**last_spills**|**bigint**|ページの数には、クエリが実行された最終時刻が書き込まれました。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**min_spills**|**bigint**|このクエリ 1 回の実行中に書き込まれたページの最小数。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**max_spills**|**bigint**|このクエリ 1 回の実行中に書き込まれたページの最大数。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**pdw_node_id**|**int**|この分布はでは、ノードの識別子。<br /><br /> **適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**pdw_node_id**|**int**|この分布はでは、ノードの識別子。<br /><br /> **適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 
 > [!NOTE]
 > <sup>1</sup>ネイティブ コンパイル ストアド プロシージャに対する統計コレクションを有効にすると、ワーカー時間がミリ秒単位で収集します。 クエリを 1 ミリ秒未満で実行した場合、値は 0 になります。  
@@ -175,7 +178,7 @@ ORDER BY qs.execution_count DESC;
   
 ## <a name="see-also"></a>参照  
 [実行関連の動的管理ビューおよび関数 &#40;TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
-[sys.dm_exec_sql_text &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
+[sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
 [sys.dm_exec_query_plan &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 [sys.dm_exec_procedure_stats および #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
 [sys.dm_exec_trigger_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     

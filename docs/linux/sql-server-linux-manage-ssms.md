@@ -1,9 +1,9 @@
 ---
 title: "SSMS を使用して Linux 上の SQL Server を管理する |Microsoft ドキュメント"
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 08/23/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: f7999536135bed5a06d54b2e54e5d965df966c09
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: ae79f5e7a2f526b5ef1d153f333adab5c9a8c8a1
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Linux 上の SQL Server を管理するのに Windows 上の SQL Server Management Studio の使用します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このトピックで紹介[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)と、いくつかの一般的なタスクについて説明します。 SSMS は、Windows アプリケーション、ので Linux 上のリモート SQL Server インスタンスに接続できる Windows コンピューターがある場合に SSMS を使用します。
 
@@ -96,5 +96,5 @@ SQL Server を使用する場合は、常に最新バージョンの SQL Server 
 - [SQL Server Management Studio の使用 [SQL Server]](https://msdn.microsoft.com/en-us/library/ms174173.aspx)
 - [エクスポートし、SSMS でデータベースをインポートします。](sql-server-linux-migrate-ssms.md)
 - [チュートリアル: SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/bb934498.aspx)
-- [チュートリアル: Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)
+- [チュートリアル : Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [サーバーのパフォーマンスと利用状況の監視](../relational-databases/performance/server-performance-and-activity-monitoring.md)

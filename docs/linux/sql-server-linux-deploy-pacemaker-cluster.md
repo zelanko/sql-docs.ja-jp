@@ -3,7 +3,7 @@ title: "SQL Server on Linux のペース クラスターの展開 |Microsoft ド
 description: "このチュートリアルでは、SQL Server on Linux のペース クラスターを展開する方法を示します。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 4a014c0b7eedb96375f027674d9eb2374f38c85e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd9d35a7fa6e8a8a0e826d584a4f78ca2581d9bc
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>SQL Server on Linux のペース クラスターを展開します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このチュートリアルのドキュメントの Linux ペース クラスターを展開に必要なタスク、 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On 可用性グループ (AG) またはフェールオーバー クラスター インスタンス (FCI)。 密に結合された Windows Server とは異なり/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]前に、またはのインストール後、スタック ペース クラスターの作成に加え、Linux 上の可用性グループ (AG) の構成を行うことができます[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]です。 クラスターを構成した後、統合とペース部分では、可用性グループまたは FCI の展開のリソースの構成は行われます。
 > [!IMPORTANT]

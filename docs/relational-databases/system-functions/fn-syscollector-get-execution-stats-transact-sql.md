@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - fn_syscollector_get_execution_stats
 - fn_syscollector_get_execution_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: fn_syscollector_get_execution_stats function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- fn_syscollector_get_execution_stats function
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dbdb0794058c51f43fd760096623ded58aee789
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 28ad2b80a39f778ed5cafdd06b67ceec45da99da
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="fnsyscollectorgetexecutionstats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,11 +65,11 @@ fn_syscollector_get_execution_stats ( log_id )
 |min_duration|**int**|パッケージのデータ フロー コンポーネントに費やされた時間の最小値です (ミリ秒)。|  
 |max_duration|**int**|パッケージのデータ フロー コンポーネントに費やされた時間の最大値です (ミリ秒)。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  SELECT 権限が必要**dc_operator**です。  
   
 ## <a name="see-also"></a>参照  
  [syscollector_execution_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
- [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
+ [データ コレクション](../../relational-databases/data-collection/data-collection.md)  
   
   

@@ -1,9 +1,9 @@
 ---
 title: "エクスポートし、Linux 上のデータベースのインポート |Microsoft ドキュメント"
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.technology: database-engine
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: ea882010f49c19237c7dc7d21a2211a7b0c16e54
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 6daf9f5293e30d5a42439920850b5abfe1ad83a0
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>エクスポートし、SSMS または SqlPackage.exe Windows 上の Linux 上のデータベースのインポート
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このトピックは、使用する方法を示します[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)と[SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx)をエクスポートし、Linux 上の SQL Server 2017 上のデータベースをインポートします。 SSMS と SqlPackage.exe は Windows アプリケーション、Linux 上のリモート SQL Server インスタンスに接続できる Windows マシンがあるときにそのためこの手法を使用します。
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/01/2017
 
 1. 入力して、SSMS を起動**Microsoft SQL Server Management Studio** Windows の検索ボックスで、およびデスクトップ アプリをクリックします。
 
-    ![[SQL Server Management Studio]](./media/sql-server-linux-develop-use-ssms/ssms.png) 
+    ![SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/ssms.png) 
 
 2. オブジェクト エクスプ ローラーで、ソース データベースに接続します。 ソース データベースは、オンプレミスで実行して Microsoft SQL server または Linux、Windows または Docker と Azure SQL Database または Azure SQL Data Warehouse で、クラウド内に指定できます。
 
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/01/2017
 
 1. 入力して、SSMS を起動**Microsoft SQL Server Management Studio** Windows の検索ボックスで、およびデスクトップ アプリをクリックします。
 
-    ![[SQL Server Management Studio]](./media/sql-server-linux-develop-use-ssms/ssms.png) 
+    ![SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/ssms.png) 
 
 2. オブジェクト エクスプ ローラーで、対象サーバーに接続します。 対象サーバーがオンプレミスで実行して Microsoft SQL Server をあるまたはクラウドでは、Linux、Windows または Docker と Azure SQL Database または Azure SQL Data Warehouse にします。
 

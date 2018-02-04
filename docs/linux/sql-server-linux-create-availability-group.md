@@ -3,7 +3,7 @@ title: "作成し、Linux 上の SQL Server の可用性グループの構成 |M
 description: "このチュートリアルでは、作成して、Linux 上の SQL Server の可用性グループを構成する方法を示します。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 53256f0cf5e18d8fb250cb5c67ae092771585de1
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8c055558b2a1e8287272835a0a1c0d2e2dc94f02
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>作成し、Linux 上の SQL Server の可用性グループを構成します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このチュートリアルでは、作成し、可用性グループ (AG) を構成する方法を説明の[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux にします。 異なり[!INCLUDE[sssql15-md](../includes/sssql15-md.md)]以前 Windows では、有効にして Ag 有無にかかわらず、最初に基になるペース クラスターを作成します。 クラスターとの統合が必要な場合は行われません、後で。
 
@@ -622,7 +622,7 @@ sudo systemctl restart mssql-server
  
 2.  リスナーの機能に関連付けられる、AG の IP アドレス リソースを作成します。
 
-    **RHEL および Ubuntu**
+    **RHEL and Ubuntu**
     
     ```bash
     sudo pcs resource create <NameForIPResource> ocf:heartbeat:IPaddr2 ip=<IPAddress> cidr_netmask=<Netmask>
@@ -642,7 +642,7 @@ sudo systemctl restart mssql-server
     
 3.  IP アドレスと、可用性グループ リソースが同じノードで実行されていることを確認してください、コロケーションの制約を構成する必要があります。
 
-    **RHEL および Ubuntu**
+    **RHEL and Ubuntu**
     
     ```bash
     sudo pcs constraint colocation add <NameForIPResource> <NameForAGResource>-master INFINITY with-rsc-role=Master
@@ -660,7 +660,7 @@ sudo systemctl restart mssql-server
 
 4.  オーダリングの制約を可用性グループ リソースがあることを確認して、IP アドレスの前に実行を作成します。 コロケーションの制約には、順序付けの制約がからわかるように、中に、実施します。
 
-    **RHEL および Ubuntu**
+    **RHEL and Ubuntu**
     
     ```bash
     sudo pcs constraint order promote <NameForAGResource>-master then start <NameForIPResource>

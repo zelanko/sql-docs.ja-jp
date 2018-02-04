@@ -15,15 +15,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 2ecd66763b0fbcdff8eb0d776b9c7b7df98e60b0
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 40213ffd43b629e3679cd8d4549aeb147db97f67
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>抽出、変換、および SSIS Linux でのデータを読み込む
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 この記事では、Linux 上の SQL Server Integration Services (SSIS) パッケージを実行する方法について説明します。 SSIS は、複数のソースと形式からデータを抽出することで複雑なデータ統合の問題を解決し、データをクレンジング データ変換および読み込み、複数の送信先にします。 
 
@@ -31,7 +31,7 @@ Linux で実行されている SSIS パッケージは、Windows、オンプレ�
 
 SSIS の機能に関する詳細については、次を参照してください。 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)です。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 最初を Linux コンピューターで SSIS パッケージを実行するには、SQL Server Integration Services をインストールする必要があります。 SSIS は、Linux コンピューターの SQL Server のインストールには含まれません。 インストール手順については、次を参照してください。 [SQL Server Integration Services のインストール](sql-server-linux-setup-ssis.md)です。
 

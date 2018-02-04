@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_repl_schemas
 - sys.dm_repl_schemas_TSQL
 - sys.dm_repl_schemas
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_schemas dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_schemas dynamic management function
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fef5dd298e56cb1560562db1003e255244ca8fd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8e4ed91b38fc7175b6e3eff96f1e65415022834d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmreplschemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,21 +41,21 @@ ms.lasthandoff: 11/17/2017
  
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**artcache_schema_address**|**varbinary (8)**|パブリッシュされたテーブル アーティクルに関する、キャッシュされたスキーマ構造のメモリ内アドレス。|  
+|**artcache_schema_address**|**varbinary(8)**|パブリッシュされたテーブル アーティクルに関する、キャッシュされたスキーマ構造のメモリ内アドレス。|  
 |**tabid**|**bigint**|レプリケートされたテーブルの ID。|  
 |**indexid**|**smallint**|パブリッシュされたテーブルのクラスター化インデックスの ID。|  
 |**idSch**|**bigint**|テーブル スキーマの ID。|  
 |**tabschema**|**nvarchar(510)**|テーブル スキーマの名前。|  
 |**ccTabschema**|**smallint**|テーブル スキーマの文字長。|  
-|**tabname $**|**nvarchar(510)**|パブリッシュされたテーブルの名前。|  
+|**tabname**|**nvarchar(510)**|パブリッシュされたテーブルの名前。|  
 |**ccTabname**|**smallint**|パブリッシュされたテーブル名の文字長。|  
 |**rowsetid_delete**|**bigint**|削除された行の ID。|  
 |**rowsetid_insert**|**bigint**|挿入された行の ID。|  
 |**num_pk_cols**|**int**|主キー列の数。|  
-|**pcitee**|**binary (8000)**|計算列の評価に使用するクエリ式構造へのポインター。|  
+|**pcitee**|**binary(8000)**|計算列の評価に使用するクエリ式構造へのポインター。|  
 |**re_numtextcols**|**int**|レプリケートされたテーブルのバイナリ ラージ オブジェクト列の数。|  
-|**re_schema_lsn_begin**|**binary (8000)**|スキーマ バージョンのログ記録に関する最初のログ シーケンス番号 (LSN)。|  
-|**re_schema_lsn_end**|**binary (8000)**|スキーマ バージョンのログ記録に関する最後の LSN。|  
+|**re_schema_lsn_begin**|**binary(8000)**|スキーマ バージョンのログ記録に関する最初のログ シーケンス番号 (LSN)。|  
+|**re_schema_lsn_end**|**binary(8000)**|スキーマ バージョンのログ記録に関する最後の LSN。|  
 |**re_numcols**|**int**|パブリッシュされた列の数。|  
 |**re_colid**|**int**|パブリッシャーの列識別子。|  
 |**re_awcName**|**nvarchar(510)**|パブリッシュされた列の名前。|  
@@ -70,8 +73,8 @@ ms.lasthandoff: 11/17/2017
 |**re_fAnsiTrim**|**tinyint**|パブリッシュされた列で ANSI 切り捨てが使用されるかどうかを示します。|  
 |**re_computed**|**smallint**|パブリッシュされた列が計算列かどうかを示します。|  
 |**se_rowsetid**|**bigint**|行セットの ID。|  
-|**se_schema_lsn_begin**|**binary (8000)**|スキーマ バージョンのログ記録に関する最初の LSN。|  
-|**se_schema_lsn_end**|**binary (8000)**|スキーマ バージョンのログ記録に関する最後の LSN。|  
+|**se_schema_lsn_begin**|**binary(8000)**|スキーマ バージョンのログ記録に関する最初の LSN。|  
+|**se_schema_lsn_end**|**binary(8000)**|スキーマ バージョンのログ記録に関する最後の LSN。|  
 |**se_numcols**|**int**|列の数。|  
 |**se_colid**|**int**|サブスクライバーでの列の ID。|  
 |**se_maxlen**|**smallint**|列の最大長。|  
@@ -86,7 +89,7 @@ ms.lasthandoff: 11/17/2017
 |**se_computed**|**smallint**|列が計算列かどうかを示します。|  
 |**se_nullBitInLeafRows**|**int**|列の値が NULL かどうかを示します。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  呼び出す、パブリケーション データベースに対する VIEW DATABASE STATE 権限が必要**dm_repl_schemas**です。  
   
 ## <a name="remarks"></a>解説  

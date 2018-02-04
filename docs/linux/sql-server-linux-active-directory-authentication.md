@@ -2,9 +2,9 @@
 title: "SQL Server on Linux での active Directory 認証 |Microsoft ドキュメント"
 description: "このチュートリアルでは、SQL Server on Linux の AAD 認証の構成手順を提供します。"
 author: meet-bhagdev
-ms.date: 10/09/2017
+ms.date: 01/30/2018
 ms.author: meetb
-manager: jhubbard
+manager: craigg
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,17 +13,18 @@ ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
-helpviewer_keywords: Linux, AAD authentication
+helpviewer_keywords:
+- Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: d412eec0c27fac301f2ac6d319666f40004da409
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7de515aa08ec73ff6c7b90e9a630e59ca6f71252
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>SQL Server on Linux での active Directory 認証
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このチュートリアルは、構成する方法を説明します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Active Directory (AD) の認証とも呼ばれる統合認証をサポートする Linux にします。 AD の認証により、クライアントへの認証に Windows または Linux ではドメインに参加している[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ドメイン資格情報と、Kerberos プロトコルを使用します。
 
@@ -48,7 +49,7 @@ AD 認証経由では次の利点があります[!INCLUDE[ssNoVersion](../includ
 AD の認証を構成する前にする必要があります。
 
 * ネットワーク上の AD ドメイン コントローラ (Windows) の設定します。  
-* [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストール
+* Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -56,7 +57,7 @@ AD の認証を構成する前にする必要があります。
 > [!IMPORTANT]
 > 制限事項:
 > - この時点では、データベース ミラーリング エンドポイントでサポートされる唯一の認証方法は、証明書です。 WINDOWS 認証方法は、将来のリリースで有効にするされます。
-> - Centrify、Powerbroker いる Vintela などのサード パーティ AD ツールはサポートされていません 
+> - Centrify、Powerbroker などのサード パーティ製 AD ツールおよびいる Vintela はサポートされていません 
 
 ## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>参加[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AD ドメインにホスト
 
@@ -96,7 +97,7 @@ AD の認証を構成する前にする必要があります。
       ```
 
       > [!NOTE]
-      > 別のマシンのネットワーク インターフェイス (eth0) が異なる場合があります。 使用しているどちらかを調べるには、ifconfig を実行し、IP アドレスと送信および受信したバイト数を持つインターフェイスをコピーします。
+      > さまざまなマシンのネットワーク インターフェイス (eth0) が異なる場合があります。 使用しているどちらかを調べるには、ifconfig を実行し、IP アドレスと送信および受信したバイト数を持つインターフェイスをコピーします。
 
       このファイルを編集した後、ネットワーク サービスを再起動します。
 
@@ -104,7 +105,7 @@ AD の認証を構成する前にする必要があります。
       sudo ifdown eth0 && sudo ifup eth0
       ```
 
-      今すぐことを確認、`/etc/resolv.conf`ファイルには、次のような行が含まれています。  
+      今すぐことを確認、`/etc/resolv.conf`ファイルには、次の例のような行が含まれています。  
 
       ```Code
       nameserver **<AD domain controller IP address>**
@@ -126,7 +127,7 @@ AD の認証を構成する前にする必要があります。
      sudo systemctl restart network
      ```
 
-     今すぐことを確認、`/etc/resolv.conf`ファイルには、次のような行が含まれています。  
+     今すぐことを確認、`/etc/resolv.conf`ファイルには、次の例のような行が含まれています。  
 
      ```Code
      nameserver **<AD domain controller IP address>**
@@ -134,9 +135,9 @@ AD の認証を構成する前にする必要があります。
 
 1. ドメインに参加します。
 
-   DNS が正しく構成されていることを確認して 1 回、次のコマンドを実行して、ドメインに参加します。 新しいマシンをドメインに参加させる AD のための十分な特権を持つ AD アカウントを使用して認証する必要があります。
+   DNS が正しく構成されていることを確認した後、次のコマンドを実行して、ドメインに参加します。 新しいマシンをドメインに参加させる AD のための十分な特権を持つ AD アカウントを使用して認証する必要があります。
 
-   具体的には、このコマンドは、新しいコンピューター アカウントの ad を作成し、 `/etc/krb5.keytab` keytab ファイルをホストしでドメインを構成する`/etc/sssd/sssd.conf`:
+   具体的には、このコマンドは AD での新しいコンピューター アカウントを作成、作成、 `/etc/krb5.keytab` keytab ファイルをホストしでドメインを構成する`/etc/sssd/sssd.conf`:
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
@@ -147,9 +148,9 @@ AD の認証を構成する前にする必要があります。
    > [!NOTE]
    > エラーが表示するかどうかは、「必要なパッケージがインストールされていない」し、実行する前に、Linux ディストリビューションのパッケージ マネージャーを使用してそれらのパッケージをインストールする必要があります、`realm join`もう一度コマンドします。
    >
-   > 「アクセス許可がありません、ドメインに参加する」、エラーが発生する場合は、Linux コンピューターをドメインに参加させるための十分なアクセス許可がある、ドメイン管理者に確認する必要があります。
+   > 「アクセス許可がありません、ドメインに参加する」、エラーが発生する場合は、Linux マシンをドメインに参加させるための十分なアクセス許可がある、ドメイン管理者に確認する必要があります。
    
-   > SQL Server は、ユーザー アカウントとグループをセキュリティ識別子 (SID) にマップするため、SSSD と NSS を使用します。 SSSD 構成され、AD ログインを正常に作成する SQL Server の順序で実行されている必要があります。 Realmd は通常、この処理をドメインに参加の一環として自動的が、場合によってはこれとは別に実行する必要があります。
+   > SQL Server は、ユーザー アカウントとグループをセキュリティ識別子 (SID) にマップするため、SSSD と NSS を使用します。 SSSD 構成され、AD ログインを正常に作成する SQL Server の順序で実行されている必要があります。 Realmd は、ドメインへの参加の一部として自動的にこれは通常が、場合によってはこれを行うとは別にします。
    >
    > 構成するには、以下のチェック_アウト[SSSD 手動で](https://access.redhat.com/articles/3023951)、および[SSSD を操作する NSS を構成します。](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
@@ -181,7 +182,7 @@ AD の認証を構成する前にする必要があります。
 ## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>AD ユーザーを作成する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]SPN を設定し、
 
   > [!NOTE]
-  > 次の手順では、使用、[完全修飾ドメイン名](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)です。 表示されている場合**Azure**、する必要が**[作成](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**続行する前にします。
+  > 次の手順では、使用、[完全修飾ドメイン名](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)です。 表示されている場合**Azure**、する必要があります**[作成](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**続行する前にします。
 
 1. 、ドメイン コント ローラーで実行、 [New-aduser](https://technet.microsoft.com/library/ee617253.aspx)パスワードを無期限にすると、新しい AD ユーザーを作成する PowerShell コマンド。 この例で、アカウント"mssql"は名前が、アカウント名には、どのようなを指定できます。 アカウントの新しいパスワードを入力が求められます。
 
@@ -203,13 +204,13 @@ AD の認証を構成する前にする必要があります。
    > [!NOTE]
    > 「十分なアクセス権、」、エラーが発生する場合は、このアカウントの SPN を設定するための十分なアクセス許可がある、ドメイン管理者に確認する必要があります。
    >
-   > 後で、TCP ポートを変更する場合は、新しいポート番号を持つ setspn コマンドを再度実行する必要があります。 SQL Server サービス keytab に、次のセクションの手順に従って、新しい SPN を追加する必要があります。
+   > 後で、TCP ポートを変更する場合は、新しいポート番号、setspn コマンドを再度実行する必要があります。 また、次のセクションの手順に従って、SQL Server サービス keytab に新しい SPN を追加する必要があります。
 
 3. 詳細については、「 [Kerberos 接続用のサービス プリンシパル名の登録](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)」を参照してください。
 
 ## <a name="configure-includessnoversionincludesssnoversion-mdmd-service-keytab"></a>構成[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]サービス keytab
 
-1. 前の手順で作成した AD アカウントのキーのバージョン番号 (kvno) を確認します。 通常、2 もはアカウントのパスワードを複数回変更した場合、別の整数がある可能性があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ホスト マシンを次を実行します。
+1. 前の手順で作成した AD アカウントのキーのバージョン番号 (kvno) を確認します。 通常、2 が、アカウントのパスワードを複数回変更した場合、別の整数がある可能性があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ホスト マシンを次を実行します。
 
    ```bash
    kinit user@CONTOSO.COM
@@ -294,7 +295,7 @@ AD の認証を構成する前にする必要があります。
   
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルではお方法を全体についセットアップ Active Directory の認証と SQL Server on Linux です。 方法を学習します。
+このチュートリアルではとおし、SQL Server on Linux での Active Directory 認証を設定する方法です。 方法を学習します。
 > [!div class="checklist"]
 > * 参加[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AD ドメインにホスト
 > * AD ユーザーを作成する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]SPN を設定し、

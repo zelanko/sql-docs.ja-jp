@@ -3,7 +3,7 @@ title: "Always On 可用性グループの SQL Server on Linux |Microsoft ドキ
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: 3c708d4e06f32515b96b22099990007d58db20f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d7f9dec114fd17025081c4a139537b11dd4fde45
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux 上の可用性グループ
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Always On 可用性グループ (Ag) の下にある Linux ベースの特性を説明[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]インストールします。 Linux と Windows Server フェールオーバー クラスター (WSFC) の違いについても説明、Ag のベースします。 参照してください、 [Windows ベースのドキュメント](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)Ag の基本の Windows および、WSFC を除く Linux で作業と同じにします。
 

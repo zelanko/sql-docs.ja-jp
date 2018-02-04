@@ -3,7 +3,7 @@ title: "Docker で SQL Server データベースをリストア |Microsoft ド�
 description: "このチュートリアルには表示は、新しい Linux Docker コンテナーでの SQL Server データベースのバックアップを復元する方法です。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 35a8e5ef7b08530b54d751636c122c6455971faf
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 4b336a3800b9ccd30196f61fcd971b5fbcc0127b
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker コンテナーでの SQL Server データベースを復元します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このチュートリアルでは、移動して、Docker で実行されている SQL Server 2017 Linux コンテナー イメージに SQL Server のバックアップ ファイルを復元する方法を示します。
 

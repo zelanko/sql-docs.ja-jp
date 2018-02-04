@@ -8,27 +8,29 @@ ms.reviewer:
 ms.service: 
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.index_resumable_operations_TSQL
 - sys.indexes_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.indexes
 - sys.index_resumable_operations
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb2d574822922598524458e9e5a5fe45638a178e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 53b6aad214f3d1760bb03ff340e5a5dab30c1067
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -44,14 +46,14 @@ ms.lasthandoff: 11/17/2017
 |**last_max_dop**|**smallint**|最後の使用の MAX_DOP (既定値 = 0)|
 |**partition_number**|**int**|所有しているインデックスまたはヒープ内のパーティション番号。 非パーティション テーブルとパーティション インデックスや場合、すべてのパーティションはこの列の値を再構築は NULL をしています。|
 |**状態**|**tinyint**|再開可能なインデックスの動作状態:<br /><br />0 = 実行中<br /><br />1 = 一時停止|
-|**state_desc**|**nvarchar (60)**|再開可能なインデックス (実行中または一時停止) の操作状態の説明|  
+|**state_desc**|**nvarchar(60)**|再開可能なインデックス (実行中または一時停止) の操作状態の説明|  
 |**start_time**|**datetime**|インデックス操作の開始時刻が null を許容しない)|
 |**last_pause_time**|**datatime**| インデックス操作 (null 許容の) の最後の一時停止にします。 操作が実行されているとしない一時停止した場合は NULL です。|
 |**total_execution_time**|**int**|開始時間 (分) (null を許容しません) からの実行時間の合計|
 |**percent_complete**|**real**|% (Null を許容しないインデックス操作の進行状況の完了します。|
 |**page_count**|**bigint**|マッピング インデックス (null を許容しないと、新しいインデックス構築操作によって割り当てられているインデックス ページの合計数。 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
    
 ## <a name="example"></a>例  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_repl_articles
 - dm_repl_articles_TSQL
 - sys.dm_repl_articles
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_articles dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a28b7a4e6b49427fff970bbc0a793f2fcc30d6dd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 99ec6ab0d4feb697092002fb0c7354625dd9da83
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +40,10 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**artcache_db_address**|**varbinary (8)**|パブリケーション データベースに関する、キャッシュされたデータベース構造のメモリ内アドレス。|  
-|**artcache_table_address**|**varbinary (8)**|パブリッシュされたテーブル アーティクルに関する、キャッシュされたテーブル構造のメモリ内アドレス。|  
-|**artcache_schema_address**|**varbinary (8)**|パブリッシュされたテーブル アーティクルに関する、キャッシュされたアーティクル スキーマ構造のメモリ内アドレス。|  
-|**artcache_article_address**|**varbinary (8)**|パブリッシュされたテーブル アーティクルに関する、キャッシュされたアーティクル構造のメモリ内アドレス。|  
+|**artcache_db_address**|**varbinary(8)**|パブリケーション データベースに関する、キャッシュされたデータベース構造のメモリ内アドレス。|  
+|**artcache_table_address**|**varbinary(8)**|パブリッシュされたテーブル アーティクルに関する、キャッシュされたテーブル構造のメモリ内アドレス。|  
+|**artcache_schema_address**|**varbinary(8)**|パブリッシュされたテーブル アーティクルに関する、キャッシュされたアーティクル スキーマ構造のメモリ内アドレス。|  
+|**artcache_article_address**|**varbinary(8)**|パブリッシュされたテーブル アーティクルに関する、キャッシュされたアーティクル構造のメモリ内アドレス。|  
 |**artid**|**bigint**|このテーブル内にある各エントリの一意識別子。|  
 |**artfilter**|**bigint**|アーティクルを行方向へフィルター選択する場合に使用されるストアド プロシージャの ID。|  
 |**artobjid**|**bigint**|パブリッシュされたオブジェクトの ID。|  
@@ -50,15 +53,15 @@ ms.lasthandoff: 11/17/2017
 |**wszArtdesttable**|**nvarchar(514)**|パブリッシュ先での、パブリッシュされたオブジェクトの名前。|  
 |**wszArtdesttableowner**|**nvarchar(514)**|パブリッシュ先での、パブリッシュされたオブジェクトの所有者。|  
 |**wszArtinscmd**|**nvarchar(510)**|挿入に使用されるコマンドまたはストアド プロシージャ。|  
-|**cmdTypeIns**|**int**|挿入ストアド プロシージャの呼び出し構文。次のいずれかになります。<br /><br /> **1**呼び出しを =<br /><br /> **2** = SQL<br /><br /> **3** = なし<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeIns**|**int**|挿入ストアド プロシージャの呼び出し構文。次のいずれかになります。<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = なし<br /><br /> **7** = UNKNOWN|  
 |**wszArtdelcmd**|**nvarchar(510)**|削除に使用されるコマンドまたはストアド プロシージャ。|  
-|**cmdTypeDel**|**int**|削除ストアド プロシージャの呼び出し構文。次のいずれかになります。<br /><br /> **0** XCALL を =<br /><br /> **1**呼び出しを =<br /><br /> **2** = SQL<br /><br /> **3** = なし<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeDel**|**int**|削除ストアド プロシージャの呼び出し構文。次のいずれかになります。<br /><br /> **0** XCALL を =<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = なし<br /><br /> **7** = UNKNOWN|  
 |**wszArtupdcmd**|**nvarchar(510)**|更新に使用されるコマンドまたはストアド プロシージャ。|  
-|**cmdTypeUpd**|**int**|更新ストアド プロシージャの呼び出し構文。次のいずれかになります。<br /><br /> **0** XCALL を =<br /><br /> **1**呼び出しを =<br /><br /> **2** = SQL<br /><br /> **3** = なし<br /><br /> **4** MCALL を =<br /><br /> **5** VCALL を =<br /><br /> **6** SCALL を =<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeUpd**|**int**|更新ストアド プロシージャの呼び出し構文。次のいずれかになります。<br /><br /> **0** XCALL を =<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = なし<br /><br /> **4** MCALL を =<br /><br /> **5** = VCALL<br /><br /> **6** SCALL を =<br /><br /> **7** = UNKNOWN|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|部分更新に使用されるコマンドまたはストアド プロシージャ。|  
 |**cmdTypePartialUpd**|**int**|部分更新ストアド プロシージャの呼び出し構文。次のいずれかになります。<br /><br /> **2** = SQL|  
 |**numcol**|**int**|列方向にフィルター選択されたアーティクルのパーティション内の列数。|  
-|**artcmdtype**|**tinyint**|現在レプリケートされているコマンドの種類。次のいずれかになります。<br /><br /> **1**挿入を =<br /><br /> **2** = DELETE<br /><br /> **3**更新プログラムを =<br /><br /> **4** UPDATETEXT を =<br /><br /> **5** = なし<br /><br /> **6** = 内部使用のみ<br /><br /> **7** = 内部使用のみ<br /><br /> **8** = 部分的な更新|  
+|**artcmdtype**|**tinyint**|現在レプリケートされているコマンドの種類。次のいずれかになります。<br /><br /> **1**挿入を =<br /><br /> **2** = DELETE<br /><br /> **3** = UPDATE<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = なし<br /><br /> **6** = 内部使用のみ<br /><br /> **7** = 内部使用のみ<br /><br /> **8** = 部分的な更新|  
 |**artgeninscmd**|**nvarchar(510)**|アーティクルに含まれる列に基づく INSERT コマンド テンプレート。|  
 |**artgendelcmd**|**nvarchar(510)**|DELETE コマンド テンプレート。呼び出し構文が使用されているかどうかに基づいて、アーティクル内にある主キーまたは列が含まれます。|  
 |**artgenupdcmd**|**nvarchar(510)**|UPDATE コマンド テンプレート。呼び出し構文が使用されているかどうかに基づいて、主キー、更新された列、または完全な列リストが含まれます。|  
@@ -70,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 |**fPubAllowUpdate**|**tinyint**|パブリケーションがサブスクリプションの更新を許可するかどうかを示します。|  
 |**intPublicationOptions**|**bigint**|ビットごとのオプションの値が、追加の発行オプションを指定するビットマップ。<br /><br /> **0x1** - ピア ツー ピア レプリケーションに対して有効です。<br /><br /> **0x2** -ローカル変更のみをパブリッシュします。<br /><br /> **0x4**の SQL Server 以外のサブスクライバーに対応します。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  呼び出す、パブリケーション データベースに対する VIEW DATABASE STATE 権限が必要**dm_repl_articles**です。  
   
 ## <a name="remarks"></a>解説  

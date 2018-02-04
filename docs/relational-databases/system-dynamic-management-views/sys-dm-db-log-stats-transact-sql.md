@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_log_stats
 - sys.dm_db_log_stats_TSQL
 - dm_db_log_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_log_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_log_stats dynamic management function
 ms.assetid: 
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa7b169b3ff6887616346a8324854ab10aceab07
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 281e3c2c74361698ddf67a4e9a607c559bd74ccb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (TRANSACT-SQL)   
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="arguments"></a>引数  
 
-*database_id* |NULL |**既定**
+*database_id* | NULL | **DEFAULT**
 
 データベースの ID です。 `database_id`is `int`. 有効な入力値は、データベースの ID 番号`NULL`、または`DEFAULT`です。 既定値は `NULL` です。 `NULL`および`DEFAULT`は現在のデータベースのコンテキストで対応する値。  
 組み込み関数は、 [DB_ID](../../t-sql/functions/db-id-transact-sql.md)を指定できます。 使用する場合`DB_ID`データベース名を指定せず、現在のデータベースの互換性レベルを 90 以上でなければなりません。
@@ -56,7 +59,7 @@ ms.lasthandoff: 01/08/2018
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |データベース ID |  
-|recovery_model |**nvarchar (60)**   |   データベースの復旧モデルです。 有効な値は次のとおりです。 <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
+|recovery_model |**nvarchar(60)**   |   データベースの復旧モデルです。 有効な値は次のとおりです。 <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
 |log_min_lsn    |**nvarchar(24)**   |   現在の開始[ログ シーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)トランザクション ログにします。|  
 |log_end_lsn    |**nvarchar(24)**   |   [ログ シーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)のトランザクション ログの最後のログ レコード。|  
 |current_vlf_sequence_number    |**bigint** |   現在[仮想ログ ファイル (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)実行時にシーケンス番号。|  
@@ -65,7 +68,7 @@ ms.lasthandoff: 01/08/2018
 |total_log_size_mb  |**float**  |   トランザクション ログ サイズの合計 (MB)。 |  
 |active_vlf_count   |**bigint** |   アクティブな数の合計[仮想ログ ファイル (Vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)トランザクション ログにします。|  
 |active_log_size_mb |**float**  |   アクティブなトランザクション ログ サイズの合計 mb 単位で。|  
-|log_truncation_holdup_reason   |**nvarchar (60)**   |   ログ切り捨てホールド アップ理由です。 値と同じ`log_reuse_wait_desc`の列`sys.databases`です。  (詳細なこれらの値の説明を参照してください。[トランザクション ログ](../../relational-databases/logs/the-transaction-log-sql-server.md))。 <br />有効な値は次のとおりです。 <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />レプリケーション<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />その他の一時的なもの |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   ログ切り捨てホールド アップ理由です。 値と同じ`log_reuse_wait_desc`の列`sys.databases`です。  (詳細なこれらの値の説明を参照してください。[トランザクション ログ](../../relational-databases/logs/the-transaction-log-sql-server.md))。 <br />有効な値は次のとおりです。 <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />レプリケーション<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />その他の一時的なもの |  
 |log_backup_time    |**datetime**   |   最後のトランザクション ログ バックアップされた時刻。|   
 |log_backup_lsn |**nvarchar(24)**   |   最後のトランザクション ログ バックアップ[ログ シーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)です。|   
 |log_since_last_log_backup_mb   |**float**  |   ログのサイズを mb 単位で最後のトランザクション ログ バックアップ以降[ログ シーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)です。|  
@@ -76,7 +79,7 @@ ms.lasthandoff: 01/08/2018
 |recovery_vlf_count |**bigint** |   合計数[仮想ログ ファイル (Vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)を回復する場合はフェールオーバーやサーバーの再起動が発生しました。 |  
 
 
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
 必要があります、`VIEW DATABASE STATE`データベースの権限です。   
   
 ## <a name="examples"></a>使用例  
@@ -102,7 +105,7 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id);
 
 ## <a name="see-also"></a>参照  
 [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[データベース関連の動的管理ビュー & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[データベース関連の動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
   

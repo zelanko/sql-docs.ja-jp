@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_procedure_stats_TSQL
 - dm_exec_procedure_stats
 - sys.dm_exec_procedure_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_procedure_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_procedure_stats dynamic management view
 ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f8e20e1ebf036e61585f2a690452354de2ba3f71
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: a1c2ff19bc5054a0f0d6ba6b9a52a95e5dc9c37e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,9 +51,9 @@ ms.lasthandoff: 01/12/2018
 |**database_id**|**int**|ストアド プロシージャが存在するデータベースの ID。|  
 |**object_id**|**int**|ストアド プロシージャのオブジェクト ID 番号。|  
 |**type**|**char(2)**|次のいずれかのオブジェクトの種類。<br /><br /> P = SQL ストアド プロシージャ<br /><br /> PC = アセンブリ (CLR) ストアド プロシージャ<br /><br /> X = 拡張ストアド プロシージャ|  
-|**type_desc**|**nvarchar (60)**|オブジェクトの種類の説明です。<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
-|**sql_handle**|**varbinary (64)**|これは、クエリと関連付けるために使用できる**sys.dm_exec_query_stats**するは、このストアド プロシージャ内から実行されました。|  
-|**plan_handle**|**varbinary (64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値で使用することがあります、 **sys.dm_exec_cached_plans**動的管理ビュー。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
+|**type_desc**|**nvarchar(60)**|オブジェクトの種類の説明です。<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
+|**sql_handle**|**varbinary(64)**|これは、クエリと関連付けるために使用できる**sys.dm_exec_query_stats**するは、このストアド プロシージャ内から実行されました。|  
+|**plan_handle**|**varbinary(64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値で使用することがあります、 **sys.dm_exec_cached_plans**動的管理ビュー。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
 |**cached_time**|**datetime**|ストアド プロシージャがキャッシュに追加された時刻。|  
 |**last_execution_time**|**datetime**|前回ストアド プロシージャが実行された時刻。|  
 |**execution_count**|**bigint**|以降に、ストアド プロシージャが実行された回数を最後にコンパイルします。|  
@@ -58,7 +61,7 @@ ms.lasthandoff: 01/12/2018
 |**last_worker_time**|**bigint**|ストアド プロシージャを前回実行したときに使用された CPU 時間 (マイクロ秒単位)。 <sup>1</sup>|  
 |**min_worker_time**|**bigint**|最小の CPU 時間 (マイクロ秒)、このストアド プロシージャで使用された 1 回の実行。 <sup>1</sup>|  
 |**max_worker_time**|**bigint**|最大 CPU 時間、マイクロ秒単位でこのストアド プロシージャで使用された 1 回の実行。 <sup>1</sup>|  
-|**トリガー**|**bigint**|コンパイルされた後に、このストアド プロシージャの実行によって実行される物理読み取りの合計数。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
+|**total_physical_reads**|**bigint**|コンパイルされた後に、このストアド プロシージャの実行によって実行される物理読み取りの合計数。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
 |**last_physical_reads**|**bigint**|物理読み取りの数は、ストアド プロシージャが実行された最終時刻を実行します。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
 |**min_physical_reads**|**bigint**|このストアド プロシージャが 1 回の実行で行われた物理読み取りの最小数。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
 |**max_physical_reads**|**bigint**|このストアド プロシージャが 1 回の実行で行われた物理読み取りの最大数。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
@@ -78,7 +81,7 @@ ms.lasthandoff: 01/12/2018
 |**last_spills**|**bigint**|ページの数には、ストアド プロシージャが実行された最終時刻が書き込まれました。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**min_spills**|**bigint**|このストアド プロシージャが 1 回の実行中に書き込まれたことをページの最小数。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**max_spills**|**bigint**|このストアド プロシージャが 1 回の実行中に書き込まれたことをページの最大数。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**pdw_node_id**|**int**|この分布はでは、ノードの識別子。<br /><br />**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**pdw_node_id**|**int**|この分布はでは、ノードの識別子。<br /><br />**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
  <sup>1</sup>ネイティブ コンパイル ストアド プロシージャに対する統計コレクションを有効にすると、ワーカー時間がミリ秒単位で収集します。 クエリが 1 ミリ秒未満で実行された場合は、値は 0 になります。  
   
@@ -103,7 +106,7 @@ ORDER BY [total_worker_time] DESC;
   
 ## <a name="see-also"></a>参照  
 [実行関連の動的管理ビューおよび関数 &#40;TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
-[sys.dm_exec_sql_text &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+[sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
 [sys.dm_exec_query_plan &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 [sys.dm_exec_query_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)    
 [sys.dm_exec_trigger_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)    

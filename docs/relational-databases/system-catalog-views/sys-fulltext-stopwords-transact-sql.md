@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - fulltext_stopwords
 - sys.fulltext_stopwords
 - sys.fulltext_stopwords_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - stoplists [full-text search]
 - full-text search [SQL Server], stopwords
 - sys.fulltext_stopwords catalog view
 - stopwords [full-text search]
 ms.assetid: 79787bb7-d729-448e-b56a-0a467bbb304f
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90bc334c7b42c40e7b5d31e6cdd67458775e2f1a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c8f000dcca384ae92dcb580267a6f67021adbd59
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfulltextstopwords-transact-sql"></a>sys.fulltext_stopwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +44,11 @@ ms.lasthandoff: 11/17/2017
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|**stopword** が属しているストップリストの ID です。 この ID はデータベース内で一意です。|  
-|**ストップ ワード**|**nvarchar(64)**|ストップワードの照合で考慮される用語です。|  
-|**言語**|**sysname**|内の別名のいずれかの値は、 [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)ロケール識別子の値に対応する (**LCID**)、または LCID の数値の文字列表現。|  
+|**stopword**|**nvarchar(64)**|ストップワードの照合で考慮される用語です。|  
+|**language**|**sysname**|内の別名のいずれかの値は、 [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)ロケール識別子の値に対応する (**LCID**)、または LCID の数値の文字列表現。|  
 |**language_id**|**int**|単語区切りに使用される LCID です。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>参照  

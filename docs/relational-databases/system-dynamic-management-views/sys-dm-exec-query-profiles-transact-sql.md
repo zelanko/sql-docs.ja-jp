@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_query_profiles_TSQL
 - dm_exec_query_profiles
 - sys.dm_exec_query_profiles
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_profiles dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_profiles dynamic management view
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13b3c49133a4e1c26ab879fb0e51e9832de62e97
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c9a7656b78478c321e277ae16577f9bce178aeca
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,12 +45,12 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|このクエリが実行されるセッションを識別します。 dm_exec_sessions.session_id を参照します。|  
 |request_id|**int**|対象の要求を識別します。 dm_exec_sessions.request_id を参照します。|  
-|sql_handle|**varbinary (64)**|対象のクエリを識別します。 dm_exec_query_stats.sql_handle を参照します。|  
-|plan_handle|**varbinary (64)**|対象のクエリを識別します。dm_exec_query_stats.plan_handle を参照します。|  
+|sql_handle|**varbinary(64)**|対象のクエリを識別します。 dm_exec_query_stats.sql_handle を参照します。|  
+|plan_handle|**varbinary(64)**|対象のクエリを識別します。dm_exec_query_stats.plan_handle を参照します。|  
 |physical_operator_name|**nvarchar (256)**|物理演算子の名前。|  
 |node_id|**int**|クエリ ツリー内の演算子ノードを識別します。|  
 |thread_id|**int**|同じクエリ演算子ノードに属するスレッド (並列クエリ用) を区別します。|  
-|task_address|**varbinary (8)**|このスレッドが使用している SQLOS タスクを識別します。 dm_os_tasks.task_address を参照します。|  
+|task_address|**varbinary(8)**|このスレッドが使用している SQLOS タスクを識別します。 dm_os_tasks.task_address を参照します。|  
 |row_count|**bigint**|これまでに演算子によって返された行の数。|  
 |rewind_count|**bigint**|これまでの巻き戻しの数。|  
 |rebind_count|**bigint**|これまでの再バインドの数。|  
@@ -93,7 +96,7 @@ ms.lasthandoff: 11/17/2017
 
  STATISTICS XML ON および SET STATISTICS PROFILE ON プロファイリング インフラストラクチャ従来のクエリ実行の統計を常に使用を設定します。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 階層には、データベースの VIEW DATABASE STATE 権限が必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard および Basic 階層が必要です、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理者アカウントです。  

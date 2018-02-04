@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.xml_schema_wildcards_TSQL
 - xml_schema_wildcards
 - xml_schema_wildcards_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.xml_schema_wildcards catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.xml_schema_wildcards catalog view
 ms.assetid: 7cedfe9a-e99e-4777-8a28-98674b6e5cff
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4c30d9d2cf3c97994d37e831b708367556b6d48
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 92e5cf89b44d849bd5b6223c86245a2faa026b1a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysxmlschemawildcards-transact-sql"></a>sys.xml_schema_wildcards (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +41,11 @@ ms.lasthandoff: 11/17/2017
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**\<継承された列 >**||列を継承[sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)です。|  
-|**process_content**|**char (1)**|コンテンツの処理方法。<br /><br /> S = 厳密な検証 (必ず検証される)<br /><br /> L = 緩やかな検証 (可能であれば検証される)<br /><br /> P = スキップ検証|  
-|**process_content_desc**|**nvarchar (60)**|コンテンツの処理方法の説明。<br /><br /> **STRICT_VALIDATION**<br /><br /> **LAX_VALIDATION**<br /><br /> **SKIP_VALIDATION**|  
+|**process_content**|**char(1)**|コンテンツの処理方法。<br /><br /> S = 厳密な検証 (必ず検証される)<br /><br /> L = 緩やかな検証 (可能であれば検証される)<br /><br /> P = スキップ検証|  
+|**process_content_desc**|**nvarchar(60)**|コンテンツの処理方法の説明。<br /><br /> **STRICT_VALIDATION**<br /><br /> **LAX_VALIDATION**<br /><br /> **SKIP_VALIDATION**|  
 |**disallow_namespaces**|**bit**|0 = に列挙された名前空間[sys.xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md)許可されている唯一のものです。<br /><br /> 1 = 許可されていない名前空間だけが列挙されています。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

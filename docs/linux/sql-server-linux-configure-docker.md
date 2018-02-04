@@ -3,7 +3,7 @@ title: "Docker では、SQL Server 2017 の構成オプション |Microsoft ド�
 description: "使用して、Docker でコンテナー イメージの SQL Server 2017 やり取りのさまざまな方法について説明します。 これには、データ永続化ファイルのコピー、トラブルシューティングにはが含まれます。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: 416a05397580e6b9c609307f8b25c8014099f999
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 30ac0b58a439af47504c94669af581f5e81fd17c
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Docker でコンテナー イメージの SQL Server 2017 を構成します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 構成および使用する方法を説明する、 [mssql サーバー linux コンテナー イメージ](https://hub.docker.com/r/microsoft/mssql-server-linux/)docker です。 このイメージは、Ubuntu 16.04 に基づいて Linux で実行されている SQL Server で構成されます。 Mac/Windows 用の Docker エンジン 1.8 + Linux または Docker を使用できます。
 
@@ -351,7 +351,7 @@ Windows では、PowerShell、または、管理者としてコマンド プロ�
 
 実行する、SQL Server のコンテナーが失敗した場合は、次のテストを試してください。
 
-- など、エラーが発生した場合**' をネットワーク ブリッジ エンドポイント CONTAINER_NAME を作成できませんでした。プロキシを開始中にエラー: リッスン tcp 0.0.0.0:1433 バインド: 既に使用されているアドレスです '。**、コンテナーのポート 1433 を既に使用されているポートにマップしようとしています。 これは、ホスト コンピューターに SQL Server をローカルで実行している場合に発生することができます。 また、2 つの SQL Server のコンテナーを開始して、これらの両方を同じホスト ポートにマップしようとした場合も発生することができます。 この場合を使用して、`-p`コンテナー ポート 1433 を別のホストのポートにマップするパラメーターです。 例 : 
+- など、エラーが発生した場合**' をネットワーク ブリッジ エンドポイント CONTAINER_NAME を作成できませんでした。プロキシを開始中にエラー: リッスン tcp 0.0.0.0:1433 バインド: 既に使用されているアドレスです '。**、コンテナーのポート 1433 を既に使用されているポートにマップしようとしています。 これは、ホスト コンピューターに SQL Server をローカルで実行している場合に発生することができます。 また、2 つの SQL Server のコンテナーを開始して、これらの両方を同じホスト ポートにマップしようとした場合も発生することができます。 この場合を使用して、`-p`コンテナー ポート 1433 を別のホストのポートにマップするパラメーターです。 例: 
 
     ```bash
     docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux:2017-latest`.

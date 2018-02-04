@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_os_dispatcher_pools
 - sys.dm_os_dispatcher_pools
 - sys.dm_os_dispatcher_pools_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - extended events [SQL Server], views
 - sys.dm_os_dispatcher_pools DMV
 ms.assetid: b9edbc83-c6bc-4753-9bb5-a454cfe7d6bf
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 479e97ce3202d33fdf125f0c5978e2c1899ee0cd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7a6d77e725af44db9c7a06df2bfe115511748a9b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosdispatcherpools-transact-sql"></a>sys.dm_os_dispatcher_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|dispatcher_pool_address|**varbinary (8)**|ディスパッチャー プールのアドレス。 dispatcher_pool_address は一意です。 NULL 値は許可されません。|  
+|dispatcher_pool_address|**varbinary(8)**|ディスパッチャー プールのアドレス。 dispatcher_pool_address は一意です。 NULL 値は許可されません。|  
 |型|**nvarchar (256)**|ディスパッチャー プールの種類。 NULL 値は許可されません。 ディスパッチャー プールには、次の 2 種類があります。<br /><br /> DISP_POOL_XE_ENGINE<br /><br /> DISP_POOL_XE_SESSION<br /><br /> 完全な一覧について、DMV のクエリ|  
 |name|**nvarchar (256)**|ディスパッチャー プールの名前。 NULL 値は許可されません。|  
 |dispatcher_count|**int**|アクティブなディスパッチャー スレッドの数。 NULL 値は許可されません。|  
@@ -50,9 +52,9 @@ ms.lasthandoff: 11/17/2017
 |dispatcher_timeout_ms|**int**|ディスパッチャーが終了する前に新しい処理を待つ時間 (ミリ秒単位)。 NULL 値は許可されません。|  
 |dispatcher_waiting_count|**int**|アイドル状態のディスパッチャー スレッドの数。 NULL 値は許可されません。|  
 |queue_length|**int**|ディスパッチャー プールによる処理を待っている作業項目の数。 NULL 値は許可されません。|  
-|pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 階層が必要です、`VIEW DATABASE STATE`データベースの権限です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
   

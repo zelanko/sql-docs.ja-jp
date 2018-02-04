@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,33 +17,35 @@ f1_keywords:
 - dm_qn_subscriptions_TSQL
 - sys.dm_qn_subscriptions
 - sys.dm_qn_subscriptions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_qn_subscriptions dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd318140e5c3eed17a5440ebf1a3135e7e01dc90
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2fdc34ae033de8baf0173bc7c86bd0fe05c7668f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>クエリ通知 - sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   サーバーのアクティブ クエリ通知サブスクリプションに関する情報を返します。 このビューは、サーバーまたは指定したデータベース内のアクティブなサブスクリプションを確認したり、指定したサーバー プリンシパルを確認する際に使用できます。  
   
-|列名|データ型|説明|  
+|列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|サブスクリプションの ID。|  
 |**database_id**|**int**|通知クエリが実行されたデータベースの ID。 このデータベースには、サブスクリプションに関連する情報が格納されています。|  
-|**sid**|**varbinary (85)**|このサブスクリプションを作成して所有しているサーバー プリンシパルのセキュリティ ID。|  
+|**sid**|**varbinary(85)**|このサブスクリプションを作成して所有しているサーバー プリンシパルのセキュリティ ID。|  
 |**object_id**|**int**|サブスクリプションのパラメーターに関する情報を格納している内部テーブルの ID。|  
-|**作成**|**datetime**|サブスクリプションを作成した日時。|  
-|**タイムアウト**|**int**|サブスクリプションのタイムアウト値 (秒単位)。 この時間が経過した後、通知が行われます。<br /><br /> 注意: 実際の実行時間は、指定されたタイムアウトを超えることがあります。指定したタイムアウト時刻が経過してからサブスクリプションが起動するまでの間に、サブスクリプションが無効になる変更が発生した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの変更時に必ず通知が行われます。|  
+|**created**|**datetime**|サブスクリプションを作成した日時。|  
+|**timeout**|**int**|サブスクリプションのタイムアウト値 (秒単位)。 この時間が経過した後、通知が行われます。<br /><br /> 注意: 実際の実行時間は、指定されたタイムアウトを超えることがあります。指定したタイムアウト時刻が経過してからサブスクリプションが起動するまでの間に、サブスクリプションが無効になる変更が発生した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの変更時に必ず通知が行われます。|  
 |**ステータス**|**int**|サブスクリプションの状態を示します。 コードの一覧については、「解説」の表を参照してください。|  
   
 ## <a name="relationship-cardinalities"></a>リレーションシップの基数  
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 |コード|マイナー状態|Info|  
 |----------|------------------|----------|  
 |65798|データが変更されたため、サブスクリプションが起動しました|挿入によってサブスクリプションがトリガーされました|  
-|65799|データが変更されたため、サブスクリプションが起動しました|DELETE|  
+|65799|データが変更されたため、サブスクリプションが起動しました|Del|  
 |65800|データが変更されたため、サブスクリプションが起動しました|Update|  
 |65801|データが変更されたため、サブスクリプションが起動しました|Merge|  
 |65802|データが変更されたため、サブスクリプションが起動しました|テーブルを切り捨てる|  
@@ -95,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 |199168|サブスクリプションがアクティブです|未定義の info モード|  
 |199424|サブスクリプションが初期化されていますが、まだアクティブではありません|未定義の info モード|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 > [!NOTE]  

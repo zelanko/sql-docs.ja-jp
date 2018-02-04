@@ -3,7 +3,7 @@ title: "Linux 上の SQL Server 2017 年 1 のインストール |Microsoft ド�
 description: "インストール、更新、および Linux に SQL Server をアンインストールします。 このトピックでは、オンライン、オフライン、および無人のシナリオについて説明します。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 180c8492531da7c3b9c15ebef28917b52e0869ce
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 114bbd717ad7d0d244b7290bd612547c9226f941
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上の SQL Server のインストールのガイダンス
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このトピックでは、インストール、更新、および Linux に SQL Server 2017 をアンインストールする方法について説明します。 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、および Ubuntu では、SQL Server 2017 をサポートします。 Linux または Docker を Windows/ファルダ上の Docker エンジンで実行できる、Docker のイメージとして使用
 
@@ -36,9 +36,9 @@ SQL Server 2017 は次の Linux プラットフォームでサポートされて
 
 | プラットフォーム | サポートされているバージョン | 取得
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3 または 7.4 | [RHEL 7.4 を取得します。](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3 または 7.4 | [Get RHEL 7.4](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2 を入手します。](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [Ubuntu 16.04 を取得します。](http://www.ubuntu.com/download/server)
+| **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker エンジン** | 1.8+ | [Docker を取得します。](http://www.docker.com/products/overview)
 
 Microsoft を展開して、OpenShift と Kubernetes を使用して SQL Server のコンテナーの管理をサポートします。
@@ -52,7 +52,7 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 |||
 |-----|-----|
 | **[メモリ]** | 2 GB |
-| **[ファイル システム]** | **XFS**または**EXT4** (その他のファイル システム**BTRFS**、サポートされていません) |
+| **ファイル システム** | **XFS**または**EXT4** (その他のファイル システム**BTRFS**、サポートされていません) |
 | **ディスク領域** | 6 GB |
 | **プロセッサ速度** | 2 GHz |
 | **プロセッサ コア** | 2 コア |
@@ -188,7 +188,7 @@ CU または GDR のリポジトリを構成するのには、次の手順を使
 
 1. 新しいリポジトリを構成します。
 
-   | プラットフォーム | リポジトリ | コマンド |
+   | プラットフォーム | リポジトリ | Command |
    |-----|-----|-----|
    | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
    | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |

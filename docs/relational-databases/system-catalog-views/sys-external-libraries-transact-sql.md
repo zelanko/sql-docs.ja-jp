@@ -16,16 +16,18 @@ f1_keywords:
 - external_libraries_TSQL
 - sys.external_libraries
 - sys.external_libraries_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.external_libraries catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.external_libraries catalog view
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 9370c00fa528f204f5f76cc3bba4c807ae82a173
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: c1e65db4ccb43dde92188e462b6e99414ee05f52
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (TRANSACT-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +41,15 @@ R、Python などの外部のランタイムに関連するパッケージ ラ�
 
 |列名 |データ型 | Description|
 |------|------|------|
-|external_library_id |ssNoversion | 外部ライブラリ オブジェクトの ID。 |
-|NAME |sysname |外部ライブラリの名前です。 所有者ごとのデータベース内で一意です。|
-|principal_id |ssNoversion |この外部ライブラリを所有するプリンシパルの ID です。 |
+|external_library_id |int | 外部ライブラリ オブジェクトの ID。 |
+|name |sysname |外部ライブラリの名前です。 所有者ごとのデータベース内で一意です。|
+|principal_id |int |この外部ライブラリを所有するプリンシパルの ID です。 |
 |language | sysname | 言語または外部のライブラリをサポートするランタイムの名前。 有効な値は、'R' です。 追加のランタイムは、将来追加される可能性があります。|
-|スコープ (scope) |ssNoversion |パブリックのスコープ以外の場合は 0プライベート スコープの場合は 1 |  
+|スコープ (scope) |int |パブリックのスコープ以外の場合は 0プライベート スコープの場合は 1 |  
 |scope_desc |varchar (7) |パッケージがパブリックかプライベートかどうかを示します|
 
 
 ## <a name="see-also"></a>参照  
 [sys.external_library_files](sys-external-library-files-transact-sql.md)  
-[外部ライブラリを作成します。](../../t-sql/statements/create-external-library-transact-sql.md)  
+[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)  
 [SQL Server R Services のパッケージの管理](../../advanced-analytics/r/installing-and-managing-r-packages.md)  

@@ -3,7 +3,7 @@ title: "Linux 上の SQL Server コマンド ライン ツールのインスト�
 description: "このトピックでは、Linux に SQL Server ツールをインストールする方法について説明します。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: fa96adb2d8a3cf5430ca09b636007887b7863df1
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 16a2366541809237609c88f8458a3930a5569c3a
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd および bcp、SQL Server コマンド ライン ツールを Linux にインストールします。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 次の手順では、コマンド ライン ツール、Microsoft ODBC ドライバー、およびその依存関係をインストールします。 **Mssql ツール**パッケージが含まれています。
 
@@ -206,21 +206,21 @@ SQL Server 2017 CTP 2.0 以降では、SQL Server コマンド ライン ツー�
 
 次の表は、最新ツール パッケージの場所を示します。
 
-| ツール パッケージ | [バージョンのオプション] | ダウンロード |
+| ツール パッケージ | バージョン | ダウンロード |
 |-----|-----|-----|
-| Red Hat RPM ツール パッケージ | 14.0.5.0-1 | [mssql ツール RPM パッケージ](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
-| SLES RPM ツール パッケージ | 14.0.5.0-1 | [mssql ツール RPM パッケージ](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
-| Ubuntu 16.04 Debian ツール パッケージ | 14.0.5.0-1 | [mssql ツール Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
-| Ubuntu 16.10 Debian ツール パッケージ | 14.0.5.0-1 | [mssql ツール Debian パッケージ](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
+| Red Hat RPM ツール パッケージ | 14.0.5.0-1 | [mssql-tools RPM package](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
+| SLES RPM ツール パッケージ | 14.0.5.0-1 | [mssql-tools RPM package](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
+| Ubuntu 16.04 Debian ツール パッケージ | 14.0.5.0-1 | [mssql-tools Debian package](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
+| Ubuntu 16.10 Debian ツール パッケージ | 14.0.5.0-1 | [mssql-tools Debian package](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
 
 これらのパッケージに依存**移動**を最初にインストールする必要があります。 **移動**パッケージもいずれかに依存している**unixODBC devel** (RPM) または**unixodbc デベロッパー** (Debian)。 場所、**移動**パッケージは、次の表に一覧表示されます。
 
-| パッケージの移動 | [バージョンのオプション] | ダウンロード |
+| msodbcsql package | バージョン | ダウンロード |
 |-----|-----|-----|
-| Red Hat RPM 移動パッケージ | 13.1.6.0-1 | [移動 RPM パッケージ](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
-| SLES RPM 移動パッケージ | 13.1.6.0-1 | [移動 RPM パッケージ](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
-| Ubuntu 16.04 Debian 移動パッケージ | 13.1.6.0-1 | [Debian パッケージの移動](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
-| Ubuntu 16.10 Debian 移動パッケージ | 13.1.6.0-1 | [Debian パッケージの移動](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
+| Red Hat RPM 移動パッケージ | 13.1.6.0-1 | [msodbcsql RPM package](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
+| SLES RPM 移動パッケージ | 13.1.6.0-1 | [msodbcsql RPM package](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
+| Ubuntu 16.04 Debian msodbcsql package | 13.1.6.0-1 | [Debian パッケージの移動](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
+| Ubuntu 16.10 Debian msodbcsql package | 13.1.6.0-1 | [Debian パッケージの移動](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
 
 これらのパッケージを手動でインストールするには、次の手順に従います。
 

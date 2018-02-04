@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - backup_devices
 - sys.backup_devices
 - sys.backup_devices_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backup devices [SQL Server], viewing information
 - sys.backup_devices catalog view
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dab6ab1eedc6ae0e6a7af91fbad65a8ed36562a1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8c3e73f8ed9f7d19f52d40742ea029d664b02ea8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysbackupdevices-transact-sql"></a>sys.backup_devices (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +42,11 @@ ms.lasthandoff: 11/27/2017
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|バックアップ デバイスの名前。 セット内で一意です。|  
-|**型**|**tinyint**|バックアップ デバイスの種類。<br /><br /> 2 = ディスク<br /><br /> 3 = フロッピー ディスク (廃止)<br /><br /> 5 = テープ<br /><br /> 6 = パイプ (廃止)<br /><br /> 7 = 仮想デバイス (サード パーティ バックアップ ベンダーがオプションで使用)<br /><br /> 通常は、ディスク (2) またはテープ (5) のみが使用されます。|  
-|**type_desc**|**nvarchar (60)**|バックアップ デバイスの種類の説明。<br /><br /> DISK<br /><br /> DISKETTE (廃止)<br /><br /> TAPE<br /><br /> PIPE (廃止)<br /><br /> VIRTUAL_DEVICE (サード パーティ バックアップ ベンダーがオプションで使用)<br /><br /> 通常は、DISK および TAPE のみが使用されます。|  
-|**physical_name**|**nvarchar (260)**|バックアップ デバイスの物理的なファイル名またはパス。|  
+|**type**|**tinyint**|バックアップ デバイスの種類。<br /><br /> 2 = ディスク<br /><br /> 3 = フロッピー ディスク (廃止)<br /><br /> 5 = テープ<br /><br /> 6 = パイプ (廃止)<br /><br /> 7 = 仮想デバイス (サード パーティ バックアップ ベンダーがオプションで使用)<br /><br /> 通常は、ディスク (2) またはテープ (5) のみが使用されます。|  
+|**type_desc**|**nvarchar(60)**|バックアップ デバイスの種類の説明。<br /><br /> DISK<br /><br /> DISKETTE (廃止)<br /><br /> TAPE<br /><br /> PIPE (廃止)<br /><br /> VIRTUAL_DEVICE (サード パーティ バックアップ ベンダーがオプションで使用)<br /><br /> 通常は、DISK および TAPE のみが使用されます。|  
+|**physical_name**|**nvarchar(260)**|バックアップ デバイスの物理的なファイル名またはパス。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

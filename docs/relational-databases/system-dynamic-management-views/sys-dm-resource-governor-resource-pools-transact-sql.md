@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_resource_governor_resource_pools_TSQL
 - sys.dm_resource_governor_resource_pools
 - dm_resource_governor_resource_pools
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_resource_governor_resource_pools dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_resource_governor_resource_pools dynamic management view
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d98b1faa8a39ae5b347fd6dbe9a35db1b4ce9097
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a66fe36785d2f54e265144df3b9fa1d454fd305c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmresourcegovernorresourcepools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -79,14 +82,14 @@ ms.lasthandoff: 11/17/2017
 |write_io_stall_queued_ms|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 書き込み IO の到着から発行までの合計時間 (ミリ秒単位)。 NULL 値が許可されます。 IO についてリソース プールが管理されていない場合  (リソース プールの MIN_IOPS_PER_VOLUME および MAX_IOPS_PER_VOLUME の設定が 0 の場合) は NULL です。<br /><br /> これは、IO リソース管理によって発生した遅延です。|  
 |io_issue_violations_total|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> IO 発行違反の合計。 つまり、IO の発行レートが予約レートを下回った回数です。 NULL 値が許可されます。 IO についてリソース プールが管理されていない場合  (リソース プールの MIN_IOPS_PER_VOLUME および MAX_IOPS_PER_VOLUME の設定が 0 の場合) は NULL です。|  
 |io_issue_delay_total_ms|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> IO の発行予定時間から実際に発行されるまでの合計時間 (ミリ秒単位)。 NULL 値が許可されます。 IO についてリソース プールが管理されていない場合  (リソース プールの MIN_IOPS_PER_VOLUME および MAX_IOPS_PER_VOLUME の設定が 0 の場合) は NULL です。|  
-|pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
   
 ## <a name="remarks"></a>解説  
  リソース ガバナー ワークロード グループとリソース ガバナー リソース プールには、多対一のマッピングがあります。 このため、多くのリソース プール統計が、ワークロード グループ統計から派生しています。  
   
  この動的管理ビューには、メモリ内の構成が表示されます。 格納されている構成メタデータを表示するには、sys.resource_governor_resource_pools カタログ ビューを使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

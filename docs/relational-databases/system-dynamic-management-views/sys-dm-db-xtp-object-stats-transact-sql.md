@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,26 +17,28 @@ f1_keywords:
 - sys.dm_db_xtp_object_stats
 - dm_db_xtp_object_stats
 - sys.dm_db_xtp_object_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_object_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_object_stats dynamic management view
 ms.assetid: 07300b59-3cab-4d3e-8138-5ea8f584f88f
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fdb57b1f90044605dc67fd3a41892df4bed8716c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7610e24b87a2a6dff0ffefbd5a786acf8191dca5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpobjectstats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   各操作によって影響を受ける行の数を報告、[!INCLUDE[hek_2](../../includes/hek-2-md.md)]最後のデータベースからオブジェクトを再起動します。 トランザクションがコミットされたかロールバックされたかに関係なく、統計情報は操作の実行時に更新されます。  
   
- sys.dm_db_xtp_object_stats は、変化の著しいメモリ最適化テーブルを特定するために役立ちます。 各インデックスはパフォーマンスに影響するため、テーブル内でまったく使用されていないインデックスまたはほとんど使用されていないインデックスの削除を検討することができます。 ハッシュ インデックスがあれば、バケット数を定期的に再評価する必要があります。 詳細については、次を参照してください。[ハッシュ インデックスの適切なバケット数を決定する](http://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5)です。  
+ sys.dm_db_xtp_object_stats は、変化の著しいメモリ最適化テーブルを特定するために役立ちます。 各インデックスはパフォーマンスに影響するため、テーブル内でまったく使用されていないインデックスまたはほとんど使用されていないインデックスの削除を検討することができます。 ハッシュ インデックスがあれば、バケット数を定期的に再評価する必要があります。 詳細については、「 [Determining the Correct Bucket Count for Hash Indexes](http://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5)」を参照してください。  
   
  sys.dm_db_xtp_object_stats は、書き込みと書き込みの競合が発生しているメモリ最適化テーブルを特定するために役立ちます。このような競合は、アプリケーションのパフォーマンスに影響します。 たとえば、トランザクションの再試行ロジックがあれば、同じステートメントの実行が複数回必要になることがあります。 また、この情報を使用して、書き込みと書き込みのエラー処理を必要とするテーブル (およびビジネス ロジック) を特定することもできます。  
   
@@ -51,9 +54,9 @@ ms.lasthandoff: 11/27/2017
 |row_delete_attempts|**bigint**|前回データベースが再起動されてから、コミットされたトランザクションおよび中断されたトランザクションの両方によってテーブルから削除された行の数。|  
 |write_conflicts|**bigint**|前回データベースが再起動されてから発生した書き込み競合の数。|  
 |unique_constraint_violations|**bigint**|前回データベースが再起動されてから発生した UNIQUE 制約違反の数。|  
-|object_address|**varbinary (8)**|内部使用のみです。|  
+|object_address|**varbinary(8)**|内部使用のみです。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  現在のデータベースに対する VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

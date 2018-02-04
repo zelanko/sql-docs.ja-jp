@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - sys.availability_databases_cluster
 - availability_databases_cluster_TSQL
 - availability_databases_cluster
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Availability Groups [SQL Server], WSFC clusters
 - sys.availability_databases_cluster catalog view
 - Availability Groups [SQL Server], databases
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cd9ecf7618cf95939773f26f9803a9310e78b19
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 91b6b66e88bb74d7dbb6d0176437c1f3e442ef0c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysavailabilitydatabasescluster-transact-sql"></a>sys.availability_databases_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 |**group_database_id**|**uniqueidentifier**|データベースが参加している可用性グループ (存在する場合) 内のデータベースの一意の識別子。 **group_database_id**をデータベースが参加している可用性グループにすべてのセカンダリ レプリカとプライマリ レプリカでは、このデータベースに対して同じです。<br /><br /> NULL = データベースは、どの可用性グループの可用性レプリカの一部でもありません。|  
 |**database_name**|**sysname**|可用性グループに追加されたデータベースの名前。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  場合、呼び出し元の**sys.availability_databases_cluster**データベース、ALTER ANY DATABASE、対応する行を確認するために必要な最低限の権限または VIEW ANY DATABASE のサーバー レベルの権限、または作成の所有者ではありませんDATABASE の権限、**マスター**データベース。  
   
 ## <a name="see-also"></a>参照  

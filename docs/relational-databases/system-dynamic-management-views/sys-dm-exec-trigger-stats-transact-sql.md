@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_trigger_stats_TSQL
 - sys.dm_exec_trigger_stats_TSQL
 - sys.dm_exec_trigger_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_trigger_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_trigger_stats dynamic management function
 ms.assetid: 863498b4-849c-434d-b748-837411458738
-caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f0c102ba4f43cbd81d228945dc3e27143f7ce5a
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 63430240cfd518ce38567d10fbebbf258a37d872
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,9 +43,9 @@ ms.lasthandoff: 01/12/2018
 |**database_id**|**int**|トリガーが存在するデータベースの ID。|  
 |**object_id**|**int**|トリガーのオブジェクト ID 番号。|  
 |**type**|**char(2)**|次のいずれかのオブジェクトの種類。<br /><br /> TA = アセンブリ (CLR) トリガー<br /><br /> TR = SQL トリガー|  
-|**Type_desc**|**nvarchar (60)**|オブジェクトの種類の説明です。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
-|**sql_handle**|**varbinary (64)**|これは、クエリと関連付けるために使用できる**sys.dm_exec_query_stats**するは、このトリガー内から実行されました。|  
-|**plan_handle**|**varbinary (64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値で使用することがあります、 **sys.dm_exec_cached_plans**動的管理ビュー。|  
+|**Type_desc**|**nvarchar(60)**|オブジェクトの種類の説明です。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|**sql_handle**|**varbinary(64)**|これは、クエリと関連付けるために使用できる**sys.dm_exec_query_stats**するは、このトリガー内から実行されました。|  
+|**plan_handle**|**varbinary(64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値で使用することがあります、 **sys.dm_exec_cached_plans**動的管理ビュー。|  
 |**cached_time**|**datetime**|トリガーがキャッシュに追加された時刻。|  
 |**last_execution_time**|**datetime**|前回トリガーが実行された時刻。|  
 |**execution_count**|**bigint**|前回の後に、トリガーが実行された回数のコンパイル時。|  
@@ -50,7 +53,7 @@ ms.lasthandoff: 01/12/2018
 |**last_worker_time**|**bigint**|トリガーを前回実行したときに使用された CPU 時間 (マイクロ秒単位)。|  
 |**min_worker_time**|**bigint**|最大の CPU 時間、1 回の実行中にこのトリガーで使用された (マイクロ秒)。|  
 |**max_worker_time**|**bigint**|最大の CPU 時間、1 回の実行中にこのトリガーで使用された (マイクロ秒)。|  
-|**トリガー**|**bigint**|コンパイルされた後にこのトリガーの実行によって実行される物理読み取りの合計数。|  
+|**total_physical_reads**|**bigint**|コンパイルされた後にこのトリガーの実行によって実行される物理読み取りの合計数。|  
 |**last_physical_reads**|**bigint**|物理読み取りの数は、トリガーが実行された最終時刻を実行します。|  
 |**min_physical_reads**|**bigint**|このトリガーの 1 回の実行中に行われた物理読み取りの最小数。|  
 |**max_physical_reads**|**bigint**|このトリガーの 1 回の実行中に行われた物理読み取りの最大数。|  
@@ -96,7 +99,7 @@ ORDER BY [total_worker_time] DESC;
   
 ## <a name="see-also"></a>参照  
 [実行関連の動的管理ビューおよび関数 &#40;TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
-[sys.dm_exec_sql_text &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+[sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
 [sys.dm_exec_query_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
 [sys.dm_exec_procedure_stats および #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
 [sys.dm_exec_cached_plans &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  

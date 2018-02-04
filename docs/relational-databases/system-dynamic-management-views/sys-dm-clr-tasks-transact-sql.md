@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_tasks_TSQL
 - dm_clr_tasks
 - dm_clr_tasks_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_tasks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_tasks dynamic management view
 ms.assetid: 462b9061-09fa-4858-9707-03d6cc19c769
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45aad56182dd79b9b5787e78964b23d7469344d0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2a3c99ffd172c97c5738ed2dd19bc8b07f303470
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrtasks-transact-sql"></a>sys.dm_clr_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,16 +40,16 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**task_address**|**varbinary (8)**|CLR タスクのアドレス。|  
-|**sos_task_address**|**varbinary (8)**|基になるアドレス[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ タスクです。|  
-|**appdomain_address**|**varbinary (8)**|このタスクが実行されているアプリケーション ドメインのアドレス。|  
-|**状態**|**nvarchar (128)**|タスクの現在の状態。|  
-|**abort_state**|**nvarchar (128)**|タスクが取り消された場合の、現在の中止の状態。中止には複数の状態があります。|  
-|**型**|**nvarchar (128)**|タスクの種類。|  
+|**task_address**|**varbinary(8)**|CLR タスクのアドレス。|  
+|**sos_task_address**|**varbinary(8)**|基になるアドレス[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ タスクです。|  
+|**appdomain_address**|**varbinary(8)**|このタスクが実行されているアプリケーション ドメインのアドレス。|  
+|**状態**|**nvarchar(128)**|タスクの現在の状態。|  
+|**abort_state**|**nvarchar(128)**|タスクが取り消された場合の、現在の中止の状態。中止には複数の状態があります。|  
+|**type**|**nvarchar(128)**|タスクの種類。|  
 |**affinity_count**|**int**|タスクの関係。|  
 |**forced_yield_count**|**int**|タスクが強制的に解放された回数。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 階層には、データベースの VIEW DATABASE STATE 権限が必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard および Basic 階層が必要です、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理者アカウントです。  

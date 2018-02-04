@@ -3,7 +3,7 @@ title: "フェールオーバー クラスター インスタンス記憶域 iSC
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 9d4ab14772f78370563c6117553ea9e45203a8b9
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 9720eb3b4254f2592e3c237bc2af16bc5360d2ad
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>フェールオーバー クラスター インスタンス - iSCSI: Linux 上の SQL Server を構成します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 この記事では、Linux 上のフェールオーバー クラスター インスタンス (FCI) の iSCSI 記憶域を構成する方法について説明します。 
 
@@ -99,7 +99,7 @@ iSCSI では、ネットワークを使用して、サーバーをターゲッ�
     ```bash
     sudo grep “Attached SCSI” /var/log/messages
     ```
-    ![30 iSCSIattachedDisks][7]
+    ![30-iSCSIattachedDisks][7]
 
 7.  ISCSI ディスク上の物理ボリュームを作成します。
 
@@ -200,7 +200,7 @@ iSCSI では、ネットワークを使用して、サーバーをターゲッ�
     ls /var/opt/mssql/data
     ```
 
-    ![45 CopyMove][8]
+    ![45-CopyMove][8]
  
    *    型`exit`root ユーザーに戻る。
 
@@ -324,7 +324,7 @@ iSCSI では、ネットワークを使用して、サーバーをターゲッ�
 
    *    テストするには、そのフォルダーにデータベースを作成します。 次に示す例では、sqlcmd を使用してデータベースを作成、コンテキストを切り替える、ファイルが、OS レベルが存在し、一時的な場所を削除します。 SSMS を使用することができます。
   
-    ![50 ExampleCreateSSMS][9]
+    ![50-ExampleCreateSSMS][9]
 
    *    共有のマウントを解除します。 
 
@@ -358,7 +358,7 @@ iSCSI では、ネットワークを使用して、サーバーをターゲッ�
 
     \<ListOfVGsNotUsedByPacemaker > は、FCI では使用されません手順 20 の出力からボリューム グループの一覧を示します。 コンマを引用符で囲まれたを分けてそれぞれの 1 つずつを配置します。 例を次に示します。
 
-    ![55 ListOfVGs][11]
+    ![55-ListOfVGs][11]
  
  
 17. Linux の開始時に、ファイル システムをマウントします。 ペースのみが iSCSI ディスクをマウントできることを確認するには、ルート ファイル システムのイメージを再構築します。 
@@ -397,8 +397,8 @@ FCI を構成する準備が整いました。
 
 |Distribution |トピック 
 |----- |-----
-|**HA アドオンで、Red Hat Enterprise Linux** |[構成](sql-server-linux-shared-disk-cluster-configure.md)<br/>[操作](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-|**HA アドオンに SUSE Linux Enterprise Server** |[構成](sql-server-linux-shared-disk-cluster-sles-configure.md)
+|**HA アドオンで、Red Hat Enterprise Linux** |[構成します。](sql-server-linux-shared-disk-cluster-configure.md)<br/>[操作](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+|**HA アドオンに SUSE Linux Enterprise Server** |[構成します。](sql-server-linux-shared-disk-cluster-sles-configure.md)
 
 ## <a name="next-steps"></a>次の手順
 

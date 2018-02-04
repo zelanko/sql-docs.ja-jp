@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,28 +17,29 @@ f1_keywords:
 - sys.dm_db_resource_stats_TSQL
 - dm_db_resource_stats
 - dm_db_resource_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1fa8f540e8f16d901eb41138bc7ee153339cb5a
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: 606b871aeac34ac99d239ec4a84757187e00855f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   CPU、I/O、およびメモリの消費量を返す、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]データベース。 1 つの行は、データベース内にアクティビティがない場合でも、15 秒ごとに存在します。 1 時間では、履歴データは維持されます。  
   
-|[列]|データ型|Description|  
+|列|データ型|Description|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|UTC 時刻では、現在のレポートの間隔の終了を示します。|  
 |avg_cpu_percent|**10 進数 (5,2)**|サービス層の上限に対するパーセンテージで示した、平均コンピューティング使用率。|  
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/14/2017
 > [!TIP]  
 >  これらの制限とサービス層に関する詳細コンテキストは、トピックを参照して[サービス階層](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)と[サービス層の機能と制限](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)です。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  このビューには、VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="remarks"></a>解説  

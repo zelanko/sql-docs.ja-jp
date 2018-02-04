@@ -3,7 +3,7 @@ title: "Linux 環境の SQL Server 可用性の基本 |Microsoft ドキュメン
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: b137d8badf44bf1c7d181b490bcf6d06e2bd087f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d53e54c6e8e74970316de557ddf3bd60a09e9ffe
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 展開用の SQL Server 可用性の基礎
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 以降で[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]は Linux と Windows の両方でサポートされています。 などの Windows ベース[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]展開では、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]データベースおよびインスタンスが Linux で高可用性にする必要があります。 この記事の計画と可用性の高い展開の技術的な側面を説明する Linux ベース[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]データベースとインスタンス、さらに Windows ベースのインストールからの違いの一部です。 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux 専門家、および Linux 場合がありますの新機能について新しいもあります[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]技術者、アーティクル時点が導入されていますの概念をいくつかになじみや他のユーザーによく知らない場合があります。
 
@@ -90,18 +90,18 @@ Windows と同様に、Linux ディストリビューション組み込みのフ
 
 | [ポート番号] | 型     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS –`rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS – `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | (使用する場合) を samba – エンドポイント マッパー                                                                                          |
 | 137         | UDP      | (使用する場合) を samba – NetBIOS ネーム サービス                                                                                      |
 | 138         | UDP      | (使用する場合) を samba – NetBIOS データグラム                                                                                          |
 | 139         | TCP      | (使用する場合) を samba – NetBIOS セッション                                                                                           |
 | 445         | TCP      | (使用する場合) を samba – TCP 経由で SMB                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]– 既定のポートです。必要な場合で変更できます。`mssql-conf set network.tcpport <portnumber>`                       |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – 既定のポートです。必要な場合で変更できます。`mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP、UDP | NFS (使用する場合)                                                                                                               |
 | 2224        | TCP      | によって使用される – ペース`pcsd`                                                                                                |
 | 3121        | TCP      | ペース – ペース リモート ノードがあるかどうかに必要な                                                                    |
 | 3260        | TCP      | iSCSI イニシエーター (使用する場合) – は内で変更されることができます`/etc/iscsi/iscsid.config`(RHEL)、iSCSI ターゲットのポートに一致する必要がありますが、 |
-| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-既定のポートは、AG エンドポイントの使用エンドポイントを作成するときに変更することができます。                                |
+| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -既定のポートは、AG エンドポイントの使用エンドポイントを作成するときに変更することができます。                                |
 | 5403        | TCP      | ペース                                                                                                                   |
 | 5404        | UDP      | UDP マルチキャストを使用する場合、Corosync によって必要 – ペース                                                                     |
 | 5405        | UDP      | ペース – Corosync で必要                                                                                            |
@@ -204,7 +204,7 @@ WSFCs が参加しているノードの状態を監視し、それらの問題�
 #### <a name="cluster-log-location"></a>クラスターのログの場所
 ペース クラスター ログの場所は、分布によって異なります。
 -   RHEL、SLES-`/var/log/cluster/corosync.log`
--   Ubuntu:`/var/log/corosync/corosync.log`
+-   Ubuntu – `/var/log/corosync/corosync.log`
 
 既定のログの場所を変更する変更`corosync.conf`です。
 

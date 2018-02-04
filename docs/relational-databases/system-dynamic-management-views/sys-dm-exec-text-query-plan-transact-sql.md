@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_text_query_plan_TSQL
 - dm_exec_text_query_plan_TSQL
 - sys.dm_exec_text_query_plan
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_text_query_plan dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_text_query_plan dynamic management function
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1bd975dbb78b502df209a6763c6198284f1f5dea
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 38650de120ae1c7cb80be3d279de9bfa0da37434
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +71,7 @@ sys.dm_exec_text_query_plan
   
 -  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
-*statement_start_offset* | 0 |既定値  
+*statement_start_offset* | 0 | DEFAULT  
 バッチまたは保存されるオブジェクトのテキスト内での、行が示すクエリの開始位置 (バイト単位) を示します。 *statement_start_offset*は**int**です。値 0 はバッチの先頭を表します。 既定値は 0 です。  
   
 ステートメントの開始オフセットは、次の動的管理オブジェクトから取得できます。  
@@ -77,7 +80,7 @@ sys.dm_exec_text_query_plan
   
 -  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
-*statement_end_offset* |-1 |既定値  
+*statement_end_offset* | -1 | DEFAULT  
 バッチまたは保存されるオブジェクトのテキスト内での、行が示すクエリの終了位置 (バイト単位) を示します。  
   
 *statement_start_offset*は**int**です。  
@@ -90,8 +93,8 @@ sys.dm_exec_text_query_plan
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|このプランに対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがコンパイルされたときに有効であったコンテキスト データベースの ID。 アドホック SQL ステートメントおよび準備された SQL ステートメントの場合、ステートメントがコンパイルされたデータベースの ID。<br /><br /> 列は、null 値は。|  
 |**objectid**|**int**|ストアド プロシージャやユーザー定義関数など、クエリ プランのオブジェクトの ID。 アドホックおよび準備されたバッチでは、この列は**null**です。<br /><br /> 列は、null 値は。|  
-|**数**|**smallint**|ストアド プロシージャに付けられた番号 (整数)。 用のプロシージャのグループなど、 **orders**アプリケーションが付けられて**orderproc; 1**、 **orderproc; 2**のようにします。 アドホックおよび準備されたバッチでは、この列は**null**です。<br /><br /> 列は、null 値は。|  
-|**暗号化**|**bit**|対応するプロシージャが暗号化されているかどうか。<br /><br /> 0 = 暗号化されていません。<br /><br /> 1 = 暗号化<br /><br /> 列値が許容されません。|  
+|**number**|**smallint**|ストアド プロシージャに付けられた番号 (整数)。 用のプロシージャのグループなど、 **orders**アプリケーションが付けられて**orderproc; 1**、 **orderproc; 2**のようにします。 アドホックおよび準備されたバッチでは、この列は**null**です。<br /><br /> 列は、null 値は。|  
+|**encrypted**|**bit**|対応するプロシージャが暗号化されているかどうか。<br /><br /> 0 = 暗号化されていません。<br /><br /> 1 = 暗号化<br /><br /> 列値が許容されません。|  
 |**query_plan**|**nvarchar(max)**|指定されたクエリ実行プランのコンパイル時のプラン表示を含む*plan_handle*です。 プラン表示はテキスト形式です。 含む、たとえばアドホック バッチごとの 1 つのプランが生成された[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント、ストアド プロシージャの呼び出し、およびユーザー定義関数の呼び出しです。<br /><br /> 列は、null 値は。|  
   
 ## <a name="remarks"></a>解説  
@@ -105,7 +108,7 @@ sys.dm_exec_text_query_plan
   
 アドホック クエリを使用する場合[単純](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)または[強制パラメーター化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)、 **query_plan**ステートメント テキストのみと、実際のクエリ プランではない列が含まれます。 クエリ プランを返すを呼び出す**sys.dm_exec_text_query_plan**の準備されたパラメーター化クエリのプラン ハンドル。 参照することによって、クエリがパラメーター化されたかどうかを決定できます、 **sql**の列、 [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)ビューまたはの text 列、 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)動的管理ビュー。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  実行する**sys.dm_exec_text_query_plan**、ユーザーのメンバーである必要があります、 **sysadmin**固定サーバー ロールまたはサーバーの VIEW SERVER STATE 権限を持っています。  
   
 ## <a name="examples"></a>使用例  

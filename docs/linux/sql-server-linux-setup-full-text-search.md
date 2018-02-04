@@ -3,7 +3,7 @@ title: "Linux 上の SQL Server フルテキスト検索のインストール |M
 description: "このトピックでは、Linux に SQL Server フルテキスト検索をインストールする方法について説明します。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.workload: Inactive
-ms.openlocfilehash: 68704db01975a26b028d2ebc5b7f0d166793d6bc
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 8b1f14ca454582ee85506cd68b07a38f17ada1b4
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux 上の SQL Server フルテキスト検索をインストールします。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 次の手順インストール[SQL Server フルテキスト検索](https://msdn.microsoft.com/library/ms142571.aspx)(**mssql サーバー-fts**) on Linux です。 フルテキスト検索では、SQL Server テーブル内の文字ベースのデータに対してフルテキスト クエリを実行することができます。 このリリースの既知の問題については、次を参照してください。、 [Release Notes](sql-server-linux-release-notes.md)です。
 
@@ -187,7 +187,7 @@ sudo zypper update mssql-server-fts
 |.faq | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.fky | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.h | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|影響 | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.hhc | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.hpp | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.hta | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.htm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
@@ -215,10 +215,10 @@ sudo zypper update mssql-server-fts
 |.lst | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.m3u | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.mak | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.mk という | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.mk | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.odc | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.odh | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.odl ファイル | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.odl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.pkgdef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.pkgundef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.pl | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |

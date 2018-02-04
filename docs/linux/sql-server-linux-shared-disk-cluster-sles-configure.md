@@ -3,7 +3,7 @@ title: "SQL Server の SLES 共有ディスク クラスターの構成 |Microso
 description: "SQL Server の SUSE Linux Enterprise Server (SLES) 共有ディスク クラスターを構成することによって高可用性を実装します。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
-ms.openlocfilehash: 71671e0103916d6a539b730ce4bac141d29c417e
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 52747e7bc7a4ab04e0316669e350affb96fc73bf
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SQL Server の SLES 共有ディスク クラスターを構成します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このガイドでは、SQL Server SUSE Linux Enterprise Server (SLES) 上の 2 ノードの共有ディスク クラスターを作成する方法を提供します。 クラスタ リングのレイヤーが SUSE に基づいて[高可用性の拡張機能 (HAE)](https://www.suse.com/products/highavailability)の上に構築[ペース](http://clusterlabs.org/)です。 
 
@@ -254,7 +254,7 @@ Full list of resources:
 
 クラスター リソースを管理するには、SUSE、次のトピックを参照してください:[クラスター リソースの管理](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
-### <a name="manual-failover"></a>手動フェールオーバー
+### <a name="manual-failover"></a>手動フェールオーバー (manual failover)
 
 自動的にフェールオーバー (または移行)、ハードウェアまたはソフトウェアに障害が発生した場合、クラスターの他のノードには、リソースが構成されている、ペース GUI またはコマンドラインを使用して、クラスター内の別のノードにも手動でリソースを移動できます。 
 
