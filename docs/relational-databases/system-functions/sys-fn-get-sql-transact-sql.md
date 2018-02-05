@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - sys.fn_get_sql_TSQL
 - fn_get_sql_TSQL
 - sys.fn_get_sql
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_get_sql function
 - text [SQL Server], SQL handles
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87cac4a79dc4e155974006f05920ab7a1cad9899
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ad0861b72965936dfb673774a339ab7769f63689
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   指定した SQL ハンドルに対して、SQL ステートメントのテキストを返します。  
   
 > [!IMPORTANT]  
->  この機能は、Microsoft SQL Server の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに sys.dm_exec_sql_text を使用してください。 詳細については、次を参照してください。 [sys.dm_exec_sql_text &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
+>  この機能は、Microsoft SQL Server の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに sys.dm_exec_sql_text を使用してください。 詳細については、次を参照してください。 [sys.dm_exec_sql_text &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)。  
   
  
   
@@ -83,7 +85,7 @@ sys.fn_get_sql ( SqlHandle )
   
 -   ストアド プロシージャに関する、現在の入れ子における最上位レベルの情報を返す必要がある場合。 たとえば、sp_1 と sp_2 という名前の 2 つのストアド プロシージャがある場合に、 sp_1 で sp_2 を呼び出し、sp_2 の実行中に sys.dm_exec_requests 動的管理ビューからハンドルを取得すると、fn_get_sql 関数では sp_2 に関する情報が返されます。 さらに fn_get_sql 関数では、現在の入れ子の最上位レベルにあるストアド プロシージャの完全なテキストが返されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ユーザーには、サーバーに対する VIEW SERVER STATE 権限が必要があります。  
   
 ## <a name="examples"></a>使用例  

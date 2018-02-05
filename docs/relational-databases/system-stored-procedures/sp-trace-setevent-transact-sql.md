@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setevent_TSQL
 - sp_trace_setevent
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_setevent
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f47656c08b4cdf835a9f7d6dc7e9ae0b84dbdca9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f4d36c6512a23d69371767e75d179fbdbf5d695d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +52,10 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@traceid=** ] *trace_id*  
+ [ **@traceid=** ] *trace_id*  
  変更するトレースの ID を指定します。 *trace_id*は**int**、既定値はありません。 ユーザーが使用してこの*trace_id*識別、変更、およびトレースを制御する値。  
   
- [  **@eventid=** ] *event_id*  
+ [ **@eventid=** ] *event_id*  
  有効にするイベントの ID を指定します。 *event_id*は**int**、既定値はありません。  
   
  次の表は、トレースに対して追加または削除できるイベントの一覧です。  
@@ -124,7 +127,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |78|CursorClose|カーソルがオープンされていた、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ODBC、OLE DB、または Db-library によってステートメントが終了します。|  
 |79|Missing Column Statistics|オプティマイザーに有効な列の統計が利用できません。|  
 |80|Missing Join Predicate|結合の述語がないクエリが実行されています。 クエリの終了に時間がかかる可能性があります。|  
-|81|Server Memory Change|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリ使用量が増加または減少 1 メガバイト (MB) または最大サーバー メモリの 5% のいずれか、大きい方です。|  
+|81|Server Memory Change|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ使用量が増加または減少 1 メガバイト (MB) または最大サーバー メモリの 5% のいずれか、大きい方です。|  
 |82-91|User Configurable (0-9)|ユーザー定義のイベント データです。|  
 |92|Data File Auto Grow|データ ファイルがサーバーによって自動的に拡張されたことを示します。|  
 |93|Log File Auto Grow|ログ ファイルがサーバーによって自動的に拡張されたことを示します。|  
@@ -242,7 +245,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|SQL Server でプラン ガイドを含むクエリまたはバッチの実行プランを生成できなかったことを示します。 SQL Server はプラン ガイドを適用せずにこのクエリまたはバッチの実行プランを生成しようとしました。 無効なプラン ガイドが原因になった可能性があります。 sys.fn_validate_plan_guide システム関数を使用して、プラン ガイドを検証することができます。|  
 |235|Audit Fulltext||  
   
- [  **@columnid=** ] *column_id*  
+ [ **@columnid=** ] *column_id*  
  イベントに対して追加する列の ID を指定します。 *column_id*は**int**、既定値はありません。  
   
  次の表は、イベントに対して追加できる列の一覧です。  
@@ -259,7 +262,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |8|**HostName**|要求を生成したクライアント コンピューターの名前。|  
 |9|**ClientProcessID**|クライアント アプリケーションが実行されているプロセスに対し、クライアントのコンピューターが割り当てた ID。|  
 |10|**ApplicationName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|  
-|11|**LoginName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントのログイン名。|  
+|11|**LoginName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのログイン名。|  
 |12|**SPID**|によって割り当てられたサーバー プロセス ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントに関連付けられたプロセスにします。|  
 |13|**Duration**|イベントの実行に要した経過時間 (マイクロ秒単位)。 Hash Warning イベントに対しては、このデータ列は作成されません。|  
 |14|**StartTime**|イベントの開始時刻 (取得できた場合)。|  
@@ -267,11 +270,11 @@ sp_trace_setevent [ @traceid = ] trace_id
 |16|**Reads**|イベントの代わりにサーバーによって実行される、論理ディスク読み取り回数。 この列は作成されません、**ロック: リリース**イベント。|  
 |17|**Writes**|イベントの代わりにサーバーによって実行される、物理ディスクの書き込み回数。|  
 |18|**CPU**|イベントに使用された CPU 時間 (ミリ秒単位)。|  
-|19|**アクセス許可**|セキュリティ監査によって使用される、権限のビットマップ。|  
+|19|**権限**|セキュリティ監査によって使用される、権限のビットマップ。|  
 |20|**Severity**|例外の重大度レベル。|  
 |21|**EventSubClass**|イベント サブクラスの種類。 すべてのイベント クラスに対して、このデータ列が作成されるわけではありません。|  
-|22|**ObjectID**|システムによって割り当てられたオブジェクト ID。|  
-|23|**Success**|権限が正常に使用されたかどうか。監査で使用します。<br /><br /> **1** = 成功**0** = 失敗|  
+|22|**Exchange Spill**|システムによって割り当てられたオブジェクト ID。|  
+|23|**成功**|権限が正常に使用されたかどうか。監査で使用します。<br /><br /> **1** = 成功**0** = 失敗|  
 |24|**IndexID**|イベントの影響を受けるオブジェクトに付けられたインデックス用の ID。 オブジェクトのインデックス ID を調べるには、 **sysindexes** システム テーブルの **indid** 列を使用します。|  
 |25|**IntegerData**|トレースでキャプチャされたイベント クラスに依存する整数値。|  
 |26|**ServerName**|インスタンスの名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]か、 *servername*または*servername \instancename*、トレース中します。|  
@@ -288,7 +291,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |37|**OwnerName**|参照されたオブジェクトの所有者名。|  
 |38|**RoleName**|ステートメントの対象となっているデータベースまたはサーバー全体のロールの名前。|  
 |39|**TargetUserName**|アクションの対象となるユーザー名。|  
-|40|**DBUserName**|クライアントの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ユーザー名。|  
+|40|**DBUserName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのデータベース ユーザー名。|  
 |41|**LoginSid**|ログインしたユーザーのセキュリティ識別子 (SID)。|  
 |42|**TargetLoginName**|アクションの対象となるログイン名。|  
 |43|**TargetLoginSid**|アクションの対象となるログインの SID。|  
@@ -314,8 +317,8 @@ sp_trace_setevent [ @traceid = ] trace_id
 |63|**SqlHandle**|64 ビット ハッシュ。アドホック クエリやデータベースのテキスト、および SQL オブジェクトのオブジェクト ID に基づいています。 この値を **sys.dm_exec_sql_text()** に渡して、関連付けられている SQL テキストを取得できます。|  
 |64|**SessionLoginName**|セッションを開始したユーザーのログイン名。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に **Login1** を使用して接続し、 **Login2**としてステートメントを実行した場合、 **SessionLoginName** には **Login1**が表示され、 **LoginName** には **Login2**が表示されます。 このデータ列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|  
   
- **[ @on=]** *上*  
- このイベントを ON (1) にするか OFF (0) にするかを指定します。 **は**ビット**、既定値はありません。  
+ **[ @on=]** *on*  
+ このイベントを ON (1) にするか OFF (0) にするかを指定します。 *で* は **ビット**, 、既定値はありません。  
   
  場合*で*に設定されている**1**、および*column_id*を NULL にしてから、イベントが ON に設定されているすべての列を消去します。 場合*column_id*が null でない列はそのイベントを ON に設定されます。  
   
@@ -350,7 +353,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_addnewqueue**  
   
--   **この**  
+-   **xp_trace_eventclassrequired**  
   
 -   **xp_trace_seteventclassrequired**  
   
@@ -360,7 +363,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  トレース ストアド プロシージャを使用した例については、「[トレースの作成 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)」を参照してください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ユーザーに ALTER TRACE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

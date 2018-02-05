@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_server_services
 - sys.dm_server_services_TSQL
 - dm_server_services_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_server_services dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_server_services dynamic management view
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 08a4cd914783a094cf9d9ae681d3a3695af34e4d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 205d755e46b472cfca44170819ba177e523e4f3f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +54,9 @@ ms.lasthandoff: 01/08/2018
 |cluster_nodename|**nvarchar (256)**|サービスがインストールされているクラスター ノードの名前。 NULL 値が許可されます。|
 |instant_file_initialization_enabled|**nvarchar(1)**|ファイルの瞬時初期化が有効になっているかどうかを指定します、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]サービス。<br /><br />Y = サービスのファイルの瞬時初期化が有効にします。<br /><br />N = ファイルの瞬時初期化は、サービスで無効にします。<br /><br /> NULL 値が許可されます。<br /><br /> **注:** SQL Server エージェントなどの他のサービスには適用されません。<br /><br /> **適用されます:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降で[!INCLUDE[sssql11](../../includes/sssql11-md.md)]SP4、および[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じてを通じて SP1 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|  
 
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>アクセス許可  
+### <a name="permissions"></a>権限  
  サーバーに対する `VIEW SERVER STATE` 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
