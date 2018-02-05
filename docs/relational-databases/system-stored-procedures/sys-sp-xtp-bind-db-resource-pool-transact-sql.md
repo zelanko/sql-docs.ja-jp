@@ -1,5 +1,5 @@
 ---
-title: "sys.sp_xtp_bind_db_resource_pool (TRANSACT-SQL) |Microsoft ドキュメント"
+title: sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sp_xtp_bind_db_resource_pool
 - sys.sp_xtp_bind_db_resource_pool_TSQL
 - sys.sp_xtp_bind_db_resource_pool
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_xtp_bind_db_resource_pool
 - sys.sp_xtp_bind_db_resource_pool
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
-caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8ca783fe598e05a83c32a22e821f9b0ce48760c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8bcac671ebd335be8e6f22a1385d0c038e61e365
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +72,7 @@ Database 'Hekaton_DB213' does not exist. Make sure that the name is entered corr
 ```  
   
 **データベースは、システム データベースは、**  
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)] テーブルをシステム データベースに作成することはできません。  そのため、そのようなデータベースに[!INCLUDE[hek_2](../../includes/hek-2-md.md)] メモリのバインドを作成するのは無効です。  次のエラーが返されます。  
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] システム データベースでは、テーブルを作成できません。  そのため、そのようなデータベースに[!INCLUDE[hek_2](../../includes/hek-2-md.md)] メモリのバインドを作成するのは無効です。  次のエラーが返されます。  
 *Database_name %s は、システム データベースを参照します。リソース プールは、ユーザー データベースにのみバインド可能性があります。*  
   
 ```  
@@ -97,7 +99,7 @@ Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'
 ```  
   
 **データベースは既に別のリソース プールにバインドされています**  
- データベースにバインドできるのは、1 度に 1 つのリソース プールだけです。 データベースを別のリソース プールにバインドする前に、リソース プールに対するデータベースのバインドを明示的に削除する必要があります。 参照してください[sys.sp_xtp_unbind_db_resource_pool &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
+ データベースにバインドできるのは、1 度に 1 つのリソース プールだけです。 データベースを別のリソース プールにバインドする前に、リソース プールに対するデータベースのバインドを明示的に削除する必要があります。 参照してください[sys.sp_xtp_unbind_db_resource_pool &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)。  
 *データベース %s は既にをリソース プール %s にバインドされています。新しいバインディングを作成する前にバインドを解除する必要があります。*  
   
 ```  

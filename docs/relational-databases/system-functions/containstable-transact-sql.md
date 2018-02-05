@@ -8,13 +8,15 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CONTAINSTABLE
 - CONTAINSTABLE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - precise or fuzzy (less precise) matches [full-text search]
 - fuzzy (less precise) word or phrase search [full-text search]
@@ -33,16 +35,16 @@ helpviewer_keywords:
 - rankings [full-text search]
 - less precise (fuzzy) searches [full-text search]
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be9da8f4e10f299844f5ea6895f189c5c4fe4c3c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a9f4ab666351984b62e47d664d17d9e2769337cd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -134,7 +136,7 @@ CONTAINSTABLE
  言語*language_term*  
  リソースが単語区切り、語幹検索、および類義語辞典、およびノイズ ワードを使用する言語は、(または[ストップ ワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md))、クエリの一部として削除します。 このパラメーターは省略可能で、言語のロケール識別子 (LCID) に対応する文字列、整数、または 16 進数の値を指定できます。 場合*language_term*を指定すると、その言語は検索条件のすべての要素に適用されます。 値を指定しなかった場合は、列のフルテキストの言語が使用されます。  
   
- 1 つの列に言語の異なる複数のドキュメントが BLOB (Binary Large Object) として格納されている場合、そのインデックスの作成に使用される言語は、そのドキュメントのロケール識別子 (LCID) によって決まります。 このような列のクエリを実行する場合を指定して*言語**language_term*とよく一致の確率を高めることができます。  
+ 1 つの列に言語の異なる複数のドキュメントが BLOB (Binary Large Object) として格納されている場合、そのインデックスの作成に使用される言語は、そのドキュメントのロケール識別子 (LCID) によって決まります。 このような列のクエリを実行する場合を指定して*言語 * * language_term*とよく一致の確率を高めることができます。  
   
  文字列として指定すると*language_term*に対応する、**エイリアス**列の値、 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)互換性ビューです。  文字列は、ように、単一引用符で囲む必要があります '*language_term*' です。 整数として指定すると*language_term*言語を識別する実際の LCID です。 16 進数の値として指定する*language_term*は 0 x 後に LCID の 16 進数の値。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
   
@@ -146,12 +148,12 @@ CONTAINSTABLE
  だけを *n* 降順で最高順位の一致が返されます。 整数値、場合にのみ適用されます *n*を指定します。 *top_n_by_rank* を他のパラメーターと組み合わせた場合、クエリから返される行数は、実際にすべての述語に一致する行数より少なくなります。 *top_n_by_rank*最も重要なヒットだけを再度呼び出すことによってクエリ パフォーマンスを向上することができます。  
   
  <contains_search_condition>  
- 内で検索するテキストを示す*column_name*と一致するための条件。 検索条件については、次を参照してください。 [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md).  
+ 内で検索するテキストを示す*column_name*と一致するための条件。 検索条件については、次を参照してください。 [CONTAINS &#40;です。TRANSACT-SQL と #41 です](../../t-sql/queries/contains-transact-sql.md)。  
   
 ## <a name="remarks"></a>解説  
  フルテキストの述語と関数の対象は、FROM 述語で示される 1 つのテーブルです。 複数のテーブルを検索するには、FROM 句で結合テーブルを使用して、複数のテーブルが組み合わされた結果セットを検索します。  
   
- 返されるテーブルがという名前の列を持つ**キー**フルテキスト キー値を格納しています。 各フルテキスト インデックス付きテーブルがあり、値を持つことが保証されます、一意である列で返される値、**キー**列で指定した選択条件に一致する行のフルテキスト キー値は、検索が含まれています条件です。 **TableFulltextKeyColumn** OBJECTPROPERTYEX 関数から取得したプロパティは、この一意のキー列の id を提供します。 フルテキスト インデックスのフルテキスト キーに関連付けられている列の ID を取得するには使用**sys.fulltext_indexes**です。 詳細については、次を参照してください。 [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ 返されるテーブルがという名前の列を持つ**キー**フルテキスト キー値を格納しています。 各フルテキスト インデックス付きテーブルがあり、値を持つことが保証されます、一意である列で返される値、**キー**列で指定した選択条件に一致する行のフルテキスト キー値は、検索が含まれています条件です。 **TableFulltextKeyColumn** OBJECTPROPERTYEX 関数から取得したプロパティは、この一意のキー列の id を提供します。 フルテキスト インデックスのフルテキスト キーに関連付けられている列の ID を取得するには使用**sys.fulltext_indexes**です。 詳細については、次を参照してください。 [sys.fulltext_indexes &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
   
  元のテーブルから目的の行を取得するには、CONTAINSTABLE 行との結合を指定してください。 CONTAINSTABLE を使用する場合、通常は次の形式で FROM 句を SELECT ステートメントに指定します。  
   
@@ -168,7 +170,7 @@ FROM table AS FT_TBL INNER JOIN
   
 -   選択リストで使用し、それぞれの行に割り当てられている順位値を表示する。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  実行権限は、対象テーブルまたは参照されるテーブル内の列に対して SELECT 特権を持っているユーザーにだけ与えられます。  
   
 ## <a name="examples"></a>使用例  

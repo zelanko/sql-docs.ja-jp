@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_index_operational_stats_TSQL
 - sys.dm_db_index_operational_stats
 - dm_db_index_operational_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_index_operational_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_index_operational_stats dynamic management function
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3856ea2062d6575f34382c2489d3a80ece259203
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3866f4dfbd25fc665949455969b1546bd906462a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  メモリ最適化インデックスは、この DMV には表示されません。    
     
 > [!NOTE]    
->  **sys.dm_db_index_operational_stats**メモリ最適化インデックスに関する情報は返されません。 メモリ最適化インデックスの使用方法については、次を参照してください。 [sys.dm_db_xtp_index_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).    
+>  **sys.dm_db_index_operational_stats**メモリ最適化インデックスに関する情報は返されません。 メモリ最適化インデックスの使用方法については、次を参照してください。 [sys.dm_db_xtp_index_stats &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)。    
         
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
@@ -55,26 +58,26 @@ sys.dm_db_index_operational_stats (
 ```    
     
 ## <a name="arguments"></a>引数    
- *database_id* |NULL |0 |既定値    
+ *database_id* | NULL | 0 | DEFAULT    
  データベースの ID です。 *database_id*は**smallint**です。 有効な入力値は、データベースの ID 番号、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。    
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのすべてのデータベースに関する情報を返すには NULL を指定します。 NULL を指定する場合*database_id*の場合は NULL を指定する必要がありますも*object_id*、 *index_id*、および*partition_number*です。    
     
  組み込み関数は、 [DB_ID](../../t-sql/functions/db-id-transact-sql.md)を指定できます。    
     
- *object_id* |NULL |0 |既定値    
+ *object_id* | NULL | 0 | DEFAULT    
  インデックスがあるテーブルまたはビューのオブジェクト ID を指定します。 *object_ID* は **int**です。    
     
  有効な入力値は、テーブルおよびビューの ID 番号、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。    
     
  NULL を指定すると、指定されたデータベース内にあるすべてのテーブルとビューに関するキャッシュされた情報が返されます。 NULL を指定する場合*object_id*の場合は NULL を指定する必要がありますも*index_id*と*partition_number*です。    
     
- *index_id* | 0 |NULL |-1 |既定値    
+ *index_id* | 0 | NULL | -1 | DEFAULT    
  インデックスの ID。 *index_id*は**int**です。有効な入力値は、ID 番号、インデックス 0 の場合*object_id*ヒープ、NULL、-1、または DEFAULT です。 既定値は -1 です。このコンテキストでは、NULL、-1、および DEFAULT は同じ値になります。    
     
  NULL を指定すると、ベース テーブルまたはビューのすべてのインデックスに関するキャッシュされた情報が返されます。 NULL を指定する場合*index_id*の場合は NULL を指定する必要がありますも*partition_number*です。    
     
- *partition_number* |NULL |0 |既定値    
+ *partition_number* | NULL | 0 | DEFAULT    
  オブジェクト内のパーティション番号を指定します。 *partition_number*は**int**です。有効な値は、 *partion_number*のインデックスまたはヒープ、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。    
     
  NULL を指定すると、インデックスまたはヒープのすべてのパーティションについてキャッシュされた情報が返されます。    
@@ -88,7 +91,7 @@ sys.dm_db_index_operational_stats (
 |**database_id**|**smallint**|データベース ID。|    
 |**object_id**|**int**|テーブルまたはビューの ID。|    
 |**index_id**|**int**|インデックスまたはヒープの ID。<br /><br /> 0 = ヒープ|    
-|**hobt_id で**|**bigint**|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> データ ヒープまたは列ストア インデックスの内部データを追跡する B ツリーの行セットの ID。<br /><br /> NULL: これは、内部の列ストア行セットではありません。<br /><br /> 詳細については、次を参照してください。 [sys.internal_partitions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
+|**hobt_id**|**bigint**|**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> データ ヒープまたは列ストア インデックスの内部データを追跡する B ツリーの行セットの ID。<br /><br /> NULL: これは、内部の列ストア行セットではありません。<br /><br /> 詳細については、次を参照してください。 [sys.internal_partitions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
 |**partition_number**|**int**|インデックスまたはヒープ内の、1 から始まるパーティション番号。|    
 |**leaf_insert_count**|**bigint**|リーフレベルの挿入の累積数。|    
 |**leaf_delete_count**|**bigint**|リーフレベルの削除の累積数。 leaf_delete_count としてマークされていないゴースト最初に削除されたレコードだけ増加します。 最初に、非実体化は、削除されたレコードの**leaf_ghost_count**は代わりにインクリメントされます。|    
@@ -178,14 +181,14 @@ sys.dm_db_index_operational_stats (
  列の値**lob_fetch_in_pages**と**lob_fetch_in_bytes**付加列として 1 つまたは複数の LOB 列を含む非クラスター化インデックスを 0 より大きくすることができます。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。 列の値では同様に、 **row_overflow_fetch_in_pages**と**row_overflow_fetch_in_bytes**プッシュできる列がインデックスに含まれている場合、非クラスター化インデックスの場合は 0 より大きい値を指定できます行外にします。    
     
 ## <a name="how-the-counters-in-the-metadata-cache-are-reset"></a>メタデータ キャッシュ内のカウンターのリセット方法    
- によって返されるデータ**sys.dm_db_index_operational_stats**としてヒープまたはインデックスを表すメタデータ キャッシュ オブジェクトが使用可能な限りのみ存在します。 このデータは持続性はなく、トランザクション上の一貫性もありません。 つまり、これらのカウンターを使って、インデックスが使用されているかどうかや、インデックスが最後に使用されたのはいつであるかを判断することはできません。 詳細については、次を参照してください。 [sys.dm_db_index_usage_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md).    
+ によって返されるデータ**sys.dm_db_index_operational_stats**としてヒープまたはインデックスを表すメタデータ キャッシュ オブジェクトが使用可能な限りのみ存在します。 このデータは持続性はなく、トランザクション上の一貫性もありません。 つまり、これらのカウンターを使って、インデックスが使用されているかどうかや、インデックスが最後に使用されたのはいつであるかを判断することはできません。 詳細については、次を参照してください。 [sys.dm_db_index_usage_stats &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)。    
     
  ヒープまたはインデックスに対するメタデータがメタデータ キャッシュに組み込まれるたび、各列の値はゼロに設定されます。統計値は、キャッシュ オブジェクトがメタデータ キャッシュから削除されるまで累積されます。 そのため、アクティブなヒープまたはインデックス可能性がありますが常にそのメタデータ キャッシュ内と累積数は以降のインスタンスのアクティビティを反映することがあります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が最後に起動します。 アクティブになる頻度が低いヒープやインデックスのメタデータは、使用状況に応じてキャッシュ内外に移動されます。 その結果、使用できる値が存在する場合と、存在しない場合が発生します。 インデックスを削除すると、対応する統計はメモリから削除され、この関数ではレポートされなくなります。 インデックスに対するその他の DDL 操作によって、統計の値がゼロにリセットされる場合もあります。    
     
 ## <a name="using-system-functions-to-specify-parameter-values"></a>システム関数によるパラメーター値の指定    
- 使用することができます、[!INCLUDE[tsql](../../includes/tsql-md.md)]関数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)と[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)の値を指定する、 *database_id*と*object_id*パラメーター。 ただし、これらの関数に無効な値を渡すと、意図しない結果が生じる可能性があります。 DB_ID または OBJECT_ID を使用する場合は、必ず有効な ID が返されるようにしてください。 詳細については、「解説」セクションを参照してください。 [sys.dm_db_index_physical_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
+ 使用することができます、[!INCLUDE[tsql](../../includes/tsql-md.md)]関数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)と[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)の値を指定する、 *database_id*と*object_id*パラメーター。 ただし、これらの関数に無効な値を渡すと、意図しない結果が生じる可能性があります。 DB_ID または OBJECT_ID を使用する場合は、必ず有効な ID が返されるようにしてください。 詳細については、「解説」セクションを参照してください。 [sys.dm_db_index_physical_stats &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)。    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>権限    
  次の権限が必要です。    
     
 -   データベース内の指定したオブジェクトに対する CONTROL 権限。    
@@ -198,7 +201,7 @@ sys.dm_db_index_operational_stats (
     
  VIEW DATABASE STATE 権限を拒否すると、特定のオブジェクトに対する CONTROL 権限が許可されていたとしても、そのデータベース内のどのオブジェクトも取得できません。 データベースのワイルドカード @*database_id*= NULL を指定すると、データベースは省略します。    
     
- 詳細については、次を参照してください[動的管理ビューおよび関数 &#40;。TRANSACT-SQL と #41 です。](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).    
+ 詳細については、次を参照してください[動的管理ビューおよび関数 &#40;。TRANSACT-SQL と #41 です](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。    
     
 ## <a name="examples"></a>使用例    
     
@@ -240,7 +243,7 @@ GO
     
 ## <a name="see-also"></a>参照    
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
- [インデックス関連の動的管理ビューおよび関数 &#40;TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
+ [インデックス関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
  [sys.dm_db_index_usage_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     

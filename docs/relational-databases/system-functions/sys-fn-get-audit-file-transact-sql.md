@@ -26,13 +26,13 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ac4372d753bdc9fde231d2ec08daa957771dc46
-ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
+ms.openlocfilehash: efaffab66cba6d95d76d7c5371e43db1aca9f744
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ fn_get_audit_file ( file_pattern,
  initial_file_name で指定したファイルを使用して既知の場所を指定します。 この引数を使用した場合、関数は、指定されたオフセットの直後にあるバッファーの最初のレコードから読み取りを開始します。  
   
 > [!NOTE]  
->  *Audit_record_offset*引数が有効なエントリを含める必要がありますか、またはいずれかの既定値を含める必要があります |NULL 値です。 種類は**bitint**です。  
+>  *Audit_record_offset*引数が有効なエントリを含める必要がありますか、またはいずれかの既定値を含める必要があります |NULL 値です。 種類は**bigint**です。  
   
 ## <a name="tables-returned"></a>返されたテーブル  
  次の表に、この関数から返される監査ファイルの内容を示します。  
@@ -119,7 +119,7 @@ fn_get_audit_file ( file_pattern,
 |additional_information|**nvarchar (4000)**|単一のイベントに対してだけ適用される固有の情報が XML として返されます。 この種類の情報は、少数の監査可能なアクションに含まれます。<br /><br /> TSQL スタックが関連付けられているアクションに関して、XML 形式には、1 レベルの TSQL スタックが表示されます。 この XML 形式は次のとおりです。<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> frame nest_level は、フレームの現在の入れ子レベルを示します。 モジュール名は 3 つの部分 (database_name、schema_name、object_name) から成る形式で表されます。  モジュール名は無効な xml 文字をエスケープするために解析されます`'\<'`、 `'>'`、 `'/'`、`'_x'`です。 としてエスケープされます`_xHHHH\_`です。 HHHH は、その文字の 4 桁の 16 進数 UCS-2 コードを表しています。<br /><br /> NULL 値が許可されます。 イベントから追加情報が報告されない場合は NULL を返します。|  
 |file_name|**varchar(260)**|レコードの読み取り元の監査ログ ファイルのパスと名前。 NULL 値は許可されません。|  
 |audit_file_offset|**bigint**|監査レコードを含むファイルのバッファー オフセット。 NULL 値は許可されません。|  
-|user_defined_event_id|**smallint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 引数として渡されるユーザー定義のイベント id **sp_audit_write**です。 **NULL**システム イベント (既定値) のユーザー定義のイベントには 0 以外。 詳細については、次を参照してください。 [sp_audit_write &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
+|user_defined_event_id|**smallint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 引数として渡されるユーザー定義のイベント id **sp_audit_write**です。 **NULL**システム イベント (既定値) のユーザー定義のイベントには 0 以外。 詳細については、次を参照してください。 [sp_audit_write &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)。|  
 |user_defined_information|**nvarchar (4000)**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> ユーザーに記録する追加情報を記録するために使用 |監査ログを使用して、 **sp_audit_write**ストアド プロシージャです。|  
 |audit_schema_version |**int** | |  
 |sequence_group_id |**varbinary** | SQL Server のみ (2016年以降) |  

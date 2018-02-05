@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_sql_referenced_entities
 - sys.dm_sql_referenced_entities
 - sys.dm_sql_referenced_entities_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_sql_referenced_entities dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba6329fb017dd398e9ff17586c8bbbab8f3ba455
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8af92c77cf5ab1f1c43f5c4cb529fe97b7de787a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +71,7 @@ sys.dm_sql_referenced_entities (
 ```  
   
 ## <a name="arguments"></a>引数  
- [ *schema_name*です。 *referencing_entity_name*  
+ [ *schema_name*. ] *referencing_entity_name*  
  参照元エンティティの名前です。 *schema_name*参照元のクラスが OBJECT の場合は必須です。  
   
  *schema_name.referencing_entity_name*は**nvarchar (517)**です。  
@@ -91,8 +94,8 @@ sys.dm_sql_referenced_entities (
 |referenced_id|**int**|参照先エンティティの ID。 referenced_minor_id が 0 以外の場合、referenced_id は、その列が定義されているエンティティになります。<br /><br /> 複数サーバーにまたがる参照の場合は常に NULL。<br /><br /> 複数データベースにまたがる参照で、データベースがオフラインか、エンティティをバインドできないために ID を判別できない場合は NULL。<br /><br /> データベース内の参照で ID を判別できない場合は、NULL。 非スキーマ バインド参照のため、データベース内、または名前解決が呼び出し元に依存、参照先エンティティが存在しない場合に、ID を解決できません。  後者の場合は、is_caller_dependent は 1 に設定されます。<br /><br /> スキーマ バインド参照の場合、NULL にすることはできません。|  
 |referenced_minor_id|**int**|参照先エンティティが列の場合は列 ID。それ以外の場合は 0。 たとえば、参照先エンティティ自体を一覧表示する行では、referenced_minor_id は 0 になります。<br /><br /> 非スキーマ バインド参照の場合、列の依存関係は、すべての参照先エンティティがバインドできる場合にのみ報告されます。 バインドできない参照先エンティティが 1 つでも存在した場合、列レベルの依存関係は報告されず、referenced_minor_id は 0 になります。 例 D を参照してください。|  
 |referenced_class|**tinyint**|参照先エンティティのクラス。<br /><br /> 1 = オブジェクトまたは列<br /><br /> 6 = 型<br /><br /> 10 = XML スキーマ コレクション<br /><br /> 21 = パーティション関数|  
-|referenced_class_desc|**nvarchar (60)**|参照先エンティティのクラスの説明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
-|is_caller_dependent|**bit**|スキーマ バインド参照先エンティティが実行時に発生したことを示します。そのため、エンティティ ID の解決は、呼び出し元のスキーマに依存します。 これが該当するのは、参照先エンティティがストアド プロシージャ、拡張ストアド プロシージャ、または、EXECUTE ステートメント内で呼び出されるユーザー定義関数である場合です。<br /><br /> 1 = 参照先エンティティが呼び出し元に依存し、実行時に解決されます。 この場合、referenced_id は NULL です。<br /><br /> 0 = 参照先エンティティの ID は呼び出し元に依存しません。 スキーマ バインド参照のほか、スキーマ名を明示的に指定するデータベース間参照やサーバー間参照の場合は常に 0 になります。 たとえば、`EXEC MyDatabase.MySchema.MyProc` 形式のエンティティ参照は呼び出し元に依存しません。 ただし、形式の参照 `EXEC MyDatabase..MyProc` が呼び出し元が依存しています。|  
+|referenced_class_desc|**nvarchar(60)**|参照先エンティティのクラスの説明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
+|is_caller_dependent|**bit**|スキーマ バインド参照先エンティティが実行時に発生したことを示します。そのため、エンティティ ID の解決は、呼び出し元のスキーマに依存します。 これが該当するのは、参照先エンティティがストアド プロシージャ、拡張ストアド プロシージャ、または、EXECUTE ステートメント内で呼び出されるユーザー定義関数である場合です。<br /><br /> 1 = 参照先エンティティが呼び出し元に依存し、実行時に解決されます。 この場合、referenced_id は NULL です。<br /><br /> 0 = 参照先エンティティの ID は呼び出し元に依存しません。 スキーマ バインド参照のほか、スキーマ名を明示的に指定するデータベース間参照やサーバー間参照の場合は常に 0 になります。 たとえば、`EXEC MyDatabase.MySchema.MyProc` 形式のエンティティ参照は呼び出し元に依存しません。 ただし、形式の参照`EXEC MyDatabase..MyProc`が呼び出し元が依存しています。|  
 |is_ambiguous|**bit**|参照があいまいで、実行時、ユーザー定義関数、ユーザー定義型 (UDT)、または型の列への xquery 参照に解決できることを示します**xml**です。 たとえば、ステートメント`SELECT Sales.GetOrder() FROM Sales.MySales`ストアド プロシージャで定義されています。 `Sales.GetOrder()` が `Sales` スキーマ内のユーザー定義関数なのか、`Sales` という名前のメソッドを持つ UDT 型の `GetOrder()` という名前の列なのかは、ストアド プロシージャが実行されるまで不明です。<br /><br /> 1 = ユーザー定義関数の参照なのか、列のユーザー定義型 (UDT) のメソッドなのかがあいまいです。<br /><br /> 0 = 参照は明確です。つまり、関数を呼び出したときに、エンティティを正しくバインドできます。<br /><br /> スキーマ バインド参照の場合は常に 0 になります。|  
 |is_selected|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = オブジェクトまたは列が選択されています。|  
 |is_updated|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = オブジェクトまたは列が変更されています。|  
@@ -123,28 +126,28 @@ sys.dm_sql_referenced_entities (
   
 |エンティティの種類|参照元エンティティ|参照先エンティティ|  
 |-----------------|------------------------|-----------------------|  
-|テーブル|可*|可|  
-|表示|可|可|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ**|可|可|  
-|CLR ストアド プロシージャ (CLR stored procedure)|不可|可|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数|可|可|  
-|CLR ユーザー定義関数|不可|可|  
-|CLR トリガー (DML および DDL)|不可|不可|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガー|可|不可|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]データベース レベルの DDL トリガー|可|不可|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー レベルの DDL トリガー|可|不可|  
-|拡張ストアド プロシージャ|不可|可|  
-|キュー|不可|可|  
-|シノニム|不可|可|  
-|型 (別名および CLR ユーザー定義型)|不可|可|  
-|XML スキーマ コレクション|不可|可|  
-|パーティション関数|不可|可|  
+|Table|可*|はい|  
+|表示|はい|はい|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ * *|はい|はい|  
+|CLR ストアド プロシージャ (CLR stored procedure)|いいえ|はい|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数 (user-defined function)|はい|はい|  
+|CLR ユーザー定義関数|いいえ|はい|  
+|CLR トリガー (DML および DDL)|いいえ|いいえ|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガー (DML trigger)|はい|いいえ|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] データベース レベルの DDL トリガー|はい|いいえ|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー レベルの DDL トリガー|はい|いいえ|  
+|拡張ストアド プロシージャ|いいえ|はい|  
+|キュー|いいえ|はい|  
+|シノニム|いいえ|はい|  
+|型 (別名および CLR ユーザー定義型)|いいえ|はい|  
+|XML スキーマ コレクション|いいえ|はい|  
+|パーティション関数|いいえ|はい|  
   
  \*テーブルは、参照している場合にのみ、参照元エンティティとして追跡、[!INCLUDE[tsql](../../includes/tsql-md.md)]モジュール、ユーザー定義型、または計算列、CHECK 制約、または既定の制約の定義の XML スキーマ コレクションです。  
   
  ** 1 より大きな整数値を持つ番号付きストアド プロシージャは、参照元エンティティとしても、参照先エンティティとしても追跡されません。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  sys.dm_sql_referenced_entities に対する SELECT 権限および参照元エンティティに対する VIEW DEFINITION 権限が必要です。 既定では、SELECT 権限が public に与えられます。 参照元エンティティがデータベース レベルの DDL トリガーである場合は、データベースに対する VIEW DEFINITION 権限またはデータベースに対する ALTER DATABASE DDL TRIGGER 権限が必要です。 参照元エンティティがサーバー レベルの DDL トリガーである場合は、サーバーに対する VIEW ANY DEFINITION 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

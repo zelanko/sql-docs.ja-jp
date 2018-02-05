@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_fts_index_population
 - sys.dm_fts_index_population_TSQL
 - dm_fts_index_population_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_index_population dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_index_population dynamic management view
 ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 719da7d41ba34adcf7a3aa7ccc53a14217e657ff
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8f118b1be30119e7328ee20477a0c18808fbdc3e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,13 +43,13 @@ ms.lasthandoff: 11/17/2017
 |**database_id**|**int**|作成中のフルテキスト インデックスを含むデータベースの ID。|  
 |**catalog_id**|**int**|フルテキスト インデックスを含む、フルテキスト カタログの ID。|  
 |**table_id**|**int**|フルテキスト インデックスを設定しているテーブルの ID。|  
-|**memory_address**|**varbinary (8)**|アクティブな設定を表すときに使用される内部データ構造のメモリ アドレス。|  
+|**memory_address**|**varbinary(8)**|アクティブな設定を表すときに使用される内部データ構造のメモリ アドレス。|  
 |**population_type**|**int**|設定の種類。 次のいずれかです。<br /><br /> 1 = 完全設定<br /><br /> 2 = タイムスタンプに基づく増分設定<br /><br /> 3 = 追跡した変更の手動更新<br /><br /> 4 = 追跡した変更のバックグラウンド更新|  
 |**population_type_description**|**nvarchar(120)**|設定の種類の説明。|  
 |**is_clustered_index_scan**|**bit**|設定では、クラスター化されたインデックスでのスキャンが行われるかどうかを示します。|  
 |**range_count**|**int**|インデックス設定が並列処理されたサブ範囲の数。|  
 |**completed_range_count**|**int**|処理が完了した範囲の数。|  
-|**outstanding_batch_count**|**int**|このインデックス設定で現在未解決のバッチの数。 詳細については、次を参照してください。 [sys.dm_fts_outstanding_batches &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
+|**outstanding_batch_count**|**int**|このインデックス設定で現在未解決のバッチの数。 詳細については、次を参照してください。 [sys.dm_fts_outstanding_batches &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)。|  
 |**ステータス**|**int**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 設定の状態。 注 : 状態によっては、一時的なものもあります。 次のいずれかです。<br /><br /> 3 = 開始<br /><br /> 5 = 正常に処理中<br /><br /> 7 = 処理を停止<br /><br /> たとえば、この状態は自動マージの進行中に発生します。<br /><br /> 11 = 作成が中止されました<br /><br /> 12 = セマンティックな類似性の抽出を実行中|  
 |**status_description**|**nvarchar(120)**|作成の状態の説明。|  
 |**completion_type**|**int**|設定の完了の状態。|  
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>解説  
  フルテキスト インデックス作成に加えて統計的セマンティック インデックス作成が有効になっている場合は、キー フレーズのセマンティックな抽出と作成、およびドキュメントの類似性データの抽出が、フルテキスト インデックス作成と同時に実行されます。 ドキュメントの類似性に関するインデックスの作成は、2 番目のフェーズで実行されます。 詳細については、次を参照してください。[モニター セマンティック検索の管理と](../../relational-databases/search/manage-and-monitor-semantic-search.md)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 階層が必要です、`VIEW DATABASE STATE`データベースの権限です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。  
  

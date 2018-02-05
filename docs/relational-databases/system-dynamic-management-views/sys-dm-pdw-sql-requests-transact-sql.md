@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4cdf51b635fb1b7e29ab20a65704fc560ce8496
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8f345dbbdda12ade363b4d5f8a52f5cca80e564f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmpdwsqlrequests-transact-sql"></a>sys.dm_pdw_sql_requests (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,12 +33,12 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar (32)**|この SQL クエリの分布が属している、クエリの一意の識別子。<br /><br /> request_id、step_index、および distribution_id は、このビューのキーを形成します。|Request_id 内を参照してください[sys.dm_pdw_exec_requests &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
-|step_index|**int**|このような配布の一部であるクエリのステップのインデックスです。<br /><br /> request_id、step_index、および distribution_id は、このビューのキーを形成します。|Step_index を参照してください[sys.dm_pdw_request_steps &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
-|pdw_node_id|**int**|このクエリの配布を実行するノードの一意の識別子。|Node_id を参照してください[sys.dm_pdw_nodes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|distribution_id|**int**|このクエリの配布を実行する配布の一意の識別子。<br /><br /> request_id、step_index、および distribution_id は、このビューのキーを形成します。|Distribution_id を参照してください[sys.pdw_distributions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md). ノード スコープの配布のスコープではないで実行される要求の場合は-1 に設定されます。|  
-|ステータス|**nvarchar (32)**|クエリの分布の現在の状態。|保留中の実行して、失敗、取り消し済み、完了、中止、CancelSubmitted|  
-|error_id|**nvarchar (36)**|エラーの一意識別子は、存在する場合に、このクエリの配布に関連付けられました。|Error_id を参照してください[sys.dm_pdw_errors &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). エラーが発生していない場合は、NULL に設定します。|  
+|request_id|**nvarchar(32)**|この SQL クエリの分布が属している、クエリの一意の識別子。<br /><br /> request_id、step_index、および distribution_id は、このビューのキーを形成します。|Request_id 内を参照してください[sys.dm_pdw_exec_requests &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
+|step_index|**int**|このような配布の一部であるクエリのステップのインデックスです。<br /><br /> request_id、step_index、および distribution_id は、このビューのキーを形成します。|Step_index を参照してください[sys.dm_pdw_request_steps &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)。|  
+|pdw_node_id|**int**|このクエリの配布を実行するノードの一意の識別子。|Node_id を参照してください[sys.dm_pdw_nodes &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)。|  
+|distribution_id|**int**|このクエリの配布を実行する配布の一意の識別子。<br /><br /> request_id、step_index、および distribution_id は、このビューのキーを形成します。|Distribution_id を参照してください[sys.pdw_distributions &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)。 ノード スコープの配布のスコープではないで実行される要求の場合は-1 に設定されます。|  
+|ステータス|**nvarchar(32)**|クエリの分布の現在の状態。|保留中の実行して、失敗、取り消し済み、完了、中止、CancelSubmitted|  
+|error_id|**nvarchar(36)**|エラーの一意識別子は、存在する場合に、このクエリの配布に関連付けられました。|Error_id を参照してください[sys.dm_pdw_errors &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)。 エラーが発生していない場合は、NULL に設定します。|  
 |start_time|**datetime**|クエリでは、配布は実行を開始した時刻。|このクエリの分布に属するより小さいまたは現在の時刻に等しいと大きいまたは等しい start_time クエリのステップの|  
 |end_time|**datetime**|このクエリの分布の実行完了したが取り消された場合、または失敗したの時間です。|以上の開始時刻、またはクエリの分布が継続的なまたはキューに置かれた場合は NULL に設定します。|  
 |total_elapsed_time|**int**|クエリの配布が実行されている、ミリ秒単位で時間を表します。|大きいまたは 0 を設定します。 Start_time のデルタに等しいと end_time 完了、失敗、またはクエリの分布が取り消されました。<br /><br /> Total_elapsed_time では、整数の最大値を超えると、total_elapsed_time 引き続き、最大値になります。 この状態が「、最大値を超過しました」警告を生成します。<br /><br /> 最大値をミリ秒単位は 24.8 日に相当します。|  

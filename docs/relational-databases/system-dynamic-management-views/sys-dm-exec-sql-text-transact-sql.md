@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_sql_text (TRANSACT-SQL) |Microsoft ドキュメント"
+title: sys.dm_exec_sql_text (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_sql_text
 - sys.dm_exec_sql_text_TSQL
 - dm_exec_sql_text_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_sql_text dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_sql_text dynamic management function
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e024b0147fb716adfba320d2129a7d623bbff85d
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2a2e9eac12ffb3c3ef7ada6e94013ed387e2dd9f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,11 +76,11 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|データベースの ID。<br /><br /> アドホック SQL ステートメントおよび準備された SQL ステートメントの場合、ステートメントがコンパイルされたデータベースの ID。|  
 |**objectid**|**int**|オブジェクトの ID。<br /><br /> アドホック SQL ステートメントおよび準備された SQL ステートメントの場合は NULL になります。|  
-|**数**|**smallint**|番号付きストアド プロシージャの場合、ストアド プロシージャの番号。 詳細については、次を参照してください。 [sys.numbered_procedures &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> アドホック SQL ステートメントおよび準備された SQL ステートメントの場合は NULL になります。|  
-|**暗号化**|**bit**|1 = SQL テキストは暗号化されています。<br /><br /> 0 = SQL テキストは暗号化されていません。|  
-|**text**|**nvarchar (max** **)**|SQL クエリのテキスト。<br /><br /> 暗号化されているオブジェクトの場合は NULL になります。|  
+|**number**|**smallint**|番号付きストアド プロシージャの場合、ストアド プロシージャの番号。 詳細については、次を参照してください。 [sys.numbered_procedures &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)。<br /><br /> アドホック SQL ステートメントおよび準備された SQL ステートメントの場合は NULL になります。|  
+|**encrypted**|**bit**|1 = SQL テキストは暗号化されています。<br /><br /> 0 = SQL テキストは暗号化されていません。|  
+|**text**|**nvarchar(max** **)**|SQL クエリのテキスト。<br /><br /> 暗号化されているオブジェクトの場合は NULL になります。|  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="remarks"></a>解説  

@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1fabc150e92d9ca23196fbc838e5691267e9f38
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a63fcd61563499894205c3cc55323480e8a805d7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -50,8 +51,8 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @data_source_name =] *datasourcename*  
- ステートメントが実行された外部データ ソースを識別します。 参照してください[外部データ ソースの作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md). 外部データ ソースは、"RDBMS"または"SHARD_MAP_MANAGER"の型指定できます。  
+ [ @data_source_name = ] *datasourcename*  
+ ステートメントが実行された外部データ ソースを識別します。 参照してください[外部データ ソースの作成 &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/create-external-data-source-transact-sql.md)。 外部データ ソースは、"RDBMS"または"SHARD_MAP_MANAGER"の型指定できます。  
   
  [ @stmt=]*ステートメント*  
  Unicode 文字列が含まれて、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチです。 @stmtUnicode 定数または Unicode 変数のいずれかにする必要があります。 + 演算子で 2 つの文字列を連結するなどの複雑な Unicode 式は使用できません。 文字定数も使用できません。 Unicode 定数が指定されている場合に付ける必要があります、 **N**です。たとえば、Unicode 定数**N 'sp_who'**有効ですが、文字定数**'sp_who'**はありません。 文字列のサイズは、データベース サーバーで利用可能なメモリにより制限されます。 64 ビット サーバーに、文字列のサイズは 2 GB の最大サイズに制限**nvarchar (max)**です。  
@@ -61,7 +62,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
  @stmt に含める各パラメーターには、@params パラメーター定義リストとパラメーター値リストの両方に、対応するエントリが存在する必要があります。  
   
- [ @params=] N'@*parameter_name**data_type* [,...*n* ] '  
+ [ @params=] N'@*parameter_name * * data_type* [,...*n* ] '  
  @stmt に埋め込まれたすべてのパラメーターの定義が含まれている 1 つの文字列を指定します。この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*追加のパラメーター定義を示すプレース ホルダー。 すべてのパラメーターで指定された@stmtmustで定義されている@paramsです。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに@stmtパラメーターを含まない@paramsは必要ありません。 このパラメーターの既定値は NULL です。  
   
  [ @param1=] '*value1*'  
@@ -76,7 +77,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="result-sets"></a>結果セット  
  最初の SQL ステートメントからの結果セットを返します。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  必要があります`ALTER ANY EXTERNAL DATA SOURCE`権限です。  
   
 ## <a name="remarks"></a>解説  
@@ -86,7 +87,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
  `sp_execute_remote`行を生成するリモートのデータベースの名前を含む ' $ShardName' という名前が結果セットに追加の列を追加します。  
   
- `sp_execute_remote`同様に使用できる[sp_executesql &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
+ `sp_execute_remote`同様に使用できる[sp_executesql &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)。  
   
 ## <a name="examples"></a>使用例  
 ### <a name="simple-example"></a>簡単な例  
@@ -110,6 +111,6 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 
 ## <a name="see-also"></a>参照:
 
-[データベース スコープを作成する資格情報](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
-[外部データ ソース (TRANSACT-SQL) を作成します。](../../t-sql/statements/create-external-data-source-transact-sql.md)  
+[CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
+[CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
     

@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CHANGETABLE_TSQL
 - CHANGETABLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CHANGETABLE
 - change tracking [SQL Server], CHANGETABLE
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 233a613024b4e216501ea7baaaf9a363325e5998
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: fd13db35ee0a53d1c752b3ed891ed6c0fedeb557
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +53,7 @@ CHANGETABLE (
 ```  
   
 ## <a name="arguments"></a>引数  
- 変更*テーブル*、 *last_sync_version*  
+ CHANGES *table* , *last_sync_version*  
  追跡情報を返しますのすべての変更テーブルで指定したバージョン以降に発生した*last_sync_version*です。  
   
  *テーブル*  
@@ -68,9 +70,9 @@ CHANGETABLE (
   
  NULL を指定すると、すべての変更箇所が返されます。  
   
- *last_sync_version*されていないことが古すぎるため、データベース用に構成された保有期間に従って、変更情報の一部またはすべてがクリーンアップされている可能性がありますのでことを確認することを検証する必要があります。 詳細については、次を参照してください。 [CHANGE_TRACKING_MIN_VALID_VERSION (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)と[ALTER DATABASE の SET オプション &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ *last_sync_version*されていないことが古すぎるため、データベース用に構成された保有期間に従って、変更情報の一部またはすべてがクリーンアップされている可能性がありますのでことを確認することを検証する必要があります。 詳細については、次を参照してください。 [CHANGE_TRACKING_MIN_VALID_VERSION (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)と[ALTER DATABASE の SET オプション &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
- バージョン*テーブル*、{< primary_key_values >}  
+ VERSION *table*, { <primary_key_values> }  
  指定した行に関する最新の変更追跡情報を返します。 行は主キー値によって識別される必要があります。 <主キー値> で主キー列を識別し、値を指定します。 主キー列の名前は任意の順序で指定できます。  
   
  *Table*  
@@ -79,10 +81,10 @@ CHANGETABLE (
  *column_name*  
  主キー列の名前を指定します。 複数の列名を任意の順序で指定できます。  
   
- *[値]*  
+ *値*  
  主キーの値を指定します。 同じ順序で、値を指定してください、複数の主キー列がある場合に、列が表示されると、 *column_name*  ボックスの一覧です。  
   
- [と]*table_alias* [(*column_alias* [,...*n* ] ) ]  
+ [AS] *table_alias* [ (*column_alias* [ ,...*n* ] ) ]  
  CHANGETABLE によって返される結果の名前を指定します。  
   
  *table_alias*  
@@ -103,10 +105,10 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|行の最後の変更に関連付けられているバージョンの値です。|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|最後の挿入操作に関連付けられているバージョンの値です。|  
-|SYS_CHANGE_OPERATION|**nchar (1)**|変更の種類を示します。<br /><br /> **U**更新プログラムを =<br /><br /> **I**挿入を =<br /><br /> **D** = Delete|  
+|SYS_CHANGE_OPERATION|**nchar(1)**|変更の種類を示します。<br /><br /> **U**更新プログラムを =<br /><br /> **I**挿入を =<br /><br /> **D** = Delete|  
 |SYS_CHANGE_COLUMNS|**varbinary(4100)**|last_sync_version (ベースライン) 以降に変更された列の一覧です。 計算列が変更されると決して表示されていることを注意してください。<br /><br /> 以下の場合は値が NULL になります。<br /><br /> 列の変更の追跡が有効になっていない場合。<br /><br /> 操作が挿入操作または削除操作の場合。<br /><br /> すべての非主キー列が 1 回の操作で更新された場合。 このバイナリ値を直接解釈しないでください。 代わりに、その解釈は、次のように使用します。 [CHANGE_TRACKING_IS_COLUMN_IN_MASK()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)です。|  
 |SYS_CHANGE_CONTEXT|**varbinary (128)**|変更のコンテキスト情報を使用して指定することができます必要に応じて、 [WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) INSERT、UPDATE、または DELETE ステートメントの一部としての句。|  
-|\<主キー列の値 >|ユーザー テーブルの列と同じ|追跡対象テーブルの主キーの値です。 これらの値により、ユーザー テーブルの各行が一意に識別されます。|  
+|\<primary key column value>|ユーザー テーブルの列と同じ|追跡対象テーブルの主キーの値です。 これらの値により、ユーザー テーブルの各行が一意に識別されます。|  
   
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  VERSION を指定すると、次の列を含む 1 つの行が返されます。  
@@ -115,7 +117,7 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|行に関連付けられている現在の変更バージョンの値です。<br /><br /> 変更追跡情報の保有期間より長い期間にわたって変更が行われていない場合や、変更の追跡を有効にしてからまだ行が変更されていない場合は、値が NULL になります。|  
 |SYS_CHANGE_CONTEXT|**varbinary (128)**|INSERT、UPDATE、DELETE の各ステートメントの一部として WITH 句を使用することによってオプションで指定できる変更のコンテキスト情報です。|  
-|\<主キー列の値 >|ユーザー テーブルの列と同じ|追跡対象テーブルの主キーの値です。 これらの値により、ユーザー テーブルの各行が一意に識別されます。|  
+|\<primary key column value>|ユーザー テーブルの列と同じ|追跡対象テーブルの主キーの値です。 これらの値により、ユーザー テーブルの各行が一意に識別されます。|  
   
 ## <a name="remarks"></a>解説  
  CHANGETABLE 関数は、クエリの FROM 句の中でテーブルとして使用されるのが一般的です。  
@@ -146,7 +148,7 @@ CHANGETABLE (
   
  保有期間より長い期間にわたって変更が行われていない場合 (クリーンアップによって変更情報が削除されている場合など) や、テーブルに対して変更の追跡を有効にしてからまだ行が変更されていない場合、SYS_CHANGE_VERSION の値は NULL になります。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  指定されているテーブルで次のアクセス許可が必要です、*テーブル*変更追跡情報を取得する値。  
   
 -   主キー列に対する SELECT 権限  
