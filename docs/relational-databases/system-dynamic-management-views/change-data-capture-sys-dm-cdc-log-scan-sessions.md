@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_cdc_log_scan_sessions_TSQL
 - sys.dm_cdc_log_scan_sessions_TSQL
 - sys.dm_cdc_log_scan_sessions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - change data capture [SQL Server], log scan reporting
 - sys.dm_cdc_log_scan_sessions dynamic management view
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6db4f34391cf36757ed086b24ddfe3618ebbe529
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f7d81782bac9590aac7fb1905304aec53f531db1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>変更データ キャプチャの sys.dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |**start_time**|**datetime**|セッションの開始時刻です。<br /><br /> ときに**session_id**が 0 の場合、集計データの収集が開始された時刻。|  
 |**end_time**|**datetime**|セッションの時間が終了しました。<br /><br /> NULL は、セッションがアクティブであることを表します。<br /><br /> ときに**session_id**が 0 の場合、時刻、最後のセッションが終了しました。|  
 |**duration**|**bigint**|セッションの実行時間 (秒単位) です。<br /><br /> 変更データ キャプチャ トランザクションがセッションに存在しない場合は 0 になります。<br /><br /> ときに**session_id** = 0、すべてのセッション変更データ キャプチャ トランザクションの秒単位で期間の合計。|  
-|**scan_phase**|**nvarchar (200)**|セッションの現在のフェーズです。 使用可能な値とその説明を次に示します。<br /><br /> 1: 構成の読み取り<br />2: 最初のスキャン、ハッシュ テーブルの構築<br />3: 2 つ目のスキャン<br />4: 2 つ目のスキャン<br />5: 2 つ目のスキャン<br />6: スキーマのバージョン管理<br />7: 最後のスキャン<br />8: 完了<br /><br /> ときに**session_id** = 0 で、この値は"Aggregate"では常にします。|  
+|**scan_phase**|**nvarchar(200)**|セッションの現在のフェーズです。 使用可能な値とその説明を次に示します。<br /><br /> 1: 構成の読み取り<br />2: 最初のスキャン、ハッシュ テーブルの構築<br />3: 2 つ目のスキャン<br />4: 2 つ目のスキャン<br />5: 2 つ目のスキャン<br />6: スキーマのバージョン管理<br />7: 最後のスキャン<br />8: 完了<br /><br /> ときに**session_id** = 0 で、この値は"Aggregate"では常にします。|  
 |**error_count**|**int**|発生したエラーの数です。<br /><br /> ときに**session_id** = 0、すべてのセッション内のエラーの合計数。|  
 |**start_lsn**|**nvarchar(23)**|セッションの開始 LSN です。<br /><br /> ときに**session_id** = 0 の場合、最後のセッションの開始の LSN。|  
 |**current_lsn**|**nvarchar(23)**|現在スキャン中の LSN です。<br /><br /> ときに**session_id** = 0、現在の LSN は 0 です。|  
@@ -57,15 +59,15 @@ ms.lasthandoff: 11/17/2017
 |**first_begin_cdc_lsn**|**nvarchar(23)**|変更データ キャプチャ トランザクションを含んでいた最初の LSN です。<br /><br /> ときに**session_id** = 0、変更データ キャプチャ トランザクションに含まれる最初の LSN。|  
 |**last_commit_cdc_lsn**|**nvarchar(23)**|変更データ キャプチャ トランザクションを含んでいた最終コミット ログ レコードの LSN です。<br /><br /> ときに**session_id**任意のセッションに含まれる変更データ キャプチャ トランザクションの 0、最後のコミット ログ レコードの LSN を =|  
 |**last_commit_cdc_time**|**datetime**|変更データ キャプチャ トランザクションを含んでいた最終コミット ログ レコードが処理された時刻です。<br /><br /> ときに**session_id**が 0 の場合、最後のコミット ログ レコードが任意のセッションに含まれる変更データ キャプチャ トランザクションの時刻。|  
-|**待機時間**|**int**|差を秒単位で間**end_time**と**last_commit_cdc_time**セッションでします。 このカウンターはフェーズ 7 の最後に設定されます。<br /><br /> ときに**session_id** = 0、セッションによって記録された最後の待機時間が 0 以外の値。|  
+|**latency**|**int**|差を秒単位で間**end_time**と**last_commit_cdc_time**セッションでします。 このカウンターはフェーズ 7 の最後に設定されます。<br /><br /> ときに**session_id** = 0、セッションによって記録された最後の待機時間が 0 以外の値。|  
 |**empty_scan_count**|**int**|変更データ キャプチャ トランザクションが含まれていなかった、連続するセッションの数です。|  
 |**failed_sessions_count**|**int**|失敗したセッションの数です。|  
   
 ## <a name="remarks"></a>解説  
  この動的管理ビューでは値がリセットされるたびに、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が開始します。  
   
-## <a name="permissions"></a>Permissions  
- クエリに VIEW DATABASE STATE 権限が必要です、 **sys.dm_cdc_log_scan_sessions**動的管理ビュー。 動的管理ビューに対するアクセス許可の詳細については、次を参照してください[動的管理ビューおよび関数 &#40;。TRANSACT-SQL と #41 です。](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+## <a name="permissions"></a>権限  
+ クエリに VIEW DATABASE STATE 権限が必要です、 **sys.dm_cdc_log_scan_sessions**動的管理ビュー。 動的管理ビューに対するアクセス許可の詳細については、次を参照してください[動的管理ビューおよび関数 &#40;。TRANSACT-SQL と #41 です](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ## <a name="examples"></a>使用例  
  次の例では、最新のセッションの情報を返します。  

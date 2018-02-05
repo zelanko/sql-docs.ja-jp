@@ -8,21 +8,23 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a08d9b0fdb770918c1bb7c8b08e253af58be314
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2af7a56997955f12770157cfd3a89fe5ee9ac943
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspdwdatabasemappings-transact-sql"></a>sys.pdw_database_mappings (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -31,8 +33,8 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|physical_name|**nvarchar (36)**|コンピューティング ノードで、データベースの物理名。<br /><br /> **physical_name**と**database_id**このビューのキーを形成します。||  
-|database_id|**int**|データベースのオブジェクト ID。 参照してください[sys.databases &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).<br /><br /> **physical_name**と**database_id**このビューのキーを形成します。||  
+|physical_name|**nvarchar(36)**|コンピューティング ノードで、データベースの物理名。<br /><br /> **physical_name**と**database_id**このビューのキーを形成します。||  
+|database_id|**int**|データベースのオブジェクト ID。 参照してください[sys.databases &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。<br /><br /> **physical_name**と**database_id**このビューのキーを形成します。||  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、sys.pdw_database_mappings をデータベースにマップする方法を表示するには、他のシステム テーブルに結合します。  

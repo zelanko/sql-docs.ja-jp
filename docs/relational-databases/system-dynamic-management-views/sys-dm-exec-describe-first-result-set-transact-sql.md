@@ -8,32 +8,35 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_describe_first_result_set
 - sys.dm_exec_describe_first_result_set_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_describe_first_result_set catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_describe_first_result_set catalog view
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2c7db2d6b9af5bf47f0019ec5e20336edad2a744
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ee19d4df3deed6580a33be2620a6597ebd24f2ce
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   この動的管理関数には、[!INCLUDE[tsql](../../includes/tsql-md.md)]をパラメーターとしてステートメントと最初の結果、ステートメントのセットのメタデータについて説明します。  
   
- **sys.dm_exec_describe_first_result_set**が、同じ結果セットの定義[sys.dm_exec_describe_first_result_set_for_object &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)と似ています[sp_describe_first_result_set &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ **sys.dm_exec_describe_first_result_set** has the same result set definition as [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) and is similar to [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -65,12 +68,12 @@ sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)
 |**is_hidden**|**bit**|この列が結果セットに実際に表示されていない参照および情報提供の目的で追加された余分な列を指定します。|  
 |**column_ordinal**|**int**|結果セット内の列の位置を示す序数を格納します。 最初の列の位置は、1 つとして指定されます。|  
 |**name**|**sysname**|列の名前を確認できる場合は、その名前を格納します。 確認できない場合は、NULL が格納されます。|  
-|**によって is_nullable**|**bit**|次の値を格納します。<br /><br /> 列が NULL を許容する場合は 1。<br /><br /> 列 が NULL を許容しない場合は 0。<br /><br /> 列が NULL を許容することを確認できない場合は 1。|  
+|**is_nullable**|**bit**|次の値を格納します。<br /><br /> 列が NULL を許容する場合は 1。<br /><br /> 列 が NULL を許容しない場合は 0。<br /><br /> 列が NULL を許容することを確認できない場合は 1。|  
 |**system_type_id**|**int**|Sys.types で指定された列のデータ型の system_type_id を格納します。 CLR 型の場合は、system_type_name 列が NULL を返しても、この列は値 240 を返します。|  
 |**system_type_name**|**nvarchar (256)**|列のデータ型に指定されている名前と引数 (長さ、有効桁数、小数点以下桁数など) を格納します。<br /><br /> データ型がユーザー定義の別名型の場合は、基になるシステム型がここで指定します。<br /><br /> データ型が CLR ユーザー定義型の場合は、この列には NULL が返されます。|  
 |**max_length**|**smallint**|列の最大長 (バイト単位) です。<br /><br /> -1 = 列のデータ型は**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**です。<br /><br /> **テキスト**、列、 **max_length**値は 16 かによって設定された値になります**sp_tableoption 'text in row'**です。|  
-|**有効桁数**|**tinyint**|数値ベースの場合は、列の有効桁数です。 それ以外の場合は 0 を返します。|  
-|**小数点以下桁数**|**tinyint**|数値ベースの場合は、列の小数点以下桁数です。 それ以外の場合は 0 を返します。|  
+|**有効桁数 (precision)**|**tinyint**|数値ベースの場合は、列の有効桁数です。 それ以外の場合は 0 を返します。|  
+|**scale**|**tinyint**|数値ベースの場合は、列の小数点以下桁数です。 それ以外の場合は 0 を返します。|  
 |**collation_name**|**sysname**|文字ベースの場合は、列の照合順序の名前です。 それ以外の場合は NULL を返します。|  
 |**user_type_id**|**int**|CLR 型と別名型の場合、sys.types で指定された列のデータ型の user_type_id を格納します。 それ以外の場合は NULL です。|  
 |**user_type_database**|**sysname**|CLR 型と別名型の場合、その型が定義されたデータベースの名前を格納します。 それ以外の場合は NULL です。|  
@@ -87,7 +90,7 @@ sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)
 |**source_server**|**sysname**|(リモート サーバーから発生する場合) 元のサーバーの名前です。 Sys.servers に表示される、名前が与えられます。 この列がローカル サーバー上で発生した場合、または元のサーバーを特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
 |**source_database**|**sysname**|この結果内の列によって返された元のデータベースの名前です。 データベースを特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
 |**source_schema**|**sysname**|この結果内の列によって返された元のスキーマの名前です。 スキーマを特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
-|**ソース テーブル**|**sysname**|この結果内の列によって返された元のテーブルの名前です。 テーブルを特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
+|**source_table**|**sysname**|この結果内の列によって返された元のテーブルの名前です。 テーブルを特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
 |**source_column**|**sysname**|結果列から返された元の列の名前です。 列を特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
 |**is_identity_column**|**bit**|この列が ID 列の場合は 1、それ以外の場合は 0 を返します。 ID 列であることを確認できない場合は NULL を返します。|  
 |**is_part_of_unique_key**|**bit**|ない場合は、列が一意インデックス (一意と主キー制約を含む) および 0 の一部の場合は、1 を返します。 一意インデックスの一部であることを確認できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
@@ -100,12 +103,12 @@ sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)
 |**error_number**|**int**|関数によって返されるエラー番号が格納されます。 エラーが発生しなかった場合は、NULL が格納されます。|  
 |**error_severity**|**int**|関数によって返される重大度が格納されます。 エラーが発生しなかった場合は、NULL が格納されます。|  
 |**error_state**|**int**|関数によって返される 状態メッセージが格納されます。 エラーが発生しなかった場合は、NULL が格納されます。|  
-|**error_message**|**nvarchar (4096)**|関数によって返されるメッセージが格納されます。 エラーが発生しなかった場合は、NULL が格納されます。|  
+|**error_message**|**nvarchar(4096)**|関数によって返されるメッセージが格納されます。 エラーが発生しなかった場合は、NULL が格納されます。|  
 |**error_type**|**int**|返されるエラーを表す整数が格納されます。 error_type_desc にマップされます。 解説の下の一覧を参照してください。|  
-|**error_type_desc**|**nvarchar (60)**|返されるエラーを表す短い大文字の文字列が格納されます。 error_type にマップされます。 解説の下の一覧を参照してください。|  
+|**error_type_desc**|**nvarchar(60)**|返されるエラーを表す短い大文字の文字列が格納されます。 error_type にマップされます。 解説の下の一覧を参照してください。|  
   
 ## <a name="remarks"></a>解説  
- この関数と同じアルゴリズムを使用して**sp_describe_first_result_set**です。 詳細については、次を参照してください。 [sp_describe_first_result_set &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ この関数と同じアルゴリズムを使用して**sp_describe_first_result_set**です。 詳細については、次を参照してください。 [sp_describe_first_result_set &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
   
  次の表に、エラーの種類とその説明を示します。  
   
@@ -125,7 +128,7 @@ sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)
 |12|OBJECT_TYPE_NOT_SUPPORTED|@object_id関数に渡されるは (つまり、ストアド プロシージャではありません) はサポートされていません|  
 |13|OBJECT_DOES_NOT_EXIST|@object_idに渡された関数がシステム カタログに見つかりませんでした。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  実行する権限が必要です、@tsql引数。  
   
 ## <a name="examples"></a>使用例  
@@ -175,6 +178,6 @@ GO
 ## <a name="see-also"></a>参照  
  [sp_describe_first_result_set &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sp_describe_undeclared_parameters &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set_for_object &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   

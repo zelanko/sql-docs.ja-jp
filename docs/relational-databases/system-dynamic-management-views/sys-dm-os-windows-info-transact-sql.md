@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,26 +17,28 @@ f1_keywords:
 - dm_os_windows_info_TSQL
 - sys.dm_os_windows_info
 - sys.dm_os_windows_info_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_windows_info dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_windows_info dynamic management view
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 759ac050225bdc1abd78a6400152c6ee7f89dcfd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bdb100404984cd679c2899a78a655872afbf501c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmoswindowsinfo-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Windows オペレーティング システムのバージョン情報を示す 1 行のデータを返します。  
   
-  Windows で実行されている SQL Server にのみ適用されます。 使用して、Linux などの非 Windows ホストで実行されている SQL Server のような情報を参照する[sys.dm_os_host_info &#40;です。TRANSACT-SQL と #41 です。](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
+  Windows で実行されている SQL Server にのみ適用されます。 使用して、Linux などの非 Windows ホストで実行されている SQL Server のような情報を参照する[sys.dm_os_host_info &#40;です。TRANSACT-SQL と #41 です](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)。 
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
@@ -45,11 +48,11 @@ ms.lasthandoff: 11/17/2017
 |**os_language_version**|**int**| Windows の場合は、オペレーティング システムの Windows ロケール識別子 (LCID) を返します。 LCID 値と説明の一覧は、次を参照してください。 [Microsoft によるロケール Id 割り当て](http://go.microsoft.com/fwlink/?LinkId=208080)です。 NULL 値は許容されません。|  
   
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 Sys.dm_os_windows_info に対する SELECT 権限は、既定では、public ロールに与えられます。 失効させた場合、サーバーに対する VIEW SERVER STATE 権限が必要です。  
 
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
-Linux などの非 Windows ホストで実行されている SQL の情報を表示する使用[sys.dm_os_host_info &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
+Linux などの非 Windows ホストで実行されている SQL の情報を表示する使用[sys.dm_os_host_info &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)。 
   
 ## <a name="examples"></a>使用例  
  次の例は、のすべての列を返して、 **sys.dm_os_windows_info**ビュー。  

@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_resource_governor_resource_pool_volumes (TRANSACT-SQL) |Microsoft ドキュメント"
+title: sys.dm_resource_governor_resource_pool_volumes (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,26 +17,27 @@ f1_keywords:
 - dm_resource_governor_resource_pool_volumes_TSQL
 - dm_resource_governor_resource_pool_volumes
 - sys.dm_resource_governor_resource_pool_volumes
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dm_resource_governor_resource_pool_volumes
 - sys.dm_resource_governor_resource_pool_volumes
 ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
-caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48468c3ff9f06966161462dafdd7eb9e0a36d416
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a60bd54400d9e9d82c3abbde9d828c1877b0753b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmresourcegovernorresourcepoolvolumes-transact-sql"></a>sys.dm_resource_governor_resource_pool_volumes (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  現在のリソース プールの IO の統計に関する情報をディスク ボリュームごとに返します。 リソース プール レベルでこの情報が利用可能なも[sys.dm_resource_governor_resource_pools &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
+  現在のリソース プールの IO の統計に関する情報をディスク ボリュームごとに返します。 リソース プール レベルでこの情報が利用可能なも[sys.dm_resource_governor_resource_pools &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。  
   
   
 |列名|データ型|Description|  
@@ -59,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 |io_issue_violations_total|**int**|IO 発行違反の合計。 つまり、IO の発行レートが予約レートを下回った回数です。 NULL 値は許可されません。|  
 |io_issue_delay_total_ms|**bigint**|IO の発行予定時間から実際に発行されるまでの合計時間 (ミリ秒単位)。 NULL 値は許可されません。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

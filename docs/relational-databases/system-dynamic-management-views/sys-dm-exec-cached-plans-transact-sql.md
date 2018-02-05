@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_cached_plans
 - dm_exec_cached_plans_TSQL
 - sys.dm_exec_cached_plans_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_cached_plans dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_cached_plans dynamic management view
 ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
-caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 816fcb7a7fbf362f2f531b93629508ab3ab2b76f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9ef3927340e8fc87e8d25796ae331273556c43a6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,16 +49,16 @@ ms.lasthandoff: 11/17/2017
 |refcounts|**int**|このキャッシュ オブジェクトを参照しているキャッシュ オブジェクトの数。 **Refcounts**キャッシュ内にあるエントリを 1 以上にする必要があります。|  
 |usecounts|**int**|キャッシュ オブジェクトが検索された回数。 パラメーター化クエリがキャッシュ内のプランを検索したときは増加しません。 プラン表示を使用しているときは複数回増加できます。|  
 |size_in_bytes|**int**|キャッシュ オブジェクトによって使用されたバイト数。|  
-|memory_object_address|**varbinary (8)**|キャッシュ エントリのメモリ アドレス。 この値で使用できる[sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)を使用して、キャッシュされたプランのメモリ内訳を取得する[sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)とエントリをキャッシュするコストを取得します。|  
-|cacheobjtype|**nvarchar (34)**|キャッシュ内のオブジェクトの種類。 値は、次のいずれかです。<br /><br /> Compiled Plan<br /><br /> Compiled Plan Stub<br /><br /> Parse Tree<br /><br /> Extended Proc<br /><br /> CLR Compiled Func<br /><br /> CLR Compiled Proc|  
-|objtype|**nvarchar (16)**|オブジェクトの種類。 使用可能な値とその対応する説明のとおりです。<br /><br /> Proc: ストアド プロシージャ<br />準備されたステートメントの準備:<br />Adhoc: アドホック クエリです。 指す[!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して言語イベントとして送信された**osql**または**sqlcmd**の代わりにリモート プロシージャ呼び出しとして。<br />ReplProc: レプリケーション フィルター プロシージャ<br />トリガー: トリガー<br />ビュー: 表示<br />Default: 既定<br />UsrTab: ユーザー テーブル<br />SysTab: システム テーブル<br />CHECK 制約をチェックします。<br />ルール: ルール|  
-|plan_handle|**varbinary (64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値は、次の動的管理関数で使用できます。<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
+|memory_object_address|**varbinary(8)**|キャッシュ エントリのメモリ アドレス。 この値で使用できる[sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)を使用して、キャッシュされたプランのメモリ内訳を取得する[sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)とエントリをキャッシュするコストを取得します。|  
+|cacheobjtype|**nvarchar(34)**|キャッシュ内のオブジェクトの種類。 値は、次のいずれかです。<br /><br /> Compiled Plan<br /><br /> Compiled Plan Stub<br /><br /> Parse Tree<br /><br /> Extended Proc<br /><br /> CLR Compiled Func<br /><br /> CLR Compiled Proc|  
+|objtype|**nvarchar(16)**|オブジェクトの種類。 使用可能な値とその対応する説明のとおりです。<br /><br /> Proc: ストアド プロシージャ<br />準備されたステートメントの準備:<br />Adhoc: アドホック クエリです。 指す[!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して言語イベントとして送信された**osql**または**sqlcmd**の代わりにリモート プロシージャ呼び出しとして。<br />ReplProc: レプリケーション フィルター プロシージャ<br />トリガー: トリガー<br />ビュー: 表示<br />Default: 既定<br />UsrTab: ユーザー テーブル<br />SysTab: システム テーブル<br />CHECK 制約をチェックします。<br />ルール: ルール|  
+|plan_handle|**varbinary(64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値は、次の動的管理関数で使用できます。<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|このプランのメモリ使用量の大部分を占めるリソース プールの ID。|  
-|pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
   
  <sup>1</sup>  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 階層には、データベースの VIEW DATABASE STATE 権限が必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard および Basic 階層が必要です、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理者アカウントです。  
@@ -86,7 +89,7 @@ GO
 ```  
   
 ### <a name="c-returning-the-set-options-with-which-the-plan-was-compiled"></a>C. プランをコンパイルした SET オプションを取得する  
- 次の例は、プランをコンパイルした SET オプションを返します。 `sql_handle`計画も返されます。 PIVOT 演算子が使用される出力を`set_options`と`sql_handle`属性の行ではなく列として。 戻り値の詳細については`set_options`を参照してください[sys.dm_exec_plan_attributes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).  
+ 次の例は、プランをコンパイルした SET オプションを返します。 `sql_handle`計画も返されます。 PIVOT 演算子が使用される出力を`set_options`と`sql_handle`属性の行ではなく列として。 戻り値の詳細については`set_options`を参照してください[sys.dm_exec_plan_attributes &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)。  
   
 ```  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
@@ -119,8 +122,8 @@ GO
  [実行関連の動的管理ビューおよび関数 &#40;TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_query_plan &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
  [sys.dm_exec_plan_attributes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_os_memory_objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)   
  [sys.dm_os_memory_cache_entries &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
