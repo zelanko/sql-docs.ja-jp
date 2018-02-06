@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/01/2017
 ---
-# <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループ向けに RHEL クラスターを構成します。
+# <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループ向けに RHEL クラスターを構成する
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
@@ -41,26 +41,26 @@ ms.lasthandoff: 12/01/2017
 
 高可用性の Linux サーバーに可用性グループを作成する手順は、Windows Server フェールオーバー クラスターの手順と異なります。 手順の概要を以下に説明します。 
 
-1. [クラスター ノードの SQL Server を構成する](sql-server-linux-setup.md)。
+1. [クラスター ノードの SQL Server を構成する](sql-server-linux-setup.md)です。
 
-2. [可用性グループを作成する](sql-server-linux-availability-group-configure-ha.md)。 
+2. [可用性グループの作成](sql-server-linux-availability-group-configure-ha.md)です。
 
 3.  Pacemaker のように、クラスター リソース マネージャーを構成します。 これらの手順は、このドキュメントに記載されています。
    
    クラスター リソース マネージャーを構成する方法は、特定の Linux ディストリビューションに依存します。 
 
    >[!IMPORTANT]
-   >実稼働環境では、高可用性を実現 STONITH などのフェンス操作エージェントが必要です。 このドキュメントでのデモンストレーションでは、フェンス操作エージェントは使用していません。 このデモはテストおよび検証目的のみです。 
+   >実稼働環境では、高可用性を実現 STONITH などのフェンス操作エージェントが必要です。 このドキュメントではデモンストレーションでは、フェンス操作エージェントは使用しないでください。 デモは、テストおよび検証のみです。 
    
-   >Linux クラスターでは、フェンス操作を使用して、クラスターを既知の状態にします。 フェンス操作を構成する方法は、ディストリビューションと環境によって異なります。 現時点では、フェンス操作では、一部のクラウド環境で使用できません。 詳細については、[RHEL 高可用性クラスターの仮想化プラットフォームのサポート ポリシー](https://access.redhat.com/articles/29440)を参照してください。 
+   >Linux クラスターでは、フェンス操作を使用して、既知の状態をクラスターを返します。 フェンス操作を構成する方法は、分布と、環境によって異なります。 現時点では、フェンス操作では、一部のクラウド環境で使用できません。 詳細については、次を参照してください。 [RHEL 高可用性クラスターの仮想化プラットフォームのサポート ポリシー](https://access.redhat.com/articles/29440)です。
 
-5. [可用性グループをクラスター内のリソースとして追加](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)。  
+5. [可用性グループ、クラスター内のリソースとして追加](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)です。  
 
 ## <a name="configure-high-availability-for-rhel"></a>RHEL の高可用性を構成します。
 
-RHEL の高可用性を構成するには、 High Availability サブスクリプションを有効にしてペースを構成します。
+RHEL の高可用性を構成するには、高可用性のサブスクリプションを有効にしてペースを構成します。
 
-### <a name="enable-the-high-availability-subscription-for-rhel"></a>RHEL の High Availability サブスクリプションをを有効にします。
+### <a name="enable-the-high-availability-subscription-for-rhel"></a>RHEL のサブスクリプションを高可用性を有効にします。
 
 クラスター内の各ノードは、RHEL と High Availability Add on の適切なサブスクリプションが必要です。 [Red Hat Enterprise Linux での高可用性クラスター パッケージをインストールする方法](http://access.redhat.com/solutions/45930)の要件を確認してください。 サブスクリプションとリポジトリを構成する手順に従います。
 
@@ -94,27 +94,27 @@ RHEL の高可用性を構成するには、 High Availability サブスクリ�
 
 詳細については、[Pacemaker – オープン ソースな高可用性クラスター](http://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/)を参照してください。 
 
-サブスクリプションを構成した後は、 Pacemaker を構成する次の手順を実行します。
+サブスクリプションを構成した後は、 Pacemaker を構成するため次の手順を実行します。
 
-### <a name="configure-pacemaker"></a> Pacemaker を構成します。
+### <a name="configure-pacemaker"></a> Pacemaker を構成する。
 
-サブスクリプションを登録した後は、 Pacemaker を構成する次の手順を実行します。
+サブスクリプションを登録した後は、 Pacemaker を構成するため次の手順を実行します。
    
 [!INCLUDE [RHEL-Configure-Pacemaker](../includes/ss-linux-cluster-pacemaker-configure-rhel.md)]
 
- Pacemaker を設定した後は、`pcs`を使用することでクラスターと対話できます。 すべてのコマンドはクラスターの一つのノードで実行します。
+ Pacemaker を設定した後は、`pcs`を使用することでクラスターと対話できます。 すべてのコマンドはクラスターの 1 つのノードで実行します。
 
 ## <a name="configure-fencing-stonith"></a>フェンス操作 (STONITH) を構成します。
 
  Pacemaker クラスターのベンダーは、STONITH を有効にして、サポートされているクラスターのセットアップ用に構成されたフェンス操作デバイスを必要としています。 STONITHは「shoot the other node in the head」の略です。 クラスター リソース マネージャーがノードまたはノード上のリソースの状態を判断できないときに、フェンス操作によりクラスターを既知の状態を戻します。
 
-リソース レベルのフェンス操作により、構成されたリソースに障害が発生した場合でも、データの破損がないことを保証できます。 例えば、リソース レベルのフェンス操作を使用して、通信リンクがダウンしたときに、ノード上のディスクを古くなったとマークすることができます。
+リソース レベルのフェンス操作により、リソースの構成で障害が発生した場合でも、データの破損がないことが保証されます。たとえば、リソース レベルのフェンス操作を使用して、通信リンクがダウンしたときに、ノード上のディスクを古くなったとマークすることができます。
 
-ノード レベルのフェンス操作により、ノードがすべてのリソースを実行できないことを保証できます。 これは、ノードをリセットすることによって行います。 Pacemaker はさまざまなフェンス操作デバイスをサポートします。 例えば、無停電電源装置、もしくはサーバーの管理インターフェイスのカード といったものです。
+ノード レベルのフェンス操作により、ノードがどのリソースも実行しないことが保証されます。これは、ノードをリセットすることによって行います。 Pacemaker はさまざまなフェンス操作デバイスをサポートします。たとえば、無停電電源装置やサーバーの管理インターフェイスのカードなどがあります。
 
 STONITH、およびフェンス操作については、次の記事を参照してください。
 
-* [Pacemaker クラスター 入門](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [Pacemaker クラスターを最初から作成](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
 * [フェンス操作と STONITH](http://clusterlabs.org/doc/crm_fencing.html)
 * [Pacemaker を使用した Red Hat High Availability Add-On の設定: フェンス機能](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/ch-fencing-haar)
 
