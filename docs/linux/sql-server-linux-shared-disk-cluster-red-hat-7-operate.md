@@ -35,7 +35,7 @@ ms.lasthandoff: 12/01/2017
 
 ## <a name="architecture-description"></a>アーキテクチャの説明
 
-クラスタ リングの層は [Pacemaker](http://clusterlabs.org/)の上に構築されたRed Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)をベースにしています。 Corosync と Pacemaker のクラスター ネットワーク通信およびリソース管理を調整します。 SQL Server のインスタンスは 1 つのノードまたは他の上でアクティブです。
+クラスタ リングの層は [Pacemaker](http://clusterlabs.org/)の上に構築されたRed Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)をベースにしています。Corosync と Pacemaker はクラスター通信およびリソース管理を調整します。SQL Server のインスタンスはいずれかのノードでアクティブです。
 
 次の図は、SQL Server でのLinux クラスターのコンポーネントを示しています。 
 
@@ -199,7 +199,7 @@ sudo crm_mon
 sudo pcs    cluster node remove <nodeName>  
 ```
 
-## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>sqlservr リソース監視の間隔の頻度を変更します。
+## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>sqlservr リソース監視の間隔の頻度を変更する。
 
 ```bash
 sudo pcs    resource op monitor interval=<interval>s <sqlResourceName> 
@@ -210,9 +210,9 @@ sudo pcs    resource op monitor interval=<interval>s <sqlResourceName>
 ```bash
 sudo pcs    resource op monitor interval=2s mssqlha 
 ```
-## <a name="troubleshoot-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server 向けの Red Hat Enterprise Linux 共有ディスク クラスターをトラブルシューティングします
+## <a name="troubleshoot-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server 向けの Red Hat Enterprise Linux 共有ディスク クラスターをトラブルシューティングする
 
-クラスターのトラブルシューティングでは、クラスター リソースの管理のために3 つのデーモンがどのように一緒に動作しているかを理解することが役立ちます。 
+クラスターをトラブルシューティングするには、3 つのデーモンがどのように連携してクラスター リソースを管理するかを理解することが役立ちます。 
 
 | デーモン | Description 
 | ----- | -----
@@ -253,11 +253,11 @@ pacemaker: active/enabled
 
 例では、`partition with quorum`はノードのマジョリティ クォーラムがオンラインであることを意味します。 クラスターがノード マジョリティ クォーラムを失った場合、`pcs status`は`partition WITHOUT quorum`を返し、すべてのリソースが停止されます。
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]`はクラスターに現在参加しているすべてのノードの名前を返します。 ひとつのノードも参加していない場合、`pcs status`は`OFFLINE: [<nodename>]`返します。
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]`はクラスターに現在参加しているすべてのノードの名前を返します。 参加しているノードが一つもない場合、`pcs status`は`OFFLINE: [<nodename>]`返します。
 
 `PCSD Status`はクラスターの各ノードの状態を示しています。
 
-### <a name="reasons-why-a-node-may-be-offline"></a>ノードがオフラインになる理由
+### <a name="reasons-why-a-node-may-be-offline"></a>ノードがオフラインである理由 
 
 ノードがオフラインのときは、次の項目を確認します。
 
