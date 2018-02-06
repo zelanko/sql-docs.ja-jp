@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4522ce26253a547b7cf55202f99a4e391f8fdaf3
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: f60dd96e3a335938d99c0b0f619ce859c208e795
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="search-text-with-regular-expressions"></a>正規表現によるテキストの検索
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 正規表現は、文字列のパターンの検索や置換のための、正確で柔軟性の高い表記方法です。 **の** [検索と置換] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[検索する文字列]** フィールドでは、特定のセットの正規表現を使用できます。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 12/21/2017
 |セット内の任意の 1 文字|[]|[] 内の任意の 1 文字を検索します。 文字の範囲を指定するには、開始文字と終了文字をダッシュ (-) で区切り、たとえば [a-z] のように指定します。|  
 |セット外の任意の 1 文字|[^...]|^ の後の文字セット内に存在しない任意の 1 文字を検索します。|  
 |スイッチまたは|&#124;|OR 記号 (&#124;) の前の表現と後の表現を検索します。 基本的にグループ内で使用します。 たとえば、「(sponge&#124;mud) bath」の一致項目は、「sponge bath」と「mud bath」です。|  
-|エスケープ|\|円記号 (\\) の後の文字をリテラルと見なして一致項目を検索します。 これにより、正規表現の中で使用する文字 (「{」、「^」など) を検索できます。 たとえば、「 \\^」と指定すると、「^」文字を検索できます。|  
+|エスケープ|\|バックスラッシュ (\\) の後の文字をリテラルと見なして一致項目を検索します。 これにより、正規表現の中で使用する文字 (「{」、「^」など) を検索できます。 たとえば、「 \\^」と指定すると、「^」文字を検索できます。|  
 |タグ付き正規表現|{}|かっこで囲んだ正規表現をタグとして追加したテキストが一致項目になります。|  
 |C/C++ 識別子|:i|正規表現 ([a-zA-Z_$][a-zA-Z0-9_$]*) を検索します。|  
 |引用符で囲んだ文字列|:q|正規表現 (("[^"]*")&#124;('[^']\*')) を検索します。|  

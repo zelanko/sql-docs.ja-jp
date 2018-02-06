@@ -1,11 +1,12 @@
 ---
 title: "Windows Server 2008/2008 R2/2012 クラスターで実行されている SQL Server インスタンスのアップグレード | Microsoft Docs"
-ms.date: 11/10/2017
+ms.date: 1/25/2018
 ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: database engine
 ms.component: failover-clustuers
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bac006539f14341ff07d6af2ba7fd73c1e73a917
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 3337f1c438f303775d923ec12b14891c13b36c03
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Windows Server 2008/2008 R2/2012 クラスターで実行されている SQL Server インスタンスのアップグレード
 
@@ -29,7 +30,6 @@ ms.lasthandoff: 01/09/2018
 ## <a name="prerequisites"></a>Prerequisites
 
 -   移行方法のいずれかを実行する前に、Windows Server 2016/2012 R2 で並列 Windows Server フェールオーバー クラスターを準備する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] フェールオーバー クラスター インスタンス (FCI) を構成するすべてのノードを、並列 FCI がインストールされている Windows クラスターに結合する必要があります。 移行前に、Windows Server フェールオーバー クラスターにスタンドアロン コンピューターを結合することは**できません**。 移行前に、ユーザー データベースを新しい環境で同期する必要があります。
-
 -   対象のすべてのインスタンスは、元の環境の並列インスタンスと同じバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] を同じインスタンス名と ID で実行し、同じ機能と共にインストールされる必要があります。 インストール パスとディレクトリ構造は、対象のコンピューターで同じである必要があります。 これには FCI 仮想ネットワーク名は含まれません。移行前は、この名前は異なっている必要があります。 元のインスタンスで有効になっているすべての機能 (Always On、FILESTREAM など) は、対象のインスタンスでも有効にする必要があります。
 
 -   移行前に、並列クラスターに [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)]をインストールする必要はありません。
@@ -41,7 +41,6 @@ ms.lasthandoff: 01/09/2018
 -   元の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] クラスター環境で使用されているネットワーク ファイル共有とネットワークで割り当てられたドライブは引き続き存在する必要があり、元のインスタンスと同じアクセス許可でターゲット クラスターからアクセスできる必要があります。
 
 -   元の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] インスタンスでリッスンされる TCP/IP ポートは未使用である必要があり、ターゲット コンピューターでの受信トラフィックを許可する必要があります。
-
 -   SQL 関連のサービスをすべてインストールし、同じ Windows ユーザーが実行する必要があります。
 
 -   対象のインスタンスは、元のインスタンスと同じロケールでインストールする必要があります。
@@ -57,8 +56,8 @@ ms.lasthandoff: 01/09/2018
 | **クラスターでスタンドアロン インスタンスを使用** | [シナリオ 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [シナリオ 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [シナリオ 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [シナリオ 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
 \* 可用性グループ リスナー名を除く
 
-## <a name="scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1"></a>シナリオ 1: 移行するクラスターで厳密に可用性グループを使用する (Windows Server 2008 R2 SP1 以降)
-厳密に可用性グループ (AG) を使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] セットアップの場合、Windows Server 2016/2012 R2 とは異なる Windows クラスターに並列 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] セットアップを作成することで新しいクラスターに移行できます。 その後、ターゲット クラスターが現在の運用クラスターに対してセカンダリとなる分散型 AG を作成できます。 その場合、ユーザーは [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] 以降にアップグレードする必要があります。
+## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>シナリオ 1: SQL Server 可用性グループを使用する、フェールオーバー クラスター インスタンス (FCI) のない Windows クラスター
+可用性グループ (AG) を使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] セットアップの場合、Windows Server 2016/2012 R2 とは異なる Windows クラスターに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] の並列配置を作成することで新しいクラスターに移行できます。 その後、ターゲット クラスターが現在の運用クラスターに対してセカンダリとなる分散型 AG を作成できます。 その場合、ユーザーは [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] 以降にアップグレードする必要があります。
 
 ###  <a name="to-perform-the-upgrade"></a>アップグレードを実行するには
 
@@ -69,7 +68,7 @@ ms.lasthandoff: 01/09/2018
 3.  ターゲット クラスターがセカンダリ可用性グループとなる分散型可用性グループを形成します。
 
     >[!NOTE]
-    >分散型 AG の作成クエリの LISTENER\_URL パラメーターの動作は、プライマリ インスタンスとして機能する FCI を含む AG では多少異なります。 これがプライマリまたはセカンダリ AG のシナリオである場合、リスナーのネットワーク名の代わりに、リスナー URL としてプライマリ SQL FCI の VNN を使用します。その場合、いずれのシナリオでもデータベース ミラーリング エンドポイントのポートを使用します。
+    >分散型 AG T-SQL の作成の LISTENER\_URL パラメーターの動作は、プライマリ インスタンスとして SQL FCI を使用する AG では異なります。 これがプライマリまたはセカンダリ AG のいずれかの場合、データベース ミラーリング エンドポイントのポートと共に、リスナーのネットワーク名の代わりに、リスナー URL としてプライマリ SQL FCI の VNN を使用します。
 
 4.  セカンダリ可用性グループを分散型 AG に結合します。
 
@@ -80,7 +79,7 @@ ms.lasthandoff: 01/09/2018
 
 6.  プライマリ AG へのトラフィックをすべて切断し、セカンダリでの同期を許可します。
 
-7.  両方の可用性グループのコミット ポリシーを SYNCHRONOUS\_COMMIT に変更し、状態が SYNCHRONIZED になったらターゲット クラスターにフェールオーバーします。
+7.  両方の可用性グループのコミット ポリシーを SYNCHRONOUS_COMMIT に変更し、状態が SYNCHRONIZED になったらターゲット クラスターにフェールオーバーします。
 
 8.  分散型 AG を削除します。
 
@@ -93,9 +92,9 @@ ms.lasthandoff: 01/09/2018
 
 11. リスナーに対するトラフィックを再開します。
 
-## <a name="scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag"></a>シナリオ 2: 移行するクラスターに SQL FCI のみがあり、AG はない
+## <a name="scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis"></a>シナリオ 2: SQL Server フェールオーバー クラスター インスタンス (FCI) を使用する Windows クラスター
 
-スタンドアロン [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] インスタンスを使用しない (SQL FCI のみ使用) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] セットアップの場合、Windows Server 2016/2012 R2 とは異なる Windows クラスターに並列 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] セットアップを作成することで、新しいクラスターに移行できます。 古い SQL FCI の VNN を "スティール" して、それらを新しいクラスターで取得することで、ターゲット クラスターに移行します。 これにより、DNS の伝達時間に応じて、追加のダウンタイムが作成されます。
+SQL FCI インスタンスのみを使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 環境の場合、Windows Server 2016/2012 R2 とは異なる Windows クラスターに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] の並列環境を作成することで、新しいクラスターに移行できます。 古い SQL FCI の VNN を "スティール" して、それらを新しいクラスターで取得することで、ターゲット クラスターに移行します。 これにより、DNS の伝達時間に応じて、追加のダウンタイムが作成されます。
 
 ###  <a name="to-perform-the-upgrade"></a>アップグレードを実行するには
 
@@ -126,7 +125,7 @@ ms.lasthandoff: 01/09/2018
 
 12. コンピューターが再起動後にオンラインに戻ったら、フェールオーバー クラスター マネージャーで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] FCI ロールをそれぞれ開始します。
 
-## <a name="scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups"></a>シナリオ 3: クラスターで SQL FCI のみが存在し、可用性グループを使用する
+## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>シナリオ 3: SQL FCI と SQL Server 可用性グループの両方を含む Windows クラスター
 
 1 つ以上の可用性グループに含まれる、SQL FCI のみを使用し、スタンドアロン [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] インスタンスを使用しない [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] セットアップがある場合、"可用性グループなし、スタンドアロン インスタンスなし" のシナリオと同様の方法を使用して、新しいクラスターにこれを移行することができます。 ターゲットの FCI 共有ディスクにシステム テーブルをコピーする前に、元の環境ですべての可用性グループを削除する必要があります。 すべてのデータベースがターゲット コンピューターに移行された後、同じスキーマとリスナーの名前で可用性グループを再作成します。 これにより、Windows Server フェールオーバー クラスター リソースがターゲット クラスターで正しく形成され、管理されます。 **Always On は、移行前にターゲット環境内の各コンピューターの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 構成マネージャーで有効にする必要があります。**
 
@@ -164,7 +163,7 @@ ms.lasthandoff: 01/09/2018
 
 16. 元の可用性グループのリスナーのリスナー名を使用して、新しい AG にリスナーを作成します。
 
-## <a name="scenario-4-cluster-has-some-non-fci-and-no-availability-groups"></a>シナリオ 4: クラスターに非 FCI がいくつかあり、可用性グループがない
+## <a name="scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups"></a>シナリオ 4: スタンドアロン SQL Server インスタンスを使用する、可用性グループのない Windows クラスター
 
 スタンドアロン インスタンスのクラスターの移行は、FCI のみの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] クラスターの移行プロセスと似ていますが、FCI のネットワーク名クラスター リソースの VNN を変更するのではなく、元のスタンドアロン コンピューターのコンピューター名を変更し、ターゲット コンピューターの古いコンピューター名を "スティール" します。 古いコンピューターのネットワーク名を取得するまでは、WSFC にターゲットのスタンドアロン コンピューターを結合できないため、これによりスタンドアロンなしのシナリオに関するダウンタイムが増えます。
 
@@ -200,9 +199,9 @@ ms.lasthandoff: 01/09/2018
 
 15. コンピューターが再起動後にオンラインに戻ったら、フェールオーバー クラスター マネージャーで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] FCI ロールをそれぞれ開始します。
 
-## <a name="scenario-5-cluster-has-some-non-fci-and-uses-availability-groups"></a>シナリオ 5: クラスターに非 FCI がいくつかあり、可用性グループを使用する
+## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>シナリオ 5: スタンドアロン SQL Server インスタンスと可用性グループを使用する Windows クラスター
 
-スタンドアロン レプリカを含む可用性グループを使用するクラスターの移行は、厳密に可用性グループを使用する FCI を含むクラスターの移行プロセスと似ています。 ここでも、元の可用性グループを削除して、ターゲット クラスターで再構築する必要があります。ただし、スタンドアロン インスタンスの移行には追加コストがかかるため、ダウンタイムが増えます。 **Always On は、移行前にターゲット環境内の各 FCI で有効にする必要があります。**
+スタンドアロン レプリカを含む可用性グループを使用するクラスターの移行は、可用性グループを使用する FCI を含むクラスターの移行プロセスと似ています。 ここでも、元の可用性グループを削除して、ターゲット クラスターで再構築する必要があります。ただし、スタンドアロン インスタンスの移行には追加コストがかかるため、ダウンタイムが増えます。 **Always On は、移行前にターゲット環境内の各 FCI で有効にする必要があります。**
 
 ###  <a name="to-perform-the-upgrade"></a>アップグレードを実行するには
 
