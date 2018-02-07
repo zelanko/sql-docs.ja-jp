@@ -17,13 +17,13 @@ ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
-ms.date: 11/15/2017
+ms.date: 01/31/2018
 ms.author: aliceku
-ms.openlocfilehash: 5621bbaf20f30371ffabafddc0520dd15b8e4723
-ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
+ms.openlocfilehash: 8c192f5d1114ddab7d75761b385e91c0f22e481b
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database および Data Warehouse 用の Bring Your Own Key (プレビュー) サポートによる Transparent Data Encryption
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -82,7 +82,7 @@ TDE と BYOK には、次のような利点があります。
 
 ### <a name="guidelines-for-configuring-the-tde-protector-asymmetric-key-stored-in-azure-key-vault"></a>Azure Key Vault に格納された TDE プロテクター (非対称キー) の構成に関するガイドライン
 
-- ローカル HSM デバイスのローカルに暗号化キーを作成します。 Azure Key Vault に格納できるように、非対称の RSA 2048 キーであることを確認してください。
+- ローカル HSM デバイスのローカルに暗号化キーを作成します Azure Key Vault に格納できるように、非対称の RSA 2048 キーであることを確認してください。
 - キー エスクロー システムのキーをエスクローします。  
 - 暗号化キー ファイル (.pfx、.byok、または .backup) を Azure Key Vault にインポートします。 
     

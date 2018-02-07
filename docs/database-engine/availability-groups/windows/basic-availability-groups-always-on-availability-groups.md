@@ -1,26 +1,27 @@
 ---
 title: "基本的な可用性グループ (Always On 可用性グループ) | Microsoft Docs"
 ms.custom: 
-ms.date: 09/27/2016
+ms.date: 02/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 15696e7bf14fb5a240f1ef14070f28bb5d87a1f2
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ba38095f11a5f40ec6b9a9398217a98f390d146d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>基本的な可用性グループ (AlwaysOn 可用性グループ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +43,7 @@ ms.lasthandoff: 01/18/2018
 - セカンダリ レプリカに対する整合性チェックはありません。 
 
 - SQL Server 2016 Community Technology Preview 3 (CTP3) より前のバージョンの SQL Server を実行するサーバーでホストされるレプリカはサポートされません。  
-  
-- 既存の基本的な可用性グループに対するレプリカの追加や削除はサポートされません。  
-  
+
 - 可用性データベースは 1 つしかサポートされません。  
   
 - 基本的な可用性グループを拡張可用性グループにアップグレードすることはできません。 グループを削除し、SQL Server 2016 Enterprise Edition のみを実行するサーバーを含むグループに再度追加する必要があります。  

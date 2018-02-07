@@ -8,26 +8,28 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - storing programs as stored procedures
 - stored procedures [SQL Server], about stored procedures
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
-caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dd0517fa69865cd3a4d3180071be0551606a5090
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c3792d9ef087c2e8dce4dfbceed1a1a4d500440c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="stored-procedures-database-engine"></a>ストアド プロシージャ (データベース エンジン)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストアド プロシージャは、1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) メソッドの参照のグループです。 プロシージャは、以下ができるために、他のプログラミング言語の構造に似ています。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストアド プロシージャは、1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) メソッドの参照のグループです。 プロシージャは、以下ができるために、他のプログラミング言語の構造に似ています。  
   
 -   入力パラメーターを受け取り、呼び出し元のプログラムに出力パラメーターの形式で複数の値を返す。  
   
@@ -81,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  拡張ストアド プロシージャは、今後のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションはできるだけ早く修正してください。 代わりに CLR プロシージャを作成してください。 この方法では、拡張プロシージャの記述に代わる、より堅牢でセキュリティ保護された手段が提供されます。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
