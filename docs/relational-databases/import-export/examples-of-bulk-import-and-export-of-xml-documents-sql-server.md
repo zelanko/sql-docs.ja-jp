@@ -24,13 +24,13 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 15e1fe1efcd8b2e0e1afc8ac4d64a26d7e274454
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: fbb5caa7623b0571ec724eea74f139ef7387d538
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML ドキュメントの一括インポートと一括エクスポートの例 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
