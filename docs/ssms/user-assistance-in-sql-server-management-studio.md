@@ -8,14 +8,15 @@ ms.service:
 ms.component: ssms
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Help [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], user assistance
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -50,7 +51,7 @@ ms.lasthandoff: 01/17/2018
   
     後からアクセスしやすくするために、ユーザー トピックのブックマークを格納します。  
   
-[ヘルプに関するヘルプ] ([!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer のヘルプ) は、ヘルプ ビューアーに関するドキュメントへのリンクを提供しますが、トピックは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] オンライン ブックとは別のコレクションに入っています。 ヘルプ ビューアーの詳細については、 **オンライン ブックの [ヘルプ] メニューから** [ヘルプに関するヘルプ] [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] を選択してください。  
+[ヘルプに関するヘルプ]\ ([!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer のヘルプ) は、ヘルプ ビューアーに関するドキュメントへのリンクを提供しますが、トピックは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] オンライン ブックとは別のコレクションに入っています。 ヘルプ ビューアーの詳細については、 **オンライン ブックの [ヘルプ] メニューから** [ヘルプに関するヘルプ] [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] を選択してください。  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN オンラインと SQL Server コミュニティ  
 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] のヘルプには、Web 上の MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]コミュニティから情報を得るための方法も用意されています。 可能な代替手段としては以下の方法があります。  

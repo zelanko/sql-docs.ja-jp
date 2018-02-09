@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-visual-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,7 +19,7 @@ f1_keywords:
 - vdt.designers.properties.Column.ColumnComputedColumnSpec
 - vdt.designers.properties.Column.ColumnFulltextSpec
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -29,7 +30,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/17/2018
 ---
-# <a name="column-properties-visual-database-tools"></a>[列のプロパティ] (Visual Database Tools)
+# <a name="column-properties-visual-database-tools"></a>[列のプロパティ] \(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 列のプロパティのセットには、テーブル デザイナーの **[列のプロパティ]** タブに表示される完全なセット ([!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースでのみ使用可能) と、サーバー エクスプローラーで [プロパティ] ウィンドウに表示されるサブセットの 2 種類があります。  
   
 > [!NOTE]  
