@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 661c3797ef0881efd49921231c2899f5391e4e27
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: e8160ec17a856a3c14d1177085c95c329e5d2b3b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a id="cuinstall"></a>累積的更新プログラムをインストールする方法
 
-構成した場合、累積的な更新リポジトリ、新規インストールを実行するときに SQL Server パッケージの最新の累積的な更新が発生します。 累積的な更新プログラムのリポジトリは、Linux 上の SQL Server のすべてのパッケージのインストールのアーティクルの既定値です。 リポジトリの構成の詳細については、次を参照してください。[リポジトリのソース](sql-server-linux-setup.md#repositories)です。
+構成した場合、累積的な更新リポジトリ、新規インストールを実行するときに SQL Server パッケージの最新の累積的な更新が発生します。 累積的な更新プログラムのリポジトリは、Linux 上の SQL Server のすべてのパッケージのインストールのアーティクルの既定値です。 リポジトリの構成の詳細については、次を参照してください。 [Linux に SQL Server 用のリポジトリを構成する](sql-server-linux-change-repo.md)です。
 
 SQL Server の既存のパッケージを更新する場合は、最新の累積的な更新プログラムを取得するには、各パッケージの適切な更新プログラムのコマンドを実行します。 各パッケージの特定の更新手順については、次のインストール ガイドを参照してください。
 

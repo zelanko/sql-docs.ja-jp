@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,23 +13,24 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: ObjectProxy collection [ADO]
+helpviewer_keywords:
+- ObjectProxy collection [ADO]
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88fe2039e43e0d58f3cc1c96cf97250d328e53ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 19884e98de3a6ed8070dcd30d3965c7ad9e77a4c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO - WFC 構文)
 **ObjectProxy**オブジェクトは、サーバーを表し、によって返される、 **createObject**のメソッド、 [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)オブジェクト。 ObjectProxy クラスが 1 つのメソッド、**呼び出す**サーバー上のメソッドを呼び出すし、呼び出しの結果オブジェクトを返すことができます。  
   
- **パッケージ com.ms.wfc.data**  
+ **package com.ms.wfc.data**  
   
 ## <a name="methods"></a>メソッド  
   
@@ -42,15 +44,15 @@ public Object ObjectProxy.( String method )
 public Object ObjectProxy.( String method, Object[] args)  
 ```  
   
-#### <a name="returns"></a>戻り値  
- Object  
+#### <a name="returns"></a>返します。  
+ オブジェクト  
  メソッドを呼び出し、結果のオブジェクト。  
   
 #### <a name="parameters"></a>パラメーター  
  *ObjectProxy*  
  **ObjectProxy**サーバーを表すオブジェクト。  
   
- *メソッド*  
+ *method*  
  サーバーで呼び出すメソッドの名前を含む文字列。  
   
  *args*  

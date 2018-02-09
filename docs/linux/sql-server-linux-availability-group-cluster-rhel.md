@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: dd997e9d3f235d841cd5706b9c81b9335360540d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 860d3571aa1edf7c467125de1cc2920a968eb704
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループに RHEL クラスターを構成します。
 
@@ -160,10 +160,10 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
 
 ## <a name="create-virtual-ip-resource"></a>仮想 IP リソースを作成します。
 
-仮想 IP アドレス リソースを作成するには、1 つのノードで次のコマンドを実行します。 ネットワークから使用可能な静的 IP アドレスを使用します。 間で IP アドレスの代わりに`**<10.128.16.240>**`有効な IP アドレスを使用します。
+仮想 IP アドレス リソースを作成するには、1 つのノードで次のコマンドを実行します。 ネットワークから使用可能な静的 IP アドレスを使用します。 間で IP アドレスの代わりに`<10.128.16.240>`有効な IP アドレスを使用します。
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 同じペースで仮想サーバー名がありません。 IP アドレスの代わりに文字列のサーバー名を指す接続文字列を使用するには、目的の仮想サーバーの名前とリソースの仮想 IP アドレスを DNS に登録します。 災害復旧構成のプライマリおよび災害復旧サイトの両方で DNS サーバーで、目的の仮想サーバー名と IP アドレスを登録します。

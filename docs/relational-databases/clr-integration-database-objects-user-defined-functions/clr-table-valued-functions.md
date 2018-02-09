@@ -20,19 +20,20 @@ helpviewer_keywords:
 - table-valued functions [CLR integration]
 - TVFs [CLR integration]
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
-caps.latest.revision: "88"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 220c83c7378e634745a7edc71f521d30c3f812b6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b39532e93eba5784bbc9925f3140c26ced977ede
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-table-valued-functions"></a>CLR テーブル値関数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]テーブル値関数は、テーブルを返すユーザー定義関数です。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+テーブル値関数とは、テーブルを返すユーザー定義関数です。  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル値関数の機能が拡張され、テーブル値関数をどのマネージ言語でも定義できるようになりました。 データを使用して、テーブル値関数から返される、 **IEnumerable**または**IEnumerator**オブジェクト。  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/08/2018
  CLR テーブル値関数の詳細については、チェック_アウト MSSQLTips' [Introduction to SQL Server の CLR テーブル値関数です。](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Transact-SQL と CLR のテーブル値関数の違い  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] のテーブル値関数は、関数の呼び出し結果を具体化して中間テーブルを作成します。 TVF では中間テーブルを使用するため、結果に対する制約や一意インデックスがサポートされます。 これらの機能は、大量の結果が返される場合に非常に有用です。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値関数は、中間テーブル関数の呼び出しの結果を具体化します。 TVF では中間テーブルを使用するため、結果に対する制約や一意インデックスがサポートされます。 これらの機能は、大量の結果が返される場合に非常に有用です。  
   
  一方、CLR のテーブル値関数は同じことをストリーミングで実現します。 結果セット全体を 1 つのテーブルに具体化する必要はありません。 **IEnumerable**マネージ関数から返されるオブジェクトは直接と呼ばれ、テーブル値関数を呼び出すクエリの実行プランで増分方式で、結果を消費します。 このストリーミング モデルでは、テーブル全体に値が格納されるまで待たなくても、最初の行が生成された直後から結果を使用できます。 返される行をメモリ内で一括して具体化する必要がないので、返される行数が多い場合にもストリーミングが適しています。 たとえば、マネージ テーブル値関数を使用して、テキスト ファイルを解析し、テキストの各行を 1 つのテーブル行にして返すことができます。  
   
@@ -62,7 +63,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Transact-SQL のテーブル値関数の定義  
- CLR テーブル値関数を定義するための構文はに似ていますが、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、追加すると、テーブル値関数、 **EXTERNAL NAME**句。 例 :  
+ CLR テーブル値関数を定義するための構文はに似ていますが、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、追加すると、テーブル値関数、 **EXTERNAL NAME**句。 例:  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  

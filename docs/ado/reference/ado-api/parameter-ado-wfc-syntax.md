@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -12,21 +13,22 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Parameter collection [ADO], ADO/WFC syntax
+helpviewer_keywords:
+- Parameter collection [ADO], ADO/WFC syntax
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 370528b6a58ab987f95ae551ab5473f3b8e549e7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 05f3e2f6f6b3985c1c68604e6e9829c1b1f3eef1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameter-ado---wfc-syntax"></a>パラメーター (ADO - WFC 構文)
-## <a name="package-commswfcdata"></a>パッケージ com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
   
 ### <a name="constructor"></a>コンス トラクター  
   
@@ -47,7 +49,7 @@ public void appendChunk(char[] chars)
 public void appendChunk(String chars)  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 public int getAttributes()  
@@ -74,7 +76,7 @@ public AdoProperties getProperties()
   
  ADO/WFC を実装して、**値**を持つプロパティ、 **getValue** 、バリアント型のオブジェクトを返すメソッド、および**setValue**を引数として VARIANT を受け取るメソッド。 バリアントは、Microsoft Visual Basic などの特定の言語に非常に効率的です。  
   
- 加え、**値**プロパティ、ADO/WFC 提供*アクセサー*を取得および設定の内容を Java データ型を使用するメソッド**パラメーター**オブジェクト。 これらのメソッドのほとんどは、フォームの名前を持つ**取得***DataType*または**設定***DataType*です。  
+ 加え、**値**プロパティ、ADO/WFC 提供*アクセサー*を取得および設定の内容を Java データ型を使用するメソッド**パラメーター**オブジェクト。 これらのメソッドのほとんどは、フォームの名前を持つ **取得 * * * DataType*または **設定 * * * DataType*です。  
   
  注目すべき 1 つの例外が発生: があるない**注意する必要**プロパティです。 代わりに、、 **isNull**フィールドが null かどうかを示すブール値を返します。  
   

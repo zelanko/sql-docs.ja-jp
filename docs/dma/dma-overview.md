@@ -1,34 +1,39 @@
 ---
 title: "データ Migration Assistant (SQL Server) の概要 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 10/04/2017
+ms.date: 02/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-dma
+ms.technology:
+- sql-dma
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: 
-helpviewer_keywords: Data Migration Assistant, overview
+helpviewer_keywords:
+- Data Migration Assistant, overview
 ms.assetid: 
 caps.latest.revision: 
 author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea780da11c39984fa8828119eee621a66768f1fe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c23ed7d07474cc763da951e782badd42458dacdb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="overview-of-data-migration-assistant"></a>Migration Assistant のデータの概要
 
 データ移行アシスタント (DMA) では、新しいバージョンの SQL Server と Azure SQL Database でデータベースの機能に影響する互換性の問題を検出することにより、最新のデータ プラットフォームへのアップグレードを行うことができます。 DMA は、パフォーマンスと信頼性の向上を対象となる環境のことをお勧めし、スキーマ、データ、および非包含オブジェクトを移行元サーバーからターゲット サーバーに移動することができます。
 
+> [!NOTE] 
+> (番号とデータベースのサイズ) 観点から大規模な移行をお勧めを使用する、 [Azure データベースの移行サービス](https://docs.microsoft.com/en-us/azure/dms/dms-overview)スケールでデータベースを移行することができます。
+  
 ## <a name="capabilities"></a>Capabilities
 
 - 内部設置型 SQL Server のインスタンスが Azure SQL データベースへの移行を評価します。 評価ワークフローでは、Azure SQL データベースの移行に影響を与えることができ、問題を解決する方法の詳細なガイダンスを提供する次の問題を検出することができます。
@@ -37,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 
   - 部分的にサポートされているか、サポートされていない機能: ソース SQL Server インスタンス上で使用されている部分的にサポートされているか、サポートされていない機能を検出します。 DMA は、包括的なは、移行プロジェクトに組み込むことができるように推奨事項は、Azure、および問題を緩和する手順で使用可能な他の方法の設定を提供します。
 
-- 内部設置型 SQL Server へのアップグレードに影響する問題を検出します。  これは、ログの互換性の問題として記述され、、次のカテゴリで整理されています。
+- 内部設置型 SQL Server へのアップグレードに影響する問題を検出します。 これは、ログの互換性の問題として記述され、、次のカテゴリで整理されています。
 
   - 重大な変更
 
@@ -47,9 +52,9 @@ ms.lasthandoff: 12/21/2017
 
 - アップグレードした後、データベースから利点を活用できるターゲット SQL Server プラットフォームの新機能を検出します。 これは、ログ機能の推奨事項として記述され、、次のカテゴリで整理されています。
 
-  - [パフォーマンス]
+  - パフォーマンス
 
-  - Security
+  - セキュリティ
 
   - ストレージ
 
@@ -76,12 +81,14 @@ DMA は、SQL Server アップグレード アドバイザーの以前のバー�
 - SQL Server 2012 
 - SQL Server 2014
 - SQL Server 2016
+- Windows 上の SQL Server 2017
 
 **ターゲット**
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- Azure SQL データベース
+- Windows と Linux 上の SQL Server 2017
+- Azure SQL Database
 
 ## <a name="installation"></a>インストール
 

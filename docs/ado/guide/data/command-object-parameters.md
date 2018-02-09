@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Command object [ADO], parameters
+helpviewer_keywords:
+- Command object [ADO], parameters
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9cb0b971096fe603620fc610386e09d985ae9e5c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 527ed7c9e6e3a3f250fd559b479637414be3989f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-object-parameters"></a>コマンド オブジェクトのパラメーター
 前に説明したトピック[作成し、簡単なコマンドを実行する](../../../ado/guide/data/creating-and-executing-a-simple-command.md)です。 使用して、興味深い、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトが SQL コマンドのパラメーター化する、次の例で示すようにします。 この変更により、パラメーターのたびに、別の値を渡して、コマンドを再利用することです。 [プロパティの準備ができている](../../../ado/reference/ado-api/prepared-property-ado.md)プロパティを**コマンド**にオブジェクトが設定されている**true**、ADO で指定されたコマンドのコンパイルにプロバイダーが必要になります[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)を初めて実行する前にします。 メモリ内でコンパイル済みのコマンドも保持されます。 少しがパフォーマンスの向上、コマンドがその後呼び出されるたびに結果を準備するためのオーバーヘッドが原因で実行される最初の時間のコマンドの実行はこの低下します。 そのため、1 つ以上の時間を使用する場合にのみ、コマンドを準備する必要があります。  

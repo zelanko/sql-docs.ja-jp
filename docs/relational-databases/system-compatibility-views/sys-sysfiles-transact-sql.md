@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.sysfiles_TSQL
 - sys.sysfiles
 - sysfiles_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sysfiles system table
 - sys.sysfiles compatibility view
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
-caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7190a2389fc1504cb8068eb5ea9b6ffd7ed127fb
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 46f241ec9402dc275f265419344bc2e3ccf4d007
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +46,13 @@ ms.lasthandoff: 11/27/2017
 |-----------------|---------------|-----------------|  
 |**fileid**|**smallint**|各データベースで一意なファイル ID 番号です。|  
 |**groupid**|**smallint**|ファイル グループの識別番号です。|  
-|**サイズ**|**int**|ファイルのサイズ (8 KB ページ単位) です。|  
+|**size**|**int**|ファイルのサイズ (8 KB ページ単位) です。|  
 |**maxsize**|**int**|最大ファイル サイズ (8 KB ページ単位) です。<br /><br /> 0 = ファイル サイズが拡張しないことを表します。<br /><br /> -1 = ディスクがいっぱいになるまでファイル サイズが拡張します。<br /><br /> 268435456 = ログ ファイルが最大 2 TB まで拡張することを表します。<br /><br /> 注: が無制限のログ ファイル サイズとアップグレードされたデータベースは、ログ ファイルの最大サイズに達すると-1 に報告されます。|  
-|**成長**|**int**|データベース サイズの増分値です。 ページ数またはの値に応じて、ファイル サイズのパーセンテージのいずれかを指定できます**ステータス**です。<br /><br /> 0 = ファイル サイズが拡張しないことを表します。|  
+|**growth**|**int**|データベース サイズの増分値です。 ページ数またはの値に応じて、ファイル サイズのパーセンテージのいずれかを指定できます**ステータス**です。<br /><br /> 0 = ファイル サイズが拡張しないことを表します。|  
 |**ステータス**|**int**|ステータス ビットです、**成長**メガバイト (MB) またはキロバイト (KB) のいずれかの値。<br /><br /> 0x2 = ディスク ファイル。<br /><br /> 0x40 = ログ ファイル。<br /><br /> 0x100000 = 拡張。 この値は、パーセンテージであり、ページ数ではありません。|  
-|**パフォーマンス**|**int**|予約されています。|  
+|**perf**|**int**|予約されています。|  
 |**name**|**sysname**|ファイルの論理名です。|  
-|**ファイル名**|**nvarchar (260)**|物理デバイスの名前です。 ファイルの完全なパスが含まれます。|  
+|**filename**|**nvarchar(260)**|物理デバイスの名前です。 ファイルの完全なパスが含まれます。|  
   
 ## <a name="see-also"></a>参照  
  [システム ビュー &#40; をシステム テーブルのマッピングTRANSACT-SQL と #41 です。](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: cursors [ADO], types
+helpviewer_keywords:
+- cursors [ADO], types
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab0d11fa3eb0ea935b05ce1d2486e5136594c1c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3ec8ccca017236a8f6aa784d92e8304a98452f02
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="types-of-cursors-ado"></a>種類のカーソル (ADO)
 一般的な規則として、アプリケーションは、必要なデータ アクセスを提供する最も簡単なカーソルを使用する必要があります。 基本の (順方向専用、読み取り専用、静的、スクロール、バッファーを使用しない) 場合は、各追加カーソル特性には、価格、クライアントのメモリ、ネットワークの負荷、またはパフォーマンス。 多くの場合は、既定のカーソル オプションは、アプリケーションが実際に必要なよりも複雑なカーソルを生成します。  

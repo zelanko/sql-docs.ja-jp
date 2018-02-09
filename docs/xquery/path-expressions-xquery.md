@@ -8,26 +8,29 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - axis step [XQuery]
 - path expressions [XQuery]
 - expressions [XQuery], path
 ms.assetid: b93fa36c-bf69-46b9-b137-f597d66fd0c0
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a611a904ab2c969060e6d756a20bcf635ce2100
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e47b66d37e7b43f2921d8d6edf626a6b9178b7e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions-xquery"></a>パス式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +59,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="axis-step"></a>軸ステップ  
  パス式の軸ステップは、次の部分で構成されます。  
   
- [軸](../xquery/path-expressions-specifying-axis.md)  
+ [axis](../xquery/path-expressions-specifying-axis.md)  
  移動の方向を定義します。 パス式の軸ステップはコンテキスト ノードから始まり、軸ステップにより指定されている方向で到達可能なノードまで移動します。  
   
  [ノード テスト](../xquery/path-expressions-specifying-node-test.md)  

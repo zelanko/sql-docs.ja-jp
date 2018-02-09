@@ -1,10 +1,11 @@
 ---
-title: "格納 |Microsoft ドキュメント"
+title: DataTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: DataTypeEnum
-helpviewer_keywords: DataTypeEnum enumeration [ADO]
+f1_keywords:
+- DataTypeEnum
+helpviewer_keywords:
+- DataTypeEnum enumeration [ADO]
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 70e44dc6ea6eb3622b43f241827ad5cae7a7df44
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f99476b2ccbf9e405d29eca6adbf49ce22fc3f85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="datatypeenum"></a>格納
+# <a name="datatypeenum"></a>DataTypeEnum
 データ型を指定します、[フィールド](../../../ado/reference/ado-api/field-object.md)、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)、または[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)です。 次の表の説明の列内のかっこに対応する OLE DB 型インジケーターを示します。  
   
-|定数|値|Description|  
+|定数|[値]|Description|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|常に他のデータ型定数は、その他のデータ型の配列を示すと組み合わせるフラグ値です。 ADOX には適用されません。|  
 |**adBigInt**|20|8 バイト符号付き整数 (DBTYPE_I8) を示します。|  
@@ -37,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |**adBoolean**|11|示します、**ブール**値 (DBTYPE_BOOL)。|  
 |**adBSTR**|8|Null で終わる文字の文字列 (Unicode) (DBTYPE_BSTR) を示します。|  
 |**adChapter**|136|子行セット (DBTYPE_HCHAPTER) 内の行を識別する 4 バイト章値を示します。|  
-|**ファミリ**|129|文字列値 (DBTYPE_STR) を示します。|  
+|**adChar**|129|文字列値 (DBTYPE_STR) を示します。|  
 |**adCurrency**|6|通貨値 (DBTYPE_CY) を示します。 通貨は、小数点の右側に 4 桁の数字の固定小数点数です。 これは、10,000 を掛け、8 バイト符号付き整数に格納されます。|  
 |**adDate**|7|日付値 (DBTYPE_DATE) を示します。 日付は、整数部分は 1899 年 12 月 30 日から経過した日数と、小数部分は 1 日の端数部分を double として格納されます。|  
 |**adDBDate**|133|日付値 (yyyymmdd) (DBTYPE_DBDATE) を示します。|  
@@ -49,9 +52,9 @@ ms.lasthandoff: 12/21/2017
 |**adError**|10|32 ビット エラー コード (DBTYPE_ERROR) を示します。|  
 |**adFileTime**|64|1601 年 1 月 1 日 (DBTYPE_FILETIME) から 100 ナノ秒間隔の数を表す 64 ビット値を示します。|  
 |**adGUID**|72|グローバル一意識別子 (GUID) (dbtype_guid 型) を示します。|  
-|**追加**|9|ポインターを示す、 **IDispatch** COM オブジェクト (DBTYPE_IDISPATCH) 上のインターフェイスです。<br /><br /> **注**このデータ型は現在サポートされていません ADO でします。 使用状況予期しない結果が生じる可能性があります。|  
+|**adIDispatch**|9|ポインターを示す、 **IDispatch** COM オブジェクト (DBTYPE_IDISPATCH) 上のインターフェイスです。<br /><br /> **注**このデータ型は現在サポートされていません ADO でします。 使用状況予期しない結果が生じる可能性があります。|  
 |**adInteger**|3|4 バイト符号付き整数 (DBTYPE_I4) を示します。|  
-|**追加しようとします。**|13|ポインターを示す、 **IUnknown** COM オブジェクト (DBTYPE_IUNKNOWN) 上のインターフェイスです。<br /><br /> **注**このデータ型は現在サポートされていません ADO でします。 使用状況予期しない結果が生じる可能性があります。|  
+|**adIUnknown**|13|ポインターを示す、 **IUnknown** COM オブジェクト (DBTYPE_IUNKNOWN) 上のインターフェイスです。<br /><br /> **注**このデータ型は現在サポートされていません ADO でします。 使用状況予期しない結果が生じる可能性があります。|  
 |**adLongVarBinary**|205|長のバイナリ値を示します。|  
 |**adLongVarChar**|201|長い文字列値を示します。|  
 |**adLongVarWChar**|203|長い null で終わる Unicode 文字列値を示します。|  
@@ -66,7 +69,7 @@ ms.lasthandoff: 12/21/2017
 |**adUnsignedTinyInt**|17|1 バイト符号なし整数 (DBTYPE_UI1) を示します。|  
 |**adUserDefined**|132|ユーザー定義の変数 (DBTYPE_UDT) を示します。|  
 |**adVarBinary**|204|バイナリ値を示します。|  
-|**異なる**|200|文字列値を示します。|  
+|**adVarChar**|200|文字列値を示します。|  
 |**adVariant**|12|オートメーションを示す**バリアント**(DBTYPE_VARIANT)。<br /><br /> **注**このデータ型は現在サポートされていません ADO でします。 使用状況予期しない結果が生じる可能性があります。|  
 |**adVarNumeric**|139|数値の値を示します。|  
 |**adVarWChar**|202|Null で終わる Unicode 文字列を示します。|  

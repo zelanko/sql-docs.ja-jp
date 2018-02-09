@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - ADO, objects and interfaces
 - objects [ADO]
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad14c7327d3dc7186ff86c3ca0ba84d206143973
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 76115318e0205c0b0f0bf4746dd482f39f4a8b89
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO オブジェクトとインターフェイス
 これらのオブジェクト間のリレーションシップがで表される、 [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)です。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/21/2017
 |[パラメーター](../../../ado/reference/ado-api/parameter-object.md)|パラメーターまたはに関連付けられている引数を表します、**コマンド**オブジェクトがパラメーター化されたクエリまたはストアド プロシージャに基づいています。<br /><br /> **パラメーター**オブジェクトはスクリプトを実行しても安全ではありません。|  
 |[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)|プロバイダーによって定義されている ADO オブジェクトの動的な特性を表します。|  
 |[レコード](../../../ado/reference/ado-api/record-object-ado.md)|行を表し、 **Recordset**、ディレクトリまたはファイル システム内のファイルです。 **レコード**オブジェクトにスクリプトを実行しても安全です。|  
-|[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)|ベース テーブル、または実行されたコマンドの結果から、レコードのセットを表します。 いつでも、 **Recordset**オブジェクトとして現在のレコード セット内で 1 つのレコードのみを参照します。<br /><br /> **Recordset**オブジェクトにスクリプトを実行しても安全です。|  
+|[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|ベース テーブル、または実行されたコマンドの結果から、レコードのセットを表します。 いつでも、 **Recordset**オブジェクトとして現在のレコード セット内で 1 つのレコードのみを参照します。<br /><br /> **Recordset**オブジェクトにスクリプトを実行しても安全です。|  
 |[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)|データのバイナリ ストリームを表します。<br /><br /> **ストリーム**オブジェクトにスクリプトを実行しても安全です。|  
   
 ## <a name="see-also"></a>参照  

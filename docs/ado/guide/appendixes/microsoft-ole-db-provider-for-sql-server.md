@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a81ac91a4a159d41e711f79f76f79d9f168e23af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3d7be2d6b7f9be8105723b8781106b50da678b11
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server の概要
 Microsoft OLE DB Provider for SQL Server、SQLOLEDB では、ADO では Microsoft SQL Server にアクセスできます。
@@ -62,11 +63,11 @@ User ID=MyUserID;Password=MyPassword;"
 >  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = [はい]**または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。
 
 ## <a name="provider-specific-connection-parameters"></a>プロバイダー固有の接続パラメーター
- プロバイダーは、ADO で定義されているだけでなく、いくつかのプロバイダーに固有の接続パラメーターをサポートします。 ADO 接続のプロパティを持つこれらのプロバイダーに固有のプロパティを設定してを使用して、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクション、[接続](../../../ado/reference/ado-api/connection-object-ado.md)の一部として設定できますまたは、 **ConnectionString。**.
+ プロバイダーは、ADO で定義されているだけでなく、いくつかのプロバイダーに固有の接続パラメーターをサポートします。 ADO 接続のプロパティを持つこれらのプロバイダーに固有のプロパティを設定してを使用して、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクション、[接続](../../../ado/reference/ado-api/connection-object-ado.md)の一部として設定できますまたは、 **ConnectionString**.
 
 |パラメーター|Description|
 |---------------|-----------------|
-|Trusted_Connection|ユーザーの認証モードを示します。 これに設定できます**はい**または**いいえ**です。 既定値は**いいえ**です。 このプロパティ設定されている場合**はい**、SQLOLEDB では、Microsoft Windows NT の認証モードを使用して、ユーザーによって指定された SQL Server データベースへのアクセスを承認します、**場所**と[データソース](../../../ado/reference/ado-api/datasource-property-ado.md)プロパティの値。 このプロパティ設定されている場合**いいえ**SQLOLEDB では、混在モードを使用して、SQL Server データベースへのユーザー アクセスを承認します。 SQL Server ログインとパスワードが指定されて、**ユーザー Id**と**パスワード**プロパティです。|
+|Trusted_Connection|ユーザーの認証モードを示します。 これに設定できます**はい**または**いいえ**です。 既定値は **いいえ**します。 このプロパティ設定されている場合**はい**、SQLOLEDB では、Microsoft Windows NT の認証モードを使用して、ユーザーによって指定された SQL Server データベースへのアクセスを承認します、**場所**と[データソース](../../../ado/reference/ado-api/datasource-property-ado.md)プロパティの値。 このプロパティ設定されている場合**いいえ**SQLOLEDB では、混在モードを使用して、SQL Server データベースへのユーザー アクセスを承認します。 SQL Server ログインとパスワードが指定されて、**ユーザー Id**と**パスワード**プロパティです。|
 |[現在の言語]|SQL Server 言語名を示します。 システム メッセージの選択や書式設定に使われる言語を示します。 SQL Server の言語をインストールする必要がそれ以外の場合の開始が、接続は失敗します。|
 |[ネットワーク アドレス]|指定された SQL Server のネットワーク アドレスを示す、**場所**プロパティです。|
 |ネットワーク ライブラリ|SQL Server と通信するために使用されるネットワーク ライブラリ (DLL) の名前を示します。 この名前には、パスやファイル拡張子 (.dll) は含めません。 既定値は、SQL Server client の構成によって提供されます。|
@@ -149,61 +150,61 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |非同期中止|DBPROP_ASYNCTXNABORT|
 |非同期のコミット|DBPROP_ASYNCTNXCOMMIT|
 |自動コミットの分離レベル|DBPROP_SESS_AUTOCOMMITISOLEVELS|
-|カタログの場所|DBPROP_CATALOGLOCATION と|
-|カタログの用語|DBPROP_CATALOGTERM と|
-|列の定義|DBPROP_COLUMNDEFINITION と|
+|カタログの場所|DBPROP_CATALOGLOCATION|
+|カタログの用語|DBPROP_CATALOGTERM|
+|列の定義|DBPROP_COLUMNDEFINITION|
 |Connect Timeout|DBPROP_INIT_TIMEOUT|
 |現在のカタログ|DBPROP_CURRENTCATALOG|
 |[データ ソース]|DBPROP_INIT_DATASOURCE|
-|Data Source Name|開か|
+|Data Source Name|DBPROP_DATASOURCENAME|
 |データ ソース オブジェクト スレッド モデル|DBPROP_DSOTHREADMODEL|
-|DBMS の名前|DBPROP_DBMSNAME と|
-|DBMS のバージョン|DBPROP_DBMSVER と|
+|DBMS の名前|DBPROP_DBMSNAME|
+|DBMS のバージョン|DBPROP_DBMSVER|
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|
-|グループ化のサポート|DBPROP_GROUPBY と|
-|異なるテーブルのサポート|DBPROP_HETEROGENEOUSTABLES と|
+|グループ化のサポート|DBPROP_GROUPBY|
+|異なるテーブルのサポート|DBPROP_HETEROGENEOUSTABLES|
 |識別子の大文字と小文字の区別|DBPROP_IDENTIFIERCASE|
 |Initial Catalog|DBPROP_INIT_CATALOG|
 |分離レベル|DBPROP_SUPPORTEDTXNISOLEVELS|
-|分離保有期間|DBPROP_SUPPORTEDTXNISORETAIN と|
+|分離保有期間|DBPROP_SUPPORTEDTXNISORETAIN|
 |[Locale Identifier]|DBPROP_INIT_LCID|
-|インデックスの最大サイズ|DBPROP_MAXINDEXSIZE と|
-|行の最大サイズ|DBPROP_MAXROWSIZE と|
-|最大行サイズには、BLOB が含まれています。|DBPROP_MAXROWSIZEINCLUDESBLOB と|
-|SELECT の最大のテーブル|DBPROP_MAXTABLESINSELECT と|
+|インデックスの最大サイズ|DBPROP_MAXINDEXSIZE|
+|行の最大サイズ|DBPROP_MAXROWSIZE|
+|最大行サイズには、BLOB が含まれています。|DBPROP_MAXROWSIZEINCLUDESBLOB|
+|SELECT の最大のテーブル|DBPROP_MAXTABLESINSELECT|
 |複数のパラメーター セット|DBPROP_MULTIPLEPARAMSETS|
 |複数の結果|DBPROP_MULTIPLERESULTS|
 |複数のストレージ オブジェクト|DBPROP_MULTIPLESTORAGEOBJECTS|
-|複数のテーブルの更新|DBPROP_MULTITABLEUPDATE と|
-|NULL の照合順序|DBPROP_NULLCOLLATION と|
-|NULL を連結した動作|DBPROP_CONCATNULLBEHAVIOR と|
+|複数のテーブルの更新|DBPROP_MULTITABLEUPDATE|
+|NULL の照合順序|DBPROP_NULLCOLLATION|
+|NULL を連結した動作|DBPROP_CONCATNULLBEHAVIOR|
 |OLE DB バージョン|DBPROP_PROVIDEROLEDBVER|
 |OLE オブジェクトのサポート|DBPROP_OLEOBJECTS|
 |行セットのサポートを開く|DBPROP_OPENROWSETSUPPORT|
-|選択リストの ORDER BY 列|DBPROP_ORDERBYCOLUMNSINSELECT と|
+|選択リストの ORDER BY 列|DBPROP_ORDERBYCOLUMNSINSELECT|
 |出力パラメーターの使用状況|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |Ref アクセサーを使って渡す|DBPROP_BYREFACCESSORS|
-|パスワード|DBPROP_AUTH_PASSWORD|
+|Password|DBPROP_AUTH_PASSWORD|
 |Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
-|永続的な ID 型|DBPROP_PERSISTENTIDTYPE と|
-|中止の動作を準備します。|DBPROP_PREPAREABORTBEHAVIOR と|
-|コミット動作を準備します。|DBPROP_PREPARECOMMITBEHAVIOR と|
-|プロシージャの用語|DBPROP_PROCEDURETERM と|
+|永続的な ID 型|DBPROP_PERSISTENTIDTYPE|
+|中止の動作を準備します。|DBPROP_PREPAREABORTBEHAVIOR|
+|コミット動作を準備します。|DBPROP_PREPARECOMMITBEHAVIOR|
+|プロシージャの用語|DBPROP_PROCEDURETERM|
 |[プロンプト]|DBPROP_INIT_PROMPT|
 |プロバイダーの表示名|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |プロバイダーのバージョン|DBPROP_PROVIDERVER|
-|読み取り専用のデータ ソース|DBPROP_DATASOURCEREADONLY と|
+|読み取り専用のデータ ソース|DBPROP_DATASOURCEREADONLY|
 |行セットの変換|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |スキーマの用語|DBPROP_SCHEMATERM|
-|スキーマの使用|DBPROP_SCHEMAUSAGE と|
+|スキーマの使用|DBPROP_SCHEMAUSAGE|
 |SQL のサポート|DBPROP_SQLSUPPORT|
 |構造化ストレージ|DBPROP_STRUCTUREDSTORAGE|
-|サブクエリのサポート|DBPROP_SUBQUERIES と|
-|テーブルの用語|DBPROP_TABLETERM と|
+|サブクエリのサポート|DBPROP_SUBQUERIES|
+|テーブルの用語|DBPROP_TABLETERM|
 |トランザクション DDL|DBPROP_SUPPORTEDTXNDDL|
 |[ユーザー ID]|DBPROP_AUTH_USERID|
-|[ユーザー名]|DBPROP_USERNAME と|
+|[ユーザー名]|DBPROP_USERNAME|
 |ウィンドウ ハンドル|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>レコード セットの動的プロパティ

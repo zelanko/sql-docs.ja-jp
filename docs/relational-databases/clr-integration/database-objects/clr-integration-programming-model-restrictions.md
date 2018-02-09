@@ -17,19 +17,20 @@ helpviewer_keywords:
 - programming model restrictions [CLR integration]
 - assemblies [CLR integration], runtime checks
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23972fb78bafaca778b37fc7226d3db4f53083e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3d282b317a5ea31fe8170a847f5b425bcd1af4fd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 統合プログラミング モデルの制限事項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]マネージ ストアド プロシージャやその他のマネージ データベース オブジェクトを作成するときはコードのチェックが実行される特定の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]考慮する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]まず、データベースに登録されているときに、マネージ コード アセンブリに対する検査は実行を使用して、 **CREATE ASSEMBLY**ステートメントでは、および実行時にもします。 マネージ コードが実行時にもチェックされるのは、実行時に決して到達しないコード パスがアセンブリに含まれる場合があるためです。  このチェックにより、サード パーティ アセンブリを柔軟に登録できます。特に、クライアント環境での実行を目的に作成され、ホストされた CLR では実行されない "安全でない" コードを含むアセンブリをブロックしないようにすることができるため、サード パーティ アセンブリに柔軟に対応できます。 マネージ コードが満たす必要がある要件として、アセンブリが登録されているかどうかによって変わります**セーフ**、 **EXTERNAL_ACCESS**、または**UNSAFE**、**セーフ** 、最も制限の厳しい、され、次のとおりです。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+マネージ ストアド プロシージャやその他のマネージ データベース オブジェクトを作成するときはコードのチェックが実行される特定の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]考慮する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]まず、データベースに登録されているときに、マネージ コード アセンブリに対する検査は実行を使用して、 **CREATE ASSEMBLY**ステートメントでは、および実行時にもします。 マネージ コードが実行時にもチェックされるのは、実行時に決して到達しないコード パスがアセンブリに含まれる場合があるためです。  このチェックにより、サード パーティ アセンブリを柔軟に登録できます。特に、クライアント環境での実行を目的に作成され、ホストされた CLR では実行されない "安全でない" コードを含むアセンブリをブロックしないようにすることができるため、サード パーティ アセンブリに柔軟に対応できます。 マネージ コードが満たす必要がある要件として、アセンブリが登録されているかどうかによって変わります**セーフ**、 **EXTERNAL_ACCESS**、または**UNSAFE**、**セーフ** 、最も制限の厳しい、され、次のとおりです。  
   
  マネージ コード アセンブリには、制限事項に加えてコード セキュリティ権限も付与されます。 共通言語ランタイム (CLR) では、マネージ コードに対してコード アクセス セキュリティ (CAS) というセキュリティ モデルがサポートされます。 このモデルでは、コードの ID に基づいてアセンブリに権限が許可されます。 **安全な**、 **EXTERNAL_ACCESS**、および**UNSAFE**アセンブリが別の CAS 権限を持っています。 詳細については、次を参照してください。 [CLR 統合のコード アクセス セキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)です。  
   
@@ -43,9 +44,9 @@ ms.lasthandoff: 01/08/2018
   
 -   サポートされているアセンブリの 1 つであること。 詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)です。  
   
--   使用している**アセンブリから作成***\<場所 >、*すべての参照先アセンブリとその依存関係がで利用できる*\<場所 >*.  
+-   使用している **FROM * * * の CREATE ASSEMBLY\<場所 >、*すべての参照先アセンブリとその依存関係がで利用できる*\<場所 >*です。  
   
--   使用している**アセンブリから作成***\<バイト... >、*参照が領域を使用して指定されたすべての区切りのバイトとします。  
+-   使用している **FROM * * * の CREATE ASSEMBLY\<バイト... >、*参照が領域を使用して指定されたすべての区切りのバイトとします。  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  すべて**EXTERNAL_ACCESS**アセンブリは、次の条件を満たす必要があります。  
@@ -126,6 +127,6 @@ ms.lasthandoff: 01/08/2018
  [サポートされている .NET Framework ライブラリ](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)   
  [CLR 統合のコード アクセス セキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [ホスト保護属性と CLR 統合プログラミング](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [アセンブリの作成](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
+ [アセンブリを作成します。](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
   
   

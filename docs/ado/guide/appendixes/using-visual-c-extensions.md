@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7722a67ea07a6a5e0b033d8b0131c494e5e6bd11
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 304b814ee6e190e3b29dfbbd1a4ce2ee48ff1763
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-extensions"></a>Visual C の拡張機能
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding インターフェイス
@@ -91,52 +93,52 @@ Update(CADORecordBinding *binding)
  詳細については、次を参照してください。[付録 a: データ型](http://msdn.microsoft.com/en-us/e3a0533a-2196-4eb0-a31e-92fe9556ada6)、OLE DB プログラマーズ リファレンスのです。
 
 ### <a name="begin-binding-entries"></a>バインディング エントリを開始します。
- **BEGIN_ADO_BINDING**(*クラス*)
+ **BEGIN_ADO_BINDING**(*Class*)
 
 ### <a name="fixed-length-data"></a>固定長のデータ
- **ADO_FIXED_LENGTH_ENTRY**(*序数、データ型、バッファー、状態、変更*)
+ **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Status, Modify*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*序数、バッファーのデータ型を変更*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
 
 ### <a name="numeric-data"></a>数値データ
- **ADO_NUMERIC_ENTRY**(*序数、データ型、バッファー、有効桁数、小数点以下桁数、状態、変更*)
+ **ADO_NUMERIC_ENTRY**(*Ordinal, DataType, Buffer, Precision, Scale, Status, Modify*)
 
- **ADO_NUMERIC_ENTRY2**(*序数、データ型、バッファー、Precision、Scale、変更*)
+ **ADO_NUMERIC_ENTRY2**(*Ordinal, DataType, Buffer, Precision, Scale, Modify*)
 
 ### <a name="variable-length-data"></a>可変長のデータ
- **ADO_VARIABLE_LENGTH_ENTRY**(*序数、データ型、バッファー、サイズ、ステータス、長さ、変更*)
+ **ADO_VARIABLE_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Size, Status, Length, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY2**(*序数、データ型、バッファー、サイズ、状態、変更*)
+ **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Size, Status, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY3**(*序数、データ型、バッファー、サイズ、長さ、変更*)
+ **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordinal, DataType, Buffer, Size, Length, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY4**(*、序数、データ型、バッファーのサイズ変更*)
+ **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, DataType, Buffer, Size, Modify*)
 
 ### <a name="end-binding-entries"></a>バインディング エントリの終了
- **END_ADO_BINDING**)
+ **END_ADO_BINDING**()
 
 |パラメーター|Description|
 |---------------|-----------------|
 |*クラス*|バインディング エントリおよび C と C++ の変数が定義されているクラスです。|
 |*Ordinal*|序数のいずれかでカウント、 **Recordset** C と C++ の変数に対応するフィールドです。|
-|*データ型*|C と C++ の変数の同等の ADO データ型 (を参照してください[格納](../../../ado/reference/ado-api/datatypeenum.md)有効なデータ型の一覧については)。 値、 **Recordset**フィールドは、必要な場合はこのデータ型に変換されます。|
+|*DataType*|C と C++ の変数の同等の ADO データ型 (を参照してください[格納](../../../ado/reference/ado-api/datatypeenum.md)有効なデータ型の一覧については)。 値、 **Recordset**フィールドは、必要な場合はこのデータ型に変換されます。|
 |*バッファー*|C と C++ の変数の名前を**レコード セット**フィールドが格納されます。|
-|*[サイズ]*|最大サイズ (バイト) の*バッファー*です。 場合*バッファー*可変長の文字列には末尾のゼロの領域を確保できるようにします。|
+|*サイズ*|最大サイズ (バイト) の*バッファー*です。 場合*バッファー*可変長の文字列には末尾のゼロの領域を確保できるようにします。|
 |*[状態]*|示す変数の名前かどうかの内容*バッファー*が有効でとかどうか、変換するフィールドの*DataType*が成功しました。<br /><br /> この変数の 2 つの最も重要な値は**adFldOK**、つまり、変換が成功したと**adFldNull**、つまり、フィールドの値となる型 VT_ のバリアントだけでなく、空です。<br /><br /> 指定できる値*ステータス*次の表では、「状態の値です」に。|
 |*変更*|ブール型のフラグです。TRUE の場合は、ADO の対応する、更新が許可されたことを示します**Recordset**フィールドに含まれる値に*バッファー*です。<br /><br /> ブール値を設定*変更*ADO では、バインドされたフィールドが更新を有効にする場合は TRUE と FALSE の変更ではなく、フィールドを確認する場合のパラメーターです。|
 |*有効桁数*|数値型の変数で表すことができる数字の数。|
 |*Scale*|数値型の変数の小数点以下桁数です。|
-|*Length*|内のデータの実際の長さを格納する 4 バイトの変数の名前*バッファー*です。|
+|*長さ*|内のデータの実際の長さを格納する 4 バイトの変数の名前*バッファー*です。|
 
 ## <a name="status-values"></a>状態の値
  値、*ステータス*変数は、フィールドが変数に正常にコピーされたかどうかを示します。
 
  データを設定するときに*ステータス*に設定することがあります**adFldNull**を示すために、 **Recordset**フィールドを設定する必要がありますを null にします。
 
-|定数|値|Description|
+|定数|[値]|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Null 以外のフィールドの値が返されました。|
-|**adFldBadAccessor**|@shouldalert|バインドが無効でした。|
+|**adFldBadAccessor**|1|バインドが無効でした。|
 |**adFldCantConvertValue**|2|符号の不一致またはデータ オーバーフロー以外の理由の値を変換できませんでした。|
 |**adFldNull**|3|フィールドを取得するときに、null 値が返されたことを示します。<br /><br /> フィールドに設定するときに、フィールドを設定する必要がありますを示します。 **NULL**フィールドがエンコードできない**NULL**自体 (たとえば、文字配列または整数)。|
 |**adFldTruncated**|4|可変長のデータまたは数値の桁は切り捨てられました。|

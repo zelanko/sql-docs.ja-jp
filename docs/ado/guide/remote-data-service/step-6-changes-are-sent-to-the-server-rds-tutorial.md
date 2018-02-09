@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RDS tutorial [ADO], changes sent to server
+helpviewer_keywords:
+- RDS tutorial [ADO], changes sent to server
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de6c8d6a9873f57d25a24f29633360490f24c44e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 82a03d6178b9a8af36dedbda242e5e809a025bf1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>手順 6: 変更は、サーバー (RDS チュートリアル) に送信されます。
 場合、 **Recordset**オブジェクトを編集、変更 (つまり、追加、変更、または削除された行) をサーバーに送信できます。  

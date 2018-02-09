@@ -1,39 +1,34 @@
 ---
 title: "更新済み - T-SQL docs |Microsoft ドキュメント"
 description: "最近変更したドキュメントについては、TRANSACT-SQL の更新されたコンテンツのスニペットを表示します。"
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: BYHAM
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: t-sql
-ms.openlocfilehash: 33c50454f34c1902ea7f7dedc9ecb0a54f99ce24
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: t-sql
+ms.date: 02/03/2018
+ms.openlocfilehash: c1f1ce751bd4bca781644e7e2f5282320c8c88a8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-transact-sql-docs"></a>新規または最近の更新: TRANSACT-SQL のドキュメント
 
 
 
-ほとんど毎日、Microsoft は [Docs.Microsoft.com](http://docs.microsoft.com/) ドキュメント Web サイトの既存記事の一部を更新しています。 この記事では、最近更新された記事からの抜粋を示します。 新しい記事へのリンクも示される場合があります。
+ほとんど毎日 Microsoft への更新プログラムの既存のアーティクルのいくつかの[Docs.Microsoft.com](http://docs.microsoft.com/)ドキュメント web サイトです。 この記事では、最近更新された文書からの抜粋を表示します。 新しい情報の記事へのリンクも表示される可能性があります。
 
-この記事は、定期的に再実行されるプログラムによって生成されます。 場合によっては、抜粋の形式が不完全であったり、ソース記事からのマークダウンとして表示されることがあります。 イメージはここでは表示されません。
+この記事は、定期的に再実行しているプログラムによって生成されます。 場合によっては抜粋を付けること不完全な書式設定、マークダウンとしてソース アーティクルからです。 イメージはここでは表示されません。
 
-最近の更新として次の日付範囲と対象のものが報告されます。
+最新の更新プログラムは、次の日付範囲とサブジェクトの報告されます。
 
 
 
-- *更新プログラムの日付範囲:* &nbsp; **2017 年-09-28** &nbsp;対&nbsp; **2017 年-12-02**
+- *更新プログラムの日付範囲:* &nbsp; **2017 年-12-03** &nbsp;対&nbsp; **2018-02-03**
 - *サブジェクト領域:* &nbsp; **T-SQL**です。
 
 
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/04/2017
 
 &nbsp;
 
-## <a name="new-articles-created-recently"></a>最近新しく作成された記事
+## <a name="new-articles-created-recently"></a>最近作成された新しい情報の記事
 
 以下のリンクは、最近追加された新しい記事に移動します。
 
@@ -52,13 +47,13 @@ ms.lasthandoff: 12/04/2017
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>更新された記事と抜粋
+## <a name="updated-articles-with-excerpts"></a>更新されたアーティクルの抜粋が
 
 このセクションでは、最近大幅な更新があった記事から収集された更新の抜粋を示します。
 
-ここで示す抜粋は、適切なセマンティック コンテキストから切り離されて表示されます。 また、実際の記事で抜粋を囲んでいる重要なマークダウン構文から切り離されていることもあります。 したがって、これらの抜粋は一般的なガイダンス専用です。 抜粋は、クリックして実際の記事を参照する価値があるかどうかを判断するためだけに使用できます。
+ここに表示される抜粋は、適切なセマンティック コンテキストから区切りが表示されます。 また、区切ることもあります抜粋が実際の資料の周囲にある重要なマークダウン構文からです。 したがってこれらの抜粋は、一般的なガイダンスのみです。 のみの抜粋を使用するをクリックし、実際の資料を参照してくださいに時間がかかって各自の興味を保証するかどうかを把握できます。
 
-これらおよびその他の理由から、これらの抜粋からコードをコピーしたり、テキストの抜粋を正確な情報源と考えたりしないでください。 代わりに、実際の記事を参照してください。
+これらおよびその他の理由は、これらの抜粋からコードをコピーしない場合と受け取らない正確な情報源として任意のテキストの抜粋です。 代わりに、実際の資料を参照してください。
 
 
 
@@ -68,12 +63,12 @@ ms.lasthandoff: 12/04/2017
 
 <a name="compactupdatedlist"/>
 
-### <a name="compact-list-of-articles-updated-recently"></a>最近更新された記事の簡易一覧
+### <a name="compact-list-of-articles-updated-recently"></a>最近更新されたアーティクルの圧縮のリスト
 
 この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
-1. [円記号 (行の連結) (TRANSACT-SQL)](#TitleNum_1)
-2. [選択 - ORDER BY 句 (TRANSACT-SQL)](#TitleNum_2)
+1. [統計情報 (TRANSACT-SQL) を作成します。](#TitleNum_1)
+2. [UPDATE STATISTICS (TRANSACT-SQL)](#TitleNum_2)
 
 
 
@@ -84,37 +79,33 @@ ms.lasthandoff: 12/04/2017
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-backslash-line-continuation-transact-sqllanguage-elementssql-server-utilities-statements-backslashmd"></a>1.&nbsp;[円記号 (行の連結) (TRANSACT-SQL)](language-elements/sql-server-utilities-statements-backslash.md)
+### <a name="1-nbsp-create-statistics-transact-sqlstatementscreate-statistics-transact-sqlmd"></a>1.&nbsp;[CREATE STATISTICS (TRANSACT-SQL)](statements/create-statistics-transact-sql.md)
 
-*最終更新日: 2017 年-11-15* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([次](#TitleNum_2))
+*最終更新日: 2018-01-04* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([次](#TitleNum_2))
 
-<!-- Source markdown line 83.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 200.  ms.author= "edmaca".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 9484441710ac9a083a554ffadb59a3b7e92484b3 19b9c37c65ba462a32067c80e81a920eeb339851  (PR=3966  ,  Filename=sql-server-utilities-statements-backslash.md  ,  Dirpath=docs\t-sql\language-elements\  ,  MergeCommitSha40=b0c223ba0f78af5eb76948e68e2d1aab2e7b80c1) -->
+<!-- git diff --ignore-all-space --unified=0 384e68493597bcc36876a3c7bada2630106256e2 c22168ea59b6020e8ebe1ccac5fa6a6049e6db4d  (PR=4460  ,  Filename=create-statistics-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=4aeedbb88c60a4b035a49754eff48128714ad290) -->
 
 
 
-**B.バイナリ文字列の分割**
+MAXDOP = *max_degree_of_parallelism*
+**Applies to**: SQL Server (Starting with SQL Server 2017 CU3).
 
+ 上書き、**並列処理の次数の最大**統計操作の実行中の構成オプション。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。
 
-次の例では、円記号と復帰を使用して、バイナリ文字列を 2 つの行に分割します。
+ *max_degree_of_parallelism*を指定できます。
 
-```
-SELECT 0xabc\
-def AS [ColumnResult];
+ 1 しません並列プランが生成されます。
 
-```
+ \>1 が、指定した数に並列統計操作で使用されるプロセッサの最大数を制限または現在のシステム ワークロードに基づいて数が少ないです。
 
- ..!テキストの NotShown--ssResult--./../includes/ssresult-md.md)]
+ プロセッサの実際の数を 0 (既定値) が使用または現在のシステム ワークロードに基づいて少なくします。
 
-```
- ColumnResult
- ------------
- 0xABCDEF
-```
+ \<update_stats_stream_option > 読み取り専用を識別します。 サポートされていません。 将来の互換性は保証されません。
 
 
 
@@ -127,39 +118,32 @@ def AS [ColumnResult];
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-select---order-by-clause-transact-sqlqueriesselect-order-by-clause-transact-sqlmd"></a>2.&nbsp;[選択 - ORDER BY 句 (TRANSACT-SQL)](queries/select-order-by-clause-transact-sql.md)
+### <a name="2-nbsp-update-statistics-transact-sqlstatementsupdate-statistics-transact-sqlmd"></a>2.&nbsp;[UPDATE STATISTICS (TRANSACT-SQL)](statements/update-statistics-transact-sql.md)
 
-*最終更新日: 2017 年 1-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_1))
+*最終更新日: 2018-01-04* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_1))
 
-<!-- Source markdown line 481.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 167.  ms.author= "edmaca".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 b8d7bc7bab46e914eb2facf6c654a5944383077e de7e4f3f7826011e273120a2b6b08af4d263a510  (PR=3663  ,  Filename=select-order-by-clause-transact-sql.md  ,  Dirpath=docs\t-sql\queries\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
+<!-- git diff --ignore-all-space --unified=0 5721e21a9f43fa784fe9357c47cb2a814385e63d 24ae47c553635f389a182e5e643bf9bd6bf59e78  (PR=4460  ,  Filename=update-statistics-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=4aeedbb88c60a4b035a49754eff48128714ad290) -->
 
 
 
-**<a name="Union"></a>Order BY 句を使用して、和集合を EXCEPT、および INTERSECT**
+MAXDOP = *max_degree_of_parallelism*
 
- クエリで UNION、EXCEPT、または INTERSECT 演算子を使用する場合は、ORDER BY 句をステートメントの末尾に指定する必要があります。この場合、結合されたクエリの結果が並べ替えられます。 赤または黄色と組み合わせてこの種類は、すべての製品を返す例を次の列によって一覧`ListPrice`です。
+**適用されます**: SQL Server (SQL Server 2017 CU3 以降)。
 
-```sql
-USE AdventureWorks2012;
-GO
-SELECT Name, Color, ListPrice
-FROM Production.Product
-WHERE Color = 'Red'
--- ORDER BY cannot be specified here.
-UNION ALL
-SELECT Name, Color, ListPrice
-FROM Production.Product
-WHERE Color = 'Yellow'
-ORDER BY ListPrice ASC;
+ 上書き、**並列処理の次数の最大**統計操作の実行中の構成オプション。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。
 
-```
+ *max_degree_of_parallelism*を指定できます。
 
-**例:.. です。テキストの NotShown--ssSDWfull--./../includes/sssdwfull-md.md)]、.. です。テキストの NotShown--ssPDW--./../includes/sspdw-md.md)]**
+ 1 しません並列プランが生成されます。
+
+ \>1 が、指定した数に並列統計操作で使用されるプロセッサの最大数を制限または現在のシステム ワークロードに基づいて数が少ないです。
+
+ プロセッサの実際の数を 0 (既定値) が使用または現在のシステム ワークロードに基づいて少なくします。
 
 
 
@@ -168,46 +152,45 @@ ORDER BY ListPrice ASC;
 
 
 
-## <a name="similar-articles"></a>類似した記事
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>新規または更新のアーティクルに関する類似の記事
 
 このセクションでは、パブリック GitHub.com リポジトリ [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/) 内の他の対象領域の記事で、この対象領域において最近更新された記事とよく似たものの一覧を示します。
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のある対象領域
 
-- [新しい + 更新 (3 + 14): **SQL の Advanced Analytics** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新規 + 更新 (1 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
-- [新しい + 更新 (87 + 0): **sql 分析プラットフォーム システム**docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新しい + 更新 (5 + 4): **SQL への接続**docs](../connect/new-updated-connect.md)
-- [新しい + 更新 (0 + 1): **SQL のデータベース エンジン**docs](../database-engine/new-updated-database-engine.md)
-- [新しい + 更新 (2 + 2): **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
-- [新しい + 更新 (10 + 9): **SQL の Linux** docs](../linux/new-updated-linux.md)
-- [新しい + 更新 (2 + 4):**リレーショナル データベースを SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [新しい + 更新 (4 + 2): **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
-- [新しい + 更新 (0 + 1): **SQL 用のサンプル**docs](../sample/new-updated-sample.md)
-- [新しい + 更新 (21 + 0): **SQL 操作 Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新しい + 更新 (5 + 1): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [新規 + 更新 (0 + 1): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
-- [新しい + 更新 (1 + 0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [新規 + 更新 (0 + 1): **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
-- [新しい + 更新 (0 + 2): **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>サブジェクト領域を*しないで*が新規または最近更新のアーティクル
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のない対象領域
 
-- [新しい + 更新 (0 0 以降):**データ移行アシスタント (DMA) sql** docs](../dma/new-updated-dma.md)
-- [新規 + 更新 (0 + 0): **SQL の ActiveX データ オブジェクト (ADO)** に関するドキュメント](../ado/new-updated-ado.md)
-- [新規 + 更新 (0 + 0): **SQL の Data Quality Services** に関するドキュメント](../data-quality-services/new-updated-data-quality-services.md)
-- [新規 + 更新 (0 + 0): **SQL のデータ マイニング拡張機能 (DMX)** に関するドキュメント](../dmx/new-updated-dmx.md)
+- [新しい + 更新 (1 + 3):&nbsp; **SQL の Advanced Analytics** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新しい + 更新 (0 + 1):&nbsp; **sql 分析プラットフォーム システム**docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新しい + 更新 (0 + 1):&nbsp; **SQL への接続**docs](../connect/new-updated-connect.md)
+- [新しい + 更新 (0 + 1):&nbsp; **SQL のデータベース エンジン**docs](../database-engine/new-updated-database-engine.md)
+- [新しい + 更新 (12 + 1): **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
+- [新しい + 更新 (6 + 2):&nbsp; **SQL の Linux** docs](../linux/new-updated-linux.md)
+- [新しい + 更新 (15 + 0): **SQL 用の PowerShell** docs](../powershell/new-updated-powershell.md)
+- [新しい + 更新 (2 + 9):&nbsp; **リレーショナル データベースを SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [新しい + 更新 (1 + 0):&nbsp; **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
+- [新しい + 更新 (1 + 1):&nbsp; **SQL 操作 Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新しい + 更新 (1 + 1):&nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [新しい + 更新 (0 + 1):&nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [新しい + 更新 (1 + 2):&nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [新しい + 更新 (0 + 2):&nbsp; **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>実行の領域をサブジェクト*いない*がいずれかの new または最近更新のアーティクル
+
+
+- [新規 + 更新 (0 + 0): **SQL の Data Migration Assistant (DMA)** に関するドキュメント](../dma/new-updated-dma.md)
+- [新しい + 更新 (0 0 以降): **SQL のように、ActiveX データ オブジェクト (ADO)** docs](../ado/new-updated-ado.md)
+- [新規 + 更新 (0 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新しい + 更新 (0 0 以降): **SQL の Data Quality Services** docs](../data-quality-services/new-updated-data-quality-services.md)
+- [新しい + 更新 (0 0 以降):**データ マイニング拡張機能 (DMX) の SQL** docs](../dmx/new-updated-dmx.md)
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
-- [新規 + 更新 (0 + 0): **SQL の多次元式 (MDX)** に関するドキュメント](../mdx/new-updated-mdx.md)
-- [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
-- [新規 + 更新 (0 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
+- [新しい + 更新 (0 0 以降): **SQL の多次元式 (MDX)** docs](../mdx/new-updated-mdx.md)
+- [新しい + 更新 (0 0 以降): **SQL に対する ODBC (Open Database Connectivity)** docs](../odbc/new-updated-odbc.md)
+- [新しい + 更新 (0 0 以降): **SQL 用のサンプル**docs](../sample/new-updated-sample.md)
+- [新しい + 更新 (0 0 以降): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
 - [新規 + 更新 (0 + 0): **Tools for SQL**  に関するドキュメント](../tools/new-updated-tools.md)
-- [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)
+- [新しい + 更新 (0 0 以降): **SQL 用の XQuery** docs](../xquery/new-updated-xquery.md)
 
 

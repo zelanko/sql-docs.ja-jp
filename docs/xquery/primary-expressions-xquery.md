@@ -8,11 +8,14 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - variable references [XQuery]
 - primary expressions [XQuery]
@@ -21,16 +24,16 @@ helpviewer_keywords:
 - literals [XQuery]
 - context item expressions [XQuery]
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d366d9558ac0f1016cc87c5f892edf6f0be88cad
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 339cb237a14869c2d747d81e32bc572ba003a5e3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="primary-expressions-xquery"></a>原始式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +54,7 @@ ms.lasthandoff: 12/05/2017
  文字列リテラルには、10 進または 16 進のコード ポイントで識別される文字参照 (Unicode 文字への XML 形式の参照) を含めることもできます。 たとえば、文字参照でユーロの通貨記号を表すことができます"&\#8364;"です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、XML Version 1.0 が解析の基準として使用されます。  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 解析するための基準として XML version 1.0 を使用します。  
   
 ### <a name="examples"></a>使用例  
  リテラル、エンティティ参照、および文字参照の使用方法を次の例に示します。  

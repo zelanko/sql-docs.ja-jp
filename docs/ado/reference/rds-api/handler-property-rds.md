@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Handler property [ADO]
+helpviewer_keywords:
+- Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7b2bdaddbbf0d0cb78627567fc1efeed22593ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fa363b9fa9761eb764a7bf2aa7b9d4eb992ec65b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="handler-property-rds"></a>ハンドラーのプロパティ (RDS)
 機能を拡張するプログラム (ハンドラー) のサーバー側のカスタマイズの名前を示す、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)とで使用される任意のパラメーター、*ハンドラー*です。  
@@ -54,7 +56,7 @@ DataControl.Handler = String
   
  既定のハンドラーの名前は**MSDFMAP です。ハンドラー**、その既定のパラメーターは、という名前のカスタマイズ ファイルおよび**MSDFMAP です。INI**です。 このプロパティを使用して、サーバー管理者によって作成される代替のカスタマイズ ファイルを呼び出します。  
   
- 設定する代わりに、**ハンドラー**プロパティがハンドラーと内のパラメーターを指定するには、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティですつまり、"**ハンドラー =**  *。handlerName、parameter1、parameter2、います。*".  
+ 設定する代わりに、**ハンドラー**プロパティがハンドラーと内のパラメーターを指定するには、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティですつまり、"**ハンドラー = * * * handlerName、parameter1、。パラメーター 2、... です。*".  
   
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

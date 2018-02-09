@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sysindexes_TSQL
 - sys.sysindexes
 - sys.sysindexes_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sysindexes system table
 - sys.sysindexes compatibility view
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
-caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4d196e511921980543b23c45c36ada1a6f1eba41
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6871dcbbc0259e6aeca7b3d24ff6050b9608f199
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,19 +42,19 @@ ms.lasthandoff: 11/27/2017
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|データ型|説明|  
+|列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|インデックスが属するテーブルの ID。|  
 |**ステータス**|**int**|システム状態情報。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**まずは**|**binary(6)**|最初のページまたはルート ページへのポインター。<br /><br /> 使用されていない場合に**indid** 0 を = です。<br /><br /> NULL = インデックスがパーティション分割すると**indid** > 1。<br /><br /> NULL = テーブルはパーティション分割すると**indid**が 0 または 1 です。|  
+|**first**|**binary(6)**|最初のページまたはルート ページへのポインター。<br /><br /> 使用されていない場合に**indid** 0 を = です。<br /><br /> NULL = インデックスがパーティション分割すると**indid** > 1。<br /><br /> NULL = テーブルはパーティション分割すると**indid**が 0 または 1 です。|  
 |**indid**|**smallint**|インデックスの ID。<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化インデックス<br /><br /> >1 = 非クラスター化インデックス|  
 |**ルート**|**binary(6)**|**Indid** > = 1,**ルート**ルート ページへのポインターします。<br /><br /> 使用されていない場合に**indid** 0 を = です。<br /><br /> NULL = インデックスがパーティション分割すると**indid** > 1。<br /><br /> NULL = テーブルはパーティション分割すると**indid**が 0 または 1 です。|  
 |**minlen**|**smallint**|最小行サイズ。|  
 |**keycnt**|**smallint**|キーの数。|  
 |**groupid**|**smallint**|オブジェクトが作成されたファイル グループ ID。<br /><br /> NULL = インデックスがパーティション分割すると**indid** > 1。<br /><br /> NULL = テーブルはパーティション分割すると**indid**が 0 または 1 です。|  
 |**dpages**|**int**|**Indid** = 0 または**indid** = 1, **dpages**使用するデータ ページ数です。<br /><br /> **Indid** > 1、 **dpages**使用されているインデックス ページ数です。<br /><br /> 0 = インデックスがパーティション分割すると**indid** > 1。<br /><br /> 0 = テーブルはパーティション分割すると**indid**が 0 または 1 です。<br /><br /> 行オーバーフローが発生した場合、正確な結果は生成されません。|  
-|**予約されています**|**int**|**Indid** = 0 または**indid** = 1,**予約**に割り当てられたすべてのインデックスとテーブル データ ページ数です。<br /><br /> **Indid** > 1、**予約**インデックスに割り当てられたページ数です。<br /><br /> 0 = インデックスがパーティション分割すると**indid** > 1。<br /><br /> 0 = テーブルはパーティション分割すると**indid**が 0 または 1 です。<br /><br /> 行オーバーフローが発生した場合、正確な結果は生成されません。|  
-|**使用します。**|**int**|**Indid** = 0 または**indid** = 1,**使用**インデックスとテーブルのすべてのデータで使用される合計ページ数です。<br /><br /> **Indid** > 1、**使用**インデックスで使用されるページ数です。<br /><br /> 0 = インデックスがパーティション分割すると**indid** > 1。<br /><br /> 0 = テーブルはパーティション分割すると**indid**が 0 または 1 です。<br /><br /> 行オーバーフローが発生した場合、正確な結果は生成されません。|  
+|**reserved**|**int**|**Indid** = 0 または**indid** = 1,**予約**に割り当てられたすべてのインデックスとテーブル データ ページ数です。<br /><br /> **Indid** > 1、**予約**インデックスに割り当てられたページ数です。<br /><br /> 0 = インデックスがパーティション分割すると**indid** > 1。<br /><br /> 0 = テーブルはパーティション分割すると**indid**が 0 または 1 です。<br /><br /> 行オーバーフローが発生した場合、正確な結果は生成されません。|  
+|**used**|**int**|**Indid** = 0 または**indid** = 1,**使用**インデックスとテーブルのすべてのデータで使用される合計ページ数です。<br /><br /> **Indid** > 1、**使用**インデックスで使用されるページ数です。<br /><br /> 0 = インデックスがパーティション分割すると**indid** > 1。<br /><br /> 0 = テーブルはパーティション分割すると**indid**が 0 または 1 です。<br /><br /> 行オーバーフローが発生した場合、正確な結果は生成されません。|  
 |**rowcnt**|**bigint**|基づくデータ レベルの行数**indid** = 0 および**indid** = 1 です。<br /><br /> 0 = インデックスがパーティション分割すると**indid** > 1。<br /><br /> 0 = テーブルはパーティション分割すると**indid**が 0 または 1 です。|  
 |**rowmodctr**|**int**|テーブルの統計情報が前回更新されてから挿入、削除、更新された行の総数。<br /><br /> 0 = インデックスがパーティション分割すると**indid** > 1。<br /><br /> 0 = テーブルはパーティション分割すると**indid**が 0 または 1 です。<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降では、 **rowmodctr**以前のバージョンと完全に互換性がありません。 詳細については、「解説」を参照してください。|  
 |**reserved3**|**int**|0 を返します。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -66,11 +68,11 @@ ms.lasthandoff: 11/27/2017
 |**impid**|**smallint**|インデックス実装フラグ。<br /><br /> 0 を返します。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**lockflags**|**smallint**|インデックスのロック粒度を適切に保つために使用します。 たとえば、ロック コストを最小限にするには、基本的に読み取り専用の参照テーブルで、テーブル レベルのロックだけを行うように設定します。|  
 |**pgmodctr**|**int**|0 を返します。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**キー**|**varbinary(816)**|インデックス キーを構成する列の列 ID の一覧。<br /><br /> NULL を返します。<br /><br /> 表示するには、インデックス キー列を使用して[sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)です。|  
+|**keys**|**varbinary(816)**|インデックス キーを構成する列の列 ID の一覧。<br /><br /> Returns NULL.<br /><br /> 表示するには、インデックス キー列を使用して[sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)です。|  
 |**name**|**sysname**|インデックスまたは統計の名前。 ときに、NULL を返します**indid** 0 を = です。 アプリケーションを変更して、NULL ヒープ名を検索するようにしてください。|  
-|**statblob**|**image**|統計バイナリ ラージ オブジェクト (BLOB)。<br /><br /> NULL を返します。|  
+|**statblob**|**image**|統計バイナリ ラージ オブジェクト (BLOB)。<br /><br /> Returns NULL.|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**行**|**int**|基づくデータ レベルの行数**indid** = 0 および**indid** = 1、値は繰り返されます**indid** > 1。|  
+|**rows**|**int**|基づくデータ レベルの行数**indid** = 0 および**indid** = 1、値は繰り返されます**indid** > 1。|  
   
 ## <a name="remarks"></a>解説  
  予約済みとして定義されている列は使用しないでください。  

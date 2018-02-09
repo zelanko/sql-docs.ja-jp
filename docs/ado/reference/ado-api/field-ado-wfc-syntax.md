@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -12,21 +13,22 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Field collection [ADO], ADO/WFC syntax
+helpviewer_keywords:
+- Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 42748fb897d2ec6a7ed226f35852b828ddf82f71
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0ca92f0ab46f11fad94d4dacd6399bc2c97dd8b4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="field-ado---wfc-syntax"></a>フィールド (ADO - WFC 構文)
-## <a name="package-commswfcdata"></a>パッケージ com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
   
 ### <a name="methods"></a>メソッド  
   
@@ -39,7 +41,7 @@ public char[] getCharChunk(int len)
 public String getStringChunk(int len)  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 public int getActualSize()  
@@ -73,7 +75,7 @@ public AdoProperties getProperties()
   
  ADO/WFC を実装して、**値**を持つプロパティ、 **getValue** 、バリアント型のオブジェクトを返すメソッド、および**setValue**を引数として VARIANT を受け取るメソッド。 バリアントは、Microsoft Visual Basic などの特定の言語に非常に効率的です。  
   
- 加え、**値**プロパティ、ADO/WFC 提供*アクセサー*を取得および設定の内容を Java データ型を使用するメソッド**フィールド**オブジェクト。 これらのメソッドのほとんどは、フォームの名前を持つ**取得***DataType*または**設定***DataType*です。  
+ 加え、**値**プロパティ、ADO/WFC 提供*アクセサー*を取得および設定の内容を Java データ型を使用するメソッド**フィールド**オブジェクト。 これらのメソッドのほとんどは、フォームの名前を持つ **取得 * * * DataType*または **設定 * * * DataType*です。  
   
  2 つの注目すべき例外があります: のいずれか、 **getObject**メソッドは、指定したクラスに強制型変換オブジェクトを返します。 ない**注意する必要**プロパティです。 代わりに、、 **isNull**フィールドが null かどうかを示すブール値を返します。  
   

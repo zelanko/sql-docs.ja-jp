@@ -11,18 +11,19 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: extended stored procedures [SQL Server], about extended stored procedures
+helpviewer_keywords:
+- extended stored procedures [SQL Server], about extended stored procedures
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8dd9610a9dbc9e1df0793a80411d5d2b3972eaee
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: eb9c6663cd2891669140c7eb59e44e110f3d5607
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-extended-stored-procedures-work"></a>拡張ストアド プロシージャのしくみ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +35,9 @@ ms.lasthandoff: 01/08/2018
   
 1.  表形式データ ストリーム (TDS) またはクライアント アプリケーションからの簡易オブジェクト アクセス プロトコル (SOAP) 形式で要求が送信されるクライアントは、拡張ストアド プロシージャを実行するとき[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
-2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は拡張ストアド プロシージャに関連付けられた DLL を検索し、対象の DLL がまだロードされていない場合はロードします。  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張ストアド プロシージャに関連付けられている DLL を検索し、まだ読み込まれていない場合は、DLL を読み込みます。  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、要求されている拡張ストアド プロシージャ (DLL 内に関数として実装されている) を呼び出します。  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 呼び出し、要求された拡張ストアド プロシージャ (DLL 内に関数として実装される)。  
   
 4.  拡張ストアド プロシージャは拡張ストアド プロシージャ API を介してサーバーに結果セットを渡し、パラメーターを返します。  
   

@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - ADO, Visual Basic
 - Visual Basic [ADO]
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5f3652eba15968b40a6d8a33902e1ca757275dd8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: abeb037ed89277082fce38c833baadc5a4170e3c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>アプリケーションの Microsoft Visual Basic および Visual Basic と ADO の併用
 ADO プロジェクトの設定や ADO コードの記述はのようなアプリケーションの Visual Basic または Visual Basic を使用するかどうかです。 このトピックでは、Visual Basic および Visual Basic の両方で ADO を使用してアプリケーションに対応し、ノートのすべての差異。
@@ -47,7 +49,7 @@ ADO プロジェクトの設定や ADO コードの記述はのようなアプ�
 
     -   OLE オートメーション
 
-3.  **[OK]** をクリックします。
+3.  **[OK]**をクリックします。
 
  ADO を使用でき同じくらい簡単に Visual Basic によるアプリケーションについては、たとえば Microsoft Access を使用して、します。
 
@@ -65,7 +67,7 @@ ADO プロジェクトの設定や ADO コードの記述はのようなアプ�
 
     -   DAO 3.5 オブジェクト ライブラリ (またはそれ以降)
 
-4.  **[OK]** をクリックします。
+4.  **[OK]**をクリックします。
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>Visual Basic では ADO オブジェクトの作成
  オートメーション変数とその変数にオブジェクトのインスタンスを作成するには、2 つのメソッドを使用することができます: **Dim**または**CreateObject**です。
@@ -103,7 +105,7 @@ Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- オブジェクトがインスタンス化される**CreateObject**遅延バインディングがない厳密に型指定し、コマンド ライン入力候補が無効になっていることを意味します。 ただし、では、プロジェクトから ADO ライブラリの参照をスキップすることし、特定のバージョンのオブジェクトをインスタンス化することができます。 例 :
+ オブジェクトがインスタンス化される**CreateObject**遅延バインディングがない厳密に型指定し、コマンド ライン入力候補が無効になっていることを意味します。 ただし、では、プロジェクトから ADO ライブラリの参照をスキップすることし、特定のバージョンのオブジェクトをインスタンス化することができます。 例:
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,26 +13,28 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: FieldStatusEnum
-helpviewer_keywords: FieldStatusEnum enumeration [ADO]
+f1_keywords:
+- FieldStatusEnum
+helpviewer_keywords:
+- FieldStatusEnum enumeration [ADO]
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12e543a4baa7bbcc46ea39e906d57d001ea5f078
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e04f98c5691a66b02a4c5daa8d745f529a9820e0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 指定します、[ステータス](../../../ado/reference/ado-api/status-property-ado-field.md)の[フィールド オブジェクト](../../../ado/reference/ado-api/field-object.md)です。  
   
  **AdFieldPending\*** 値は、操作を設定できる状態の原因となったはその他の状態の値と組み合わせることを示します。  
   
-|定数|値|Description|  
+|定数|[値]|Description|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|指定したフィールドが既に存在することを示します。|  
 |**adFieldBadStatus**|12|無効な状態値は、OLE DB プロバイダーに ADO から送信されたことを示します。 考えられる原因は、OLE DB 1.0 または 1.1 プロバイダーは、または、不適切な組み合わせの[値](../../../ado/reference/ado-api/value-property-ado.md)と[ステータス](../../../ado/reference/ado-api/status-property-ado-field.md)です。|  
@@ -46,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 |**adFieldIntegrityViolation**|10|計算された、または派生エンティティであるため、フィールドを変更できないことを示します。|  
 |**adFieldInvalidURL**|17|データ ソースの URL に無効な文字が含まれていることを示します。|  
 |**adFieldIsNull**|3|プロバイダーに型 VT_ のバリアント値が返されることと、フィールドが空でないことを示します。|  
-|**adfieldok で**|0|既定値です。 フィールドが正常に追加または削除することを示します。|  
+|**adFieldOK**|0|既定値です。 フィールドが正常に追加または削除することを示します。|  
 |**adFieldOutOfSpace**|22|プロバイダーが、移動が完了またはコピー操作に十分な記憶域を入手することであることを示します。|  
 |**adFieldPendingChange**|0x40000|いずれかを示すフィールドを削除し、もう一度追加、おそらく別のデータ型、またはを以前の状態に配置すると、フィールドの値の**adfieldok で**が変更されました。 フィールドの最終的な形式の変更は、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)の後にコレクション、[更新](../../../ado/reference/ado-api/update-method.md)メソッドが呼び出されます。|  
 |**adFieldPendingDelete**|0x20000|示します、**削除**操作の原因となった状態を設定します。 削除にマークされているフィールド、**フィールド**の後にコレクション、**更新**メソッドが呼び出されます。|  

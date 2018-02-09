@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: e2ce8a7cd87e188fce0f1b0f62bde148324373a5
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 9d8528d227f45e212141e97308718082d6c59cea
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Linux 上の読み取りのスケールの SQL Server 可用性グループの構成します。
 
@@ -36,21 +36,21 @@ Linux では、SQL Server 常に 可用性グループ (AG) な読み取りワ�
 
 可用性グループを作成します。 Set `CLUSTER_TYPE = NONE`. さらに、各レプリカを設定`FAILOVER_MODE = NONE`です。 分析を実行するか、ワークロードをレポートできますを直接クライアント アプリケーションは、セカンダリ データベースに接続します。 また、読み取り専用ルーティング リストを作成することもできます。 転送用のプライマリ レプリカへの接続は、ラウンド ロビン方式で、ルーティング リストから各セカンダリ レプリカに接続要求を読み取る。
 
-次の TRANSACT-SQL スクリプトを作成、AG という`ag1`です。 スクリプトは、構成、可用性グループ レプリカと`SEEDING_MODE = AUTOMATIC`です。 この設定は、各セカンダリ サーバーでは、可用性グループに追加した後、データベースを自動的に作成する SQL Server をによりします。 環境内の次のスクリプトを更新します。 置換、`**<node1>**`と`**<node2>**`レプリカをホストする SQL Server インスタンスの名前を持つ値です。 置換、`**<5022>**`エンドポイント用に設定するポートを持つ値です。 SQL Server のプライマリ レプリカでは、次の TRANSACT-SQL スクリプトを実行します。
+次の TRANSACT-SQL スクリプトを作成、AG という`ag1`です。 スクリプトは、構成、可用性グループ レプリカと`SEEDING_MODE = AUTOMATIC`です。 この設定は、各セカンダリ サーバーでは、可用性グループに追加した後、データベースを自動的に作成する SQL Server をによりします。 環境内の次のスクリプトを更新します。 置換、`<node1>`と`<node2>`レプリカをホストする SQL Server インスタンスの名前を持つ値です。 置換、`<5022>`エンドポイント用に設定するポートを持つ値です。 SQL Server のプライマリ レプリカでは、次の TRANSACT-SQL スクリプトを実行します。
 
 ```SQL
 CREATE AVAILABILITY GROUP [ag1]
     WITH (CLUSTER_TYPE = NONE)
     FOR REPLICA ON
-        N'**<node1>**' WITH (
-            ENDPOINT_URL = N'tcp://**<node1>:**<5022>**',
+        N'<node1>' WITH (
+            ENDPOINT_URL = N'tcp://<node1>:<5022>',
             AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
             FAILOVER_MODE = MANUAL,
             SEEDING_MODE = AUTOMATIC,
                     SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
             ),
-        N'**<node2>**' WITH ( 
-            ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**', 
+        N'<node2>' WITH ( 
+            ENDPOINT_URL = N'tcp://<node2>:<5022>', 
             AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
             FAILOVER_MODE = MANUAL,
             SEEDING_MODE = AUTOMATIC,

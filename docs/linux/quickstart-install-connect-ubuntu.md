@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: ac570feda5ce20ee8d255abb25b83a327c84c7f3
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 3f9435a43e57cc8d528e70c7376ba9ccd1c85c95
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>SQL Server をインストールし、Ubuntu でデータベースを作成
 
@@ -61,7 +61,7 @@ Ubuntu で SQL Server を構成するをインストールするターミナル�
    ```
 
    > [!NOTE]
-   > これは、累積的な更新プログラム (CU) リポジトリです。 詳細については、リポジトリ オプションとそれらの相違点については、次を参照してください。[ソース リポジトリを変更](sql-server-linux-setup.md#repositories)です。
+   > これは、累積的な更新プログラム (CU) リポジトリです。 詳細については、リポジトリ オプションとそれらの相違点については、次を参照してください。 [Linux に SQL Server 用のリポジトリを構成する](sql-server-linux-change-repo.md)です。
 
 1. SQL Server をインストールするには、次のコマンドを実行します。
 

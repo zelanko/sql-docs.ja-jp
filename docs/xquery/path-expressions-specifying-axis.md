@@ -8,11 +8,14 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - attribute axis [SQL Server]
 - axis step [XQuery]
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - descendant-or-self axis
 - parent axis
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d19dec5b1ea98242c96ca43e3c295290827a8bcf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 44ae49e51ac3fab0ca4b2cd8363601a14a3edf0b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions---specifying-axis"></a>パス式の軸の指定
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,18 +48,18 @@ ms.lasthandoff: 12/05/2017
   
 -   [(省略可能) 0 個以上のステップ修飾子](../xquery/path-expressions-specifying-predicates.md)  
   
- 詳細については、次を参照してください。[パス式 &#40;です。XQuery と #41 です。](../xquery/path-expressions-xquery.md).  
+ 詳細については、次を参照してください。[パス式 &#40;です。XQuery と #41 です](../xquery/path-expressions-xquery.md)。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の XQuery 実装では、次の軸ステップがサポートされています。  
   
 |軸|Description|  
 |----------|-----------------|  
-|**子**|コンテキスト ノードの子を返します。|  
-|**子**|コンテキスト ノードのすべての子孫を返します。|  
-|**親**|コンテキスト ノードの親を返します。|  
-|**属性**|コンテキスト ノードの属性を返します。|  
+|**child**|コンテキスト ノードの子を返します。|  
+|**descendant**|コンテキスト ノードのすべての子孫を返します。|  
+|**parent**|コンテキスト ノードの親を返します。|  
+|**attribute**|コンテキスト ノードの属性を返します。|  
 |**self**|コンテキスト ノード自身を返します。|  
-|**子孫または self**|コンテキスト ノード自身とその子孫をすべて返します。|  
+|**descendant-or-self**|コンテキスト ノード自身とその子孫をすべて返します。|  
   
  これらのすべての軸を除く、**親**軸は順方向軸です。 **親**ドキュメントの階層で後方に検索するので、軸は逆方向軸です。 たとえば、相対パス式 `child::ProductDescription/child::Summary` には 2 つのステップがあり、各ステップが `child` 軸を指定します。 最初の手順の取得、 \<ProductDescription > コンテキスト ノードの子要素です。 各\<ProductDescription > 要素ノード、2 番目の手順の取得、\<概要 > 子要素ノードです。  
   
@@ -192,7 +195,7 @@ WHERE  ProductModelID=19
 </ProductDescription>  
 ```  
   
- クエリは、反復子変数を設定`$f`の要素の子を返します FLWOR ステートメントで、`<Features>`要素。 詳細については、次を参照してください。 [FLWOR ステートメントおよびイテレーション &#40;です。XQuery と #41 です。](../xquery/flwor-statement-and-iteration-xquery.md). 各機能に対して、`return`句には、次の形式で XML が構築されます。  
+ クエリは、反復子変数を設定`$f`の要素の子を返します FLWOR ステートメントで、`<Features>`要素。 詳細については、次を参照してください。 [FLWOR ステートメントおよびイテレーション &#40;です。XQuery と #41 です](../xquery/flwor-statement-and-iteration-xquery.md)。 各機能に対して、`return`句には、次の形式で XML が構築されます。  
   
 ```  
 <Feature ProductModelID="...">...</Feature>  

@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Current property
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be30c3c81333080fdcf3bc40bd6abad7c7449d5b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: abcc68d96e7516b31a231efeb4c5c851b10dee45
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-the-current-transaction"></a>現在のトランザクションへのアクセス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]トランザクションの時点で実行されている共通言語ランタイム (CLR) コードでアクティブな場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が入力すると、トランザクションはによって公開される、 **System.Transactions.Transaction**クラスです。 **Transaction.Current**プロパティは、現在のトランザクションにアクセスするために使用します。 ほとんどの場合、トランザクションに明示的にアクセスする必要はありません。 ADO.NET データベース接続に対してチェック**Transaction.Current**時に自動的に、 **Connection.Open**メソッドが呼び出され、そのトランザクションに、接続を透過的に登録 (しない限り、**Enlist**キーワードが接続文字列で false に設定されている)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+トランザクションの時点で実行されている共通言語ランタイム (CLR) コードでアクティブな場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が入力すると、トランザクションはによって公開される、 **System.Transactions.Transaction**クラスです。 **Transaction.Current**プロパティは、現在のトランザクションにアクセスするために使用します。 ほとんどの場合、トランザクションに明示的にアクセスする必要はありません。 ADO.NET データベース接続に対してチェック**Transaction.Current**時に自動的に、 **Connection.Open**メソッドが呼び出され、そのトランザクションに、接続を透過的に登録 (しない限り、**Enlist**キーワードが接続文字列で false に設定されている)。  
   
  使用することができます、**トランザクション**次のシナリオで直接オブジェクト。  
   

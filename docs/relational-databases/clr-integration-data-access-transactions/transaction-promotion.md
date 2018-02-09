@@ -17,19 +17,20 @@ helpviewer_keywords:
 - Enlist keyword
 - transaction promotion [CLR integration]
 ms.assetid: 5bc7e26e-28ad-4198-a40d-8b2c648ba304
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 492191dfa1f3784ccacd8d7f7f12a247f76c9741
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: baf9282b5afc062c91ade5ee4c4bbe8d9d1485bf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="transaction-promotion"></a>トランザクションの昇格
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]トランザクション*プロモーション*自動的に昇格できる完全な分散トランザクションを必要に応じて、軽量のローカル トランザクションを示します。 サーバー側で実行されているデータベース トランザクション内でマネージ ストアド プロシージャが呼び出されると、CLR (共通言語ランタイム) コードはローカル トランザクションのコンテキストで実行されます。  データベース トランザクション内でリモート サーバーへの接続が開かれると、リモート サーバーへの接続が分散トランザクションに参加し、ローカル トランザクションは自動的に分散トランザクションに昇格します。 トランザクションの昇格では、必要になるまで分散トランザクションの作成を遅延し、分散トランザクションのオーバーヘッドを最小限に抑えます。 トランザクションの昇格は自動的を使用して有効にする場合、 **Enlist**キーワードでは、開発者による介入は必要ありません。 .NET Framework Data Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクションの昇格、.NET Framework のクラスを介して処理のサポートを提供**System.Data.SqlClient**名前空間。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+トランザクション*プロモーション*自動的に昇格できる完全な分散トランザクションを必要に応じて、軽量のローカル トランザクションを示します。 サーバー側で実行されているデータベース トランザクション内でマネージ ストアド プロシージャが呼び出されると、CLR (共通言語ランタイム) コードはローカル トランザクションのコンテキストで実行されます。  データベース トランザクション内でリモート サーバーへの接続が開かれると、リモート サーバーへの接続が分散トランザクションに参加し、ローカル トランザクションは自動的に分散トランザクションに昇格します。 トランザクションの昇格では、必要になるまで分散トランザクションの作成を遅延し、分散トランザクションのオーバーヘッドを最小限に抑えます。 トランザクションの昇格は自動的を使用して有効にする場合、 **Enlist**キーワードでは、開発者による介入は必要ありません。 .NET Framework Data Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクションの昇格、.NET Framework のクラスを介して処理のサポートを提供**System.Data.SqlClient**名前空間。  
   
 ## <a name="the-enlist-keyword"></a>Enlist キーワード  
  **ConnectionString**のプロパティ、 **SqlConnection**オブジェクトのサポート、 **Enlist**かを示すキーワードかどうか**System.Data.SqlClient**トランザクションのコンテキストを検出し、分散トランザクションに、接続を自動的に登録します。 このキーワードが true に設定されている場合 (既定の設定)、開かれているスレッドの現在のトランザクション コンテキストに接続が自動参加します。 このキーワードが false に設定されている場合、SqlClient 接続は分散トランザクションとのやり取りを行いません。 場合**Enlist**が指定されていない接続文字列で接続は接続を開いた時点でいずれかが検出された場合、自動的に分散トランザクションに参加します。  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.syslockinfo_TSQL
 - sys.syslockinfo
 - syslockinfo
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - syslockinfo system table
 - sys.syslockinfo compatibility view
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 410d07a73d4a5b96c3fa5805208735055bc36174
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4b58420c47d73e1eff9bb895ccab1fab0be82844
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +48,8 @@ ms.lasthandoff: 11/27/2017
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar(32)**|ロック リソースの説明。 リソース名の一部が含まれます。|  
-|**rsc_bin**|**binary (16)**|バイナリ ロック リソース。 ロック マネージャーに格納されている実際のロック リソースが含まれます。 書式指定済みのロック リソースの把握、ロック リソース形式を生成するため、独自のツールは、この列が含まれるを実行するために自己結合**syslockinfo**です。|  
-|**rsc_valblk**|**binary (16)**|ロック値ブロック。 リソースの種類によっては、ロック マネージャーによってハッシュされず、特定のロック リソースの所有権が判断されないロック リソース内の追加データが含まれることがあります。 たとえば、ページ ロックは特定のオブジェクト ID で所有されません。 ロックのエスカレーションなどの目的があるためです。 ただし、ロック値ブロックにページ ロックのオブジェクト ID が含まれることがあります。|  
+|**rsc_bin**|**binary(16)**|バイナリ ロック リソース。 ロック マネージャーに格納されている実際のロック リソースが含まれます。 書式指定済みのロック リソースの把握、ロック リソース形式を生成するため、独自のツールは、この列が含まれるを実行するために自己結合**syslockinfo**です。|  
+|**rsc_valblk**|**binary(16)**|ロック値ブロック。 リソースの種類によっては、ロック マネージャーによってハッシュされず、特定のロック リソースの所有権が判断されないロック リソース内の追加データが含まれることがあります。 たとえば、ページ ロックは特定のオブジェクト ID で所有されません。 ロックのエスカレーションなどの目的があるためです。 ただし、ロック値ブロックにページ ロックのオブジェクト ID が含まれることがあります。|  
 |**rsc_dbid**|**smallint**|リソースに関連付けられているデータベース ID。|  
 |**rsc_indid**|**smallint**|該当する場合、リソースに関連付けられているインデックス ID。|  
 |**rsc_objid**|**int**|該当する場合、リソースに関連付けられているオブジェクト ID。|  
@@ -64,7 +66,7 @@ ms.lasthandoff: 11/27/2017
 |**req_transactionID**|**bigint**|独自のトランザクションで使用される ID **syslockinfo**および profiler イベント|  
 |**req_transactionUOW**|**uniqueidentifier**|DTC トランザクションの作業単位 ID (UOW)。 MS DTC 以外のトランザクションの場合、UOW は 0 に設定されます。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

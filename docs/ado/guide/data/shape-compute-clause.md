@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c20aec7585c33a7165fac4e93b446e4ce3aaf4e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 53ebeab9edfa1d9fc339f080d4a9de995053f77a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-compute-clause"></a>図形の COMPUTE 句
 図形の COMPUTE 句には、親が生成されます**レコード セット**、子への参照で構成されている列を持つ**レコード セット**以外の場合は省略可能な列の内容が章では、新しい、または計算列、または子で集計関数の実行結果**レコード セット**以前形または**レコード セット**; 子からの列と**レコード セット**に一覧表示オプションの BY 句。  
@@ -41,7 +42,7 @@ SHAPE child-command [AS] child-alias
 ## <a name="description"></a>Description  
  この句の各部分は次のとおりです。  
   
- *子コマンド*  
+ *child-command*  
  次のいずれかで構成されます。  
   
 -   子を返すクエリ コマンド中かっこ (「{}」) で**Recordset**オブジェクト。 基になるデータ プロバイダーにコマンドが発行され、その構文は、そのプロバイダーの要件によって異なります。 これは通常なります SQL 言語では、ADO では、特定のクエリ言語は必要はありません。  
@@ -52,13 +53,13 @@ SHAPE child-command [AS] child-alias
   
 -   このデータ プロバイダーでのテーブルの名前を続けてテーブル キーワードです。  
   
- *子エイリアス*  
+ *child-alias*  
  使用して参照する別名、 **Recordset**によって返される、*子コマンド。* *子エイリアス*COMPUTE 句で列の一覧で、必須であり、親と子の間の関係を定義**Recordset**オブジェクト。  
   
- *付加列リスト*  
+ *appended-column-list*  
  各要素が生成された親の列を定義するリスト。 各要素には、チャプター列、新しい列、計算列、または子に対する集計関数の結果の値が含まれています。 **Recordset**です。  
   
- *グループ フィールド リスト*  
+ *grp-field-list*  
  親と子列の一覧**Recordset**子の行をグループ化する方法を指定するオブジェクト。  
   
  各列に対して、*グループのフィールド リスト*子と親に対応する列が**Recordset**オブジェクト。 親の行ごと**Recordset**、*グループ フィールド リスト*列は一意の値と子要素がある**レコード セット**親によって参照されている行のみで構成される子行を持つ*グループ フィールド リスト*列は、親の行と同じ値を持ちます。  
@@ -67,7 +68,7 @@ SHAPE child-command [AS] child-alias
   
  BY 句を省略すると、子全体**レコード セット**は 1 つのグループと、親として扱われます**Recordset**は正確に 1 つの行が含まれます。 その行は子全体を参照する**Recordset**です。 BY 句を省略すると、子全体を「総計」集計を計算できます**Recordset**です。  
   
- 例 :  
+ 例:  
   
 ```  
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
@@ -85,12 +86,12 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
 |状態|City|[母集団]|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|スイッチまたは|Medford|200,000|  
-|スイッチまたは|Portland|400,000|  
+|または|Medford|200,000|  
+|または|Portland|400,000|  
 |CA|Los Angeles|800,000|  
 |CA|サンディエゴ|600,000|  
 |WA|Tacoma|500,000|  
-|スイッチまたは|Corvallis|300,000|  
+|または|Corvallis|300,000|  
   
  ここで、この図形コマンドを発行します。  
   
@@ -114,7 +115,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1,300,000|Child1 への参照|CA|  
 |1,200,000|Child2 への参照|WA|  
-|1,100,000|子 3 への参照|スイッチまたは|  
+|1,100,000|子 3 への参照|または|  
   
 ## <a name="child1"></a>Child1  
   
@@ -134,9 +135,9 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 |状態|City|[母集団]|  
 |-----------|----------|----------------|  
-|スイッチまたは|Medford|200,000|  
-|スイッチまたは|Portland|400,000|  
-|スイッチまたは|Corvallis|300,000|  
+|または|Medford|200,000|  
+|または|Portland|400,000|  
+|または|Corvallis|300,000|  
   
 ## <a name="see-also"></a>参照  
  [階層のレコード セット内の行にアクセスします。](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

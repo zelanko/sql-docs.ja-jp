@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6f5a67559ea2137110dc72d77a56bacc8da39a8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8f4c9bf19fd1df07bb4271a8db94311548a4e092
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-append-clause"></a>図形の APPEND 句
 列または列を図形コマンドの APPEND 句が追加され、 **Recordset**です。 多くの場合、これらの列は、チャプター列は、子を参照してください**Recordset**です。  
@@ -39,7 +40,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
 ## <a name="description"></a>Description  
  この句の各部分は次のとおりです。  
   
- *親コマンド*  
+ *parent-command*  
  次のいずれかです (省略することができます、*親コマンド*完全に)。  
   
 -   中かっこ (「{}」) で囲まれたプロバイダーのコマンドを返す、 **Recordset**オブジェクト。 基になるデータ プロバイダーにコマンドが発行され、その構文は、そのプロバイダーの要件によって異なります。 これは通常なります SQL 言語では、ADO では、特定のクエリ言語は必要はありません。  
@@ -48,10 +49,10 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 -   このデータ プロバイダーでのテーブルの名前を続けてテーブル キーワードです。  
   
- *親エイリアス*  
+ *parent-alias*  
  省略可能な親を参照する別名**Recordset**です。  
   
- *列リスト*  
+ *column-list*  
  1 つ以上の次:  
   
 -   集計列です。  
@@ -71,7 +72,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 ```  
   
 ## <a name="remarks"></a>解説  
- *子レコード セット*  
+ *child-recordset*  
  -   中かっこ (「{}」) で囲まれたプロバイダーのコマンドを返す、 **Recordset**オブジェクト。 基になるデータ プロバイダーにコマンドが発行され、その構文は、そのプロバイダーの要件によって異なります。 これは通常なります SQL 言語では、ADO では、特定のクエリ言語は必要はありません。  
   
 -   別の図形のコマンドは、かっこ内に埋め込まれます。  
@@ -80,19 +81,19 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 -   このデータ プロバイダーでのテーブルの名前を続けてテーブル キーワードです。  
   
- *子エイリアス*  
+ *child-alias*  
  子を参照する別名**Recordset**です。  
   
- *親列*  
+ *parent-column*  
  内の列、 **Recordset**によって返される、*親コマンド。*  
   
- *子列*  
+ *child-column*  
  内の列、 **Recordset**によって返される、*子コマンド*です。  
   
- *パラメーター番号*  
+ *param-number*  
  参照してください[パラメーター化コマンドの操作](../../../ado/guide/data/operation-of-parameterized-commands.md)です。  
   
- *チャプター エイリアス*  
+ *chapter-alias*  
  親に追加されたチャプター列を参照する別名です。  
   
 > [!NOTE]

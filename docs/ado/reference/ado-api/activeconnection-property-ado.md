@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Command15::ActiveConnection
 - Recordset15::get_ActiveConnection
 - _Record::ActiveConnection
-helpviewer_keywords: ActiveConnection property [ADO]
+helpviewer_keywords:
+- ActiveConnection property [ADO]
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77c5f58c5fed82651e5fc7f0228ef36e5fbea880
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2bbd6ba28209df50d8956c784d0ef25f9ac73728
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection プロパティ (ADO)
 示す[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの指定した[コマンド](../../../ado/reference/ado-api/command-object-ado.md)、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトが現在属しています。  
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>解説  
  使用して、 **ActiveConnection**を決定するプロパティ、**接続**オブジェクトを指定した**コマンド**オブジェクトは実行または指定した**レコード セット**は開かれます。  
   
-## <a name="command"></a>コマンド  
+## <a name="command"></a>Command  
  **コマンド**、オブジェクト、 **ActiveConnection**読み取り/書き込みプロパティです。  
   
  呼び出すしようとすると、 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッドを**コマンド**、開いているにこのプロパティを設定する前にオブジェクト**接続**オブジェクトか、有効な接続文字列、エラーが発生します。  

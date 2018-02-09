@@ -8,11 +8,14 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - sequence [XQuery]
 - type system [XQuery]
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - built-in XML schema types [SQL Server]
 - xs prefix [XML in SQL Server]
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c0c11fc81be9e8a5b34548e22a7f2feb43a441b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5e0c8e060eede58292de8f47a39c563059927513
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-system-xquery"></a>型システム (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +52,14 @@ ms.lasthandoff: 12/05/2017
   
 -   型指定された値とノードの文字列値。  
   
--   [Data 関数 &#40;です。XQuery と #41 です。](../xquery/data-accessor-functions-data-xquery.md)と[文字列関数 &#40;です。XQuery と #41 です。](../xquery/data-accessor-functions-string-xquery.md).  
+-   [Data 関数 &#40;です。XQuery と #41 です。](../xquery/data-accessor-functions-data-xquery.md)と[文字列関数 &#40;です。XQuery と #41 です](../xquery/data-accessor-functions-string-xquery.md)。  
   
 -   式から返されるシーケンス型の照合。  
   
 ## <a name="built-in-types-of-xml-schema"></a>XML スキーマの組み込み型  
  XML スキーマの組み込み型には、xs という定義済みの名前空間プレフィックスが付いています。 これらの種類のものが**xs:integer**と**xs:string**です。 これらの組み込み型はすべてサポートされます。 XML スキーマ コレクションを作成するときに、これらの型を使用できます。  
   
- 型指定された XML のクエリを実行するとき、ノードの静的および動的な型は、クエリの対象の列または変数に関連付けられた XML スキーマ コレクションによって決まります。 静的および動的な型の詳細については、次を参照してください。[式のコンテキストとクエリの評価と #40 です。XQuery と #41 です。](../xquery/expression-context-and-query-evaluation-xquery.md). 次のクエリを指定するなど、型指定されたに対して**xml**列 (`Instructions`)。 式を使用して`instance of`ことを確認するの型指定された値、`LotSize`属性が返されるは、`xs:decimal`型です。  
+ 型指定された XML のクエリを実行するとき、ノードの静的および動的な型は、クエリの対象の列または変数に関連付けられた XML スキーマ コレクションによって決まります。 静的および動的な型の詳細については、次を参照してください。[式のコンテキストとクエリの評価と #40 です。XQuery と #41 です](../xquery/expression-context-and-query-evaluation-xquery.md)。 次のクエリを指定するなど、型指定されたに対して**xml**列 (`Instructions`)。 式を使用して`instance of`ことを確認するの型指定された値、`LotSize`属性が返されるは、`xs:decimal`型です。  
   
 ```  
 SELECT Instructions.query('  

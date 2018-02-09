@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bdb4d1847a2a55c57235a88979b19f7370169b9c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2ce82243dda984375bef3a1630650ff27c68dd09
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="provider-errors"></a>プロバイダー エラー
 プロバイダー エラーが発生したときに-2147467259 の実行時エラーが返されます。 このエラーが表示されたら、確認、**エラー**のアクティブなコレクション**接続**問題の概要を説明する 1 つ以上のエラーを含むオブジェクト。  
@@ -74,8 +75,8 @@ End Function
 |-------------------|-----------------|  
 |**Description**|発生したエラーの説明文です。|  
 |**HelpContext、ヘルプ ファイル**|発生したエラーの説明が含まれているヘルプ トピックとヘルプ ファイルを参照します。|  
-|**以下**|プロバイダー固有のエラー番号。|  
-|**数**|数を表す長整数 (に一覧表示、 **ErrorValueEnum**) のエラーが発生します。|  
+|**NativeError**|プロバイダー固有のエラー番号。|  
+|**Number**|数を表す長整数 (に一覧表示、 **ErrorValueEnum**) のエラーが発生します。|  
 |**ソース**|オブジェクトまたはエラーが発生したアプリケーションの名前を示します。|  
 |**SQLState**|プロバイダーを返す SQL ステートメントの処理中に 5 文字のエラー コード。|  
   

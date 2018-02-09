@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - WillExecute
 - Connection::WillExecute
-helpviewer_keywords: WillExecute event [ADO]
+helpviewer_keywords:
+- WillExecute event [ADO]
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66a04a7bf45771c9c6f16b32bfd9c8bac54db4ad
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dafc71b9f9da6dde5cf9ef7acf7909236441f656
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="willexecute-event-ado"></a>アクティビ ティー イベント (ADO)
 **アクティビ ティー**イベントは、接続で保留中のコマンドを実行する前に呼び出されます。  
@@ -42,13 +44,13 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *ソース*  
  A**文字列**SQL コマンドまたはストアド プロシージャの名前を格納しています。  
   
- *カーソル。*  
+ *CursorType*  
  A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)のカーソルの種類を格納している、 **Recordset**は開かれます。 このパラメーターを使用中に任意の型にカーソルを変更することができます、 **Recordset**[Open メソッド (ADO レコード セット)](../../../ado/reference/ado-api/open-method-ado-recordset.md)操作します。 *カーソル。*他の操作は無視されます。  
   
- *ロック。*  
+ *LockType*  
  A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)のロックの種類を格納している、 **Recordset**は開かれます。 このパラメーターを使用中に任意の型にロックを変更することができます、 **RecordsetOpen**操作します。 *LockType*他の操作は無視されます。  
   
- *および*  
+ *Options*  
  A**長い**コマンドを実行したり、開いたりに使用できるオプションを示す値、 **Recordset**です。  
   
  *adStatus*  
@@ -69,7 +71,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  **アクティビ ティー**を確認し、保留中の実行のパラメーターを変更することができます。 このイベントは、保留中のコマンドをキャンセルする要求を返す可能性があります。  
   
 > [!NOTE]
->  元のソースの場合、**コマンド**で指定されたストリーム、 [CommandStream プロパティ (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)プロパティ、新しい文字列を割り当てる、**アクティビ ティー** *ソース*パラメーターのソースの変更、**コマンド**です。 **CommandStream**プロパティはクリアされ、 [CommandText プロパティ (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)プロパティは、新しいソースで更新されます。 指定された元のストリーム**CommandStream**がリリースされ、アクセスできません。  
+>  元のソースの場合、**コマンド**で指定されたストリーム、 [CommandStream プロパティ (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)プロパティ、新しい文字列を割り当てる、**アクティビ ティー * * * ソース*パラメーターのソースの変更、**コマンド**です。 **CommandStream**プロパティはクリアされ、 [CommandText プロパティ (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)プロパティは、新しいソースで更新されます。 指定された元のストリーム**CommandStream**がリリースされ、アクセスできません。  
   
  新しいソース文字列の言語が、元の設定と異なるかどうか、 [Dialect プロパティ](../../../ado/reference/ado-api/dialect-property.md)プロパティ (に対応しますが、 **CommandStream**)、正しい言語を設定して指定する必要があります**Dialect**によって参照されるコマンド オブジェクトのプロパティ*pCommand*です。  
   

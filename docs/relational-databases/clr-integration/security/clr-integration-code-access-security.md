@@ -19,19 +19,20 @@ helpviewer_keywords:
 - code access security [CLR integration]
 - EXTERNAL_ACCESS assemblies
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 37d547672455e794854d2143819a445fc25edef2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b93a1955adb6f38eebd8de86599e1861a80ff75b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 統合のコード アクセス セキュリティ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]共通言語ランタイム (CLR) は、マネージ コードに対してコード アクセス セキュリティというセキュリティ モデルをサポートします。 このモデルでは、コードの ID に基づいてアセンブリに権限が許可されます。 詳細については、.NET Framework Software Development Kit の「コード アクセス セキュリティ」を参照してください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+共通言語ランタイム (CLR) では、マネージ コードに対してコード アクセス セキュリティというセキュリティ モデルがサポートされます。 このモデルでは、コードの ID に基づいてアセンブリに権限が許可されます。 詳細については、.NET Framework Software Development Kit の「コード アクセス セキュリティ」を参照してください。  
   
  アセンブリに許可される権限を決定するセキュリティ ポリシーは、次の 3 つに分類されます。  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="sql-server-host-policy-level-permission-sets"></a>SQL Server ホスト ポリシー レベルの権限セット  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ホスト ポリシー レベルでアセンブリに許可されるコード アクセス セキュリティ権限のセットは、アセンブリの作成時にどの権限セットを指定するかによって決定されます。 次の 3 つのアクセス許可セットが生成されます:**セーフ**、 **EXTERNAL_ACCESS**と**UNSAFE** (を使用して指定、 **PERMISSION_SET** のオプション[アセンブリ &#40; を作成します。TRANSACT-SQL と #41 です。](../../../t-sql/statements/create-assembly-transact-sql.md)).  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、CLR のホスト時に、ホスト レベルのセキュリティ ポリシー レベルを提供します。このポリシーは、常に効力を持つ 2 つのポリシー レベルより下位の追加ポリシー レベルになります。 このポリシーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によって作成されるアプリケーション ドメインごとに設定されます。 このポリシーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が CLR のインスタンスを作成するときに有効になる、既定のアプリケーション ドメイン用ではありません。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] それをホストしているときに CLR をホスト レベルのセキュリティ ポリシー レベルを提供します。このポリシーは、追加のポリシー レベルは常に有効な 2 つのポリシー レベル以下です。 このポリシーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によって作成されるアプリケーション ドメインごとに設定されます。 このポリシーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が CLR のインスタンスを作成するときに有効になる、既定のアプリケーション ドメイン用ではありません。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ホスト レベル ポリシーは、システム アセンブリの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固定ポリシーと、ユーザー アセンブリのユーザー指定ポリシーの組み合わせです。  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 01/08/2018
 |権限|値/説明|  
 |----------------|-----------------------------|  
 |**SecurityPermission**|**実行する場合:**をマネージ コードを実行する権限です。|  
-|**Sqlclientpermission を与える**|**コンテキスト接続 = true**、**コンテキスト接続 = [はい]**: コンテキスト接続を使用して、接続文字列がの値を指定できますのみ専用"コンテキスト接続 = true"または"コンテキスト接続 = [はい]"です。<br /><br /> **AllowBlankPassword = false:**空のパスワードは許可されていません。|  
+|**SqlClientPermission**|**コンテキスト接続 = true**、**コンテキスト接続 = [はい]**: コンテキスト接続を使用して、接続文字列がの値を指定できますのみ専用"コンテキスト接続 = true"または"コンテキスト接続 = [はい]"です。<br /><br /> **AllowBlankPassword = false:**空のパスワードは許可されていません。|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS アセンブリと同じアクセス許可がある**セーフ**アセンブリ、ファイル、ネットワーク、環境変数、レジストリなどの外部システム リソースにアクセスする追加機能を使用します。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 01/08/2018
 |権限|値/説明|  
 |----------------|-----------------------------|  
 |**DistributedTransactionPermission**|**無制限:**分散トランザクションが許可されます。|  
-|**コード**|**無制限:**ドメイン ネーム サーバーから情報を要求するアクセス許可。|  
+|**DNSPermission**|**無制限:**ドメイン ネーム サーバーから情報を要求するアクセス許可。|  
 |**EnvironmentPermission**|**無制限:**完全システムとユーザーの環境変数へのアクセスを許可します。|  
 |**EventLogPermission**|**管理:**次の操作が許可されます: イベント ソースまたはオフにすると、イベントをリッスンしていると、すべてのイベント ログのコレクションへのアクセスのイベント ログ エントリに応答して、ログを削除すると、既存のログの読み取り、イベント ソースを作成します。|  
 |**FileIOPermission**|**無制限:**ファイルへのフル アクセスのフォルダーが許可されているとします。|  
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
 |**SecurityPermission**|**アサーション:**このコードのすべての呼び出し元に、操作に必要な権限があることをアサートする機能。<br /><br /> **ControlPrincipal:**プリンシパル オブジェクトを操作する機能。<br /><br /> **実行する場合:**をマネージ コードを実行する権限です。<br /><br /> **SerializationFormatter:**をシリアル化サービスを提供する機能。|  
 |**SmtpPermission**|**アクセス:** SMTP ホスト ポート 25 への発信接続を許可します。|  
 |**SocketPermission**|**接続:**トランスポート アドレスでの発信接続 (すべてのポートおよびプロトコル) を許可します。|  
-|**Sqlclientpermission を与える**|**無制限:**完全データ ソースへのアクセスを許可します。|  
+|**SqlClientPermission**|**無制限:**完全データ ソースへのアクセスを許可します。|  
 |**StorePermission**|**無制限:**フル アクセスを X.509 証明書ストアを許可します。|  
 |**WebPermission**|**接続:** web リソースへの発信接続を許可します。|  
   
@@ -111,12 +112,12 @@ ms.lasthandoff: 01/08/2018
   
 |||||  
 |-|-|-|-|  
-||**セーフ**|**EXTERNAL_ACCESS**|**安全でないです。**|  
+||**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|  
 |**コード アクセス セキュリティのアクセス許可**|実行のみ|実行および外部リソースへのアクセス|無制限 (P/Invoke を含む)|  
-|**プログラミング モデルの制限**|可|可|制限はありません。|  
-|**検証の必要性**|可|可|不可|  
-|**ローカル データ アクセス**|可|可|可|  
-|**ネイティブ コードを呼び出すための機能**|不可|不可|可|  
+|**プログラミング モデルの制限**|はい|はい|制限はありません。|  
+|**検証の必要性**|はい|[ユーザー アカウント制御]|いいえ|  
+|**ローカル データ アクセス**|はい|[ユーザー アカウント制御]|はい|  
+|**ネイティブ コードを呼び出すための機能**|いいえ|いいえ|可|  
   
 ## <a name="see-also"></a>参照  
  [CLR 統合のセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

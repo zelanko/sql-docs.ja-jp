@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23ed1396e76f0339c2fdda92501aca751d2d4559
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 61f54b700be8ec03e56bf63999dc7f93b8d5fcdb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="detecting-and-resolving-conflicts"></a>競合の検出および解決
 イミディ エイト モードで、レコード セットを処理する場合は、同時実行の問題が発生する可能性は大幅に小さくします。 その一方で、アプリケーションでは、バッチ モードの更新を使用する場合は、ある可能性があります良い機会同じレコードを編集する別のユーザーによって行われた変更が保存される前にあるユーザーが、レコードを変更します。 競合を適切に処理するアプリケーションは、このような場合でします。 最後に更新プログラムをサーバーに送信した人物「優先します」の方がある可能性があります。 または、更新プログラムの優先順位が 2 つの競合する値のいずれかで彼を提供することで決定する、最新のユーザーを許可することができます。  

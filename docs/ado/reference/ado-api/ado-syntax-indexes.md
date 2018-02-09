@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: syntax indexes [ADO]
+helpviewer_keywords:
+- syntax indexes [ADO]
 ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e185dbb815485553a133898a5802ecf5f9d5521c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e4afdfdae0eb9a461008e26fe5d701862c19aaf8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-syntax-indexes"></a>ADO 構文のインデックス
 ADO のメソッドとプロパティを呼び出す構文は、開発環境によって異なります。 ADO 言語リファレンスの残りの部分では、ADO メソッドおよびプロパティの構文を説明するために Microsoft Visual Basic プログラミング言語を使用します。 ただし、プログラミング言語と方法に基づいて特定の構文例を次のセクションを参照してください。  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Command15::raw_CreateParameter
 - Command15::CreateParameter
-helpviewer_keywords: CreateParameter method [RDS]
+helpviewer_keywords:
+- CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 070b1fed1f5d38da0a3f8275abf9933339a8f5dc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c293e3a6e337e3c0331884bf1ee1eed57ad36003
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter メソッド (ADO)
 新たに作成[パラメーター](../../../ado/reference/ado-api/parameter-object.md)指定したプロパティを持つオブジェクト。  
@@ -48,13 +50,13 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *型*  
  省略可。 A[格納](../../../ado/reference/ado-api/datatypeenum.md)のデータ型を指定する値、**パラメーター**オブジェクト。  
   
- *[方向]*  
+ *方向*  
  省略可。 A[値](../../../ado/reference/ado-api/parameterdirectionenum.md)の種類を指定する値**パラメーター**オブジェクト。  
   
- *[サイズ]*  
+ *サイズ*  
  省略可。 A**長い**文字またはバイトで、パラメーターの値の最大長を指定する値。  
   
- *[値]*  
+ *値*  
  省略可。 A**バリアント**の値を指定する、**パラメーター**オブジェクト。  
   
 ## <a name="remarks"></a>解説  

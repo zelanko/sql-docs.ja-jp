@@ -3,7 +3,7 @@
 
 可用性グループに追加するデータベースが完全復旧モードでは、され、有効なログ バックアップを持つことを確認します。 テスト データベース、または新しく作成されたデータベースの場合は、データベース バックアップを実行します。 プライマリ SQL Server で次の TRANSACT-SQL スクリプトを作成し、という名前のデータベースをバックアップを実行`db1`:
 
-```Transact-SQL
+```sql
 CREATE DATABASE [db1];
 ALTER DATABASE [db1] SET RECOVERY FULL;
 BACKUP DATABASE [db1] 
@@ -12,7 +12,7 @@ BACKUP DATABASE [db1]
 
 SQL Server のプライマリ レプリカでという名前のデータベースを追加する次の TRANSACT-SQL スクリプトを実行`db1`を可用性グループと呼ばれる`ag1`:
 
-```Transact-SQL
+```sql
 ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [db1];
 ```
 
@@ -20,7 +20,7 @@ ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [db1];
 
 各セカンダリ SQL Server レプリカでかどうかを次のクエリを実行、`db1`データベースが作成されが同期されています。
 
-```Transact-SQL
+```sql
 SELECT * FROM sys.databases WHERE name = 'db1';
 GO
 SELECT DB_NAME(database_id) AS 'database', synchronization_state_desc FROM sys.dm_hadr_database_replica_states;

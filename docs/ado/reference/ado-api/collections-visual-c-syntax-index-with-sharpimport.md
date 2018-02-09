@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,23 +13,24 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - 'syntax indexes [ADO], ADO for Visual C++ syntax with #import'
 - 'collections [ADO], ADO for Visual C++ syntax with #import'
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4f4f89342ddf85459779c77ecc11f7059734aa7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 488f5dcc74f6b5b1d1ea89c794511a96dc3dea81
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>コレクション (Visual C++ 構文のインデックス #import)
 コレクションが、一般的なメソッドとプロパティを継承ことを確認すると便利です。  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/21/2017
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -59,7 +61,7 @@ HRESULT Clear( );
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -76,7 +78,7 @@ HRESULT Delete( const _variant_t & Index );
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -94,7 +96,7 @@ HRESULT Refresh( );
 HRESULT Update( );  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  

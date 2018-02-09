@@ -4,29 +4,31 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - EditMode property [ADO], Visual Basic example
 - CursorType property [ADO], Visual Basic example
 - LockType property [ADO], Visual Basic example
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24f3a3fbba6b55f658ac5dd1f3b0b0e12bd20c9d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 56d778c210b196621d846fce5b06596571c01b8a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>カーソル。、LockType、および EditMode のプロパティの例 (VB)
 この例の設定、[カーソル。](../../../ado/reference/ado-api/cursortype-property-ado.md)と[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)開く前にプロパティ、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)です。 値も示しています、 [EditMode](../../../ado/reference/ado-api/editmode-property.md)さまざまな条件下でプロパティです。 EditModeOutput 関数は、この手順を実行する必要があります。  

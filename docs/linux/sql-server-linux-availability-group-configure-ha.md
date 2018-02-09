@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: b9aeae97abc2f60a9bb6c9c54f5061f68b61a1c9
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 76a5ed98ddd1aa69c11cd371586ce963ebcd97de
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>構成する SQL Server Always On 可用性グループ Linux 上の高可用性
 
@@ -89,7 +89,7 @@ Linux 上の高可用性のため、可用性グループを作成します。 �
 * プライマリ レプリカとセカンダリ レプリカを設定`FAILOVER_MODE = EXTERNAL`です。 
    レプリカが対話ペースのように、外部のクラスター マネージャーを指定します。 
 
-次の TRANSACT-SQL スクリプトの作成という名前の可用性を高めるため、AG`ag1`です。 スクリプトは、構成、可用性グループ レプリカと`SEEDING_MODE = AUTOMATIC`です。 この設定は、各セカンダリ サーバーで、データベースを自動的に作成する SQL Server をによりします。 環境内の次のスクリプトを更新します。 置換、 `**<node1>**`、 `**<node2>**`、または`**<node3>**`レプリカをホストする SQL Server インスタンスの名前を持つ値です。 置換、`**<5022>**`データのミラーリング エンドポイントのポートを設定します。 可用性グループを作成するには、プライマリ レプリカをホストする SQL Server インスタンスで次の TRANSACT-SQL を実行します。
+次の TRANSACT-SQL スクリプトの作成という名前の可用性を高めるため、AG`ag1`です。 スクリプトは、構成、可用性グループ レプリカと`SEEDING_MODE = AUTOMATIC`です。 この設定は、各セカンダリ サーバーで、データベースを自動的に作成する SQL Server をによりします。 環境内の次のスクリプトを更新します。 置換、 `<node1>`、 `<node2>`、または`<node3>`レプリカをホストする SQL Server インスタンスの名前を持つ値です。 置換、`<5022>`データのミラーリング エンドポイントのポートを設定します。 可用性グループを作成するには、プライマリ レプリカをホストする SQL Server インスタンスで次の TRANSACT-SQL を実行します。
 
 実行**1 つだけ**以下のスクリプト。 
 
@@ -105,23 +105,23 @@ Linux 上の高可用性のため、可用性グループを作成します。 �
    CREATE AVAILABILITY GROUP [ag1]
        WITH (DB_FAILOVER = ON, CLUSTER_TYPE = EXTERNAL)
        FOR REPLICA ON
-           N'**<node1>**' 
+           N'<node1>' 
             WITH (
-               ENDPOINT_URL = N'tcp://**<node1>:**<5022>**',
+               ENDPOINT_URL = N'tcp://<node1>:<5022>',
                AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
                FAILOVER_MODE = EXTERNAL,
                SEEDING_MODE = AUTOMATIC
                ),
-           N'**<node2>**' 
+           N'<node2>' 
             WITH ( 
-               ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**', 
+               ENDPOINT_URL = N'tcp://<node2>:<5022>', 
                AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
                FAILOVER_MODE = EXTERNAL,
                SEEDING_MODE = AUTOMATIC
                ),
-           N'**<node3>**'
+           N'<node3>'
            WITH( 
-              ENDPOINT_URL = N'tcp://**<node3>**:**<5022>**', 
+              ENDPOINT_URL = N'tcp://<node3>:<5022>', 
               AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
               FAILOVER_MODE = EXTERNAL,
               SEEDING_MODE = AUTOMATIC
@@ -142,20 +142,20 @@ Linux 上の高可用性のため、可用性グループを作成します。 �
    CREATE AVAILABILITY GROUP [ag1] 
       WITH (CLUSTER_TYPE = EXTERNAL) 
       FOR REPLICA ON 
-       N'**<node1>**' WITH ( 
-          ENDPOINT_URL = N'tcp://**<node1>**:**<5022>**', 
+       N'<node1>' WITH ( 
+          ENDPOINT_URL = N'tcp://<node1>:<5022>', 
           AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
           FAILOVER_MODE = EXTERNAL, 
           SEEDING_MODE = AUTOMATIC 
           ), 
-       N'**<node2>**' WITH (  
-          ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**',  
+       N'<node2>' WITH (  
+          ENDPOINT_URL = N'tcp://<node2>:<5022>',  
           AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
           FAILOVER_MODE = EXTERNAL, 
           SEEDING_MODE = AUTOMATIC 
           ), 
-       N'**<node3>**' WITH ( 
-          ENDPOINT_URL = N'tcp://**<node3>**:**<5022>**', 
+       N'<node3>' WITH ( 
+          ENDPOINT_URL = N'tcp://<node3>:<5022>', 
           AVAILABILITY_MODE = CONFIGURATION_ONLY  
           );
    ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;

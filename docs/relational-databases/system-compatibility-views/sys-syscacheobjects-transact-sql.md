@@ -1,5 +1,5 @@
 ---
-title: "sys.syscacheobjects (TRANSACT-SQL) |Microsoft ドキュメント"
+title: sys.syscacheobjects (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.syscacheobjects
 - syscacheobjects
 - syscacheobjects_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - syscacheobjects system table
 - sys.syscacheobjects compatibility view
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aee1092010168413f316e3b42083bb752f2d9cfa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: afc20f732375a4ecd04075c1dbd228139b0005d3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +44,10 @@ ms.lasthandoff: 11/27/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**バケット id**|**int**|バケット ID です。 値は 0 ～ディレクトリ サイズ -1 の範囲を示します。 ディレクトリ サイズは、ハッシュ テーブルのサイズです。|  
+|**bucketid**|**int**|バケット ID です。 値は 0 ～ディレクトリ サイズ -1 の範囲を示します。 ディレクトリ サイズは、ハッシュ テーブルのサイズです。|  
 |**cacheobjtype**|**nvarchar(17)**|キャッシュ内のオブジェクトの種類です。<br /><br /> コンパイル済みプラン<br /><br /> 実行プラン<br /><br /> 解析ツリー<br /><br /> カーソル<br /><br /> 拡張ストアド プロシージャ|  
-|**objtype**|**nvarchar (8)**|オブジェクトの種類です。<br /><br /> ストアド プロシージャ<br /><br /> 準備済みステートメント<br /><br /> アドホック クエリ ([!INCLUDE[tsql](../../includes/tsql-md.md)]から言語イベントとして送信された、 **sqlcmd**または**osql**ユーティリティは、リモート プロシージャ呼び出しではなく)<br /><br /> ReplProc (レプリケーション プロシージャ)<br /><br /> トリガー<br /><br /> 表示<br /><br /> 既定値<br /><br /> ユーザー テーブル<br /><br /> システム テーブル<br /><br /> [確認]<br /><br /> Rule|  
-|**オブジェクト id**|**int**|キャッシュ内のオブジェクトを検索するために使用される主キーの 1 つです。 これは、オブジェクトに格納されている ID **sysobjects**のデータベース オブジェクト (プロシージャ、ビュー、トリガー、およびなど)。 アドホックまたは準備された SQL などのキャッシュ オブジェクトに対して**objid**内部的に生成された値です。|  
+|**objtype**|**nvarchar(8)**|オブジェクトの種類です。<br /><br /> ストアド プロシージャ<br /><br /> 準備済みステートメント<br /><br /> アドホック クエリ ([!INCLUDE[tsql](../../includes/tsql-md.md)]から言語イベントとして送信された、 **sqlcmd**または**osql**ユーティリティは、リモート プロシージャ呼び出しではなく)<br /><br /> ReplProc (レプリケーション プロシージャ)<br /><br /> トリガー<br /><br /> 表示<br /><br /> 既定値<br /><br /> ユーザー テーブル<br /><br /> システム テーブル<br /><br /> [確認]<br /><br /> Rule|  
+|**objid**|**int**|キャッシュ内のオブジェクトを検索するために使用される主キーの 1 つです。 これは、オブジェクトに格納されている ID **sysobjects**のデータベース オブジェクト (プロシージャ、ビュー、トリガー、およびなど)。 アドホックまたは準備された SQL などのキャッシュ オブジェクトに対して**objid**内部的に生成された値です。|  
 |**dbid**|**smallint**|キャッシュ オブジェクトがコンパイルされたデータベース ID です。|  
 |**dbidexec**|**smallint**|クエリ実行元となるデータベース ID です。<br /><br /> ほとんどのオブジェクトに対して**dbidexec**と同じ値を持つ**dbid**です。<br /><br /> システム ビューの**dbidexec**クエリの実行元となるデータベース id を指定します。<br /><br /> アドホック クエリでは、 **dbidexec**は 0 です。 つまり、 **dbidexec**と同じ値を持つ**dbid**です。|  
 |**uid**|**smallint**|アドホックなクエリ プランおよび使用可能になったプランのプラン作成者です。<br /><br /> -2 は、送られたバッチが暗黙的な名前解決に依存せず、複数ユーザー間での共有が可能なことを示します。 これは推奨される方法です。 他の値は、データベースのクエリを送っているユーザーのユーザー ID を示します。<br /><br /> ユーザーとロールの数が 32,767 を超える場合は、オーバーフローが発生するか NULL が返されます。|  

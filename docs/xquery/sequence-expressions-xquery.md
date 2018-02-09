@@ -8,30 +8,32 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: XML
+dev_langs:
+- XML
 helpviewer_keywords:
 - sequence [XQuery]
 - expressions [XQuery], sequence
 - filtering sequences [XQuery]
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 199db55ebfbdb701dfc805ab64d09e1336a772cf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 50ed3ac28bad010247c8d117c950bb898305807a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sequence-expressions-xquery"></a>シーケンス式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、アイテムのシーケンスの構築、フィルター処理、および組み合わせに使用される、XQuery 演算子がサポートされます。 項目には、アトミック値またはノードを指定できます。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構築、フィルター、および項目のシーケンスを結合に使用される XQuery 演算子をサポートしています。 項目には、アトミック値またはノードを指定できます。  
   
 ## <a name="constructing-sequences"></a>シーケンスの構築  
  コンマ演算子を使用して、複数のアイテムを 1 つのシーケンスに連結するシーケンスを構築できます。  
@@ -136,7 +138,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>シーケンスのフィルター処理  
- 式に述語を追加することにより、式で返されるシーケンスをフィルター処理できます。 詳細については、次を参照してください。[パス式 &#40;です。XQuery と #41 です。](../xquery/path-expressions-xquery.md). たとえば次のクエリは、3 つの <`a`> 要素ノードのシーケンスを返します。  
+ 式に述語を追加することにより、式で返されるシーケンスをフィルター処理できます。 詳細については、次を参照してください。[パス式 &#40;です。XQuery と #41 です](../xquery/path-expressions-xquery.md)。 たとえば次のクエリは、3 つの <`a`> 要素ノードのシーケンスを返します。  
   
 ```  
 declare @x xml  

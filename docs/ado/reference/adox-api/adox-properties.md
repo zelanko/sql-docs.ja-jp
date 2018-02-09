@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,27 +16,27 @@ helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 024d824d6fd8e7b11f5ec3ea184a356da84408b4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 779d8fe872fe5db8d36b7dc7feb2f0e4742595be
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-properties"></a>ADOX プロパティ
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|ADO を示す**接続**カタログが所属するオブジェクトします。|  
 |[属性](../../../ado/reference/adox-api/attributes-property-adox.md)|列の特性について説明します。|  
-|[クラスター化](../../../ado/reference/adox-api/clustered-property-adox.md)|インデックスがクラスター化するかどうかを示します。|  
+|[クラスター化インデックス](../../../ado/reference/adox-api/clustered-property-adox.md)|インデックスがクラスター化するかどうかを示します。|  
 |[Command](../../../ado/reference/adox-api/command-property-adox.md)|ADO を示す**コマンド**を作成またはプロシージャを実行するために使用できるオブジェクト。|  
-|[カウント](../../../ado/reference/ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
-|[作成日時](../../../ado/reference/adox-api/datecreated-property-adox.md)|オブジェクトが作成された日付を示します。|  
-|[最終更新日時](../../../ado/reference/adox-api/datemodified-property-adox.md)|オブジェクトが最後に変更された日付を示します。|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
+|[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|オブジェクトが作成された日付を示します。|  
+|[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|オブジェクトが最後に変更された日付を示します。|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|列の指定された最大サイズを示します。|  
 |[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|主キーが削除されたときに実行されるアクションを示します。|  
 |[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)|Null 値を持つインデックス フィールドにレコードがインデックス エントリを持つかどうかを示します。|  
@@ -44,7 +45,7 @@ ms.lasthandoff: 12/21/2017
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|列の数値の小数点以下桁数を示します。|  
 |[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|テーブルまたはプロバイダー固有のプロパティへのアクセスを提供する列の親のカタログを指定します。|  
 |[有効桁数](../../../ado/reference/adox-api/precision-property-adox.md)|データ列の値の最大有効桁数を示します。|  
-|[主キー](../../../ado/reference/adox-api/primarykey-property-adox.md)|インデックスがテーブルに主キーを表すかどうかを示します。|  
+|[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|インデックスがテーブルに主キーを表すかどうかを示します。|  
 |[RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)|関連テーブル (キー列のみ) に関連する列の名前を示します。|  
 |[RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md)|関連テーブルの名前を示します。|  
 |[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)|列 (インデックス列のみ) の並べ替え順序を示します。|  

@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Dispose method
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e365b0ffd041b8457fff3035fbbe4e19f5bcee6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 28edabefb40a43db17bb69a484c97e2c55f64274
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-systemtransactions"></a>System.Transactions の使用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**System.Transactions**名前空間は ADO.NET と完全に統合される新しいトランザクション フレームワークを提供し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]共通言語ランタイム (CLR) 統合します。 **System.Transactions.TransactionScope**クラスは、暗黙的に接続を分散トランザクションに参加させることで、コード ブロックをトランザクションです。 呼び出す必要があります、**完了**でマークされたメソッドのコード ブロックの最後に、 **TransactionScope**です。 **Dispose**プログラムの実行が中止された場合、トランザクションの原因と、コード ブロックを離れるときに、メソッドが呼び出され、**完了**メソッドは呼び出されません。 コードがスコープから離れるような例外がスローされると、このトランザクションは中止されたと見なされます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+**System.Transactions**名前空間は ADO.NET と完全に統合される新しいトランザクション フレームワークを提供し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]共通言語ランタイム (CLR) 統合します。 **System.Transactions.TransactionScope**クラスは、暗黙的に接続を分散トランザクションに参加させることで、コード ブロックをトランザクションです。 呼び出す必要があります、**完了**でマークされたメソッドのコード ブロックの最後に、 **TransactionScope**です。 **Dispose**プログラムの実行が中止された場合、トランザクションの原因と、コード ブロックを離れるときに、メソッドが呼び出され、**完了**メソッドは呼び出されません。 コードがスコープから離れるような例外がスローされると、このトランザクションは中止されたと見なされます。  
   
  使用されていることをお勧め、**を使用して**いることを確認するブロック、 **Dispose**メソッドが、 **TransactionScope**オブジェクトと、 **を使用して**ブロックを終了します。 コミットまたは保留中のトランザクションをロールバックに失敗することができます重大なパフォーマンスが低下するための既定のタイムアウト、 **TransactionScope**は 1 分です。 使用しない場合、**を使用して**ステートメントでは、すべての処理を実行する必要があります、**再試行**をブロックし、明示的に呼び出す、 **Dispose**メソッドで、**最後に**ブロックします。  
   

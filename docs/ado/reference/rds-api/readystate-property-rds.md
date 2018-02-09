@@ -1,6 +1,7 @@
 ---
 title: "ReadyState プロパティ (RDS) |Microsoft ドキュメント"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -11,18 +12,19 @@ ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: ReadyState property [ADO]
+helpviewer_keywords:
+- ReadyState property [ADO]
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52d32f6b2ba1e3a85b0d374a4d11b4e0bf3c742c
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: c5496f5b5c98efa6f4754d131d74627f9ab75984
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="readystate-property-rds"></a>ReadyState プロパティ (RDS)
 進行状況を示す、 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトへのデータが取得されてその[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -33,7 +35,7 @@ ms.lasthandoff: 12/20/2017
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  設定または値は次のいずれかを返します。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|現在のクエリが実行中で、行が取得されていません。 **DataControl**オブジェクトの**Recordset**は使用されません。|  
 |**adcReadyStateInteractive**|現在のクエリによって取得される行の初期セットが格納されている、 **DataControl**オブジェクトの**Recordset**し、使用可能な。 残りの行がまだフェッチされています。|  

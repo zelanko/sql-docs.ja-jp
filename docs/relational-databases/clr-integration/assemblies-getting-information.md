@@ -16,19 +16,20 @@ helpviewer_keywords:
 - status information [SQL Server], assemblies
 - metadata [SQL Server], assemblies
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: faae880f2751179d5cc0903714062b47893e2dfe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c96fde4198ff475f53aa94e09a400e62f26fc8b3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---getting-information"></a>アセンブリの情報を取得します。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]次のカタログ ビューおよび関数は、アセンブリに関するメタデータを照会できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+次のカタログ ビューや関数により、アセンブリに関するメタデータにクエリを行うことができます。  
   
  **個別のアセンブリに関する情報を取得するには**  
   

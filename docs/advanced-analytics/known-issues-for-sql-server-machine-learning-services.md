@@ -1,6 +1,6 @@
 ---
 title: "Machine Learning のサービスの既知の問題 |Microsoft ドキュメント"
-ms.date: 01/31/2018
+ms.date: 02/05/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 5a262bb73d5989ebf3ad961ee7c2e84e75415f26
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2c3bd4ada6d234015ef1ab4d8b474f7ab45c4b85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning のサービスの既知の問題
 
@@ -71,17 +71,31 @@ R パッケージに問題を避けるためには、R ライブラリ」の説�
 
 **適用されます:** SQL Server 2016 R Services、R Server バージョン 9.0.0 の以前のバージョン
 
+### <a name="r-components-missing-from-cu3-setup"></a>R コンポーネントを CU3 セットアップからが見つかりません
+
+Azure の仮想マシン数に制限は、SQL Server に付属する必要のある R インストール ファイルを指定せずにプロビジョニングされました。 2018-01-05 から 2018-01-23 までの期間でプロビジョニングした仮想マシンに問題が適用されます。 この問題は、内部設置型インストールの場合を適用した場合の SQL Server 2017 CU3 更新期間中に 2018-01-05 から 2018-01-23 影響も可能性があります。
+
+サービス リリースは、R のインストール ファイルの正しいバージョンを含む提供されました。
+
++ [SQL Server 2017 KB4052987 の累積的な更新プログラム パッケージ 3](https://www.microsoft.com/en-us/download/details.aspx?id=56128)です。
+
+コンポーネントをインストールして、SQL Server 2017 年 1 CU3 を修復には、CU3 をアンインストールして、更新されたバージョンを再インストールする必要があります。
+
+1. 更新された CU3 インストール ファイルをダウンロード、R インストーラーが含まれます。
+2. CU3 をアンインストールします。 コントロール パネルで、検索**更新プログラムをアンインストール**、し、「用の修正プログラム 3015 2017 (KB4052987) (64 ビット) の SQL Server」を選択します。 アンインストールの手順に進みます。
+3. 更新プログラムをダウンロードした KB4052987 をダブルクリックして CU3 更新プログラムを再インストールしてください:`SQLServer2017-KB4052987-x64.exe`です。 インストール手順に従います。
+
 ### <a name="unable-to-install-python-components-in-offline-installations-of-sql-server-2017-ctp-20-or-later"></a>オフライン インストールでは SQL Server 2017 CTP 2.0 またはそれ以降に Python コンポーネントをインストールすることができません。
 
 インターネットにアクセスできないコンピューターに SQL Server 2017 のプレリリース版をインストールする場合は、ダウンロードされた Python コンポーネントの場所の入力を求めるページを表示するインストーラーが失敗します。 このようなインスタンスでは、Machine Learning サービス機能は、Python コンポーネントではないをインストールできます。
 
-リリース バージョンでは、この問題が解決します。 この問題を回避するには、この問題が発生した場合は、セットアップ中に一時的にインターネットへのアクセスを有効にできます。 R. にこの制限は適用されません。
+リリース バージョンでは、この問題が解決します。 また、この制限は、R コンポーネントには適用されません。
 
 **適用されます:** Python の SQL Server 2017
 
 ### <a name="bkmk_sqlbindr"></a>使用して、クライアントから、古いバージョンの SQL Server R Services に接続するときに、互換性のないバージョンの警告[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
-SQL Server 2016 のコンピューティング コンテキストで R コードを実行するときは、次のようなエラーを参照してください可能性があります。
+R コードを実行するときは、SQL Server 2016 の計算コンテキスト、次のエラーを表示する場合があります。
 
 > *Microsoft R Server バージョン 8.0.3 と互換性のない、バージョン 9.0.0 の Microsoft R Client をコンピューター上で実行しています。互換性のあるバージョンをダウンロードしてインストールしてください。*
 
@@ -170,13 +184,13 @@ Enterprise Edition では、外部スクリプト プロセスを管理するた
 
 SQL Server のインスタンスがインストールされている場合、既定以外の場所になどの外部、`Program Files`フォルダー、ACCESS_DENIED は、パッケージをインストールするスクリプトを実行しようとしたときに発生する警告です。 例:
 
-> *NormalizePath(path.expand(path)、winslash、mustWork) パス [2] ="~ExternalLibraries/R/8/1": アクセスが拒否されました。*
+> *`normalizePath(path.expand(path), winslash, mustWork)` : パス [2] ="~ExternalLibraries/R/8/1": アクセスが拒否されました*
 
 その理由は R 関数は、パスを読み取ろうとすると、失敗した場合、組み込みのユーザー グループ**SQLRUserGroup**は読み取りアクセスがありません。 生成される警告は、現在の R スクリプトの実行をブロックしませんが、ユーザーがその他の R スクリプトを実行するたびに、警告が繰り返し再発可能性があります。
 
 で既定の場所に SQL Server をインストールする場合は、このエラーは発生しません、すべての Windows ユーザーのアクセス許可を読み取りがであるため、`Program Files`フォルダーです。
 
-この問題は、次のサービス リリースで解決されます。 この問題を回避するには、提供、グループ**SQLRUserGroup**のすべての親フォルダーに対して読み取りアクセス権を持つ`ExternalLibraries`します。
+この問題 ia は、次のサービス リリースで対処します。 この問題を回避するには、提供、グループ**SQLRUserGroup**のすべての親フォルダーに対して読み取りアクセス権を持つ`ExternalLibraries`します。
 
 ### <a name="serialization-error-between-old-and-new-versions-of-revoscaler"></a>RevoScaleR の新旧のバージョン間でシリアル化エラー
 
@@ -192,13 +206,13 @@ API バージョンが同じ場合、またはシリアル化 API の新しい�
 
 つまり、シリアル化と逆シリアル化の両方の RevoScaleR の同じバージョンを使用します。
 
-### <a name="real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>リアルタイムのスコア付けも、ツリーまたはフォレスト モデル learningRate パラメーターは正しく処理しません
+### <a name="real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>リアルタイム スコアリング適切に処理されません、 _learningRate_ツリーやフォレスト モデル内のパラメーター
 
 デシジョン ツリーまたはデシジョン フォレスト メソッドを使用してモデルを作成、学習率を指定すると、表示される矛盾する結果を使用する場合`sp_rxpredict`または SQL`PREDICT`関数を使用すると比較して`rxPredict`です。
 
 原因とそのシリアル化のプロセス モデルでは、API のエラーし、に制限されます、`learningRate`パラメーター: たとえば、 [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)、または
 
-この問題は、次のサービス リリースで修正されます。
+この問題は次のサービス リリースで対処します。
 
 ### <a name="limitations-on-processor-affinity-for-r-jobs"></a>R ジョブのプロセッサ アフィニティに関する制限事項
 
@@ -376,7 +390,7 @@ SQL Server 2017 の早期のリリースでは、事前トレーニング済み�
 
 + 事前トレーニング済みモデルをインストールする場合は、カスタムの場所を選択します。
 + 可能であれば、C:\SQL\MSSQL14 などの短いパスを持つカスタムのインストール パスで SQL Server インスタンスをインストールします。MSSQLSERVER です。
-+ Windows ユーティリティを使用して[Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx)短いパスをモデル ファイルにマップするハード リンクを作成します。 
++ Windows ユーティリティを使用して[Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx)短いパスをモデル ファイルにマップするハード リンクを作成します。
 + 最新のサービス リリースを更新します。
 
 ### <a name="error-when-saving-serialized-model-to-sql-server"></a>保存するときにエラーが SQL Server へのモデルをシリアル化

@@ -22,19 +22,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], Native serialization
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04ee34b1a2474e97111d42be84954dc4c0987dd1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a075d6c4c4cc5ccd0477bb33159cf319fb0754b6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-user-defined-types---requirements"></a>ユーザー定義型の要件の作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]作成するユーザー定義型 (UDT) にインストールするときに、いくつかの重要な設計上の決定を行う必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 ほとんどの場合は、UDT を構造体として作成することをお勧めしますが、クラスとして作成することもできます。 UDT の定義は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録する UDT を作成するための仕様に準拠している必要があります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+作成するユーザー定義型 (UDT) にインストールするときに、いくつかの重要な設計上の決定を行う必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 ほとんどの場合は、UDT を構造体として作成することをお勧めしますが、クラスとして作成することもできます。 UDT の定義は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録する UDT を作成するための仕様に準拠している必要があります。  
   
 ## <a name="requirements-for-implementing-udts"></a>UDT の実装要件  
  UDT を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行するには、UDT の定義に次の要件を実装する必要があります。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
 -   UDT オブジェクトのシリアル化は 1 つだけ存在する必要があります。 シリアル化ルーチンまたはシリアル化解除ルーチンでは、特定のオブジェクトの表現が複数認識されると検証が失敗します。  
   
--   **SqlUserDefinedTypeAttribute.IsByteOrdered**する必要があります**true**バイトの順序でデータを比較します。 IComparable インターフェイスが実装されていない場合と**SqlUserDefinedTypeAttribute.IsByteOrdered**は**false**バイト順での比較は失敗します。  
+-   **SqlUserDefinedTypeAttribute.IsByteOrdered** must be **true** to compare data in byte order. IComparable インターフェイスが実装されていない場合と**SqlUserDefinedTypeAttribute.IsByteOrdered**は**false**バイト順での比較は失敗します。  
   
 -   クラスで定義する UDT には、引数を受け取らないバプリック コンストラクターを含める必要があります。 必要に応じて、オーバーロードのクラス コンストラクターを追加作成できます。  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="native-serialization"></a>ネイティブ シリアル化  
  UDT に適したシリアル化属性は、作成する UDT の種類によって異なります。 **ネイティブ**シリアル化形式を利用できるようにする非常に単純な構造[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]効率的なネイティブ形式は、UDT をディスクに保存します。 **ネイティブ**形式は、UDT が単純であり、次の種類のフィールドのみを含む場合にお勧めします。  
   
- **bool**、**バイト**、 **sbyte**、**短い**、 **ushort**、 **int**、 **uint**、**長い**、 **ulong**、 **float**、**二重**、 **SqlByte**、**SqlInt16**、 **SqlInt32**、 **SqlInt64**、 **SqlDateTime**、 **SqlSingle**、 **SqlDouble**、 **SqlMoney**、 **SqlBoolean**  
+ **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
  値の型を上記の種類のフィールドで構成される適した候補となる**ネイティブ**書式を設定するように**構造体**Visual c# では、(または**構造**がで知られているとVisual Basic の場合)。 指定した UDT のなど、**ネイティブ**シリアル化形式を指定したもう 1 つの UDT のフィールドを含めることがあります、**ネイティブ**形式です。 必要がありますを指定するかどうかは、UDT の定義はより複雑であり、上記のリストではなくデータ型が含まれています、 **UserDefined**シリアル化形式します。  
   
@@ -108,7 +109,7 @@ ms.lasthandoff: 01/08/2018
   
  **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute**は次のプロパティがあります。  
   
- **形式**  
+ **Format**  
  シリアル化形式を指定**ネイティブ**または**UserDefined**UDT のデータ型に応じて、します。  
   
  **IsByteOrdered**  

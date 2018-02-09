@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -12,16 +13,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8c6afcc5c41535031961f0d96cf756cd4015c9b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8dbbe05208498d4b23f95ded09ea9a9238c806d0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO イベントのインスタンス化: ADO および WFC
 ADO の Windows Foundation Class (ADO/WFC) は、ADO イベント モデルでビルドし、簡略化されたアプリケーション プログラミング インターフェイスを提供します。 一般に、ADO/WFC ADO イベントを取得、イベント パラメーターに 1 つのイベント クラスでは、統合し、イベント ハンドラーを呼び出します。  
@@ -46,7 +47,7 @@ ADO の Windows Foundation Class (ADO/WFC) は、ADO イベント モデルで�
   
      最初の引数、 **ConnectionEventHandler**コンス トラクターは、2 番目の引数で指定されたイベント ハンドラーを含むクラスへの参照。  
   
-3.  特定の種類のイベントを処理するためのハンドラーの一覧を表示、イベント ハンドラーを追加します。 など、名前のメソッドを使用して**addOn***EventName*(*ハンドラー*)。  
+3.  特定の種類のイベントを処理するためのハンドラーの一覧を表示、イベント ハンドラーを追加します。 など、名前のメソッドを使用して **addOn * * * EventName*(*ハンドラー*)。  
   
 4.  ADO/WFC は内部的には、ADO のすべてのイベント ハンドラーを実装します。 によってこのため、イベントの原因となった、**接続**または**レコード セット**ADO/WFC イベント ハンドラーによって操作が傍受します。  
   
@@ -64,7 +65,7 @@ ADO の Windows Foundation Class (ADO/WFC) は、ADO イベント モデルで�
   
 6.  イベント ハンドラーから、ADO/WFC イベントのハンドラーに、ADO を返します。 ADO/WFC ADO イベント パラメーターに適切な ADO/WFC イベントのデータ メンバーをコピーし、ADO のイベント ハンドラーを返します。  
   
-7.  終了したら ADO/WFC イベント ハンドラーの一覧から、ハンドラーの削除を処理します。 など、名前のメソッドを使用して**removeOn***EventName*(*ハンドラー*)。  
+7.  終了したら ADO/WFC イベント ハンドラーの一覧から、ハンドラーの削除を処理します。 など、名前のメソッドを使用して **removeOn * * * EventName*(*ハンドラー*)。  
   
 ## <a name="see-also"></a>参照  
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
