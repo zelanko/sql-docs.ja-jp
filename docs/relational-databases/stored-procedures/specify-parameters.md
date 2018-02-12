@@ -8,7 +8,8 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - output parameters [SQL Server]
 - input parameters [SQL Server]
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0b580149c946b88eafc138dc69e55ef673aafc9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 029b4f8eab1af6ebbd26c1d8fe877d38420e7f5c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-parameters"></a>パラメーターの指定
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] プロシージャのパラメーターを指定することで、呼び出し元のプログラムからプロシージャの本体に値を渡すことができます。 これらの値は、プロシージャの実行中にさまざまな目的で使用できます。 プロシージャ パラメーターも、パラメーターが OUTPUT パラメーターとしてマークされている場合は、呼び出し元のプログラムに値を返すことができます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+プロシージャのパラメーターを指定することで、呼び出し元のプログラムからプロシージャの本体に値を渡すことができます。 これらの値は、プロシージャの実行中にさまざまな目的で使用できます。 プロシージャ パラメーターも、パラメーターが OUTPUT パラメーターとしてマークされている場合は、呼び出し元のプログラムに値を返すことができます。  
   
  プロシージャには最大 2,100 個のパラメーターを指定できます。各パラメーターには、名前、データ型、および方向が割り当てられます。 パラメーターには、必要に応じて既定値を割り当てることもできます。  
   
@@ -69,10 +71,10 @@ GO
  パラメーターに明示的に名前を付け、プロシージャ呼び出しで各パラメーターに適切な値を代入することで、パラメーターを任意の順序で指定できます。 たとえば、 **my_proc** というプロシージャが **@first**、 **@second**、および **@third**という 3 つのパラメーターを必要とする場合、プロシージャに渡される値は、以下のようにパラメーター名に代入できます。 `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
->  1 つのパラメーター値を **@parameter =** *value* の形式で指定した場合は、後続のパラメーターもすべてこの形式で指定する必要があります。 パラメーター値を **@parameter =** *value* の形式で渡さない場合は、CREATE PROCEDURE ステートメント内のパラメーターと同じ順序 (左から右) で値を指定する必要があります。  
+>  1 つのパラメーター値を **@parameter =***value* の形式で指定した場合は、後続のパラメーターもすべてこの形式で指定する必要があります。 パラメーター値を **@parameter =***value* の形式で渡さない場合は、CREATE PROCEDURE ステートメント内のパラメーターと同じ順序 (左から右) で値を指定する必要があります。  
   
 > [!WARNING]  
->  **@parameter =** *value* の形式で渡すパラメーターのスペルが間違っていると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってエラーが生成され、プロシージャは実行されません。  
+>  **@parameter =***value* の形式で渡すパラメーターのスペルが間違っていると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってエラーが生成され、プロシージャは実行されません。  
   
 ## <a name="specifying-parameter-data-types"></a>パラメーターのデータ型の指定  
  パラメーターを CREATE PROCEDURE ステートメントで宣言する場合は、パラメーターのデータ型を定義する必要があります。 パラメーターのデータ型により、プロシージャの呼び出し時にパラメーターとして指定できる値の型と範囲が決まります。 たとえば、 **tinyint** データ型のパラメーターを定義した場合は、そのパラメーターに渡す値として 0 ～ 255 の範囲の数値だけを指定できます。 指定したデータ型と互換性がない値を使用してプロシージャを実行すると、エラーが返されます。  
@@ -132,7 +134,7 @@ EXEC Sales.uspGetSalesYTD N'Blythe';
 GO  
 ```  
   
- 既定値が指定されているパラメーターは省略できますが、パラメーターの一覧を切り捨てることしかできません。 たとえば、プロシージャに 5 つのパラメーターがある場合は、4 番目と 5 番目のパラメーターを両方とも省略できます。 ただし、**@parameter =** *value* の形式でパラメーターを指定しない限り、4 番目のパラメーターを省略して 5 番目のパラメーターを指定することはできません。  
+ 既定値が指定されているパラメーターは省略できますが、パラメーターの一覧を切り捨てることしかできません。 たとえば、プロシージャに 5 つのパラメーターがある場合は、4 番目と 5 番目のパラメーターを両方とも省略できます。 ただし、**@parameter =***value* の形式でパラメーターを指定しない限り、4 番目のパラメーターを省略して 5 番目のパラメーターを指定することはできません。  
   
 ## <a name="specifying-parameter-direction"></a>パラメーターの方向の指定  
  パラメーターの方向は、入力または出力です。入力の場合は、値がプロシージャの本体に渡されます。出力の場合は、プロシージャが呼び出し元のプログラムに値を返します。 既定値は入力パラメーターです。  
