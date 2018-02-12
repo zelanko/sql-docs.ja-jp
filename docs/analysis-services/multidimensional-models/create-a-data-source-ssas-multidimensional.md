@@ -20,19 +20,20 @@ helpviewer_keywords:
 - data sources [Analysis Services], creating
 - security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 213bc7a17344f42cd10258962f91711a5ee3acba
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>データ ソースの作成 (SSAS 多次元)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多次元モデルでは、データ ソース オブジェクトを表す元となる処理 (またはインポートする)、データ ソースへの接続データ。 多次元モデルには少なくとも 1 つのデータ ソース オブジェクトが含まれている必要がありますが、複数のデータ ウェアハウスのデータを結合するために、データ ソース オブジェクトをさらに追加することもできます。 このトピックで説明する手順に従って、モデルのデータ ソース オブジェクトを作成します。 このオブジェクトのプロパティの設定の詳細については、「[データ ソースのプロパティの設定 &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の多次元モデルでは、データ ソース オブジェクトが、処理 (またはインポート) するデータを持つデータ ソースへの接続を表します。 多次元モデルには少なくとも 1 つのデータ ソース オブジェクトが含まれている必要がありますが、複数のデータ ウェアハウスのデータを結合するために、データ ソース オブジェクトをさらに追加することもできます。 このトピックで説明する手順に従って、モデルのデータ ソース オブジェクトを作成します。 このオブジェクトのプロパティの設定の詳細については、「[データ ソースのプロパティの設定 &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)」を参照してください。  
   
  このトピックのセクションは次のとおりです。  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 01/08/2018
   
          データ ソース ウィザードの **[接続の定義方法を選択します]** ページにある **[データ接続]** ペインに新しい接続が表示されます。  
   
-6.  **[次へ]** をクリックします。  
+6.  **[次へ]**をクリックします。  
   
 7.  **[権限借用情報]**で、Analysis Services が外部データ ソースに接続する際に使用する Windows 資格情報またはユーザー ID を指定します。 データベース認証を使用する場合、接続でこれらの設定は無視されます。  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 01/08/2018
   
      指定するアカウントは、データ ソースに対する読み取り権限を持っている必要があります。  
   
-8.  **[次へ]** をクリックします。  **[ウィザードの完了]**で、データ ソースの名前を入力するか、既定の名前を使用します。 既定の名前は、接続で指定されたデータベース名になっています。 この新しいデータ ソースの接続文字列が **[プレビュー]** ペインに表示されます。  
+8.  **[次へ]**をクリックします。  **[ウィザードの完了]**で、データ ソースの名前を入力するか、既定の名前を使用します。 既定の名前は、接続で指定されたデータベース名になっています。 この新しいデータ ソースの接続文字列が **[プレビュー]** ペインに表示されます。  
   
 9. **[完了]**をクリックします。  ソリューション エクスプローラーの **[データ ソース]** フォルダーに、新しいデータ ソースが表示されます。  
   
@@ -179,6 +180,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>参照  
  [サポートされるデータ ソース &#40;SSAS - 多次元&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
- [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [多次元モデル内のデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>付録 b: ODBC 状態遷移のテーブル
 この付録の内容の表では、ODBC 関数による環境、接続、ステートメント、および記述子の状態の遷移の発生を示しています。 通常、環境、接続、ステートメント、または記述子の状態は、ハンドル (環境、接続、ステートメント、または記述子) の対応する型を使用する関数を呼び出すことができる場合は決定します。 環境、接続、ステートメント、および記述子の状態は次の図に示すようにほぼと重複します。 たとえば、接続の正確な重複の状態の C5 と C6、S1 S12 からはデータ ソースに依存する、さまざまなデータ ソースに異なる時刻でトランザクションを開始し、記述子の状態 (暗黙的に割り当てられた記述子) D1i 依存ステートメントの状態記述子が関連付けられているステートメントの状態、状態 (明示的に割り当てられた記述子) D1e 中には任意のステートメントの状態に依存しないです。 各状態の説明は、次を参照してください[環境遷移](../../../odbc/reference/appendixes/environment-transitions.md)、[接続遷移](../../../odbc/reference/appendixes/connection-transitions.md)、[ステートメント遷移](../../../odbc/reference/appendixes/statement-transitions.md)、および[記述子遷移。](../../../odbc/reference/appendixes/descriptor-transitions.md)、後の「します。  
@@ -51,13 +52,13 @@ ms.lasthandoff: 12/21/2017
 -   **--**、関数を実行した後状態は変更されません。  
   
 -   **E**  
-     ***n***、  **C*n***、  **S*n***、または**D*n** *、環境、接続、ステートメント、または記述子の状態が指定した状態に移動します。  
+     ***n***、**C*n * * *、**S*n***、または**D * n***  — 環境、接続、ステートメント、または記述子の状態に移動指定された状態です。  
   
 -   **(組み込み)** : 関数に無効なハンドルが渡されました。 場合は、ハンドルが null のハンドルか、誤った型の有効なハンドル — など、接続ハンドルが、ステートメント ハンドルが必要なときに渡されました: SQL_INVALID_HANDLE 以外を返しますそれ以外の場合の動作は未定義と致命的な可能性があります。 このエラーは、指定された状態で、関数の呼び出しの可能な唯一の結果である場合にのみに表示されます。 このエラーは、状態は変更されませんありが常に検出されたドライバー マネージャーによって、かっこで示されます。  
   
 -   **NS** : 次の状態。 ステートメントの移行は、ステートメントが非同期状態を完了していない場合と同じです。 たとえば、結果セットを作成するステートメントの状態に S11 状態 S1 からため**SQLExecDirect** SQL_STILL_EXECUTING が返されます。 状態 S11 NS 表記では、ステートメントの遷移と同じ状態 S1 内のステートメントの結果セットを作成することを意味します。 場合**SQLExecDirect**エラーを返します、ステートメントは状態 S1 のまま以外の場合は成功した場合、ステートメントに移動 S5 を記述する以外の場合はデータを必要とする場合、ステートメント S8; の状態をし移動がまだ実行中の場合 S11 の状態のままにします。  
   
--   ***XXXXX***または **(*XXXXX*) * *-移行テーブルに関連付けられている、SQLSTATESQLSTATEs ドライバー マネージャーによって検出されたは、かっこで囲まれます。 関数から SQL_ERROR と指定の SQLSTATE 返されましたが、状態は変更されません。 たとえば場合、 **SQLExecute**前に呼び出されます**SQLPrepare**、SQLSTATE HY010 が返されます (関数のシーケンス エラーです)。  
+-   ***XXXXX***または**(*XXXXX*)** — 移行テーブルに関連付けられている、SQLSTATESQLSTATEs ドライバー マネージャーによって検出されたは、かっこで囲まれます。 関数から SQL_ERROR と指定の SQLSTATE 返されましたが、状態は変更されません。 たとえば場合、 **SQLExecute**前に呼び出されます**SQLPrepare**、SQLSTATE HY010 が返されます (関数のシーケンス エラーです)。  
   
 > [!NOTE]  
 >  テーブルでは、状態を変更しない移行テーブルに関係のないエラーは表示されません。 たとえば、 **SQLAllocHandle** E1 環境の状態で呼び出され、SQLSTATE HY001 を返します (メモリ割り当てエラー) は、環境の状態のまま E1 ですこれは、用の環境移行テーブルに表示されません**。SQLAllocHandle**です。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 12/21/2017
 |d|データを必要とします。 関数には、SQL_NEED_DATA が返されます。|  
 |e|エラー状態。 関数には、SQL_ERROR が返されます。|  
 |i|行が無効です。 カーソルの位置が結果内の行セットといずれかの行が削除されたか、行に対して操作でエラーが発生しました。 行の状態配列が存在する場合は、行の状態配列内の行の値が SQL_ROW_DELETED または SQL_ROW_ERROR。 (行の状態配列を指す SQL_ATTR_ROW_STATUS_PTR ステートメント属性です。)|  
-|%nf|見つかりませんでした。 関数には、SQL_NO_DATA が返されます。 これは適用されないとき**SQLExecDirect**、 **SQLExecute**、または**SQLParamData**更新または delete ステートメントを検索を実行した後 SQL_NO_DATA が返されます。|  
+|nf|見つかりませんでした。 関数には、SQL_NO_DATA が返されます。 これは適用されないとき**SQLExecDirect**、 **SQLExecute**、または**SQLParamData**更新または delete ステートメントを検索を実行した後 SQL_NO_DATA が返されます。|  
 |np|準備されていません。 ステートメントが準備されていませんでした。|  
 |nr|結果はありません。 ステートメントは、されませんまたは結果セットを作成できませんでした。|  
 |o|その他の関数。 別の関数は非同期的に実行しています。|  
@@ -86,7 +87,7 @@ ms.lasthandoff: 12/21/2017
   
 |E0<br /><br /> 未割り当て|E1<br /><br /> 割り当てられています。|E2<br /><br /> 接続|  
 |------------------------|----------------------|-----------------------|  
-|(組み込み)|E0|(HY010)|  
+|(IH)|E0|(HY010)|  
   
  場合**SQLFreeHandle**環境状態 E0 で呼び出される*HandleType* SQL_INVALID_HANDLE が返されない、ドライバー マネージャーを SQL_HANDLE_ENV に設定します。 使用して状態 E1 で呼び出された場合*HandleType* SQL_HANDLE_ENV に設定すると、環境を E0 状態の場合は、関数が成功し、関数が失敗した場合に、E1 の状態のままに移動します。 使用して状態 E2 で呼び出された場合*HandleType* SQL_HANDLE_ENV に設定すると、ドライバー マネージャーは、常に返します SQL_ERROR と SQLSTATE HY010 (関数のシーケンス エラー)、環境の状態のまま E2 とします。  
   
