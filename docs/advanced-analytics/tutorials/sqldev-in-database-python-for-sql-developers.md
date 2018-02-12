@@ -10,22 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2017
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 6d7e49a6074e342f51595e9b1cdb10227761f670
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>SQL 開発者のためのデータベースでの Python の分析
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 このチュートリアルの目的は、SQL プログラマ環境に提供する実践的な機械学習の SQL Server で実行されている Python を使用したソリューションの構築です。 このチュートリアルでは、ストアド プロシージャに Python コードを追加してビルドし、モデルから予測するストアド プロシージャを実行する方法を学習します。
 
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 
 データは、よく知られた NYC タクシー データ セットからです。 このチュートリアルを迅速かつ簡単には、データをサンプリングします。 かどうか特定トリップもそうでない、ヒントを取得する可能性の高い、時刻、距離、および収集場所などの列に基づいて予測する二項分類モデルを作成します。
 
-すべてのタスクを行うことができますを使用して[!INCLUDE[tsql](../../includes/tsql-md.md)]の使い慣れた環境でのストアド プロシージャ[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
+すべてのタスクを行うことができますを使用して[!INCLUDE[tsql](../../includes/tsql-md.md)]の使い慣れた環境でのストアド プロシージャ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
 - [手順 1: サンプル データのダウンロード](sqldev-py1-download-the-sample-data.md)
 

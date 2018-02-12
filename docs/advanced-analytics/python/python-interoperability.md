@@ -14,19 +14,20 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 71b578fb47a7bd7881f2681206a0f69f5c37facb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1edd059c283a0f780f6dd1419d70ed2bedb23f03
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="python-interoperability-with-sql-server"></a>SQL Server での Python の相互運用性
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 このトピックは、この機能を有効にした場合にインストールされている Python コンポーネントについて説明**Machine Learning Services (In-database)**言語としての Python を選択します。
 
 ## <a name="python-components"></a>Python コンポーネント
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]Python の実行可能ファイルを変更しません。 Python ランタイム SQL ツールとは別にインストールされているし、外部で実行される、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]プロセスです。
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Python の実行可能ファイルを変更しません。 Python ランタイム SQL ツールとは別にインストールされているし、外部で実行される、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]プロセスです。
 
 特定の関連付けられている配布[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]インスタンスがインスタンスに関連付けられているフォルダーにあります。
 

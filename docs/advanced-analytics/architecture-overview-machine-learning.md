@@ -15,13 +15,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 737087692cff4d5b76336b1a31b58e2f9390abfc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>SQL Server の Machine Learning のサービスのアーキテクチャの概要 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 このトピックでは、SQL Server での Python と R スクリプトの実行をサポートする機能拡張フレームワークの目標について説明します。
 
@@ -60,7 +61,7 @@ SQL Server によって管理されているセキュリティで保護された
 
    さらに、Microsoft は、データの翻訳、圧縮、および最適化をサポートする各言語を対象としたなど、SQL Server との統合を提供する独自のライブラリのセットを提供します。
 
-+ **Security**
++ **セキュリティ**
 
    強力なセキュリティは、資格情報の処理を適切にセキュリティで保護されたデータ保護、および外部スクリプトを管理する SQL Server 信頼スタート パッドの使用の SQL Server への依存統合 Windows 認証と SQL ログインのパスワード ベースの両方のサポート実行とスクリプトで使用されるセキュリティで保護されたデータ。
 

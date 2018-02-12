@@ -14,18 +14,19 @@ keywords:
 - "黙示的な認証"
 - SQLRUserGroup
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: c1d52c4ee2d9c09aeb8493b68e0aeb6dfe418b52
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8e448e665044b1b8f63d30b7c99adf62419ae283
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>SQLRUserGroup をデータベース ユーザーとして追加します。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、データベースに接続し、ユーザーの代理として R または Python のジョブを実行するアクセス許可が必要な SQL Server の machine learning のサービスで使用されるワーカー アカウントのグループに付与する方法について説明します。
 

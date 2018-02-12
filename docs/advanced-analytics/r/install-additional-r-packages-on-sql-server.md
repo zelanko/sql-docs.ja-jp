@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2821983b39dcd4c301ea4b49713de0cdd3550a65
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 530745918dfd4808694b401be55e40bac00f3cce
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>SQL Server に追加の R パッケージをインストールします。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、機械学習が有効になっている SQL Server のインスタンスに新しい R パッケージをインストールする方法について説明します。
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 01/09/2018
 + [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
 + [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 + Windows のバージョンのパッケージがあるかどうかを判断します[適切なパッケージのバージョンと形式を取得する。](#packageVersion)
 
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/09/2018
 
     また、パッケージ (または必要なすべてのパッケージ) が SQL Server やポリシーによってブロックされる機能に含まれるかどうかを確認してください。 たとえば、特定のパッケージは、セキュリティを強化した SQL Server 環境で不適切な適合です。 こうしたパッケージには、Java、または通常は SQL Server 環境の場合、または管理者特権でのファイル システム アクセスが必要なパッケージで使用されるその他のフレームワークを使用して、ネットワークにアクセスするパッケージが含まれる可能性があります。
 
-+ アクセス許可
++ 権限
 
     SQL Server を実行しているコンピューターへの管理アクセスが必要です。
 
@@ -85,15 +86,15 @@ ms.lasthandoff: 01/09/2018
 
     **[既定のインスタンス]**
 
-    SQL Server 2017:`C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
     
-    SQL Server 2016 の場合:`C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
 
     **[名前付きインスタンス]**
 
-    SQL Server 2017:`C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
     
-    SQL Server 2016 の場合:`C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
 
     機械学習のコンポーネントをアップグレードするバインディングを使用している場合、パスを変更した可能性があります。 常に新しいパッケージをインストールする前に、インスタンス パスを確認します。 
 
@@ -129,15 +130,15 @@ ms.lasthandoff: 01/09/2018
 
     **[既定のインスタンス]**
 
-    SQL Server 2017:`C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
     
-    SQL Server 2016 の場合:`C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
 
     **[名前付きインスタンス]**
 
-    SQL Server 2017:`C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
     
-    SQL Server 2016 の場合:`C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
 
 3. R コマンド プロンプトを管理者として開きます。
 
@@ -267,7 +268,7 @@ R パッケージは、多くの場合、これらのいくつかできない可
 
 使用することをお勧めを複数のパッケージをインストールまたは正しいパッケージの種類とバージョン、組織内のすべてのユーザーを取得することを確認する必要がある場合、 [miniCRAN](https://mran.microsoft.com/package/miniCRAN)パッケージを共有できるローカル リポジトリを作成するには複数のユーザーまたはコンピューター。 詳細については、次を参照してください。 [miniCRAN を使用して、ローカルのパッケージ リポジトリを作成する](create-a-local-package-repository-using-minicran.md)です。
 
-### <a name="permissions"></a>アクセス許可
+### <a name="permissions"></a>権限
 
 このセクションでは、さまざまなレベルの SQL Server 2016 および SQL Server 2017 でパッケージをインストールするために必要な権限について説明します。 インストールを行うことができますの R ツールまたは SQL Server を使用して、プロセスとアクセス許可が若干異なりますが、します。
 

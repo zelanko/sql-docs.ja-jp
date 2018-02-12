@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: abc79124569635f3aafaaa309e25e2c827fa5d9b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9ecd54dcb1fe829c51e0e05346abf04d80af3cf9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Python Machine Learning Services (In-database) を設定します。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   この記事の内容を実行して、Python のために必要なコンポーネントをインストールする方法を説明する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップ ウィザード、および対話的なプロンプトに従っています。
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 01/08/2018
 
 インストールが完了したら、外部実行可能ファイルを使用してスクリプトの実行を許可するインスタンスを再構成します。 Machine learning のワークロードをサポートするためにサーバーにさらに変更する必要があります。 構成の変更は、一般に、インスタンスの再起動またはスタート パッド サービスの再起動が必要です。
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>前提条件
 
 + SQL Server 2017 が必要です。 SQL Server の以前のバージョンでは、Python の統合はサポートされていません。
 + 必ず、データベース エンジンをインストールしてください。 Python スクリプトのデータベースでを実行するには、SQL Server のインスタンスが必要です。
@@ -273,7 +274,7 @@ SQL Server Enterprise Edition を使用する場合は、Python の外部リソ�
   
      [サーバー メモリに関するサーバー構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)
   
--   によって開始可能ワーカー アカウントの数を変更します。[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
+-   によって開始可能ワーカー アカウントの数を変更します。 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
   
      [SQL Server R Services のユーザー アカウント プールを変更します。](../r/modify-the-user-account-pool-for-sql-server-r-services.md)
 

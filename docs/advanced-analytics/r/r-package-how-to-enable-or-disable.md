@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e384893-04da-43f9-b100-bfe99888f085
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3c3dab54416d680e0d021a2edf9fbe33d5a0d81f
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 35bcae1e29e9b640d2e04b9adc788e382b18b6e8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="enable-or-disable-r-package-management-for-sql-server"></a>有効にするにまたは SQL Server の R パッケージの管理を無効にします。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事は、データベース管理者は R. ではなく、T-SQL を使用して、インスタンス上のパッケージのインストールを制御できるように設計された、SQL Server 2017 で新しいパッケージ管理機能をについて説明します
 

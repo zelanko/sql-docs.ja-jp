@@ -8,20 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a8803b1a18ce1a0987c9ebfcbd718345cfc3ef60
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a0a97971dcd8a16a2ac15b1013dbbe96a43f21c0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-source-wizard-screen-3"></a>データ ソース ウィザード画面 3
 
@@ -82,6 +83,10 @@ ANSI_PADDING を on に設定を後続の空白にして**varchar** 、値を後
 ### <a name="column-encryption"></a>列の暗号化します。
 
 により、自動暗号化解除およびとで暗号化された列からのデータ転送の暗号化、 [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) SQL Server 2016 では使用し、後で機能します。
+
+### <a name="use-fmtonly-metadata-discovery"></a>FMTONLY メタデータの検出を使用します。
+
+SQL Server 2012 への接続中またはそれ以降の場合は、従来の SET FMTONLY メタデータの検出方法を使用します。 サポートされていないクエリを使用する場合にのみ、このファイルを有効にする[sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)、一時テーブルが含まれるものなどです。 
 
 ### <a name="next"></a>Next
 

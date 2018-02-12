@@ -1,5 +1,5 @@
 ---
-title: "接続文字列キーワードとデータ ソース名 (Dsn) |Microsoft ドキュメント"
+title: "SQL Server への接続 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,36 +17,28 @@ helpviewer_keywords:
 - connection string keywords
 - DSNs
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2020ce16f722354b49a7e35e4a3f1e1706b6a2d5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b6ad6278da1a3e325356058df51238dc34018bf0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="connection-string-keywords-and-data-source-names-dsns"></a>接続文字列のキーワードとデータ ソース名 (DSN)
+# <a name="connecting-to-sql-server"></a>SQL Server への接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 このトピックへの接続を作成する方法について説明します、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベース。  
   
 ## <a name="connection-properties"></a>接続プロパティ  
-このリリースの[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux または macOS では、次の接続キーワードを使用することができます。  
-  
-||||||  
-|-|-|-|-|-|  
-|`Addr`|`Address`|`ApplicationIntent`|`AutoTranslate`|`Database`|
-|`Driver`|`DSN`|`Encrypt`|`FileDSN`|`MARS_Connection`|  
-|`MultiSubnetFailover`|`PWD`|`Server`|`Trusted_Connection`|`TrustServerCertificate`|  
-|`UID`|`WSID`|`ColumnEncryption`|`TransparentNetworkIPResolution`||  
+
+参照してください[DSN と接続文字列キーワード、および属性](../../../connect/odbc/dsn-connection-string-attribute.md)すべての接続文字列キーワードと Linux、Mac でサポートされる属性
 
 > [!IMPORTANT]  
 > データベース ミラーリングを使用する (フェールオーバー パートナーがある) データベースに接続する場合は、接続文字列にデータベース名を指定しないでください。 代わりに、送信、**使用** *database_name*クエリを実行する前に、データベースに接続するコマンド。  
-  
-これらのキーワードの詳細については、「 [SQL Server Native Client での接続文字列キーワードの使用](http://go.microsoft.com/fwlink/?LinkID=126696)」の ODBC のセクションを参照してください。  
   
 渡された値、**ドライバー**キーワードは、次のいずれかを指定できます。  
   
@@ -71,7 +64,7 @@ Server = [protocol:]server[,port]
 静的なポートの名前付きインスタンスに接続するには、使用<b>サーバー =</b>*servername*、**port_number**です。 動的ポートに接続することはサポートされていません。  
 
 テンプレート ファイル DSN 情報を追加しに追加するには、次のコマンドを実行する代わりに、 `~/.odbc.ini` :
- - **odbcinst-i の-f** *template_file*  
+ - **odbcinst -i -s -f** *template_file*  
  
 使用して、ドライバーが動作していることを確認することができます`isql`このコマンドを使用するか、接続をテストします。
  - **OutFile.dat-s out、bcp master.INFORMATION_SCHEMA.TABLES <server> -u <name> ~ P<password>**  
@@ -85,10 +78,10 @@ Secure Sockets Layer (SSL) を使用するには接続を暗号化する[!INCLUD
 
 **Encrypt** と **TrustServerCertificate**の設定に関係なく、サーバー ログインの資格情報 (ユーザー名とパスワード) は常に暗号化されます。 次の表は、 **Encrypt** 設定と **TrustServerCertificate** 設定の効果の一覧です。  
 
-||**TrustServerCertificate = なし**|**TrustServerCertificate = [はい]**|  
+||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  
-|**暗号化 = なし**|サーバー証明書は確認されません。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されません。|サーバー証明書は確認されません。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されません。|  
-|**暗号化 = [はい]**|サーバー証明書は確認されます。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されます。<br /><br />サブジェクト共通名 (CN) またはサブジェクトの別名 (SAN) 内で名前 (または IP アドレス)、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL 証明書は、サーバー名 (または IP アドレス)、接続文字列で指定されたと一致します。|サーバー証明書は確認されません。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されます。|  
+|**Encrypt=no**|サーバー証明書は確認されません。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されません。|サーバー証明書は確認されません。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されません。|  
+|**Encrypt=yes**|サーバー証明書は確認されます。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されます。<br /><br />サブジェクト共通名 (CN) またはサブジェクトの別名 (SAN) 内で名前 (または IP アドレス)、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL 証明書は、サーバー名 (または IP アドレス)、接続文字列で指定されたと一致します。|サーバー証明書は確認されません。<br /><br />クライアントとサーバー間で送信されるデータは暗号化されます。|  
 
 既定では、暗号化された接続はサーバーの証明書を必ず検証します。 ただし、自己署名証明書を持つサーバーに接続する場合も追加、`TrustServerCertificate`信頼された証明機関の一覧に対して証明書の確認をバイパスするにはオプション。  
 
@@ -100,15 +93,18 @@ SSL は、OpenSSL ライブラリを使用します。 次の表は、OpenSSL �
 
 |プラットフォーム|最低限の OpenSSL のバージョン|既定の証明書信頼ストアの場所|  
 |------------|---------------------------|--------------------------------------------|
-|Debian 8.71 |1.0.1t|/etc/ssl/certs|
-|macOS 10.12|1.0.2k|/usr/local/etc/openssl/certs|
-|OS X 10.11|1.0.2j|/usr/local/etc/openssl/certs|
-|Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|  
-|Red Hat Enterprise Linux 7|1.0.1e|/etc/pki/tls/cert.pem|
-|SuSE Linux Enterprise 12 |1.0.1i|/etc/ssl/certs|
-|Ubuntu 15.10 |1.0.2d|/etc/ssl/certs|
-|Ubuntu 16.04 |1.0.2g|/etc/ssl/certs|
-|Ubuntu 16.10 |1.0.2g|/etc/ssl/certs|
+|Debian 9|1.1.0|/etc/ssl/certs|
+|Debian 8.71 |1.0.1|/etc/ssl/certs|
+|macOS 10.13|1.0.2|/usr/local/etc/openssl/certs|
+|macOS 10.12|1.0.2|/usr/local/etc/openssl/certs|
+|OS X 10.11|1.0.2|/usr/local/etc/openssl/certs|
+|Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
+|Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
+|SuSE Linux Enterprise 12 |1.0.1|/etc/ssl/certs|
+|SuSE Linux Enterprise 11 |0.9.8|/etc/ssl/certs|
+|Ubuntu 17.10 |1.0.2|/etc/ssl/certs|
+|Ubuntu 16.10 |1.0.2|/etc/ssl/certs|
+|Ubuntu 16.04 |1.0.2|/etc/ssl/certs|
   
 接続文字列を使用して、暗号化を指定することも、`Encrypt`オプションを使用する場合**SQLDriverConnect**に接続します。
 

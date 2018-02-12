@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: abbc7043f4eefe2c6f33a3f9fbc61fe0a97ceff9
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: c5f9810dfb057045fd1ec0ba25fd7651b2e10ea1
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>SQL Server の Machine Learning のサービスの新機能
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2016 では、Microsoft には、SQL Server R Services、SQL Server データベース エンジンと、R 言語を統合することにより、エンタープライズ規模のデータ サイエンスをサポートする機能が導入されました。
 
@@ -60,7 +61,7 @@ SQL Server の開発者にアクセスする広範な Python ライブラリ sci
 
 + Microsoft Machine Learning Server (スタンドアロン) での Python のサポート
 
-    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]Microsoft Machine Learning Server のスタンドアロン バージョンをインストールするオプションが含まれます。 Machine Learning のサーバーを使用するは、配布し、SQL Server を使用せずに R または Python コードをスケールします。
+    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] Microsoft Machine Learning Server のスタンドアロン バージョンをインストールするオプションが含まれます。 Machine Learning のサーバーを使用するは、配布し、SQL Server を使用せずに R または Python コードをスケールします。
 
 ### <a name="linux-support"></a>Linux サポート
 
@@ -86,7 +87,7 @@ SQL Server の開発者にアクセスする広範な Python ライブラリ sci
 
     **Mrsdeploy**にパッケージ化する[!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)]と[!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]web サービスとしての Python モデルとスクリプトの展開をサポートします。 そのしくみの例は、次を参照してください。[発行 Python コードを使用すると](python/publish-consume-python-code.md)です。
 
-+ [パフォーマンス]
++ パフォーマンス
 
     Microsoft はスコアリングのためのパフォーマンスの境界をプッシュされます。 ごとに 100万行を処理したデータベース内のスコアリングと 2 番目の R モデルを使用します。 このリリースでは、新機能で**リアルタイム スコアリング**と**ネイティブ スコアリング**の単一行のバッチ スコアリング パフォーマンス向上をサポートします。
 
@@ -124,7 +125,7 @@ SQL Server 2016 の R Services の以前のバージョンをインストール�
 
 詳細については、次を参照してください。[パッケージの管理](r/r-package-management-for-sql-server-r-services.md)です。
 
-### <a name="get-started"></a>作業を開始します。
+### <a name="get-started"></a>概要します。
 
 + [SQL Server の Machine Learning のサービスでの Python の設定します。](../advanced-analytics/python/setup-python-machine-learning-services.md)
 

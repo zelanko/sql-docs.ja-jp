@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 65e3ca0b62da2a8412b92485316074a5f52fa080
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 83c3590714660201d7411c360958f9ff4263240b
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services のパフォーマンス: 結果とリソース
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、4 番目と R Services のパフォーマンスの最適化を説明するシリーズで最終版です。 この記事では、メソッド、調査、およびさまざまな最適化の方法をテストした 2 つのケース スタディの結論をまとめたものです。
 
@@ -97,7 +98,7 @@ metric time pct
 
 最初のテストでは、圧縮とデータのサイズを縮小する単票形式のテーブルの使用と比較されます。
 
-| テーブル名            | [行]     | 予約済み。   | data       | index_size | 未使用  | 節約率 (予約済み) |
+| テーブル名            | [行]     | 予約済み。   | Data       | index_size | 未使用  | 節約率 (予約済み) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |
@@ -114,11 +115,11 @@ metric time pct
 
 | テーブル名            | テスト名       | numTasks | 平均時間 |
 |-----------------------|-----------------|----------|--------------|
-| *airlineWithIndex*    | NoCompression   | @shouldalert        | 5.6775       |
+| *airlineWithIndex*    | NoCompression   | 1        | 5.6775       |
 |                       | NoCompression - 並列| 4        | 5.1775       |
-| *airlineWithPageComp* | PageCompression | @shouldalert        | 6.7875       |
+| *airlineWithPageComp* | PageCompression | 1        | 6.7875       |
 |                       | PageCompression - 並列 | 4        | 5.3225       |
-| *airlineWithRowComp*  | RowCompression  | @shouldalert        | 6.1325       |
+| *airlineWithRowComp*  | RowCompression  | 1        | 6.1325       |
 |                       | RowCompression - 並列  | 4        | 5.2375       |
 
 **結論**
@@ -137,14 +138,14 @@ metric time pct
 
 | テスト名 | 実行します。\# | 経過時間 | 平均時間 |
 |-----------|--------|--------------|--------------|
-| IntCol    | @shouldalert      | 3.57 秒 |              |
+| IntCol    | 1      | 3.57 秒 |              |
 |           | 2      | 3.45 秒 |              |
 |           | 3      | 3.45 秒 |              |
 |           | 4      | 3.55 秒 |              |
 |           | 5      | 3.55 秒 |              |
 |           | 6      | 3.45 秒 |              |
 |           |        |              | 3.475        |
-|           | @shouldalert      | 3.45 秒 |              |
+|           | 1      | 3.45 秒 |              |
 |           | 2      | 3.53 秒 |              |
 |           | 3      | 3.63 秒 |              |
 |           | 4      | 3.49 秒 |              |
@@ -156,14 +157,14 @@ metric time pct
 
 | テスト名 | 実行します。\# | 経過時間 | 平均時間 |
 |-----------|--------|--------------|--------------|
-| IntCol    | @shouldalert      | 3.89 秒 |              |
+| IntCol    | 1      | 3.89 秒 |              |
 |           | 2      | 4.15 秒 |              |
 |           | 3      | 3.77 秒 |              |
 |           | 4      | 5 秒    |              |
 |           | 5      | 3.92 秒 |              |
 |           | 6      | 3.8 秒  |              |
 |           |        |              | 3.91         |
-|           | @shouldalert      | 3.82 秒 |              |
+|           | 1      | 3.82 秒 |              |
 |           | 2      | 3.84 秒 |              |
 |           | 3      | 3.86 秒 |              |
 |           | 4      | 4.07 秒 |              |
@@ -240,9 +241,9 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 | テスト名     | Cube パラメーター | numTasks | 平均時間 | 単一行の予測 (ArrDelay_Pred) |
 |---------------|----------------|----------|--------------|---------------------------------|
-| CubeArgEffect | `cube = F`     | @shouldalert        | 91.0725      | 9.959204                        |
+| CubeArgEffect | `cube = F`     | 1        | 91.0725      | 9.959204                        |
 |               |                | 4        | 44.09        | 9.959204                        |
-|               | `cube = T`     | @shouldalert        | 21.1125      | 9.959204                        |
+|               | `cube = T`     | 1        | 21.1125      | 9.959204                        |
 |               |                | 4        | 8.08         | 9.959204                        |
 
 **結論**
@@ -255,7 +256,7 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 | テスト名       | maxDepth | 平均時間 |
 |-----------------|----------|--------------|
-| TreeDepthEffect | @shouldalert        | 10.1975      |
+| TreeDepthEffect | 1        | 10.1975      |
 |                 | 2        | 13.2575      |
 |                 | 4        | 19.27        |
 |                 | 8        | 45.5775      |

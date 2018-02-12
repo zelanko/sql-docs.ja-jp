@@ -15,13 +15,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 640dde0a2faf43c7c5cda39789eaba759959bb99
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d334aefbd43bf17e776a8b75a09a2cef8448542d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="troubleshoot-machine-learning"></a>機械学習をトラブルシューティングします。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、マシン学習機能によって SQL Server のセットアップと構成に関連するトラブルシューティングの情報を提供します。 情報には、セットアップ ガイド、既知の問題、およびリリース ノートへのリンクが含まれています。 この記事から、SQL Server の machine learning ソリューションのパフォーマンスの最適化に関するアドバイスを提供する他のアーティクルがリンクされています。
 

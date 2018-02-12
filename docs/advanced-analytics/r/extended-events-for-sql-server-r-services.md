@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e90e057-aacb-4adc-8da6-64861f4e87df
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d5e8d61735b5a40f178c76ccb6549150a2e9f0ab
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d2f43ab9235e6c16976789027f6308f95bf9d246
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>SQL Server の Machine Learning のサービスの拡張イベント
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server に関連する操作のトラブルシューティングで使用する拡張イベントのセットを提供する、 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]Python または R ジョブを送信するとともに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。
 
@@ -95,7 +96,7 @@ SQL Server の Machine Learning のサービスは、SQL Server プロセスの�
   
     スタートパッドに関連するイベントをキャプチャするには、Binn ディレクトリに SQL Server インスタンスの *.config* ファイルを配置します。  既定のインストールでは、これは、次のようになります。
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`」をご覧ください。  
+    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`」を参照してください。  
   
 + **BXLServer**は R、Python などの外部のスクリプト言語による SQL 拡張機能をサポートしているサテライト プロセスです。 各外部の言語のインスタンスである BxlServer の個別のインスタンスが起動します。
   
