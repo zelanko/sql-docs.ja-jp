@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4b2f5a3e4f4ad8cc2ea2ba1d2d0dcdcf23d03e52
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: efb0477481e47af1ace78b938a64e72bace6d81f
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server の R パッケージの同期
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017 に含まれる RevoScaleR のバージョンには、ファイル システムと、インスタンスとデータベース間のパッケージが使用されている R パッケージのコレクションを同期する機能が含まれています。
 
@@ -63,7 +64,7 @@ Microsoft r です。 最新バージョンを使用するインスタンスを�
 
 パッケージの管理機能を使用して新しいパッケージを追加するたびに SQL Server およびファイル システムで、両方のレコードが更新されます。 この情報は、データベース全体の情報をパッケージ復元に使用できます。
 
-### <a name="permissions"></a>アクセス許可
+### <a name="permissions"></a>権限
 
 + パッケージの同期関数を実行したユーザーは、SQL Server インスタンスと、パッケージであるデータベース プリンシパルのセキュリティをする必要があります。
 

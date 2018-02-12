@@ -10,24 +10,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 58b79170-5731-46b5-af8c-21164d28f3b0
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 2e31ecde894070c9b7b38dbe5e2c9e310ad71c5f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d12de2f8298e23d5396d7caf2496b293f1bf28ed
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>SQL Server の機械学習のユーザー アカウント プールを変更します。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] サービスによるタスクの実行をサポートするために、[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] のインストール プロセスの一部として、新しい Windows "ユーザー アカウント プール" が作成されました。** これらのワーカー アカウントの目的は、別の SQL ユーザーの外部のスクリプトの同時実行を分離します。
+[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] サービスによるタスクの実行をサポートするために、[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] のインストール プロセスの一部として、新しい Windows *"ユーザー アカウント プール"* が作成されました。 これらのワーカー アカウントの目的は、別の SQL ユーザーの外部のスクリプトの同時実行を分離します。
 
 この記事では、既定の構成、セキュリティ、および容量のワーカー アカウント、および既定の構成を変更する方法について説明します。
 
-**適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]、 [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]、 [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## <a name="worker-accounts-used-for-external-script-execution"></a>外部スクリプトの実行に使用されるワーカー アカウント
 
@@ -70,7 +71,7 @@ Python または R スクリプトで使用できるリソースは、SQL Server
 - [R Services の SQL Server の構成](../../advanced-analytics/r/sql-server-configuration-r-services.md)
 -  [R Services のパフォーマンスのケース スタディ](../../advanced-analytics/r/performance-case-study-r-services.md)
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 各ユーザー グループは、特定のインスタンス上の [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] サービスに関連付けられます。他のインスタンス上で実行されている R ジョブをサポートすることはできません。
 

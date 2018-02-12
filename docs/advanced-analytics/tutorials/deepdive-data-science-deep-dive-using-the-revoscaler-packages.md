@@ -12,20 +12,22 @@ ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: c2efb3f2-cad5-4188-b889-15d68b742ef5
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: a8fe18a578391beaae79259440779b0a76336ee2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 003434a055ab73afb288ea5801130ce1c06aa9c5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-science-deep-dive-using-the-revoscaler-packages-with-sql-server"></a>データ サイエンス deep dive: SQL Server で、RevoScaleR パッケージを使用
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 このチュートリアルで提供される強化された R パッケージを使用する方法を示します[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]SQL Server のデータを操作および高パフォーマンスのビッグ データ分析のコンピューティング コンテキストとしてサーバーを使用して、スケーラブルな R ソリューションを作成します。
 
@@ -84,7 +86,7 @@ ms.lasthandoff: 01/08/2018
 > [!TIP]
 > 中断した箇所からを容易に再開できるように、レッスンの合間に R ワークスペースを保存してください。
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>前提条件
 
 - **SQL Server の R のサポート**
   

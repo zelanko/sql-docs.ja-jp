@@ -11,30 +11,31 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 801a29c07d55b9388d5be0edab33690399f2dde9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7d41bd73398c016b920fa67244ffea1af865bde2
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>Machine Learning Services (In-database) の無人インストール
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、SQL Server セットアップをコマンドライン引数を使用して、機械学習のコンポーネントをインストールする方法について説明します。
 
 無人インストールは、意味ことがありませんセットアップ ウィザードの対話型機能を使用してでライセンス契約 for SQL Server との machine learning のコンポーネントを含め、完全なインストールに必要なすべての引数を指定する代わりに、コマンドラインまたは通常はクワイエット モードで、スクリプトの一部として。
 
-+ [SQL Server 2016 R サービス](#bkmk_OldInstall)
++ [SQL Server 2016 R Services](#bkmk_OldInstall)
 + [サービスの学習の SQL Server 2017 マシン](#bkmk_NewInstall)R、Python と
 + [Microsoft R サーバーまたは Machine Learning サーバー](../r/install-microsoft-r-server-from-the-command-line.md)
 
 **適用されます SQL Server 2017 Machine Learning Services (In-database)、SQL Server 2016 R サービス。**
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 + Machine learning を使用する各インスタンスで、データベース エンジンをインストールする必要があります。
 
@@ -72,7 +73,7 @@ SQL Server 2017 で R の必要なフラグを注意してください。
 
 + `ADVANCEDANALYTICS`
 + `SQL_INST_MR`
-+ `IACCEPTROPENLICENSETERMS`」をご覧ください。
++ `IACCEPTROPENLICENSETERMS`」を参照してください。
 
 ### <a name="install-python-only"></a>Python のインストールのみ
 

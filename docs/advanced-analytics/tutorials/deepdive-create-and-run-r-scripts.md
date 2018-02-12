@@ -12,20 +12,22 @@ ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 51e8e66f-a0a5-4e96-aa71-f5c870e6d0d4
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 302068f7ee9f1fe04bc7a3b1558e510274b2bc0d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1ca2c7227163816092e7248fe20cb377fc03ac03
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-and-run-r-scripts-sql-and-r-deep-dive"></a>作成し、R スクリプト (SQL と R deep dive) を実行します。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事の内容を使用する方法について、データ サイエンス Deep Dive のチュートリアルの一部である[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server とします。
 
@@ -100,7 +102,7 @@ R コードを実行する前に、 *現行* のコンピューティング コ�
 
  *numIntlTrans     4.0868    8.726757 0      60 10000    0           100000*
 
- *creditLine 9.1856 9.870364 1 75 10000 0 100000*
+ *creditLine       9.1856    9.870364 1      75 10000    0          100000*
 
  *性別カテゴリのカウント*
 

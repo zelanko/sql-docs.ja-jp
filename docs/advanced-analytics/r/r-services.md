@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 341e80f5-3b59-4122-bbaa-969d7904297d
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: bc3d80c01bc16d6d89bbf3e97ddf88089e9379fd
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 40c76cba27559c8fcc314ce4c9761ee42edacac0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="microsoft-machine-learning-services"></a>Microsoft Machine Learning Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft Machine Learning のサービスの目的は、machine learning のサービスを使用するアプリケーションと機械学習タスクとツールを統合するため、拡張可能な拡張性の高いプラットフォームを提供します。 プラットフォーム必要がありますのニーズを満たすすべてのユーザー データの開発と、分析プロセスに関連するからデータ科学者、アーキテクトやデータベース管理者にします。
 
@@ -39,7 +40,7 @@ Microsoft Machine Learning のサービスの目的は、machine learning のサ
 
 SQL Server 2016 では、Microsoft は、一般的なオープン ソース R 言語をビジネス アプリケーションと統合するための 2 つのサーバー プラットフォームを起動しました。
 
-+ **との統合用の**SQL Server R Services (データベース内) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ **SQL Server R Services (In-database)**との統合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 + **Microsoft R Server**、Windows および Linux サーバーでエンタープライズ レベルの R のデプロイの
 
 SQL Server の 2017 でよく使われる Python 言語のサポートを反映するように名前が変更されました。
