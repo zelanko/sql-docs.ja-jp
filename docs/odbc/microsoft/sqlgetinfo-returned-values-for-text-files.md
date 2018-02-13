@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - text file driver [ODBC], SQLGetInfo
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 986e4ed2b436fa94c676c59afd03f1e0a4a32fd3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>SQLGetInfo は、テキスト ファイルの値が返されます
 次の表に、C 言語 # を defines、 *fInfoType*引数と、対応する値によって返される**SQLGetInfo**です。 この情報は、表示されている C 言語を渡すことによって取得できます #defines **SQLGetInfo**で、 *fInfoType*引数。 によって返される値の詳細については**SQLGetInfo**を参照してください、 [ODBC プログラマ リファレンス](../../odbc/reference/odbc-programmer-s-reference.md)です。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]  
 >  ここで**SQLGetInfo**ビットマスクを 32 ビット、垂直バー (&#124;) を返します OR 演算を表します。  
   
-|情報の種類|戻り値|  
+|InfoType|戻り値|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/21/2017
 |SQL_CATALOG_USAGE|[複数の値]|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
-|SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NON_|  
+|SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NON_NULL|  
 |SQL_CONVERT_BIGINT|0|  
 |SQL_CONVERT_BINARY|[複数の値]|  
 |SQL_CONVERT_BIT|0|  
@@ -91,7 +92,7 @@ ms.lasthandoff: 12/21/2017
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
 |SQL_DATABASE_NAME|現在のデータベース ディレクトリ|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|「テキスト」|  
+|SQL_DBMS_NAME|"TEXT"|  
 |SQL_DBMS_VER|ISAM: テキスト<br /><br /> バージョン: 1.0<br /><br /> バージョン番号の形式: 01.00.0000|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
@@ -113,7 +114,7 @@ ms.lasthandoff: 12/21/2017
 |SQL_DROP_VIEW|SQL_DV_DROP_VIEW|  
 |SQL_EXPRESSIONS_IN_ORDERBY|"Y"|  
 |SQL_FILE_USAGE|SQL_FILE_TABLE|  
-|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT、|  
+|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT|  
 |SQL_GETDATA_EXTENSIONS|[複数の値]|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
@@ -147,7 +148,7 @@ ms.lasthandoff: 12/21/2017
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|[複数の値]|  
-|SQL_ODBC_SAG_CLI_ 準拠|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|ドライバー マネージャーから|  
 |SQL_OJ_CAPABILITIES|[複数の値]|  
@@ -161,7 +162,7 @@ ms.lasthandoff: 12/21/2017
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|[複数の値]|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|「テキスト」|  
+|SQL_SERVER_NAME|"TEXT"|  
 |SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|[複数の値]|  
 |SQL_SUBQUERIES|[複数の値]|  

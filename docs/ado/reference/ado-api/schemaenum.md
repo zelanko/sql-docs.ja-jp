@@ -24,16 +24,16 @@ ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: dc84741e1963b2c484e82eea7bc3de08cf12da13
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="schemaenum"></a>SchemaEnum
 スキーマの種類を指定**Recordset**を[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)メソッドを取得します。  
   
 ## <a name="remarks"></a>解説  
- 各 ADO 定数は含まれてのトピックでの関数と列に関する追加情報が返された[付録 B スキーマ行セット](http://msdn.microsoft.com/en-us/2b5fbf03-e50d-44ee-bc57-5a57666c55f1)の OLE DB プログラマーズ リファレンスです。 各トピックの名前は、次の表の説明] セクションでは、かっこに表示されます。  
+ 各 ADO 定数は含まれてのトピックでの関数と列に関する追加情報が返された[付録 B スキーマ行セット](http://msdn.microsoft.com/en-us/2b5fbf03-e50d-44ee-bc57-5a57666c55f1)の OLE DB プログラマーズ リファレンスです。 各トピックの名前は、次の表の説明 セクションでは、かっこに表示されます。  
   
  各 ADO MD 定数は含まれてのトピックでの関数と列に関する追加情報が返された[OLE DB for OLAP オブジェクトおよびスキーマ行セット](http://msdn.microsoft.com/en-us/d20bb2a6-68bd-423f-9ec8-eb930cd0c144)OLE DB for Online Analytical Processing (OLAP) のドキュメントにします。 各トピックの名前は、次の表の説明の列内のかっこに表示されます。  
   
@@ -56,18 +56,18 @@ ms.lasthandoff: 02/09/2018
 |**adSchemaCubes**|32|スキーマ (または、カタログは、プロバイダーがスキーマをサポートしていない場合) で利用可能なキューブに関する情報を返します。<br /><br /> (キューブ行セット *)|CATALOG_NAME SCHEMA_NAME CUBE_NAME|  
 |**adSchemaDBInfoKeywords**|30|プロバイダー固有のキーワードの一覧を返します。<br /><br /> (IDBInfo::GetKeywords)|\<なし >|  
 |**adSchemaDBInfoLiterals**|31|テキスト コマンドで使用されるプロバイダー固有のリテラルの一覧を返します。<br /><br /> (IDBInfo::GetLiteralInfo)|\<なし >|  
-|**adSchemaDimensions**|33|特定のキューブ ディメンションに関する情報を返します。 各ディメンションの 1 つの行があります。<br /><br /> ([ディメンション行セット)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_NAME DIMENSION_UNIQUE_NAME|  
+|**adSchemaDimensions**|33|特定のキューブ ディメンションに関する情報を返します。 各ディメンションの 1 つの行があります。<br /><br /> (ディメンション行セット)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_NAME DIMENSION_UNIQUE_NAME|  
 |**adSchemaForeignKeys**|27|特定のユーザーによってカタログで定義されている外部キー列を返します。<br /><br /> (FOREIGN_KEYS 行セット)|PK_TABLE_CATALOG、PK_TABLE_SCHEMA、PK_TABLE_NAME、FK_TABLE_CATALOG、FK_TABLE_SCHEMA、FK_TABLE_NAME|  
 |**adSchemaHierarchies**|34|ディメンションの使用可能な階層についての情報を返します。<br /><br /> (階層行セット)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_NAME HIERARCHY_UNIQUE_NAME|  
 |**adSchemaIndexes**|12|特定のユーザーによって所有されているカタログで定義されているインデックスを返します。<br /><br /> (インデックス行セット)|TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TYPE TABLE_NAME|  
 |**adSchemaKeyColumnUsage**|8|キーとして特定のユーザーによって制限されているカタログで定義されている列を返します。<br /><br /> (KEY_COLUMN_USAGE 行セット)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG、TABLE_SCHEMA、TABLE_NAME、COLUMN_NAME|  
 |**adSchemaLevels**|35|ディメンションで利用できるレベルに関する情報を返します。<br /><br /> (行セットのレベル)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_NAME される LEVEL_UNIQUE_NAME|  
-|**adSchemaMeasures**|36|使用できるメジャーに関する情報を返します。<br /><br /> ([MEASURES 行セット)|CATALOG_NAME SCHEMA_NAME CUBE_NAME MEASURE_NAME MEASURE_UNIQUE_NAME|  
+|**adSchemaMeasures**|36|使用できるメジャーに関する情報を返します。<br /><br /> (MEASURES 行セット)|CATALOG_NAME SCHEMA_NAME CUBE_NAME MEASURE_NAME MEASURE_UNIQUE_NAME|  
 |**adSchemaMembers**|38|利用可能なメンバーに関する情報を返します。<br /><br /> (行セットのメンバー)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME される LEVEL_UNIQUE_NAME LEVEL_NUMBER MEMBER_NAME MEMBER_UNIQUE_NAME MEMBER_CAPTION MEMBER_TYPE ツリー演算子です。 詳細については、のオンライン分析処理 (OLAP) の OLE DB を参照してください。|  
 |**adSchemaPrimaryKeys**|28|特定のユーザーによってカタログで定義されている主キー列を返します。<br /><br /> (PRIMARY_KEYS 行セット)|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME|  
 |**adSchemaProcedureColumns**|29|プロシージャによって返される行セットの列に関する情報を返します。<br /><br /> (PROCEDURE_COLUMNS 行セット)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME COLUMN_NAME|  
 |**adSchemaProcedureParameters**|26|プロシージャのパラメーターとリターン コードに関する情報を返します。<br /><br /> (PROCEDURE_PARAMETERS 行セット)|PROCEDURE_CATALOG、PROCEDURE_SCHEMA、PROCEDURE_NAME、PARAMETER_NAME|  
-|**adSchemaProcedures**|16|特定のユーザーによって所有されているカタログで定義されているプロシージャを返します。<br /><br /> ([プロシージャ行セット)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME PROCEDURE_TYPE|  
+|**adSchemaProcedures**|16|特定のユーザーによって所有されているカタログで定義されているプロシージャを返します。<br /><br /> (プロシージャ行セット)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME PROCEDURE_TYPE|  
 |**adSchemaProperties**|37|ディメンションのレベルごとに使用可能なプロパティに関する情報を返します。<br /><br /> (行セットのプロパティ)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME される LEVEL_UNIQUE_NAME MEMBER_UNIQUE_NAME PROPERTY_TYPE PROPERTY_NAME|  
 |**adSchemaProviderSpecific**|-1|プロバイダーには、独自の標準スキーマ クエリが定義されている場合に使用します。|\<プロバイダー固有 >|  
 |**adSchemaProviderTypes**|22|データ プロバイダーでサポートされている (基本) データ型を返します。<br /><br /> (PROVIDER_TYPES 行セット)|DATA_TYPE、BEST_MATCH|  
@@ -77,8 +77,8 @@ ms.lasthandoff: 02/09/2018
 |**adSchemaStatistics**|19|特定のユーザーによって所有されているカタログで定義されている統計を返します。<br /><br /> (統計の行セット)|TABLE_CATALOG、TABLE_SCHEMA、TABLE_NAME|  
 |**adSchemaTableConstraints**|10|特定のユーザーによって所有されているカタログで定義されているテーブル制約を返します。<br /><br /> (TABLE_CONSTRAINTS 行セット)|CONSTRAINT_CATALOG、CONSTRAINT_SCHEMA、CONSTRAINT_NAME、TABLE_CATALOG、TABLE_SCHEMA、TABLE_NAME、CONSTRAINT_TYPE|  
 |**adSchemaTablePrivileges**|14|カタログで定義されているユーザーが利用できる、または特定のユーザーによって付与されるテーブルの特権を返します。<br /><br /> (TABLE_PRIVILEGES 行セット)|TABLE_CATALOG、TABLE_SCHEMA、TABLE_NAME、GRANTOR、GRANTEE|  
-|**adSchemaTables**|20|テーブル (ビューを含む)、カタログで定義されている特定のユーザーにアクセスできるを返します。<br /><br /> ([テーブル行セット)|TABLE_CATALOG、TABLE_SCHEMA、TABLE_NAME、TABLE_TYPE|  
-|**adSchemaTranslations**|21|カタログで定義されている、指定されたユーザーがアクセスできる文字変換を返します。<br /><br /> ([翻訳行セット)|TRANSLATION_CATALOG TRANSLATION_SCHEMA TRANSLATION_NAME|  
+|**adSchemaTables**|20|テーブル (ビューを含む)、カタログで定義されている特定のユーザーにアクセスできるを返します。<br /><br /> (テーブル行セット)|TABLE_CATALOG、TABLE_SCHEMA、TABLE_NAME、TABLE_TYPE|  
+|**adSchemaTranslations**|21|カタログで定義されている、指定されたユーザーがアクセスできる文字変換を返します。<br /><br /> (翻訳行セット)|TRANSLATION_CATALOG TRANSLATION_SCHEMA TRANSLATION_NAME|  
 |**adSchemaTrustees**|39|将来の使用のために予約されています。||  
 |**adSchemaUsagePrivileges**|15|カタログで定義されているユーザーが利用できる、または特定のユーザーによって付与されるオブジェクトの使用権限を返します。<br /><br /> (USAGE_PRIVILEGES 行セット)|OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME OBJECT_TYPE GRANTOR GRANTEE|  
 |**adSchemaViewColumnUsage**|24|返し、列がテーブルの表示、カタログで定義されている特定のユーザーによって所有されているは、依存します。<br /><br /> (VIEW_COLUMN_USAGE 行セット)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  

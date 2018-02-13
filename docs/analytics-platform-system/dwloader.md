@@ -14,12 +14,12 @@ description: "**dwloader**を既存のテーブルに一括でテーブルの行
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: "90"
+caps.latest.revision: 
 ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="dwloader-command-line-loader"></a>dwloader のコマンド ライン ローダー
 **dwloader**を既存のテーブルに一括でテーブルの行を読み込む並列データ ウェアハウス (PDW) コマンド ライン ツールです。 行を読み込むときに、テーブルの末尾にすべての行を追加することができます (*追加モード*または*fastappend モード*)、新しい行を追加および既存の行を更新 (*upsert モード*)、またはすべてを削除します。既存の読み込みの前に行とし、空のテーブルにすべての行を挿入 (*モードを再読み込み*)。  
@@ -161,7 +161,7 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name* 。[*スキーマ*] です。*table_name*  
+**-T** *target_database_name.*[*schema*].*table_name*  
 変換先テーブルの 3 部構成の名前。  
   
 **-I***source_data_location*  
@@ -215,7 +215,7 @@ For more information about this install option, see [Install dwloader Command-Li
 **-fh** *number_header_rows*  
 先頭に無視する行 (行) の数*source_data_file_name*です。 既定値は 0 です。  
   
-< variable_length_column_options >  
+<variable_length_column_options>  
 オプション、 *source_data_file_name*文字で区切られた可変長列を持ちます。 既定では、 *source_data_file_name*可変長列に ASCII 文字が含まれています。  
   
 ASCII ファイルでは、null 値が区切り文字を連続して配置することによって表されます。 たとえば、パイプで区切られたファイルで ("|")、によって null 値が示される"| |"です。 コンマ区切りのファイルで null 値が示されている,「,」です。 さらに、 **-e** (--emptyStringAsNull) オプションを指定する必要があります。 -E の詳細については、以下を参照してください。  
@@ -226,7 +226,7 @@ ASCII ファイルでは、null 値が区切り文字を連続して配置する
 **-t** *field_delimiter*  
 内の各フィールド (列)、行区切り記号です。 フィールド区切り記号は、1 つ以上のこれらのエスケープ文字の ASCII または ASCII 16 進値には.  
   
-|[オブジェクト名]|エスケープ文字|16 進の文字|  
+|名前|エスケープ文字|16 進の文字|  
 |--------|--------------------|-----------------|  
 |タブ|\t|0x09|  
 |キャリッジ リターン (CR)|\r|0x0d|  
@@ -240,7 +240,7 @@ ASCII ファイルでは、null 値が区切り文字を連続して配置する
   
 例 :  
   
--t"|"  
+-t "|"  
   
 -t ' '  
   
@@ -248,7 +248,7 @@ ASCII ファイルでは、null 値が区切り文字を連続して配置する
   
 -t \t  
   
--t ' ~ | ~'  
+-t '~|~'  
   
 **-r** *row_delimiter*  
 元のデータ ファイルの行ごとに区切り記号です。 行区切り記号は、1 つまたは複数の ASCII 値です。  
@@ -284,7 +284,7 @@ LF は、Unix の必要があります。 CR は、Windows の必要がありま
   
 -s 0x22  
   
-< fixed_width_column_options >  
+< fixed_width_column_options>  
 固定長列を含むソース データ ファイルのオプションです。 既定では、 *source_data_file_name*可変長列に ASCII 文字が含まれています。  
   
 – E は UTF8 ときに、固定幅列はサポートされていません。  
@@ -300,7 +300,7 @@ LF は、Unix の必要があります。 CR は、Windows の必要がありま
   
 固定幅の構成ファイルの例:  
   
-SalesCode 3 を =  
+SalesCode=3  
   
 SalesID 10 を =  
   
@@ -344,10 +344,10 @@ LF の例:
   
 LF は、Unix の必要があります。 CR は、Windows の必要があります。  
   
-**-D** { **ymd** | ydm | mdy | myd | dmy |dym |*custom_date_format* }  
+**-D** { **ymd** | ydm | mdy | myd |  dmy | dym | *custom_date_format* }  
 入力ファイルで月 (m)、日 (d)、および datetime のすべてのフィールドの年 (y) の順序を指定します。 既定の順序は、ymd です。 同じソース ファイルの複数の注文形式を指定するには、–-dt オプションを使用します。  
   
-ymd |dmy  
+ymd | dmy  
 ydm と dmy は、同じ入力形式を使用できます。 両方には、日付の末尾または先頭にある年ができるようにします。 たとえば、両方とも**ydm**と**dmy**日付の書式、入力ファイルの 2013-02-03 または 02-03-2013 がある可能性があります。  
   
 ydm  
@@ -402,7 +402,7 @@ append
 fastappend  
 ローダーは、変換先テーブルの既存の行の末尾に、一時テーブルを使用せず、直接、行を挿入します。 fastappend には、複数のトランザクションが必要です (– m) オプション。 Fastappend を使用する場合、ステージング データベースを指定できません。 読み込みプロセスにより、失敗または中止負荷からの復旧を処理する必要があり、fastappend のロールバックは行われません。  
   
-upsert **-k***merge_column* [,...*n* ]  
+upsert **-K**  *merge_column* [ ,...*n* ]  
 ローダーでは、SQL Server マージ ステートメントを使用して、既存の行を更新し、新しい行を挿入します。  
   
 -K オプションは、マージの基に列を指定します。 これらの列は、一意の行を表す必要があります、マージのキーを形成します。 コピー先のテーブルに主キーが存在する場合、行が更新されます。 コピー先のテーブルに主キーが存在しない場合、行が追加されます。  
@@ -427,10 +427,10 @@ SQL Server 2012 PDW から始まり、コントロールのノードは、既定
   
 負荷の種類が FASTAPPEND の場合、 *batchsize*それ以外の場合、テーブルにデータを読み込む対象*batchsize*ステージング テーブルにデータを読み込むには適用されます。  
   
-< reject_options >  
+<reject_options>  
 ローダーにより、読み込みエラーの数を決定するためのオプションを指定します。 読み込みエラーがしきい値を超えた場合、ローダーは停止し、すべての行をコミットできません。  
   
-**-rt** {**値**| 割合}  
+**-rt** { **value** | percentage }  
 指定するかどうかは、*reject_value*で、 **-rv** *reject_value*オプションは、リテラル (値) または行数、エラー (割合) の割合がします。 既定値は、値です。  
   
 割合オプションは、リアルタイム - rs オプションに基づいて間隔で発生する計算です。  
@@ -456,7 +456,7 @@ Char、nchar、varchar、および nvarchar のフィールドの右側と左側
   
 '' に切り捨て '  
   
-'abc' は取得 'abc' に切り捨てられます。  
+'    abc     ' gets truncated to 'abc'  
   
 – C を使用する場合、E、– E の操作が最初に発生します。 空白文字のみを含むフィールドは、空の文字列と NULL に変換されます。  
   
@@ -491,7 +491,7 @@ Char、nchar、varchar、および nvarchar のフィールドの右側と左側
 ## <a name="return-code-values"></a>リターン コードの値  
 0 (成功) またはその他の整数値 (失敗)  
   
-コマンド ウィンドウまたはバッチ ファイルで使用して`errorlevel`リターン コードを表示します。 例 :  
+コマンド ウィンドウまたはバッチ ファイルで使用して`errorlevel`リターン コードを表示します。 例:  
   
 ```  
 dwloader  
@@ -502,7 +502,7 @@ if %errorlevel%==0 echo Success
   
 PowerShell を使用してを使用して`$LastExitCode`です。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
 読み込み権限とコピー先のテーブルに適用可能な権限 (INSERT、UPDATE、DELETE) が必要です。 ステージング データベース (一時テーブルの作成) に対する作成アクセス許可が必要です。 ステージング データベースを使用しない場合は、転送先データベースに作成する権限が必要です。 
 
 <!-- MISSING LINK
@@ -555,14 +555,14 @@ Append モードでは、2 つのフェーズでデータが読み込まれま�
   
 |テーブル型|複数のトランザクション<br />モード (-m)|テーブルが空です。|サポートされている同時実行|ログ記録|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|ヒープ|可|可|可|最小|  
-|ヒープ|可|不可|可|最小|  
-|ヒープ|不可|可|不可|最小|  
-|ヒープ|不可|不可|不可|最小|  
-|cl|可|可|不可|最小|  
-|cl|可|不可|可|[完全]|  
-|cl|不可|可|不可|最小|  
-|cl|不可|不可|可|[完全]|  
+|ヒープ|はい|[ユーザー アカウント制御]|はい|最小|  
+|ヒープ|はい|いいえ|はい|最小|  
+|ヒープ|いいえ|可|いいえ|最小|  
+|ヒープ|いいえ|いいえ|いいえ|最小|  
+|Cl|はい|[ユーザー アカウント制御]|いいえ|最小|  
+|Cl|はい|いいえ|はい|Full|  
+|Cl|いいえ|可|いいえ|最小|  
+|Cl|いいえ|いいえ|はい|Full|  
   
 上記の表に示す**dwloader** append モード、ヒープまたはクラスター化インデックス (CI) テーブル、トランザクションで複数のフラグの有無を読み込むと、空のテーブルまたは空でないテーブルへの読み込みを使用します。 ロックと、負荷のような組み合わせでは、それぞれの動作をログ記録は、テーブルに表示されます。 たとえばのフェーズ append モードとは異なる (2) の読み込みとテーブル PDW テーブルに排他ロックを作成する必要があるマルチ トランザクション モードを使用せず、クラスター化インデックスと、空にログ記録は最小限に抑える。 これは、顧客がいないできる (2 番目) の段階とクエリを同時に空のテーブルに読み込むことを意味します。 ただし、PDW では、テーブルに排他ロックは発行されませんと空でないテーブルに同じ構成を読み込むときに、同時実行が可能です。 残念ながら、完全ログ記録が発生したプロセスのパフォーマンスの低下します。  
   
@@ -688,7 +688,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe �
   
 -   *-i.\DimAccount.txt*データが、現在のディレクトリに存在する DimAccount.txt という名前のファイルを指定します。  
   
--   *-T AdventureWorksPDW2012.dbo.DimAccount*データを受信するテーブルの 3 部構成の名前を指定します。  
+-   *-T AdventureWorksPDW2012.dbo.DimAccount* specifies the 3-part name of the table to receive the data.  
   
 -   *-R DimAccount.bad* DimAccount.bad という名前のファイルに書き込まれます読み込みに失敗した行を指定します。  
   

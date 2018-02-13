@@ -29,19 +29,20 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムには、時系列を分析するための 2 つの異なるアルゴリズムが含まれています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムには、時系列を分析するための 2 つの異なるアルゴリズムが含まれています。  
   
 -   ARTXP アルゴリズム。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]で導入されたアルゴリズムで、系列内で最も近い値の予測に適しています。  
   
@@ -145,7 +146,7 @@ ms.lasthandoff: 01/08/2018
 |*INSTABILITY_SENSITIVITY*|予測の分散が特定のしきい値を超えて ARTXP アルゴリズムの予測が中止されるポイントを制御します。 既定値は 1 です。<br /><br /> 注: このパラメーターは、ARIMA のみを使用するモデルには適用されません。<br /><br /> 既定値の 1 では、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と同じ動作になります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、各予測の正規化された標準偏差を監視します。 この値がいずれかの予測のしきい値を超えると、タイム シリーズ アルゴリズムが NULL を返して予測処理が中止されます。<br /><br /> 値を [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] にすると、不安定性の検出が中止されます。 この場合は、偏差に関係なく予測を無制限に作成できます。<br /><br /> 注: このパラメーターは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise でのみ変更できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には既定値の 1 のみが使用されます。|  
 |*MAXIMUM_SERIES_VALUE*|予測に使用する最大値を指定します。 このパラメーターを *MINIMUM_SERIES_VALUE*と共に使用すると、予測が所定の範囲内に制約されます。 たとえば、日次の予測販売数量が製品の在庫数を超えないように指定することができます。<br /><br /> 注: このパラメーターは、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけで使用できます。|  
 |*MINIMUM_SERIES_VALUE*|予測できる最小値を指定します。 このパラメーターを *MAXIMUM_SERIES_VALUE*と共に使用すると、予測が所定の範囲内に制約されます。 たとえば、販売数量の予測が負の値にならないように指定できます。<br /><br /> 注: このパラメーターは、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけで使用できます。|  
-|*MINIMUM_SUPPORT*|各タイム シリーズ ツリーで分割を生成するために必要なタイム スライスの最小数を指定します。 既定値は 10 です。|  
+|*MINIMUM_SUPPORT*|各タイム シリーズ ツリーで分割を生成するために必要なタイム スライスの最小数を指定します。 既定値は、10 です。|  
 |*MISSING_VALUE_SUBSTITUTION*|履歴データのギャップを埋める方法を指定します。 既定では、データ内のギャップは許可されません。 このパラメーターに指定できる値の一覧を次の表に示します。<br /><br /> **前**: 前のタイム スライスの値を繰り返します。<br /><br /> **平均**: トレーニングに使用されたタイム スライスの移動平均を使用します。<br /><br /> 数値定数: 指定した数値を使用してすべての不足値を置き換えます。<br /><br /> **None**: 既定値。 トレーニング済みモデルの曲線に沿ってプロットされた値で不足値を置き換えます。<br /><br /> <br /><br /> データに複数のシリーズが含まれている場合は、シリーズの端を揃える必要があります。 つまり、すべてのシリーズの開始点と終了点が同じである必要があります。 <br />                    [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はこのパラメーターの値を、タイム シリーズ モデルで **PREDICTION JOIN** を実行する際に新しいデータのギャップを埋めるためにも使用します。|  
 |*PERIODICITY_HINT*|データの周期性に関して、アルゴリズムにヒントを提供します。 たとえば、売上が年ごとに異なり、シリーズの単位が月である場合、周期性は 12 です。 このパラメーターの形式は {n [, n]} です。ここで、n には正の値を指定します。<br /><br /> 角かっこ ([]) 内の n は省略可能で、必要なだけ繰り返すことができます。 たとえば、毎月提供されるデータに対して複数の周期性のヒントを指定して、年、四半期、および月のパターンを検出するには、「{12, 3, 1}」と入力します。 ただし、周期性はモデルの品質に大きな影響を与えるので注意してください。 指定したヒントが実際の周期性と異なると、結果が悪影響を受けることがあります。<br /><br /> 既定値は \{1\} です。<br /><br /> 値は中かっこで囲む必要があります。 また、このパラメーターは文字列データ型です。 したがって、このパラメーターをデータ マイニング拡張機能 (DMX) ステートメントの一部として入力する場合は、数字と中かっこを引用符で囲む必要があります。|  
 |*PREDICTION_SMOOTHING*|予測を最適化するためにモデルを組み合わせる方法を指定します。 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] ～ 1 の任意の値を入力するか、次のいずれかの値を使用します。<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)][ ] :<br />                          予測に ARTXP のみを使用するように指定します。 少数の予測に最適化されます。<br /><br /> 1: 予測に ARIMA のみを使用するように指定します。 多数の予測に最適化されます。<br /><br /> 0.5: 既定値。 予測に両方のアルゴリズムを使用して、結果を統合するように指定します。<br /><br /> <br /><br /> 予測のスムージングを実行する際には、 *FORECAST_METHOD* パラメーターを使用してトレーニングを制御します。   このパラメーターは、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のみで使用できます。|  
@@ -164,7 +165,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  次の表のように、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは、特定の入力列のコンテンツの種類、予測可能列のコンテンツの種類、およびモデリング フラグがサポートされています。  
   
-|[列]|コンテンツの種類|  
+|列|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Continuous、Key、Key Time、Table|  
 |予測可能な属性|Continuous、Table|  
@@ -175,6 +176,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>参照  
  [Microsoft タイム シリーズ アルゴリズム](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [タイム シリーズ モデルのクエリ例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [タイム シリーズ モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

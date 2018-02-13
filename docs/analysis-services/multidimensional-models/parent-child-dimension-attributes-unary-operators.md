@@ -16,19 +16,20 @@ helpviewer_keywords:
 - attributes [Analysis Services], unary operators
 - unary operators
 ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a387b74a5e0f1a401249555bb470159394bc1338
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>親子ディメンションの属性の単項演算子
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]親子リレーションシップが含まれているディメンションで[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、単項 (またはカスタム ロールアップ) を指定する演算子列を親属性の計算されないメンバーのすべてのカスタム ロールアップを指定します。 単項演算子は、親メンバーの値が評価されるたびにメンバーに適用されます。 親属性 ( **Usage** =Parent) の**UnaryOperatorColumn**は、単項演算子を含んでいるテーブル列をデータ ソース ビューで指定します。 この列に格納されるカスタム ロールアップ演算子の値は、属性の各メンバーに適用されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の親子リレーションシップを含んでいるディメンションでは、親属性のすべての計算されないメンバーにカスタム ロールアップを指定する、単項 (またはカスタム ロールアップ) 演算子列を指定します。 単項演算子は、親メンバーの値が評価されるたびにメンバーに適用されます。 親属性 ( **Usage** =Parent) の**UnaryOperatorColumn**は、単項演算子を含んでいるテーブル列をデータ ソース ビューで指定します。 この列に格納されるカスタム ロールアップ演算子の値は、属性の各メンバーに適用されます。  
   
  データ ソース ビューでは、ディメンション テーブルの名前付き計算を作成し、単項演算子列として指定できます。 "+" などの単純な式は、すべてのメンバーに関して同じ演算子を返します。 ただし、すべてのメンバーに関して 1 つの演算子を返す式に限り、使用できます。  
   

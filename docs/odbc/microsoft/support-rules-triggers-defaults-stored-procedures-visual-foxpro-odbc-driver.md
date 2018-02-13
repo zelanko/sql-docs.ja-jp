@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], stored procedures
 - Visual FoxPro commands and functions [ODBC]
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: c2fcdf0a9a7af2f34a2a0d87495d00ddf3373d3a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>ルール、トリガー、既定値、およびストアド プロシージャ (Visual FoxPro ODBC Driver) のサポート
 Visual FoxPro 規則、トリガー、既定値、または、Visual FoxPro ODBC ドライバーを使用してストアド プロシージャを作成することはできません。 ただし、アプリケーションは、挿入、更新、またはデータベースに格納されている Visual FoxPro データ削除と、既存のルール、トリガー、既定値、またはストアド プロシージャと対話可能性があります。  
@@ -63,9 +64,9 @@ Visual FoxPro 規則、トリガー、既定値、または、Visual FoxPro ODBC
 ||||  
 |-|-|-|  
 |ABS () 関数|ACOPY () 関数|TABLE コマンドを追加します。|  
-|ADATABASES に関するページ () 関数|ADBOBJECTS に関するページ () 関数|待ち () 関数|  
+|ADATABASES に関するページ () 関数|ADBOBJECTS に関するページ () 関数|AERROR( ) Function|  
 |ADEL () 関数|AELEMENT に関するページ () 関数|ALEN に関するページ () 関数|  
-|AFIELDS に関するページ () 関数|AINS に関するページ () 関数|ALTER TABLE の SQL コマンド|  
+|AFIELDS に関するページ () 関数|AINS に関するページ () 関数|ALTER TABLE - SQL Command|  
 |エイリアス () 関数|ALLTRIM に関するページ () 関数|配列のコマンドを追加します。|  
 |AND 演算子|コマンドを追加します。|メモのコマンドを追加します。|  
 |コマンドを追加します。|[全般] コマンドを追加します。|ASCAN に関するページ () 関数|  
@@ -86,7 +87,7 @@ Visual FoxPro 規則、トリガー、既定値、または、Visual FoxPro ODBC
 |BITTEST に関するページ () 関数|BITXOR に関するページ () 関数||  
 |BOF () 関数|BITAND () 関数||  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
@@ -155,7 +156,7 @@ Visual FoxPro 規則、トリガー、既定値、または、Visual FoxPro ODBC
 |INDBC に関するページ () 関数|INDEX コマンド|引数が極端に () 関数|  
 |挿入 SQL コマンド|INT () 関数|ISALPHA () 関数|  
 |ISBLANK () 関数|ISDIGIT () 関数|ISEXCLUSIVE に関するページ () 関数|  
-|ISLEADBYTE () 関数|ISLOWER () 関数|ISNULL () 関数|  
+|ISLEADBYTE () 関数|ISLOWER () 関数|ISNULL( ) Function|  
 |ISREADONLY () 関数|ISUPPER () 関数||  
   
 ## <a name="k"></a>K  
@@ -229,15 +230,15 @@ Visual FoxPro 規則、トリガー、既定値、または、Visual FoxPro ODBC
 |スキャンしています...ENDSCAN コマンド|コマンドを散布図します。|秒 () 関数|  
 |秒 () 関数|コマンドをシークします。|SEEK () 関数|  
 |コマンドを選択します。|選択 () 関数|SQL コマンド|  
-|SET BLOCKSIZE コマンド|SET CARRY コマンド|2 桁の年の SET コマンド|  
+|SET BLOCKSIZE Command|SET CARRY コマンド|2 桁の年の SET コマンド|  
 |SET COLLATE コマンド|データベースの SET コマンド|日付の SET コマンド|  
-|セットの既定のコマンド|SET DELETED コマンド|セットの正確なコマンド|  
-|排他の SET コマンド|SET FDOW コマンド|フィールドの SET コマンド|  
-|フィルターの SET コマンド|固定の SET コマンド|SET FULLPATH コマンド|  
+|SET DEFAULT Command|SET DELETED コマンド|セットの正確なコマンド|  
+|排他の SET コマンド|SET FDOW Command|フィールドの SET コマンド|  
+|フィルターの SET コマンド|固定の SET コマンド|SET FULLPATH Command|  
 |SET FWEEK コマンド|コマンドの時間の設定|インデックスの SET コマンド|  
-|SET LOCK コマンド|SET MULTILOCKS コマンド|コマンドの近くに設定します|  
+|SET LOCK コマンド|SET MULTILOCKS コマンド|SET NEAR Command|  
 |SET NOCPTRANS コマンド|通知の SET コマンド|SET NULL コマンド|  
-|SET の最適化コマンド|セットの順序コマンド|SET PATH コマンド|  
+|SET の最適化コマンド|セットの順序コマンド|SET PATH Command|  
 |SET プロシージャ コマンド|SET 関係コマンド|関係の設定 コマンドをオフ|  
 |再処理コマンドのセット|[スキップ] コマンドを設定します。|SET UDFPARMS コマンド|  
 |セットの一意のコマンド|SET ボリューム コマンド|設定に関するページ () 関数|  
@@ -271,7 +272,7 @@ Visual FoxPro 規則、トリガー、既定値、または、Visual FoxPro ODBC
   
 ||||  
 |-|-|-|  
-|VAL に関するページ () 関数|バージョン () 関数||  
+|VAL に関するページ () 関数|VERSION( ) Function||  
   
 ## <a name="w"></a>W  
   
