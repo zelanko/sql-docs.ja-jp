@@ -25,10 +25,10 @@ ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a63fcd61563499894205c3cc55323480e8a805d7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="remarks"></a>解説  
  `sp_execute_remote`上記の「構文」の説明に従って、特定の順序でパラメーターを入力する必要があります。 パラメーターを不適切な順序で入力した場合、エラー メッセージが表示されます。  
   
- `sp_execute_remote`として動作は同じ[EXECUTE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/execute-transact-sql.md)に関してバッチおよび名前のスコープです。 TRANSACT-SQL ステートメントまたはバッチ、sp_execute_remote に *@stmt* パラメーターは、sp_execute_remote ステートメントが実行されるまでコンパイルされません。  
+ `sp_execute_remote`として動作は同じ[EXECUTE &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/execute-transact-sql.md)に関してバッチおよび名前のスコープです。 TRANSACT-SQL ステートメントまたはバッチ、sp_execute_remote に *@stmt* パラメーターは、sp_execute_remote ステートメントが実行されるまでコンパイルされません。  
   
  `sp_execute_remote`行を生成するリモートのデータベースの名前を含む ' $ShardName' という名前が結果セットに追加の列を追加します。  
   
