@@ -35,7 +35,7 @@
 ### [SQL Server エージェントのインストール](sql-server-linux-setup-sql-agent.md)
 ### [SQL Server フルテキスト検索のインストール](sql-server-linux-setup-full-text-search.md)
 ### [SQL Server Integration Services のインストール](sql-server-linux-setup-ssis.md)
-### [GA リポジトリの登録](sql-server-linux-change-repo.md)
+### [リポジトリの構成](sql-server-linux-change-repo.md)
 
 ## [構成]
 ### [mssql-conf での構成](sql-server-linux-configure-mssql-conf.md)
@@ -85,6 +85,7 @@
 ##### [操作](sql-server-linux-availability-group-failover-ha.md)
 #### [読み取りスケールのみ用に作成する]()
 ##### [AG の構成](sql-server-linux-availability-group-configure-rs.md)
+#### [クロス プラットフォーム (Windows と Linux) の構成](sql-server-linux-availability-group-cross-platform.md)
 
 ## [Security](sql-server-linux-security-overview.md)
 ### [セキュリティ機能の入門](sql-server-linux-security-get-started.md)

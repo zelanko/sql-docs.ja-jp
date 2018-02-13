@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: d53e54c6e8e74970316de557ddf3bd60a09e9ffe
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 展開用の SQL Server 可用性の基礎
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/12/2018
 -   Always On フェールオーバー クラスター インスタンス (Fci)
 -   [ログ配布](sql-server-linux-use-log-shipping.md)
 
-Windows では、Fci は、基になる Windows Server フェールオーバー クラスター (WSFC) を常に必要です。 デプロイメントのシナリオによって、AG 通常必要があります、基になる WSFC されて、新しい例外でバリアント[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]です。 Linux では、WSFC がありませんでした。 Linux での実装をクラスタ リングについては下[on Linux インスタンスの Always On 可用性グループおよびフェールオーバー クラスターのペース](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux)です。
+Windows では、Fci は、基になる Windows Server フェールオーバー クラスター (WSFC) を常に必要です。 デプロイメントのシナリオによって、AG 通常必要があります、基になる WSFC されて、新しい例外でバリアント[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]です。 Linux では、WSFC がありませんでした。 Linux での実装をクラスタ リングは、セクションで説明[on Linux インスタンスの Always On 可用性グループおよびフェールオーバー クラスターのペース](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux)です。
 
 ## <a name="a-quick-linux-primer"></a>Linux の入門
 Linux のインストールによってはインターフェイスでインストールされているときにほとんどではありません、コマンドラインを使用してオペレーティング システムのレイヤーでほぼすべてを行うことを意味します。 Linux の世界でコマンド プロンプトの一般的な用語は、 *bash シェル*です。
@@ -59,9 +59,9 @@ Linux では、多くのコマンドは、管理者として Windows Server で�
 ここでは、すべての Linux ベースに共通するタスク[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]展開します。
 
 ### <a name="ensure-that-files-can-be-copied"></a>ファイルをコピーできることを確認してください。
-1 つの点を使用してユーザー [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux を実行可能にする必要がありますは別に 1 つのサーバーからファイルをコピーします。 このタスクは、AG の構成が重要です。
+1 つのサーバー間でファイルをコピーするすべての人が使用して、タスクは、 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux を実行可能にする必要があります。 このタスクは、AG の構成が重要です。
 
-Linux および Windows ベースのインストール、アクセス許可の問題などが存在できます。 ただし、Windows 上のサーバーをコピーする方法をよく知っている可能性がありますいないに習熟 Linux 上の実行方法。 一般的な方法は、コマンド ライン ユーティリティを使用する`scp`、セキュリティで保護されたコピーの略です。 背後では、 `scp` OpenSSH を使用します。 SSH は、セキュリティで保護されたシェルを表しています。 Linux ディストリビューションに応じて OpenSSH 自体がインストールされていません。 そうでない場合は、OpenSSH を最初にインストールする必要があります。 OpenSSH を構成する方法については、次のリンクの各配布に情報を参照してください。
+Linux および Windows ベースのインストール、アクセス許可の問題などが存在できます。 ただし、Windows 上のサーバーをコピーする方法をよく知っている可能性がありますいないに習熟 Linux 上の実行方法。 一般的な方法は、コマンド ライン ユーティリティを使用する`scp`、セキュリティで保護されたコピーの略です。 背後では、 `scp` OpenSSH を使用します。 SSH は、セキュリティで保護されたシェルを表しています。 Linux ディストリビューションに応じて OpenSSH 自体がインストールされていません。 そうでない場合、OpenSSH を最初にインストールする必要があります。 OpenSSH を構成する方法については、次のリンクの各配布に情報を参照してください。
 -   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
@@ -112,7 +112,7 @@ Windows と同様に、Linux ディストリビューション組み込みのフ
 | 変数    | TCP/UDP  | ポートはポートを NFS – `MOUNTD_PORT` (で見つかった`/etc/sysconfig/nfs`RHEL 上)                                                |
 | 変数    | TCP/UDP  | ポートはポートを NFS – `STATD_PORT` (で見つかった`/etc/sysconfig/nfs`RHEL 上)                                                 |
 
-追加のポートは Samba で使用できますを参照してください[Samba ポートの使用状況](https://wiki.samba.org/index.php/Samba_Port_Usage)です。
+追加のポートは Samba で使用できますが、次を参照してください。 [Samba ポートの使用状況](https://wiki.samba.org/index.php/Samba_Port_Usage)です。
 
 逆に、Linux 上でサービスの名前も追加できます。 ポートの代わりに例外としてたとえば、`high-availability`ペースのです。 この方向を追求する場合は、名前のディストリビューションを参照してください。 たとえば、RHEL ペースで追加するコマンドは
 
@@ -135,7 +135,7 @@ Ag または Fci を構成したら、Windows ベースの構成で、クラス�
 その他の省略可能なパッケージは、 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux では、 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 、フルテキスト検索 (*mssql サーバー-fts*) および[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Integration Services (*mssql サーバーが*)、されません。FCI は、または、AG のいずれかの高可用性のために必要です。
 
 ## <a name="pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux"></a>Always On 可用性グループおよび Linux でのフェールオーバー クラスター インスタンスのペース
-前述のように、Corosync とペースは現在の Ag と Fci を Microsoft でサポートされている唯一のクラスタ リング メカニズムです。 ここでは、ソリューション、および計画およびをできるように配置する方法について理解する基本的な情報[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]構成します。
+前に、現在の Ag と Fci を Microsoft でサポートされている唯一のクラスタ リング メカニズムが注意 Corosync とペースです。 ここでは、ソリューション、および計画およびをできるように配置する方法について理解する基本的な情報[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]構成します。
 
 ### <a name="ha-add-onextension-basics"></a>HA のアドオンと拡張の基本事項
 現在サポートされている分布のすべて付属して、高可用性アドオン-の/拡張機能は、スタックをクラスタ リングのペースに基づいています。 このスタックには、次の 2 つの主なコンポーネントが組み込まれています: ペースと Corosync です。 スタックのすべてのコンポーネントは次のとおりです。
@@ -247,7 +247,7 @@ STONITH はペース クラスターのサポートされている必要があ�
 -   分散 AG、独自の可用性グループとして構成する 2 つの異なる Ag を許可する可用性グループの特殊な型です。 分散 Ag の詳細については、ドキュメントを参照して[分散型可用性グループ](../database-engine/availability-groups/windows/distributed-availability-groups.md)です。
 
 #### <a name="other-linux-distributions"></a>他の Linux ディストリビューション
-Linux では、ペース クラスターのすべてのノードは、同じ配布する必要があります。 たとえば、つまり、RHEL ノードは SLES ノードを持つペース クラスターの一部であること。 その理由は、メインの上記: のディストリビューションが可能性がさまざまなバージョンおよび機能、処理が正しく動作しない可能性があります。 WSFCs と Linux の混在と同じストーリーがディストリビューションの混在: none、または、Ag を分散します。
+Linux では、ペース クラスターのすべてのノードは、同じ配布する必要があります。 たとえば、つまり、RHEL ノードは SLES ノードを持つペース クラスターの一部であること。 主な理由が前に示した: のディストリビューションが可能性がさまざまなバージョンおよび機能、処理が正しく動作しない可能性があります。 WSFCs と Linux の混在と同じストーリーがディストリビューションの混在: none、または、Ag を分散します。
 
 ## <a name="next-steps"></a>次の手順
 [SQL Server on Linux のペース クラスターを展開します。](sql-server-linux-deploy-pacemaker-cluster.md)
