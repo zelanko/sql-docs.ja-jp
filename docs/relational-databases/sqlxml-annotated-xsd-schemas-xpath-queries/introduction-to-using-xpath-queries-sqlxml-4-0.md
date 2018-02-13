@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - W3C XPath specification
 - XPath queries [SQLXML], functionality
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9113df3519ab212f3647b96c63620167c7913ffb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b08c314d50376e55d9825658aabc75385bbbe0be
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath クエリの使用について (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]XML パス言語 (XPath) クエリは、テンプレート内の URL の一部として指定できます。 この結果のフラグメントの構造はマッピング スキーマによって決定され、値はデータベースから取得されます。 このプロセスは、CREATE VIEW ステートメントを使用してビューを作成し、そのビューに対して SQL クエリを記述するのと概念的には同じです。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XML パス言語 (XPath) クエリは、URL の一部として、またはテンプレート内で指定できます。 この結果のフラグメントの構造はマッピング スキーマによって決定され、値はデータベースから取得されます。 このプロセスは、CREATE VIEW ステートメントを使用してビューを作成し、そのビューに対して SQL クエリを記述するのと概念的には同じです。  
   
 > [!NOTE]  
 >  SQLXML 4.0 の XPath クエリを理解するには、XML ビューと、それに関連するテンプレートやマッピング スキーマなどの概念について理解している必要があります。 詳細については、次を参照してください[注釈付き XSD スキーマの選択 &#40; の概要。SQLXML 4.0 &#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)と World Wide Web Consortium (W3C) で定義されている XPath 標準です。  
@@ -101,9 +103,9 @@ ms.lasthandoff: 11/17/2017
 |連続する述語や入れ子になった述語など、ブール値を使用する述語||[XPath クエリ &#40; での算術演算子の指定SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |すべての関係演算子|=, !=, <, \<=, >, >=|[XPath クエリ &#40; での関係演算子の指定SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |算術演算子|+、-、*、div|[XPath クエリ &#40; での算術演算子の指定SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|明示的な変換関数|**number()**、 **string()**、**なく Boolean()**|[XPath クエリ &#40; での明示的な変換関数の指定SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|明示的な変換関数|**number()**, **string()**, **Boolean()**|[XPath クエリ &#40; での明示的な変換関数の指定SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |ブール演算子|AND、OR|[XPath クエリ &#40; でのブール演算子の指定SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|論理関数|**true()**、 **false()**、 **not()**|[XPath クエリのブール関数 &#40; を指定します。SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|論理関数|**true()**, **false()**, **not()**|[XPath クエリのブール関数 &#40; を指定します。SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |XPath 変数||[XPath クエリ &#40; XPath 変数を指定します。SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>サポートされない機能  
@@ -111,13 +113,13 @@ ms.lasthandoff: 11/17/2017
   
 |機能|アイテム|  
 |-------------|----------|  
-|軸|**先祖**、**先祖または self**、**子孫**、**子孫または self (//)**、**次**、 **次兄弟**、**名前空間**、**前**、**前兄弟**|  
+|軸|**先祖**、**先祖または self**、**子孫**、**子孫または self (//)**、**次**、 **次の兄弟**、**名前空間**、**前**、**前兄弟**|  
 |数値を使用する述語||  
 |算術演算子|mod|  
-|ノード関数|**先祖**、**先祖または self**、**子孫**、**子孫または self (//)**、**次**、 **次兄弟**、**名前空間**、**前**、**前兄弟**|  
-|文字列関数|**string()**、 **concat()**、 **starts-with()**、 **contains()**、 **substring-before()**、 **substring-after()**、 **substring()**、 **string-length()**、 **normalize()**、 **translate()**|  
+|ノード関数|**先祖**、**先祖または self**、**子孫**、**子孫または self (//)**、**次**、 **次の兄弟**、**名前空間**、**前**、**前兄弟**|  
+|文字列関数|**string()**, **concat()**, **starts-with()**, **contains()**, **substring-before()**, **substring-after()**, **substring()**, **string-length()**, **normalize()**, **translate()**|  
 |論理関数|**lang()**|  
-|数値関数|**sum()**、 **floor()**、 **ceiling()**、 **round()**|  
+|数値関数|**sum()**, **floor()**, **ceiling()**, **round()**|  
 |union 演算子|&#124;|  
   
  テンプレートに XPath クエリを指定する場合には、次の動作に注意してください。  

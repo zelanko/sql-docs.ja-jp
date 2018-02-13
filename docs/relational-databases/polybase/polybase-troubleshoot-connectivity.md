@@ -21,17 +21,18 @@ ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.author: alazad
 ms.openlocfilehash: cbbc687cf4c3a5edf769ab973879bc81f8db8406
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos の接続性のトラブルシューティング
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Kerberos によるセキュリティで保護された Hadoop クラスターに対して PolyBase を使用する場合、PolyBase に組み込まれている対話型診断ツールを使用すると、認証の問題のトラブルシューティングに役立ちます。 
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Kerberos によるセキュリティで保護された Hadoop クラスターに対して PolyBase を使用する場合、PolyBase に組み込まれている対話型診断ツールを使用すると、認証の問題のトラブルシューティングに役立ちます。 
 
 この記事は、このツールを使用したこのような問題のデバッグ方法を示すガイドとして利用できます。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 1. PolyBase がインストールされた SQL Server 2016 RTM CU6 / SQL Server 2016 SP1 CU3 / SQL Server 2017 またはそれ以降
 1. Kerberos (Active Directory または MIT) によるセキュリティで保護された Hadoop クラスター (Cloudera または Hortonworks)

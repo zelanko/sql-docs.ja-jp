@@ -1,6 +1,6 @@
 ---
 title: "Linux 上の SQL Server のパフォーマンス機能の概要 |Microsoft ドキュメント"
-description: "このトピックでは、SQL Server に追加された新しい Linux ユーザーの SQL Server のパフォーマンス機能の概要を示します。 すべてのプラットフォームでは、これらの例の多くは機能が Linux にこの記事のコンテキストが存在します。"
+description: "この記事では、SQL Server に追加された新しい Linux ユーザーの SQL Server のパフォーマンス機能の概要を示します。 すべてのプラットフォームでは、これらの例の多くは機能が Linux にこの記事のコンテキストが存在します。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,19 +9,21 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: d31f07a9ef05f056fe0887a3873f972b0683da5f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 73b452cf99016b4b4f38c7debacadf32a270421d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux 上の SQL Server のパフォーマンス機能のチュートリアル
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server に新しい Linux ユーザーの場合は、次のタスクはパフォーマンス機能の一部を説明します。 これらは一意または Linux に固有でないですがさらに詳しく調査するには、領域の概念を付けると便利です。 各例では、リンクは、その領域の深さのドキュメントが提供されます。
 
@@ -31,7 +33,7 @@ SQL Server に新しい Linux ユーザーの場合は、次のタスクはパ�
 ## <a name="create-a-columnstore-index"></a>列ストア インデックスを作成します。
 列ストア インデックスは、格納して、列ストアと呼ばれる列指向データ形式でデータの大規模なストアのクエリを実行するためのテクノロジです。  
 
-1. T-SQL は、以下を実行することによって、salesorderdetail の各テーブルに列ストア インデックスを追加します。
+1. 次の TRANSACT-SQL コマンドを実行することによって、salesorderdetail の各テーブルに列ストア インデックスを追加します。
 
    ```sql
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
@@ -40,7 +42,7 @@ SQL Server に新しい Linux ユーザーの場合は、次のタスクはパ�
    GO
    ```
 
-2. 列ストア インデックスがテーブルのスキャンを使用して次のクエリを実行します。
+2. 列ストア インデックスを使用して、テーブルをスキャンする次のクエリを実行します。
 
    ```sql
    SELECT ProductID, SUM(UnitPrice) SumUnitPrice, AVG(UnitPrice) AvgUnitPrice,

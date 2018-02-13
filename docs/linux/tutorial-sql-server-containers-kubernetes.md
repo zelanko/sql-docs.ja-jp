@@ -9,16 +9,16 @@ ms.topic: tutorial
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: mvc
+ms.custom: sql-linux,mvc
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 4ada1034b64f710f4eeae995b771ef8be5bf4fe2
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a21856b3a864373f84ad304484ecdd88ac17f52a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>Kubernetes で高可用性のため、SQL Server のコンテナーを構成します。
 
@@ -119,7 +119,7 @@ Kubernetes クラスタで SA パスワードを作成します。 Kubernetes �
    kubectl apply -f <Path to pvc.yaml file>
    ```
 
-   `<Path to pvc.yaml file>`ファイルを保存した場所です。
+   `<Path to pvc.yaml file>` ファイルを保存した場所です。
 
    永続的なボリュームは自動的に、Azure ストレージ アカウントとして作成され、永続的なボリュームの要求にバインドされています。 
 
@@ -131,7 +131,7 @@ Kubernetes クラスタで SA パスワードを作成します。 Kubernetes �
    kubectl describe pvc <PersistentVolumeClaim>
    ```
 
-   `<PersistentVolumeClaim>`永続的なボリュームの要求の名前です。
+   `<PersistentVolumeClaim>` 永続的なボリュームの要求の名前です。
 
    前の手順では、永続的なボリュームの要求の名前`mssql-data`です。 永続的なボリューム要求に関するメタデータを表示するには、次のコマンドを実行します。
 
@@ -153,7 +153,7 @@ Kubernetes クラスタで SA パスワードを作成します。 Kubernetes �
    kubectl describe pv
    ```
 
-   `kubectl`永続的なボリュームが自動的に作成された永続的なボリュームの要求にバインドされているに関するメタデータを返します。 
+   `kubectl` 永続的なボリュームが自動的に作成された永続的なボリュームの要求にバインドされているに関するメタデータを返します。 
 
 ## <a name="create-the-deployment"></a>展開を作成します。
 
@@ -242,7 +242,7 @@ Kubernetes クラスタで SA パスワードを作成します。 Kubernetes �
    kubectl apply -f <Path to sqldeployment.yaml file>
    ```
 
-   `<Path to sqldeployment.yaml file>`ファイルを保存した場所です。
+   `<Path to sqldeployment.yaml file>` ファイルを保存した場所です。
 
    ![展開コマンドのスクリーン ショット](media/tutorial-sql-server-containers-kubernetes/04_deploy_cmd.png)
 
@@ -293,8 +293,8 @@ Kubernetes クラスタで SA パスワードを作成します。 Kubernetes �
 
    次の値を置き換えます。
       
-    - `<External IP Address>`IP アドレスを含む、`mssql-deployment`サービス 
-    - `MyC0m9l&xP@ssw0rd`自分のパスワード
+    - `<External IP Address>` IP アドレスを含む、`mssql-deployment`サービス 
+    - `MyC0m9l&xP@ssw0rd` 自分のパスワード
 
 ## <a name="verify-failure-and-recovery"></a>エラーと回復を確認します。
 
@@ -313,7 +313,7 @@ Kubernetes クラスタで SA パスワードを作成します。 Kubernetes �
    ```azurecli
    kubectl delete pod mssql-deployment-0
    ```
-   `mssql-deployment-0`pod 型名の前の手順から返される値。 
+   `mssql-deployment-0` pod 型名の前の手順から返される値。 
 
 Kubernetes 自動的に再作成を SQL Server のインスタンスを回復し、永続的な記憶域に接続 pod です。 使用して`kubectl get pods`新しい pod が展開されていることを確認します。 使用して`kubectl get services`に新しいコンテナーの IP アドレスが同じであることを確認します。 
 

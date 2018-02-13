@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -28,19 +29,20 @@ helpviewer_keywords:
 - updg:before attribute
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c6ff13edf01370778da9361d5834e70ebfdb20a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01df178b47bb3aac688d12e54760cd530706fd94
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの更新 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]既存のデータを更新すると、両方を指定する必要があります、 **\<する前に >**と**\<後 >**ブロックします。 指定した要素を**\<する前に >**と**\<後 >**ブロックが、必要な変更について説明します。 アップデート グラムで指定されている要素を使用して、 **\<する前に >**ブロックをデータベースの既存のレコードを識別します。 対応する要素で、 **\<後 >**ブロックは、更新操作を実行した後、レコードの外観を示します。 この情報から、アップデート グラムが一致する SQL ステートメントを作成、 **\<後 >**ブロックします。 そのステートメントによってデータベースが更新されます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+既存のデータを更新すると、両方を指定する必要があります、 **\<する前に >**と**\<後 >**ブロックします。 指定した要素を**\<する前に >**と**\<後 >**ブロックが、必要な変更について説明します。 アップデート グラムで指定されている要素を使用して、 **\<する前に >**ブロックをデータベースの既存のレコードを識別します。 対応する要素で、 **\<後 >**ブロックは、更新操作を実行した後、レコードの外観を示します。 この情報から、アップデート グラムが一致する SQL ステートメントを作成、 **\<後 >**ブロックします。 そのステートメントによってデータベースが更新されます。  
   
  更新操作のアップデートグラムの形式は次のとおりです。  
   
@@ -59,10 +61,10 @@ ms.lasthandoff: 11/17/2017
 </ROOT>  
 ```  
   
- **\<updg: する前に >**  
+ **\<updg:before>**  
  内の要素、 **\<する前に >**ブロックは、データベース テーブルの既存のレコードを識別します。  
   
- **\<updg: 後 >**  
+ **\<updg:after>**  
  内の要素、 **\<後 >**ブロックにレコードを指定する方法を説明する、 **\<する前に >**ブロックは、更新プログラムが適用された後になります。  
   
  **マッピング スキーマ**属性は、アップデート グラムで使用するマッピング スキーマを識別します。 要素と属性名がで指定された、アップデート グラムでマッピング スキーマを指定する場合、 **\<する前に >**と**\<後 >**ブロックは、スキーマの名前と一致する必要があります。 マッピング スキーマでは、これらの要素または属性の名前がデータベース テーブルと列の名前にマップされます。  

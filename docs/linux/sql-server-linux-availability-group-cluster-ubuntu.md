@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: d6a49bc2f3fb815cecda0e8a24a63993b5423103
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5f52c5f83ca91b196f0bf2f05e98fb73133b4c8a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu クラスターと可用性グループ リソースを構成します。
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/09/2018
 このドキュメントでは、Ubuntu で 3 つのノードのクラスターを作成し、以前に作成した可用性グループをクラスター内のリソースとして追加する方法について説明します。 Linux 上の可用性グループ、可用性を高めるためには 3 つのノードが必要です - 参照[可用性グループの構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)です。
 
 > [!NOTE] 
-> この時点では、Linux 上のペースで SQL Server の統合は Windows での WSFC でとして結合します。 SQL 内ではありません、クラスターの存在についてのナレッジ、すべてのオーケストレーションの外部には、およびサービスが、スタンドアロン インスタンスとしてペースで制御されます。 また、仮想ネットワーク名は、WSFC を特定、相当するのと同じペースではありません。 Always On の動的管理ビューのクラスター情報を照会するには、空の行が返されます。 フェールオーバー後は、透過的な再接続に使用するリスナーを作成できますが、仮想 IP リソース (下記参照) を作成するために使用する ip アドレス、DNS サーバーで、リスナー名を手動で登録する必要があります。
+> この時点では、Linux 上のペースで SQL Server の統合は Windows での WSFC でとして結合します。 SQL 内ではありません、クラスターの存在についてのナレッジ、すべてのオーケストレーションの外部には、およびサービスが、スタンドアロン インスタンスとしてペースで制御されます。 また、仮想ネットワーク名は、WSFC を特定、相当するのと同じペースではありません。 Always On の動的管理ビューのクラスター情報を照会するには、空の行が返されます。 フェールオーバー後は、透過的な再接続に使用するリスナーを作成できますが、仮想 IP リソース (次のセクションで説明されている) を作成するために使用する ip アドレス、DNS サーバーで、リスナー名を手動で登録する必要があります。
 
 次のセクションでは、フェールオーバー クラスター ソリューションをセットアップする手順について説明します。 
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. クラスターを作成します。 
 
    >[!WARNING]
-   >クラスター ('pc クラスター start') は、クラスタ リングの仕入先があり、調査して、開始する既知の問題により、以下のエラーで失敗します。 ログ ファイルは、クラスター セットアップ コマンドが実行時に作成されて、間違った/etc/corosync/corosync.conf で構成されているためにです。 この問題を回避するには、ログ ファイルを変更:/var/log/corosync/corosync.log です。 また、/var/log/cluster/corosync.log ファイルを作成します。
+   >クラスタ リングの仕入先があり、調査して、開始する既知の問題により、クラスター ('pc クラスター start') は、次のエラーで失敗します。 ログ ファイルは、クラスター セットアップ コマンドが実行時に作成されて、間違った/etc/corosync/corosync.conf で構成されているためにです。 この問題を回避するには、ログ ファイルを変更:/var/log/corosync/corosync.log です。 また、/var/log/cluster/corosync.log ファイルを作成します。
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
@@ -150,7 +150,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>開始-障害が-致命的でクラスターのプロパティが false に設定します。
 
-`start-failure-is-fatal`ノードにリソースを起動しますの失敗によってそのノードに対して試行された開始でがさらにかどうかを示します。 設定すると`false`クラスターは、リソースの現在の失敗数と移行のしきい値に基づいて、もう一度同じノードで起動するかどうかを決定します。 そのため、フェールオーバーが発生した後、SQL インスタンスが使用可能なペースの再試行回数が、可用性を開始には以前のプライマリ上のリソースがグループ化します。 ペースがセカンダリ レプリカを降格し、可用性グループを自動的に再度参加します。 
+`start-failure-is-fatal` ノードにリソースを起動しますの失敗によってそのノードに対して試行された開始でがさらにかどうかを示します。 設定すると`false`クラスターは、リソースの現在の失敗数と移行のしきい値に基づいて、もう一度同じノードで起動するかどうかを決定します。 そのため、フェールオーバーが発生した後、SQL インスタンスが使用可能なペースの再試行回数が、可用性を開始には以前のプライマリ上のリソースがグループ化します。 ペースがセカンダリ レプリカを降格し、可用性グループを自動的に再度参加します。 
 
 プロパティの値を更新する`false`次のスクリプトを実行します。
 

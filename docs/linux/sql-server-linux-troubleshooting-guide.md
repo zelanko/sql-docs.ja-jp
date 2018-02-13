@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: 2771b3bc37eccf9fd24eecea3c716ea6d6b7b749
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: f56806313075865c53cbd3fc1f80c0d132804c04
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux をトラブルシューティングします。
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/01/2018
 
 このドキュメントでは、Linux または、Docker コンテナーで実行されている Microsoft SQL Server のトラブルシューティングを行う方法について説明します。 SQL Server on Linux のトラブルシューティングを行うときにサポートされる機能の既知の制限事項を確認するのに注意してください、 [SQL Server on Linux のリリース ノート](sql-server-linux-release-notes.md)です。
 
-## <a id="connection"></a>接続エラーをトラブルシューティングします。
+## <a id="connection"></a> 接続エラーをトラブルシューティングします。
 Linux SQL Server への接続に問題が発生した場合は、いくつかを確認します。 
 
 - サーバー名または IP アドレスが、クライアント コンピューターから到達可能であることを確認します。

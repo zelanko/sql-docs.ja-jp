@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 891047c2d748e5c3c07afc26af790619eda5e315
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの配置およびバージョン サポート (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] では、次のシナリオがサポートされます。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/09/2018
 ##  <a name="bkmk_SupportedVersions"></a> Supported Versions  
   
 > [!NOTE]  
->  レポート サーバー プロジェクトの 32 ビット開発環境である [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] ベースのコンピューターで実行できるようにデザインされていないため、[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] ベースのサーバーにはインストールされません。 ただし、x64 ベースのコンピューターでは [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がサポートされています。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]レポート サーバー プロジェクトの 32 ビット開発環境であり、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]ベースのコンピューターで実行できるようにデザインされていないため、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]ベースのサーバーにはインストールされません。 ただし、x64 ベースのコンピューターでは [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がサポートされています。  
   
  次の表では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でのレポートの作成およびパブリッシュをサポートするバージョンについて説明します。  
   

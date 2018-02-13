@@ -8,23 +8,24 @@ ms.service:
 ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, architecture
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30748d9c5cf8a53b7e04c9897ba2fe70fa32972e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b8652d59a4a2a6ad980c2d7659940ac0552bfeed
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph のアーキテクチャ  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ SQL のグラフを構築する方法について説明します。 基本を知
 
 |列名    |Description  |
 |---   |---  |
-|`$edge_id`   |データベース内の特定のエッジを一意に識別します。 生成された列であるし、値は、object_id、エッジ テーブルと内部で生成された bigint 値の組み合わせ。 ただし、ときに、`$edge_id`列が選択されていると、JSON 文字列の形式での計算値が表示されます。 `$edge_id`16 進数の文字列で、内部名にマップされる擬似列です。 選択すると`$edge_id`として、テーブルから列名が表示されます`$edge_id_\<hex_string>`です。 擬似列名を使用して、クエリでは、内部クエリを実行することをお勧め`$edge_id`列と 16 進文字列での内部名の使用を回避する必要があります。 |
+|`$edge_id`   |データベース内の特定のエッジを一意に識別します。 生成された列であるし、値は、object_id、エッジ テーブルと内部で生成された bigint 値の組み合わせ。 ただし、ときに、`$edge_id`列が選択されていると、JSON 文字列の形式での計算値が表示されます。 `$edge_id` 16 進数の文字列で、内部名にマップされる擬似列です。 選択すると`$edge_id`として、テーブルから列名が表示されます`$edge_id_\<hex_string>`です。 擬似列名を使用して、クエリでは、内部クエリを実行することをお勧め`$edge_id`列と 16 進文字列での内部名の使用を回避する必要があります。 |
 |`$from_id`   |ストア、`$node_id`エッジの発生源からのノードのです。  |
 |`$to_id`   |ストア、`$node_id`エッジが終了した、ノードのです。 |
 
@@ -99,7 +100,7 @@ SQL のグラフを構築する方法について説明します。 基本を知
 |8  |GRAPH_TO_ID_COMPUTED  |
 
 
-`sys.columns`ノードまたはエッジ テーブルに作成される暗黙の列に関する情報も格納します。 Sys.columns から以下の情報を取得できる、ただし、ユーザーは、ノードまたはエッジ テーブルからのこれらの列を選択できません。 
+`sys.columns` ノードまたはエッジ テーブルに作成される暗黙の列に関する情報も格納します。 Sys.columns から以下の情報を取得できる、ただし、ユーザーは、ノードまたはエッジ テーブルからのこれらの列を選択できません。 
 
 ノードはテーブルの暗黙の列  
 |列名    |データ型  |is_hidden  |解説  |
@@ -139,7 +140,7 @@ SQL のグラフを構築する方法について説明します。 基本を知
 ### <a name="data-definition-language-ddl-statements"></a>データ定義言語 (DDL) ステートメント
 |タスク   |関連トピック  |注
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE `拡張された AS ノードまたは AS エッジ テーブルの作成をサポートするためにします。 エッジ テーブルがいるかが定義していないすべてのユーザー属性に注意してください。  |
+|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` 拡張された AS ノードまたは AS エッジ テーブルの作成をサポートするためにします。 エッジ テーブルがいるかが定義していないすべてのユーザー属性に注意してください。  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|ノードとエッジ テーブルにリレーショナル テーブルを使用して、同じ方法を変更することができます、`ALTER TABLE`です。 ユーザーでは、追加したり、ユーザー定義の列、インデックスまたは制約を変更することができます。 ただし、内部のグラフ列を変更するには、機会をいただいて`$node_id`または`$edge_id`エラーになります。  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |ユーザーは、擬似列とテーブルのノードとエッジ テーブル内のユーザー定義の列にインデックスを作成できます。 クラスター化および非クラスター化列ストア インデックスを含むすべてのインデックス型がサポートされます。  |
 |DROP TABLE |[DROP TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-table-transact-sql.md)  |リレーショナル テーブルを使用して、同じ方法 ノードとエッジ テーブルを削除することができます、`DROP TABLE`です。 ただし、このリリースで制約はありませんエッジ ポイントを削除したノードとノードまたはノードのテーブルの削除時に、エッジのカスケード削除はサポートされていないことを確認します。 ノードのテーブルが削除された場合、ユーザーを削除、グラフの整合性を維持するために手動でそのノードのテーブル内のノードに接続されているすべての端をお勧めします。  |
@@ -148,10 +149,10 @@ SQL のグラフを構築する方法について説明します。 基本を知
 ### <a name="data-manipulation-language-dml-statements"></a>データ操作言語 (DML) ステートメント
 |タスク   |関連トピック  |注
 |---  |---  |---  |
-|INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|ノード テーブルに挿入するはリレーショナル テーブルに挿入すると同じです。 値は、`$node_id`列が自動的に生成します。 値を挿入しようとしています。`$node_id`または`$edge_id`列が、エラーになります。 ユーザーがの値を指定する必要があります`$from_id`と`$to_id`エッジ テーブルへの挿入中に列です。 `$from_id`および`$to_id`は、`$node_id`の特定のエッジに接続するノードの値。  |
+|INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|ノード テーブルに挿入するはリレーショナル テーブルに挿入すると同じです。 値は、`$node_id`列が自動的に生成します。 値を挿入しようとしています。`$node_id`または`$edge_id`列が、エラーになります。 ユーザーがの値を指定する必要があります`$from_id`と`$to_id`エッジ テーブルへの挿入中に列です。 `$from_id` および`$to_id`は、`$node_id`の特定のエッジに接続するノードの値。  |
 |DELETE | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|リレーショナル テーブルから削除されると、同じ方法でノードまたはエッジ テーブルからデータを削除できます。 ただし、このリリースで制約はありませんエッジ ポイントを削除したノードとノードの削除時に、エッジのカスケード削除はサポートされていないことを確認します。 ノードが削除されると、そのノードへのすべての接続エッジも削除すること、グラフの整合性を維持するをお勧めします。  |
 |UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |ユーザー定義の列の値は、UPDATE ステートメントを使用して更新できます。 内部のグラフ列を更新する`$node_id`、 `$edge_id`、`$from_id`と`$to_id`は許可されていません。  |
-|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE`ステートメントは、ノードまたはエッジ テーブルでサポートされていません。  |
+|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` ステートメントは、ノードまたはエッジ テーブルでサポートされていません。  |
 
 
 ### <a name="query-statements"></a>クエリ ステートメント

@@ -8,26 +8,28 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, xml data type support
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 581472d13c4bb9e11d52a8a71965f9b8f64bf0c4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dfdb6b2fba95fc3e723122e9402e70caede522b1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0 での xml データ型のサポート
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サポート XML を使用してデータに型指定された、 **xml**データ型。 このトピックは、SQLXML 4.0 でのインスタンスを認識する方法に関する情報を提供、 **xml**それらのデータ型と実装をサポートします。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サポート XML を使用してデータに型指定された、 **xml**データ型。 このトピックは、SQLXML 4.0 でのインスタンスを認識する方法に関する情報を提供、 **xml**それらのデータ型と実装をサポートします。  
   
 ## <a name="working-with-xml-data-types"></a>xml データ型の使用  
  SQL テーブルの実装を使用する方法の詳細を理解する**xml**データ型の列、次の例が提供されます。  
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   SQLXML 4.0 は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で提供される XML 解析サポートに依存しています。 **Xml**型指定された XML と型指定されていない XML か、列をマップすることができます。 どちらの場合も、SQLXML 4.0 で入力 XML は検証されません。  入力 XML が有効でないか、適切な形式でない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から SQLXML にそのことがレポートされ、サーバーによって返された関連エラー情報がある場合はユーザーに伝達されます。  
   
--   SQLXML 4.0 は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で提供される DTD の制限付きサポートに依存しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]により、内部 DTD **xml**データ型のデータで、既定値を指定して、エンティティ参照に置き換えるの拡張コンテンツに使用することができます。 SQLXML では、サーバーに XML データが "そのまま" (内部 DTD を含めて) 渡されます。 ここで、サード パーティのツールを使用して DTD を XML スキーマ (XSD) ドキュメントに変換し、データをインライン XSD スキーマと共にデータベースに読み込むことができます。  
+-   SQLXML 4.0 は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で提供される DTD の制限付きサポートに依存しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、内部 DTD **xml**データ型のデータで、既定値を指定して、エンティティ参照に置き換えるの拡張コンテンツに使用することができます。 SQLXML では、サーバーに XML データが "そのまま" (内部 DTD を含めて) 渡されます。 ここで、サード パーティのツールを使用して DTD を XML スキーマ (XSD) ドキュメントに変換し、データをインライン XSD スキーマと共にデータベースに読み込むことができます。  
   
 -   SQLXML 4.0 では保持されません XML 宣言の処理命令 (など) の動作に基づいて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 代わりに、XML 宣言がするディレクティブとして扱われます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML パーサーとその属性 (バージョン、エンコーディング、およびスタンドアロン) が失われるデータに変換されます、 **xml**データ型。 XML データは内部的に UCS-2 として保存されます。 XML インスタンスの場合は、他のすべての処理命令は保持されます。許可されているが、 **xml**列 SQLXML でサポートされていることができます。  
   

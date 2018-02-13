@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.workload: On Demand
-ms.openlocfilehash: 98fdce174be9f7a3dc67d910a84f8558ede1b317
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 442d57154222fdb06ba26ad7858eb783103e93cd
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>Windows 上の SQL Server Management Studio (SSMS) を使用して、Linux 上の SQL Server を管理するには
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このトピックは、使用する方法を示します[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) Linux 上の SQL Server 2017 に接続します。 SSMS は、Windows アプリケーション、ので Linux 上のリモート SQL Server インスタンスに接続できる Windows コンピューターがある場合に SSMS を使用します。
+この記事は、使用する方法を示します[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) Linux 上の SQL Server 2017 に接続します。 SSMS は、Windows アプリケーション、ので Linux 上のリモート SQL Server インスタンスに接続できる Windows コンピューターがある場合に SSMS を使用します。
 
 正常に接続すると、データベースとの通信を確認する簡単な TRANSACT-SQL (T-SQL) クエリを実行します。
 

@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.workload: On Demand
-ms.openlocfilehash: 12a0f16762cac5411616d2add3fe548d7f7ec6c7
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a7cc0015af2ca7af7821175cdb836f71ba0ac6f5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>SQL Server on Linux に bcp を使用したデータの一括コピー
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="install-the-sql-server-command-line-tools"></a>SQL Server コマンド ライン ツールをインストールします。
 
-`bcp`SQL Server on Linux で自動的にインストールされていない SQL Server コマンド ライン ツールの一部です。 場合は、SQL Server コマンド ライン ツールを Linux コンピューターに既にインストールしていない、インストールする必要があります。 ツールをインストールする方法の詳細については、次の一覧から、ディストリビューションを選択します。
+`bcp` SQL Server on Linux で自動的にインストールされていない SQL Server コマンド ライン ツールの一部です。 場合は、SQL Server コマンド ライン ツールを Linux コンピューターに既にインストールしていない、インストールする必要があります。 ツールをインストールする方法の詳細については、次の一覧から、ディストリビューションを選択します。
 
 - [Red Hat Enterprise Linux (RHEL)](sql-server-linux-setup-tools.md#RHEL)
 - [Ubuntu](sql-server-linux-setup-tools.md#ubuntu)
@@ -62,7 +62,7 @@ sqlcmd -S localhost -U sa -P <your_password> -Q "CREATE DATABASE BcpSampleDB;"
 sqlcmd -S localhost -U sa -P <your_password> -d BcpSampleDB -Q "CREATE TABLE TestEmployees (Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY, Name NVARCHAR(50), Location NVARCHAR(50));"
 ```
 ### <a name="create-the-source-data-file"></a>元のデータ ファイルを作成します。
-コピーし、次のコマンドをターミナル ウィンドウに貼り付けます。 組み込みを使用して`cat`3 つのレコードでサンプル テキスト データ ファイルを作成するコマンドと、ホーム ディレクトリにファイルを保存する**~/test_data.txt**です。 レコードのフィールドはコンマで区切られます。
+コピーし、次のコマンドをターミナル ウィンドウに貼り付けます。 組み込みを使用してお`cat`3 つのレコードでサンプル テキスト データ ファイルを作成するコマンドと、ホーム ディレクトリにファイルを保存する**~/test_data.txt**です。 レコードのフィールドはコンマで区切られます。
 
 ```bash
 cat > ~/test_data.txt << EOF

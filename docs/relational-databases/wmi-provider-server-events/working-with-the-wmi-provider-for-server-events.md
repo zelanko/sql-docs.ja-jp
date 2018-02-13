@@ -22,19 +22,20 @@ helpviewer_keywords:
 - notifications [WMI]
 - WMI Provider for Server Events, security
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dd4fd5dbd42a132dd5f3ab8f6eef376f1b6fc3dc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: da5cc9e2163ba86ebb26f631c8b35d8590de27c5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>WMI Provider for Server Events の操作
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]このトピックでは、サーバー イベントの WMI プロバイダーを使用してプログラムの前に検討する必要がありますのガイドラインを示します。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+このトピックでは、WMI Provider for Server Events を使用したプログラミングを行う前に、検討する必要があるガイドラインを示します。  
   
 ## <a name="enabling-service-broker"></a>Service Broker の有効化  
  WMI Provider for Server Events は、イベントに対する WQL クエリを変換して、対象とするデータベースにイベント通知を作成します。 イベント通知のしくみを理解しておくと、プロバイダーに対してプログラミングを行う際に役立つ場合があります。 詳細については、「 [WMI Provider for Server Events の概念](http://technet.microsoft.com/library/ms180560.aspx)」を参照してください。  

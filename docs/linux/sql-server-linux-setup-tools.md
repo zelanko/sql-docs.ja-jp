@@ -1,6 +1,6 @@
 ---
 title: "Linux 上の SQL Server コマンド ライン ツールのインストール |Microsoft ドキュメント"
-description: "このトピックでは、Linux に SQL Server ツールをインストールする方法について説明します。"
+description: "この記事では、Linux に SQL Server ツールをインストールする方法について説明します。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: 16a2366541809237609c88f8458a3930a5569c3a
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 7a23c561b34668a46f86aaad006ff6faacb41f49
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd および bcp、SQL Server コマンド ライン ツールを Linux にインストールします。
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/01/2018
 - [macOS](#macos)
 - [Docker](#docker)
 
-このトピックでは、コマンド ライン ツールをインストールする方法について説明します。 使用する方法の例を探しているかどうかは**sqlcmd**または**bcp**を参照してください、[リンク](#next-steps)このトピックの最後。
+この記事では、コマンド ライン ツールをインストールする方法について説明します。 使用する方法の例を探しているかどうかは**sqlcmd**または**bcp**を参照してください、[リンク](#next-steps)このトピックの最後。
 
 ## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>RHEL 7 にツールをインストールします。
 
@@ -180,7 +180,7 @@ ms.lasthandoff: 02/01/2018
    source ~/.bashrc
    ```
 
-## <a id="macos"></a>MacOS にツールをインストールします。
+## <a id="macos"></a> MacOS にツールをインストールします。
 
 プレビュー **sqlcmd**と**bcp** macOS 上で利用できます。 詳細については、次を参照してください。、[アナウンス](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/)です。
 
@@ -196,7 +196,7 @@ brew install --no-sandbox mssql-tools
 #ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
-## <a id="docker"></a>Docker
+## <a id="docker"></a> Docker
 
 SQL Server 2017 CTP 2.0 以降では、SQL Server コマンド ライン ツールは、Docker イメージに含まれます。 対話型のコマンド プロンプトで、イメージをアタッチする場合は、ツールをローカルで実行することができます。
 

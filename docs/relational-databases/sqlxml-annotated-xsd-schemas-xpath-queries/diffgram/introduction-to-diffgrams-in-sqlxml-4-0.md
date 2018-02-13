@@ -8,26 +8,28 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - annotations [SQLXML]
 - DiffGrams [SQLXML], about DiffGrams
 ms.assetid: 1902d67f-baf3-46e6-a36c-b24b5ba6f8ea
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a653d706808ecb4d25490ad661125ffa4d81c5a4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5743cbab13add72e27351c74424e09bc028496d9
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>SQLXML 4.0 の DiffGram の概要
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]このトピックでは、Diffgram の概要を説明します。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+ここでは、DiffGram の概要を説明します。  
   
 ## <a name="diffgram-format"></a>DiffGram の書式  
  一般的な DiffGram の書式は次のとおりです。  
@@ -53,13 +55,13 @@ ms.lasthandoff: 11/17/2017
   
  DiffGram の書式は次のブロックで構成されています。  
   
- **\<DataInstance >**  
+ **\<DataInstance>**  
  この要素の名前**DataInstance**、このドキュメントでは説明のために使用します。 たとえば、.NET framework での値のデータセットから DiffGram を生成した場合、**名前**この要素の名前としてデータセットのプロパティを使用するとします。 このブロックには、変更後のすべての関連データを指定します。変更されていないデータも指定できます。 DiffGram の処理ロジックでは、このブロック内の要素を無視する、 **diffgr:hasChanges**属性が指定されていません。  
   
- **\<diffgr: する前に >**  
+ **\<diffgr:before>**  
  省略可能なブロックです。更新または削除する必要がある元のレコード インスタンス (要素) を指定します。 変更 (更新または削除) されるすべてのデータベースのテーブルでは、DiffGram 必要がありますの最上位要素として表示されます、 **\<する前に >**ブロックします。  
   
- **\<diffgr:errors >**  
+ **\<diffgr:errors>**  
  省略可能なブロックです。DiffGram の処理ロジックでは無視されます。  
   
 ## <a name="diffgram-annotations"></a>DiffGram の注釈  
@@ -81,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 |---------------|-----------------|  
 |Insert|要素が表示されたら、DiffGram は挿入操作を示す、  **\<DataInstance >**ブロックではなく、対応する**\<する前に >**ブロック、および、 **diffgr:hasChanges**属性を指定する (**diffgr:hasChanges = 挿入**) 要素にします。 DiffGram で指定されているレコード インスタンスを挿入します。 ここでは、、  **\<DataInstance >**データベースにブロックします。<br /><br /> 場合、 **diffgr:hasChanges**属性が指定されていない、処理ロジックで、要素は無視され、挿入は実行されません。 作業用サンプルについては、次を参照してください。 [DiffGram の例 &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).|  
 |Update|内の要素がある場合、DiffGram は更新操作を示す、\<する前に > が対応する要素が存在するブロック、  **\<DataInstance >**ブロック (つまり、両方の要素である、 **diffgr:id**同じ値を持つ属性) と**diffgr:hasChanges**値を持つ属性が指定されて**変更**要素で、 **\<DataInstance >**ブロックします。<br /><br /> 場合、 **diffgr:hasChanges**属性が要素で指定されていない、  **\<DataInstance >**ブロック、処理ロジックで、エラーが返されます。 作業用サンプルについては、次を参照してください。 [DiffGram の例 &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> 場合**diffgr:parentID**で指定された、 **\<する前に >**ブロックで指定されている要素の親子リレーションシップ**parentID**で使用されますレコードが更新される順序を決定します。|  
-|DELETE|要素が表示されたら、DiffGram は削除操作を示す、 **\<する前に >**ブロックではなく、対応する **\<DataInstance >**ブロックします。 DiffGram がで指定されているレコード インスタンスを削除するこの例では、 **\<する前に >**データベースからブロックされます。 作業用サンプルについては、次を参照してください。 [DiffGram の例 &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> 場合**diffgr:parentID**で指定された、 **\<する前に >**ブロックで指定されている要素の親子リレーションシップ**parentID**で使用されますレコードが削除される順序を決定します。|  
+|Del|要素が表示されたら、DiffGram は削除操作を示す、 **\<する前に >**ブロックではなく、対応する **\<DataInstance >**ブロックします。 DiffGram がで指定されているレコード インスタンスを削除するこの例では、 **\<する前に >**データベースからブロックされます。 作業用サンプルについては、次を参照してください。 [DiffGram の例 &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> 場合**diffgr:parentID**で指定された、 **\<する前に >**ブロックで指定されている要素の親子リレーションシップ**parentID**で使用されますレコードが削除される順序を決定します。|  
   
 > [!NOTE]  
 >  DiffGram にパラメーターを渡すことはできません。  

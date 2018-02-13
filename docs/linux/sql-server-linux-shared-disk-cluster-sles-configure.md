@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
-ms.openlocfilehash: 52747e7bc7a4ab04e0316669e350affb96fc73bf
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 9ef50e606e89d1e6673806ee0d90df510c6c6a68
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SQL Server の SLES 共有ディスク クラスターを構成します。
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="prerequisites"></a>前提条件
 
-次のエンド ツー エンド シナリオを完了するには、は、2 つのマシンを 2 つのノードのクラスターと NFS 共有を構成する別のサーバーを展開する必要があります。 以下の手順には、これらのサーバーを構成する方法を説明します。
+次のエンド ツー エンドのシナリオを完了するには、2 つのマシンを 2 つのノードのクラスターと NFS 共有を構成する別のサーバーを展開する必要があります。 以下の手順には、これらのサーバーを構成する方法を説明します。
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>セットアップし、各クラスター ノードで、オペレーティング システムを構成します。
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>インストールし、各クラスター ノードに SQL Server の構成
 
-1. インストールし、両方のノード上に SQL Server をセットアップします。 詳細な手順についてを参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)です。
+1. インストールし、両方のノード上に SQL Server をセットアップします。 詳細については、次を参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)です。
 2. プライマリ サーバーと、他の構成のために、セカンダリとして 1 つのノードを指定します。 これらの用語を使用して、次のこのガイドです。 
 3. セカンダリ ノードで停止し、SQL Server を無効にします。 次の例では、停止して、SQL Server を無効にします。
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/01/2018
 
     > [!NOTE]
     > Server マスター_キーの SQL Server インスタンスの生成し、に配置され、セットアップ時に`/var/opt/mssql/secrets/machine-key`です。 Linux では、SQL Server は、常に mssql と呼ばれるローカル アカウントとして実行されます。 ローカル アカウントであるために、その id は、ノード間で共有されません。 したがって、各ローカル mssql アカウント アクセスできるように、サーバーのマスター _ キーの暗号化を解除するは、各セカンダリ ノードにプライマリ ノードから、暗号化キーをコピーする必要があります。
-4. プライマリ ノードで、ペースの SQL server ログインの作成および実行する権限をログイン`sp_server_diagnostics`です。 ペースのどのノードは、SQL Server を実行していることを確認するのにアカウントが使用されます。
+4. プライマリ ノードで、ペースの SQL server ログインの作成および実行する権限をログイン`sp_server_diagnostics`です。 ペースでは、このアカウントを使用して、どのノードが SQL Server を実行していることを確認します。
 
     ```bash
     sudo systemctl start mssql-server
@@ -203,7 +203,7 @@ NFS サーバーを構成するのには、SUSE ドキュメントでは、次�
 - **SQL Server リソース名**: SQL Server のクラスター化リソースの名前。 
 - **タイムアウト値**: タイムアウトの値は、クラスターが、リソースがオンラインにしている間に待機する時間。 SQL Server では、これは、時間を表示するために SQL Server、`master`データベースがオンラインです。 
 
-以下のスクリプトを環境から値を更新します。 構成およびクラスター化されたサービスを開始する 1 つのノード上で実行します。
+次のスクリプトを環境から値を更新します。 構成およびクラスター化されたサービスを開始する 1 つのノード上で実行します。
 
 ```bash
 sudo crm configure

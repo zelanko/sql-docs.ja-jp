@@ -18,19 +18,20 @@ helpviewer_keywords:
 - monitoring events [WMI]
 - events [WMI]
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 37de98527c65803971285bd52134d26449954b23
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 90490b4884521f509d6e008f2bbde49605afd7b4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>WMI Provider for Server Events の概念
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]WMI Provider for Server Events を使用してのインスタンス内のイベントを監視する Windows Management Instrumentation (WMI) を使用できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+WMI Provider for Server Events を使用すると、Windows Management Instrumentation (WMI) によって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのイベントを監視できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [サーバー イベント用 WMI プロバイダーについて](../../relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md)  

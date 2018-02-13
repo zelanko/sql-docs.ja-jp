@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff0a1647573191483cc9c14e68734ee3a28707c4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77113446bfea793621c13567bdb30ff7381290ef
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field および sql:limit-value を使用した、値のフィルター選択 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]いくつかの制限値に基づいて、データベース クエリから返される行を制限することができます。 **Sql:limit-フィールド**と**sql:limit-値**注釈を使用制限値を含むデータベース列を識別するデータをフィルター処理に使用する特定の制限値を指定するには返されます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+データベース クエリから返される行を、一定の制限値に基づいて制限することができます。 **Sql:limit-フィールド**と**sql:limit-値**注釈を使用制限値を含むデータベース列を識別するデータをフィルター処理に使用する特定の制限値を指定するには返されます。  
   
  **Sql:limit-フィールド**注釈が制限値を格納する列を識別するためです。 各マップ要素または属性で許可されています。  
   

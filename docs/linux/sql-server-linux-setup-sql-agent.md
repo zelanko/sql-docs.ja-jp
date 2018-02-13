@@ -1,6 +1,6 @@
 ---
 title: "Linux 上の SQL Server エージェントのインストール |Microsoft ドキュメント"
-description: "このトピックでは、Linux に SQL Server エージェントをインストールする方法について説明します。"
+description: "この記事では、Linux に SQL Server エージェントをインストールする方法について説明します。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.workload: On Demand
-ms.openlocfilehash: 873c2da961db577889a3fca4139e325083d609e9
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 7db50a59a4a6ce9ab7aa416e4ac8d597449541b7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux 上の SQL Server エージェントをインストールします。
 
@@ -53,7 +53,7 @@ sudo yum update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-オフラインでインストールする場合は、検索で SQL Server エージェントのパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 トピックで説明されている同じオフライン インストール手順を使用して[SQL Server インストール](sql-server-linux-setup.md#offline)です。
+オフラインでインストールする場合は、検索で SQL Server エージェントのパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 記事で説明されている同じ、オフライン インストール手順に従って[SQL Server のインストール](sql-server-linux-setup.md#offline)です。
 
 ## <a name="ubuntu">Ubuntu をインストールします。</a>
 
@@ -73,7 +73,7 @@ sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-オフラインでインストールする場合は、検索で SQL Server エージェントのパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 トピックで説明されている同じオフライン インストール手順を使用して[SQL Server インストール](sql-server-linux-setup.md#offline)です。
+オフラインでインストールする場合は、検索で SQL Server エージェントのパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 記事で説明されている同じ、オフライン インストール手順に従って[SQL Server のインストール](sql-server-linux-setup.md#offline)です。
 
 ## <a name="SLES">SLES をインストールします。</a>
 
@@ -94,7 +94,7 @@ sudo zypper update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-オフラインでインストールする場合は、検索で SQL Server エージェントのパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 トピックで説明されている同じオフライン インストール手順を使用して[SQL Server インストール](sql-server-linux-setup.md#offline)です。
+オフラインでインストールする場合は、検索で SQL Server エージェントのパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 記事で説明されている同じ、オフライン インストール手順に従って[SQL Server のインストール](sql-server-linux-setup.md#offline)です。
 
 ## <a name="next-steps"></a>次の手順
 SQL Server エージェントを使用して、作成、スケジュール、およびジョブを実行する方法の詳細については、次を参照してください。 [Linux に SQL Server エージェント ジョブを実行](sql-server-linux-run-sql-server-agent-job.md)です。

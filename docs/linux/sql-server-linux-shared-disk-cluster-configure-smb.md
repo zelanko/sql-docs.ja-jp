@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 53c1bf7265cc15b9dd9401958317d4f14ea400d1
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 704cb4dfb96a2293bf1a595fda781519b70183cb
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>フェールオーバー クラスター インスタンス: SMB - Linux に SQL Server を構成します。
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 02/01/2018
     mkdir <TempDir>
     ```
 
-    <TempDir>フォルダーの名前です。 次の例では、/var/opt/mssql/tmp をという名前のフォルダーを作成します。
+    <TempDir> フォルダーの名前です。 次の例では、/var/opt/mssql/tmp をという名前のフォルダーを作成します。
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -172,7 +172,7 @@ ms.lasthandoff: 02/01/2018
     sudo systemctl status mssql-server
     ```
  
-   *    さらにテストするには、アクセス許可が正常であることを確認するデータベースを作成します。 次の例です。 TRANSACT-SQL を使用します。SSMS を使用することができます。
+   *    さらにテストするには、アクセス許可が正常であることを確認するデータベースを作成します。 次の例では、TRANSACT-SQL です。SSMS を使用することができます。
 
     ![10_testcreatedb][2] 
   
@@ -209,7 +209,7 @@ ms.lasthandoff: 02/01/2018
     mkdir <FolderName>
     ```
 
-    \<フォルダー名 > フォルダーの名前を指定します。 フォルダーの完全なパスを指定する必要は、適切な場所ではない場合。 次の例では、/var/opt/mssql/userdata をという名前のフォルダーを作成します。
+    \<フォルダー名 > フォルダーの名前を指定します。 フォルダーの完全なパスを指定する必要があります、適切な場所ではない場合。 次の例では、/var/opt/mssql/userdata をという名前のフォルダーを作成します。
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -239,7 +239,7 @@ ms.lasthandoff: 02/01/2018
  
    * スーパー ユーザーを使用できなくする exit」と入力します。
 
-   * テストするには、そのフォルダーにデータベースを作成します。 次に示す例では、sqlcmd を使用してデータベースを作成、コンテキストを切り替える、ファイルが、OS レベルが存在し、一時的な場所を削除します。 SSMS を使用することができます。
+   * テストするには、そのフォルダーにデータベースを作成します。 次の例では、sqlcmd を使用して、データベースを作成、コンテキストを切り替える、ファイルが、OS レベルが存在し、一時的な場所が削除されます。 SSMS を使用することができます。
  
    * 共有のマウントを解除します。 
 

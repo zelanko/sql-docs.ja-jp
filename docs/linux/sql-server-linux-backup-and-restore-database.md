@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.workload: On Demand
-ms.openlocfilehash: 9a0a1243ede149ada6a1042a246006929370a4b2
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 96450590b55a6cb9cf6fcf517380bc25a13c1431
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux 上のバックアップと復元の SQL Server データベース
 
@@ -71,7 +71,7 @@ sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM DISK = N'/var/opt/m
 ```
 
 > [!TIP]
-> コマンドを実行を誤って、NORECOVERY を使用していて、追加のログ ファイルのバックアップはありません、`RESTORE DATABASE demodb`追加パラメーターなしでします。 これは、復元を完了.、データベースを運用状態
+> コマンドを実行を誤って、NORECOVERY を使用していて、追加のログ ファイルのバックアップはありません、`RESTORE DATABASE demodb`追加パラメーターなしでします。 これにより、復元を完了し、運用データベース状態のまま。
 
 ### <a name="restore-the-transaction-log"></a>トランザクション ログを復元します。
 

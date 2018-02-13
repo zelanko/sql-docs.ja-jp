@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: 519728819aa79534a1c8cc3a079164d276924a44
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 5263a40e37388ea9a884cafeffe2302f56f0043e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを構成します。
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/01/2018
 > [!NOTE] 
 > Red Hat HA アドオンおよびドキュメントへのアクセスには、サブスクリプションが必要です。 
 
-として、次の図は、記憶域は、2 つのサーバーに表示されます。 -Corosync とペース - クラスタ リングのコンポーネントは、通信およびリソース管理を調整します。 サーバーのいずれかが、記憶域リソース、および SQL Server へのアクティブな接続です。 ペースが障害を検出したときに、クラスタ リングのコンポーネントは、他のノードに、リソースの移動を管理します。  
+次の図に示す 2 つのサーバーに記憶域が提供されます。 -Corosync とペース - クラスタ リングのコンポーネントは、通信およびリソース管理を調整します。 サーバーのいずれかが、記憶域リソース、および SQL Server へのアクティブな接続です。 ペースが障害を検出したときに、クラスタ リングのコンポーネントは、他のノードに、リソースの移動を管理します。  
 
 ![Red Hat Enterprise Linux 7 ディスク SQL クラスターの共有](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
@@ -39,13 +39,13 @@ ms.lasthandoff: 02/01/2018
 
 > [!NOTE] 
 > この時点では、ペースで SQL Server の統合は Windows での WSFC でとして結合します。 SQL 内ではありません、クラスターの存在についてのナレッジ、すべてのオーケストレーションが外であり、サービスは、スタンドアロン インスタンスとしてペースによって制御されます。 など、クラスター dmv sys.dm_os_cluster_nodes と sys.dm_os_cluster_properties ないレコードがされます。
-文字列のサーバー名を指す接続文字列を使用して、ip アドレスを使用しない、これらには、選択したサーバーの名前 (後述) の仮想 IP リソースを作成するために使用する ip アドレスが DNS サーバーに登録する必要があります。
+文字列のサーバー名を指す接続文字列を使用して、ip アドレスを使用しない、これらには、選択したサーバーの名前 (次のセクションで説明されている) と仮想 IP リソースの作成に使用される IP、DNS サーバーに登録する必要があります。
 
 次のセクションでは、フェールオーバー クラスター ソリューションをセットアップする手順について説明します。 
 
 ## <a name="prerequisites"></a>前提条件
 
-次のエンド ツー エンド シナリオを完了するには、2 台のコンピューターを 2 つのノードのクラスターと NFS サーバーを構成する別のサーバーを展開する必要があります。 以下の手順には、これらのサーバーを構成する方法を説明します。
+次のエンド ツー エンドのシナリオを完了するには、2 台のコンピューターを 2 つのノードのクラスターと NFS サーバーを構成する別のサーバーを展開する必要があります。 以下の手順には、これらのサーバーを構成する方法を説明します。
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>セットアップし、各クラスター ノードで、オペレーティング システムを構成します。
 
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>インストールし、各クラスター ノードに SQL Server の構成
 
-1. インストールし、両方のノード上に SQL Server をセットアップします。  詳細な手順についてを参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)です。
+1. インストールし、両方のノード上に SQL Server をセットアップします。  詳細については、次を参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)です。
 
 1. プライマリ サーバーと、他の構成のために、セカンダリとして 1 つのノードを指定します。 これらの用語を使用して、次のこのガイドです。  
 
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/01/2018
 > [!NOTE] 
 > Server マスター_キーの SQL Server インスタンスの生成し、に配置され、セットアップ時に`/var/opt/mssql/secrets/machine-key`です。 Linux では、SQL Server は、常に mssql と呼ばれるローカル アカウントとして実行されます。 ローカル アカウントであるために、その id は、ノード間で共有されません。 したがって、各ローカル mssql アカウント アクセスできるように、サーバーのマスター _ キーの暗号化を解除するは、各セカンダリ ノードにプライマリ ノードから、暗号化キーをコピーする必要があります。 
 
-1. プライマリ ノードで、ペースの SQL server ログインの作成および実行する権限をログイン`sp_server_diagnostics`です。 ペースのどのノードは、SQL Server を実行していることを確認するのにアカウントが使用されます。 
+1. プライマリ ノードで、ペースの SQL server ログインの作成および実行する権限をログイン`sp_server_diagnostics`です。 ペースでは、このアカウントを使用して、どのノードが SQL Server を実行していることを確認します。 
 
    ```bash
    sudo systemctl start mssql-server
@@ -131,19 +131,19 @@ NFS サーバー上には、次の操作を行います。
    sudo yum -y install nfs-utils
    ```
 
-1. 有効化と開始`rpcbind`
+1. 有効化と開始 `rpcbind`
 
    ```bash
    sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
-1. 有効化と開始`nfs-server`
+1. 有効化と開始 `nfs-server`
  
    ```bash
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  編集`/etc/exports`を共有するディレクトリをエクスポートします。 必要な共有フォルダーごとに 1 行を必要があります。 例: 
+1.  編集`/etc/exports`を共有するディレクトリをエクスポートします。 必要な共有フォルダーごとに 1 行を必要とします。 例: 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -233,7 +233,7 @@ NFS サーバー上には、次の操作を行います。
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->ファイル システム (FS) のリソースを使用して、下の推奨どおり場合、/etc/fstab にコマンドのマウントを保持する必要はありません。 FS クラスター化されたリソースを開始するときに、フォルダーをマウント ペースくれます。 フェンス操作のヘルプ、FS が 2 回マウントしないことを確認されます。 
+>以下を使用してファイル システム (FS) のリソースの指定どおり場合、/etc/fstab にコマンドのマウントを保持する必要はありません。 FS クラスター化されたリソースを開始するときに、フォルダーをマウント ペースくれます。 フェンス操作のヘルプでは、FS が 2 回マウントされていることを確認します。 
 
 1.  実行`mount -a`マウントされているパスを更新するシステムのコマンド。  
 
@@ -332,7 +332,7 @@ NFS サーバー上には、次の操作を行います。
    sudo pcs property set start-failure-is-fatal=false
    ```
 
-2. SQL Server、ファイル システムと仮想 IP リソースをクラスター リソースを構成し、クラスターに構成をプッシュします。 次の情報を必要となります。
+2. SQL Server、ファイル システムと仮想 IP リソースをクラスター リソースを構成し、クラスターに構成をプッシュします。 次の情報が必要です。
 
    - **SQL Server リソース名**: SQL Server のクラスター化リソースの名前。 
    - **IP リソース名を浮動**: 仮想 IP アドレス リソースの名前。
@@ -342,7 +342,7 @@ NFS サーバー上には、次の操作を行います。
    - **デバイス**: にマウントされている共有へのローカル パス
    - **すれば**: ファイル共有の種類 (つまり nfs)
 
-   以下のスクリプトを環境から値を更新します。 構成およびクラスター化されたサービスを開始する 1 つのノード上で実行します。  
+   次のスクリプトを環境から値を更新します。 構成およびクラスター化されたサービスを開始する 1 つのノード上で実行します。  
 
    ```bash
    sudo pcs cluster cib cfg 

@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 8c055558b2a1e8287272835a0a1c0d2e2dc94f02
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 4e1190fea92c1e84ce38bd46040a8b5fcdd532d7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>作成し、Linux 上の SQL Server の可用性グループを構成します。
 
@@ -64,7 +64,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>再起動[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>再起動 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Windows では、再起動する必要があります、可用性グループを有効にした後[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]です。 次のように行えます。
 
 ```bash
@@ -365,7 +365,7 @@ sudo systemctl restart mssql-server
 
 12. **[次へ]**をクリックします。
 
-13. セカンダリ レプリカの初期化方法を選択します。 既定値が使用するには[自動シード処理](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)、可用性グループに参加しているすべてのサーバー上の同じパスにする必要があります。 ウィザードはバックアップ、コピー、および (2 番目のオプション); を復元することもできます。手動でバックアップ、コピー、および、レプリカ上のデータベースを復元する場合に参加させて (オプション 3) です。データベースを後で追加または (最後のオプション)。 同様に証明書を手動でバックアップを作成すると、コピーすることは、バックアップ ファイルのアクセス許可は、その他のレプリカに設定する必要があります。 **[次へ]**をクリックします。
+13. セカンダリ レプリカの初期化方法を選択します。 既定値が使用するには[自動シード処理](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)、可用性グループに参加しているすべてのサーバー上の同じパスにする必要があります。 ウィザードはバックアップ、コピー、および (2 番目のオプション); を復元することもできます。手動でバックアップ、コピー、および、レプリカ上のデータベースを復元する場合に参加させて (オプション 3) です。データベースを後で追加または (最後のオプション)。 同様に証明書を手動でバックアップを作成すると、コピーすることは、バックアップ ファイルのアクセス許可を他のレプリカに設定する必要があります。 **[次へ]**をクリックします。
 
 14. [検証] ダイアログ ボックスで、成功として戻すすべて作成されていない場合を調査します。 いくつかの警告は許容といない致命的などのリスナーを作成しない場合です。 **[次へ]**をクリックします。
 
@@ -596,7 +596,7 @@ sudo systemctl restart mssql-server
     ```
 
     >[!NOTE]
-    >RHEL 7.4 で master データベースの使用で警告が発生する可能性があります。 これを回避するには、次のように使用します。`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
+    >RHEL 7.4 で master データベースの使用で警告が発生する可能性があります。 これを回避するには、次のように使用します。 `sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
    
     **SUSE Linux Enterprise Server (SLES)**
     

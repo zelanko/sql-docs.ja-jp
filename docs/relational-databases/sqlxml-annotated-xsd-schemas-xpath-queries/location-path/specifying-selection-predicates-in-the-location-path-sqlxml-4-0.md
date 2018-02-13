@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - filtering [SQLXML]
 - location path for XPath query
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2b476304fddd169a253a3777bb1a0fb4d53087f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08a27de5e9c528d3e49156df804f19376ae5a6bd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>ロケーション パスでの選択述語の指定 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]述語は、(SELECT ステートメントの WHERE 句に似ています)、軸に関してノード セットをフィルター処理します。 述語はかっこで囲みます。 フィルター選択されたノード セットの各ノードに対し、ノードをコンテキスト ノード、ノード セット内のノード数をコンテキストのサイズとして、述語式が評価されます。 述語式が TRUE と評価された場合、そのノードは結果のノード セットに含められます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+述語は、SELECT ステートメントの WHERE 句と同様に、軸についてノード セットをフィルター選択するものです。 述語はかっこで囲みます。 フィルター選択されたノード セットの各ノードに対し、ノードをコンテキスト ノード、ノード セット内のノード数をコンテキストのサイズとして、述語式が評価されます。 述語式が TRUE と評価された場合、そのノードは結果のノード セットに含められます。  
   
  XPath では、位置に基づくフィルター選択を行うこともできます。 数値として評価される述語式を使用すると、その序数に対応するノードが選択されます。 たとえば、ロケーション パス `Customer[3]` では、3 番目の顧客が返されますが、 このような数値述語はサポートされていません。 サポートされているのは、ブール値の結果を返す述語式のみです。  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- この XPath クエリでは、`child` と `attribute` は軸名で、 `Customer`ノード テストです (場合は TRUE`Customer`は、 **\<要素ノード >**ので、 **\<要素 >**の主ノード型は、`child`軸) です。 `attribute::CustomerID="ALFKI"` は述語です。 述語で`attribute`軸と`CustomerID`ノード テストです (場合は TRUE **CustomerID**ためコンテキスト ノードの属性は、 **\<属性 >**プリンシパルは、ノード型**属性**軸) です。  
+ この XPath クエリでは、`child` と `attribute` は軸名で、 `Customer` ノード テストです (場合は TRUE`Customer`は、 **\<要素ノード >**ので、 **\<要素 >**の主ノード型は、`child`軸) です。 `attribute::CustomerID="ALFKI"` は述語です。 述語で`attribute`軸と`CustomerID`ノード テストです (場合は TRUE **CustomerID**ためコンテキスト ノードの属性は、 **\<属性 >**プリンシパルは、ノード型**属性**軸) です。  
   
  省略構文を使用した場合、XPath クエリは次のように指定できます。  
   
@@ -77,7 +79,7 @@ child::Customer[child::ContactName]
   
  この例では、  **\<ContactName >**の子要素、 **\<顧客 >**と呼ばれる XML ドキュメント内の要素*要素中心のマッピング*注釈付き XSD スキーマです。  
   
- この XPath 式では、`child` が軸名で、 `Customer`ノード テストです (場合は TRUE`Customer`は、 **\<要素 >**ノード、ため**\<要素 >**の主ノード型は、`child`軸) です。 `child::ContactName` は述語です。 述語で`child`軸と`ContactName`ノード テストです (場合は TRUE`ContactName`は、 **\<要素 >**ノード)。  
+ この XPath 式では、`child` が軸名で、 `Customer` ノード テストです (場合は TRUE`Customer`は、 **\<要素 >**ノード、ため**\<要素 >**の主ノード型は、`child`軸) です。 `child::ContactName` は述語です。 述語で`child`軸と`ContactName`ノード テストです (場合は TRUE`ContactName`は、 **\<要素 >**ノード)。  
   
  この式はだけを返す、 **\<顧客 >**を含むコンテキスト ノードの要素の子 **\<ContactName >**子要素です。  
   
@@ -96,7 +98,7 @@ child::Customer[not(child::ContactName)]
   
  この例では、  **\<ContactName >**の子要素、 **\<顧客 >** XML ドキュメントであり、ContactName フィールド内の要素は必須でない、データベースです。  
   
- この例では、`child` は軸で、 `Customer`ノード テストです (場合は TRUE`Customer`は、\<要素 > ノード)。 `not(child::ContactName)` は述語です。 述語で`child`軸と`ContactName`ノード テストです (場合は TRUE`ContactName`は、\<要素 > ノード)。  
+ この例では、`child` は軸で、 `Customer` ノード テストです (場合は TRUE`Customer`は、\<要素 > ノード)。 `not(child::ContactName)` は述語です。 述語で`child`軸と`ContactName`ノード テストです (場合は TRUE`ContactName`は、\<要素 > ノード)。  
   
  省略構文を使用した場合、XPath クエリは次のように指定できます。  
   
@@ -120,7 +122,7 @@ Customer[@CustomerID]
 ```  
   
 ## <a name="selection-predicate-example-6"></a>選択述語 : 例 6  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 では、次の例に示すように、述語にクロス積を含む XPath クエリがサポートされています。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 には、次の例で示すように、述語にクロス積を含む XPath クエリのサポートが含まれています。  
   
 ```  
 Customer[Order/@OrderDate=Order/@ShipDate]  

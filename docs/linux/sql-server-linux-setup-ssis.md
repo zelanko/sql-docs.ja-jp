@@ -10,16 +10,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: accd3a7f7abe9dd4771971e241868ef61a4f5dd0
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: d2715583f9898afe9101be4d24729547730ae376
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux 上の SQL Server Integration Services (SSIS) のインストールします。
 
@@ -32,7 +32,7 @@ SQL Server Integration Services をインストールするには、この記事
 - [Ubuntu](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-## <a name="ubuntu"></a>Ubuntu で SSIS をインストールします。
+## <a name="ubuntu"></a> Ubuntu で SSIS をインストールします。
 インストールする、 `mssql-server-is` Ubuntu でパッケージ化、これらの手順に従います。
 
 1. パブリック リポジトリ鍵キーをインポートします。
@@ -79,7 +79,7 @@ sudo apt-get install mssql-server-is
 sudo apt-get remove mssql-server-is
 ```
 
-## <a name="RHEL"></a>RHEL に SSIS をインストールします。
+## <a name="RHEL"></a> RHEL に SSIS をインストールします。
 インストールする、 `mssql-server-is` RHEL にパッケージ化、これらの手順に従います。
 
 1. Microsoft SQL Server の Red Hat リポジトリの構成ファイルをダウンロードします。

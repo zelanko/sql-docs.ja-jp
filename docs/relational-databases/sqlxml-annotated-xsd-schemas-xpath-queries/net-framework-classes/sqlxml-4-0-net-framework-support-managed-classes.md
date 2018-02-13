@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,21 +25,22 @@ helpviewer_keywords:
 - data providers [SQLXML], SQLXML Managed Classes
 - SQLXML, Managed Classes
 ms.assetid: 73a5faeb-dabf-4895-acb5-a9651b646065
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f2d79aae0c863030a478ed2e3859785d491be61
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8af16544cc8fa3e9291087662bba6cbb273b4082
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sqlxml-40-net-framework-support---managed-classes"></a>SQLXML 4.0 の .NET Framework のサポート、マネージ クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 のインスタンスから XML データにアクセスするアプリケーションを作成できるようにする機能をサポートしている[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、データを取り込み、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 環境、プロセス データおよびに送信[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 のインスタンスから XML データにアクセスするアプリケーションを作成できるようにする機能をサポートしている[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、データを取り込み、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 環境や、データの処理に送信[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 
   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML マネージ クラスでは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 内で SQLXML 4.0 の機能へのアクセスが提供されます。 SQLXML マネージ クラスを使用すると、C# アプリケーションを作成して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスから XML データにアクセスしたり、.NET Framework 環境にデータを取り込んだり、データを処理したり、変更を DiffGram として [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信し適用することができます。 SQL マネージ クラスを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに更新を適用するときには、マッピング スキーマを使用する必要があります。 作業用サンプルについては、次を参照してください。 [.NET 環境での SQLXML 機能へのアクセス](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)です。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML マネージ クラス内で SQLXML 4.0 の機能を公開する、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET フレームワークです。 SQLXML マネージ クラスを使用すると、C# アプリケーションを作成して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスから XML データにアクセスしたり、.NET Framework 環境にデータを取り込んだり、データを処理したり、変更を DiffGram として [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信し適用することができます。 SQL マネージ クラスを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに更新を適用するときには、マッピング スキーマを使用する必要があります。 作業用サンプルについては、次を参照してください。 [.NET 環境での SQLXML 機能へのアクセス](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)です。  
   
  SQLXML 4.0 で SQLXML マネージ クラスを使用するには、Microsoft Visual Studio をインストールする必要があります。  
   

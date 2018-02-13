@@ -21,10 +21,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 49cdcb7768103ba9cfd62a58bcdcbf5399ae09a1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>カスタム コンポーネントの複数バージョン対応のサポート
  SQL Server Data Tools (SSDT) で SSIS デザイナーを使用して、SQL Server 2016、SQL Server 2014、または SQL Server 2012 をターゲットとするパッケージを作成、管理、および実行できるようになりました。 Visual Studio 2015 用の SSDT を入手する方法については、「[最新の SQL Server Data Tools のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。 

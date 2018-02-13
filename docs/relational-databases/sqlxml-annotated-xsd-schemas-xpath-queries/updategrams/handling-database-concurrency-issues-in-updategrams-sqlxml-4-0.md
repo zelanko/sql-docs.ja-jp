@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - concurrency [SQLXML]
 - intermediate concurrency protection [SQLXML]
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 42193f8bcb67b8b89e0f3f2d435645cae3fc4b19
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1e19d8397d59b4c85d60593c63faa5bc6f0f2ea4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>アップデートグラムでのデータベースの同時実行に関する問題への対応 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]その他のデータベースの更新メカニズムのようなアップデート グラムはマルチ ユーザー環境でのデータへの同時更新を扱う必要があります。 アップデートグラムではオプティミスティック同時実行制御が使用されます。この機能では、更新するデータがデータベースからの読み取り後に他のユーザー アプリケーションによって変更され邸内事を確認するために、選択フィールド データの比較がスナップショットとして使用されます。 アップデート グラムは、これらのスナップショット値で、 **\<する前に >**アップデート グラムのブロックです。 アップデート グラムがで指定されている値をチェックするデータベースを更新する前に、 **\<する前に >**ブロックに対して、更新プログラムが有効であることを確認するデータベースの現在の値。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+アップデートグラムは、他のデータベースの更新メカニズムと同様に、マルチサーバー環境での同時実行更新に対応しています。 アップデートグラムではオプティミスティック同時実行制御が使用されます。この機能では、更新するデータがデータベースからの読み取り後に他のユーザー アプリケーションによって変更され邸内事を確認するために、選択フィールド データの比較がスナップショットとして使用されます。 アップデート グラムは、これらのスナップショット値で、 **\<する前に >**アップデート グラムのブロックです。 アップデート グラムがで指定されている値をチェックするデータベースを更新する前に、 **\<する前に >**ブロックに対して、更新プログラムが有効であることを確認するデータベースの現在の値。  
   
  アップデートグラムでは、オプティミスティック同時実行制御による保護を低 (なし)、中、高の 3 レベルで使用できます。 必要な保護レベルを適用するには、アップデートグラムで適切に指定する必要があります。  
   
@@ -61,7 +63,7 @@ ms.lasthandoff: 11/17/2017
   
  このレベルの保護は、主キー列とでは、更新する列を指定して取得できます、 **\<する前に >**ブロックします。  
   
- たとえば、このアップデートグラムでは、Person.Contact テーブルで、ContactID が 1 となっている連絡先の Phone 列の値が変更されます。 **\<する前に >**ブロックを指定します、 **Phone**属性をこの属性値、更新された値を適用する前に、データベース内の対応する列の値に一致することを確認してください。.  
+ たとえば、このアップデートグラムでは、Person.Contact テーブルで、ContactID が 1 となっている連絡先の Phone 列の値が変更されます。 **\<する前に >**ブロックを指定します、 **Phone**属性をこの属性値、更新された値を適用する前に、データベース内の対応する列の値に一致することを確認してください.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

@@ -12,19 +12,20 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: "100"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 4bbb387c935dc07e467125921ef11986ea004c21
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 リリース ノート
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)] このリリース ノートでは、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] のインストールやトラブルシューティングを行う前に知っておく必要がある、既知の問題について説明しています。  
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+このリリース ノートでは、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]のインストールやトラブルシューティングを行う前に知っておく必要がある、既知の問題について説明しています。  
   
 ## <a name="top"></a>目次  
 [1.0 インストールの準備](#BeforeInstall)  
@@ -214,7 +215,7 @@ optimized table or natively compiled stored procedure with object ID
 0xc00cee81.  
 ```  
   
-**回避策:** 2 つの回避策が推奨されます。  
+**回避策:** &2; つの回避策が推奨されます。  
   
 1.  次の例のように、式にかっこを追加します。  
   
@@ -230,7 +231,7 @@ optimized table or natively compiled stored procedure with object ID
     SELECT((@v0 + ... + @v49) + (@v50 + ... + @v99)) + ((@v100 + ... + @v149) + (@v150 + ... + @v199))  
     ```  
   
-2.  SHOWPLAN を対象にして、わずかに簡略化した式を使用する2 番目のプロシージャを作成します。プランの全般的な形式は同じままにします。 たとえば、次の表記の代わりに、  
+2.  SHOWPLAN を対象にして、わずかに簡略化した式を使用する&2; 番目のプロシージャを作成します。プランの全般的な形式は同じままにします。 たとえば、次の表記の代わりに、  
   
     ```  
     SELECT @v0 +@v1 +@v2 +...+@v199  
@@ -245,7 +246,7 @@ optimized table or natively compiled stored procedure with object ID
 #### <a name="328-using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>3.2.8 ネイティブ コンパイル ストアド プロシージャ内にある DATEPART とそれに関連する関数で文字列パラメーターまたは文字列変数を使用するとエラーが発生する  
 **問題点:** ネイティブ コンパイル ストアド プロシージャ内で組み込み関数 DATEPART、DAY、MONTH、YEAR と共に、(var)char または n(var)char のような文字列データ型のパラメーターまたは変数を使用すると、データ型 datetimeoffset がネイティブ コンパイル ストアド プロシージャ内でサポートされていないことを示すエラー メッセージが出力されます。  
   
-**回避策:** 文字列パラメーターまたは文字列変数に対して、新しい変数型である datetime2 を割り当て、DATEPART、DAY、MONTH、または YEAR 関数を使用します。 例:  
+**回避策:** 文字列パラメーターまたは文字列変数に対して、新しい変数型である datetime2 を割り当て、DATEPART、DAY、MONTH、または YEAR 関数を使用します。 例 :  
   
 ```  
 DECLARE @d datetime2 = @string  
@@ -289,17 +290,17 @@ instance_id の値の不一致という問題が既に発生している場合�
 ### <a name="41-the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>4.1 SQL Server 2012 Reporting Services ネイティブ モード レポート サーバーを SQL Server 2014 Reporting Services SharePoint コンポーネントとサイド バイ サイドで実行できない  
 **問題点:**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モードの Windows サービス SQL Server Reporting Services (ReportingServicesService.exe) の起動に失敗します。  
   
-**回避策:**  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint コンポーネントをアンインストールし、Microsoft SQL Server 2012 Reporting Services の Windows サービスを再起動します。  
+**回避策:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint コンポーネントをアンインストールし、Microsoft SQL Server 2012 Reporting Services の Windows サービスを再起動します。  
   
 **詳細情報:**  
   
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モードは、次のいずれのものともサイド バイ サイドで実行することはできません。  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 製品用アドイン  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 製品用 アドイン  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共有サービス  
   
-サイド バイ サイド インストールでは、 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モード Windows Service を起動することはできません。 次のようなエラー メッセージが Windows イベント ログに記録されます。  
+サイド バイ サイド インストールでは、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モード Windows Service を起動することはできません。 次のようなエラー メッセージが Windows イベント ログに記録されます。  
   
 ```  
 Log Name:   Application  
@@ -339,7 +340,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 ### <a name="51-the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>5.1 Windows Azure で可用性グループ リスナーを構成するときに Azure のレプリカ追加ウィザードでエラーが返される  
 **問題点:** 可用性グループ にリスナーが存在する場合は、Windows Azure でリスナーを構成しようとしたときに、Azure のレプリカ追加ウィザードでエラーが返されます。  
   
-Azure サブネットを含め、可用性グループのレプリカをホストしているすべてのサブネットで、可用性グループ リスナーに1 つの IP アドレスを割り当てることが必要とされるのが原因です。  
+Azure サブネットを含め、可用性グループのレプリカをホストしているすべてのサブネットで、可用性グループ リスナーに&1; つの IP アドレスを割り当てることが必要とされるのが原因です。  
   
 **回避策:**  
   

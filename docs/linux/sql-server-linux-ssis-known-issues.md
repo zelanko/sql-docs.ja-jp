@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: edff09c1c66a1b3c97a80d42d5a1d9702dca3e0c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fc2455ea79931b051c83677fc918c0382afcab3b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>制限事項と Linux の SSIS の既知の問題
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 この記事の内容について説明します現在の制限事項と既知の問題 SQL Server Integration Services (SSIS) を Linux 上。
 
@@ -40,7 +42,7 @@ ms.lasthandoff: 12/08/2017
 
 その他の制限事項と Linux 上の SSIS に関する既知の問題には、次を参照してください。、[リリース ノート](sql-server-linux-release-notes.md#ssis)です。
 
-## <a name="components"></a>サポートされており、サポートされていないコンポーネント
+## <a name="components"></a> サポートされており、サポートされていないコンポーネント
 
 次の組み込みの Integration Services コンポーネントは、Linux でサポートされます。 Linux プラットフォーム上の制限は、次の表で説明したようにそれらの一部があります。
 
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/08/2017
 - 式タスク
 - FTP タスク
 - Web サービス タスク
-- XML タスク
+- XML Task
 
 ### <a name="control-flow-tasks-supported-with-limitations"></a>制御フロー タスクの制限付きでサポート
 
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/08/2017
 | ADO.NET ソースと変換先 | SQLClient データ プロバイダーのみをサポートします。 |
 | フラット ファイル ソースと変換先 | のみ、既定のパス マッピング規則を適用する、Windows 形式ファイル パスをサポートします。 たとえば`D:\home\ssis\travel.csv`なります`/home/ssis/travel.csv`です。 |
 | OData ソース | 基本認証のみをサポートします。 |
-| Odbc 入力元および変換先 | Linux 上の 64 ビットの Unicode ODBC ドライバーをサポートしています。 Linux 上の UnixODBC ドライバー マネージャーに依存します。 |
+| ODBC のソースとターゲット | Linux 上の 64 ビットの Unicode ODBC ドライバーをサポートしています。 Linux 上の UnixODBC ドライバー マネージャーに依存します。 |
 | OLE DB ソースと変換先 | のみ SQL Server の SQL Server Native Client 11.0 と Microsoft OLE DB プロバイダーをサポートします。 |
 | | |
 

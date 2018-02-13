@@ -9,28 +9,29 @@ ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, tsql reference
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ffc2bcd906e0d975d763d12aaa899cb414ef6b5e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a8cdff2f5407ae25f096ff65c0110e22a28bfb09
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>グラフのデータベースを作成し、T-SQL を使用してクエリに一致するパターンを実行
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-このサンプルでは、[!INCLUDE[tsql-md](../../includes/tsql-md.md)]ノードとエッジで、グラフのデータベースを作成して新しい MATCH 句を使用していくつかのパターンに一致し、グラフを走査するスクリプト。 このサンプル スクリプトは Azure SQL データベースで動作し、[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+このサンプルでは、[!INCLUDE[tsql-md](../../includes/tsql-md.md)]ノードとエッジで、グラフのデータベースを作成して新しい MATCH 句を使用していくつかのパターンに一致し、グラフを走査するスクリプト。 このサンプル スクリプトは Azure SQL データベースで動作し、 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
  
 ## <a name="sample-schema"></a>サンプル スキーマ  
 このサンプルは、人、レストラン、市区町村のノードを持つ仮想的なソーシャル ネットワークの図 1 に示したようにグラフ スキーマを作成します。 これらのノードが、友人を使用して相互に接続されている、LivesIn と LocatedIn のエッジが好きです。 

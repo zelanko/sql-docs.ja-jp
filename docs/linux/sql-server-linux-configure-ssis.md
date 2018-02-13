@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 015c170e998fc824a8816010288b33be33d89005
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ee15f5b5124d96b2f8033515f95f03c3aab89ae3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Ssis conf で Linux 上の SQL Server Integration Services を構成します。
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 実行する、 `ssis-conf` Red Hat Enterprise Linux および Ubuntu 用 SQL Server Integration Services (SSIS) をインストールすると、構成スクリプト。 SSIS のインストールに関する詳細については、次を参照してください。[インストール SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)です。
 
@@ -29,7 +31,7 @@ ms.lasthandoff: 12/08/2017
 
 | Command | Description |
 |-------------|---------------------------------------------------------------------|
-| セット エディション | SQL Server のエディションを設定します。                                       |
+| set-edition | SQL Server のエディションを設定します。                                       |
 | 製品利用統計情報   | 有効にするにまたは SQL Server Integration Services 製品利用統計情報サービスを無効にします。 |
 | セットアップ       | Microsoft SQL Server Integration Services の初期化し、セットアップ      |
 |||

@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: cf0a61c924a10066a41bcf4127e444b60f0f50bc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 68e41573c107725ef7af12e8b990678f8991bb02
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Linux 上の可用性グループに対して常に実行します。
 
@@ -129,7 +129,7 @@ ms.lasthandoff: 02/01/2018
  [SLES 管理ガイド - リソース](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 
-### <a name="forceManual"></a>クラスター ツールの応答がありません手動移動します。 
+### <a name="forceManual"></a> クラスター ツールの応答がありません手動移動します。 
 
 極端な場合、ユーザーがクラスターと対話するためのクラスター管理ツールを使用できない場合 (つまり、クラスターが応答していない、クラスター管理ツールがある障害のある動作)、ユーザーが手動でフェールオーバーする必要があります外部クラスター マネージャーをバイパスします。 これはお勧めできませんの定期的操作は、クラスター管理ツールを使用してフェールオーバー操作を実行するクラスターが失敗している場合内で使用する必要があります。
 
@@ -158,7 +158,7 @@ ms.lasthandoff: 02/01/2018
    EXEC sp_set_session_context @key = N'external_cluster', @value = N'yes';
    ```
 
-1. Transact SQL を使用した可用性グループのフェールオーバーは失敗します。 置換次の例で`<**MyAg**>`可用性グループの名前に置き換えます。 対象のセカンダリ レプリカをホストする SQL Server のインスタンスに接続し、次のコマンドを実行します。
+1. Transact SQL を使用した可用性グループのフェールオーバーは失敗します。 次の例では、置換`<**MyAg**>`可用性グループの名前に置き換えます。 対象のセカンダリ レプリカをホストする SQL Server のインスタンスに接続し、次のコマンドを実行します。
 
    ```Transact-SQL
    ALTER AVAILABILITY GROUP <**MyAg**> FAILOVER;
@@ -244,7 +244,7 @@ ms.lasthandoff: 02/01/2018
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. フェールオーバー後は、b.1 b.3 上記の手順で説明されている同じ手順を繰り返して、古いプライマリ レプリカで SQL Server をアップグレードします。
+1. フェールオーバー後は、b.1 b.3 の手順で説明されている同じ手順を繰り返して、古いプライマリ レプリカで SQL Server をアップグレードします。
 
    次の例のアップグレード`mssql-server`と`mssql-server-ha`パッケージです。
 
@@ -267,7 +267,7 @@ ms.lasthandoff: 02/01/2018
    pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
-1. 外部のクラスターで、可用性グループ マネージャー - クラスターの入力場所は外部、クリーンアップ、手動フェールオーバーが発生した場所の制約条件です。 
+1. クラスターの種類が外部、-、外部のクラスター マネージャーで、可用性グループの手動フェールオーバーが発生した場所の制約をクリーンアップします。 
 
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  

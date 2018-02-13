@@ -1,7 +1,7 @@
 ---
 title: "テーブル モデリング (互換性レベル 1200) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 01/17/2018
+ms.date: 02/10/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -11,23 +11,24 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 keywords:
 - Analysis Services
 - "テーブル モデル"
 - "チュートリアル"
 - SSAS
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 20248d68dc0371ef158f287d1f3a8bc9e87360d3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3bf21d3debd7c24ea7b2e5ddcea56392e0f33400
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>テーブル モデリング (互換性レベル 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/18/2018
 SQL Server 2017 または Azure Analysis Services を使用して、1400 互換性のレベルでモデルを作成、使用する場合、 [Azure Analysis Services - Adventure Works チュートリアル](https://review.docs.microsoft.com/azure/analysis-services/tutorials/aas-adventure-works-tutorial?branch=master)です。 この更新されたバージョンは、新しい、最新のデータの取得機能を使用して接続し、ソース データをインポートし、パーティションを構成する、M 言語を使用します。
  
   
-## <a name="what-youll-learn"></a>学習する内容   
+## <a name="what-you-learn"></a>学習内容   
   
 -   SSDT で新しいテーブル モデル プロジェクトを作成する方法。
   
@@ -47,7 +48,7 @@ SQL Server 2017 または Azure Analysis Services を使用して、1400 互換�
   
 -   モデル データの分析を支援するための、計算、計測、および主要業績評価指標を作成および管理する方法。  
   
--   ビジネスおよびアプリケーション固有のビューポイントを提供して、ユーザーがモデル データをより簡単に参照できるようにするためのパースペクティブや階層を作成および管理する方法。  
+-   パースペクティブとビジネスとアプリケーション固有のビュー ポイントを提供することによって、モデル データを簡単に参照複数ユーザーを支援する階層を作成および管理方法です。  
   
 -   パーティションを作成してテーブル データをより小さな論理部分に分割し、他のパーティションと分離して処理できるようにする方法。  
   
@@ -60,22 +61,22 @@ SQL Server 2017 または Azure Analysis Services を使用して、1400 互換�
   
 あなたは、販売チーム、マーケティング チーム、および上級管理職のデータ分析ニーズにより高度に対応するべく、AdventureWorksDW サンプル データベース内のインターネット販売データを分析するためのテーブル モデルを作成します。  
   
-このチュートリアル (および Adventure Works Internet Sales テーブル モデル) を完了するには、多数のレッスンを完了する必要があります。 各レッスンに多数の実習が含まれています。レッスンを完了するには、各実習を順序どおりに完了する必要があります。 特定のレッスンである可能性があります、同様の結果を実現するいくつかのタスクが、各タスクを完了する方法は若干異なります。 これは、特定のタスクを完了して、前のタスクで学習したスキルが身に複数の 1 つの方法が多くの場合、ことを示します。  
+このチュートリアル (および Adventure Works Internet Sales テーブル モデル) を完了するには、多数のレッスンを完了する必要があります。 各レッスンでは、多くのタスクです。順序で各タスクの完了は、レッスンを完了する必要があります。 特定のレッスンである可能性があります、同様の結果を実現するいくつかのタスクが、各タスクを完了する方法は若干異なります。 これは、特定のタスクを完了して、前のタスクで学習したスキルが身に複数の 1 つの方法が多くの場合、ことを示します。  
   
-各レッスンの目的は、SSDT に含まれる機能の多くを使用して、インメモリ モードで実行されている基本的な表形式モデルの作成を指示します。 各レッスンは前のレッスンに基づいているので、順序どおりに完了する必要があります。 すべてのレッスンを完了したら、作成し、Adventure Works Internet Sales サンプル テーブル モデルの Analysis Services サーバーを展開したされます。  
+各レッスンの目的は、SSDT に含まれる機能の多くを使用して、インメモリ モードで実行されている基本的な表形式モデルの作成を指示します。 各レッスンは前のレッスンに基づいているので、順序どおりに完了する必要があります。 すべてのレッスンを完了したら、作成し、Analysis Services サーバーで Adventure Works Internet Sales サンプル テーブル モデルを展開しました。  
   
 このチュートリアルでは、配置したテーブル モデル データベースを SQL Server Management Studio で管理する方法や、レポート クライアント アプリケーションを使用して配置済みのモデルに接続し、モデル データを参照する方法については説明しません。  
   
 ## <a name="prerequisites"></a>前提条件  
-このチュートリアルを完了するために次の前提条件が必要です。  
+このチュートリアルを完了するのには、次の前提条件が必要です。  
   
--   最新バージョンの [!含める[ssBIDevStudioFull](../ssdt/download-sql-server-data-tools-ssdt.md)です。
+-   最新バージョン[SSDT](../ssdt/download-sql-server-data-tools-ssdt.md)です。
 
 -   SQL Server Management Studio の最新バージョン。 [最新バージョンを入手](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)です。 
   
--   などのクライアント アプリケーション[Power BI Desktop](https://powerbi.microsoft.com/desktop/)または[!INCLUDE[msCoName](../includes/msconame-md.md)]Excel です。    
+-   などのクライアント アプリケーション[Power BI Desktop](https://powerbi.microsoft.com/desktop/)または Excel です。    
   
--   Adventure Works DW 2014 サンプル データベースと SQL Server インスタンス。 このサンプル データベースには、このチュートリアルを完了するのに必要なデータが含まれています。 [最新バージョンを入手](http://go.microsoft.com/fwlink/?LinkID=335807)です。  
+-   Adventure Works DW サンプル データベースと SQL Server インスタンス。 このサンプル データベースには、このチュートリアルを完了するのに必要なデータが含まれています。 [最新バージョンを入手](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)です。  
   
 
 -   Azure Analysis Services または SQL Server 2016 またはそれ以降の Analysis Services インスタンスにモデルを配置します。 [Azure Analysis Services の無料試用版にサインアップする](https://azure.microsoft.com/services/analysis-services/)です。

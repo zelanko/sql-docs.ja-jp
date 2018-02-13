@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ms.workload: Inactive
-ms.openlocfilehash: 2f9d7d8697aa82caf3822cefefe83a2525a72e24
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 0e5a08655bcfea396bcf599ef65e7a8e1f126575
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>接続ライブラリと Microsoft SQL Server のフレームワーク
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/01/2018
 
 チェック アウト、[チュートリアル入門](http://aka.ms/sqldev)をすばやく c#、Java、Node.js、PHP、Python などのプログラミング言語で作業を開始し、macos Linux または Windows Docker で SQL Server を使用してアプリをビルドします。
 
-次の表に、接続ライブラリを表示または*ドライバー*またはクラウドでは、Linux、Windows または Docker ともに Azure SQL Database と Azure SQL Data Warehouse に接続し、オンプレミスで実行して Microsoft SQL Server を使用する言語のさまざまなクライアント アプリケーションを使用できることです。 
+次の表に、接続ライブラリまたは*ドライバー*または Linux、Windows または Docker で、クラウド内に接続し、オンプレミスで実行して Microsoft SQL Server を使用する言語のさまざまなクライアント アプリケーションを使用できることとまたに Azure SQL Database と Azure SQL Data Warehouse です。 
 
 | 言語 | プラットフォーム | その他のリソース | ダウンロード | 開始するには |
 | :-- | :-- | :-- | :-- | :-- |
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/01/2018
 | Ruby | Windows、Linux、macOS | [Ruby Driver for SQL Server](../connect/ruby/ruby-driver-for-sql-server.md) | [はじめに](https://www.microsoft.com/en-us/sql-server/developer-get-started/ruby/ubuntu)
 | C++ | Windows、Linux、macOS | [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/en-us/library/mt654048(v=sql.1).aspx) | [ダウンロード](https://msdn.microsoft.com/en-us/library/mt654048(v=sql.1).aspx) |  
 
-次の表は、Linux、Windows や Docker と Azure SQL データベースと Azure SQL Data Warehouse にも、クラウド内には、オブジェクト リレーショナル マッピング (ORM) フレームワークとクライアント アプリケーションは、オンプレミスで実行して Microsoft SQL Server またはを使用している web フレームワークのいくつかの例を示します。 
+次の表に、Linux、Windows または Docker と Azure SQL Database には、クラウド内には、オブジェクト リレーショナル マッピング (ORM) フレームワークとクライアント アプリケーションは、オンプレミスで実行して Microsoft SQL Server またはを使用している web フレームワークのいくつかの例とAzure SQL Data Warehouse です。 
 
 | 言語 | プラットフォーム | ORM(s) |
 | :-- | :-- | :-- |

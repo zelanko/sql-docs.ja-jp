@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: df5182d374e41b68fe35333c6e4ab59714d8241d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 84195d2451664b2bee81ebbb1dc3b7d9d89060d5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>複数のサブネット Always On 可用性グループおよびフェールオーバー クラスター インスタンスを構成します。
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/01/2018
 
     ここで*filename* CIB を呼び出したい名前を指定します。
 
-2.  生成されたファイルを編集します。 探して、`<resources>`セクションです。 可用性グループまたは FCI に対して作成されたさまざまなリソースが表示されます。 IP アドレスに関連付けられている 1 つを検索します。 追加、`<instance attributes>`上または既存のものでは、下の 2 番目の IP アドレスの情報とその前にセクション`<operations>`です。 次の構文のように表示されます。
+2.  生成されたファイルを編集します。 探して、`<resources>`セクションです。 可用性グループまたは FCI に対して作成されたさまざまなリソースが表示されます。 IP アドレスに関連付けられている 1 つを検索します。 追加、`<instance attributes>`上または既存のものでは、下の 2 番目の IP アドレスの情報とその前にセクション`<operations>`です。 次の構文に似ています。
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">

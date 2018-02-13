@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - data types [SQLXML], mapping data types
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 358a75a6cbc2ddd716c14297daa21881ea5c3304
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c4c5d33454cebe84fb14a5bb154f7ee30a57de51
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>データ型の強制型変換と sql:datatype 注釈 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]XSD スキーマで、 **xsd:type**属性が要素または属性の XSD データ型を指定します。 XSD スキーマを使用したデータベースからのデータの抽出では、指定されているデータ型を使用して、データが書式設定されます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XSD スキーマで、 **xsd:type**属性が要素または属性の XSD データ型を指定します。 XSD スキーマを使用したデータベースからのデータの抽出では、指定されているデータ型を使用して、データが書式設定されます。  
   
  スキーマを XSD 型を指定するだけでなく、Microsoft を指定することも[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型を使用して、 **sql:datatype**注釈。 **Xsd:type**と**sql:datatype**属性は、XSD データ型間のマッピングを制御および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  
   
@@ -62,32 +64,32 @@ ms.lasthandoff: 11/17/2017
   
 |SQL Server データ型|XSD データ型|  
 |--------------------------|-------------------|  
-|**bigint**|**長い**|  
+|**bigint**|**long**|  
 |**[バイナリ]**|**base64Binary**|  
 |**bit**|**boolean**|  
-|**char**|**string**|  
+|**char**|**文字列**|  
 |**datetime**|**dateTime**|  
 |**decimal**|**decimal**|  
 |**float**|**double**|  
 |**image**|**base64Binary**|  
 |**int**|**int**|  
 |**money**|**decimal**|  
-|**nchar**|**string**|  
-|**ntext**|**string**|  
-|**nvarchar**|**string**|  
+|**nchar**|**文字列**|  
+|**ntext**|**文字列**|  
+|**nvarchar**|**文字列**|  
 |**numeric**|**decimal**|  
 |**real**|**float**|  
 |**smalldatetime**|**dateTime**|  
-|**smallint**|**短い**|  
+|**smallint**|**short**|  
 |**smallmoney**|**decimal**|  
-|**sql_variant**|**string**|  
-|**sysname**|**string**|  
-|**text**|**string**|  
+|**sql_variant**|**文字列**|  
+|**sysname**|**文字列**|  
+|**text**|**文字列**|  
 |**timestamp**|**dateTime**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  
-|**varchar**|**string**|  
-|**uniqueidentifier**|**string**|  
+|**varchar**|**文字列**|  
+|**uniqueidentifier**|**文字列**|  
   
 ## <a name="sqldatatype-annotation"></a>sql:datatype 注釈  
  **Sql:datatype**注釈が指定に使用される、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。 この注釈場合に指定する必要があります。  

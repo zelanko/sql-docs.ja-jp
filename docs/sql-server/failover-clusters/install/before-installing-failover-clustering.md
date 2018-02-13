@@ -8,7 +8,8 @@ ms.service:
 ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-caps.latest.revision: "141"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
 ms.openlocfilehash: ad89b5180e55bbbcdde55e2856588ca46695baa1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="before-installing-failover-clustering"></a>フェールオーバー クラスタリングをインストールする前に
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server フェールオーバー クラスターをインストールする前に、SQL Server を実行するハードウェアとオペレーティング システムを選択する必要があります。 また、Windows Server フェールオーバー クラスタリング (WSFC) を構成し、ネットワーク、セキュリティ、およびフェールオーバー クラスターで実行するその他のソフトウェアに関する考慮事項を見直す必要があります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+SQL Server フェールオーバー クラスターをインストールする前に、SQL Server を実行するハードウェアとオペレーティング システムを選択する必要があります。 また、Windows Server フェールオーバー クラスタリング (WSFC) を構成し、ネットワーク、セキュリティ、およびフェールオーバー クラスターで実行するその他のソフトウェアに関する考慮事項を見直す必要があります。  
   
  Windows クラスターにローカル ディスク ドライブがあり、共有ドライブと同じドライブ文字が 1 つ以上のクラスター ノードでも使用されている場合、そのドライブに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールできません。  
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/05/2017
 |トピックの説明|トピック|  
 |-----------------------|-----------|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスタリングの概念について説明し、関連するコンテンツとタスクへのリンクを示します。|[Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)|  
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー ポリシーの概念について説明し、組織の要件に合うようにフェールオーバー ポリシーを構成するためのリンクを示します。|[フェールオーバー クラスター インスタンスのフェールオーバー ポリシー](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー ポリシーの概念について説明し、組織の要件に合うようにフェールオーバー ポリシーを構成するためのリンクを示します。|[Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
 |既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの維持方法について説明します。|[フェールオーバー クラスター インスタンスの管理とメンテナンス](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
 |Windows Server フェールオーバー クラスター (WSFC) に [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] をインストールする方法について説明します。|[SQL Server Analysis Services をクラスター化する方法](http://go.microsoft.com/fwlink/p/?LinkId=396548)|  
   
@@ -57,7 +59,7 @@ ms.lasthandoff: 12/05/2017
   
     -   .NET Framework 4: セットアップでは、クラスター化されたオペレーティング システムに対して .NET Framework 4 がインストールされます。 インストール時間を短縮するには、セットアップを実行する前に .NET Framework 4 をインストールすることを検討してください。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップ サポート ファイル。 これらのファイルは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] インストール メディアにある SqlSupport.msi を実行してインストールできます。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップ サポート ファイル。 これらのファイルは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] インストール メディアにある SqlSupport.msi を実行してインストールできます。  
   
 -   ウイルス対策プログラムが WSFC クラスターにインストールされていないことを確認します。 詳細については、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] サポート技術情報で [ウイルス対策ソフトウェアによるクラスター サービスの問題](http://go.microsoft.com/fwlink/?LinkId=116986)に関する資料を参照してください。  
   
@@ -81,7 +83,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールまたは更新する前に、インストール中に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンポーネントを使用する可能性のあるすべてのアプリケーションとサービスを無効にします。ただしディスク リソースはオンラインのままにします。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップにより、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クラスター グループと、フェールオーバー クラスターに含まれるディスクとの間に自動的に依存関係が設定されます。 セットアップ前に、ディスクの依存関係を設定しないでください。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップにより、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クラスター グループと、フェールオーバー クラスターに含まれるディスクとの間に自動的に依存関係が設定されます。 セットアップ前に、ディスクの依存関係を設定しないでください。  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターのインストール時に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ネットワーク リソース名に対応するコンピューター オブジェクト (Active Directory コンピューター アカウント) が作成されます。 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] クラスターの場合、クラスター名アカウント (クラスター自体のコンピューター アカウント) には、コンピューター オブジェクトを作成する権限が必要です。 詳細については、 [Active Directory でのアカウントの構成](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx)に関する記事を参照してください。  
   
@@ -148,7 +150,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスタリングは、クラスター ノードがドメイン コントローラーの場合はインストールできません。  
   
--   「 [SQL Server インストールにおけるセキュリティの考慮事項](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)の内容について検討してください。  
+-   「[SQL Server インストールにおけるセキュリティの考慮事項](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)の内容について検討してください。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で Kerberos 認証を有効にするには、 [サポート技術情報の「](http://support.microsoft.com/kb/319723) SQL Server で Kerberos 認証を使用する方法 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 」を参照してください。  
   
@@ -192,7 +194,7 @@ ms.lasthandoff: 12/05/2017
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32 ビット)|はい|はい|||  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (64 ビット)|はい|はい|可**|可**|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32 ビット)|はい|はい|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64 ビット)|はい|可|可|はい|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64 ビット)|はい|はい|はい|はい|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32 ビット)|はい|はい|||  
   
  *[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クラスターは、WOW モードではサポートされません。 これには、WOW で最初にインストールされた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの以前のバージョンからのアップグレードが含まれます。 この場合に使用できる唯一のアップグレード オプションは、新しいバージョンをサイド バイ サイドでインストールしてから移行することです。  
@@ -210,7 +212,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターでは、Windows Server フェールオーバー クラスターを利用して、フェールオーバー発生時に IP 依存関係の条件が有効であるかどうかを確認します。  
   
--   [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] では、すべてのクラスター サーバーが同じ Active Directory ドメインに属している必要があります。 したがって、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターでは、クラスター ノードが異なるサブネットにある場合でも、それらはすべて同じ Active Directory ドメインに属している必要があります。  
+-   [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] では、すべてのクラスター サーバーが同じ Active Directory ドメインに属している必要があります。 したがって、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターでは、クラスター ノードが異なるサブネットにある場合でも、それらはすべて同じ Active Directory ドメインに属している必要があります。  
   
 #### <a name="ip-address-and-ip-address-resource-dependencies"></a>IP アドレスと IP アドレス リソースの依存関係  
   

@@ -1,6 +1,6 @@
 ---
 title: "環境変数と SQL Server の設定を構成する |Microsoft ドキュメント"
-description: "このトピックでは、環境変数を使用して、Linux の特定の SQL Server 2017 設定を構成する方法について説明します。"
+description: "この記事では、環境変数を使用して、Linux の特定の SQL Server 2017 設定を構成する方法について説明します。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: b32330aee4fcd427ecd05d27fba3ffb8539bffa6
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: c7a04b62625863d9f98521b1a408f572ac79a403
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux 上の環境変数と SQL Server の設定を構成します。
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/01/2018
 |-----|-----|
 | **ACCEPT_EULA** | 任意の値 (たとえば、' Y') に設定すると SQL Server のライセンス契約に同意します。 |
 | **MSSQL_SA_PASSWORD** | SA パスワードを構成します。 |
-| **MSSQL_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 有効な値は次のとおりです。 </br></br>**Evaluation**</br>**開発者**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**プロダクト キー**</br></br>プロダクト キーを指定する場合は、###-###-###-###-###、ここで、'#' は、数または文字の形式でなければなりません。|
+| **MSSQL_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 有効な値は次のとおりです。 </br></br>**Evaluation**</br>**開発者**</br>**Express**</br>Web</br>**Standard**</br>**Enterprise**</br>プロダクト キー</br></br>プロダクト キーを指定する場合は、###-###-###-###-###、ここで、'#' は、数または文字の形式でなければなりません。|
 | **MSSQL_LCID** | SQL Server に使用する言語 ID を設定します。 たとえば 1036 はフランス語です。 |
 | **MSSQL_COLLATION** | SQL Server の既定の照合順序を設定します。 照合順序には、言語 id (LCID) の既定のマッピングが上書きされます。 |
 | **MSSQL_MEMORY_LIMIT_MB** | 最大メモリ (MB) SQL Server が使用できる量を設定します。 既定では、合計物理メモリの 80% を勧めします。 |

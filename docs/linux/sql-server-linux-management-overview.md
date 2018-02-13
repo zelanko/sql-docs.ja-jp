@@ -1,6 +1,6 @@
 ---
 title: "SQL Server on Linux の管理 |Microsoft ドキュメント"
-description: "このトピックは、Linux で実行されている SQL Server の一般的な管理タスクとツールへのリンクを提供します。"
+description: "この記事は、Linux で実行されている SQL Server の一般的な管理タスクとツールへのリンクを提供します。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: f6710b3e7bd40a2589333cebbf94c8b07f9aaa5d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: de19f1952465c62bf026dbd3d92666b7a1b968ae
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Linux 上の SQL Server を管理する適切なツールを選択します。
 
@@ -36,7 +36,7 @@ TRANSACT-SQL ステートメントのほとんどのクライアント ツール
 
 ## <a name="sql-server-operations-studio-preview"></a>SQL Server 操作 Studio (プレビュー)
 
-新しい Microsoft SQL 操作 Studio (プレビュー) は、SQL Server を管理するためのクロスプラット フォーム ツールです。 詳細については、次を参照してください。 [Microsoft SQL 操作 Studio (プレビュー) は、どのような](../sql-operations-studio/what-is.md)します。
+新しい Microsoft SQL 操作 Studio (プレビュー) は、SQL Server を管理するためのクロスプラット フォーム ツールです。 詳細については、次を参照してください。 [Microsoft SQL 操作 Studio (プレビュー)](../sql-operations-studio/what-is.md)です。
 
 ## <a name="sql-server-management-studio-on-windows"></a>Windows 上の SQL Server Management Studio
 

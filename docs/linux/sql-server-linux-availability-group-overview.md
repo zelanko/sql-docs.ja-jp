@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: bfd36553e4ac30b6d551e60cde02d57a7eec8fbc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b9dd4b05cf69b8556c4c021e2ede576b1a805c5e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux 上の可用性グループ
 
@@ -65,7 +65,7 @@ None のクラスターの種類は、こと、要件はありません。 ま�
 -   1 – 1 つのセカンダリ レプリカがプライマリ; と同期済み状態にする必要があります。自動フェールオーバーが可能です。 同期セカンダリ レプリカが利用可能になるまで、プライマリ データベースは使用できません。
 -   2 –; プライマリと 3 つ以上のノード AG の構成で両方のセカンダリ レプリカを同期する必要があります自動フェールオーバーが可能です。
 
-`required_synchronized_secondaries_to_commit`だけでなくの同期レプリカですがデータの損失とフェールオーバーの動作を制御します。 1 または 2 の値にセカンダリ レプリカは常に必要同期するのには常にあるデータの冗長性。 データが失われるをのためなしです。
+`required_synchronized_secondaries_to_commit` だけでなくの同期レプリカですがデータの損失とフェールオーバーの動作を制御します。 1 または 2 の値にセカンダリ レプリカは常に必要同期するのには常にあるデータの冗長性。 データが失われるをのためなしです。
 
 値を変更する`required_synchronized_secondaries_to_commit`、次の構文を使用します。
 
@@ -147,11 +147,11 @@ Linux でリスナーが異なる方法で構成されているが、その機�
 
 クロス プラットフォームそのレプリカ、AG の外部または WSFC クラスターの型を持つことはできません。 これは true かどうか、可用性グループが[!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)]または[!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)]です。 つまり基になるクラスターで従来 AG の構成で、1 つのレプリカは、WSFC と別のペースの Linux コンピューターにすることはできません。
 
-クラスター型なしの可用性グループには、OS 境界を越えることがあるため Linux と Windows ベースの両方のレプリカ、同じ可用性グループ レプリカはそのことができます。 たとえば、プライマリ レプリカが Windows ベース セカンダリ上にある Linux ディストリビューションのいずれかの次に示します。
+クラスター型なしの可用性グループには、OS 境界を越えることがあるため Linux と Windows ベースの両方のレプリカ、同じ可用性グループ レプリカはそのことができます。 例を示します、プライマリ レプリカが Windows ベース セカンダリ上にある Linux ディストリビューションのいずれか。
 
 ![ハイブリッドなし](./media/sql-server-linux-availability-group-overview/image1.png)
 
-分散型可用性グループでは、OS の境界を越えることができますも。 構成方法、外部の中で構成されているいずれかなどの基になる Ag は、ルールによってバインドされる Linux のみが、WSFC を使用して、可用性グループに参加していることを構成する可能性があります。 例を次に示します。
+分散型可用性グループでは、OS の境界を越えることができますも。 構成方法、外部の中で構成されているいずれかなどの基になる Ag は、ルールによってバインドされる Linux のみが、WSFC を使用して、可用性グループに参加していることを構成する可能性があります。 次の例を参照してください。
 
 ![ハイブリッド Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 

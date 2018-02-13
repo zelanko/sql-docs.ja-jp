@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - relative location path [SQLXML]
 - location path for XPath query
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8954831cd600a5e10ec9e98879d8d68568c837d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f704e45b165ecb4e29d909bcce09f7af92fb0989
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>ロケーション パスの指定 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]XPath クエリは、式の形式で指定されます。 式の種類にはさまざまなものがあります。 ロケーション パスは、コンテキスト ノードに相対的なノードのセットを選択する式です。 ロケーション パスを評価すると、結果はノード セットになります。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XPath クエリは式の形式で指定され、 式の種類にはさまざまなものがあります。 ロケーション パスは、コンテキスト ノードに相対的なノードのセットを選択する式です。 ロケーション パスを評価すると、結果はノード セットになります。  
   
 ## <a name="types-of-location-paths"></a>ロケーション パスの種類  
  ロケーション パスは、次のいずれかの形式で指定できます。  
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="location-steps"></a>ロケーション ステップ  
  ロケーション パス (絶対または相対) は、次の 3 つの部分から成るロケーション ステップで構成されます。  
   
--   **Axis**  
+-   **軸**  
   
      軸によって、ロケーション ステップで選択されるノードと、コンテキスト ノードの間のツリー リレーションシップが指定されます。 **親**、**子**、**属性**、および**self**軸がサポートされます。 場合、**子**軸を指定する場所のパスに、クエリによって選択されたすべてのノードはコンテキスト ノードの子です。 場合、**親**軸を指定すると、選択したノードはコンテキスト ノードの親ノードです。 場合、**属性**軸を指定すると、選択したノードはコンテキスト ノードの属性です。  
   

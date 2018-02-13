@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 2949110180da3c51a0bb536279cc9003d60be947
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 このチュートリアルのレッスンでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートにグループ化と合計を追加して、データを整理して要約します。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/09/2018
   
 8.  **[型]** ボックスで **[2000 年 1 月 31 日]**を選択します。  
   
-9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]をクリックします。  
+9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
   
 10.  **[プレビュー]** タブに切り替えて、レポートをプレビューします。 この画面は次の図のようになります。  
     ![rs_BasicTableGroupsPreview](../reporting-services/media/rs-basictablegroupspreview.png) 

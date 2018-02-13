@@ -1,11 +1,11 @@
 ---
 title: "エディションとサポートされる機能の SQL Server 2017 ~ Linux |Microsoft ドキュメント"
-ms.custom: 
+ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -35,13 +35,15 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e1734b7ec7619a6943e1d79a0933b6189ad3162d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: cd937ab176ef7c33f6ffa99090ac36b69182968c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>エディションと SQL Server 2017 on Linux のサポートされる機能
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 この記事では、Linux 上の SQL Server 2017 の各種エディションでサポートされる機能の詳細を説明します。 エディションと Windows 上の SQL Server のサポートされる機能は、次を参照してください。 [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)です。  
   
@@ -72,7 +74,7 @@ Linux で使用できない SQL Server 機能の一覧は、次を参照して�
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクライアント コンポーネントだけを、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに直接接続するクライアント/サーバー アプリケーションを実行するコンピューターにインストールできます。 クライアント コンポーネントをインストールすることは、データベース サーバー上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを管理する場合、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] アプリケーションを開発しようとしている場合にも適切なオプションです。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コンポーネント  
+## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネント  
 
 Linux 上の SQL Server 2017 には、SQL Server データベース エンジンがサポートされています。 次の表では、データベース エンジンの機能について説明します。   
   

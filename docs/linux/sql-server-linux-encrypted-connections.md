@@ -1,6 +1,6 @@
 ---
 title: "Linux 上の SQL Server への接続の暗号化 |Microsoft ドキュメント"
-description: "このトピックでは、Linux 上の SQL Server への接続の暗号化について説明します。"
+description: "この記事では、Linux 上の SQL Server への接続の暗号化について説明します。"
 author: tmullaney
 ms.date: 01/30/2018
 ms.author: meetb
@@ -9,25 +9,25 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.workload: Inactive
-ms.openlocfilehash: c8d57e65d060ff6958f07fbb57ab97806d99402c
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 646a876fb7cedc4733e4d3a60ef86361ab151c4f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Linux 上の SQL Server への接続を暗号化
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Linux のトランスポート層セキュリティ (TLS) 暗号化に使用できます、クライアント アプリケーションとのインスタンス間のネットワーク経由で送信されるデータ[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Windows と Linux の両方で同じ TLS プロトコルをサポートします。 TLS 1.2、1.1 および 1.0 です。 ただし、TLS を構成する手順は、オペレーティング システムに固有[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]が実行されています。  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Linux のトランスポート層セキュリティ (TLS) 暗号化に使用できます、クライアント アプリケーションとのインスタンス間のネットワーク経由で送信されるデータ[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Windows と Linux の両方で同じ TLS プロトコルをサポートします。 TLS 1.2、1.1 および 1.0 です。 ただし、TLS を構成する手順は、オペレーティング システムに固有[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]が実行されています。  
 
 ## <a name="requirements-for-certificates"></a>証明書の要件 
 始める前に、証明書は、これらの要件を満たすかどうかを確認する必要があります。
@@ -70,9 +70,9 @@ TLS は、クライアント アプリケーションからの接続の暗号化
         - **SUSE**: コピーの証明書と```/usr/share/pki/trust/anchors/```使用```update-ca-certificates```システム CA 証明書として有効にします。
         - **Windows**: ルート証明機関証明書]-> [信頼された証明書を現在のユーザーとして .pem ファイル]-> [インポート
         - **macOS**: 
-           - 証明書をコピーします。```/usr/local/etc/openssl/certs```
-           - ハッシュ値を取得するには、次のコマンドを実行します。```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
-           - 値に、証明書の名前を変更します。 たとえば、 ```mv mssql.pem dc2dd900.0```のようにします。 Dc2dd900.0 を確認してください。```/usr/local/etc/openssl/certs```
+           - 証明書をコピーします。 ```/usr/local/etc/openssl/certs```
+           - ハッシュ値を取得するには、次のコマンドを実行します。 ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
+           - 値に、証明書の名前を変更します。 たとえば、 ```mv mssql.pem dc2dd900.0```のようにします。 Dc2dd900.0 を確認してください。 ```/usr/local/etc/openssl/certs```
     
 -   **接続文字列の例** 
 

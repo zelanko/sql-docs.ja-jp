@@ -18,10 +18,10 @@ ms.author: maggies
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0728592148787403783279f0be8d42e52f5237a2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="managing-report-parts"></a>レポート パーツの管理
   ページネーションのあるレポート内のレポート パーツは、複数のユーザーが複数のレポート内で再利用できます。 ユーザーはサーバー上のレポート パーツを検索し、それらをレポートに追加できます。  また、ユーザーはサーバー上のレポート パーツの更新について通知を受け、レポート パーツの新しいバージョンを再パブリッシュすることもできます。 これらのレポート作成アクションは、Reporting Services のセキュリティ権限によって管理および制御されます。  このトピックでは、既にサーバー上に配置されているレポート パーツのプロパティと動作について説明します。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/09/2018
  レポート ビルダーなどのレポート作成アプリケーションから SharePoint 統合モードのレポート サーバーにレポート パーツがパブリッシュされると、レポート サーバー カタログも更新されて、ギャラリーから検索するときに新しいレポート パーツまたは更新されたレポート パーツが正確に反映されるようになります。  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>SharePoint フォルダーへのレポート パーツの直接アップロード  
- レポート パーツが、レポート作成アプリケーションからパブリッシュされるのではなく、SharePoint ドキュメント フォルダーに直接アップロードされた場合は、レポート サーバー カタログは更新されません。 レポート パーツ ギャラリーから検索しても、アップロードされたレポート パーツは見つかりません。 SharePoint フォルダーとレポート サーバー カタログの同期を維持するには、SharePoint サーバー上で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ファイル同期機能をアクティブ化します。 詳しくは、「 [SharePoint サーバーの全体管理でレポート サーバーのファイル同期機能をアクティブにする](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)」をご覧ください。  
+ レポート パーツが、レポート作成アプリケーションからパブリッシュされるのではなく、SharePoint ドキュメント フォルダーに直接アップロードされた場合は、レポート サーバー カタログは更新されません。 レポート パーツ ギャラリーから検索しても、アップロードされたレポート パーツは見つかりません。 SharePoint フォルダーとレポート サーバー カタログの同期を維持するには、SharePoint サーバー上で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ファイル同期機能をアクティブ化します。 詳しくは、「 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)」をご覧ください。  
   
  ファイルは、GetProperties や SetProperties などの、一部の Reporting Services 管理 API を呼び出すことによって同期することもできます。  
   

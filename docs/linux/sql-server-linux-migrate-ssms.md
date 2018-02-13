@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: 6daf9f5293e30d5a42439920850b5abfe1ad83a0
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 817fc0ae018ebb7999ad572c0f18ede943ff7090
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>エクスポートし、SSMS または SqlPackage.exe Windows 上の Linux 上のデータベースのインポート
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このトピックは、使用する方法を示します[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)と[SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx)をエクスポートし、Linux 上の SQL Server 2017 上のデータベースをインポートします。 SSMS と SqlPackage.exe は Windows アプリケーション、Linux 上のリモート SQL Server インスタンスに接続できる Windows マシンがあるときにそのためこの手法を使用します。
+この記事は、使用する方法を示します[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)と[SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx)をエクスポートし、Linux 上の SQL Server 2017 上のデータベースをインポートします。 SSMS と SqlPackage.exe は Windows アプリケーション、Linux 上のリモート SQL Server インスタンスに接続できる Windows マシンがあるときにそのためこの手法を使用します。
 
 常にインストールし、」の説明に従って、最新バージョンの SQL Server Management Studio (SSMS) を使用する必要があります[Linux に SQL Server への接続に Windows での SSMS の使用](sql-server-linux-develop-use-ssms.md)
 
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/01/2018
 
 * です。指定した対象サーバーで新しいデータベースを作成する BACPAC ファイルをインポートするとします。
 
-## <a id="sqlpackage"></a>SqlPackage コマンド ライン オプション
+## <a id="sqlpackage"></a> SqlPackage コマンド ライン オプション
 
 SQL Server Data Tools (SSDT) のコマンド ライン ツールを使用することも[SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx)をエクスポートし、BACPAC ファイルをインポートします。
 

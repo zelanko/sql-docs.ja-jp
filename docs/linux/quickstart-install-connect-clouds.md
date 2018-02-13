@@ -8,14 +8,15 @@ ms.date: 10/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.component: sql-linux
+ms.component: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 645c3e11621b1c9faecffc7edf76df9a6a1eabab
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 613f6e1b0182d5003c68380bb5a5698397db2207
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>SQL Server 2017 をクラウドで実行します。
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 02/01/2018
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  接続と AMI ssh
-1.  選択した Linux distrbution のクイック スタートに従います。 
+1.  選択した Linux ディストリビューションのクイック スタートに従います。 
     * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -44,7 +45,7 @@ ms.lasthandoff: 02/01/2018
 
     
 ## <a name="digital-ocean"></a>デジタル オーシャン
-1. ログイン、[コントロール パネルの ](https://cloud.digitalocean.com/login) [ドロップレットの作成] をクリック
+1. ログインに、[コントロール パネルの [](https://cloud.digitalocean.com/login)ドロップレットの作成] をクリック
 1. 少なくとも 2 GB のメモリと Ubuntu 16.04 ドロップレットを選択します。
 1. 接続とドロップレット ssh
 1. 以下の[Ubuntu のクイック スタート](quickstart-install-connect-ubuntu.md)
@@ -58,10 +59,10 @@ ms.lasthandoff: 02/01/2018
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  接続のイメージに ssh
-1.  選択した Linux distrbution のクイック スタートに従います。 
+1.  選択した Linux ディストリビューションのクイック スタートに従います。 
     * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  リモート接続を構成します。 
     * 移動して、[ファイアウォール規則](https://console.cloud.google.com/networking/firewalls)
-    * SQL Server がリッスンする (既定 tcp:1433 です) ポートでトラフィックを許可する受信規則を追加します。
+    * SQL Server がリッスンするポートのトラフィックを許可する受信の規則の追加 (既定の tcp: 1433)

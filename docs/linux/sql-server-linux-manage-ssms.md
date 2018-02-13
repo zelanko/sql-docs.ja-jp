@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: ae79f5e7a2f526b5ef1d153f333adab5c9a8c8a1
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 31bff0cb43048585fb03246b683ad71e673bb7f4
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Linux 上の SQL Server を管理するのに Windows 上の SQL Server Management Studio の使用します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このトピックで紹介[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)と、いくつかの一般的なタスクについて説明します。 SSMS は、Windows アプリケーション、ので Linux 上のリモート SQL Server インスタンスに接続できる Windows コンピューターがある場合に SSMS を使用します。
+この記事で紹介[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)と、いくつかの一般的なタスクについて説明します。 SSMS は、Windows アプリケーション、ので Linux 上のリモート SQL Server インスタンスに接続できる Windows コンピューターがある場合に SSMS を使用します。
 
 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) Microsoft は無料の開発と管理のニーズに SQL ツールのセットの一部です。 SSMS は、アクセス、構成、管理、管理、およびオンプレミスで実行して SQL Server または Linux、Windows または macOS と Azure SQL データベース上の Docker と Azure SQL Data Warehouse で、クラウド内のすべてのコンポーネントを開発する統合環境です。 SSMS では、あらゆるスキルレベルの開発者や管理者に SQL Server へのアクセスを提供する高機能スクリプト エディターの数がグラフィカルなツールの広範なグループを結合します。
 
