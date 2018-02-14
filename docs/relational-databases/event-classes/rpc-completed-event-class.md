@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RPC:Completed event class
+helpviewer_keywords:
+- RPC:Completed event class
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c14de50af756d8b58b4af5368f13b788b7c65e3a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4f3dd125555180acb996579ff07f184a8092722c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] RPC:Completed イベント クラスは、リモート プロシージャ コールが完了したことを示します。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+RPC:Completed イベント クラスは、リモート プロシージャ コールが完了したことを示します。  
   
 ## <a name="rpccompleted-event-class-data-columns"></a>RPC:Completed イベント クラスのデータ列  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|Description|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |BinaryData|**image**|トレースでキャプチャされたイベント クラスに依存するバイナリ値。|2|はい|  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 |SessionLoginName|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |SPID|**int**|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|TextData|**ntext**|リモート プロシージャ コールのテキスト。|1|はい|  
+|TextData|**ntext**|リモート プロシージャ コールのテキスト。|@shouldalert|はい|  
 |TransactionID|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
 |Writes|**bigint**|リモート プロシージャ コールによって実行されたページ書き込みの回数。|17|はい|  
 |XactSequence|**bigint**|現在のトランザクションを説明するトークン。|50|はい|  

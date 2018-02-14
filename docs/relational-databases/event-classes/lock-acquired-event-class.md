@@ -8,30 +8,33 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Acquired event class
+helpviewer_keywords:
+- Acquired event class
 ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 707749c893523d6db48220d4223bf29bb8680ef0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7c2afa0dfd180073e91cbe541ae25687448ccaa1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lockacquired-event-class"></a>Lock:Acquired イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Lock:Acquired イベント クラスは、データ ページなどのリソースのロックの取得を示します。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Lock:Acquired イベント クラスは、データ ページなどのリソースのロックの取得を示します。  
   
  Lock:Acquired イベント クラスおよび Lock:Released イベント クラスを使用すると、オブジェクトがロックされている時点、取得するロックの種類、およびロックが保持されていた期間を監視できます。 長時間ロックが保持されると、競合の問題が発生する原因となり、調査が必要になることがあります。 たとえば、アプリケーションでは、テーブルの行のロックを取得して、ユーザー入力を待機できます。 ユーザー入力は行われるまでに長時間かかることがあるので、ロックによって他のユーザーがブロックされることがあります。 この場合、アプリケーションは、必要なときにだけロックを要求し、ロックが取得されている場合はユーザー入力を要求しないように再設計する必要があります。  
   
 ## <a name="lockacquired-event-class-data-columns"></a>Lock:Acquired イベント クラスのデータ列  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|Description|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |BigintData1|**bigint**|パーティション ID (ロック リソースがパーティション分割されている場合)。|52|はい|  
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 |SessionLoginName|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |SPID|**int**|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|TextData|**ntext**|取得したロックの種類に依存するテキスト値。 この値は、sys.dm_tran_locks の resource_description 列と同じです。|1|はい|  
+|TextData|**ntext**|取得したロックの種類に依存するテキスト値。 この値は、sys.dm_tran_locks の resource_description 列と同じです。|@shouldalert|はい|  
 |TransactionID|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
 |型|**int**|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|はい|  
   

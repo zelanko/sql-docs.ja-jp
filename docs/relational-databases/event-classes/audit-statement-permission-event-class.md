@@ -8,30 +8,33 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Statement Permission event class
+helpviewer_keywords:
+- Audit Statement Permission event class
 ms.assetid: 84ababe0-166e-4b1e-903b-bee6c1f005e7
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52413975715c122017d32d4a1d6901a044d606f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db99329ebf08184c1be6c17138cfeab80ecef889
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-statement-permission-event-class"></a>Audit Statement Permission イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Audit Statement Permission** イベント クラスは、ステートメント権限 (CREATE TABLE など) が使用されるたびに発生します。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Audit Statement Permission** イベント クラスは、ステートメント権限 (CREATE TABLE など) が使用されるたびに発生します。  
   
  **Audit Statement Permission** イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の今後のバージョンで廃止される可能性があります。 代わりに、 **Audit Schema Object Management** イベント クラスを使用することをお勧めします。  
   
 ## <a name="audit-statement-permission-event-class-data-columns"></a>Audit Statement Permission イベント クラスのデータ列  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|Description|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  
@@ -46,14 +49,14 @@ ms.lasthandoff: 11/17/2017
 |**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
-|**アクセス許可**|**bigint**|チェックする権限の種類を表す整数値。<br /><br /> 1 = CREATE DATABASE (master データベースのみ)<br /><br /> 2 = CREATE TABLE<br /><br /> 4 = CREATE PROCEDURE<br /><br /> 8 = CREATE VIEW<br /><br /> 16 = CREATE RULE<br /><br /> 32 = CREATE DEFAULT<br /><br /> 64 = BACKUP DATABASE<br /><br /> 128 = BACKUP LOG<br /><br /> 256 = BACKUP TABLE<br /><br /> 512 = CREATE FUNCTION|19|はい|  
-|**RequestID**|**int**|ステートメントが含まれている要求の ID。|49|可|  
+|**権限**|**bigint**|チェックする権限の種類を表す整数値。<br /><br /> 1 = CREATE DATABASE (master データベースのみ)<br /><br /> 2 = CREATE TABLE<br /><br /> 4 = CREATE PROCEDURE<br /><br /> 8 = CREATE VIEW<br /><br /> 16 = CREATE RULE<br /><br /> 32 = CREATE DEFAULT<br /><br /> 64 = BACKUP DATABASE<br /><br /> 128 = BACKUP LOG<br /><br /> 256 = BACKUP TABLE<br /><br /> 512 = CREATE FUNCTION|19|はい|  
+|**RequestID**|**int**|ステートメントが含まれている要求の ID。|49|はい|  
 |**ServerName**|**nvarchar**|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**SessionLoginName**|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |**SPID**|**int**|イベントが発生したセッションの ID。|12|はい|  
 |**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |**成功**|**int**|1 = 成功。 0 = 失敗。 たとえば、値 1 は権限チェックの成功を示し、値 0 は失敗を示します。|23|はい|  
-|**TextData**|**ntext**|ステートメント権限を必要とするステートメントの SQL テキスト。|1|可|  
+|**TextData**|**ntext**|ステートメント権限を必要とするステートメントの SQL テキスト。|@shouldalert|はい|  
 |**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
 |**XactSequence**|**bigint**|現在のトランザクションを説明するトークン。|50|はい|  
   

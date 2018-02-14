@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Object:Altered event class
+helpviewer_keywords:
+- Object:Altered event class
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a7c43fda5f0543e51a835f70dbee5be6b94ad1a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21eafbc19f9659ca6fc22cf59c242f0b4857b699
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Object:Altered イベント クラスは、ALTER INDEX、ALTER TABLE、ALTER DATABASE などのステートメントによって、オブジェクトが変更されたことを示します。 このイベント クラスは、たとえば、頻繁に一時ストアド プロシージャを作成する ODBC アプリケーションによって、オブジェクトが変更されているかどうかを判断するために使用できます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Object:Altered イベント クラスは、ALTER INDEX、ALTER TABLE、ALTER DATABASE などのステートメントによって、オブジェクトが変更されたことを示します。 このイベント クラスは、たとえば、頻繁に一時ストアド プロシージャを作成する ODBC アプリケーションによって、オブジェクトが変更されているかどうかを判断するために使用できます。  
   
  Object:Altered イベント クラスは常に 2 つのイベントとして発生します。 最初のイベントは開始フェーズを示します。 2 番目のイベントはロールバック フェーズまたはコミット フェーズを示します。  
   
@@ -33,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="objectaltered-event-class-data-columns"></a>Object:Altered イベント クラスのデータ列  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|Description|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |ClientProcessID|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  

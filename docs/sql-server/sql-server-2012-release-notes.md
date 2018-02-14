@@ -407,7 +407,7 @@ Data Quality Client のマップ ステージ中にいずれかの DQS アクテ
   
 このエラーは、DQS では SQL Server データベースの文字列と C# の文字列を比較する方法が異なるため発生します。 SQL Server データベースの文字列比較では大文字と小文字が区別されませんが、C# では区別されます。  
   
-例を挙げてこの問題を説明します。 Domain\user1 というユーザーがいるとします。 このユーザーが "user1" アカウントを使用して Data Quality Client コンピューターにログオンし、ナレッジ ベースの作業を行います。 各ユーザーが最近使用したナレッジ ベースは、DQS_MAIN データベースの A_CONFIGURATION テーブルにレコードとして格納されています。 このユーザーの場合、レコードは RecentList:KB:Domain\user1 という名前で格納されます。 その後で、このユーザーが Data Quality Client コンピューターに "User1" という名前でログオンし (最初の U が大文字)、ドメイン管理アクティビティの **[最近使用したナレッジ ベース]** 一覧でナレッジ ベースを開くとします。 DQS の基になるコードで RecentList:KB:DOMAIN\user1 と DOMAIN\User1 という&2; つの文字列が比較されますが、このときに大文字と小文字が区別される C# の方法が使用されます。この&2; つの文字列は一致しないと見なされるため、DQS_MAIN データベースの A_CONFIGURATION テーブルにこのユーザー (User1) 用の新しいレコードを挿入しようとします。 しかし、SQL データベースでは文字列の比較で大文字と小文字が区別されないため、DQS_MAIN データベースの A_CONFIGURATION テーブルにその文字列が既に存在することになり、挿入操作が失敗します。  
+例を挙げてこの問題を説明します。 Domain\user1 というユーザーがいるとします。 このユーザーが "user1" アカウントを使用して Data Quality Client コンピューターにログオンし、ナレッジ ベースの作業を行います。 各ユーザーが最近使用したナレッジ ベースは、DQS_MAIN データベースの A_CONFIGURATION テーブルにレコードとして格納されています。 このユーザーの場合、レコードは RecentList:KB:Domain\user1 という名前で格納されます。 その後で、このユーザーが Data Quality Client コンピューターに "User1" という名前でログオンし (最初の U が大文字)、ドメイン管理アクティビティの **[最近使用したナレッジ ベース]** 一覧でナレッジ ベースを開くとします。 DQS の基になるコードで RecentList:KB:DOMAIN\user1 と DOMAIN\User1 という 2 つの文字列が比較されますが、このときに大文字と小文字が区別される C# の方法が使用されます。この 2 つの文字列は一致しないと見なされるため、DQS_MAIN データベースの A_CONFIGURATION テーブルにこのユーザー (User1) 用の新しいレコードを挿入しようとします。 しかし、SQL データベースでは文字列の比較で大文字と小文字が区別されないため、DQS_MAIN データベースの A_CONFIGURATION テーブルにその文字列が既に存在することになり、挿入操作が失敗します。  
   
 **回避策:** この問題を解決するには、次のいずれかの操作を行います。  
   
@@ -517,7 +517,7 @@ Data Quality Client のマップ ステージ中にいずれかの DQS アクテ
   
 **MultiSubnetFailover のキーワードおよび関連機能**  
   
-MultiSubnetFailover は、SQL Server 2012 の AlwaysOn 可用性グループおよび AlwaysOn フェールオーバー クラスター インスタンスに対して高速フェールオーバーを有効にするために使用する新しい接続文字列キーワードです。 接続文字列で MultiSubnetFailover=True が設定されていると、次の&3; つのサブ機能が有効になります。  
+MultiSubnetFailover は、SQL Server 2012 の AlwaysOn 可用性グループおよび AlwaysOn フェールオーバー クラスター インスタンスに対して高速フェールオーバーを有効にするために使用する新しい接続文字列キーワードです。 接続文字列で MultiSubnetFailover=True が設定されていると、次の 3 つのサブ機能が有効になります。  
   
 -   AlwaysOn 可用性グループまたはフェールオーバー クラスター インスタンスに対する複数サブネット リスナーへのより高速なマルチサブネット フェールオーバー。  
   
@@ -626,7 +626,7 @@ SQL Server 2012 Reporting Services から Microsoft SQL Server PDW Appliance Upd
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012 には StreamInsight 2.0 が含まれています。 StreamInsight 2.0 を使用するには、Microsoft SQL Server 2012 のライセンスと .NET Framework 4.0 が必要です。 StreamInsight&2;.0 には、いくつかのバグ修正に加え、さまざまなパフォーマンスの改善が施されています。 詳細については、「 [Microsoft StreamInsight 2.0 RC0 Release Notes (Microsoft StreamInsight 2.0 のリリース ノート)](http://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)」をご覧ください。 StreamInsight 2.0 を単独でダウンロードするには、Microsoft ダウンロード センターの [Microsoft StreamInsight 2.0 のダウンロード ページ](http://go.microsoft.com/fwlink/?LinkId=241593) にアクセスしてください。  
+SQL Server 2012 には StreamInsight 2.0 が含まれています。 StreamInsight 2.0 を使用するには、Microsoft SQL Server 2012 のライセンスと .NET Framework 4.0 が必要です。 StreamInsight 2.0 には、いくつかのバグ修正に加え、さまざまなパフォーマンスの改善が施されています。 詳細については、「 [Microsoft StreamInsight 2.0 RC0 Release Notes (Microsoft StreamInsight 2.0 のリリース ノート)](http://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)」をご覧ください。 StreamInsight 2.0 を単独でダウンロードするには、Microsoft ダウンロード センターの [Microsoft StreamInsight 2.0 のダウンロード ページ](http://go.microsoft.com/fwlink/?LinkId=241593) にアクセスしてください。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

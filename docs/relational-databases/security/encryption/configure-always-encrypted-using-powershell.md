@@ -8,22 +8,23 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac3904e6dff2383dac9bbaa09621095b9b2ec11f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5116e95d422b182ddc8f9c102cae7cc286d5a4b1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="configure-always-encrypted-using-powershell"></a>PowerShell を使用した Always Encrypted の構成
+# <a name="configure-always-encrypted-using-powershell"></a>Configure Always Encrypted using PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 SqlServer PowerShell モジュールは、Azure SQL Database および SQL Server 2016 両方で [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) を構成するコマンドレットを提供します。
@@ -34,7 +35,7 @@ Always Encrypted の主な目的は、データベース システムが侵害�
 
 個々のコマンドレットに関する記事へのリンクは [このページの下](#aecmdletreference)にあります。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 SQL Server インスタンスをホストしているコンピューターではない安全なコンピューターに [SqlServer モジュール](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) をインストールします。 モジュールは、PowerShell ギャラリーから直接インストールできます。  詳細については、[ダウンロード](../../../ssms/download-sql-server-ps-module.md)の手順を参照してください。
 
@@ -121,14 +122,14 @@ $database | Get-SqlColumnMasterKey
 
 - [PowerShell を使用して Always Encrypted キーの構成](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md) 
 - [PowerShell を使用した Always Encrypted キーの交換](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [PowerShell を使用して列の暗号化の構成](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md)
+- [PowerShell を使用した列の暗号化の構成](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md)
 
 
 ##  <a name="aecmdletreference"></a> Always Encrypted コマンドレット リファレンス
 
 Always Encrypted では次の PowerShell コマンドレットを使用できます。
 
-|コマンドレット |説明
+|コマンドレット |Description
 |:---|:---
 |**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**   |Azure への認証を実行し、認証トークンを取得します。
 |**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**   |データベースの既存の列暗号化キー オブジェクトに新しく暗号化された値を追加します。
@@ -153,7 +154,7 @@ Always Encrypted では次の PowerShell コマンドレットを使用できま
 
 ## <a name="additional-resources"></a>その他のリソース
 
-- [Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted (データベース エンジン)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted のキー管理の概要](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Always Encrypted と .NET Framework Data Provider for SQL Server を使用する](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [SQL Server Management Studio を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
