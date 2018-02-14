@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssma-sybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -20,7 +21,7 @@ helpviewer_keywords:
 - Sybase Console,Script File Validation
 - Sybase Console,Server Connection Parameters
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 # <a name="creating-script-files-sybasetosql"></a>スクリプト ファイル (SybaseToSQL) を作成します。
 最初の手順とスクリプト ファイルの作成には、SSMA コンソール アプリケーションを起動する前に、変数の値のファイルと、サーバー接続ファイルを作成するために必要な場合は。  
   
-スクリプト ファイルを viz 3 つのセクションに分割できます。。、します。  
+スクリプト ファイルを viz 3 つのセクションに分割できますします..,:  
   
 1.  **config:**コンソール アプリケーションの構成パラメーターを設定することができます。  
   
