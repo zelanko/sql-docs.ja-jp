@@ -363,7 +363,7 @@ Analysis Services (AS) 用の SQL Server Integration Services (SSIS) コンポ�
 **回避策:** DQS クレンジング コンポーネントを使用してデータ列を処理する前に、データ変換の変換を使用して、これらの列を **DT_STR** データ型または **DT_WSTR** データ型に変換する必要があります。  
   
 ### <a name="49-the-item-to-run-dqsinstallerexe-on-the-start-menu-is-overwritten-on-new-sql-server-instance-installation"></a>4.9 [スタート] メニューの DQSInstaller.exe を実行するアイテムが新しい SQL Server インスタンスのインストールで上書きされる  
-**問題点:** SQL Server インスタンスに Data Quality Services をインストールすることを選択した場合、SQL Server セットアップの完了後に、 **[スタート]** メニューの **[Data Quality Services]** プログラム グループに **[Data Quality Server インストーラー]** というアイテムが作成されます。 ただし、同じコンピューターに複数の SQL Server インスタンスをインストールした場合でも、 **[スタート]** メニューに作成される **[Data Quality Server インストーラー]** アイテムは&1; つです。 このアイテムをクリックすると、最後にインストールされた SQL Server インスタンスの DQSInstaller.exe ファイルが実行されます。  
+**問題点:** SQL Server インスタンスに Data Quality Services をインストールすることを選択した場合、SQL Server セットアップの完了後に、 **[スタート]** メニューの **[Data Quality Services]** プログラム グループに **[Data Quality Server インストーラー]** というアイテムが作成されます。 ただし、同じコンピューターに複数の SQL Server インスタンスをインストールした場合でも、 **[スタート]** メニューに作成される **[Data Quality Server インストーラー]** アイテムは 1 つです。 このアイテムをクリックすると、最後にインストールされた SQL Server インスタンスの DQSInstaller.exe ファイルが実行されます。  
   
 ### <a name="410-activity-monitoring-displays-incorrect-status-for-failed-integration-services-cleansing-activities"></a>4.10 [アクティビティ監視] 画面に、失敗した Integration Services クレンジング アクティビティについて正しくないステータスが表示される  
 [アクティビティ監視] 画面の **[現在の状態]** 列に、失敗した Integration Services クレンジング アクティビティに対しても **[成功]** と表示されます。  
