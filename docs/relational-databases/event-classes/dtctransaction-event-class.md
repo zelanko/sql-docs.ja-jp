@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: DTCTransaction event class
+helpviewer_keywords:
+- DTCTransaction event class
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87a52c7d2055b583cfdbf8eda47021e58a1de23b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: caa5c28313a53eb2a49de9d723f31979df9ff2a4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **DTCTransaction** イベント クラスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (DTC) によってコーディネートされた [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] トランザクションの状態を監視するために使用します。 このようなトランザクションには、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の同一インスタンスの 2 つ以上のデータベースに関連するトランザクションや、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の 2 つ以上のインスタンスに関連する分散トランザクションがあります。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**DTCTransaction** イベント クラスは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 分散トランザクション コーディネーター (DTC) によってコーディネートされた [!INCLUDE[msCoName](../../includes/msconame-md.md)] トランザクションの状態を監視するために使用します。 このようなトランザクションには、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の同一インスタンスの 2 つ以上のデータベースに関連するトランザクションや、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の 2 つ以上のインスタンスに関連する分散トランザクションがあります。  
   
 ## <a name="dtctransaction-event-class-data-columns"></a>DTCTransaction イベント クラスのデータ列  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|Description|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**BinaryData**|**image**|DTC 内でこのトランザクションを一意に識別する UOW (作業単位 ID) のバイナリ表記。|2|はい|  
@@ -41,18 +44,18 @@ ms.lasthandoff: 11/17/2017
 |**EventSubClass**|**int**|イベント サブクラスの種類。<br /><br /> 0 = アドレスの取得<br /><br /> 1 = トランザクションの反映<br /><br /> 3 = 接続を閉じる<br /><br /> 6 = 新しい DTC トランザクションの作成<br /><br /> 7 = DTC トランザクションへの参加<br /><br /> 9 = 内部コミット<br /><br /> 10 = 内部アボート<br /><br /> 14 = トランザクションの準備<br /><br /> 15 = トランザクションの準備完了<br /><br /> 16 = トランザクションのアボート中<br /><br /> 17 = トランザクションのコミット中<br /><br /> 22 = TM が準備状態で失敗<br /><br /> 23 = 不明|21|はい|  
 |**GroupID**|**int**|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |**HostName**|**nvarchar**|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
-|**IntegerData**|**int**|トランザクションの分離レベル。|25|可|  
+|**IntegerData**|**int**|トランザクションの分離レベル。|25|はい|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
 |**LoginName**|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログイン、または DOMAIN\username の形式で表された [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。|11|はい|  
 |**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
-|**RequestID**|**int**|ステートメントが含まれている要求の ID。|49|可|  
+|**RequestID**|**int**|ステートメントが含まれている要求の ID。|49|はい|  
 |**ServerName**|**nvarchar**|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**SessionLoginName**|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |**SPID**|**int**|イベントが発生したセッションの ID。|12|はい|  
-|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|可|  
-|**TextData**|**ntext**|DTC 内でこのトランザクションを一意に識別する UOW のテキスト形式の表記。|1|可|  
+|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
+|**TextData**|**ntext**|DTC 内でこのトランザクションを一意に識別する UOW のテキスト形式の表記。|@shouldalert|はい|  
 |**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
 |**XactSequence**|**bigint**|現在のトランザクションを説明するトークン。|50|はい|  
   

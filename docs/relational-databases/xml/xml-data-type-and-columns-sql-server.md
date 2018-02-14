@@ -8,23 +8,25 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 68e9e9a97b9a601bad62750b2092f2bea66441c0
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 1c46731315da67c4258b4a08983b54e381bd6dbf
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML データ型と列 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での **xml** データ型を使用する利点と制限および、XML データを保存する方法の正しい選択について説明します。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+このトピックでは、 **での** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型を使用する利点と制限および、XML データを保存する方法の正しい選択について説明します。  
   
 ## <a name="relational-or-xml-data-model"></a>リレーショナル データ モデルと XML データ モデル  
  使用するデータが既知のスキーマにより十分に構造化されている場合、データ ストレージとしてはリレーショナル モデルが最適です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に用意されています。 ただし、データが構造化されていないか構造化が部分的である場合、または構造化の状態が不明な場合は、データのモデリングを検討する必要があります。  

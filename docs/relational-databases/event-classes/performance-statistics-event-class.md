@@ -8,31 +8,34 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Performance Statistics event class
+helpviewer_keywords:
+- Performance Statistics event class
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 952bad5b2f70ce0d1c22579ea50708cd48e6b9a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b3b788ea13beced99f19a35707591ecf90c5dd5d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Performance Statistics イベント クラスは、実行中のクエリ、ストアド プロシージャ、トリガーのパフォーマンスを監視するために使用できます。 6 個のイベント サブクラスがあり、それぞれがシステム内のクエリ、ストアド プロシージャ、およびトリガーの有効期間内のイベントを示します。 これらのイベント サブクラスを、関連する sys.dm_exec_query_stats、sys.dm_exec_procedure_stats、および sys.dm_exec_trigger_stats 動的管理ビューと組み合わせて使用することで、クエリ、ストアド プロシージャ、トリガーのパフォーマンス履歴を再構成できます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Performance Statistics イベント クラスは、実行中のクエリ、ストアド プロシージャ、およびトリガーのパフォーマンスを監視するために使用できます。 6 個のイベント サブクラスがあり、それぞれがシステム内のクエリ、ストアド プロシージャ、およびトリガーの有効期間内のイベントを示します。 これらのイベント サブクラスを、関連する sys.dm_exec_query_stats、sys.dm_exec_procedure_stats、および sys.dm_exec_trigger_stats 動的管理ビューと組み合わせて使用することで、クエリ、ストアド プロシージャ、トリガーのパフォーマンス履歴を再構成できます。  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Performance Statistics イベント クラスのデータ列  
  次の表では、EventSubClass 0、EventSubClass 1、EventSubClass 2、EventSubClass 3、EventSubClass 4、および EventSubClass 5 の各イベント サブクラスに関連するイベント クラスのデータ列について説明します。  
   
 ### <a name="eventsubclass-0"></a>EventSubclass 0  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|Description|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|はい|  
 |BinaryData|**image**|NULL|2|はい|  
@@ -47,16 +50,16 @@ ms.lasthandoff: 11/17/2017
 |SPID|**int**|イベントが発生したセッションの ID。|12|はい|  
 |SqlHandle|**image**|sys.dm_exec_sql_text 動的管理ビューを使用してバッチ SQL テキストを取得するために使用できる SQL ハンドル。|63|はい|  
 |StartTime|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|TextData|**ntext**|バッチの SQL テキスト。|1|はい|  
+|TextData|**ntext**|バッチの SQL テキスト。|@shouldalert|はい|  
   
 ### <a name="eventsubclass-1"></a>EventSubclass 1  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|Description|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|このプランが再コンパイルされた累積回数。|52|はい|  
 |BinaryData|**image**|コンパイル済みプランのバイナリ XML。|2|はい|  
 |DatabaseID|**int**|USE *database* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database* ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
-|EventSequence|**int**|要求内の特定のイベントのシーケンス。|51|不可|  
+|EventSequence|**int**|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |SessionLoginName|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |EventSubClass|**int**|イベント サブクラスの種類。<br /><br /> 1 = ストアド プロシージャ内のクエリがコンパイルされました。<br /><br /> ストアド プロシージャのトレースで、次の種類の EventSubClass が生成されます。<br /><br /> *n* 個のクエリを持つストアド プロシージャでは、次のようになります。<br /><br /> *n* 個|21|はい|  
 |IntegerData2|**int**|ストアド プロシージャ内のステートメントの最後。<br /><br /> ストアド プロシージャの最後に達すると -1 になります。|55|はい|  
@@ -65,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 |SPID|**int**|イベントが発生したセッションの ID。|12|はい|  
 |SqlHandle|**image**|dm_exec_sql_text 動的管理ビューを使用してストアド プロシージャの SQL テキストを取得するために使用できる SQL ハンドル。|63|はい|  
 |StartTime|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|TextData|**ntext**|NULL|1|はい|  
+|TextData|**ntext**|NULL|@shouldalert|はい|  
 |PlanHandle|**image**|ストアド プロシージャのコンパイル済みプランのプラン ハンドル。 sys.dm_exec_query_plan 動的管理ビューを使用して XML プランを取得するために使用できます。|65|はい|  
 |ObjectType|**int**|イベントに関係するオブジェクトの種類を表す値。<br /><br /> 8272 = ストアド プロシージャ|28|はい|  
 |BigintData2|**bigint**|コンパイル中に使用されたメモリの合計 (KB 単位)。|53|はい|  
@@ -75,12 +78,12 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|Description|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|このプランが再コンパイルされた累積回数。|52|はい|  
 |BinaryData|**image**|コンパイル済みプランのバイナリ XML。|2|はい|  
 |DatabaseID|**int**|USE *database* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database* ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
-|EventSequence|**int**|要求内の特定のイベントのシーケンス。|51|不可|  
+|EventSequence|**int**|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |SessionLoginName|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |EventSubClass|**int**|イベント サブクラスの種類。<br /><br /> 2 = アドホック SQL ステートメント内のクエリがコンパイルされました。<br /><br /> アドホック バッチのトレースで、次の種類の EventSubClass が生成されます。<br /><br /> *n* 個のクエリを持つアドホック バッチでは、次のようになります。<br /><br /> *n* 個|21|はい|  
 |IntegerData2|**int**|バッチ内のステートメントの最後。<br /><br /> バッチの最後に達すると -1 になります。|55|はい|  
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/17/2017
 |SPID|**int**|イベントが発生したセッションの ID。|12|はい|  
 |SqlHandle|**image**|SQL ハンドル。 dm_exec_sql_text 動的管理ビューを使用してバッチ SQL テキストを取得するために使用できます。|63|はい|  
 |StartTime|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|TextData|**ntext**|NULL|1|はい|  
+|TextData|**ntext**|NULL|@shouldalert|はい|  
 |PlanHandle|**image**|バッチのコンパイル済みプランのプラン ハンドル。 dm_exec_query_plan 動的管理ビューを使用してバッチ XML プランを取得するために使用できます。|65|はい|  
 |BigintData2|**bigint**|コンパイル中に使用されたメモリの合計 (KB 単位)。|53|はい|  
 |CPU|**int**|コンパイル中に使用された CPU 時間の合計 (マイクロ秒単位)。|18|はい|  
@@ -98,12 +101,12 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="eventsubclass-3"></a>EventSubClass 3  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|Description|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|このプランが再コンパイルされた累積回数。|52|はい|  
 |BinaryData|**image**|NULL|2|はい|  
 |DatabaseID|**int**|USE *database* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database* ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
-|EventSequence|**int**|要求内の特定のイベントのシーケンス。|51|不可|  
+|EventSequence|**int**|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |SessionLoginName|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |EventSubClass|**int**|イベント サブクラスの種類。<br /><br /> 3 = キャッシュされたクエリが破棄され、プランに関連付けられたパフォーマンス履歴データが破棄されようとしています。<br /><br /> トレースで、次の種類の EventSubClass が生成されます。<br /><br /> *n* 個のクエリを持つアドホック バッチでは、次のようになります。<br /><br /> クエリがキャッシュからフラッシュされるときは種類 3 が 1 個<br /><br /> *n* 個のクエリを持つストアド プロシージャでは、次のようになります。<br /><br /> クエリがキャッシュからフラッシュされるときは種類 3 が 1 個。|21|はい|  
 |IntegerData2|**int**|ストアド プロシージャまたはバッチ内のステートメントの最後。<br /><br /> ストアド プロシージャまたはバッチの最後に達すると -1 になります。|55|はい|  
@@ -112,18 +115,18 @@ ms.lasthandoff: 11/17/2017
 |SPID|**int**|イベントが発生したセッションの ID。|12|はい|  
 |SqlHandle|**image**|dm_exec_sql_text 動的管理ビューを使用してストアド プロシージャまたはバッチ SQL テキストを取得するために使用できる SQL ハンドル。|63|はい|  
 |StartTime|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|TextData|**ntext**|クエリ実行の統計情報。|1|はい|  
+|TextData|**ntext**|クエリ実行の統計情報。|@shouldalert|はい|  
 |PlanHandle|**image**|ストアド プロシージャまたはバッチのコンパイル済みプランのプラン ハンドル。 dm_exec_query_plan 動的管理ビューを使用して XML プランを取得するために使用できます。|65|はい|  
 |GroupID|**int**|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
   
 ### <a name="eventsubclass-4"></a>EventSubClass 4  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|Description|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|はい|  
 |BinaryData|**image**|NULL|2|はい|  
 |DatabaseID|**int**|指定されたストアド プロシージャが存在するデータベースの ID。|3|はい|  
-|EventSequence|**int**|要求内の特定のイベントのシーケンス。|51|不可|  
+|EventSequence|**int**|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |SessionLoginName|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |EventSubClass|**int**|イベント サブクラスの種類。<br /><br /> 4 = キャッシュされたストアド プロシージャがキャッシュから削除されており、そのストアド プロシージャに関連付けられたパフォーマンス履歴データが破棄されようとしています。|21|はい|  
 |IntegerData2|**int**|NULL|55|はい|  
@@ -132,18 +135,18 @@ ms.lasthandoff: 11/17/2017
 |SPID|**int**|イベントが発生したセッションの ID。|12|はい|  
 |SqlHandle|**image**|dm_exec_sql_text 動的管理ビューを使用して実行されたストアド プロシージャ SQL テキストを取得するために使用できる SQL ハンドル。|63|はい|  
 |StartTime|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|TextData|**ntext**|ProcedureExecutionStats|1|はい|  
+|TextData|**ntext**|ProcedureExecutionStats|@shouldalert|はい|  
 |PlanHandle|**image**|ストアド プロシージャのコンパイル済みプランのプラン ハンドル。 dm_exec_query_plan 動的管理ビューを使用して XML プランを取得するために使用できます。|65|はい|  
 |GroupID|**int**|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
   
 ### <a name="eventsubclass-5"></a>EventSubClass 5  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|Description|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|はい|  
 |BinaryData|**image**|NULL|2|はい|  
 |DatabaseID|**int**|指定されたトリガーが存在するデータベースの ID。|3|はい|  
-|EventSequence|**int**|要求内の特定のイベントのシーケンス。|51|不可|  
+|EventSequence|**int**|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |SessionLoginName|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |EventSubClass|**int**|イベント サブクラスの種類。<br /><br /> 5 = キャッシュされたトリガーがキャッシュから削除されており、そのトリガーに関連付けられたパフォーマンス履歴データが破棄されようとしています。|21|はい|  
 |IntegerData2|**int**|NULL|55|はい|  
@@ -152,7 +155,7 @@ ms.lasthandoff: 11/17/2017
 |SPID|**int**|イベントが発生したセッションの ID。|12|はい|  
 |SqlHandle|**image**|dm_exec_sql_text 動的管理ビューを使用してトリガーの SQL テキストを取得するために使用できる SQL ハンドル。|63|はい|  
 |StartTime|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|TextData|**ntext**|TriggerExecutionStats|1|はい|  
+|TextData|**ntext**|TriggerExecutionStats|@shouldalert|はい|  
 |PlanHandle|**image**|トリガーのコンパイル済みプランのプラン ハンドル。 dm_exec_query_plan 動的管理ビューを使用して XML プランを取得するために使用できます。|65|はい|  
 |GroupID|**int**|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
   

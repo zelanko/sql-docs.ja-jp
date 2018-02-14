@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f27dbf8d8a6deb04fc9f45af51d0a90f694e4ef
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: b10dd4f325b79672d4b0c880186f9331bc71dc1b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="application-level-partitioning"></a>アプリケーション レベルのパーティション分割
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] このアプリケーションは注文を処理します。 最近の注文には多くの処理が行われます。 以前の注文には多くの処理は行われません。 最近の注文は、メモリ最適化テーブルにあります。 以前の注文は、ディスク ベース テーブルにあります。 *hotDate* より後の注文は、メモリ最適化テーブルにあります。 *hotDate* より前の注文は、ディスク ベース テーブルにあります。 多くの同時トランザクションが含まれる極端な OLTP ワークロードを前提とします。 複数の同時実行トランザクションが *hotDate*を変更しようとしている場合でも、このビジネス ルール (メモリ最適化テーブルの最近の注文) を適用する必要があります。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+このアプリケーションは注文を処理します。 最近の注文には多くの処理が行われます。 以前の注文には多くの処理は行われません。 最近の注文は、メモリ最適化テーブルにあります。 以前の注文は、ディスク ベース テーブルにあります。 *hotDate* より後の注文は、メモリ最適化テーブルにあります。 *hotDate* より前の注文は、ディスク ベース テーブルにあります。 多くの同時トランザクションが含まれる極端な OLTP ワークロードを前提とします。 複数の同時実行トランザクションが *hotDate*を変更しようとしている場合でも、このビジネス ルール (メモリ最適化テーブルの最近の注文) を適用する必要があります。  
   
  このサンプルでは、ディスク ベース テーブルに対応するパーティション テーブルを使用せず、3 番目のテーブルを使用して 2 つのテーブルの間の明示的な分岐点を追跡します。 この分岐点を使用して、新しく挿入されるデータが日付に基づいて必ず適切なテーブルに挿入されることを保証できます。 また、どこでデータを検索するかを決定することもできます。 遅れて到着するデータも、引き続き適切なテーブルに配置されます。  
   

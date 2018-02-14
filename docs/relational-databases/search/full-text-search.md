@@ -8,24 +8,27 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: full-text search [SQL Server]
+helpviewer_keywords:
+- full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c1e7d3cfd9aa001c9fb842d46b649bd164c5b359
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f69fa33969aeaa0d6ae1064651afd6c93c93d353
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="full-text-search"></a>フルテキスト検索
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] のフルテキスト検索は、ユーザーおよびアプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの文字ベースのデータに対してフルテキスト クエリを実行できるようにします。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] のフルテキスト検索は、ユーザーおよびアプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの文字ベースのデータに対してフルテキスト クエリを実行できるようにします。
   
 ## <a name="basic-tasks"></a>基本的なタスク
 このトピックでは、フルテキスト検索の概要とそのコンポーネントおよびアーキテクチャについて説明します。 すぐに使い始めたい場合は、この基本的なタスクを参照してください。
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/17/2017
   
  フルテキスト クエリでは大文字と小文字は区別されません。 たとえば、"Aluminum" を検索した場合と "aluminum" を検索した場合では、同じ結果が返されます。  
   
- フルテキスト クエリでは、少数の [!INCLUDE[tsql](../../includes/tsql-md.md)] 述語 (CONTAINS と FREETEXT) および関数 (CONTAINSTABLE と FREETEXTTABLE) が使用されます。 ただし、ビジネス シナリオの検索目的によってフルテキスト クエリの構造は異なります。 例:  
+ フルテキスト クエリでは、少数の [!INCLUDE[tsql](../../includes/tsql-md.md)] 述語 (CONTAINS と FREETEXT) および関数 (CONTAINSTABLE と FREETEXTTABLE) が使用されます。 ただし、ビジネス シナリオの検索目的によってフルテキスト クエリの構造は異なります。 例 :  
   
 -   e ビジネス - Web サイト上で製品を検索する場合  
   
@@ -159,9 +162,9 @@ ms.lasthandoff: 11/17/2017
   
  この例では、 **Title** 列に対してフルテキスト インデックスが作成されているものとします。  
   
-|DocumentID|Title|  
+|DocumentID|[タイトル]|  
 |----------------|-----------|  
-|1|Crank Arm and Tire Maintenance|  
+|@shouldalert|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
 |3|Front Reflector Bracket Installation|  
   
@@ -175,20 +178,20 @@ ms.lasthandoff: 11/17/2017
   
 |Keyword|ColId|DocId|個数|  
 |-------------|-----------|-----------|----------------|  
-|Crank|1|1|1|  
-|Arm|1|1|2|  
-|Tire|1|1|4|  
-|メンテナンス|1|1|5|  
-|Front|1|2|1|  
-|Front|1|3|1|  
-|Reflector|1|2|2|  
-|Reflector|1|2|5|  
-|Reflector|1|3|2|  
-|Bracket|1|2|3|  
-|Bracket|1|3|3|  
-|アセンブリ|1|2|6|  
-|3|1|2|7|  
-|インストール|1|3|4|  
+|Crank|@shouldalert|@shouldalert|@shouldalert|  
+|Arm|@shouldalert|@shouldalert|2|  
+|Tire|@shouldalert|@shouldalert|4|  
+|メンテナンス|@shouldalert|@shouldalert|5|  
+|Front|@shouldalert|2|@shouldalert|  
+|Front|@shouldalert|3|@shouldalert|  
+|Reflector|@shouldalert|2|2|  
+|Reflector|@shouldalert|2|5|  
+|Reflector|@shouldalert|3|2|  
+|Bracket|@shouldalert|2|3|  
+|Bracket|@shouldalert|3|3|  
+|アセンブリ|@shouldalert|2|6|  
+|3|@shouldalert|2|7|  
+|インストール|@shouldalert|3|4|  
   
  **Keyword** 列には、インデックス作成時に抽出された単一のトークン表現が含まれています。 ワード ブレーカーが、トークンの構成要素を決定します。  
   
@@ -201,7 +204,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="fragments"></a> フルテキスト インデックス フラグメント  
  論理フルテキスト インデックスは、通常、複数の内部テーブルに分割されます。 各内部テーブルは、フルテキスト インデックス フラグメントと呼ばれます。 これらのフラグメントの一部は、他のフラグメントよりも新しいデータを含んでいることがあります。 たとえば、DocId が 3 である次の行をユーザーが更新し、テーブルの変更が自動的に追跡される場合、新しいフラグメントが作成されます。  
   
-|DocumentID|Title|  
+|DocumentID|[タイトル]|  
 |----------------|-----------|  
 |3|Rear Reflector|  
   
@@ -211,8 +214,8 @@ ms.lasthandoff: 11/17/2017
   
 |Keyword|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Rear|1|3|1|  
-|Reflector|1|3|2|  
+|Rear|@shouldalert|3|@shouldalert|  
+|Reflector|@shouldalert|3|2|  
   
  フラグメント 2 を見ればわかるように、フルテキスト クエリでは、各フラグメントを内部的にクエリし、古いエントリを破棄する必要があります。 したがって、非常に多くのフルテキスト インデックス フラグメントがフルテキスト インデックスに含まれている場合、クエリのパフォーマンスが大幅に低下する可能性があります。 フラグメントの数を減らすには、 [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの REORGANIZE オプションを使用してフルテキスト カタログを再構成します。 このステートメントは *マスター マージ*を実行します。マスター マージでは、フラグメントが単一のより大きなフラグメントにマージされ、フルテキスト インデックスから古いエントリがすべて削除されます。  
   
@@ -220,18 +223,18 @@ ms.lasthandoff: 11/17/2017
   
 |Keyword|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Crank|1|1|1|  
-|Arm|1|1|2|  
-|Tire|1|1|4|  
-|メンテナンス|1|1|5|  
-|Front|1|2|1|  
-|Rear|1|3|1|  
-|Reflector|1|2|2|  
-|Reflector|1|2|5|  
-|Reflector|1|3|2|  
-|Bracket|1|2|3|  
-|アセンブリ|1|2|6|  
-|3|1|2|7|  
+|Crank|@shouldalert|@shouldalert|@shouldalert|  
+|Arm|@shouldalert|@shouldalert|2|  
+|Tire|@shouldalert|@shouldalert|4|  
+|メンテナンス|@shouldalert|@shouldalert|5|  
+|Front|@shouldalert|2|@shouldalert|  
+|Rear|@shouldalert|3|@shouldalert|  
+|Reflector|@shouldalert|2|2|  
+|Reflector|@shouldalert|2|5|  
+|Reflector|@shouldalert|3|2|  
+|Bracket|@shouldalert|2|3|  
+|アセンブリ|@shouldalert|2|6|  
+|3|@shouldalert|2|7|  
 
 ### <a name="differences-between-full-text-indexes-and-regular-sql-server-indexes"></a>フルテキスト インデックスと標準の SQL Server インデックスの違い:  
   

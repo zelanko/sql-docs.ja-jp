@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Add Login to Server Role event class
+helpviewer_keywords:
+- Audit Add Login to Server Role event class
 ms.assetid: 7a8ed1c3-a98f-4f93-a6ba-e3901d941db9
-caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bcaccf951a28b8c36620cc983d7b4fb03cd0c55d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9bddd27fba0db8cee9bc4459930deb5c044895a1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-add-login-to-server-role-event-class"></a>Audit Add Login to Server Role イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Audit Add Login to Server Role** イベント クラスは、固定サーバー ロールにログインが追加されるたび、または固定サーバー ロールからログインが削除されるたびに発生します。 このイベント クラスは **sp_addsrvrolemember** ストアド プロシージャと **sp_dropsrvrolemember** ストアド プロシージャで使用します。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Audit Add Login to Server Role** イベント クラスは、固定サーバー ロールにログインが追加されるたび、または固定サーバー ロールからログインが削除されるたびに発生します。 このイベント クラスは **sp_addsrvrolemember** ストアド プロシージャと **sp_dropsrvrolemember** ストアド プロシージャで使用します。  
   
 ## <a name="audit-add-login-to-server-role-event-class-data-columns"></a>Audit Add Login to Server Role イベント クラスのデータ列  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|Description|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  

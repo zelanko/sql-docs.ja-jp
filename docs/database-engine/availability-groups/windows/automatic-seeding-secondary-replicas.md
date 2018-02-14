@@ -10,20 +10,22 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Automatic seeding [SQL Server], secondary replica
+helpviewer_keywords:
+- Automatic seeding [SQL Server], secondary replica
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 86282a01e4c9027d9dc340d348a814f61c0f4b3b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 60bb5a01191de574b7fcac4eb11d73190c94aac8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>セカンダリ レプリカの自動シード処理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +37,7 @@ SQL Server 2012 および 2014 では、SQL Server Always On 可用性グルー�
 自動シード処理を使用する場合の考慮事項は次のとおりです。
 
 * [プライマリ レプリカへのパフォーマンスおよびトランザクション ログの影響](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [ディスク レイアウト](#disk-layout)
+* [ディスク レイアウト](#disklayout)
 * [Security](#security)
 
 
@@ -154,9 +156,6 @@ ALTER AVAILABILITY GROUP [<AGName>]
 <a name="sql-server-log"></a> 以下に示す[動的管理ビュー](#dynamic-management-views)に加え、自動シード処理の開始および完了を SQL Server ログで確認することができます。
 
 ![SQL Server ログ][2]
-
-
-
 
 ## <a name="combine-backup-and-restore-with-automatic-seeding"></a>バックアップおよび復元を自動シード処理と組み合わせる
 

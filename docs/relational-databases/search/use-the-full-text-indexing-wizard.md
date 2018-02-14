@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,19 +26,20 @@ helpviewer_keywords:
 - Full-Text Indexing Wizard
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cfca84ed59bd6922a6667a0b214668836e421ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85be544c13310a98863b03d8bd515c5a1990a5ba
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>フルテキスト インデックス作成ウィザードの使用
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] SSMS のフルテキスト インデックス作成ウィザードを使用すると、フルテキスト インデックスを作成するために作られた一連の手順を実行できます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+SSMS のフルテキスト インデックス作成ウィザードを使用すると、フルテキスト インデックスを作成するために作られた一連の手順を実行できます。  
   
 ## <a name="create-a--full-text-index"></a>フルテキスト インデックスを作成する 
 
@@ -84,15 +86,15 @@ ms.lasthandoff: 11/17/2017
 
      **[カタログの選択]:** フルテキスト カタログを一覧から選択します。 データベースの既定のカタログが一覧の既定の選択項目となります。 カタログが存在しない場合、一覧は無効になり、 **[カタログの新規作成]** チェック ボックスはオンのまま変更できなくなります。  
   
-  または
+  スイッチまたは
   
  10. **[カタログの新規作成]**
  - [フルテキスト カタログの選択]。  
   
-    a. **名前**  
+    A. **名前**  
      新しいフルテキスト カタログの名前を入力します。  
   
-     b. **[既定のカタログとして設定する]**  
+     B. **[既定のカタログとして設定する]**  
      このカタログをこのデータベースの既定のカタログにする場合に選択します。  
   
      c. **[アクセントの区別]**  
@@ -102,7 +104,7 @@ ms.lasthandoff: 11/17/2017
      フルテキスト インデックスを作成するファイル グループを指定します。  
   
      e. 値を選択します。  
-      |値|説明|  
+      |ReplTest1|Description|  
       |-----------|-----------------|
       |**<default>**| テーブルまたはビューがパーティション分割されていない場合に、基になるテーブルまたはビューと同じファイル グループを使用するには、この値を選択します。 テーブルまたはビューがパーティション分割されている場合は、プライマリ ファイル グループが使用されます。|
       |**PRIMARY**|新しいフルテキスト インデックスにプライマリ ファイル グループを使用する場合に選択します。|
@@ -116,7 +118,7 @@ ms.lasthandoff: 11/17/2017
   
      次のいずれかの値を選択します。  
   
-   |値|説明|  
+   |ReplTest1|Description|  
     |-----------|-----------------|  
     |**<system>**|新しいフルテキスト インデックスに対してシステム ストップリストを使用する場合に選択します。 これは既定値です。|  
     |**<off>**|新しいフルテキスト インデックスに対してストップリストを無効にする場合に選択します。|  
@@ -135,7 +137,7 @@ ms.lasthandoff: 11/17/2017
      **[編集]**  
      スケジュールを編集します。  
   
-     **Del**  
+     **削除**  
      スケジュールを削除します。  
   
 5.  フルテキスト インデックス作成ウィザードの進行状況を表示または制御します。  

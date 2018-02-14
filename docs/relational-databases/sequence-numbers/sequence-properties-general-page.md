@@ -8,24 +8,27 @@ ms.service:
 ms.component: sequence-numbers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.sequence.general.f1
+f1_keywords:
+- sql13.swb.sequence.general.f1
 ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3f667e4beef4a39034066d46258677f2079fe78
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7867babbca7d6481033c6d882445390b643b6114
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="sequence-properties-general-page"></a>[順序のプロパティ] ([全般] ページ)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] シーケンス オブジェクトを作成し、そのプロパティを指定します。 シーケンスは、シーケンスが作成された仕様に従って数値のシーケンスを生成するユーザー定義のスキーマ バインド オブジェクトです。 数値のシーケンスは、定義された間隔で昇順または降順に生成され、要求に応じて再起動 (繰り返し) するように構成できます。 ID 列とは異なり、シーケンスは、特定のテーブルに関連付けられていません。 アプリケーションは、シーケンス オブジェクトを参照して、次の値を受け取ります。 シーケンスとテーブルの関係は、アプリケーションによって制御されます。 ユーザー アプリケーションは、シーケンス オブジェクトを参照し、複数の行とテーブル間で値を調整できます。  
+# <a name="sequence-properties-general-page"></a>[順序のプロパティ]\([全般] ページ)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+シーケンス オブジェクトを作成し、そのプロパティを指定します。 シーケンスは、シーケンスが作成された仕様に従って数値のシーケンスを生成するユーザー定義のスキーマ バインド オブジェクトです。 数値のシーケンスは、定義された間隔で昇順または降順に生成され、要求に応じて再起動 (繰り返し) するように構成できます。 ID 列とは異なり、シーケンスは、特定のテーブルに関連付けられていません。 アプリケーションは、シーケンス オブジェクトを参照して、次の値を受け取ります。 シーケンスとテーブルの関係は、アプリケーションによって制御されます。 ユーザー アプリケーションは、シーケンス オブジェクトを参照し、複数の行とテーブル間で値を調整できます。  
   
  挿入時に生成される ID 列値とは異なり、アプリケーションで [NEXT VALUE の関数](../../t-sql/functions/next-value-for-transact-sql.md)を呼び出すことで、行を挿入せずに次のシーケンス番号を取得できます。 一度に複数のシーケンス番号を取得するには、 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) を使用します。  
   
@@ -33,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
  このページには 2 とおりの方法でアクセスできます。オブジェクト エクスプローラーで **[シーケンス]** を右クリックして **[新しいシーケンス]**をクリックするか、既存のシーケンスを右クリックして **[プロパティ]**をクリックします。 既存のシーケンスを右クリックして **[プロパティ]** をクリックした場合は、オプションは編集不可能です。 シーケンス オプションを変更するには、[ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) ステートメントを使用するか、シーケンス オブジェクトを削除してから再作成してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[シーケンス名]**  
  ここにシーケンス名を入力します。  
   
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
 -   これらの種類のいずれかに基づいている、すべてのユーザー定義データ型 (別名型) です。  
   
- **有効桁数**  
+ **[精度]**  
  **decimal** データ型または **numeric** データ型については、有効桁数を指定します (小数点以下桁数は常に 0 です)。  
   
  **[開始値]**  
@@ -88,7 +91,7 @@ ms.lasthandoff: 11/17/2017
   
  CREATE SEQUENCE のオプションの詳細については、「[CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)」をご覧ください。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  SCHEMA に対する **CREATE SEQUENCE**権限、 **ALTER**権限、または **CONTROL** 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

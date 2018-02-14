@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,27 +17,28 @@ helpviewer_keywords:
 - Audit Database Mirroring Login event class
 - database mirroring [SQL Server], event notifications
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d845ba23a517b6afd3e74d9d807dc3cac3f3a794
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e224b60ca56dab7ce2c46d6bf3a554690bc3b0c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **Audit Database Mirroring Login** イベントを作成して、データベース ミラーリングのトランスポートのセキュリティに関する監査メッセージを報告します。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **Audit Database Mirroring Login** イベントを作成して、データベース ミラーリングのトランスポートのセキュリティに関する監査メッセージを報告します。  
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Audit Database Mirroring Login イベント クラスのデータ列  
   
-|データ列|型|説明|列番号|フィルターの適用|  
+|データ列|型|Description|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|このイベント クラスでは使用しません。|10|はい|  
 |**ClientProcessID**|**int**|このイベント クラスでは使用しません。|9|はい|  
-|**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|可|  
+|**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |**EventClass**|**int**|キャプチャされたイベント クラスの種類。 **Audit Database Mirroring Login** の場合は常に **154**。|27|いいえ|  
 |**EventSequence**|**int**|このイベントのシーケンス番号。|51|いいえ|  
 |**EventSubClass**|**int**|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 次の表に、このイベントのイベント サブクラス値を示します。|21|はい|  
@@ -52,16 +54,16 @@ ms.lasthandoff: 11/17/2017
 |**RoleName**|**nvarchar**|接続のロール。 **initiator** または **target**のいずれかです。|38|いいえ|  
 |**ServerName**|**nvarchar**|トレースされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**SPID**|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
-|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|可|  
+|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |**状態**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のソース コード内のイベントが生成された場所を示します。 イベントが生成された場所によって、状態コードが異なることがあります。 マイクロソフトのサポート エンジニアはこの状態コードを使用して、イベントが生成されたソース コード内の場所を特定することができます。|30|いいえ|  
 |**TargetUserName**|**nvarchar**|ログイン状態。 次のいずれかです。<br /><br /> **INITIAL**<br /><br /> **WAIT LOGIN NEGOTIATE**<br /><br /> **ONE ISC**<br /><br /> **ONE ASC**<br /><br /> **TWO ISC**<br /><br /> **TWO ASC**<br /><br /> **WAIT ISC Confirm**<br /><br /> **WAIT ASC Confirm**<br /><br /> **WAIT REJECT**<br /><br /> **WAIT PRE-MASTER SECRET**<br /><br /> **WAIT VALIDATION**<br /><br /> **WAIT ARBITRATION**<br /><br /> **ONLINE**<br /><br /> **ERROR**<br /><br /> <br /><br /> 注: ISC は、セキュリティ コンテキストの送信 (Initiate Security Context) を表します。 ASC は、セキュリティ コンテキストの受け入れ (Accept Security Context) を表します。|39|いいえ|  
 |**TransactionID**|**bigint**|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  
   
  次の表に、このイベント クラスのサブクラス値を示します。  
   
-|ID|サブクラス|説明|  
+|ID|サブクラス|Description|  
 |--------|--------------|-----------------|  
-|1|Login Success|Login Success イベントは、隣接するデータベース ミラーリングのログイン プロセスが正常に完了したことを報告するイベントです。|  
+|@shouldalert|Login Success|Login Success イベントは、隣接するデータベース ミラーリングのログイン プロセスが正常に完了したことを報告するイベントです。|  
 |2|Login Protocol Error|Login Protocol Error イベントは、形式は正しくても、ログイン プロセスの現在の状態では無効なメッセージをデータベース ミラーリング ログインが受け取ったことを報告するイベントです。 このメッセージは、失われたか、誤った順序で送信されている可能性があります。|  
 |3|Message Format Error|Message Format Error イベントは、期待する形式に一致しないメッセージをデータベース ミラーリング ログインが受け取ったことを報告するイベントです。 このメッセージは破損しているか、データベース ミラーリングが使用しているポートに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のプログラムがメッセージを送信している可能性があります。|  
 |4|Negotiate Failure|Negotiate Failure イベントは、ローカルのデータベース ミラーリング エンドポイントとリモートのデータベース ミラーリング エンドポイントが同時に使用できない認証をサポートしていることを報告するイベントです。|  

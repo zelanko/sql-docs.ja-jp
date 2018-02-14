@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - SQL Server event classes, OLEDB event category
 - event classes [SQL Server], OLEDB event category
 ms.assetid: cf93e424-3dac-462d-b3da-92e7d0b064d4
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 00ad26dba1a02c5544215bada7fefa2ed5dfa3a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 111e97f459178ce8afdb9b710b5fc9db0f0fc9c6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="oledb-event-category"></a>OLEDB イベント カテゴリ
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **OLEDB** イベント カテゴリには、一般的な OLEDB イベントが含まれます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**OLEDB** イベント カテゴリには、一般的な OLEDB イベントが含まれます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|説明|  
+|トピック|Description|  
 |-----------|-----------------|  
 |[OLEDB Call イベント クラス](../../relational-databases/event-classes/oledb-call-event-class.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、分散クエリとリモート ストアド プロシージャ用の OLE DB プロバイダーに、データ以外の呼び出しまたは**QueryInterface** ではない呼び出しが行われたことを示します。|  
 |[OLEDB DataRead イベント クラス](../../relational-databases/event-classes/oledb-dataread-event-class.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって分散クエリとリモート ストアド プロシージャの OLE DB プロバイダーが呼び出されたことを示します。|  

@@ -8,26 +8,27 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e85070af106dd7f8aa334c7163fc0e1734ed86d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: df6980bfcc713c17d1a4c39c52c967922f5b9cb5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>PowerShell を使用して Always Encrypted キーの構成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
     
-この記事では、[SqlServer PowerShell モジュール](../../../relational-databases/scripting/sql-server-powershell-provider.md)を使用し、Always Encrypted のキーを与える手順について説明します。 PowerShell を使用し、Always Encrypted キーを与えることができますが、そのとき、 [役割の分離を指定することも、指定しないこともできます](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#KeyManagementRoles)。キー ストアの実際の暗号鍵にアクセスするユーザーとデータベースにアクセスするユーザーを制御できます。 
+この記事では、 [SqlServer PowerShell モジュール](../../../relational-databases/scripting/sql-server-powershell-provider.md)を使用し、Always Encrypted のキーを与える手順について説明します。 PowerShell を使用し、Always Encrypted キーを与えることができますが、そのとき、 [役割の分離を指定することも、指定しないこともできます](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#KeyManagementRoles)。キー ストアの実際の暗号鍵にアクセスするユーザーとデータベースにアクセスするユーザーを制御できます。 
 
 推奨されるベスト プラクティスを含む (上位)、Always Encrypted のキー管理の概要については、「 [Always Encrypted のキー管理の概要](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)」を参照してください。
 Always Encrypted に SqlServer PowerShell を使用する方法については、「 [PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)」を参照してください。
@@ -280,7 +281,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName -EncryptedValue $keyData.EncryptedValue
 ```  
  
-## <a name="next-steps"></a>次の手順    
+## <a name="next-steps"></a>Next Steps    
 
 - [PowerShell を使用して列の暗号化の構成](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md)    
 - [PowerShell を使用した Always Encrypted キーの交換](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
@@ -289,7 +290,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
     
 - [Always Encrypted のキー管理の概要](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-- [Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted (データベース エンジン)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted (クライアント開発)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [Always Encrypted 関連のブログ](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
 

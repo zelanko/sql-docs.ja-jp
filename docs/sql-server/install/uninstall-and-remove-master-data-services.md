@@ -2,37 +2,40 @@
 title: "マスター データ サービスのアンインストールと削除 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: install
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4934ba6f54b7bcd5270f69b860b291903cba5556
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bf5fe32060d6026c6a62b589fbdd991ef561eda6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>マスター データ サービスのアンインストールと削除
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスから [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 機能をアンインストールするには、「[SQL Server の既存のインスタンスのアンインストール &#40;セットアップ&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)」の手順に従って [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] を **[機能の選択]** ページで削除する機能として指定します。 アンインストール プロセスによって [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] のフォルダーおよびファイルが削除され、ローカル コンピューターから [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] がアンインストールされます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスから [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 機能をアンインストールするには、「[SQL Server の既存のインスタンスのアンインストール &#40;セットアップ&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)」の手順に従って [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] を **[機能の選択]** ページで削除する機能として指定します。 アンインストール プロセスによって [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] のフォルダーおよびファイルが削除され、ローカル コンピューターから [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]がアンインストールされます。  
   
  データの損失またはシステム内の他のコンピューターへの影響を回避するために、削除されない項目、またはアンインストール プロセスによって変更される項目もあります。 次の表を参考にして、項目を残すか削除するかを決定します。  
   
-|アイテム|説明|  
+|アイテム|Description|  
 |----------|-----------------|  
 |フォルダーとファイル|アンインストール プロセスによって、ほとんどのフォルダーとファイルがインストール パスから削除されます。<br /><br /> アンインストール プロセスでは、Master Data Services フォルダーおよび MDSTempDir フォルダーはインストール場所から削除されません。 これらのフォルダーのファイル システムからの削除は、アンインストール プロセスの完了後に手動で実行できます。 詳細については、「[フォルダーとファイルの権限 &#40;マスター データ サービス&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)」を参照してください。|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] アセンブリ|アンインストール プロセスによって、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] アセンブリがグローバル アセンブリ キャッシュ (GAC) から削除されます。|  
-|データベース|アンインストール プロセスは、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースには影響を及ぼしません。 データベースは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンス内にそのまま残ります。つまり、マスター データ、モデル オブジェクト、ユーザーおよびグループの権限、ビジネス ルールなどを含めて、データは損失しません。<br /><br /> データベースを必要とせず、別の [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web サイトまたはアプリケーションに将来接続する予定がない場合、データベースをホストする [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスからデータベースを削除することもできます。 詳細については、「 [データベースの削除](../../relational-databases/databases/delete-a-database.md)」を参照してください。|  
+|[データベース]|アンインストール プロセスは、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースには影響を及ぼしません。 データベースは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンス内にそのまま残ります。つまり、マスター データ、モデル オブジェクト、ユーザーおよびグループの権限、ビジネス ルールなどを含めて、データは損失しません。<br /><br /> データベースを必要とせず、別の [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web サイトまたはアプリケーションに将来接続する予定がない場合、データベースをホストする [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスからデータベースを削除することもできます。 詳細については、「 [データベースの削除](../../relational-databases/databases/delete-a-database.md)」を参照してください。|  
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] と Web.config|WebApplication フォルダーは、アンインストール プロセスによってファイル システムから削除されます。 WebApplication フォルダーには、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]の Web アプリケーション ファイルと Web.config ファイルがあります。<br /><br /> **\*\* 重要 \*\*** アンインストールを実行する前に、ファイル内に保存されているカスタム設定やその他の情報を維持するために Web.config ファイルを別の場所にコピーする必要がある場合があります。 アンインストール プロセスが完了すると、Web.config ファイルは回復できません。|  
 |インターネット インフォメーション サービス (IIS) の項目|アンインストール プロセスは、ローカル コンピューター上の IIS にあるアプリケーション プール、Web サイト、Web アプリケーションには影響を及ぼしません。 アンインストール プロセスによって、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]の WebApplication フォルダーと Web.config ファイルが削除されるため、これらのファイルを使用する [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションでは、コンテンツが表示されなくなります。 ユーザーがこうした Web アプリケーションへのアクセスを試みると、「HTTP エラー 500.19 - 内部サーバー エラー: ページに関連する構成データが無効であるため、要求されたページにアクセスできません。」というメッセージが表示されます。<br /><br /> Web サイトまたはアプリケーション、および Web サイトまたはアプリケーションで使用されているアプリケーション プールを今後必要としない場合は、IIS ツールを使用してそれらを削除できます。 詳細については、 [TechNet の『](http://go.microsoft.com/fwlink/?LinkId=184885) IIS 7 Operations Guide [!INCLUDE[msCoName](../../includes/msconame-md.md)] 』を参照してください。|  
 |**MDS_ServiceAccounts** グループ|アンインストール プロセスが完了しても、 **MDS_ServiceAccounts** Windows グループおよびそのグループに追加されたサービス アカウントはそのまま残ります。 グループおよびアカウントを今後必要としない場合、削除できます。|  

@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: CursorImplicitConversion event class
+helpviewer_keywords:
+- CursorImplicitConversion event class
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4c5582a8f136ddcc9d8d1135fd00c27a4dfe817
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 62c9ff7500944f749523a2aa42f01d8106bf54d5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **CursorImplicitConversion** イベント クラスは、アプリケーション プログラミング インターフェイス (API) または [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソルで発生する暗黙的なカーソル変換イベントを表します。 暗黙的なカーソル変換イベントは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が、要求された種類のサーバー カーソルでサポートされていない Transact-SQL ステートメントを実行するときに発生します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] はカーソルの種類が変更されたことを示すエラーを返します。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**CursorImplicitConversion** イベント クラスは、アプリケーション プログラミング インターフェイス (API) または [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソルで発生する暗黙的なカーソル変換イベントを表します。 暗黙的なカーソル変換イベントは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が、要求された種類のサーバー カーソルでサポートされていない Transact-SQL ステートメントを実行するときに発生します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] はカーソルの種類が変更されたことを示すエラーを返します。  
   
  **CursorImplicitConversion** イベント クラスは、カーソルのパフォーマンスを記録しているトレースに含めます。  
   
@@ -33,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="cursorimplicitconversion-event-class-data-columns"></a>CursorImplicitConversion イベント クラスのデータ列  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|Description|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**BinaryData**|**image**|結果のカーソルの種類です。 値は次のとおりです。<br /><br /> 1 = キー セット<br /><br /> 2 = 動的<br /><br /> 4 = 順方向専用<br /><br /> 8 = 静的<br /><br /> 16 = 高速順方向|2|はい|  
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 |**LoginSid**|**image**|ログインしたユーザーのセキュリティ識別子 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
-|**RequestID**|**int**|暗黙的な変換の要求識別子です。|49|可|  
+|**RequestID**|**int**|暗黙的な変換の要求識別子です。|49|はい|  
 |**ServerName**|**nvarchar**|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**SessionLoginName**|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |**SPID**|**int**|イベントが発生したセッションの ID。|12|はい|  

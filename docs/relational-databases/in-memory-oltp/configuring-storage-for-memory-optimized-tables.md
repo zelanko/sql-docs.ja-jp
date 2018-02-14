@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e72a08f08a3d6ad49c429739108e0e862d0e507
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a83f67f8f376f48bc76a66636138a6b971e5b834
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>メモリ最適化テーブルのストレージの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]記憶域の容量と 1 秒間の入出力操作 (IOPS) を構成する必要があります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+記憶域の容量と 1 秒間の入出力操作 (IOPS) を構成する必要があります。  
   
 ## <a name="storage-capacity"></a>記憶域の容量  
  [メモリ最適化テーブルのメモリ必要量の推定](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) の情報を使用して、データベースの持続性のあるメモリ最適化テーブルのメモリ内サイズを推定します。 インデックスはメモリ最適化テーブルに対して永続化されないため、インデックスのサイズは含めません。 サイズを確認した後には、持続性のあるメモリ内テーブルのサイズの 4 倍のディスク領域を提供する必要があります。  
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 -   スペースが許す場合は、通常、チェックポイント ファイルはすべてのコンテナーに均等に分散されます。 SQL server 2014 では、均一な分散を実現するには奇数個のコンテナーが必要です。2016 以降では、コンテナーが奇数または偶数のどちらでも、均一に分散されます。
   
 ## <a name="encryption"></a>暗号化  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、メモリ最適化テーブルのストレージの暗号化は、データベースで TDE を有効化する際に行われます。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」をご覧ください。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、データベースで TDE が有効になっている場合でも、チェックポイント ファイルは暗号化されません。
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、メモリ最適化テーブルのストレージの暗号化は、データベースで TDE を有効化する際に行われます。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、データベースで TDE が有効になっている場合でも、チェックポイント ファイルは暗号化されません。
   
 ## <a name="see-also"></a>参照  
  [メモリ最適化オブジェクト用ストレージの作成と管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

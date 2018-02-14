@@ -8,30 +8,33 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Data File Auto Shrink event class
+helpviewer_keywords:
+- Data File Auto Shrink event class
 ms.assetid: ea02b01e-9f87-47ca-9117-afadc382fb45
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47c05cf969cf8b76f8905b097bd07d86fc0baa4b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca97f272a4dc24c7e1f610ef33bbd1242cfa2242
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Data File Auto Shrink** イベント クラスは、データ ファイルが自動的に圧縮されたことを示します。 このイベントは、ALTER DATABASE ステートメントを明示的に使用してデータ ファイルを圧縮した場合には発生しません。 データ ファイルのサイズ変更を監視するトレースに、 **Data File Auto Shrink** イベント クラスを含めます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Data File Auto Shrink** イベント クラスは、データ ファイルが自動的に圧縮されたことを示します。 このイベントは、ALTER DATABASE ステートメントを明示的に使用してデータ ファイルを圧縮した場合には発生しません。 データ ファイルのサイズ変更を監視するトレースに、 **Data File Auto Shrink** イベント クラスを含めます。  
   
  **Data File Auto Shrink** イベント クラスをトレースに含めても、データ ファイルが頻繁に圧縮されない限り、オーバーヘッドはそれほど発生しません。  
   
 ## <a name="data-file-auto-shrink-event-class-data-columns"></a>Data File Auto Shrink イベント クラスのデータ列  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|Description|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**Int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |**EventSequence**|**int**|バッチ内のイベント クラスのシーケンス。|51|いいえ|  
 |**Filename**|**nvarchar**|圧縮されているファイルの論理名。|36|はい|  
 |**HostName**|**nvarchar**|クライアントが実行されているコンピューターの名前。 このデータ列には、クライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
-|**IntegerData**|**int**|ファイルを圧縮する単位で、8 KB ページの倍数です。|25|可|  
+|**IntegerData**|**int**|ファイルを圧縮する単位で、8 KB ページの倍数です。|25|はい|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
 |**LoginName**|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\username という形式の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。|11|はい|  
 |**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  

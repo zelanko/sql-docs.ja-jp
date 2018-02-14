@@ -8,26 +8,28 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 881c663038225af57b33aeb655306f6ef1d1f1f4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a36b99483ece6d73dd94e9f5d218fdcf8ce4c743
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] このトピックでは、プロパティを検索プロパティ リストに追加してフルテキスト検索で検索できるようにするために事前に必要な値を取得する方法について説明します。 これらの値には、ドキュメント プロパティのプロパティ セット GUID およびプロパティ整数識別子が含まれます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+このトピックでは、プロパティを検索プロパティ リストに追加してフルテキスト検索で検索できるようにするために事前に必要な値を取得する方法について説明します。 これらの値には、ドキュメント プロパティのプロパティ セット GUID およびプロパティ整数識別子が含まれます。  
   
  バイナリ データ ( **varbinary**、 **varbinary(max)** ( **FILESTREAM**を含む)、または **image** データ型の列に格納されたデータ) から IFilter で抽出されたドキュメント プロパティは、フルテキスト検索で使用できます。 抽出されたプロパティを検索できるようにするには、検索プロパティ リストにプロパティを手動で追加する必要があります。 さらに、検索プロパティ リストを 1 つ以上のフルテキスト インデックスに関連付ける必要があります。 詳細については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」を参照してください。  
   
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="wellknown"></a> 広く使用され、知られている Microsoft プロパティについての情報の入手  
  マイクロソフトでは、さまざまなコンテキストで使用できる何百ものドキュメント プロパティを定義していますが、それぞれのファイル形式で使用できるプロパティはごくわずかです。 頻繁に使用される Windows プロパティの中に、少数の汎用プロパティがあります。 よく知られている汎用プロパティの一部の例を次の表に示します。 この表では、よく知られている名前、Windows の正規名 (マイクロソフトが公開するプロパティの説明で使用)、プロパティ セット GUID、プロパティ整数識別子、および簡単な説明を示します。  
   
-|よく知られている名前|Windows の正規名|プロパティ セット GUID|整数 ID|説明|  
+|よく知られている名前|Windows の正規名|プロパティ セット GUID|整数 ID|Description|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|**System.Author**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|特定のアイテムの作成者。|  
 |Tags|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|アイテムに割り当てられる一連のキーワード (タグとも呼ばれます)。|  
