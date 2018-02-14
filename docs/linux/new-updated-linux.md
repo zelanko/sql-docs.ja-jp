@@ -5,16 +5,16 @@ manager: craigg
 author: MightyPen
 ms.author: genemi
 ms.topic: article
-ms.custom: UpdArt.exe
+ms.custom: sql-linux,UpdArt.exe
 ms.suite: sql
 ms.prod_service: sql-non-specified
-ms.component: linux
+ms.component: 
 ms.date: 02/03/2018
-ms.openlocfilehash: fc740b59397f0438a059b38df57ffc40999cc81e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 827399587a8147c59caf6bf31bf8b10f10c83211
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>新規または最近の更新: SQL Server on Linux のドキュメント
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/09/2018
 
 これらの条件が満たされてし、失敗した場合、プライマリ レプリカをホストしているサーバー、AG は同期レプリカへの所有権を変更します。 同期レプリカの動作は、(存在できる 3 つの合計: 1 つのプライマリ レプリカと 2 つのセカンダリ レプリカ) でさらに制御できます`required_synchronized_secondaries_to_commit`です。 これにより、Windows と Linux の両方の Ag とでも動作しますが完全に異なる方法で構成されています。 Linux では、値は AG リソース自体に、クラスターによって自動的に構成します。
 
-**構成専用のレプリカとクォーラム**
+構成専用のレプリカとクォーラム
 
 
 また新しい CU1 時点での SQL Server 2017 では構成専用のレプリカです。 ペースは異なるため、WSFC よりも、クォーラムと STONITH を必要とするときに特に 2 つのノードの構成のみは機能しません、AG になります。 FCI のペースで提供されるクォーラム メカニズムもかまいません、クラスターの層のすべての FCI フェールオーバー判別が行われるためです。 AG の判別 Linux では、すべてのメタデータが格納されている SQL Server で行われます。 これは、活躍するが、構成のみのレプリカです。
@@ -123,7 +123,7 @@ ms.lasthandoff: 02/09/2018
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-extract-transform-and-load-data-on-linux-with-ssissql-server-linux-migrate-ssismd"></a>2.&nbsp;[抽出、変換、および SSIS Linux でのデータの読み込み](sql-server-linux-migrate-ssis.md)
+### <a name="2-nbsp-extract-transform-and-load-data-on-linux-with-ssissql-server-linux-migrate-ssismd"></a>2.&nbsp;[抽出、変換、および SSIS Linux でのデータを読み込む](sql-server-linux-migrate-ssis.md)
 
 *最終更新日: 2018-01-31* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_1))
 
