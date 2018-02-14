@@ -29,13 +29,13 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7353125066cfcfe8d1d244bd04d98b51eedc884c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services のロール (SSIS サービス)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納されたパッケージに安全にアクセスするための固定データベース レベルの特定のロールを提供します。 利用可能なロールは、パッケージを SSIS カタログ データベース (SSISDB) に保存するか、msdb データベースに保存するかどうかによって異なります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納されたパッケージに安全にアクセスするための固定データベース レベルの特定のロールを提供します。 利用可能なロールは、パッケージを SSIS カタログ データベース (SSISDB) に保存するか、msdb データベースに保存するかどうかによって異なります。  
   
 ## <a name="roles-in-the-ssis-catalog-database-ssisdb"></a>SSIS カタログ データベース (SSISDB) のロール  
  SSIS カタログ データベース (SSISDB) は、パッケージやパッケージに関する情報に安全にアクセスするための、次の固定データベース レベルのロールを提供します。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
      ビューの一覧には、[catalog].[projects]、[catalog].[packages]、[catalog].[operations]、[catalog].[extended_operation_info]、[catalog].[operation_messages]、[catalog].[event_messages]、[catalog].[execution_data_statistics]、[catalog].[execution_component_phases]、[catalog].[execution_data_taps]、[catalog].[event_message_context]、[catalog].[executions]、[catalog].[executables]、[catalog].[executable_statistics]、[catalog].[validations]、[catalog].[execution_parameter_values] [catalog].[execution_property_override_values] が含まれます。  
   
 ## <a name="roles-in-the-msdb-database"></a>msdb データベースのロール  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、 **msdb**に保存されたパッケージへのアクセスを制御するために、 **db_ssisadmin**、 **db_ssisltduser**、 **db_ssisoperator** というデータベース レベルの 3 つの固定ロールがあります。 パッケージにロールを割り当てるには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用します。 ロールの割り当ては、 **msdb** データベースに保存されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、**msdb** データベースに保存されたパッケージへのアクセスを制御するために、**db_ssisadmin**、**db_ssisltduser**、**db_ssisoperator** というデータベース レベルの 3 つの固定ロールがあります。 パッケージにロールを割り当てるには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用します。 ロールの割り当ては、 **msdb** データベースに保存されます。  
   
 ### <a name="read-and-write-actions"></a>読み取りアクションと書き込みアクション  
  次の表で、Windows の読み取りおよび書き込みアクションと、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]での固定データベース レベル ロールの読み取りおよび書き込みアクションについて説明します。  

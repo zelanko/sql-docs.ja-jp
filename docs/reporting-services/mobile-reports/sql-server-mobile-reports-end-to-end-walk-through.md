@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3233c1433d1e09038d66af3db7e84a732e81926a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server モバイル レポート: エンド ツー エンドのチュートリアル
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] Web ポータル上の [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] で任意の画面サイズのモバイル レポートを作成し、Power BI モバイル アプリで表示するチュートリアル。
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/08/2018
 この記事では、次について説明します。   
   
 - サンプル データ ソースとして AdventureWorks データベースを使用して、 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータル上で共有データ ソースとデータセットを作成する。  
-- [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
+- Reporting Services モバイル レポートを作成する [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
 - モバイル レポートを [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータルにパブリッシュする。  
 - Power BI モバイル アプリでモバイル レポートを表示する。  
   
@@ -151,7 +151,7 @@ Reporting Services モバイル レポートを作成するには、 [SQL Server
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)
 
-   [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] により、マスター レイアウト グリッドが表示されます。  
+   [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] マスター レイアウト グリッドが表示されます。  
   
 2. **[レイアウト]** タブで、[グラフ] セクションまで下方向へスクロールします。  
   

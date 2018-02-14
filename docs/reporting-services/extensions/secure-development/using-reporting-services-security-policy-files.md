@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - CodeGroup elements
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2a7354eba000f4982753d0253dd9dfbc70aa09bf
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Reporting Services セキュリティ ポリシー ファイルの使用
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、セットアップ時にファイル システムにコピーされる 3 つの構成ファイルにコンポーネントのセキュリティ ポリシーを格納します。 これらの構成ファイルには、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のコード アセンブリについて、内部用セキュリティ ポリシーとユーザー定義セキュリティ ポリシーの組み合わせを含めることができます。 3 つの構成ファイルは、セキュリティ保護可能な [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の 3 つのコンポーネント (レポート サーバーと Windows サービス、レポート マネージャー Web アプリケーション、レポート デザイナー プレビュー ウィンドウ) に対応しています。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] セットアップ時にファイル システムにコピーされる 3 つの構成ファイルにコンポーネントのセキュリティ ポリシーを格納します。 これらの構成ファイルには、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のコード アセンブリについて、内部用セキュリティ ポリシーとユーザー定義セキュリティ ポリシーの組み合わせを含めることができます。 3 つの構成ファイルは、セキュリティ保護可能な [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の 3 つのコンポーネント (レポート サーバーと Windows サービス、レポート マネージャー Web アプリケーション、レポート デザイナー プレビュー ウィンドウ) に対応しています。  
   
 > [!NOTE]  
 >  レポート デザイナーには 2 種類のプレビュー モードがあります。1 つは [プレビュー] タブ、もう 1 つは、レポート プロジェクトを **DebugLocal** モードで開始したときに起動されるポップアップ プレビュー ウィンドウです。 **[プレビュー]** タブはセキュリティ保護可能なコンポーネントではなく、セキュリティ ポリシー設定が適用されません。 レポート サーバー機能のシミュレーションを目的としているプレビュー ウィンドウには、ポリシー構成ファイルが備わっています。レポート デザイナーでカスタム アセンブリやカスタム拡張機能を使用する場合、ユーザーまたは管理者はこの構成ファイルを変更する必要があります。  
