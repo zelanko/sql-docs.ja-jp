@@ -92,20 +92,18 @@
 ## [トレース イベント](../analysis-services/trace-events/analysis-services-trace-events.md)
 
 # Developer
-## テーブル モデル
-### [テーブル モデルのプログラミング互換性レベル 1200 以降](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
-#### [テーブル モデルのスクリプト言語 (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
-#### [テーブル モデルのスクリプト言語 (TMSL) コマンド](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
-#### [テーブル モデルのスクリプト言語 (TMSL) オブジェクト](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
-### [互換性レベル 1050 および 1103 のテーブル モデルのプログラミング](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
+## [テーブル モデルのプログラミング互換性レベル 1200 以降](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
+### [テーブル モデルのスクリプト言語 (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
+### [テーブル モデルのスクリプト言語 (TMSL) コマンド](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
+### [テーブル モデルのスクリプト言語 (TMSL) オブジェクト](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
+## [互換性レベル 1050 および 1103 のテーブル モデルのプログラミング](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
 
-## 多次元モデル
-### [Analysis Services スクリプト言語 (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
-### [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
-### [分析管理オブジェクト +](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
-### [OLAP 論理的要素 +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
-### [OLAP 物理的要素 +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
-### [OLAP の拡張 +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
+## [Analysis Services スクリプト言語 (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
+## [分析管理オブジェクト (AMO)+](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
+## [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
+## [OLAP 論理的要素 +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
+## [OLAP 物理的要素 +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
+## [OLAP の拡張 +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
 
 ## [スキーマ行セット](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
 ## [Analysis Services スクリプト言語 (XMLA 用 ASSL)](scripting/analysis-services-scripting-language-assl-for-xmla.md)

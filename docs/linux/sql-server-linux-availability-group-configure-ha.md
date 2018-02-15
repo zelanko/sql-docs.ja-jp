@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: 76a5ed98ddd1aa69c11cd371586ce963ebcd97de
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: c1d84ae8ac797775759bc53a29cc55acd1323f32
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>構成する SQL Server Always On 可用性グループ Linux 上の高可用性
 
@@ -164,7 +164,7 @@ Linux 上の高可用性のため、可用性グループを作成します。 �
 
 - 2 つの同期レプリカが可用性グループを作成します。
 
-   同期の可用性モードの 2 つのレプリカが含まれます。 たとえば、次のスクリプトを作成と呼ばれる、AG`ag1`です。 `node1`および`node2`自動シード処理を自動フェールオーバーを伴うの同期モードでのレプリカをホストします。
+   同期の可用性モードの 2 つのレプリカが含まれます。 たとえば、次のスクリプトを作成と呼ばれる、AG`ag1`です。 `node1` および`node2`自動シード処理を自動フェールオーバーを伴うの同期モードでのレプリカをホストします。
 
    >[!IMPORTANT]
    >のみと 2 つの同期レプリカ、可用性グループを作成する次のスクリプトを実行します。 上記のスクリプトを実行した場合、次のスクリプトは実行されません。 

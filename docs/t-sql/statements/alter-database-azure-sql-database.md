@@ -19,10 +19,10 @@ ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: a5c22e2ce58189f396835f65748fdbab7ef8f9d5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -193,7 +193,7 @@ ALTER DATABASE { database_name }
 <temporal_history_retention>  ::=  TEMPORAL_HISTORY_RETENTION { ON | OFF }
 ```  
   
- Set オプションの詳しい説明については、次を参照してください。 [ALTER DATABASE SET Options &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md)と[ALTER DATABASE 互換性レベル &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ Set オプションの詳しい説明については、次を参照してください。 [ALTER DATABASE SET Options &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md)と[ALTER DATABASE 互換性レベル &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
 ## <a name="arguments"></a>引数  
  *database_name*  
@@ -247,7 +247,7 @@ ALTER DATABASE current
 |1024 GB|なし|√|√|√|√ (D)|  
 |1024 GB から最大 4096 GB 単位での 256 GB *|なし|なし|なし|なし|√|√|  
   
- \*P11 と P15 MAXSIZE を許可する最大 4 TB 1024 GB が既定のサイズをされているとします。  P11 および P15 は、追加料金なしで最大 4 TB の含まれる記憶域を使用できます。 Premium 階層で MAXSIZE が 1 TB を超えるは次の地域で現在使用可能な: 米国 East2、米国西部、米国 Gov バージニア、西ヨーロッパ、ドイツの中央、南東アジア、東日本、オーストラリア東部、カナダ中央、およびカナダ東部です。 現在の制限については、次を参照してください。[データベースをシングル](https://docs.microsoft.com/azure/sql-database-single-database-resources)です。  
+ \* P11 と P15 MAXSIZE を許可する最大 4 TB 1024 GB が既定のサイズをされているとします。  P11 および P15 は、追加料金なしで最大 4 TB の含まれる記憶域を使用できます。 Premium 階層で MAXSIZE が 1 TB を超えるは次の地域で現在使用可能な: 米国 East2、米国西部、米国 Gov バージニア、西ヨーロッパ、ドイツの中央、南東アジア、東日本、オーストラリア東部、カナダ中央、およびカナダ東部です。 現在の制限については、次を参照してください。[データベースをシングル](https://docs.microsoft.com/azure/sql-database-single-database-resources)です。  
 
   
  引数 MAXSIZE および EDITION には、以下の規則が適用されます。  

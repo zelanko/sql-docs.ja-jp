@@ -9,18 +9,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 82a1f6d840897311dbb52ffbbf2620c8ec3994ec
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: bf9a129df2e76f0eafc6992fc0d81f1a397df963
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>インストールして、Linux 上の SQL Server をアップグレードするためのリポジトリを構成します。
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 この記事では、Linux 上の SQL Server 2017 インストールおよびアップグレードの適切なリポジトリを構成する方法について説明します。
 
@@ -37,7 +39,7 @@ Linux に SQL Server をインストールするときは、Microsoft のリポ�
 | **CU** | **mssql-server-2017** | SQL Server 2017 累積的な更新プログラム (CU) リポジトリ。 |
 | **GDR** | **mssql-server-2017-gdr** | 重要な更新プログラムのみの SQL Server 2017 GDR リポジトリ。 |
 
-## <a id="cuversusgdr"></a>GDR と累積更新プログラム
+## <a id="cuversusgdr"></a> GDR と累積更新プログラム
 
 ことが重要の各配布リポジトリの 2 つの主な種類があることに注意してください。
 
@@ -50,7 +52,7 @@ Linux に SQL Server をインストールするときは、Microsoft のリポ�
 > [!NOTE]
 > CU GDR のリリースから更新できますリポジトリを変更することでいつでもリリースされます。 更新 CU から GDR リリースにリリースはサポートされていません。 
 
-## <a id="configure"></a>リポジトリを構成します。
+## <a id="configure"></a> リポジトリを構成します。
 
 次のセクションでは、ことを確認して、次のサポートされているプラットフォームのリポジトリを構成する方法について説明します。
 
@@ -58,7 +60,7 @@ Linux に SQL Server をインストールするときは、Microsoft のリポ�
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#sles)
 
-## <a id="rhel"></a>RHEL リポジトリを構成します。
+## <a id="rhel"></a> RHEL リポジトリを構成します。
 Red Hat Enterprise Server (RHEL) でリポジトリを構成するのにには、次の手順を使用します。
 
 ### <a name="check-for-previously-configured-repositories-rhel"></a>以前に構成したリポジトリ (RHEL) の確認します。
@@ -97,7 +99,7 @@ SQL Server のインストールとアップグレードに使用する新しい
 | **CU** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **GDR** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
-## <a id="sles"></a>SLES リポジトリを構成します。
+## <a id="sles"></a> SLES リポジトリを構成します。
 SLES でリポジトリを構成するのにには、次の手順を使用します。
 
 ### <a name="check-for-previously-configured-repositories-sles"></a>以前に構成したリポジトリ (SLES) の確認します。
@@ -128,7 +130,7 @@ SQL Server のインストールとアップグレードに使用する新しい
 | **CU** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
 | **GDR** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
 
-## <a id="ubuntu"></a>Ubuntu リポジトリを構成します。
+## <a id="ubuntu"></a> Ubuntu リポジトリを構成します。
 Ubuntu でリポジトリを構成するのにには、次の手順を使用します。
 
 ### <a name="check-for-previously-configured-repositories-ubuntu"></a>以前に構成したリポジトリ (Ubuntu) の確認します。
