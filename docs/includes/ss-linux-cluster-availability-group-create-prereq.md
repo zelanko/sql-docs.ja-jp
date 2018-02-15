@@ -138,15 +138,15 @@ CREATE CERTIFICATE dbm_certificate
 
 ## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>すべてのレプリカにデータベース ミラーリング エンドポイントを作成する
 
-データベース ミラーリング エンドポイントは、データベース ミラーリング セッションに参加させる、または可用性レプリカをホストするサーバー インスタンス間でメッセージの送受信に伝送制御プロトコル (TCP) を使用します。 データベース ミラーリング エンドポイントでは、一意な TCP ポート番号でリッスンします。 TCP リスナーには、リスナーの IP アドレスが必要です。 リスナーの IP アドレスは、IPv4 アドレスである必要があります。 使用することも`0.0.0.0`します。 
+データベース ミラーリング エンドポイントは、データベース ミラーリング セッションに参加させる、または可用性レプリカをホストするサーバー インスタンス間でメッセージの送受信に伝送制御プロトコル (TCP) を使用します。 データベース ミラーリング エンドポイントでは、一意な TCP ポート番号でリッスンします。 
 
-次の TRANSACT-SQL スクリプトの作成という名前のリッスンしているエンドポイント`Hadr_endpoint`可用性グループのです。 エンドポイントを開始し、接続のアクセス許可を作成したユーザーに与えられます。 スクリプトを実行する前に、`**< ... >**` の間の値を置き換えます。
+次の TRANSACT-SQL スクリプトの作成という名前のリッスンしているエンドポイント`Hadr_endpoint`可用性グループのです。 エンドポイントを開始し、接続のアクセス許可を作成したユーザーに与えられます。 スクリプトを実行する前に、`**< ... >**` の間の値を置き換えます。 IP アドレスを含めることができます必要に応じて`LISTENER_IP = (0.0.0.0)`です。 リスナーの IP アドレスは、IPv4 アドレスである必要があります。 使用することも`0.0.0.0`します。 
 
 すべての SQL Server インスタンスで、環境には、次の TRANSACT-SQL スクリプトを更新します。 
 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
-    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    AS TCP (LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
         ROLE = ALL,
         AUTHENTICATION = CERTIFICATE dbm_certificate,
@@ -161,7 +161,7 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
-    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    AS TCP (LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
         ROLE = WITNESS,
         AUTHENTICATION = CERTIFICATE dbm_certificate,

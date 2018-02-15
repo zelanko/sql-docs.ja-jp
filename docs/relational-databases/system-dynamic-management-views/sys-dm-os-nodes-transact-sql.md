@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_nodes (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/19/2017
+ms.date: 02/13/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -27,29 +27,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2abdd42300c8264f87513f428c7c6f4aa22645d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 53d10c2bc54517db851ef1fe40cb727c799ef223
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  SQLOS という内部コンポーネントは、ハードウェア プロセッサの局所性を疑似的に表現したノード構造を作成します。 これらの構造をソフト NUMA を使って変更することで、カスタム ノード レイアウトを作成できます。  
+SQLOS という内部コンポーネントは、ハードウェア プロセッサの局所性を疑似的に表現したノード構造を作成します。 これらの構造体を使用して変更することができます[ソフト NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)カスタム ノード レイアウトを作成します。  
+
+> [!NOTE]
+> 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]特定のハードウェア構成のソフト NUMA は自動的に使用します。 詳細については、次を参照してください。[自動ソフト NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)です。
   
- 次の表では、これらのノードに関する情報を示します。  
+次の表では、これらのノードに関する情報を示します。  
   
-> **注:**この DMV からの呼び出しに[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_os_nodes**です。  
+> [!NOTE]
+> この DMV からの呼び出しに[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_os_nodes**です。  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|ノードの ID。|  
-|node_state_desc|**nvarchar (256)**|ノード状態の説明。 相互排他的な値から先に表示され、続けて、組み合わせ可能な値が表示されます。 例:<br /><br /> Online、Thread Resources Low、Lazy Preemptive<br /><br /> 次の 4 つの相互に排他的な node_state_desc 値があります。 これらは、その説明を以下に示します。<br /><br /> ノードがオンラインでオンラインにします。<br /><br /> ノードがオフライン オフラインです。<br /><br /> アイドル状態: ノードは、保留中の作業要求を持たずがアイドル状態になりました。<br /><br /> IDLE_READY: ノードは、保留中の作業要求を持たずをアイドル状態に移行する準備ができました。<br /><br /> その説明を以下に示す 5 つの組み合わせ可能な node_state_desc 値。<br /><br /> DAC: このノードは、専用管理者接続の予約されています。<br /><br /> THREAD_RESOURCES_LOW: 新しいスレッドを作成できませんこのノード上でメモリ不足の状態が原因です。<br /><br /> ホット追加されました。 は、ノードがへの応答に追加されたことを示します、ホット アド CPU イベント。|  
-|memory_object_address|**varbinary(8)**|このノードに関連付けられているメモリ オブジェクトのアドレス。 sys.dm_os_memory_objects.memory_object_address と一対一の関係にあります。|  
-|memory_clerk_address|**varbinary(8)**|このノードに関連付けられているメモリ クラークのアドレス。 sys.dm_os_memory_clerks.memory_clerk_address と一対一の関係にあります。|  
-|io_completion_worker_address|**varbinary(8)**|このノードの IO 完了に割り当てられているワーカーのアドレス。 sys.dm_os_workers.worker_address と一対一の関係にあります。|  
-|memory_node_id|**smallint**|このノードが属しているメモリ ノードの ID。 sys.dm_os_memory_nodes.memory_node_id と多対一の関係にあります。|  
+|node_state_desc|**nvarchar (256)**|ノード状態の説明。 相互排他的な値から先に表示され、続けて、組み合わせ可能な値が表示されます。 例:<br /> Online、Thread Resources Low、Lazy Preemptive<br /><br />次の 4 つの相互に排他的な node_state_desc 値があります。 これらは、その説明を以下に示します。<br /><ul><li>ノードがオンラインでオンラインにします。<li>ノードがオフライン オフラインです。<li>アイドル状態: ノードは、保留中の作業要求を持たずがアイドル状態になりました。<li>IDLE_READY: ノードは、保留中の作業要求を持たずをアイドル状態に移行する準備ができました。</li></ul><br />その説明を以下に示す 3 つの組み合わせ可能な node_state_desc 値。<br /><ul><li>DAC: このノードの予約されています、[専用管理者接続](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)です。<li>THREAD_RESOURCES_LOW: 新しいスレッドを作成できませんこのノード上でメモリ不足の状態が原因です。<li>ホット追加されました。 は、ノードがへの応答に追加されたことを示します、ホット アド CPU イベント。</li></ul>|  
+|memory_object_address|**varbinary(8)**|このノードに関連付けられているメモリ オブジェクトのアドレス。 一対一の関係に[sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).memory_object_address です。|  
+|memory_clerk_address|**varbinary(8)**|このノードに関連付けられているメモリ クラークのアドレス。 一対一の関係に[sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).memory_clerk_address です。|  
+|io_completion_worker_address|**varbinary(8)**|このノードの IO 完了に割り当てられているワーカーのアドレス。 一対一の関係に[sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).worker_address です。|  
+|memory_node_id|**smallint**|このノードが属しているメモリ ノードの ID。 多対一の関係に[sys.dm_os_memory_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md).memory_node_id です。|  
 |cpu_affinity_mask|**bigint**|このノードに関連付けられている CPU を識別するビットマップ。|  
 |online_scheduler_count|**smallint**|このノードによって管理されるオンライン スケジューラの数です。|  
 |idle_scheduler_count|**smallint**|アクティブなワーカーの存在しないオンライン スケジューラの数。|  
@@ -67,11 +71,7 @@ ms.lasthandoff: 02/03/2018
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 階層が必要です、`VIEW DATABASE STATE`データベースの権限です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。  
   
-## <a name="see-also"></a>参照  
-  
+## <a name="see-also"></a>参照    
  [SQL Server オペレーティング システム関連の動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [ソフト NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   
-  
-
-

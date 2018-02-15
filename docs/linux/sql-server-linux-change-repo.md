@@ -4,7 +4,7 @@ description: "確認し、Linux 上の SQL Server 2017 のソース リポジト
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/07/2018
+ms.date: 02/14/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: bf9a129df2e76f0eafc6992fc0d81f1a397df963
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
-ms.translationtype: HT
+ms.openlocfilehash: 33f02349d10cfd0ada76325c378d0259ec931002
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>インストールして、Linux 上の SQL Server をアップグレードするためのリポジトリを構成します。
 
@@ -181,8 +181,5 @@ SQL Server のインストールとアップグレードに使用する新しい
 
 > [!IMPORTANT]
 > この時点などを使用してインストール記事のいずれかを選択した場合、[クイック スタート](sql-server-linux-setup.md#platforms)ターゲットのリポジトリが既に構成されていることに注意してください。 チュートリアルではその手順は繰り返されません。 これは、クイック スタート CU リポジトリを使用するために GDR リポジトリを構成する場合に特に当てはまります。
-
-> [!IMPORTANT]
-> 任意のバージョンの SQL Server 2017 年 1 CTP 2.1 の前に、GA. にアップグレードする前に 2.1 には、少なくともにアップグレードする必要があります。 別のオプションには、データベースのバックアップ、以前のバージョンをアンインストールおよび GA バージョンの新規インストールを実行します。
 
 Linux に SQL Server 2017 をインストールする方法の詳細については、次を参照してください。 [Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md)です。
