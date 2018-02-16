@@ -1,7 +1,7 @@
 ---
 title: "セル (XMLA) の更新 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - modifying cells
 - XMLA, cells
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - cells [Analysis Services]
 - XML for Analysis, cells
 ms.assetid: a1c61496-36ee-4bce-98d9-d13440d349aa
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 10803f4f2e3356d996a7c524c69ccd5121569a3e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4349868e9e9656a5bbd735c9fa6c6741c95d6e57
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="updating-cells-xmla"></a>セルの更新 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用することができます、 [UpdateCells](../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)キューブの書き戻しを有効になっているキューブ内の 1 つまたは複数のセルの値を変更するコマンド。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を更新するセルを含む各パーティション用の別個の書き戻しテーブルに更新された情報を格納します。  
+  使用することができます、 [UpdateCells](../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)キューブの書き戻しを有効になっているキューブ内の 1 つまたは複数のセルの値を変更するコマンド。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 更新するセルを含む各パーティション用の別個の書き戻しテーブルに更新された情報を格納します。  
   
 > [!NOTE]  
 >  **UpdateCells**コマンドで、キューブ書き戻し時の割り当てがサポートされていません。 書き戻しの割り当てを使用する必要がありますを使用する、[ステートメント](../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md)多次元式 (MDX) UPDATE ステートメントを送信するコマンド。 詳細については、次を参照してください。 [UPDATE CUBE ステートメント &#40;です。MDX と #41 です。](../../mdx/mdx-data-manipulation-update-cube.md)  
@@ -45,6 +46,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>参照  
  [Update 要素 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
- [Analysis Services での XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Analysis Services の XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

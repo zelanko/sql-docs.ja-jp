@@ -18,19 +18,20 @@ helpviewer_keywords:
 - projects [Analysis Services]
 - solutions [Analysis Services]
 ms.assetid: 132ed779-3ec8-4734-9698-802116d1b017
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: e841871a7be5dd1d787854bc5fbedc86eed264f4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>SQL Server データ ツール (SSDT) を使用した多次元モデルの作成
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、2 つの環境のビルド、配置、および管理する[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ソリューション:[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]と[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。 この 2 つの環境には、プロジェクト システムが実装されています。 Visual Studio プロジェクトの詳細については、MSDN ライブラリの「 [コンテナーとしてのプロジェクト](http://go.microsoft.com/fwlink/?LinkId=63960) 」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ソリューションの作成、配置、管理を行うために [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]という 2 つの環境が提供されています。 この 2 つの環境には、プロジェクト システムが実装されています。 Visual Studio プロジェクトの詳細については、MSDN ライブラリの「 [コンテナーとしてのプロジェクト](http://go.microsoft.com/fwlink/?LinkId=63960) 」を参照してください。  
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2010 をベースにした開発環境であり、ビジネス インテリジェンス ソリューションを作成および変更する場合に使用します。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクト (キューブやディメンションなど) の定義が含まれる [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを作成し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] スクリプト言語 (ASSL) の要素が含まれる XML ファイルに保存します。 これらのプロジェクトが他のプロジェクトを含めることができますもソリューションに含まれている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]など、コンポーネント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]です。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]では、特定の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに依存しないソリューションの一部として [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを開発できます。 開発時にテストするためにテスト サーバー上のインスタンスにオブジェクトを配置し、同じ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを使用して 1 つ以上のステージング サーバーまたは実稼働サーバー上のインスタンスにそのオブジェクトを配置できます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を含むソリューション内のプロジェクトとアイテムは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe などのソース コード コントロールと統合できます。 作成の詳細については、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクト[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用して[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を参照してください[Analysis Services プロジェクト &#40; を作成します。SSDT &#41;](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md). [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに直接接続し、プロジェクトの操作や XML ファイルへのオブジェクト定義の保存を行わずに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトを作成したり変更したりすることもできます。 詳細については、「 [多次元モデル データベース (SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)、および [Analysis Services データベースへのオンライン モードでの接続](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)という 2 つの環境が提供されています。  
   

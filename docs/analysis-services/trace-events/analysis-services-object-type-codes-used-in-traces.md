@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>トレースで使用される Analysis Services オブジェクトの種類のコード
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このページには、Analysis Services データ モデル内の各オブジェクトのオブジェクトの種類 (6 桁の数字) が一覧表示されます。 これらのコードは、トレース ログに表示され、特定のロックに関連付けられているオブジェクトの種類を識別するために使用されます。 たとえば、データベースでのロックのタイムアウトは、オブジェクトの種類が 100002 で、これはデータベース オブジェクトの種類を示します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+このページは、Analysis Services データ モデル内の各オブジェクトのオブジェクトの種類 (6 桁の数字) を一覧表示します。 これらのコードは、トレース ログに表示され、特定のロックに関連付けられているオブジェクトの種類を識別するために使用されます。 たとえば、データベースでのロックのタイムアウトは、オブジェクトの種類が 100002 で、これはデータベース オブジェクトの種類を示します。  
   
 > [!NOTE]  
 >  トレース ログに実際に表示されるよりも多くのコードが、以下に一覧表示されています。 以下の一覧はすべてのオブジェクトの種類のコードの包括的な一覧ですが、ロックを取得するオブジェクトのみがトレース ログにオブジェクトの種類のコードを表示します。  
@@ -34,8 +35,8 @@ ms.lasthandoff: 01/08/2018
 |オブジェクトの種類|オブジェクト名です。|  
 |-----------------|-----------------|  
 |100000|[サーバー]|  
-|100001|コマンド|  
-|100002|[データベース]|  
+|100001|Command|  
+|100002|データベース|  
 |100003|DataSource|  
 |100004|DatabasePermission|  
 |100005|ロール|  
@@ -73,10 +74,10 @@ ms.lasthandoff: 01/08/2018
 |100047|CubeAttributePermission|  
 |100048|CellPermission|  
 |100049|CubeDimensionPermission|  
-|100050|Trace|  
+|100050|トレース|  
 |100051|ServerAssembly|  
 |100052|CubeAssembly|  
-|100053|コマンド|  
+|100053|Command|  
 |100054|KPI (KPI)|  
 |100055|DataSourceView|  
 |100056|Perspective|  

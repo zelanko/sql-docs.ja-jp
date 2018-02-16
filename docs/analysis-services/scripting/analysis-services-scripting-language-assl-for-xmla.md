@@ -11,9 +11,12 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: Analysis Services Scripting Language Reference
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-applies_to: SQL Server 2016 Preview
+apiname:
+- Analysis Services Scripting Language Reference
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - ASSL, reference
 - scripting languages [Analysis Services]
@@ -23,19 +26,20 @@ helpviewer_keywords:
 - scripts [Analysis Services Scripting Language]
 - object definition language [Analysis Services Scripting Language]
 ms.assetid: ca0e852e-9002-4224-a0f0-bd96f2fc5c65
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 00661a3edba892563837af0c20f5015aa9d259dc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-scripting-language-assl-for-xmla"></a>Analysis Services スクリプト言語 (ASSL を XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]アプリケーションと通信[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XML コマンドやオブジェクトの説明を使用します。 この XML 言語のオブジェクト定義言語部分は、Analysis Services スクリプト言語 (ASSL) で表現します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+アプリケーションと通信[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XML コマンドやオブジェクトの説明を使用します。 この XML 言語のオブジェクト定義言語部分は、Analysis Services スクリプト言語 (ASSL) で表現します。  
   
  このリファレンスのセクションには、ASSL スキーマでの各要素の構文および使用法に関する情報が記載されています。  
   
@@ -52,6 +56,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>参照  
  [Analysis Services スクリプト言語 &#40; を使用した開発ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
- [分析管理オブジェクト &#40;AMO&#41; による開発](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [分析管理オブジェクト &#40; を使用した開発AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
   

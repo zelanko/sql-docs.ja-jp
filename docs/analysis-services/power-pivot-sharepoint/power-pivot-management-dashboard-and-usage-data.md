@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 17b70799d09fd1f9a62100c85fde71046250d12e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理ダッシュボードと使用状況データ
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]管理ダッシュ ボードが定義済みのレポートのコレクションで、SQL Server を管理するのに役立つ、SharePoint サーバーの全体管理の web パーツ[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]for SharePoint の配置。 管理ダッシュボードでは、サーバーの状態、ブックの利用状況、およびデータ更新に関連する情報が示されます。 ダッシュボードは、SharePoint 使用状況データ コレクションのデータを使用します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理ダッシュボードとは、SQL Server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint の配置の管理に役立つ SharePoint サーバーの全体管理の定義済みのレポートおよび Web パーツのコレクションです。 管理ダッシュボードでは、サーバーの状態、ブックの利用状況、およびデータ更新に関連する情報が示されます。 ダッシュボードは、SharePoint 使用状況データ コレクションのデータを使用します。  
   
   
 ##  <a name="prereq"></a> 前提条件  
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/08/2018
 |ブックの利用状況 - リスト|データ アクセスの頻度をレポートします。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] データ ソースへの接続が発生する頻度を日単位または週単位で確認できます。|  
 |データ更新 - 最近の利用状況|データ更新ジョブの状態をレポートします (実行に失敗したジョブを含む)。 このレポートは、データ更新操作をアプリケーション レベルで総合的に理解するのに役立ちます。 管理者は、 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーション全体に対して定義されているデータ更新ジョブの数が一目でわかります。|  
 |データ更新 - 最近のエラー|データ更新が正常に完了しなかった [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ブックを一覧表示します。|  
-|[レポート]|Excel で開くことができるレポートへのリンクを示します。|  
+|レポート|Excel で開くことができるレポートへのリンクを示します。|  
   
 ##  <a name="open"></a> Power Pivot 管理ダッシュボードを開く  
  ダッシュボードには、一度に 1 つの [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーションの情報が表示されます。 管理ダッシュボードは、異なる 2 つの場所から開くことができます。  
@@ -101,7 +102,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  テキスト エディターで .odc ファイルを開きます。  
   
-6.   **\<Odc:ConnectionString >**要素、削除の行の最後までスクロール**データが埋め込まれた = False**、し、削除**編集モードの 0 を =**です。 文字列の最後の文字がセミコロンである場合は、ここで削除します。  
+6.  **\<Odc:ConnectionString >**要素、削除の行の最後までスクロール**データが埋め込まれた = False**、し、削除**編集モードの 0 を =**です。 文字列の最後の文字がセミコロンである場合は、ここで削除します。  
   
 7.  このファイルを保存します。 残りの手順は、使用している [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] と Excel のバージョンによって異なります。  
   

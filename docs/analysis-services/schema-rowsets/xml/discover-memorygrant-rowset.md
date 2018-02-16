@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: d254e42d-9918-47ce-b6df-47f1f0b432dd
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9bf3896348044d084144fd2276ff31f617b202c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovermemorygrant-rowset"></a>DISCOVER_MEMORYGRANT 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]サーバーで現在実行中のジョブによって実行されたクォータ付与内部メモリの一覧を返します。 サーバーでジョブが実行されているかどうかを調べるには、`Select * from $System.Discover_Jobs` を使用します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+サーバーで現在実行中のジョブによって確保されている内部メモリ クォータ付与の一覧を返します。 サーバーでジョブが実行されているかどうかを調べるには、`Select * from $System.Discover_Jobs` を使用します。  
   
  **適用されます:**表形式モデル、多次元モデル  
   
@@ -35,12 +37,12 @@ ms.lasthandoff: 01/08/2018
 |列名|型を表すインジケーター|制限|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**MEMORY_ID**|**DBTYPE_I8**||メモリ クォータ付与を識別する番号。 1 つの DISCOVER_MEMORYGRANT 要求のコンテキスト内で一意です。|  
-|**SPID**|**DBTYPE_I4**|Required|SPID は、`Select * from $System.Discover_Sessions` を実行することにより取得できます。|  
+|**SPID**|**DBTYPE_I4**|必須|SPID は、`Select * from $System.Discover_Sessions` を実行することにより取得できます。|  
 |**CreationTime**|**DBTYPE_I8 DBTYPE_DBTIMESTAMP**||クォータが付与された時刻。|  
 |**LastRequestTime**|**DBTYPE_DBTIMESTAMP**||クォータ要求を前回変更した時刻。|  
 |**MemoryUsed**|**DBTYPE_I4**||クォータに関連して使用されたメモリの量。|  
 |**MemoryGranted**|**DBTYPE_I4**||メモリ クォータを取得するジョブで使用するために付与されたメモリの量。|  
-|**ブロックされています。**|**DBTYPE_BOOL**||ジョブのブロック状態を示すブール値。 True は、そのジョブがブロックされており、そのクォータ要求を許可するのに十分なクォータが別のジョブから解放されるまで待機していることを示します。 False は、ジョブがそのクォータを受け取り、実行できることを示します。|  
+|**Blocked**|**DBTYPE_BOOL**||ジョブのブロック状態を示すブール値。 True は、そのジョブがブロックされており、そのクォータ要求を許可するのに十分なクォータが別のジョブから解放されるまで待機していることを示します。 False は、ジョブがそのクォータを受け取り、実行できることを示します。|  
   
  このスキーマ行セットは並べ替えられません。  
   
@@ -55,6 +57,6 @@ ms.lasthandoff: 01/08/2018
 |ADOMDNAME|MemoryGrant|  
   
 ## <a name="see-also"></a>参照  
- [XML for Analysis Schema 行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis スキーマ行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

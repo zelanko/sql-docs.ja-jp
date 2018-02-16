@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a90f1158-68d3-4330-98c1-fb0f81e13328
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 045979085e6d8e1622fef2a961f6c9fdb21d772a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="update-powerpivotsystemservice-cmdlet"></a>Update-PowerPivotSystemService コマンドレット
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]親オブジェクトをアップグレード、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]ファーム内のシステム サービスです。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+親オブジェクトをアップグレード、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 、ファーム内のシステム サービスです。  
 
 >[!NOTE] 
 >この記事には、古くなった情報と例があります。 最新バージョンには、Get-help コマンドレットを使用します。
@@ -48,7 +49,7 @@ Update-PowerPivotSystemService [-Confirm <switch>] [<CommonParameters>]
   
 ## <a name="parameters"></a>パラメーター  
   
-### <a name="-confirm-switch"></a>確認\<スイッチ >  
+### <a name="-confirm-switch"></a>-Confirm \<switch>  
  コマンドを実行する前に確認メッセージを表示します。 既定では、この値は有効にされています。 コマンドで確認応答を省略するには、コマンドで Confirm:$false を指定してください。  
   
 |||  
@@ -59,10 +60,10 @@ Update-PowerPivotSystemService [-Confirm <switch>] [<CommonParameters>]
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  このコマンドレットは、次のパラメーターをサポートしています。  
   
--   "詳細"  
+-   Verbose  
   
 -   デバッグ  
   

@@ -11,40 +11,42 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 399aaa34-896c-48e7-aacb-18564f31b568
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8c1bb47c2273d79e320e53b49c524112b067a2d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="memberref-element-csdlbi"></a>MemberRef 要素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MemberRef 要素は、参照の対象となっているプロパティの名前を識別します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+MemberRef 要素は、参照の対象であるプロパティの名前を示します。  
   
 ## <a name="elements-and-attributes"></a>要素と属性  
  次の表に、MemberRef 要素を定義する要素と属性を示します。  
   
-|[オブジェクト名]|必須かどうか|Description|  
+|名前|必須かどうか|Description|  
 |----------|-----------------|-----------------|  
-|[オブジェクト名]|可|MemberRef 要素に含まれるプロパティの名前。|  
+|名前|可|MemberRef 要素に含まれるプロパティの名前。|  
   
 ## <a name="memberrefs-element"></a>MemberRefs 要素  
  MemberRefs は、それぞれのメンバーが MemberRef 要素に含まれるメンバーのコレクションを定義する複合型です。  
   
  次の表では、MemberRef の要素と属性を示します。  
   
-|[オブジェクト名]|必須かどうか|Description|  
+|名前|必須かどうか|Description|  
 |----------|-----------------|-----------------|  
 |MemberRef|可|メンバー参照を表す文字列。|  
   
 ## <a name="example"></a>例  
- **テーブル**  
+ **表形式**  
   
  CSDLBI Version 1.1 における次の例では、Products テーブルを定義する AdventureWorks サンプル データ モデルの一部を示します。 MemberRef 要素が、モデルの既定のフィールド セットに含まれる各列に対して使用されています。  
   

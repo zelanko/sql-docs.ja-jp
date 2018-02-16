@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 6d3a1171-8e4d-4022-ade0-b785cf795d70
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 61f69caeab165c4d6822f8f25667ad544d6014ec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverlocations-rowset"></a>DISCOVER_LOCATIONS 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]バックアップ ファイルの内容に関する情報を返します。 バックアップ ファイルの場所にアクセスする権限が必要です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+バックアップ ファイルの内容に関する情報を返します。 バックアップ ファイルの場所にアクセスする権限が必要です。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **DISCOVER_LOCATIONS**行セットには、次の列が含まれています。  
@@ -48,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 |列名|型を表すインジケーター|制限の状態|  
 |-----------------|--------------------|-----------------------|  
-|**LOCATION_BACKUP_FILE_PATHNAME**|**DBTYPE_WSTR**|Required|  
+|**LOCATION_BACKUP_FILE_PATHNAME**|**DBTYPE_WSTR**|必須|  
 |**LOCATION_PASSWORD PF_DBTYPE**|**DBTYPE_WSTR**|バックアップ中に指定された場合は必須。 この制限は、返される行を制限するためには使用されません。 場所にアクセスするためのパスワードを提供するために使用されます。|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>ADOMD.NET を使用した行セットのリターン  
@@ -62,6 +64,6 @@ ms.lasthandoff: 01/08/2018
 |ADOMDNAME|[場所]|  
   
 ## <a name="see-also"></a>参照  
- [XML for Analysis Schema 行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis スキーマ行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

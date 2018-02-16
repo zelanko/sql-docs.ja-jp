@@ -20,19 +20,20 @@ helpviewer_keywords:
 - properties [Analysis Services], configuration
 - properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 4db4d5d2e57f5f4a967a2099ef11efa0ca10ca21
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services のサーバー プロパティ
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理者がの既定のサーバー構成プロパティを変更できる、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンス。 各インスタンスには、同じサーバーの他のインスタンスとは別に設定される固有の構成プロパティがあります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理者は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの既定のサーバー構成プロパティを変更できます。 各インスタンスには、同じサーバーの他のインスタンスとは別に設定される固有の構成プロパティがあります。  
   
  サーバーを構成するには、SQL Server Management Studio を使用するか、特定のインスタンスの msmdsrv.ini ファイルを編集します。  
  
@@ -82,18 +83,18 @@ SQL Server Management Studio のプロパティ ページには、最も頻繁�
 |[データ マイニング プロパティ](../../analysis-services/server-properties/data-mining-properties.md)|データ マイニング プロパティでは、どのデータ マイニング アルゴリズムを有効または無効にするかを制御します。 既定では、すべてのアルゴリズムが有効になっています。| 
 |[DAX のプロパティ](../../analysis-services/server-properties/dax-properties.md)|DAX クエリに関連するプロパティを定義します。|
 |DSO|DSO は現在サポートされません。 DSO のプロパティは無視されます。|  
-|[機能プロパティ](../../analysis-services/server-properties/feature-properties.md)|機能プロパティは、製品の機能に関連しており、そのほとんどが詳細プロパティです。サーバー インスタンス間のリンクを制御するプロパティが含まれます。|  
+|[フィーチャーのプロパティ](../../analysis-services/server-properties/feature-properties.md)|機能プロパティは、製品の機能に関連しており、そのほとんどが詳細プロパティです。サーバー インスタンス間のリンクを制御するプロパティが含まれます。|  
 |[Filestore プロパティ](../../analysis-services/server-properties/filestore-properties.md)|ファイル ストア プロパティは、高度な用途のみを対象としています。 高度なメモリ管理設定が含まれます。|  
 |[ロック マネージャーのプロパティ](../../analysis-services/server-properties/lock-manager-properties.md)|ロック マネージャー プロパティでは、ロックおよびタイムアウトに関連するサーバーの動作を定義します。 これらのほとんどのプロパティは、高度な用途のみを対象としています。|  
 |[ログのプロパティ](../../analysis-services/server-properties/log-properties.md)|ログ プロパティでは、サーバー上でイベントがログ記録される条件、場所、および方法を制御します。 これには、エラー ログ、例外ログ、フライト レコーダー、クエリ ログ、およびトレースが含まれます。|  
 |[メモリのプロパティ](../../analysis-services/server-properties/memory-properties.md)|メモリ プロパティでは、サーバーでメモリが使用される方法を制御します。 主に高度な用途を対象としています。|  
-|[ネットワーク プロパティ](../../analysis-services/server-properties/network-properties.md)|ネットワーク プロパティでは、ネットワークに関連するサーバーの動作を制御します。圧縮およびバイナリ XML を制御するプロパティが含まれます。 これらのほとんどのプロパティは、高度な用途のみを対象としています。|  
-|[OLAP のプロパティ](../../analysis-services/server-properties/olap-properties.md)|OLAP プロパティでは、キューブおよびディメンションの処理、レイジー処理、データのキャッシュ、およびクエリの動作を制御します。 基本プロパティと詳細プロパティの両方が含まれます。|  
+|[ネットワークのプロパティ](../../analysis-services/server-properties/network-properties.md)|ネットワーク プロパティでは、ネットワークに関連するサーバーの動作を制御します。圧縮およびバイナリ XML を制御するプロパティが含まれます。 これらのほとんどのプロパティは、高度な用途のみを対象としています。|  
+|[OLAP プロパティ](../../analysis-services/server-properties/olap-properties.md)|OLAP プロパティでは、キューブおよびディメンションの処理、レイジー処理、データのキャッシュ、およびクエリの動作を制御します。 基本プロパティと詳細プロパティの両方が含まれます。|  
 |[セキュリティのプロパティ](../../analysis-services/server-properties/security-properties.md)|セキュリティ セクションには、アクセス権を定義する基本プロパティと詳細プロパティの両方が含まれています。 管理者およびユーザーに関連する設定が含まれます。|  
 |[スレッド プール プロパティ](../../analysis-services/server-properties/thread-pool-properties.md)|スレッド プール プロパティでは、サーバーによって作成されるスレッドの数を制御します。 これらは主に詳細プロパティです。|  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services インスタンス管理](../../analysis-services/instances/analysis-services-instance-management.md)   
- [ソリューションの配置に関する構成設定の指定](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
+ [ソリューションの配置の構成設定の指定](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

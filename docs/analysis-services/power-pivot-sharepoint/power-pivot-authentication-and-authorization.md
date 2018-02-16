@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 691bf8b3fd2e26a3f906c88fbc8ceb840b636f6c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot の認証および承認
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint、SharePoint 2010 ファーム内で実行される配置が SharePoint サーバーによって提供される認証サブシステムと承認モデルを使用します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 関連のすべてのコンテンツは SharePoint コンテンツ データベースに格納され、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]関連のすべての操作はファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共有サービスによって実行されるので、SharePoint のセキュリティ インフラストラクチャは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のコンテンツや操作にまで及ぶことになります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データが含まれているブックを要求するユーザーは、Windows ユーザー ID に基づく SharePoint ユーザー ID を使用して認証されます。 この要求が許可されるか拒否されるかは、ブックに対する表示権限によって決まります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+SharePoint 2010 ファーム内で実行される [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の配置では、SharePoint サーバーによって提供される認証サブシステムと承認モデルを使用します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 関連のすべてのコンテンツは SharePoint コンテンツ データベースに格納され、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]関連のすべての操作はファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共有サービスによって実行されるので、SharePoint のセキュリティ インフラストラクチャは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のコンテンツや操作にまで及ぶことになります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データが含まれているブックを要求するユーザーは、Windows ユーザー ID に基づく SharePoint ユーザー ID を使用して認証されます。 この要求が許可されるか拒否されるかは、ブックに対する表示権限によって決まります。  
   
  セルフサービス型のデータ分析には Excel Services との統合が必要となるため、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーをセキュリティで保護する場合、Excel Services のセキュリティについても理解している必要があります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データへのデータ接続があるピボットテーブルに対してユーザーがクエリを実行すると、データ接続要求が Excel Services からファームの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーに転送され、データが読み込まれます。 サーバー間のこの連携では、両方のサーバーのセキュリティ設定を構成する方法を理解している必要があります。  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 01/08/2018
 |ファームまたはサービス管理者|サービスおよびアプリケーションをインストール、有効化、および構成します。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードを使用し、管理レポートを表示します。|  
 |フル コントロール|サイト コレクション レベルで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能統合をアクティブ化します。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー ライブラリを作成します。<br /><br /> データ フィード ライブラリを作成します。|  
 |投稿|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックを追加、編集、削除、およびダウンロードします。<br /><br /> データ更新を構成します。<br /><br /> SharePoint サイトで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックに基づいて新しいブックやレポートを作成します。<br /><br /> データ フィード ライブラリにデータ サービス ドキュメントを作成します。|  
-|Read|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックに外部データ ソースとしてアクセスします。ブックの URL は接続ダイアログ ボックス (たとえば、Excel のデータ接続ウィザード) で明示的に入力されます。|  
+|読み取り|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックに外部データ ソースとしてアクセスします。ブックの URL は接続ダイアログ ボックス (たとえば、Excel のデータ接続ウィザード) で明示的に入力されます。|  
 |表示のみ|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックを表示します。<br /><br /> データ更新履歴を表示します。<br /><br /> ローカル ブックを SharePoint サイト上の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックに接続し、そのデータの用途を変更します。<br /><br /> ブックのスナップショットをダウンロードします。 スナップショットは、スライサー、フィルター、式、またはデータ接続を含まない、データの静的なコピーです。 スナップショットの内容は、ブラウザー ウィンドウからのセル値のコピーに似ています。|  
   
 ##  <a name="excel"></a> Excel Services での Power Pivot ブックのセキュリティに関する考慮事項  
@@ -104,7 +105,7 @@ ms.lasthandoff: 01/08/2018
  Excel Services では、セキュリティ関連の構成設定は信頼できる場所、信頼できるデータ プロバイダー、および信頼できるデータ接続ライブラリで指定します。 次の表に、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスを有効化または拡張する設定について説明します。 ここに記載されていない設定は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバー接続に影響しません。 これらの設定を指定する方法については、「 [初期構成(Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)」の「Excel Services の有効化」を参照してください。  
   
 > [!NOTE]  
->  ほとんどのセキュリティ関連の設定は、信頼できる場所に適用されます。 既定値を保持するか、サイトごとに異なる値を使用する場合は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを含むサイト用に信頼できる場所を追加作成し、そのサイトにのみ以下の設定を構成できます。 詳細については、「 [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
+>  ほとんどのセキュリティ関連の設定は、信頼できる場所に適用されます。 既定値を保持するか、サイトごとに異なる値を使用する場合は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを含むサイト用に信頼できる場所を追加作成し、そのサイトにのみ以下の設定を構成できます。 詳細については、「 [Power Pivot サイト用の信頼できる場所の作成](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
   
 |領域|設定|Description|  
 |----------|-------------|-----------------|  

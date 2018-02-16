@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 1be6a035-ffc9-489e-9d4d-7391b3e384e2
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c79aa16cc7dc0d232c3acaa4407588932befc124
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertraces-rowset"></a>DISCOVER_TRACES 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]サーバー上で現在アクティブになっているトレースに関する情報を提供します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+サーバー上で現在アクティブになっているトレースに関する情報を提供します。  
   
  **適用されます:**表形式モデル、多次元モデル  
   
@@ -39,9 +41,9 @@ ms.lasthandoff: 01/08/2018
 |**LogFileName**|**DBTYPE_WSTR**|トレース ログ ファイルの名前です。|  
 |**LogFileSize**|**DBTYPE_I4**|トレース ログ ファイルのサイズです。|  
 |**LogFileRollover**|**DBTYPE_BOOL**|true の場合、ログ ファイルをロールオーバーする必要があることを示します。それ以外の場合は false です。|  
-|**再起動の自動化**|**DBTYPE_BOOL**|true の場合、自動再起動オプションが有効になっていることを示します。それ以外の場合は false です。|  
-|**CreationTime**|**DBTYPE_TIME 型**|トレースが作成された日付と時刻です。|  
-|**StopTime**|**DBTYPE_TIME 型**|トレースの停止時刻です。|  
+|**AutoRestart**|**DBTYPE_BOOL**|true の場合、自動再起動オプションが有効になっていることを示します。それ以外の場合は false です。|  
+|**CreationTime**|**DBTYPE_TIME**|トレースが作成された日付と時刻です。|  
+|**StopTime**|**DBTYPE_TIME**|トレースの停止時刻です。|  
 |**型**|**PF_DBTYPE_WSTR**|トレースの種類です。|  
   
  このスキーマ行セットは並べ替えられません。  
@@ -62,9 +64,9 @@ ms.lasthandoff: 01/08/2018
 |引数|値|  
 |--------------|-----------|  
 |GUID|a07ccd1a-8148-11d0-87bb-00c04fc33942|  
-|String|DISCOVER_TRACES|  
+|文字列|DISCOVER_TRACES|  
   
 ## <a name="see-also"></a>参照  
- [XML for Analysis Schema 行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis スキーマ行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

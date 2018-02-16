@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Schema Generation Wizard, incremental generation
 - relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8527382a85e1e85fb7981e69ea02304d2a7a940c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="understanding-incremental-generation"></a>増分生成の理解
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用してキューブとディメンションの定義を変更する次の最初のスキーマの生成、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、スキーマ生成ウィザードを再実行します。 ウィザードは、サブジェクト領域データベースおよび関連するデータ ソース ビュー内のスキーマを更新して変更を反映し、再生成するテーブル内の既存のデータを可能な限り保持します。 最初の生成後にテーブルを変更した場合、スキーマ生成ウィザードは、可能な限り以下のルールに従ってそれらの変更を保持します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+スキーマを初めて生成した後は、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用してキューブやディメンションの定義を変更し、その後スキーマ生成ウィザードを再実行できます。 ウィザードは、サブジェクト領域データベースおよび関連するデータ ソース ビュー内のスキーマを更新して変更を反映し、再生成するテーブル内の既存のデータを可能な限り保持します。 最初の生成後にテーブルを変更した場合、スキーマ生成ウィザードは、可能な限り以下のルールに従ってそれらの変更を保持します。  
   
 -   ウィザードによってテーブルが以前に生成されている場合、そのテーブルは上書きされます。 ウィザードによって生成されたテーブルが上書きされないようにするには、データ ソース ビューのテーブルの **AllowChangesDuringGeneration** プロパティを **false**に変更します。 テーブルのコントロールを取得すると、テーブルはユーザー定義による他のテーブルと同じように取り扱われ、再生成中に影響を受けなくなります。 テーブルを生成から除外したら、後でデータ ソース ビューのテーブルの **AllowChangesDuringGeneration** プロパティを **true** に変更し、テーブルを再び開いて、ウィザードによる変更を反映させることができます。 詳細については、「[データ ソース ビューのプロパティの変更 (Analysis Services)](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)」を参照してください。  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 01/08/2018
  一方、データ ソース接続文字列を以前の生成後に別のデータベースに変更した場合は、エラーは発生しません。 この場合は新しいデータベースが使用され、以前のデータベースには変更は行われません。  
   
 ## <a name="see-also"></a>参照  
- [データ ソース ビューおよびデータ ソースへの変更の管理](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
- [スキーマ生成ウィザード &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
+ [データ ソース ビューとデータ ソースへの変更を管理します。](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
+ [スキーマ生成ウィザード &#40;です。Analysis Services &#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   
   

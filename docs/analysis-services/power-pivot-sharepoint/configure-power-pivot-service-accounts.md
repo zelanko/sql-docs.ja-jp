@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 590f8ebba552477bf3622570c3cb6aa1e2a73247
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Power Pivot サービス アカウントの構成
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]インストールには、サーバー操作をサポートする 2 つのサービスが含まれています。 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** サービスは、アプリケーション サーバー上での [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データの処理およびクエリのサポートを提供する Windows サービスです。 このサービスのログイン アカウントは、SharePoint 統合モードで Analysis Services をインストールするときに、SQL Server セットアップで必ず指定します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]のインストールには、サーバー処理をサポートする 2 つのサービスが含まれます。 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** サービスは、アプリケーション サーバー上での [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データの処理およびクエリのサポートを提供する Windows サービスです。 このサービスのログイン アカウントは、SharePoint 統合モードで Analysis Services をインストールするときに、SQL Server セットアップで必ず指定します。  
   
  SharePoint ファームのアプリケーション プール ID で実行される共有 Web サービスである [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション用に、アカウントをもう 1 つ指定する必要があります。 このアカウントは、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]構成ツールまたは PowerShell を使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] インストールを構成するときに指定します。  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  **[このサービスのアカウントを選択する]**で、既存のマネージ アカウントを選択するか、新規に作成します。 このアカウントは、ドメイン ユーザー アカウントであることが必要です。  
   
-6.  **[OK]** をクリックします。  
+6.  **[OK]**をクリックします。  
   
 ##  <a name="bkmk_appPool"></a> Power Pivot サービス アプリケーションのアプリケーション プールの作成または変更  
   

@@ -19,19 +19,20 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0d930adaecb3d2148a07a54797b902162c6d2a89
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>データベース ディメンション - 日付型ディメンションの作成
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]時間ディメンションは、ディメンションの種類を表す属性を持つなど、年、半期、四半期、月、および日の時間間隔。 時間ディメンションの期間は、分析やレポートの粒度を時間ベースで指定します。 時間ディメンションの属性は階層化され、粒度は履歴データのビジネス要件とレポート要件によって主に決定されます。 たとえば、ビジネス インテリジェンス アプリケーションの財務データと販売データでは、ほとんどの場合、月または四半期の粒度が使用されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、時間ディメンションとは、属性が年、半期、四半期、月、日などの時間間隔を表すディメンションの種類を指します。 時間ディメンションの期間は、分析やレポートの粒度を時間ベースで指定します。 時間ディメンションの属性は階層化され、粒度は履歴データのビジネス要件とレポート要件によって主に決定されます。 たとえば、ビジネス インテリジェンス アプリケーションの財務データと販売データでは、ほとんどの場合、月または四半期の粒度が使用されます。  
   
  通常、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のキューブには、さまざまな形式の時間ディメンションが組み込まれています。 データの粒度とレポート要件によっては、各キューブに、複数の時間ディメンションまたは同じ時間ディメンションの複数の階層が含まれている場合があります。 ただし、すべてのキューブに時間ディメンションを組み込む必要があるわけではありません。 利用状況に基づくディメンションでは、時間ではなく利用状況に基づいてコストが設定されるので、利用状況に基づいてコストを設定する場合など、一部の OLAP アプリケーションでは時間ディメンションを使用する必要がありません。  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 01/08/2018
 >  ビジネス インテリジェンス ウィザードを使用して、タイム インテリジェンスをサーバー時間ディメンションに追加することはできません。 ビジネス インテリジェンス ウィザードによってタイム インテリジェンスをサポートする階層が追加されたら、この階層を時間ディメンション テーブルの列にバインドする必要があります。 サーバー時間ディメンションは、対応する時間ディメンション テーブルを持たないため、この追加の階層をサポートできません。  
   
 ## <a name="see-also"></a>参照  
- [Create a Time Dimension by Generating a Time Table](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
+ [時間テーブルを生成することによって時間ディメンションを作成します。](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
  [ビジネス インテリジェンス ウィザードの F1 ヘルプ](http://msdn.microsoft.com/library/155ac80c-63ae-47aa-9e86-9396e3d920eb)   
  [ディメンションの種類](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   

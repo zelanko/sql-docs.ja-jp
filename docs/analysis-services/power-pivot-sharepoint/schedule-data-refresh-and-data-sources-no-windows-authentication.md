@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9dadc46f53cff296a0332069165a9faa876e6180
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>定期データ更新とデータ ソースに Windows 認証は行われません
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このトピックのワークフローをについて説明[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]for SharePoint 定期データ更新データを使用するソースを**いない**Windows 認証をサポートします。 たとえば、Oracle データ ソースまたは IDM DB2 データ ソースが該当します。 このトピックにある図と手順では、Oracle データ ソースを参照していますが、他のデータ ソースにも同じワークフローが当てはまります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+このトピックでは、Windows 認証をサポートしない [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**データ ソースを使用できる** for SharePoint 定期データ更新のワークフローについて説明します。 たとえば、Oracle データ ソースまたは IDM DB2 データ ソースが該当します。 このトピックにある図と手順では、Oracle データ ソースを参照していますが、他のデータ ソースにも同じワークフローが当てはまります。  
   
 ||  
 |-|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/08/2018
   
 -   **(4)** PowerPivot ブックでは Oracle データが使用されます。 ブックの更新設定では、データ ソースへの接続で、資格情報にターゲット アプリケーション **(2)** を使用するよう指定します。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションがある。  
   
@@ -70,15 +71,15 @@ ms.lasthandoff: 01/08/2018
   
     -   **ターゲット アプリケーション ページの URL:** なし  
   
-5.  **[次へ]** をクリックします。  
+5.  **[次へ]**をクリックします。  
   
 6.  [資格情報] ページで、 **[Windows ユーザー名]** と **[Windows パスワード]**の 2 つのフィールド名とフィールドの種類は既定値のままにします。  
   
-7.  **[次へ]** をクリックします。  
+7.  **[次へ]**をクリックします。  
   
 8.  **[メンバーシップの設定]** ページで、 **[ターゲット アプリケーションの管理者]** に 1 人以上を追加し、ターゲット アプリケーションへのアクセスが必要なメンバーを追加します。  
   
-9. **[OK]** をクリックします。  
+9. **[OK]**をクリックします。  
   
 10. 新しいターゲット アプリケーション ID が一覧に追加されます。 ターゲット アプリケーション ID を選択し、クリックして**資格情報の設定**![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")です。  
   
@@ -104,17 +105,17 @@ ms.lasthandoff: 01/08/2018
   
     -   **ターゲット アプリケーション ページの URL:** なし  
   
-5.  **[次へ]** をクリックします。  
+5.  **[次へ]**をクリックします。  
   
 6.  **[資格情報]** ページで、最初のフィールド名を **Oracle User ID** に変更し、 **フィールドの種類** を **User Name**に変更します。  
   
      2 つ目のフィールド名を **Oracle Password** に変更し、 **フィールドの種類** を **Password**に変更します。  
   
-7.  **[次へ]** をクリックします。  
+7.  **[次へ]**をクリックします。  
   
 8.  **[メンバーシップの設定]** ページで、 **[ターゲット アプリケーションの管理者]** に 1 人以上を追加し、ターゲット アプリケーションへのアクセスが必要なメンバーを追加します。  
   
-9. **[OK]** をクリックします。  
+9. **[OK]**をクリックします。  
   
 10. 新しいターゲット アプリケーション ID が一覧に追加されます。 ターゲット アプリケーション ID を選択し、クリックして**資格情報の設定**![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")です。  
   
@@ -156,7 +157,7 @@ ms.lasthandoff: 01/08/2018
   
 10. **[ID]** ボックスに「 **OracleAuthentication**」と入力します。  
   
-11. **[OK]** をクリックします。  
+11. **[OK]**をクリックします。  
   
      " `The provided Secure Store target application is either incorrectly configured or does not exist`" のようなエラー メッセージが表示される場合があります。  
   
@@ -169,7 +170,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="to-verify-data-refresh-with-the-new-authentication"></a>新しい認証を使用したデータ更新を確認するには  
  **[OK]**をクリックすると、 **[更新の履歴]** ページが表示されます。 前の手順で **[さらに、できるだけ早く更新を行います]**を選択したため、数分以内に、新しい項目が更新の履歴に表示されます。 タイマー ジョブ " **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ更新タイマー ジョブ** " の既定値は 1 分です。 履歴の更新に新しい項目が表示されない場合は、しばらく待ってから、ブラウザーを更新してください。 それでも新しい項目が表示されない場合は、タイマー ジョブの現在の値を確認してください。  
   
-## <a name="more-information"></a>詳細情報  
+## <a name="more-information"></a>その他の情報  
   
 -   [SharePoint 2013 で Secure Store Service を構成する](http://technet.microsoft.com/library/ee806866.aspx)。  
   

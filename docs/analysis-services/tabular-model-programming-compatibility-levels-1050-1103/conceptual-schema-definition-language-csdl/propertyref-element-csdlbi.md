@@ -11,40 +11,42 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 8299efb9-e224-4a82-bdfc-a74ec92f8711
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9df2f9bfd77a854c90f08ed8b4314bfa212bf469
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="propertyref-element-csdlbi"></a>PropertyRef 要素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]PropertyRef 要素は、別のプロパティが必要な値を指定する列への参照を提供する単純な型です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+PropertyRef 要素は、別のプロパティが必要とする値を与える列への参照を提供する単純型です。  
   
 ## <a name="elements-and-attributes"></a>要素と属性  
  次の表に、PropertyRef 要素を定義する要素と属性を示します。  
   
-|[オブジェクト名]|必須かどうか|Description|  
+|名前|必須かどうか|Description|  
 |----------|-----------------|-----------------|  
-|[オブジェクト名]|可|参照の対象であるプロパティの名前を含む文字列。|  
+|名前|可|参照の対象であるプロパティの名前を含む文字列。|  
   
 ## <a name="propertyrefs-element"></a>PropertyRefs 要素  
  PropertyRefs は、それぞれのプロパティが PropertyRef 要素に含まれるプロパティのコレクションを定義する複合型です。  
   
  次の表では、PropertyRefs の要素と属性を示します。  
   
-|[オブジェクト名]|必須かどうか|Description|  
+|名前|必須かどうか|Description|  
 |----------|-----------------|-----------------|  
 |PropertyRef|可|プロパティ参照を表す文字列。|  
   
 ## <a name="example"></a>例  
- **テーブル**  
+ **表形式**  
   
  CSDLBI Version 1.1 における次の例では、AdventureWorks テーブル モデル サンプルからの、メジャーで使用される式のソースを指定する PropertyRef 要素を示しています。  
   

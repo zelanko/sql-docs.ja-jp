@@ -20,13 +20,14 @@ ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: f3b10fdee9956b28273553755365b9251d073964
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Power Pivot モードでの Analysis Services のインストール
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]このトピックの手順でインストールの手順を 1 台のサーバーの[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]内のサーバー [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint の配置モードです。 手順には、SQL Server インストール ウィザードの実行と、SharePoint サーバーの全体管理を使用する構成タスクが含まれます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+このトピックでは、SharePoint 配置の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードで [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーのシングル サーバー インストールを行う手順について説明します。 手順には、SQL Server インストール ウィザードの実行と、SharePoint サーバーの全体管理を使用する構成タスクが含まれます。  
   
 ##  <a name="bkmk_background"></a> 背景情報  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint は、SharePoint 2016 (SharePoint 2013) ファームでの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] データ アクセスを提供する中間層のバックエンド サービスです。  

@@ -1,7 +1,7 @@
 ---
 title: "集計 (XMLA) のデザイン |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - statistical information [XML for Analysis]
 - batches [XML for Analysis]
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - XML for Analysis, aggregations
 - iterative aggregation process [XMLA]
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fdc973309fe87792aa135813c23e4e68d7650043
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 07e7d766fa70662c55330ef2a7569ecf22b88ccc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="designing-aggregations-xmla"></a>集計のデザイン (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]集計デザインは、集計を格納するときに、パーティションで同じ構造を使用するかどうかを確認する特定のメジャー グループのパーティションに関連付けられます。 使用して後でマージできるパーティションを簡単に定義することにより、パーティションに対して同じ記憶域の構造を使用して、 [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)コマンド。 集計デザインの詳細については、次を参照してください。[集計と集計デザイン](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)です。  
+  集計デザインは、集計の格納時に複数のパーティションで同じ構造を確実に使用するようにするため、特定のメジャー グループのパーティションに関連付けられるものです。 使用して後でマージできるパーティションを簡単に定義することにより、パーティションに対して同じ記憶域の構造を使用して、 [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)コマンド。 集計デザインの詳細については、次を参照してください。[集計と集計デザイン](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)です。  
   
  使用することができます、集計デザインの集計を定義する、 [DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) XML for Analysis (XMLA) コマンド。 **DesignAggregations**コマンドには、参照とその参照に基づいたデザイン プロセスを制御する方法として使用する集計デザインを識別するプロパティです。 使用して、 **DesignAggregations**コマンドとそのプロパティを反復処理またはバッチ内の集計をデザインして、デザイン プロセスを評価する結果として得られるデザインの統計を表示します。  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="specifying-queries"></a>クエリの指定  
  DesignAggregations コマンドは、1 つまたは複数を含めることによって使用法に基づく最適化のコマンドをサポートしている**クエリ**内の要素、[クエリ](../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)プロパティです。 **クエリ**プロパティは、1 つまたは複数を含めることができます[クエリ](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)要素。 場合、**クエリ**プロパティ含まない**クエリ**で指定された要素の集計のデザイン、**オブジェクト**要素を含む既定の構造を使用して、一般的な集計のセット。 この一般的な集計のセットで指定された条件に一致するものでは、**最適化**と**ストレージ**のプロパティ、 **DesignAggregations**コマンド。  
   
- 各 **Query** 要素は、最もよく使用するクエリを対象とする集計を定義するためにデザイン プロセスが使用する、目標クエリを表します。 独自の目標クエリを指定するかのインスタンスで格納されている情報を使用することができます[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に関する、最も頻繁に情報を取得するクエリ ログ内のクエリを使用します。 使用法に基づく最適化ウィザードでは、クエリ ログを使用して、送信時に、時間、使用法、または指定されたユーザーに基づいて目標クエリを取得する、 **DesignAggregations**コマンド。 詳細については、次を参照してください。[使用法に基づく最適化ウィザードの F1 ヘルプ](http://msdn.microsoft.com/library/e5f5a938-ae7c-4f4e-9416-a7f94ac82763)です。  
+ 各 **Query** 要素は、最もよく使用するクエリを対象とする集計を定義するためにデザイン プロセスが使用する、目標クエリを表します。 ユーザー独自のクエリを指定することもできますが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスによってクエリ ログに格納されている情報を使用して、最もよく使用されるクエリに関する情報を取得することもできます。 使用法に基づく最適化ウィザードでは、クエリ ログを使用して、送信時に、時間、使用法、または指定されたユーザーに基づいて目標クエリを取得する、 **DesignAggregations**コマンド。 詳細については、次を参照してください。[使用法に基づく最適化ウィザードの F1 ヘルプ](http://msdn.microsoft.com/library/e5f5a938-ae7c-4f4e-9416-a7f94ac82763)です。  
   
  繰り返しの集計をデザインする場合のみがある、最初に目標クエリを渡す**DesignAggregations**コマンドのため、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスがこれらの目標クエリを保存し、後続中にこれらのクエリを使用**DesignAggregations**コマンド。 反復処理の最初の **DesignAggregations** コマンドで目標クエリを渡した場合、後続の **DesignAggregations** コマンドの **Queries** プロパティに目標クエリが含まれていると、エラーが発生します。  
   
@@ -108,7 +109,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="returning-design-statistics"></a>デザインの統計を返す処理  
  ときに、 **DesignAggregations**コマンドは、クライアント アプリケーションに制御を返す、コマンドをコマンドのデザインの統計を表す 1 つの行を含む行セットが返されます。 行セットに含まれる列は、次の表のとおりです。  
   
-|[列]|データ型|Description|  
+|列|データ型|Description|  
 |------------|---------------|-----------------|  
 |手順|Integer|クライアント アプリケーションに制御を返すまでに、コマンドによって行われたステップの数です。|  
 |[時刻]|Long integer|クライアント アプリケーションに制御を返すまでに、コマンドで経過したミリ秒単位の時間です。|  
@@ -120,6 +121,6 @@ ms.lasthandoff: 01/08/2018
  それぞれの後に返される行セットに含まれるデザインの統計を使用する**DesignAggregations**反復の両方でコマンドとバッチ設計します。 反復処理によるデザインの場合、進行状況の判別と表示を行うために、デザインの統計を使用できます。 集計をバッチ処理によってデザインする場合は、コマンドによって作成された集計の数を判断するために、デザインの統計を使用できます。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services での XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Analysis Services の XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

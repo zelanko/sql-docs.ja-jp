@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: d4703c9e-5594-472e-a85b-0f5bd0d73d6f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4ae8366ecec5bf25e1fd27a63d22ac796c080660
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="entityset-element-csdlbi"></a>EntitySet 要素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]EntitySet 要素は、CSDLBI データ モデル内の特定の種類のエンティティのコレクションを定義します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+EntitySet 要素は、CSDLBI データ モデル内の特定の種類のエンティティのコレクションを定義します。  
   
  EntitySet では、データ モデルに含まれる各エンティティ タイプを指定する必要があります。 これらのモデル エンティティに関する情報は、Entity 要素型の子エンティティをリストすることで指定します。 詳細については、「[EntityType 要素 &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md)」を参照してください。  
   
@@ -36,13 +38,13 @@ ms.lasthandoff: 01/08/2018
   
 |属性名|必須かどうか|Description|  
 |--------------------|-----------------|-----------------|  
-|[キャプション]|不可|エンティティ セットについてのわかりやすい説明。|  
-|CollectionCaption|不可|エンティティの複数形の名前を表す文字列です。|  
-|ReferenceName|不可|エンティティのマージされていない完全修飾名を含みます。 多次元モデルでは CubeDimension 名に対応します。|  
-|[非表示]|不可|エンティティが非表示かどうかを示します。 既定ではエンティティは非表示ではありません。|  
+|Caption|いいえ|エンティティ セットについてのわかりやすい説明。|  
+|CollectionCaption|いいえ|エンティティの複数形の名前を表す文字列です。|  
+|ReferenceName|いいえ|エンティティのマージされていない完全修飾名を含みます。 多次元モデルでは CubeDimension 名に対応します。|  
+|[非表示]|いいえ|エンティティが非表示かどうかを示します。 既定ではエンティティは非表示ではありません。|  
   
 ## <a name="example"></a>例  
- **テーブル**  
+ **表形式**  
   
  CSDLBI Version 1.1 における次の例では、AdventureWorks のテーブル モデルで使用される Date テーブルと Geography テーブルの定義を示します。  
   

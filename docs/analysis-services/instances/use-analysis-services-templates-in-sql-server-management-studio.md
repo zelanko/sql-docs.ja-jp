@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2b13acc5ac8947e4e97509764f648f8c31da1fa6
-ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio での Analysis Services テンプレートの使用
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -151,7 +151,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  **テンプレート エクスプローラー**を開き、 **[スキーマ行セットの発見]**テンプレートを空のクエリ ウィンドウにドラッグします。  
   
-3.  テンプレートで、置換、 [RequestType 要素 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)要素を次のテキスト。`<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  テンプレートで、置換、 [RequestType 要素 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)要素を次のテキスト。 `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  **[実行]**をクリックします。  
   

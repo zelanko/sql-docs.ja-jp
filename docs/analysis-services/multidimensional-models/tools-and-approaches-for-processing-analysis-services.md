@@ -15,19 +15,20 @@ helpviewer_keywords:
 - process [Analysis Services]
 - processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 910a1fc1ddcd7eee478c5a16ed1243801e482203
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>処理するためのツールと方法 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]処理は、操作を Analysis Services がリレーショナル データ ソースを照会し、そのデータを使用して Analysis Services オブジェクトを設定します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+"処理" とは、Analysis Services がリレーショナル データ ソースにクエリを実行し、そのデータを使用して Analysis Services オブジェクトを設定する操作です。  
   
  Analysis Services のシステム管理者は、以下の方法で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの処理の実行と監視を行うことができます。  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  必要に応じて、 **[設定の変更]** をクリックし、処理順序や特定の種類のエラーに関する処理の動作などの設定を変更します。  
   
-6.  **[OK]** をクリックします。  
+6.  **[OK]**をクリックします。  
   
      [処理の進行状況] ダイアログ ボックスに、各コマンドの進行状況が表示されます。 ステータス メッセージが切り詰められている場合は、 **[詳細表示]** をクリックすると、メッセージ全体を確認できます。  
   

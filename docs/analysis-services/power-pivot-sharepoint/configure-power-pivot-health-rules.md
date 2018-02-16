@@ -12,20 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1bd59f4d64395ee1def3d8e1c1eaf31942a6533c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-health-rules"></a>Power Pivot の正常性ルールの構成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]SharePoint が含まれていますする際に役立つ SharePoint 正常性ルールを監視およびサーバー可用性と構成に関する問題を解決します。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint に適用される正常性ルールは、[ルール定義の確認] ページに表示されます。  
+[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint には、サーバーの可用性と構成に関する問題を監視および解決するのに役立つ SharePoint 正常性ルールが含まれています。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint に適用される正常性ルールは、[ルール定義の確認] ページに表示されます。  
   
  正常性ルールは、最終的にサービスが中断される可能性があるサーバーの問題を早期に検出します。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint には、ユーザーに影響を与える前に問題を特定して解決するのに役立つさまざまなルールが用意されています。 これらのルールの多くは、配置固有の特性に合うようにカスタマイズできます。 たとえば、ディスク領域に関する警告に対処する時間がより多く必要な場合は、警告が早めに発生するように、使用可能なディスク領域の割合を 5% から 10% に引き上げることができます。  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/08/2018
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
 ```  
   
- **このトピックの内容:**  
+ **このトピックの内容**  
   
  [Power Pivot の正常性ルールの表示](#bkmk_view)  
   
@@ -49,7 +49,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
  [アプリケーションの安定性を評価する正常性ルールの構成 (Power Pivot サービス アプリケーション)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  Analysis Services インスタンスおよび [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーションの構成プロパティを変更するには、サービス アプリケーションの管理者である必要があります。  
   
 ##  <a name="bkmk_view"></a> Power Pivot の正常性ルールの表示  

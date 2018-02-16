@@ -1,7 +1,7 @@
 ---
 title: "AMO OLAP 基本オブジェクトのプログラミング |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,26 +11,27 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 77fb61b67606c1d0ab3fd81f561c1dbdd0c4a126
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1f3b03ad50bf5921217c4313909c050a5afe6acf
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-olap-basic-objects"></a>AMO OLAP 基本オブジェクトのプログラミング
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]複雑な作成[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]オブジェクトは簡単ですが、詳細については注意が必要です。 このトピックでは、OLAP 基本オブジェクトのプログラミングについて詳しく説明します。 このトピックには、次のセクションが含まれます。  
+  複雑な [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] オブジェクトの作成は簡単でわかりやすいものですが、詳細については注意が必要です。 このトピックでは、OLAP 基本オブジェクトのプログラミングについて詳しく説明します。 このトピックには、次のセクションが含まれます。  
   
 -   [Dimension オブジェクト](#Dim)  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Aggregation オブジェクト](#AD)  
   
-##  <a name="Dim"></a>Dimension オブジェクト  
+##  <a name="Dim"></a> Dimension オブジェクト  
  ディメンションを管理または処理するには、<xref:Microsoft.AnalysisServices.Dimension> オブジェクトをプログラミングします。  
   
 ### <a name="creating-dropping-and-finding-a-dimension"></a>ディメンションの作成、削除、および検索  
@@ -179,7 +180,7 @@ static void UpdateAllDimensions(Database db)
 }  
 ```  
   
-##  <a name="Cub"></a>キューブ オブジェクト  
+##  <a name="Cub"></a> キューブ オブジェクト  
  キューブを管理または処理するには、<xref:Microsoft.AnalysisServices.Cube> オブジェクトをプログラミングします。  
   
 ### <a name="creating-dropping-and-finding-a-cube"></a>キューブの作成、削除、および検索  
@@ -264,7 +265,7 @@ foreach (Cube cube in db.Cubes)
      }  
 ```  
   
-##  <a name="MG"></a>MeasureGroup オブジェクト  
+##  <a name="MG">MeasureGroup オブジェクト</a>  
  メジャー グループを管理または処理するには、<xref:Microsoft.AnalysisServices.MeasureGroup> オブジェクトをプログラミングします。  
   
 ### <a name="creating-dropping-and-finding-a-measuregroup"></a>メジャー グループの作成、削除、および検索  
@@ -433,7 +434,7 @@ static void FullProcessAllMeasureGroups(Cube cube)
 }  
 ```  
   
-##  <a name="Part"></a>Partition オブジェクト  
+##  <a name="Part">Partition オブジェクト</a>  
  パーティションを管理または処理するには、<xref:Microsoft.AnalysisServices.Partition> オブジェクトをプログラミングします。  
   
 ### <a name="creating-dropping-and-finding-a-partition"></a>パーティションの作成、削除、および検索  
@@ -484,7 +485,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 }  
 ```  
   
-###  <a name="ProcPart"></a>パーティションの処理  
+###  <a name="ProcPart"></a> パーティションの処理  
  パーティションの処理は、<xref:Microsoft.AnalysisServices.Partition> オブジェクトの Process メソッドを使用して簡単に実行できます。  
   
  処理オプションの詳細については、次を参照してください。[オブジェクトの処理 &#40;です。XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)と[多次元モデル &#40; の処理Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
@@ -532,7 +533,7 @@ static void MergeAllPartitions(MeasureGroup mg)
     }  
 ```  
   
-##  <a name="AD"></a>Aggregation オブジェクト  
+##  <a name="AD">Aggregation オブジェクト</a>  
  集計をデザインして 1 つ以上のパーティションに適用するには、<xref:Microsoft.AnalysisServices.Aggregation> オブジェクトをプログラミングします。  
   
 ### <a name="creating-and-dropping-aggregations"></a>集計の作成および削除  

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: f6ef197b-3d74-4339-ae73-8a7c1eaf0e91
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fc15f310355b3ecaab626600c14ee27905d250a5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-powerpivotsystemservice-cmdlet"></a>Set-PowerPivotSystemService コマンドレット
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ファーム レベルで PowerPivotSystemService オブジェクトのグローバル プロパティを設定します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+PowerPivotSystemService オブジェクトのグローバル プロパティをファームレベルで設定します。  
 
 >[!NOTE] 
 >この記事には、古くなった情報と例があります。 最新バージョンには、Get-help コマンドレットを使用します。
@@ -42,7 +43,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
   
 ## <a name="parameters"></a>パラメーター  
   
-### <a name="-identity-powerpivotmidtierservicepipebind"></a>Id \<PowerPivotMidTierServicePipeBind >  
+### <a name="-identity-powerpivotmidtierservicepipebind"></a>-Identity \<PowerPivotMidTierServicePipeBind>  
  プロパティを更新する親オブジェクトを指定します。 値は、ファーム内のオブジェクトを一意に識別する有効な GUID である必要があります。  
   
 |||  
@@ -53,18 +54,18 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |パイプライン入力の受け入れ|true|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-updateassemblyinformation-switch"></a>-Updateassemblyinformation &\<スイッチ >  
+### <a name="-updateassemblyinformation-switch"></a>-UpdateAssemblyInformation \<switch>  
  アップグレードの目的にのみ使用します。 SharePoint 構成データベースに格納されているバージョンと、ファームに配置されているアセンブリ バージョンが異なる場合、このコマンドレットを実行して構成データベース内のアセンブリ情報を更新できます。 アセンブリのバージョン情報は、グローバル アセンブリに格納されている Microsoft.AnalysisServices.SharePoint.Integration.dll のファイル プロパティで利用可能です。  
   
 |||  
 |-|-|  
 |必須/省略可能|オプション|  
-|位置|@shouldalert|  
+|位置|1|  
 |既定値||  
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-workbookupgradeondatarefresh-boolean"></a>-Workbookupgradeondatarefresh &\<ブール値 >  
+### <a name="-workbookupgradeondatarefresh-boolean"></a>-WorkbookUpgradeOnDataRefresh \<boolean>  
  サーバーの定期データ更新の開始時に [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ブックを自動的にアップグレードするために使用します。 データ更新は、サーバーの現在のバージョンに対応するブックに対してのみサポートされます。 このプロパティを有効にする場合は、データ更新を続けることができるように、ブックが自動的にアップグレードされます。 このプロパティは、サーバー インスタンス レベルで設定されます。 特定のブック、ライブラリ、サイト、またはユーザーによって変えることはできません。  
   
 |||  
@@ -75,7 +76,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-directtcpconnections-boolean"></a>-Directtcpconnections &\<ブール値 >  
+### <a name="-directtcpconnections-boolean"></a>-DirectTCPConnections \<boolean>  
  Excel Services が、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースに送信された各クエリ要求に使用される MSOLAP データ プロバイダーおよびチャネル転送をバイパスして、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースを読み込む SQL Server Analysis Services (POWERPIVOT) のインスタンスにすべてのクエリを直接送信するように指定します。  
   
  このパラメーターを設定すると、読み込まれたデータベースへの接続がより効率的になり、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クエリのパフォーマンスとスケーラビリティが向上します。 このパラメーターは、最初の読み込み要求の割り当て動作は変更しません。 ファーム内の複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint インスタンス間でデータベース読み込み要求を割り当てるために使用される他のパラメーター (–RoundRobinAllocation や –HealthBasedAllocation など) は影響を受けません。–DirectTCPConnections は、データベースが読み込まれた後に発行されるクエリのみに適用されるためです。  
@@ -90,7 +91,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-confirm-switch"></a>確認\<スイッチ >  
+### <a name="-confirm-switch"></a>-Confirm \<switch>  
  コマンドを実行する前に確認メッセージを表示します。 既定では、この値は有効にされています。 コマンドで確認応答を省略するには、コマンドで Confirm:$false を指定してください。  
   
 |||  
@@ -101,7 +102,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  このコマンドレットは共通のパラメーターをサポートしています (Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer、および OutVariable)。 詳細については、「 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)」を参照してください。  
   
 ## <a name="inputs-and-outputs"></a>入力および出力  

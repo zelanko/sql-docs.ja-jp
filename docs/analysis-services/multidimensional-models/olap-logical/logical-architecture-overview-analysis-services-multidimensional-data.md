@@ -11,24 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - cubes [Analysis Services], examples
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2f3197d3962f7bce7b8882b9676643bed4a97bdb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>論理アーキテクチャの概要 (Analysis Services - 多次元データ)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services は、さまざまな種類の Analysis Services モデルで使用されるメモリ アーキテクチャとランタイム環境を決定するサーバー配置モードで動作します。 サーバー モードは、インストール時に決定されます。 **多次元およびデータ マイニング モード**従来の OLAP およびデータ マイニングをサポートしています。 **表形式モード**表形式モデルをサポートします。 **SharePoint 統合モード**としてインストールされた Analysis Services のインスタンスを指す[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]の読み込みと Excel のクエリを実行するために使用 for SharePoint、または[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ブック内のデータ モデル。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Analysis Services は、さまざまな種類の Analysis Services モデルで使用されるメモリ アーキテクチャとランタイム環境を指定する、サーバー配置モードで動作します。 サーバー モードは、インストール時に決定されます。 **多次元およびデータ マイニング モード**従来の OLAP およびデータ マイニングをサポートしています。 **表形式モード**表形式モデルをサポートします。 **SharePoint 統合モード**としてインストールされた Analysis Services のインスタンスを指す[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]の読み込みと Excel のクエリを実行するために使用 for SharePoint、または[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ブック内のデータ モデル。  
   
  このトピックでは、多次元モードとデータ マイニング モードで動作する場合の Analysis Services の基本アーキテクチャについて説明します。 その他のモードの詳細については、次を参照してください。[テーブル モデリング (&) #40 です。SSAS &#41;](../../../analysis-services/tabular-models/tabular-models-ssas.md)と[テーブル ソリューションと多次元ソリューション &#40; を比較します。SSAS &#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
@@ -72,7 +74,7 @@ ms.lasthandoff: 01/08/2018
   
  キューブの周囲の小さい英数字の値はディメンションのメンバーです。 この例のメンバーは、ground (Route ディメンションのメンバー)、Africa (Source ディメンションのメンバー)、および 1st quarter (Time ディメンションのメンバー) です。  
   
-### <a name="measures"></a>メジャー  
+### <a name="measures"></a>[メジャー]  
  キューブ セル内の値は、Packages と Last という 2 つのメジャーを表します。 Packages メジャーは、インポートされたパッケージの数を表す、**合計**関数はファクトを集計するために使用します。 Last メジャーは受入日を表す、 **Max**関数はファクトを集計するために使用します。  
   
 ### <a name="dimensions"></a>ディメンション  
@@ -117,12 +119,12 @@ ms.lasthandoff: 01/08/2018
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|パッケージ|Last|  
-|3516987|@shouldalert|6|@shouldalert|15|年 1 月-10-99|  
-|3554790|@shouldalert|6|@shouldalert|40|年 1 月 19 99 の範囲|  
-|3572673|@shouldalert|6|@shouldalert|34|Jan-27-99|  
-|3600974|@shouldalert|6|@shouldalert|45|Feb-02-99|  
-|3645541|@shouldalert|6|@shouldalert|20|Feb-09-99|  
-|3674906|@shouldalert|6|@shouldalert|36|Feb-17-99|  
+|3516987|1|6|1|15|年 1 月-10-99|  
+|3554790|1|6|1|40|年 1 月 19 99 の範囲|  
+|3572673|1|6|1|34|Jan-27-99|  
+|3600974|1|6|1|45|Feb-02-99|  
+|3645541|1|6|1|20|Feb-09-99|  
+|3674906|1|6|1|36|Feb-17-99|  
   
  上記の表に行のそれぞれがの値が同一、 **RouteKey**、 **SourceKey**、および**TimeKey**列、これらの行が同じキューブ セルに貢献ことを示すです。  
   
@@ -131,6 +133,6 @@ ms.lasthandoff: 01/08/2018
  ここで示す例には、1 つのファクト テーブルだけが含まれています。 キューブに複数のファクト テーブルがある場合、各ファクト テーブルからのメジャーはメジャー グループに編成され、メジャー グループは定義済みのディメンション リレーションシップによって、特定のセットのディメンションに関連付けられます。 これらのリレーションシップは、データ ソース ビューの参加テーブルとリレーションシップの粒度を指定することによって定義します。 **関連トピック:**[ディメンション リレーションシップ](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)です。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデル データベース &#40;です。SSAS &#41;](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [多次元モデル データベース &#40;SSAS&#41;](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

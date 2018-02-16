@@ -15,10 +15,10 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
 ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 展開用の SQL Server 可用性の基礎
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 02/13/2018
 
 以降で[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]は Linux と Windows の両方でサポートされています。 などの Windows ベース[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]展開では、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]データベースおよびインスタンスが Linux で高可用性にする必要があります。 この記事の計画と可用性の高い展開の技術的な側面を説明する Linux ベース[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]データベースとインスタンス、さらに Windows ベースのインストールからの違いの一部です。 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux 専門家、および Linux 場合がありますの新機能について新しいもあります[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]技術者、アーティクル時点が導入されていますの概念をいくつかになじみや他のユーザーによく知らない場合があります。
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux の展開の可用性オプション
+## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux の展開の可用性オプション
 バックアップや復元だけでなく、同じ 3 つの可用性機能は、Windows ベースの展開と Linux 入手できます。
 -   Always On 可用性グループ (Ag)
 -   Always On フェールオーバー クラスター インスタンス (Fci)
@@ -43,16 +43,16 @@ Linux では、多くのコマンドは、管理者として Windows Server で�
 2. 使用する処理を実行する複数の一般的なとセキュリティ意識の高い方法は、`sudo`何も実行する前にします。 この例の多くの記事を使用して`sudo`です。
 
 一般的なコマンド、各種のスイッチとオンラインの研究オプションがある各:
--   `cd`– ディレクトリを変更
--   `chmod`– ファイルまたはディレクトリのアクセス許可の変更
--   `chown`– ファイルまたはディレクトリの所有権を変更します。
--   `ls`– ディレクトリの内容を表示します。
--   `mkdir`– ドライブ上のフォルダー (ディレクトリ) の作成
--   `mv`– ファイルを別の 1 つの場所に移動
--   `ps`– 作業プロセスをすべて表示
--   `rm`– サーバーのローカルにファイルを削除
--   `rmdir`– フォルダー (ディレクトリ) を削除します。
--   `systemctl`– 開始、停止、またはサービスを有効にします。
+-   `cd` – ディレクトリを変更
+-   `chmod` – ファイルまたはディレクトリのアクセス許可の変更
+-   `chown` – ファイルまたはディレクトリの所有権を変更します。
+-   `ls` – ディレクトリの内容を表示します。
+-   `mkdir` – ドライブ上のフォルダー (ディレクトリ) の作成
+-   `mv` – ファイルを別の 1 つの場所に移動
+-   `ps` – 作業プロセスをすべて表示
+-   `rm` – サーバーのローカルにファイルを削除
+-   `rmdir` – フォルダー (ディレクトリ) を削除します。
+-   `systemctl` – 開始、停止、またはサービスを有効にします。
 -   テキスト エディター コマンド。 Linux では、vi emacs など、さまざまなテキスト エディター オプションがあります。
 
 ## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>可用性の構成に関する一般的なタスク[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]on Linux
@@ -96,9 +96,9 @@ Windows と同様に、Linux ディストリビューション組み込みのフ
 | 138         | UDP      | (使用する場合) を samba – NetBIOS データグラム                                                                                          |
 | 139         | TCP      | (使用する場合) を samba – NetBIOS セッション                                                                                           |
 | 445         | TCP      | (使用する場合) を samba – TCP 経由で SMB                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – 既定のポートです。必要な場合で変更できます。`mssql-conf set network.tcpport <portnumber>`                       |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – 既定のポートです。必要な場合で変更できます。 `mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP、UDP | NFS (使用する場合)                                                                                                               |
-| 2224        | TCP      | によって使用される – ペース`pcsd`                                                                                                |
+| 2224        | TCP      | によって使用される – ペース `pcsd`                                                                                                |
 | 3121        | TCP      | ペース – ペース リモート ノードがあるかどうかに必要な                                                                    |
 | 3260        | TCP      | iSCSI イニシエーター (使用する場合) – は内で変更されることができます`/etc/iscsi/iscsid.config`(RHEL)、iSCSI ターゲットのポートに一致する必要がありますが、 |
 | 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -既定のポートは、AG エンドポイントの使用エンドポイントを作成するときに変更することができます。                                |
@@ -203,15 +203,15 @@ WSFCs が参加しているノードの状態を監視し、それらの問題�
 
 #### <a name="cluster-log-location"></a>クラスターのログの場所
 ペース クラスター ログの場所は、分布によって異なります。
--   RHEL、SLES-`/var/log/cluster/corosync.log`
+-   RHEL、SLES- `/var/log/cluster/corosync.log`
 -   Ubuntu – `/var/log/corosync/corosync.log`
 
 既定のログの場所を変更する変更`corosync.conf`です。
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>ペース クラスターを計画します。[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>ペース クラスターを計画します。 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 このセクションでは、ペース クラスターの場合は、重要な計画点について説明します。
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>をクラスターの仮想化の Linux ベースのペース[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>をクラスターの仮想化の Linux ベースのペース [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 仮想マシンを使用して、Linux ベースを展開する[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Ag および Fci の展開は、Windows ベースの対応の規則でカバーされます。 ルールのサポート性のための基本セットが仮想化された[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]で Microsoft によって提供される展開[Microsoft サポート KB 956893](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment)です。 Microsoft の HYPER-V と VMware ESXi などの別のハイパーバイザーでは、プラットフォーム自体の違いにより、別の差異をその上でがあります。
 
 Ag と Fci に仮想化でに関しては、アンチ アフィニティが特定のペース クラスターのノードに対して設定されていることを確認します。 ホストする Vm を可用性グループまたは FCI の構成で高可用性構成時に[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]同じハイパーバイザー ホストで決して実行されている必要があります。 たとえば、2 つのノードの FCI が展開されている場合は必要があります*少なくとも*Live などのハイパーバイザー ホストの 3 つになるようどこかに移動するホストに障害が発生した場合に、ノードをホストする Vm のいずれかの機能を使用する場合に特に移行または vmotion を使用します。

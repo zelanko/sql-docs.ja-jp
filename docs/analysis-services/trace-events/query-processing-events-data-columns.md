@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 81a522bd-440d-406c-a524-3af44a3af101
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c1ef8b812aa362d42d8facd7d4620146ed3f917a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="query-processing-events-data-columns"></a>クエリ処理イベントのデータ列
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]クエリ処理イベントのイベント カテゴリには、次のイベント クラスがあります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+クエリ処理イベントのイベント カテゴリには、次のイベント クラスがあります。  
   
 |**イベント ID**|**イベント名**|**イベントの説明**|  
 |------------------|--------------------|---------------------------|  
@@ -58,20 +59,20 @@ ms.lasthandoff: 01/08/2018
 |||||  
 |-|-|-|-|  
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
-|ProgressTotal|9|@shouldalert|進行状況の合計。|  
-|IntegerData|10|@shouldalert|整数データ。|  
-|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
+|ProgressTotal|9|1|進行状況の合計。|  
+|IntegerData|10|1|整数データ。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -79,20 +80,20 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
-|ProgressTotal|9|@shouldalert|進行状況の合計。|  
-|IntegerData|10|@shouldalert|整数データ。|  
-|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
+|ProgressTotal|9|1|進行状況の合計。|  
+|IntegerData|10|1|整数データ。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -100,20 +101,20 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
-|ProgressTotal|9|@shouldalert|進行状況の合計。|  
-|IntegerData|10|@shouldalert|整数データ。|  
-|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
+|ProgressTotal|9|1|進行状況の合計。|  
+|IntegerData|10|1|整数データ。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -122,21 +123,21 @@ ms.lasthandoff: 01/08/2018
 |||||  
 |-|-|-|-|  
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|@shouldalert|@shouldalert|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 1: Get Data<br /><br /> 2: Process Calculated Members<br /><br /> 3: Post Order|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 1: Get Data<br /><br /> 2: Process Calculated Members<br /><br /> 3: Post Order|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
-|ProgressTotal|9|@shouldalert|進行状況の合計。|  
-|IntegerData|10|@shouldalert|整数データ。|  
-|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
+|ProgressTotal|9|1|進行状況の合計。|  
+|IntegerData|10|1|整数データ。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -144,20 +145,20 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
-|ProgressTotal|9|@shouldalert|進行状況の合計。|  
-|IntegerData|10|@shouldalert|整数データ。|  
-|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
+|ProgressTotal|9|1|進行状況の合計。|  
+|IntegerData|10|1|整数データ。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -165,20 +166,20 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
-|ProgressTotal|9|@shouldalert|進行状況の合計。|  
-|IntegerData|10|@shouldalert|整数データ。|  
-|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
+|ProgressTotal|9|1|進行状況の合計。|  
+|IntegerData|10|1|整数データ。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -186,21 +187,21 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|@shouldalert|@shouldalert|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 1: Serialize Axes<br /><br /> 2: Serialize Cells<br /><br /> 3: Serialize SQL Rowset<br /><br /> 4: Serialize Flattened Rowset|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 1: Serialize Axes<br /><br /> 2: Serialize Cells<br /><br /> 3: Serialize SQL Rowset<br /><br /> 4: Serialize Flattened Rowset|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
-|ProgressTotal|9|@shouldalert|進行状況の合計。|  
-|IntegerData|10|@shouldalert|整数データ。|  
-|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
+|ProgressTotal|9|1|進行状況の合計。|  
+|IntegerData|10|1|整数データ。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -208,20 +209,20 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
-|ProgressTotal|9|@shouldalert|進行状況の合計。|  
-|IntegerData|10|@shouldalert|整数データ。|  
-|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
+|ProgressTotal|9|1|進行状況の合計。|  
+|IntegerData|10|1|整数データ。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -229,21 +230,21 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|@shouldalert|@shouldalert|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
-|ProgressTotal|9|@shouldalert|進行状況の合計。|  
-|IntegerData|10|@shouldalert|整数データ。|  
-|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
+|ProgressTotal|9|1|進行状況の合計。|  
+|IntegerData|10|1|整数データ。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -251,20 +252,20 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
-|ProgressTotal|9|@shouldalert|進行状況の合計。|  
-|IntegerData|10|@shouldalert|整数データ。|  
-|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
+|ProgressTotal|9|1|進行状況の合計。|  
+|IntegerData|10|1|整数データ。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -272,21 +273,21 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|@shouldalert|@shouldalert|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
-|ProgressTotal|9|@shouldalert|進行状況の合計。|  
-|IntegerData|10|@shouldalert|整数データ。|  
-|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
+|ProgressTotal|9|1|進行状況の合計。|  
+|IntegerData|10|1|整数データ。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -294,21 +295,21 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|@shouldalert|@shouldalert|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 1: Cache data<br /><br /> 2: Non-cache data|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 1: Cache data<br /><br /> 2: Non-cache data|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
-|ProgressTotal|9|@shouldalert|進行状況の合計。|  
-|IntegerData|10|@shouldalert|整数データ。|  
-|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
+|ProgressTotal|9|1|進行状況の合計。|  
+|IntegerData|10|1|整数データ。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -316,19 +317,19 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|@shouldalert|@shouldalert|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 1: Cache data<br /><br /> 2: Non-cache data<br /><br /> 3: Internal data<br /><br /> 4: SQL data<br /><br /> 11: Measure Group Structural Change<br /><br /> 12: Measure Group Deletion|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 1: Cache data<br /><br /> 2: Non-cache data<br /><br /> 3: Internal data<br /><br /> 4: SQL data<br /><br /> 11: Measure Group Structural Change<br /><br /> 12: Measure Group Deletion|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |SessionID|39|8|セッション GUID。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -336,19 +337,19 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|@shouldalert|@shouldalert|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 21: Cache data<br /><br /> 22: Non-cache data<br /><br /> 23: Internal data<br /><br /> 24: SQL data|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 21: Cache data<br /><br /> 22: Non-cache data<br /><br /> 23: Internal data<br /><br /> 24: SQL data|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |SessionID|39|8|セッション GUID。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -356,18 +357,18 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |SessionID|39|8|セッション GUID。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -375,19 +376,19 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|@shouldalert|@shouldalert|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 1: Get data from measure group cache<br /><br /> 2: Get data from flat cache<br /><br /> 3: Get data from calculation cache<br /><br /> 4: Get data from persisted cache|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 1: Get data from measure group cache<br /><br /> 2: Get data from flat cache<br /><br /> 3: Get data from calculation cache<br /><br /> 4: Get data from persisted cache|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |SessionID|39|8|セッション GUID。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -395,24 +396,24 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|@shouldalert|@shouldalert|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 0: VertiPaq Scan<br /><br /> 1: Tabular Query<br /><br /> 2: User Hierarchy Processing Query<br /><br /> 10: VertiPaq Scan internal<br /><br /> 11: Tabular Query internal<br /><br /> 12: User Hierarchy Processing Query internal|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 0: VertiPaq Scan<br /><br /> 1: Tabular Query<br /><br /> 2: User Hierarchy Processing Query<br /><br /> 10: VertiPaq Scan internal<br /><br /> 11: Tabular Query internal<br /><br /> 12: User Hierarchy Processing Query internal|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
-|JobID|7|@shouldalert|進行状況に対応するジョブ ID。|  
+|JobID|7|1|進行状況に対応するジョブ ID。|  
 |SessionType|8|8|セッションの種類 (操作の原因となったエンティティ)。|  
 |ObjectID|11|8|オブジェクト ID (文字列です)。|  
-|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
 |ObjectName|13|8|オブジェクト名です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
 |ObjectReference|15|8|オブジェクト参照。 タグを使用してオブジェクトを記述することにより、すべての親の XML としてエンコードされます。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |NTUserName|32|8|Windows のユーザー名。|  
 |NTDomainName|33|8|ユーザーが所属する Windows ドメイン。|  
 |SessionID|39|8|セッション GUID。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -420,32 +421,32 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|@shouldalert|@shouldalert|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 0: VertiPaq Scan<br /><br /> 1: Tabular Query<br /><br /> 10: VertiPaq Scan internal<br /><br /> 11: Tabular Query internal|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 0: VertiPaq Scan<br /><br /> 1: Tabular Query<br /><br /> 10: VertiPaq Scan internal<br /><br /> 11: Tabular Query internal|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
-|JobID|7|@shouldalert|進行状況に対応するジョブ ID。|  
+|JobID|7|1|進行状況に対応するジョブ ID。|  
 |SessionType|8|8|セッションの種類 (操作の原因となったエンティティ)。|  
-|ProgressTotal|9|@shouldalert|進行状況の合計。|  
-|IntegerData|10|@shouldalert|整数データ。|  
+|ProgressTotal|9|1|進行状況の合計。|  
+|IntegerData|10|1|整数データ。|  
 |ObjectID|11|8|オブジェクト ID (文字列です)。|  
-|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
 |ObjectName|13|8|オブジェクト名です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
 |ObjectReference|15|8|オブジェクト参照。 タグを使用してオブジェクトを記述することにより、すべての親の XML としてエンコードされます。|  
-|Severity|22|@shouldalert|例外の重大度レベル。|  
-|成功|23|@shouldalert|1 = 成功。 0 = 失敗 (たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します)。|  
-|[エラー]|24|@shouldalert|特定のイベントのエラー番号。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|Severity|22|1|例外の重大度レベル。|  
+|成功|23|1|1 = 成功。 0 = 失敗 (たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します)。|  
+|[エラー]|24|1|特定のイベントのエラー番号。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |NTUserName|32|8|Windows のユーザー名。|  
 |NTDomainName|33|8|ユーザーが所属する Windows ドメイン。|  
 |SessionID|39|8|セッション GUID。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -453,17 +454,17 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |NTUserName|32|8|Windows のユーザー名。|  
 |NTDomainName|33|8|ユーザーが所属する Windows ドメイン。|  
-|ClientProcessID|36|@shouldalert|クライアント アプリケーションのプロセス ID。|  
+|ClientProcessID|36|1|クライアント アプリケーションのプロセス ID。|  
 |ApplicationName|37|8|サーバーに対する接続を確立したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|  
 |SessionID|39|8|セッション GUID。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -471,23 +472,23 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|@shouldalert|@shouldalert|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 0: VertiPaq Cache exact match|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 0: VertiPaq Cache exact match|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
-|JobID|7|@shouldalert|進行状況に対応するジョブ ID。|  
+|JobID|7|1|進行状況に対応するジョブ ID。|  
 |SessionType|8|8|セッションの種類 (操作の原因となったエンティティ)。|  
 |ObjectID|11|8|オブジェクト ID (文字列です)。|  
-|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
 |ObjectName|13|8|オブジェクト名です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
 |ObjectReference|15|8|オブジェクト参照。 タグを使用してオブジェクトを記述することにより、すべての親の XML としてエンコードされます。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
 |NTUserName|32|8|Windows のユーザー名。|  
 |NTDomainName|33|8|ユーザーが所属する Windows ドメイン。|  
 |SessionID|39|8|セッション GUID。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -495,27 +496,27 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
-|JobID|7|@shouldalert|進行状況に対応するジョブ ID。|  
+|JobID|7|1|進行状況に対応するジョブ ID。|  
 |SessionType|8|8|セッションの種類 (操作の原因となったエンティティ)。|  
-|IntegerData|10|@shouldalert|整数データ。|  
+|IntegerData|10|1|整数データ。|  
 |ObjectID|11|8|オブジェクト ID (文字列です)。|  
-|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
 |ObjectName|13|8|オブジェクト名です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|Severity|22|@shouldalert|例外の重大度レベル。|  
-|成功|23|@shouldalert|1 = 成功。 0 = 失敗 (たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します)。|  
-|[エラー]|24|@shouldalert|特定のイベントのエラー番号。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|Severity|22|1|例外の重大度レベル。|  
+|成功|23|1|1 = 成功。 0 = 失敗 (たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します)。|  
+|[エラー]|24|1|特定のイベントのエラー番号。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
-|ClientProcessID|36|@shouldalert|クライアント アプリケーションのプロセス ID。|  
+|ClientProcessID|36|1|クライアント アプリケーションのプロセス ID。|  
 |SessionID|39|8|セッション GUID。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
@@ -523,27 +524,27 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
 |CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
-|JobID|7|@shouldalert|進行状況に対応するジョブ ID。|  
+|JobID|7|1|進行状況に対応するジョブ ID。|  
 |SessionType|8|8|セッションの種類 (操作の原因となったエンティティ)。|  
-|IntegerData|10|@shouldalert|整数データ。|  
+|IntegerData|10|1|整数データ。|  
 |ObjectID|11|8|オブジェクト ID (文字列です)。|  
-|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
 |ObjectName|13|8|オブジェクト名です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|Severity|22|@shouldalert|例外の重大度レベル。|  
-|成功|23|@shouldalert|1 = 成功。 0 = 失敗 (たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します)。|  
-|[エラー]|24|@shouldalert|特定のイベントのエラー番号。|  
-|ConnectionID|25|@shouldalert|一意の接続 ID。|  
+|Severity|22|1|例外の重大度レベル。|  
+|成功|23|1|1 = 成功。 0 = 失敗 (たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します)。|  
+|[エラー]|24|1|特定のイベントのエラー番号。|  
+|ConnectionID|25|1|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
-|ClientProcessID|36|@shouldalert|クライアント アプリケーションのプロセス ID。|  
+|ClientProcessID|36|1|クライアント アプリケーションのプロセス ID。|  
 |SessionID|39|8|セッション GUID。|  
-|SPID|41|@shouldalert|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   

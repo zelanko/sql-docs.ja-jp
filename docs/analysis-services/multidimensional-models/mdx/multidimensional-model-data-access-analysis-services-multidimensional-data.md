@@ -22,19 +22,20 @@ helpviewer_keywords:
 - manipulating objects [Analysis Services]
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多次元モデルのデータ アクセス (Analysis Services - 多次元データ)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]このトピックの情報を使用してアクセスする方法について[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]プログラム方法、スクリプト、またはに接続するための組み込みサポートが含まれているクライアント アプリケーションを使用してデータを多次元、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]ネットワーク上のサーバー。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+このトピックには、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の多次元データにアクセスするために役立つ情報が記載されています。ネットワーク上の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーに接続するための機能が組み込まれたクライアント アプリケーションのほか、プログラミングによる手法やスクリプトを使用した方法を取り上げます。  
   
  このトピックには、次のセクションが含まれます。  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
  次の Microsoft アプリケーションでは、多次元データへのネイティブ接続がサポートされます。  
   
-### <a name="excel"></a>[エクスポート]  
+### <a name="excel"></a>Excel  
  通常、Analysis Services の多次元データの表示には、Excel ブックのピボット テーブルとピボット グラフ コントロールが使用されます。 モデル内の階層と集計、ナビゲーション構造は、ピボットテーブルのデータ サマリー機能と相性がよいことから、ピボットテーブルは多次元データに適しています。 データ接続を簡単にセットアップできるように、Analysis Services OLE DB データ プロバイダーは Excel のインストールに含まれています。 詳細については、「 [SQL Server Analysis Services のデータに接続する、または SQL Server Analysis Services のデータをインポートする](http://go.microsoft.com/fwlink/?linkID=215150)」を参照してください。  
   
 ### <a name="reporting-services-reports"></a>Reporting Services レポート  
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
   
  SQL Server データ ツールは Visual Studio のシェルをベースに構築されており、モデルの編成と格納にはプロジェクトが使用されます。 詳細については、「[SQL Server データ ツール (SSDT) を使用した多次元モデルの作成](../../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)」を参照してください。  
   
-### <a name="sql-server-management-studio"></a>[SQL Server Management Studio]  
+### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  データベース管理者にとって SQL Server Management Studio は、多次元データベースや Analysis Services のインスタンスを含む、SQL Server のインスタンスを管理するための統合環境です。 詳細については、「 [SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b) 」と「 [Analysis Services への接続](../../../analysis-services/instances/connect-to-analysis-services.md)」を参照してください。  
   
 ##  <a name="bkmk_querylang"></a> クエリ言語  
@@ -105,6 +106,6 @@ ms.lasthandoff: 01/08/2018
  [Analysis Services への接続](../../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services スクリプト言語 &#40; を使用した開発ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Analysis Services の XMLA による開発](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [テーブル モデル データ アクセス](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
+ [表形式モデルのデータ アクセス](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
   
   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 2742b2a3-927c-4e7c-bd7d-43c072fa01ab
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7078a7733c7764b77667628071c66c8313aae85a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="remove-powerpivotserviceapplication-cmdlet"></a>Remove-PowerPivotServiceApplication コマンドレット
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]削除、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]サービス アプリケーション。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+削除、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション。  
 
 >[!NOTE] 
 >この記事には、古くなった情報と例があります。 最新バージョンには、Get-help コマンドレットを使用します。
@@ -44,7 +45,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
   
 ## <a name="parameters"></a>パラメーター  
   
-### <a name="-identity-spgeminiserviceapplicationpipebind"></a>Id \<SPGeminiServiceApplicationPipeBind >  
+### <a name="-identity-spgeminiserviceapplicationpipebind"></a>-Identity \<SPGeminiServiceApplicationPipeBind>  
  1 つの GUID を指定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 、ファーム内のアプリケーションのサービスを提供します。 他のサービス アプリケーションをそのまま残してアプリケーションを 1 つだけ削除する場合、GUID を指定する必要があります。  
   
 |||  
@@ -55,7 +56,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |パイプライン入力の受け入れ|true|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-confirm-switch"></a>確認\<スイッチ >  
+### <a name="-confirm-switch"></a>-Confirm \<switch>  
  コマンドを実行する前に確認メッセージを表示します。 既定では、この値は有効にされています。 コマンドで確認応答を省略するには、コマンドで Confirm:$false を指定してください。  
   
 |||  
@@ -66,7 +67,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-deleteall-switch"></a>-Deleteall\<スイッチ >  
+### <a name="-deleteall-switch"></a>-DeleteAll \<switch>  
  すべて削除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスのアプリケーションは、ファーム内のサービス アプリケーション データベースおよびサービス インスタンスのオブジェクトを削除します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスと [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] エンジン サービス オブジェクトは残りますが、インスタンス化された、使用できない場合は、サービス アプリケーションを削除した後です。  
   
 |||  
@@ -77,7 +78,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-removedata-switch"></a>-Removedata &\<スイッチ >  
+### <a name="-removedata-switch"></a>-RemoveData \<switch>  
  データ更新スケジュール、ブック使用状況データ、データベースが読み込まれるトラックで使用されるインスタンス マップ、その他の内部データを含むサービス アプリケーション データベースを削除します。  
   
 |||  
@@ -88,7 +89,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  このコマンドレットは共通のパラメーターをサポートしています (Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer、および OutVariable)。 詳細については、「 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)」を参照してください。  
   
 ## <a name="inputs-and-outputs"></a>入力および出力  

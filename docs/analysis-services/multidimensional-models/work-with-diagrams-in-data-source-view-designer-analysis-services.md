@@ -19,19 +19,20 @@ helpviewer_keywords:
 - data source views [Analysis Services], diagrams
 - diagrams [Analysis Services]
 ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 96015431ceabb705a04ed7fc73a1879a7c496d8d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>データ ソース ビュー デザイナーでのダイアグラムの操作 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]データ ソース ビュー (DSV) ダイアグラムは、DSV 内のオブジェクトのビジュアル表現です。 対話的な操作で特定のオブジェクトを追加、非表示、削除、または変更できます。 また、同じ DSV で複数のダイアグラムを作成して、オブジェクトのサブセットに焦点を絞ることができます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+データ ソース ビュー (DSV) ダイアグラムは、DSV でのオブジェクトの視覚的イメージです。 対話的な操作で特定のオブジェクトを追加、非表示、削除、または変更できます。 また、同じ DSV で複数のダイアグラムを作成して、オブジェクトのサブセットに焦点を絞ることができます。  
   
  ダイアグラム ペインに表示されるダイアグラムの領域を変更するには、ペインの右下隅で 4 方向の矢印をクリックし、選択する領域がダイアグラム ペインに表示されるまで、サムネイル ダイアグラム上で選択ボックスをドラッグします。  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 01/08/2018
  この問題を回避するには、最終的な調整を行う前に、最初にすべてのテーブルを追加します。 この場合は、後でダイアグラムを再度開くときに、オブジェクトは自らの位置を保持しています。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [多次元モデル内のデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [データ ソース ビュー デザイナー &#40;です。Analysis Services - 多次元データ &#41;](http://msdn.microsoft.com/library/6f40a074-761f-440b-a999-09b755bd86ce)  
   
   

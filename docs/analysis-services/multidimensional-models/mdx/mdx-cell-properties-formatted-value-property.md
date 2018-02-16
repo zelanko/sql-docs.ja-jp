@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0e69f9e798dd5922bae7c677fc599c8f82293ee1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---formattedvalue-property"></a>MDX のセルのプロパティ - FORMATTED_VALUE プロパティ
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]FORMATTED_VALUE プロパティは、セルの VALUE、FORMAT_STRING、および言語のプロパティの相互作用に基づいて構築されます。 このトピックではそのしくみについて説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+FORMATTED_VALUE プロパティは、セルの VALUE、FORMAT_STRING、および LANGUAGE の各プロパティの相互作用に基づいて構築されます。 このトピックではそのしくみについて説明します。  
   
 ## <a name="value-formatstring-language-properties"></a>VALUE プロパティ、FORMAT_STRING プロパティ、LANGUAGE プロパティ  
  これらのプロパティを組み合わせて使用するための準備として、次の表に各プロパティの概要を示します。  
@@ -86,12 +87,12 @@ ms.lasthandoff: 01/08/2018
 |------------|----------------------|-----------------|  
 |A|$5,040.00|FORMAT_STRING が `Currency` に設定され、LANGUAGE が `1033`に設定されています (システム ロケール値から継承)。|  
 |B|€5.040,00|FORMAT_STRING が `Currency` に設定され (A から継承)、LANGUAGE が明示的に `1034` (スペイン) に設定されています。したがって、ユーロ記号が使用され、小数点と桁の区切り文字も変わっています。|  
-|c|$5.040,00|FORMAT_STRING が `$#,##0.00` に設定されて、A から継承された Currency が優先されています。LANGUAGE は明示的に `1034` (スペイン) に設定されています。 FORMAT_STRING プロパティで通貨記号が明示的に $ に設定されているため、FORMATTED_VALUE には $ 記号が付いています。 一方、 `.` (ドット) と `,` (コンマ) はそれぞれ小数点区切り文字と桁区切り文字のプレースホルダーであるため、言語の指定の影響を受けます。したがって、小数点と桁の区切り文字がローカライズされた出力が生成されています。|  
+|C|$5.040,00|FORMAT_STRING が `$#,##0.00` に設定されて、A から継承された Currency が優先されています。LANGUAGE は明示的に `1034` (スペイン) に設定されています。 FORMAT_STRING プロパティで通貨記号が明示的に $ に設定されているため、FORMATTED_VALUE には $ 記号が付いています。 一方、 `.` (ドット) と `,` (コンマ) はそれぞれ小数点区切り文字と桁区切り文字のプレースホルダーであるため、言語の指定の影響を受けます。したがって、小数点と桁の区切り文字がローカライズされた出力が生成されています。|  
 |D|5.04E+03|FORMAT_STRING が `Scientific` に設定され、LANGUAGE が `1033`に設定されています (システム ロケール値から継承)。したがって、小数点区切り文字が `.` (ドット) になっています。|  
 |E|5,04E+03|FORMAT_STRING が `Scientific` に設定され、LANGUAGE が明示的に `1034,` に設定されています。したがって、小数点区切り文字が `,` (コンマ) になっています。|  
 |F|50.40%|FORMAT_STRING が `Percent` に設定され、LANGUAGE が `1033`に設定されています (システム ロケール値から継承)。したがって、小数点区切り文字が `.` (ドット) になっています。<br /><br /> VALUE が 5040 から 0.5040 に変更されたことに注意してください。|  
 |G|50,40%|FORMAT_STRING が `Percent`に設定され (F から継承)、LANGUAGE が明示的に `1034` に設定されています。したがって、小数点区切り文字が `,` (コンマ) になっています。<br /><br /> VALUE が F の値から継承されていることに注意してください。|  
-|H|不可|FORMAT_STRING が `YES/NO`に設定され、VALUE が 0 に設定され、LANGUAGE が明示的に `1034`に設定されています。英語の NO とスペイン語の NO は変わらないため、FORMATTED_VALUE には目に見える違いはありません。|  
+|H|いいえ|FORMAT_STRING が `YES/NO`に設定され、VALUE が 0 に設定され、LANGUAGE が明示的に `1034`に設定されています。英語の NO とスペイン語の NO は変わらないため、FORMATTED_VALUE には目に見える違いはありません。|  
 |I|SI|FORMAT_STRING が `YES/NO`に設定され、VALUE が 59 に設定され、LANGUAGE が明示的に `1034`に設定されています。YES/NO の書式設定の定義ではゼロ (0) 以外の値はすべて YES になり、ここでは言語がスペイン語に設定されているため、FORMATTED_VALUE は SI になります。|  
 |J|Desactivado|FORMAT_STRING が `ON/OFF`に設定され、VALUE が 0 に設定され、LANGUAGE が明示的に `1034`に設定されています。ON/OFF の書式設定の定義では値がゼロ (0) と等しい場合は OFF になり、ここでは言語がスペイン語に設定されているため、FORMATTED_VALUE は Desactivado になります。|  
 |K|Activado|FORMAT_STRING が `ON/OFF`に設定され、VALUE が -312 に設定され、LANGUAGE が明示的に `1034`に設定されています。ON/OFF の書式設定の定義ではゼロ (0) 以外の値はすべて ON になり、ここでは言語がスペイン語に設定されているため、FORMATTED_VALUE は Activado になります。|  
@@ -136,7 +137,7 @@ ms.lasthandoff: 01/08/2018
 |------------|----------------------|-----------------|  
 |A|3/12/1959 6:30:00 AM|FORMAT_STRING が CDate() 式によって暗黙的に `General Date` に設定され、LANGUAGE が `1033` (英語) に設定されています (システム ロケール値から継承)。|  
 |B|Thursday, March 12, 1959|FORMAT_STRING が明示的に `Long Date` に設定され、LANGUAGE が `1033` (英語) に設定されています (システム ロケール値から継承)。|  
-|c|12/03/1959 6:30:00|FORMAT_STRING が明示的に `General Date` に設定され、LANGUAGE が明示的に `1034` (スペイン語) に設定されています。<br /><br /> 月と日の位置が米国の書式スタイルとは逆になっていることに注意してください。|  
+|C|12/03/1959 6:30:00|FORMAT_STRING が明示的に `General Date` に設定され、LANGUAGE が明示的に `1034` (スペイン語) に設定されています。<br /><br /> 月と日の位置が米国の書式スタイルとは逆になっていることに注意してください。|  
 |D|jueves, 12 de marzo de 1959|FORMAT_STRING が明示的に `Long Date` に設定され、LANGUAGE が明示的に `1034` (スペイン語) に設定されています。<br /><br /> 月と曜日がスペイン語になっていることに注意してください。|  
 |E|1959/03/12 6:30:00|FORMAT_STRING が明示的に `General Date` に設定され、LANGUAGE が明示的に `1041` (日本語) に設定されています。<br /><br /> 日付の書式が "年/月/日 時:分:秒" になったことに注意してください。|  
 |F|1959年3月12日|FORMAT_STRING が明示的に `Long Date` に設定され、LANGUAGE が明示的に `1041` (日本語) に設定されています。|  
@@ -148,9 +149,9 @@ ms.lasthandoff: 01/08/2018
 |L|06:30|FORMAT_STRING が明示的に `Short Time` に設定され、LANGUAGE が明示的に `1041` (日本語) に設定されています。|  
   
 ## <a name="see-also"></a>参照  
- [FORMAT_STRING の内容 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
+ [FORMAT_STRING の内容と #40 です。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
  [セルのプロパティ &#40; を使用します。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [作成とプロパティの値 &#40; を使用MDX と #41 です。](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [MDX クエリの基礎 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX クエリの基礎と #40 です。Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

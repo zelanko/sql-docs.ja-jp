@@ -1,5 +1,5 @@
 ---
-title: "DISCOVER_TRACE_EVENT_CATEGORIES 行セット |Microsoft ドキュメント"
+title: DISCOVER_TRACE_EVENT_CATEGORIES Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: analysis-services
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 1ad74fd2-4740-469d-85b5-abf0171737fd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b95fb2824757a4b45001dd5a1eed4871995b86cb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertraceeventcategories-rowset"></a>DISCOVER_TRACE_EVENT_CATEGORIES 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]トレース プロバイダーによってサポートされているイベント カテゴリの一覧を示します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+トレース プロバイダーによってサポートされているイベント カテゴリの一覧を表示します。  
   
  **適用されます:**表形式モデル、多次元モデル  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
 |列名|型を表すインジケーター|長さ|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**Data**|**DBTYPE_WSTR**||カテゴリの名前、型、説明などのトレース プロバイダーに関するイベント カテゴリ情報を説明するエンコードされた XML 文字列を格納します。 型は、イベント カテゴリの型を示す文字列です。 列挙値は次のとおりです。<br /><br /> 0 = 標準<br /><br /> 1 = 重要<br /><br /> 2 = エラー|  
+|**データ**|**DBTYPE_WSTR**||カテゴリの名前、型、説明などのトレース プロバイダーに関するイベント カテゴリ情報を説明するエンコードされた XML 文字列を格納します。 型は、イベント カテゴリの型を示す文字列です。 列挙値は次のとおりです。<br /><br /> 0 = 標準<br /><br /> 1 = 重要<br /><br /> 2 = エラー|  
   
  このスキーマ行セットは並べ替えられません。  
   
@@ -46,9 +48,9 @@ ms.lasthandoff: 01/08/2018
 |引数|値|  
 |--------------|-----------|  
 |GUID|a07ccd19-8148-11d0-87bb-00c04fc33942|  
-|String|DISCOVER_TRACE_EVENT_CATEGORIES|  
+|文字列|DISCOVER_TRACE_EVENT_CATEGORIES|  
   
 ## <a name="see-also"></a>参照  
- [XML for Analysis Schema 行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis スキーマ行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

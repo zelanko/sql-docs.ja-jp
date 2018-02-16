@@ -11,28 +11,32 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: Analysis Services Scripting Language XML Data Types
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Analysis Services Scripting Language XML Data Types
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - ASSL, data types
 - Analysis Services Scripting Language, data types
 - data types [Analysis Services Scripting Language]
 ms.assetid: 8e527916-932e-48ec-9010-f22cd4b721e2
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9baa60a57d8ef59bb7bb24afc82c0a3e5435a56d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-scripting-language-xml-data-types-assl"></a>Analysis Services スクリプト言語の XML データ型 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]このリファレンス セクションには、Analysis Services スクリプト言語 (ASSL) スキーマ内の型として機能する各要素の構文と使用状況の情報が含まれています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+このリファレンス セクションでは、Analysis Services スクリプト言語 (ASSL) スキーマで型の役割を果たす各要素の構文と使い方について説明します。  
   
  ASSL スキーマには、開発者の観点からの XML 要素のみが含まれていますが、このセクションで説明する要素などに対応して型、**バインド**と**権限**、するために使用されます。子要素およびその他のオブジェクトのプロパティを定義します。  
   
@@ -54,12 +58,12 @@ ms.lasthandoff: 01/08/2018
 |[AggregationInstanceMeasure データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/aggregationinstancemeasure-data-type-assl.md)|集計インスタンスによって使用されるメジャーに関する情報を表すプリミティブ データ型を定義します。|  
 |[Assembly データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/assembly-data-type-assl.md)|表す抽象プリミティブ データ型を定義、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]アセンブリまたは COM ダイナミック リンク ライブラリ (DLL) に関連付けられている、[サーバー](../../../analysis-services/scripting/objects/server-element-assl.md)または[データベース](../../../analysis-services/scripting/objects/database-element-assl.md)要素。|  
 |[AttributeBinding データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/attributebinding-data-type-assl.md)|バインドを表す派生データ型を定義、[属性](../../../analysis-services/scripting/objects/attribute-element-assl.md)要素。|  
-|[AttributeTranslation データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/attributetranslation-data-type-assl.md)|関連付けられている翻訳を表す派生データ型を定義、[属性](../../../analysis-services/scripting/objects/attribute-element-assl.md)要素|  
+|[AttributeTranslation データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/attributetranslation-data-type-assl.md)|関連付けられている翻訳を表す派生データ型を定義、[属性](../../../analysis-services/scripting/objects/attribute-element-assl.md)の要素|  
 |[バインディング データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|あるオブジェクトのデータまたはメタデータがバインド対象オブジェクトのデータまたはメタデータに依存している 2 つのオブジェクト間の依存関係を表す抽象プリミティブ データ型を定義します。|  
 |[ClrAssembly データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)|表す派生データ型を定義、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]アセンブリに関連付けられている、[データベース](../../../analysis-services/scripting/objects/database-element-assl.md)または[サーバー](../../../analysis-services/scripting/objects/server-element-assl.md)要素|  
 |[ClrAssemblyFile データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md)|構成するファイルのいずれかを表すプリミティブ データ型を定義、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]アセンブリ ([ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)要素)。|  
 |[ColumnBinding データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/columnbinding-data-type-assl.md)|データ ソース ビュー内の列のバインドを表す派生データ型を定義、 [DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)要素。|  
-|[ComAssembly データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/comassembly-data-type-assl.md)|関連付けられた COM ライブラリを表す派生データ型を定義、[サーバー](../../../analysis-services/scripting/objects/server-element-assl.md)または[データベース](../../../analysis-services/scripting/objects/database-element-assl.md)要素。|  
+|[ComAssembly データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/comassembly-data-type-assl.md)|[Server](../../../analysis-services/scripting/objects/server-element-assl.md) 要素または [Database](../../../analysis-services/scripting/objects/database-element-assl.md) 要素に関連付けられた COM ライブラリを表す派生データ型を定義します。|  
 |[CubeAttribute データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/cubeattribute-data-type-assl.md)|関連付けられている属性を表すプリミティブ データ型を定義、[キューブ](../../../analysis-services/scripting/objects/cube-element-assl.md)要素。|  
 |[CubeAttributeBinding データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/cubeattributebinding-data-type-assl.md)|アクションまたはマイニング構造列に対するキューブ ディメンションの属性のバインドを表す派生データ型を定義します。|  
 |[CubeBinding データ型 &#40;不一致の&#41;&#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/cubebinding-data-type-out-of-line-assl.md)|間のリレーションシップを表すプリミティブ データ型を定義、[キューブ](../../../analysis-services/scripting/objects/cube-element-assl.md)要素、および[データソース](../../../analysis-services/scripting/objects/datasource-element-assl.md)要素。|  
@@ -99,7 +103,7 @@ ms.lasthandoff: 01/08/2018
 |[PartitionBinding データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/partitionbinding-data-type-assl.md)|バインドを表す派生データ型を定義、[パーティション](../../../analysis-services/scripting/objects/partition-element-assl.md)要素。|  
 |[Permission データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)|個別の権限についての情報を表す抽象プリミティブ データ型を定義します。|  
 |[PerspectiveAction データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/perspectiveaction-data-type-assl.md)|内のアクションに関する情報を表すプリミティブ データ型を定義、[パースペクティブ](../../../analysis-services/scripting/objects/perspective-element-assl.md)要素。|  
-|[PerspectiveAttribute データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/perspectiveattribute-data-type-assl.md)|内の属性に関する情報を表すプリミティブ データ型を定義、 [PerspectiveDimension](../../../analysis-services/scripting/data-type/perspectivedimension-data-type-assl.md)要素。|  
+|[PerspectiveAttribute データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/perspectiveattribute-data-type-assl.md)|内の属性に関する情報を表すプリミティブ データ型を定義、 [PerspectiveDimension](../../../analysis-services/scripting/data-type/perspectivedimension-data-type-assl.md)の要素。|  
 |[PerspectiveCalculation データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/perspectivecalculation-data-type-assl.md)|計算間のリレーションシップを表すプリミティブ データ型を定義し、[パースペクティブ](../../../analysis-services/scripting/objects/perspective-element-assl.md)要素。|  
 |[PerspectiveDimension データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/perspectivedimension-data-type-assl.md)|パースペクティブ内のディメンションに関する情報を表すプリミティブ データ型を定義します。|  
 |[PerspectiveHierarchy データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/perspectivehierarchy-data-type-assl.md)|内の階層に関する情報を表すプリミティブ データ型を定義、 [PerspectiveDimension](../../../analysis-services/scripting/data-type/perspectivedimension-data-type-assl.md)要素。|  

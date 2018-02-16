@@ -1,7 +1,7 @@
 ---
 title: "分析データ ソースからメタデータを取得する |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,24 +11,25 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - retrieving metadata
 ms.assetid: 00043ebd-7164-4ceb-b945-6e44378ea00a
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1ccc559449edeb5274c22aa892c21a4677f75f61
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f2e387b3c60c2738e5da4f2b28af4aa75f2735ce
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>分析データ ソースからのメタデータの取得
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]メタデータは、分析データを取得して操作するアプリケーションに重要です。 リレーショナル データ ソースからデータを取得する場合、データセットが入れ子になっていても、それらのデータの次元を予測することができます。 通常、リレーショナル データベースから取得する結果セットは 2 次元またはスカラー構造です。 一方、分析データ ソースから取得したデータは次元がさまざまであり、多層構造になっている場合もあります。  
+  分析データを取得して操作するアプリケーションにとって、メタデータは重要です。 リレーショナル データ ソースからデータを取得する場合、データセットが入れ子になっていても、それらのデータの次元を予測することができます。 通常、リレーショナル データベースから取得する結果セットは 2 次元またはスカラー構造です。 一方、分析データ ソースから取得したデータは次元がさまざまであり、多層構造になっている場合もあります。  
   
  分析データ ソースからメタデータを取得する際の複雑さに対応するため、ADOMD.NET には次の 2 つのメタデータ取得形式が用意されています。  
   

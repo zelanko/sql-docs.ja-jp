@@ -17,19 +17,20 @@ helpviewer_keywords:
 - Synchronize Database Wizard
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3bb86dbcb264f7073847cce62dc9c3e200208821
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services データベースの同期
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]により、2 つのデータベースの同期機能が含まれています[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データおよびメタデータを移行元サーバー上のデータベースを移行先サーバー上のデータベースにコピーして、同等のデータベースです。 データベースの同期機能は、次のタスクを達成するために使用します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に付属しているデータベースの同期機能は、同期元サーバー上のデータベースから同期先サーバー上のデータベースにデータおよびメタデータをコピーすることによって、2 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを同一にします。 データベースの同期機能は、次のタスクを達成するために使用します。  
   
 -   ステージング サーバーから運用サーバーへのデータベースの配置。  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  次のホワイト ペーパーは、Analysis Services の以前のバージョンを対象として作成されたものですが、SQL Server 2012 を使用して作成したスケーラブルな多次元ソリューションにも引き続き当てはまります。 詳細については、「 [Analysis Services を使用するクエリのスケールアウト](http://go.microsoft.com/fwlink/?LinkId=253136) 」および「 [読み取り専用データベースによる Analysis Services のクエリのスケールアウト](http://go.microsoft.com/fwlink/?LinkId=253137.)」を参照してください。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  データベースの同期を開始する同期先 (またはターゲット) サーバーで、Analysis Services サーバー管理者ロールのメンバーである必要があります。 同期元サーバーで、使用している Windows ユーザー アカウントに、同期元データベースに対するフル コントロールの権限が付与されている必要があります。 データベースを対話形式で同期する場合は、自分の Windows ユーザー ID のセキュリティ コンテキストで同期が実行されることに注意してください。 自分のアカウントが特定のオブジェクトへのアクセスを拒否された場合は、そのようなオブジェクトは操作から除外されます。 サーバー管理者のロールとデータベース権限の詳細については、「[Analysis Services インスタンスにサーバー管理者権限を付与する](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)」と「[データベース権限の付与 (Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)」を参照してください。  
   
  既定のインスタンス間のリモート接続を許可するために、両方のサーバーで TCP ポート 2383 を開く必要があります。 Windows ファイアウォールの例外を作成する方法の詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」を参照してください。  
@@ -111,7 +112,7 @@ ms.lasthandoff: 01/08/2018
     > [!NOTE]  
     >  同期元インスタンスの既定の場所に格納されているローカル パーティションを選択した場合、この列は変更できません。  
   
-     **[サイズ]**  
+     **サイズ**  
      ローカル パーティションの推定サイズが表示されます。  
   
      **[選択した場所のパーティション]** オプションでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [場所] **で選択した行の** [同期元フォルダー] **列で指定した同期元**インスタンス上の場所に格納されたローカル パーティションについて、グリッドに説明が表示されます。  
@@ -157,7 +158,7 @@ ms.lasthandoff: 01/08/2018
   
      **[...]**ボタンをクリックして、 **[リモート フォルダーの参照]** ダイアログ ボックスを表示し、選択した場所に格納されたリモート パーティションを同期する同期先インスタンス上のフォルダーを指定します。  
   
-     **[サイズ]**  
+     **サイズ**  
      この場所に格納されたリモート パーティションの推定サイズが表示されます。  
   
      **[選択した場所のパーティション]** では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [場所] **で選択した行の** [同期元フォルダー] **列で指定した同期元の**インスタンス上の場所に格納されたリモート パーティションについて、グリッドに説明が表示されます。 このグリッドには次の列が含まれています。  
@@ -189,12 +190,12 @@ ms.lasthandoff: 01/08/2018
   
 8.  **[完了]** をクリックして同期をとります。 **[ウィザードの完了]** ページでオプションを確認したら、もう一度 **[完了]** をクリックします。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
  ロールまたはロールのメンバーシップを同期しなかった場合は、この段階で、同期先データベースでユーザー アクセス権を指定してください。  
   
 ## <a name="see-also"></a>参照  
  [Synchronize 要素 (XMLA)](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
- [XMLA を使用したモデル ソリューションの配置](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
- [配置ウィザードを使用したモデル ソリューションの配置](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [XMLA を使用したモデル ソリューションを配置します。](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
+ [配置ウィザードを使用したモデル ソリューションを配置します。](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

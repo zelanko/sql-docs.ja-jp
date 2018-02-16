@@ -23,19 +23,20 @@ helpviewer_keywords:
 - system requirements [Analysis Services]
 - availability [Analysis Services]
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: cb9d445b33f7a9ab1dc81f32ea7db419c512f680
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services の配置に関する要件と注意点
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]パフォーマンスとソリューションの可用性は、基になるハードウェア、サーバーの展開のトポロジ、(たとえば、分散パーティションを持つソリューションの特性の機能を含む、さまざまな要因によって異なります複数のサーバーまたはリレーショナル エンジンに直接アクセスを必要とする ROLAP ストレージを使用して)、サービス レベル アグリーメント、およびデータ モデルの複雑さです。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+あるソリューションのパフォーマンスと可用性は、多くの因子に左右されます。たとえば、基になるハードウェアの機能、サーバーの配置トポロジ、ソリューションの特性 (たとえば、パーティションが複数サーバーに分散されているとか、リレーショナル エンジンへの直接アクセスを必要とする ROLAP ストレージを使用するなど)、サービス レベル契約、データ モデルの複雑さなどです。  
   
 ## <a name="memory-and-processor-requirements"></a>メモリおよびプロセッサの要件  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、次のような場合、より大きなメモリおよびプロセッサ リソースが必要です。  
@@ -90,7 +91,7 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの 1 つまたは複数のキューブに影響を与える可能性がある構造的変更を処理しているときに可用性を確保するには、ステージング サーバーを組み込むか、データベースの同期ウィザードを使用することを検討してください。 この機能を使用すると、ステージング サーバー上でデータとメタデータを更新し、実稼働サーバーとステージング サーバーの同期をオンラインで実行できます。 詳細については、「 [Analysis Services データベースの同期](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)」を参照してください。  
   
- ソース データの増分更新を簡単に処理するには、プロアクティブ キャッシュを有効にします。 プロアクティブ キャッシュでは、新しいソース データを使用してキューブが更新されます。手動での処理は必要なく、キューブの可用性に影響を与えることもありません。 詳細については、「[プロアクティブ キャッシュ (パーティション)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)」をご覧ください。  
+ ソース データの増分更新を簡単に処理するには、プロアクティブ キャッシュを有効にします。 プロアクティブ キャッシュでは、新しいソース データを使用してキューブが更新されます。手動での処理は必要なく、キューブの可用性に影響を与えることもありません。 詳細については、「[プロアクティブ キャッシュ &#40;パーティション&#41;)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)」をご覧ください。  
   
 ##  <a name="BKMK_Scalability"></a> スケーラビリティに関する注意点  
  同じコンピューター上に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の複数のインスタンスがあると、パフォーマンスの問題が発生する場合があります。 このような問題を解決する 1 つの方法は、サーバー上のプロセッサ、メモリ、およびディスク リソースを増やすことです。 ただし、複数のコンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスをスケーリングすることが必要な場合もあります。  

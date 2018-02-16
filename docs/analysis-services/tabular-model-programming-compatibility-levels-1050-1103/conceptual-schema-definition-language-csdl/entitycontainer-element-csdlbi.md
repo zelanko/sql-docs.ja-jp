@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: e328558e-16b0-4d4a-a79a-fdd3c9493595
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 30b24a87a5d1915b16c18557b93abfabfe99ab12
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="entitycontainer-element-csdlbi"></a>EntityContainer 要素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]EntityContainer 要素は、CSDL の種類を 1 つのデータ モデル内のエンティティのコレクションを定義に基づく、複合型です。 ビジネス インテリジェンス アプリケーションでは、EntityContainer で表されるデータ モデルは、リレーションシップによってリンクされた列のある複数のテーブルと、計算、メジャー、および KPI を含む可能性があります。 概念的には、データベースやデータ ソースに似ています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+EntityContainer 要素は、CSDL の種類に基づく複合型で、1 つのデータ モデル内のエンティティのコレクションを定義します。 ビジネス インテリジェンス アプリケーションでは、EntityContainer で表されるデータ モデルは、リレーションシップによってリンクされた列のある複数のテーブルと、計算、メジャー、および KPI を含む可能性があります。 概念的には、データベースやデータ ソースに似ています。  
   
  EntityContainer では、テーブルやリレーションシップを含む、データ モデルに含まれる各エンティティ タイプを指定する必要があります。 これらのモデル エンティティに関する情報は、Entity 要素型の子エンティティをリストすることで指定します。 詳細については、「[EntityType 要素 &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md)」を参照してください。  
   
@@ -34,15 +36,15 @@ ms.lasthandoff: 01/08/2018
 ## <a name="elements-and-attributes"></a>要素と属性  
  次の表に、EntityContainer 要素を定義する要素と属性を示します。  
   
-|[オブジェクト名]|必須かどうか|Description|  
+|名前|必須かどうか|Description|  
 |----------|-----------------|-----------------|  
-|[オブジェクト名]|可|データ モデルの名前。|  
-|[キャプション]|不可|データベースまたはデータ モデルの説明。|  
+|名前|可|データ モデルの名前。|  
+|Caption|いいえ|データベースまたはデータ モデルの説明。|  
 |カルチャ|可|要求の LCID を含む文字列。|  
 |CompareOptions|可|モデルの言語固有の並べ替えおよび文字列比較のオプション|  
-|DirectQueryMode|不可|モデルが DirectQuery モードを使用するときのクエリ モードを示す列挙体。|  
-|EntitySet 要素|可|[EntitySet 要素 &#40;です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)|  
-|AssociationSet 要素|不可|[AssociationSet 要素 &#40;です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
+|DirectQueryMode|いいえ|モデルが DirectQuery モードを使用するときのクエリ モードを示す列挙体。|  
+|EntitySet 要素|はい|[EntitySet 要素 &#40;です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)|  
+|AssociationSet 要素|いいえ|[AssociationSet 要素 &#40;です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
   
 ## <a name="compareoptions-element"></a>CompareOptions 要素  
  CompareOptions 属性では、データ モデルに適用される照合順序のプロパティが定義されます。 CompareOptions で定義されているプロパティは、モデルのデザイン時に Analysis Services データベースで設定される並べ替え順序、かなの区別、大文字小文字の区別に対する設定から派生されます。 次の表では、CompareOptions 属性の一部として含まれる値について説明します。  
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/08/2018
 |DirectQuery|モデルに対するクエリがリレーショナル データ ソース内のみのデータを使用することを示します。|  
   
 ## <a name="example"></a>例  
- **テーブル**  
+ **表形式**  
   
  CSDLBI Version 1.1 における次の例は、AdventureWorks テーブル データ モデルの一部です。  
   

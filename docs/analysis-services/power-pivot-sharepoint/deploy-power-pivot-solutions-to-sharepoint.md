@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fac07e924fb94ce9901f1aca771b1954b474aaff
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>SharePoint への PowerPivot ソリューションの配置
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]次の手順を使用して手動で追加する 2 つのソリューション パッケージを展開する[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]SharePoint Server 2010 環境に機能します。 ソリューションの配置は、SharePoint 2010 サーバー上で [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を構成するために必要な手順です。 必要な手順の完全な一覧を確認するには、「 [サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+SharePoint Server 2010 環境に [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能を追加する 2 つのソリューション パッケージを手動で配置するには、次の手順に従います。 ソリューションの配置は、SharePoint 2010 サーバー上で [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を構成するために必要な手順です。 必要な手順の完全な一覧を確認するには、「 [サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)」を参照してください。  
   
  ソリューションの配置には、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールを使用することもできます。 シングル サーバー インストールでは構成ツールを使用するのが簡単で効率的ですが、使い慣れたツールを使用したい場合や、複数の機能を同時に構成する場合は、サーバーの全体管理と PowerShell を使用することもできます。 構成ツールの詳細については、「 [Power Pivot の構成ツール](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)」を参照してください。  
   
@@ -112,7 +113,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 4.  **[配置先]**で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能のサポートを追加する SharePoint Web アプリケーションを選択します。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
 6.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスをサポートする他の SharePoint Web アプリケーションに対して、この手順を繰り返します。  
   

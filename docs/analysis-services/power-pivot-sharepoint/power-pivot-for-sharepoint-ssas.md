@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 864e795be41ccc9e68df3d1fc33b05f73e0695c7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-for-sharepoint-ssas"></a>Power Pivot for SharePoint (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]内のサーバー[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]モードのサーバー ホスティングを提供する[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]SharePoint ファーム内のデータ。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データは、次のいずれかを使用して構築する分析データ モデルです。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] モードの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーは、SharePoint ファームの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データをサーバーでホストします。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データは、次のいずれかを使用して構築する分析データ モデルです。  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 2010 アドイン  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/08/2018
   
  ![SSAS PowerPivot モード 2 のサーバー配置](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot モード 2 のサーバー配置")  
   
-##  <a name="bkmk_RelatedContent"></a> トピックの内容  
+##  <a name="bkmk_RelatedContent"></a> このセクションの内容  
  [サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [Windows PowerShell を使用した Power Pivot の構成](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  

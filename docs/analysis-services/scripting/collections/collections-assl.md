@@ -11,25 +11,27 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - collections [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, collections
 - ASSL, collections
 ms.assetid: 072b8c6b-1550-4cab-ae64-ba0e3e60b059
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7f121fbcd03bf3dace4c09c20925b7ce3d52baf5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="collections-assl"></a>コレクション (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]このリファレンス セクションには、Analysis Services スクリプト言語 (ASSL) スキーマのコレクションとして機能する各要素の構文と使用状況の情報が含まれています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+このリファレンス セクションでは、Analysis Services スクリプト言語 (ASSL) スキーマでコレクションの役割を果たす各要素の構文と使い方について説明します。  
   
  ASSL スキーマには、開発者の観点からの XML 要素のみが含まれていますが、このセクションで説明する要素などに対応して、オブジェクトのコレクション、**ディメンション**と**キューブ**コレクション。  
   
@@ -75,7 +77,7 @@ ms.lasthandoff: 01/08/2018
 |[Files 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/files-element-assl.md)|コレクションを格納[ファイル](../../../analysis-services/scripting/objects/file-element-assl.md)を構成する要素、 [ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)要素。|  
 |[ForeignKeyColumns 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/foreignkeycolumns-element-assl.md)|リレーショナル データ ソースの親テーブルへの結合を識別する列のコレクションを格納します。|  
 |[Groups 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/groups-element-assl.md)|属性にバインドされるメンバーのグループのコレクションを格納します。|  
-|[Hierarchies 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/hierarchies-element-assl.md)|コレクションを格納[階層](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)親要素に関連付けられている要素です。|  
+|[Hierarchies 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/hierarchies-element-assl.md)|親要素に関連付けられた [Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) 要素のコレクションを格納します。|  
 |[IncrementalProcessingNotifications 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/incrementalprocessingnotifications-element-assl.md)|コレクションを格納[IncrementalProcessingNotification](../../../analysis-services/scripting/objects/incrementalprocessingnotification-element-assl.md)要素に情報を提供する、 [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md)の進行状況を判断するために実行するクエリについて要素増分処理します。|  
 |[KeyColumns 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/keycolumns-element-assl.md)|コレクションを格納[KeyColumn](../../../analysis-services/scripting/objects/keycolumn-element-assl.md)親オブジェクトの要素の定義。|  
 |[Kpis 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/kpis-element-assl.md)|コレクションを格納[Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md)親要素に関連付けられている要素です。|  

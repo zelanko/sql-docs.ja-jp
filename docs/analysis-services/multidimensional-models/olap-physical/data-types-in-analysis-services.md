@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7fcf359a6f760ffffa4e1a0682e4c4b45f4fe272
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-types-in-analysis-services"></a>Analysis Services で使用するデータ型
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]すべての<xref:Microsoft.AnalysisServices.DataItem>オブジェクト、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]次のサブセットをサポートしている**System.Data.OleDb.OleDbType**です。 使用して設定またはデータ型を読み取る、 [DataItem データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+すべての<xref:Microsoft.AnalysisServices.DataItem>オブジェクト、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]次のサブセットをサポートしている**System.Data.OleDb.OleDbType**です。 使用して設定またはデータ型を読み取る、 [DataItem データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
   
 ## <a name="supported-data-types"></a>サポートされるデータ型  
   
@@ -35,7 +37,7 @@ ms.lasthandoff: 01/08/2018
 |Binary|バイナリ データのストリーム**バイト**型です。 **バイト**は範囲 0 ~ 255 の値の符号なし整数を表す値の型。|  
 |ブール値|この型のインスタンスは、いずれかの値を持つ**true**または**false**です。|  
 |通貨|A*通貨*(小数点以下 4 桁) 通貨単位の 10,000 の精度で +922,337,203,685,477.5807-922,337,203,685,477.5808 から範囲の値。|  
-|date|日付と時刻データで、double として格納されます。 整数部分は 1899 年 12 月 30 日から起算した日数、小数部分は日の一部分 (時刻) を表します。|  
+|日付|日付と時刻データで、double として格納されます。 整数部分は 1899 年 12 月 30 日から起算した日数、小数部分は日の一部分 (時刻) を表します。|  
 |Double|-1.79769313486232E +308 から 1.79769313486232E +308 までの範囲の浮動小数点数です。 Double 値は、最大有効桁数が 15 の 10 進数の数値情報を格納します。|  
 |Integer|負の 2,147,483,648 から正の 2,147,483,647 までの符号付き整数値を表す、32 ビットの符号付き整数です。|  
 |単一|-3.4028235E +38 から 3.4028235E +38 までの範囲の浮動小数点数です。 Single 値は、最大有効桁数が 7 の 10 進数の数値情報を格納します。|  
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="amo-validations-on-data-types"></a>データ型に対する AMO の検証  
  次の表は、特定のバインドに対して分析管理オブジェクト (AMO) が行う追加の検証を示しています。  
   
-|Object|Binding|許可されるデータ型|  
+|オブジェクト|Binding|許可されるデータ型|  
 |------------|-------------|------------------------|  
 |DimensionAttribute|[KeyColumns]|Binary 以外のすべて|  
 ||NameColumn|WChar のみ|  
@@ -58,12 +60,12 @@ ms.lasthandoff: 01/08/2018
 ||CustomRollupColumn|WChar のみ|  
 ||CustomRollupPropertiesColumn|WChar のみ|  
 ||UnaryOperatorColumn|WChar のみ|  
-||ValueColumn|All|  
+||ValueColumn|すべて|  
 |AttributeTranslation|CaptionColumn|WChar のみ|  
 |ScalarMiningStructureColumn|[KeyColumns]|Binary 以外のすべて|  
 ||NameColumn|WChar のみ|  
 |TableMiningStructureColumn|ForeignKeyColumns|Binary 以外のすべて|  
 |MeasureGroupAttribute|[KeyColumns]|Binary 以外のすべて|  
-|個別のカウント メジャー|Source|BigInt、Currency、Double、Integer、Single、SmallInt、TinyInt、UnsignedBigInt、UnsignedInt、UnsignedSmallInt、UnsignedTinyInt|  
+|個別のカウント メジャー|ソース|BigInt、Currency、Double、Integer、Single、SmallInt、TinyInt、UnsignedBigInt、UnsignedInt、UnsignedSmallInt、UnsignedTinyInt|  
   
   

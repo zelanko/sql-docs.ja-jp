@@ -17,19 +17,20 @@ helpviewer_keywords:
 - partitions [Analysis Services], write-enabled
 - writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c1e6971bd8c1bc228386ad5b39a498f0e0ed5d42
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-partition-writeback"></a>パーティションの書き戻しの設定
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]場合は書き込みを有効にする、メジャー グループ、エンドユーザーは、キューブ データやソース データではなく、書き戻しテーブルという別個のテーブルで変更を保存する場所を参照しながらキューブ データを変更できます。 書き込み許可パーティションを参照しているエンド ユーザーは、そのパーティションの書き戻しテーブルを見れば、すべての変更の最終結果を確認できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+メジャー グループを書き込み許可にすると、エンド ユーザーはキューブを参照しているときにキューブ データを変更できます。この場合、変更内容は、キューブ データやソース データではなく、書き戻しテーブルという別個のテーブルに保存されます。 書き込み許可パーティションを参照しているエンド ユーザーは、そのパーティションの書き戻しテーブルを見れば、すべての変更の最終結果を確認できます。  
   
  書き戻しデータは、参照または削除できます。 また、書き戻しデータをパーティションに変換することもできます。 書き込み許可パーティションの場合、キューブ ロールを使用して、ユーザーまたはユーザー グループに読み取り/書き込みアクセス権を許可し、パーティション内の特定のセルまたはセル グループへのアクセスを制限できます。  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 01/08/2018
  パーティションの書き戻しテーブルに含まれるデータは、パーティションに変換できます。 この手順により、書き戻しテーブルは新しいパーティションのファクト テーブルになります。  
   
 > [!CAUTION]  
->  パーティションの使い方が不適切な場合、キューブ データが不正確になることがあります。 詳細については、「 [ローカル パーティションの作成と管理 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)」を参照してください。  
+>  パーティションの使い方が不適切な場合、キューブ データが不正確になることがあります。 詳細については、「[ローカル パーティションの作成と管理 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)」を参照してください。  
   
  書き戻しデータ テーブルをパーティションに変換すると、パーティションの書き込みも無効になります。 パーティションのセルの無制限読み取り/書き込みポリシーと読み取り/書き込み (Read/Write) 権限はすべて無効になり、エンド ユーザーは表示されるキューブ データを変更できなくなります。 無制限読み取り/書き込みポリシーまたは読み取り/書き込み権限が無効であるエンド ユーザーでもキューブを参照できます。読み取り (Read) 権限と条件付き読み取り (Read-Contingent) 権限は影響を受けません。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>参照  
  [書き込み許可パーティション](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Excel 2010 のセル レベルの OLAP キューブへの書き戻しを有効にします。](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [有効にして、Analysis Services の書き戻しデータ エントリのセキュリティ保護](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Excel 2010 のセル レベルで OLAP キューブへの書き戻しを有効にする](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Analysis Services の書き戻しを使用したデータ入力の有効化と保護](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

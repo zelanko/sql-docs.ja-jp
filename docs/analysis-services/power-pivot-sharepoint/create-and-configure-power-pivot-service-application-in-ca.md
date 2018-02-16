@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 625844e5cc54882fadd7707de4b7548caa820ea3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>作成し、CA で Power Pivot サービス アプリケーションを構成します。
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]サービス アプリケーションは、共有サービス インスタンスの[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]システム サービスです。 各サービス アプリケーションは、固有のアプリケーション ID、構成設定、プロパティ、および内部データ ストレージを備えています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスの共有サービス インスタンスです。 各サービス アプリケーションは、固有のアプリケーション ID、構成設定、プロパティ、および内部データ ストレージを備えています。  
   
  このトピックには、次のセクションが含まれます。  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/08/2018
   
      サービスの関連付けの詳細については、「 [サーバーの全体管理での SharePoint Web アプリケーションへの PowerPivot サービス アプリケーションの接続](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)」を参照してください。  
   
-10. **[OK]** をクリックします。 作成したサービスが、他のマネージ サービスと共にファームのサービス アプリケーションの一覧に表示されます。  
+10. クリックして **OK.** 作成したサービスが、他のマネージ サービスと共にファームのサービス アプリケーションの一覧に表示されます。  
   
 ##  <a name="ConfigApp"></a> Power Pivot サービス アプリケーションの構成  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションは、既定の構成を使用して作成されます。 既定の設定は、ほとんどのシナリオで推奨されます。 既定の設定を変更するのは、応答の遅延や接続の切断などの問題が発生した場合や、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスの構成を特定の SharePoint Web アプリケーションに対して変更する場合だけにしてください。  
@@ -147,7 +148,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  **[カスタム]**を選択した場合は、使用する各サービス アプリケーション接続の横のチェック ボックスをオンにします。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション ([型] が **Power Pivot Service Application Proxy**に設定されているアプリケーション) が複数ある場合は、そのうちの 1 つだけを選択してください。  
   
-6.  **[OK]** をクリックします。  
+6.  **[OK]**をクリックします。  
   
 ##  <a name="EditGSA"></a> サービス アプリケーションのプロパティの編集  
  サービス アプリケーションの名前、アプリケーション プール、データベース設定、およびサービスの関連付けを指定するプロパティ ページを再び開くには、次の手順に従ってください。  

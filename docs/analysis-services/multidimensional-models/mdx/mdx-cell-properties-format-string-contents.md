@@ -18,24 +18,25 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX のセルのプロパティ - FORMAT_STRING の内容
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**FORMAT_STRING**セルの書式設定、**値**セル プロパティの値を作成する、 **FORMATTED_VALUE**セル プロパティです。 **FORMAT_STRING** セル プロパティは文字列と数値列の値を処理し、その値にフォーマット式を適用して、 **FORMATTED_VALUE** セル プロパティ用に書式設定した値を返します。 次の表は、文字列および数値の処理に使用する構文および書式文字の詳細を示しています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+**FORMAT_STRING** セル プロパティは、 **VALUE** セル プロパティを書式設定して、 **FORMATTED_VALUE** セル プロパティの値を作成します。 **FORMAT_STRING** セル プロパティは文字列と数値列の値を処理し、その値にフォーマット式を適用して、 **FORMATTED_VALUE** セル プロパティ用に書式設定した値を返します。 次の表は、文字列および数値の処理に使用する構文および書式文字の詳細を示しています。  
   
 ## <a name="string-values"></a>文字列の値  
  文字列のフォーマット式には、1 つのセクション、またはセミコロン (;) で区切った 2 つのセクションを含めることができます。  
   
-|使用方法|[結果]|  
+|使用方法|結果|  
 |-----------|------------|  
 |1 つのセクション|この書式はすべての文字列の値に適用されます。|  
 |2 つのセクション|最初のセクションは文字列のデータに適用され、2 番目のセクションは NULL 値および長さ 0 の文字列 ('''') に適用されます。|  
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="numeric-values"></a>数値  
  数値に対するユーザー定義のフォーマット式には、1 つのセクションからセミコロンで区切った 4 つのセクションまでを任意の場所に含めることができます。 フォーマット引数にいずれかの名前付き数値書式が含まれている場合、使用できるセクションは 1 つだけです。  
   
-|使用方法|[結果]|  
+|使用方法|結果|  
 |-----------|------------|  
 |1 つのセクション|このフォーマット式は、すべての値に適用されます。|  
 |2 つのセクション|最初のセクションは正の値および 0 に適用され、2 番目のセクションは負の値に適用されます。|  
@@ -158,6 +159,6 @@ ms.lasthandoff: 01/08/2018
  [LANGUAGE と FORMAT_STRING FORMATTED_VALUE 上](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
  [セルのプロパティ &#40; を使用します。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [作成とプロパティの値 &#40; を使用MDX と #41 です。](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [MDX クエリの基礎 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX クエリの基礎と #40 です。Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

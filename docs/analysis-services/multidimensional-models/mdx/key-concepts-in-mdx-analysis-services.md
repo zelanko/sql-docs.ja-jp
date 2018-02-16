@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], dimensional modeling
 - MDX [Analysis Services], dimensional modeling
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 23aca9e6a5595c8597d13e2e832390988c50be3c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX の主な概念 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]多次元式 (MDX) を使用すると、多次元データのクエリまたはキューブ内で MDX 式を作成して、前に、多次元の概念と用語を理解するのに役立ちます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+多次元式 (MDX) を使用して多次元データを照会したり、キューブ内で MDX 式を作成したりするには、多次元の概念と用語を理解しておく必要があります。  
   
  既にご存じのデータ要約の例を足掛かりにして、それと MDX の関連性を確認することをお勧めします。 ここでは、Excel でピボットテーブルを作成し、それに Analysis Services サンプル キューブからのデータを設定します。  
   
@@ -141,24 +142,24 @@ ms.lasthandoff: 01/08/2018
   
  **データベース ディメンションとキューブ ディメンション**。 モデル内では、スタンドアロン ディメンションを定義して、同じモデル内の任意の数のキューブに含めることができます。 ディメンションがキューブに追加された場合は、キューブ ディメンションと呼ばれます。 プロジェクト内部では、Object Explorer 内のスタンドアロン項目として、データベース ディメンションと呼ばれます。 どうして区別が必要なのでしょうか。 それは、それぞれに独立的にプロパティを設定できるからです。 製品マニュアルでは、両方の用語が使用されているため、それぞれの意味を理解しておく必要があります。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
  これで、重要な概念と用語が理解できたところで、Analysis Services の基本的な概念をさらに詳しく説明している以下のトピックに進むことができます。  
   
--   [MDX の基本的なクエリ (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  
+-   [MDX の基本的なクエリ &#40;です。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  
   
--   [基本的な MDX スクリプト (MDX)](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
+-   [基本的な MDX スクリプト &#40;です。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
--   [多次元モデリング (Adventure Works チュートリアル)](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+-   [多次元モデリング &#40;です。Adventure Works チュートリアル &#41;](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
- [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [キューブ空間](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [組](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [メンバー、組、およびセットの操作 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [メンバー、組、およびセット &#40; の操作MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [表示部分の合計と非表示部分の合計](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
  [MDX クエリの基礎と #40 です。Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [MDX スクリプティングの基礎と #40 です。Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [MDX 言語リファレンス &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
- [多次元式 &#40;MDX&#41; リファレンス](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [MDX 言語リファレンス &#40;です。MDX と #41 です。](../../../mdx/mdx-language-reference-mdx.md)   
+ [多次元式 &#40;です。MDX と #41 です。参照](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

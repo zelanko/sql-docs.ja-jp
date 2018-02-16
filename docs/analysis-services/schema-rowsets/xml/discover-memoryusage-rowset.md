@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bd97d1b2eb02dda3f8add861e6767b7a495a821d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovermemoryusage-rowset"></a>DISCOVER_MEMORYUSAGE 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]サーバーによって割り当てられるさまざまなオブジェクトの DISCOVER_MEMORYUSAGE 統計を返します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+サーバーによって割り当てられているさまざまなオブジェクトの DISCOVER_MEMORYUSAGE 統計を返します。  
   
 > [!WARNING]  
 >  この行セットでは、非常に大きな結果セットが生成されることがあります。 SQL Server Management Studio によって許可されている量よりも多くの表示メモリを必要とするために結果を表示できない場合、次の既定の場所にある一時ファイルに結果が書き込まれます。  
@@ -41,15 +43,15 @@ ms.lasthandoff: 01/08/2018
 |-----------------|--------------------|-----------------|-----------------|  
 |**MemoryID**|**DBTYPE_UI8**||メモリを識別する番号。|  
 |**MemoryName**|**DBTYPE_WSTR**||メモリを所有しているオブジェクトの名前。|  
-|**SPID**|**DBTYPE_UI4**|可|メモリを割り当てたセッション。 ゼロは、メモリが特定のセッションに関連付けられていないことを意味します。|  
+|**SPID**|**DBTYPE_UI4**|はい|メモリを割り当てたセッション。 ゼロは、メモリが特定のセッションに関連付けられていないことを意味します。|  
 |**CreationTime**|**DBTYPE_DBTIMESTAMP**||"オブジェクトが作成された時刻" または "メモリが割り当てられた時刻"。|  
-|**BaseObjectType**|**DBTYPE_UI4**|可|オブジェクトの型を記述する番号です。 BaseObjectType が同じオブジェクトは同じ型になります。|  
-|**MemoryUsed**|**DBTYPE_UI8**|可|オブジェクトの現在のサイズです。オブジェクトが使用するために割り当てられているメモリよりも小さい場合があります。|  
-|**割り当てられたメモリ**|**DBTYPE_UI8**||オブジェクトが使用するために割り当てられているメモリの量。オブジェクトが実際に使用するメモリの量よりも大きい場合があります。|  
+|**BaseObjectType**|**DBTYPE_UI4**|はい|オブジェクトの型を記述する番号です。 BaseObjectType が同じオブジェクトは同じ型になります。|  
+|**MemoryUsed**|**DBTYPE_UI8**|はい|オブジェクトの現在のサイズです。オブジェクトが使用するために割り当てられているメモリよりも小さい場合があります。|  
+|**MemoryAllocated**|**DBTYPE_UI8**||オブジェクトが使用するために割り当てられているメモリの量。オブジェクトが実際に使用するメモリの量よりも大きい場合があります。|  
 |**MemoryAllocBase**|**DBTYPE_UI8**||オブジェクト自体に最初に割り当てられたバイト数 (オブジェクトのコンテンツに対する追加の割り当てを除く)。|  
 |**MemoryAllocFromAlloc**|**DBTYPE_UI8**||このオブジェクトのコンテンツに割り当てられたメモリ。|  
 |**ElementCount**|**DBTYPE_UI4**||コンテナー オブジェクトの場合、これはそのオブジェクトに含まれるオブジェクトの数です。|  
-|**圧縮可能**|**DBTYPE_BOOL**|可|メモリが圧縮可能かどうかを示すブール値 (メモリ不足により解放することができます)。 true の場合メモリは圧縮可能であり、false の場合メモリは圧縮不能です。|  
+|**圧縮可能**|**DBTYPE_BOOL**|はい|メモリが圧縮可能かどうかを示すブール値 (メモリ不足により解放することができます)。 true の場合メモリは圧縮可能であり、false の場合メモリは圧縮不能です。|  
 |**ObjectParentPath**|**DBTYPE_WSTR**||このオブジェクトの完全なパスを識別する文字列。|  
 |**Exchange Spill**|**DBTYPE_WSTR**||オブジェクトを識別する文字列。 このオブジェクトの完全なパスが、文字列で表される: (ObjectParentPath + '.' + ObjectId)。|  
   
@@ -66,6 +68,6 @@ ms.lasthandoff: 01/08/2018
 |ADOMDNAME|MemoryUsage|  
   
 ## <a name="see-also"></a>参照  
- [XML for Analysis Schema 行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis スキーマ行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

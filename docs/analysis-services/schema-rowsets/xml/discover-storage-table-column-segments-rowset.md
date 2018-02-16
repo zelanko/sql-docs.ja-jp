@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 878568721816c90e202727dc3e516370f9c3ee56
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]表形式で実行される Analysis Services データベースによって使用されるストレージ テーブルに関する列およびセグメント レベルの情報を提供または[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]モード。 この行セットは、主にトラブルシューティングや分析に使用されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+表形式で実行される Analysis Services データベースによって使用されるストレージ テーブルに関する列およびセグメント レベルの情報を提供または[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]モード。 この行セットは、主にトラブルシューティングや分析に使用されます。  
   
  **適用対象:** テーブル モデル  
   
@@ -34,14 +36,14 @@ ms.lasthandoff: 01/08/2018
   
 |**列名**|**型インジケーター**|**制限**|**Description**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|**DATABASE_NAME**|**DBTYPE_WSTR**|可|表形式のデータベースを指定します。<br /><br /> **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS**この列を使用して行セットを制限することができます。 現在のデータベースを省略した場合は使用されます。|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|可|モデルの名前。<br /><br /> **DISCOVER_STORAGE_TABLES**この列を使用して行セットを制限することができます。|  
-|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|可|メジャー グループの名前。|  
-|**PARTITION_NAME**|**DBTYPE_WSTR**|可|パーティションの名前。|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|はい|表形式のデータベースを指定します。<br /><br /> **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS**この列を使用して行セットを制限することができます。 現在のデータベースを省略した場合は使用されます。|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|はい|モデルの名前。<br /><br /> **DISCOVER_STORAGE_TABLES**この列を使用して行セットを制限することができます。|  
+|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|はい|メジャー グループの名前。|  
+|**PARTITION_NAME**|**DBTYPE_WSTR**|はい|パーティションの名前。|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||ディメンションの名前。|  
 |**TABLE_ID**|**DBTYPE_WSTR**||テーブル セグメントの内部 ID。|  
 |**COLUMN_ID**|**DBTYPE_WSTR**||列の内部 ID。|  
-|**セグメント数 (_N)**|**DBTYPE_I8**||テーブル セグメントの序数。|  
+|**SEGMENT _NUMBER**|**DBTYPE_I8**||テーブル セグメントの序数。|  
 |**TABLE_PARTTION_NUMBER**|**DBTYPE_I8**||パーティションの序数。|  
 |**RECORDS_COUNT**|**DBTYPE_I8**||パーティション内のレコード数。|  
 |**ALLOCATED_SIZE**|**DBTYPE_UI8**||列セグメントに割り当てられたサイズ (バイト単位)。|  
