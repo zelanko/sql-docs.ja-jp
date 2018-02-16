@@ -14,12 +14,12 @@ description: "管理 ノード SQL Server 並列データ ウェアハウス (PD
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
-caps.latest.revision: "15"
+caps.latest.revision: 
 ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Analytics Platform System の InfiniBand ネットワーク アダプターを構成します。
 管理 ノード SQL Server 並列データ ウェアハウス (PDW) に接続する非アプライアンス クライアント サーバーの InfiniBand ネットワーク アダプターを構成する方法について説明します。 読み込み、バックアップ、およびその他のプロセスがアクティブの InfiniBand ネットワークに自動的に接続できるように基本的な接続と高可用性は、これらの手順に従います。  
@@ -58,7 +58,7 @@ APS アプライアンスのドメイン アカウント、AD01 ノードへの�
   
 ネットワーク アダプターを構成する権限を持つクライアント サーバーで Windows アカウントが必要です。  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>前提条件  
 これらの手順では、クライアント サーバーのラックおよびアプライアンスの InfiniBand ネットワークに配線されていると仮定します。 ラック マウントと指示をケーブルは、次を参照してください。[取得および構成を読み込むサーバー](acquire-and-configure-loading-server.md)です。  
   
 ### <a name="general-remarks"></a>全般的な解説  
@@ -77,9 +77,9 @@ SQLCTL01 を使用すると、分析プラットフォーム システム DNS �
   
     ![管理ノード上の InfiniBand 接続](media/network-teamib.png "管理ノード上の InfiniBand 接続")  
   
-4.  値を書き留めて、インターネット プロトコル バージョン 4 (Tcp/ipv4) のプロパティ ウィンドウから、 **IP アドレス**と**サブネット マスク**です。  IP アドレス、  ***appliance_domain*-AD01**ノードは、分析プラットフォーム システム DNS サーバーの IP アドレス。  
+4.  値を書き留めて、インターネット プロトコル バージョン 4 (Tcp/ipv4) のプロパティ ウィンドウから、 **IP アドレス**と**サブネット マスク**です。  IP アドレス、***appliance_domain *-AD01**ノードは、分析プラットフォーム システム DNS サーバーの IP アドレス。  
   
-5.  TeamIB1 アダプターの 1 ~ 5 の上記の手順を繰り返します ***appliance_domain*-AD02**サーバー。  
+5.  TeamIB1 アダプターの 1 ~ 5 の上記の手順を繰り返します ***appliance_domain *-AD02**サーバー。  
   
     ![PDW 管理ノード InfiniBand 1 プロパティ](media/network-ip1-properties.png "PDW 管理ノード InfiniBand 1 のプロパティ")  
   
@@ -168,7 +168,7 @@ SQLCTL01 を使用すると、分析プラットフォーム システム DNS �
   
 2.  [詳細設定] をクリックしてください. ボタンをクリックします。  
   
-3.  [TCP/IP 詳細設定] ウィンドウで場合は、追加これらの DNS サフィックスを順に) オプションがないグレー、チェック ボックスと呼ばれるこれら DNS サフィックスを追加 (順序で): アプライアンス ドメイン サフィックスを選択して、[追加] をクリックしています. アプライアンスのドメイン サフィックスになります`appliance_domain.local`  
+3.  [TCP/IP 詳細設定] ウィンドウで場合は、追加これらの DNS サフィックスを順に) オプションがないグレー、チェック ボックスと呼ばれるこれら DNS サフィックスを追加 (順序で): アプライアンス ドメイン サフィックスを選択して、[追加] をクリックしています. アプライアンスのドメイン サフィックスになります `appliance_domain.local`  
   
 4.  場合は、以下の DNS サフィックス (順序で): オプションがグレーで \software\policies\microsoft\windows NT\DNSClient のレジストリ キーを変更することでこのサーバーに APS ドメインを追加することができます。  
   
@@ -182,10 +182,10 @@ SQLCTL01 を使用すると、分析プラットフォーム システム DNS �
   
     MyPDW PDW 地域に MyAPS をという名前のアプライアンスは、という名前の例:  
   
-    -   MyPDW SQLCTL01.MyAPS.local  
+    -   MyPDW-SQLCTL01.MyAPS.local  
   
-    -   MyPDW SQLCTL01  
+    -   MyPDW-SQLCTL01  
   
 ## <a name="see-also"></a>参照  
-[取得し、読み込みサーバーを構成します。](acquire-and-configure-loading-server.md)  
+[取得し、読み込みサーバーを構成します。 ](acquire-and-configure-loading-server.md)  
   
