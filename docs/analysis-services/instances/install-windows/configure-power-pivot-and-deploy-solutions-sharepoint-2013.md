@@ -19,13 +19,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a815c21f442c615217fdc863448f18b49fdb3588
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Power Pivot の構成とソリューションの配置 (SharePoint 2013)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]このトピックではの展開と構成に中間層機能強化について説明します、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]機能[!INCLUDE[SPS2013](../../../includes/sps2013-md.md)]など[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ギャラリー、スケジュール データ更新、管理ダッシュ ボード、およびデータ プロバイダー。 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成** ツールを実行して、以下の操作を完了します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+このトピックでは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ギャラリー、定期データ更新、管理ダッシュボード、データ プロバイダーといった [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 機能に対する中間層機能強化の配置および構成について説明します。 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成** ツールを実行して、以下の操作を完了します。  
   
 -   SharePoint ソリューション ファイルを配置する。  
   

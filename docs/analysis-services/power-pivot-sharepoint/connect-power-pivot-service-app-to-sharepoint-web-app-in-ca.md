@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 888a9c7c06a43f1fcee9306a7edeaed4b484e24b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>CA での SharePoint Web アプリに Power Pivot サービス アプリケーションを接続します。
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]サービス アプリケーションは、任意の数のファームで SharePoint Web アプリケーションで使用できます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを使用できるようにするには、サービス関連付けリストに PowerPivot サービス アプリケーションを追加します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションは、ファーム内の任意の数の SharePoint Web アプリケーションで使用できます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを使用できるようにするには、サービス関連付けリストに PowerPivot サービス アプリケーションを追加します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードが正しく機能するには、既定のグループに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションが 1 つ存在している必要があります。 既定のグループに複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを追加しないでください。 同じ型のサービス アプリケーションのエントリを複数追加する構成はサポートされていないため、エラーが発生する可能性があります。 追加のサービス アプリケーションを作成する場合は、それらをカスタム リストに追加してください。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション (型名 **Power Pivot Service Application Proxy**で示されます) の横のチェック ボックスをオンにします。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションが複数ある場合は、そのうちの 1 つだけを選択します。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
 ##  <a name="custom"></a> カスタム サービス関連付けリストへの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションの追加  
  既定のグループは、カスタム リストで置き換えることができます。 カスタム リストは、SharePoint Web アプリケーションごとに作成します。 カスタム リストは既定のグループよりも優先され、既定のグループは、ファームまたはサービスの管理者が指定したサービス関連付けとのみ置き換えられます。 複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを作成した場合は、使用するサービス アプリケーションをカスタム リストで指定する必要があります。 カスタム リストを他の Web アプリケーションで再利用することはできません。 カスタム リストは、作成対象の Web アプリケーションにのみ適用されます。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  使用する各サービス アプリケーション接続の横のチェック ボックスをオンにします。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション ([型] が **Power Pivot Service Application Proxy**に設定されているアプリケーション) が複数ある場合は、そのうちの 1 つだけを選択してください。  
   
-6.  **[OK]** をクリックします。  
+6.  **[OK]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [サーバーの全体管理での Power Pivot サービス アプリケーションの作成および構成](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   

@@ -17,19 +17,20 @@ helpviewer_keywords:
 - members [Analysis Services], calculated
 - calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 92d18934426772d34d4b63e087d235fe6c48dfe3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-calculated-members"></a>計算されるメンバーの作成
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]カスタマイズされたメジャーまたはディメンション メンバー、キューブ データ、算術演算子、数字、および関数を組み合わせることによって、計算されるメンバーを呼び出すを作成することができます。 たとえば、既存のドル メジャーに換算率を掛けて、ドルをユーロに換算する、Euro という計算されるメンバーを作成できます。 Euro は、別個の行または列に表示されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+キューブ データ、算術演算子、数値、関数などを組み合わせることによって、「計算されるメンバー」と呼ばれる、カスタマイズされたメジャーまたはディメンション メンバーを作成できます。 たとえば、既存のドル メジャーに換算率を掛けて、ドルをユーロに換算する、Euro という計算されるメンバーを作成できます。 Euro は、別個の行または列に表示されます。  
   
  計算されるメンバーの定義は格納されますが、その値はメモリにしか存在しません。 上記の例では、Euro の値はエンド ユーザーに表示されますが、キューブ データとしては格納されません。  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
  階層はレベルに分割され、そこにメンバーが含まれています。 各メンバーによってヘッダーが作成されます。 キューブ内のデータを参照中、選択したヘッダーから、これまで表示されていなかった下位のヘッダーにドリル ダウンできます。 計算されるメンバーのヘッダーは、選択した親メンバーの直下に属するレベルに追加されます。  
   
- **[式]**  
+ **式**  
  計算されるメンバーの値を作成する式を指定します。 この式は、多次元式 (MDX) で記述できます。 式には、次の要素を含めることができます。  
   
 -   ディメンション、レベル、メジャーなどのキューブのコンポーネントを表すデータ式  
@@ -87,6 +88,6 @@ ms.lasthandoff: 01/08/2018
 -   計算されるメンバーがメジャー ディメンションで作成された場合、そのメンバーはそのディメンション内でアドレス指定可能です。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデルの計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
+ [多次元モデルでの計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

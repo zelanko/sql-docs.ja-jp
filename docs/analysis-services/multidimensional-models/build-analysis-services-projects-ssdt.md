@@ -15,19 +15,20 @@ helpviewer_keywords:
 - projects [Analysis Services], building
 - Business Intelligence Development Studio, project building [Analysis Services]
 ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 634586ccc56d55a8678bc63a7ed4eb381f619e02
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Analysis Services プロジェクトのビルド (SSDT)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、構築する、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プログラミング Visual Studio でプロジェクトをビルドするようにプロジェクトの多くです。 プロジェクトを作成する場合、出力ディレクトリ内に XML ファイルのセットが作成されます。 この XML ファイルは、Analysis Services Scripting Language (ASSL) を使用したファイルです。ASSL は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] や [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] などのクライアント アプリケーションが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスと接続して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの作成や変更に使用する XML 言語仕様です。 この XML ファイルを使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト内の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクト定義が、指定された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに配置されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの作成方法は、Visual Studio を使用したプログラミング プロジェクトの作成方法とほとんど同じです。 プロジェクトを作成する場合、出力ディレクトリ内に XML ファイルのセットが作成されます。 この XML ファイルは、Analysis Services Scripting Language (ASSL) を使用したファイルです。ASSL は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] や [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] などのクライアント アプリケーションが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスと接続して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの作成や変更に使用する XML 言語仕様です。 この XML ファイルを使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト内の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクト定義が、指定された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに配置されます。  
   
 ## <a name="building-a-project"></a>プロジェクトの作成  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの作成時、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、プロジェクト内のすべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース オブジェクトを作成するために必要なすべての ASSL コマンドが含まれた完全な XML ファイル セットを出力フォルダー内に作成します。 そのプロジェクトが既に作成済みであり、その有効な構成について増分配置が指定されている場合、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、配置されたオブジェクトの増分更新を実行する ASSL コマンドを含んでいる XML ファイルも作成します。 この XML ファイルは、プロジェクトの ..\obj\\< アクティブ構成\> フォルダーに書き込まれます。 プロジェクトを増分作成すると、大容量のプロジェクトやデータベースの配置および処理時間を短縮できます。  
@@ -65,6 +66,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>参照  
  [Analysis Services スクリプト言語 &#40;XMLA 用 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services プロジェクトの配置 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Analysis Services プロジェクトの展開 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

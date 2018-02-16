@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 5d2ac4e4346e51614787cabdf9eb6956a7c8012f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0 で Analysis Services への HTTP アクセスの構成します。
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]この記事では、Analysis Services インスタンスにアクセスするために HTTP エンドポイントを設定する方法について説明します。 HTTP アクセスを有効にするには、MSMDPUMP.dll を構成します。MSMDPUMP.dll は、インターネット インフォメーション サービス (IIS) で実行され、クライアント アプリケーションと Analysis Services サーバーの間で双方向にデータをポンプする ISAPI 拡張機能です。 この方法は、BI ソリューションが次の機能を必要とする場合に、Analysis Services への接続の代わりに使用できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+この記事では、Analysis Services インスタンスにアクセスするために HTTP エンドポイントを設定する方法について説明します。 HTTP アクセスを有効にするには、MSMDPUMP.dll を構成します。MSMDPUMP.dll は、インターネット インフォメーション サービス (IIS) で実行され、クライアント アプリケーションと Analysis Services サーバーの間で双方向にデータをポンプする ISAPI 拡張機能です。 この方法は、BI ソリューションが次の機能を必要とする場合に、Analysis Services への接続の代わりに使用できます。  
   
 -   クライアント アクセスが、有効にできるポートに制限があるインターネット接続またはエクストラネット接続を経由して接続する。  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 01/08/2018
   
  次の表には、さまざまなシナリオで HTTP アクセスを有効にするときに検討する必要がある追加の検討事項が示されています。  
   
-|シナリオ|構成|  
+|Scenario|構成|  
 |--------------|-------------------|  
 |IIS と Analysis Services が同じコンピューター上にある場合|これが、既定の構成 (サーバー名は localhost)、ローカルの Analysis Services OLE DB プロバイダー、および NTLM を使用した Windows 統合セキュリティを使用できるため最も簡単な構成となります。 クライアントも同じドメインにあることを前提としているため、認証はユーザーにはわからないように内部的に行われ、追加の作業も必要ありません。|  
 |IIS と Analysis Services が異なるコンピューター上にある場合|このトポロジでは、Web サーバーに Analysis Services OLE DB プロバイダーをインストールする必要があります。 msmdpump.ini ファイルを編集して、リモート コンピューター上の Analysis Services インスタンスの場所を指定する必要もあります。<br /><br /> このトポロジでは、ダブルホップ認証ステップが追加されます。この認証では、資格情報がクライアントから Web サーバーに渡され、バックエンドの Analysis Services サーバーまで到達する必要があります。 Windows 資格情報と NTLM を使用している場合、NTLM では 2 番目のサーバーへのクライアント資格情報の委任が許可されないためにエラーが発生します。 最も一般的なソリューションは、SSL (Secure Sockets Layer) で基本認証を使用する方法です。ただし、この場合、MSMDPUMP 仮想ディレクトリにアクセスするときにユーザー名とパスワードの入力が必要となります。 さらにわかりやすい方法として、Kerberos を有効にし、Analysis Services 制約付き委任を構成することによって認証を内部的に処理して Analysis Services にアクセスできるようにすることもできます。 詳細については、「 [Configure Analysis Services for Kerberos constrained delegation](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md) 」を参照してください。<br /><br /> Windows ファイアウォールでどのポートのブロックを解除するかを検討してください。 両方のサーバー上のポートのブロックを解除して IIS 上の Web アプリケーションと、リモート サーバー上の Analysis Services にアクセスできるようにする必要があります。|  
@@ -128,11 +129,11 @@ ms.lasthandoff: 01/08/2018
   
 4.  Web サーバー上の \inetpub\wwwroot\OLAP フォルダーに、MSMDPUMP.DLL、MSMDPUMP.INI、および Resources フォルダーがあることを確認します。 フォルダー構造は次のようになります。  
   
-    -   \<ドライブ >: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<ドライブ >: \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
-    -   \<ドライブ >: \inetpub\wwwroot\OLAP\Resources  
+    -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> 手順 2: IIS にアプリケーション プールと仮想ディレクトリを作成する  
  次に、アプリケーション プールと、ポンプへのエンドポイントを作成します。  
@@ -163,7 +164,7 @@ ms.lasthandoff: 01/08/2018
   
      ![アプリケーションへの変換の設定を](../../analysis-services/instances/media/ssas-httpaccess-convertedapp.png "アプリケーションへの変換の設定")  
   
-4.  **[OK]** をクリックします。 Web サイトを更新し、OLAP フォルダーが既定の Web サイトでアプリケーションになっていることを確認します。 これで、MSMDPUMP ファイルへの仮想パスが確立されました。  
+4.  **[OK]**をクリックします。 Web サイトを更新し、OLAP フォルダーが既定の Web サイトでアプリケーションになっていることを確認します。 これで、MSMDPUMP ファイルへの仮想パスが確立されました。  
   
      ![アプリケーションに変換後の OLAP フォルダー](../../analysis-services/instances/media/ssas-httpaccess-convertfolderafter.png "アプリケーションへの変換後の OLAP フォルダー")  
   

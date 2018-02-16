@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: bc46094a-5584-47ba-8883-77dc79373a5d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bc93af457830a9efe0c57707a37ec946597887fe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="remove-powerpivotsystemserviceinstance-cmdlet"></a>Remove-PowerPivotSystemServiceInstance コマンドレット
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]削除、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービス インスタンスをファームからです。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービス インスタンスをファームから削除します。  
 
 >[!NOTE] 
 >この記事には、古くなった情報と例があります。 最新バージョンには、Get-help コマンドレットを使用します。
@@ -46,7 +47,7 @@ Remove-PowerPivotSystemServiceInstance [-Confirm <switch>] [-DeleteLocal <switch
   
 ## <a name="parameters"></a>パラメーター  
   
-### <a name="-identity-powerpivotmidtierserviceinstancepipebind"></a>Id \<PowerPivotMidTierServiceInstancePipeBind >  
+### <a name="-identity-powerpivotmidtierserviceinstancepipebind"></a>-Identity \<PowerPivotMidTierServiceInstancePipeBind>  
  削除する [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービス インスタンスの GUID を指定します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint がインストールされているアプリケーション サーバーごとに 1 つのサーバー インスタンスがあります。  
   
 |||  
@@ -57,7 +58,7 @@ Remove-PowerPivotSystemServiceInstance [-Confirm <switch>] [-DeleteLocal <switch
 |パイプライン入力の受け入れ|true|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-deletelocal-switch"></a>-Deletelocal &\<スイッチ >  
+### <a name="-deletelocal-switch"></a>-DeleteLocal \<switch>  
  ローカル コンピューターにインストールされている [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスのインスタンスを削除します。これにより、オブジェクトの ID を指定しなくてもインスタンスを削除できます。  
   
 |||  
@@ -68,7 +69,7 @@ Remove-PowerPivotSystemServiceInstance [-Confirm <switch>] [-DeleteLocal <switch
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-confirm-switch"></a>確認\<スイッチ >  
+### <a name="-confirm-switch"></a>-Confirm \<switch>  
  コマンドを実行する前に確認メッセージを表示します。 既定では、この値は有効にされています。 コマンドで確認応答を省略するには、コマンドで Confirm:$false を指定してください。  
   
 |||  
@@ -79,7 +80,7 @@ Remove-PowerPivotSystemServiceInstance [-Confirm <switch>] [-DeleteLocal <switch
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  このコマンドレットは共通のパラメーターをサポートしています (Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer、および OutVariable)。 詳細については、「 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)」を参照してください。  
   
 ## <a name="inputs-and-outputs"></a>入力および出力  

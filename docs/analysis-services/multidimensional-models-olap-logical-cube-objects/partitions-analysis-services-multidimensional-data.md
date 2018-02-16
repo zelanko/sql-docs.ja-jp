@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - incremental updates [Analysis Services]
@@ -26,19 +27,20 @@ helpviewer_keywords:
 - remote partitions [Analysis Services]
 - measure groups [Analysis Services], partitions
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 1a44581e828d92756c46b897d9e7c9be69144c5b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>パーティション (Analysis Services - 多次元データ)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]パーティションは、メジャー グループ データの一部のコンテナーです。 パーティションは、MDX クエリからは見えません。メジャー グループに定義されたパーティションの数にかかわらず、すべてのクエリでメジャー グループの内容全体が反映されます。 パーティションのデータの内容は、パーティションのクエリ バインドと、スライス式によって定義されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+パーティションは、メジャー グループ データの一部を入れるコンテナーです。 パーティションは、MDX クエリからは見えません。メジャー グループに定義されたパーティションの数にかかわらず、すべてのクエリでメジャー グループの内容全体が反映されます。 パーティションのデータの内容は、パーティションのクエリ バインドと、スライス式によって定義されます。  
   
  簡単な <xref:Microsoft.AnalysisServices.Partition> オブジェクトは、基本情報、スライス定義、集計デザインなどで構成されます。 基本情報には、パーティションの名前、ストレージ モード、処理モードなどが含まれます。 スライス定義は、組またはセットを指定する MDX 式です。 スライス定義には、StrToSet MDX 関数と同様の制限があります。 CONSTRAINED パラメーターを指定したスライス定義では、ディメンション、階層、レベルとメンバーの名前、キー、一意の名前やキューブ内のその他の名前付きオブジェクトを使用できますが、MDX 関数は使用できません。 集計デザインは、複数のパーティションで共有できる集計定義のコレクションです。 親キューブの集計デザインが既定値となります。  
   

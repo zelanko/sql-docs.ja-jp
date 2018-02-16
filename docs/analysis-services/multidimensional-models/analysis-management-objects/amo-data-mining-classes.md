@@ -1,7 +1,7 @@
 ---
 title: "AMO データ マイニング クラス |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - data mining [AMO]
 - AMO, data mining
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: de2b66f2dea7dfa29301ddd14f831d7318c6f4f9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a1a5ca970ee22d91b06a945e8a3b600b74892790
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-data-mining-classes"></a>AMO データ マイニング クラス
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]データ マイニング クラスでは、作成、変更、削除、およびデータ マイニング オブジェクトを処理できます。 データ マイニング オブジェクトでの作業には、データ マイニング構造の作成、データ マイニング モデルの作成、およびモデルの処理が含まれます。  
+  データ マイニング クラスは、データ マイニング オブジェクトの作成、変更、削除、および処理を行うのに役立ちます。 データ マイニング オブジェクトでの作業には、データ マイニング構造の作成、データ マイニング モデルの作成、およびモデルの処理が含まれます。  
   
  詳細方法については、環境を設定して約<xref:Microsoft.AnalysisServices.Server>、 <xref:Microsoft.AnalysisServices.Database>、 <xref:Microsoft.AnalysisServices.DataSource>、および<xref:Microsoft.AnalysisServices.DataSourceView>、オブジェクトを参照してください[AMO 基礎クラス](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)です。  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  ![AMO データ マイニング クラス](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-dataminingclasses.gif "AMO データ マイニング クラス")  
   
-##  <a name="MiningStructure"></a>MiningStructure オブジェクト  
+##  <a name="MiningStructure">MiningStructure オブジェクト</a>  
  マイニング構造はマイニング モデルのコンテナーです。 この構造では、マイニング モデルが使用する可能性のあるすべての列を定義します。 各マイニング モデルでは、構造で定義された列のセットから独自の列を定義します。  
   
  簡単な <xref:Microsoft.AnalysisServices.MiningStructure> オブジェクトは、基本情報、データ ソース ビュー、1 つ以上の <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>、0 個以上の <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>、および <xref:Microsoft.AnalysisServices.MiningModelCollection> で構成されます。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
  <xref:Microsoft.AnalysisServices.MiningStructure> は、独自の処理メソッドを使用して処理するか、親オブジェクトがそれ自体を独自の処理メソッドで処理する際に処理することができます。  
   
-### <a name="columns"></a>[列]  
+### <a name="columns"></a>列  
  列は、モデルのデータを保持し、その用途により、異なる種類、つまり Key、Input、Predictable、または InputPredictable となることができます。 Predictable 列はマイニング モデルを構築する対象です。  
   
  単一の値の列は、AMO では <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn> と呼ばれます。 複数の値の列は、<xref:Microsoft.AnalysisServices.TableMiningStructureColumn> と呼ばれます。  
@@ -97,7 +98,7 @@ ms.lasthandoff: 01/08/2018
   
  <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn> を削除するには、親 <xref:Microsoft.AnalysisServices.MiningStructure> のコレクションからこれを削除し、Update メソッドを使用して、サーバー上で親 <xref:Microsoft.AnalysisServices.MiningStructure> オブジェクトを更新する必要があります。  
   
-##  <a name="MiningModel"></a>MiningModel オブジェクト  
+##  <a name="MiningModel">MiningModel オブジェクト</a>  
  <xref:Microsoft.AnalysisServices.MiningModel> は、使用する構造の列、使用するアルゴリズム、およびモデルをチューニングする特定のオプション パラメーターを選択できるオブジェクトです。 たとえば、同じアルゴリズムを使用する同じマイニング構造で、いくつかのマイニング モデルを定義したいが、1 つのモデルのマイニング構造のいくつかの列を無視し、これらを別のモデルで入力として使用し、第 3 のモデルでこれらを入力および予測として使用したいという場合があります。 このオブジェクトは、1 つのマイニング モデルで列を連続的なものとして扱い、別のモデルでこの列を分離されているものとして扱う場合に便利です。  
   
  簡単な <xref:Microsoft.AnalysisServices.MiningModel> オブジェクトは、基本情報、アルゴリズム定義、および、いくつかの列で構成されます。  

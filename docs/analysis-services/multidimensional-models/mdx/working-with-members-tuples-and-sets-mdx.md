@@ -29,19 +29,20 @@ helpviewer_keywords:
 - tuples
 - set functions [MDX]
 ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 6bfa28850b007de34937834d80c79fe81c58b7fc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>メンバー、組、およびセットの操作 (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX には多数の関数を 1 つ以上のメンバー、組、またはセットを返すまたは、メンバー、組、に対して操作を実行する、または設定します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+MDX には、1 つ以上のメンバー、組、またはセットを返す操作や、メンバー、組、またはセットに対する操作を行うための関数が各種用意されています。  
   
 ## <a name="member-functions"></a>メンバー関数  
  MDX には、ディメンション、レベル、セット、組などの他の MDX エンティティからメンバーを取得するための関数がいくつかあります。 たとえば、 [FirstChild](../../../mdx/firstchild-mdx.md) 関数はメンバーに対して操作を実行してメンバーを返す関数です。  
@@ -82,10 +83,10 @@ ON COLUMNS
 FROM [Adventure Works]  
 ```  
   
- 組関数の詳細については、「 [MDX 関数リファレンス &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)」をご覧ください。  
+ 組関数の詳細については、「[MDX 関数リファレンス &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)」をご覧ください。  
   
 ## <a name="set-functions"></a>集合関数  
- MDX には、セットを返す関数がいくつかあります。 セットを取得する方法は、明示的に組を入力して中かっこで囲むだけではありません。 セットを返すメンバー関数の詳細については、「 [MDX の主な概念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)」をご覧ください。 他にも多くのセット関数があります。  
+ MDX には、セットを返す関数がいくつかあります。 セットを取得する方法は、明示的に組を入力して中かっこで囲むだけではありません。 セットを返すメンバー関数の詳細については、「[MDX の主な概念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)」をご覧ください。 他にも多くのセット関数があります。  
   
  コロン演算子を使用すれば、メンバーの順序を指定してセットを作成できます。 たとえば、次の例のセットには、2002 年度の第 1 四半期から第 4 四半期までの組が含まれます。  
   
@@ -111,16 +112,16 @@ FROM [Adventure Works]
   
  コロン演算子は内包的な関数です。 コロン演算子の両側のメンバーはどちらも結果セットに含まれます。  
   
- セット関数の詳細については、「 [MDX 関数リファレンス &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)」をご覧ください。  
+ セット関数の詳細については、「[MDX 関数リファレンス &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)」をご覧ください。  
   
 ## <a name="array-functions"></a>配列関数  
- 配列関数は、セットに対して操作を実行して配列を返します。 配列関数の詳細については、「 [MDX 関数リファレンス &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)」をご覧ください。  
+ 配列関数は、セットに対して操作を実行して配列を返します。 配列関数の詳細については、「[MDX 関数リファレンス &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)」をご覧ください。  
   
 ## <a name="hierarchy-functions"></a>階層関数  
- 階層関数は、メンバー、レベル、階層、または文字列に対して操作を実行して、階層を返します。 階層関数の詳細については、「 [MDX 関数リファレンス &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)」をご覧ください。  
+ 階層関数は、メンバー、レベル、階層、または文字列に対して操作を実行して、階層を返します。 階層関数の詳細については、「[MDX 関数リファレンス &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)」をご覧ください。  
   
 ## <a name="level-functions"></a>レベル関数  
- レベル関数は、メンバー、レベル、または文字列に対して操作を実行して、レベルを返します。 レベル関数の詳細については、「 [MDX 関数リファレンス &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)」をご覧ください。  
+ レベル関数は、メンバー、レベル、または文字列に対して操作を実行して、レベルを返します。 レベル関数の詳細については、「[MDX 関数リファレンス &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)」をご覧ください。  
   
 ## <a name="logical-functions"></a>論理関数  
  論理関数は、MDX 式に対して操作を実行し、その式の組、メンバー、またはセットに関する情報を返します。 たとえば、[IsEmpty &#40;MDX&#41;](../../../mdx/isempty-mdx.md) 関数は、式から空のセル値が返されるかどうかを評価します。 論理関数の詳細については、「[MDX 関数リファレンス &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)」をご覧ください。  
@@ -132,7 +133,7 @@ FROM [Adventure Works]
  文字列関数は、MDX 式に対して操作を実行して文字列を返します。 たとえば、[UniqueName &#40;MDX&#41;](../../../mdx/uniquename-mdx.md) 関数は、ディメンション、階層、レベル、メンバーの一意の名前を格納した文字列値を返します。 文字列関数の詳細については、「[MDX 関数リファレンス &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [MDX の主な概念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX &#40; の主な概念Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [MDX クエリの基礎と #40 です。Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [MDX 関数リファレンス &#40;です。MDX と #41 です。](../../../mdx/mdx-function-reference-mdx.md)  
   

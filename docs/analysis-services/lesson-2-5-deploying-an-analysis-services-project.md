@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: d6717a94aeacf2891c48050b6bb33f706cb2c2c0
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>レッスン 2 ~ 5-Analysis Services プロジェクトを配置します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/22/2018
     > [!NOTE]  
     > 配置中にエラーが発生する場合は、SQL Server Management Studio を使用して、データベース権限を確認します。 データ ソース接続用に指定したアカウントに、SQL Server インスタンスへのログインがあることが必要です。 ユーザー マッピングのプロパティを表示するには、ログインをダブルクリックします。 そのアカウントには、 **AdventureWorksDW2012** データベースに対する db_datareader 権限が必要です。  
   
-    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] により、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトがビルドされ、配置スクリプトを使用して [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の指定したインスタンスに配置されます。 配置の進行状況は、 **[出力]** ウィンドウと **[配置状況 - Analysis Services Tutorial]** ウィンドウの 2 つに表示されます。  
+    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] により、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトがビルドされ、配置スクリプトを使用して [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の指定したインスタンスに配置されます。 配置の進行状況は、 **[出力]** ウィンドウと **[配置状況 - Analysis Services Tutorial]** ウィンドウの 2 つに表示されます。  
   
     必要に応じて、 **[表示]** メニューの **[出力]** をクリックして出力ウィンドウを開きます。 **[出力]** ウィンドウには、配置の全体的な進行状況が表示されます。 **[配置状況 - Analysis Services Tutorial]** ウィンドウには、配置中に実行される各手順の詳細が表示されます。 詳細については、「[Analysis Services プロジェクトのビルド (SSDT)](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)」および「[Analysis Services プロジェクトの配置 (SSDT)](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)」を参照してください。  
   

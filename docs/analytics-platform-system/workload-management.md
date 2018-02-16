@@ -17,10 +17,10 @@ ms.topic: article
 ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
 caps.latest.revision: 
 ms.openlocfilehash: 738818a49491fbf8f8df491cac2f10ebdeedf3bf
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="workload-management"></a>ワークロードの管理
 SQL Server PDW のワークロードの管理機能には、ユーザーと管理者はあらかじめ設定されているメモリ、および同時実行の構成への要求を割り当てることができるようにします。 すべての要求を永久に不足せずに必要な適切なリソースへの要求を許可することで、一貫性のある、または混合、ワークロードのパフォーマンスを向上させるためにワークロードの管理を使用します。  

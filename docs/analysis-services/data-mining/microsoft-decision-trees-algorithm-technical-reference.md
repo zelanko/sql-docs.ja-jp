@@ -22,19 +22,20 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 700a8d3238c9411fd95e9358b26cbfb32ccade87
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]デシジョン ツリー アルゴリズムは、ツリーを作成するためのさまざまな方法が組み込まれており、回帰、分類、アソシエーションなど、複数の分析タスクをサポートしているハイブリッド アルゴリズムです。 Microsoft デシジョン ツリー アルゴリズムは、不連続属性と連続属性の両方のモデリングをサポートしています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、さまざまなツリー作成手法が組み込まれた複合アルゴリズムであり、回帰、分類、アソシエーションなど、複数の分析タスクをサポートしています。 Microsoft デシジョン ツリー アルゴリズムは、不連続属性と連続属性の両方のモデリングをサポートしています。  
   
  このトピックでは、アルゴリズムの実装について説明し、さまざまなタスクに合わせてアルゴリズムの動作をカスタマイズする方法を示します。また、デシジョン ツリー モデルに対するクエリに関する追加情報へのリンクも示します。  
   
@@ -155,9 +156,9 @@ ms.lasthandoff: 01/08/2018
  *SCORE_METHOD*  
  分割スコアを計算するために使用する方法を決定します。 使用できるオプションは以下のとおりです。  
   
-|ID|[オブジェクト名]|  
+|ID|名前|  
 |--------|----------|  
-|@shouldalert|エントロピー|  
+|1|エントロピー|  
 |3|K2 事前分布を指定したベイズ定理|  
 |4|均一な事前分布を指定したベイズ ディリクレ等式 (BDE)<br /><br /> (既定値)。|  
   
@@ -168,9 +169,9 @@ ms.lasthandoff: 01/08/2018
  *SPLIT_METHOD*  
  ノードを分割するために使用する方法を決定します。 使用できるオプションは以下のとおりです。  
   
-|ID|[オブジェクト名]|  
+|ID|名前|  
 |--------|----------|  
-|@shouldalert|**Binary:** 属性値の実際の数にかかわらず、ツリーが 2 つの分岐に分割されることを示します。|  
+|1|**Binary:** 属性値の実際の数にかかわらず、ツリーが 2 つの分岐に分割されることを示します。|  
 |2|**Complete:** 属性値と同じ数の分割をツリーに作成できることを示します。|  
 |3|**Both:** バイナリ分割と完全分割のどちらを使用すると最適な結果が生成されるのかが、Analysis Services によって判断されることを示します。|  
   
@@ -199,7 +200,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](../../analysis-services/data-mining/content-types-data-mining.md)」を参照してください。  
   
-|[列]|コンテンツの種類|  
+|列|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Continuous、Cyclical、Discrete、Discretized、Key、Ordered、Table|  
 |予測可能な属性|Continuous、Cyclical、Discrete、Discretized、Ordered、Table|  
@@ -210,6 +211,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>参照  
  [Microsoft デシジョン ツリー アルゴリズム](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [デシジョン ツリー モデルのクエリ例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [デシジョン ツリー モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [デシジョン ツリー モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

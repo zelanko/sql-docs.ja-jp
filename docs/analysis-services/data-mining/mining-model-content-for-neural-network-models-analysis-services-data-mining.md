@@ -22,19 +22,20 @@ helpviewer_keywords:
 - mining model content, neural network models
 - neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8368189052f70da2e93b7d87a13787bf1793b006
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このトピックでは、Microsoft ニューラル ネットワーク アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>ニューラル ネットワーク モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+このトピックでは、Microsoft ニューラル ネットワーク アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="understanding-the-structure-of-a-neural-network-model"></a>ニューラル ネットワーク モデルの構造について  
  各ニューラル ネットワーク モデルには、モデルとそのメタデータを表す 1 つの親ノードと、入力属性に関する説明的な統計情報を提供するマージナル統計ノード (NODE_TYPE = 24) があります。 マージナル統計ノードの便利な点は、入力値に関する情報が要約されるため、個々のノードのデータにクエリを実行する必要がないことです。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/08/2018
 |マージナル統計|空白|  
 |入力層|空白|  
 |入力ノード|入力属性名|  
-|非表示層|空白|  
+|hidden layer|空白|  
 |隠しノード|空白|  
 |出力層|空白|  
 |出力ノード|出力属性名|  
@@ -96,7 +97,7 @@ ms.lasthandoff: 01/08/2018
   
 |ノードの種類の ID|Description|  
 |------------------|-----------------|  
-|@shouldalert|モデル。|  
+|1|モデル。|  
 |17|サブネットワークのオーガナイザー ノード。|  
 |18|入力層のオーガナイザー ノード。|  
 |19|非表示層のオーガナイザー ノード。|  
@@ -137,7 +138,7 @@ ms.lasthandoff: 01/08/2018
 |マージナル統計|空白|  
 |入力層|空白|  
 |入力ノード|入力属性名|  
-|非表示層|空白|  
+|hidden layer|空白|  
 |隠しノード|隠しノードの一覧における隠しノードのシーケンスを示す整数。|  
 |出力層|空白|  
 |出力ノード|出力属性が連続属性の場合は、出力属性名が含まれます。<br /><br /> 出力属性が不連続属性または分離された属性の場合は、出力属性名と値が含まれます。|  
@@ -243,8 +244,8 @@ ms.lasthandoff: 01/08/2018
  **連続属性:** NODE_DISTRIBUTION テーブルの最後の 2 行には、属性の平均、ノード全体の係数、および係数の分散が含まれます。  
   
 ## <a name="see-also"></a>参照  
- [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Microsoft ニューラル ネットワーク アルゴリズム](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [ニューラル ネットワーク モデルのクエリ例](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "定義するオブジェクトと識別 (XMLA) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [XML for Analysis]
 - identifying objects [XML for Analysis]
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - object definitions [XML for Analysis]
 - XMLA, objects
 ms.assetid: 43b65f6d-0123-4556-81f0-c7a0b84361e5
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: eaea16c728177c1a2672bfd04075079598e920c9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d2d39b5057dd00d310c1d4f5581228ed6ae27ea0
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="defining-and-identifying-objects-xmla"></a>オブジェクトの定義と識別 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]オブジェクトは、オブジェクト識別子とオブジェクト参照を使用して xml for Analysis (XMLA) コマンド識別されますされ、Analysis Services スクリプト言語 (ASSL) 要素の XMLA コマンドを使用して定義されます。  
+  XML for Analysis (XMLA) コマンド内では、オブジェクト識別子とオブジェクト参照を使用してオブジェクトが識別されます。また、XMLA コマンド内では、Analysis Services Scripting Language (ASSL) 要素を使用してオブジェクトが定義されます。  
   
 ## <a name="object-identifiers"></a>オブジェクト識別子  
  インスタンスに定義されているオブジェクトの一意識別子を使用して、オブジェクトが識別される[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 オブジェクト識別子は明示的に指定されるか、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でオブジェクトが作成されるときに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスによって決定されます。 使用することができます、 [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md)のオブジェクト識別子を取得する方法を後続**Discover**または[Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドの呼び出しです。  
@@ -49,6 +50,6 @@ ms.lasthandoff: 01/08/2018
  [ParentObject 要素 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md)   
  [Source 要素 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)   
  [ターゲット要素 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)   
- [Analysis Services での XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Analysis Services の XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

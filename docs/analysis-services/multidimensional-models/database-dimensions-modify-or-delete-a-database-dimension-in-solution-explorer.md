@@ -18,19 +18,20 @@ helpviewer_keywords:
 - deleting dimensions
 - removing dimensions
 ms.assetid: be52b351-f376-42ee-adba-2dcaa0c0f69c
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 67fc72907e0d15cfbd5edf14733f1e9669c1e0fe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-dimensions---modify-or-delete-a-database-dimension-in-solution-explorer"></a>データベース ディメンションの変更またはソリューション エクスプ ローラーでデータベース ディメンションを削除します。
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]変更したり、ディメンション デザイナーを使用してディメンションを削除[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]です。 ディメンションを変更した場合、そのディメンションを処理するまでユーザーは変更内容を利用できません。 詳細については、「[多次元モデルの処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション デザイナーを使用して、ディメンションを変更または削除することができます。 ディメンションを変更した場合、そのディメンションを処理するまでユーザーは変更内容を利用できません。 詳細については、「[多次元モデルの処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)」を参照してください。  
   
 ### <a name="to-modify-a-dimension-in-sql-server-data-tools"></a>SQL Server データ ツールでディメンションを変更するには  
   

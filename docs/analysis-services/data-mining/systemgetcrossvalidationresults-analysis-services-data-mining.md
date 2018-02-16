@@ -16,19 +16,20 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
 ms.assetid: f70c3337-c930-434a-b278-caf1ef0c3b3b
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 499e62070cb0ec0fed8e814c926d915f7e69bbe3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services - データ マイニング)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]指定された数のセクションでは、マイニング構造のパーティションは、各パーティションに対してモデルをトレーニングし、各パーティションに対して精度の基準を返します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+指定した数の複数のセクションにマイニング構造をパーティション分割し、各パーティションに対してモデルをトレーニングして、各パーティションの精度の基準を返します。  
   
 > [!NOTE]  
 >  このストアド プロシージャを使用しても、クラスタリング モデルを相互検証したり、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムや [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムを使用して作成されたモデルを相互検証することはできません。 クラスタリング モデルを相互検証するには、 [SystemGetClusterCrossValidationResults &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)という別のストアド プロシージャを使用できます。  
@@ -118,7 +119,7 @@ SystemGetCrossValidationResults(
  既定値は **null**です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]設定した場合、エラーは発生しません*状態のしきい値*0.0 が、この値を使用することはありません。 実際、しきい値を 0.0 に設定すると、確率が 0% の予測が正しいと見なされます。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、 *state threshold* を 0.0 に設定するとエラーが発生しませんが、この値は使用しないでください。 実際、しきい値を 0.0 に設定すると、確率が 0% の予測が正しいと見なされます。  
   
  (省略可能)  
   
@@ -143,7 +144,7 @@ SystemGetCrossValidationResults(
 |PartitionSize|各パーティションに含まれていたケースの数を示す整数。|  
 |テスト|実行されたテストのカテゴリ。 カテゴリおよび各カテゴリに含まれるテストの説明については、「 [相互検証レポートのメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)」を参照してください。|  
 |[メジャー]|テストから返されたメジャーの名前。 各モデルのメジャーは、予測可能な値の型によって異なります。 各メジャーの定義については、「[相互検証 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)」を参照してください。<br /><br /> 予測可能な型ごとに返されるメジャーの一覧については、「[相互検証レポートのメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)」を参照してください。|  
-|値|指定したテスト メジャーの値。|  
+|[値]|指定したテスト メジャーの値。|  
   
 ## <a name="remarks"></a>解説  
  データ セット全体の精度の基準を返すには、 [SystemGetAccuracyResults &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)という別のストアド プロシージャを使用できます。  
@@ -172,22 +173,22 @@ NULL
   
  サンプルの結果 :  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|テスト|[メジャー]|値|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|テスト|[メジャー]|[値]|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|分類|True Positive|144|  
-|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|分類|False Positive|105|  
-|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|分類|True Negative|186|  
-|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|分類|False Negative|65|  
-|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|Likelihood|ログ スコア|-0.619042807138345|  
-|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|Likelihood|リフト|0.0740963734002671|  
-|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|Likelihood|2 乗平均平方根誤差|0.346946279977653|  
-|Target Mail DT|Bike Buyer|@shouldalert|2|500|分類|True Positive|162|  
-|Target Mail DT|Bike Buyer|@shouldalert|2|500|分類|False Positive|86|  
-|Target Mail DT|Bike Buyer|@shouldalert|2|500|分類|True Negative|165|  
-|Target Mail DT|Bike Buyer|@shouldalert|2|500|分類|False Negative|87|  
-|Target Mail DT|Bike Buyer|@shouldalert|2|500|Likelihood|ログ スコア|-0.654117781086519|  
-|Target Mail DT|Bike Buyer|@shouldalert|2|500|Likelihood|リフト|0.038997399132084|  
-|Target Mail DT|Bike Buyer|@shouldalert|2|500|Likelihood|2 乗平均平方根誤差|0.342721344892651|  
+|Target Mail DT|Bike Buyer|1|1|500|分類|True Positive|144|  
+|Target Mail DT|Bike Buyer|1|1|500|分類|False Positive|105|  
+|Target Mail DT|Bike Buyer|1|1|500|分類|True Negative|186|  
+|Target Mail DT|Bike Buyer|1|1|500|分類|False Negative|65|  
+|Target Mail DT|Bike Buyer|1|1|500|Likelihood|ログ スコア|-0.619042807138345|  
+|Target Mail DT|Bike Buyer|1|1|500|Likelihood|リフト|0.0740963734002671|  
+|Target Mail DT|Bike Buyer|1|1|500|Likelihood|2 乗平均平方根誤差|0.346946279977653|  
+|Target Mail DT|Bike Buyer|1|2|500|分類|True Positive|162|  
+|Target Mail DT|Bike Buyer|1|2|500|分類|False Positive|86|  
+|Target Mail DT|Bike Buyer|1|2|500|分類|True Negative|165|  
+|Target Mail DT|Bike Buyer|1|2|500|分類|False Negative|87|  
+|Target Mail DT|Bike Buyer|1|2|500|Likelihood|ログ スコア|-0.654117781086519|  
+|Target Mail DT|Bike Buyer|1|2|500|Likelihood|リフト|0.038997399132084|  
+|Target Mail DT|Bike Buyer|1|2|500|Likelihood|2 乗平均平方根誤差|0.342721344892651|  
   
 ## <a name="requirements"></a>必要条件  
  相互検証は、 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 以降の [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]でのみ使用できます。  
@@ -196,6 +197,6 @@ NULL
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

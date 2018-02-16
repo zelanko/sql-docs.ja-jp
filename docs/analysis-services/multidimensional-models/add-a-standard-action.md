@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 72a2181917ded838c8ab538fbd1c017147fc91d6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="add-a-standard-action"></a>標準アクションの追加
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]データベースに、アクションを追加するには、キューブ デザイナーでアクション ビューを使用します。 このビューには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスできます。 作成されたアクションは、関連キューブの再処理後、使用可能になります。 詳細については、「 [Analysis Services オブジェクトの処理](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+アクションをデータベースに追加するには、キューブ デザイナーの [アクション] ビューを使用します。 このビューには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスできます。 作成されたアクションは、関連キューブの再処理後、使用可能になります。 詳細については、「 [Analysis Services オブジェクトの処理](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)」を参照してください。  
   
 ### <a name="to-create-an-action"></a>アクションを作成するには  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 01/08/2018
         |ステートメントから削除してください。|OLE DB コマンドを実行します。|  
         |[URL]|インターネット ブラウザーで Web ページを表示します。|  
   
-    -   **[アクションの式]**で、アクションを定義する式を作成します。 式の評価結果は文字列になる必要があります。 式は手動で入力するか、 **[メタデータ]** タブおよび **[関数]** タブからアイテムをドラッグします。  
+    -   **[アクションの式]**で、アクションを定義する式を作成します。 式の評価結果は文字列になる必要があります。 式は手動で入力するか、**[メタデータ]** タブおよび **[関数]** タブからアイテムをドラッグします。  
   
 3.  オプションです。**[追加のプロパティ]** を展開して、次のいずれかの手順を実行します。  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 01/08/2018
         |オプション|Description|  
         |------------|-----------------|  
         |Interactive|アクションはユーザーによる対話型操作でトリガーされます。|  
-        |[バッチ]|アクションはバッチ操作で実行されます。|  
+        |Batch|アクションはバッチ操作で実行されます。|  
         |オープン時|アクションはユーザーがキューブを開いたときに実行されます。|  
   
     -   **[アプリケーション]**にアクションに関連付けられたアプリケーションの名前を入力します。 たとえば、ユーザーを特定の Web サイトに移動するアクションを作成する場合、アクションに関連付けられるアプリケーションは Microsoft Internet Explorer または他の Web ブラウザーになります。  

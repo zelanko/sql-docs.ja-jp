@@ -18,19 +18,20 @@ helpviewer_keywords:
 - cubes [Analysis Services], actions
 - OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bd000979f6a7db2ea3da1b449312193edaa2c6ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>アクション (Analysis Services - 多次元データ)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]アクションがさまざまな種類のありが適切に作成する必要があることができます。 アクションの種類は次のとおりです。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+アクションにはさまざまな種類があり、適切に作成する必要があります。 アクションの種類は次のとおりです。  
   
 -   ドリルスルー アクション。このアクションが発生したキューブで選択されているセル内のデータを表す行セットを返します。  
   
@@ -78,6 +79,6 @@ ms.lasthandoff: 01/08/2018
  コマンド オブジェクトが定義されているオブジェクトにビジネス ユーザーがアクセスすると、アクションに関連付けられているステートメントが自動的に解決されます。このため、クライアント アプリケーションでそのステートメントを利用できるようになりますが、アクションが自動的に実行されるわけではありません。 アクションは、ビジネス ユーザーがそのアクションを開始するクライアント固有の操作をしたときにのみ実行されます。 たとえば、クライアント アプリケーションでは、ビジネス ユーザーが特定のメンバーまたはセルを右クリックしたときに、ポップアップ メニューとしてアクションの一覧を表示できます。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデルのアクション](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
+ [多次元モデル内のアクション](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

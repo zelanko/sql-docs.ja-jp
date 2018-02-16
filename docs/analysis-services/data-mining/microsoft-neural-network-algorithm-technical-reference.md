@@ -30,19 +30,20 @@ helpviewer_keywords:
 - coding [Data Mining]
 - HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ceac69e8f44885b16983b1354acea23f43b5b594
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]ニューラル ネットワークを使用して、*多層パーセプトロン*とも呼ばれる、ネットワーク、*バックプロパゲーション デルタ ルール ネットワーク*を最大 3 つの層のニューロン、構成、または*パーセプトロン*です。 これらの層は、入力層、オプションの非表示層、および出力層です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワークでは、最大 3 層のニューロンまたは*パーセプトロン*で構成される*多層パーセプトロン* ネットワーク (*バックプロパゲーション デルタ ルール ネットワーク*とも呼ばれる) を使用します。 これらの層は、入力層、オプションの非表示層、および出力層です。  
   
  多層パーセプトロン ニューラル ネットワークの詳細については、このマニュアルでは扱いません。 このトピックでは、入力値および出力値を正規化するために使用する方法や属性の基数を減らすために使用する機能選択方法など、アルゴリズムの基本的な実装について説明します。 このトピックでは、アルゴリズムの動作をカスタマイズするために使用できるパラメーターおよびその他の設定について説明します。モデルのクエリに関する追加情報へのリンクも示します。  
   
@@ -198,7 +199,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。  
   
-|[列]|コンテンツの種類|  
+|列|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Continuous、Cyclical、Discrete、Discretized、Key、Table、Ordered|  
 |予測可能な属性|Continuous、Cyclical、Discrete、Discretized、Ordered|  

@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - hybrid OLAP
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - MOLAP
 - ROLAP
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 2d5eab13f606ada93eaf927e8c01ecb09644b7ac
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>パーティションのパーティションのストレージ モードと処理
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]パーティションのストレージ モードは、クエリと処理のパフォーマンス、記憶域の要件、およびパーティションとその親メジャー グループとキューブのストレージの場所に影響します。 また、ストレージ モードの選択内容は、処理の選択内容にも影響します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+パーティションのストレージ モードは、クエリと処理のパフォーマンス、ストレージの要件、パーティションおよびその親メジャー グループと親キューブのストレージ場所に影響します。 また、ストレージ モードの選択内容は、処理の選択内容にも影響します。  
   
  パーティションでは、次の 3 つの基本的なストレージ モードのうちいずれかを使用できます。  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
 -   ハイブリッド OLAP (HOLAP)  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 3 つすべての基本的なストレージ モードをサポートしています。 また、ROLAP ストレージと MOLAP ストレージの特性を組み合わせてデータの即時性とクエリのパフォーマンスを向上させることができるプロアクティブ キャッシュもサポートされています。 詳細については、「[プロアクティブ キャッシュ (パーティション)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)」をご覧ください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] すべての 3 つの基本的なストレージ モードをサポートしています。 また、ROLAP ストレージと MOLAP ストレージの特性を組み合わせてデータの即時性とクエリのパフォーマンスを向上させることができるプロアクティブ キャッシュもサポートされています。 詳細については、「[プロアクティブ キャッシュ &#40;パーティション&#41;)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)」をご覧ください。  
   
 ## <a name="molap"></a>[MOLAP]  
  MOLAP ストレージ モードを使用した場合は、パーティションの処理時、パーティションの集計とそのソース データのコピーが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の多次元構造に格納されます。 この MOLAP 構造は、クエリのパフォーマンスを最大限に高めるために高度に最適化されています。 ストレージの場所は、パーティションが定義されているコンピューター上、または [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を実行している別のコンピューター上に配置できます。 ソース データのコピーは多次元構造に存在するため、パーティションのソース データにアクセスしないでクエリを解決できます。 集計を使用すればクエリの応答時間を大幅に削減できます。 パーティションの MOLAP 構造の現在のデータは、最新のパーティションの処理によって決まります。  
@@ -79,7 +81,7 @@ ms.lasthandoff: 01/08/2018
   
     -   QUOTED_IDENTIFIER  
   
--   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] で使用できるインデックス キーの合計サイズは最大 900 バイトです [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]CREATE INDEX ステートメントが処理されるときに、固定長キー列に基づいてこの条件がアサートされます。 ただし、インデックス キーに可変長列がある場合は、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ベース テーブルへのすべての更新プログラムのこの条件がアサートされます。 ビュー定義は集計ごとに異なるため、インデックス付きビューを使用する ROLAP 処理の成否は、集計デザインによって決まります。  
+-   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] で使用できるインデックス キーの合計サイズは最大 900 バイトです [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] CREATE INDEX ステートメントが処理されるときに、固定長キー列に基づいてこの条件がアサートされます。 ただし、インデックス キーに可変長列がある場合は、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ベース テーブルへのすべての更新プログラムのこの条件がアサートされます。 ビュー定義は集計ごとに異なるため、インデックス付きビューを使用する ROLAP 処理の成否は、集計デザインによって決まります。  
   
 -   インデックス付きビューを作成するセッションでは、ARITHABORT、CONCAT_NULL_YEILDS_NULL、QUOTED_IDENTIFIER、ANSI_NULLS、ANSI_PADDING、および ANSI_WARNING オプションを ON に設定する必要があります。 これは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で設定できます。  
   
@@ -92,7 +94,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>参照  
  [プロアクティブ キャッシュ (&) #40 です。パーティション&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
- [Analysis Services データベースの同期](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [パーティション (Analysis Services - 多次元データ)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Analysis Services データベースを同期します。](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
+ [パーティションと &#40; です。Analysis Services - 多次元データと &#41; です。](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

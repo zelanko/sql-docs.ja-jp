@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Prediction Query Builder
 - mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-queries"></a>データ マイニング クエリ
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]データ マイニング クエリは、多くの目的で役立ちます。 可能な代替手段としては以下の方法があります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+データ マイニング クエリは多くの目的で役立ちます。 可能な代替手段としては以下の方法があります。  
   
 -   モデルを新しいデータに適用し、1 つまたは複数の予測を作成する。 入力値をパラメーターとして、またはバッチで提供する。  
   
@@ -158,22 +159,22 @@ ms.lasthandoff: 01/08/2018
   
  [データ マイニング クエリ ツール](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
  データ マイニング クエリを作成および操作する方法の詳細については、次のリンクを使用してください。  
   
 |処理手順|リンク|  
 |-----------|-----------|  
 |データ マイニング クエリのチュートリアルの表示|[レッスン 6: 予測の作成と操作 &#40;基本的なデータ マイニング チュートリアル&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)<br /><br /> [時系列予測の DMX のチュートリアル](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)|  
-|SQL Server Management studio と [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[SQL Server Management Studio で DMX クエリを作成する](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [予測クエリ ビルダーを使用した予測クエリの作成](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [モデルへの予測関数の適用](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [手動での予測クエリの編集](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
-|予測クエリで使用される外部データの操作|[予測クエリの入力データの選択およびマップ](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [予測クエリの入力データの選択およびマップ](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
+|SQL Server Management studio と [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[SQL Server Management Studio で、DMX クエリを作成します。](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [予測クエリ ビルダーを使用した予測クエリの作成](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [予測関数をモデルに適用します。](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [手動での予測クエリの編集](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
+|予測クエリで使用される外部データの操作|[選択し、予測クエリの入力データのマップ](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [選択し、予測クエリの入力データのマップ](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
 |クエリ結果の操作|[予測クエリの結果の表示および保存](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)|  
-|Management Studio の DMX クエリ テンプレートと XMLA クエリ テンプレートの使用|[テンプレートからの単一予測クエリの作成](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [XMLA を使用したデータ マイニング クエリの作成](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [SQL Server Management Studio での Analysis Services テンプレートの使用](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
-|コンテンツ クエリの詳細の説明と例の参照|[マイニング モデルのコンテンツ クエリの作成](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [マイニング モデルの作成に使用されたパラメーターのクエリ](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [コンテンツ クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)|  
-|クエリ オプションの設定およびクエリの権限と問題のトラブルシューティング|[データ マイニング クエリのタイムアウト値の変更](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
+|Management Studio の DMX クエリ テンプレートと XMLA クエリ テンプレートの使用|[テンプレートから単一予測クエリを作成します。](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [XMLA を使用したデータ マイニング クエリの作成](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [SQL Server Management Studio での Analysis Services テンプレートの使用](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|コンテンツ クエリの詳細の説明と例の参照|[マイニング モデルに対するコンテンツ クエリを作成します。](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [マイニング モデルの作成に使用されたパラメーターのクエリ](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [コンテンツ クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)|  
+|クエリ オプションの設定およびクエリの権限と問題のトラブルシューティング|[データ マイニング クエリのタイムアウト値を変更します。](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
 |Integration Services のデータ マイニング コンポーネントの使用|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   
   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 99e4faa1-2f87-43c6-b7ec-a97d4112c5ac
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 00ec7bd0c6ffe655e77cb8543216053697733fad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="get-powerpivotserviceapplication-cmdlet"></a>Get-PowerPivotServiceApplication コマンドレット
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]1 つまたは複数の返します[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]サービス アプリケーション。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+1 つまたは複数の返します [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション。  
 
 >[!NOTE] 
 >この記事には、古くなった情報と例があります。 最新バージョンには、Get-help コマンドレットを使用します。
@@ -42,7 +43,7 @@ Get-PowerPivotServiceApplication [[-Identity] <SPGeminiServiceApplicationPipeBin
   
 ## <a name="parameters"></a>パラメーター  
   
-### <a name="-identity-spgeminiserviceapplicationpipebind"></a>Id \<SPGeminiServiceApplicationPipeBind >  
+### <a name="-identity-spgeminiserviceapplicationpipebind"></a>-Identity \<SPGeminiServiceApplicationPipeBind>  
  取得するサービス アプリケーションを指定します。 値は、ファーム内のオブジェクトを一意に識別する有効な GUID である必要があります。  
   
 |||  
@@ -53,7 +54,7 @@ Get-PowerPivotServiceApplication [[-Identity] <SPGeminiServiceApplicationPipeBin
 |パイプライン入力の受け入れ|true|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  このコマンドレットは共通のパラメーターをサポートしています (Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer、および OutVariable)。 詳細については、「 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)」を参照してください。  
   
 ## <a name="inputs-and-outputs"></a>入力および出力  

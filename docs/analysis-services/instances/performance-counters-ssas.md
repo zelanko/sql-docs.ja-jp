@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: edaf6abe5becb215a58f8ae229562c774d1f0fd1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="performance-counters-ssas"></a>パフォーマンス カウンター (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]パフォーマンス モニターを使用して、パフォーマンス カウンターを使用して、Microsoft SQL Server Analysis Services (SSAS) インスタンスのパフォーマンスを監視できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+パフォーマンス モニターを使用すると、Microsoft SQL Server Analysis Services (SSAS) インスタンスのパフォーマンスをパフォーマンス カウンターで監視できます。  
   
  パフォーマンス モニターは、リソース使用量を追跡する [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール (MMC) スナップインです。 この MMC スナップインを起動するには、コマンド プロンプトで「 **PerfMon** 」と入力するか、コントロール パネルで **[管理ツール]**をクリックして、 **[パフォーマンス モニター]**をクリックします。 パフォーマンス モニターを使用すると、定義済みのオブジェクトやカウンターを使用してサーバーおよびプロセスのパフォーマンスと利用状況を追跡でき、ユーザー定義のカウンターを使用するとイベントを監視できます。 パフォーマンス モニターでは、イベントに関するデータではなく、メモリの使用量、アクティブなトランザクションの数、CPU の利用状況など、イベントに関する数が収集されます。 また、特定のカウンターにしきい値を設定して、オペレーターに通知する警告を生成できます。  
   

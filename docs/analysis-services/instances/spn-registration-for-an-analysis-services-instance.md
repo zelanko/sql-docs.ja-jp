@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Analysis Services インスタンスの SPN 登録
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]サービス プリンシパル名 (SPN) は、クライアントとサービス id の相互認証に Kerberos を使用すると、Active Directory ドメイン内のサービス インスタンスを一意に識別します。 SPN は、サービス インスタンスを実行するログオン アカウントに関連付けられます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+クライアントとサービス ID の相互認証に Kerberos が使用されている場合、サービス プリンシパル名 (SPN) は、Active Directory ドメイン内のサービス インスタンスを一意に識別します。 SPN は、サービス インスタンスを実行するログオン アカウントに関連付けられます。  
   
  Kerberos 認証を通じて Analysis Services に接続するクライアント アプリケーションの場合、Analysis Services クライアント ライブラリは、接続文字列のホスト名と、Analysis Services のどのリリースでも固定されているその他のよく知られている変数 (サービス クラスなど) を使用して、SPN を構築します。  
   
@@ -170,15 +171,15 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
   
 ## <a name="see-also"></a>参照  
  [Microsoft BI 認証と ID 委任](http://go.microsoft.com/fwlink/?LinkID=286576)   
- [相互認証を使用して Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
- [Kerberos 認証を使用するには、SQL Server 2008 Analysis Services と SQL Server 2005 Analysis Services を構成する方法](http://support.microsoft.com/kb/917409)   
- [サービス プリンシパル名 (Spn) SetSPN の構文 (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [どのような SPN が使用し、は、取得方法がありますか。](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Kerberos を使用した相互認証](http://go.microsoft.com/fwlink/?LinkId=299283)   
+ [Kerberos 認証を使用するように SQL Server 2008 Analysis Services および SQL Server 2005 Analysis Services を構成する方法](http://support.microsoft.com/kb/917409)   
+ [サービス プリンシパル名 (SPN) SetSPN の構文 (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [使用する SPN とその理由](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
  [サービス アカウントのステップ バイ ステップ ガイド](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
- [を含めて、すべての](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [インターネット インフォメーション サービスでホストされている Web アプリケーションを構成するときに Spn を使用する方法](http://support.microsoft.com/kb/929650)   
+ [Windows サービス アカウントと権限を構成します。](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
+ [インターネット インフォメーション サービスでホストされている Web アプリケーションを構成するときに SPN を使用する方法](http://support.microsoft.com/kb/929650)   
  [サービス アカウントの新機能](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
- [SharePoint 2010 製品 (ホワイト ペーパー) 用の Kerberos 認証を構成します。](http://technet.microsoft.com/library/ff829837.aspx)  
+ [SharePoint 2010 製品向けの Kerberos 認証の構成 (ホワイト ペーパー)](http://technet.microsoft.com/library/ff829837.aspx)  
   
   

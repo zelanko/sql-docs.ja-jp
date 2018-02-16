@@ -16,19 +16,20 @@ helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 3e09cceda5b62fe4112fe15a7a69b520134a733b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このトピックの説明を使用するモデルに固有のマイニング モデル コンテンツ、[!INCLUDE[msCoName](../../includes/msconame-md.md)]デシジョン ツリー アルゴリズムです。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」 (マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。 Microsoft デシジョン ツリー アルゴリズムは、まったく機能の異なる多様なモデルを作成できる複合アルゴリズムであることに注意してください。デシジョン ツリーでは、アソシエーションやルールのほか、線形回帰も表すことができます。 ツリーの構造は本質的には同じですが、モデルを作成した目的によって情報を解釈する方法が異なります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」 (マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。 Microsoft デシジョン ツリー アルゴリズムは、まったく機能の異なる多様なモデルを作成できる複合アルゴリズムであることに注意してください。デシジョン ツリーでは、アソシエーションやルールのほか、線形回帰も表すことができます。 ツリーの構造は本質的には同じですが、モデルを作成した目的によって情報を解釈する方法が異なります。  
   
 ##  <a name="bkmk_Top"></a> デシジョン ツリー モデルの構造について  
  デシジョン ツリー モデルには、モデルとそのメタデータを表す 1 つの親ノードがあります。 その親ノードの下には、選択した予測可能な属性を表す独立したツリーがあります。 たとえば、顧客が購入を行うかどうかを予測するためのデシジョン ツリー モデルを設定し、性別と収入の入力を指定した場合、モデルでは購入の属性に対して 1 つのツリーが作成され、その中に性別と収入に関連する条件で分割される多数の分岐が含まれます。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/08/2018
  Microsoft デシジョン ツリー アルゴリズムでは、連続するデータ型が入力として許可されないため、連続する数値データ型の列があると値が分離されます。 アルゴリズムによって、すべての連続属性の分割のポイントで独自の分離が実行されます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]連続属性のバケットのメソッドを自動的に選択します。ただし、入力でどのように連続する値を制御することができますが分離するマイニング構造の列のコンテンツの種類を設定して**Discretized**設定し、<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>または<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>プロパティです。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連続属性のバケットのメソッドを自動的に選択します。ただし、入力でどのように連続する値を制御することができますが分離するマイニング構造の列のコンテンツの種類を設定して**Discretized**設定し、<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>または<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>プロパティです。  
   
  [Top](#bkmk_Top)  
   
@@ -212,7 +213,7 @@ ms.lasthandoff: 01/08/2018
  XML フラグメントで表現される属性は、単純な属性または複雑な属性のいずれかになります。 単純な属性には、モデル列の名前、および属性の値が含まれます。 モデル列に入れ子になったテーブルが含まれる場合は、入れ子になったテーブルの属性は、テーブル名、キー値、および属性を連結して表現されます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]バージョン 2.0 の PMML 標準規格の入れ子になったテーブルの使用をサポートする拡張機能をサポートしています。 入れ子になったテーブルがデータに含まれている場合に PMML バージョンのモデルを生成すると、述語を含むモデル内のすべての要素に拡張機能であることを示すマークが付けられます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] バージョン 2.0 の PMML 標準規格と、入れ子になったテーブルの使用をサポートする拡張機能をサポートしています。 入れ子になったテーブルがデータに含まれている場合に PMML バージョンのモデルを生成すると、述語を含むモデル内のすべての要素に拡張機能であることを示すマークが付けられます。  
   
  [Top](#bkmk_Top)  
   
@@ -300,7 +301,7 @@ ms.lasthandoff: 01/08/2018
  回帰ノードの詳細については、「[線形回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [マイニング モデル コンテンツ &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft デシジョン ツリー アルゴリズム](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  

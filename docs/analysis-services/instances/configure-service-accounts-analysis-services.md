@@ -17,19 +17,20 @@ helpviewer_keywords:
 - accounts [Analysis Services]
 - logon accounts [Analysis Services], about logon accounts
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 090f81a3668e91ce8c18e10a1bb7ee5fccc52365
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-service-accounts-analysis-services"></a>サービス アカウントの構成 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]製品全体のアカウントの準備については[Windows サービス アカウントの構成とアクセス許可](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)、すべての包括的なサービス アカウント情報を提供するトピック[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を含むサービス[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 有効なアカウントの種類、セットアップで割り当てられた Windows 特権、ファイル システムの権限、レジストリの権限などについては、前のトピックをご覧ください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+製品全体のアカウントの準備については、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を含めて、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに関する包括的なサービス アカウントの情報を提供するトピック、「[Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。 有効なアカウントの種類、セットアップで割り当てられた Windows 特権、ファイル システムの権限、レジストリの権限などについては、前のトピックをご覧ください。  
   
  このトピックでは、テーブルおよびクラスター化インストールに必要な追加の権限など、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の補足情報を提供します。 また、サーバー操作をサポートするために必要な権限についても説明します。 たとえば、サービス アカウントの下で実行するように処理およびクエリ操作を構成できます。その場合、これを機能させるには追加の権限を付与する必要があります。  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="logon-account-recommendations"></a>ログオン アカウントに関する推奨事項  
  フェールオーバー クラスターでは、Analysis Services のすべてのインスタンスが Windows ドメイン ユーザー アカウントを使用するように構成する必要があります。 すべてのインスタンスに、同じアカウントを割り当てます。 詳細については、「 [Analysis Services をクラスター化する方法](http://msdn.microsoft.com/library/dn736073.aspx) 」を参照してください。  
   
- スタンドアロンのインスタンスは、既定のインスタンスの場合は既定の仮想アカウント **NT Service\MSSQLServerOLAPService** を使用しなければならず、名前付きインスタンスの場合は **NT Service\MSOLAP$***instance-name* を使用します。 この推奨事項は、すべてのサーバー モードの Analysis Services インスタンスに適用されます。オペレーティング システムには Windows Server 2008 R2 以降、Analysis Services には SQL Server 2012 を想定しています。  
+ スタンドアロンのインスタンスが既定の仮想アカウントを使用する必要があります**NT service \mssqlserverolapservice**既定のインスタンス、または **NT service \msolap$ * * * インスタンス名*名前付きインスタンス。 この推奨事項は、すべてのサーバー モードの Analysis Services インスタンスに適用されます。オペレーティング システムには Windows Server 2008 R2 以降、Analysis Services には SQL Server 2012 を想定しています。  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Analysis Services へのアクセス許可の付与  
  このセクションでは、Analysis Services がローカルの内部操作 (実行可能ファイルの開始、構成ファイルの読み取り、データ ディレクトリからのデータベースの読み込みなど) に必要とするアクセス許可を説明します。 必要としているのがその情報ではなく、外部データ アクセスやその他のサービスおよびアプリケーションとの相互運用性のためのアクセス許可の設定のガイダンスである場合は、このトピックで後述する「 [特定のサーバー操作に対する追加のアクセス許可の付与](#bkmk_tasks) 」を参照してください。  
@@ -102,7 +103,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_FilePermissions"></a> Analysis Services サービス アカウントに割り当てられたファイル システム権限  
   
 > [!NOTE]  
->  各プログラム フォルダーに関連付けられている権限の一覧については、「 [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 」を参照してください。  
+>  各プログラム フォルダーに関連付けられている権限の一覧については、「[Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
 >   
 >  IIS の構成と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に関連するファイル権限の詳細については、「[インターネット インフォメーション サービス &#40;IIS&#41; 8.0 上の Analysis Services への HTTP アクセスの構成](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)」を参照してください。  
   
@@ -155,11 +156,11 @@ ms.lasthandoff: 01/08/2018
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース内のクエリ ログ テーブルへの書き込み|サービス アカウントのデータベース ログインの作成、およびクエリ ログ テーブルに対する書き込み権限の割り当て|以降の分析用にデータベース テーブル内に使用状況データを収集するために、クエリ ログ記録を有効にできます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービス アカウントには、指定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのクエリ ログ テーブルに対する書き込み権限が必要です。 このテーブルがまだ存在しておらず、作成する必要がある場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ログオン アカウントに、指定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内でテーブルを作成するための権限も必要です。 詳細については、 [使用法に基づく最適化ウィザードによる SQL Server Analysis Services のパフォーマンスの向上 (ブログ)](http://www.mssqltips.com/sqlservertip/2876/improve-sql-server-analysis-services-performance-with-the-usage-based-optimization-wizard/) および [Analysis Services でのクエリのログ記録 (ブログ)](http://weblogs.asp.net/miked/archive/2013/07/31/query-logging-in-analysis-services.aspx)を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [を含めて、すべての](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
+ [Windows サービス アカウントと権限を構成します。](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [SQL Server サービス アカウントとサービスごとの SID (ブログ)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [SQL Server では、サービス SID を使用して、サービスを分離 (サポート技術情報の記事)](http://support.microsoft.com/kb/2620201)   
+ [サービス SID を使用してサービスを分離する SQL Server (サポート技術情報の記事)](http://support.microsoft.com/kb/2620201)   
  [アクセス トークン (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [セキュリティ識別子 (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [セキュリティ ID (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
  [アクセス トークン (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
  [アクセス制御リスト (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   

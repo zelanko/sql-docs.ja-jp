@@ -18,13 +18,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6d745e0de3f7d18571d904a31cf34a8e30217555
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Power Pivot for SharePoint インストールの確認
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint を SharePoint ファームにインストールするインスタンスは、SharePoint サーバーの全体管理によって管理されます。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のサーバー コンポーネントと機能が使用可能になっているかどうかは、少なくとも、サーバーの全体管理および SharePoint サイトのページを調べれば確認できます。 インストールを完全に確認するには、SharePoint にパブリッシュでき、ライブラリからアクセスできる [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックが必要になります。 テスト時には、既に [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] データが含まれているサンプル ブックをパブリッシュし、それを使用して SharePoint 統合が正しく構成されているかどうかを確認できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+SharePoint ファームにインストールした [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint インスタンスは、SharePoint サーバーの全体管理から管理されます。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のサーバー コンポーネントと機能が使用可能になっているかどうかは、少なくとも、サーバーの全体管理および SharePoint サイトのページを調べれば確認できます。 インストールを完全に確認するには、SharePoint にパブリッシュでき、ライブラリからアクセスできる [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックが必要になります。 テスト時には、既に [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] データが含まれているサンプル ブックをパブリッシュし、それを使用して SharePoint 統合が正しく構成されているかどうかを確認できます。  
 
   
 ##  <a name="verifyinstall"></a> 全体管理統合の確認  
