@@ -27,24 +27,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9652e093a6b358a209bb7b84f1c4aa4c6854c328
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: fef54757181e9a4fc39a8eabf6399041ac0d6879
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sysdmdbindexusagestats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  さまざまな種類のインデックス操作の数と、各種の操作が前回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行された時刻を返します。  
+  さまざまな種類のインデックス操作の数と、各種の操作が前回実行された時刻を返します。  
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、動的管理ビューは、データベースの包含に影響を与えるまたはユーザーがアクセスを他のデータベースに関する情報が公開される情報を公開できません。 この情報が公開されないように、接続されたテナントに属していないデータを含む行はすべてフィルターで除外されます。  
   
 > [!NOTE]  
->  **sys.dm_db_index_usage_stats**メモリ最適化インデックスに関する情報は返されません。 メモリ最適化インデックスの使用方法については、次を参照してください。 [sys.dm_db_xtp_index_stats &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)。  
+>  **sys.dm_db_index_usage_stats**メモリ最適化インデックスに関する情報は返されません。 メモリ最適化インデックスの使用方法については、次を参照してください。 [sys.dm_db_xtp_index_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)  
   
 > [!NOTE]  
->  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_db_index_usage_stats**です。  
+>  このビューからの呼び出しに[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]を使用して**sys.dm_pdw_nodes_db_index_usage_stats**です。  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
@@ -52,9 +52,9 @@ ms.lasthandoff: 02/03/2018
 |**object_id**|**int**|インデックスが定義されているテーブルまたはビューの ID。|  
 |**index_id**|**int**|インデックスの ID。|  
 |**user_seeks**|**bigint**|ユーザー クエリによるシーク数。|  
-|**user_scans**|**bigint**|ユーザー クエリによるスキャン数。 これには、'シーク' 述語を使用していないスキャンを表します。|  
+|**user_scans**|**bigint**|使用していないユーザー クエリによるスキャンの数は、述語を ' シーク '。|  
 |**user_lookups**|**bigint**|ユーザー クエリによるブックマーク参照数。|  
-|**user_updates**|**bigint**|ユーザー クエリによる更新数。 これは、Insert、Delete が含まれていて、実際に影響を受ける行にないを実行する操作の数を表すを更新します。 たとえば場合は、1 つのステートメントで 1000 行を削除すると、この数が 1 ずつ増加は|  
+|**user_updates**|**bigint**|ユーザー クエリによる更新数。 これは、Insert、Delete が含まれていて、実際に影響を受ける行にないを実行する操作の数を表すを更新します。 たとえば、1 つのステートメントで 1000 行を削除すると場合、このカウントを 1 ずつインクリメントします。|  
 |**last_user_seek**|**datetime**|前回のユーザー シークの時刻。|  
 |**last_user_scan**|**datetime**|前回のユーザー スキャンの時刻。|  
 |**last_user_lookup**|**datetime**|前回のユーザー参照の時刻。|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="permissions"></a>権限  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 階層が必要です、`VIEW DATABASE STATE`データベースの権限です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。  
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。  
   
 ## <a name="see-also"></a>参照  
 

@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: d3abecd450bbb734304c8c04909c38ae216595ad
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 36834e634f26e7918b6577379c24b9914d41f308
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを運用します。
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/01/2018
 - フェールオーバー クラスターの SQL Server サービスを監視します。
 - クラスター ノードを追加します。
 - クラスター ノードを削除します。
-- 頻度を監視する SQL Server リソースを変更します。
+- SQL Server リソースを監視する頻度を変更します。
 
 ## <a name="architecture-description"></a>アーキテクチャの説明
 
@@ -73,7 +73,7 @@ sudo pcs status
 sudo crm_mon 
 ```
 
-リソースのエージェント ログを表示します。`/var/log/cluster/corosync.log`
+リソースのエージェント ログを表示します。 `/var/log/cluster/corosync.log`
 
 ## <a name="add-a-node-to-a-cluster"></a>クラスターにノードを追加します。
 
@@ -105,7 +105,7 @@ sudo crm_mon
 
 1. 共有の場所にデータベース ファイル ディレクトリをマウントする手順に従います。
 
-   NFS サーバーから次のようにインストールします。`nfs-utils`
+   NFS サーバーから次のようにインストールします。 `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils 
@@ -193,38 +193,38 @@ sudo crm_mon
 
 ## <a name="remove-nodes-from-a-cluster"></a>クラスターからノードを削除します。
 
-次のコマンドを実行するクラスターからノードを削除します。
+次のコマンドを実行し、クラスターからノードを削除します。
 
 ```bash
 sudo pcs    cluster node remove <nodeName>  
 ```
 
-## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>Sqlservr リソース監視の間隔の頻度を変更します。
+## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>sqlservr リソース監視の間隔の頻度を変更する
 
 ```bash
 sudo pcs    resource op monitor interval=<interval>s <sqlResourceName> 
 ```
 
-次の例では、監視間隔を mssql リソースが 2 秒に設定します。
+次の例では、mssql リソースの監視間隔を2 秒に設定します。
 
 ```bash
 sudo pcs    resource op monitor interval=2s mssqlha 
 ```
-## <a name="troubleshoot-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターをトラブルシューティングします。
+## <a name="troubleshoot-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server 向けの Red Hat Enterprise Linux 共有ディスク クラスターをトラブルシューティングする
 
-クラスターのトラブルシューティングに動作を理解する 3 つのデーモン一緒にクラスター リソースの管理に役立ちます。 
+クラスターをトラブルシューティングするには、3 つのデーモンがどのように連携してクラスター リソースを管理するかを理解することが役立ちます。 
 
 | デーモン | Description 
 | ----- | -----
 | Corosync | クォーラムのメンバーシップとクラスター ノード間のメッセージングを提供します。
-| ペース | Corosync 上に存在し、ステート マシンのリソースを提供します。 
-| PCSD | ペースとを通じて Corosync の両方を管理、`pcs`ツール
+| Pacemaker | Corosync 上に存在し、リソースのステート マシンを提供します。 
+| PCSD | `pcs` ツールを通し、Pacemaker と Corosync の両方を管理します。
 
-使用するために実行する必要あります PCSD`pcs`ツールです。 
+`pcs` ツールを使用するためには、PCSDを実行している必要あります。 
 
 ### <a name="current-cluster-status"></a>クラスターの現在の状態 
 
-`sudo pcs status`各ノードのクラスター、クォーラム、ノード、リソース、およびデーモンの状態に関する基本的な情報を返します。 
+`sudo pcs status` は、各ノードのクラスター、クォーラム、ノード、リソース、およびデーモンの状態に関する基本的な情報を返します。 
 
 正常なペース クォーラム出力の例は次のようになります。
 
@@ -251,23 +251,23 @@ corosync: active/disabled
 pacemaker: active/enabled 
 ```
 
-例では、`partition with quorum`ノード マジョリティ クォーラムがオンラインであることを意味します。 クラスターはノード マジョリティ クォーラムを失った場合`pcs status`戻ります`partition WITHOUT quorum`され、すべてのリソースが中止されます。 
+例では、`partition with quorum` はノードのマジョリティ クォーラムがオンラインであることを意味します。 クラスターがノード マジョリティ クォーラムを失った場合、`pcs status` は `partition WITHOUT quorum` を返し、すべてのリソースが停止されます。 
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]`クラスターに現在参加しているすべてのノードの名前を返します。 すべてのノードが参加していない場合`pcs status`返します`OFFLINE: [<nodename>]`です。
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` はクラスターに現在参加しているすべてのノードの名前を返します。 参加しているノードが一つもない場合、`pcs status` は `OFFLINE: [<nodename>]` 返します。
 
-`PCSD Status`各ノードのクラスターの状態を示しています。
+`PCSD Status` はクラスターの各ノードの状態を示しています。
 
-### <a name="reasons-why-a-node-may-be-offline"></a>上の理由から、ノードをオフラインになる理由
+### <a name="reasons-why-a-node-may-be-offline"></a>ノードがオフラインである理由
 
 ノードがオフラインのときは、次の項目を確認します。
 
 - **ファイアウォール**
 
-    次のポートは、通信できるようにするペースのすべてのノードで開かれている必要があります。
+    Pacemaker ですべてのノードが通信できるように、で次のポートが開かれている必要があります。
     
     - **TCP: 2224, 3121, 21064
 
-- **ペースまたはを実行している Corosync services**
+- **Pacemaker および Corosync サービスが実行されているか**
 
 - **ノードの通信**
 
@@ -275,7 +275,7 @@ pacemaker: active/enabled
 
 ## <a name="additional-resources"></a>その他のリソース
 
-* [クラスターの最初から](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf)ペースからガイド
+* Pacemaker の [クラスター入門](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf)
 
 ## <a name="next-steps"></a>次の手順
 

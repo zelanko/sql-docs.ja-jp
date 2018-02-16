@@ -18,10 +18,10 @@ ms.author: maggies
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 604952211abf63d6dacb111c8170d678acd2d80a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 表示拡張機能では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートが [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 形式 (.xlsx) で表示されます。 Excel 表示拡張機能を使用すると、レポートの列の幅は、より正確に Excel の列の幅に反映されます。  
@@ -250,7 +250,7 @@ ms.lasthandoff: 02/13/2018
 -   Excel の制限により、アウトラインの入れ子レベルは最大 7 です。  
   
 ### <a name="document-map"></a>ドキュメント マップ  
- レポートにドキュメント マップ ラベルが存在する場合、そのドキュメント マップがレンダリングされます。 ドキュメント マップは、表紙の Excel ワークシートとして、ブックの最初のタブ位置に挿入され、レンダリングされます。 ワークシートには、**"Document map"**という名前が付けられます。  
+ レポートにドキュメント マップ ラベルが存在する場合、そのドキュメント マップがレンダリングされます。 ドキュメント マップは、表紙の Excel ワークシートとして、ブックの最初のタブ位置に挿入され、レンダリングされます。 ワークシートには、 **"Document map"** という名前が付けられます。  
   
  ドキュメント マップに表示されるテキストは、レポート アイテムまたはレポート グループの DocumentMapLabel プロパティによって決まります。 ドキュメント マップ ラベルは、先頭列の先頭行を起点とし、レポートにおける出現順に一覧表示されます。 各ドキュメント マップ ラベルのセルは、レポートでの見出しの階層に合わせてインデントされます。 それぞれのインデント レベルは、ラベルを後続の列に配置することによって表現されます。 Excel でサポートされるアウトラインの入れ子レベルは、最大 256 です。  
   

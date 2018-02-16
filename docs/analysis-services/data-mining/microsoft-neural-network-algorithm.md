@@ -25,19 +25,20 @@ helpviewer_keywords:
 - input neurons [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 8af39f31c569beb4df25d8da1dd933c902d3b4f6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]ニューラル ネットワーク アルゴリズムは、機械学習の人気があり、適応性のニューラル ネットワーク アーキテクチャの実装です。  このアルゴリズムでは、入力属性の考えられる各状態が、予測可能属性の考えられる各状態に対してテストし、トレーニング データに基づいて各組み合わせの確率を計算することによって動作します。 これらの確率は、分類や回帰のタスクで使用することも、入力属性に基づいて結果を予測するために使用することもできます。 ニューラル ネットワークは、アソシエーション分析にも使用できます。  
+# <a name="microsoft-neural-network-algorithm"></a>Microsoft ニューラル ネットワーク アルゴリズム
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムは、Machine Learning の一般的で適応性のあるニューラル ネットワーク アーキテクチャの実装です。  このアルゴリズムでは、入力属性の考えられる各状態が、予測可能属性の考えられる各状態に対してテストし、トレーニング データに基づいて各組み合わせの確率を計算することによって動作します。 これらの確率は、分類や回帰のタスクで使用することも、入力属性に基づいて結果を予測するために使用することもできます。 ニューラル ネットワークは、アソシエーション分析にも使用できます。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムを使用してマイニング モデルを作成する場合、複数の出力を含めることができ、アルゴリズムによって複数のネットワークが作成されます。 1 つのマイニング モデルに含まれるネットワークの数は、入力列の状態 (または属性値) の数、およびマイニング モデルが使用する予測可能列の数とそれらの列の状態の数によって異なります。  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/08/2018
 -   多数の入力と比較的少数の出力間の複雑なリレーションシップを分析する予測モデル  
   
 ## <a name="how-the-algorithm-works"></a>アルゴリズムの動作  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムは、最大 3 層のノード (”ニューロン” と呼ばれることもあります) で構成されるネットワークを作成します **。 これらの層は、 *入力層*、 *非表示層*、および *出力層*です。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムは、最大 3 層のノード (*ニューロン* と呼ばれることもあります) で構成されるネットワークを作成します。 これらの層は、 *入力層*、 *非表示層*、および *出力層*です。  
   
  **入力層:** 入力ノードは、データ マイニング モデルのすべての入力属性値、およびそれらの確率を定義します。  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 01/08/2018
 -   データ マイニング ディメンションの作成はサポートされていません。  
   
 ## <a name="see-also"></a>参照  
- [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [ニューラル ネットワーク モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [ニューラル ネットワーク モデルのクエリ例](../../analysis-services/data-mining/neural-network-model-query-examples.md)   
  [Microsoft ロジスティック回帰アルゴリズム](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)  
