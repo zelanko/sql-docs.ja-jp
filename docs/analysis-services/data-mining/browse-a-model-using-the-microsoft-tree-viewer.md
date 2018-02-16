@@ -25,19 +25,20 @@ helpviewer_keywords:
 - dependencies [Analysis Services]
 - continuous attributes
 ms.assetid: 0c96d518-ed20-40b7-8d62-b26ad6244287
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 61e3be434f2029216742813178b041b083174362
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Microsoft ツリー ビューアーを使用したモデルの参照
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]ツリー ビューアーに[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に組み込まれているデシジョン ツリーが表示されます、[!INCLUDE[msCoName](../../includes/msconame-md.md)]デシジョン ツリー アルゴリズムです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、分類と回帰の両方をサポートする複合的なデシジョン ツリー アルゴリズムです。 したがって、このビューアーには [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムに基づくモデルを表示できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、不連続属性と連続属性の両方の予測モデリングに使用します。 このアルゴリズムの詳細については、「 [Microsoft デシジョン ツリー アルゴリズム](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の [!INCLUDE[msCoName](../../includes/msconame-md.md)] ツリー ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムを使用して作成されたデシジョン ツリーが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、分類と回帰の両方をサポートする複合的なデシジョン ツリー アルゴリズムです。 したがって、このビューアーには [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムに基づくモデルを表示できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、不連続属性と連続属性の両方の予測モデリングに使用します。 このアルゴリズムの詳細については、「 [Microsoft デシジョン ツリー アルゴリズム](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)」を参照してください。  
   
 > [!NOTE]  
 >  モデルで使用された式と、検出されたパターンの詳細情報を表示するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 汎用コンテンツ ツリー ビューアーを使用します。 詳細については、「[Microsoft 汎用コンテンツ ツリー ビューアーを使用したモデルの参照](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)」または「[Microsoft 汎用コンテンツ ツリー ビューアー (データ マイニング)](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)」を参照してください。  
@@ -111,7 +112,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>参照  
  [Microsoft デシジョン ツリー アルゴリズム](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
- [マイニング モデル ビューアー &#40;データ マイニング モデル デザイナー&#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)   
+ [マイニング モデル ビューアーと &#40; データ マイニング モデル デザイナー、&#41; です。](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)   
  [マイニング モデル ビューアーのタスクと操作方法](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [データ マイニング ツール](../../analysis-services/data-mining/data-mining-tools.md)   
  [データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)  

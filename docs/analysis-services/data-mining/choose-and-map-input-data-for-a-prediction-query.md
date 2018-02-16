@@ -15,19 +15,20 @@ helpviewer_keywords:
 - tables [Analysis Services], prediction queries
 - Mining Model Prediction [Analysis Services], input tables
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6694a4e59637f96240afd1f2b04575ede20c2dfe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>予測クエリの入力データの選択およびマップ
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]マイニング モデルから予測を作成するときに一般的にこれを行う新しいデータをモデルに供給することで。 (例外はタイム シリーズ モデルで、履歴データのみに基づいて予測を行うことができます)。モデルに新しいデータを提供するには、データがデータ ソース ビューの一部として使用可能であることを確認する必要があります。 予測に使用するデータがあらかじめわかっている場合は、モデルの作成に使用するデータ ソース ビューにそのデータを含めることができます。 それ以外の場合は、新しいデータ ソース ビューを作成する必要があります。 詳細については、「 [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+マイニング モデルから予測を作成する場合は、一般に新しいデータをモデルに供給することでこの操作を行います  (例外はタイム シリーズ モデルで、履歴データのみに基づいて予測を行うことができます)。モデルに新しいデータを提供するには、データがデータ ソース ビューの一部として使用可能であることを確認する必要があります。 予測に使用するデータがあらかじめわかっている場合は、モデルの作成に使用するデータ ソース ビューにそのデータを含めることができます。 それ以外の場合は、新しいデータ ソース ビューを作成する必要があります。 詳細については、「 [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)」を参照してください。  
   
  必要なデータが一対多の結合で複数の表に含まれている場合があります。 これはデータがアソシエーション モデルまたはシーケンス クラスター モデルに使用されるケースであり、製品またはトランザクションの詳細を含む入れ子になったテーブルにリンクしているケース テーブルを使用します。 モデルでケースが入れ子になったテーブル構造を使用する場合は、予測に使用するデータにもケースが入れ子になったテーブル構造が必要です。  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  **[テーブル名またはビュー名]**で、モデルのテストに使用するデータが含まれているテーブルを選択します。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
      マイニング構造の列が、入力テーブル内の同じ名前を持つ列に自動的にマップされます。  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  外部データ ソースで使用可能な列の一覧から新しい列を選択します。 列マッピングを削除するには、一覧内の空白の項目を選択します。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
      新しい列マッピングがデザイナーに表示されます。  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  **[リレーションシップの削除]**をクリックします。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
      ケース テーブルと入れ子になったテーブルの間のリレーションシップが削除されます。  
   
@@ -124,6 +125,6 @@ ms.lasthandoff: 01/08/2018
      リレーションシップが既に存在する場合は、マイニング モデルの列が、入力テーブル内の同じ名前の列に自動的にマップされます。 入れ子になったテーブルとケース テーブル間のリレーションシップは、 **[結合の変更]**をクリックし、 **[リレーションシップの作成]** ダイアログ ボックスを開いて変更できます。  
   
 ## <a name="see-also"></a>参照  
- [予測クエリ (データ マイニング)](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [予測クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

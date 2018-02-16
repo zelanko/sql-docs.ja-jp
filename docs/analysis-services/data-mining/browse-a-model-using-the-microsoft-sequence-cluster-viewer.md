@@ -22,25 +22,26 @@ helpviewer_keywords:
 - sequence [Analysis Services]
 - transitions [Analysis Services]
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6553c3d5077b485d0736f2ffd8589d17a81edc33
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Microsoft シーケンス クラスター ビューアーを使用したモデルの参照
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]シーケンス クラスター ビューアーに[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に組み込まれているマイニング モデルを表示、[!INCLUDE[msCoName](../../includes/msconame-md.md)]シーケンス クラスター アルゴリズムです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムは、パス ( *シーケンス*) をたどることによってリンクできるイベントが含まれているデータを探索するためのシーケンス分析アルゴリズムです。 このアルゴリズムの詳細については、 [「Microsoft シーケンス クラスター アルゴリズム」](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] シーケンス クラスター ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムは、パス ( *シーケンス*) をたどることによってリンクできるイベントが含まれているデータを探索するためのシーケンス分析アルゴリズムです。 このアルゴリズムの詳細については、 [「Microsoft シーケンス クラスター アルゴリズム」](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)を参照してください。  
   
 > [!NOTE]  
 >  モデルで使用された式と、検出されたパターンの詳細情報を表示するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 汎用コンテンツ ツリー ビューアーを使用します。 詳細については、「[Microsoft 汎用コンテンツ ツリー ビューアーを使用したモデルの参照](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)」または「[Microsoft 汎用コンテンツ ツリー ビューアー (データ マイニング)](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスター ビューアーに似た機能とオプションが用意されています。 詳細については、 [「Microsoft クラスター ビューアーを使用したモデルの参照」](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)を参照してください。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスター ビューアーに似た機能とオプションが用意されています。 詳細については、「 [Microsoft クラスター ビューアーを使用したモデルの参照](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)」を参照してください。  
   
 ##  <a name="BKMK_ViewerTabs"></a> ビューアーのタブ  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でマイニング モデルを参照すると、そのモデルに適したビューアーを使用してデータ マイニング デザイナーの **[マイニング モデル ビューアー]** タブにモデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター ビューアーには、シーケンス クラスター マイニング モデルを調べるための次のタブがあります。  
@@ -99,9 +100,9 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>参照  
  [マイニング モデル ビューアーのタスクと操作方法](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [マイニング モデル ビューアーのタスクと操作方法](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft シーケンス クラスタ リング アルゴリズム](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [データ マイニング ツール](../../analysis-services/data-mining/data-mining-tools.md)   
  [データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)   
- [Microsoft クラスター ビューアーを使用したモデルの参照](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ [Microsoft クラスター ビューアーを使用してモデルを参照します。](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
   

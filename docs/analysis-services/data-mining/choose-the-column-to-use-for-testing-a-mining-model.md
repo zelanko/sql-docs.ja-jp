@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services], columns
 - predictable mining columns [Analysis Services]
 ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ea1fbd3d7522c08b025d6c8fb6c4595e6fe4e63e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>マイニング モデルのテストに使用する列の選択
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]マイニング モデルの精度を測定することができます、前に、評価することがどの結果を決定する必要があります。 多くのデータ マイニング モデルでは、モデルの作成時に、予測可能な属性として使用する少なくとも 1 つの列を選択する必要があります。 そのため、モデルの精度をテストするときに、通常はその属性をテスト対象として選択する必要があります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+マイニング モデルの精度を測定する前に、評価するのがどの結果なのかを決定する必要があります。 多くのデータ マイニング モデルでは、モデルの作成時に、予測可能な属性として使用する少なくとも 1 つの列を選択する必要があります。 そのため、モデルの精度をテストするときに、通常はその属性をテスト対象として選択する必要があります。  
   
  次の一覧では、テストに使用する予測可能な属性を選択する際のいくつかの追加の考慮事項について説明します。  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 01/08/2018
 5.  モデルのリフト値を指定する場合は、 **[予測値]** の一覧から、測定する特定の結果値を選択する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [モデルのテスト データの選択およびマップ](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [精度チャートの種類の選択とグラフのオプションの設定](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [選択し、モデルのテスト データのマップ](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
+ [精度チャートの種類と設定を選択してグラフのオプション](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

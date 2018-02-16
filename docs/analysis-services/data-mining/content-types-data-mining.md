@@ -28,19 +28,20 @@ helpviewer_keywords:
 - continuous columns
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="content-types-data-mining"></a>コンテンツの種類 (データ マイニング)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、両方の物理データ型の列を定義するには、マイニング構造およびモデルでは、使用されている列の論理コンテンツの種類  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、マイニング構造の列に対して物理データ型を定義することも、モデルに使用されている列に対して論理的なコンテンツの種類を定義することもできます。  
   
  *データ型* により、マイニング モデルを作成するときにその列に含まれるデータをアルゴリズムでどのように処理するかが決定されます。 列のデータ型を定義することで、列に含まれるデータの型に関する情報と、データの処理方法がアルゴリズムに通知されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の各データ型では、データ マイニング向けに 1 つまたは複数のコンテンツの種類がサポートされます。  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/08/2018
   
  コンテンツの種類 **Discretized** は、 **Date**、 **Double**、 **Long**、および **Text**の各データ型によってサポートされています。  
   
-## <a name="key"></a>Key  
+## <a name="key"></a>[キー]  
  コンテンツの種類 *key* は、この列が行を一意に識別することを表します。 ケース テーブルの場合、通常、キー列は数値またはテキストの識別子です。 コンテンツの種類を **key** に設定すると、分析には使用しない、レコードの追跡専用の列であることが示されます。  
   
  入れ子になったテーブルにもキーはありますが、入れ子になったテーブルのキーは使い方が多少異なります。 入れ子になったテーブルでコンテンツの種類を **key** に設定するのは、その列が分析する属性である場合です。 入れ子になったテーブルのキーの値は各ケースで一意である必要がありますが、ケースのセット全体では重複していてもかまいません。  
@@ -118,7 +119,7 @@ ms.lasthandoff: 01/08/2018
  すべてのモデルで共通して使用される上記のコンテンツの種類の他にも、分類済みの列を使用して、一部のデータ型に対してコンテンツの種類を定義できます。 分類済みの列の詳細については、「[分類済みの列 (データ マイニング)](../../analysis-services/data-mining/classified-columns-data-mining.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [コンテンツの種類 (DMX)](../../dmx/content-types-dmx.md)   
+ [コンテンツの種類 &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
  [データ型 &#40;データ マイニング&#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
  [データ型 &#40;DMX&#41;](../../dmx/data-types-dmx.md)   
  [マイニング構造のプロパティの変更](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   

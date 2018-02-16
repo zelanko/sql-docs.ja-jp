@@ -17,19 +17,20 @@ helpviewer_keywords:
 - cross-validation [data mining]
 - statistical standard deviation
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6b8b5dad234adf73717b5785fc0f3b06becaebce
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cross-validation-report"></a>クロス検証レポートの作成
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このトピックでは、データ マイニング デザイナーで、精度チャート タブを使用してクロス検証レポートの作成について説明します。 クロス検証レポートの外観およびレポートに含まれる統計メジャーに関する一般的な情報については、「[相互検証 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+このトピックでは、データ マイニング デザイナーの [精度チャート] タブを使用してクロス検証レポートを作成する方法を順を追って説明します。 クロス検証レポートの外観およびレポートに含まれる統計メジャーに関する一般的な情報については、「[相互検証 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)」を参照してください。  
   
  クロス検証レポートは、リフト チャートや分類マトリックスなどの精度チャートとは基本的に異なります。  
   
@@ -97,6 +98,6 @@ ms.lasthandoff: 01/08/2018
 4.  選択した内容を、開いている Excel ブックに貼り付けます。 **[貼り付け]** オプションを使用すると、レポートが HTML として Excel に貼り付けられ、行と列の形式が維持されます。 **[形式を選択して貼り付け]** オプションを使用して、テキストまたは Unicode テキストとしてレポートを貼り付けると、行で区切られた形式でレポートが貼り付けられます。  
   
 ## <a name="see-also"></a>参照  
- [相互検証レポートのメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
+ [クロス検証レポート内のメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
   

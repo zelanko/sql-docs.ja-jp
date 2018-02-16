@@ -24,19 +24,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], predictive modeling
 - dependencies [Analysis Services]
 ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 77b9857488d3574338f7eaee0815082ea3ac690c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Microsoft Naive Bayes ビューアーを使用したモデルの参照
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes ビューアーに[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に組み込まれているマイニング モデルを表示、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムは、予測モデリング タスクに非常に適した分類アルゴリズムです。 このアルゴリズムの詳細については、「 [Microsoft Naive Bayes アルゴリズム](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムは、予測モデリング タスクに非常に適した分類アルゴリズムです。 このアルゴリズムの詳細については、「 [Microsoft Naive Bayes アルゴリズム](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)」を参照してください。  
   
  Naive Bayes モデルの主な目的の 1 つはデータセット内のデータを短時間で調査できるようにすることなので、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes ビューアーには、予測可能属性および入力属性の相互関係を表示するための手段がいくつか用意されています。  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 01/08/2018
  **[値 1]**の予測可能な属性値が優先される度合いを示す、色分けされたバーが表示されます。  
   
  **[優先]\<数値 2 >**  
- **[値 2]** の予測可能な属性値が優先される度合いを示す、色分けされたバーが表示されます。  
+ **[値 2]**の予測可能な属性値が優先される度合いを示す、色分けされたバーが表示されます。  
   
  [トップに戻る](#BKMK_ViewerTabs)  
   

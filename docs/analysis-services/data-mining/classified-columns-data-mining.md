@@ -22,19 +22,20 @@ helpviewer_keywords:
 - PROBABILITY_VARIANCE column
 - SUPPORT column
 ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 02792608fce3f2cca0c1bf78e5215b1a0b607a1e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="classified-columns-data-mining"></a>分類済みの列 (データ マイニング)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]分類済みの列を定義する場合は、マイニング構造の現在の列と別の列間のリレーションシップを作成します。 マイニング構造内で分類済みの列として指定した列のデータには、その構造内の別の列の値について説明した分類情報が含まれています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+分類済みの列を定義する場合は、マイニング構造内の現在の列と別の列の間でリレーションシップを作成します。 マイニング構造内で分類済みの列として指定した列のデータには、その構造内の別の列の値について説明した分類情報が含まれています。  
   
  たとえば、数値データを含んだ 2 つの列があるとします。一方の列 [Yearly Purchases] には、特定の暦年における顧客ごとの年間合計購入金額が格納され、もう一方の [Standard Deviations] 列には、これらの値の標準偏差が格納されます。 この場合、[Yearly Purchases] 列を分類済みの列に指定すると、モデルはこのリレーションシップを分析で使用できるようになります。  
   
@@ -65,8 +66,8 @@ ms.lasthandoff: 01/08/2018
  この列の値は、関連付けられている値の重み (ケース レプリケーション係数) です。  
   
 ## <a name="see-also"></a>参照  
- [コンテンツの種類 &#40;データ マイニング&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [マイニング構造 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [データ型 (データ マイニング)](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [コンテンツの種類 (&) #40 です。 データ マイニング &#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [マイニング構造と #40 です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [データ型 &#40;データ マイニング&#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
   

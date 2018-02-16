@@ -20,19 +20,20 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: edb3f0ab17369a4a1df4a69d80e07bfa1ff84012
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>SQL Server Management Studio で DMX クエリを作成する
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]予測クエリ、コンテンツ クエリ、およびマイニング モデル、マイニング構造に対するデータ定義クエリを作成するのに役立つ機能のセットを提供します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、マイニング モデルおよびマイニング構造に対する、予測クエリ、コンテンツ クエリ、およびデータ定義クエリを作成できる一連の機能が用意されています。  
   
 -   グラフィカルな予測クエリ ビルダーは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の両方で使用でき、予測クエリを記述し、データ セットをモデルにマッピングするプロセスを簡略化します。  
   
@@ -86,12 +87,12 @@ ms.lasthandoff: 01/08/2018
   
  テンプレートから特定の種類のクエリを作成する方法の例については、次の各トピックを参照してください。  
   
- [テンプレートからの単一予測クエリの作成](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
+ [テンプレートから単一予測クエリを作成します。](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
   
- [マイニング モデルのコンテンツ クエリの作成](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
+ [マイニング モデルに対するコンテンツ クエリを作成します。](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング クエリ ツール](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41;参照](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

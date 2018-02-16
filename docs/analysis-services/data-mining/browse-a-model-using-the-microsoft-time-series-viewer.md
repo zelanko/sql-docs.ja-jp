@@ -20,19 +20,20 @@ helpviewer_keywords:
 - continuous columns
 - regression algorithms [Analysis Services]
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6eaa320911fbba0f46472750bde9293b36430b46
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Microsoft タイム シリーズ ビューアーを使用したモデルの参照
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ ビューアーに[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に組み込まれているマイニング モデルを表示、[!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムは回帰アルゴリズムであり、予測シナリオで製品売上などの連続列を予測するデータ マイニング モデルを作成します。 これらの時系列モデルには、次のようなアルゴリズムに基づく情報を含めることができます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムは回帰アルゴリズムであり、予測シナリオで製品売上などの連続列を予測するデータ マイニング モデルを作成します。 これらの時系列モデルには、次のようなアルゴリズムに基づく情報を含めることができます。  
   
 -   ARTxp アルゴリズム。短期的な予測に適しています。  
   
