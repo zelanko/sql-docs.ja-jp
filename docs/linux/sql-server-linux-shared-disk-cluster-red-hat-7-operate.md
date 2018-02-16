@@ -28,7 +28,7 @@ ms.lasthandoff: 02/13/2018
 このドキュメントでは、Red Hat Enterprise Linux、共有ディスク フェールオーバー クラスターで SQL Server を次のタスクを実行する方法について説明します。
 
 - 手動でフェールオーバー クラスター
-- フェールオーバー クラスターの SQL Server サービスを監視します。
+- フェールオーバー クラスターの SQL Server サービスを監視します
 - クラスター ノードを追加します。
 - クラスター ノードを削除します。
 - SQL Server リソースを監視する頻度を変更します。
@@ -37,11 +37,11 @@ ms.lasthandoff: 02/13/2018
 
 クラスタ リングの層は Red Hat Enterprise Linux (RHEL) に基づいて[HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)の上に構築[ペース](http://clusterlabs.org/)です。 Corosync とペースのクラスター ネットワーク通信およびリソース管理を調整します。 SQL Server のインスタンスは 1 つのノードまたは他の上でアクティブです。
 
-次の図は、Linux クラスターで SQL Server コンポーネントを示しています。 
+次の図は、SQL Server での Linux クラスターのコンポーネントを示しています。 
 
 ![Red Hat Enterprise Linux 7 ディスク SQL クラスターの共有](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-クラスターの構成、リソース エージェント オプション、および管理の詳細については、次を参照してください。 [RHEL リファレンス ドキュメント](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)です。
+クラスターの構成、リソース エージェント オプション、および管理の詳細については、[RHEL リファレンス ドキュメント](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html) を参照してください。
 
 ## <a name = "failManual"></a>フェールオーバー クラスターを手動で
 
@@ -52,14 +52,14 @@ sudo pcs resource move <sqlResourceName> <targetNodeName>
 sudo pcs resource clear <sqlResourceName> 
 ```
 
-次の例では移動、 **mssqlha**という名前のノードにリソース**sqlfcivm2**、し、そのリソースが後での別のノードに移動できるように、制約を削除します。  
+次の例では **mssqlha** リソースを **sqlfcivm2**という名前のノードに移動し、その後そのリソースが別のノードに移動できるように制約を削除します。  
 
 ```bash
 sudo pcs resource move mssqlha sqlfcivm2 
 sudo pcs resource clear mssqlha 
 ```
 
-## <a name="monitor-a-failover-cluster-sql-server-service"></a>フェールオーバー クラスターの SQL Server サービスを監視します。
+## <a name="monitor-a-failover-cluster-sql-server-service"></a>フェールオーバー クラスターの SQL Server サービスを監視します
 
 現在のクラスターの状態を表示します。
 
@@ -67,15 +67,15 @@ sudo pcs resource clear mssqlha
 sudo pcs status  
 ```
 
-クラスターとリソースのライブ状態の表示:
+クラスターとリソースの現在の状態の表示:
 
 ```bash
 sudo crm_mon 
 ```
 
-リソースのエージェント ログを表示します。 `/var/log/cluster/corosync.log`
+`/var/log/cluster/corosync.log` にあるリソースのエージェント ログを表示します。
 
-## <a name="add-a-node-to-a-cluster"></a>クラスターにノードを追加します。
+## <a name="add-a-node-to-a-cluster"></a>クラスターにノードを追加します
 
 1. 各ノードの IP アドレスを確認してください。 次のスクリプトは、現在のノードの IP アドレスを示します。 
 
@@ -89,7 +89,7 @@ sudo crm_mon
    sudo vi /etc/hosts
    ```
 
-   次の例は`/etc/hosts`という 3 つのノードの追加と`sqlfcivm1`、 `sqlfcivm2`、および`sqlfcivm3`です。
+   次の `/etc/hosts` の例では、`sqlfcivm1`、 `sqlfcivm2`、および `sqlfcivm3` という3 つのノードを追加しています。
 
    ```
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -99,19 +99,19 @@ sudo crm_mon
    10.128.14.26 fcivm3
     ```
     
-   ファイルは、すべてのノードで同じにする必要があります。 
+   このファイルは、すべてのノードで同じにする必要があります。 
 
-1. 新しいノードに SQL Server サービスを停止します。
+1. 新しいノードで SQL Server サービスを停止します。
 
 1. 共有の場所にデータベース ファイル ディレクトリをマウントする手順に従います。
 
-   NFS サーバーから次のようにインストールします。 `nfs-utils`
+   NFS サーバーで、`nfs-utils` をインストールします。
 
    ```bash
    sudo yum -y install nfs-utils 
    ``` 
 
-   クライアントと NFS サーバー上のファイアウォールを open 
+   クライアントと NFS サーバー上でファイアウォールを開きます。 
 
    ```bash
    sudo firewall-cmd --permanent --add-service=nfs
@@ -126,9 +126,9 @@ sudo crm_mon
    <IP OF NFS SERVER>:<shared_storage_path> <database_files_directory_path> nfs timeo=14,intr
    ```
 
-   実行`mount -a`変更を有効にするためにします。
+   変更を有効にするために `mount -a` を実行します。
    
-1. 新しいノードで、SQL Server のユーザー名とペース ログインのパスワードを格納するファイルを作成します。 次のコマンドは、このファイルを作成および設定します。
+1. 新しいノードで、 Pacemaker ログインのための SQL Server のユーザー名とパスワードを格納するファイルを作成します。 次のコマンドで、このファイルを作成し設定します。
 
    ```bash
    sudo touch /var/opt/mssql/passwd
@@ -138,7 +138,7 @@ sudo crm_mon
    sudo chmod 600 /var/opt/mssql/passwd
    ```
 
-3. 新しいノードで、ペースのファイアウォール ポートを開きます。 `firewalld` を使用してこれらのポートを開くには、次のコマンドを実行します。
+3. 新しいノードで、 Pacemaker のファイアウォール ポートを開きます。 `firewalld` を使用してこれらのポートを開くには、次のコマンドを実行します。
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
@@ -151,7 +151,7 @@ sudo crm_mon
    > * TCP: ポート 2224、3121、21064
    > * UDP: ポート 5405
 
-1. 新しいノードにペース パッケージをインストールします。
+1. 新しいノードに Pacemaker パッケージをインストールします。
 
    ```bash
    sudo yum install pacemaker pcs fence-agents-all resource-agents
@@ -163,7 +163,7 @@ sudo crm_mon
    sudo passwd hacluster
    ```
  
-3. `pcsd` サービスと Pacemaker を有効にし、起動します。 これにより、新しいノードを再起動した後、クラスターを再参加が許可されます。 新しいノードには、次のコマンドを実行します。
+3. `pcsd` サービスと Pacemaker を有効にし、起動します。 これにより、新しいノードを再起動した後、クラスターへの再参加が許可されます。 新しいノードで次のコマンドを実行します。
 
    ```bash
    sudo systemctl enable pcsd
@@ -171,20 +171,20 @@ sudo crm_mon
    sudo systemctl enable pacemaker
    ```
 
-4. SQL Server の FCI リソース エージェントをインストールします。 新しいノードには、次のコマンドを実行します。 
+4. SQL Server の FCI リソース エージェントをインストールします。 新しいノードで次のコマンドを実行します。 
 
    ```bash
    sudo yum install mssql-server-ha
    ```
 
-1. 既存ノードでクラスターから、新しいノードを認証し、クラスターに追加します。
+1. 既存ノードでクラスターから新しいノードを認証し、クラスターに追加します。
 
     ```bash
     sudo pcs    cluster auth <nodeName3> -u hacluster 
     sudo pcs    cluster node add <nodeName3> 
     ```
 
-    次の例は、という名前のノードを追加**vm3**クラスターにします。
+    次の例では、**vm3**という名前のノードをクラスターに追加します。
 
     ```bash
     sudo pcs    cluster auth  
