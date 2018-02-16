@@ -18,19 +18,20 @@ f1_keywords:
 - Sql13.ssms.XeASNewEventSession.Targets.f1
 - Sql13.ssms.XeASNewEventSession.Advanced.f1
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: abe5ce23dfb6f16fcc8fb27f16918895f6a51650
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>SQL Server 拡張イベントを使用した Analysis Services の監視
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]拡張イベント (*xEvents*) は、軽量のトレースとパフォーマンスがわずかなシステム リソースを使用するシステムの監視、実稼働環境とテストの両方のサーバー上の問題を診断するための理想的なツールになります。 また、拡張性が高く、詳細な構成が可能で、SQL Server 2016 では、新しい組み込みのツール サポートにより使用が簡単です。 SQL Server Management Studio で Analysis Services インスタンスに接続すると、SQL Server Profiler を使用するようにライブ トレースを構成、実行、および監視することができます。 優れたツールを追加することで、SQL Server Profiler から xEvent に置き換える合理性が高まり、データベース エンジンと Analysis Services ワークロードの問題を同等に診断できるようになります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+拡張イベント (*xEvents*) は、わずかなシステム リソースを運用サーバーとテスト サーバーの両方の問題を診断するための理想的なツールに変える、軽量のトレースおよびパフォーマンス監視システムです。 また、拡張性が高く、詳細な構成が可能で、SQL Server 2016 では、新しい組み込みのツール サポートにより使用が簡単です。 SQL Server Management Studio で Analysis Services インスタンスに接続すると、SQL Server Profiler を使用するようにライブ トレースを構成、実行、および監視することができます。 優れたツールを追加することで、SQL Server Profiler から xEvent に置き換える合理性が高まり、データベース エンジンと Analysis Services ワークロードの問題を同等に診断できるようになります。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]だけでなく  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 拡張イベントのセッションも、以前のリリースでサポートされていたように XMLA スクリプトで構成することができます。  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/08/2018
   
  ダイアログ ボックスの一番端に**[構成]** オプションがあります。  
   
- ![ssas xevent 構成](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas xevent 構成")  
+ ![ssas-xevents-configure](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas-xevents-configure")  
   
  [構成] の [イベント フィールド] タブで **[TextData]** を選択して、このフィールドがサーバーで実行されているクエリを含む戻り値を示した状態でイベントの隣に表示されるようにします。  
   

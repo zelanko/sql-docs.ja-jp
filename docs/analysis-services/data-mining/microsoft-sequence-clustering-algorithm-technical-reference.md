@@ -18,19 +18,20 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - CLUSTER_COUNT parameter
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e0a53d359debe447cc4e1cc94197516c75f53f8d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft シーケンス クラスタリング アルゴリズム テクニカル リファレンス
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Microsoft シーケンス クラスター アルゴリズムは、Markov 連鎖分析を使用して順序付けられたシーケンスを特定し、シーケンスやその他の属性に基づいてクラスターを生成する手法をクラスタ リングでこの分析の結果を結合するハイブリッド アルゴリズムモデル。 このトピックでは、アルゴリズムの実装、アルゴリズムをカスタマイズする方法、およびシーケンス クラスター モデルの特別な要件について説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Microsoft シーケンス クラスター アルゴリズムは、複合的なアルゴリズムです。このアルゴリズムでは、Markov 連鎖分析を使用して順序付けられたシーケンスを特定し、この分析結果とクラスタリング技法を組み合わせて、シーケンスおよびモデル内のその他の属性に基づいてクラスターを生成します。 このトピックでは、アルゴリズムの実装、アルゴリズムをカスタマイズする方法、およびシーケンス クラスター モデルの特別な要件について説明します。  
   
  シーケンス クラスター モデルの参照およびクエリを行う方法を含む、アルゴリズムに関する一般的な情報については、「 [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)」をご覧ください。  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 01/08/2018
  CLUSTER_COUNT  
  アルゴリズムによって作成されるクラスターの概数を指定します。 その数のクラスターをデータから作成できない場合は、可能な限り多数のクラスターが作成されます。 CLUSTER_COUNT パラメーターを 0 に設定すると、アルゴリズムではヒューリスティックを使用して、作成するクラスターの数が最適に決定されます。  
   
- 既定値は 10 です。  
+ 既定値は、10 です。  
   
 > [!NOTE]  
 >  0 以外の数値を指定すると、アルゴリズムへのヒントとして機能します。アルゴリズムでは指定の数を取得することを目標に処理が進められますが、指定の数以外になる場合もあります。  
@@ -95,7 +96,7 @@ ms.lasthandoff: 01/08/2018
  MINIMUM_SUPPORT  
  クラスターの作成に必要とされる、属性をサポートするケースの最小数を指定します。  
   
- 既定値は 10 です。  
+ 既定値は、10 です。  
   
  MAXIMUM_SEQUENCE_STATES  
  シーケンスの状態の最大数を指定します。  
@@ -135,7 +136,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 (データ マイニング)](../../analysis-services/data-mining/content-types-data-mining.md)」を参照してください。  
   
-|[列]|コンテンツの種類|  
+|列|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Continuous、Cyclical、Discrete、Discretized、Key、Key Sequence、Table、Ordered|  
 |予測可能な属性|Continuous、Cyclical、Discrete、Discretized、Table、Ordered|  
@@ -149,8 +150,8 @@ ms.lasthandoff: 01/08/2018
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムでは、ドリルスルー、OLAP マイニング モデルの使用、およびデータ マイニング ディメンションの使用がサポートされています。  
   
 ## <a name="see-also"></a>参照  
- [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft シーケンス クラスタ リング アルゴリズム](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [シーケンス クラスター モデルのクエリ例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [シーケンス クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [シーケンス クラスター モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

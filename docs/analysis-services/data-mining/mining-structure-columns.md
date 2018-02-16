@@ -17,19 +17,20 @@ helpviewer_keywords:
 - data sources [Analysis Services], mining structure columns
 - columns [data mining], mining structure columns
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f87ea88579145b0220be7a047d230d2f3d8d9a1e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-structure-columns"></a>マイニング構造列
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]外部データの列を選択し、データのモデリングに使用する方法を指定して、マイニング構造を作成する場合は、マイニング構造に列を定義します。 したがって、マイニング構造列は、単なるデータ ソースのデータのコピーではなく、マイニング モデルでソースのデータがどのように使用するかを定義するものです。 データの分離方法を決定するプロパティ (データ値の分布を記述するプロパティ) を割り当てることができます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+マイニング構造を作成するときは、外部データの列を選択し、データをどのようにモデリングに使用するかを指定して、マイニング構造の列を定義します。 したがって、マイニング構造列は、単なるデータ ソースのデータのコピーではなく、マイニング モデルでソースのデータがどのように使用するかを定義するものです。 データの分離方法を決定するプロパティ (データ値の分布を記述するプロパティ) を割り当てることができます。  
   
  マイニング構造列は、柔軟性と拡張性を併せ持つように設計されています。これは、マイニング モデルの作成に使用する各アルゴリズムによって、構造内のさまざまな列を使用してデータが解釈される場合があるためです。 モデルごとに 1 つずつデータ セットを用意する代わりに、1 つのマイニング構造を使用し、そこに含まれる列を使用して各モデルのデータをカスタマイズできます。  
   

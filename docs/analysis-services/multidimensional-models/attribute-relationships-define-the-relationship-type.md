@@ -18,19 +18,20 @@ helpviewer_keywords:
 - adding member properties
 - member properties [Analysis Services], removing
 ms.assetid: 893a9084-d0fe-425c-b251-7518d3b3b65b
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 158e22518b67117f830ba019860bacb95454a73a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-relationships---define-the-relationship-type"></a>属性リレーションシップ-、リレーションシップの種類の定義
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用して、属性リレーションシップのリレーションシップの種類を定義する、**属性リレーションシップ** タブからアクセス可能なディメンション デザイナーで[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+属性リレーションシップのリレーションシップの種類を定義するには、ディメンション デザイナーの **[属性リレーションシップ]** タブを使用します。ディメンション デザイナーには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] からアクセスできます。  
   
 ### <a name="to-set-the-relationship-type-of-an-attribute-relationship"></a>属性リレーションシップのリレーションシップの種類を設定するには  
   
@@ -44,6 +45,6 @@ ms.lasthandoff: 01/08/2018
      可変のリレーションシップでは、メンバー間のリレーションシップが時間の経過と共に変化します。 固定のリレーションシップでは、メンバー間のリレーションシップが時間の経過と共に変化しません。  
   
 ## <a name="see-also"></a>参照  
- [属性リレーションシップの定義](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
+ [属性リレーションシップを定義します。](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
   
   

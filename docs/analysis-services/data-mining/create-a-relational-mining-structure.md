@@ -18,19 +18,20 @@ helpviewer_keywords:
 - relational mining models [Analysis Services]
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6ea3691ad03e5133d14f6aa8f99324957eb0c2b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="create-a-relational-mining-structure"></a>Create a Relational Mining Structure
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ほとんどのデータ マイニング モデルはリレーショナル データ ソースに基づいています。 リレーショナル データ マイニング モデルを作成する利点は、キューブの作成という複雑な作業をせずに、アドホック データをまとめ、モデルをトレーニングおよび更新できることです。  
+# <a name="create-a-relational-mining-structure"></a>リレーショナル マイニング構造の作成
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+ほとんどのデータ マイニング モデルは、リレーショナル データ ソースに基づいています。 リレーショナル データ マイニング モデルを作成する利点は、キューブの作成という複雑な作業をせずに、アドホック データをまとめ、モデルをトレーニングおよび更新できることです。  
   
  リレーショナル マイニング構造では、さまざまなソースからデータを取得できます。 生データは、データ ソース ビューの一部として定義可能であれば、テーブル、ファイル、またはリレーショナル データベース システムに格納できます。 たとえば、データが Excel、SQL Server データ ウェアハウス データベース、または SQL Server レポート データベースにある場合、あるいは OLE DB プロバイダーまたは ODBC プロバイダー経由でアクセスする外部ソースにある場合は、リレーショナル マイニング構造を使用する必要があります。  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
 7.  **[テスト セットの作成]**: このページでは、モデルのテスト用に使用するデータの量を指定します。 データで複数のモデルがサポートされている場合は、同じデータに対してすべてのモデルをテストできるように予約データセットを作成することをお勧めします。  
   
-     詳細については、「 [テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)" テンプレートを使用して、データ マイニング プロジェクトを作成します。  
+     詳細については、「[テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)」を参照してください。  
   
 8.  **[ウィザードの完了]**: このページでは、新しいマイニング構造と関連マイニング モデルに名前を付け、構造とモデルを保存します。  
   
@@ -128,7 +129,7 @@ ms.lasthandoff: 01/08/2018
  なぜこれが役に立つのでしょうか。 たとえば、クラスター モデルの結果を表示し、特定のクラスターに配置された顧客を確認する必要がある場合、 ドリルスルーを使用すると、連絡先情報などの詳細を表示できます。  
   
 > [!WARNING]  
->  ドリルスルーを使用するには、マイニング構造の作成時にドリルスルーを有効にする必要があります。 モデルのドリルスルーはモデルのプロパティを設定することで後から有効にできますが、マイニング構造のこのオプションは最初に設定する必要があります。 詳細については、「 [ドリルスルー クエリ (データ マイニング)](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)」をご覧ください。  
+>  ドリルスルーを使用するには、マイニング構造の作成時にドリルスルーを有効にする必要があります。 モデルのドリルスルーはモデルのプロパティを設定することで後から有効にできますが、マイニング構造のこのオプションは最初に設定する必要があります。 詳細については、「[ドリルスルー クエリ (データ マイニング)](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング デザイナー](../../analysis-services/data-mining/data-mining-designer.md)   

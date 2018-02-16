@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: cc94d0226262eb6c40fce83370774e9fed08a8ab
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="drillthrough-on-mining-models"></a>マイニング モデルでのドリルスルー
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*ドリル スルー*モデルのマイニング モデルまたはマイニング構造のいずれかのクエリを実行し、詳細データを取得する機能が公開されていないことを意味します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  *ドリルスルー* とは、マイニング モデルまたはマイニング構造に対してクエリを実行し、モデルで公開されていない詳細データを取得する機能です。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、ケース データへのドリルスルーの 2 つのオプションを提供します。 データの作成に使用されたケースにドリルスルーすることも、マイニング構造のケースにドリルスルーすることもできます。  
   
@@ -57,14 +58,14 @@ ms.lasthandoff: 01/08/2018
 |Microsoft 線形回帰アルゴリズム|サポートされています。<br /><br /> ただし、モデルによって作成されるノードが **All**だけであるため、ドリルスルーすると、モデルのすべてのトレーニング ケースが返されます。 トレーニング セットが大きいと、結果の読み込みに非常に時間がかかることがあります。|  
 |Microsoft タイム シリーズ アルゴリズム (Microsoft Time Series algorithm)|サポートされています。<br /><br /> ただし、構造やケース データのドリルスルーに、データ マイニング デザイナーの **[マイニング モデル ビューアー]** を使用することはできません。 代わりに、DMX クエリを作成する必要があります。<br /><br /> また、タイム シリーズ モデルでは、特定のノードをドリルスルーしたり、特定のノード内のケースを取得する DMX クエリを記述したりすることができません。 日付や属性値などの他の条件を使用して、モデルや構造からケース データを取得することは可能です。<br /><br /> Microsoft タイム シリーズ アルゴリズムで作成された ARTXP ノードおよび ARIMA ノードの詳細を表示する場合は、[Microsoft 汎用コンテンツ ツリー ビューアー (データ マイニング)](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c) を使用する方が簡単です。|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
  マイニング モデルでドリルスルーを使用する方法の詳細については、次のトピックを参照してください。  
   
 |処理手順|リンク|  
 |-----------|-----------|  
-|マイニング モデル ビューアーでドリルスルーを使用する|[モデル ビューアーからのドリルスルーの使用](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
-|ドリルスルーを使用してモデルのケース データを取得する|[マイニング モデルからケース データへのドリルスルー](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
-|既存のマイニング モデルのドリルスルーを有効にする|[マイニング モデルのドリルスルーの有効化](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
+|マイニング モデル ビューアーでドリルスルーを使用する|[モデル ビューアーからのドリルスルーを使用します。](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
+|ドリルスルーを使用してモデルのケース データを取得する|[マイニング モデルからケース データにドリルスルーします。](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
+|既存のマイニング モデルのドリルスルーを有効にする|[マイニング モデルのドリルスルーを有効にします。](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
 |特定のモデルの種類に対するドリルスルー クエリの例|[データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)|  
 |マイニング モデル ウィザードでドリルスルーを有効にする|[[ウィザードの完了] (データ マイニング ウィザード)](http://msdn.microsoft.com/library/6aef1548-35eb-42fd-ae87-63650a79eda1)|  
   

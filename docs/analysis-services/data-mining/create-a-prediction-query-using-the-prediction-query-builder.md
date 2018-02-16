@@ -15,25 +15,26 @@ helpviewer_keywords:
 - prediction queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], prediction queries
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: af9277de8848136f2123b7acf476dbee80a92ce1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>予測クエリ ビルダーを使用した予測クエリの作成
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]か、SQL Server Management Studio で既存のマイニング モデルを右クリックし、このオプションを選択し、BI Development Studio でのデータ マイニング ソリューションを構築するときに、予測クエリを作成することができます**予測クエリの作成**.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+予測クエリは、BI Development Studio でデータ マイニング ソリューションを構築しているときに作成できます。また、SQL Server Management Studio で既存のマイニング モデルを右クリックし、 **[予測クエリの作成]**オプションを選択して、作成することもできます。  
   
  **予測クエリ ビルダー** には、次の 3 種類のデザイン モードがあります。これらのモードを切り替えるには、左上隅のアイコンをクリックします。  
   
 -   **デザイン**  
   
--   **クエリ**  
+-   **Query**  
   
 -   **結果**  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
  **フィールド**  
  **[ソース]** 列の選択に関連付けられている特定の列または関数を決定します。  
   
- **[エイリアス]**  
+ **別名**  
  結果セット内で列に付けられる名前を決定します。  
   
  **[表示]**  
@@ -97,7 +98,7 @@ ms.lasthandoff: 01/08/2018
 8.  **[マイニング モデル予測]** タブのツール バーにある最初のボタンをクリックし、 **[結果]**を選択して、クエリを実行します。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング デザイナーでの単一クエリの作成](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
+ [データ マイニング デザイナーで単一クエリを作成します。](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

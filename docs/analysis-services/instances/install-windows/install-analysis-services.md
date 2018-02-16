@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 992a09878aece468b52a26241c362cb71ae43ec9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>SQL Server Analysis Services をインストールします。
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services は、表形式モデル、多次元キューブ、およびレポート、スプレッドシート、およびダッシュ_ボードからアクセスできるデータ マイニング モデルをホストする分析データベース サーバーです。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+SQL Server Analysis Services は、表形式モデル、多次元キューブ、およびレポート、スプレッドシート、およびダッシュ_ボードからアクセスできるデータ マイニング モデルをホストする分析データベース サーバーです。  
   
  Analysis Services は、複数のインスタンスが 1 台のコンピューターに複数のコピーをインストールまたは新しいバージョンと古いバージョンを同時に実行できます。 インストールしたすべてのインスタンスは、セットアップ時に決定される 3 つのモード: 多次元およびデータ マイニング、表形式、または SharePoint のいずれかで実行されます。 複数のモードを使用する場合は、それぞれに個別のインスタンスが必要です。  
   
@@ -72,7 +73,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  **ASSERVERMODE** では、大文字と小文字が区別されます。  値はすべて大文字で指定する必要があります。 次の表に、 **ASSERVERMODE**の有効な値を示します。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |TABULAR|これが既定値です。 設定しない場合**ASSERVERMODE**、表形式モードでは、サーバーをインストールします。|
 |MULTIDIMENSIONAL|この値は省略可能です。|  

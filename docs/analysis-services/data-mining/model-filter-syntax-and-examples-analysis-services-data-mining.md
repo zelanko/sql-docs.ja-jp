@@ -17,19 +17,20 @@ helpviewer_keywords:
 - filters [data mining]
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: daf31a5100ced2272b74b1bcad982f84bbbe5916
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>モデル フィルターの構文と例 (Analysis Services - データ マイニング)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このセクションでは、サンプル式、モデル フィルターの構文に関する詳細情報を提供します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+ここでは、モデル フィルターの構文について詳しく説明し、サンプル式を示します。  
   
  [フィルター構文](#bkmk_Syntax)  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
  *avPredicate*  
  スカラー マイニング構造列にのみ適用できるフィルター式です。 *avPredicate* 式は、モデル フィルターと入れ子になったテーブルのフィルターの両方で使用できます。  
   
- 次のいずれかの演算子を使用する式は、連続列にのみ適用できます。 によってデコードされる文字を次に示します。  
+ 次のいずれかの演算子を使用する式は、連続列にのみ適用できます。 [ ] :  
   
 -   **\<** (より小さい)  
   
@@ -101,7 +102,7 @@ ms.lasthandoff: 01/08/2018
   
 -   **=** (等しい)  
   
--   **** (等しくない)  
+-   **!=** (等しくない)  
   
 -   **IS NULL**  
   
@@ -318,7 +319,7 @@ FILTER (EXISTS (Products))
   
   
 ## <a name="see-also"></a>参照  
- [マイニング モデルのフィルター &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [テストおよび検証 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [フィルターをマイニング モデルと #40 です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [テストと検証 &#40; データ マイニング &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

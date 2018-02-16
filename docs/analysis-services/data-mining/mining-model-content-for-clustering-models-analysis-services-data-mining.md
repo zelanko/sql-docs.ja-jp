@@ -17,19 +17,20 @@ helpviewer_keywords:
 - mining model content, clustering models
 - clustering algorithms [Analysis Services]
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4f00b10d96682d72fde39277ceeeabb866d460e5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このトピックでは、Microsoft クラスタ リング アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」 (マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+このトピックでは、Microsoft クラスタリング アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」 (マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。  
   
 ## <a name="understanding-the-structure-of-a-clustering-model"></a>クラスター モデルの構造について  
  クラスター モデルの構造は単純です。 モデルとそのメタデータを表す 1 つの親ノードが各モデルにあり、各親ノードにはクラスターのフラット リストがあります (NODE_TYPE = 5)。 この組織は次の図に表示されます。  
@@ -43,10 +44,10 @@ ms.lasthandoff: 01/08/2018
   
  親ノードには、すべてのトレーニング ケースの実際の分布を表す便利な統計も含まれています。 これらの統計は、入れ子になったテーブル列である NODE_DISTRIBUTION に含まれています。 たとえば次の表は、「 `TM_Clustering`基本的なデータ マイニング チュートリアル [」で作成したクラスター モデル (](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)) の顧客の人口統計の分布を表す NODE_DISTRIBUTION テーブルのいくつかの行を示しています。  
   
-|ATTRIBUTE_NAME|ATRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUE_TYPE|  
+|ATTRIBUTE_NAME|ATRIBUTE_VALUE|[別名]|PROBABILITY|VARIANCE|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
 |Age|Missing|0|0|0|1 (Missing: 不足)|  
-|Age|44.9016152716593|12939|@shouldalert|125.663453102554|3 (Continuous: 連続)|  
+|Age|44.9016152716593|12939|1|125.663453102554|3 (Continuous: 連続)|  
 |Gender|Missing|0|0|0|1 (Missing: 不足)|  
 |Gender|F|6350|0.490764355823479|0|4 (Discrete: 不連続)|  
 |Gender|M|6589|0.509235644176521|0|4 (Discrete: 不連続)|  
@@ -165,9 +166,9 @@ ms.lasthandoff: 01/08/2018
 >  使用するクラスタリング手法やパラメーターが違っても、モデルの構造とコンテンツは変わりません。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [マイニング モデル コンテンツ &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)   
- [Microsoft クラスタリング アルゴリズム](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
+ [Microsoft クラスタ リング アルゴリズム](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

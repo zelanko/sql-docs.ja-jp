@@ -15,51 +15,52 @@ helpviewer_keywords:
 - data mining [Analysis Services], models
 - mining models [Analysis Services], how-to topics
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8c1eef41d84a8bdbd758c02f4830467b14cd9ebb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>マイニング モデル タスクと操作方法
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用して、**マイニング モデル**でデータ マイニング デザイナーのタブ[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を管理し、マイニング構造にマイニング モデルを処理します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+マイニング構造のマイニング モデルを管理および処理するには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデータ マイニング デザイナーにある **[マイニング モデル]** タブを使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [既存のマイニング構造へのマイニング モデルの追加](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
+-   [既存のマイニング構造にマイニング モデルを追加します。](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
   
--   [マイニング構造からのマイニング モデルの削除](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)  
+-   [マイニング構造からマイニング モデルを削除します。](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)  
   
--   [マイニング モデルからの列の除外](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)  
+-   [マイニング モデルから列を除外します。](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)  
   
--   [モデル列の別名の作成](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
+-   [モデル列の別名を作成します。](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
   
--   [マイニング モデルでの列の分離の変更](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
+-   [マイニング モデル内の列の分離を変更します。](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [モデリング フラグの表示または変更 (データ マイニング)](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [モデリング フラグ &#40;データ マイニング"&"#41 です。 表示または変更](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
--   [モデルでリグレッサーとして使用する列の指定](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)  
+-   [モデルでリグレッサーとして使用する列を指定します。](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)  
   
 -   [マイニング モデルのプロパティの変更](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [マイニング モデルへのフィルターの適用](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)  
+-   [マイニング モデルにフィルターを適用します。](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)  
   
--   [マイニング モデルからのフィルターの削除](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
+-   [マイニング モデルからフィルターを削除します。](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
--   [マイニング モデルのドリルスルーの有効化](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)  
+-   [マイニング モデルのドリルスルーを有効にします。](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)  
   
--   [アルゴリズム パラメーターの表示または変更](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
+-   [ビューまたはアルゴリズム パラメーターの変更](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   
--   [マイニング モデルのコピーの作成](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)  
+-   [マイニング モデルのコピーを作成します。](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)  
   
--   [マイニング モデルの処理](../../analysis-services/data-mining/process-a-mining-model.md)  
+-   [マイニング モデルを処理します。](../../analysis-services/data-mining/process-a-mining-model.md)  
   
--   [データ マイニング ディメンションの作成](../../analysis-services/data-mining/create-a-data-mining-dimension.md)  
+-   [データ マイニング ディメンションを作成します。](../../analysis-services/data-mining/create-a-data-mining-dimension.md)  
   
 ## <a name="see-also"></a>参照  
  [マイニング構造のタスクと操作方法](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)   

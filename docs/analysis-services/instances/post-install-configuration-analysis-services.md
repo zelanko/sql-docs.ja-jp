@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 58d6481958138346ee40b9815b8209cb41bf2bae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="post-install-configuration-analysis-services"></a>インストール後の構成 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services をインストールすると、追加の構成は必要完全に機能し、一般的な使用可能なサーバーにします。 このセクションでは、インストールを完了するための追加の作業について説明します。 接続要件によっては、認証も構成する必要がある場合があります (「 [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)」を参照)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Analysis Services のインストール後、サーバーを一般的な用途で使用できるように動作させるためには、追加の構成が必要です。 このセクションでは、インストールを完了するための追加の作業について説明します。 接続要件によっては、認証も構成する必要がある場合があります (「 [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)」を参照)。  
   
  後で、データベースの配置の準備ができたら、追加の作業が必要になります。 つまり、データベースのロール メンバーシップをデータへのユーザー アクセスを許可するように構成し、データベースのバックアップおよび復旧の方法を設計すると共に、データを定期的に更新するためにスケジュールされた処理ワークロードが必要であるかどうかを判断することが求められます。 データベースの配置と管理の詳細については、「[多次元モデル データベース (SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)」および「[表形式モデルのデータベース (SSAS 表形式)](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)」を参照してください。  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 01/08/2018
 |[Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)|インストール中に、サーバー上で実行されるモデルの種類 (多次元またはテーブル) を決めるサーバー モードを選択します。 サーバー モードが不明な場合は、どちらのモードがインストールされたかを判断するために、このトピックの情報を参照してください。|  
 |[Analysis Services インスタンスの名前変更](../../analysis-services/instances/rename-an-analysis-services-instance.md)|わかりやすい名前を付けると、サーバー モードが異なる複数のインスタンスや、組織の部門やチームに主に使用されるインスタンスを区別するために役立ちます。 インスタンス名をインストールが管理しやすい名前に変更する方法については、このトピックの情報を参照してください。|  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
  クライアント ライブラリを使用して Microsoft アプリケーションまたはカスタム アプリケーションから Analysis Services に接続する方法について学習します。 ソリューションの要件によっては、Kerberos 認証用にサービスを構成する必要がある場合もあります。 ドメインの境界を超える必要のある接続では、HTTP アクセスが必要です。 次の手順に関する指示については、「 [Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md) 」を参照してください。  
   
 ## <a name="see-also"></a>参照  

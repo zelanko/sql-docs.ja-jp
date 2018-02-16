@@ -43,19 +43,20 @@ helpviewer_keywords:
 - Type property
 - ProactiveCaching property
 ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d448349dfa423810a6bdfd70a5d79a1dfd41f0b1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-measure-properties"></a>メジャーのプロパティの構成
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]メジャーを定義するプロパティがある方法、メジャーの動作して、メジャーがユーザーに表示する方法を制御します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+メジャーには、メジャーの動作を定義し、メジャーがユーザーに表示される方法を制御できるプロパティがあります。  
   
  キューブまたはメジャーを作成または編集する際、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でプロパティを設定できます。 また、MDX または AMO を使用してプログラムで設定することもできます。 詳細については、「[多次元モデル内のメジャーおよびメジャー グループの作成](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)」、「[CREATE MEMBER ステートメント &#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md)」、または「[AMO OLAP 基本オブジェクトのプログラミング](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md)」を参照してください。  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 01/08/2018
 |**[表示]**|クライアント アプリケーションでメジャーの表示/非表示を決定します。|  
   
 ## <a name="see-also"></a>参照  
- [メジャー グループのプロパティの構成](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)   
+ [メジャー グループのプロパティを構成します。](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)   
  [メジャーの変更](../../analysis-services/lesson-3-1-modifying-measures.md)  
   
   

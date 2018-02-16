@@ -18,19 +18,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 - architecture [Analysis Services]
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 3f6e0b1540d9dc1072e7370b50cfa8736894b712
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>論理アーキテクチャ (Analysis Services - データ マイニング)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]データ マイニングは、複数のコンポーネントの相互作用を伴うプロセスです。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+データ マイニングは、複数のコンポーネントの相互作用を伴うプロセスです。  
   
 -   SQL Server データベース内のデータのソースまたはその他のデータ ソースにアクセスし、トレーニング、テスト、または予測に使用します。  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 01/08/2018
  詳細については、「 [多次元モデルのアセンブリの管理](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)」を参照してください。  
   
  **カスタム ストアド プロシージャ**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データ マイニングには、データ マイニング オブジェクトを使用するストアド プロシージャの使用がサポートされています。 独自のストアド プロシージャを作成して、機能を拡張し、予測クエリおよびコンテンツ クエリから返されるデータをより簡単に操作できます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ マイニングでは、ストアド プロシージャを使用して、データ マイニング オブジェクトを操作できます。 独自のストアド プロシージャを作成して、機能を拡張し、予測クエリおよびコンテンツ クエリから返されるデータをより簡単に操作できます。  
   
  [ストアド プロシージャの定義](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
@@ -104,7 +105,7 @@ ms.lasthandoff: 01/08/2018
  また、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、内部でデータ マイニングに使用されるシステム ストアド プロシージャが多数用意されています。 システム ストアド プロシージャは内部で使用するためのものですが、それらを応用することもできます。 これらのストアド プロシージャは、マイクロソフトによって随時変更される場合があります。そのため、実際の運用では、DMX、AMO、または XMLA を使用してクエリを作成することをお勧めします。  
   
  **カスタム プラグイン アルゴリズム**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]独自のアルゴリズムを作成し、追加するアルゴリズムは、新しいデータ マイニング サービスとして、サーバー インスタンスのメカニズムを提供します。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、独自のアルゴリズムを作成し、そのアルゴリズムを新しいデータ マイニング サービスとしてサーバー インスタンスに追加するためのメカニズムが用意されています。  
   
  Analysis Services では、COM インターフェイスを使用して、プラグイン アルゴリズムと通信します。 新しいアルゴリズムの実装方法の詳細については、「 [プラグイン アルゴリズム](../../analysis-services/data-mining/plugin-algorithms.md)」を参照してください。  
   
@@ -113,6 +114,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>参照  
  [多次元モデルの処理 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41;参照](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Data Mining Designer
 - properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fcc84bc6effb3e4a831ce58b81fcbe9e7eda3437
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-properties"></a>マイニング モデルのプロパティ
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]マイニング モデルでは、次のようなプロパティがあります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+マイニング モデルには、次の種類のプロパティがあります。  
   
 -   モデルによって使用されるデータのデータ型および内容を定義するマイニング構造から継承されたプロパティ。  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/08/2018
 |--------------|-----------------|  
 |**アルゴリズム**|マイニング モデルのアルゴリズムの種類を設定します。|  
 |**AlgorithmParameters**|アルゴリズムの各種類で使用可能なアルゴリズム パラメーターの値を設定します。|  
-|**Assert**|マイニング モデルのトレーニングとテストに使用するデータに適用するフィルターを設定します。 フィルター定義はモデルと共に格納され、予測クエリの作成時やモデル精度のテスト時に必要に応じて使用できます。<br /><br /> モデルのトレーニング時には、モデルのフィルターは省略できません。|  
+|**[フィルター]**|マイニング モデルのトレーニングとテストに使用するデータに適用するフィルターを設定します。 フィルター定義はモデルと共に格納され、予測クエリの作成時やモデル精度のテスト時に必要に応じて使用できます。<br /><br /> モデルのトレーニング時には、モデルのフィルターは省略できません。|  
 |**名前**|マイニング モデルの名前を設定します。|  
 |**AllowDrillThrough**|マイニング モデルでドリルスルーを有効にするかどうかを指定します。|  
   
@@ -62,15 +63,15 @@ ms.lasthandoff: 01/08/2018
 |**名前**|マイニング モデル列の名前を設定します。 新しい名前を入力し、マイニング モデル列に別名を指定できます。|  
 |**ModelingFlags**|列に対してアルゴリズム固有のフラグを設定します。|  
 |**SourceColumnID**|モデル列の基になるマイニング構造列の名前を示します。<br /><br /> このプロパティは読み取り専用です。|  
-|**Usage**|マイニング モデルによる列の使用方法を設定します。|  
+|**使用方法**|マイニング モデルによる列の使用方法を設定します。|  
   
 ## <a name="see-also"></a>参照  
  [マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)   
- [マイニング構造 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [マイニング構造と #40 です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [マイニング モデル タスクと操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [マイニング モデルのプロパティの変更](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
  [データ マイニング ツール](../../analysis-services/data-mining/data-mining-tools.md)   
- [リレーショナル マイニング構造の作成](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
- [モデル列の別名の作成](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
+ [リレーショナル マイニング構造を作成します。](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
+ [モデル列の別名を作成します。](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
   
   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9b6f4c9-7e1f-4f61-b657-8986e39a6af2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 77b32b08e1ffc1765d731e9bc9112f093ef854bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>多次元データ ソースを使用した Power View レポートの作成
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Power View の作成、多次元モデルに基づくレポートに基づくレポートを作成するよりもまったく同じ、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]ブックまたは Analysis Services 表形式モデル。 Power View レポートは、SharePoint ライブラリのレポート データ ソース接続ファイル (.rsds) から作成されます。 .rsds ファイルの作成方法については、「 [レポート データ ソースの作成](../../analysis-services/multidimensional-models/create-a-report-data-source.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+多次元モデルに基づく Power View レポートを作成するのは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックまたは Analysis Services テーブル モデルに基づくレポートを作成するのと同じです。 Power View レポートは、SharePoint ライブラリのレポート データ ソース接続ファイル (.rsds) から作成されます。 .rsds ファイルの作成方法については、「 [レポート データ ソースの作成](../../analysis-services/multidimensional-models/create-a-report-data-source.md)」を参照してください。  
   
  開始する前に以下を調べます。  
   

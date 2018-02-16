@@ -15,19 +15,20 @@ helpviewer_keywords:
 - attributes [Analysis Services], member properties
 - member properties [Analysis Services], creating
 ms.assetid: 137b2f40-5dfb-4141-9110-70f961f259cb
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e521c6eb3bbcb1c40dde10c5767ea024e6eaa3c1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-relationships---create-modify-or-delete-relationship"></a>属性リレーションシップの作成、変更、またはリレーションシップの削除
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]作成、変更、またはを使用してディメンションの属性間に属性リレーションシップを削除することができます、**属性リレーションシップ**内のディメンション デザイナーのタブ[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション デザイナーの **[属性リレーションシップ]** タブを使用すると、ディメンションの属性間の属性リレーションシップを作成、変更、または削除することができます。  
   
 ### <a name="to-create-an-attribute-relationship"></a>属性リレーションシップを作成するには  
   
@@ -66,6 +67,6 @@ ms.lasthandoff: 01/08/2018
 3.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [のディメンション デザイナーの](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [属性リレーションシップ](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

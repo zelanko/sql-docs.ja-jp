@@ -17,19 +17,20 @@ helpviewer_keywords:
 - columns [data mining], properties
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0bc682b950c696f801bef26f3b258b55ba7d93bb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>マイニング構造と構造列のプロパティ
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]設定またはを使用して、マイニング構造とその関連付けられた列および入れ子になったテーブルのプロパティを変更することができます、**マイニング構造**データ マイニング デザイナーのタブです。 このタブで設定したプロパティは、その構造に関連付けられている各マイニング モデルに反映されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+データ マイニング デザイナーの **[マイニング構造]** タブを使用すると、マイニング構造のプロパティと、そのマイニング構造に関連付けられた列および入れ子になったテーブルのプロパティを設定または変更できます。 このタブで設定したプロパティは、その構造に関連付けられている各マイニング モデルに反映されます。  
   
 > [!NOTE]  
 >  マイニング構造のプロパティ値を変更した場合は、変更したのが名前や説明などのメタデータであっても、モデルの表示またはクエリを実行する前に、マイニング構造とそのモデルを再処理する必要があります。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 |プロパティ|Description|  
 |--------------|-----------------|  
 |**CacheMode**|トレーニングに使用したケースを、トレーニングの完了後にキャッシュするか破棄するかを指定します。 **注:**  ドリルスルーおよび提示データを有効にするには、このプロパティを **KeepTrainingCases** に設定する必要があります。|  
-|**照合順序**|列の既定の照合順序を指定します。 照合順序を指定しない場合は、サーバーの照合順序が使用されます。|  
+|**[照合順序]**|列の既定の照合順序を指定します。 照合順序を指定しない場合は、サーバーの照合順序が使用されます。|  
 |**Description**|マイニング構造について説明します。 構造のデータの目的と構成について説明することをお勧めします。|  
 |**ErrorConfiguration (既定)**|特別なエラー処理が行われる場合のオプションを指定します。|  
 |**HoldoutMaxCases**|テスト データセットとして予約できる構造ケースの最大数を指定します。  **HoldoutMaxCases** と **HoldoutPercent**の両方に値を指定すると、それらの条件が結合されます。 **注:**  このプロパティを設定するには、 <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> を **KeepTrainingCases**をクリックします。|  

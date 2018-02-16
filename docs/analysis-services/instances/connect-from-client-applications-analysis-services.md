@@ -16,19 +16,20 @@ f1_keywords:
 - sql13.swb.connecttoas.connectionproperties.f1
 - sql13.swb.connecttoas.login.f1
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 20302da167c1ba1d19fb1b65ab871d81f7170591
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>クライアント アプリケーションからの接続 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services に慣れていない場合、このトピックの情報を使用して、既存のインスタンスに接続する[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]一般的なツールとアプリケーションを使用します。 このトピックでは、テスト目的で異なるユーザー ID を使用して接続する方法についても説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Analysis Services を初めて使用する場合は、このトピックの情報を参照し、一般的なツールとアプリケーションを使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既存のインスタンスに接続します。 このトピックでは、テスト目的で異なるユーザー ID を使用して接続する方法についても説明します。  
   
 -   [SQL Server Management Studio (SSMS) による接続](#bkmk_SSMS)  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [オブジェクトと操作へのアクセスの承認 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [オブジェクトと操作 &#40; への認証のアクセスAnalysis Services &#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> SQL Server Management Studio (SSMS) による接続  
  サーバー インスタンスとデータベースを対話操作で管理するには、SSMS で Analysis Services に接続します。 また、XMLA クエリや MDX クエリを実行して、管理タスクの実行またはデータの取得を行うこともできます。 クエリの送信時にのみデータベースを読み込むツールやアプリケーションとは異なり、SSMS では、ユーザーがサーバーに接続すると、すべてのデータベースが読み込まれます (データベースを表示する権限がユーザーにある場合)。 これは、サーバー上に多数のテーブル データベースがある場合、SSMS を使用して接続するとすべてのデータベースがシステム メモリに読み込まれることを表します。  
@@ -141,6 +142,6 @@ ms.lasthandoff: 01/08/2018
  [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services でサポートされる認証方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [権限借用 &#40;です。SSAS テーブル &#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [データ ソースの作成 &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [データ ソース &#40; を作成します。SSAS 多次元 &#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

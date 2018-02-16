@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], rules
 - Rules Viewer
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8627d46cc0d919ecf41c7ad5c202d13921cd77df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>アソシエーション ルール モデルのルールのフィルター選択
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]アソシエーション モデルでフィルターは、結果を制限する、必要なアソシエーションだけに使用できます。 たとえば、ルールをフィルター選択して、特定の製品を含むルールだけを表示できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+アソシエーション モデルでフィルターを使用して、結果を必要なアソシエーションだけに限定できます。 たとえば、ルールをフィルター選択して、特定の製品を含むルールだけを表示できます。  
   
  データ マイニング デザイナーで、 **アソシエーション ルール ビューアーの** [ルール] [!INCLUDE[msCoName](../../includes/msconame-md.md)] タブのコントロールを使用して、表示されるルールをフィルター選択します。  モデルに対するクエリを作成して、特定の値が格納されているアイテムセットだけを表示することもできます。  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/08/2018
   
 ### <a name="create-a-query-on-the-itemsets-in-an-association-model"></a>アソシエーション モデルのアイテムセットに対するクエリの作成  
   
--   [結合モデルのクエリ例](../../analysis-services/data-mining/association-model-query-examples.md)  
+-   [アソシエーション モデルのクエリ例](../../analysis-services/data-mining/association-model-query-examples.md)  
   
 ## <a name="see-also"></a>参照  
  [マイニング モデル ビューアーのタスクと操作方法](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   

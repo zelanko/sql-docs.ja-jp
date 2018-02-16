@@ -22,19 +22,20 @@ helpviewer_keywords:
 - datasets [Analysis Services]
 - clustering algorithms [Analysis Services]
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
-caps.latest.revision: "62"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: d9511055469bea3bbd5e090ecb14c22e8c043789
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft クラスタリング アルゴリズム
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]クラスタ リング アルゴリズムは、*セグメンテーション*または*クラスタ リング*類似した特性を持つクラスターにグループ化するデータセット内のケースを反復処理するアルゴリズム。 このグループ化は、データの探索、データの異常の特定、および予測の作成に役立ちます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムとは、データセット内のケースを反復処理して類似した特性を持つクラスターにグループ化する " *セグメンテーション* " または " *クラスタリング* " アルゴリズムです。 このグループ化は、データの探索、データの異常の特定、および予測の作成に役立ちます。  
   
  クラスタリング モデルでは、一般レベルの観察では論理的に推論できないデータセット内の関係が識別されます。 たとえば、自転車で通勤している従業員は、一般的に勤め先から遠くないところに住んでいることは、だれでも容易に想像できます。 しかし、このアルゴリズムでは、それほど明確でない自転車通勤者に関する他の特性を見つけることができます。 次の図では、クラスター A は勤め先に車で通勤する従業員に関するデータを表し、クラスター B は勤め先に自転車で通勤する従業員に関するデータを表しています。  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="viewing-a-clustering-model"></a>クラスタリング モデルの表示  
  モデルを参照するには、 **Microsoft クラスター ビューアー**を使用します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でクラスタリング モデルを表示すると、クラスター間の相互関係がダイアグラムで示され、各クラスターの詳細なプロファイル、クラスターどうしを識別する属性の一覧、およびトレーニング データセット全体の特性も提供されます。 詳細については、「 [Microsoft クラスター ビューアーを使用したモデルの参照](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)」を参照してください。  
   
- さらに詳細を知るには、 [Microsoft 汎用コンテンツ ツリー ビューアー](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)でモデルを参照してください。 モデルに保存される内容には、各ノードのすべての値の分布や、各クラスターの確率などの情報が含まれます。 詳細については、「 [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)」を参照してください。  
+ さらに詳細を知るには、 [Microsoft 汎用コンテンツ ツリー ビューアー](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)でモデルを参照してください。 モデルに保存される内容には、各ノードのすべての値の分布や、各クラスターの確率などの情報が含まれます。 詳細については、「[クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="creating-predictions"></a>予測の作成  
  モデルのトレーニング後、結果がパターンのセットとして保存されます。これを参照したり、これを使用して予測を実行したりできます。  
@@ -88,9 +89,9 @@ ms.lasthandoff: 01/08/2018
 -   OLAP マイニング モデルの使用およびデータ マイニング ディメンションの作成がサポートされています。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft クラスタ リング アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
  [クラスタ リング モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
- [クラスタリング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)  
+ [クラスタ リング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
   
