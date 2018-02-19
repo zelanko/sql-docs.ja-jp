@@ -54,7 +54,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  [ @data_source_name = ] *datasourcename*  
  ステートメントが実行された外部データ ソースを識別します。 参照してください[外部データ ソースの作成 &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/create-external-data-source-transact-sql.md)。 外部データ ソースは、"RDBMS"または"SHARD_MAP_MANAGER"の型指定できます。  
   
- [ @stmt=]*ステートメント*  
+ [ @stmt= ] *ステートメント*  
  Unicode 文字列が含まれて、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチです。 @stmt Unicode 定数または Unicode 変数のいずれかにする必要があります。 + 演算子で 2 つの文字列を連結するなどの複雑な Unicode 式は使用できません。 文字定数も使用できません。 Unicode 定数が指定されている場合に付ける必要があります、 **N**です。たとえば、Unicode 定数**N 'sp_who'**有効ですが、文字定数**'sp_who'**はありません。 文字列のサイズは、データベース サーバーで利用可能なメモリにより制限されます。 64 ビット サーバーに、文字列のサイズは 2 GB の最大サイズに制限**nvarchar (max)**です。  
   
 > [!NOTE]  
@@ -62,7 +62,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
  @stmt に含める各パラメーターには、@params パラメーター定義リストとパラメーター値リストの両方に、対応するエントリが存在する必要があります。  
   
- [ @params=] N'@*parameter_name * * data_type* [,...*n* ] '  
+ [ @params= ] N'@*parameter_name**data_type* [ ,... *n* ] '  
  @stmt に埋め込まれたすべてのパラメーターの定義が含まれている 1 つの文字列を指定します。この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n* 追加のパラメーター定義を示すプレース ホルダー。 すべてのパラメーターで指定された@stmtmustで定義されている@paramsです。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに@stmtパラメーターを含まない@paramsは必要ありません。 このパラメーターの既定値は NULL です。  
   
  [ @param1=] '*value1*'  
