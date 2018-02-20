@@ -2,7 +2,7 @@
 title: "Microsoft SQL 操作 Studio (プレビュー) のリリース ノート |Microsoft ドキュメント"
 description: "Microsoft SQL 操作 Studio (プレビュー) のリリース ノート"
 ms.custom: tools|sos
-ms.date: 01/17/2018
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,15 +14,39 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eded99dffd8029431a127e6cbf4b125ab5e0ac97
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1b8c5e3cce8f84f0565c764a47d3f3b7c1709454
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL 操作 Studio (プレビュー) のリリース ノート
 
-**[年 1 月のパブリック プレビューをダウンロードします。](download.md)**
+**[2 月のパブリック プレビューをダウンロードします。](download.md)**
+
+## <a name="february-2018-february-public-preview"></a>2 月 2018 (パブリック プレビューの年 2 月)
+
+リリース日: 2018 年 2 月 15日  
+バージョン: 0.26.7
+
+*年 2 月のパブリック プレビュー*いくつかの機能に関する意見および優先度の高いバグの修正が含まれます。 このリリースには、次の機能強化が含まれています。
+
+- 自動更新のインストールの概要を提供する、通知、新しいリリースがダウンロード可能な場合に 
+- 接続ダイアログ 'Database' フィールドは、指定したサーバーから設定するデータベースの一覧を含む動的に設定されているドロップダウン リストではようになりました。
+- 修正[6 を発行](https://github.com/Microsoft/sqlopsstudio/issues/6): クエリの新しいタブを開くときに接続し、選択したデータベースを保持します。
+- 修正[発行 22](https://github.com/Microsoft/sqlopsstudio/issues/22): 'サーバー名' と ' Database Name' には、これらのドロップダウン テキスト ボックスの代わりにしますか?
+- 修正[発行 549](https://github.com/Microsoft/sqlopsstudio/issues/549): インストール後に元のアプリケーションで結果サイレント/非常にサイレント インストールします。
+- 修正[481 の発行](https://github.com/Microsoft/sqlopsstudio/issues/481):「更新プログラムを確認する」オプションを追加します。
+- SQL エディターの色づけとオートコンプリートの修正:
+   - 修正[発行 584](https://github.com/Microsoft/sqlopsstudio/issues/584): IntelliSense では、"FULL"強調表示されていないキーワードです。
+   - 修正[発行 345](https://github.com/Microsoft/sqlopsstudio/issues/345): エディター内での色分け SQL 関数。
+   - 修正[発行 300](https://github.com/Microsoft/sqlopsstudio/issues/300): [#tempData] 最新"]"緑の色が表示されます。
+   - 修正[発行 225](https://github.com/Microsoft/sqlopsstudio/issues/225): キーワードの色が一致しません。
+   - 修正[発行 60](https://github.com/Microsoft/sqlopsstudio/issues/60): 無効な sql 構文の色で強調表示の from 句内の一時テーブルを使用する場合。
+- 接続の機能拡張 API を紹介します。
+- VS コード エディター 1.19 統合します。
+- ビューアーの改良がいくつかのクエリ プランを収集する JustinPealing/html-クエリ プランのコンポーネントに更新します。
+
 
 ## <a name="january-2018-january-public-preview"></a>年 1 月 2018 (パブリック プレビューの年 1 月)
 

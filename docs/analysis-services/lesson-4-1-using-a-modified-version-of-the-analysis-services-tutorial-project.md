@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d37f4c7e9c21231e99bf8cce8e588969d824b40b
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 90a1b92087d0f753fdd637830bc4dd4c86d601a3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>レッスン 4-1-Analysis Services チュートリアル プロジェクトの変更済みバージョンを使用します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,15 +34,15 @@ ms.lasthandoff: 01/22/2018
   
 ## <a name="downloading-and-extracting-the-project-file"></a>プロジェクト ファイルのダウンロードと展開  
   
-1.  このチュートリアルのサンプル プロジェクトをダウンロードできるページに移動するには、[ここをクリック](http://go.microsoft.com/fwlink/?LinkID=221866) してください。 チュートリアルのプロジェクトは、 **Analysis Services Tutorial SQL Server 2012** ダウンロードに含まれています。  
+1.  このチュートリアルのサンプル プロジェクトをダウンロードできるページに移動するには、[ここをクリック](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services)してください。 チュートリアルのプロジェクトに含まれる、 **adventure-works-マルチ ディメンションのチュートリアル-projects.zip**をダウンロードします。  
   
-2.  このチュートリアルのプロジェクトを含むパッケージをダウンロードするには、 **[Analysis Services Tutorial SQL Server 2012]** をクリックしてください。  
+2.  をクリックして**adventure-works-マルチ ディメンションのチュートリアル-projects.zip**このチュートリアルでは、プロジェクトを含むパッケージをダウンロードします。  
   
     既定では、.zip ファイルはダウンロード フォルダーに保存されます。 より短いパスの場所に .zip ファイルを移動する必要があります (たとえば、ファイルを保存するための C:\Tutorials フォルダーを作成します)。  その後、.zip ファイルに含まれているファイルを展開します。 長いパスのダウンロード フォルダーからファイルを解凍しようとすると、レッスン 1 しか取得できない場合があります。  
   
 3.  ルート ドライブか、それに近い場所にサブフォルダーを作成します (C:\Tutorial など）。  
   
-4.  そのサブフォルダーに、 **Analysis Services Tutorial SQL Server 2012.zip** ファイルを移動します。  
+4.  移動、 **adventure-works-マルチ ディメンションのチュートリアル-projects.zip**サブフォルダーにファイル。  
   
 5.  ファイルを右クリックし、 **[すべて展開]**をクリックします。  
   

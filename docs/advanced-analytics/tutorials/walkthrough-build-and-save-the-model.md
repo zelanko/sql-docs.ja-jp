@@ -20,11 +20,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: aec87866d4bf22b5e1f685ba5fdf41fd259fc6e3
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: d8bd3c158c40accf191c775f0fe8466c05c32203
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>R モデルを構築して、SQL Server に保存
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,9 +51,7 @@ ms.lasthandoff: 02/11/2018
 
      *結果*
 
-     *ロジスティック回帰結果: その先端 ~ passenger_count trip_distance + trip_time_in_secs +*
-     <br/>*direct_distance*
-     <br/>*Data: featureDataSource (RxSqlServerData Data Source)*
+     *ロジスティック回帰結果: その先端 ~ passenger_count trip_distance + trip_time_in_secs +* direct_distance *   <br/>*Data: featureDataSource (RxSqlServerData Data Source)*
      <br/>*Dependent variable(s): 先が*
      <br/>*独立変数の合計: 5*
      <br/>*有効な値: 17068*
@@ -210,7 +208,7 @@ ms.lasthandoff: 02/11/2018
     モデルをテーブルへの保存に必要なステートメントは、INSERT のみです。 ただしなどのストアド プロシージャでラップされたときに簡単は_PersistModel_です。
 
     > [!NOTE]
-    > など、エラーが発生した場合は、「EXECUTE 権限が拒否されました PersistModel オブジェクトの」を現在のログインが権限を持っているかどうかを確認します。 ストアド プロシージャだけで明示的なアクセス許可を付与するには、次のように T-SQL ステートメントを実行します。`GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
+    > など、エラーが発生した場合は、「EXECUTE 権限が拒否されました PersistModel オブジェクトの」を現在のログインが権限を持っているかどうかを確認します。 ストアド プロシージャだけで明示的なアクセス許可を付与するには、次のように T-SQL ステートメントを実行します。 `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
 
 4. モデルを作成すると、データベースに保存、呼び出せますから直接[!INCLUDE[tsql](../../includes/tsql-md.md)]コードでは、システム ストアド プロシージャを使用して[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)です。
 

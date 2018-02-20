@@ -1,7 +1,7 @@
 ---
 title: "Machine Learning サーバー スタンドアロンまたは R Server のスタンドアロン インストール |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 11/16/2017
+ms.date: 02/14/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 275bda79d9c8cb74d871a4d13612847dc58592e8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2ecb60bd02b3fc1ee7ac7101749fa7affc2523bd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone"></a>Machine Learning Server (スタンドアロン) または R Server (スタンドアロン) をインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ SQL Server セットアップには、機械学習の SQL Server の外部で実
 + [Microsoft R Server の既存のインスタンスをアップグレードします。](#bkmk_upgrade)
 + [インストールするものの判断に役立つ](#bkmk_tips)
 
-##  <a name="bkmk_installMLServer"></a>Machine Learning Server (スタンドアロン) のインストールします。
+##  <a name="bkmk_installMLServer"></a> Machine Learning Server (スタンドアロン) のインストールします。
 
 この機能は、エンタープライズ ライセンスまたは対応するものが必要です。 **SQL Server 2017**です。
 
@@ -114,7 +114,7 @@ Microsoft R Server の以前のバージョンをインストールした場合�
     
 5.  **[インストールの準備完了]** ページで、選択内容を確認し、**[インストール]** をクリックします。
 
-## <a name="bkmk_upgrade"></a>R Server の既存のインスタンスをアップグレードします。
+## <a name="bkmk_upgrade"></a> R Server の既存のインスタンスをアップグレードします。
 
 Microsoft R Server (スタンドアロン) の以前のバージョンをインストールする場合は、新しいバージョンの R コンポーネントを使用するインスタンスをアップグレードできます。 アップグレードでは、最新ソフトウェア ライフ サイクルのサポート ポリシーを使用してサポート ポリシーも変更されます。 これにより、SQL Server リリースよりも別のスケジュールでより多くの場合、更新するインスタンス。
 
@@ -125,7 +125,7 @@ Microsoft R Server (スタンドアロン) の以前のバージョンをイン�
 
 2. インストーラーを実行し、指示に従います。 インストールする機能を選択する ページで、アップグレードする R Server の各インスタンスを選択します。
 
-## <a name ="bkmk_tips"></a>インストールのヒントとフォロー アップ
+## <a name ="bkmk_tips"></a> インストールのヒントとフォロー アップ
 
 このセクションでは、セットアップに関連する追加の情報を提供します。
 
@@ -151,11 +151,12 @@ R Server をインストールするときにまたは Machine Learning サー�
 |----|----|----|
 |R Server (スタンドアロン) |SQL Server 2016 セットアップ ウィザード|`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |R Server (スタンドアロン) |Windows スタンドアロン インストーラー|`C:\Program Files\Microsoft\R Server\R_SERVER`|
-|Machine Learning Server (スタンドアロン) |  SQL Server 2017 セットアップ ウィザード |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
+|Machine Learning Server (スタンドアロン) |  R 言語のオプションを使用して、SQL Server 2017 セットアップ ウィザード |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
+|Machine Learning Server (スタンドアロン) |  Python 言語オプションと、SQL Server 2017 セットアップ ウィザード |`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Machine Learning Server (スタンドアロン) |  Windows スタンドアロン インストーラー |`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |R Services (データベース内) |SQL Server 2016 セットアップ ウィザード|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
-|Machine Learning Services (データベース内) |SQL Server 2017 セットアップ ウィザード|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`または`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
-
+|Machine Learning Services (データベース内) |R 言語のオプションを使用して、SQL Server 2017 セットアップ ウィザード|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  |
+|Machine Learning Services (データベース内) |Python 言語オプションと、SQL Server 2017 セットアップ ウィザード| `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 ### <a name="development-tools"></a>開発ツール
 
 開発 IDE はセットアップの一部としてインストールされていません。 その他のツールは必要ありませんに R または Python の分布を使用して指定するようにすべての標準的なツールが含まれます。
@@ -182,7 +183,7 @@ RTM バージョンの SQL Server 2016 でが既知の問題 Microsoft R Server 
 
 この問題が発生した場合は、修正プログラムを適用することができます[プログラム KB3164398](https://support.microsoft.com/kb/3164398)を Windows Server Core 上の既存のインスタンスに R の機能を追加します。   詳細については、 [「Can't install Microsoft R Server Standalone on a Windows Server Core operating system」](https://support.microsoft.com/kb/3168691)(Windows Server Core オペレーティング システムに Microsoft R Server (スタンドアロン) をインストールすることはできません) を参照してください。
 
-###  <a name="bkmk_Uninstall"></a>Microsoft R Server の以前のバージョンからアップグレードします。
+###  <a name="bkmk_Uninstall"></a> Microsoft R Server の以前のバージョンからアップグレードします。
 
 Microsoft R Server のプレリリース版がインストールされている場合は、それをアンインストールしてから新しいバージョンにアップグレードする必要があります。
 

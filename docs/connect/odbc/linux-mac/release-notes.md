@@ -16,28 +16,40 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5aecc3796565d4c32d91fe28304bdd04f5793980
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 8fe5c32ed34d9056c69069d6b390a49fc71b396c
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Microsoft ODBC Driver for Linux と macOS 上の SQL Server のリリース ノート
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>新機能、[!INCLUDE[msCoName](../../../includes/msconame_md.md)]の ODBC ドライバーの 17 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux と macOS
 
-Azure SQL では、(拡張プライベート プレビュー) のインスタンスを管理します。 いくつかの相違点のマネージ インスタンスを使用する場合に注意してください。
--   FILESTREAM がサポートされていません 
--   ローカル ファイル システム アクセスはサポートされている、せずに tracefiles などのために必要な 
--   ローカル パスがサポートされていませんから UDT を作成します。 
--   Windows 統合認証がサポートされていません 
--   DTC がサポートされていません 
--   'sa' アカウントが存在しない (既定のアカウントと呼びます 'cloudSA')
--   TDS トークン エラー (0xAA) が正しくないサーバー名を返します
--   データベース名に特殊文字はサポートされていません 
--   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] is not supported
--   エラー メッセージが英語では、言語に関係なく常に表示される設定 (Azure と同じ) 
+**サポートされている新しいディストリビューション**: macOS 高 Sierra および Ubuntu 17.10 
+
+**パフォーマンスの向上**: 10 倍のパフォーマンスが向上する/8/utf-16 からドライバーに変換するときよりも大きいです。
+
+**追加された機能**:
+
+BCP API が常に暗号化されたサポート
+
+新しい接続文字列属性 UseFMTOnly には、一時テーブルを必要とする特殊なケースで以前のメタデータを使用するドライバーが原因です。
+
+Azure SQL のマネージ インスタンス (拡張プライベート プレビュー) をサポートします。 
+> [!NOTE]
+> さまざまな違いがあるマネージ インスタンスを使用する場合。
+> -   FILESTREAM がサポートされていません 
+> -   ローカル ファイル システム アクセスはサポートされている、せずに tracefiles などのために必要な 
+> -   ローカル コンピューターから UDT を作成するパスはサポートされていません 
+> -   Windows 統合認証はサポートされていません 
+> -   DTC がサポートされていません 
+> -   'sa' アカウントが存在しない (既定のアカウントと呼びます 'cloudSA')
+> -   TDS トークン エラー (0xAA) が正しくないサーバー名を返します
+> -   データベース名に特殊文字はサポートされていません 
+> -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] is not supported
+> -   エラー メッセージが英語では、言語に関係なく常に表示される設定 (Azure と同じ) 
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>新機能、[!INCLUDE[msCoName](../../../includes/msconame_md.md)]用 ODBC Driver 13.1 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux と macOS  
 
