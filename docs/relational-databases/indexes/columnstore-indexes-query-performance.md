@@ -8,20 +8,21 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 97c0483870e4f99b68265a09337109f1f0ce0ac2
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d8c18a2198e32bae0427ea286a64998ab546e3ac
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---query-performance"></a>列ストア インデックス - クエリ パフォーマンス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,7 +115,7 @@ ms.lasthandoff: 01/02/2018
 |Top Sort||いいえ|いいえ|はい||    
 |Window Aggregates||NA|NA|はい|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の新しいオペレーター。|    
     
- ¹[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 Premium Edition、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に該当します。    
+ ¹ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 Premium Edition、および次のバージョンに該当します [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### <a name="aggregate-pushdown"></a>集計プッシュ ダウン    
  SCAN ノードから条件を満たす行をフェッチしてバッチ モードで値を集計する、集計計算の通常の実行パスです。 パフォーマンスは良好ですが、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、次の条件を満たしていれば、集計操作を SCAN ノードにプッシュして、集計計算のパフォーマンスを大幅に (バッチ モードでの実行に加えてさらに) 向上できます。 
@@ -163,8 +164,8 @@ FROM FactResellerSalesXL_CCI
     -   NULL を評価する式はサポートされていません。    
     
 ## <a name="see-also"></a>参照    
- [列ストア インデックス設計ガイダンス](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
- [列ストア インデックス データ読み込みガイダンス](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
+ [列ストア インデックスの設計ガイダンス](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
+ [列ストア インデックスのデータ読み込みガイダンス](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [列ストアを使用したリアルタイム運用分析の概要](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
  [データ ウェアハウスの列ストア インデックス](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [列ストア インデックスの最適化](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)    

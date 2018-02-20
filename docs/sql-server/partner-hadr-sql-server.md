@@ -19,11 +19,11 @@ ms.date: 09/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 1c0f95e02d7b214d9a1ed295c55e42f8416451f0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 18a740fa623665b6978bf5897f5654657602270d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server の高可用性とディザスター リカバリーのパートナー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ SQL Server サービスの高可用性とディザスター リカバリーを�
 | --- | --- | --- |
 |![azure][5] |**Azure Site Recovery**<br>Site Recovery は、ワークロードをレプリケートすることで、仮想マシンまたは物理サーバーで実行中のワークロードがプライマリ サイトを使用できない場合に、2 番目の場所で引き続き使用できるようにします。 SQL Server 仮想マシンをオンプレミスのデータ センターから Azure またはその他のオンプレミスのデータ センター、もしくはある Azure データ センターから別の Azure データ センターにレプリケートしてフェールオーバーすることができます。<br><br> SQL Server 2008 R2 - SQL Server 2016 の Enterprise および Standard エディション|[Web サイト][azure_website]<br>[Marketplace][azure_marketplace]<br>[データシート][azure_datasheet]<br>[Twitter][azure_twitter]<br>[ビデオ][azure_youtube]|
 |![dh2i][2] |**DH2i**<br>DxEnterprise は、計画/計画外のダウンタイムをほぼゼロに抑え、大幅なコスト削減を実現し、管理を著しく簡素化し、物理と論理の両方を統合するために役立つ、Windows、Linux、Docker 向けのスマート可用性ソフトウェアです。<br><br>SQL Server 2005 以降、Windows Server 2008 R2 以降、Ubuntu 16 以降、RHEL 7 以降、CentOS 7 以降|[Web サイト][dh2i_website]<br>[データシート][dh2i_datasheet]<br>[Twitter][dh2i_twitter]<br>[ビデオ][dh2i_youtube]|
-|![hpe][4] |**HPE Serviceguard**<br>HPE Serviceguard for Linux (SGLX) は、物理環境か仮想環境かに関わらず、インフラストラクチャとアプリケーションの大量のエラーから発生する計画されてた、または計画外のダウンタイムから Linux ® の SQL Server 2017 の重要なワークロードを保護します。 HPE SGLX はベータ プログラムの一環として、フェールオーバー クラスター インスタンスと Always On 可用性グループの SQL Server ワークロードの状況依存型の監視と回復のオプションを提供しています。 HPE SGLX ではデータ整合性とパフォーマンスを損なわずに、アップタイムを最大化します。<br><br>Linux 上の SQL Server 2017 - RedHat 7.3、7.4、SUSE 12 SP2、SP3|[Web サイト][hpe_website]<br>[データシート][hpe]<br>[ベータ版のダウンロード][hpe_download]<br>[ブログ][hpe_download]<br>[Twitter][hpe_twitter]
+|![hpe][4] |**HPE Serviceguard**<br>HPE Serviceguard for Linux (SGLX) は、物理環境か仮想環境かに関わらず、インフラストラクチャとアプリケーションの大量のエラーから発生する計画されてた、または計画外のダウンタイムから Linux ® の SQL Server 2017 の重要なワークロードを保護します。 HPE SGLX A.12.20.00 以降は、フェールオーバー クラスター インスタンスと Always On 可用性グループの SQL Server ワークロードの状況依存型の監視と回復のオプションを提供しています。 HPE SGLX ではデータ整合性とパフォーマンスを損なわずに、アップタイムを最大化します。<br><br>Linux 上の SQL Server 2017 - RedHat 7.3、7.4、SUSE 12 SP2、SP3|[Web サイト][hpe_website]<br>[データシート][hpe]<br>[評価版をダウンロードする][hpe_download]<br>[ブログ][hpe_download]<br>[Twitter][hpe_twitter]
 |![idera][3]|**IDERA**<br>SQL の安全なバックアップは、SQL Server の高性能なバックアップと回復のソリューションです。データベースのバックアップ時間とバックアップ ファイルのサイズを削減し、バックアップ ファイル内のデータベースへのインスタント読み取り/書き込みアクセスを提供することで、コストを削減します。<br><br>Microsoft SQL Server: 2005 SP1 以降、2008、2008 R2、2012、2014、2016 すべてのエディション |[Web サイト][idera_website]|
 |![nec][7]|**NEC**<br>ExpressCluster は、総合的で完全に自動化された高可用なディザスター リカバリー ソリューションです。オンプレミスまたはクラウド環境の物理マシンや仮想マシン上で実行される SQL Server と関連アプリケーションのハードウェア、ソフトウェア、ネットワーク、サイトの障害など、あらゆる主な障害に対応します。<br><br>Microsoft SQL Server: 2005 以降 (すべてのエディション) |[Web サイト][necec_website]<br>[データシート][necec_datasheet]<br>[ビデオ][necec_youtube]<br>[ダウンロード][necec_download]|
 |![portworx][6] |**Portworx**<br>Portworx は、実稼働環境で実行されているステートフル コンテナーのソリューションです。 Portworx では、ユーザーは、Kubernetes、Mesosphere DC/OS、Docker Swarm を含む任意のコンテナー スケジューラーを使用して、すべてのインフラストラクチャのすべてのデータベースまたはステートフル サービスを管理できます。 Portworx は DevOps チームが実稼働環境のコンテナー化されたデータベースまたはその他のステートフル サービスを実行する際に遭遇する、特に一般的な 5 つの問題 (永続化、高可用性、データの自動化、複数のデータ ストアとインフラストラクチャのサポート、セキュリティ) を解決します。<br><br>Docker 上の SQL Server 2017 |[Web サイト][portworx_website]<br>[ドキュメント][portworx_docs]<br>[ビデオ][portworx_youtube]|
@@ -104,7 +104,7 @@ SQL Server サービスの高可用性とディザスター リカバリーを�
 [portworx_docs]: http://docs.portworx.com/
 
 <!--Download links-->
-[hpe_download]: http://downloads.linux.hpe.com/SDR/project/sglx/sglx-beta/
+[hpe_download]: https://h20392.www2.hpe.com/portal/swdepot/displayProductInfo.do?productNumber=SGLX-DEMO
 [necec_download]: https://www.necam.com/ExpressCluster/30daytrial/
 <!--Blog links-->
 [hpe_blog]: https://community.hpe.com/t5/Servers-The-Right-Compute/SQL-Server-for-Linux-Is-Here-and-A-New-Chapter-for-Mission/ba-p/6977571#.WiHWW0xFwUE

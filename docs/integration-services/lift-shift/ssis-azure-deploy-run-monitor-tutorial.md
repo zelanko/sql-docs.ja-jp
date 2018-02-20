@@ -1,6 +1,6 @@
 ---
 title: "Azure で SSIS パッケージを配置、実行、および監視する | Microsoft Docs"
-ms.date: 09/25/2017
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,21 +8,22 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bf9df198105549f481dda8472f7142533fa8f23
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: aa1cc5db91745fb7773856a8f66b03c82bba3e9a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Azure で SSIS パッケージを配置、実行、および監視する
 このチュートリアルでは、Azure SQL Database の SSISDB カタログ データベースに SQL Server Integration Services プロジェクトを配置する方法、Azure-SSIS Integration Runtime でのパッケージの実行方法、および実行中のパッケージの監視方法を示します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 始める前に、バージョン 17.2 以降の SQL Server Management Studio があることを確認します。 最新バージョンの SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
 
@@ -53,7 +54,7 @@ SQL Server Management Studio を使用して、Azure SQL Database サーバー�
 
 5. オブジェクト エクスプローラーで、**[Integration Services カタログ]**、**[SSISDB]** の順に展開し、SSIS カタログ データベース内のオブジェクトを表示します。
 
-## <a name="deploy-a-project"></a>プロジェクトを配置する
+## <a name="deploy-a-project-with-the-deployment-wizard"></a>配置ウィザードを使用してプロジェクトを配置する
 
 ### <a name="start-the-integration-services-deployment-wizard"></a>Integration Services 配置ウィザードを起動する
 1. SSMS のオブジェクト エクスプローラーで、**[Integration Services カタログ]** ノードと **[SSISDB]** ノードを展開した状態で、プロジェクト フォルダーを展開します。
@@ -78,11 +79,75 @@ SQL Server Management Studio を使用して、Azure SQL Database サーバー�
 4.  **[レビュー]** ページで、選択した設定を確認します。
     -   選択内容を変更するには、**[戻る]** を選択するか、左ペインで任意の手順を選択します。
     -   **[配置]** をクリックして、配置プロセスを開始します。
-  
+
+    > ![NOTE] "**アクティブなワーカー エージェントがありません。(.Net SqlClient Data Provider)**" というエラー メッセージが表示される場合は、Azure-SSIS Integration Runtime が動いていることを確認してください。 Azure-SSIS IR が停止状態の間に配置しようとすると、このエラーが発生します。
+
 5.  配置プロセスが完了すると、**[結果]** ページが開きます。 このページでは、各アクションが成功したか、失敗したかを表示します。
     -   アクションが失敗した場合は、**[結果]** 列の **[失敗]** を選択すると、エラーの説明が表示されます。
     -   必要に応じて、**[レポートの保存]** を選択して結果を XML ファイルに保存します。
     -   **[閉じる]** を選択してウィザードを終了します。
+
+## <a name="deploy-a-project-with-powershell"></a>PowerShell でプロジェクトを配置する
+
+PowerShell を使って Azure SQL Database の SSISDB にプロジェクトを配置するには、次のスクリプトを要件に適合させます。
+
+```powershell
+# Variables
+$ProjectFilePath = "C:\<folder>"
+$SSISDBServerEndpoint = "<servername>.database.windows.net"
+$SSISDBServerAdminUserName = "<username>"
+$SSISDBServerAdminPassword = "<password>"
+
+# Load the IntegrationServices Assembly
+[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Management.IntegrationServices") | Out-Null;
+
+# Store the IntegrationServices Assembly namespace to avoid typing it every time
+$ISNamespace = "Microsoft.SqlServer.Management.IntegrationServices"
+
+Write-Host "Connecting to server ..."
+
+# Create a connection to the server
+$sqlConnectionString = "Data Source=" + $SSISDBServerEndpoint + ";User ID="+ $SSISDBServerAdminUserName +";Password="+ $SSISDBServerAdminPassword + ";Initial Catalog=SSISDB"
+$sqlConnection = New-Object System.Data.SqlClient.SqlConnection $sqlConnectionString
+
+# Create the Integration Services object
+$integrationServices = New-Object $ISNamespace".IntegrationServices" $sqlConnection
+
+# Get the catalog
+$catalog = $integrationServices.Catalogs['SSISDB']
+
+write-host "Enumerating all folders..."
+
+$folders = ls -Path $ProjectFilePath -Directory
+
+if ($folders.Count -gt 0)
+{
+    foreach ($filefolder in $folders)
+    {
+        Write-Host "Creating Folder " $filefolder.Name " ..."
+
+        # Create a new folder
+        $folder = New-Object $ISNamespace".CatalogFolder" ($catalog, $filefolder.Name, "Folder description")
+        $folder.Create()
+
+        $projects = ls -Path $filefolder.FullName -File -Filter *.ispac
+        if ($projects.Count -gt 0)
+        {
+            foreach($projectfile in $projects)
+            {
+                $projectfilename = $projectfile.Name.Replace(".ispac", "")
+                Write-Host "Deploying " $projectfilename " project ..."
+
+                # Read the project file, and deploy it to the folder
+                [byte[]] $projectFileContent = [System.IO.File]::ReadAllBytes($projectfile.FullName)
+                $folder.DeployProject($projectfilename, $projectFileContent)
+            }
+        }
+    }
+}
+
+Write-Host "All done." 
+```
 
 ## <a name="run-a-package"></a>パッケージの実行
 

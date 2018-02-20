@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - query statistics reports [SQL Server]
 - disk usage reports [SQL Server]
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73dc17666d055ffbd4646befb43ff2a40ab77053
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a2395391111bcd8b21fd030d02bc4756aa98d1fc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="system-data-collection-set-reports"></a>システム データ コレクション セット レポート
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] データ コレクターは、各システム データ コレクション セットの履歴レポートを提供します。 次の各レポートでは、管理データ ウェアハウスに格納されているデータが使用されます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+データ コレクターは、各システム データ コレクション セットの履歴レポートを提供します。 次の各レポートでは、管理データ ウェアハウスに格納されているデータが使用されます。  
   
 -   [ディスク使用量の概要](#Disk)  
   
@@ -62,13 +64,13 @@ ms.lasthandoff: 11/17/2017
  グラフの下にあるテーブルには、データ収集時間と、対応する使用量データの一覧が表示されます。  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>データベースのディスク使用量: <database_name> サブレポート  
- **[データベースのディスク使用量]:***<database_name>* サブレポートは、ディスク使用量コレクション セット レポートの概要テーブルでデータベース名をクリックすると表示されます。 このレポートには、データベースのデータ ファイルおよびトランザクション ログ ファイルによる使用領域の内訳が数値とグラフで示されます。 データ ファイルの使用領域は、インデックス ページ、未割り当ての領域、データ ページ、および未使用領域に割り当てられた割合として分類されます。 これらのカテゴリは、次のように定義されています。  
+ **[データベースのディスク使用量: <*データベース名*>]** サブレポートは、ディスク使用量コレクション セット レポートの概要テーブルでデータベース名をクリックすると表示されます。 このレポートには、データベースのデータ ファイルおよびトランザクション ログ ファイルによる使用領域の内訳が数値とグラフで示されます。 データ ファイルの使用領域は、インデックス ページ、未割り当ての領域、データ ページ、および未使用領域に割り当てられた割合として分類されます。 これらのカテゴリは、次のように定義されています。  
   
 |カテゴリ|定義|  
 |--------------|----------------|  
 |インデックス|インデックス ページを保持するために使用されているディスク領域のサイズ。|  
 |未割り当て|データベースで利用可能なディスク領域のうち、どのオブジェクトにもまだ割り当てられていない領域のサイズ。|  
-|データ|データ ページで使用されているディスク領域のサイズ。|  
+|data|データ ページで使用されているディスク領域のサイズ。|  
 |未使用|1 つ以上のオブジェクトに割り当てられているディスク領域のうち、まだ使用されていない領域のサイズ。|  
   
  トランザクション ログ ファイルの使用領域は、使用済み領域と未使用領域に分類されます。  

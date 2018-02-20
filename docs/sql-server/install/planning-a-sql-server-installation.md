@@ -8,23 +8,27 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords: installing SQL Server, planning
+helpviewer_keywords:
+- installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 5f45fe1c93f33f8f4666791c9014c1ca3f4a5aec
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6fa512799bf19e284b25b7f847d71d3f6e5aab7a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="planning-a-sql-server-installation"></a>SQL Server のインストール計画
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールするには、次の手順を実行します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールするには、次の手順を実行します。  
   
 -   インストール要件、システム構成チェック、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールに関するセキュリティ上の考慮事項を確認します。  
   
@@ -41,25 +45,25 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [SQL Server インストールの新機能](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
- このトピックでは、今バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でのインストールに関する、新しい機能や強化された機能について説明します。  
+ この記事では、このバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でのインストールに関する、新しい機能や強化された機能について説明します。  
   
  [SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
- このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインスタンスのインストールおよび実行に必要な最低限のハードウェア要件とソフトウェア要件について説明します。  
+ この記事では、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスのインストールおよび実行に必要な最低限のハードウェア要件とソフトウェア要件について説明します。  
   
  [SQL Server インストールにおけるセキュリティの考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
- このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール前と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインストール後で考慮する必要があるセキュリティのベスト プラクティスについて説明します。  
+ この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール前と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール後で考慮する必要があるセキュリティのベスト プラクティスについて説明します。  
   
  [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
- このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのリリースにおける既定のサービス構成、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時およびインストール後に設定できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの構成オプションについて説明します。  
+ この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のこのリリースにおける既定のサービス構成、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時とインストール後に設定できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの構成オプションについて説明します。  
   
  [ネットワーク プロトコルとネットワーク ライブラリ](../../sql-server/install/network-protocols-and-network-libraries.md)  
- このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのリリースにおけるネットワーク プロトコルの既定の構成と、利用可能な構成オプションについて説明します。  
+ この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のこのリリースにおけるネットワーク プロトコルの既定の構成と、利用可能な構成オプションについて説明します。  
   
  [SQL Server の複数のバージョンおよびインスタンスの使用](../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の複数のバージョンおよびインスタンスのインストールに関する考慮事項について説明します。  
+ この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のバージョンおよびインスタンスのインストールに関する考慮事項について説明します。  
   
  [SQL Server のローカル言語版](../../sql-server/install/local-language-versions-in-sql-server.md)  
- このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のローカライズ版について説明します。  
+ この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカライズ版について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
  [SQL Server のインストール](../../database-engine/install-windows/install-sql-server.md)  
@@ -68,7 +72,7 @@ ms.lasthandoff: 12/05/2017
  [SQL Server のビジネス インテリジェンス機能のインストール](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップのドキュメントのこのセクションでは、Microsoft BI プラットフォームの一部である [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能のインストール方法について説明します。  
   
- [SQL Server をアップグレードする](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [SQL Server のアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)  
  このセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンのインスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする方法について概説します。  
   
  [SQL Server のアンインストール](../../sql-server/install/uninstall-sql-server.md)  

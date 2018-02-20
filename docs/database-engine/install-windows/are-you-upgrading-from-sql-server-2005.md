@@ -8,22 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eae5931014a84ff1169412b830a20e217627918c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d582d7d9ca0bc90ca40ee34e946d49bf545024bd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>SQL Server 2005 からアップグレードしますか?
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server 2005 の延長サポートの終了は、新しいバージョンの SQL Server や Azure SQL Database への早めのアップグレードをお勧めする 1 つの理由です。 アップグレードすると、セキュリティとコンプライアンスを維持し、パフォーマンスを大きく改善し、データ プラットフォームのインフラストラクチャを最適化できます。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
+ SQL Server 2005 の延長サポートの終了は、新しいバージョンの SQL Server や Azure SQL Database への早めのアップグレードをお勧めする 1 つの理由です。 アップグレードすると、セキュリティとコンプライアンスを維持し、パフォーマンスを大きく改善し、データ プラットフォームのインフラストラクチャを最適化できます。  
   
  アップグレードまたは移行の計画と自動化を行うための情報、ガイダンス、ツールの詳細については、「 [SQL Server 2005 のサポート終了](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)」をご覧ください。  
   
@@ -64,10 +68,10 @@ ms.lasthandoff: 01/18/2018
   
 -   アップグレードする方法をご確認ください。  
   
-    -   トピック「 [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md)」で使用可能なアップグレード方法を確認し、計画方法とテスト方法を学習します。  
+    -   「[データベース エンジンのアップグレード](../../database-engine/install-windows/upgrade-database-engine.md)」記事で使用可能なアップグレード方法を確認し、計画方法とテスト方法を学習します。  
   
         > [!IMPORTANT]  
-        >  SQL Server 2005 インスタンスを SQL Server 2017 サーバーにイン プレースでアップグレードすることはできません。 SQL Server 2017 のインスタンスをインストールしてから、SQL Server 2005 データベースを新規インストールに移行する必要があります。 詳細については、トピック「 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)」の「New Installation Upgrade」 (新しいインストールのアップグレード) セクションを参照してください。  
+        >  SQL Server 2005 インスタンスを SQL Server 2017 サーバーにイン プレースでアップグレードすることはできません。 SQL Server 2017 のインスタンスをインストールしてから、SQL Server 2005 データベースを新規インストールに移行する必要があります。 詳しくは、トピック「[データベース エンジンのアップグレード方法の選択](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)」の新規インストール アップグレードに関するセクションをご覧ください。  
    
   
 -   アップグレードまたは移行の計画と自動化を行うための情報、ガイダンス、ツールの詳細については、「 [SQL Server 2005 のサポート終了](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)」をご覧ください。  

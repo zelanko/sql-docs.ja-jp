@@ -22,18 +22,21 @@ helpviewer_keywords:
 - installing Analysis Services, upgrading
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: 4286f2266d115d39ad97ff3f6255187e7a01d968
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: eb0bcf7a72e59e58bdd4f980c5be175c2a0affdd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services のアップグレード
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Analysis Services インスタンスを同じサーバー モードの SQL Server バージョンにアップグレードすると、「[Analysis Services の新機能](../../analysis-services/what-s-new-in-analysis-services.md)」で説明する、最新リリースで導入された機能を利用できます。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  Analysis Services インスタンスを同じサーバー モードの SQL Server バージョンにアップグレードすると、「[Analysis Services の新機能](../../analysis-services/what-s-new-in-analysis-services.md)」で説明する、最新リリースで導入された機能を利用できます。  
   
  同じハードウェアで実行されている他のインスタンスとは独立して、各インスタンスをインプレース アップグレードできます。 ほとんどの管理者は、実稼働ワークロードを新しいサーバーに転送する前にアプリケーションをテストするために、新しいバージョンの新しいインスタンスをインストールしますが、 開発サーバーやテスト サーバーでは、インプレース アップグレードの方が便利な場合があります。  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 01/08/2018
   
  表形式データベースと多次元データベースは、異なるバージョン パスに従います。 多次元モデルと表形式モデルの互換性レベルが似た値になるのは偶然です。  機能の変更がどちらか一方にのみ影響する場合、モードは異なる速度で進歩することになります。  
   
- 基礎知識を得るために、次の表には互換性レベルがまとめられていますが、詳細トピックを確認して、各レベルが提供する機能を把握する必要があります。  
+ 基礎知識を得るために、次の表には互換性レベルがまとめられていますが、詳細記事を確認して、各レベルが提供する機能を把握する必要があります。  
   
 ||||  
 |-|-|-|  

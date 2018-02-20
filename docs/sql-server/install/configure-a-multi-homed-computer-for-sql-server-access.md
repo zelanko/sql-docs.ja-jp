@@ -8,7 +8,8 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,24 +17,26 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 64c02e1d3e2c0304acebd9d8c8c9a60982841c10
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 084fc871f35c8902fab894ad170db57b44f2b824
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>SQL Server アクセス用のマルチホーム コンピューターの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] サーバーが複数のネットワークまたはネットワーク サブネットへの接続を提供する必要がある場合、一般的なシナリオではマルチホーム コンピューターを使用します。 通常、このコンピューターは、境界ネットワーク (DMZ、非武装地帯、またはスクリーン サブネットとも呼ばれます) にあります。 このトピックでは、マルチホーム環境内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへのネットワーク接続用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とセキュリティが強化された Windows ファイアウォールを構成する方法について説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  サーバーが複数のネットワークまたはネットワーク サブネットへの接続を提供する必要がある場合、一般的なシナリオではマルチホーム コンピューターを使用します。 通常、このコンピューターは、境界ネットワーク (DMZ、非武装地帯、またはスクリーン サブネットとも呼ばれます) にあります。 この記事では、マルチホーム環境内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへのネットワーク接続用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とセキュリティが強化された Windows ファイアウォールを構成する方法について説明します。  
   
 > [!NOTE]  
 >  マルチホーム コンピューターには複数のネットワーク アダプターがあるか、または 1 つのネットワーク アダプターに複数の IP アドレスを使用するように構成されています。 デュアルホーム コンピューターには 2 つのネットワーク アダプターがあるか、または 1 つのネットワーク アダプターに 2 つの IP アドレスを使用するように構成されています。  
   
- このトピックを続行する前に、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」のトピックの説明をよく理解してください。 このトピックには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントがファイアウォールと連携して動作する方法に関する基本的な情報が含まれています。  
+ この記事を続行する前に、「[SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」の記事の説明をよく理解してください。 この記事には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントがファイアウォールと連携して動作する方法に関する基本的な情報が含まれています。  
   
  **この例の前提条件は、次のとおりです。**  
   
@@ -44,7 +47,7 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     >  IPv4 アドレスは、オクテットと呼ばれる一連の 4 つの数字です。 各数字は、ピリオドで区切られた 255 より小さい数字です (127.0.0.1 など)。 IPv6 アドレスは、コロンで区切られた一連の 8 つの 16 進数です (fe80:4898:23:3:49a6:f5c1:2452:b994 など)。  
   
--   ファイアウォール ルールでは、特定のポート (ポート 1433 など) を経由したアクセスを許可できます。 または、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] プログラム (sqlservr.exe) へのアクセスを許可できます。 どちらのメソッドもあまりよくありません。 境界ネットワーク内のサーバーはイントラネット上のサーバーよりも攻撃に対して脆弱なので、このトピックでは、より正確に制御し、開くポートを個別に選択する場合を前提とします。 そのため、このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が固定ポートでリッスンするように構成することを前提とします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用するポートの詳細については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」をご参照ください。  
+-   ファイアウォール ルールでは、特定のポート (ポート 1433 など) を経由したアクセスを許可できます。 または、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] プログラム (sqlservr.exe) へのアクセスを許可できます。 どちらのメソッドもあまりよくありません。 境界ネットワーク内のサーバーはイントラネット上のサーバーよりも攻撃に対して脆弱なので、この記事では、より正確に制御し、開くポートを個別に選択する場合を前提とします。 そのため、この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が固定ポートでリッスンするように構成することを前提とします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用するポートの詳細については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」をご参照ください。  
   
 -   次の例では、TCP ポート 1433 を使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] へのアクセスを構成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントが異なる他のポートは、同じ一般的な手順を使用して構成できます。  
   

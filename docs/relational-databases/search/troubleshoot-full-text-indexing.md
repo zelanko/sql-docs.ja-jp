@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], full-text search
 - troubleshooting [full-text search]
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
-caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e273a9963b26f5c6361cf459bba54010ad58d56
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ddb9ea039218fa967132572df461103957300161
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="troubleshoot-full-text-indexing"></a>フルテキスト インデックスの作成のトラブルシューティング
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   フルテキスト インデックスが作成されているテーブルを含むファイル グループがオフラインになるか、読み取り専用になる。  
   
- すべての重要なフルテキスト インデックス作成操作の最後、または作成が完了していないことがわかったときは、クロール ログを確認してください。  
+ すべての重要なフルテキスト インデックス作成操作の最後、または作成が完了していないことがわかったときは、クロール ログを確認します。  
   
 ### <a name="unsigned-components"></a>署名されていないコンポーネント  
  既定では、フルテキスト インデクサーでは、読み込むフィルターやワード ブレーカーに署名が必要です。 コンポーネントに署名されていない場合、つまり署名されていないカスタム コンポーネントをインストールする可能性がある場合は、署名の検証が無視されるようにフルテキスト インデクサーを構成する必要があります。  

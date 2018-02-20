@@ -17,20 +17,23 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: bd176479745f786197782bc489b45ea2c1e74429
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: df0547a4e9665040cea0aff190586759d6a24cd4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Power Pivot for SharePoint のアップグレード
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の配置を [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] にアップグレードするために必要な手順について説明します。 具体的な手順は、お使いの環境で現在実行されている SharePoint のバージョンによって異なります。また、この手順には、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint アドイン (**spPowerPivot.msi**) が含まれます。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  この記事では、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の配置を [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] にアップグレードするために必要な手順について説明します。 具体的な手順は、お使いの環境で現在実行されている SharePoint のバージョンによって異なります。また、この手順には、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint アドイン (**spPowerPivot.msi**) が含まれます。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
  リリース ノートについては、「 [SQL Server 2016 リリース ノート](http://go.microsoft.com/fwlink/?LinkID=398124)」を参照してください。  
   
- **このトピックの内容:**  
+ **この記事の内容:**  
   
  [前提条件](#bkmk_prereq)  
   
@@ -54,7 +57,7 @@ ms.lasthandoff: 01/08/2018
   
 -   複数の [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] インスタンスを含むマルチサーバー SharePoint 2010 ファームをアップグレードする場合は、各サーバーを完全にアップグレードした **後** で、次のサーバーのアップグレードを続行する必要があります。 完全なアップグレードでは、SQL Server セットアップを実行して [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] プログラム ファイルをアップグレードした後、アップグレードしたサービスを構成するアップグレード処理を実行します。 適切な [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールまたは Windows PowerShell でアップグレード処理を実行するまでは、サーバーの可用性が制限されます。  
   
--   SharePoint 2010 ファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスおよび Analysis Services のインスタンスはすべて、同じバージョンである必要があります。 バージョンを確認する方法の詳細については、このトピックの「 [PowerPivot のコンポーネントとサービスのバージョンを確認する](#bkmk_verify_versions) 」を参照してください。  
+-   SharePoint 2010 ファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスおよび Analysis Services のインスタンスはすべて、同じバージョンである必要があります。 バージョンを確認する方法について詳しくは、この記事の「[PowerPivot のコンポーネントとサービスのバージョンを確認する](#bkmk_verify_versions)」をご覧ください。  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールは SQL Server の共有機能の 1 つで、すべての共有機能は同時にアップグレードされます。 アップグレード プロセス中に、共有機能のアップグレードを必要とする他の SQL Server インスタンスまたは機能を選択すると、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールもアップグレードされます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールがアップグレードされても [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] インスタンスがアップグレードされない場合は、問題が発生している可能性があります。 SQL Server の共有機能の詳細については、「[インストール ウィザードを使用した SQL Server 2016 へのアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)」を参照してください。  
   
@@ -139,7 +142,7 @@ ms.lasthandoff: 01/08/2018
   
     -   [Power Pivot for SharePoint 用 PowerShell リファレンス](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
-5.  アップグレード後の手順を実行し、ファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーのバージョンを確認して、アップグレードが成功したことを確認します。 詳細については、このトピックの「 [アップグレード後の検証タスク](#verify) 」以降のセクションを参照してください。  
+5.  アップグレード後の手順を実行し、ファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーのバージョンを確認して、アップグレードが成功したことを確認します。 詳しくは、この記事の「[アップグレード後の検証タスク](#verify)」および次のセクションをご覧ください。  
   
 ##  <a name="bkmk_uprgade_sharepoint2010"></a> 既存の SharePoint 2010 ファームのアップグレード  
  SharePoint 2010 に配置された [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をアップグレードするには、次の手順を実行します。  
@@ -207,7 +210,7 @@ ms.lasthandoff: 01/08/2018
   
 8.  ファーム内の各 SQL Server Analysis Services (**) サービスに対して、1) SQL Server セットアップを実行する、2)** 構成ツールを実行するという[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]処理を繰り返します [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 。  
   
-9. アップグレード後の手順を実行し、ファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーのバージョンを確認して、アップグレードが成功したことを確認します。 詳細については、このトピックの「 [アップグレード後の検証タスク](#verify) 」以降のセクションを参照してください。  
+9. アップグレード後の手順を実行し、ファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーのバージョンを確認して、アップグレードが成功したことを確認します。 詳しくは、この記事の「[アップグレード後の検証タスク](#verify)」および次のセクションをご覧ください。  
   
 10. **エラーのトラブルシューティング**  
   
@@ -262,7 +265,7 @@ Get-PowerPivotSystemService
   
 3.  **[詳細]**をクリックします。  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ファイル バージョンは 13.00.\<メジャー ビルド>.\<マイナー ビルド> です。  
+4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ファイルのバージョンは、13.00.\<メジャー ビルド>.\<マイナー ビルド> でなければなりません。  
   
 5.  この数値が [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューションおよびシステム サービスのバージョンと同じであることを確認します。  
   
@@ -301,7 +304,7 @@ Get-PowerPivotSystemService
   
 3.  **[信頼できるデータ プロバイダー]**をクリックします。 MSOLAP.5 (Microsoft OLE DB プロバイダー (OLAP Services 11.0 用)) が表示されます。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をアップグレードした場合、以前のバージョンの MSOLAP.4 も表示されます。  
   
-4.  詳細については、「 [Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)」を参照してください。  
+4.  詳細については、「 [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)」を参照してください。  
   
  MSOLAP.4 には、"Microsoft OLE DB プロバイダー (OLAP Services 10.0 用)" という説明が表示されます。 このバージョンは、Excel Services と共にインストールされる [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] に付属する既定のバージョンか、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] バージョンである可能性があります。 SharePoint によってインストールされる既定のバージョンでは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスはサポートされません。 SharePoint で [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ブックに接続するには、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 以降のバージョンが必要です。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] バージョンがインストールされていることを確認するには、前のセクションの手順に従って、ファイルのプロパティでバージョンを確認してください。  
   
@@ -319,7 +322,7 @@ Get-PowerPivotSystemService
   
  最初のサーバーをアップグレードした後は、まだアップグレードされていない他のサーバーが **使用できなくなります**。 すべてのサーバーが同じレベルで実行されるようになると、再び使用可能になります。  
   
- SQL Server セットアップによって [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション ファイルが物理コンピューター上の適切な位置でアップグレードされますが、ファームで使用中のソリューションをアップグレードするには、このトピックの前のセクションで説明した [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールを使用する必要があります。  
+ SQL Server セットアップによって [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション ファイルが物理コンピューター上の適切な位置でアップグレードされますが、ファームで使用中のソリューションをアップグレードするには、この記事の前のセクションで説明した [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールを使う必要があります。  
   
 ##  <a name="qfe"></a> ファーム内の Power Pivot インスタンスに QFE を適用する  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint サーバーに修正プログラムを適用すると、既存のプログラム ファイルが、特定の問題の修正を含む新しいバージョンに更新されます。 QFE をマルチサーバー トポロジに適用するときに、最初に使用すべきプライマリ サーバーはありません。 ファーム内の他の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーに同じ QFE を適用している限り、どのサーバーからでも開始できます。  

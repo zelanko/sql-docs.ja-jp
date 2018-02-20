@@ -8,30 +8,35 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords: upgrading SQL Server
+helpviewer_keywords:
+- upgrading SQL Server
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 63b740d38d52feb7e29b724560c0d6f29023057b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 7ea633debf8e726dfd8de81c0cfb57104ea1b3bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-sql-server"></a>SQL Server をアップグレードする
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ss2016](../../includes/sssql15-md.md)] のインスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行して [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする前に、アップグレード プロセスに関する以下のトピックとリリース ノートを確認してください。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ss2016](../../includes/sssql15-md.md)] のインスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行して [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードする前に、アップグレード プロセスに関する以下の記事とリリース ノートを確認してください。  
   
    - [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]からアップグレードする方法については、「 [Are you upgrading from SQL Server 2005?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)」(SQL Server 2005 からのアップグレード) を参照してください。  
    - [SQL Server 2016 リリース ノート](../../sql-server/sql-server-2016-release-notes.md) 
    - [SQL Server 2017 リリース ノート](../../sql-server/sql-server-2017-release-notes.md) 
   
 ## <a name="in-this-section"></a>このセクションの内容  
-このセクションのトピックは次のとおりです。  
+ここでは、以下の記事について説明します。  
   
 -   [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
 -   [Data Migration Assistant を実行してアップグレードを準備する](../../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md)  

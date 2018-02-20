@@ -1,25 +1,20 @@
 ---
 title: "更新済み - SQL Server 用 Integration Services のドキュメント | Microsoft Docs"
 description: "Microsoft SQL Server 用 Integration Services の最近変更されたドキュメントで更新されたコンテンツのスニペットを示します。"
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: 
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: integration-services
-ms.openlocfilehash: 9660fa7239c14c3adc963cc75ceb98de8316734c
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: ssis
+ms.date: 02/03/2018
+ms.openlocfilehash: 8bfcdc3fb1033620d351ecaee2c79910c475dd94
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-integration-services-for-sql-server"></a>新規または最近更新: SQL Server 用 Integration Services
 
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/04/2017
 
 
 
-- *更新日の範囲:* &nbsp; **2017 年 9 月 28 日**&nbsp;から &nbsp; **2017 年 12 月 2 日**
+- *"更新日の範囲:"* &nbsp; **2017 年 12 月 3 日**&nbsp;から&nbsp;**2018 年 2 月 3 日**
 - *対象領域:* &nbsp; **SQL Server 用 Integration Services**。
 
 
@@ -46,8 +41,18 @@ ms.lasthandoff: 12/04/2017
 以下のリンクは、最近追加された新しい記事に移動します。
 
 
-1. [オンプレミスおよび Azure のファイル共有のファイルを格納および取得する](lift-shift/ssis-azure-files-file-shares.md)
-2. [Azure にデプロイされた SSIS パッケージの検証](lift-shift/ssis-azure-validate-packages.md)
+1. [[すべてのプリンシパルを参照] ダイアログ ボックス](catalog/browse-all-principals-dialog-box.md)
+2. [[構成] ダイアログ ボックス](catalog/configure-dialog-box.md)
+3. [[フォルダーのプロパティ] ダイアログ ボックス](catalog/folder-properties-dialog-box.md)
+4. [Integration Services (SSIS) カタログ Transact-SQL リファレンス](catalog/integration-services-ssis-catalog-transact-sql-reference.md)
+5. [Integration Services (SSIS) サーバーとカタログ](catalog/integration-services-ssis-server-and-catalog.md)
+6. [[パッケージのプロパティ] ダイアログ ボックス](catalog/package-properties-dialog-box.md)
+7. [[プロジェクトのプロパティ] ダイアログ ボックス](catalog/project-properties-dialog-box.md)
+8. [[プロジェクトのバージョン] ダイアログ ボックス](catalog/project-versions-dialog-box.md)
+9. [[パラメーター値の設定] ダイアログ ボックス](catalog/set-parameter-value-dialog-box.md)
+10. [SSIS カタログ](catalog/ssis-catalog.md)
+11. [[検証] ダイアログ ボックス](catalog/validate-dialog-box.md)
+12. [Integration Services サーバー上のパッケージの一覧を表示する](catalog/view-the-list-of-packages-on-the-integration-services-server.md)
 
 
 
@@ -73,8 +78,7 @@ ms.lasthandoff: 12/04/2017
 
 この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
-1. [Hadoop 接続マネージャー](#TitleNum_1)
-2. [Windows 認証でオンプレミス データ ソースと Azure ファイル共有に接続する](#TitleNum_2)
+1. [Azure で SSIS パッケージの実行をスケジュールする](#TitleNum_1)
 
 
 
@@ -85,141 +89,53 @@ ms.lasthandoff: 12/04/2017
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-hadoop-connection-managerconnection-managerhadoop-connection-managermd"></a>1.&nbsp; [Hadoop 接続マネージャー](connection-manager/hadoop-connection-manager.md)
+### <a name="1-nbsp-schedule-the-execution-of-an-ssis-package-on-azurelift-shiftssis-azure-schedule-packagesmd"></a>1.&nbsp; [Azure で SSIS パッケージの実行をスケジュールする](lift-shift/ssis-azure-schedule-packages.md)
 
-*更新日: 2017 年 11 月 28 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([次へ](#TitleNum_2))
+*更新日: 2018 年 1 月 18 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 65.  ms.author= "douglasl".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 2d68f4e884304f1a28045b42b680c15cc6a41ec5 fb2429466ea4d545682975d8dbea47451ce98ec7  (PR=4113  ,  Filename=hadoop-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=28cccac53767db70763e5e705b8cc59a83c77317) -->
-
-
-
-**Kerberos 認証を使用した接続**
-
-Hadoop 接続マネージャーで Kerberos 認証を使用できるようにオンプレミス環境を設定する方法は 2 つあります。 状況に合う方法を選択することができます。
--   方法 1: [SSIS コンピューターを Kerberos 領域に参加させる--#kerberos-join-realm)
--   方法 2: [Windows ドメインと Kerberos 領域の間の相互信頼関係を有効にする--#kerberos-mutual-trust)
-
-**<a name="kerberos-join-realm"></a>方法 1: SSIS コンピューターを Kerberos 領域に参加させる**
-
-
-**要件:**
-
-
--   ゲートウェイ コンピューターは Kerberos 領域に参加する必要があります。Windows ドメインに参加することはできません。
-
-**構成方法:**
-
-
-**SSIS コンピューター:**
-
-1.  **Ksetup** ユーティリティを実行して、Kerberos KDC サーバーと領域を構成します。
-
-    コンピューターはワークグループのメンバーとして構成する必要があります。これは、Kerberos 領域が Windows ドメインとは異なるためです。 次の例のように Kerberos 領域を設定し、KDC サーバーを追加します。 *REALM.COM* は、必要に応じて実際の領域に置き換えます。
-
-```
-    C:> Ksetup /setdomain REALM.COM`
-    C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
-```
-
-    Restart the computer after executing these two commands.
-
-2.  **Ksetup** コマンドを実行して構成を確認します。 出力は次の例のようになります。
-
-```
-    C:> Ksetup
-    default realm = REALM.COM (external)
-    REALM.com:
-        kdc = <your_kdc_server_address>
-```
-
-**<a name="kerberos-mutual-trust"></a>方法 2: Windows ドメインと Kerberos 領域の間の相互信頼関係を有効にする**
-
-
-**要件:**
-
--   ゲートウェイ コンピューターは Windows ドメインに参加する必要があります。
--   ドメイン コントローラーの設定を更新するアクセス許可が必要です。
-
-**構成方法:**
-
-
-> [!NOTE]
-> 次のチュートリアルの REALM.COM と AD.COM を、必要に応じて実際の領域とドメイン コントローラーに置き換えます。
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### <a name="2-nbsp-connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authenticationlift-shiftssis-azure-connect-with-windows-authmd"></a>2.&nbsp; [Windows 認証でオンプレミス データ ソースと Azure ファイル共有に接続する](lift-shift/ssis-azure-connect-with-windows-auth.md)
-
-*更新日: 2017 年 11 月 27 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([前へ](#TitleNum_1))
-
-<!-- Source markdown line 66.  ms.author= "douglasl".  -->
+<!-- Source markdown line 28.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 673386fca53cb60b983e0cb3cd4b9e2ee1dee0de 65458b4dceb92d01184c5e9c6f68ec0e8f16ba08  (PR=4104  ,  Filename=ssis-azure-connect-with-windows-auth.md  ,  Dirpath=docs\integration-services\lift-shift\  ,  MergeCommitSha40=19e1c4067142d33e8485cb903a7a9beb7d894015) -->
+<!-- git diff --ignore-all-space --unified=0 be778f8096559da9b84670382deb11f56c129971 640dd3cb59a88ccbc4cf6eab363a45e284f6b873  (PR=4662  ,  Filename=ssis-azure-schedule-packages.md  ,  Dirpath=docs\integration-services\lift-shift\  ,  MergeCommitSha40=6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f) -->
 
 
 
-**オンプレミスの SQL Server への接続**
+オンプレミスの SQL Server エージェントを使用して、Azure SQL Database サーバーに格納されているパッケージの実行をスケジュール設定するには、事前に SQL Database サーバーをリンク サーバーとしてオンプレミス SQL Server に追加する必要があります。
 
-オンプレミスの SQL Server に接続できるかどうかを確認するには、次のことを行います。
+1.  **リンク サーバーを設定する**
 
-1.  このテストを実行するには、ドメインに参加していないコンピューターを見つけます。
+    ```
+    -- Add the SSISDB database on your Azure SQL Database as a linked server to your SQL Server on premises
+    EXEC sp_addlinkedserver
+        @server='myLinkedServer', -- Name your linked server
+        @srvproduct='',
+        @provider='sqlncli', -- Use SQL Server native client
+        @datasrc='<server_name>.database.windows.net', -- Add your Azure SQL Database server endpoint
+        @location='',
+        @provstr='',
+        @catalog='SSISDB'  -- Add SSISDB as the initial catalog
+    ```
 
-2.  ドメインに参加していないコンピューターで、次のコマンドを実行し、使用したいドメイン資格情報を使用して SQL Server Management Studio (SSMS) を起動します。
+2.  **リンク サーバーの資格情報を設定する**
 
-```
-    runas.exe /netonly /user:<domain>\<username> SSMS.exe
-```
+    ```
+    -- Add your Azure SQL DB server admin credentials
+    EXEC sp_addlinkedsrvlogin
+        @rmtsrvname = 'myLinkedServer',
+        @useself = 'false',
+        @rmtuser = 'myUsername', -- Add your server admin username
+        @rmtpassword = 'myPassword' -- Add your server admin password
+    ```
 
-3.  SSMS から、使用するオンプレミスの SQL Server に接続できるかどうかを確認します。
+3.  **リンク サーバーのオプションを設定する**
 
-**オンプレミスのファイル共有への接続**
+    ```
+    EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;
+    ```
 
-オンプレミスのファイル共有に接続できるかどうかを確認するには、次のことを行います。
-
-1.  このテストを実行するには、ドメインに参加していないコンピューターを見つけます。
-
-2.  ドメインに参加していないコンピューターで、次のコマンドを実行します。 このコマンドは、使用したいドメイン資格情報を使用してコマンド プロンプト ウィンドウを開き、ディレクトリの一覧を取得することによって、ファイル共有への接続をテストします。
-
-```
-    runas.exe /netonly /user:<domain>\<username> cmd.exe
-    dir \\fileshare
-```
-
-3.  使用したいオンプレミスのファイルシェアに対して、ディレクトリの一覧が返されるかどうかを確認します。
-
-**Azure VM のファイル共有への接続**
-
-Azure の仮想マシン上のファイル共有に接続するには、次のことを行います。
-
-1.  SQL Server Management Studio (SSMS) または別のツールを使用して、SSIS カタログ データベース (SSISDB) をホストする SQL Database に接続します。
-
-2.  SSISDB を現在のデータベースとして使用し、クエリ ウィンドウを開きます。
-
-3.  次のオプションの説明に従って、`catalog.set_execution_credential` ストアド プロシージャを実行します。
-
-```
-    catalog.set_execution_credential @domain = N'.', @user = N'username of local account on Azure virtual machine', @password = N'password'
-```
-
-**Azure Files のファイル共有への接続**
-
-Azure Files に関する詳細については、「[Azure ファイル](https://azure.microsoft.com/services/storage/files/)」を参照してください。
+詳細については、「[リンク サーバーの作成](lift-shift/../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)」と「[リンク サーバー](lift-shift/../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。
 
 
 
@@ -227,45 +143,44 @@ Azure Files に関する詳細については、「[Azure ファイル](https://
 
 
 
-## <a name="similar-articles"></a>類似した記事
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>新規記事または更新記事に関する類似記事
 
 このセクションでは、パブリック GitHub.com リポジトリ [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/) 内の他の対象領域の記事で、この対象領域において最近更新された記事とよく似たものの一覧を示します。
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のある対象領域
 
-- [新規 + 更新 (3 + 14): **SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新規 + 更新 (1 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
-- [新規 + 更新 (87 + 0): **SQL の分析プラットフォーム システム**に関するドキュメント](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新規 + 更新 (5 + 4): **SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
-- [新規 + 更新 (0 + 1): **SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
-- [新規 + 更新 (2 + 2): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
-- [新規 + 更新 (10 + 9): **Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
-- [新規 + 更新 (2 + 4): **SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
-- [新規 + 更新 (4 + 2): **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
-- [新規 + 更新 (0 + 1): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
-- [新規 + 更新 (21 + 0): **SQL Operations Studio** に関するドキュメント](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新規 + 更新 (5 + 1): **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
-- [新規 + 更新 (0 + 1): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
-- [新規 + 更新 (1 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
-- [新規 + 更新 (0 + 1): **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
-- [新規 + 更新 (0 + 2): **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事が "*ある*" 対象領域
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のない対象領域
+
+- [新規 + 更新 (1 + 3):&nbsp;**SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新規 + 更新 (0 + 1):&nbsp;**SQL の分析プラットフォーム システム**に関するドキュメント](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新規 + 更新 (0 + 1):&nbsp;**SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
+- [新規 + 更新 (0 + 1):&nbsp;**SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
+- [新規 + 更新 (12 + 1): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
+- [新規 + 更新 (6 + 2):&nbsp;**Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
+- [新規 + 更新 (15 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
+- [新規 + 更新 (2 + 9):&nbsp;**SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
+- [新規 + 更新 (1 + 0):&nbsp;**SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
+- [新規 + 更新 (1 + 1):&nbsp;**SQL Operations Studio** に関するドキュメント](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新規 + 更新 (1 + 1):&nbsp;**Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
+- [新規 + 更新 (0 + 1):&nbsp;**SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
+- [新規 + 更新 (1 + 2):&nbsp;**SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
+- [新規 + 更新 (0 + 2):&nbsp;**Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事が "*ない*" 対象領域
+
 
 - [新規 + 更新 (0 + 0): **SQL の Data Migration Assistant (DMA)** に関するドキュメント](../dma/new-updated-dma.md)
 - [新規 + 更新 (0 + 0): **SQL の ActiveX データ オブジェクト (ADO)** に関するドキュメント](../ado/new-updated-ado.md)
+- [新規 + 更新 (0 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
 - [新規 + 更新 (0 + 0): **SQL の Data Quality Services** に関するドキュメント](../data-quality-services/new-updated-data-quality-services.md)
 - [新規 + 更新 (0 + 0): **SQL のデータ マイニング拡張機能 (DMX)** に関するドキュメント](../dmx/new-updated-dmx.md)
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
 - [新規 + 更新 (0 + 0): **SQL の多次元式 (MDX)** に関するドキュメント](../mdx/new-updated-mdx.md)
 - [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
-- [新規 + 更新 (0 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
+- [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
+- [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
 - [新規 + 更新 (0 + 0): **Tools for SQL**  に関するドキュメント](../tools/new-updated-tools.md)
 - [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)
 

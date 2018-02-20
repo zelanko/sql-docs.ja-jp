@@ -1,32 +1,58 @@
 ---
 title: "SQL Server Data Tools (SSDT) の変更ログ | Microsoft Docs"
 ms.custom: 
-ms.date: 12/22/2017
+ms.date: 02/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssdt
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssdt
+ms.technology:
+- tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e516b5d29e975236e9fa002a7d258caca706663d
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: cd69c5ff505f60aacd131976a5f42edef02a4d4d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] この変更ログは、[SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) のものです。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+この変更ログは、[SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) のものです。  
   
 新機能および変更点の詳細については、[SSDT チーム ブログ](https://blogs.msdn.microsoft.com/ssdt/)をご覧ください。
+
+## <a name="ssdt-for-visual-studio-2017-1552"></a>SSDT for Visual Studio 2017 (15.5.2)
+ビルド番号: 14.0.16156.0
+  
+### <a name="whats-new"></a>新機能
+
+**SSIS**
+1.  SSAS と SSIS の両方が同じ VS 2017 インスタンスにインストールされているときに、SSIS 2008 プロジェクトの移行が失敗する問題を修正しました。
+2.  Rdlc レポート デザイナーと SSIS の両方が同じ VS 2017 インスタンスにインストールされているときに、Rdlc プロジェクトをビルドできない問題を修正しました。
+3.  注釈の色を更新できない問題を修正しました。
+4.  Hadoop 接続マネージャー エディターで一部の文字列が他の言語で切り捨てられる問題を修正しました。
+5.  OData 接続マネージャー エディターで一部の文字列が切り捨てられる問題を修正しました。
+6.  Integration Services のプロジェクトのインポート ウィザード ウィンドウで一部の文字列が切り捨てられる問題を修正しました。
+7.  SSIS ツール ボックス情報ウィンドウのタイトルの問題を修正しました。
+8.  Integration Services のプロジェクトの配置ウィザード ウィンドウで一部の文字列が切り捨てられる問題を修正しました。 
+
+**インストーラー**
+- ペイロードのダウンロードが "指定されたファイルが見つかりません (0x80070002)" というエラーで失敗することがある問題を修正しました。  
+
+### <a name="known-issues"></a>既知の問題
+- ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
+
+
+
 
 ## <a name="ssdt-for-visual-studio-2017-1551"></a>SSDT for Visual Studio 2017 (15.5.1)
 ビルド番号: 14.0.16148.0
