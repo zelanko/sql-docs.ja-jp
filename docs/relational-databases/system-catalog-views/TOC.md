@@ -12,7 +12,7 @@
 # データベース ミラーリング
 ## [データベース ミラーリング監視サーバー - sys.database_mirroring_witnesses](database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
 
-# データ層アプリケーション
+# の
 ## [データ層アプリケーション ビュー - dbo.sysdac_instance](data-tier-application-views-dbo-sysdac-instances.md)  
 
 # [可用性グループ](always-on-availability-groups-catalog-views-transact-sql.md)  
@@ -36,9 +36,6 @@
 ## [sys.resource_stats](sys-resource-stats-azure-sql-database.md)  
 ## [sys.resource_usage](sys-resource-usage-azure-sql-database.md)  
 ## [dbo.server_quotas](dbo-server-quotas-azure-sql-database.md)  
-## [dbo.slo_assignment_history](dbo-slo-assignment-history-azure-sql-database.md)  
-## [dbo.slo_database_objectives](dbo-slo-database-objectives-azure-sql-database.md)  
-## [dbo.slo_service_objectives](dbo-slo-service-objectives-azure-sql-database.md)  
 
 # [CLR アセンブリ](clr-assembly-catalog-views-transact-sql.md)  
 ## [sys.assemblies](sys-assemblies-transact-sql.md)  
@@ -234,7 +231,7 @@
 ## [sys.column_type_usages](sys-column-type-usages-transact-sql.md)  
 ## [sys.parameter_type_usages](sys-parameter-type-usages-transact-sql.md)  
 
-# [セキュリティ](security-catalog-views-transact-sql.md)  
+# [Security](security-catalog-views-transact-sql.md)  
 ## [sys.asymmetric_keys](sys-asymmetric-keys-transact-sql.md)  
 ## [sys.certificates](sys-certificates-transact-sql.md)  
 ## [sys.column_encryption_keys ](sys-column-encryption-keys-transact-sql.md)  
