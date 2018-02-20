@@ -35,7 +35,7 @@ ms.lasthandoff: 02/19/2018
 ## <a id="requirements"></a> 前提条件
 
 - Docker エンジン 1.8 + 任意の Linux ディストリビューションまたは Docker は Mac/windows のサポート。 詳細については、次を参照してください。[インストール Docker](https://docs.docker.com/engine/installation/)です。
-- 2 GB のディスク領域の最小値
+- 2 GB 以上のディスク領域
 - 2 GB の RAM の最小値
 - [Linux 上の SQL Server のシステム要件](sql-server-linux-setup.md#system)です。
 
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/19/2018
 
    前のコマンドは、最新の SQL Server 2017 コンテナー イメージを取得します。 コロンとタグ名を追加する場合は、特定のイメージを取得するには、(たとえば、 `microsoft/mssql-server-linux:2017-GA`)。 すべての利用可能なイメージを表示するには、次を参照してください。 [mssql サーバー linux Docker ハブ ページ](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)です。
 
-1. Docker によってコンテナー イメージを実行するには、bash シェル (Linux/macOS) または管理者特権の PowerShell コマンド プロンプトから次のコマンドを使用できます。
+1. Docker でコンテナー イメージを実行するには、bash シェル (Linux/macOS) または管理者特権の PowerShell コマンド プロンプトから次のコマンドを使用できます。
 
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
@@ -71,16 +71,16 @@ ms.lasthandoff: 02/19/2018
    > パスワードが SQL Server の既定のパスワード ポリシーに従う必要があります、それ以外の場合、コンテナーの SQL server をセットアップできませんでき、動作が停止します。 既定では、パスワード必要がありますには、少なくとも 8 文字にして、次の 4 つのセットのうち、3 つの文字を含める: 大文字、小文字、数字、およびシンボルです。 実行することによって、エラー ログを調査することができます、 [docker ログ](https://docs.docker.com/engine/reference/commandline/logs/)コマンド。
 
    > [!NOTE]
-   > 既定では、これは、コンテナーを作成 2017 年 1 SQL Server の Developer edition を使用します。 コンテナーで実稼働のエディションを実行するためのプロセスは若干異なります。 詳細については、次を参照してください。[実稼働環境にコンテナー イメージを実行](sql-server-linux-configure-docker.md#production)です。
+   > 既定では、これは SQL Server 2017 の Developer エディションのコンテナーを作成します。 コンテナーで実稼働のエディションを実行するためのプロセスは若干異なります。 詳細については 「[実稼働環境のコンテナー イメージを実行する](sql-server-linux-configure-docker.md#production)」を参照してください。
 
-   次の表は、前に、パラメーターの説明を示します`docker run`例。
+   次の表では、前述の `docker run` の例におけるパラメーターを説明しています。
 
-   | パラメーター | Description |
+   | パラメーター | 説明 |
    |-----|-----|
-   | **-e 'ACCEPT_EULA=Y'** |  設定、 **ACCEPT_EULA**変数への同意を確認する任意の値を[使用許諾契約書](http://go.microsoft.com/fwlink/?LinkId=746388)です。 SQL Server イメージの設定が必要です。 |
-   | **-e 'MSSQL_SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 8 文字以上には、満たす独自の強力なパスワードを指定、 [SQL Server のパスワード要件](../relational-databases/security/password-policy.md)です。 SQL Server イメージの設定が必要です。 |
-   | **-p 1401:1433** | ホスト環境での TCP ポートにマップ (先頭の値)、コンテナーの TCP ポートと (2 番目の値)。 この例では SQL Server がコンテナー内の TCP 1433 でリッスンしていると、ホスト上の 1401 ポートにこの公開されます。 |
-   | **--name sql1** | ランダムに生成されたものではなく、コンテナーのカスタム名を指定します。 1 つ以上のコンテナーを実行すると場合に、この同じ名前を再利用することはできません。 |
+   | **-e 'ACCEPT_EULA=Y'** |  **ACCEPT_EULA** 変数に [使用許諾契約書](http://go.microsoft.com/fwlink/?LinkId=746388) の同意を確認するための任意の値を設定します。 SQL Server イメージの設定が必要です。 |
+   | **-e 'MSSQL_SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 8 文字以上で、 [SQL Server のパスワード要件](../relational-databases/security/password-policy.md) を満たす強力なパスワードを指定します。 SQL Server イメージに必須の設定です。 |
+   | **-p 1401:1433** | ホスト環境の TCP ポート (最初の値) を コンテナーの TCP ポート (2 番目の値) にマップします。 この例では、 SQL Server はコンテナーの TCP 1433 でリッスンし、これがホストのポート 1401 に公開されます。 |
+   | **--name sql1** | ランダムに生成されたものではなく、コンテナーのカスタム名を指定します。 2 つ以上のコンテナーを実行する場合、同じ名前を再利用することはできません。 |
    | **microsoft/mssql-server-linux:2017-latest** | SQL Server 2017 Linux コンテナー イメージ。 |
 
 1. 表示するには、Docker コンテナーを使用して、`docker ps`コマンド。
@@ -227,7 +227,7 @@ SELECT @@SERVERNAME,
 
 1. コンテナーをホストしているコンピューターの IP アドレスが見つかりません。 Linux では、次のように使用します。 **ifconfig**または**ip アドレス**です。Windows では、次のように使用します。 **ipconfig**です。
 
-1. IP アドレスとポート 1433、コンテナー内にマップされているポートを指定する sqlcmd を実行します。 この例では、ホスト マシン上のポート 1401 であります。
+1. IP アドレスとコンテナーのポート 1433 にマップされたポートを指定して sqlcmd を実行します。 この例では、ホスト マシンのポート 1401 です。
 
    ```bash
    sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourNewStrong!Passw0rd>'
@@ -239,7 +239,7 @@ SELECT @@SERVERNAME,
 
 1. TRANSACT-SQL コマンドを実行します。 終了したら、入力`QUIT`です。
 
-SQL Server に接続するその他の一般的なツールは次のとおりです。
+SQL Server に接続するその他の一般的なツールには次のものがあります。
 
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [Windows で SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
