@@ -1,6 +1,6 @@
 ---
-title: "Analysis Services チュートリアル (SSAS) |Microsoft ドキュメント"
-ms.date: 03/17/2017
+title: "Analysis Services チュートリアル |Microsoft ドキュメント"
+ms.date: 02/20/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -19,33 +19,37 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 6a2578633c1ccce72d866c40882eaf4c95669d6c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 78b46dfa832faf6496d0b986dce78390fb8af33a
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/20/2018
 ---
-# <a name="analysis-services-tutorials-ssas"></a>Analysis Services チュートリアル (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+# <a name="analysis-services-tutorials"></a>Analysis Services チュートリアル
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-このセクションには、SQL Server Analysis Services のチュートリアルが含まれています。  
+[テーブル モデリング (1400 互換性レベル)](tutorial-tabular-1400/as-adventure-works-tutorial.md)   
+Azure Analysis Services と SQL Server 2017 Analysis Services を適用し、後でします。 このチュートリアルでは、SQL Server Data Tools (SSDT) を使用して、Adventure Works という架空の会社の基本的な Analysis Services 表形式モデルを作成する方法を」のレッスンを提供します。 
+
+[テーブル モデリング (互換性レベル 1200)](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
+Azure Analysis Services と SQL Server 2016 Analysis Services を適用し、後でします。 このチュートリアルでは、SQL Server Data Tools (SSDT) を使用して、Adventure Works という架空の会社の基本的な Analysis Services 表形式モデルを作成する方法を」のレッスンを提供します。  
   
-[テーブル モデリング (Adventure Works チュートリアル)](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
-このチュートリアルでは、SQL Server Data Tools (SSDT) を使用して、Adventure Works という架空の会社の基本的な Analysis Services 表形式モデルを作成する方法を」のレッスンを提供します。  
-  
-[多次元モデリング &#40;です。Adventure Works チュートリアル &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-このチュートリアルでは、基本的なスキルと SSDT での多次元モデリングの概念を説明します。 完了したら、Excel、Reporting Services、または Analysis Services に接続するその他のすべてのクライアント アプリケーションからアクセスできる Adventure Works データに基づくキューブ データベースがあります。  
+[多次元モデリング](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+SQL Server 2012 Analysis Services と後で適用されます。 Azure Analysis Services では、多次元モデルはサポートされていません。 このチュートリアルでは、基本的なスキルと SSDT での多次元モデリングの概念を学習するためのレッスンを提供します。 完了したら、Excel、Reporting Services、または Analysis Services に接続するその他のすべてのクライアント アプリケーションからアクセスできる Adventure Works データに基づくキューブ データベースがあります。  
   
 [データ マイニング](../analysis-services/data-mining-tutorials-analysis-services.md)  
-このチュートリアルのコレクションでは、ウィザードと、統合された視覚エフェクトを使用してデータ マイニング ソリューションを作成する方法について説明します。  
+SQL Server 2012 Analysis Services と後で適用されます。 Azure Analysis Services では、データ マイニングと多次元モデルはサポートされていません。 このチュートリアルのコレクションでは、ウィザードと、統合された視覚エフェクトを使用してデータ マイニング ソリューションを作成する方法について説明します。  
   
   
-## <a name="additional-resources"></a>その他のリソース  
-[Codeplex の AdventureWorks サンプル データベース](http://go.microsoft.com/fwlink/?linkID=335807)  
-このリンクは AdventureWorks サンプル データベースを持つ codeplex ダウンロード ページに移動します。  
-  
-[テーブル モデルをプログラムで作成するための AMO コード サンプル](http://go.microsoft.com/fwlink/?linkID=221036)  
-このリンクでは、AMO サンプルができる Codeplex ダウンロード ページに移動します。  
+## <a name="samples"></a>サンプル 
+### <a name="project-and-completed-model-database-samples"></a>プロジェクトと完成したモデル データベースのサンプル
+サンプル データのモデリング プロジェクトおよび完成したサンプル モデルのデータベースはいただけます[GitHub 上の Analysis Services 用 Adventure Works](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services)です。
+
+### <a name="code-samples"></a>コード サンプル
+ソース コード サンプルとコミュニティのプロジェクトで使用可能なを開く[github リポジトリの Analysis Services](https://github.com/Microsoft/Analysis-Services)です。
+
+### <a name="sql-server-database-and-sql-server-data-warehouse-samples"></a>SQL Server データベースと SQL Server データ ウェアハウスのサンプル  
+Adventure Works と Wide World Importers のサンプル データベースは、「 [GitHub 上の SQL Server のサンプル リポジトリ](https://github.com/Microsoft/sql-server-samples)です。
   
   
   
