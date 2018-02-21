@@ -8,21 +8,23 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Availability Groups [SQL Server], domain independent
+helpviewer_keywords:
+- Availability Groups [SQL Server], domain independent
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61014dfd6113a16e37b4be9a1a06e6901abba37f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 950e7cb62718b2c1fedfc5415544f21f85205cf6
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="domain-independent-availability-groups"></a>ドメインに依存しない可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,63 +87,81 @@ Windows Server 2016 では、Active Directory がデタッチされたクラス�
 1. [このリンクの手順を使用して](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/)、すべてが可用性グループに参加するサーバーで構成されるワークグループ クラスターを展開します。 ワークグループ クラスターを構成する前に、共通の DNS サフィックスが既に構成されていることを確認します。
 2. 可用性グループに追加する各インスタンスの [Always On 可用性グループ機能を有効にします](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server)。 これには、各 SQL Server インスタンスの再起動が必要がです。
 3. プライマリ レプリカをホストするインスタンスごとに、データベース マスター キーが必要です。 マスター キーがまだ存在していない場合は、次のコマンドを実行します。
-```
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
+   GO
+   ```
+
 4. プライマリ レプリカとなるインスタンスで、セカンダリ レプリカの着信接続用と、プライマリ レプリカのエンドポイントをセキュリティで保護するために使用される証明書を作成します。
-```
-CREATE CERTIFICATE InstanceA_Cert 
-WITH SUBJECT = 'InstanceA Certificate';
-GO
-``` 
+
+   ```sql
+   CREATE CERTIFICATE InstanceA_Cert 
+   WITH SUBJECT = 'InstanceA Certificate';
+   GO
+   ``` 
+
 5. 証明書をバックアップします。 また、必要であれば、秘密キーを使ってさらにセキュリティで保護することもできます。 この例では、秘密キーを使用しません。
-```
-BACKUP CERTIFICATE InstanceA_Cert 
-TO FILE = 'Backup_path\InstanceA_Cert.cer';
-GO
-```
+
+   ```sql
+   BACKUP CERTIFICATE InstanceA_Cert 
+   TO FILE = 'Backup_path\InstanceA_Cert.cer';
+   GO
+   ```
+
 6. 手順 4 と 5 を繰り返して、InstanceB_Cert などの証明書の適切な名前を使用し、セカンダリ レプリカごとに証明書を作成してバックアップします。
 7. プライマリ レプリカでは、可用性グループのセカンダリ レプリカごとにログインを作成する必要があります。 このログインには、ドメインに依存しない可用性グループによって使用されるエンドポイントに接続するアクセス許可が付与されます。 たとえば、InstanceB という名前のレプリカの場合
-```
-CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 8. 各セカンダリ レプリカで、プライマリ レプリカのログインを作成します。 このログインには、エンドポイントに接続するアクセス許可が付与されます。 たとえば、InstanceB という名前のレプリカで次を実行します。
-```
-CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 9. すべてのインスタンスで、作成されたログインごとにユーザーを作成します。 これは、証明書を復元するときに使用されます。 たとえば、プライマリ レプリカのユーザーを作成するには、次を実行します。
-```
-CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
-GO
-```
+
+   ```sql
+   CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
+   GO
+   ```
+
 10. プライマリになる可能性があるレプリカでは、関連するすべてのセカンダリ レプリカでログインとユーザーを作成します。
 11. 各インスタンスで、作成されたログインとユーザーがある他のインスタンスに証明書を復元します。 プライマリ レプリカで、すべてのセカンダリ レプリカの証明書を復元します。 各セカンダリで、プライマリ レプリカの証明書を復元します。また、プライマリになる可能性があるその他のレプリカにも復元します。 例 :
-```
-CREATE CERTIFICATE [InstanceB_Cert]
-AUTHORIZATION InstanceB_User
-FROM FILE = 'Restore_path\InstanceB_Cert.cer'
-```
+
+   ```sql
+   CREATE CERTIFICATE [InstanceB_Cert]
+   AUTHORIZATION InstanceB_User
+   FROM FILE = 'Restore_path\InstanceB_Cert.cer'
+   ```
+
 12. レプリカになる各インスタンスに、可用性グループによって使用されるエンドポイントを作成します。 可用性グループの場合は、エンドポイントに DATABASE_MIRRORING の型がある必要があります。 エンドポイントでは、手順 4 で認証のインスタンスのために作成した証明書を使用します。 以下の構文は、証明書を使用してエンドポイントを作成する例を示しています。 適切な暗号化方法と、環境に関連するその他のオプションを使用します。 使用できるオプションの詳細については、「[CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md)」を参照してください。
-```
-CREATE ENDPOINT DIAG_EP
-STATE = STARTED
-AS TCP (
+
+   ```sql
+   CREATE ENDPOINT DIAG_EP
+   STATE = STARTED
+   AS TCP (   
     LISTENER_PORT = 5022,
     LISTENER_IP = ALL
-)
-FOR DATABASE_MIRRORING (
+         )
+   FOR DATABASE_MIRRORING (
     AUTHENTICATION = CERTIFICATE InstanceX_Cert,
     ROLE = ALL
-)
-```
+         )
+   ```
+
 13. エンドポイントに接続できるように、手順 9 のインスタンスで作成された各ユーザーに権限を割り当てます。 
-```
-GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
-GO
-```
+
+   ```sql
+   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_User];
+   GO
+   ```
+
 14. 基になる証明書とエンドポイントのセキュリティが構成されたら、指定した方法を使用して、可用性グループを作成します。 セカンダリの初期化に使用するバックアップを手動でバックアップ、コピー、および復元するか、または[自動シード処理](automatically-initialize-always-on-availability-group.md)を使用することをお勧めします。 セカンダリ レプリカを初期化するためのウィザードの使用には、サーバー メッセージ ブロック (SMB) ファイルが関係し、ドメインに参加していないワークグループ クラスターを使用する場合は動作しない可能性があります。
 15. リスナーを作成する場合は、その名前と IP アドレスの両方が DNS に登録されていることを確認します。
 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - rebuilding databases, master
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c267615cb7970d7833821662cfd97662093a2edb
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3a1d3cd6a2cb8183acf9d4f787e9d434dcc5577d
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="rebuild-system-databases"></a>システム データベースの再構築
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [master](../../relational-databases/databases/master-database.md)、[model](../../relational-databases/databases/model-database.md)、[msdb](../../relational-databases/databases/msdb-database.md)、または [resource](../../relational-databases/databases/resource-database.md) の各システム データベースの損傷による問題を解決するか、既定のサーバー レベルの照合順序を変更するには、システム データベースを再構築する必要があります。 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でシステム データベースを再構築する手順について説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[master](../../relational-databases/databases/master-database.md)、 [model](../../relational-databases/databases/model-database.md)、 [msdb](../../relational-databases/databases/msdb-database.md)、または [resource](../../relational-databases/databases/resource-database.md) の各システム データベースの損傷による問題を解決するか、既定のサーバー レベルの照合順序を変更するには、システム データベースを再構築する必要があります。 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でシステム データベースを再構築する手順について説明します。  
   
  **このトピックの内容**  
   
@@ -179,7 +181,7 @@ ms.lasthandoff: 01/18/2018
   
 5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスを通常の方法で停止および再起動します。  
   
-6.  コマンド ライン ウィンドウで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、コマンド `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o" C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
+6.  コマンド ライン ウィンドウで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、コマンド `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
      *<servername\<* は [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに置き換えます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのファイル システム パスを使用してください。  
   
