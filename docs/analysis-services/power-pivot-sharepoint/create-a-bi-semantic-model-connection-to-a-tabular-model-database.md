@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae5acd43bb7d4bd4956cc5dae36e7dc15787a83f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0077f3a970f872329db9c30e16ae5653a4ccb13f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>テーブル モデル データベースへの BI セマンティック モデル接続の作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -86,7 +86,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="bkmk_BISM"></a> テーブル モデル データベースの読み取り権限の付与  
  データベースがファームの外部にあるサーバーで実行しているため、接続の設定の一環として、バックエンドの Analysis Services サーバーに対するデータベース ユーザー権限を付与します。 Analysis Services はロールベースの権限モデルを使用します。 model データベースに接続するユーザーは、メンバーに読み取りアクセスを付与するロールを介して、読み取り権限以上の権限を使用して接続する必要があります。  
   
- ロール (および場合によってはロール メンバーシップ) が定義されるのは、モデルが [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で作成されるときです。 SQL Server Management Studio ではロールを作成することはできませんが、定義済みのロールにメンバーを追加することはできます。 ロールの作成の詳細については、「[ロールの作成および管理 (SSAS テーブル)](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)」を参照してください。  
+ ロール (および場合によってはロール メンバーシップ) が定義されるのは、モデルが [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で作成されるときです。 SQL Server Management Studio ではロールを作成することはできませんが、定義済みのロールにメンバーを追加することはできます。 ロールの作成の詳細については、次を参照してください。[作成と管理の役割](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)です。  
   
 #### <a name="assign-role-membership"></a>ロールのメンバーシップの割り当て  
   

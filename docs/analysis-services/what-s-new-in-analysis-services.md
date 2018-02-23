@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f6645a2a5da1e63050c0d448bc1006c85d85f212
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6ec1299dc5e82e4af6093c914742d456e7897807
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Analysis Services の新機能
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -77,7 +77,7 @@ SQL Server 2016 Service SP1 Analysis Services は、Non-Uniform Memory Access (N
  ### <a name="calculated-tables-in-ssdt"></a>SSDT の計算テーブル    
 *計算テーブル* は、SSDT での DAX 式またはクエリに基づいたモデルのみの構築です。 データベースに展開すると、計算テーブルを通常のテーブルと区別することはできません。    
 
- 計算テーブルには、特定のロールの既存のテーブルを公開するために新しいテーブルを作成するなど、いくつかの使用法があります。 その典型例は、複数のコンテキスト (注文日、出荷日など) で動作する Date テーブルです。 任意のロールの計算テーブルを作成することによって、計算テーブルを使用してクエリまたはデータ操作を容易にするために、テーブル リレーションシップをアクティブにできるようになりました。 計算テーブルの別の使用法は、モデルにのみ存在するまったく新しいテーブルに、既存のテーブルの部品を結合することです。  詳細については、「[計算テーブルを作成する &#40;SSAS 表形式&#41;](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md)」を参照してください。    
+ 計算テーブルには、特定のロールの既存のテーブルを公開するために新しいテーブルを作成するなど、いくつかの使用法があります。 その典型例は、複数のコンテキスト (注文日、出荷日など) で動作する Date テーブルです。 任意のロールの計算テーブルを作成することによって、計算テーブルを使用してクエリまたはデータ操作を容易にするために、テーブル リレーションシップをアクティブにできるようになりました。 計算テーブルの別の使用法は、モデルにのみ存在するまったく新しいテーブルに、既存のテーブルの部品を結合することです。  参照してください[計算テーブルを作成する](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md)詳細についてはします。    
  ### <a name="formula-fixup"></a>数式の修正    
  表形式モデル 1200 で数式を修正すると、SSDT は名前が変更された列または名前を参照しているすべてのメジャーを自動更新します。    
  ### <a name="support-for-visual-studio-configuration-manager"></a>Visual Studio 構成マネージャーのサポート    
@@ -87,7 +87,7 @@ SQL Server 2016 Service SP1 Analysis Services は、Non-Uniform Memory Access (N
  ### <a name="administer-tabular-1200-models-in-ssms"></a>SSMS での表形式モデル 1200 の管理    
  このリリースでは、表形式サーバー モードの Analysis Services インスタンスが、表形式モデルを任意の互換性レベル (1100、1103、1200) で実行できます。 最新の [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) は、プロパティを表示し、互換性レベル 1200 の表形式モデルのデータベース モデル管理を提供するように更新されています。    
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>表形式モデルでの複数のテーブル パーティションの並列処理    
- このリリースには、処理パフォーマンスを強化する、2 つ以上のパーティションを持つテーブルへの新しい並行処理機能が含まれます。 この機能には、構成設定はありません。 パーティションの構成およびテーブルの処理に関する詳細については、「[テーブル モデル パーティション &#40;SSAS 表形式&#41;](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)」を参照してください。    
+ このリリースには、処理パフォーマンスを強化する、2 つ以上のパーティションを持つテーブルへの新しい並行処理機能が含まれます。 この機能には、構成設定はありません。 パーティションを構成して、テーブルの処理に関する詳細については、次を参照してください。[テーブル モデル パーティション](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)です。    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>SSMS の管理者としてコンピューター アカウントを追加する    
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理者は、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理者グループのメンバーにするコンピューター アカウントを構成できるようになりました。 **[ユーザーまたはグループの選択]** ダイアログ ボックスで、コンピューター ドメインの **[場所]** を設定して、 **[コンピューター]** のオブジェクトの種類を追加します。 詳細については、「 [Analysis Services インスタンスにサーバー管理者権限を付与する](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)」を参照してください。    
  ### <a name="dbcc-for-analysis-services"></a>Analysis Services 用 DBCC    
@@ -206,7 +206,7 @@ Visual Studio 2015 の [コードの表示] で、表形式モデル 1200 の BI
 ### <a name="new-data-sources-for-directquery-mode"></a>DirectQuery モードの新しいデータ ソース    
  これで、DirectQuery モードの表形式の 1200 モデルでサポートされるデータ ソースには、Oracle、Teradata および Microsoft Analytics Platform (以前は並列データ ウェアハウスと呼ばれます) が含まれます。    
     
-詳細については、「[DirectQuery モード &#40;SSAS テーブル&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)」を参照してください。    
+詳細については、次を参照してください。 [DirectQuery モード](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)です。    
 
 ## <a name="see-also"></a>参照
 [Analysis Services チーム ブログ](http://blogs.msdn.microsoft.com/analysisservices/)    

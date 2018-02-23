@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 115db2e7cc02805cd41e79363d8ff0a83d1c719e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f545d90cd695eef78f4ae8b33eef7f2f32e9439f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-mining-projects"></a>データ マイニング プロジェクト
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -220,11 +220,11 @@ ms.lasthandoff: 02/15/2018
 |各マイニング モデル ビューアーに関する情報へのリンクを提供します。|[データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |リフト チャート、利益チャート、または分類マトリックスを作成する方法、またはマイニング構造をテストする方法について説明します。|[テストおよび検証 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |処理オプションと権限について説明します。|[データ マイニング オブジェクトの処理](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Analysis Services について詳しく説明します。|[多次元モデル データベース &#40;です。SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Analysis Services について詳しく説明します。|[多次元モデル データベース ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング デザイナー](../../analysis-services/data-mining/data-mining-designer.md)   
  [SQL Server Data Tools &#40; を使用して多次元モデルを作成します。SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [ワークスペース データベース &#40;です。SSAS テーブル &#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
+ [ワークスペース データベース](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   

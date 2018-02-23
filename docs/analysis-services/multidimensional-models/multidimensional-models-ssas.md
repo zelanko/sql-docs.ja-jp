@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 276211036c3d977ab0a0b6a61114e7fe58505b63
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 970d341ee8c07cfcc15cda52f8f28dff9fed3d76
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multidimensional-modeling-ssas"></a>多次元モデリング (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,11 +33,11 @@ Analysis Services 多次元ソリューションは、複数のディメンシ�
  Analysis Services 多次元データベースを使用するもう 1 つの重要な利点は、Excel、Reporting Services、PerformancePoint などの一般的に使用される BI レポート ツール、およびカスタム アプリケーションやサード パーティ ソリューションとの統合です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [多次元モデル ソリューション &#40;です。SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)  
+ [多次元モデル ソリューション ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)  
   
- [多次元モデル データベース &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [多次元モデル データベース ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
- [多次元モデルの処理 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
+ [多次元モデルの処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
  [ロールと権限 (Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   

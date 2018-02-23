@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5b6f6c1561997970811e729a498383cef08f4ac3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f6b199d42dc8273660018d8b0fb4a14606c62559
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos の制約付き委任のための Analysis Services の構成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ Kerberos 認証用に Analysis Services を構成する際は、通常、デー�
 ##  <a name="bkmk_delegate"></a> 信頼された委任のための Analysis Services の構成  
  Kerberos の制約付き委任用に Analysis Services を構成すると、サービスは、下位レベル サービス (リレーショナル データベース エンジンなど) のクライアント ID の権限を借用して、クライアントが直接接続されているかのようにデータを照会できます。  
   
- Analysis Services の委任シナリオは、 **DirectQuery** 用に構成されたテーブル モデルに限られます。 これは、委任された資格情報を Analysis Services が別のサービスに渡すことができる唯一のシナリオです。 前のセクションで説明された SharePoint のシナリオなど、他のすべてのシナリオでは、Analysis Services は委任チェーンの受信側です。 DirectQuery の詳細については、「[DirectQuery モード (SSAS テーブル)](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)」を参照してください。  
+ Analysis Services の委任シナリオは、 **DirectQuery** 用に構成されたテーブル モデルに限られます。 これは、委任された資格情報を Analysis Services が別のサービスに渡すことができる唯一のシナリオです。 前のセクションで説明された SharePoint のシナリオなど、他のすべてのシナリオでは、Analysis Services は委任チェーンの受信側です。 DirectQuery の詳細については、次を参照してください。 [DirectQuery モード](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)です。  
   
 > [!NOTE]  
 >  共通する誤りは、ROLAP ストレージ、処理操作、またはリモート パーティションへのアクセスによって制約付き委任が要求されてしまうことです。 この場合は当てはまりません。 これらすべての操作は、代わりにサービス アカウント (処理アカウントとも呼ばれます) によって直接実行されます。 このような操作の権限が直接サービス アカウントに付与されているため (例えば、リレーショナル データベースに db_datareader 権限を付与することにより、サービスがデータを処理できるようにします)、Analysis Services におけるこれらの操作に委任は必要ありません。 サーバー操作と権限の詳細については、「[サービス アカウントの構成 (Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md)」を参照してください。  

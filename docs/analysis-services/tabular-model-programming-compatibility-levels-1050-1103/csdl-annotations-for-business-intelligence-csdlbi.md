@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ec23a28ccf5a6fc115ae9aac984c6e9a30eea694
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: dfc70006520f0d4a9e47661de5c065aecf59356f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>ビジネス インテリジェンス向けの CSDL 注釈 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,9 +34,9 @@ ms.lasthandoff: 02/15/2018
   
  CSDL は Entity Data Framework に準拠していますが、エンティティとリレーションシップのモデルについての理解や、テーブル モデルまたはモデルに基づくレポートを構築するための専用ツールは必要ありません。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] などのクライアント ツールや AMO などの API を使用してモデルを作成し、それをサーバーに配置します。 クライアントからモデルへの接続にはモデル定義ファイルを使用し、通常、モデル定義ファイルは SharePoint ライブラリにパブリッシュされます。レポート デザイナーとレポート コンシューマーは、このライブラリでモデルの定義ファイルを使用できます。 詳細については、次のリンクを参照してください。  
   
--   [テーブル モデル ソリューション &#40;です。SSAS テーブル &#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+-   [テーブル モデル ソリューション](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
--   [表形式モデル ソリューションの配置 &#40;です。SSAS テーブル &#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [表形式モデル ソリューションの配置](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 -   [Power Pivot BI セマンティック モデル接続 &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   

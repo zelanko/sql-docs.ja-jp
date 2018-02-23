@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21e11773cfe402d85d661c009bf1b6a2fef7235a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 230e5438e9494a873a0045eebb2870597834b5be
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hierarchy-element-csdlbi"></a>Hierarchy 要素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ Hierarchy 要素はテーブル内のフィールドの論理的なコンテナ�
 |レベル|可|階層内で使用される列を定義する 1 つまたは複数の Level 要素。<br /><br /> 「[Level 要素 &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/level-element-csdlbi.md)」を参照してください。|  
   
 ## <a name="remarks"></a>解説  
- テーブル モデルでは、同じテーブル内の列間の親子関係を指定することにより階層を作成します。 詳細については、「[階層 (SSAS テーブル)](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)」を参照してください。  
+ テーブル モデルでは、同じテーブル内の列間の親子関係を指定することにより階層を作成します。 詳細については、次を参照してください。[階層](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)です。  
   
 ## <a name="example"></a>例  
  **表形式**  
