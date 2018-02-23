@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: ebaeba0db0daaf494533cafe03f89effff2fe792
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fe1c808d84bac0c14e1cf46c4613464e04bbea0c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>レッスン 1: 新しいテーブル モデル プロジェクトの作成
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 このレッスンの推定所要時間: **10 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 このトピックは、テーブル モデル作成チュートリアルの最初のレッスンです。 このレッスンを完了するには、SQL Server インスタンスにインストールされている、AdventureWorksDW サンプル データベースが必要です。 詳細については、次を参照してください。[テーブル モデリング (&) #40 です。Adventure Works チュートリアル &#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  
   
 ## <a name="create-a-new-tabular-model-project"></a>新しいテーブル モデル プロジェクトの作成  
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
     既定では、 **[ソリューション名]** はプロジェクト名と同じですが、別のソリューション名を入力することもできます。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
 5.  **表形式モデル デザイナー**ダイアログ ボックスで、**統合ワークスペース**です。  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/08/2018
       
 6.  **[互換性レベル]**で **[SQL Server 2016 (1200)]** が選択されていることを確認し、 **[OK]**をクリックします。   
  
-    ![として-表形式のレッスン 1 から-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
+    ![as-tabular-lesson1-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
       
     SQL Server 2016 RTM (1200) の互換性レベルのボックスの一覧に表示されない場合は、SQL Server Data Tools の最新バージョンを使用していません。 最新バージョンの入手については、「 [SQL Server Data Tools のインストール](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)」を参照してください。  
 
@@ -67,15 +68,15 @@ ms.lasthandoff: 01/08/2018
   
 プロジェクトを作成すると、SSDT でが開きます。 右側にあるで**表形式モデル エクスプ ローラー**モデル内のオブジェクトのツリー ビューが表示されます。 まだデータをインポートしていないため、フォルダーは空になります。 メニュー バーに同様のアクションを実行するオブジェクトのフォルダーを右クリックすることができます。 このチュートリアルのステップ実行すると、モデル プロジェクトで別のオブジェクトを移動するのに表形式モデル エクスプ ローラーを使用します。
 
-![として-表形式のレッスン 1 からのデータ](../analysis-services/media/as-tabular-lesson1-tme.png)
+![as-tabular-lesson1-tme](../analysis-services/media/as-tabular-lesson1-tme.png)
 
 クリックして、**ソリューション エクスプ ローラー**タブです。ここが表示されます、 **Model.bim**ファイル。 左側 (空のウィンドウと Model.bim タブ)、デザイナーのウィンドウが表示されないかどうか**ソリューション エクスプ ローラー** **AW Internet Sales プロジェクト**をダブルクリックして、 **Model.bim**ファイル。 Model.bim ファイルには、すべてのモデル プロジェクトのメタデータが含まれています。 
 
-![として-表形式のレッスン 1 から-se](../analysis-services/media/as-tabular-lesson1-se.png)
+![as-tabular-lesson1-se](../analysis-services/media/as-tabular-lesson1-se.png)
   
 モデルのプロパティを見てみましょう。 をクリックして**Model.bim**です。 **プロパティ**ウィンドウが表示されます、[モデル プロパティの](../analysis-services/tabular-models/model-properties-ssas-tabular.md)、最も重要なは、 **DirectQuery モード**プロパティです。 このプロパティは、モデルがインメモリ モード (オフ) と DirectQuery モード (オン) のどちらで配置されるかを指定します。 このチュートリアルでは、インメモリ モードでモデルを作成し、展開します。
 
-![として表形式のレッスン 1 からのプロパティ](../analysis-services/media/as-tabular-lesson1-properties.png)
+![as-tabular-lesson1-properties](../analysis-services/media/as-tabular-lesson1-properties.png)
   
 指定できるデータ モデリング設定に従って、新しいモデルを作成するときに特定のモデルのプロパティを自動的に設定、**ツール** > **オプション** ダイアログ ボックス。 データ バックアップ、ワークスペースの保有期間、およびワークスペース サーバーの各プロパティは、ワークスペース データベース (モデル作成データベース) をバックアップ、メモリ内保持、および構築するための方法と場所を指定します。 これらの設定は後で必要に応じて変更できますが、ここではそのままにしておきます。  
 
@@ -91,7 +92,7 @@ SSDT をインストールしたときに、いくつかの新しいメニュー
 
 
 ## <a name="additional-resources"></a>その他のリソース
-テーブル モデル プロジェクトの種類については、「[テーブル モデル プロジェクト (SSAS テーブル)](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)」を参照してください。 テーブル モデル作成環境の詳細については、「[テーブル モデル デザイナー (SSAS)](../analysis-services/tabular-models/tabular-model-designer-ssas.md)」を参照してください。  
+テーブル モデル プロジェクトのさまざまな種類の詳細については、次を参照してください。[表形式モデル プロジェクト](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)です。 表形式モデルの作成環境の詳細については、次を参照してください。[テーブル モデル デザイナー](../analysis-services/tabular-models/tabular-model-designer-ssas.md)です。  
   
 
 ## <a name="whats-next"></a>次の操作

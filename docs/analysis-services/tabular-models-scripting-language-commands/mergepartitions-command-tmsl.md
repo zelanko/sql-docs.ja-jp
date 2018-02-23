@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: dd568426-a415-41bf-b1e9-ea2261babf81
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7960dbd174c0f959439029dc05cd16efbc42f319
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fce99eb78e6e5a40b825d13b81def4a87deb48b5
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mergepartitions-command-tmsl"></a>MergePartitions コマンド (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]対象パーティションに 1 つまたは複数のソース パーティションのデータをマージし、元のパーティションを削除します。 対象パーティションの SQL クエリは、マージの一部として更新されません。 パーティションの後続の処理に、すべてのデータを取得することを確認するには、するには、クエリを変更して、マージされたパーティション内のすべてのデータを選択するようにする必要があります。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+対象パーティションに 1 つまたは複数のソース パーティションのデータをマージし、元のパーティションを削除します。 対象パーティションの SQL クエリは、マージの一部として更新されません。 パーティションの後続の処理に、すべてのデータを取得することを確認するには、するには、クエリを変更して、マージされたパーティション内のすべてのデータを選択するようにする必要があります。  
   
 ## <a name="request"></a>要求  
  データベース、テーブル、およびソースとターゲットのパーティションを指定する必要があります。 同じテーブルからパーティションをマージすることができますのみです。  
@@ -72,6 +73,6 @@ ms.lasthandoff: 01/08/2018
 
 ## <a name="see-also"></a>参照  
  [表形式モデルのスクリプト言語 (TMSL) リファレンス](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [テーブル モデル パーティションの作成および管理 (SSAS テーブル)](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [テーブル モデル パーティションの作成および管理](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

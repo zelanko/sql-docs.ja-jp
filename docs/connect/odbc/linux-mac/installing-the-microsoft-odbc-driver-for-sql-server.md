@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e7f03a55e7be9bba83458b04d11208ed1a65b524
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 883c016829dcf5ba9b7d48f0356a4a6141550e7d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux および macOS に Microsoft ODBC Driver for SQL Server をインストールする
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,6 +32,8 @@ ms.lasthandoff: 02/11/2018
 このトピックの内容をインストールする方法を説明します、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux と macOS、SQL Server の省略可能なコマンド ライン ツールに (`bcp`と`sqlcmd`) および unixODBC 開発ヘッダー。
 
 ## <a name="microsoft-odbc-driver-17-for-sql-server"></a>SQL Server 用 Microsoft ODBC Driver 17 
+
+**重要なメモ:**バージョン 17 ODBC ドライバーのパッケージは、Linux、Mac は既存のインストールを更新するときに問題のため現在ご利用いただけません。 更新したパッケージをできるだけ早く提供に取り組んでいます。 17 のバージョンのインストール コマンドを実行すると、バージョン 13.1 ドライバーは現在インストールします。
 
 ### <a name="debian-8-and-9"></a>Debian 8 と 9
 ```
@@ -364,8 +366,8 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ### <a name="offline-installation"></a>オフライン インストール
 優先または必要とする場合、[!INCLUDE[msCoName](../../../includes/msconame_md.md)]パッケージの依存関係を手動で解決する必要があるインターネットに接続せずにコンピューターにインストールされる ODBC Driver 13、します。 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 が次の直接の依存関係。
 - Ubuntu: libc6 (> = 2.21)、ため libstdc++ + + 6 (> = 4.9)、libkrb5 3、libcurl3、openssl、debconf (> = 0.5)、unixodbc (> 2.3.1-1 を =)
-- Red Hat は:```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
-- SuSE:```glibc, libuuid1, krb5, openssl, unixODBC```
+- Red Hat は: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
+- SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
 これらの各パッケージが独自の依存関係があり、システムに存在していない可能性があります。 この問題に一般的なソリューションは、配布のパッケージ マネージャーのドキュメントを参照してください: [Red Hat](https://wiki.centos.org/HowTos/CreateLocalRepos)、 [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)、および[SUSE](https://en.opensuse.org/Portal:Zypper)
 

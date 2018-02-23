@@ -24,18 +24,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3bf21d3debd7c24ea7b2e5ddcea56392e0f33400
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d85d437ce17c04107d85cf444268eb26f1a460e8
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>テーブル モデリング (互換性レベル 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 このチュートリアルでの Analysis Services 表形式モデルを作成する方法のレッスンでは、[互換性レベル 1200](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)を使用して[SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)、Analysis Services にモデルを配置およびサーバーをオンプレミスまたは Azure です。  
  
-SQL Server 2017 または Azure Analysis Services を使用して、1400 互換性のレベルでモデルを作成、使用する場合、 [Azure Analysis Services - Adventure Works チュートリアル](https://review.docs.microsoft.com/azure/analysis-services/tutorials/aas-adventure-works-tutorial?branch=master)です。 この更新されたバージョンは、新しい、最新のデータの取得機能を使用して接続し、ソース データをインポートし、パーティションを構成する、M 言語を使用します。
+SQL Server 2017 または Azure Analysis Services を使用しているし、1400 互換性のレベルでモデルを作成、使用する場合、[テーブル モデリング (互換性レベルが 1400)](tutorial-tabular-1400/as-adventure-works-tutorial.md)です。 この更新されたバージョンは、最新のデータの取得機能を使用して接続し、ソース データをインポートをパーティションを構成する、M 言語を使用し、追加の補足レッスンが含まれています。
+
+> [!IMPORTANT]
+> サーバーでサポートされている最新の互換性レベルで、表形式モデルを作成する必要があります。 以降の互換性レベル モデルでは、パフォーマンスを向上させる、追加の機能よりシームレスに将来の互換性レベルにアップグレードされます。
  
   
 ## <a name="what-you-learn"></a>学習内容   
@@ -50,14 +53,14 @@ SQL Server 2017 または Azure Analysis Services を使用して、1400 互換�
   
 -   パースペクティブとビジネスとアプリケーション固有のビュー ポイントを提供することによって、モデル データを簡単に参照複数ユーザーを支援する階層を作成および管理方法です。  
   
--   パーティションを作成してテーブル データをより小さな論理部分に分割し、他のパーティションと分離して処理できるようにする方法。  
+-   作成する方法より小さな論理部分に、他のパーティションから独立して処理できる分割テーブルのデータをパーティション分割します。  
   
 -   ユーザー メンバーのロールを作成して、モデル オブジェクトとデータを保護する方法。  
   
 -   Analysis Services サーバーにオンプレミスまたは Azure では、表形式モデルを展開する方法です。  
   
 ## <a name="scenario"></a>Scenario  
-このチュートリアルは、Adventure Works Cycles、架空の会社に基づいています。 Adventure Works は、生成し、金属製自転車を北アメリカ、ヨーロッパ、およびアジアの市場を配布する、大規模な多国籍製造会社です。 ワシントン州ボセルに本社では、会社には、500 の作業者が採用しています。 さらに、Adventure Works では、市場には、全体で複数の地域販売チームが採用しています。  
+このチュートリアルは、Adventure Works Cycles、架空の会社に基づいています。 Adventure Works は、自転車、部品、および北米、ヨーロッパ、およびアジアの市場で商用アクセサリを生成するための大規模な多国籍製造会社です。 ワシントン州ボセルに本社では、会社には、500 の作業者が採用しています。 さらに、Adventure Works では、市場には、全体で複数の地域販売チームが採用しています。  
   
 あなたは、販売チーム、マーケティング チーム、および上級管理職のデータ分析ニーズにより高度に対応するべく、AdventureWorksDW サンプル データベース内のインターネット販売データを分析するためのテーブル モデルを作成します。  
   

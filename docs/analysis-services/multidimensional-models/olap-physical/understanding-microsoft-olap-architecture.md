@@ -11,22 +11,25 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: multidimensional data [Analysis Services], about multidimensional data
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- multidimensional data [Analysis Services], about multidimensional data
 ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c671dde35093f9a5931d4387ee2debd65200412f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 29fa27487fde84c7838f834dc0dfe397bc3d356e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Microsoft OLAP アーキテクチャについて
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]理解するのにはこれらのトピックを使用して[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]プランの多次元データベースと多次元データベース、ビジネス インテリジェンス ソリューションを実装する方法です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+以下のトピックを参照して、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多次元データベースを十分に理解し、ビジネス インテリジェンス ソリューションに多次元データベースを実装する計画を立てます。  
   
  ![小さいファイル フォルダー アイコン](../../../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン")**論理アーキテクチャ**  
  [サーバー オブジェクト &#40;です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md)  
@@ -55,6 +58,6 @@ ms.lasthandoff: 01/08/2018
  [Analysis Services のグローバリゼーションのシナリオ](../../../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
 ## <a name="see-also"></a>参照  
- [テクニカル リファレンス &#40;です。SSAS &#41;](../../../analysis-services/powershell/technical-reference-ssas.md)  
+ [テクニカル リファレンス ](../../../analysis-services/powershell/technical-reference-ssas.md)  
   
   

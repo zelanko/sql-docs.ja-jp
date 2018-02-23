@@ -1,5 +1,5 @@
 ---
-title: "テーブルまたは列 (SSAS テーブル) の名前を変更 |Microsoft ドキュメント"
+title: "テーブルまたは列の名前を変更 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 05/22/2017
 ms.prod: analysis-services
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.renametableorcolumn.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.renametableorcolumn.f1
 ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b22cc6d04ca3384accec6b1893a1fcd1297ca022
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bf8d925f0ffe72eab343ebf8af82030a21c0a9b0
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="rename-a-table-or-column-ssas-tabular"></a>テーブルまたは列名の変更 (SSAS テーブル)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]インポート処理中に、テーブルの名前を変更するには」と入力して、**フレンドリ名**で、 **テーブルおよびビュー**のページ、**テーブルのインポート ウィザード**です。 **テーブルのインポート ウィザード** の **[SQL クエリの指定]**ページでクエリを指定してデータをインポートした場合は、テーブルおよび列の名前を変更することもできます。  
+# <a name="rename-a-table-or-column"></a>テーブルまたは列名の変更 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+**テーブルのインポート ウィザード** の **[テーブルとビューの選択]** ページで **表示名**を入力することにより、インポート処理中にテーブルの名前を変更できます。 **テーブルのインポート ウィザード** の **[SQL クエリの指定]**ページでクエリを指定してデータをインポートした場合は、テーブルおよび列の名前を変更することもできます。  
   
  データをモデルに追加すると、テーブルの名前 (つまりタイトル) がモデル デザイナーの下部にあるテーブル タブに表示されます。 テーブルの名前は、より適切な名前に変更できます。 列の名前は、データをモデルに追加した後で変更することもできます。 このオプションは、複数のソースからデータをインポートして、別のテーブルの列にわかりやすい名前を付けたい場合に特に重要となります。  
   
