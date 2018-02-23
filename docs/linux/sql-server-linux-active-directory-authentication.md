@@ -9,18 +9,18 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: 7de515aa08ec73ff6c7b90e9a630e59ca6f71252
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 8644c6e061b0c1cdcd80d8c7cb25b8662eb7ae26
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>SQL Server on Linux での active Directory 認証
 
@@ -157,7 +157,7 @@ AD の認証を構成する前にする必要があります。
   
 5. ドメインからユーザーに関する情報を収集できるようになりましたことと、そのユーザーとして Kerberos チケットを取得することを確認します。
 
-   We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
+   次の例で**id**、  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**、および **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** このコマンド。
 
    ```bash
    id user@contoso.com
@@ -182,7 +182,7 @@ AD の認証を構成する前にする必要があります。
 ## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>AD ユーザーを作成する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]SPN を設定し、
 
   > [!NOTE]
-  > 次の手順では、使用、[完全修飾ドメイン名](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)です。 表示されている場合**Azure**、する必要があります**[作成](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**続行する前にします。
+  > 次のステップを使用して、[完全修飾ドメイン名](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)です。 表示されている場合**Azure**、する必要があります**[作成](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**続行する前にします。
 
 1. 、ドメイン コント ローラーで実行、 [New-aduser](https://technet.microsoft.com/library/ee617253.aspx)パスワードを無期限にすると、新しい AD ユーザーを作成する PowerShell コマンド。 この例で、アカウント"mssql"は名前が、アカウント名には、どのようなを指定できます。 アカウントの新しいパスワードを入力が求められます。
 
@@ -195,7 +195,7 @@ AD の認証を構成する前にする必要があります。
    > [!NOTE]
    > SQL Server の資格情報が同じアカウントを使用して他のサービスと共有されないようにするには、専用の AD アカウントを SQL Server のセキュリティのベスト プラクティスを勧めします。 ただし、再利用できます既存の AD アカウントを使用する場合 (次の手順では、keytab ファイルを生成するために必要な) アカウントのパスワードがわかっている場合。
 
-2. このアカウントを使用するためのサービス プリンシパル名 (SPN) を設定、`setspn.exe`ツールです。 SPN に次の例では正確に指定した書式を設定する必要があります: の完全修飾ドメイン名を見つけることができます、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を実行して、ホスト マシン`hostname --all-fqdns`上、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ホスト、および TCP ポートは、構成していない限りに、1433 にする必要があります[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]別のポート番号を使用します。
+2. このアカウントを使用するためのサービス プリンシパル名 (SPN) を設定、`setspn.exe`ツールです。 SPN は次の例では指定どおり正確にフォーマットされている必要があります。 完全修飾ドメイン名を見つけることができます、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を実行して、ホスト マシン`hostname --all-fqdns`上、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ホスト、および TCP ポートは、構成していない限りに、1433 にする必要があります[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]別のポート番号を使用します。
 
    ```PowerShell
    setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
@@ -218,7 +218,7 @@ AD の認証を構成する前にする必要があります。
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. AD ユーザーが、前の手順で作成した keytab ファイルを作成します。 使用してこれを行うに **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**です。 メッセージが表示されたらは、その AD アカウントのパスワードを入力します。
+2. Keytab ファイルを作成 **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** 前の手順で作成した AD ユーザー用です。 メッセージが表示されたらは、その AD アカウントのパスワードを入力します。
 
    ```bash
    sudo ktutil
@@ -267,9 +267,9 @@ AD の認証を構成する前にする必要があります。
 
 ドメインの資格情報を使用してクライアント コンピューターにログインします。 接続できるようになりました[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AD 認証を使用して、パスワードを再入力しなくてもします。 AD グループのログインを作成する場合、そのグループのメンバーになっている AD ユーザーは、同じ方法で接続できます。
 
-クライアントが AD の認証を使用する特定の接続文字列パラメーターは、使用しているドライバーによって異なります。 いくつかの例のとおりです。
+クライアントが AD の認証を使用する特定の接続文字列パラメーターは、使用しているドライバーによって異なります。 次の例を考えてみます。
 
-* `sqlcmd`ドメインに参加している Linux クライアントで
+* `sqlcmd` ドメインに参加している Linux クライアントで
 
    使用してドメインに参加している Linux クライアントへのログインに`ssh`と、ドメイン資格情報。
 

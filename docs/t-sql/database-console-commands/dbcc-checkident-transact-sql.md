@@ -1,5 +1,5 @@
 ---
-title: "DBCC CHECKIDENT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC CHECKIDENT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC CHECKIDENT
 - CHECKIDENT_TSQL
 - DBCC_CHECKIDENT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - checking identity values
 - reseeding identity values
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - identity values [SQL Server], reseeding
 - reporting current identity values
 ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a370a89e175a00f33d26992cfc5c6aaecbd7436
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: ffe0d85efb5f67e75a84c0012ba351bd01568bb8
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +64,7 @@ DBCC CHECKIDENT
   
 ## <a name="arguments"></a>引数  
  *table_name*  
- 現在の ID 値をチェックするテーブルの名前を指定します。 指定されたテーブルには、ID 列が含まれている必要があります。 テーブル名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。 'Person.AddressType'、または [Person.AddressType] など、2 つまたは 3 つの部分名を区切る必要があります。   
+ 現在の ID 値をチェックするテーブルの名前を指定します。 指定されたテーブルには、ID 列が含まれている必要があります。 テーブル名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 'Person.AddressType' や [Person.AddressType] など、2 つまたは 3 つの部分名を区切る必要があります。   
   
  NORESEED  
  現在の ID 値を変更しないように指定します。  
@@ -76,22 +78,22 @@ DBCC CHECKIDENT
  WITH NO_INFOMSGS  
  すべての情報メッセージを表示しないようにします。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  現在の ID 値に加えられる個々の修正は、指定されているパラメーターによって異なります。  
   
 |DBCC CHECKIDENT コマンド|加えられる ID の修正|  
 |-----------------------------|---------------------------------------------|  
-|DBCC CHECKIDENT ( *table_name*NORESEED)|現在の ID 値はリセットされません。 DBCC CHECKIDENT は、ID 列の現在の ID 値と現在の最大値を返します。 2 つの値が異なる場合は、エラーが発生しないよう、または連続値の一部が欠落しないように、ID 値をリセットする必要があります。|  
-|DBCC CHECKIDENT ( *table_name* )<br /><br /> または<br /><br /> DBCC CHECKIDENT ( *table_name*、RESEED)|テーブルの現在の ID 値が、ID 列に格納されている最大の ID 値より小さい場合、テーブルの現在の ID 値は ID 列の最大値にリセットされます。 後の「例外」のセクションを参照してください。|  
-|DBCC CHECKIDENT ( *table_name*、RESEED, *new_reseed_value* )|現在の id 値に設定されている、 *new_reseed_value*です。 行が挿入されていないテーブルにテーブルが作成された、またはすべての行が削除された場合、TRUNCATE TABLE ステートメントを使用して、DBCC CHECKIDENT を実行した後に挿入された最初の行を使用して場合*new_reseed_value* id として。<br /><br /> 次の行が挿入された行がテーブルに存在する場合、 *new_reseed_value*値。 バージョンで[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]以前で、次の行の挿入を使用して*new_reseed_value* +[現在インクリメント](../../t-sql/functions/ident-incr-transact-sql.md)値。<br /><br /> テーブルが空でない場合、ID 値に ID 列の最大値より小さな値を設定すると、次の状況のいずれかが発生する可能性があります。<br /><br /> Id 列に PRIMARY KEY または UNIQUE 制約が存在する場合エラー メッセージ 2627 が生成されますテーブルへの後続の挿入操作で生成される id 値が既存の値と競合するためです。<br /><br /> PRIMARY KEY または UNIQUE 制約が存在しない場合、後続の挿入操作は重複した id 値になります。|  
+|DBCC CHECKIDENT ( *table_name*, NORESEED )|現在の ID 値はリセットされません。 DBCC CHECKIDENT は、ID 列の現在の ID 値と現在の最大値を返します。 2 つの値が異なる場合は、エラーが発生しないよう、または連続値の一部が欠落しないように、ID 値をリセットする必要があります。|  
+|DBCC CHECKIDENT ( *table_name* )<br /><br /> 内の複数の<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|テーブルの現在の ID 値が、ID 列に格納されている最大の ID 値より小さい場合、テーブルの現在の ID 値は ID 列の最大値にリセットされます。 後の「例外」のセクションを参照してください。|  
+|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|現在の ID 値は *new_reseed_value* に設定されます。 テーブルが作成された後、そのテーブルに行が挿入されていない、または TRUNCATE TABLE ステートメントを使用してすべての行が削除された場合、DBCC CHECKIDENT を実行した後に挿入された最初の行が ID として *new_reseed_value* を使用します。<br /><br /> 行がテーブルに存在する場合、次の行が *new_reseed_value* で挿入されます。 バージョン [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以前では、挿入された次の行で *new_reseed_value* + [現在のインクリメント](../../t-sql/functions/ident-incr-transact-sql.md)の値を使用します。<br /><br /> テーブルが空でない場合、ID 値に ID 列の最大値より小さな値を設定すると、次の状況のいずれかが発生する可能性があります。<br /><br /> ID 列に PRIMARY KEY 制約または UNIQUE 制約が設定されている場合、生成される ID 値と既存の値との競合が原因で、テーブルに対する後続の挿入操作でエラー メッセージ 2627 が生成されます。<br /><br /> PRIMARY KEY 制約または UNIQUE 制約が設定されていない場合、後続の挿入操作では重複した ID 値が挿入されます。|  
   
 ## <a name="exceptions"></a>例外  
  次の表に、DBCC CHECKIDENT で現在の ID 値が自動的にリセットされないときの条件と、ID 値をリセットする方法を示します。  
   
 |条件|リセット方法|  
 |---------------|-------------------|  
-|現在の ID 値がテーブルの最大値より大きい。|DBCC checkident (*table_name*、NORESEED) の列で、現在の最大値を確認し、その値としてを指定、 *new_reseed_value* DBCC checkident (*table _名前*、RESEED,*new_reseed_value*) コマンド。<br /><br /> - または -<br /><br /> DBCC checkident (*table_name*、RESEED,*new_reseed_value*) と*new_reseed_value*に非常に低い値を設定し、DBCC CHECKIDENT を実行 (*table_name*、RESEED) 値を修正します。|  
-|すべての行がテーブルから削除されている。|DBCC checkident (*table_name*、RESEED,*new_reseed_value*) と*new_reseed_value*開始値に設定します。|  
+|現在の ID 値がテーブルの最大値より大きい。|DBCC CHECKIDENT (*table_name*, NORESEED) を実行して列の現在の最大値を決定し、DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) コマンドでその値を *new_reseed_value* として指定します。<br /><br /> -または-<br /><br /> *new_reseed_value* を非常に低い値に設定して DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) を実行してから DBCC CHECKIDENT (*table_name*, RESEED) を実行して値を修正します。|  
+|すべての行がテーブルから削除されている。|*new_reseed_value* を希望の開始値に設定して DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) を実行します。|  
   
 ## <a name="changing-the-seed-value"></a>シード値の変更  
  シード値は、テーブルに読み込まれる最初の行の ID 列に挿入される値です。 以降の行にはすべて、現在の ID 値 (テーブルまたはビューに対して生成された最後の ID 値) に増分値を加えた値が格納されます。  
@@ -109,17 +111,17 @@ DBCC CHECKIDENT
   
 `Checking identity information: current identity value '\<current identity value>', current column value '\<current column value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
- 再シードを使用して新しいシード値を指定して DBCC CHECKIDENT を使用する場合*new_reseed_value*、次のメッセージが返されます。  
+ RESEED *new_reseed_value* を使用して新しいシード値を指定する DBCC CHECKIDENT を使用する場合、次のメッセージが返されます。  
   
 `Checking identity information: current identity value '\<current identity value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
-## <a name="permissions"></a>権限  
- 呼び出し元のテーブルを含むスキーマを所有またはのメンバーである必要があります、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、または**db_ddladmin**固定データベース ロール。  
+## <a name="permissions"></a>アクセス許可  
+ 呼び出し元がテーブルを含むスキーマを所有しているか、**sysadmin** 固定サーバー ロール、**db_owner** 固定サーバー ロール、または **db_ddladmin** 固定サーバー ロールのメンバーである必要があります。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-resetting-the-current-identity-value-if-it-is-needed"></a>A. 必要に応じて現在の ID 値をリセットする  
- 次の例は、指定されたテーブルでの必要な場合に現在の id 値をリセット、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。  
+ 次の例では、必要に応じて、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内の指定されたテーブルの現在の ID 値をリセットします。  
   
 ```  
 USE AdventureWorks2012;  
@@ -140,12 +142,24 @@ GO
 ```  
   
 ### <a name="c-forcing-the-current-identity-value-to-a-new-value"></a>C. 現在の ID 値を強制的に新しい値に設定する  
- 次の例では、現在の id 値を強制する、`AddressTypeID`内の列、`AddressType`テーブル 10 の値にします。 テーブルには既存の行があるため、次に挿入される行では値に 11 が使用されます。この値は、列の値に対して定義されている新しい現在の増分値に 1 を加えた値です。  
+ 次の例では、 `AddressType` テーブルの `AddressTypeID` 列の現在の ID 値を強制的に 10 に設定します。 テーブルには既存の行があるため、次に挿入される行では値に 11 が使用されます。この値は、列の値に対して定義されている新しい現在の増分値に 1 を加えた値です。  
   
 ```  
 USE AdventureWorks2012;  
 GO  
 DBCC CHECKIDENT ('Person.AddressType', RESEED, 10);  
+GO  
+  
+```  
+### <a name="d-resetting-the-identity-value-on-an-empty-table"></a>D. 空のテーブルの ID 値をリセットする
+ 次の例では、テーブルのすべてのレコードを削除した後に、`ErrorLog` テーブルの `ErrorLogID` 列の現在の ID 値を強制的に 1 に設定します。 テーブルには既存の行がないため、次に挿入される行では値に 1 が使用されます。この値は、列について定義された増分値を加えない現在の ID 値です。  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+TRUNCATE TABLE dbo.ErrorLog
+GO
+DBCC CHECKIDENT ('dbo.ErrorLog', RESEED, 1);  
 GO  
   
 ```  
@@ -158,6 +172,6 @@ GO
 [ID 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)  
 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
 [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)  
-[IDENT_INCR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ident-incr-transact-sql.md)  
+[IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)  
   
   

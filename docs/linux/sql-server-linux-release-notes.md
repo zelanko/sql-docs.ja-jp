@@ -1,6 +1,6 @@
 ---
 title: "Linux 上の SQL Server 2017 のリリース ノート |Microsoft ドキュメント"
-description: "このトピックでは、リリース ノートが含まれていて、Linux で実行されている SQL Server 2017 の機能をサポートします。 リリース ノートは、最新のリリースから以前のリリースをいくつか含まれます。"
+description: "ここでは、リリース ノートが含まれていて、Linux で実行されている SQL Server 2017 の機能をサポートします。 リリース ノートは、最新のリリースから以前のリリースをいくつか含まれます。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,21 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: e8160ec17a856a3c14d1177085c95c329e5d2b3b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 3d53adc21ff54f8fe6171f361fbfba3208a427d1
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
-次のリリース ノートは、Linux で実行されている SQL Server 2017 に適用されます。 以下のトピックは、各リリースについてのセクションに分割されます。 GA リリースがサポートの詳細し、既知の問題が一覧表示します。 各累積更新プログラム (CU) リリースでは、CU 変更に加え、パッケージのダウンロード、Linux へのリンクを説明するサポートのトピックにリンクがあります。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+次のリリース ノートは、Linux で実行されている SQL Server 2017 に適用されます。 この記事は、各リリースについてのセクションに分割されます。 GA リリースがサポートの詳細し、既知の問題が一覧表示します。 各累積更新プログラム (CU) リリースでは、CU 変更に加え、パッケージのダウンロード、Linux へのリンクを説明するサポートの記事にリンクがあります。
 
 ## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
@@ -56,7 +58,7 @@ ms.lasthandoff: 02/09/2018
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [GA](#GA) | 14.0.1000.169 | 10-2017 |
 
-## <a id="cuinstall"></a>累積的更新プログラムをインストールする方法
+## <a id="cuinstall"></a> 累積的更新プログラムをインストールする方法
 
 構成した場合、累積的な更新リポジトリ、新規インストールを実行するときに SQL Server パッケージの最新の累積的な更新が発生します。 累積的な更新プログラムのリポジトリは、Linux 上の SQL Server のすべてのパッケージのインストールのアーティクルの既定値です。 リポジトリの構成の詳細については、次を参照してください。 [Linux に SQL Server 用のリポジトリを構成する](sql-server-linux-change-repo.md)です。
 
@@ -67,7 +69,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の累積
 - [SQL Server エージェント パッケージをインストールします。](sql-server-linux-setup-sql-agent.md)
 - [SQL Server Integration Services のインストール](sql-server-linux-setup-ssis.md)
 
-## <A id="CU2"></a>累積更新プログラム 3 (年 2018年 1 月)
+## <A id="CU2"></a> 累積更新プログラム 3 (年 2018年 1 月)
 
 これは、SQL Server 2017 の累積更新プログラム 3 (CU3) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3015.40 です。 修正プログラムとこのリリースの機能強化については、次を参照してください。 [https://support.microsoft.com/en-us/help/4052987](https://support.microsoft.com/en-us/help/4052987)です。
 
@@ -81,7 +83,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の累積
 | SLES RPM パッケージ | 14.0.3015.40-1 | [mssql server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[フルテキスト検索の 15,000 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[SQL Server エージェント RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3015.40-1 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3015.40-1_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3015.40-1_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3015.40-1_amd64.deb)</br>[SQL Server エージェントの Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3015.40-1_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <A id="CU2"></a>Cumulative Update 2 (2017 年 11 月)
+## <A id="CU2"></a> Cumulative Update 2 (2017 年 11 月)
 
 これは、SQL Server 2017 の Cumulative Update 2 (CU2) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3008.27 です。 修正プログラムとこのリリースの機能強化については、次を参照してください。 [https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574)です。
 
@@ -95,7 +97,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の累積
 | SLES RPM パッケージ | 14.0.3008.27-1 | [mssql server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[フルテキスト検索の 15,000 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[SQL Server エージェント RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3008.27-1 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3008.27-1_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3008.27-1_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3008.27-1_amd64.deb)</br>[SQL Server エージェントの Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3008.27-1_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <A id="CU1"></a>Cumulative Update 1 (2017 年 10 月)
+## <A id="CU1"></a> Cumulative Update 1 (2017 年 10 月)
 
 これは、SQL Server 2017 の Cumulative Update 1 (CU1) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3006.16 です。 修正プログラムとこのリリースの機能強化については、次を参照してください。 [https://support.microsoft.com/help/4038634](https://support.microsoft.com/help/4038634)です。
 
@@ -109,7 +111,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の累積
 | SLES RPM パッケージ | 14.0.3006.16-3 | [mssql server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3006.16-3.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3006.16-3.x86_64.rpm)</br>[フルテキスト検索の 15,000 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3006.16-3.x86_64.rpm)</br>[SQL Server エージェント RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3006.16-3.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3006.16-3 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3006.16-3_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3006.16-3_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3006.16-3_amd64.deb)</br>[SQL Server エージェントの Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3006.16-3_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="GA"></a>GA (2017 年 10 月)
+## <a id="GA"></a> GA (2017 年 10 月)
 
 これは、SQL Server 2017 の一般公開 (GA) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.1000.169 です。
 
@@ -128,13 +130,13 @@ SQL Server の既存のパッケージを更新する場合は、最新の累積
 | SLES RPM パッケージ | 14.0.1000.169-2 | [mssql server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[フルテキスト検索の 15,000 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server エージェント RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.1000.169-2 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[SQL Server エージェントの Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-### <a name="Unsupported"></a>サポートされていない機能とサービス
+### <a name="Unsupported"></a> サポートされていない機能とサービス
 
 次の機能とサービスは現時点では Linux で使用できません。 時間の経過と共に、これらの機能のサポートをしだいに有効なります。
 
 | 領域 | サポートされていない機能またはサービス |
 |-----|-----|
-| **データベース エンジン** | トランザクション レプリケーション |
+| データベース エンジン | トランザクション レプリケーション |
 | &nbsp; | マージ レプリケーション |
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
@@ -227,7 +229,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の累積
 
 1. ソース インスタンスには、カーネルで無効になっている IPv6 があります。 かどうか、システムはをカーネル内で有効になっている IPv6 ことを確認するには、次のすべてのテストに合格する必要があります。
 
-   - `cat /proc/cmdline`現在のカーネルのブート cmdline が印刷されます。 出力にはする必要がありますが含まれていない`ipv6.disable=1`です。
+   - `cat /proc/cmdline` 現在のカーネルのブート cmdline が印刷されます。 出力にはする必要がありますが含まれていない`ipv6.disable=1`です。
    - Proc/sys/net ipv6/ディレクトリが存在する必要があります。
    - C プログラムを呼び出す`socket(AF_INET6, SOCK_STREAM, IPPROTO_IP)`成功すべき - syscall、fd を返す必要があります! =-1 と EAFNOSUPPORT で異常終了しません。
 
