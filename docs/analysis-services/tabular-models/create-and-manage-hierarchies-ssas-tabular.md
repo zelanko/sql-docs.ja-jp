@@ -1,7 +1,7 @@
 ---
-title: "作成および管理階層 (SSAS テーブル) |Microsoft ドキュメント"
+title: "作成し、階層の管理 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6a8646985a0d9eb8dbba35123c2c3b1d049e62a5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 96af188d39d583c53b2520d03f6fd0962092a90f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-hierarchies-ssas-tabular"></a>階層の作成および管理 (SSAS テーブル)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]階層の作成し、管理はダイアグラム ビューで、モデル デザイナーでことができます。 モデル デザイナーをダイアグラム ビューに表示するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で **[モデル]** メニューをクリックし、 **[モデル ビュー]**をポイントして、 **[ダイアグラム ビュー]**をクリックします。  
+# <a name="create-and-manage-hierarchies"></a>作成し、階層の管理 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+階層の作成と管理はダイアグラム ビューのモデル デザイナーで行うことができます。 モデル デザイナーをダイアグラム ビューに表示するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で **[モデル]** メニューをクリックし、 **[モデル ビュー]**をポイントして、 **[ダイアグラム ビュー]**をクリックします。  
   
- このトピックでは、次のタスクについて説明します。  
+ この記事には、次のタスクが含まれています。  
   
 -   [階層の作成](#bkmk_create)  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [階層の削除](#bkmk_delete)  
   
-##  <a name="bkmk_create"></a> 階層の作成  
+##  <a name="bkmk_create"></a> 階層を作成します。  
  列とテーブルのショートカット メニューを使用すると階層を作成できます。 階層を作成すると、選択した列を子レベルに持つ新しい親レベルが表示されます。  
   
 #### <a name="to-create-a-hierarchy-from-the-context-menu"></a>ショートカット メニューから階層を作成するには  
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  1 つ以上の列と共に 1 つのメジャーを複数選択するか、または複数のテーブルから複数の列を選択した場合、ショートカット メニューの [階層の作成] コマンドは無効になります。  
   
-##  <a name="bkmk_edit"></a> 階層の編集  
+##  <a name="bkmk_edit"></a> 階層を編集します。  
  階層名の変更、子レベルの名前の変更、子レベルの順序の変更、子レベルとしての列の追加、階層内の子レベルの削除、子レベルの基になる名前 (列名) の表示、階層の親レベルと同名の子レベルの非表示を行うことができます。  
   
 #### <a name="to-change-the-name-of-a-hierarchy-or-child-level"></a>階層または子レベルの名前を変更するには  
@@ -100,8 +101,8 @@ ms.lasthandoff: 01/08/2018
 -   または、親階層レベルをクリックし、Del キーを押します。 これにより、すべての子レベルも削除されます。  
   
 ## <a name="see-also"></a>参照  
- [テーブル モデル デザイナー &#40;SSAS&#41;](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
- [階層 &#40;です。SSAS テーブル &#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
- [メジャー (SSAS テーブル)](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
+ [テーブル モデル デザイナー ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [階層](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
+ [メジャー](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   

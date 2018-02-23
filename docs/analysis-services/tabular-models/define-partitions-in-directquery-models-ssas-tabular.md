@@ -1,7 +1,7 @@
 ---
-title: "パーティションと DirectQuery モデル (SSAS テーブル) での定義 |Microsoft ドキュメント"
+title: "パーティションと DirectQuery モデルでの定義 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/06/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88079b80a84e692ca07695f718c161f626093cec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 21e629bbac90f30562c6b8434e2a73a71fdea4ed
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="define-partitions-in-directquery-models"></a>パーティションと DirectQuery モデルの定義
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]このセクションでは、DirectQuery モデルでパーティションを使用する方法について説明します。 テーブル モデルでのパーティションに関する一般的な情報については、「 [パーティション (SSAS テーブル)](../../analysis-services/tabular-models/partitions-ssas-tabular.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+ここでは、DirectQuery モデルでのパーティションの使用方法について説明します。 テーブル モデルでパーティションの概要については、次を参照してください。[パーティション](../../analysis-services/tabular-models/partitions-ssas-tabular.md)です。  
   
 > [!NOTE]  
 >  1 つのテーブルに対して複数のパーティションを設定することができますが、DirectQuery モードでは、クエリの実行に使用できるのはそのうちの 1 つのみです。 この単一のパーティションの要件は、すべての互換性レベルの DirectQuery モデルに適用されます。  
@@ -82,6 +83,6 @@ ms.lasthandoff: 01/08/2018
 |DirectQueryUsage = InMemory With DirectQuery (インメモリ (DirectQuery あり))<br /><br /> インメモリと DirectQuery モードの組み合わせで実行される 1100 または 1103 表形式モデルに適用されます。|[パーティションを処理できる]|モデルがハイブリッド モードを使用している場合は、インメモリと DirectQuery データ ソースに対するクエリで同じパーティションを使用する必要があります。|  
   
 ## <a name="see-also"></a>参照  
- [パーティション (SSAS テーブル)](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
+ [パーティション](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
   
   

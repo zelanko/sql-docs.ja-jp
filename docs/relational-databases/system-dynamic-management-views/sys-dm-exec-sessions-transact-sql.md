@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: aa248e9733c17b734eb60095f65b462e42e8b0c7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f2cf9c01c280848403ca2998e550213f2de78ad6
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>権限  
 すべてのユーザーは、独自のセッション情報を参照してくださいことができます。  
 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:**必要`VIEW SERVER STATE`に対する権限[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、サーバー上のすべてのセッションを表示します。  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:**必要`VIEW DATABASE STATE`を現在のデータベースに対するすべての接続を確認します。 `VIEW DATABASE STATE`付与することはできません、`master`データベース。 
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:**必要`VIEW DATABASE STATE`を現在のデータベースに対するすべての接続を確認します。 `VIEW DATABASE STATE` 付与することはできません、`master`データベース。 
   
   
 ## <a name="remarks"></a>解説  
@@ -114,7 +114,7 @@ ms.lasthandoff: 02/03/2018
  このオプションが有効でない場合、これらの列は NULL 値を返します。 このサーバー構成オプションを設定する方法の詳細については、次を参照してください。[共通の criteria compliance enabled サーバー構成オプション](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)です。  
  
  
- 管理者以外の接続は、データベース ユーザーのセッションに関連する情報のみ表示中に、Azure SQL データベース上の管理の接続は、認証済みセッションごとに 1 行に表示されます。 
+ Azure SQL データベース上の管理の接続には、認証済みセッションごとに 1 行が表示されます。 結果セットに表示される"sa"セッションは、セッションのユーザー クォータの影響がないです。 管理者以外の接続には、そのデータベースのユーザー セッションに関連する情報のみ表示されます。
  
   
 ## <a name="relationship-cardinalities"></a>リレーションシップの基数  

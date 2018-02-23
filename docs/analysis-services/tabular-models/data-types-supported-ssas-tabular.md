@@ -1,7 +1,7 @@
 ---
 title: "Analysis Services 表形式モデルでサポートされるデータ型 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 10/16/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,22 +12,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 84cdb30142c75b4bc35d956daff130df3bf62305
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 79cb9eb46d0561ab6dd94ba6e001b97fe3ae801f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-types-supported-in-tabular-models"></a>表形式モデルでサポートされるデータ型
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]この記事では、テーブル モデルで使用できるデータ型について説明し、データが計算または Data Analysis Expressions (DAX) 数式で使用する場合は、データ型の暗黙的な変換をについて説明します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+このトピックでは、テーブル モデルで使用できるデータ型について説明し、データが計算される場合または Data Analysis Expressions (DAX) の数式で使用される場合の暗黙的な変換についても解説します。  
 
   
-##  <a name="bkmk_data_types"></a>テーブル モデルで使用されるデータ型  
+##  <a name="bkmk_data_types"></a> テーブル モデルで使用されるデータ型  
 データをインポートする場合や数式で値を使用する場合は、元のデータ ソースに別のデータ型が含まれていても、そのデータは次のデータ型のいずれかに変換されます。 数式で得られる結果の値にも、これらのデータ型が使用されます。  
   
  通常、これらのデータ型は、計算列で正確な計算を実行するために実装されます。一貫性を確保するために、同じ制限がモデルのその他のデータにも適用されます。  
@@ -40,12 +41,12 @@ ms.lasthandoff: 01/08/2018
 |整数|64 ビット (8 バイト) の整数値*<br /><br /> 注:<br />         DAX の数式は、説明に示されている最小値を保持するには小さすぎるデータ型をサポートしません。|小数点以下を含まない数値。 整数は正の数値または負の数値のどちらも有効ですが、-9,223,372,036,854,775,808 (-2^63) ～ 9,223,372,036,854,775,807 (2^63-1) の範囲の整数でなければなりません。|  
 |10 進数|64 ビット (8 バイト) の実数*<br /><br /> 注:<br />         DAX の数式は、説明に示されている最小値を保持するには小さすぎるデータ型をサポートしません。|小数点以下を含む数値。 実数では次のような幅広い値が有効です。<br /><br /> 負の値 (-1.79E +308 ～ -2.23E -308 の範囲)<br /><br /> Zero<br /><br /> 正の値 (2.23E -308 ～ 1.79E + 308 の範囲)<br /><br /> ただし、有効桁数は小数点以下が 17 桁に制限されます。|  
 |ブール値|ブール値|True または False の値。|  
-|Text|String|Unicode 文字データ文字列。 文字列、数値、またはテキスト形式で表現される日付を指定できます。|  
-|date|日付/時刻|許容された日付時刻表現による日付および時刻。<br /><br /> 1900 年 3 月 1 日より後のすべての日付が有効です。|  
+|テキスト|文字列|Unicode 文字データ文字列。 文字列、数値、またはテキスト形式で表現される日付を指定できます。|  
+|日付|日付/時刻|許容された日付時刻表現による日付および時刻。<br /><br /> 1900 年 3 月 1 日より後のすべての日付が有効です。|  
 |通貨|通貨|通貨データ型では、-922,337,203,685,477.5808 ～ 922,337,203,685,477.5807 の範囲の値 (小数点以下が 4 桁で有効桁数が固定長) が有効です。|  
 |なし|空白|空白は、DAX では SQL の NULL に相当するデータ型です。 空白を作成するには BLANK 関数を使用し、空白かどうかをテストするには論理関数の ISBLANK を使用します。|  
   
- \*数値が大きいデータをインポートしようとすると、インポートが次のエラーで失敗する可能性があります。  
+ \* 数値が大きいデータをインポートしようとすると、インポートが次のエラーで失敗する可能性があります。  
   
  メモリ内のデータベース エラー: '\<列名 >' の列、'\<テーブル名 >' テーブルには、値が含まれています。' 1.7976931348623157 e + 308' はサポートされていません。 操作が取り消されました。  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/08/2018
   
 ||  
 |-|  
-|値|  
+|[値]|  
 |9223372036854775807|  
 |-9223372036854775808|  
 |1.7976931348623158e+308|  
@@ -67,11 +68,11 @@ ms.lasthandoff: 01/08/2018
 ### <a name="table-data-type"></a>table データ型  
  また、DAX では *table* データ型を使用します。 このデータ型は、集計やタイム インテリジェンス計算など、DAX の多くの関数で使用されます。 一部の関数は、テーブルへの参照を受け取ります。また、他の関数の入力として使用できるテーブルを返す関数もあります。 入力としてテーブルを受け取る一部の関数では、テーブルに評価される式を指定できます。また、ベース テーブルへの参照を受け取る関数もあります。 特定の関数の要件については、「 [DAX 関数リファレンス](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)」を参照してください。  
   
-##  <a name="bkmk_implicit"></a>DAX の数式で暗黙的および明示的なデータ型の変換
+##  <a name="bkmk_implicit"></a> DAX の数式で暗黙的および明示的なデータ型の変換
   
  各 DAX 関数には、入力および出力として使用するデータ型について固有の要件があります。 たとえば、一部の関数は、特定の引数に整数や日付の指定が必要です。テキストやテーブルの指定が必要な関数もあります。  
   
- 引数として指定した列のデータは、関数に必要なデータ型と互換性がありません、DAX では、多くの場合は、エラーを返します。 ただし、任意の場所可能な DAX しようとデータに必要なデータ型に暗黙的に変換します。 例 :  
+ 引数として指定した列のデータは、関数に必要なデータ型と互換性がありません、DAX では、多くの場合は、エラーを返します。 ただし、任意の場所可能な DAX しようとデータに必要なデータ型に暗黙的に変換します。 例:  
   
 -   数値 (たとえば "123") は、文字列として入力できます。 DAX では、文字列を解析し、数値データ型として指定しようとしています。  
   
@@ -93,10 +94,10 @@ ms.lasthandoff: 01/08/2018
   
 ||||||  
 |-|-|-|-|-|  
-|演算子 (+)|INTEGER|Currency|real|日付/時刻|  
-|INTEGER|INTEGER|Currency|real|日付/時刻|  
-|通貨|通貨|通貨|real|日付/時刻|  
-|real|real|real|real|日付/時刻|  
+|演算子 (+)|INTEGER|Currency|REAL|日付/時刻|  
+|INTEGER|INTEGER|Currency|REAL|日付/時刻|  
+|通貨|通貨|通貨|REAL|日付/時刻|  
+|REAL|REAL|REAL|REAL|日付/時刻|  
 |日付/時刻|日付/時刻|日付/時刻|日付/時刻|日付/時刻|  
   
  たとえば、加算演算で実数を通貨データと組み合わせて使用する場合、両方の値が実数に変換され、結果が実数として返されます。  
@@ -106,10 +107,10 @@ ms.lasthandoff: 01/08/2018
   
 ||||||  
 |-|-|-|-|-|  
-|演算子 (-)|INTEGER|Currency|real|日付/時刻|  
-|INTEGER|INTEGER|Currency|real|real|  
-|通貨|通貨|通貨|real|real|  
-|real|real|real|real|real|  
+|演算子 (-)|INTEGER|Currency|REAL|日付/時刻|  
+|INTEGER|INTEGER|Currency|REAL|REAL|  
+|通貨|通貨|通貨|REAL|REAL|  
+|REAL|REAL|REAL|REAL|REAL|  
 |日付/時刻|日付/時刻|日付/時刻|日付/時刻|日付/時刻|  
   
  たとえば、減算演算で日付を他のデータ型と共に使用する場合、両方の値が日付に変換され、戻り値も日付になります。  
@@ -121,10 +122,10 @@ ms.lasthandoff: 01/08/2018
   
 ||||||  
 |-|-|-|-|-|  
-|演算子 (*)|INTEGER|Currency|real|日付/時刻|  
-|INTEGER|INTEGER|Currency|real|INTEGER|  
-|通貨|通貨|real|通貨|通貨|  
-|real|real|通貨|real|real|  
+|演算子 (*)|INTEGER|Currency|REAL|日付/時刻|  
+|INTEGER|INTEGER|Currency|REAL|INTEGER|  
+|通貨|通貨|REAL|通貨|通貨|  
+|REAL|REAL|通貨|REAL|REAL|  
   
  たとえば、乗算演算で整数を実数と組み合わせて使用する場合、両方の数値が実数に変換され、戻り値も実数になります。  
   
@@ -133,23 +134,23 @@ ms.lasthandoff: 01/08/2018
   
 ||||||  
 |-|-|-|-|-|  
-|演算子 (/)<br /><br /> 行/列|INTEGER|Currency|real|日付/時刻|  
-|INTEGER|real|通貨|real|real|  
-|通貨|通貨|real|通貨|real|  
-|real|real|real|real|real|  
-|日付/時刻|real|real|real|real|  
+|演算子 (/)<br /><br /> 行/列|INTEGER|Currency|REAL|日付/時刻|  
+|INTEGER|REAL|通貨|REAL|REAL|  
+|通貨|通貨|REAL|通貨|REAL|  
+|REAL|REAL|REAL|REAL|REAL|  
+|日付/時刻|REAL|REAL|REAL|REAL|  
   
  たとえば、除算演算で整数を通貨値と組み合わせて使用する場合、両方の値が実数に変換され、結果も実数になります。  
   
 #### <a name="comparison-operators"></a>比較演算子  
 比較操作の混合のデータ型の組み合わせの限定されたセットのみがサポートされています。 詳細については、「 [DAX 演算子リファレンス](https://msdn.microsoft.com/library/ee634237.aspx)」を参照してください。  
   
-## <a name="bkmk_hand_blanks"></a>空白、空の文字列、およびゼロ値の処理  
+## <a name="bkmk_hand_blanks"></a> 空白、空の文字列、およびゼロ値の処理  
  次の表には、空白が処理されるように DAX と Microsoft Excel での違いをまとめたものです。  
   
 ||||  
 |-|-|-|  
-|式|DAX|[エクスポート]|  
+|式|DAX|Excel|  
 |BLANK + BLANK|空白|0 (ゼロ)|  
 |BLANK + 5|5|5|  
 |BLANK * 5|空白|0 (ゼロ)|  

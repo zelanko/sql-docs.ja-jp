@@ -4,7 +4,7 @@ description: "この記事では、Linux に SQL Server エージェントをイ
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,28 +15,46 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.workload: On Demand
-ms.openlocfilehash: 7db50a59a4a6ce9ab7aa416e4ac8d597449541b7
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: bec1837a2e4084d01858815346c5a7563199a220
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux 上の SQL Server エージェントをインストールします。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-次の手順は、SQL Server エージェントをインストール (**mssql server エージェント**) on Linux です。 [SQL Server エージェント](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)SQL Server のスケジュールされたジョブを実行します。 SQL Server エージェントのこのリリースでサポートされる機能については、次を参照してください。、 [Release Notes](sql-server-linux-release-notes.md)です。
+ [SQL Server エージェント](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)SQL Server のスケジュールされたジョブを実行します。 SQL Server 2017 CU4 以降では、SQL Server エージェントに含まれて、 **mssql サーバー**パッケージ化し、既定で無効にします。 このリリースのバージョン情報と共に、SQL Server エージェントのサポートされる機能については、次を参照してください。、 [Release Notes](sql-server-linux-release-notes.md)です。
+
+ SQL Server エージェントをインストールまたは有効にします。
+- [バージョン 2017 CU4 以降では、SQL Server エージェントを有効にします。](#EnableAgentAfterCU4)
+- [バージョン 2017 年 1 CU3 に対してとその下の SQL Server エージェントをインストールします。](#InstallAgentBelowCU4)
+
+
+## <a name="EnableAgentAfterCU4">バージョン 2017 CU4 以降では、SQL Server エージェントを有効にします。</a>
+
+ SQL Server エージェントを有効にするには、次の手順に従います。
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+sudo systemctl restart mssql-server
+```
 
 > [!NOTE]
-> まず、SQL Server エージェントをインストールする前に[インストールの SQL Server 2017](sql-server-linux-setup.md#platforms)です。 これにより、キーとリポジトリをインストールするときに使用する構成、 **mssql server エージェント**パッケージです。
+> 2017 年 1 CU3 からアップグレードするまたはの下でエージェントをインストールするには、SQL Server エージェントとなる自動的に有効になっており、以前は、エージェント パッケージがアンインストールされます。  
+
+## <a name="InstallAgentBelowCU4">バージョン 2017 年 1 CU3 に対してとその下の SQL Server エージェントをインストールします。</a>
+
+> [!NOTE]
+> 次のインストール手順は、SQL Server バージョン 2017 CU3 と下に適用されます。 まず、SQL Server エージェントをインストールする前に[インストールの SQL Server 2017](sql-server-linux-setup.md#platforms)です。 これにより、キーとリポジトリをインストールするときに使用する構成、 **mssql server エージェント**パッケージです。
 
 プラットフォームの SQL Server エージェントをインストールします。
-
 - [Red Hat Enterprise Linux](#RHEL)
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">RHEL をインストールします。</a>
+### <a name="RHEL">RHEL をインストールします。</a>
 
 インストールする次の手順を使用して、 **mssql server エージェント**Red Hat Enterprise Linux にします。 
 
@@ -55,7 +73,7 @@ sudo systemctl restart mssql-server
 
 オフラインでインストールする場合は、検索で SQL Server エージェントのパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 記事で説明されている同じ、オフライン インストール手順に従って[SQL Server のインストール](sql-server-linux-setup.md#offline)です。
 
-## <a name="ubuntu">Ubuntu をインストールします。</a>
+### <a name="ubuntu">Ubuntu をインストールします。</a>
 
 インストールする次の手順を使用して、 **mssql server エージェント**Ubuntu でします。 
 
@@ -75,7 +93,7 @@ sudo systemctl restart mssql-server
 
 オフラインでインストールする場合は、検索で SQL Server エージェントのパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 記事で説明されている同じ、オフライン インストール手順に従って[SQL Server のインストール](sql-server-linux-setup.md#offline)です。
 
-## <a name="SLES">SLES をインストールします。</a>
+### <a name="SLES">SLES をインストールします。</a>
 
 インストールする次の手順を使用して、 **mssql server エージェント**SUSE Linux Enterprise Server にします。 
 

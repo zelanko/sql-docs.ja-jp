@@ -1,5 +1,5 @@
 ---
-title: "Kpi (SSAS テーブル) |Microsoft ドキュメント"
+title: "Kpi |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f6a9dca9980e0d03fcdea646c919eeec7d96e887
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a38d562df467f020db529fde8633acaa081d045c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="kpis"></a>KPI
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]A *KPI* (主要業績評価指標)、表形式モデルで定義される値のパフォーマンスを測定に使用されます、*ベース*メジャーに対して、*ターゲット*によっても定義されている、値、メジャーまたは絶対値によってです。 このトピックは、テーブル モデル作成者が表形式モデルの KPI の基本を理解できることを目的としています。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+*KPI* (主要業績評価指標) は、表形式モデルで、 *対象* の値に対する *ベース* メジャーによって定義される、また、メジャーまたは絶対値によって定義される値のパフォーマンスの測定に使用されます。 この記事は、表形式モデルの作成者が表形式モデルの Kpi の基本を理解を提供します。  
   
 ##  <a name="bkmk_benefits"></a> 利点  
  ビジネス用語では、主要業績評価指標 (KPI) とは、ビジネス目標を判断するための測定値のことです。 KPI は一定期間中頻繁に評価されます。 たとえば、組織の営業部門では KPI を使用して予測総利益に対する月間売上総利益を測定できます。 経理部門では、月間の収入に対する支出を測定してコストを評価し、人事部門では、四半期単位の従業員離職率を測定することができます。 これらはそれぞれ KPI の一例です。 企業のプロフェッショナルは、グループにまとめて事業のスコアカードに記録した KPI を頻繁に使用し、事業の成功度の履歴要約をすばやく正確に取得したり、傾向を把握したりします。  

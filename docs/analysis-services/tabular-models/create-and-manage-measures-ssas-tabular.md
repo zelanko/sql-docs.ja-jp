@@ -1,7 +1,7 @@
 ---
-title: "作成およびメジャー (SSAS テーブル) の管理 |Microsoft ドキュメント"
+title: "作成し、メジャーの管理 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,31 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 799ada43cebe2f6358c88c0b4aa8719186f67823
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0e61c65d65723b1500140a2c2493a479b0e2a640
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-measures-ssas-tabular"></a>メジャーを作成および管理する (SSAS テーブル)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]メジャーとは、レポートまたは Excel のピボット テーブル (またはピボット グラフ) で使用中に作成される数式です。 COUNT や SUM などの標準の集計関数に基づいてメジャーを作成することも、DAX を使用して独自の数式を定義することもできます。 このトピックのタスクでは、テーブルのメジャー グリッドを使用してメジャーを作成し管理する方法について説明します。  
-  
- このトピックでは、次のタスクについて説明します。  
-  
--   [標準の集計式を使用してメジャーを作成するには](#bkmk_create_stand)  
-  
--   [カスタム式を使用してメジャーを作成するには](#bkmk_create_custom)  
-  
--   [メジャー プロパティを編集するには](#bkmk_edit)  
-  
--   [メジャー名を変更するには](#bkmk_rename)  
-  
--   [メジャーを削除するには](#bkmk_delete)  
+# <a name="create-and-manage-measures"></a>作成するメジャーおよび管理します。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+メジャーとは、レポートまたは Excel ピボットテーブル (またはピボットグラフ) で使用するために作成される数式のことです。 COUNT や SUM などの標準の集計関数に基づいてメジャーを作成することも、DAX を使用して独自の数式を定義することもできます。 このトピックのタスクでは、テーブルのメジャー グリッドを使用してメジャーを作成し管理する方法について説明します。  
   
 ## <a name="tasks"></a>処理手順  
  メジャーを作成、管理するには、テーブルのメジャー グリッドを使用します。 テーブルのメジャー グリッドは、モデル デザイナーのデータ ビューのみで表示することができます。 ダイアグラム ビューでは、メジャーの作成もメジャー グリッドの表示もできません。ただし、既存のメジャーであれば、ダイアグラム ビューで表示できます。 あるテーブルのメジャー グリッドを表示するには、 **[テーブル]** メニューをクリックしてから **[メジャー グリッドの表示]**をクリックします。  
@@ -66,8 +55,8 @@ ms.lasthandoff: 01/08/2018
 -   メジャー グリッドで、メジャーを右クリックしてから **[削除]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [メジャー &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [KPI &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [計算列 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
+ [メジャー](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [計算列](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

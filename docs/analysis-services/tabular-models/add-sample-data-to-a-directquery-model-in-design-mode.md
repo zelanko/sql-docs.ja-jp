@@ -1,7 +1,7 @@
 ---
 title: "デザイン モードで DirectQuery モデルにサンプル データを追加する |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/06/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1af1e823-85aa-4319-a93f-98b35f7c7322
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a95bc30ae2e75638c61f9d8bba8f5069c8fdf9d8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 068366df63bbe37d658345c1157a9d02eb7e5187
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Design モードで DirectQuery モデルにサンプル データを追加する
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]DirectQuery モードでは、テーブルのパーティションがモデルのデザイン時に使用されるサンプル データのサブセットを作成するか、完全データ ビューの代替を作成するに使用されます。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+DirectQuery モードでは、テーブルのパーティションがモデルのデザイン時に使用されるサンプル データのサブセットを作成するか、完全なデータ ビューの代替手段の作成に使用されます。
  
  DirectQuery テーブル モデルを配置するとき、パーティションはテーブルあたり 1 つだけ許可されます。そのパーティションは完全データ ビューにする必要があります。 追加パーティションは完全データ ビューの代替かサンプル データになります。 このトピックでは、データのサブセットを含むサンプル パーティションの作成について説明します。
  
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  パーティションを選択し、 **[コピー]**をクリックします。  
 
-    これにより既定のパーティションのコピーが作成されますが、このコピーには、クエリで指定したサンプル データが含まれています。 例 :
+    これにより既定のパーティションのコピーが作成されますが、このコピーには、クエリで指定したサンプル データが含まれています。 例:
   
      ![ssas_tabularproject_copypartition](../../analysis-services/tabular-models/media/ssas-tabularproject-copypartition.jpg "ssas_tabularproject_copypartition")  
   

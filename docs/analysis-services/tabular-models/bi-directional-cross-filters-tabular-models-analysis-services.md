@@ -1,7 +1,7 @@
 ---
-title: "双方向クロス フィルター - テーブル モデルの Analysis Services |Microsoft ドキュメント"
+title: "双方向クロス フィルター テーブル モデルで |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,25 +12,26 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e0ffd9fce046edae4098f965f2cc2967fa7f1e3a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b3d4854a602dc3eb7b02a50dc760409243a64313
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="bi-directional-cross-filters---tabular-models---analysis-services"></a>双方向クロス フィルター - テーブル モデルの Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]新しい SQL Server 2016 では、組み込みのアプローチを有効にする*双方向クロス フィルター*テーブル モデルでテーブル リレーションシップ間でフィルター コンテキストを反映するために DAX 式を手動で作成必要があります。  
+# <a name="bi-directional-cross-filters-in-tabular-models"></a>テーブル モデルでの双方向クロス フィルターします。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+SQL Server 2016 では、表形式モデルで *双方向のクロス フィルター* を有効にするための組み込みアプローチが新たに導入されています。これにより、テーブル リレーションシップ間でフィルター コンテキストを伝達するために DAX 式を手動で作成する必要がなくなります。  
   
  この概念を構成要素に分解して説明します。 *クロス フィルタリング* は、関連テーブルの値に基づいてテーブルのフィルター コンテキストを設定する機能です。 *双方向* は、テーブル リレーションシップのもう一方の側の 2 つ目の関連テーブルにフィルター コンテキストを伝達することを意味します。 名前が示すように、一方向ではなく、双方向のリレーションシップでスライスすることができます。  内部的には、双方向のフィルタリングではフィルター コンテキストが展開され、データのスーパーセットが照会されます。  
   
  ![SSAS BIDI 1 Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "SSAS BIDI 1 Filteroption")  
   
- クロス フィルターには、一方向フィルタリングと双方向フィルタリングの 2 種類があります。 一方向は、そのリレーションシップにおけるファクト テーブルとディメンション テーブル間の従来の多対一のフィルターです。 双方向は、両方のリレーションシップに共通する 1 つのテーブルを使用して、一方のリレーションシップのフィルター コンテキストをもう一方のテーブル リレーションシップのフィルター コンテキストとして使用できるようにするクロス フィルターです。  
+ クロス フィルターの 2 種類があります。 一方向と双方向のフィルター処理します。 一方向は、そのリレーションシップにおけるファクト テーブルとディメンション テーブル間の従来の多対一のフィルターです。 双方向は、両方のリレーションシップに共通する 1 つのテーブルを使用して、一方のリレーションシップのフィルター コンテキストをもう一方のテーブル リレーションシップのフィルター コンテキストとして使用できるようにするクロス フィルターです。  
   
  **FactOnlineSales** との外部キー リレーションシップを持つ **DimDate** と **DimProduct**がある場合、双方向のクロス フィルターは、 **FactOnlineSales-to-DimDate** と **FactOnlineSales-to-DimProduct** を同時に使用することに相当します。  
   
@@ -76,19 +77,19 @@ ms.lasthandoff: 01/08/2018
   
  この単純なスター スキーマでは、フィルタリングがディメンション テーブルの行と列から中央の **FactOnlineSales** テーブルにある **Sum of Sales** メジャーで提供される集計データに流れる場合に、データが適切にスライスされることが Excel でのテストで確認されています。  
   
- ![ssas bidi 4 excelSumSales](../../analysis-services/tabular-models/media/ssas-bidi-4-excelsumsales.PNG "ssas bidi 4 excelSumSales")  
+ ![ssas-bidi-4-excelSumSales](../../analysis-services/tabular-models/media/ssas-bidi-4-excelsumsales.PNG "ssas-bidi-4-excelSumSales")  
   
  メジャーがファクト テーブルから取得され、フィルター コンテキストがファクト テーブルで終了していれば、このモデルの集計は正しくフィルター処理されます。 しかし、製品テーブルまたは顧客テーブルの個別カウントやプロモーション テーブルの平均割引率など、他の場所でメジャーを作成し、既存のフィルター コンテキストをそのメジャーにも適用する場合はどうなるのでしょうか。  
   
  **DimProducts** の個別カウントを PivotTable に追加して試してみましょう。 **Count Products**の繰り返し値に注目してください。 一見したところ、テーブル リレーションシップがないように見えますが、モデルでは、すべてのリレーションシップが完全に定義され、アクティブであることがわかっています。 この場合、繰り返し値が発生するのは、製品テーブルの行に日付フィルターがないためです。  
   
- ![ssas の bidi-5-prodcount-nofilter](../../analysis-services/tabular-models/media/ssas-bidi-5-prodcount-nofilter.png "ssas の bidi-5-prodcount-nofilter")  
+ ![ssas-bidi-5-prodcount-nofilter](../../analysis-services/tabular-models/media/ssas-bidi-5-prodcount-nofilter.png "ssas-bidi-5-prodcount-nofilter")  
   
  **FactOnlineSales** と **DimProduct**の間に双方向のクロス フィルターを追加すると、製品テーブルの行が製造元と日付で正しくフィルター処理されるようになりました。  
   
- ![ssas の bidi-6-prodcount-withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "ssas の bidi-6-prodcount-withfilter")  
+ ![ssas-bidi-6-prodcount-withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "ssas-bidi-6-prodcount-withfilter")  
   
-## <a name="learn-step-by-step"></a>手順の確認  
+## <a name="learn-step-by-step"></a>ステップ バイ ステップの説明します。  
  このチュートリアルの手順に従うことで、双方向のクロス フィルターを試すことができます。 このチュートリアルを実行するには、以下が必要です。  
   
 -   SQL Server 2016 Analysis Services インスタンス、表形式モード、最新リリースの CTP  
@@ -121,7 +122,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  ContosoRetailDW データベースを選択します。  
   
-4.  **[次へ]** をクリックします。  
+4.  **[次へ]**をクリックします。  
   
 5.  テーブルの選択では、Ctrl キーを押しながら次のテーブルを選択します。  
   
@@ -137,7 +138,7 @@ ms.lasthandoff: 01/08/2018
   
      モデルでテーブル名をわかりやすくする場合は、この時点で名前を編集できます。  
   
-     ![ssas bidi 7 インポート](../../analysis-services/tabular-models/media/ssas-bidi-7-importdata.PNG "ssas bidi 7 インポート")  
+     ![ssas-bidi-7-ImportData](../../analysis-services/tabular-models/media/ssas-bidi-7-importdata.PNG "ssas-bidi-7-ImportData")  
   
 6.  データをインポートします。  
   
@@ -197,14 +198,14 @@ ms.lasthandoff: 01/08/2018
   
  **DimProducts** の製造元だけでなく、 **DimDate**のカレンダー年度も含まれた同じフィルター コンテキストで、製品数と売上の両方がフィルター処理されているのがわかります。  
   
-## <a name="conclusion-and-next-steps"></a>まとめと次の手順  
+## <a name="next-steps"></a>次の手順  
  双方向のクロス フィルターをいつどのように使用するかの理解は、実際のシナリオでそのしくみを確認する試行錯誤の問題と言えます。 組み込みの動作では不十分であることがわかり、作業を完了するために DAX 計算に戻ることが必要な場合もあります。 「 **参照** 」には、このテーマに関する追加リソースへのリンクが用意されています。  
   
  実際には、クロス フィルタリングにより、通常は多対多構造によってのみ実現されるデータ探索の方法を実現できます。 それでもやはり、双方向のクロス フィルタリングは多対多構造ではないことを認識しておくことが重要です。  このリリースの表形式モデルのデザイナーでは、実際の多対多テーブル構成は引き続きサポートされていません。  
   
 ## <a name="see-also"></a>参照  
  [Power BI Desktop でのリレーションシップの作成と管理](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
- [Power Pivot と SSAS の表形式モデルでの単純な多 manay 関係を処理する方法の実用的な例](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
+ [Power Pivot とテーブル モデルでの単純な多 manay 関係を処理する方法の実用的な例](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
  [解決の多対多リレーションシップが DAX を活用するテーブル間にまたがるフィルター処理](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
  [Many-to-many revolution (SQLBI ブログ)](http://www.sqlbi.com/articles/many2many/)  
   

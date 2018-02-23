@@ -4,7 +4,7 @@ description: "この記事では、環境変数を使用して、Linux の特定
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/21/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: c7a04b62625863d9f98521b1a408f572ac79a403
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux 上の環境変数と SQL Server の設定を構成します。
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/13/2018
 |-----|-----|
 | **ACCEPT_EULA** | 任意の値 (たとえば、' Y') に設定すると SQL Server のライセンス契約に同意します。 |
 | **MSSQL_SA_PASSWORD** | SA パスワードを構成します。 |
-| **MSSQL_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 有効な値は次のとおりです。 </br></br>**Evaluation**</br>**開発者**</br>**Express**</br>Web</br>**Standard**</br>**Enterprise**</br>プロダクト キー</br></br>プロダクト キーを指定する場合は、###-###-###-###-###、ここで、'#' は、数または文字の形式でなければなりません。|
+| **MSSQL_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 有効な値は次のとおりです。 </br></br>**Evaluation**</br>**開発者**</br>**Express**</br>Web</br>**Standard**</br>**Enterprise**</br>**プロダクト キー**</br></br>プロダクト キーを指定する場合は、###-###-###-###-###、ここで、'#' は、数または文字の形式でなければなりません。|
 | **MSSQL_LCID** | SQL Server に使用する言語 ID を設定します。 たとえば 1036 はフランス語です。 |
 | **MSSQL_COLLATION** | SQL Server の既定の照合順序を設定します。 照合順序には、言語 id (LCID) の既定のマッピングが上書きされます。 |
 | **MSSQL_MEMORY_LIMIT_MB** | 最大メモリ (MB) SQL Server が使用できる量を設定します。 既定では、合計物理メモリの 80% を勧めします。 |
@@ -49,7 +49,11 @@ ms.lasthandoff: 02/13/2018
 | **MSSQL_DATA_DIR** | 新しい SQL Server データベース データ ファイル (.mdf) の作成元ディレクトリを変更します。 |
 | **MSSQL_LOG_DIR** | 新しい SQL Server データベースのログ (.ldf) ファイルが作成されるディレクトリを変更します。 |
 | **MSSQL_DUMP_DIR** | ここで SQL Server が預金メモリ ダンプおよびその他のトラブルシューティング ファイル既定では、ディレクトリを変更します。 |
-| **MSSQL_ENABLE_HADR** | 可用性グループを有効にします。 |
+| **MSSQL_ENABLE_HADR** | 可用性グループを有効にします。 たとえば、'1' が有効になっているし、'0' が無効になっています |
+| **MSSQL_AGENT_ENABLED** | SQL Server エージェントを有効にします。 たとえば、'true' が有効で、'false' は無効になっています。 既定では、エージェントが無効です。  |
+| **MSSQL_MASTER_DATA_FILE** | Master データベースのデータ ファイルの場所を設定します。 |
+| **MSSQL_MASTER_LOG_FILE** | Master データベース ログ ファイルの場所を設定します。 |
+
 
 ## <a name="example-initial-setup"></a>例: 初回セットアップ
 
@@ -86,7 +90,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 > [!NOTE]
-> コンテナーで実稼働のエディションを実行するためのプロセスは若干異なります。 詳細については、次を参照してください。[実稼働環境にコンテナー イメージを実行](sql-server-linux-configure-docker.md#production)です。
+> コンテナーで実稼働のエディションを実行するためのプロセスは若干異なります。 詳細については 「[実稼働環境のコンテナー イメージを実行する](sql-server-linux-configure-docker.md#production)」を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 

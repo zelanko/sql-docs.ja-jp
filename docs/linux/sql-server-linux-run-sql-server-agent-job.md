@@ -4,7 +4,7 @@ description: "このチュートリアルでは、Linux 上の SQL Server エー
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.workload: Inactive
-ms.openlocfilehash: b812c67d693d6cf9670160c6d0d795e22a9b202f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 0788983d79392fbd39c87ce13aeb4c9439bffe33
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>作成し、Linux 上の SQL Server エージェント ジョブの実行
 
@@ -47,23 +47,22 @@ Linux 上の SQL Server エージェントに関する既知の問題を参照�
 * SSMS を持つ Windows マシン。
   * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) SSMS 手順については省略可能です。
 
-## <a name="install-sql-server-agent"></a>SQL Server エージェントをインストールします。
+## <a name="enable-sql-server-agent"></a>SQL Server エージェントを有効にします。
 
-Linux に SQL Server エージェントを使用するには、まず、 **mssql server エージェント**がインストールされている SQL Server 2017 マシン上のパッケージです。
+Linux に SQL Server エージェントを使用するには、がインストールされている SQL Server 2017 マシンで SQL Server エージェントを最初に有効にする必要があります。
 
-1. インストール**mssql server エージェント**には、Linux OS の適切なコマンドを使用します。
-
-   | プラットフォーム | インストール コマンド |
-   |-----|-----|
-   | RHEL | `sudo yum install mssql-server-agent` |
-   | SLES | `sudo zypper refresh`<br/>`sudo zypper update mssql-server-agent` |
-   | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server-agent` |
+1. SQL Server エージェントを有効にするには、次の手順に従います。
+  ```bash
+  sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+  ```
 
 1. 次のコマンドで SQL Server を再起動します。
+  ```bash
+  sudo systemctl restart mssql-server
+  ```
 
-   ```bash
-   sudo systemctl restart mssql-server
-   ```
+> [!NOTE]
+> SQL Server 2017 CU4 以降では、SQL Server エージェントに含まれて、 **mssql サーバー**パッケージ化し、既定で無効にします。 エージェントが CU4 訪問する前に設定[Linux 上の SQL Server エージェントのインストール](sql-server-linux-setup-sql-agent.md)です。
 
 ## <a name="create-a-sample-database"></a>サンプル データベースの作成
 

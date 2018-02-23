@@ -1,5 +1,5 @@
 ---
-title: "表形式モデル データベース (SSAS) への接続 |Microsoft ドキュメント"
+title: "表形式モデル データベースへの接続 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -12,37 +12,28 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e2911c3a191a0cd41832fc37a3f07bff4735ee54
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e733d7e8964dcdd714ac095dc44a4432ac4835b7
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="connect-to-a-tabular-model-database-ssas"></a>テーブル モデル データベースへの接続 (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]表形式モデルを構築して、Analysis Services 表形式モード サーバーに配置した後に、クライアント アプリケーションに使用できるようにするアクセス許可を設定する必要があります。 このトピックでは、クライアント アプリケーションからデータベースに接続するための権限と方法について説明します。  
+# <a name="connect-to-a-tabular-model-database"></a>表形式モデル データベースへの接続します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+テーブル モデルを構築し、Analysis Services テーブル モード サーバーに配置したら、クライアント アプリケーションからの使用を可能にするための権限を設定する必要があります。 この記事の説明のアクセス許可をクライアント アプリケーションからデータベースに接続する方法です。  
   
 > [!NOTE]  
 >  既定では、ファイアウォールを構成するまで、Analysis Services へのリモート接続は利用できません。 クライアント接続の名前付きインスタンスまたは既定のインスタンスを構成する場合は、適切なポートを開いていることを確認する必要があります。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご参照ください。  
   
- このトピックには、次のセクションが含まれます。  
-  
- [データベースに対するユーザー権限](#bkmk_userpermissions)  
-  
- [サーバーに対する管理権限](#bkmk_admin)  
-  
- [Excel または SharePoint からの接続](#bkmk_excelconn)  
-  
- [接続の問題のトラブルシューティング](#bkmk_Tshoot)  
-  
 ##  <a name="bkmk_userpermissions"></a> データベースに対するユーザー権限  
  テーブル データベースに接続するユーザーには、読み取りアクセスを指定するデータベース ロールのメンバーシップが必要です。  
   
- ロール (および場合によってはロール メンバーシップ) が定義されるのは、モデルが [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で作成されるときです。または、配置済みモデルの場合は [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] によって使用されるときです。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でロール マネージャーを使用したロールの作成の詳細については、「[ロールの作成および管理 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)」を参照してください。 配置済みモデルのロールの作成と管理の詳細については、「[テーブル モデル ロール &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)」を参照してください。  
+ ロール (および場合によってはロール メンバーシップ) が定義されるのは、モデルが [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で作成されるときです。または、配置済みモデルの場合は [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]によって使用されるときです。 ロール マネージャーを使用してロールの作成の詳細については[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]を参照してください[作成と管理の役割](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)です。 ロール配置済みモデルを作成および管理の詳細については、次を参照してください。[表形式モデル ロール](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)です。  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] のロール マネージャーを使用して定義済みロールを含むテーブル モデル プロジェクトを再配置すると、配置済みテーブル モデルに定義されたロールが上書きされます。  
@@ -91,11 +82,11 @@ ms.lasthandoff: 01/08/2018
   
      スタンドアロン テーブル配置用にサーバー インスタンスを構成する必要があります。そのサーバー インスタンスには、アクセスを許可する受信の規則が必要です。 詳細については、「 [Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md) 」および「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」を参照してください。  
   
-4.  データベースに対する読み取り権限がある場合は、ログオン資格情報について **[Windows 認証を使用する]** を選択します。 それ以外の場合は、 **[以下のユーザー名とパスワードを使用する]**を選択し、データベース権限を持つ Windows アカウントのユーザー名とパスワードを入力します。 **[次へ]** をクリックします。  
+4.  データベースに対する読み取り権限がある場合は、ログオン資格情報について **[Windows 認証を使用する]** を選択します。 それ以外の場合は、 **[以下のユーザー名とパスワードを使用する]**を選択し、データベース権限を持つ Windows アカウントのユーザー名とパスワードを入力します。 **[次へ]**をクリックします。  
   
 5.  データベースを選択します。 有効なデータベースを選択すると、データベースの単一の **モデル** キューブが表示されます。 **[次へ]** をクリックし、 **[完了]**をクリックします。  
   
- 接続を確立した後は、データを使用して、ピボットテーブルやピボットグラフを作成できます。 詳しくは、後の「 [Excel で分析 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)で [ロール マネージャー] ダイアログ ボックスを使用してロールを定義するテーブル モデル作成者向けです。  
+ 接続を確立した後は、データを使用して、ピボットテーブルやピボットグラフを作成できます。 詳細については、次を参照してください。 [Excel で分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)です。  
   
 ##  <a name="bkmk_sharepoint"></a> SharePoint からの接続  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を使用している場合は、Analysis Services テーブル モード サーバー上で実行されているデータベースへのリダイレクトを提供する BI セマンティック モデル接続ファイルを SharePoint で作成できます。 BI セマンティック モデル接続により、データベースへの HTTP エンドポイントが提供されます。 また、SharePoint サイト上のドキュメントを定期的に使用するナレッジ ワーカーが簡単にテーブル モデルにアクセスできるようになります。 ナレッジ ワーカーがテーブル モデル データベースにアクセスするために知っておく必要があるのは、BI セマンティック モデル接続ファイルの場所またはその URL だけです。 サーバーの場所やデータベース名に関する詳細は、BI セマンティック モデル接続にカプセル化されます。 BI セマンティック モデル接続ファイルの作成および使用の詳細については、「[Power Pivot BI セマンティック モデル接続 &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)」および「[テーブル モデル データベースへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)」を参照してください。  
@@ -105,7 +96,7 @@ ms.lasthandoff: 01/08/2018
   
  **データ接続ウィザードで、指定したデータ ソースからデータベースのリストを取得できません。**  
   
- データをインポートする場合に、十分な権限がないのに、ウィザードを使用してリモートの Analysis Services サーバー上のテーブル モデル データベースに接続しようとすると、この Microsoft Excel エラーが発生します。 このエラーを解決するには、データベースに対するユーザー アクセス権が必要です。 データへのユーザー アクセスの許可については、このトピックの前半で説明している手順を参照してください。  
+ データをインポートするときに、リモートの Analysis Services サーバー上の表形式モデル データベースに接続ウィザードを使用しようとして、十分なアクセス許可がないと、この Microsoft Excel エラーが発生します。 このエラーを解決するには、データベースに対するユーザー アクセス権が必要です。 データへのユーザー アクセスの許可については、このトピックの前半で説明している手順を参照してください。  
   
  **外部データ ソースへの接続を確立しようとしましたが、エラーが発生しました。次の接続を更新できませんでした:\<モデル名 > サンド ボックス**  
   
@@ -120,6 +111,6 @@ ms.lasthandoff: 01/08/2018
  SharePoint では、モデル データを使用するピボットテーブルでデータのフィルター処理などのデータ操作を実行しようとすると、この Microsoft Excel エラーが発生します。 このエラーは、ユーザーがブックに対する十分な SharePoint 権限を持っていないために発生します。 ユーザーには、 **読み取り** 権限以上の権限が必要です。 データにアクセスするには、**表示のみ** 権限では不十分です。  
   
 ## <a name="see-also"></a>参照  
- [テーブル モデル ソリューションの配置 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [表形式モデル ソリューションの配置](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

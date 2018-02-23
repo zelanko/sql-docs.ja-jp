@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 04edc4aeea3123ad58775fddf3a821f65decd90b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bbc725ce1d2f5999486f46f4ab30f6e3fb98f42d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>補足レッスン - Power View レポートのレポートのプロパティを構成します。
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 このレッスンの推定所要時間: **30 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 この補足のレッスンは表形式モデルの作成チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 この補足のレッスンの作業を実行する前に、前のレッスンをすべて完了している必要があります。  
 この補足のレッスンを完了するには、次の準備も必要です。  
   
@@ -79,7 +80,7 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
 ## <a name="default-field-set"></a>既定のフィールド セット  
 既定のフィールド セットは、列とレポート フィールド リストでテーブルがクリックされたときにレポート キャンバスに自動的に追加されるテーブルのメジャーの定義済みリストです。 基本的に、このテーブルが Power View レポート内で視覚化されたときにユーザーに表示される既定の列、メジャー、フィールドの順序を指定できます。  Internet Sales モデルでは、Customer、Geography、Product の各テーブルの既定のフィールド セットと順序を定義します。 含まれるのは、Power View レポートを使用して Adventure Works Internet Sales データを分析するときにユーザーが表示する必要がある、使用頻度の高いこれらの列のみです。  
   
-既定のフィールド セットの詳細については、SQL Server オンライン ブックの「[Power View レポートの既定のフィールド セットの構成 (SSAS テーブル)](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md)」を参照してください。  
+既定のフィールド セットの詳細については、次を参照してください。[を構成する既定のフィールド セット Power View レポートの](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md)SQL Server オンライン ブック。  
   
 #### <a name="to-set-default-field-set-for-tables"></a>テーブルの既定のフィールド セットを設定するには  
   
@@ -114,7 +115,7 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
 ## <a name="table-behavior"></a>テーブルの動作  
 [テーブルの動作] プロパティを使用すると、Power View レポートで使用するテーブルについて、さまざまな視覚エフェクトの種類の既定の動作およびグループ化動作を変更できます。 これにより、名前やイメージ、またはタイル、カード、グラフ レイアウトのタイトルなど、識別情報の適切な既定位置を設定できます。  
   
-テーブル動作プロパティの詳細については、「[Power View レポートのテーブル動作プロパティの構成 (SSAS テーブル)](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)」を参照してください。  
+テーブル動作プロパティの詳細については、次を参照してください。 [Power View レポート用のテーブル動作プロパティの構成](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)SQL Server オンライン ブック。  
   
 #### <a name="to-set-table-behavior"></a>テーブルの動作を設定するには 
   
@@ -139,7 +140,7 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
 ## <a name="reporting-properties-for-columns"></a>列の [レポートのプロパティ]  
 列にはいくつかの基本のプロパティと列に固有のレポート プロパティがあり、このプロパティを設定することにより、モデルのレポートをより使いやすくすることができます。 たとえば、ユーザーが必ずしもすべてのテーブルのすべての列を見る必要がない場合もあります。 前の例で Product Category テーブルと Product Subcategory テーブルを非表示にしたように、列の [非表示] プロパティを使用して、本来は表示されるテーブル内の特定の列を非表示にすることができます。 [データ形式] や [列で並べ替え] などの他のプロパティも、レポート内の列データの表示に影響を及ぼします。 ここでは、特定の列にいくつかのプロパティを設定します。 操作の必要がない他の列は、以下には表示していません。  
   
-ここでは、さまざまな列のプロパティのうちの一部のみを設定しますが、他にも多くのプロパティがあります。 列のレポート プロパティの詳細については、SQL Server オンライン ブックの「[列のプロパティ (SSAS テーブル)](../analysis-services/tabular-models/column-properties-ssas-tabular.md)」を参照してください。  
+ここでは、さまざまな列のプロパティのうちの一部のみを設定しますが、他にも多くのプロパティがあります。 詳細レポートのプロパティの列に関する情報を参照してください。[列プロパティ](../analysis-services/tabular-models/column-properties-ssas-tabular.md)SQL Server オンライン ブック。  
   
 #### <a name="to-set-properties-for-columns"></a>列のプロパティを設定するには  
   
@@ -155,7 +156,7 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
   
     **Customer**  
   
-    |[列]|プロパティ|値|  
+    |列|プロパティ|[値]|  
     |----------|------------|---------|  
     |[Geography Id]|[非表示]|True|  
     |[Birth Date]|データ形式|短い日付|  
@@ -163,11 +164,11 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
     **Date**  
   
     > [!NOTE]  
-    > Date テーブルは「レッスン 7: 日付テーブルとしてマーク」で、[日付テーブルとしてマーク] 設定を使ってモデル日付テーブルとして選択されています。また、Date テーブルの Date 列は一意の識別子として使われる列です。そのため、Date 列の [行識別子 (ROWID)] プロパティは自動的に True に設定され、変更することができません。 DAX 式でタイム インテリジェンス関数を使用するときは、日付テーブルを指定する必要があります。 このモデルでは、タイム インテリジェンス関数を使用していくつかのメジャーを作成して、さまざまな期間 (前四半期と現四半期など) の売上データを計算しました。これは KPI にも使用できます。 日付テーブルの指定の詳細については、SQL Server オンライン ブックの「[タイム インテリジェンスで使用する [日付テーブルとしてマーク] の指定 (SSAS テーブル)](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)」を参照してください。  
+    > Date テーブルは「レッスン 7: 日付テーブルとしてマーク」で、[日付テーブルとしてマーク] 設定を使ってモデル日付テーブルとして選択されています。また、Date テーブルの Date 列は一意の識別子として使われる列です。そのため、Date 列の [行識別子 (ROWID)] プロパティは自動的に True に設定され、変更することができません。 DAX 式でタイム インテリジェンス関数を使用するときは、日付テーブルを指定する必要があります。 このモデルでは、タイム インテリジェンス関数を使用していくつかのメジャーを作成して、さまざまな期間 (前四半期と現四半期など) の売上データを計算しました。これは KPI にも使用できます。 日付テーブルの指定に関する詳細については、次を参照してください。[タイム インテリジェンスで使用するための日付テーブルとしてのマークの指定](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)SQL Server オンライン ブック。  
   
-    |[列]|プロパティ|値|  
+    |列|プロパティ|[値]|  
     |----------|------------|---------|  
-    |date|データ形式|短い日付|  
+    |日付|データ形式|短い日付|  
     |Day Number of Week|[非表示]|True|  
     |Day Name|[列で並べ替え]|Day Number of Week|  
     |Day of Week|[非表示]|True|  
@@ -182,14 +183,14 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
   
     **Geography**  
   
-    |[列]|プロパティ|値|  
+    |列|プロパティ|[値]|  
     |----------|------------|---------|  
     |[Geography Id]|[非表示]|True|  
     |Sales Territory Id|[非表示]|True|  
   
     **Product**  
   
-    |[列]|プロパティ|値|  
+    |列|プロパティ|[値]|  
     |----------|------------|---------|  
     |[Product Id]|[非表示]|True|  
     |Product Alternate Id|[既定のラベル]|True|  
@@ -199,7 +200,7 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
   
     **Internet Sales**  
   
-    |[列]|プロパティ|値|  
+    |列|プロパティ|[値]|  
     |----------|------------|---------|  
     |[Product Id]|[非表示]|True|  
     |[Customer Id]|[非表示]|True|  
