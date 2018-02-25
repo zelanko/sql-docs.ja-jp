@@ -209,7 +209,7 @@
 ## [RANK](rank-transact-sql.md)  
 ## [ROW_NUMBER](row-number-transact-sql.md)  
 
-# レプリケーション
+# のレプリケーション
 ## [PUBLISHINGSERVERNAME](replication-functions-publishingservername.md)  
 
 # [行セット](rowset-functions-transact-sql.md)  
@@ -219,7 +219,7 @@
 ## [OPENROWSET](openrowset-transact-sql.md)  
 ## [OPENXML](openxml-transact-sql.md)  
 
-# [セキュリティ](security-functions-transact-sql.md)  
+# [Security](security-functions-transact-sql.md)  
 ## [CERTENCODED](certencoded-transact-sql.md)  
 ## [CERTPRIVATEKEY](certprivatekey-transact-sql.md)  
 ## [CURRENT_USER](current-user-transact-sql.md)  
