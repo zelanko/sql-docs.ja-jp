@@ -1,7 +1,7 @@
 ---
 title: "PolyBase の構成 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/13/2017
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -12,17 +12,15 @@ ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 80ff73c1-2861-438b-a13f-309155f3d6e1
-caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f46ca117e763d5ec6d4bb76eb4beff6c3b15f358
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a202fe4cb2a6f6bd24ce6279259e6cbc46a622f6
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="polybase-configuration"></a>PolyBase の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +31,9 @@ ms.lasthandoff: 02/12/2018
  SQL Server から外部データ ソースへの接続を確立する必要があります。 接続の種類は、クエリ パフォーマンスに大きな影響を与えます。 たとえば、10 ギガ ビットのイーサネット リンクは、1 ギガ ビットのイーサネット リンクよりも PolyBase クエリのクエリ応答時間が短くなります。  
   
  **sp_configure**を使用して、Hadoop バージョンと Azure BLOB ストレージのどちらかに接続するように SQL Server を構成する必要があります。 PolyBase は、Hortonworks Data Platform (HDP) と Cloudera Distributed Hadoop (CDH) の 2 つの Hadoop ディストリビューションをサポートしています。  サポートされている外部データ ソースの一覧については、「[PolyBase Connectivity Configuration &#40;Transact-SQL&#41; (PolyBase 接続性構成 &#40;Transact-SQL&#41;)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)」を参照してください。  
-1 注意: PolyBase は Cloudera 暗号化ゾーンをサポートしていません。 
+
+PolyBase では、SQL Server 2016 SP1 CU7 および SQL Server 2017 以降の Hadoop 暗号化ゾーンがサポートされることに注意してださい。
+
   
 ### <a name="run-spconfigure"></a>sp_configure の実行  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/12/2018
 4. すべての CDH 5.X バージョンで、**yarn.site.xml file** の最後か **mapred-site.xml file** に **mapreduce.application.classpath** 構成パラメーターを追加する必要があります。 HortonWorks では、**yarn.application.classpath** 構成内にこれらの構成が含まれます。
 
 ## <a name="connecting-to-hadoop-cluster-with-hadooprpcprotection-setting"></a>Hadoop.RPC.Protection 設定での Hadoop クラスターへの接続
-Hadoop クラスターで通信を保護する一般的な方法は、hadoop.rpc.protection 構成を "Privacy" または "Integrity" に変更することです。 既定では、PolyBase は構成が "Authenticate" に設定されているものと想定します。 この既定値をオーバーライドするには、次のプロパティを core-site.xml ファイルに追加する必要があります。 この構成を変更すると、Hadoop ノード間の安全なデータ転送だけでなく、SQL Server への SSL 接続も有効になります。
+Hadoop クラスターで通信を保護する一般的な方法は、hadoop.rpc.protection 構成を "Privacy" または "Integrity" に変更することです。 既定では、PolyBase は構成が "Authenticate" に設定されているものと想定します。 この既定値をオーバーライドするには、次のプロパティを core-site.xml ファイルに追加します。 この構成を変更すると、Hadoop ノード間の安全なデータ転送と、SQL Server への SSL 接続が有効になります。
 
 ```
 <!-- RPC Encryption information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG -->
@@ -192,7 +192,7 @@ yarn.application.classpath と mapreduce.application.classpath で構成され�
 ```
   
 ## <a name="kerberos-configuration"></a>Kerberos の構成  
-Kerberos でセキュリティが強化されているクラスターに PolyBase が認証するとき、hadoop.rpc.protection を認証に設定する必要があります。 それにより、Hadoop ノード間のデータ通信が暗号化されません。 
+PolyBase が Kerberos でセキュリティが強化されているクラスターに対して認証を行う場合、hadoop.rpc.protection が既定で "Authenticate" に設定されている必要があることに注意してください。 これにより、Hadoop ノード間のデータ通信が暗号化されなくなります。 hadoop.rpc.protection の "Privacy" または "Integrity" 設定を使用するには、PolyBase サーバーで core-site.xml ファイルを更新します。 詳細については、前のセクションの「[Hadoop.RPC.Protection 設定での Hadoop クラスターへの接続](#connecting-to-hadoop-cluster-with-hadooprpcprotection-setting)」を参照してください。
 
  Kerberos でセキュリティ保護された Hadoop クラスターに接続します [MIT KDC を使用]。
    

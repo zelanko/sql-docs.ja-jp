@@ -1,7 +1,7 @@
 ---
 title: "クエリ処理アーキテクチャ ガイド | Microsoft Docs"
 ms.custom: 
-ms.date: 11/07/2017
+ms.date: 02/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c55426d6723749d9edda2b6244ae7e75f47047b2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 625481946af508b626a6bc142113298298a7fca2
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,6 +35,40 @@ ms.lasthandoff: 02/09/2018
 ## <a name="sql-statement-processing"></a>SQL ステートメントの処理
 
 単一の SQL ステートメントの処理は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で SQL ステートメントを実行する最も基本的な方法です。 ローカルのベース テーブルだけを参照する (ビューやリモート テーブルは参照しない) 単一の `SELECT` ステートメントを処理する手順が、この基本的な処理の良い例です。
+
+#### <a name="logical-operator-precedence"></a>論理演算子の優先順位
+
+1 つのステートメントで複数の論理演算子を使用すると、最初に `NOT` が評価され、次に `AND`、最後に `OR` が評価されます。 算術演算子、およびビット演算子は論理演算子より前に処理されます。 詳細については、「[Operator Precedence (Transact-SQL)](../t-sql/language-elements/operator-precedence-transact-sql.md)」 (演算子の順位 (Transact-SQL)) を参照してください。
+
+次の例では、色の条件が製品モデル 21 には該当しますが、製品モデル 20 には該当しません。これは、`AND` が `OR` よりも優先されるためです。
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
+```
+
+`OR` が必ず最初に評価されるように、かっこを付け加えることでクエリの意味を変えることができます。 次のクエリでは、モデル 20 とモデル 21 で赤色の製品のみが検索されます。
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+必要でない場合でもかっこを使用すると、クエリが読みやすくなり、演算子の優先順位が原因の微妙な間違いを犯す可能性が減少します。 かっこを使用することでパフォーマンスが大幅に低下することはありません。 次の例は、元の例と構文は同じですが、元の例よりも読みやすくなっています。
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
 
 #### <a name="optimizing-select-statements"></a>SELECT ステートメントの最適化
 
@@ -49,7 +83,6 @@ ms.lasthandoff: 02/09/2018
 * 取得するデータが含まれているテーブル。 これは `FROM` 句で指定します。
 * `SELECT` ステートメントを実行するためにテーブルを論理的に関連付ける方法。 `WHERE` の後に指定する `ON` 句や `FROM`句などで指定する結合により定義します。
 * 基になるテーブルの行が `SELECT` ステートメントの対象になるために満たす必要がある条件。 `WHERE` 句と `HAVING` 句で指定します。
-
 
 クエリ実行プランは、次の事項を定義しています。 
 
@@ -1045,4 +1078,5 @@ GO
  [拡張イベント](../relational-databases/extended-events/extended-events.md)  
  [クエリ ストアを使用する際の推奨事項](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [基数推定](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [アダプティブ クエリ処理](../relational-databases/performance/adaptive-query-processing.md)
+ [アダプティブ クエリ処理](../relational-databases/performance/adaptive-query-processing.md)   
+ [演算子の優先順位](../t-sql/language-elements/operator-precedence-transact-sql.md)

@@ -1,32 +1,34 @@
 ---
-title: "ALTER DATABASE (Azure SQL Data Warehouse) |Microsoft ドキュメント"
+title: ALTER DATABASE (Azure SQL Data Warehouse) | Microsoft Docs
 ms.custom: 
-ms.date: 03/03/2017
+ms.date: 02/15/2018
 ms.prod: 
 ms.prod_service: sql-data-warehouse
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: da712a46-5f8a-4888-9d33-773e828ba845
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
-ms.openlocfilehash: 71737beb817cfeebed195c90d056768aef678a3e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: b70750eebf7727348f9058bea2aecd0508d544bd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="alter-database-azure-sql-data-warehouse"></a>ALTER DATABASE (Azure SQL データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-名前、最大サイズは、またはデータベースのサービス目標を変更します。  
+データベースの名前、最大サイズ、またはサービス目標を変更します。  
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,40 +60,40 @@ ALTER DATABASE database_name
 変更するデータベースの名前を指定します。  
 
 MODIFY NAME = *new_database_name*  
-として指定された名前のデータベースの名前を変更*new_database_name*です。  
+データベースの名前を、*new_database_name* で指定した名前に変更します。  
   
 MAXSIZE  
-既定では 10,240 GB (10 TB) です。  
+既定値は 245,760 GB (240 TB) です。  
 
-**適用されます:**パフォーマンス層の柔軟性の最適化
+**適用対象:** エラスティック用に最適化パフォーマンス レベル
 
-データベースの最大許容サイズ。 データベースは、MAXSIZE を超えることはできません。 
+データベースの最大許容サイズ。 データベースは MAXSIZE を超えることはできません。 
 
-**適用されます:**コンピューティング パフォーマンス層用に最適化されました。
+**適用対象:** 計算用に最適化パフォーマンス レベル
 
-データベース内の行ストア データの最大許容サイズ。 行ストア テーブル、列ストア インデックスのデルタストアまたはクラスター化列ストア インデックスに非クラスター化インデックスに格納されたデータは、MAXSIZE を超えることはできません。  列ストア形式に圧縮されたデータは、サイズの制限はありませんし、MAXSIZE による制約を受けない。 
+データベースの行ストア データの最大許容サイズ。 行ストア テーブル、列ストア インデックスのデルタストア、またはクラスター化列ストア インデックスの非クラスター化インデックスに格納されているデータは MAXSIZE を超えることはできません。  列ストア形式に圧縮されたデータにはサイズ制限はなく、MAXSIZE に制約されません。 
   
 SERVICE_OBJECTIVE  
-パフォーマンス レベルを指定します。 サービス目標の詳細については[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]を参照してください[パフォーマンス層](https://azure.microsoft.com/documentation/articles/performance-tiers/)です。  
+パフォーマンス レベルを指定します。 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] のサービス目標の詳細については、[パフォーマンス レベル](https://azure.microsoft.com/documentation/articles/performance-tiers/)に関するページを参照してください。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 これらのアクセス許可が必要です。  
   
 -   サーバー レベル プリンシパル ログイン (プロビジョニング処理で作成されたもの) または  
   
--   メンバー、`dbmanager`データベース ロール。  
+-   `dbmanager` データベース ロールのメンバー。  
   
-所有者のメンバーである場合を除き、データベースの所有者は、データベースを変更ことはできません、`dbmanager`ロール。  
+所有者が `dbmanager` ロールのメンバーである場合を除き、データベースの所有者はデータベースを変更することはできません。  
   
 ## <a name="general-remarks"></a>全般的な解説  
-現在のデータベースが別のデータベースを変更する、したがってものにする必要があります**、master データベースに接続されている場合、ALTER を実行する必要があります**です。  
+現在のデータベースは、変更対象とは異なるデータベースである必要があります。したがって、**ALTER は master データベースに接続されている間に実行する必要があります**。  
   
-SQL データ ウェアハウスは、COMPATIBILITY_LEVEL 130 に設定されているし、変更できません。 詳細については、次を参照してください。 [Azure SQL データベースの互換性レベル 130 でのクエリ パフォーマンスの向上](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)です。
+SQL Data Warehouse は COMPATIBILITY_LEVEL 130 に設定されており、変更することはできません。 詳細については、「[ALTER DATABASE (TRANSACT-SQL) の互換性レベル](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)」を参照してください。
   
-データベースのサイズを小さくを使用して[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)です。  
+データベースのサイズを縮小するには、[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) を使用します。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
-ALTER DATABASE を実行するには、データベースがオンラインにする必要があり、一時停止状態にすることはできません。  
+ALTER DATABASE を実行するには、データベースをオンラインにする必要があり、一時停止状態にすることはできません。  
   
 ALTER DATABASE ステートメントは、既定のトランザクション管理モードには自動コミット モードで実行する必要があります。 これは、接続の設定で設定されます。  
   
@@ -100,7 +102,7 @@ ALTER DATABASE ステートメントでは、ユーザー定義のトランザ�
 データベースの照合順序を変更することはできません。  
   
 ## <a name="examples"></a>使用例  
-これらの例を実行する前にデータベースを変更するが、現在のデータベースではないことを確認します。 現在のデータベースが別のデータベースを変更する、したがってものにする必要があります**、master データベースに接続されている場合、ALTER を実行する必要があります**です。  
+これらの例を実行する前に、変更対象のデータベースが現在のデータベースでないことを確認します。 現在のデータベースは、変更対象とは異なるデータベースである必要があります。したがって、**ALTER は master データベースに接続されている間に実行する必要があります**。  
 
 ### <a name="a-change-the-name-of-the-database"></a>A. データベースの名前を変更します。  
 
@@ -129,5 +131,5 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
   
 ## <a name="see-also"></a>参照  
 [CREATE DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/create-database-azure-sql-data-warehouse.md)
-[リファレンスのトピックの一覧を SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
+[SQL Data Warehouse の参照トピック](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
   

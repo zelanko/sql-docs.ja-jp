@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: 
-ms.date: 12/07/2017
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
@@ -18,19 +18,95 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 01d0f988103f39aa311b84a1bf9e03292e60f511
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f125db75de84856b8754a305a1c6ce8be9d29868
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 この記事では、SSMS の現在と以前のバージョンの更新、機能強化、およびバグの修正に関する詳細を提供します。 [SSMS の以前のバージョン](#previous-ssms-releases)は以下でダウンロードできます。
 
 
-## <a name="ssms-174download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.4](download-sql-server-management-studio-ssms.md)
+
+## <a name="ssms-175download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.5](download-sql-server-management-studio-ssms.md)
+
+一般公開 | ビルド番号: 14.0.17224.0
+
+### <a name="whats-new"></a>新機能
+
+**SSMS 全般**
+
+データの検出と分類:
+
+- データベース内の機密データの検出、分類、ラベル付けとレポート作成を行うための新しい SQL データの検出と分類機能が追加されました。 
+- 最も機密性の高いデータ (ビジネス、財務、医療、PII など) の自動検出と分類は、組織の情報保護の達成において極めて重要な役割を果たすことができます。
+- 詳細については、「[SQL データの検出と分類](../relational-databases/security/sql-data-discovery-and-classification.md)」を参照してください。
+
+クエリ エディター:
+
+- Azure SQL DW の区切られたテキストの外部ファイル形式に SkipRows オプションのサポートが追加されました。 この機能では、ユーザーは区切られたテキスト ファイルを SQL DW に読み込む際に指定した数の行をスキップすることができます。 また、FIRST_ROW キーワードの対応する intellisense/SMO サポートも追加されました。 
+
+Showplan:
+
+- SQL Data Warehouse の推定プラン ボタンを表示できるようになりました。
+- 新しい Showplan 属性 *EstimateRowsWithoutRowGoal* が追加され、新しい Showplan 属性 (*UdfCpuTime* と *UdfElapsedTime*) が *QueryTimeStats* に追加されました。 詳細については、「[Optimizer row goal information in query execution plan added in SQL Server 2017 CU3](http://support.microsoft.com/help/4051361)」 (SQL Server 2017 CU3 で追加されたクエリ実行プランのオプティマイザー行の目標情報) を参照してください。
+
+
+
+### <a name="bug-fixes"></a>バグの修正
+
+**SSMS 全般**
+
+Showplan:
+
+- LQS 接続の経過時間ではなく、エンジンの実行時間を表示するように、ライブ クエリ統計経過時間が修正されました。
+- Showplan で GbApply や InnerApply などの Apply 論理演算子を認識できないという問題が修正されました。
+- ExchangeSpill に関する問題が修正されました。
+
+クエリ エディター:
+
+- 先頭に "SET SHOWPLAN_ALL ON" が付いた単純なクエリを実行する際に SSMS が "入力文字列の形式が正しくありません。 (mscorlib)" というようなエラーをスローするという SPID に関する問題が修正されました。 
+
+
+SMO:
+
+- サーバーの照合順序で大文字と小文字が区別される場合に SMO が AvailabilityReplica プロパティをフェッチできない (その結果、SSMS で "マルチパート識別子 "a.delimited" をバインドできませんでした" というようなエラー メッセージが表示される場合がある) という問題が修正されました。
+- 照合順序が処理されない (その結果、照合順序の大文字と小文字が区別されるサーバーで実行されているデータベースで右クリックしたときに、トルコ語のロケールの ma マシン上で実行されている SSMS で "レガシ基数推定が有効なスコープ構成ではありません" というようなエラーが表示される場合がある) という、DatabaseScopedConfigurationCollection クラスの問題が修正されました。
+- SMO が SQL 2005 サーバーで SQL エージェント プロパティをフェッチできない (その結果、SSMS が "ローカル変数に既定値を代入できません。 スカラー変数 "@ServiceStartMode" を宣言してください" というようなエラーをスローし、最終的にオブジェクト エクスプローラーで SQL エージェント ノードが表示されない) という、JobServer クラスの問題が修正されました。
+
+テンプレート: 
+
+- "データベース メール": いくつかのタイプミスが修正されました [(https://feedback.azure.com/forums/908035/suggestions/33143512)](https://feedback.azure.com/forums/908035/suggestions/33143512)。  
+
+オブジェクト エクスプローラー:
+- インデックスの管理圧縮が失敗する問題が修正されました (https://feedback.azure.com/forums/908035-sql-server/suggestions/32610058-ssms-17-4-error-when-enabling-page-compression-o)。
+
+監査: 
+- *監査ファイルの統合*機能に関する問題が修正されました。
+<br>
+
+### <a name="known-issues"></a>既知の問題
+
+データ分類:
+- 分類を削除してから、同じ列の新しい分類を手動で追加すると、古い情報の種類と機密ラベルがメイン ビューの列に割り当てられます。<br>
+*回避策*: 分類をメイン ビューに戻した後、保存する前に新しい情報の種類と機密ラベルを割り当てます。
+
+
+
+## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
+
+以前のバージョンの SSMS をダウンロードするには、次のセクションのタイトル リンクをクリックします。
+
+
+
+
+## <a name="downloadssdtmediadownloadpng-ssms-174httpsgomicrosoftcomfwlinklinkid864329"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.4](https://go.microsoft.com/fwlink/?linkid=864329)
 一般公開 | ビルド番号: 14.0.17213.0
+
+[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+
 
 ### <a name="whats-new"></a>新機能
 
@@ -121,9 +197,6 @@ XE プロファイラー:
 - Azure AS に対して Windows 認証を選択した場合にログインを求めるメッセージが引き続き表示されるという SQL Profiler での問題を修正しました。
 
 
-## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
-
-以前のバージョンの SSMS をダウンロードするには、次のセクションのタイトル リンクをクリックします。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-173httpsgomicrosoftcomfwlinklinkid858904"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 一般公開 | ビルド番号: 14.0.17199.0

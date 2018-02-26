@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6455a2881d11ccd10c7be65a437357b1d1431dda
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 169ad5455571c2b0e484fc0aa153e55141cdd1fd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>簡単な例によるインポートおよびエクスポート ウィザードの概要
 Excel スプレッドシートから SQL Server データベースにデータをインポートするというよくあるシナリオを使って、SQL Server インポートおよびエクスポート ウィザードの機能について説明します。 別の変換元および別の変換先を使う予定の場合でも、このトピックを読むとウィザードの実行について知っておく必要があるほとんどのことがわかります。

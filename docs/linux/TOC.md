@@ -2,9 +2,10 @@
 
 # 概要
 ## [リリース ノート](sql-server-linux-release-notes.md)
-## [このリリースの新機能](sql-server-linux-whats-new.md)
+## [新機能](sql-server-linux-whats-new.md)
 ## [新規および更新のアーティクル](new-updated-linux.md)
 ## [エディションとサポートされる機能](sql-server-linux-editions-and-components-2017.md)
+## [よくあるご質問](sql-server-linux-faq.md)
 
 # クイック スタート
 ## [インストールと接続 - Red Hat](quickstart-install-connect-red-hat.md)
@@ -89,6 +90,7 @@
 
 ## [Security](sql-server-linux-security-overview.md)
 ### [セキュリティ機能の入門](sql-server-linux-security-get-started.md)
+### [Active Directory 認証](sql-server-linux-active-directory-auth-overview.md)
 ### [接続の暗号化](sql-server-linux-encrypted-connections.md)
 
 ## [パフォーマンス]
@@ -102,7 +104,6 @@
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # リソース
-## [よくあるご質問](sql-server-linux-faq.md)
 ## [[トラブルシューティング]](sql-server-linux-troubleshooting-guide.md)
 ## [SQL Server のドキュメント](../sql-server/sql-server-technical-documentation.md)
 ## パートナー

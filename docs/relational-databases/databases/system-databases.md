@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,18 +18,19 @@ helpviewer_keywords:
 - modifying system data
 - viewing system database data
 ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7985a4fa9d1fa3dd4fc11553d640c4ef0ad0c6a2
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: bb1953a20292a1b56766861479699faed049bb18
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="system-databases"></a>システム データベース
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、次のシステム データベースが用意されています。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、次のシステム データベースが用意されています。  
   
 |システム データベース|Description|  
 |---------------------|-----------------|  
@@ -37,6 +39,9 @@ ms.lasthandoff: 01/18/2018
 |[model データベース](../../relational-databases/databases/model-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで作成されたすべてのデータベースのテンプレートとして使用されます。 データベース サイズ、照合順序、復旧モデル、およびその他のデータベース オプションなどの **model** データベースに変更を加えると、その変更内容は、それ以降に作成されるすべてのデータベースに適用されます。|  
 |[Resource データベース](../../relational-databases/databases/resource-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に装備されているシステム オブジェクトを格納する読み取り専用のデータベースです。 システム オブジェクトは、物理的には **Resource** データベースに保存されていますが、すべてのデータベースの **sys** スキーマに論理的に表示されます。|  
 |[tempdb データベース](../../relational-databases/databases/tempdb-database.md)|一時オブジェクトや生成途中の結果セットを保存するためのワークスペースです。|  
+
+> [!IMPORTANT]
+> Azure SQL Database では、master データベースと tempdb データベースのみが適用されます。 論理サーバーと論理 master データベースの概念については、「[Azure SQL 論理サーバーとは何か](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)」を参照してください。 Azure SQL Database のコンテキストでの tempdb の詳細については、「[SQL Database の Tempdb データベース](tempdb-database.md#tempdb-database-in-sql-database)」を参照してください。
   
 ## <a name="modifying-system-data"></a>システム データの変更  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザーは、システム テーブル、システム ストアド プロシージャ、カタログ ビューなどのシステム オブジェクトに含まれている情報を直接更新できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、代わりに完全な管理ツール セットが用意されています。ユーザーは、これらのツールを使用して、システムを完全に管理し、データベース内のすべてのユーザーとオブジェクトを管理できます。 その一部を次に示します。  

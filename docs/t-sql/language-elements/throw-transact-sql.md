@@ -1,5 +1,5 @@
 ---
-title: "THROW (TRANSACT-SQL) |Microsoft ドキュメント"
+title: THROW (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,33 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - THROW_TSQL
 - THROW
-dev_langs: TSQL
-helpviewer_keywords: THROW statement
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- THROW statement
 ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 32527795209b49b2b698962c86aee61b2956dd18
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: 04e09db13babdf05ba4cfa2f213f6d6e0d58c1a5
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  例外が発生し、実行を試してみてくださいの CATCH ブロックに転送しています.CATCH 構造で[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、例外を発生させ、TRY...CATCH 構造の CATCH ブロックに実行制御を移します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,20 +49,20 @@ THROW [ { error_number | @local_variable },
   
 ## <a name="arguments"></a>引数  
  *error_number*  
- 例外を表す定数または変数です。 *error_number*は**int** 50000 以上にする必要があります 2,147, 483,647 以下です。  
+ 例外を表す定数または変数です。 *error_number* は **int** で、50000 以上、2147483647 以下にする必要があります。  
   
  *message*  
- 例外を説明する文字列または変数です。 *メッセージ*は**nvarchar (2048)**です。  
+ 例外を説明する文字列または変数です。 *message* は **nvarchar(2048)** です。  
   
  *state*  
- メッセージに関連付けられる状態を示す、0 ～ 255 の範囲の定数または変数です。 *状態*は**tinyint**です。  
+ メッセージに関連付けられる状態を示す、0 ～ 255 の範囲の定数または変数です。 *state* は **tinyint** です。  
   
-## <a name="remarks"></a>解説  
- THROW ステートメントはセミコロン (;) が続かなければなりません前に、のステートメント ステートメントのターミネータです。  
+## <a name="remarks"></a>Remarks  
+ THROW ステートメントの前のステートメントの後に、セミコロン (;) ステートメント ターミネータが続く必要があります。  
   
- TRY...CATCH 構造を使用できない場合は、セッションが終了します。 例外が発生する行番号およびプロシージャが設定されます。 重大度は 16 に設定されます。  
+ TRY...CATCH 構造を使用できない場合は、ステートメント バッチが終了します。 例外が発生する行番号およびプロシージャが設定されます。 重大度は 16 に設定されます。  
   
- パラメーターを使用せずに THROW ステートメントを指定する場合は、ステートメントが CATCH ブロック内に存在する必要があります。 これによりキャッチされた例外が発生します。 THROW ステートメントで発生したエラーは、ステートメント バッチが終了させます。  
+ パラメーターを使用せずに THROW ステートメントを指定する場合は、ステートメントが CATCH ブロック内に存在する必要があります。 これによりキャッチされた例外が発生します。 THROW ステートメント内でエラーが発生すると、ステートメント バッチが終了します。  
   
  % は THROW ステートメントのメッセージ テキストに予約された文字で、エスケープする必要があります。 文字 % を二重にすると、% をメッセージ テキストの一部として返します (例: 「増加が元の値の 15 %% を超えました。」)。  
   
@@ -68,14 +71,14 @@ THROW [ { error_number | @local_variable },
   
 |RAISERROR ステートメント|THROW ステートメント|  
 |-------------------------|---------------------|  
-|場合、 *msg_id*渡される sys.messages 内で raiserror に ID を定義する必要があります。|*Error_number*パラメーターが sys.messages 内で定義する必要はありません。|  
-|*Msg_str*パラメーターを含めることができます**printf**スタイルの書式設定します。|*メッセージ*パラメーターが受け付けない**printf**スタイルで書式設定します。|  
-|*重大度*パラメーターは、例外の重大度を指定します。|ない*重大度*パラメーター。 例外の重大度は常に 16 に設定されます。|  
+|*msg_id* が RAISERROR に渡される場合、ID は sys.messages で定義する必要があります。|*error_number* パラメーターを sys.messages で定義する必要はありません。|  
+|*msg_str* パラメーターには **printf** 書式スタイルを含めることができます。|*message* パラメーターでは **printf** 書式スタイルは受け入れられません。|  
+|*severity* パラメーターでは例外の重大度を指定します。|*severity* パラメーターはありません。 例外の重大度は常に 16 に設定されます。|  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-throw-to-raise-an-exception"></a>A. THROW を使用して例外を発生させる  
- 次の例を使用する方法を示しています、`THROW`ステートメントから例外が発生します。  
+ 次の例では、`THROW` ステートメントを使用して例外を発生させる方法を示します。  
   
 ```sql  
 THROW 51000, 'The record does not exist.', 1;  
@@ -90,7 +93,7 @@ THROW 51000, 'The record does not exist.', 1;
  ```  
   
 ### <a name="b-using-throw-to-raise-an-exception-again"></a>B. THROW を使用して例外を再度発生させる  
- 次の例では、`THROW`最後スローされた例外を再度を発生させるステートメントです。  
+ 次の例では、`THROW` ステートメントを使用して最後にスローされた例外を再度発生させる方法を示します。  
   
 ```sql  
 USE tempdb;  
@@ -121,7 +124,7 @@ END CATCH;
  ```  
   
 ### <a name="c-using-formatmessage-with-throw"></a>C. FORMATMESSAGE を THROW と共に使用する  
- 次の例を使用する方法を示しています、`FORMATMESSAGE`で機能`THROW`カスタマイズされたエラー メッセージをスローします。 この例では、まず、`sp_addmessage` を使用して、ユーザー定義のエラー メッセージを作成します。 THROW ステートメントは置換パラメーターで許可されないため、*メッセージ*エラー メッセージ 60000 で想定されている 3 つのパラメーター値を渡す方法では、RAISERROR FORMATMESSAGE 関数のパラメーターを使用します。  
+ 次の例では、`FORMATMESSAGE` 関数を `THROW` と共に使用して、カスタマイズされたエラー メッセージをスローする方法を示します。 この例では、まず、`sp_addmessage` を使用して、ユーザー定義のエラー メッセージを作成します。 THROW ステートメントでは、RAISERROR のように、*message* パラメーターで書式引数が許可されないため、エラー メッセージ 60000 で想定される 3 つのパラメーター値を渡すために FORMATMESSAGE 関数が使用されます。  
   
 ```sql  
 EXEC sys.sp_addmessage  
@@ -145,20 +148,20 @@ THROW 60000, @msg, 1;
  ```  
   
 ## <a name="see-also"></a>参照  
- [FORMATMESSAGE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/formatmessage-transact-sql.md)   
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
  [データベース エンジン エラーの重大度](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; です。TRANSACT-SQL と&#41; です。](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
- [GOTO &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/goto-transact-sql.md)   
+ [GOTO &#40;Transact-SQL&#41;](../../t-sql/language-elements/goto-transact-sql.md)   
  [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [XACT_STATE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/xact-state-transact-sql.md)   
- [SET XACT_ABORT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-xact-abort-transact-sql.md)  
+ [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)   
+ [SET XACT_ABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   
   
 
