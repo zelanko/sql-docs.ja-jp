@@ -1,6 +1,6 @@
 ---
 title: "Linux 上の SQL Server フルテキスト検索のインストール |Microsoft ドキュメント"
-description: "このトピックでは、Linux に SQL Server フルテキスト検索をインストールする方法について説明します。"
+description: "この記事では、Linux に SQL Server フルテキスト検索をインストールする方法について説明します。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.workload: Inactive
-ms.openlocfilehash: 8b1f14ca454582ee85506cd68b07a38f17ada1b4
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 1ffb4caadffb8f292f6bd8e495a457fe86e9d641
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux 上の SQL Server フルテキスト検索をインストールします。
 
@@ -51,7 +51,7 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-オフラインでインストールする場合は、検索で、フルテキスト検索のパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 トピックで説明されている同じオフライン インストール手順を使用して[SQL Server インストール](sql-server-linux-setup.md#offline)です。
+オフラインでインストールする場合は、検索で、フルテキスト検索のパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 記事で説明されている同じ、オフライン インストール手順に従って[SQL Server のインストール](sql-server-linux-setup.md#offline)です。
 
 ## <a name="ubuntu">Ubuntu をインストールします。</a>
 
@@ -69,7 +69,7 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts 
 ```
 
-オフラインでインストールする場合は、検索で、フルテキスト検索のパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 トピックで説明されている同じオフライン インストール手順を使用して[SQL Server インストール](sql-server-linux-setup.md#offline)です。
+オフラインでインストールする場合は、検索で、フルテキスト検索のパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 記事で説明されている同じ、オフライン インストール手順に従って[SQL Server のインストール](sql-server-linux-setup.md#offline)です。
 
 ## <a name="SLES">SLES をインストールします。</a>
 
@@ -86,7 +86,7 @@ sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-オフラインでインストールする場合は、検索で、フルテキスト検索のパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 トピックで説明されている同じオフライン インストール手順を使用して[SQL Server インストール](sql-server-linux-setup.md#offline)です。
+オフラインでインストールする場合は、検索で、フルテキスト検索のパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 記事で説明されている同じ、オフライン インストール手順に従って[SQL Server のインストール](sql-server-linux-setup.md#offline)です。
 
 ## <a name="supported-languages"></a>サポートされている言語
 
@@ -148,7 +148,7 @@ sudo zypper update mssql-server-fts
 | ウルドゥ語 | 1056 |
 | ベトナム語 | 1066 |
 
-## <a id="filters"></a>フィルター
+## <a id="filters"></a> フィルター
 
 フルテキスト検索は、バイナリ ファイルに格納されているテキストのでも動作します。 必須でここでは、インストールされているフィルターは、ファイルを処理します。 フィルターの詳細については、次を参照してください。[検索用フィルターの管理と構成](../relational-databases/search/configure-and-manage-filters-for-search.md)です。
 

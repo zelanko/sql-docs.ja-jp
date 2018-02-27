@@ -1,6 +1,6 @@
 ---
 title: "Linux 上の SQL Server 2017 年 1 のインストール |Microsoft ドキュメント"
-description: "インストール、更新、および Linux に SQL Server をアンインストールします。 このトピックでは、オンライン、オフライン、および無人のシナリオについて説明します。"
+description: "インストール、更新、および Linux に SQL Server をアンインストールします。 この記事では、オンライン、オフライン、および無人のシナリオについて説明します。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,28 +9,28 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 924542a970ac63df74e7bb725b4f7a171f74e95a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: a93be0508eff85d4e653a1e0d0790c71ceaaeb44
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上の SQL Server のインストールのガイダンス
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このトピックでは、インストール、更新、および Linux に SQL Server 2017 をアンインストールする方法について説明します。 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、および Ubuntu では、SQL Server 2017 をサポートします。 Linux または Docker を Windows/ファルダ上の Docker エンジンで実行できる、Docker のイメージとして使用
+この記事では、インストール、更新、および Linux に SQL Server 2017 をアンインストールする方法について説明します。 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、および Ubuntu では、SQL Server 2017 をサポートします。 Linux または Docker を Windows/ファルダ上の Docker エンジンで実行できる、Docker のイメージとして使用
 
 > [!TIP]
 > 手始めのクイック スタートのいずれかにジャンプ[RHEL](quickstart-install-connect-red-hat.md)、 [SLES](quickstart-install-connect-suse.md)、 [Ubuntu](quickstart-install-connect-ubuntu.md)、または[Docker](quickstart-install-connect-docker.md)です。
 
-## <a id="supportedplatforms"></a>サポートされているプラットフォーム
+## <a id="supportedplatforms"></a> サポートされているプラットフォーム
 
 SQL Server 2017 は次の Linux プラットフォームでサポートされています。
 
@@ -45,7 +45,7 @@ Microsoft を展開して、OpenShift と Kubernetes を使用して SQL Server 
 
 SQL Server 2017 の最新のサポート ポリシーで、次を参照してください。 [for Microsoft SQL Server の技術的なサポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)です。
 
-## <a id="system"></a>システム要件
+## <a id="system"></a> システム要件
 
 SQL Server 2017 では、Linux の次のシステム要件があります。
 
@@ -74,14 +74,14 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 - [Docker で実行します。](quickstart-install-connect-docker.md)
 - [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-## <a id="repositories"></a>ソース リポジトリを構成します。
+## <a id="repositories"></a> ソース リポジトリを構成します。
 
 インストールまたは SQL Server をアップグレードするときに、構成されている Microsoft リポジトリから SQL Server 2017 の最新バージョンを取得します。 クイック スタートを使用して、**累積的な更新プログラム (CU)**リポジトリです。 代わりに構成することができますが、 **GDR**リポジトリです。 リポジトリとその構成方法の詳細については、次を参照してください。 [Linux に SQL Server 用のリポジトリを構成する](sql-server-linux-change-repo.md)です。
 
 > [!IMPORTANT]
 > CTP または SQL Server 2017 年 1 の RC バージョンを以前インストールした場合は、プレビュー リポジトリを削除し、一般公開 (GA) 1 つを登録する必要があります。 詳細については、次を参照してください。 [Linux に SQL Server 用のリポジトリを構成する](sql-server-linux-change-repo.md)です。
 
-## <a id="upgrade"></a>SQL Server を更新します。
+## <a id="upgrade"></a> SQL Server を更新します。
 
 更新する、 **mssql サーバー**最新のリリースにパッケージ化、プラットフォームに基づく次のコマンドのいずれかを使用します。
 
@@ -93,7 +93,7 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 
 これらのコマンドは、最新のパッケージをダウンロードし、下にあるバイナリ ファイルを置き換える`/opt/mssql/`です。 ユーザーがデータベースを生成し、システム データベースは、この操作には影響しません。
 
-## <a id="rollback"></a>SQL Server をロールバック
+## <a id="rollback"></a> SQL Server をロールバック
 
 ロールバックまたは SQL Server の以前のリリースにダウン グレードは、次の手順に従います。
 
@@ -110,7 +110,7 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 > [!NOTE]
 > SQL Server 2017 など、同じメジャー バージョンのリリースにダウン グレードすることのみサポートされます。
 
-## <a id="versioncheck"></a>インストールされている SQL Server のバージョンを確認します。
+## <a id="versioncheck"></a> インストールされている SQL Server のバージョンを確認します。
 
 現在のバージョンと Linux に SQL Server のエディションを確認するには、次の手順を使用します。
 
@@ -122,7 +122,7 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
    sqlcmd -S localhost -U SA -Q 'select @@VERSION'
    ```
 
-## <a id="uninstall"></a>SQL Server をアンインストールします。
+## <a id="uninstall"></a> SQL Server をアンインストールします。
 
 削除する、 **mssql サーバー** Linux でパッケージ化、プラットフォームに基づく次のコマンドのいずれかを使用します。
 
@@ -138,7 +138,7 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 sudo rm -rf /var/opt/mssql/
 ```
 
-## <a id="unattended"></a>無人インストール
+## <a id="unattended"></a> 無人インストール
 
 次のように、無人インストールを実行できます。
 
@@ -159,12 +159,12 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 - [SUSE 無人インストール用スクリプト](sample-unattended-install-suse.md)
 - [Ubuntu 無人インストール用スクリプト](sample-unattended-install-ubuntu.md)
 
-## <a id="offline"></a>オフライン インストール
+## <a id="offline"></a> オフライン インストール
 
 かどうか、Linux コンピューターがアクセスできないで使用されるオンライン リポジトリに、[クイック スタート](#platforms)、パッケージ ファイルを直接ダウンロードできます。 これらのパッケージは、Microsoft リポジトリ [https://packages.microsoft.com](https://packages.microsoft.com) にあります。
 
 > [!TIP]
-> クイック スタートの手順に正常にインストールした場合は、ダウンロードしたり、次のパッケージを手動でインストールする必要はありません。 このセクションでは、オフラインのシナリオでのみです。
+> クイック スタートの手順に正常にインストールした場合は、ダウンロードしたり、SQL Server のパッケージを手動でインストールする必要はありません。 このセクションでは、オフラインのシナリオでのみです。
 
 1. **パッケージをダウンロードする、データベース エンジンには、プラットフォームの**します。 パッケージのダウンロード リンクが記載されて、パッケージの詳細 セクションの[リリース ノート](sql-server-linux-release-notes.md)です。
 

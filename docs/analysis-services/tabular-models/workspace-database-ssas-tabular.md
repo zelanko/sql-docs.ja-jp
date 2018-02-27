@@ -1,7 +1,7 @@
 ---
-title: "ワークスペース データベース (SSAS テーブル) |Microsoft ドキュメント"
+title: "ワークスペース データベース |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/24/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73cbfa40573fcf08774a576aaa7f09bb1ea21195
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2ab6a38542e9c6702edcf98401db0796fc5e78e4
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="workspace-database-ssas-tabular"></a>ワークスペース データベース (SSAS テーブル)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]新しいテーブル モデル プロジェクトを作成するときに、モデルの作成時に使用される、テーブル モデル ワークスペース データベースが作成された[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]です。
+# <a name="workspace-database"></a>[ワークスペース データベース] 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+モデルの作成時に使用されるテーブル モデル ワークスペース データベースは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で新しいテーブル モデル プロジェクトを作成したときに作成されます。
   
 ## <a name="specifying-a-workspace-instance"></a>ワークスペースのインスタンスを指定する  
   SSDT で新しいテーブル モデル プロジェクトを作成する場合は、プロジェクトを作成するときに使用する Analysis Services インスタンスを指定できます。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の 2016 年 9 月リリース (14.0.60918.0) 以降、新しいテーブル モデル プロジェクトを作成するときにワークスペースのインスタンスを指定するための 2 つのモードが導入されています。 
@@ -32,8 +33,6 @@ ms.lasthandoff: 01/08/2018
 **統合ワークスペース** - SSDT 独自の内部 Analysis Services のインスタンスを使用します。
 
 **ワークスペース サーバー** - 明示的な Analysis Services インスタンスにワークスペース データベースを作成します。これは多くの場合、SSDT と同じコンピューターか同じネットワーク内の別のコンピューター上です。
-
-
   
 ### <a name="integrated-workspace"></a>統合ワークスペース
 統合ワークスペースでは、SSDT 独自の暗黙的な Analysis Services インスタンスを使用して、メモリ内に作業データベースを作成します。 統合ワークスペース モードでは別途 SQL Server Analysis Services の明示的なインストールを行う必要がないため、SSDT でテーブル プロジェクトを作成する際の複雑さが大幅に軽減されます。
@@ -56,7 +55,7 @@ model.bim の [ワークスペース データベース] と [ワークスペー
   
  テーブルのインポート ウィザードを使用するか、コピー/貼り付けを行って、モデル プロジェクトにデータを追加後、モデル デザイナーでテーブル、列、データを表示すると、ワークスペース データベースが表示されます。 追加のテーブル、列、リレーションシップなどを追加すると、ワークスペース データベースも変更されます。  
   
- テーブル モデル プロジェクトを配置すると、基本的にワークスペース データベースのコピーである配置済みのモデル データベースが、配置サーバー プロパティに指定された Analysis Services サーバー インスタンスに作成されます。 配置サーバー プロパティの詳細については、「[プロジェクトのプロパティ (SSAS テーブル)](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)」を参照してください。  
+ テーブル モデル プロジェクトを配置すると、基本的にワークスペース データベースのコピーである配置済みのモデル データベースが、配置サーバー プロパティに指定された Analysis Services サーバー インスタンスに作成されます。 配置サーバー プロパティの詳細については、次を参照してください。[プロジェクト プロパティ](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)です。  
   
  通常、モデル ワークスペース データベースは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーの localhost またはローカルの名前付きインスタンスに存在します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のリモート インスタンスを使用してワークスペース データベースをホストできますが、データのクエリ中の待機時間とその他の制約のため、この構成はお勧めしません。 最適に、ワークスペース データベースをホストする [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスが [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]と同じコンピューター上にあります。 ワークスペース データベースをホストする [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスと同じコンピューター上にモデル プロジェクトを作成すると、パフォーマンスが向上します。  
   
@@ -82,12 +81,12 @@ model.bim の [ワークスペース データベース] と [ワークスペー
  ワークスペース データベースのプロパティは、モデルのプロパティに含まれます。 モデルのプロパティを表示するには、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の **ソリューション エクスプローラー**で **Model.bim** ファイルをクリックします。 モデルのプロパティは **[プロパティ]** ウィンドウを使用して構成できます。 ワークスペース データベース固有のプロパティには、次のものが含まれます。  
   
 > [!NOTE]  
->  **[統合ワークスペース モード]**、**[ワークスペース サーバー]**、**[ワークスペースの保有期間]**、**[データ バックアップ]** の各プロパティには、新しいモデル プロジェクトを作成するときに既定の設定が適用されます。 [ツール] メニューから開く [オプション] ダイアログ ボックスで、 **[分析サーバー]** 設定の **[データ モデリング]** ページを使用して、新しいモデル プロジェクトの既定の設定を変更できます。 他のプロパティと同様に、これらのプロパティは **[プロパティ]** ウィンドウでモデル プロジェクトごとに設定することもできます。 既定の設定の変更は、作成済みのモデル プロジェクトには適用されません。 詳細については、「 [既定のデータ モデルと配置プロパティの構成 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)」を参照してください。  
+>  **[統合ワークスペース モード]**、**[ワークスペース サーバー]**、**[ワークスペースの保有期間]**、**[データ バックアップ]** の各プロパティには、新しいモデル プロジェクトを作成するときに既定の設定が適用されます。 [ツール] メニューから開く [オプション] ダイアログ ボックスで、 **[分析サーバー]** 設定の **[データ モデリング]** ページを使用して、新しいモデル プロジェクトの既定の設定を変更できます。 他のプロパティと同様に、これらのプロパティは **[プロパティ]** ウィンドウでモデル プロジェクトごとに設定することもできます。 既定の設定の変更は、作成済みのモデル プロジェクトには適用されません。 詳細については、次を参照してください。[既定のデータ モデリングおよび配置プロパティを構成する](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)です。  
   
 |プロパティ|既定の設定|Description|  
 |--------------|---------------------|-----------------|  
 |**[統合ワークスペース モード]**|True、False|プロジェクトの作成時にワークスペース データベースに統合ワークスペース モードを選ぶと、このプロパティは True になります。 プロジェクトの作成時に **[ワークスペース サーバー]** モードを選ぶと、このプロパティは False になります。 | 
-|**[ワークスペース データベース]**|[オブジェクト名]|ワークスペース データベースの名前。 このプロパティは、 **[統合ワークスペース モード]** が **True**のときは、編集できません。|  
+|**[ワークスペース データベース]**|名前|ワークスペース データベースの名前。 このプロパティは、 **[統合ワークスペース モード]** が **True**のときは、編集できません。|  
 |**ワークスペースの保有期間**|メモリからアンロード|モデル プロジェクトが閉じられた後でワークスペース データベースを保持する方法を指定します。 ワークスペース データベースには、モデル メタデータとインポートされたデータが含まれています。 場合によっては、ワークスペース データベースは非常に大きくなり、大量のメモリを消費することがあります。 既定では、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でモデル プロジェクトを閉じると、ワークスペース データベースはメモリからアンロードされます。 この設定を変更するときには、使用可能なメモリ リソースと、モデル プロジェクトに対する作業を行う頻度を考慮することが重要です。 このプロパティの設定には、以下のオプションがあります。<br /><br /> **メモリに保持** - モデル プロジェクトを閉じた後もワークスペース データベースをメモリ内に保持するように指定します。 このオプションはより多くのメモリを消費しますが、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でモデル プロジェクトを開くときのリソース消費が少なくて済み、ワークスペース データベースの読み込みも高速になります。<br /><br /> **メモリからアンロード** - モデル プロジェクトを閉じた後、ワークスペース データベースをディスク上に保持し、メモリには残さないように指定します。 このオプションはメモリの消費量は比較的少なくて済みますが、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でモデル プロジェクトを開くときにワークスペース データベースを再度接続する必要があるため、リソース消費が増え、ワークスペース データベースをメモリ内に保持した場合と比べて、モデル プロジェクトの読み込みにも時間がかかるようになります。 メモリ内のリソースが制限されている場合、またはリモートのワークスペース データベースで作業する場合に、このオプションを使用します。<br /><br /> **ワークスペースの削除** - モデル プロジェクトを閉じた後、メモリからワークスペース データベースを削除し、ディスク上にもワークスペース データベースを保持しないように指定します。 このオプションはメモリとストレージ領域の消費量が比較的少なくて済みますが、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でモデル プロジェクトを開くときのリソース消費が増え、ワークスペース データベースをメモリ内やディスク上に保持した場合と比べて、モデル プロジェクトの読み込みにも時間がかかるようになります。 このオプションは、モデル プロジェクトの使用時、必要な場合にのみ使用してください。<br /><br /> このプロパティの既定の設定は、[ツール] メニューから開く [オプション] ダイアログ ボックスで、 **[分析サーバー]** 設定の **[データ モデリング]** ページを使用して変更できます。 このプロパティは、 **[統合ワークスペース モード]** が **True**のときは、編集できません。|  
 |**Workspace Server**|localhost|このプロパティは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でモデル プロジェクトが作成されるときにワークスペース データベースをホストするのに使用される既定のサーバーを指定します。 ローカル コンピューターで実行されている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の使用可能なすべてのインスタンスが、このボックスの一覧に表示されます。<br /><br /> テーブル モードで実行されている別の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーを指定するには、サーバー名を入力します。 ログオンするユーザーは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーの管理者である必要があります。<br /><br /> ワークスペース サーバーとして、ローカルの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーを指定することをお勧めします。 リモート サーバー上のワークスペース データベースでは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] からのインポートはサポートされておらず、データはローカルにバックアップされず、クエリ中にユーザー インターフェイスで遅延が発生する場合があります。<br /><br /> このプロパティの既定の設定は、[ツール] メニューから開く [オプション] ダイアログ ボックスで、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 設定の [データ モデリング] ページを使用して変更できます。 このプロパティは、 **[統合ワークスペース モード]** が **True**のときは、編集できません。|  
   
@@ -95,6 +94,6 @@ model.bim の [ワークスペース データベース] と [ワークスペー
  SQL Server Management Studio (SSMS) を使用して、ワークスペース データベースをホストする [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーに接続できます。 通常、ワークスペース データベースは必ずしも管理されません。例外は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から実行する必要のあるワークスペース データベースのデタッチまたは削除です。 モデル デザイナーでプロジェクトを開いているときに、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してワークスペース データベースを管理しないでください。 このような操作により、データが失われることがあります。
    
 ## <a name="see-also"></a>参照  
-[モデルのプロパティ &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
+[モデルのプロパティ](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
   
   

@@ -4,41 +4,41 @@ description: "使用して、Docker でコンテナー イメージの SQL Serve
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 02/15/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: 30ac0b58a439af47504c94669af581f5e81fd17c
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
-ms.translationtype: MT
+ms.openlocfilehash: 70ed897c26211945987b81c179f7310a1437b482
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Docker でコンテナー イメージの SQL Server 2017 を構成します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-構成および使用する方法を説明する、 [mssql サーバー linux コンテナー イメージ](https://hub.docker.com/r/microsoft/mssql-server-linux/)docker です。 このイメージは、Ubuntu 16.04 に基づいて Linux で実行されている SQL Server で構成されます。 Mac/Windows 用の Docker エンジン 1.8 + Linux または Docker を使用できます。
+この記事は、構成および使用する方法を説明します、 [mssql サーバー linux コンテナー イメージ](https://hub.docker.com/r/microsoft/mssql-server-linux/)docker です。 このイメージは Ubuntu 16.04 に基づく Linux で実行されている SQL Server で構成されます。 イメージは Linux の Docker エンジン 1.8+ または Mac/Windows 用 Docker で使用することができます。
 
 > [!NOTE]
-> このトピックは、mssql サーバー linux イメージを使用して上に特に注目します。 Windows イメージが含まれていないが、詳細情報を入手するには上、 [mssql server windows Docker Hub ページ](https://hub.docker.com/r/microsoft/mssql-server-windows/)です。
+> この記事は、mssql サーバー linux イメージを使用して上に特に注目します。 Windows イメージが含まれていないが、詳細情報を入手するには上、 [mssql server windows Docker Hub ページ](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)です。
 
-## <a name="pull-and-run-the-container-image"></a>プルし、コンテナー イメージを実行
+## <a name="pull-and-run-the-container-image"></a>コンテナー イメージのプルと実行
 
 プルし、SQL Server 2017 の Docker コンテナー イメージを実行するには、前提条件と、次のクイック スタートの手順に従います。
 
 - [Docker を使用した SQL Server 2017 コンテナー イメージを実行します。](quickstart-install-connect-docker.md)
 
-この構成のトピックでは、以下のセクションに追加の使用シナリオを示します。
+この構成の記事では、次のセクションで追加の使用シナリオを提供します。
 
-## <a id="production"></a>実稼働環境にコンテナー イメージを実行します。
+## <a id="production"></a> 実稼働環境にコンテナー イメージを実行します。
 
 前のセクションで、クイック スタートでは、Docker Hub から SQL Server の無償の Developer エディションを実行します。 情報の大部分は、Enterprise、Standard、または Web edition などのコンテナー イメージの運用を実行する場合にも適用されます。 ただし、ここで説明されている、いくつかの違いがあります。
 
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/01/2018
 
 - [sqlcmd](sql-server-linux-setup-tools.md)
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
-- [Windows で SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
+- [Windows の SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
 
 次の例で**sqlcmd** Docker コンテナーで実行されている SQL Server に接続します。 接続文字列で IP アドレスは、コンテナーが実行されているホスト コンピューターの IP アドレスです。
 
@@ -114,7 +114,7 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P "<YourPassword>"
 
 SQL Server 2017 CTP 2.0 以降で、 [SQL Server コマンド ライン ツール](sql-server-linux-setup-tools.md)コンテナー イメージに含まれています。 対話型のコマンド プロンプトで、イメージをアタッチする場合は、ツールをローカルで実行することができます。
 
-1. 使用して、`docker exec -it`実行中のコンテナー内の対話型 bash シェルを起動するコマンド。 次の例で`e69e056c702d`コンテナー ID です。
+1. 実行中のコンテナー内で対話型の Bash シェルを開始するには、`docker exec -it` コマンドを使用します。 次の例で`e69e056c702d`コンテナー ID です。
 
     ```bash
     docker exec -it e69e056c702d "bash"
@@ -123,7 +123,7 @@ SQL Server 2017 CTP 2.0 以降で、 [SQL Server コマンド ライン ツー�
     > [!TIP]
     > 常にコンテナー全体の id を指定する必要はありません。だけ、一意に識別するための十分な文字を指定する必要があるとします。 この例で使用するのに十分なする可能性があります`e6`または`e69`完全 id ではなくです。
 
-2. 1 回、コンテナー内の接続ローカル sqlcmd でします。 その sqlcmd がパスにない、既定では、完全なパスを指定する必要があるので注意してください。
+2. コンテナー内では sqlcmd とローカル接続してください。 その sqlcmd がパスにない、既定では、完全なパスを指定する必要があるので注意してください。
 
     ```bash
     /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourPassword>'
@@ -131,7 +131,7 @@ SQL Server 2017 CTP 2.0 以降で、 [SQL Server コマンド ライン ツー�
 
 3. 終了したら、sqlcmd で、入力`exit`です。
 
-4. 終了したら、対話型のコマンド プロンプトで、入力`exit`です。 コンテナーは、対話型 bash シェルを終了した後に実行を続けます。
+4. 終了したら、対話型のコマンド プロンプトで、入力`exit`です。 コンテナーは、対話型の Bash シェルを終了した後も引き続き実行されます。
 
 ## <a name="run-multiple-sql-server-containers"></a>複数の SQL Server のコンテナーを実行します。
 
@@ -161,7 +161,7 @@ sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
 sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 ```
 
-## <a id="persist"></a>データを永続化します。
+## <a id="persist"></a> データを永続化します。
 
 SQL Server 構成の変更とデータベース ファイルに保存されているコンテナーとコンテナーを再起動する場合でも`docker stop`と`docker start`です。 ただしのコンテナーを削除する場合`docker rm`コンテナー内のすべてが削除された、SQL Server や、データベースなどです。 次のセクションを使用する方法について説明**データ ボリューム**に関連付けられているコンテナーが削除された場合でも、データベース ファイルを保持します。
 
@@ -236,7 +236,7 @@ docker ps
 docker exec -ti <Container ID> /bin/bash
 ```
 
-今すぐ端末、コンテナー内で実行しているかのように、コマンドを実行できます。 終了したら、入力`exit`です。 対話型コマンド セッションで、これが終了したが、コンテナーが実行し続けます。
+今すぐ端末、コンテナー内で実行しているかのように、コマンドを実行できます。 終わったら、`exit` と入力します。 対話型コマンド セッションで、これが終了したが、コンテナーが実行し続けます。
 
 ## <a name="copy-files-from-a-container"></a>コンテナーからファイルをコピー
 
@@ -301,7 +301,7 @@ docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 > [!IMPORTANT]
 > アップグレードおよびダウン グレードは、この時点で RC1 と RC2 の間でのみサポートされます。
 
-## <a id="upgrade"></a>コンテナー内の SQL Server をアップグレードします。
+## <a id="upgrade"></a> コンテナー内の SQL Server をアップグレードします。
 
 Docker でコンテナー イメージをアップグレードするには、まず、リリース アップグレードのためのタグを特定します。 このバージョンを使用してレジストリからプル、`docker pull`コマンド。
 
@@ -324,7 +324,7 @@ docker pull microsoft/mssql-server-linux:<image_tag>
 
 1. 必要に応じて、削除でコンテナーを古い`docker rm`です。
 
-## <a id="troubleshooting"></a>トラブルシューティング
+## <a id="troubleshooting"></a> トラブルシューティング
 
 次のセクションでは、SQL Server のコンテナーの実行のトラブルシューティング方法を提供します。
 
@@ -409,7 +409,7 @@ Docker と SQL Server 可用性グループを使用している場合は、次�
 
 - コンテナーのホスト名を明示的に設定、`-h YOURHOSTNAME`のパラメーター、`docker run`コマンド。 このホスト名は、可用性グループを構成するときに使用されます。 指定しない場合は`-h`、既定値は、コンテナーの id です。
 
-### <a id="errorlogs"></a>SQL Server のセットアップとエラーのログ
+### <a id="errorlogs"></a> SQL Server のセットアップとエラーのログ
 
 SQL Server セットアップを確認できのエラー ログの**/var/opt/mssql/log**です。 コンテナーが実行されていない場合は、まず、コンテナーを開始します。 対話型のコマンド プロンプトを使用して、ログを検査します。
 

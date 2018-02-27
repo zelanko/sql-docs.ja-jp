@@ -2,7 +2,7 @@
 title: "ダウンロードし、インストールの Microsoft SQL 操作 Studio (プレビュー) |Microsoft ドキュメント"
 description: "ダウンロードおよびインストール Microsoft SQL 操作 (プレビュー) 対応の Studio Windows、macOS、または Linux"
 ms.custom: tools|sos
-ms.date: 01/17/2018
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8828b5f94c5500aa7ef3bffd48556e599e41124
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: dda75f01b68816c971d31354f08686381597271f
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>ダウンロードして SQL 操作 Studio (プレビュー) のインストール
 
-[!INCLUDE[name-sos](../includes/name-sos.md)]Windows、macOS、および Linux で実行されます。
+[!INCLUDE[name-sos](../includes/name-sos.md)] Windows、macOS、および Linux で実行されます。
 
-ダウンロードし、最新のリリースをインストール、*年 1 月のパブリック プレビュー*:
+ダウンロードし、最新のリリースをインストール、*年 2 月のパブリック プレビュー*:
 
-|プラットフォーム|ダウンロード|リリース日|
-|:---|:---|:---|
-|Windows|[インストーラー](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|2018 年 1 月 17日 |
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|2018 年 1 月 17日 |
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|2018 年 1 月 17日|
+|プラットフォーム|ダウンロード|リリース日| バージョン |
+|:---|:---|:---|:---|
+|Windows|[インストーラー](https://go.microsoft.com/fwlink/?linkid=867998)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=867997)|2018 年 2 月 15日 |0.26.7|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=867999)|2018 年 2 月 15日 |0.26.7|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=868002)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=868001)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=868000)|2018 年 2 月 15日|0.26.7|
 
 最新のリリースに関する詳細については、次を参照してください。、[リリース ノート](release-notes.md)です。
 
@@ -40,27 +40,27 @@ ms.lasthandoff: 01/19/2018
 
 **インストーラー**
 
-1. ダウンロードし、実行、 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=866480)です。
+1. ダウンロードし、実行、 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=867998)です。
 1. 開始、[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]アプリ。
 
 
 **.zip file**
 
-1. ダウンロード[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows .zip](https://go.microsoft.com/fwlink/?linkid=866479)です。
+1. ダウンロード[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows .zip](https://go.microsoft.com/fwlink/?linkid=867997)です。
 2. ダウンロードしたファイルを参照し、抽出しています。
-3. 実行します。`\sqlops-windows\sqlops.exe`
+3. 実行します。 `\sqlops-windows\sqlops.exe`
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>MacOS の SQL 操作 Studio (プレビュー) を取得します。
 
-1. ダウンロード[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] macOS の](https://go.microsoft.com/fwlink/?linkid=866481)します。
+1. ダウンロード[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] macOS の](https://go.microsoft.com/fwlink/?linkid=867999)します。
 2. Zip の内容を展開しをダブルクリックします。
 3. させる[!INCLUDE[name-sos](../includes/name-sos-short.md)]で使用できる、*スタート パッド*、ドラッグ*sqlops.app*を*アプリケーション*フォルダーです。
 
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Linux 用の SQL 操作 Studio (プレビュー) の取得します。
 
-1. ダウンロード[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=866482)です。
+1. ダウンロード[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=868000)です。
 1. ファイルと起動を抽出する[!INCLUDE[name-sos](../includes/name-sos-short.md)]新しいターミナル ウィンドウを開きを次のコマンドを入力します。
 
    ```bash
@@ -97,7 +97,7 @@ ms.lasthandoff: 01/19/2018
 
 ## <a name="supported-operating-systems"></a>サポートされるオペレーティング システム
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]Windows、macOS など、Linux で実行され、次のプラットフォームではサポートされています。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows、macOS など、Linux で実行され、次のプラットフォームではサポートされています。
 
 ### <a name="windows"></a>Windows
 - Windows 10 (64 ビット)

@@ -1,5 +1,5 @@
 ---
-title: "バージョン (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "VERSION (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,19 +8,21 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8ba4237f9a43a525571a2d25f95acb0a31d4a5cb
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
@@ -41,7 +43,7 @@ VERSION ( )
 ## <a name="arguments"></a>引数  
   
 ## <a name="general-remarks"></a>全般的な解説  
-テーブル名を指定する必要があります、 [FROM](../../t-sql/queries/from-transact-sql.md)結果を返すには、この関数の句。 クエリの結果セットの各行の結果の行が返されます使用して[上部 (TRANSACT-SQL)](../../t-sql/queries/top-transact-sql.md)返された行の数を制限します。  
+テーブル名を指定する必要があります、 [FROM](../../t-sql/queries/from-transact-sql.md)結果を返すには、この関数の句。 クエリの結果セットの各行の結果の行が返されます使用して[TOP (TRANSACT-SQL)](../../t-sql/queries/top-transact-sql.md)返された行の数を制限します。  
   
 ## <a name="examples"></a>使用例  
 次の例では、バージョン番号を返します。  

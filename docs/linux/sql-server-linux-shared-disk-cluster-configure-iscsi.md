@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 9720eb3b4254f2592e3c237bc2af16bc5360d2ad
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>フェールオーバー クラスター インスタンス - iSCSI: Linux 上の SQL Server を構成します。
 
@@ -41,7 +41,7 @@ iSCSI では、ネットワークを使用して、サーバーをターゲッ�
 
 このセクションでは、FCI のノードとして使用するサーバー上の iSCSI イニシエーターを構成する方法について説明します。 手順は RHEL および Ubuntu では、動作します。
 
-追加の詳細についてはサポートされている分布の iSCSI イニシエーターでは、次のリンクを参照してください。
+サポートされている分布の iSCSI イニシエーターの詳細については、次のリンクを参照してください。
 - [Red Hat](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
 - [SUSE](http://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
@@ -210,7 +210,7 @@ iSCSI では、ネットワークを使用して、サーバーをターゲッ�
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > ボリューム グループの名前を指定し、 \<LogicalVolumeName > が作成された論理ボリュームの名前を指定します。 次の構文の例では、上に作成された論理ボリュームとボリューム グループと一致します。
+    \<VolumeGroupName > ボリューム グループの名前を指定し、 \<LogicalVolumeName > が作成された論理ボリュームの名前を指定します。 次の構文の例では、前のコマンドからの論理ボリュームとボリューム グループと一致します。
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
@@ -278,7 +278,7 @@ iSCSI では、ネットワークを使用して、サーバーをターゲッ�
     mkdir <FolderName>
     ```
 
-    \<フォルダー名 > フォルダーの名前を指定します。 フォルダーの完全なパスを指定する必要は、適切な場所ではない場合。 次の例では、/var/opt/mssql/userdata をという名前のフォルダーを作成します。
+    \<フォルダー名 > フォルダーの名前を指定します。 フォルダーの完全なパスを指定する必要があります、適切な場所ではない場合。 次の例では、/var/opt/mssql/userdata をという名前のフォルダーを作成します。
 
     ```bash
     mkdir /var/opt/mssql/userdata

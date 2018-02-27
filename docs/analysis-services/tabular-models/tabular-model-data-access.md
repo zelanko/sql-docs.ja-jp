@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e004604829a9b7701744d41df53c4bf00afa432d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4c1fa9b4e4f9003b193628d114ad6832436a7c8f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-data-access"></a>テーブル モデル データ アクセス
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Analysis services 表形式モデル データベースは、同じクライアント、インターフェイス、および多次元モデルからのデータまたはメタデータの取得に使用する言語のほとんどでアクセスできます。 詳細については、「[Multidimensional Model Data Access (Analysis Services - Multidimensional Data)](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)」(多次元モデルのデータ アクセス (Analysis Services - 多次元データ)) を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Analysis Services のテーブル モデル データベースは、多次元モデルからデータまたはメタデータを取得するときとほぼ同じクライアント、インターフェイス、および言語でアクセスできます。 詳細については、「[Multidimensional Model Data Access (Analysis Services - Multidimensional Data)](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)」(多次元モデルのデータ アクセス (Analysis Services - 多次元データ)) を参照してください。  
   
- このトピックでは、テーブル モデルを操作するクライアント、クエリ言語、およびプログラム インターフェイスについて説明します。  
+ この記事では、クライアント、クエリ言語、および表形式モデルを操作できるプログラマティック インターフェイスについて説明します。  
   
 ## <a name="clients"></a>クライアント  
  次の Microsoft 製クライアント アプリケーションでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のテーブル モデル データベースに対するネイティブ接続がサポートされます。  
@@ -34,10 +35,10 @@ ms.lasthandoff: 01/08/2018
 ### <a name="power-bi"></a>Power BI
 [Power BI](https://powerbi.microsoft.com/)からオンプレミスの Analysis Services テーブル モデル データベースに接続できます。 Power BI は、データを分析して詳細情報を共有するためのビジネス分析用ツール群です。 
 
-### <a name="excel"></a>[エクスポート]  
+### <a name="excel"></a>Excel  
  テーブル モデルのデータベースには Excel から接続できます。Excel にあるデータの視覚エフェクトと分析機能を使用してデータを操作することができます。 データにアクセスするには、Analysis Services のデータ接続を定義し、表形式サーバー モードで動作するサーバーを指定してから、使用するデータベースを選択します。 詳細については、「 [SQL Server Analysis Services のデータに接続する、または SQL Server Analysis Services のデータをインポートする](http://go.microsoft.com/fwlink/?linkID=215150)」を参照してください。  
   
- また、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でテーブル モデルを参照する用途にも Excel は適しています。 このツールには、 **[Excel で分析]** というオプションがあります。このオプションを選択すると、新しい Excel インスタンスが起動して Excel ブックが作成され、そのブックからモデル ワークスペース データベースへのデータ接続が開きます。 Excel でテーブル モデル データを参照する際は、モデルに対するクエリが、Excel PivotTable クライアントを使用して実行される点に注意してください。 したがって、Excel ブック内の操作は、DAX クエリではなく、MDX クエリとしてワークスペース データベースに送信されます。 SQL Profiler などの監視ツールを使用してクエリを監視したとき、プロファイラー トレースに表示されるのは DAX ではなく MDX です。 "Excel で分析" 機能の詳細については、「[Excel で分析 (SSAS テーブル)](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)」を参照してください。  
+ また、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でテーブル モデルを参照する用途にも Excel は適しています。 このツールには、 **[Excel で分析]** というオプションがあります。このオプションを選択すると、新しい Excel インスタンスが起動して Excel ブックが作成され、そのブックからモデル ワークスペース データベースへのデータ接続が開きます。 Excel でテーブル モデル データを参照する際は、モデルに対するクエリが、Excel PivotTable クライアントを使用して実行される点に注意してください。 したがって、Excel ブック内の操作は、DAX クエリではなく、MDX クエリとしてワークスペース データベースに送信されます。 SQL Profiler などの監視ツールを使用してクエリを監視したとき、プロファイラー トレースに表示されるのは DAX ではなく MDX です。 詳細については、Excel で分析機能を参照してください。 [Excel で分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)です。  
   
 ### <a name="power-view"></a>Power View  
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は、Reporting Services のレポート クライアント アプリケーションであり、SharePoint 2010 環境で動作します。 データ探索、クエリ デザイン、プレゼンテーション レイアウトが、アドホック レポート環境に統合されています。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は、テーブル モデルをデータ ソースとして使用することができます。そのモデルが、テーブル モードで動作する Analysis Services のインスタンスにホストされているか、DirectQuery モードを使用してリレーショナル データ ストアから取得されるかは関係ありません。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]でテーブル モデルに接続するには、サーバーの場所とデータベース名を格納する接続ファイルを作成する必要があります。 Reporting Services の共有データ ソースまたは BI Semantic Model の接続ファイルは SharePoint で作成することができます。 BI セマンティック モデル接続の詳細については、「[Power Pivot BI セマンティック モデル接続 (.bism)](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)」を参照してください。  
@@ -46,14 +47,14 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] クライアントからモデルへと送信されるクエリは DAX ステートメントとして発行され、モデルにトレースを設定することによって監視できます。  クライアントは、概念スキーマ定義言語 (CSDL) に従って提示される初期スキーマ定義をサーバーに要求しますが、その際にも、サーバーに要求を送信します。 詳細については、「 [ビジネス インテリジェンス向けの CSDL 注釈 (CSDLBI)](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
-### <a name="sql-server-management-studio"></a>[SQL Server Management Studio]  
+### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、テーブル モデルをホストするインスタンスの管理や、テーブル モデル内のメタデータおよびデータに対するクエリを行うことができます。 モデルやモデル内のオブジェクトの処理、パーティションの作成と管理、さらには、データ アクセスを管理するためのセキュリティの設定を行うこともできます。 詳細については、次の各トピックを参照してください。  
   
 -   [Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
 -   [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)  
   
--   [Analysis Services インスタンスの監視](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+-   [Analysis Services インスタンスを監視します。](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、MDX と XMLA の両方のクエリ ウィンドウを使用して、テーブル モデル データベースからデータやメタデータを取得することができます。 ただし、次の制限事項に注意してください。  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="data-and-metadata"></a>データとメタデータ  
  マネージ アプリケーションでは、ADOMD.NET を使用して、テーブル モデルからデータおよびメタデータを取得できます。 
   
--   [動的管理ビュー (DMV) を使用した Analysis Services の監視](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [使用して動的管理ビュー &#40;です。 Dmv&#41; Analysis Services を監視するには](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  アンマネージ クライアント アプリケーションでは Analysis Services 9.0 OLE DB プロバイダーを使用して、テーブル モデルに対する OLE DB アクセスをサポートできます。 テーブル モデル アクセスを有効にするには、最新バージョンの Analysis Services OLE DB プロバイダーが必要です。 テーブル モデルで使用するプロバイダーの詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 」を参照してください。  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [MDSCHEMA_HIERARCHIES 行セット](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
   
-     新しい **STRUCTURE_TYPE** 列挙体は、テーブル モデルで作成されたユーザー定義階層の識別をサポートします。 詳細については、「[階層 (SSAS テーブル)](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)」を参照してください。  
+     新しい **STRUCTURE_TYPE** 列挙体は、テーブル モデルで作成されたユーザー定義階層の識別をサポートします。 詳細については、次を参照してください。[階層](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)です。  
   
  このリリースでは、データ マイニング スキーマ行セットの OLE DB に対する更新はありません。  
   
@@ -131,7 +132,7 @@ ms.lasthandoff: 01/08/2018
 >  DirectQuery モードで配置されているデータベースでは MDX クエリや DMX クエリは使用できません。したがって、DirectQuery モデルに対し、スキーマ行セットを使用してクエリを実行する必要がある場合は、関連する DMV ではなく、XMLA を使用する必要があります。 SELECT * from $system.DBSCHEMA_CATALOGS (または DISCOVER_TRACES) など、サーバー全体の結果を返す DMV の場合、キャッシュ モードで配置されたデータベースの内容のクエリを実行できます。  
   
 ## <a name="see-also"></a>参照  
- [テーブル モデル データベースへの接続 (SSAS)](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
+ [表形式モデル データベースへの接続します。 ](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
  [Power Pivot データ アクセス](../../analysis-services/power-pivot-sharepoint/power-pivot-data-access.md)   
  [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)  
   

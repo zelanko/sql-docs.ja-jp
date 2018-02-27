@@ -1,5 +1,5 @@
 ---
-title: "DAX では、テーブル モデル (SSAS テーブル) |Microsoft ドキュメント"
+title: "テーブル モデルにおける DAX |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 10/21/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a95f7acdcf05c003521a4471f07036b5f458b65e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8bf7c6895b62fb992094bb3850a90ee904b7a956
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="dax-in-tabular-models-ssas-tabular"></a>DAX では、テーブル モデル (SSAS テーブル)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Data Analysis Expressions (DAX) は、Analysis Services、Power BI Desktop と Power Pivot in Excel でカスタムの計算を作成するための数式言語です。 DAX の数式は、テーブル内や列内のデータに対して高度な計算を実行するための関数、演算子、値などで構成されます。  
+# <a name="dax-in-tabular-models"></a>テーブル モデルにおける DAX 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Data Analysis Expressions (DAX) は、Analysis Services、Power BI Desktop と Power Pivot in Excel でカスタムの計算を作成するための数式言語です。 DAX の数式は、テーブル内や列内のデータに対して高度な計算を実行するための関数、演算子、値などで構成されます。  
   
  Analysis Services、Power BI Desktop と Excel の Power Pivot で DAX が使用されますが、このトピックは SQL Server Data Tools (SSDT) で作成されたため、Analysis Services テーブル モデル プロジェクトに複数適用されます。  
   
@@ -73,8 +74,8 @@ ms.lasthandoff: 01/08/2018
 |整数|64 ビット (8 バイト) の整数値 <sup>1、2</sup>|小数点以下を含まない数値。 整数は正の数値または負の数値のどちらも有効ですが、-9,223,372,036,854,775,808 (-2^63) ～ 9,223,372,036,854,775,807 (2^63-1) の範囲の整数でなければなりません。|  
 |10 進数|64 ビット (8 バイト) の実数 <sup>1、2</sup>|小数点以下を含む数値。 実数では次のような幅広い値が有効です。<br /><br /> 負の値 (-1.79E +308 ～ -2.23E -308 の範囲)<br /><br /> Zero<br /><br /> 正の値 (2.23E -308 ～ 1.79E + 308 の範囲)<br /><br /> ただし、有効桁数は小数点以下が 17 桁に制限されます。|  
 |ブール値|ブール値|True または False の値。|  
-|Text|String|Unicode 文字データ文字列。 文字列、数字、またはテキスト形式で表現される日付を使用できます。|  
-|date|日付/時刻|許容された日付時刻表現による日付および時刻。<br /><br /> 1900 年 3 月 1 日より後のすべての日付が有効です。|  
+|テキスト|文字列|Unicode 文字データ文字列。 文字列、数字、またはテキスト形式で表現される日付を使用できます。|  
+|日付|日付/時刻|許容された日付時刻表現による日付および時刻。<br /><br /> 1900 年 3 月 1 日より後のすべての日付が有効です。|  
 |通貨|通貨|通貨データ型では、-922,337,203,685,477.5808 ～ 922,337,203,685,477.5807 の範囲の値 (小数点以下が 4 桁で有効桁数が固定長) が有効です。|  
 |なし|空白|空白は、DAX では SQL の NULL に相当するデータ型です。 空白を作成するには BLANK 関数を使用し、空白かどうかをテストするには論理関数の ISBLANK を使用します。|  
   
@@ -328,7 +329,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 -   リレーションシップを使用してモデル内のテーブルをリンクする場合は、数式を評価するスコープ (または *コンテキスト*とも呼ばれる) が拡大されます。 新しいテーブルや新しいリレーションシップを追加したため、またはアクティブなリレーションシップを変更したためにコンテキストが変化すると、予測していなかった結果の変更が生じることがあります。 詳細については、このトピックの「 [DAX の数式のコンテキスト](#bkmk_context) 」を参照してください。  
   
-##  <a name="bkmk_tables"></a> テーブルと列の操作  
+##  <a name="bkmk_tables"></a> Working with tables and columns  
  テーブル モデルにおけるテーブルは、外観が Excel テーブルと似ていますが、データや数式を処理する方法は異なります。  
   
 -   数式では、テーブルおよび列のみを使用できます。個々のセル、範囲参照、配列などは使用できません。  
@@ -366,7 +367,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  再計算の結果、異なる値が返され、ロール メンバーによる行のクエリの可否が変化しない限り、処理も再計算も行フィルターの数式には影響しません。  
   
- 詳細については、「 [データの処理 (SSAS テーブル)](../../analysis-services/tabular-models/process-data-ssas-tabular.md)」を参照してください。  
+ 詳細については、次を参照してください。[プロセス データ](../../analysis-services/tabular-models/process-data-ssas-tabular.md)です。  
   
 ##  <a name="bkmk_troubleshoot"></a> 数式内のエラーのトラブルシューティング  
  数式を定義するときにエラーが発生した場合は、その数式に *構文エラー*、 *セマンティック エラー*、または *計算エラー*が含まれている可能性があります。  

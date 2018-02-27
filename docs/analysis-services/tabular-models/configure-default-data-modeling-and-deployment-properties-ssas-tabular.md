@@ -1,7 +1,7 @@
 ---
-title: "既定のデータ モデルと配置プロパティ (SSAS テーブル) の構成 |Microsoft ドキュメント"
+title: "既定のデータ モデリングおよび配置プロパティを構成する |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -17,19 +17,20 @@ f1_keywords:
 - sql13.asvs.bidtoolset.asoptions.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ac64c706d3f8583d614989214940423d19ce7ccb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 95406a20ad71e7ed95d1d83b2a8cda44fbba3a8c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>既定のデータ モデルと配置プロパティの構成 (SSAS テーブル)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]このトピックは、既定の互換性レベルを構成する方法を説明、展開およびワークスペース データベース プロパティの設定、可能性がある定義済みする新しい各テーブル モデル プロジェクトの作成で[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]です。 新しいプロジェクトの作成後も、これらのプロパティを特定の要件に応じて変更できます。  
+# <a name="configure-default-data-modeling-and-deployment-properties"></a>既定のデータ モデリングおよび配置プロパティを構成します。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+この記事は、既定の互換性レベルを構成する方法を説明、展開およびワークスペース データベース プロパティの設定、可能性がある定義済みする新しい各テーブル モデル プロジェクトの作成で[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]です。 新しいプロジェクトの作成後も、これらのプロパティを特定の要件に応じて変更できます。  
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>新しいモデル プロジェクトの既定の互換性レベル プロパティの設定を構成するには  
   
@@ -77,8 +78,8 @@ ms.lasthandoff: 01/08/2018
 >  既定のモデル プロパティを変更しても、変更前に作成された既存のモデルのプロパティに影響しません。  
   
 ## <a name="see-also"></a>参照  
- [プロジェクトのプロパティ (SSAS テーブル)](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
- [モデルのプロパティ &#40;です。SSAS テーブル &#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
- [Analysis Services での表形式モデルの互換性レベル](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
+ [プロジェクトのプロパティ](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
+ [モデルのプロパティ](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
+ [互換性レベル](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

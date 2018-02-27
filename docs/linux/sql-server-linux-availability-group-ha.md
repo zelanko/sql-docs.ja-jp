@@ -1,11 +1,11 @@
 ---
 title: "SQL Server Always On 可用性グループ配置のパターン |Microsoft ドキュメント"
-ms.custom: 
+ms.custom: sql-linux
 ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d0f5fe75b65efbea49df143e573316b50675a93
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 25d20ff22474c8df65184cab9ddd0a9f1efb7a8c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性グループの構成の高可用性とデータの保護
 
@@ -70,7 +70,7 @@ SQL Server 2017 が導入されています、`REQUIRED_SYNCHRONIZED_SECONDARIES
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
 |プライマリ停止 | 手動フェールオーバー。 データが失われる可能性があります。 新しいプライマリが R が付けられます。 |自動フェールオーバー。 新しいプライマリが R が付けられます。 |自動フェールオーバー。 前のプライマリが復旧し、セカンダリとして可用性グループに参加するまでは、新しいプライマリをユーザー トランザクションで使用できません。 
 |1 つのセカンダリ レプリカ停止  | プライマリが R 付けられます。 プライマリが失敗した場合はない自動フェールオーバー。 |プライマリが R 付けられます。 プライマリにも失敗した場合はない自動フェールオーバー。 | プライマリでは、ユーザー トランザクションで使用できません。 
-<sup>*</sup>既定値
+<sup>*</sup> 既定値
 
 <a name="twoSynch"></a>
 
@@ -87,7 +87,7 @@ SQL Server 2017 が導入されています、`REQUIRED_SYNCHRONIZED_SECONDARIES
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |プライマリ停止 | 手動フェールオーバー。 データが失われる可能性があります。 新しいプライマリが R が付けられます。| 自動フェールオーバー。 前のプライマリが復旧し、セカンダリとして可用性グループに参加するまでは、新しいプライマリをユーザー トランザクションで使用できません。
 |1 つのセカンダリ レプリカ停止  |読み取り/書き込み、データの損失を不安定な実行は、プライマリのです。 |プライマリはセカンダリあって回復するまではユーザー トランザクションで使用できません。
-<sup>*</sup>既定値
+<sup>*</sup> 既定値
 
 >[!NOTE]
 >上記のシナリオでは、SQL Server 2017 CU 1 より前の動作です。 
@@ -117,7 +117,7 @@ SQL Server 2017 が導入されています、`REQUIRED_SYNCHRONIZED_SECONDARIES
 |セカンダリ レプリカの停止 | プライマリ ファイル グループは読み取り/書き込みを実行して公開されているデータの損失を (プライマリが失敗し、回復することはできません) です。 プライマリにも失敗した場合はない自動フェールオーバー。 | プライマリでは、ユーザー トランザクションで使用できません。 プライマリにも失敗した場合にフェールオーバーするレプリカがありません。 
 |構成のみのレプリカの停止 | プライマリが R 付けられます。 プライマリにも失敗した場合はない自動フェールオーバー。 | プライマリが R 付けられます。 プライマリにも失敗した場合はない自動フェールオーバー。 
 |同期セカンダリ + の構成のみのレプリカの停止| プライマリでは、ユーザー トランザクションで使用できません。 自動フェールオーバーはありません。 | プライマリでは、ユーザー トランザクションで使用できません。 レプリカにフェールオーバーする場合はプライマリでも失敗しません。 
-<sup>*</sup>既定値
+<sup>*</sup> 既定値
 
 >[!NOTE]
 >構成のみのレプリカをホストする SQL Server のインスタンスは、他のデータベースをホストすることもできます。 1 つ以上の可用性グループの構成のみデータベースとして参加できます。 
@@ -142,7 +142,7 @@ SQL Server 2017 が導入されています、`REQUIRED_SYNCHRONIZED_SECONDARIES
 
 ## <a name="understand-sql-server-resource-agent-for-pacemaker"></a>ペースに対する SQL Server エージェントのリソースを理解します。
 
-SQL Server 2017 CTP 1.4 追加`sequence_number`に`sys.availability_groups`レプリカがプライマリ レプリカとが最新であるかのセカンダリを識別するペースを許可します。 `sequence_number`最新であるか、ローカルの可用性グループのレプリカを表す単調に増加する bigint 型の値です。 ペースの更新プログラム、`sequence_number`可用性グループの構成変更のたびにします。 構成の変更には、フェールオーバー、レプリカの追加または削除などがあります。 数が、プライマリ上で更新し、セカンダリ レプリカにレプリケートします。 このため、最新の状態の構成を持つセカンダリ レプリカは、プライマリと同じシーケンス番号です。 
+SQL Server 2017 CTP 1.4 追加`sequence_number`に`sys.availability_groups`レプリカがプライマリ レプリカとが最新であるかのセカンダリを識別するペースを許可します。 `sequence_number` 最新であるか、ローカルの可用性グループのレプリカを表す単調に増加する bigint 型の値です。 ペースの更新プログラム、`sequence_number`可用性グループの構成変更のたびにします。 構成の変更には、フェールオーバー、レプリカの追加または削除などがあります。 数が、プライマリ上で更新し、セカンダリ レプリカにレプリケートします。 このため、最新の状態の構成を持つセカンダリ レプリカは、プライマリと同じシーケンス番号です。 
 
 最初は送信をプライマリ レプリカを昇格するペースが決定したら、*事前昇格*すべてのレプリカに通知します。 レプリカは、シーケンス番号を返します。 次に、ペースが実際には、レプリカはプライマリに昇格しようとするとき、レプリカのみ昇格自体のシーケンス番号が、すべてのシーケンス番号の最も高い場合。 独自のシーケンス番号が一番大きいシーケンス番号が一致しない場合、レプリカは、昇格操作を拒否します。 この方法により、最大のシーケンス番号を持つレプリカだけがプライマリに昇格できるようになるため、データの損失が回避されます。 
 
@@ -150,7 +150,7 @@ SQL Server 2017 CTP 1.4 追加`sequence_number`に`sys.availability_groups`レ�
 
 たとえば、次の 3 つの同期レプリカの 1 つのプライマリ レプリカと 2 つの同期セカンダリ レプリカを可用性グループです。
 
-- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`1 になります。(3 -> 1 の 2/)。
+- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 1 になります。(3 -> 1 の 2/)。
 
 - 事前昇格アクションに応答するレプリカの必要な数は 2 です。(3-1 = 2)。 
 
