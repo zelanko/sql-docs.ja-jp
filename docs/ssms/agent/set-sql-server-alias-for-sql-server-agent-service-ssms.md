@@ -22,13 +22,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 34ac8dbca47438f2a551a423a72db455d41298d0
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssDE](../../includes/ssde_md.md)] への接続時に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントに対して、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] を使用して [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の別名を設定する方法について説明します。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスは、追加のクライアント構成を必要としない動的サーバー名を使用することによって、名前付きパイプを経由して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のインスタンスに接続します。 既定のネットワーク転送を使用しない場合、または、代替の名前付きパイプを使用して受信待ちする [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のインスタンスに接続する場合は、サーバー接続の別名を設定する必要があります。  
+# <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>SQL Server Management Studio を使用して SQL Server エージェント サービスの SQL Server 別名を設定する方法
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+このトピックでは、[!INCLUDE[ssDE](../../includes/ssde_md.md)] への接続時に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントに対して、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] を使用して [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の別名を設定する方法について説明します。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスは、追加のクライアント構成を必要としない動的サーバー名を使用することによって、名前付きパイプを経由して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のインスタンスに接続します。 既定のネットワーク転送を使用しない場合、または、代替の名前付きパイプを使用して受信待ちする [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のインスタンスに接続する場合は、サーバー接続の別名を設定する必要があります。  
   
 **このトピックの内容**  
   

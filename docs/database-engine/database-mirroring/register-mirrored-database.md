@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d670b9efc8bcbe67bb12758318fb72cf99c2218f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="register-mirrored-database"></a>[ミラー化されたデータベースの登録]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このダイアログ ボックスを使用すると、特定のサーバー インスタンスに対し、ミラー化されたデータベース (複数可) を登録できます。登録は、データベースをデータベース ミラーリング モニターに追加することによって行います。 データベースを追加すると、データベースとそのパートナーに関する情報、およびパートナーへの接続方法に関する情報が、データベース ミラーリング モニターによってローカルにキャッシュされます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+このダイアログ ボックスを使用すると、特定のサーバー インスタンスに対し、ミラー化されたデータベース (複数可) を登録できます。登録は、データベースをデータベース ミラーリング モニターに追加することによって行います。 データベースを追加すると、データベースとそのパートナーに関する情報、およびパートナーへの接続方法に関する情報が、データベース ミラーリング モニターによってローカルにキャッシュされます。  
   
 > [!IMPORTANT]  
 >  プリンシパル サーバー インスタンスで、 **sysadmin** 固定サーバー ロールのメンバーであったとしても、ミラー サーバー インスタンスで、そのロールのメンバーになっていない場合、プリンシパル サーバー インスタンスの状態は読み取り専用になります。  

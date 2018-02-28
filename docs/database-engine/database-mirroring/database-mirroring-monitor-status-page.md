@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7b0ad2d6c9773860640bbf25ecac671dfae2dbe1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring-monitor-status-page"></a>[データベース ミラーリング モニター] ([状態] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 読み取り専用ページです。現在ナビゲーション ツリーで選択されているデータベースのプリンシパルおよびミラー サーバー インスタンスについて、最新のミラーリング状態が表示されます。 インスタンスに関する情報が利用できない場合、そのインスタンスに対応する **[状態]** グリッドのセルは " **不明**" とグレーで表示されます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+読み取り専用ページです。現在ナビゲーション ツリーで選択されているデータベースのプリンシパルおよびミラー サーバー インスタンスについて、最新のミラーリング状態が表示されます。 インスタンスに関する情報が利用できない場合、そのインスタンスに対応する **[状態]** グリッドのセルは " **不明**" とグレーで表示されます。  
   
  **SQL Server Management Studio を使用してデータベース ミラーリングを監視するには**  
   

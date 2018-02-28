@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b625927cc888ef09f83ada2cae55197d9533ab18
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-warning-thresholds"></a>[警告しきい値の設定]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このダイアログ ボックスでは、**[データベース ミラーリング モニター]** ダイアログ ボックスのナビゲーション ツリーで選択されているデータベースの警告しきい値を有効にしたり構成したりできます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+このダイアログ ボックスでは、 **[データベース ミラーリング モニター]** ダイアログ ボックスのナビゲーション ツリーで選択されているデータベースの警告しきい値を有効にしたり構成したりできます。  
   
  このダイアログ ボックスは、両方のサーバー インスタンスに接続を試みます。 これらの接続は非同期的に確立されます。 ダイアログには、互いのパートナーの接続状態が表示されます。 パートナーが接続されていない場合は、 **[接続]**をクリックして接続できます。  
   

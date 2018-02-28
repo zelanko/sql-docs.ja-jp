@@ -34,13 +34,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 1dbf5d00855a498782a65a3ff04e2477a2cb871d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="backup-devices-sql-server"></a>バックアップ デバイス (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース上でのバックアップ操作中、バックアップ対象のデータ (*backup*) は、物理バックアップ デバイスに書き込まれます。 この物理バックアップ デバイスは、メディア セットの最初のバックアップが書き込まれるときに初期化されます。 単一または一連のバックアップ デバイス上にあるバックアップによって、1 つのメディア セットが構成されます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース上でのバックアップ操作中、バックアップ対象のデータ (*backup*) は、物理バックアップ デバイスに書き込まれます。 この物理バックアップ デバイスは、メディア セットの最初のバックアップが書き込まれるときに初期化されます。 単一または一連のバックアップ デバイス上にあるバックアップによって、1 つのメディア セットが構成されます。  
    
 ##  <a name="TermsAndDefinitions"></a> 用語と定義  
  バックアップ ディスク (backup disk)  
@@ -59,7 +60,7 @@ ms.lasthandoff: 01/18/2018
   
  バックアップ操作によってバックアップがメディア セットに追加されているときにディスク ファイルがいっぱいになると、バックアップ操作は失敗します。 バックアップ ファイルの最大サイズはディスク デバイス上の使用可能な空き領域によって決まるため、バックアップ ディスク デバイスの適切なサイズは、バックアップのサイズによって異なります。  
   
- ディスク バックアップ デバイスには、ATA ドライブなどの単純なディスク デバイスを使用できます。 また、ホットスワップ可能なディスク ドライブも使用できます。この場合、ドライブ上のいっぱいになったディスクを空のディスクと交換する作業を透過的に行えます。 バックアップ ディスクには、サーバー上のローカル ディスクや、共有ネットワーク リソースであるリモート ディスクを使用できます。 リモート ディスクの使用方法については、このトピックの「 [ネットワーク共有のファイルへのバックアップ](#NetworkShare)」をご覧ください。  
+ ディスク バックアップ デバイスには、ATA ドライブなどの単純なディスク デバイスを使用できます。 また、ホットスワップ可能なディスク ドライブも使用できます。この場合、ドライブ上のいっぱいになったディスクを空のディスクと交換する作業を透過的に行えます。 バックアップ ディスクには、サーバー上のローカル ディスクや、共有ネットワーク リソースであるリモート ディスクを使用できます。 リモート ディスクの使用方法については、このトピックの「 [ネットワーク共有のファイルへのバックアップ](#NetworkShare)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理ツールを使用すると、タイムスタンプの付いた名前がディスク ファイルに対して自動的に生成されるため、ディスク バックアップ デバイスの操作を柔軟に行うことができます。  
   
