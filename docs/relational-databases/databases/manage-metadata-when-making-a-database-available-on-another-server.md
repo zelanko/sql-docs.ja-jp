@@ -43,13 +43,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 9d46ba6ce2dfe1af2454b95d05bd82f3d8b1ce2f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>データベースを別のサーバーで使用できるようにするときのメタデータの管理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックは、次の状況に関連しています。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+このトピックは、次の状況に関連しています。  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性グループの可用性レプリカを構成する場合。  
   
@@ -213,13 +214,13 @@ ms.lasthandoff: 01/18/2018
   
 -   ジョブによって使用されるログイン  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを作成または実行するには、まず、ジョブに必要なすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを対象のサーバー インスタンスに追加する必要があります。 詳細については、「 [SQL Server エージェント ジョブ ステップを作成および管理するユーザーの構成](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)」を参照してください。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを作成または実行するには、まず、ジョブに必要なすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを対象のサーバー インスタンスに追加する必要があります。 詳細については、「[SQL Server エージェント ジョブ ステップを作成および管理するユーザーの構成](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)」を参照してください。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサービス開始アカウント  
   
      サービス開始アカウントにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] エージェントを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows アカウントとそのネットワーク権限が定義されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、指定されたユーザー アカウントで実行されます。 SQL Server エージェント サービスのコンテキストは、ジョブとその実行環境の設定に影響します。 アカウントは、ジョブで必要とされるネットワーク共有などのリソースにアクセスできる必要があります。 サービス開始アカウントの選択方法と変更方法の詳細については、「 [SQL Server エージェント サービスのアカウントの選択](http://msdn.microsoft.com/library/fe658e32-9e6b-4147-a189-7adc3bd28fe7)」を参照してください。  
   
-     正しく稼働するには、適切なドメイン、ファイル システム、およびレジストリの権限を持つようにサービス開始アカウントを構成する必要があります。 また、サービス アカウント用に構成する必要がある共有ネットワーク リソースがジョブで必要になる場合があります。 詳細については、「 [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
+     正しく稼働するには、適切なドメイン、ファイル システム、およびレジストリの権限を持つようにサービス開始アカウントを構成する必要があります。 また、サービス アカウント用に構成する必要がある共有ネットワーク リソースがジョブで必要になる場合があります。 詳細については、「[Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンスに関連付けられている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスには独自のレジストリ ハイブが設定されているので、SQL Server エージェント サービスのジョブは、通常、このレジストリ ハイブの 1 つ以上の設定に依存します。 ジョブが適切に動作するには、それらのレジストリ設定が必要です。 スクリプトを使用して別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスにジョブを再作成した場合、その SQL Server エージェント サービスのレジストリには、再作成されたジョブに適したレジストリ設定が行われない場合があります。 再作成したジョブを対象のサーバー インスタンスで適切に動作させるには、元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスと対象の SQL Server エージェント サービスのレジストリ設定が同じである必要があります。  
   

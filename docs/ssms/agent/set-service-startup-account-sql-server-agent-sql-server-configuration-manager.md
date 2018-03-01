@@ -23,13 +23,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: bcd26feceb6ecd2fc0b776a5ceec80756cd2e110
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのサービス開始アカウントでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを実行する Windows アカウントとそのネットワーク アクセス許可を定義します。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] で [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 構成マネージャーを使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]エージェント サービス アカウントを設定する方法について説明します。  
+# <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>SQL Server エージェントのサービス開始アカウントの設定 (SQL Server 構成マネージャー)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのサービス開始アカウントでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを実行する Windows アカウントとそのネットワーク権限を定義します。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] で [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 構成マネージャーを使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]エージェント サービス アカウントを設定する方法について説明します。  
   
 **このトピックの内容**  
   

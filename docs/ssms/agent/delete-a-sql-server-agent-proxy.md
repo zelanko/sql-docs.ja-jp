@@ -23,13 +23,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 79937166e8bbd119f2bb5d5e98b7a49dd969047b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] または [!INCLUDE[tsql](../../includes/tsql_md.md)] を使用して [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント プロキシ アカウントを削除する方法について説明します。  
+# <a name="delete-a-sql-server-agent-proxy"></a>SQL Server エージェントのプロキシの削除
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] を使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] で [!INCLUDE[tsql](../../includes/tsql_md.md)]エージェント プロキシ アカウントを削除する方法について説明します。  
   
 **このトピックの内容**  
   

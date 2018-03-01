@@ -25,10 +25,10 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: dd6a236b2ead2c5891d1794a7b20ea7a72c4a4de
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="use-tokens-in-job-steps"></a>ジョブ ステップでのトークンの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.lasthandoff: 01/17/2018
 > [!IMPORTANT]  
 > Windows イベント ログに対して書き込みのアクセス許可を持っている Windows ユーザーであればだれでも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの警告または WMI 警告によってアクティブ化されるジョブ ステップにアクセスできます。 このセキュリティ上のリスクを避けるために、警告によってアクティブになるジョブで使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント トークンは、既定で無効になっています。 このようなトークンには、**A-DBN**、**A-SVR**、**A-ERR**、**A-SEV**、**A-MSG**、**WMI(***property***)** があります。 このリリースでは、トークンの使用はすべての警告に拡張されていることに注意してください。  
 >   
-> これらのトークンを使用する必要がある場合は、まず、Administrators グループなどの信頼されている Windows セキュリティ グループのメンバーのみが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] が存在するコンピューターのイベント ログに対して書き込みのアクセス許可を持っていることを確認してください。 確認したら、[オブジェクト エクスプローラー] で **[SQL Server エージェント]** を右クリックし、 **[プロパティ]**をクリックします。次に、 **[警告システム]** ページで、 **[警告に応答するすべてのジョブのトークンを置き換える]** チェック ボックスをオンにして、これらのトークンを有効にします。  
+> これらのトークンを使用する必要がある場合は、まず、Administrators グループなどの信頼されている Windows セキュリティ グループのメンバーのみが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] が存在するコンピューターのイベント ログに対して書き込みのアクセス許可を持っていることを確認してください。 確認したら、[オブジェクト エクスプローラー] で **[SQL Server エージェント]** を右クリックし、**[プロパティ]** をクリックします。次に、**[警告システム]** ページで、**[警告に応答するすべてのジョブのトークンを置き換える]** チェック ボックスをオンにして、これらのトークンを有効にします。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのトークンの置換は簡単で効率的です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントにより、トークンのリテラル文字列値にそのまま置き換えられます。 すべてのトークンには大文字と小文字の区別があります。 ジョブ ステップでは、この点を考慮し、使用するトークンを正しく引用したり、置換後の文字列を正しいデータ型に変換したりする必要があります。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのトークンの置換は簡単で効率的です。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントにより、トークンのリテラル文字列値にそのまま置き換えられます。 すべてのトークンには大文字と小文字の区別があります。 ジョブ ステップでは、この点を考慮し、使用するトークンを正しく引用したり、置換後の文字列を正しいデータ型に変換したりする必要があります。  
   
 たとえば、ジョブ ステップでデータベースの名前を表示するときに、次のステートメントを使用する場合があります。  
   

@@ -29,10 +29,10 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f99696f644d5def145d4e4ff1c0b040ec29d6673
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="use-performance-objects"></a>パフォーマンス オブジェクトの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/17/2018
 |既定|**SQLAgent:***object*:*counter*|  
 |名前付き|**SQLAgent$**<br /> **&#42;instance_name&#42; :***object*:*counter*|  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの次のパフォーマンス オブジェクトが含まれています。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの次のパフォーマンス オブジェクトが含まれています。  
   
 |オブジェクト名です。|Description|  
 |---------------|---------------|  

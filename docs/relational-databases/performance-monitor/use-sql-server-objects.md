@@ -39,10 +39,10 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 4a11f27ebd08fc7d1e7377f7d84fb5e3f95f4e13
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="use-sql-server-objects"></a>SQL Server オブジェクトの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/18/2018
  システム モニターは、任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターの統計を表示するように構成することができます。 また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターにしきい値を設定して、カウンターがしきい値を超えたときに警告を生成することもできます。 警告を構成する方法の詳細については、「 [SQL Server データベース警告の作成](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)」を参照してください。  
   
 > [!TIP]  
->  動的管理ビュー [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) のクエリによって、パフォーマンス カウンターの値を返すこともできます。  
+>  動的管理ビュー [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) のクエリによって、パフォーマンス カウンターの値を返すこともできます。    
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の統計情報は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがインストールされているときにのみ表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを停止して再起動すると、SQL Server の統計情報の表示も中断され、自動的に再開されます。 システム モニター スナップインでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されていないときでも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のカウンターが表示されます。 クラスター化されたインスタンスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されているノードでのみ、パフォーマンス カウンターが機能します。  

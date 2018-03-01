@@ -66,7 +66,7 @@ Visual Studio のコードは、Linux、macOS、および拡張機能をサポ�
 
 ## <a name="create-or-open-a-sql-file"></a>作成または SQL ファイルを開く
 
-**Mssql**拡張機能を使用 mssql コマンドと T-SQL は、IntelliSense、エディターで、言語モードが に設定されているときに**SQL**です。
+**mssql** 拡張機能を使用 mssql コマンドと T-SQL は、IntelliSense、エディターで、言語モードが に設定されているときに **SQL** です。
 
 1. キーを押して**CTRL + N**です。 Visual Studio のコードは、既定で新しい 'プレーン テキスト' ファイルを開きます。 
 

@@ -23,13 +23,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5909ba97271614b39e0b899a257f62c1658cfe09
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Windows 認証の使用によるデータベースのミラーリング監視の追加 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] データベースのミラーリング監視を設定するには、データベース所有者が、データベース エンジンのインスタンスをミラーリング監視サーバーの役割に割り当てます。 ミラーリング監視サーバーのインスタンスは、プリンシパル サーバーまたはミラー サーバーのインスタンスと同じコンピューターで実行できますが、このようにすると、自動フェールオーバーの堅牢性が大幅に低下します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+データベースのミラーリング監視を設定するには、データベース所有者が、データベース エンジンのインスタンスをミラーリング監視サーバーの役割に割り当てます。 ミラーリング監視サーバーのインスタンスは、プリンシパル サーバーまたはミラー サーバーのインスタンスと同じコンピューターで実行できますが、このようにすると、自動フェールオーバーの堅牢性が大幅に低下します。  
   
  ミラーリング監視は独立したコンピューターに常駐させることを強くお勧めします。 特定のサーバーを、同じパートナーまたは別のパートナーを含む複数の同時実行データベース ミラーリング セッションに参加させることができます。 また、特定のサーバーを、あるセッションではパートナーとし、別のセッションではミラーリング監視にすることができます。  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Distribution Agent, parameter reference
 - command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b3a92cdd309e4bc4c60ff922b8444d810a2981cf
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-distribution-agent"></a>レプリケーション ディストリビューション エージェント
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] レプリケーション ディストリビューション エージェントは、ディストリビューション データベース テーブルに登録されたスナップショット (スナップショット レプリケーションの場合) とトランザクション (トランザクション レプリケーションの場合) を、サブスクライバーのレプリケーション先のテーブルに移動する実行可能ファイルです。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+レプリケーション ディストリビューション エージェントは、ディストリビューション データベース テーブルに登録されたスナップショット (スナップショット レプリケーションの場合) とトランザクション (トランザクション レプリケーションの場合) を、サブスクライバーのレプリケーション先のテーブルに移動する実行可能ファイルです。  
   
 > [!NOTE]  
 >  パラメーターは任意の順序で指定できます。 省略可能なパラメーターを省略する場合、ローカル コンピューターであらかじめ定義されているレジストリ設定の値が使用されます。  

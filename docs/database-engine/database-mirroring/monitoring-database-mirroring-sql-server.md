@@ -22,13 +22,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c0133d9255da8fd0dfe9d373b717bf813bb17767
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>データベース ミラーリングの監視 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ここでは、データベース ミラーリング モニターと **sp_dbmmonitor** システム ストアド プロシージャ、およびデータベース ミラーリングの監視に伴う作業 (**データベース ミラーリング モニターのジョブ**など) について説明し、データベース ミラーリング セッションについて監視できる情報の概要を示します。 さらに、事前に定義された一連のデータベース ミラーリング イベントに対する警告しきい値を定義する方法、および任意のデータベース ミラーリング イベントでの警告の設定についても説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ここでは、データベース ミラーリング モニターと **sp_dbmmonitor** システム ストアド プロシージャ、およびデータベース ミラーリングの監視に伴う作業 ( **データベース ミラーリング モニターのジョブ**など) について説明し、データベース ミラーリング セッションについて監視できる情報の概要を示します。 さらに、事前に定義された一連のデータベース ミラーリング イベントに対する警告しきい値を定義する方法、および任意のデータベース ミラーリング イベントでの警告の設定についても説明します。  
   
  ミラーリング セッション中にミラー化されたデータベースを監視すると、データ フローが発生しているかどうかや、データ フローがどの程度適切に行われているかを確認することができます。 サーバー インスタンス上にある 1 つ以上のミラー化されたデータベースの監視を設定および管理するには、データベース ミラーリング モニターまたは **sp_dbmmonitor** システム ストアド プロシージャを使用します。  
   
