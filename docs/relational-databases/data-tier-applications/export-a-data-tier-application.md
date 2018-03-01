@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-tier-applications
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-data-tier-apps
+ms.technology:
+- dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,19 +27,20 @@ helpviewer_keywords:
 - export DAC
 - data-tier application [SQL Server], export
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2d4318ad30d660b9e04aa53100061fd6ed6036bc
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5c20a0e2757366b22b4c81885106d1b9c6d362f6
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="export-a-data-tier-application"></a>データ層アプリケーションのエクスポート
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 配置されているデータ層アプリケーション (DAC) またはデータベースをエクスポートすると、エクスポート ファイルが作成されます。このファイルには、データベース内のオブジェクトの定義に加え、テーブルに格納されているすべてのデータが含まれています。 さらに、このエクスポート ファイルを [!INCLUDE[ssDE](../../includes/ssde-md.md)]の別のインスタンスまたは [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]にインポートすることもできます。 エクスポートとインポートという操作を組み合わせることで、DAC をインスタンス間で移行したりアーカイブを作成したりすることが可能です。また、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に配置されているデータベースの社内用コピーを作成することもできます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+配置されているデータ層アプリケーション (DAC) またはデータベースをエクスポートすると、エクスポート ファイルが作成されます。このファイルには、データベース内のオブジェクトの定義に加え、テーブルに格納されているすべてのデータが含まれています。 さらに、このエクスポート ファイルを [!INCLUDE[ssDE](../../includes/ssde-md.md)]の別のインスタンスまたは [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]にインポートすることもできます。 エクスポートとインポートという操作を組み合わせることで、DAC をインスタンス間で移行したりアーカイブを作成したりすることが可能です。また、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に配置されているデータベースの社内用コピーを作成することもできます。  
   
 ## <a name="before-you-begin"></a>はじめに  
  エクスポート プロセスでは、2 つの段階を経て DAC エクスポート ファイルが構築されます。  

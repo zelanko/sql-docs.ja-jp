@@ -12,19 +12,20 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 72171357-28de-4edd-bdfd-194f97225a6f
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: ac1dcd75aa97cb12142d142c82d5c0c6d3f59791
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="sql-server-2012-sp1-release-notes"></a>SQL Server 2012 SP1 リリース ノート
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] このリリース ノートでは、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1 のインストールやトラブルシューティングを行う前に知っておく必要がある、既知の問題について説明しています。 このリリース ノートは、オンラインのみで入手でき、インストール メディアには含まれていません。また、定期的に更新されます。  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+このリリース ノートでは、 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1 のインストールやトラブルシューティングを行う前に知っておく必要がある、既知の問題について説明しています。 このリリース ノートは、オンラインのみで入手でき、インストール メディアには含まれていません。また、定期的に更新されます。  
   
 ## <a name="bkmk_top"></a>目次  
 [1.0 インストールの準備](#bmk_Install)  
@@ -125,7 +126,7 @@ SQL Server 2012 SP1 をインストールする前に、次のことを考慮し
   
 -   "値 'SharePoint Principal' は、接続文字列プロパティ 'User Identity' ではサポートされていません。"  
   
-**回避策:** SharePoint Server 2013 に PowerPivot for SharePoint 2013 インストーラー パッケージ (**spPowerPivot.msi**) をインストールします。 インストーラー パッケージは、 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 機能パックに付属しています。 この機能パックは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] ダウンロード センターの [SQL Server 2012 SP1 機能パック](http://go.microsoft.com/fwlink/p/?LinkID=268266) からダウンロードできます。  
+**回避策:** SharePoint Server 2013 に PowerPivot for SharePoint 2013 インストーラー パッケージ (**spPowerPivot.msi**) をインストールします。 インストーラー パッケージは、 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 機能パックに付属しています。 この機能パックは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] ダウンロード センターの [SQL Server 2012 SP1 機能パック](http://go.microsoft.com/fwlink/p/?LinkID=268266)(http://go.microsoft.com/fwlink/p/?LinkID=268266) からダウンロードできます。  
   
 ### <a name="33-power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>3.3 定期データ更新の後で、PowerPivot ブックの Power View シートが削除される  
 **問題点**: PowerPivot for SharePoint アドインでは、Power View が含まれたブックで **定期データ更新** を使用すると、すべての Power View シートが削除されます。  

@@ -96,7 +96,7 @@ ms.lasthandoff: 01/25/2018
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask>  
   
-## <a name="script-task-editor-general-page"></a>[スクリプト タスク エディター] ([全般] ページ)
+## <a name="script-task-editor-general-page"></a>[スクリプト タスク エディター] \([全般] ページ)
   **[スクリプト タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、スクリプト タスクの名前と説明を入力できます。  
   
  スクリプト タスクの詳細については、「 [Script Task](../../integration-services/control-flow/script-task.md) 」および「 [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)」を参照してください。 スクリプト タスクのプログラミングの詳細については、「 [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)」を参照してください。  
@@ -111,7 +111,7 @@ ms.lasthandoff: 01/25/2018
  **[説明]**  
  スクリプト タスクの説明を入力します。  
   
-## <a name="script-task-editor-script-page"></a>[スクリプト タスク エディター] ([スクリプト] ページ)
+## <a name="script-task-editor-script-page"></a>[スクリプト タスク エディター] \([スクリプト] ページ)
   **[スクリプト タスク エディター]** ダイアログ ボックスの **[スクリプト]** ページを使用すると、スクリプト プロパティを設定し、スクリプトによってアクセスできる変数を指定できます。  
   
 > [!NOTE]  
