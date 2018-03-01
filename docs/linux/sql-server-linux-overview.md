@@ -1,6 +1,6 @@
 ---
 title: "SQL Server on Linux の概要 |Microsoft ドキュメント"
-description: "この記事には、SQL Server on Linux を実行し、方法の詳細について説明がについて説明します。"
+description: "このトピックでは、SQL Server が Linux 上でどのように実行されるかを説明し、詳細な知識を得るための情報を提供します。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -17,7 +17,7 @@ ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
 ms.openlocfilehash: 71efe59db9de4b60389f40ee6718627817ecee37
 ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/21/2018
 ---
@@ -25,41 +25,41 @@ ms.lasthandoff: 02/21/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server 2017 が Linux で実行されます。 ような多くの機能とサービスは、オペレーティング システムに関係なく、同じ SQL Server データベース エンジンを勧めします。
+SQL Server 2017 を Linux で実行することができるようになりました。 同じ SQL Server データベース エンジンです。オペレーティング システムに関係なく、類似した多くの機能とサービスを備えています。
 
-## <a name="install"></a>Install
+## <a name="install"></a>インストール
 
 、作業を開始するには、次のクイック スタートのいずれかを使用して Linux に SQL Server をインストールします。
 
 - [Red Hat Enterprise Linux にインストールします。](quickstart-install-connect-red-hat.md)
-- [SUSE Linux Enterprise Server をインストールします。](quickstart-install-connect-suse.md)
-- [Ubuntu をインストールします。](quickstart-install-connect-ubuntu.md)
+- [SUSE Linux Enterprise Server にインストールします](quickstart-install-connect-suse.md)
+- [Ubuntu にインストールします](quickstart-install-connect-ubuntu.md)
 - [Docker で実行します。](quickstart-install-connect-docker.md)
 - [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 > [!NOTE]
-> Docker 自体は、Linux、Mac、および Windows で Docker イメージを実行できることを意味する、複数のプラットフォームで実行されます。
+> Docker 自体は複数のプラットフォームで実行することができます。つまり、Linux、Mac、および Windows で Docker イメージを実行することができます。
 
-## <a name="connect"></a>[接続]
+## <a name="connect"></a>接続
 
-インストール後に、Linux コンピューター上の SQL Server インスタンスに接続します。 ローカルまたはリモートでと、さまざまなツールとドライバーを接続することができます。 クイック スタートを使用する方法をデモンストレーションする、 [sqlcmd](sql-server-linux-setup-tools.md)コマンド ライン ツールです。 その他のツールは次のとおりです。
+インストール後に、Linux コンピューター上の SQL Server インスタンスに接続します。 ローカルまたはリモートで、さまざまなツールとドライバーで接続することができます。 クイック スタート チュートリアルでは、 [sqlcmd](sql-server-linux-setup-tools.md) コマンド ライン ツールの使用方法を説明します。 その他のツールは次のとおりです。
 
 | ツール | チュートリアル |
 |-----|-----|
-| Visual Studio Code (VS Code) | [SQL Server on Linux で VS コードを使用します。](sql-server-linux-develop-use-vscode.md) |
+| Visual Studio Code (VS Code) | [SQL Server on Linux での VS Code の使用](sql-server-linux-develop-use-vscode.md) |
 | SQL Server Management Studio (SSMS) | [Windows で SSMS を使用して Linux 上の SQL Server に接続するには](sql-server-linux-develop-use-ssms.md) |
-| SQL Server Data Tools (SSDT) | [SQL Server on Linux で SSDT を使用します。](sql-server-linux-develop-use-ssdt.md) |
+| SQL Server Data Tools (SSDT) | [SSDT を SQL Server on Linux と共に使用します](sql-server-linux-develop-use-ssdt.md) |
 
 ## <a name="explore"></a>探索
 
-SQL Server 2017 では、Linux を含む、サポートされているすべてのプラットフォームで同じ基になるデータベース エンジンがあります。 非常に多くの既存の機能と機能は、Linux で同じように動作します。 ドキュメントのこの領域では、Linux の観点からこれらの機能の一部を公開します。 これは、Linux 固有の要件がある領域も呼び出します。
+SQL Server 2017 では、Linux を含む、サポートされているすべてのプラットフォームで同じベースとなるデータベース エンジンを使用しています。 非常に多くの既存の機能と操作は、Linux でも同じように動作します。 このドキュメントでは、Linux の観点からこれらの機能のいくつかを紹介しています。 また、Linux 固有の要件がある領域についても触れています。
 
-SQL Server を使い慣れている場合は、確認、[リリース ノート](sql-server-linux-release-notes.md)のこのリリースの既知の問題の一般的なガイドラインとします。 見て[SQL Server on Linux の新](sql-server-linux-whats-new.md)だけでなく[新機能の全体的な SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)。 よく寄せられる質問に対する回答については、次を参照してください。、 [SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)です。
+SQL Server を使い慣れている場合は、[リリース ノート](sql-server-linux-release-notes.md)で、このリリースの既知の問題と、一般的なガイドラインを確認してください。 その後、[SQL Server on Linux の新機能](sql-server-linux-whats-new.md) と、[SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md) をご覧ください。 よく寄せられる質問に対する回答については、次を参照してください。、 [SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)です。
 
 ##  <a name="infotipmediageneralinfotippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](./media/general/info_tip.png) SQL Server エンジニアリング チームと連携する
 
-- [DBA スタック Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): データベースの管理の質問
-- [スタックのオーバーフロー](http://stackoverflow.com/questions/tagged/sql-server): 開発の質問
+- [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): データベース管理の質問
+- [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server): 開発の質問
 - [MSDN フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): 技術的な質問
-- [フィードバックを送信](https://feedback.azure.com/forums/908035-sql-server): バグ、および要求機能の報告
-- [Reddit](https://www.reddit.com/r/SQLServer/): SQL Server の説明
+- [フィードバックを送信](https://feedback.azure.com/forums/908035-sql-server): バグの報告と機能のリクエスト
+- [Reddit](https://www.reddit.com/r/SQLServer/): SQL Server についての議論

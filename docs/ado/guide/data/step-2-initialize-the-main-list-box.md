@@ -54,7 +54,7 @@ End Sub
   
  このコードは、グローバルのレコードと、レコード セット オブジェクトをインスタンス化します。 Record オブジェクト`grec`、ActiveConnection として指定された URL でが開きます。 URL が存在する場合は、開かれています。これは既に存在しない場合は作成されます。 お客様の環境から"http://servername/foldername/"の有効な URL を置き換える必要がありますに注意してください。  
   
- レコード セット オブジェクト`grs`、レコードの子で開かれる`grec`です。 `lstMain` URL に公開されているリソースのファイル名が格納されます。  
+ レコード セット オブジェクト`grs`、レコードの子で開かれる`grec`です。  `lstMain` URL に公開されているリソースのファイル名が格納されます。  
   
 ## <a name="see-also"></a>参照  
  [インターネット発行シナリオ](../../../ado/guide/data/internet-publishing-scenario.md)   
