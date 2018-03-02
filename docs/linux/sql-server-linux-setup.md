@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: a93be0508eff85d4e653a1e0d0790c71ceaaeb44
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
-ms.translationtype: HT
+ms.openlocfilehash: c686e97bd3d06b99fcbb847c23ac7e174e85dd6b
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上の SQL Server のインストールのガイダンス
 
@@ -29,6 +29,8 @@ ms.lasthandoff: 02/13/2018
 
 > [!TIP]
 > 手始めのクイック スタートのいずれかにジャンプ[RHEL](quickstart-install-connect-red-hat.md)、 [SLES](quickstart-install-connect-suse.md)、 [Ubuntu](quickstart-install-connect-ubuntu.md)、または[Docker](quickstart-install-connect-docker.md)です。
+
+よく寄せられる質問に対する回答については、次を参照してください。、 [SQL Server on Linux に関する FAQ](../linux/sql-server-linux-faq.md)です。
 
 ## <a id="supportedplatforms"></a> サポートされているプラットフォーム
 
@@ -40,6 +42,9 @@ SQL Server 2017 は次の Linux プラットフォームでサポートされて
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2 を入手します。](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker エンジン** | 1.8+ | [Docker を取得します。](http://www.docker.com/products/overview)
+
+> [!NOTE]
+> インストールし、他の密接に関連する Linux プラットフォームでは、SQL Server を実行することがありますが、SQL Server のみテストは、上記の表に、プラットフォームでサポートされます。
 
 Microsoft を展開して、OpenShift と Kubernetes を使用して SQL Server のコンテナーの管理をサポートします。
 
@@ -69,8 +74,8 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 コマンドラインから Linux に SQL Server をインストールできます。 手順については、次のクイック スタートのいずれかを参照してください。
 
 - [Red Hat Enterprise Linux にインストールします。](quickstart-install-connect-red-hat.md)
-- [SUSE Linux Enterprise Server をインストールします。](quickstart-install-connect-suse.md)
-- [Ubuntu をインストールします。](quickstart-install-connect-ubuntu.md)
+- [SUSE Linux Enterprise Server にインストールします](quickstart-install-connect-suse.md)
+- [Ubuntu にインストールします](quickstart-install-connect-ubuntu.md)
 - [Docker で実行します。](quickstart-install-connect-docker.md)
 - [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
@@ -209,6 +214,6 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 データベースの作成および管理を開始するように SQL Server インスタンスに接続します。 開始するには、クイック スタートを参照してください。
 
 - [Red Hat Enterprise Linux にインストールします。](quickstart-install-connect-red-hat.md)
-- [SUSE Linux Enterprise Server をインストールします。](quickstart-install-connect-suse.md)
-- [Ubuntu をインストールします。](quickstart-install-connect-ubuntu.md)
+- [SUSE Linux Enterprise Server にインストールします](quickstart-install-connect-suse.md)
+- [Ubuntu にインストールします](quickstart-install-connect-ubuntu.md)
 - [Docker で実行します。](quickstart-install-connect-ubuntu.md)

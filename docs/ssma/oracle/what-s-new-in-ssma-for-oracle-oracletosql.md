@@ -5,26 +5,37 @@ ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 03/01/2018
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 908bd781fcbb32e2991976ad197401da0c5c0776
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 63bc96b49c351d9923c5e4d4ae59056c7911ae40
+ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/01/2018
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle (OracleToSQL) の新機能
 このトピックでは、Oracle での変更の各リリース SSMA が一覧表示します。  
+
+## <a name="ssma-v77"></a>SSMA v7.7
+SSMA for Oracle の v7.7 リリースには、次の変更が含まれています。
+- SSMA for Oracle は、品質、および変換のメトリックを向上する対象となる修正プログラムで強化されています。
+- SSMA for Oracle の 32 ビット バージョンは戻るには、人気のある要求に基づいて、です。 (V7.4) より前の以前の実装と比較して、2 つのインストーラー パッケージがありますが、サイド バイ サイドでインストールできません。 その結果がある場合、接続コンポーネントに基づいて最も適切なバージョンを選択する必要があります。 可能であれば、64 ビット バージョンを使用することはお勧め常にします。
+- SQL Server 2017 サポートは、Oracle の拡張機能パックでも Linux でサポートされている (新しいリモート インストール オプション) は正式なようになりました。 拡張機能パックの機能は制限されて Linux では、インストールされている場合、テスト担当者とサーバー側のデータ移行の機能がサポートされていないので 
+- SSMA for Oracle では、通常のテーブルとして具体化されたビューを移行することができます (での設定によって構成可能な**プロジェクト設定** -> **同期** ->  **バッキング テーブルを具体化されたビューの検出**)。
+
+> [!IMPORTANT]
+> SSMA v7.4 とそれ以降のバージョンでは、.Net 4.5.2 は、インストールの前提がします。
 
 ## <a name="ssma-v76"></a>SSMA v7.6
 SSMA for Oracle の v7.6 リリースの品質、および変換のメトリックを向上する対象となる修正プログラムと SQL Server 2017 (パブリック プレビュー) のサポートが拡張されました。 Windows および Linux での SQL Server 2017 のサポートは、パブリック プレビューではの運用環境の移行は使用できません。

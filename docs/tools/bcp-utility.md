@@ -35,23 +35,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d394c689e4f4220781342dca687906d46a673c8e
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: 57dc975f2307a4f05afc3e71a8a9514d2aa84302
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > SQL Server の以前のバージョンに関連するコンテンツでは、次を参照してください。 [bcp ユーティリティ](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx)です。
 
+ > 最新のバージョンの bcp ユーティリティでは、次を参照してください[SQL Server 用 Microsoft コマンド ライン ユーティリティ 14.0。 ](http://go.microsoft.com/fwlink/?LinkID=825643)
+
+ > Bcp を使用して、Linux を参照してください[Linux での sqlcmd および bcp のインストール](../linux/sql-server-linux-setup-tools.md)です。
 
  > Azure SQL Data Warehouse で bcp を使用する方法の詳細については、次を参照してください。 [bcp を使用したデータを読み込む](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)します。
 
   **b**ulk **c**opy **p**rogram ユーティリティ (**bcp**) は、 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスと、ユーザー指定の形式のデータ ファイルとの間でデータの一括コピーを行います。 **bcp** ユーティリティを使うと、多数の新規行を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルにインポートしたり、データをテーブルからデータ ファイルにエクスポートしたりできます。 このユーティリティでは [!INCLUDE[tsql](../includes/tsql-md.md)] の知識は必要ありません。ただし、**queryout** オプションと同時に使う場合はその知識が必要になります。 データをテーブルにインポートするには、そのテーブル用に作成されたフォーマット ファイルを使用するか、テーブルの構造およびテーブルの列に有効なデータの型を理解しておく必要があります。  
   
- ![トピック リンク アイコン](../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")に使用される構文表記規則について、 **bcp**構文を参照してください[TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")に使用される構文表記規則について、 **bcp**構文を参照してください[TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]
 > **bcp** を使ってデータをバックアップする場合、フォーマット ファイルを作成してデータ形式を記録します。 **bcp** データ ファイルには、スキーマ情報やフォーマット情報が **含まれない** ので、テーブルまたはビューが削除され、フォーマット ファイルがない場合は、データをインポートできないことがあります。  
@@ -134,7 +137,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-b** ***batch_size***<a name="b"></a>  
  一括インポートするデータの行数を指定します。 コミットされる前に、各バッチはすべてのバッチをインポートする個別のトランザクションとしてインポートおよび記録されます。 既定では、データ ファイルのすべての行が 1 つのバッチとしてインポートされます。 複数のバッチに行を分散するには、データ ファイルの行数よりも少ない *batch_size* を指定します。 バッチのトランザクションが失敗すると、現在のバッチの挿入のみがロールバックされます。 コミットされたトランザクションによって既にインポートされているバッチは、それ以降の失敗による影響を受けません。  
   
- 組み合わせてこのオプションを使用しない、 **-h"**ROWS_PER_BATCH ** = ***bb***"**オプション。  
+ 組み合わせてこのオプションを使用しない、 **-h"**ROWS_PER_BATCH  **= ***bb***"**オプション。  
  
  **-c**<a name="c"></a>  
  文字データ型を使用して操作を実行します。 このオプションを使用すると、フィールドごとにプロンプトが表示されません。 **char** をプレフィックスなしのストレージ型として、また **\t** (タブ) をフィールド区切り文字、 **\r\n** (改行文字) を行ターミネータとして使用します。 **-c** は **-w** と互換性がありません。  
@@ -177,7 +180,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 -   **in** または **out** オプションと共に使用する場合、**-f** を使うには既存のフォーマット ファイルが必要です。  
   
     > [!NOTE]
-    > **in** または **out** オプションを使う場合、フォーマット ファイルは省略可能です。 ない場合、 **-f**場合は、オプション、 ** -n **、 **-c**、 **-w**、または**-n**が指定されていない、コマンドは、プロンプトの書式情報を表示し、応答 (が既定のファイル名は Bcp.fmt) 形式ファイルに保存することができます。
+    > **in** または **out** オプションを使う場合、フォーマット ファイルは省略可能です。 ない場合、 **-f**場合は、オプション、  **-n** 、 **-c**、 **-w**、または**-n**が指定されていない、コマンドは、プロンプトの書式情報を表示し、応答 (が既定のファイル名は Bcp.fmt) 形式ファイルに保存することができます。
   
  *format_file* がハイフン (-) またはスラッシュ (/) で始まる場合は、 **-f** と *format_file* 値の間に空白を入れないでください。  
   
@@ -324,7 +327,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  詳細については、後の「 [解説](#remarks)」を参照してください。  
   
  **-r** ***row_term***<a name="r"></a>  
- 行ターミネータを指定します。 既定値は** \n ** (改行文字)。 既定の行ターミネータを無効にする場合、このパラメーターを使用します。 詳細については、「[フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」をご覧ください。  
+ 行ターミネータを指定します。 既定値は **\n**  (改行文字)。 既定の行ターミネータを無効にする場合、このパラメーターを使用します。 詳細については、「[フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」をご覧ください。  
   
  bcp.exe コマンドでは、行ターミネータを 16 進数表記で指定すると、値が 0x00 で切り捨てられます。 たとえば、0x410041 を指定した場合、使用されるのは 0x41 になります。  
   
@@ -382,7 +385,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  詳細については、「 [Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)」をご覧ください。  
   
  **-x**<a name="x"></a>  
-  **format** および **-f** *format_file* オプションと共に使用し、既定の XML ではないフォーマット ファイルの代わりに XML ベースのフォーマット ファイルを生成します。 **-x** はデータのインポート時とエクスポート時には機能しません。  **format** および **-f** *format_file*の両方を指定せずに使用すると、エラーが生成されます。  
+ **format** および **-f** *format_file* オプションと共に使用し、既定の XML ではないフォーマット ファイルの代わりに XML ベースのフォーマット ファイルを生成します。 **-x** はデータのインポート時とエクスポート時には機能しません。 **format** および **-f** *format_file*の両方を指定せずに使用すると、エラーが生成されます。  
   
 ## 解説<a name="remarks"></a>
  **bcp** 13.0 クライアントは、 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のツールをインストールしたときにインストールされます。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] と以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の両方のツールがインストールされている場合、PATH 環境変数の値の順番によっては、 **bcp** 13.0 クライアントではなく、以前の **bcp** クライアントを使用している可能性があります。 この環境変数によって Windows で実行可能ファイルを探すときに使用されるディレクトリのセットが定義されます。 使用しているバージョンを確認するには、Windows のコマンド プロンプトで **bcp /v** コマンドを実行します。 コマンド パスを PATH 環境変数で設定する方法の詳細については、Windows のヘルプを参照してください。  
@@ -497,18 +500,18 @@ bcp ユーティリティは、 [Microsoft SQL Server 2016 Feature Pack](https:/
 ### <a name="example-test-conditions"></a>**テスト条件の例**
 以下の例では、SQL Server (2016 以降) および Azure SQL Database 用の `WideWorldImporters` サンプル データベースを利用しています。  `WideWorldImporters`[https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)からダウンロードできます。  サンプル データベースを復元する構文については、「 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 」を参照してください。  特記していない場合、この例では、Windows 認証を使用していること、および **bcp** コマンドを実行しているサーバー インスタンスへのセキュリティ接続があることを前提としています。  多くの例では、 `D:\BCP` というディレクトリを使用します。
 
-以下のスクリプトでは、 `WorlWideImporters.Warehouse.StockItemTransactions` テーブルの空のコピーを作成し、主キー制約を追加します。  SQL Server Management Studio (SSMS) で、次の T-SQL スクリプトを実行します。
+以下のスクリプトでは、`WideWorldImporters.Warehouse.StockItemTransactions` テーブルの空のコピーを作成し、主キー制約を追加します。  SQL Server Management Studio (SSMS) で、次の T-SQL スクリプトを実行します。
 
 ```tsql  
-USE WorlWideImporters;  
+USE WideWorldImporters;  
 GO  
 
 SET NOCOUNT ON;
 
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Warehouse.StockItemTransactions_bcp')     
 BEGIN
-    SELECT * INTO WorlWideImporters.Warehouse.StockItemTransactions_bcp
-    FROM WorlWideImporters.Warehouse.StockItemTransactions  
+    SELECT * INTO WideWorldImporters.Warehouse.StockItemTransactions_bcp
+    FROM WideWorldImporters.Warehouse.StockItemTransactions  
     WHERE 1 = 2;  
 
     ALTER TABLE Warehouse.StockItemTransactions_bcp 
@@ -520,7 +523,7 @@ END
 > [!NOTE]
 > 必要に応じて、 `StockItemTransactions_bcp` テーブルの全行を削除します。
 >
-> TRUNCATE TABLE WorlWideImporters.Warehouse.StockItemTransactions_bcp;
+> TRUNCATE TABLE WideWorldImporters.Warehouse.StockItemTransactions_bcp;
 
 ### <a name="a--identify-bcp-utility-version"></a>A.  **bcp** ユーティリティ バージョンの特定
 コマンド プロンプトで、次のコマンドを入力します。
@@ -529,14 +532,14 @@ bcp -v
 ```
   
 ### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>B. データ ファイルへのテーブル行のコピー (セキュリティ接続を使用)  
-次の例は、 **テーブルに対する** out `WorlWideImporters.Warehouse.StockItemTransactions` オプションを示します。
+次の例は、`WideWorldImporters.Warehouse.StockItemTransactions` テーブルに対する **out** オプションを示します。
 
 - **基本**  
 `StockItemTransactions_character.bcp` という名前のデータ ファイルを作成し、 **文字** 形式を使用してテーブルのデータをこのデータ ファイルにコピーします。
 
   コマンド プロンプトで、次のコマンドを入力します。
   ```
-  bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
+  bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
  
  - **拡張**  
@@ -544,30 +547,30 @@ bcp -v
 
     コマンド プロンプトで、次のコマンドを入力します。
     ```
-    bcp WorlWideImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
+    bcp WideWorldImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
     ``` 
  
 `Error_out.log` と `Output_out.log`を確認します。  `Error_out.log` は、空白にする必要があります。  `StockItemTransactions_character.bcp` と `StockItemTransactions_native.bcp`のファイル サイズを比較します。 
    
 ### <a name="c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>C. データ ファイルへのテーブル行のコピー (混合モード認証を使用)  
-次の例では、 **テーブルに対して** out `WorlWideImporters.Warehouse.StockItemTransactions` オプションを実行します。  `StockItemTransactions_character.bcp` という名前のデータ ファイルを作成し、 **文字** 形式を使用してテーブルのデータをこのデータ ファイルにコピーします。  
+次の例では、`WideWorldImporters.Warehouse.StockItemTransactions` テーブルに対して **out** オプションを実行します。  `StockItemTransactions_character.bcp` という名前のデータ ファイルを作成し、 **文字** 形式を使用してテーブルのデータをこのデータ ファイルにコピーします。  
   
  この例では、混合モード認証を使用していることを前提としているため、ログイン ID の指定に **-U** スイッチを使用する必要があります。 また、ローカル コンピューター上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続する以外の場合は、 **-S** スイッチを使用して、システム名と、オプションでインスタンス名を指定します。  
 
 コマンド プロンプトに次のコマンドを入力します。 \(パスワードの入力が求められます。\)
 ```  
-bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
+bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```  
   
 ### <a name="d-copying-data-from-a-file-to-a-table"></a>D. ファイルからテーブルへのデータのコピー  
-次の例は、上で作成したファイルを使用して、 **テーブルの** in `WorlWideImporters.Warehouse.StockItemTransactions_bcp` オプションを示しています。
+次の例は、上で作成したファイルを使用して、`WideWorldImporters.Warehouse.StockItemTransactions_bcp` テーブルの **in** オプションを示しています。
   
 - **基本**  
 この例では、以前に作成した `StockItemTransactions_character.bcp` データ ファイルを使用します。
 
   コマンド プロンプトで、次のコマンドを入力します。
   ```  
-  bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T  
+  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T  
   ```  
 
 - **拡張**  
@@ -575,7 +578,7 @@ bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransa
   
   コマンド プロンプトで、次のコマンドを入力します。
   ```  
-  bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T 
+  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T 
   ```    
   `Error_in.log` と `Output_in.log`を確認します。
    
@@ -585,39 +588,39 @@ bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransa
 コマンド プロンプトで、次のコマンドを入力します。
   
 ```  
-bcp "SELECT StockItemTransactionID FROM WorlWideImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
+bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```  
   
 ### <a name="f-copying-a-specific-row-into-a-data-file"></a>F. データ ファイルへの特定の行のコピー  
-特定の行をコピーする場合に、 **queryout** オプションを使用できます。 次の例では、 `Amy Trefl` という名前の個人の行のみを `WorlWideImporters.Application.People` テーブルからデータ ファイル `Amy_Trefl_c.bcp`へコピーします。  注: **-d** スイッチは、データベースの識別に使用されます。
+特定の行をコピーする場合に、 **queryout** オプションを使用できます。 次の例では、`Amy Trefl` という名前の個人の行のみを `WideWorldImporters.Application.People` テーブルからデータ ファイル `Amy_Trefl_c.bcp` へコピーします。  注: **-d** スイッチは、データベースの識別に使用されます。
   
 コマンド プロンプトで、次のコマンドを入力します。 
 ```  
-bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WorlWideImporters -c -T
+bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```  
   
 ### <a name="g-copying-data-from-a-query-to-a-data-file"></a>G. クエリからデータ ファイルへのデータのコピー  
-Transact-SQL ステートメントからデータ ファイルに結果セットをコピーするには、 **queryout** オプションを使用します。  次の例では、フル ネームで並べ替えた名前を `WorlWideImporters.Application.People` テーブルから `People.txt` データ ファイルへコピーします。  注: **-t** スイッチは、コンマ区切りファイルを作成するために使用します。
+Transact-SQL ステートメントからデータ ファイルに結果セットをコピーするには、 **queryout** オプションを使用します。  次の例では、フル ネームで並べ替えた名前を `WideWorldImporters.Application.People` テーブルから `People.txt` データ ファイルへコピーします。  注: **-t** スイッチは、コンマ区切りファイルを作成するために使用します。
   
 コマンド プロンプトで、次のコマンドを入力します。
 ```  
-bcp "SELECT FullName, PreferredName FROM WorlWideImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
+bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```  
   
 ### <a name="h-creating-format-files"></a>H. フォーマット ファイルの作成  
-次の例では、 `Warehouse.StockItemTransactions` データベース内の `WorlWideImporters` テーブルに対して 3 種類のフォーマット ファイルを作成します。  作成した各ファイルの内容を確認します。
+次の例では、`WideWorldImporters` データベース内の `Warehouse.StockItemTransactions` テーブルに対して 3 種類のフォーマット ファイルを作成します。  作成した各ファイルの内容を確認します。
   
 コマンド プロンプトで、次のコマンドを入力します。
   
 ```  
 REM non-XML character format
-bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
+bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
 REM non-XML native format
-bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_n.fmt -n -T
+bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_n.fmt -n -T
 
 REM XML character format
-bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.xml -x -c -T
+bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.xml -x -c -T
  
 ```  
   
@@ -631,7 +634,7 @@ bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stock
   
 コマンド プロンプトで、次のコマンドを入力します。
 ```  
-bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T 
+bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T 
 ```  
   
 > [!NOTE]  
@@ -656,12 +659,12 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
 |一括インポートまたは一括エクスポートのデータ形式 (SQL Server)<br />&emsp;&#9679;&emsp;[ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[文字形式を使用したデータのインポートまたはエクスポート (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Unicode 文字形式を使用したデータのインポートまたはエクスポート (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[フィールド ターミネータと行ターミネータの指定 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[一括インポート中の NULL の保持または既定値の使用 (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[データの一括インポート時の ID 値の保持 (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />データのインポートまたはエクスポート用のフォーマット ファイル (SQL Server)<br />&emsp;&#9679;&emsp;[フォーマット ファイルの作成 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[データの一括インポートでのフォーマット ファイルの使用 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[フォーマット ファイルを使用したテーブル列のスキップ (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[フォーマット ファイルを使用したデータ フィールドのスキップ (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[XML ドキュメントの一括インポートと一括エクスポートの例 (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>                                                                                                                                                                                                                  </p>|
 
 ## <a name="see-also"></a>参照  
- [一括エクスポートまたはインポート & #40; のデータを準備します。SQL Server & #41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
+ [一括エクスポートまたはインポート &#40; のデータを準備します。SQL Server &#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
  [一括挿入 &#40; です。Transact SQL と &#41; です。](../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../t-sql/functions/openrowset-transact-sql.md)   
- [[SET QUOTED_IDENTIFIER と #40 です。TRANSACT-SQL と #41 です。](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER と #40 です。TRANSACT-SQL と #41 です。](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [sp_tableoption & #40 です。TRANSACT-SQL と #41 です。](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
+ [sp_tableoption &#40;です。TRANSACT-SQL と #41 です。](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
  [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   

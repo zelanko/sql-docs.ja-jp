@@ -29,13 +29,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 036bb0f6375461e5764fb92534d4d8b07e016f52
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="register-a-database-as-a-dac"></a>データベースを DAC として登録する方法
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **データ層アプリケーションの登録ウィザード**または Windows PowerShell スクリプトを使用して、既存のデータベース内のオブジェクトを表すデータ層アプリケーション (DAC) 定義を作成し、その DAC 定義を **msdb** システム データベース ([!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] では **master** データベース) に登録します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+**データ層アプリケーションの登録ウィザード** または Windows PowerShell スクリプトを使用して、既存のデータベース内のオブジェクトを表すデータ層アプリケーション (DAC) 定義を作成し、その DAC 定義を **msdb** システム データベース (**では** master [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]データベース) に登録します。  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   

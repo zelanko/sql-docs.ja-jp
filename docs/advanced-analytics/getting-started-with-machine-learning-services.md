@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: e33a91587f393c6c510bdb16fe9c71dc2f422eac
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 0abc11160704871799ec7cfcec19e86bb0f45a1b
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>SQL Server での機械学習の概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/11/2018
 
   SQL Server 2017 年 1 から始まり、SQL Server での Python コードをここで使用できます。 ソリューション (で以上になる!)、複数の言語と名前の広範なサポートを反映するように変更された[!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]です。 これで、R、または Python コードを実行する SQL ツールを使用して、機械学習タスクを自動化できます。 または、として、SQL Server コンピューターを使用して、_計算コンテキスト_リモート開発環境から起動されたジョブにします。
 
-    + [SQL Server での Python のアーキテクチャの概要](/python/architecture-overview-sql-server-python.md)
+    + [SQL Server での Python のアーキテクチャの概要](../advanced-analytics/python/architecture-overview-sql-server-python.md)
     + [SQL Server R Services または Machine Learning のサービスのセットアップします。](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
 + SQL Server 2016

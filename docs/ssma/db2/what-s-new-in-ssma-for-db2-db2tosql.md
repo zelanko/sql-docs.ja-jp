@@ -5,29 +5,38 @@ ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
-ms.date: 09/30/2017
+ms.date: 03/01/2018
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ce602bd9726c8762793d9289daf5c52b2176494
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 70bda1f659a284a31896ff15ee0638b64a9d0bac
+ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/01/2018
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 の新機能 (DB2ToSQL)
 このトピックでは、DB2 での変更の各リリース SSMA が一覧表示します。  
+
+## <a name="ssma-v77"></a>SSMA v7.7
+SSMA の DB2 の v7.7 リリースには、次の変更が含まれています。
+- SSMA for DB2 は、品質、および変換のメトリックを向上する対象となる修正プログラムで強化されています。
+- SSMA for DB2 の 32 ビット バージョンは戻るには、人気のある要求に基づいて、です。 (V7.4) より前の以前の実装と比較して、2 つのインストーラー パッケージがありますが、サイド バイ サイドでインストールできません。 その結果がある場合、接続コンポーネントに基づいて最も適切なバージョンを選択する必要があります。 可能であれば、64 ビット バージョンを使用することはお勧め常にします。
+
+> [!IMPORTANT]
+> SSMA v7.4 とそれ以降のバージョンでは、.Net 4.5.2 は、インストールの前提がします。
 
 ## <a name="ssma-v76"></a>SSMA v7.6
 SSMA の DB2 の v7.6 リリースの品質、および変換のメトリックを向上する対象となる修正プログラムと SQL Server 2017 (パブリック プレビュー) のサポートが拡張されました。 Windows および Linux での SQL Server 2017 のサポートは、パブリック プレビューではの運用環境の移行は使用できません。

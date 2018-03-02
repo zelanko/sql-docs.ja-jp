@@ -4,7 +4,7 @@ description: "SQL Server 2017 を使用して Linux 上のトラブルシュー�
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 01/18/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,17 +15,20 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: f56806313075865c53cbd3fc1f80c0d132804c04
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: b3dc37601859ee4125f9f7885592e3a0653e8d0c
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux をトラブルシューティングします。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このドキュメントでは、Linux または、Docker コンテナーで実行されている Microsoft SQL Server のトラブルシューティングを行う方法について説明します。 SQL Server on Linux のトラブルシューティングを行うときにサポートされる機能の既知の制限事項を確認するのに注意してください、 [SQL Server on Linux のリリース ノート](sql-server-linux-release-notes.md)です。
+
+> [!TIP]
+> よく寄せられる質問に対する回答については、次を参照してください。、 [SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)です。
 
 ## <a id="connection"></a> 接続エラーをトラブルシューティングします。
 Linux SQL Server への接続に問題が発生した場合は、いくつかを確認します。 
@@ -200,12 +203,4 @@ SQLCMD でのシングル ユーザー モードで SQL Server を起動しま�
    リソース:[特殊文字](http://tldp.org/LDP/abs/html/special-chars.html)
    [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
 
-## <a name="support"></a>サポート
-
-サポート、コミュニティを通じて使用エンジニア リング チームによって監視できます。 質問については、次のリソースを使用します。
-
-- [DBA スタック Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): データベースの管理の質問
-- [スタックのオーバーフロー](http://stackoverflow.com/questions/tagged/sql-server): 開発の質問
-- [MSDN フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): 技術的な質問
-- [フィードバックを送信](https://feedback.azure.com/forums/908035-sql-server): バグ、および要求機能の報告
-- [Reddit](https://www.reddit.com/r/SQLServer/): SQL Server の説明
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

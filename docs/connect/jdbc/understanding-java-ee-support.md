@@ -1,27 +1,28 @@
 ---
 title: "Java EE のサポートについて |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5f692489b6d8e701e13c6700d63de6df0b9607a5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: cb98529d22b17ad21bfcab786064a8c8882f3b5b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="understanding-java-ee-support"></a>Java EE のサポートについて
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/18/2017
  まず、使用している Java 環境 (JDK、JRE) に javax.sql パッケージが含まれていることを確認してください。 このパッケージは、オプションの API を使用するすべての JDBC アプリケーションに必須です。 JDK 1.5 以降のバージョンには、このパッケージが既に含まれているので、別途インストールする必要はありません。  
   
 ## <a name="driver-name"></a>ドライバー名  
- ドライバーのクラス名は**com.microsoft.sqlserver.jdbc.SQLServerDriver**です。 JDBC ドライバー 4.0、4.1、4.2、および 6.0 の場合は、ドライバーは sqljdbc.jar、sqljdbc4.jar、sqljdbc41.jar、または sqljdbc42.jar ファイルに含まれています。 JDBC ドライバー 6.2、ドライバーは mssql jdbc-6.2.1.jre7.jar または mssql jdbc-6.2.1.jre8.jar で含まれています。
+ ドライバーのクラス名は**com.microsoft.sqlserver.jdbc.SQLServerDriver**です。 JDBC ドライバー 4.1、4.2、および 6.0、ドライバーが、sqljdbc.jar、sqljdbc4.jar、sqljdbc41.jar、または sqljdbc42.jar ファイルに含まれます。 JDBC ドライバー 6.2、ドライバーは mssql jdbc-6.2.1.jre7.jar または mssql jdbc-6.2.1.jre8.jar で含まれています。 JDBC ドライバーの 6.4 のドライバーは mssql jdbc-6.4.0.jre7.jar、mssql jdbc-6.4.0.jre8.jar または mssql jdbc-6.4.0.jre9.jar で含まれています。
   
  JDBC ドライバー マネージャー クラスを使用してドライバーを読み込むたびに、クラス名が使用されます。 また、ドライバー構成でドライバーのクラス名を指定する必要があるときにも使用されます。 たとえば、Java EE アプリケーション サーバー内でデータ ソースを構成するには、ドライバーのクラス名を入力する必要が生じる場合があります。  
   

@@ -1,1 +1,1 @@
-<Token>**適用対象:** ![○](media/yes.png)SQL Server (2008 以降)![○](media/yes.png)Azure SQL Database![○](media/yes.png)Azure SQL Data Warehouse ![○](media/yes.png)Parallel Data Warehouse </Token> 
+<Token>**このトピックに適用されます**![はい](media/yes.png)SQL Server (2008 以降)![はい](media/yes.png)Azure SQL Database![はい](media/yes.png)Azure SQL Data Warehouse ![[はい]。](media/yes.png)並列データ ウェアハウス </Token> 

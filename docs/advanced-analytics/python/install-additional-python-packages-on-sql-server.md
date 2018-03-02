@@ -1,6 +1,6 @@
 ---
 title: "SQL Server に新しい Python パッケージをインストール |Microsoft ドキュメント"
-ms.date: 01/04/2018
+ms.date: 02/20/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -16,22 +16,22 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 68c3c0c3699455854ac23fed7befb042eaf17155
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f9ac8a72618cb432134d8fd87b0664b720085730
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server に新しい Python パッケージをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、SQL Server 2017 のインスタンスに新しい Python パッケージをインストールする方法について説明します。
 
-現在の環境にインストールされているパッケージを一覧表示する方法についても説明します。
+一般に、新しいパッケージをインストールするためのプロセスは、標準の Python 環境でと似ています。 ただし、サーバーには、インターネット接続がない場合は、追加の手順が必要です。
+
+パッケージがインストールされている、またはインストールされているパッケージを見つけ出し、ヘルプを参照してください。[表示するには、R または Python のパッケージがインストールされている](../r/determine-which-packages-are-installed-on-sql-server.md)です。
 
 ## <a name="prerequisites"></a>前提条件
-
-新しいパッケージをインストールするためのプロセスでは、ほとんどを標準の Python 環境でこのような。 ただし、サーバーには、インターネット接続がない場合は、追加の手順が必要です。
 
 + Python 言語オプションと Machine Learning Services (In-database) をインストールする必要があります。 手順については、次を参照してください。 [Python Machine Learning のサービス設定](setup-python-machine-learning-services.md)です。
 
@@ -39,7 +39,11 @@ ms.lasthandoff: 02/11/2018
 
 + Python 3.5 とは、Windows 環境で使用するパッケージは機能するかどうかを決定します。 
 
-    一般に、インポートして SQL Server 環境で使用したパッケージのほとんどの制限がありません。 考えられる問題は、サーバーまたはファイアウォールによってブロックされているネットワークの機能を使用するパッケージまたは Windows コンピューターにインストールすることはできませんの依存関係を持つパッケージを含めます。
++ パッケージは、SQL Server 環境での使用に適しているかどうかを評価します。 通常、データベース サーバーに複数のサービスとアプリケーション がサポートしているし、ファイル システム上のリソースは、サーバーへの接続と同様に、制限された可能性があります。 多くの場合は、インターネットへのアクセスがまったくブロックされます。
+
+    その他の一般的な問題には、ネットワーク サーバーまたはファイアウォール、または Windows のコンピューターにインストールすることはできませんの依存関係を持つパッケージによってブロックされている機能の使用があります。 
+
+    (Flask) などのいくつかの一般的な Python パッケージは、スタンドアロン環境でより確実に実行される web 開発などのタスクを実行します。 単に、データベースを照会するのではなく、データベース エンジンとの緊密な統合の利点を活用集中型のデータ処理を必要とする機械学習などのタスクには、データベース内に Python を使用することをお勧めします。
 
 + パッケージをインストールするには、サーバーへの管理アクセスが必要です。
 
@@ -62,28 +66,31 @@ ms.lasthandoff: 02/11/2018
 
     たとえば、別のコンピューターにダウンロードできます WHL ファイルこのサイトから[https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)、ファイル コピー `cntk-2.1-cp35-cp35m-win_amd64.whl` SQL Server コンピューターのローカル フォルダーにします。
 
-+ SQL Server 2017 は、Python 3.5 を使用します。 Windows のバージョンのパッケージ、および Python 3.5 と互換性があるバージョンを取得することを確認します。
++ SQL Server 2017 は、Python 3.5 を使用します。 
+
+> [!IMPORTANT]
+> パッケージの Windows バージョンを取得することを確認します。 ファイルは、.gz で終了した場合、適切なバージョンではありません。
 
 このページには、複数のプラットフォームおよび複数の Python バージョンのダウンロードが含まれています: [CNTK 設定](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
 
 ### <a name="step-2-open-a-python-command-prompt"></a>手順 2. Python コマンド プロンプトを開きます
 
-SQL Server で使用される既定 Python ライブラリの場所を見つけます。 複数のインスタンスをインストールした場合は、パッケージを追加するインスタンスの PYTHON_SERVICE フォルダーに移動することを確認します。
+SQL Server で使用される既定 Python ライブラリの場所を見つけます。 複数のインスタンスをインストールした場合は、パッケージを追加するインスタンスの PYTHON_SERVICE フォルダーを探します。
 
 たとえば、マシン学習サービスがインストールされている既定値を使用して、機械学習が既定のインスタンスで有効になっている場合は、パスはようになります。
 
-    `C:\Program Files\Microsoft SQL  Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
+    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
 
 インスタンスに関連付けられている Python コマンド プロンプトを開きます。
 
 > [!TIP]
-> Machine Learning Server または SQL Server に固有に Python 環境をセットアップする設定をお勧めします。
+> 将来のデバッグおよびテストには、インスタンスのライブラリに固有の Python 環境を設定することができます。
 
 ### <a name="step-3-install-the-package-using-pip"></a>手順 3. Pip を使用してパッケージをインストールします。
 
 + Python のコマンドラインを使用することに慣れている場合は、PIP.exe を使用して、新しいパッケージをインストールします。 検索することができます、 **pip**内のインストーラー、`Scripts`サブフォルダーです。 
 
-    エラーが表示された場合**pip** Python 実行可能ファイルと、Python スクリプト フォルダーのパスを追加するには Windows での PATH 変数に、内部または外部コマンドとして認識されていません。
+    エラーが表示された場合`pip`Python 実行可能ファイルと、Python スクリプト フォルダーのパスを追加するには Windows での PATH 変数に、内部または外部コマンドとして認識されていません。
 
     完全なパス、**スクリプト**既定のインストール フォルダーは、次のようにします。
 
@@ -91,9 +98,11 @@ SQL Server で使用される既定 Python ライブラリの場所を見つけ�
 
 + Python の拡張子を持つ Visual Studio 2017 年 1、または Visual Studio 2015 を使用している場合は、実行`pip install`から、 **Python Environments**ウィンドウです。 をクリックして**パッケージ**、テキスト ボックスに名前またはインストールするパッケージの場所を指定します。 入力する必要はありません`pip install`; これが自動的に入力します。 
 
-    - コンピューターがインターネットにアクセスしている、パッケージの名前または特定のパッケージとバージョンの URL を提供します。 たとえば、Windows および Python 3.5 がサポートされている CNTK のバージョンをインストールするダウンロード URL を指定します。`https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
+    - コンピューターがインターネットにアクセスしている、パッケージの名前または特定のパッケージとバージョンの URL を提供します。 
+    
+    たとえば、Windows および Python 3.5 がサポートされている CNTK のバージョンをインストールするには、ダウンロード URL を指定します。 `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
 
-    - コンピューターがインターネットにアクセスできる、する必要がありますがファイルをダウンロードした WHL 事前にします。 次に、ローカル ファイル パスと名前を指定します。 たとえば、次のパスと、サイトからダウンロードした WHL ファイルをインストールするファイルを貼り付けます。`"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
+    - コンピューターがインターネットにアクセスを持たない場合は、インストールを開始する前に WHL ファイルをダウンロードする必要があります。 次に、ローカル ファイル パスと名前を指定します。 たとえば、次のパスと、サイトからダウンロードした WHL ファイルをインストールするファイルを貼り付けます。 `"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
 
 インストールを完了するアクセス許可を引き上げるようにを求められます可能性があります。
 
@@ -108,7 +117,6 @@ Collecting cntk==2.1 from https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp3
 Installing collected packages: cntk
 Successfully installed cntk-2.1
 ```
-
 
 
 ### <a name="step-4-load-the-package-or-its-functions-as-part-of-your-script"></a>手順 4. スクリプトの一部として、パッケージまたはその機能を読み込む
@@ -131,7 +139,7 @@ cntk._version_
 
 使用することができます、Python のコマンドラインを使用している場合、 **conda**は SQL Server セットアップによって追加された Anaconda Python 環境に含まれているパッケージ マネージャーです。
 
-現在の環境にインストールされている Python パッケージを表示するには、するには、コマンド プロンプト ウィンドウからこのコマンドを実行します。
+現在の環境にインストールされている Python パッケージを表示するには、するには、コマンド プロンプトから次のコマンドを実行します。
 
 ```python
 conda list

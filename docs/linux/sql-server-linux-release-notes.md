@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: a661da062d65ca699627bc2b5bf0683e5fe08806
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
-ms.translationtype: HT
+ms.openlocfilehash: 23f93527aa295815304f76676f2efc3506fd9878
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -39,13 +39,9 @@ ms.lasthandoff: 02/21/2018
 > [!TIP]
 > 詳細については、確認、[システム要件](sql-server-linux-setup.md#system)Linux に SQL Server 用です。 SQL Server 2017 の最新のサポート ポリシーで、次を参照してください。、 [for Microsoft SQL Server の技術的なサポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)です。
 
-## <a name="supported-client-tools"></a>サポートされているクライアント ツール
+## <a name="tools"></a>ツール
 
-| ツール | 最小バージョン |
-|-----|-----|
-| [Windows 用 SQL Server Management Studio (SSMS)](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
-| [SQL Server Data Tools for Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
-| [Visual Studio Code](https://code.visualstudio.com)で、 [mssql 拡張機能](https://aka.ms/mssql-marketplace) | 最新 |
+SQL Server を対象とするほとんどの既存クライアント ツールは、Linux で実行されている SQL Server を対象にシームレスにできます。 一部のツールは、Linux で適切に動作するための特定のバージョン要件があります。 SQL Server ツールの一覧については、次を参照してください。 [SQL ツール、および SQL Server ユーティリティ](../tools/overview-sql-tools.md)です。
 
 ## <a name="release-history"></a>リリース履歴
 
@@ -180,6 +176,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の累積
 | &nbsp; | Reporting Services |
 | &nbsp; | [データベース エンジン サービス] |
 | &nbsp; | マスター データ サービス |
+| &nbsp; | 分散トランザクション コーディネーター (DTC) |
 
 ## <a name="known-issues"></a>既知の問題
 
@@ -327,8 +324,10 @@ Linux 上の SSIS の詳細については、次の記事を参照してくだ�
 開始するには、次のクイック スタートを参照してください。
 
 - [Red Hat Enterprise Linux にインストールします。](quickstart-install-connect-red-hat.md)
-- [SUSE Linux Enterprise Server をインストールします。](quickstart-install-connect-suse.md)
-- [Ubuntu をインストールします。](quickstart-install-connect-ubuntu.md)
+- [SUSE Linux Enterprise Server にインストールします](quickstart-install-connect-suse.md)
+- [Ubuntu にインストールします](quickstart-install-connect-ubuntu.md)
 - [Docker で実行します。](quickstart-install-connect-ubuntu.md)
 - [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 - [実行と接続 - クラウド](quickstart-install-connect-clouds.md)
+
+よく寄せられる質問に対する回答については、次を参照してください。、 [SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)です。

@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: d2715583f9898afe9101be4d24729547730ae376
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 70e5bddb584135585042d9521ab580777e0e8b5a
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux 上の SQL Server Integration Services (SSIS) のインストールします。
 
@@ -148,3 +148,9 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 Linux で SSIS パッケージを実行するには、「[抽出変換、および SQL Server on Linux と SSIS データの読み込み](sql-server-linux-migrate-ssis.md)です。
 
 を Linux 上の SSIS の追加の設定を構成するのには、を参照してください。 [ssis conf Linux で SQL Server Integration Services を構成する](sql-server-linux-configure-ssis.md)です。
+
+## <a name="related-content-about-ssis-on-linux"></a>Linux 上の SSIS についての関連コンテンツ
+-   [抽出、変換、および SSIS Linux でのデータを読み込む](sql-server-linux-migrate-ssis.md)
+-   [Ssis conf で Linux 上の SQL Server Integration Services を構成します。](sql-server-linux-configure-ssis.md)
+-   [制限事項と Linux の SSIS の既知の問題](sql-server-linux-ssis-known-issues.md)
+-   [スケジュール SQL Server Integration Services パッケージの cron と Linux の実行](sql-server-linux-schedule-ssis-packages.md)

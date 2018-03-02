@@ -4,7 +4,7 @@ description: "この記事では、Linux で実行されている SQL Server に
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/21/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: b5dd38c166f869cfff730d091cee091582507114
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 3fad3fb2892e5a91e42eefb5f00932c39d00064f
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server on Linux Frequently Asked Questions (FAQ)
 
@@ -30,7 +30,11 @@ ms.lasthandoff: 02/13/2018
 
 1. **Linux プラットフォームがサポートされますか。**
 
-   SQL Server は Red Hat Enterprise Server、SUSE Linux Enterprise Server、および Ubuntu で現在サポートされています。 サポートされるバージョンに関する最新情報については、次を参照してください。[サポートされているプラットフォーム](sql-server-linux-setup.md#supportedplatforms)です。
+   SQL Server は Red Hat Enterprise Server、SUSE Linux Enterprise Server、および Ubuntu で現在サポートされています。 Docker によってコンテナーでも実行されます。 サポートされるバージョンに関する最新情報については、次を参照してください。[サポートされているプラットフォーム](sql-server-linux-setup.md#supportedplatforms)です。
+
+1. **他のプラットフォームで動作の SQL Server on Linux**しますか?
+
+   インストールして、Linux の他のディストリビューションで SQL Server を実行することができます可能性があります。 たとえば、CentOS は密接に関連して Red Hat Enterprise Server、ため、SQL Server の 15,000 RPM パッケージをインストールすることができます。 これは、密接に関連する他のディストリビューションをも true 可能性があります。 主な問題は、テストおよびサポートです。 SQL Server では、のみテストされていて、Red Hat Enterprise Linux、SUSE Linux Enterprise Server、および Ubuntu でのみサポートされます。
 
 1. **Linux でサポートされるは、SQL Server 機能ですか。**
 
@@ -130,6 +134,4 @@ ms.lasthandoff: 02/13/2018
 
    既定のインストールからの SQL Server ディレクトリとファイルの所有権の変更はサポートされていません。 Mssql アカウントとグループは、SQL Server が具体的には使用され、対話型ログイン アクセス権がありません。
 
-## <a name="next-steps"></a>次の手順
-
-詳細については、Linux 上の SQL Server を実行して、次を参照してください。、 [Linux に SQL Server の概要](sql-server-linux-overview.md)です。
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

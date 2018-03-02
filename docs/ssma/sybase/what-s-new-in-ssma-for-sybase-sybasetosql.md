@@ -1,33 +1,42 @@
 ---
 title: "SSMA for SAP ASE (SybaseToSQL) の新機能 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 09/30/2017
+ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55733de35eb8b138d1aef999c59bbc7bdc016a0b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd8bd705a767095e28a55dc22d6b26fcd079baf6
+ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/01/2018
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE (SybaseToSQL) の新機能
 このトピックでは、SAP ASE (旧称 SSMA for Sybase) での変更の各リリース SSMA が一覧表示します。 
+
+## <a name="ssma-v77"></a>SSMA v7.7
+SSMA の SAP ASE v7.7 のリリースには、次の変更が含まれています。
+- SAP ASE の SSMA は、品質、および変換のメトリックを向上する対象となる修正プログラムで強化されています。
+- 一般的な要求に基づき、SAP ASE の SSMA の 32 ビット バージョンは戻されました。 (V7.4) より前の以前の実装と比較して、2 つのインストーラー パッケージがありますが、サイド バイ サイドでインストールできません。 その結果がある場合、接続コンポーネントに基づいて最も適切なバージョンを選択する必要があります。 可能であれば、64 ビット バージョンを使用することはお勧め常にします。
+
+> [!IMPORTANT]
+> SSMA v7.4 とそれ以降のバージョンでは、.Net 4.5.2 は、インストールの前提がします。
 
 ## <a name="ssma-v76"></a>SSMA v7.6
 SSMA の SAP ASE v7.6 のリリースには、次の変更が含まれています。

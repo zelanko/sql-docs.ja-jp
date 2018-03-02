@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: fc2455ea79931b051c83677fc918c0382afcab3b
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: c366afc1b8755a22b13fa6224ec117db045c8dd3
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>制限事項と Linux の SSIS の既知の問題
 
@@ -132,3 +132,8 @@ SQL Server ログ プロバイダーは、SQL 認証のみをサポートして�
 -   パスを指定しない場合、ログ プロバイダーは、ホストの現在のディレクトリに書き込みます。 現在のユーザーには、ホストの現在のディレクトリに対する書き込みアクセス許可が割り当てられていない、ログ プロバイダーは、エラーが発生します。
 -   ファイル パスで環境変数を使用することはできません。 環境変数を指定すると、ファイル パスで指定されたリテラルのテキストが表示されます。 指定する場合など、 `%TMP%/log.txt`、ログ プロバイダーは、リテラル テキストを追加する`/%TMP%/log.txt`ホストの現在のディレクトリにします。
 
+## <a name="related-content-about-ssis-on-linux"></a>Linux 上の SSIS についての関連コンテンツ
+-   [抽出、変換、および SSIS Linux でのデータを読み込む](sql-server-linux-migrate-ssis.md)
+-   [Linux 上の SQL Server Integration Services (SSIS) のインストールします。](sql-server-linux-setup-ssis.md)
+-   [Ssis conf で Linux 上の SQL Server Integration Services を構成します。](sql-server-linux-configure-ssis.md)
+-   [スケジュール SQL Server Integration Services パッケージの cron と Linux の実行](sql-server-linux-schedule-ssis-packages.md)

@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.workload: On Demand
-ms.openlocfilehash: 5b94646e5e58db531369dcf498ada5f85b6a7902
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: fd7f69a8cb21fa8aaabb518f9b3d1d178606a685
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 の新機能します。
 
@@ -65,13 +65,14 @@ ms.lasthandoff: 02/21/2018
 Linux 上の SQL Server をインストールするには、次のチュートリアルのいずれかを使用します。
 
 - [Red Hat Enterprise Linux にインストールします。](quickstart-install-connect-red-hat.md)
-- [SUSE Linux Enterprise Server をインストールします。](quickstart-install-connect-suse.md)
-- [Ubuntu をインストールします。](quickstart-install-connect-ubuntu.md)
+- [SUSE Linux Enterprise Server にインストールします](quickstart-install-connect-suse.md)
+- [Ubuntu にインストールします](quickstart-install-connect-ubuntu.md)
 - [Docker で実行します。](quickstart-install-connect-docker.md)
 - [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-その他の情報に関する SQL Server on Linux を参照してください、[概要](sql-server-linux-overview.md)です。 パッケージのダウンロードとサポートされない機能と既知の問題の一覧は、次を参照してください。、[リリース ノート](sql-server-linux-release-notes.md)です。
-
 SQL Server 2017 に導入されたその他の改善を表示するには、次を参照してください。[の SQL Server 2017 新](../sql-server/what-s-new-in-sql-server-2017.md)です。
+
+> [!TIP]
+> よく寄せられる質問に対する回答については、次を参照してください。、 [SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)です。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

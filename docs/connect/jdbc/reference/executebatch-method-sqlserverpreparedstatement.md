@@ -8,23 +8,26 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname: SQLServerPreparedStatement.executeBatch
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerPreparedStatement.executeBatch
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8418167e-cbd2-464d-b118-73cdd76080ed
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a459eef327f162e362cf5f86fbba1c2a726e78af
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 774a382c6e026094261ec562f21e11ba80dc85fb
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="executebatch-method-sqlserverpreparedstatement"></a>executeBatch メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,9 +51,7 @@ public int[] executeBatch()
   
 ## <a name="remarks"></a>解説  
  この executeBatch メソッドは、java.sql.Statement インターフェイスの executeBatch メソッドによって指定されます。  
-  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 はストアド プロシージャが OUT または INOUT を受け入れる場合に (PreparedStatement から継承) CallableStatement.executeBatch メソッドへの呼び出しが、BatchUpdateException をスローするという JDBC 4.0 の勧告に準拠しています。パラメーターにも更新数の何か以外を返します。  
-  
+    
  このメソッドは[、sqlserverstatement.executebatch をオーバーライド](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md)です。  
   
 ## <a name="see-also"></a>参照  

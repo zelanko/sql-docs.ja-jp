@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlcmd
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,22 +29,23 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: "155"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 78bad0a1dfd518bb29c8bbdc5f04d0c173756e9f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 66a5e1f8b450fcc6d7cb13ba8e3d6bff36c46f4a
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > SQL Server 2014 と下位の場合は、次を参照してください。 [sqlcmd ユーティリティ](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx)です。
 
+ > Sqlcmd を使用して、Linux を参照してください[Linux での sqlcmd および bcp のインストール](../linux/sql-server-linux-setup-tools.md)です。
 
   **Sqlcmd**ユーティリティで TRANSACT-SQL ステートメント、システム プロシージャ、およびスクリプト ファイルをコマンド プロンプトでを入力できます。**クエリ エディター** SQLCMD モードで、Windows スクリプト ファイル、または SQL Server エージェント ジョブのオペレーティング システム (Cmd.exe) ジョブ ステップ。 このユーティリティは ODBC を使用して、TRANSACT-SQL バッチを実行します。 
   
@@ -55,14 +57,14 @@ ms.lasthandoff: 01/17/2018
   SSMS で sqlcmd ステートメントを実行するには、上部のナビゲーションの [クエリ] メニューのドロップダウン リストから SQLCMD モードを選択します。  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)](SSMS) で、Microsoft が使用[!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)]で通常の実行モードと SQLCMD モードの SqlClient**クエリ エディター**です。 コマンド ラインから **sqlcmd** を実行する場合、 **sqlcmd** では ODBC ドライバーが使用されます。 同じクエリでも、 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] の SQLCMD モードで実行する場合と **sqlcmd** ユーティリティで実行する場合とでは、適用される既定のオプションが異なるので、動作も異なる可能性があります。  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) で、Microsoft が使用[!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)]で通常の実行モードと SQLCMD モードの SqlClient**クエリ エディター**です。 コマンド ラインから **sqlcmd** を実行する場合、 **sqlcmd** では ODBC ドライバーが使用されます。 同じクエリでも、 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] の SQLCMD モードで実行する場合と **sqlcmd** ユーティリティで実行する場合とでは、適用される既定のオプションが異なるので、動作も異なる可能性があります。  
 >   
   
  現在、 **sqlcmd** ではコマンド ライン オプションと値の間に空白を入れる必要はありません。 ただし、将来のリリースでは、コマンド ライン オプションと値の間に空白が必要になる可能性があります。  
  
  その他のトピック:
 - [sqlcmd ユーティリティの起動](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
--  [sqlcmd ユーティリティの使用](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [sqlcmd ユーティリティの使用](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
   
 ## <a name="syntax"></a>構文  
   
@@ -400,15 +402,15 @@ sqlcmd
  **-Y** *fixed_length_type_display_width*  
  **sqlcmd** スクリプト変数 `SQLCMDMAXFIXEDTYPEWIDTH`を設定します。 既定値は 0 (無制限) です。 次のデータ型に返される文字数を制限します。  
   
--   **char(** *n* **)**, where 1<=n<=8000  
+-   **char (**  *n*  **)**、ここで、1 < = n < 8000 を =  
   
--   **nchar(n** *n* **)**, where 1<=n<=4000  
+-   **nchar (n**  *n*  **)**、ここで、1 < = n < 4000 を =  
   
--   **varchar(n** *n* **)**, where 1<=n<=8000  
+-   **varchar (n**  *n*  **)**、ここで、1 < = n < 8000 を =  
   
--   **nvarchar(n** *n* **)**, where 1<=n<=4000  
+-   **nvarchar (n**  *n*  **)**、ここで、1 < = n < 4000 を =  
   
--   **varbinary(n** *n* **)**, where 1<=n\<=4000  
+-   **varbinary (n**  *n*  **)**、ここで、1 < = n\<4000 を =  
   
 -   **variant**  
   
@@ -452,7 +454,7 @@ sqlcmd
   
  各要素の説明は次のとおりです。  
   
- `x`SQL Server によって処理されるトランザクションの数を = です。  
+ `x` SQL Server によって処理されるトランザクションの数を = です。  
   
  `t1` = すべてのトランザクションにかかる合計時間、  
   

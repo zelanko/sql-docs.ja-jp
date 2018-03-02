@@ -1,7 +1,7 @@
 ---
-title: "SQL Server と共にインストールされている R パッケージ |Microsoft ドキュメント"
+title: "既定の SQL Server 上の機械学習パッケージ ライブラリ |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 01/04/2018
+ms.date: 02/19/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -18,98 +18,105 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 082aea3b1cde3c335dd7fa51b8ef219fc30f7efd
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: d871795effaace791541b4a1f751f8f9e3845b82
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/28/2018
 ---
-# <a name="r-packages-installed-with-sql-server"></a>SQL Server と共にインストールされている R パッケージ
+# <a name="default-package-libraries-for-machine-learning-on-sql-server"></a>既定の SQL Server 上の機械学習パッケージ ライブラリ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、インストールし、マシン学習機能を有効にする場合は、SQL Server と一緒にインストールされている R パッケージについて説明します。 この記事では、管理し、既存のパッケージを表示または SQL Server インスタンスに新しいパッケージを追加する方法も説明します。
+この記事では、R と SQL Server と共にインストールされている Python の既定のライブラリについて説明します。 この記事は、これらのライブラリの既定の場所を提供し、どのパッケージと R のバージョンを判断する方法について説明します、または Python は、各インスタンスのライブラリにインストールします。
 
-**適用されます:** SQL Server 2017 Machine Learning Services (In-database)、SQL Server 2016 R Services (In-database)
+## <a name="using-the-default-instance-library"></a>既定のインスタンスのライブラリを使用します。
 
-## <a name="what-is-the-instance-library-and-where-is-it"></a>インスタンスのライブラリおよび場所とは
+機械学習と SQL Server をインストールするときにインストールする言語ごとに、インスタンス レベルで 1 つのパッケージ ライブラリが作成されます。 SQL Server は、その他のライブラリにインストールされているパッケージにアクセスできません。
 
-SQL Server で実行されている任意の R ソリューションでは、インスタンスに関連付けられている既定の R ライブラリにインストールされているパッケージのみを使用できます。 SQL Server で R の機能をインストールするときに、R パッケージのライブラリは、インスタンス フォルダーに格納します。
+リモート クライアントからサーバーに接続する場合、サーバーのコンピューティング コンテキストで実行する R または Python コードは、インスタンス ライブラリでインストールされているパッケージのみを使用できます。
 
-+ 既定のインスタンス*MSSQLSERVER* 
+サーバー資産を保護するのには、既定のインスタンスのライブラリは、SQL Server に登録され、コンピューターの管理者によってのみ変更できますをセキュリティで保護されたフォルダーにインストールされます。 コンピューターの所有者でない場合は、このライブラリにパッケージをインストールする管理者から権限を取得する必要があります。 
 
-    SQL Server 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library` 
-    
-    SQL Server 2016: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
+コンピューターを所有している場合でも、パッケージをインスタンスのライブラリに追加する前に、特定の R または Python パッケージをサーバー環境での有用性を検討してください。 パッケージ ファイルと、必要な複数のバージョンのサイズなどの要因をできるだけでなく、パッケージでのネットワークまたはインターネットの必要かどうかを考慮アクセスします。
 
-+ 名前付きインスタンス*MyNamedInstance* 
+### <a name="sql-server"></a>SQL Server
 
-    SQL Server 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.MyNamedInstance\R_SERVICES\library` 
-    
-    SQL Server 2016: `C:\Program Files\Microsoft SQL Server\MSSQL13.MyNamedInstance\R_SERVICES\library`
+|バージョン | [インスタンス名]|既定のパス|
+|------|------|------|
+| SQL Server 2016 |既定のインスタンス (default instance)|`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`|
+| SQL Server 2016 |名前付きインスタンス (named instance) |`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES\library`|
+| R と SQL Server 2017|既定のインスタンス (default instance) |`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library` |
+| R と SQL Server 2017|名前付きインスタンス (named instance)|`C:\Program Files\Microsoft SQL Server\MSSQL14.MyNamedInstance\R_SERVICES\library` |
+| Python の SQL Server 2017 |既定のインスタンス (default instance) |`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library` |
+| Python の SQL Server 2017|名前付きインスタンス (named instance)|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES\library` |
 
-次のステートメントを実行すると、R の現在のインスタンスの既定のライブラリを確認することができます。
+### <a name="r-server-standalone-or-machine-learning-server-standalone"></a>R Server (スタンドアロン) または Machine Learning Server (スタンドアロン)
 
-```sql
-EXECUTE sp_execute_external_script  @language = N'R'
-, @script = N'OutputDataSet <- data.frame(.libPaths());'
-WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
-GO
-```
+次の表は、SQL Server セットアップを使用して、スタンドアロン サーバーにインストールされている場合、バイナリの既定のパスを一覧表示します。 
 
-また、使用できます、新しい[rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) sp を実行している場合に、機能\_実行\_外部\_ターゲット コンピューター上で直接スクリプト。 関数は、リモート接続のライブラリ パスを返すことはできません。
+|バージョン| インストール|既定のパス|
+|------|------|------|
+| SQL Server 2016|R Server (スタンドアロン)| |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
+|SQL Server 2017|Machine Learning の R のサーバー |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
+|SQL Server 2017|Machine Learning Python でのサーバー |`C:\Program Files\Microsoft SQL Server\130\PYTHON_SERVER`|
 
-```sql
-EXEC sp_execute_external_script
-  @language =N'R',
-  @script=N'
-  sql_r_path <- rxSqlLibPaths("local")
-  print(sql_r_path)
-```
+既定のパスが異なる Microsoft R Server または Machine Learning を個別の Windows インストーラーを使用してサーバーをインストールする場合。 一般のようなもの`C:\Program Files\Microsoft\R Server\R_SERVER`です。 詳細については、以下をご覧ください。
+ 
++ [機械学習の windows Server をインストールします。](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
++ [R Server 9.1 を Windows をインストールします。](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
 
-> [!NOTE]
-> バインディングを使用してインスタンスに R コンポーネントをアップグレードする場合、インスタンスのライブラリへのパスを変更できます。 必ず SQL Server でどのライブラリが使用されていることを確認してください。
+## <a name="what-is-included-in-a-default-installation"></a>既定のインストールに含まれるもの
 
-## <a name="r-packages-installed-with-sql-server"></a>SQL Server と共にインストールされている R パッケージ
+このセクションでは、既定でインストールされている R または Python の機能の概要を示します。
+
+### <a name="default-r-installation-for-sql-server"></a>SQL Server の R の既定のインストール
 
 既定では、R**基本**パッケージがインストールされています。 基本パッケージを含めるなどパッケージによって提供されるコア機能`stats`と`utils`です。
 
-常に SQL Server 2016 または SQL Server 2017 での R のインストールに含まれる、 **RevoScaleR**パッケージ、および関連する拡張パッケージおよびプロバイダー、リモート計算コンテキストをサポートするストリーミング、並列 rx 関数の実行とその他の多くの機能です。 RevoScaleR パッケージをアップグレードするには、か、機械学習のコンポーネントだけをアップグレードまたは修正プログラムまたは新しいバージョンの SQL Server のインスタンスをアップグレードするバインディングを使用します。
+R の基本インストールには、多数のサンプル データセット、および RGui (軽量の対話型エディター) および RTerm (R コマンド プロンプト) などの標準の R ツールも含まれています。
+
+SQL Server 2016 または SQL Server 2017 で R のインストールにも含まれています、 **RevoScaleR**パッケージ、および関連する拡張パッケージおよびプロバイダー、リモート計算コンテキストをサポートするストリーミング、並列 rx 関数の実行とその他の多くの機能です。
+
+RevoScaleR パッケージをアップグレードするには、か、機械学習のコンポーネントだけをアップグレードまたは修正プログラムまたは新しいバージョンの SQL Server のインスタンスをアップグレードするバインディングを使用します。
 
 + 強化された R 機能の概要については、次を参照してください[Machine Learning サーバーについて。](https://docs.microsoft.com/machine-learning-server/what-is-microsoft-r-server)
 
 + クライアント コンピューター上に RevoScaleR ライブラリをダウンロードするには、インストール[Microsoft R クライアント](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
 
-## <a name="permissions-required-for-installing-r-packages"></a>R パッケージをインストールするために必要なアクセス許可
+### <a name="default-python-installation-for-sql-server"></a>SQL Server の既定の Python インストール
 
-SQL Server 2016 では、管理者は、インスタンス全体を対象に新しい R パッケージをインストールする必要があります。 
+機械学習の機能と Python 言語のオプションを選択すると、Anaconda ディストリビューションがインストールされます。 正確なバージョンは、インストールされている SQL Server のバージョンと Machine Learning Server インストーラーを使用して、インスタンスをアップグレードするかどうかによって異なります。
 
-SQL Server 2017 には、パッケージのインストールと管理の新機能が導入されています。
+|リリース| Anaconda バージョン| その他の変更|
+|------|------|------|
+| SQL Server 2017 RTM| 3.5.2| 新しい: revoscalepy|
+| Machine Learning サーバー 9.2.1 を経由して 2017 年 9 月を更新します。| Anaconda 4.2| revoscalepy への更新 |
+| SQL Server 2017 CU3| Anaconda 4.2| revoscalepy への更新 |
 
-+ リモート クライアントから R コマンドを使用して、プライベートまたは共有のいずれかのスコープを使用してパッケージをインストールすることができます。 この機能では、いずれかが必要[Microsoft R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install)または[Machine Learning サーバー](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)、インスタンスに対する dbo 特権とします。
-+ 新しいデータベース機能が追加されましたパッケージの管理をサポートするためにデータベース管理者によって T-SQL を使用してなし。 今後、これらの機能は、特権のあるユーザーへのパッケージ管理のほとんどのファセットを委任することを Dba を提供します。
+Python コード ライブラリ、だけでなく、標準インストールには、サンプル データ、単体テスト、およびサンプル スクリプトが含まれています。
 
-このセクションでは、インストールし、バージョンごとのパッケージの管理に必要な権限について説明します。
+## <a name="restrictions-and-known-issues"></a>制限事項と既知の問題
 
-+ SQL Server 2016 R Services (In-database)
+SQL Server で実行されている任意のソリューションで使用できる**のみ**インスタンスに関連付けられている既定のライブラリにインストールされているパッケージ。
 
-    実行しているコンピューターに新しい R パッケージをインストールする[!INCLUDE [ssCurrent](..\..\includes\sscurrent-md.md)]、コンピューターに対する管理者権限を持つ必要があります。 必要なすべてのパッケージがインストールされていることを確認するには、データベース管理者またはサーバーの他の管理者のタスクは、 [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)]インスタンス。
+バインディングを使用してインスタンスに R コンポーネントをアップグレードする場合、インスタンスのライブラリへのパスを変更できます。 必ず SQL Server によって現在使用されているライブラリのパスを確認してください。
 
-    ない管理者特権コンピューターでホストしている場合、 [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)]インスタンス、R パッケージをインストールする方法に関する管理者向けの情報を提供して、セキュリティで保護されたパッケージ リポジトリへのアクセスを提供、パッケージ化によって要求されたユーザーを取得できます。
+## <a name="administrative-permissions-required-for-package-installation"></a>パッケージのインストールに必要な管理者権限
 
-+ SQL Server 2017 Machine Learning サービス
+パッケージのインストールに必要なアクセス許可は、SQL Server 2016 および SQL Server 2017 間で変更されました。
 
-    SQL Server インスタンスの管理者の場合で新しいパッケージをインストールできます。 インスタンスに関連付けられている既定のライブラリを使用することを確認するだけです。 ストアド プロシージャから呼び出されたときに、他の場所にインストールされているパッケージを実行できません。 コンピューティング コンテキストとしても、SQL Server を使用して実行するすべての R コードでは、パッケージが、インスタンス ライブラリで使用できることが必要です。
++ SQL Server 2016 では、管理アクセス権は新しい R パッケージのインストールに必要です。
 
-    このリリースでは、今後のリリースでの Dba によってパッケージの管理が簡単をサポートすると一部の新機能も含まれます。 ここでは、インスタンス単位での R パッケージのインストールを続行することをお勧めします。
++ SQL Server 2017、パッケージを管理者として R と、Python の両方のインストールを続行できがある可能性が最も簡単な方法です。
 
-+ R Server (スタンドアロン)
+    DDL ステートメント、外部ライブラリの作成には、R ツールを使用せずにパッケージをインストールするデータベース管理者ができます。 
 
-    新しい R パッケージをインストールするコンピューターに対する管理者権限が必要です。
+    Machine Learning のサーバーにパッケージの管理機能を使用する場合は、データベース レベルでの R パッケージをインストールする RevoScaleR を使用することができます。 データベース管理者は、機能を有効にし、データベースごとに独自のパッケージをインストールする機能をユーザーに付与する必要があります。 詳細については、次を参照してください。 [Ddl を使用してパッケージの管理を有効にする](r-package-how-to-enable-or-disable.md)です。
 
-+ その他のクライアント環境
+### <a name="user-libraries-are-not-supported"></a>ユーザーのライブラリがサポートされていません
 
-    R ワークステーションとして使用されているコンピューターに新しい R パッケージをインストールするかどうかはそのコンピューター**いない**のインスタンスがある[!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)]をインストールする必要がありますにコンピューターに対する管理者権限パッケージをインストールします。 パッケージをインストールしたら、それをローカルで実行することができます。
+インストールできないユーザーのパッケージを安全な場所に多くの場合は、ユーザー ライブラリにパッケージをインストールする手段です。 ただし、SQL Server 環境でこれができません。ファイル システム アクセスでもは多くの場合、サーバーで制限されます。
 
-## <a name="managing-or-viewing-installed-packages"></a>インストールされているパッケージの管理または表示します。
+場合でも、サーバー上のユーザー ドキュメント フォルダーにある場合の管理者権限とアクセスは、SQL Server で実行する外部スクリプトの実行時は、ライブラリの既定インスタンス外にインストールされているすべてのパッケージにアクセスできません。
 
-現在インストールされているパッケージの完全な一覧を取得できる複数の方法はあります。 詳細については、次を参照してください。 [SQL Server にインストールされているパッケージを決定](determine-which-packages-are-installed-on-sql-server.md)です。
+ユーザーのライブラリに関連する問題を解決する方法のヒントについては、次を参照してください。[ユーザー ライブラリでパッケージがインストールされている](packages-installed-in-user-libraries.md)です。

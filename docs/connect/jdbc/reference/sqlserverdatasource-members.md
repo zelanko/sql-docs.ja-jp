@@ -1,27 +1,28 @@
 ---
 title: "SQLServerDataSource のメンバー |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6feb87ad1bb5054b800a001a30af6b94679e977a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: d046db6ae560e0384d3966286952069e940a189b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="sqlserverdatasource-members"></a>SQLServerDataSource のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/18/2017
   
 |名前|Description|  
 |----------|-----------------|  
-|[SQLServerDataSource)](../../../connect/jdbc/reference/sqlserverdatasource-constructor.md)|新しいインスタンスを初期化、 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)クラスです。|  
+|[SQLServerDataSource ()](../../../connect/jdbc/reference/sqlserverdatasource-constructor.md)|新しいインスタンスを初期化、 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)クラスです。|  
   
 ## <a name="fields"></a>フィールド  
  [なし] :  
@@ -48,6 +49,8 @@ ms.lasthandoff: 11/18/2017
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|アプリケーション名を返します。|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)|このソースのデータとの接続を確立するために試行[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)オブジェクトを表します。|  
 |[getDatabaseName](../../../connect/jdbc/reference/getdatabasename-method-sqlserverdatasource.md)|データベース名を返します。|  
+|[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverdatasource.md)|値を返します**disableStatementPooling**接続プロパティです。 この設定は、ステートメントのプールが有効になっているかどうか、またはこの接続ではなくを制御します。|  
+|[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|値を返します**enablePrepareOnFirstPreparedStatementCall**接続プロパティです。|  
 |[getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md)|返します、**ブール**encrypt プロパティが有効になっているかどうかを示す値。|  
 |[getDescription](../../../connect/jdbc/reference/getdescription-method-sqlserverdatasource.md)|データ ソースの記述を返します。|  
 |[getFailoverPartner](../../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md)|データベース ミラーリング構成で使用されるフェールオーバー サーバーの名前を返します。|  
@@ -66,6 +69,10 @@ ms.lasthandoff: 11/18/2017
 |[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md)|返します、**ブール**文字列パラメーターを UNICODE 形式でサーバーに送信が有効になっているかどうかを示す値。|  
 |[getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md)|設定値を返します、 **SendTimeAsDatetime**接続プロパティです。|  
 |[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)|実行するコンピューターの名前を返します[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。|  
+|[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md)|値を返します**serverPreparedStatementDiscardThreshold**接続プロパティです。|  
+|[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverdatasource.md)|この接続の準備されたステートメント キャッシュのサイズを返します。|  
+|[getTrustManagerClass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md)|TrustManagerClass 接続プロパティの文字列値を返します。|  
+|[getTrustManagerConstructorArg](../../../connect/jdbc/reference/gettrustmanagerconstructorarg-method-sqlserverdatasource.md)|TrustManagerConstructorArg 接続プロパティの文字列値を返します。|  
 |[getTrustServerCertificate](../../../connect/jdbc/reference/gettrustservercertificate-method-sqlserverdatasource.md)|返します、**ブール**trustServerCertificate プロパティが有効になっているかどうかを示す値。|  
 |[getTrustStore](../../../connect/jdbc/reference/gettruststore-method-sqlserverdatasource.md)|証明書の trustStore ファイルへのパス (ファイル名を含む) を返します。|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatasource.md)|データ ソースへの接続に使用される URL を返します。|  
@@ -79,6 +86,8 @@ ms.lasthandoff: 11/18/2017
 |[setAuthenticationScheme](../../../connect/jdbc/reference/setauthenticationscheme-sqlserverdatasource.md)|アプリケーションで使用する統合セキュリティの種類を示します。|  
 |[setDatabaseName](../../../connect/jdbc/reference/setdatabasename-method-sqlserverdatasource.md)|接続するデータベース名を設定します。|  
 |[setDescription](../../../connect/jdbc/reference/setdescription-method-sqlserverdatasource.md)|データ ソースの記述を設定します。|  
+|[setDisableStatementPooling](../../../connect/jdbc/reference/setdisablestatementpooling-method-sqlserverdatasource.md)|ステートメントのプールを true または false に設定します。|  
+|[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|新しい値を指定します、 **enablePrepareOnFirstPreparedStatementCall**接続プロパティです。|  
 |[setEncrypt](../../../connect/jdbc/reference/setencrypt-method-sqlserverdatasource.md)|セット、**ブール**encrypt プロパティが有効になっているかどうかを示す値。|  
 |[setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md)|データベース ミラーリング構成で使用されるフェールオーバー サーバーの名前を設定します。|  
 |[setHostNameInCertificate](../../../connect/jdbc/reference/sethostnameincertificate-method-sqlserverdatasource.md)|SQL Server の SSL (Secure Sockets Layer) 証明書の検証に使用されるホスト名を設定します。|  
@@ -97,6 +106,10 @@ ms.lasthandoff: 11/18/2017
 |[setSendStringParametersAsUnicode](../../../connect/jdbc/reference/setsendstringparametersasunicode-method-sqlserverdatasource.md)|セット、**ブール**文字列パラメーターを UNICODE 形式でサーバーに送信が有効になっているかどうかを示す値。|  
 |[setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)|java.sql.Time 値をサーバーに送信する方法を指定します。|  
 |[setServerName](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md)|実行するコンピューターの名前を設定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。|  
+|[setServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/setserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md)|新しい値を設定、 **serverPreparedStatementDiscardThreshold**接続プロパティです。|  
+|[setStatementPoolingCacheSize](../../../connect/jdbc/reference/setstatementpoolingcachesize-method-sqlserverdatasource.md)|この接続の準備されたステートメント キャッシュのサイズを設定します。|  
+|[setTrustManagerClass](../../../connect/jdbc/reference/settrustmanagerclass-method-sqlserverdatasource.md)|TrustManagerClass 接続プロパティの文字列値を設定します。|  
+|[setTrustManagerConstructorArg](../../../connect/jdbc/reference/settrustmanagerconstructorarg-method-sqlserverdatasource.md)|TrustManagerConstructorArg 接続プロパティの文字列値を設定します。|  
 |[setTrustServerCertificate](../../../connect/jdbc/reference/settrustservercertificate-method-sqlserverdatasource.md)|セット、**ブール**trustServerCertificate プロパティが有効になっているかどうかを示す値。|  
 |[setTrustStore](../../../connect/jdbc/reference/settruststore-method-sqlserverdatasource.md)|証明書の trustStore ファイルへのパス (ファイル名を含む) を設定します。|  
 |[setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md)|trustStore データの整合性を確認するために使用するパスワードを設定します。|  

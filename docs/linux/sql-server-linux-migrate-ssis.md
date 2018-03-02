@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 40699608d068895cdcee736c87aa4c2bd405b807
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 87c28ec845a59ea13acce0585bc9b249f100a4a5
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>抽出、変換、および SSIS Linux でのデータを読み込む
 
@@ -111,7 +111,13 @@ SSIS では、次の機能があります。
 
 最新バージョンをダウンロード、SSIS で作業を開始する[SQL Server Data Tools (SSDT)](../integration-services/ssis-how-to-create-an-etl-package.md)です。
 
-## <a name="see-also"></a>参照
+SSIS に関する詳細については、次の記事を参照してください。
 - [SQL Server Integration Services の詳細を表示します](../integration-services/sql-server-integration-services.md)
 - [SQL Server Integration Services (SSIS) の開発および管理ツール](../integration-services/integration-services-ssis-development-and-management-tools.md)
 - [SQL Server Integration Services のチュートリアル](../integration-services/integration-services-tutorials.md)
+
+## <a name="related-content-about-ssis-on-linux"></a>Linux 上の SSIS についての関連コンテンツ
+-   [Linux 上の SQL Server Integration Services (SSIS) のインストールします。](sql-server-linux-setup-ssis.md)
+-   [Ssis conf で Linux 上の SQL Server Integration Services を構成します。](sql-server-linux-configure-ssis.md)
+-   [制限事項と Linux の SSIS の既知の問題](sql-server-linux-ssis-known-issues.md)
+-   [スケジュール SQL Server Integration Services パッケージの cron と Linux の実行](sql-server-linux-schedule-ssis-packages.md)

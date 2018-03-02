@@ -1,6 +1,6 @@
 ---
 title: "クラウド内の SQL Server 2017 の概要 |Microsoft ドキュメント"
-description: "このクイック スタート チュートリアルでは、任意のクラウド内の Linux 上の SQL Server 2017 を実行する方法を示します。"
+description: "このクイック スタートでは、任意のクラウド内の Linux で SQL Server 2017 を実行する方法を示します。"
 author: annashres
 ms.author: annashres
 manager: craigg
@@ -12,17 +12,17 @@ ms.component:
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 613f6e1b0182d5003c68380bb5a5698397db2207
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
-ms.translationtype: HT
+ms.openlocfilehash: 3966bb71f4112c12d340ab9780586013d8732206
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="run-the-sql-server-2017-in-the-cloud"></a>SQL Server 2017 をクラウドで実行します。
+# <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>クイック スタート: SQL Server 2017 をクラウドで実行します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このクイック スタート チュートリアルでは、任意のクラウドの Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、または Ubuntu に SQL Server 2017 をインストールします。 Azure で Linux の SQL Server を実行する場合は、「[Azure Portal での Linux SQL Server 仮想マシンのプロビジョニング](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)」に移動してください。
+このクイック スタートでは、Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、または任意のクラウドで Ubuntu で SQL Server 2017 をインストールします。 Azure で Linux の SQL Server を実行する場合は、「[Azure Portal での Linux SQL Server 仮想マシンのプロビジョニング](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)」に移動してください。
 
     > [!NOTE]
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
