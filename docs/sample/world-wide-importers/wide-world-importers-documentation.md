@@ -1,10 +1,11 @@
 ---
-title: "ワイド World Importers のドキュメント |Microsoft ドキュメント"
+title: "Wide World Importers のドキュメント |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,7 +13,7 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 17cabd9d-cb2f-436c-ad9c-ce02225808b7
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
@@ -24,7 +25,7 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/05/2017
 ---
-# <a name="wide-world-importers-documentation"></a>ワイド World Importers のドキュメント
+# <a name="wide-world-importers-documentation"></a>Wide World Importers のドキュメント
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wide World importers 社は、SQL Server 2016 の新しいサンプル データベースと Azure SQL データベースです。 SQL Server 2016 と Azure SQL データベースのトランザクション処理 (OLTP)、データ ウェアハウスと分析 (OLAP) ワークロード、だけでなくハイブリッド トランザクションと分析処理 (HTAP) ワークロードのコア機能を示しています。
 
 ## <a name="about-this-sample"></a>このサンプルについて
