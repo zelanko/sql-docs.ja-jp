@@ -1,8 +1,8 @@
 ---
-title: "SQL Server on Linux での active Directory 認証 |Microsoft ドキュメント"
+title: "Linux 上の SQL Server の active Directory 認証チュートリアル |Microsoft ドキュメント"
 description: "このチュートリアルでは、SQL Server on Linux の AAD 認証の構成手順を提供します。"
 author: meet-bhagdev
-ms.date: 01/30/2018
+ms.date: 02/23/2018
 ms.author: meetb
 manager: craigg
 ms.topic: article
@@ -16,24 +16,17 @@ ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: 8644c6e061b0c1cdcd80d8c7cb25b8662eb7ae26
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: a0939dfa0f8304dc47a6925cf4c6f0375eb6a8df
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="active-directory-authentication-with-sql-server-on-linux"></a>SQL Server on Linux での active Directory 認証
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>SQL Server on Linux でのチュートリアル: を使用して Active Directory 認証
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このチュートリアルは、構成する方法を説明します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Active Directory (AD) の認証とも呼ばれる統合認証をサポートする Linux にします。 AD の認証により、クライアントへの認証に Windows または Linux ではドメインに参加している[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ドメイン資格情報と、Kerberos プロトコルを使用します。
-
-AD 認証経由では次の利点があります[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]認証。
-
-* ユーザーは、パスワードの入力を求められず、シングル サインオンを使用して認証します。   
-* アクセスおよびアクセス許可を管理する AD グループのログインを作成すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD グループのメンバーシップを使用します。  
-* を追跡する必要はありません、各ユーザーが組織全体で単一の id を持って[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ログインは、どのユーザーに対応します。   
-* AD では、組織全体で一元的なパスワード ポリシーを適用することができます。   
+このチュートリアルは、構成する方法を説明します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Active Directory (AD) の認証とも呼ばれる統合認証をサポートする Linux にします。 概要については、次を参照してください。 [Linux に SQL Server の Active Directory 認証](sql-server-linux-active-directory-auth-overview.md)です。
 
 このチュートリアルは、次のタスクで構成されます。
 
@@ -49,17 +42,12 @@ AD 認証経由では次の利点があります[!INCLUDE[ssNoVersion](../includ
 AD の認証を構成する前にする必要があります。
 
 * ネットワーク上の AD ドメイン コントローラ (Windows) の設定します。  
-* Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+* インストール [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-> [!IMPORTANT]
-> 制限事項:
-> - この時点では、データベース ミラーリング エンドポイントでサポートされる唯一の認証方法は、証明書です。 WINDOWS 認証方法は、将来のリリースで有効にするされます。
-> - Centrify、Powerbroker などのサード パーティ製 AD ツールおよびいる Vintela はサポートされていません 
-
-## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>参加[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AD ドメインにホスト
+## <a id="join"></a> 参加[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AD ドメインにホスト
 
 参加を次の手順を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Active Directory ドメインにホストします。
 
@@ -179,7 +167,7 @@ AD の認証を構成する前にする必要があります。
 
 詳細については、Red Hat でドキュメントを参照して[探索および結合の Id ドメイン](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html)です。 
 
-## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>AD ユーザーを作成する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]SPN を設定し、
+## <a id="createuser"></a> AD ユーザーを作成する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]SPN を設定し、
 
   > [!NOTE]
   > 次のステップを使用して、[完全修飾ドメイン名](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)です。 表示されている場合**Azure**、する必要があります**[作成](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**続行する前にします。
@@ -208,7 +196,7 @@ AD の認証を構成する前にする必要があります。
 
 3. 詳細については、「 [Kerberos 接続用のサービス プリンシパル名の登録](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)」を参照してください。
 
-## <a name="configure-includessnoversionincludesssnoversion-mdmd-service-keytab"></a>構成[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]サービス keytab
+## <a id="configurekeytab"></a> 構成[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]サービス keytab
 
 1. 前の手順で作成した AD アカウントのキーのバージョン番号 (kvno) を確認します。 通常、2 が、アカウントのパスワードを複数回変更した場合、別の整数がある可能性があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ホスト マシンを次を実行します。
 
@@ -249,7 +237,7 @@ AD の認証を構成する前にする必要があります。
    sudo systemctl restart mssql-server
    ```
 
-## <a name="create-ad-based-logins-in-transact-sql"></a>TRANSACT-SQL の AD に基づくログインを作成します。
+## <a id="createsqllogins"></a> TRANSACT-SQL の AD に基づくログインを作成します。
 
 1. 接続[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]し、AD ベースの新しいログインを作成します。
 
@@ -263,7 +251,7 @@ AD の認証を構成する前にする必要があります。
    SELECT name FROM sys.server_principals;
    ```
 
-## <a name="connect-to-includessnoversionincludesssnoversion-mdmd-using-ad-authentication"></a>接続[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AD 認証を使用します。
+## <a id="connect"></a> 接続[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AD 認証を使用します。
 
 ドメインの資格情報を使用してクライアント コンピューターにログインします。 接続できるようになりました[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AD 認証を使用して、パスワードを再入力しなくてもします。 AD グループのログインを作成する場合、そのグループのメンバーになっている AD ユーザーは、同じ方法で接続できます。
 
