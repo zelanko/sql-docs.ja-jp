@@ -19,7 +19,7 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
@@ -94,7 +94,7 @@ Reporting Services は "従来の" ページ分割されたドキュメント �
 
 独自のカスタム ブランドを Web ポータルに適用することができます。 また、Web ポータルでは KPI の権限を作成できます。 KPI を使うと、レポートを開かなくても、主要なビジネス指標をブラウザーで簡単に見ることができます。 
 
-新しい Web サイトは、レポート マネージャーを完全に書き直したものです。 単一ページで標準ベースの HTML5 アプリであり、Edge、Internet Explorer 10 と 11、Chrome、Firefox、Safari などのすべての主要な最新ブラウザーが最適化されています。
+新しい Web サイトは、レポート マネージャーを完全に書き直したものです。 単一ページで標準ベースの HTML5 アプリであり、Microsoft Edge、Internet Explorer 10 と 11、Chrome、Firefox、Safari などのすべての主要な最新ブラウザーが最適化されています。
 
 Web ポータルのコンテンツは、Reporting Services のモバイルやページ分割されたレポート、KPI に加えて、レポートの構成要素として使用される Power BI Desktop レポート、Excel ブック、共有データセット、共有データ ソースなどの種類別に整理されます。 従来のフォルダー階層で、ここから安全に保存および管理することができます。 お気に入りのタグを付けることができ、管理者はコンテンツを管理できます。
 

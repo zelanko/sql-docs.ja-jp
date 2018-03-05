@@ -12,7 +12,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -67,7 +67,7 @@ Web ポータルは、ネイティブ モードで実行されているレポー
 新しくインストールした場合、コンテンツおよび設定を操作するのに十分な権限を持っているのはローカル管理者のみです。 他のユーザーに権限を与えるには、ローカル管理者がレポート サーバーへのアクセスを許可するロールの割り当てを作成する必要があります。 ロールの割り当てが作成された後、ユーザーがアクセスできるようになるアプリケーション ページとタスクは、そのユーザーに対するロールの割り当てによって異なります。 詳細については、「[レポート サーバーへのユーザー アクセスを許可する](security/grant-user-access-to-a-report-server-report-manager.md)」をご覧ください。
 
 > [!NOTE]
-> サーバーが実行されているローカル コンピューターで Web ポータルを閲覧している場合、このフォルダーの表示が禁止されている旨のメッセージが表示されることがあります。 これは Universal Access Control (UAC) による規制であり、また、ユーザーが管理者としてブラウザーを実行していないことに起因します。管理者として Edge を実行することはできません。Internet Explorer を使用する必要があります。 リモートでサーバーを閲覧するか、管理者として Internet Explorer を起動し、Web ポータルを閲覧できます。 Web ポータルをリモートで利用する場合、自分のアカウントにフォルダーのコンテンツ管理権限を与える必要があります。  
+> サーバーが実行されているローカル コンピューターで Web ポータルを閲覧している場合、このフォルダーの表示が禁止されている旨のメッセージが表示されることがあります。 これは Universal Access Control (UAC) による規制であり、また、ユーザーが管理者としてブラウザーを実行していないことに起因します。管理者として Microsoft Edge を実行することはできません。Internet Explorer を使用する必要があります。 リモートでサーバーを閲覧するか、管理者として Internet Explorer を起動し、Web ポータルを閲覧できます。 Web ポータルをリモートで利用する場合、自分のアカウントにフォルダーのコンテンツ管理権限を与える必要があります。  
 
 ## <a name="start-and-use-the-web-portal"></a>Web ポータルの開始と使用
 
