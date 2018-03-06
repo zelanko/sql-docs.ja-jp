@@ -24,15 +24,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 757a6b2aebe68dc32ddc493c3e6649a8b589be3e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 770b33f7fb7fa22d1a2e86d4b5c7a9d3f8c84b35
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-3-2---create-custom-templates"></a>レッスン 3-2 - カスタム テンプレートの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には一般的な作業のためのテンプレートが多数用意されていますが、テンプレートの真価は、頻繁に作成する複雑なスクリプトに適したカスタム テンプレートを作成できる点にあります。 この演習では、2 ～ 3 のパラメーターを使用した簡単なスクリプトを作成しますが、規模が大きく、反復的なスクリプトを作成する場合にもテンプレートが役立ちます。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 一般的な作業のためのテンプレートが多数用意されていますが、テンプレートの真価は、頻繁に作成する複雑なスクリプトに適したカスタム テンプレートを作成できる点にあります。 この演習では、2 ～ 3 のパラメーターを使用した簡単なスクリプトを作成しますが、規模が大きく、反復的なスクリプトを作成する場合にもテンプレートが役立ちます。  
   
 ## <a name="using-custom-templates"></a>カスタム テンプレートの使用  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/17/2018
 7.  クエリ エディターに次のスクリプトを入力し、特定の部分 (この例では Blade) の命令を検索するストアド プロシージャを作成します (チュートリアル ウィンドウからコードをコピーして、貼り付けることができます)。  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
@@ -73,11 +73,11 @@ ms.lasthandoff: 01/17/2018
   
 8.  F5 キーを押してこのスクリプトを実行し、 **WorkOrdersForBlade** プロシージャを作成します。  
   
-9. オブジェクト エクスプローラーでサーバーを右クリックし、 **[新しいクエリ]**をクリックします。 新しいクエリ エディター ウィンドウが開きます。  
+9. オブジェクト エクスプローラーで、**[AdventureWorks2012]** データベースを右クリックし、 **[新しいクエリ]**をクリックします。 新しいクエリ エディター ウィンドウが開きます。  
   
 10. クエリ エディターに「 **EXECUTE dbo.WorkOrdersForBlade**」と入力し、F5 キーを押してクエリを実行します。 **結果**ペインに、ブレードに対する作業命令の一覧が返されていることを確認します。  
   
-11. テンプレート スクリプト (手順 7 のスクリプト) を編集します。4 つの場所で、製品名 Blade をパラメーター ***\<*product_name**, **nvarchar(50)**, **name*>*** に置き換えます。  
+11. テンプレート スクリプト (手順 7 のスクリプト) を編集します。4 つの場所で、製品名 Blade をパラメーター **\<product_name, nvarchar(50), name>** に置き換えます。  
   
     > [!NOTE]  
     > パラメーターには、置き換えるパラメーターの名前、パラメーターのデータ型、パラメーターの既定値の 3 つの要素が必要です。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 01/17/2018
 12. スクリプトは以下のようになります。  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
