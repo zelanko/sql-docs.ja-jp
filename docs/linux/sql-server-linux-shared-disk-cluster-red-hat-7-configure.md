@@ -53,20 +53,20 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>インストールし、各クラスター ノードに SQL Server の構成
 
-1. インストールし、両方のノード上に SQL Server をセットアップします。  詳細については、次を参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)です。
+1. 両方のノード上に SQL Server をインストールし、セットアップします。  詳細については、次を参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)です。
 
 1. プライマリ サーバーと、他の構成のために、セカンダリとして 1 つのノードを指定します。 これらの用語を使用して、次のこのガイドです。  
 
-1. セカンダリ ノードで停止し、SQL Server を無効にします。
+1. セカンダリ ノードでSQL Server を停止し無効にします。
 
-   次の例では、停止して、SQL Server を無効にします。 
+   次の例では、SQL Server を停止して無効にします。 
 
    ```bash
    sudo systemctl stop mssql-server
    sudo systemctl disable mssql-server
    ```
 > [!NOTE] 
-> Server マスター_キーの SQL Server インスタンスの生成し、に配置され、セットアップ時に`/var/opt/mssql/secrets/machine-key`です。 Linux では、SQL Server は、常に mssql と呼ばれるローカル アカウントとして実行されます。 ローカル アカウントであるために、その id は、ノード間で共有されません。 したがって、各ローカル mssql アカウント アクセスできるように、サーバーのマスター _ キーの暗号化を解除するは、各セカンダリ ノードにプライマリ ノードから、暗号化キーをコピーする必要があります。 
+> セットアップ時に、SQL Server インスタンスのためにサーバー マスター キーが生成され、`/var/opt/mssql/secrets/machine-key` に配置されます。 Linux では、SQL Server は、常に mssql と呼ばれるローカル アカウントとして実行されます。 ローカル アカウントであるため、その id はノード間で共有されません。 したがって、各ローカル mssql アカウント がサーバー マスター  キーの暗号化を解除するためにアクセスできるようにするために、各セカンダリ ノードにプライマリ ノードから暗号化キーをコピーする必要があります。 
 
 1. プライマリ ノードで、ペースの SQL server ログインの作成および実行する権限をログイン`sp_server_diagnostics`です。 ペースでは、このアカウントを使用して、どのノードが SQL Server を実行していることを確認します。 
 
@@ -74,7 +74,7 @@ ms.lasthandoff: 02/13/2018
    sudo systemctl start mssql-server
    ```
 
-   SQL Server に接続`master`sa アカウントを使用してデータベースにあり、次を実行します。
+   SQL Server の`master`データベースに sa アカウントを使用して接続し、次のスクリプトを実行します。
 
    ```bashsql
    USE [master]
@@ -95,12 +95,12 @@ ms.lasthandoff: 02/13/2018
    sudo ip addr show
    ```
 
-   各ノードで、コンピューター名を設定します。 各ノード一意の名前は 15 文字以下です。 追加することによって、コンピューター名を設定`/etc/hosts`です。 次のスクリプトを使うと、`vi` で `/etc/hosts` を編集できます。 
+   各ノードで、コンピューター名を設定します。 各ノードに 15 文字以下の一意の名前を指定します。 そのコンピューター名を`/etc/hosts`に追加することにより設定します。 次のスクリプトを使うと、`vi` で `/etc/hosts` を編集できます。 
 
    ```bash
    sudo vi /etc/hosts
    ```
-   次の例は`/etc/hosts`という 2 つのノードの追加と`sqlfcivm1`と`sqlfcivm2`です。
+   次の`/etc/hosts`の例は`sqlfcivm1`と`sqlfcivm2`という名前の 2 つのノードの追加します。
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -123,7 +123,7 @@ ms.lasthandoff: 02/13/2018
 > [!IMPORTANT] 
 > バージョンを持つ NFS サーバー上のデータベース ファイルをホストしている < 4 がこのリリースでサポートされていません。 これは、NFS を使用して、共有ディスクに対してフェールオーバー クラスタ リングのデータベースと非クラスター化インスタンスに含まれています。 今後のリリースで他の NFS サーバーのバージョンの有効化に取り組んでいます。 
 
-NFS サーバー上には、次の操作を行います。
+NFS サーバー上で、次の操作を行います。
 
 1. `nfs-utils` のインストール
 
@@ -131,13 +131,13 @@ NFS サーバー上には、次の操作を行います。
    sudo yum -y install nfs-utils
    ```
 
-1. 有効化と開始 `rpcbind`
+1. `rpcbind` を有効にして開始します
 
    ```bash
    sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
-1. 有効化と開始 `nfs-server`
+1. `nfs-server` を有効にして開始します
  
    ```bash
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
@@ -155,7 +155,7 @@ NFS サーバー上には、次の操作を行います。
    sudo exportfs -rav
    ```
 
-1. パスが、エクスポート/共有 NFS サーバーから実行を確認してください。
+1. パスがエクスポート/共有されていることを確認するため、NFS サーバーから実行してください。
 
    ```bash
    sudo showmount -e
@@ -186,7 +186,7 @@ NFS サーバー上には、次の操作を行います。
    sudo yum -y install nfs-utils
    ```
 
-1. クライアントと NFS サーバー上のファイアウォールを open
+1. クライアントと NFS サーバー上のファイアウォールを開きます。
 
    ```bash
    sudo firewall-cmd --permanent --add-service=nfs
@@ -203,15 +203,15 @@ NFS サーバー上には、次の操作を行います。
 
 1. すべてのクラスター ノードでこれらの手順を繰り返します。
 
-詳細については、NFS を使用して、次のリソースを参照してください。
+NFS の使用に関する詳細については、次のリソースを参照してください。
 
-* [NFS サーバーと firewalld |スタックの交換](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
+* [NFS サーバーと firewalld |Stack Exchange](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [NFS ボリュームのマウント |Linux のネットワーク管理者ガイド](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
 * [NFS サーバーの構成](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>共有記憶域 をポイントにデータベース ファイル ディレクトリをマウントします。
 
-1.  **プライマリ ノードのみで**、一時的な場所にデータベース ファイルを保存します。次のスクリプトでは、新しい一時ディレクトリを作成するには、データベース ファイルを新しいディレクトリにコピーおよび古いデータベース ファイルを削除します。 ローカル ユーザー mssql として SQL Server を実行すると、マウントされた共有へのデータ転送、後にローカル ユーザーが共有への読み取り/書き込みアクセスを持っているかどうかを確認する必要があります。 
+1.  **プライマリ ノード上でのみ**、一時的な場所にデータベース ファイルを保存します。次のスクリプトでは、新しい一時ディレクトリを作成し、データベース ファイルを新しいディレクトリにコピーして、古いデータベース ファイルを削除します。 SQL Server はローカル ユーザー mssql として実行されるため、マウントされた共有へのデータ転送後に、ローカル ユーザーが共有への読み取り/書き込みアクセスを持っているかどうかを確認する必要があります。 
 
    ``` 
    $ sudo su mssql
@@ -258,10 +258,10 @@ NFS サーバー上には、次の操作を行います。
  
 この時点で、共有記憶域上のデータベース ファイルを使用して実行する SQL Server の両方のインスタンスが構成されます。 次の手順では、ペースの SQL Server を構成します。 
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>インストールし、ペースを各クラスター ノードの構成
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>各クラスター ノードでPacemakerインストールして構成する
 
 
-2. 両方のクラスター ノードで、Pacemaker にログインするための SQL Server のユーザー名とパスワードを格納するファイルを作成します。 次のコマンドは、このファイルを作成および設定します。
+2. 両方のクラスター ノードで、Pacemaker がログインするための SQL Server のユーザー名とパスワードを格納するファイルを作成します。 次のコマンドは、このファイルを作成および設定します。
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
@@ -313,7 +313,7 @@ NFS サーバー上には、次の操作を行います。
    sudo yum install mssql-server-ha
    ```
 
-## <a name="create-the-cluster"></a>クラスターを作成します。 
+## <a name="create-the-cluster"></a>クラスターを作成する。 
 
 1. ノードのいずれかで、クラスターを作成します。
 
@@ -325,24 +325,24 @@ NFS サーバー上には、次の操作を行います。
 
    > RHEL HA アドオンは、VMWare と KVM エージェントをフェンスがします。 フェンス操作は、他のすべてのハイパーバイザーで無効にする必要があります。 実稼働環境では、フェンス操作エージェントを無効にしないでください。 時間帯、時点では、HyperV またはクラウド環境のフェンス操作エージェントがありません。 これらの構成を実行している場合は、フェンス操作を無効にする必要があります。 \**これは、説明は、実稼働システムでは推奨されません。**
 
-   次のコマンドでは、フェンス操作エージェントが無効にします。
+   次のコマンドで、フェンス操作エージェントを無効にします。
 
    ```bash
    sudo pcs property set stonith-enabled=false
    sudo pcs property set start-failure-is-fatal=false
    ```
 
-2. SQL Server、ファイル システムと仮想 IP リソースをクラスター リソースを構成し、クラスターに構成をプッシュします。 次の情報が必要です。
+2. SQL Server、ファイル システム、仮想 IP リソースに対してクラスター リソースを構成し、クラスターに構成をプッシュします。 次の情報が必要です。
 
    - **SQL Server リソース名**: SQL Server のクラスター化リソースの名前。 
    - **IP リソース名を浮動**: 仮想 IP アドレス リソースの名前。
    - **IP アドレス**: SQL Server のクラスター化されたインスタンスに接続するクライアントが使用する IP アドレス。 
    - **ファイル システム リソース名**: ファイル システム リソースの名前。
    - **デバイス**:、NFS 共有のパス
-   - **デバイス**: にマウントされている共有へのローカル パス
-   - **すれば**: ファイル共有の種類 (つまり nfs)
+   - **デバイス**: 共有にマウントしているローカル パス
+   - **fstype**: ファイル共有の種類 (つまり nfs)
 
-   次のスクリプトを環境から値を更新します。 構成およびクラスター化されたサービスを開始する 1 つのノード上で実行します。  
+   次のスクリプトを環境から値を更新します。 クラスター化されたサービスを構成および開始するために 1 つのノード上で実行します。  
 
    ```bash
    sudo pcs cluster cib cfg 
