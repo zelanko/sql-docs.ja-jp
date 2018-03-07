@@ -8,15 +8,17 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Setting project options,configuration options
+helpviewer_keywords:
+- Setting project options,configuration options
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
@@ -37,7 +39,7 @@ SSMA では、プロジェクトの設定の 5 つのセットがあります。
   
 -   プロジェクト情報  
   
--   [全般] (変換、移行、および SQL Azure)  
+-   [全般]\(変換、移行、および SQL Azure)  
   
 -   Synchronization  
   
