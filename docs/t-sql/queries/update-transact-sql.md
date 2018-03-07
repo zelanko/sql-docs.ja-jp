@@ -47,7 +47,7 @@ manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 227cafdd68eddac2ff6a515853f0fcded0c07f63
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
