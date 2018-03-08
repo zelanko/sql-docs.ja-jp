@@ -89,7 +89,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [ODBC 変換先のカスタム プロパティ](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
-## <a name="odbc-destination-editor-connection-manager-page"></a>[ODBC 変換先エディター] ([接続マネージャー] ページ)
+## <a name="odbc-destination-editor-connection-manager-page"></a>[ODBC 変換先エディター]\([接続マネージャー] ページ)
   **[ODBC 入力先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、入力先の ODBC 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
   
  **[ODBC 入力先エディター] の [接続マネージャー] ページを開くには**  
