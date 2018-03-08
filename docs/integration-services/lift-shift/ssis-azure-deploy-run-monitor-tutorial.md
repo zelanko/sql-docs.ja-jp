@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa1cc5db91745fb7773856a8f66b03c82bba3e9a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bde92101af0b761df9f37171b35952fa3ab9d25b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Azure で SSIS パッケージを配置、実行、および監視する
 このチュートリアルでは、Azure SQL Database の SSISDB カタログ データベースに SQL Server Integration Services プロジェクトを配置する方法、Azure-SSIS Integration Runtime でのパッケージの実行方法、および実行中のパッケージの監視方法を示します。
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/09/2018
 
 始める前に、バージョン 17.2 以降の SQL Server Management Studio があることを確認します。 最新バージョンの SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
 
-また、SSISDB データベースを設定し、Azure-SSIS Integration Runtime をプロビジョニングしていることを確認してください。 Azure で SSIS をプロビジョニングする方法については、「[SQL Server Integration Services パッケージを Azure にデプロイする](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)」を参照してください。
+また、SSISDB データベースを設定し、Azure-SSIS Integration Runtime をプロビジョニングしていることを確認してください。 Azure で SSIS をプロビジョニングする方法については、「[Azure Data Factory UI を使用した Azure SSIS 統合ランタイムのプロビジョニング](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)」を参照してください。
 
 ## <a name="connect-to-the-ssisdb-database"></a>SSISDB データベースに接続する
 
@@ -89,7 +89,9 @@ SQL Server Management Studio を使用して、Azure SQL Database サーバー�
 
 ## <a name="deploy-a-project-with-powershell"></a>PowerShell でプロジェクトを配置する
 
-PowerShell を使って Azure SQL Database の SSISDB にプロジェクトを配置するには、次のスクリプトを要件に適合させます。
+PowerShell を使って Azure SQL Database の SSISDB にプロジェクトを配置するには、次のスクリプトを要件に適合させます。 スクリプトが `$ProjectFilePath` の下の子フォルダーと各子フォルダー内のプロジェクトを列挙し、次に、SSISDB で同じフォルダーを作成し、それらのフォルダーにプロジェクトを展開します。
+
+このスクリプトには、SQL Server Data Tools バージョン 17.x、またはスクリプトを実行するコンピューターにインストールされている SQL Server Management Studio が必要です。
 
 ```powershell
 # Variables

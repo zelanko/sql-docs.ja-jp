@@ -1,6 +1,6 @@
 ---
 title: "Linux 上の SQL Server のパフォーマンスのベスト プラクティス |Microsoft ドキュメント"
-description: "この記事では、Linux 上の SQL Server 2017 を実行するためのパフォーマンスのベスト プラクティスとガイドラインを説明します。"
+description: "このトピックでは、Linux で SQL Server 2017 を実行する場合の、パフォーマンスのベスト プラクティスとガイドラインを提供します。"
 author: rgward
 ms.author: bobward
 manager: craigg

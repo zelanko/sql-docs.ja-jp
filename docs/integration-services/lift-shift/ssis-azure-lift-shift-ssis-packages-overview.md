@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d534f3118cbc8d9516d7db6033c490a9ab59dd1c
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 96384f918239772c3c6a859f523c04a4d53ec4d0
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする
 SQL Server Integration Services (SSIS) パッケージとワークロードを Azure クラウドに移動できるようになりました。
@@ -64,7 +65,7 @@ Data Factory は、他の種類の Integration Runtime もサポートしてい�
 > [!NOTE]
 > パッケージを Azure に配置すると、常に最新のパッケージ形式となるように、パッケージの配置ウィザードによってパッケージがアップグレードされます。
 
-Azure の前提条件の詳細については、「[SQL Server Integration Services パッケージを Azure にデプロイする](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)」を参照してください。
+Azure での前提条件の詳細については、「[Azure Data Factory UI を使用した Azure SSIS 統合ランタイムのプロビジョニング](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)」を参照してください。
 
 ## <a name="ssis-features-on-azure"></a>Azure の SSIS 機能
 
@@ -81,7 +82,7 @@ Windows 認証を使用してクラウドから**オンプレミスのデータ 
 ## <a name="common-tasks"></a>よく使用するタスク
 
 ### <a name="provision"></a>プロビジョニング
-Azure で SSIS パッケージをデプロイして実行するには、事前に SSISDB カタログ データベースと Azure SSIS Integration Runtime をプロビジョニングする必要があります。 「[SQL Server Integration Services パッケージを Azure にデプロイする](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)」のプロビジョニングの手順に従います。
+Azure で SSIS パッケージをデプロイして実行するには、事前に SSISDB カタログ データベースと Azure SSIS Integration Runtime をプロビジョニングする必要があります。 次の記事のプロビジョニングの手順に従ってください: [Azure Data Factory UI を使用した Azure SSIS 統合ランタイムのプロビジョニング](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)
 
 ### <a name="deploy-and-run-packages"></a>パッケージの配置と実行
 SQL Database でプロジェクトの配置と実行は、使い慣れたツールやスクリプト作成オプションのいずれかを使用して行えます。
@@ -105,5 +106,5 @@ SQL Database に格納されたパッケージの実行をスケジュール設�
 
 ## <a name="next-steps"></a>次の手順
 Azure で SSIS ワークロードの使用を開始するには、次の記事を参照してください。
--   [SQL Server Integration Services パッケージを Azure にデプロイする](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
+-   [Azure Data Factory UI を使用した Azure SSIS 統合ランタイムのプロビジョニング](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)
 -   [Azure で SSIS パッケージを配置、実行、および監視する](ssis-azure-deploy-run-monitor-tutorial.md)

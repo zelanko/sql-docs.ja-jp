@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2016 リリース ノート | Microsoft Docs"
-ms.date: 10/30/2017
+ms.date: 02/27/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -8,51 +8,42 @@ ms.component: sql-non-specified
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - build notes
 - release issues
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
-caps.latest.revision: "276"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3979b28e6b530ba08641731f811e259168975004
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6485ef83b940ab9d04b9406e461517d5254aec7f
+ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 リリース ノート
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] ここでは、SQL Server 2016 リリースでの制限事項と問題について説明します。    
-    
- **お試しください:**    
-   
-[![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** から SQL Server 2016 をダウンロードする    
-    
-[![Azure Virtual Machine のアイコン](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Azure アカウントをすでにお持ちですか?  **[こちら](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** にアクセスして、SQL Server 2016 SP1 がインストール済みの仮想マシンをすぐにご利用いただけます。
-    
-[![SSMS をダウンロードする](../includes/media/download2.png)**SSMS:** 最新版の SQL Server Management Studio を入手するには、「**[SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)**」を参照してください。   
-    
- 新機能については、「 [SQL Server 2016 の新機能](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708)」をご覧ください。
-    
-##  <a name="bkmk_top"></a> 記事のセクション:    
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+ここでは、SQL Server 2016 リリースでの制限事項と問題について説明します。 新機能については、「 [SQL Server 2016 の新機能](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016)」をご覧ください。
 
--   [SQL Server 2016 Service Pack 1 (SP1) を使用できる](#bkmk_2016sp1)    
--   [SQL Server 2016 の一般公開 (GA)](#bkmk_2016_ga) 
--   [SQL Server 2016 Release Candidate 3 (RC3)](#bkmk_2016_rc3)     
+> [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** から SQL Server 2016 をダウンロードする
+>
+> [![Azure Virtual Machine のアイコン](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Azure アカウントをすでにお持ちですか?  **[こちら](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** にアクセスして、SQL Server 2016 SP1 がインストール済みの仮想マシンをすぐにご利用いただけます。
+>
+> [![SSMS をダウンロードする](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) 最新版の SQL Server Management Studio を入手するには、「**[SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)**」をご覧ください。
 
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1) を使用できる
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 では、SQL Server 2016 のすべてのエディションとサービス レベルを SQL Server 2016 SP1 にアップグレードします。 この記事に記載されている修正プログラムに加えて、SQL Server 2016 SP1 には、SQL Server 2016 Cumulative Update 1 (CU1) から SQL Server 2016 CU3 に含まれていた修正プログラムが含まれています。
-    
+
 - [SQL Server 2016 SP1 ダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=54276)
 - [SQL Server 2016 Service Pack 1 リリース情報](https://support.microsoft.com/kb/3182545) SP1 で修正または変更されたバグ番号と問題を一覧します。
- - ![info_tip](../sql-server/media/info-tip.png) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] のサービス パックを含む、サポートされるすべてのバージョンのリンクと情報については、「[SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx)」を参照してください。 
-    
-    
+ - ![info_tip](../sql-server/media/info-tip.png) のサービス パックを含む、サポートされるすべてのバージョンのリンクと情報については、「[SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx)」を参照してください。 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
+
 ##  <a name="bkmk_2016_ga"></a>SQL Server 2016 Release - 一般公開 (GA)
 -   [データベース エンジン (GA)](#bkmk_ga_instalpatch) 
 -   [Stretch Database (GA)](#bkmk_ga_stretch)
