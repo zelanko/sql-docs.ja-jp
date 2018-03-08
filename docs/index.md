@@ -113,15 +113,15 @@ ms.lasthandoff: 02/09/2018
                                                     <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li> 
                                                     <li><a class="barLink" href="/azure/stream-analytics/">Azure Stream Analytics</a></li>
                                                     <li><a class="barLink" href="/azure/data-lake-analytics/">Azure Data Lake Analytics</a></li>
-                                                    <li><a class="barLink" href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-ads.standard-data-science-vm">データ サイエンス仮想マシン</a></li>
+                                                    <li><a class="barLink" href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-ads.standard-data-science-vm">Data Science Virtual Machine</a></li>
                                                 </ul>
                                                 <h4>Machine Learning</h4>
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="https://docs.microsoft.com/azure/machine-learning/">Azure Machine Learning</a></li> 
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/sql/advanced-analytics/r/r-services">SQL Server コンピューターのサービスの学習</a></li>
+                                                    <li><a class="barLink" href="https://docs.microsoft.com/sql/advanced-analytics/r/r-services">SQL Server Machine Learning Services</a></li>
                                                     <li><a class="barLink" href="https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone">Machine Learning Server (スタンドアロン)</a></li>
                                                 </ul>
-                                                <h4>レポート方法</h4>
+                                                <h4>レポーティング</h4>
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports">SQL Server Reporting Services (2016、2017)</a></li>
                                                     <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.120).aspx">SQL Server 2014 Reporting Services</a></li>
