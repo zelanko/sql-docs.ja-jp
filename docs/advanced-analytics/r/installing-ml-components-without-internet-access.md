@@ -1,7 +1,7 @@
 ---
 title: "インターネットにアクセスできないマシン ラーニング コンポーネントをインストールする |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 01/08/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 1c4a63077cf9801a6c83502f2fdea6f88c063227
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: d7d218dcb5efeddf248230abff85b46da23d389a
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>インターネットにアクセスできないマシン ラーニング コンポーネントをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,16 +47,18 @@ SQL Server 2016 および SQL Server 2017 で提供される R、Python のコ�
 
 ### <a name="step-1-obtain-additional-installers"></a>手順 1. その他のインストーラーを入手します。
 
+一般に、別々 のインストーラーは、オープン ソース アプリケーションおよび独自のコンポーネントに提供されます。 SQL Server セットアップ ウィザードが正しい順序でインストールされることを確認します。 ただし、一部のリリースは、コンポーネントの 1 つだけのセットを更新して可能性があります。 参照してください、[インストーラーのテーブル](#bkmk_2017Installers)については、リリースごとです。
+
 **R の**
 
-R 言語は、SQL Server 2016 および SQL Server 2017 の両方でサポートされています。 2 つの異なるインストーラーが必要、オープン ソース アプリケーションおよび独自のコンポーネントです。 SQL Server セットアップ ウィザードが正しい順序でインストールされることを確認します。
+R 言語には、SQL Server 2016 以降はサポートされています。 
 
 + インストーラーで**SRO**名前で、オープン ソース コンポーネントを提供します。
 + インストーラーで**SRS**名にデータベースの統合を含め、マイクロソフトによって提供されるコンポーネントが含まれています。
 
 **Python の**
 
-Python 言語は、SQL Server 2017 でのみサポートされます。 もう一度は 2 つの別々 のインストーラーをダウンロードする必要があります。
+Python 言語には、SQL Server 2017 以降が必要です。 
 
 + インストーラーで**SPO**名には、マイクロソフト Python のオープンし、オープン ソース コンポーネントを提供します。
 + インストーラーで**SPS**名前では、Microsoft Python サーバーの場合があり、データベースの統合を含め、マイクロソフトによって提供されるコンポーネントが含まれています。
@@ -79,19 +81,18 @@ SQL Server 2016 での R Services のオフライン インストール プロ�
 3. 入力を求めるダイアログ ボックスが開き、**インストール パス**に必要なパッケージ。
 4. をクリックして**参照**先ほどコピーしたインストーラー ファイルを含むフォルダーを検索します。
 5. 目的のファイルが見つかったら、**[次へ]** をクリックして、コンポーネントが利用可能であることを示します。
-10. SQL Server セットアップ ウィザードを完了します。
-11. サービスが有効になっているかどうかを確認する必要なインストール後の手順を実行します。
+6. SQL Server セットアップ ウィザードを完了します。
+7. サービスが有効になっているかどうかを確認する必要なインストール後の手順を実行します。
 
 ## <a name="installerlocs"></a>Machine learning のコンポーネントをダウンロードする場所
 
-> [!NOTE]
-> インストールする SQL Server のバージョンに一致するファイルを取得してください。
-> 
-> Python のサポートは、SQL Server 2017 CTP 2.0 以降で提供されます。 SQL Server 2016 を含む、以前のバージョンは、Python をサポートしていません。
+インストールする SQL Server のバージョンに一致するファイルを取得してください。
 
 + [SQL Server 2016 の R コンポーネントを取得するには](#bkmk_2016Installers)
 
 + [SQL Server 2017 の R または Python のコンポーネントを取得するには](#bkmk_2017Installers)
+
+Python のサポートは、SQL Server 2017 CTP 2.0 以降で提供されます。 SQL Server 2016 を含む、以前のバージョンは、Python をサポートしていません。
 
 ### <a name="bkmk_2017Installers"></a>SQL Server 2017 のダウンロード
 
@@ -141,6 +142,11 @@ Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?
 Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
 Microsoft の Python のオープン     |変更はありません。以前の使用|
 Microsoft Python Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
+**SQL Server 2017 CU4** |
+Microsoft R Open     |変更はありません。以前の使用|
+Microsoft R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
+Microsoft の Python のオープン     |変更はありません。以前の使用|
+Microsoft Python Server    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
 
 ### <a name="bkmk_2016Installers"></a>SQL Server 2016 のダウンロード
 
@@ -235,7 +241,7 @@ Microsoft R のソース コードを表示したい場合はダウンロード�
 
 + サーバーにインターネット アクセスがない場合は、更新処理を開始する**前に**、SQL Server インストーラーをダウンロードし、対応するバージョンの R コンポーネント インストーラーをダウンロードする必要があります。  R コンポーネントは、既定では、SQL Server は含まれません。
 
-+ 場合*追加*これらのコンポーネントを*既存*インストール、SQL Server インストーラーの更新バージョンを使用し、その他のコンポーネントのバージョンが更新されて、対応します。 R の機能がインストールされることを指定すると、インストーラーは、一致する、機械学習のコンポーネントのインストーラーのバージョンが検索されます。
++ 既存のインストールにこれらのコンポーネントを追加する場合は、更新されたバージョンの SQL Server インストーラー、およびその他のコンポーネントの対応する更新されたバージョンを使用します。 R の機能がインストールされることを指定すると、インストーラーは、一致する、機械学習のコンポーネントのインストーラーのバージョンが検索されます。
 
 ## <a name="command-line-arguments-for-specifying-component-locations"></a>コンポーネントの場所を指定するためのコマンドライン引数
 
@@ -243,27 +249,26 @@ Microsoft R のソース コードを表示したい場合はダウンロード�
 
 **インストーラーの場所**
 
-- `/UPDATESOURCE`SQL Server 更新プログラムのインストーラーを含むローカル ファイルの場所を指定するには
-- `/MRCACHEDIRECTORY`R コンポーネントの CAB ファイルを含むフォルダーを指定するには
-- `/MPYCACHEDIRECTORY`Python コンポーネントの CAB ファイルを含むフォルダーを指定するには
+- `/UPDATESOURCE` SQL Server 更新プログラムのインストーラーを含むローカル ファイルの場所を指定するには
+- `/MRCACHEDIRECTORY` R コンポーネントの CAB ファイルを含むフォルダーを指定するには
+- `/MPYCACHEDIRECTORY` Python コンポーネントの CAB ファイルを含むフォルダーを指定するには
 
 **SQL Server 2016 での R コンポーネント**
 
-- `/ADVANCEDANALYTICS`外部スクリプトのエンジンのサポートを取得するには
-- `/IACCEPTROPENLICENSETERMS="True"`個別の R 使用許諾契約書に同意するには
+- `/ADVANCEDANALYTICS` 外部スクリプトのエンジンのサポートを取得するには
+- `/IACCEPTROPENLICENSETERMS="True"` 個別の R 使用許諾契約書に同意するには
 
 **SQL Server 2017 で R コンポーネント**
 
-- `/ADVANCEDANALYTICS`外部スクリプトのエンジンのサポートを取得するには
-- `/SQL_INST_MR`R を使用するには
-- `/IACCEPTROPENLICENSETERMS="True"`個別の R 使用許諾契約書に同意するには
+- `/ADVANCEDANALYTICS` 外部スクリプトのエンジンのサポートを取得するには
+- `/SQL_INST_MR` R を使用するには
+- `/IACCEPTROPENLICENSETERMS="True"` 個別の R 使用許諾契約書に同意するには
 
 **SQL Server 2017 で Python コンポーネント**
 
-- `/ADVANCEDANALYTICS`外部スクリプトのエンジンのサポートを取得するには
-- `/SQL_INST_MPY`Python を使用するには
-- `/IACCEPTPYTHONLICENSETERMS="True"`個別の Python 使用許諾契約書に同意するには
-
+- `/ADVANCEDANALYTICS` 外部スクリプトのエンジンのサポートを取得するには
+- `/SQL_INST_MPY` Python を使用するには
+- `/IACCEPTPYTHONLICENSETERMS="True"` 個別の Python 使用許諾契約書に同意するには
 
 > [!NOTE]
 > SQL Server セットアップでパラメーターを使用して、スタート パッドのサービス アカウントを変更できません。 既定のサービス アカウントを使用してインストールして SQL Server 構成マネージャーを使用して、サービス アカウントを変更することをお勧めします。 その後、必ず、スタート パッド サービスを再起動してください。

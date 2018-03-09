@@ -20,20 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 883c016829dcf5ba9b7d48f0356a4a6141550e7d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 2f8b7e34ae99042012b88f9d83c0ee3af0ad18be
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux および macOS に Microsoft ODBC Driver for SQL Server をインストールする
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-このトピックの内容をインストールする方法を説明します、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux と macOS、SQL Server の省略可能なコマンド ライン ツールに (`bcp`と`sqlcmd`) および unixODBC 開発ヘッダー。
+この記事をインストールする方法を説明します、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux と macOS、SQL Server の省略可能なコマンド ライン ツールに (`bcp`と`sqlcmd`) および unixODBC 開発ヘッダー。
 
 ## <a name="microsoft-odbc-driver-17-for-sql-server"></a>SQL Server 用 Microsoft ODBC Driver 17 
-
-**重要なメモ:**バージョン 17 ODBC ドライバーのパッケージは、Linux、Mac は既存のインストールを更新するときに問題のため現在ご利用いただけません。 更新したパッケージをできるだけ早く提供に取り組んでいます。 17 のバージョンのインストール コマンドを実行すると、バージョン 13.1 ドライバーは現在インストールします。
 
 ### <a name="debian-8-and-9"></a>Debian 8 と 9
 ```
@@ -51,7 +49,7 @@ curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources
 
 exit
 sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql
+sudo ACCEPT_EULA=Y apt-get install msodbcsql17
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y apt-get install mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -76,7 +74,7 @@ curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/m
 
 exit
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
-sudo ACCEPT_EULA=Y yum install msodbcsql
+sudo ACCEPT_EULA=Y yum install msodbcsql17
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y yum install mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -101,7 +99,7 @@ zypper ar https://packages.microsoft.com/config/sles/11/prod.repo
 zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
 
 exit
-sudo ACCEPT_EULA=Y zypper install msodbcsql
+sudo ACCEPT_EULA=Y zypper install msodbcsql17
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y zypper install mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -130,7 +128,7 @@ curl https://packages.microsoft.com/config/ubuntu/17.10/prod.list > /etc/apt/sou
 
 exit
 sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql
+sudo ACCEPT_EULA=Y apt-get install msodbcsql17
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y apt-get install mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -146,7 +144,7 @@ sudo apt-get install unixodbc-dev
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox msodbcsql mssql-tools
+brew install --no-sandbox msodbcsql17 mssql-tools
 ```
 
 ## <a name="microsoft-odbc-driver-131-for-sql-server"></a>Microsoft ODBC Driver 13.1 for SQL Server 
@@ -369,12 +367,12 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat は: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-これらの各パッケージが独自の依存関係があり、システムに存在していない可能性があります。 この問題に一般的なソリューションは、配布のパッケージ マネージャーのドキュメントを参照してください: [Red Hat](https://wiki.centos.org/HowTos/CreateLocalRepos)、 [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)、および[SUSE](https://en.opensuse.org/Portal:Zypper)
+これらの各パッケージが、独自の依存関係があり、システムに存在していない可能性があります。 この問題に一般的なソリューションは、配布のパッケージ マネージャーのドキュメントを参照してください: [Red Hat](https://wiki.centos.org/HowTos/CreateLocalRepos)、 [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)、および[SUSE](https://en.opensuse.org/Portal:Zypper)
 
 終了したすべての依存パッケージを手動でダウンロード、インストール コンピューター上に一緒に配置し、各パッケージを手動でインストールに共通ではまた、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 パッケージです。
 
 #### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
-  - 最新版をダウンロード`msodbcsql`ここから .rpm: http://packages.microsoft.com/rhel/7/prod/
+  - 最新版をダウンロード`msodbcsql``.rpm`ここから: http://packages.microsoft.com/rhel/7/prod/
   - 依存関係と、ドライバーをインストールします。
   
 ```
@@ -392,7 +390,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
-- 最新版をダウンロード`msodbcsql`ここから .rpm: http://packages.microsoft.com/sles/12/prod/
+- 最新版をダウンロード`msodbcsql``.rpm`ここから: http://packages.microsoft.com/sles/12/prod/
 - 依存関係と、ドライバーをインストールします。
 
 ```
@@ -426,9 +424,9 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 5.  **odbcinst.ini**のバックアップを作成します。 ドライバーのインストールで、 **odbcinst.ini**を更新します。 odbcinst.ini には、unixODBC ドライバー マネージャーで登録されたドライバーの一覧が含まれます。 コンピューターの odbcinst.ini の場所を検出するには、次のコマンドを実行します。```odbc_config --odbcinstini```です。  
   
-6.  ドライバーをインストールする前に、コマンド **./install.sh verify**を実行します。 Linux で ODBC ドライバーをサポートするためにコンピューターに必要なソフトウェアがある場合、 **./install.sh verify** の出力でレポートされます。  
+6.  ドライバーをインストールする前に、次のコマンドを実行します。`./install.sh verify`です。 出力`./install.sh verify`on Linux の ODBC ドライバーをサポートするために必要なソフトウェアがコンピューターにあるかどうかに報告します。  
   
-7.  Linux に ODBC ドライバーをインストールする準備が整ったら、コマンド **./install.sh install**を実行します。 インストール コマンドを指定する必要がある場合 (`bin-dir`または`lib-dir`)、後にコマンドを指定して、**インストール**オプション。  
+7.  Linux の ODBC ドライバーをインストールする準備ができたら、コマンドを実行します。`./install.sh install`です。 インストール コマンドを指定する必要がある場合 (`bin-dir`または`lib-dir`)、後にコマンドを指定して、**インストール**オプション。  
   
 8.  使用許諾契約を確認し、 **YES** と入力してインストールを続行します。  
   

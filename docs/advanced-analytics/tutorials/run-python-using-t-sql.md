@@ -1,7 +1,7 @@
 ---
 title: "T-SQL を使用して Python を実行 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 09/19/2017
+ms.date: 02/28/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -11,185 +11,385 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: tutorial
 applies_to:
-- SQL Server 2016
+- SQL Server 2017
 dev_langs:
 - Python
 caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: ea8010bb51e02e9676653bb0dc2f12cbfe02761a
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 5c6145d3af6918a5f3daa954aae5522ffffebb89
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="run-python-using-t-sql"></a>T-SQL を使用して実行の Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この例は、ストアド プロシージャを使用して、SQL Server で単純な Python スクリプトを実行する方法を示しています[sp_execute_external_script。](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
+このチュートリアルでは、SQL Server 2017 での Python コードを実行する方法について説明します。 SQL Server と、Python の間でデータを移動するプロセスの手順を説明し、ストアド プロシージャで適切な形式の Python コードをラップする方法について説明します[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)をビルドするには、トレーニング、および SQL の機械学習モデルを使用サーバー。
 
-## <a name="step-1-create-the-test-data-table"></a>手順 1. テスト データ テーブルを作成します。
+## <a name="prerequisites"></a>前提条件
 
-最初に、ソース データへの週の曜日名のマッピング時に使用する、追加のデータを作成します。 テーブルの作成に次の T-SQL ステートメントを実行します。
+このチュートリアルを完了するは、まず SQL Server 2017 をインストールし、」の説明に従って、インスタンスで、Machine Learning のサービスを有効にする必要があります[この資料](../python/setup-python-machine-learning-services.md)です。 
 
-```SQL
-CREATE TABLE PythonTest (
-    [DayOfWeek] varchar(10) NOT NULL,
-    [Amount] float NOT NULL
-    )
-GO
+インストールする必要がありますも[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)です。 代わりに、限り、サーバーおよびデータベースに接続して T-SQL クエリまたはストアド プロシージャを実行できますデータベース管理またはクエリ、別のツールを使用することができます。
 
-INSERT INTO PythonTest VALUES
-('Sunday', 10.0),
-('Monday', 11.1),
-('Tuesday', 12.2),
-('Wednesday', 13.3),
-('Thursday', 14.4),
-('Friday', 15.5),
-('Saturday', 16.6),
-('Friday', 17.7),
-('Monday', 18.8),
-('Sunday', 19.9)
-GO
-```
+セットアップを完了したら、このチュートリアルでは、ストアド プロシージャのコンテキストでの Python コードを実行する方法についてに戻ります。 
 
-## <a name="step-2-run-the-hello-world-script"></a>手順 2. "Hello World"のスクリプトを実行します。
+## <a name="overview"></a>概要
 
-次のコード Python 実行可能ファイル、入力のデータを渡しますを読み込んで、入力データの各行の曜日単位のインデックスを表す数で、テーブルの曜日名を更新します。
+このチュートリアルには、4 つのレッスンが含まれています。
 
-パラメーターのメモ *@RowsPerRead*です。 このパラメーターは、SQL Server から Python ランタイムに渡される行の数を指定します。
++ SQL Server および Python 間のデータ移動の基礎: 基本的な要件、データ構造、入力、出力をについて説明します。
++ サンプル データの読み込みなどの単純な Python タスクにストアド プロシージャの使い方を練習します。
++ Python 機械学習モデルを作成するストアド プロシージャを使用し、モデルからスコアを生成します。
++ 省略可能なレッスンからを実行する Python として SQL Server を使用して、リモート クライアントのユーザーに対して、_計算コンテキスト_です。 は、モデルを構築するためのコードが含まれていますただし、ある程度の Python 環境と Python tools に精通してがあることが必要です。
 
-呼ばれる、Python データ分析ライブラリ**パンダ**の SQL Server にデータを渡すことが必要、および既定では、Machine Learning のサービスは含まれています。
+SQL Server 2017 に固有の他の Python サンプルは、ここで指定した: [SQL Server の Python のチュートリアル](../tutorials/sql-server-python-tutorials.md)
 
-```sql
-DECLARE @ParamINT INT = 1234567
-DECLARE @ParamCharN VARCHAR(6) = 'INPUT '
+## <a name="verify-that-python-is-enabled-and-the-launchpad-is-running"></a>Python を有効にし、スタート パッドを実行していることを確認してください。
 
-print '------------------------------------------------------------------------'
-print 'Output parameters (before):'
-print FORMATMESSAGE('ParamINT=%d', @ParamINT)
-print FORMATMESSAGE('ParamCharN=%s', @ParamCharN)
+1. Management Studio で、サービスが有効になっているかどうかを確認するには、このステートメントを実行します。
 
-print 'Dataset (before):'
-SELECT * FROM PythonTest
+    ```sql
+    sp_configure 'external scripts enabled'
+    ```
 
-print '------------------------------------------------------------------------'
-print 'Dataset (after):'
-DECLARE @RowsPerRead INT = 5
+    場合**run_value** 1 の場合は、マシン学習機能はインストールして使用します。
 
-execute sp_execute_external_script 
-@language = N'Python',
-@script = N'
-import sys
-import os
-print("*******************************")
-print(sys.version)
-print("Hello World")
-print(os.getcwd())
-print("*******************************")
-if ParamINT == 1234567:
-       ParamINT = 1
-else:
-       ParamINT += 1
+    エラーの一般的な原因は、SQL Server と Python 間の通信を管理するには、スタート パッドが停止されたことです。 スタート パッドの状態を表示するには、Windows を使用して**Services**パネル、または SQL Server 構成マネージャーを開くことによってです。 サービスが停止すると、再起動します。
 
-ParamCharN="OUTPUT"
-OutputDataSet = InputDataSet
+2. 次に、Python ランタイムが作業し、SQL Server と通信することを確認します。 これを行うには、新しく開きます**クエリ**SQL Server Management Studio でのウィンドウおよび Python のインストール先のインスタンスに接続します。
 
-global daysMap
+    ```sql
+    EXEC sp_execute_external_script @language = N'Python', 
+    @script = N'print(3+4)'
+    ```
 
-daysMap = {
-       "Monday" : 1,
-       "Tuesday" : 2,
-       "Wednesday" : 3,
-       "Thursday" : 4,
-       "Friday" : 5,
-       "Saturday" : 6,
-       "Sunday" : 7
-       }
+    すべてが適切では場合、は、次のような結果のメッセージが表示されます。
 
-OutputDataSet["DayOfWeek"] = pandas.Series([daysMap[i] for i in OutputDataSet["DayOfWeek"]], index = OutputDataSet.index, dtype = "int32")
-', 
-@input_data_1 = N'SELECT * FROM PythonTest', 
-@params = N'@r_rowsPerRead INT, @ParamINT INT OUTPUT, @ParamCharN CHAR(6) OUTPUT',
-@r_rowsPerRead = @RowsPerRead,
-@paramINT = @ParamINT OUTPUT,
-@paramCharN = @ParamCharN OUTPUT
-with result sets (("DayOfWeek" int null, "Amount" float null))
+    ```text
+    STDOUT message(s) from external script: 
+    7
+    ```
 
-print 'Output parameters (after):'
-print FORMATMESSAGE('ParamINT=%d', @ParamINT)
-print FORMATMESSAGE('ParamCharN=%s', @ParamCharN)
-GO
-```
+3. エラーが発生する場合は、さまざまなサーバーおよび Python 通信できることを確認することがあります。 
 
-> [!TIP]
-> このストアド プロシージャのパラメーターがこのクイック スタートで詳しく説明されている: [t-sql を使用して R コード](rtsql-using-r-code-in-transact-sql-quickstart.md)です。
+    Windows ユーザー グループを追加する必要があります`SQLRUserGroup`スタート パッドが Python と SQL Server 間の通信を提供できることを確認する、インスタンス上のログインとして。 (同じグループは両方の R の使用および Python コードの実行) します。詳細については、次を参照してください。[有効黙示的な認証](../r/add-sqlrusergroup-to-database.md)です。
+    
+    さらに、無効になっているネットワーク プロトコルを有効にするにまたは SQL Server は、外部クライアントと通信できるようにするには、ファイアウォールを解放する必要があります。 詳細については、次を参照してください。[のセットアップに関するトラブルシューティング](../common-issues-external-script-execution.md)です。
 
-## <a name="step-3-view-the-results"></a>手順 3. 結果を表示します。
+## <a name="basic-python-interaction"></a>基本的な Python 対話
 
-ストアド プロシージャは、元のデータを取得し、Python スクリプトを適用で変更されたデータを返します、**結果**の Management Studio またはその他の SQL クエリ ツール ウィンドウです。
+これには SQL Server での Python コードを実行する 2 つの方法があります。
 
++ システム ストアド プロシージャの引数としての Python スクリプトの追加**sp_execute_external_script**
++ リモート Python クライアントでは、SQL Server に接続し、計算コンテキストとして SQL Server を使用してコードを実行します。 これは、必要があります[revoscalepy](../python/what-is-revoscalepy.md)です。
 
-|DayOfWeek (変更前) に、| Amount|DayOfWeek (変更後) |
-|-----|-----|-----|
-|日曜日|10|7|
-|月曜日|11.1|1|
-|火曜日|12.2|2|
-|水曜日|13.3|3|
-|木曜日|14.4|4|
-|金曜日|15.5|5|
-|土曜日|16.6|6|
-|金曜日|17.7|5|
-|月曜日|18.8|1|
-|日曜日|19.9|7|
+このチュートリアルの主な目的は、ストアド プロシージャでの Python を使用することができます。
 
-内のメッセージとして返されるステータス メッセージ、または Python コンソールに返されるエラー、**クエリ**ウィンドウです。 次に表示される出力の抜粋を示します。
+1. SQL Server および Python の間のデータの前後の渡す方法を表示する単純なコードを実行します。
 
-*サンプルの結果*
+    ```sql
+    execute sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    a = 1
+    b = 2
+    c = a/b
+    d = a*b
+    print(c, d)
+    '
+    ```
 
-```
-Output parameters (before):
-ParamINT=1234567
-ParamCharN=INPUT 
-Dataset (before):
+2. すべてのセットアップが正常にあり、その Python と SQL Server が互いに通信した場合、正しい結果が計算され、および、Python`print`関数に結果を返します、**メッセージ**windows です。
 
-(10 rows affected)
+    **結果**
 
-Dataset (after):
-STDOUT message(s) from external script: 
-C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy
+    ```text
+    STDOUT message(s) from external script: 
+    0.5 2
+    ```
+    
+    取得中に**stdout**メッセージは、コードをテストするときに便利ですより多くの場合する必要がありますで結果を返す表形式、アプリケーションで使用したり、テーブルに書き込むようにします。 
 
-3.5.2 |Anaconda 4.2.0 (64-bit)| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)]
-Hello World
-C:\PROGRA~1\MICROS~2\MSSQL1~1.MSS\MSSQL\EXTENS~1\MSSQLSERVER01\7A70B3FB-FBA2-4C52-96D6-8634DB843229
+ここでは、これらの規則に注意してください。
 
-3.5.2 |Anaconda 4.2.0 (64-bit)| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)]
-Hello World
-C:\PROGRA~1\MICROS~2\MSSQL1~1.MSS\MSSQL\EXTENS~1\MSSQLSERVER01\7A70B3FB-FBA2-4C52-96D6-8634DB843229
++ 内のすべての`@script`引数が有効な Python コードをする必要があります。 
++ コードは、インデント、変数名、およびなどに関するすべての Pythonic 規則に従う必要があります。 エラーが発生したときに、空白文字および大文字小文字の区別を確認してください。
++ 既定で読み込まれていないすべてのライブラリを使用している場合、スクリプトの先頭にインポート ステートメントを使用して、それらを読み込む必要があります。 
++ ライブラリが既にインストールされていない場合は、停止、およびパッケージのインストール、Python SQL Server の外部」の説明に従って: [SQL Server に新しい Python パッケージをインストール](../python/install-additional-python-packages-on-sql-server.md)
 
-(10 rows affected)
-Output parameters (after):
-ParamINT=2
-ParamCharN=OUTPUT
-```
+## <a name="inputs-and-outputs"></a>[スクリプト変換エディター]
 
-+ **メッセージ**出力には、スクリプトの実行に使用する作業ディレクトリが含まれています。 この例では MSSQLSERVER01 はジョブを管理する SQL Server によって割り当てられたワーカー アカウントを参照します。 
+既定では、 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 1 つの入力データセットが有効な SQL クエリの形式で指定する通常を受け入れます。 その他の種類の入力は、SQL 変数として渡されることができます: たとえば、渡せるトレーニング済みモデルを変数としてなどを使用してシリアル化の関数[pickle](https://docs.python.org/3.0/library/pickle.html)または[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)でモデルを記述する、バイナリ形式です。
 
-    GUID は、データとスクリプトの成果物を保管するスクリプトの実行中に作成された一時フォルダーの名前です。 これらの一時フォルダーは、SQL Server がセキュリティで保護されクリーンアップされます Windows ジョブ オブジェクトでスクリプトが終了した後です。
+ストアド プロシージャが返す 1 つの Python[パンダ](http://pandas.pydata.org/pandas-docs/stable/index.html)出力としてデータ フレーム。 ただし変数としてスカラーおよびモデルを出力することができます。 たとえば、バイナリ変数として、トレーニング済みモデルを出力でき、そのモデルをテーブルに書き込む、T SQL の INSERT ステートメントに渡すできます。 バイナリ形式でプロットまたはスカラーを生成することもできます (日付と時刻をなど、個々 の値、経過時間、モデルのトレーニングなど)。
 
-+ メッセージ"Hello World"が含まれたセクションでは、2 回を出力します。 これは、値の *@RowsPerRead*  5 に設定しは、テーブルの 10 行では Python を 2 つの呼び出しがテーブル内のすべての行を処理に必要なため、します。
+ここは、既定値だけを見てみましょう入力と出力変数では、`InputDataSet`と`OutputDataSet`です。 
 
-    実行では、運用、各バッチで渡す必要がある行の最大数を決定する値が異なる試してみることをお勧めします。 最適な数の行のデータに依存するは、データセット内の列の番号の両方と渡されたデータの種類によって影響をします。
+1. いくつかの数値演算を行い、結果を出力するには、次のコードを実行します。
 
-## <a name="resources"></a>リソース
+        ```sql
+        execute sp_execute_external_script 
+        @language = N'Python', 
+        @script = N'
+        a = 1
+        b = 2
+        c = a/b
+        print(c)
+        OutputDataSet = c
+        '
+        WITH RESULT SETS ((ResultValue float))
+        ```
 
-これらの他の Python サンプルと高度なヒントと、エンド ツー エンドのデモ用のチュートリアルを参照してください。
+2. Python コードにはスカラーでは、データ フレームではありませんがによって生成されるため、エラーを取得する必要があります。
 
-+ [Python revoscalepy を使用してモデルを作成するには](use-python-revoscalepy-to-create-model.md)
-+ [SQL 開発者のためのデータベースでの Python](sqldev-in-database-python-for-sql-developers.md)
-+ [Python および SQL Server を使用して予測モデルを構築します。](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
+        **Results**
 
-## <a name="troubleshooting"></a>トラブルシューティング
+        ```text
+        line 43, in transform
+            raise TypeError('OutputDataSet should be of type pandas.DataFrame')
+        ```
 
-ストアド プロシージャを見つけられない場合`sp_execute_external_script`、おそらくが終了していない外部スクリプトの実行をサポートするためにインスタンスを構成することを意味します。 SQL Server 2017 セットアップを実行し、機械学習の言語としての Python を選択すると、後にする必要があります明示的に有効にする機能を使用して、 `sp_configure`、インスタンスを再起動します。 詳細については、「 [Python セットアップの Machine Learning サービス](../python/setup-python-machine-learning-services.md)です。
+3. これで表形式のデータセットに渡す Python、既定の入力変数を使用するときの動作を参照してください`InputDataSet`です。 
+
+    ```sql
+    EXECUTE sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    OutputDataSet = InputDataSet
+    ',
+    @input_data_1 = N'SELECT 1 as Col1'
+    ```
+
+    ストアド プロシージャを返します、data.frame、自動的に、Python コード内の余分な何もする必要はありません。
+
+    **結果**
+
+    | ありません columnname|
+    |------|
+    | 1|
+
+    既定では、1 つの表形式の入力データセットが、名前を持つ`InputDataSet`します。 ただし、次のように行を追加してその名前を変更することができます:`@input_data_1_name = N'myResultName'`です。
+
+    Python を使用する列名は、出力で保持されません。 指定された列名の入力クエリが`Col1`、その名前が返されないは、Python スクリプトで使用される任意の列見出し。 SQL Server にデータを返す場合に、列の名前とデータ型を指定するには、T-SQL を使用して`WITH RESULT SETS`句。
+
+4. この例では、入力と出力変数の新しい名前を提供します。
+
+    ```sql
+    execute sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    MyOutput = MyInput
+    ',
+    @input_data_1_name = N'MyInput',
+    @input_data_1 = N'SELECT 1 as Col1',
+    @output_data_1_name = N'MyOutput'
+    WITH RESULT SETS ((ResultValue int))
+    ```
+
+    Python 列名は、data.frame と共に返されることはありませんので、結果のセットの句は、出力のスキーマを定義します。
+
+    **結果**
+
+    | ResultValue|
+    |------|
+    | 1|
+
+5. これで、一般的な Python エラーを確認してみましょう。 前の例からの行を変更`@input_data_1_name = N'MyInput'`に`@input_data_1_name = N'myinput'`です。
+
+    Python のエラーは、SQL Server で使用される、サテライト サービスによって、メッセージとしてに渡されます。 メッセージは長くなるし、SQL Server エラーまたは Python エラーに加えてスタート パッドのエラーを含めるため物置テキストからで患者をします。 キーのメッセージは、この行には。
+
+    ```text
+    MyOutput = MyInput
+    NameError: name 'MyInput' is not defined
+    ```
+
+    R と同様に、Python と小文字は区別ことに注意してください。 そのため、任意の種類のエラーを取得する場合、変数名を確認し、間隔、インデント、およびデータ型の問題を検索します。
+
+## <a name="python-data-structures"></a>Python のデータ構造体
+
+SQL Server は、Python に依存**パンダ**パッケージは表形式のデータを操作するために役立ちます。 ただし、既に見たよう Python から SQL Server にはスカラーを渡すし、"単に動作"予想されることはできません。 このセクションの Python と SQL Server の間で表形式のデータを渡すときに間で実行するその他の問題についての準備に、一部の基本的なデータ型定義を確認します。
+
++ データ フレームを含むテーブルは、_複数_列です。
++ データ フレームの 1 つの列は、系列と呼ばれるリストのようなオブジェクトです。
++ 1 つの値は、データ フレームのセルには、インデックスによって呼び出すことがあります。
+
+Data.frame が表形式構造を必要とする場合、データ フレームとして計算の 1 つの結果をどのようにを公開しますか。 1 つの応答では、データ フレームに簡単に変換されるデータ系列として単一のスカラー値を表すです。 
+
+1. この例では、いくつかの単純な計算はしを系列にはスカラーに変換します。 系列には、割り当てることができます、ここで示すように、手動またはプログラムによって、インデックスが必要です。
+
+    ```sql
+    execute sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    a = 1
+    b = 2
+    c = a/b
+    print(c)
+    s = pandas.Series(c, index =["simple math example 1"])
+    print(s)
+    '
+    ```
+
+2. 系列は、data.frame に変換されていない、ため、[メッセージ] ウィンドウで、値が返されますが、結果がより表形式であることを確認できます。
+
+    **結果**
+
+    ```text
+    STDOUT message(s) from external script: 
+    0.5
+    simple math example 1    0.5
+    dtype: float64
+    ```
+
+3. 系列の長さを上げるためには配列を使用して新しい値は、追加できます。 
+
+    ```sql
+    execute sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    a = 1
+    b = 2
+    c = a/b
+    d = a*b
+    s = pandas.Series([c,d])
+    print(s)
+    '
+    ```
+
+    インデックスを指定しない場合は、0 から始まる配列の長さで終わる値を持つインデックスが生成されます。
+
+    **結果**
+
+    ```text
+    STDOUT message(s) from external script: 
+    0    0.5
+    1    2.0
+    dtype: float64
+    ```
+
+4. 数を増やす場合**インデックス**値、新規に追加しないで**データ**値、連続データを作成するデータ値が繰り返されます。
+
+    ```sql
+    execute sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    a = 1
+    b = 2
+    c = a/b
+    s = pandas.Series(c, index =["simple math example 1", "simple math example 2"])
+    print(s)
+    '
+    ```
+
+    **結果**
+
+    ```text
+    STDOUT message(s) from external script: 
+    0.5
+    simple math example 1    0.5
+    simple math example 2    0.5
+    dtype: float64
+    ```
+
+### <a name="convert-series-to-data-frame"></a>系列をデータ フレームに変換します。
+
+表形式構造体に、スカラー演算の結果を変換すること、必要がありますに SQL Server が処理できる形式に変換します。 
+
+1. 系列を data.frame に変換する呼び出しパンダ[データ フレーム](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe)メソッドです。
+
+    ```sql
+    execute sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    import pandas as pd
+    a = 1
+    b = 2
+    c = a/b
+    d = a*b
+    s = pandas.Series([c,d])
+    print(s)
+    df = pd.DataFrame(s)
+    OutputDataSet = df
+    '
+    WITH RESULT SETS (( ResultValue float ))
+    ```
+
+2. Data.frame から特定の値を取得するインデックスを使用する場合でも、インデックス値が出力をされないことに注意してください。
+
+    **結果**
+
+    |ResultValue|
+    |------|
+    |0.5|
+    |2|
+
+### <a name="output-values-into-dataframe-using-an-index"></a>インデックスを使用して data.frame に出力値
+
+単純な算術演算の結果を含む、2 つの系列が、data.frame への変換のしくみを見てみましょう。 最初には、Python によって生成される連続した値のインデックスがあります。 2 つ目は、文字列値の任意のインデックスを使用します。
+
+1. この例では、整数インデックスを使用する系列の値を取得します。
+
+    ```sql
+    EXECUTE sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    import pandas as pd
+    a = 1
+    b = 2
+    c = a/b
+    d = a*b
+    s = pandas.Series([c,d])
+    print(s)
+    df = pd.DataFrame(s, index=[1])
+    OutputDataSet = df
+    '
+    WITH RESULT SETS (( ResultValue float ))
+    ```
+
+    自動生成されたインデックスは 0 から始まることに注意してください。 範囲外のインデックス値を使用してくださいし、何が起こるかを確認します。
+
+2. 今すぐみましょう文字列インデックスを持つ他のデータ フレームから 1 つの値を取得します。 
+
+    ```sql
+    EXECUTE sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    import pandas as pd
+    a = 1
+    b = 2
+    c = a/b
+    s = pandas.Series(c, index =["simple math example 1", "simple math example 2"])
+    print(s)
+    df = pd.DataFrame(s, index=["simple math example 1"])
+    OutputDataSet = df
+    '
+    WITH RESULT SETS (( ResultValue float ))
+    ```
+
+    **結果**
+
+    |ResultValue|
+    |------|
+    |0.5|
+
+    エラーが発生したこのシリーズの値を取得する数値のインデックスを使用しようとする場合。
+
+この演習は、別の Python データ構造を操作し、データ フレームとして正しい結果を取得することを確認する方法の概要を把握することを目的としています。 可能性がありますが終了したことを出力する 1 つの値データ フレームはその分よりも多くの問題です。 幸いにも、すべての種類のストアド プロシージャとの間の値には、変数として簡単に渡すことができます。 次のレッスンをについて説明します。
+
+## <a name="tips"></a>ヒント
+
++ Python では、プログラミング言語間では、最も柔軟なの 1 つ単一引用符と二重引用符で囲ま; に関してこれらは、ほぼ同義です。 
+
+    ただし、T-SQL は、特定の点のみに対して単一引用符を使用し、`@script`引数では、単一引用符を使用して、Unicode 文字列としての Python コードを囲みます。 したがって、Python コードを確認し、いくつかの単一引用符を二重引用符に変更する必要があります。
+
++ ストアド プロシージャを見つけることができません`sp_execute_external_script`しますか? 外部スクリプトの実行をサポートするためにインスタンスを構成する可能性があります終了していないことを示します。 SQL Server 2017 セットアップを実行し、機械学習の言語としての Python を選択すると、後にする必要があります明示的に有効にする機能を使用して、 `sp_configure`、インスタンスを再起動します。 
+
+    詳細については、「 [Python セットアップの Machine Learning サービス](../python/setup-python-machine-learning-services.md)です。
+
+## <a name="next-steps"></a>次の手順
+
+[SQL ストアド プロシージャでの Python コードを折り返す](wrap-python-in-tsql-stored-procedure.md)

@@ -1,10 +1,10 @@
 ---
-title: "Linux 上の SQL Server 2017 年 1 のインストール |Microsoft ドキュメント"
+title: "Linux 上の SQL Server 2017 のためのインストール ガイド |Microsoft ドキュメント"
 description: "インストール、更新、および Linux に SQL Server をアンインストールします。 この記事では、オンライン、オフライン、および無人のシナリオについて説明します。"
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/21/2017
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,26 +15,30 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: c686e97bd3d06b99fcbb847c23ac7e174e85dd6b
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: d8f8cde3d3a299008d75c4b701be224c458880eb
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上の SQL Server のインストールのガイダンス
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、インストール、更新、および Linux に SQL Server 2017 をアンインストールする方法について説明します。 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、および Ubuntu では、SQL Server 2017 をサポートします。 Linux または Docker を Windows/ファルダ上の Docker エンジンで実行できる、Docker のイメージとして使用
+この記事では、インストール、更新、および Linux に SQL Server 2017 をアンインストールするためのガイダンスを提供します。
 
 > [!TIP]
-> 手始めのクイック スタートのいずれかにジャンプ[RHEL](quickstart-install-connect-red-hat.md)、 [SLES](quickstart-install-connect-suse.md)、 [Ubuntu](quickstart-install-connect-ubuntu.md)、または[Docker](quickstart-install-connect-docker.md)です。
+> このガイドには、いくつかの展開シナリオ項目について説明します。 ステップ バイ ステップのインストール手順だけを検索する場合は、クイック スタートのいずれかに移動します。
+> - [RHEL クイック スタート](quickstart-install-connect-red-hat.md)
+> - [SLES クイック スタート](quickstart-install-connect-suse.md)
+> - [Ubuntu のクイック スタート](quickstart-install-connect-ubuntu.md)
+> - [Docker クイック スタート](quickstart-install-connect-docker.md)
 
 よく寄せられる質問に対する回答については、次を参照してください。、 [SQL Server on Linux に関する FAQ](../linux/sql-server-linux-faq.md)です。
 
 ## <a id="supportedplatforms"></a> サポートされているプラットフォーム
 
-SQL Server 2017 は次の Linux プラットフォームでサポートされています。
+Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、および Ubuntu では、SQL Server 2017 をサポートします。 Linux または Docker を Windows/ファルダ上の Docker エンジンで実行できる、Docker のイメージとしてもサポートされます。
 
 | プラットフォーム | サポートされているバージョン | 取得
 |-----|-----|-----
@@ -69,6 +73,13 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 - のみを検索、 **/var/opt/mssql** NFS マウント上のディレクトリ。 SQL Server システム バイナリなどその他のファイルはサポートされていません。
 - NFS クライアントが、そのリモート共有をマウントするときに、'nolock' オプションを使用することを確認します。
 
+## <a id="repositories"></a> ソース リポジトリを構成します。
+
+インストールまたは SQL Server をアップグレードするときに、構成されている Microsoft リポジトリから SQL Server 2017 の最新バージョンを取得します。 クイック スタートを使用して、**累積的な更新プログラム (CU)**リポジトリです。 代わりに構成することができますが、 **GDR**リポジトリです。 リポジトリとその構成方法の詳細については、次を参照してください。 [Linux に SQL Server 用のリポジトリを構成する](sql-server-linux-change-repo.md)です。
+
+> [!IMPORTANT]
+> CTP または SQL Server 2017 年 1 の RC バージョンを以前インストールした場合は、プレビュー リポジトリを削除し、一般公開 (GA) 1 つを登録する必要があります。 詳細については、次を参照してください。 [Linux に SQL Server 用のリポジトリを構成する](sql-server-linux-change-repo.md)です。
+
 ## <a id="platforms"></a> SQL Server のインストール
 
 コマンドラインから Linux に SQL Server をインストールできます。 手順については、次のクイック スタートのいずれかを参照してください。
@@ -78,13 +89,6 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 - [Ubuntu にインストールします](quickstart-install-connect-ubuntu.md)
 - [Docker で実行します。](quickstart-install-connect-docker.md)
 - [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
-
-## <a id="repositories"></a> ソース リポジトリを構成します。
-
-インストールまたは SQL Server をアップグレードするときに、構成されている Microsoft リポジトリから SQL Server 2017 の最新バージョンを取得します。 クイック スタートを使用して、**累積的な更新プログラム (CU)**リポジトリです。 代わりに構成することができますが、 **GDR**リポジトリです。 リポジトリとその構成方法の詳細については、次を参照してください。 [Linux に SQL Server 用のリポジトリを構成する](sql-server-linux-change-repo.md)です。
-
-> [!IMPORTANT]
-> CTP または SQL Server 2017 年 1 の RC バージョンを以前インストールした場合は、プレビュー リポジトリを削除し、一般公開 (GA) 1 つを登録する必要があります。 詳細については、次を参照してください。 [Linux に SQL Server 用のリポジトリを構成する](sql-server-linux-change-repo.md)です。
 
 ## <a id="upgrade"></a> SQL Server を更新します。
 
@@ -202,18 +206,16 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="optional-sql-server-features"></a>省略可能な SQL Server の機能
 
-インストールが完了したら、他の省略可能な SQL Server パッケージをインストールすることもできます。
+インストール後もインストールまたは、省略可能な SQL Server の機能を有効にできます。
 
 - [SQL Server コマンド ライン ツール](sql-server-linux-setup-tools.md)
 - [SQL Server エージェント](sql-server-linux-setup-sql-agent.md)
 - [SQL Server フルテキスト検索](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
 
-データベースの作成および管理を開始するように SQL Server インスタンスに接続します。 開始するには、クイック スタートを参照してください。
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
-- [Red Hat Enterprise Linux にインストールします。](quickstart-install-connect-red-hat.md)
-- [SUSE Linux Enterprise Server にインストールします](quickstart-install-connect-suse.md)
-- [Ubuntu にインストールします](quickstart-install-connect-ubuntu.md)
-- [Docker で実行します。](quickstart-install-connect-ubuntu.md)
+> [!TIP]
+> よく寄せられる質問に対する回答については、次を参照してください。、 [SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)です。

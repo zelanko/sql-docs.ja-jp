@@ -2,7 +2,7 @@
 title: "クイック スタート: 接続し、クエリの SQL 操作 Studio (プレビュー) を使用して SQL Server |Microsoft ドキュメント"
 description: "このクイック スタートは、Studio を使用して SQL の操作 (プレビュー) を SQL Server に接続してクエリを実行する方法を示しています。"
 ms.custom: tools|sos
-ms.date: 11/15/2017
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,16 +14,16 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7588368dcd64316551a9eaa72aeb8ce1d2ea67a6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c0f78537429026583fe970a65426bc909a46557
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート: に接続してクエリを使用して SQL サーバー[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート: に接続してクエリを使用して SQL サーバー [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 このクイック スタートの使用方法を示しています。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] SQL Server に接続し、TRANSACT-SQL (T-SQL) ステートメントを使用して、作成、 *TutorialDB*で使用される[!INCLUDE[name-sos](../includes/name-sos-short.md)]チュートリアルです。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このクイック スタートを完了する必要があります[!INCLUDE[name-sos](../includes/name-sos-short.md)]、および SQL Server にアクセスします。
 
@@ -92,7 +92,10 @@ SQL Server へのアクセスを持っていない場合は、次のリンクか
 
 
 
-1. クエリ ウィンドウに次のスニペットを貼り付けます。
+1. クエリ ウィンドウに次のスニペットを貼り付けるし、をクリックして**実行**:
+
+   > [!NOTE]
+   > これを追加したり、エディターでは、前のクエリを上書きできます。 クリックすると**実行**が選択されているクエリのみを実行します。 何も選択されている場合にクリックすると**実行**エディター内のすべてのクエリを実行します。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -115,7 +118,8 @@ SQL Server へのアクセスを持っていない場合は、次のリンクか
 
 ## <a name="insert-rows"></a>行を挿入します。
 
-1. クエリ ウィンドウに次のスニペットを貼り付けます。
+- クエリ ウィンドウに次のスニペットを貼り付けるし、をクリックして**実行**:
+
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -128,18 +132,17 @@ SQL Server へのアクセスを持っていない場合は、次のリンクか
    GO
    ```
 
-1. クエリを実行する をクリックして**実行**です。
 
 
 ## <a name="view-the-data-returned-by-a-query"></a>クエリによって返されるデータを表示します。
-1. クエリ ウィンドウに次のスニペットを貼り付けます。
+1. クエリ ウィンドウに次のスニペットを貼り付けるし、をクリックして**実行**:
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. クエリを実行する をクリックして**実行**です。
+1. クエリの結果が表示されます。
 
    ![Select の結果](media/quickstart-sql-server/select-results.png)
 
