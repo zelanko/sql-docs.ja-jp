@@ -1,6 +1,6 @@
 ---
 title: "SQL Server に追加の R パッケージをインストール |Microsoft ドキュメント"
-ms.date: 02/20/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: a328b07027f61f50df7e3ca2b6ac12b92508688b
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: acb1727c85cae1d8176703c93cc77c971980d394
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>SQL Server に追加の R パッケージをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ SQL Server のバージョンがある場合、および、サーバーがイン
 
     インターネットからパッケージをインストールするのにには、従来の R コマンドを使用します。 これは最も簡単な方法ですが、管理アクセス権が必要です。
 
-    **適用されます:**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]です。     必要なのインスタンス[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] Ddl を使用してパッケージの管理が有効になっていません。
+    **適用されます:**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]です。 必要なのインスタンス[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] Ddl を使用してパッケージの管理が有効になっていません。
 
 + [使用して、サーバーに新しい R パッケージをインストール**ありません**インターネットへのアクセス](#bkmk_offlineInstall)
 
@@ -40,9 +40,9 @@ SQL Server のバージョンがある場合、および、サーバーがイン
 
 + [外部ライブラリの作成ステートメントを使用してパッケージをインストールします。](#bkmk_createlibrary) 
 
-    外部ライブラリの作成ステートメントは、DBA が R または Python コードを直接実行せずにパッケージ ライブラリを作成できるように、SQL Server 2017 で提供されます。 ただし、このメソッドは、必要なすべてのパッケージを事前に準備することが必要です。  
+    [外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)ステートメントは、SQL Server 2017 年、R を実行しなくてもパッケージ ライブラリを作成できるようにすることで提供される、Python コードを直接またはします。 ただし、このメソッドは、必要なすべてのパッケージを事前に準備し、その他のデータベース権限が必要ですが必要です。
 
-    **適用されます:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; 他の制限が適用されます  
+    **適用されます:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; 他の制限が適用されます
 
 ## <a name="bkmk_rInstall"></a> インターネットを使用して新しい R パッケージをインストールします。
 
@@ -131,7 +131,7 @@ SQL Server のバージョンがある場合、および、サーバーがイン
 
 ## <a name="bkmk_createlibrary"></a> DDL ステートメントを使用して、パッケージをインストールします。 
 
-SQL Server 2017 で使用できます、[外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)インスタンスまたは特定のデータベースにパッケージまたはパッケージのセットを追加するステートメント。 この DDL ステートメントとサポートのデータベース ロールは、パッケージのインストールと管理を容易にで、BA R または Python のツールを使用する必要はありません。
+SQL Server 2017 で使用できます、[外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)インスタンスまたは特定のデータベースにパッケージまたはパッケージのセットを追加するステートメント。 この DDL ステートメントとサポートのデータベース ロール、パッケージのインストールと管理を容易にするため、データベースの所有者によって R または Python のツールを使用することがなくです。
 
 このプロセスには、R、Python または、従来の方法を使用してパッケージをインストールすると比較すると、いくつかの準備が必要です。
 
@@ -140,6 +140,8 @@ SQL Server 2017 で使用できます、[外部ライブラリの作成](https:/
     サーバー上のファイル システムへのアクセスがない、渡すこともできます完全なパッケージ変数としてバイナリ形式を使用します。 詳細については、次を参照してください。[外部ライブラリの作成](../../t-sql/statements/create-external-library-transact-sql.md)です。
 
 + パッケージが利用できないために必要な場合、ステートメントが失敗します。 インストールし、サーバーおよびデータベースへのパッケージがアップロードされるかどうかを確認するパッケージの依存関係を分析する必要があります。 使用することをお勧め**miniCRAN**または**igraph**パッケージの依存関係を分析するためです。
+
++ データベースでは、必要なアクセス許可が必要です。 詳細については、「[外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)です。
 
 ### <a name="prepare-the-packages-in-archive-format"></a>アーカイブ形式でパッケージを準備します。
 

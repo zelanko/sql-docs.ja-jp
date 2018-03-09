@@ -2,7 +2,7 @@
 title: "クイック スタート: は接続し、クエリの SQL 操作 Studio (プレビュー) を使用して Azure SQL Data Warehouse |Microsoft ドキュメント"
 description: "このクイック スタートは、SQL 操作 Studio (プレビュー) を使用して SQL データベースに接続し、クエリを実行する方法を示しています。"
 ms.custom: tools|sos
-ms.date: 11/15/2017
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,17 +14,17 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c00912cadb94abccf14779fc6969c3a70b02a7d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3d4ed7d25abb2780c719c5b8201ecae54e8e86bf
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>クイック スタート: を使用して[!INCLUDE[name-sos](../includes/name-sos-short.md)]接続し、Azure SQL Data Warehouse のデータの照会
 
 このクイック スタートを使用する方法を示しています[!INCLUDE[name-sos](../includes/name-sos-short.md)]に Azure SQL データ ウェアハウスに接続し、TRANSACT-SQL ステートメントを使用して、作成、挿入、およびデータを選択します。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 このクイック スタートを完了する必要があります[!INCLUDE[name-sos](../includes/name-sos-short.md)]、および Azure SQL データ ウェアハウスです。
 
 - [インストール[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)です。
@@ -38,32 +38,34 @@ SQL データ ウェアハウスがない場合は、次を参照してくださ
 
 使用して[!INCLUDE[name-sos](../includes/name-sos-short.md)]Azure SQL Data Warehouse サーバーへの接続を確立します。
 
-1. 初めて実行する[!INCLUDE[name-sos](../includes/name-sos-short.md)]、**接続**ページを開く必要があります。 場合、**接続**ページが開かないをクリックして、**新しい接続**のアイコン、**サーバー**サイドバー。
+1. 初めて実行する[!INCLUDE[name-sos](../includes/name-sos-short.md)]、**接続**ページを開く必要があります。 表示されない場合、**接続**] ページで [**接続の追加**、または**新しい接続**のアイコン、**サーバー**サイドバー。
    
    ![新しい接続のアイコン](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. この記事では*SQL ログイン*が*Windows 認証*もサポートされています。 次のように、フィールドに入力します。
+2. この記事では*SQL ログイン*が*Windows 認証*もサポートされています。 次のようにサーバー名、ユーザー名およびパスワードを使用して、フィールドに入力*、* Azure SQL server:
 
    | 設定       | 提案される値 | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **サーバー名** | 完全修飾サーバー名 | 名前には、次のようにする必要があります: **sqldwsample.database.windows.net** |
    | **[認証]** | SQL ログイン| このチュートリアルでは、SQL 認証を使用します。 |
-   | **User name** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
+   | **ユーザー名** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
    | **パスワード (SQL ログイン)** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
    | **パスワードを保存しますか?** | はい、いいえ | 毎回パスワードを入力したくない場合は、[はい] を選択します。 |
    | **データベース名** | *空白のままに* | 接続先となるデータベースの名前。 |
-   | **サーバー グループ** | 選択します。<Default> | サーバー グループを作成する場合は、特定のサーバー グループを設定できます。 | 
+   | **サーバー グループ** | 選択します。 <Default> | サーバー グループを作成する場合は、特定のサーバー グループを設定できます。 | 
 
    ![新しい接続のアイコン](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. ファイアウォールに関するエラーが発生した場合は、ファイアウォール規則を作成する必要があります。 ファイアウォール規則を作成するを参照してください。[のファイアウォール ルールを](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)です。
+3. サーバーに接続する、SQL 操作 Studio を許可するファイアウォール規則を持っていない場合、**新しいファイアウォール ルールを作成**フォームが開きます。 新しいファイアウォール ルールを作成するフォームを完了します。 詳細については、「[のファイアウォール ルール](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)です。
 
-4. サーバーを正常に接続した後は、オブジェクト エクスプ ローラーに表示されます。
+   ![新しいファイアウォール規則](media/quickstart-sql-dw/firewall.png)  
+
+4. サーバーへの接続が開いた後、*サーバー*サイドバーです。
 
 ## <a name="create-the-tutorial-data-warehouse"></a>チュートリアルのデータ ウェアハウスを作成します。
 1. オブジェクト エクスプ ローラーで、サーバーを右クリックし、選択**新しいクエリ。**
 
-1. 次のスニペットをクエリ エディターに貼り付けます。
+1. 次のスニペットをクエリ エディターに貼り付け をクリックして**実行**:
 
    ```sql
     IF NOT EXISTS (
@@ -78,7 +80,6 @@ SQL データ ウェアハウスがない場合は、次を参照してくださ
     GO
    ```
 
-1. クエリを実行する をクリックして**実行**です。
 
 ## <a name="create-a-table"></a>テーブルの作成
 
@@ -89,7 +90,10 @@ SQL データ ウェアハウスがない場合は、次を参照してくださ
    ![変更のコンテキスト](media/quickstart-sql-database/change-context.png)
 
 
-1. 次のスニペットをクエリ エディターに貼り付けます。
+1. 次のスニペットをクエリ エディターに貼り付け をクリックして**実行**:
+
+   > [!NOTE]
+   > これを追加したり、エディターでは、前のクエリを上書きできます。 クリックすると**実行**が選択されているクエリのみを実行します。 何も選択されている場合にクリックすると**実行**エディター内のすべてのクエリを実行します。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -108,11 +112,10 @@ SQL データ ウェアハウスがない場合は、次を参照してくださ
    GO
    ```
 
-1. クエリを実行する をクリックして**実行**です。
 
 ## <a name="insert-rows"></a>行を挿入します。
 
-1. 次のスニペットをクエリ エディターに貼り付けます。
+1. 次のスニペットをクエリ エディターに貼り付け をクリックして**実行**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -124,17 +127,16 @@ SQL データ ウェアハウスがない場合は、次を参照してくださ
       SELECT 4, N'Janet', N'United States', N'janet1@adventure-works.com'
    ```
 
-1. クエリを実行する をクリックして**実行**です。
 
 ## <a name="view-the-result"></a>結果を表示します。
-1. 次のスニペットをクエリ エディターに貼り付けます。
+1. 次のスニペットをクエリ エディターに貼り付け をクリックして**実行**:
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. クエリを実行する をクリックして**実行**です。
+1. クエリの結果が表示されます。
 
    ![Select の結果](media/quickstart-sql-dw/select-results.png)
 
