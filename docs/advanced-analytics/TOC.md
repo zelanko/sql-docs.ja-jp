@@ -84,7 +84,10 @@
 ## [Python のチュートリアル](tutorials/sql-server-python-tutorials.md)
 
 ### [Python: T-SQL を使用して Python を実行する](tutorials/run-python-using-t-sql.md)
-### [Python: revoscalepy を使用してモデルを作成する](tutorials/use-python-revoscalepy-to-create-model.md)
+#### [ストアド プロシージャで Python をラップする](tutorials/wrap-python-in-tsql-stored-procedure.md)
+#### [SQL Server の Python モデルからトレーニングおよびスコア付けする](tutorials/train-score-using-python-in-tsql.md)
+#### [SQL Server の計算コンテキストで revoscalepy を使用してモデルを作成する](tutorials/use-python-revoscalepy-to-create-model.md)
+
 ### [Python: SQL 開発者向けの高度な分析 (データベース内)](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 #### [サンプル データをダウンロードする](tutorials/sqldev-py1-download-the-sample-data.md)
@@ -94,7 +97,7 @@
 #### [モデルのトレーニングと保存](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [モデルを運用する](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python: モデルを展開および使用する](../advanced-analytics/python/publish-consume-python-code.md)
+### [Python: スタンドアロン サーバーを使用してモデルを展開および使用する](../advanced-analytics/python/publish-consume-python-code.md)
 
 # [Machine Learning Server - スタンドアロン](r/r-server-standalone.md)
 ## [作業の開始](r/getting-started-with-microsoft-r-server-standalone.md)
@@ -163,7 +166,7 @@
 ### [Machine Learning Services のリソース管理](r/resource-governance-for-r-services.md)
 ### [Machine Learning 用のリソース プールの作成](r/how-to-create-a-resource-pool-for-r.md)
 ### [Machine Learning Services の拡張イベント](r/extended-events-for-sql-server-r-services.md)
-
+### [PREDICT ステートメントを監視するための拡張イベント](xe-event-predict-tsql.md)
 ### [Machine Learning Services の DMV](r/dmvs-for-sql-server-r-services.md)
 ### [R コード プロファイル関数の使用](r/using-r-code-profiling-functions.md)
 ### [Management Studio でカスタム レポートを使用して Machine Learning Services を監視する](r/monitor-r-services-using-custom-reports-in-management-studio.md)
