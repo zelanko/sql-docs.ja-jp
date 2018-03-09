@@ -1,4 +1,4 @@
----
+﻿---
 title: "Linux 上の SQL Server のパフォーマンス機能の概要 |Microsoft ドキュメント"
 description: "この記事では、SQL Server に追加された新しい Linux ユーザーの SQL Server のパフォーマンス機能の概要を示します。 すべてのプラットフォームでは、これらの例の多くは機能が Linux にこの記事のコンテキストが存在します。"
 author: rothja
@@ -130,7 +130,7 @@ SQL Server では、アプリケーションのシステムのパフォーマン
 ### <a name="natively-compiled-stored-procedure"></a>ネイティブ コンパイル ストアド プロシージャ
 SQL Server では、メモリ最適化テーブルにアクセスするネイティブ コンパイル ストアド プロシージャがサポートされています。 T-SQL ステートメントは、機械語のコードにコンパイルされ、高速データ アクセスと従来の T-SQL より効率的なクエリ実行が可能になる、ネイティブ DLL として格納されます。   NATIVE_COMPILATION が設定されているストアド プロシージャはネイティブでコンパイルされます。 
 
-1. ShoppingCart テーブルに大量のレコードを挿入するネイティブ コンパイル ストアド プロシージャを作成する次のスクリプトを実行します。
+1. ShoppingCart テーブルに大量のレコードを挿入するネイティブ コンパイル ストアド プロシージャを作成する次のスクリプトを実行します。 
 
 
    ```sql
@@ -148,7 +148,7 @@ SQL Server では、メモリ最適化テーブルにアクセスするネイテ
     END
    END 
    ```
-2. 行数は 1,000,000 行を挿入します。
+2. 1,000,000 行を挿入します。
 
    ```sql
    EXEC usp_InsertSampleCarts 1000000 
@@ -178,7 +178,7 @@ SQL Server では、メモリ最適化テーブルにアクセスするネイテ
    ALTER DATABASE AdventureWorks SET QUERY_STORE = ON;
    ```
 
-クエリ ストアのクエリとプランに関する情報を返す次のクエリを実行します。 
+クエリ ストアのクエリとプランに関する情報を返す次のクエリを実行します。  
 
    ```sql
    SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*
@@ -192,7 +192,7 @@ SQL Server では、メモリ最適化テーブルにアクセスするネイテ
 ## <a name="query-dynamic-management-views"></a>クエリの動的管理ビュー
 動的管理ビューは、サーバー インスタンスのヘルスの監視、問題の診断、パフォーマンスのチューニングに使用できる、サーバーの状態の情報を返します。
 
-Dm_os_wait stats 動的管理ビューを照会します。
+Dm_os_wait stats 動的管理ビューを照会します。 
 
    ```sql
    SELECT wait_type, wait_time_ms

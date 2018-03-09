@@ -1,4 +1,4 @@
----
+﻿---
 title: "SQL Server の Red Hat Enterprise Linux 共有クラスターを運用 |Microsoft ドキュメント"
 description: "SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを構成することによって高可用性を実装します。"
 author: MikeRayMSFT
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="architecture-description"></a>アーキテクチャの説明
 
-クラスタ リングの層は Red Hat Enterprise Linux (RHEL) に基づいて[HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)の上に構築[ペース](http://clusterlabs.org/)です。 Corosync とペースのクラスター ネットワーク通信およびリソース管理を調整します。 SQL Server のインスタンスは 1 つのノードまたは他の上でアクティブです。
+クラスタ リングの層は [Pacemaker](http://clusterlabs.org/)の上に構築されたRed Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)をベースにしています。Corosync と Pacemaker はクラスター通信およびリソース管理を調整します。SQL Server のインスタンスはいずれかのノードでアクティブです。
 
 次の図は、SQL Server での Linux クラスターのコンポーネントを示しています。 
 
@@ -43,9 +43,9 @@ ms.lasthandoff: 02/13/2018
 
 クラスターの構成、リソース エージェント オプション、および管理の詳細については、[RHEL リファレンス ドキュメント](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html) を参照してください。
 
-## <a name = "failManual"></a>フェールオーバー クラスターを手動で
+## <a name = "failManual"></a>手動によるクラスターのフェールオーバします
 
-`resource move`コマンドは、ターゲット ノードで起動するリソースを強制する制約を作成します。  実行した後、`move`リソースを実行したコマンド`clear`のため、リソースをもう一度移動したり、リソースを自動的にフェールオーバーすることは、制約が削除されます。 
+`resource move`コマンドは、ターゲット ノードで起動するリソースを強制する制約を作成します。 `move`コマンドを実行した後、リソースをもう一度移動したり、リソースを自動的にフェールオーバーしたりすることを可能にするために、リソースの`clear`を実行して制約を削除します。
 
 ```bash
 sudo pcs resource move <sqlResourceName> <targetNodeName>  
@@ -83,7 +83,7 @@ sudo crm_mon
    ip addr show
    ```
 
-3. 新しいノードに必要な一意の名前は 15 文字以下です。 コンピューター名は、既定では、Red Hat Linux`localhost.localdomain`です。 この既定の名前が一意でないが長すぎます。 新しいノードにコンピューター名を設定します。 追加することによって、コンピューター名を設定`/etc/hosts`です。 次のスクリプトを使うと、`vi` で `/etc/hosts` を編集できます。 
+3. 新しいノードには 15 文字以下の一意の名前が必要です。 Red Hat Enterprise Linuxの既定では、コンピューター名は`localhost.localdomain`です。 この既定の名前は一意でなく、長すぎます。 コンピューター名を新しいノードに設定します。 `/etc/hosts`に追加することによって、コンピューター名を設定です。 次のスクリプトを使うと、`vi` で `/etc/hosts` を編集できます。 
 
    ```bash
    sudo vi /etc/hosts

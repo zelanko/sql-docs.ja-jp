@@ -1,4 +1,4 @@
----
+﻿---
 title: "環境変数で SQL Server の設定を構成する |Microsoft ドキュメント"
 description: "このトピックでは、環境変数を使用して、Linux で SQL Server 2017 の特定の設定を構成する方法について説明します。"
 author: rothja
@@ -59,9 +59,9 @@ ms.lasthandoff: 02/21/2018
 
 この例では構成した環境変数で `mssql-conf setup` を実行します。 次の環境変数が指定されます。
 
-- **ACCEPT_EULA**使用許諾契約書を受け入れます。
+- **ACCEPT_EULA** 使用許諾契約書を受け入れます。
 - **MSSSQL_PID** 非運用環境で利用できる、フリーライセンスの Developer Edition の SQL Server を指定します。
-- **MSSQL_SA_PASSWORD**強力なパスワードを設定します。
+- **MSSQL_SA_PASSWORD** 強力なパスワードを設定します。
 - **MSSQL_TCP_PORT** SQL Server がリッスンする TCP ポートを 1234 として設定します。
 
 ```bash
@@ -72,9 +72,9 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 
 この例の docker コマンドでは、次の環境変数を使用して、新しい SQL Server 2017 コンテナーを作成します。
 
-- **ACCEPT_EULA**使用許諾契約書を受け入れます。
+- **ACCEPT_EULA** 使用許諾契約書を受け入れます。
 - **MSSSQL_PID** 非運用環境で利用できる、フリーライセンスの Developer Edition の SQL Server を指定します。
-- **MSSQL_SA_PASSWORD**強力なパスワードを設定します。
+- **MSSQL_SA_PASSWORD** 強力なパスワードを設定します。
 - **MSSQL_TCP_PORT** SQL Server がリッスンする TCP ポートを 1234 として設定します。 つまり、この例では、ポート 1433 (既定値) をホスト ポートにマップする代わりに、このカスタム TCP ポートを `-p 1234:1234` コマンドでマップしなければなりません。
 
 Linux/macOS で Docker を実行している場合は、単一引用符で、次の構文を使用します。

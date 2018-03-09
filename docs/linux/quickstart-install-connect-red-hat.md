@@ -1,4 +1,4 @@
----
+﻿---
 title: "Red Hat Enterprise Linux に SQL Server 2017 の概要 |Microsoft ドキュメント"
 description: "このクイック スタートでは、Red Hat Enterprise Linux に SQL Server 2017 をインストールし、作成し、sqlcmd によるデータベースのクエリを実行する方法を示します。"
 author: rothja
@@ -60,16 +60,16 @@ RHEL で SQL Server を構成するためには、ターミナルで次のコマ
    sudo yum install -y mssql-server
    ```
 
-1. パッケージのインストールが完了したら、**mssql-conf setup** の実行後に、SA パスワードの設定とエディションを選択する指示に従います。
+1. パッケージのインストールが完了した後、**mssql-conf setup** を実行し、プロンプトに従って SA パスワードを設定し、エディションを選択します。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
    > [!TIP]
-   > このチュートリアルで SQL Server 2017 を試す場合、次のエディションはライセンスフリーです: Evaluation、Developer、および Express
+   > このチュートリアルで SQL Server 2017 を試す場合、次のエディションのライセンスはフリーです: Evaluation、Developer、およびExpress。
 
    > [!NOTE]
-   > SA アカウントは強力なパスワードを指定していることを確認してください。(最小長さが 8 文字で、大文字と小文字のアルファベット、10 進数の数字や英数字以外の記号を含む)。
+   > SA アカウントのパスワードは十分に強力なもの(大文字と小文字のアルファベット、十進数の数字および／もしくは英数字以外の記号を含む、8文字以上の文字列)を指定するようにしてください。
 
 1. 構成を完了したら、サービスが実行されていることを確認します。
 

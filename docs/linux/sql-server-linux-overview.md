@@ -1,4 +1,4 @@
----
+﻿---
 title: "SQL Server on Linux の概要 |Microsoft ドキュメント"
 description: "このトピックでは、SQL Server が Linux 上でどのように実行されるかを説明し、詳細な知識を得るための情報を提供します。"
 author: rothja
@@ -31,10 +31,10 @@ SQL Server 2017 を Linux で実行することができるようになりまし
 
 、作業を開始するには、次のクイック スタートのいずれかを使用して Linux に SQL Server をインストールします。
 
-- [Red Hat Enterprise Linux にインストールします。](quickstart-install-connect-red-hat.md)
+- [Red Hat Enterprise Linux にインストールします](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server にインストールします](quickstart-install-connect-suse.md)
 - [Ubuntu にインストールします](quickstart-install-connect-ubuntu.md)
-- [Docker で実行します。](quickstart-install-connect-docker.md)
+- [Docker で実行します](quickstart-install-connect-docker.md)
 - [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 > [!NOTE]
