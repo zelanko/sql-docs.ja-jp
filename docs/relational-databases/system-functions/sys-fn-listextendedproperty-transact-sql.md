@@ -8,13 +8,15 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - fn_listextendedproperty
 - fn_listextendedproperty_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_listextendedproperty function
 - displaying extended properties
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - extended properties [SQL Server], columns
 - table extended properties [SQL Server]
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
-caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 24cf6367e6326500a8dc76d91125d4e648956ff0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4c9daa724fd73ab9a1da7e4f8d7bf1c510a34d7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,31 +63,31 @@ fn_listextendedproperty (
 ```  
   
 ## <a name="arguments"></a>引数  
- {既定 |'*property_name*' |NULL}  
+ { default | '*property_name*' | NULL}  
  プロパティ名を指定します。 *property_name*は**sysname**です。 有効な値は、default、NULL、またはプロパティ名です。  
   
- {既定 |'*level0_object_type*' |NULL}  
- ユーザーまたはユーザーが定義した種類です。 *level0_object_type*は**varchar (128)**、既定値は NULL です。 有効な値は、ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、TRIGGER、TYPE、USER、および NULL です。  
+ { default | '*level0_object_type*' | NULL}  
+ ユーザーまたはユーザーが定義した種類です。 *level0_object_type* is **varchar(128)**, with a default of NULL. 有効な値は、ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、TRIGGER、TYPE、USER、および NULL です。  
   
 > [!IMPORTANT]  
 >  USER および TYPE はレベル 0 の種類は、の将来のバージョンで削除される予定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。 USER の代わりに、レベル 0 の種類として SCHEMA を使用してください。 TYPE については、レベル 0 の種類として SCHEMA、レベル 1 の種類として TYPE を使用してください。  
   
- {既定 |'*level0_object_name*' |NULL}  
- 指定したレベル 0 のオブジェクトの種類の名前です。 *level0_object_name*は**sysname**既定値は NULL です。 有効な値は、default、NULL、またはオブジェクト名です。  
+ { default | '*level0_object_name*' | NULL }  
+ 指定したレベル 0 のオブジェクトの種類の名前です。 *level0_object_name* is **sysname** with a default of NULL. 有効な値は、default、NULL、またはオブジェクト名です。  
   
- {既定 |'*level1_object_type*' |NULL}  
- レベル 1 のオブジェクトの種類です。 *level1_object_type*は**varchar (128)**既定値は NULL です。 有効な値は、AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION、および NULL です。  
+ { default | '*level1_object_type*' | NULL }  
+ レベル 1 のオブジェクトの種類です。 *level1_object_type* is **varchar(128)** with a default of NULL. 有効な値は、AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION、および NULL です。  
   
 > [!NOTE]  
 >  default は NULL に相当し、'default' はオブジェクトの種類の DEFAULT に相当します。  
   
- {既定 |'*level1_object_name*' |NULL}  
+ {default | '*level1_object_name*' |NULL }  
  指定したレベル 1 のオブジェクトの種類の名前です。 *level1_object_name*は**sysname**既定値は NULL です。 有効な値は、default、NULL、またはオブジェクト名です。  
   
- {既定 |'*level2_object_type*' |NULL}  
- レベル 2 のオブジェクトの型です。 *level2_object_type*は**varchar (128)**既定値は NULL です。 有効な値は、DEFAULT、default (NULL に相当します)、または NULL です。 有効な入力*level2_object_type*は、列、制約、EVENT NOTIFICATION、インデックス、パラメーター、トリガー、および NULL です。  
+ { default | '*level2_object_type*' |NULL }  
+ レベル 2 のオブジェクトの型です。 *level2_object_type* is **varchar(128)** with a default of NULL. 有効な値は、DEFAULT、default (NULL に相当します)、または NULL です。 有効な入力*level2_object_type*は、列、制約、EVENT NOTIFICATION、インデックス、パラメーター、トリガー、および NULL です。  
   
- {既定 |'*level2_object_name*' |NULL}  
+ { default | '*level2_object_name*' |NULL }  
  指定したレベル 2 のオブジェクトの種類の名前です。 *level2_object_name*は**sysname**既定値は NULL です。 有効な値は、default、NULL、またはオブジェクト名です。  
   
 ## <a name="tables-returned"></a>返されたテーブル  
@@ -119,7 +121,7 @@ LEFT JOIN sys.fn_listextendedproperty(N'MS_Description', N'user',N'HumanResource
 WHERE o.name = 'Employee';  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  オブジェクトの拡張プロパティを一覧表示する権限は、オブジェクトの種類によって異なります。  
   
 ## <a name="examples"></a>使用例  

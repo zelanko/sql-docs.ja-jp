@@ -5,34 +5,32 @@ ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 128cadc90dd4c2fa76d8174e8537598ec805c027
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 24d32bd54651eb173ca6de920d9e457c6331c8ca
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="impersonation"></a>権限借用 
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]このトピックは、表形式モデルの作成者ログオン資格情報の使用方法の Analysis Services によってデータ ソースに接続するときに (更新) のデータをインポートおよび処理について理解を提供します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+この記事は、ログオン資格情報の使用方法の Analysis Services によってデータ ソースに接続するときに (更新) のデータをインポートおよび処理について理解を表形式モデルの作成者に提供します。  
 
-##  <a name="bkmk_conf_imp_info"></a>権限借用の構成  
+##  <a name="bkmk_conf_imp_info"></a> 権限借用の構成  
  モデルが存在する場所、およびどのようなコンテキストでは、権限借用情報を構成する方法を決定します。 新しいモデル プロジェクトを作成するときに権限借用が構成されている SQL Server Data Tools (SSDT) でデータをインポートするデータ ソースに接続するとします。 モデルを展開した後は、SQL Server Management Studio (SSMS) を使用して、モデルのデータベース接続文字列プロパティで権限借用が構成できます。 Azure Analysis services 表形式モデルの SSMS を使用することができます、または**として表示: スクリプト**JSON で Model.bim ファイルを編集するブラウザー ベースのデザイナーのモード。
   
-##  <a name="bkmk_how_imper"></a>権限借用の使用方法  
+##  <a name="bkmk_how_imper"></a> 権限借用の使用方法  
  *権限借用* は、Analysis Services などのサーバー アプリケーションがクライアント アプリケーションの ID を使用するための機能です。 サービス アカウントを使用してサービスの実行ただし、サーバーが、データ ソースへの接続を確立する場合、権限借用を使用できるように、データのインポートと処理に対するアクセス チェックを分析を実行できます。  
   
  権限借用のために使用される資格情報は、現在ログオンするいると、資格情報と異なります。 ログオンしたユーザーがモデルの作成時に、特定のクライアント側の操作の資格情報が使用されます。  
@@ -79,7 +77,7 @@ ms.lasthandoff: 12/08/2017
 |オプション|Description|  
 |------------|-----------------|  
 |**特定の Windows ユーザー名とパスワード**|このオプションは、モデルで使用するインポートまたはデータ ソースからデータを処理する Windows ユーザー アカウントを指定します。 ドメインとユーザー アカウントの名前は、次の形式:**\<ドメイン名 >\\< ユーザー アカウント名\>**です。 テーブルのインポート ウィザードを使用して新しいモデルを作成する場合は、これが既定のオプションです。|  
-|**[サービス アカウント]**|モデルを管理している Analysis Services サービス インスタンスに関連付けられているセキュリティ資格情報をモデルで使用するように指定します。|  
+|**サービス アカウント**|モデルを管理している Analysis Services サービス インスタンスに関連付けられているセキュリティ資格情報をモデルで使用するように指定します。|  
   
 ##  <a name="bkmk_impers_sec"></a> セキュリティ  
  偽装と共に使用される資格情報は、メモリ内に保存 VertiPaq™ エンジンによってが。 資格情報が書き込まれることをディスクにします。 ワークスペース データベースがメモリ内ではないモデルを配置するときに場合、は、データ ソースとデータのフェッチへの接続に使用する資格情報の入力を求められます。  

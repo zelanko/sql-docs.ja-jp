@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55c63a3a3d54bd92f494e11029e6ee450f0ee46c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4fe3a7adab5e0c4f87abaf09b04efa64f27e124f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>レッスン 3-2 の Customer ディメンションの変更
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]キューブのディメンションの機能と使いやすさを向上させる多くのさまざまな方法はあります。 このトピックの実習では、Customer ディメンションを変更します。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+キューブのディメンションの使いやすさと機能性を向上させる方法は数多くあります。 このトピックの実習では、Customer ディメンションを変更します。  
   
 ## <a name="renaming-attributes"></a>属性名の変更  
 属性名は、ディメンション デザイナーの **[ディメンション構造]** タブで変更できます。  
@@ -227,7 +230,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  ダイアグラムで、 **[City]** 属性を右クリックし、 **[新しい属性リレーションシップ]**をクリックします。  
   
-3.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[City]**を指定します。 **[関連属性]** を **[State-Province]**に設定します。  
+3.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[City]**を指定します。 **[関連属性]** を **[State-Province]** に設定します。  
   
 4.  **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]**に設定します。  
   

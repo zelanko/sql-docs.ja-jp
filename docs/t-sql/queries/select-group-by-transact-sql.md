@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -22,7 +23,8 @@ f1_keywords:
 - GROUP_TSQL
 - CUBE_TSQL
 - ROLLUP_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - GROUP BY clause, about GROUP BY clause
 - dividing tables into groups
@@ -32,18 +34,18 @@ helpviewer_keywords:
 - groups [SQL Server], tables divided into groups
 - summary values [SQL Server]
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
-caps.latest.revision: "80"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 49b572a8ce91287faa4c162efa8de8e7f0113235
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 5e99efe49620003de40659dd4bfd959dacef986c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---group-by--transact-sql"></a>-グループで、TRANSACT-SQL を選択します。
+# <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 クエリの結果をグループごとに 1 つまたは複数の集計を実行する目的では、通常、行のグループに分割する SELECT ステートメントの句。 SELECT ステートメントでは、グループごとに 1 行を返します。  
@@ -100,7 +102,7 @@ GROUP BY {
   
 ## <a name="arguments"></a>引数 
  
-### <a name="column-expression"></a>*列式*  
+### <a name="column-expression"></a>*column-expression*  
 列の列または非集計計算を指定します。 この列は、テーブル、派生テーブル、またはビューに属することができます。 列は、SELECT ステートメントの FROM 句に表示する必要がありますが、選択リストに表示する必要はありません。 
 
 有効な式は、次を参照してください。[式](~/t-sql/language-elements/expressions-transact-sql.md)です。    
@@ -130,7 +132,7 @@ GROUP BY {
 - サブクエリ。 エラー 144 が返されます。 
 - インデックス付きビューの列。 
  
-### <a name="group-by-column-expression--n-"></a>GROUP BY*列式*[、.. .n] 
+### <a name="group-by-column-expression--n-"></a>GROUP BY *column-expression* [ ,...n ] 
 
 1 つまたは複数の列の式のリスト内の値に従って SELECT ステートメントの結果をグループ化します。 
 
@@ -177,7 +179,7 @@ GROUP BY Country, Region;
 たとえば、`GROUP BY ROLLUP (col1, col2, col3, col4)`次の一覧に列の式の組み合わせごとにグループを作成します。  
 
 - col1、col2、col3、col4 
-- col1 と col2、col3、NULL
+- col1, col2, col3, NULL
 - col1 と col2 に NULL の場合、NULL
 - col1、NULL の場合、NULL の場合、NULL
 - これは、総計、NULL、NULL、NULL NULL--
@@ -265,7 +267,7 @@ FROM Sales
 GROUP BY GROUPING SETS ( Country, () );
 ```
 
-### <a name="group-by--all--column-expression--n-"></a>式列グループで [すべて] [、.. .n] 
+### <a name="group-by--all--column-expression--n-"></a>GROUP BY [ ALL ] column-expression [ ,...n ] 
 
 適用されます SQL Server と Azure SQL Database。
 
@@ -347,7 +349,7 @@ GROUP BY 句には、次の構文の例外、sql-2006 標準規格に含まれ�
 |機能|SQL Server Integration Services|SQL Server 互換性レベル 100 以上|SQL Server 2008 以降で互換性レベル 90|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 集計|WITH CUBE および WITH ROLLUP ではサポートされていません。|WITH CUBE、WITH ROLLUP、GROUPING SETS、CUBE、および ROLLUP でサポートされています。|互換性レベル 100 と同じです。|  
-|GROUP BY 句内の、CUBE または ROLLUP の名前を持つユーザー定義関数|ユーザー定義関数**dbo.cube (***arg1***、***.. .argN***)**または**dbo.rollup (***arg1***、**.*argN***)**で GROUP BY 句は許可します。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|ユーザー定義関数**dbo.cube (***arg1***、**.. .argN**)**または**dbo.rollup (**arg1**、***.. .argN***)**で GROUP BY 句は許可されません。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 次のエラー メッセージが返されます"キーワード 'cube' &#124; 付近に構文が正しくない '。プログラムのロールアップ '."<br /><br /> この問題を避けるためには、置換`dbo.cube`で`[dbo].[cube]`または`dbo.rollup`で`[dbo].[rollup]`です。<br /><br /> 次の例は使用できます。`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|ユーザー定義関数**dbo.cube (***arg1***、***.. .argN*) または**dbo.rollup (** *arg1***、***.. .argN***)**で GROUP BY 句は許可<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUP BY 句内の、CUBE または ROLLUP の名前を持つユーザー定義関数|ユーザー定義関数**dbo.cube (***arg1***、***.. .argN***)**または**dbo.rollup (***arg1***、**.*argN * * *)** で GROUP BY 句は許可します。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|ユーザー定義関数**dbo.cube (***arg1***、**.. .argN**)**または**dbo.rollup (**arg1**、***.. .argN***)**で GROUP BY 句は許可されません。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 次のエラー メッセージが返されます"キーワード 'cube' &#124; 付近に構文が正しくない '。プログラムのロールアップ '."<br /><br /> この問題を避けるためには、置換`dbo.cube`で`[dbo].[cube]`または`dbo.rollup`で`[dbo].[rollup]`です。<br /><br /> 次の例は使用できます。`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|ユーザー定義関数 **dbo.cube (***arg1***、* * *.. .argN*) または**dbo.rollup (***arg1***、***.. .argN***)**で GROUP BY 句は許可<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|サポートされていません|Supported|Supported|  
 |CUBE|サポートされていません|Supported|サポートされていません|  
 |ROLLUP|サポートされていません|Supported|サポートされていません|  

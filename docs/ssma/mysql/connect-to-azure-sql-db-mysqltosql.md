@@ -1,7 +1,7 @@
 ---
 title: "Azure SQL DB (MySQLToSQL) への接続 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,30 +20,30 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dadd18eb9f5f2af55b2d68ad69f69fb3c54709fc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f3f0572426b6c90aa7b56c1f81e077f05f01caae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>Azure SQL DB (MySQLToSQL) への接続します。
-SQL Azure] ダイアログ ボックスに接続を使用すると、移行する SQL Azure データベースへの接続します。  
+SQL Azure ダイアログ ボックスに接続を使用すると、移行する SQL Azure データベースへの接続します。  
   
-このダイアログ ボックスにアクセスする、**ファイル**メニューの [ **SQL Azure への接続**です。 以前接続した場合、コマンドは**SQL Azure に再接続します。**  
+このダイアログ ボックスにアクセスする、**ファイル**メニューの  **SQL Azure への接続**です。 以前接続した場合、コマンドは**SQL Azure に再接続します。**  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[サーバー名]**  
   
 選択するか、SQL Azure に接続するためのサーバー名を入力します。  
   
-**データベース**  
+**[データベース]**  
   
 選択し、入力または**参照**データベース名。  
   
 > [!IMPORTANT]  
 > SSMA for MySQL は SQL Azure での master データベースへの接続をサポートしていません。  
   
-**ユーザー名**  
+**User name**  
   
 SSMA は、SQL Azure データベースへの接続を使用してユーザー名を入力します。  
   
@@ -60,13 +60,13 @@ SQL Azure アカウントでにデータベースがない場合は、最初の�
   
 非常に最初に、新しいデータベースを作成するには次の手順に従います  
   
-1.  SQL Azure] ダイアログ ボックスに、接続に存在する [参照] ボタンをクリックします。  
+1.  SQL Azure ダイアログ ボックスに、接続に存在する 参照 ボタンをクリックします。  
   
 2.  データベースが存在しない場合は、次の 2 つのメニュー項目が表示されます。  
   
     1.  **(データベースが見つかりません)**は無効になっているし、すべての時間がグレーで表示されます。  
   
-    2.  **新しいデータベースを作成**SQL Azure アカウントにデータベースがない場合にのみこれを有効にします。 このメニュー項目をクリックすると、Azure データベースの作成] ダイアログ ボックスがあるデータベースの名前とサイズを使用します。  
+    2.  **新しいデータベースを作成**SQL Azure アカウントにデータベースがない場合にのみこれを有効にします。 このメニュー項目をクリックすると、Azure データベースの作成 ダイアログ ボックスがあるデータベースの名前とサイズを使用します。  
   
 3.  データベースの作成時に、次の 2 つのパラメーターは入力として指定します。  
   

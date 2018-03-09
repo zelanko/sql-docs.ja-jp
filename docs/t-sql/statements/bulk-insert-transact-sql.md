@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - BULK INSERT
 - BULK_INSERT_TSQL
 - BULK
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - tables [SQL Server], importing data into
 - inserting files
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-caps.latest.revision: "153"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: da5449283269e7ff018e7a4b394eb4c26b69e590
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: ec29eaa73339980516f4a3de4b67fa195953d80a
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -92,7 +94,7 @@ BULK INSERT
  テーブルまたはビューのスキーマの名前を指定します。 *schema_name*場合は、一括インポート操作を実行するユーザーの既定のスキーマは、指定したテーブルまたはビューのスキーマは省略します。 場合*スキーマ*が指定されていないと、一括インポート操作を実行するユーザーの既定のスキーマは、指定したテーブルまたはビューから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー メッセージ、および一括インポート操作が取り消されるを返します。  
   
  *table_name*  
- データの一括インポート先のテーブル名またはビュー名を指定します。 指定できるビューは、すべての列が同じベース テーブルを参照するビューだけです。 ビューにデータの読み込みの制限に関する詳細については、次を参照してください。 [INSERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/insert-transact-sql.md).  
+ データの一括インポート先のテーブル名またはビュー名を指定します。 指定できるビューは、すべての列が同じベース テーブルを参照するビューだけです。 ビューにデータの読み込みの制限に関する詳細については、次を参照してください。 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)。  
   
  **'** *data_file* **'**  
  指定のテーブルまたはビューにインポートするデータが含まれているデータ ファイルの完全なパスを指定します。 BULK INSERT を使用して、ディスク (ネットワーク、フロッピー ディスク、ハード ディスクなど) からデータをインポートすることができます。   
@@ -250,7 +252,7 @@ CSV ファイルの引用符の文字として使用される文字を指定し�
 ### <a name="string-to-decimal-data-type-conversions"></a>文字列から 10 進数へのデータ型変換  
  BULK INSERT で使用される 10 進数の文字列データ型変換と同じ規則に従います、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [変換](../../t-sql/functions/cast-and-convert-transact-sql.md)関数で、科学的表記法を使用して数値を表す文字列を拒否します。 したがって、BULK INSERT を実行するときに、そのような文字列が無効な値として評価され、変換エラーが報告されます。  
   
- この動作を回避するには、一括インポートの科学的表記法、フォーマット ファイルを使用**float** 10 進数の列へのデータ。 フォーマット ファイルで明示的に記述する列として**実際**または**float**データ。 これらのデータ型の詳細については、次を参照してください。 [float、real および #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/float-and-real-transact-sql.md).  
+ この動作を回避するには、一括インポートの科学的表記法、フォーマット ファイルを使用**float** 10 進数の列へのデータ。 フォーマット ファイルで明示的に記述する列として**実際**または**float**データ。 これらのデータ型の詳細については、次を参照してください。 [float、real および #40 です。TRANSACT-SQL と #41 です](../../t-sql/data-types/float-and-real-transact-sql.md)。  
   
 > [!NOTE]  
 >  フォーマット ファイル**実際**データとして、 **SQLFLT4**データ型と**float**データとして、 **SQLFLT8**データ型。 XML 以外のフォーマット ファイルについては、次を参照してください[bcp &#40; を使用して、ファイル ストレージ型の指定。SQL Server &#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md).  
@@ -323,7 +325,7 @@ GO
   
  コンピューターはそれぞれ異なるため、実際のデータでさまざまなバッチ サイズを試して最適な値を見つけるようにすることをお勧めします。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
 ### <a name="security-account-delegation-impersonation"></a>セキュリティ アカウントの委任 (権限借用)  
  ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを使用する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス アカウントのセキュリティ プロファイルが使用されます。 SQL Server 認証を使用したログインは、データベース エンジン以外では認証できません。 そのため、SQL Server 認証を使用したログインによって BULK INSERT コマンドが開始されると、SQL Server プロセス アカウント (SQL Server データベース エンジン サービスで使用されるアカウント) のセキュリティ コンテキストを使用してデータへの接続が行われます。 ソース データを正しく読み取るには、SQL Server データベース エンジンで使用されるアカウントに対して、ソース データへのアクセス権を付与する必要があります。これに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーが Windows 認証を使用してログインした場合、そのユーザーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスのセキュリティ プロファイルに関係なく、そのユーザー アカウントでアクセス可能なファイルのみを読み取ることができます。  
@@ -334,8 +336,8 @@ GO
   
  このおよび BULK INSERT を使用するための他のセキュリティの考慮事項に関する詳細については、次を参照してください[を使用して BULK INSERT または OPENROWSET &#40; した一括データのインポート。BULK...&#41;&#40;です。SQL Server &#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
-### <a name="permissions"></a>Permissions  
- INSERT および ADMINISTER BULK OPERATIONS 権限が必要です。 ただし次の操作を 1 つ以上行う場合は、さらに ALTER TABLE 権限が必要になります。  
+### <a name="permissions"></a>アクセス許可  
+ INSERT および ADMINISTER BULK OPERATIONS 権限が必要です。 Azure SQL データベースでは、INSERT および ADMINISTER データベース BULK OPERATIONS 権限が必要です。 ただし次の操作を 1 つ以上行う場合は、さらに ALTER TABLE 権限が必要になります。  
   
 -   制約が存在する場合に、CHECK_CONSTRAINTS オプションを指定しない。  
   
@@ -415,7 +417,7 @@ WITH (FORMAT = 'CSV');
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Azure blob ストレージ内のファイルからデータをインポートします。   
 次の例は、Azure blob ストレージの場所に、外部データ ソースとして構成されている csv ファイルからデータを読み込む方法を示します。 これには、共有アクセス署名を使用してデータベース スコープ資格情報が必要です。    
 
-```tsql
+```sql
 BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
@@ -451,7 +453,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
   
 ## <a name="see-also"></a>参照  
  [データの一括インポートと一括エクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [インポートまたはエクスポート データ &#40; 用のフォーマット ファイルSQL Server &#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

@@ -1,7 +1,7 @@
 ---
 title: "オブジェクトの選択 (OracleToSQL) 高度な |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
-ms.openlocfilehash: aa6d68d6545a48fc412d3298d0d0e758e3d1fa43
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 967e803d7827b987cd6b457b9e6737138fec144d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-object-selection--oracletosql"></a>高度なオブジェクトの選択 (OracleToSQL)
 **オブジェクト セクションの高度な** ダイアログ ボックスでは、オブジェクト名に文字列および部分文字列を使用してデータベース オブジェクトをフィルター処理し、選択するか、それらのオブジェクトの選択を解除することができます。 SSMA では、選択したオブジェクトでの変換と移行操作を実行します。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/05/2017
   
 このダイアログ ボックスを使用する前に、スキーマを変換するか、プロジェクトを保存してすべてのメタデータを読み込む SSMA を強制することができます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **すべての項目をチェックします。**  
 すべての項目の横にあるチェック マークを追加します。 これらの項目は、メタデータ エクスプ ローラーで、すぐに選択されます。  
   

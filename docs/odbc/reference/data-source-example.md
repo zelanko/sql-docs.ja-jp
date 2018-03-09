@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 16217ebf7c229a47263b330e395a777716907797
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 29fe9b818d34f620ededd9d07eab5cfbecfbee47
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-source-example"></a>データ ソースの例
 Microsoft® Windows NT® Server または Windows 2000 Server、Microsoft Windows NT ワークステーション/Windows 2000 Professional、または Microsoft Windows® 95/98、マシンのデータを実行するコンピューターでは、ソース情報がレジストリに格納されます。 によっては、レジストリ キーの情報に格納されている、データ ソースと呼ばれます、*ユーザー データ ソース*または*システム データ ソース*です。 ユーザー データ ソースは、HKEY_CURRENT_USER キーには保存され、現在のユーザーにのみ提供されます。 システム データ ソースは、HKEY_LOCAL_MACHINE キーに格納され、1 台のコンピューターの 1 つ以上のユーザーによって使用されることができます。 また、システム全体のサービスは、アクセスできるように、データ ソースに、マシンにログオンしているユーザーがいない場合でもによっても使用できます。 ユーザーおよびシステム データ ソースの詳細については、次を参照してください。 [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md)です。  

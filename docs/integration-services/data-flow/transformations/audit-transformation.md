@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa1ed88a75603d7a943dfb05089c0a79092507ef
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6a3e8e346a8b71c3bd11fad1847dc33fa4b47145
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="audit-transformation"></a>監査変換
   監査変換により、パッケージが実行される環境に関するデータをパッケージ内のデータ フローに含めることができます。 たとえば、パッケージ、コンピューター、および演算子の名前をデータ フローに追加できます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、この情報を提供するシステム変数が含まれています。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/20/2017
 |システム変数|インデックス|Description|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|パッケージの実行インスタンスを識別する GUID です。|  
-|**PackageID**|1|パッケージの一意識別子です。|  
+|**PackageID**|@shouldalert|パッケージの一意識別子です。|  
 |**PackageName**|2|パッケージの名前です。|  
 |**VersionID**|3|パッケージのバージョンです。|  
 |**ExecutionStartTime**|4|パッケージの実行を開始した時刻です。|  
@@ -65,14 +66,14 @@ ms.lasthandoff: 11/20/2017
 ## <a name="audit-transformation-editor"></a>監査変換エディター
   監査変換により、パッケージが実行される環境に関するデータをパッケージ内のデータ フローに含めることができます。 たとえば、パッケージ、コンピューター、および演算子の名前をデータ フローに追加できます。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、この情報を提供するシステム変数が含まれています。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **[出力列の名前]**  
  監査情報を格納する、新しい出力列の名前を入力します。  
   
  **[監査の種類]**  
  監査情報を得るために使用できるシステム変数を選択します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[実行インスタンスの GUID]**|パッケージの実行インスタンスを個別に識別する GUID を挿入します。|  
 |**[パッケージ ID]**|パッケージを個別に識別する GUID を挿入します。|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/20/2017
 |**[バージョン ID]**|パッケージのバージョンを個別に識別する GUID を挿入します。|  
 |**[実行開始時刻]**|パッケージの実行が開始される時刻を挿入します。|  
 |**コンピューター名**|パッケージを起動したコンピューターの名前を挿入します。|  
-|**ユーザー名**|パッケージを起動したユーザーのログイン名を挿入します。|  
+|**User name**|パッケージを起動したユーザーのログイン名を挿入します。|  
 |**[タスク名]**|監査変換が関連付けられているデータ フロー タスクの名前を挿入します。|  
 |**[タスク ID]**|監査変換が関連付けられているデータ フロー タスクを個別に識別する GUID を挿入します。|  
   

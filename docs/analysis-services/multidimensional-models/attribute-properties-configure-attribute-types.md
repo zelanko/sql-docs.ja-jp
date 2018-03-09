@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +19,20 @@ helpviewer_keywords:
 - currency dimensions [Analysis Services]
 - Type property
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3a7d8d9405d27956eecef276ef9a5b80b1806667
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f0011391fde6ea0445553587b0ac2a396f66974e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>属性のプロパティ - 属性の種類を構成します。
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]属性の型がビジネス機能で属性を分類できます。 属性の型は多数用意されており、そのほとんどは属性の表示やサポートのためにクライアント アプリケーションで使用されています。 ただし、属性の型の中には、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で特定の意味を持つものもあります。 たとえば、時間ディメンションのさまざまなカレンダーで時刻を表す属性を識別する属性の型がいくつか用意されています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、属性の型を使用して、ビジネス機能で属性を分類できます。 属性の型は多数用意されており、そのほとんどは属性の表示やサポートのためにクライアント アプリケーションで使用されています。 ただし、属性の型の中には、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で特定の意味を持つものもあります。 たとえば、時間ディメンションのさまざまなカレンダーで時刻を表す属性を識別する属性の型がいくつか用意されています。  
   
 ##  <a name="setting_attibute_types"></a> 属性の型の設定  
  属性の型は、その属性の **Type** プロパティの値によって決まります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のいくつかのウィザードでは、ディメンションまたは属性の定義時に属性の型を設定します。 これらの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ウィザードでは、ウィザードによってディメンションに機能が追加された場合にも属性の型を設定します。 たとえば、ビジネス インテリジェンス ウィザードでは、ディメンション内の勘定科目の名前、コード、番号、構造を含んでいる属性を識別するための勘定科目インテリジェンスの追加時に、ディメンション内の属性に複数の属性の型を適用します。 また、ビジネス インテリジェンス ウィザードでは、通貨換算などにも属性の型を使用します。 詳細については、「 [通貨ディメンションの作成](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)」を参照してください。  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/08/2017
   
 ###  <a name="general_attribute_types"></a> General Attribute Types  
   
-|属性の型の値|説明|  
+|属性の型の値|Description|  
 |--------------------------|-----------------|  
 |**Address**|住所を表します。|  
 |**AddressBuilding**|住所のビル名を表します。|  
@@ -151,11 +149,11 @@ ms.lasthandoff: 12/08/2017
 |**RelationToParent**|親へのリレーションを表します。|  
 |**Representative**|代表者を表します。|  
 |**Scenario**|シナリオを表します。|  
-|**Sequence**|シーケンス属性を表します。|  
+|**シーケンス**|シーケンス属性を表します。|  
 |**ShortCaption**|短いキャプションを表します。|  
 |**StateOrProvince**|都道府県を表します。|  
 |**Utility**|ユーティリティを表します。|  
-|**バージョン**|バージョンを表します。|  
+|**[バージョン]**|バージョンを表します。|  
 |**WebHtml**|HTML コンテンツを表します。|  
 |**WebMailAlias**|電子メールの別名を表します。|  
 |**WebUrl**|URL アドレスを表します。|  
@@ -163,7 +161,7 @@ ms.lasthandoff: 12/08/2017
   
 ###  <a name="account_dimension_attribute_types"></a> Account Dimension Attribute Types  
   
-|属性の型の値|説明|  
+|属性の型の値|Description|  
 |--------------------------|-----------------|  
 |**アカウント**|勘定科目の親を表します。 この属性の型は、通常、勘定科目ディメンションの親属性に適用されます。|  
 |**AccountName**|勘定科目名を表します。 この属性の型は、通常、勘定科目ディメンションのキー属性に適用されます。|  
@@ -172,7 +170,7 @@ ms.lasthandoff: 12/08/2017
   
 ###  <a name="currency_dimension_attribute_types"></a> 通貨ディメンションの属性の型  
   
-|属性の型の値|説明|  
+|属性の型の値|Description|  
 |--------------------------|-----------------|  
 |**CurrencyDestination**|通貨換算の換算先通貨を表します。 この属性の型は、通常、通貨換算で使用するためにレポーティング ディメンションのキー属性に適用されます。 通貨換算の詳細については、「[通貨換算 &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md)」を参照してください。|  
 |**CurrencyIsoCode**|通貨の ISO (国際標準化機構) コードを表します。 通貨換算の詳細については、「[通貨換算 &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md)」を参照してください。|  
@@ -181,7 +179,7 @@ ms.lasthandoff: 12/08/2017
   
 ###  <a name="slowly_changing_dimension_attribute_types"></a> 緩やかに変化するディメンションの属性の型  
   
-|属性の型の値|説明|  
+|属性の型の値|Description|  
 |--------------------------|-----------------|  
 |**ScdEndDate**|緩やかに変化するディメンションのメンバーの実効終了日を表します。|  
 |**ScdOriginalID**|緩やかに変化するディメンションのメンバーの元の識別子を表します。|  
@@ -190,7 +188,7 @@ ms.lasthandoff: 12/08/2017
   
 ###  <a name="time_dimension_attribute_types"></a> 時間ディメンションの属性の型  
   
-|属性の型の値|説明|  
+|属性の型の値|Description|  
 |--------------------------|-----------------|  
 |**日付**|日付を表します。 この属性の型は、通常、時間ディメンションまたはサーバー時間ディメンションのキー属性に適用されます。|  
 |**DayOfHalfYear**|半期の通算日を表します。|  

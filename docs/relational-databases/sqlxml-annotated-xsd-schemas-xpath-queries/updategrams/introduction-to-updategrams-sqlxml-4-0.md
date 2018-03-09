@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b5a9ef6b56ee32f31b277273fb644a03925fdf0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2dc3ce73bfe3da97e6567c1819eea34a8bc1dfaa
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>アップデートグラムの概要 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]変更することができます (挿入、更新、または削除) のデータベースに[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]アップデート グラムまたは OPENXML を使用してドキュメントの既存の XML から[!INCLUDE[tsql](../../../includes/tsql-md.md)]関数。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+変更することができます (挿入、更新、または削除) のデータベースに[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]アップデート グラムまたは OPENXML を使用してドキュメントの既存の XML から[!INCLUDE[tsql](../../../includes/tsql-md.md)]関数。  
   
  OPENXML 関数は、既存の XML ドキュメントを断片化し、INSERT、UPDATE または DELETE ステートメントに渡すことができる行セットを提供することで、データベースを変更する関数です。 OPENXML を使用すると、データベース テーブルに対して操作を直接実行できます。 したがって、ソースにテーブルなどの行セット プロバイダーがある場合は常に、OPENXML を使用するのが最適です。  
   
@@ -66,13 +68,13 @@ ms.lasthandoff: 11/17/2017
   
  次に、これらの各ブロックの役割について説明します。  
   
- **\<前に >**  
+ **\<before>**  
  レコード インスタンスの既存の状態 ("before 状態") を指定します。  
   
- **\<後 >**  
+ **\<after>**  
  データの変更後の新しい状態を指定します。  
   
- **\<同期 >**  
+ **\<sync>**  
  含まれています、 **\<する前に >**と**\<後 >**ブロックします。 A **\<同期 >**ブロックは 1 つ以上のセットを含めることができます**\<する前に >**と**\<後 >**ブロックします。 1 つ以上のセットがある場合**\<する前に >**と**\<後 >**ブロック、これらのブロック (でも場合は、空) 指定する必要のペアとして。 さらに、アップデート グラムでは 1 つ以上**\<同期 >**ブロックします。 各**\<同期 >**ブロックは、トランザクションの 1 つの単位 (つまり、すべてのオブジェクト、 **\<同期 >**ブロックが実行されるか、何も行わ)。 複数指定する場合**\<同期 >**アップデート グラムでは、1 つの障害でブロック**\<同期 >**ブロックには影響しません、他の**\<同期>**ブロックします。  
   
  かどうか、アップデート グラムを削除、挿入、または更新レコード インスタンスの内容に応じた、 **\<する前に >**と**\<後 >**ブロック。  

@@ -8,28 +8,30 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_service
 - sp_fulltext_service_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], properties
 - sp_fulltext_service
 - Full-Text Search Upgrade Option
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac28028d1e888724417d1a313e229beb479e8ea2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c51847237598fcd1e493fec3194463359198d929
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +52,7 @@ sp_fulltext_service [ [@action=] 'action'
  [  **@action=**] **'***アクション***'**  
  変更またはリセットするプロパティです。 *アクション*は**nvarchar (100)、**既定値はありません。 一覧については、*c*アクション プロパティ、その説明、および設定できる値は、下にある表を参照して、*値*引数。 この引数によって返されるプロパティには、データ型、現在の実行値、最小値または最大値、非推奨のステータスなどがあります。  
   
- [  **@value=**]*値*  
+ [ **@value=**] *value*  
  指定したプロパティの値です。 *値*は**sql_variant**既定値は NULL です。 場合@valueが null、 **sp_fulltext_service**現在の設定値を返します。 次の表は、アクション プロパティとその説明、および設定できる値の一覧です。  
   
 > [!NOTE]  
@@ -75,7 +77,7 @@ sp_fulltext_service [ [@action=] 'action'
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **serveradmin**固定サーバー ロールまたはシステム管理者が実行できる**sp_fulltext_service**です。  
   
 ## <a name="examples"></a>使用例  
@@ -97,7 +99,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
+ [フル テキスト検索](../../relational-databases/search/full-text-search.md)   
  [FULLTEXTSERVICEPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

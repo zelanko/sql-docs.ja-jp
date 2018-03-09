@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_table_TSQL
 - sp_fulltext_table
-dev_langs: TSQL
-helpviewer_keywords: sp_fulltext_table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6ca014dd3d76c57402fe8a3af7bb8bb33fa4fce
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1827d90dab1dc4be8acbc3cf3e00bfe97d4b1bae
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   テーブルに対してフルテキスト インデックスの作成をアクティブにするかどうかを設定します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用して[CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md)、 [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)、および[DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して[CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md)、 [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)、および[DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md)代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,13 +55,13 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@tabname=**] **'***qualified_table_name***'**  
+ [ **@tabname=**] **'***qualified_table_name***'**  
  1 つまたは 2 つの要素で構成されるテーブル名を指定します。 テーブルは、現在のデータベース内に存在している必要があります。 *qualified_table_name*は**nvarchar (517)**、既定値はありません。  
   
  [  **@action=**] **'***アクション***'**  
  実行する操作を指定します。 *アクション*は**nvarchar (50)**, で、既定値はありませんはこれらの値のいずれかを指定します。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |**作成**|によって参照されるテーブルのフルテキスト インデックスのメタデータ作成*qualified_table_name*このテーブルのフルテキスト インデックス データに配置することを指定して*fulltext_catalog_name*です。 このアクションの使用も指定する*unique_index_name*フルテキスト キー列として。 この一意なインデックスは既に存在していて、テーブル内の列に定義しておく必要があります。<br /><br /> このテーブルに対するフルテキスト検索は、フルテキスト カタログが作成されるまで実行できません。|  
 |**Drop**|メタデータのフルテキスト インデックスを削除*qualified_table_name*です。 フルテキスト インデックスがアクティブな場合は、自動的に非アクティブになってからデータが削除されます。 フルテキスト インデックスを削除する前に、列を削除する必要はありません。|  
@@ -73,10 +76,10 @@ sp_fulltext_table
 |**start_incremental**|テーブルのフルテキスト インデックスの追加作成を開始します。|  
 |**[停止]**|完全作成または追加作成を停止します。|  
   
- [  **@ftcat=**] **'***fulltext_catalog_name***'**  
+ [ **@ftcat=**] **'***fulltext_catalog_name***'**  
  有効な既存のフルテキスト カタログの名前を指定、**作成**アクション。 その他すべての操作の場合は、このパラメーターは NULL にする必要があります。 *fulltext_catalog_name*は**sysname**、既定値は NULL です。  
   
- [  **@keyname=**] **'***unique_index_name***'**  
+ [ **@keyname=**] **'***unique_index_name***'**  
  有効な単一キー列の一意の非 null インデックス*qualified_table_name*の**作成**アクション。 その他すべての操作の場合は、このパラメーターは NULL にする必要があります。 *unique_index_name*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -94,7 +97,7 @@ sp_fulltext_table
   
  フルテキスト キー列は 900 バイト以下に定義する必要があります。 パフォーマンス上の理由から、キー列のサイズはできる限り小さくすることをお勧めします。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロール、 **db_owner**と**db_ddladmin**参照、フルテキスト カタログはアクセス許可を持つ固定データベース ロール、またはユーザー実行**sp_fulltext_table**です。  
   
 ## <a name="examples"></a>使用例  

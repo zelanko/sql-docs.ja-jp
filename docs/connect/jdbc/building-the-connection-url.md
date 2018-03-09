@@ -8,20 +8,21 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 81176070a9363e54dc469dd050891335edcb92af
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 886dea89a0e3ddd0db19cd9d0f8159cd6becf1b8
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="building-the-connection-url"></a>接続 URL の構築
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -79,7 +80,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>名前付きおよび複数の SQL Server インスタンス  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]サーバーごとの複数のデータベース インスタンスをインストールをできます。 各インスタンスは個別の名前によって識別されます。 名前付きインスタンスに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)](推奨)、名前付きインスタンスのポート番号を指定することができますか、またはインスタンス名を JDBC URL プロパティとして指定することができます、または**データソース**プロパティです。 インスタンス名またはポート番号のプロパティを指定しない場合は、既定のインスタンスへの接続が作成されます。 次の例を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] では、サーバーごとに複数のデータベース インスタンスをインストールできます。 各インスタンスは個別の名前によって識別されます。 名前付きインスタンスに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)](推奨)、名前付きインスタンスのポート番号を指定することができますか、またはインスタンス名を JDBC URL プロパティとして指定することができます、または**データソース**プロパティです。 インスタンス名またはポート番号のプロパティを指定しない場合は、既定のインスタンスへの接続が作成されます。 次の例を参照してください。  
   
  ポート番号を使用するには、次のように指定します。  
   
@@ -97,12 +98,12 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  中かっこ内の空白はリテラルでありトリミングされません。  
   
-##  <a name="Connectingintegrated"></a>Windows 統合認証を使用した接続  
+##  <a name="Connectingintegrated"></a> Windows 統合認証を使用した接続  
  JDBC ドライバーでは、integratedSecurity 接続文字列プロパティを通じて、Windows オペレーティング システム上でのタイプ 2 の統合認証の使用がサポートされています。 統合認証を使用するには、JDBC ドライバーがインストールされているコンピューターの Windows システム パス上のディレクトリに sqljdbc_auth.dll ファイルをコピーします。  
   
  sqljdbc_auth.dll ファイルは次の場所にインストールされています。  
   
- \<*インストール ディレクトリ*> \sqljdbc_\<*バージョン*>\\<*言語*> \auth\  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\auth\  
   
  サポートされている任意のオペレーティング システムについて、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]を参照してください[を使用して Kerberos 統合認証を SQL Server への接続](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)で追加された機能の詳細については[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]アプリケーションに接続することができます、データベースはタイプ 4 の Kerberos 統合認証を使用します。  
   
@@ -111,7 +112,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  または、java.libary.path システム プロパティを設定して sqljdbc_auth.dll のディレクトリを指定することもできます。 たとえば、JDBC ドライバーが既定のディレクトリにインストールされている場合、Java アプリケーションの起動時に次の仮想マシン (VM) 引数を使用することで、DLL の場所を指定できます。  
   
- `-Djava.library.path=C:\Microsoft JDBC Driver 4.0 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
+ `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   
 ## <a name="connecting-with-ipv6-addresses"></a>IPv6 アドレスによる接続  
  JDBC ドライバーでは、接続プロパティのコレクション、および serverName 接続文字列プロパティと合わせて IPv6 アドレスを使用できます。 Jdbc など、serverName の初期値:*sqlserver*://*serverName*、接続文字列内の IPv6 アドレスはサポートされていません。 名前を使用して*serverName*生 IPv6 ではなくアドレスは、接続ですべてのケースで機能します。 詳細を次の例に示します。  

@@ -55,4 +55,8 @@
 ## [プラン ガイドの削除](delete-a-plan-guide.md)  
 ## [プラン ガイドの有効化または無効化](enable-or-disable-a-plan-guide.md)  
 
-#[リソースの利用状況の監視 (システム モニター)](../performance-monitor/monitor-resource-usage-system-monitor.md) 
+# [リソースの利用状況の監視 (システム モニター)](../performance-monitor/monitor-resource-usage-system-monitor.md)    
+
+# [結合](joins.md)   
+
+# [サブクエリ](subqueries.md)    

@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - input column mapping [Analysis Services]
 - mapping input columns [Analysis Services]
 ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 591da6613982e9c7539b26257c6f78265343220e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 82d6368aa699b537c2fee81c3d054e6c3546797b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="choose-and-map-model-testing-data"></a>モデルのテスト データの選択およびマップ
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]精度チャートを作成する[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データをモデルのテストに使用して、データ モデルにマップするを選択する必要があります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で精度チャートを作成するには、モデルのテストに使用されるデータを選択し、データをモデルにマップする必要があります。  
   
  既定では、予約データ セットをマイニング構造の構築時に作成した場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ではマイニング モデルのテスト データが使用されます。 予約テスト セットを作成すると、列名とデータ型は常にモデルと一致し、データの分布が類似することを合理的に想定できるため、同じマイニング構造に基づくモデルを最も簡単にテストできます。 また、デザイナーでは入力列とモデル列間のリレーションシップが自動的に作成されます。  
   
@@ -93,7 +92,7 @@ ms.lasthandoff: 12/08/2017
   
 8.  **[テーブル名またはビュー名]** ボックスで、モデルのテストに使用するデータが含まれているテーブルを選択します。  
   
-9. 必要に応じてマッピングを編集します。 マイニング構造の列が入力テーブルの同じ名前の列に自動的にマップされます。 **[入力テーブルの選択]** テーブルの列をクリックし、 **[マイニング構造]** テーブルの対応する列にドラッグして、マッピングを手動で作成することもできます。 マッピングを削除するには、 **[マイニング構造]** テーブルの列が **[入力テーブルの選択]** テーブル内のマップ先の列にリンクしている線をクリックし、&lt;localizedText&gt;Del&lt;/localizedText&gt; キーを押します。  
+9. 必要に応じてマッピングを編集します。 マイニング構造の列が入力テーブルの同じ名前の列に自動的にマップされます。 **[入力テーブルの選択]** テーブルの列をクリックし、 **[マイニング構造]** テーブルの対応する列にドラッグして、マッピングを手動で作成することもできます。 マッピングを削除するには、 **[マイニング構造]** テーブルの列が **[入力テーブルの選択]** テーブル内のマップ先の列にリンクしている線をクリックし、Del キーを押します。  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -125,9 +124,9 @@ ms.lasthandoff: 12/08/2017
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-     **[列マッピングの指定]** ダイアログ ボックスに、新しい列マッピングが表示されます。 2 つの列を結ぶ線を選択して &lt;localizedText&gt;Del&lt;/localizedText&gt; キーを押すと、マッピングを削除できます。 **[マイニング構造]** テーブルで列を選択し、 **[入力テーブルの選択]** テーブルの対応する列にドラッグすると、新しい接続を作成できます。  
+     **[列マッピングの指定]** ダイアログ ボックスに、新しい列マッピングが表示されます。 2 つの列を結ぶ線を選択して Del キーを押すと、マッピングを削除できます。 **[マイニング構造]** テーブルで列を選択し、 **[入力テーブルの選択]** テーブルの対応する列にドラッグすると、新しい接続を作成できます。  
   
 ## <a name="see-also"></a>参照  
- [テスト、検証タスク、および操作方法 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [テストおよび検証タスクと操作方法 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

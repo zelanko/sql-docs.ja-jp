@@ -8,19 +8,20 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 48519fd9-c7c2-434b-848d-ccbf41133fdd
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 42ac4136c77b3ba00784276b12898f3d4e08d7f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: d4b3fcfe0e335b53dc483cde24520ea136c9af37
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxedatabasesessioneventactions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -33,13 +34,13 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary (8)**|イベント セッションのメモリ アドレス。 NULL 値は許可されません。|  
-|action_name|**nvarchar (60)**|アクションの名前です。 NULL 値は許可されません。|  
+|event_session_address|**varbinary(8)**|イベント セッションのメモリ アドレス。 NULL 値は許可されません。|  
+|action_name|**nvarchar(60)**|アクションの名前です。 NULL 値は許可されません。|  
 |action_package_guid|**uniqueidentifier**|アクションを含むパッケージの GUID。 NULL 値は許可されません。|  
-|event_name|**nvarchar (60)**|アクションにバインドされているイベントの名前。 NULL 値は許可されません。|  
+|event_name|**nvarchar(60)**|アクションにバインドされているイベントの名前。 NULL 値は許可されません。|  
 |event_package_guid|**uniqueidentifier**|イベントを含むパッケージの GUID です。 NULL 値は許可されません。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  VIEW DATABASE STATE 権限が必要です。  
   
 ### <a name="relationship-cardinalities"></a>リレーションシップの基数  

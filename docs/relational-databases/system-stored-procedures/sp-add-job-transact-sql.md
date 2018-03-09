@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_job_TSQL
 - sp_add_job
-dev_langs: TSQL
-helpviewer_keywords: sp_add_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_job
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 330ad1186afa47b55ed6365be76fe96d1878e980
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9f83b2b206b38783e53d2fb0ccdbf724a78b17d7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +61,7 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@job_name =** ] **'***job_name***'**  
+ [ **@job_name =** ] **'***job_name***'**  
  ジョブの名前を指定します。 名前が一意であり、割合を含めることはできません (**%**) 文字です。 *job_name*は**nvarchar (128)**、既定値はありません。  
   
  [  **@enabled =** ]*有効になっています。*  
@@ -67,53 +70,53 @@ sp_add_job [ @job_name = ] 'job_name'
  [  **@description =** ] **'***説明***'**  
  ジョブの説明を指定します。 *説明*は**nvarchar (512)**、既定値は NULL です。 場合*説明*は省略すると、「使用可能な説明はありません」が使用されます。  
   
- [  **@start_step_id =** ] *step_id*  
+ [ **@start_step_id =** ] *step_id*  
  ジョブで実行する最初のステップの ID 番号を指定します。 *step_id*は**int**、既定値は 1 です。  
   
- [  **@category_name =** ] **'***カテゴリ***'**  
+ [ **@category_name =** ] **'***category***'**  
  ジョブのカテゴリを指定します。 *カテゴリ*は**sysname**、既定値は NULL です。  
   
- [  **@category_id =** ] *category_id*  
+ [ **@category_id =** ] *category_id*  
  ジョブ カテゴリを指定するための、言語に依存しないメカニズムを指定します。 *category_id*は**int**、既定値は NULL です。  
   
  [  **@owner_login_name =** ] **'***ログイン***'**  
  ジョブを所有するログインの名前です。 *ログイン*は**sysname**の既定値は NULL には、現在のログイン名として解釈されます。 メンバーにのみ、 **sysadmin**固定サーバー ロールの設定またはの値を変更できます **@owner_login_name**です。 場合のメンバーでもないユーザーの**sysadmin**ロールを設定またはの値を変更 **@owner_login_name** 、このストアド プロシージャの実行は失敗し、エラーが返されます。  
   
- [  **@notify_level_eventlog =** ] *eventlog_level*  
+ [ **@notify_level_eventlog =** ] *eventlog_level*  
  対象となるジョブのエントリをいつ Microsoft Windows アプリケーション ログに記録するかを示す値を指定します。 *eventlog_level*は**int**、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|Never|  
 |**1**|成功時|  
 |**2** (既定値)|失敗時|  
 |**3**|毎回|  
   
- [  **@notify_level_email =** ] *email_level*  
+ [ **@notify_level_email =** ] *email_level*  
  対象となるジョブの完了後、いつ電子メールを送信するかを示す値を指定します。 *email_level*は**int**、既定値は**0**、しないことを示します。 *email_level*と同じ値を使用して*eventlog_level*です。  
   
- [  **@notify_level_netsend =** ] *netsend_level*  
+ [ **@notify_level_netsend =** ] *netsend_level*  
  対象となるジョブの完了後、いつネットワーク メッセージを送信するかを示す値を指定します。 *netsend_level*は**int**、既定値は**0**、しないことを示します。 *netsend_level*と同じ値を使用して*eventlog_level*です。  
   
- [  **@notify_level_page =** ] *page_level*  
+ [ **@notify_level_page =** ] *page_level*  
  対象となるジョブの完了後、いつポケットベルのメッセージを送信するかを示す値を指定します。 *page_level*は**int**、既定値は**0**、しないことを示します。 *page_level*と同じ値を使用して*eventlog_level*です。  
   
- [  **@notify_email_operator_name =** ] **'***email_name***'**  
+ [ **@notify_email_operator_name =** ] **'***email_name***'**  
  ときに電子メールの送信先となる相手の電子メール名*email_level*に到達します。 *email_name*は**sysname**、既定値は NULL です。  
   
- [  **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
+ [ **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
  対象となるジョブの完了時にネットワーク メッセージの送信先となるオペレーターの名前を指定します。 *netsend_name*は**sysname**、既定値は NULL です。  
   
- [  **@notify_page_operator_name =** ] **'***page_name***'**  
+ [ **@notify_page_operator_name =** ] **'***page_name***'**  
  対象となるジョブの完了時にポケットベルのメッセージの送信先となる相手の名前を指定します。 *page_name*は**sysname**、既定値は NULL です。  
   
- [  **@delete_level =** ] *delete_level*  
+ [ **@delete_level =** ] *delete_level*  
  いつジョブを削除するかを示す値を指定します。 *delete_value*は**int**、既定値は 0、つまりことはありません。 *delete_level*と同じ値を使用して*eventlog_level*です。  
   
 > [!NOTE]  
 >  ときに*delete_level*は**3**ジョブを 1 回だけ実行、ジョブのスケジュールに関係を定義します。 また、ジョブが自分自身を削除した場合、そのジョブのすべての履歴も削除されます。  
   
- [  **@job_id =** ] *job_id***出力**  
+ [ **@job_id =** ] *job_id***OUTPUT**  
  ジョブの作成が成功したときにジョブに割り当てられるジョブ ID 番号を指定します。 *job_id*型の output 変数は、 **uniqueidentifier**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -131,7 +134,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  このストアド プロシージャを実行するには、ユーザーがのメンバーをする必要があります、 **sysadmin**固定サーバー ロール、または、次のいずれかに付与する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント固定データベース ロールに存在する、 **msdb**データベース。  
   
 -   **SQLAgentUserRole**  

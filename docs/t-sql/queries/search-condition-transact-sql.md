@@ -1,21 +1,23 @@
 ---
 title: "検索条件 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 01/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - search
 - Search Condition
 - condition
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - OR operator [Transact-SQL]
 - CONTAINS predicate (Transact-SQL)
@@ -37,16 +39,16 @@ helpviewer_keywords:
 - logical operators [SQL Server], precedence
 - LIKE comparisons
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
-caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eaacb26fe7c402b17206ecf3a0e05af709170f97
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: aff1f4010182b601111ed2ba892bb06b6e82b71d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="search-condition-transact-sql"></a>検索条件 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +100,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>引数  
- \<search_condition >  
+ \<search_condition>  
  SELECT ステートメント、クエリ式、またはサブクエリの場合、結果セットに返す行の条件を指定します。 UPDATE ステートメントの場合、更新する行を指定します。 DELETE ステートメントの場合、削除する行を指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの検索条件に含まれる述語の数に制限はありません。  
   
  [NOT]  
@@ -117,7 +119,9 @@ ms.lasthandoff: 11/17/2017
  列名、定数、関数、変数、スカラー サブクエリ、または 1 つ以上の演算子やサブクエリで接続された列名、定数、および関数の組み合わせです。 expression には CASE 式が含まれる場合もあります。  
   
 > [!NOTE]  
->  Unicode 文字データ型を参照するときに**nchar**、 **nvarchar**、および**ntext**、'expression' は、大文字の英字を付ける必要があります 'N' です。 場合 'n' が指定されていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースまたは列の既定の照合順序に対応するコード ページに文字列に変換します。 文字列がこのコード ページにない場合は、失われます。  
+>  非 Unicode 文字列定数と変数は、データベースの既定の照合順序に対応するコード ページを使用します。 コード ページ変換が発生の非 Unicode 文字のデータのみを使用する場合と非 Unicode 文字データ型を参照する**char**、 **varchar**、および**テキスト**です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]参照先の列の照合順序に対応するか、そのコード ページが、データベースの既定の照合順序に対応するコード ページと異なる場合、COLLATE を使用するを指定するコード ページには、非 Unicode 文字列定数と変数を変換します。 新しいコード ページに存在しない任意の文字の場合は、類似した文字に変換されます、[最適マッピング](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)の既定の置換文字に変換されるか、または見つからない"?"。  
+>  
+> 複数のコード ページを使用するときに文字定数の先頭に大文字の ' N '、および Unicode コード ページ変換を避けるために、変数を使用できます。  
   
  =  
  2 つの式が等しいことを調べるのに使用する演算子です。  
@@ -152,7 +156,7 @@ ms.lasthandoff: 11/17/2017
  [ NOT ] LIKE  
  後続の文字列が、パターン照合で使用されます。 詳細については、次を参照してください。[のような &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md).  
   
- エスケープ**'***escape _ 文字***'**  
+ ESCAPE **'***escape_ character***'**  
  ワイルドカードとして機能するのではなく、ワイルドカード文字そのものを文字列内で検索できます。 *escape_character*この特別な用途を示すために、ワイルドカード文字の前に配置されている文字です。  
   
  [ NOT ] BETWEEN  
@@ -168,9 +172,9 @@ ms.lasthandoff: 11/17/2017
  文字ベースのデータを含む列で、述語内の文字の並びと正確に一致しなくても意味が合っている値を検索するための、単純形式の自然言語クエリを指定します。 このオプションは、SELECT ステートメントでのみ使用できます。 詳細については、次を参照してください。 [FREETEXT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/freetext-transact-sql.md).  
   
  [ NOT ] IN  
- 式がリストに含まれているかどうかに基づいて、式の検索を指定します。 検索式には定数または列名を指定できます。またリストには、一般的にはサブクエリが指定されますが、一連の定数も指定できます。 値のリストはかっこで囲んでください。 詳細については、次を参照してください。 [IN &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/in-transact-sql.md).  
+ 式がリストに含まれているかどうかに基づいて、式の検索を指定します。 検索式には定数または列名を指定できます。またリストには、一般的にはサブクエリが指定されますが、一連の定数も指定できます。 値のリストはかっこで囲んでください。 詳細については、「[IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)」を参照してください。  
   
- *サブクエリ*  
+ *subquery*  
  制限された SELECT ステートメントと見なされます。 と似ています\<query_expresssion > SELECT ステートメントでします。 ORDER BY 句および INTO キーワードは使用できません。 詳細については、次を参照してください[SELECT &#40;。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-transact-sql.md).  
   
  ALL  

@@ -8,20 +8,20 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 caps.latest.revision: "6"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 68a7523b0c044a90c9c71d53ffbb00c6e680b5a1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0f8ff65614eac486e11fc907c42737eb330c8b83
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>ページ分割されたレポートの使用 (Web ポータル)
 
@@ -58,7 +58,7 @@ Web ポータル内のページ分割されたレポートのプロパティを�
     
     ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>[プロパティ]  
   
 プロパティ画面では、ページ分割されたレポートの **[名前]** と **[説明]** を変更できます。 また、 **[削除]**、 **[移動]**、 **[リンク レポートの作成]**、 **[レポート ビルダーでの編集]**、 **[ダウンロード]** 、または **[置換]**を選択することもできます。  
     
@@ -187,7 +187,7 @@ Reporting Services サブスクリプションは、特定の時刻に、また�
   
 レポート ヒストリ スナップショットをクリックすると、そのスナップショットが表示されます。 レポート ヒストリに表示されるスナップショットは、作成日時だけで識別されます。 スナップショットがスケジュールの設定を受けて生成されたのか、手動で生成されたのかを識別する表示はありません。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
 [セキュリティのプロパティ] ページを使用すると、レポートへのアクセスを決定するセキュリティ設定の表示や変更を行えます。 このページは、セキュリティ保護の権限の対象となるアイテムに対して利用できます。  
   
 アイテムへのアクセスは、グループまたはユーザーが実行できるタスクを指定するロールの割り当てによって定義されます。 ロールの割り当ては、1 つのユーザー名またはグループ名、および一連のタスクを指定する 1 つ以上のロールの定義で構成されています。  

@@ -1,14 +1,15 @@
 ---
 title: "ORDER BY 句 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/11/2017
+ms.date: 12/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - BY_TSQL
 - ORDER
 - ORDER BY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ad-hoc query paging
 - OFFSET clause
@@ -39,18 +41,18 @@ helpviewer_keywords:
 - sort orders [SQL Server], ORDER BY clause
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-caps.latest.revision: "68"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ba5d93e724e11887397fef9a6e3a6a33426c88c6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 08805ce7f01b11d9b87c587e543f5dae91734e68
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---order-by-clause-transact-sql"></a>選択 - ORDER BY 句 (TRANSACT-SQL)
+# <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   クエリによって返されるデータを並べ替えます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 この句は次の場合に使用します。  
@@ -61,9 +63,12 @@ ms.lasthandoff: 11/17/2017
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
+> [!NOTE]  
+>  順序を選択/に BY はサポートされていませんまたはで作成テーブルとして選択 (CTAS) ステートメント[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]です。
+
 ## <a name="syntax"></a>構文  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -103,10 +108,10 @@ ORDER BY order_by_expression
  COLLATE *collation_name*  
  指定された照合順序に従って ORDER BY 操作を実行する必要がありますを指定*collation_name*、テーブルまたはビューで定義されている列の照合順序ではなくです。 *collation_name* Windows 照合順序名または SQL 照合順序名のいずれかを指定できます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。 COLLATE は型の列に対してのみ適用**char**、 **varchar**、 **nchar**、および**nvarchar**です。  
   
- **ASC** |DESC  
+ **ASC** | DESC  
  指定した列の値を昇順と降順のどちらで並べ替えるかを指定します。 ASC を指定した場合、最小値から最大値の順序で並べ替えられます。 DESC を指定した場合、最大値から最小値の順序で並べ替えられます。 ASC が既定の並べ替え順序です。 NULL 値は最小値として扱われます。  
   
- オフセット { *integer_constant* | *offset_row_count_expression* } {行 |行}  
+ OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  クエリ式から行を取得する前にスキップする行の数を指定します。 0 以上の整数の定数か式を指定できます。  
   
 **適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
@@ -131,7 +136,7 @@ ORDER BY order_by_expression
  クエリ実行プランで、オフセット行数値が表示される、**行**または**上部**TOP クエリ演算子の属性です。  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
- 選択リスト内の列の位置を表すために、ORDER BY 句で整数を指定しないでください。 たとえば、`SELECT ProductID, Name FROM Production.Production ORDER BY 2` などのステートメントは有効ですが、実際の列名を指定した場合と比べて理解が難しくなります。 さらに、列の順序を変更したり、新しい列を追加するなどして、選択リストに変更を加えた場合は、予期しない結果が生じないように ORDER BY 句を変更する必要が生じます。  
+ 選択リスト内の列の位置を表すために、ORDER BY 句で整数を指定しないでください。 たとえば、`SELECT ProductID, Name FROM Production.Production ORDER BY 2` などのステートメントは有効ですが、実際の列名を指定した場合と比べて理解が難しくなります。 さらに、列の順序を変更するなど、選択リストに変更したり、新しい列を追加すると、予期しない結果を回避するために、ORDER BY 句を変更する必要があります。  
   
  SELECT top (*N*) ステートメントでは、常に ORDER BY 句を使用します。 これは、TOP の処理対象の行を指定するための唯一の方法です。 詳細については、次を参照してください。 [TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
   
@@ -159,9 +164,9 @@ ORDER BY order_by_expression
   
 -   SELECT DISTINCT  
   
- これに加えて、ステートメントで UNION、EXCEPT、または INTERSECT 演算子を使用する場合は、列の名前または別名が、最初の (左側の) クエリの選択リストに指定されている必要があります。  
+ さらに、ステートメントには、共用体が含まれています、EXCEPT、または、INTERSECT 演算子、列名、または列の別名は、最初の (左側) のクエリの選択のリストで指定する必要があります。  
   
- UNION、EXCEPT、または INTERSECT 演算子を使用するクエリでは、ステートメントの末尾でのみ ORDER BY を使用できます。 この制限が適用されるのは、UNION、EXCEPT、および INTERSECT をサブクエリではなく、最上位レベルのクエリで指定する場合のみです。 例については、後の「例」のセクションを参照してください。  
+ UNION、EXCEPT、または INTERSECT 演算子を使用するクエリでは、ステートメントの末尾でのみ ORDER BY を使用できます。 この制限は次のものを除く、共用体の指定するとき、にのみ適用および INTERSECT をサブクエリではなく、最上位のクエリでします。 例については、後の「例」のセクションを参照してください。  
   
  TOP 句か、OFFSET 句と FETCH 句が指定されていない場合、ビュー、インライン関数、派生テーブル、およびサブクエリでは ORDER BY 句は無効です。 これらのオブジェクトで ORDER BY を使用する場合、この句は TOP 句か、OFFSET 句と FETCH 句で返される行の特定にのみ使用されます。 クエリ自体にも ORDER BY を指定しない限り、これらの構造をクエリしたときに、ORDER BY 句で順序どおりの結果が得られるかどうかは保証されません。  
   
@@ -267,8 +272,8 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-a-ascending-order"></a>B. 昇順を指定する  
- 次の例は、結果セットを並べ替えます、`Name`列で昇順に並べ替えます。 文字は数字ではなくアルファベット順に並べ替えられます。 つまり、10 の位置は、2 の前になります。  
+#### <a name="b-specifying-an-ascending-order"></a>B. 昇順を指定します。  
+ 次の例は、結果セットを並べ替えます、`Name`列で昇順に並べ替えます。 アルファベット順に、数値でない文字が並べ替えられます。 つまり、10 の位置は、2 の前になります。  
   
 ```  
 USE AdventureWorks2012;  
@@ -313,7 +318,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ```  
   
 ###  <a name="Case"></a>条件付きの順序を指定します。  
- 次の例では、ORDER BY 句で CASE 式を使用して、指定された列の値に基づいて、条件に応じて行の並べ替え順序を決定しています。 最初の例では、値では、`SalariedFlag`の列、`HumanResources.Employee`テーブルが評価されます。 `SalariedFlag` が 1 に設定されている従業員は `BusinessEntityID` の降順で、 従業員が、 `SalariedFlag` 0 に設定するが order by 句で返される、`BusinessEntityID`で昇順に並べ替えます。 2 番目の例では、`TerritoryName` 列が 'United States' と等しい場合は結果セットが `CountryRegionName` 列の順序に従って並べ替えられ、他のすべての列は `CountryRegionName` の順序に従って並べ替えられます。  
+ 次の例では、ORDER BY 句で CASE 式を使用して、条件付きで指定された列の値に基づいて行の並べ替え順序を決定します。 最初の例では、値では、`SalariedFlag`の列、`HumanResources.Employee`テーブルが評価されます。 `SalariedFlag` が 1 に設定されている従業員は `BusinessEntityID` の降順で、 従業員が、 `SalariedFlag` 0 に設定するが order by 句で返される、`BusinessEntityID`で昇順に並べ替えます。 2 番目の例では、`TerritoryName` 列が 'United States' と等しい場合は結果セットが `CountryRegionName` 列の順序に従って並べ替えられ、他のすべての列は `CountryRegionName` の順序に従って並べ替えられます。  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  

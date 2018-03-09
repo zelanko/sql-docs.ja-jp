@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_cryptographic_provider_properties
 - sys.dm_cryptographic_provider_properties_TSQL
 - dm_cryptographic_provider_properties
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_cryptographic_provider_properties dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_cryptographic_provider_properties dynamic management view
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ded9cecb8f5fca6c876e0971e80b0a3964b8aa24
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 668ac255e05eb78324dbba1279b9c516c18f79e9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmcryptographicproviderproperties-transact-sql"></a>sys.dm_cryptographic_provider_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |guid|**uniqueidentifier**|一意のプロバイダー GUID。|  
 |provider_version|**nvarchar (256)**|バージョンの形式でプロバイダー '*aa.bb.cccc.dd*' です。|  
 |sqlcrypt_version|**nvarchar (256)**|メジャー バージョン、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]形式で Cryptographic API '*aa.bb.cccc.dd*' です。|  
-|friendly_name|**nvarchar (2048)**|プロバイダーによって指定された名前。|  
+|friendly_name|**nvarchar(2048)**|プロバイダーによって指定された名前。|  
 |authentication_type|**nvarchar (256)**|WINDOWS、BASIC、または OTHER。|  
 |symmetric_key_support|**tinyint**|0 (サポートされていません)<br /><br /> 1 (サポートされています)|  
 |symmetric_key_export|**tinyint**|0 (サポートされていません)<br /><br /> 1 (サポートされています)|  

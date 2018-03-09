@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.configureflatfiledest.f1
+f1_keywords:
+- sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e312251291cbf2e8850b7900793b8d32e7c3d53b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a9384b498ea78369278261a3334504e5d1b29b58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>[フラット ファイルの変換先の構成] (SQL Server インポートおよびエクスポート ウィザード)
   フラット ファイルの変換先を選択した場合、テーブルをコピーするように指定した後で、またはクエリを指定した後で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードには、**[フラット ファイルの変換先の構成]** が表示されます。 このページで、宛先のフラット ファイルの書式設定オプションを指定します 必要に応じて、個々の列のマッピングを確認し、サンプル データをプレビューします。  
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/20/2017
  **[行区切り記号]**  
  出力で行を区切るための区切り記号を一覧から選択します。 *カスタム*の行区切り記号を指定するオプションはありません。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|復帰と改行の組み合わせで行を区切ります。|  
 |**{CR}**|復帰で行を区切ります。|  
@@ -53,22 +55,22 @@ ms.lasthandoff: 11/20/2017
 |**セミコロン {;}**|セミコロンで行を区切ります。|  
 |**コロン {:}**|コロンで行を区切ります。|  
 |**コンマ {,}**|コンマで行を区切ります。|  
-|**タブ {t}**|タブで行を区切ります。|  
+|**[タブ {t}]**|タブで行を区切ります。|  
 |**縦棒 {&#124;}**|垂直バーで行を区切ります。|  
   
  **列区切り記号**  
  出力で列を区切るための区切り記号を一覧から選択します。 *カスタム*の列区切り記号を指定するオプションはありません。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|復帰と改行の組み合わせで列を区切ります。|  
 |**{CR}**|復帰で列を区切ります。|  
 |**{LF}**|改行で列を区切ります。|  
 |**セミコロン {;}**|セミコロンで列を区切ります。|  
 |**コロン {:}**|コロンで列を区切ります。|  
-|**コンマ {,}**|コンマで列を区切ります。|  
+|**[コンマ {,}]**|コンマで列を区切ります。|  
 |**タブ {t}**|タブで列を区切ります。|  
-|**縦棒 {&#124;}**|垂直バーで列を区切ります。|  
+|**[縦棒 {&#124;}]**|垂直バーで列を区切ります。|  
 
 ## <a name="optionally-review-column-mappings-and-preview-data"></a>必要に応じて、列マッピングとプレビュー データをレビューします。
 

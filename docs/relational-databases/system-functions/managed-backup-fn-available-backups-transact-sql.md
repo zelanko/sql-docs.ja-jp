@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - smart_admin.fn_available_backups_TSQL
 - fn_available_backups_TSQL
 - fn_available_backups
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_available_backups
 - smart_admin.fn_available_backups
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e5b69caf7cde64cae7454c7132e1ee739898fff
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1db926d3539587c411056a59135fb028899566de
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>構文  
   
-```tsql  
+```sql  
 managed_backup.fn_available_backups ([@database_name = ] 'database name')  
 ```  
   
@@ -60,8 +62,8 @@ LSN にギャップがある場合は、ログ チェーンが中断されてい
 |backup_type|NVARCHAR (6)|データベース バックアップの場合は "DB"、ログ バックアップの場合は "LOG"。|  
 |expiration_date|DATETIME|このファイルが削除されることが予想される日付。 これは、指定された保有期間内の特定の時点にデータベースを復旧する機能に基づいて設定されます。|  
 |database_guid|UNIQUEIDENTIFIER|指定されたデータベースの GUID 値。  GUID はデータベースを一意に識別します。|  
-|first_lsn|NUMERIC(25, 0)|バックアップ セット内の先頭または最も古いログ レコードのログ シーケンス番号。 NULL にすることができます。|  
-|last_lsn|NUMERIC(25, 0)|バックアップ セットの次のログ レコードのログ シーケンス番号。 NULL にすることができます。|  
+|first_lsn|NUMERIC(25, 0)|バックアップ セット内の先頭または最も古いログ レコードのログ シーケンス番号。 NULL を指定できます。|  
+|last_lsn|NUMERIC(25, 0)|バックアップ セットの次のログ レコードのログ シーケンス番号。 NULL を指定できます。|  
 |backup_start_date|DATETIME|バックアップ操作が開始された日付と時刻。|  
 |backup_finish_date|NVARCHAR(128)|バックアップ操作が終了した日付と時刻。|  
 |machine_name|NVARCHAR(128)|SQL Server のインスタンスがインストールされ、実行中コンピューターの名前[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]です。|  
@@ -75,7 +77,7 @@ LSN にギャップがある場合は、ログ チェーンが中断されてい
   
 ## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>権限  
  必要があります**選択**この関数に対する権限。  
   
 ## <a name="examples"></a>使用例  

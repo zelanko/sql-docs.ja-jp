@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SQLAgent:JobSteps
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6d6953a342ab24540da33464962712ea43579f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d6c2bfb8f1b628ba4515f3668b2a226e44b5c8fe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server エージェントの JobSteps オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの **JobSteps** パフォーマンス オブジェクトには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップについての情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターを示します。  
   
  次の表は、 **SQLAgent:JobSteps** カウンターの一覧です。  
   
-|名前|説明|  
+|[オブジェクト名]|Description|  
 |----------|-----------------|  
 |**Active steps**|このカウンターは、現在実行中のジョブ ステップの数を報告します。|  
 |**Queued steps**|このカウンターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで実行する準備が整っているジョブ ステップで、まだ実行が開始されていないジョブ ステップの数を報告します。|  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|インスタンス|説明|  
+|Instance|Description|  
 |--------------|-----------------|  
 |**_Total**|すべてのジョブ ステップの情報です。|  
 |**ActiveScripting**|**ActiveScripting** サブシステムを使用するジョブ ステップの情報です。|  

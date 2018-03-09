@@ -6,24 +6,27 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 0b0582b8-8843-4787-94a8-2e28bdc04fb2
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: cd04930584a96353a7dc4914743e7aa38cc1708b
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 6ac8e646c93c0371f959afc212601e5abe0de213
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>SQL Server と R のデータ サイエンスのチュートリアルの前提条件
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ラップトップまたは Microsoft R ライブラリがインストールされているその他のコンピューターでは、このチュートリアルを実行することをお勧めします。 接続する場合、同じネットワーク上にする必要があります、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] machine learning のサービスと、R 言語を有効になっているコンピューターにします。
 
@@ -34,7 +37,7 @@ ms.lasthandoff: 12/20/2017
 インストールされている R のサポートを持つ SQL Server のインスタンスへのアクセスが必要です。 このチュートリアルが当初 SQL erver 2016 用に開発され、次の SQL Server のバージョンのいずれかを使用することができますので、2017年でテストします。 (がいくつかの相違は小さい RevoScaleR 関数でリリース。)
 
 + SQL Server 2017 の機械学習の Services (In-database)
-+ SQL Server 2016 R サービス
++ SQL Server 2016 R Services
 
 詳細については、次を参照してください。 [SQL Server R Services の設定 (データベース内](../r/set-up-sql-server-r-services-in-database.md)です。
 

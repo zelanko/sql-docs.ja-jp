@@ -7,7 +7,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords:
@@ -16,18 +16,19 @@ keywords:
 - "R Services セットアップします。"
 - "SQL の機械学習をインストールします。"
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 2b0bace5079478e725df9d253c31e583193660cb
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>SQL Server マシン ラーニング Services (In-database) セットアップします。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 このトピックでは、インストールして、次の機械学習で SQL Server データベース内の分析をサポートする機能を構成する方法について説明します。
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/20/2017
 
 + Machine learning サーバー**ありません**SQL Server
 
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップには、マシンの学習のコンポーネントは、データベース エンジンと SQL Server では実行されません「スタンドアロン」バージョンをインストールするオプションも含まれています。  一般に、SQL Server をホストするコンピューターとは異なるコンピューターでこのオプションをインストールすることをお勧めします。
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップには、マシンの学習のコンポーネントは、データベース エンジンと SQL Server では実行されません「スタンドアロン」バージョンをインストールするオプションも含まれています。  一般に、SQL Server をホストするコンピューターとは異なるコンピューターでこのオプションをインストールすることをお勧めします。
     
     [機械学習のスタンドアロン サーバーのセットアップ](create-a-standalone-r-server.md)です。
 
@@ -125,7 +126,7 @@ ms.lasthandoff: 12/20/2017
 > * インストール後の手順が必要: 機械学習を有効にして再起動
 > * 省略可能なインストール後の手順: ファイアウォール規則を追加、ユーザーを追加、変更、またはサービス アカウントの構成、リモート データ サイエンス クライアントを設定します。
 
-**開始するには**
+**作業を開始します。**
 
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行します。
   
@@ -231,7 +232,7 @@ ms.lasthandoff: 12/20/2017
 
     | hello |
     |----|
-    | @shouldalert|
+    | 1|
 
 
 8. エラーが発生した場合は、インストールが完了したら、またはトラブルシューティング ガイドを参照する必要があります (省略可能) の変更を説明するセクションに進みます。

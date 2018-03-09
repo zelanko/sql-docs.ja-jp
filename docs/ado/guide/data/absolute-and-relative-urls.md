@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0bbd79ff71ffe17c9fb33903501ab7302766fbf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3564236b7b6bee2ae21f1b78a4275fb615aa2e4e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absolute-and-relative-urls"></a>絶対と相対 Url
 URL では、ローカルまたはネットワーク上のコンピューターに格納されているターゲットの場所を指定します。 ファイル、ディレクトリ、HTML ページ、画像、プログラム、およびなど、ターゲットにできます*です。*  
@@ -38,16 +39,16 @@ URL では、ローカルまたはネットワーク上のコンピューター�
   
  相対 URL 通常のみで構成されて、*パス*、し、必要に応じて、*リソース*が*スキーム*または*サーバー*です。 次の表は、完全な URL の形式の個々 の部分を定義します。  
   
- *スキーム*  
+ *scheme*  
  指定する方法、*リソース*へのアクセスします。  
   
  *server*  
  コンピューターの名前を指定場所、*リソース*が配置されています。  
   
- *パス*  
+ *path*  
  一連の先頭のターゲットにディレクトリを指定します。 場合*リソース*は内の最後のディレクトリがターゲットを省略すると、*パス*です。  
   
- *リソース*  
+ *resource*  
  含まれる場合、*リソース*ターゲットは、通常、ファイルの名前。 ある可能性があります、*単純なファイルは、* (バイト単位) の 1 つのバイナリ ストリームを含むまたは*構造化ドキュメントは、* 1 つまたは複数の記憶域とのバイトのバイナリ ストリームを含むです。  
   
 ## <a name="url-scheme-registration"></a>URL スキームの登録  

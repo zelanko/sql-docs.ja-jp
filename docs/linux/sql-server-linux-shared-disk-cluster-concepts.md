@@ -3,25 +3,27 @@ title: "フェールオーバー クラスター インスタンスの SQL Serve
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: c99b850b9733eba6baadb1d5bb893e6479fe4dea
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: a9e8964b16eff5da35ef3abac6f493afc7615903
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの SQL Server on Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 この記事では、SQL Server フェールオーバー クラスター インスタンス (FCI) を Linux に関連する概念について説明します。 
 
@@ -40,13 +42,13 @@ Linux 上の SQL Server の FCI を作成するを参照してください[Linux
 
 RHEL HA アドオンおよび SUSE HAE の両方に基づいて構築されます[ペース](http://clusterlabs.org/)です。
 
-として、次の図は、記憶域は、2 つのサーバーに表示されます。 -Corosync とペース - クラスタ リングのコンポーネントは、通信およびリソース管理を調整します。 サーバーのいずれかが、記憶域リソース、および SQL Server へのアクティブな接続です。 ペースが障害を検出したときに、クラスタ リングのコンポーネントは、他のノードに、リソースの移動を管理します。  
+次の図に示す 2 つのサーバーに記憶域が提供されます。 -Corosync とペース - クラスタ リングのコンポーネントは、通信およびリソース管理を調整します。 サーバーのいずれかが、記憶域リソース、および SQL Server へのアクティブな接続です。 ペースが障害を検出したときに、クラスタ リングのコンポーネントは、他のノードに、リソースの移動を管理します。  
 
 ![Red Hat Enterprise Linux 7 ディスク SQL クラスターの共有](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
 
 > [!NOTE]
-> この時点では、Linux 上のペースで SQL Server の統合は Windows での WSFC でとして結合します。 SQL 内ではありません、クラスターの存在についてのナレッジ、すべてのオーケストレーションが外であり、サービスは、スタンドアロン インスタンスとしてペースによって制御されます。 また、仮想ネットワーク名は、WSFC を特定、相当するのと同じペースではありません。 推測 @ を@servernameと sys.servers クラスター dmv sys.dm_os_cluster_nodes と sys.dm_os_cluster_properties にレコードがないときに、ノード名を返すにします。 文字列のサーバー名を指す接続文字列を使用して、ip アドレスを使用しない、これらには、選択したサーバーの名前 (後述) の仮想 IP リソースを作成するために使用する ip アドレスが DNS サーバーに登録する必要があります。
+> この時点では、Linux 上のペースで SQL Server の統合は Windows での WSFC でとして結合します。 SQL 内ではありません、クラスターの存在についてのナレッジ、すべてのオーケストレーションが外であり、サービスは、スタンドアロン インスタンスとしてペースによって制御されます。 また、仮想ネットワーク名は、WSFC を特定、相当するのと同じペースではありません。 推測 @ を@servernameと sys.servers クラスター dmv sys.dm_os_cluster_nodes と sys.dm_os_cluster_properties にレコードがないときに、ノード名を返すにします。 文字列のサーバー名を指す接続文字列を使用して、ip アドレスを使用しない、これらには、選択したサーバーの名前 (次のセクションで説明されている) と仮想 IP リソースの作成に使用される IP、DNS サーバーに登録する必要があります。
 
 ## <a name="number-of-instances-and-nodes"></a>インスタンスの数およびノード
 
@@ -57,7 +59,7 @@ SQL Server on Linux の主な違いがありますがあることですのみ SQ
 SQL Server FCI で SQL Server のインスタンスが 1 つのノードか一方でアクティブです。
 
 ## <a name="ip-address-and-name"></a>IP アドレスと名前
-Linux ペース クラスターでは、各 SQL Server の FCI は独自の一意の IP アドレスと名前を必要があります。 FCI の構成は、複数のサブネットにまたがっている場合、1 つの IP アドレスがサブネットごとに必要になります。 一意の名前と IP アドレスは、アプリケーションとエンドユーザーする必要はありません、ペース クラスターの基になるサーバーが決まっているように、FCI のアクセスに使用されます。
+Linux ペース クラスターでは、各 SQL Server の FCI は、独自の一意の IP アドレスと名前が必要です。 FCI の構成は、複数のサブネットにまたがっている場合、1 つの IP アドレスがサブネットごとに必要になります。 一意の名前と IP アドレスは、アプリケーションとエンドユーザーする必要はありません、ペース クラスターの基になるサーバーが決まっているように、FCI のアクセスに使用されます。
 
 DNS で、FCI の名前は、ペース クラスターの作成を取得する FCI リソースの名前と同じにする必要があります。
 名前と IP アドレスの両方を DNS に登録する必要があります。

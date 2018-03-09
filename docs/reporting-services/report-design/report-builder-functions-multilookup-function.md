@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3b5c2254a10b9effafd6ac0640ddc5233a3efd8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13a935d3281eae92baacc6741d7e276b3046f2ba
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---multilookup-function"></a>レポート ビルダー関数 - Multilookup 関数
   名前と値のペアを含むデータセットから、指定された名前のセットに最初に一致した値のセットを返します。  
@@ -54,7 +52,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="return"></a>戻り値  
  **VariantArray**を返します。一致する結果がなかった場合は、 **Nothing** を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データセットで、名前と値の各ペアに 1 対 1 のリレーションシップが存在する場合、 **Multilookup** を使用して一連の値を取得します。 **MultiLookup** は、一連の名前またはキーに対して **Lookup** を呼び出すことと同じです。 たとえば、主キー識別子に基づく複数値パラメーターの場合、テーブルのテキスト ボックス内の式で **Multilookup** を使用して、パラメーターまたはテーブルにバインドされていないデータセットから、関連付けられている値を取得することができます。  
   
  **Multilookup** を実行すると、次の処理が行われます。  
@@ -98,12 +96,12 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  CategoryNames データセットには、次の表に示すように、カテゴリ識別子とカテゴリ名が格納されています。  
   
-|ID|名前|  
+|ID|[オブジェクト名]|  
 |--------|----------|  
-|1|Accessories|  
+|@shouldalert|Accessories|  
 |2|Bikes|  
 |3|Clothing|  
-|4|コンポーネント|  
+|4|Components|  
   
  識別子のリストに対応する名前を参照するには、 **Multilookup**を使用します。 まず、リストを文字列の配列に分割する必要があります。次に、 **Multilookup** を呼び出してカテゴリ名を取得し、結果を連結して文字列にします。  
   
@@ -120,7 +118,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 |ColorID|色|  
 |-------------|-----------|  
-|1|[赤]|  
+|@shouldalert|[赤]|  
 |2|[青]|  
 |3|[緑]|  
   

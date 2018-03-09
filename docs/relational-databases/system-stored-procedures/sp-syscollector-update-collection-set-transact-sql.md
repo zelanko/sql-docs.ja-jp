@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
 - sp_syscollector_update_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90f034f59bc7430e059fb276ec0111a4af2f807c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9863651eca95bcd4eafd263b205ddeef5ba4e438
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,19 +62,19 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@collection_set_id =** ] *collection_set_id*  
+ [ **@collection_set_id =** ] *collection_set_id*  
  コレクション セットの一意なローカル識別子を指定します。 *collection_set_id*は**int**場合、値が必要と*名前*は NULL です。  
   
  [  **@name =** ] '*名前*'  
  コレクション セットの名前を指定します。 *名前*は**sysname**場合、値が必要と*collection_set_id*は NULL です。  
   
- [  **@new_name =** ] '*new_name*'  
+ [ **@new_name =** ] '*new_name*'  
  コレクション セットの新しい名前です。 *新しい名前*は**sysname**、使用する場合は、空の文字列にすることはできません。 *新しい名前*一意である必要があります。 現在のコレクション セットの名前の一覧については、syscollector_collection_sets システム ビューにクエリを実行します。  
   
- [  **@target =** ] '*ターゲット*'  
+ [ **@target =** ] '*target*'  
  将来の使用のために予約されています。  
   
- [  **@collection_mode =** ] *collection_mode*  
+ [ **@collection_mode =** ] *collection_mode*  
  使用するデータ コレクションの種類です。 *collection_mode*は**smallint**値は次のいずれかを持つことができます。  
   
  0 - キャッシュ モード。 データの収集とアップロードは個別のスケジュールに従います。 連続コレクションのキャッシュ モードを指定します。  
@@ -81,10 +83,10 @@ sp_syscollector_update_collection_set
   
  場合は非キャッシュ モードからキャッシュ モード (0) に変更する、する必要がありますいずれかも指定*schedule_uid*または*schedule_name*です。  
   
- [  **@days_until_expiration=** ] *days_until_expiration*  
+ [ **@days_until_expiration=** ] *days_until_expiration*  
  収集したデータを管理データ ウェアハウスに保管しておく日数です。 *days_until_expiration*は**smallint**です。 *days_until_expiration* 0 または正の整数にする必要があります。  
   
- [  **@proxy_id =** ] *proxy_id*  
+ [ **@proxy_id =** ] *proxy_id*  
  一意の識別子は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント プロキシ アカウント。 *proxy_id*は**int**です。  
   
  [  **@proxy_name =** ] '*proxy_name*'  
@@ -97,10 +99,10 @@ sp_syscollector_update_collection_set
   
  ときに*collection_mode*を 0 に設定されている*schedule_uid*または*schedule_name*指定する必要があります。 ときに*collection_mode*を 1 に設定されている*schedule_uid*または*schedule_name*指定されている場合は無視されます。  
   
- [  **@schedule_name =** ] '*schedule_name*'  
+ [ **@schedule_name =** ] '*schedule_name*'  
  スケジュールの名前です。 *schedule_name*は**sysname** null 値を許容します。 指定した場合*schedule_uid* NULL にする必要があります。 取得する*schedule_name*、sysschedules システム テーブルにクエリします。  
   
- [  **@logging_level =** ] *logging_level*  
+ [ **@logging_level =** ] *logging_level*  
  ログ レベルです。 *logging_level*は**smallint**次の値のいずれかの。  
   
  0 - ログの実行情報と[!INCLUDE[ssIS](../../includes/ssis-md.md)]イベントを追跡します。  
@@ -117,7 +119,7 @@ sp_syscollector_update_collection_set
   
 -   コレクションの進行状況を継続的に実行します。  
   
--   警告イベント[!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+-   警告イベント [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
  2 – レベル 1 ログに記録してから詳細なイベントについて[!INCLUDE[ssIS](../../includes/ssis-md.md)]です。  
   
@@ -136,7 +138,7 @@ sp_syscollector_update_collection_set
   
  場合、コレクション セットが実行されていることができますのみを更新する*schedule_uid*と*説明*です。 コレクション セットを停止するには使用[sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  このプロシージャを実行するには、(EXECUTE 権限を持つ) dc_admin または dc_operator 固定データベース ロールのメンバーシップが必要です。 dc_operator ロールのメンバーがこのストアド プロシージャで更新できるのは、その権限で変更できるプロパティに限られます。 次のプロパティについては、dc_admin のみ変更できます。  
   
 -   @new_name  
@@ -197,7 +199,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)   
+ [データ コレクション](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
  [dbo.sysschedules &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   

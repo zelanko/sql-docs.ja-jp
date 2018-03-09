@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,19 +23,20 @@ helpviewer_keywords:
 - process clear structure option [Analysis Services]
 - process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 37311ad6191047a4eebdc51f427bc0e28c8f86d0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e05c1a60cc016b9f72d486a5b0f03037b0faa9ef
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>処理オプションと設定 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]内のオブジェクトを処理すると[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、各オブジェクトに対して行われる処理の種類を制御する処理オプションを選択することができます。 処理の種類はオブジェクトごとに異なるほか、オブジェクトに対する変更内容 (オブジェクトが前回処理されたことによって発生した変更) によっても異なります。 処理方法を自動的に選択する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の機能を有効にすると、オブジェクトを完全処理状態に最短時間で戻す方法が使用されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でオブジェクトを処理する場合、処理オプションを選択することにより、各オブジェクトに対して行われる処理の種類を制御できます。 処理の種類はオブジェクトごとに異なるほか、オブジェクトに対する変更内容 (オブジェクトが前回処理されたことによって発生した変更) によっても異なります。 処理方法を自動的に選択する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の機能を有効にすると、オブジェクトを完全処理状態に最短時間で戻す方法が使用されます。  
   
  処理オプションを設定することにより、処理されるオブジェクト、およびオブジェクトの処理方法を制御できます。 このような設定のいくつかは、主にバッチ処理ジョブで使用されます。 バッチ処理の詳細については、「[バッチ処理 (Analysis Services)](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)」を参照してください。  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="processing-options"></a>処理オプション  
  次の表に、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で使用できる処理方法と、それぞれの方法でサポートされているオブジェクトを示します。  
   
-|モード|適用対象|Description|  
+|[モード]|適用対象|Description|  
 |----------|----------------|-----------------|  
 |**既定の処理**|キューブ、データベース、ディメンション、メジャー グループ、マイニング モデル、マイニング構造、パーティション|データベース オブジェクトの処理状態を検出し、処理されていないオブジェクトや部分的に処理されたオブジェクトを完全処理状態にするために必要な処理を行います。 データ バインドを変更した場合、"既定の処理" では、影響を受けるオブジェクトに対して "完全処理" が実行されます。|  
 |**完全処理**|キューブ、データベース、ディメンション、メジャー グループ、マイニング モデル、マイニング構造、パーティション|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトとそのオブジェクトに含まれるすべてのオブジェクトを処理します。 既に処理済みのオブジェクトに対して Process Full を実行した場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はオブジェクト内のすべてのデータを削除してからオブジェクトを処理します。 この種類の処理は、属性階層の追加、削除、または名前変更など、構造上の変更がオブジェクトに加えられた場合に必要です。|  

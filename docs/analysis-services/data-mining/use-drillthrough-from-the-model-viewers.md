@@ -5,28 +5,27 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bb23accde5d3711a97d67aab6750a6a16a6a8b3d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 31ac0cffe6656c5d644b5424b56f150572dc9af6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>モデル ビューアーからのドリルスルーの使用
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ある参照ビューアーからのドリルスルーを使用するモデルの種類に応じて、**マイニング モデル ビューアー**をマイニング モデルで使用するケースを調べたり、マイニング構造に追加の列を参照したり、データ マイニング デザイナーのタブです。 モデルのパターンは特定のケースに直接リンクできないため、多くのモデルの種類ではドリルスルーがサポートされませんが、次のモデルの種類ではドリルスルーがサポートされます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+モデルの種類に応じて、データ マイニング デザイナーの **[マイニング モデル ビューアー]** タブにある参照ビューアーのドリルスルーを使用して、マイニング モデルで使用されているケースを調べたり、マイニング構造の追加列を参照したりできます。 モデルのパターンは特定のケースに直接リンクできないため、多くのモデルの種類ではドリルスルーがサポートされませんが、次のモデルの種類ではドリルスルーがサポートされます。  
   
  モデルでドリルスルーが有効になっている必要があり、適切な権限も必要です。 モデルが以前に処理されたかどうか、またコンテンツがあるかどうかにかかわらず、ドリルスルー オプションはモデルが未処理状態の場合にも無効になることがあります。 ドリルスルーを使用してモデル ケース データを取得するには、構造とモデルのキャッシュが最新である必要があります。  
   

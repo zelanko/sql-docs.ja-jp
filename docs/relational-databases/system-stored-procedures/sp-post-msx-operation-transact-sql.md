@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_post_msx_operation
 - sp_post_msx_operation_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_post_msx_operation
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_post_msx_operation
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f24eec6894314859df8d8d8343e0095448d2517c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b54a5b8dbf5539adb2d87ef6a095f4f78f767aff
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,23 +57,23 @@ sp_post_msx_operation
   
 |オブジェクトの種類|操作|  
 |-----------------|---------------|  
-|**ジョブ**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
+|**JOB**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
 |**サーバー**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
-|**スケジュール**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
+|**SCHEDULE**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
  [  **@object_type =**] **'***オブジェクト***'**  
  操作を通知するオブジェクトの種類を指定します。 有効な種類は**ジョブ**、**サーバー**、および**スケジュール**です。 *オブジェクト*は**varchar (64)**、既定値は**ジョブ**です。  
   
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  操作が適用されるジョブのジョブ識別番号を指定します。 *job_id*は**uniqueidentifier**、既定値はありません。 **0x00**すべてのジョブを示します。 場合*オブジェクト*は**サーバー**、し*job_id*は必要ありません。  
   
- [  **@specific_target_server =**] **'***target_server***'**  
+ [ **@specific_target_server =**] **'***target_server***'**  
  指定した操作を適用する対象サーバーの名前を指定します。 場合*job_id*が指定されているが、 *target_server*が指定されていない、すべてのジョブ、ジョブのサーバー操作が通知されます。 *target_server*は**nvarchar (30)**、既定値は NULL です。  
   
- [  **@value =**]*値*  
+ [ **@value =**] *value*  
  ポーリング間隔を秒数で指定します。 *value* のデータ型は **int**で、既定値は NULL です。 場合にのみ、このパラメーターを指定*操作*は**SET-POLL**です。  
   
- [  **@schedule_uid=** ] *schedule_uid*  
+ [ **@schedule_uid=** ] *schedule_uid*  
  操作が適用されるスケジュールの一意識別子を指定します。 *schedule_uid*は**uniqueidentifier**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -88,7 +91,7 @@ sp_post_msx_operation
   
  ダウンロードの一覧は、SQL Server Management Studio を使用して管理することを強くお勧めします。 詳細については、次を参照してください。[の表示または変更ジョブ](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  このストアド プロシージャを実行するユーザーに付与する必要があります、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="see-also"></a>参照  

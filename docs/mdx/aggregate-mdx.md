@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: AGGREGATE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6e0905531658202c86ef5deac9e20d4db36fd9d6
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9ae3eb300df4b0dccd02e6e3ec7034feaa8913e7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,9 +50,9 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
   
  次の表方法、**集計**各種集計関数の関数の動作です。  
   
-|集計演算子|結果|  
+|集計演算子|[結果]|  
 |--------------------------|------------|  
-|Sum|セット全体の値の合計を返します。|  
+|SUM|セット全体の値の合計を返します。|  
 |Count|セット全体の値の数を返します。|  
 |Max|セット全体の最大値を返します。|  
 |Min|セット全体の最小値を返します。|  

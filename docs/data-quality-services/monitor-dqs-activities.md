@@ -17,27 +17,27 @@ helpviewer_keywords:
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 73bc05ebd57a2e530dd98988824544238e7ba141
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7edd36b5b50eabac2cfa609a06aef2638d5b6dfd
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="monitor-dqs-activities"></a>DQS アクティビティの監視
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ検出、ドメイン管理、照合ポリシー、データ クレンジング、データ照合、および SSIS クレンジングの各アクティビティを一元的に監視する方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  アクティビティを終了させたりアクティビティ内のプロセスを停止させたりすることができるのは、DQS_Main データベースの dqs_administrator ロールを持つユーザーだけです。  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
   
 -   DQS アクティビティを表示するには、DQS_MAIN データベースに対する dqs_kb_editor または dqs_kb_operator ロールが必要です。  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  保存する Excel ファイルの名前と場所を指定するように求めるメッセージが表示されます。 エクスポートした Excel ファイルには、次のシートが含まれています。  
   
-    |シート名|説明|  
+    |シート名|Description|  
     |----------------|-----------------|  
     |アクティビティ|アクティビティ グリッドと同様の、アクティビティに関する情報 (列) が表示されます。|  
     |プロセス|**[アクティビティ ステップ]** タブと同様の、アクティビティのプロセスに関する情報 (列) が表示されます。|  

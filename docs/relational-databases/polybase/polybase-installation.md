@@ -8,21 +8,23 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-polybase
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: PolyBase, installation
+helpviewer_keywords:
+- PolyBase, installation
 ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 982594dc9a0f3ec83dcecef9738b2d4cda1fad83
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6a207474995eb36fbda4b446949bdf188f959edd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-installation"></a>PolyBase のインストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,6 +54,7 @@ SQL Server インスタンスに PolyBase をインストールする前に、�
 - すべてのマシンが同じドメインにある。
 - インストール時、同じサービス アカウントとパスワードを使用する。
 - SQL Server インスタンスがネットワーク経由で互いと通信できる。
+- SQL Server インスタンスがすべて同じバージョンの SQL Server である。
 
 PolyBase をスタンドアロンとスケールアウト グループのいずれかでインストールした後、変更することはできません。 この設定を変更するには、この機能をアンインストールし、再インストールする必要があります。
 

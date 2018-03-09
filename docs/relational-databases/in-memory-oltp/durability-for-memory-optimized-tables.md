@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 772e17a6f5b444b6d75719896bed74e3cd13ab67
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 206337e355352ce6b1f1a13cd36f90f18937de91
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="durability-for-memory-optimized-tables"></a>メモリ最適化テーブルの持続性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +111,7 @@ ms.lasthandoff: 11/17/2017
  空き領域のある CFP がすべてマージに適合するとは限りません。 たとえば、2 つの隣接する CFP の入力率が 60% の場合、これらはマージの対象にならないため、各 CFP の 40% のストレージは未使用になります。 最悪のケースは、すべての CFP の入力率が 50% になり、ストレージが 50% しか使用されない場合です。 CFP がマージ対象にならず、削除済みの行がストレージに存在していても、それらの削除済みの行は、インメモリ ガベージ コレクションによって既にメモリからは削除されている場合があります。 ストレージとメモリの管理は、ガベージ コレクションから独立しています。 アクティブな CFP (すべての CFP が更新されるわけではありません) から取得されたストレージは、最大でメモリ内の持続性のあるテーブルのサイズの 2 倍になる可能性があります。  
   
 ### <a name="life-cycle-of-a-cfp"></a>CFP のライフ サイクル  
- CPF は、割り当てが解除されるまでにいくつかの状態を遷移します。 フェーズを辿ってファイルを遷移し、必要なくなったファイルを最終的にクリーンアップするには、データベースのチェックポイントとログのバックアップが必要です。 これらのフェーズの説明については、「[sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)」を参照してください。  
+ CFP は、割り当てが解除されるまでにいくつかの状態を遷移します。 フェーズを辿ってファイルを遷移し、必要なくなったファイルを最終的にクリーンアップするには、データベースのチェックポイントとログのバックアップが必要です。 これらのフェーズの説明については、「[sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)」を参照してください。  
   
  チェックポイントとその後のログのバックアップを手動で強制的に実行し、ガベージ コレクションを早めることができます。 実稼動環境のシナリオでは、バックアップ方法の一環として実行される自動チェックポイントとログ バックアップにより、CFP はこれらのフェーズをシームレスに移行し、手動による操作は必要ありません。 ガベージ コレクション プロセスが実行されると、その影響として、メモリ最適化テーブルのあるデータベースのストレージ サイズがメモリ内のサイズに比べて大きくなる可能性があります。 チェックポイントとログのバックアップを実行しないと、チェックポイント ファイルのディスク上の使用量は増え続けます。  
   

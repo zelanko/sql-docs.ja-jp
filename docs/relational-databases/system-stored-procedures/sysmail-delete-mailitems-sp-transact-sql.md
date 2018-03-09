@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_mailitems_sp_TSQL
 - sysmail_delete_mailitems_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_delete_mailitems_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_delete_mailitems_sp
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a0142e48fba0338c1271da1eb7aa0edc13a4847f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6a7843e44e42de868c3748dbf31794d4c69e361e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +47,10 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@sent_before=** ] **'***@sent_before***'**  
+ [ **@sent_before=** ] **'***sent_before***'**  
  として指定した日時まで電子メールを削除、 *@sent_before*引数。 *@sent_before*は**datetime**で、既定値としては NULL です。 NULL はすべての日付を表します。  
   
- [  **@sent_status=** ] **'***sent_status***'**  
+ [ **@sent_status=** ] **'***sent_status***'**  
  指定された型の電子メールを削除*sent_status*です。 *sent_status*は**varchar (8)**既定値はありません。 有効なエントリは**送信**、**未送信**、**再試行**と**失敗**です。 NULL はすべての状態を表します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -58,7 +61,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
   
  電子メールを削除すると、そのメッセージに関係する添付ファイルも削除されます。 電子メールを削除しても、対応するエントリは削除されません**sysmail_event_log**です。 使用して[sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)ログから項目を削除します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  既定では、このストアド プロシージャが実行のメンバーに与えられますオフ、 **sysadmin**固定サーバー ロールと**DatabaseMailUserRole**です。 メンバー、 **sysadmin**をすべてのユーザーから送信された電子メールを削除するには、この手順を実行できるは、固定サーバー ロール。 メンバー **DatabaseMailUserRole**のみ、そのユーザーが送信された電子メールを削除できます。  
   
 ## <a name="examples"></a>使用例  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 978418b3341bf82e0d7560052e68fecbbeb3c59b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d175970f31ac75e3d94fe23bfc89304ac316e3ab
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>データの長さ、バッファー長、および切り捨て
 *データ長*はデータのバイト長アプリケーションのデータ バッファーに格納されますが、データ ソースに格納されていることがではありません。 データは多くの場合よりも、データ ソース内のデータ バッファー内のさまざまな種類に格納されているために、この区別は重要です。 したがって、データ ソースに送信されるデータ、これは、データ ソースの型への変換前に、のデータのバイト長です。 データ ソースから取得されるデータ、これは、データのバイト長切り捨てが行われる前に、データ バッファーの型に変換した後です。  

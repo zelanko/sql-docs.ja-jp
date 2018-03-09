@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CREATE LOGIN
 - LOGIN_TSQL
 - LOGIN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - passwords [SQL Server], logins
 - mapping logins [SQL Server]
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - re-hashing passwords
 - certificates [SQL Server], logins
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-caps.latest.revision: "101"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c0b06e7119f051d5854ae7f5435e8edd7fecf1a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 2e94847ca10923bba05e228f36a25e5caa8c2027
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -196,6 +198,8 @@ WINDOWS
  ログインを転送するスクリプトを次を参照してください。 [SQL Server 2005 のインスタンスと SQL Server 2008 の間で、ログインおよびパスワードを転送する方法](http://support.microsoft.com/kb/918992)です。  
   
  ログインを自動的に作成する、新しいログインを有効にし、ログイン、サーバー レベルの付与**CONNECT SQL**権限です。  
+ 
+ サーバーの[認証モード](../../relational-databases/security/choose-an-authentication-mode.md)アクセスを許可するログインの種類に一致する必要があります。
   
  権限システムの設計の詳細については、「 [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。  
   
@@ -208,27 +212,27 @@ WINDOWS
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作成することがルール、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]形式の認証ログイン\<loginname > @\<サーバー名 >。 場合、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]サーバーが**myazureserver** 、ログインが **myemail@live.com** 、としてログインを指定する必要があります **myemail@live.com @myazureserver** .  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]接続の認証に必要なログイン データ、およびサーバー レベルのファイアウォール ルールは、各データベースでは一時的にキャッシュします。 このキャッシュは定期的に更新されます。 認証キャッシュの更新を強制し、データベースのログインの表に、最新バージョンがあることを確認、実行[DBCC FLUSHAUTHCACHE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]接続の認証に必要なログイン データ、およびサーバー レベルのファイアウォール ルールは、各データベースでは一時的にキャッシュします。 このキャッシュは定期的に更新されます。 認証キャッシュの更新を強制し、データベースのログインの表に、最新バージョンがあることを確認、実行[DBCC FLUSHAUTHCACHE &#40;です。TRANSACT-SQL と #41 です](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。  
   
  詳細については[!INCLUDE[ssSDS](../../includes/sssds-md.md)]ログインを参照してください[Windows Azure SQL データベースにおけるデータベースの管理とログイン](http://msdn.microsoft.com/library/ee336235.aspx)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が必要です**ALTER ANY LOGIN**メンバーシップまたはサーバーに対する権限、 **securityadmin**固定サーバー ロール。  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、(準備プロセスによって作成される) サーバーレベルのプリンシパルのログインまたは master データベースの `loginmanager` データベース ロールのメンバーだけが新しいログインを作成できます。  
   
  場合、**資格情報**オプションを使うと、必要もあります**ALTER ANY CREDENTIAL**サーバーに対する権限。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
  ログインを作成するには、ログインに接続できる、[!INCLUDE[ssDE](../../includes/ssde-md.md)]または[!INCLUDE[ssSDS](../../includes/sssds-md.md)]のみに許可する権限を持つ、**パブリック**ロール。 次の操作のいくつかを実行することを検討してください。  
   
 -   データベースに接続するには、ログイン用のデータベース ユーザーを作成する必要があります。 詳細については、「[CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)」を参照してください。  
   
--   使用して、ユーザー定義サーバー ロールを作成[CREATE SERVER ROLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-server-role-transact-sql.md). 使用して**サーバーの役割が ALTER**しています. **メンバーの追加**ユーザー定義サーバー ロールに、新しいログインを追加します。 詳細については、次を参照してください。 [CREATE SERVER ROLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-server-role-transact-sql.md)と[ALTER SERVER ROLE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-server-role-transact-sql.md).  
+-   使用して、ユーザー定義サーバー ロールを作成[CREATE SERVER ROLE &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/create-server-role-transact-sql.md)。 使用して**サーバーの役割が ALTER**しています. **メンバーの追加**ユーザー定義サーバー ロールに、新しいログインを追加します。 詳細については、次を参照してください。 [CREATE SERVER ROLE &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/create-server-role-transact-sql.md)と[ALTER SERVER ROLE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-server-role-transact-sql.md)。  
   
--   使用して**sp_addsrvrolemember**固定サーバー ロールにログインを追加します。 詳細については、次を参照してください。[サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)と[sp_addsrvrolemember (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
+-   使用して**sp_addsrvrolemember**固定サーバー ロールにログインを追加します。 詳細については、次を参照してください。[サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)と[sp_addsrvrolemember (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)。  
   
--   使用して、 **GRANT**ステートメントでは、新しいログインまたはログインを含むロールにサーバー レベルのアクセス許可を付与します。 詳細については、「[GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)」を参照してください。  
+-   使用して、 **GRANT**ステートメントでは、新しいログインまたはログインを含むロールにサーバー レベルのアクセス許可を付与します。 詳細については、「 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)と共に使用できるように構成する方法について説明します。  
   
 ## <a name="examples"></a>使用例  
   
@@ -314,7 +318,7 @@ GO
 ### <a name="g-creating-a-sql-server-authentication-login-with-a-password"></a>G. パスワードで SQL Server 認証ログインを作成します。  
  次の例は、ログインを作成`Mary7`パスワードを持つ`A2c3456`します。  
   
-```tsql  
+```sql  
 CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;  
 ```  
   
@@ -340,7 +344,7 @@ GO
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [パスワード ポリシー](../../relational-databases/security/password-policy.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
- [DROP LOGIN &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP LOGIN &#40;TRANSACT-SQL と #41 です](../../t-sql/statements/drop-login-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [ログインの作成](../../relational-databases/security/authentication-access/create-a-login.md)  
   

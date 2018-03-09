@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 00fbddda37b58442e37618a25347576bc88caf07
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fbe87e904a8e46ae19d6dcb06600352a29949dc2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted のキー管理の概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,7 +101,7 @@ Always Encrypted の主な目的は、データベース システムまたは�
 - 列マスター キーまたは暗号化キーをデータベースをホストするコンピューター上で生成しないでください。 代わりに、別のコンピューター (キー管理専用またはキーへのアクセスを必要とするアプリケーションをホストしているコンピューターのいずれか) でキーを生成します。 つまり、攻撃者がプロビジョニングや Always Encrypted キーの維持に使用しているコンピューターにアクセスすると、ツールのメモリにキーが短時間表示されるだけでも、攻撃者がキーを取得できる可能性があるため、 **キーを生成するために使用したツールをデータベースをホストしているコンピューター上で決して実行しないでください** 。
 - キー管理プロセスで誤って列マスター キーや列暗号化キーを公開しないようにするには、キー管理プロセスを定義して実装する前に、潜在的な敵対者およびセキュリティの脅威を識別することが重要です。 たとえば、DBA が機密データにアクセスできないようにすることが目的の場合は、DBA がキーの生成を担当することはできません。 ただし、メタデータにはプレーンテキストのキーは含まれていないため、DBA はデータベース内のキーのメタデータを管理することは *できます* 。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>Next Steps
 
 - [列マスター キーを作成して保存する (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
 - [PowerShell を使用して Always Encrypted キーの構成](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)

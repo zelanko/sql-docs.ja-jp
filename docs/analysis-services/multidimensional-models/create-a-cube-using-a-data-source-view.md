@@ -5,29 +5,27 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6c5514b6ef512855ff718740fc7b7ea7342a1258
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1a78f2353c7d6afa88adc0bd76c4031b9224363b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>データ ソース ビューを使用したキューブの作成
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]既存のデータ ソース ビューを使用する場合、新しいキューブの構築のこのメソッドを使用します。 この方法では、データ ソース ビューを指定して、データ ソース ビューで使用するファクト テーブルとディメンション テーブルを選択します。 次に、キューブに含めるディメンションとメジャーを選択します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+既存のデータ ソース ビューを使用する場合、新しいキューブを構築するには、ここで説明する方法を使用します。 この方法では、データ ソース ビューを指定して、データ ソース ビューで使用するファクト テーブルとディメンション テーブルを選択します。 次に、キューブに含めるディメンションとメジャーを選択します。  
   
  データ ソースを使用してキューブを作成するには、ソリューション エクスプローラーで **[キューブ]** を右クリックして、 **[新しいキューブ]**をクリックします。 キューブ ウィザードが開きます。  
   
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  **[ダイアグラム]** タブでは、スキーマを表示するウィザード ウィンドウを拡大または最大化できます。  
   
- データ ソース ビューに時間ディメンション テーブルがある場合は、 **[時間ディメンション テーブル]** の一覧でテーブルを選択します。 資格情報がない場合のままに**\<なし >**選択します。 これは一覧の既定の項目です。 時間ディメンション テーブルとして選択されたテーブルは、 **[テーブル]** タブおよび **[ダイアグラム]** タブでもディメンション テーブルとして選択されます。  
+ データ ソース ビューに時間ディメンション テーブルがある場合は、**[時間ディメンション テーブル]** の一覧でテーブルを選択します。 資格情報がない場合のままに**\<なし >**選択します。 これは一覧の既定の項目です。 時間ディメンション テーブルとして選択されたテーブルは、 **[テーブル]** タブおよび **[ダイアグラム]** タブでもディメンション テーブルとして選択されます。  
   
 ## <a name="defining-time-periods"></a>時間間隔の定義  
  テーブル型を選択するときに時間ディメンション テーブルを指定した場合、ウィザードの **[時間間隔の定義]** ページを使用して、テーブルで標準時間間隔に対応する列を指定します。 **[Time プロパティ名]**で標準的な間隔を見つけます。 時間ディメンション テーブルに対応する列が存在する行ごとに、 **[Time テーブル列]**で適切な列を選択します。 ウィザードは指定したアソシエーションを使用して、属性を作成し、データに有効な時間階層を提案します。 これらのアソシエーションによって、新しい時間ディメンションの対応する属性の **Type** プロパティも設定されます。 次に、ウィザードによって時間ディメンション テーブルに基づいて時間ディメンションが作成されます。  

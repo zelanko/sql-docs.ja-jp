@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 77bad0900d5d636a06ed1b836697e96120d0a7cd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c35cd0e0174ffc94c498007fff8a314d2094856a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="imdembeddeddata-interface"></a>IMDEmbeddedData インターフェイス
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]IMDEmbeddedData インターフェイスは、埋め込みの管理に使用するパブリック インターフェイス[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]データベースまたは表形式モデル データベース。 インターフェイスが継承、 **IPersistStream**インターフェイスです。 このインターフェイスでは、次の操作を実行できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+IMDEmbeddedData インターフェイスは、埋め込みの管理に使用するパブリック インターフェイス[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]データベースまたは表形式モデル データベース。 インターフェイスが継承、 **IPersistStream**インターフェイスです。 このインターフェイスでは、次の操作を実行できます。  
   
 -   コンテナー ドキュメント内の埋め込みストリームの識別子を取得します。  
   

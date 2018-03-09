@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ec8f2b705ca226f94f2fcea9cf79aa8a7cdc31c4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86ba311eb458c1128a611b6d1cc2ed1c71329d3f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="translator-specification-subkeys"></a>変換プログラムの仕様のサブキー
 ODBC 変換器サブキーに表示されている各翻訳には、独自のサブキーがあります。 このサブキーは、ODBC 変換器のサブキーの下の対応する値として同じ名前を持ちます。 このサブキーの下の値は、変換、変換プログラムのセットアップ Dll と使用率カウントの完全パスを一覧表示します。 値の形式は、次の表に示すようにします。  
   
-|名前|データ型|data|  
+|[オブジェクト名]|データ型|data|  
 |----------|---------------|----------|  
 |[変換者]|REG_SZ|*トランスレーター DLL パス*|  
 |セットアップ|REG_SZ|*セットアップ DLL パス*|  

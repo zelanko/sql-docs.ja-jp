@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 5938b3a9-6412-45fc-86f8-264651d01598
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 91f83a1e522059fe9924ece04a6cfd64ee221120
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 20e512bbc1ac3ba7c2a6b6604032c047f83d10cf
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-restorefolder-cmdlet"></a>New-RestoreFolder コマンドレット
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]新しいフォルダーには、元のフォルダーを復元します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+元のフォルダーを新しいフォルダーに復元します。  
 
 >[!NOTE] 
 >この記事には、古くなった情報と例があります。 最新バージョンには、Get-help コマンドレットを使用します。
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="parameters"></a>パラメーター  
   
-### <a name="-originalfolder-string"></a>-Originalfolder &\<文字列 >  
+### <a name="-originalfolder-string"></a>-OriginalFolder \<string>  
  元のフォルダーの場所を取得します。  
   
 |||  
@@ -52,7 +53,7 @@ ms.lasthandoff: 12/08/2017
 |パイプライン入力の受け入れ|true|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-newfolder-string"></a>-新しいフォルダー\<文字列 >  
+### <a name="-newfolder-string"></a>-NewFolder \<string>  
  新しいフォルダーの場所を設定します。  
   
 |||  
@@ -63,7 +64,7 @@ ms.lasthandoff: 12/08/2017
 |パイプライン入力の受け入れ|true|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-astemplate-switchparameter"></a>-Astemplate \<SwitchParameter >  
+### <a name="-astemplate-switchparameter"></a>-AsTemplate \<SwitchParameter>  
  オブジェクトをメモリ内に作成して取得するかどうかを指定します。  
   
 |||  
@@ -74,7 +75,7 @@ ms.lasthandoff: 12/08/2017
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-server-string"></a>-サーバー\<文字列 >  
+### <a name="-server-string"></a>-Server \<string>  
  コマンドレットが接続して実行する Analysis Services インスタンスを指定します。 サーバー名が指定されていない場合は、localhost に接続されます。 既定のインスタンスの場合は、サーバー名のみを指定します。 名前付きインスタンスの場合は、servername \instancename 形式を使用します。 HTTP 接続では、http[s]://server[:port]/virtualdirectory/msmdpump.dll 形式を使用します。  
   
 |||  
@@ -85,7 +86,7 @@ ms.lasthandoff: 12/08/2017
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
+### <a name="-credential-pscredential"></a>-Credential \<PSCredential>  
  このパラメーターは、HTTP アクセス用に構成したインスタンスに対して、Analysis Service インスタンスへの HTTP 接続を使用するときに、ユーザー名とパスワードを渡すために使用されます。 詳細については、次を参照してください。 [Analysis Services 上にインターネット インフォメーション サービス (&) #40 です。 IIS"&"#41 への HTTP アクセスの構成; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)の HTTP 接続です。  
   
  このパラメーターを指定した場合は、指定された Analysis Server インスタンスへの接続にユーザー名とパスワードが使用されます。 資格情報を指定していない場合は、ツールを実行しているユーザーの既定の Windows アカウントが使用されます。  

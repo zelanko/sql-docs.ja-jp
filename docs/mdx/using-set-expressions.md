@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: c6934579db146c851f2677e78abbfa34870de358
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ba59d13932b4d93f7d4992b8f26b6830ba67b395
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-set-expressions"></a>セット式の使用
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -70,9 +70,9 @@ ms.lasthandoff: 11/27/2017
   
  このセットは 3 つの組で構成されており、それぞれの組には、Product ディメンションの Product Categories 階層のメンバーと Date ディメンションの Calendar 階層のメンバーへの、2 つの明示的な参照が含まれています。  
   
- セットを返す関数の例については、次を参照してください[メンバー、組、およびセット &#40; の操作。MDX と #41 です;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)。  
+ セットを返す関数の例については、次を参照してください[メンバー、組、およびセット &#40; の操作。MDX と #41 です](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)。  
   
 ## <a name="see-also"></a>参照  
- [式 &#40;です。MDX と #41 です。](../mdx/expressions-mdx.md)  
+ [式 &#40;です。MDX と #41 です](../mdx/expressions-mdx.md)  
   
   

@@ -1,20 +1,32 @@
 ---
 title: "SQL Server の Python チュートリアル |Microsoft ドキュメント"
-ms.custom: SQL2016_New_Updated
-ms.date: 09/19/2017
-vapplies_to: SQL Server 2017
-dev_langs: Python
-caps.latest.revision: "1"
+titleSuffix: SQL Server
+ms.custom: 
+ms.date: 03/06/2018
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
+ms.tgt_pltfrm: 
+ms.topic: tutorial
+applies_to:
+- SQL Server 2017
+dev_langs:
+- Python
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 60b17dd267e5b6bbb940a335aa89b74585b24dcc
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: a9ba77cd6ec26e21136aa8ebfebfe67725b94ba2
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="sql-server-python-tutorials"></a>SQL Server の Python のチュートリアル
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、チュートリアルおよび SQL Server 2017 での Python の使用方法を示すサンプルの一覧を示します。 これらのサンプルとデモでは、学びます。
 
@@ -34,15 +46,15 @@ ms.lasthandoff: 12/20/2017
 
 + [機械学習 revoscalepy を使用して Python でモデルを作成します。](use-python-revoscalepy-to-create-model.md)
 
-   使用してモデルを作成する**rxLinMod**、新しいから**revoscalepy**ライブラリです。 リモート Python ターミナルからのコードを起動しますが、SQL Server のコンピューティング コンテキストで、モデリングが行われます。
+   このレッスンでは、どのようにコードを実行できる、リモートの Python ターミナルから SQL Server のコンピューティング コンテキストを使用してを示しています。 Python tools および環境をある程度理解してください。 サンプル コードを使用してモデルを作成する提供**rxLinMod**、新しいから**revoscalepy**ライブラリです。 
 
 + [SQL 開発者のためのデータベースでの Python の分析](sqldev-in-database-python-for-sql-developers.md)
 
-  新機能！ T-SQL ストアド プロシージャを使用して完全な Python ソリューションをビルドします。 すべての Python コードが含まれます。
+    このエンド ツー エンド チュートリアルでは、T-SQL ストアド プロシージャを使用して完全な Python ソリューションを構築するプロセスを示します。 すべての Python コードが含まれます。
 
 + [展開および Python モデルを使用します。](..\python\publish-consume-python-code.md)
 
-  Python を Microsoft Machine Learning のサーバーの最新バージョンを使用してモデルを展開する方法を説明します。
+  Microsoft Machine Learning のサーバーの最新バージョンを使用して、web サービスとしての Python モデルを展開する方法を説明します。
 
 ## <a name="python-samples"></a>Python のサンプル
 
@@ -61,22 +73,26 @@ ms.lasthandoff: 12/20/2017
 
 ## <a name="bkmk_Prerequisites"></a>前提条件
 
-これらのチュートリアルを使用するには、SQL Server 2017 Machine Learning Services (In-database) をインストールする必要があります。 SQL Server 2017 は、R、または Python をサポートします。 ただし、機械学習をサポートする拡張機能フレームワークをインストールし、Python をインストールする言語として選択する必要があります。 同じコンピューターには、R、Python の両方をインストールできます。
+これらのチュートリアルを使用する SQL Server の 2017 が必要と明示的にインストールし、Machine Learning Services (In-database)、この機能を有効にする必要があります。 
 
-> [!NOTE]
->
-> Python のサポートは、SQL Server 2017 の新機能は、CTP 2.0 以降が必要です。 機能はリリース前と実稼働環境のサポートされていませんが、ご協力をお試しくださいフィードバックをお送りください。
+SQL Server 2017 が R、Python の両方の言語をサポートしますが、どちらをインストールまたは既定で有効にします。 Python を実行するには、extensibility framework を有効にして、Python をインストールする言語として選択する必要があります。 
 
-**SQL Server 2017**
+### <a name="post-installation-configuration-tips"></a>インストール後の構成のヒント
 
-SQL Server セットアップを実行した後、これらの重要な手順を必ず。
+SQL Server セットアップを実行した後は、Python と SQL Server が通信していることを確認する追加の手順を実行する必要があります。
 
 + 実行して、外部スクリプト実行機能を有効にする`sp_configure 'external scripts enabled', 1`です。
-+ サーバーを再起動します。
-+ 外部のランタイムを呼び出して、サービスが必要な権限を持っていることを確認します。
++ サーバーを再起動します。 
++ 開く、 **Services**パネルをスタート パッドが開始されているかどうかを確認します。 
++ 外部のランタイムを呼び出して、サービスが必要な権限を持っていることを確認します。 詳細については、次を参照してください。[黙示的な認証を有効にする](../r/add-sqlrusergroup-to-database.md)です。
++ SQL Server のファイアウォールでポートを開くし、必要なネットワーク プロトコルを有効にします。
 + SQL ログインまたは Windows ユーザー アカウントが、データを読み取ると、このサンプルで必要なすべてのデータベース オブジェクトを作成するのには、サーバーに接続するために必要な権限を持っていることを確認します。
 
-問題が実行する場合は、いくつかの一般的な問題には、この記事を参照してください: [Machine Learning のサービスのトラブルシューティング](../machine-learning-troubleshooting-faq.md)
+一般的な問題は、この資料を参照してください: [Machine Learning のサービスのトラブルシューティング](../machine-learning-troubleshooting-faq.md)
+
+### <a name="resource-management"></a>リソース管理
+
+同じコンピューターに R、Python の両方をインストールすることができますが、両方の操作を実行している多くのリソースを要求できます。 「メモリ不足」エラーが発生する場合、または、プリンシパル サーバーを使用するためのものでは、machine learning のジョブを実行する場合は、データベース エンジンに割り当てられているメモリの量を減らすことができます。 詳細については、次を参照してください。 [Managing and monitoring SQL Server での Python](../python/managing-and-monitoring-python-solutions.md)です。
 
 ## <a name="see-also"></a>参照
 

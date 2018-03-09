@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 46b8a628b6b8e6ad9a2eb3164e6935f3f3401ec8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b05067010701d1751056cb99089708b5cbeb67f9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-returned-by-catalog-functions"></a>カタログ関数によって返されるデータ
 各カタログ関数では、データがその結果セットを返します。 この結果セットは、その他の結果セットから変わりません。 生成される通常、定義済みでパラメーター化された**選択**ドライバーで、ハードコーディングまたはストアド プロシージャは、データ ソース内にあるステートメントです。 結果セットからデータを取得する方法については、次を参照してください。[が、結果セットを作成しますか?](../../../odbc/reference/develop-app/was-a-result-set-created.md)です。  

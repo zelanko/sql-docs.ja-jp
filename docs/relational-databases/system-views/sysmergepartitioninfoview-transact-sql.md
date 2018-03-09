@@ -8,26 +8,30 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sysmergepartitioninfoview
 - sysmergepartitioninfoview_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmergepartitioninfoview view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmergepartitioninfoview view
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a6c4dab4fd8f840d4c646bb1b9ec07a38da275a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ee0a46b7ec48d16bb2af2d528b4e832298c36a39
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,15 +41,15 @@ ms.lasthandoff: 11/17/2017
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|アーティクルの名前です。|  
-|**型**|**tinyint**|アーティクルの種類。次のいずれかになります。<br /><br /> **0x0a**テーブルを = です。<br /><br /> **0x20** = プロシージャ スキーマのみです。<br /><br /> **0x40** = ビュー スキーマのみ、またはインデックス付きビュー スキーマのみです。<br /><br /> **0x80** = 関数スキーマのみです。|  
-|**オブジェクト id**|**int**|パブリッシュされたオブジェクトの識別子です。|  
+|**type**|**tinyint**|アーティクルの種類。次のいずれかになります。<br /><br /> **0x0a**テーブルを = です。<br /><br /> **0x20** = プロシージャ スキーマのみです。<br /><br /> **0x40** = ビュー スキーマのみ、またはインデックス付きビュー スキーマのみです。<br /><br /> **0x80** = 関数スキーマのみです。|  
+|**objid**|**int**|パブリッシュされたオブジェクトの識別子です。|  
 |**sync_objid**|**int**|同期データセットを表すビューのオブジェクト ID。|  
 |**view_type**|**tinyint**|ビューの種類。<br /><br /> **0**ビューではなくを = です。 すべてのベース オブジェクトを使用します。<br /><br /> **1** = パーマネント ビュー。<br /><br /> **2** = 一時ビュー。|  
 |**artid**|**uniqueidentifier**|指定したアーティクルの一意な ID 番号です。|  
 |**説明**|**nvarchar (255)**|アーティクルの簡単な説明。|  
 |**pre_creation_command**|**tinyint**|サブスクリプション データベースにアーティクルが作成されるときに実行される既定の操作。<br /><br /> **0** = なし - サブスクライバーでテーブルが既に存在する場合のアクションは行われません。<br /><br /> **1** = drop - テーブルを再作成する前に削除します。<br /><br /> **2** = 削除 - サブセット フィルターの WHERE 句に基づいて削除します。<br /><br /> **3** = 切り捨て - 2 が行ではなくページを削除と同じです。 ただし、WHERE 句は使用しません。|  
 |**pubid**|**uniqueidentifier**|現在のアーティクルが属するパブリケーションの ID。|  
-|**ニックネーム**|**int**|アーティクル識別用のニックネーム マップ。|  
+|**nickname**|**int**|アーティクル識別用のニックネーム マップ。|  
 |**column_tracking**|**int**|アーティクルの列の追跡が実装されているかどうかを示します。|  
 |**ステータス**|**tinyint**|アーティクルの状態。次のいずれかになります。<br /><br /> **1** = Unsynced - テーブルをパブリッシュする初期処理スクリプトは、次回、スナップショット エージェントの実行を実行します。<br /><br /> **2** = active - テーブルをパブリッシュする初期処理スクリプトが実行されています。|  
 |**conflict_table**|**sysname**|現在のアーティクルに関する競合レコードが含まれているローカル テーブルの名前。 このテーブルは情報用のみとして提供されており、その内容は、カスタム競合回避ルーチンを使用して変更や削除ができます。または、管理者が直接変更したり、削除することもできます。|  
@@ -58,16 +62,16 @@ ms.lasthandoff: 11/17/2017
 |**select_proc**|**sysname**|マージ エージェントがロックやアーティクルの列と行の検索に使用する、自動生成ストアド プロシージャの名前です。|  
 |**metadata_select_proc**|**sysname**|マージ レプリケーション システム テーブル内のメタデータへのアクセスに使用する、自動生成ストアド プロシージャの名前です。|  
 |**delete_proc**|**sysname**|同期時に行の削除に使用するプロシージャです。|  
-|**schema_option**|**binary (8)**|指定されたアーティクルに対するスキーマ生成オプションのビットマップです。 詳細については、サポート*schema_option*値を参照してください[sp_addmergearticle (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
+|**schema_option**|**binary(8)**|指定されたアーティクルに対するスキーマ生成オプションのビットマップです。 詳細については、サポート*schema_option*値を参照してください[sp_addmergearticle (& a) #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
 |**destination_object**|**sysname**|サブスクライバーで作成されるテーブルの名前。|  
 |**destination_owner**|**sysname**|目的のオブジェクトの所有者名。|  
 |**resolver_clsid**|**nvarchar (50)**|カスタム競合回避モジュールの ID。 ビジネス ロジック ハンドラーの場合、この値は NULL です。|  
-|**subset_filterclause**|**nvarchar (1000)**|アーティクルのフィルター句。|  
+|**subset_filterclause**|**nvarchar(1000)**|アーティクルのフィルター句。|  
 |**missing_col_count**|**int**|アーティクルにない、パブリッシュされた列の数です。|  
 |**missing_cols**|**varbinary (128)**|アーティクルにない列を示すビットマップです。|  
 |**excluded_cols**|**varbinary (128)**|アーティクルから除外された列のビットマップです。|  
 |**excluded_col_count**|**int**|アーティクルから除外された列の数です。|  
-|**列**|**varbinary (128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**columns**|**varbinary (128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**deleted_cols**|**varbinary (128)**|アーティクルから削除された列を示すビットマップです。|  
 |**resolver_info**|**nvarchar (255)**|カスタム競合回避モジュールによって必要な追加情報の記憶域。|  
 |**view_sel_proc**|**nvarchar(290)**|マージ エージェントが、動的にフィルター選択されたパブリケーションでアーティクルを最初に作成するとき、およびフィルター選択された任意のパブリケーションで変更された行を列挙するときに使用するストアド プロシージャの名前です。|  
@@ -78,28 +82,28 @@ ms.lasthandoff: 11/17/2017
 |**before_view_objid**|**int**|ビュー テーブルのオブジェクト ID。 ビューが存在するテーブルでは、行の削除または更新前に、その行が特定のサブスクライバーに属していたかどうかが追跡されます。 パブリケーションに対するパーティションの変更の最適化が有効な場合にのみ適用されます。|  
 |**verify_resolver_signature**|**int**|マージ レプリケーションで競合回避モジュールを使用する前に、デジタル署名を確認するかどうかを示します。<br /><br /> **0** = 署名がないことを確認します。<br /><br /> **1** = 署名が信頼できる発行元であるかどうかを表示することを確認します。|  
 |**allow_interactive_resolver**|**bit**|アーティクルに対する対話型の競合回避モジュールの使用が有効かどうかを示します。 **1**アーティクルにインタラクティブ競合回避モジュールを使用できることを意味します。|  
-|**@fast_multicol_updateproc**|**bit**|1 つの UPDATE ステートメントで同じ行の複数の列に対して変更を適用するように、マージ エージェントが有効になっているかどうかを示します。<br /><br /> **0**列ごとに個別の更新の変更の問題を = です。<br /><br /> **1** 1 つのステートメントで複数の列を更新する UPDATE ステートメントの発行を = です。|  
+|**fast_multicol_updateproc**|**bit**|1 つの UPDATE ステートメントで同じ行の複数の列に対して変更を適用するように、マージ エージェントが有効になっているかどうかを示します。<br /><br /> **0**列ごとに個別の更新の変更の問題を = です。<br /><br /> **1** 1 つのステートメントで複数の列を更新する UPDATE ステートメントの発行を = です。|  
 |**check_permissions**|**int**|テーブル レベルの権限のビットマップは、マージ エージェントがパブリッシャーに変更を適用するときにことを確認します。 *check_permissions*これらの値のいずれかを持つことができます。<br /><br /> **0x00** = 権限はチェックされません。<br /><br /> **0x10** = チェックをサブスクライバーで挿入が行われる前に、パブリッシャー側でのアクセス許可をアップロードすることができます。<br /><br /> **0x20**サブスクライバーで行われた更新プログラムをアップロードする前に、パブリッシャー側で権限をチェックを = です。<br /><br /> **0x40**したサブスクライバー側で Delete をアップロードする前に、パブリッシャー側で権限をチェックを = です。|  
 |**maxversion_at_cleanup**|**int**|マージ エージェントの次回実行時にクリーンアップされる generation の最大値です。|  
-|**processing_order**|**int**|マージ パブリケーション内のアーティクルの処理順序を示します値が**0**ことを示し、アーティクルが順序付けられた、非アーティクルが最高の最低値から順に処理します。 2 つのアーティクルの値が同じ場合、それらは同時に処理されます。 詳細については、「[Specify the Processing Order of Merge Articles](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)」 (マージ アーティクルの処理順序の指定) を参照してください。|  
+|**processing_order**|**int**|マージ パブリケーション内のアーティクルの処理順序を示します値が**0**ことを示し、アーティクルが順序付けられた、非アーティクルが最高の最低値から順に処理します。 2 つのアーティクルの値が同じ場合、それらは同時に処理されます。 詳細については、「[マージ アーティクルの処理順序の指定](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)」を参照してください。|  
 |**upload_options**|**tinyint**|変更がサブスクライバーで許可されるか、サブスクライバーからアップロードされるかを示します。次の値のいずれかになります。<br /><br /> **0** = サブスクライバー側で行われる更新に制限はありません。 すべての変更がパブリッシャーにアップロードされます。<br /><br /> **1** = 変更は許可されます、サブスクライバーでパブリッシャーにアップロードされません。<br /><br /> **2** = 変更はサブスクライバーで許可されません。|  
 |**published_in_tran_pub**|**bit**|マージ パブリケーション内のアーティクルが、トランザクション パブリケーションでもパブリッシュされるかどうかを示します。<br /><br /> **0** = アーティクルはトランザクション アーティクルでパブリッシュされません。<br /><br /> **1** = アーティクルはトランザクション アーティクルでもパブリッシュされます。|  
-|**軽量**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|更新前のテーブルのビューの ID です。|  
 |**delete_tracking**|**bit**|削除がレプリケートされるかどうかを示します。<br /><br /> **0** = 削除はレプリケートされません。<br /><br /> **1** = マージ レプリケーションの既定の動作は、削除がレプリケートされます。<br /><br /> ときに、値の*delete_tracking*は**0**パブリッシャー、サブスクライバーで削除された行を手動で削除する必要があります、およびサブスクライバー、パブリッシャー側で削除された行を手動で削除する必要があります。<br /><br /> 注: 値の**0**の非収束の結果します。|  
 |**compensate_for_errors**|**bit**|同期中にエラーが検出されたときに補正アクションが行われるかどうかを示します。<br /><br /> **0** = 補正アクションは無効です。<br /><br /> **1** = マージ レプリケーションの既定の動作は、これらの変更を元に戻すアクションを補正するサブスクライバーまたはパブリッシャーが常に潜在顧客で適用できない変更します。<br /><br /> 注: 値の**0**の非収束の結果します。|  
 |**pub_range**|**bigint**|パブリッシャーの ID 範囲の大きさ。|  
-|**範囲**|**bigint**|調整の際にサブスクライバーに割り当てられる、連続する ID 値の大きさ。|  
-|**しきい値**|**int**|ID 範囲のしきい値のパーセンテージ。|  
+|**range**|**bigint**|調整の際にサブスクライバーに割り当てられる、連続する ID 値の大きさ。|  
+|**threshold**|**int**|ID 範囲のしきい値のパーセンテージ。|  
 |**stream_blob_columns**|**bit**|バイナリ ラージ オブジェクトの列にストリームの最適化を使用するかどうかを示します。 **1**最適化が試行されたことを意味します。|  
 |**preserve_rowguidcol**|**bit**|レプリケーションが既存の rowguid 列を使用するかどうかを示します。 値**1**既存の ROWGUIDCOL 列を使用することを意味します。 **0**レプリケーションによって ROWGUIDCOL 列を追加することを意味します。|  
 |**partition_view_id**|**int**|サブスクライバー パーティションを定義するビューを指定します。|  
 |**repl_view_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**partition_deleted_view_rule**|**sysname**|マージ レプリケーション トリガー内で、列の古い値に基づいて削除または更新された各行のパーティション ID を取得するために使用されるステートメントです。|  
 |**partition_inserted_view_rule**|**Sysname**|マージ レプリケーション トリガー内で、列の新しい値に基づいて挿入または更新された各行のパーティション ID を取得するために使用されるステートメントです。|  
-|**membership_eval_proc_name**|**sysname**|内の行の現在のパーティション Id を評価するプロシージャの名前[MSmerge_contents &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/msmerge-contents-transact-sql.md).|  
+|**membership_eval_proc_name**|**sysname**|内の行の現在のパーティション Id を評価するプロシージャの名前[MSmerge_contents &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)。|  
 |**column_list**|**sysname**|アーティクル内でパブリッシュされた列のコンマ区切りの一覧です。|  
 |**column_list_blob**|**sysname**|バイナリ ラージ オブジェクトの列を含む、アーティクル内でパブリッシュされた列のコンマ区切りの一覧です。|  
 |**expand_proc**|**sysname**|新たに挿入された親行のすべての子行、パーティションを変更された親行、および削除された親行のパーティション ID を再評価するプロシージャの名前です。|  

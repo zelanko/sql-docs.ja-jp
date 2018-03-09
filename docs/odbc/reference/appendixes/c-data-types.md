@@ -5,7 +5,7 @@ ms.date: 07/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2933ac739ff3772d3d0ad223f4c2a3041256777
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 31de2fc95be1a7ead0b61b2dde493caf8d484fe4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-data-types"></a>C データ型
 ODBC C データ型では、アプリケーションでデータの格納に使用される C バッファーのデータ型を示します。  
@@ -45,7 +45,7 @@ ODBC C データ型では、アプリケーションでデータの格納に使�
 |SQL_C_USHORT [j]|SQLUSMALLINT|符号なし short int|  
 |SQL_C_SLONG [j]|SQLINTEGER|long int|  
 |SQL_C_ULONG [j]|SQLUINTEGER|符号なし long int|  
-|SQL_C_FLOAT|SQLREAL|float|  
+|SQL_C_FLOAT|SQLREAL|FLOAT|  
 |SQL_C_DOUBLE|SQLDOUBLE、SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|unsigned char|  
 |SQL_C_STINYINT [j]|SQLSCHAR|符号付き文字|  

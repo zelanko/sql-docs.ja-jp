@@ -7,29 +7,30 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: r-services
 ms.component: python
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: a159a3198037e21664bb9b07647a01b1d5317d22
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 810adfeca86bc12bf05561eb50d555261579a1a5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Python Machine Learning Services (In-database) の無人インストール
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 このトピックでは、Machine Learning のサービスと、Python、quiet モードを使用して、SQL Server データベース エンジンをインストールする SQL Server 2017 セットアップ時にコマンドライン引数を使用する方法について説明します。
 
 > [!NOTE]
 > Python 用および SQL Server 用のライセンス契約のコマンドライン引数を含める忘れないでください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 インストール プロセスを始める前に、次の要件を確認してください。
 

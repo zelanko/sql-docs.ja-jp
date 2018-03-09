@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OUTPUT_TSQL
 - OUTPUT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - displaying updated rows
 - INSERT statement [SQL Server], OUTPUT clause
@@ -31,16 +33,16 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-caps.latest.revision: "94"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1c56150f81604473f87ae9c220ac916be30ce3c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 6a28059e6a30657a67275d317c70bdb26d2507a2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -138,13 +140,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- 明示的な列参照です。 変更対象のテーブルへの参照正しく修飾して指定する、INSERTED または DELETED プレフィックス、適切な場合は、たとえば: INSERTED**.***column_name*です。  
+ 明示的な列参照です。 変更対象のテーブルへの参照正しく修飾して指定する、INSERTED または DELETED プレフィックス、適切な場合は、たとえば: INSERTED **. * * * column_name*です。  
   
  $action  
  MERGE ステートメントでのみ使用できます。 型の列を示す**nvarchar (10)**を返す行ごとに 3 つの値のいずれかの MERGE ステートメントで OUTPUT 句で: 'INSERT'、'UPDATE'、または 'DELETE'、その行に対して実行されたアクションに従ってします。  
   
 ## <a name="remarks"></a>解説  
- 出力\<dml_select_list > 句、および出力\<dml_select_list > INTO {  **@**  *table_variable*  |  *output_table* } 句を単一の INSERT、UPDATE、DELETE、または MERGE ステートメントで定義することができます。  
+ 出力\<dml_select_list > 句、および出力\<dml_select_list > INTO {**@ * * * table_variable* | *output_table* } 句を定義することができます単一の INSERT、UPDATE、DELETE、または MERGE ステートメントでします。  
   
 > [!NOTE]  
 >  特に指定しない限り、OUTPUT 句への参照は、OUTPUT 句と OUTPUT INTO 句の両方を参照します。  
@@ -311,7 +313,7 @@ DROP TABLE dbo.table1;
 > [!NOTE]  
 >  複数のアプリケーションの同じテーブルへの破壊的な読み取りを許可する場合は、UPDATE ステートメントおよび DELETE ステートメントで READPAST テーブル ヒントを使用します。 これにより、テーブル内の最初の該当レコードを別のアプリケーションが既に読み込み中である場合に発生するロックの問題が起こらなくなります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  使用して取得するすべての列に対する SELECT 権限が必要\<dml_select_list > で使用されているまたは\<scalar_expression >。  
   
  指定された任意のテーブルに対する INSERT 権限が必要\<output_table >。  
@@ -670,7 +672,7 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
   
 ## <a name="see-also"></a>参照  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [挿入 &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [テーブルと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

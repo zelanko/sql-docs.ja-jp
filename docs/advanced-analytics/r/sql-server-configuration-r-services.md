@@ -7,22 +7,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b65eb600060a5d7e12d3095d145a23f5b8b3290b
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 5716fced7dd2be49c580222b9ae155451cf8f426
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R で使用するための SQL Server の構成
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、次の 2 つのケース スタディに基づいて R Services のパフォーマンスの最適化を説明するシリーズの 2 つ目はします。  この記事では、SQL Server R Services を実行するために使用するコンピューターのハードウェアおよびネットワークの構成に関するガイダンスを提供します。 SQL Server インスタンス、データベース、またはソリューションで使用されるテーブルを構成する方法に関する情報も含まれています。 SQL Server での NUMA の使用は、ハードウェアとデータベースの最適化の間の線をぼかす、ために、3 番目のセクションには、詳細で、CPU の結合とリソース ガバナンスがについて説明します。
 

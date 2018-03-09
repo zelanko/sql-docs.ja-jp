@@ -1,29 +1,29 @@
----
+﻿---
 title: "SQL Server 可用性グループに RHEL クラスターの構成 |Microsoft ドキュメント"
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 06/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: 11eea4891b1214e48f70ca56462322305fa97c06
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c90eb7d5f11456a13dfa3d4354070bc506d030e5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループ向けに RHEL クラスターを構成する
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このドキュメントでは、Red Hat Enterprise Linux 上の SQL Server の 3 つのノードの可用性グループのクラスターを作成する方法について説明します。 可用性を高めるためにはLinux 上の可用性グループでは 3 つのノードが必要です - [可用性グループの構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)を参照してください。 クラスタ リングの層は、[Pacemaker](http://clusterlabs.org/)の上に構築された Red Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています。 
 
@@ -129,7 +129,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>クラスターのプロパティ start-failure-is-fatal を false に設定します。
 
-`start-failure-is-fatal`は、ノードでリソースの起動が失敗したときにそのノードに対してさらに起動を試みることを許さないかどうかを示します。 `false`に設定すると、クラスターはリソースの現在の失敗数と移行のしきい値に基づいて、もう一度同じノードで起動するかどうかを決定します。 フェールオーバーが発生した後は、いったんSQL インスタンスが使用可能になったときに、 Pacemaker が以前のプライマリで可用性グループのリソースの起動を再度試行します。 Pacemaker はレプリカをセカンダリに降格し、可用性グループに自動的に再度参加させます。 
+`start-failure-is-fatal` ノードにリソースを起動しますの失敗によってそのノードに対して試行された開始でがさらにかどうかを示します。 設定すると`false`クラスターは、リソースの現在の失敗数と移行のしきい値に基づいて、もう一度同じノードで起動するかどうかを決定します。 フェールオーバーが発生した後は、SQL インスタンスが使用可能に以前のプライマリ上のリソースがグループ ペースの再試行回数が、可用性を開始します。 ペースがセカンダリ レプリカを降格し、可用性グループを自動的に再度参加します。 
 
 プロパティの値を`false`に更新するには、次のコマンドを実行します。
 
@@ -160,10 +160,10 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
 
 ## <a name="create-virtual-ip-resource"></a>仮想 IP リソースを作成します。
 
-仮想 IP アドレス リソースを作成するには、1 つのノードで次のコマンドを実行します。 ネットワークから使用可能な静的 IP アドレスを使用します。 `**<10.128.16.240>**`を有効な IP アドレスで置換します。
+仮想 IP アドレス リソースを作成するには、1 つのノードで次のコマンドを実行します。 ネットワークから使用可能な静的 IP アドレスを使用します。 間で IP アドレスの代わりに`<10.128.16.240>`有効な IP アドレスを使用します。
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 仮想サーバー名に相当するものが Pacemaker にはありません。 IP アドレスの代わりに文字列のサーバー名を指す接続文字列を使用するには、目的の仮想サーバーの名前と仮想 IP リソースのアドレスを DNS に登録します。 災害復旧構成のプライマリおよび災害復旧サイトの両方で DNS サーバーに目的の仮想サーバー名と IP アドレスを登録します。

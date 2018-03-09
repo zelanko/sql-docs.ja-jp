@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 388a88d1f9a7ad6b18b2f04a702d2198c644e4fe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86d567d804c64c769823b33cc50ff231d310a760
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-paths"></a>Integration Services のパス
   パスは、データ フロー コンポーネントの出力を別のコンポーネントの入力に連結することにより、データ フロー内の 2 つのコンポーネントを連結します。 パスには連結元と連結先があります。 たとえば、パスが OLE DB ソースと並べ替え変換を連結する場合、OLE DB ソースはパスの連結元であり、並べ替え変換はパスの連結先になります。 連結元とはパスが開始するコンポーネントで、連結先とはパスが終了するコンポーネントのことです。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  **[データ フロー パス エディター]**ダイアログ ボックスで、 **[全般]**をクリックします。 ここで、パスの既定の名前を編集したり、パスに関する説明を入力できます。 PathAnnotation プロパティを変更することもできます。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
 6.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/20/2017
   
  **[データ フロー パス エディター]** ダイアログ ボックスの **[全般]** ノードを使用して、パスに名前を付けて説明を記述したり、パスの注釈のオプションを指定したりできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **名前**  
  パスの一意な名前を指定します。  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/20/2017
  **[IdentificationString]**  
  パスを識別する文字列です。 上記で入力した名前から自動的に生成されます。  
   
- **Description**  
+ **[説明]**  
  パスの説明を記述します。  
   
  **[PathAnnotation]**  
@@ -92,14 +93,14 @@ ms.lasthandoff: 11/20/2017
 ## <a name="metadata-page---data-flow-path-editor"></a>[メタデータ] ページ - [データ フロー パス エディター]
 **[データ フロー パス エディター]** ダイアログ ボックスの **[メタデータ]** ページを使用すると、パス列のメタデータを表示できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **[パスのメタデータ]**  
  列のメタデータが一覧表示されます。 列のデータを並べ替えるには、列ヘッダーをクリックします。  
   
  **名前**  
  列名が一覧表示されます。  
   
- **データ型**  
+ **[データ型]**  
  列のデータ型が一覧表示されます。  
   
  **[精度]**  
@@ -132,7 +133,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="data-viewers-page---data-flow-path-editor"></a>[データ ビューアー] ページ - [データ フロー パス エディター]
 **[データ フロー パス エディター]** ダイアログ ボックスの **[データ ビューアー]** ページを使用すると、パスにアタッチされているデータ ビューアーを管理できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **名前**  
  データ ビューアーが一覧表示されます。  
   
@@ -142,7 +143,7 @@ ms.lasthandoff: 11/20/2017
  **[追加]**  
  クリックすると、 **[データ ビューアーの構成]** ダイアログ ボックスを使用してデータ ビューアーを追加できます。  
   
- **Del**  
+ **削除**  
  クリックすると、選択したデータ ビューアーが削除されます。  
   
  **構成**  
@@ -162,4 +163,4 @@ ms.lasthandoff: 11/20/2017
 |-------------------|---------------|-----------------|  
 |[PathAnnotation]|Integer (列挙)|注釈をパスと共にデザイナー画面に表示するかどうかを示す値。 指定できる値は、 **AsNeeded**、 **SourceName**、 **PathName**、 **Never**です。 既定値は **AsNeeded**です。|  
 |[DestinationName]|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|パスに関連付けられた入力|  
-|[SourceName]|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|パスに関連付けられた出力|  
+|SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|パスに関連付けられた出力|  

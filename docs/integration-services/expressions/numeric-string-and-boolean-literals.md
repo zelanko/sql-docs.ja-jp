@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 428bdd08e35be0ebc2a3c069396f67118144b07f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a89f9c1fde9d4a14776d37bc648341a5b5fa4aad
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="numeric-string-and-boolean-literals"></a>数値、文字列、ブール型リテラル
  式には、数値、文字列、およびブール値のリテラルを含めることができます。 式エバリュエーターでは、整数、10 進数、浮動小数点定数など、さまざまな数値リテラルがサポートされます。 さらに、式エバリュエーターが値を処理する方法を指定する long 型および float 型サフィックスと、数値リテラルの科学的表記法がサポートされます。  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/20/2017
   
  式には、異なるデータ型を持つ複数の数値リテラルを含めることができます。 式エバリュエーターがこれらの式を評価する場合、データは互換性のあるデータ型に変換されます。 詳細については、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」を参照してください。  
   
- ただし、一部のデータ型の変換には、明示的なキャストが必要な場合があります。 式エバリュエーターでは、データ型の明示的な変換を実行するキャスト演算子が用意されています。 詳細については、「[Cast &#40;SSIS 式&#41;](../../integration-services/expressions/cast-ssis-expression.md)」を参照してください。  
+ ただし、一部のデータ型の変換には、明示的なキャストが必要な場合があります。 式エバリュエーターでは、データ型の明示的な変換を実行するキャスト演算子が用意されています。 詳細については、「[Cast &#40;SSIS 式&#41;](../../integration-services/expressions/cast-ssis-expression.md)」をご覧ください。  
   
 ### <a name="mapping-numeric-literals-to-integration-services-data-types"></a>数値リテラルから Integration Services データ型へのマッピング  
  式エバリュエーターは、数値リテラルの評価を行うときに次の変換を実行します。  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/20/2017
 |\t|水平タブ|  
 |\v|垂直タブ|  
 |\\"|引用符|  
-|\\\|円記号|  
+|\\\|バックスラッシュ|  
 |\xhhhh|16 進法で表記された Unicode 文字|  
   
 ## <a name="boolean-literals"></a>ブール型リテラル  

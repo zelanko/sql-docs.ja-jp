@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2b58f344839a0f8e74fa46c5e788b7835d3eadc2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7eb679c8d7182dd0edd3a96caafa824a8722962
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trace-dll"></a>トレース DLL
 トレースを実行する DLL は、ODBC コア コンポーネントのいずれかです。 以前、DLL、Windows SDK のコンポーネントの ODBC サンプル DLL として提供されています、トレースには、Microsoft Data Access Components (MDAC) SDK が含まれています。 したがって、レジストリ エントリ、インターフェイス、およびトレース DLL のサンプル コードは使用できます。 この DLL は、トレースを ODBC ユーザーまたはサード パーティ ベンダーによって生成された DLL で置換できます。 カスタム トレース DLL は、元のサンプル トレース DLL とは異なる名前を指定してください。 システム ディレクトリのトレースの Dll をインストールする必要があります。 または読み込みが失敗します。 接続文字列は渡されません DLL は、トレース、ドライバー マネージャーでします。  

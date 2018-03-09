@@ -14,41 +14,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0215c2ebdd4a98607dcb60418e468fbe02f6663f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f3b10fdee9956b28273553755365b9251d073964
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Power Pivot モードでの Analysis Services のインストール
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]このトピックの手順でインストールの手順を 1 台のサーバーの[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]内のサーバー [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint の配置モードです。 手順には、SQL Server インストール ウィザードの実行と、SharePoint サーバーの全体管理を使用する構成タスクが含まれます。  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
-  
- **このトピックの内容:**  
-  
- [背景情報](#bkmk_background)  
-  
- [前提条件](#bkmk_prereq)  
-  
- [手順 1. Power Pivot for SharePoint のインストール](#InstallSQL)  
-  
- [手順 2. 基本的な Analysis Services SharePoint 統合の構成](#bkmk_config)  
-  
- [手順 3. 統合の確認](#bkmk_verify)  
-  
- [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](#bkmk_firewall)  
-  
- [ブックのアップグレードと定期データ更新](#bkmk_upgrade_workbook)  
-  
- [シングル サーバー インストールではない場合 - Power Pivot for Microsoft SharePoint](#bkmk_multiple_servers)  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+このトピックでは、SharePoint 配置の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードで [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーのシングル サーバー インストールを行う手順について説明します。 手順には、SQL Server インストール ウィザードの実行と、SharePoint サーバーの全体管理を使用する構成タスクが含まれます。  
   
 ##  <a name="bkmk_background"></a> 背景情報  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint は、SharePoint 2016 (SharePoint 2013) ファームでの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] データ アクセスを提供する中間層のバックエンド サービスです。  
@@ -167,7 +146,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  **[SQL Server Management Studio]**を選択します。  
   
-3.  Analysis Services インスタンス (たとえば、 **[サーバー名]\POWERPIVOT**) に接続します。 インスタンスに接続できたら、サービスが実行されていることがわかります。  
+3.  Analysis Services インスタンス (たとえば、**[サーバー名]\POWERPIVOT**) に接続します。 インスタンスに接続できたら、サービスが実行されていることがわかります。  
   
 ##  <a name="bkmk_config"></a> 手順 2. 基本的な Analysis Services SharePoint 統合の構成  
  SharePoint ドキュメント ライブラリ内で Excel の高度なデータ モデルを操作できるようにするには、次の手順を実行して構成を変更する必要があります。 これらの手順は、SharePoint と SQL Server Analysis Services をインストールしてから実行します。  
@@ -178,7 +157,7 @@ ms.lasthandoff: 12/08/2017
 #### <a name="grant-office-online-server-machine-account-administration-rights-on-analysis-services"></a>Office Online Server マシン アカウントへの Analysis Services に対する管理権限の付与  
  Analysis Services のインストール時に、Analysis Services 管理者として Office Online Server マシン アカウントを追加した場合は、このセクションの手順を実行する必要はありません。  
   
-1.  Analysis Services サーバーで、SQL Server Management Studio を起動し、Analysis Services インスタンス (たとえば、 `[MyServer]\POWERPIVOT`) に接続します。  
+1.  Analysis Services サーバーで、SQL Server Management Studio を起動し、Analysis Services インスタンス (たとえば、`[MyServer]\POWERPIVOT`) に接続します。  
   
 2.  オブジェクト エクスプローラーで、インスタンス名を右クリックし、 **[プロパティ]**を選択します。  
   
@@ -206,7 +185,7 @@ ms.lasthandoff: 12/08/2017
 #### <a name="grant-excel-services-server-administration-rights-on-analysis-services"></a>Excel Services への Analysis Services に対するサーバー管理権限の付与  
  Analysis Services のインストール時に、Analysis Services 管理者として Excel Services アプリケーションのサービス アカウントを追加した場合は、このセクションの手順を実行する必要はありません。  
   
-1.  Analysis Services サーバーで、SQL Server Management Studio を起動し、Analysis Services インスタンス (たとえば、 `[MyServer]\POWERPIVOT`) に接続します。  
+1.  Analysis Services サーバーで、SQL Server Management Studio を起動し、Analysis Services インスタンス (たとえば、`[MyServer]\POWERPIVOT`) に接続します。  
   
 2.  オブジェクト エクスプローラーで、インスタンス名を右クリックし、 **[プロパティ]**を選択します。  
   
@@ -306,11 +285,11 @@ ms.lasthandoff: 12/08/2017
   
  **冗長性とサーバー負荷:** 2 台目またはそれ以上の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーを [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] モードでインストールすると、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバー機能の冗長性が実現します。 サーバーを追加すると、サーバー間の負荷分散も行われます。 詳細については、以下を参照してください。  
   
--   [Excel Services でデータ モデルを処理するために Analysis Services を構成する (SharePoint 2013)](http://technet.microsoft.com/library/jj614437\(v=office.15\)) (http://technet.microsoft.com/library/jj614437(v=office.15))  
+-   [Excel Services (SharePoint 2013) のデータ モデルを処理するための Analysis Services を構成する](http://technet.microsoft.com/library/jj614437(v=office.15))です。  
   
--   [Excel Services のデータ モデルの設定を管理する (SharePoint 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\)) (http://technet.microsoft.com/library/jj219780(v=office.15))  
+-   [Excel Services データ モデルの設定 (SharePoint 2013) を管理](http://technet.microsoft.com/library/jj219780(v=office.15))です。  
   
- ![SharePoint の設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定") [ご意見および連絡先情報は、Microsoft SQL Server に関するフィードバックの送信ページ](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback) からお送りください。  
+ ![SharePoint 設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[フィードバックや連絡先の情報を SQL Server に関するフィードバックを送信](https://feedback.azure.com/forums/908035-sql-server)です。  
   
 ## <a name="see-also"></a>参照  
  [SharePoint 2013 への Power Pivot の移行](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   

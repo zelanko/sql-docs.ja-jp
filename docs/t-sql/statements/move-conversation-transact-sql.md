@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - MOVE CONVERSATION
 - MOVE_TSQL
 - MOVE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - moving conversations
 - MOVE CONVERSATION statement
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - conversations [Service Broker], groups
 - conversations [Service Broker], moving
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7367254b7dad104c7503c33777d26316a542b4ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: cd8c5e548bf45fe4a2fc6bf0638ebb5282981263
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +57,7 @@ MOVE CONVERSATION conversation_handle
  *conversation_handle*  
  移動するメッセージ交換のメッセージ交換ハンドルを含む、変数または定数。 *conversation_handle*型でなければなりません**uniqueidentifier**です。  
   
- *Conversation_group_id*  
+ TO *conversation_group_id*  
  メッセージ交換の移動先となるメッセージ交換グループの識別子を含む、変数または定数。 *conversation_group_id*型でなければなりません**uniqueidentifier**です。  
   
 ## <a name="remarks"></a>解説  
@@ -68,7 +70,7 @@ MOVE CONVERSATION conversation_handle
   
  ユーザー定義の関数では、MOVE CONVERSATION は無効です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メッセージ交換を移動するには、そのメッセージ交換およびメッセージ交換グループの所有者であるか、固定サーバー ロール sysadmin または固定データベース ロール db_owner のメンバーである必要があります。  
   
 ## <a name="examples"></a>使用例  

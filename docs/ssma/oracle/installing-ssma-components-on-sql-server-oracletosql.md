@@ -1,7 +1,7 @@
 ---
 title: "SQL Server (OracleToSQL) へ SSMA コンポーネントのインストール |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 62d1fb09d879290ed8f6078f36996590f2799231
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 76880266efb8c38bffdaa4223e49822c6d3b0778
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>SQL server (OracleToSQL) SSMA コンポーネントのインストール
 SSMA をインストールするだけでなくする必要がありますコンポーネントもインストールを実行しているコンピューターで[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 これらのコンポーネントには、データの移行、およびサーバーからサーバーへの接続を有効にする Oracle プロバイダーをサポートする、SSMA 拡張機能パックが含まれます。  
@@ -34,7 +34,7 @@ SSMA 拡張機能パックには、データベースが追加されて**sysdb**
   
 データを移行する場合にも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、SSMA 作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]エージェント ジョブ、データ移行のサーバー側のデータ移行のエンジンを使用するとします。  
   
-### <a name="prerequisites"></a>前提条件  
+### <a name="prerequisites"></a>Prerequisites  
 SSMA for Oracle サーバー コンポーネントをインストールする前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]システムが、次の要件を満たしていることを確認します。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]インスタンスがインストールされます。 SSMA は、SQL Server 2008 Express Edition をサポートしていません。  

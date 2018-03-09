@@ -15,20 +15,20 @@ f1_keywords: sql13.rep.profiles.perfprofiles.f1
 helpviewer_keywords: Agent Profiles dialog box
 ms.assetid: 0422e99c-e688-419b-bb4c-c7bebeef1d8d
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de8af2a057c11042d631fdc3488edf15b399cad3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 492171457e02895fd9cb883e9197ac2c2821608a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="agent-profiles"></a>[エージェント プロファイル]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[エージェント プロファイル]** ダイアログ ボックスを使用すると、エージェント プロファイルを管理できます。 エージェント プロファイルを利用すると、各エージェントの実行時パラメーターを容易に管理できます。 それぞれのエージェントは既定のプロファイルを持ちます。一部のエージェントには、追加の定義済みプロファイルが用意されています。 たとえば、マージ エージェントには、低帯域幅接続の "低速リンク" プロファイルが用意されています。 ほとんどのアプリケーションでは定義済みのプロファイルで十分ですが、ユーザー定義プロファイルを作成して、エージェントの動作をカスタマイズすることもできます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[ページの選択]**  
  左側のペインでエージェントを選択すると、エージェントのプロファイルが右側のペインに表示されます。  
   
@@ -39,15 +39,15 @@ ms.lasthandoff: 11/17/2017
  プロファイルの名前。  
   
  **型**  
- プロファイルの種類です。 **[ユーザー]** (ユーザー定義) または **[システム]** (定義済み) を選択します。  
+ プロファイルの種類です。 **[ユーザー]** \(ユーザー定義) または **[システム]** (定義済み) を選択します。  
   
  **[プロパティ] (...)**  
  クリックすると、エージェント プロファイルの各パラメーターに使用されている値が表示されます。  
   
- **新規**  
+ **[新規作成]**  
  クリックすると、新しいプロファイルを作成できます。  
   
- **Del**  
+ **削除**  
  ユーザー定義プロファイルを削除するには、プロファイルを選択し、 **[削除]** をクリックします。 定義済みのプロファイルは削除できません。  
   
  **[既存のエージェントの変更]**  

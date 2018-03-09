@@ -8,27 +8,29 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: incremental load [Integration Services],determining readiness
+helpviewer_keywords:
+- incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dff547a6882d13763b471185f9ac486facc946b9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1d2f30ddb989c9d92d0972f85af33e3b0496ba56
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>データの変更の準備ができているかどうかを判断する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、2 番目のタスクは、選択した間隔の変更データが準備できていることを確認することです。 選択したエンドポイントまでの変更が非同期キャプチャ プロセスでまだ一部処理されていない可能性があるため、この手順が必要となります。  
   
 > [!NOTE]  
->  制御フローの最初のタスクは、変更間隔のエンドポイントを計算することです。 このタスクに関する詳細については、「[変更データの間隔を指定する](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)」を参照してください。 制御フローをデザインするプロセス全体の説明については、「[変更データ キャプチャ (SSIS)](../../integration-services/change-data-capture/change-data-capture-ssis.md)」を参照してください。  
+>  制御フローの最初のタスクは、変更間隔のエンドポイントを計算することです。 このタスクに関する詳細については、「[変更データの間隔を指定する](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)」を参照してください。 制御フローをデザインするプロセス全体の説明については、「[変更データ キャプチャ &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)」を参照してください。  
   
 ## <a name="understanding-the-components-of-the-solution"></a>ソリューションのコンポーネントについて  
  このトピックで説明するソリューションでは、次の 4 つの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントを使用します。  
@@ -94,7 +96,7 @@ ms.lasthandoff: 11/20/2017
 |戻り値|意味|応答|  
 |------------------|-------------|--------------|  
 |0|変更データが準備できていないことを示します。<br /><br /> 選択した間隔の終了時点より後に変更データ キャプチャ レコードがありません。|遅延を実装するコンポーネントから実行が継続されます。 その後、制御が For ループ コンテナーに戻り、返される値が 0 である限り引き続きコンテナーによって SQL 実行タスクがチェックされます。|  
-|1|間隔全体にわたって変更データがキャプチャされていないか、変更データが削除されていることを示します。 これは、エラー状態として扱われます。<br /><br /> 選択した間隔の開始時点より前に変更データ キャプチャ レコードがありません。|エラーをログに記録するオプションのコンポーネントから実行が継続されます。|  
+|@shouldalert|間隔全体にわたって変更データがキャプチャされていないか、変更データが削除されていることを示します。 これは、エラー状態として扱われます。<br /><br /> 選択した間隔の開始時点より前に変更データ キャプチャ レコードがありません。|エラーをログに記録するオプションのコンポーネントから実行が継続されます。|  
 |2|データが準備できていることを示します。<br /><br /> 選択した間隔の開始時点より前にも終了時点より後にも変更データ キャプチャ レコードがあります。|実行が For ループ コンテナーの外に移り、増分読み込みが開始されます。|  
 |3|使用可能なすべての変更データの最初の読み込みを示します。<br /><br /> この値は、このためだけに使用される特殊なパッケージ変数から条件ロジックによって取得されます。|実行が For ループ コンテナーの外に移り、増分読み込みが開始されます。|  
 |5|TimeoutCeiling に達したことを示します。<br /><br /> 指定された回数だけループでデータがテストされましたが、データはまだ使用できません。 このテストまたは同様のテストを実行しないと、パッケージが無期限に実行される可能性があります。|タイムアウトをログに記録するオプションのコンポーネントから実行が継続されます。|  
@@ -222,7 +224,7 @@ ms.lasthandoff: 11/20/2017
   
          制約値 **[成功]** は、前の SQL 実行タスクの成功を表します。  
   
-    3.  **[式]** に「`@DataReady == 0`」と入力します。  
+    3.  **[式]**に「 `@DataReady == 0`」と入力します。  
   
     4.  **[論理 AND (すべての制約が True と評価される必要があります)**] が選択されていない場合は、選択します。  
   

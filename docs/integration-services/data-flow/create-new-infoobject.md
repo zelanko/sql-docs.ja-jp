@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 142607d2ea3486749c0233c2d35692c682fd50e1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 50f319341ba89890f67b77f698ff3411c9ab820e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-new-infoobject"></a>[新しいインフォオブジェクトの作成]
   SAP Netweaver BW システムで新しいインフォオブジェクトを作成するには、 **[新しいインフォオブジェクトの作成]** ダイアログ ボックスを使用します。  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/20/2017
  **小文字を許可する**  
  インフォオブジェクトのデータの小文字を許可します。  
   
- **保存とアクティブ化**  
+ **保存と有効化**  
  新しいインフォオブジェクトを保存してアクティブ化します。  
   
 ## <a name="data-type-options"></a>[データ型] オプション  
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/20/2017
  **TIMS - 時刻 (HHMMSS)**  
  インフォオブジェクト オブジェクトに時刻データが含まれていることを示します。  
   
- **長さ**  
+ **[データ型]**  
  データ型の長さを入力します。  
   
 ## <a name="text-options"></a>[テキスト] のオプション  
@@ -129,13 +130,13 @@ ms.lasthandoff: 11/20/2017
  **[インフォオブジェクト]**  
  インフォオブジェクトの名前を表示します。  
   
- **Description**  
+ **[説明]**  
  インフォオブジェクトの説明を表示します。  
   
  **インフォオブジェクトの種類**  
  インフォオブジェクトの種類を表示します。 次の表に、種類として使用できる値の一覧を示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |CHA|特性|  
 |KYF|主要データ|  
@@ -158,7 +159,7 @@ ms.lasthandoff: 11/20/2017
  **[削除]**  
  選択したインフォオブジェクトを **[属性]** の一覧から削除します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [[トランザクション データのインフォキューブの作成]](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [[インフォソースの作成]](../../integration-services/data-flow/create-infosource.md)   
  [トランザクション データのインフォソースの作成](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   

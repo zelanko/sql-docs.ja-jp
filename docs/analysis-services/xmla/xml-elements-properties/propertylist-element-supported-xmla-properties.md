@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
@@ -25,16 +23,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e29ed3613253db0f93580717f126dbc53a37c108
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c1076c683c164c2d084b431f4190c549d0a5a0cd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="propertylist-element---supported-xmla-properties"></a>PropertyList 要素 - には、XMLA プロパティがサポートされています。
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]次の表に示すプロパティをサポートしています。 表示されているプロパティを使用して、[プロパティ](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)の要素、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)と[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドです。  
   
-|名前|Description|型|値|  
+|[オブジェクト名]|Description|型|値|  
 |----------|-----------------|----------|------------|  
 |AxisFormat|内で使用される形式を決定する[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)結果セットの多次元データセットの軸を記述します。 このプロパティに使用できる値は、次の表のとおりです。<br /><br /> このプロパティで使用できる、 **Execute**メソッドです。|省略可能、書き込み専用**文字列**プロパティ|*ClusterFormat*: **MDDataSet**軸で構成される 1 つ以上の[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md)要素。<br /><br /> *CustomFormat*: <br />                          [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]使用して、 *TupleFormat*この設定の形式です。<br /><br /> *TupleFormat*既定です。 **MDDataSet**軸は、1 つ以上含まれています。[組](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)要素。|  
 |BeginRange|対応する 0 から始まる整数値が含まれています、 **CellOrdinal**属性の値。 (、 **CellOrdinal**属性の一部である、[セル](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)内の要素、 [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md)のセクション**MDDataSet**)。<br /><br /> このプロパティの既定値は-1 です。<br /><br /> このプロパティで使用できる、 **Execute**メソッドです。<br /><br /> と共に使用される、 **EndRange**プロパティ、クライアント アプリケーションで使用できるこのプロパティを特定のセルの範囲に、コマンドによって返される OLAP データセットを制限します。 指定されたセルまでのすべてのセル-1 が指定されている場合、 **EndRange**プロパティが返されます。|省略可能、書き込み専用**整数**プロパティ||  
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/08/2017
 |EndRange|対応する 0 から始まる整数値を指定します、 **CellOrdinal**属性の値。 (、 **CellOrdinal**属性の一部である、**セル**内の要素、 **CellData**のセクション**MDDataSet**)。<br /><br /> と共に使用される、 **BeginRange**プロパティ、クライアント アプリケーションで使用できるこのプロパティを特定のセルの範囲に、コマンドによって返される OLAP データセットを制限します。 すべてのセルで指定されたセルから-1 が指定されている場合、 **BeginRange**プロパティが返されます。<br /><br /> このプロパティの既定値は-1 です。<br /><br /> このプロパティで使用できる、 **Execute**メソッドです。|省略可能、書き込み専用**整数**プロパティ||  
 |ExecutionMode|将来の使用のために予約されています。<br /><br /> このプロパティの既定値は*Execute*です。<br /><br /> このプロパティで使用できる、 **Discover**と**Execute**メソッドです。|省略可能、書き込み専用**文字列**プロパティ||  
 |ForceCommitTimeout|現在実行中の XMLA コマンドのコミット フェーズが、以前に発行されたコマンドを強制的にロールバックするまでに待機する時間を、秒数で指定します。 コミット フェーズなどの XMLA コマンドに対応**ステートメント**または**プロセス**です。<br /><br /> 値 0 は、インスタンスが無制限に待機することを意味します。<br /><br /> このプロパティの既定値は 0 です。<br /><br /> このプロパティで使用できる、 **Discover**と**Execute**メソッドです。|省略可能、書き込み専用**整数**プロパティ||  
-|Format|返される結果セットの種類を決定、 **Discover**と**Execute**メソッドです。<br /><br /> このプロパティの既定値は*ネイティブ*です。<br /><br /> このプロパティで使用できる、 **Discover**と**Execute**メソッドです。|省略可能、書き込み専用**文字列**プロパティ|このプロパティは、以下の値をとります。<br /><br /> *表形式*: が返す結果セットを使用して、[行セット](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)データ型。<br /><br /> *多次元*: を使用して、行セットを返します、 [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)データ型。<br /><br /> *ネイティブ*: 形式は明示的に指定されません。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] はコマンドに応じて適切な形式を返します。 実際の結果の種類は、結果の名前空間によって識別されます。|  
+|[形式]|返される結果セットの種類を決定、 **Discover**と**Execute**メソッドです。<br /><br /> このプロパティの既定値は*ネイティブ*です。<br /><br /> このプロパティで使用できる、 **Discover**と**Execute**メソッドです。|省略可能、書き込み専用**文字列**プロパティ|このプロパティは、以下の値をとります。<br /><br /> *表形式*: が返す結果セットを使用して、[行セット](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)データ型。<br /><br /> *多次元*: を使用して、行セットを返します、 [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)データ型。<br /><br /> *ネイティブ*: 形式は明示的に指定されません。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] はコマンドに応じて適切な形式を返します。 実際の結果の種類は、結果の名前空間によって識別されます。|  
 |ImpactAnalysis|将来の使用のために予約されています。<br /><br /> このプロパティの既定値は 0 です。<br /><br /> このプロパティで使用できる、 **Discover**と**Execute**メソッドです。|省略可能、書き込み専用**ブール**プロパティ||  
 |LocaleIdentifier|によって使用されるロケール識別子 (LCID) の設定を読み取ったり、 **Discover**または**Execute**メソッドです。 言語識別子の 16 進数の完全なリストについては、MSDN ライブラリで「Language Identifiers」を検索してください。<br /><br /> このプロパティの既定値はありません。<br /><br /> このプロパティで使用できる、 **Discover**と**Execute**メソッドです。|省略可能、読み取り/書き込み**整数**プロパティ||  
 |MaximumRows|将来の使用のために予約されています。<br /><br /> このプロパティの既定値はありません。<br /><br /> このプロパティで使用できる、 **Discover**と**Execute**メソッドです。|省略可能、書き込み専用**整数**プロパティ||  
@@ -125,7 +123,7 @@ ms.lasthandoff: 12/08/2017
 |MdxMissingMemberMode|欠落したメンバーを MDX ステートメントで無視するかどうかを示します。<br /><br /> このプロパティは OLE DB プロパティの DBPROP_MDX_MISSING_MEMBER_MODE と等価です。<br /><br /> このプロパティの既定値は*既定*です。<br /><br /> このプロパティで使用できる、 **Discover**と**Execute**メソッドです。|省略可能、書き込み専用**文字列**プロパティ|このプロパティの値は、次のいずれか 1 つです。<br /><br /> *既定の*: によって生成される値を使用して、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。<br /><br /> *エラー*: エラーが発生します。<br /><br /> *無視*: 欠落したメンバーを常に無視します。|  
 |MDXSupport|MDX のサポートの程度を記述する列挙を指定します。<br /><br /> このプロパティの既定値は*コア*です。<br /><br /> このプロパティで使用できる、 **Discover**メソッドです。<br /><br /> 現在、この列挙体の唯一の有効な値はメモ*コア*です。 今後、この列挙体の他の値を定義することがあります。|省略可能、読み取り専用**文字列**プロパティ|このプロパティは、次の値をとります。<br /><br /> *コア*: すべての MDX オプションがサポートされます。|  
 |NonEmptyThreshold|将来の使用のために予約されています。<br /><br /> このプロパティの既定値はありません。<br /><br /> このプロパティで使用できる、 **Discover**と**Execute**メソッドです。|省略可能な読み取り/書き込み**整数**プロパティ||  
-|Password|このプロパティはサポートされなくなりました。<br /><br /> 旧バージョンと互換性のため、このプロパティはと共に使用すると、エラーを生成せず、 **Execute**または**Discover**メソッドです。|省略可書き込み専用**文字列**プロパティ。||  
+|パスワード|このプロパティはサポートされなくなりました。<br /><br /> 旧バージョンと互換性のため、このプロパティはと共に使用すると、エラーを生成せず、 **Execute**または**Discover**メソッドです。|省略可書き込み専用**文字列**プロパティ。||  
 |ProviderName|このプロパティは OLE DB プロパティの DBPROP_DBMSNAME と等価です。<br /><br /> このプロパティの既定値は "OLAP Server" です。<br /><br /> このプロパティで使用できる、 **Discover**メソッドです。|省略可能、読み取り専用**文字列**プロパティ||  
 |ProviderType|このプロパティは OLE DB プロパティの DBPROP_DATASOURCE_TYPE と等価です。<br /><br /> このプロパティの既定値は 6 です。<br /><br /> このプロパティで使用できる、 **Discover**と**Execute**メソッドです。|省略可能、読み取り専用**整数**プロパティ||  
 |ProviderVersion|このプロパティは OLE DB プロパティの DBPROP_DBMSVER と等価です。<br /><br /> このプロパティの既定値は、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスのバージョンです。<br /><br /> このプロパティで使用できる、 **Discover**メソッドです。|省略可能、読み取り専用**文字列**プロパティ||  

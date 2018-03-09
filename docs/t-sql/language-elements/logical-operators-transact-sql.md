@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - operators [Transact-SQL], logical
 - testing truth
@@ -20,16 +22,16 @@ helpviewer_keywords:
 - FALSE
 - logical operators [SQL Server], Transact-SQL
 ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e65c03b034c211d80b79db045985284245c6ccbb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 1c012e6105f4cbdbb12659c840ebe3c1da6156e2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="logical-operators-transact-sql"></a>論理演算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 |[LIKE](../../t-sql/language-elements/like-transact-sql.md)|オペランドがパターンに一致する場合、TRUE を返します。|  
 |[NOT](../../t-sql/language-elements/not-transact-sql.md)|論理演算子の値を反転します。|  
 |[または](../../t-sql/language-elements/or-transact-sql.md)|いずれかのブール式が TRUE の場合、TRUE を返します。|  
-|[いくつか](../../t-sql/language-elements/some-any-transact-sql.md)|比較セットのいくつかが TRUE の場合、TRUE を返します。|  
+|[SOME](../../t-sql/language-elements/some-any-transact-sql.md)|比較セットのいくつかが TRUE の場合、TRUE を返します。|  
   
 ## <a name="see-also"></a>参照  
  [演算子の優先順位 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operator-precedence-transact-sql.md)  

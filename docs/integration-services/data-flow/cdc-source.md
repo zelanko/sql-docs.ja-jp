@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d53ac25527e482ae043adeef1c56e5024cb78eb1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 632174b48536a4111125b24cfc85503ed6868a20
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cdc-source"></a>CDC ソース
   CDC ソースは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 変更テーブルから変更データの範囲を読み取り、変更内容を下流の他の SSIS コンポーネントに伝えます。  
@@ -140,7 +141,7 @@ use <cdc-enabled-database-name>
   
 3.  **[CDC ソース エディター]**で、 **[接続マネージャー]**をクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **ADO.NET 接続マネージャー**  
  既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。 選択した変更テーブルが存在する、CDC に対応した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの接続である必要があります。  
   
@@ -193,7 +194,7 @@ use <cdc-enabled-database-name>
   
 3.  **[CDC ソース エディター]**で、 **[列]**をクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧です。 このテーブルを使用して列を追加または削除することはできません。 ソースで使用する列を選択します。 選択した列は、選択した順序で **[外部列]** の一覧に追加されます。  
   
@@ -215,7 +216,7 @@ use <cdc-enabled-database-name>
   
 3.  **[CDC ソース エディター]**で、 **[エラー出力]**をクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **[入力または出力]**  
  データ ソースの名前を表示します。  
   
@@ -228,7 +229,7 @@ use <cdc-enabled-database-name>
  **切り捨て**  
  CDC ソースでフローの切り捨てを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
   
- **Description**  
+ **[説明]**  
  使用されていません。  
   
  **[選択したセルに設定する値]**  

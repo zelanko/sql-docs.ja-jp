@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2d00f69e21f00a2e4140af6a81d747471d50c48b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 70ae232ed09ab7bd04a2474b5798dd4ed581df39
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Interval データ型のトップ レベルの既定値と秒の有効桁数を上書きします。
 ARD の SQL_DESC_TYPE フィールド設定されている場合に、datetime 型または interval C 型を呼び出して、 **SQLBindCol**または**SQLSetDescField**、SQL_DESC_PRECISION フィールド (が間隔 (秒) が含まれています有効桁数) は、次の既定値に設定されます。  

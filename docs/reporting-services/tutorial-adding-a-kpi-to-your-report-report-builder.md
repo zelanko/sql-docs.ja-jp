@@ -8,21 +8,22 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e3e6194d510371b5a7aed8cad4f2efe5d188687
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4c0e21bcd1d4695aaf7a55891c7b6d3c9231cdd7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>チュートリアル: レポートへの KPI の追加 (レポート ビルダー)
 この [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] チュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートに主要業績評価指標 (KPI) を追加します。  
@@ -58,11 +59,11 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
 4.  **[データセットの選択]** ページで、 **[データセットを作成する]**をクリックします。  
   
-5.  **[次へ]**をクリックします。  
+5.  **[次へ]** をクリックします。  
   
 6.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 詳細については、「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
-7.  **[次へ]**をクリックします。  
+7.  **[次へ]** をクリックします。  
   
 8.  **[クエリのデザイン]** ページで、 **[テキストとして編集]**をクリックします。  
   
@@ -104,9 +105,9 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
        'SLR Camera' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-10. クエリ デザイナーのツール バーで、[実行] (**!**) をクリックします。
+10. クエリ デザイナーのツール バーで、[実行]\(**!**) をクリックします。
 
-11. **[次へ]**をクリックします。  
+11. **[次へ]** をクリックします。  
   
 ## <a name="CompleteWizard"></a>2.ウィザードでデータを整理し、レイアウトを選択する  
 テーブルまたはマトリックス ウィザードでは、データを表示するための最初のデザインを提供します。 ウィザードのプレビュー ペインでは、テーブルやマトリックスのデザインを完了する前にデータのグループ化の結果を表示できます。  
@@ -129,7 +130,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
     手順 4. および 5. で、フィールドの値がまず日付でまとめられ、次にその日付のすべての売上でまとめられます。  
   
-6.  **[次へ]**をクリックします。  
+6.  **[次へ]** をクリックします。  
   
     レポートを実行すると、テーブルに各日付、日付ごとのすべての注文、および注文ごとのすべての製品、数量、および売上の合計が表示されます。  
   
@@ -141,7 +142,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
     このチュートリアルで作成するレポートでは、ユーザーが親グループ階層を展開して子グループ行および詳細行を表示できるようにするドリル ダウン機能は使用されません。  
   
-10. **[次へ]**をクリックします。  
+10. **[次へ]** をクリックします。  
   
 11. **[完了]**をクリックします。  
   
@@ -238,7 +239,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
 10. **[線形ポインターのプロパティ]** ダイアログ ボックスで、**[ポインター オプション]** タブ、**[ポインター型]** の順にクリックし、**[バー]** が選択されていることを確認します。 
  
-11. **[OK]**をクリックします。  
+11. **[OK]** をクリックします。  
   
 12. ゲージのスケールを右クリックし、 **[スケールのプロパティ]**をクリックします。  
   
@@ -249,7 +250,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
 
 14. **[ラベル]** タブで、 **[スケールのラベルを非表示にする]**をオンにします。
 
-15. **[OK]**をクリックします。
+15. **[OK]** をクリックします。
   
 14. 背景色の式を追加したフィールドの横にある `Subcategory` フィールドの売上高の小計を表示する行で、Linear KPI 列の 2 番目のセルに、テーブル内のゲージをドラッグします。  
   
@@ -291,7 +292,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
     このレポートでは、サブカテゴリの小計のセルに配置したインジケーターのスコープを変更して、SalesDate フィールドのデータが同期されるようにすることもできます。  
   
-11. **[OK]**をクリックします。
+11. **[OK]** をクリックします。
 
 11. **[実行]** をクリックして、レポートをプレビューします。  
 
@@ -344,7 +345,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
 2.  **[保存]**をクリックします。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 これで、「レポートへの KPI の追加」チュートリアルを終了します。 詳細については、以下をご覧ください。
 *  [ゲージ](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [インジケーター](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

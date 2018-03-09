@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - xml_schema_attributes
 - sys.xml_schema_attributes_TSQL
 - sys.xml_schema_attributes
-dev_langs: TSQL
-helpviewer_keywords: sys.xml_schema_attributes catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.xml_schema_attributes catalog view
 ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c2f8156f9821bb6d4d0f70ae1af200a33ce3cb9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f71e46667c56b628965eab154af0c3e15c421f8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +54,8 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|XML 列を持つテーブルの ID。|  
 |**index_id**|**int**|選択的 XML インデックスの一意の ID。|  
-|**path_id と**|**int**|上位変換された XML パス ID。|  
-|**パス**|**nvarchar (4000)**|上位変換されたパス。 たとえば、"/a/b/c/d/e" です。|  
+|**path_id**|**int**|上位変換された XML パス ID。|  
+|**path**|**nvarchar (4000)**|上位変換されたパス。 たとえば、"/a/b/c/d/e" です。|  
 |**name**|**sysname**|パス名。|  
 |**path_type**|**tinyint**|0 = XQUERY<br /><br /> 1 = SQL|  
 |**path_type_desc**|**sysname**|基づく**path_type** "XQUERY"または 'SQL' の値します。|  
@@ -65,12 +68,12 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**system_type_id**|**tinyint**|列のシステム型の ID。|  
 |**user_type_id**|**tinyint**|列のユーザー型の ID。|  
 |**max_length**|**smallint**|型の最大長 (バイト単位)。<br /><br /> -1 の場合、列のデータ型は varchar(max)、nvarchar(max)、varbinary(max)、または xml です。|  
-|**有効桁数**|**tinyint**|型が数値型の場合は、最大有効桁数。 それ以外の場合は、0。|  
-|**小数点以下桁数**|**tinyint**|型が数値型の場合は、最大小数点以下桁数。 それ以外の場合は、0 に設定されます。|  
+|**有効桁数 (precision)**|**tinyint**|型が数値型の場合は、最大有効桁数。 それ以外の場合は、0。|  
+|**scale**|**tinyint**|型が数値型の場合は、最大小数点以下桁数。 それ以外の場合は、0 に設定されます。|  
 |**collation_name**|**sysname**|型が文字型の場合は、照合順序名。 それ以外の場合は、NULL。|  
 |**is_singleton**|**bit**|0 = SINGLETON ヒントが存在しない。<br /><br /> 1 = SINGLETON 最適化ヒントが適用される。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

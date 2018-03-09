@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - relational data binding [SQL Server]
 - XML [SQL Server], binding relational data
@@ -20,16 +22,16 @@ helpviewer_keywords:
 - variables [XML in SQL Server], relational data binding
 - columns [XML in SQL Server], relational data binding
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef249a7482610419873604637290cab3ef18e34b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 87dca9b5bcd70335a6121b1be1e49f4cc352826e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>XML データ内部のリレーショナル データのバインド
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
  これらの関数を使用しての列や変数のデータを参照することはできません、 **xml**、CLR ユーザー定義型、datetime、smalldatetime、**テキスト**、 **ntext**、 **sql_variant**、および**イメージ**型です。  
   
- また、このバインドは読み取り専用です。 つまり、これらの関数を使用する列には、データを書き込めません。 たとえば、sql:variable("@x") ="*式"*は許可されていません。  
+ また、このバインドは読み取り専用です。 つまり、これらの関数を使用する列には、データを書き込めません。 For example, sql:variable("@x")="*some expression"* is not allowed.  
   
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>例 : sql:variable() を使用した複数の領域にまたがるクエリ  
  この例ではどのように**sql:variable()**クエリをパラメーター化するアプリケーションを有効にすることができます。 Isbn を保存が SQL 変数を使用して渡された@isbnです。 使用して、定数に置き換えることで**sql:variable()**クエリは、どの ISBN でも、ISBN が 0-7356-1588-2、1 つだけでなくの検索に使用することができます。  

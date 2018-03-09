@@ -15,12 +15,12 @@ ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: v-saume
-manager: jhubbard
-ms.openlocfilehash: 083530811bd1dcee460e10566d9ddf94b8aa5f71
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>AlwaysOn 可用性グループを自動的に初期化する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ SQL Server 2016 には、可用性グループの自動シード処理が導入�
 
 背景情報については、「[セカンダリ レプリカの自動シード処理](automatic-seeding-secondary-replicas.md)」を参照してください。
  
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 SQL Server 2016 の自動シード処理では、データとログ ファイルのパスが、可用性グループに参加しているすべての SQL Server インスタンスで同じである必要があります。 SQL Server 2017 では、異なるパスを使用できますが、すべてのレプリカを同じプラットフォーム (Windows または Linux など) でホストする場合、同じパスを使用することが推奨されます。 クロスプラットフォームの可用性グループのレプリカは、パスが異なります。 詳細については、「[ディスク レイアウト](automatic-seeding-secondary-replicas.md#disklayout)」を参照してください。
 
@@ -150,7 +150,7 @@ GO
 
 **sys.dm_hadr_automatic_seeding** 
 
-プライマリ レプリカでクエリ `sys.dm_hadr_automatic_seeding` を実行して、自動シード処理プロセスの状態を確認します。 このビューは、シード処理プロセスごとに 1 つの行を返します。 例:
+プライマリ レプリカでクエリ `sys.dm_hadr_automatic_seeding` を実行して、自動シード処理プロセスの状態を確認します。 このビューは、シード処理プロセスごとに 1 つの行を返します。 例 :
 
 ```sql
 SELECT start_time, 
@@ -215,7 +215,7 @@ GO
 
 次の表に、自動シード処理に関連する拡張イベントを示します。 
 
-| 名前 | 説明|
+| [オブジェクト名] | Description|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  シード処理要求メッセージ。
 |hadr_physical_seeding_backup_state_change |    物理シード処理のバックアップ側の状態変更。
@@ -236,7 +236,7 @@ GO
 
 **自動シード処理時の監視**
 
-`sys.dm_hadr_physical_seeding_stats` のクエリを実行して、現在実行中の自動シード処理プロセスを問い合わせます。 このビューは、データベースごとに 1 つの行を返します。 例:
+`sys.dm_hadr_physical_seeding_stats` のクエリを実行して、現在実行中の自動シード処理プロセスを問い合わせます。 このビューは、データベースごとに 1 つの行を返します。 例 :
 
 ```sql
 SELECT local_database_name, 

@@ -14,21 +14,21 @@ ms.topic: article
 f1_keywords: sql13.swb.maint.reportinglogging.f1
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c3a26d6e0cdf6e356fa65035cff28f99b86bbb6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05d9eac7b81f5a17d5f2b9de71cc0a7027896354
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>メンテナンス プラン ([レポートとログ記録] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[レポートとログ記録]** ダイアログ ボックスを使用して、メンテナンス プランを実行したときに生成されるレポートとログを構成できます。  
   
-## <a name="options"></a>オプション  
- [テキスト ファイルのレポートを生成する]  
+## <a name="options"></a>および  
+ **[テキスト ファイルのレポートを生成する]**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でテキスト ファイル レポートを生成するかどうかを指定します。  
   
  **[新しいファイルの作成]**  
@@ -49,10 +49,10 @@ ms.lasthandoff: 11/17/2017
  **[リモート サーバーにログを記録する]**  
  メンテナンス プランの履歴をリモート サーバーに記録します。  
   
- **接続**  
+ **[接続]**  
  リモート サーバーにログを記録するときの接続情報を指定します。  
   
- **新規**  
+ **[新規作成]**  
  **[接続プロパティ]** ダイアログ ボックスを表示します。 リモート サーバーにログを記録するための新しい接続情報を構成する場合に使用します。  
   
 ## <a name="see-also"></a>参照  

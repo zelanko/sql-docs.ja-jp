@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_targetsvrgrp_member
 - sp_add_targetsvrgrp_member_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_targetsvrgrp_member
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_targetsvrgrp_member
 ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04d278e67070b10c72fb0820d17f6d19b37d323b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 785cd15327bd8d1bb3e4d168812c7280c098c9bf
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddtargetsvrgrpmember-transact-sql"></a>sp_add_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +46,10 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@group_name=** ] **'***group_name***'**  
+ [ **@group_name=** ] **'***group_name***'**  
  グループの名前です。 *group_name*は**sysname**、既定値はありません。  
   
- [  **@server_name=** ] **'***server_name***'**  
+ [ **@server_name=** ] **'***server_name***'**  
  指定したグループに追加するサーバーの名前を指定します。 *server_name*は**nvarchar (30)**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -58,7 +61,7 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ## <a name="remarks"></a>解説  
  対象サーバーは、複数の対象サーバー グループのメンバーになることができます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**この手順を実行できるは、固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
@@ -75,7 +78,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_delete_targetsvrgrp_member &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-delete-targetsvrgrp-member-transact-sql.md)   
+ [sp_delete_targetsvrgrp_member &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetsvrgrp-member-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

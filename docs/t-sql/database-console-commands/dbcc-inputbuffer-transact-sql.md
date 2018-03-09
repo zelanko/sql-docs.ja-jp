@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - INPUTBUFFER
 - DBCC_INPUTBUFFER_TSQL
 - INPUTBUFFER_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - input buffers [SQL Server]
 - last statement from client
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - DBCC INPUTBUFFER statement
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
-caps.latest.revision: "51"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 23ac916dccb2f8d4c6511f9e672aa07834001cad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 0d36f0e25c0f5959053e028cdfc95babf69c4e48
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +75,7 @@ DBCC INPUTBUFFER では、次の列を含む結果セットが返されます。
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**イベントの種類**|**nvarchar (30)**|イベントの種類。 これは、 **RPC イベント**または**言語イベント**です。 出力になります**No Event**と最後のイベントは検出されませんでした。|  
+|**EventType**|**nvarchar(30)**|イベントの種類。 これは、 **RPC イベント**または**言語イベント**です。 出力になります**No Event**と最後のイベントは検出されませんでした。|  
 |**パラメーター**|**smallint**|0 = テキスト<br /><br /> 1-  *n* パラメーターを =|  
 |**EventInfo**|**nvarchar (4000)**|**EventType** RPC の場合、 **EventInfo**はプロシージャ名だけが含まれています。 **EventType**言語のイベントの最初の 4,000 文字だけが表示されます。|  
   
@@ -92,7 +94,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 > [!NOTE]
 > 以降で[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2 では、使用[sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)のインスタンスに送信されたステートメントに関する情報を返す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次のいずれかが必要です。
 -   ユーザーのメンバーである必要があります、 **sysadmin**固定サーバー ロール。  
 -   ユーザーには VIEW SERVER STATE 権限が必要です。  
@@ -126,6 +128,6 @@ DBCC INPUTBUFFER (52);
 ## <a name="see-also"></a>参照  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-[sys.dm_exec_input_buffer &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
+[sys.dm_exec_input_buffer &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
   
   

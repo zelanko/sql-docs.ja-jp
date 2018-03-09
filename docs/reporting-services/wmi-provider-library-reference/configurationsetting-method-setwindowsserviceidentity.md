@@ -8,9 +8,7 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname: SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,15 +17,15 @@ apitype: MOFDef
 helpviewer_keywords: SetWindowsServiceIdentity method
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1546b0dda5a6f72c3d34ff7d5c450394e0794e00
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c7c0887b3049f935b5a8cab7649acb7ce8a9f000
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-method---setwindowsserviceidentity"></a>ConfigurationSetting メソッド - SetWindowsServiceIdentity
   レポート サーバーの Windows サービスを指定された Windows ユーザーとして実行させ、レポート サーバーを運用できるファイル システム権限をこのアカウントに与えます。  
@@ -60,7 +58,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *UseBuiltInAccount* パラメーターを **true** に設定しており、レポート サーバーが Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] または Windows XP で実行されている場合、 *Name*、 *Domain*、および *Password* の各パラメーターの値は無視され、ローカル システム アカウントが使用されます。  
   
  *UseBuiltInAccount* パラメーターを **true** に設定しており、レポート サーバーが Windows Server 2003 で実行されている場合、 *Domain* および *Password* プロパティは無視され、名前フィールドには "Builtin\NetworkService"、"Builtin\System"、または "Builtin\LocalService" を指定する必要があります。  

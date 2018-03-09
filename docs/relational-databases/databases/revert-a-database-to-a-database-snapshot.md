@@ -8,26 +8,28 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
 - reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
-caps.latest.revision: "58"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6ebcff5d0d885fe580af9ac0b14d81e7b4ad2746
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a93fde67cfb08245607153afbddaffd1aca6669
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>データベースをデータベース スナップショットに戻す
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] オンライン データベースのデータが破損した場合、特定のケースでは、データベースをバックアップから復元する代わりに、データベースをデータが破損した日付より前のデータベース スナップショットに復帰させる方が適切であることがあります。 たとえば、テーブルの削除など、最近の重大なユーザー エラーを元に戻すには、データベースの復帰が役立つ場合があります。 ただし、スナップショットの作成後に行った変更はすべて失われます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+オンライン データベースのデータが破損した場合、特定のケースでは、データベースをバックアップから復元する代わりに、データベースをデータが破損した日付より前のデータベース スナップショットに復帰させる方が適切であることがあります。 たとえば、テーブルの削除など、最近の重大なユーザー エラーを元に戻すには、データベースの復帰が役立つ場合があります。 ただし、スナップショットの作成後に行った変更はすべて失われます。  
   
 -   **作業を開始する準備:**  
   
@@ -35,11 +37,11 @@ ms.lasthandoff: 11/17/2017
   
      [前提条件](#Prerequisites)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **データベースをデータベース スナップショットに戻すには、**  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  元に戻す操作は、次の状況ではサポートされません。  
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
  データベースを復帰する前に、次の制限について検討してください。  
   
--   復帰は、メディアの復旧を目的としたものではありません。 」を参照してください。 データベース スナップショットはデータベース ファイルの不完全なコピーであるため、データベースまたはデータベース スナップショットが壊れた場合、スナップショットから復帰することはほぼ不可能です。 復帰が可能であっても、データベースまたはデータベース スナップショットが壊れている場合は、問題が解決しない可能性が高くなります。 このため、データベースの保護には、定期的なバックアップと復元プランのテストが必要です。 詳細については、「 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」をご覧ください。  
+-   復帰は、メディアの復旧を目的としたものではありません。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 データベース スナップショットはデータベース ファイルの不完全なコピーであるため、データベースまたはデータベース スナップショットが壊れた場合、スナップショットから復帰することはほぼ不可能です。 復帰が可能であっても、データベースまたはデータベース スナップショットが壊れている場合は、問題が解決しない可能性が高くなります。 このため、データベースの保護には、定期的なバックアップと復元プランのテストが必要です。 詳細については、「 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」をご覧ください。  
   
     > [!NOTE]  
     >  データベース スナップショットの作成時点の状態にソース データベースを復元できるようにする必要がある場合は、完全復旧モデルを使用し、そのためのバックアップ ポリシーを実装してください。  
@@ -86,7 +88,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  ソース データベースで RESTORE DATABASE 権限を持つユーザーは、データベース スナップショットが作成されたときの状態に復帰させることができます。  
   
 ##  <a name="TsqlProcedure"></a> データベースをデータベース スナップショットに戻す方法 (Transact-SQL の使用)  

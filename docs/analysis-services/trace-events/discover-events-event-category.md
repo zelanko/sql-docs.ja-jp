@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +16,20 @@ helpviewer_keywords:
 - discover events [Analysis Services]
 - event classes [Analysis Services], discover events
 ms.assetid: fb964bac-dc68-4ad0-80f5-aeb677277169
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: af8ffe2fc68b8bb2694ec1cf3e0776fd15e6875b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 40cbdf890c45c965217e038420e4fea4b108a08e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discover-events-event-category"></a>Discover イベントのイベント カテゴリ
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Discover イベントのイベント カテゴリには、次の表に示したイベント クラスがあります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Discover イベントのイベント カテゴリには、次の表に示したイベント クラスがあります。  
   
 |Event Class|イベント ID|Description|  
 |-----------------|--------------|-----------------|  

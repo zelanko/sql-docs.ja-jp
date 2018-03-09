@@ -1,33 +1,33 @@
----
+﻿---
 title: "For SQL Server、Visual Studio Code mssql 拡張機能を使用して |Microsoft ドキュメント"
 description: "このチュートリアルでは、VS Code の mssql 拡張機能を使用する方法を示します。 この拡張機能を使用すると、VS Code で Transact-SQL スクリプトを編集し、実行できます。"
 author: erickangMSFT
 ms.author: erickang
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Active
-ms.openlocfilehash: f7620db7f18c07544158ba49efbead9025c7a19a
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Visual Studio Code を使用して SQL Server の Transact-SQL スクリプトを作成し、実行する
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このトピックでは、Visual Studio Code (VS Code) 用の **mssql** 拡張機能を使用して SQL Server データベースを開発する方法について説明します。
 
-Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカルなコード エディターで、拡張機能をサポートします。[VS Code 用の **mssql** 拡張機能]により、SQL Server に接続し、 Transact-SQL (T-SQL) でクエリを行い、結果を表示することができます。
+Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカルなコード エディターで、拡張機能をサポートします。 [VS Code 用の **mssql** 拡張機能] により、SQL Server に接続し、 Transact-SQL (T-SQL) でクエリを行い、結果を表示することができます。
 
 ## <a name="install-vs-code"></a>VS Code をインストールします。
 1. VS Code をまだインストールしていない場合[をダウンロードしてインストール VS Code]コンピューターにします。
@@ -47,12 +47,12 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
    
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-extension.png" alt="Install the extension" style="width: 600px;"/>
 
-3. **mssql**拡張機能は、最大 1 分間でインストールされます。 正常にインストールされたことを示すプロンプトを待ちます。
+3. **Mssql** 拡張機能は、最大 1 分間でインストールされます。 正常にインストールされたことを示すプロンプトを待ちます。
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 600px;"/>
 
    > [!NOTE]
-   > MacOS の場合、OpenSSL をインストールする必要があります。 これは、mssql 拡張機能で使用されている.Net Core の前提条件です。[.Net Core のインストラクション]にある**前提条件のインストール**手順に従ってください。 または、macOS ターミナルで次のコマンドを実行することもできます。
+   > MacOS の場合、OpenSSL をインストールする必要があります。 これは、mssql 拡張機能で使用されている.Net Core の前提条件です。 [.Net Core のインストラクション] にある **前提条件のインストール** 手順に従ってください。 または、macOS ターミナルで次のコマンドを実行することもできます。
    >
    >   ```bash
    >   brew update
@@ -66,7 +66,7 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
 
 ## <a name="create-or-open-a-sql-file"></a>作成または SQL ファイルを開く
 
-**mssql**拡張機能を使用 mssql コマンドと T-SQL は、IntelliSense、エディターで、言語モードが に設定されているときに**SQL**です。
+**mssql** 拡張機能を使用 mssql コマンドと T-SQL は、IntelliSense、エディターで、言語モードが に設定されているときに **SQL** です。
 
 1. キーを押して**CTRL + N**です。 Visual Studio のコードは、既定で新しい 'プレーン テキスト' ファイルを開きます。 
 
@@ -80,7 +80,7 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
 
 次の手順では、VS コードでの SQL Server に接続する方法を示します。
 
-1. VS Code でキーを押して**CTRL + SHIFT + P** (または**F1**) コマンド パレットを開きます。
+1. VS Code で **Ctrl + Shift + P** (または **F1**) キーを押して、コマンド パレットを開きます。
 
 2. 型**sql** mssql コマンドを表示します。
 
@@ -91,7 +91,7 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
 
 4. 選択**接続プロファイルの作成**です。 これは、SQL Server インスタンスの接続プロファイルを作成します。
 
-5. 指示に従って、新しい接続プロファイルの接続プロパティを指定します。 それぞれの値を指定してからキーを押します。 **ENTER**を続行します。 
+5. 指示に従って、新しい接続プロファイルの接続プロパティを指定します。 それぞれの値を指定してから、**Enter** キーを押して続行します。 
 
    次の表では、接続プロファイルのプロパティについて説明します。
 
@@ -101,13 +101,13 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
    | **[オプション]データベース名** | 使用するデータベースです。 このチュートリアルの目的を指定しないと、データベース キーを押して**ENTER**を続行します。 |
    | **ユーザー名** | サーバー上のデータベースにアクセス権を持つユーザーの名前を入力します。 このチュートリアルでは、既定値を使用して**SA**アカウント、SQL Server のセットアップ中に作成します。 |
    | **パスワード (SQL ログイン)** | 指定したユーザーのパスワードを入力します。 | 
-   | **パスワードを保存しますか。** | 型**はい**パスワードを保存します。 それ以外の場合、入力**いいえ**を求めるには、パスワード、接続プロファイルが使用されるたびにします。 |
+   | **パスワードを保存しますか?** | 型**はい**パスワードを保存します。 それ以外の場合、入力**いいえ**を求めるには、パスワード、接続プロファイルが使用されるたびにします。 |
    | **[オプション]このプロファイルの名前を入力してください。** | 接続プロファイルの名前。 たとえば、プロファイルを名前でした**localhost プロファイル**です。 
 
    > [!Tip] 
    > 作成してユーザー設定ファイル (settings.json) で接続プロファイルを編集します。 選択して、設定ファイルを開きます**優先**し**ユーザー設定**VS Code メニューでします。 詳細については、次を参照してください。[接続プロファイルの管理]です。
 
-6. キーを押して、 **ESC**プロファイルが作成され、接続されていることを通知する情報メッセージを閉じるにはキー。
+6. **Esc** キーを押して、プロファイルが作成され、接続されていることを通知する情報メッセージを閉じます。
 
    > [!TIP]
    > 接続エラーが発生する場合は、まず、内のエラー メッセージから、問題を診断、**出力**VS Code のパネル (選択**出力**上、**ビュー**メニュー)。 次に、[接続のトラブルシューティングに関する推奨事項]を確認します。

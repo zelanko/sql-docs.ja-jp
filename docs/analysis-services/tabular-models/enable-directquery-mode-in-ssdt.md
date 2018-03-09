@@ -1,30 +1,31 @@
 ---
 title: "SSDT での DirectQuery モードを有効にする |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/06/2017
+ms.date: 02/22/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 71fc7ebd-2e86-4a76-994b-66d3a57bcc9b
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1866cd3c6194edf7065ebb2929cc77f8cc4acc3a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cc16e4c1e4c34e9e37d20a747e8ea2acac6bea01
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="enable-directquery-mode-in-ssdt"></a>SSDT での DirectQuery モードの有効化
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]このトピックではで表形式モデル プロジェクトの DirectQuery モードを有効にする方法を説明おします[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]です。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+このトピックでは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でテーブル モデル プロジェクトに対して DirectQuery モードを有効にする方法を説明します。  
   
 SSDT で設計するテーブル モデルに対して DirectQuery モードを有効にすると、次のようになります。
 -   DirectQuery モードと互換性のない機能が無効になります。  

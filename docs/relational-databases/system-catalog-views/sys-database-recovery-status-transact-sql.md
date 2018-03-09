@@ -1,5 +1,5 @@
 ---
-title: "sys.database_recovery_status (TRANSACT-SQL) |Microsoft ドキュメント"
+title: sys.database_recovery_status (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/12/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - database_recovery_status
 - sys.database_recovery_status
 - sys.database_recovery_status_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.database_recovery_status catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.database_recovery_status catalog view
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc080e2f9a7dd102dcd9fa760ffc6267430fb30f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 644f73be666aa21a13cd745e5c50ed4552d87b19
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdatabaserecoverystatus-transact-sql"></a>sys.database_recovery_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 |**first_recovery_fork_guid**|**uniqueidentifier**|最初の復旧分岐の識別子。<br /><br /> NULL= データベースがオフラインであるか起動しない。|  
 |**fork_point_lsn**|**numeric(25,0)**|場合**first_recovery_fork_guid**が等しくない (! =) を**recovery_fork_guid**、 **fork_point_lsn**現在の分岐ポイントのログ シーケンス番号です。 それ以外の場合は NULL になります。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

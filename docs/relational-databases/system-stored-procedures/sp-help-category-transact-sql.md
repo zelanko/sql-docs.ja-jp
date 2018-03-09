@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_category
 - sp_help_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efec4c1ef04ef95e74ef13479b5f51cfe2d84bdb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: debc3b8cef2aeb0a9f4893ff5e9287a2a5fdd016
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,28 +49,28 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@class=**] **'***クラス***'**  
+ [ **@class=**] **'***class***'**  
  要求する情報のクラスを指定します。 *クラス*は**varchar (8)**、既定値は**ジョブ**です。 *クラス*これらの値のいずれかになります。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
-|**ジョブ**|ジョブ カテゴリに関する情報|  
+|**JOB**|ジョブ カテゴリに関する情報|  
 |**アラートを生成します。**|警告カテゴリに関する情報|  
-|**演算子**|オペレーター カテゴリに関する情報|  
+|**OPERATOR**|オペレーター カテゴリに関する情報|  
   
- [  **@type=** ] **'***型***'**  
+ [ **@type=** ] **'***type***'**  
  要求する情報に関するカテゴリの種類を指定します。 *型*は**varchar (12)**、既定値は NULL、これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
-|**地元の**|ローカル ジョブ カテゴリです。|  
+|**LOCAL**|ローカル ジョブ カテゴリです。|  
 |**複数のサーバー**|マルチ サーバー ジョブ カテゴリです。|  
 |**NONE**|以外のクラスのカテゴリ**ジョブ**です。|  
   
- [  **@name=** ] **'***名前***'**  
+ [ **@name=** ] **'***name***'**  
  要求する情報に関するカテゴリの名前を指定します。 *名前*は**sysname**、既定値は NULL です。  
   
- [  **@suffix=** ]*サフィックス*  
+ [ **@suffix=** ] *suffix*  
  指定するかどうか、 **category_type**結果セット内の列が ID と名前。 *サフィックス*は**ビット**、既定値は**0**します。 **1**を示しています、 **category_type** 、名、および**0** ID として表示  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -95,7 +98,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
  パラメーターを指定しない場合、結果セットではすべてのジョブ カテゴリに関する情報が提供されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  

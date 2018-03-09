@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,15 +23,15 @@ helpviewer_keywords:
 - Connect to Server dialog box, Reporting Services
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 caps.latest.revision: "53"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1b6a12b85b69cb6bb8ae1b5bc138a47d1a58c1a0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 951f22989a1fb2bb725073cd27da6f1307c71551
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Management Studio でレポート サーバーに接続する
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のオブジェクト エクスプローラーでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファミリのあらゆるサーバーに接続して、その内容をグラフィカルに表示できます。 Reporting Services については、オブジェクト エクスプローラーを使用して、次のことを実行できます。  
@@ -113,7 +111,7 @@ ms.lasthandoff: 12/05/2017
   
  [サーバーの種類] として [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を指定した場合、 **[サーバーへの接続]** ダイアログ ボックスには、レポート サーバーの名前または Web サービスのエンドポイントを指定できます。  
   
-|接続先|処理手順|Permissions|  
+|接続先|処理手順|アクセス許可|  
 |----------------|-----------|-----------------|  
 |ネイティブ モードのレポート サーバー (既定のインスタンスまたは名前付きインスタンスとして接続)<br /><br /> \<サーバー名>\<_instance><br /><br /> レポート サーバーへの接続は、レポート サーバー WMI プロバイダーを介して行われます。|サーバーのプロパティと既定値を表示および設定する。<br /><br /> ジョブを表示および取り消す。<br /><br /> 共有スケジュールを作成および管理する。<br /><br /> ロール定義を作成、変更、または削除する。|システム管理者ロールへの割り当て。|  
 |ネイティブ モードのレポート サーバー (レポート サーバー Web サービスのエンドポイントを介し、既定のインスタンスまたは名前付きインスタンスとして接続)<br /><br /> `http://<servername>/reportserver`<br /><br /> レポート サーバーの URL を指定することによって、レポート サーバーに接続することもできます。|サーバーのプロパティと既定値を表示および設定する。<br /><br /> ジョブを表示および取り消す。<br /><br /> 共有スケジュールを作成および管理する。<br /><br /> ロール定義を作成、変更、または削除する。|システム管理者ロールへの割り当て。|  

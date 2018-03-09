@@ -23,15 +23,15 @@ helpviewer_keywords:
 - column filters [SQL Server replication]
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6b8a32e40c44b7cdc0ec8bb082ebc08a95d2221
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c33c6903f664437076c06f12fb2be3b231f7e0f1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-published-data"></a>パブリッシュされたデータのフィルター選択
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] テーブル アーティクルをフィルター選択すると、パブリッシュされるデータのパーティションを作成できます。 パブリッシュされたデータをフィルター選択することによって、次のことができるようになります。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 -   パラメーター化された行フィルター。マージ レプリケーションでのみ使用できます。  
   
-     パラメーター化された行フィルターを使用して、パブリッシュする行のサブセットを選択できます。 すべてのサブスクライバーに同じ行のサブセットを送信する静的フィルターと異なり、パラメーター化された行フィルターは、サブスクライバーにより提供されたデータの値を使用し、サブスクライバーにそれぞれ別の行のサブセットを送信します。 詳細については、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
+     パラメーター化された行フィルターを使用して、パブリッシュする行のサブセットを選択できます。 すべてのサブスクライバーに同じ行のサブセットを送信する静的フィルターと異なり、パラメーター化された行フィルターは、サブスクライバーにより提供されたデータの値を使用し、サブスクライバーにそれぞれ別の行のサブセットを送信します。 詳しくは、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
 -   結合フィルター。マージ レプリケーションでのみ使用できます。  
   

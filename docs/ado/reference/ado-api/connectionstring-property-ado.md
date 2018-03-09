@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Connection15::ConnectionString
-helpviewer_keywords: ConnectionString property [ADO]
+f1_keywords:
+- Connection15::ConnectionString
+helpviewer_keywords:
+- ConnectionString property [ADO]
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41f887dbd21f120706e32059128227669f517ea4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aaf33c9a4fd5b628307195b9b9a7d1743d24d7f2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString プロパティ (ADO)
 データ ソースへの接続を確立するために使用される情報を示します。  
@@ -39,11 +42,11 @@ ms.lasthandoff: 12/21/2017
   
 |引数|Description|  
 |--------------|-----------------|  
-|*プロバイダー =*|接続に使用するプロバイダーの名前を指定します。|  
+|*Provider=*|接続に使用するプロバイダーの名前を指定します。|  
 |*ファイル名 =*|事前設定された接続情報を含むプロバイダー固有のファイル (たとえば、永続化されたデータ ソース オブジェクト) の名前を指定します。|  
 |*リモート プロバイダー =*|クライアント側の接続を開くときに使用するプロバイダーの名前を指定します。 (リモート データのサービスのみ。)|  
 |*リモート サーバー =*|クライアント側の接続を開くときに使用するサーバーのパス名を指定します。 (リモート データのサービスのみ。)|  
-|*URL =*|ファイルまたはディレクトリなどのリソースを識別する絶対 URL として接続文字列を指定します。|  
+|*URL=*|ファイルまたはディレクトリなどのリソースを識別する絶対 URL として接続文字列を指定します。|  
   
  設定した後、 **ConnectionString**プロパティと open、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト、プロバイダー可能性がありますの内容が変更プロパティは、たとえば、ADO 定義の引数名をマップすることによって、特定のプロバイダーに対応します。  
   

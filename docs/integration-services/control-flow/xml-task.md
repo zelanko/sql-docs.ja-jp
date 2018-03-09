@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - XML [Integration Services]
 - XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 198bea7d4f2b566d34185156477179359eaf82bb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d8826d464d7cdbfab3e17e2cca9b61ceed0ae304
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-task"></a>XML タスク
   XML タスクは、XML データの処理に使用します。 このタスクを使用すると、パッケージは、XML ドキュメントの取得、Extensible Stylesheet Language Transformations (XSLT) スタイル シートや XPath 式の使用によるドキュメントへの操作の適用、複数ドキュメントのマージ、または更新したドキュメントの検証、比較、およびファイルや変数への保存を行うことができます。  
@@ -115,7 +116,7 @@ ms.lasthandoff: 11/20/2017
  `<?xml version="1.0" encoding="UTF-8"?>`  
   
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>XML タスクで使用できるカスタム ログ メッセージ  
- 次の表では、XML タスクのカスタム ログ エントリを説明します。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
+ 次の表では、XML タスクのカスタム ログ エントリを説明します。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
 |ログ エントリ|Description|  
 |---------------|-----------------|  
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/20/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
@@ -151,7 +152,7 @@ ms.lasthandoff: 11/20/2017
  **[OperationType]**  
  一覧から操作の種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[検証]**|文書型定義 (DTD) または XML スキーマ定義 (XSD) スキーマに対して XML ドキュメントを検証します。 このオプションを選択すると、 **[Validate]**セクションに動的オプションが表示されます。|  
 |**XSLT (XSLT)**|XML ドキュメントに対して XSL 変換を実行します。 このオプションを選択すると、 **[XSLT]**セクションに動的オプションが表示されます。|  
@@ -163,14 +164,14 @@ ms.lasthandoff: 11/20/2017
  **[SourceType]**  
  XML ドキュメントのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  **ソース**  
- **[ソース]** が **[直接入力]**に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
+ **[ソース]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
  **[ソース]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
@@ -199,7 +200,7 @@ ms.lasthandoff: 11/20/2017
  **[DestinationType]**  
  XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
@@ -207,7 +208,7 @@ ms.lasthandoff: 11/20/2017
  **[ValidationType]**  
  検証の種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[DTD]**|文書型定義 (DTD) を使用します。|  
 |**[XSD]**|XML スキーマ定義 (XSD) スキーマを使用します。 このオプションを選択すると、 **[ValidationType]**セクションに動的オプションが表示されます。|  
@@ -224,14 +225,14 @@ ms.lasthandoff: 11/20/2017
  **[SecondOperandType]**  
  2 番目の XML ドキュメントのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  **[SecondOperand]**  
- **[SecondOperandType]** が **[直接入力]**に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
+ **[SecondOperandType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
  **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
@@ -262,7 +263,7 @@ ms.lasthandoff: 11/20/2017
  **[DestinationType]**  
  XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
@@ -270,14 +271,14 @@ ms.lasthandoff: 11/20/2017
  **[SecondOperandType]**  
  2 番目の XML ドキュメントのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  **[SecondOperand]**  
- **[SecondOperandType]** が **[直接入力]**に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
+ **[SecondOperandType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
  **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
@@ -308,7 +309,7 @@ ms.lasthandoff: 11/20/2017
  **[DestinationType]**  
  XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
@@ -316,14 +317,14 @@ ms.lasthandoff: 11/20/2017
  **[SecondOperandType]**  
  2 番目の XML ドキュメントのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  **[SecondOperand]**  
- **[SecondOperandType]** が **[直接入力]**に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
+ **[SecondOperandType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
  **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
@@ -339,7 +340,7 @@ ms.lasthandoff: 11/20/2017
  **[XPathOperation]**  
  XPath の結果の種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**Evaluation**|XPath 関数の結果を返します。|  
 |**[ノード リスト]**|選択されたノードを XML フラグメントとして返します。|  
@@ -351,14 +352,14 @@ ms.lasthandoff: 11/20/2017
  **[XPathStringSourceType]**  
  XML ドキュメントのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  **[XPathStringSource]**  
- **[XPathStringSourceType]** が **[直接入力]**に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
+ **[XPathStringSourceType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
  **[XPathStringSourceType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
@@ -388,7 +389,7 @@ ms.lasthandoff: 11/20/2017
  **[DestinationType]**  
  XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
@@ -396,7 +397,7 @@ ms.lasthandoff: 11/20/2017
  **[SecondOperandType]**  
  2 番目の XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
@@ -419,7 +420,7 @@ ms.lasthandoff: 11/20/2017
  **[DiffAlgorithm]**  
  Diff アルゴリズムを選択して、文書を比較する場合に使用します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**Auto**|XML タスクに、高速アルゴリズムを使用するか、詳細アルゴリズムを使用するかを決定します。|  
 |**[高速]**|高速ではあるが詳細ではない Diff アルゴリズムを使用します。|  
@@ -428,7 +429,7 @@ ms.lasthandoff: 11/20/2017
  **[DiffOptions]**  
  Diff 操作に適用するための Diff オプションを設定します。 次の表に示すオプションがあります。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[IgnoreXMLDeclaration]**|XML 宣言を比較するかどうかを指定します。|  
 |**[IgnoreDTD]**|文書型定義 (DTD) を無視するかどうかを指定します。|  
@@ -463,7 +464,7 @@ ms.lasthandoff: 11/20/2017
  **[DestinationType]**  
  XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
@@ -471,7 +472,7 @@ ms.lasthandoff: 11/20/2017
  **[SecondOperandType]**  
  XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
@@ -509,7 +510,7 @@ ms.lasthandoff: 11/20/2017
  **[DestinationType]**  
  XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
@@ -517,7 +518,7 @@ ms.lasthandoff: 11/20/2017
  **[SecondOperandType]**  
  XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  

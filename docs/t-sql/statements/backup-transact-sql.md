@@ -1,14 +1,15 @@
 ---
 title: "BACKUP (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 09/13/2017
+ms.date: 01/22/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - BACKUP_LOG_TSQL
 - BACKUP LOG
 - BACKUP DATABASE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backup media [SQL Server], BACKUP statement
 - backing up filegroups [SQL Server]
@@ -46,16 +48,16 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-caps.latest.revision: "275"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ef97afb50c2a8d4dcf18ea342b8ac98dc6014863
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 506cda0644c6e3d144d5b02ff208d78e7305dfcc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +103,7 @@ BACKUP LOG { database_name | @database_name_var }
  {  
    { logical_device_name | @logical_device_name_var }   
  | { DISK | TAPE | URL} =   
-     { 'physical_device_name' | @physical_device_name_var }  
+     { 'physical_device_name' | @physical_device_name_var | 'NUL' }  
  }   
   
 <MIRROR TO clause>::=  
@@ -170,49 +172,48 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  データベースのバックアップで作成されたバックアップを復元すると (、*データ バックアップ*)、全体のバックアップを復元します。 バックアップ内の特定の時点またはトランザクションに復元できるのは、ログ バックアップだけです。  
   
 > [!NOTE]  
->  データベースの完全バックアップのみを実行できる、**マスター**データベース。  
+> データベースの完全バックアップのみを実行できる、**マスター**データベース。  
   
  LOG  
  トランザクション ログのみのバックアップを指定します。 前回正しく実行されたログ バックアップの位置から、ログの現在の末尾まで、ログのバックアップが行われます。 最初のログ バックアップを作成するには、その前に完全バックアップを作成する必要があります。  
   
- 特定の時刻またはバックアップ内のトランザクション ログ バックアップを復元するには WITH STOPAT、STOPATMARK、または stopbeforemark のいずれかで指定することによって、 [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md)ステートメントです。  
+ 特定の時刻またはバックアップ内のトランザクション ログ バックアップを復元するにを指定して`WITH STOPAT`、 `STOPATMARK`、または`STOPBEFOREMARK`で、 [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md)ステートメントです。  
   
 > [!NOTE]  
->  WITH NO_TRUNCATE または COPY_ONLY を指定する以外の標準的な方法でログ バックアップを行うと、一部のトランザクション ログ レコードはアクティブでなくなります。 1 つ以上の仮想ログ ファイル内ですべてのレコードがアクティブでなくなった場合、ログは切り捨てられます。 定期的なログ バックアップの後ログが切り捨てられない場合は、何らかの原因によりログの切り捨てが遅れている可能性があります。 詳細については、以下を参照してください。  
+>  一般的なログ バックアップの後のトランザクション ログ レコードの一部と無効になる、指定しない限り`WITH NO_TRUNCATE`または`COPY_ONLY`です。 1 つ以上の仮想ログ ファイル内ですべてのレコードがアクティブでなくなった場合、ログは切り捨てられます。 定期的なログ バックアップの後ログが切り捨てられない場合は、何らかの原因によりログの切り捨てが遅れている可能性があります。 詳細については、次を参照してください。[ログの切り捨てが遅れる要因](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)です。  
   
- { *database_name* | **@**database_name_var *}   
- トランザクション ログ、データベースの一部、またはデータベース全体をバックアップする場合の、バックアップ元となるデータベースを指定します。 変数として指定する場合 (**@***database_name_var*)、この名前を指定できます文字列定数として指定 ( **@**  *database_name_var***=***データベース名*) または文字の文字列データ型の変数として以外の**ntext**または**テキスト**データ型。  
+ { *database_name* | **@***database_name_var* } Is the database from which the transaction log, partial database, or complete database is backed up.変数として指定する場合 (**@***database_name_var*)、この名前を指定できます文字列定数として指定 (**@***database_name_var***= * * * データベース名*) か、または、文字の変数では、データ型を文字列を除き、 **ntext**または**テキスト**データ型。  
   
 > [!NOTE]  
->  データベース ミラーリング パートナーシップ内のミラー データベースは、バックアップできません。  
+> データベース ミラーリング パートナーシップ内のミラー データベースは、バックアップできません。  
   
-\<file_or_filegroup > [ **、**.*n* ]  
+\<file_or_filegroup> [ **,**...*n* ]  
  BACKUP DATABASE でのみ使用できます。ファイル バックアップに含めるデータベース ファイルまたはファイル グループを指定するか、部分バックアップに含める読み取り専用ファイルまたはファイル グループを指定します。  
   
- ファイル **=**  { *logical_file_name*| **@***logical_file_name_var* }  
+ FILE **=** { *logical_file_name* | **@***logical_file_name_var* }  
  バックアップに含めるファイルの論理名、またはこの論理名を値として保持する変数を指定します。  
   
- ファイル グループ **=**  { *logical_filegroup_name*| **@***logical_filegroup_name_var* }  
+ FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
  バックアップに含めるファイル グループの論理名、またはこの論理名を値として保持する変数を指定します。 単純復旧モデルでは、ファイル グループのバックアップは、読み取り専用のファイル グループに対してのみ使用できます。  
   
 > [!NOTE]  
->  データベースのサイズやパフォーマンス要件によりデータベース バックアップの実行が難しい場合は、ファイル単位のバックアップを検討してください。  
+> データベースのサイズやパフォーマンス要件によりデータベース バックアップの実行が難しい場合は、ファイル単位のバックアップを検討してください。 NUL デバイスは、バックアップのパフォーマンスをテストするために使用できますが、実稼働環境では使用できません。
   
  *n*  
  複数のファイルおよびファイル グループを、コンマで区切ったリストで指定できることを示すプレースホルダーです。 数値の制限はありません。 
   
- 詳細についてを参照してください:[ファイルの完全バックアップ &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)と[ファイルおよびファイル グループ &#40; バックアップSQL Server &#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
+ 詳細については、次を参照してください。[ファイルの完全バックアップ &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)と[ファイルおよびファイル グループ &#40; バックアップSQL Server &#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
   
- READ_WRITE_FILEGROUPS [ **、**ファイル グループ = { *logical_filegroup_name*| **@***logical_filegroup_name_var* }[ **,**...*n* ] ]  
+ READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* } [ **,**...*n* ] ]  
  部分バックアップを指定します。 部分バックアップには、データベース内のすべての読み取り/書き込みファイル (プライマリ ファイル グループ、存在する場合は読み取り/書き込みセカンダリ ファイル グループ、および指定の読み取り専用ファイルまたはファイル グループ) が含まれます。  
   
  READ_WRITE_FILEGROUPS  
  部分バックアップで、すべての読み取り/書き込みファイル グループをバックアップすることを指定します。 データベースが読み取り専用の場合、READ_WRITE_FILEGROUPS にはプライマリ ファイル グループのみが含まれます。  
   
 > [!IMPORTANT]  
->  READ_WRITE_FILEGROUPS の代わりに FILEGROUP を使用して、読み取り/書き込みファイル グループのリストを明示的に指定すると、ファイル バックアップが作成されます。  
+> READ_WRITE_FILEGROUPS の代わりに FILEGROUP を使用して、読み取り/書き込みファイル グループのリストを明示的に指定すると、ファイル バックアップが作成されます。  
   
- ファイル グループ = { *logical_filegroup_name*| **@***logical_filegroup_name_var* }  
+ FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
 部分バックアップに含める読み取り専用ファイル グループの論理名、またはこの論理名を値として保持する変数を指定します。 詳細については、次を参照してください。"\<file_or_filegroup >、"このトピックで前述しました。
   
  *n*  
@@ -224,42 +225,47 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
 \<backup_device >、バックアップ操作に使用する論理または物理バックアップ デバイスを指定します。  
   
- { *logical_device_name* | **@***logical_device_name_var* }  
- データベースのバックアップが作成されるバックアップ デバイスの論理名を指定します。 論理名は、識別子のルールに従う必要があります。 変数として指定する場合 (@*logical_device_name_var*)、バックアップ デバイス名を指定できます文字列定数として指定 (@*logical_device_name_var*  **=** 論理バックアップ デバイス名)、または任意の文字の文字列データ型以外の変数として、 **ntext**または**テキスト**データ型。  
+ { *logical_device_name* | **@***logical_device_name_var* } Is the logical name of the backup device to which the database is backed up.論理名は、識別子のルールに従う必要があります。変数として指定する場合 (@*logical_device_name_var*)、バックアップ デバイス名を指定できます文字列定数として指定 (@*logical_device_name_var * **=** 論理バックアップ デバイス名)、または任意の文字の文字列データ型以外の変数として、 **ntext**または**テキスト**データ型。  
   
- {ディスク |テープ |URL}  **=**  { **'***physical_device_name***'**  |   **@** *physical_device_name_var* }  
- ディスク ファイルまたはテープ デバイス、あるいは Windows Azure BLOB ストレージ サービスを指定します。 URL の形式は、Windows Azure ストレージ サービスへのバックアップを作成するために使用されます。 詳細と例については、次を参照してください。 [SQL Server のバックアップと Microsoft Azure Blob ストレージ サービスによる復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)です。 チュートリアルについては、次を参照してください。[チュートリアル: SQL Server のバックアップと Windows Azure Blob ストレージ サービスへの復元](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)です。  
+ {ディスク |テープ |URL}  **=**  { **'***physical_device_name***'** | **@ * * * physical_device_name_var* |NUL'}  
+ ディスク ファイルまたはテープ デバイス、あるいは Windows Azure BLOB ストレージ サービスを指定します。 URL の形式は、Windows Azure ストレージ サービスへのバックアップを作成するために使用されます。 詳細と例については、次を参照してください。 [SQL Server のバックアップと Microsoft Azure Blob ストレージ サービスによる復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)です。 チュートリアルについては、次を参照してください。[チュートリアル: SQL Server のバックアップと Windows Azure Blob ストレージ サービスへの復元](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)です。 
+
+> [!NOTE] 
+> NUL ディスク デバイスは、送信される情報はすべて失わし、テストにのみ使用する必要があります。 本番用途ではありません。
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]まで SP1 CU2 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]URL にバックアップする場合のみ 1 台のデバイスにバックアップすることができます。 URL にバックアップする場合は、複数のデバイスにバックアップをするために使用する必要があります[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]し Shared Access Signature (SAS) トークンを使用する必要があります。 共有アクセス署名を作成する例については、次を参照してください。 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)と[Powershell による Azure Storage に Shared Access Signature (SAS) トークンで、SQL 資格情報の作成を簡素化](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)です。  
+> 以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 CU2 から[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]URL にバックアップする場合のみ 1 台のデバイスにバックアップすることができます。 URL にバックアップする場合は、複数のデバイスにバックアップをするために使用する必要があります[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]し Shared Access Signature (SAS) トークンを使用する必要があります。 共有アクセス署名を作成する例については、次を参照してください。 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)と[Powershell による Azure Storage に Shared Access Signature (SAS) トークンで、SQL 資格情報の作成を簡素化](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)です。  
   
 **URL が対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
  ディスク デバイスは、BACKUP ステートメントで指定するときにまだ存在していなくてもかまいません。 物理デバイスが既に存在し、BACKUP ステートメントに INIT オプションが指定されていない場合、バックアップはデバイスに追加されます。  
+ 
+> [!NOTE] 
+> ただし、バックアップは引き続きマーク設定のすべてのページをバックアップ、NUL デバイスは、このファイルに送信されるすべての入力を破棄します。
   
- 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)の別のインスタンスで作成された場合、これは必須です。  
+ 詳細については、「 [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)のインスタンスが動作しているコンピューターにテープ ドライブが装着されている場合のみ使用できます。  
   
 > [!NOTE]  
->  TAPE オプションは将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。  
+> TAPE オプションは将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。  
   
  *n*  
  最大 64 個のバックアップ デバイスをコンマ区切りリストに指定できることを示すプレースホルダーです。  
   
-MIRROR TO \<backup_device > [ **、**. *n*  ]、バックアップ デバイスが、TO 句で指定された各なるミラー、最大 3 つのセカンダリ バックアップ デバイスのセットを指定します。 MIRROR TO 句では、TO 句と同じの型とバックアップ デバイスの数を指定する必要があります。 MIRROR TO 句の最大数は 3 です。  
+MIRROR TO \<backup_device> [ **,**...*n* ] Specifies a set of up to three secondary backup devices, each of which mirrors the backups devices specified in the TO clause. MIRROR TO 句では、TO 句と同じの型とバックアップ デバイスの数を指定する必要があります。 MIRROR TO 句の最大数は 3 です。  
   
  このオプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Enterprise Edition でのみ使用できます。  
   
 > [!NOTE]  
->  MIRROR TO = DISK の場合、BACKUP によって、ディスク デバイスに応じた適切なブロック サイズが自動的に決まります。 ブロック サイズの詳細については、後の「BLOCKSIZE」の説明を参照してください。  
+> MIRROR TO = DISK の場合、BACKUP によって、ディスク デバイスに応じた適切なブロック サイズが自動的に決まります。 ブロック サイズの詳細については、後の「BLOCKSIZE」の説明を参照してください。  
   
 \<backup_device > を参照してください"\<backup_device >、"このセクションで前述しました。
   
  *n*  
  最大 64 個のバックアップ デバイスをコンマ区切りリストに指定できることを示すプレースホルダーです。 各 MIRROR TO 句内のデバイス数は、TO 句内のデバイス数と同じである必要があります。  
   
- 詳細については、後の「解説」の「ミラー化されたメディア セットのメディア ファミリ」を参照してください。  
+ 詳細についてを参照してください"メディア ファミリでミラー化メディア セット"、[解説](#general-remarks) セクションで、このトピックで後述します。  
   
- [*次でミラーを*]  
+ [ *next-mirror-to* ]  
  単一の BACKUP ステートメントに、1 つの TO 句と 3 つまでの MIRROR TO 句を含めることができることを示すプレースホルダーです。  
   
 ### <a name="with-options"></a>WITH オプション  
@@ -271,7 +277,7 @@ MIRROR TO \<backup_device > [ **、**. *n*  ]、バックアップ デバイス�
 **適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
  FILE_SNAPSHOT  
- Azure Blob ストレージ サービスを使用してすべての SQL Server データベース ファイルが格納される場合は、データベース ファイルの Azure のスナップショットを作成するために使用します。 詳細については、次を参照してください。 [Microsoft Azure で SQL Server データ ファイル](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スナップショット バックアップでは、一貫性のある状態にデータベース ファイル (データとログ ファイル) の Azure のスナップショットを取得します。 Azure のスナップショットの一貫性のあるセットでは、バックアップを構成し、バックアップ ファイルに記録されます。 唯一の違い**バックアップ データベースを URL で FILE_SNAPSHOT**と**バックアップ ログを URL で FILE_SNAPSHOT**こと、後者もトランザクション ログを切り捨て、以前ではありませんが、します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スナップショット バックアップで必要とされる最初の完全バックアップの後に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけを 1 つのトランザクション ログのバックアップは、トランザクション ログ バックアップの時間内のポイントにデータベースを復元するために、バックアップのチェーンを確立するためにします。 さらに、次の 2 つのトランザクション ログ バックアップの期間の間のポイントにデータベースを復元するだけの 2 つのトランザクション ログ バックアップが必要です。  
+ Azure Blob ストレージ サービスを使用してすべての SQL Server データベース ファイルが格納される場合は、データベース ファイルの Azure のスナップショットを作成するために使用します。 詳細については、次を参照してください。 [Microsoft Azure で SQL Server データ ファイル](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スナップショット バックアップでは、一貫性のある状態にデータベース ファイル (データとログ ファイル) の Azure のスナップショットを取得します。 Azure のスナップショットの一貫性のあるセットでは、バックアップを構成し、バックアップ ファイルに記録されます。 唯一の違い`BACKUP DATABASE TO URL WITH FILE_SNAPSHOT`と`BACKUP LOG TO URL WITH FILE_SNAPSHOT`こと、後者もトランザクション ログを切り捨て、以前ではありませんが、します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スナップショット バックアップで必要とされる最初の完全バックアップの後に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけを 1 つのトランザクション ログのバックアップは、トランザクション ログ バックアップの時間内のポイントにデータベースを復元するために、バックアップのチェーンを確立するためにします。 さらに、次の 2 つのトランザクション ログ バックアップの期間の間のポイントにデータベースを復元するだけの 2 つのトランザクション ログ バックアップが必要です。  
   
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]まで)。  
   
@@ -279,50 +285,45 @@ MIRROR TO \<backup_device > [ **、**. *n*  ]、バックアップ デバイス�
  BACKUP DATABASE でのみ使用できます。前回の完全バックアップ以降に変更が加えられたデータベースやファイルだけをバックアップすることを指定します。 完全バックアップに比べ、差分バックアップの方が使用領域が少なくてすみます。 前回の完全バックアップ以降に実行された各ログ バックアップをすべて適用する必要がない場合に、このオプションを使用します。  
   
 > [!NOTE]  
->  BACKUP DATABASE では、既定で完全バックアップが作成されます。  
+> 既定では、`BACKUP DATABASE`完全バックアップを作成します。  
   
  詳細については、「 [差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)」を参照してください。  
   
  ENCRYPTION  
- バックアップの暗号化を指定するために使用します。 バックアップを暗号化するための暗号化アルゴリズムを指定するか、バックアップを暗号化しない場合は "NO_ENCRYPION" を指定できます。 暗号化は、セキュリティで保護されたバックアップ ファイルを作成する場合に推奨される方法です。 指定できるアルゴリズムを次に示します。  
+ バックアップの暗号化を指定するために使用します。 バックアップを暗号化するかを指定する暗号化アルゴリズムを指定できます`NO_ENCRYPTION`暗号化されたバックアップがないようにします。 暗号化は、セキュリティで保護されたバックアップ ファイルを作成する場合に推奨される方法です。 指定できるアルゴリズムを次に示します。  
   
--   AES_128  
-  
--   AES_192  
-  
--   AES_256  
-  
--   TRIPLE_DES_3KEY  
-  
--   NO_ENCRYPTION  
-  
- 暗号化することを選択した場合、次の暗号化機能のオプションを使用して、暗号化機能も指定する必要があります。  
+-   `AES_128`  
+-   `AES_192`  
+-   `AES_256`  
+-   `TRIPLE_DES_3KEY`  
+-   `NO_ENCRYPTION`    
+
+暗号化することを選択した場合、次の暗号化機能のオプションを使用して、暗号化機能も指定する必要があります。  
   
 -   SERVER CERTIFICATE = Encryptor_Name  
-  
 -   SERVER ASYMMETRIC KEY = Encryptor_Name  
   
-    > [!WARNING]  
-    >  暗号化が FILE_SNAPSHOT 引数と組み合わせて使用し、指定した暗号化アルゴリズムを使用して、メタデータ ファイル自体が暗号化されて、システムでは、データベース用に TDE が完了したことを確認します。 データ自体の追加の暗号化が行われない。 データベースが暗号化されていないまたは backup ステートメントが発行された場合は、暗号化をする前に完了していない場合、バックアップは失敗します。  
+> [!WARNING]  
+> 暗号化を組み合わせて使用するときに、`FILE_SNAPSHOT`引数、メタデータ ファイル自体は、指定した暗号化アルゴリズムを使用して暗号化し、システムであることを確認[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)は完了しましたデータベース。 データ自体の追加の暗号化が行われない。 データベースが暗号化されていないまたは backup ステートメントが発行された場合は、暗号化をする前に完了していない場合、バックアップは失敗します。  
   
 **バックアップ セットのオプション**  
   
 以下のオプションは、このバックアップ操作で作成されるバックアップ セットに対して有効なオプションです。  
   
 > [!NOTE]  
->  復元操作用のバックアップ セットを指定するファイルを使用して **=**   *\<backup_set_file_number >*オプション。 バックアップ セットを指定する方法の詳細についてを参照してください「バックアップ セットの指定" [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
+> 復元操作用のバックアップ セットを指定するには、使用、`FILE = <backup_set_file_number>`オプション。 バックアップ セットを指定する方法の詳細についてを参照してください「バックアップ セットの指定" [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。
   
  COPY_ONLY  
  バックアップがあるを指定します、*コピーのみのバックアップ*、これは通常のバックアップ シーケンスには影響しません。 コピーのみのバックアップは定期的に行われる従来のバックアップとは別に作成するもので、 コピーのみのバックアップはありません、全体的なバックアップと復元、データベースのプロシージャです。  
   
  コピーのみのバックアップは、オンラインでファイルを復元する前にログをバックアップするなど、特殊な目的でバックアップを作成する場合にのみ使用してください。 通常、コピーのみのログ バックアップは 1 回だけ使用して、その後削除します。  
   
--   BACKUP DATABASE で COPY_ONLY オプションを使用した場合、作成される完全バックアップは差分ベースとして使用できません。 差分ビットマップは更新されず、後に実行する差分バックアップではコピーのみのバックアップは無視され、 従来のバックアップで作成された最新の完全バックアップがベースとして使用されます。  
+-   使用すると`BACKUP DATABASE`、`COPY_ONLY`オプションは、完全バックアップを差分のベースとして使用できませんを作成します。 差分ビットマップは更新されず、後に実行する差分バックアップではコピーのみのバックアップは無視され、 従来のバックアップで作成された最新の完全バックアップがベースとして使用されます。  
   
     > [!IMPORTANT]  
-    >  COPY_ONLY を DIFFERENTIAL と共に使用した場合、COPY_ONLY は無視され、差分バックアップが作成されます。  
+    > 場合`DIFFERENTIAL`と`COPY_ONLY`、一緒に使用する`COPY_ONLY`は無視され、差分バックアップを作成します。  
   
--   ログのバックアップに使用する場合、COPY_ONLY オプションを作成、*コピーのみのログ バックアップ*、これは、トランザクション ログを切り捨てられません。 コピーのみのログ バックアップはログ チェーンに影響せず、他のログ バックアップはコピーのみのバックアップが存在しない場合と同様に動作します。  
+-   使用すると`BACKUP LOG`、`COPY_ONLY`オプションを作成、*コピーのみのログ バックアップ*、これは、トランザクション ログを切り捨てられません。 コピーのみのログ バックアップはログ チェーンに影響せず、他のログ バックアップはコピーのみのバックアップが存在しない場合と同様に動作します。  
   
 詳細については、「[コピーのみのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)」を参照してください。  
   
@@ -330,6 +331,8 @@ MIRROR TO \<backup_device > [ **、**. *n*  ]、バックアップ デバイス�
 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]し、それ以降のバージョンを指定するだけ、かどうか[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)はこのバックアップは、サーバー レベルの既定値のオーバーライドで実行します。  
   
 インストール時の既定の動作では、バックアップの圧縮は行われません。 この既定値を設定して変更できますが、[バックアップの圧縮の既定](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)サーバー構成オプション。 このオプションの現在の値を表示する方法については、次を参照してください。[ビューまたはサーバー プロパティの変更 &#40;です。SQL Server &#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).  
+
+バックアップの圧縮を使用する方法について[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)有効になっているデータベースを参照してください、[解説](#general-remarks)セクションです。
   
 COMPRESSION  
 バックアップの圧縮を明示的に有効にします。  
@@ -337,22 +340,21 @@ COMPRESSION
 NO_COMPRESSION  
 バックアップの圧縮を明示的に無効にします。  
   
-DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+説明 **=**  { **'***テキスト***'** | **@ * * * text_variable* }  
 バックアップ セットを記述したテキストを自由な形式で指定します。 文字列の長さは最大 255 文字です。  
   
-名前 **=**  { *backup_set_name*| **@***backup_set_var* }  
+NAME **=** { *backup_set_name* | **@***backup_set_var* }  
 バックアップ セットの名前を指定します。 名前の長さは最大 128 文字です。 NAME を指定しないと、名前は空白になります。  
   
-{EXPIREDATE **='***日付***'**|RETAINDAYS  **=**  *日数*}  
+{ EXPIREDATE **='***date***'** | RETAINDAYS **=** *days* }  
 このバックアップのバックアップ セットがいつ上書きできるようになるかを指定します。 オプションを両方とも使用した場合は、RETAINDAYS が EXPIREDATE よりも優先されます。  
   
-有効期限の日付がによって決まりますがどちらのオプションが指定されている場合、 **mediaretention**構成設定。 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)サーバー構成オプションを構成する方法について説明します。  
+有効期限の日付がによって決まりますがどちらのオプションが指定されている場合、 **mediaretention**構成設定。 詳細については、「 [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)サーバー構成オプションを構成する方法について説明します。   
   
 > [!IMPORTANT]  
->  これらのオプションを防ぐだけ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ファイルを上書きするからです。 テープは別の方法で消去することができ、ディスク ファイルはオペレーティング システムで削除できます。 有効期限の確認の詳細については、このトピックの「SKIP」および「FORMAT」を参照してください。  
+> これらのオプションを防ぐだけ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ファイルを上書きするからです。 テープは別の方法で消去することができ、ディスク ファイルはオペレーティング システムで削除できます。 有効期限の確認の詳細については、このトピックの「SKIP」および「FORMAT」を参照してください。  
   
-EXPIREDATE  **=**  { **'***日付***'** |   **@** *date_var* }  
- バックアップ セットが失効して上書きできるようになる日を指定します。 変数として指定する場合 (@*date_var*)、この日付が構成されたシステムに従う必要があります**datetime**書式設定し、次のいずれかとして指定します。  
+EXPIREDATE  **=**  { **'***日付***'** | **@ * * * date_var* } かを指定、バックアップセットが失効して上書きできます。変数として指定する場合 (@*date_var *)、この日付が構成されたシステムに従う必要があります**datetime**書式設定し、次のいずれかとして指定します。  
   
 -   文字列定数 (@*date_var*  **=** 日付)  
 -   文字列データ型の変数 (を除き、 **ntext**または**テキスト**データ型)  
@@ -367,41 +369,40 @@ EXPIREDATE  **=**  { **'***日付***'** |   **@** *date_var* }
 指定する方法については**datetime**値を参照してください[日付と時刻型](../../t-sql/data-types/date-and-time-types.md)です。  
   
 > [!NOTE]  
->  失効日を無視するには、SKIP オプションを使用します。  
+> 有効期限の日付を無視するのには、使用、`SKIP`オプション。  
   
-RETAINDAYS  **=**  {*日数*| **@***days_var* }  
- このバックアップ メディア セットに上書きできるようになるまでの経過日数を指定します。 変数として指定する場合 (**@***days_var*)、整数として指定する必要があります。  
+RETAINDAYS  **=**  {*日数* | **@ * * * days_var* } このバックアップ メディアの前になるまでの経過日数を指定しますセットを上書きすることができます。変数として指定する場合 (**@***days_var*)、整数として指定する必要があります。  
   
 **メディア セットのオプション**  
   
 以下のオプションはメディア セット全般に適用されます。  
   
-{ **NOINIT** |INIT}  
+{ **NOINIT** | INIT }  
  バックアップ操作で、バックアップ メディア上の既存のバックアップ セットに追加するか、上書きするかを制御します。 既定では、メディア上の最新のバックアップ セットに追加します (NOINIT)。  
   
 > [!NOTE]  
->  間の相互作用について { **NOINIT** |INIT} と { **NOSKIP** |SKIP} では、このトピックの「解説」を参照してください。  
+> 間の相互作用について { **NOINIT** |INIT} と { **NOSKIP** |SKIP} を参照してください[解説](#general-remarks)このトピックで後述します。  
   
 NOINIT  
  バックアップ セットを指定のメディア セットに追加します。この場合、既存のバックアップ セットは維持されます。 メディア セットのメディア パスワードが定義されている場合は、パスワードを指定する必要があります。 既定値は NOINIT です。  
   
-詳細については、「 [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
+詳細については、「[メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
   
 INIT  
  すべてのバックアップ セットを上書きします。ただし、メディア ヘッダーは維持されます。 INIT を指定した場合は、条件が満たされる限り、そのデバイス上にある既存のすべてのバックアップ セットが上書きされます。 既定では、BACKUP によって次の状況が確認され、いずれかの状況に該当する場合はバックアップ メディアは上書きされません。  
   
--   バックアップ セットがまだ期限切れではない。 詳細については、EXPIREDATE オプションおよび RETAINDAYS オプションの説明を参照してください。  
+-   バックアップ セットがまだ期限切れではない。 詳細については、次を参照してください。、`EXPIREDATE`と`RETAINDAYS`オプション。  
 -   BACKUP ステートメントにバックアップ セットの名前が指定されていて、その名前がバックアップ メディア上の名前と一致していない。 詳細については、前の NAME オプションを参照してください。  
   
-これらのチェックを無効にするには、SKIP オプションを使用します。  
+これらのチェックを無効にするを使用して、`SKIP`オプション。  
   
-詳細については、「 [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
+詳細については、「[メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
   
-{ **NOSKIP** |SKIP}  
+{ **NOSKIP** | SKIP }  
 バックアップ操作で、上書き前にメディア上のバックアップ セットの失効日と失効時刻を確認するかどうかを制御します。  
   
 > [!NOTE]  
->  間の相互作用について { **NOINIT** |INIT} と { **NOSKIP** |SKIP} では、このトピックの「解説」を参照してください。  
+> 間の相互作用について { **NOINIT** |INIT} と { **NOSKIP** |SKIP} では、このトピックの「解説」を参照してください。  
   
 NOSKIP  
 上書きを許可する前に、メディア上のすべてのバックアップ セットの有効期限を確認することを BACKUP ステートメントに指示します。 これは既定の動作です。  
@@ -410,7 +411,7 @@ SKIP
 バックアップ セットの有効期限と名前の確認を無効にします。この確認は、通常、バックアップ セットの上書きを防止するために BACKUP ステートメントによって実行されます。 { INIT | NOINIT } と { NOSKIP | SKIP } の相関関係については、後の「解説」を参照してください。  
 バックアップ セットの有効期限の日付を表示するには、クエリ、 **expiration_date**の列、 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)履歴テーブルです。  
   
-{ **NOFORMAT** |形式}  
+{ **NOFORMAT** | FORMAT }  
 このバックアップ操作で使用するボリュームに新しいメディア ヘッダーを書き込み、既存のメディア ヘッダーとバックアップ セットを上書きするかどうかを指定します。  
   
 NOFORMAT  
@@ -420,44 +421,48 @@ FORMAT
 新しいメディア セットを作成するよう指定します。 FORMAT を指定した場合、バックアップ操作に使用するすべてのメディア ボリュームに、新しいメディア ヘッダーを書き込みます。 この場合、ボリューム上の既存のメディア ヘッダーとバックアップ セットは上書きされるので、それまであった内容は無効になります。  
   
 > [!IMPORTANT]  
->  FORMAT の使用には注意が必要です。 メディア セットに属するボリュームを 1 つでも初期化すると、メディア セット全体が使用できなくなります。 たとえば、既存のストライプ メディア セットに属するテープを 1 つ初期化すると、このメディア セット全体が使用できなくなります。  
+> 使用して`FORMAT`慎重にします。 メディア セットに属するボリュームを 1 つでも初期化すると、メディア セット全体が使用できなくなります。 たとえば、既存のストライプ メディア セットに属するテープを 1 つ初期化すると、このメディア セット全体が使用できなくなります。  
   
-FORMAT を指定することは SKIP を実行することを意味します。SKIP を明示的に指定する必要はありません。  
+形式を指定することを意味`SKIP`です。`SKIP`明示的に指定する必要はありません。  
   
-MEDIADESCRIPTION  **=**  {*テキスト* | **@***text_variable* }  
+MEDIADESCRIPTION **=** { *text* | **@***text_variable* }  
 メディア セットを記述した自由形式のテキストを最大 255 文字で指定します。  
   
-MEDIANAME  **=**  { *media_name* | **@***media_name_variable* }  
-バックアップ メディア セット全体に対するメディア名を指定します。 メディア名は最長 128 文字まで入力できます。MEDIANAME を指定する場合、バックアップ ボリュームに既に存在する、前回指定したメディア名と一致する必要があります。 MEDIANAME を指定しない場合、または SKIP オプションを指定した場合、メディア名の照合チェックは行われません。  
+MEDIANAME  **=**  { *media_name* | **@ * * * media_name_variable* }  
+バックアップ メディア セット全体に対するメディア名を指定します。 メディア名は、128 文字以内である必要がある場合`MEDIANAME`を指定すると、バックアップ ボリューム上の既存以前に指定したメディアの名前に一致する必要があります。 MEDIANAME を指定しない場合、または SKIP オプションを指定した場合、メディア名の照合チェックは行われません。  
   
-BLOCKSIZE  **=**  { *blocksize* | **@***blocksize_variable* }  
+BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
 物理ブロック サイズをバイト単位で指定します。 サポートされるサイズは、512、1024、2048、4096、8192、16384、32768、および 65536 (64 KB) バイトです。 テープ デバイスの場合の既定値は 65536 バイトで、他のデバイスの場合の既定値は 512 バイトです。 通常は、BACKUP でデバイスに適したブロック サイズが自動的に選択されるので、このオプションは不要です。 ブロック サイズは、自動的に選択された値よりも明示的に指定された値が優先されます。  
   
 バックアップを作成して CD-ROM に格納したり、CD-ROM からバックアップを復元する場合は、BLOCKSIZE=2048 と指定します。  
   
 > [!NOTE]  
->  このオプションがパフォーマンスに影響するのは、通常、テープ デバイスに書き込むときだけです。  
+> このオプションがパフォーマンスに影響するのは、通常、テープ デバイスに書き込むときだけです。  
   
 **データ転送オプション**  
   
-BUFFERCOUNT  **=**  { *buffercount* | **@***buffercount_variable* }  
+BUFFERCOUNT  **=**  { *buffercount* | **@ * * * buffercount_variable* }  
 バックアップ操作に使用される I/O バッファーの総数を指定します。 任意の正の整数を指定できますが、バッファー数が多いと Sqlservr.exe プロセスで仮想アドレス空間が不足し、"メモリ不足" エラーの原因となる場合があります。  
   
-バッファーで使用される領域の合計はによって決定されます。 *buffercount***\****maxtransfersize*です。  
+バッファーで使用される領域の合計はによって決定されます。 *buffercount と maxtransfersize*です。  
   
 > [!NOTE]  
->  BUFFERCOUNT オプションを使用してに関する重要な情報は、次を参照してください。、 [OOM の状態につながる可能性が不適切な BufferCount データ転送オプション](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)ブログ。  
+> 使用してに関する重要な情報、`BUFFERCOUNT`オプションを参照してください、 [OOM の状態につながる可能性が不適切な BufferCount データ転送オプション](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)ブログ。  
   
-MAXTRANSFERSIZE  **=**  { *maxtransfersize* | **@***maxtransfersize_variable* }  
- 間で使用できるをバイト単位で最大転送単位を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]とバックアップ メディア。 有効値は 65536 バイト (64 KB) の倍数で、最大有効値は 4194304 バイト (4 MB) です。  
+MAXTRANSFERSIZE  **=**  { *maxtransfersize*  |   ***@**  maxtransfersize_variable*} 間で使用できるをバイト単位で最大転送単位を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]とバックアップ メディア。 有効値は 65536 バイト (64 KB) の倍数で、最大有効値は 4194304 バイト (4 MB) です。  
+
 > [!NOTE]  
->  データベースで構成されて FILESTREAM、か、インメモリ OLTP ファイル グループが含まれます場合に、SQL ライター サービスを使用してバックアップを作成するときに、`MAXTRANSFERSIZE`時的な部分復元のより大きいか等しくなければなりませんを`MAXTRANSFERSIZE`となった際に使用される、バックアップが作成されました。 
+> データベースが構成されている場合は、SQL ライター サービスを使用してバックアップを作成するときに[FILESTREAM](../../relational-databases/blob/filestream-sql-server.md)、または含まれる[メモリ最適化ファイル グループ](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)、`MAXTRANSFERSIZE`復元時にする必要があります大きいまたは等しい、`MAXTRANSFERSIZE`バックアップが作成されたときに使用されていた。 
+
+> [!NOTE]  
+> [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 1 つのデータ ファイルと、既定のデータベースを有効になっている`MAXTRANSFERSIZE`65536 (64 KB)。 非 TDE で暗号化されたデータベースの既定値の`MAXTRANSFERSIZE`は 1048576 (1 MB) を使用する場合、ディスクまたは 65536 (64 KB) にバックアップする VDI またはテープを使用する場合。
+> 詳細については、TDE とバックアップの圧縮を使用して暗号化されたデータベースを参照してください、[解説](#general-remarks)セクションです。
   
 **エラー管理オプション**  
   
 これらのオプションを使用すると、バックアップ操作でバックアップ チェックサムが有効にするかどうかと、エラー発生時に、操作を停止するかどうかを決定できます。  
   
-{ **NO_CHECKSUM** |チェックサム}  
+{ **NO_CHECKSUM** | CHECKSUM }  
  バックアップのチェックサムを有効にするかどうかを制御します。  
   
 NO_CHECKSUM  
@@ -470,7 +475,7 @@ CHECKSUM
   
 詳細については、次を参照してください[可能なメディア エラー時にバックアップと復元 &#40;。SQL Server &#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
-{**場合は STOP_ON_ERROR** |CONTINUE_AFTER_ERROR}  
+{ **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR }  
 ページ チェックサム エラーの発生時、バックアップ操作を停止するか続行するかを制御します。  
   
 STOP_ON_ERROR  
@@ -490,7 +495,7 @@ RESTART
   
 **監視オプション**  
   
-統計情報 [  **=** *割合*]  
+統計情報 [  **=**  *割合*]  
  ごとにメッセージが表示されます*割合*が完了し、進行状況の測定に使用されます。 場合*割合*を省略すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各 10% が完了した後、メッセージが表示されます。  
   
 STATS オプションでは、次のパーセンテージをレポートするためのしきい値に達した時点で、完了したパーセンテージがレポートされます。 このしきい値は、指定したパーセンテージを正確に反映するものではありません。たとえば STATS=10 の場合、40% が完了しても、43% の時点でメッセージが表示されることがあります。 大きいバックアップ セットの場合、これは重要な問題にはなりません。これは、完了した I/O 呼び出し間で、完了パーセンテージの変化が非常に遅くなるためです。  
@@ -509,11 +514,12 @@ NOREWIND
 NOREWIND は暗黙的に NOUNLOAD も意味しています。この 2 つのオプションを同一 BACKUP ステートメント内で同時に使用することはできません。  
   
 > [!NOTE]  
->  NOREWIND を使用する場合、テープ ドライブの所有権は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスによって保持されます。同じプロセス内で実行される BACKUP ステートメントや RESTORE ステートメントで REWIND オプションまたは UNLOAD オプションが使用されるか、サーバー インスタンスがシャットダウンすると、所有権は解放されます。 テープを開いたままにすると、他のプロセスはそのテープにアクセスできません。 開いているテープの一覧を表示して、開いているテープを閉じる方法については、次を参照してください。[バックアップ デバイス &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+> 使用する場合`NOREWIND`のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]同じプロセスで実行されているバックアップまたは復元ステートメントでは、いずれかを使用するまで、テープ ドライブの所有権を保持、`REWIND`または`UNLOAD`オプション、またはサーバー インスタンスがシャット ダウンします。 テープを開いたままにすると、他のプロセスはそのテープにアクセスできません。 開いているテープの一覧を表示して、開いているテープを閉じる方法については、次を参照してください。[バックアップ デバイス &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
-{**アンロード**|NOUNLOAD}  
+{ **UNLOAD** | NOUNLOAD }    
+
 > [!NOTE]  
->  UNLOAD または NOUNLOAD はセッションの設定であり、セッションが終了するまで、または代わりとなるオプションの指定によりリセットされるまで有効です。  
+> `UNLOAD`および`NOUNLOAD`または別名を指定することでリセットされるまで、セッションの有効期間後も維持されるセッションの設定。  
   
 UNLOAD  
  バックアップ完了後、テープの巻き戻しおよびアンロードを自動的に行います。 UNLOAD はセッション開始時の既定の設定です。 
@@ -522,22 +528,22 @@ NOUNLOAD
  テープのバックアップ処理は、テープ ドライブに読み込まれたまま後を指定します。  
   
 > [!NOTE]  
->  テープ バックアップ デバイスへのバックアップの場合、BLOCKSIZE オプションはバックアップ操作のパフォーマンスに影響します。 このオプションがパフォーマンスに影響するのは、通常、テープ デバイスに書き込むときだけです。  
+> テープのバックアップ デバイスへのバックアップ、`BLOCKSIZE`バックアップ操作のパフォーマンスに影響するオプションです。 このオプションがパフォーマンスに影響するのは、通常、テープ デバイスに書き込むときだけです。  
   
 **ログに固有のオプション**  
   
-以下のオプションは、BACKUP LOG でのみ使用するオプションです。  
+これらのオプションでのみ使用`BACKUP LOG`です。  
   
 > [!NOTE]  
->  ログ バックアップを作成しない場合は、単純復旧モデルを使用します。 詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」を参照してください。  
+> ログ バックアップを作成しない場合は、単純復旧モデルを使用します。 詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」を参照してください。  
   
-{NORECOVERY |スタンバイ **=**  *undo_file_name* }  
+{ NORECOVERY | STANDBY **=** *undo_file_name* }  
   NORECOVERY  
   ログの末尾をバックアップし、データベースを RESTORING の状態のままにします。 NORECOVERY は、セカンダリ データベースにフェールオーバーする場合、または RESTORE 操作の前にログの末尾を保存する場合に便利です。  
   
-  ログの切り捨てをスキップするベストエフォートのログ バックアップを実行して、データベースを自動的に RESTORING 状態にするには、NO_TRUNCATE および NORECOVERY オプションを同時に使用します。  
+  スキップはログの切り捨てと、実行して、データベースは RESTORING 状態にアトミックにベストエフォートのログ バックアップを実行するには、`NO_TRUNCATE`と`NORECOVERY`オプションを同時にします。  
   
-  スタンバイ **=**  *standby_file_name*  
+  STANDBY **=** *standby_file_name*  
   ログの末尾をバックアップし、データベースを読み取り専用および STANDBY 状態のままにします。 STANDBY 句では、スタンバイ データが書き込まれます。ロールバックが実行されますが、追加の復元を行うこともできます。 STANDBY オプションの使用は、BACKUP LOG WITH NORECOVERY の後に RESTORE WITH STANDBY を使用する場合と同じ効果があります。  
   
   指定した、スタンバイ ファイルをスタンバイ モードを使用する必要があります*standby_file_name*、ある場所は、データベースのログに格納します。 指定したファイルが既に存在する場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が上書きされます。 ファイルが存在しない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって作成されます。 スタンバイ ファイルはデータベースの一部となります。  
@@ -545,13 +551,13 @@ NOUNLOAD
   このファイルには、ロールバックされた変更内容が含まれています。RESTORE LOG 操作を後で適用する場合、これらの変更内容の順序を逆にする必要があります。 スタンバイ ファイルでは、ファイル サイズが増加するので、ディスクに十分な空き容量が必要です。これは、コミットされていないトランザクションのロールバックによって変更が加えられた、データベース内にあるすべてのページを保存できるようにするためです。  
   
 NO_TRUNCATE  
-指定、ログの切り捨ては、原因、[!INCLUDE[ssDE](../../includes/ssde-md.md)]データベースの状態に関係なくバックアップが行われる。 その結果、NO_TRUNCATE で実行されるバックアップに不完全なメタデータが含まれる場合があります。 このオプションを使用すると、データベースが破損している場合でもログをバックアップできます。  
+指定、ログの切り捨ては、原因、[!INCLUDE[ssDE](../../includes/ssde-md.md)]データベースの状態に関係なくバックアップが行われる。 その結果、使用して作成したバックアップ`NO_TRUNCATE`不完全なメタデータがあります。 このオプションを使用すると、データベースが破損している場合でもログをバックアップできます。  
   
 BACKUP LOG の NO_TRUNCATE オプションを指定すると、COPY_ONLY と CONTINUE_AFTER_ERROR の両方を指定する場合と同じ結果が得られます。  
   
-NO_TRUNCATE オプションを使用しない場合は、データベースが ONLINE 状態である必要があります。 データベースが SUSPENDED 状態の場合は、NO_TRUNCATE を指定することによってバックアップを作成できる可能性がありますが、 データベースが OFFLINE または EMERGENCY 状態の場合、NO_TRUNCATE を使用しても BACKUP を実行できません。 データベースの状態については、次を参照してください。[データベースの状態](../../relational-databases/databases/database-states.md)です。  
+なし、`NO_TRUNCATE`オプション、データベースがオンライン状態である必要があります。 データベースが SUSPENDED 状態にある場合を指定してバックアップを作成できる場合があります`NO_TRUNCATE`です。 使用しても、バックアップが許可されていません、データベースが OFFLINE または EMERGENCY 状態にある場合は、`NO_TRUNCATE`です。 データベースの状態については、次を参照してください。[データベースの状態](../../relational-databases/databases/database-states.md)です。  
   
-## <a name="about-working-with-sql-server-backups"></a>SQL Server バックアップの操作について  
+## <a name="about-working-with-sql-server-backups"></a>SQL Server のバックアップを操作します。  
  このセクションでは、次の基本的なバックアップの概念について説明します。  
   
  [バックアップの種類](#Backup_Types)  
@@ -561,7 +567,7 @@ NO_TRUNCATE オプションを使用しない場合は、データベースが O
  [SQL Server のバックアップを復元します。](#Restoring_Backups)  
   
 > [!NOTE]  
->  バックアップの概要について[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[バックアップの概要 &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
+> バックアップの概要について[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[バックアップの概要 &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 ###  <a name="Backup_Types"></a>バックアップの種類  
  実行できるバックアップの種類は、次のようにデータベースの復旧モデルに依存します。  
@@ -581,7 +587,7 @@ NO_TRUNCATE オプションを使用しない場合は、データベースが O
      ログ バックアップは、データベースのバックアップとは別のボリュームに配置することをお勧めします。  
   
     > [!NOTE]  
-    >  最初のログ バックアップを作成するには、その前に完全バックアップを作成する必要があります。  
+    > 最初のログ バックアップを作成するには、その前に完全バックアップを作成する必要があります。  
   
 -   A*コピーのみのバックアップ*は特殊な用途の完全バックアップまたはログ バックアップの従来のバックアップの通常のシーケンスから独立しました。 コピーのみのバックアップを作成するには、BACKUP ステートメントで COPY_ONLY オプションを指定します。 詳細については、「[コピーのみのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)」を参照してください。  
   
@@ -589,19 +595,19 @@ NO_TRUNCATE オプションを使用しない場合は、データベースが O
  データベースのトランザクション ログがいっぱいにならないように、トランザクション ログを定期的にバックアップする必要があります。 ログの切り捨ては、単純復旧モデルではデータベースのバックアップ後に、完全復旧モデルではトランザクション ログのバックアップ後に自動的に行われます。 ただし、切り捨ての処理が遅れる場合もあります。 ログの切り捨てが遅れる要因については、「[トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
->  BACKUP LOG WITH NO_LOG オプションと WITH TRUNCATE_ONLY オプションは廃止されました。 完全復旧モデルまたは一括ログ復旧モデルの復旧を使用している場合に、ログ バックアップ チェーンをデータベースから削除するには、単純復旧モデルに切り替える必要があります。 詳細については、「[データベースの復旧モデルの表示または変更 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)」を参照してください。  
+> `BACKUP LOG WITH NO_LOG`と`WITH TRUNCATE_ONLY`オプションは廃止されました。 完全復旧モデルまたは一括ログ復旧モデルの復旧を使用している場合に、ログ バックアップ チェーンをデータベースから削除するには、単純復旧モデルに切り替える必要があります。 詳細については、「[データベースの復旧モデルの表示または変更 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)」を参照してください。  
   
 ###  <a name="Formatting_Media"></a>バックアップ メディアを書式設定  
  次の条件のいずれか 1 つでも該当する場合は、BACKUP ステートメントでバックアップ メディアがフォーマットされます。  
   
--   FORMAT オプションが指定されている。  
+-   `FORMAT`オプションを指定します。  
 -   メディアが空である。  
 -   連続するテープに書き込んでいる。  
   
 ###  <a name="Backup_Devices_and_Media_Sets"></a>バックアップ デバイスとメディア セットの操作  
   
 #### <a name="backup-devices-in-a-striped-media-set-a-stripe-set"></a>ストライプ メディア セット (ストライプ セット) 内のバックアップ デバイス  
- A*セットをストライピング*は、一連のディスク ファイル データのブロックに分割され、一定の順序で分散します。 ストライプ セットで使用されるバックアップ デバイスの数は、(FORMAT でメディアを最初期化する場合を除いて) 常に同じである必要があります。  
+ A*セットをストライピング*は、一連のディスク ファイル データのブロックに分割され、一定の順序で分散します。 ストライプ セットで使用されるバックアップ デバイスの数は同じに維持する必要があります (でメディアが再初期化しない限り、 `FORMAT`)。  
   
  次の例では、バックアップ、 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 3 つのディスク ファイルを使用する新しいストライプ メディア セットへのデータベースです。  
   
@@ -620,34 +626,34 @@ GO
   
  MEDIANAME と MEDIADESCRIPTION のどちらも指定すると、メディア ヘッダーが書き込まれるときに、空のアイテムに対応するメディアのヘッダー フィールドが空です。  
   
-#### <a name="working-with-a-mirrored-media-set"></a>ミラー化されたメディア セットの操作  
+#### <a name="working-with-a-mirrored-media-set"></a>ミラー化メディア セットの操作  
  通常、バックアップはミラー化せず、BACKUP ステートメントには TO 句のみを指定しますが、 メディア セットあたり 4 つまでミラーを指定できます。 ミラー化されたメディア セットの場合、バックアップ操作では、バックアップ デバイスの複数のグループに書き込みが行われます。 このバックアップ デバイスの各グループが、ミラー化されたメディア セット内の 1 つのミラーとなります。 それぞれのミラーでは同じ容量および種類の物理バックアップ デバイスを使用する必要があり、プロパティがすべて同じである必要があります。  
   
- ミラー化されたメディア セットにバックアップを作成するには、ミラーがすべて存在している必要があります。 ミラー化されたメディア セットにバックアップするには、TO 句に 1 つ目のミラーを指定し、MIRROR TO 句にその他のミラーをそれぞれ指定します。  
+ ミラー化されたメディア セットにバックアップを作成するには、ミラーがすべて存在している必要があります。 ミラー化メディア セットへのバックアップを指定する、`TO`最初のミラーを指定し、指定する句、`MIRROR TO`追加の各ミラーの句。  
   
- ミラー化されたメディア セットの場合、各 MIRROR TO 句では、TO 句と同じ数および種類のデバイスのリストを指定する必要があります。 次の例では、ミラー化されたメディア セットに書き込みます。このメディア セットには 2 つのミラーが含まれ、それぞれで 3 つのデバイスが使用されています。  
+ ミラー化メディア セットの各`MIRROR TO`同じ数と種類のデバイス、TO 句と句を一覧表示する必要があります。 次の例では、ミラー化されたメディア セットに書き込みます。このメディア セットには 2 つのミラーが含まれ、それぞれで 3 つのデバイスが使用されています。  
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012  
 TO DISK='X:\SQLServerBackups\AdventureWorks1a.bak',   
-DISK='Y:\SQLServerBackups\AdventureWorks2a.bak',   
-DISK='Z:\SQLServerBackups\AdventureWorks3a.bak'  
+  DISK='Y:\SQLServerBackups\AdventureWorks2a.bak',   
+  DISK='Z:\SQLServerBackups\AdventureWorks3a.bak'  
 MIRROR TO DISK='X:\SQLServerBackups\AdventureWorks1b.bak',   
-DISK='Y:\SQLServerBackups\AdventureWorks2b.bak',   
-DISK='Z:\SQLServerBackups\AdventureWorks3b.bak';  
+  DISK='Y:\SQLServerBackups\AdventureWorks2b.bak',   
+  DISK='Z:\SQLServerBackups\AdventureWorks3b.bak';  
 GO  
 ```  
   
 > [!IMPORTANT]  
->  この例は、ローカル システム上でテストできるように設計されています。 実際には同じドライブ上にある複数のデバイスにバックアップすると、パフォーマンスが低下するおそれがあり、ミラー化されたメディア セットの設計目的でもある冗長性が損なわれる可能性があります。  
+> この例は、ローカル システム上でテストできるように設計されています。 実際には同じドライブ上にある複数のデバイスにバックアップすると、パフォーマンスが低下するおそれがあり、ミラー化されたメディア セットの設計目的でもある冗長性が損なわれる可能性があります。  
   
-##### <a name="media-families-in-mirrored-media-sets"></a>ミラー化されたメディア セットのメディア ファミリ  
- BACKUP ステートメントの TO 句で指定する各バックアップ デバイスは、1 つのメディア ファミリとなります。 たとえば、TO 句で 3 つのデバイスのリストを指定する場合、BACKUP では 3 つのメディア ファミリにデータが書き込まれます。 ミラー化されたメディア セットでは、各ミラーにすべてのメディア ファミリのコピーが含まれている必要があります。 このため、各ミラーでデバイス数が一致する必要があります。  
+##### <a name="media-families-in-mirrored-media-sets"></a>ミラー化メディア セット内のメディア ファミリ  
+ 指定した各バックアップ デバイス、 `TO` BACKUP ステートメントの句は、メディア ファミリに対応しています。 たとえば場合、`TO`句には、3 つのデバイスが一覧表示、バックアップ データを書き込みますの 3 つのメディア ファミリにします。 ミラー化されたメディア セットでは、各ミラーにすべてのメディア ファミリのコピーが含まれている必要があります。 このため、各ミラーでデバイス数が一致する必要があります。  
   
  各ミラーに対し複数のデバイスのリストを指定する順番によって、どのメディア ファミリがどのデバイスに書き込まれるかが決まります。 たとえば、各デバイスのリストで、2 番目のデバイスは 2 番目のメディア ファミリに対応します。 先に示した例のデバイスでは、デバイスとメディア ファミリの対応は次の表のようになります。  
   
 |ミラー|メディア ファミリ 1|メディア ファミリ 2|メディア ファミリ 3|  
-|------------|--------------------|--------------------|--------------------|  
+|---------|---------|---------|---------|  
 |0|`Z:\AdventureWorks1a.bak`|`Z:\AdventureWorks2a.bak`|`Z:\AdventureWorks3a.bak`|  
 |1|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
   
@@ -664,40 +670,47 @@ GO
  次の表の間のやり取り、{ **NOINIT** |INIT} と { **NOSKIP** |SKIP} オプションです。  
   
 > [!NOTE]  
->  テープ メディアが空の場合、またはディスクのバックアップ ファイルが存在しない場合は、これらすべての相関関係に基づいて、メディア ヘッダーが記述され、操作が継続します。 ただしメディアが空でなく、有効なメディア ヘッダーが含まれない場合、これらの操作では有効な MTF メディアでないことが返され、バックアップ操作は中断されます。  
+> テープ メディアが空の場合、またはディスクのバックアップ ファイルが存在しない場合は、これらすべての相関関係に基づいて、メディア ヘッダーが記述され、操作が継続します。 ただしメディアが空でなく、有効なメディア ヘッダーが含まれない場合、これらの操作では有効な MTF メディアでないことが返され、バックアップ操作は中断されます。  
   
 ||NOINIT|INIT|  
 |------|------------|----------|  
-|NOSKIP|ボリュームに有効なメディア ヘッダーが含まれる場合は、MEDIANAME が指定されていれば、その値とメディア名が一致していることを確認します。 メディア名が一致した場合は、すべての既存のバックアップ セットはそのままにして、バックアップ セットを追加します。<br /> ボリュームに有効なメディア ヘッダーが含まれない場合は、エラーが発生します。|ボリュームに有効なメディア ヘッダーが含まれている場合は、次のチェックを実行します。<br /> -MEDIANAME が指定されている場合は、特定のメディア名と一致しているメディア ヘッダーのメディア name.* * ことを確認します。<br /> -メディアには既に期限が切れていないバックアップ セットがないことを確認します。 存在している場合は、バックアップを中断します。<br /> 上のチェックにパスした場合は、メディア ヘッダーだけをそのままにして、メディア上のすべてのバックアップ セットを上書きします。<br /> ボリュームに有効なメディア ヘッダーが含まれない場合は、MEDIANAME および MEDIADESCRIPTION が指定されていれば、これらのオプションを使用してメディア ヘッダーを生成します。|  
-|SKIP|ボリュームに有効なメディア ヘッダーが含まれる場合は、すべての既存のバックアップ セットをそのままにして、バックアップ セットを追加します。|ボリュームが含まれていますが、有効な場合 * メディア ヘッダーが、メディア ヘッダーだけをそのまま、メディア上のすべてのバックアップ セットが上書きされます。<br /> メディアが空の場合は、MEDIANAME および MEDIADESCRIPTION が指定されていれば、これらのオプションを使用してメディア ヘッダーを生成します。|  
-  
- * 有効性には、MTF のバージョン番号とその他のヘッダー情報が含まれています。 指定されたバージョンがサポートされていないか、予期しない値の場合、エラーが発生します。  
-  
- * *、ユーザーは、バックアップ操作を実行する適切な固定データベースまたはサーバー ロールに属している必要があります。  
+|NOSKIP|ボリュームに有効なメディア ヘッダーが含まれている場合は、メディアの名前と一致することを確認、指定された`MEDIANAME`存在する場合、します。 メディア名が一致した場合は、すべての既存のバックアップ セットはそのままにして、バックアップ セットを追加します。<br /> ボリュームに有効なメディア ヘッダーが含まれない場合は、エラーが発生します。|ボリュームに有効なメディア ヘッダーが含まれている場合は、次のチェックを実行します。<br /><ul><li>場合`MEDIANAME`が指定されて、特定のメディア名が、メディア ヘッダーのメディア名と一致していることを確認します<sup>。1</sup></li><li>メディア上に失効前のバックアップ セットが存在していないことを確認します。 存在している場合は、バックアップを中断します。</li></ul><br />上のチェックにパスした場合は、メディア ヘッダーだけをそのままにして、メディア上のすべてのバックアップ セットを上書きします。<br /> ボリュームに有効なメディア ヘッダーが含まれていない場合を使用して生成指定`MEDIANAME`と`MEDIADESCRIPTION`存在する場合、します。|  
+|SKIP|ボリュームに有効なメディア ヘッダーが含まれる場合は、すべての既存のバックアップ セットをそのままにして、バックアップ セットを追加します。|ボリュームが含まれていますが、有効な場合<sup>2</sup>メディア ヘッダーが、メディア ヘッダーだけをそのまま、メディア上のすべてのバックアップ セットが上書きされます。<br /> メディアが空の場合は、指定してメディア ヘッダーを生成します。`MEDIANAME`と`MEDIADESCRIPTION`存在する場合、します。|  
+
+<sup>1</sup>ユーザーは、バックアップ操作を実行する適切な固定データベースまたはサーバー ロールに属している必要があります。    
+
+<sup>2</sup>有効には、MTF のバージョン番号とその他のヘッダー情報が含まれています。 指定されたバージョンがサポートされていないか、予期しない値の場合、エラーが発生します。  
   
 ## <a name="compatibility"></a>互換性  
   
 > [!CAUTION]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって作成されたバックアップは、それより前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では復元できません。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって作成されたバックアップは、それより前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では復元できません。  
   
- バックアップの以前のバージョンとの下位互換性を提供するのには、再起動オプションをサポートしている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 ただし、RESTART は無効です。  
+バックアップがサポートされる、`RESTART`の以前のバージョンとの下位互換性を提供するオプション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 ただし、RESTART は無効です。  
   
-## <a name="general-remarks"></a>全般的な解説  
- データベースやログのバックアップは、任意のディスクまたはテープ デバイスに追加できます。これによって、データベースとそのトランザクション ログをすべて 1 つの物理位置に格納できます。  
+## <a name="general-remarks"></a>一般的な解説  
+データベースやログのバックアップは、任意のディスクまたはテープ デバイスに追加できます。これによって、データベースとそのトランザクション ログをすべて 1 つの物理位置に格納できます。  
   
- BACKUP ステートメントは、明示的または暗黙的なトランザクションでは使用できません。  
+BACKUP ステートメントは、明示的または暗黙的なトランザクションでは使用できません。  
   
- オペレーティング システムがデータベースの照合順序をサポートしている場合は、プロセッサの種類が違っていても、1 つのプラットフォームから別のプラットフォームにわたるバックアップ操作を実行できます。  
-  
+オペレーティング システムがデータベースの照合順序をサポートしている場合は、プロセッサの種類が違っていても、1 つのプラットフォームから別のプラットフォームにわたるバックアップ操作を実行できます。  
+ 
+バックアップの圧縮を使用するときに[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)対応データベースを使用する 1 つのデータ ファイルと、推奨は、`MAXTRANSFERSIZE`設定**65536 (64 KB) よりも大きい**です。   
+以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、この有効 TDE に使用する最適な圧縮アルゴリズムが暗号化されたデータベース最初のページの暗号化を解除し、圧縮され、それを再度暗号化します。 使用して場合`MAXTRANSFERSIZE = 65536`(64 KB) TDE 暗号化のデータベースとバックアップの圧縮は、直接、暗号化されたページを圧縮し、適切な圧縮率が得られない可能性があります。 詳細については、次を参照してください。 [TDE が有効なデータベースのバックアップの圧縮](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/)です。
+
 > [!NOTE]  
->  既定では、バックアップ操作が成功するたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 ログを頻繁にバックアップすると、これらの成功メッセージがすぐに蓄積され、他のメッセージを探すのが困難になるほどエラー ログが大きくなることがあります。 そのような場合、これらのエントリに依存するスクリプトがなければ、トレース フラグ 3226 を使用することによってこれらのログ エントリを除外できます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。  
+> TDE 暗号化されたデータベースの最適な圧縮アルゴリズムは自動的にときに使用します。
+> * URL へのバックアップが使用される、その場合は、既定`MAXTRANSFERSIZE`1048576 (1 MB) に変更され、値を小さい値には強制されません。
+> * データベースが複数のデータ ファイル場合、既定以外の場合`MAXTRANSFERSIZE`65536 の倍数に変更されます (64 KB) は、小さい値に変更されません (など`MAXTRANSFERSIZE = 65536`)。 
+  
+既定では、バックアップ操作が成功するたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 ログを頻繁にバックアップすると、これらの成功メッセージがすぐに蓄積され、他のメッセージを探すのが困難になるほどエラー ログが大きくなることがあります。 そのような場合、これらのエントリに依存するスクリプトがなければ、トレース フラグ 3226 を使用することによってこれらのログ エントリを除外できます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。  
   
 ## <a name="interoperability"></a>相互運用性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースが使用されているときに、データベースのバックアップを許可するのにには、オンラインのバックアップ プロセスを使用します。 バックアップ中はほとんどの操作が可能です。たとえば、INSERT、UPDATE、または DELETE ステートメントはバックアップ操作中でも使用できます。  
   
  データベース バックアップやトランザクション ログ バックアップ中に実行できない操作には次のものがあります。  
   
--   ADD FILE または REMOVE FILE オプションのいずれかで ALTER DATABASE ステートメントなどの管理操作をファイルです。  
+-   などのファイル管理操作、`ALTER DATABASE`いずれかのステートメント、`ADD FILE`または`REMOVE FILE`オプション。  
   
 -   データベースまたはファイルの圧縮操作。 これには自動圧縮操作も含まれます。  
   
@@ -715,12 +728,12 @@ GO
 復元が行われる場合、バックアップ セットがまだに記録されていない場合、 **msdb**データベース、バックアップ履歴テーブルを変更する可能性があります。  
   
 ## <a name="security"></a>セキュリティ  
- 以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、**パスワード**と**MEDIAPASSWORD**バックアップを作成するオプションが廃止されました。 これは、パスワード付きで作成されたバックアップを復元することも可能です。  
+ 以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、`PASSWORD`と`MEDIAPASSWORD`バックアップを作成するオプションが廃止されました。 これは、パスワード付きで作成されたバックアップを復元することも可能です。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>権限  
  BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられています。  
   
- バックアップ デバイスの物理ファイルに対する所有と許可の問題によって、バックアップ操作が妨げられることがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、デバイスに対して読み書きを実行できる必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが実行されているアカウントには書き込み権限が必要です。 ただし、システム テーブルにバックアップ デバイスのエントリを追加する [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)では、ファイル アクセスの権限は確認されません。 バックアップ デバイスの物理ファイルに関するこのような問題は、バックアップや復元が試行され、物理リソースがアクセスされるまで、表面化しない可能性があります。  
+ バックアップ デバイスの物理ファイルに対する所有と許可の問題によって、バックアップ操作が妨げられることがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デバイスへの読み書きできる必要があります。アカウントが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの実行には、書き込みアクセス許可が必要です。 ただし、システム テーブルにバックアップ デバイスのエントリを追加する [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)では、ファイル アクセスの権限は確認されません。 バックアップ デバイスの物理ファイルに関するこのような問題は、バックアップや復元が試行され、物理リソースがアクセスされるまで、表面化しない可能性があります。  
   
 ##  <a name="examples"></a> 使用例  
  ここでは、次の例について説明します。  
@@ -733,10 +746,10 @@ GO
 -   F. [セットを作成し、マルチファミリ ミラー化メディアへのバックアップ](#create_multifamily_mirrored_media_set)  
 -   G[ミラー化メディア セットの既存のバックアップ](#existing_mirrored_media_set)  
 -   H. [新しいメディア セットに圧縮されたバックアップを作成します。](#creating_compressed_backup_new_media_set)  
--   I.  [Microsoft Azure Blob ストレージ サービスへのバックアップ](#url)  
+-   I. [Microsoft Azure Blob ストレージ サービスへのバックアップ](#url)  
   
 > [!NOTE]  
->  バックアップ方法に関するトピックで、さらに例を記載しています。 詳細については、「 [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)」を参照してください。  
+> バックアップ方法に関するトピックで、さらに例を記載しています。 詳細については、「 [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)」を参照してください。  
   
 ###  <a name="backing_up_db"></a> A. データベース全体をバックアップする  
  次の例でをバックアップ、[!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]データベースをディスク ファイル。  
@@ -837,7 +850,7 @@ WITH
    MEDIANAME = 'AdventureWorksSet1';  
 ```  
   
-###  <a name="existing_mirrored_media_set"></a>G. 既存のミラー化メディア セットにバックアップを作成する  
+###  <a name="existing_mirrored_media_set"></a> G. 既存のミラー化メディア セットにバックアップを作成する  
  次の例では、前の例で作成されたメディア セットにバックアップ セットを追加します。  
   
 ```sql  
@@ -852,7 +865,7 @@ WITH
 > [!NOTE]  
 >  NOINIT は既定値ですが、ここではわかりやすくするために記載しています。  
   
-###  <a name="creating_compressed_backup_new_media_set"></a>H. 新しいメディア セットに圧縮されたバックアップを作成する  
+###  <a name="creating_compressed_backup_new_media_set"></a> H. 新しいメディア セットに圧縮されたバックアップを作成する  
  次の例形式に新しいメディアを作成して、メディア セットにしの圧縮された完全バックアップを実行、[!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]データベース。  
   
 ```sql  
@@ -862,7 +875,7 @@ WITH
    COMPRESSION;  
 ```  
 
-###  <a name="url"></a>私。 Microsoft Azure BLOB ストレージ サービスへのバックアップ 
+###  <a name="url"></a> I. Microsoft Azure BLOB ストレージ サービスへのバックアップ 
 データベースの完全バックアップを実行する例では、 `Sales` Microsoft Azure Blob ストレージ サービスにします。  ストレージ アカウント名は `mystorageaccount`です。  コンテナーは `myfirstcontainer`と呼ばれます。  保存されたアクセス ポリシーは読み取り、書き込み、削除および一覧表示権で作成されています。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資格情報、 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`、保存されたアクセス ポリシーに関連付けられている共有アクセス署名を使用して作成されました。  について[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows Azure Blob ストレージ サービスへのバックアップ、参照[SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)と[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)です。
 
 ```sql  

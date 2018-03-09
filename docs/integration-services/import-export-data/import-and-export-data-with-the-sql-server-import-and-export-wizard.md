@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - importing data, SSIS packages
 - sources [Integration Services], copying data
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
-caps.latest.revision: "160"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2bb672edb72392a8ae215160719aa3476c2452f1
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b2a3d6c1968c0e8d2a2463dedf6a9050590c2bbd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを使用してデータをインポートおよびエクスポートする
 
@@ -60,7 +61,7 @@ ms.lasthandoff: 12/01/2017
 |**Microsoft Excel ファイルと Microsoft Access ファイル**|Microsoft Office は、Excel と Access のファイルにデータ ソースとして接続するために必要なすべてのファイルはインストールしません。 次のダウンロードを入手します - [Microsoft Access データベース エンジン 2016 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=54920)。<br/><br/>詳しくは、「[Excel データ ソースに接続する](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)」または「[Access データ ソースに接続する](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。|
 |**Azure データ ソース**<br/>現在 Azure BLOB ストレージのみ。|SQL Server Data Tools では、Azure BLOB Storage にデータ ソースとして接続するために必要なファイルはインストールされません。 次のダウンロードを取得してください - [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)。<br/><br/>詳しくは、「[Azure Blob Storage に接続する](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)」をご覧ください。|
 |**オープン ソース データベース**<br/>PostgreSQL、MySql、その他。|これらのデータ ソースに接続するには、追加ファイルをダウンロードする必要があります。<br/><br/>- **PostgreSQL** の場合は、「[PostgreSQL データ ソースに接続する](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。<br/>- **MySql** の場合は、「[MySQL データ ソースに接続する](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。|
-|**ドライバーまたはプロバイダーを入手できるその他のデータ ソース**|通常、次の種類のデータ ソースに接続するために追加ファイルをダウンロードする必要があります。<br/><br/>- **ODBC ドライバー** を使用できるソース。 詳しくは、「[ODBC データ ソースに接続する](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。<br/>- **.Net Framework Data Provider** を使用できるソース。<br/>- **OLE DB プロバイダー** を使用できるソース。<br/><br/>他のデータ ソースに変換元と変換先の機能を提供するサード パーティ製のコンポーネントが、SQL Server Integration Services (SSIS) 用のアドオン製品として販売されている場合があります。|
+|**ドライバーまたはプロバイダーを入手できるその他のデータ ソース**|通常、次の種類のデータ ソースに接続するために追加ファイルをダウンロードする必要があります。<br/><br/>- **ODBC ドライバー** を使用できるソース。 詳細については、「[ODBC データ ソースに接続する](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。<br/>- **.Net Framework Data Provider** を使用できるソース。<br/>- **OLE DB プロバイダー** を使用できるソース。<br/><br/>他のデータ ソースに変換元と変換先の機能を提供するサード パーティ製のコンポーネントが、SQL Server Integration Services (SSIS) 用のアドオン製品として販売されている場合があります。|
 
 ## <a name="how-do-i-connect-to-my-data"></a>データに接続する方法
 よく使われるデータ ソースに接続する方法については、次のいずれかのページをご覧ください。
@@ -101,7 +102,7 @@ ms.lasthandoff: 12/01/2017
 
 詳細については、「 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)」を参照してください。
 
-## <a name="whats-next"></a>次の課題  
+## <a name="whats-next"></a>次の操作  
  ウィザードを開始します。 詳細については、「 [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)」(SQL Server インポートおよびエクスポート ウィザードを開始する) を参照してください。  
 
 ## <a name="see-also"></a>参照

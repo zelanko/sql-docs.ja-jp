@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83f524dbbd4062735ea596b58d460ba93d590366
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74f7d68b9e3feb4e65c1a287b69a580802719199
+ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>SQL Server および Azure SQL Database のデータをインポートおよびエクスポートする
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] さまざまな方法を使って、SQL Server と Azure SQL Database のデータをインポートやエクスポートができます。 Transact-SQL ステートメント、コマンドライン ツール、ウィザードなどの方法があります。
@@ -55,7 +55,7 @@ SQL Server インポートおよびエクスポート ウィザードを使っ�
 フラット ファイルまたはその他のさまざまなファイル形式、リレーショナル データベース、およびクラウド サービスで、データをインポートおよびエクスポートできます。 特定のツールでのこれらのオプションについて詳しくは、次のトピックをご覧ください。
 -   SQL Server インポートおよびエクスポート ウィザードについては、「[Connect to Data Sources with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)」(SQL Server インポートおよびエクスポート ウィザードを使用してデータ ソースに接続する) をご覧ください。
 -   SQL Server Integration Services については、「[Integration Services (SSIS) の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」をご覧ください。
--   Azure Data Factory については、「[Azure Data Factory を使用して Amazon Redshift からデータを移動する](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-amazon-redshift-connector)」をご覧ください。
+-   Azure Data Factory については、「[Azure Data Factory を使用して Amazon Redshift からデータを移動する](https://docs.microsoft.com/azure/data-factory/data-factory-amazon-redshift-connector)」をご覧ください。
 
 ### <a name="commonly-used-data-formats"></a>よく使われるデータ形式
 

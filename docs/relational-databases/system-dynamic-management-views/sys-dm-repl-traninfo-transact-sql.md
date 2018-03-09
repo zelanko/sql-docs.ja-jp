@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_repl_traninfo
 - sys.dm_repl_traninfo_TSQL
 - dm_repl_traninfo_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_traninfo dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8667321964f457ae05c6b7768be4b22220b50da
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 45fd6246b7a98f16c86a6f7e2c7052c70b2af039
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,20 +42,20 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**fp2p_pub_exists**|**tinyint**|ピアツーピア トランザクション レプリケーションを使用してパブリッシュされるデータベースに、トランザクションがあるかどうかを示します。 true の場合、値は 1 です。それ以外の場合は 0 です。|  
 |**db_ver**|**int**|データベースのバージョン。|  
-|**comp_range_address**|**varbinary (8)**|スキップする必要がある、部分ロールバックの範囲。|  
-|**textinfo_address**|**varbinary (8)**|キャッシュされたテキスト情報構造のメモリ内アドレス。|  
-|**fsinfo_address**|**varbinary (8)**|キャッシュされたファイル ストリーム情報構造のメモリ内アドレス。|  
+|**comp_range_address**|**varbinary(8)**|スキップする必要がある、部分ロールバックの範囲。|  
+|**textinfo_address**|**varbinary(8)**|キャッシュされたテキスト情報構造のメモリ内アドレス。|  
+|**fsinfo_address**|**varbinary(8)**|キャッシュされたファイル ストリーム情報構造のメモリ内アドレス。|  
 |**begin_lsn**|**nvarchar(64)**|トランザクションに関する最初のログ レコードのログ シーケンス番号 (LSN)。|  
 |**commit_lsn**|**nvarchar(64)**|トランザクションに関するコミット ログ レコードの LSN。|  
 |**dbid**|**smallint**|データベース ID。|  
-|**行**|**int**|トランザクション内のレプリケートされたコマンドの ID。|  
+|**rows**|**int**|トランザクション内のレプリケートされたコマンドの ID。|  
 |**xdesid**|**nvarchar(64)**|トランザクション id。|  
-|**artcache_table_address**|**varbinary (8)**|トランザクションで最後に使用されたキャッシュ済みアーティクル テーブル構造のメモリ内アドレス。|  
-|**サーバー (server)**|**nvarchar(514)**|サーバー名。|  
+|**artcache_table_address**|**varbinary(8)**|トランザクションで最後に使用されたキャッシュ済みアーティクル テーブル構造のメモリ内アドレス。|  
+|**server**|**nvarchar(514)**|サーバー名。|  
 |**server_len_in_bytes**|**smallint**|サーバー名の文字長 (バイト単位)。|  
-|**database**|**nvarchar(514)**|データベース名。|  
+|**データベース (database)**|**nvarchar(514)**|データベース名。|  
 |**db_len_in_bytes**|**smallint**|データベース名の文字長 (バイト単位)。|  
-|**発信元**|**nvarchar(514)**|トランザクションが発生したサーバーの名前。|  
+|**originator**|**nvarchar(514)**|トランザクションが発生したサーバーの名前。|  
 |**originator_len_in_bytes**|**smallint**|トランザクションが発生したサーバーの文字長 (バイト単位)。|  
 |**orig_db**|**nvarchar(514)**|トランザクションが発生したデータベースの名前。|  
 |**orig_db_len_in_bytes**|**smallint**|トランザクションが発生したデータベースの文字長 (バイト単位)。|  
@@ -72,7 +75,7 @@ ms.lasthandoff: 11/17/2017
 |**is_known_cdc_tran**|**bit**|トランザクションが変更データ キャプチャで追跡されることを示します。<br /><br /> 0 = トランザクション レプリケーション トランザクション。<br /><br /> 1 = 変更データ キャプチャ トランザクション。|  
 |**error_count**|**int**|発生したエラーの数です。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  パブリケーション データベースまたは変更データ キャプチャが有効にされたデータベースに対する VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="remarks"></a>解説  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c3df5b8f8ef946021fcc72bb12cb164e99fdb5b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 34e524470a56b62657f231a22639fc3e2c20e2d1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="odbc-destination"></a>ODBC 入力先
   ODBC 入力先は、ODBC でサポートされているデータベース テーブルにデータを一括で読み込みます。 ODBC 入力先は ODBC 接続マネージャーを使用してデータ ソースに接続します。  
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [ODBC 変換先のカスタム プロパティ](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
-## <a name="odbc-destination-editor-connection-manager-page"></a>[ODBC 変換先エディター] ([接続マネージャー] ページ)
+## <a name="odbc-destination-editor-connection-manager-page"></a>[ODBC 変換先エディター]\([接続マネージャー] ページ)
   **[ODBC 入力先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、入力先の ODBC 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
   
  **[ODBC 入力先エディター] の [接続マネージャー] ページを開くには**  
@@ -101,12 +102,12 @@ ms.lasthandoff: 11/20/2017
   
 -   **[ODBC 入力先エディター]**で、 **[接続マネージャー]**をクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
   
-#### <a name="connection-manager"></a>[ODBC 入力先エディター]  
+#### <a name="connection-manager"></a>[ODBC 入力元エディター]  
  既存の ODBC 接続マネージャーを一覧から選択するか、[新規作成] をクリックして新しい接続を作成します。 ODBC でサポートされているデータベースへの接続を選択または入力できます。  
   
-#### <a name="new"></a>新規  
+#### <a name="new"></a>ボタンを使用して新しい  
  **[新規作成]**をクリックします。 新しい接続マネージャーを作成できる **[ODBC 接続マネージャーの構成エディター]** ダイアログ ボックスが開きます。  
   
 #### <a name="data-access-mode"></a>[データ アクセス モード]  
@@ -125,9 +126,9 @@ ms.lasthandoff: 11/20/2017
 ## <a name="odbc-destination-editor-mappings-page"></a>[ODBC 変換先エディター] ([マッピング] ページ)
   **[ODBC 入力先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
   
-#### <a name="available-input-columns"></a>使用できる入力列  
+#### <a name="available-input-columns"></a>[使用できる入力列]  
  使用できる入力列の一覧です。 使用できる変換先列に入力列をドラッグ アンド ドロップして、列をマップできます。  
   
 #### <a name="available-destination-columns"></a>使用できる変換先列  
@@ -152,12 +153,12 @@ ms.lasthandoff: 11/20/2017
   
 -   **[ODBC 入力先エディター]**で、 **[エラー出力]**をクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
   
 #### <a name="inputoutput"></a>[入力または出力]  
  データ ソースの名前を表示します。  
   
-#### <a name="column"></a>列  
+#### <a name="column"></a>[列]  
  使用されていません。  
   
 #### <a name="error"></a>[エラー]  

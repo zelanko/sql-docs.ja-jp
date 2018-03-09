@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +16,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], compilation process
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 485a37af0cb6d9d5f7d34986f99db151e59c4628
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 327c531d44fc883afa144252dda3ba43d188682a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 統合アーキテクチャのパフォーマンス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このトピックでは一部のパフォーマンスを向上させる設計の選択肢の[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]との統合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 共通言語ランタイム (CLR)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+このトピックでは一部のパフォーマンスを向上させる設計の選択肢の[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]との統合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 共通言語ランタイム (CLR)。  
   
 ## <a name="the-compilation-process"></a>コンパイル処理  
  SQL 式のコンパイル時に、マネージ ルーチンへの参照が検出されると、MSIL ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Intermediate Language) スタブが生成されます。 このスタブには、ルーチン パラメーターを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から CLR にマーシャリングして関数を呼び出し、結果を返すコードが含まれています。 この "グルー" (接着剤) コードは、パラメーターの型とパラメーターの方向 (入力、出力、または参照) に基づいています。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/17/2017
  配列として簡単に表現できるデータを [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソルでスキャンする必要がある場合、マネージ コードを使用するとパフォーマンスが大幅に向上します。  
   
 ### <a name="string-data"></a>文字列データ  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]など、データの文字**varchar**、マネージ関数で SqlString または SqlChars 型を指定できます。 SqlString 変数は値全体のインスタンスをメモリに作成します。 SqlChars 変数には、ストリーミング インターフェイスが用意されており、これを使用すると、値全体のインスタンスをメモリに作成しないことでパフォーマンスおよびスケーラビリティを高めることができます。 このことは、特に LOB (ラージ オブジェクト) データにとって重要です。 さらに、XML データをサーバーから使用できますが返すストリーミング インターフェイス**SqlXml.CreateReader()**です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] など、データの文字**varchar**、マネージ関数で SqlString または SqlChars 型を指定できます。 SqlString 変数は値全体のインスタンスをメモリに作成します。 SqlChars 変数には、ストリーミング インターフェイスが用意されており、これを使用すると、値全体のインスタンスをメモリに作成しないことでパフォーマンスおよびスケーラビリティを高めることができます。 このことは、特に LOB (ラージ オブジェクト) データにとって重要です。 さらに、XML データをサーバーから使用できますが返すストリーミング インターフェイス**SqlXml.CreateReader()**です。  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR と拡張ストアド プロシージャ  
  マネージ プロシージャから結果セットをクライアントに返す Microsoft.SqlServer.Server API (アプリケーション プログラミング インターフェイス) は、拡張ストアド プロシージャにより使用される ODS (オープン データ サービス) API に比べパフォーマンスに優れています。 また、System.Data.SqlServer Api サポート データなどの型**xml**、 **varchar (max)**、 **nvarchar (max)**、および**varbinary(max)**で導入された、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]となる一方で、新しいデータ型をサポートするために、ODS Api が拡張されていません。  

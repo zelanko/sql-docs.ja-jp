@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b6afa16b339241460c33beb459fed74946a1238
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5d703eff7e65b590961a4bc78a70032050e1b395
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Jet の概要
 OLE DB Provider for Jet は、Microsoft Jet データベースにアクセスする ADO できます。
@@ -133,58 +134,58 @@ Microsoft.Jet.OLEDB.4.0
 |非同期中止|DBPROP_ASYNCTXNABORT|
 |非同期のコミット|DBPROP_ASYNCTNXCOMMIT|
 |自動コミットの分離レベル|DBPROP_SESS_AUTOCOMMITISOLEVELS|
-|カタログの場所|DBPROP_CATALOGLOCATION と|
-|カタログの用語|DBPROP_CATALOGTERM と|
-|列の定義|DBPROP_COLUMNDEFINITION と|
+|カタログの場所|DBPROP_CATALOGLOCATION|
+|カタログの用語|DBPROP_CATALOGTERM|
+|列の定義|DBPROP_COLUMNDEFINITION|
 |現在のカタログ|DBPROP_CURRENTCATALOG|
 |[データ ソース]|DBPROP_INIT_DATASOURCE|
-|Data Source Name|開か|
+|Data Source Name|DBPROP_DATASOURCENAME|
 |データ ソース オブジェクト スレッド モデル|DBPROP_DSOTHREADMODEL|
-|DBMS の名前|DBPROP_DBMSNAME と|
-|DBMS のバージョン|DBPROP_DBMSVER と|
-|グループ化のサポート|DBPROP_GROUPBY と|
-|異なるテーブルのサポート|DBPROP_HETEROGENEOUSTABLES と|
+|DBMS の名前|DBPROP_DBMSNAME|
+|DBMS のバージョン|DBPROP_DBMSVER|
+|グループ化のサポート|DBPROP_GROUPBY|
+|異なるテーブルのサポート|DBPROP_HETEROGENEOUSTABLES|
 |識別子の大文字と小文字の区別|DBPROP_IDENTIFIERCASE|
 |分離レベル|DBPROP_SUPPORTEDTXNISOLEVELS|
-|分離保有期間|DBPROP_SUPPORTEDTXNISORETAIN と|
+|分離保有期間|DBPROP_SUPPORTEDTXNISORETAIN|
 |[Locale Identifier]|DBPROP_INIT_LCID|
-|インデックスの最大サイズ|DBPROP_MAXINDEXSIZE と|
-|行の最大サイズ|DBPROP_MAXROWSIZE と|
-|最大行サイズには、BLOB が含まれています。|DBPROP_MAXROWSIZEINCLUDESBLOB と|
-|SELECT の最大のテーブル|DBPROP_MAXTABLESINSELECT と|
-|モード|DBPROP_INIT_MODE|
+|インデックスの最大サイズ|DBPROP_MAXINDEXSIZE|
+|行の最大サイズ|DBPROP_MAXROWSIZE|
+|最大行サイズには、BLOB が含まれています。|DBPROP_MAXROWSIZEINCLUDESBLOB|
+|SELECT の最大のテーブル|DBPROP_MAXTABLESINSELECT|
+|[モード]|DBPROP_INIT_MODE|
 |複数のパラメーター セット|DBPROP_MULTIPLEPARAMSETS|
 |複数の結果|DBPROP_MULTIPLERESULTS|
 |複数のストレージ オブジェクト|DBPROP_MULTIPLESTORAGEOBJECTS|
-|複数のテーブルの更新|DBPROP_MULTITABLEUPDATE と|
-|NULL の照合順序|DBPROP_NULLCOLLATION と|
-|NULL を連結した動作|DBPROP_CONCATNULLBEHAVIOR と|
+|複数のテーブルの更新|DBPROP_MULTITABLEUPDATE|
+|NULL の照合順序|DBPROP_NULLCOLLATION|
+|NULL を連結した動作|DBPROP_CONCATNULLBEHAVIOR|
 |OLE DB バージョン|DBPROP_PROVIDEROLEDBVER|
 |OLE オブジェクトのサポート|DBPROP_OLEOBJECTS|
 |行セットのサポートを開く|DBPROP_OPENROWSETSUPPORT|
-|選択リストの ORDER BY 列|DBPROP_ORDERBYCOLUMNSINSELECT と|
+|選択リストの ORDER BY 列|DBPROP_ORDERBYCOLUMNSINSELECT|
 |出力パラメーターの使用状況|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |Ref アクセサーを使って渡す|DBPROP_BYREFACCESSORS|
-|パスワード|DBPROP_AUTH_PASSWORD|
-|永続的な ID 型|DBPROP_PERSISTENTIDTYPE と|
-|中止の動作を準備します。|DBPROP_PREPAREABORTBEHAVIOR と|
-|コミット動作を準備します。|DBPROP_PREPARECOMMITBEHAVIOR と|
-|プロシージャの用語|DBPROP_PROCEDURETERM と|
+|Password|DBPROP_AUTH_PASSWORD|
+|永続的な ID 型|DBPROP_PERSISTENTIDTYPE|
+|中止の動作を準備します。|DBPROP_PREPAREABORTBEHAVIOR|
+|コミット動作を準備します。|DBPROP_PREPARECOMMITBEHAVIOR|
+|プロシージャの用語|DBPROP_PROCEDURETERM|
 |[プロンプト]|DBPROP_INIT_PROMPT|
 |プロバイダーの表示名|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |プロバイダーのバージョン|DBPROP_PROVIDERVER|
-|読み取り専用のデータ ソース|DBPROP_DATASOURCEREADONLY と|
+|読み取り専用のデータ ソース|DBPROP_DATASOURCEREADONLY|
 |行セットの変換|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |スキーマの用語|DBPROP_SCHEMATERM|
-|スキーマの使用|DBPROP_SCHEMAUSAGE と|
+|スキーマの使用|DBPROP_SCHEMAUSAGE|
 |SQL のサポート|DBPROP_SQLSUPPORT|
 |構造化ストレージ|DBPROP_STRUCTUREDSTORAGE|
-|サブクエリのサポート|DBPROP_SUBQUERIES と|
-|テーブルの用語|DBPROP_TABLETERM と|
+|サブクエリのサポート|DBPROP_SUBQUERIES|
+|テーブルの用語|DBPROP_TABLETERM|
 |トランザクション DDL|DBPROP_SUPPORTEDTXNDDL|
 |[ユーザー ID]|DBPROP_AUTH_USERID|
-|[ユーザー名]|DBPROP_USERNAME と|
+|[ユーザー名]|DBPROP_USERNAME|
 |ウィンドウ ハンドル|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>レコード セットの動的プロパティ

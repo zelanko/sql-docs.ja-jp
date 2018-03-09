@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_io_backup_tapes_TSQL
 - sys.dm_io_backup_tapes_TSQL
 - dm_io_backup_tapes
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_io_backup_tapes dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_io_backup_tapes dynamic management view
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d2a6365411d66238512fddf23e7f71848acf5de
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 80f1fdab524409956921aa9087177b2ef9d8ae7f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmiobackuptapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +40,10 @@ ms.lasthandoff: 11/17/2017
  
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**physical_device_name**|**nvarchar (520)**|バックアップを実行できる実際の物理デバイスの名前。 NULL 値は許可されません。|  
+|**physical_device_name**|**nvarchar(520)**|バックアップを実行できる実際の物理デバイスの名前。 NULL 値は許可されません。|  
 |**logical_device_name**|**nvarchar (256)**|ドライブのユーザーが指定した名前 (から**sys.backup_devices**)。 ユーザーが指定した名前がない場合は NULL になります。 NULL 値が許可されます。|  
 |**ステータス**|**int**|テープの状態。<br /><br /> 1 = 空き、使用可<br /><br /> 2 = マウント保留<br /><br /> 3 = 使用中<br /><br /> 4 = 読み込み中<br /><br /> **注:**テープの読み込み中に (**状態 = 4**)、メディア ラベルがまだ閲覧していません。 など、メディア ラベル値をコピーする列**media_sequence_number**、予想値を表示する、テープ上の実際の値と異なる場合があります。 ラベルが読み取られた後**ステータス**に変更**3** (使用中)、メディア ラベル列が読み込まれている実際のテープを反映し、します。<br /><br /> NULL 値は許可されません。|  
-|**status_desc**|**nvarchar (520)**|テープの状態の説明。<br /><br /> AVAILABLE <br /><br /> MOUNT PENDING <br /><br /> IN USE <br /><br /> LOADING MEDIA <br /><br /> NULL 値は許可されません。|  
+|**status_desc**|**nvarchar(520)**|テープの状態の説明。<br /><br /> AVAILABLE <br /><br /> MOUNT PENDING <br /><br /> IN USE <br /><br /> LOADING MEDIA <br /><br /> NULL 値は許可されません。|  
 |**mount_request_time**|**datetime**|マウントが要求された時間。 保留中マウントがない場合は NULL (**ステータス! = 2**)。 NULL 値が許可されます。|  
 |**mount_expiration_time**|**datetime**|マウント要求が期限切れ (タイムアウト) となる時間。 保留中マウントがない場合は NULL (**ステータス! = 2**)。 NULL 値が許可されます。|  
 |**database_name**|**nvarchar (256)**|このデバイスにバックアップされるデータベース。 NULL 値が許可されます。|  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 |**mount_request_type**|**int**|マウント要求の種類。<br /><br /> 1 = 特定のテープ。 によって識別される、テープ、 **media _\*** フィールドが必要です。<br /><br /> 2 = 次のメディア ファミリ。 まだ復元されていない次のメディア ファミリが要求されています。 これは、メディア ファミリより少ないデバイスから復元するときに使用されます。<br /><br /> 3 = 後続テープ。 メディア ファミリが拡張され、後続テープが要求されています。<br /><br /> NULL 値が許可されます。|  
 |**mount_request_type_desc**|**nvarchar(120)**|マウント要求の種類。<br /><br /> SPECIFIC TAPE <br /><br /> NEXT MEDIA FAMILY <br /><br /> CONTINUATION VOLUME <br /><br /> NULL 値が許可されます。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  サーバーでの VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

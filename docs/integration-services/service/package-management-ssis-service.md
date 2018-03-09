@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -29,16 +30,16 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f3438dedb23fe7a168599e06b4847654853aa57b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 454bdfb2ce829153943ebef0c32f7ef80c2a2b2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="package-management-ssis-service"></a>パッケージの管理 (SSIS サービス)
   パッケージの管理には、パッケージの監視、管理、インポートおよびエクスポートが含まれます。  
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/20/2017
   
     -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアからインポートするには、 **[SSIS パッケージ ストア]** をクリックし、サーバーを指定します。  
   
-         参照ボタン ( **[...]**) をクリックし、インポートするパッケージを選択します。次に、 **[OK]**をクリックします。  
+         参照ボタン (**[...]**) をクリックし、インポートするパッケージを選択します。次に、**[OK]** をクリックします。  
   
 7.  必要に応じて、パッケージ名を更新します。  
   
@@ -172,7 +173,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  オブジェクト エクスプローラーが開いていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]**をクリックします。  
   
-4.  オブジェクト エクスプローラーで、 **[格納されたパッケージ]** フォルダーを展開します。  
+4.  オブジェクト エクスプローラーで、**[格納されたパッケージ]** フォルダーを展開します。  
   
 5.  サブフォルダーを展開し、エクスポートするパッケージを探します。  
   
@@ -190,14 +191,14 @@ ms.lasthandoff: 11/20/2017
   
          参照ボタン ( **[...]**) をクリックして **[SSIS パッケージ]** フォルダーを展開し、パッケージを保存するフォルダーを選択します。 必要に応じて、パッケージの新しい名前を **[パッケージ名]** テキスト ボックスに入力します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  パッケージの保護レベルを更新するには、参照ボタン ( **[...]** ) をクリックし、 **[パッケージの保護レベル]** ダイアログ ボックスで別の保護レベルを選択します。 **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** をクリックした場合は、パスワードを入力して確認します。  
+7.  パッケージの保護レベルを更新するには、参照ボタン (**[...]**) をクリックし、**[パッケージの保護レベル]** ダイアログ ボックスで別の保護レベルを選択します。 **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** をクリックした場合は、パスワードを入力して確認します。  
   
 8.  **[OK]** をクリックすると、エクスポートが完了します。  
 
 ## <a name="import-package-dialog-box-ui-reference"></a>[パッケージのインポート] ダイアログ ボックスの UI リファレンス
   **の** [パッケージのインポート] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージをインポートしたり、パッケージの保護レベルの設定や変更を行ったりできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **[パッケージの場所]**  
  パッケージをインポートする格納場所の種類を選択します。 使用できるオプションは以下のとおりです。  
   
@@ -219,10 +220,10 @@ ms.lasthandoff: 11/20/2017
  **認証の種類**  
  認証の種類を選択します。  
   
- **ユーザー名**  
+ **User name**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名を指定します。  
   
- **[パスワード]**  
+ **Password**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、パスワードを指定します。  
   
  **[パッケージのパス]**  
@@ -237,7 +238,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="export-package-dialog-box-ui-reference"></a>[パッケージのエクスポート] ダイアログ ボックスの UI リファレンス
   **の** [パッケージのエクスポート] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを別の場所にエクスポートしたり、必要に応じてパッケージの保護レベルを変更したりできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **[パッケージの場所]**  
  パッケージをエクスポートする格納場所の種類を選択します。 使用できるオプションは以下のとおりです。  
   
@@ -259,10 +260,10 @@ ms.lasthandoff: 11/20/2017
  **認証の種類**  
  認証の種類を選択します。  
   
- **ユーザー名**  
+ **User name**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名を指定します。  
   
- **[パスワード]**  
+ **Password**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、パスワードを指定します。  
   
  **[パッケージのパス]**  

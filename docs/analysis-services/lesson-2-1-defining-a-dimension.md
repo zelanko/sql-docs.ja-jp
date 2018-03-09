@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 112696db-3838-4b50-91bd-d2ce5fa04ee5
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 125908516823730701e0502398d4c8346d093edb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0a6a1056c4b778dbc4cb71faa4e7b05111512285
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>レッスン 2-1-ディメンションを定義します。
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]次の実習では、日付ディメンションを作成するのにディメンション ウィザードを使用します。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+この実習では、ディメンション ウィザードを使用して Date ディメンションを構築します。  
   
 > [!NOTE]  
 > このレッスンを学習するには、レッスン 1 のすべての手順を完了している必要があります。  
@@ -60,13 +63,13 @@ ms.lasthandoff: 12/08/2017
   
 8.  **Full Date Alternate Key** 属性の **[属性の型]** 列の設定を **Regular** から **Date**に変更します。 これを行うには、 **[属性の型]** 列で **[Regular]** をクリックします。 次に、矢印をクリックしてオプションを展開し、 **[Date]** > **[Calendar]** > **[Date]**の順にクリックします。 **[OK]**をクリックします。 次の属性について同じ手順を繰り返し、属性の型を次のように変更します。  
   
-    -   **English Month Name** から **Month**  
+    -   **English Month Name** to **Month**  
   
-    -   **Calendar Quarter** から **Quarter**  
+    -   **Calendar Quarter** to **Quarter**  
   
-    -   **Calendar Year** から **Year**  
+    -   **Calendar Year** to **Year**  
   
-    -   **Calendar Semester** から **Half Year**  
+    -   **Calendar Semester** to **Half Year**  
   
 9. **[次へ]**をクリックします。  
   

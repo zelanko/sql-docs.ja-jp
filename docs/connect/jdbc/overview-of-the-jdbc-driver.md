@@ -1,32 +1,33 @@
 ---
 title: "JDBC ドライバーの概要 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/18/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5caebf50c2f7ec29bef49b2b42bbd5a1452218a8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 3783933de0579de9c0da9f227280656b3583b7b7
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC ドライバーの概要
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Microsoft JDBC Driver for SQL Server は、SQL Server 2016、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008、および Azure SQL Database に堅牢なデータ アクセスを提供する Type 4 Java Database Connectivity (JDBC) 4.2 準拠ドライバーです。  
+  Microsoft JDBC Driver for SQL Server が SQL Server 2017、SQL Server 2016、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008、および Azure SQL Database に堅牢なデータ アクセスを提供する Type 4 Java Database Connectivity (JDBC) 4.2 準拠のドライバー.  
   
  このセクションのトピックでは、JDBC ドライバーの使用に必要なシステム要件、JDBC ドライバーの使用方法、および追加情報の入手先など、JDBC ドライバーの概要について説明します。  
   
@@ -44,7 +45,8 @@ ms.lasthandoff: 11/18/2017
 |[JDBC ドライバーの追加情報の検索](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|外部リソースへのリンクを含む、Microsoft JDBC ドライバーに関する追加リソースの取得先について説明しています。|  
 |[Microsoft SQL Server 用 JDBC Driver のサポート表](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Microsoft SQL Server 用 JDBC Driver のサポート表とサポート ライフサイクル ポリシー。|  
 |[よくある質問 &#40;です。よく寄せられる質問&#41;JDBC driver](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Microsoft JDBC ドライバーのよく寄せられる質問。|  
-  
+|[Microsoft JDBC Driver for SQL Server の機能の依存関係](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Microsoft JDBC Driver for SQL Server の機能の依存関係。|
+
 ## <a name="see-also"></a>参照  
  [JDBC ドライバーの GitHub リポジトリ](https://github.com/microsoft/mssql-jdbc)  
  [JDBC ドライバー API リファレンス](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  

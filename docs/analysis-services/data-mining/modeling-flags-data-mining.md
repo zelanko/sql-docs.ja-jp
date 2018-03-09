@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,19 +24,20 @@ helpviewer_keywords:
 - MODEL_EXISTENCE_ONLY column
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fbe2029742ba4df3c390820effa565055159f7dd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0b7139d1120e9b244ae4bc20e32951c52cc7f37d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="modeling-flags-data-mining"></a>モデリング フラグ (データ マイニング)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]モデリング フラグを使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データ マイニング アルゴリズムには、ケース テーブルで定義されているデータに関する追加の情報を提供します。 アルゴリズムは、この情報を使用して、より正確なデータ マイニング モデルを作成することができます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のモデリング フラグを使用すると、ケース テーブルで定義されているデータに関する追加情報をデータ マイニング アルゴリズムに提供できます。 アルゴリズムは、この情報を使用して、より正確なデータ マイニング モデルを作成することができます。  
   
  マイニング構造のレベルで定義されるモデリング フラグもあれば、マイニング モデル列のレベルで定義されるモデリング フラグもあります。 たとえば、 **NOT NULL** モデリング フラグはマイニング構造列で使用されます。 モデルの作成に使用するアルゴリズムに応じて、追加的なモデリング フラグをマイニング モデル列に定義することができます。  
   
@@ -61,7 +60,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Missing はアルゴリズムによって使用される特殊な状態であり、列のテキスト値の "Missing" とは異なります。 詳細については、「 [不足値 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)であらかじめ定義されているフラグに加えて他のモデリング フラグがある場合もあります。  
   
- **REGRESSOR**  
+ **リグレッサー**  
  列が処理中にリグレッサーとして使用される候補であることを示します。 このフラグは、マイニング モデル列で定義され、連続する数値データ型の列にのみ適用できます。 このフラグの使用の詳細については、このトピックの「 [REGRESSOR モデリング フラグの使用](#bkmk_UseRegressors)」を参照してください。  
   
 ## <a name="viewing-and-changing-modeling-flags"></a>モデリング フラグの表示と変更  
@@ -113,12 +112,12 @@ WHERE MODEL_NAME = '<model name>'
 |タスク|トピック|  
 |----------|-----------|  
 |データ マイニング デザイナーを使用してモデリング フラグを編集する|[モデリング フラグの表示または変更 &#40;データ マイニング&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
-|適切なリグレッサーを推奨するためのヒントをアルゴリズムに対して指定する|[モデルでリグレッサーとして使用する列の指定](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|特定のアルゴリズムでサポートされているモデリング フラグを確認する (各アルゴリズムのリファレンス トピックの「モデリング フラグ」セクション)|[データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
+|適切なリグレッサーを推奨するためのヒントをアルゴリズムに対して指定する|[モデルでリグレッサーとして使用する列を指定します。](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|特定のアルゴリズムでサポートされているモデリング フラグを確認する (各アルゴリズムのリファレンス トピックの「モデリング フラグ」セクション)|[データ マイニング アルゴリズムと #40 です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |マイニング構造列とそこに設定できるプロパティについて詳しく知る|[マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md)|  
 |モデル レベルで適用できるマイニング モデル列とモデリング フラグについて知る|[マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)|  
 |モデリング フラグを DMX ステートメントで扱うための構文を確認する|[モデリング フラグ &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
-|不足値とその取り扱いの方法について知る|[不足値 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
+|不足値とその取り扱いの方法について知る|[欠損値 &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
 |モデルと構造の管理および使用法のプロパティの設定について知る|[データ マイニング オブジェクトの移動](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   

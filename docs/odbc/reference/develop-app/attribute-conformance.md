@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7859fbb5483acd09dd99f4f27be77d5874e7b992
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 335fc5f60e47be26a9e394bdd632c1301f507ac8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attribute-conformance"></a>属性への準拠
 次の表では、これは適切に定義された各 ODBC 環境属性の準拠レベルを示します。  
   
-|関数|準拠レベル|  
+|機能|準拠レベル|  
 |--------------|-----------------------|  
 |SQL_ATTR_CONNECTION_POOLING|--[1]|  
 |SQL_ATTR_CP_MATCH|--[1]|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/20/2017
   
  次の表では、これは適切に定義された各 ODBC 接続属性の準拠レベルを示します。  
   
-|関数|準拠レベル|  
+|機能|準拠レベル|  
 |--------------|-----------------------|  
 |SQL_ATTR_ACCESS_MODE|コア|  
 |SQL_ATTR_ASYNC_ENABLE|レベル 1 またはレベル 2 の [1]|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/20/2017
   
  次の表では、これは適切に定義された ODBC ステートメント属性ごとの準拠レベルを示します。  
   
-|関数|準拠レベル|  
+|機能|準拠レベル|  
 |--------------|-----------------------|  
 |SQL_ATTR_APP_PARAM_DESC|コア|  
 |SQL_ATTR_APP_ROW_DESC|コア|  

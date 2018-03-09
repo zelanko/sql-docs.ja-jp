@@ -8,23 +8,24 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.destinationassistant.f1
 - sql13.DTS.DESIGNER.DESTINATIONASSIST.F1
 ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21ce9dc332f5a31fa95ea57e5cbe63a2757f198a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 62e4fb6f0d7f368ec96f647ee7befa8826a7812c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="destination-assistant"></a>デスティネーション アシスタント
   変換先アシスタント コンポーネントを使用すると、変換先コンポーネントおよび接続マネージャーを作成できます。 このコンポーネントは、SSIS ツールボックスの **[お気に入り]** セクションにあります。  
@@ -55,4 +56,4 @@ ms.lasthandoff: 11/20/2017
 |型|変換先の種類を選択します。|  
 |接続マネージャー|既存の接続マネージャーを選択するか、**[\<新規作成>]** をクリックして新しい接続マネージャーを作成します。|  
 |インストールされているもののみを表示する|インストールされている変換先のみを表示するかどうかを指定します。|  
-|OK|変更を保存し、後続のダイアログ ボックスを開いてその他のオプションを構成する場合にクリックします。|  
+|[OK]|変更を保存し、後続のダイアログ ボックスを開いてその他のオプションを構成する場合にクリックします。|  

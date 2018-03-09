@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_database_copies
 - dm_database_copies
 - sys.dm_database_copies_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dm_database_copies
 - sys.dm_database_copies
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9ea0a5834ae83cd49deec2731f6ce2c3f8ccacc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fb6240f63ab72ae0e6ddbc28d2afe7e6ef24ef82
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdatabasecopies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -47,7 +49,7 @@ Geo レプリケーション リンクに関する情報を返すを使用して
 |**modify_date**|**datetimeoffset**|地域の [!INCLUDE[ssSDS](../../includes/sssds-md.md)] データセンターにおいてデータベース コピーが完了した時刻 (UTC)。 新しいデータベースには、この時点でのプライマリ データベースのトランザクションが反映されます。 完了情報は、1 分間隔では更新されます。<br /><br />Percent_complete フィールドの最後の更新を反映した UTC 時刻です。|  
 |**percent_complete**|**real**|コピーされたバイトの割合 (%)。 値の範囲は 0 ～ 100 です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] は、フェールオーバーなどのエラーから自動的に復旧した後に、データベース コピーを再開することがあります。 この場合、percent_complete は 0 から再開されます。|  
 |**error_code**|**int**|値が 0 より大きい場合は、コピー中に発生したエラーを示すコード。 エラーが発生しなかった場合は 0 です。|  
-|**error_desc**|**nvarchar (4096)**|コピー中に発生したエラーの説明。|  
+|**error_desc**|**nvarchar(4096)**|コピー中に発生したエラーの説明。|  
 |**error_severity**|**int**|データベース コピーが失敗した場合は 16 を返します。|  
 |**error_state**|**int**|コピーが失敗した場合は 1 を返します。|  
 |**copy_guid**|**uniqueidentifier**|コピー操作の一意の ID。|  
@@ -61,7 +63,7 @@ Geo レプリケーション リンクに関する情報を返すを使用して
 |**is_interlink_connected**|bit|予約フィールドです。|  
 |**is_offline_secondary**|bit|予約フィールドです。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  このビューはのみで使用できます、**マスター**データベース、サーバー レベル プリンシパル ログインをします。  
   
 ## <a name="remarks"></a>解説  

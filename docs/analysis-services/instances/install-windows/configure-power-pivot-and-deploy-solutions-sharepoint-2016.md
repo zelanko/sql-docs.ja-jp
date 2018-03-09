@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6675b8338a54dca9dac4b842ec2d0f563058e1b8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 92dc344de6a88459a2ec718a30f893cff50b16af
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Power Pivot の構成とソリューションの配置 (SharePoint 2016)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]このトピックではの展開と構成に中間層機能強化について説明します、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]機能[!INCLUDE[SPS2016](../../../includes/sps2016-md.md)]など[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ギャラリー、スケジュール データ更新、管理ダッシュ ボード、およびデータ プロバイダー。 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 構成** ツールを実行して、以下の操作を完了します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+このトピックでは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ギャラリー、定期データ更新、管理ダッシュボード、データ プロバイダーといった [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 機能に対する中間層機能強化の配置および構成について説明します。 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 構成** ツールを実行して、以下の操作を完了します。  
   
 -   SharePoint ソリューション ファイルを配置する。  
   
@@ -33,18 +34,6 @@ ms.lasthandoff: 12/08/2017
 -   バックエンド サービスと、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーをインストールする方法の詳細については、「 [Power Pivot モードでの Analysis Services のインストール](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)」を参照してください。  
   
  インストール方法について、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint 2016 構成ツールでは、次を参照してください。[インストールまたは for SharePoint アドイン (SharePoint 2016) Power Pivot をアンインストール](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)です。  
-  
- このトピックには、次のセクションが含まれます。  
-  
- [Power Pivot for SharePoint 2016 の構成の実行](#bkmk_run_configuration_tool)  
-  
- [Power Pivot の構成の確認](#bkmk_verify_powerpivot)  
-  
- [問題のトラブルシューティング](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Power Pivot for SharePoint 2016 の構成の実行  
  **注:** 次の手順を実行するには、ファーム管理者である必要があります。 次のようなエラー メッセージが表示される場合があります。  

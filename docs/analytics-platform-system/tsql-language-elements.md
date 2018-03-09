@@ -20,11 +20,11 @@ ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 32643cbe6ab7019cbac912eb26fe3e78423bdeb9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35c8de2f1105bbbda05642b993d8fe0c88d76f39
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="language-elements"></a>言語要素
 TRANSACT-SQL (T-SQL) 言語要素の分析 Platform System (APS) SQL Server 並列データ ウェアハウス (PDW)。
@@ -33,12 +33,12 @@ TRANSACT-SQL (T-SQL) 言語要素の分析 Platform System (APS) SQL Server 並�
 * [構文表記規則](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [オブジェクトの名前付け規則](../relational-databases/databases/database-identifiers.md)
 * [予約済みキーワード](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [照合順序](https://msdn.microsoft.com/library/ff848763.aspx)
-* [コメント](../t-sql/language-elements/comment-transact-sql.md)
-* [定数](../t-sql/data-types/constants-transact-sql.md)
+* [collations](https://msdn.microsoft.com/library/ff848763.aspx)
+* [comments](../t-sql/language-elements/comment-transact-sql.md)
+* [constants](../t-sql/data-types/constants-transact-sql.md)
 * [データ型](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
-* [式](../t-sql/language-elements/expressions-transact-sql.md)
+* [expressions](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [IDENTITY プロパティの回避策](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
@@ -61,7 +61,7 @@ TRANSACT-SQL (T-SQL) 言語要素の分析 Platform System (APS) SQL Server 並�
 * [- (負号)](../t-sql/language-elements/unary-operators-negative.md)
 * [- (減算)](../t-sql/language-elements/subtract-transact-sql.md)
 * [* (乗算)](../t-sql/language-elements/multiply-transact-sql.md)
-* [/(除算)](../t-sql/language-elements/divide-transact-sql.md)
+* [/ (Divide)](../t-sql/language-elements/divide-transact-sql.md)
 * [剰余](../t-sql/language-elements/modulo-transact-sql.md)
 
 ## <a name="wildcard-characters-to-match"></a>一致するワイルドカード文字
@@ -76,7 +76,7 @@ TRANSACT-SQL (T-SQL) 言語要素の分析 Platform System (APS) SQL Server 並�
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
 * [IN](../t-sql/language-elements/in-transact-sql.md)
-* [は[されません](../t-sql/queries/is-null-transact-sql.md)
+* [そうじゃないです](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
 * [または](../t-sql/language-elements/or-transact-sql.md)
@@ -206,7 +206,7 @@ TRANSACT-SQL (T-SQL) 言語要素の分析 Platform System (APS) SQL Server 並�
 * [SQRT](../t-sql/functions/sqrt-transact-sql.md)
 * [SQUARE](../t-sql/functions/square-transact-sql.md)
 * [STATS_DATE](../t-sql/functions/stats-date-transact-sql.md)
-* [STDEV](../t-sql/functions/stdev-transact-sql.md)
+* [[STDEV]](../t-sql/functions/stdev-transact-sql.md)
 * [STDEVP](../t-sql/functions/stdevp-transact-sql.md)
 * [STR](../t-sql/functions/str-transact-sql.md)
 * [STUFF](../t-sql/functions/stuff-transact-sql.md)
@@ -235,7 +235,7 @@ TRANSACT-SQL (T-SQL) 言語要素の分析 Platform System (APS) SQL Server 並�
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
 ## <a name="transactions"></a>トランザクション
-* [トランザクション](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+* [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>診断セッション
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)
@@ -265,7 +265,7 @@ TRANSACT-SQL (T-SQL) 言語要素の分析 Platform System (APS) SQL Server 並�
 
 ## <a name="set-statements"></a>SET ステートメント
 * [[SET ANSI_DEFAULTS]](../t-sql/statements/set-ansi-defaults-transact-sql.md)
-* [セット ANSI_NULL_DFLT_OFF](../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)
+* [SET ANSI_NULL_DFLT_OFF](../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)
 * [セット ANSI_NULL_DFLT_ON](../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)
 * [[SET ANSI_NULLS]](../t-sql/statements/set-ansi-nulls-transact-sql.md)
 * [[SET ANSI_PADDING]](../t-sql/statements/set-ansi-padding-transact-sql.md)
@@ -274,11 +274,11 @@ TRANSACT-SQL (T-SQL) 言語要素の分析 Platform System (APS) SQL Server 並�
 * [SET ARITHIGNORE](../t-sql/statements/set-arithignore-transact-sql.md)
 * [セット CONCAT_NULL_YIELDS_NULL](../t-sql/statements/set-concat-null-yields-null-transact-sql.md)
 * [SET DATEFIRST](../t-sql/statements/set-datefirst-transact-sql.md)
-* [DATEFORMAT の設定](../t-sql/statements/set-dateformat-transact-sql.md)
+* [SET DATEFORMAT](../t-sql/statements/set-dateformat-transact-sql.md)
 * [SET FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
-* [セット IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
-* [[SET LOCK_TIMEOUT]](../t-sql/statements/set-lock-timeout-transact-sql.md)
-* [セット NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
+* [SET IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
+* [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
+* [SET NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
 * [[SET QUOTED_IDENTIFIER]](../t-sql/statements/set-quoted-identifier-transact-sql.md)
 * [[SET ROWCOUNT]](../t-sql/statements/set-rowcount-transact-sql.md)
 * [[SET TEXTSIZE]](../t-sql/statements/set-textsize-transact-sql.md)

@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5f3fccc743eba7809d368771c5e5d942ea954f25
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d7c5c99922e82652ecbd4d7ad2f526f7f4c3d89c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー)
 このチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートを作成します。レポートには、カテゴリでグループ化された一連の縦棒として連続を表示する棒グラフを含めます。 
@@ -94,20 +94,20 @@ ms.lasthandoff: 12/05/2017
   
 8.  (省略可) [実行] ボタン (**!**) をクリックして、グラフの基になるデータを確認します。  
   
-9. **[次へ]**をクリックします。  
+9. **[次へ]** をクリックします。  
   
 ## <a name="ChartType"></a>2.グラフの種類を選択する  
 事前定義されたグラフの種類から選択し、ウィザードの完了後にグラフを修正できます。  
   
 ### <a name="to-add-a-column-chart"></a>縦棒グラフを追加するには  
   
-1.  **[グラフの種類の選択]** ページでは、縦棒グラフが既定のグラフの種類です。 **[次へ]**をクリックします。  
+1.  **[グラフの種類の選択]** ページでは、縦棒グラフが既定のグラフの種類です。 **[次へ]** をクリックします。  
   
 2.  **[グラフのフィールドの配置]** ページで、SalesDate フィールドを **[カテゴリ]**にドラッグします。 カテゴリは横軸に表示されます。  
   
 3.  Sales フィールドを **[値]**にドラッグします。 販売の合計値の総計が 1 日ごとに集計されるので、 **[値]** ボックスには Sum(Sales) が表示されます。 値は縦軸に表示されます。  
   
-4.  **[次へ]**をクリックします。  
+4.  **[次へ]** をクリックします。  
  
 6.  **[完了]**をクリックします。  
   
@@ -306,7 +306,7 @@ x 軸では一部のラベルのみが表示されています。 このセク�
   
 4.  **[保存]**をクリックします。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 これで、「レポートへの縦棒グラフの追加」チュートリアルを終了します。 グラフの詳細については、「[グラフ (レポート ビルダーおよび SSRS)](../reporting-services/report-design/charts-report-builder-and-ssrs.md)」と「[スパークラインとデータ バー (レポート ビルダーおよび SSRS)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

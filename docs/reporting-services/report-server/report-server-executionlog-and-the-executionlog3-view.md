@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: "41"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8458127daae58d63376f80dc1b67302928f9f943
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1177b4cf7db3d55e839608f45fb036ae95e7baf5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>レポート サーバー ExecutionLog と ExecutionLog3 ビュー
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート サーバー実行ログには、サーバー上で実行するレポート、またはネイティブ モードのスケールアウト配置や SharePoint ファーム内の複数のサーバー上で実行するレポートに関する情報が含まれます。 レポート実行ログを使用して、レポートを要求する頻度、最も多く使用される出力形式、および各処理フェーズでかかる処理時間 (単位はミリ秒) を調査できます。 このログには、レポートのデータセット クエリの実行にかかった時間とデータの処理にかかった時間に関する情報が記録されます。 レポート サーバー管理者は、ログの情報を確認して実行時間が長いタスクを特定し、レポート作成者に対して改善の余地があるレポートの領域 (データセットや処理) について提案することができます。  
@@ -38,7 +36,7 @@ ms.lasthandoff: 12/05/2017
   
  レポート サーバー実行ログはレポート サーバー データベースに格納されます。このデータベースの既定の名前は **ReportServer**です。 実行ログの情報は、SQL ビューに表示されます。 新しいリリースで追加された "2" および "3" のビューには、新しいフィールドが追加されています。また、以前のリリースよりもわかりやすい名前に変更されたフィールドもあります。 古いビューも引き続き利用できるため、それらに依存するカスタム アプリケーションへの影響はありません。 ExecutionLog などの古いビューに依存していない場合は、最新のビューである ExecutionLog**3**を使用することをお勧めします。  
   
- このトピックの内容:  
+ このトピックの内容  
   
 -   [SharePoint モードのレポート サーバーの構成設定](#bkmk_sharepoint)  
   
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  **[ログ記録]** セクションで **[実行のログ記録を有効にする]** を選択します。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
  **詳細ログを有効にするには**  
   
@@ -116,14 +114,14 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  次の表に、レポート実行ログに取得されるデータを示します。  
   
-|列|Description|  
+|[列]|Description|  
 |------------|-----------------|  
 |InstanceName|要求を処理したレポート サーバー インスタンスの名前。 レポート サーバーが複数ある環境では、InstanceName のディストリビューションを分析することで、ネットワーク負荷分散を監視し、要求がレポート サーバー間で想定どおりに分散されているかどうかを確認することができます。|  
 |ItemPath|レポートまたはレポート アイテムの格納場所のパス。|  
 |UserName|ユーザー識別子。|  
 |[ExecutionID]|要求に関連付けられた内部識別子。 同じユーザー セッションの要求は、同じ実行 ID を共有します。|  
 |RequestType|有効値は次のとおりです。<br /><br /> Interactive<br /><br /> サブスクリプション<br /><br /> <br /><br /> RequestType=Subscription でフィルター処理したログ データを TimeStart で並べ替えて分析すると、サブスクリプションが集中している時間が見つかることがあります。この情報を基に、レポートのサブスクリプションの一部を別の時間に変更することができます。|  
-|Format|表示形式。|  
+|[形式]|表示形式。|  
 |Parameters|レポート実行に使用するパラメーター値。|  
 |ItemAction|有効値は次のとおりです。<br /><br /> Render<br /><br /> 並べ替え<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
 |TimeStart|レポート処理の期間を示す開始時刻と終了時刻。|  
@@ -331,7 +329,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  次の表に、レポート実行ログに取得されるデータを示します。  
   
-|列|Description|  
+|[列]|Description|  
 |------------|-----------------|  
 |InstanceName|要求を処理したレポート サーバー インスタンスの名前。|  
 |ReportPath|レポートのパス構造。  たとえば、"test" というレポートがレポート マネージャーのルート フォルダーにある場合、ReportPath は "/test" となります。<br /><br /> "test" という名前のレポートがレポート マネージャー "samples" フォルダーに保存されている場合は、ReportPath は "/Samples/test/" となります。|  
@@ -363,13 +361,13 @@ select * from ExecutionLog order by TimeStart DESC
   
  次の表に、レポート実行ログに取得されるデータを示します。  
   
-|列|Description|  
+|[列]|Description|  
 |------------|-----------------|  
 |InstanceName|要求を処理したレポート サーバー インスタンスの名前。|  
 |ReportID|レポート識別子。|  
 |UserName|ユーザー識別子。|  
 |RequestType|有効値は次のとおりです。<br /><br /> True = サブスクリプション要求<br /><br /> False = 対話型の要求|  
-|Format|表示形式。|  
+|[形式]|表示形式。|  
 |Parameters|レポート実行に使用するパラメーター値。|  
 |TimeStart|レポート処理の期間を示す開始時刻と終了時刻。|  
 |TimeEnd||  
@@ -377,7 +375,7 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeProcessing||  
 |TimeRendering||  
 |Source|レポート実行のソース。 有効値: 1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴、5 = アドホック、6 = セッション、7 = RDCE。|  
-|Status|有効値: rsSuccess、rsProcessingAborted、またはエラー コード。 複数のエラーが発生した場合は、最初のエラーだけが記録されます。|  
+|状態|有効値: rsSuccess、rsProcessingAborted、またはエラー コード。 複数のエラーが発生した場合は、最初のエラーだけが記録されます。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  
   

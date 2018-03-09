@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +19,20 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 79178d1319e296d1dead562440d57c25d379dbd4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5effa132a9ccb440ccf3b8a7c004e6692a4aef57
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>リフト チャート (Analysis Services - データ マイニング)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A*リフト チャート*視覚的に、マイニング モデルと比較した場合は、ランダムな推測に対する改善を表しの観点で変化を測定、*リフト*スコア。 さまざまなモデルのリフト スコアを比較することで、最適なモデルを判断できます。 また、モデルの予測の有用度が低くなる点を判断することもできます。 たとえば、リフト チャートを確認することで、販売促進キャンペーンが顧客の 30% に対してのみ有効であることに気付いた場合は、その図を使用してキャンペーンの範囲を制限します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+*リフト チャート* は、ランダムな推測に対するマイニング モデルによる改善をグラフィカルに表示し、 *リフト* スコアの観点で変化を測定します。 さまざまなモデルのリフト スコアを比較することで、最適なモデルを判断できます。 また、モデルの予測の有用度が低くなる点を判断することもできます。 たとえば、リフト チャートを確認することで、販売促進キャンペーンが顧客の 30% に対してのみ有効であることに気付いた場合は、その図を使用してキャンペーンの範囲を制限します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ マイニングでは、リフト チャートにより同じ予測属性を含む複数のモデルの精度を比較できます。 また、1 つの結果 (予測属性の 1 つの値) またはすべての結果 (指定された属性のすべての値) のどちらかの予測精度を評価することもできます。  
   
@@ -130,6 +129,6 @@ ms.lasthandoff: 12/08/2017
  [トップに戻る](#bkmk_Top)  
   
 ## <a name="see-also"></a>参照  
- [テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [テストおよび検証 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

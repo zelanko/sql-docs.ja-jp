@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,13 +19,13 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: "31"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7aeaa7ce698d5fd2b7f0d9823fb89a201bed96eb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3851cd1793ddb98c29fddd82654adfba887b44d3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>チュートリアル: オフラインでのクイック グラフ レポートの作成 (レポート ビルダー)
 
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
  ![レポート ビルダー クイック円グラフ](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "レポート ビルダー クイック円グラフ")  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  XML データを使用するか [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用するかにかかわらず、レポート ビルダーにアクセスできることが必要です。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] は、ネイティブ モードまたは SharePoint 統合モードで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] から起動するか、Microsoft ダウンロード センターから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] をダウンロードできます。 詳細については、「 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)」を参照してください。  
   
 ##  <a name="TwoWays"></a> このチュートリアルを実行する 2 つの方法  
@@ -119,7 +117,7 @@ ms.lasthandoff: 12/05/2017
   
      ![レポート ビルダーのデザイン クエリ](../../reporting-services/report-builder/media/rb-designquery.png "レポート ビルダーのデザイン クエリ")  
   
-12. **[次へ]**をクリックします。  
+12. **[次へ]** をクリックします。  
   
 13. **[グラフの種類の選択]** ページで **[円]**をクリックし、 **[次へ]**をクリックします。  
   
@@ -181,7 +179,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  (省略可) [実行] ボタン (**!**) をクリックして、グラフの基になるデータを確認します。  
   
-9. **[次へ]**をクリックします。  
+9. **[次へ]** をクリックします。  
   
 10. **[グラフの種類の選択]** ページで **[円]**をクリックし、 **[次へ]**をクリックします。  
   
@@ -225,7 +223,7 @@ ms.lasthandoff: 12/05/2017
 
 5. **[フォント]** タブで、 **[太字]** を選択し、 **[色]** を **[白]**に変更します。
 
-6. **[OK]**をクリックします。     
+6. **[OK]** をクリックします。     
   
  グラフのラベルと凡例をカスタマイズする方法の詳細については、「[円グラフへのパーセンテージの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)」および「[凡例アイテムのテキストの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)」を参照してください。  
   
@@ -243,4 +241,4 @@ ms.lasthandoff: 12/05/2017
 [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)   
 [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

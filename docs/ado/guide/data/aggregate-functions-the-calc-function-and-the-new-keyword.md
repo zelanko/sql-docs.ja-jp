@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - NEW keyword [ADO]
 - aggregate functions [ADO]
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab522abece6300345819649380be206a277a456
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c3b7e33486bc8a5cc283a101893aec4287062c2f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>集計関数、CALC 関数と NEW キーワード
 データ シェイプには、次の関数がサポートされています。 処理される列を含む章に割り当てられた名前が、*章エイリアス*です。  
@@ -39,13 +40,13 @@ ms.lasthandoff: 12/21/2017
 |AVG (*章エイリアス*.*列名*)|指定された列のすべての値の平均を計算します。|  
 |MAX (*章エイリアス*.*列名*)|指定された列の最大値を計算します。|  
 |MIN (*章エイリアス*.*列名*)|指定された列内の最小値を計算します。|  
-|カウント (*章エイリアス*[.*列名*])|指定したエイリアスの行数をカウントします。 列が指定されている場合は、カウントにその列の Null 以外のみの行が含まれます。|  
-|STDEV (*章エイリアス*.*列名*)|指定された列の標準偏差を計算します。|  
-|任意 (*章エイリアス*.*列名*)|指定された列の値です。 予測可能な値は、列の値はチャプター内のすべての行の同じ場合にのみいずれかが存在します。<br /><br /> **注**列にチャプター内の行のすべてに対して同じ値が含まれていない場合、図形コマンド任意を返します、関数の値を指定する値のいずれか。|  
+|COUNT(*chapter-alias*[.*column-name*])|指定したエイリアスの行数をカウントします。 列が指定されている場合は、カウントにその列の Null 以外のみの行が含まれます。|  
+|STDEV(*chapter-alias*.*column-name*)|指定された列の標準偏差を計算します。|  
+|ANY(*chapter-alias*.*column-name*)|指定された列の値です。 予測可能な値は、列の値はチャプター内のすべての行の同じ場合にのみいずれかが存在します。<br /><br /> **注**列にチャプター内の行のすべてに対して同じ値が含まれていない場合、図形コマンド任意を返します、関数の値を指定する値のいずれか。|  
   
 |計算式|Description|  
 |---------------------------|-----------------|  
-|計算 (*式*)|ただし、に対してのみの行の任意の式を計算、**レコード セット**CALC 関数を含むです。 これらを使用して任意の式[の Visual Basic for Applications (VBA) 関数](../../../ado/guide/data/visual-basic-for-applications-functions.md)は許可されています。|  
+|CALC(*expression*)|ただし、に対してのみの行の任意の式を計算、**レコード セット**CALC 関数を含むです。 これらを使用して任意の式[の Visual Basic for Applications (VBA) 関数](../../../ado/guide/data/visual-basic-for-applications-functions.md)は許可されています。|  
   
 |NEW キーワード|Description|  
 |-----------------|-----------------|  
@@ -65,9 +66,9 @@ ms.lasthandoff: 12/21/2017
 |DBTYPE_I8|adBigInt|  
 |DBTYPE_UI8|adUnsignedBigInt|  
 |DBTYPE_GUID|adGuid|  
-|DBTYPE_BYTES|adBinary、AdVarBinary、adLongVarBinary|  
+|DBTYPE_BYTES|adBinary, AdVarBinary, adLongVarBinary|  
 |DBTYPE_STR|ファミリ、それぞれ、adLongVarChar|  
-|DBTYPE_WSTR|adWChar、adVarWChar、adLongVarWChar|  
+|DBTYPE_WSTR|adWChar, adVarWChar, adLongVarWChar|  
 |DBTYPE_NUMERIC|adNumeric|  
 |DBTYPE_DBDATE|adDBDate|  
 |DBTYPE_DBTIME|adDBTime|  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sysdevices_TSQL
 - sys.sysdevices
 - sys.sysdevices_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.sysdevices compatibility view
 - sysdevices system table
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
-caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bd38d3162d55881c145cc5c40f11ecbc05e529c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: df1376d568b0b95952f57251d1f2b32fe9680a52
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssysdevices-transact-sql"></a>sys.sysdevices (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,12 +45,12 @@ ms.lasthandoff: 11/27/2017
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|バックアップ ファイルまたはデータベース ファイルの論理名。|  
-|**サイズ**|**int**|ファイルのサイズ (2 KB ページ単位)。|  
-|**低**|**int**|旧バージョンとの互換性のためにだけ用意されています。|  
-|**高**|**int**|旧バージョンとの互換性のためにだけ用意されています。|  
+|**size**|**int**|ファイルのサイズ (2 KB ページ単位)。|  
+|**low**|**int**|旧バージョンとの互換性のためにだけ用意されています。|  
+|**high**|**int**|旧バージョンとの互換性のためにだけ用意されています。|  
 |**ステータス**|**smallint**|デバイスの種類を示すビットマップ。<br /><br /> 1 = 既定のディスク<br /><br /> 2 = 物理ディスク<br /><br /> 4 = 論理ディスク<br /><br /> 8 = ヘッダーをスキップ<br /><br /> 16 = バックアップ ファイル<br /><br /> 32 = シリアル書き込み<br /><br /> 4096 = 読み取り専用|  
 |**cntrltype**|**smallint**|コント ローラーの種類:<br /><br /> 0 = CD-ROM 以外のデータベース ファイル<br /><br /> 2 = ディスク バックアップ ファイル<br /><br /> 3 - 4 = フロッピー ディスク バックアップ ファイル<br /><br /> 5 = テープ バックアップ ファイル<br /><br /> 6 = 名前付きパイプ ファイル|  
-|**phyname**|**nvarchar (260)**|物理ファイルの名前。|  
+|**phyname**|**nvarchar(260)**|物理ファイルの名前。|  
   
 ## <a name="see-also"></a>参照  
  [システム ビュー &#40; をシステム テーブルのマッピングTRANSACT-SQL と #41 です。](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

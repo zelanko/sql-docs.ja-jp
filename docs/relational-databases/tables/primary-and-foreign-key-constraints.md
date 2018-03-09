@@ -18,15 +18,15 @@ helpviewer_keywords:
 - foreign keys [SQL Server], about foreign key constraints
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eb8267d4e8549f377da83d48e0c6b27ac71379f3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 641c3e3916cced8ce6ee995111f75f6865731fdc
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主キー制約と外部キー制約
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
  主キー制約をテーブルに対して指定すると、重複のないインデックスを [!INCLUDE[ssDE](../../includes/ssde-md.md)] が主キー列に対して自動的に作成し、データが一意になるようにします。 また、クエリの中で主キーが使用された場合は、このインデックスによってデータに高速にアクセスできます。 複数の列に一意キー制約が定義されている場合は、1 つの列内で値が重複してもかまいませんが、一意キー制約が定義された列に格納される値の組み合わせは一意である必要があります。  
   
- 次の図に示すように、このテーブルの複合主キー制約は、 **Purchasing.ProductVendor** テーブルの **ProductID** 列と **VendorID** 列により作成されています。 そのため、 **ProductID** と **VendorID** の組み合わせは、 **ProductVendor**テーブル内のすべての行で一意になります。 これによって重複行の挿入が防止されます。  
+ 次の図に示すように、このテーブルの複合主キー制約は、 **Purchasing.ProductVendor** テーブルの **ProductID** 列と **VendorID** 列により作成されています。 そのため、**ProductID** と **VendorID** の組み合わせは、**ProductVendor** テーブル内のすべての行で一意になります。 これによって重複行の挿入が防止されます。  
   
  ![複合 PRIMARY KEY 制約](../../relational-databases/tables/media/fund04.gif "複合 PRIMARY KEY 制約")  
   

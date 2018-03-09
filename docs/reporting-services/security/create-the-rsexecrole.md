@@ -8,22 +8,20 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 caps.latest.revision: "23"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: 6d137b42fd99f18c0742d4535762c9cfd36d4b1a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 4698782486ccae04b7f2b343beda95edad676568
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-the-rsexecrole"></a>RSExecRole を作成する
 
@@ -77,13 +75,13 @@ ms.lasthandoff: 12/05/2017
   
 11. **[検索]**をクリックします。 **[オブジェクトの追加]** ダイアログ ボックスが表示されます。 既定では、 **[特定のオブジェクト]** オプションが選択されています。  
   
-12. **[OK]**をクリックします。 **[オブジェクトの選択]** ダイアログ ボックスが表示されます。  
+12. **[OK]** をクリックします。 **[オブジェクトの選択]** ダイアログ ボックスが表示されます。  
   
 13. **[オブジェクトの種類]**をクリックします。  
   
 14. **[拡張ストアド プロシージャ]**をクリックします。  
   
-15. **[OK]**をクリックします。  
+15. **[OK]** をクリックします。  
   
 16. **[参照]**をクリックします。  
   
@@ -126,13 +124,13 @@ ms.lasthandoff: 12/05/2017
   
 9. **[追加]**をクリックします。 **[オブジェクトの追加]** ダイアログ ボックスが表示されます。 **[オブジェクトの指定]** オプションが既定で選択されます。  
   
-10. **[OK]**をクリックします。  
+10. **[OK]** をクリックします。  
   
 11. **[オブジェクトの種類]**をクリックします。  
   
 12. **[ストアド プロシージャ]**をクリックします。  
   
-13. **[OK]**をクリックします。  
+13. **[OK]** をクリックします。  
   
 14. **[参照]**をクリックします。  
   
@@ -168,13 +166,13 @@ ms.lasthandoff: 12/05/2017
   
 20. [セキュリティ保護可能なリソース] タブで、もう一度 **[追加]** をクリックします。 **[オブジェクトの追加]** ダイアログ ボックスが表示されます。 **[オブジェクトの指定]** オプションが既定で選択されます。  
   
-21. **[OK]**をクリックします。  
+21. **[OK]** をクリックします。  
   
 22. **[オブジェクトの種類]**をクリックします。  
   
 23. **[テーブル]**をクリックします。  
   
-24. **[OK]**をクリックします。  
+24. **[OK]** をクリックします。  
   
 25. **[参照]**をクリックします。  
   
@@ -216,7 +214,7 @@ ms.lasthandoff: 12/05/2017
   
 6.  **[接続テスト]**をクリックします。  
   
-7.  **[次へ]**をクリックします。  
+7.  **[次へ]** をクリックします。  
   
 8.  [データベース] で、レポート サーバー データベースを選択します。  
   

@@ -1,5 +1,5 @@
 ---
-title: "外部データ ソース (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
@@ -23,13 +23,13 @@ ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
 caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba34b4411b5c3946bf1bc5cb75bc361cd7929990
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8e5f0a03ef6efa09218cc6740df4439a25eb7265
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-data-source-transact-sql"></a>外部データ ソース (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -135,22 +135,22 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 ## <a name="arguments"></a>引数  
  *data_source_name*データ ソースのユーザー定義名を指定します。 名前は、SQL Server、Azure SQL データベース、および Azure SQL Data Warehouse でのデータベース内で一意にする必要があります。 名前は、Parallel Data Warehouse ではサーバー内で一意である必要があります。
   
- 種類 = [HADOOP |SHARD_MAP_MANAGER |RDBMS |BLOB_STORAGE]  
+ TYPE = [ HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
  データ ソースの種類を指定します。 HADOOP を使用して、外部データ ソースが Hadoop または Azure ストレージ blob の Hadoop のです。 Azure SQL Database でシャーディングの柔軟なデータベース クエリの外部データ ソースを作成する場合は、SHARD_MAP_MANAGER を使用します。 RDBMS を外部データ ソースと Azure SQL データベースでエラスティック データベース クエリを使用してデータベースにまたがるクエリを使用します。  使用して一括操作を実行するときに、BLOB_STORAGE を使用して[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)または[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)で[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]です。
   
-場所 = \<location_path > **HADOOP**    
+LOCATION = \<location_path> **HADOOP**    
 Hadoop, Hadoop クラスターの Uniform Resource Indicator (URI) を指定します。  
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
 NameNode_URI: マシン名または IP アドレスの Hadoop クラスター Namenode です。  
 ポート: Namenode IPC ポートです。 これは、Hadoop fs.default.name 構成パラメーターによって示されます。 値が指定されていない場合、8020 は既定で使用されます。  
-例:`LOCATION = 'hdfs://10.10.10.10:8020'`
+例: `LOCATION = 'hdfs://10.10.10.10:8020'`
 
 Hadoop と Azure blob ストレージ、Azure blob ストレージに接続するための URI を指定します。  
 `LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
 wasb [s]: Azure blob ストレージのプロトコルを指定します。 [S] は省略可能であり、セキュリティ保護された SSL 接続を指定します。SQL Server から送信されたデータは SSL プロトコルを使って安全に暗号化されます。 'Wasb' ではなく ' wasbs' を使用を強くお勧めします。 場所は wasb [s] ではなく asv [s] を使用できることに注意してください。 Asv [s] 構文は推奨されていません、将来のリリースでは削除されます。  
 コンテナー: Azure blob ストレージ コンテナーの名前を指定します。 ドメインのストレージ アカウントのルート コンテナーを指定するには、コンテナー名ではなく、ドメイン名を使用します。 ルート コンテナーは、データをバックアップ コンテナーに書き込むことはできませんのでは読み取り専用です。  
 account_name: Azure のストレージ アカウントの完全修飾ドメイン名 (FQDN) です。  
-例:`LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
+例: `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
 
 Azure Data Lake Store には、場所は、Azure Data Lake Store に接続するための URI を指定します。
 
@@ -202,7 +202,7 @@ RDBMS のステップ バイ ステップ チュートリアルでは、次を�
 使用して、使用する資格情報を作成する必要があります`SHARED ACCESS SIGNATURE`id として。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。 Blob ストレージへのアクセスの例は、の例 F を参照してください。 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)です。 
 
   
- RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*ポート*]'  
+ RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  
  Hadoop のリソース マネージャーの場所を指定します。 指定した場合、クエリ オプティマイザーは MapReduce で Hadoop の計算の機能を使用して、PolyBase クエリのデータを事前処理コストベースの判断になります。 述語のプッシュ ダウンが呼び出されると、この Hadoop と SQL の間で転送されるデータ量を大幅に削減し、クエリのパフォーマンス向上します。  
   
  これは、指定しない場合、PolyBase クエリの計算を Hadoop にプッシュが無効です。  
@@ -256,7 +256,7 @@ Hadoop ディストリビューションと各接続値でサポートされて�
     RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8032'  
     ```  
   
- 資格情報 = *credential_name*  
+ CREDENTIAL = *credential_name*  
  外部データ ソースへの認証の資格情報をデータベース スコープを指定します。 例については、次を参照してください。 [C. が Azure blob ストレージの外部データ ソースを作成する](../../t-sql/statements/create-external-data-source-transact-sql.md#credential)です。 資格情報を作成するを参照してください。[資格情報の作成 (TRANSACT-SQL)](../../t-sql/statements/create-credential-transact-sql.md)です。 資格情報が匿名アクセスを許可するパブリック データ セットに必要ないことに注意してください。 
   
  DATABASE_NAME = *'QueryDatabaseName'*  
@@ -276,7 +276,7 @@ Hadoop ディストリビューションと各接続値でサポートされて�
   
 -   外部データ ソースと外部のファイル形式を参照する外部テーブルです。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  SQL データ ウェアハウス、SQL Server、AP 2016 および SQL DB 内のデータベースに対する CONTROL 権限が必要です。
 
 > [!IMPORTANT]  
@@ -308,7 +308,7 @@ Hadoop NameNode フェールオーバーが発生した場合の成功の PolyBa
 ### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. Hadoop を参照する外部データ ソースを作成します。  
 Hortonworks または Cloudera Hadoop クラスターを参照する外部データ ソースを作成するには、マシン名または Hadoop Namenode とポートの IP アドレスを指定します。  
   
-```tsql  
+```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -320,7 +320,7 @@ WITH (
 ### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>B. プッシュ ダウンを有効になっている Hadoop を参照する外部データ ソースを作成します。  
 PolyBase クエリの Hadoop にプッシュ ダウン計算を有効にする RESOURCE_MANAGER_LOCATION オプションを指定します。 有効にすると、PolyBase はコストベースの判断を使用して、クエリの計算を Hadoop にプッシュする必要がありますか、SQL Server で、クエリの処理にすべてのデータを移動するかを判断します。
   
-```tsql  
+```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -333,7 +333,7 @@ WITH (
 ###  <a name="credential"></a> C. Kerberos でセキュリティ保護された Hadoop を参照する外部データ ソースを作成します。  
 Hadoop クラスターが Kerberos でセキュリティ保護されたことを確認するには、Hadoop core-site.xml hadoop.security.authentication プロパティの値を確認します。 Kerberos でセキュリティ保護された Hadoop クラスターを参照するには、Kerberos のユーザー名とパスワードを含むデータベース スコープ資格情報を指定する必要があります。 データベース マスター _ キーはデータベース スコープの資格情報シークレットの暗号化に使用されます。 
   
-```tsql  
+```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
 
@@ -380,7 +380,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. シャードのマップ manager の外部データ ソースを作成します。
 SHARD_MAP_MANAGER を参照する外部データ ソースを作成するには、Azure SQL Database または Azure の仮想マシンで SQL Server データベースにシャードのマップ manager をホストする論理サーバー名を指定します。
 
-```tsql
+```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL ElasticDBQueryCred  
@@ -400,7 +400,7 @@ WITH (
 ### <a name="f-create-an-rdbms-external-data-source"></a>F. RDBMS の外部データ ソースを作成します。
 RDBMS を参照する外部データ ソースを作成するには、Azure SQL データベースでリモート データベースの論理サーバー名を指定します。
 
-```tsql
+```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL SQL_Credential  
@@ -421,7 +421,7 @@ WITH (
 ### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. Azure Data Lake Store を参照する外部データ ソースを作成します。
 Azure Data lake Store の接続は、ADLS URI と、Azure のアクティブなディレクトリ アプリケーションのサービス プリンシパルに基づいています。 このアプリケーションを作成するドキュメントはあります[Active Directory を使用してデータ lake store 認証](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)です。
 
-```tsql
+```sql
 -- If you do not have a Master Key on your DW you will need to create one.
 CREATE MASTER KEY
 
@@ -444,7 +444,7 @@ WITH (TYPE = HADOOP,
 ### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>H. プッシュ ダウンを有効になっている Hadoop を参照する外部データ ソースを作成します。
 PolyBase クエリの Hadoop にプッシュ ダウン計算を有効にする JOB_TRACKER_LOCATION オプションを指定します。 有効にすると、PolyBase はコストベースの判断を使用して、クエリの計算を Hadoop にプッシュする必要がありますか、SQL Server で、クエリの処理にすべてのデータを移動するかを判断します。 
 
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -458,7 +458,7 @@ WITH (
 
 この例では、外部データ ソースは、Azure のストレージ アカウント名 myaccount の下にある dailylogs と呼ばれる Azure blob ストレージ コンテナーはします。 Azure ストレージの外部データ ソースがデータ転送だけ、述語のプッシュ ダウンをサポートしていません。
 
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
         TYPE = HADOOP, 
         LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'
@@ -469,7 +469,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. 一括操作が Azure Blob ストレージからデータを取得する外部データ ソースを作成します。   
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]」を参照してください。   
 一括操作を使用して次のデータ ソースを使用して[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)または[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)です。 使用して、使用する資格情報を作成する必要があります`SHARED ACCESS SIGNATURE`id として。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,

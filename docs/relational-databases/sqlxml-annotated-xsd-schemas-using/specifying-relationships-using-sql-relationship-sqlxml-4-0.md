@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -30,19 +31,20 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce5968efc9238e44be3d66b2533da8951e28c907
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb997dc9775115708cfd5e39162dfd8d474d2838
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>sql:relationship を使用した、リレーションシップの指定 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]XML ドキュメント内の要素を関連付けることができます。 要素は階層的に入れ子にでき、要素間に ID、IDREF、または IDREFS のリレーションシップを指定することができます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XML ドキュメント内の要素は関連付けることができます。 要素は階層的に入れ子にでき、要素間に ID、IDREF、または IDREFS のリレーションシップを指定することができます。  
   
  たとえば、XSD スキーマで、 **\<顧客 >**要素が含まれます**\<順序 >**子要素です。 スキーマは、AdventureWorks データベースにマップされるとき、 **\<顧客 >**要素は Sales.Customer テーブルにマップされ、 **\<順序 >**要素にマップ、Sales.SalesOrderHeader テーブルです。 これらの基になるテーブル、Sales.Customer および Sales.SalesOrderHeader、は顧客が注文を行うために関連します。 ここで、Sales.SalesOrderHeader テーブル内の CustomerID は、Sales.Customer テーブル内の CustomerID 主キーを参照する外部キーです。 使用してマッピング スキーマで要素間のリレーションシップを確立することができます、 **sql:relationship**注釈。  
   
@@ -62,13 +64,13 @@ ms.lasthandoff: 11/17/2017
  **Parent**  
  親リレーション (テーブル) を指定します。 これは省略可能な属性です。この属性を指定しない場合、親テーブル名はドキュメント内の子階層の情報から取得されます。 スキーマを使用して、同じ 2 つの親子階層を指定する場合 **\<sql:relationship >**別の親要素の親属性指定しないが、  **\<sql:リレーションシップ >**です。 この情報はスキーマ内の階層から取得されます。  
   
- **親キー**  
+ **parent-key**  
  親の親キーを指定します。 親キーが複数の列で構成される場合は、値をスペースで区切って指定します。 複数列キーに指定される値と、それに対応する子キーに指定される値の間では、位置的なマッピングが行われます。  
   
  **子**  
  子リレーション (テーブル) を指定します。  
   
- **子キー**  
+ **child-key**  
  親の parent-key を参照する子の、子キーを指定します。 子キーが複数の属性 (列) で構成される場合、child-key の値は、スペースで区切って指定します。 複数列キーに指定される値と、それに対応する親キーに指定される値の間では、位置的なマッピングが行われます。  
   
  **逆の操作**  
@@ -390,9 +392,9 @@ ms.lasthandoff: 11/17/2017
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. 複数の要素に sql:relationship を指定する  
  この例では、注釈付き XSD スキーマを含む、 **\<顧客 >**、 **\<順序 >**、および **\<OrderDetail >**要素です。  
   
- **\<順序 >**要素の子要素、 **\<顧客 >**要素。 **\<sql:relationship >**で指定された、 **\<順序 >**子要素ですしたがって、顧客の注文はの子要素として表示されます。 **\<顧客 >。**.  
+ **\<順序 >**要素の子要素、 **\<顧客 >**要素。 **\<sql:relationship >**で指定された、 **\<順序 >**子要素ですしたがって、顧客の注文はの子要素として表示されます。 **\<顧客 >**。  
   
- **\<順序 >**要素が含まれています、  **\<OrderDetail >**子要素です。 **\<sql:relationship >**で指定された **\<OrderDetail >**子要素、その子要素として注文に関連する注文の詳細が表示されるように**\<順序>**要素。  
+ **\<順序 >**要素が含まれています、  **\<OrderDetail >**子要素です。 **\<sql:relationship >**で指定された **\<OrderDetail >**子要素、その子要素として注文に関連する注文の詳細が表示されるように**\<順序 >**要素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

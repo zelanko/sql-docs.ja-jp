@@ -8,23 +8,25 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.savedtspackage.f1
+f1_keywords:
+- sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b938ef910a1c1e8c302529364ab6cfddfec54fb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f20252884bd2adc8003603107ed4efbd45c01ca9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>[SSIS パッケージの保存] (SQL Server インポートおよびエクスポート ウィザード)
+# <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>[SSIS パッケージの保存]\(SQL Server インポートおよびエクスポート ウィザード)
   **[パッケージの保存および実行]** ページで、設定を SQL Server Integration Services (SSIS) パッケージとして保存することを指定した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードは **[SSIS パッケージの保存]** を表示します。 このページでは、ウィザードで作成されたパッケージを保存するための追加オプションを指定します。  
 
 **[SSIS パッケージの保存]** ページに表示されるオプションは、SQL Server またはファイル システムにパッケージを保存するために **[パッケージの保存および実行]** ページで以前に行った選択によって異なります。 **[パッケージの保存および実行]** ページについては、「 [Save and Run Package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)」 ([パッケージの保存および実行]) を参照してください。
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/20/2017
  **名前**  
  パッケージの一意な名前を指定します。  
   
- **説明**  
+ **[説明]**  
  パッケージの説明を指定します。 パッケージを見るだけでその内容がわかり、保守が容易になるように、パッケージの目的について記述することをお勧めします。  
   
  **ターゲット**  
@@ -66,7 +68,7 @@ Windows 統合認証を使用してサーバーに接続します。 これは�
  **SQL Server 認証を使用する**  
 SQL Server 認証を使用してサーバーに接続します。  
   
- **ユーザー名**  
+ **User name**  
 SQL Server 認証を指定した場合は、ユーザー名を入力します。  
   
  **Password**  
@@ -80,7 +82,7 @@ SQL Server 認証を指定した場合は、パスワードを入力します。
 
 ## <a name="options-to-specify-target--file-system"></a>指定するオプション (ターゲット = ファイル システム)
 
- **ファイル名**  
+ **[ファイル名]**  
  保存先ファイルのパスとファイル名を入力するか、**[参照]** ボタンを使用して保存先を指定します。  
   
 > [!TIP]
@@ -88,7 +90,7 @@ SQL Server 認証を指定した場合は、パスワードを入力します。
 >   
 >  パッケージ ファイルの保存場所を忘れないでください。  
   
- **参照**  
+ **[参照]**  
  必要に応じて、**[パッケージの保存]** ダイアログ ボックスで保存先ファイルのパスを参照して選択します。  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>パッケージを保存するためのオプションの 2 つのページについて  

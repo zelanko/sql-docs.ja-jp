@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a7820a1592d8d7f2b600e8d53f59faf625d60bd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 902a28f31abdc9dd501c6352acd4b2bee4042fd0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,12 +85,12 @@ sp_dropmergearticle [ @publication= ] 'publication'
   
  実行する**sp_dropmergearticle**パブリケーションからアーティクルを削除する削除されませんオブジェクトから、パブリケーション データベースまたはサブスクリプション データベースから対応するオブジェクト。 必要であれば `DROP <object>` を使用して、手動でこれらのオブジェクトを削除します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_dropmergearticle**です。  
   
 ## <a name="example"></a>例  
   
-```tsql  
+```sql  
 DECLARE @publication AS sysname;  
 DECLARE @article1 AS sysname;  
 DECLARE @article2 AS sysname;  
@@ -111,7 +111,7 @@ EXEC sp_dropmergearticle
 GO  
 ```  
   
-```tsql  
+```sql  
 DECLARE @publication AS sysname;  
 DECLARE @table1 AS sysname;  
 DECLARE @table2 AS sysname;  

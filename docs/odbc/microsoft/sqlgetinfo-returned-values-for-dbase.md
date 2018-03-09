@@ -5,10 +5,11 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - DBase driver [ODBC], SQLGetInfo
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a073881ff2e298276fe2c9213bbf593106697f57
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dab32294edbe982817a03cc81c33d6623ff973ab
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>DBASE の SQLGetInfo 返される値
 次の表に、C 言語 # を defines、 *fInfoType*引数と、対応する値によって返される**SQLGetInfo**です。 この情報は、表示されている C 言語を渡すことによって取得できます #defines **SQLGetInfo**で、 *fInfoType*引数。 によって返される値の詳細については**SQLGetInfo**を参照してください、 *ODBC プログラマ リファレンス*です。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  ここで**SQLGetInfo**ビットマスクを 32 ビット、垂直バー (&#124;) を返します OR 演算を表します。  
   
-|情報の種類|戻り値|  
+|InfoType|戻り値|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_CATALOG_USAGE|[複数の値]|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
-|SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NON_|  
+|SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NON_NULL|  
 |SQL_CONVERT_BIGINT|0|  
 |SQL_CONVERT_BINARY|[複数の値]|  
 |SQL_CONVERT_BIT|0|  
@@ -113,7 +114,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_DROP_VIEW|SQL_DV_DROP_VIEW|  
 |SQL_EXPRESSIONS_IN_ORDERBY|"Y"|  
 |SQL_FILE_USAGE|SQL_FILE_TABLE|  
-|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT、|  
+|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT|  
 |SQL_GETDATA_EXTENSIONS|[複数の値]|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_UPPER (修飾子が返されます大文字小文字混在で Windows NT は、ディレクトリを特定できるようにします。)|  
@@ -147,7 +148,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|[複数の値]|  
-|SQL_ODBC_SAG_CLI_ 準拠|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|ドライバー マネージャーから|  
 |SQL_OJ_CAPABILITIES|[複数の値]|  

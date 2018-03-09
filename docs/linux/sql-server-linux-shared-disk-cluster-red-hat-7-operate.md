@@ -1,34 +1,34 @@
----
+﻿---
 title: "SQL Server の Red Hat Enterprise Linux 共有クラスターを運用 |Microsoft ドキュメント"
 description: "SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを構成することによって高可用性を実装します。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: 439f906eaec98fe6b67c15842441f598ee6d8da5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 36834e634f26e7918b6577379c24b9914d41f308
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを運用します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このドキュメントでは、Red Hat Enterprise Linux、共有ディスク フェールオーバー クラスターで SQL Server を次のタスクを実行する方法について説明します。
 
 - 手動でフェールオーバー クラスター
-- フェールオーバー クラスターの SQL Server サービスを監視します。
+- フェールオーバー クラスターの SQL Server サービスを監視します
 - クラスター ノードを追加します。
 - クラスター ノードを削除します。
 - SQL Server リソースを監視する頻度を変更します。
@@ -37,11 +37,11 @@ ms.lasthandoff: 12/01/2017
 
 クラスタ リングの層は [Pacemaker](http://clusterlabs.org/)の上に構築されたRed Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)をベースにしています。Corosync と Pacemaker はクラスター通信およびリソース管理を調整します。SQL Server のインスタンスはいずれかのノードでアクティブです。
 
-次の図は、SQL Server でのLinux クラスターのコンポーネントを示しています。 
+次の図は、SQL Server での Linux クラスターのコンポーネントを示しています。 
 
 ![Red Hat Enterprise Linux 7 ディスク SQL クラスターの共有](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-クラスターの構成、リソース エージェント オプション、および管理の詳細については、[RHEL リファレンス ドキュメント](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)を参照してください。
+クラスターの構成、リソース エージェント オプション、および管理の詳細については、[RHEL リファレンス ドキュメント](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html) を参照してください。
 
 ## <a name = "failManual"></a>手動によるクラスターのフェールオーバします
 
@@ -52,7 +52,7 @@ sudo pcs resource move <sqlResourceName> <targetNodeName>
 sudo pcs resource clear <sqlResourceName> 
 ```
 
-次の例では**mssqlha**リソースを**sqlfcivm2**という名前のノードに移動し、その後そのリソースが別のノードに移動できるように制約を削除します。  
+次の例では **mssqlha** リソースを **sqlfcivm2**という名前のノードに移動し、その後そのリソースが別のノードに移動できるように制約を削除します。  
 
 ```bash
 sudo pcs resource move mssqlha sqlfcivm2 
@@ -73,7 +73,7 @@ sudo pcs status
 sudo crm_mon 
 ```
 
-`/var/log/cluster/corosync.log`にあるリソースのエージェント ログを表示します。
+`/var/log/cluster/corosync.log` にあるリソースのエージェント ログを表示します。
 
 ## <a name="add-a-node-to-a-cluster"></a>クラスターにノードを追加します
 
@@ -89,7 +89,7 @@ sudo crm_mon
    sudo vi /etc/hosts
    ```
 
-   次の`/etc/hosts`の例では、`sqlfcivm1`、 `sqlfcivm2`、および`sqlfcivm3`という3 つのノードを追加しています。
+   次の `/etc/hosts` の例では、`sqlfcivm1`、 `sqlfcivm2`、および `sqlfcivm3` という3 つのノードを追加しています。
 
    ```
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -105,13 +105,13 @@ sudo crm_mon
 
 1. 共有の場所にデータベース ファイル ディレクトリをマウントする手順に従います。
 
-   NFS サーバーで、`nfs-utils`をインストールします。
+   NFS サーバーで、`nfs-utils` をインストールします。
 
    ```bash
    sudo yum -y install nfs-utils 
    ``` 
 
-   クライアントと NFS サーバー上でファイアウォールを開きます。
+   クライアントと NFS サーバー上でファイアウォールを開きます。 
 
    ```bash
    sudo firewall-cmd --permanent --add-service=nfs
@@ -126,7 +126,7 @@ sudo crm_mon
    <IP OF NFS SERVER>:<shared_storage_path> <database_files_directory_path> nfs timeo=14,intr
    ```
 
-   変更を有効にするために`mount -a`を実行します。
+   変更を有効にするために `mount -a` を実行します。
    
 1. 新しいノードで、 Pacemaker ログインのための SQL Server のユーザー名とパスワードを格納するファイルを作成します。 次のコマンドで、このファイルを作成し設定します。
 
@@ -199,7 +199,7 @@ sudo crm_mon
 sudo pcs    cluster node remove <nodeName>  
 ```
 
-## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>sqlservr リソース監視の間隔の頻度を変更する。
+## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>sqlservr リソース監視の間隔の頻度を変更する
 
 ```bash
 sudo pcs    resource op monitor interval=<interval>s <sqlResourceName> 
@@ -218,13 +218,13 @@ sudo pcs    resource op monitor interval=2s mssqlha
 | ----- | -----
 | Corosync | クォーラムのメンバーシップとクラスター ノード間のメッセージングを提供します。
 | Pacemaker | Corosync 上に存在し、リソースのステート マシンを提供します。 
-| PCSD | `pcs`ツールを通し、Pacemaker と Corosync の両方を管理します。
+| PCSD | `pcs` ツールを通し、Pacemaker と Corosync の両方を管理します。
 
-`pcs`ツールを使用するためには、PCSDを実行している必要あります。 
+`pcs` ツールを使用するためには、PCSDを実行している必要あります。 
 
 ### <a name="current-cluster-status"></a>クラスターの現在の状態 
 
-`sudo pcs status`は、各ノードのクラスター、クォーラム、ノード、リソース、およびデーモンの状態に関する基本的な情報を返します。 
+`sudo pcs status` は、各ノードのクラスター、クォーラム、ノード、リソース、およびデーモンの状態に関する基本的な情報を返します。 
 
 正常なペース クォーラム出力の例は次のようになります。
 
@@ -251,21 +251,21 @@ corosync: active/disabled
 pacemaker: active/enabled 
 ```
 
-例では、`partition with quorum`はノードのマジョリティ クォーラムがオンラインであることを意味します。 クラスターがノード マジョリティ クォーラムを失った場合、`pcs status`は`partition WITHOUT quorum`を返し、すべてのリソースが停止されます。
+例では、`partition with quorum` はノードのマジョリティ クォーラムがオンラインであることを意味します。 クラスターがノード マジョリティ クォーラムを失った場合、`pcs status` は `partition WITHOUT quorum` を返し、すべてのリソースが停止されます。 
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]`はクラスターに現在参加しているすべてのノードの名前を返します。 参加しているノードが一つもない場合、`pcs status`は`OFFLINE: [<nodename>]`返します。
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` はクラスターに現在参加しているすべてのノードの名前を返します。 参加しているノードが一つもない場合、`pcs status` は `OFFLINE: [<nodename>]` 返します。
 
-`PCSD Status`はクラスターの各ノードの状態を示しています。
+`PCSD Status` はクラスターの各ノードの状態を示しています。
 
-### <a name="reasons-why-a-node-may-be-offline"></a>ノードがオフラインである理由 
+### <a name="reasons-why-a-node-may-be-offline"></a>ノードがオフラインである理由
 
 ノードがオフラインのときは、次の項目を確認します。
 
 - **ファイアウォール**
 
-    Pacemaker ですべてのノードが通信できるように、すべてのノードで次のポートが開かれている必要があります。
+    Pacemaker ですべてのノードが通信できるように、で次のポートが開かれている必要があります。
     
-    - * * TCP: 2224 3121、21064
+    - **TCP: 2224, 3121, 21064
 
 - **Pacemaker および Corosync サービスが実行されているか**
 
@@ -275,7 +275,7 @@ pacemaker: active/enabled
 
 ## <a name="additional-resources"></a>その他のリソース
 
-* Pacemaker の[クラスター入門](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf)
+* Pacemaker の [クラスター入門](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf)
 
 ## <a name="next-steps"></a>次の手順
 

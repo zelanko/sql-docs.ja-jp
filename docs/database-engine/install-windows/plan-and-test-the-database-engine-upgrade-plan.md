@@ -8,32 +8,36 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: ef0de3c547ac843807bf9e8e906ea19fa1e3a5b5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: a10e7d35aa5a72f9dcc7ba34b11b6486fb9ac1cf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>データベース エンジンのアップグレード計画の策定およびテスト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のアップグレードを成功させるには、どんな手法であろうと、適切な計画を立てる必要があります。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のアップグレードを成功させるには、どんな手法であろうと、適切な計画を立てる必要があります。  
   
 ## <a name="release-notes-and-known-upgrade-issues"></a>リリース ノートとアップグレードの既知の問題  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] をアップグレードする前に次を確認してください。
 
 - [SQL Server 2017 リリース ノート](../../sql-server/sql-server-2017-release-notes.md) 
 - [SQL Server 2016 リリース ノート](../../sql-server/sql-server-2016-release-notes.md) 
-- [SQL Server データベース エンジンの旧バージョンとの互換性](../../database-engine/sql-server-database-engine-backward-compatibility.md)トピック。  
+- 「[SQL Server データベース エンジンの旧バージョンとの互換性](../../database-engine/sql-server-database-engine-backward-compatibility.md)」の記事。  
   
 ## <a name="pre-upgrade-planning-checklist"></a>アップグレード前の計画チェックリスト  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]をアップグレードする前に、次のチェックリストと関連するトピックを確認します。 これらのトピックは、アップグレードの方法に関係なく、すべてのアップグレードに適用され、ローリング アップグレード、新しいインストールのアップグレード、またはインプレース アップグレードの中から最適なアップグレード方法を決定するのに役立ちます。 たとえば、オペレーティング システムのアップグレード、SQL Server 2005 からのアップグレード、または SQL Server の 32 ビット バージョンからアップグレードの場合、インプレース アップグレードまたはローリング アップグレードは実行できない場合があります。 デシジョン ツリーについては、「 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)」を参照してください。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]をアップグレードする前に、次のチェックリストと関連する記事を確認します。 これらの記事は、アップグレードの方法に関係なく、すべてのアップグレードに適用され、ローリング アップグレード、新しいインストールのアップグレード、またはインプレース アップグレードの中から最適なアップグレード方法を決定するのに役立ちます。 たとえば、オペレーティング システムのアップグレード、SQL Server 2005 からのアップグレード、または SQL Server の 32 ビット バージョンからアップグレードの場合、インプレース アップグレードまたはローリング アップグレードは実行できない場合があります。 デシジョン ツリーについては、「 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)」を参照してください。  
   
 -   **ハードウェアとソフトウェアの要件:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールするためのハードウェアおよびソフトウェア要件を確認してください。 これらの要件は、「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」に掲載されています。 アップグレードの計画サイクルの一環として、ハードウェアのアップグレード (ハードウェアが新しくなると、速度も速くなり、またプロセッサ数の不足またはデータベースとサーバーの統合が原因でライセンス処理が低下する場合があります) およびオペレーティング システムのアップグレードを検討する必要があります。 この種のハードウェアとソフトウェアの変更は、アップグレード方法の種類の選定に影響を与えます。  
   
@@ -61,7 +65,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition から [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] をアップグレードする場合は、"Enterprise Edition: コアベースのライセンス" または "Enterprise Edition" を選択してください。 これらの Enterprise エディションは、ライセンス モードのみが異なります。 詳細については、「 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
   
--   **下位互換性:** [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] データベース エンジンの下位互換性に関するトピックを参照して、 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] とアップグレード対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンとの間の動作の違いについて確認します。 「 [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)」を参照してください。  
+-   **下位互換性:** [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] データベース エンジンの下位互換性に関する記事を参照して、[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] とアップグレード対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンとの間の動作の違いについて確認します。 「 [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)」を参照してください。  
   
 -   **アップグレード アドバイザー:**  アップグレード プロセスを妨げるおそれのある問題、または既存のスクリプトまたはアプリケーションを修正しなければならない可能性がある重大な変更については、 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] を実行して診断を行うことができます。 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] には、顧客が既存のシステムのアップグレード準備を行う際に役立つアップグレード アドバイザーの新しいバージョンが搭載されています。  このツールには、アップグレード完了後に、テーブルの拡張などの新機能を利用できるかどうかについて、既存のデータベースを調べる機能も含まれます。   
     [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]アップグレード アドバイザー  [こちら](https://www.microsoft.com/en-us/download/details.aspx?id=48119)からダウンロードできます。  

@@ -8,24 +8,26 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: XML
+dev_langs:
+- XML
 helpviewer_keywords:
 - XQuery, atomization
 - atomization [XQuery]
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b35d5e55a2d0e913586e7c60d161e4e2e85c6cb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 266a592860894ac255f7d01647e1f4caabbe88a3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="atomization-xquery"></a>アトミック化 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +52,7 @@ SELECT @x.query('sum(/ROOT/Location/@LaborHours)')
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- 暗黙のアトミック化の別の例として、算術演算子を使用するケースがあります。  **+** 演算子はアトミック値を必要と**data()** LaborHours 属性のアトミック値を取得するが暗黙的に適用します。 クエリがの Instructions 列に対して指定された、 **xml** ProductModel テーブルを入力します。 次のクエリでは、LaborHours 属性を 3 回返します。 このクエリでは、次の点に注意してください。  
+ 暗黙のアトミック化の別の例として、算術演算子を使用するケースがあります。 **+** 演算子はアトミック値を必要と**data()** LaborHours 属性のアトミック値を取得するが暗黙的に適用します。 クエリがの Instructions 列に対して指定された、 **xml** ProductModel テーブルを入力します。 次のクエリでは、LaborHours 属性を 3 回返します。 このクエリでは、次の点に注意してください。  
   
 -   OrignialLaborHours 属性の構築では、(`$WC/@LaborHours`) によって返される単一シーケンスにアトミック化が暗黙的に適用されます。 LaborHours 属性の型指定された値が、OrignialLaborHours に代入されます。  
   

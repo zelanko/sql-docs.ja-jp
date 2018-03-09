@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1fd45ef05d5469acb83a80e3463329976b9a843
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 96384f918239772c3c6a859f523c04a4d53ec4d0
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする
 SQL Server Integration Services (SSIS) パッケージとワークロードを Azure クラウドに移動できるようになりました。
@@ -54,7 +55,7 @@ SSIS IR は 1 回だけプロビジョニングを行う必要があります。
 
 Data Factory は、他の種類の Integration Runtime もサポートしています。 SSIS IR と他の種類の Integration Runtime の詳細については、「[Azure Data Factory の統合ランタイム](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime)」を参照してください。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 この記事で説明されている機能には、SQL Server 2017 または SQL Server 2016 は必要ありません。
 
 これらの機能には、次のバージョンの SQL Server Data Tools (SSDT) が必要です。
@@ -64,11 +65,11 @@ Data Factory は、他の種類の Integration Runtime もサポートしてい�
 > [!NOTE]
 > パッケージを Azure に配置すると、常に最新のパッケージ形式となるように、パッケージの配置ウィザードによってパッケージがアップグレードされます。
 
-Azure の前提条件の詳細については、「[SQL Server Integration Services パッケージを Azure にデプロイする](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)」を参照してください。
+Azure での前提条件の詳細については、「[Azure Data Factory UI を使用した Azure SSIS 統合ランタイムのプロビジョニング](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)」を参照してください。
 
 ## <a name="ssis-features-on-azure"></a>Azure の SSIS 機能
 
-SSISDB をホストする SQL Database のインスタンスをプロビジョニングする際に、SSIS 用 Azure Feature Pack と Access Redistributable もインストールされます。 これらのコンポーネントは、組み込みのコンポーネントでサポートされるデータ ソースの他に、**Excel ファイルと Access ファイル**、およびさまざまな **Azure** データ ソースへの接続を提供します。 この時点では、SSIS 用の**サード パーティ コンポーネント** (Attunity や SAP BI コンポーネントなど、Microsoft が提供するサード パーティ コンポーネントを含む) をインストールすることはできません。
+SSISDB をホストする SQL Database のインスタンスをプロビジョニングする際に、SSIS 用 Azure Feature Pack と Access Redistributable もインストールされます。 これらのコンポーネントは、組み込みのコンポーネントでサポートされるデータ ソースの他に、**Excel ファイルと Access ファイル**、およびさまざまな **Azure** データ ソースへの接続を提供します。 この時点では、SSIS 用の**サード パーティ コンポーネント** (Attunity がサポートする Oracle と Teradata のコンポーネント、SAP BI コンポーネントなど、Microsoft が提供するサード パーティ コンポーネントを含む) をインストールすることはできません。
 
 SSISDB をホストする **SQL Database の名前**が、SSDT および SSMS からパッケージを配置して管理する際に使用する 4 つの部分から成る名前の最初の部分になります: `<sql_database_name>.database.windows.net`。
 
@@ -81,7 +82,7 @@ Windows 認証を使用してクラウドから**オンプレミスのデータ 
 ## <a name="common-tasks"></a>よく使用するタスク
 
 ### <a name="provision"></a>プロビジョニング
-Azure で SSIS パッケージをデプロイして実行するには、事前に SSISDB カタログ データベースと Azure SSIS Integration Runtime をプロビジョニングする必要があります。 「[SQL Server Integration Services パッケージを Azure にデプロイする](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)」のプロビジョニングの手順に従います。
+Azure で SSIS パッケージをデプロイして実行するには、事前に SSISDB カタログ データベースと Azure SSIS Integration Runtime をプロビジョニングする必要があります。 次の記事のプロビジョニングの手順に従ってください: [Azure Data Factory UI を使用した Azure SSIS 統合ランタイムのプロビジョニング](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)
 
 ### <a name="deploy-and-run-packages"></a>パッケージの配置と実行
 SQL Database でプロジェクトの配置と実行は、使い慣れたツールやスクリプト作成オプションのいずれかを使用して行えます。
@@ -105,5 +106,5 @@ SQL Database に格納されたパッケージの実行をスケジュール設�
 
 ## <a name="next-steps"></a>次の手順
 Azure で SSIS ワークロードの使用を開始するには、次の記事を参照してください。
--   [SQL Server Integration Services パッケージを Azure にデプロイする](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
+-   [Azure Data Factory UI を使用した Azure SSIS 統合ランタイムのプロビジョニング](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)
 -   [Azure で SSIS パッケージを配置、実行、および監視する](ssis-azure-deploy-run-monitor-tutorial.md)

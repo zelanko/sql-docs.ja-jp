@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - fn_syscollector_get_execution_details_TSQL
 - fn_syscollector_get_execution_details
-dev_langs: TSQL
-helpviewer_keywords: fn_syscollector_get_execution_details function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- fn_syscollector_get_execution_details function
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd44ed098f4dbf15e529df6cbe4026d065dfa2a5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 98d6fd075e060b9c25863137eccdd1cd86b4c45e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fnsyscollectorgetexecutiondetails-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +51,7 @@ fn_syscollector_get_execution_details ( log_id )
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|説明|  
+|列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |id|**int**|ログ エントリの一意識別子。|  
 |イベント|**sysname**|ログ エントリを生成したイベントの名前。|  
@@ -63,11 +66,11 @@ fn_syscollector_get_execution_details ( log_id )
 |databytes|**image**|戻り値を識別するバイト配列。|  
 |message|**nvarchar**|イベントおよびイベントに関連する情報の説明。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  に対する SELECT 権限が必要です**dc_operator**です。  
   
 ## <a name="see-also"></a>参照  
  [パッケージで SQL Server データ ツールのログ記録を有効にします。](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
- [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
+ [データ コレクション](../../relational-databases/data-collection/data-collection.md)  
   
   

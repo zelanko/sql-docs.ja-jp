@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.bnrdevicecontents.f1
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 208c0d03e893fa50c33ae28e5533163af75a3ff9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 54eb5c1750289784ed7a15016b6047287fdb15a9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="device-contents-sql-server"></a>デバイス コンテンツ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このダイアログ ボックスは、バックアップ情報の表示に使用します。 ここでは、デバイス、メディア、メディア セット、バックアップ セットの情報が得られます。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [論理バックアップ デバイスのプロパティと内容の表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[メディア]**  
  バックアップ情報が保存されるディスク、またはテープのセットです。  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
  **名前**  
  メディア セットの名前を表示します。  
   
- **説明**  
+ **[説明]**  
  メディア セットの説明を表示します。  
   
  **[メディア ファミリ数]**  
@@ -58,16 +58,16 @@ ms.lasthandoff: 11/17/2017
  **[バックアップ セット]**  
  メディアに収められているバックアップ セットに関する情報を表示します。 バックアップ セットとは、正常に完了したバックアップ操作の結果です。バックアップ セットの内容は、一連のバックアップ デバイスのメディアに分散されます。  
   
-|[ヘッダー]|値|  
+|Header|値|  
 |------------|------------|  
 |**名前**|バックアップ セットの名前です。|  
 |**型**|実行されたバックアップの種類。[完全]、[差分]、[トランザクション ログ] のいずれかになります。|  
 |**コンポーネント**|バックアップされるコンポーネント。[データベース]、[ファイル]、または *[\<空白>]* (トランザクション ログ用) のいずれかを指定します。|  
 |**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前。|  
-|**データベース**|バックアップされたデータベースの名前。|  
+|**[データベース]**|バックアップされたデータベースの名前。|  
 |**[位置]**|ボリューム内でのバックアップ セットの位置。|  
 |**日付**|バックアップ操作が完了したときの日付と時刻。クライアントの地域設定で表示されます。|  
-|**サイズ**|バックアップ セットのサイズ (バイト単位) です。|  
+|**[サイズ]**|バックアップ セットのサイズ (バイト単位) です。|  
 |**[ユーザー名]**|バックアップ操作を実行したユーザーの名前。|  
 |**[有効期限]**|バックアップ セットの期限が切れる日付と時刻。|  
   

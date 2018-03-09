@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f926f312b1696b3fcc3433e6234dc0f44005b7cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1992b3fc6d6013859c1bdd46d119f633db46acfc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scrollable-cursors"></a>スクロール可能なカーソル
 最新のスクリーン ベースのアプリケーションでは、ユーザーは、データを前後をスクロールします。 このようなアプリケーションでは、以前にフェッチした行を返すことは問題です。 1 つの可能性を開始、カーソル閉じてから、必要な行がカーソルに到達するまでの行をフェッチします。 別の方法としては、結果セットを読み取り、それをローカルにキャッシュおよびアプリケーションでのスクロールを実装するのにです。 どちらが小さい結果セットにのみ使用し、後者が可能な実装が困難です。 良いソリューションは、使用する、*スクロール可能なカーソルは、*後ろに移動し、結果セットに転送することができます。  

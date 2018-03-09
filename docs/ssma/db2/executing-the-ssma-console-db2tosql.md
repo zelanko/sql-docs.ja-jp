@@ -1,30 +1,31 @@
 ---
 title: "SSMA コンソール (DB2ToSQL) を実行 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1346ccef45d9a8de619293da09a3d4a148bc9cf8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 55415d575aac34cdee2ed2acdb8c9ceaade6465c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>SSMA コンソール (DB2ToSQL) を実行します。
 Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実行し、SSMA 動作を制御できます。 次のセクションでは、同じを詳しく説明します。 コンソール アプリケーションは、このセクションで、列挙型として特定の標準的なスクリプト ファイルのコマンドを使用します。  
@@ -168,7 +169,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
   metabase="<source/target>"/>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <force-load>  
@@ -281,7 +282,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <generate-assessment-report  
@@ -353,7 +354,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <convert-schema  
@@ -419,7 +420,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 </migrate-data>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <migrate-data  
@@ -529,7 +530,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <synchronize-target  
@@ -538,7 +539,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
    object-type="<object-category>"/>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <synchronize-target>  
@@ -594,7 +595,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <refresh-from-database  
@@ -603,7 +604,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
    object-type="<object-category>"/>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <refresh-from-database>  
@@ -653,7 +654,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <save-as-script  
@@ -692,7 +693,7 @@ sql ステートメントの変換
   
 -   `write-summary-report-to`レポートを生成するパスを指定します。 フォルダー パスが示されているだけの場合、ファイルの名前で**ConvertSQLReport.XML**を作成します。 (省略可能な属性)  
   
-    レポートの作成が viz サブカテゴリの一覧をさらに 2。。、します。  
+    レポートの作成が viz サブカテゴリの一覧をさらに 2します..,:  
   
     -   -エラーの報告 (="true または false"、"false"(省略可能な属性) として既定値)。  
   
@@ -729,7 +730,7 @@ sql ステートメントの変換
   
 </convert-sql-statement>  
 ```  
-または  
+内の複数の  
   
 ```  
 <convert-sql-statement  
@@ -752,7 +753,7 @@ sql ステートメントの変換
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-または  
+内の複数の  
   
 ```  
 <convert-sql-statement  

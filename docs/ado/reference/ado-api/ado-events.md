@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - events [ADO]
 - ADO, events
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dec529bcbc7130ea29fac793a82a5979974f396e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4315048296c450e1365874e021725c8160612313
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-events"></a>ADO イベント
 |||  
@@ -47,7 +48,7 @@ ms.lasthandoff: 12/21/2017
 |[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|1 つまたは複数のレコード (行) の前に呼び出されます、 **Recordset**を変更します。|  
 |[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|保留中の操作を変更する前に呼び出す、 **Recordset**です。|  
 |[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)|接続を開始する前に呼び出されます。|  
-|[アクティビ ティー](../../../ado/reference/ado-api/willexecute-event-ado.md)|保留中のコマンドは、この接続上で実行し、により、営業案件を調べて、保留中の実行のパラメーターを変更する直前に呼び出されます。|  
+|[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|保留中のコマンドは、この接続上で実行し、により、営業案件を調べて、保留中の実行のパラメーターを変更する直前に呼び出されます。|  
 |[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|**WillMove**イベントが呼び出された*する前に*保留中の操作の現在の位置を変更する、 **Recordset**です。|  
   
 ## <a name="see-also"></a>参照  

@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26bba253f4e74b7d42f0bf6adf02f981234f7c92
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 20a65fb532fd8a37402c9ce09e6095907715d1f3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---connections-page"></a>サーバーのプロパティ - [接続] ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、接続オプションを表示したり変更したりできます。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
  **Default connection options**  
  次の表に示すような既定の接続オプションを指定します。  
   
-|構成オプション|説明|  
+|構成オプション|Description|  
 |--------------------------|-----------------|  
 |**[disable deferred constraint checking]**|中間制約チェックまたは遅延制約チェックを制御します。|  
 |**暗黙のトランザクション**|ステートメント実行時にトランザクションを暗黙的に開始するかどうかを制御します。|  

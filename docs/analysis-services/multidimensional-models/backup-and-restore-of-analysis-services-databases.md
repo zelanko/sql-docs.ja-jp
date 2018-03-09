@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,19 +23,20 @@ helpviewer_keywords:
 - restoring databases [Analysis Services]
 - recovery [Analysis Services]
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f750fc5c1c991b8cf4392d427855f583c478c028
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a3ca95b34e684fa5ec67d0dab4720020a0e4e883
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Analysis Services データベースのバックアップと復元
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]できますから回復するデータベースとそのオブジェクトの特定のポイントにできるようにバックアップと復元が含まれています。 また、バックアップと復元は、アップグレードされたサーバーへのデータベースの移行、サーバー間でのデータベースの移動、実稼働サーバーへのデータベースの配置を行うための有効な方法でもあります。 バックアップ計画をまだ確立しておらず、重要なデータを保持している場合は、データ復旧のために、できるだけ早く計画を作成して実行してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、特定の時点からデータベースとそのオブジェクトを復旧できるように、バックアップと復元機能が用意されています。 また、バックアップと復元は、アップグレードされたサーバーへのデータベースの移行、サーバー間でのデータベースの移動、実稼働サーバーへのデータベースの配置を行うための有効な方法でもあります。 バックアップ計画をまだ確立しておらず、重要なデータを保持している場合は、データ復旧のために、できるだけ早く計画を作成して実行してください。  
   
  バックアップと復元のコマンドは、配置済みの Analysis Services データベースで実行されます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のプロジェクトおよびソリューションの場合、ソース管理を使用して特定のバージョンのソース ファイルを復旧できるようにし、使用するソース管理システムのリポジトリのデータ復旧プランを作成する必要があります。  
   
@@ -76,7 +74,7 @@ ms.lasthandoff: 12/08/2017
  管理者は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのサイズにかかわらず、データベースを 1 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] バックアップ ファイル (.abf) にバックアップできます。 手順の詳細については、「 [Analysis Services データベースをバックアップする方法 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) 」と「 [Analysis Services データベースのバックアップの自動化 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]、の読み込みとクエリを実行するために使用[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]データ モデルを SharePoint 環境では、SharePoint コンテンツ データベースからそのモデルを読み込みます。 これらのコンテンツ データベースはリレーショナル データベースであり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース エンジン上で動作します。 このため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ モデルについては、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のバックアップと復元の方法はありません。 SharePoint コンテンツ用のディザスター リカバリー計画がある場合、その計画では、コンテンツ データベースに格納されている [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ モデルが対象となります。  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]は SharePoint 環境で [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ モデルの読み込みとクエリを実行する際に使用され、SharePoint コンテンツ データベースからそのモデルを読み込みます。 これらのコンテンツ データベースはリレーショナル データベースであり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース エンジン上で動作します。 このため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ モデルについては、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のバックアップと復元の方法はありません。 SharePoint コンテンツ用のディザスター リカバリー計画がある場合、その計画では、コンテンツ データベースに格納されている [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ モデルが対象となります。  
   
  **リモート パーティション**  
   

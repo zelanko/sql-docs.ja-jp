@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Migration Assistant for Access の概要 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: a862dae4fc4c6aafd5be1bebaabd028560de96b7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 92a7e496075cb7e42c09bd89a1f17e1b296b9946
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant for Access (AccessToSQL) の概要
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) のアクセスでは、すばやくアクセス使用するデータベース オブジェクトを変換することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Azure SQL DB オブジェクトに結果として得られるオブジェクトのアップロードまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB へのアクセスからデータを移行および[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB します。 かどうか必要に応じて、リンクすることもアクセス テーブルを[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]既存の Access のフロント エンド アプリケーションでの使用を継続できるように Azure SQL DB がテーブルまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB します。  
@@ -114,7 +114,7 @@ SSMA は 2 つのツールバー: プロジェクト ツールバー、および
 #### <a name="the-migration-toolbar"></a>移行ツールバー  
 移行のツールバーには、次のコマンドが含まれています。  
   
-|ボタン|関数|  
+|ボタン|機能|  
 |----------|------------|  
 |**変換、読み込み、および移行**|Access データベースを変換に変換されたオブジェクトを読み込みます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB にデータを移行および[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または 1 つの手順ですべての Azure SQL DB します。|  
 |**レポートを作成します。**|選択したアクセスのスキーマを変換[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB 構文し成功に変換されたを示すレポートを作成します。<br /><br />このコマンドは、オブジェクトがアクセス メタデータ エクスプ ローラーで選択した場合にのみ使用できます。|  
@@ -127,7 +127,7 @@ SSMA には、次のメニューが含まれています。
   
 |メニュー|Description|  
 |--------|---------------|  
-|**ファイル**|移行ウィザードは、プロジェクトでは、作業への接続の追加と Access データベース ファイルの削除のコマンドを含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB します。|  
+|**[最近使ったファイル]**|移行ウィザードは、プロジェクトでは、作業への接続の追加と Access データベース ファイルの削除のコマンドを含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB します。|  
 |**[編集]**|検索して、詳細ページで、コピーするなどのテキストの操作用のコマンドを含む[!INCLUDE[tsql](../../includes/tsql_md.md)]SQL の詳細ウィンドウ。 開くには、**管理ブックマーク**ダイアログで、[編集] メニューで、[ブックマークの管理] をクリックします。 ダイアログ ボックスで、既存のブックマークの一覧が表示されます。 ダイアログ ボックスの右側にあるボタンを使用するには、それらのブックマークを管理します。|  
 |**[表示]**|含まれています、**メタデータ エクスプ ローラーの同期**コマンド。 これにより、同期アクセス メタデータ エクスプ ローラーの間でオブジェクトと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB メタデータ エクスプ ローラー。 表示と非表示のコマンドを含む、**出力**と**エラー一覧**ペインおよびオプション**レイアウト**レイアウトを管理します。|  
 |**ツール**|レポートを作成、データをエクスポート、オブジェクトとデータの移行、テーブルをリンクするためのコマンドを格納し、グローバルへのアクセスとプロジェクトの設定 ダイアログ ボックスを提供します。|  

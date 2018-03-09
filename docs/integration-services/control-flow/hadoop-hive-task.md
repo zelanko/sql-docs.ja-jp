@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ssis.designer.hadoophivetask.f1
+f1_keywords:
+- sql13.ssis.designer.hadoophivetask.f1
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48fadf9351c58d93e157a8d3a46d6d962d1798d2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 66e0ac41dbc9015be94ec18180a5c8fa3932efe9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hadoop-hive-task"></a>Hadoop Hive Task
   Hadoop Hive Task は、Hadoop クラスターで Hive スクリプトを実行するために使用します。  
@@ -31,7 +33,7 @@ ms.lasthandoff: 11/20/2017
   
  ![[Hadoop Hive タスク エディター]](../../integration-services/control-flow/media/hadoop-hive-task.png "[Hadoop Hive タスク エディター]")  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[Hadoop Hive Task Editor]** (Hadoop Hive Task エディター) ダイアログ ボックスで、次のオプションを構成します。  
   
 |フィールド|Description|  

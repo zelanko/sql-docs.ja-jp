@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_schedulers_TSQL
 - sys.dm_os_schedulers
 - dm_os_schedulers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_schedulers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_schedulers dynamic management view
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
-caps.latest.revision: "55"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 738494bb7320248fa8616d381b4424fe0b055414
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: aa32726893d196cc4c2830e79703f5583d661793
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,11 +43,11 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|scheduler_address|**varbinary (8)**|スケジューラのメモリ アドレス。 NULL 値は許可されません。|  
+|scheduler_address|**varbinary(8)**|スケジューラのメモリ アドレス。 NULL 値は許可されません。|  
 |parent_node_id|**int**|スケジューラが属するノード (親ノード) の ID。 これは非均質メモリ アクセス (NUMA) ノードを表します。 NULL 値は許可されません。|  
 |scheduler_id|**int**|スケジューラの ID です。 定期的なクエリの実行に使用されるスケジューラにはすべて、1048576 未満の ID 番号が付いています。 Id が 1048576 以上スケジューラが内部で使用される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、専用管理者接続のスケジューラなどです。 NULL 値は許可されません。|  
 |cpu_id|**smallint**|スケジューラに割り当てられた CPU ID。<br /><br /> NULL 値は許可されません。<br /><br /> **注:** 255 は示しませんありませんアフィニティと同じ[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。 参照してください[sys.dm_os_threads &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)関係の詳細についてをします。|  
-|ステータス|**nvarchar (60)**|スケジューラの状態。 次の値のいずれかです。<br /><br /> 非オンライン<br />非オフライン<br />表示されているオンライン<br />表示されているオフライン<br />表示されているオンライン (DAC)<br />-HOT_ADDED<br /><br /> NULL 値は許可されません。<br /><br /> 非表示スケジューラは、内部的な要求の処理に使用される、[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。 VISIBLE スケジューラは、ユーザーの要求の処理に使用されます。<br /><br /> OFFLINE スケジューラは、関係マスクでオフラインになっているプロセッサにマップされます。そのため、要求の処理には使用されません。 ONLINE スケジューラは、関係マスクでオンラインになっているプロセッサにマップされ、スレッドの処理に使用されます。<br /><br /> DAC は、スケジューラが専用管理者接続で動作していることを示します。<br /><br /> HOT ADDED は、スケジューラがホット アド CPU イベントに応答して追加されたことを示します。|  
+|ステータス|**nvarchar(60)**|スケジューラの状態。 次の値のいずれかです。<br /><br /> 非オンライン<br />非オフライン<br />表示されているオンライン<br />表示されているオフライン<br />表示されているオンライン (DAC)<br />-   HOT_ADDED<br /><br /> NULL 値は許可されません。<br /><br /> 非表示スケジューラは、内部的な要求の処理に使用される、[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。 VISIBLE スケジューラは、ユーザーの要求の処理に使用されます。<br /><br /> OFFLINE スケジューラは、関係マスクでオフラインになっているプロセッサにマップされます。そのため、要求の処理には使用されません。 ONLINE スケジューラは、関係マスクでオンラインになっているプロセッサにマップされ、スレッドの処理に使用されます。<br /><br /> DAC は、スケジューラが専用管理者接続で動作していることを示します。<br /><br /> HOT ADDED は、スケジューラがホット アド CPU イベントに応答して追加されたことを示します。|  
 |is_online|**bit**|場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が構成されている、サーバーで使用可能なプロセッサの一部のみを使用する可能性が一部のスケジューラが、関係マスクに含まれていないプロセッサにマップされています。 これに該当する場合、この列には 0 が返されます。 この値は、スケジューラがクエリまたはバッチの処理に使用されていないことを意味します。<br /><br /> NULL 値は許可されません。|  
 |is_idle|**bit**|1 = スケジューラはアイドル状態です。 現在実行中のワーカーはありません。 NULL 値は許可されません。|  
 |preemptive_switches_count|**int**|スケジューラのワーカーがプリエンプティブ モードに切り替えられた回数。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部のコード (拡張ストアド プロシージャや分散クエリなど) を実行するには、スレッドを非プリエンプティブ スケジューラの制御外で実行する必要があります。 このとき、ワーカーはプリエンプティブ モードに切り替えられます。|  
@@ -60,13 +63,13 @@ ms.lasthandoff: 11/17/2017
 |yield_count|**int**|スケジューラの進行状況を示すために使用される内部値。 この値は、スケジューラ モニターで、このスケジューラのワーカーが予定どおりに他のワーカーに変更されるかどうかを確認するために使用されます。 ワーカーまたはタスクが新しいワーカーに移行するわけではありません。 NULL 値は許可されません。|  
 |last_timer_activity|**bigint**|前回、スケジューラのタイマー キューがスケジューラにより確認された時間 (CPU ティック単位)。 NULL 値は許可されません。|  
 |failed_to_create_worker|**bit**|スケジューラで新しいワーカーを作成できなかった場合は 1 になります。 これは通常、メモリ制約が原因で発生します。 NULL 値が許可されます。|  
-|active_worker_address|**varbinary (8)**|現在アクティブなワーカーのメモリ アドレス。 NULL 値が許可されます。 詳細については、次を参照してください。 [sys.dm_os_workers &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|memory_object_address|**varbinary (8)**|スケジューラのメモリ オブジェクトのメモリ アドレス。 Null を許容しません。|  
-|task_memory_object_address|**varbinary (8)**|タスクのメモリ オブジェクトのメモリ アドレス。 NULL 値は許可されません。 詳細については、次を参照してください。 [sys.dm_os_memory_objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
-|quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]SQLOS によって使用されるスケジューラ クォンタムを公開します。|  
-|pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|active_worker_address|**varbinary(8)**|現在アクティブなワーカーのメモリ アドレス。 NULL 値が許可されます。 詳細については、次を参照してください。 [sys.dm_os_workers &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。|  
+|memory_object_address|**varbinary(8)**|スケジューラのメモリ オブジェクトのメモリ アドレス。 Null を許容しません。|  
+|task_memory_object_address|**varbinary(8)**|タスクのメモリ オブジェクトのメモリ アドレス。 NULL 値は許可されません。 詳細については、次を参照してください。 [sys.dm_os_memory_objects &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。|  
+|quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] SQLOS によって使用されるスケジューラ クォンタムを公開します。|  
+|pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 階層が必要です、`VIEW DATABASE STATE`データベースの権限です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
   
@@ -144,7 +147,7 @@ active_workers_count work_queue_count
  次のクエリでは、負荷が高い表示スケジューラの状態を示します。このスケジューラでは、利用可能なワーカーの処理数を上回る要求が存在します。 この例では、256 のワーカーにタスクが割り当てられており、 一部のタスクはワーカーへの割り当てを待機中です。 実行可能なタスクの数が少ないということは、複数のタスクがリソースの待機中であることを意味します。  
   
 > [!NOTE]  
->  sys.dm_os_workers でクエリを実行すると、ワーカーの状態を確認できます。 詳細については、次を参照してください。 [sys.dm_os_workers &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).  
+>  sys.dm_os_workers でクエリを実行すると、ワーカーの状態を確認できます。 詳細については、次を参照してください。 [sys.dm_os_workers &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。  
   
  クエリを次に示します。  
   

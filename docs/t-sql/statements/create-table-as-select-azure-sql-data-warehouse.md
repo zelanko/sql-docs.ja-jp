@@ -8,21 +8,23 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 68cdce96ae6c8e6f98b3c6d922101c6f830ff208
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 429c2dc727d844c35943fa599e6fbcb911df04ac
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>テーブルとして選択 (Azure SQL データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -94,7 +96,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 
 ### <a name="table-distribution-options"></a>テーブルの配布オプション
 
-`DISTRIBUTION` = `HASH`( *distribution_column_name* ) |ROUND_ROBIN |レプリケート      
+`DISTRIBUTION` = `HASH` ( *distribution_column_name* ) | ROUND_ROBIN | REPLICATE      
 CTAS ステートメントは、配布オプションが必要ですし、既定値はありません。 これは、既定値を持つテーブルの作成と異なります。 
 
 詳細については、および最適なディストリビューション列を選択する方法を理解するには、「、[テーブル配布オプション](https://msdn.microsoft.com/library/mt203953/#TableDistributionOptions)テーブルの作成」セクション。 
@@ -111,15 +113,15 @@ CTAS ステートメントは、ソース テーブルがパーティション�
 ### <a name="select-options"></a>オプションを選択します
 Select ステートメントは、CTAS と CREATE TABLE の基本的な違いです。  
 
- `WITH`*common_table_expression*  
- 共通テーブル式 (CTE) と呼ばれる一時的な名前付き結果セットを指定します。 詳細については、次を参照してください。[で common_table_expression と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ `WITH` *common_table_expression*  
+ 共通テーブル式 (CTE) と呼ばれる一時的な名前付き結果セットを指定します。 詳細については、次を参照してください。[で common_table_expression と #40 です。TRANSACT-SQL と #41 です](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
- `SELECT`*select_criteria*  
+ `SELECT` *select_criteria*  
  SELECT ステートメントの結果を新しいテーブルを追加します。 *select_criteria*新しいテーブルにコピーするデータを決定する SELECT ステートメントの本文です。 SELECT ステートメントの概要については、次を参照してください[SELECT &#40;。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-transact-sql.md).  
   
 <a name="permissions-bk"></a>  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 CTAS 必要`SELECT`で参照されているすべてのオブジェクトに対する権限、 *select_criteria*です。
 
 テーブルを作成するアクセス許可は、次を参照してください。[権限](https://msdn.microsoft.com/library/mt203953/#Permissions)CREATE TABLE でします。 
@@ -724,7 +726,7 @@ from ctas_r
 
 格納されている結果の値が異なるです。 結果列に永続化された値が他の式で使用されるので、エラーは、さらに大きなになります。
 
-![CREATE TABLE AS SELECT の結果](../../t-sql/statements/media/create-table-as-select-results.png)
+![CREATE TABLE AS SELECT results](../../t-sql/statements/media/create-table-as-select-results.png)
 
 これは、データ移行のため特に重要です。 2 番目のクエリはより正確な記述しても問題があります。 データが異なることが、ソース システムと比較して、移行での整合性の質問につながります。 これは、「が正しくありません」の応答が実際には右側の 1 つをそれらのまれなケースのいずれかです。
 

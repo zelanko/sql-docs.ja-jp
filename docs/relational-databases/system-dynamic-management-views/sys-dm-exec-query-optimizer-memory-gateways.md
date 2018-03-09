@@ -9,7 +9,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,17 +18,19 @@ f1_keywords:
 - dm_exec_query_optimizer_memory_gateways
 - sys.dm_exec_query_optimizer_memory_gateways_TSQL
 - sys.dm_exec_query_optimizer_memory_gateways
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_optimizer_memory_gateways dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_optimizer_memory_gateways dynamic management view
 author: josack
 ms.author: josack
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf31a066798e1c88d0d6d475edda87f2df08ba05
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b65e22d1cd2f403e2ed3aa1bd1dc14faa90079b9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,11 +45,11 @@ ms.lasthandoff: 11/17/2017
 |**active_count**|**int**|現在アクティブなこのゲートのコンパイル数|
 |**waiter_count**|**int**|このゲートの待機中の数|
 |**threshold_factor**|**bigint**|クエリの最適化によって使用されるメモリの最大の部分を定義するしきい値の係数。  Small のゲートウェイの threshold_factor では、小規模のゲートウェイにアクセスする必要が前にクエリが 1 つのバイト単位で最大オプティマイザー メモリ使用量を示します。  中規模および大規模なゲートウェイの場合は、threshold_factor は、このゲートの使用できる合計サーバー メモリの一部を示しています。 ゲートのメモリ使用率のしきい値を計算するときに、除数として使用されます。|
-|**しきい値**|**bigint**|[次へ] のしきい値メモリのバイト。  アクセスするために、このゲートウェイに、メモリの消費がこのしきい値に達すると、クエリが必要です。  「-1」場合は、クエリは、このゲートウェイにアクセスする必要はありません。|
+|**threshold**|**bigint**|[次へ] のしきい値メモリのバイト。  アクセスするために、このゲートウェイに、メモリの消費がこのしきい値に達すると、クエリが必要です。  「-1」場合は、クエリは、このゲートウェイにアクセスする必要はありません。|
 |**is_active**|**bit**|かどうかを現在のゲートを渡すか、クエリが必要です。|
 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 SQL Server では、サーバーに対する VIEW SERVER STATE 権限が必要です。
 
 Azure SQL Database には、データベース内の VIEW DATABASE STATE 権限が必要です。

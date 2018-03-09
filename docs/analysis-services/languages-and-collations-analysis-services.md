@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: "Analysis Services のテスト"
@@ -26,14 +26,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7bb3fd81631b2e442cee440e3e0aa0a89c9e932
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 75a28b8a2e0d40ae453fce13058bb3cb53c0ea3e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>言語および照合順序 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]言語と照合順序によって提供されるサポート[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows オペレーティング システムです。 **Language** プロパティと **Collation** プロパティはインストール中、最初にインスタンス レベルで設定されますが、後でオブジェクト階層のさまざまなレベルで変更できます。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows オペレーティング システムが提供する言語と照合順序をサポートします。 **Language** プロパティと **Collation** プロパティはインストール中、最初にインスタンス レベルで設定されますが、後でオブジェクト階層のさまざまなレベルで変更できます。  
   
  多次元モデルの場合 (のみ)、データベースまたはキューブでこれらのプロパティを設定できます。キューブ内のオブジェクト用に作成した翻訳に設定することもできます。 表形式モデルでは、言語および照合順序はホスト オペレーティング システムから継承されます。  
   
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/08/2017
 ###  <a name="bkmk_lcid"></a> 言語プロパティの値はロケール識別子 (LCID)  
  有効な値には、ドロップダウン リストに表示される任意の LCID が含まれます。 Management Studio および SQL Server Data Tools では、LCID は同等の文字列で表されます。 同じ言語は、ツールに関係なく **Language** プロパティが公開される場所に表示されます。 同一の言語のリストを持つことで、モデル全体で翻訳のテストと実装に一貫性を持たせることができます。  
   
- Analysis Services には、言語が名前順に表示されますが、プロパティについて格納されている実際の値は LCID です。 言語プロパティをプログラムにより設定、または msmdsrv.ini ファイルで設定する場合は、 [ロケール識別子 (LCID)](http://en.wikipedia.org/wiki/Locale) を値として使用します。 LCID は、言語 ID、並べ替え ID、および特定の言語を識別する予約されたビットから構成される 32 ビット値です。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、LCID を使用して、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスおよびオブジェクトに選択された言語を指定します。  
+ Analysis Services には、言語が名前順に表示されますが、プロパティについて格納されている実際の値は LCID です。 言語プロパティをプログラムにより設定、または msmdsrv.ini ファイルで設定する場合は、 [ロケール識別子 (LCID)](http://en.wikipedia.org/wiki/Locale) を値として使用します。 LCID は、言語 ID、並べ替え ID、および特定の言語を識別する予約されたビットから構成される 32 ビット値です。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は LCID を使用して、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスとオブジェクトの選択言語を特定します。  
   
  16 進数または 10 進数のいずれかの形式を使用して、LCID を設定することができます。 **言語** プロパティの有効な値の例を、次にいくつか示します。  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_collations"></a> Analysis Services での照合順序のサポート  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、Windows (バージョン _90 および _100) およびバイナリ照合順序を排他的に使用します。 これには、従来の SQL Server の照合順序は使用されません。 キューブ内では、属性のレベルでの翻訳を除き、単一の照合順序が全体を通じて使用されます。 属性翻訳の定義の詳細については、「 [Analysis Services での翻訳のサポート](../analysis-services/translation-support-in-analysis-services.md)」を参照してください。  
   
- 照合順序は、2 種類の活字のある言語において、オブジェクト識別子を除くすべての文字列の大文字小文字の区別を制御します。 オブジェクト識別子で大文字と小文字を使用する場合は、オブジェクト識別子の大文字小文字の区別は、照合順序ではなく [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]によって決定されることをあらかじめご了承ください。 英語版のスクリプト内で構成されるオブジェクト識別子の場合、照合順序に関係なく、オブジェクト識別子の大文字小文字の区別は常に無視されます。 キリル語など、2 種類の活字を持つ言語は、逆の処理になります (常に大文字小文字を区別)。 詳細については、「 [グローバリゼーションのヒントとベスト プラクティス (Analysis Services)](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 」をご覧ください。  
+ 照合順序は、2 種類の活字のある言語において、オブジェクト識別子を除くすべての文字列の大文字小文字の区別を制御します。 オブジェクト識別子で大文字と小文字を使用する場合は、オブジェクト識別子の大文字小文字の区別は、照合順序ではなく [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]によって決定されることをあらかじめご了承ください。 英語版のスクリプト内で構成されるオブジェクト識別子の場合、照合順序に関係なく、オブジェクト識別子の大文字小文字の区別は常に無視されます。 キリル語など、2 種類の活字を持つ言語は、逆の処理になります (常に大文字小文字を区別)。 詳細については、「 [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 」をご覧ください。  
   
  Analysis Services での照合順序は、各サービス用に選択した並べ替えオプションでパリティを維持すると仮定した場合、SQL Server リレーショナル データベース エンジンの照合順序と互換性があります。 たとえば、リレーショナル データベースがアクセントを区別する場合、キューブを同じ方法で構成する必要があります。 照合順序の設定が分岐していると、問題が発生する可能性があります。 例と回避策については、「 [Unicode 文字列の空白は照合順序に基づいてさまざまな処理の結果が生成される](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx)」を参照してください。 照合順序とデータベース エンジンの詳細については、「 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
@@ -124,7 +126,7 @@ ms.lasthandoff: 12/08/2017
 |並べ替え順 (サフィックス)|並べ替え順の説明|  
 |---------------------------|----------------------------|  
 |Binary (_BIN) または BIN2 (_BIN2)|SQL Server には、古い BIN 照合順序と新しい BIN2 照合順序の 2 種類のバイナリ照合順序があります。 BIN2 照合順序では、すべての文字がコード ポイントに従って並び替えられます。 BIN 照合順序では、最初の文字だけがコード ポイントに従って並び替えられ、残りの文字はバイト値に従って並び替えられます (Intel プラットフォームはリトル エンディアン アーキテクチャであるため、Unicode コード文字は常にバイト スワップして格納されます)。<br /><br /> Unicode データ型のバイナリ照合順序では、データを並べ替える際にロケールが考慮されません。 たとえば、Unicode データに対して Latin_1_General_BIN と Japanese_BIN を使用した場合、並べ替え結果はどちらも同じになります。<br /><br /> バイナリ並べ替え順では、大文字と小文字が区別され、アクセントが区別されます。 また、バイナリは最速の並べ替え順です。|  
-|大文字と小文字を区別する (_CS)|大文字と小文字を区別します。 このオプションを選択すると、大文字より先に小文字が並べ替えられます。 大文字と小文字を区別しないことを明示的に設定するには、_CI と指定します。 照合順序に固有の大文字小文字の設定は、ディメンション、キューブ、およびその他のオブジェクトの ID など、オブジェクト識別子には適用されません。 詳細については、「 [グローバリゼーションのヒントとベスト プラクティス (Analysis Services)](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 」をご覧ください。|  
+|大文字と小文字を区別する (_CS)|大文字と小文字を区別します。 このオプションを選択すると、大文字より先に小文字が並べ替えられます。 大文字と小文字を区別しないことを明示的に設定するには、_CI と指定します。 照合順序に固有の大文字小文字の設定は、ディメンション、キューブ、およびその他のオブジェクトの ID など、オブジェクト識別子には適用されません。 詳細については、「 [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 」をご覧ください。|  
 |アクセントを区別する (_AS)|アクセントのある文字とアクセントのない文字を区別します。 たとえば、"a" と "&#xE1;" は等しくありません。 このオプションが選択されていない場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、アクセントのある文字とアクセントのない文字が並べ替えで同じものと見なされます。 アクセントを区別しないことを明示的に設定するには、_AI と指定します。|  
 |かなを区別する (_KS)|ひらがなとカタカナという日本語の 2 種類のかな文字を区別します。 このオプションが選択されていない場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、ひらがなとカタカナが並べ替えで同じものと見なされます。 かなを区別しない並べ替えには、並べ替え順のサフィックスはありません。|  
 |文字幅を区別する (_WS)|1 バイト文字と 2 バイト文字として表現された同じ文字を区別します。 このオプションが選択されていない場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、同じ文字の 1 バイト表現と 2 バイト表現が並べ替えで同じものと見なされます。 文字幅を区別しない並べ替えには、並べ替え順のサフィックスはありません。|  
@@ -140,7 +142,7 @@ ms.lasthandoff: 12/08/2017
   
  SQL Server Management Studio または AMO PowerShell を使用して、サーバー レベルの既定の言語または照合順序を変更することができます。 または、変更、 **\<言語 >**と **\<CollationName >**言語の LCID を指定する、msmdsrv.ini ファイルで設定します。  
   
-1.  Management Studio で、サーバー名を右クリックして、 **[プロパティ]** | **[言語/照合順序]**と選択します。  
+1.  Management Studio で、サーバー名を右クリックして、**[プロパティ]** | **[言語/照合順序]** と選択します。  
   
 2.  並べ替えオプションを選択します。 **[バイナリ]** または **[バイナリ 2]** のいずれかを選択するには、まず **[アクセントの区別]** のチェック ボックスをオフにします。  
   
@@ -184,6 +186,6 @@ ms.lasthandoff: 12/08/2017
 ## <a name="see-also"></a>参照  
  [Analysis Services のグローバリゼーションのシナリオ](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [グローバリゼーションのヒントとベスト プラクティス (&) #40 です。Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
- [照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

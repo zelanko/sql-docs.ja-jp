@@ -7,25 +7,26 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: 46babd8a-a331-44fc-bbd6-24daf58865e1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: aa4bb7404e5469dd4331cca865fbd027ea631a8f
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 835e7d4901fc3d58edfedaea4474e9b523b71620
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="predict-and-plot-from-model-r-in-sql-quickstart"></a>予測は、モデル (SQL のクイック スタートで R) から
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 実行する_スコアリング_新しいデータを使用して、トレーニング済みモデルの 1 つ、テーブルから取得し、新しい予測を基になるデータのセットを呼び出します。 スコアリングは、予測、確率、またはトレーニング済みモデルに渡す新しいデータに基づくその他の値を生成することを意味するデータ サイエンスでときどき使わ用語です。
 

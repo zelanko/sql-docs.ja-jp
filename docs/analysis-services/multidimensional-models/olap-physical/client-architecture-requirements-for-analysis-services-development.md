@@ -8,12 +8,11 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - local mining models [Analysis Services]
 - Analysis Services, architecture
@@ -22,19 +21,20 @@ helpviewer_keywords:
 - client architecture [Analysis Services]
 - local cubes [Analysis Services]
 ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6ad9afc1cf4b6353e68e2849754c0c138b8f54e8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5fa4192b9852d88100c1520a8c274dac199e1f48
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Analysis Services 開発に関するクライアント アーキテクチャの要件
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]シン クライアント アーキテクチャをサポートしています。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]計算エンジンは完全サーバーに基づくため、サーバー上のすべてのクエリで解決されます。 つまり、クエリごとにクライアントとサーバー間での単一ラウンド トリップが必要です。この結果、クエリの複雑さが増すにつれてパフォーマンスが変化します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] シン クライアント アーキテクチャをサポートしています。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]計算エンジンは完全サーバーに基づくため、サーバー上のすべてのクエリで解決されます。 つまり、クエリごとにクライアントとサーバー間での単一ラウンド トリップが必要です。この結果、クエリの複雑さが増すにつれてパフォーマンスが変化します。  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のネイティブ プロトコルは、XML for Analysis (XMLA) です。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では、クライアント アプリケーション用のデータ アクセス インターフェイスがいくつか用意されていますが、これらのすべてのコンポーネントは XML for Analysis を使用して [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスと通信を行います。  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/08/2017
 |.NET 言語|ADO MD.NET|  
 |SOAP をサポートするすべての言語|XML for Analysis (XML for Analysis)|  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] には、小規模な組織と大規模な組織の両方の配置に対応できる完全にスケーラブルな中間層を使用した Web アーキテクチャが装備されています。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] には、Web サービスへの広範な中間層のサポートが用意されています。 ASP アプリケーションはサポートされて OLE DB で OLAP および ADO MD、ASP.NET アプリケーションは ADOMD.NET によってサポートされています。 次の図のように、中間層は、多数の同時ユーザーに対応できるスケーラブルな層です。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 大小両方の組織で展開を完全にスケーラブルな中間層で Web アーキテクチャがあります。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] には、Web サービスへの広範な中間層のサポートが用意されています。 ASP アプリケーションはサポートされて OLE DB で OLAP および ADO MD、ASP.NET アプリケーションは ADOMD.NET によってサポートされています。 次の図のように、中間層は、多数の同時ユーザーに対応できるスケーラブルな層です。  
   
  ![中間層アーキテクチャの論理図](../../../analysis-services/multidimensional-models/olap-physical/media/as-midtierarch9.gif "中間層アーキテクチャの論理図")  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>テーブル モードまたは SharePoint モードの Analysis Services  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、表形式データベースと、xVelocity メモリ内分析エンジン (VertiPaq) モードで、サーバーを起動する[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]SharePoint サイトにパブリッシュされたブック。  
   
- [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] および [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] は、それぞれ SharePoint モードまたは表形式モードを使用するインメモリ データベースの作成とクエリがサポートされる、ただ 1 つのクライアント環境です。 埋め込まれた[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]、Excel を使用して作成したデータベースおよび[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ツールは、Excel ブック内に含まれ、Excel .xlsx ファイルの一部として保存されます。  
+ [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] および[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]作成と SharePoint モードまたは表形式モードをそれぞれを使用するインメモリ データベースのクエリがサポートされている唯一のクライアント環境です。 埋め込まれた[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]、Excel を使用して作成したデータベースおよび[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ツールは、Excel ブック内に含まれ、Excel .xlsx ファイルの一部として保存されます。  
   
  ただし、キューブ データをブックにインポートすると、従来のキューブに格納されたデータを [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックで使用できます。 また、SharePoint サイトにパブリッシュされている場合、別の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックからデータをインポートすることもできます。  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/08/2017
  データ ソースとしての SSAS キューブの使用の詳細については、次を参照してください。、 [Power Pivot for Excel](http://go.microsoft.com/fwlink/?LinkId=164234)です。  
   
 ### <a name="interfaces-for-power-pivot-client"></a>Power Pivot クライアント用のインターフェイス  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]Analysis Services の確立されたインターフェイスおよび言語を使用して、ブック内で xVelocity メモリ内分析エンジン (VertiPaq) ストレージ エンジンと対話します。 AMO と ADOMD.NET、および MDX と XMLA です。 アドイン内では、メジャーは、Excel、Data Analysis Expressions (DAX) と同様の数式言語を使用して定義されます。 DAX の式は、インプロセス サーバーに送信される XMLA メッセージ内に埋め込まれます。  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Analysis Services の確立されたインターフェイスおよび言語を使用して、ブック内で xVelocity メモリ内分析エンジン (VertiPaq) ストレージ エンジンと対話します。 AMO と ADOMD.NET、および MDX と XMLA です。 アドイン内では、メジャーは、Excel、Data Analysis Expressions (DAX) と同様の数式言語を使用して定義されます。 DAX の式は、インプロセス サーバーに送信される XMLA メッセージ内に埋め込まれます。  
   
 ### <a name="providers"></a>[プロバイダー]  
  間の通信[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]Excel MSOLAP OLEDB プロバイダー (バージョン 11.0) を使用するとします。 MSOLAP プロバイダー内には、4 つの異なるモジュールまたはトランスポートがあり、クライアントとサーバー間のメッセージの送信に使用できます。  

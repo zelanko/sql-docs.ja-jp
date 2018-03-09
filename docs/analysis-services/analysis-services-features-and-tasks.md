@@ -8,28 +8,30 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 02bcccd0-99e1-4a08-9401-f1f1147d184b
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 72bf28a40f2314ec696eae6ce8b758010a0ad78e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 89fb560797d1fadba703fc84d30c785bec4f0daa
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="analysis-services-features-and-tasks"></a>Analysis Services の機能とタスク
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Analysis Services の基本的なドキュメントはモデルの種類とサーバーのモードで整理されるので、ツール、タスク、およびインストールしたモードで使用できる機能に集中できます。 複数のモードに関連するサーバー管理タスクは、インスタンス管理にあります。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  Analysis Services に関する基本ドキュメントは、インストールしたモードで使用できるツール、タスク、および機能に関する情報だけを参照できるように、モデルの種類およびサーバーのモード別に分類されています。 複数のモードに関連するサーバー管理タスクは、インスタンス管理にあります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [テーブル ソリューションと多次元ソリューションの比較 &#40;SSAS&#41;](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
+ [テーブル ソリューションと多次元ソリューションの比較 ](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
- [Analysis Services で使用するツールとアプリケーション](../analysis-services/tools-and-applications-used-in-analysis-services.md)  
+ [ツールと Analysis Services で使用されるアプリケーション](../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
  [Analysis Services インスタンス管理](../analysis-services/instances/analysis-services-instance-management.md)  
   
@@ -37,9 +39,9 @@ ms.lasthandoff: 12/08/2017
 
 [多次元モデル](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
   
- [データ マイニング &#40;SSAS&#41;](../analysis-services/data-mining/data-mining-ssas.md)  
+ [データ マイニング ](../analysis-services/data-mining/data-mining-ssas.md)  
   
- [Power Pivot for SharePoint &#40;SSAS&#41;](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
+ [Power Pivot for SharePoint ](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services](../analysis-services/analysis-services.md)   

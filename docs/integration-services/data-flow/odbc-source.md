@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8af8fe7422b0f58c99fa95dd63bd2c0408b6e624
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9c8def299d18a8c7d64cd581fdf7934f366ce5dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-source"></a>ODBC 入力元
   ODBC 入力元は、データベース テーブル、ビュー、または SQL ステートメントを使用して、ODBC でサポートされているデータベースからデータを抽出します。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/20/2017
  ODBC 入力元は、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、「[ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)」を参照してください。  
   
 ## <a name="data-type-support"></a>データ型のサポート  
- ODBC 入力元でサポートされるデータ型については、「Connector for Open Database Connectivity (ODBC) by Attunity」を参照してください。  
+ ODBC 入力元でサポートされるデータ型については、「Connector for Open Database Connectivity (ODBC)」を参照してください。  
   
 ## <a name="extract-options"></a>抽出オプション  
  ODBC 入力元は、 **バッチ** または **行ごと** のどちらかのモードで動作します。 使用するモードは、 **FetchMethod** プロパティによって決まります。 以下に、モードの説明を示します。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/20/2017
   
  **FetchMethod** プロパティの詳細については、「 [ODBC 入力元のカスタム プロパティ](../../integration-services/data-flow/odbc-source-custom-properties.md)」を参照してください。  
   
-## <a name="parallelism"></a>並列処理  
+## <a name="parallelism"></a>Parallelism  
  並列実行できる ODBC 入力元コンポーネントの数に制限はありません。これは、同一テーブル上にある場合または異なるテーブル上にある場合、同一コンピューター上で実行する場合または異なるコンピューター上で実行する場合のいずれにも該当します (ただし、通常のグローバルなセッション制限を除きます)。  
   
  ただし、使用する ODBC プロバイダーの制限によって、プロバイダーを介する同時接続数が制限される場合があります。 これらの制限によって、ODBC 入力元で使用できる並列インスタンス数のサポートが制限されます。 SSIS プロバイダーは、使用される ODBC プロバイダーの制限を把握し、SSIS パッケージを作成する際に考慮する必要があります。  
@@ -101,12 +102,12 @@ ms.lasthandoff: 11/20/2017
   
 -   **[データ フロー]** タブで、ODBC 入力元をダブルクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
   
 #### <a name="connection-manager"></a>[ODBC 入力元エディター]  
  既存の ODBC 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。 ODBC でサポートされているデータベースへの接続を選択または入力できます。  
   
-#### <a name="new"></a>新規  
+#### <a name="new"></a>ボタンを使用して新しい  
  **[新規作成]**をクリックします。 新しい ODBC 接続マネージャーを作成できる **[ODBC 接続マネージャーの構成エディター]** ダイアログ ボックスが開きます。  
   
 #### <a name="data-access-mode"></a>[データ アクセス モード]  
@@ -137,14 +138,14 @@ ms.lasthandoff: 11/20/2017
   
 3.  **[ODBC 入力元エディター]**で、 **[列]**をクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
   
 #### <a name="available-external-columns"></a>使用できる外部列  
  データ ソース内の使用できる外部列の一覧です。 このテーブルを使用して列を追加または削除することはできません。 入力元から使用する列を選択します。 選択した列は、選択した順序で **[外部列]** の一覧に追加されます。  
   
  **[すべて選択]** チェック ボックスをオンにすると、すべての列が選択されます。  
   
-#### <a name="external-column"></a>[外部列]  
+#### <a name="external-column"></a>外部列  
  外部 (入力元) 列のビューです。ODBC 入力元のデータを使用するコンポーネントを構成するときの表示順になります。  
   
 #### <a name="output-column"></a>出力列  
@@ -162,12 +163,12 @@ ms.lasthandoff: 11/20/2017
   
 -   **[ODBC 入力元エディター]**で、 **[エラー出力]**をクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
   
 #### <a name="inputoutput"></a>[入力または出力]  
  データ ソースの名前を表示します。  
   
-#### <a name="column"></a>列  
+#### <a name="column"></a>[列]  
  使用されていません。  
   
 #### <a name="error"></a>[エラー]  

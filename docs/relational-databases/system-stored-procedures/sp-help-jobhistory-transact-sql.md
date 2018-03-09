@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobhistory_TSQL
 - sp_help_jobhistory
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobhistory
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c927767e00429c9ccdbe3143ade99cbe363950d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: de1836ee52354e96341386db5dfd33297f2d9be6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,40 +60,40 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  ジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'***job_name***'**  
  ジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
   
- [  **@step_id=** ] *step_id*  
+ [ **@step_id=** ] *step_id*  
  ステップの識別番号を指定します。 *step_id*は**int**、既定値は NULL です。  
   
- [  **@sql_message_id=** ] *sql_message_id*  
+ [ **@sql_message_id=** ] *sql_message_id*  
  ジョブの実行時に Microsoft SQL Server で返されるエラー メッセージの識別番号を指定します。 *sql_message_id*は**int**、既定値は NULL です。  
   
- [  **@sql_severity=** ] *sql_severity*  
+ [ **@sql_severity=** ] *sql_severity*  
  ジョブの実行時に SQL Server で返されるエラー メッセージの重大度を指定します。 *sql_severity*は**int**、既定値は NULL です。  
   
- [  **@start_run_date=** ] *start_run_date*  
+ [ **@start_run_date=** ] *start_run_date*  
  ジョブを開始した日付を指定します。 *start_run_date*は**int**、既定値は NULL です。 *start_run_date*する必要があります形式で入力 yyyymmdd 形式で指定、YYYY は 4 桁の年、MM は 2 桁の月、DD は 2 桁の日です。  
   
- [  **@end_run_date=** ] *end_run_date*  
+ [ **@end_run_date=** ] *end_run_date*  
  ジョブが完了した日付を指定します。 *end_run_date*は**int**、既定値は NULL です。 *end_run_date*する必要があります形式で入力 yyyymmdd 形式で指定、YYYY は 4 桁の年、MM は 2 桁の月、DD は 2 桁の日です。  
   
- [  **@start_run_time=** ] *start_run_time*  
+ [ **@start_run_time=** ] *start_run_time*  
  ジョブを開始した時刻を指定します。 *start_run_time*は**int**、既定値は NULL です。 *start_run_time*必要があります形式で入力 hhmmss で、HH は、1 日の 2 桁の時、MM は、2 桁の分、SS は、1 日の 2 桁の秒。  
   
- [  **@end_run_time=** ] *end_run_time*  
+ [ **@end_run_time=** ] *end_run_time*  
  ジョブが完了した時刻を指定します。 *end_run_time*は**int**、既定値は NULL です。 *end_run_time*必要があります形式で入力 hhmmss で、HH は、1 日の 2 桁の時、MM は、2 桁の分、SS は、1 日の 2 桁の秒。  
   
- [  **@minimum_run_duration=** ] *minimum_run_duration*  
+ [ **@minimum_run_duration=** ] *minimum_run_duration*  
  ジョブを完了するのに必要な最小時間を指定します。 *minimum_run_duration*は**int**、既定値は NULL です。 *minimum_run_duration*必要があります形式で入力 hhmmss で、HH は、1 日の 2 桁の時、MM は、2 桁の分、SS は、1 日の 2 桁の秒。  
   
- [  **@run_status=** ] *run_status*  
+ [ **@run_status=** ] *run_status*  
  ジョブの実行ステータス。 *run_status*は**int**、既定値は NULL、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|失敗|  
 |**1**|成功しました|  
@@ -99,16 +102,16 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**4**|実行中メッセージ|  
 |**5**|Unknown|  
   
- [  **@minimum_retries=** ] *minimum_retries*  
+ [ **@minimum_retries=** ] *minimum_retries*  
  ジョブの実行を再試行する最小回数を指定します。 *minimum_retries*は**int**、既定値は NULL です。  
   
- [  **@oldest_first=** ] *oldest_first*  
+ [ **@oldest_first=** ] *oldest_first*  
  ジョブを古い順に出力するかどうかを指定します。 *oldest_first*は**int**、既定値は**0**、最初にすること、最新のジョブを示します。 **1**最初、最も古いジョブを表示します。  
   
- [  **@server=** ] **'***サーバー***'**  
+ [ **@server=** ] **'***server***'**  
  ジョブを実行したサーバーの名前を示します。 *サーバー*は**nvarchar (30)**、既定値は NULL です。  
   
- [  **@mode=** ] **'***モード***'**  
+ [ **@mode=** ] **'***mode***'**  
  SQL Server が結果セット内のすべての列を出力するか (**完全**) または列の概要です。 *モード*は**varchar (7)**、既定値は**概要**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -126,21 +129,21 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**step_name**|**sysname**|ステップ名。ジョブ履歴の場合は NULL です。|  
 |**sql_message_id**|**int**|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合、コマンドの実行中に最も新しく発生した [!INCLUDE[tsql](../../includes/tsql-md.md)] エラーの番号。|  
 |**sql_severity**|**int**|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合、コマンドの実行中に発生した最も重大な [!INCLUDE[tsql](../../includes/tsql-md.md)] エラーの重大度。|  
-|**メッセージ**|**nvarchar (1024)**|ジョブまたはステップの履歴メッセージ。|  
+|**message**|**nvarchar(1024)**|ジョブまたはステップの履歴メッセージ。|  
 |**run_status**|**int**|ジョブまたはステップの結果。|  
 |**run_date**|**int**|ジョブまたはステップの実行を開始した日付。|  
 |**run_time**|**int**|ジョブまたはステップの実行を開始した時刻。|  
 |**run_duration**|**int**|ジョブまたはステップを実行してからの経過時間 (HHMMSS 形式)。|  
-|**operator_emailed**|**nvarchar (20)**|このジョブに関する電子メールを送信したオペレーター。ステップ履歴の場合は NULL です。|  
-|**operator_netsent**|**nvarchar (20)**|このジョブに関するネットワーク メッセージを送信したオペレーター。ステップ履歴の場合は NULL です。|  
-|**operator_paged**|**nvarchar (20)**|このジョブに関するページを送信したオペレーター。ステップ履歴の場合は NULL です。|  
+|**operator_emailed**|**nvarchar(20)**|このジョブに関する電子メールを送信したオペレーター。ステップ履歴の場合は NULL です。|  
+|**operator_netsent**|**nvarchar(20)**|このジョブに関するネットワーク メッセージを送信したオペレーター。ステップ履歴の場合は NULL です。|  
+|**operator_paged**|**nvarchar(20)**|このジョブに関するページを送信したオペレーター。ステップ履歴の場合は NULL です。|  
 |**retries_attempted**|**int**|ステップの再試行回数。ジョブ履歴の場合は常に 0 です。|  
-|**サーバー (server)**|**nvarchar (30)**|ステップまたはジョブを実行するサーバー。 常に (**ローカル**)。|  
+|**server**|**nvarchar(30)**|ステップまたはジョブを実行するサーバー。 常に (**ローカル**)。|  
   
 ## <a name="remarks"></a>解説  
  **sp_help_jobhistory**の指定されたスケジュールされたジョブの履歴レポートを返します。 どのパラメーターも指定しない場合は、レポートにはすべての定期ジョブの履歴が含まれます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  

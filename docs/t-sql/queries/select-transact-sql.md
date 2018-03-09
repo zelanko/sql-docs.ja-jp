@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT_TSQL
 - SELECT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - retrieving rows
 - SELECT statement [SQL Server]
@@ -25,33 +27,33 @@ helpviewer_keywords:
 - row retrieval [SQL Server]
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 012853c97e01250bf5aee62d95ae7971549f5094
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: b8cca7419cce15dcbb83b4aa72dc551e5eb89eb1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  データベースから行が取得され、1 つ以上のテーブルからの行または列の 1 つまたは複数を選択できるように[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 SELECT ステートメントの完全な構文は複雑ですが、主な句は次のとおりです。  
+  データベースから行が取得され、1 つ以上のテーブルからの行または列の 1 つまたは複数を選択できるように[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 SELECT ステートメントの完全な構文は複雑ですが、主な句は次のとおりです:  
   
-[で {[XMLNAMESPACES] [ \<common_table_expression >]}]
+[ WITH { [ XMLNAMESPACES ,] [ \<common_table_expression> ] } ]
   
- 選択*select_list* [INTO *new_table* ]  
+ SELECT *select_list* [ INTO *new_table* ]  
   
- [から*table_source* ] [場所*search_condition* ]  
+ [ FROM *table_source* ] [ WHERE *search_condition* ]  
   
- [GROUP BY *group_by_expression* ]  
+ [ GROUP BY *group_by_expression* ]  
   
  [持つ*search_condition* ]  
   
- [ORDER BY *order_expression* [ASC |DESC]  
+ [ ORDER BY *order_expression* [ ASC | DESC ] ]  
   
  UNION、EXCEPT、INTERSECT 演算子はクエリを結合または比較の結果の 1 つの結果セットの間で使用できます。  
   
@@ -105,12 +107,12 @@ SELECT <select_criteria>
 ```  
   
 ## <a name="remarks"></a>解説  
- SELECT ステートメントは非常に複雑であるため、構文の構成要素と引数の詳細を句ごとに説明します。  
+ SELECT ステートメントは非常に複雑であるため、構文の構成要素と引数の詳細を句ごとに説明します:  
   
 |||  
 |-|-|  
 |[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[持つ](../../t-sql/queries/select-having-transact-sql.md)|  
-|[SELECT 句](../../t-sql/queries/select-clause-transact-sql.md)|[共用体](../../t-sql/language-elements/set-operators-union-transact-sql.md)|  
+|[SELECT 句](../../t-sql/queries/select-clause-transact-sql.md)|[UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)|  
 |[INTO 句](../../t-sql/queries/select-into-clause-transact-sql.md)|[EXCEPT および INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)|  
 |[FROM](../../t-sql/queries/from-transact-sql.md)|[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)|  
 |[WHERE](../../t-sql/queries/where-transact-sql.md)|[FOR 句](../../t-sql/queries/select-for-clause-transact-sql.md)|  
@@ -144,7 +146,7 @@ SELECT <select_criteria>
 >
 > たとえば、ビューがいくつかのテーブル行を除外およびビューの SELECT 列リストから、データ型を変更する変換を使用して、ビューにクラスター化インデックスがある*varchar*に*整数*です。 このような状況では、変換は、WHERE 句を実行する前に実行できます。 珍しいことで実際にします。 多くの場合、方法がある場合で問題になる場合は、別のシーケンスを避けるためにビューを変更します。 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  データの選択にはテーブルまたはビューに対する **SELECT** 権限が必要です。この権限は、スキーマに対する **SELECT** 権限やテーブルに対する **CONTROL** 権限など上位スコープから継承されます。 メンバーシップが必要か、 **db_datareader**または**db_owner**固定データベース ロール、または**sysadmin**固定サーバー ロール。 使用して新しいテーブルを作成する**SELECTINTO**両方も必要、 **CREATETABLE**権限、および**ALTERSCHEMA**新しいテーブルを所有するスキーマに対する権限。  
   
 ## <a name="examples"></a>例 :   

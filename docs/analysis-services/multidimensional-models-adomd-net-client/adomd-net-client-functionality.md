@@ -1,36 +1,35 @@
 ---
 title: "ADOMD.NET クライアント機能 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - functionality [ADOMD.NET]
 - ADOMD.NET, functionality
 ms.assetid: 0f5e16a1-dc2d-4c87-8551-985921bf069b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8010335c897b279ead050e34a25b2f2833d63021
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 59d5086aaba3fbf1ebe8581031f30f3313a51938
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET のクライアント機能
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET とその他の同様[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework データ プロバイダー、アプリケーションとデータ ソース間の仲介役として機能します。 ただし、分析データを扱うという点で、他の .NET Framework データ プロバイダーとは異なります。 分析データを操作する ADOMD.NET では、サポートされている機能が他の .NET Framework データ プロバイダーとは大きく違っています。 データを取得するだけでなく、メタデータを取得したり、分析データ ストアの構造を変更したりすることができます。  
+  ADOMD.NET は、他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework データ プロバイダーと同様、アプリケーションとデータ ソースの間の仲介役となります。 ただし、分析データを扱うという点で、他の .NET Framework データ プロバイダーとは異なります。 分析データを操作する ADOMD.NET では、サポートされている機能が他の .NET Framework データ プロバイダーとは大きく違っています。 データを取得するだけでなく、メタデータを取得したり、分析データ ストアの構造を変更したりすることができます。  
   
  **メタデータの取得**  
  スキーマ行セットまたはオブジェクト モデルを使用してメタデータを取得することにより、データ ソースから取得できるデータについてアプリケーションでより多くの情報を得ることができます。 たとえば、利用可能な各主要業績評価指標 (KPI) の型、キューブのディメンション、マイニング モデルで必要とされるパラメーターなどの情報を入手できます。 メタデータは、最も重要な*動的*を取得するには、型、深さ、およびデータのスコープを決定するユーザー入力を必要とするアプリケーション。 たとえば、クエリ アナライザー、Microsoft Excel、その他のクエリ ツールがこれに該当します。 メタデータを重要度の低い*静的*定義済みの一連の操作を実行するアプリケーション。  

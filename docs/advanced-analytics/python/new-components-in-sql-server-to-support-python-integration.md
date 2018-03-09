@@ -7,20 +7,21 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 40554878da331bd975164a6ece13cd92ca251182
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 495b7757073cea48773dd7c03f32f7ccf4240cd0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>Python の統合をサポートするために SQL Server のコンポーネント
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017 以降は、Machine Learning のサービスは、T-SQL から実行できるまたはリモート計算コンテキストとして SQL Server を使用して実行する外部の言語としての Python をサポートします。
 
@@ -116,7 +117,7 @@ SQL サテライトは、windows の拡張イベント (Xevent) を使用して�
 
 ストアド プロシージャに埋め込まれたスクリプト、ストアド プロシージャを呼び出すと、すべてのアプリケーションは、Python コードの実行を開始できます。  その後[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]の次の図に示すように、コードの実行を管理します。
 
-![スクリプトで db python](../../advanced-analytics/python/media/script-in-db-python2.png)
+![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
 1. Python ランタイムの要求が、パラメーターで示される`@language='Python'`ストアド プロシージャに渡されます。 SQL Server では、スタート パッド サービスにこの要求を送信します。
 2. スタート パッド サービスの開始、適切なランチャーです。この場合、PythonLauncher です。
@@ -124,7 +125,7 @@ SQL サテライトは、windows の拡張イベント (Xevent) を使用して�
 4. BxlServer は、データの交換と作業の結果のストレージを管理する Python ランタイムと連携します。
 5. SQL サテライト関連のタスクについての通信を管理および処理し、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]です。
 6. BxlServer が SQL サテライトを使用して状態を通信し、結果を [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] に送信します。
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] が結果を取得し、関連するタスクとプロセスを終了します。
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 結果を取得し、関連するタスクとプロセスを終了します。
 
 ### <a name="python-scripts-executed-from-a-remote-client"></a>リモート クライアントから実行された Python スクリプト
 
@@ -135,7 +136,7 @@ SQL サテライトは、windows の拡張イベント (Xevent) を使用して�
 
 次の図は、スクリプトがリモート コンピューターから送信されるときに、全体的なワークフローをまとめたものです。
 
-![リモート sqlcc から python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
+![remote-sqlcc-from-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
 1. サポートされている関数の**revoscalepy**、Python ランタイムは BxlServer を呼び出し、リンクの関数を呼び出します。
 2. BxlServer では、Machine Learning Services (In-database) に含まれてし、Python ランタイムから別のプロセスで実行します。
@@ -145,7 +146,7 @@ SQL サテライトは、windows の拡張イベント (Xevent) を使用して�
 6. PythonLauncher にインストールされている Python のインスタンスへの呼び出しを行い、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]コンピューター。
 7. 結果が BxlServer に返されます。
 8. SQL サテライトは、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] との通信と、関連するジョブ オブジェクトのクリーンアップを管理します。
-9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] がクライアントに結果を返します。
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 結果をクライアントに渡します。
 
 ## <a name="next-steps"></a>次の手順
 

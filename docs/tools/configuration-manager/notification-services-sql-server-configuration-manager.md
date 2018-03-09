@@ -3,28 +3,30 @@ title: "Notification Services (SQL Server 構成マネージャー) |Microsoft �
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 78d9f0e8-eca8-458e-a1ad-29ffa0838ef7
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 932266a137b550a7fceec7bafc9be33d32a24b6c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b05b54ffc39e8b15f2ea60c01bf868de55279777
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="notification-services-sql-server-configuration-manager"></a>SQL Server Notification Services (SQL Server 構成マネージャー)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]これは、サポートするサービス[!INCLUDE[ssNS](../../includes/ssns-md.md)]です。 このサービスのプロパティを表示するには、詳細ペインでそのサービスを右クリックし、 **[プロパティ]**をクリックします。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+これは [!INCLUDE[ssNS](../../includes/ssns-md.md)]をサポートするサービスです。 このサービスのプロパティを表示するには、詳細ペインでそのサービスを右クリックし、 **[プロパティ]**をクリックします。  
   
  [!INCLUDE[ssNS](../../includes/ssns-md.md)]の詳細については、オンライン ブックを参照してください。  
   

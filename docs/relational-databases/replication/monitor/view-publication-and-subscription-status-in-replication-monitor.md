@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Replication Monitor, publication and subscription status
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ea47f9f50242003e4aa933da2e5657bb7e2ed5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ab769d9d4a6c5c311fa6695056ef503999455d8f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>レプリケーション モニターでのパブリケーションおよびサブスクリプションの状態の表示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターには、パブリケーションおよびサブスクリプションの状態情報が表示されます。  
@@ -68,12 +68,12 @@ ms.lasthandoff: 11/17/2017
 ## <a name="publication-status-values"></a>パブリケーションの状態の値  
  次の表は、パブリケーションの状態の値と対応するアイコンを優先度順に示しています。  
   
-|[状態]|アイコン|  
+|状態|アイコン|  
 |------------|----------|  
 |[エラー]|![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|  
 |[パフォーマンス クリティカル]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[失敗したコマンドの再試行]|![UI アイコン: レプリケーション エージェントの再試行](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI アイコン: レプリケーション エージェントの再試行")|  
-|OK|なし|  
+|[OK]|なし|  
   
 ## <a name="subscription-status-values"></a>サブスクリプションの状態値  
  次の表は、サブスクリプションの状態値と対応するアイコンを優先度順に示しています。 サブスクリプションは、" **まもなく期限切れ/期限切れ** " と " **失敗したコマンドの再試行**" など同時に 2 つの状態になることがあります。その場合、最も優先度の高い状態が表示されます。  
@@ -82,11 +82,11 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="transactional-subscriptions"></a>トランザクション サブスクリプション  
   
-|[状態]|アイコン|  
+|状態|アイコン|  
 |------------|----------|  
 |[エラー]|![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|  
 |[パフォーマンス クリティカル]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
-|[まもなく期限切れ/期限切れ]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
+|まもなく期限切れ/期限切れ|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[初期化されていないサブスクリプション]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[失敗したコマンドの再試行]|![UI アイコン: レプリケーション エージェントの再試行](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI アイコン: レプリケーション エージェントの再試行")|  
 |[実行されていません]|![UI アイコン: レプリケーション エージェントの停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI アイコン: レプリケーション エージェントの停止")|  
@@ -94,12 +94,12 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="merge-subscriptions"></a>マージ サブスクリプション  
   
-|[状態]|アイコン|  
+|状態|アイコン|  
 |------------|----------|  
 |[エラー]|![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|  
 |[パフォーマンス クリティカル]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[長期マージ]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
-|[まもなく期限切れ/期限切れ]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
+|まもなく期限切れ/期限切れ|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[初期化されていないサブスクリプション]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[失敗したコマンドの再試行]|![UI アイコン: レプリケーション エージェントの再試行](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI アイコン: レプリケーション エージェントの再試行")|  
 |[同期中]|![UI アイコン: レプリケーション エージェントの実行](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI アイコン: レプリケーション エージェントの実行")|  
@@ -107,7 +107,7 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="snapshot-subscriptions"></a>スナップショット サブスクリプション  
   
-|[状態]|アイコン|  
+|状態|アイコン|  
 |------------|----------|  
 |[エラー]|![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|  
 |[まもなく期限切れ/期限切れ]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  

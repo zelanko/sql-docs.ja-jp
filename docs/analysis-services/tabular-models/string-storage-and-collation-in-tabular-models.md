@@ -1,35 +1,33 @@
 ---
 title: "文字列ストレージとテーブル モデルでの照合順序 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 90b110552e0ea5469258581c1d1e26d4ebd86d36
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f84b7fb415372066b820119280dd3728d340322d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="string-storage-and-collation-in-tabular-models"></a>テーブル モデルの文字列ストレージと照合順序
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]文字列 (テキスト値); の表形式モデルには、圧縮率の高い形式に格納されます。この圧縮により、全体または部分文字列を取得するときに予期しない結果を取得できます。 文字列のロケールと照合順序は最も近い親プロジェクトから階層的に継承されるため、文字列の言語が明示的に定義されていない場合、親のロケールと照合順序は、文字列の格納方法、および文字列が一意であるか親の照合順序の定義に従って同様の文字列と結合されるかに影響することがあります。  
+# <a name="string-storage-and-collation-in-tabular-models"></a>文字列ストレージとテーブル モデルでの照合順序
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+文字列 (テキスト値) は高度に圧縮された形式でテーブル モデルに格納されます。この圧縮により、文字列の全体または一部を取得するときに予期しない結果を取得することがあります。 文字列のロケールと照合順序は最も近い親プロジェクトから階層的に継承されるため、文字列の言語が明示的に定義されていない場合、親のロケールと照合順序は、文字列の格納方法、および文字列が一意であるか親の照合順序の定義に従って同様の文字列と結合されるかに影響することがあります。  
   
- このトピックでは、文字列を圧縮および格納するメカニズムについて説明し、照合順序と言語がテーブル モデルのテキスト式の結果に与える影響の例を示します。  
+ この記事では、文字列の圧縮および格納されているのメカニズムについて説明し、表形式モデルのテキスト式の結果に対する照合順序と言語の影響の例を示します。  
   
 ## <a name="storage"></a>ストレージ  
  テーブル モデルでは、すべてのデータがより効率よくメモリに収まるように高度に圧縮されます。 その結果、構文的に等価と見なされるすべての文字列が 1 回だけ格納されます。 文字列の最初のインスタンスが正規表現として使用され、等価な各文字列は最初の出現と同じ圧縮値にインデックス付けされます。  

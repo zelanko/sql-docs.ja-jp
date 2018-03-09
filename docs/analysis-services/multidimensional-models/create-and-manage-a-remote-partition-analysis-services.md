@@ -5,32 +5,30 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - partitions [Analysis Services], remote
 - remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 152d8f844949ac0a27747e04b4d2ca55a257c39e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>リモート パーティションの作成と管理 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]リモート コンピューターのセカンダリ データベースを構成するには、メジャー グループをパーティション分割するとき[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]パーティションのストレージとしてインスタンス。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+メジャー グループをパーティション分割する場合は、パーティションのストレージとして [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のリモート インスタンスでセカンダリ データベースを構成できます。  
   
  キューブ (master データベースと呼ばれます) のリモート パーティションは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のリモート インスタンス上の専用の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース (セカンダリ データベースと呼ばれます) に格納されています。  
   
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/08/2017
   
 -   両方のサーバー インスタンスが同じバージョンであることが必要です。 両方のデータベースの機能レベルは同じである必要があります。  
   
--   両方のインスタンスが TCP 接続用に構成されている必要があります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、HTTP プロトコルの使用によるリモート パーティションの作成をサポートしません。  
+-   両方のインスタンスが TCP 接続用に構成されている必要があります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]HTTP プロトコルを使用してリモート パーティションの作成はできません。  
   
 -   両方のコンピューターのファイアウォール設定は、外部接続を許可するように設定されている必要があります。 ファイアウォールの設定の詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」を参照してください。  
   
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/08/2017
   
 -   両方のコンピューターで [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理者である必要があります。  
   
--   ディザスター リカバリー計画がリモート パーティションのバックアップと復元に対応していることを確認する必要があります。 リモート パーティションを使用すると、バックアップ操作と復元操作が複雑になる場合があります。 必要なデータを復元できるように、計画を十分にテストしてください。  
+-   災害復旧計画がリモート パーティションのバックアップと復元に対応していることを確認する必要があります。 リモート パーティションを使用すると、バックアップ操作と復元操作が複雑になる場合があります。 必要なデータを復元できるように、計画を十分にテストしてください。  
   
 ## <a name="configure-remote-partitions"></a>リモート パーティションの構成  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスを実行している異なる 2 台のコンピューターはそれぞれ、1 台をマスター サーバー、もう 1 台を下位サーバーとして指定するリモート パーティションの配置を作成するために必要です。  
@@ -119,7 +117,7 @@ ms.lasthandoff: 12/08/2017
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>リモート パーティションを設定する (SSDT)  
   
-1.  マスター サーバー: キューブ デザイナーでキューブを開き、 **[パーティション]** タブをクリックします。メジャー グループを展開します。 メジャー グループが既に複数のパーティションに対して構成されている場合は **[新しいパーティション]** をクリックします。または、[基になる列] の参照ボタン (.. の同一のリモート インスタンスに存在する場合に限り、複数のセカンダリ データベースを使用できます。 ) をクリックして既存のパーティションを編集します。  
+1.  マスター サーバー: キューブ デザイナーでキューブを開き、 **[パーティション]** タブをクリックします。メジャー グループを展開します。 メジャー グループが既に複数のパーティションに対して構成されている場合は **[新しいパーティション]** をクリックします。または、[基になる列] の参照ボタン (. の同一のリモート インスタンスに存在する場合に限り、複数のセカンダリ データベースを使用できます。 ) をクリックして既存のパーティションを編集します。  
   
 2.  パーティション ウィザードの **[基になる情報の指定]**で、元のデータ ソース ビューとファクト テーブルを選択します。  
   
@@ -141,6 +139,6 @@ ms.lasthandoff: 12/08/2017
 >  リモート パーティションの格納専用のデータベースは、スキーマ行セットに対して公開されていませんが、分析管理オブジェクト (AMO) を使用するアプリケーションは、Analysis Discover コマンドの XML を使用して専用データベースを検出できます。 TCP または HTTP クライアントを使用して専用データベースに直接送信された CREATE コマンドまたは DELETE コマンドは成功しますが、操作によりこの厳密管理データベースが損傷する可能性があることを示す警告がサーバーにより返されます。  
   
 ## <a name="see-also"></a>参照  
- [パーティション (Analysis Services - 多次元データ)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [パーティションと &#40; です。Analysis Services - 多次元データと &#41; です。](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

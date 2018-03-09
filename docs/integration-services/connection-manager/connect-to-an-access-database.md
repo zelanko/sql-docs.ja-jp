@@ -8,23 +8,24 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Access [Integration Services]
 - Access databases [Integration Services]
 ms.assetid: 229fbd46-ef6a-4609-a4cc-d80d52c33cf1
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cbd98ef05bc8c6de066f72a9aded9243c1636f70
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 44c04e7978ca425eb6fb625374f9404e3f286fde
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-access-database"></a>Access データベースに接続する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを Microsoft Office Access データ ソースに接続するには、OLE DB 接続マネージャーとデータ プロパイダが必要です。 使用するデータ プロパイダは、データ ソースを作成した Access のバージョンによって異なります。  
@@ -46,7 +47,7 @@ Microsoft Office ファイルの接続コンポーネントがまだインスト
 
 コンピューターに 32 ビット バージョンの Office が存在する場合は、32 ビット バージョンのコンポーネントをインストールする必要があるほか、32 ビット モードでパッケージが実行されるようにする必要があります。
 
-Office 365 サブスクリプションがある場合は、Microsoft Access 2016 ランタイムではなく、必ず Access データベース エンジン 2016 再頒布可能パッケージをダウンロードしてください。 インストーラーを実行するときに、ダウンロードを Office のクイック実行コンポーネントとサイド バイ サイドでインストールできないことを示すエラー メッセージが表示される場合があります。 このエラー メッセージを回避するには、コマンド プロンプト ウィンドウを開き、`/quiet` スイッチを使用してダウンロードした .EXE ファイルを実行して、Quiet モードでインストールを実行します。 例:
+Office 365 サブスクリプションがある場合は、Microsoft Access 2016 ランタイムではなく、必ず Access データベース エンジン 2016 再頒布可能パッケージをダウンロードしてください。 インストーラーを実行するときに、ダウンロードを Office のクイック実行コンポーネントとサイド バイ サイドでインストールできないことを示すエラー メッセージが表示される場合があります。 このエラー メッセージを回避するには、コマンド プロンプト ウィンドウを開き、`/quiet` スイッチを使用してダウンロードした .EXE ファイルを実行して、Quiet モードでインストールを実行します。 例 :
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
   
@@ -60,7 +61,7 @@ Office 365 サブスクリプションがある場合は、Microsoft Access 2016
   
 3.  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスで、 **[新規作成]**をクリックします。  
   
-     詳細については、「 [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
+     詳細については、「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
 4.  **[接続マネージャー]** ダイアログ ボックスの **[プロバイダー]**で **[Microsoft Jet 4.0 OLE DB Provider]**を選択し、接続マネージャーを適切に構成します。  
   
@@ -70,7 +71,7 @@ Office 365 サブスクリプションがある場合は、Microsoft Access 2016
   
 2.  **[データ ソースの選択]** ページの **[データ ソース]**で **[Microsoft Access]**を選択して、Access 接続を構成します。  
   
-     **[データ ソース]** で **[Microsoft Access]**を選択すると、適切なデータ プロバイダーを使用して必要な OLE DB 接続マネージャーが自動的に作成されます。 詳細については、「 [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
+     **[データ ソース]** で **[Microsoft Access]**を選択すると、適切なデータ プロバイダーを使用して必要な OLE DB 接続マネージャーが自動的に作成されます。 詳細については、「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
 ## <a name="connecting-to-a-data-source-in-access-2007-format"></a>Access 2007 形式のデータ ソースへの接続  
  Access 2007 データ ソースにアクセスする場合、OLE DB 接続マネージャーでは Microsoft Office 12.0 Access データベース エンジン用の OLE DB プロバイダーが必要です。 このプロバイダーは、2007 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office system と共に自動的にインストールされます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を実行しているコンピューターに 2007 Office system がインストールされていない場合は、プロバイダーを別途インストールする必要があります。 Microsoft Office 12.0 Access データベース エンジン用の OLE DB プロバイダーをインストールするには、「 [2007 Office System ドライバー : データ接続コンポーネント](http://go.microsoft.com/fwlink/?LinkId=98155)」でコンポーネントをダウンロードしてインストールしてください。  
@@ -83,7 +84,7 @@ Office 365 サブスクリプションがある場合は、Microsoft Access 2016
   
 3.  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスで、 **[新規作成]**をクリックします。  
   
-     詳細については、「 [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
+     詳細については、「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
 4.  **[接続マネージャー]** ダイアログ ボックスの **[プロバイダー]**で **[Microsoft Office 12.0 Access Database Engine OLE DB]**を選択し、接続マネージャーを適切に構成します。  
   
@@ -99,7 +100,7 @@ Office 365 サブスクリプションがある場合は、Microsoft Access 2016
     > [!NOTE]  
     >  Access 2007 を使用するデータ ソースに接続する場合は、 **[データ ソース]** で **[Microsoft Jet 4.0 OLE DB Provider]**を選択することはできません。  
   
-     **[データ ソース]** で **[Microsoft Office 12.0 Access Database Engine OLE DB Provider]**を選択すると、適切なデータ プロバイダーを使用して必要な OLE DB 接続マネージャーが自動的に作成されます。 詳細については、「 [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
+     **[データ ソース]** で **[Microsoft Office 12.0 Access Database Engine OLE DB Provider]**を選択すると、適切なデータ プロバイダーを使用して必要な OLE DB 接続マネージャーが自動的に作成されます。 詳細については、「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Excel ブックに接続する](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  

@@ -7,26 +7,28 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: 3c5b5145-fa57-455a-b153-0400fc062dc0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 2f88b31305c9c648192d48d071972a787903136d
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 4aaaf0ec50d5bd3764a78c8a202ccac399255956
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="lesson-2-import-data-to-sql-server-using-powershell"></a>レッスン 2: PowerShell を使用して SQL server のデータをインポートします。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事は、SQL Server で R を使用する方法で SQL 開発者のためのチュートリアルの一部です。
 
@@ -56,7 +58,7 @@ ms.lasthandoff: 12/20/2017
   
     - インスタンス上のアカウントのユーザー名とパスワード。 アカウントは、データベースを作成、テーブルおよびストアド プロシージャを作成し、テーブルにデータをアップロードする権限が必要です。 ユーザー名とパスワードを指定しない場合、Windows id は SQL Server へのサインインに使用されます。
   
-    - ダウンロードしたばかりのサンプル データ ファイルのパスとファイル名。 例 :
+    - ダウンロードしたばかりのサンプル データ ファイルのパスとファイル名。 例:
   
         `C:\tempRSQL\nyctaxi1pct.csv`
   

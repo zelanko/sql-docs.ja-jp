@@ -8,22 +8,22 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords: SQLBrowseConnect function
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbe505cb8cd07efc04274725513dd8143bec688f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8af521c2bd56d8d66386be324477b7f094052d73
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,25 +35,25 @@ ms.lasthandoff: 11/17/2017
   
 |Keyword|一覧が返されるかどうか|省略できるかどうか|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN (DSN)|なし|不可|によって返されるデータ ソースの名前**SQLDataSources**です。 DSN キーワードは、DRIVER キーワードと同時に使用できません。|  
-|DRIVER|なし|不可|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー名は {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11} です。 DRIVER キーワードは、DSN キーワードと同時に使用できません。|  
+|DSN (DSN)|なし|いいえ|によって返されるデータ ソースの名前**SQLDataSources**です。 DSN キーワードは、DRIVER キーワードと同時に使用できません。|  
+|DRIVER|なし|いいえ|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー名は {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11} です。 DRIVER キーワードは、DSN キーワードと同時に使用できません。|  
   
 ## <a name="level-2"></a>[レベル 2]  
   
 |Keyword|一覧が返されるかどうか|省略できるかどうか|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|可|不可|データ ソースがあるネットワーク上のサーバー名。 サーバー名には「(local)」と入力することもできます。これは、ネットワークに接続されていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル コピーも使用できることを意味します。|  
-|UID|不可|可|ユーザー ログイン ID。|  
-|PWD|不可|はい (ユーザーによって異なります)|ユーザーが指定したパスワード。|  
-|APP|不可|可|呼び出すアプリケーションの名前**SQLBrowseConnect**です。|  
-|WSID|不可|可|ワークステーション id。 通常は、アプリケーションが実行されているコンピューターのネットワーク名です。|  
+|SERVER|はい|いいえ|データ ソースがあるネットワーク上のサーバー名。 サーバー名には「(local)」と入力することもできます。これは、ネットワークに接続されていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル コピーも使用できることを意味します。|  
+|UID|いいえ|はい|ユーザー ログイン ID。|  
+|PWD|いいえ|はい (ユーザーによって異なります)|ユーザーが指定したパスワード。|  
+|APP|いいえ|はい|呼び出すアプリケーションの名前**SQLBrowseConnect**です。|  
+|WSID|いいえ|はい|ワークステーション id。 通常は、アプリケーションが実行されているコンピューターのネットワーク名です。|  
   
 ## <a name="level-3"></a>[レベル 3]  
   
 |Keyword|一覧が返されるかどうか|省略できるかどうか|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DATABASE|可|可|名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。|  
-|LANGUAGE|可|可|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される言語。|  
+|DATABASE|はい|はい|名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。|  
+|LANGUAGE|はい|はい|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される言語。|  
   
  **SQLBrowseConnect** ODBC データ ソース定義に格納されているデータベースと言語のキーワードの値は無視されます。 データベースまたは接続文字列で指定された言語に渡された場合**SQLBrowseConnect**が有効でない**SQLBrowseConnect** SQL_NEED_DATA とレベル 3 の接続属性を返します。  
   

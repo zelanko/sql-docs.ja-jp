@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 822116bb998a5a8f42afecaeedbbdf56f4c41a5b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4caf4c8fde349f6865792d327965a8dea4161f73
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-infosource-for-master-data"></a>[マスター データのインフォソースの作成]
   SAP Netweaver BW システムでマスター データ用の新しいインフォソースを作成するには、 **[マスター データのインフォソースの作成]** ダイアログ ボックスを使用します。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  **[インフォソースの作成]** ダイアログ ボックスで、 **[マスター データ]**を選択して **[OK]**をクリックします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **インフォオブジェクトの名前**  
  新しいインフォソースの基にするインフォオブジェクトの名前を入力します。  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
  インフォオブジェクトを選択すると、選択したインフォオブジェクトの名前が **[インフォオブジェクトの名前]** ボックスに設定されます。  
   
- **新規**  
+ **[新規作成]**  
  新しいインフォオブジェクトを作成します。 このオプションは、新しいインフォオブジェクトを作成できる **[新しいインフォオブジェクトの作成]** ダイアログ ボックスを開きます。 このダイアログ ボックスの詳細については、「 [[新しいインフォオブジェクトの作成]](../../integration-services/data-flow/create-new-infoobject.md)」を参照してください。  
   
  インフォオブジェクトを作成すると、新しいインフォオブジェクトの名前が **[インフォオブジェクトの名前]** ボックスに設定されます。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/20/2017
  **テキスト**  
  マスター データが複数の属性で構成されることを示します。  
   
- **保存とアクティブ化**  
+ **保存と有効化**  
  新しいインフォソースを保存してアクティブ化します。  
   
 ## <a name="see-also"></a>参照  

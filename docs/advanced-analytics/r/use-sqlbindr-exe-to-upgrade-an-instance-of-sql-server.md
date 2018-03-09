@@ -7,23 +7,25 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server (starting with 2016 CTP3)
+applies_to:
+- SQL Server (starting with 2016 CTP3)
 ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: e83922e15c8bea5f26dcc5c1992acc0529daf18c
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 643d5062f14de70cec493fd9c2fab69989eb4dd6
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>SQL Server インスタンスの machine learning コンポーネントをアップグレードします。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事のプロセス説明_バインディング_コンピューターをアップグレードする SQL Server で使用されるコンポーネントの学習に使用できます。 バインドするプロセスのリリースの Machine Learning Server に基づいて更新リズムにサーバーをロックする、SQL Server を使用するのではなくリリースおよびスケジュールを更新します。
 
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/20/2017
 
 機械学習のコンポーネントをアップグレードするプロセスと呼びます**バインディング**新しい最新ソフトウェア ライフ サイクル ポリシーを使用する SQL Server マシン ラーニング コンポーネントのサポートのモデルを変更するため、します。 
 
-一般に、新しいライセンス モデルへの切り替えにより、データ サイエンティストは、R または Python の最新バージョンに常に使用できます。 最新のライフ サイクル ポリシーの条件の詳細については、次を参照してください。 [Microsoft R Server のサポート タイムライン](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)です。
+一般に、新しいサービス モデルへの切り替えにより、データ サイエンティストは、R または Python の最新バージョンに常に使用できます。 最新のライフ サイクル ポリシーの条件の詳細については、次を参照してください。 [Microsoft R Server のサポート タイムライン](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)です。
 
 > [!NOTE]
 > アップグレードでは、SQL Server データベースのサポートのモデルが変更され、SQL Server のバージョンは変更されません。
@@ -189,7 +191,7 @@ Microsoft R Server 9.0.1 に含まれているアップグレードのユーテ�
 
 ### <a name="parameters"></a>パラメーター
 
-|[オブジェクト名]|Description|
+|名前|Description|
 |------|------|
 |*list*| 現在のコンピューター上にあるすべての SQL データベース インスタンスの ID を一覧表示します|
 |*bind*| 指定された SQL データベース インスタンスを R Server の最新バージョンにアップグレードし、インスタンスが R Server の今後のアップグレードを自動的に取得するようにします|

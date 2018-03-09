@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - UPDATE()_TSQL
 - UPDATE()
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - INSERT statement [SQL Server], UPDATE function
 - testing column updates
@@ -26,18 +28,18 @@ helpviewer_keywords:
 - verifying column updates
 - checking column updates
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6d5b93a4f98e382ccb6504e1d20d6e974a031f86
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="update---trigger-functions-transact-sql"></a>更新プログラム - トリガー関数 (TRANSACT-SQL)
+# <a name="update---trigger-functions-transact-sql"></a>更新プログラム - トリガーUPDATE (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   テーブルまたはビューの指定された列で、INSERT または UPDATE が行われたかどうかを示すブール値を返します。 UPDATE() は [!INCLUDE[tsql](../../includes/tsql-md.md)] の INSERT または UPDATE トリガーの内部のどこでも使用でき、そのトリガーが特定の動作を実行すべきかどうかをテストすることができます。  
@@ -66,7 +68,7 @@ UPDATE ( column )
  INSERT 動作では、列には明示的な値または暗黙的な (NULL) 値が挿入されるので、IF UPDATE は TRUE の値を返します。  
   
 > [!NOTE]  
->  IF UPDATE (*列*n) 場合、IF と同じ句機能しています.それ以外の場合、または WHILE 句および使用を開始しています.終了ブロック。 詳細については、次を参照してください。[フロー制御言語 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md).  
+>  IF UPDATE (*列*n) 場合、IF と同じ句機能しています.それ以外の場合、または WHILE 句および使用を開始しています.終了ブロック。 詳細については、次を参照してください。[フロー制御言語 &#40;です。TRANSACT-SQL と #41 です](~/t-sql/language-elements/control-of-flow.md)。  
   
  更新 (*列*) 内部のどこでも使用できる、[!INCLUDE[tsql](../../includes/tsql-md.md)]トリガーします。  
   

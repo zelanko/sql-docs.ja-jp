@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c342ad591c790e4c0d8167ab78f73436e81610b0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 49511281ee8ce420186ad72b112a319dff8a55ce
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,23 +33,23 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar (32)**|このビューのキーです。 要求に関連付けられている一意の数値 id です。|システム内のすべての要求間で一意です。|  
-|session_id|**nvarchar (32)**|このクエリの実行に使用されたセッションに関連付けられた一意の数値 id です。 参照してください[sys.dm_pdw_exec_sessions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
-|ステータス|**nvarchar (32)**|要求の現在の状態。|実行中 ' '、'中断'、'完了'、'キャンセル'、'失敗' です。|  
+|request_id|**nvarchar(32)**|このビューのキーです。 要求に関連付けられている一意の数値 id です。|システム内のすべての要求間で一意です。|  
+|session_id|**nvarchar(32)**|このクエリの実行に使用されたセッションに関連付けられた一意の数値 id です。 参照してください[sys.dm_pdw_exec_sessions &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。||  
+|ステータス|**nvarchar(32)**|要求の現在の状態。|実行中 ' '、'中断'、'完了'、'キャンセル'、'失敗' です。|  
 |submit_time|**datetime**|実行要求が送信された時刻。|有効な**datetime**より小さいか等しい start_time と現在の時刻。|  
 |start_time|**datetime**|要求の実行が開始された時刻。|キューに置かれた要求の場合は NULLそれ以外の場合、有効な**datetime**より小さいまたは現在の時刻と同じです。|  
 |end_compile_time|**datetime**|エンジンが、要求のコンパイルを完了した時刻。|まだコンパイルされていない要求の場合は NULLそれ以外の場合、有効な**datetime** start_time よりも小さいと現在の時刻。|
 |end_time|**datetime**|時間を要求の実行完了、失敗したか、取り消されました。|キューまたはアクティブな要求の場合は nullそれ以外の場合、有効な**datetime**より小さいまたは現在の時刻と同じです。|  
 |total_elapsed_time|**int**|(ミリ秒単位)、要求を開始してから、実行の経過時間です。|0 ~ start_time と end_time の違い間。<br /><br /> Total_elapsed_time では、整数の最大値を超えると、total_elapsed_time 引き続き、最大値になります。 この状態が「、最大値を超過しました」警告を生成します。<br /><br /> 最大値をミリ秒単位は 24.8 日に相当します。|  
 |ラベル●らべる○|**nvarchar (255)**|(省略可能) ラベル文字列がいくつかのクエリの SELECT ステートメントに関連付けられています。|任意の文字列を含む ' a ～ z'、' A ～ Z'、' 0-9'、'_' です。|  
-|error_id|**nvarchar (36)**|存在する場合は、要求に関連付けられているエラーの一意の id。|参照してください[sys.dm_pdw_errors &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); エラーが発生しなかった場合は NULL に設定します。|  
-|database_id|**int**|コンテキストの明示的な (使用 DB_X など) によって使用されるデータベースの識別子です。|内の id を参照してください[sys.databases &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|error_id|**nvarchar(36)**|存在する場合は、要求に関連付けられているエラーの一意の id。|参照してください[sys.dm_pdw_errors &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); エラーが発生しなかった場合は NULL に設定します。|  
+|database_id|**int**|コンテキストの明示的な (使用 DB_X など) によって使用されるデータベースの識別子です。|内の id を参照してください[sys.databases &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
 |command|**nvarchar (4000)**|ユーザーによって送信されると、要求の完全なテキストを保持します。|有効なクエリまたは要求テキスト。 4,000 バイトより長いクエリは切り捨てられます。|  
-|resource_class|**nvarchar (20)**|この要求のリソース クラスです。 関連する参照**concurrency_slots_used**で[sys.dm_pdw_resource_waits &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
+|resource_class|**nvarchar(20)**|この要求のリソース クラスです。 関連する参照**concurrency_slots_used**で[sys.dm_pdw_resource_waits &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)。|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
   
  このビューで保持される最大行数のについては、「最小値と最大値」を参照してください、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="security"></a>セキュリティ  

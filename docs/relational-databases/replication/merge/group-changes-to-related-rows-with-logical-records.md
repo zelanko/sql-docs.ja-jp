@@ -17,15 +17,15 @@ helpviewer_keywords:
 - logical records [SQL Server replication]
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 026199b68479b9219984123bcc5958b037474986
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d2ae5beed7a724e7baa9783e411f8b2f656e3f8a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>論理レコードによる関連行への変更のグループ化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
  ![値を持つ論理レコードの 3 つのテーブル](../../../relational-databases/replication/merge/media/logical-records-02.gif "値を持つ論理レコードの 3 つのテーブル")  
   
- アーティクル間で論理レコード リレーションシップを定義するには、「 [マージテーブル記事間の論理レコード関係を定義する](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)」を参照してください。  
+ アーティクル間で論理レコード リレーションシップを定義するには、「 [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)」を参照してください。  
   
 ## <a name="benefits-of-logical-records"></a>論理レコードの利点  
  論理レコード機能には、2 つの主な利点があります。  
@@ -122,7 +122,7 @@ ms.lasthandoff: 11/17/2017
   
     -   重複しないパラメーター化されたフィルターは使用できません。 詳細については、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」の「[パーティションのオプション] の設定」を参照してください。  
   
--   パブリケーションで結合フィルターを使用する場合、論理レコード リレーションシップに含まれるすべての結合フィルターに対し、 **join unique key** プロパティを **true** に設定する必要があります。 詳細については、「 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)」を参照してください。  
+-   パブリケーションで結合フィルターを使用する場合、論理レコード リレーションシップに含まれるすべての結合フィルターに対し、 **join unique key** プロパティを **true** に設定する必要があります。 詳しくは、「 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)」をご覧ください。  
   
 ### <a name="relationships-between-tables"></a>テーブル間のリレーションシップ  
   
@@ -148,6 +148,6 @@ ms.lasthandoff: 11/17/2017
  論理レコードを使用する場合、マージ エージェントは各論理レコード全体に対する変更をまとめて処理する必要があります。 これにより、マージ エージェントが行をレプリケートするためにかかる時間に影響を与えます。 さらに、エージェントは各論理レコードに対して個別にトランザクションを開くため、ロックの要件が増大します。  
   
 ## <a name="see-also"></a>参照  
- [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
+ [マージ レプリケーションのアーティクル オプション](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
   
   

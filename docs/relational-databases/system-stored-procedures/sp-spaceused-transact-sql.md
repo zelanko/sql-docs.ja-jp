@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2ed6f3bfcb2e034dd782ed477ebcd75e9a43a483
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 670fc2eaf7d6e5c4e499ff57c3a5564bec903ac1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,9 +47,9 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## <a name="arguments"></a>引数  
 
-[!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]、`sp_spacedused`名前付きパラメーターを指定する必要があります (たとえば`sp_spacedused (@objname= N'Table1');`パラメーターの序数位置によって証明書利用者のではなくです。 
+[!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]と[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]、`sp_spacedused`名前付きパラメーターを指定する必要があります (たとえば`sp_spacedused (@objname= N'Table1');`パラメーターの序数位置によって証明書利用者のではなくです。 
 
- [  **@objname=**] **'***objname***'** 
+ [ **@objname=**] **'***objname***'** 
    
  領域の使用情報を要求するテーブル、インデックス付きビュー、またはキューの、修飾付きまたは修飾なしの名前を指定します。 引用符は、オブジェクトの修飾名を指定する場合のみ必要です。 データベース名も含めてオブジェクトの完全修飾名を指定した場合は、そのデータベース名は現在のデータベース名であることが必要です。  
 場合*objname*が指定されていない、データベース全体の結果が返されます。  
@@ -57,7 +57,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)][!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]のみデータベースとテーブルのオブジェクトをサポートします。
   
- [  **@updateusage=**] **'***updateusage***'**  
+ [ **@updateusage=**] **'***updateusage***'**  
  領域の使用情報の更新に DBCC UPDATEUSAGE を使用するかどうかを示します。 ときに*objname*はデータベース全体に対して、ステートメントが実行; でステートメントを実行するそれ以外の場合、指定されていない*objname*です。 値は、 **true**または**false**です。 *updateusage*は**varchar (5)**、既定値は**false**です。  
   
  [  **@mode=**] **'***モード***'**  
@@ -65,7 +65,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *モード*引数は、次の値を持つことができます。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |ALL|オブジェクトまたはローカル部分およびリモートの部分の両方を含むデータベースの記憶域の統計を返します。|  
 |LOCAL_ONLY|オブジェクトまたはデータベースのローカル部分だけの記憶域の統計を返します。 返す場合と同様の統計情報の場合は、オブジェクトまたはデータベースがストレッチが有効な@mode= ALL です。|  
@@ -76,14 +76,14 @@ sp_spaceused [[ @objname = ] 'objname' ]
  [  **@oneresultset=**] *oneresultset*  
  1 つの結果セットを返すかどうかを示します。 *Oneresultset*引数は、次の値を持つことができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0|ときに *@objname* が null またはが指定されていない 2 つの結果セットが返されます。 2 つの結果セットは、既定の動作です。|  
 |1|ときに *@objname*  = null またはが指定されていない 1 つの結果セットが返されます。|  
   
  *oneresultset*は**ビット**、既定値は**0**します。  
 
-[  **@include_total_xtp_storage** ] **'***include_total_xtp_storage***'**  
+[ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'**  
 **適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]、[!INCLUDE[sssds-md](../../includes/sssds-md.md)]です。  
   
  ときに@oneresultset= 1、パラメーター @include_total_xtp_storage MEMORY_OPTIMIZED_DATA ストレージの列が 1 つの結果セットに含まれて かどうかを決定します。 既定値は 0 の場合は、既定で (場合は、パラメーターを省略すると)、XTP 列は、結果セットに含まれません。  
@@ -96,79 +96,79 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**nvarchar (128)**|現在のデータベース名。|  
-|**database_size**|**varchar (18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**データおよびログ ファイル両方にはが含まれています。|  
-|**未割り当ての領域**|**varchar (18)**|データベース オブジェクト用に予約されていないデータベースの領域。|  
+|**database_name**|**nvarchar(128)**|現在のデータベース名。|  
+|**database_size**|**varchar(18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**データおよびログ ファイル両方にはが含まれています。|  
+|**未割り当ての領域**|**varchar(18)**|データベース オブジェクト用に予約されていないデータベースの領域。|  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**予約されています**|**varchar (18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
-|**データ**|**varchar (18)**|データの使用領域の合計。|  
-|**index_size**|**varchar (18)**|インデックスの使用領域の合計。|  
-|**未使用**|**varchar (18)**|データベース内でオブジェクト用に予約されており、使用されていない領域の合計。|  
+|**reserved**|**varchar(18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
+|**data**|**varchar(18)**|データの使用領域の合計。|  
+|**index_size**|**varchar(18)**|インデックスの使用領域の合計。|  
+|**unused**|**varchar(18)**|データベース内でオブジェクト用に予約されており、使用されていない領域の合計。|  
   
  場合*objname*を省略した場合の値と*oneresultset* 1 に設定されて現在のデータベースのサイズ情報を提供する次の 1 つの結果セットが返されます。  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**nvarchar (128)**|現在のデータベース名。|  
-|**database_size**|**varchar (18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**データおよびログ ファイル両方にはが含まれています。|  
-|**未割り当ての領域**|**varchar (18)**|データベース オブジェクト用に予約されていないデータベースの領域。|  
-|**予約されています**|**varchar (18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
-|**データ**|**varchar (18)**|データの使用領域の合計。|  
-|**index_size**|**varchar (18)**|インデックスの使用領域の合計。|  
-|**未使用**|**varchar (18)**|データベース内でオブジェクト用に予約されており、使用されていない領域の合計。|  
+|**database_name**|**nvarchar(128)**|現在のデータベース名。|  
+|**database_size**|**varchar(18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**データおよびログ ファイル両方にはが含まれています。|  
+|**未割り当ての領域**|**varchar(18)**|データベース オブジェクト用に予約されていないデータベースの領域。|  
+|**reserved**|**varchar(18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
+|**data**|**varchar(18)**|データの使用領域の合計。|  
+|**index_size**|**varchar(18)**|インデックスの使用領域の合計。|  
+|**unused**|**varchar(18)**|データベース内でオブジェクト用に予約されており、使用されていない領域の合計。|  
   
  場合*objname*を指定すると、指定したオブジェクトの次の結果セットが返されます。  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar (128)**|領域の使用情報を要求したオブジェクトの名前。<br /><br /> オブジェクトのスキーマ名は返されません。 スキーマ名が必要な場合は、使用、 [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)または[sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)動的管理ビューと同じサイズ情報を取得します。|  
-|**行**|**char(20)**|テーブルに含まれる行数。 指定されたオブジェクトがある場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)]キュー、この列は、キュー内のメッセージの数を示します。|  
-|**予約されています**|**varchar (18)**|予約領域の量の合計*objname*です。|  
-|**データ**|**varchar (18)**|内のデータによって使用される領域の合計金額*objname*です。|  
-|**index_size**|**varchar (18)**|インデックスで使用される領域の合計容量*objname*です。|  
-|**未使用**|**varchar (18)**|予約された領域の合計金額*objname*が使用されていません。|  
+|**name**|**nvarchar(128)**|領域の使用情報を要求したオブジェクトの名前。<br /><br /> オブジェクトのスキーマ名は返されません。 スキーマ名が必要な場合は、使用、 [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)または[sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)動的管理ビューと同じサイズ情報を取得します。|  
+|**rows**|**char(20)**|テーブルに含まれる行数。 指定されたオブジェクトがある場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)]キュー、この列は、キュー内のメッセージの数を示します。|  
+|**reserved**|**varchar(18)**|予約領域の量の合計*objname*です。|  
+|**data**|**varchar(18)**|内のデータによって使用される領域の合計金額*objname*です。|  
+|**index_size**|**varchar(18)**|インデックスで使用される領域の合計容量*objname*です。|  
+|**unused**|**varchar(18)**|予約された領域の合計金額*objname*が使用されていません。|  
  
 これは、パラメーターが指定されていない場合、既定のモードです。 次の結果セットには、ディスク上のデータベース サイズの詳細情報が返されます。 
 
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**nvarchar (128)**|現在のデータベース名。|  
-|**database_size**|**varchar (18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**データおよびログ ファイル両方にはが含まれています。 データベースに MEMORY_OPTIMIZED_DATA ファイル グループがある場合、ファイル グループにすべてのチェックポイント ファイルのディスク上の合計サイズを含めます。|  
-|**未割り当ての領域**|**varchar (18)**|データベース オブジェクト用に予約されていないデータベースの領域。 データベースに MEMORY_OPTIMIZED_DATA ファイル グループがある場合は、状態 PRECREATED とチェックポイント ファイルの合計のディスク上のサイズ、ファイル グループに含めます。|  
+|**database_name**|**nvarchar(128)**|現在のデータベース名。|  
+|**database_size**|**varchar(18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**データおよびログ ファイル両方にはが含まれています。 データベースに MEMORY_OPTIMIZED_DATA ファイル グループがある場合、ファイル グループにすべてのチェックポイント ファイルのディスク上の合計サイズを含めます。|  
+|**未割り当ての領域**|**varchar(18)**|データベース オブジェクト用に予約されていないデータベースの領域。 データベースに MEMORY_OPTIMIZED_DATA ファイル グループがある場合は、状態 PRECREATED とチェックポイント ファイルの合計のディスク上のサイズ、ファイル グループに含めます。|  
 
 データベース内のテーブルで使用される領域: (この結果セットが反映されないメモリ最適化テーブルでは、ディスク使用量の会計がのテーブルが存在しないため) 
 
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**予約されています**|**varchar (18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
-|**データ**|**varchar (18)**|データの使用領域の合計。|  
-|**index_size**|**varchar (18)**|インデックスの使用領域の合計。|  
-|**未使用**|**varchar (18)**|データベース内でオブジェクト用に予約されており、使用されていない領域の合計。|
+|**reserved**|**varchar(18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
+|**data**|**varchar(18)**|データの使用領域の合計。|  
+|**index_size**|**varchar(18)**|インデックスの使用領域の合計。|  
+|**unused**|**varchar(18)**|データベース内でオブジェクト用に予約されており、使用されていない領域の合計。|
 
 次の結果セットが返される**場合のみ**データベースには、少なくとも 1 つのコンテナーと、MEMORY_OPTIMIZED_DATA ファイル グループには。 
 
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**xtp_precreated**|**varchar (18)**|状態 (KB 単位) の PRECREATED とチェックポイント ファイルの合計サイズ。 全体として、データベース内の未割り当て領域にカウントします。 [など 600,000 KB 事前作成されたチェックポイント ファイルの場合は、この列に含まれる ' 600000 KB']|  
-|**xtp_used**|**varchar (18)**|UNDER CONSTRUCTION、アクティブ、およびマージ ターゲット (KB 単位) の状態を持つチェックポイント ファイルの合計サイズ。 これは、メモリ最適化テーブルのデータをアクティブに使用されるディスク領域です。|  
-|**xtp_pending_truncation**|**varchar (18)**|状態 (KB 単位) の WAITING_FOR_LOG_TRUNCATION とチェックポイント ファイルの合計サイズ。 これは、ログの切り捨てが発生したら、クリーンアップ処理を待機しているチェックポイント ファイルに使用されるディスク領域です。|
+|**xtp_precreated**|**varchar(18)**|状態 (KB 単位) の PRECREATED とチェックポイント ファイルの合計サイズ。 全体として、データベース内の未割り当て領域にカウントします。 [など 600,000 KB 事前作成されたチェックポイント ファイルの場合は、この列に含まれる ' 600000 KB']|  
+|**xtp_used**|**varchar(18)**|UNDER CONSTRUCTION、アクティブ、およびマージ ターゲット (KB 単位) の状態を持つチェックポイント ファイルの合計サイズ。 これは、メモリ最適化テーブルのデータをアクティブに使用されるディスク領域です。|  
+|**xtp_pending_truncation**|**varchar(18)**|状態 (KB 単位) の WAITING_FOR_LOG_TRUNCATION とチェックポイント ファイルの合計サイズ。 これは、ログの切り捨てが発生したら、クリーンアップ処理を待機しているチェックポイント ファイルに使用されるディスク領域です。|
 
 場合*objname*は省略すると、oneresultset の値は 1、および*include_total_xtp_storage* 1 に設定されて現在のデータベースのサイズ情報を提供する次の 1 つの結果セットが返されます。 場合`include_total_xtp_storage`は 0 (既定)、最後の 3 つの列は省略されます。 
 
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**nvarchar (128)**|現在のデータベース名。|  
-|**database_size**|**varchar (18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**データおよびログ ファイル両方にはが含まれています。 データベースに MEMORY_OPTIMIZED_DATA ファイル グループがある場合、ファイル グループにすべてのチェックポイント ファイルのディスク上の合計サイズを含めます。|
-|**未割り当ての領域**|**varchar (18)**|データベース オブジェクト用に予約されていないデータベースの領域。 データベースに MEMORY_OPTIMIZED_DATA ファイル グループがある場合は、状態 PRECREATED とチェックポイント ファイルの合計のディスク上のサイズ、ファイル グループに含めます。|  
-|**予約されています**|**varchar (18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
-|**データ**|**varchar (18)**|データの使用領域の合計。|  
-|**index_size**|**varchar (18)**|インデックスの使用領域の合計。|  
-|**未使用**|**varchar (18)**|データベース内でオブジェクト用に予約されており、使用されていない領域の合計。|
-|**xtp_precreated**|**varchar (18)**|状態 (KB 単位) の PRECREATED とチェックポイント ファイルの合計サイズ。 データベース内の未割り当て領域に、全体としてカウントされます。 データベースには、少なくとも 1 つのコンテナーと、memory_optimized_data ファイル グループがない場合は、NULL を返します。 *この列はのみが含まれる場合@include_total_xtp_storage= 1*です。| 
-|**xtp_used**|**varchar (18)**|UNDER CONSTRUCTION、アクティブ、およびマージ ターゲット (KB 単位) の状態を持つチェックポイント ファイルの合計サイズ。 これは、メモリ最適化テーブルのデータをアクティブに使用されるディスク領域です。 データベースには、少なくとも 1 つのコンテナーと、memory_optimized_data ファイル グループがない場合は、NULL を返します。 *この列はのみが含まれる場合@include_total_xtp_storage= 1*です。| 
-|**xtp_pending_truncation**|**varchar (18)**|状態 (KB 単位) の WAITING_FOR_LOG_TRUNCATION とチェックポイント ファイルの合計サイズ。 これは、ログの切り捨てが発生したら、クリーンアップ処理を待機しているチェックポイント ファイルに使用されるディスク領域です。 データベースには、少なくとも 1 つのコンテナーと、memory_optimized_data ファイル グループがない場合は、NULL を返します。 この列はのみが含まれる場合`@include_total_xtp_storage=1`です。|
+|**database_name**|**nvarchar(128)**|現在のデータベース名。|  
+|**database_size**|**varchar(18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**データおよびログ ファイル両方にはが含まれています。 データベースに MEMORY_OPTIMIZED_DATA ファイル グループがある場合、ファイル グループにすべてのチェックポイント ファイルのディスク上の合計サイズを含めます。|
+|**未割り当ての領域**|**varchar(18)**|データベース オブジェクト用に予約されていないデータベースの領域。 データベースに MEMORY_OPTIMIZED_DATA ファイル グループがある場合は、状態 PRECREATED とチェックポイント ファイルの合計のディスク上のサイズ、ファイル グループに含めます。|  
+|**reserved**|**varchar(18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
+|**data**|**varchar(18)**|データの使用領域の合計。|  
+|**index_size**|**varchar(18)**|インデックスの使用領域の合計。|  
+|**unused**|**varchar(18)**|データベース内でオブジェクト用に予約されており、使用されていない領域の合計。|
+|**xtp_precreated**|**varchar(18)**|状態 (KB 単位) の PRECREATED とチェックポイント ファイルの合計サイズ。 データベース内の未割り当て領域に、全体としてカウントされます。 データベースには、少なくとも 1 つのコンテナーと、memory_optimized_data ファイル グループがない場合は、NULL を返します。 *この列はのみが含まれる場合@include_total_xtp_storage= 1*です。| 
+|**xtp_used**|**varchar(18)**|UNDER CONSTRUCTION、アクティブ、およびマージ ターゲット (KB 単位) の状態を持つチェックポイント ファイルの合計サイズ。 これは、メモリ最適化テーブルのデータをアクティブに使用されるディスク領域です。 データベースには、少なくとも 1 つのコンテナーと、memory_optimized_data ファイル グループがない場合は、NULL を返します。 *この列はのみが含まれる場合@include_total_xtp_storage= 1*です。| 
+|**xtp_pending_truncation**|**varchar(18)**|状態 (KB 単位) の WAITING_FOR_LOG_TRUNCATION とチェックポイント ファイルの合計サイズ。 これは、ログの切り捨てが発生したら、クリーンアップ処理を待機しているチェックポイント ファイルに使用されるディスク領域です。 データベースには、少なくとも 1 つのコンテナーと、memory_optimized_data ファイル グループがない場合は、NULL を返します。 この列はのみが含まれる場合`@include_total_xtp_storage=1`です。|
 
 ## <a name="remarks"></a>解説  
  **database_size**の合計よりも大きいは常に**予約** + **未割り当て領域**ログ ファイルのサイズが含まれていますが、 **に予約されています**と**unallocated_space**データ ページのみを検討してください。  
@@ -182,7 +182,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 > [!NOTE]  
 >  ドロップまたは大規模なインデックスを再構築またはドロップまたは大規模なテーブルを切り捨てるしたときに、[!INCLUDE[ssDE](../../includes/ssde-md.md)]トランザクションがコミットされた後に、まで、実際のページの割り当て解除と、関連するロックを延期します。 削除操作が延期された場合、割り当てられた領域は、すぐには解放されません。 によって返される値ではそのため、 **sp_spaceused**すぐ削除するか切り捨てたラージ オブジェクトが使用可能な実際のディスク領域を反映されません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  **sp_spaceused** の実行権限は、 **public** ロールに与えられています。 **@updateusage** パラメーターを指定できるのは、**db_owner** 固定データベース ロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
@@ -252,7 +252,7 @@ GO
 
 ## <a name="see-also"></a>参照  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC UPDATEUSAGE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [sys.allocation_units &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 88db862493213badd36cfcaf4301cc1be6da5881
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4dbf50b3d48d83d3df69ec285a22379164f883e0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-network-configuration"></a>サーバー ネットワークの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] サーバー ネットワークの構成作業には、プロトコルの有効化、プロトコルで使用されるポートまたはパイプの変更、暗号化の構成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスの構成、ネットワーク上での [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の公開または非表示、サーバー プリンシパル名の登録などがあります。 ほとんどの場合、サーバー ネットワークの構成を変更する必要はありません。 特殊なネットワーク要件がある場合は、サーバー ネットワーク プロトコルのみを再構成します。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/20/2017
   
  SPN を使用すると、NTLM で接続する場合のクライアント認証のセキュリティを強化することもできます。 詳細については、「 [拡張保護を使用したデータベース エンジンへの接続](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)」を参照してください。  
   
-## <a name="sql-server-browser-service"></a>SQL Server Browser サービス  
+## <a name="sql-server-browser-service"></a>SQL Server Browser Service  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスはサーバーで実行され、クライアント コンピューターが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを見つけるのに役立ちます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスを構成する必要はありませんが、いくつかの接続シナリオで実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスの詳細については、「[SQL Server Browser サービス &#40;データベース エンジンと SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)」を参照してください。  
   
 ## <a name="hiding-sql-server"></a>SQL Server の非表示  

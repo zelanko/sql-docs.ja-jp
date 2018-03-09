@@ -8,31 +8,34 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.status.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.status.f1
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 658cb8a6783afc9b01259e8cf2e8915659550867
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7b0ad2d6c9773860640bbf25ecac671dfae2dbe1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring-monitor-status-page"></a>[データベース ミラーリング モニター] ([状態] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 読み取り専用ページです。現在ナビゲーション ツリーで選択されているデータベースのプリンシパルおよびミラー サーバー インスタンスについて、最新のミラーリング状態が表示されます。 インスタンスに関する情報が利用できない場合、そのインスタンスに対応する **[状態]** グリッドのセルは " **不明**" とグレーで表示されます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+読み取り専用ページです。現在ナビゲーション ツリーで選択されているデータベースのプリンシパルおよびミラー サーバー インスタンスについて、最新のミラーリング状態が表示されます。 インスタンスに関する情報が利用できない場合、そのインスタンスに対応する **[状態]** グリッドのセルは " **不明**" とグレーで表示されます。  
   
  **SQL Server Management Studio を使用してデータベース ミラーリングを監視するには**  
   
 -   [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>オプション  
- **[状態]**  
+## <a name="options"></a>および  
+ **ステータス**  
  プリンシパル/ミラー サーバー インスタンスごとに、最新の高度なミラーリング状態が反映されたグリッドが表示されます。 **[状態]** グリッドの行は、次の順序で表示されます。  
   
 -   [プリンシパル サーバー インスタンス]  
@@ -41,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
  次の列で構成されます。  
   
-|列名|説明|  
+|列名|Description|  
 |-----------------|-----------------|  
 |**サーバー インスタンス**|**[状態]** 行に状態が表示されているサーバー インスタンス名。|  
 |**[現在のロール]**|サーバー インスタンスの現在のロールです。 **[プリンシパル]** または **[ミラー]**のいずれかになります。|  
@@ -97,8 +100,8 @@ ms.lasthandoff: 11/20/2017
   
 -   **[自動フェールオーバーを伴う高い安全性 (同期)]**  
   
-## <a name="remarks"></a>解説  
- **dbm_monitor** 固定データベース ロールのメンバーは、データベース ミラーリング モニターまたは **sp_dbmmonitorresults** ストアド プロシージャを使用して既存のミラーリングの状態を表示できます。 ただし、これらのユーザーは状態テーブルを更新できません。 状態テーブルは、 **[データベース ミラーリング モニターのジョブ]**によって定期的に更新されます。 表示されている状態の経過期間は、**[プリンシパル ログ (***\<time>***)]** および **[ミラー ログ (***\<time>***)]** の "time" にあたる部分で確認できます。  
+## <a name="remarks"></a>Remarks  
+ **dbm_monitor** 固定データベース ロールのメンバーは、データベース ミラーリング モニターまたは **sp_dbmmonitorresults** ストアド プロシージャを使用して既存のミラーリングの状態を表示できます。 ただし、これらのユーザーは状態テーブルを更新できません。 状態テーブルは、 **[データベース ミラーリング モニターのジョブ]**によって定期的に更新されます。 表示されている状態の経過期間は、**[プリンシパル ログ (***\<time>***)]** と **[ミラー ログ (***\<time>***)]** の "time" にあたる部分で確認できます。  
   
  該当のジョブが存在しないか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが停止している場合、状態はしだいに古くなるため、ミラーリング セッションの構成が反映されない場合があります。 たとえば、フェールオーバー後、パートナーがプリンシパルまたはミラーなどの同じロールを共有しているように見えたり、現在のプリンシパル サーバーがミラー サーバーとして表示され、その一方で現在のミラー サーバーがプリンシパルとして表示されたりすることがあります。  
   

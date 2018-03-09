@@ -17,15 +17,15 @@ f1_keywords:
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 98b520919aeb80434d33d9a1b66ae3f4c3d4f986
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9d4e8bb9372d6e9e19e674160f9039422cd87ebc
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>値を Excel ファイルからドメインへインポートする
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で Excel ファイルからドメインにデータをインポートする方法について説明します。 Excel ファイルを使用して [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションにドメイン値をインポートすることで、ナレッジの生成処理を簡略化し、時間と労力を節約します。 この処理では、有効なデータ値の一覧が保存された Excel ファイルまたはテキスト ファイルを使用して、それらの値をドメインにインポートすることができます。 Excel ファイルからドメインにドメイン値をインポートしたり、ナレッジ ベースにドメインをインポートしたりできます (ナレッジ ベースへのドメインのインポートについて詳しくは、「[ナレッジ検出でドメインを Excel ファイルからインポートする](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)」をご覧ください)。Excel ファイルへのエクスポートはサポートされていません。  
@@ -36,14 +36,14 @@ ms.lasthandoff: 11/20/2017
   
 -   値が含まれている既存のドメインに値をインポートします。この場合、新しい値だけがインポートされます。 既に含まれている値はインポートされません。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  Excel ファイルからドメイン値または完全なドメインをインポートするには、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションがインストールされているコンピューターに Excel がインストールされていること、ドメイン値を含む Excel ファイルが作成されていること (「 [How the import works](#How)」を参照)、およびドメインをインポートするナレッジ ベースが作成されていて開いていることが必要です。  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  Excel ファイルからドメイン値をインポートするには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
 ##  <a name="Import"></a> Import values from an Excel file into a domain  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
 9. ワークシートの先頭の行がドメイン名を表し、残りのすべての行が有効なドメイン値を表す場合は、 **[先頭の行を見出しとして使用]** をオンにします。  
   
-10. クリックして **OK**です。 進行状況バーに、正常にインポートされた値の数、インポートされなかった値の数、および値の総数が表示されます。 処理を取り消すには、 **[キャンセル]** ボタンをクリックします。  
+10. **[OK]** をクリックします。 進行状況バーに、正常にインポートされた値の数、インポートされなかった値の数、および値の総数が表示されます。 処理を取り消すには、 **[キャンセル]** ボタンをクリックします。  
   
 11. **[ドメイン値のインポート]** ダイアログ ボックスに "インポート完了" と表示されていることを確認します。 このダイアログ ボックスで、正常にインポートされた値とインポートされなかった値を確認します。 ファイルの名前とパス、処理の完了状態、正常にインポートされた値の数、インポートされなかった値の数、および処理された値の総数が表示されます。  
   

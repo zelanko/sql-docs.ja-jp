@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a65065437ced53d1554ddd11035e7aa687872e9f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 57e14656a089736a8b7ce9566362c9d7c8888a5d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-data-types-xmla"></a>XML データ型 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]に加えて、標準的なプリミティブ型と派生型、XML 1.0 勧告で定義されたは、XML for Analysis (XMLA) 1.1 仕様は、多次元と表形式のデータの形式をサポートするために追加のデータ型を定義します。  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
 |[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)|によって返される多次元データ、*結果*のパラメーター、 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドです。|  
 |[結果セット](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|自己記述型 XML 結果セットがによって返される、 **Execute**メソッドです。|  
 |[行セット](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)|によって返される、埋め込みの XML スキーマによって構造化されたデータ ソースから行、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)メソッドです。|  
-|文字列|XML**文字列**データ型。|  
+|String|XML**文字列**データ型。|  
 |UnsignedInt|XML **unsignedInt**スキーマの型。|  
   
  標準的な XML データ型の詳細な説明については、World Wide Web Consortium (W3C) 勧告候補を参照してください。  

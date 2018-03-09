@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 95970bab-aa4d-4e8e-be86-0c96e95a5d0c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f9984bef616c5993ab57892bd5fa2266105d0495
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6a8300259dd2ac5a670a69677cfb7153d30c9825
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="errors-and-events-reference-power-pivot-for-sharepoint"></a>エラーとイベントのリファレンス (Power Pivot for SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このセクションでは、エラーとイベントに関する情報を提供[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]for SharePoint です。 このセクションで説明するエラーは、ログやエラー ウィンドウに表示されるエラー メッセージ テキストによって識別されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+ここでは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint のエラーとイベントに関する情報について説明します。 このセクションで説明するエラーは、ログやエラー ウィンドウに表示されるエラー メッセージ テキストによって識別されます。  
   
  このセクションに記載されているエラー メッセージの一覧を表示するには、オンライン ブックの目次ペインを使用してください。  
   

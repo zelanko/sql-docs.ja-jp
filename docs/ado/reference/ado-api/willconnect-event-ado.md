@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - WillConnect
 - Connection::WillConnect
-helpviewer_keywords: WillConnect event [ADO]
+helpviewer_keywords:
+- WillConnect event [ADO]
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45e9a6fb4dcc55b836195065c279627e50c74511
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f80b08a53784a215d58d7f36697207f4d8c3c942
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="willconnect-event-ado"></a>WillConnect イベント (ADO)
 **WillConnect**の接続を開始する前に、イベントが呼び出されます。  
@@ -44,13 +46,13 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *ConnectionString*  
  A**文字列**保留中の接続の接続情報を格納します。  
   
- *ユーザー Id*  
+ *UserID*  
  A**文字列**保留中の接続のユーザー名を格納しています。  
   
  *Password*  
  A**文字列**保留中の接続のパスワードを格納しています。  
   
- *および*  
+ *Options*  
  A**長い**プロバイダーを評価する方法を示す値、 *ConnectionString*です。 唯一のオプションは**adAsyncOpen**です。  
   
  *adStatus*  

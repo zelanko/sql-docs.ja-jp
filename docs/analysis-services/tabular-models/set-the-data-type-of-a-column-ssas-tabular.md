@@ -1,33 +1,31 @@
 ---
-title: "列 (SSAS テーブル) のデータ型を設定 |Microsoft ドキュメント"
+title: "列のデータ型を設定 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ca2bd5f49f3d8a756e213f9e8ae46dcd5a25f6a9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d40df86ee45154243d854dea65162b49a5e6352e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="set-the-data-type-of-a-column-ssas-tabular"></a>列のデータ型の設定 (SSAS テーブル)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]データをインポートするか、モデルにデータを貼り付けるときに、モデル デザイナーは自動的に検出してデータ型を適用します。 データをモデルに追加したら、列のデータ型を手動で変更してデータの格納方法を変更できます。 代わりに、データの格納方法を変更せずに表示形式だけを変更することもできます。  
+# <a name="set-the-data-type-of-a-column"></a>列のデータ型の設定 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+モデルにデータをインポートするか、データを貼り付けると、モデル デザイナーによってデータ型の検出と適用が自動的に行われます。 データをモデルに追加したら、列のデータ型を手動で変更してデータの格納方法を変更できます。 代わりに、データの格納方法を変更せずに表示形式だけを変更することもできます。  
   
 ### <a name="to-change-the-data-type-or-display-format-for-a-column"></a>列のデータ型または表示形式を変更するには  
   
@@ -82,9 +80,9 @@ ms.lasthandoff: 12/08/2017
   
  そのデータ型がサポートされていても、新しいデータ型の範囲でサポートされていない値が見つかった場合は、モデル デザイナーによって別のエラーが表示されます。この場合は、続行する前にデータ値を修正する必要があります。  
   
- Business Intelligence Semantic Model で使用されるデータ型、それらのデータ型の暗黙的な変換、および数式でさまざまなデータ型を使用する方法の詳細については、 [サポートされているデータ型 (SSAS テーブル)](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)」を参照してください。  
+ Business intelligence semantic model で使用されるデータ型の詳細については、暗黙的に変換、およびさまざまなデータ型ではどのように式で使用するを参照してください[データ型はサポートされて](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)です。  
   
-## <a name="see-also"></a>「  
- [サポートされているデータ型 (SSAS テーブル)](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
+## <a name="see-also"></a>参照  
+ [サポートされているデータ型](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
   
   

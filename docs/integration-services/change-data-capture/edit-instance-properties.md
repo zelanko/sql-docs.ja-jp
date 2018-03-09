@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ddaa0513e6b095ec5dcbb5b9b52358bbedface8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ba04041ff88617c249184201805023c215f8d649
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="edit-instance-properties"></a>インスタンスのプロパティの編集
   プロパティ エディターを使用すると、初期構成を作成した後に CDC インスタンスを変更することができます。 プロパティ エディターでは、次の操作を実行できます。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/20/2017
   
      左ペインでサービスを右クリックし、 **[プロパティ]**をクリックすることもできます。  
   
-### <a name="or"></a>または  
+### <a name="or"></a>スイッチまたは  
   
 1.  CDC デザイナー コンソールの左側のペインで、操作するサービスを選択します。  
   

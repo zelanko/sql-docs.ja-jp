@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 12e52e14200f946ad3b256d423b8ade169514182
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f0cb934bc431491de43d6d2100d4c56de82b2dd3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conformance-levels"></a>準拠レベル
 ODBC ドライバーでは、さまざまなデータ ソースへアプリケーション アクセス権を付与します。 各ドライバーにより、アプリケーションは実行時に決定 ODBC の機能とどのような SQL 文法ドライバーと、各データ ソースをサポートしています。 これらのアプリケーションはそのドライバーまたはドライバーの機能を提供するだけで書き込まれるので、1 つのドライバーまたはドライバーの既知の小さなセットを使用する設計されたアプリケーションの要件ではありません。 ドライバーとデータ ソースの機能を検出するアプリケーションのため、準拠の 2 つの領域を利用できます。 SQL 文法と ODBC インターフェイスです。  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_stop_job_TSQL
 - sp_stop_job
-dev_langs: TSQL
-helpviewer_keywords: sp_stop_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_stop_job
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7e84b7df3ec1ae8d504a026569d75ee8fa379715
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1276a936bece39cc875e5f80e8da5465f51bb4ee
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +51,19 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  停止するジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
   
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  停止するジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
- [  **@originating_server =**] **'***master_server***'**  
+ [ **@originating_server =**] **'***master_server***'**  
  マスター サーバーの名前を指定します。 指定した場合、すべてのマルチサーバー ジョブが停止します。 *master_server*は**nvarchar (128)**、既定値は NULL です。 呼び出すときにのみ、このパラメーターを指定**sp_stop_job**をターゲット サーバーにします。  
   
 > [!NOTE]  
 >  最初の 3 つのパラメーターは、いずれか 1 つだけを指定できます。  
   
- [  **@server_name =**] **'***target_server***'**  
+ [ **@server_name =**] **'***target_server***'**  
  マルチサーバー ジョブを停止する特定の対象サーバーの名前を指定します。 *target_server*は**nvarchar (128)**、既定値は NULL です。 呼び出すときにのみ、このパラメーターを指定**sp_stop_job**マルチ サーバー ジョブのマスター サーバーでします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -74,7 +77,7 @@ sp_stop_job
   
  型のステップがジョブで実行されているかどうかは**CmdExec**または**PowerShell**、実行中のプロセス (MyProgram.exe など) は途中で強制終了します。 途中で終了した場合、そのプロセスによって使用されていたファイルが開いたままになるなど、予期しない結果が発生する可能性があります。 その結果、 **sp_stop_job**ジョブには、型のステップが含まれている場合に、極端な状況でのみ使用する必要があります**CmdExec**または**PowerShell**です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  

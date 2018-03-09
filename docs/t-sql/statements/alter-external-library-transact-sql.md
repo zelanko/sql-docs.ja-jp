@@ -3,12 +3,12 @@ title: "外部ライブラリ (TRANSACT-SQL) を ALTER |Microsoft ドキュメ�
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,16 +18,16 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 8365e364c9769af139be2b8dd4e7f5943afc58ff
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: d0fe9adc1907d773bdfddda38b5900774ec97deb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER 外部ライブラリ (TRANSACT-SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 既存のパッケージの外部ライブラリの内容を変更します。
 
@@ -73,7 +73,7 @@ WITH ( LANGUAGE = 'R' )
 
 必要に応じて、ファイルの OS プラットフォームを指定できます。 1 ファイルのみの成果物またはコンテンツについては、特定の言語や実行時の OS プラットフォームごとに許可します。
 
-**DATA_SOURCE external_data_source_name を =**
+**DATA_SOURCE = external_data_source_name**
 
 ライブラリ ファイルの場所を含む外部データ ソースの名前を指定します。 この場所は、Azure blob ストレージ パスを参照する必要があります。 外部データ ソースを作成するには、使用[外部データ ソースの作成 (TRANSACT-SQL)](create-external-data-source-transact-sql.md)です。
 
@@ -84,7 +84,7 @@ WITH ( LANGUAGE = 'R' )
 
 アセンブリのような 16 進数のリテラルとして、パッケージのコンテンツを指定します。 このオプションが必要なアクセス許可が、サーバーがアクセスできる任意のフォルダーにファイルのパスへのアクセスはありません、ライブラリを変更するライブラリを作成することができます。
 
-**プラットフォーム WINDOWS を =**
+**PLATFORM = WINDOWS**
 
 コンテンツ ライブラリのプラットフォームを指定します。 この値は、さまざまなプラットフォームを追加する既存のライブラリを変更する場合に必要です。 Windows は、唯一サポートされているプラットフォームです。
 
@@ -94,7 +94,7 @@ R 言語用には、zip 形式のアーカイブ ファイルの形式でパッ�
 
 `ALTER EXTERNAL LIBRARY`ステートメントがデータベースにのみライブラリ ビットをアップロードします。 変更したライブラリが実際にインストールされていないユーザーが実行されるまで外部のスクリプトは、その後を実行して[sp_execute_external_script (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)です。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>権限
 
 必要があります、`ALTER ANY EXTERNAL LIBRARY`権限です。 外部のライブラリを作成したユーザーは、その外部のライブラリを変更できます。
 

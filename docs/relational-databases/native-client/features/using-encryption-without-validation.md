@@ -1,14 +1,14 @@
 ---
 title: "検証を伴わない暗号化を使用して |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,25 +19,27 @@ helpviewer_keywords:
 - SQL Server Native Client, encryption
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d29061f3c43735b9a3855cee0dd635face3db00
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 943a6aa49feee1d9bbd7a8fdc59392479e104735
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-encryption-without-validation"></a>検証を伴わない暗号化の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、常に、ログインに関連するネットワーク パケットを暗号化します。 サーバーの起動時に証明書がサーバーに提供されないと、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はログイン パケットの暗号化に使用される自己署名入りの証明書を生成します。  
-  
- アプリケーションでは、接続文字列キーワードまたは接続プロパティを使用して、すべてのネットワーク トラフィックの暗号化を要求することもできます。 キーワードは、ODBC および OLE DB の"Encrypt"のプロバイダー文字列の使用時**idbinitialize::initialize**、または"Use Encryption for Data"ADO および OLE DB 初期化文字列を使用する場合の**IDataInitialize**. これによっても構成可能性があります[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager を使用して、 **Force Protocol Encryption**オプション。 既定では、接続のネットワーク トラフィックをすべて暗号化するには、証明書をサーバーに提供する必要があります。  
-  
- 接続文字列キーワードについては、次を参照してください。[使用した Connection String Keywords with SQL Server Native Client を使用して](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)です。  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、常に、ログインに関連するネットワーク パケットを暗号化します。 サーバーの起動時に証明書がサーバーに提供されないと、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はログイン パケットの暗号化に使用される自己署名入りの証明書を生成します。  
+
+自己署名証明書では、セキュリティが保証されません。 暗号化ハンドシェイクは、NT LAN Manager (NTLM) に基づいています。 SQL サーバー上のセキュリティで保護された接続は検証可能な証明書をプロビジョニングすることを強くお勧めします。 証明書の検証でのみセキュリティで保護されたトランスポート セキュリティ層 (TLS) を作成できます。
+
+アプリケーションでは、接続文字列キーワードまたは接続プロパティを使用して、すべてのネットワーク トラフィックの暗号化を要求することもできます。 キーワードは、ODBC および OLE DB の"Encrypt"のプロバイダー文字列の使用時**idbinitialize::initialize**、または"Use Encryption for Data"ADO および OLE DB 初期化文字列を使用する場合の**IDataInitialize**. によって構成もこの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager を使用して、 **Force Protocol Encryption**オプション、およびで暗号化された接続を要求するクライアントの構成します。 既定では、接続のネットワーク トラフィックをすべて暗号化するには、証明書をサーバーに提供する必要があります。 サーバー上の証明書を信頼するようにクライアントを設定するが、中間の攻撃に対する脆弱性のようになります。 サーバーで検証可能な証明書を展開する場合は、FALSE には、証明書の信頼に関するクライアント設定を変更することを確認します。
+
+接続文字列キーワードについては、次を参照してください。[使用した Connection String Keywords with SQL Server Native Client を使用して](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)です。  
   
  サーバーで、証明書がプロビジョニングされていないときに使用される暗号化を有効にする[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]構成マネージャーを使用して、両方を設定できます、 **Force Protocol Encryption**と**Trust Server Certificate**オプション。 この場合、検証可能な証明書がサーバーに提供されなかった場合は、暗号化には検証を伴わない自己署名入りのサーバー証明書を使用します。  
   
@@ -45,14 +47,18 @@ ms.lasthandoff: 11/17/2017
   
 |[Force Protocol Encryption] クライアント設定|[Trust Server Certificate] クライアント設定|接続文字列/接続属性 Encrypt/Use Encryption for Data|接続文字列/接続属性 Trust Server Certificate|結果|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
-|不可|なし|いいえ (既定値)|無視|暗号化は行われません。|  
-|不可|なし|可|いいえ (既定値)|暗号化は、検証可能なサーバー証明書が提供されている場合にのみ行われます。それ以外の場合は、接続試行が失敗します。|  
-|不可|なし|可|可|暗号化は常に行われますが、自己署名入りのサーバー証明書を使用することがあります。|  
-|可|不可|無視|無視|暗号化は、検証可能なサーバー証明書が提供されている場合にのみ行われます。それ以外の場合は、接続試行が失敗します。|  
-|可|可|いいえ (既定値)|無視|暗号化は常に行われますが、自己署名入りのサーバー証明書を使用することがあります。|  
-|可|可|可|いいえ (既定値)|暗号化は、検証可能なサーバー証明書が提供されている場合にのみ行われます。それ以外の場合は、接続試行が失敗します。|  
-|可|可|可|可|暗号化は常に発生するが自己署名サーバー証明書を使用する場合があります。|  
-  
+|いいえ|なし|いいえ (既定値)|無視|暗号化は行われません。|  
+|いいえ|なし|はい|いいえ (既定値)|暗号化は、検証可能なサーバー証明書が提供されている場合にのみ行われます。それ以外の場合は、接続試行が失敗します。|  
+|いいえ|なし|はい|はい|暗号化は常に行われますが、自己署名入りのサーバー証明書を使用することがあります。|  
+|はい|いいえ|無視|無視|暗号化は、検証可能なサーバー証明書が提供されている場合にのみ行われます。それ以外の場合は、接続試行が失敗します。|  
+|はい|はい|いいえ (既定値)|無視|暗号化は常に行われますが、自己署名入りのサーバー証明書を使用することがあります。|  
+|はい|[ユーザー アカウント制御]|はい|いいえ (既定値)|暗号化は、検証可能なサーバー証明書が提供されている場合にのみ行われます。それ以外の場合は、接続試行が失敗します。|  
+|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|暗号化は常に発生するが自己署名サーバー証明書を使用する場合があります。|  
+||||||
+
+> [!CAUTION]
+> 上記の表は、異なる構成で、システムの動作にのみ、ガイドを提供します。 セキュリティで保護された接続は、クライアントとサーバーの両方が暗号化を要求することを確認します。 検証可能な証明書、およびをサーバーにあることを確認してください、 **TrustServerCertificate**クライアントの設定が FALSE に設定します。
+
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB プロバイダー  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーには、DBPROPSET_SQLSERVERDBINIT プロパティで実装される SSPROP_INIT_TRUST_SERVER_CERTIFICATE データ ソース初期化プロパティの追加によって検証を伴わない暗号化がサポートしています設定します。 さらに、新しい接続文字列キーワード、"TrustServerCertificate"のように追加されました。 "TrustServerCertificate" は、yes または no を値として受け取ります。既定値は no です。 サービス コンポーネントを使用しているときは、"TrustServerCertificate" は true または false を値として受け取ります。既定値は false です。  
   

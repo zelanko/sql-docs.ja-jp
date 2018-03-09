@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +18,20 @@ helpviewer_keywords:
 - UDTs [CLR integration], Transact-SQL
 - queries [CLR integration]
 ms.assetid: 807376fb-1f1a-4f2a-8cf8-a622c5858634
-caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ecb5e4f780c1aa35b5ab509cc7862b477c3854d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7a0fae94ce48d8e26bc7ef7a013219131e2e9b85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>SQL Server でのユーザー定義型の使用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]ユーザー定義型 (UDT) の機能にアクセスできます[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から、[!INCLUDE[tsql](../../includes/tsql-md.md)]標準のクエリ構文を使用して言語。 UDT は、データベース オブジェクトの定義、[!INCLUDE[tsql](../../includes/tsql-md.md)] バッチの変数、関数とストアド プロシージャ、および関数とストアド プロシージャの引数に使用できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ユーザー定義型 (UDT) の機能にアクセスできます[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から、[!INCLUDE[tsql](../../includes/tsql-md.md)]標準のクエリ構文を使用して言語。 UDT は、データベース オブジェクトの定義、[!INCLUDE[tsql](../../includes/tsql-md.md)] バッチの変数、関数とストアド プロシージャ、および関数とストアド プロシージャの引数に使用できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [UDT テーブルと列を定義します。](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md)  

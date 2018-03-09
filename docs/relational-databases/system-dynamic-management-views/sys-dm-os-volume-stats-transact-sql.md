@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_volume_stats
 - sys.dm_os_volume_stats
 - sys.dm_os_volume_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_volume_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 43d9ead206eb4f5a83d0006c3b23626346b04fe5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 647c47f57e8f6eb7f756ec5a6263ae5d5059b674
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +63,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**volume_mount_point**|**nvarchar(512)**|ボリュームがルートとするマウント ポイント。 空の文字列を返すことができます。|  
 |**volume_id**|**nvarchar(512)**|オペレーティング システム ボリューム ID。 空の文字列を返すことができます。|  
 |**logical_volume_name**|**nvarchar(512)**|論理ボリューム名。 空の文字列を返すことができます。|  
-|**ある**|**nvarchar(512)**|ファイル システム ボリュームの種類 (NTFS、FAT、RAW など)。 空の文字列を返すことができます。|  
+|**file_system_type**|**nvarchar(512)**|ファイル システム ボリュームの種類 (NTFS、FAT、RAW など)。 空の文字列を返すことができます。|  
 |**total_bytes**|**bigint**|ボリュームの合計サイズ (バイト単位)。 null にすることはできません。|  
 |**available_bytes**|**bigint**|ボリューム上の使用可能な空き領域。 null にすることはできません。|  
 |**supports_compression**|**bit**|ボリュームがオペレーティング システムによる圧縮をサポートするかどうかを示します。 null にすることはできません。|  
@@ -71,7 +74,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>権限  
  VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

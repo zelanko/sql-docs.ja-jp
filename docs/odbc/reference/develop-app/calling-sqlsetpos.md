@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cec632458d406fa0dedeea10a1285b1b521cb197
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 70351e468a6038a26b7b647d6bc7c64d3263f3d6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-sqlsetpos"></a>SQLSetPos を呼び出す
 ODBC 2 です。*x*、行の状態配列へのポインターが引数**SQLExtendedFetch**です。 行の状態配列への呼び出しによって更新された後で**SQLSetPos**です。 一部のドライバーがこの配列は間変更されないという事実に依存していました**SQLExtendedFetch**と**SQLSetPos**です。 ODBC 3 です。*x*状態配列へのポインターが記述子フィールド、および、したがってアプリケーション簡単に変更し、別の配列を指すようにします。 これは、とき、ODBC 3 問題となることができます。*x* ODBC 2 を利用するアプリケーション*。x*ドライバーを呼び出すが、 **SQLSetStmtAttr**配列状態のポインターを設定して呼び出しは**SQLFetchScroll**データをフェッチします。 ドライバー マネージャーがへの呼び出しのシーケンスとしてマップ**SQLExtendedFetch**です。 次のコードでは、エラーは通常と発生ドライバー マネージャーは、2 つ目のマップ**SQLSetStmtAttr** ODBC 2 を操作するときに呼び出す*.x*ドライバー。  

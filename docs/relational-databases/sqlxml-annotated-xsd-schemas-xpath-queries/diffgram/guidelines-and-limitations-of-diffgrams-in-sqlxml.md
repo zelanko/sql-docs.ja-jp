@@ -8,24 +8,26 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: DiffGrams [SQLXML], about DiffGrams
+helpviewer_keywords:
+- DiffGrams [SQLXML], about DiffGrams
 ms.assetid: cf8689c4-2a63-4d05-b202-21b5ff187d7f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07f698a9bcd18566d4cca639e810056f79523684
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2af871b240d318aaa027402a52a9c31498521b99
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="guidelines-and-limitations-of-diffgrams-in-sqlxml"></a>SQLXML における DiffGram のガイドラインと制限
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]SQLXML 4.0 で Diffgram を使用する場合は、次に注意してください。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+SQLXML 4.0 で DiffGram を使用するときには、次の点に注意してください。  
   
 -   バイナリ ラージ オブジェクト (BLOB) のような種類**text、ntext**イメージでは使用できません、  **\<diffgr: する前に >**これが含まれるためそれらで使用するため、Diffgram を使用する場合ブロック同時実行制御。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で、BLOB 型の比較の制限によって問題が発生する可能性があります。 列の間で比較するため、WHERE 句で LIKE キーワードが使用するなど、**テキスト**データ型です。 ただし、比較は失敗ここで、データのサイズは 8 K を超える BLOB 型の場合。  
   

@@ -6,22 +6,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 52ad3f10-6d24-477a-aeb6-110456b2ed1c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 22cd61895126a1d6daa1d69991ec0075d1cd684d
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 27a80fa7dddf5066e87a60998a691c07acfb40ab
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="machine-learning-lifecycle-and-personas"></a>Machine learning のライフ サイクルとペルソナ
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Machine learning プロジェクト スキルとプロフェッショナル向けのさまざまな一連の共同作業に必要なため、複雑なことはできます。 この記事では、マシン学習のライフ サイクルであり、機械学習、および SQL Server がニーズをサポートする方法を行っているデータ担当者の種類の主なタスクについて説明します。
 

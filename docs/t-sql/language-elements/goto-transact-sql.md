@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GOTO
 - GOTO_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - skipping statements
 - Transact-SQL statements, skipping
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - statements [SQL Server], skipping
 - GOTO statement
 ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9dbabcc0fe5f9573554384549023ab8395b87762
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: e4420f83c9cb36ea9c8dfb2f9cae6586d7089047
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="goto-transact-sql"></a>GOTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,13 +53,13 @@ GOTO label
 ```  
   
 ## <a name="arguments"></a>引数  
- *ラベル*  
+ *label*  
  GOTO によりラベルを指定した場合、そのラベルが以降の処理を開始する位置になります。 ラベルの規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。 GOTO の使用の有無にかかわらず、ラベルをコメント行として使用することができます。  
   
 ## <a name="remarks"></a>解説  
  GOTO は、条件付きフロー制御ステートメント、ステートメント ブロック、またはプロシージャ内に存在できますが、バッチの外にあるラベルに移動できません。 GOTO による分岐は、GOTO の前後に定義されたラベルに移動できます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  GOTO 権限は、特に指定のない限りすべての有効なユーザーに与えられます。  
   
 ## <a name="examples"></a>使用例  
@@ -84,7 +86,7 @@ Branch_Three:
   
 ## <a name="see-also"></a>参照  
  [フロー制御言語 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md)   
- [作業を開始してください.END &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
  [中断 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/break-transact-sql.md)   
  [続行 (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/continue-transact-sql.md)   
  [もし。。。ELSE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/if-else-transact-sql.md)   

@@ -8,20 +8,21 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e255c0abb98d6ffae0cad9d68fd8696fdef8f71
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: af0dd255b49e77593bbd14ffa6d06542a995a06c
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>[フィルター] ダイアログ ボックス (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、 **[フィルター]** ダイアログ ボックスを使用して、MDS によって管理されるデータを Excel に読み込む前に絞り込むことができます。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/20/2017
 |------------------|-----------------|  
 |属性|フィルター処理の基準にする属性が表示されます。 属性が表示されない場合は、属性が追加されていません。<br /><br /> 注: ワークシートに表示しない属性を基準にフィルター処理を行うことができます。|  
 |演算子|選択した属性の型に対応する演算子が表示されます。 詳細については、「[フィルター演算子 (マスター データ サービス)](../../master-data-services/filter-operators-master-data-services.md)」を参照してください。|  
-|条件|フィルター処理に使用する条件。|  
+|[抽出条件]|フィルター処理に使用する条件。|  
 |概要の更新|大きなデータセットを操作する場合に、クリックすると、読み込まれるデータの量に関する詳細を含む **[概要]** セクションが更新されます。|  
 |[追加]|**[列]** セクションで属性をクリックし、 **[追加]**をクリックすると、属性がフィルターの一覧に追加されます。|  
 |[すべて削除]|一覧からすべてのフィルターを削除します。|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/20/2017
 |コントロール名|Description|  
 |------------------|-----------------|  
 |[モデル]|モデルの名前。|  
-|バージョン|バージョンの名前。|  
+|[バージョンのオプション]|バージョンの名前。|  
 |Entity|エンティティの名前。|  
 |[行]|Excel に読み込まれる行数。 **[行]** セクションで適用したフィルターに基づきます。|  
 |[列]|Excel に読み込まれる列数。 **[列]** セクションで選択した属性に基づきます。|  

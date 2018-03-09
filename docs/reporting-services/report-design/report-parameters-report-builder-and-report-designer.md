@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,13 +22,13 @@ ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 caps.latest.revision: "41"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 2daf7d7d92e9e0fe3163a06a08d85f5710a8606f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3d6f3f09da04a449f074b02375f5b95a396d359e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>レポート パラメーター (レポート ビルダーおよびレポート デザイナー)
   このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート パラメーターの一般的な使用方法、設定できるプロパティ、その他について説明します。 レポート パラメーターを使用すると、レポート データの制御、他のレポートとの関連付け、およびレポートの表示方法の変更が可能になります。 レポート パラメーターは、 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] やレポート デザイナーで作成する改ページ調整されたレポートのほか、 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]で作成するモバイル レポートで使用できます。 詳細については、「 [レポート パラメーターの概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)」を参照してください。  
@@ -149,7 +147,7 @@ ms.lasthandoff: 12/05/2017
   
 |プロパティ|Description|  
 |--------------|-----------------|  
-|名前|パラメーターの名前を入力します (大文字と小文字が区別されます)。 名前は文字で始まる必要があります。また、名前には、文字、数字、アンダースコア (_) を使用できます。 空白は使用しないでください。 自動的に生成されたパラメーターの名前は、データセット クエリのパラメーターと同じ名前になります。 既定では、手動で作成されたパラメーターの名前は、ReportParameter1 のようになります。|  
+|[オブジェクト名]|パラメーターの名前を入力します (大文字と小文字が区別されます)。 名前は文字で始まる必要があります。また、名前には、文字、数字、アンダースコア (_) を使用できます。 空白は使用しないでください。 自動的に生成されたパラメーターの名前は、データセット クエリのパラメーターと同じ名前になります。 既定では、手動で作成されたパラメーターの名前は、ReportParameter1 のようになります。|  
 |[プロンプト]|レポート ビューアー ツール バーでパラメーターの横に表示されるテキストです。|  
 |データ型|レポート パラメーターのデータ型は、次のいずれかである必要があります。<br /><br /> **[Boolean]**。 オプション ボタンから True または False を選択します。<br /><br /> **[DateTime]**。 カレンダー コントロールから日付を選択します。<br /><br /> **[Integer]**。 テキスト ボックスに値を入力します。<br /><br /> **[Float]**。 テキスト ボックスに値を入力します。<br /><br /> **[Text]**。 テキスト ボックスに値を入力します。<br /><br /> パラメーターに有効な値を定義した場合は、データ型が **DateTime**であっても、ユーザーはドロップダウン リストから値を選択することになります。<br /><br /> レポートのデータ型の詳細については、「 [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)」をご覧ください。|  
 |[空白の値を許可]|パラメーターの値に空の文字列 (空白) を許可する場合に選択します。<br /><br /> パラメーターの有効な値の一覧を指定する場合に空白を有効な値にするには、指定する値の中に含める必要があります。 このオプションを選択すると自動的に空白が有効な値に含まれるわけではありません。|  
@@ -160,7 +158,7 @@ ms.lasthandoff: 12/05/2017
 |Internal|レポート パラメーターを非表示にする場合に選択します。 パブリッシュ済みレポートでは、レポート パラメーターはレポート定義でのみ参照できます。|  
 |[使用できる値]|パラメーターに使用できる値を指定した場合、それらの値は常にドロップダウン リストとして表示されます。 たとえば、 **DateTime** パラメーターに使用できる値を指定すると、カレンダー コントロールの代わりに日付のドロップダウン リストがパラメーター ペインに表示されます。<br /><br /> レポートとサブレポートの間で値の一覧の一貫性を確保するには、データ ソースのオプションを設定して、データ ソースに関連付けられているデータセットのすべてのクエリに対して 1 つのトランザクションが使用されるようにします。<br /><br /> **セキュリティに関する注意** **Text** データ型のパラメーターが含まれるレポートでは、使用可能な値の一覧 (有効な値の一覧とも呼ばれる) を必ず使用してください。また、レポートを実行するすべてのユーザーに対して、レポートのデータの表示に必要なアクセス許可のみを与えてください。 詳細については、「 [セキュリティ (レポート ビルダー)](../../reporting-services/report-builder/security-report-builder.md)で作成するモバイル レポートで使用できます。|  
 |[既定値]|クエリまたは静的な一覧から既定値を設定します。<br /><br /> 各パラメーターに既定値が指定されていれば、レポートは最初に表示したときに自動的に実行されます。|  
-|[詳細設定]|このパラメーターがレポートのデータに直接的または間接的に影響するかどうかを示す値、レポート定義属性 **UsedInQuery**を設定します。<br /><br /> **[更新のタイミングを自動的に決定する]**<br /> レポート プロセッサでこの値の設定が決定されるようにする場合に選択します。 このパラメーターへの直接参照または間接参照が含まれているデータセット クエリがレポート プロセッサで検出された場合、またはレポートにサブレポートがある場合は、この値が **True** になります。<br /><br /> **[常に更新する]**<br /> データセット クエリまたはパラメーター式でレポート パラメーターを直接的または間接的に使用する場合に選択します。 このオプションを選択すると、 **UsedInQuery** が True に設定されます。<br /><br /> **[更新しない]**<br /> データセット クエリまたはパラメーター式でレポート パラメーターを直接的にも間接的にも使用しない場合に選択します。 このオプションを選択すると、 **UsedInQuery** が False に設定されます。<br /><br /> **注意** **[更新しない]** は注意して使用してください。 レポート サーバーでは、 **UsedInQuery** を使用してレポート データと表示レポートのキャッシュ オプション、およびスナップショット レポートのパラメーター オプションが制御されます。 **[更新しない]** を正しく設定しないと、正しいレポート データまたはレポートがキャッシュされなかったり、スナップショット レポートのデータの一貫性が損なわれたりする可能性があります。 詳細については、「[レポート定義言語 (SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)」を参照してください。|  
+|詳細設定|このパラメーターがレポートのデータに直接的または間接的に影響するかどうかを示す値、レポート定義属性 **UsedInQuery**を設定します。<br /><br /> **[更新のタイミングを自動的に決定する]**<br /> レポート プロセッサでこの値の設定が決定されるようにする場合に選択します。 このパラメーターへの直接参照または間接参照が含まれているデータセット クエリがレポート プロセッサで検出された場合、またはレポートにサブレポートがある場合は、この値が **True** になります。<br /><br /> **[常に更新する]**<br /> データセット クエリまたはパラメーター式でレポート パラメーターを直接的または間接的に使用する場合に選択します。 このオプションを選択すると、 **UsedInQuery** が True に設定されます。<br /><br /> **[更新しない]**<br /> データセット クエリまたはパラメーター式でレポート パラメーターを直接的にも間接的にも使用しない場合に選択します。 このオプションを選択すると、 **UsedInQuery** が False に設定されます。<br /><br /> **注意** **[更新しない]** は注意して使用してください。 レポート サーバーでは、 **UsedInQuery** を使用してレポート データと表示レポートのキャッシュ オプション、およびスナップショット レポートのパラメーター オプションが制御されます。 **[更新しない]** を正しく設定しないと、正しいレポート データまたはレポートがキャッシュされなかったり、スナップショット レポートのデータの一貫性が損なわれたりする可能性があります。 詳細については、「[レポート定義言語 (SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)」を参照してください。|  
   
 ##  <a name="bkmk_Dataset_Parameters"></a> データセット クエリ  
  データセット クエリのデータをフィルター処理するには、結果セットに追加するか、結果セットから除外する値を指定して、取得データを制限する制限句を含めることができます。  
@@ -176,7 +174,7 @@ ms.lasthandoff: 12/05/2017
   
  パブリッシュ済みのレポートには、以下を使用できます。  
   
--   **レポート パラメーター プロパティ。** レポート パラメーターの値を (レポート定義とは関係なく) レポート サーバー上で直接変更します。  
+-   **レポート パラメーター プロパティ。** レポート パラメーターの値を (レポート定義とは関係なく) レポート サーバー上で直接変更する。  
   
 -   **キャッシュされたレポート。** レポートのキャッシュ計画を作成するには、各パラメーターに既定値が指定されている必要があります。 詳細については、「 [レポートのキャッシュ (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)でキャッシュを事前に読み込む唯一の方法でした。  
   
@@ -253,9 +251,9 @@ ms.lasthandoff: 12/05/2017
   
  [レポートでの式の使用 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   
- [式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
- [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
  [セキュリティ (レポート ビルダー)](../../reporting-services/report-builder/security-report-builder.md)  
   

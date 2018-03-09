@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-caps.latest.revision: "68"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8b31518a6ed1b32820e9ed1dc2f7acb7a6b94685
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 2ffe0f2aa4a462c211fcfc591b8d2577a2f451c7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] このトピックでは、フルテキスト インデントとクエリのパフォーマンス低下の一般的な原因をいくつか説明します。 また、このような問題を軽減し、パフォーマンスを改善する提案もいくつか紹介します。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+このトピックでは、フルテキスト インデントとクエリのパフォーマンス低下の一般的な原因をいくつか説明します。 また、このような問題を軽減し、パフォーマンスを改善する提案もいくつか紹介します。
   
 ##  <a name="causes"></a> Common causes of performance issues
 ### <a name="hardware-resource-issues"></a>ハードウェア リソースの問題
@@ -141,7 +143,7 @@ ms.lasthandoff: 12/12/2017
 |x64|*F* = *クロール範囲の数* * 10 * 8|*M* = *T* – *F* – 500|  
 
 **式に関する注意事項**
-1.  複数の完全作成を実行中の場合は、それぞれの fdhost.exe のメモリ要件を、*F1*、*F2* などのように個別に計算してください。 その後、 *M* を *T***–** sigma**(***F*i**)**で計算してください。  
+1.  複数の完全作成を実行中の場合は、それぞれの fdhost.exe のメモリ要件を、*F1*、*F2* などのように個別に計算してください。 その後、 *M* を *T***–** sigma**(***F*i**)** で計算します。  
 2.  500 MB は、システムの他のプロセスに必要なメモリの推定値です。 システムで追加の作業を実行している場合、適宜この値を大きくします。  
 3.  」を参照してください。*ism_size* は 8 MB と見なされます (x64 プラットフォームの場合)。  
   
@@ -183,7 +185,7 @@ GO
   
      次の表で、主な待機の種類について説明します。  
   
-    |待機の種類|説明|解決方法|  
+    |待機の種類|Description|解決方法|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX または _UP)|IO がボトルネックとなっている可能性があります。この場合は通常、平均のディスク キューも長くなります。|別のディスクの別のファイル グループにフルテキスト インデックスを移動すると、IO のボトルネックを軽減できる場合があります。|  
     |PAGELATCH_EX (または _UP)|複数のスレッドが同じデータベース ファイルへの書き込みを試行し、多数の競合が発生している可能性があります。|フルテキスト インデックスが格納されているファイル グループにファイルを追加すると、このような競合を軽減できる場合があります。|  

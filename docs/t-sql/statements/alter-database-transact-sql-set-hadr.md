@@ -1,5 +1,5 @@
 ---
-title: "ALTER DATABASE SET HADR (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER DATABASE SET HADR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - SET_HADR_TSQL
 - HADR_TSQL
 - HADR
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ALTER DATABASE statement, AlwaysOn Availability Group
 - ALTER DATABASE statement, SET HADR options
@@ -24,18 +26,18 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], Transact-SQL statements
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
-caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a06e868a26e0da160e70e7f2923496e73f136ff7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: a601a5f93f7a922228232c8ef4a91b5775eded91
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (TRANSACT-SQL) の SET HADR 
+# <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   このトピックには、設定の ALTER DATABASE の構文が含まれています。[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]セカンダリ データベースでのオプションです。 1 つだけの SET HADR オプションは ALTER DATABASE ステートメントごとに許可します。 これらのオプションは、セカンダリ レプリカ上でのみサポートされます。  
@@ -62,7 +64,7 @@ ALTER DATABASE database_name
  SET HADR  
  指定された実行[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]コマンドを指定されたデータベースでします。  
   
- {可用性グループ **=**  *group_name* |オフ}  
+ { AVAILABILITY GROUP **=***group_name* | OFF }  
  次のように、指定した可用性グループから可用性データベースを削除するか、指定した可用性グループに参加させます。  
   
  *group_name*  
@@ -81,7 +83,7 @@ ALTER DATABASE database_name
     > [!NOTE]  
     >  データベースを可用性グループを追加する、プライマリ レプリカをホストするサーバー インスタンスに接続し、使用して、、 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*group_name*のデータベース追加*database_name*ステートメントです。  
   
- 詳細については、「 [可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。  
+ 詳細については、「 [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。  
   
  OFF  
  指定したセカンダリ データベースを可用性グループから削除します。  
@@ -133,7 +135,7 @@ ALTER DATABASE database_name
   
 ## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>アクセス許可  
+### <a name="permissions"></a>権限  
  データベースに対する ALTER 権限が必要です。 データベースを可用性グループに参加させるには、メンバーシップが必要です、 **db_owner**固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  
@@ -149,7 +151,7 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [可用性グループ &#40;Transact SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [AlwaysOn 可用性グループ &#40; の概要SQL Server &#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [AlwaysOn 可用性グループの構成 &#40; のトラブルシューティングSQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
   

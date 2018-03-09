@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_resource_stats_TSQL
 - dm_db_resource_stats
 - dm_db_resource_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41ae9665de08068d1bfa3ed919bbf43f55151a7c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 606b871aeac34ac99d239ec4a84757187e00855f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |avg_cpu_percent|**10 進数 (5,2)**|サービス層の上限に対するパーセンテージで示した、平均コンピューティング使用率。|  
 |avg_data_io_percent|**10 進数 (5,2)**|データ サービス層の限度のパーセンテージで I/O の使用率は平均です。|  
 |avg_log_write_percent|**10 進数 (5,2)**|サービス層の上限に対するパーセンテージで示した、平均書き込みリソース使用率。|  
-|avg_memory_percent|**10 進数 (5,2)**|サービス層の上限に対するパーセンテージで示した、平均メモリ使用率。<br /><br /> これには、インメモリ OLTP オブジェクトの格納に使用されるメモリが含まれます。|  
+|avg_memory_usage_percent|**10 進数 (5,2)**|サービス層の上限に対するパーセンテージで示した、平均メモリ使用率。<br /><br /> これには、インメモリ OLTP オブジェクトの格納に使用されるメモリが含まれます。|  
 |xtp_storage_percent|**10 進数 (5,2)**|記憶域使用率、インメモリ OLTP のサービス層の制限の割合で表した (したレポート期間の末尾)。 これには、次のインメモリ OLTP オブジェクトの格納に使用されるメモリが含まれます。 メモリ最適化テーブル、インデックス、およびテーブル変数。 ALTER TABLE 操作を処理するために使用されるメモリも含まれています。<br /><br /> インメモリ OLTP では、データベースで使用されていない場合は、0 を返します。|  
 |max_worker_percent|**10 進数 (5,2)**|データベースのサービス層の制限の割合の最大同時実行ワーカー (要求)。|  
 |max_session_percent|**10 進数 (5,2)**|データベースのサービス層の制限の割合の最大同時セッション数。|  
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 > [!TIP]  
 >  これらの制限とサービス層に関する詳細コンテキストは、トピックを参照して[サービス階層](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)と[サービス層の機能と制限](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  このビューには、VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="remarks"></a>解説  

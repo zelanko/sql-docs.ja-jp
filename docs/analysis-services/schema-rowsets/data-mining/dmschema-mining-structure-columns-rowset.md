@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DMSCHEMA_MINING_STRUCTURE_COLUMNS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 187bba4f2a785eab9c1de4e076c323bcc4d561fc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 25a6ba694cad584a0c1d6e229ab1f029d288d11e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>DMSCHEMA_MINING_STRUCTURE_COLUMNS 行セット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]実行しているサーバーに展開されているすべてのマイニング構造の個々 の列について説明します[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 |**COLUMN_DEFAULT**|**DBTYPE_WSTR**||列の既定値です。 プロバイダーが公開される**DBCOLUMN_DEFAULTVALUE**ではなく**DBCOLUMN_HASDEFAULT** (ISO テーブル用) によって返される行セットで**icolumnsrowset::getcolumnsrowset**です。<br /><br /> 既定値は場合**NULL**、 **COLUMN_HASDEFAULT**は**TRUE**と**COLUMN_DEFAULT**列が、 **NULL**値。|  
 |**COLUMN_FLAGS**|**DBTYPE_UI4**||列の特性を記述するビットマスク。 **DBCOLUMNFLAGS**列挙型は、対応するビットマスクのビットを指定します。 この列を含めることはできません、 **NULL**値。 有効な値は次のとおりです。<br /><br /> **DBCOLUMNFLAGS_ISNULLABLE** (**0x20**)<br /><br /> **DBCOLUMNFLAGS_MAYBENULL** (**0x40**)<br /><br /> **DBCOLUMNFLAGS_ISLONG** (**0x80**)|  
 |**によって IS_NULLABLE**|**DBTYPE_BOOL**||この列に既定値があるかどうかを示すブール値。<br /><br /> **TRUE**列を含めることができる場合**NULL**です。**FALSE**、それ以外の場合。|  
-|**DATA_TYPE**|**DBTYPE_UI2**||列のデータ型のインジケーターです。 例:<br /><br /> "**テーブル**"= **DBTYPE_HCHAPTER**<br /><br /> "**テキスト**"= **DBTYPE_WCHAR**<br /><br /> "**長い**"= **DBTYPE_I8**<br /><br /> "**二重**"= **DBTYPE_R8**<br /><br /> "**日付**"= **DBTYPE_DATE**|  
+|**DATA_TYPE**|**DBTYPE_UI2**||列のデータ型のインジケーターです。 例 :<br /><br /> "**テーブル**"= **DBTYPE_HCHAPTER**<br /><br /> "**テキスト**"= **DBTYPE_WCHAR**<br /><br /> "**長い**"= **DBTYPE_I8**<br /><br /> "**二重**"= **DBTYPE_R8**<br /><br /> "**日付**"= **DBTYPE_DATE**|  
 |**TYPE_GUID**|**DBTYPE_GUID 型**||列のデータ型の GUID。 データ型を識別する Guid を使用しないプロバイダーを返す必要があります**NULL**この列にします。|  
 |**CHARACTER_MAXIMUM_LENGTH**|**DBTYPE_UI4**||列に格納できる値の最大の長さ。 文字、バイナリ、またはビットの列の場合、これは次のいずれかになります。<br /><br /> 長さが定義されている場合は、列の最大の長さ (単位は文字、バイト、またはビット)。 たとえば、SQL テーブルの `CHAR(5)` 列は、最大の長さが 5 になります。<br /><br /> 列の長さが定義されていない場合は、データ型の最大の長さ (単位は文字、バイト、またはビット)。<br /><br /> 列にもデータ型にも最大の長さが定義されていない場合はゼロ (0) になります。<br /><br /> **NULL**他のすべての型の列です。|  
 |**CHARACTER_OCTET_LENGTH**|**DBTYPE_UI4**||列の型が文字またはバイナリである場合は、列の最大の長さ (単位はオクテット (バイト))。 ゼロ (0) の値は、列に最大の長さがないことを意味します。 **NULL**他のすべての型の列です。|  

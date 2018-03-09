@@ -17,13 +17,13 @@ ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 394f15a46fe16b06585c262ea5dbf542746e614b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cb0587036168b77e50da5e1ed26cb9eac66a9b9c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="advanced-save-options"></a>[保存オプションの詳細設定]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このダイアログ ボックスを使用すると、言語エンコード方式を選択したり、各行の末尾に挿入する文字を指定したりできます。 **[保存オプションの詳細設定]** ダイアログ ボックスを表示するには、**[ファイル]** メニューの **[名前を付けて** <query name>**.sql を保存]** をクリックします。**[名前を付けてファイルを保存]** ダイアログ ボックスが開くので、**[保存]** ボタンにある下矢印をクリックして、**[エンコード付きで保存]** をクリックします。  

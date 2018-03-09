@@ -1,7 +1,7 @@
 ---
 title: "SSMA コンソール (AccessToSQL) を実行 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3d749a876fb128f55e653eca6fe8dda613a09dfa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 29f9c2bbce707aa08ce5cff918965e65f66d8370
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>SSMA コンソール (AccessToSQL) を実行します。
 Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと実行および SSMA アクティビティを制御するコマンド ライン オプションを提供します。 次のセクションでは、同じを詳しく説明します。  
@@ -167,7 +167,7 @@ Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <load-access-database>  
@@ -201,7 +201,7 @@ Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと
   
   metabase="<source/target>"/>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <force-load>  
@@ -314,7 +314,7 @@ Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <generate-assessment-report  
@@ -386,7 +386,7 @@ Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <convert-schema  
@@ -446,7 +446,7 @@ Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと
   
 </migrate-data>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <migrate-data  
@@ -476,7 +476,7 @@ Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと
   
 </link-tables>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <link-tables>  
@@ -502,7 +502,7 @@ Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと
   
 </unlink-tables>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <unlink-tables>  
@@ -581,7 +581,7 @@ Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <synchronize-target  
@@ -590,7 +590,7 @@ Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと
   
   object-type="category"/>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <synchronize-target>  
@@ -646,7 +646,7 @@ Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <refresh-from-database  
@@ -655,7 +655,7 @@ Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと
   
   object-type="category"/>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <refresh-from-database>  
@@ -705,7 +705,7 @@ Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <save-as-script  

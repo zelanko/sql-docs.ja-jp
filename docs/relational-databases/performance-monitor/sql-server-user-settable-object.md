@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97c5a83f9a773f2d0894ed0ed7e4b11e3c7384d9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d60d2059230ed74f72ef4e5ad7f32a3f91aa40b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server: User Settable オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **User Settable** オブジェクトを使用すると、カスタムのカウンター インスタンスを作成できます。 カスタムのカウンター インスタンスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのユーザー独自のコンポーネントなど、既存のカウンターでは監視されないサーバーの特性を監視するために使用します。たとえば、ログに記録された顧客注文数や製品在庫数などを監視できます。  
@@ -36,13 +36,13 @@ ms.lasthandoff: 11/17/2017
   
  次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** object.  
   
-|SQL Server User Settable カウンター|説明|  
+|SQL Server User Settable カウンター|Description|  
 |---------------------------------------|-----------------|  
-|**Query**|**User Settable** オブジェクトには、Query カウンターが含まれています。 ユーザーは、クエリ オブジェクト内の **ユーザー カウンター** を構成します。|  
+|**クエリ**|**User Settable** オブジェクトには、Query カウンターが含まれています。 ユーザーは、クエリ オブジェクト内の **ユーザー カウンター** を構成します。|  
   
  次の表では、 **Query** カウンターの **インスタンス** について説明します。  
   
-|Query カウンターのインスタンス|説明|  
+|Query カウンターのインスタンス|Description|  
 |-----------------------------|-----------------|  
 |**ユーザー カウンター 1**|**sp_user_counter1**を使用して定義します。|  
 |**ユーザー カウンター 2**|**sp_user_counter2**を使用して定義します。|  
@@ -72,7 +72,7 @@ GO
 > [!IMPORTANT]  
 >  ユーザー カウンターのストアド プロシージャで定義するクエリは、できるだけ単純なものにしてください。 大量の並べ替え操作やハッシュ操作を実行するクエリや大量の I/O を実行するクエリは、メモリを集中的に消費するので、パフォーマンスに影響する可能性があります。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  **sp_user_counter** はすべてのユーザーが使用できますが、任意のクエリ カウンターに制限することもできます。  
   
 ## <a name="see-also"></a>参照  

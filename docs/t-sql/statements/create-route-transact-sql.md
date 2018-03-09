@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - ROUTE
 - CREATE ROUTE
 - ROUTE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - lifetimes [Service Broker]
 - routes [Service Broker], creating
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - activating routes
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c71b5fd2c6fb873889eafdb4bceafeba7699208d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 767be5069d65c11dad849a8fc32f5b15296a4eda
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +66,7 @@ WITH
  *route_name*  
  作成するルートの名前を指定します。 新しいルートが現在のデータベースで作成され、AUTHORIZATION 句で指定されるプリンシパルによって所有されます。 サーバー名、データベース名、スキーマ名は指定できません。 *Route_name*は有効な**sysname**です。  
   
- 承認*owner_name*  
+ AUTHORIZATION *owner_name*  
  ルートの所有者を、指定したデータベース ユーザーまたはロールに設定します。 *Owner_name* 、現在のユーザーがいずれかのメンバーである任意の有効なユーザーまたはロールの名前にすることができます、 **db_owner**固定データベース ロール、または**sysadmin**固定サーバー ロール。 それ以外の場合、 *owner_name*現在のユーザーの名前、現在のユーザーが、IMPERSONATE 権限を持っているユーザーの名前または現在のユーザーが所属するロールの名前にする必要があります。 この句を省略すると、ルートは現在のユーザーに属します。  
   
  のすべてのメンションを  
@@ -84,13 +86,13 @@ WHERE database_id = DB_ID()
   
  BROKER_INSTANCE 句を省略すると、このルートはすべてのブローカー インスタンスと照合されます。 ブローカー インスタンスを指定しないメッセージ交換では、すべてのブローカー インスタンスと照合されるルートは、明示的なブローカー インスタンスを持つルートよりも照合の優先度が高くなります。 ブローカー インスタンスを指定するメッセージ交換では、ブローカー インスタンスを持つルートの方が、すべてのブローカー インスタンスと照合されるルートより優先度が高くなります。  
   
- 有効期間 **=**  *route_lifetime*  
+ 有効期間 **= * * * route_lifetime*  
  時間を秒単位で指定される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ルーティング テーブルにルートを保持します。 有効期間の最後に、ルートの有効期限、および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]新しいメッセージ交換のルートを選択するときに、ルートを不可と見なされます。 この句を省略した場合、 *route_lifetime*が NULL で、ルートの有効期限が切れることはありません。  
   
- アドレス**='***next_hop_address***'**  
+ ADDRESS **='***next_hop_address***'**  
  ルート用のネットワーク アドレスを指定します。 *Next_hop_address*次の形式で TCP/IP アドレスを指定します。  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
   
  指定した*port_number*のポート番号に一致する必要があります、[!INCLUDE[ssSB](../../includes/sssb-md.md)]のインスタンスのエンドポイント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定したコンピューターにします。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
   
@@ -138,7 +140,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  ルートは一時オブジェクトとして指定できません。 ルート名で始まる **#** 許可されますが、パーマネント オブジェクト。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ルートの既定値のメンバーを作成するためのアクセス許可、 **db_ddladmin**または**db_owner**固定データベース ロールおよび**sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  

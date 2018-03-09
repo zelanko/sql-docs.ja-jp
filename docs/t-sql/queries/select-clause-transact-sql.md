@@ -8,14 +8,16 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT Clause
 - SELECT_Clause_TSQL
 - DISTINCT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - parentheses [SQL Server]
 - identity columns [SQL Server], SELECT clause
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - $ROWGUID keyword
 - queries [SQL Server], results
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
-caps.latest.revision: "54"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: acc0566abe5865284a39680136f0535e8b801d90
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 34a1dee420dd8e409df2043f3278a32235656ace
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -85,7 +87,7 @@ SELECT [ ALL | DISTINCT ]
  \*  
  FROM 句内のすべてのテーブルおよびビューの、すべての列を返すことを指定します。 列は、FROM 句に指定されているテーブルまたはビューの順に、テーブルまたはビュー内に並んでいる順序で返されます。  
   
- *table_name* | *view_name* | *テーブル*_*エイリアス**。  
+ *table_name* | *view_name* | *table*_*alias*.*  
  スコープを制限、\*を指定したテーブルまたはビュー。  
   
  *column_name*  
@@ -119,7 +121,7 @@ SELECT [ ALL | DISTINCT ]
  *field_name*  
  パブリック データ メンバーである*udt_column_name*です。  
   
- *メソッド名が*  
+ *method_name*  
  パブリック メソッドは、 *udt_column_name*を 1 つまたは複数の引数を受け取る。 *メソッド名が*ミューテーター メソッドにすることはできません。  
   
  次の例では、`Location` という名前のメソッドを呼び出すことにより、`point` 型として定義されている `Cities` 列に対する値を `Distance` テーブルから選択します。  
@@ -136,7 +138,7 @@ SELECT Location.Distance (@p)
 FROM Cities;  
 ```  
   
- *column _ エイリアス*  
+ *column_ alias*  
  クエリの結果セット内の列名を置き換える別名です。 たとえば、quantity という名前の列に対して、Quantity、Quantity to Date、Qty などの別名を指定できます。  
   
  別名を使用して、式の結果の名前を指定することもできます。たとえば、次のようにします。  

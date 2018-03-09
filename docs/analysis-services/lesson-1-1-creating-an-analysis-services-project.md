@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 065fdc60-1791-4e27-9ed5-51d751b3f8c4
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ebc25a68b66605dd82de6107011bcce34a2a0557
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d2dbc32284d43c15c5e07206137f5a8253ed7040
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>レッスン 1-1-Analysis Services プロジェクトの作成
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]使用する次の実習で[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]新しい[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]という名前のプロジェクト**Analysis Services Tutorial**に基づいて、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プロジェクト テンプレート。 *プロジェクト* とは、関連するオブジェクトのコレクションです。 プロジェクトはソリューションに追加され、各ソリューションは 1 つ以上のプロジェクトで構成されます。 詳しくは、「 [Analysis Services プロジェクトの作成 (SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+この実習では、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] を使用して、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Analysis Services Tutorial **という名前の**プロジェクトを新規に作成します。このプロジェクトの作成には、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクト テンプレートを使用します。 *プロジェクト* とは、関連するオブジェクトのコレクションです。 プロジェクトはソリューションに追加され、各ソリューションは 1 つ以上のプロジェクトで構成されます。 詳しくは、「[Analysis Services プロジェクトの作成 (SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)」を参照してください。  
   
 ### <a name="to-create-a-new-analysis-services-project"></a>Analysis Services プロジェクトを作成するには  
   
@@ -41,11 +44,11 @@ ms.lasthandoff: 12/08/2017
 **[Analysis Services 多次元およびデータ マイニング プロジェクト]** テンプレートを基にして **Analysis Services Tutorial** プロジェクトを作成しました。このプロジェクトは、同じ名前の新しいソリューション ( **Analysis Services Tutorial**) に格納されています。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[データ ソースの定義](../analysis-services/lesson-1-2-defining-a-data-source.md)  
+[データ ソースを定義します。](../analysis-services/lesson-1-2-defining-a-data-source.md)  
   
 ## <a name="see-also"></a>参照  
 [SQL Server データ ツール &#40;SSDT&#41; を使用した多次元モデルの作成](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
-[Analysis Services プロジェクトの作成 (SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+[Analysis Services プロジェクト &#40; を作成します。SSDT &#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   
   

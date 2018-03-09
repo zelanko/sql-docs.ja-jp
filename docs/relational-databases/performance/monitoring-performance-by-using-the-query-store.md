@@ -8,23 +8,24 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4b3236a5888d906328f525333ae9e20b42e6d8de
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 29ba7f266a86e53f95668b8bf8ca4ce879bb62f8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/02/2018
 1.  オブジェクト エクスプローラーで、データベースを右クリックし、 **[プロパティ]**をクリックします。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のバージョン 16 以降が必要です。  
+    > [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のバージョン 16 以降が必要です。  
   
 2.  **[データベースのプロパティ]** ダイアログ ボックスで、 **[クエリのストア]** ページをクリックします。  
   
@@ -49,18 +50,18 @@ ms.lasthandoff: 01/02/2018
   
 #### <a name="use-transact-sql-statements"></a>Transact-SQL ステートメントを使用する  
   
-1.  **ALTER DATABASE** ステートメントを使用してクエリのストアを有効にします。 例 :  
+**ALTER DATABASE** ステートメントを使用してクエリのストアを有効にします。 例 :  
   
-    ```sql  
-    ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
-    ```  
+```sql  
+ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
+```  
   
-     クエリ ストアに関連する構文オプションの詳細については、「[ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  
+クエリ ストアに関連する構文オプションの詳細については、「[ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  
   
 > [!NOTE]  
 >  **マスター** データベースまたは **tempdb** データベースに対しては、クエリ ストアを有効にできません。  
  
-##  <a name="About"></a> クエリのストア内の情報  
+## <a name="About"></a> クエリのストア内の情報  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のどの特定のクエリの実行プランも、通常、統計情報やスキーマの変更、インデックスの作成または削除などのさまざまな理由により、時間の経過とともに進化します。プロシージャ キャッシュ (ここにキャッシュされたクエリ プランが格納される) には、最新の実行プランのみ格納されます。 メモリ負荷が原因で、プランがプラン キャッシュから削除されることもあります。 その結果、実行プランの変更によるクエリ パフォーマンスの低下が深刻なレベルになり、解決に時間を要する場合があります。  
   
  クエリのストアには、1 つのクエリにつき複数の実行プランが保持されるため、クエリの特定の実行プランを使用するようクエリ プロセッサに指示するポリシーを強制できます。 これをプラン強制と呼びます。 クエリのストアのプラン強制は、 [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) クエリ ヒントに似たメカニズムを使用して提供されますが、ユーザー アプリケーションを変更する必要はありません。 プラン強制を使用することで、プラン変更によるクエリ パフォーマンスの低下をきわめて短時間に解決できます。  
@@ -70,32 +71,28 @@ ms.lasthandoff: 01/02/2018
  このクエリのストアの機能を使用する一般的なシナリオは次のとおりです。  
   
 -   前のクエリ プランを強制的に適用することにより、プラン パフォーマンスの低下をすばやく発見し修正します。 実行プランの変更によって最近パフォーマンスが低下したクエリを修正します。  
-  
 -   特定の時間枠内にクエリが実行された回数を確認し、パフォーマンス リソースの問題に関するトラブルシューティングにおいて DBA を支援します。  
-  
 -   上位 *n* クエリ (過去 *x* 時間内) を、実行時間やメモリ消費量などを基に識別します。  
-  
 -   指定したクエリのクエリ プランの履歴を監査します。  
-  
 -   特定のデータベースのリソース (CPU、I/O、メモリ) の使用パターンを分析します。  
 -   リソースで待機している上位 n クエリを識別します。 
 -   特定のクエリまたはプランの待機の性質を理解します。
   
 クエリ ストアには 3 つのストアが含まれます。
-- **プラン ストア**は、実行プラン情報の保存用です。
-- **ランタイム統計ストア**は、実行統計情報の保存用です
-- **待機統計ストア**は、待機統計情報の保存用です
+- **プラン ストア**は、実行プラン情報の保存用です。     
+- **ランタイム統計ストア**は、実行統計情報の保存用です    
+- **待機統計ストア**は、待機統計情報の保存用です     
  
- クエリのためにプラン ストア内に格納できる一意のプラン数は、 **max_plans_per_query** 構成オプションによって制限されています。 パフォーマンスを向上させるために、この情報はストアに非同期的に書き込まれます。 領域使用量を最小にするため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 これらのストア内の情報は、クエリのストアのカタログ ビューに対してクエリを実行することによって表示できます。  
+クエリのためにプラン ストア内に格納できる一意のプラン数は、 **max_plans_per_query** 構成オプションによって制限されています。 パフォーマンスを向上させるために、この情報はストアに非同期的に書き込まれます。 領域使用量を最小にするため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 これらのストア内の情報は、クエリのストアのカタログ ビューに対してクエリを実行することによって表示できます。  
   
- 次のクエリは、クエリのストア内のクエリとプランに関する情報を返します。  
+次のクエリは、クエリのストア内のクエリとプランに関する情報を返します。  
   
 ```sql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
-JOIN sys.query_store_query AS Qry  
+INNER JOIN sys.query_store_query AS Qry  
     ON Pl.query_id = Qry.query_id  
-JOIN sys.query_store_query_text AS Txt  
+INNER JOIN sys.query_store_query_text AS Txt  
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
  
@@ -111,7 +108,7 @@ JOIN sys.query_store_query_text AS Txt
  プランを強制的に適用するには、クエリとプランを選択してから、 **[プランの強制]**をクリックします。 強制できるプランは、クエリ プランの機能によって保存され、クエリ プランのキャッシュに保持されているプランのみです。  
 ##  <a name="Waiting"></a>待機クエリの検索
 
-SQL Server 2017 CTP 2.0 以降および Azure SQL Database では、クエリ ストアのユーザーは一定期間のクエリごとの待機統計を見ることができます。 クエリ ストアでは、待機の種類が**待機カテゴリ**に組み合わされます。 完全なマッピングについては、「[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)」をご覧ください。
+[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 以降では、クエリごとの時系列の待機統計情報をクエリ ストアで使用できます。 クエリ ストアでは、待機の種類が**待機カテゴリ**に組み合わされます。 待機カテゴリから待機の種類へのマッピングは、[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) で使用できます。
 
 **待機カテゴリ**では、異なる待機種類が性質の類似性によってバケットに組み合わされます。 問題の解決に必要なフォローアップ分析は待機カテゴリによって異なりますが、同じカテゴリの待機種類からは非常によく似たトラブルシューティング エクスペリエンスが得られ、待機の先頭に影響受けたクエリを提供することは、このような調査の大部分を正常に完了するために不足している部分です。
 
@@ -129,38 +126,38 @@ SQL Server 2017 CTP 2.0 以降および Azure SQL Database では、クエリ �
 
 次のオプションは、クエリ ストア パラメーターの構成に使用できます。
 
- `OPERATION_MODE`  
- **READ_WRITE** (既定値) または READ_ONLY。  
+*OPERATION_MODE*  
+**READ_WRITE** (既定値) または READ_ONLY。  
   
- `CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)`  
- STALE_QUERY_THRESHOLD_DAYS 引数を構成して、クエリのストア内にデータを保持する日数を指定します。 既定値は、30 です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの場合、既定の日数は **7** 日です。
+*CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)*  
+`STALE_QUERY_THRESHOLD_DAYS` 引数を構成して、クエリのストア内にデータを保持する日数を指定します。 既定値は、30 です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの場合、既定の日数は **7** 日です。
   
- `DATA_FLUSH_INTERVAL_SECONDS`  
- クエリに書き込まれるデータ ストアが永続化する頻度を決定をディスクにします。 パフォーマンスを最適化するには、クエリのストアで収集したデータ非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度は、DATA_FLUSH_INTERVAL_SECONDS 引数を介して構成されます。 既定値は **900** (15 分) です。  
+*DATA_FLUSH_INTERVAL_SECONDS*  
+クエリに書き込まれるデータ ストアが永続化する頻度を決定をディスクにします。 パフォーマンスを最適化するには、クエリのストアで収集したデータ非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度は `DATA_FLUSH_INTERVAL_SECONDS` で構成されています。 既定値は **900** (15 分) です。  
   
- `MAX_STORAGE_SIZE_MB`  
- クエリのストアの最大サイズを構成します。 クエリのストア内のデータが MAX_STORAGE_SIZE_MB の上限に達すると、クエリのストアは自動的に状態を読み取り/書き込みから読み取り専用に変更し、新しいデータの収集を停止します。  既定値は 100Mb です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition の既定値は **1 GB**、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの既定値は **10 MB** です。
+*MAX_STORAGE_SIZE_MB*  
+クエリのストアの最大サイズを構成します。 クエリのストア内のデータが `MAX_STORAGE_SIZE_MB` の上限に達すると、クエリのストアは自動的に状態を読み取り/書き込みから読み取り専用に変更し、新しいデータの収集を停止します。  既定値は 100 MB です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition の既定値は **1 GB**、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの既定値は **10 MB** です。
   
- `INTERVAL_LENGTH_MINUTES`  
- クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定された時間枠は、INTERVAL_LENGTH_MINUTES 引数を介して構成されます。 既定値は **60**です。 
+*INTERVAL_LENGTH_MINUTES*  
+クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定された時間枠は、`INTERVAL_LENGTH_MINUTES` 引数を介して構成されます。 既定値は **60**です。 
   
- `SIZE_BASED_CLEANUP_MODE`  
- データの総量が最大サイズに近付いたときにクリーンアップ プロセスを自動的にアクティブにするかどうかを制御します。 **AUTO** (既定値) または OFF。  
+*SIZE_BASED_CLEANUP_MODE*  
+データの総量が最大サイズに近付いたときにクリーンアップ プロセスを自動的にアクティブにするかどうかを制御します。 **AUTO** (既定値) または OFF。  
   
- `QUERY_CAPTURE_MODE`  
- クエリのストアが、すべてのクエリをキャプチャするか、実行数とリソース消費量に基づいて関連するクエリをキャプチャするか、または新しいクエリの追加を停止して現在のクエリのみを追跡するかを指定します。 ALL (すべてのクエリをキャプチャする)、AUTO (不定期で、不必要なコンパイルと実行期間を持つクエリを無視する) または NONE (新しいクエリのキャプチャを停止する)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) での既定値は **ALL** ですが、Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では AUTO です。
+*QUERY_CAPTURE_MODE*  
+クエリのストアが、すべてのクエリをキャプチャするか、実行数とリソース消費量に基づいて関連するクエリをキャプチャするか、または新しいクエリの追加を停止して現在のクエリのみを追跡するかを指定します。 **ALL** (すべてのクエリをキャプチャする)、AUTO (不定期で、不必要なコンパイルと実行期間を持つクエリを無視する) または NONE (新しいクエリのキャプチャを停止する)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) での既定値は ALL ですが、Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では AUTO です。
   
- `MAX_PLANS_PER_QUERY`  
- 各クエリに対して保持の計画の最大数を表す整数。 既定値は **200** です。  
+*MAX_PLANS_PER_QUERY*  
+各クエリに対して保持の計画の最大数を表す整数。 既定値は **200** です。  
  
- `WAIT_STATS_CAPTURE_MODE`  
- クエリ ストアが待機統計情報をキャプチャするかどうかを制御します。 OFF または **ON** (既定値) にすることができます。  
+*WAIT_STATS_CAPTURE_MODE*  
+クエリ ストアが待機統計情報をキャプチャするかどうかを制御します。 OFF または **ON** (既定値) にすることができます。  
  
- **sys.database_query_store_options** ビューにクエリを実行し、クエリ ストアの現在のオプションを確認します。 値に関する詳細については、「[sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)」を参照してください。  
+**sys.database_query_store_options** ビューにクエリを実行し、クエリ ストアの現在のオプションを確認します。 値に関する詳細については、「[sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)」を参照してください。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用してオプションを設定する方法の詳細については、「 [オプション管理](#OptionMgmt)」をご覧ください。  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用してオプションを設定する方法の詳細については、「 [オプション管理](#OptionMgmt)」をご覧ください。  
   
-##  <a name="Related"></a> 関連するビュー、関数、プロシージャ  
+## <a name="Related"></a> 関連するビュー、関数、プロシージャ  
  クエリのストアは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] か、次のビューとプロシージャを使用して表示および管理します。  
 
 ### <a name="query-store-functions"></a>クエリ ストア関数  
@@ -311,9 +308,8 @@ DEALLOCATE adhoc_queries_cursor;
   
  上記の例では、 **sp_query_store_remove_query** 拡張ストアド プロシージャを使用して不要なデータを削除しています。 次のプロシージャを使用することもできます。  
   
--   **sp_query_store_reset_exec_stats** – 指定されたプランの実行時統計をクリアします。  
-  
--   **sp_query_store_remove_plan** –&1; つのプランを削除します。  
+-   **sp_query_store_reset_exec_stats**。指定されたプランの実行時統計をクリアします。  
+-   **sp_query_store_remove_plan**。1 つのプランを削除します。  
  
   
 ###  <a name="Peformance"></a> パフォーマンスの監査とトラブルシューティング  
@@ -554,7 +550,6 @@ ORDER BY additional_duration_workload DESC
 OPTION (MERGE JOIN);  
 ```  
  
-  
 ###  <a name="Stability"></a> クエリ パフォーマンスの安定性を維持する  
  複数回実行されるクエリでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が異なるプランを使用した結果、リソースの使用の仕方や期間が異なっていることに気付く場合があります。 クエリのストアを使用すると、クエリ パフォーマンスが低下している時点を検出し、対象期間の最適なプランを特定できます。 こうすることで、将来のクエリの実行で最適なプランを強制的に適用できます。  
   

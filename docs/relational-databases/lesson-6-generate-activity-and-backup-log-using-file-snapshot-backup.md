@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ba32c2a03abab77de366687c5e4fe3e72834204
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7deac98fa7bef4e087647aad142c735f01747c67
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup"></a>レッスン 6: ファイル スナップショット バックアップを使用してアクティビティを生成し、ログをバックアップする
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このレッスンでは、AdventureWorks2014 データベースにアクティビティを生成し、ファイル スナップショット バックアップを使用してトランザクション ログ バックアップを定期的に作成します。 ファイル スナップショット バックアップの使用の詳細については、 [「Azure でのデータベース ファイルのスナップショット バックアップ」](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)を参照してください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+このレッスンでは、AdventureWorks2014 データベースにアクティビティを生成し、ファイル スナップショット バックアップを使用してトランザクション ログ バックアップを定期的に作成します。 ファイル スナップショット バックアップの使用の詳細については、 [「Azure でのデータベース ファイルのスナップショット バックアップ」](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)を参照してください。  
   
 AdventureWorks2014 データベースにアクティビティを生成し、ファイル スナップショット バックアップを使用してトランザクション ログ バックアップを定期的に作成するには、次の手順を実行します。  
   

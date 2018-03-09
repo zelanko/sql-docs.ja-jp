@@ -5,29 +5,27 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2489ce5465afcbbb42ffaa9403d75a7d42d68ca4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 25343dab0a818aa86f0a3a2f5080204602cc1f38
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="view-the-cube-schema"></a>キューブ スキーマの表示
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**データ ソース ビュー**のペイン、 **[キューブ構造]** ] タブの [**キューブ デザイナー**キューブ スキーマが表示されます。 スキーマとは、キューブのメジャーおよびディメンションの派生元であるテーブルのセットです。 どのキューブ スキーマも、キューブ内のメジャーとディメンションの基になっている 1 つ以上のファクト テーブルと 1 つ以上のディメンション テーブルで構成されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+**キューブ デザイナー** の **[キューブ構造]** タブにある **[データ ソース ビュー]** ペインには、キューブ スキーマが表示されます。 スキーマとは、キューブのメジャーおよびディメンションの派生元であるテーブルのセットです。 どのキューブ スキーマも、キューブ内のメジャーとディメンションの基になっている 1 つ以上のファクト テーブルと 1 つ以上のディメンション テーブルで構成されます。  
   
  **[キューブ構造]** タブの **[データ ソース ビュー]** ペインには、キューブの基になっているデータ ソース ビューのダイアグラムが表示されます。 このダイアグラムは、データ ソース ビューのメイン ダイアグラムのサブセットです。 **[データ ソース ビュー]** ペインのテーブルの表示と非表示を切り替えたり、既存のダイアグラムを表示したりできます。 ただし、基になるスキーマに変更 (新しいリレーションシップまたは名前付きクエリの追加など) を加えることはできません。 スキーマに変更を加えるには、データ ソース ビュー デザイナーを使用します。  
   

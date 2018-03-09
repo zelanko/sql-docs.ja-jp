@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_refresh_log_shipping_monitor
 - sp_refresh_log_shipping_monitor_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_refresh_log_shipping_monitor
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_refresh_log_shipping_monitor
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a2533d1ecd4617fe1aea38e08be16f2b293b386
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7731ce78547a36284e95a43d80464c8e84ceccba
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +50,10 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@agent_id=** ] **'***agent_id***'**  
+ [ **@agent_id=** ] **'***agent_id***'**  
  バックアップの場合はプライマリ ID、コピーまたは復元の場合はセカンダリ ID。 *agent_id*は**uniqueidentifier** NULL にすることはできません。  
   
- [  **@agent_type=** ] **'***agent_type***'**  
+ [ **@agent_type=** ] **'***agent_type***'**  
  ログ配布ジョブの種類を指定します。  
   
  0 = バックアップ。  
@@ -61,7 +64,7 @@ sp_refresh_log_shipping_monitor
   
  *agent_type*は**tinyint** NULL にすることはできません。  
   
- [  **@database=** ] **'***データベース***'**  
+ [ **@database=** ] **'***database***'**  
  バックアップや復元エージェントのログ記録で使用されるプライマリまたはセカンダリ データベースを指定します。  
   
  [ **@mode** ] *n*  
@@ -82,11 +85,11 @@ sp_refresh_log_shipping_monitor
   
  **sp_refresh_log_shipping_monitor**から実行する必要があります、**マスター**プライマリまたはセカンダリ サーバー上のデータベースです。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールは、この手順を実行できます。  
   
 ## <a name="see-also"></a>参照  
- [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [ログ配布 &#40; についてSQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

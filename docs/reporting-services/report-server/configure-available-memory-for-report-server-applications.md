@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - memory thresholds [Reporting Services]
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 caps.latest.revision: "49"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f444ed7b1c875ed523a690d0a13629a1b190f381
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dd6fcd0875993612dba6d8f787ba2d13df87d7f6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>レポート サーバー アプリケーションで利用可能なメモリの構成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、利用可能なすべてのメモリを使用できますが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー アプリケーションに割り当てることのできる合計メモリ リソース量に上限を設けることによって、既定の動作よりも、そちらを優先させることができます。 また、しきい値を設定することにより、メモリの圧迫度 (低、中、高) に応じて、要求の優先度付けや処理の方法を変えることもできます。 メモリ圧迫の度合いが低い場合、レポート サーバーは、対話型のレポート処理またはオンデマンドのレポート処理に若干高い優先度を割り当てます。 メモリ圧迫の度合いが高い場合、レポート サーバーは、さまざまな手法を用いながら、利用できる限られたリソースで稼働状態を保ちます。  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/05/2017
 |---------------------|---------------------|  
 |Low|引き続き現在の要求を処理します。 ほとんどの場合、新しい要求が受け付けられます。 バックグラウンド処理アプリケーションに送られる要求には、レポート サーバー Web サービスに送られる要求よりも低い優先度が割り当てられます。|  
 |Medium|引き続き現在の要求を処理します。 通常、新しい要求が受け付けられます。 バックグラウンド処理アプリケーションに送られる要求には、レポート サーバー Web サービスに送られる要求よりも低い優先度が割り当てられます。 3 つのサーバー アプリケーションに対して割り当てられるメモリはすべて減らされます。また、Web サービス要求用にできるだけ多くのメモリを確保するため、バックグラウンド処理アプリケーションに割り当てられるメモリは、他のアプリケーションよりも大きく削減されます。|  
-|High|メモリ割り当てがさらに削減されます。 多くのメモリを要求するサーバー アプリケーションは拒否されます。 現在の要求はスローダウンされ、完了までにより多くの時間がかかるようになります。 新しい要求は受け付けられません。 レポート サーバーは、メモリ内のデータ ファイルをディスクにスワップします。<br /><br /> メモリ制約が深刻化し、新しい要求を処理できるだけのメモリが存在しない場合、現在の要求が完了するまでの間、レポート サーバーは HTTP 503 (サーバー利用不可) エラーを返します。 場合によっては、メモリ不足を直ちに解消するために、アプリケーション ドメインがリサイクルされることもあります。|  
+|高|メモリ割り当てがさらに削減されます。 多くのメモリを要求するサーバー アプリケーションは拒否されます。 現在の要求はスローダウンされ、完了までにより多くの時間がかかるようになります。 新しい要求は受け付けられません。 レポート サーバーは、メモリ内のデータ ファイルをディスクにスワップします。<br /><br /> メモリ制約が深刻化し、新しい要求を処理できるだけのメモリが存在しない場合、現在の要求が完了するまでの間、レポート サーバーは HTTP 503 (サーバー利用不可) エラーを返します。 場合によっては、メモリ不足を直ちに解消するために、アプリケーション ドメインがリサイクルされることもあります。|  
   
  メモリ不足に対するレポート サーバーの対処をシナリオごとにカスタマイズすることはできませんが、メモリの圧迫度 (高、中、低) に応じた対処を構成設定で指定することはできます。  
   

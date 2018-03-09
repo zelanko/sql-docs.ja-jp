@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: customization file in RDS [ADO]
+helpviewer_keywords:
+- customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f630817b87a464d3f02e5fdad6c88c161a081b23
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0597c403a9d716c155fe129ab8cb514268b27341
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="understanding-the-customization-file"></a>カスタマイズ ファイルの概要
 カスタマイズ ファイルの各セクション ヘッダーは、角かっこで構成されます (**:operator[]**) 型とパラメーターを格納します。 次の 4 つのセクションの種類は、リテラル文字列で示されます。**接続**、 **sql**、 **userlist**、または**ログ**です。 パラメーターでは、リテラル文字列、既定値、ユーザー指定の識別子では、または何も行われません。  
@@ -48,18 +50,18 @@ identifier
   
 |要素|Description|  
 |----------|-----------------|  
-|**接続**|接続文字列を変更するリテラル文字列。|  
+|**connect**|接続文字列を変更するリテラル文字列。|  
 |**sql**|コマンド文字列を変更するリテラル文字列。|  
 |**userlist**|特定のユーザーのアクセス権を変更するリテラル文字列。|  
-|**ログ**|操作エラーを記録するログ ファイルを指定するリテラル文字列。|  
-|**既定値**|識別子のないを指定または検索された場合に使用されるリテラル文字列。|  
-|*識別子*|文字列に一致する文字列、**接続**または**コマンド**文字列。<br /><br /> セクションを使用してこのセクションのヘッダーが含まれている場合**接続**接続文字列で、識別子の文字列があるとします。<br />セクションを使用してこのセクションのヘッダーが含まれている場合**sql**コマンド文字列内に識別子の文字列があるとします。<br />セクションを使用してこのセクションのヘッダーが含まれている場合**userlist**識別子文字列と一致して、**接続**セクションの識別子。|  
+|**logs**|操作エラーを記録するログ ファイルを指定するリテラル文字列。|  
+|**default**|識別子のないを指定または検索された場合に使用されるリテラル文字列。|  
+|*identifier*|文字列に一致する文字列、**接続**または**コマンド**文字列。<br /><br /> セクションを使用してこのセクションのヘッダーが含まれている場合**接続**接続文字列で、識別子の文字列があるとします。<br />セクションを使用してこのセクションのヘッダーが含まれている場合**sql**コマンド文字列内に識別子の文字列があるとします。<br />セクションを使用してこのセクションのヘッダーが含まれている場合**userlist**識別子文字列と一致して、**接続**セクションの識別子。|  
   
  **DataFactory**クライアント パラメーターを渡すこと、ハンドラーを呼び出します。 ハンドラーは、該当するセクション ヘッダー内の識別子に一致するクライアント パラメーターで全体の文字列を検索します。 一致が見つかった場合、そのセクションの内容は、クライアント パラメーターに適用されます。  
   
  特定のセクションは、次の状況で使用されます。  
   
--   A**接続**セクションは、クライアントの値部分文字列のキーワードを接続する場合は、使用"**データ ソース =***値*"、一致する、**接続**セクションの識別子*です。*  
+-   A**接続**セクションは、クライアントの値部分文字列のキーワードを接続する場合は、使用"**データ ソース = * * * 値*"、一致する、**接続**セクション識別子*.*  
   
 -   **Sql**セクションには、クライアントのコマンド文字列に一致する文字列が含まれている場合、使用、 **sql**セクションの識別子。  
   

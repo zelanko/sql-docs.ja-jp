@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ed52bf78-2b0a-4252-98a7-8c2805e22d3d
-caps.latest.revision: "7"
+caps.latest.revision: 
 ms.openlocfilehash: 0ebc616d28fe734b9dac52303641390ce9bc0957
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-an-aps-domain-administrator"></a>APS ドメイン管理者を作成します。
 一部の操作では、Analytics Platform System ドメイン管理者特権が必要です。 これには、ドメイン管理者の追加のアプライアンスを作成する方法について説明します。  
@@ -30,9 +30,9 @@ APS のすべてのノードを実行するユーザーを構成する十分な�
   
 #### <a name="to-add-a-user-to-the-domain-admins-group"></a>Domain Admins グループにユーザーを追加するには  
   
-1.  アクティブな AD ノードへのログイン **(*appliance_domain*-AD01 * * または ***appliance_domain*-AD02**) 既存のアプライアンス ドメインを使用します。管理者アカウントです。  
+1.  アクティブな AD ノードへのログイン**(*appliance_domain*-AD01**または ***appliance_domain *-AD02**) 既存のアプライアンス ドメイン管理者アカウントを使用します。  
   
-2.  [スタート] メニューの **[ファイル名を指定して実行]**をクリックします。 **開く**ボックスに、入力**dsa.msc**です。 **[OK]** をクリックします。  
+2.  [スタート] メニューの **[ファイル名を指定して実行]**をクリックします。 **開く**ボックスに、入力**dsa.msc**です。 **[OK]**をクリックします。  
   
 3.  **Active Directory ユーザーとコンピューター**プログラムを右クリックして**ユーザー**、 をポイント**新規**、クリックして**ユーザー**です。  
   
@@ -49,9 +49,9 @@ APS のすべてのノードを実行するユーザーを構成する十分な�
   
 6.  **メンバーの** タブで、をクリックして**追加**です。  
   
-    型**Domain Admins です。PdwControlNodeAccess**  をクリックし、**名前の確認**です。 **[OK]** をクリックします。  
+    型**Domain Admins です。PdwControlNodeAccess**  をクリックし、**名前の確認**です。 **[OK]**をクリックします。  
   
-    新しいユーザーを追加、 **Domain Admins**グループおよび**PdwControlNodeAccess**グループ。 **[OK]** をクリックします。  
+    新しいユーザーを追加、 **Domain Admins**グループおよび**PdwControlNodeAccess**グループ。 **[OK]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
 [構成マネージャー &#40; を起動します。Analytics Platform System &#41;](launch-the-configuration-manager.md)  

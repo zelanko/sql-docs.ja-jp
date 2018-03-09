@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1569b4bb562d9342792e4ff9cda58ffe3714eb2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1e67ff8d521b46f0f22462b244b6b4aff41c1a6f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,13 +31,13 @@ ms.lasthandoff: 11/20/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|Event_message_ID|bigint|イベント メッセージの一意の ID。|  
-|Operation_id|bigint|操作の種類。<br /><br /> 操作の種類の一覧については、「[catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」を参照してください。|  
+|Event_message_ID|BIGINT|イベント メッセージの一意の ID。|  
+|Operation_id|BIGINT|操作の種類。<br /><br /> 操作の種類の一覧については、「[catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」を参照してください。|  
 |Message_time|datetimeoffset(7)|メッセージが作成された時刻。|  
-|Message_type|smallint|表示されるメッセージの種類。 メッセージの種類の詳細については、「[catalog.operation_messages &#40;SSISDB データベース&#41](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)」を参照してください。|  
-|Message_source_type|smallint|メッセージのソース。|  
+|Message_type|SMALLINT|表示されるメッセージの種類。 メッセージの種類の詳細については、「[catalog.operation_messages &#40;SSISDB データベース&#41](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)」を参照してください。|  
+|Message_source_type|SMALLINT|メッセージのソース。|  
 |message|nvarchar(max)|メッセージのテキストです。|  
-|Extended_info_id|bigint|操作メッセージに関連する追加情報の ID については、[catalog.extended_operation_info &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) ビューを参照してください。|  
+|Extended_info_id|BIGINT|操作メッセージに関連する追加情報の ID については、[catalog.extended_operation_info &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) ビューを参照してください。|  
 |Package_name|nvarchar (260)|パッケージ ファイルの名前。|  
 |Event_name|nvarchar (1024)|メッセージに関連付けられた実行時イベント。|  
 |Message_source_name|nvarchar (4000)|メッセージのソースであるパッケージ コンポーネント。|  
@@ -44,10 +45,10 @@ ms.lasthandoff: 11/20/2017
 |Subcomponent_name|nvarchar (4000)|メッセージのソースであるデータ フロー コンポーネント。<br /><br /> メッセージが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エンジンによって返されると、SSIS.Pipeline がこの列に表示されます。|  
 |Package_path|nvarchar(max)|パッケージ内のコンポーネントの一意のパス。|  
 |Execution_path|nvarchar(max)|親パッケージからコンポーネントが実行されるポイントまでの完全パス。<br /><br /> このパスは、コンポーネントの繰り返しもキャプチャします。|  
-|threadID|int|メッセージがログに記録されるときに実行しているスレッドの ID。|  
-|Message_code|int|メッセージに関連付けられたコード。|  
+|threadID|ssNoversion|メッセージがログに記録されるときに実行しているスレッドの ID。|  
+|Message_code|ssNoversion|メッセージに関連付けられたコード。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このビューに表示されるメッセージ ソースの種類は次のとおりです。  
   
 |**message_source_type**|Description|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/20/2017
 |50|制御フロー コンテナー|  
 |60|データ フロー タスク|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  このビューには、次の権限のいずれかが必要です。  
   
 -   この操作の READ 権限  

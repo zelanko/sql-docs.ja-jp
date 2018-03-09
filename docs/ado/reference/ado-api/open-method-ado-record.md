@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Record::raw_Open
 - _Record::Open
-helpviewer_keywords: Open method [ADO]
+helpviewer_keywords:
+- Open method [ADO]
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 627000fbf4b3b153895d64ba0bd7560654d63719
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1da941f0a4e16a649adc6139cd24fc4642218b84
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-record"></a>Open メソッド (ADO レコード)
 既存を開く[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト、またはによって表される新しい項目の作成、**レコード**ファイルやディレクトリなどです。  
@@ -51,7 +53,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *CreateOptions*  
  省略可。 A [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md)既存のファイルまたはディレクトリを開くか、新しいファイルまたはディレクトリを作成する必要がありますかを示す値。 既定値は**adFailIfNotExists**です。 かどうかは、既定値に設定、アクセス モードから取得、[モード](../../../ado/reference/ado-api/mode-property-ado.md)プロパティです。 このパラメーターは無視されるときに、*ソース*パラメーターに URL が含まれていません。  
   
- *および*  
+ *Options*  
  省略可。 A [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md)開くのためのオプションを指定する値、**レコード**です。 既定値は**adOpenRecordUnspecified**です。 これらの値を組み合わせることができます。  
   
  *UserName*  

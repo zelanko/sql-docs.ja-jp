@@ -8,29 +8,31 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - IF_TSQL
 - IF
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - IF...ELSE keyword
 - ELSE (IF...ELSE) keyword
 - ELSE keyword
 - IF keyword
 ms.assetid: 676c881f-dee1-417a-bc51-55da62398e81
-caps.latest.revision: "49"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3eca1a794ea4676b8f3922840802ca44791e100d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 34a14f617d5eed0b56d6ffb44134f03efa96d2c2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +73,7 @@ ELSE
        SELECT 'Weekday';
 ```  
   
- 例については、次を参照してください[ELSE &#40; IF しています。ELSE &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/else-if-else-transact-sql.md).  
+ 例については、次を参照してください[ELSE &#40; IF しています。ELSE &#41;&#40;です。TRANSACT-SQL と #41 です](../../t-sql/language-elements/else-if-else-transact-sql.md)。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例で`IF…ELSE`内の項目の重み付けに基づいて、ユーザーを表示する 2 つの応答の決定、`DimProduct`テーブル。  
@@ -96,7 +98,7 @@ ELSE
 ```  
   
 ## <a name="see-also"></a>参照  
- [作業を開始してください.END &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
  [END &#40;です。作業を開始してください.終了&#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/end-begin-end-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [中に &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/while-transact-sql.md)   

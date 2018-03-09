@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fe142dd0fdf6e896c6930528b563514c3aa2fb8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 216f5e4e3a68ead9a8353b2b35fef0b3d1717cba
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +49,10 @@ catalog.set_object_parameter_value [@object_type =] object_type
  パラメーターを含むフォルダーの名前。 *folder_name* は **nvarchar(128)** です。  
   
  [@project_name =] *project_name*  
- パラメーターを含むプロジェクトの名前。 *project_name* は **nvarchar (128)** です。  
+ パラメーターを含むプロジェクトの名前。 *project_name* は **nvarchar(128)** です。  
   
  [@parameter_name =] *parameter_name*  
- パラメーターの名前。 *parameter_name* は **nvarchar (128)** です。  
+ パラメーターの名前。 *parameter_name* は **nvarchar(128)** です。  
   
  [@parameter_value =] *parameter_value*  
  パラメーターの値。 *parameter_value* は **sql_variant** です。  
@@ -68,7 +69,7 @@ catalog.set_object_parameter_value [@object_type =] object_type
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャには、次の権限のいずれかが必要です。  
   
 -   プロジェクトの READ および MODIFY 権限  
@@ -90,7 +91,7 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 -   ユーザーに適切な権限がない  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 -   *value_type* が指定されていない場合は、*parameter_value* のリテラル値が既定で使用されます。 リテラル値を使用すると、[object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) ビューの *value_set* が `1` に設定されます。 NULL パラメーター値は許可されません。  
   

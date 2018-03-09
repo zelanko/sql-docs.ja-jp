@@ -3,27 +3,27 @@ title: "作成し、Linux での SQL Server のジョブを実行 |Microsoft ド
 description: "このチュートリアルでは、Linux 上の SQL Server エージェント ジョブを実行する方法を示します。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 10/02/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.workload: Inactive
-ms.openlocfilehash: fe2705d9d1bfefd9953ff03da123621dd4ef95f3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0788983d79392fbd39c87ce13aeb4c9439bffe33
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>作成し、Linux 上の SQL Server エージェント ジョブの実行
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server ジョブを使用して、定期的に、SQL Server データベースで同じ一連のコマンドを実行できます。 このチュートリアルでは、TRANSACT-SQL および SQL Server Management Studio (SSMS) の両方を使用して Linux 上の SQL Server エージェント ジョブを作成する方法の例を示します。
 
@@ -47,23 +47,22 @@ Linux 上の SQL Server エージェントに関する既知の問題を参照�
 * SSMS を持つ Windows マシン。
   * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) SSMS 手順については省略可能です。
 
-## <a name="install-sql-server-agent"></a>SQL Server エージェントをインストールします。
+## <a name="enable-sql-server-agent"></a>SQL Server エージェントを有効にします。
 
-Linux に SQL Server エージェントを使用するには、まず、 **mssql server エージェント**がインストールされている SQL Server 2017 マシン上のパッケージです。
+Linux に SQL Server エージェントを使用するには、がインストールされている SQL Server 2017 マシンで SQL Server エージェントを最初に有効にする必要があります。
 
-1. インストール**mssql server エージェント**には、Linux OS の適切なコマンドを使用します。
-
-   | プラットフォーム | インストール コマンド |
-   |-----|-----|
-   | RHEL | `sudo yum install mssql-server-agent` |
-   | SLES | `sudo zypper refresh`<br/>`sudo zypper update mssql-server-agent` |
-   | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server-agent` |
+1. SQL Server エージェントを有効にするには、次の手順に従います。
+  ```bash
+  sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+  ```
 
 1. 次のコマンドで SQL Server を再起動します。
+  ```bash
+  sudo systemctl restart mssql-server
+  ```
 
-   ```bash
-   sudo systemctl restart mssql-server
-   ```
+> [!NOTE]
+> SQL Server 2017 CU4 以降では、SQL Server エージェントに含まれて、 **mssql サーバー**パッケージ化し、既定で無効にします。 エージェントが CU4 訪問する前に設定[Linux 上の SQL Server エージェントのインストール](sql-server-linux-setup-sql-agent.md)です。
 
 ## <a name="create-a-sample-database"></a>サンプル データベースの作成
 

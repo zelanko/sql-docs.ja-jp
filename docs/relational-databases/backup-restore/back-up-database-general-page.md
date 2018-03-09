@@ -8,24 +8,27 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.backupdatabase.general.f1
+f1_keywords:
+- sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
-caps.latest.revision: "64"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6096d9cbe627276898de55425c60b98a327de947
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: acb78ba1abb462f76dd26cd87062732b386f547e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="back-up-database-general-page"></a>[データベースのバックアップ] \([全般] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[データベースのバックアップ]** ダイアログ ボックスの **[全般]** ページでは、データベースのバックアップ操作の設定を表示または変更できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+**[データベースのバックアップ]** ダイアログ ボックスの **[全般]** ページでは、データベースのバックアップ操作の設定を表示または変更できます。  
   
  バックアップの基本的な概念については、「[バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)」を参照してください。  
   
@@ -45,12 +48,12 @@ ms.lasthandoff: 11/17/2017
   
 -   部分バックアップを作成するには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) ステートメントで PARTIAL オプションを使用する必要があります。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
   
-### <a name="source"></a>ソース  
+### <a name="source"></a>Source  
  **[ソース]** パネルのオプションでは、データベースを特定し、バックアップ操作のバックアップの種類とコンポーネントを指定します。  
   
- **データベース**  
+ **[データベース]**  
  バックアップするデータベースを選択します。  
   
  **復旧モデル**  
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/17/2017
   
 |[バックアップの種類]|適用対象|制限|  
 |-----------------|-------------------|------------------|  
-|Full|データベース、ファイル、ファイル グループ|**master** データベースでは、完全バックアップのみ可能です。<br /><br /> SIMPLE (単純) 復旧モデルの場合、ファイルおよびファイル グループのバックアップは読み取り専用ファイル グループについてのみ実行できます。|  
+|[完全]|データベース、ファイル、ファイル グループ|**master** データベースでは、完全バックアップのみ可能です。<br /><br /> SIMPLE (単純) 復旧モデルの場合、ファイルおよびファイル グループのバックアップは読み取り専用ファイル グループについてのみ実行できます。|  
 |[差分]|データベース、ファイル、ファイル グループ|SIMPLE (単純) 復旧モデルの場合、ファイルおよびファイル グループのバックアップは読み取り専用ファイル グループについてのみ実行できます。|  
 |トランザクション ログ|トランザクション ログ|トランザクション ログ バックアップは、単純復旧モデルでは使用できません。|  
   
@@ -78,10 +81,10 @@ ms.lasthandoff: 11/17/2017
   
 |||  
 |-|-|  
-|**データベース**|データベース全体がバックアップされるように指定します。|  
+|**[データベース]**|データベース全体がバックアップされるように指定します。|  
 |**[ファイルおよびファイル グループ]**|指定したファイルやファイル グループがバックアップされるように指定します。<br /><br /> このオプションをクリックすると、 **[ファイルおよびファイル グループの選択]** ダイアログ ボックスが表示されます。 バックアップするファイル グループまたはファイルを選択して **[OK]**をクリックすると、選択した項目が **[ファイルおよびファイル グループ]** ボックスに表示されます。|  
   
-### <a name="destination"></a>転送先  
+### <a name="destination"></a>[Destination]  
  **[バックアップ先]** パネルのオプションでは、バックアップ操作で使用するバックアップ デバイスの種類を指定して、既存の論理バックアップ デバイスまたは物理バックアップ デバイスを検索できます。  
   
 > [!NOTE]  

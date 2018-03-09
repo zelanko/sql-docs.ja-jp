@@ -19,6 +19,7 @@
 ## [JDBC ドライバーの追加情報の検索](finding-additional-jdbc-driver-information.md)
 ## [Microsoft SQL Server 用 JDBC Driver のサポート表](microsoft-jdbc-driver-for-sql-server-support-matrix.md)
 ## [JDBC Driver のよくあるご質問 (FAQ)](frequently-asked-questions-faq-for-jdbc-driver.md)
+## [Microsoft JDBC Driver for SQL Server の機能依存関係](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) 
 
 # [JDBC ドライバー アプリケーションのセキュリティ保護](securing-jdbc-driver-applications.md)
 ## [接続文字列のセキュリティ保護](securing-connection-strings.md)
@@ -36,6 +37,7 @@
 ## [ステートメントおよび結果セットの操作](working-with-statements-and-result-sets.md)
 ## [アダプティブ バッファリングの使用](using-adaptive-buffering.md)
 ## [スパース列](sparse-columns.md)
+## [JDBC Driver の準備されたステートメント メタデータ キャッシュ](prepared-statement-metadata-caching-for-the-jdbc-driver.md)
 
 # [JDBC ドライバーで発生した問題の診断](diagnosing-problems-with-the-jdbc-driver.md)
 ## [エラーの処理](handling-errors.md)
@@ -63,6 +65,7 @@
 # [JDBC SQL ドライバーの準拠](compliance-and-legal-for-the-jdbc-sql-driver.md)
 ## [JDBC Driver の JDBC 4.1 への準拠](jdbc-4-1-compliance-for-the-jdbc-driver.md)
 ## [JDBC Driver の JDBC 4.2 への準拠](jdbc-4-2-compliance-for-the-jdbc-driver.md)
+## [JDBC Driver の JDBC 4.3 への準拠](jdbc-4-3-compliance-for-the-jdbc-driver.md)
 
 # [JDBC SQL ドライバーのプログラミング ガイド](programming-guide-for-jdbc-sql-driver.md)
 ## [JDBC ドライバーによる SQL Server への接続](connecting-to-sql-server-with-the-jdbc-driver.md)
@@ -125,3 +128,5 @@
 ### [java.sql.Time の値をサーバーに送信する方法の構成](configuring-how-java-sql-time-values-are-sent-to-the-server.md)
 ### [SQL エスケープ シーケンスの使用](using-sql-escape-sequences.md)
 ### [ストアド プロシージャでのステートメントの使用](using-statements-with-stored-procedures.md)
+### [Azure Key Vault のサンプル版 6.0.0](azure-key-vault-sample-version-6.0.0.md)
+### [Azure Key Vault のサンプル版 6.2.2](azure-key-vault-sample-version-6.2.2.md)

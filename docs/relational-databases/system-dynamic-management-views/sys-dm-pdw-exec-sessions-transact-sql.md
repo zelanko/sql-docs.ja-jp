@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbec94d3778bf9b898f9b0f789a644d39829ae5a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 57fa5867f9fa62dd4a81426673339afcd615f140
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,11 +33,11 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|session_id|**nvarchar (32)**|現在のクエリまたは前回のクエリの id は、(セッションが終了して、終了時に、クエリが実行されている) 場合に実行します。 このビューのキーです。|システム内のすべてのセッション間で一意です。|  
-|ステータス|**nvarchar (10)**|現在のセッションでは、セッションがアクティブまたはアイドル状態では現在あるかどうかを識別します。 過去のセッションでは、状態を表示することがありますセッションが終了するか、または (この場合、セッションが強制的に切断されました) を強制終了します。|'ACTIVE'、'CLOSED'、'アイドル状態の'、' 終了 '|  
-|request_id|**nvarchar (32)**|現在のクエリまたはクエリの実行の最後の id。|システム内のすべての要求間で一意です。 [なし] が実行されている場合は null です。|  
-|security_id|**varbinary (85)**|セッションを実行するプリンシパルのセキュリティ ID。||  
-|login_name|**nvarchar (128)**|セッションを実行するプリンシパルのログイン名。|ユーザーの名前付け規則に準拠している任意の文字列。|  
+|session_id|**nvarchar(32)**|現在のクエリまたは前回のクエリの id は、(セッションが終了して、終了時に、クエリが実行されている) 場合に実行します。 このビューのキーです。|システム内のすべてのセッション間で一意です。|  
+|ステータス|**nvarchar(10)**|現在のセッションでは、セッションがアクティブまたはアイドル状態では現在あるかどうかを識別します。 過去のセッションでは、状態を表示することがありますセッションが終了するか、または (この場合、セッションが強制的に切断されました) を強制終了します。|'ACTIVE'、'CLOSED'、'アイドル状態の'、' 終了 '|  
+|request_id|**nvarchar(32)**|現在のクエリまたはクエリの実行の最後の id。|システム内のすべての要求間で一意です。 [なし] が実行されている場合は null です。|  
+|security_id|**varbinary(85)**|セッションを実行するプリンシパルのセキュリティ ID。||  
+|login_name|**nvarchar(128)**|セッションを実行するプリンシパルのログイン名。|ユーザーの名前付け規則に準拠している任意の文字列。|  
 |login_time|**datetime**|日付と時間でユーザーがログインして、このセッションが作成されました。|有効な**datetime**現在時刻より前にします。|  
 |query_count|**int**|キャプチャのクエリ/requeststhis セッションの数は、作成以降が実行されます。|以上の値を 0 にします。|  
 |is_transactional|**bit**|セッションが現在のトランザクション内でかしないかどうかをキャプチャします。|自動コミットの場合は 0、1 をトランザクションです。|  
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
  このビューで保持される最大行数のについてを参照してくださいシステム ビューの最大値、[最小値と最大値 (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9)トピックです。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  必要があります、`VIEW SERVER STATE`権限です。  
   
 ## <a name="see-also"></a>参照  

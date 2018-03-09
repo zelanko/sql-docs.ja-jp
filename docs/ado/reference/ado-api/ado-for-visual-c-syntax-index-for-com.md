@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,26 +13,27 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ADO for Visual C++ syntax [ADO]
 - syntax indexes [ADO], ADO for Visual C++ syntax
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5367b7c31db36fb2fe3c523371c1b3a7666669d4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 081d81654e6898496e81b809b9c4925020630181
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>COM 用の Visual C 構文のインデックスの ADO
 このインデックスは、Microsoft Visual C に基づく、ADO 言語リファレンスへの相互参照します。  
   
- 使用する場合、 **#import**ディレクティブ、アプリケーションで、ヘッダー ファイルが生成されますができるようにするには、Microsoft Visual Basic と同様の構文を使用します。 フォームのプロパティ名**get _***PropertyName*と**put _***PropertyName* として単に宣言された場合と同様に扱うことができます*PropertyName*です。 プロパティは、関数ではなくデータ メンバーと同様に扱うことができます。  
+ 使用する場合、 **#import**ディレクティブ、アプリケーションで、ヘッダー ファイルが生成されますができるようにするには、Microsoft Visual Basic と同様の構文を使用します。 フォームのプロパティ名 **get _ * * * PropertyName*と **put _ * * * PropertyName*として単に宣言された場合と同様に扱うことができます*PropertyName*です。 プロパティは、関数ではなくデータ メンバーと同様に扱うことができます。  
   
  返す関数は、すべてのメソッド、プロパティ、イベント、 **HRESULT**関数が正常に実行されるかどうかを決定するテストできます。  
   

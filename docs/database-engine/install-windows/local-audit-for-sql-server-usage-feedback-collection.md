@@ -9,32 +9,34 @@ ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
-- analysis-services
 - dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Local Audit
+helpviewer_keywords:
+- Local Audit
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48de69218e71bb9688e6d7a3d0669b43baefe150
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1d579ced53344bc871e640de8ab81246ed652325
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server Usage Feedback Collection の Local Audit
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 ## <a name="introduction"></a>概要
 
 Microsoft SQL Server は、お客様のコンピューターまたはデバイスに関する情報 (以下「標準的なコンピューター情報」といいます) を収集してマイクロソフトに送信するインターネット対応の機能を備えています。 [SQL Server Usage Feedback Collection](http://support.microsoft.com/kb/3153756) の Local Audit コンポーネントは、サービスで収集されたデータを保存先フォルダーに出力します。このデータは、Microsoft に送信されるデータ (ログ) です。 Local Audit の目的は、Microsoft がこの機能で収集するすべてのデータをユーザーがコンプライアンス、法規制、またはプライバシーの検証目的で確認できるようにすることです。  
 
 SQL Server 2016 CU2 以降、Local Audit は SQL Server Database Engine and Analysis Services (SSAS) のインスタンス レベルで構成できるようになりました。 SQL Server 2016 CU4 および SQL Server 2016 SP1 では、Local Audit は SQL Server Integration Services (SSIS) に対しても有効になります。 セットアップ中にインストールされる他の SQL Server コンポーネントと、セットアップ後にダウンロードまたはインストールされる SQL Server ツールには、使用状況フィードバック収集用の Local Audit 機能はありません。 
 
-## <a name="prerequisites"></a>前提条件 
+## <a name="prerequisites"></a>Prerequisites 
 
 各 SQL Server インスタンスで Local Audit を有効にする前提条件は次のとおりです。 
 
@@ -183,14 +185,14 @@ Local Audit では、1 日に 1 つのログ ファイルが生成されます�
 | Machine | hostname、domainHash、sqmID、operatingSystem 
 | Instance | instanceName、correlationID、clientVersion 
 | Session | sessionID、traceName 
-| Query | sequence、querySetVersion、queryIdentifier、query、queryTimeInTicks 
+| [クエリ] | sequence、querySetVersion、queryIdentifier、query、queryTimeInTicks 
 | data |  data 
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>名前/値ペアの定義と例 
 
 以下の列は、Local Audit ファイル出力の順を表しています。 以下の複数列の匿名化された値に対して、SHA 256 による一方向のハッシュが使用されています。  
 
-| 名前 | 説明 | 値の例
+| [オブジェクト名] | Description | 値の例
 |-------|--------| ----------|
 |hostname | SQL Server がインストールされている匿名化されたコンピューター名| de3b3769a63970b63981ab7a956401388962c986bfd39d371f5870d800627d11 
 |domainHash| SQL Server インスタンスをホストするコンピューターの匿名化されたドメイン ハッシュ | de3b3769a63970b63981ab7a956401388962c986bfd39d371f5870d800627d11 

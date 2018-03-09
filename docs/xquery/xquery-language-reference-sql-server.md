@@ -8,10 +8,12 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - XQuery
 - XQuery, about XQuery
@@ -19,21 +21,21 @@ helpviewer_keywords:
 - XML [SQL Server], XQuery
 - queries [XML in SQL Server], XQuery
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
-caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4c13cc549ad05caf3f866f5e1574033b350bdd47
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5c242348870d6b6862e02cc8d14ec1fdc184d62e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xquery-language-reference-sql-server"></a>XQuery 言語リファレンス (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[tsql](../includes/tsql-md.md)]クエリを実行するために使用する XQuery 言語のサブセットをサポート、 **xml**データ型。 この実装は、2004 年 7 月に公開された XQuery のワーキング ドラフトに従っています。 この言語は W3C (World Wide Web Consortium) によって開発が進められており、マイクロソフトをはじめとする主要なすべてのデータベース ベンダーが参加しています。 W3C 仕様は W3C 勧告になる前に改訂されることがあるので、この実装は最終的な勧告とは異なる可能性があります。 このトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でサポートされる XQuery サブセットのセマンティクスと構文について概説します。  
+  [!INCLUDE[tsql](../includes/tsql-md.md)] クエリを実行するために使用する XQuery 言語のサブセットをサポート、 **xml**データ型。 この実装は、2004 年 7 月に公開された XQuery のワーキング ドラフトに従っています。 この言語は W3C (World Wide Web Consortium) によって開発が進められており、マイクロソフトをはじめとする主要なすべてのデータベース ベンダーが参加しています。 W3C 仕様は W3C 勧告になる前に改訂されることがあるので、この実装は最終的な勧告とは異なる可能性があります。 このトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でサポートされる XQuery サブセットのセマンティクスと構文について概説します。  
   
  詳細については、次を参照してください。、 [W3C XQuery 1.0 Language Specification](http://go.microsoft.com/fwlink/?LinkId=48846)です。  
   
@@ -67,7 +69,7 @@ WHERE ProductModelID=7
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)|サポートについて説明します、 **xml**のデータ型の[!INCLUDE[ssDE](../includes/ssde-md.md)]とメソッドのこのデータ型に対して使用できます。 **Xml**データ型の入力の XQuery データ モデルの XQuery 式が実行されます。|  
+|[XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)|サポートについて説明します、 **xml**のデータ型の[!INCLUDE[ssDE](../includes/ssde-md.md)]とメソッドのこのデータ型に対して使用できます。 **Xml**データ型の入力の XQuery データ モデルの XQuery 式が実行されます。|  
 |[XML スキーマ コレクション &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)|データベースに格納されている XML インスタンスを型指定する方法について説明します。 つまりを使用した XML スキーマ コレクションを関連付けることができます、 **xml**型の列です。 この列に格納されているすべてのインスタンスは、コレクションのスキーマに対して検証と型指定が行われます。また、これらのインスタンスにより、XQuery の型情報が提供されます。|  
 |||  
   

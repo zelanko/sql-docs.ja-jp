@@ -1,12 +1,13 @@
-# [Analysis Services とは](analysis-services.md)
+# [SQL Server Analysis Services の概要](analysis-services.md)
 
 # 概要
 ## [SQL Server Analysis Services 2016 の新機能](what-s-new-in-analysis-services.md)  
 ## [SQL Server Analysis Services 2017 の新機能](what-s-new-in-sql-server-analysis-services-2017.md) 
 ## [新規および更新のアーティクル](new-updated-analysis-services.md)
 ## [ツールとアプリケーション](tools-and-applications-used-in-analysis-services.md)   
+## [クライアント ライブラリ (データ プロバイダー)](../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)
 ## [テーブル ソリューションと多次元ソリューションの比較](comparing-tabular-and-multidimensional-solutions-ssas.md)  
-## [SQL Server 2016 の各エディションがサポートする Analysis Services の機能](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
+## [SQL Server の各エディションがサポートする Analysis Services の機能](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
 ## [旧バージョンとの互換性 (SQL Server 2016 Analysis Services)](analysis-services-backward-compatibility.md)  
 ## [旧バージョンとの互換性 (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)  
 ## [グローバリゼーションと翻訳](globalization-scenarios-for-analysis-services.md)  
@@ -15,11 +16,26 @@
 ### [通貨換算](currency-conversions-analysis-services.md)  
 ### [ヒントとベスト プラクティス](globalization-tips-and-best-practices-analysis-services.md) 
 
-# サンプル
-## [Analysis Services のサンプル](analysis-services-samples.md)
+# [チュートリアル](analysis-services-tutorials-ssas.md)
+## [表形式のモデリング (1400 互換性レベル)](tutorial-tabular-1400/as-adventure-works-tutorial.md)
+### [1 - テーブル モデル プロジェクトの作成](tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)
+### [2 - データの取得](tutorial-tabular-1400/as-lesson-2-get-data.md)
+### [3 - 日付テーブルとしてマーク](tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)
+### [4 - リレーションシップの作成](tutorial-tabular-1400/as-lesson-4-create-relationships.md)
+### [5 - 計算列の作成](tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)
+### [6 - メジャーの作成](tutorial-tabular-1400/as-lesson-6-create-measures.md)
+### [7 - 主要業績評価指標の作成](tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)
+### [8 - パースペクティブの作成](tutorial-tabular-1400/as-lesson-8-create-perspectives.md)
+### [9 - 階層の作成](tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)
+### [10 - パーティションの作成](tutorial-tabular-1400/as-lesson-10-create-partitions.md)
+### [11 - ロールの作成](tutorial-tabular-1400/as-lesson-11-create-roles.md)
+### [12 - Excel で分析](tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)
+### [13 - 配置](tutorial-tabular-1400/as-lesson-13-deploy.md)
+### [補足のレッスン: 詳細行](tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)
+### [補足のレッスン: 動的なセキュリティ](tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)
+### [補足のレッスン: 不規則階層](tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)
 
-# チュートリアル
-## [テーブル モデリング (Adventure Works チュートリアル)](tabular-modeling-adventure-works-tutorial.md)  
+## [表形式のモデリング (1200 互換性レベル)](tabular-modeling-adventure-works-tutorial.md)  
 ### [レッスン 1: 新しいテーブル モデル プロジェクトの作成](lesson-1-create-a-new-tabular-model-project.md)  
 ### [レッスン 2: データの追加](lesson-2-add-data.md)  
 ### [レッスン 3: 日付テーブルとしてマーク](lesson-3-mark-as-date-table.md)  
@@ -36,7 +52,7 @@
 ### [補足のレッスン: 行フィルターを使用した動的なセキュリティの実装](supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)  
 ### [補足のレッスン: Power View レポートのレポート プロパティの構成](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)  
 
-## [多次元モデリング (Adventure Works チュートリアル)](multidimensional-modeling-adventure-works-tutorial.md)  
+## [多次元モデリング](multidimensional-modeling-adventure-works-tutorial.md)  
 ### [チュートリアルのシナリオ](analysis-services-tutorial-scenario.md)  
 ### [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](install-sample-data-and-projects.md)  
 ### [レッスン 1: Analysis Services プロジェクト内でのデータ ソース ビューの定義](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)  
@@ -93,25 +109,25 @@
 ## [サーバーの管理](../analysis-services/instances/analysis-services-instance-management.md)
 ## [トレース イベント](../analysis-services/trace-events/analysis-services-trace-events.md)
 
-# 開発者
-## テーブル モデル
-### [テーブル モデルのプログラミング互換性レベル 1200 以降](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
-#### [テーブル モデルのスクリプト言語 (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
-#### [テーブル モデルのスクリプト言語 (TMSL) コマンド](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
-#### [テーブル モデルのスクリプト言語 (TMSL) オブジェクト](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
-### [互換性レベル 1050 および 1103 のテーブル モデルのプログラミング](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
+# Developer
+## [テーブル モデルのプログラミング互換性レベル 1200 以降](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
+### [テーブル モデルのスクリプト言語 (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
+### [テーブル モデルのスクリプト言語 (TMSL) コマンド](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
+### [テーブル モデルのスクリプト言語 (TMSL) オブジェクト](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
+## [互換性レベル 1050 および 1103 のテーブル モデルのプログラミング](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
 
-## 多次元モデル
-### [Analysis Services スクリプト言語 (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
-### [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
-### [分析管理オブジェクト +](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
-### [OLAP 論理的要素 +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
-### [OLAP 物理的要素 +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
-### [OLAP の拡張 +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
+## [Analysis Services スクリプト言語 (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
+## [分析管理オブジェクト (AMO)+](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
+## [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
+## [OLAP 論理的要素 +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
+## [OLAP 物理的要素 +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
+## [OLAP の拡張 +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
 
 ## [スキーマ行セット](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
 ## [Analysis Services スクリプト言語 (XMLA 用 ASSL)](scripting/analysis-services-scripting-language-assl-for-xmla.md)
 
+# サンプル
+## [Analysis Services のサンプル](analysis-services-samples.md)
 
 # リファレンス
 ## [MSDN の Data Analysis Expressions (DAX) の概要](https://msdn.microsoft.com/library/gg413422.aspx)

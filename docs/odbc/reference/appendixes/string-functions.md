@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0bbc611df9bcddaf0930a864ca2541f003a6ddb4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 049e1acec8ad27e9fd65d838c17f48c78519ad46
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-functions"></a>文字列関数
 次の表は、文字列操作関数を一覧表示します。 文字列関数が呼び出すことによって、ドライバーでサポートされる、アプリケーションを判別**SQLGetInfo**で、*情報の種類*SQL_STRING_FUNCTIONS のです。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
  BIT_LENGTH、CHAR_LENGTH、CHARACTER_LENGTH、OCTET_LENGTH、および位置の文字列のスカラー関数、sql-92 に合うように ODBC 3.0 で追加されました。  
   
-|関数|Description|  
+|機能|Description|  
 |--------------|-----------------|  
 |**ASCII (** *string_exp* **)** (ODBC 1.0)|左端の文字の ASCII コード値を返します*string_exp*整数として。|  
 |**BIT_LENGTH (** *string_exp* **)** (ODBC 3.0)|文字列式の長さ (ビット単位) を返します。<br /><br /> 文字列データ型に対してのみは機能には、変換は暗黙的にない*string_exp*代わりに文字列にはどのようなデータ型が指定の (内部) のサイズを返します。|  

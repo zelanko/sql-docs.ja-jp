@@ -8,21 +8,22 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9d74e5d7e56704515bb6f1c97e26e47802583279
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a75e3eb0532359a4528af38270820126e14f4b36
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tutorial-introducing-expressions"></a>チュートリアル: 式の概要
 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] のこのチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 強力かつ柔軟性のあるページネーション付きのレポートを作成するために、式と共に一般的な関数や演算子を使用します。 
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     > 適切な権限を持っている限り、選択するデータ ソースは重要ではありません。 データ ソースからはデータを取得しません。 詳細については、[「別の方法でデータ接続を取得する &#40;レポート ビルダー&#41;」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
   
-7.  **[次へ]**をクリックします。  
+7.  **[次へ]** をクリックします。  
   
 8.  **[クエリのデザイン]** ページで、 **[テキストとして編集]**をクリックします。  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 12/05/2017
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
-11. **[次へ]**をクリックします。  
+11. **[次へ]** をクリックします。  
   
 12. **[フィールドの配置]** ページで、 **[使用できるフィールド]** ボックスから **[値]** ボックスに、次に示すフィールドを指定順にドラッグします。  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 12/05/2017
     
     ![report-builder-expression-not-sum](../reporting-services/media/report-builder-expression-not-sum.png)
   
-15. **[次へ]**をクリックします。  
+15. **[次へ]** をクリックします。  
   
 16. **[レイアウトの選択]** ページで、既定の設定をすべてそのまま選択し、 **[次へ]**をクリックします。  
 

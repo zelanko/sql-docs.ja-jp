@@ -1,7 +1,7 @@
 ---
 title: "プロジェクトの設定 (変換) (MySQLToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5c40fe3bcc95b062b188c041477011358d60fba2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9062c61ad2a799a20370c8b406843e0e4a209869
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>プロジェクトの設定 (変換) (MySQLToSQL)
 変換 ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA に SQL Server または SQL Azure の構文に MySQL 構文を変換する方法をカスタマイズする設定が含まれています。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
 -   現在のプロジェクトの設定を指定する、**ツール**ボタンをクリックし**プロジェクト設定**、順にクリックして**全般**クリックして、左側のウィンドウの下部にある**変換**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
   
 ### <a name="collate-clause"></a>Collate 句  
   

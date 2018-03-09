@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09c8d0a538d539c54e304d220566345a96a5e2f1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>トレースで使用される Analysis Services オブジェクトの種類のコード
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このページには、Analysis Services データ モデル内の各オブジェクトのオブジェクトの種類 (6 桁の数字) が一覧表示されます。 これらのコードは、トレース ログに表示され、特定のロックに関連付けられているオブジェクトの種類を識別するために使用されます。 たとえば、データベースでのロックのタイムアウトは、オブジェクトの種類が 100002 で、これはデータベース オブジェクトの種類を示します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+このページは、Analysis Services データ モデル内の各オブジェクトのオブジェクトの種類 (6 桁の数字) を一覧表示します。 これらのコードは、トレース ログに表示され、特定のロックに関連付けられているオブジェクトの種類を識別するために使用されます。 たとえば、データベースでのロックのタイムアウトは、オブジェクトの種類が 100002 で、これはデータベース オブジェクトの種類を示します。  
   
 > [!NOTE]  
 >  トレース ログに実際に表示されるよりも多くのコードが、以下に一覧表示されています。 以下の一覧はすべてのオブジェクトの種類のコードの包括的な一覧ですが、ロックを取得するオブジェクトのみがトレース ログにオブジェクトの種類のコードを表示します。  

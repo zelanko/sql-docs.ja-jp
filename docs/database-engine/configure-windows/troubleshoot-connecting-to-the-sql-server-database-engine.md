@@ -16,15 +16,15 @@ helpviewer_keywords:
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5963e9521c9c54cad7cee997f246d31b1b198549
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a5ff7baa53924206192db30e8ae9f50cef02cff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server データベース エンジンへの接続のトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ TCP/IP を使用して SQL Server に接続するには、Windows が接続を�
 >    [!NOTE] 
 >    クライアントに渡されるエラー メッセージの一部は、問題を解決するために十分な情報を意図的に与えません。 これはセキュリティ機能であり、SQL Server に関する情報を攻撃者に与えることを回避します。 エラーに関する完全な情報は、SQL Server エラー ログを調べてください。 そこに詳細があります。 エラー **18456 ユーザーはログインできませんでした**を受け取った場合、オンライン ブックのトピック、 [MSSQLSERVER_18456](http://msdn.microsoft.com/library/cc645917) にエラー コードに関する追加情報があります。 また、Aaron Bertrand のブログで、非常に広範囲なエラー コード リストが紹介されています ( [エラー 18456 のトラブルシューティング](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx))。 オブジェクト エクスプローラーの管理セクションで、SSMS (接続できる場合) のエラー ログを見ることができます。 接続できない場合、Windows のメモ帳プログラムでエラー ログを表示できます。 既定の場所はバージョンによって異なり、セットアップ中に変更できます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] の既定の場所は `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`です。  
 
-4.   共有メモリで接続できない場合、TCP による接続をテストしてください。 名前の前に **tcp:** を指定すると、TCP 接続を強制できます。 例:
+4.   共有メモリで接続できない場合、TCP による接続をテストしてください。 名前の前に **tcp:** を指定すると、TCP 接続を強制できます。 例 :
 
 |接続先:|型:|例:|
 |-----------------|---------------|-----------------|

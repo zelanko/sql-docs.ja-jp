@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b5ebc2779d005a31f9b93a1cf6ca8fb6e35b346
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d63ef11103b88f70233f269914c54425402b1def
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-data-types"></a>SQL データ型
 各 DBMS では、独自の SQL 型を定義します。 各 ODBC ドライバーでは、関連付けられた DBMS 定義 SQL データ型のみを公開します。 ODBC で定義された SQL 型識別子をドライバーがどのようにマップについて DBMS SQL 型し、を呼び出すことによって、ドライバーがドライバー固有の SQL 型識別子には独自に DBMS SQL 型をマップする方法が返されます**SQLGetTypeInfo**です。 ドライバーは、列とを呼び出すことでパラメーターのデータ型を記述するときにも、SQL データ型を返します**SQLColAttribute**、 **SQLColumns**、 **SQLDescribeCol**、**SQLDescribeParam**、 **SQLProcedureColumns**、および**SQLSpecialColumns**です。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_NUMERIC|数値 (*p*、*s*)|符号付き、正確な数値有効桁数を持つ*p*有効桁数と小数点*s* (1 < = *p* < = 15 です。*s* <= *p*) です [。4]|  
 |SQL_SMALLINT|SMALLINT|固定精度が 5 で数値および 0 をスケール (署名: –32,768 < =  *n*  < 符号なし、32,767 を =: 0 < =  *n*  < 65,535 を =) [3]。|  
 _INTEGER|INTEGER|固定精度が 10 で数値および 0 のスケール (署名: – 2 [31] < =  *n*  < = 2 [31] – 1、符号なし: 0 < =  *n*  < = 2 [32] – 1) [3]。|  
-|SQL_REAL|REAL|署名済み、バイナリ有効桁数 24 を持つ概数の数値の値 (0 または絶対値 10 [–38] 10[38]) にします。|  
+|SQL_REAL|real|署名済み、バイナリ有効桁数 24 を持つ概数の数値の値 (0 または絶対値 10 [–38] 10[38]) にします。|  
 |SQL_FLOAT|FLOAT (*p*)|署名済み、バイナリ有効桁数の概数の数値の値には、少なくとも*p*です。 (最大有効桁数はドライバーで定義されます。)[5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|署名済み、バイナリ有効桁数が 53 概数の数値の値 (0 または絶対値 10 [– 308] 10[308]) にします。|  
 |SQL_BIT|BIT|1 つのビットのバイナリ データ。[8]|  

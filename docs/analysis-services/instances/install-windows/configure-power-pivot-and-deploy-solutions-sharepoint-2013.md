@@ -8,23 +8,25 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: power-view
+ms.technology:
+- power-view
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 897e459ef746d90fd8756af0e19c51c076543498
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a815c21f442c615217fdc863448f18b49fdb3588
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Power Pivot の構成とソリューションの配置 (SharePoint 2013)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]このトピックではの展開と構成に中間層機能強化について説明します、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]機能[!INCLUDE[SPS2013](../../../includes/sps2013-md.md)]など[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ギャラリー、スケジュール データ更新、管理ダッシュ ボード、およびデータ プロバイダー。 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成** ツールを実行して、以下の操作を完了します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+このトピックでは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ギャラリー、定期データ更新、管理ダッシュボード、データ プロバイダーといった [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 機能に対する中間層機能強化の配置および構成について説明します。 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成** ツールを実行して、以下の操作を完了します。  
   
 -   SharePoint ソリューション ファイルを配置する。  
   
@@ -34,22 +36,10 @@ ms.lasthandoff: 12/08/2017
   
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成ツールのインストールについては、「[PowerPivot for SharePoint アドインのインストールまたはアンインストール &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)」を参照してください。  
   
- このトピックには、次のセクションが含まれます。  
-  
- [Power Pivot for SharePoint 2013 の構成の実行](#bkmk_run_configuration_tool)  
-  
- [Power Pivot の構成の確認](#bkmk_verify_powerpivot)  
-  
- [問題のトラブルシューティング](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
-  
 ##  <a name="bkmk_run_configuration_tool"></a> Power Pivot for SharePoint 2013 の構成の実行  
  **注:** [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] セットアップ ウィザードでは、 [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]の 2 種類の構成ツールがインストールされます。 これらのツールはそれぞれ異なるバージョンの SharePoint をサポートします。  
   
-|名前|説明|  
+|名前|Description|  
 |----------|-----------------|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成|SharePoint 2013|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成ツール|SharePoint 2010 Service Pack 1 (SP1)|  
@@ -142,7 +132,7 @@ ms.lasthandoff: 12/08/2017
   
 4.  **[正常性データの収集を有効にする]** が選択されていることを確認します。  
   
-5.  クリックして **OK**です。  
+5.  **[OK]**をクリックします。  
   
  データ更新のトラブルシューティングに関する詳細については、 [Troubleshooting Power Pivot Data Refresh (Power Pivot データ更新のトラブルシューティング)](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) に関するページを参照してください。  
   

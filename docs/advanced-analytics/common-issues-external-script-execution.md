@@ -1,6 +1,7 @@
 ---
 title: "SQL Server の外部スクリプトの実行に関する一般的な問題 |Microsoft ドキュメント"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 10/11/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
@@ -8,21 +9,22 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4f515ba26c4eeae70eaf9244c0eaedaa954954b4
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>SQL Server の外部スクリプトの実行に関する一般的な問題
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事には、既知の問題と SQL Server で R または Python コードの実行に関する一般的な問題の一覧が含まれています。
 
@@ -191,9 +193,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 4. Machine learning のスクリプトを実行できるように、問題を修正通常、サービスを再起動します。 再起動に問題が解決しない場合、パスおよび引数を注意してください。、**バイナリ パス**プロパティ、および、次の操作。
 
-    A. 起動の .config ファイルを確認し、作業ディレクトリが有効であることを確認します。
+    a. 起動の .config ファイルを確認し、作業ディレクトリが有効であることを確認します。
 
-    B. スタート パッドで使用される Windows グループが、SQL Server インスタンスに接続できることを確認してください」の説明に従って、[前のセクション](#bkmk_LaunchpadTS)です。
+    b. スタート パッドで使用される Windows グループが、SQL Server インスタンスに接続できることを確認してください」の説明に従って、[前のセクション](#bkmk_LaunchpadTS)です。
 
     c. サービスのプロパティを変更する場合は、スタート パッド サービスを再起動します。
 

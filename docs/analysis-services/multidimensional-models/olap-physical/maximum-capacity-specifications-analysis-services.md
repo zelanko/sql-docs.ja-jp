@@ -8,39 +8,39 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Services], maximum number
 - objects [Analysis Services], maximum size
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f0ababa5bb354b91df756bd5998967fb9b6ddf3a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e60e818b40d2aa7c266903a23d0fec908039b44
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>最大容量仕様 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]次の表は、最大サイズと最大で定義される各種オブジェクトの数を指定[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]別のサーバー配置モードの下にあるコンポーネント。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+次の各表に、さまざまなサーバー配置モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] コンポーネントで定義される各種オブジェクトの最大サイズと最大数を示します。  
   
  このトピックには、次のセクションが含まれます。  
   
  [多次元およびデータ マイニング (DeploymentMode = 0)](#bkmk_OLAP)  
   
- [SharePoint (DeploymentMode = 1)](#bkmk_sharepoint)  
+ [SharePoint (DeploymentMode=1)](#bkmk_sharepoint)  
   
  [テーブル (DeploymentMode = 2)](#bkmk_vertipaq)  
   
-##  <a name="bkmk_OLAP"></a>多次元およびデータ マイニング (DeploymentMode = 0)  
+##  <a name="bkmk_OLAP">多次元およびデータ マイニング (DeploymentMode = 0)</a>  
  データとメタデータの両方を格納する MOLAP ストレージ モードは、ファイル サイズに物理的な制限があります。 文字列ストア ファイルの既定の最大サイズは 4 GB です。 文字列を格納するためにより大きなファイルが必要な場合は、別の文字列ストレージ アーキテクチャを指定できます。 詳細については、次を参照してください。[ディメンションおよびパーティションの文字列ストレージを構成する](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)です。  
   
 |オブジェクト|最大サイズと最大数|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/08/2017
   
  オンライン分析処理 (OLAP) およびデータ マイニングのデータ ソース制限の詳細については、次を参照してください。[データ ソースのサポートと #40 です。SSAS - 多次元 &#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)、[データソース &#40; をサポートSSAS - 多次元 &#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)、および[ASSL オブジェクトとオブジェクトの特性](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)です。  
   
-##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
+##  <a name="bkmk_sharepoint"></a> SharePoint (DeploymentMode=1)  
   
 |オブジェクト|最大サイズと最大数|  
 |------------|----------------------------|  
@@ -88,7 +88,7 @@ ms.lasthandoff: 12/08/2017
 |ソース クエリのレコード サイズ|64 K|  
 |オブジェクト名の長さ|100 文字|  
   
-##  <a name="bkmk_vertipaq"></a>テーブル (DeploymentMode = 2)  
+##  <a name="bkmk_vertipaq">テーブル (DeploymentMode = 2)</a>  
 理論上の制限を次に示します。 小さい番号のパフォーマンスは低下します。   
 
 |オブジェクト|最大サイズと最大数|  

@@ -1,28 +1,29 @@
 ---
 title: "どのような &#39; s Machine Learning のサービスの新機能 |Microsoft ドキュメント"
-ms.date: 11/16/2017
+ms.date: 01/08/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 694ec29101c2558cf77b01b56bfbfc14c7da48dd
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: c5f9810dfb057045fd1ec0ba25fd7651b2e10ea1
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>SQL Server の Machine Learning のサービスの新機能
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2016 では、Microsoft には、SQL Server R Services、SQL Server データベース エンジンと、R 言語を統合することにより、エンタープライズ規模のデータ サイエンスをサポートする機能が導入されました。
 
@@ -34,9 +35,11 @@ SQL Server 2017、データベースに統合された機械学習は一般的�
 
 SQL Server でマシン学習サーバーは、構築および R または Python で machine learning ソリューションを配置するための包括的なサポートを提供します。 このリリースの要点を次に示します。
 
-### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>SQL Server 2017 累積的な更新プログラム 1 の新機能
+### <a name="whats-new-in-cumulative-update-3-for-sql-server-2017"></a>SQL Server 2017 の累積更新プログラム 3 の新機能
 
-Machine Learning サーバー 9.2.1.24 に、Python と R コンポーネントをアップグレードすることができますようになりました。 このリリースの特徴は多くの機能強化**revoscalepy**と**RevoScaleR**パフォーマンスの向上を含むです。
+このリリースには、Python と R コンポーネントの更新プログラムが含まれています。 
+
++ Python モデルでのシリアル化 revoscalepy、rx_serialize_model 関数を使用してサポートが追加されました
 
 ### <a name="in-database-python-integration"></a>データベース内の Python の統合
 
@@ -58,7 +61,7 @@ SQL Server の開発者にアクセスする広範な Python ライブラリ sci
 
 + Microsoft Machine Learning Server (スタンドアロン) での Python のサポート
 
-    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]Microsoft Machine Learning Server のスタンドアロン バージョンをインストールするオプションが含まれます。 Machine Learning のサーバーを使用するは、配布し、SQL Server を使用せずに R または Python コードをスケールします。
+    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] Microsoft Machine Learning Server のスタンドアロン バージョンをインストールするオプションが含まれます。 Machine Learning のサーバーを使用するは、配布し、SQL Server を使用せずに R または Python コードをスケールします。
 
 ### <a name="linux-support"></a>Linux サポート
 
@@ -84,7 +87,7 @@ SQL Server の開発者にアクセスする広範な Python ライブラリ sci
 
     **Mrsdeploy**にパッケージ化する[!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)]と[!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]web サービスとしての Python モデルとスクリプトの展開をサポートします。 そのしくみの例は、次を参照してください。[発行 Python コードを使用すると](python/publish-consume-python-code.md)です。
 
-+ [パフォーマンス]
++ パフォーマンス
 
     Microsoft はスコアリングのためのパフォーマンスの境界をプッシュされます。 ごとに 100万行を処理したデータベース内のスコアリングと 2 番目の R モデルを使用します。 このリリースでは、新機能で**リアルタイム スコアリング**と**ネイティブ スコアリング**の単一行のバッチ スコアリング パフォーマンス向上をサポートします。
 
@@ -122,7 +125,7 @@ SQL Server 2016 の R Services の以前のバージョンをインストール�
 
 詳細については、次を参照してください。[パッケージの管理](r/r-package-management-for-sql-server-r-services.md)です。
 
-### <a name="get-started"></a>作業を開始します。
+### <a name="get-started"></a>概要します。
 
 + [SQL Server の Machine Learning のサービスでの Python の設定します。](../advanced-analytics/python/setup-python-machine-learning-services.md)
 

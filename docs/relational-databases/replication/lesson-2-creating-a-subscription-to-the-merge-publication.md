@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c1d145f5fc43ad13cbc5f41faec86974ee736f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1fb890bc73be0a4d27c5ea9cafe1e2fbed930679
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>レッスン 2 : マージ パブリケーションへのサブスクリプションの作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このレッスンでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してサブスクリプションを作成します。 次に、サブスクリプション データベースに権限を設定し、新しいサブスクリプション用のフィルター選択データのスナップショットを手動で作成します。 このレッスンを進めるには、前のレッスン「 [レッスン 1: マージ レプリケーションを使用したデータのパブリッシュ](../../relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md)」を完了している必要があります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+このレッスンでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してサブスクリプションを作成します。 次に、サブスクリプション データベースに権限を設定し、新しいサブスクリプション用のフィルター選択データのスナップショットを手動で作成します。 このレッスンを進めるには、前のレッスン「 [レッスン 1: マージ レプリケーションを使用したデータのパブリッシュ](../../relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md)」を完了している必要があります。  
   
 ### <a name="to-create-the-subscription"></a>サブスクリプションを作成するには  
   
@@ -46,9 +50,9 @@ ms.lasthandoff: 11/17/2017
   
 7.  **[新しいデータベース]** ダイアログ ボックスで、 **[データベース名]** ボックスに「 **SalesOrdersReplica** 」と入力し、 **[OK]**をクリックして **[次へ]**をクリックします。  
   
-8.  [マージ エージェント セキュリティ] ページで参照ボタン (**[…]**) をクリックし、**[プロセス アカウント]** ボックスに「\<*コンピューター名>***\repl_merge**」と入力して、このアカウントのパスワードを入力します。次に、**[OK]** をクリックし、**[次へ]****** を 2 回クリックします。  
+8.  [マージ エージェント セキュリティ] ページで参照ボタン (**[…]**) をクリックし、**[プロセス アカウント]** ボックスに「\<*コンピューター名>***\repl_merge**」と入力して、このアカウントのパスワードを入力します。次に **[OK]** をクリックし、**[次へ]** をクリックし、もう一度 **[次へ]** をクリックします。  
   
-9. [サブスクリプションの初期化] ページで、**[次の場合に初期化]** ボックスの一覧から **[初回同期時]** を選択し、**[次へ]****** を 2 回クリックします。  
+9. [サブスクリプションの初期化] ページで、**[次の場合に初期化]** ボックスの一覧から **[初回同期時]** を選択し、**[次へ]**をクリックし、**[次へ]**もう一度です。  
   
 10. [HOST_NAME 値] ページで、**[HOST_NAME 値]** ボックスに値「**adventure-works\pamela0**」と入力して、**[完了]** をクリックします。  
   
@@ -58,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でサブスクライバーに接続し、 **[データベース]**、 **[SalesOrdersReplica]**、 **[セキュリティ]**の順に展開して、 **[ユーザー]**を右クリックし、 **[新しいユーザー]**を選択します。  
   
-2.  **[全般]** ページで、**[ユーザー名]** ボックスに「\<*コンピューター名>***\repl_merge**」と入力します。参照ボタン (**[…]**) をクリックし、**[参照]** をクリックして [\<*コンピューター名>***\repl_merge**] を選択します。次に、**[OK]** をクリックし、**[名前の確認]** をクリックして、**[OK]** をクリックします。  
+2.  **[全般]** ページで、**[ユーザー名]** ボックスに「\<*コンピューター名>***\repl_merge**」と入力します。参照ボタン (**[…]**) をクリックし、**[参照]** をクリックして [\<*コンピューター名>***\repl_merge**] を選択します。次に **[OK]** をクリックし、**[名前の確認]** をクリックし、**[OK]** をクリックします。  
   
 3.  **[データベース ロールのメンバーシップ]**で **[db_owner]**を選択し、 **[OK]** をクリックしてユーザーを作成します。  
   
@@ -76,7 +80,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  新しく追加したパーティションを選択して、 **[今すぐ選択したスナップショットを生成する]**をクリックし、 **[OK]**をクリックします。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 ここでは、マージ パブリケーションへのサブスクリプションを作成し、新しいサブスクリプションのデータ パーティション用のフィルター選択スナップショットを生成して、サブスクリプション初期化時に使用できるようにしました。 次は、サブスクリプション データベースのマージ エージェントに権限を付与します。さらに、マージ エージェントを実行して、同期の開始とサブスクリプションの初期化を行います。 「 [レッスン 3:マージ パブリケーションへのサブスクリプションの同期](../../relational-databases/replication/lesson-3-synchronizing-the-subscription-to-the-merge-publication.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

@@ -8,31 +8,31 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - schema rowsets [OLE DB]
 - schema rowsets [Analysis Services], OLE DB
 - OLE DB schema rowsets
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 10a60e9e3696076a4e3672e7bcb5037f362f161b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 59d17cb1345f7ba32a2cbaac27f5ec002aadfa40
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="ole-db-schema-rowsets"></a>OLE DB スキーマ行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]サポートされている次の OLE DB スキーマ行セット、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) プロバイダーです。 使用して、 **DISCOVER_ENUMERATORS**を含む行セット、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)特定のデータ ソース プロバイダーが行セットをサポートしているかどうかを確認します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+次の OLE DB スキーマ行セットは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) プロバイダーによってサポートされています。 使用して、 **DISCOVER_ENUMERATORS**を含む行セット、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)特定のデータ ソース プロバイダーが行セットをサポートしているかどうかを確認します。  
   
  これらの行セットの詳細情報は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Web サイトの MSDN® ライブラリの OLE DB プログラマ向けリファレンスで「スキーマ行セット」のトピックを検索することによっても参照できます。  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 |[行セット]|Description|  
 |------------|-----------------|  
 |**DBSCHEMA_ASSERTIONS**|カタログで定義され、特定のユーザーによって所有されているアサーションを識別します。|  
-|[DBSCHEMA_CATALOGS 行セット](../../../analysis-services/schema-rowsets/ole-db/dbschema-catalogs-rowset.md) <sup>1</sup>|データベース管理システム (DBMS) からアクセス可能なカタログに関連付けられている物理属性を識別します。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access などの一部のシステムでは、カタログを 1 つしか指定できません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の場合、この行セットでは、システム データベースで定義されたすべてのカタログ (データベース) を列挙します。|  
+|[DBSCHEMA_CATALOGS Rowset](../../../analysis-services/schema-rowsets/ole-db/dbschema-catalogs-rowset.md) <sup>1</sup>|データベース管理システム (DBMS) からアクセス可能なカタログに関連付けられている物理属性を識別します。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access などの一部のシステムでは、カタログを 1 つしか指定できません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の場合、この行セットでは、システム データベースで定義されたすべてのカタログ (データベース) を列挙します。|  
 |**DBSCHEMA_CHARACTER_SETS**|カタログで定義され、特定のユーザーがアクセスできる文字セットを識別します。|  
 |**DBSCHEMA_CHECK_CONSTRAINTS**|カタログで定義され、特定のユーザーによって所有されているチェック制約を識別します。|  
 |**DBSCHEMA_CHECK_CONSTRAINTS_BY_TABLE**|カタログで定義され、特定のユーザーによって所有されている特定のテーブルのチェック制約を識別します。|  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/08/2017
 |**DBSCHEMA_PROCEDURE_COLUMNS**|プロシージャによって返される行セットの列に関する情報を返します。|  
 |**DBSCHEMA_PROCEDURE_PARAMETERS**|プロシージャのパラメーターとリターン コードに関する情報を返します。|  
 |**DBSCHEMA_PROCEDURES**|カタログで定義され、特定のユーザーによって所有されているプロシージャを識別します。 これは OLE DB の拡張機能です。|  
-|[DBSCHEMA_PROVIDER_TYPES 行セット](../../../analysis-services/schema-rowsets/ole-db/dbschema-provider-types-rowset.md) <sup>1</sup>|データ プロバイダーによってサポートされている (基本) データ型を識別します。|  
+|[DBSCHEMA_PROVIDER_TYPES Rowset](../../../analysis-services/schema-rowsets/ole-db/dbschema-provider-types-rowset.md) <sup>1</sup>|データ プロバイダーによってサポートされている (基本) データ型を識別します。|  
 |**DBSCHEMA_REFERENTIAL_CONSTRAINTS**|カタログで定義され、特定のユーザーによって所有されている参照制約を識別します。|  
 |**DBSCHEMA_SCHEMATA**|特定のユーザーによって所有されているスキーマを識別します。|  
 |**DBSCHEMA_SQL_LANGUAGES**|カタログで定義されたデータを処理する SQL 実装によってサポートされているレベル、オプション、および言語の準拠を識別します。|  

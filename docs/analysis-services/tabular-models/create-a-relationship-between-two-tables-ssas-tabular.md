@@ -1,35 +1,34 @@
 ---
-title: "2 つのテーブル (SSAS テーブル) 間のリレーションシップを作成 |Microsoft ドキュメント"
+title: "リレーションシップを作成 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.asvs.bidtoolset.createrelatdb.f1
 - sql13.asvs.bidtoolset.managereldb.f1
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 79aa7bc1e5dff61693c4d7f5a671bffa49416bf6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3936d29e4d547db75e7a92020c82d8c5c5854503
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>2 つのテーブル間のリレーションシップの作成 (SSAS テーブル)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]データ ソース内のテーブルに既存のリレーションシップがない場合、または新しいテーブルを追加する場合は、新しいリレーションシップを作成、モデル デザイナーで、ツールを使用できます。 テーブル モデルでリレーションシップがどのように使用されるかについては、「 [リレーションシップ (SSAS テーブル)](../../analysis-services/tabular-models/relationships-ssas-tabular.md)」を参照してください。  
+# <a name="create-a-relationship"></a>リレーションシップを作成します。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+データ ソース内のテーブルに既存のリレーションシップがない場合、または新しいテーブルを追加する場合は、モデル デザイナーのツールを使用して新しいリレーションシップを作成できます。 テーブル モデルでリレーションシップを使用する方法については、次を参照してください。[リレーションシップ](../../analysis-services/tabular-models/relationships-ssas-tabular.md)です。  
   
 ## <a name="create-a-relationship-between-two-tables"></a>2 つのテーブル間のリレーションシップの作成  
   
@@ -78,7 +77,7 @@ ms.lasthandoff: 12/08/2017
 6.  **[作成]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [リレーションシップの削除 (SSAS テーブル)](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
- [リレーションシップ (SSAS テーブル)](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
+ [リレーションシップを削除します。](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
+ [リレーションシップ](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
   
   

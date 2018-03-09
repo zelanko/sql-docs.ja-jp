@@ -3,7 +3,7 @@ title: "(SQL Server Profiler) カーソルを再生 |Microsoft ドキュメン�
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - replaying traces
 ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10ecf88b7f85d199323ef1e8027c7872b16e9ce4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 723d3a47736b44dba88a50a2d24ed862c1f30507
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>カーソルまでの再生 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このトピックの内容がトレース ファイルまたはトレース テーブルを使用して、カーソルに到達したときに一時停止を再生する方法について説明します[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]です。 カーソル到達時点でトレースを一時停止することでデバッグがサポートされることになります。これは、長いトレース スクリプトの再生を、順番に分析できる短いセグメントに分割できるためです。  
@@ -49,8 +49,8 @@ ms.lasthandoff: 12/05/2017
 6.  手順 5. をトレースの最後まで繰り返します。  
   
 ## <a name="see-also"></a>参照  
- [ブレークポイントまでの再生 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-to-a-breakpoint-sql-server-profiler.md)   
- [トレースの再生](../../tools/sql-server-profiler/replay-traces.md)   
+ [ブレークポイント &#40; までの再生します。SQL Server Profiler &#41;](../../tools/sql-server-profiler/replay-to-a-breakpoint-sql-server-profiler.md)   
+ [トレースを再生します。](../../tools/sql-server-profiler/replay-traces.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

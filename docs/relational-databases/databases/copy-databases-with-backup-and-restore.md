@@ -21,15 +21,15 @@ helpviewer_keywords:
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 caps.latest.revision: "61"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 61898f292e44da04152eeb3ebeb2e7221eb1bb68
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5555b305edf4ac249959e77d4a68c07c72efef5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>バックアップと復元によるデータベースのコピー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
  エラーと好ましくない結果を回避するには、復元操作の前に、 [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) 履歴テーブルを使用して、復元しようとしているバックアップ内のデータベースとログ ファイルを確認できます。  
   
 ## <a name="moving-the-database-files"></a>データベース ファイルの移動  
- データベース バックアップ内のファイルをコピー先コンピューターに復元できない場合は、復元のときにファイルを新しい場所に移動する必要があります。 例:  
+ データベース バックアップ内のファイルをコピー先コンピューターに復元できない場合は、復元のときにファイルを新しい場所に移動する必要があります。 例 :  
   
 -   以前のバージョンの既定の場所に作成されたバックアップからデータベースを復元する場合。  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
  データベースを別のコンピューターに復元すると、復元操作を開始した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン ユーザーまたは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザーが自動的に新しいデータベースの所有者になります。 復元されたデータベースのシステム管理者または新しいデータベース所有者は、そのデータベースの所有権を変更できます。 認められていないデータベースの復元を防止するため、メディアまたはバックアップ セットのパスワードを使用してください。  
   
 ## <a name="managing-metadata-when-restoring-to-another-server-instance"></a>別のサーバー インスタンスに復元するときのメタデータの管理  
- データベースを別のサーバー インスタンスに復元するときは、ユーザーおよびアプリケーションに一貫した使用環境を提供するために、復元先のサーバー インスタンスで、ログインやジョブなどのデータベースのメタデータの一部またはすべてを作成し直す必要がある場合があります。 詳細については、「[データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  
+ データベースを別のサーバー インスタンスに復元するときは、ユーザーおよびアプリケーションに一貫した使用環境を提供するために、復元先のサーバー インスタンスで、ログインやジョブなどのデータベースのメタデータの一部またはすべてを作成し直す必要がある場合があります。 詳細については、「 [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  
   
  **バックアップ セットに含まれているデータ ファイルおよびログ ファイルの表示**  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [新しい場所へのファイルの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
--   [SSMS を使用したデータベース バックアップの復元](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [SSMS を使用してデータベース バックアップを復元する](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
  **既存のファイルにファイルとファイル グループを復元する**  
   
@@ -119,7 +119,7 @@ ms.lasthandoff: 11/17/2017
   
  **新しい名前でデータベースを復元する**  
   
--   [SSMS を使用したデータベース バックアップの復元](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [SSMS を使用してデータベース バックアップを復元する](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
  **中断された復元操作の再開**  
   

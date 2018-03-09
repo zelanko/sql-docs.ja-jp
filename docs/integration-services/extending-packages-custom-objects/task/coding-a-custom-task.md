@@ -8,10 +8,11 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - validation [Integration Services], design-time tasks
 - SSIS custom tasks, validating
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9c15c407c7fae442d7d96b6679d177e864aa632
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d23a210af0a19b81c583304984ae439e411037b5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="coding-a-custom-task"></a>カスタム タスクのコーディング
   <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基本クラスを継承するクラスを作成し、<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性をそのクラスに適用したら、基本クラスのプロパティとメソッドの実装をオーバーライドして、カスタム機能を提供する必要があります。  
@@ -176,7 +177,7 @@ End Class
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|タスクで使用できる変数を含みます。 タスクは、VariableDispenser を介して変数を使用します。変数を直接使用することはありません。 変数ディスペンサーには、変数をロックまたはロック解除したり、デッドロックや上書きを防ぐ機能があります。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>|イベントを生成してランタイム エンジンに送るためにタスクが呼び出すメソッドを含みます。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSLogging>|イベント ログにエントリを記録するためにタスクが使用するメソッドおよびプロパティを含みます。|  
-|オブジェクト|トランザクション オブジェクトの一部がコンテナーである場合、そのオブジェクトを含みます。 この値はパラメーターとして、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> オブジェクトの <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> メソッドに渡されます。|  
+|Object|トランザクション オブジェクトの一部がコンテナーである場合、そのオブジェクトを含みます。 この値はパラメーターとして、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> オブジェクトの <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> メソッドに渡されます。|  
   
 ### <a name="providing-execution-feedback"></a>実行結果のフィードバックの送信  
  タスクは、タスクのコードを **try/catch** ブロックにラップし、ランタイム エンジンに例外が発生するのを防ぎます。 これにより、パッケージは予期せず停止することなく、実行を完了します。 ランタイム エンジンには、タスクの実行中に発生する可能性のあるエラー条件を処理するメカニズムが他にも用意されています。 このメカニズムには、エラー メッセージや警告メッセージの通知、<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 構造からの戻り値、メッセージの通知、<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> の戻り値、<xref:Microsoft.SqlServer.Dts.Runtime.Task.ExecutionValue%2A> プロパティによるタスクの実行結果に関する情報の公開などが含まれています。  

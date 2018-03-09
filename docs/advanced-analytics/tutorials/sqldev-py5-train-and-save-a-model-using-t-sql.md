@@ -7,25 +7,27 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2017
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 66a72f22e91cf1a1e4f4ec27279f7a7249e7571b
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: a2f0ffafb466030802b87dc96f905e9c875dd548
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>手順 5: トレーニングおよび T-SQL を使用して、Python モデルを保存
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、チュートリアルのパート[SQL 開発者のためのデータベースでの Python analytics](sqldev-in-database-python-for-sql-developers.md)です。 
 
@@ -124,14 +126,14 @@ ms.lasthandoff: 12/20/2017
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    データの処理と、モデルの調整を行うには、最小のいくつかをかかる場合があります。 Python のパイプとメッセージ**stdout**にストリームが表示されます、**メッセージ**のウィンドウ[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。 例 :
+    データの処理と、モデルの調整を行うには、最小のいくつかをかかる場合があります。 Python のパイプとメッセージ**stdout**にストリームが表示されます、**メッセージ**のウィンドウ[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。 例:
 
     *外部スクリプトからの STDOUT メッセージ:*
   *C:\Program files \microsoft SQL Server\MSSQL14 です。MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
 
 3. テーブルを開く*nyc\_taxi_models*です。 _model_列にシリアル化されたモデルを含む新しい行が 1 つ追加されます。
 
-    *linear_model* *0x800363736B6C6561726E2E6C696E6561 しています.*
+    *linear_model* *0x800363736B6C6561726E2E6C696E6561....*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -189,14 +191,14 @@ ms.lasthandoff: 12/20/2017
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    データの処理と、モデルの調整を行う時間がかかります。 Python のパイプとメッセージ**stdout**にストリームが表示されます、**メッセージ**のウィンドウ[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。 例 :
+    データの処理と、モデルの調整を行う時間がかかります。 Python のパイプとメッセージ**stdout**にストリームが表示されます、**メッセージ**のウィンドウ[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。 例:
 
     *外部スクリプトからの STDOUT メッセージ:*
   *C:\Program files \microsoft SQL Server\MSSQL14 です。MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
 
 3. テーブル *nyc_taxi_models*を開きます。 _model_列にシリアル化されたモデルを含む新しい行が 1 つ追加されます。
 
-    *rx_model* *0x8003637265766F7363616c しています.*
+    *rx_model* *0x8003637265766F7363616c....*
 
 次の手順では、トレーニング済みモデルを使用して予測を作成します。
 

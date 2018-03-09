@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -29,19 +29,20 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62e51e155dbd230d3db7d6e84d71f5b1635a22be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b3aaf081b264cd74614af93fd58d130b19dfa4d5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 統合アーキテクチャの CLR ホスト環境
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .NET Framework 共通言語ランタイム (CLR) との統合により、データベース プログラマは、Visual c#、Visual Basic .NET、および Visual C などの言語を使用します。 プログラマがこれらの言語を使用して記述できるビジネス ロジックには、関数、ストアド プロシージャ、トリガー、データ型、集計などがあります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  データベース プログラマは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と .NET Framework CLR (共通言語ランタイム) との統合により、Visual C#、Visual Basic .NET、Visual C++ などの言語を使用できます。 プログラマがこれらの言語を使用して記述できるビジネス ロジックには、関数、ストアド プロシージャ、トリガー、データ型、集計などがあります。  
   
   CLR の特色には、ガベージ コレクションが行われるメモリ、プリエンプティブなスレッド処理、メタデータ サービス (型リフレクション)、コードの検証可能性、コード アクセス セキュリティなどがあります。 CLR では、クラスの検索と読み込み、メモリ内でのインスタンスのレイアウト、メソッド呼び出しの解決、ネイティブ コードの生成、セキュリティの設定、およびランタイム コンテキスト境界の設定にメタデータが使用されます。  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/17/2017
  ユーザーからの応答を要求するメッセージ ボックスの表示やプロセスの終了など、データベース エンジン プロセスの整合性に影響を与える操作は、ユーザー コードから実行できないようにする必要があります。 ユーザー コードからデータベース エンジンのメモリ バッファーや内部データ構造体への上書きを許可しないでください。  
   
 ###### <a name="scalability"></a>スケーラビリティ  
- スケジュール設定とメモリ管理の内部モデルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と CLR で異なります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、協調動作する非プリエンプティブなスレッド モデルがサポートされます。このモデルでは、定期的に、またはスレッドがロックや I/O を待機しているときに、スレッドの実行が自主的に明け渡されます。 CLR では、プリエンプティブなスレッド モデルがサポートされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部で実行されているユーザー コードから、オペレーティング システムのスレッド プリミティブを直接呼び出すことができると、そのユーザー コードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] タスク スケジューラに適切に統合されず、システムのスケーラビリティを低下させる可能性があります。 CLR では仮想メモリと物理メモリが区別されませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では物理メモリが直接管理され、構成可能な制限内で物理メモリを使用する必要があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR のスケジュール設定とメモリ管理のための別の内部モデルがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、協調動作する非プリエンプティブなスレッド モデルがサポートされます。このモデルでは、定期的に、またはスレッドがロックや I/O を待機しているときに、スレッドの実行が自主的に明け渡されます。 CLR では、プリエンプティブなスレッド モデルがサポートされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部で実行されているユーザー コードから、オペレーティング システムのスレッド プリミティブを直接呼び出すことができると、そのユーザー コードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] タスク スケジューラに適切に統合されず、システムのスケーラビリティを低下させる可能性があります。 CLR では仮想メモリと物理メモリが区別されませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では物理メモリが直接管理され、構成可能な制限内で物理メモリを使用する必要があります。  
   
  このようにスレッド処理、スケジュール設定、およびメモリ管理のモデルが異なるため、数千の同時実行ユーザー セッションをサポートするまで規模が拡大された RDBMS (リレーショナル データベース管理システム) では統合が課題になります。 アーキテクチャでは、スレッド処理、メモリ、および同期プリミティブの API (アプリケーション プログラミング インターフェイス) を直接呼び出すユーザー コードによってシステムのスケーラビリティが損なわれないことを保証する必要があります。  
   
@@ -125,15 +126,15 @@ ms.lasthandoff: 11/17/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でホストされているときは、CLR がスレッドの中断が発生したアプリケーション ドメインのすべての共有状態を検出することで、このようなスレッドの中断が処理されます。 CLR では、同期オブジェクトが存在するかどうかを確認することで、この処理を行います。 アプリケーション ドメインに共有状態が存在する場合は、アプリケーション ドメイン自体がアンロードされます。 アプリケーション ドメインをアンロードすると、そのアプリケーション ドメインで現在実行されているデータベース トランザクションが停止します。 共有状態が存在すると、例外が発生したユーザー セッション以外のユーザー セッションに、このような重大な例外の影響が拡大する可能性があるので、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と CLR では、共有状態が存在する可能性を減少させる手順が実行されます。 詳細については、.NET Framework のドキュメントを参照してください。  
   
 ###### <a name="security-permission-sets"></a>セキュリティ : 権限セット  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースに配置されるコードの信頼性とセキュリティに関する要件をユーザーが指定できます。 データベースにアセンブリをアップロードするとき、アセンブリの作成者は SAFE、EXTERNAL_ACCESS、および UNSAFE の 3 つの権限セットのうちのいずれかをアセンブリに指定できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに配置されるコードの信頼性とセキュリティ要件を指定することができます。 データベースにアセンブリをアップロードするとき、アセンブリの作成者は SAFE、EXTERNAL_ACCESS、および UNSAFE の 3 つの権限セットのうちのいずれかをアセンブリに指定できます。  
   
 |||||  
 |-|-|-|-|  
 |権限セット|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |コード アクセス セキュリティ|実行のみ|実行および外部リソースへのアクセス|[無制限]|  
-|プログラミング モデルの制限事項|可|可|制限はありません。|  
-|検証可能性の要件|可|可|不可|  
-|ネイティブ コードを呼び出す機能|不可|いいえ|可|  
+|プログラミング モデルの制限事項|はい|はい|制限はありません。|  
+|検証可能性の要件|はい|[ユーザー アカウント制御]|いいえ|  
+|ネイティブ コードを呼び出す機能|いいえ|いいえ|はい|  
   
  SAFE は、許可されているプログラミング モデルの中でも多くの制限事項が関連付けられており、最も信頼性が高く、セキュリティで保護されたモードです。 SAFE アセンブリには、実行、計算の実行、およびローカル データベースへのアクセスを行うには十分な権限が許可されます。 SAFE アセンブリは検証可能なタイプ セーフである必要があり、アンマネージ コードを呼び出すことはできません。  
   
@@ -141,14 +142,14 @@ ms.lasthandoff: 11/17/2017
   
  EXTERNAL_ACCESS には、両者の中間に位置するセキュリティ オプションが提供されます。このオプションにより、SAFE の信頼性保証を備えたまま、コードからデータベース外部のリソースにアクセスできます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ホストレベルの CAS ポリシー層を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カタログに格納されている権限セットに基づいて上記の 3 つの権限セットのうちのいずれかを許可するホスト ポリシーを構成します。 データベース内部で実行するマネージ コードには、これらのコード アクセス権限セットのうちのいずれかが必ず許可されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ホストレベルの CAS ポリシー層を使用して、アクセス許可に格納されている設定に基づいてアクセス許可の 3 つのセットのいずれかを許可するホスト ポリシーを設定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カタログ。 データベース内部で実行するマネージ コードには、これらのコード アクセス権限セットのうちのいずれかが必ず許可されます。  
   
 ### <a name="programming-model-restrictions"></a>プログラミング モデルの制限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージ コードのプログラミング モデルでは、通常、複数の呼び出し間で保持される状態の使用や複数のユーザー セッション間での状態の共有を必要としない関数、プロシージャ、および型の記述が必要になります。 さらに、既に説明したように、共有状態が存在すると、アプリケーションのスケーラビリティや信頼性に影響を与える重大な例外が発生する可能性があります。  
   
  このような考慮事項を考えると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用するクラスの静的変数や静的なデータ メンバーを使用することはお勧めしません。 SAFE アセンブリと EXTERNAL_ACCESS アセンブリの場合、CREATE ASSEMBLY を使用するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でアセンブリのメタデータが調べられ、静的なデータ メンバーや変数の使用が検出された場合はこのようなアセンブリを作成できません。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]またで注釈が付けられている .NET Framework Api の呼び出しが禁止、 **SharedState**、**同期**と**ExternalProcessMgmt**ホスト保護属性。 これにより、SAFE アセンブリと EXTERNAL_ACCESS アセンブリで、状態の共有、同期の実行、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性に影響を与える可能性のあるすべての API が呼び出されなくなります。 詳細については、次を参照してください。 [CLR 統合プログラミング モデルの制限事項](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またで注釈が付けられている .NET Framework Api の呼び出しが禁止、 **SharedState**、**同期**と**ExternalProcessMgmt**ホスト保護属性。 これにより、SAFE アセンブリと EXTERNAL_ACCESS アセンブリで、状態の共有、同期の実行、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性に影響を与える可能性のあるすべての API が呼び出されなくなります。 詳細については、次を参照してください。 [CLR 統合プログラミング モデルの制限事項](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)です。  
   
 ## <a name="see-also"></a>参照  
  [CLR 統合のセキュリティ](../../relational-databases/clr-integration/security/clr-integration-security.md)   

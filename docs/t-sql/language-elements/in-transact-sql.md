@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - IN_TSQL
 - IN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - values [SQL Server], matching
 - NOT IN keyword
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - IN keyword
 - 8632 (Database Engine error)
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 487c576ea2323ea7da9726dfb161889e12aff0d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 86d03b96015869efb8ff2ab873b1c838c50387f8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,13 +52,13 @@ test_expression [ NOT ] IN
 ```  
   
 ## <a name="arguments"></a>引数  
- *な任意*  
+ *test_expression*  
  有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
- *サブクエリ*  
+ *subquery*  
  1 列の結果セットを返すサブクエリです。 この列と同じデータ型を持つ必要があります*な任意*です。  
   
- *式*[ **、**.*n* ]  
+ *expression*[ **,**... *n* ]  
  一致するかどうかのテストに使用する式のリストです。 すべての式と同じ型でなければなりません*な任意*です。  
   
 ## <a name="result-types"></a>戻り値の型  

@@ -1,33 +1,31 @@
 ---
-title: "ロール (SSAS テーブル) |Microsoft ドキュメント"
+title: "役割 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 121aa11fa1238529d4d3c382c0347878615a3068
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 15030b1b2c5345d3072ff188356aaa532857c90b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="roles"></a>ロール
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]役割、テーブル モデルでは、モデルのメンバーの権限を定義します。 ロールのメンバーは、ロール権限によって定義されたとおりにモデル上で各種操作を実行できます。 読み取り権限を付与して定義されたロールでは、行レベル フィルターを使用して行レベルでのセキュリティを向上させることもできます。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+テーブル モデルでは、ロールはあるモデルのメンバー アクセス許可を定義します。 ロールのメンバーは、ロール権限によって定義されたとおりにモデル上で各種操作を実行できます。 読み取り権限を付与して定義されたロールでは、行レベル フィルターを使用して行レベルでのセキュリティを向上させることもできます。 
   
  SQL Server Analysis Services のロールは、Windows ユーザー名または Windows グループおよびアクセス許可 (読み取り、処理、管理者) によってユーザーのメンバーを含めます。 Azure Analysis services では、ユーザーが Azure Active Directory とユーザー名である必要があり、組織の電子メール アドレスまたは UPN によって指定されたグループがある必要があります。 
   
@@ -49,14 +47,14 @@ ms.lasthandoff: 12/08/2017
   
  既定では、テーブル モデル プロジェクトの新規作成時点では、モデル プロジェクトにロールはありません。 ロールは、SSDT のロール マネージャー ダイアログ ボックスを使用して定義できます。 モデルを作成しているときにロールを定義すると、それらのロールはモデル ワークスペース データベースに適用されます。 モデルを配置すると、同じロールが配置済みモデルに適用されます。 モデルが配置された後、サーバー ロール ([Analysis Services の管理者) とデータベース管理者のメンバーは、モデルに関連付けられているロールと SSMS を使用して各ロールに関連付けられているメンバーを管理できます。  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> アクセス許可  
  各ロールに定義済みデータベース権限が 1 つ存在します (読み取りと処理を組み合わせた権限を除きます)。 既定では、新しいロールの権限は [なし] です。 つまり、メンバーが権限のないロールに追加されると、別の権限が与えられるまで、データベースの変更、処理操作の実行、データの照会、およびデータベースの表示を行うことはできません。  
   
  グループまたはユーザーは、任意の数のロールを別の権限を持つ各ロールのメンバーであることができます。 ある 1 人のユーザーが、複数個のロールのメンバーである場合、各ロールに対して定義された権限は累積されます。 たとえば、あるユーザーが読み取り権限を持つロールのメンバーであると同時に、権限のないロールのメンバーでもある場合、そのユーザーは読み取り権限を持つことになります。  
   
  各ロールに対して、次のうちいずれかの権限を定義できます。  
   
-|Permissions|Description|DAX を使用する行フィルター|  
+|権限|Description|DAX を使用する行フィルター|  
 |-----------------|-----------------|----------------------------|  
 |なし|メンバーは、モデルのデータベース スキーマを変更したり、データを照会したりすることはできません。|行フィルターは適用されません。 このロールのユーザーには、データは表示されません。|  
 |読み取り|メンバーは、(行フィルターに基づいて) データに対してクエリを実行できますが、SSMS のモデル データベースを表示することはできず、モデルのデータベース スキーマを変更することはできません。また、ユーザーはモデルを処理できません。|行フィルターが適用されます。 行フィルター DAX 式で指定されたデータのみがユーザーに表示されます。|  
@@ -123,7 +121,7 @@ ms.lasthandoff: 12/08/2017
 |7|Sales and Marketing|  
   
 ##  <a name="bkmk_testroles"></a> Testing roles  
- モデル プロジェクトの作成時に、Excel で分析機能を使用して、定義したロールの有効性をテストできます。 モデル デザイナーで **[モデル]** メニューの **[Excel で分析]**をクリックすると、Excel が開く前に **[資格情報とパースペクティブの選択]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、データ ソースとしてワークスペース モデルに接続するために使用する、現在のユーザー名、別のユーザー名、ロール、およびパースペクティブを指定できます。 詳細については、次を参照してください。 [Excel で分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)です。  
+ モデル プロジェクトの作成時に、Excel で分析機能を使用して、定義したロールの有効性をテストできます。 モデル デザイナーで **[モデル]** メニューの **[Excel で分析]** をクリックすると、Excel が開く前に **[資格情報とパースペクティブの選択]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、データ ソースとしてワークスペース モデルに接続するために使用する、現在のユーザー名、別のユーザー名、ロール、およびパースペクティブを指定できます。 詳細については、次を参照してください。 [Excel で分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)です。  
   
 ##  <a name="bkmk_rt"></a> Related tasks  
   

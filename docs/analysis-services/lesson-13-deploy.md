@@ -8,21 +8,22 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4a58956ec5a484799f311371d0e343c7416c3611
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 29a05dfbeea281b2468b95e69b458d4948f7f624
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-13-deploy"></a>レッスン 13: 配置
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  **AW Internet Sales のプロパティ ページ**ダイアログ ボックスで、**配置サーバー**で、**サーバー**プロパティ、Azure Analysis Services サーバーの名前を入力または内部設置型サーバーのインスタンスは表形式モードで実行されています。 これによりに、モデルを配置するサーバー インスタンスになります。  
 
-    ![送信し、展開の展開-サーバーのプロパティ](../analysis-services/media/aas-deploy-deployment-server-property.png)
+    ![aas-deploy-deployment-server-property](../analysis-services/media/aas-deploy-deployment-server-property.png)
  
     > [!IMPORTANT]  
     > リモート Analysis Services インスタンスでの順序に配置するには、管理者のアクセス許可が必要です。  
@@ -63,20 +64,20 @@ ms.lasthandoff: 12/08/2017
   
     [配置] ダイアログ ボックスが表示され、メタデータの配置状況と、モデルに含まれる各テーブルが表示されます。  
     
-    ![送信し、展開ステータス](../analysis-services/media/aas-deploy-status.png)
+    ![aas-deploy-status](../analysis-services/media/aas-deploy-status.png)
   
 3. 展開が正常に完了したら、先へ進めて、 **[閉じる]**をクリックします。  
   
 ## <a name="conclusion"></a>まとめ  
 これで、 作成と、最初の Analysis Services 表形式モデルの配置が完了したらです。 このチュートリアルでは、テーブル モデルを作成する際の、最も一般的なタスクについて説明しました。 Adventure Works Internet Sales Model が配置されたので、SQL Server Management Studio を使用してモデルを管理したり、プロセス スクリプトやバックアップ計画を作成できるようになりました。 ユーザーは、Microsoft Excel または Power BI などのレポート クライアント アプリケーションを使用して、モデルにも接続できます。  
 
-![として-表形式の lesson13 の ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
+![as-tabular-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
   
   
 ## <a name="see-also"></a>参照  
-[DirectQuery モード &#40;SSAS テーブル&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
-[既定のデータ モデルと配置プロパティの構成 &#40;SSAS テーブル&#41;](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
-[表形式モデルのデータベース (SSAS 表形式)](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
+[DirectQuery モード](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
+[既定のデータ モデリングおよび配置プロパティを構成します。](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
+[表形式モデル データベース](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   
   ## <a name="whats-next"></a>次の操作

@@ -15,13 +15,13 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 caps.latest.revision: "23"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42d859148c12bcc83c3f6961b69385a390431f20
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 41c64af6ffe805d6b0b92ffde0c7057a7cd2abca
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
      ![[テーブルの選択] ページで履歴テーブルを選択する](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "[テーブルの選択] ページで履歴テーブルを選択する")  
   
-3.  **[Azure の構成]** ウィンドウで、ログイン資格情報を指定します。 Microsoft Azure にサインインするか、アカウントを作成します。 使用するサブスクリプションを選択し、Azure 領域を選択します。 次に、新しいサーバーを作成するか、既存のサーバーを選択します。 **[次へ]**をクリックします。  
+3.  **[Azure の構成]** ウィンドウで、ログイン資格情報を指定します。 Microsoft Azure にサインインするか、アカウントを作成します。 使用するサブスクリプションを選択し、Azure 領域を選択します。 次に、新しいサーバーを作成するか、既存のサーバーを選択します。 **[次へ]** をクリックします。  
   
      ![新しい Azure サーバーを作成 - Stretch Database ウィザード](../../relational-databases/tables/media/stretch-wizard-4.png "新しい Azure サーバーを作成 - Stretch Database ウィザード")  
   

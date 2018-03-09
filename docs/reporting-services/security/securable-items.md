@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 caps.latest.revision: "45"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f3345eedb8d1d8fa933deb6ac5f543fdb6e82f51
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5aa30529e45f4436d6e3d5b7a366993f5f9fa909
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="securable-items"></a>セキュリティ保護可能なアイテム
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポート サーバーに保存されているアイテムへのアクセス制御に、ロールベースのセキュリティが使用されます。 レポート サーバーへのユーザー アクセスを許可する場合は、通常次の場所でロールの割り当てのペアを作成します。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
 -   フォルダー  
   
--   レポート  
+-   [レポート]  
   
 -   レポート モデル  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/05/2017
 |アイテム|特性|  
 |----------|---------------------|  
 |フォルダー|フォルダーのセキュリティは、フォルダー自体と内部のアイテムに適用されます。 [ホーム] フォルダーは、フォルダー階層のルート ノードです。 このフォルダーに対して設定したセキュリティは、そのフォルダー階層にあるすべての下位フォルダー、レポート、リソース、および共有データ ソースに対するセキュリティの初期設定になります。 詳細については、「 [フォルダーをセキュリティで保護する](../../reporting-services/security/secure-folders.md)」をご覧ください。<br /><br /> [個人用レポート] は特別な用途を持つフォルダーで、専用のロールに基づく黙示的なロールの割り当てによってセキュリティで保護されています。 詳細については、「 [個人用レポートをセキュリティで保護する](../../reporting-services/security/secure-my-reports.md)」を参照してください。|  
-|レポート|レポートおよびリンク レポートをセキュリティで保護して、ユーザーが実行できるアクションの範囲 (指定したレポートのプロパティを変更するなど) を制御することができます。<br /><br /> レポート履歴は、履歴に含まれているレポートによりセキュリティで保護されます。 レポート履歴のスナップショットを個別にセキュリティで保護することはできません。<br /><br /> レポートのセキュリティの詳細については、「 [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)」を参照してください。|  
+|[レポート]|レポートおよびリンク レポートをセキュリティで保護して、ユーザーが実行できるアクションの範囲 (指定したレポートのプロパティを変更するなど) を制御することができます。<br /><br /> レポート履歴は、履歴に含まれているレポートによりセキュリティで保護されます。 レポート履歴のスナップショットを個別にセキュリティで保護することはできません。<br /><br /> レポートのセキュリティの詳細については、「 [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)」を参照してください。|  
 |レポート モデル|レポート モデル全体またはその一部に対してロールの割り当てを指定できます。 レポート モデルは非常に広範囲にわたることがあるため、そのような場合は、機密データに関連するモデル アイテムのみをセキュリティで保護できます。|  
 |リソース|リソースをセキュリティで保護して、リソース自体とプロパティへのアクセスを制御することができます。<br /><br /> スタンドアロン リソースのみ、独立したアイテムとしてセキュリティで保護できます。 レポートに埋め込まれているリソースは、レポートと別にセキュリティで保護できません。<br /><br /> レポートのセキュリティの詳細については、「 [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)」を参照してください。|  
 |共有データ ソース|共有データ ソースをセキュリティで保護して、共有データ ソース アイテムおよびそのプロパティ ページへのアクセスを制限することができます。 詳細については、「 [Secure Shared Data Source Items](../../reporting-services/security/secure-shared-data-source-items.md)」(共有データ ソース アイテムをセキュリティで保護する) を参照してください。|  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -22,23 +23,24 @@ f1_keywords:
 - CREATE COLUMNSTORE INDEX
 - CREATE_CLUSTERED_COLUMNSTORE_INDEX_TSQL
 - COLUMNSTORE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - index creation [SQL Server], columnstore indexes
 - columnstore index, creating
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: "76"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c2c5b9cec465ff1e969df9f657ab66a7e6d5b68f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -46,8 +48,11 @@ ms.lasthandoff: 11/17/2017
 行ストア テーブルをクラスター化列ストア インデックスに変換するか、非クラスター化列ストア インデックスを作成します。 OLTP ワークロードに効率的にリアルタイムの経営分析を実行する、またはデータ ウェアハウスのワークロードのデータの圧縮とクエリのパフォーマンスを向上させるためには、列ストア インデックスを使用します。  
   
 > [!NOTE]  
->  以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、クラスター化列ストア インデックスとテーブルを作成することができます。   まず行ストア テーブルを作成し、クラスター化列ストア インデックスに変換する必要は不要になったです。  
-  
+> 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、クラスター化列ストア インデックスとテーブルを作成することができます。   まず行ストア テーブルを作成し、クラスター化列ストア インデックスに変換する必要は不要になったです。  
+
+> [!TIP]
+> インデックスのデザイン ガイドラインについてを参照してください、 [SQL Server インデックス デザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)です。
+
 例に進みます。  
 -   [行ストア テーブルを列ストアに変換するための例](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
 -   [非クラスター化列ストア インデックスの例](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
@@ -120,7 +125,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX
   
 テーブルは、クラスター化列ストア インデックスを既に持っている場合、既存のインデックスと同じ名前を指定できます。 または DROP EXISTING オプションを使用するには新しい名前を指定します。  
   
-ON [*database_name*です。 [*schema_name* ] です。 | *schema_name*です。 *table_name*  
+ON [*database_name*です。 [*schema_name* ] です。 | *schema_name* . ] *table_name*  
    クラスター化列ストア インデックスとして格納するテーブルの 1 部、2 部、または 3 部構成の名前を指定します。 場合は、テーブルがヒープまたはクラスター化インデックス、テーブルは行ストアから列ストアに変換します。 テーブルが列ストアで既に場合、このステートメントには、クラスター化列ストア インデックスが再構築します。  
   
 のすべてのメンションを  
@@ -139,14 +144,14 @@ MAXDOP = *max_degree_of_parallelism*
   
    詳細については、次を参照してください。 [max degree of parallelism サーバー構成オプションを構成する](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)、および[並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)です。  
  
-COMPRESSION_DELAY = **0** | *遅延*[分]  
+COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
    適用されます:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。
 
    ディスク ベース テーブルの場合*遅延*SQL Server を使用すると、圧縮された行グループに圧縮できる前に、デルタ行グループで閉じられた状態で、デルタ行グループがある必要があります (分) の最小数を指定します。 ディスク ベース テーブルの挿入を追跡および更新されないため時間個々 の行に SQL Server を適用の遅延が閉じられた状態で、デルタ行グループ。  
    既定値は、0 分です。  
    COMPRESSION_DELAY を使用する場合の推奨事項を参照してください[リアルタイム運用分析の列ストアの概要](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)です。  
   
-DATA_COMPRESSION = COLUMNSTORE |COLUMNSTORE_ARCHIVE  
+DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
    適用されます:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。
 指定したテーブル、パーティション番号、またはパーティション範囲に、データ圧縮オプションを指定します。 次のオプションがあります。   
 COLUMNSTORE  
@@ -168,10 +173,10 @@ ON
    *filegroup_name*  
    クラスター化列ストア インデックスを格納するファイル グループを指定します。 位置の指定がなく、テーブルがパーティション分割されていない場合は、基になるテーブルまたはビューと同じファイル グループが使用されます。 ファイル グループは既に存在している必要があります。  
 
-   **"**既定**"**  
+   **"**default**"**  
    既定のファイル グループに、インデックスを作成するには、"default"または [既定] を使用します。  
   
-   "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 QUOTED_IDENTIFIER は既定で ON です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
+   "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 QUOTED_IDENTIFIER は既定で ON です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」を参照してください。  
   
 [非クラスター化] 列ストア インデックスを作成します。  
 行ストア テーブルにメモリ内の非クラスター化列ストア インデックスを作成、ヒープまたはクラスター化インデックスとして格納します。 インデックスでは、フィルター選択された条件し、基になるテーブルの列のすべてを含める必要はありません。 列ストア インデックスでは、データのコピーを保存するには、十分な領域が必要です。 更新可能であるし、基になるテーブルが変更されるとは更新します。 クラスター化インデックスに非クラスター化列ストア インデックスでは、リアルタイム分析の機能を使用できます。  
@@ -179,14 +184,14 @@ ON
 *index_name*  
    インデックスの名前を指定します。 *index_name*テーブル内で一意である必要がありますが、データベース内で一意にする必要はありません。 インデックス名の規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。  
   
- **(** *列*[ **、**.*n* ] **)**  
+ **(** *column*  [ **,**...*n* ] **)**  
     格納する列を指定します。 非クラスター化列ストア インデックスは、1,024年列に制限されます。  
    各列は、列ストア インデックスでサポートされているデータ型である必要があります。 参照してください[制限事項と制約](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)サポートされるデータ型の一覧についてはします。  
 
-ON [*database_name*です。 [*schema_name* ] です。 | *schema_name*です。 *table_name*  
+ON [*database_name*です。 [*schema_name* ] です。 | *schema_name* . ] *table_name*  
    1 部、2 部、またはインデックスを含むテーブルの 3 部構成の名前を指定します。  
 
-WITH DROP_EXISTING = [オフ] |ON  
+WITH DROP_EXISTING = [OFF] | ON  
    DROP_EXISTING = ON の既存のインデックスを削除および再構築します。 指定するインデックス名は、現在存在するインデックスと同じにする必要がありますが、インデックス定義は変更できます。 たとえば、異なる列またはインデックス オプションを指定できます。
   
    DROP_EXISTING = OFF を指定したインデックス名が既に存在する場合、エラーが表示されます。 DROP_EXISTING を使用してインデックスの種類を変更することはできません。 旧バージョンと互換性のある構文では、WITH DROP_EXISTING は WITH DROP_EXISTING = ON と同じです。  
@@ -204,13 +209,13 @@ MAXDOP = *max_degree_of_parallelism*
 > [!NOTE]  
 >  並列インデックス操作はすべてのエディションで使用できない[!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
-ONLINE = [ON |OFF]   
+ONLINE = [ON | OFF]   
    適用されます: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]、非クラスター化列ストア インデックスのみにします。
 オンラインのまま、非クラスター化列ストア インデックスとインデックスの新しいコピー中に使用できるをビルドすることを指定します。
 
    オフには、新しいコピーがビルド中には、インデックスが使用するために使用できないことを指定します。 これは、非クラスター化インデックスのみ、ベース テーブルが使用可能な非クラスター化列ストア インデックスのみが新しいインデックスが完了するまで、クエリを満たすために使用されません。 
 
-COMPRESSION_DELAY = **0** | \<遅延 > [分]  
+COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
    適用されます:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。 
   
    どのくらいの時間行必要があります内にデルタ行グループが圧縮された行グループへの移行の対象となる下限の境界を指定します。 たとえば、顧客は、120 分間、行が変更されていない場合を使用することから単票形式のストレージ形式に圧縮の対象となるとことができます。 ディスク ベース テーブルに列ストア インデックスの場合は、行が挿入または更新されると、ときに時間を追跡しませんデルタ行グループが終了時間をプロキシとしての行の代わりに使用します。 既定の期間は、0 分です。 行はデルタ行グループで累積された行数を 100万と closed に設定されている列指向の記憶域に移行されます。  
@@ -226,7 +231,7 @@ COLUMNSTORE_ARCHIVE
   
  圧縮の詳細については、次を参照してください。[データ圧縮](../../relational-databases/data-compression/data-compression.md)です。  
   
-ここで\<filter_expression > [AND \<filter_expression >] に適用されます:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。
+WHERE \<filter_expression> [ AND \<filter_expression> ] Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
    フィルター述語が呼び出されると、インデックスに含める行を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フィルター選択されたインデックス内のデータ行をフィルター選択された統計を作成します。  
   
@@ -252,10 +257,10 @@ ON
 *filegroup_name*  
    インデックスを作成するファイル グループ名を指定します。 場合*filegroup_name*が指定されていないテーブルがパーティション分割されていないと、インデックスが、基になるテーブルと同じファイル グループを使用します。 ファイル グループは既に存在している必要があります。  
  
-**"**既定**"**  
+**"**default**"**  
 既定のファイル グループに、指定したインデックスを作成します。  
   
-この文脈での default という語はキーワードではありません。 既定のファイル グループの識別子を指定しのように区切る必要があります**"**既定**"**または ON **[**既定**]**です。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
+この文脈での default という語はキーワードではありません。 既定のファイル グループの識別子を指定しのように区切る必要があります**"**既定**"**または ON **[**既定**]**です。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」を参照してください。  
   
 ##  <a name="Permissions"></a> アクセス許可  
  テーブルに対する ALTER 権限が必要です。  

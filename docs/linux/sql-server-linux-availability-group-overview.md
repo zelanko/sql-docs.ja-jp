@@ -3,27 +3,27 @@ title: "Always On 可用性グループの SQL Server on Linux |Microsoft ドキ
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: 3c708d4e06f32515b96b22099990007d58db20f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b9dd4b05cf69b8556c4c021e2ede576b1a805c5e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux 上の可用性グループ
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Always On 可用性グループ (Ag) の下にある Linux ベースの特性を説明[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]インストールします。 Linux と Windows Server フェールオーバー クラスター (WSFC) の違いについても説明、Ag のベースします。 参照してください、 [Windows ベースのドキュメント](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)Ag の基本の Windows および、WSFC を除く Linux で作業と同じにします。
 
@@ -65,7 +65,7 @@ None のクラスターの種類は、こと、要件はありません。 ま�
 -   1 – 1 つのセカンダリ レプリカがプライマリ; と同期済み状態にする必要があります。自動フェールオーバーが可能です。 同期セカンダリ レプリカが利用可能になるまで、プライマリ データベースは使用できません。
 -   2 –; プライマリと 3 つ以上のノード AG の構成で両方のセカンダリ レプリカを同期する必要があります自動フェールオーバーが可能です。
 
-`required_synchronized_secondaries_to_commit`だけでなくの同期レプリカですがデータの損失とフェールオーバーの動作を制御します。 1 または 2 の値にセカンダリ レプリカは常に必要同期するのには常にあるデータの冗長性。 データが失われるをのためなしです。
+`required_synchronized_secondaries_to_commit` だけでなくの同期レプリカですがデータの損失とフェールオーバーの動作を制御します。 1 または 2 の値にセカンダリ レプリカは常に必要同期するのには常にあるデータの冗長性。 データが失われるをのためなしです。
 
 値を変更する`required_synchronized_secondaries_to_commit`、次の構文を使用します。
 
@@ -147,11 +147,11 @@ Linux でリスナーが異なる方法で構成されているが、その機�
 
 クロス プラットフォームそのレプリカ、AG の外部または WSFC クラスターの型を持つことはできません。 これは true かどうか、可用性グループが[!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)]または[!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)]です。 つまり基になるクラスターで従来 AG の構成で、1 つのレプリカは、WSFC と別のペースの Linux コンピューターにすることはできません。
 
-クラスター型なしの可用性グループには、OS 境界を越えることがあるため Linux と Windows ベースの両方のレプリカ、同じ可用性グループ レプリカはそのことができます。 たとえば、プライマリ レプリカが Windows ベース セカンダリ上にある Linux ディストリビューションのいずれかの次に示します。
+クラスター型なしの可用性グループには、OS 境界を越えることがあるため Linux と Windows ベースの両方のレプリカ、同じ可用性グループ レプリカはそのことができます。 例を示します、プライマリ レプリカが Windows ベース セカンダリ上にある Linux ディストリビューションのいずれか。
 
 ![ハイブリッドなし](./media/sql-server-linux-availability-group-overview/image1.png)
 
-分散型可用性グループでは、OS の境界を越えることができますも。 構成方法、外部の中で構成されているいずれかなどの基になる Ag は、ルールによってバインドされる Linux のみが、WSFC を使用して、可用性グループに参加していることを構成する可能性があります。 例を次に示します。
+分散型可用性グループでは、OS の境界を越えることができますも。 構成方法、外部の中で構成されているいずれかなどの基になる Ag は、ルールによってバインドされる Linux のみが、WSFC を使用して、可用性グループに参加していることを構成する可能性があります。 次の例を参照してください。
 
 ![ハイブリッド Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 
@@ -170,4 +170,6 @@ If using automatic seeding with a distributed availability group that crosses OS
 [SLES で可用性グループのクラスター リソースを追加します。](sql-server-linux-availability-group-cluster-sles.md)
 
 [Ubuntu で可用性グループのクラスター リソースを追加します。](sql-server-linux-availability-group-cluster-ubuntu.md)
+
+[クロス プラットフォームの可用性グループを構成します。](sql-server-linux-availability-group-cross-platform.md)
 

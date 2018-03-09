@@ -1,10 +1,11 @@
 ---
-title: "RecordCreateOptionsEnum |Microsoft ドキュメント"
+title: RecordCreateOptionsEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: RecordCreateOptionsEnum
-helpviewer_keywords: RecordCreateOptionsEnum enumeration [ADO]
+f1_keywords:
+- RecordCreateOptionsEnum
+helpviewer_keywords:
+- RecordCreateOptionsEnum enumeration [ADO]
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e25b3793d4e3f271d1ea9a1b172440106c591ee
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4c36b34f0d8eabdde75b25847d1ae47c674af2e6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 指定します、既存かどうか**レコード**開くか、新しいにする必要があります**レコード**用に作成された、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト[開く](../../../ado/reference/ado-api/open-method-ado-record.md)メソッドです。 値は、AND 演算子と組み合わせることができます。  
   
-|定数|値|Description|  
+|定数|[値]|Description|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|新たに作成**レコード**によって指定されたノードに*ソース*既存を開く代わりに、パラメーター**レコード**です。 ソースを指している場合、既存のノードでは、実行時エラーが発生し、しない限り、 **adCreateCollection**と組み合わせる**adOpenIfExists**または**adCreateOverwrite**です。|  
 |**adCreateNonCollection**|0|新たに作成**レコード**型の[adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md)です。|  

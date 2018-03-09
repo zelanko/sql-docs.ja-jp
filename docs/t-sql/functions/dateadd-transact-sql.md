@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DATEADD
 - DATEADD_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - add interval to date or time [SQL Server]
@@ -26,23 +28,23 @@ helpviewer_keywords:
 - date and time [SQL Server], DATEADD
 - DATEADD function [SQL Server]
 ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
-caps.latest.revision: "71"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: db5499d73b4eab7ff4ba3079469412cc30a111a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: f3aa417b85782fa806961b107658403e51f7afe6
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 指定したを返します*日付*、指定した*数*間隔 (符号付き整数) を指定した追加*datepart*その*日付*です。
   
-すべての概要については[!INCLUDE[tsql](../../includes/tsql-md.md)]日付と時刻のデータ型および関数を参照してください[日付と時刻のデータ型および関数 &#40;TRANSACT-SQL と #41 です。](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+すべての概要については[!INCLUDE[tsql](../../includes/tsql-md.md)]日付と時刻のデータ型および関数を参照してください[日付と時刻のデータ型および関数 &#40;TRANSACT-SQL&#41; です](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,23 +56,23 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>引数  
 *datepart*  
-一部である*日付*先、**整数***数*を追加します。 次の表にリストのすべての有効な*datepart*引数。 ユーザー定義変数に相当するものは無効です。
+一部である*日付*する、**整数 * * * 数*を追加します。 次の表にリストのすべての有効な*datepart*引数。 ユーザー定義変数に相当するものは無効です。
   
 |*datepart*|省略形|  
 |---|---|
-|**1 年**|**yy**、 **yyyy**|  
-|**四半期**|**qq**、 **q**|  
-|**月**|**mm**、 **m**|  
-|**dayofyear**|**dy**、 **y**|  
-|**1 日**|**dd**、 **d**|  
-|**週**|**wk**、 **ww**|  
-|**曜日**|**dw**、 **w**|  
-|**1 時間**|**mm**|  
-|**1 分**|**mi**、**n**|  
-|**1 秒**|**ss**、 **s**|  
-|**ミリ秒**|**ms**|  
-|**マイクロ秒**|**mcs**|  
-|**ナノ秒**|**ns**|  
+|**year**|**yy**, **yyyy**|  
+|**quarter**|**qq**, **q**|  
+|**month**|**mm**, **m**|  
+|**dayofyear**|**dy**, **y**|  
+|**day**|**dd**, **d**|  
+|**week**|**wk**、 **ww**|  
+|**weekday**|**dw**、 **w**|  
+|**hour**|**mm**|  
+|**minute**|**mi**、**n**|  
+|**second**|**ss**、 **s**|  
+|**millisecond**|**ms**|  
+|**microsecond**|**mcs**|  
+|**nanosecond**|**ns**|  
   
 *number*  
 解決可能な式を指定、 [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)に追加されている、 *datepart*の*日付*です。 ユーザー定義型の変数は有効です。  
@@ -93,24 +95,24 @@ DATEADD (datepart , number , date )
 場合*datepart*は**月**と*日付*の月が日数を超えて戻り値の月と*日付*日が戻り値の月に存在しません。戻り値の月の最終日が返されます。 たとえば、9 月の日数が 30 日である場合、次の 2 つのステートメントは、2006-09-30 00:00:00.000 を返します。
   
 ```sql
-SELECT DATEADD(month, 1, '2006-08-30');
-SELECT DATEADD(month, 1, '2006-08-31');
+SELECT DATEADD(month, 1, '20060830');
+SELECT DATEADD(month, 1, '20060831');
 ```
   
 ## <a name="number-argument"></a>number 引数  
 *数*引数が範囲を超えることはできません**int**です。次のステートメントの引数で*数*の範囲を超える**int**を 1 つです。 "`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."` というエラー メッセージが返されます。
   
 ```sql
-SELECT DATEADD(year,2147483648, '2006-07-31');  
-SELECT DATEADD(year,-2147483649, '2006-07-31');  
+SELECT DATEADD(year,2147483648, '20060731');  
+SELECT DATEADD(year,-2147483649, '20060731');  
 ```  
   
 ## <a name="date-argument"></a>date 引数  
 *日付*引数は、そのデータ型の範囲外の値を増加することはできません。 次のステートメントで、*数*に追加される値、*日付*の範囲を超える値、*日付*データ型。 次のエラー メッセージが返されます"`Msg 517, Level 16, State 1, Line 1 Adding a value to a 'datetime' column caused overflow`。"。
   
 ```sql
-SELECT DATEADD(year,2147483647, '2006-07-31');  
-SELECT DATEADD(year,-2147483647, '2006-07-31');  
+SELECT DATEADD(year,2147483647, '20060731');  
+SELECT DATEADD(year,-2147483647, '20060731');  
 ```  
   
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>smalldatetime に対する戻り値 (秒または 1 秒未満の秒)  

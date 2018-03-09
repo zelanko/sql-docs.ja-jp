@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +16,20 @@ helpviewer_keywords:
 - dependency network nodes [Analysis Services]
 - Mining Model Viewer [Analysis Services], dependency network nodes
 ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f95a58a73030375534a202dd0c6a6d24a449e373
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e67cca59b2383c525fdd0fbd80546d2c123a8a96
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>依存関係ネットワークでの特定のノードの検索
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]依存関係ネットワークに、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]マイニング モデルは、多数のノードを含めることができます、データを見つけるが困難に関心があります。 データ マイニング デザイナーの **[依存関係ネットワーク]** タブでは、 **[ノードの検索]** ダイアログ ボックスを使用して特定のノードを検索できるので、この問題を解決することができます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] マイニング モデルの依存関係ネットワークに含まれているノードの数が多すぎると、対象となるデータを見つけにくくなる場合があります。 データ マイニング デザイナーの **[依存関係ネットワーク]** タブでは、 **[ノードの検索]** ダイアログ ボックスを使用して特定のノードを検索できるので、この問題を解決することができます。  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>依存関係ネットワークで特定のノードを検索するには  
   

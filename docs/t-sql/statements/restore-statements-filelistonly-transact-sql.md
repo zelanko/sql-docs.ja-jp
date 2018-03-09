@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - RESTORE_FILELISTONLY_TSQL
 - FILELISTONLY
 - FILELISTONLY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backups [SQL Server], file lists
 - RESTORE FILELISTONLY statement
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-caps.latest.revision: "83"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 54e5a186bc7beaa13cfb1fef8d69cc1fbf34cbf0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE ステートメントで FILELISTONLY (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,10 +90,10 @@ FROM <backup_device>
   
 |列名|データ型|Description|  
 |-|-|-|  
-|LogicalName|**nvarchar (128)**|ファイルの論理名です。|  
-|PhysicalName|**nvarchar (260)**|ファイルの物理名またはオペレーティング システム名。|  
-|型|**char (1)**|ファイルの種類。次のいずれかになります。<br /><br /> **L** = Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ ファイル<br /><br /> **D**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ファイル<br /><br /> **F**フル テキスト カタログを =<br /><br /> **S** = FileStream、FileTable、または[!INCLUDE[hek_2](../../includes/hek-2-md.md)]コンテナー|  
-|FileGroupName|**nvarchar (128)**|このファイルを含むファイル グループの名前。|  
+|LogicalName|**nvarchar(128)**|ファイルの論理名です。|  
+|PhysicalName|**nvarchar(260)**|ファイルの物理名またはオペレーティング システム名。|  
+|型|**char(1)**|ファイルの種類。次のいずれかになります。<br /><br /> **L** = Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ ファイル<br /><br /> **D**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ファイル<br /><br /> **F**フル テキスト カタログを =<br /><br /> **S** = FileStream、FileTable、または[!INCLUDE[hek_2](../../includes/hek-2-md.md)]コンテナー|  
+|FileGroupName|**nvarchar(128)**|このファイルを含むファイル グループの名前。|  
 |サイズ|**numeric(20,0)**|現在のサイズ (バイト単位)。|  
 |MaxSize|**numeric(20,0)**|最大許容サイズ (バイト単位)。|  
 |FileID|**bigint**|データベース内で一意なファイル識別子。|  
@@ -103,12 +105,12 @@ FROM <backup_device>
 |BackupSizeInBytes|**bigint**|ファイルのバックアップ サイズ (バイト単位)。|  
 |SourceBlockSize|**int**|ファイルが格納されている物理デバイス (バックアップ デバイス以外) のバイト単位のブロック サイズ。|  
 |FileGroupID|**int**|ファイル グループの ID。|  
-|LogGroupGUID|**NULL で一意識別子**|NULL。|  
+|LogGroupGUID|**uniqueidentifier NULL**|NULL。|  
 |DifferentialBaseLSN|**numeric(25,0)** NULL|差分バックアップは、ログ シーケンス番号より大きいか等しいを持つ変更**DifferentialBaseLSN**差分に含まれます。<br /><br /> その他の種類のバックアップの場合、この値は NULL です。|  
 |DifferentialBaseGUID|**uniqueidentifier**|差分ベースの一意識別子 (差分バックアップの場合)。<br /><br /> その他の種類のバックアップの場合、この値は NULL です。|  
 |IsReadOnly|**bit**|**1** = ファイルは読み取り専用です。|  
 |IsPresent|**bit**|**1** = バックアップに、ファイルが存在します。|  
-|TDEThumbprint|**varbinary (32)**|データベース暗号化キーの拇印を表示します。 暗号化の拇印とは、キーの暗号化で使用された証明書の SHA-1 ハッシュです。 データベースの暗号化については、次を参照してください。 [Transparent Data Encryption &#40;です。TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
+|TDEThumbprint|**varbinary(32)**|データベース暗号化キーの拇印を表示します。 暗号化の拇印とは、キーの暗号化で使用された証明書の SHA-1 ハッシュです。 データベースの暗号化については、次を参照してください。 [Transparent Data Encryption &#40;です。TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
 |SnapshotURL|**nvarchar(360)**|FILE_SNAPSHOT バックアップに含まれているデータベース ファイルの Azure のスナップショットの URL。 FILE_SNAPSHOT バックアップがない場合は、NULL を返します。|  
   
 ## <a name="security"></a>セキュリティ  
@@ -117,7 +119,7 @@ FROM <backup_device>
 > [!IMPORTANT]  
 >  パスワードによる保護は強力なものではありません。 使用して、正しくない復元を防止するものでは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ツールを承認またはユーザーです。 その他の手段によるバックアップ データの読み取りやパスワードの置き換えを防ぐわけではありません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]バックアップを保護するためのベスト プラクティスでは、安全な場所に、または十分なアクセス制御リスト (Acl) によって保護されているディスク ファイルへのバックアップ、バックアップ テープを保存します。 ACL は、バックアップを作成するディレクトリのルートに設定する必要があります。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>権限  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、バックアップ セットやバックアップ デバイスに関する情報の取得には CREATE DATABASE 権限が必要になります。 詳細については、「[GRANT (データベースの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  

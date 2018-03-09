@@ -8,24 +8,27 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Stretch Database
+helpviewer_keywords:
+- Stretch Database
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1ee6dfafdf595e6b61a031bc611b878050fa8995
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 30361d4466b7495945a7dae857bbcd52fd86103a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="stretch-database"></a>Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   Stretch Database は、コールド データを透過的かつ安全に Microsoft Azure クラウドに移行します。  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 12/05/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のテンポラル テーブル機能を使用する場合は、Stretch Database を使用して、関連付けられている履歴テーブル全体または一部を、Azure のコスト効果の高いストレージに移行します。 詳細については、「 [システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)」を参照してください。  
   
- Stretch Database 用のデータベースとテーブルを特定するには、SQL Server 2016 Upgrade Advisor の機能、Stretch Database Advisor を使用してください。 詳細については、「 [Stretch Database Advisor を実行して Stretch Database のデータベースとテーブルを特定する](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)」を参照してください。 潜在的なブロッキングの問題の詳細については、「 [Stretch Database の制限事項](../../sql-server/stretch-database/limitations-for-stretch-database.md)」を参照してください。  
+ Stretch Database 用のデータベースとテーブルを特定するには、SQL Server 2016 Upgrade Advisor の機能、Stretch Database Advisor を使用してください。 詳細については、「 [Stretch Database Advisor を実行して Stretch Database のデータベースとテーブルを特定する](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)」をご覧ください。 潜在的なブロッキングの問題の詳細については、「 [Stretch Database の制限事項](../../sql-server/stretch-database/limitations-for-stretch-database.md)」を参照してください。  
 
 ## <a name="test-drive-stretch-database"></a>Stretch Database の試用  
  **AdventureWorks サンプル データベースでの Stretch Database の試用。** AdventureWorks サンプル データベースを入手するには、 [こちら](https://www.microsoft.com/en-us/download/details.aspx?id=49502)から最小限のデータベース ファイルとサンプルおよびスクリプト ファイルをダウンロードしてください。 SQL Server 2016 のインスタンスにサンプル データベースを復元したら、サンプル ファイルを解凍し、Stretch DB フォルダーから Stretch DB サンプルのファイルを開きます。 このファイルのスクリプトを実行し、Stretch Database を有効にする前と後にデータで使用する領域を確認したり、データ移行の進行状況を追跡したり、引き続き既存のデータにクエリを実行し、データの移行中と移行後の両方で新しいデータを挿入できることを確認します。  

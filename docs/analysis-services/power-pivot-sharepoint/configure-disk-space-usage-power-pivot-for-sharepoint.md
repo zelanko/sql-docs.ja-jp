@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f279adc22305b40d0207b6256e29d42b9b32ef65
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cfac3c1160e6889fe51f1b93a4df87a0ed92a302
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>ディスクの使用領域の構成 (Power Pivot for SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 配置ではキャッシュに、ホスト コンピューターのディスク領域を使用[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]のデータベースを再読み込みを高速化します。 後で再読み込みをすばやく実行して新しい要求を処理できるように、メモリに読み込まれているすべての [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースが最初にディスクにキャッシュされます。 既定では、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint は、利用可能なすべてのディスク領域を使用してデータベースをキャッシュします。ただし、この動作は、使用するディスク領域を制限するプロパティを設定することにより変更できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の配置では、再読み込みを高速化するために、ホスト コンピューターのディスク領域を使用して、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースをキャッシュします。 後で再読み込みをすばやく実行して新しい要求を処理できるように、メモリに読み込まれているすべての [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースが最初にディスクにキャッシュされます。 既定では、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint は、利用可能なすべてのディスク領域を使用してデータベースをキャッシュします。ただし、この動作は、使用するディスク領域を制限するプロパティを設定することにより変更できます。  
   
  このトピックでは、ディスク領域の使用量を制限する方法について説明します。  
   

@@ -8,21 +8,21 @@ ms.service:
 ms.component: native-client-ole-db-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d45c0eafa873e0697c791d478eeffada7cfd91a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0de69450f5aecceb87e56a76b9edb0e46a146d35
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="metadata---parameter-and-rowset"></a>メタデータ - パラメーターと行セット
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,13 +32,13 @@ ms.lasthandoff: 11/17/2017
   
 -   DBBINDING 構造体  
   
--   **Icommandwithparameters::getparameterinfo**  
+-   **ICommandWithParameters::GetParameterInfo**  
   
--   **Icommandwithparameters::setparameterinfo**  
+-   **ICommandWithParameters::SetParameterInfo**  
   
--   **Icolumnsrowset::getcolumnsrowset**  
+-   **IColumnsRowset::GetColumnsRowset**  
   
--   **Icolumnsinfo::getcolumninfo**  
+-   **IColumnsInfo::GetColumnInfo**  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  介して DBPARAMINFO 構造体で、次の情報が返される*prgParamInfo*:  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="icommandwithparameterssetparameterinfo-and-implied-parameter-types"></a>ICommandWithParameters::SetParameterInfo と暗黙のパラメーターの型  
  DBPARAMBINDINFO 構造体で提供される情報は、次の表に準拠する必要があります。  
   
-|*して*<br /><br /> (プロバイダー固有)|*して*<br /><br /> (OLE DB 汎用)|*ulParamSize*|*bScale*|  
+|*pwszDataSourceType*<br /><br /> (プロバイダー固有)|*pwszDataSourceType*<br /><br /> (OLE DB 汎用)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|無視|  
 |date|DBTYPE_DBDATE|6|無視|  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/17/2017
   
  Icommandwithparameters::setparameterinfo が呼び出されていない場合プロバイダー基、サーバーに iaccessor::createaccessor で指定されたバインディングの種類から次のように入力します。  
   
-|バインドの種類|*して*<br /><br /> (プロバイダー固有)|  
+|バインドの種類|*pwszDataSourceType*<br /><br /> (プロバイダー固有)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
 |DBTYPE_DBDATE|date|  

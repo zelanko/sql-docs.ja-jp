@@ -8,21 +8,23 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d52355cc7eebcc27eecdd924640ef547d0cd5215
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d7374f3cf3924ad12fc7077ec8fdc46fa91ec295
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmpdwnodestatus-transact-sql"></a>sys.dm_pdw_node_status (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |is_available|**bit**|このノードが使用できるかどうかを示すフラグします。||  
 |sent_time|**datetime**|最後に、ネットワークのパッケージは、このノードが送信されました。||  
 |received_time|**datetime**|最後に、ネットワークのパッケージは、このノードによって受信されました。||  
-|error_id|**nvarchar (36)**|このノードで発生した最後のエラーの一意の識別子。||  
+|error_id|**nvarchar(36)**|このノードで発生した最後のエラーの一意の識別子。||  
   
 ## <a name="see-also"></a>参照  
  [SQL データ ウェアハウスと並列データ ウェアハウスの動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

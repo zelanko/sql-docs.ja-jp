@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - data updates [ADO]
 - ADO, updating data
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6b67b559f31dc2e7c57f32abb4a2c2e26e0e558
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1fd0fc64e1727b5e4ba9d2830218f3ddb6e004be
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="updating-and-persisting-data"></a>更新およびデータを保持します。
 前のチャプターは、ADO を使用して、データ ソース内のデータを取得する方法、データ内を移動する方法、およびデータを編集する方法も説明してきました。 もちろん場合は、アプリケーションの目的は、データを変更するユーザーを許可するのには、これらの変更を保存する方法を理解する必要があります。 永続化することができますか、 **Recordset**を使用してファイルを変更、**保存**メソッド、または、その変更を使用してストレージのデータ ソースに戻すを送信できます、**更新**または**UpdateBatch**メソッドです。  

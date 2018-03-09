@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_remove_job_from_targets_TSQL
 - sp_remove_job_from_targets
-dev_langs: TSQL
-helpviewer_keywords: sp_remove_job_from_targets
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_remove_job_from_targets
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8748e6968197faeb3809cf8adef59bc9b2452d57
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d27f90f6b4ec53b0bf68bd052c17483990205cfe
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spremovejobfromtargets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,22 +49,22 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  指定された対象サーバーまたは対象サーバー グループから削除されるジョブのジョブ識別番号を指定します。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  指定された対象サーバーまたは対象サーバー グループから削除されるジョブの名前を指定します。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。 *job_name*は**sysname**、既定値は NULL です。  
   
- [  **@target_server_groups =**] **'***target_server_groups***'**  
+ [ **@target_server_groups =**] **'***target_server_groups***'**  
  指定したジョブの削除元である対象サーバー グループをコンマで区切って指定します。 *target_server_groups*は**nvarchar (1024)**、既定値は NULL です。  
   
- [  **@target_servers =**] **'***target_servers***'**  
+ [ **@target_servers =**] **'***target_servers***'**  
  指定したジョブの削除元である対象サーバーをコンマで区切って指定します。 *target_servers*は**nvarchar (1024)**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
 ## <a name="examples"></a>使用例  

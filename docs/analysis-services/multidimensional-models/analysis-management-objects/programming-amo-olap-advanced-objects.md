@@ -1,38 +1,37 @@
 ---
 title: "プログラミング AMO OLAP オブジェクトの詳細 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 924f2a618b029d3724a2435fa1a27287d454247e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 32457c48afcad9d40c901b78252afdf476df31e4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>高度な AMO OLAP オブジェクトのプログラミング
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]このトピックでは、分析管理オブジェクト (AMO) プログラミングの詳細の OLAP オブジェクトの詳細について説明します。 このトピックには、次のセクションが含まれます。  
+  このトピックでは、高度な OLAP オブジェクトの分析管理オブジェクト (AMO) プログラミングの詳細について説明します。 このトピックには、次のセクションが含まれます。  
   
 -   [Action オブジェクト](#Action)  
   
@@ -44,7 +43,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [Translation オブジェクト](#Transl)  
   
-##  <a name="Action"></a>Action オブジェクト  
+##  <a name="Action">Action オブジェクト</a>  
  アクション クラスは、キューブの特定領域の参照時に、アクティブな応答を作成するために使用します。 Action オブジェクトは AMO を使用して定義できます。ただし、このオブジェクトはデータを参照するクライアント アプリケーションから使用されます。 アクションにはさまざまな種類があり、その種類に応じて作成する必要があります。 アクションの種類は次のとおりです。  
   
 -   ドリルスルー アクション。このアクションが発生したキューブで選択されているセル内のデータを表す行セットを返します。  
@@ -192,7 +191,7 @@ static public void CreateActions(Cube cube)
 }  
 ```  
   
-##  <a name="KPI"></a>Kpi オブジェクト  
+##  <a name="KPI">Kpi オブジェクト</a>  
  主要業績評価指標 (KPI) はキューブ内のメジャー グループに関連付けられた、ビジネスの成功の評価に使用される計算のコレクションです。 <xref:Microsoft.AnalysisServices.Kpi> オブジェクトは AMO で定義できます。ただし、このオブジェクトはデータを参照するクライアント アプリケーションから使用されます。  
   
  作成する、<xref:Microsoft.AnalysisServices.Kpi>オブジェクトには、次の手順が必要です。  
@@ -351,7 +350,7 @@ static public void CreateKPIs(Cube cube)
 }.  
 ```  
   
-##  <a name="Persp"></a>Perspective オブジェクト  
+##  <a name="Persp">Perspective オブジェクト</a>  
  <xref:Microsoft.AnalysisServices.Perspective> オブジェクトは AMO で定義できます。ただし、このオブジェクトはデータを参照するクライアント アプリケーションから使用されます。  
   
  作成する、<xref:Microsoft.AnalysisServices.Perspective>オブジェクトには、次の手順が必要です。  
@@ -414,7 +413,7 @@ static public void CreatePerspectives(Cube cube)
 }  
 ```  
   
-##  <a name="PC"></a>ProactiveCaching オブジェクト  
+##  <a name="PC">ProactiveCaching オブジェクト</a>  
  <xref:Microsoft.AnalysisServices.ProactiveCaching> オブジェクトは AMO で定義できます。  
   
  作成する、<xref:Microsoft.AnalysisServices.ProactiveCaching>オブジェクトには、次の手順が必要です。  
@@ -471,7 +470,7 @@ static public void SetProactiveCachingSettings(Database db)
 }  
 ```  
   
-##  <a name="Transl"></a>Translation オブジェクト  
+##  <a name="Transl">Translation オブジェクト</a>  
  Translation オブジェクトは AMO で定義できます。ただし、このオブジェクトはデータを参照するクライアント アプリケーションから使用されます。 Translation オブジェクトのコーディングは簡単です。 オブジェクトのキャプションの翻訳は、ロケール識別子とキャプションの翻訳の組によって提供されます。 すべてのキャプションで複数の翻訳を使用できます。 ディメンション、属性、階層、キューブ、メジャー グループ、メジャーなど、ほとんどの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] オブジェクトに対して翻訳を提供できます。  
   
  次のコード サンプルでは、属性 Product Name の名前をスペイン語に翻訳します。  

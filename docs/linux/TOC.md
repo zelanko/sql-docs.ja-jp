@@ -2,9 +2,10 @@
 
 # 概要
 ## [リリース ノート](sql-server-linux-release-notes.md)
-## [このリリースの新機能](sql-server-linux-whats-new.md)
+## [新機能](sql-server-linux-whats-new.md)
 ## [新規および更新のアーティクル](new-updated-linux.md)
 ## [エディションとサポートされる機能](sql-server-linux-editions-and-components-2017.md)
+## [よくあるご質問](sql-server-linux-faq.md)
 
 # クイック スタート
 ## [インストールと接続 - Red Hat](quickstart-install-connect-red-hat.md)
@@ -26,6 +27,7 @@
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
 ## [7_ペースメーカー クラスターの配置](sql-server-linux-deploy-pacemaker-cluster.md)
 ## [8_可用性グループの作成と構成](sql-server-linux-create-availability-group.md)
+## [9_高可用性のための Kubernetes の構成](tutorial-sql-server-containers-kubernetes.md)
 
 # 概念
 ## Install
@@ -34,7 +36,7 @@
 ### [SQL Server エージェントのインストール](sql-server-linux-setup-sql-agent.md)
 ### [SQL Server フルテキスト検索のインストール](sql-server-linux-setup-full-text-search.md)
 ### [SQL Server Integration Services のインストール](sql-server-linux-setup-ssis.md)
-### [GA リポジトリの登録](sql-server-linux-change-repo.md)
+### [リポジトリの構成](sql-server-linux-change-repo.md)
 
 ## [構成]
 ### [mssql-conf での構成](sql-server-linux-configure-mssql-conf.md)
@@ -84,12 +86,14 @@
 ##### [操作](sql-server-linux-availability-group-failover-ha.md)
 #### [読み取りスケールのみ用に作成する]()
 ##### [AG の構成](sql-server-linux-availability-group-configure-rs.md)
+#### [クロス プラットフォーム (Windows と Linux) の構成](sql-server-linux-availability-group-cross-platform.md)
 
-## [セキュリティ](sql-server-linux-security-overview.md)
+## [Security](sql-server-linux-security-overview.md)
 ### [セキュリティ機能の入門](sql-server-linux-security-get-started.md)
+### [Active Directory 認証](sql-server-linux-active-directory-auth-overview.md)
 ### [接続の暗号化](sql-server-linux-encrypted-connections.md)
 
-## パフォーマンス
+## [パフォーマンス]
 ### [ベスト プラクティス](sql-server-linux-performance-best-practices.md)
 ### [パフォーマンス機能の概要](sql-server-linux-performance-get-started.md)
 
@@ -100,7 +104,6 @@
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # リソース
-## [よくあるご質問](sql-server-linux-faq.md)
 ## [[トラブルシューティング]](sql-server-linux-troubleshooting-guide.md)
 ## [SQL Server のドキュメント](../sql-server/sql-server-technical-documentation.md)
 ## パートナー
@@ -111,5 +114,5 @@
 ## [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ## [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ## [MSDN フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-## [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
+## [フィードバックの送信:](https://feedback.azure.com/forums/908035-sql-server)
 ## [Reddit](https://www.reddit.com/r/SQLServer)

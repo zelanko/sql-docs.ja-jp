@@ -1,31 +1,33 @@
 ---
 title: "プロジェクトのオプション (MySQLToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Setting project options,configuration options
+helpviewer_keywords:
+- Setting project options,configuration options
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 16d9b108e62772093379c46bcbf2bd171d069618
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3aaec0d6811369af2ab4b5c52591af95fd944b57
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-mysqltosql"></a>プロジェクト オプションの設定 (MySQLToSQL)
 SSMA プロジェクトごとに、プロジェクト レベルのオプションを設定できます。 これらのオプションは、オブジェクトの変換方法、データの移行方法、および対象のデータ型へのソースのデータ型のマップ方法を指定します。  SQL Server または SQL Azure オブジェクトに変換したり、SQL Server または SQL Azure にデータを移行する前に、構成オプションには、プロジェクトの適切なことを確認します。  
@@ -37,7 +39,7 @@ SSMA では、プロジェクトの設定の 5 つのセットがあります。
   
 -   プロジェクト情報  
   
--   [全般] (変換、移行、および SQL Azure)  
+-   [全般]\(変換、移行、および SQL Azure)  
   
 -   Synchronization  
   
@@ -51,7 +53,7 @@ SSMA では、プロジェクトの設定の 5 つのセットがあります。
   
 -   オプティミスティック  
   
--   Full  
+-   [完全]  
   
 -   Custom  
   

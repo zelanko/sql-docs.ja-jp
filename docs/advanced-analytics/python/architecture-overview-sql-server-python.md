@@ -7,20 +7,21 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f9a7802848f5355b3bab8a45cd5d2f55b861bfe9
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 5ca823bc7094c77a31cfd3178294cd49a360d77a
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>Python の Machine Learning のサービスのアーキテクチャの概要
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 このトピックでは、Python を外部スクリプトの実行をサポートするデータベース エンジンと SQL Server での Python の相互運用性を有効にする新しいコンポーネントのセキュリティ モデルでは、コンポーネントを含む、SQL Server と統合する方法の概要を示します。 詳細については、リンク先のトピックを参照してください。
 
@@ -39,7 +40,7 @@ Python の SQL Server の相互作用の詳細については、次を参照し�
 
 など、Python をサポートするコンポーネントの詳細については、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]と PythonLauncher を参照してください[新しいコンポーネント](../../advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md)です。
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 Python のタスクは、セキュリティと管理容易性を提供する、SQL Server プロセス外で実行します。
 

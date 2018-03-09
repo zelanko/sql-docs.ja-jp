@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32617273341026d55a6ac63baa99c2a2d02c4a6e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 79759c7f5ec38bb2c729f092248866b87bf9e611
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-containers"></a>Integration Services コンテナー
   コンテナーとは、パッケージに構造を提供し、タスクにサービスを提供する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクトのことです。 コンテナーは、パッケージ内の制御フローの反復をサポートし、タスクおよびコンテナーを意味のある作業単位にグループ化します。 コンテナーには、タスクの他に別のコンテナーを含めることができます。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/20/2017
 |プロパティ|Description|  
 |--------------|-----------------|  
 |**DelayValidation**|コンテナーの検証を実行時まで遅らせるかどうかを示すブール値です。 このプロパティの既定値は、 **False**です。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>に評価されるまで、タスクを繰り返します。|  
-|**Description**|コンテナーの説明です。 このプロパティに格納されるのは文字列で、空白にすることもできます。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>に評価されるまで、タスクを繰り返します。|  
+|**[説明]**|コンテナーの説明です。 このプロパティに格納されるのは文字列で、空白にすることもできます。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>に評価されるまで、タスクを繰り返します。|  
 |**Disable**|コンテナーを実行するかどうかを示すブール値です。 このプロパティの既定値は、 **False**です。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A>に評価されるまで、タスクを繰り返します。|  
 |**DisableEventHandlers**|コンテナーに関連付けられているイベント ハンドラーを実行するかどうかを示すブール値です。 このプロパティの既定値は、 **False**です。|  
 |**FailPackageOnFailure**|コンテナーでエラーが発生した場合、パッケージが失敗するかどうかを示すブール値です。 このプロパティの既定値は、 **False**です。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>に評価されるまで、タスクを繰り返します。|  
@@ -92,13 +93,13 @@ ms.lasthandoff: 11/20/2017
  実行可能ファイルは、コンテナー レベルのタスクおよびコンテナー内の任意のコンテナーを参照します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が提供するタスクおよびコンテナーのいずれか、またはカスタム タスクを実行ファイルとすることができます。 詳細については、「 [Integration Services のタスク](../../integration-services/control-flow/integration-services-tasks.md)」を参照してください。  
   
 ### <a name="precedence-constraints"></a>優先順位制約  
- 優先順位制約は、同じ親コンテナー内のコンテナーとタスクを連結して、順序付けられた制御フローを作成します。 優先順位制約の詳細については、「 [優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」を参照してください。  
+ 優先順位制約は、同じ親コンテナー内のコンテナーとタスクを連結して、順序付けられた制御フローを作成します。 詳細については、「 [優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」を参照してください。  
   
 ### <a name="event-handlers"></a>イベント ハンドラー  
  コンテナー レベルのイベント ハンドラーは、コンテナーまたはそれに含まれるオブジェクトにより発生したイベントに応答します。 詳細については、「[Integration Services (SSIS) のイベント ハンドラー](../../integration-services/integration-services-ssis-event-handlers.md)」を参照してください。  
   
-### <a name="variables"></a>変数  
- コンテナーで使用される変数には、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が提供するコンテナー レベルのシステム変数、およびコンテナーが使用するユーザー定義の変数が含まれます。 詳細については、「[Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)」を参照してください。  
+### <a name="variables"></a>変数:  
+ コンテナーで使用される変数には、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が提供するコンテナー レベルのシステム変数、およびコンテナーが使用するユーザー定義の変数が含まれます。 詳細については、「 [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」を参照してください。  
   
 ## <a name="break-points"></a>ブレークポイント  
  コンテナーにブレークポイントを設定していて、ブレークの条件が **[コンテナーに OnVariableValueChanged イベントが渡されたときに停止します]**である場合は、変数をコンテナーのスコープ内で定義します。  

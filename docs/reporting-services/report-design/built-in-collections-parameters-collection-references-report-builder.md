@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4b5fa050cbb69944039c143f3140086851a68ab
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 469b28cd43b2e5fd03063e0031b487a7959345e9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>組み込みコレクション - Parameters コレクションの参照 (レポート ビルダー)
   レポート パラメーターは、式から参照できる組み込みコレクションの 1 つです。 パラメーターを式に含めると、レポートのデータと外観をユーザーの選択に基づいてカスタマイズできます。 式は、(*Fx*) オプションまたは [\<**式**>] オプションを利用できる、すべてのレポート アイテム プロパティやテキスト ボックス プロパティで使用できます。 式は、他の方法でレポートの内容と外観を制御する場合にも使用されます。 詳細については、「[式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)」を参照してください。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/05/2017
 |`=Parameters!` *\<ParameterName>* `.Count`|整数値 1 が返されます。 単一値パラメーターの場合、カウントは常に 1 です。|  
 |`=Parameters!` *\<ParameterName>* `.Label`|パラメーター ラベルが返されます。パラメーター ラベルは通常、使用可能な値のドロップダウン リストの表示名として使用されます。|  
 |`=Parameters!` *\<ParameterName>* `.Value`|パラメーターの値が返されます。 Label プロパティが設定されていない場合、この値は使用可能な値のボックスの一覧に表示されます。|  
-|`=CStr(Parameters!` *\<ParameterName>* `.Value)`|パラメーターの値が文字列として返されます。|  
+|`=CStr(Parameters!`  *\<ParameterName>* `.Value)`|パラメーターの値が文字列として返されます。|  
 |`=Fields(Parameters!` *\<ParameterName>* `.Value).Value`|パラメーターと同じ名前のフィールドの値が返されます。|  
   
  フィルターでのパラメーターの使用の詳細については、｢[データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)」を参照してください。  

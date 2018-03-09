@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67f88f5-9f0c-4f19-ab09-558c56ca9335
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5a79c607d07a50861f87bcdec21c928231cd51bc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2b5e88e9a77c1d192709bde2fe6dcc9be3887aa3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>表形式モデルでの翻訳 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]表形式モデルに対する翻訳文字列のサポートを追加します。 モデル内の単一オブジェクトには、名前または説明の複数の翻訳を含めることができます。これにより、モデル定義内で複数の言語バージョンをサポートできるようになります。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 表形式モデルに対する翻訳文字列のサポートを追加します。 モデル内の単一オブジェクトには、名前または説明の複数の翻訳を含めることができます。これにより、モデル定義内で複数の言語バージョンをサポートできるようになります。  
   
  翻訳された文字列は、Excel のピボットテーブル リストなどのクライアント ツールに表示される、オブジェクト メタデータ (テーブルと列の名前と説明) のみに使用されます。  翻訳された文字列を使用するには、クライアント接続でカルチャを指定します。 **Excel で分析** 機能では、ドロップダウン リストから言語を選択することができます。 その他のツールでは、接続文字列にカルチャを指定する必要がある場合があります。  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/08/2017
   
 4.  **[言語ファイルのエクスポート]**をクリックします。  ファイル名と場所を指定します。  
   
- ![ssas 表形式-変換-エクスポート](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas 表形式の変換のエクスポート")  
+ ![ssas-tabular-translate-export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabular-translate-export")  
   
 ## <a name="add-translations"></a>翻訳の追加  
  空の JSON 翻訳ファイルには、特定の言語の翻訳に対するメタデータが含まれます。 オブジェクト名と説明の翻訳のプレースホルダーは、モデル定義の最後の **Culture** セクションに指定されます。 次の翻訳を追加することができます。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 12/08/2017
   
  次の例では、 **DimProduct** テーブルと **DimCustomer** テーブルの翻訳されたキャプションと説明を示します。  
   
- ![ssas-テーブル-変換-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-テーブル-変換-json")  
+ ![ssas-tabular-translate-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-tabular-translate-json")  
   
 > [!TIP]  
 >  ファイルを開くために JSON エディターを使用できますが、Visual Studio 内で JSON エディターを使用することをお勧めします。ここでは、SSDT で表形式モデルの定義を表示するために、ソリューション エクスプローラーで [コードの表示] コマンドを使用することもできます。 JSON エディターを取得するには、 [通常版の Visual Studio 2015 のインストール](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx)が必要です。 無料の Community Edition には、JSON エディションが含まれます。  
@@ -111,13 +112,13 @@ ms.lasthandoff: 12/08/2017
   
 2.  Excel 接続ダイアログ ボックスで、モデルに存在する文字列の翻訳のカルチャを選択します。 Excel では、モデルに定義されているカルチャを検出し、それに応じてドロップダウン リストが設定されます。  
   
-     ![ssas の表形式の翻訳-excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-テーブルの翻訳、excel")  
+     ![ssas-tabular-translations-excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-tabular-translations-excel")  
   
      ピボットテーブルを作成するときに、翻訳済みのテーブルおよび列名が表示されます。  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services での表形式モデルの互換性レベル](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services のグローバリゼーションのシナリオ](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Excel で分析 (SSAS テーブル)](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Excel で分析します。](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
   

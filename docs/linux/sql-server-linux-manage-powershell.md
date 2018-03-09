@@ -1,31 +1,31 @@
 ---
 title: "PowerShell を使用した Linux に SQL Server の管理 |Microsoft ドキュメント"
-description: "このトピックでは、SQL Server on Linux での windows PowerShell の使用の概要を示します。"
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+description: "この記事では、SQL Server on Linux での windows PowerShell の使用の概要を示します。"
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.workload: Inactive
-ms.openlocfilehash: 91a86656cdcf54ec4d7951316d82936ed9e738fc
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: f7324a270323950444741cfe713ad0eb5f01aa10
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Windows PowerShell を使用して、Linux 上の SQL Server を管理するには
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このトピックで紹介[SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx)と Linux 上の SQL Server 2017 で使用する方法の例をいくつか使用について説明します。 SQL Server の PowerShell のサポートは、Linux 上のリモート SQL Server インスタンスに接続できる Windows マシンがあるときに使用できるように Windows では、現在使用可能なです。
+この記事で紹介[SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx)と Linux 上の SQL Server 2017 で使用する方法の例をいくつか使用について説明します。 SQL Server の PowerShell のサポートは、Linux 上のリモート SQL Server インスタンスに接続できる Windows マシンがあるときに使用できるように Windows では、現在使用可能なです。
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Windows 上の SQL PowerShell の最新バージョンをインストールします。
 
@@ -45,19 +45,19 @@ PowerShell
 
 SQL Server という名前の Windows PowerShell モジュールを提供する**SqlServer** PowerShell 環境またはスクリプトへの SQL Server コンポーネント (SQL Server プロバイダーとコマンドレット) をインポートに使用できます。
 
-コピーしてインポートする PowerShell プロンプトで、以下のコマンドを貼り付ける、 **SqlServer**現在の PowerShell セッションにモジュール。
+コピーしてインポートする PowerShell プロンプトで次のコマンドを貼り付ける、 **SqlServer**現在の PowerShell セッションにモジュール。
 
 ```powershell
 Import-Module SqlServer
 ```
 
-確認する PowerShell プロンプトで、以下のコマンドを入力、 **SqlServer**モジュールが正しくインポートされました。
+次のコマンドを入力することを確認、PowerShell プロンプトで、 **SqlServer**モジュールが正しくインポートされました。
 
 ```powershell
 Get-Module -Name SqlServer
 ```
 
-PowerShell には、対象に以下のような情報が表示されます。
+PowerShell には、次の出力のような情報が表示されます。
 
 ```
 ModuleType Version    Name          ExportedCommands
@@ -97,7 +97,7 @@ $server.Information | Select-Object Edition, HostPlatform, HostDistribution | Fo
 # done
 ```
 
-PowerShell の下に表示される内容のような情報が表示されます。
+PowerShell には、次の出力のような情報が表示されます。
 
 ```
 Edition          : Developer Edition (64-bit)

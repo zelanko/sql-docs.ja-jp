@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +16,20 @@ helpviewer_keywords:
 - relationships [Analysis Services], data source views
 - data source views [Analysis Services], relationships
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7ebf28e254d90e0d617c2b3319770e91c54e9a16
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d1975eb94bc8ad2d69808279a5358b7a40180866
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>データ ソース ビューでの論理リレーションシップの定義 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]データ ソース ビュー ウィザードとデータ ソース ビュー デザイナーは、基になるデータベース リレーションシップまたは指定した名前一致条件に基づいてデータ ソース ビュー (DSV) に追加されるテーブル間のリレーションシップを自動的に定義します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+データ ソース ビュー ウィザードとデータ ソース ビュー デザイナーでは、データ ソース ビュー (DSV) に追加されたテーブル間のリレーションシップが、基になるデータベース リレーションシップまたは指定した名前一致条件に基づき、自動的に定義されます。  
   
  複数のデータ ソースのデータを使用する場合は、データ ソース ビューの論理リレーションシップを手動で定義して、自動的に定義されたリレーションシップを補完する必要があることもあります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、ファクト テーブルやディメンション テーブルの識別、基になるデータ ソースからデータやメタデータを取得するためのクエリの作成、および高度なビジネス インテリジェンス機能の利用において、リレーションシップが必要となります。  
   
@@ -50,9 +48,9 @@ ms.lasthandoff: 12/08/2017
   
  このトピックのセクションは次のとおりです。  
   
- [テーブル、名前付きクエリ、またはビュー間のリレーションシップを追加するには](#bkmk_addRel)  
+ [クエリ、またはビューの名前、テーブル間のリレーションシップを追加するには](#bkmk_addRel)  
   
- [[ダイアグラム] ペインでリレーションシップを表示または変更するには](#bkmk_diagrampane)  
+ [表示またはダイアグラム ペインで、リレーションシップを変更するには](#bkmk_diagrampane)  
   
  [[テーブル] ペインでリレーションシップを表示または変更するには](#bkmk_tablespane)  
   
@@ -94,6 +92,6 @@ ms.lasthandoff: 12/08/2017
 3.  変更するリレーションシップを右クリックし、 **[リレーションシップの編集]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [多次元モデル内のデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

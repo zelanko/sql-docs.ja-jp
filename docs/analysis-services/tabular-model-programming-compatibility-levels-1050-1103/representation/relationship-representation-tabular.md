@@ -8,28 +8,28 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3204dee0af5235847920c41d9738a1c2ecdcfb9c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c0fef50d7a63d51955dcc523e07957c237d530ff
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="relationship-representation-tabular"></a>リレーションシップ表現 (テーブル)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]リレーションシップは、データの 2 つのテーブル間の接続です。 これにより、2 つのテーブルのデータの関連付けの方法が決まります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+リレーションシップとは、2 つのデータ テーブルの間の接続です。 これにより、2 つのテーブルのデータの関連付けの方法が決まります。  
   
- 参照してください[リレーションシップ表現 (テーブル)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md)作成し、リレーションシップ表現を操作する方法の詳細についてはします。  
+ リレーションシップ表現の作成および操作方法の詳細については、「 [Relationship Representation (Tabular)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md) 」を参照してください。  
   
 ## <a name="relationship-representation"></a>リレーションシップ表現  
  テーブル モデルでは、2 つのテーブル間に複数のリレーションシップを定義できます。 2 つのテーブル間に複数のリレーションシップを定義する場合、モデルの既定のリレーションシップとして定義できるのは 1 つのみで、アクティブなリレーションシップとして指定されます。その他のリレーションシップはすべて、非アクティブなリレーションシップに指定されます。  

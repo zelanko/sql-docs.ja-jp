@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Connection
-helpviewer_keywords: Connection object [ADO]
+f1_keywords:
+- Connection
+helpviewer_keywords:
+- Connection object [ADO]
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 68a54c70eb48a65e5bce6349adf99040945211d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7beb64b0620b1a5b603c02cb36904e3a42f5b3f7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connection-object-ado"></a>接続オブジェクト (ADO)
 データ ソースへの接続を開くを表します。  
@@ -67,7 +70,7 @@ ms.lasthandoff: 12/21/2017
 >  この機能を使用しないでください (場合と同様、ネイティブ メソッドの名前付きコマンドまたはストアド プロシージャを呼び出して、**接続**オブジェクト)、Microsoft® .NET Framework アプリケーションのため機能競合の基になる実装.NET Framework を方法には、com 相互運用します。  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>接続オブジェクトのネイティブ メソッドとしてコマンドを実行します。  
- コマンドを実行するには、付与、コマンドを使用して名前、**コマンド**オブジェクト[名前](../../../ado/reference/ado-api/name-property-ado.md)プロパティです。 設定、 **ActiveConnection**のプロパティ、**コマンド**接続するオブジェクト。 メソッドがある場合のように、コマンド名が使用されているステートメントを発行し、**接続**すべてのパラメーターの前に、オブジェクトと**レコード セット**オブジェクトのかどうか、すべての行が返されます。 設定、 **Recordset**プロパティをその結果をカスタマイズする**レコード セット**です。 例 :  
+ コマンドを実行するには、付与、コマンドを使用して名前、**コマンド**オブジェクト[名前](../../../ado/reference/ado-api/name-property-ado.md)プロパティです。 設定、 **ActiveConnection**のプロパティ、**コマンド**接続するオブジェクト。 メソッドがある場合のように、コマンド名が使用されているステートメントを発行し、**接続**すべてのパラメーターの前に、オブジェクトと**レコード セット**オブジェクトのかどうか、すべての行が返されます。 設定、 **Recordset**プロパティをその結果をカスタマイズする**レコード セット**です。 例:  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -83,7 +86,7 @@ cnn. "parameter", rst
 ```  
   
 ## <a name="execute-a-stored-procedure-as-a-native-method-of-a-connection-object"></a>接続オブジェクトのネイティブ メソッドとしてストアド プロシージャを実行します。  
- ストアド プロシージャを実行する場合と同様、メソッドで、ストアド プロシージャ名が使用されているステートメントを発行、**接続**任意のパラメーターの前に、オブジェクトです。 ADO とパラメーターの型「最善の推測」になります。 例 :  
+ ストアド プロシージャを実行する場合と同様、メソッドで、ストアド プロシージャ名が使用されているステートメントを発行、**接続**任意のパラメーターの前に、オブジェクトです。 ADO とパラメーターの型「最善の推測」になります。 例:  
   
 ```  
 Dim cnn As New ADODB.Connection  

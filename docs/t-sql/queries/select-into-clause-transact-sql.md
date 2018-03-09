@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - INTO
 - INTO clause
 - INTO_clause_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - copying data [SQL Server], into a new table
 - INTO clause
@@ -29,19 +31,19 @@ helpviewer_keywords:
 - clauses [SQL Server], INTO
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-caps.latest.revision: "63"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: df016654700bd36ebb553e7b3cd66f50d35eadc1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 410e71466944f1744d0c8092f0ad030ffa1da29b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---into-clause-transact-sql"></a>SELECT の INTO 句 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="select---into-clause-transact-sql"></a>SELECT - INTO Clause (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   SELECT...INTO は、既定のファイル グループに新しいテーブルを作成し、クエリの結果得られた行をそのテーブルに挿入します。 SELECT の完全な構文を表示するには、次を参照してください[SELECT &#40;。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-transact-sql.md).  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 11/17/2017
  *new_table*  
  新しいテーブルの名前を指定します。このテーブルは選択リストで指定した列とデータ ソースから選択された行を基に作成されます。  
  
-  *ファイル グループ*
+  *filegroup*
  
  新しいテーブルが作成されるファイル グループの名前を指定します。 指定されたファイル グループは存在他のデータベースで SQL Server エンジンがスローされますエラーです。 このオプションは、以降でのみサポートされます[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]です。
  
@@ -99,9 +101,9 @@ ms.lasthandoff: 11/17/2017
  リストに計算列が指定されている場合、新しいテーブル内の対応する列は計算列にはなりません。 新しい列の値は、SELECT...INTO が実行された時点の計算値になります。  
   
 ## <a name="logging-behavior"></a>ログ記録の動作  
- SELECT...INTO のログ記録量は、データベースに対して有効な復旧モデルによって異なります。 単純復旧モデルまたは一括ログ復旧モデルでは、一括操作は最小限しかログに記録されません。 選択 を使用して、最小ログ記録しています. ステートメントに効率的であるテーブルを作成すると、INSERT ステートメントを含むテーブルを作成します。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
+ SELECT...INTO のログ記録量は、データベースに対して有効な復旧モデルによって異なります。 単純復旧モデルまたは一括ログ復旧モデルでは、一括操作は最小限しかログに記録されません。 選択 を使用して、最小ログ記録しています. ステートメントに効率的であるテーブルを作成すると、INSERT ステートメントを含むテーブルを作成します。 詳細については、「[トランザクションログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  対象となるデータベースの CREATE TABLE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -109,7 +111,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. 複数のソースの列を指定してテーブルを作成する  
  次の例では、各種の従業員関連テーブルと住所関連テーブルから 7 つの列を選択して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにテーブル `dbo.EmployeeAddresses` を作成します。  
   
-```tsql  
+```sql  
 SELECT c.FirstName, c.LastName, e.JobTitle, a.AddressLine1, a.City,   
     sp.Name AS [State/Province], a.PostalCode  
 INTO dbo.EmployeeAddresses  
@@ -128,7 +130,7 @@ GO
 ### <a name="b-inserting-rows-using-minimal-logging"></a>B. 最小ログ記録を使用して行を挿入する  
  次の例は、テーブルを作成`dbo.NewProducts`から行を挿入し、`Production.Product`テーブル。 例では、復旧モデル、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースが FULL に設定します。 したがって、最小ログ記録が使用されるようにするために、行を挿入する前に [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの復旧モデルを BULK_LOGGED に設定し、SELECT...INTO ステートメントの後に FULL に戻しています。 これにより、SELECT...INTO ステートメントが使用するトランザクション ログの領域が最小化され、ステートメントが効率的に実行されるようになります。  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
 GO  
   
@@ -144,7 +146,7 @@ GO
 ### <a name="c-creating-an-identity-column-using-the-identity-function"></a>C. IDENTITY 関数を使用して ID 列を作成する  
  次の例では、IDENTITY 関数を使用して、新しいテーブルに id 列を作成する`Person.USAddress`で、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。 この操作が必要になるのは、テーブルを定義する SELECT ステートメントに結合が含まれているため、IDENTITY プロパティが新しいテーブルに転送されないからです。 IDENTITY 関数で、ソース テーブル `AddressID` の `Person.Address` 列とは異なるシード値と増分値が指定されていることに注意してください。  
   
-```tsql  
+```sql  
 -- Determine the IDENTITY status of the source column AddressID.  
 SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
   is_identity, seed_value, increment_value  
@@ -173,7 +175,7 @@ WHERE name = 'AddressID';
   
  **適用されます:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。  
   
-```tsql
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -216,7 +218,7 @@ GO
   
  **適用対象:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]」を参照してください。  
   
-```tsql
+```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
 SELECT DISTINCT   
         Insured_Customers.FirstName, Insured_Customers.LastName,   
@@ -230,11 +232,11 @@ ORDER BY YearlyIncome
   
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 別のテーブルのコピーとして新しいテーブルを作成して、指定されたファイル グループを読み込む
-次の例を別のテーブルのコピーとして新しいテーブルを作成して、ユーザーの既定のファイル グループから別の指定されたファイル グループへの読み込みを demostrates です。
+次の例では、別のテーブルのコピーとして新しいテーブルを作成して、ユーザーの既定のファイル グループから別の指定されたファイル グループに読み込むを示します。
 
  **適用されます:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
-```tsql
+```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE
@@ -250,7 +252,7 @@ SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
 ## <a name="see-also"></a>参照  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [例 &#40; を選択します。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-examples-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [挿入 &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/insert-transact-sql.md)   
  [ID および #40 です。関数と #41 です。&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/identity-function-transact-sql.md)  
   
   

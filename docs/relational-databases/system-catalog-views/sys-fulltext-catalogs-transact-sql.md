@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.fulltext_catalogs
 - fulltext_catalogs
 - fulltext_catalogs_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.fulltext_catalogs catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.fulltext_catalogs catalog view
 ms.assetid: cf1489ff-4819-41fa-a62a-4ed797a16207
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bebdf8510393ea10076a405f585c3414d0afcca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4c3f1c279176dea69b27a2c1416af3d15338924
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfulltextcatalogs-transact-sql"></a>sys.fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |fulltext_catalog_id|**int**|フルテキスト カタログの ID です。 データベース内のフルテキスト カタログ全体で一意です。|  
 |name|**sysname**|カタログの名前です。 データベース内で一意です。|  
-|path|**nvarchar (260)**|ファイル システム内のカタログ ディレクトリの名前。|  
+|path|**nvarchar(260)**|ファイル システム内のカタログ ディレクトリの名前。|  
 |is_default|**bit**|既定のフルテキスト カタログ。<br /><br /> True = 既定値<br /><br /> False = 既定値ではない|  
 |is_accent_sensitivity_on|**bit**|カタログのアクセントの区別に関する設定。<br /><br /> True = アクセントを区別する<br /><br /> False = アクセントを区別しない|  
 |data_space_id|**int**|カタログが作成されたファイル グループ。|  
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |principal_id|**int**|フルテキスト カタログを所有するデータベース プリンシパルの ID。|  
 |is_importing|**bit**|フルテキスト カタログがインポートされているかどうかを示します。<br /><br /> 1 = カタログがインポートされています。<br /><br /> 2 = カタログがインポートされていません。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>参照  

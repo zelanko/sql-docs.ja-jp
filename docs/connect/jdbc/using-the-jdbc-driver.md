@@ -1,27 +1,28 @@
 ---
 title: "JDBC ドライバーの使用 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 018679acc5c3e0119755e5ab5e0378c6f3fec7f0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 9118a82f333b14f9ba468c039255ff3e6a1280d7
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="using-the-jdbc-driver"></a>「JDBC ドライバーの使用」を参照してください。
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,25 +30,44 @@ ms.lasthandoff: 11/18/2017
   このセクションで説明する簡単な接続を行うためのクイック スタート手順、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースを使用して、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]です。 接続する前に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ローカル コンピューターまたはサーバーのいずれかで最初にインストールされている必要があり、JDBC ドライバーは、ローカル コンピューターにインストールする必要があります。  
   
 ## <a name="choosing-the-right-jar-file"></a>最適な JAR ファイルの選択  
+ SQL Server 用 Microsoft JDBC Driver 6.4 提供**mssql jdbc-6.4.0.jre7.jar**、 **mssql jdbc-6.4.0.jre8.jar**、および**mssql jdbc-6.4.0.jre9.jar**クラス ライブラリファイル、必要な Java ランタイム環境 (JRE) 設定によって使い分けることができます。  
+ 
  SQL Server 用 Microsoft JDBC Driver 6.2 提供**mssql jdbc-6.2.1.jre7.jar**、および**mssql jdbc-6.2.1.jre8.jar**クラス、推奨の Java ランタイムによって使用されるライブラリ ファイル環境 (JRE) 設定します。  
   
   Microsoft JDBC Drivers 6.0 と 4.2 for SQL Server 提供**sqljdbc41.jar**、および**sqljdbc42.jar**クラス ライブラリ ファイル、必要な Java ランタイム環境 (JRE) 設定によって使い分けることができます。  
   
  Microsoft JDBC Driver 4.1 for SQL Server の提供、 **sqljdbc41.jar**クラス ライブラリ ファイル、必要な Java ランタイム環境 (JRE) 設定によって使い分けることができます。  
-  
- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 提供**sqljdbc.jar**と**sqljdbc4.jar**クラス ライブラリ ファイル、必要な Java ランタイム環境 (JRE) 設定によって使い分けることができます。  
-  
+    
  また、選択した JAR ファイルによって、使用可能な機能が決定します。 選択する JAR ファイルの詳細については、次を参照してください。 [JDBC Driver のシステム要件](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)です。  
   
 ## <a name="setting-the-classpath"></a>クラスパスの設定  
- JDBC ドライバーは、Java SDK の一部ではありません。 それを使用する場合に含めるクラスパスを設定する必要があります、 **sqljdbc.jar**ファイル、 **sqljdbc4.jar**ファイル、 **sqljdbc41.jar**ファイル、または**sqljdbc42.jar**ファイル。 JDBC ドライバー 6.2 を使用する、クラスパスの設定を含める場合、 **mssql jdbc-6.2.1.jre7.jar**または**mssql jdbc-6.2.1.jre8.jar**です。 クラスパスにエントリがない場合、アプリケーションで "Class not found" という一般的な例外がスローされます。  
+ JDBC ドライバーは、Java SDK の一部ではありません。 それを使用する場合に含めるクラスパスを設定する必要があります、 **sqljdbc.jar**ファイル、 **sqljdbc4.jar**ファイル、 **sqljdbc41.jar**ファイル、または**sqljdbc42.jar**ファイル。 JDBC ドライバー 6.2 を使用する、クラスパスの設定を含める場合、 **mssql jdbc-6.2.1.jre7.jar**または**mssql jdbc-6.2.1.jre8.jar**です。 JDBC ドライバーの 6.4 を使用して、クラスパスの設定を含める場合、 **mssql jdbc-6.4.0.jre7.jar**、 **mssql jdbc-6.4.0.jre8.jar**または**mssql jdbc-6.4.0.jre9.jar**です。 クラスパスにエントリがない場合、アプリケーションで "Class not found" という一般的な例外がスローされます。  
   
+### <a name="for-microsoft-jdbc-driver-64"></a>Microsoft JDBC driver 6.4
+ **Mssql jdbc-6.4.0.jre7.jar**、 **mssql jdbc-6.4.0.jre8.jar**または**mssql jdbc-6.4.0.jre9.jar**ファイルは、次の場所にインストールされます。  
+  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre7.jar 
+  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre8.jar
+ 
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre9.jar
+  
+ Windows アプリケーションで使用される CLASSPATH ステートメントの例を以下に示します。  
+  
+ `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_6.4\enu\mssql-jdbc-6.4.0.jre9.jar`  
+  
+ Unix/Linux アプリケーションで使用される CLASSPATH ステートメントの例を以下に示します。  
+  
+ `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.4/enu/mssql-jdbc-6.4.0.jre9.jar`  
+  
+ CLASSPATH ステートメントに、1 つだけ含まれていることを確認する必要があります[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]、mssql jdbc-6.4.0.jre7.jar、mssql jdbc-6.4.0.jre8.jar または mssql jdbc-6.4.0.jre9.jar のいずれかなどです。   
+
 ### <a name="for-microsoft-jdbc-driver-62"></a>Microsoft JDBC driver 6.2
  **Mssql jdbc-6.2.1.jre7.jar**または**mssql jdbc-6.2.1.jre8.jar**ファイルは、次の場所にインストールされます。  
   
- \<*インストール ディレクトリ*> \sqljdbc_\<*バージョン*>\\<*言語*> \mssql-jdbc-6.2.1.jre7.jar 
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.2.1.jre7.jar 
   
- \<*インストール ディレクトリ*> \sqljdbc_\<*バージョン*>\\<*言語*> \mssql-jdbc-6.2.1.jre8.jar
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.2.1.jre8.jar
   
  Windows アプリケーションで使用される CLASSPATH ステートメントの例を以下に示します。  
   
@@ -59,16 +79,16 @@ ms.lasthandoff: 11/18/2017
   
  CLASSPATH ステートメントに、1 つだけ含まれていることを確認する必要があります[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]、mssql jdbc-6.2.1.jre7.jar mssql jdbc-6.2.1.jre8.jar などです。  
 
-### <a name="for-microsoft-jdbc-driver-40-41-42-and-60"></a>Microsoft JDBC driver 4.0、4.1、4.2、および 6.0
+### <a name="for-microsoft-jdbc-driver-41-42-and-60"></a>Microsoft JDBC driver 4.1、4.2、および 6.0
  sqljdbc.jar ファイル、sqljdbc4.jar ファイル、sqljdbc41.jar ファイル、または sqljdbc42.jar ファイルは次の場所にインストールします。  
   
- \<*インストール ディレクトリ*> \sqljdbc_\<*バージョン*>\\<*言語*> \sqljdbc.jar  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\sqljdbc.jar  
   
- \<*インストール ディレクトリ*> \sqljdbc_\<*バージョン*>\\<*言語*> \sqljdbc4.jar  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\sqljdbc4.jar  
   
- \<*インストール ディレクトリ*> \sqljdbc_\<*バージョン*>\\<*言語*> \sqljdbc41.jar  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\sqljdbc41.jar  
   
- \<*インストール ディレクトリ*> \sqljdbc_\<*バージョン*>\\<*言語*> \sqljdbc42.jar  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\sqljdbc42.jar  
   
  Windows アプリケーションで使用される CLASSPATH ステートメントの例を以下に示します。  
   

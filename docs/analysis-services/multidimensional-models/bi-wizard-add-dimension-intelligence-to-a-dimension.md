@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - dimension intelligence [Analysis Services]
 - Type property
 ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4109707f30b6569c9d67bf6259e61958ff1a6251
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 86c5f345dc963667ea5b05177e84517609f7e5a7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>BI ウィザード - ディメンションにディメンション インテリジェンスを追加します。
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]キューブまたはディメンションにディメンションの標準のビジネス タイプを指定するには、ディメンション インテリジェンス拡張機能を追加します。 この拡張機能により、ディメンション属性に対応する型も指定されます。 クライアント アプリケーションでは、指定された種類をデータの分析時に使用できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+ディメンションに標準のビジネスの種類を指定するには、ディメンション インテリジェンス拡張機能をキューブまたはディメンションに追加します。 この拡張機能により、ディメンション属性に対応する型も指定されます。 クライアント アプリケーションでは、指定された種類をデータの分析時に使用できます。  
   
  ディメンション インテリジェンスを追加するには、ビジネス インテリジェンス ウィザードを使用して、 **[拡張機能の選択]** ページの **[ディメンション インテリジェンスの定義]** オプションを選択します。 次に、ウィザードに従って、ディメンション インテリジェンスの適用先となるディメンションを選択し、選択したディメンションの属性を識別します。  
   
@@ -50,6 +48,6 @@ ms.lasthandoff: 12/08/2017
  たとえば、勘定科目ディメンションにディメンション インテリジェンスを追加するには、 **[ディメンションの種類]**で **[勘定科目]**を選択します。 次に、このディメンションに **[勘定科目の種類]** 属性と **[勘定科目の説明]** 属性がある場合は、 **[追加]** 列で、 **[勘定科目名]** と **[勘定科目の種類]** の、各勘定科目の種類に対応するチェック ボックスをオンにします。 さらに **[ディメンションの属性]** 列で、これらの勘定科目の種類をディメンションの **[勘定科目の説明]** 属性と **[勘定科目の種類]** 属性にそれぞれ関連付けます。  
   
 ## <a name="see-also"></a>参照  
- [ビジネス インテリジェンス ウィザードを使用したタイム インテリジェンス計算の定義](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
+ [ビジネス インテリジェンス ウィザードを使用してタイム インテリジェンス計算の定義します。](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
   
   

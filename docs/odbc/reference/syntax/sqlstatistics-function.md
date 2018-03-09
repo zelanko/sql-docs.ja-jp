@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f0e4b82221c78572d24c28717edb0f3209f29ea6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c1e66748edcc81f87c261d6958a766f5b651c31a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 関数
 **準拠**  
@@ -82,14 +82,14 @@ SQLRETURN SQLStatistics(
  *[一意]*  
  [入力]インデックスの種類: SQL_INDEX_UNIQUE または SQL_INDEX_ALL です。  
   
- *予約されています*  
+ *Reserved*  
  [入力]結果セットの基数およびページの列の重要度を示します。 次のオプションに影響を与える基数およびページの列のみです。 戻り値基数およびページは返されません場合でも、インデックスの情報が返されます。  
   
  SQL_ENSURE では、ドライバーが統計を無条件に取得することを要求します。 (ドライバーのみ、Open Group 標準に準拠しているし、ODBC 拡張機能をサポートしていませんができなく SQL_ENSURE をサポートするためにします。)  
   
  SQL_QUICK では、サーバーからすぐに使用できる場合に、ドライバーで基数とページを取得するを要求します。 この場合、ドライバーで取得される値が最新であるかどうかは保証されません。 (ODBC 3 から SQL_QUICK 動作を常に取得は、Open Group 標準に記述されたアプリケーションを*.x*-準拠のドライバーです)。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -140,7 +140,7 @@ SQLRETURN SQLStatistics(
   
 |列名|列番号|データ型|コメント|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|1|Varchar|統計またはインデックスを適用する; テーブルのカタログ名データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のカタログをサポートする場合 ("")、それらのテーブルのカタログがないです。|  
+|TABLE_CAT (ODBC 1.0)|@shouldalert|Varchar|統計またはインデックスを適用する; テーブルのカタログ名データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のカタログをサポートする場合 ("")、それらのテーブルのカタログがないです。|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|統計またはインデックスを適用する; テーブルのスキーマ名データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のスキーマをサポートする場合 ("")、それらのテーブルのスキーマがないです。|  
 |TABLE_NAME (ODBC 1.0)|3|NULL でない Varchar|統計またはインデックスを適用するテーブルのテーブル名です。|  
 |NON_UNIQUE (ODBC 1.0)|4|Smallint|インデックスでは重複する値が許可されないかどうかを示します。<br /><br /> SQL_TRUE 場合は、インデックス値が一意でなくなることができます。<br /><br /> SQL_FALSE 場合は、インデックス値を一意にする必要があります。<br /><br /> 型が SQL_TABLE_STAT の場合は、NULL が返されます。|  

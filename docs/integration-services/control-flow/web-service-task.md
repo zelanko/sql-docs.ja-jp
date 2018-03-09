@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,18 +17,19 @@ f1_keywords:
 - sql13.dts.designer.webservicestask.general.f1
 - sql13.dts.designer.webservicestask.input.f1
 - sql13.dts.designer.webservicestask.output.f1
-helpviewer_keywords: Web Service task [Integration Services]
+helpviewer_keywords:
+- Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9bdfbf05eafc612d7a6c5531e5c5c1b00fd576a3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4cadb534bd6ddfca7df61e316c6d6cabc669a9c1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="web-service-task"></a>Web サービス タスク
   Web サービス タスクは、Web サービス メソッドを実行します。 Web サービス タスクは、次の目的で使用できます。  
@@ -59,7 +61,7 @@ ms.lasthandoff: 11/20/2017
  Web サービス メソッドの結果は、変数またはファイルに書き込むことができます。 結果を書き込むファイルを指定するか、変数の名前を指定するには、ファイル接続マネージャーを使用します。 詳細については、「[ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)」および「[Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)」を参照してください。  
   
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Web サービス タスクで使用できるカスタム ログ メッセージ  
- 次の表は、Web サービス タスクに対して有効にできるカスタム ログ エントリの一覧です。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
+ 次の表は、Web サービス タスクに対して有効にできるカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
 |ログ エントリ|Description|  
 |---------------|-----------------|  
@@ -86,7 +88,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="web-service-task-editor-general-page"></a>[Web サービス タスク エディター] ([全般] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、HTTP 接続マネージャーの指定、Web サービス タスクで使用する WSDL (Web サービス記述言語) ファイルの場所の指定、Web サービス タスクの記述、WSDL ファイルのダウンロードなどの操作を実行できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **[HTTPConnection]**  
  接続マネージャーを一覧から選択するか、[\<**新しい接続…**>] をクリックして新しい接続マネージャーを作成します。  
   
@@ -122,7 +124,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **Description**  
+ **[説明]**  
  Web サービス タスクの説明を入力します。  
   
  **[WSDL のダウンロード]**  
@@ -133,7 +135,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="web-service-task-editor-input-page"></a>[Web サービス タスク エディター] ([入力] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[入力]** ページを使用すると、Web サービス、Web メソッド、および Web メソッドの入力値を指定できます。 値を指定するには、[値] 列に直接文字列を入力するか、[値] 列から変数を選択します。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **サービス**  
  Web メソッドを実行するために使用する Web サービスを一覧から選択します。  
   
@@ -155,7 +157,7 @@ ms.lasthandoff: 11/20/2017
  **変数**  
  変数を使って入力値を指定する場合は、チェック ボックスをオンにします。  
   
- **値**  
+ **[値]**  
  [Variable] のチェック ボックスをオンにした場合、一覧から変数を選択して入力値を指定します。それ以外の場合は、入力値として使用する値をキーボードから入力します。  
   
 ## <a name="web-service-task-editor-output-page"></a>[Web サービス タスク エディター] ([出力] ページ)
@@ -165,7 +167,7 @@ ms.lasthandoff: 11/20/2017
  **[OutputType]**  
  結果を格納するときに使用するストレージ型を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[ファイル接続]**|結果をファイルに格納します。 この値を選択すると、動的オプションの **[ファイル]**が表示されます。|  
 |**変数**|結果を変数に格納します。 この値を選択すると、動的オプションの **[変数]**が表示されます。|  
@@ -173,7 +175,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="outputtype-dynamic-options"></a>[OutputType] の動的オプション  
   
 #### <a name="outputtype--file-connection"></a>[OutputType] = [ファイル接続]  
- **ファイル**  
+ **[最近使ったファイル]**  
  ファイル接続マネージャーを一覧から選択するか、[\<**新しい接続…**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  

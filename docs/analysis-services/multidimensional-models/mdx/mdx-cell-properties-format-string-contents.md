@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +18,20 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5116ad72af06d2820c2af6ed0957d9030d971747
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX のセルのプロパティ - FORMAT_STRING の内容
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**FORMAT_STRING**セルの書式設定、**値**セル プロパティの値を作成する、 **FORMATTED_VALUE**セル プロパティです。 **FORMAT_STRING** セル プロパティは文字列と数値列の値を処理し、その値にフォーマット式を適用して、 **FORMATTED_VALUE** セル プロパティ用に書式設定した値を返します。 次の表は、文字列および数値の処理に使用する構文および書式文字の詳細を示しています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+**FORMAT_STRING** セル プロパティは、 **VALUE** セル プロパティを書式設定して、 **FORMATTED_VALUE** セル プロパティの値を作成します。 **FORMAT_STRING** セル プロパティは文字列と数値列の値を処理し、その値にフォーマット式を適用して、 **FORMATTED_VALUE** セル プロパティ用に書式設定した値を返します。 次の表は、文字列および数値の処理に使用する構文および書式文字の詳細を示しています。  
   
 ## <a name="string-values"></a>文字列の値  
  文字列のフォーマット式には、1 つのセクション、またはセミコロン (;) で区切った 2 つのセクションを含めることができます。  
@@ -89,7 +87,7 @@ ms.lasthandoff: 12/08/2017
 |**/**|日付区切り文字。日付の値を書式設定する際に、年、月、日を区切ります。<br /><br /> 書式設定された出力で実際にどの文字が日付区切り文字として使用されるかは、コンピューターのシステム設定によって決まります。<br /><br /> 注: いくつかのロケールでは、日付区切り文字として他の文字が使用されることがあります。|  
 |**E- E+ e- e+**|指数書式。<br /><br /> フォーマット式の中で、**E-** 、 **#**E+ **、**e- **、または**e+ **の右側に少なくとも 1 つの数字のプレースホルダー (**0 **または**) が含まれる場合、書式設定された値は指数書式で表示され、数値と指数の間に E または e が挿入されます。 右側にある数字のプレースホルダーの数によって指数内の数字の数が決まります。 負の指数の横にマイナス記号を付けるには、 **E-** または **e-** を使用します。 負の指数の横にマイナス記号を、正の指数の横にプラス記号を付けるには、 **E+** または **e+** を使用します。|  
 |**- + $ ( )**|リテラル文字を表示します。<br /><br /> この一覧に含まれていない文字を表示するには、文字の前に円記号 (**\\**) を付けるか、文字を二重引用符 (**" "**) で囲みます。|  
-|**\\**|書式文字列の次の文字を表示します。<br /><br /> リテラル文字として特別な意味を持つ文字を表示するには、その文字の前に円記号 (**\\**) を付けます。 円記号自体は表示されません。 円記号の使用は、次の文字を二重引用符で囲むことと同じです。 円記号を表示するには、円記号を 2 つ続けて (**\\\\**) 使用します。 以下のような文字は、リテラル文字として表示できません。<br /><br /> <br /><br /> 日付の書式設定と時刻の書式設定文字 —**、**、 **c**、 **d**、 **h**、 **m**、  **n** 、 **p**、 **q**、 **s**、 **t**、 **w**、**y**、  **/** 、および**:**<br /><br /> 数値の書式設定文字 —**#**、 **0**、 **%**、 **E**、 **e**、 **コンマ**、および **ピリオド**<br /><br /> 文字列の書式設定文字 — **@****&****\<****>****!**|  
+|**\\**|書式文字列の次の文字を表示します。<br /><br /> リテラル文字として特別な意味を持つ文字を表示するには、その文字の前に円記号 (**\\**) を付けます。 円記号自体は表示されません。 円記号の使用は、次の文字を二重引用符で囲むことと同じです。 円記号を表示するには、円記号を 2 つ続けて (**\\\\**) 使用します。 以下のような文字は、リテラル文字として表示できません。<br /><br /> <br /><br /> 日付の書式設定と時刻の書式設定文字 —**、**、 **c**、 **d**、 **h**、 **m**、  **n** 、 **p**、 **q**、 **s**、 **t**、 **w**、**y**、  **/** 、および**:**<br /><br /> 数値の書式設定文字 — **#**、**0**、**%**、**E**、**e**、**コンマ**、および**ピリオド**<br /><br /> 文字列の書式設定文字 — **@****&****\<****>****!**|  
 |**"ABC"**|二重引用符 (**" "**) 内の文字列を表示します。<br /><br /> コード内で書式に文字列を含めるには、Chr(**34**) を使ってテキストを囲みます。 (二重引用符の文字コードは **34**です)。|  
   
 ### <a name="named-numeric-formats"></a>名前付き数値書式  
@@ -161,6 +159,6 @@ ms.lasthandoff: 12/08/2017
  [LANGUAGE と FORMAT_STRING FORMATTED_VALUE 上](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
  [セルのプロパティ &#40; を使用します。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [作成とプロパティの値 &#40; を使用MDX と #41 です。](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [MDX クエリの基礎 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX クエリの基礎と #40 です。Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

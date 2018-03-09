@@ -1,24 +1,26 @@
 ---
 title: "ADO の動的プロパティ インデックス |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: dynamic properties [ADO], index
+helpviewer_keywords:
+- dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: f126cc040174725ded02bd320e54a76536c0d516
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: craigg
+ms.openlocfilehash: 5c56ef6d6a146d1613bdd11618fadb3b11296fe7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 動的プロパティのインデックス
 データ プロバイダー、サービス プロバイダー、およびサービスのコンポーネントが動的なプロパティを追加できます、**プロパティ**、開かれていないのコレクション[接続](../../../ado/reference/ado-api/connection-object-ado.md)と[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 特定のプロバイダーは、これらのオブジェクトが開かれたときに、追加のプロパティを挿入も可能性があります。 これらのプロパティの一部は、「、 [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)セクションです。 内の特定のプロバイダーの詳細に表示される、[付録 a: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)セクションです。  
@@ -35,64 +37,64 @@ ms.lasthandoff: 11/09/2017
 |非同期中止|DBPROP_ASYNCTXNABORT|  
 |非同期のコミット|DBPROP_ASYNCTNXCOMMIT|  
 |自動コミットの分離レベル|DBPROP_SESS_AUTOCOMMITISOLEVELS|  
-|カタログの場所|DBPROP_CATALOGLOCATION と|  
-|カタログの用語|DBPROP_CATALOGTERM と|  
-|列の定義|DBPROP_COLUMNDEFINITION と|  
+|カタログの場所|DBPROP_CATALOGLOCATION|  
+|カタログの用語|DBPROP_CATALOGTERM|  
+|列の定義|DBPROP_COLUMNDEFINITION|  
 |Connect Timeout|DBPROP_INIT_TIMEOUT|  
 |現在のカタログ|DBPROP_CURRENTCATALOG|  
 |[データ ソース]|DBPROP_INIT_DATASOURCE|  
-|Data Source Name|開か|  
+|Data Source Name|DBPROP_DATASOURCENAME|  
 |データ ソース オブジェクト スレッド モデル|DBPROP_DSOTHREADMODEL|  
-|DBMS の名前|DBPROP_DBMSNAME と|  
-|DBMS のバージョン|DBPROP_DBMSVER と|  
+|DBMS の名前|DBPROP_DBMSNAME|  
+|DBMS のバージョン|DBPROP_DBMSVER|  
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|  
-|グループ化のサポート|DBPROP_GROUPBY と|  
-|異なるテーブルのサポート|DBPROP_HETEROGENEOUSTABLES と|  
+|グループ化のサポート|DBPROP_GROUPBY|  
+|異なるテーブルのサポート|DBPROP_HETEROGENEOUSTABLES|  
 |識別子の大文字と小文字の区別|DBPROP_IDENTIFIERCASE|  
 |Initial Catalog|DBPROP_INIT_CATALOG|  
 |分離レベル|DBPROP_SUPPORTEDTXNISOLEVELS|  
-|分離保有期間|DBPROP_SUPPORTEDTXNISORETAIN と|  
+|分離保有期間|DBPROP_SUPPORTEDTXNISORETAIN|  
 |[Locale Identifier]|DBPROP_INIT_LCID|  
 |場所|DBPROP_INIT_LOCATION|  
-|インデックスの最大サイズ|DBPROP_MAXINDEXSIZE と|  
-|行の最大サイズ|DBPROP_MAXROWSIZE と|  
-|最大行サイズには、BLOB が含まれています。|DBPROP_MAXROWSIZEINCLUDESBLOB と|  
-|SELECT の最大のテーブル|DBPROP_MAXTABLESINSELECT と|  
-|モード|DBPROP_INIT_MODE|  
+|インデックスの最大サイズ|DBPROP_MAXINDEXSIZE|  
+|行の最大サイズ|DBPROP_MAXROWSIZE|  
+|最大行サイズには、BLOB が含まれています。|DBPROP_MAXROWSIZEINCLUDESBLOB|  
+|SELECT の最大のテーブル|DBPROP_MAXTABLESINSELECT|  
+|[モード]|DBPROP_INIT_MODE|  
 |複数のパラメーター セット|DBPROP_MULTIPLEPARAMSETS|  
 |複数の結果|DBPROP_MULTIPLERESULTS|  
 |複数のストレージ オブジェクト|DBPROP_MULTIPLESTORAGEOBJECTS|  
-|複数のテーブルの更新|DBPROP_MULTITABLEUPDATE と|  
-|NULL の照合順序|DBPROP_NULLCOLLATION と|  
-|NULL を連結した動作|DBPROP_CONCATNULLBEHAVIOR と|  
+|複数のテーブルの更新|DBPROP_MULTITABLEUPDATE|  
+|NULL の照合順序|DBPROP_NULLCOLLATION|  
+|NULL を連結した動作|DBPROP_CONCATNULLBEHAVIOR|  
 |OLE DB サービス|DBPROP_INIT_OLEDBSERVICES|  
 |OLE DB バージョン|DBPROP_PROVIDEROLEDBVER|  
 |OLE オブジェクトのサポート|DBPROP_OLEOBJECTS|  
 |行セットのサポートを開く|DBPROP_OPENROWSETSUPPORT|  
-|選択リストの ORDER BY 列|DBPROP_ORDERBYCOLUMNSINSELECT と|  
+|選択リストの ORDER BY 列|DBPROP_ORDERBYCOLUMNSINSELECT|  
 |出力パラメーターの使用状況|DBPROP_OUTPUTPARAMETERAVAILABILITY|  
 |Ref アクセサーを使って渡す|DBPROP_BYREFACCESSORS|  
 |Password|DBPROP_AUTH_PASSWORD|  
 |Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|  
-|永続的な ID 型|DBPROP_PERSISTENTIDTYPE と|  
-|中止の動作を準備します。|DBPROP_PREPAREABORTBEHAVIOR と|  
-|コミット動作を準備します。|DBPROP_PREPARECOMMITBEHAVIOR と|  
-|プロシージャの用語|DBPROP_PROCEDURETERM と|  
+|永続的な ID 型|DBPROP_PERSISTENTIDTYPE|  
+|中止の動作を準備します。|DBPROP_PREPAREABORTBEHAVIOR|  
+|コミット動作を準備します。|DBPROP_PREPARECOMMITBEHAVIOR|  
+|プロシージャの用語|DBPROP_PROCEDURETERM|  
 |[プロンプト]|DBPROP_INIT_PROMPT|  
 |プロバイダーの表示名|DBPROP_PROVIDERFRIENDLYNAME|  
 |Provider Name|DBPROP_PROVIDERFILENAME|  
 |プロバイダーのバージョン|DBPROP_PROVIDERVER|  
-|読み取り専用のデータ ソース|DBPROP_DATASOURCEREADONLY と|  
+|読み取り専用のデータ ソース|DBPROP_DATASOURCEREADONLY|  
 |行セットの変換|DBPROP_ROWSETCONVERSIONSONCOMMAND|  
 |スキーマの用語|DBPROP_SCHEMATERM|  
-|スキーマの使用|DBPROP_SCHEMAUSAGE と|  
+|スキーマの使用|DBPROP_SCHEMAUSAGE|  
 |SQL のサポート|DBPROP_SQLSUPPORT|  
 |構造化ストレージ|DBPROP_STRUCTUREDSTORAGE|  
-|サブクエリのサポート|DBPROP_SUBQUERIES と|  
-|テーブルの用語|DBPROP_TABLETERM と|  
+|サブクエリのサポート|DBPROP_SUBQUERIES|  
+|テーブルの用語|DBPROP_TABLETERM|  
 |トランザクション DDL|DBPROP_SUPPORTEDTXNDDL|  
 |[ユーザー ID]|DBPROP_AUTH_USERID|  
-|[ユーザー名]|DBPROP_USERNAME と|  
+|[ユーザー名]|DBPROP_USERNAME|  
 |ウィンドウ ハンドル|DBPROP_INIT_HWND|  
   
 ## <a name="recordset-dynamic-properties"></a>レコード セットの動的プロパティ  

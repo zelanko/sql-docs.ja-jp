@@ -1,33 +1,31 @@
 ---
-title: "SSMS (SSAS テーブル) を使用してロールの管理 |Microsoft ドキュメント"
+title: "SSMS を使用してロールの管理 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: af36d37d9cbbaa0554719fd97e22e193d08b696a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9472bef0e1971c3f8868902b5cd91189256e860d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="manage-roles-by-using-ssms-ssas-tabular"></a>SSMS を使用したロールの管理 (SSAS テーブル)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]作成、編集、およびを使用して配置済みテーブル モデルのロールを管理できる[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。  
+# <a name="manage-roles-by-using-ssms"></a>SSMS を使用したロールの管理 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、配置したテーブル モデルのロールの作成、編集、および管理を行うことができます。  
   
  このトピックのタスク:  
   
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/08/2017
 8.  行フィルター ウィンドウで、テーブルを選択し、をクリックして、 **DAX フィルター**フィールド、し、 **DAX フィルター - \<tablename >**フィールドに、DAX の数式を入力します。  
   
     > [!NOTE]  
-    >  DAX フィルター - \<tablename > フィールドが、AutoComplete クエリ エディターを含むまたは関数挿入機能していません。 DAX 数式を作成するときにオートコンプリート機能を使用するには、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の DAX 数式エディターを使用する必要があります。  
+    >  DAX フィルター - \<tablename > フィールドが、AutoComplete クエリ エディターを含むまたは関数挿入機能していません。 DAX 数式を作成するときにオートコンプリート機能を使用するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] の DAX 数式エディターを使用する必要があります。  
   
 9. **[OK]** をクリックして、ロールを保存します。  
   
@@ -82,7 +80,7 @@ ms.lasthandoff: 12/08/2017
   
 ###  <a name="bkmk_edit_role"></a> ロールを編集するには  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、編集するロールを含むテーブル モデル データベースを展開し、 **[ロール]**を展開してから、ロールを右クリックして **[プロパティ]**をクリックします。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、編集するロールを含むテーブル モデル データベースを展開し、**[ロール]** を展開してから、ロールを右クリックして **[プロパティ]** をクリックします。  
   
      **ロール プロパティ** \<rolename > ダイアログ ボックスで、アクセス許可を変更、追加するか、メンバーを削除および追加/編集行フィルターします。  
   
@@ -91,6 +89,6 @@ ms.lasthandoff: 12/08/2017
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、削除するロールを含むテーブル モデル データベースを展開し、 **[ロール]**を展開してから、ロールを右クリックして **[削除]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [ロール (SSAS テーブル)](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
+ [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - data formats [SQL Server], field length
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a59b93a9877eb6e58c34fc1aeb54795aaee52d3c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ad5143f4bc309f4156ebc4ea174ac11f4b9246fb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>bcp を使用したフィールド長の指定 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] フィールド長は、文字形式でデータを表現するために必要な文字の最大数を示します。 データがネイティブ形式で格納されている場合、フィールド長は既にわかっています。たとえば、 **int** データ型では 4 バイトになります。 プレフィックス長に 0 を指定した場合、 **bcp** コマンドを実行すると、フィールド長、既定のフィールド長、 **char** データを含むデータ ファイル内のデータ ストレージに対するフィールド長の影響を確認するプロンプトが表示されます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+フィールド長は、文字形式でデータを表現するために必要な文字の最大数を示します。 データがネイティブ形式で格納されている場合、フィールド長は既にわかっています。たとえば、 **int** データ型では 4 バイトになります。 プレフィックス長に 0 を指定した場合、 **bcp** コマンドを実行すると、フィールド長、既定のフィールド長、 **char** データを含むデータ ファイル内のデータ ストレージに対するフィールド長の影響を確認するプロンプトが表示されます。  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>フィールド長を要求する bcp プロンプト  
  対話型の **bcp** コマンドで、フォーマット ファイル スイッチ ( **-f** ) またはデータ形式スイッチ ( **-n** 、**-c**、**-n**または **-N**または **in**または **-N**オプションを指定すると、次のように各データ フィールドの長さを要求するプロンプトが表示されます。  
@@ -69,7 +71,7 @@ ms.lasthandoff: 11/17/2017
 |**nvarchar**|列に対して定義された長さの 2 倍|  
 |**テキスト**|0|  
 |**ntext**|0|  
-|**bit**|1|  
+|**bit**|@shouldalert|  
 |**[バイナリ]**|列に対して定義された長さの 2 倍 + 1|  
 |**varbinary**|列に対して定義された長さの 2 倍 + 1|  
 |**image**|0|  
@@ -103,7 +105,7 @@ ms.lasthandoff: 11/17/2017
   
 |データ型|既定の長さ (文字数)|  
 |---------------|-----------------------------------|  
-|**bit**|1|  
+|**bit**|@shouldalert|  
 |**[バイナリ]**|列に対して定義された長さ|  
 |**varbinary**|列に対して定義された長さ|  
 |**image**|0|  
@@ -114,7 +116,7 @@ ms.lasthandoff: 11/17/2017
 |**int**|4|  
 |**bigint**|8|  
 |**smallint**|2|  
-|**tinyint**|1|  
+|**tinyint**|@shouldalert|  
 |**money**|8|  
 |**smallmoney**|4|  
 |**decimal**|*|  

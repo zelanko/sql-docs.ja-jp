@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - TRIM
 - TRIM_TSQL
-dev_langs: TSQL
-helpviewer_keywords: TRIM function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- TRIM function
 ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54a39a38050589ba4e842253e192b820c2f1c0ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 88ba00513a8f76ae560ed717801150aa9b80046e
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="trim-transact-sql"></a>TRIM (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -57,7 +60,7 @@ string
 ## <a name="examples"></a>使用例
 ### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  文字列の両方の側から、空白文字を削除します。   
 次の例は前に、から、単語の後にスペースを削除`test`です。   
-```tsql
+```sql
 SELECT TRIM( '     test    ') AS Result;
 ```
 
@@ -68,7 +71,7 @@ SELECT TRIM( '     test    ') AS Result;
 
 ### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  指定した文字列の両方の側からの文字を削除   
 次の例では、末尾にピリオドと末尾のスペースを削除します。
-```tsql
+```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 ```
 
@@ -77,7 +80,10 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 
 
 ## <a name="see-also"></a>参照
-[文字列関数 (TRANSACT-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
-[LTRIM (TRANSACT-SQL)](../../t-sql/functions/ltrim-transact-sql.md)   
-[RTRIM (TRANSACT-SQL)](../../t-sql/functions/rtrim-transact-sql.md)   
-[置換 (TRANSACT-SQL)](../../t-sql/functions/replace-transact-sql.md)   
+ [左と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ltrim-transact-sql.md)  
+ [右 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [部分文字列と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/substring-transact-sql.md)  
+ [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)   

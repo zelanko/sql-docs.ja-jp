@@ -1,5 +1,5 @@
 ---
-title: "sys.sp_rda_get_rpo_duration (TRANSACT-SQL) |Microsoft ドキュメント"
+title: sys.sp_rda_get_rpo_duration (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_get_rpo_duration
 - sys.sp_rda_get_rpo_duration_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_rda_get_rpo_duration stored procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_rda_get_rpo_duration stored procedure
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a36d1b1e04e53098710a1cacc8c463653f82710
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a2a8877f7e101241399db2132b02d6e5a41b31b5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syssprdagetrpoduration-transact-sql"></a>sys.sp_rda_get_rpo_duration (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,11 +52,11 @@ sp_rda_get_rpo_duration @durationinhours output
  *@durationinhours*    
   時間の数です (null 以外の整数値) の SQL Server が現在の拡張が有効なデータベースが保持される移行データ。    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>権限    
  Db_owner アクセス許可が必要です。    
     
 ## <a name="remarks"></a>解説    
- 実行して、値を変更する[sys.sp_rda_set_rpo_duration &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md).    
+ 実行して、値を変更する[sys.sp_rda_set_rpo_duration &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)。    
     
 ## <a name="see-also"></a>参照    
  [sys.sp_rda_set_rpo_duration &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     

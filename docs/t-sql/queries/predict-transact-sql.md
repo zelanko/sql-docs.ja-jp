@@ -8,7 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,12 +18,12 @@ dev_langs: TSQL
 helpviewer_keywords: PREDICT clause
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 8cc0e51a83b4c024a25caf2fe6501438a3ef8a18
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: b9aacbffa28783adf6e92d9260d2bf73d89a0cc4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="predict-transact-sql"></a>予測 (TRANSACT-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -61,11 +61,11 @@ MODEL = @model | model_literal
 
 モデル オブジェクトは、R、Python または他のツールを使用して作成できます。
 
-**データ**
+**data**
 
 データ パラメーターを使用してをスコア付けまたは予測に使用するデータを指定します。 データは、クエリでテーブル ソースの形式で指定されます。 テーブル ソースには、テーブル、テーブルの別名、CTE のエイリアス、ビュー、またはテーブル値関数を指定できます。
 
-**パラメーター**
+**parameters**
 
 パラメーターのパラメーターは、スコア付けまたは予測に使用される省略可能なユーザー定義のパラメーターを指定する使用されます。
 
@@ -73,7 +73,7 @@ MODEL = @model | model_literal
 
 > [注]このオプションは、SQL Server 2017 のプレリリース版ではサポートされていませんしの将来の互換性の目的でのみが含まれます。
 
-**使用 ( \<result_set_definition >)**
+**WITH ( \<result_set_definition> )**
 
 によって返される出力のスキーマを指定すると、WITH 句が使用される、`PREDICT`関数。
 
@@ -101,7 +101,7 @@ R、Python、または言語を習得する別のコンピューターを使用�
 
 モデルを使用する必要があります作成されている RevoScaleR パッケージからサポートされているアルゴリズムのいずれかを使用します。 現在サポートされているモデルの一覧は、次を参照してください。[リアルタイム スコアリング](../../advanced-analytics/real-time-scoring.md)です。
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>権限
 
 アクセス許可は必要ありません`PREDICT`。 ただし、ユーザーのニーズ`EXECUTE`、データベースに対する権限と、入力として使用されるデータをクエリする権限です。 ユーザーも必要があります、テーブルからモデルを読み込むこと、モデルをテーブルに格納されている場合。
 

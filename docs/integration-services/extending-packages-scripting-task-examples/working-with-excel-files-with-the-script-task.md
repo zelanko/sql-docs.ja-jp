@@ -8,26 +8,28 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - Script task [Integration Services], Excel files
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cb50dc174d4a1763416b4ccc313db56f26a5b1b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bfbe8efdeab1af1ba6c802d69abdce4b1b4696fa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>スクリプト タスクを使用した Excel ファイルの操作
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には Excel 接続マネージャー、Excel ソース、Excel 変換先が用意されており、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ファイル形式のスプレッドシートに保存されているデータを操作できます。 このトピックで説明する方法では、スクリプト タスクを使用して、使用可能な Excel のデータベース (ワークブック ファイル) およびテーブル (ワークシートおよび名前付き範囲) に関する情報を取得します。 これらのサンプルに簡単な変更を加えて、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB プロバイダーによってサポートされる他のすべてのファイルベース データ ソースを操作することができます。  
@@ -91,7 +93,7 @@ ms.lasthandoff: 11/20/2017
   
     -   「**ExcelFile**」と入力します。  
   
-         -または-  
+         - または -  
   
     -   プロパティ フィールドの横にある省略記号 (**[...]**) ボタンをクリックし、**[変数の選択]** ダイアログ ボックスで **[ExcelFile]** 変数を選択します。  
   
@@ -99,7 +101,7 @@ ms.lasthandoff: 11/20/2017
   
     -   「**ExcelFileExists**」と入力します。  
   
-         -または-  
+         - または -  
   
     -   プロパティ フィールドの横にある省略記号 (**[...]**) ボタンをクリックし、**[変数の選択]** ダイアログ ボックスで **[ExcelFileExists]** 変数を選択します。  
   
@@ -161,7 +163,7 @@ public class ScriptMain
   
     -   「**ExcelTable**」および「**ExcelFile**」をコンマで区切って入力します**。**  
   
-         -または-  
+         - または -  
   
     -   プロパティ フィールドの横にある省略記号 (**[...]**) ボタンをクリックし、**[変数の選択]** ダイアログ ボックスで **[ExcelTable]** と **[ExcelFile]** の変数を選択します。  
   
@@ -169,7 +171,7 @@ public class ScriptMain
   
     -   「**ExcelTableExists**」と入力します。  
   
-         -または-  
+         - または -  
   
     -   プロパティ フィールドの横にある省略記号 (**[...]**) ボタンをクリックし、**[変数の選択]** ダイアログ ボックスで **[ExcelTableExists]** 変数を選択します。  
   
@@ -268,7 +270,7 @@ public class ScriptMain
   
     -   「**ExcelFolder**」と入力します。  
   
-         -または-  
+         - または -  
   
     -   プロパティ フィールドの横にある省略記号 (**[...]**) ボタンをクリックし、**[変数の選択]** ダイアログ ボックスで [ExcelFolder] 変数を選択します。  
   
@@ -276,7 +278,7 @@ public class ScriptMain
   
     -   「**ExcelFiles**」と入力します。  
   
-         -または-  
+         - または -  
   
     -   プロパティ フィールドの横にある省略記号 (**[...]**) ボタンをクリックし、**[変数の選択]** ダイアログ ボックスで [ExcelFiles] 変数を選択します。  
   
@@ -343,7 +345,7 @@ public class ScriptMain
   
     -   「**ExcelFile**」と入力します。  
   
-         -または-  
+         - または -  
   
     -   プロパティ フィールドの横にある省略記号 (**[...]**) ボタンをクリックし、**[変数の選択]** ダイアログ ボックスで [ExcelFile] 変数を選択します。  
   
@@ -351,7 +353,7 @@ public class ScriptMain
   
     -   「**ExcelTables**」と入力します。  
   
-         -または-  
+         - または -  
   
     -   プロパティ フィールドの横にある省略記号 (**[...]**) ボタンをクリックし、**[変数の選択]** ダイアログ ボックスで [ExcelTables] 変数を選択します。  
   
@@ -456,7 +458,7 @@ public class ScriptMain
   
     -   各変数の名前をコンマで区切って入力します。  
   
-         -または-  
+         - または -  
   
     -   プロパティ フィールドの横にある省略記号 (**[...]**) ボタンをクリックし、**[変数の選択]** ダイアログ ボックスで変数を選択します。  
   

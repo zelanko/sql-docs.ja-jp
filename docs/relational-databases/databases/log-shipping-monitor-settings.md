@@ -14,26 +14,26 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.logshipping.settings.monitor.f1
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9f1b2e15ff1c7ba3ff48fb37763e8742e4056eb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 39a41cec811cacb613ef61a8cf0b5c753f84fd86
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-shipping-monitor-settings"></a>[ログ配布モニターの設定]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、ログ配布監視サーバーのプロパティを構成および変更できます。  
   
  ログ配布の概念については、「 [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[監視サーバー インスタンス]**  
  ログ配布構成の監視サーバーとして現在構成されているサーバー インスタンスの名前を表示します。  
   
- **Connect**  
+ **のインスタンスに接続するときには、**  
  監視サーバーとして使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを選択して接続します。 接続に使用するアカウントは、セカンダリ サーバーのインスタンスの sysadmin 固定サーバー ロールのメンバーである必要があります。  
   
  **[ジョブのプロキシ アカウントを借用する]**  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
  **ジョブ名**  
  バックアップまたは復元しきい値が超過したときに、警告を発行するためにログ配布によって使用される SQL Server エージェントの警告ジョブの名前を示します。 このジョブを作成しているときは、ボックスに入力することで名前を変更できます。  
   
- **スケジュール**  
+ **[スケジュール]**  
  SQL Server エージェントの警告ジョブの現在のスケジュールを示します。  
   
  **[編集]**  

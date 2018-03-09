@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,18 +17,19 @@ f1_keywords:
 - sys.dm_exec_query_statistics_xml_TSQL
 - dm_exec_query_statistics_xml_TSQL
 - dm_exec_query_statistics_xml
-helpviewer_keywords: sys.dm_exec_query_statistics_xml management view
+helpviewer_keywords:
+- sys.dm_exec_query_statistics_xml management view
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 051b93348547603d2e68a007ede531bfa73a6d58
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c2e4547a6c0d79f56fa0f732236e16dbde409a45
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,8 +57,8 @@ sys.dm_exec_query_statistics_xml(session_id)
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|セッションの ID を指定します。 Null を許容しません。|
 |request_id|**int**|要求の ID。 Null を許容しません。|
-|sql_handle|**varbinary (64)**|要求の SQL テキストのハッシュ マップ。 Null 値を許容します。|
-|plan_handle|**varbinary (64)**|クエリ プランのハッシュ マップ。 Null 値を許容します。|
+|sql_handle|**varbinary(64)**|要求の SQL テキストのハッシュ マップ。 Null 値を許容します。|
+|plan_handle|**varbinary(64)**|クエリ プランのハッシュ マップ。 Null 値を許容します。|
 |query_plan|**xml**|統計の部分的なプラン表示 XML です。 Null 値を許容します。|
 
 ## <a name="remarks"></a>解説
@@ -80,7 +82,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 > [!IMPORTANT]
 > TPC c ワークロードのテストと同様に、軽量の統計プロファイル インフラストラクチャを有効にする 1.5 ~ 2% のオーバーヘッドを追加します。 これに対し、標準的な統計プロファイル インフラストラクチャでは、同一のワークロードのシナリオのオーバーヘッドを最大 90% を追加できます。
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  サーバーに対する `VIEW SERVER STATE` 権限が必要です。  
 
 ## <a name="examples"></a>使用例  
@@ -88,14 +90,14 @@ sys.dm_exec_query_statistics_xml(session_id)
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. 実行中のバッチのライブ クエリ プランと実行の統計情報を見る  
  次の例のクエリ**sys.dm_exec_requests**興味深いクエリとコピーを検索するその`session_id`出力からします。  
   
-```t-sql  
+```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
  次に、ライブ クエリ プランと実行の統計情報を取得するを使用して、先ほどコピーした`session_id`をシステム関数**sys.dm_exec_query_statistics_xml**です。  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_query_statistics_xml(< copied session_id >);  
 GO  
@@ -103,7 +105,7 @@ GO
 
  または、実行中のすべての要求を結合します。  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_requests
 CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);  

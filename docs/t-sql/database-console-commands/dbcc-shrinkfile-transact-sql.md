@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC_SHRINKFILE_TSQL
 - DBCC SHRINKFILE
 - SHRINKFILE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data shrinking [SQL Server]
 - TRUNCATEONLY option
@@ -30,16 +32,16 @@ helpviewer_keywords:
 - reducing database size
 - DBCC SHRINKFILE statement
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
-caps.latest.revision: "87"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f1b96b92738d3f44c21f4e6056798da74e26872a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 94ad5652920129790045e33c93e2a8fbb83816bd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -104,7 +106,7 @@ WITH NO_INFOMSGS
 |---|---|
 |**DbId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]で圧縮が試行されたファイルのデータベース識別番号。|  
 |**FileId**|ファイルのファイル識別番号、[!INCLUDE[ssDE](../../includes/ssde-md.md)]圧縮が試行されます。|  
-|**現在**|ファイルが現在占有する 8 KB ページの数。|  
+|**CurrentSize**|ファイルが現在占有する 8 KB ページの数。|  
 |**MinimumSize**|ファイルが占有できる 8 KB ページの最小数。 この値は、ファイルの最小サイズまたは最初に作成されたサイズと一致します。|  
 |**UsedPages**|ファイルが現在使用している 8 KB ページの数。|  
 |**EstimatedPages**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]で推定されるファイル圧縮後の 8 KB ページの数。|  
@@ -163,7 +165,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 -   圧縮操作を終了します。 圧縮操作を終了した場合、完了済みの作業は保持されます。  
 -   何もせず、ブロックしているトランザクションが完了するまで圧縮操作を待機状態にしておきます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。
   
 ## <a name="examples"></a>使用例  

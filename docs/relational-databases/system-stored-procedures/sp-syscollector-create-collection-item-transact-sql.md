@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_item
 - sp_syscollector_create_collection_item_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e112c3e144679a71e12ea1890826a7b598d51aa
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3fac04c31bdebdc98aa082fb9809fe505ce66eef
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +53,10 @@ sp_syscollector_create_collection_item
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @collection_set_id =] *collection_set_id*  
+ [ @collection_set_id = ] *collection_set_id*  
  コレクション セットの一意なローカル識別子を指定します。 *collection_set_id*は**int**です。  
   
- [ @collector_type_uid =] '*collector_type_uid*'  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
  この項目に使用するコレクター型を識別する GUID を*collector_type_uid*は**uniqueidentifier**既定値はありません. コレクター型の一覧については、syscollector_collector_types システム ビューにクエリを実行します。  
   
  [ @name =] '*名前*'  
@@ -70,7 +72,7 @@ sp_syscollector_create_collection_item
  [ @parameters =] '*パラメーター*'  
  コレクター型の入力パラメーターを指定します。 *パラメーター*は**xml**既定値は NULL です。 *パラメーター*スキーマはコレクター型のパラメーター スキーマと一致する必要があります。  
   
- [ @collection_item_id =] *collection_item_id*  
+ [ @collection_item_id = ] *collection_item_id*  
  コレクション セット アイテムを識別する一意な識別子を指定します。 *collection_item_id*は**int** OUTPUT を持ちます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -81,11 +83,11 @@ sp_syscollector_create_collection_item
   
  コレクション アイテムを追加するコレクション セットは、コレクション アイテムを作成する前に停止する必要があります。 コレクション アイテムは、システム コレクション セットには追加できません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  このプロシージャを実行するには、(EXECUTE 権限を持つ) dc_admin 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、コレクション アイテムがコレクション型に基づく`Generic T-SQL Query Collector Type`し、名前付きセット、コレクションに追加`Simple collection set test 2`です。 指定されたコレクション セットを作成する、例 B を実行[sp_syscollector_create_collection_set (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ 次の例では、コレクション アイテムがコレクション型に基づく`Generic T-SQL Query Collector Type`し、名前付きセット、コレクションに追加`Simple collection set test 2`です。 指定されたコレクション セットを作成する、例 B を実行[sp_syscollector_create_collection_set (& a) #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
   
 ```  
 USE msdb;  
@@ -122,7 +124,7 @@ EXEC sp_syscollector_create_collection_item
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)   
+ [データ コレクション](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_update_collection_item &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
  [sp_syscollector_delete_collection_item は &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
  [syscollector_collector_types &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   

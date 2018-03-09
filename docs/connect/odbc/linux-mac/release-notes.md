@@ -8,21 +8,48 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 895280e7c7c8924ec2ec5eea55049f87d9206c4f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 8fe5c32ed34d9056c69069d6b390a49fc71b396c
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Microsoft ODBC Driver for Linux と macOS 上の SQL Server のリリース ノート
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>新機能、[!INCLUDE[msCoName](../../../includes/msconame_md.md)]の ODBC ドライバーの 17 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux と macOS
+
+**サポートされている新しいディストリビューション**: macOS 高 Sierra および Ubuntu 17.10 
+
+**パフォーマンスの向上**: 10 倍のパフォーマンスが向上する/8/utf-16 からドライバーに変換するときよりも大きいです。
+
+**追加された機能**:
+
+BCP API が常に暗号化されたサポート
+
+新しい接続文字列属性 UseFMTOnly には、一時テーブルを必要とする特殊なケースで以前のメタデータを使用するドライバーが原因です。
+
+Azure SQL のマネージ インスタンス (拡張プライベート プレビュー) をサポートします。 
+> [!NOTE]
+> さまざまな違いがあるマネージ インスタンスを使用する場合。
+> -   FILESTREAM がサポートされていません 
+> -   ローカル ファイル システム アクセスはサポートされている、せずに tracefiles などのために必要な 
+> -   ローカル コンピューターから UDT を作成するパスはサポートされていません 
+> -   Windows 統合認証はサポートされていません 
+> -   DTC がサポートされていません 
+> -   'sa' アカウントが存在しない (既定のアカウントと呼びます 'cloudSA')
+> -   TDS トークン エラー (0xAA) が正しくないサーバー名を返します
+> -   データベース名に特殊文字はサポートされていません 
+> -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] is not supported
+> -   エラー メッセージが英語では、言語に関係なく常に表示される設定 (Azure と同じ) 
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>新機能、[!INCLUDE[msCoName](../../../includes/msconame_md.md)]用 ODBC Driver 13.1 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux と macOS  
 

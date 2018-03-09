@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4c4d0ac2fa7d02ed8b0e75a1f0ab6347b1e5506a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c3d9efd513db58e6c0e28060be339ee71ed1e2bd
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="remote-servers"></a>リモート サーバー
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、旧バージョンとの互換性を保つ目的でのみ、リモート サーバーがサポートされています。 新しいアプリケーションでは、リモート サーバーではなく、リンク サーバーを使用してください。 詳しくは、「 [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、旧バージョンとの互換性を保つ目的でのみ、リモート サーバーがサポートされています。 新しいアプリケーションでは、リモート サーバーではなく、リンク サーバーを使用してください。 詳しくは、「 [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。  
   
  リモート サーバーを構成することによって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続しているクライアントは、新たに接続を確立することなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の別のインスタンスでストアド プロシージャを実行できます。 クライアントが接続するサーバーは、クライアントからの要求を受け、この要求をクライアントの代わりにリモート サーバーに送信します。 リモート サーバーが、要求を処理し、要求を行ったサーバーに結果を返します。 結果を受け取ったサーバーは、結果をクライアントに渡します。 リモート サーバーを構成する場合は、セキュリティをどのように確立するかを検討する必要もあります。  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 11/20/2017
 >  可能な場合は、Windows 認証を使用します。  
   
 ### <a name="remote-server-security-example"></a>リモート サーバーのセキュリティの例  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverSend **と** serverReceive **という**インストールがあるとします。 **serverReceive** は、 **Sales_Mary**という **serverSend**からの受信ログインを、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverReceive **の**Alice **という**認証のログインにマップするように構成されています。 **serverSend**からの **Joe**という別の受信ログインは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverReceive **、***の* Joe **という**認証のログインにマップされます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverSend **と** serverReceive **という**インストールがあるとします。 **serverReceive** は、 **Sales_Mary**という **serverSend**からの受信ログインを、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverReceive **の**Alice **という**認証のログインにマップするように構成されています。 **serverSend** から **Joe** という別のログインを受信すると、それは **serverReceive**** の **Joe** という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインにマップされます。  
   
  次の Transact-SQL コードの例では、 `serverSend` に対して RPC を実行するように `serverReceive`を構成しています。  
   
@@ -101,7 +103,7 @@ GO
 ## <a name="viewing-local-or-remote-server-properties"></a>ローカル サーバーまたはリモート サーバーのプロパティの表示  
  **xp_msver** 拡張ストアド プロシージャを使用すると、ローカル サーバーまたはリモート サーバーのサーバー属性を確認できます。 これらの属性には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバージョン番号、コンピューターのプロセッサの種類と数、およびオペレーティング システムのバージョンが格納されています。 リモート サーバーのデータベース、ファイル、ログイン、およびツールを、ローカル サーバーで表示できます。 詳細については、「[xp_msver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md)」を参照してください。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  

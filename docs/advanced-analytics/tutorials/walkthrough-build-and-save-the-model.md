@@ -7,24 +7,27 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 69b374c1-2042-4861-8f8b-204a6297c0db
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d10d27aa32125bd85e4694741c8dc765ff5c123e
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: d8bd3c158c40accf191c775f0fe8466c05c32203
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>R モデルを構築して、SQL Server に保存
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ここでは、機械学習モデルをビルドし、内のモデルを保存する方法を学習[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。
 
@@ -48,21 +51,19 @@ ms.lasthandoff: 12/20/2017
 
      *結果*
 
-     *ロジスティック回帰結果: その先端 ~ passenger_count trip_distance + trip_time_in_secs +*
-     <br/>*direct_distance*
-     <br/>*データ: featureDataSource (RxSqlServerData データ ソース)*
+     *ロジスティック回帰結果: その先端 ~ passenger_count trip_distance + trip_time_in_secs +* direct_distance *   <br/>*Data: featureDataSource (RxSqlServerData Data Source)*
      <br/>*Dependent variable(s): 先が*
      <br/>*独立変数の合計: 5*
      <br/>*有効な値: 17068*
      <br/>*不足している観測数: 0*
-     <br/>*-2\*LogLikelihood: 23540.0602 (残存偏差 17063 自由度の)*
+     <br/>*-2\*LogLikelihood: 23540.0602 (Residual deviance on 17063 degrees of freedom)*
      <br/>*係数。*
-     <br/>*Estimate Std.エラー z 値 Pr (> | z |)*
-     <br/>*(受信) - 2.509e-03 3.223e-02-0.078 0.93793*
-     <br/>*passenger_count-5.753e-02 1.088e-02-5.289 1.23 e-07\*\*\**
-     <br/>*trip_distance-3.896e-02 1.466e-02-2.658 0.00786\*\**
-     <br/>*trip_time_in_secs 2.115e-04 4.336e-05 4.878 1.07e-06\*\*\**
-     <br/>*direct_distance 6.156e-02 2.076e-02 2.966 0.00302\*\**
+     <br/>*Estimate Std.Error z value Pr(>|z|)*
+     <br/>*(Intercept)       -2.509e-03  3.223e-02  -0.078  0.93793*
+     <br/>*passenger_count   -5.753e-02  1.088e-02  -5.289 1.23e-07 \*\*\**
+     <br/>*trip_distance     -3.896e-02  1.466e-02  -2.658  0.00786 \*\**
+     <br/>*trip_time_in_secs  2.115e-04  4.336e-05   4.878 1.07e-06 \*\*\**
+     <br/>*direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
      <br/>*---*
      <br/>*Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’0.1 ‘ ’ 1*
      <br/>*条件の最終的な差異共分散マトリックスの数: 48.3933*
@@ -207,7 +208,7 @@ ms.lasthandoff: 12/20/2017
     モデルをテーブルへの保存に必要なステートメントは、INSERT のみです。 ただしなどのストアド プロシージャでラップされたときに簡単は_PersistModel_です。
 
     > [!NOTE]
-    > など、エラーが発生した場合は、「EXECUTE 権限が拒否されました PersistModel オブジェクトの」を現在のログインが権限を持っているかどうかを確認します。 ストアド プロシージャだけで明示的なアクセス許可を付与するには、次のように T-SQL ステートメントを実行します。`GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
+    > など、エラーが発生した場合は、「EXECUTE 権限が拒否されました PersistModel オブジェクトの」を現在のログインが権限を持っているかどうかを確認します。 ストアド プロシージャだけで明示的なアクセス許可を付与するには、次のように T-SQL ステートメントを実行します。 `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
 
 4. モデルを作成すると、データベースに保存、呼び出せますから直接[!INCLUDE[tsql](../../includes/tsql-md.md)]コードでは、システム ストアド プロシージャを使用して[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)です。
 

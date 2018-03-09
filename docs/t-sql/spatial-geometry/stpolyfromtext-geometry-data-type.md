@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STPolyFromText_TSQL
 - STPolyFromText (geometry Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STPolyFromText (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STPolyFromText (geometry Data Type)
 ms.assetid: a7c1c9f0-1dd5-493b-b206-83bbfa33452b
-caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0edae0af8499c783ef20b412dab9ee6422d8cfd1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d5960c16e7a1452b920b3538e85bb792b107655d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stpolyfromtext-geometry-data-type"></a>STPolyFromText (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
 ## <a name="arguments"></a>引数  
  *polygon_tagged_text*  
- WKT 表現です、 **geometryPolygon**インスタンスを取得します。 *polygon_tagged_text*は、 **nvarchar (max)**式。  
+ WKT 表現です、 **geometryPolygon**インスタンスを取得します。 *polygon_tagged_text* is an **nvarchar(max)** expression.  
   
  *SRID*  
  **Int** 、空間を表す式の ID (SRID) を参照、 **geometryPolygon**インスタンスを取得します。  

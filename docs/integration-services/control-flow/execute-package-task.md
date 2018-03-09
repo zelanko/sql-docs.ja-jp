@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a51a1ac9bbe88d5b2d5718b4c02181cc33dd7f89
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 703f8c2dbcc954c4603ec0ff73b0928c6afaf70c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-package-task"></a>パッケージ実行タスク
-  パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
+  パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
   
  パッケージ実行タスクは、次の目的で使用されます。  
   
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **Description**  
+ **[説明]**  
  パッケージ実行タスクの説明を入力します。  
   
 ###  <a name="package"></a> [パッケージ] ページのオプションを設定する  
@@ -174,12 +175,12 @@ ms.lasthandoff: 11/20/2017
  **場所**  
  子パッケージの場所を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**SQL Server**|場所を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに設定します。|  
 |**ファイル システム**|場所をファイル システムに設定します。|  
   
- **接続**  
+ **[接続]**  
  子パッケージの格納場所の種類を選択します。  
   
  **PackageNameReadOnly**  
@@ -192,7 +193,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="location-dynamic-options"></a>[Location] の動的オプション  
   
 ##### <a name="location--sql-server"></a>Location = SQL Server  
- **接続**  
+ **[接続]**  
  OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...>**] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)  
@@ -201,7 +202,7 @@ ms.lasthandoff: 11/20/2017
  子パッケージの名前を入力するか、[...] をクリックし、パッケージを指定します。  
   
 ##### <a name="location--file-system"></a>Location = ファイル システム  
- **接続**  
+ **[接続]**  
  ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [[ファイル接続マネージャー エディター]](../../integration-services/connection-manager/file-connection-manager.md)  

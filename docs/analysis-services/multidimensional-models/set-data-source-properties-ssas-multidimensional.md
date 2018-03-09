@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.sqlserverstudio.datasourceproperties.f1
@@ -22,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 654337a578f1852e2e2fcdb452d62bfbe46747f9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6b9db08a099e78744f89e184882d21c3d066e6c0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>データ ソースのプロパティの設定 (SSAS 多次元)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、データ ソース オブジェクトは、外部データ ウェアハウスまたは多次元モデルにデータを提供するリレーショナル データベースへの接続を指定します。 データ ソースのプロパティにより、接続文字列、タイムアウト間隔、最大接続数、およびトランザクション分離レベルが決定されます。  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 |**[スキーマの最終更新]**|この読み取り専用プロパティは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]に表示されます。 データ ソースのメタデータが最後に更新された日時を表示します。 この値はソリューションを配置したときに更新されます。|  
 |**[クエリ タイムアウト]**|接続要求を破棄するまでの試行時間を指定します。<br /><br /> 次の形式でクエリ タイムアウトを入力します。<br /><br /> *\<時間 >*:*\<分 >*:*\<(秒) >*<br /><br /> このプロパティは **DatabaseConnectionPoolTimeoutConnection** サーバー プロパティによって却下できます。 値が **[クエリ タイムアウト]**の値未満の場合、このサーバー プロパティが使用されます。<br /><br /> 詳細については、**クエリのタイムアウト**プロパティを参照してください<xref:Microsoft.AnalysisServices.DataSource.Timeout%2A>です。 サーバー プロパティの詳細については、「 [OLAP のプロパティ](../../analysis-services/server-properties/olap-properties.md)」を参照してください。|  
 |**接続文字列**|多次元モデルにデータを提供するデータベースの物理的な場所と、接続に使用するデータ プロバイダーを指定します。 この情報は、接続要求を行うクライアント ライブラリに提供されます。 プロバイダーによって、接続文字列に設定できるプロパティが決まります。<br /><br /> 接続文字列は、 **[接続マネージャー]** ダイアログ ボックスで指定した情報を使用して作成されます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のデータ ソースのプロパティ ページで、接続文字列を表示および編集することもできます。<br /><br /> SQL Server データベースでは、 **ユーザー ID** を含む接続文字列はデータベース認証を示し、 **Integrated Security=SSPI** を含む接続は Windows 認証を示します。<br /><br /> データベースを新しい場所に移動した場合は、サーバー名またはデータベース名を変更できます。 現在接続に指定されている資格情報がデータベース ログインにマップされていることを必ず確認してください。|  
-|**[接続の最大数]**|データ ソースに接続するときに、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で許可される最大接続数を指定します。 指定した接続数よりも多くの接続が必要な場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は接続が使用できるようになるまで待機します。 既定値は、10 です。 接続数を制限することにより、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の要求によって外部データ ソースが過負荷になるのを防ぐことができます。|  
+|**[接続の最大数]**|データ ソースに接続するときに、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で許可される最大接続数を指定します。 指定した接続数よりも多くの接続が必要な場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は接続が使用できるようになるまで待機します。 既定値は 10 です。 接続数を制限することにより、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の要求によって外部データ ソースが過負荷になるのを防ぐことができます。|  
 |**分離性**|リレーショナル データベースへの接続で発行される SQL コマンドのロックおよび行のバージョン管理の動作を指定します。 有効な値は、ReadCommitted または Snapshot です。 既定値は ReadCommitted です。これは、ダーティ リードを防ぐために、データが読み取られる前にデータをコミットする必要があることを示します。 Snapshot は、以前にコミットされたデータのスナップショットから読み取ることを示します。 SQL Server での分離レベルについての詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。|  
 |**マネージ プロバイダー**|データ ソースがマネージ プロバイダーを使用している場合、System.Data.SqlClient や System.Data.OracleClient などのマネージ プロバイダーの名前を表示します。<br /><br /> データ ソースがマネージ プロバイダーを使用していない場合、このプロパティには空の文字列が表示されます。<br /><br /> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]では、このプロパティは読み取り専用となります。 接続で使用するプロバイダーを変更するには、接続文字列を編集します。|  
 |**[権限借用情報]**|Windows 認証を使用するデータ ソースへの接続時に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の実行に使用する Windows ID を指定します。 オプションとして、一連の定義済み Windows 資格情報の使用、サービス アカウントの使用、現在のユーザーの ID の使用、モデルに複数のデータ ソース オブジェクトが含まれている場合に役立つ継承オプションがあります。 詳細については、「[権限借用オプションの設定 &#40;SSAS - 多次元&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)」を参照してください。<br /><br /> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、有効な値の一覧に次の値が含まれています。<br /><br /> **ImpersonateAccount** (特定の Windows ユーザー名とパスワードを使用して、データ ソースに接続します)。<br /><br /> **ImpersonateServiceAccount** (サービス アカウントのセキュリティ ID を使用して、データ ソースに接続します)。 これが既定値です。<br /><br /> **ImpersonateCurrentUser** (現在のユーザーのセキュリティ ID を使用して、データ ソースに接続します)。 このオプションは、外部のデータ ウェアハウスまたはデータベースからデータを取得するデータ マイニング クエリでのみ有効です。データ接続を多次元データベースでの処理、読み込み、または書き戻しに使用する場合は、このオプションを選択しないでください。<br /><br /> **Inherit** または **default** (このデータ ソース オブジェクトを含む [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの権限借用設定を使用します)。 データベースのプロパティには、権限借用のオプションが含まれます。|  

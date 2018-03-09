@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3679e15b62a746cba1322bdf85691e313839ba46
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 91fa99b0a5338f705cecff4d1622a2db0a262154
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]に関する情報を返します、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]データ モデル (テーブルまたは多次元)、CSDLBI 形式 (Conceptual Schema Definition Language BI 注釈付き) でモデルの定義を提供します。 CSDLBI は、Entity Data Framework によって使用される XML スキーマである CSDL に基づくもので、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーと [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] クライアントの間の通信に使用されます。 ビジネス インテリジェンス (BI) 注釈は、テーブル モデルとテーブル モデル内のオブジェクトに関する追加のメタデータを提供します。 テーブル データ モデルの詳細については、「[ビジネス インテリジェンス向け CSDL 注釈 &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+CSDLBI 形式 (BI 注釈付き概念スキーマ定義言語) でモデル定義を提供しながら、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データ モデル (テーブル モデルまたは多次元) に関する情報を返します。 CSDLBI は、Entity Data Framework によって使用される XML スキーマである CSDL に基づくもので、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーと [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] クライアントの間の通信に使用されます。 ビジネス インテリジェンス (BI) 注釈は、テーブル モデルとテーブル モデル内のオブジェクトに関する追加のメタデータを提供します。 テーブル データ モデルの詳細については、「[ビジネス インテリジェンス向け CSDL 注釈 &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)」を参照してください。  
   
  返される行セットは、コマンドのセキュリティ コンテキストの影響を受けます。 サーバーから CSDL 定義を取得するには、Analysis Services インスタンスの読み取り権限が必要です。  
   
@@ -38,11 +38,11 @@ ms.lasthandoff: 12/08/2017
   
 |**列名**|**型インジケーター**|**制限**|**Description**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|可|CSDLBI 記述の要求対象となるデータベースの名前を指定します。 省略した場合は、現在のデータベースが使用されます。<br /><br /> この制限は、すべての種類のモデルに対して必要です。|  
-|**PERSPECTIVE_ID**|**DBTYPE_WSTR**|可|CATALOG_NAME によって指定されたモデルに定義されているパースペクティブの ID を指定します。<br /><br /> 省略可能な制限。 すべての種類のモデルに適用されます。|  
-|**PERSPECTIVE_NAME**|**DBTYPE_WSTR**|可|CATALOG_NAME によって指定されたモデルに定義されているパースペクティブの名前を指定します。<br /><br /> この制限は、テーブル モデルにパースペクティブが含まれるか、多次元ソリューションに複数のキューブまたはパースペクティブが含まれる場合に必要です。|  
-|**メタデータ**|**DBTYPE_WSTR**|不可|データ ソースとそのプロパティの XML 定義を CSDLBI スキーマに従って保持する文字列です。|  
-|**CUBE_ID**|**DBTYPE_WSTR**|可|文字列識別子。<br /><br /> この制限は、多次元データベースに対しては省略可能です。 複数のキューブが利用可能であるときに、制限が省略されると、既定のキューブが返されます。|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|はい|CSDLBI 記述の要求対象となるデータベースの名前を指定します。 省略した場合は、現在のデータベースが使用されます。<br /><br /> この制限は、すべての種類のモデルに対して必要です。|  
+|**PERSPECTIVE_ID**|**DBTYPE_WSTR**|はい|CATALOG_NAME によって指定されたモデルに定義されているパースペクティブの ID を指定します。<br /><br /> 省略可能な制限。 すべての種類のモデルに適用されます。|  
+|**PERSPECTIVE_NAME**|**DBTYPE_WSTR**|はい|CATALOG_NAME によって指定されたモデルに定義されているパースペクティブの名前を指定します。<br /><br /> この制限は、テーブル モデルにパースペクティブが含まれるか、多次元ソリューションに複数のキューブまたはパースペクティブが含まれる場合に必要です。|  
+|**METADATA**|**DBTYPE_WSTR**|いいえ|データ ソースとそのプロパティの XML 定義を CSDLBI スキーマに従って保持する文字列です。|  
+|**CUBE_ID**|**DBTYPE_WSTR**|はい|文字列識別子。<br /><br /> この制限は、多次元データベースに対しては省略可能です。 複数のキューブが利用可能であるときに、制限が省略されると、既定のキューブが返されます。|  
   
 ## <a name="remarks"></a>解説  
  DISCOVER_CSDL_METADATA には、次の要件があります。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/08/2017
 -   IsRightToLeft  
   
 ## <a name="example"></a>例  
- **テーブル**  
+ **表形式**  
   
  次の XMLA クエリは、AdventureWorks 2012 のテーブル モデル サンプルの CSDL 表現を返します。 各テーブル ソリューションには 1 つのモデルだけを含めることができるので、PERSPECTIVE_NAME 制限を空白にできます。 ただしこのモデルには複数のパースペクティブが含まれています。  
   

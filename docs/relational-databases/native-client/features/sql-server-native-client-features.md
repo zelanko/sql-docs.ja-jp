@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], features
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 caps.latest.revision: "59"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a4bdab61611f392315c06eefa15b0830b12968b6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 42eb24a2536f388e13e04892246e917f277ef408
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client の機能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,13 +53,13 @@ ms.lasthandoff: 11/17/2017
  [ユーザー定義型の使用](../../../relational-databases/native-client/features/using-user-defined-types.md)  
  説明方法[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client は、ユーザー定義型 (UDT)、オブジェクトやカスタム データ構造を格納することにより、SQL 型システムを拡張するものをサポートしている、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベース。  
   
- [大きな値の型の使用](../../../relational-databases/native-client/features/using-large-value-types.md)  
+ [大きな値の型を使用します。](../../../relational-databases/native-client/features/using-large-value-types.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client で大きな値のデータ型をサポートする方法について説明します。大きな値のデータ型とは、ラージ オブジェクト (LOB) データ型のことです。  
   
  [プログラムによるパスワードの変更](../../../relational-databases/native-client/features/changing-passwords-programmatically.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client で、有効期限が切れたパスワードの処理をサポートする方法について説明します。この処理により、管理者の手を煩わせることなく、クライアント側でパスワードを変更できるようになりました。  
   
- [スナップショット分離を使用した作業](../../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
+ [スナップショット分離の使用](../../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client で、行のバージョン管理の機能強化をサポートする方法について説明します。この機能強化では、リーダーとライターとの間で発生するブロックを回避することにより、データベースのパフォーマンスが向上します。  
   
  [クエリ通知の操作](../../../relational-databases/native-client/features/working-with-query-notifications.md)  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/17/2017
  [SQL Server Native Client 11.0 での UTF-16 のサポート](../../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] で導入された動作の変更について説明します。 列の結果または出力パラメーターをバインドするときに、固定長バッファーを指定した場合、 **wchar**終端文字がサロゲート ペアの上位サロゲート コード ポイントする前に、バッファーに書き込まれた文字、次へ**wchar**文字が下位サロゲート コード ポイントでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はバッファーに上位サロゲート コード ポイントを追加できません。  
   
- [SQL Server Native Client の HADR サポート](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
+ [SQL Server Native Client の高可用性、災害復旧のサポート](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
  機能が追加された高可用性、災害復旧を活用するために、アプリケーションを構成する方法について説明[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]です。  
   
  [拡張イベント ログの診断情報へのアクセス](../../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
@@ -108,6 +108,6 @@ ms.lasthandoff: 11/17/2017
  [SQL Server Native Client プログラミング](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [ODBC の操作方法に関するトピック](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB の操作方法に関するトピック](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)   
- [SQL Server Native Client のインストール](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
+ [SQL Server Native Client をインストールします。](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   
   

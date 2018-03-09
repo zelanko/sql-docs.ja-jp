@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f77f31c7dcb3a52e25b359d146669284d43b1dce
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 22d01847cb4d2a4bc6e1019fda0d29458af751c8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-properties"></a>ADO のプロパティ
 |||  
@@ -36,41 +37,41 @@ ms.lasthandoff: 12/21/2017
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|フィールドの値の実際の長さを示します。|  
 |[属性](../../../ado/reference/ado-api/attributes-property-ado.md)|オブジェクトの 1 つまたは複数の特性を示します。|  
 |[BOF と EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF**レコード セット オブジェクトの最初のレコードの前に、現在のレコードの位置があることを示します。<br /><br /> **EOF**レコード セット オブジェクトの最後のレコードの後に、現在のレコードの位置があることを示します。|  
-|[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)|ブックマークの現在のレコードを一意に識別することを示します、**レコード セット**オブジェクトまたは現在のレコードを設定、**レコード セット**レコードの有効なブックマークによって識別されるオブジェクト。|  
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|ブックマークの現在のレコードを一意に識別することを示します、**レコード セット**オブジェクトまたは現在のレコードを設定、**レコード セット**レコードの有効なブックマークによって識別されるオブジェクト。|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|レコードの数を示す、 **Recordset**メモリにローカルにキャッシュされたオブジェクト。|  
 |[章](../../../ado/reference/ado-api/chapter-property-ado.md)|OLE DB の設定を取得または**章**オブジェクトから/上、 **ADORecordsetConstruction**オブジェクト。|  
-|[文字セット](../../../ado/reference/ado-api/charset-property-ado.md)|文字セットを示します、テキストの内容**ストリーム**変換する必要があります。|  
+|[CharSet](../../../ado/reference/ado-api/charset-property-ado.md)|文字セットを示します、テキストの内容**ストリーム**変換する必要があります。|  
 |[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)|入力として使用されるストリームを示す、**コマンド**オブジェクト。|  
 |[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)|プロバイダーに対して発行できるコマンドのテキストを示します。|  
 |[CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)|試行を終了し、エラーが発生する前に、コマンドを実行中に待機する時間を示します。|  
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|型を示す、**コマンド**オブジェクト。|  
 |[ConnectionString プロパティ](../../../ado/reference/ado-api/connectionstring-property-ado.md)|データ ソースへの接続を確立するために使用される情報を示します。|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|試行を終了し、エラーが発生する前に、接続を確立中に待機する時間を示します。|  
-|[カウント](../../../ado/reference/ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|カーソル サービスの場所を示します。|  
-|[カーソル。](../../../ado/reference/ado-api/cursortype-property-ado.md)|使用されているカーソルの種類を示す、 **Recordset**オブジェクト。|  
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|使用されているカーソルの種類を示す、 **Recordset**オブジェクト。|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|によって参照されるオブジェクトから取得されるデータ メンバーの名前を示す、**データソース**プロパティです。|  
-|[データ ソース](../../../ado/reference/ado-api/datasource-property-ado.md)|として表現されているデータを格納しているオブジェクトを示す、 **Recordset**オブジェクト。|  
+|[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)|として表現されているデータを格納しているオブジェクトを示す、 **Recordset**オブジェクト。|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|既定のデータベースを示す、**接続**オブジェクト。|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|データ容量を示す、**フィールド**オブジェクト。|  
 |[Description](../../../ado/reference/ado-api/description-property.md)|について説明します、**エラー**オブジェクト。|  
 |[言語仕様](../../../ado/reference/ado-api/dialect-property.md)|構文と、プロバイダーは解析に使用される一般的な規則を示します、 **CommandText**または**CommandStream**プロパティです。|  
-|[[方向]](../../../ado/reference/ado-api/direction-property.md)|示すかどうか、**パラメーター**入力パラメーター、出力パラメーター、またはその両方を表すパラメーターがストアド プロシージャからの戻り値の場合、または。|  
+|[方向](../../../ado/reference/ado-api/direction-property.md)|示すかどうか、**パラメーター**入力パラメーター、出力パラメーター、またはその両方を表すパラメーターがストアド プロシージャからの戻り値の場合、または。|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|現在のレコードの編集状態を示します。|  
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|現在の位置がストリームの末尾にするかどうかを示します。|  
-|[[フィルター]](../../../ado/reference/ado-api/filter-property.md)|内のデータにフィルターを示します、 **Recordset**です。|  
+|[フィルター](../../../ado/reference/ado-api/filter-property.md)|内のデータにフィルターを示します、 **Recordset**です。|  
 |[HelpContext と HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|ヘルプ ファイルとに関連付けられているトピックを示します、**エラー**オブジェクト。<br /><br /> **ヘルプ コンテキスト Id**として、コンテキスト ID を返します、**長い**ヘルプ ファイルのトピックの値。<br /><br /> **HelpFile**を返します、**文字列**ヘルプ ファイルの完全に解決されたパスに評価される値。|  
 |[Index](../../../ado/reference/ado-api/index-property.md)|有効にインデックスを現在の名前を示す、 **Recordset**オブジェクト。|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|分離のレベルを示す、**接続**オブジェクト。|  
 |[アイテム](../../../ado/reference/ado-api/item-property-ado.md)|名前または序数で、コレクションの特定のメンバーを示します。|  
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|テキストの行区切り記号として使用するバイナリの文字を示す**ストリーム**オブジェクト。|  
-|[ロック。](../../../ado/reference/ado-api/locktype-property-ado.md)|編集中のレコードに置かれたロックの種類を示します。|  
-|[スレッド](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|レコードが、サーバーにマーシャ リングするかを示します。|  
+|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|編集中のレコードに置かれたロックの種類を示します。|  
+|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|レコードが、サーバーにマーシャ リングするかを示します。|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|返されるレコードの最大数を示す、 **Recordset**クエリからです。|  
 |[モード](../../../ado/reference/ado-api/mode-property-ado.md)|データの変更の利用可能なアクセス許可を示す、**接続**、**レコード**、または**ストリーム**オブジェクト。|  
 |[名前](../../../ado/reference/ado-api/name-property-ado.md)|オブジェクトの名前を示します。|  
-|[以下](../../../ado/reference/ado-api/nativeerror-property-ado.md)|特定のプロバイダー固有のエラー コードを示します**エラー**オブジェクト。|  
-|[数](../../../ado/reference/ado-api/number-property-ado.md)|一意に識別する数値を示します、**エラー**オブジェクト。|  
+|[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|特定のプロバイダー固有のエラー コードを示します**エラー**オブジェクト。|  
+|[Number](../../../ado/reference/ado-api/number-property-ado.md)|一意に識別する数値を示します、**エラー**オブジェクト。|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|内の数値の小数点以下桁数を示す、**パラメーター**または**フィールド**オブジェクト。|  
 |[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|値を示す、**フィールド**すべての変更が行われる前に、レコード内に存在します。|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|データのページ数を示す、 **Recordset**オブジェクトが含まれます。|  
@@ -98,7 +99,7 @@ ms.lasthandoff: 12/21/2017
 |[型](../../../ado/reference/ado-api/type-property-ado.md)|操作の種類またはデータ型を示す、**パラメーター**、**フィールド**、または**プロパティ**オブジェクト。|  
 |[型 (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)|含まれているデータの種類を示す、**ストリーム**(バイナリまたはテキスト)。|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|データベースの現在の値を示す、**フィールド**オブジェクト。|  
-|[[値]](../../../ado/reference/ado-api/value-property-ado.md)|割り当てられた値を示す、**フィールド**、**パラメーター**、または**プロパティ**オブジェクト。|  
+|[値](../../../ado/reference/ado-api/value-property-ado.md)|割り当てられた値を示す、**フィールド**、**パラメーター**、または**プロパティ**オブジェクト。|  
 |[[バージョン]](../../../ado/reference/ado-api/version-property-ado.md)|ADO のバージョン番号を示します。|  
   
 ## <a name="see-also"></a>参照  

@@ -17,15 +17,15 @@ f1_keywords:
 - vdt.ppg.columns
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 66ebe137da10784f3999e9039538895afa701abe
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2d2860c28663df8c5b2fc9ef995dafdefcb892e2
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>テーブル列のプロパティ (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
  **全般**  
  展開すると、 **[オブジェクト名]**、 **[Null を許容]**、 **[データ型]**、 **[既定値またはバインド]**、 **[長さ]**、 **[有効桁数]**、 **[小数点以下桁数]**が表示されます。  
   
- **[オブジェクト名]**  
+ **名前**  
  選択した列の名前を表示します。  
   
  **[Null を許容]**  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
  **[既定値またはバインド]**  
  この列に値が指定されていないときの既定値を表示します。 このフィールドの値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定の制約の値か、列がバインドされているグローバル制約の名前になります。 ドロップダウン リストには、データベースに定義されているすべてのグローバル既定値が含まれています。 列にグローバル既定値をバインドする場合は、ドロップダウン リストから選択します。 列に既定の制約を作成する場合は、既定値をテキストとして直接入力します。  
   
- **長さ**  
+ **[長さ]**  
  文字ベースのデータ型で許容される文字数が表示されます。 このプロパティは、文字に基づくデータ型にのみ使用できます。  
   
  **[小数点以下桁数]**  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
  **テーブル デザイナー (Table Designer)**  
  **[テーブル デザイナー]** セクションを拡張します。  
   
- **[照合順序]**  
+ **照合順序**  
  クエリ結果の行を並べ替えるために列値が使用されるときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が既定で列に適用する照合順序を表示します。 照合順序を編集するには、プロパティを選択し、プロパティ値の右側にある省略記号 ([...]) をクリックして **[照合順序]** ダイアログ ボックスを表示します。  
   
  **[計算列の指定]**  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
  この列を説明するテキストを表示します。 説明を編集するには、プロパティを選択し、プロパティ値の右側にある省略記号 ([...]) をクリックします。次に、 **[説明のプロパティ]** ダイアログ ボックスで説明を編集します。  
   
  **決定的**  
- 選択した列のデータ型を明確に決定できるかどうかが表示されます  
+ 選択した列のデータ型を明確に決定できるかどうかが表示されます   
   
  **[DTS パブリッシュ済み]**  
  列が SSIS によりパブリッシュされているかどうかが表示されます ([データ変換サービスは非推奨](https://msdn.microsoft.com/library/cc707786(v=sql.130).aspx#Anchor_0))。 

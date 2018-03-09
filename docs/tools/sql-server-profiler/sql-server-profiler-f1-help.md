@@ -3,7 +3,7 @@ title: "SQL Server Profiler ダイアログ ボックス |Microsoft ドキュメ
 ms.custom: 
 ms.date: 07/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -44,15 +44,15 @@ helpviewer_keywords:
 - Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e27d4133d4115d3313dcb7b9f0e9e834b60645d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 284333202ee48153b0de4d513502e35edc73acaf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler ダイアログ ボックス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]キャプチャするツールは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバーからのイベントです。 キャプチャされたイベントはトレース ファイルに保存され、後で分析したり、問題の発生したステップを厳密に再現して診断する際に利用できます。 コマンドとのダイアログ ボックスで使用可能な設定を次に示します[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]です。  
@@ -99,7 +99,7 @@ ms.lasthandoff: 12/05/2017
 |**[選択したサーバーの種類に対する既定のテンプレートとして使用する]**|このサーバーの種類に対して作成されたトレースには、既定でこのテンプレートを使用します。  
 
 ### <a name="edit-general-tab"></a>編集 ([全般] タブ)
- **[トレース テンプレートのプロパティ]** ダイアログ ボックスの **[全般]** タブで以下のオプションを使用すると、既存のトレース テンプレートを表示または編集できます。 このダイアログ ボックスにアクセスするには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **Edit Template**.  
+ **[トレース テンプレートのプロパティ]** ダイアログ ボックスの **[全般]** タブで以下のオプションを使用すると、既存のトレース テンプレートを表示または編集できます。 このダイアログ ボックスにアクセスする、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **ファイル** メニューのをポイント**テンプレート**、クリックして**テンプレートの編集**です。  
 |アイテム|Description
 |---|---
 |**[サーバーの種類の選択]**|このテンプレートを使用するサーバーの種類を選択します。  
@@ -123,7 +123,7 @@ ms.lasthandoff: 12/05/2017
 このウィンドウを表示するには、トレース ファイルを開きます。 次に、 **[ファイル]** メニューの **[プロパティ]**をクリックします。  
 |アイテム|Description
 |---|---
-|**ファイル名**|表示するトレース ファイルのパスと名前。  
+|**[ファイル名]**|表示するトレース ファイルのパスと名前。  
 |**[トレース プロバイダー名]**|トレースされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前を表示。  
 |**[トレース プロバイダーの種類]**|トレースを提供したサーバーの種類を表示。  
 |**version**|トレースを提供したサーバーのバージョンを表示。  
@@ -192,14 +192,14 @@ ms.lasthandoff: 12/05/2017
 |**[ヘルス モニターの既定のポーリング間隔 (秒)]**|再生中のヘルス モニターのポーリング間隔を秒単位で指定します。 既定値は 60 秒です。 ユーザーはこの値を指定することで、終了するプロセスを決定するためにヘルス モニターがポーリングする頻度を設定できます。
 ## <a name="source-table-database-engine-tuning-advisor-select-workload-table"></a>ソース テーブル (データベース エンジン チューニング アドバイザーの選択のワークロード テーブル)
 Microsoft SQL Server Profiler および チューニング アドバイザーでは、このダイアログ ボックスを使用してテーブルを選択します。  
-- Profiler では、 **[基になるテーブル]** ダイアログ ボックスを使用して、トレース テーブルの基になるテーブルを指定します。 This is a table from which a trace is loaded, and the contents of which are viewed or used for replaying the trace.  
+- Profiler では、 **[基になるテーブル]** ダイアログ ボックスを使用して、トレース テーブルの基になるテーブルを指定します。 これは、トレースの読み込み元のテーブルです。このテーブルの内容が、表示されたり、トレースを再生するために使用されたりします。  
 - チューニング アドバイザーでは、 **[ワークロード テーブルの選択]** ダイアログ ボックスを使用して、チューニング ワークロードとして使用する profiler トレース情報が格納されているデータベース テーブルを選択したり、チューニング分析を開始する前にテーブルの内容をプレビューしたりします。  
 
 |アイテム|Description
 |---|---
 |**SQL Server**|現在接続されている SQL Server のインスタンスを指定します。 このフィールドには自動的に値が入力され、更新することはできません。  
 |**データベース**|トレース テーブルがあるデータベースを指定します。  
-|**所有者**|Specifies the owner of the trace table. このフィールドは、 **dbo**として自動的に入力されます。  
+|**所有者**|トレース テーブルの名前を指定します。 このフィールドは、 **dbo**として自動的に入力されます。  
 |**Table**|トレースの読み込み元のトレース テーブルの名前を指定します。  
 ## <a name="destination-table"></a>[ターゲット テーブル]
 **[挿入先テーブル]** ダイアログ ボックスを使用すると、トレースを格納するテーブルを指定できます。  
@@ -207,7 +207,7 @@ Microsoft SQL Server Profiler および チューニング アドバイザーで
 |---|---
 |**SQL Server**|現在接続されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを指定します。 このフィールドには自動的に値が入力され、更新することはできません。 サーバーを変更するには、 **[キャンセル]** をクリックして、トレース テーブルを格納する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
 |**データベース**|トレース テーブルを格納するデータベースを指定します。  
-|**所有者**|Specifies the owner of the trace table. このフィールドは、 **dbo**として自動的に入力されます。  
+|**所有者**|トレース テーブルの名前を指定します。 このフィールドは、 **dbo**として自動的に入力されます。  
 |**Table**|トレースを格納するテーブルの名前を指定します。  
 ## <a name="replay-configuration"></a>構成の再生
 ### <a name="basic-replay-options"></a>基本再生オプション
@@ -217,7 +217,7 @@ Microsoft SQL Server Profiler および チューニング アドバイザーで
 |---|---
 |**[再生サーバー]**|再生のために接続する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを表示します。  
 |**[変更]**|**[サーバーへの接続]** ダイアログ ボックスを表示して、別のサーバーへ接続します。  
-|**[ファイルに保存]** |再生結果をファイルに保存します。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] により、ファイルを保存する場所を指定するための標準ファイル ダイアログが表示されます。  
+|**[ファイルに保存]** |再生結果をファイルに保存します。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]ファイルを保存する場所を指定することができます、標準ファイル ダイアログを表示します。  
 |**[テーブルに保存]**|再生結果をテーブルに保存します。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] により、テーブルを保存する場所を指定するためのテーブル選択ダイアログが表示されます。  
 |**[再生スレッドの数]**|同時に使用する再生スレッドの数を指定します。 値を大きくするほど、再生時にはより多くのリソースが消費されますが、再生が高速になり、同時実行性が高くなります。  
 |**[トレースされた順番にイベントを再生します。このオプションはデバッグを有効にします。]**|イベントを順番に再生します。 このオプションは、デバッグのためにトレースを再生する場合に使用します。  
@@ -239,7 +239,7 @@ Microsoft SQL Server Profiler および チューニング アドバイザーで
 |**[SQL Server のブロックされるプロセスの監視を有効にする]**|ブロックされるプロセス、またはブロックするプロセスを検索するプロセスを有効にします。  
 |**[ブロックされるプロセスの監視の待機間隔 (秒)]**|ブロックされるプロセス モニターで、ブロックされるプロセスまたはブロックするプロセスを検索する頻度を設定します。  
 ## <a name="find-dialog-box"></a>[検索] ダイアログ ボックス
-**[検索]** ダイアログ ボックスを使用すると、トレース内で特定の文字や単語を検索できます。 検索の実行中に取り消すには、<localizedText>Esc</localizedText> キーを押します。  
+**[検索]** ダイアログ ボックスを使用すると、トレース内で特定の文字や単語を検索できます。 検索の実行中に取り消すには、Esc キーを押します。  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]でこのダイアログ ボックスを開くには、 **[編集]** メニューの **[検索]**をクリックします。  
 |アイテム|Description
 |---|---
@@ -263,7 +263,7 @@ Microsoft SQL Server Profiler および チューニング アドバイザーで
 |アイテム|Description
 |---|---
 |**[列]**|**[グループ]**への移動に使用できるデータ列の一覧です。 **[列]** の左にあるプラス記号 (**[+]**) をクリックすると、一覧が展開されます。  
-|**[上へ]**|データ列を選択した後で、 **[上へ]** をクリックすると、データ列を上に移動して **[グループ]**に入れることができます。 また、 **[上へ]** をクリックして、トレース ウィンドウ表示内の列の表示を再構成することもできます。  
+|**アップ**|データ列を選択した後で、 **[上へ]** をクリックすると、データ列を上に移動して **[グループ]**に入れることができます。 また、 **[上へ]** をクリックして、トレース ウィンドウ表示内の列の表示を再構成することもできます。  
 |**[下へ]**|データ列を選択した後で、 **[下へ]** をクリックすると、データ列を下に移動して **[グループ]**から除外することができます。 また、 **[下へ]** をクリックして、トレース ウィンドウ表示内の列の表示を再構成することもできます。  
 ## <a name="edit-filter"></a>フィルターを編集します。
 **[フィルターの編集]** ダイアログ ボックスを使用すると、トレース内のデータ列フィルターを作成および変更できます。 一覧のデータ列名をクリックすると、そのデータ列に使用できるフィルター条件が横のペインに表示されます。 フィルター条件を入力して **[OK]** をクリックすると、選択したデータ列にその条件が適用されます。 一覧のデータ列名の左側にフィルター アイコンが表示されている場合、その列には既にフィルターが構成されています。  
@@ -271,7 +271,7 @@ Microsoft SQL Server Profiler および チューニング アドバイザーで
  >文字列型のデータ列の場合、フィルター条件は LIKE または NOT LIKE 文字列値として表示されます。  
 
 ## <a name="select-template-name"></a>[テンプレート名の選択]
-**[テンプレート名の選択]** ダイアログ ボックスを使用すると、既存の [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] トレース テンプレートを選択してオペレーティング システム上のファイルにエクスポートできます。 また、このダイアログ ボックスを使用すると、既存のトレース テンプレートを編集する場合に、別の名前を選択または入力してトレース テンプレートを保存できます。 テンプレートをエクスポートする場合にこのダイアログ ボックスにアクセスするには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **Export Template**. テンプレート名を変更する場合にこのダイアログ ボックスにアクセスするには、 **[ファイル]** メニューの **[テンプレート]**をポイントし、 **[テンプレートの編集]**をクリックします。次に、 **[名前を付けて保存]**をクリックします。  
+**[テンプレート名の選択]** ダイアログ ボックスを使用すると、既存の [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] トレース テンプレートを選択してオペレーティング システム上のファイルにエクスポートできます。 また、このダイアログ ボックスを使用すると、既存のトレース テンプレートを編集する場合に、別の名前を選択または入力してトレース テンプレートを保存できます。 テンプレートをエクスポートするときに、このダイアログ ボックスを表示する、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **ファイル** メニューのをポイント**テンプレート**、順にクリック**テンプレートのエクスポート**です。 テンプレート名を変更する場合にこのダイアログ ボックスにアクセスするには、 **[ファイル]** メニューの **[テンプレート]**をポイントし、 **[テンプレートの編集]**をクリックします。次に、 **[名前を付けて保存]**をクリックします。  
 |アイテム|Description
 |---|---
 |**サーバーの種類**|テンプレートを選択するサーバーの種類を選択します。 このオプションは、テンプレートをエクスポートする場合のみ使用できます。  

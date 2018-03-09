@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DATEPART_TSQL
 - DATEPART
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - date and time [SQL Server], DATEPART
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: a972e0646d68620b915fe441e35ebfb617d06859
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 
 指定されたを表す整数を返します*datepart*の指定した*日付*です。
   
-すべての概要については[!INCLUDE[tsql](../../includes/tsql-md.md)]日付と時刻のデータ型および関数を参照してください[日付と時刻のデータ型および関数 &#40;TRANSACT-SQL と #41 です。](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+すべての概要については[!INCLUDE[tsql](../../includes/tsql-md.md)]日付と時刻のデータ型および関数を参照してください[日付と時刻のデータ型および関数 &#40;TRANSACT-SQL と #41 です](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -61,11 +63,11 @@ DATEPART ( datepart , date )
 |---|---|
 |**1 年**|**yy**、 **yyyy**|  
 |**四半期**|**qq**、 **q**|  
-|**月**|**mm**、 **m**|  
+|**月**|**mMMMMm**、 **m**|  
 |**dayofyear**|**dy**、 **y**|  
 |**1 日**|**dd**、 **d**|  
 |**週**|**wk**、 **ww**|  
-|**曜日**|**データ ウェアハウス**|  
+|**曜日**|**dw**|  
 |**1 時間**|**mm**|  
 |**1 分**|**mi、n**|  
 |**1 秒**|**ss**、 **s**|  

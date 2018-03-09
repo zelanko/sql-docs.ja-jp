@@ -3,24 +3,26 @@ title: "Linux 上の SQL Server のパフォーマンスのベスト プラク�
 description: "このトピックでは、Linux で SQL Server 2017 を実行する場合の、パフォーマンスのベスト プラクティスとガイドラインを提供します。"
 author: rgward
 ms.author: bobward
-manager: jhubbard
+manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: c4de3f861a994ebe2476008146be810e7a2e2500
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のパフォーマンスについてのベスト プラクティスと構成ガイドライン
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このトピックでは、Linux 上の SQL Server に接続するデータベース アプリケーションのパフォーマンスを最大化するための、ベスト プラクティスと推奨事項を提供します。 これらの推奨事項は、Linux プラットフォームで実行されている場合に特化しています。 インデックスのデザインなどの、すべての一般的な SQL Server の推奨事項は引き続き適用されます。
 
@@ -34,21 +36,21 @@ ms.lasthandoff: 12/07/2017
 
 - **ノード および/または CPU に PROCESS AFFINITY を使用します**
 
-`ALTER SERVER CONFIGURATION`を使用して、 Linux オペレーティング システム上の SQL Server で使用しているすべての **NUMANODE** および/または CPU  (一般的にはすべてのノードと CPU) に対して `PROCESS AFFINITY` を設定することをお勧めします。 プロセッサのアフィニティにより、効率的に Linux および SQL のスケジューリングの動作を維持することができます。 **NUMANODE** オプションを使用することが、最も簡単な方法です。 お使いのコンピューターに NUMA ノードが 1 つのみの場合でも、**PROCESS AFFINITY** を使用する必要があることにご注意ください。**PROCESS AFFINITY** を設定する方法の詳細については、次のドキュメントを参照してください。 [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) 
+   `ALTER SERVER CONFIGURATION`を使用して、 Linux オペレーティング システム上の SQL Server で使用しているすべての**NUMANODEs**および/または CPU  (一般的にはすべてのノードと CPU) に対して`PROCESS AFFINITY`を設定することをお勧めします。 プロセッサのアフィニティにより、効率的に Linux および SQL のスケジューリングの動作を維持することができます。 **NUMANODE**オプションを使用することが、最も簡単な方法です。 お使いのコンピューターに NUMA ノードが 1 つのみの場合でも、**PROCESS AFFINITY**を使用する必要があることにご注意ください。  **PROCESS AFFINITY**を設定する方法の詳細については、次のドキュメントを参照してください。[ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md)
 
 - **複数の tempdb データ ファイルを構成します**
 
-Linux 上の SQL Server では複数の tempdb ファイルを構成するオプションを提供していないため、インストール後に複数の tempdb データ ファイルの作成を検討することをお勧めします。 詳細については、次の記事のガイダンスを参照してください。[SQL Server の tempdb データベース内の割り当ての競合を減らすための推奨事項](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d) 
+   Linux 上の SQL Server では複数の tempdb ファイルを構成するオプションを提供していないため、インストール後に複数の tempdb データ ファイルの作成を検討することをお勧めします。 詳細については、次の記事のガイダンスを参照してください。[SQL Server の tempdb データベース内の割り当ての競合を減らすための推奨事項](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d)
 
 ### <a name="advanced-configuration"></a>高度な構成
 
-次の推奨事項は、Linux に SQL Server をインストールした後に実行することができる省略可能な構成設定です。 ワークロードの要件とLinux オペレーティング システムの構成に基づいて選択します。  
+次の推奨事項は、Linux に SQL Server をインストールした後に実行することができる省略可能な構成設定です。 ワークロードの要件とLinux オペレーティング システムの構成に基づいて選択します。
 
 - **mssql-conf でメモリの制限を設定します**
 
-   Linux オペレーティング システムで、十分な空き物理メモリを確保するために、既定では、SQL Server プロセスは、物理メモリの 80% のみを使用します。いくつかの大量の物理 RAM のシステムでは、20% はかなり大きい可能性があります。 たとえば、1 TB の RAM システムの既定の設定では、約 200 GB の RAM が未使用となります。 このような状況では、メモリ制限の値をより高く構成することができます。 **mssql-conf** ツールおよび、SQL Server のメモリの設定 (MB 単位) を制御する [memory.memorylimitmb](sql-server-linux-configure-mssql-conf.md#memorylimit) のドキュメントを参照してください。 
+   Linux オペレーティング システムで、十分な空き物理メモリを確保するために、既定では、SQL Server プロセスは、物理メモリの 80% のみを使用します。 いくつかの大量の物理 RAM のシステムでは、20% はかなり大きい可能性があります。 たとえば、1 TB の RAM システムの既定の設定では、約 200 GB の RAM が未使用となります。 このような状況では、メモリ制限の値をより高く構成することができます。 **mssql conf**ツールおよび、SQL Server のメモリの設定 (MB 単位) を制御する [memory.memorylimitmb](sql-server-linux-configure-mssql-conf.md#memorylimit)のドキュメントを参照してください。
 
-   この設定を変更する場合は、高すぎる値を設定しないように注意します。 十分なメモリが残っていない場合、Linux オペレーティング システムおよびその他の Linux アプリケーションで問題が発生する可能性があります。
+   この設定を変更する場合は、高すぎる値を設定しないように注意します。 十分なメモリが残っていない場合、Linux オペレーティング システムおよびその他の Linux アプリケーションで問題が発生する可能性があります。
 
 ## <a name="linux-os-configuration"></a>Linux OS の構成
 
@@ -64,7 +66,7 @@ Linux 上の SQL Server では複数の tempdb ファイルを構成するオプ
 
 次の表は、CPU の設定に関する推奨事項を示します。
 
-| 設定 | 値 | 詳細情報 |
+| 設定 | [値] | 詳細情報 |
 |---|---|---|
 | CPU 周波数ガバナー | パフォーマンス | **cpupower**コマンドを参照してください |
 | ENERGY_PERF_BIAS | パフォーマンス | **x86_energy_perf_policy**コマンドを参照してください |
@@ -73,14 +75,14 @@ Linux 上の SQL Server では複数の tempdb ファイルを構成するオプ
 
 次の表は、ディスクの設定に関する推奨事項を示します。
 
-| 設定 | 値 | 詳細情報 |
+| 設定 | [値] | 詳細情報 |
 |---|---|---|
 | ディスクの先行読み込み | 4096 | **blockdev**コマンドを参照してください |
-| sysctl 設定 | kernel.sched_min_granularity_ns = 10000000 <br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | **sysctl** コマンドを参照してください |
+| sysctl 設定 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | **sysctl**コマンドを参照してください |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>マルチノード NUMA システムの自動 NUMA バランシングのカーネル設定
 
-複数ノードの **NUMA**システムに SQL Server をインストールする場合、次の **kernel.numa_balancing** カーネル設定が既定で有効になります。 **NUMA** システム上でSQL Server が最高の効率で動作するように、複数ノードの NUMA システムで、自動 NUMA バランシングを無効にします。
+複数ノードの **NUMA**システムに SQL Server をインストールする場合、次の**kernel.numa_balancing** カーネル設定が既定で有効になります。 **NUMA**システム上でSQL Server が最高の効率で動作するように、複数ノードの NUMA システムで、自動 NUMA バランシングを無効にします。
 
 ```bash
 sysctl -w kernel.numa_balancing=0
@@ -88,7 +90,7 @@ sysctl -w kernel.numa_balancing=0
 
 ### <a name="kernel-settings-for-virtual-address-space"></a>カーネルの仮想アドレス空間の設定
 
-既定の設定の **vm.max_map_count** (65536) はSQL Server インストール環境では十分な大きさではない可能性があります。この値を (上限となる) 256K に変更します。 
+既定の設定の**vm.max_map_count** (65536) はSQL Server インストール環境では十分な大きさではない可能性があります。 この値を (上限となる) 256K に変更します。
 
 ```bash
 sysctl -w vm.max_map_count=262144
@@ -114,4 +116,4 @@ SQL Server のデータおよびログ ファイルを格納するファイル �
 
 パフォーマンスを向上させる SQL Server 機能の詳細については、次を参照してください。[パフォーマンス機能の概要](sql-server-linux-performance-get-started.md)です。 
 
-Linux 上の SQL Server に関する詳細については、次を参照してください。 [Linux の SQL Server の概要](sql-server-linux-overview.md)です。 
+Linux 上の SQL Server に関する詳細については、次を参照してください。 [Linux の SQL Server の概要](sql-server-linux-overview.md)です。

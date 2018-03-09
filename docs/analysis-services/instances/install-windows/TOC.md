@@ -13,4 +13,4 @@
 ## [チェック リスト: PowerShell を使用して Power Pivot for SharePoint を確認する](checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)  
 ## [SharePoint 2016 での SQL Server 2016 PowerPivot と Power View の配置](deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md)  
 ## [多層 SharePoint 2016 ファームでの SQL Server 2016 PowerPivot と Power View の配置](deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md)  
-# [Analysis Services データ プロバイダー (AMO、ADOMD.NET、MSOLAP) をインストールする](install-analysis-services-data-providers-amo-adomd-net-msolap.md)  
+# [クライアント ライブラリ (AMO、ADOMD.NET、MSOLAP) のインストール](../data-providers-used-for-analysis-services-connections.md)  

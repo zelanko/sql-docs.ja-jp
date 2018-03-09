@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 537267b15a65dca3035ba79e6bbecb9f7bc4a51c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5a4b8748f024649ec2980e46d8e828afcffc553c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,14 +61,14 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>結果セット  
 **sp_server_diagnostics**次の情報を返します  
   
-|列|データ型|Description|  
+|[列]|データ型|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|行の作成のタイムスタンプを示します。 単一の行セットの各行は、同じタイムスタンプを持っています。|  
 |**component_type**|**sysname**|行の情報を含んでいるかどうかを示す、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レベルのコンポーネントまたは Always On 可用性グループのインスタンスします。<br /><br /> インスタンス (instance)<br /><br /> Always On: AvailabilityGroup|  
 |**component_name**|**sysname**|コンポーネントの名前または可用性グループの名前を示します。<br /><br /> システム<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> イベント<br /><br /> *\<可用性グループの名前 >*|  
-|**状態**|**int**|コンポーネントの正常性状態を示します。<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**state**|**int**|コンポーネントの正常性状態を示します。<br /><br /> 0<br /><br /> @shouldalert<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|状態列について説明します。 状態列の値に対応する説明は、次のとおりです。<br /><br /> 0: 不明<br /><br /> 1: クリーン<br /><br /> 2: 警告<br /><br /> 3: エラー|  
-|**データ**|**varchar (max)**|コンポーネントに固有のデータを指定します。|  
+|**data**|**varchar (max)**|コンポーネントに固有のデータを指定します。|  
   
  5 つのコンポーネントの説明は以下のとおりです。  
   
@@ -89,7 +89,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 次の表は、各コンポーネントと関連する正常性状態をマップしたものです。  
   
-|コンポーネント|クリーン (1)|警告 (2)|エラー (3)|不明 (0)|  
+|Components|クリーン (1)|警告 (2)|エラー (3)|不明 (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |システム|x|x|x||  
 |resource|x|x|x||  
@@ -102,12 +102,12 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 > [!NOTE]
 > Sp_server_diagnostics 内部プロシージャの実行は、優先順位の高いプリエンプティブなスレッドで実装されます。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
 サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
 拡張セッションを使用して正常性の情報をキャプチャし、SQL Server の外部にあるファイルに保存することをお勧めします。 これにより、障害が発生した場合でも正常性の情報にアクセスできます。 次の例は、イベント セッションからの出力をファイルに保存します。  
-```tsql  
+```sql  
 CREATE EVENT SESSION [diag]  
 ON SERVER  
            ADD EVENT [sp_server_diagnostics_component_result] (set collect_data=1)  
@@ -119,7 +119,7 @@ GO
 ```  
   
 以下のクエリの例は、拡張セッションのログ ファイルを読み取ります。  
-```tsql  
+```sql  
 SELECT  
     xml_data.value('(/event/@name)[1]','varchar(max)') AS Name  
   , xml_data.value('(/event/@package)[1]', 'varchar(max)') AS Package  
@@ -142,7 +142,7 @@ ORDER BY time;
 ```  
   
 次の例は、sp_server_diagnostics の出力を非繰り返しモードでテーブルにキャプチャします。  
-```tsql  
+```sql  
 CREATE TABLE SpServerDiagnosticsResult  
 (  
       create_time DateTime,  
@@ -156,16 +156,16 @@ INSERT INTO SpServerDiagnosticsResult
 EXEC sp_server_diagnostics; 
 ```  
 
-次のクエリの例では、テーブルからの出力の概要を読み取ります。  
-```tsql  
+次のクエリ例では、テーブルから出力の概要を読み取ります。  
+```sql  
 SELECT create_time,
        component_name,
        state_desc 
 FROM SpServerDiagnosticsResult;  
 ``` 
 
-次のクエリの例では、テーブルの各コンポーネントから詳細な出力の一部を読み取ります。  
-```tsql  
+次のクエリ例では、テーブルの各コンポーネントから詳細な出力の一部を読み取ります。  
+```sql  
 -- system
 select data.value('(/system/@systemCpuUtilization)[1]','bigint') as 'System_CPU',
    data.value('(/system/@sqlCpuUtilization)[1]','bigint') as 'SQL_CPU',

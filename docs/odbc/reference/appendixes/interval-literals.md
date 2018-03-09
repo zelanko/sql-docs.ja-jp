@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b291abb4869256575b5d915e509107a1c46e2267
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0ee22a6f808dd1b97d0d865229c78cbf26808fba
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interval-literals"></a>間隔のリテラル
 ODBC では、すべてのドライバーが、SQL_CHAR 型または SQL_VARCHAR データ型のすべての C interval データ型への変換をサポートする必要があります。 基になるデータ ソースが interval データ型をサポートしていない場合はただし、ドライバーをこれらの変換をサポートするために、正しい形式の SQL_CHAR フィールドの値を知る必要があります。 同様に、ODBC では、ドライバーは、どのような形式の文字のフィールドに格納されている間隔を知る必要があるために、型が SQL_CHAR、SQL_VARCHAR、またはに変換できる任意の ODBC C を使用する必要があります。 このセクションでは、ドライバーの作成者を使用するか、C interval データ型からの変換中に、SQL_CHAR フィールドを検証する必要がある間隔リテラルの構文について説明します。  

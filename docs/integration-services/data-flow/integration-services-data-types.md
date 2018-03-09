@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: "98"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d255bfaa20012bce9104aad8e56611163d1c462a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2b27cb51a9b5090fc8495de50c597579eb100f6f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-data-types"></a>Integration Services のデータ型
   データがパッケージ内のデータ フローに入ると、データを抽出する変換元は、そのデータを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換します。 数値データは数値データ型、文字列データは文字列データ型、および日付データは日付データ型に割り当てられます。 GUID やバイナリ ラージ オブジェクト (BLOB) などの他のデータも、同様に適切な [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に割り当てられます。 データのデータ型が [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換できない場合は、エラーが発生します。  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
 -   式を使用して、データ型を暗黙的に変換します。 詳細については、「[式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」、「[式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」、「[Integration Services &#40;SSIS&#41; の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」を参照してください。  
   
--   キャスト演算子を使用して、データ型を変換します。 詳細については、「[Cast &#40;SSIS 式&#41;](../../integration-services/expressions/cast-ssis-expression.md)」を参照してください。  
+-   キャスト演算子を使用して、データ型を変換します。 詳細については、「[Cast &#40;SSIS 式&#41;](../../integration-services/expressions/cast-ssis-expression.md)」をご覧ください。  
   
 -   データ変換の変換を使用して、列のデータ型を別のデータ型にキャストします。 詳細については、「 [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md)」を参照してください。  
   
@@ -113,7 +114,7 @@ ms.lasthandoff: 11/20/2017
   
 #### <a name="converting-from-dtfiletime"></a>DT_FILETIME からの変換  
   
-|DT_FILETIME の変換|結果|  
+|DT_FILETIME の変換|[結果]|  
 |-----------------------------|------------|  
 |DT_FILETIME|変更なし。|  
 |DT_DATE|データ型を変換します。|  
@@ -126,7 +127,7 @@ ms.lasthandoff: 11/20/2017
   
 #### <a name="converting-from-dtdate"></a>DT_DATE からの変換  
   
-|DT_DATE の変換|結果|  
+|DT_DATE の変換|[結果]|  
 |-------------------------|------------|  
 |DT_FILETIME|データ型を変換します。|  
 |DT_DATE|変更なし。|  
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/20/2017
   
 #### <a name="converting-from-dtdbdate"></a>DT_DBDATE からの変換  
   
-|DT_DBDATE の変換|結果|  
+|DT_DBDATE の変換|[結果]|  
 |---------------------------|------------|  
 |DT_FILETIME|DT_FILETIME データ型の時刻フィールドをゼロに設定します。|  
 |DT_DATE|DT_DATE データ型の時刻フィールドをゼロに設定します。|  
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/20/2017
   
 #### <a name="converting-from-dtdbtime"></a>DT_DBTIME からの変換  
   
-|DT_DBTIME の変換|結果|  
+|DT_DBTIME の変換|[結果]|  
 |---------------------------|------------|  
 |DT_FILETIME|DT_FILETIME データ型の日付フィールドを現在の日付に設定します。|  
 |DT_DATE|DT_DATE データ型の日付フィールドを現在の日付に設定します。|  
@@ -165,7 +166,7 @@ ms.lasthandoff: 11/20/2017
   
 #### <a name="converting-from-dtdbtime2"></a>DT_DBTIME2 からの変換  
   
-|DT_DBTIME2 の変換|結果|  
+|DT_DBTIME2 の変換|[結果]|  
 |----------------------------|------------|  
 |DT_FILETIME|DT_FILETIME データ型の日付フィールドを現在の日付に設定します。<br /><br /> 秒の小数点以下桁数が、DT_FILETIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DATE|DT_DATE データ型の日付フィールドを現在の日付に設定します。<br /><br /> 秒の小数点以下桁数が、DT_DATE データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
@@ -178,7 +179,7 @@ ms.lasthandoff: 11/20/2017
   
 #### <a name="converting-from-dtdbtimestamp"></a>DT_DBTIMESTAMP からの変換  
   
-|DT_DBTIMESTAMP の変換|結果|  
+|DT_DBTIMESTAMP の変換|[結果]|  
 |--------------------------------|------------|  
 |DT_FILETIME|データ型を変換します。|  
 |DT_DATE|DT_DBTIMESTAMP データ型によって表される値が DT_DATE データ型の範囲からオーバーフローする場合は、DB_E_DATAOVERFLOW エラーを返します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
@@ -191,7 +192,7 @@ ms.lasthandoff: 11/20/2017
   
 #### <a name="converting-from-dtdbtimestamp2"></a>DT_DBTIMESTAMP2 からの変換  
   
-|DT_DBTIMESTAMP2 の変換|結果|  
+|DT_DBTIMESTAMP2 の変換|[結果]|  
 |---------------------------------|------------|  
 |DT_FILETIME|秒の小数点以下桁数が、DT_FILETIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DATE|DT_DBTIMESTAMP2 データ型によって表される値が DT_DATE データ型の範囲からオーバーフローする場合は、DB_E_DATAOVERFLOW エラーが返されます。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。<br /><br /> 秒の小数点以下桁数が、DT_DATE データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
@@ -204,7 +205,7 @@ ms.lasthandoff: 11/20/2017
   
 #### <a name="converting-from-dtdbtimestampoffset"></a>DT_DBTIMESTAMPOFFSET からの変換  
   
-|DT_DBTIMESTAMPOFFSET の変換|結果|  
+|DT_DBTIMESTAMPOFFSET の変換|[結果]|  
 |--------------------------------------|------------|  
 |DT_FILETIME|DT_DBTIMESTAMPOFFSET データ型で表される時刻値を協定世界時 (UTC) に変更します。<br /><br /> 秒の小数点以下桁数が、DT_FILETIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DATE|DT_DBTIMESTAMPOFFSET データ型で表される時刻値を UTC に変更します。<br /><br /> DT_DBTIMESTAMPOFFSET データ型によって表される値が DT_DATE データ型の範囲からオーバーフローする場合は、DB_E_DATAOVERFLOW エラーを返します。<br /><br /> 秒の小数点以下桁数が、DT_DATE データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。<br /><br /> 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
@@ -228,26 +229,26 @@ ms.lasthandoff: 11/20/2017
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary、varbinary、timestamp|binary、varbinary、timestamp|BigBinary、VarBinary|RAW|||  
-|DT_CY|smallmoney、money|smallmoney、money|Currency||||  
+|DT_CY|smallmoney、money|smallmoney、money|通貨||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||date|date|date|  
-|DT_DBTIME||||timestamp|time|time|  
+|DT_DBDATE|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||日付|日付|日付|  
+|DT_DBTIME||||TIMESTAMP|time|time|  
 |DT_DBTIME2|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)(p)|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md) (p)|||||  
 |DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)、[smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)、[smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|DateTime|TIMESTAMP、DATE、INTERVAL|TIME、TIMESTAMP、DATE|TIME、TIMESTAMP、DATE|  
-|DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||timestamp|timestamp|timestamp|  
+|DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)(p)|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md) (p)||timestampoffset|timestamp、<br /><br /> varchar|timestamp、<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
-|DT_GUID|uniqueidentifier|uniqueidentifier|GUID||||  
+|DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
-|DT_I2|smallint|smallint|Short||smallint|smallint|  
-|DT_I4|int|int|Long||INTEGER|INTEGER|  
-|DT_I8|bigint|bigint|||bigint|bigint|  
+|DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
+|DT_I4|ssNoversion|ssNoversion|Long||INTEGER|INTEGER|  
+|DT_I8|BIGINT|BIGINT|||BIGINT|bigint|  
 |DT_NUMERIC|decimal、numeric|decimal、numeric|Decimal|NUMBER、INT|decimal、numeric|decimal、numeric|  
-|DT_R4|real|real|単一||real|real|  
-|DT_R8|float|float|Double|FLOAT、REAL|FLOAT、DOUBLE|FLOAT、DOUBLE|  
+|DT_R4|REAL|REAL|単一||real|real|  
+|DT_R8|FLOAT|FLOAT|Double|FLOAT、REAL|FLOAT、DOUBLE|FLOAT、DOUBLE|  
 |DT_STR|char、varchar||varchar||char、varchar|char、varchar|  
-|DT_UI1|tinyint|tinyint|Byte||||  
+|DT_UI1|TINYINT|TINYINT|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
 |DT_UI8|||||||  

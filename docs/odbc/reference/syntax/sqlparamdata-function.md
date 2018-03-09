@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10bd29a112823ea3c4aa400b0fd63d1627d55ac5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4449d7b0af1c8138680d11b71b0a696d5f2d65fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData 関数
 **準拠**  
@@ -51,7 +51,7 @@ SQLRETURN SQLParamData(
  *ValuePtrPtr*  
  [出力]アドレスを取得するためのバッファーへのポインター、 *ParameterValuePtr*で指定されたバッファー **SQLBindParameter** (のパラメーターのデータ) のアドレス、または、 *TargetValuePtr*で指定されたバッファー **SQLBindCol** (列、データの) SQL_DESC_DATA_PTR 記述子レコード フィールドに含まれているとします。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NEED_DATA、SQL_NO_DATA、SQL_STILL_EXECUTING、SQL_ERROR、SQL_INVALID_HANDLE、または SQL_PARAM_DATA_AVAILABLE です。  
   
 ## <a name="diagnostics"></a>診断  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 016c2cefd6280a7b2cc21e4b5e290468d8271973
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 12e66ad8a1aa5e1389b69d5f30156f7b86b3b733
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-features"></a>新機能
 ODBC 3 以下の新機能が導入されました。*x*です。 ODBC 3 です。*x* ODBC 2 作業アプリケーション*.x*ドライバーでは、この機能を使用できません。 ODBC 3 です。*x* ODBC 2 を使用する場合に、ドライバー マネージャーでこれらの機能がマップされていない*.x*ドライバー。  

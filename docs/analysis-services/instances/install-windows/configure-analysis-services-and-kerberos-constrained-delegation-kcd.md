@@ -8,27 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae2cafe597e5540a58cc89e28cee87516942d021
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9f1a5ab2c98e45d705be57658238077d88daefb5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Analysis Services と Kerberos の制約付き委任 (KCD) の構成
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Kerberos の制約付き委任 (KCD) はクライアントの資格情報を委任するために Windows 認証で構成できる認証プロトコルは、環境内のサービスにサービスします。 KCD には、ドメイン コントローラーなどの追加のインフラストラクチャと環境の追加構成が必要です。 KCD は、SharePoint 2016 で [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] と [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のデータが関係する一部のシナリオの要件となっています。 SharePoint 2016 では、Excel Services が SharePoint ファームの外部にある別の新しいサーバーである **Office Online Server**に移動しました。 Office Online Server は独立しているため、一般的な 2 つのホップ シナリオでクライアントの資格情報を委任する方法の必要性が高まります。  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Kerberos の制約付き委任 (KCD) は、環境全体にわたってクライアントの資格情報をサービス間で委任するために Windows 認証で構成できる認証プロトコルです。 KCD には、ドメイン コントローラーなどの追加のインフラストラクチャと環境の追加構成が必要です。 KCD は、SharePoint 2016 で [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] と [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のデータが関係する一部のシナリオの要件となっています。 SharePoint 2016 では、Excel Services が SharePoint ファームの外部にある別の新しいサーバーである **Office Online Server**に移動しました。 Office Online Server は独立しているため、一般的な 2 つのホップ シナリオでクライアントの資格情報を委任する方法の必要性が高まります。  
   
 ## <a name="overview"></a>概要  
  KCD により、アカウントは、リソースにアクセスできるようにするために別のアカウントの権限を借用できます。 権限を借用する側のアカウントは、Web アプリケーションに割り当てられたサービス アカウントまたは Web サーバーのコンピューター アカウントであり、権限を借用される側のアカウントは、リソースへのアクセスを必要とするユーザー アカウントです。 KCD はサービス レベルで機能するため、権限を借用する側のアカウントによってサーバー上の選択されたサービスにアクセス権を付与できます。同じサーバー上の他のサービスや他のサーバー上のサービスはアクセスを拒否されます。  

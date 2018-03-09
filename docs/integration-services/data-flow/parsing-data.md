@@ -8,23 +8,24 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - parsing [Integration Services]
 - data parsing [Integration Services]
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7d198fce5bdc57a21083ea063522f73cc9dde22
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 48579e225f90fe074aaaffa22f6424f1fe90dddd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="parsing-data"></a>データの解析
   パッケージ内のデータ フローは、異種データ ストア間でデータの抽出や読み込みを行います。データ ストアでは、標準およびカスタムのさまざまなデータ型を使用します。 データ フローでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の変換元は、データの抽出、文字列データの解析、および [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型へのデータ変換を行います。 次に続く変換で、データを解析して別のデータ型に変換したり、列のコピーを別のデータ型で作成することもあります。 コンポーネントで使用する式で、引数やオペランドを別のデータ型にキャストする場合もあります。 さらに、データがデータ ストアに読み込まれるとき、変換先でデータを解析して、変換先が使用するデータ型に変換する場合もあります。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/20/2017
   
 -   次の表に示す ISO 8601 形式。  
   
-    |Format|Description|  
+    |[形式]|Description|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> -YYYY-MM-DD|4 桁の年、2 桁の月、および 2 桁の日を表す、基本および拡張形式です。 拡張形式では、日付部分はハイフン (-) で区切られます。|  
     |YYYY-MM|4 桁の年および 2 桁の月を表す、有効桁数を減らした基本および拡張形式です。 拡張形式では、日付部分はハイフン (-) で区切られます。|  
@@ -123,7 +124,7 @@ ms.lasthandoff: 11/20/2017
   
 -   次の表に示す ISO 8601 時刻形式。  
   
-    |Format|Description|  
+    |[形式]|Description|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|2 桁の時、2 桁の分、および 2 桁の秒を表す、基本および拡張形式です。 拡張形式では、時刻の部分はコロン (:) で区切られます。|  
     |HHMI<br /><br /> HH:MI|2 桁の時と 2 桁の分を表す、基本および拡張の切り捨て形式です。 拡張形式では、時刻の部分はコロン (:) で区切られます。|  
@@ -132,7 +133,7 @@ ms.lasthandoff: 11/20/2017
   
 -   次の表に示す、タイム ゾーンを指定する時刻形式。  
   
-    |Format|Description|  
+    |[形式]|Description|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|ローカル時間を求めるために協定世界時 (UTC) に加算される時間数と分数を示す基本形式と拡張形式。|  
     |-HH:MI<br /><br /> -HHMI|ローカル時間を求めるために協定世界時 (UTC) から減算される時間数と分数を示す基本形式と拡張形式。|  
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/20/2017
   
 -   次の表に示す、小数部を含む時刻形式。  
   
-    |Format|Description|  
+    |[形式]|Description|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n は、時間の端数を表す 0 ～ 9999999 の範囲の値です。 角かっこは、この値が省略可能であることを示しています。<br /><br /> たとえば、値 12.750 は 12:45 を示します。|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n は、分の端数を表す 0 ～ 9999999 の範囲の値です。 角かっこは、この値が省略可能であることを示しています。<br /><br /> たとえば、値 1220.500 は 12:20:30 を示します。|  
@@ -201,7 +202,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  [プロパティ] ウィンドウで **[カスタム プロパティ]** ノードを展開し、 **FastParse** プロパティを **True**に設定します。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
 
 ## <a name="standard-parse"></a>標準解析
 標準解析は、ロケール依存型の解析ルーチンのセットであり、Oleaut32.dll と Ole2dsip.dll で使用できるオートメーション データ型変換の API が提供する、すべてのデータ型変換がサポートされています。 標準解析は、OLE DB 解析 API に相当します。  

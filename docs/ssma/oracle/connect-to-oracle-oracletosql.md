@@ -1,7 +1,7 @@
 ---
 title: "Oracle (OracleToSQL) への接続 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,18 +17,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 9f2db42d3770626ef983b4d45473ad5827c604f5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 04f87810ef02030a95c06870012972f307c41f33
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Oracle (OracleToSQL) への接続します。
 使用して、 **Connect to Oracle**を移行する Oracle データベースに接続する ダイアログ ボックス。  
   
 このダイアログ ボックスにアクセスする、**ファイル**メニューの  **Connect to Oracle**です。 以前接続した場合、コマンドは**Oracle への再接続**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **プロバイダー**  
 Oracle データベースへの接続用のデータ アクセス プロバイダーを選択します。 使用可能なプロバイダーは、Oracle Client プロバイダーと OLE DB プロバイダーです。 既定値は、Oracle クライアント プロバイダーです。  
   
@@ -62,7 +62,7 @@ TNSNAME モード オプションです。
   
 標準モードのオプションです。  
   
-**ユーザー名**  
+**User name**  
 SSMA が Oracle データベースへの接続に使用するユーザー名を入力します。  
   
 **Password**  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - DBREINDEX_TSQL
 - DBREINDEX
 - DBCC_DBREINDEX_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - index rebuilding [SQL Server]
 - rebuilding indexes
 - dynamic index rebuilding [SQL Server]
 - DBCC DBREINDEX statement
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
-caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ec9cbe9b5b8d7757c63b5dcca3b9011245ec0fd3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 991c16eea9a651270ca299e72cafbc822465a9b3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]指定されたデータベース内のテーブルの 1 つ以上のインデックスを再構築します。
@@ -62,7 +64,7 @@ DBCC DBREINDEX
  *index_name*  
  再構築するインデックスの名前です。 インデックス名は、識別子の規則に従っている必要があります。 場合*index_name*が指定されている*table_name*指定する必要があります。 場合*index_name*が指定されていないか、""、テーブルのすべてのインデックスが再構築されます。  
   
- *fillfactor の値*  
+ *fillfactor*  
  インデックスの作成時または再構築時に、データを格納する各インデックス ページの領域の割合を指定します。 *fillfactor*インデックスとクラスター化インデックスが再構築されたので、再構築、他の非クラスター化インデックスには、新しい既定値になる、インデックスの作成時に fill factor を上書きします。  
  ときに*fillfactor* 0 は、DBCC DBREINDEX はインデックスの最後に指定された fill factor 値を使用します。 この値は、 **sys.indexes**カタログ ビューです。   
  場合*fillfactor*が指定されている*table_name*と*index_name*指定する必要があります。 場合*fillfactor*が指定されていない、既定の fill factor を 100 を使用します。 詳細については、「 [インデックスの FILL FACTOR の指定](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)」を参照してください。  
@@ -92,7 +94,7 @@ NO_INFOMSGS を指定しない限り (テーブル名の指定は必要)、DBCC 
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 呼び出し元のテーブルを所有またはのメンバーである必要があります、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、または**db_ddladmin**固定データベース ロール。
   
 ## <a name="examples"></a>使用例  

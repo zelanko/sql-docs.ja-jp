@@ -1,45 +1,48 @@
 ---
 title: "接続オプション |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/14/2017
+ms.date: 02/08/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4fcec3597676efa5feebc3fdb562a6dd19878278
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 899e072051224e2f28423e31f44d368a2884497b
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="connection-options"></a>接続オプション
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 このトピックには、連想配列で許可されているオプションが一覧表示 (を使用する場合[sqlsrv_connect](../../connect/php/sqlsrv-connect.md) SQLSRV ドライバーで) またはデータ ソース名 (dsn) で許可されているキーワード (を使用する場合[:: _ _construct](../../connect/php/pdo-construct.md) PDO_SQLSRV ドライバーで)。  
 
-|Key|値|説明|既定値|  
+|[キー]|[値]|Description|既定値|  
 |-------|---------|---------------|-----------|  
 |APP|文字列|トレースで使用されるアプリケーション名を指定します。|値は設定されません。|  
 |ApplicationIntent|文字列|アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 有効値は、ReadOnly と ReadWrite です。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]によるサポートの詳細については、「 [PHP Driver for SQL Server Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)」(高可用性、障害復旧の PHP Driver for SQL Server のサポート) を参照してください。|ReadWrite|  
 |AttachDBFileName|文字列|サーバーがアタッチするデータベース ファイルを指定します。|値は設定されません。|  
-|[認証]|次の文字列のいずれかです。<br /><br />' SqlPassword'<br /><br />' ActiveDirectoryPassword'|認証モードを指定します。|設定されていません。|  
-|CharacterSet<br /><br />(PDO_SQLSRV ドライバーではサポートされていません)|文字列|サーバーにデータを送信するために使用する文字セットを指定します。<br /><br />可能な値は SQLSRV_ENC_CHAR と UTF-8 です。 詳細については、「 [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)」を参照してください。|SQLSRV_ENC_CHAR|  
+|[認証]|次の文字列のいずれかです。<br /><br />'SqlPassword'<br /><br />'ActiveDirectoryPassword'|認証モードを指定します。|設定されていません。|  
+|CharacterSet<br /><br />(PDO_SQLSRV ドライバーではサポートされていません)|文字列|サーバーにデータを送信するために使用する文字セットを指定します。<br /><br />可能な値は SQLSRV_ENC_CHAR と UTF-8 です。 詳細については、「 [方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)」を参照してください。|SQLSRV_ENC_CHAR|  
+|ColumnEncryption<br /><br />(Windows でのみサポート)|**有効になっている**または**無効になっています。**|Always Encrypted 機能が有効かどうかを指定します。 |Disabled|  
 |ConnectionPooling|接続プールを有効にするには、1 または **true** 。<br /><br />接続プールを無効にするには、0 または **false** 。|接続が接続プールから割り当てられているかどうかを指定します (1 または**true**) か (0 または**false**).<sup>1</sup>|**true** (1)|  
 |データベース|文字列|確立中の接続の使用中で、データベースの名前を指定<sup>2</sup>です。|使用されているログインの既定のデータベース。|  
+|Driver|文字列|SQL Server と通信するために使用する Microsoft ODBC ドライバーを指定します。<br /><br />有効な値は次のとおりです。<br />SQL Server 用 ODBC Driver 17<br />ODBC Driver 13 for SQL Server<br />ODBC Driver 11 for SQL Server (Windows のみ)。|Driver キーワードが指定されていない Microsoft Drivers for PHP for SQL Server とシステムでは、サポートされている Microsoft ODBC ドライバーの種類の存在を検出と ODBC の最新バージョンで開始されます。|  
 |Encrypt|暗号化を有効にするには、1 または **true** 。<br /><br />暗号化を無効にするには、0 または **false** 。|SQL Server との通信を暗号化するかどうかを指定します (1 または**true**) か暗号化しない (0 または**false**)<sup>3</sup>です。|**false** (0)|  
 |Failover_Partner|文字列|プライマリ サーバーが利用できないときに使用する、データベースのミラーのサーバーおよびインスタンス (有効かつ構成されている場合) を指定します。<br /><br />Failover_Partner を MultiSubnetFailover とともに使用する場合には、制限があります。 詳細については、「 [PHP Driver for SQL Server Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)」(高可用性、障害復旧の PHP Driver for SQL Server のサポート) を参照してください。|値は設定されません。|  
-|LoginTimeout|整数 (SQLSRV ドライバー<br /><br />文字列 (PDO_SQLSRV ドライバー|接続の試行に失敗するまで待機する秒数を指定します。|タイムアウトはありません。|  
+|LoginTimeout|整数 (SQLSRV ドライバー)<br /><br />文字列 (PDO_SQLSRV ドライバー)|接続の試行に失敗するまで待機する秒数を指定します。|タイムアウトはありません。|  
 |MultipleActiveResultSets|複数のアクティブな結果セットを使用するには、1 または **true** 。<br /><br />複数のアクティブな結果セットを無効にするには、0 または **false** 。|複数のアクティブな結果セット (MARS) のサポートを無効にするか、または明示的に有効にします。<br /><br />詳細については、次を参照してください。[する方法: 複数のアクティブな結果を無効にする &#40;です。MARS &#41;](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).|true (1)|  
 |MultiSubnetFailover|文字列|常に指定**multiSubnetFailover = [はい]**の可用性グループ リスナーに接続するときに、[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]可用性グループ、または[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]フェールオーバー クラスター インスタンス。 **multiSubnetFailover = yes**構成[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]を迅速に検出し、(現在) アクティブなサーバーへの接続を提供します。 可能な値は Yes と No です。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]によるサポートの詳細については、「 [PHP Driver for SQL Server Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)」(高可用性、障害復旧の PHP Driver for SQL Server のサポート) を参照してください。|いいえ|  
 |PWD<br /><br />(PDO_SQLSRV ドライバーではサポートされていません)|文字列|SQL Server 認証で接続するときに使用されるユーザー ID に関連付けられているパスワードを指定します<sup>4</sup>です。|値は設定されません。|  

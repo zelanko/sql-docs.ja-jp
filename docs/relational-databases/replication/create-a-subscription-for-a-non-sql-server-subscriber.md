@@ -17,15 +17,15 @@ helpviewer_keywords:
 - non-SQL Server Subscribers, subscriptions
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2de231ff458d52de6aa4caf4ecda59eb6785490
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 528537bd5cf2e1b0d3020b8a22fe532e5c616cbb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 以外のサブスクライバーのサブスクリプションの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。 トランザクション レプリケーションとスナップショット レプリケーションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対するデータのパブリッシュがサポートされています。 サポートされるサブスクライバー プラットフォームの詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)を使用して、SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  パブリケーションのスナップショットを生成します。 この手順の詳細については、このトピック内で説明します。  
   
-7.  サブスクリプションを同期します。 詳しくは、「 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)」をご覧ください。  
+7.  サブスクリプションを同期します。 詳細については、「 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)」をご覧ください。  
   
 #### <a name="to-enable-a-publication-for-non-sql-server-subscribers"></a>SQL Server 以外のサブスクライバーのパブリケーションを有効にするには  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/17/2017
   
     -   **[プロセス アカウント]**、 **[パスワード]**、および **[パスワードの確認入力]** フィールドで、ディストリビューション エージェントの実行、およびディストリビューターへのローカル接続に使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントおよびパスワードを入力します。  
   
-         アカウントには、ディストリビューション データベースの固定データベース ロール **db_owner** のメンバーであること、パブリケーション アクセス リスト (PAL) のメンバーであること、スナップショット共有での読み取り権限、および OLE DB プロバイダーのインストール ディレクトリでの読み取り権限など、最小限の権限が必要です。 PAL の詳細については、「[パブリッシャーのセキュリティ保護](../../relational-databases/replication/security/secure-the-publisher.md)」を参照してください。  
+         アカウントには、ディストリビューション データベースの固定データベース ロール **db_owner** のメンバーであること、パブリケーション アクセス リスト (PAL) のメンバーであること、スナップショット共有での読み取り権限、および OLE DB プロバイダーのインストール ディレクトリでの読み取り権限など、最小限の権限が必要です。 PAL の詳細については、「[Secure the Publisher (パブリッシャーのセキュリティ保護)](../../relational-databases/replication/security/secure-the-publisher.md)」を参照してください。  
   
     -   **[サブスクライバーに接続]**の、 **[ログイン]**、 **[パスワード]**、および **[パスワードの確認入力]** フィールドで、サブスクライバーへの接続に使用するログインとパスワードを入力します。 このログインは、あらかじめ構成され、サブスクリプション データベースでオブジェクトを作成できる十分な権限を持っている必要があります。  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 11/17/2017
   
     -   このウィザードが完了した後に、ディストリビューション エージェントからサブスクライバーへスナップショット ファイルを転送するには、 **[次の場合に初期化]** 列のドロップダウン リスト ボックスから **[今すぐ]** を選択します。 エージェントの次回の実行時にファイルが転送されるようにするには、 **[初回同期時]** を選択します。  
   
-12. **[ウィザードのアクション]** ページで、必要に応じてサブスクリプションのスクリプトを作成します。 詳細については、「 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)」を参照してください。  
+12. **[ウィザードのアクション]** ページで、必要に応じてサブスクリプションのスクリプトを作成します。 詳しくは、「 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)」をご覧ください。  
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>サブスクライバー側のテーブルを保持するには  
   

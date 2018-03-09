@@ -18,13 +18,13 @@ ms.assetid: 709c9b8e-2f3f-441e-97e1-7fd8341b64b4
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fdd762b2fa0fcd1287ecb4488e5258e78305c72
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d8eebef1d1901059da39d797841e65c6c7fd963e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="data-type-change-required-dialog-box-visual-database-tools"></a>[データ型の変更を要求] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] リレーションシップを定義した列のデータ型、長さ、小数部桁数、有効桁数、または照合順序を変更したときに表示されます。  

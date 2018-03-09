@@ -8,38 +8,41 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 69507d44a55e1879d31e97f75a9f755078c5f36a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 90a1b92087d0f753fdd637830bc4dd4c86d601a3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>レッスン 4-1-Analysis Services チュートリアル プロジェクトの変更済みバージョンを使用します。
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]このチュートリアルの残りのレッスンは、強化されたバージョンに基づく、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]最初の 3 つのレッスンで作成したチュートリアルのプロジェクトです。 まず、新しいテーブルと名前付き計算が **Adventure Works DW 2012** データ ソース ビューに追加されています。次に、新しいディメンションがプロジェクトおよび [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに追加されています。 そして、2 つ目のメジャー グループが追加されています。このメジャー グループには、2 番目のファクト テーブルのメジャーが含まれています。 修正されたこのプロジェクトを使用すれば、これまでに習得したスキルを繰り返し使用せずに、ビジネス インテリジェンス アプリケーションに機能を追加する方法を学習していくことができます。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+このチュートリアルの残りのレッスンでは、最初の 3 つのレッスンで作成した [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトの修正版を使用します。 まず、新しいテーブルと名前付き計算が **Adventure Works DW 2012** データ ソース ビューに追加されています。次に、新しいディメンションがプロジェクトおよび [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに追加されています。 そして、2 つ目のメジャー グループが追加されています。このメジャー グループには、2 番目のファクト テーブルのメジャーが含まれています。 修正されたこのプロジェクトを使用すれば、これまでに習得したスキルを繰り返し使用せずに、ビジネス インテリジェンス アプリケーションに機能を追加する方法を学習していくことができます。  
   
 チュートリアルを続ける前に、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトの修正版のダウンロード、展開、読み込み、および処理を行う必要があります。  すべての手順を確実に実行するために、このレッスンでの指示に従ってください。  
   
 ## <a name="downloading-and-extracting-the-project-file"></a>プロジェクト ファイルのダウンロードと展開  
   
-1.  このチュートリアルのサンプル プロジェクトをダウンロードできるページに移動するには、[ここをクリック](http://go.microsoft.com/fwlink/?LinkID=221866) してください。 チュートリアルのプロジェクトは、 **Analysis Services Tutorial SQL Server 2012** ダウンロードに含まれています。  
+1.  このチュートリアルのサンプル プロジェクトをダウンロードできるページに移動するには、[ここをクリック](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services)してください。 チュートリアルのプロジェクトに含まれる、 **adventure-works-マルチ ディメンションのチュートリアル-projects.zip**をダウンロードします。  
   
-2.  このチュートリアルのプロジェクトを含むパッケージをダウンロードするには、 **[Analysis Services Tutorial SQL Server 2012]** をクリックしてください。  
+2.  をクリックして**adventure-works-マルチ ディメンションのチュートリアル-projects.zip**このチュートリアルでは、プロジェクトを含むパッケージをダウンロードします。  
   
     既定では、.zip ファイルはダウンロード フォルダーに保存されます。 より短いパスの場所に .zip ファイルを移動する必要があります (たとえば、ファイルを保存するための C:\Tutorials フォルダーを作成します)。  その後、.zip ファイルに含まれているファイルを展開します。 長いパスのダウンロード フォルダーからファイルを解凍しようとすると、レッスン 1 しか取得できない場合があります。  
   
 3.  ルート ドライブか、それに近い場所にサブフォルダーを作成します (C:\Tutorial など）。  
   
-4.  そのサブフォルダーに、 **Analysis Services Tutorial SQL Server 2012.zip** ファイルを移動します。  
+4.  移動、 **adventure-works-マルチ ディメンションのチュートリアル-projects.zip**サブフォルダーにファイル。  
   
 5.  ファイルを右クリックし、 **[すべて展開]**をクリックします。  
   
@@ -49,7 +52,7 @@ ms.lasthandoff: 12/08/2017
   
 1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で **[ファイル]** メニューの **[ソリューションを閉じる]** をクリックして、使用しないファイルを閉じます。  
   
-2.  **[ファイル]** メニューの **[開く]**をポイントし、 **[プロジェクト/ソリューション]**をクリックします。  
+2.  **[ファイル]** メニューの **[開く]** をポイントし、**[プロジェクト/ソリューション]** をクリックします。  
   
 3.  チュートリアルのプロジェクト ファイルを展開した場所を参照します。  
   
@@ -124,5 +127,5 @@ Geography ディメンションは、 **Adventure Works DW 2012** データ ソ�
 [親子階層の親属性プロパティの定義](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
   
 ## <a name="see-also"></a>参照  
-[Analysis Services プロジェクトの配置](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
+[Analysis Services プロジェクトの展開](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   

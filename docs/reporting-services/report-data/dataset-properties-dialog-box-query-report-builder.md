@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,15 +17,15 @@ f1_keywords:
 - "10160"
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 caps.latest.revision: "12"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03a8561e921834373686c6582f6630c8047417b4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f733d1c6013bb6f8110a52007e1a3cfa682bfecd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>「クエリ」 (「データセットのプロパティ」 ダイアログ ボックス) (レポート ビルダー)
   **[データセットのプロパティ]** ダイアログ ボックスの **[クエリ]** を選択すると、レポート サーバーから共有データセットを選択したり、埋め込みデータセットを作成したりできます。 埋め込みデータセットを作成するには、データ ソースを選択し、クエリを構築する必要があります。  
@@ -44,14 +42,14 @@ ms.lasthandoff: 12/05/2017
   
  詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **名前**  
  データセットの名前を入力します。 名前は、レポートのすべてのデータ領域名またはグループ名と異なっている必要があります。  
   
  **[共有データセットを使用する]**  
  レポート サーバーの事前定義済みデータセットを使用するには、このオプションを選択します。  
   
- **参照**  
+ **[参照]**  
  レポート サーバーまたは SharePoint サイト上のフォルダーを参照し、共有データセット (.rsd) を選択します。  
   
  **[レポート内の埋め込みデータセットを使用する]**  
@@ -76,7 +74,7 @@ ms.lasthandoff: 12/05/2017
  データセットとして使用するテーブルの名前を入力します。 このオプションは **[テーブル]**を選択したときに表示されます。  
   
  **[ストアド プロシージャ名の選択または入力]**  
- 使用するストアド プロシージャの名前を入力または選択します。 式を編集するには、 **「式」** (*fx*) ボタンをクリックします。 このオプションは、コマンドの種類のオプションとして [ストアド プロシージャ] を選択したときに表示されます。  
+ 使用するストアド プロシージャの名前を入力または選択します。 式を編集するには、 **[式]** (*fx*) ボタンをクリックします。 このオプションは、コマンドの種類のオプションとして [ストアド プロシージャ] を選択したときに表示されます。  
   
  **[タイムアウト (秒)]**  
  クエリがタイムアウトするまでの期間を秒数で入力します。既定値は 30 秒です。 **[タイムアウト]** には、値を指定しないか、0 より大きい値を指定する必要があります。 空の場合は、クエリはタイムアウトしません。  
@@ -85,7 +83,7 @@ ms.lasthandoff: 12/05/2017
  クエリ コマンドを実行して、 [[データセットのプロパティ] ダイアログ ボックスの [フィールド]](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) ページにあるフィールドの一覧を更新します。  
   
 ## <a name="see-also"></a>参照  
- [レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
+ [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
  [クエリ デザイナー &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   

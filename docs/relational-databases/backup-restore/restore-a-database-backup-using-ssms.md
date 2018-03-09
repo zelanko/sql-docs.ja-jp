@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,18 +22,18 @@ helpviewer_keywords:
 - database backups [SQL Server], full backups
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
-caps.latest.revision: "79"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d0c0f0112eee81379e2c1548dd9938e27088dea8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d51837413865aedb9b4610b045355556634ea6df
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="restore-a-database-backup-using-ssms"></a>SSMS を使用したデータベース バックアップの復元
+# <a name="restore-a-database-backup-using-ssms"></a>SSMS を使用してデータベース バックアップを復元する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、SQL Server Management Studio を使用して、データベースの完全バックアップを復元する方法について説明します。    
@@ -62,7 +63,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
     
 3.  **[全般]** ページの **ソース** 復元元のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。    
     
-    -   **データベース**    
+    -   **[データベース]**    
     
          復元するデータベースをドロップダウン リストから選択します。 このリストには、 **msdb** バックアップ履歴に従ってバックアップされたデータベースのみが含まれます。    
     
@@ -80,9 +81,9 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
             **[追加]**  
             **[追加]** をクリックすると、 **[バックアップ メディアの種類]** ドロップダウン リストで選択したメディアの種類に応じて、次のダイアログ ボックスのいずれかが開きます。 ( **[バックアップ メディア]** ボックスの一覧がいっぱいの場合、 **[追加]** ボタンは使用できません)。
 
-            |メディアの種類|ダイアログ ボックス|説明|    
+            |メディアの種類|ダイアログ ボックス|Description|    
             |----------------|----------------|-----------------|    
-            |**ファイル**|**[バックアップ ファイルの検索]**|このダイアログ ボックスでは、ツリーからローカル ファイルを選択するか、完全修飾の汎用名前付け規則 (UNC) 名を使用したリモート ファイルを指定できます。 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md))。|    
+            |**[最近使ったファイル]**|**[バックアップ ファイルの検索]**|このダイアログ ボックスでは、ツリーからローカル ファイルを選択するか、完全修飾の汎用名前付け規則 (UNC) 名を使用したリモート ファイルを指定できます。 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)の別のインスタンスで作成された場合、これは必須です。|    
             |**[デバイス]**|**[バックアップ デバイスの選択]**|このダイアログ ボックスでは、サーバー インスタンスで定義された論理バックアップ デバイスの一覧から選択できます。|    
             |**[テープ]**|**[バックアップ テープの選択]**|このダイアログ ボックスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスが動作しているコンピューターに物理的に接続されているテープ ドライブの一覧から選択できます。|    
             |**[URL]**|**[バックアップ ファイルの場所を選択]**|このダイアログ ボックスで、既存の SQL Server 資格情報/Azure ストレージ コンテナーを選択し、共有アクセス署名で新しい Azure ストレージ コンテナーを追加するか、共有アクセス署名と既存のストレージ コンテナーの SQL Server 資格情報を生成します。  「 [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)」 (Microsoft Azure サブスクリプションへの接続) もご覧ください。|  
@@ -241,13 +242,13 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
     10. **[コンテナー]** を展開して、 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`に移動します。
     
     11. Ctrl キーを押しながらファイル `Sales_stripe1of2_20160601.bak` と `Sales_stripe2of2_20160601.bak`を選択します。
-    12. クリックして **OK**です。
+    12. **[OK]** をクリックします。
     13. **[OK]** をクリックして、 **[全般]** ページに戻ります。
     14. **[ページの選択]** ペインの **[オプション]** をクリックします。
     15. **[復元オプション]** パネルで、 **[既存のデータベースを上書きする (WITH REPLACE)]**チェック ボックスをオンにします。
     16. **[ログ末尾のバックアップ]** セクションで、 **[復元の前にログ末尾のバックアップを実行する]**チェック ボックスをオフにします。
     17. **[サーバー接続]** セクションで、 **[接続先データベースへの既存の接続を閉じる]**チェック ボックスをオンにします。
-    18. **[OK]**をクリックします。
+    18. **[OK]** をクリックします。
 
     #### <a name="e2---a-shared-access-signature-does-not-exist"></a>**E2. Shared Access Signature が存在しない場合**
     この例では、現在、 `Sales` データベースはサーバーに存在しません。
@@ -258,7 +259,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
     10. **[コンテナー]** を展開して、 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`に移動します。
     11. バックアップ ファイルを選択して、 **[OK]**をクリックします。
     12. **[OK]** をクリックして、 **[全般]** ページに戻ります。
-    13. **[OK]**をクリックします。
+    13. **[OK]** をクリックします。
 
 #### <a name="f---restore-local-backup-to-microsoft-azure-storage-url"></a>**F. Microsoft Azure Storage (URL) のローカルのバックアップを復元する**
 `Sales` データベースは、 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` に置かれたバックアップから Microsoft Azure ストレージ コンテナー `E:\MSSQL\BAK`に復元されます。  Azure コンテナーの SQL Server 資格情報は、既に作成されています。  復元先コンテナーの SQL Server 資格情報は、 **[復元]** タスク中に作成できないので、既に存在している必要があります。  現在、 `Sales` データベースはサーバーに存在しません。
@@ -274,7 +275,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
 9.  **[ページの選択]** ペインの **[ファイル]** をクリックします。
 10. **[すべてのファイルをフォルダーに移動]**チェック ボックスをオンにします。
 11. `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`[データ ファイル フォルダー:] **と** [ログ ファイルのフォルダ:] **のテキスト ボックスで、コンテナー (**) を入力します。
-12. クリックして **OK**です。
+12. **[OK]** をクリックします。
 
 
 ## <a name="see-also"></a>参照    

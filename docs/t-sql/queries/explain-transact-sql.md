@@ -8,20 +8,21 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3aa20ea08fe34eab316a41d46ea955a78e4be512
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 515c21cbf7874c0268eeedad0b67e0ce7cf3726d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="explain-transact-sql"></a>説明 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -42,7 +43,7 @@ EXPLAIN SQL_statement
  *SQL_statement*  
  [!INCLUDE[DWsql](../../includes/dwsql-md.md)]をステートメント**説明**実行されます。 *SQL_statement*これらのコマンドのいずれかです:**選択**、**挿入**、**更新**、**削除**、 **CREATE TABLE AS SELECT**、**リモート テーブルを作成する**です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  必要があります、 **SHOWPLAN**アクセス許可、および実行する権限*SQL_statement*です。 参照してください[アクセス許可: GRANT、DENY、REVOKE &#40;です。Azure SQL Data Warehouse、並列データ ウェアハウス &#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
 ## <a name="return-value"></a>戻り値  
@@ -68,11 +69,11 @@ EXPLAIN SQL_statement
   
 |XML タグ|概要、属性、およびコンテンツ|  
 |-------------|--------------------------------------|  
-|\<dsql_query >|最上位レベル/ドキュメントの要素。|
-|\<sql >|エコー *SQL_statement*です。|  
-|\<params >|このタグは、この時点では使用されません。|  
-|\<dsql_operations >|まとめたものし、クエリの手順が含まれています、クエリのコスト情報が含まれています。 すべて含まれています、`<dsql_operation>`ブロックします。 このタグには、全体のクエリに対して行数の情報が含まれています。<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost*推定時間 (ミリ秒) を実行するクエリの合計がします。<br /><br /> *total_number_operations*クエリの操作の合計数です。 並列に処理して複数のノード上で実行される操作は、1 つの操作としてカウントされます。|  
-|\<dsql_operation >|クエリ プラン内で 1 回の操作について説明します。 \<Dsql_operation > タグに属性として操作の種類が含まれています。<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type*で見つかった値の 1 つ[クエリを実行するデータ (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c)です。<br /><br /> 内のコンテンツ、`\<dsql_operation>`ブロックは操作の種類に依存します。<br /><br /> 次の表を参照してください。|  
+|\<dsql_query>|最上位レベル/ドキュメントの要素。|
+|\<sql>|エコー *SQL_statement*です。|  
+|\<params>|このタグは、この時点では使用されません。|  
+|\<dsql_operations>|まとめたものし、クエリの手順が含まれています、クエリのコスト情報が含まれています。 すべて含まれています、`<dsql_operation>`ブロックします。 このタグには、全体のクエリに対して行数の情報が含まれています。<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost*推定時間 (ミリ秒) を実行するクエリの合計がします。<br /><br /> *total_number_operations*クエリの操作の合計数です。 並列に処理して複数のノード上で実行される操作は、1 つの操作としてカウントされます。|  
+|\<dsql_operation>|クエリ プラン内で 1 回の操作について説明します。 \<Dsql_operation > タグに属性として操作の種類が含まれています。<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type*で見つかった値の 1 つ[クエリを実行するデータ (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c)です。<br /><br /> 内のコンテンツ、`\<dsql_operation>`ブロックは操作の種類に依存します。<br /><br /> 次の表を参照してください。|  
   
 |操作の種類|コンテンツ|例|  
 |--------------------|-------------|-------------|  

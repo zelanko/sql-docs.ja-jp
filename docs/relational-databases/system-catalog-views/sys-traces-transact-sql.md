@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.traces_TSQL
 - sys.traces
 - traces_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.traces catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.traces catalog view
 ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a105a7fbfcac2213f422144b431574cdd543426
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a846bac5a610bac22c9b00712df5ea04c2779df1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="systraces-transact-sql"></a>sys.traces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +41,13 @@ ms.lasthandoff: 11/27/2017
  サポートされているトレース イベントの一覧については、次を参照してください。 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)です。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]拡張イベント カタログ ビューを代わりに使用します。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 拡張イベント カタログ ビューを代わりに使用します。  
   
-|列名|データ型|説明|  
+|列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|トレース ID。|  
 |**ステータス**|**int**|トレースの状態。<br /><br /> 0 = 停止<br /><br /> 1 = 実行中|  
-|**パス**|**nvarchar (260)**|トレース ファイルのパス。 トレースが行セット トレースの場合、この値は NULL になります。|  
+|**path**|**nvarchar(260)**|トレース ファイルのパス。 トレースが行セット トレースの場合、この値は NULL になります。|  
 |**max_size**|**bigint**|トレース ファイル サイズの上限 (MB 単位)。 トレースが行セット トレースの場合、この値は NULL になります。|  
 |**stop_time**|**datetime**|実行中のトレースを停止する日時。|  
 |**max_files**|**int**|ロールオーバー ファイルの最大数。 最大数が設定されていない場合、この値は NULL になります。|  
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/27/2017
 |**event_count**|**bigint**|発生したイベントの総数。|  
 |**dropped_event_count**|**int**|削除されたイベントの総数。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

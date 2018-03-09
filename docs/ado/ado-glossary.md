@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ADO, glossary
+helpviewer_keywords:
+- ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddc7cab1de929354827a316770f373c0792828e8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1b27ecc0b3905a12d453cc53d6ac941fc80708f9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-glossary-terms"></a>ADO 用語集の用語
 このトピックでは、ADO に関連する用語を定義します。
@@ -141,7 +143,7 @@ ms.lasthandoff: 11/17/2017
 
  一般に、階層内の階層は、top を含むランク付けされた構造体レベルし、下位レベル。 ADO では、階層的な**レコード セット**レコードとチャプターの間の親子リレーションシップを表すために使用します。 ADO でも**レコード**と**ストリーム**フォルダーおよびドキュメントのような階層ツリー構造にアクセスするオブジェクトを使用できます。 ADO MD も含まれています。**階層**OLAP キューブのディメンションのレベル間のリレーションシップを表すオブジェクト。 親子リレーションシップ、章、ツリーに階層のレコード セットを参照してください。
 
-## <a name="i-l"></a>I L
+## <a name="i-l"></a>I-L
  インターネット サーバーでは、Microsoft® インターネット インフォメーション サービス (IIS) を実行している Windows NT® Server または Windows 2000 Server などの関数の ISAPI (Internet Server Application Programming Interface) セット。
 
  キーの列またはテーブル内の 1 つの行を一意に識別する列多くの場合、テーブルのインデックス化に使用されます。
@@ -155,7 +157,7 @@ ms.lasthandoff: 11/17/2017
 
  MIME は、バイナリ データのパブリッシュおよびインターネット上の読み取りを許可する標準です。 バイナリ データを含むファイルのヘッダーには、データの MIME の種類が含まれています。これにより、クライアント プログラム (インスタンスの Web ブラウザーやメール パッケージ) プレーン テキストの処理よりも、別の方法でデータを処理する必要があります。 たとえば、JPEG 画像を含む Web ドキュメントのヘッダーには、JPEG ファイル形式に固有の MIME の種類が含まれています。 これにより、1 つが存在する場合、JPEG ビューアーを使用してファイルを表示するブラウザーにします。
 
-## <a name="n-o"></a>N O
+## <a name="n-o"></a>N-O
  ノード階層ツリー構造内の要素です。 ルート、または別のノードの子ノードがあります。 ノードには、複数の子の親ことができます。 階層、ツリー、ルート、子、親も参照してください。
 
  オブジェクトへの参照を含むオブジェクトは変数 A 変数です。 たとえば、 `objCustomObject` [customobject] の型のオブジェクトが指す変数です。`Set objCustomObject = CreateObject(adodb.Recordset)`
@@ -215,7 +217,7 @@ ms.lasthandoff: 11/17/2017
 
  同期操作を次の操作の前に完了するコードによって実行される操作の開始可能性があります。 非同期操作を参照してください。
 
-## <a name="t-z"></a>T Z
+## <a name="t-z"></a>T-Z
  ツリー (ノード) の要素間の階層リレーションシップを表す構造です。 (ルート) ツリーの最上位レベルに 1 つのノードがあります。 ルートの下に、複数の子があります。 それぞれの子順番の他の子、したがってツリーのように分岐の親があります。 ドキュメントとその他のフォルダーを含むフォルダーでは、ツリー構造の一般的な例を示します。 階層ノード、ルート、子である親も参照してください。
 
  Web サーバーを Web サービス、およびイントラネットおよびインターネット ユーザーにページを提供するコンピューター。

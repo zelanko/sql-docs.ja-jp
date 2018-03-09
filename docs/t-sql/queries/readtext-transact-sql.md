@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - READTEXT_TSQL
 - READTEXT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - column reading [SQL Server]
 - READTEXT statement
 - reading columns
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 02bf4a96756b8bf3a63a75dec97fe6f58abc8a6d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: c1659dfcc9ca8908ce756eb41b32fd30649decfa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,16 +51,16 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
 ```  
   
 ## <a name="arguments"></a>引数  
- *テーブル***です。** *列*  
+ *table* **.** *column*  
  読み取り元のテーブルと列の名前です。 テーブルおよび列名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。 テーブル名と列名は必ず指定してください。しかし、データベース名と所有者の指定は省略可能です。  
   
  *text_ptr*  
- 有効なテキスト ポインターです。 *text_ptr*する必要があります**binary (16)**です。  
+ 有効なテキスト ポインターです。 *text_ptr* must be **binary(16)**.  
   
- *オフセット*  
+ *offset*  
  バイトの数です (ときに、**テキスト**または**イメージ**データ型を使用) または文字 (ときに、 **ntext**データ型を使用)、の読み取りを開始する前にスキップする**テキスト**、**イメージ**、または**ntext**データ。  
   
- *サイズ*  
+ *size*  
  バイトの数です (ときに、**テキスト**または**イメージ**データ型を使用) または文字 (ときに、 **ntext**データ型を使用) 読み取るデータのです。 場合*サイズ*0 の場合は、4 kb のデータを読み取る。  
   
  HOLDLOCK  
@@ -71,7 +73,7 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
   
  値、@@TEXTSIZE関数 READTEXT READTEXT の指定したサイズよりも小さい場合に指定されたサイズよりも優先されます。 @@TEXTSIZE関数は、SET TEXTSIZE ステートメントによってセットが返されるデータのバイト数の制限を指定します。 TEXTSIZE のセッションの設定を設定する方法の詳細については、次を参照してください。 [SET TEXTSIZE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-textsize-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  READTEXT 権限は、特に指定のない限り指定されたテーブルで SELECT 権限を持つユーザーに与えられます。 SELECT 権限を譲渡した場合は、READTEXT 権限を譲渡できます。  
   
 ## <a name="examples"></a>使用例  

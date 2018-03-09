@@ -3,8 +3,9 @@ title: "Microsoft OLE DB リモート プロバイダー (ADO サービス プ�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB remoting provider
 - remoting provider [ADO]
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fea86b408c80a0165ddfae0899df4fa072839163
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 189be564682e59c64a49e7b53dd9e6a763e92cdd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB のリモート処理のプロバイダーの概要
 Microsoft OLE DB リモート プロバイダーをクライアント コンピューターでリモート コンピューター上のデータ プロバイダーを呼び出すためのローカル ユーザーを有効にします。 リモート コンピューター上のローカル ユーザーをした場合と同様、リモート コンピューターのデータ プロバイダーのパラメーターを指定します。 次に、リモート コンピューターにアクセスするリモート プロバイダーによって使用されるパラメーターを指定します。 ローカル ユーザーをした場合とするリモート コンピューターにアクセスできます。
@@ -80,7 +81,7 @@ cn.Properties("Internet Timeout") = 5000
 
  該当するショートカットは、 **.rds ですDataControl**オブジェクト[SQL](../../../ado/reference/rds-api/sql-property.md)プロパティは使用できません。 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト**開く**メソッド*ソース*引数は代わりに使用されます。
 
- **注**"...; を指定します。リモート プロバイダー MS リモートを = です。..."4 層のシナリオを作成します。 4 層のシナリオでは、テストされていないと、必要はありません。
+ **注**"...; を指定します。リモート プロバイダー MS リモートを = です。 ..."4 層のシナリオを作成します。 4 層のシナリオでは、テストされていないと、必要はありません。
 
 ## <a name="example"></a>例
  この例で、クエリを実行し、**作成者**のテーブル、 **Pubs**という名前のサーバー上のデータベース*通常*です。 リモート データ ソースおよびリモート サーバーの名前で提供される、[開く](../../../ado/reference/ado-api/open-method-ado-connection.md)のメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト、および SQL クエリで指定された、[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)のメソッド、[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 A **Recordset**オブジェクトが返される、編集、およびデータ ソースを更新するために使用します。

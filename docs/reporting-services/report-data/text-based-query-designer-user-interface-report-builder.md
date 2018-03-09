@@ -8,24 +8,22 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10010"
 helpviewer_keywords: query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fdb2de3aefff54bd7350a6b1831ccea8f7a71721
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a7ec1e4a1b2b9f96dc14e7190ac2212254a5c5ff
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>テキストベースのクエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
   デザイン時に、データ ソースでサポートされているクエリ言語でクエリを指定し、クエリを実行し、結果を表示するには、テキスト ベースのクエリ デザイナーを使用します。 複数の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、カスタム データ処理拡張機能のクエリまたはコマンド構文、および式としてのクエリを指定できます。 テキスト ベースのクエリ デザイナーはクエリを前処理せず、あらゆる種類のクエリ構文に対応できるため、これは多くの種類のデータ ソースで既定のクエリ デザイナー ツールになっています。  
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/05/2017
   
 |ペイン|機能|  
 |----------|--------------|  
-|[クエリ]|[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ テキストを表示します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを記述または編集する際に、このペインを使用します。|  
+|クエリ|[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ テキストを表示します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを記述または編集する際に、このペインを使用します。|  
 |[結果]|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、 **[実行]**をクリックするか、ツール バーの **[実行]** ボタンをクリックします。|  
   
 #### <a name="example"></a>例  

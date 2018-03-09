@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - WHERE_TSQL
 - WHERE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - retrieving rows
 - clauses [SQL Server], WHERE
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - row retrieval [SQL Server], WHERE clause
 - WHERE clause
 ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 122bf7814a90223319310c49749eb94eea02581a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: c91187d506ab994c654159da24ff0904b0b8b96a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="where-transact-sql"></a>WHERE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>引数  
-\<*search_condition* > 返される行が満たす条件を定義します。 検索条件に含まれる述語の数に制限はありません。 検索条件および述語の詳細については、次を参照してください。[検索条件 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md).  
+\<*search_condition* > 返される行が満たす条件を定義します。 検索条件に含まれる述語の数に制限はありません。 検索条件および述語の詳細については、次を参照してください。[検索条件 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md)  
   
 ## <a name="examples"></a>使用例  
  以下の例は、`WHERE` 句でいくつかの一般的な検索条件を使用する方法を示しています。  

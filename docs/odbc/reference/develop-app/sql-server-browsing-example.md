@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7a7076a1a1fad871c03c55ef87e87591d45acb3a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 358a1ce1e7351fa61e19b78f766a7aaa71c3b441
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-browsing-example"></a>SQL Server の参照の例
 例を次にどのように**SQLBrowseConnect** for SQL Server ドライバーで利用可能な接続を閲覧するために使用する場合があります。 最初に、アプリケーションは、接続ハンドルを要求します。  
@@ -82,7 +82,7 @@ SQLBrowseConnect(hdbc, "DATABASE=pubs;", SQL_NTS, BrowseResult,
 "DSN=MySQLServer;SERVER=green;UID=Smith;PWD=Sesame;DATABASE=pubs;"  
 ```  
   
- ドライバーによって返される最後の接続文字列には、各キーワードの後にわかりやすい名前は含まれません。 また、アプリケーションで指定されていないオプションのキーワードを含んでいるか。 アプリケーションがこの文字列を使用して**SQLDriverConnect** (接続を切断) した後、現在の接続ハンドル上のデータ ソースへの再接続をまたは別の接続ハンドル上のデータ ソースに接続します。 例:  
+ ドライバーによって返される最後の接続文字列には、各キーワードの後にわかりやすい名前は含まれません。 また、アプリケーションで指定されていないオプションのキーワードを含んでいるか。 アプリケーションがこの文字列を使用して**SQLDriverConnect** (接続を切断) した後、現在の接続ハンドル上のデータ ソースへの再接続をまたは別の接続ハンドル上のデータ ソースに接続します。 例 :  
   
 ```  
 SQLDriverConnect(hdbc, hwnd, BrowseResult, SQL_NTS, ConnStrOut,  

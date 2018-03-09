@@ -1,5 +1,5 @@
 ---
-title: "sysmail_help_queue_sp (TRANSACT-SQL) |Microsoft ドキュメント"
+title: sysmail_help_queue_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_queue_sp
 - sysmail_help_queue_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_queue_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_queue_sp
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 233187d223f7d22c5a950fcb2d29063f37be7c7d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5e83aba8601f4329a496229eca329035a95b283c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@queue_type**  =] **'***queue_type***'**  
+ [ **@queue_type** = ] **'***queue_type***'**  
  省略可能な引数として指定された型の電子メールを削除する、 *queue_type*です。 *queue_type*は**nvarchar (6)**既定値はありません。 有効なエントリは**メール**と**ステータス**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -53,7 +56,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**queue_type**|**nvarchar (6)**|キューの種類。 指定できる値は**メール**と**ステータス**です。|  
+|**queue_type**|**nvarchar(6)**|キューの種類。 指定できる値は**メール**と**ステータス**です。|  
 |**長さ**|**int**|指定したキュー内のメール アイテムの数。|  
 |**状態**|**nvarchar(64)**|監視の状態。 指定できる値は**非アクティブ**(キューがアクティブ) でない**通知**(キューの有効期限がされた受信)、および**RECEIVES_OCCURRING** (キューは受信中)。|  
 |**last_empty_rowset_time**|**DATETIME**|キューが最後に空になった日時。 24 時間形式、GMT タイム ゾーンで表されます。|  
@@ -62,7 +65,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ## <a name="remarks"></a>解説  
  データベース メールのトラブルシューティングを行うとき**sysmail_help_queue_sp**を項目の数は、キューに表示して最後に、キューの状態がアクティブにします。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  既定では、メンバーにのみ、 **sysadmin**固定サーバー ロールは、このプロシージャを使用できます。  
   
 ## <a name="examples"></a>使用例  

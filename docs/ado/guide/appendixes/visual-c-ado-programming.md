@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae662529fc9297fa709d1a185b63d0648b0af903
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 995c833e24f23c7a30ea8c4e5893215222e0867a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-ado-programming"></a>Visual C ADO プログラミング
 ADO の API リファレンスでは、ADO アプリケーション プログラミング インターフェイス (API)、Microsoft Visual Basic に似た構文を使用するの機能について説明します。 ADO プログラマが Visual Basic、Visual C などのさまざまな言語を使用する対象とするユーザーには、すべてのユーザーが、(とそうでない、 **#import**ディレクティブ)、および Visual j (ADO/WFC クラス パッケージ) にします。  
@@ -44,7 +46,7 @@ ADO の API リファレンスでは、ADO アプリケーション プログラ
   
  クラス (メソッドまたはプロパティの呼び出し) 内で各操作がある操作を呼び出す、直接 (つまり、「生の」形式の操作)、宣言と生の操作を呼び出すし、succ を実行する操作が失敗した場合は、COM エラーをスローする宣言essfully です。 操作が、プロパティの場合は、通常は、Visual Basic などの構文のある操作の代替構文を作成するコンパイラ ディレクティブ。  
   
- プロパティの値を取得する操作は、フォームの名前を持つ**取得***プロパティ*です。 プロパティの値を設定する操作は、フォームの名前を持つ**Put***プロパティ*です。 ADO オブジェクトにポインターを使用してプロパティの値を設定する操作は、フォームの名前を持つ**PutRef***プロパティ*です。  
+ プロパティの値を取得する操作は、フォームの名前を持つ **取得 * * * プロパティ*です。 プロパティの値を設定する操作は、フォームの名前を持つ **Put * * * プロパティ*です。 ADO オブジェクトにポインターを使用してプロパティの値を設定する操作は、フォームの名前を持つ **PutRef * * * プロパティ*です。  
   
  取得またはこれらの形式の呼び出しを持つプロパティを設定することができます。  
   
@@ -69,13 +71,13 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```  
   
- コンパイラは、適切な生成**取得***-*、 **Put**-、または**PutRef***プロパティ*代替構文は宣言されており、プロパティがされているかどうかに基づいて、呼び出しの読み取りまたは書き込まれます。  
+ コンパイラは、適切な生成 **Get * * *-*、 **Put**-、または **PutRef * * * プロパティ*代替構文は宣言されており、プロパティは使用するかどうかに基づいて、呼び出し読み取りまたは書き込まれます。  
   
  **__Declspec(property...)**のみコンパイラ ディレクティブを宣言できます**取得**、 **put**、または**取得**と**put**関数の代替構文です。 読み取り専用操作だけが、**取得**宣言; のみが書き込み専用の操作、**配置**宣言以外の操作は両方の読み取りし、書き込み両方を**取得**と**put**宣言します。  
   
- 2 つだけ宣言も有効であるこのディレクティブを指定します。ただし、各プロパティがプロパティの 3 つの関数を必要があります:**取得***プロパティ*、 **Put***プロパティ*、および**PutRef***プロパティ*です。 その場合は、プロパティの 2 つの形式では、代替構文があります。  
+ 2 つだけ宣言も有効であるこのディレクティブを指定します。ただし、各プロパティがプロパティの 3 つの関数を必要があります: **取得 * * * プロパティ*、**Put * * * プロパティ*、および **PutRef * * * プロパティ*です。 その場合は、プロパティの 2 つの形式では、代替構文があります。  
   
- たとえば、**コマンド**オブジェクト**ActiveConnection**プロパティは、別の構文で宣言されて**取得***ActiveConnection*と**PutRef***ActiveConnection*です。 **PutRef**の実習では通常設定する、開いているために、構文は、適切な選択**接続**オブジェクト (つまり、**接続**オブジェクト ポインター) このプロパティ。 その一方で、**レコード セット**オブジェクトが**取得**-、 **Put**-、および**PutRef***ActiveConnection*、操作が別の構文ではありません。  
+ たとえば、**コマンド**オブジェクト**ActiveConnection**プロパティが、別の構文で宣言された **取得 * * * ActiveConnection*と **PutRef ** * ActiveConnection*です。 **PutRef**の実習では通常設定する、開いているために、構文は、適切な選択**接続**オブジェクト (つまり、**接続**オブジェクト ポインター) このプロパティ。 その一方で、**レコード セット**オブジェクトが**取得**-、 **Put**-、および **PutRef * * * ActiveConnection*操作が代替オプションがないです。構文があります。  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>コレクション、GetItem メソッド、および項目のプロパティ  
  ADO など、いくつかのコレクションを定義する**フィールド**、**パラメーター**、**プロパティ**、および**エラー**です。 Visual c で、 **GetItem (***インデックス***)**メソッドがコレクションのメンバーを返します。 *インデックス*は、**バリアント**の値は、コレクション内のメンバーの数値インデックスまたはメンバーの名前を含む文字列。  
@@ -226,7 +228,7 @@ Dim rst As ADODB.Recordset
 Dim rst As New ADODB.Recordset  
 ```  
   
- - または -  
+ -または-  
   
 ```  
 Dim rst As ADODB.Recordset  
@@ -245,14 +247,14 @@ _RecordsetPtr  rs;
 _RecordsetPtr  rs("ADODB.Recordset");  
 ```  
   
- - または -  
+ -または-  
   
 ```  
 _RecordsetPtr  rs;  
 rs.CreateInstance("ADODB.Recordset");  
 ```  
   
- - または -  
+ -または-  
   
 ```  
 _RecordsetPtr  rs;  
@@ -437,7 +439,7 @@ cn.Close
 End Sub  
 ```  
   
- この Visual C の例を示します、**取得**/**Put**/**PutRef***プロパティ*です。  
+ この Visual C の例を示します、**取得**/**Put**/**PutRef * * * プロパティ*です。  
   
 #### <a name="notes"></a>注  
  次の注意事項は、コード例ではコメント部分に対応します。  

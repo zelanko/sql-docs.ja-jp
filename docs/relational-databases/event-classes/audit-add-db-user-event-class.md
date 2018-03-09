@@ -8,30 +8,33 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Add DB User event class
+helpviewer_keywords:
+- Audit Add DB User event class
 ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25d15b25de3c25223cb2a49a62f442afc51b5603
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f77357183147cf4fc5e6a651fae6543bd4d7743a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Audit Add DB User** イベント クラスは、データベースにデータベース ユーザーとしてログインが追加または削除されるたびに発生します。 このイベント クラスは、 **sp_grantdbaccess**、 **sp_revokedbaccess**、 **sp_adduser**、および **sp_dropuser** プロシージャに対して使用します。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Audit Add DB User** イベント クラスは、データベースにデータベース ユーザーとしてログインが追加または削除されるたびに発生します。 このイベント クラスは、 **sp_grantdbaccess**、 **sp_revokedbaccess**、 **sp_adduser**、および **sp_dropuser** プロシージャに対して使用します。  
   
  このイベント クラスは、今後のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で廃止される可能性があります。 代わりに、 **Audit Database Principal Management** イベント クラスを使用することをお勧めします。  
   
 ## <a name="audit-add-db-user-event-class-data-columns"></a>Audit Add DB User イベント クラスのデータ列  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|Description|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  

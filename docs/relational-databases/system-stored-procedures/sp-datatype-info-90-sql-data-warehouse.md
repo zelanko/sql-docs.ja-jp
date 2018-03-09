@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71d31ffc47781bac881e8d1af0116d3adf0731d0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0989c6224160fdad3059083358eb2ef84b5990e3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -41,10 +43,10 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@data_type=** ] *data_type*  
+ [ **@data_type=** ] *data_type*  
  対象となるデータ型のコード番号を指定します。 すべてのデータ型の一覧を表示するには、このパラメーターを省略します。 *data_type*は**int**、既定値は 0 です。  
   
- [  **@ODBCVer=** ] *odbc_version*  
+ [ **@ODBCVer=** ] *odbc_version*  
  使用している ODBC のバージョンを指定します。 *odbc_version*は**tinyint**、既定値は 2 です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -57,9 +59,9 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|DBMS に依存するデータ型です。|  
 |DATA_TYPE|**smallint**|このデータ型のすべての列がマップされる ODBC 型のコードです。|  
 |PRECISION|**int**|データ ソースでのデータ型の最大有効桁数です。 有効桁数を適用できないデータ型については、NULL が返されます。 PRECISION 列の戻り値は 10 進表記です。|  
-|LITERAL_PREFIX|**varchar (**32**)**|定数の先頭に記述する文字です。 単一引用符など、(**'**) 文字の種類とバイナリの 0x をします。|  
-|LITERAL_SUFFIX|**varchar (**32**)**|定数の末尾に記述する文字です。 単一引用符など、(**'**) 文字の種類とバイナリの引用符のです。|  
-|CREATE_PARAMS|**varchar (**32**)**|データ型の作成パラメーターの説明です。 たとえば、 **10 進**は"precision, scale"、 **float**が NULL の場合、および**varchar** "max_length"は、します。|  
+|LITERAL_PREFIX|**varchar(**32**)**|定数の先頭に記述する文字です。 単一引用符など、(**'**) 文字の種類とバイナリの 0x をします。|  
+|LITERAL_SUFFIX|**varchar(**32**)**|定数の末尾に記述する文字です。 単一引用符など、(**'**) 文字の種類とバイナリの引用符のです。|  
+|CREATE_PARAMS|**varchar(**32**)**|データ型の作成パラメーターの説明です。 たとえば、 **10 進**は"precision, scale"、 **float**が NULL の場合、および**varchar** "max_length"は、します。|  
 |NULLABLE|**smallint**|NULL 値を許容するかどうかを示します。<br /><br /> 1 = null 値を許可します。<br /><br /> 0 = は null 値を許容します。|  
 |CASE_SENSITIVE|**smallint**|大文字と小文字を区別するかどうかを示します。<br /><br /> 1 = この型のすべての列では、大文字と小文字を区別します (照合の場合)。<br /><br /> 0 = この型のすべての列では、大文字と小文字を区別しません。|  
 |SEARCHABLE|**smallint**|列の型の検索機能を示します。<br /><br /> 1 = 検索できません。<br /><br /> 2 = LIKE で検索できます。<br /><br /> 3 = WHERE で検索できます。<br /><br /> 4 = WHERE または LIKE で検索できます。|  
@@ -78,7 +80,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ## <a name="remarks"></a>解説  
  sp_datatype_info は、ODBC で SQLGetTypeInfo と同じです。 結果は、まず DATA_TYPE の順序で、次にデータ型が対応する ODBC SQL データ型にどれだけ正確にマップされているのかに基づいて返されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

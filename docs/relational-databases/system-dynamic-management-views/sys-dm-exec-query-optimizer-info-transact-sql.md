@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_query_optimizer_info (TRANSACT-SQL) |Microsoft ドキュメント"
+title: sys.dm_exec_query_optimizer_info (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_query_optimizer_info
 - sys.dm_exec_query_optimizer_info_TSQL
 - sys.dm_exec_query_optimizer_info
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_optimizer_info dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_optimizer_info dynamic management view
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d954f21d2cfe9a99701f81a9439c9b4a82bd30a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c7b87cc0b34d33abd8f658a7ff20852200b93a2c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,20 +43,20 @@ ms.lasthandoff: 11/17/2017
   
 |名前|データ型|Description|  
 |----------|---------------|-----------------|  
-|**カウンター**|**nvarchar (4000)**|オプティマイザーの統計イベントの名前。|  
-|**出現する位置**|**bigint**|このカウンターに関する最適化イベントの発生回数。|  
-|**値**|**float**|1 回のイベント発生あたりの平均プロパティ値。|  
-|**pdw_node_id**|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|**counter**|**nvarchar (4000)**|オプティマイザーの統計イベントの名前。|  
+|**occurrence**|**bigint**|このカウンターに関する最適化イベントの発生回数。|  
+|**value**|**float**|1 回のイベント発生あたりの平均プロパティ値。|  
+|**pdw_node_id**|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 階層には、データベースの VIEW DATABASE STATE 権限が必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard および Basic 階層が必要です、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理者アカウントです。  
   
 ## <a name="remarks"></a>解説  
- **sys.dm_exec_query_optimizer_info**次のプロパティ (カウンター) が含まれています。 すべての発生回数の値は累積され、システムの再起動時に 0 に設定されます。 値フィールドのすべての値は、システムの再起動時に NULL に設定されます。 平均を示す列のすべての値では、平均計算の分母として、同一行を基にした発生回数の値が使用されます。 すべてのクエリの最適化のときに測定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への変更を判断**dm_exec_query_optimizer_info**、両方のユーザーとシステムによって生成されたクエリを含むです。 既にキャッシュされている計画の実行がの値を変更していない**dm_exec_query_optimizer_info**、大幅な最適化のみです。  
+ **sys.dm_exec_query_optimizer_info** contains the following properties (counters). すべての発生回数の値は累積され、システムの再起動時に 0 に設定されます。 値フィールドのすべての値は、システムの再起動時に NULL に設定されます。 平均を示す列のすべての値では、平均計算の分母として、同一行を基にした発生回数の値が使用されます。 すべてのクエリの最適化のときに測定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への変更を判断**dm_exec_query_optimizer_info**、両方のユーザーとシステムによって生成されたクエリを含むです。 既にキャッシュされている計画の実行がの値を変更していない**dm_exec_query_optimizer_info**、大幅な最適化のみです。  
   
-|カウンター|個数|値|  
+|カウンター|個数|[値]|  
 |-------------|----------------|-----------|  
 |optimizations|最適化の合計数。|適用なし|  
 |elapsed time|最適化の合計数。|個別のステートメント (クエリ) の最適化ごとの平均経過時間 (秒単位)。|  

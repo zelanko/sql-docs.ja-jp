@@ -6,22 +6,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 442f4f434e019da241fcaecb380c967d0f405fd6
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 5d9f60684cc749c35674233fbdaaa222953396d9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>事前トレーニング済みの機械学習の SQL Server 上のモデルをインストールします。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、事前トレーニング済みモデルを SQL Server のインスタンスに追加済みの R Services または Machine Learning のサービスのインストール方法について説明します。
 
@@ -41,9 +42,9 @@ SQL Server のデータを事前トレーニング済みモデルを使用する
 
 各ネットワークの構成が次の参照の実装に基づいています。
 
-+ ResNet 18
-+ ResNet 50
-+ ResNet 101
++ ResNet-18
++ ResNet-50
++ ResNet-101
 + AlexNet
 
 これらのモデルの詳細については、次を参照してください[事前トレーニング済みの機械学習のセンチメント分析とイメージ検出モデル。](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)

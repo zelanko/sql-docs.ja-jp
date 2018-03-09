@@ -5,29 +5,27 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a4f1dcea3c74fdf61af401a854aba9c2166f5610
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0159070eb0405e49f9813828aa82b1483008b61f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>キューブ内のデータおよびメタデータの参照
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用して、**ブラウザー**キューブ データの参照をキューブ デザイナーのタブです。 このビューでは、キューブ構造を検証し、データベース オブジェクトのデータ、計算、書式設定、およびセキュリティを確認できます。 レポート ツールや他のクライアント アプリケーションで、キューブがユーザーにどのように表示されるかを迅速に検証できます。 キューブのデータを参照すると、異なるディメンションを表示し、メンバーをドリル ダウンし、ディメンションをスライスできます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+キューブ デザイナーの **[ブラウザー]** タブを使用すると、キューブ データを参照できます。 このビューでは、キューブ構造を検証し、データベース オブジェクトのデータ、計算、書式設定、およびセキュリティを確認できます。 レポート ツールや他のクライアント アプリケーションで、キューブがユーザーにどのように表示されるかを迅速に検証できます。 キューブのデータを参照すると、異なるディメンションを表示し、メンバーをドリル ダウンし、ディメンションをスライスできます。  
   
  キューブを参照するには、その前にキューブを処理し、再接続する必要があります。 キューブの処理後、キューブ デザイナーの **[ブラウザー]** タブが開きます。 ツール バーの [再接続] ボタンをクリックし、接続を更新します。  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
   
 -   メタデータ ペインでディメンションを展開し、フィルター ペインに階層をドラッグします。  
   
-     \- - または -  
+     \- または -  
   
 -   **ディメンション**の列、**フィルター**  ウィンドウで、をクリックして**\<次元の選択 >**リストから、ディメンションを選択し、をクリックして**\<階層を選択 >**で、**階層**列と、一覧から階層を選択します。  
   

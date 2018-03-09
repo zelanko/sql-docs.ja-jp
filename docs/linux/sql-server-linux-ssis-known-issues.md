@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: edff09c1c66a1b3c97a80d42d5a1d9702dca3e0c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c366afc1b8755a22b13fa6224ec117db045c8dd3
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>制限事項と Linux の SSIS の既知の問題
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 この記事の内容について説明します現在の制限事項と既知の問題 SQL Server Integration Services (SSIS) を Linux 上。
 
@@ -40,7 +42,7 @@ ms.lasthandoff: 12/08/2017
 
 その他の制限事項と Linux 上の SSIS に関する既知の問題には、次を参照してください。、[リリース ノート](sql-server-linux-release-notes.md#ssis)です。
 
-## <a name="components"></a>サポートされており、サポートされていないコンポーネント
+## <a name="components"></a> サポートされており、サポートされていないコンポーネント
 
 次の組み込みの Integration Services コンポーネントは、Linux でサポートされます。 Linux プラットフォーム上の制限は、次の表で説明したようにそれらの一部があります。
 
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/08/2017
 - 式タスク
 - FTP タスク
 - Web サービス タスク
-- XML タスク
+- XML Task
 
 ### <a name="control-flow-tasks-supported-with-limitations"></a>制御フロー タスクの制限付きでサポート
 
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/08/2017
 | ADO.NET ソースと変換先 | SQLClient データ プロバイダーのみをサポートします。 |
 | フラット ファイル ソースと変換先 | のみ、既定のパス マッピング規則を適用する、Windows 形式ファイル パスをサポートします。 たとえば`D:\home\ssis\travel.csv`なります`/home/ssis/travel.csv`です。 |
 | OData ソース | 基本認証のみをサポートします。 |
-| Odbc 入力元および変換先 | Linux 上の 64 ビットの Unicode ODBC ドライバーをサポートしています。 Linux 上の UnixODBC ドライバー マネージャーに依存します。 |
+| ODBC のソースとターゲット | Linux 上の 64 ビットの Unicode ODBC ドライバーをサポートしています。 Linux 上の UnixODBC ドライバー マネージャーに依存します。 |
 | OLE DB ソースと変換先 | のみ SQL Server の SQL Server Native Client 11.0 と Microsoft OLE DB プロバイダーをサポートします。 |
 | | |
 
@@ -130,3 +132,8 @@ SQL Server ログ プロバイダーは、SQL 認証のみをサポートして�
 -   パスを指定しない場合、ログ プロバイダーは、ホストの現在のディレクトリに書き込みます。 現在のユーザーには、ホストの現在のディレクトリに対する書き込みアクセス許可が割り当てられていない、ログ プロバイダーは、エラーが発生します。
 -   ファイル パスで環境変数を使用することはできません。 環境変数を指定すると、ファイル パスで指定されたリテラルのテキストが表示されます。 指定する場合など、 `%TMP%/log.txt`、ログ プロバイダーは、リテラル テキストを追加する`/%TMP%/log.txt`ホストの現在のディレクトリにします。
 
+## <a name="related-content-about-ssis-on-linux"></a>Linux 上の SSIS についての関連コンテンツ
+-   [抽出、変換、および SSIS Linux でのデータを読み込む](sql-server-linux-migrate-ssis.md)
+-   [Linux 上の SQL Server Integration Services (SSIS) のインストールします。](sql-server-linux-setup-ssis.md)
+-   [Ssis conf で Linux 上の SQL Server Integration Services を構成します。](sql-server-linux-configure-ssis.md)
+-   [スケジュール SQL Server Integration Services パッケージの cron と Linux の実行](sql-server-linux-schedule-ssis-packages.md)

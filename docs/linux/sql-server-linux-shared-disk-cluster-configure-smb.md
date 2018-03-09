@@ -3,26 +3,26 @@ title: "フェールオーバー クラスター インスタンスの記憶域�
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8043cd57758749399500b206410694c1735b30e8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 704cb4dfb96a2293bf1a595fda781519b70183cb
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>フェールオーバー クラスター インスタンス: SMB - Linux に SQL Server を構成します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 この記事では、Linux 上のフェールオーバー クラスター インスタンス (FCI) の SMB 記憶域を構成する方法について説明します。 
  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/01/2017
 - SMB 共有は、高可用性にする必要があります。
 - セキュリティを設定する必要があります、SMB 共有に対する適切です。 次に、例から/etc/samba/smb.conf、SQLData1 は共有の名前を指定します。
 
-![05 smbsource][1]
+![05-smbsource][1]
 
 ## <a name="instructions"></a>Instructions
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/01/2017
     mkdir <TempDir>
     ```
 
-    <TempDir>フォルダーの名前です。 次の例では、/var/opt/mssql/tmp をという名前のフォルダーを作成します。
+    <TempDir> フォルダーの名前です。 次の例では、/var/opt/mssql/tmp をという名前のフォルダーを作成します。
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -172,7 +172,7 @@ ms.lasthandoff: 12/01/2017
     sudo systemctl status mssql-server
     ```
  
-   *    さらにテストするには、アクセス許可が正常であることを確認するデータベースを作成します。 次の例です。 TRANSACT-SQL を使用します。SSMS を使用することができます。
+   *    さらにテストするには、アクセス許可が正常であることを確認するデータベースを作成します。 次の例では、TRANSACT-SQL です。SSMS を使用することができます。
 
     ![10_testcreatedb][2] 
   
@@ -209,7 +209,7 @@ ms.lasthandoff: 12/01/2017
     mkdir <FolderName>
     ```
 
-    \<フォルダー名 > フォルダーの名前を指定します。 フォルダーの完全なパスを指定する必要は、適切な場所ではない場合。 次の例では、/var/opt/mssql/userdata をという名前のフォルダーを作成します。
+    \<フォルダー名 > フォルダーの名前を指定します。 フォルダーの完全なパスを指定する必要があります、適切な場所ではない場合。 次の例では、/var/opt/mssql/userdata をという名前のフォルダーを作成します。
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -239,7 +239,7 @@ ms.lasthandoff: 12/01/2017
  
    * スーパー ユーザーを使用できなくする exit」と入力します。
 
-   * テストするには、そのフォルダーにデータベースを作成します。 次に示す例では、sqlcmd を使用してデータベースを作成、コンテキストを切り替える、ファイルが、OS レベルが存在し、一時的な場所を削除します。 SSMS を使用することができます。
+   * テストするには、そのフォルダーにデータベースを作成します。 次の例では、sqlcmd を使用して、データベースを作成、コンテキストを切り替える、ファイルが、OS レベルが存在し、一時的な場所が削除されます。 SSMS を使用することができます。
  
    * 共有のマウントを解除します。 
 

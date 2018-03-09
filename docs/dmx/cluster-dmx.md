@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: Cluster
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f187086060a37471bf1e49567ac55d886ba11c18
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cec73e5b3c182073cfad14c3605183fe72732d72
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +46,7 @@ Cluster()
   
  **クラスター**関数は、クラスター名のスカラー値を返します。 ただし、別の関数の引数としてこの関数を使用する場合は、する必要があります記事として、\<クラスター列参照 >。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **クラスター**として使用することも、`<`クラスター列参照`>`の**PredictHistogram**関数。  
   
 ## <a name="examples"></a>使用例  

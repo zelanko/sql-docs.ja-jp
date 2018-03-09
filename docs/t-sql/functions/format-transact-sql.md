@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FORMAT_TSQL
 - FORMAT
-dev_langs: TSQL
-helpviewer_keywords: FORMAT function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- FORMAT function
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 43d702accc0611030c1c7ad0eda74d456711b694
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 46c7becb151b1942b411aefe337717172f207bb9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,12 +48,12 @@ FORMAT ( value, format [, culture ] )
  *value*  
  書式設定がサポートされているデータ型の式。 有効な型の一覧については、以下の「解説」のセクションにある表を参照してください。  
   
- *書式設定*  
+ *format*  
  **nvarchar**形式パターン。  
   
  *形式*引数含める必要があります、有効な .NET Framework 形式文字列 (たとえば、"C"または"D") は、標準書式指定文字列、またはカスタム文字のパターンとしての日付と数値 (たとえば、"MMMM DD, yyyy (dddd)"). 複合書式設定はサポートされていません。 これらの書式設定パターンの完全な説明については、一般書式指定文字列、カスタムの日付と時刻の形式、およびカスタム数値書式で .NET Framework のドキュメントを参照してください。 適切な開始点は、トピック「"[型の書式設定](http://go.microsoft.com/fwlink/?LinkId=211776)。"  
   
- *カルチャ*  
+ *culture*  
  省略可能な**nvarchar**カルチャを指定する引数。  
   
  場合、*カルチャ*引数が指定されていない、現在のセッションの言語を使用します。 この言語には、SET LANGUAGE ステートメントを使用して、暗黙的または明示的には設定されます。 *カルチャ*、引数として .NET Framework でサポートされている任意のカルチャを受け入れますで明示的にサポートされる言語に限定されるわけで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 場合、*カルチャ*引数が有効でない形式でエラーが発生します。  
@@ -212,5 +215,7 @@ SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35
   
 ## <a name="see-also"></a>参照  
  [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ [STR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/str-transact-sql.md)  
+ [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

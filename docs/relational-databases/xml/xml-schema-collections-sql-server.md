@@ -8,7 +8,8 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 581c46bbb59d9339bc91712a4e100d922e76813f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c8c7a11c64d487aa6f08d616d6bae70b24a742dc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML スキーマ コレクション (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 「[xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md)」で説明したように、SQL Server には、**xml** データ型を使った XML データのネイティブ ストレージが用意されています。 必要に応じて、XML スキーマ コレクションを使って **xml** 型の変数や列と XSD スキーマを関連付けることができます。 XML スキーマ コレクションにはインポートした XML スキーマが格納され、その後このコレクションを次の操作に使用します。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+「[xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md)」で説明したように、SQL Server には、**xml** データ型を使った XML データのネイティブ ストレージが用意されています。 必要に応じて、XML スキーマ コレクションを使って **xml** 型の変数や列と XSD スキーマを関連付けることができます。 XML スキーマ コレクションにはインポートした XML スキーマが格納され、その後このコレクションを次の操作に使用します。  
   
 -   XML インスタンスの検証  
   
@@ -117,7 +119,7 @@ ms.lasthandoff: 11/17/2017
   
 -   MODELGROUP  
   
- 例:  
+ 例 :  
   
 -   **SomeAttribute** は、ATTRIBUTE コンポーネントです。  
   

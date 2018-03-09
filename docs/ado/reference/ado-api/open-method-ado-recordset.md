@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Open
 - Recordset15::Open
-helpviewer_keywords: Open method [ADO]
+helpviewer_keywords:
+- Open method [ADO]
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 81a22742808fe2663f5601af91cb554764a8e46c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 74e6fc58d5b32313806301467ca48b9f033b083b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-recordset"></a>Open メソッド (ADO レコード セット)
 カーソルをオープン、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -45,13 +47,13 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  *ActiveConnection*  
  省略可。 いずれか、**バリアント**として評価された、有効な[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト変数名、または**文字列**を格納している[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)パラメーター。  
   
- *カーソル。*  
+ *CursorType*  
  省略可。 A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)を開くときに、プロバイダーが使用するカーソルの種類を決定する値、 **Recordset**です。 既定値は**adOpenForwardOnly**です。  
   
- *ロック。*  
+ *LockType*  
  省略可。 A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)ロック (同時実行) の種類を開くときに、プロバイダーを使用する必要がありますを決定する値、 **Recordset**です。 既定値は**adLockReadOnly**です。  
   
- *および*  
+ *Options*  
  省略可。 A**長い**プロバイダーを評価する方法を示す値、*ソース*引数を表している場合のもの以外の場合、**コマンド**オブジェクト、または、 **Recordset**以前保存されているファイルから復元する必要があります。 1 つまたは複数指定できます[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)または[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)値で、ビットごとの OR 演算子と組み合わせて使用できます。  
   
 > [!NOTE]

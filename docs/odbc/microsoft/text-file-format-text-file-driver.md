@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0451bf3965e35353d3465cd5bd873954638f2fd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b7d111fee1ae82fc3dbb1fff3eec2dd9dff53465
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-file-format-text-file-driver"></a>テキスト ファイルの形式 (テキスト ファイル ドライバー)
 テキストの ODBC ドライバーでは、両方の区切り記号付き固定幅テキスト ファイルをサポートします。 省略可能なヘッダー行と 0 個以上のテキスト行のテキスト ファイルで構成されます。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
  次の文章では、プログラマ、用に記述には、テキストの ODBC ドライバーで読み取ることができるテキスト ファイルの形式が定義されています。  
   
-|Format|[表記]|  
+|[形式]|[表記]|  
 |------------|--------------------|  
 |非表示|文字が示すように入力する必要があります。|  
 |*斜体*|文法で別の場所で定義されている引数|  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -33,19 +34,20 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 - bulk load [SQLXML], examples
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3e872d63c71817e8f79e261598875840ccb65f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cabf000a6a14a041a0d5e5dbedbafb07365dc63f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 一括読み込みの例 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]次の例では、Microsoft では、XML 一括読み込み機能[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。 それぞれの例では、XSD スキーマと、同等の XDR スキーマを提供します。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+以下の例では、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の XML 一括読み込み機能について示します。 それぞれの例では、XSD スキーマと、同等の XDR スキーマを提供します。  
   
 ## <a name="bulk-loader-script-validateandbulkloadvbs"></a>一括読み込みスクリプト (ValidateAndBulkload.vbs)  
  次のスクリプトで記述された、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript)、XML DOM に XML ドキュメントを読み込みます以外の場合はスキーマに対して検証し場合、ドキュメントは、有効な実行、XML 一括読み込みに XML、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブル。 このスクリプトは、後に示す個々の例で使用できます。  
@@ -123,7 +125,7 @@ End Function
   
 1.  次のテーブルを作成します。  
   
-    ```tsql  
+    ```sql  
     CREATE TABLE Cust(CustomerID  int PRIMARY KEY,  
                       CompanyName varchar(20),  
                       City        varchar(20));  
@@ -281,7 +283,7 @@ End Function
   
 1.  2 つのテーブルを作成する**tempdb**データベース。  
   
-    ```tsql  
+    ```sql  
     USE tempdb;  
     CREATE TABLE Cust(  
            CustomerID  int PRIMARY KEY,  
@@ -396,7 +398,7 @@ End Function
   
 1.  次の 3 つのテーブルを作成します。  
   
-    ```tsql  
+    ```sql  
     CREATE TABLE Ord (  
              OrderID     int  PRIMARY KEY,  
              CustomerID  varchar(5));  

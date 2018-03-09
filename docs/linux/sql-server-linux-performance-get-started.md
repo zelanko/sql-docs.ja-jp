@@ -1,37 +1,39 @@
----
+﻿---
 title: "Linux 上の SQL Server のパフォーマンス機能の概要 |Microsoft ドキュメント"
-description: "このトピックでは、SQL Server を初めて利用する、Linux ユーザーのための SQL Server のパフォーマンス機能の概要を示します。これらの例の多くの機能はすべてのプラットフォームで動作しますが、この記事は Linux についてとなります。"
+description: "この記事では、SQL Server に追加された新しい Linux ユーザーの SQL Server のパフォーマンス機能の概要を示します。 すべてのプラットフォームでは、これらの例の多くは機能が Linux にこの記事のコンテキストが存在します。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: d7fdf285c7ab6a19dd4367c38745008e83167a9a
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 73b452cf99016b4b4f38c7debacadf32a270421d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux 上の SQL Server のパフォーマンス機能のチュートリアル
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server を初めて利用する Linux ユーザーの場合、次のタスクはパフォーマンス機能の一部についての解説となります。 これらは Linux に固有のものではありませんが、より詳しく調べたい領域を知るのに役立ちます。 各例では、その領域の詳細なドキュメントのリンクが提供されます。
 
 > [!NOTE]
-> 次の例では、AdventureWorks サンプル データベースを使用します。 このサンプル データベースを入手し、インストールする方法については、次を参照してください。 [Windows から Linux に SQL Server のデータベースを復元](sql-server-linux-migrate-restore-database.md)
+> 次の例では、AdventureWorks サンプル データベースを使用します。 このサンプル データベースを入手し、インストールする方法については、次を参照してください。 [Windows から Linux に SQL Server のデータベースを復元](sql-server-linux-migrate-restore-database.md)。
 
 ## <a name="create-a-columnstore-index"></a>列ストア インデックスを作成します。
-列ストア インデックスは、列ストアと呼ばれる列指向データ形式で大規模なストアのデータを格納して、クエリを実行するためのテクノロジです。  
+列ストア インデックスは、列ストアと呼ばれる列指向データ形式で大規模なストアのデータを格納して、クエリを実行するためのテクノロジです。  
 
-1. 以下の T-SQL を実行することによって、SalesOrderDetail のテーブルに列ストア インデックスを追加します。 
+1. 次の TRANSACT-SQL コマンドを実行することによって、salesorderdetail の各テーブルに列ストア インデックスを追加します。
 
    ```sql
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
@@ -40,7 +42,7 @@ SQL Server を初めて利用する Linux ユーザーの場合、次のタス�
    GO
    ```
 
-2. 次のクエリを実行します。このクエリでは、列ストア インデックスを使用してテーブルをスキャンします。 
+2. 列ストア インデックスを使用して、テーブルをスキャンする次のクエリを実行します。
 
    ```sql
    SELECT ProductID, SUM(UnitPrice) SumUnitPrice, AVG(UnitPrice) AvgUnitPrice,
@@ -50,7 +52,7 @@ SQL Server を初めて利用する Linux ユーザーの場合、次のタス�
       ORDER BY ProductID
    ```
 
-3. 列ストア インデックスの object_id を参照して SalesOrderDetail テーブルの使用状況の統計に表示されることを確認することにより、列ストア インデックスが使用されたことを確認します。 
+3. 列ストア インデックスの object_id を参照して SalesOrderDetail テーブルの使用状況の統計に表示されることを確認することにより、列ストア インデックスが使用されたことを確認します。
 
    ```sql
    SELECT * FROM sys.indexes WHERE name = 'IX_SalesOrderDetail_ColumnStore'
@@ -63,10 +65,10 @@ SQL Server を初めて利用する Linux ユーザーの場合、次のタス�
    ```
    
 ## <a name="use-in-memory-oltp"></a>インメモリ OLTP を使用します。
-SQL Server では、アプリケーションのシステムのパフォーマンスを大幅に改善できるインメモリ OLTP 機能を提供します。評価ガイドのこのセクションでは、コンパイルまたは解釈することなくテーブルにアクセスできる、ネイティブ コンパイル ストアド プロシージャと、メモリに格納されているメモリ最適化テーブルを作成する手順を説明します。 
+SQL Server では、アプリケーションのシステムのパフォーマンスを大幅に改善できるインメモリ OLTP 機能を提供します。  評価ガイドのこのセクションでは、コンパイルまたは解釈することなくテーブルにアクセスできる、ネイティブ コンパイル ストアド プロシージャと、メモリに格納されているメモリ最適化テーブルを作成する手順を説明します。
 
 ### <a name="configure-database-for-in-memory-oltp"></a>インメモリ OLTP でのデータベースを構成します。
-1. インメモリ OLTP を使用するには、データベースで少なくとも 130 の互換性レベルを設定することを推奨します。  AdventureWorks の現在の互換性レベルを確認するには、次のクエリを使用します。
+1. インメモリ OLTP を使用するには、データベースで少なくとも 130 の互換性レベルを設定することを推奨します。  AdventureWorks の現在の互換性レベルを確認するには、次のクエリを使用します。  
 
    ```sql
    USE AdventureWorks
@@ -85,14 +87,14 @@ SQL Server では、アプリケーションのシステムのパフォーマン
    GO
    ```
 
-2. トランザクションにディスク ベース テーブルとメモリ最適化テーブルの両方が含まれる場合、メモリ最適化部分のトランザクションはスナップショットと呼ばれるトランザクション分離レベルで動作させることが重要です。  コンテナーをまたがるトランザクションでメモリ最適化テーブルに対してこのレベルを確実に適用するには、次を実行します。 
+2. トランザクションにディスク ベース テーブルとメモリ最適化テーブルの両方が含まれる場合、メモリ最適化部分のトランザクションはスナップショットと呼ばれるトランザクション分離レベルで動作させることが重要です。  コンテナーをまたがるトランザクションでメモリ最適化テーブルに対してこのレベルを確実に適用するには、次を実行します。
 
    ```sql
    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
    GO
    ```
 
-3. メモリ最適化テーブルを作成する前に、メモリ最適化ファイル グループとデータ ファイルのコンテナーを作成します。 
+3. メモリ最適化テーブルを作成する前に、メモリ最適化ファイル グループとデータ ファイルのコンテナーを作成します。
 
    ```sql
    ALTER DATABASE AdventureWorks ADD FILEGROUP AdventureWorks_mod CONTAINS memory_optimized_data
@@ -102,9 +104,9 @@ SQL Server では、アプリケーションのシステムのパフォーマン
    ```
 
 ### <a name="create-a-memory-optimized-table"></a>メモリ最適化テーブルを作成します。
-メモリ最適化テーブルのプライマリ ストアはメイン メモリであるため、ディスク ベース テーブルとは異なり、ディスクからメモリ バッファーにデータを読み取る必要はありません。  メモリ最適化テーブルを作成するには、MEMORY_OPTIMIZED = ON 句を使用します。 
+メモリ最適化テーブルのプライマリ ストアはメイン メモリであるため、ディスク ベース テーブルとは異なり、ディスクからメモリ バッファーにデータを読み取る必要はありません。  メモリ最適化テーブルを作成するには、MEMORY_OPTIMIZED = ON 句を使用します。
 
-1. メモリ最適化テーブルの dbo.ShoppingCart を作成するために、次のクエリを実行します。  既定では、データは持続性の目的のためディスクに保持されます (注: 持続性は、スキーマのみを保持するよう設定することもできます)。
+1. メモリ最適化テーブルの dbo.ShoppingCart を作成するために、次のクエリを実行します。  既定では、データは持続性の目的のためディスクに保持されます (注: 持続性は、スキーマのみを保持するよう設定することもできます)。 
 
    ```sql
    CREATE TABLE dbo.ShoppingCart ( 
@@ -126,7 +128,7 @@ SQL Server では、アプリケーションのシステムのパフォーマン
    ```
 
 ### <a name="natively-compiled-stored-procedure"></a>ネイティブ コンパイル ストアド プロシージャ
-SQL Server では、メモリ最適化テーブルにアクセスするネイティブ コンパイル ストアド プロシージャがサポートされています。 T-SQL ステートメントは、機械語のコードにコンパイルされ、高速データ アクセスと従来の T-SQL より効率的なクエリ実行が可能になる、ネイティブ DLL として格納されます。   NATIVE_COMPILATION が設定されているストアド プロシージャはネイティブでコンパイルされます。 
+SQL Server では、メモリ最適化テーブルにアクセスするネイティブ コンパイル ストアド プロシージャがサポートされています。 T-SQL ステートメントは、機械語のコードにコンパイルされ、高速データ アクセスと従来の T-SQL より効率的なクエリ実行が可能になる、ネイティブ DLL として格納されます。   NATIVE_COMPILATION が設定されているストアド プロシージャはネイティブでコンパイルされます。 
 
 1. ShoppingCart テーブルに大量のレコードを挿入するネイティブ コンパイル ストアド プロシージャを作成する次のスクリプトを実行します。 
 
@@ -188,7 +190,7 @@ SQL Server では、メモリ最適化テーブルにアクセスするネイテ
    ```
 
 ## <a name="query-dynamic-management-views"></a>クエリの動的管理ビュー
-動的管理ビューは、サーバー インスタンスのヘルスの監視、問題の診断、パフォーマンスのチューニングに使用できる、サーバーの状態の情報を返します。 
+動的管理ビューは、サーバー インスタンスのヘルスの監視、問題の診断、パフォーマンスのチューニングに使用できる、サーバーの状態の情報を返します。
 
 Dm_os_wait stats 動的管理ビューを照会します。 
 

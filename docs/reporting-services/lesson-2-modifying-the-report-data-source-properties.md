@@ -8,21 +8,21 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ba7880d9cc6f316b7ce06b73dda896becd892797
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 52547af895d362214e6a33c69c29fe2cd2c3cb8a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 この [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] レッスンでは、受信者に配信されるレポートを、Web ポータルを使って選択します。 ここで定義するデータ ドリブン サブスクリプションによって、チュートリアル「 **基本的なテーブル レポートの作成 (SSRS チュートリアル)** 」で作成されたレポート [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)が配信されます。  この後の手順では、レポートがデータの取得に使用するデータ ソースの接続情報を変更します。 データ ドリブン サブスクリプションを介して配信できるのは、 **保存されている資格情報** を使用してレポート データ ソースにアクセスするレポートのみです。 保存されている資格情報は、レポートの自動処理に必要となります。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  管理者特権を使用して [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web ポータルを参照します。たとえば、Internet Explorer アイコンを右クリックして **[管理者として実行]**をクリックします。  
  
-2.    Web ポータルの URL を参照します。  例:   
+2.    Web ポータルの URL を参照します。  例 :   
     `http://<server name>/reports`が配信されます。  
     `http://localhost/reports`
  **注:** Web *ポータル* URL は "Reports" です。Report *Server* の URL "Reportserver" ではありません。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/05/2017
 10. **[保存]**をクリックします。
 11. **[キャンセル]**をクリックします。  
   
-11. レポートを表示し、指定した資格情報を使用してレポートが実行されていることを確認します。 が配信されます。  
+11. レポートを表示し、指定した資格情報を使用してレポートが実行されていることを確認します。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
   
 ## <a name="bkmk_modify_dataset"></a>AdventureWorksDataset を変更するには  
  次の手順では、パラメーターを使用して注文番号でデータ セットをフィルター処理できるよう、データセットを変更します。
@@ -102,7 +102,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  **[NULL 値を許可]**を選択します。  
   
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
   
 7.  **[プレビュー]** タブをクリックして、レポートを実行します。 レポートの先頭にパラメーター入力領域が表示されます。 次のいずれかを実行できます。  
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  ツール バーの **[ビルド]** をクリックし、 **[チュートリアルの配置]**をクリックします。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 + 保存されている資格情報を使用してデータを取得するレポートを構成したので、パラメーターを使用してデータをフィルター処理できます。 
 + 次のレッスンでは、Web ポータルのデータ ドリブン サブスクリプション ページを使用してサブスクリプションを構成します。 「 [レッスン 3: データ ドリブン サブスクリプションの定義](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)」を参照してください。  
   

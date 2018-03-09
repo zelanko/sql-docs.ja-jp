@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aa1b2d225847952e39d5f28ee095dedb551cdc6f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d73b3b84f1a2c2fb8a9427cde1deba7a8745c90e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server 並列データ ウェアハウスの接続の種類 (SSRS)
 
@@ -79,7 +77,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  テキスト ベースのクエリ デザイナーでは、 [Text](#QueryText) モードをサポートしています。このモードで、データ ソースからデータを選択する [!INCLUDE[DWsql](../../includes/dwsql-md.md)] コマンドを入力します。  
   
--   [Text](#QueryText)  
+-   [テキスト](#QueryText)  
   
  [!INCLUDE[DWsql](../../includes/dwsql-md.md)] では [!INCLUDE[ssDW](../../includes/ssdw-md.md)] を使用し、SQL Server では [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。 SQL 言語のこの 2 つの言語仕様はよく似ています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースの接続の種類に対して作成されたクエリは、通常、 [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] データ ソースの接続の種類に使用できます。  
   

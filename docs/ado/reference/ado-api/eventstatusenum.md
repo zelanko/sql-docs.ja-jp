@@ -1,10 +1,11 @@
 ---
-title: "EventStatusEnum |Microsoft ドキュメント"
+title: EventStatusEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,29 +13,31 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: EventStatusEnum
-helpviewer_keywords: EventStatusEnum enumeration [ADO]
+f1_keywords:
+- EventStatusEnum
+helpviewer_keywords:
+- EventStatusEnum enumeration [ADO]
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82518cbfd6572f03cbe0b742b52bb5e4acd3d8e9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 213d511098daa616043e7dd3078025d63ba2333c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 イベントの実行の現在の状態を指定します。  
   
-|定数|値|Description|  
+|定数|[値]|Description|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|イベントが発生する原因となった操作の取り消しを要求します。|  
 |**adStatusCantDeny**|3|操作が保留中の操作の取り消しを要求できないことを示します。|  
 |**adStatusErrorsOccurred**|2|エラーまたはエラーのため、イベントの原因となった操作が失敗したことを示します。|  
-|**adStatusOK**|@shouldalert|イベントの原因となった操作が成功したことを示します。|  
+|**adStatusOK**|1|イベントの原因となった操作が成功したことを示します。|  
 |**adStatusUnwantedEvent**|5|イベント メソッドの実行が完了する前に、後続の通知をできないようにします。|  
   
 ## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  

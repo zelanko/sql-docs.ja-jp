@@ -3,7 +3,7 @@ title: "Transact SQL スクリプト (SQL Server Profiler) を再生 |Microsoft 
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - replaying traces
 ms.assetid: 9c0eb222-e6e3-4bc1-a25f-a41e962d361b
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b9de32b90da72311b4d239d9b734bd97f8b60c5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b21ed5c4b270a64c6eee3cc2d41cb4f1ba0518df
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-a-transact-sql-script-sql-server-profiler"></a>Transact-SQL スクリプトの再生 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]パフォーマンスの問題の解決策の候補をテストするときに使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を再生する[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト、および変更の前後にパフォーマンスを比較します。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
 4.  **[構成の再生]** ダイアログ ボックスで設定を確認し、 **[OK]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [トレースの再生](../../tools/sql-server-profiler/replay-traces.md)   
+ [トレースを再生します。](../../tools/sql-server-profiler/replay-traces.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

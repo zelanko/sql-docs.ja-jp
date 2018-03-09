@@ -8,10 +8,12 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - AlwaysOn
 - DB_FAILOVER
@@ -19,21 +21,22 @@ helpviewer_keywords:
 - High Availability
 - SQL Server
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
-caps.latest.revision: "4"
-author: JasonWHowell
-ms.author: jasonh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c9f10162900579bcf871b2a1bf63d8aa5cc4ac6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ce5cf8ff6cbbddd0e4a65d702494d80cf7537490
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性グループのデータベース レベルの正常性検出フェールオーバー オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server 2016 以降、Always On 可用性グループを構成するときに、データベース レベルの正常性検出 (DB_FAILOVER) オプションを使用できます。 何らかの問題が発生し、データベースがオンライン状態でなくなると、このデータベース レベルの正常性検出によって検知され、可用性グループの自動フェールオーバーがトリガーされます。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+SQL Server 2016 以降、Always On 可用性グループを構成するときに、データベース レベルの正常性検出 (DB_FAILOVER) オプションを使用できます。 何らかの問題が発生し、データベースがオンライン状態でなくなると、このデータベース レベルの正常性検出によって検知され、可用性グループの自動フェールオーバーがトリガーされます。
 
-可用性グループのデータベース レベルの正常性検出は、可用性グループ全体に対して有効になるため、データベース レベルの正常性検出では可用性グループ内のすべてのデータベースが監視されます。 可用性グループ内の特定のデータベースを選択して有効にすることはできません。 
+可用性グループのデータベース レベルの正常性検出は、可用性グループ全体に対して有効になるため、データベース レベルの正常性検出では可用性グループ内のすべてのデータベースが監視されます。 可用性グループ内の特定のデータベースを選択して有効にすることはできません。
 
 ## <a name="benefits-of-database-level-health-detection-option"></a>データベース レベルの正常性検出オプションの利点
 ---
@@ -43,15 +46,15 @@ ms.lasthandoff: 11/20/2017
 
 <a name="enabling-database-level-health-detection"></a>データベース レベルの正常性検出の有効化
 ----
-データベースの正常性オプションは一般的に推奨されるオプションですが、以前のバージョンにおける既定の設定との下位互換性を維持するために、**既定でオフ**になっています。 
+データベースの正常性オプションは一般的に推奨されるオプションですが、以前のバージョンにおける既定の設定との下位互換性を維持するために、**既定でオフ**になっています。
 
 データベース レベルの正常性検出の設定を有効にする方法はいくつかあります。
 
-1. SQL Server Management Studio で、SQL Server データベース エンジンに接続します。 オブジェクト エクスプ ローラー ウィンドウを使用して、AlwaysOn 高可用性ノードを右クリックし、**新しい可用性グループ ウィザード**を実行します。 [名前の指定] ページで **[データベース レベルの正常性検出]** チェック ボックスをオンします。 続けて、ウィザードの残りのページに情報を入力します。 
+1. SQL Server Management Studio で、SQL Server データベース エンジンに接続します。 オブジェクト エクスプ ローラー ウィンドウを使用して、AlwaysOn 高可用性ノードを右クリックし、**新しい可用性グループ ウィザード**を実行します。 [名前の指定] ページで **[データベース レベルの正常性検出]** チェック ボックスをオンします。 続けて、ウィザードの残りのページに情報を入力します。
 
    ![AlwaysOn/データベース正常性のチェック ボックスをオンにする](../../../database-engine/availability-groups/windows/media/always-on-enable-database-health-checkbox.png)
 
-2. SQL Server Management Studio で既存の可用性グループの**プロパティ**を表示します。 SQL Server に接続します。 オブジェクト エクスプローラー ウィンドウを使用して、AlwaysOn 高可用性ノードを展開します。 可用性グループを展開します。 可用性グループを右クリックし、[プロパティ] を選択します。 **[データベース レベルの正常性検出]** オプションをオンにして、[OK] をクリックするか、[スクリプト] をクリックして変更します。 
+2. SQL Server Management Studio で既存の可用性グループの**プロパティ**を表示します。 SQL Server に接続します。 オブジェクト エクスプローラー ウィンドウを使用して、AlwaysOn 高可用性ノードを展開します。 可用性グループを展開します。 可用性グループを右クリックし、[プロパティ] を選択します。 **[データベース レベルの正常性検出]** オプションをオンにして、[OK] をクリックするか、[スクリプト] をクリックして変更します。
 
    ![AlwaysOn/AG プロパティ/データベース レベルの正常性検出](../../../database-engine/availability-groups/windows/media/always-on-ag-properties-database-level-health-detection.png)
 
@@ -59,13 +62,13 @@ ms.lasthandoff: 11/20/2017
 3. **CREATE AVAILABILITY GROUP** の Transact-SQL 構文。 DB_FAILOVER パラメーターには、ON または OFF を指定できます。
 
    ```Transact-SQL
-   CREATE AVAILABILITY GROUP [Contoso-ag] 
+   CREATE AVAILABILITY GROUP [Contoso-ag]
    WITH (DB_FAILOVER=ON)
-   FOR DATABASE [AutoHa-Sample] 
-   REPLICA ON 
-       N'SQLSERVER-0' WITH (ENDPOINT_URL = N'TCP://SQLSERVER-0.DOMAIN.COM:5022', 
-         FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT), 
-       N'SQLSERVER-1' WITH (ENDPOINT_URL = N'TCP://SQLSERVER-1.DOMAIN.COM:5022',  
+   FOR DATABASE [AutoHa-Sample]
+   REPLICA ON
+       N'SQLSERVER-0' WITH (ENDPOINT_URL = N'TCP://SQLSERVER-0.DOMAIN.COM:5022',
+         FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT),
+       N'SQLSERVER-1' WITH (ENDPOINT_URL = N'TCP://SQLSERVER-1.DOMAIN.COM:5022',
         FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
     ```
 
@@ -73,20 +76,20 @@ ms.lasthandoff: 11/20/2017
 
    ```Transact-SQL
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = ON);
-   
+
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = OFF);
    ```
 
 ### <a name="caveats"></a>注意事項
 
-現時点では、データベース レベルの正常性検出オプションを使用しても、SQL Server ではディスクの稼働時間が監視されない点に注意してください。SQL Server では、データベース ファイルの可用性は直接監視されません。 ディスク ドライブで障害が発生したり、利用できなくなったりしても、それだけで可用性グループが自動的にフェールオーバーされるとは限りません。 
+現時点では、データベース レベルの正常性検出オプションを使用しても、SQL Server ではディスクの稼働時間が監視されない点に注意してください。SQL Server では、データベース ファイルの可用性は直接監視されません。 ディスク ドライブで障害が発生したり、利用できなくなったりしても、それだけで可用性グループが自動的にフェールオーバーされるとは限りません。
 
 たとえば、アクティブなトランザクションがなく、物理書き込みも発生していないデータベースがアイドル状態のとき、そのデータベース ファイルのいくつかにアクセスできなくなると、SQL Server によるそのファイルの IO 読み取りまたは書き込みは行われず、データベースの状態もすぐには変更されない可能性があるため、フェールオーバーはトリガーされません。 後で、データベース チェックポイントが発生したとき、またはクエリ実行のために物理読み取りまたは書き込みが発生すると、SQL Server はファイルで問題が発生していることを検知し、データベースの状態を変更します。その後、データベースの正常性が変更されたため、データベース レベルの正常性検出が設定されている可用性グループがフェールオーバーします。
 
-また、SQL Server データベース エンジンがクエリ実行のためにデータ ページを読み取る必要があるとき、そのデータ ページがバッファー プール メモリにキャッシュされていると、物理アクセスを伴うディスクの読み取りを行わなくても、そのクエリ要求に対処できます。 したがって、データ ファイルが存在しない、または利用できない場合、データベース正常性オプションが有効になっていても、データベースの状態はすぐには変更されないため、自動フェールオーバーがすぐにトリガーされることはありません。  
+また、SQL Server データベース エンジンがクエリ実行のためにデータ ページを読み取る必要があるとき、そのデータ ページがバッファー プール メモリにキャッシュされていると、物理アクセスを伴うディスクの読み取りを行わなくても、そのクエリ要求に対処できます。 したがって、データ ファイルが存在しない、または利用できない場合、データベース正常性オプションが有効になっていても、データベースの状態はすぐには変更されないため、自動フェールオーバーがすぐにトリガーされることはありません。
 
 
-## <a name="database-failover-is-separate-from-flexible-failover-policy"></a>データベースのフェールオーバーと柔軟なフェールオーバー ポリシーの分離 
+## <a name="database-failover-is-separate-from-flexible-failover-policy"></a>データベースのフェールオーバーと柔軟なフェールオーバー ポリシーの分離
 データベース レベルの正常性検出では、フェールオーバー ポリシーに対して SQL Server プロセスの正常性のしきい値が構成された、柔軟なフェールオーバー ポリシーが実装されています。 データベース レベルの正常性検出は DB_FAILOVER パラメーターを使用して構成されますが、可用性グループ オプション FAILURE_CONDITION_LEVEL はそれとは別のもので、SQL Server プロセスの正常性検出を構成します。 この 2 つのオプションは互いに独立しています。
 
 ## <a name="managing-and-monitoring-database-level-health-detection"></a>データベース レベルの正常性検出の管理と監視
@@ -102,14 +105,14 @@ select name, db_failover from sys.availability_groups
 
 dmv 出力の例:
 
-name  |  db_failover  
+NAME  |  db_failover
 ---------|---------
-| Contoso-ag |  1  |
+| Contoso-ag |  @shouldalert  |
 
-### <a name="errorlog"></a>ErrorLog 
-データベース レベルの正常性検出チェックが原因で、可用性グループがフェールオーバーした場合、SQL Server エラー ログ (または sp_readerrorlog のテキスト) にはエラー メッセージ 41653 が表示されます。 
+### <a name="errorlog"></a>ErrorLog
+データベース レベルの正常性検出チェックが原因で、可用性グループがフェールオーバーした場合、SQL Server エラー ログ (または sp_readerrorlog のテキスト) にはエラー メッセージ 41653 が表示されます。
 
-たとえば、次のエラー ログの抜粋は、ディスクで問題が発生したためにトランザクション ログの書き込みが失敗し、その後、AutoHa-Sample という名前のデータベースがシャットダウンして、データベース レベルの正常性検出がトリガーされ、可用性グループをフェールオーバーしたことを示しています。  
+たとえば、次のエラー ログの抜粋は、ディスクで問題が発生したためにトランザクション ログの書き込みが失敗し、その後、AutoHa-Sample という名前のデータベースがシャットダウンして、データベース レベルの正常性検出がトリガーされ、可用性グループをフェールオーバーしたことを示しています。
 
 >2016-04-25 12:20:21.08 spid1s      エラー: 17053、重大度: 16、状態: 1。
 >
@@ -134,22 +137,22 @@ name  |  db_failover
 
 ### <a name="extended-event-sqlserveravailabilityreplicadatabasefaultreporting"></a>拡張イベント sqlserver.availability_replica_database_fault_reporting
 
-SQL Server 2016 以降、新しい拡張イベントが定義されました。このイベントは、データベース レベルの正常性検出によってトリガーされます。  イベントの名前は **sqlserver.availability_replica_database_fault_reporting** です。 
+SQL Server 2016 以降、新しい拡張イベントが定義されました。このイベントは、データベース レベルの正常性検出によってトリガーされます。  イベントの名前は **sqlserver.availability_replica_database_fault_reporting** です。
 
-この XEvent は、プライマリ レプリカでのみトリガーされます。 また、可用性グループでホストされているデータベースに対して、データベース レベルの正常性に関する問題が検出されたときにトリガーされます。 
+この XEvent は、プライマリ レプリカでのみトリガーされます。 また、可用性グループでホストされているデータベースに対して、データベース レベルの正常性に関する問題が検出されたときにトリガーされます。
 
 このイベントをキャプチャする XEvent セッションを作成する例を次に示します。 パスが指定されていないため、XEvent 出力ファイルは、SQL Server エラー ログの既定のパスに配置されます。 このスクリプトは、可用性グループのプライマリ レプリカで実行してください。
 
 拡張イベント セッション スクリプトの例
 ```
-CREATE EVENT SESSION [AlwaysOn_dbfault] ON SERVER 
+CREATE EVENT SESSION [AlwaysOn_dbfault] ON SERVER
 ADD EVENT sqlserver.availability_replica_database_fault_reporting
 ADD TARGET package0.event_file(SET filename=N'dbfault.xel',max_file_size=(5),max_rollover_files=(4))
 WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,
     MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=ON)
-GO 
+GO
 ALTER EVENT SESSION AlwaysOn_dbfault ON SERVER STATE=START
-GO 
+GO
 ```
 
 #### <a name="extended-event-output"></a>拡張イベントの出力
@@ -165,14 +168,14 @@ SQL Server Management Studio を使用して、プライマリ SQL Server に接
 |availability_replica_name  |可用性レプリカの名前。
 |database_name  |エラーをレポートしているデータベースの名前。
 |database_replica_id    |可用性レプリカ データベースの ID。
-|failover_ready_replicas    |同期されている自動フェールオーバー セカンダリ レプリカの数。 
+|failover_ready_replicas    |同期されている自動フェールオーバー セカンダリ レプリカの数。
 |fault_type     | レポートされたエラー ID。 有効値は次のとおりです。  <br/> 0 - NONE <br/>1 - Unknown<br/>2 – Shutdown
 |is_critical    | SQL Server 2016 の XEvent では、この値は常に true を返します。
 
 
 この出力例は、AutoHa-Sample2 という名前のデータベースで "fault_type 2 シャットダウン" が発生したため、SQLSERVER-1 という名前のレプリカの、可用性グループ Contoso-ag で、重大なイベントが発生したことを示しています。
 
-|フィールド  | 値
+|フィールド  | ReplTest1
 |---------|---------
 |availability_group_id |    24E6FE58-5EE8-4C4E-9746-491CFBB208C1
 |availability_group_name |  Contoso-ag
@@ -180,7 +183,7 @@ SQL Server Management Studio を使用して、プライマリ SQL Server に接
 |availability_replica_name |    SQLSERVER-1
 |database_name |    AutoHa-Sample2
 |database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
-|failover_ready_replicas |  1
+|failover_ready_replicas |  @shouldalert
 |fault_type |   2
 |is_critical    | True
 

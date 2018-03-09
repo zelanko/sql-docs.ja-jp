@@ -21,15 +21,15 @@ helpviewer_keywords:
 - file size [SQL Server]
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 833d84c44f7c2ef9cae31cf1908cd5732518b469
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0e765bcdaa052e2cf72c679ab0a6c913e137f79
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="shrink-a-file"></a>ファイルの圧縮
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のデータ ファイルまたはログ ファイルを圧縮する方法について説明します。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
      [推奨事項](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してデータ ファイルまたはログ ファイルを圧縮するには:**  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> 権限  
+####  <a name="Permissions"></a> Permissions  
  **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  **[タスク]**、 **[圧縮]**の順にポイントし、 **[ファイル]**をクリックします。  
   
-     **データベース**  
+     **[データベース]**  
      選択しているデータベースの名前が表示されます。  
   
      **ファイルの種類**  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
      **ファイル グループ**  
      上記で選択した **[ファイルの種類]** に関連付けられたファイル グループの一覧から、ファイル グループを選択します。 別のファイル グループを選択すると、その選択に応じて他のフィールドの選択が変更されます。  
   
-     **ファイル名**  
+     **[ファイル名]**  
      選択したファイル グループおよびファイルの種類で利用可能なファイルの一覧からファイルを選択します。  
   
      **場所**  
@@ -126,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
      このオプションをオンにすると、指定したファイルのすべてのデータが同じファイル グループの他のファイルに移動されます。 その後、空になったファイルを削除できます。 このオプションは、EMPTYFILE オプションを指定して DBCC SHRINKFILE を実行するのと同じ効果があります。  
   
-9. クリックして **OK**です。  
+9. **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

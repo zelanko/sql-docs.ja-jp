@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65e5464a1a3ee36420d92b23268ab9aa7cb88c02
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b2fccaf04b123ec7ba354ffabef8d21ee6c35845
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-8-restore-as-new-database-from-log-backup"></a>レッスン 8: ログ バックアップから新しいデータベースとして復元する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このレッスンでは、ファイル スナップショットのトランザクション ログ バックアップから、新しいデータベースとして AdventureWorks2014 データベースを復元します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+このレッスンでは、ファイル スナップショットのトランザクション ログ バックアップから、新しいデータベースとして AdventureWorks2014 データベースを復元します。  
   
 このシナリオでは、ビジネス分析やレポートのために、別の仮想マシン上の SQL Server インスタンスに復元を実行します。 別の仮想マシン上の別のインスタンスに復元することによって、この目的に合わせてサイズ調整された専用の仮想マシンにワークロードをオフロードし、トランザクション システムからリソース要件を削除することができます。  
   

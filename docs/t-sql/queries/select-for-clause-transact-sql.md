@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - FOR CLAUSE
 - FOR_TSQL
 - FOR_CLAUSE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - XML option [SQL Server]
 - BROWSE option
 - FOR clause [Transact-SQL]
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
-caps.latest.revision: "54"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0cb4b3936aa78f22958c28351d2dad523a6d9932
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 085a9c7f6422c70cc43086d2174a5c7aa485040e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT の FOR 句 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -182,7 +184,7 @@ JSON
  XML  
  クエリの結果を XML ドキュメントとして返します。 XML モードとして、RAW、AUTO、EXPLICIT のいずれか 1 つを指定する必要があります。 XML データの詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[FOR XML &#40;です。SQL Server &#41;](../../relational-databases/xml/for-xml-sql-server.md).  
   
- 生 [ **('***ElementName***')** ]  
+ RAW [ **('***ElementName***')** ]  
  クエリの結果を受け取り、汎用識別子を持つ XML 要素に結果セット内の各行を変換\<行/> 要素タグとして。 必要に応じて、その行要素に名前を指定することもできます。 結果の XML 出力が、指定した*ElementName*行ごとに生成される行要素として。 詳細については、次を参照してください。 [FOR XML での RAW モードの使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)と[FOR XML での RAW モードの使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)です。  
   
  AUTO  
@@ -209,7 +211,7 @@ JSON
  ABSENT  
  列の値が NULL の場合、対応する XML 要素を XML 結果に追加しません。 このオプションは、ELEMENTS でのみ指定してください。  
   
- パス [ **('***ElementName***')** ]  
+ PATH [ **('***ElementName***')** ]  
  生成、\<行 > 要素ラッパーを結果セット内の行ごとです。 必要に応じての要素名を指定することができます、\<行 > 要素ラッパーです。 FOR XML PATH など、空の文字列を提供するかどうか (**'**))、ラッパー要素は生成されません。 EXPLICIT ディレクティブを使用するよりも、PATH を使用した方が、クエリが単純になる場合があります。 詳細については、「 [FOR XML での PATH モードの使用](../../relational-databases/xml/use-path-mode-with-for-xml.md)」を参照してください。  
   
  BINARY BASE64  
@@ -218,7 +220,7 @@ JSON
  TYPE  
  クエリとして結果を返すことを示す**xml**型です。 詳細については、「 [FOR XML クエリの TYPE ディレクティブ](../../relational-databases/xml/type-directive-in-for-xml-queries.md)」を参照してください。  
   
- ルート [ **('***RootName***')** ]  
+ ROOT [ **('***RootName***')** ]  
  単一のトップレベル要素を、結果として生成される XML に追加します。 必要に応じて、生成するルート要素名を指定することもできます。 省略可能なルートの名前が指定されていない場合、既定\<ルート > 要素を追加します。  
   
  詳細については、次を参照してください。 [FOR XML &#40;です。SQL Server &#41;](../../relational-databases/xml/for-xml-sql-server.md).  
@@ -253,7 +255,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  INCLUDE_NULL_VALUES  
  指定して、JSON 出力に null 値を含める、 **INCLUDE_NULL_VALUES**オプションは、 **FOR JSON**句。 このオプションを指定しない場合、出力は、クエリの結果に null 値を JSON のプロパティを含まれません。 詳細と例については、次を参照してください[INCLUDE_NULL_VALUES オプション &#40; を使用して JSON 出力に Null 値を含める。SQL Server &#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).  
   
- ルート [ **('***RootName***')** ]  
+ ROOT [ **('***RootName***')** ]  
  指定して、JSON 出力に単一の最上位要素を追加、**ルート**オプションは、 **FOR JSON**句。 指定しない場合、 **ROOT** オプションでは、JSON の出力はルート要素がないです。 詳細と例については、次を参照してください[ROOT オプション &#40; で JSON 出力にルート ノードを追加。SQL Server &#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
   
  WITHOUT_ARRAY_WRAPPER  

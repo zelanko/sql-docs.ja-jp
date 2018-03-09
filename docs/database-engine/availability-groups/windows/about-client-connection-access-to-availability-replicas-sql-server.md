@@ -22,13 +22,13 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d945149c7bb6dc583f378c0d8823e2eff0e925b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b73573c8fb57c50bbca5e74587952e7ed50fa307
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>可用性レプリカに対するクライアント接続アクセスについて (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] AlwaysOn 可用性グループでは、1 つまたは複数の可用性レプリカを構成して、セカンダリ ロールで実行しているとき (つまり、セカンダリ レプリカとして実行しているとき) に読み取り専用接続を許可することができます。 各可用性レプリカをプライマリ ロールで実行しているとき (つまり、プライマリ レプリカとして実行しているとき) に、読み取り専用接続を許可または除外するように構成することもできます。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
  読み取り専用接続の許可  
  セカンダリ データベースは、すべて読み取りアクセス接続に利用できます。 このオプションでは、下位バージョンのクライアントを接続できます。  
   
- 詳細については、「 [可用性レプリカでの読み取り専用アクセスの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)」をご参照ください。  
+ 詳細については、「 [可用性レプリカでの読み取り専用アクセスの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)が存在する必要があります。  
   
 ##  <a name="ConnectAccessForPrimary"></a> プライマリ ロールでサポートされる接続アクセスの種類  
  プライマリ ロールは、次に示すように 2 種類のクライアント接続をサポートします。  
@@ -86,13 +86,13 @@ ms.lasthandoff: 11/20/2017
   
 |レプリカのロール|レプリカでサポートされる接続アクセス|接続の目的|接続の試行の結果|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|セカンダリ|すべて|読み取り目的、読み取り/書き込み、または接続目的の指定なし|Success|  
+|セカンダリ|All|読み取り目的、読み取り/書き込み、または接続目的の指定なし|成功|  
 |セカンダリ|なし (これは、セカンダリの既定の動作です)。|読み取り目的、読み取り/書き込み、または接続目的の指定なし|失敗|  
-|セカンダリ|[読み取り目的のみ]|読み取り目的|Success|  
+|セカンダリ|[読み取り目的のみ]|読み取り目的|成功|  
 |セカンダリ|[読み取り目的のみ]|読み取り/書き込み、または接続目的の指定なし|失敗|  
-|プライマリ|すべて (これはプライマリの既定の動作です)|読み取りのみ、読み取り/書き込み、または接続目的の指定なし|Success|  
+|プライマリ|すべて (これはプライマリの既定の動作です)|読み取りのみ、読み取り/書き込み、または接続目的の指定なし|成功|  
 |プライマリ|読み取り/書き込み|[読み取り目的のみ]|失敗|  
-|プライマリ|読み取り/書き込み|読み取り/書き込み、または接続目的の指定なし|Success|  
+|プライマリ|読み取り/書き込み|読み取り/書き込み、または接続目的の指定なし|成功|  
   
  クライアント接続要求を処理する可用性グループ リスナーの詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」をご参照ください。  
   

@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e9fcfd0dfb1171371a8b1ead7543ec14d67035d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e853ee12af38d0a48a448f8d0798fd4b192c110
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2: 別のコンピューターからの接続
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] セキュリティを強化するため、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer、Express、および Evaluation Editions の [!INCLUDE[ssDE](../includes/ssde-md.md)] は、最初にインストールした状態では別のコンピューターからアクセスできないようになっています。 このレッスンでは、別のコンピューターから接続するために、プロトコルの有効化、ポートの構成、Windows ファイアウォールの構成を行う方法について学習します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+セキュリティを強化するため、 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer、Express、および Evaluation Editions の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、最初にインストールした状態では別のコンピューターからアクセスできないようになっています。 このレッスンでは、別のコンピューターから接続するために、プロトコルの有効化、ポートの構成、Windows ファイアウォールの構成を行う方法について学習します。  
   
 このレッスンの内容は次のとおりです。  
   
@@ -108,7 +111,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  **[規則の種類]** ダイアログ ボックスで、 **[ポート]**をクリックし、 **[次へ]**をクリックします。  
   
-4.  **[プロトコルおよびポート]** ダイアログ ボックスで、 **[TCP]**をクリックします。 **[特定のローカル ポート]**を選択し、 [!INCLUDE[ssDE](../includes/ssde-md.md)]のインスタンスのポート番号を入力します。 既定のインスタンスの場合は「1433」と入力してください。 名前付きインスタンスを構成する場合や、前の作業で固定ポートを構成した場合は、「 **49172** 」と入力します。 **[次へ]**をクリックします。  
+4.  **[プロトコルおよびポート]** ダイアログ ボックスで、 **[TCP]**をクリックします。 **[特定のローカル ポート]**を選択し、 [!INCLUDE[ssDE](../includes/ssde-md.md)]のインスタンスのポート番号を入力します。 既定のインスタンスの場合は「1433」と入力してください。 名前付きインスタンスを構成する場合や、前の作業で固定ポートを構成した場合は、「 **49172** 」と入力します。 **[次へ]** をクリックします。  
   
 5.  **[操作]** ダイアログ ボックスで、 **[接続を許可する]**をクリックし、 **[次へ]**をクリックします。  
   
@@ -129,7 +132,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバーの種類]** ボックスが **[データベース エンジン]** になっていることを確認します。  
   
-3.  **[サーバー名]** ボックスに「**tcp:**」と入力してプロトコルを指定し、続けてコンピューター名、コンマ、ポート番号の順に入力します。 既定のインスタンスに接続する場合、ポート 1433 が暗黙的に設定されるためポート番号を省略できます。したがって、この場合は「**tcp:***<computer_name>*」と入力します。 今回の名前付きインスタンスの例では、「**tcp:***<computer_name>***,49172**」と入力します。  
+3.  **[サーバー名]** ボックスに「 **tcp:** 」と入力してプロトコルを指定し、続けてコンピューター名、コンマ、ポート番号の順に入力します。 既定のインスタンスに接続する場合、ポート 1433 が暗黙的に設定されるためポート番号を省略できます。したがって、この場合は「**tcp:***<コンピューター名>*」と入力します。 今回の名前付きインスタンスの例では、「**tcp:***<コンピューター名>***,49172**」と入力します。  
   
     > [!NOTE]  
     > **[サーバー名]** ボックスで **tcp:** を省略した場合、クライアントは、有効になっているすべてのプロトコルをクライアント構成に指定された順番で試行します。  

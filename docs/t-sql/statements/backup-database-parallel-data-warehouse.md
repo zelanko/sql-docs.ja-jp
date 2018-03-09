@@ -8,20 +8,21 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 73c8d465-b36b-4727-b9f3-368e98677c64
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ced03c90d0f30a1e8749d09f00d293bdee53b06e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: cc87423b3444daf6d44f590c283b52ce948da193
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>データベースのバックアップ (並列データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -63,7 +64,7 @@ BACKUP DATABASE database_name
  *database_name*  
  バックアップを作成する対象のデータベースの名前。 データベースには、master データベースまたはユーザー データベースを指定できます。  
   
- ディスクを = '\\\\*UNC_path*\\*backup_directory*'  
+ TO DISK = '\\\\*UNC_path*\\*backup_directory*'  
  ネットワーク パスとするディレクトリ[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]バックアップ ファイルを記述します。 たとえば、'\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup' です。  
   
 -   バックアップ ディレクトリの名前をパスでは、既に存在する必要があり、完全修飾の汎用名前付け規則 (UNC) パスとして指定する必要があります。  
@@ -76,12 +77,12 @@ BACKUP DATABASE database_name
   
 -   サーバーまたはホストは、IP アドレスとして指定する必要があります。  これは、ホストまたはサーバー名として指定できません。  
   
- 説明 = **'***テキスト***'**  
+ DESCRIPTION = **'***text***'**  
  バックアップの説明テキストを指定します。 テキストの最大長は、255 文字です。  
   
  説明は、メタデータは格納され、RESTORE HEADERONLY とバックアップ ヘッダーを復元するときに表示されます。  
   
- 名前 = **'***バックアップ名 (_n)***'**  
+ NAME = **'***backup _name***'**  
  バックアップの名前を指定します。 バックアップ名は、データベース名を異なっていてもかまいません。  
   
 -   名前の長さは最大 128 文字です。  
@@ -103,7 +104,7 @@ BACKUP DATABASE database_name
   
  `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerDiff' WITH DIFFERENTIAL;`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  必要があります、 **BACKUP DATABASE**権限またはメンバーシップ、 **db_backupoperator**固定データベース ロール。 追加された通常のユーザーでは、マスター データベースをバックアップすることはできません、 **db_backupoperator**固定データベース ロール。 Master データベース バックアップのみ可能するによって**sa**、ファブリック管理者、またはのメンバー、 **sysadmin**固定サーバー ロール。  
   
  アクセス、作成、およびバックアップのディレクトリに書き込むアクセス許可を持つ Windows アカウントが必要です。 Windows アカウント名とパスワードを格納する必要がありますも[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]します。 これらのネットワーク資格情報を追加する[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]を使用して、 [sp_pdw_add_network_credentials (& a) #40 です。SQL Data Warehouse &#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)ストアド プロシージャです。  

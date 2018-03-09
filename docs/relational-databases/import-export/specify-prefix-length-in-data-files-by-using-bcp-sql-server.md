@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - lengths [SQL Server], prefix characters
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e27fceed483f3f66d1f167c5971a536bc4aa6a77
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cf8736be942f9edd7c23da9f7acf6191b6eab625
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>bcp を使用したデータ ファイルのプレフィックス長の指定 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **bcp** コマンドでは、ネイティブ形式のデータをデータ ファイルに一括エクスポートするためのファイル ストレージが最も少なくなるように、各フィールドの前にそのフィールドの長さを 1 文字以上の文字列で指定します。 このような文字列を、 *プレフィックス長文字列*と呼びます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+**bcp** コマンドでは、ネイティブ形式のデータをデータ ファイルに一括エクスポートするためのファイル ストレージが最も少なくなるように、各フィールドの前にそのフィールドの長さを 1 文字以上の文字列で指定します。 このような文字列を、 *プレフィックス長文字列*と呼びます。  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>プレフィックス長の bcp プロンプト  
  対話型の **bcp** コマンドで、フォーマット ファイル スイッチ ( **-f** ) またはデータ形式スイッチ ( **-n** 、**-c**、**-n**、または **-N**、または **in**または **-N**オプションを指定すると、次のように各データ フィールドのプレフィックス長を要求するプロンプトが表示されます。  
@@ -67,21 +69,21 @@ ms.lasthandoff: 11/17/2017
 |**[バイナリ]**|2|2|2|2|  
 |**varbinary**|2|2|2|2|  
 |**image***|4|4|4|4|  
-|**datetime**|0|1|0|1|  
-|**smalldatetime**|0|1|0|1|  
-|**decimal**|1|1|1|1|  
-|**numeric**|1|1|1|1|  
-|**float**|0|1|0|1|  
-|**real**|0|1|0|1|  
-|**int**|0|1|0|1|  
-|**bigint**|0|1|0|1|  
-|**smallint**|0|1|0|1|  
-|**tinyint**|0|1|0|1|  
-|**money**|0|1|0|1|  
-|**smallmoney**|0|1|0|1|  
-|**bit**|0|1|0|1|  
-|**uniqueidentifier**|1|1|0|1|  
-|**timestamp**|1|1|1|1|  
+|**datetime**|0|@shouldalert|0|@shouldalert|  
+|**smalldatetime**|0|@shouldalert|0|@shouldalert|  
+|**decimal**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
+|**numeric**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
+|**float**|0|@shouldalert|0|@shouldalert|  
+|**real**|0|@shouldalert|0|@shouldalert|  
+|**int**|0|@shouldalert|0|@shouldalert|  
+|**bigint**|0|@shouldalert|0|@shouldalert|  
+|**smallint**|0|@shouldalert|0|@shouldalert|  
+|**tinyint**|0|@shouldalert|0|@shouldalert|  
+|**money**|0|@shouldalert|0|@shouldalert|  
+|**smallmoney**|0|@shouldalert|0|@shouldalert|  
+|**bit**|0|@shouldalert|0|@shouldalert|  
+|**uniqueidentifier**|@shouldalert|@shouldalert|0|@shouldalert|  
+|**timestamp**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
 |**varchar(max)**|8|8|8|8|  
 |**varbinary(max)**|8|8|8|8|  
 |**UDT** (ユーザー定義データ型)|8|8|8|8|  

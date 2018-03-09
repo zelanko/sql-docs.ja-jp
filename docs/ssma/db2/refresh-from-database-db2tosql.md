@@ -1,7 +1,7 @@
 ---
 title: "更新からのデータベース (DB2ToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8fa3c91de2468da1ba9a7d67f597a2eae716632c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c62364a5dae70a00624cceddc87e9673466212fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="refresh-from-database-db2tosql"></a>データベース (DB2ToSQL) からの更新します。
 **データベースから更新** ダイアログ ボックスを使用して、DB2 データベースから更新するには、どのオブジェクトを選択できます。 ダイアログ ボックス内の行が色分けされるメタデータの状態に基づいて。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
 アクセスする、**データベースから更新**DB2 メタデータ エクスプ ローラー内のオブジェクトを右クリックしてダイアログ ボックスで、**データベースから更新**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **折りたたみ (-)**  
 個々 のオブジェクトを非表示にするすべてのオブジェクト グループを折りたたみます。  
   

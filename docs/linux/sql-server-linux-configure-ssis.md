@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 015c170e998fc824a8816010288b33be33d89005
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d71490df718bfcb6f8ce35c7d087bac4d5961aff
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Ssis conf で Linux 上の SQL Server Integration Services を構成します。
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 実行する、 `ssis-conf` Red Hat Enterprise Linux および Ubuntu 用 SQL Server Integration Services (SSIS) をインストールすると、構成スクリプト。 SSIS のインストールに関する詳細については、次を参照してください。[インストール SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)です。
 
@@ -29,7 +31,7 @@ ms.lasthandoff: 12/08/2017
 
 | Command | Description |
 |-------------|---------------------------------------------------------------------|
-| セット エディション | SQL Server のエディションを設定します。                                       |
+| set-edition | SQL Server のエディションを設定します。                                       |
 | 製品利用統計情報   | 有効にするにまたは SQL Server Integration Services 製品利用統計情報サービスを無効にします。 |
 | セットアップ       | Microsoft SQL Server Integration Services の初期化し、セットアップ      |
 |||
@@ -143,3 +145,9 @@ enabled = Y
                        
 lcid = 2052
 ```
+
+## <a name="related-content-about-ssis-on-linux"></a>Linux 上の SSIS についての関連コンテンツ
+-   [抽出、変換、および SSIS Linux でのデータを読み込む](sql-server-linux-migrate-ssis.md)
+-   [Linux 上の SQL Server Integration Services (SSIS) のインストールします。](sql-server-linux-setup-ssis.md)
+-   [制限事項と Linux の SSIS の既知の問題](sql-server-linux-ssis-known-issues.md)
+-   [スケジュール SQL Server Integration Services パッケージの cron と Linux の実行](sql-server-linux-schedule-ssis-packages.md)

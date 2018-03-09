@@ -5,28 +5,27 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 75caf898ac2e79e57e8c85f8b9e5a33b44460cf6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d321050e1568a505e6b3550d3af07fc176ddb566
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-an-olap-mining-structure"></a>OLAP マイニング構造の作成
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]これには、OLAP キューブまたはその他の多次元データ ストアに基づいてデータ マイニング モデルを作成する多くの利点があります。 OLAP ソリューションには、適切に整理、クリーンアップ、および書式設定された大量のデータが既に含まれています。ただし、データが複雑なため、アドホック探索でユーザーが有意なパターンを見つけることは困難です。 データ マイニングは、新しい相関関係を発見し、実用的な洞察力を得るための手段を提供します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+OLAP キューブまたはその他の多次元データ ストアに基づいてデータ マイニング モデルを作成することには、多くの利点があります。 OLAP ソリューションには、適切に整理、クリーンアップ、および書式設定された大量のデータが既に含まれています。ただし、データが複雑なため、アドホック探索でユーザーが有意なパターンを見つけることは困難です。 データ マイニングは、新しい相関関係を発見し、実用的な洞察力を得るための手段を提供します。  
   
  このトピックでは、既存の多次元ソリューションのディメンションおよび関連メジャーに基づいて OLAP マイニング構造を作成する方法について説明します。  
   
@@ -167,10 +166,10 @@ ms.lasthandoff: 12/08/2017
 >  データ マイニング ディメンションの作成をサポートするモデルは、Microsoft クラスタリング アルゴリズム、Microsoft デシジョン ツリー アルゴリズム、または Microsoft アソシエーション アルゴリズムに基づくモデルのみです。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md)   
  [マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)   
  [マイニング モデルのプロパティ](../../analysis-services/data-mining/mining-model-properties.md)   
- [マイニング構造と構造列のプロパティ](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
+ [マイニング構造列および構造列のプロパティ](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
   
   

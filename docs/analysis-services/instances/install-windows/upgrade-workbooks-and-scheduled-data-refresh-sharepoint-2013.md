@@ -8,38 +8,29 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3d1ecdb0be095931b952b3ef93ee566db40dfb5f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b76561da72c6a4502f451d9ee39f8e9f90c97546
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>ブックのアップグレードと定期データ更新 (SharePoint 2013)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]このトピックの内容が以前に作成されたブックのユーザー エクスペリエンスについて説明します[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]環境およびアップグレードする方法[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ブックのこのリリースで導入された新機能の利用できるようにします。 新機能の詳細については、「 [PowerPivot の新機能](http://go.microsoft.com/fwlink/?LinkID=203917)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+このトピックでは、以前の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 環境で作成されたブックのユーザー エクスペリエンスについて、およびこのリリースで導入された新機能を利用できるよう、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックをアップグレードする方法について説明します。 新機能の詳細については、「 [PowerPivot の新機能](http://go.microsoft.com/fwlink/?LinkID=203917)」を参照してください。  
   
 > [!WARNING]  
 >  サーバーで自動的にアップグレードされるブックのアップグレードをロールバックすることはできません。 ブックのアップグレードが完了すると、アップグレードされた状態のままになります。 以前のバージョンを使用するには、以前のブックを SharePoint に再パブリッシュするか、以前のバージョンを復元するか、ブックを再利用します。 SharePoint でのドキュメントの復元または再利用の詳細については、「 [ごみ箱とバージョン管理を使用したコンテンツ保護を計画する](http://go.microsoft.com/fwlink/?LinkId=238669)」を参照してください。  
   
- このトピックには、次のセクションが含まれます。  
-  
--   [ブックのアップグレードの概要](#bkmk_overview)  
-  
--   [SQL Server 2008 R2 ブックから SQL Server 2012 Service Pack 1 (SP1) ブックへのアップグレード](#bkmk_to_2012sp1_from_2008r2)  
-  
--   [SQL Server 2012 PowerPivot for Excel アドインで作成したブックから Office 2013 ブックへのアップグレード](#bkmk_to_2012sp1_from_2012)  
-  
--   [SQL Server 2008 R2 PowerPivot for Excel 2010 で作成したブックから SQL Server 2012 ブックへのアップグレード](#bkmk_to_2012_from_2008R2)  
-  
--   [新しいサーバーでの複数バージョンのブックの実行](#bkmk_runold)  
   
 ##  <a name="bkmk_overview"></a> ブックのアップグレードの概要  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックは、埋め込みの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] データを含んでいる Excel ブックです。 ブックのアップグレードには、次の 2 つの利点があります。  

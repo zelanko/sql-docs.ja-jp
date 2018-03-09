@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5148e4416998d69822fb7aea96304c92b8c2a1e1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d20db364a19a96b40ac1087485978604c24012dd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>チュートリアル: マトリックス レポートの作成 (レポート ビルダー)
 このチュートリアルでは、入れ子になった行および列グループ内のサンプル売上データのマトリックスを使用して、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートを作成する方法について説明します。 
@@ -56,11 +56,11 @@ ms.lasthandoff: 12/05/2017
   
 4.  **[データセットの選択]** ページで、 **[データセットを作成する]**をクリックします。  
   
-5.  **[次へ]**をクリックします。  
+5.  **[次へ]** をクリックします。  
   
 6.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 埋め込みデータ ソースの作成については、「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
-7.  **[次へ]**をクリックします。  
+7.  **[次へ]** をクリックします。  
   
 8.  **[クエリのデザイン]** ページで、 **[テキストとして編集]**をクリックします。  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 12/05/2017
   
 10. (省略可能) [実行] アイコン (!) をクリックしてクエリを実行し、データを表示します。
 
-11. **[次へ]**をクリックします。  
+11. **[次へ]** をクリックします。  
   
 ## <a name="Groups"></a>2.テーブルまたはマトリックスの新規作成ウィザードを使用してデータを整理し、レイアウトを選択する  
 ウィザードを使用して、データを表示する最初のデザインを作成します。 ウィザードのプレビュー ペインでは、マトリックスのデザインを完了する前にデータのグループ化の結果を表示できます。  
@@ -130,7 +130,7 @@ ms.lasthandoff: 12/05/2017
     
     ![report-builder-arrange-fields-report-wizard](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
   
-7.  **[次へ]**をクリックします。  
+7.  **[次へ]** をクリックします。  
   
 8.  [レイアウトの選択] ページの **[オプション]**で、 **[小計と総計を表示]** が選択されていることを確認します。  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 12/05/2017
   
 10. **[グループの展開/折りたたみ]** チェック ボックスがオンであることを確認します。  
   
-11. **[次へ]**をクリックします。  
+11. **[次へ]** をクリックします。  
   
 13. **[完了]**をクリックします。  
   
@@ -361,7 +361,7 @@ ms.lasthandoff: 12/05/2017
   
 販売区域名が垂直方向 (上から下) に表示されます。 Territory 行グループの高さは、販売区域名の長さによって変わります。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 これで、マトリックス レポートを作成する方法のチュートリアルは終了です。 マトリックスの詳細については、以下を参照してください。 
 -    [テーブル、マトリックス、および一覧](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [マトリックスを作成する](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)

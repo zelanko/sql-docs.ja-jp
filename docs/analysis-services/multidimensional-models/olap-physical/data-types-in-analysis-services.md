@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 30c57dde21aa4839cb06d44b77215b6afee7581b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7fcf359a6f760ffffa4e1a0682e4c4b45f4fe272
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-types-in-analysis-services"></a>Analysis Services で使用するデータ型
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]すべての<xref:Microsoft.AnalysisServices.DataItem>オブジェクト、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]次のサブセットをサポートしている**System.Data.OleDb.OleDbType**です。 使用して設定またはデータ型を読み取る、 [DataItem データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+すべての<xref:Microsoft.AnalysisServices.DataItem>オブジェクト、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]次のサブセットをサポートしている**System.Data.OleDb.OleDbType**です。 使用して設定またはデータ型を読み取る、 [DataItem データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
   
 ## <a name="supported-data-types"></a>サポートされるデータ型  
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/08/2017
 |BigInt|64 ビットの符号付き整数です。 *BigInt*値の型は整数を正 9,223,372,036,854,775,807 負 9,223,372,036,854,775,808 から範囲の値を表します。|  
 |Binary|バイナリ データのストリーム**バイト**型です。 **バイト**は範囲 0 ~ 255 の値の符号なし整数を表す値の型。|  
 |ブール値|この型のインスタンスは、いずれかの値を持つ**true**または**false**です。|  
-|Currency|A*通貨*(小数点以下 4 桁) 通貨単位の 10,000 の精度で +922,337,203,685,477.5807-922,337,203,685,477.5808 から範囲の値。|  
+|通貨|A*通貨*(小数点以下 4 桁) 通貨単位の 10,000 の精度で +922,337,203,685,477.5807-922,337,203,685,477.5808 から範囲の値。|  
 |日付|日付と時刻データで、double として格納されます。 整数部分は 1899 年 12 月 30 日から起算した日数、小数部分は日の一部分 (時刻) を表します。|  
 |Double|-1.79769313486232E +308 から 1.79769313486232E +308 までの範囲の浮動小数点数です。 Double 値は、最大有効桁数が 15 の 10 進数の数値情報を格納します。|  
 |Integer|負の 2,147,483,648 から正の 2,147,483,647 までの符号付き整数値を表す、32 ビットの符号付き整数です。|  

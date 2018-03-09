@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_components_TSQL
 - sp_help_fulltext_components
-dev_langs: TSQL
-helpviewer_keywords: sp_help_fulltext_system_components
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54f529fcb0130479ef30af742fe58fd05b4bc4d1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8bb8278204aa3b710875d3bab91a41abfe43a553
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -48,10 +51,10 @@ sp_help_fulltext_system_components
  'all'  
  すべてのフルテキスト コンポーネントについての情報を返します。  
   
- [  **@component_type=** ] *component_type*  
+ [ **@component_type=** ] *component_type*  
  コンポーネントの種類を指定します。 *component_type*次のいずれかになります。  
   
--   **ワード ブレーカー**  
+-   **wordbreaker**  
   
 -   **フィルター (filter)**  
   
@@ -61,7 +64,7 @@ sp_help_fulltext_system_components
   
  完全パスを指定すると場合、 *param* DLL コンポーネントへの完全パスでも指定する必要がありますまたはエラー メッセージが返されます。  
   
- [  **@param=** ] *param*  
+ [ **@param=** ] *param*  
  コンポーネントの種類に応じて、ロケール識別子 (LCID)、"." プレフィックス付きのファイル拡張子、プロトコル ハンドラーの完全なコンポーネント名、または DLL コンポーネントへの完全なパスのいずれかを指定します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -76,8 +79,8 @@ sp_help_fulltext_system_components
 |**componentname**|**sysname**|コンポーネント名。|  
 |**clsid**|**uniqueidentifier**|コンポーネントのクラス ID。|  
 |**fullpath**|**nvarchar (256)**|コンポーネントの場所へのパス。<br /><br /> NULL のメンバーでない呼び出し元を = **serveradmin**固定サーバー ロール。|  
-|**version**|**nvarchar (30)**|コンポーネントのバージョンです。|  
-|**製造元**|**sysname**|コンポーネントの製造元の名前。|  
+|**version**|**nvarchar(30)**|コンポーネントのバージョンです。|  
+|**manufacturer**|**sysname**|コンポーネントの製造元の名前。|  
   
  1 つがある場合にのみ、次の結果セットが返されます、または 1 つ以上のフルテキスト カタログを使用してが存在する*component_type*です。  
   
@@ -86,7 +89,7 @@ sp_help_fulltext_system_components
 |**dbid**|**int**|データベースの ID です。|  
 |**ftcatid**|**int**|フルテキスト カタログの ID です。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーシップが必要、**パブリック**ロールです。 ただし、のみを表示する対象の VIEW DEFINITION 権限がある、フルテキスト カタログに関する情報。 メンバーにのみ、 **serveradmin**に値が表示できる固定サーバー ロール、 **fullpath**列です。  
   
 ## <a name="remarks"></a>解説  

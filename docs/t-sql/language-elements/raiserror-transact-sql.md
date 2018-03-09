@@ -8,14 +8,16 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RAISERROR
 - RAISERROR_TSQL
 - RAISEERROR_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sysmessages system table
 - errors [SQL Server], RAISERROR statement
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-caps.latest.revision: "73"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eaebe21d731916e0ed6906e7d916df4c8cac2d90
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: af9f82f9b550ecd366c10562199c606bf8ff0c9c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -78,11 +80,11 @@ RAISERROR ( { msg_str | @local_variable }
   
  *msg_str*省略可能な組み込みの変換が指定された文字の文字列を指定します。 各変換指定子は、引数リスト内の値を書式化およびフィールド内の変換指定の場所に配置する方法を定義します。 *msg_str*です。 変換指定の形式は、  
   
- % [*フラグ*] [*幅*] [です。 *有効桁数*] [{h | l}]*型*  
+ % [[*flag*] [*width*] [. *precision*] [{h | l}]] *type*  
   
  使用できるパラメーター *msg_str*は。  
   
- *フラグ*  
+ *flag*  
   
  置換された値の間隔と配置を決めるコードです。  
   
@@ -94,7 +96,7 @@ RAISERROR ( { msg_str | @local_variable }
 |# (番号)|16 進型の x または X に対する 0x プレフィックス|番号記号 (#) フラグは、o、x、または X 形式で使われる場合、0 以外の値の先頭に、それぞれ 0、0x、0X を付けます。 d、i、または u に番号記号 (#) フラグが付いている場合、フラグは無視されます。|  
 |' ' (空白)|スペース埋め|出力値が符号付きで正の値の場合に、先頭に空白を付けます。 プラス記号 (+) フラグが指定される場合は、この空白は無視されます。|  
   
- *幅*  
+ *width*  
   
  引数値が配置されるフィールドの幅の最小値を定義する整数です。 引数の値の長さが同じかまたはよりも長いかどうか*幅*、埋め込みなしで、値を出力します。 値がよりも短い場合*幅*、値が指定された長さに埋め込まれた*幅*です。  
   
@@ -108,7 +110,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  アスタリスク (*) は、precision が引数のリスト内の関連する引数により指定されることを意味します。この引数は整数値である必要があります。  
   
- {h | l}*型*  
+ {h | l} *type*  
   
  文字の種類の d で使用される i、o、s、x、X、または u を作成および**shortint** (h) または**longint** (l) の値。  
   
@@ -126,10 +128,10 @@ RAISERROR ( { msg_str | @local_variable }
 > [!NOTE]  
 >  値を変換する、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint**データ型、 **%i64d**です。  
   
- **@***local_variable*  
- 任意の有効な文字データ型と同じ方法で書式設定文字列を含む変数*msg_str*です。 **@***local_variable*する必要があります**char**または**varchar**、これらのデータ型に暗黙的に変換することができるか。  
+ **@** *local_variable*  
+ 任意の有効な文字データ型と同じ方法で書式設定文字列を含む変数*msg_str*です。 **@ * * * local_variable*する必要があります**char**または**varchar**、これらのデータ型に暗黙的に変換することができるか。  
   
- *重要度*  
+ *severity*  
  このメッセージに関連付けられたユーザー定義重大度レベルです。 使用する場合*msg_id* RAISERROR で指定された重大度を sp_addmessage を使用して作成されたユーザー定義のメッセージを発生させるには、sp_addmessage で指定された重大度をオーバーライドします。  
   
  0 から 18 までの重大度レベルはどのユーザーでも指定できます。 19 から 25 までの重大度レベルは、固定サーバー ロールまたはユーザー ALTER TRACE 権限を持つ、sysadmin のメンバーでのみ指定できます。 重大度レベル 19 から 25 までは、WITH LOG オプションを必要とします。 0 より小さい重大度レベルは 0 と解釈されます。 25 より大きい重大度レベルは 25 と解釈されます。  
@@ -150,18 +152,18 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  An invalid parameter or option was specified for procedure 'mysp_CreateCustomer'.
  ```  
   
- *状態*  
+ *state*  
  0 ～ 255 の整数です。 負の値を 1 に既定値です。 255 より大きい値には使用できません。 
   
  同じユーザー定義エラーが複数の場所で発生する場合、それぞれの場所に対して一意の状態番号を使用すると、コードのどのセクションでエラーが発生しているのかを探すのに役立ちます。  
   
- *引数*  
+ *argument*  
  定義された変数の代入に使用されるパラメーターは、 *msg_str*またはに対応するメッセージ*msg_id*です。 書式引数は指定しなくても、複数指定してもかまいませんが、合計で 20 を超えることはできません。 各置換パラメーターには、ローカル変数、またはこれらのデータ型のいずれかを指定できます: **tinyint**、 **smallint**、 **int**、 **char**、 **varchar**、 **nchar**、 **nvarchar**、**バイナリ**、または**varbinary**です。 その他のデータ型はサポートされません。  
   
  *オプション*  
  エラーのカスタム オプションです。次の表のいずれかの値をとります。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |LOG|エラー ログとアプリケーション ログのインスタンスに、エラーがログ記録、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]です。 エラー ログに記録されるエラーは、現在のところ最高 440 バイトに制限されています。 Sysadmin 固定サーバー ロールまたは ALTER TRACE 権限を持つユーザーのメンバーだけでは、WITH LOG を指定できます。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|クライアントにすぐにメッセージを送信します。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_loaded_assemblies_TSQL
 - dm_clr_loaded_assemblies_TSQL
 - sys.dm_clr_loaded_assemblies
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_loaded_assemblies dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_loaded_assemblies dynamic management view
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44005aa828f6c8225832f961a7f32b8be8c5566e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a5c24a05e1f33512234edafd3fb6d2672a8eee6a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrloadedassemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |**appdomain_address**|**int**|アプリケーション ドメインのアドレス (**AppDomain**) でアセンブリが読み込まれています。 1 人のユーザーが所有するすべてのアセンブリは、常に同じに読み込まれた**AppDomain**です。 **Appdomain_address**に関する詳細情報を参照に使用できる、 **AppDomain**で、 [sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)ビュー。|  
 |**load_time**|**datetime**|アセンブリが読み込まれた時刻。 アセンブリが、まで読み込まれたままことに注意してください[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリが不足し、アンロード、 **AppDomain**です。 監視することができます**load_time**頻度を理解する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリが不足し、アンロード、 **AppDomain**です。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="remarks"></a>解説  

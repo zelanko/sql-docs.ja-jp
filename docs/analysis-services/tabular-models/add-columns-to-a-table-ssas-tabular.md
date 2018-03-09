@@ -1,35 +1,33 @@
 ---
-title: "テーブル (SSAS テーブル) に列を追加 |Microsoft ドキュメント"
+title: "テーブルに列を追加 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 71f93fa48d1bc1c8f6649262a8964f0d4ff8546f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5b5d09c35fcdfa2def6ec78422c1f4d40caa3ef3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="add-columns-to-a-table-ssas-tabular"></a>列のテーブルへの追加 (SSAS テーブル)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]このトピックでは、既存のテーブルに列を追加する方法について説明します。  
+# <a name="add-columns-to-a-table"></a>テーブルに列を追加します。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+この記事では、既存のテーブルに列を追加する方法について説明します。  
   
-## <a name="add-columns-from-the-data-source"></a>データ ソースからの列の追加  
+## <a name="add-columns-from-the-datasource"></a>データ ソースから列を追加します。  
  テーブルのインポート ウィザードを使用してデータ ソース テーブルからデータをインポートすると、ソース テーブル内のすべての列を含むテーブルがモデルに新しく作成されます。ただし、[プレビュー] 機能および [フィルター] 機能を使用して特定の列を除外した場合は、このテーブルには選択したフィルター処理済みのデータのみが含まれます。 また、インポートする特定の列のみを指定する SQL クエリを作成することもできます。 ただし、モデル テーブルに追加したいその他の列がソース テーブルにあることが後で判明する場合や DAX 式で算定された値を含む計算列を追加する必要がある場合があります。  
   
  たとえば、データ ソースから最初にインポートしたときに、テーブルのインポート ウィザードのプレビューおよびフィルター機能を使用して、ソース テーブルから限定された数の列を選択し、後でソース テーブルに存在するがモデル テーブルにはまだ存在しない別の列を追加する必要があると判断したとします。 または、データ ソースで FactSales テーブルに AdjustedProfit  列が追加され、モデル内の Sales テーブルにも同じ AdjustedProfit 列とデータを追加したいとします。  
@@ -48,8 +46,8 @@ ms.lasthandoff: 12/08/2017
   
 2.  **[テーブルのプロパティの編集]** ダイアログ ボックスのテーブル プレビュー ウィンドウで、追加するソース列を選択してから、[OK] をクリックします。 既にテーブル定義に含まれている列はチェックされています。  
   
-## <a name="add-a-calculated-column"></a>計算列の追加  
- 計算列では、各行の値の定義に DAX 式を使用します。 たとえば、各行に 1 を加算する単純な数式 (=1) を使用した計算列を作成できます。 計算列には、モデル内のその他のデータに基づき値を計算する複雑な式が含まれることもあります。 計算列については、他のトピックで詳しく説明します。 詳細については、「[計算列 (SSAS テーブル)](../../analysis-services/tabular-models/ssas-calculated-columns.md)」を参照してください。  
+## <a name="add-a-calculated-column"></a>計算列を追加します。  
+ 計算列では、各行の値の定義に DAX 式を使用します。 たとえば、各行に 1 を加算する単純な数式 (=1) を使用した計算列を作成できます。 計算列には、モデル内のその他のデータに基づき値を計算する複雑な式が含まれることもあります。 計算列については、他のトピックで詳しく説明します。 詳細については、「 [計算列](../../analysis-services/tabular-models/ssas-calculated-columns.md)で作成したテーブル モデル プロジェクトでの利用を想定して取り上げます。  
   
 #### <a name="to-create-a-calculated-column"></a>計算列を作成するには  
   
@@ -59,8 +57,8 @@ ms.lasthandoff: 12/08/2017
   
 2.  各行の属性を追加するには、数式バーに DAX 式を入力します。  
   
-## <a name="add-a-blank-column"></a>空白列の追加  
- モデル テーブルに名前付きの空白列を作成できます。 空白の列は、別のソースのデータを貼り付ける場合に便利です。 貼り付けたデータは、インポートされたデータとは異なる方法で保存されることに留意してください。 詳細については、「[データのコピーと貼り付け (SSAS テーブル)](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)」を参照してください。  
+## <a name="add-a-blank-column"></a>空白の列を追加します。  
+ モデル テーブルに名前付きの空白列を作成できます。 空白の列は、別のソースのデータを貼り付ける場合に便利です。 貼り付けたデータは、インポートされたデータとは異なる方法で保存されることに留意してください。 詳細については、次を参照してください。[コピーと貼り付けデータ](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)です。  
   
 #### <a name="to-create-a-named-blank-column"></a>名前付きの空白列を作成するには  
   
@@ -71,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 2.  一番上のセルをクリックし、名前を入力してから Enter キーを押します。  
   
 ## <a name="see-also"></a>参照  
- [[テーブルのプロパティの編集] ダイアログ ボックス (SSAS)](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
- [テーブル、列、または行のフィルターのマッピングの変更 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+ [テーブルのプロパティ ダイアログ ボックスを編集します。](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
+ [テーブル、列、または行のフィルターのマッピングの変更](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

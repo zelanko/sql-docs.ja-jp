@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_cryptographic_provider_sessions_TSQL
 - sys.dm_cryptographic_provider_sessions_TSQL
 - dm_cryptographic_provider_sessions
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_cryptographic_provider_sessions dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_cryptographic_provider_sessions dynamic management function
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f2f90b8dcca93b007b0dd7aa490fa468f010c98
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8b60590005ab185f4f03256a0e3845d9a4a61bee
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmcryptographicprovidersessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,8 +59,8 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|暗号化サービス プロバイダーの ID 番号。|  
 |**session_handle**|**varbytes(8)**|暗号セッション ハンドル。|  
-|**id**|**nvarchar (128)**|暗号プロバイダーでの認証に使用する ID。|  
-|**spid**|**短い**|接続のセッション ID SPID。 詳細については、次を参照してください。 [@@SPID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/spid-transact-sql.md).|  
+|**identity**|**nvarchar(128)**|暗号プロバイダーでの認証に使用する ID。|  
+|**spid**|**short**|接続のセッション ID SPID。 詳細については、次を参照してください。 [@@SPID &#40;です。TRANSACT-SQL と #41 です](../../t-sql/functions/spid-transact-sql.md)。|  
   
 ## <a name="remarks"></a>解説  
  **Sys.dm_cryptographic_provider_sessions**ビューは、現在の接続をパブリックに表示します。 表示するにはすべての暗号接続する必要があります、**コントロール**server 権限が許可されます。  

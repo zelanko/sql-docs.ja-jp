@@ -1,7 +1,7 @@
 ---
 title: "グローバル設定 (テスト担当者) (OracleToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,18 +17,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 8f539352279a21b6f736616c5425b4f24856cb03
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4aa9d87eefc0b268fbd8fca9cabf26e7cd27b663
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-tester-oracletosql"></a>グローバル設定 (テスト担当者) (OracleToSQL)
 テスト担当者のページを使用して、**グローバル設定**SSMA テスターの設定を指定 ダイアログ ボックス。  
   
 テスト担当者の設定にアクセスする、**ツール**メニューの [**グローバル設定**、] をクリック**Tester**左側のウィンドウの下部にあります。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **テストが容易なオブジェクトの分析**  
 この設定では、テスト可能なオブジェクトの分析を実行するかどうかを指定します。 選択**はい**SSMA Tester を分析し、依存オブジェクトを自動的にチェックする場合。 既定のオプション セットが**はい**です。  
   

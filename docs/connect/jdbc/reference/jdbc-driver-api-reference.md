@@ -1,27 +1,28 @@
 ---
 title: "JDBC ドライバー API リファレンス |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c1b58f4cd68ecafeec1c92ce42c92bfb5f29961a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 9b1083f7807caef852a3ed44991ba7b21109f086
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="jdbc-driver-api-reference"></a>JDBC Driver API リファレンス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,12 +45,14 @@ ms.lasthandoff: 11/18/2017
 >   
 >  Microsoft JDBC Driver 6.0 for SQL Server 以降使用可能な Using Table-Valued パラメーターの API 詳細については、このセクションの内容が見つかりません。 参照してください[テーブル値パラメーターの使用](../../../connect/jdbc/using-table-valued-parameters.md)  
 >   
+>  Microsoft JDBC Driver 6.4 では、JDK 7.0、8.0、9.0 でコンパイルをサポートします。  
+>   
+>  Microsoft JDBC Driver 6.2 では、JDK 7.0 および 8.0 によるコンパイルをサポートします。  
+>   
 >  Microsoft JDBC Drivers 6.0 と JDK 5.0、6.0、7.0、8.0 によるコンパイルに 4.2 対応します。  
 >   
 >  Microsoft JDBC ドライバー 4.1 は JDK 5.0、6.0、7.0 によるコンパイルに対応しています。  
->   
->  Microsoft JDBC ドライバー 4.0 は JDK 5.0 と 6.0 によるコンパイルに対応しています。  
-  
+
 ## <a name="interfaces"></a>インターフェイス  
   
 |インターフェイス名|Description|  

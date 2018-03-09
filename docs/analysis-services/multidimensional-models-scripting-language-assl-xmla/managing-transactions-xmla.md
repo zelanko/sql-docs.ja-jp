@@ -1,19 +1,18 @@
 ---
 title: "トランザクション (XMLA) の管理 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - XML for Analysis, transactions
 - XMLA, transactions
@@ -25,33 +24,33 @@ helpviewer_keywords:
 - committing transactions
 - starting transactions
 ms.assetid: f5112e01-82f8-4870-bfb7-caa00182c999
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3c61c2edfbc6b2fad49a5d7e08dced6cbffe6673
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9d7a8aefc8c018c56327cd4b5d0101523032dd60
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="managing-transactions-xmla"></a>トランザクションの管理 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]すべての XML for Analysis (XMLA) コマンドがのインスタンスに送信される[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]現在暗黙的または明示的なセッションで、トランザクションのコンテキスト内で実行します。 使用するこれらの各トランザクションを管理するため、 [BeginTransaction](../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)、 [CommitTransaction](../../analysis-services/xmla/xml-elements-commands/committransaction-element-xmla.md)、および[RollbackTransaction](../../analysis-services/xmla/xml-elements-commands/rollbacktransaction-element-xmla.md)コマンド。 これらのコマンドを使用して、暗黙の、または明示的なトランザクションの作成や、トランザクション参照カウントの変更、およびトランザクションの開始、コミット、ロールバックを行えます。  
+  すべての XML for Analysis (XMLA) コマンドがのインスタンスに送信される[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]現在暗黙的または明示的なセッションで、トランザクションのコンテキスト内で実行します。 使用するこれらの各トランザクションを管理するため、 [BeginTransaction](../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)、 [CommitTransaction](../../analysis-services/xmla/xml-elements-commands/committransaction-element-xmla.md)、および[RollbackTransaction](../../analysis-services/xmla/xml-elements-commands/rollbacktransaction-element-xmla.md)コマンド。 これらのコマンドを使用して、暗黙の、または明示的なトランザクションの作成や、トランザクション参照カウントの変更、およびトランザクションの開始、コミット、ロールバックを行えます。  
   
 ## <a name="implicit-and-explicit-transactions"></a>暗黙のトランザクションと明示的なトランザクション  
  トランザクションには、暗黙のものと明示的なものがあります。  
   
  **暗黙のトランザクション**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]作成、*暗黙的な*のトランザクションを XMLA コマンドが、 **BeginTransaction**コマンドでは、トランザクションの開始が指定されていません。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は常に、コマンドが成功した場合に暗黙のトランザクションをコミットし、コマンドが失敗した場合に暗黙のトランザクションをロールバックします。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 作成、*暗黙的な*のトランザクションを XMLA コマンドが、 **BeginTransaction**コマンドでは、トランザクションの開始が指定されていません。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は常に、コマンドが成功した場合に暗黙のトランザクションをコミットし、コマンドが失敗した場合に暗黙のトランザクションをロールバックします。  
   
  **明示的なトランザクション**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]作成、*明示的な*トランザクション場合、 **BeginTransaction**トランザクションのコマンドを開始します。 ただし、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]場合にのみ明示的なトランザクションをコミット、 **CommitTransaction**コマンドが送信され、場合は、明示的なトランザクションをロールバック、 **RollbackTransaction**コマンドを送信します。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 作成、*明示的な*トランザクション場合、 **BeginTransaction**トランザクションのコマンドを開始します。 ただし、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]場合にのみ明示的なトランザクションをコミット、 **CommitTransaction**コマンドが送信され、場合は、明示的なトランザクションをロールバック、 **RollbackTransaction**コマンドを送信します。  
   
  また、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、アクティブなトランザクションが完了する前に現在のセッションが終了した場合、暗黙のトランザクションと明示的なトランザクションの両方をロールバックします。  
   
 ## <a name="transactions-and-reference-counts"></a>トランザクションと参照カウント  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、各セッションに対してトランザクション参照カウントを維持します。 しかし、アクティブなトランザクションは各セッションに対して 1 つだけしか維持されないため、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は入れ子になったトランザクションをサポートしていません。 現在のセッションにアクティブなトランザクションがない場合、トランザクション参照カウントは 0 に設定されます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 各セッションに対してトランザクション参照カウントを保持します。 しかし、アクティブなトランザクションは各セッションに対して 1 つだけしか維持されないため、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は入れ子になったトランザクションをサポートしていません。 現在のセッションにアクティブなトランザクションがない場合、トランザクション参照カウントは 0 に設定されます。  
   
  つまり、各**BeginTransaction**コマンドは、いずれかによって、それぞれの中に参照カウントをインクリメント**CommitTransaction**参照カウントが 1 つのコマンドをデクリメントします。 場合、 **CommitTransaction**コマンドでは、トランザクション カウントを設定には、0[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]トランザクションをコミットします。  
   
@@ -67,6 +66,6 @@ ms.lasthandoff: 12/08/2017
  **RollbackTransaction**コマンドの後に実行されたコマンドの結果をロールバック、 **BeginTransaction**コマンドは、現在のセッションで実行されています。 **RollbackTransaction**コマンドは、現在のトランザクション参照カウントに関係なく、アクティブなトランザクションをロールバックし、トランザクション参照カウントを 0 に設定します。 アクティブなトランザクションが存在しない場合 (つまり、現在のセッションのトランザクション参照カウントは既に 0 に設定)、 **RollbackTransaction**コマンドをエラーが発生します。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services での XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Analysis Services の XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

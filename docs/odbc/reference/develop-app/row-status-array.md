@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4451ccb74ca19a02c352c2e7361d0ec8e84c87d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35f61dfb550c54c47e821476687320125b60b7e1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="row-status-array"></a>行の状態配列
 データに加え**SQLFetch**と**SQLFetchScroll**行セット内の行ごとの状態を配列を返すことができます。 この配列は、SQL_ATTR_ROW_STATUS_PTR ステートメント属性によって指定されます。 この配列は、アプリケーションによって割り当てられているし、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性で指定された数の要素があります。 、配列内の値が設定**SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**、および**SQLSetPos です。** 値では、行と最後にフェッチした後にその状態が変更するかどうかの状態について説明します。  

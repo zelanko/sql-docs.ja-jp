@@ -1,14 +1,15 @@
 ---
 title: "SSMA コンソール (MySQLToSQL) を実行 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - Script file commands, Report commands
 - Script file commands, Script generation commands
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39b41addf566e326174a004a210a2ba2b1cdf311
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6faf8033f2210a68217fe6cf3e7021edc2b29b98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>SSMA コンソール (MySQLToSQL) を実行します。
 Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実行し、SSMA 動作を制御できます。  
@@ -295,7 +296,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <generate-assessment-report  
@@ -369,7 +370,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <convert-schema  
@@ -429,7 +430,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 </migrate-data>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <migrate-data  
@@ -517,7 +518,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <synchronize-target  
@@ -526,7 +527,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
   object-type="<object-category>"/>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <synchronize-target>  
@@ -582,7 +583,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <refresh-from-database  
@@ -591,7 +592,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
    object-type="<object-category>"/>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <refresh-from-database>  
@@ -641,7 +642,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <save-as-script  
@@ -680,7 +681,7 @@ sql ステートメントの変換
   
 8.  `write-summary-report-to`概要レポートを生成するパスを指定します。 フォルダー パスが示されているだけの場合、ファイルの名前で**ConvertSQLReport.XML**を作成します。 (省略可能な属性)  
   
-    レポートの作成が viz サブカテゴリの一覧をさらに 2。。、します。  
+    レポートの作成が viz サブカテゴリの一覧をさらに 2します..,:  
   
     -   -エラーの報告 (="true または false"、"false"(省略可能な属性) として既定値)。  
   
@@ -717,7 +718,7 @@ sql ステートメントの変換
   
 </convert-sql-statement>  
 ```  
-または  
+内の複数の  
   
 ```  
 <convert-sql-statement  
@@ -742,7 +743,7 @@ sql ステートメントの変換
   
 />  
 ```  
-または  
+内の複数の  
   
 ```  
 <convert-sql-statement  

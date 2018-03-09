@@ -1,49 +1,45 @@
 ---
-title: "発行および Python コードを使用する |Microsoft ドキュメント"
+title: "発行および利用 Python コード - SQL Server マシン ラーニング サーバー (スタンドアロン) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 11/09/2017
+ms.date: 03/07/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: cgronlund
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 1885c518e4f90109e74f213d9b257d5b3c37c84f
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 9a7e56d5f2726b627381d24e3cfd8e50ade325f6
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publish-and-consume-python-web-services"></a>発行および Python web サービスの利用
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Web サービスに、作業用 Python ソリューションを展開するには、Microsoft Machine Learning のサーバーの操作運用の機能を使用します。 このトピックでは、正常に発行し、ソリューションを実行する手順について説明します。
+作業を展開することができますを操作運用の機能を使用して web サービスに Python ソリューション、 [SQL Server マシン ラーニング サーバー (スタンドアロン)](../r/r-server-standalone.md)インスタンス。 この記事では、正常に発行し、ソリューションを実行する手順について説明します。
 
-この記事の対象読者は、データ サイエンティストは、Microsoft Machine Learning のサーバーでホストされる web サービスとしての Python コードまたはモデルを発行する方法を学習します。 アプリケーションで使用する方法も説明、コードまたはモデル。 この記事では、Python に習熟していることを前提としています。
+対象者は、データ サイエンティストは、Machine Learning サーバーに Python コードまたはモデルを発行する方法と、コードまたはカスタム アプリケーションでモデルを使用する方法を学習します。 
 
-> [!IMPORTANT]
->
-> このサンプルは、Machine Learning Server (スタンドアロン) に含まれて、Machine Learning のサーバーのバージョンで機能を使用して Python のバージョンの開発された**9.1.0**です。
- > 
- > 次のリンクを クリックすると、再発行 Machine Learning のサーバーで、新しいライブラリを使用して、同じサンプルを参照してください。 参照してください[展開および Python で web サービスを管理](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services)です。
-
-**適用されます Microsoft R Server (スタンドアロン)。**
+この記事では、Python に習熟していることを前提としています。 その他の SQL Server 機能とは別にインストールされているスタンドアロン サーバーも必要です。 サーバーがある必要があります[操作運用用に構成された](../operationalization-with-mrsdeploy.md)web サービスのホスティングを有効にします。 
 
 ## <a name="overview-of-workflow"></a>ワークフローの概要
 
 よう Python web サービスを使用する公開からワークフローにまとめることができます。
 
-1. 満たすため、[前提条件](#prereq)のコア API Swagger ドキュメントから Python クライアント ライブラリを生成します。
-2. Python スクリプトには、認証とヘッダーのロジックを追加します。
-3. Python セッションを作成する、環境を準備し、環境を保持するスナップショットを作成します。
-4. Web サービスを発行し、このスナップショットを埋め込みます。
-5. Web サービスで試してみてから、によって、セッションで使用します。
-6. これらのサービスを管理します。
+1. Python の Machine Learning のサーバーのスタンドアロン サーバー インストールがあることを確認します。
+2. 満たすため、[前提条件](#prereq)のコア API Swagger ドキュメントから Python クライアント ライブラリを生成します。
+3. Python スクリプトには、認証とヘッダーのロジックを追加します。
+4. Python セッションを作成する、環境を準備し、環境を保持するスナップショットを作成します。
+5. Web サービスを発行し、このスナップショットを埋め込みます。
+6. Web サービスで試してみてから、によって、セッションで使用します。
+7. これらのサービスを管理します。
 
 ![Swagger ワークフロー](./media/data-scientist-python-workflow.png)
 
@@ -51,9 +47,9 @@ Web サービスに、作業用 Python ソリューションを展開するに�
 
 ## <a name="sample-code"></a>サンプル コード
 
-このサンプル コードが想定が満たされて、[の前提条件](#prereq)その Swagger から Python クライアント ライブラリを生成するファイルとを使った Autorest です。
+このサンプル コードには、必要[前提条件の Python クライアント ライブラリを生成](#prereq)Swagger から Autorest を使用しています。 操作運用のように構成された SQL Server マシン ラーニング サーバー (スタンドアロン) インスタンスでこのコードを実行します。
 
-コード ブロックの後に、すべてのプロセスに関する詳細な説明と詳細なチュートリアルがあります。
+深さでこのコードを調査するに進んで、[ステップ バイ ステップ チュートリアル](#walkthrough)詳細については、完全なプロセスの説明。
 
 > [!IMPORTANT]
 > この例は、ローカルを使用して`admin`アカウントを認証します。 ただし、資格情報を置き換える必要がありますと[認証メソッド](#python-auth)管理者によって構成します。
@@ -288,14 +284,16 @@ for service in client.get_all_web_services(headers):
 client.delete_web_service_version("Iris","V2.0",headers)
 ```
 
+<a name="walkthrough"></a>
+
 ## <a name="walkthrough"></a>チュートリアル
 
 このセクションより詳細で、コードがどのように動作するかについて説明します。
 
 
-### <a name="prereq"></a>手順 1 です。 前提条件となるクライアント ライブラリを作成します。
+### <a name="prereq"></a> 手順 1 です。 前提条件となるクライアント ライブラリを作成します。
 
-発行、Python コードとモデルいう Microsoft Machine Learning のサーバーを開始する前に、このリリースで提供される Swagger ドキュメントを使用してクライアント ライブラリを生成する必要があります。
+Python コードおよび Machine Learning のサーバーの各モデルのパブリッシュを開始するには、このリリースで提供される Swagger ドキュメントを使用してクライアント ライブラリを生成する必要があります。
 
 1. Swagger コード ジェネレーターをローカル コンピューターにインストールし、慣れることです。 Python で API のクライアント ライブラリの生成に使用されます。 一般的なツールのインクルード[Azure AutoRest](https://github.com/Azure/autorest) (Node.js が必要) および[Swagger Codegen](https://github.com/swagger-api/swagger-codegen)です。 
 

@@ -1,28 +1,31 @@
 ---
 title: "R Server (スタンドアロン) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 06/22/2017
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-vms.technology: r-services
+vms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: ca9e48f1-67b8-4905-9b78-56752d7a4e81
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: aa740dc305bf3a34afac42371dbd1ba554b11924
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: 3f0c567463c25a54829a988516890bead171f5ec
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-server-standalone"></a>R Server (スタンドアロン)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft SQL Server 2016 でリリースされた**R Server (スタンドアロン)**、エンタープライズ クラスの分析をサポートするためには、そのプラットフォームの一部として。  Microsoft R Server は、R 言語のスケーラビリティとセキュリティを提供し、オープン ソース r です。 のインメモリ制限に対処SQL Server R Services のようには、Microsoft R Server (スタンドアロン) は、データの並列処理とチャンクの処理に対し、メモリに収まらない非常に大きなデータを使用する R ユーザーの有効化を提供します。
 

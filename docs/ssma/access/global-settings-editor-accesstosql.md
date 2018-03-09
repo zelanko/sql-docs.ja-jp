@@ -1,7 +1,7 @@
 ---
 title: "グローバル設定 (エディター) (AccessToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8fac4a9bfc463b4e5460656e89b103a5dd3c0c56
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4d592f48fa0694ca640e9c3caffb1b268c501ae3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-editor-accesstosql"></a>グローバル設定 (エディター) (AccessToSQL)
 エディター ページを使用して、**グローバル設定** ダイアログ ボックスのコード エディター ウィンドウの設定を指定します。  
   
 エディターの設定にアクセスする、**ツール**メニューの **グローバル設定**をクリックして**GUI**クリックし、左側のウィンドウの下部にある**エディター**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **エディターで行番号を表示します。**  
 コード エディター ウィンドウで、行番号を表示するには、選択**True**です。  
   

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RESTORE_REWINDONLY_TSQL
 - RESTORE REWINDONLY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - closing backup devices
 - backup devices [SQL Server], rewinding
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - rewinding backup devices
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 457ce42346ec53d30cc8a47a6bc4f82a3271d8fc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: bf67d54e58f08296878c0781158e7b878b0b2a49
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE ステートメントで REWINDONLY (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,15 +63,13 @@ FROM <backup_device> [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>引数  
- **\<backup_device >:: =** 
+ **\<backup_device> ::=** 
   
  復元操作に使用する、論理バックアップ デバイスまたは物理バックアップ デバイスを指定します。  
   
- { *logical_backup_device_name* | **@***logical_backup_device_name_var* }  
- によって作成されたバックアップ デバイスの識別子の規則に従う必要があります、論理名は、 **sp_addumpdevice**からデータベースを復元します。 変数として指定する場合 (**@***logical_backup_device_name_var*)、バックアップ デバイス名を指定できます文字列定数として指定 ( **@** *logical_backup_device_name_var* = *logical_backup_device_name*) または文字の文字列データ型の変数として以外の**ntext**または**テキスト**データ型。  
+ { *logical_backup_device_name* | **@***logical_backup_device_name_var* } Is the logical name, which must follow the rules for identifiers, of the backup devices created by **sp_addumpdevice** from which the database is restored.変数として指定する場合 (**@***logical_backup_device_name_var*)、バックアップ デバイス名を指定できます文字列定数として指定 (**@ * * * logical_backup_device_name_var*  =  *logical_backup_device_name*) または文字の文字列データ型の変数として以外の**ntext**または**テキスト**データ型。  
   
- {ディスク |テープ}  **=**  { **'***physical_backup_device_name***'**  |   **@** *physical_backup_device_name_var* }  
- 指定したディスク デバイスまたはテープ デバイスから、バックアップを復元することを許可します。 デバイスの実際の名前 (たとえば、完全なパスとファイル名) でディスクとテープのデバイスの種類を指定する必要があります。 ディスク = 'C:\Program files \microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' や TAPE ='\\\\。 \TAPE0' です。 変数として指定されている場合 (**@***physical_backup_device_name_var*)、デバイス名を指定できます文字列定数として指定 ( **@**  *physical_backup_device_name_var* = '*physcial_backup_device_name*') または文字の文字列データ型の変数として以外の**ntext**または**テキスト**データ型。  
+ {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } Allows backups to be restored from the named disk or tape device.デバイスの実際の名前 (たとえば、完全なパスとファイル名) でディスクとテープのデバイスの種類を指定する必要があります。 ディスク = 'C:\Program files \microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' や TAPE ='\\\\。 \TAPE0' です。変数として指定されている場合 (**@***physical_backup_device_name_var*)、デバイス名を指定できます文字列定数として指定 (**@ * * * physical_backup_device_name_var* = '*physcial_backup_device_name *') または文字の文字列データ型の変数として以外の**ntext**または**テキスト**データ型。  
   
  ネットワーク サーバーを UNC 名で指定する場合は、デバイスの種類に DISK を指定してください (UNC 名にはマシン名を含める必要があります)。 UNC 名の使用の詳細については、次を参照してください。[バックアップ デバイス &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -80,7 +80,7 @@ FROM <backup_device> [ ,...n ]
   
  復元シーケンスで必要になるバックアップ デバイスの数が、バックアップが含まれるメディア セットの作成で使用したデバイスの数と同じになるかどうかは、復元をオフラインとオンラインのどちらで行うかによって決まります。 オフライン復元の場合は、バックアップの作成時よりも少ない数のデバイスでバックアップを復元できます。 オンライン復元の場合は、バックアップの作成時に使用されたすべてのバックアップ デバイスが必要です。 それより少ない数のデバイスで復元しようとしても失敗します。  
   
- 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)の別のインスタンスで作成された場合、これは必須です。  
+ 詳細については、「 [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)のインスタンスが動作しているコンピューターにテープ ドライブが装着されている場合のみ使用できます。  
   
 > [!NOTE]  
 >  ミラー化されたメディア セットからバックアップを復元する場合は、各メディア ファミリに対して 1 つのミラーだけを指定できますが、 エラーが発生したとき、他に複数のミラーを用意しておくと復元に関する問題をすばやく解決できる場合があります。 損傷したメディア ボリュームは、別のミラーの対応するボリュームで代替できます。 オフライン復元の場合は、メディア ファミリの数よりも少ない数のデバイスから復元できますが、各ファミリは一度しか処理されないことに注意してください。  
@@ -100,7 +100,7 @@ FROM <backup_device> [ ,...n ]
   
 ## <a name="security"></a>セキュリティ  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>権限  
  すべてのユーザーが RESTORE REWINDONLY を使用できます。  
   
 ## <a name="see-also"></a>参照  

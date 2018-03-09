@@ -8,24 +8,26 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords:
 - "弾力性プール"
 - "弾力性プールの管理"
-f1_keywords: DATABASE_SERVICE_OBJECTIVES_TSQL
+f1_keywords:
+- DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d1ccfea9f9c24312d29be192e5b6497c89e7972
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08c801fe0f7d917de2c520e788320ec3677d8a6e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -41,18 +43,18 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|int|Azure SQL Database サーバーのインスタンス内で一意で、データベースの ID。 結合可能[sys.databases &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|database_id|int|Azure SQL Database サーバーのインスタンス内で一意で、データベースの ID。 結合可能[sys.databases &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
 |のエディション|sysname|データベースまたはデータ ウェアハウス用のサービス層:**基本**、**標準**、 **Premium**または**データ ウェアハウス**です。|  
 |service_objective|sysname|データベースの価格レベル。 データベースが弾力性プール内にある場合を返します**ElasticPool**です。<br /><br /> **基本**階層を返します**基本**です。<br /><br /> **Standard サービス階層内の単一データベース**次のいずれかを返します。 S0、S1、S2 または S3 です。<br /><br /> **Premium 階層内の単一データベース**次を返します: P1、P2、P4、P6/P3 または P11 です。<br /><br /> **SQL Data Warehouse** DW2000 を通じて DW100 を返します。|  
 |elastic_pool_name|sysname|名前、[弾力性プール](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)にデータベースが属しています。 返します**NULL**データベースが 1 つのデータベースまたはデータ warehoue 場合。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  必要があります**dbManager**マスター データベースに対する権限。  データベース レベルでは、ユーザーは、作成者または所有者をする必要があります。  
   
 ## <a name="examples"></a>使用例  
  この例は、master データベースまたはユーザー データベースで実行できます。 クエリは、名前、サービス、およびデータベースのパフォーマンス レベルの情報を返します。  
   
-```tsql  
+```sql  
 SELECT  d.name,   
      slo.*    
 FROM sys.databases d   

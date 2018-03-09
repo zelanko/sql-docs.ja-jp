@@ -4,38 +4,37 @@ ms.date: 10/19/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
+f1_keywords:
+- sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 14a6ca056a079b4a51813783883cc09c5f53e8ad
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 98eb6a35d2dba7c71dcd857ffdfbe08c6e8bd17c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-designer-ssas"></a>テーブル モデル デザイナー (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]テーブル モデル デザイナーの一部である[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に統合された Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]、プロフェッショナルなテーブル モデル ソリューションを開発するには、具体的には追加のプロジェクトの種類のテンプレートにします。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は無料で Web からダウンロードしてインストールできます。 詳細については、「[SQL Server Data Tools (SSDT) のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。    
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+テーブル モデル デザイナーは、Microsoft [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に統合された [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]の一部であり、プロフェッショナルなテーブル モデル ソリューションの開発のために特化したプロジェクトの種類のテンプレートが付属しています。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は無料で Web からダウンロードしてインストールできます。 詳細については、「[SQL Server Data Tools (SSDT) のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。    
   
 ##  <a name="bkmk_benefits"></a> 利点  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールすると、テーブル モデルを作成するための新しいプロジェクト テンプレートが、使用可能なプロジェクトの種類に追加されます。 いずれかのテンプレートを使用して新しいテーブル モデル プロジェクトを作成した後は、テーブル モデル デザイナー ツール、およびウィザードを使用して、モデル作成を開始できます。  
   
  プロフェッショナルな多次元のテーブル モデル ソリューション作成のための新しいテンプレートとツールのほかに、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境には、組織のために最も強力な BI ソリューションを作成するための、デバッグ、およびプロジェクトのライフ サイクルに関する機能が用意されています。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]の詳細については、「 [Visual Studio の概要](http://go.microsoft.com/fwlink/?LinkId=206389)」を参照してください。  
   
-##  <a name="bkmk_proj_temp"></a>プロジェクト テンプレート  
+##  <a name="bkmk_proj_temp"></a> プロジェクト テンプレート  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールすると、以下のテーブル モデル プロジェクト テンプレートがビジネス インテリジェンス プロジェクトの種類に追加されます。  
   
  **Analysis Services のテーブル プロジェクト**  
@@ -99,7 +98,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [メジャー]  
   
- プロジェクト ウィンドウには、プロジェクト プロパティによりプロジェクト名とプロジェクト フォルダーのみが表示されます。 プロジェクトには、モーダル プロパティ ダイアログ ボックスを使用して設定できる配置オプションと配置サーバーの追加の設定もあります。 これらのプロパティを表示するには、 **ソリューション エクスプローラー**で、プロジェクトを右クリックして、 **[プロパティ]**をクリックします。  
+ プロジェクトのプロパティは、[プロパティ] ウィンドウで、プロジェクト名とプロジェクト フォルダーのみを表示します。 プロジェクトには、モーダル プロパティ ダイアログ ボックスを使用して設定できる配置オプションと配置サーバーの追加の設定もあります。 これらのプロパティを表示するには、 **ソリューション エクスプローラー**で、プロジェクトを右クリックして、 **[プロパティ]**をクリックします。  
   
  プロパティ ウィンドウのフィールドには、クリックすると開くコントロールが埋め込まれています。 編集コントロールの種類は、プロパティごとに異なります。 コントロールには、エディット ボックス、ドロップダウン リスト、およびカスタム ダイアログ ボックスへのリンクが含まれています。 淡色表示のプロパティは読み取り専用です。  
   
@@ -129,7 +128,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="toolbar"></a>[ツール バー]  
  Analysis Services ツール バーを使用すると、最もよく使用されるモデル作成コマンドにすばやく簡単にアクセスできます。  
   
-##  <a name="bkmk_vsint"></a>Visual Studio の統合  
+##  <a name="bkmk_vsint"></a> Visual Studio の統合  
  **ソース管理**  
  Analysis Services プロジェクトは、選択したソース管理プラグインと統合されます。 ソース コントロールを使用するように Visual Studio を構成した場合は、ソリューション エクスプローラーからチェックインとチェックアウトを使用できます。 Team Foundation Server を使用するように構成するには、「 [Team Foundation バージョン管理を使用する Visual Studio の構成](http://msdn.microsoft.com/library/ms253064.aspx)」を参照してください。 多くのサード パーティ製ソース管理プラグインもサポートされます。  
   
@@ -140,7 +139,7 @@ ms.lasthandoff: 12/08/2017
  Analysis Services のキーボード ショートカットは、[ツール]  > [オプション] > [キーボード] ダイアログで構成/再マップできます。 テーブル モデル デザイナーのコンテキストでは、ビルド、保存、デバッグ、新しいプロジェクトなど、一部のグローバル [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ショートカットがサポートされています。 その他のテーブル モデル デザイナーに固有のショートカットは Analysis Services コンテキストです。  
   
 ## <a name="see-also"></a>参照  
- [テーブル モデル プロジェクト (SSAS テーブル)](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
- [プロパティ (SSAS テーブル)](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
+ [テーブル モデル プロジェクト](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
+ [プロパティ](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   

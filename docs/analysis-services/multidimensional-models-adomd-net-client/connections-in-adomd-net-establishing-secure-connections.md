@@ -1,36 +1,35 @@
 ---
 title: "ADOMD.NET でのセキュリティで保護された接続を確立する |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [ADOMD.NET]
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 192686dd747d307163e4530c55459e2c2d814cc4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6916e57fc0135fc5688c6569eaeb8341caa23b82
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Connections in ADOMD.NET のセキュリティで保護された接続を確立します。
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]接続に使用されるセキュリティ手段がの値に依存 ADOMD.NET で接続を使用するときに、 **ProtectionLevel**を呼び出すときに使用する接続文字列のプロパティ、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A>メソッド、の<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
+  接続に使用されるセキュリティ手段がの値に依存 ADOMD.NET で接続を使用するときに、 **ProtectionLevel**を呼び出すときに使用する接続文字列のプロパティ、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A>メソッド、の<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
   
  **ProtectionLevel**プロパティは、次の 4 つのレベルのセキュリティを提供しています。 認証されていない、認証、署名済み、および暗号化します。 これらの各セキュリティ レベルについて、次の表で説明します。  
   
@@ -40,7 +39,7 @@ ms.lasthandoff: 12/08/2017
 |セキュリティ レベル|ProtectionLevel の値|  
 |--------------------|---------------------------|  
 |*未認証の接続*<br /> 未認証の接続では一切の認証が行われません。 この種の接続は広く利用されていますが、安全性が最も低い接続形態です。|**なし**|  
-|*認証された接続*<br /> 認証された接続では、接続を要求しているユーザーの本人性を確認します。ただし、その後の通信はセキュリティで保護されません。 この種の接続は、分析データ ソースに接続しようとしているユーザーまたはアプリケーションの身元を検証できるという点で便利です。|**のインスタンスに接続するときには、**|  
+|*認証された接続*<br /> 認証された接続では、接続を要求しているユーザーの本人性を確認します。ただし、その後の通信はセキュリティで保護されません。 この種の接続は、分析データ ソースに接続しようとしているユーザーまたはアプリケーションの身元を検証できるという点で便利です。|**Connect**|  
 |*署名された接続*<br /> 署名された接続は、接続を要求しているユーザーを認証し、転送データが変更されていないことを確認します。 この種の接続は、転送されたデータの信頼性を検証する必要がある場合に役立ちます。 ただし、署名された接続で防止できるのは、データ パケットの内容の不正な変更です。 転送中、データ パケットの内容が傍受される危険性は残っています。<br /><br /><br /><br /> 署名された接続が、XML for Analysis プロバイダーによって提供されるでのみサポートされていることに注意してください[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。|**Pkt 整合性**または**PktIntegrity**|  
 |*暗号化された接続*<br /> 暗号化された接続は、ADOMD.NET によって使用される既定の接続の種類です。 この種の接続は、接続を要求しているユーザーを認証したうえで、転送データの暗号化も行います。 暗号化された接続は、ADOMD.NET で作成できる接続形式の中でセキュリティ保護のレベルが最も高い形式です。 データ パケットの内容は表示または変更できず、転送中のデータが保護されます。<br /><br /><br /><br /> 暗号化された接続は、XML for Analysis プロバイダーによって提供されるでのみサポートされて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。|**Pkt プライバシー**または**PktPrivacy**|  
   
@@ -57,10 +56,10 @@ ms.lasthandoff: 12/08/2017
   
 |ProtectionLevel の値|TCP 接続で使用するか|[結果]|  
 |---------------------------|------------------------------|-------------|  
-|**なし**|可|未認証の接続が適用されます。<br /><br /> プロバイダーに対して TCP ストリームが要求されます。ただし、ストリームを要求しているユーザーに対しては、どのような形態の認証も実行されません。|  
-|**のインスタンスに接続するときには、**|可|認証された接続が適用されます。<br /><br /> TCP ストリームが、プロバイダーから要求され、ストリームを要求しているユーザーのセキュリティ コンテキストがサーバーに対して認証: 認証が成功すると、その他のアクションは実行されません。 認証が失敗した場合は、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> オブジェクトが多次元データ ソースから切断され、例外がスローされます。<br /><br /> 認証が成功または失敗した後に、接続の認証に使用されたセキュリティ コンテキストは破棄されます。|  
-|**Pkt 整合性**または**PktIntegrity**|可|署名された接続が適用されます。<br /><br /> TCP ストリームが、プロバイダーから要求され、ストリームを要求しているユーザーのセキュリティ コンテキストがサーバーに対して認証。<br /><br /> <br /><br /> 認証が成功した場合、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> オブジェクトは既存の TCP ストリームを閉じ、署名された TCP ストリームを開いて、すべての要求を処理します。 データまたはメタデータに対する各要求は、接続を開くために使用されたセキュリティ コンテキストを使用して認証されます。 また、各パケットは、TCP パケットのペイロードが変更されていないことを確認するためにデジタル署名されています。<br /><br /> <br /><br /> 認証が失敗した場合は、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> オブジェクトが多次元データ ソースから切断され、例外がスローされます。|  
-|**Pkt プライバシー**または**PktPrivacy**|可|暗号化された接続が適用されます。<br /><br /> <br /><br /> 指定することも、暗号化された接続を設定しないと、メモ、 **ProtectionLevel**接続文字列プロパティです。<br /><br /> <br /><br /> プロバイダーに対して TCP ストリームが要求されます。さらに、ストリームを要求しているユーザーのセキュリティ コンテキストがサーバーに対して認証されます。<br /><br /> <br /><br /> 認証が成功した場合、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> オブジェクトは既存の TCP ストリームを閉じ、暗号化された TCP ストリームを開いて、すべての要求を処理します。 データまたはメタデータに対する各要求は、接続を開くために使用されたセキュリティ コンテキストを使用して認証されます。 また、各 TCP パケットのペイロードは、プロバイダーおよび多次元データ ソースの両方でサポートされている最も高度な暗号化方法を使用して暗号化されます。<br /><br /> <br /><br /> 認証が失敗した場合は、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> オブジェクトが多次元データ ソースから切断され、例外がスローされます。|  
+|**なし**|はい|未認証の接続が適用されます。<br /><br /> プロバイダーに対して TCP ストリームが要求されます。ただし、ストリームを要求しているユーザーに対しては、どのような形態の認証も実行されません。|  
+|**Connect**|はい|認証された接続が適用されます。<br /><br /> TCP ストリームが、プロバイダーから要求され、ストリームを要求しているユーザーのセキュリティ コンテキストがサーバーに対して認証: 認証が成功すると、その他のアクションは実行されません。 認証が失敗した場合は、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> オブジェクトが多次元データ ソースから切断され、例外がスローされます。<br /><br /> 認証が成功または失敗した後に、接続の認証に使用されたセキュリティ コンテキストは破棄されます。|  
+|**Pkt 整合性**または**PktIntegrity**|はい|署名された接続が適用されます。<br /><br /> TCP ストリームが、プロバイダーから要求され、ストリームを要求しているユーザーのセキュリティ コンテキストがサーバーに対して認証。<br /><br /> <br /><br /> 認証が成功した場合、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> オブジェクトは既存の TCP ストリームを閉じ、署名された TCP ストリームを開いて、すべての要求を処理します。 データまたはメタデータに対する各要求は、接続を開くために使用されたセキュリティ コンテキストを使用して認証されます。 また、各パケットは、TCP パケットのペイロードが変更されていないことを確認するためにデジタル署名されています。<br /><br /> <br /><br /> 認証が失敗した場合は、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> オブジェクトが多次元データ ソースから切断され、例外がスローされます。|  
+|**Pkt プライバシー**または**PktPrivacy**|はい|暗号化された接続が適用されます。<br /><br /> <br /><br /> 指定することも、暗号化された接続を設定しないと、メモ、 **ProtectionLevel**接続文字列プロパティです。<br /><br /> <br /><br /> プロバイダーに対して TCP ストリームが要求されます。さらに、ストリームを要求しているユーザーのセキュリティ コンテキストがサーバーに対して認証されます。<br /><br /> <br /><br /> 認証が成功した場合、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> オブジェクトは既存の TCP ストリームを閉じ、暗号化された TCP ストリームを開いて、すべての要求を処理します。 データまたはメタデータに対する各要求は、接続を開くために使用されたセキュリティ コンテキストを使用して認証されます。 また、各 TCP パケットのペイロードは、プロバイダーおよび多次元データ ソースの両方でサポートされている最も高度な暗号化方法を使用して暗号化されます。<br /><br /> <br /><br /> 認証が失敗した場合は、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> オブジェクトが多次元データ ソースから切断され、例外がスローされます。|  
   
 ### <a name="using-windows-integrated-security-for-the-connection"></a>接続での Windows 統合セキュリティの使用  
  Windows 統合セキュリティは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスへの接続の確立およびセキュリティ保護を行うための最も安全な方法です。 Windows 統合セキュリティでは、認証プロセス中にユーザー名やパスワードなどのセキュリティ資格情報が公開されません。代わりに、現在実行しているプロセスのセキュリティ ID を使用して本人性を検証します。 多くのクライアント アプリケーションの場合、このセキュリティ ID は現在ログオンしているユーザーの ID を表します。  
@@ -81,9 +80,9 @@ ms.lasthandoff: 12/08/2017
   
 |ProtectionLevel の値|HTTP または HTTPS で使用するか|  
 |---------------------------|----------------------------|  
-|**なし**|不可|  
-|**のインスタンスに接続するときには、**|HTTP|  
-|**Pkt 整合性**または**PktIntegrity**|不可|  
+|**なし**|いいえ|  
+|**Connect**|HTTP|  
+|**Pkt 整合性**または**PktIntegrity**|いいえ|  
 |**Pkt プライバシー**または**PktPrivacy**|HTTPS|  
   
 ### <a name="opening-a-secure-http-connection"></a>セキュリティ保護された HTTP 接続を開く  

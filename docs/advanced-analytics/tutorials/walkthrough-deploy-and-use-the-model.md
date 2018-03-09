@@ -7,24 +7,27 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7b0514d7b32eec5899ab24450bdfc0c38f141fee
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 771683f472af17292de62fb1591539f1215ebf57
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>SQL で使用して、R モデルの配置
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 このレッスンでは、ストアド プロシージャからトレーニング済みモデルを呼び出すことによって、運用環境で R モデルを使用します。 R またはサポートするアプリケーション プログラミング言語から、ストアド プロシージャを呼び出すことができますし、 [!INCLUDE[tsql](../../includes/tsql-md.md)] (など、c#、Java、Python など)、新規の観測値を予測するモデルを使用します。
 
@@ -200,7 +203,7 @@ ms.lasthandoff: 12/20/2017
     >[!TIP]
     > SQL Server と R. の両方の優れた統合を提供する R ツールの Visual Studio (RTVS)SQL Server 接続 RODBC の併用の例については、この記事を参照してください: [SQL Server と R を使用します。](https://docs.microsoft.com/en-us/visualstudio/rtvs/sql-server)
 
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>概要
 
 操作する方法を習得する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データをトレーニング済みの R モデルを永続化と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、このデータ セットに基づく新しいモデルを作成するには比較的簡単にする必要があります。 たとえば、これらの追加のモデルを作成してみてください可能性があります。
 

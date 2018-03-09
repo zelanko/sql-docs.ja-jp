@@ -8,26 +8,30 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - IHextendedSubscriptionView_TSQL
 - IHextendedSubscriptionView
-dev_langs: TSQL
-helpviewer_keywords: IHextendedSubscriptionView view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- IHextendedSubscriptionView view
 ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7aa47e213552b5351c1dc1c7fc685ec96cd4a45
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f938ff6df875bf761b58667b328af223eb3af8ee
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +40,12 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**コ**|**int**|アーティクルの一意識別子。|  
-|**dest_db 指定してください。**|**sysname**|転送先データベースの名前。|  
+|**article_id**|**int**|アーティクルの一意識別子。|  
+|**dest_db**|**sysname**|転送先データベースの名前。|  
 |**srvid**|**smallint**|サブスクライバーの一意識別子。|  
 |**login_name**|**sysname**|サブスクライバーに接続するときに使用するログイン名。|  
 |**distribution_jobid**|**[バイナリ]**|ディストリビューション エージェント ジョブを識別します。|  
-|**化コ**|**int**|パブリケーション データベースの識別子。|  
+|**publisher_database_id**|**int**|パブリケーション データベースの識別子。|  
 |**subscription_type**|**int**|サブスクリプションの種類です。<br /><br /> **0** = プッシュ、ディストリビューション エージェントに、サブスクライバーで実行されます。<br /><br /> **1** = プル、ディストリビューション エージェントがディストリビューターで実行されます。|  
 |**sync_type**|**tinyint**|初期同期の種類。<br /><br /> **1**自動を =<br /><br /> **2** = なし|  
 |**ステータス**|**tinyint**|サブスクリプションの状態です。<br /><br /> **0** = 非アクティブ<br /><br /> **1** = サブスクライブ<br /><br /> **2** = アクティブ|  
@@ -51,8 +55,8 @@ ms.lasthandoff: 11/17/2017
 |**loopback_detection**|**bit**|双方向トランザクション レプリケーション トポロジの一部であるサブスクリプションに適用されます。 ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを示します。<br /><br /> **1** = は送信しません。<br /><br /> **0** = 戻す。|  
 |**agent_id**|**int**|ディストリビューション エージェントの一意識別子。|  
 |**update_mode**|**tinyint**|更新モードの種類を示します。次のいずれかの値になります。<br /><br /> **0** = 読み取り専用です。<br /><br /> **1** = 即時更新します。<br /><br /> **2**メッセージ キューを使用するキュー更新を = です。<br /><br /> **3**イミディ エイト = メッセージ キューを使用してフェールオーバーとしてキューに置かれた更新プログラムで更新します。<br /><br /> **4** SQL Server キューを使用するキュー更新を = です。<br /><br /> **5** = キュー更新フェールオーバーでは、SQL Server キューを使用する即時更新します。|  
-|**publisher_seqno**|**varbinary (16)**|このサブスクリプションに対するパブリッシャー側のトランザクションのシーケンス番号。|  
-|**ss_cplt_seqno**|**varbinary (16)**|同時実行スナップショット処理の完了を示すために使用するシーケンス番号。|  
+|**publisher_seqno**|**varbinary(16)**|このサブスクリプションに対するパブリッシャー側のトランザクションのシーケンス番号。|  
+|**ss_cplt_seqno**|**varbinary(16)**|同時実行スナップショット処理の完了を示すために使用するシーケンス番号。|  
   
 ## <a name="see-also"></a>参照  
  [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

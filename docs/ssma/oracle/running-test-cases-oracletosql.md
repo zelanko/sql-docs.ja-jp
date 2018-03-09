@@ -1,7 +1,7 @@
 ---
 title: "テスト_ケース (OracleToSQL) を実行している |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 8fd2e06a9d9dcaa243876638f405bcc78c6a9d33
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6d9e4e71813ff5b092ba1b67db207abd9b1adc44
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-test-cases-oracletosql"></a>テスト_ケース (OracleToSQL) を実行します。
 SSMA テスト担当者がテスト_ケースを実行すると、テスト用に選択されたオブジェクトを実行し、検証結果に関するレポートを作成します。 結果が両方のプラットフォームで同一の場合、テストが成功しました。 Oracle 間のオブジェクトの対応付けと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA プロジェクトを現在のスキーマ マッピングの設定に従って決定されます。  
@@ -39,7 +39,7 @@ SSMA テスト担当者がテスト_ケースを実行すると、テスト用�
   
 ## <a name="test-case-execution-steps"></a>テスト_ケースの実行手順  
   
-### <a name="prerequisites"></a>前提条件  
+### <a name="prerequisites"></a>Prerequisites  
 SSMA テスターは、テストの開始前にテストの実行のすべての前提条件を満たしているかどうかを確認します。 一部の条件が満たされない場合、エラー メッセージが表示されます。  
   
 ### <a name="initialization"></a>初期化  
@@ -49,7 +49,7 @@ SSMA テスターは、テストの開始前にテストの実行のすべての
   
 ||||  
 |-|-|-|  
-|名前|型|Description|  
+|[オブジェクト名]|型|Description|  
 |USER_TABLE$ Trg|トリガー (trigger)|検証済みのテーブルで変更の監査をトリガーします。|  
 |USER_TABLE$ AUD|テーブル|テーブルな行が削除され、上書きを保存します。|  
 |USER_TABLE$ AUDID|テーブル|追加または変更された行が保存されているテーブルです。|  
@@ -62,14 +62,14 @@ SSMA テスターは、テストの開始前にテストの実行のすべての
   
 ||||  
 |-|-|-|  
-|名前|型|Description|  
+|[オブジェクト名]|型|Description|  
 |USER_TABLE$ Trg|トリガー (trigger)|検証済みのテーブルで変更の監査をトリガーします。|  
   
 次のオブジェクトを作成および[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ssmatesterdb データベースにします。  
   
 ||||  
 |-|-|-|  
-|名前|型|Description|  
+|[オブジェクト名]|型|Description|  
 |USER_TABLE$ Aud|テーブル|テーブルな行が削除され、上書きを保存します。|  
 |USER_TABLE$ AudID|テーブル|追加または変更された行が保存されているテーブルです。|  
 |USER_TABLE|view|テーブルの変更の簡略化された表現。|  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - PARTITION_FUNCTION_TSQL
 - PARTITION_TSQL
 - CREATE_PARTITION_FUNCTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - RANGE RIGHT partition functions
 - RANGE LEFT partition functions
@@ -28,16 +30,16 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], functions
 - CREATE PARTITION FUNCTION statement
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea94b26815eb1bc3453a1bcf01eb6b522f41e037
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: a095e1de4fdffc97d615a39fd7cf185c99493d02
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -83,7 +85,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
   
  パーティション分割列に NULL 値がある行はすべて、左端のパーティションに配置されます。ただし、NULL が境界値として指定され、RIGHT が指定された場合は除きます。 この場合、左端のパーティションは空のパーティションになり、NULL 値は次のパーティションに配置されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  次のいずれかの権限を使用すると、CREATE PARTITION FUNCTION を実行できます。  
   
 -   ALTER ANY DATASPACE 権限。 この権限は、既定では **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_ddladmin** 固定データベース ロールのメンバーに与えられています。  
@@ -97,35 +99,35 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
 ### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>A. int 型の列に RANGE LEFT パーティション関数を作成する  
  次のパーティション関数は、テーブルまたはインデックスを 4 つのパーティションに分割します。  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF1 (int)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 ```  
   
  次の表にパーティション分割列でこのパーティション関数を使用するテーブルをどのように**col1**に分割されます。  
   
-|パーティション|1|2|3|4|  
+|パーティション|@shouldalert|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**値**|**col1** <= `1`|**col1**  >  `1` AND **col1** <= `100`|**col1**  >  `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. int 型の列に RANGE RIGHT パーティション関数を作成する  
  次のパーティション関数と同じ値を使用して*boundary_value* [ **、***.. .n* ] RANGE RIGHT を示す点を除いて、前の例とします。  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  
 AS RANGE RIGHT FOR VALUES (1, 100, 1000);  
 ```  
   
  次の表にパーティション分割列でこのパーティション関数を使用するテーブルをどのように**col1**に分割されます。  
   
-|パーティション|1|2|3|4|  
+|パーティション|@shouldalert|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**値**|**col1** \<`1`|**col1**  >=  `1` AND **col1** \<`100`|**col1**  >=  `100` AND **col1** \<`1000`|**col1** >= `1000`| 
   
 ### <a name="c-creating-a-range-right-partition-function-on-a-datetime-column"></a>C. datetime 型の列に RANGE RIGHT パーティション関数を作成する  
  次のパーティション関数が 12 のパーティションがあり、それぞれの月の値の 1 年分の 1 つをテーブルまたはインデックスをパーティション分割、 **datetime**列です。  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION [myDateRangePF1] (datetime)  
 AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',  
                '20030501', '20030601', '20030701', '20030801',   
@@ -134,28 +136,28 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
   
  次の表に、テーブルまたはインデックス パーティション分割列でこのパーティション関数を使用する方法**datecol**に分割されます。  
   
-|パーティション|1|2|[...]|11|12|  
+|パーティション|@shouldalert|2|[...]|11|12|  
 |---------------|-------|-------|---------|--------|--------|  
 |**値**|**datecol** \<`February 1, 2003`|**datecol**  >=  `February 1, 2003` AND **datecol** \<`March 1, 2003`||**datecol**  >=  `November 1, 2003` AND **col1** \<`December 1, 2003`|**datecol** >= `December 1, 2003`| 
   
 ### <a name="d-creating-a-partition-function-on-a-char-column"></a>D. char 型の列にパーティション関数を作成する  
  次のパーティション関数では、4 つのパーティションをテーブルまたはインデックスがパーティション分割します。  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF3 (char(20))  
 AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');  
 ```  
   
  次の表にパーティション分割列でこのパーティション関数を使用するテーブルをどのように**col1**に分割されます。  
   
-|パーティション|1|2|3|4|  
+|パーティション|@shouldalert|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**値**|**col1** \< `EX`しています.|**col1**  >=  `EX` AND **col1** \< `RXE`しています.|**col1**  >=  `RXE` AND **col1** \< `XR`しています.|**col1** >= `XR`| 
   
 ### <a name="e-creating-15000-partitions"></a>E. 15,000 のパーティションを作成する  
  次のパーティション関数は、テーブルまたはインデックスを 15,000 のパーティションに分割します。  
   
-```tsql  
+```sql  
 --Create integer partition function for 15,000 partitions.  
 DECLARE @IntegerPartitionFunction nvarchar(max) = 
     N'CREATE PARTITION FUNCTION IntegerPartitionFunction (int) 
@@ -174,7 +176,7 @@ GO
 ### <a name="f-creating-partitions-for-multiple-years"></a>F. 複数年のパーティションを作成する  
  次のパーティション関数パーティション テーブルまたはインデックスを 50 のパーティションで、 **datetime2**列です。 2007 年 1 月から 2011 年 1 月までの各月に対して 1 つのパーティションがあります。  
   
-```tsql  
+```sql  
 --Create date partition function with increment by month.  
 DECLARE @DatePartitionFunction nvarchar(max) = 
     N'CREATE PARTITION FUNCTION DatePartitionFunction (datetime2) 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC CHECKCATALOG
 - CHECKCATALOG_TSQL
 - CHECKCATALOG
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - catalogs [SQL Server], consistency checks
 - checking catalog consistency
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - integrity [SQL Server], catalogs
 - consistency [SQL Server], catalogs
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
-caps.latest.revision: "51"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c554f15df3eae68ea3b5cda1ba5bb316f5dcc17
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 7c8b73259e599e0001706cfaf09dca30d7d31a5b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +47,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 DBCC CHECKCATALOG   
 [   
     (   
@@ -78,27 +79,27 @@ DBCC CHECKCATALOG は、システム メタデータ テーブル間でさまざ
 スナップショットが作成できない場合、DBCC CHECKCATALOG は排他データベース ロックを獲得して必要な一貫性を取得します。 不一致が検出された場合、これらは修復できず、データベースをバックアップから復元する必要があります。
   
 > [!NOTE]  
->  に対して DBCC CHECKCATALOG を実行している**tempdb**もチェックは実行されません。 これは、パフォーマンス上の理由から、データベース スナップショットでは使用できないため**tempdb**です。 つまり、必要なトランザクションの一貫性を実現できないためです。 いずれかを解決するのには、サーバーをリサイクル**tempdb**メタデータの問題です。  
+> に対して DBCC CHECKCATALOG を実行している**tempdb**もチェックは実行されません。 これは、パフォーマンス上の理由から、データベース スナップショットでは使用できないため**tempdb**です。 つまり、必要なトランザクションの一貫性を実現できないためです。 いずれかを解決するのには、サーバーをリサイクル**tempdb**メタデータの問題です。  
   
 > [!NOTE]  
->  DBCC CHECKCATALOG では、FILESTREAM データはチェックされません。 FILESTREAM はバイナリ ラージ オブジェクト (BLOB) をファイル システムに格納します。  
+> DBCC CHECKCATALOG では、FILESTREAM データはチェックされません。 FILESTREAM はバイナリ ラージ オブジェクト (BLOB) をファイル システムに格納します。  
   
 一部として DBCC CHECKCATALOG を実行しても[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)です。
   
 ## <a name="result-sets"></a>結果セット  
 データベースが指定されていない場合、DBCC CHECKCATALOG は次の値を返します。
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] がデータベース名として指定されていない場合、DBCC CHECKCATALOG は次の値を返します。
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーシップが必要、 **sysadmin**固定サーバー ロール、または**db_owner**固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  

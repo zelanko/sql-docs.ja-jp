@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_db
 - sp_detach_db_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-caps.latest.revision: "86"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c50a0b30d69e88047ea614052cebc0105ed7c4a7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 09fd806b6ca491507fd748c3e2f9751b27c1eda5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,15 +52,15 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@dbname =** ] **'***database_name***'**  
+ [ **@dbname =** ] **'***database_name***'**  
  デタッチするデータベースの名前を指定します *database_name*は、 **sysname**値、既定値は NULL です。  
   
- [  **@skipchecks =** ] **'***skipchecks***'**  
+ [ **@skipchecks =** ] **'***skipchecks***'**  
  UPDATE STATISTIC をスキップするか、実行するかを指定します。 *skipchecks*は、 **nvarchar (10)**値、既定値は NULL です。 UPDATE STATISTICS をスキップするには、指定**true**です。 UPDATE STATISTICS を明示的に実行する指定**false**です。  
   
  既定では、UPDATE STATISTICS が実行されると、テーブルおよびインデックスにあるデータに関する情報が更新されます。 UPDATE STATISTICS の実行は、データベースを読み取り専用メディアに移動する場合に使用すると便利です。  
   
- [  **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
+ [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
  データベースをデタッチするとき、そのデータベースに関連付けられているフルテキスト インデックス ファイルを削除しないことを指定します。 *KeepFulltextIndexFile*は、 **nvarchar (10)**値、既定値は**true**です。 場合*KeepFulltextIndexFile*は**false**データベースに関連付けられているすべてのフルテキスト インデックス ファイル、およびデータベースが読み取り専用でない限り、フルテキスト インデックスのメタデータを削除します。 NULL の場合または**true**フルテキストの関連するメタデータが保持されます。  
   
 > [!IMPORTANT]  
@@ -74,7 +76,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  データベースがデタッチされると、そのすべてのメタデータが削除されます。 データベースの任意のログイン アカウントの既定のデータベース場合**マスター**既定のデータベースになります。  
   
 > [!NOTE]  
->  すべてのログイン アカウントの既定のデータベースを表示する方法については、次を参照してください。 [sp_helplogins (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). 使用することが必要なアクセス許可があれば、 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)に新しい既定のデータベースをログインに割り当てます。  
+>  すべてのログイン アカウントの既定のデータベースを表示する方法については、次を参照してください。 [sp_helplogins (& a) #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)。 使用することが必要なアクセス許可があれば、 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)に新しい既定のデータベースをログインに割り当てます。  
   
 ## <a name="restrictions"></a>制限  
  次のいずれかに該当する場合は、データベースをデタッチできません。  
@@ -123,7 +125,7 @@ GO
 ## <a name="reattaching-a-database"></a>データベースの再アタッチ  
  デタッチされたファイルはそのまま残り、FOR ATTACH または FOR ATTACH_REBUILD_LOG オプションを指定した CREATE DATABASE によって再アタッチできます。 ファイルを別のサーバーに移動し、そこにアタッチすることもできます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーシップが必要、 **sysadmin**固定サーバー ロールのメンバーシップまたは、 **db_owner**データベースの役割です。  
   
 ## <a name="examples"></a>使用例  

@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - backupfilegroup_TSQL
 - backupfilegroup
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - filegroups [SQL Server], backupfilegroup system table
 - backupfilegroup system table
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
-caps.latest.revision: "53"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 244658ccae187622bf1d67b312867d7b41584182
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2787b6a012268378421017c0a2912385c669da17
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +45,19 @@ ms.lasthandoff: 11/17/2017
 |**backup_set_id**|**int**|ファイル グループが含まれているバックアップ セット。|  
 |**name**|**sysname**|ファイル グループの名前。|  
 |**filegroup_id**|**int**|ファイル グループの ID。データベースで一意の値です。 対応する**data_space_id**で**sys.filegroups**です。|  
-|**filegroup_guid**|**uniqueidentifier**|ファイル グループのグローバル一意識別子。 NULL にすることができます。|  
-|**型**|**char(2)**|コンテンツの種類。次のいずれかです。<br /><br /> FG = "Rows" ファイル グループ<br /><br /> SL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイル グループ|  
-|**type_desc**|**nvarchar (60)**|関数の種類の説明。次のいずれかです。<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP |  
+|**filegroup_guid**|**uniqueidentifier**|ファイル グループのグローバル一意識別子。 NULL を指定できます。|  
+|**type**|**char(2)**|コンテンツの種類。次のいずれかです。<br /><br /> FG = "Rows" ファイル グループ<br /><br /> SL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイル グループ|  
+|**type_desc**|**nvarchar(60)**|関数の種類の説明。次のいずれかです。<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP |  
 |**is_default**|**bit**|CREATE TABLE または CREATE INDEX でファイル グループが指定されていない場合に使用される、既定のファイル グループ。|  
 |**is_readonly**|**bit**|1 = ファイル グループは読み取り専用です。|  
-|**log_filegroup_guid**|**uniqueidentifier**|NULL にすることができます。|  
+|**log_filegroup_guid**|**uniqueidentifier**|NULL を指定できます。|  
   
 ## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
 >  異なるデータベースに同じファイル グループ名が存在することもあります。ただし、各ファイル グループは独自の GUID を持っています。 したがって、 **(backup_set_id, filegroup_guid)**内のファイル グループを識別する一意のキーは、 **backupfilegroup**です。  
   
- RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY の列に設定、 **backupmediaset**メディア セット ヘッダーから適切な値を持つテーブルです。  
+ RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY populates the columns of the **backupmediaset** table with the appropriate values from the media-set header.  
   
  次の表では他のバックアップと履歴テーブルの行の数を減らすためには、実行、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)ストアド プロシージャです。  
   

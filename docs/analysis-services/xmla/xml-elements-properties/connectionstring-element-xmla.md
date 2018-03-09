@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ConnectionString Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7784d1a1976bee9ea76f3f9f9346e945072398de
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 24ed26ac9b9a422f7bfc05fa16e700f336e29132
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connectionstring-element-xmla"></a>ConnectionString 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]親によって使用される接続文字列を含む[場所](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)または[ソース](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)要素。  
@@ -50,15 +48,15 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
-|データ型と長さ|文字列|  
+|データ型と長さ|String|  
 |既定値|なし|  
-|Cardinality|次の表を参照してください。|  
+|基数|次の表を参照してください。|  
   
-|先祖または親|Cardinality|  
+|先祖または親|基数|  
 |------------------------|-----------------|  
-|[場所](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)|1-1 : 必須要素で、1 回だけ出現します|  
+|[[場所]](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)|1-1 : 必須要素で、1 回だけ出現します|  
 |[ソース](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/08/2017
 |親要素|[場所](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)、[ソース](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **場所**、要素、 **ConnectionString**要素にはによって使用される接続文字列が含まれています、**復元**または**同期**ローカル データ ソースを更新するか、リモート インスタンスに接続するコマンドです。  
   
  **ソース**、要素、 **ConnectionString**要素にはによって使用される接続文字列が含まれています、**同期**ソース インスタンスに接続するコマンド。  

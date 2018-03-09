@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d58e64c6d53863c52d0e2194755e5d45ff1e99ae
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ddd48de7b988cf16fb8c3ce5d3bc33088f487308
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="length-of-the-product-cycle"></a>製品サイクルの長さ
 相互運用性に関する最終的な質問は、時間です。 Noninteroperable の 1 つの開発よりも時間がかかります通常相互運用可能なアプリケーションを開発します。 理由は、アプリケーションする必要があります DBMS の機能を確認、さまざまな Dbms の異なる方法で、同じ操作を実行、Dbms によってのみでサポートされる機能を回避するなどです。  

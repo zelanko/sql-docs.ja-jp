@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 73acfc1747cdda9d3082eaed420e56943f698fea
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6b37e2294a22eadffad1302452d74b72a94891f5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-buffer-type"></a>データ バッファーの種類
 バッファーの C データ型は、アプリケーションで指定します。 1 つの変数では、アプリケーションにより、変数を割り当てるとこれに発生します。 汎用的なメモリと、メモリが void 型のポインターが指すは、— このアプリケーションは、特定の種類にメモリをキャストする場合に発生します。 ドライバーには、この型には 2 つの方法が検出されます。  

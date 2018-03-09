@@ -8,30 +8,32 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SYS.DM_EXEC_DMS_WORKERS_TSQL
 - DM_EXEC_DMS_WORKERS_TSQL
 - DM_EXEC_DMS_WORKERS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase,views
 - PolyBase
 - dm_exec_dms_workers management view
 - sys.dm_exec_dms_workers management view
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5677eb04a9a5809c2caf25d37edd288e4b1efbc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ec7edcfc352e2addf3ba69d5915a11b25f483eba
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecdmsworkers-transact-sql"></a>sys.dm_exec_dms_workers (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -42,13 +44,13 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar (32)**|クエリを DMS ワーカーは、一部の of.request_id、step_index、および dms_step_index は、このビューのキーを形成します。||  
-|step_index|**int**|DMS ワーカーの一部である手順のクエリを実行します。|内の手順インデックスを参照してください[sys.dm_exec_distributed_request_steps &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
+|execution_id|**nvarchar(32)**|クエリを DMS ワーカーは、一部の of.request_id、step_index、および dms_step_index は、このビューのキーを形成します。||  
+|step_index|**int**|DMS ワーカーの一部である手順のクエリを実行します。|内の手順インデックスを参照してください[sys.dm_exec_distributed_request_steps &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)。|  
 |dms_step_index|**int**|このワーカーが実行されている DMS プランのステップします。|参照してください[sys.dm_exec_dms_workers (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|compute_node_id|**int**|ワーカーが実行されているノードです。|参照してください[sys.dm_exec_compute_nodes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|compute_node_id|**int**|ワーカーが実行されているノードです。|参照してください[sys.dm_exec_compute_nodes &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
 |distribution_id|**int**|||  
 |型|**nvarcha(32)**|||  
-|ステータス|**nvarchar (32)**|この手順の状態|'Pending'、'Running'、'完了'、'失敗'、'UndoFailed'、'PendingCancel'、' が取り消されました '、'を元に戻す'、'中止'|  
+|ステータス|**nvarchar(32)**|この手順の状態|'Pending'、'Running'、'完了'、'失敗'、'UndoFailed'、'PendingCancel'、' が取り消されました '、'を元に戻す'、'中止'|  
 |bytes_per_sec|**bigint**|||  
 |bytes_processed|**bigint**|||  
 |rows_processed|**bigint**|||  
@@ -60,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 |buffers_available|**int**|||  
 |dms_cpid|**int**|||  
 |sql_spid|**int**|||  
-|error_id|**nvarchar (36)**|||  
+|error_id|**nvarchar(36)**|||  
 |source_info|**nvarchar (4000)**|||  
 |destination_info|**nvarchar (4000)**|||  
 |command|**nvarchar (4000)**|||  

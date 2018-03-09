@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 85b1c63c9b6ab18018b9d31143ab53503ad64ae1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 32ff76d9fd8d90b780d66ed1e12c5a4d33deca7f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー)
 このチュートリアルでは、詳細レポートとメイン レポートという、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] の 2 種類のページ分割されたレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 
@@ -103,7 +103,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. **[次へ]**をクリックします。  
+14. **[次へ]** をクリックします。  
   
 ## <a name="DMDXQuery"></a>1b. MDX クエリを作成する  
 レポートでは、クエリが事前に定義された共有データセットを使用するか、そのレポートでのみ使用する埋め込みデータセットを作成できます。 このチュートリアルでは、埋め込みデータセットを作成します。  
@@ -172,7 +172,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 6.  クエリ デザイナーのツール バーで、 **[実行 (!)]**をクリックします。  
   
-7.  **[次へ]**をクリックします。  
+7.  **[次へ]** をクリックします。  
   
 ## <a name="DLayout"></a>1c. データをグループにまとめる  
 データをグループ化するフィールドを選択し、詳細データおよび集計データを表示する行と列を含むマトリックスをデザインします。  
@@ -198,7 +198,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
     手順 4. および 5. で、マトリックスに表示するデータを指定します。  
   
-6.  **[次へ]**をクリックします。  
+6.  **[次へ]** をクリックします。  
   
 ## <a name="DTotals"></a>1d. 小計と合計を追加する  
 グループを作成したら、フィールドの集計値を表示する行を追加して書式を設定できます。 すべてのデータを表示するか、グループ化されたデータの展開と折りたたみをユーザーが対話的に行えるようにするかも選択できます。  
@@ -209,7 +209,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
     ウィザードのプレビュー ペインに、4 行を含むマトリックスが表示されます。  
   
-2.  **[次へ]**をクリックします。  
+2.  **[次へ]** をクリックします。  
   
 2.  **[完了]**をクリックします。  
   
@@ -394,7 +394,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. **[次へ]**をクリックします。  
+14. **[次へ]** をクリックします。  
   
 ## <a name="MMDXQuery"></a>1b. MDX クエリを作成する  
 次に、埋め込みデータセットを作成します。 これを行うには、クエリ デザイナーを使用して、フィルター、パラメーター、および計算されるメンバーと、データセット自体を作成します。  
@@ -492,7 +492,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
     クエリの結果セットを確認します。  
   
-6.  **[次へ]**をクリックします。  
+6.  **[次へ]** をクリックします。  
   
 ## <a name="MLayout"></a>1c. データをグループにまとめる  
 データをグループ化するフィールドを選択し、詳細データおよび集計データを表示する行と列を含むマトリックスをデザインします。  
@@ -522,7 +522,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
     ウィザードのプレビュー ペインに、4 行を含むマトリックスが表示されます。  レポートを実行すると、最初の行が列グループになり、2 行目に列見出し、3 行目に製品カテゴリのデータ (`[Sum(Net_ QTY)]` と `[Sum(Net_Sales)]`)、4 行目に合計が含まれます。  
   
-2.  **[次へ]**をクリックします。  
+2.  **[次へ]** をクリックします。  
   
 3.  **[完了]**をクリックします。  
   

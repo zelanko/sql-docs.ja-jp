@@ -1,6 +1,6 @@
 ---
-title: "Windows 認証でオンプレミス データ ソースと Azure ファイル共有に接続する | Microsoft Docs"
-ms.date: 11/27/2017
+title: "Windows 認証でデータ ソースとファイル共有に接続する | Microsoft Docs"
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,21 +8,29 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0f5e1e2319e58e9013b1f67e8a81efa9a07d556
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: 87f8b79fd8e950038658c13b502f5f26ac9a8f87
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Windows 認証でオンプレミス データ ソースと Azure ファイル共有に接続する
 この記事では、Azure SQL Database で SSIS カタログを構成して、Windows 認証を使用するパッケージを実行し、オンプレミスのデータ ソースと Azure ファイル共有に接続する方法について説明します。 Windows 認証を使用して、オンプレミスと Azure の仮想マシンの両方、さらに Azure Files で Azure SSIS Integration Runtime と同じ仮想ネットワーク内のデータ ソースに接続できます。
 
-この記事の手順を実行する際に指定するドメインの資格情報は、資格情報を変更または削除するまで、SQL Database インスタンスのすべてのパッケージの実行に適用されます。
+> [!WARNING]
+> この記事で説明されているように、`catalog`.`set_execution_credential` を実行して、Windows 認証に有効なドメイン資格情報を指定しない場合、 Windows 認証に依存するパッケージはデータ ソースに接続することができず、実行時に失敗します。
+
+## <a name="you-can-only-use-one-set-of-credentials"></a>使用できる資格情報は 1 セットのみ
+
+現在、パッケージで使用できる資格情報は 1 セットだけです。 この記事の手順を実行するときに指定したドメインの資格情報は、資格情報を変更または削除するまで、SQL Database インスタンスのすべてのパッケージの実行 (インタラクティブまたはスケジュール) に適用されます。 パッケージを資格情報のセットが異なる複数のデータ ソースに接続する必要がある場合は、パッケージを複数のパッケージに分割することが必要な場合があります。
+
+データ ソースの 1 つが Azure Files の場合、プロセス実行タスクで `net use` またはそれと同等のものを使って、パッケージの実行時に Azure ファイル共有をマウントすることにより、この制限を回避できます。 詳しくは、「[Windows で Azure ファイル共有をマウントして共有にアクセスする](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)」をご覧ください。
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Windows 認証のドメイン資格情報を提供する
 パッケージが Windows 認証を使用して、オンプレミスのデータ ソースに接続できるようにするドメイン資格情報を提供するには、次のことを行います。
@@ -80,7 +88,7 @@ ms.lasthandoff: 12/12/2017
 
 3.  SSMS から、使用するオンプレミスの SQL Server に接続できるかどうかを確認します。
 
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>Prerequisites
 Azure で実行されるパッケージからオンプレミスの SQL Server に接続するには、次の前提条件を有効にする必要があります。
 
 1.  SQL Server 構成マネージャーで、TCP/IP プロトコルを有効にします。

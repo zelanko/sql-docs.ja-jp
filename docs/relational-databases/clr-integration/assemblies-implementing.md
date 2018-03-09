@@ -8,24 +8,26 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: assemblies [CLR integration], implementing
+helpviewer_keywords:
+- assemblies [CLR integration], implementing
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dadb7fe14a03bfd94350ea280cca94494e3c163b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3739ec98683810b683bf644912268d22efe6e261
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---implementing"></a>アセンブリの実装
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このトピックでは、実装して、データベース内のアセンブリを使用するのに役立つ、次の領域について説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+このトピックでは、データベースにアセンブリを実装し、それらのアセンブリを使用して作業するのに役立つ次の情報について説明します。  
   
 -   アセンブリの作成  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  **TRANSACT-SQL を使用してアセンブリを作成するには**  
   
--   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
+-   [アセンブリ &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/create-assembly-transact-sql.md)  
   
  **SQL Server Management Studio を使用してアセンブリを作成するには**  
   
@@ -59,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
  **TRANSACT-SQL を使用してアセンブリを変更するには**  
   
--   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)  
+-   [アセンブリの変更と &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
  **SQL Server Management Studio を使用してアセンブリを変更するには**  
   
@@ -70,7 +72,7 @@ ms.lasthandoff: 11/17/2017
   
  **Transact SQL を使用してアセンブリを削除するには**  
   
--   [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
+-   [アセンブリと &#40; を削除します。Transact SQL と &#41; です。](../../t-sql/statements/drop-assembly-transact-sql.md)  
   
  **SQL Server Management Studio を使用してアセンブリを削除するには**  
   
@@ -98,7 +100,7 @@ ms.lasthandoff: 11/17/2017
   
  メンバーにのみ、 **db_owner**と**db_ddlowner**固定データベース ロールは、WITH UNCHECKED DATA 句を使用して、ALTER ASSEMBLY を実行することができます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、テーブル内に未チェック データがある状態でアセンブリが変更されたというメッセージを Windows アプリケーション イベント ログに記録します。 さらに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、そのアセンブリに依存するデータを含んでいるすべてのテーブルに、未チェック データを含むテーブルであるというマークを付けます。 **Has_unchecked_assembly_data**の列、 **sys.tables**カタログ ビューには、未チェック データ、および unchecked data を含まないテーブルに対して 0 を含むテーブルの値 1 が含まれています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内に未チェック データでアセンブリが変更されている Windows アプリケーション イベント ログへのメッセージをポストします。 さらに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、そのアセンブリに依存するデータを含んでいるすべてのテーブルに、未チェック データを含むテーブルであるというマークを付けます。 **Has_unchecked_assembly_data**の列、 **sys.tables**カタログ ビューには、未チェック データ、および unchecked data を含まないテーブルに対して 0 を含むテーブルの値 1 が含まれています。  
   
  未チェック データの整合性を解決するを持つ各テーブルに対して DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS を実行未チェック データ。 EXTENDED_LOGICAL_CHECKS で DBCC CHECKDB が失敗した場合、いずれかが無効か、問題を解決するアセンブリ コードを変更するテーブルの行を削除して追加の ALTER ASSEMBLY ステートメントを発行します。  
   
@@ -115,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
  **アセンブリのバージョンを更新するには**  
   
--   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)  
+-   [アセンブリの変更と &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
 ## <a name="see-also"></a>参照  
  [アセンブリ &#40;データベース エンジン&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   

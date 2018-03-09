@@ -5,32 +5,30 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - WITH keyword
 - query-scoped cell calculations [MDX]
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6348f5728c937b5f41531566de6df853cfbb210f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 34ef680e855c0a6b29363923ba6984189a4e9119
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>クエリ スコープのセル計算の MDX セル計算
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]使用する、 **WITH**キーワードで多次元式 (MDX) クエリのコンテキスト内で計算されるセルを記述します。 **WITH** キーワードの構文は、以下のとおりです。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+計算されるセルをクエリのコンテキストの中で記述するには、多次元式 (MDX) の **WITH** キーワードを使用します。 **WITH** キーワードの構文は、以下のとおりです。  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -63,6 +61,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  一方、計算式は、計算されるセルの定義に含まれるセルを伴うキューブに対して MDX クエリが実行されるたびに MDX によって処理されます。 この処理は、作成スコープに関係なく行われます。  
   
 ## <a name="see-also"></a>参照  
- [CREATE CELL CALCULATION ステートメント (MDX)](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [CELL CALCULATION ステートメント &#40; を作成します。MDX と #41 です。](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

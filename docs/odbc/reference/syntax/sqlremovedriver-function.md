@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a2f1a0e147d300e193ebadab06fb220e90aeb901
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5c910c862bd24a29ace17a2ec92352917d41699e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlremovedriver-function"></a>SQLRemoveDriver 関数
 **準拠**  
@@ -57,7 +57,7 @@ BOOL SQLRemoveDriver(
  *lpdwUsageCount*  
  [出力]この関数が呼び出された後に、ドライバーの使用率カウントします。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  関数は、それが成功した場合、FALSE が失敗した場合に TRUE を返します。 エントリが存在しない場合、システム情報でこの関数が呼び出されたときに、関数は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  

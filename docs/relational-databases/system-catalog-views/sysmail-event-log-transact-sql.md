@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_event_log
 - sysmail_event_log_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_event_log database mail view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_event_log database mail view
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aadbf36412f02f9a785d078d6fa949fcbeabc5f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9dca8c14d7ea9fefbe566d7f0770b395df48bf25
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +39,10 @@ ms.lasthandoff: 11/17/2017
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**Log_id**|**int**|ログ内のアイテムの識別子。|  
-|**event_type**|**varchar (11)**|ログに挿入された通知の種類。 可能な値は、エラー、警告、情報メッセージ、成功メッセージ、およびその他の内部メッセージです。|  
+|**event_type**|**varchar(11)**|ログに挿入された通知の種類。 可能な値は、エラー、警告、情報メッセージ、成功メッセージ、およびその他の内部メッセージです。|  
 |**log_date**|**datetime**|ログ エントリが作成された日時。|  
 |**説明**|**nvarchar(max)**|記録されたメッセージのテキスト。|  
-|**プロセス id**|**int**|データベース メール外部プログラムのプロセス ID。 通常、データベース メール外部プログラムが起動するたびに変更されます。|  
+|**process_id**|**int**|データベース メール外部プログラムのプロセス ID。 通常、データベース メール外部プログラムが起動するたびに変更されます。|  
 |**mailitem_id**|**int**|メール キュー内のメール アイテムの識別子。 メッセージが特定の電子メール アイテムに関係していない場合は NULL になります。|  
 |**account_id**|**int**|**Account_id**のイベントに関連するアカウント。 メッセージが特定のアカウントに関係していない場合は NULL になります。|  
 |**last_mod_date**|**datetime**|行が最後に変更された日時。|  
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
  個々のアカウントで配信試行が失敗した場合は、再試行の間、メール アイテムの配信が成功または失敗するまで、データベース メールでエラー メッセージが保持されます。 Ultimate の成功した場合、すべての蓄積されたエラー ログに記録を含む個別の警告として、 **account_id**です。 これにより、電子メールが送信された場合も警告が表示されることがあります。 最終的な配信の障害発生時以前のすべての警告ログに記録せず、1 つのエラー メッセージとして、 **account_id**すべてのアカウントが失敗したため、します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーである必要がある必要があります、 **sysadmin**固定サーバー ロールまたは**DatabaseMailUserRole**このビューにアクセスするデータベース ロール。 メンバー **DatabaseMailUserRole**のメンバーではないユーザー、 **sysadmin**ロール、のみを送信するメールのイベントを表示できます。  
   
 ## <a name="see-also"></a>参照  

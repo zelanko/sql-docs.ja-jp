@@ -15,13 +15,13 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 caps.latest.revision: "9"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5470d1d28d874404df4506127f38ee8d19b97d15
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5c86f951c3e6f8d553ea61ed959cac6ade235b54
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="temporal-table-security"></a>テンポラル テーブル セキュリティ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="security-principles"></a>セキュリティ原則  
  次の表は、テンポラル テーブルに適用されるセキュリティ原則についてまとめたものです。  
   
-|原則|説明|  
+|原則|Description|  
 |---------------|-----------------|  
 |システムによるバージョン管理の有効/無効を切り替えるには、影響を受けるオブジェクトに対する最高の権限が必要になる|SYSTEM_VERSIONING の有効/無効を切り替えるには、現行テーブルと履歴テーブルの両方の CONTROL 権限が必要になります。|  
 |履歴データを直接変更できない|SYSTEM_VERSIONING がオンのときは、現行テーブルまたは履歴テーブルの実際の権限に関係なく、履歴データを変更することはできません。 データとスキーマのいずれも変更できません。|  

@@ -1,5 +1,5 @@
 ---
-title: "dbo.sysdac_instances (TRANSACT-SQL) |Microsoft ドキュメント"
+title: dbo.sysdac_instances (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sysdac_instances
 - sysdac_instances_TSQL
 - dbo.sysdac_instances
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dbo.sysdac_instances
 - sysdac_instances
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
-caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 197eb0d8887f56d77c5851403f2914712a757bbd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1db50ced8cdff2f69b5dd3e8541b8c76e99cdae3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="data-tier-application-views---dbosysdacinstances"></a>データ層アプリケーションのビュー - dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>解説  
  DAC には、アプリケーションが使用する論理データ層オブジェクト (テーブルやビューなど) の定義である DAC 型が含まれます。 DAC パッケージは、DAC の配置に使用されるファイルです。 DAC パッケージは、DAC 型に含まれるすべての論理オブジェクトの表現を含んでいます。 DAC パッケージは、1 つ以上のコピー、またはのインスタンスに dac のインスタンスを展開するために使用できます、[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。 同じ DAC パッケージから配置された各 DAC インスタンスは、同じ型を共有しますが、一意のインスタンス名とインスタンス識別子を割り当てられます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  すべての列を表示するには、sysadmin 固定サーバー ロールのメンバーシップが必要です。 パブリック ロールのメンバーは、instance_name、description、および type_version の各列を表示できます。  
   
 ## <a name="see-also"></a>参照  

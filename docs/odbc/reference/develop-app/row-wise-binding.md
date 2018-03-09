@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b5caaab8154951fe771767206ce3755d84314855
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4dd3d59875f649c7b797d39fa31ac744457d68ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="row-wise-binding"></a>行方向のバインド
 行方向のバインドを使用して、またはアプリケーションを含む 1 つまたは 2 つ、構造体を定義、いくつかの場合、3 つ、データが返される対象の各列の要素。 最初の要素をデータ値を保持し、2 番目の要素が長さ/インジケーター バッファーを保持します。 インジケーターと長さの値は、SQL_DESC_INDICATOR_PTR および SQL_DESC_OCTET_LENGTH_PTR 記述子フィールドを別の値に設定しての個別のバッファーに格納できます。これを行う場合、構造体には、3 番目の要素が含まれています。 その後、アプリケーションでは、行セットの行数が同じ数の要素を格納しているこれらの構造体の配列を割り当てます。  

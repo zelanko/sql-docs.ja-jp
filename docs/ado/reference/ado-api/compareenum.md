@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,26 +13,28 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: CompareEnum
-helpviewer_keywords: CompareEnum enumeration [ADO]
+f1_keywords:
+- CompareEnum
+helpviewer_keywords:
+- CompareEnum enumeration [ADO]
 ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee22fbb105dc9f01444540dbdc46130d8a626bd7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 854004436912044e4575d94e31f479e74713a1d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="compareenum"></a>CompareEnum
 ブックマークによって表される 2 つのレコードの相対位置を指定します。  
   
-|定数|値|Description|  
+|定数|[値]|Description|  
 |--------------|-----------|-----------------|  
-|**adCompareEqual**|@shouldalert|ブックマークが等しいことを示します。|  
+|**adCompareEqual**|1|ブックマークが等しいことを示します。|  
 |**adCompareGreaterThan**|2|最初のブックマークが、2 つ目の後にあることを示します。|  
 |**adCompareLessThan**|0|2 つ目の最初のブックマークであることを示します。|  
 |**adCompareNotComparable**|4|ブックマークを比較できないことを示します。|  

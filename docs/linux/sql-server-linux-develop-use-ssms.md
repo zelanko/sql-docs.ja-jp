@@ -3,29 +3,29 @@ title: "SSMS での Linux に SQL Server の管理 |Microsoft ドキュメント
 description: "このチュートリアルでは、Linux で実行されている Windows 上で SQL Server Management Studio を使用して SQL Server に接続する方法を示します。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.workload: On Demand
-ms.openlocfilehash: 784c2c01365eba64fb8e19925c176033af9a1339
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 442d57154222fdb06ba26ad7858eb783103e93cd
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>Windows 上の SQL Server Management Studio (SSMS) を使用して、Linux 上の SQL Server を管理するには
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このトピックは、使用する方法を示します[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) Linux 上の SQL Server 2017 に接続します。 SSMS は、Windows アプリケーション、ので Linux 上のリモート SQL Server インスタンスに接続できる Windows コンピューターがある場合に SSMS を使用します。
+この記事は、使用する方法を示します[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) Linux 上の SQL Server 2017 に接続します。 SSMS は、Windows アプリケーション、ので Linux 上のリモート SQL Server インスタンスに接続できる Windows コンピューターがある場合に SSMS を使用します。
 
 正常に接続すると、データベースとの通信を確認する簡単な TRANSACT-SQL (T-SQL) クエリを実行します。
 
@@ -39,7 +39,7 @@ SQL Server を使用する場合は、常に最新バージョンの SQL Server 
 
 1. 入力して、SSMS を起動**Microsoft SQL Server Management Studio** Windows の検索ボックスで、およびデスクトップ アプリをクリックします。
 
-    ![[SQL Server Management Studio]](./media/sql-server-linux-develop-use-ssms/ssms.png)
+    ![SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/ssms.png)
 
 2. **サーバーへの接続** ウィンドウで、次の情報を入力してください (SSMS が既に実行されている場合はクリックして**接続 > データベース エンジン**を開くには、**サーバーへの接続**ウィンドウ)。
 

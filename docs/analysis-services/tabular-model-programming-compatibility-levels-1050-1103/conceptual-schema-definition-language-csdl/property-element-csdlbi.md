@@ -8,37 +8,37 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: f0770c5e-6420-4d0c-a5bf-b94eaf6877ca
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff62bf4280fb1e01c6df47e2f748038ec92378fd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1fee5461b3b779227839c3f722c9c75626ed44fe
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="property-element-csdlbi"></a>Property 要素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]CSDLBI の Property 要素は、ビジネス インテリジェンス データ モデルをサポートするための CSDL Property 要素に追加機能を提供する複合型です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+CSDLBI の Property 要素は、ビジネス インテリジェンス データ モデルをサポートするために、CSDL の Property 要素に追加項目を加えた複合型です。  
   
 ## <a name="elements-and-attributes"></a>要素と属性  
  次の表に、CSDLBI Property 要素を定義する要素と属性を示します。  
   
-|名前|必須かどうか|Description|  
+|名前|必須かどうか|説明|  
 |----------|-----------------|-----------------|  
-|目次|不可|要求の LCID を含む文字列。|  
-|DefaultAggregationFunction|可|計算が属性上で実行され、他の関数が指定されていない場合に使用される集計関数を指定する文字列。<br /><br /> 指定されない場合、モデルに対する既定の集計関数が使用されます。通常 SUM です。|  
-|GroupingBehavior|不可|クエリ結果をグループ化する方法を指定する値。 属性の内容は TGroupingBehavior 単純型によって定義されます (次の表を参照してください)。|  
-|OrderBy|不可|このプロパティの値の並べ替え順序が定義されているモデル内の別のプロパティへの参照。<br /><br /> 2 つのプロパティの値は 1 対 1 のマッピングである必要があります。 それ以外の場合は、並べ替えの動作が未定義です。<br /><br /> この要素が省略されると、プロパティは値を基準にして並べ替えられます。|  
-|Stability|不可|更新操作の間のプロパティ値の安定性を指定する属性です。<br /><br /> この属性はユーザーが設定するのではなく、デザイン時環境に不安定な値対してのみ発せられます。 行番号を持つ列と、不確定な結果を生成する NOW() または RAND() の式を含む列に常に適用されます。<br /><br /> この属性の値は、Stability 単純型を説明する下記の表で示します。|  
+|目次|いいえ|要求の LCID を含む文字列。|  
+|DefaultAggregationFunction|はい|計算が属性上で実行され、他の関数が指定されていない場合に使用される集計関数を指定する文字列。<br /><br /> 指定されない場合、モデルに対する既定の集計関数が使用されます。通常 SUM です。|  
+|GroupingBehavior|いいえ|クエリ結果をグループ化する方法を指定する値。 属性の内容は TGroupingBehavior 単純型によって定義されます (次の表を参照してください)。|  
+|OrderBy|いいえ|このプロパティの値の並べ替え順序が定義されているモデル内の別のプロパティへの参照。<br /><br /> 2 つのプロパティの値は 1 対 1 のマッピングである必要があります。 それ以外の場合は、並べ替えの動作が未定義です。<br /><br /> この要素が省略されると、プロパティは値を基準にして並べ替えられます。|  
+|Stability|いいえ|更新操作の間のプロパティ値の安定性を指定する属性です。<br /><br /> この属性はユーザーが設定するのではなく、デザイン時環境に不安定な値対してのみ発せられます。 行番号を持つ列と、不確定な結果を生成する NOW() または RAND() の式を含む列に常に適用されます。<br /><br /> この属性の値は、Stability 単純型を説明する下記の表で示します。|  
   
 ## <a name="groupingbehavior"></a>GroupingBehavior  
  次の表に GroupingBehavior 単純型の値を示します。  
@@ -57,14 +57,14 @@ ms.lasthandoff: 12/08/2017
 ## <a name="stability"></a>Stability  
  次の表の値、**安定性**単純型です。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |Stable|更新操作の間、プロパティは一定です。|  
 |RowNumber|プロパティに行番号が含まれます。|  
 |Volatile|更新操作の間、プロパティが一定ではない場合があります。|  
   
 ## <a name="example"></a>例  
- **テーブル**  
+ **表形式**  
   
  次の XML は、AdventureWorks のテーブル モデル サンプルで使用されているプロパティの一部を CSDLBI Version 1.1 で表現したものです。  
   

@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 68f500896e8dffa6982c2f15ac3e431bebc4df87
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e81b2dda4ddf65105da50dede9b3a82a5436dcec
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>レッスン 6-2 - 名前付きセットを定義します。
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]名前付きセットは、ディメンション メンバーのセットを返す多次元式 (MDX) 式です。 名前付きセットを定義し、キューブ定義の一部として保存できます。さらに、名前付きセットをクライアント アプリケーションで作成することもできます。 名前付きセットは、キューブ データ、算術演算子、数値、関数を組み合わせることによって作成します。 名前付きセットは、クライアント アプリケーションの MDX クエリの中で使用できます。また、サブキューブのセットを定義するときも使用できます。 サブキューブは、クロス結合によるセットのコレクションであり、後続のステートメントに対して、キューブ空間を定義されたサブスペースに制限します。 制限されたキューブ領域の定義は MDX スクリプティングの基本概念です。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+名前付きセットとは、ディメンション メンバーのセットを返す多次元式 (MDX) です。 名前付きセットを定義し、キューブ定義の一部として保存できます。さらに、名前付きセットをクライアント アプリケーションで作成することもできます。 名前付きセットは、キューブ データ、算術演算子、数値、関数を組み合わせることによって作成します。 名前付きセットは、クライアント アプリケーションの MDX クエリの中で使用できます。また、サブキューブのセットを定義するときも使用できます。 サブキューブは、クロス結合によるセットのコレクションであり、後続のステートメントに対して、キューブ空間を定義されたサブスペースに制限します。 制限されたキューブ領域の定義は MDX スクリプティングの基本概念です。  
   
 名前付きセットを使用すると、MDX クエリを単純化することができ、よく使用する複雑なセット式に対して便利な別名を使用できます。 たとえば、従業員が最も多い Reseller ディメンションのメンバーを含む Large Resellers 名前付きセットを定義できます。 エンド ユーザーはクエリの中でこの Large Resellers 名前付きセットを使用できます。また、サブキューブ内のセットを定義するために名前付きセットを使用することもできます。 名前付きセットの定義はキューブに格納されますが、その値はメモリにしか存在しません。 名前付きセットを作成するには、キューブ デザイナーの **[計算]** タブで **[新しい名前付きセット]** コマンドを使用します。 詳細については、「 [計算](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)」、「 [名前付きセットの作成](../analysis-services/multidimensional-models/create-named-sets.md)」を参照してください。  
   
@@ -139,7 +142,7 @@ ms.lasthandoff: 12/08/2017
     ![フィルター ペインの 2 つの名前を含む設定](../analysis-services/media/l6-named-set-05.gif "という 2 つを含むフィルター ウィンドウの設定")  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 7: 主要業績評価指標 (KPI) の定義](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[レッスン 7: 主要業績評価指標を定義する &#40;です。Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>参照  
 [[新しい名前付きセット]](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

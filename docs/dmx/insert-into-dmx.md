@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -34,11 +32,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 6effd75e67a69db182ddaf37388d377b644a17da
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 70b2acdd5370be93f4fca9a5270a5b9951305248
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -83,13 +81,13 @@ INSERT INTO [MINING MODEL] <model>
   
  次の表は、オブジェクトの状態に依存する、異なる形式のステートメントの結果について示しています。  
   
-|ステートメントから削除してください。|オブジェクトの状態|結果|  
+|ステートメントから削除してください。|オブジェクトの状態|[結果]|  
 |---------------|----------------------|------------|  
 |マイニング モデルに挿入*\<モデル >*|マイニング構造は処理されます。|マイニング モデルは処理されます。|  
 ||マイニング構造は処理されません。|マイニング モデルとマイニング構造は処理されます。|  
 ||マイニング構造に追加のマイニング モデルが含まれます。|処理は失敗します。 構造と関連するマイニング モデルを再処理する必要があります。|  
 |INSERT INTO MINING STRUCTURE*\<構造体 >*|マイニング構造は処理されるか処理に失敗します。|マイニング構造と関連するマイニング モデルは処理されます。|  
-|マイニング モデルに挿入*\<モデル >*ソース クエリを含む<br /><br /> または<br /><br /> INSERT INTO MINING STRUCTURE*\<構造 >*ソース クエリを含む|構造またはモデルのどちらかが既に内容に含まれます。|処理は失敗します。 使用して、この操作を実行する前にオブジェクトはクリアする必要があります[削除 &#40;DMX&#41;](../dmx/delete-dmx.md)です。|  
+|マイニング モデルに挿入*\<モデル >*ソース クエリを含む<br /><br /> 内の複数の<br /><br /> INSERT INTO MINING STRUCTURE*\<構造 >*ソース クエリを含む|構造またはモデルのどちらかが既に内容に含まれます。|処理は失敗します。 使用して、この操作を実行する前にオブジェクトはクリアする必要があります[削除 &#40;DMX&#41;](../dmx/delete-dmx.md)です。|  
   
 ## <a name="mapped-model-columns"></a>モデル列のマップ  
  使用して、\<モデルの列のマップ > 要素、マイニング モデル内の列にデータ ソースから列をマップすることができます。 \<モデルの列のマップ > 要素には、次の形式。  
@@ -147,6 +145,6 @@ AS [Models]
 ## <a name="see-also"></a>参照  
  [データ マイニング拡張機能 &#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
  [データ マイニング拡張機能 &#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

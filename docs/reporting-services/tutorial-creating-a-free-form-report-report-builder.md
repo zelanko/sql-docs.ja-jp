@@ -8,21 +8,22 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 33d2dfa08fcc9b3cbf41a80642e9d67bab8d2b3f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 76a43f57cfd8c5712928dc8ee408cb517f7dceaf
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>チュートリアル: 自由形式のレポートの作成 (レポート ビルダー)
 このチュートリアルでは、ニュースレターとして機能する、ページ分割されたレポートを作成します。 各ページには、固定テキスト、概要ビジュアル、詳細サンプル セールス データが表示されます。
@@ -67,7 +68,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  **[資格情報]**をクリックし、SQL Server データベース エンジンのインスタンスとの接続に必要な資格情報を入力します。  
   
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
   
 ### <a name="to-create-a-new-dataset"></a>新しいデータセットを作成するには  
   
@@ -304,13 +305,13 @@ ms.lasthandoff: 12/05/2017
   
 5.  SalesDate、Quantity、Sales にも手順 3 を実行します。 Product の下に SalesDate を、SalesDate の下に Quantity を、SalesDate の下に Sales を配置します。  
   
-6.  **[次へ]**をクリックします。  
+6.  **[次へ]** をクリックします。  
   
 7.  **[レイアウトの選択]** ページで、テーブルのレイアウトを確認します。  
   
     テーブルは単純で、5 列、行なし、列グループなしです。 グループがないため、グループに関連するレイアウト オプションは使用できません。 このチュートリアルでは後ほど、テーブルを手動で更新して合計が表示されるようにします。  
   
-8.  **[次へ]**をクリックします。  
+8.  **[次へ]** をクリックします。  
   
 9. **[完了]**をクリックします。  
   
@@ -506,7 +507,7 @@ ms.lasthandoff: 12/05/2017
   
 
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 これで、自由形式のレポートを作成する方法のチュートリアルは終了です。  
   
 一覧の詳細については、次を参照してください。 

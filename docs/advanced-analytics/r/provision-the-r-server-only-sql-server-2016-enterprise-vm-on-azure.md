@@ -7,21 +7,22 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 4887d79f60a8fd418fd4a5543bbac9dec0af3ebc
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: 62e1c347a3c5ee110e6865cd8c13ade76ba62b80
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Azure での機械学習の仮想マシンのプロビジョニングします。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Azure 上のバーチャル マシンは、機械学習ソリューションの完全なサーバー環境をすばやく構成するための便利なオプションです。
 
@@ -85,9 +86,7 @@ Machine Learning のサービスを含む SQL Server 2017 年 1 Enterprise Editi
 
 ### <a name="using-machine-learning-in-azure-sql-database"></a>Azure SQL データベースでの機械学習の使用
 
-以降では、2017 の分類され、Azure SQL データベースは、R を使用してモデルをトレーニングし、それらを使用して予測をサポートしています。 
-
-データベース内に R Services は、プレビュー機能として、のみ、使用可能な SQL Server のオンプレミス エディションと比較していくつかの制限があります。 詳細については、次を参照してください。 [Azure SQL DB](../r/using-r-in-azure-sql-database.md)です。
+現時点では、Azure SQL での R のサポートのプレビューは、継続的な開発作業の中断されています。 詳細については、次を参照してください。 [Azure SQL DB](../r/using-r-in-azure-sql-database.md)です。
 
 ### <a name="can-i-upgrade-the-sql-server-version-on-a-virtual-machine"></a>仮想マシンで SQL Server のバージョンをアップグレードできますか。
 
@@ -135,7 +134,7 @@ RevoScaleR または MicrosoftML などのパッケージを使用する場合�
 
 現時点では、次のバーチャル マシンでは、SQL Server での機械学習できます。
 
-|[オブジェクト名]| コメント|
+|名前| コメント|
 |----|----|----|
 | **SQL Server 2016**| ***  |
 |Windows 上の SQL Server 2016 SP1 Enterprise|R Services の統合の高度な分析します。|

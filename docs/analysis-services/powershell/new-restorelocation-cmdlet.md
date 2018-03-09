@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 5ca13d8c-1c5d-4f02-869c-72e0defce6d7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 33ed6d599dae351fd80575d8cd1a858425fce57c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ca5bf33d2d528b8e216915170d7df528589a85c3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-restorelocation-cmdlet"></a>New-RestoreLocation コマンドレット
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]データベースを復元するための情報を指定します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+データベースの復元に使用する情報を指定します。  
 
 >[!NOTE] 
 >この記事には、古くなった情報と例があります。 最新バージョンには、Get-help コマンドレットを使用します。
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="parameters"></a>パラメーター  
   
-### <a name="-file-string"></a>-ファイル\<文字列 >  
+### <a name="-file-string"></a>-File \<string>  
  復元するバックアップ ファイルの名前を指定します。  
   
 |||  
@@ -52,7 +53,7 @@ ms.lasthandoff: 12/08/2017
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-datasourceid-string"></a>-Datasourceid\<文字列 >  
+### <a name="-datasourceid-string"></a>-DataSourceId \<string>  
   
 |||  
 |-|-|  
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-connectionstring-string"></a>-Connectionstring\<文字列 >  
+### <a name="-connectionstring-string"></a>-ConnectionString \<string>  
  リモート Analysis Services インスタンスの接続文字列を指定します。  
   
 |||  
@@ -73,7 +74,7 @@ ms.lasthandoff: 12/08/2017
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-datasourcetype-asrestoredatasourcetype"></a>-Datasourcetype \<AS.RestoreDataSourceType >  
+### <a name="-datasourcetype-asrestoredatasourcetype"></a>-DataSourceType \<AS.RestoreDataSourceType>  
  パーティションの場所に基づいて、データ ソースがリモートまたはローカルのどちらであるかを指定します。  
   
 |||  
@@ -84,7 +85,7 @@ ms.lasthandoff: 12/08/2017
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-folders-asrestorefolder"></a>-フォルダー \<AS.RestoreFolder >  
+### <a name="-folders-asrestorefolder"></a>-Folders \<AS.RestoreFolder>  
  ローカルまたはリモートのインスタンスのパーティション フォルダーを指定します。  
   
 |||  
@@ -95,7 +96,7 @@ ms.lasthandoff: 12/08/2017
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-astemplate-switchparameter"></a>-Astemplate \<SwitchParameter >  
+### <a name="-astemplate-switchparameter"></a>-AsTemplate \<SwitchParameter>  
  オブジェクトをメモリ内に作成して取得するかどうかを指定します。  
   
 |||  
@@ -106,7 +107,7 @@ ms.lasthandoff: 12/08/2017
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-server-string"></a>-サーバー\<文字列 >  
+### <a name="-server-string"></a>-Server \<string>  
  コマンドレットが接続して実行する Analysis Services インスタンスを指定します。 サーバー名が指定されていない場合は、localhost に接続されます。 既定のインスタンスの場合は、サーバー名のみを指定します。 名前付きインスタンスの場合は、servername \instancename 形式を使用します。 HTTP 接続では、http[s]://server[:port]/virtualdirectory/msmdpump.dll 形式を使用します。  
   
 |||  
@@ -117,7 +118,7 @@ ms.lasthandoff: 12/08/2017
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
+### <a name="-credential-pscredential"></a>-Credential \<PSCredential>  
  このパラメーターは、HTTP アクセス用に構成したインスタンスに対して、Analysis Service インスタンスへの HTTP 接続を使用するときに、ユーザー名とパスワードを渡すために使用されます。 詳細については、次を参照してください。 [Analysis Services 上にインターネット インフォメーション サービス (&) #40 です。 IIS"&"#41 への HTTP アクセスの構成; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)の HTTP 接続です。  
   
  このパラメーターを指定した場合は、指定された Analysis Server インスタンスへの接続にユーザー名とパスワードが使用されます。 資格情報を指定していない場合は、ツールを実行しているユーザーの既定の Windows アカウントが使用されます。  

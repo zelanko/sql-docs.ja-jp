@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,18 +16,20 @@ helpviewer_keywords:
 - SMO [SQL Server], about SQL Server Management Objects
 ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d130ee73284c41c9a12bb43b364a00f67f1468b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6a445c54edd24685fd1e25eedc25615e2fb4121a
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="getting-started-in-smo"></a>SMO の概要
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このページは、役立つトピックへのリンクは、SQL Server 管理オブジェクト (SMO) を使用して概要を提供します。 トピックには、送付状、SMO オブジェクト階層、SMO、SMO と異なるプログラミング言語、および特定のプログラミング タスクでプログラムを作成が一覧表示されます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+このページは、役立つトピックへのリンクは、SQL Server 管理オブジェクト (SMO) を使用して概要を提供します。 トピックには、送付状、SMO オブジェクト階層、SMO、SMO と異なるプログラミング言語、および特定のプログラミング タスクでプログラムを作成が一覧表示されます。  
  
 ##<a name="installing-smo"></a>SMO のインストール
 [SMO のインストール](installing-smo.md)インストールし、SMO アセンブリを参照するための手順を説明します。

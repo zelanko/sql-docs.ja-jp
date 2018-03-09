@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_cryptographic_provider_algorithms
 - sys.dm_cryptographic_provider_algorithms_TSQL
 - dm_cryptographic_provider_algorithms
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_cryptographic_provider_algorithms dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_cryptographic_provider_algorithms dynamic management function
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 265fba19bee60b37f5c79b113d620c1df0031202
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6e728edc7b3e246917343bdcae834a104875ed00
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmcryptographicprovideralgorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,11 +56,11 @@ sys.dm_cryptographic_provider_algorithms ( provider_id )
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |algorithm_id|**int**|アルゴリズムの識別番号を指定します。|  
-|algorithm_tag|**nvarchar (60)**|アルゴリズムの識別タグを指定します。|  
-|key_type|**nvarchar (128)**|キーの種類を示します。 ASYMMETRIC KEY または SYMMETRIC KEY を返します。|  
+|algorithm_tag|**nvarchar(60)**|アルゴリズムの識別タグを指定します。|  
+|key_type|**nvarchar(128)**|キーの種類を示します。 ASYMMETRIC KEY または SYMMETRIC KEY を返します。|  
 |key_length|**int**|キーの長さをビット単位で示します。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ユーザーは、public データベース ロールのメンバーである必要があります。  
   
 ## <a name="examples"></a>使用例  

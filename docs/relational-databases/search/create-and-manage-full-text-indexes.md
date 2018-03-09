@@ -8,24 +8,27 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: full-text indexes [SQL Server], about
+helpviewer_keywords:
+- full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 90bd63c6177591fbc3a92bf88f11f72eca4b2e58
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 25599964a3e210e59fcbb2a1eade782e2109502b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-manage-full-text-indexes"></a>フルテキスト インデックスの作成と管理
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] このトピックでは、SQL Server でフルテキスト インデックスを作成、入力、および管理する方法について説明します。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+このトピックでは、SQL Server でフルテキスト インデックスを作成、入力、および管理する方法について説明します。
   
 ## <a name="prerequisite---create-a-full-text-catalog"></a>前提条件 - フルテキスト カタログを作成する
 フルテキスト インデックスを作成する前に、フルテキスト カタログを作成する必要があります。 カタログは、1 つまたは複数のフルテキスト インデックス用の仮想コンテナーです。 詳細については、「[Create and Manage Full-Text Catalogs](../../relational-databases/search/create-and-manage-full-text-catalogs.md)」(フルテキスト カタログの作成と管理) を参照してください。
@@ -80,7 +83,7 @@ ms.lasthandoff: 01/02/2018
     |**[列]**|フルテキスト インデックスを作成できるテーブル列が表示されます。 選択した列にフルテキスト インデックスが作成されます。 フルテキスト インデックスに含める列はいくつでも選択できます。 詳細については、「[フルテキスト インデックス プロパティ &#40;[列] ページ&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35)」を参照してください。|  
     |**スケジュール**|このページでは、フルテキスト インデックスを作成するためのテーブルの増分作成を開始する SQL Server エージェント ジョブのスケジュールを作成または管理できます。 詳細については、「[Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md)」 (フルテキスト インデックスの作成) を参照してください。<br /><br /> 注: **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスを閉じると、新規作成したスケジュールが SQL Server エージェント ジョブ ( *database_name*.*table_name*でテーブルの増分作成を開始) に関連付けられます。|  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] をクリックして変更を保存し、**[フルテキスト インデックスのプロパティ]** ダイアログ ボックスを終了します。  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 変更が保存され、 **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスが終了します。  
   
 ##  <a name="props"></a>インデックスが作成されたテーブルと列のプロパティの表示  
  OBJECTPROPERTYEX など、[!INCLUDE[tsql](../../includes/tsql-md.md)] 関数の中には、さまざまなフルテキスト インデックス プロパティの値を取得できるものがあります。 この情報は、フルテキスト検索の管理およびトラブルシューティングに役立ちます。  
@@ -131,7 +134,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
   
 ### <a name="find-the-identifier-of-the-full-text-key-column"></a>フルテキスト キー列の識別子を検索する  
   
-フルテキスト処理に対応する各テーブルには、テーブルの行を一意にするための列があります ( *一意な**キー列*)。 OBJECTPROPERTYEX 関数で取得できる **TableFulltextKeyColumn** プロパティには、この一意なキー列の列 ID が格納されます。  
+フルテキスト処理に対応する各テーブルには、テーブルの行を一意にするための列があります ("*一意なキー列*")。 OBJECTPROPERTYEX 関数で取得できる **TableFulltextKeyColumn** プロパティには、この一意なキー列の列 ID が格納されます。  
  
 この識別子を取得するには、SELECT ステートメントで OBJECTPROPERTYEX 関数を呼び出します。 次のようにテーブル名 (*table_name*) をテーブル ID に変換する OBJECT_ID 関数を使用し、 **TableFulltextKeyColumn** プロパティを指定します。  
   

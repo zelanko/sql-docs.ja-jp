@@ -1,43 +1,44 @@
 ---
 title: "Machine Learning のサービスの既知の問題 |Microsoft ドキュメント"
-ms.date: 11/16/2017
+ms.date: 02/05/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2b37a63a-5ff5-478e-bcc2-d13da3ac241c
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2eeadd5a11f3fd16282164ba6536417e7da515da
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 2143b576e3104ba2cf707e8fada75471a007a987
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning のサービスの既知の問題
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、機械学習の SQL Server 2016 および SQL Server 2017 のオプションとして提供されるコンポーネントで既知の問題または制限事項について説明します。
 
 特に指示しない限り、ここにある情報が、次のすべてに適用されます。
 
-* SQL Server 2016
+SQL Server 2016
 
-  - R Services (データベース内)
-  - Microsoft R Server (スタンドアロン)
+- R Services (データベース内)
+- Microsoft R Server (スタンドアロン)
 
-* SQL Server 2017
+SQL Server 2017
 
-  - Machine Learning の R (In-database) 用サービス
-  - Machine Learning Python (In-database) 用サービス
-  - Machine Learning Server (スタンドアロン)
+- Machine Learning の R (In-database) 用サービス
+- Machine Learning Python (In-database) 用サービス
+- Machine Learning Server (スタンドアロン)
 
 ## <a name="setup-and-configuration-issues"></a>セットアップおよび構成の問題
 
@@ -47,11 +48,11 @@ ms.lasthandoff: 12/20/2017
 
 SQL Server 2016 の R Services または SQL Server 2017 Machine Learning サービスをドメイン コント ローラーにインストールしようとすると、セットアップが失敗がこれらのエラー。
 
->*「エラーは、機能のセットアップ プロセス中に発生しました。」*
+> *機能のセットアップ プロセス中にエラーが発生しました*
 > 
->*「... Id を持つグループを見つけることができません」*
+> *Id を持つグループを見つけることができません。*
 > 
->*"コンポーネントのエラー コード: 0x80131509"*
+> *コンポーネントのエラー コード: 0x80131509*
 
 、ドメイン コント ローラーで、サービス アカウントを作成できない、20 ローカル機械学習の実行に必要なために、障害が発生します。 一般に、ドメイン コント ローラー上の SQL Server のインストールはお勧めしません。 詳細については、次を参照してください。[サポート情報 2032911](https://support.microsoft.com/en-us/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont)です。
 
@@ -59,7 +60,7 @@ SQL Server 2016 の R Services または SQL Server 2017 Machine Learning サー
 
 Microsoft R クライアントの最新バージョンをインストール、使用して、SQL Server でリモート計算コンテキストで R を実行する場合、次のようなエラーが発生した可能性があります。
 
->*Microsoft R Server バージョン 8.x.x と互換性がないコンピューターに Microsoft R Client のバージョン 9.x.x を実行しています。互換性のあるバージョンをダウンロードしてインストールしてください。*
+> *Microsoft R Server バージョン 8.x.x と互換性がないコンピューターに Microsoft R Client のバージョン 9.x.x を実行しています。互換性のあるバージョンをダウンロードしてインストールしてください。*
 
 SQL Server 2016 では、クライアント上の R ライブラリは、サーバー上の R ライブラリを正確に一致が必要です。 制限は R Server 9.0.1 より後のリリースで削除されました。 ただし、このエラーが発生した場合は、クライアントとサーバーによって使用され、必要に応じて、サーバー バージョンと一致するクライアントを更新する R ライブラリのバージョンを確認します。
 
@@ -67,25 +68,44 @@ SQL Server サービスのリリースがインストールされているとき
 
 Microsoft R クライアント 9.0.0 との互換性のために、これに説明されている更新プログラムのインストール[サポートの記事](https://support.microsoft.com/kb/3210262)です。
 
-R パッケージに問題を避けるためにはに記載されている最新のライフ サイクル ポリシーに変更することで、サーバーにインストールされている R ライブラリのバージョンをアップグレードすることも[、次のセクション](#bkmk_sqlbindr)です。 これを行うときに SQL Server と共にインストールされている R のバージョンが更新、同じスケジュールで Microsoft R Server は、により、サーバーとクライアントの両方常に、Microsoft R. の最新リリースの更新プログラムが発行されたこと
+R パッケージに問題を避けるためには、R ライブラリ」の説明に従って、最新のライフ サイクルのサポート ポリシーを使用して、サービス契約を変更することで、サーバーにインストールされているのバージョンをアップグレードすることも[、次のセクション](#bkmk_sqlbindr)です。 これを行うときに SQL Server と共にインストールされている R のバージョンは、machine Learning サーバー (旧称 Microsoft R Server) の更新に使用される同じスケジュールで更新されます。
 
 **適用されます:** SQL Server 2016 R Services、R Server バージョン 9.0.0 の以前のバージョン
+
+### <a name="r-components-missing-from-cu3-setup"></a>R コンポーネントを CU3 セットアップからが見つかりません
+
+Azure の仮想マシン数に制限は、SQL Server に付属する必要のある R インストール ファイルを指定せずにプロビジョニングされました。 2018-01-05 から 2018-01-23 までの期間でプロビジョニングした仮想マシンに問題が適用されます。 この問題は、内部設置型インストールの場合を適用した場合の SQL Server 2017 CU3 更新期間中に 2018-01-05 から 2018-01-23 影響も可能性があります。
+
+サービス リリースは、R のインストール ファイルの正しいバージョンを含む提供されました。
+
++ [SQL Server 2017 KB4052987 の累積的な更新プログラム パッケージ 3](https://www.microsoft.com/en-us/download/details.aspx?id=56128)です。
+
+コンポーネントをインストールして、SQL Server 2017 年 1 CU3 を修復には、CU3 をアンインストールして、更新されたバージョンを再インストールする必要があります。
+
+1. 更新された CU3 インストール ファイルをダウンロード、R インストーラーが含まれます。
+2. CU3 をアンインストールします。 コントロール パネルで、検索**更新プログラムをアンインストール**、し、「用の修正プログラム 3015 2017 (KB4052987) (64 ビット) の SQL Server」を選択します。 アンインストールの手順に進みます。
+3. 更新プログラムをダウンロードした KB4052987 をダブルクリックして CU3 更新プログラムを再インストールしてください:`SQLServer2017-KB4052987-x64.exe`です。 インストール手順に従います。
 
 ### <a name="unable-to-install-python-components-in-offline-installations-of-sql-server-2017-ctp-20-or-later"></a>オフライン インストールでは SQL Server 2017 CTP 2.0 またはそれ以降に Python コンポーネントをインストールすることができません。
 
 インターネットにアクセスできないコンピューターに SQL Server 2017 のプレリリース版をインストールする場合は、ダウンロードされた Python コンポーネントの場所の入力を求めるページを表示するインストーラーが失敗します。 このようなインスタンスでは、Machine Learning サービス機能は、Python コンポーネントではないをインストールできます。
 
-リリース バージョンでは、この問題が解決します。 この問題を回避するには、この問題が発生した場合は、セットアップ中に一時的にインターネットへのアクセスを有効にできます。 R. にこの制限は適用されません。
+リリース バージョンでは、この問題が解決します。 また、この制限は、R コンポーネントには適用されません。
 
-**適用されます:** Python ### と SQL Server 2017 <a name="bkmk_sqlbindr"> </a>を使用して、クライアントから、古いバージョンの SQL Server R Services に接続するときに、互換性のないバージョンの警告[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+**適用されます:** Python の SQL Server 2017
 
-SQL Server 2016 のコンピューティング コンテキストで R コードを実行して、次の 2 つのステートメントのいずれかが true の場合、次のようなエラーが表示される場合。
-* セットアップ ウィザードを使用してクライアント コンピューターで R Server (スタンドアロン) をインストールした[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]です。
-* 使用して Microsoft R Server をインストールする、 [Windows インストーラーを区切る](https://docs.microsoft.com/r-server/install/r-server-install-windows)です。
+### <a name="bkmk_sqlbindr"></a>使用して、クライアントから、古いバージョンの SQL Server R Services に接続するときに、互換性のないバージョンの警告[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
->*Microsoft R Server バージョン 8.0.3 と互換性のない、バージョン 9.0.0 の Microsoft R Client をコンピューター上で実行しています。互換性のあるバージョンをダウンロードしてインストールしてください。*
+R コードを実行するときは、SQL Server 2016 の計算コンテキスト、次のエラーを表示する場合があります。
 
-使用することができます_バインディング_Microsoft R Server 9.0 以降のリリースで、SQL Server 2016 インスタンスで R コンポーネントをアップグレードします。 かどうかをする R サービスのバージョンを参照して、アップグレードを使用できます[SqlBindR.exe を使用して R Services のインスタンスをアップグレード](/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
+> *Microsoft R Server バージョン 8.0.3 と互換性のない、バージョン 9.0.0 の Microsoft R Client をコンピューター上で実行しています。互換性のあるバージョンをダウンロードしてインストールしてください。*
+
+次の 2 つのステートメントのいずれかが true の場合、このメッセージが表示されます。
+
++ セットアップ ウィザードを使用してクライアント コンピューターで R Server (スタンドアロン) をインストールした[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]です。
++ 使用して Microsoft R Server をインストールする、 [Windows インストーラーを区切る](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)です。
+
+使用する必要があります、同じバージョンを使用すると、サーバーとクライアント_バインディング_、SQL Server 2016 インスタンスに R コンポーネントをアップグレードするには、Microsoft R Server 9.0 と以降のリリースでサポートされています。 かどうかをする R サービスのバージョンを参照して、アップグレードを使用できます[SqlBindR.exe を使用して R Services のインスタンスをアップグレード](/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
 
 **適用されます:** SQL Server 2016 R Services、R Server バージョン 9.0.0 の以前のバージョン
 
@@ -93,7 +113,7 @@ SQL Server 2016 のコンピューティング コンテキストで R コード
 
 累積的な更新プログラムのインストールまたはインターネットに接続されていないコンピューターに SQL Server 2016 の service pack をインストールするときに、ダウンロードした CAB ファイルを使用して、R コンポーネントを更新できるプロンプトを表示するセットアップ ウィザードが失敗します。 このエラーは、複数のコンポーネントは、データベース エンジンと共にインストールされたときに通常発生します。
 
-この問題を回避するには、コマンドラインを使用し、サービス リリースをインストールすることができます、 */MRCACHEDIRECTORY*引数のこの例では、CU1 更新プログラムをインストールします。
+この問題を回避するには、コマンドラインを使用し、サービス リリースをインストールすることができます、`MRCACHEDIRECTORY`引数のこの例では、CU1 更新プログラムをインストールします。
 
 `C:\<path to installation media>\SQLServer2016-KB3164674-x64.exe /Action=Patch /IACCEPTROPENLICENSETERMS /MRCACHEDIRECTORY=<path to CU1 CAB files>`
 
@@ -105,13 +125,13 @@ SQL Server 2016 のコンピューティング コンテキストで R コード
 
 データベース エンジンから SQL Server R Services を個別にインストールするし、ビルドのバージョンが異なる場合は、システム イベント ログに次のエラーを参照してください可能性があります。
 
->_SQL Server スタート パッド サービスは、次のエラーのため開始できませんでした。 サービスは適時に開始または制御要求に応答しませんでした。_
+> *SQL Server スタート パッド サービスは、次のエラーのため開始できませんでした。 サービスは適時に開始または制御要求に応答しませんでした。*
 
 たとえば、このエラー可能性があります、リリース バージョンを使用して、データベース エンジンをインストールする場合に発生する、データベース エンジンのアップグレード修正プログラムを適用およびリリース バージョンを使用して、R Services の機能を追加します。
 
-この問題を回避するには、すべてのコンポーネントのバージョン番号が同じであることを確認します。 1 つのコンポーネントをアップグレードする場合は、インストールされている他のすべてのコンポーネントに必ず同じアップグレードを適用してください。
+この問題を回避するには、ファイル マネージャーなどのユーティリティを使用して Launchpad.exe のバージョンの sqldk.dll などの SQL バイナリのバージョンと比較します。 すべてのコンポーネントは、同じバージョン番号が必要です。 1 つのコンポーネントをアップグレードする場合は、インストールされている他のすべてのコンポーネントに必ず同じアップグレードを適用してください。
 
-SQL Server 2016 の各リリースに必要な R のバージョン番号の一覧を表示するには、次を参照してください。[インターネットにアクセスできないインストールの R コンポーネント](r/installing-ml-components-without-internet-access.md)です。
+スタート パッドを探して、`Binn`インスタンスのフォルダーです。 たとえば、SQL Server 2016 の既定のインストール パスがあります`C:\Program Files\Microsoft SQL Server\MSSQL.13.InstanceNameMSSQL\Binn`です。 
 
 ### <a name="remote-compute-contexts-are-blocked-by-a-firewall-in-sql-server-instances-that-are-running-on-azure-virtual-machines"></a>Azure の仮想マシンで実行されている SQL Server インスタンス内のファイアウォールでリモート計算コンテキストがブロックされています。
 
@@ -125,7 +145,7 @@ Azure vm での回避策として開きます**セキュリティが強化され
 
 この問題を解決するために、新しいサービス リリースにアップグレードすることをお勧めします。
 
-アップグレードできない場合は、SQL ログインを使用して、埋め込みの ODBC 呼び出しを必要とする可能性のあるリモート R ジョブを実行できます。
+この問題を回避するには、アップグレードは実現できない場合は、埋め込みの ODBC 呼び出しが必要となるリモート R ジョブを実行する SQL ログインを使用します。
 
 **適用されます:** Services Express Edition の SQL Server 2016 R
 
@@ -135,8 +155,17 @@ Azure vm での回避策として開きます**セキュリティが強化され
 
 たとえば、SQL Server の Enterprise Edition を使用している場合でも R モードで実行シングル スレッド外部ツールを使用して、R コードを実行するとします。 SQL Server のパフォーマンスの利点を取得する SQL Server の接続を開始して[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)を外部スクリプトの実行時を呼び出します。
 
-+ 一般に、機械学習の外部ツールから SQL Server で使用されるライブラリを呼び出すことを回避します。
-+ デバッグ R または Python コードをする必要がある場合は、そのためには SQL Server の外部通常簡単です。 Microsoft R クライアントをインストールする SQL Server 内にある同じライブラリを取得するにまたは[Machine Learning サーバー](r/create-a-standalone-r-server.md)です。
+一般に、機械学習の外部ツールから SQL Server で使用されるライブラリを呼び出すことを回避します。 デバッグ R または Python コードをする必要がある場合は、そのためには SQL Server の外部通常簡単です。 Microsoft R クライアントをインストールする SQL Server 内にある同じライブラリを取得するにまたは[Machine Learning サーバー](r/create-a-standalone-r-server.md)です。
+
+### <a name="sql-server-data-tools-does-not-support-permissions-required-by-external-scripts"></a>SQL Server Data Tools は外部スクリプトで必要なアクセス許可をサポートしていません
+
+使用すると Visual Studio または SQL Server Data Tools データベース プロジェクトを発行する任意のプリンシパルは、外部スクリプトの実行に固有のアクセス許可を持っている場合、次のようなエラーが発生した可能性があります。
+
+> *TSQL モデル: エラーがときをリバース エンジニア リング、データベースを検出します。アクセス許可は認識されず、インポートされませんでした。*
+
+現在、DACPAC モデルは R Services または GRANT ANY 外部スクリプト、または EXECUTE ANY EXTERNAL SCRIPT などの Machine Learning サービスによって使用されるアクセス許可をサポートしていません。 この問題は今後のリリースで修正される予定です。
+
+この問題を回避するには、追加の許可でステートメントを実行、配置後スクリプトです。
 
 ### <a name="external-script-execution-is-throttled-due-to-resource-governance-default-values"></a>リソース統制の既定値が原因で抑制は外部スクリプトの実行
 
@@ -150,7 +179,41 @@ Enterprise Edition では、外部スクリプト プロセスを管理するた
 
 このセクションでは、SQL Server で R を実行している固有の既知の問題だけでなく、R ライブラリと RevoScaleR をなど、マイクロソフトによって発行されたツールに関連する問題のいくつか含まれています。
 
-追加既知の問題を R ソリューションを与える可能性がありますを参照してください、 [Microsoft R Server サイト](https://docs.microsoft.com/machine-learning-server/resources-known-issues)です。
+追加既知の問題を R ソリューションを与える可能性がありますを参照してください、 [Machine Learning サーバー](https://docs.microsoft.com/machine-learning-server/resources-known-issues)サイトです。
+
+### <a name="access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>アクセスは、既定以外の場所に SQL Server で R スクリプトを実行するときに警告を拒否されました
+
+SQL Server のインスタンスがインストールされている場合、既定以外の場所になどの外部、`Program Files`フォルダー、ACCESS_DENIED は、パッケージをインストールするスクリプトを実行しようとしたときに発生する警告です。 例:
+
+> *`normalizePath(path.expand(path), winslash, mustWork)` : パス [2] ="~ExternalLibraries/R/8/1": アクセスが拒否されました*
+
+その理由は R 関数は、パスを読み取ろうとすると、失敗した場合、組み込みのユーザー グループ**SQLRUserGroup**は読み取りアクセスがありません。 生成される警告は、現在の R スクリプトの実行をブロックしませんが、ユーザーがその他の R スクリプトを実行するたびに、警告が繰り返し再発可能性があります。
+
+で既定の場所に SQL Server をインストールする場合は、このエラーは発生しません、すべての Windows ユーザーのアクセス許可を読み取りがであるため、`Program Files`フォルダーです。
+
+この問題 ia は、次のサービス リリースで対処します。 この問題を回避するには、提供、グループ**SQLRUserGroup**のすべての親フォルダーに対して読み取りアクセス権を持つ`ExternalLibraries`します。
+
+### <a name="serialization-error-between-old-and-new-versions-of-revoscaler"></a>RevoScaleR の新旧のバージョン間でシリアル化エラー
+
+リモート SQL Server インスタンスをシリアル化された形式を使用して、モデルを渡す際にエラーが発生する可能性があります。 
+
+> *MemDecompress でエラー (データ、種類 = 圧縮解除) memDecompress(2) で内部エラー-3 です。*
+
+シリアル化の関数の最新バージョンを使用して、モデルを保存した場合、このエラーは発生[rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)モデルの逆シリアル化する、SQL Server インスタンスが、古いバージョンの SQL からの RevoScaleR ApiServer 2017 CU2 以前のバージョン。
+
+この問題を回避するには、SQL Server 2017 インスタンス CU3 を以降にアップグレードできます。
+
+API バージョンが同じ場合、またはシリアル化 API の新しいバージョンを使用するサーバーに以前のシリアル化の関数で保存されたモデルを移動する場合は、エラーは表示されません。
+
+つまり、シリアル化と逆シリアル化の両方の RevoScaleR の同じバージョンを使用します。
+
+### <a name="real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>リアルタイム スコアリング適切に処理されません、 _learningRate_ツリーやフォレスト モデル内のパラメーター
+
+デシジョン ツリーまたはデシジョン フォレスト メソッドを使用してモデルを作成、学習率を指定すると、表示される矛盾する結果を使用する場合`sp_rxpredict`または SQL`PREDICT`関数を使用すると比較して`rxPredict`です。
+
+原因とそのシリアル化のプロセス モデルでは、API のエラーし、に制限されます、`learningRate`パラメーター: たとえば、 [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)、または
+
+この問題は次のサービス リリースで対処します。
 
 ### <a name="limitations-on-processor-affinity-for-r-jobs"></a>R ジョブのプロセッサ アフィニティに関する制限事項
 
@@ -166,10 +229,11 @@ SQL Server 2016 の最初のリリース ビルドでは、最初の k グルー
 
 たとえば、CRSDepTimeStr 列がまだ整数でない場合、次のステートメントでエラーが発生します。
 
-```r
-data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM AirlineDemoSmall",
-                                connectionString = connectionString,
-                                colClasses = c(CRSDepTimeStr = "integer"))
+```R
+data <- RxSqlServerData(
+  sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM AirlineDemoSmall", 
+  connectionString = connectionString, 
+  colClasses = c(CRSDepTimeStr = "integer"))
 ```
 
 この問題を回避するには、キャストを使用する SQL クエリを書き直すことができます、または変換して正しいデータ型を使用してデータを R に提供します。 一般に、パフォーマンスは、操作する際にデータを R コードでデータを変更することによってではなく、SQL を使用しています。
@@ -194,15 +258,13 @@ data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM Airline
 
 ### <a name="avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>R コードを実行するときに、ワークスペースをオフにしないで、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]計算コンテキスト
 
-R コマンドを使用して R コードの実行中にオブジェクトのワークスペースを削除する場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コンピューティング コンテキストを使用して R スクリプトの一部としてワークスペースをクリアするかどうか、または呼び出す[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)、これをする可能性がありますエラー: 
-
->*ワークスペース オブジェクト 'revoScriptConnection' が見つかりません。*
+R コマンドを使用して R コードの実行中にオブジェクトのワークスペースを削除する場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コンピューティング コンテキストを使用して R スクリプトの一部としてワークスペースをクリアするかどうか、または呼び出す[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)、このエラーが発生する可能性があります:*ワークスペース オブジェクト revoScriptConnection が見つかりませんでした*
 
 `revoScriptConnection` は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]から呼び出される R セッションに関する情報を含む R ワークスペース内のオブジェクトです。 ただし、R コードにワークスペースをクリアするためのコマンド ( `rm(list=ls()))`など) が含まれている場合は、R ワークスペース内のセッションおよび他のオブジェクトに関するすべての情報もクリアされます。
 
 この問題を回避するには、変数およびその他のオブジェクトの区別しないで消去中にされないようにで R を実行している[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]です。 それが持つことができますが、ワークスペースをクリアする一般的な R コンソールで作業するとき、予想外の結果。
 
-* 特定の変数を削除するには、R を使用*削除*関数:`remove('name1', 'name2', ...)`です。
+* 特定の変数を削除するには、R を使用`remove`関数: たとえば、`remove('name1', 'name2', ...)`
 * 削除する変数が複数ある場合は、リストに一時変数の名前を保存し、ガベージ コレクションを定期的に実行します。
 
 ### <a name="restrictions-on-data-that-can-be-provided-as-input-to-an-r-script"></a>R スクリプトの入力として提供できるデータに対する制限事項
@@ -229,9 +291,9 @@ R 演算に使用されるメモリの量を大幅に増加させる要因とは
 
 使用してテーブルに結果を書き込む rxDataStep 関数を使用する場合、 *varsToKeep*と*varsToDrop*または操作の一部として除外する列を指定する便利な方法は、します。 ただし、これらの引数は、SQL Server データ ソースに対してはサポートされません。
 
-### <a name="limited-support-for-sql-data-types-in-spexecuteexternalscript"></a>SQL データ型の制限付きサポート`sp_execute_external_script`
+### <a name="limited-support-for-sql-data-types-in-spexecuteexternalscript"></a>Sp での SQL データ型の制限付きサポート\_実行\_外部\_スクリプト
 
-SQL でサポートされているデータ型の一部を R で使用できません。回避策として、サポートされていないデータ型をサポートされているデータ型にキャストしてから、sp_execute_external_script にデータを渡すことを検討してください。
+SQL でサポートされているすべてのデータ型は、R. のために使用できます。この問題を回避するには、sp にデータを渡す前に、サポートされているデータ型にサポートされていないデータ型をキャストを検討してください\_実行\_外部\_スクリプト。
 
 詳細については、次を参照してください。 [R ライブラリとデータ型](r/r-libraries-and-data-types.md)です。
 
@@ -257,15 +319,17 @@ SQL でサポートされているデータ型の一部を R で使用できま�
 
 暗黙のデータ型変換の詳細については、次を参照してください。 [R ライブラリとデータ型](r/r-libraries-and-data-types.md)です。
 
-### <a name="variable-scoping-error-when-you-use-the-transformfunc-parameter-the-sample-data-set-for-the-analysis-has-no-variables"></a>変数のスコープ transformFunc パラメーターを使用するときのエラー:*分析のサンプル データ セットに変数がありません*
+### <a name="variable-scoping-error-when-you-use-the-transformfunc-parameter"></a>変数のスコープ transformFunc パラメーターを使用するときのエラー
 
 渡すことができますをモデル化するときにデータを変換する、 *transformFunc*などの関数の引数`rxLinmod`または`rxLogit`です。 ただし、入れ子になった関数呼び出しは、ローカル コンピューティング コンテキストでの呼び出しが正しく動作させる場合でも、SQL Server のコンピューティング コンテキストではスコープ エラーに可能性があります。
 
-たとえば、2 つの関数が定義されている`f`と`g`をローカル グローバル環境でと`g`呼び出し`f`です。 `g`を含む分散またはリモート呼び出しでは、リモート呼び出しに `g` と `f` の両方を渡した場合でも、 `f` が見つからないために `g` の呼び出しが失敗します。
+> *分析のサンプル データ セットに変数がありません。*
+
+たとえば、2 つの関数が定義されている`f`と`g`をローカル グローバル環境でと`g`呼び出し`f`です。 分散またはリモート呼び出しは、関係する`g`への呼び出し`g`ためこのエラーで失敗する可能性があります`f`が見つからない場合でも、両方を渡した`f`と`g`のリモート呼び出しにします。
 
 この問題が発生した場合は、 `f` の定義内の、通常 `g`が `g` を呼び出す場所より前の任意の場所に、 `f`の定義を組み込むことで問題を回避できます。
 
-例 :
+例:
 
 ```r
 f <- function(x) { 2*x * 3 }
@@ -303,16 +367,10 @@ SQL Server 2016 では、`rxExec`関数がシングル スレッド モードで
 
 非常に多数の変数 (たとえば、40,000) 経由でデータ セットを使用する場合は、設定、`max-ppsize`始めると R 関数を使用するようにフラグを設定`rxGetVarInfo`です。 `max-ppsize` フラグは、ポインター保護スタックの最大サイズを指定します。
 
-(rgui.exe や rterm.exe などで) R コンソールを使用している場合、次のように入力することで max-ppsize の値を 500000 に設定できます。
+(RGui.exe や RTerm.exe など) は、R コンソールを使用している場合は、値を設定することができます_max ppsize_ 」と入力して 500000 に。
 
-```r
+```R
 R --max-ppsize=500000
-```
-
-使用している場合、[!INCLUDE[rsql_developr](../includes/rsql-developr-md.md)]環境を設定できます、 `max-ppsize` RevoIDE 実行可能ファイルに次の呼び出しを行ってフラグ。
-
-```
-RevoIDE.exe /RCommandLine --max-ppsize=500000  
 ```
 
 ### <a name="issues-with-the-rxdtree-function"></a>RxDTree 関数に関する問題
@@ -327,13 +385,24 @@ RevoIDE.exe /RCommandLine --max-ppsize=500000
 
 ### <a name="call-to-pretrained-model-fails-if-path-to-model-is-too-long"></a>モデルへのパスが長すぎる場合、事前トレーニング済みモデルへの呼び出しが失敗しました。
 
-コンピューター名とインスタンス名によって、既定のインストールで、事前トレーニング済みモデルをインストールする場合、トレーニング済みモデル ファイルに結果の完全なパスが Python を読み取るには長すぎます場合があります。 この制限は、次のサービス リリースで修正される予定です。
+SQL Server 2017 の早期のリリースでは、事前トレーニング済みモデルがインストールされている場合、トレーニング済みモデル ファイルへの完全パスが Python を読み取るには長すぎます場合があります。 この制限は、以降のサービス リリースで修正します。
 
 これにはいくつかの潜在的な回避策があります。 
 
 + 事前トレーニング済みモデルをインストールする場合は、カスタムの場所を選択します。
-+ 可能であれば、C:\SQL\MSSQL14 などのカスタム インストール パスの下、SQL Server インスタンスをインストールします。MSSQLSERVER です。
-+ Windows ユーティリティを使用して[Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx)短いパスをモデル ファイルにマップするハード リンクを作成します。 
++ 可能であれば、C:\SQL\MSSQL14 などの短いパスを持つカスタムのインストール パスで SQL Server インスタンスをインストールします。MSSQLSERVER です。
++ Windows ユーティリティを使用して[Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx)短いパスをモデル ファイルにマップするハード リンクを作成します。
++ 最新のサービス リリースを更新します。
+
+### <a name="error-when-saving-serialized-model-to-sql-server"></a>保存するときにエラーが SQL Server へのモデルをシリアル化
+
+リモートの SQL Server インスタンスにモデルを渡すバイナリ モデルを使用して読み取るしようとするときに、`rx_unserialize`関数[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)エラーが発生する可能性があります。 
+
+> *NameError: 名前 'rx_unserialize_model' が定義されていません*
+
+シリアル化の関数の最新バージョンを使用して、モデルを保存するが、モデルの逆シリアル化する、SQL Server インスタンスがシリアル化 API を認識しない場合、このエラーが発生します。
+
+この問題を解決するには、CU3 またはそれ以降の SQL Server 2017 インスタンスをアップグレードします。
 
 ### <a name="failure-to-initialize-a-varbinary-variable-causes-an-error-in-bxlserver"></a>Varbinary 変数の初期化の失敗である BxlServer でエラーが発生します。
 
@@ -361,28 +430,36 @@ exec sp_execute_external_script
 go
 ```
 
+### <a name="telemetry-warning-on-successful-execution-of-python-code"></a>Python コードの実行完了後に製品利用統計情報の警告
+
+SQL Server 2017 CU2 以降では、次のメッセージが表示される場合でも、それ以外の場合の Python コードが正常に実行されます。
+
+> *外部スクリプトからの STDERR メッセージ:*
+> **~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
+> *SyntaxWarning: telemetry_stateグローバル宣言の前に使用されます。*
+
+
+SQL Server 2017 累積更新プログラム 3 (CU3) で、この問題は修正されました。 
+
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise と Microsoft R Open
 
 このセクションでは、R の接続、開発、および Revolution Analytics によって提供されるパフォーマンス ツールに固有の問題を一覧表示します。 これらのツールは、以前のプレリリース バージョンので提供されていた[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]です。
 
 一般に、これらの以前のバージョンをアンインストールして、SQL Server または Microsoft R Server の最新バージョンをインストールすることをお勧めします。
 
-### <a name="running-side-by-side-versions-of-revolution-r-enterprise"></a>サイド バイ サイドのバージョンの Revolution R Enterprise を実行しています。
+### <a name="revolution-r-enterprise-is-not-supported"></a>Revolution R Enterprise はサポートされていません
 
 バージョンの Revolution R Enterprise サイド バイ サイドのインストール[!INCLUDE[rsql_productname_md](../includes/rsql-productname-md.md)]はサポートされていません。
 
-別のバージョンの Revolution R Enterprise を使用するためのライセンスがある場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスおよび [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスへの接続に使用するワークステーションとは別のコンピューターにライセンスを配置する必要があります。
+Revolution R Enterprise の既存のライセンスを取得する場合は、両方から別のコンピューターに配置する必要があります、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスと、ワークステーションへの接続に使用する、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンス。
 
-### <a name="the-use-of-an-r-productivity-environment-is-not-supported"></a>生産性の R 環境の使用はサポートされていません
+プレリリース バージョンによって[!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)]Revolution Analytics によって作成された Windows の R 開発環境を含まれています。 このツールは提供されなくなるはサポートされていません。
 
-プレリリース バージョンによって[!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)]Revolution Analytics によって作成された Windows の R 開発環境を含まれています。 このツールが提供されなくなるはサポートされていません。
-
-互換性のため[!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)]、Revolution Analytics ツールではなく Microsoft R Client または Microsoft R Server をインストールすることを強くお勧めします。 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)と[Visual Studio Code](https://code.visualstudio.com/)も Microsoft R ソリューションをサポートします。
+互換性のため[!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)]Microsoft R クライアントをインストールすることをお勧めします。 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)と[Visual Studio Code](https://code.visualstudio.com/)も Microsoft R ソリューションをサポートします。
 
 ### <a name="compatibility-issues-with-sqlite-odbc-driver-and-revoscaler"></a>SQLite ODBC ドライバーと RevoScaleR に関する互換性の問題
 
 SQLite ODBC ドライバーのリビジョン 0.92 は RevoScaleR と互換性がありません。 リビジョン 0.88 ~ 0.91 と 0.93 以降、互換性があることが判明しています。
-
 
 ## <a name="see-also"></a>参照
 

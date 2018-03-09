@@ -3,12 +3,12 @@ title: "外部ライブラリ (TRANSACT-SQL) を作成 |Microsoft ドキュメ�
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,16 +20,16 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 8d0f700ba30b77e892b37e98c43996d6e654e7ea
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: fe1cb90bce5717d194defd2c684d7b20fc29a061
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-library-transact-sql"></a>外部ライブラリ (TRANSACT-SQL) を作成します。  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
 指定したバイトのストリームまたはファイルのパスからデータベースへの R パッケージをアップロードします。
 
@@ -85,7 +85,7 @@ WITH ( LANGUAGE = 'R' )
 
 アセンブリのような 16 進数のリテラルとして、パッケージのコンテンツを指定します。 このオプションが必要なアクセス許可が、サーバーがアクセスできる任意のフォルダーにファイルのパスへのアクセスはありません、ライブラリを変更するライブラリを作成することができます。
 
-**プラットフォーム WINDOWS を =**
+**PLATFORM = WINDOWS**
 
 コンテンツ ライブラリのプラットフォームを指定します。 SQL Server が実行されているホスト プラットフォームの既定値。 そのため、ユーザーは、値を指定がありません。 複数のプラットフォームがサポートされている場合、またはユーザーが別のプラットフォームを指定する必要がある場合に必要です。 Windows は、唯一サポートされているプラットフォームです。
 
@@ -99,7 +99,7 @@ Zip アーカイブ ファイルの形式で、R 言語用、ファイルを使�
 
 SQL Server 2017 リリースのデータ ソースとして blob を使用することはできません。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>権限
 
 必要があります、`CREATE ANY EXTERNAL LIBRARY`権限です。
 

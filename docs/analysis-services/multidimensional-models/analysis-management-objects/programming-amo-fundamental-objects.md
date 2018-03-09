@@ -1,19 +1,18 @@
 ---
 title: "AMO 基本オブジェクトのプログラミング |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - server objects [AMO]
 - programming [AMO]
@@ -23,19 +22,19 @@ helpviewer_keywords:
 - database objects [AMO]
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 82ab6322367b9aaac757e9444d98a30401d42b06
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bcbf7e3c05fb0166324e1953b5656e8038ec682f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-fundamental-objects"></a>AMO 基本オブジェクトのプログラミング
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]基本的なオブジェクトは、一般に、シンプルで簡単なオブジェクトです。 これらのオブジェクトは、通常、作成およびインスタンス化され、その後、必要がなくなると、ユーザーによって切断されます。 基礎クラスには、<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource>、<xref:Microsoft.AnalysisServices.DataSourceView> などのオブジェクトが含まれます。 AMO 基本オブジェクトの中で唯一の複雑なオブジェクトは、<xref:Microsoft.AnalysisServices.DataSourceView> です。これは、データ ソース ビューを表す抽象モデルを構築するために詳細を必要とします。  
+  基本オブジェクトは、一般に、単純で簡単なオブジェクトです。 これらのオブジェクトは、通常、作成およびインスタンス化され、その後、必要がなくなると、ユーザーによって切断されます。 基礎クラスには、<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource>、<xref:Microsoft.AnalysisServices.DataSourceView> などのオブジェクトが含まれます。 AMO 基本オブジェクトの中で唯一の複雑なオブジェクトは、<xref:Microsoft.AnalysisServices.DataSourceView> です。これは、データ ソース ビューを表す抽象モデルを構築するために詳細を必要とします。  
   
  <xref:Microsoft.AnalysisServices.Server> オブジェクトと <xref:Microsoft.AnalysisServices.Database> オブジェクトは、通常、OLAP オブジェクトまたはデータ マイニング オブジェクトとして含まれているオブジェクトを使用する必要があります。  
   
@@ -51,7 +50,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [DataSourceView オブジェクト](#DSV)  
   
-##  <a name="ServerObjects"></a>Server オブジェクト  
+##  <a name="ServerObjects"></a> Server オブジェクト  
  <xref:Microsoft.AnalysisServices.Server> オブジェクトを使用するには、サーバーに接続し、<xref:Microsoft.AnalysisServices.Server> オブジェクトがサーバーに接続しているかどうかを確認し、接続している場合はそのサーバーから <xref:Microsoft.AnalysisServices.Server> を切断する必要があります。  
   
 ### <a name="connecting-to-the-server-object"></a>Server オブジェクトへの接続  
@@ -111,7 +110,7 @@ if ( (svr != null) && ( svr.Connected))
 }  
 ```  
   
-###  <a name="AMO"></a>AmoException 例外オブジェクト  
+###  <a name="AMO"></a> AmoException 例外オブジェクト  
  AMO は、さまざまな問題が検出されるたびに例外をスローします。 例外の詳細については、次を参照してください。 [AMO のその他のクラスとメソッド](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)です。 次のサンプル コードは、AMO 内の例外をキャプチャするための正しい方法を示します。  
   
 ```  
@@ -150,7 +149,7 @@ catch (  AMOException e)
 }  
 ```  
   
-##  <a name="DatabaseObjects"></a>データベース オブジェクト  
+##  <a name="DatabaseObjects"></a> データベース オブジェクト  
  <xref:Microsoft.AnalysisServices.Database> オブジェクトを使用した作業は、非常に単純です。 <xref:Microsoft.AnalysisServices.Server> オブジェクトのデータベース コレクションから既存のデータベースを取得します。  
   
 ### <a name="creating-dropping-and-finding-a-database"></a>データベースの作成、削除、および検索  
@@ -197,7 +196,7 @@ static Database ProcessDatabase(Database db, ProcessType pt)
 }  
 ```  
   
-##  <a name="DataSource"></a>DataSource オブジェクト  
+##  <a name="DataSource">DataSource オブジェクト</a>  
  <xref:Microsoft.AnalysisServices.DataSource> オブジェクトとは、データが存在するデータベースと [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] との間のリンクです。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の基になるモデルを表すスキーマは、<xref:Microsoft.AnalysisServices.DataSourceView> オブジェクトによって定義されます。 <xref:Microsoft.AnalysisServices.DataSource> オブジェクトは、データが存在するデータベースに対する接続文字列と見なすことができます。  
   
  次のサンプル コードは、<xref:Microsoft.AnalysisServices.DataSource> オブジェクトの作成方法を示します。 このサンプルでは、サーバーが依然として存在していること、<xref:Microsoft.AnalysisServices.Server> オブジェクトが接続されていること、およびデータベースが存在していることを確認します。 <xref:Microsoft.AnalysisServices.DataSource> オブジェクトが存在する場合、そのオブジェクトを削除して再作成します。 同じ名前と内部 ID を持つ <xref:Microsoft.AnalysisServices.DataSource> オブジェクトを作成します。 このサンプルでは、検証のために接続文字列に対して確認を実行しません。  
@@ -220,7 +219,7 @@ static string CreateDataSource(Database db, string strDataSourceName, string str
 }  
 ```  
   
-##  <a name="DSV"></a>DataSourceView オブジェクト  
+##  <a name="DSV">DataSourceView オブジェクト</a>  
  <xref:Microsoft.AnalysisServices.DataSourceView> オブジェクトは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のスキーマ モデルを保持する役割を担います。 <xref:Microsoft.AnalysisServices.DataSourceView> オブジェクトがスキーマを保持するには、まず、スキーマを作成する必要があります。 スキーマは、DataSet オブジェクトを経由して、System.Data 名前空間から作成されます。  
   
  次のサンプル コードは、AdventureWorks に基づく Analysis Services サンプル プロジェクトに含まれるスキーマの一部を作成します。 この現サンプルは、テーブル、計算列、リレーション、および複合リレーションに対するスキーマ定義を作成します。 スキーマは、保存されるデータセットです。  

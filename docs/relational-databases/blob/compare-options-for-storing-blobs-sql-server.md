@@ -8,23 +8,25 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d50be48fe1f6c1b57da6171e0bfaee8c8b23a1fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5b32325de1691fae92ff7bcecfeeda305df98d31
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Blob (SQL Server) を保存するオプションの比較
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ファイルおよびドキュメントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納するために使用できるオプションを説明して比較します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ファイルおよびドキュメントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納するために使用できるオプションを説明して比較します。  
   
 ##  <a name="Expectations"></a> データベースへのファイルの格納 - 利点と予測  
  企業データの大部分は、実際は構造化されておらず、通常、ファイルや文書としてファイル システムに保存されています。 このデータの大半は、Windows API を通じてファイルにアクセスするアプリケーションによって作成、管理、および使用されます。 通常、企業はこのデータをファイル システムに保存し、ファイルの関連するメタデータ ファイルをリレーショナル データベースに格納します。  
@@ -53,13 +55,13 @@ ms.lasthandoff: 11/17/2017
   
 |機能|ファイル サーバーとデータベース ソリューション|FILESTREAM ソリューション|FileTable ソリューション|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**管理タスクのシングル ストーリー**|いいえ|可|**可**|  
-|**サービスの単一セット**: 検索、レポート、クエリなど|いいえ|可|**可**|  
-|**統合セキュリティ モデル**|いいえ|可|**可**|  
-|**FILESTREAM データのインプレース更新**|可|いいえ|**可**|  
-|**データベースで管理されるファイルおよびディレクトリの階層**|いいえ|いいえ|**可**|  
-|**Windows アプリケーションの互換性**|可|いいえ|**可**|  
-|**ファイルの属性へのリレーショナル アクセス**|いいえ|いいえ|**可**|  
+|**管理タスクのシングル ストーリー**|いいえ|はい|**はい**|  
+|**サービスの単一セット**: 検索、レポート、クエリなど|いいえ|はい|**はい**|  
+|**統合セキュリティ モデル**|いいえ|はい|**可**|  
+|**FILESTREAM データのインプレース更新**|はい|いいえ|**はい**|  
+|**データベースで管理されるファイルおよびディレクトリの階層**|いいえ|いいえ|**はい**|  
+|**Windows アプリケーションの互換性**|はい|いいえ|**可**|  
+|**ファイルの属性へのリレーショナル アクセス**|いいえ|いいえ|**はい**|  
   
 ##  <a name="CompareRBS"></a> FILESTREAM とリモート BLOB ストア (RBS) の比較  
  これらの 2 つの機能の比較については、RBS チームのブログ投稿「 [SQL Server リモート BLOB ストアと FILESTREAM 機能の比較](http://go.microsoft.com/fwlink/?LinkId=210317)」を参照してください。  

@@ -14,29 +14,29 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d64722c817bda6fd5f940371506b3737a80323c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 16e7f118afae0ca2f33ca8852ee4ac71e156fe52
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secondary-database-settings"></a>[セカンダリ データベースの設定]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このダイアログ ボックスを使用すると、ログ配布構成におけるセカンダリ データベースのプロパティを構成および変更できます。  
   
  ログ配布の概念については、「 [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[セカンダリ サーバー インスタンス]**  
  ログ配布構成において、現在、セカンダリ サーバーとして構成されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前が表示されます。  
   
  **[セカンダリ データベース]**  
  ログ配布構成のセカンダリ データベースの名前を表示します。 新しいセカンダリ データベースをログ配布構成に追加する場合は、一覧からデータベースを選択するか、ボックスに新しいデータベースの名前を入力します。 新しいデータベースの名前を入力する場合は、セカンダリ データベースにプライマリ データベースの完全なデータベース バックアップを復元するオプションを **[初期化]** タブで選択する必要があります。 新しいデータベースは復元操作の一部として作成されます。  
   
- **Connect**  
+ **のインスタンスに接続するときには、**  
  ログ配布構成において、セカンダリ サーバーとして使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 接続に使用するアカウントは、セカンダリ サーバーのインスタンスの sysadmin 固定サーバー ロールのメンバーである必要があります。  
   
  **[初期化] タブ**  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
  **ジョブ名**  
  トランザクション ログ バックアップ ファイルをプライマリ サーバーからセカンダリ サーバーにコピーするときに使用する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの名前が表示されます。 このジョブを作成しているときは、ボックスに入力することで名前を変更できます。  
   
- **スケジュール**  
+ **[スケジュール]**  
  トランザクション ログ バックアップを、プライマリ サーバーからセカンダリ サーバーにコピーする、SQL Server エージェントのコピー ジョブの現在のスケジュールを表示します。 **[スケジュール]**をクリックすると、このスケジュールを変更できます。  
   
  **[スケジュール]**  
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/17/2017
  **ジョブ名**  
  トランザクション ログ バックアップを、セカンダリ データベースに復元するために使用する SQL Server エージェント ジョブの名前を表示します。 このジョブを作成しているときは、ボックスに入力することで名前を変更できます。  
   
- **スケジュール**  
+ **[スケジュール]**  
  トランザクション ログ バックアップを、セカンダリ データベースに復元するために使用する SQL Server エージェント ジョブの現在のスケジュールを表示します。 **[スケジュール]**をクリックすると、このオプションを変更できます。  
   
  **[スケジュール]**  

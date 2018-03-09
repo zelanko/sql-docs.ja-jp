@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_notification
 - sp_help_notification_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_notification
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e54750ac4174f054d87c5a1994f40bd3b5cfeec0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 542ffbb8b2bf6c51b31da93dc654a3a71b3fa401
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,32 +51,32 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@object_type =**] **'***object_type***'**  
+ [ **@object_type =**] **'***object_type***'**  
  返される情報の種類を指定します。 *object_type*は**char (9)**、既定値はありません。 *object_type*指定されたオペレーター名に割り当てられている警告の一覧を表示するアラートを指定できます*、*または演算子では、指定された警告名を担当する演算子の一覧を表示する*です。*  
   
- [  **@name =**] **'***名前***'**  
+ [ **@name =**]  **'***name***'**  
  演算子名 (場合*object_type* is 演算子) または警告の名前 (場合*object_type*アラートは、)。 *名前*は**sysname**、既定値はありません。  
   
- [  **@enum_type =**] **'***enum_type***'**  
+ [ **@enum_type =**] **'***enum_type***'**  
  *Object_type*返される情報です。 *enum_type*は「ACTUAL」は、ほとんどの場合。 *enum_type*は**char (10)**, で、既定値はありませんはこれらの値のいずれかを指定します。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |ACTUAL|だけを表示、 *object_types*に関連付けられている*名前*です。|  
 |ALL|すべてを一覧表示、*object_types*に関連付けられていないものも含め*名前*です。|  
 |TARGET|だけを表示、 *object_types* 、指定された照合*target_name*との関連付けに関係なく、*名前*です。|  
   
- [  **@notification_method =**] *notification_method*  
+ [ **@notification_method =**] *notification_method*  
  返される通知方法の列を表す数値を指定します。 *notification_method*は**tinyint**値は次のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|電子メール: だけを返す、 **use_email**列です。|  
 |**2**|ポケットベル: だけを返す、 **use_pager**列です。|  
 |**4**|NetSend: だけを返す、 **use_netsend**列です。|  
 |**7**|すべて: すべての列を返します。|  
   
- [  **@target_name =**] **'***target_name***'**  
+ [ **@target_name =**] **'***target_name***'**  
  検索する警告の名前 (場合*object_type*アラートは、) を検索するには、するオペレーター名を指定 (場合*object_type* is 演算子)。 *target_name*場合にのみ必要*enum_type*ターゲットです。 *target_name*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-valves"></a>戻り値  
@@ -98,7 +101,7 @@ sp_help_notification
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|オペレーター識別番号。|  
-|**演算子**|**sysname**|オペレーター名。|  
+|**operator_name**|**sysname**|オペレーター名。|  
 |**use_email**|**int**|オペレーターへの通知に電子メールを使用するかどうか。<br /><br /> **1** = [はい]<br /><br /> **0** = なし|  
 |**use_pager**|**int**|オペレーターへの通知にポケットベルを使用するかどうか。<br /><br /> **1** = [はい]<br /><br /> **0** = なし|  
 |**use_netsend**|**int**|オペレーターに通知するために使用するネットワーク ポップアップ。<br /><br /> **1** = [はい]<br /><br /> **0** = なし|  
@@ -109,7 +112,7 @@ sp_help_notification
 ## <a name="remarks"></a>解説  
  このストアド プロシージャを実行する必要があります、 **msdb**データベース。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  このストアド プロシージャを実行するには、 **sysadmin** 固定サーバー ロールのメンバーであることが必要です。  
   
 ## <a name="examples"></a>使用例  

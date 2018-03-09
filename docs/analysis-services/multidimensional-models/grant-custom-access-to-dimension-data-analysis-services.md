@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.roledesignerdialog.dimensiondata.f1
@@ -32,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9429721bd5349204d235b40edd3e7a49c7b7f0c0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 95cd49cfac7e318e427a4944182bf21cb16f8c3b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>ディメンション データへのカスタム アクセス権の付与 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]キューブに対する読み取りアクセス権を有効にした後は、明示的に許可またはディメンション メンバー (すべてのキューブで使用するメジャーを含む、Measures ディメンション内に含まれるメジャーを含む) へのアクセスを拒否する追加のアクセス許可を設定できます。 たとえば、再販業者のカテゴリが複数ある場合は、特定のビジネスの種類のデータを除外する権限を設定できます。 次の図は、Reseller ディメンションでウェアハウスのビジネスの種類へのアクセスを拒否した場合の、前後の影響を比較しています。  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  次の手順では、MDX でクエリを発行するクライアント接続を想定しています。 クライアントが Power BI の Power View などの DAX を使用する場合、ディメンションのセキュリティはクエリ結果で明らかになりません。 詳細については、「[多次元モデルの Power View について](understanding-power-view-for-multidimensional-models.md)」を参照してください。
       
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  すべてのメジャーまたはディメンション メンバーがカスタム アクセス シナリオで使用できる訳ではありません。 ロールが既定のメジャーまたはメンバーへのアクセスを制限したり、メジャー式の一部であるメジャーへのアクセスを制限したりすると、接続は失敗します。  
   
  **ディメンション セキュリティに対する障害 (既定のメジャー、既定のメンバー、メジャー式に使用されるメジャー) を確認します。**  

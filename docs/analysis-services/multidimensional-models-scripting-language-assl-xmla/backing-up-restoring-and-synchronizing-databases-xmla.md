@@ -1,19 +1,18 @@
 ---
 title: "バックアップの復元、データベース、および同期 (XMLA) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
 - backing up databases [XML for Analysis]
@@ -21,19 +20,19 @@ helpviewer_keywords:
 - synchronization [XML for Analysis]
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7155763db87be5c44ae9e5718d3d72939380038b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 33fc95e7b34b28c4233ede68927e60eada8bf5df
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>データベースのバックアップ、復元、および同期 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]分析のための xml では、バックアップ、復元、およびデータベースを同期する 3 つのコマンドがあります。  
+  XML for Analysis には、データベースのバックアップ、復元、および同期を行う 3 つのコマンドがあります。  
   
 -   [バックアップ](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)コマンド バックアップ、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベースを使用して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]バックアップ ファイル (.abf) のセクションで説明した[データベースのバックアップ](#backing_up_databases)です。  
   
@@ -41,7 +40,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [同期](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)いずれかのコマンドでは同期[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のセクションで説明したデータと、別のデータベースのメタデータを使ってデータベース[データベースの同期](#synchronizing_databases)です。  
   
-##  <a name="backing_up_databases"></a>データベースのバックアップ  
+##  <a name="backing_up_databases"></a> データベースのバックアップ  
  以前に説明したように、**バックアップ**のコマンドは、指定したバックアップ[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベースをバックアップ ファイル。 **バックアップ**コマンドにはさまざまなプロパティをバックアップするデータベースを指定するため、セキュリティの定義、およびバックアップするリモート パーティションをバックアップする方法を使用するバックアップ ファイル。  
   
 > [!IMPORTANT]  
@@ -68,18 +67,18 @@ ms.lasthandoff: 12/08/2017
   
  値、**セキュリティ**プロパティは、次の表に示す文字列の 1 つに制限されます。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|バックアップ ファイルにセキュリティ定義を含めますが、メンバーシップ情報は除外します。|  
 |*CopyAll*|バックアップ ファイルにセキュリティ定義とメンバーシップ情報を含めます。|  
-|*Ignoresecurity のいずれか*|バックアップ ファイルからセキュリティ定義を除外します。|  
+|*IgnoreSecurity*|バックアップ ファイルからセキュリティ定義を除外します。|  
   
 ### <a name="backing-up-remote-partitions"></a>リモート パーティションのバックアップ  
  リモート パーティションをバックアップするには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、データベースを設定する、 [BackupRemotePartitions](../../analysis-services/xmla/xml-elements-properties/backupremotepartitions-element-xmla.md)のプロパティ、**バックアップ**コマンドを true に設定します。 この設定により、**バックアップ**コマンドは、データベースのリモート パーティションの格納に使用するリモート データ ソースごとにリモート バックアップ ファイルを作成します。  
   
  バックアップする各リモート データ ソースを指定できます、対応するバックアップ ファイルを含めることによって、[場所](../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)内の要素、[場所](../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md)のプロパティ、**バックアップ**コマンド。 **場所**持つ要素があります、**ファイル**プロパティ、リモート バックアップ ファイルの UNC パスとファイル名に設定して、その[DataSourceID](../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md)プロパティの識別子に設定します。データベースで定義されているリモート データ ソース。  
   
-##  <a name="restoring_databases"></a>データベースの復元  
+##  <a name="restoring_databases"></a> データベースの復元  
  **復元**コマンドは、指定した復元[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース バックアップ ファイルからです。 **復元**コマンドはさまざまなプロパティをセキュリティ定義、リモート パーティションを格納して、再配置を復元する方法を使用するバックアップ ファイルを復元するデータベースを指定するためにはリレーショナル OLAP (ROLAP)オブジェクト。  
   
 > [!IMPORTANT]  
@@ -102,7 +101,7 @@ ms.lasthandoff: 12/08/2017
 |-----------|-----------------|  
 |*SkipMembership*|データベースにセキュリティ定義を含めますが、メンバーシップ情報は除外します。|  
 |*CopyAll*|データベースにセキュリティ定義とメンバーシップ情報を含めます。|  
-|*Ignoresecurity のいずれか*|データベースからセキュリティ定義を除外します。|  
+|*IgnoreSecurity*|データベースからセキュリティ定義を除外します。|  
   
 ### <a name="restoring-remote-partitions"></a>リモート パーティションの復元  
  以前の中に作成されたリモート バックアップ ファイルごとに**バックアップ**コマンドを含めることによって、関連付けられているリモート パーティションを戻すことができます、**場所**内の要素、**場所**のプロパティ、**復元**コマンド。 [%Datasourcetype](../../analysis-services/xmla/xml-elements-properties/datasourcetype-element-xmla.md)それぞれのプロパティ**場所**要素を除外または明示的に設定する必要があります*リモート*です。  
@@ -118,7 +117,7 @@ ms.lasthandoff: 12/08/2017
   
  使用することができます、**場所**内の要素、**復元**ROLAP オブジェクトを再配置するコマンド。 各**場所**要素のデータ ソースを再配置するために使用、 **%datasourcetype**明示的にプロパティを設定する必要があります*ローカル*です。 設定する必要も、 **ConnectionString**のプロパティ、**場所**を新しい場所の接続文字列の要素。 復元中、**復元**コマンドには、によって識別されるデータ ソースの接続文字列が置き換えられます、 **DataSourceID**のプロパティ、**場所**要素値を持つ、 **ConnectionString**のプロパティ、**場所**要素。  
   
-##  <a name="synchronizing_databases"></a>データベースの同期  
+##  <a name="synchronizing_databases"></a> データベースの同期  
  **同期**コマンドの指定したメタデータやデータの同期[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]別のデータベースとデータベースです。 **同期**コマンドには、ソース データベースを指定することのできるさまざまなプロパティをセキュリティ定義、リモート パーティションを同期して、ROLAP オブジェクトの同期を同期する方法です。  
   
 > [!NOTE]  
@@ -140,7 +139,7 @@ ms.lasthandoff: 12/08/2017
 |-----------|-----------------|  
 |*SkipMembership*|同期先データベースにセキュリティ定義を含めますが、メンバーシップ情報は除外します。|  
 |*CopyAll*|同期先データベースにセキュリティ定義とメンバーシップ情報を含めます。|  
-|*Ignoresecurity のいずれか*|同期先データベースからセキュリティ定義を除外します。|  
+|*IgnoreSecurity*|同期先データベースからセキュリティ定義を除外します。|  
   
 ### <a name="synchronizing-remote-partitions"></a>リモート パーティションの同期  
  ソース データベースに存在するリモート データ ソースごとに関連付けられている各リモート パーティションを同期を含めることによって、**場所**内の要素、**場所**のプロパティ、 **同期**コマンド。 各**場所**要素、 **%datasourcetype**プロパティを除外または明示的に設定する必要があります*リモート*です。  
@@ -152,12 +151,12 @@ ms.lasthandoff: 12/08/2017
 ### <a name="synchronizing-rolap-objects"></a>ROLAP オブジェクトの同期  
  **同期**コマンドは、集計やなどの情報は、基になるリレーショナル データ ソースのテーブルに格納されるので、ROLAP ストレージを使用するオブジェクトのデータを同期できません。 ただし、ROLAP オブジェクトのメタデータは同期できます。 メタデータを同期するために、**同期**コマンドは、リレーショナル データ ソースにテーブル構造を再作成します。  
   
- 使用することができます、**場所**ROLAP オブジェクトを同期する同期コマンド内の要素。 各**場所**要素のデータ ソースを再配置するために使用、 **%datasourcetype**明示的にプロパティを設定する必要があります*ローカル*です。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 設定する必要も、 **ConnectionString**のプロパティ、**場所**を新しい場所の接続文字列の要素。 同期中に、**同期**コマンドには、によって識別されるデータ ソースの接続文字列が置き換えられます、 **DataSourceID**のプロパティ、**場所**値を持つ要素、 **ConnectionString**のプロパティ、**場所**要素。  
+ 使用することができます、**場所**ROLAP オブジェクトを同期する同期コマンド内の要素。 各**場所**要素のデータ ソースを再配置するために使用、 **%datasourcetype**明示的にプロパティを設定する必要があります*ローカル*です。 」をご覧ください。 設定する必要も、 **ConnectionString**のプロパティ、**場所**を新しい場所の接続文字列の要素。 同期中に、**同期**コマンドには、によって識別されるデータ ソースの接続文字列が置き換えられます、 **DataSourceID**のプロパティ、**場所**値を持つ要素、 **ConnectionString**のプロパティ、**場所**要素。  
   
 ## <a name="see-also"></a>参照  
- [Backup 要素 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
+ [バックアップの要素と &#40; です。XMLA と &#41; です。](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
  [要素 &#40; を復元します。XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [Synchronize 要素 (XMLA)](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [要素 &#40; を同期します。XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Analysis Services データベースのバックアップと復元](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

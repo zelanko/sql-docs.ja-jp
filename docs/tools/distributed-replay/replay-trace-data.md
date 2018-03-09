@@ -3,7 +3,7 @@ title: "トレース データを再生 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e890b0d0dcaca33dcae4c7731cec7f32b89fff56
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1b63690aadee587a51f910cfc43915a04aa39bf4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-trace-data"></a>トレース データの再生
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用して、分散再生を開始することができます、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 機能が、入力トレース データを準備後します。 詳細については、「 [入力トレース データの準備](../../tools/distributed-replay/prepare-the-input-trace-data.md)」を参照してください。  
@@ -72,8 +72,8 @@ ms.lasthandoff: 12/05/2017
 3.  分散再生が終了すると、管理ツールから概要情報が返されます。 **-o** オプションを指定した場合、各クライアントで再生アクティビティが結果のトレース ファイルに保存されます。 結果のトレース ファイルの詳細については、「 [再生結果の確認](../../tools/distributed-replay/review-the-replay-results.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [分散再生の構成](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [分散再生の要件](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [管理ツールのコマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay を構成します。](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

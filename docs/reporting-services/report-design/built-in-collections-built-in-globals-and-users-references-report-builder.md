@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 048cf935a981c0c86c1d11ec90c4064abea03ac9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4c0d92d44a11aad84fe249649ef921123f78aa0b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>組み込みコレクション - 組み込み Globals および Users 参照 (レポート ビルダー)
   組み込みフィールドのコレクションには、レポートの処理時に Reporting Services によって提供されるグローバルな値を表す **Globals** コレクションと **User** コレクションの両方が含まれています。 **Globals** コレクションでは、レポート名、レポート処理の開始時刻、レポート ヘッダーまたはレポート フッターの現在のページ番号などの値が提供されます。 **User** コレクションでは、ユーザー ID と言語設定が提供されます。 これらの値は、レポート内の結果をフィルター処理する際に式で使用できます。  
@@ -34,15 +32,15 @@ ms.lasthandoff: 12/05/2017
 ## <a name="using-the-globals-collection"></a>Globals コレクションの使用  
  **Globals** コレクションには、レポートのグローバル変数が保持されます。 デザイン画面では、これらの変数は、`[&ReportName]` など、先頭に & (アンパサンド) が付いた状態で表示されます。 次の表では、 **Globals** コレクションのメンバーについて説明します。  
   
-|**メンバー**|**型**|**Description**|  
+|**メンバー**|**型**|**[説明]**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|**DateTime**|レポートの実行を開始した日付と時刻です。|  
 |PageNumber|**Integer**|ページ番号をリセットした改ページを基準とする現在のページ番号です。 レポート処理の開始時、初期値は 1 に設定されています。 ページ番号は、表示されるページごとに増えます。<br /><br /> 四角形、データ領域、データ領域グループ、マップの改ページ内でページ番号を付けるには、PageBreak プロパティで、ResetPageNumber プロパティを **True**に設定します。 Tablix 列階層グループではサポートされていません。<br /><br /> PageNumber は、ページ ヘッダーまたはページ フッターの式でのみ使用できます。|  
-|ReportFolder|**文字列**|レポートを含んでいるフォルダーへの完全なパスです。 これには、レポート サーバーの URL は含まれません。|  
-|ReportName|**文字列**|レポート サーバー データベースに格納されているとおりのレポートの名前です。|  
-|ReportServerUrl|**文字列**|レポートが実行されるレポート サーバーの URL です。|  
+|ReportFolder|**String**|レポートを含んでいるフォルダーへの完全なパスです。 これには、レポート サーバーの URL は含まれません。|  
+|ReportName|**String**|レポート サーバー データベースに格納されているとおりのレポートの名前です。|  
+|ReportServerUrl|**String**|レポートが実行されるレポート サーバーの URL です。|  
 |TotalPages|**Integer**|PageNumber をリセットした改ページを基準とする合計ページ数です。 改ページを設定しない場合、この値は OverallTotalPages と同じです。<br /><br /> TotalPages は、ページ ヘッダーまたはページ フッターの式でのみ使用できます。|  
-|PageName|**文字列**|ページの名前です。 レポート処理の開始時、初期値はレポート プロパティの InitialPageName から設定されます。 各レポート アイテムが処理されると、この値は四角形、データ領域、データ領域グループ、またはマップの PageName の対応する値に置き換えられます。 Tablix 列階層グループではサポートされていません。<br /><br /> PageName は、ページ ヘッダーまたはページ フッターの式でのみ使用できます。|  
+|PageName|**String**|ページの名前です。 レポート処理の開始時、初期値はレポート プロパティの InitialPageName から設定されます。 各レポート アイテムが処理されると、この値は四角形、データ領域、データ領域グループ、またはマップの PageName の対応する値に置き換えられます。 Tablix 列階層グループではサポートされていません。<br /><br /> PageName は、ページ ヘッダーまたはページ フッターの式でのみ使用できます。|  
 |OverallPageNumber|**Integer**|レポート全体に対する現在のページのページ番号です。 この値は ResetPageNumber の影響を受けません。<br /><br /> OverallPageNumber は、ページ ヘッダーまたはページ フッターの式でのみ使用できます。|  
 |OverallTotalPages|**Integer**|レポート全体の合計ページ数です。 この値は ResetPageNumber の影響を受けません。<br /><br /> OverallTotalPages は、ページ ヘッダーまたはページ フッターの式でのみ使用できます。|  
 |RenderFormat|**RenderFormat**|現在の表示要求に関する情報です。<br /><br /> 詳細については、次のセクションの「RenderFormat」を参照してください。|  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/05/2017
   
 |メンバー|型|Description|  
 |------------|----------|-----------------|  
-|名前|**文字列**|RSReportServer 構成ファイルに登録されているレンダラーの名前です。<br /><br /> レポート処理または表示サイクルの特定の部分で使用できます。|  
+|[オブジェクト名]|**String**|RSReportServer 構成ファイルに登録されているレンダラーの名前です。<br /><br /> レポート処理または表示サイクルの特定の部分で使用できます。|  
 |IsInteractive|**ブール値**|現在の表示要求で対話型の表示形式を使用するかどうかを示します。|  
 |DeviceInfo|読み取り専用の名前/値のコレクションです。|現在の表示要求の deviceinfo パラメーターのキーと値のペアです。<br /><br /> キーまたはインデックスを使用して、コレクションに文字列値を指定できます。|  
   
@@ -80,10 +78,10 @@ ms.lasthandoff: 12/05/2017
   
  次の表では、 **User** コレクションのメンバーについて説明します。  
   
-|**メンバー**|**型**|**Description**|  
+|**メンバー**|**型**|**[説明]**|  
 |----------------|--------------|---------------------|  
 |**言語**|**文字列**|レポートを実行しているユーザーの言語です。 たとえば、 `en-US`のようにします。|  
-|**UserID**|**文字列**|レポートを実行しているユーザーの ID です。 Windows 認証を使用している場合、この値は現在のユーザーのドメイン アカウントです。 値は、Windows 認証またはカスタム認証を使用できる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] セキュリティ拡張機能によって決まります。|  
+|**UserID**|**String**|レポートを実行しているユーザーの ID です。 Windows 認証を使用している場合、この値は現在のユーザーのドメイン アカウントです。 値は、Windows 認証またはカスタム認証を使用できる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] セキュリティ拡張機能によって決まります。|  
   
  レポートにおける複数言語のサポートの詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server オンライン ブック [にある](http://go.microsoft.com/fwlink/?LinkId=120955)のマニュアルの「多言語配置やグローバル配置のソリューション設計に関する考慮事項」を参照してください。  
   
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/05/2017
  場合によっては、 *User!UserID* 変数を含むレポートは、レポートを参照している現在のユーザー固有のレポート データを表示することができません。  
   
 ## <a name="see-also"></a>参照  
- [式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [[式] ダイアログ ボックス &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [数値と日付の書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   

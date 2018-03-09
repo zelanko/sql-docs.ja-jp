@@ -1,31 +1,33 @@
 ---
 title: "DirectQuery モード |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/06/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.realtime.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.realtime.f1
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 74dc0a734b573c94a4ec32ac9d36b57338be4eae
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 13c60b58664d87cf23ea76069a6c68eb00870927
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="directquery-mode"></a>DirectQuery モード
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]このトピックについて説明*DirectQuery モード*の Analysis Services 表形式モデル 1200 以降の互換性レベルです。 DirectQuery モードは、SSDT で設計しているモデル、または既に展開されているテーブル モデルで有効にすることができます。DirectQuery モードには SSMS で変更できます。 DirectQuery モードを選択する前に、利点と欠点の両方を理解しておく必要があります。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+この記事説明*DirectQuery モード*の Analysis Services 表形式モデル 1200 以降の互換性レベルです。 DirectQuery モードは、SSDT で設計しているモデル、または既に展開されているテーブル モデルで有効にすることができます。DirectQuery モードには SSMS で変更できます。 DirectQuery モードを選択する前に、利点と欠点の両方を理解しておく必要があります。
   
 ##  <a name="bkmk_Benefits"></a> 利点
  既定では、テーブル モデルでは、インメモリ キャッシュを使用してデータを格納およびデータにクエリを実行します。 テーブル モデルでメモリ内のデータをクエリすると、複雑なクエリでも非常に高速に実行できます。 ただし、キャッシュされたデータの使用にはいくつかの制限があります。 たとえば、大規模なデータ セットでは使用可能なメモリを超えることがあり、定期的な処理スケジュールで実現できない場合はデータ更新要件が困難になる可能性があります。  
@@ -56,8 +58,8 @@ DirectQuery モードのテーブル モデルにはいくつかの制限があ�
 |**SQL ストアド プロシージャ**|DirectQuery モデルの場合、データ インポート ウィザードを使用するときに SQL ステートメントでテーブルを定義するストアド プロシージャを指定できません。 |   
 |**計算テーブル**|DirectQuery モデルでは、計算テーブルはサポートされませんが、計算列はサポートされます。 計算テーブルを含むテーブル モデルを変換しようとすると、モデルは貼り付けられたデータを含むことができないというエラーが発生します。|  
 |**クエリの制限**|既定の行数の上限は 100 万行です。この上限は、msmdsrv.ini ファイルで **MaxIntermediateRowSize** を指定することで増やすことができます。 詳細については、「 [DAX のプロパティ](../../analysis-services/server-properties/dax-properties.md) 」を参照してください。
-|**DAX の数式**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、DirectQuery モードでテーブル モデルをクエリするときに、DAX の数式とメジャー定義を SQL ステートメントに変換します。 SQL 構文に変換できない要素を含む DAX の数式がある場合、モデルで検証エラーが返されます。<br /><br /> この制限は、ほとんどの場合は特定の DAX 関数に限定されます。 メジャーの場合、DAX の数式はリレーショナル データ ストアに対するセットベースの操作に変換されます。 これは、暗黙的に作成されるすべてのメジャーがサポートされることを意味します。 <br /><br /> 検証エラーが発生したときは、数式を書き換えるか、別の関数に置き換えるか、データ ソースで派生列を使用することによって回避する必要があります。  互換性のない関数を含む数式がテーブル モデルにある場合、デザイナーで DirectQuery モードに切り替えるときにレポートされます。 <br /><br />**注:**  モデル内の一部の数式は、モデルを DirectQuery モードに切り替えるときに検証できますが、キャッシュとリレーショナル データ ストアに対して実行したときに異なる結果を返します。 その理由は、キャッシュに対する計算では Excel の動作をエミュレートすることを意図した機能を含むインメモリ分析エンジンのセマンティクスが使用され、一方、リレーショナル データ ソースに格納されているデータに対するクエリでは SQL Server のセマンティクスを使用するためです。<br /><br /> SQL Stored  <br /><br /> 詳細については、「 [DirectQuery モードでの DAX 数式の互換性](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md)」を参照してください。|  
-|**数式の整合性**|特定のケースでは、同じ数式で返される結果が、キャッシュ モデルと、リレーショナル データ ストアのみを使用する DirectQuery モデルとで異なる場合があります。 これらの相違は、インメモリ分析エンジンと SQL Server 間のセマンティックの相違によるものです。<br /><br /> モデルがリアルタイムに配置されると異なる結果を返す可能性のある関数など、互換性の問題の完全な一覧については、「 [DAX 数式と DirectQuery モードの互換性 (SQL Server Analysis Services)](http://msdn.microsoft.com/en-us/981b6a68-434d-4db6-964e-d92f8eb3ee3e)」を参照してください。|  
+|**DAX の数式**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、DirectQuery モードでテーブル モデルをクエリするときに、DAX の数式とメジャー定義を SQL ステートメントに変換します。 SQL 構文に変換できない要素を含む DAX の数式がある場合、モデルで検証エラーが返されます。<br /><br /> この制限は、ほとんどの場合は特定の DAX 関数に限定されます。 メジャーの場合、DAX の数式はリレーショナル データ ストアに対するセットベースの操作に変換されます。 これは、暗黙的に作成されるすべてのメジャーがサポートされることを意味します。 <br /><br /> 検証エラーが発生したときは、数式を書き換えるか、別の関数に置き換えるか、データ ソースで派生列を使用することによって回避する必要があります。  互換性のない関数を含む数式がテーブル モデルにある場合、デザイナーで DirectQuery モードに切り替えるときにレポートされます。 <br /><br />**注:**  モデル内の一部の数式は、モデルを DirectQuery モードに切り替えるときに検証できますが、キャッシュとリレーショナル データ ストアに対して実行したときに異なる結果を返します。 その理由は、キャッシュに対する計算では Excel の動作をエミュレートすることを意図した機能を含むインメモリ分析エンジンのセマンティクスが使用され、一方、リレーショナル データ ソースに格納されているデータに対するクエリでは SQL Server のセマンティクスを使用するためです。<br /><br /> SQL Stored  <br /><br /> 詳細については、次を参照してください。 [DirectQuery モードでの DAX 数式の互換性](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md)です。|  
+|**数式の整合性**|特定のケースでは、同じ数式で返される結果が、キャッシュ モデルと、リレーショナル データ ストアのみを使用する DirectQuery モデルとで異なる場合があります。 これらの相違は、インメモリ分析エンジンと SQL Server 間のセマンティックの相違によるものです。<br /><br /> 返す可能性のある結果が異なるモデルを配置するときに、リアルタイムに関数を含む、互換性の問題の完全な一覧については、次を参照してください。 [DirectQuery モード (SQL Server Analysis Services) での DAX 数式の互換性](http://msdn.microsoft.com/en-us/981b6a68-434d-4db6-964e-d92f8eb3ee3e)です。|  
 |**MDX の制限事項**|相対的なオブジェクト名はありません。 すべてのオブジェクト名を完全修飾する必要があります。<br /><br /> セッション スコープの MDX ステートメントは使用できません (名前付きセット、計算メンバー、計算セル、表示部分の合計、既定メンバーなど)。ただし、"WITH" 句などのクエリ スコープ構造は使用できます。<br /><br /> MDX のサブセレクト句の異なるレベルのメンバーとの組は使用できません。<br /><br /> ユーザー定義階層は使用できません。<br /><br /> ネイティブ SQL クエリは使用できません (通常、Analysis Services は T-SQL のサブセットをサポートしますが、DirectQuery モデルについてはサポートしません)。|  
 
 ## <a name="data-sources-supported-for-directquery"></a>DirectQuery でサポートされるデータ ソース
@@ -82,7 +84,7 @@ SSDT で DirectQuery モデルを設計する場合、データ ソースへの�
 既にテーブルのインポート ウィザードを使用してデータをインポートし、まだ DirectQuery モードを有効にしていない場合、有効にしたときにメモリ内キャッシュはクリアされます。
 
   
-## <a name="additional-topics-in-this-section"></a>このセクションの他のトピック
+## <a name="additional-articles-in-this-section"></a>このセクションの他の記事
 [SSDT での DirectQuery モードの有効化](../../analysis-services/tabular-models/enable-directquery-mode-in-ssdt.md)
 
 [SSMS での DirectQuery モードの有効化](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md)

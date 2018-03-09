@@ -7,22 +7,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb4446ba-e9ce-4b93-9854-5e8a58507da0
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c10594fdecd48782a80b5d609bb21c6a937f8863
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 95f8e0c688a2f141ce066e3831e461509d72c1a9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>コマンドラインから Machine Learning Server (スタンドアロン) または Microsoft R Server (スタンドアロン) をインストールします。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、SQL Server コマンドライン引数を使用して、コマンドラインを使用して、次の SQL Server 機能をインストールする方法について説明します。
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 12/20/2017
 
 **Quiet** インストールの場合、同じ引数を渡し、 **/q** スイッチを追加します。 プロンプトが指定されていないと、操作は必要ありません。 ただし、必要な引数が省略されている場合に、セットアップが失敗します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 SQL Server のコマンド ライン インストールを実行し、スクリプトの引数に理解して方法を理解する必要があります。
 
@@ -95,8 +96,8 @@ Microsoft R Server の別のインスタンスと同じパラメーターを設�
 
 既定では、すべてのセットアップ ログと概要 for SQL Server との関連する機能は、次のフォルダーに作成されます。
 
-+ SQL Server 2017:`C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
-+ SQL Server 2016 の場合:`C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
++ SQL Server 2017: `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
++ SQL Server 2016:  `C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
 
 インストールされている各機能の個別のサブフォルダーが作成されます。
 

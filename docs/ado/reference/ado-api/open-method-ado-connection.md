@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Connection15::raw_Open
 - Connection15::Open
 - _Connection::Open
-helpviewer_keywords: Open method [ADO]
+helpviewer_keywords:
+- Open method [ADO]
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41850de804523a50dbf0d489e678b93c9f29b6ae
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aecc064b9030adb40347737dc68998de3eee4d64
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-connection"></a>Open メソッド (ADO 接続)
 データ ソースへの接続を開きます。  
@@ -43,13 +45,13 @@ connection.Open ConnectionString, UserID, Password, Options
  *ConnectionString*  
  省略可。 A**文字列**接続情報を含む値です。 参照してください、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)有効な設定の詳細プロパティです。  
   
- *ユーザー Id*  
+ *UserID*  
  省略可。 A**文字列**接続を確立するときに使用するユーザー名を含む値です。  
   
  *Password*  
  省略可。 A**文字列**接続を確立するときに使用するパスワードを含む値です。  
   
- *および*  
+ *Options*  
  省略可。 A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)後に、このメソッドを返すかどうかを決定する値 (同期的に)、または (非同期)、接続が確立される前にします。  
   
 ## <a name="remarks"></a>解説  

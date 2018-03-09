@@ -7,34 +7,35 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: fdd28279b99f0dd39a0b971412d1252feb978413
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: f1c7aaf35c0c58e9a7aab3c5b31725f586ffd2ac
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>Machine Learning Services (In-database) の無人インストール
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、SQL Server セットアップをコマンドライン引数を使用して、機械学習のコンポーネントをインストールする方法について説明します。
 
 無人インストールは、意味ことがありませんセットアップ ウィザードの対話型機能を使用してでライセンス契約 for SQL Server との machine learning のコンポーネントを含め、完全なインストールに必要なすべての引数を指定する代わりに、コマンドラインまたは通常はクワイエット モードで、スクリプトの一部として。
 
-+ [SQL Server 2016 R サービス](#bkmk_OldInstall)
++ [SQL Server 2016 R Services](#bkmk_OldInstall)
 + [サービスの学習の SQL Server 2017 マシン](#bkmk_NewInstall)R、Python と
 + [Microsoft R サーバーまたは Machine Learning サーバー](../r/install-microsoft-r-server-from-the-command-line.md)
 
 **適用されます SQL Server 2017 Machine Learning Services (In-database)、SQL Server 2016 R サービス。**
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 + Machine learning を使用する各インスタンスで、データベース エンジンをインストールする必要があります。
 
@@ -48,9 +49,9 @@ ms.lasthandoff: 12/20/2017
 
 > [!IMPORTANT]
 > 
-> セットアップの終了後に、機能を有効にする、追加の手順が必要です。 これらは、再構成を含めるし、インスタンスの再起動します。 確認して [インストール後の手順] セクションのすべての項目を確認するアクションを決定する (#bkmk_PostInstall) が必要にセットアップが完了した後。
+> セットアップの終了後に、機能を有効にする、追加の手順が必要です。 これらは、再構成を含めるし、インスタンスの再起動します。 セクションのすべての項目を確認して[インストール後の手順](#bkmk_PostInstall)をセットアップの完了後に必要なアクションを決定します。
 
-## <a name="bkmk_NewInstall"></a>SQL Server 2017 のコマンド ライン インストール
+## <a name="bkmk_NewInstall"></a>  SQL Server 2017 のコマンド ライン インストール
 
 次の例、**最小**機能に必要です。
 
@@ -72,7 +73,7 @@ SQL Server 2017 で R の必要なフラグを注意してください。
 
 + `ADVANCEDANALYTICS`
 + `SQL_INST_MR`
-+ `IACCEPTROPENLICENSETERMS`」をご覧ください。
++ `IACCEPTROPENLICENSETERMS`」を参照してください。
 
 ### <a name="install-python-only"></a>Python のインストールのみ
 
@@ -96,7 +97,7 @@ SQL Server 2017 の Python のために必要なフラグを注意してくだ�
 Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER.ServerName /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
 ```
 
-## <a name="OldInstall"></a>SQL Server 2016 用コマンド ライン インストール
+## <a name="OldInstall"></a> SQL Server 2016 用コマンド ライン インストール
  
 次の例では、追加の R 言語で、サイレントの無人実行に必要な引数が SQL Server 2016 のインストールを示します。
 

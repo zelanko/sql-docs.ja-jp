@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 01c75144c964c80a224401cd7b5f81939f2714e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4b2c46d037112cb79502e8d0ce56a5c9c319ec09
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>レポート デザインの CSDLBI 属性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このセクションでは、表形式のモデル化に影響する CSDL に、拡張機能内の属性をについて説明します[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]クエリ デザインします。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+このセクションでは、テーブル モデリングについての CSDL に対する拡張機能の、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] クエリ デザインに影響のある属性について説明します。  
   
 ## <a name="model-attributes"></a>モデル属性  
  これらの属性が、CSDL のサブ要素で定義されている[EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx)要素。  
@@ -68,11 +68,11 @@ ms.lasthandoff: 12/08/2017
 |**配置**|Enum|表形式の表示でフィールドの値を配置する方法を示す値。 指定できる値は**既定**、 **Center**、**左**、**右**です。 省略した場合は、フィールドのデータ型に基づいて既定の配置が決定されます。|  
 |**FormatString**|テキスト|フィールドの値の既定での書式設定方法を示す .NET 形式の文字列。 省略した場合は、次の形式と見なされます。<br /><br /> -Datetime フィールド: 地域の短い日付または"d"<br /><br /> -集計関数を浮動小数点フィールドと、既定値である整数フィールド: 地域の数値または"n"<br /><br /> -集計関数を既定値はありません整数: 地域の 10 進数または"d"<br /><br /> 他のすべての型のフィールドについては、書式指定文字列は適用されません。|  
 |**単位**|テキスト|単位を表現するためにフィールド値に適用される記号。 省略した場合、単位は不明と見なされます。|  
-|**Width**|Integer|表形式の表示でフィールドの値を表示するために確保する必要のある望ましい幅 (文字数)。 省略した場合は、フィールドのデータ型に基づいて既定の幅が決定されます。|  
+|**幅**|Integer|表形式の表示でフィールドの値を表示するために確保する必要のある望ましい幅 (文字数)。 省略した場合は、フィールドのデータ型に基づいて既定の幅が決定されます。|  
 |**SortDirection**|Enum|フィールドの値が通常並べ替え方法を示す値。 指定できる値は**既定**、**昇順**、**降順**です。 省略した場合は、フィールドのデータ型に基づいて既定の並べ替え方向が決定されます。|  
 |**IsRightToLeft**|ブール値|右から左に読む必要のあるテキストがフィールドに含まれるかどうかを示します。 省略した場合は、モデルの設定と見なされます。|  
 |**OrderBy**|MemberRef|このフィールドの値の並べ替え順序が定義されているモデル内の別のフィールドの参照。 2 つのフィールドの値は 1:1 で対応している必要があります。そうでない場合、並べ替えの動作は定義されません。 省略した場合、フィールドはそれ自体の値に基づいて並べ替えられます。|  
-|**目次**|Enum|フィールドのサブタイプまたは内容を記述する列挙。 省略した場合、特定のサブタイプは想定されません。ただし、フィールドのデータ型が Binary の場合は、Image と想定されます。 サポートされるコンテンツ タイプの詳細については、AMO のドキュメントを参照してください。|  
+|**内容**|Enum|フィールドのサブタイプまたは内容を記述する列挙。 省略した場合、特定のサブタイプは想定されません。ただし、フィールドのデータ型が Binary の場合は、Image と想定されます。 サポートされるコンテンツ タイプの詳細については、AMO のドキュメントを参照してください。|  
 |**DefaultAggregateFunction**|Enum|このフィールドの集計に通常使用される既定の関数を示す値 (ある場合)。 指定できる値は**None**、**合計**、**平均**、**カウント**、 **Min**、 **Max**. 省略した場合、**合計**数値フィールドと見なされ**なし**の他のすべてのフィールドです。|  
 |**IsSimpleMeasure**|ブール値|メジャーが単に数値フィールドの単純な集計かどうかを示します。 このような集計はクエリで必要に応じて簡単に定義できるので、パフォーマンス向上のためモデル定義では省略する必要があります。 省略した場合、 **false**と見なされます。|  
 |**Kpi**<br /><br /> **KpiGoal**<br /><br /> **KpiStatus**|サブ要素|メジャー要素が KPI として使用されることを示します。 KPI サブ要素では、KpiGoal および KpiStauts 要素を使用して、関連する表示画像とターゲット範囲が定義されます。|  

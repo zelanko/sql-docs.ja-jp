@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Language Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3ab4266ed5d65bf4adbc4ce626024b650c46de9b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 11984905bb11448216e56476f07ef2e04bf6c64c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="language-element-xmla"></a>Language 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]親のロケール識別子 (LCID) を含む[翻訳](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)要素。  
@@ -50,11 +48,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
 |データ型と長さ|Integer|  
 |既定値|なし|  
-|Cardinality|1-1 : 必須要素で、1 回だけ出現します|  
+|基数|1-1 : 必須要素で、1 回だけ出現します|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 |親要素|[翻訳](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **言語**要素は親によって使用される LCID を指定**翻訳**要素に割り当てる、**名前**の親要素**翻訳**要素を指定した言語の属性メンバー中に、**挿入**または**更新**コマンド。  
   
 ## <a name="see-also"></a>参照  

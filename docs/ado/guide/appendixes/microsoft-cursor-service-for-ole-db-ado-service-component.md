@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62ee8c5da51de28eff001b2056e738653db5b813
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9ba0513f0a450a57e4d25088f16d96398af9f936
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB の概要の Microsoft カーソル サービス
 OLE DB 用の Microsoft カーソル サービスは、データ プロバイダーのカーソル サポート機能を補完します。 その結果、ユーザーは、すべてのデータ プロバイダーで比較的一定な機能を認識します。
@@ -90,8 +91,8 @@ rs.Properties("Optimize") = True
 
 |プロパティ名|Description|
 |-------------------|-----------------|
-|[カーソル。](../../../ado/reference/ado-api/cursortype-property-ado.md)|利用可能なカーソルの種類を補足するもの、 **Recordset**です。|
-|[ロック。](../../../ado/reference/ado-api/locktype-property-ado.md)|使用可能なロックの種類を補足するもの、 **Recordset**です。 一括更新を可能にします。|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|利用可能なカーソルの種類を補足するもの、 **Recordset**です。|
+|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|使用可能なロックの種類を補足するもの、 **Recordset**です。 一括更新を可能にします。|
 |[Sort](../../../ado/reference/ado-api/sort-property.md)|1 つまたは複数のフィールドの名前を指定します、**レコード セット**並べ替えは、各フィールドが昇順または降順で並べ替えられたかどうか、およびです。|
 
 ## <a name="method-behavior"></a>メソッドの動作

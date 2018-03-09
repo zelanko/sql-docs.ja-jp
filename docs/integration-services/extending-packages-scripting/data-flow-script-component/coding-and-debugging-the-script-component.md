@@ -8,11 +8,13 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - SSIS Script task, development environment
 - Script component [Integration Services], debugging
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - SSIS Script component, coding
 - VSTA
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
-caps.latest.revision: "66"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1df48e67801190ccef4a6e5dce7de92fc5a5bca2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7dfd7428a390d3526897d32791103f6c55683c99
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="coding-and-debugging-the-script-component"></a>スクリプト コンポーネントのコーディングおよびデバッグ
   [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、スクリプト コンポーネントにメタデータ デザイン モードとコード デザイン モードの 2 つのモードがあります。 **[スクリプト変換エディター]** を開くと、スクリプト コンポーネントはメタデータ デザイン モードになります。このモードでは、メタデータを構成し、コンポーネントのプロパティを設定します。 メタデータ デザイン モードで、スクリプト コンポーネントのプロパティを設定して、入力と出力を構成したら、コード デザイン モードに切り替えてカスタム スクリプトを記述できます。 メタデータ デザイン モードとコード デザイン モードについて詳しくは、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」をご覧ください。  
@@ -162,10 +164,10 @@ public class ScriptMain : UserComponent
  追加したすべてのアイテムは、パッケージ内部に保存されます。  
   
 #### <a name="references-in-the-script-component-project"></a>スクリプト コンポーネント プロジェクトの参照  
- 参照をマネージ アセンブリに追加するには、**[プロジェクト エクスプローラー]** でスクリプト タスク プロジェクトを右クリックし、**[参照の追加]** をクリックします。 詳しくは、「[スクリプティング ソリューションでの他のアセンブリの参照](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)」をご覧ください。  
+ 参照をマネージ アセンブリに追加するには、**プロジェクト エクスプローラー**でスクリプト タスク プロジェクトを右クリックし、**[参照の追加]** をクリックします。 詳しくは、「[スクリプティング ソリューションでの他のアセンブリの参照](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)」をご覧ください。  
   
 > [!NOTE]  
->  プロジェクト参照は、VSTA IDE の **[クラス ビュー]** または **[プロジェクト エクスプローラー]** で表示できます。 どちらのウィンドウも **[表示]** メニューから開きます。 新しい参照は、**[プロジェクト]** メニュー、**[プロジェクト エクスプローラー]**、または **[クラス ビュー]** から追加できます。  
+>  プロジェクト参照は、VSTA IDE の **[クラス ビュー]** または**プロジェクト エクスプローラー**で表示できます。 どちらのウィンドウも **[表示]** メニューから開きます。 新しい参照は、**[プロジェクト]** メニュー、**プロジェクト エクスプローラー**、または **[クラス ビュー]** から追加できます。  
   
 ## <a name="interacting-with-the-package-in-the-script-component"></a>スクリプト コンポーネント内でのパッケージとの対話  
  スクリプト コンポーネント内で記述するカスタム スクリプトは、自動生成された基本クラス内の、厳密に型指定されたアクセサーを使用して、コンポーネントに含まれているパッケージの変数や接続マネージャーにアクセスし、それらを使用できます。 ただし、変数および接続マネージャーをスクリプトで使用できるようにするには、コード デザイン モードに切り替える前に、その両方を設定する必要があります。 また、スクリプト コンポーネントのコードから、イベントを発生させたり、ログ記録を実行することもできます。  
@@ -174,7 +176,7 @@ public class ScriptMain : UserComponent
   
 |パッケージの機能|アクセス方法|  
 |---------------------|-------------------|  
-|変数|**ComponentWrapper** プロジェクト アイテムの **Variables** コレクション クラス内の、名前付きで型指定されたアクセサー プロパティを使用します。これは **ScriptMain** クラスの **Variables** プロパティを介して公開されています。<br /><br /> **PreExecute** メソッドでは、読み取り専用変数にのみアクセスできます。 **PostExecute** メソッドでは、読み取り専用変数および読み取り/書き込み変数の両方にアクセスできます。|  
+|変数:|**ComponentWrapper** プロジェクト アイテムの **Variables** コレクション クラス内の、名前付きで型指定されたアクセサー プロパティを使用します。これは **ScriptMain** クラスの **Variables** プロパティを介して公開されています。<br /><br /> **PreExecute** メソッドでは、読み取り専用変数にのみアクセスできます。 **PostExecute** メソッドでは、読み取り専用変数および読み取り/書き込み変数の両方にアクセスできます。|  
 |接続|**ComponentWrapper** プロジェクト アイテムの **Connections** コレクション クラス内の、名前付きで型指定されたアクセサー プロパティを使用します。これは **ScriptMain** クラスの **Connections** プロパティを介して公開されています。|  
 |イベント|**ScriptMain** クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> プロパティおよび <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスの **Fire\<X>** メソッドを使用して、イベントを発生させます。|  
 |ログ記録|**ScriptMain** クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> メソッドを使用して、ログ記録を実行します。|  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_alert
 - sp_add_alert_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_alert
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_alert
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb817f23a97ff491c213cde35ba5e1d8eef4387b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e66b0fd7fffb92a9646e99f84576651e4dd8b70e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,22 +60,22 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@name =** ] **'***名前***'**  
+ [ **@name =** ] **'***name***'**  
  警告の名前を指定します。 この名前は、警告に対する応答として送信される電子メールまたはポケットベルのメッセージに表示されます。 一意である必要があります、割合を含めることができます (**%**) 文字です。 *名前*は**sysname**、既定値はありません。  
   
- [  **@message_id =** ] *message_id*  
+ [ **@message_id =** ] *message_id*  
  警告を定義するメッセージ エラー番号を指定します。 (通常、エラー番号に対応して、 **sysmessages**テーブルです)。*message_id*は**int**、既定値は**0**します。 場合*重大度*警告を定義するために使用*message_id*する必要があります**0**または NULL。  
   
 > [!NOTE]  
 >  のみ**sysmessages** Microsoft Windows アプリケーション ログに書き込まれたエラーが原因で、アラートを送信します。  
   
- [  **@severity =** ]*重要度*  
+ [ **@severity =** ] *severity*  
  重大度レベル (から**1**を通じて**25**)、アラートを定義します。 任意[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にメッセージが格納されている、 **sysmessages**テーブルに送信される、[!INCLUDE[msCoName](../../includes/msconame-md.md)]で指定された重大度での Windows アプリケーション ログと警告が送信されます。 *重大度*は**int**、既定値は 0 です。 場合*message_id*警告を定義するために使用*重大度*する必要があります**0**します。  
   
  [  **@enabled =** ]*有効になっています。*  
  警告の現在の状態を示します。 *有効になっている*は**tinyint**の既定値は 1 (有効) です。 場合**0**アラートが有効でないは発生しません。  
   
- [  **@delay_between_responses =** ] *delay_between_responses*  
+ [ **@delay_between_responses =** ] *delay_between_responses*  
  警告に対する応答から次の応答までの待機時間を秒単位で指定します。 *delay_between_responses*は**int**、既定値は**0**、つまり (アラートの各出現する位置には、応答が生成されます) 間の待機中ではありません。 応答は、次のいずれかまたは両方の方法で行うことができます。  
   
 -   1 つ以上の通知を電子メールまたはポケットベルで送信する。  
@@ -81,38 +84,38 @@ sp_add_alert [ @name = ] 'name'
   
  この値を設定すると、たとえば短時間に繰り返し警告が発生したとき、不要な電子メール メッセージの送信を防止できます。  
   
- [  **@notification_message =** ] **'***このパラメーター***'**  
+ [ **@notification_message =** ] **'***notification_message***'**  
  電子メールの一部としてオペレーターに送信される追加の省略可能なメッセージ**net send**、またはポケットベル通知します。 *このパラメーター*は**nvarchar (512)**、既定値は NULL です。 指定する*このパラメーター*は書き加えるなど特別な注意を追加するために便利です。  
   
- [  **@include_event_description_in =** ] *include_event_description_in*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーに関する説明を通知メッセージに含めるかどうかを指定します。 *include_event_description_in*は**tinyint**、既定値は**5** (電子メールと**net send**)、いずれかまたはと共にこれらの値と、**または**論理演算子です。  
+ [ **@include_event_description_in =** ] *include_event_description_in*  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーに関する説明を通知メッセージに含めるかどうかを指定します。 *include_event_description_in*is **tinyint**, with a default of **5** (e-mail and **net send**), and can have one or more of these values combined with an **OR** logical operator.  
   
 > [!IMPORTANT]  
 >  今後のバージョンの **では、** エージェントからポケットベル オプションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|なし|  
-|**1**|電子メール|  
-|**2**|ポケットベル|  
+|**1**|[電子メール]|  
+|**2**|[ポケットベル]|  
 |**4**|**net send**|  
   
- [  **@database_name =** ] **'***データベース***'**  
+ [ **@database_name =** ] **'***database***'**  
  どのデータベースでエラーが発生したときに警告を起動するかを指定します。 場合*データベース*が指定されていない、エラーが発生した場所に関係なく警告が発生します。 *データベース*は**sysname**です。 角かっこ ([ ]) で囲まれた名前は使用できません。 既定値は NULL になります。  
   
- [  **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
+ [ **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの説明に、どのような文字のシーケンスが含まれている必要があるかを指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)]LIKE 式のパターン検索文字を使用していることができます。 *event_description_keyword_pattern*は**nvarchar (100)**、既定値は NULL です。 このパラメーターは、オブジェクト名をフィルター処理用に (たとえば、 **%customer_table%**)。  
   
- [  **@job_id =** ] *job_id*  
+ [ **@job_id =** ] *job_id*  
  対象となる警告に対する応答として実行するジョブのジョブ ID 番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
- [  **@job_name =** ] **'***job_name***'**  
+ [ **@job_name =** ] **'***job_name***'**  
  この警告への応答として実行するジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
- [  **@raise_snmp_trap =** ] *raise_snmp_trap*  
+ [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
  では未実装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン 7.0。 *raise_snmp_trap*は**tinyint**、既定値は 0 です。  
   
  [  **@performance_condition =** ] **'***performance_condition***'**  
@@ -124,13 +127,13 @@ sp_add_alert [ @name = ] 'name'
 |*比較演算子*|演算子 >、<、または = のいずれか。|  
 |*値*|カウンターの数値。|  
   
- [  **@category_name =** ] **'***カテゴリ***'**  
+ [ **@category_name =** ] **'***category***'**  
  警告カテゴリの名前を指定します。 *カテゴリ*は**sysname**、既定値は NULL です。  
   
- [  **@wmi_namespace** =] **'***wmi_namespace***'**  
+ [ **@wmi_namespace**= ] **'***wmi_namespace***'**  
  イベントのクエリに対する WMI 名前空間を指定します。 *wmi_namespace*は**sysname**、既定値は NULL です。 サポートされるのはローカル サーバーの名前空間だけです。  
   
- [  **@wmi_query** =] **'***wmi_query***'**  
+ [ **@wmi_query**= ] **'***wmi_query***'**  
  警告に対する WMI イベントを指定するクエリを指定します。 *wmi_query*は**nvarchar (512)**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -164,7 +167,7 @@ sp_add_alert [ @name = ] 'name'
   
 -   **xp_logevent** で生成されたイベントは master データベースで発生します。 このため、 **xp_logevent** では、警告の **@database_name** が **'master'** または NULL になっていないと、警告が起動されません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  既定では、 **sp_add_alert** を実行できるのは、 **sysadmin**固定サーバー ロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
@@ -192,7 +195,7 @@ GO
  [sp_delete_alert &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
  [sp_help_alert &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [sp_update_alert &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
- [sys.sysperfinfo &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
+ [sys.sysperfinfo &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

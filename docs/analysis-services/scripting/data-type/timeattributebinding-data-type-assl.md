@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: TimeAttributeBinding Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4420e452b3c15088c628a86cc6d3a35e100c1ec2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4abc1f178961303526ff75ac110178106da5da00
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="timeattributebinding-data-type-assl"></a>TimeAttributeBinding データ型 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]"Placeholder"の後に、サーバー時間ディメンション内の属性のキー列など、生成されたデータ項目のバインドを表す派生データ型を定義します。  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>データ型の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
 |基本データ型|[バインド](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
 |派生データ型|なし|  

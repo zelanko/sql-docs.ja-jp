@@ -1,7 +1,7 @@
 ---
 title: "変換する DB2 スキーマ (DB2ToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3b5519b19a5ae8098016e7d9bf0daa25c8678cdd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e3684380a10f371952b2461907bb36a7b13f1107
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>DB2 スキーマ (DB2ToSQL) の変換
 接続されている DB2 に接続すると後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、DB2 データベース オブジェクトに変換するにはプロジェクトの設定とデータのマッピング オプションと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース オブジェクトです。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
 |CREATE TABLE|**SSMA は、次の例外が CREATE TABLE を割り当てます。**<br /><br />多次元のクラスタ リング (MDC) テーブル<br /><br />範囲-クラスター化テーブル (RCT)<br /><br />パーティション テーブル<br /><br />デタッチされたテーブル<br /><br />データのキャプチャ句<br /><br />非表示に IMPLICITLY オプション<br /><br />揮発性のオプション|  
 |CREATE VIEW|SSMA は、' WITH ローカル CHECK OPTION' をビューの作成をマップしますが、その他のオプションは、SQL server のセマンティクスにマップされていません|  
 |CREATE INDEX|**SSMA は、次の例外がインデックスの作成を割り当てます。**<br /><br />XML インデックス<br /><br />オーバー ラップせず BUSINESS_TIME オプション<br /><br />パーティション分割された句<br /><br />オプションの指定のみ<br /><br />オプションの拡張を使用します。<br /><br />MINPCTUSED オプション<br /><br />ページ分割オプション|  
-|トリガーの|**SSMA は、次のトリガーのセマンティクスを割り当てます。**<br /><br />AFTER/各の行のトリガーを<br /><br />各ステートメントがトリガー/FOR 後<br /><br />前に/FOR EACH ROW との代わりに各の行のトリガーの場合は/|  
+|トリガー|**SSMA は、次のトリガーのセマンティクスを割り当てます。**<br /><br />AFTER/各の行のトリガーを<br /><br />各ステートメントがトリガー/FOR 後<br /><br />前に/FOR EACH ROW との代わりに各の行のトリガーの場合は/|  
 |シーケンス|マップされます。|  
 |SELECT ステートメント|**SSMA マップは、次の例外を選択します。**<br /><br />部分的にマップされると、– データの変更テーブル参照句が最終的なテーブルはサポートされていません<br /><br />テーブル参照の句-部分的にマップされている、専用のテーブルの参照、外部テーブル参照、analyze_table 式が、コレクション派生テーブル、xmltable 式は、SQL server のセマンティクスにマップされていません<br /><br />期間仕様句: マップされていません。<br /><br />続行ハンドラー句: マップされていません。<br /><br />型指定された関連付け句: マップされていません。<br /><br />同時実行のアクセスの解像度句: マップされていません。|  
 |VALUES ステートメント|マップされます。|  
@@ -76,7 +76,7 @@ ms.lasthandoff: 12/05/2017
 |WHILE ステートメント|マップされます。|  
 |GET 診断ステートメント|**SSMA は、次の例外診断の取得を割り当てます。**<br /><br />ROW_COUNT – がマップされます。<br /><br />DB2_RETURN_STATUS – がマップされます。<br /><br />テキスト – がマップされます。<br /><br />SQL Server のセマンティクスに DB2_SQL_NESTING_LEVEL - がマップされていません。<br /><br />SQL Server のセマンティクスに DB2_TOKEN_STRING - がマップされていません。|  
 |カーソル|**SSMA は、次の例外がカーソルをマップします。**<br /><br />ALLOCATE CURSOR ステートメントでは、SQL Server のセマンティクスにはマップされていません。<br /><br />SQL Server のセマンティクスに関連付けるロケーター ステートメントにもマップされません。<br /><br />DECLARE CURSOR ステートメント、Returnability 句は SQL server のセマンティクスにマップされていません<br /><br />FETCH ステートメント – 一部のマッピング。 ターゲットとして変数がのみサポートされています。 SQL server のセマンティクスに SQLDA 記述子がマップされていません|  
-|変数|マップされます。|  
+|変数:|マップされます。|  
 |例外、ハンドラー、および条件|**SSMA は、次の例外「例外の処理」を割り当てます。**<br /><br />終了ハンドラー – マップされます。<br /><br />ハンドラーを元に戻す – マップされます。<br /><br />ハンドラー – を続行することはマップされません。<br /><br />条件のことにマップされない SQL server のセマンティクスです。|  
 |動的 SQL|マップされていません。|  
 |エイリアス|マップされます。|  

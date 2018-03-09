@@ -8,22 +8,20 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 caps.latest.revision: "6"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5dd30097deb23e911e43789e10e81685f1ce0743
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d6544043e8925c77dc88d7d1191e8ccd690b7a00
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Reporting Services でのサーバーとデータベースの接続に関する問題のトラブルシューティング
 このトピックでは、レポート サーバーへの接続時に発生する問題のトラブルシューティングを行います。 また、"予期しないエラー" メッセージについての情報も提供します。 データ ソースの構成と、レポート サーバーの接続情報の構成については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 」と「 [レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
@@ -81,7 +79,7 @@ Management Studio がレポート サーバーとの接続を確立する際、�
 パスワードを再設定する場合、接続を更新する必要があります。 詳細については、「 [レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
   
 ## <a name="the-report-server-cannot-open-a-connection-to-the-report-server-database-rsreportserverdatabaseunavailable"></a>レポート サーバーでレポート サーバー データベースへの接続を開始できません。 (rsReportServerDatabaseUnavailable)。  
-エラーの全文: レポート サーバーでレポート サーバー データベースへの接続を開始できません。 すべての要求および処理でデータベースに接続する必要があります (rsReportServerDatabaseUnavailable)  
+エラーの全文: レポート サーバーでレポート サーバー データベースへの接続を開始できません。 すべての要求および処理でデータベースに接続する必要があります  (rsReportServerDatabaseUnavailable)  
 サーバーの内部ストレージである SQL Server リレーショナル データベースにレポート サーバーから接続できないときに発生するエラーです。 レポート サーバー データベースへの接続は、Reporting Services 構成ツールを使用して管理します。 このツールを実行し、[データベースのセットアップ] ページで接続情報を修正できます。 接続情報の更新には、このツールを使用することをお勧めします。このツールを使用すると、依存する設定の更新とサービスの再起動を確実に行えます。 詳細については、「 [レポート サーバー データベース接続の構成](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) 」と「 [レポート サーバー サービス アカウントの構成](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。  
   
 このエラーは、レポート サーバー データベースをホストしているデータベース エンジン インスタンスがリモート接続用に構成されていない場合にも発生します。 SQL Server の一部のエディションでは、リモート接続が既定で有効になります。 使用している SQL Server データベース エンジン インスタンスで有効かどうかを確認するには、SQL Server 構成マネージャー ツールを実行します。 TCP/IP および名前付きパイプの両方を有効にする必要があります。 レポート サーバーでは両方のプロトコルを使用します。 リモート接続を有効にする方法については、「 [リモート管理用のレポート サーバーの構成](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)」の「レポート サーバー データベースへのリモート接続を構成する方法」を参照してください。  

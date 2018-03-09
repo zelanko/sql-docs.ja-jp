@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_category
 - sp_add_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_category
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a180b1719f11b19097d2599847f1167f15ce7424
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7df42005cfd21c4030990784c7efd482c9312118
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,25 +49,25 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@class =** ] **'***クラス***'**  
+ [ **@class =** ] **'***class***'**  
  追加するカテゴリのクラスを指定します。 *クラス*は**varchar (8)**ジョブの既定値は、これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |JOB|ジョブ カテゴリを追加します。|  
 |ALERT|警告カテゴリを追加します。|  
 |OPERATOR|オペレーター カテゴリを追加します。|  
   
- [  **@type =** ] **'***型***'**  
+ [ **@type =** ] **'***type***'**  
  追加するカテゴリの種類を指定します。 *型*は**varchar (12)**、既定値は**ローカル**、これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |LOCAL|ローカル ジョブ カテゴリ|  
 |マルチ サーバー|マルチサーバー ジョブ カテゴリ|  
 |なし|JOB 以外のクラスのカテゴリ**です。**|  
   
- [  **@name =** ] **'***名前***'**  
+ [ **@name =** ] **'***name***'**  
  追加するカテゴリの名前を指定します。 名前は指定したクラス内で一意であることが必要です。 *名前*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -76,7 +79,7 @@ sp_add_category
 ## <a name="remarks"></a>解説  
  **sp_add_category**から実行する必要があります、 **msdb**データベース。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_category**です。  
   
 ## <a name="examples"></a>使用例  

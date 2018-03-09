@@ -8,10 +8,12 @@ ms.service:
 ms.component: views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-views
+ms.technology:
+- dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.viewproperties.general.f1
+f1_keywords:
+- sql13.swb.viewproperties.general.f1
 helpviewer_keywords:
 - views [SQL Server], status information
 - metadata [SQL Server], views
@@ -22,19 +24,19 @@ helpviewer_keywords:
 - status information [SQL Server], views
 - view dependencies
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: af43ce48156e6e233159b19c608324edcb17205e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cfbfda8cf3759f89bf2b0f8ae43257e64e82c779
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="get-information-about-a-view"></a>ビューに関する情報の取得
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のビューの定義またはプロパティに関する情報は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して取得できます。 ビューのデータが元のテーブルからどのように抽出されているのかを理解したり、ビューで定義されているデータを確認するために、ビューの定義を調べたい場合があります。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のビューの定義またはプロパティに関する情報は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して取得できます。 ビューのデータが元のテーブルからどのように抽出されているのかを理解したり、ビューで定義されているデータを確認するために、ビューの定義を調べたい場合があります。  
   
 > [!IMPORTANT]  
 >  ビューから参照しているオブジェクトの名前を変更する場合は、ビューのテキストに新しいオブジェクト名が反映されるようにビューを変更する必要があります。 オブジェクト名を変更する前には、まずオブジェクトの依存関係を表示して、その変更により影響を受けるビューがないかどうかを確認してください。  
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してビューに関する情報を取得するには:**  
   
@@ -51,11 +53,11 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  `sp_helptext` を使用してビューの定義を返すには、 **public** ロールのメンバーシップが必要です。 `sys.sql_expression_dependencies` を使用してビューのすべての依存関係を見つけるには、データベースに対する VIEW DEFINITION 権限とデータベースの `sys.sql_expression_dependencies` に対する SELECT 権限が必要です。 SELECT OBJECT_DEFINITION で返されるようなシステム オブジェクトの定義は公開されます。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -68,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
      **[ビューのプロパティ]** ダイアログ ボックスに次のプロパティが表示されます。  
   
-     **データベース**  
+     **[データベース]**  
      このビューを含むデータベースの名前です。  
   
      **[サーバー]**  
@@ -83,7 +85,7 @@ ms.lasthandoff: 11/17/2017
      **名前**  
      現在のビューの名前です。  
   
-     **スキーマ**  
+     **[スキーマ]**  
      ビューを所有するスキーマを表示します。  
   
      **[システム オブジェクト]**  
@@ -114,13 +116,13 @@ ms.lasthandoff: 11/17/2017
      **[(名前)]**  
      現在のビューの名前です。  
   
-     **データベース名**  
+     **Database Name**  
      このビューを含むデータベースの名前です。  
   
-     **説明**  
+     **[説明]**  
      現在のビューの簡単な説明です。  
   
-     **スキーマ**  
+     **[スキーマ]**  
      ビューを所有するスキーマを表示します。  
   
      **[サーバー名]**  

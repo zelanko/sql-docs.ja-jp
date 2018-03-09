@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - EXCEPT_TSQL
 - INTERSECT
 - EXCEPT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - EXCEPT operator [Transact-SQL]
 - queries [SQL Server], comparing
 - comparing queries
 - INTERSECT operator
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
-caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e3580ace2c5b4295c0fecbfd7239a988137f8949
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 3b78bf6f0c70b3c522c18ada72cacdec8de8c099
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>以外の集合演算子のおよび INTERSECT (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>引数  
- \<*query_specification*> |( \< *query_expression*>)  
+ \<*query_specification*> | ( \<*query_expression*> )  
  データを返すクエリ定義またはクエリ式を指定します。このデータが、別のクエリ定義またはクエリ式で返されるデータと比較されます。 EXCEPT または INTERSECT 演算の一部である列の定義は同じである必要はありませんが、暗黙的な変換によって比較できる定義であることが必要です。 比較を実行して結果を確認を返すために使用する型がの規則に基づくデータ型が異なる場合、[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)です。  
   
  型が同じで、有効桁数、小数点以下桁数、長さが異なる場合、結果は式の結合と同じ規則に基づいて決定されます。 詳しくは、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」をご覧ください。  

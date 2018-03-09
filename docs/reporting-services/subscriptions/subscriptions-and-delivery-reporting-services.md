@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], about subscriptions
 - subscriptions [Reporting Services]
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
-caps.latest.revision: "56"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 403303e6820196353b8365975d83ed8368d8e372
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 00bc203ff747d93febf4ac625fcc261b497bc3ff
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>サブスクリプションと配信 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションは、特定の時刻で、またはイベントへの応答として、指定されたファイル形式でレポートを配信する構成です。 たとえば、毎週水曜日に、MonthlySales.rdl レポートを Microsoft Word 文書としてファイル共有に保存します。 サブスクリプションを使用して、レポート配信のスケジュールや自動化を設定したり、レポート パラメーターの特定の値セットを指定したりすることができます。  
@@ -65,9 +63,9 @@ ms.lasthandoff: 12/05/2017
   
 -   [Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md) 。レポート サーバーのファイル共有の配信操作および構成について説明します。  
   
--   [Create and Manage Subscriptions for Native Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) ネイティブ モードのレポート サーバーでサブスクリプションを作成するための詳細な手順です。  
+-   [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) ネイティブ モードのレポート サーバーでサブスクリプションを作成するための詳細な手順です。  
   
--   [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) SharePoint モードのレポート サーバーでサブスクリプションを作成するための詳細な手順です。  
+-   [SharePoint モード レポート サーバーのサブスクリプションの作成と管理](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) SharePoint モードのレポート サーバーでサブスクリプションを作成するための詳細な手順です。  
   
 -   [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md) レポート サーバーのファイル共有の配信操作および構成について説明します。  
   
@@ -109,7 +107,7 @@ ms.lasthandoff: 12/05/2017
   
 |要件|Description|  
 |-----------------|-----------------|  
-|Permissions|レポートへのアクセス権は必須です。 レポートをサブスクライブするには、レポートを表示する権限が必要です。<br /><br /> ネイティブ モードのレポート サーバーでは、次のロールの割り当てがサブスクリプションに影響します。<br /><br /> -   "個別のサブスクリプションを管理" タスクでは、ユーザーが特定のレポートのサブスクリプションを作成、変更、および削除できます。 定義済みのロールである閲覧者ロールとレポート ビルダー ロールには、このタスクが含まれています。 このタスクを含むロールの割り当てを使用すると、ユーザーは自分が作成するサブスクリプションのみを管理できます。<br />-   "すべてのサブスクリプションを管理" タスクでは、ユーザーがすべてのサブスクリプションにアクセスしてそれらを変更できます。 このタスクは、データ ドリブン サブスクリプションを作成する場合に必要です。 定義済みのロールでは、コンテンツ マネージャー ロールにのみ、このタスクが含まれます。|  
+|アクセス許可|レポートへのアクセス権は必須です。 レポートをサブスクライブするには、レポートを表示する権限が必要です。<br /><br /> ネイティブ モードのレポート サーバーでは、次のロールの割り当てがサブスクリプションに影響します。<br /><br /> -   "個別のサブスクリプションを管理" タスクでは、ユーザーが特定のレポートのサブスクリプションを作成、変更、および削除できます。 定義済みのロールである閲覧者ロールとレポート ビルダー ロールには、このタスクが含まれています。 このタスクを含むロールの割り当てを使用すると、ユーザーは自分が作成するサブスクリプションのみを管理できます。<br />-   "すべてのサブスクリプションを管理" タスクでは、ユーザーがすべてのサブスクリプションにアクセスしてそれらを変更できます。 このタスクは、データ ドリブン サブスクリプションを作成する場合に必要です。 定義済みのロールでは、コンテンツ マネージャー ロールにのみ、このタスクが含まれます。|  
 |格納された資格情報|サブスクリプションを作成するには、レポートが保存された資格情報を使用するか、または実行時にデータを取得するために資格情報を使用しないことが必要です。 現在のユーザーの資格情報の権限借用や委任を使用して外部データ ソースに接続するように構成されているレポートは、サブスクライブすることはできません。 保存された資格情報は、Windows アカウントまたはデータベース ユーザー アカウントのいずれかです。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。<br /><br /> レポートを閲覧するための権限のほか、各サブスクリプションを作成するための権限を所有していることが必要です。 レポート サーバーでは、**[定期的なイベントおよびレポート配信]** が有効になっている必要があります。 詳細については、「 [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)」を参照してください。|  
 |レポート内のユーザー依存の値|標準的なサブスクリプションに限り、ユーザー アカウント情報をフィルターに組み込んだレポートや、レポートに表示されるテキストとしてのレポートのサブスクリプションを作成できます。 レポートでは、現在のユーザーとして解釈される **User!UserID** 式を使用して、ユーザー アカウント名を指定します。 サブスクリプションを作成する時点では、サブスクリプションを作成するユーザーが現在のユーザーとして想定されます。|  
 |モデル アイテム セキュリティは無効|モデルにモデル アイテム セキュリティの設定が含まれている場合、データ ソースとしてモデルを使用するレポート ビルダー レポートをサブスクライブすることはできません。 この制限は、モデル アイテム セキュリティを使用するレポートのみが対象となります。|  
@@ -123,9 +121,9 @@ ms.lasthandoff: 12/05/2017
 |配信拡張機能|Description|  
 |------------------------|-----------------|  
 |Windows ファイル共有|レポートを静的なアプリケーション ファイルとして、ネットワーク上の共有フォルダーに配信します。|  
-|電子メール|通知またはレポートを、電子メールの添付ファイルまたは URL リンクとして配信します。|  
+|[電子メール]|通知またはレポートを、電子メールの添付ファイルまたは URL リンクとして配信します。|  
 |SharePoint ライブラリ|SharePoint サイトからアクセスできる SharePoint ライブラリに対し、レポートを静的なアプリケーション ファイルとして配信します。 このサイトは、SharePoint 統合モードで実行されたレポート サーバーと統合されている必要があります。|  
-|Null|NULL 配信プロバイダーは、特殊な用途向けの配信拡張機能です。表示する準備が整った、パラメーター化されたレポートを事前にキャッシュする場合に使用されます。ユーザーが個別のサブスクリプションでこの方法を使用することはできません。 NULL 配信は、データ ドリブン サブスクリプションで、事前にデータをキャッシュすることによってレポート サーバーのパフォーマンスを向上させるために管理者が使用します。|  
+|[Null]|NULL 配信プロバイダーは、特殊な用途向けの配信拡張機能です。表示する準備が整った、パラメーター化されたレポートを事前にキャッシュする場合に使用されます。ユーザーが個別のサブスクリプションでこの方法を使用することはできません。 NULL 配信は、データ ドリブン サブスクリプションで、事前にデータをキャッシュすることによってレポート サーバーのパフォーマンスを向上させるために管理者が使用します。|  
   
 > [!NOTE]  
 >  レポート配信は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アーキテクチャの拡張可能な部分です。 サード パーティ ベンダーが作成したカスタム配信拡張機能を使用して、レポートを別の場所やデバイスに送信することができます。 カスタム配信拡張機能の詳細については、「 [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)」を参照してください。  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c789c560adbb01d4c9c0bd2700dd3d1b0757f04
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 88260a7a9fa9c576e20938dadb3a042ad50cf97f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlardtype"></a>SQL_ARD_TYPE
 SQL_ARD_TYPE 型識別子は、バッファー内のデータが、ARD の SQL_DESC_CONCISE_TYPE フィールドに指定された型になることを示すために使用されます。 SQL_ARD_TYPE が入力されて、 *TargetType*への呼び出しの引数**SQLGetData**特定のデータ型と記述子を変更することによって、データを変更するアプリケーションが入力バッファーの有効ではなくフィールドです。 この値のデータ型を結び付ける、  *\*TargetValuePtr*記述子フィールドをバッファーします。 (SQL_ARD_TYPE がへの呼び出しで入力されていない**SQLBindCol**または**SQLBindParameter**バインドされたバッファーの種類が既に SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE フィールドに関連付けられている変更できますいつでもこれらのフィールドのいずれかを変更することによってです。)  

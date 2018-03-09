@@ -7,22 +7,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 2aa7a79610433c11270d146473f233747fda3d39
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: c66936108d054c5ee4772769732c8543283af3f9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>R をサポートする SQL Server のコンポーネント
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2016 および 2017 では、データベース エンジンには、外部のスクリプト言語では、R、Python などの機能拡張をサポートする省略可能なコンポーネントが含まれています。 SQL Server 2016; で、R 言語のサポートが追加されましたSQL Server 2017 Machine Learning サービスで追加された Python のサポートです。
 
@@ -38,7 +39,7 @@ R を読み込み、アーキテクチャ概要に示された方法で R コー
 
 スタート パッド サービスは、Microsoft によって公開された信頼済みのランチャーか、パフォーマンスとリソース管理の要件を満たしているものとして Microsoft に認定されたランチャーでのみ起動します。 言語固有の起動ツールの名前を付けることは簡単です。
 
-  + R-RLauncher.dll
+  + R -  RLauncher.dll
   + Python - PythonLauncher.dll
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] サービスは、独自のユーザー アカウント下で実行されます。 特定の言語ランタイムに対応する各サテライト プロセスは、スタート パッドのユーザー アカウントを継承します。 構成と、スタート パッドのセキュリティ コンテキストに関する詳細については、次を参照してください。[セキュリティの概要](../../advanced-analytics/r/security-overview-sql-server-r.md)です。
@@ -111,7 +112,7 @@ SQL サテライトは、拡張イベントを使用して監視できます。 
 4. BxlServer が R ランタイムと連携して、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] とのデータ交換や、作業結果の保存を管理します。
 5. SQL サテライト関連のタスクについての通信を管理および処理し、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]です。
 6. BxlServer が SQL サテライトを使用して状態を通信し、結果を [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] に送信します。
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] が結果を取得し、関連するタスクとプロセスを終了します。
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 結果を取得し、関連するタスクとプロセスを終了します。
 
 ### <a name="r-scripts-executed-from-a-remote-client"></a>リモート クライアントから実行された R スクリプト
 
@@ -127,7 +128,7 @@ SQL サテライトは、拡張イベントを使用して監視できます。 
 6. RLauncher が、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] コンピューターにインストールされている R ランタイムのインスタンスへの呼び出しを行います。
 7. 結果が BxlServer に返されます。
 8. SQL サテライトは、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] との通信と、関連するジョブ オブジェクトのクリーンアップを管理します。
-9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] がクライアントに結果を返します。
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 結果をクライアントに渡します。
 
 ## <a name="next-steps"></a>次の手順
 

@@ -8,7 +8,10 @@
 
 # [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
+# [mssql cli (コマンドライン クエリ ツール)](mssql-cli.md)
+
 # [構成マネージャー](../tools/configuration-manager/sql-server-configuration-manager-help.md)
+# [mssql-conf (Linux)](../linux/sql-server-linux-configure-mssql-conf.md)
 # [分散再生](../tools/distributed-replay/install-distributed-replay-overview.md)
 # [データベース エンジン チューニング アドバイザー (dta)](../tools/dta/dta-utility.md)
 # [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)
@@ -20,7 +23,7 @@
 ## [osql ユーティリティ](osql-utility.md)  
 ## [Profiler ユーティリティ](profiler-utility.md)  
 ## [sqlagent90 アプリケーション](sqlagent90-application.md)  
-## [sqlcmd ユーティリティ](sqlcmd-utility.md)  
+## [sqlcmd Utility](sqlcmd-utility.md)  
 ## [SQLdiag ユーティリティ](sqldiag-utility.md)  
 ## [sqlmaint ユーティリティ](sqlmaint-utility.md)  
 ## [sqllogship アプリケーション](sqllogship-application.md)  

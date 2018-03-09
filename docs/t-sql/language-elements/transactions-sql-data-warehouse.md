@@ -8,21 +8,23 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 66e897341fa06f2666969677f7a3a2305b52cf46
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 4ea7244857dcd25b1e36f3420811ef035d4ee3b2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transactions-sql-data-warehouse"></a>トランザクション (SQL データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -70,10 +72,10 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  自動コミットが ON の場合は、別のセットの自動コミット ON ステートメントを実行しても効果はありません。 同様に、自動コミットが OFF の場合は、もう 1 つ設定自動コミットを実行している効果はありません。  
   
- SET IMPLICIT_TRANSACTIONS {ON |**OFF** }  
+ SET IMPLICIT_TRANSACTIONS { ON | **OFF** }  
  これは、設定の自動コミットとして同じモードを切り替えます。 SET IMPLICIT_TRANSACTIONS が ON の場合は、接続は暗黙のトランザクション モードに設定されます。 オフ、それを返す場合、接続自動コミット モードにします。  詳細については、次を参照してください。 [SET IMPLICIT_TRANSACTIONS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  トランザクション関連のステートメントを実行するのには、特定のアクセス許可は必要ありません。 トランザクション内でステートメントを実行するには、権限が必要です。  
   
 ## <a name="error-handling"></a>エラー処理  

@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ca76f83816a3936f07e58e2f70990aeed221c262
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 59b91b7bfc168b0722d5b8d37f74e521557c4416
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-powerpivotserviceapplication-cmdlet"></a>New-PowerPivotServiceApplication コマンドレット
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]新たに作成[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]サービス アプリケーション。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+新たに作成 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション。  
 
 >[!NOTE] 
 >この記事には、古くなった情報と例があります。 最新バージョンには、Get-help コマンドレットを使用します。
@@ -44,7 +45,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
   
 ## <a name="parameters"></a>パラメーター  
   
-### <a name="-serviceapplicationname-string"></a>-Serviceapplicationname &\<文字列 >  
+### <a name="-serviceapplicationname-string"></a>-ServiceApplicationName \<string>  
  サービス アプリケーションの表示名を設定します。  
   
 |||  
@@ -55,7 +56,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-databaseservername-string"></a>-Databaseservername &\<文字列 >  
+### <a name="-databaseservername-string"></a>-DatabaseServerName \<string>  
  アプリケーション データベースをホストする SQL Server リレーショナル データベース エンジン インスタンスを指定します。 既定では、ファームのデータベース サーバーを使用するか、データベース権限を作成する他のデータベース サーバーを選択できます。  
   
 |||  
@@ -66,7 +67,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-databasename-string"></a>-DatabaseName\<文字列 >  
+### <a name="-databasename-string"></a>-DatabaseName \<string>  
  アプリケーション データを格納する SQL Server リレーショナル データベースの名前を指定します。 目的を簡単に識別できるように、アプリケーションに対応した名前を指定する必要があります。 新しいデータベースを作成したり、既存の指定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] を作成する新しいアプリケーションのサービス アプリケーション データベース。  
   
 |||  
@@ -77,7 +78,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-addtodefaultproxygroup-switch"></a>-Addtodefaultproxygroup &\<スイッチ >  
+### <a name="-addtodefaultproxygroup-switch"></a>-AddToDefaultProxyGroup \<switch>  
  作成、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 既定のサービス接続グループ内の接続にサービスを提供します。 Web アプリケーションとサービス アプリケーション間の関連付けは、このグループのメンバーシップによって決定されます。 既定のサービス接続グループにサブスクライブするすべての web アプリケーションを使用して、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス、グループに追加するアプリケーション。 複数を設定できますが、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ファームでは、アプリケーションをサービスだけで 1 つのサービス アプリケーションは既定のサービス接続グループのメンバーであることができます。  
   
  既にある場合 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 既定のプロキシ グループのメンバーであるサービス アプリケーションで AddToDefautlProxyGroup を設定する必要があります: $false を作成する新しいアプリケーションにします。 新しいサービス アプリケーションを、カスタム サービス接続グループに追加する必要があります。  このために、組み込みの SharePoint コマンドレットを使用することができます。  Get-SPServiceApplicationProxyGroup は、ファームで定義されているサービス接続グループの一覧を返します。  
@@ -90,7 +91,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  このコマンドレットは共通のパラメーターをサポートしています (Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer、および OutVariable)。 詳細については、「 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)」を参照してください。  
   
 ## <a name="inputs-and-outputs"></a>入力および出力  

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +16,20 @@ helpviewer_keywords:
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: db5a4f94951de076e1076bb8b70ff796fecc9edd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 31909fbe1a60bca85249d7c28b11574a512f442d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>タイム シリーズ モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]すべてのマイニング モデルでは、同じ構造を使用して、コンテンツを保存します。 この構造は、データ マイニング コンテンツ スキーマ行セットに従って定義されます。 しかし、その標準の構造の中で、情報を含むノードがさまざまな形で配置されて、さまざまな種類のツリーが表現されます。 このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムに基づくマイニング モデルについて、ノードの構成や各ノードの意味を説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+すべてのマイニング モデルは同じ構造を使用してコンテンツを格納します。 この構造は、データ マイニング コンテンツ スキーマ行セットに従って定義されます。 しかし、その標準の構造の中で、情報を含むノードがさまざまな形で配置されて、さまざまな種類のツリーが表現されます。 このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムに基づくマイニング モデルについて、ノードの構成や各ノードの意味を説明します。  
   
  すべてのモデルの種類に適用される一般的なマイニング モデル コンテンツの説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
@@ -212,7 +211,7 @@ ms.lasthandoff: 12/08/2017
  **ARIMA:** 現在の周期構造をサポートするケースの数。 このサポートの値は、現在の周期構造のすべてのノードで繰り返し表示されます。  
   
  MSOLAP_MODEL_COLUMN  
- ノードで表されるデータ系列の予測可能な属性 (ATTRIBUTE_NAME と同じ値)。  
+ ノードで表されるデータ系列の予測可能な属性  (ATTRIBUTE_NAME と同じ値)。  
   
  MSOLAP_NODE_SCORE  
  ツリーまたは分割の情報の価値を特徴付ける数値。  
@@ -379,7 +378,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 ### <a name="time-series-formula-for-arima"></a>ARIMA のタイム シリーズ式  
  ARIMA ノードの完全な式を表示するには、 **Microsoft タイム シリーズ ビューアー** の [[マイニング凡例]](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)を使用することをお勧めします。これにより、自己回帰の次数や移動平均などの式の要素を、一貫した形式で表示できます。  
   
--   [タイム シリーズ モデルの式の表示 &#40;データ マイニング&#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [タイム シリーズの式の表示モデル &#40;データ マイニング&#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
  ここでは、式のサンプルを示して基本的な項について説明します。  
   
@@ -417,7 +416,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 |ノードの種類|属性|[値の型]|  
 |---------------|---------------|----------------|  
-|27 (ARIMA ルート)|Intercept<br /><br /> 周期性|11|  
+|27 (ARIMA ルート)|Intercept<br /><br /> Periodicity|11|  
 |28 (ARIMA 周期構造)|周期性<br /><br /> 自己回帰の次数<br /><br /> 差分の次数<br /><br /> Moving average order|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
 |29 (ARIMA 自己回帰)|Coefficient<br /><br /> (係数の補数)|7|  
 |30 (ARIMA 移動平均)|t の値<br /><br /> t-1 の値<br /><br /> …<br /><br /> t-n の値|7|  
@@ -445,7 +444,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
  ARTXP ツリーでは、各分割の情報がそれぞれツリーの異なる場所にあるため、情報を取得するのが困難な場合があります。 したがって ARTXP モデルでは、すべての断片を取得してから、なんらかの処理を行って完全な式を再構成する必要があります。 ARIMA モデルでは、ツリー全体で式を取得できるようになっているため、比較的簡単に式を取得できます。 この情報を取得するクエリの作成方法については、「 [タイム シリーズ モデルのクエリ例](../../analysis-services/data-mining/time-series-model-query-examples.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [マイニング モデル コンテンツ &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft タイム シリーズ アルゴリズム](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [タイム シリーズ モデルのクエリ例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  

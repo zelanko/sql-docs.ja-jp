@@ -1,32 +1,35 @@
 ---
 title: "ALTER WORKLOAD GROUP (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 01/19/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_WORKLOAD_GROUP_TSQL
 - ALTER WORKLOAD GROUP
-dev_langs: TSQL
-helpviewer_keywords: ALTER WORKLOAD GROUP statement
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
-caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bfb6ca0200095860acec2b275020012e4b96284
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +41,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 ALTER WORKLOAD GROUP { group_name | "default" }  
 [ WITH  
     ([ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -53,36 +55,34 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ```  
   
 ## <a name="arguments"></a>引数  
- *group_name* |"**既定**"  
+ *group_name* | "**default**"  
  既存のユーザー定義のワークロード グループの名前か、リソース ガバナーの既定のワークロード グループを指定します。  
   
 > [!NOTE]  
->  リソース ガバナーは、"default"を作成し、ときに内部のグループ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされています。  
+> リソース ガバナーは、"default"を作成し、ときに内部のグループ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされています。  
   
  オプションの "default" を ALTER WORKLOAD GROUP で使用する場合は、システム予約語の DEFAULT と競合しないように引用符 ("") または角かっこ ([]) で囲む必要があります。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
 > [!NOTE]  
->  定義済みのワークロード グループおよびリソース プールはすべて、"default" などの小文字の名前を使用しています。 大文字と小文字を区別する照合順序を使用するサーバーでは、これを考慮する必要があります。 SQL_Latin1_General_CP1_CI_AS など、大文字と小文字を区別しない照合順序を使用するサーバーでは、"default" と "Default" が同じものと見なされます。  
+> 定義済みのワークロード グループおよびリソース プールはすべて、"default" などの小文字の名前を使用しています。 大文字と小文字を区別する照合順序を使用するサーバーでは、これを考慮する必要があります。 SQL_Latin1_General_CP1_CI_AS など、大文字と小文字を区別しない照合順序を使用するサーバーでは、"default" と "Default" が同じものと見なされます。  
   
  IMPORTANCE = { LOW | MEDIUM | HIGH }  
  ワークロード グループでの要求の相対的な重要度を指定します。 重要度では、次のいずれかです。  
   
 -   LOW  
-  
 -   MEDIUM (既定)  
-  
 -   HIGH  
   
 > [!NOTE]  
->  内部的には、各重要度の設定は計算に使用される数値として格納されます。  
+> 内部的には、各重要度の設定は計算に使用される数値として格納されます。  
   
  IMPORTANCE は、リソース プールに対してローカルです。同じリソース プール内の異なる重要度のワークロード グループは互いに影響しますが、別のリソース プールのワークロード グループには影響しません。  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*値*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  1 つの要求にプールから割り当てられる最大メモリ量を指定します。 このパーセンテージは、MAX_MEMORY_PERCENT で指定したリソース プールのサイズが基準になります。  
   
 > [!NOTE]  
->  指定した量だけがクエリ実行許可メモリに割り当てられます。  
+> 指定した量だけがクエリ実行許可メモリに割り当てられます。  
   
  *値*0 または正の整数にする必要があります。 許容範囲*値*は 0 ~ 100 です。 既定の設定*値*25 です。  
   
@@ -101,13 +101,16 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >   
 >  サーバーに十分な物理メモリがない場合は、どちらの場合も時間切れエラー 8645 が発生する可能性があります。  
   
- REQUEST_MAX_CPU_TIME_SEC =*値*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  要求が使用できる最大 CPU 時間を秒単位で指定します。 *値*0 または正の整数にする必要があります。 既定の設定*値*0 の場合は、無制限を示します。  
   
 > [!NOTE]  
->  リソース ガバナーでは、最大時間を超過しても、要求は継続されます。 ただし、イベントが生成されます。 詳細については、次を参照してください。 [CPU しきい値 Exceeded イベント クラス](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)です。  
+> 既定では、リソース ガバナーはの最大時間を超えたかどうかの続行を要求を妨げません。 ただし、イベントが生成されます。 詳細については、次を参照してください。 [CPU しきい値 Exceeded イベント クラス](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)です。 
+
+> [!IMPORTANT]
+> 以降で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3 を使用して、[トレース フラグ 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)、リソース ガバナーは、最大時間を超えたときに、要求は中止されます。
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*値*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  メモリ許可 (作業バッファー メモリ) が使用可能になるのをクエリが待機できる最大時間を秒単位で指定します。  
   
 > [!NOTE]  
@@ -115,7 +118,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  *値*正の整数を指定する必要があります。 既定の設定*値*0 では、クエリ コストに基づく内部の計算を使用して、最大時間を決定します。  
   
- MAX_DOP =*値*  
+ MAX_DOP =*value*  
  並列処理次数 (DOP) 並列要求の最大限度を指定します。 *値*から 255 まで、0 または 1、正の整数でなければなりません。 ときに*値*が 0 の場合、サーバーは、max degree of parallelism を選択します。 これは既定値であり、推奨される設定。  
   
 > [!NOTE]  
@@ -136,10 +139,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  DOP は、構成した後、許可メモリの不足時にのみ低くすることができます。 ワークロード グループの再構成は、許可メモリ キューで待機している間は認識されません。  
   
- GROUP_MAX_REQUESTS =*値*  
+ GROUP_MAX_REQUESTS =*value*  
  ワークロード グループで実行を許可する同時要求の最大数を指定します。 *値*0 または正の整数にする必要があります。 既定の設定*値*は 0 で、無制限の要求を許可します。 同時要求の最大数に達した場合、そのグループのユーザーはログインできますが、同時要求数が指定した値を下回るまで待機状態になります。  
   
- 使用して { *pool_name* |"**既定**"}  
+ USING { *pool_name* | "**default**" }  
  識別されるユーザー定義のリソース プールとワークロード グループを関連付ける*pool_name*、リソース プールのワークロード グループ有効ではします。 場合*pool_name*が指定されていないか、ワークロード グループが、定義済みのリソース ガバナーの既定のプールを使用して引数を使用しない場合。  
   
  オプションの "default" を ALTER WORKLOAD GROUP で使用する場合は、システム予約語の DEFAULT と競合しないように引用符 ("") または角かっこ ([]) で囲む必要があります。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
@@ -167,7 +170,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  非固定パーティション分割されたテーブルでインデックスの作成によって消費されるメモリは、含まれるパーティションの数に比例します。  必要なメモリの合計が、リソース ガバナーのワークロード グループの設定によって課せられているクエリごとの制限 (REQUEST_MAX_MEMORY_GRANT_PERCENT) を超えると、インデックス作成の実行に失敗します。 "default" ワークロード グループでは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] との互換性のために、クエリごとの制限を超えてもクエリの開始に必要な最低限のメモリを使用できるようになっているので、そのようなクエリを実行するのに十分な量のメモリが "default" リソース プールに対して構成されていれば、同じインデックス作成を "default" ワークロード グループで実行できる可能性があります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -192,7 +195,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
+ [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   

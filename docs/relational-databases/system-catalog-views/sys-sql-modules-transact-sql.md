@@ -1,7 +1,7 @@
 ---
 title: "sys.sql_modules (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/17/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 496ed3e4d3aad1cea7a0b9c153f4e85da1a46489
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a2ed39676fc1bd477cce716b5c9d86c721df40fe
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|このオブジェクトが属するオブジェクトの ID です。 データベース内で一意です。|  
-|**定義**|**nvarchar(max)**|このモジュールを定義する SQL テキスト。<br /><br /> NULL は、暗号化されていることを示します。|  
+|**definition**|**nvarchar(max)**|このモジュールを定義する SQL テキスト。 使用してこの値を取得することも、 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)組み込み関数。<br /><br /> NULL は、暗号化されていることを示します。|  
 |**uses_ansi_nulls**|**bit**|モジュールは、SET ANSI_NULLS ON で作成されました。<br /><br /> ルールとデフォルトに対しては、常に 0 になります。|  
 |**uses_quoted_identifier**|**bit**|モジュールは、SET QUOTED_IDENTIFIER ON で作成されました。|  
 |**is_schema_bound**|**bit**|モジュールは SCHEMABINDING オプションを使用して作成されました。<br /><br /> ネイティブ コンパイル ストアド プロシージャでは、常に値 1 が含まれます。|  
@@ -53,10 +53,10 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>解説  
  既定の制約、D 型のオブジェクトの SQL 式に存在、 [sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)カタログ ビューです。 CHECK 制約、C の型のオブジェクトの SQL 式に存在、 [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)カタログ ビューです。  
   
- この情報が記載されています[sys.dm_db_uncontained_entities &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
+ この情報が記載されています[sys.dm_db_uncontained_entities &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+## <a name="permissions"></a>権限  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
 ## <a name="examples"></a>使用例  
  次の例では、現在のデータベース内の各モジュールの名前、型、および定義を返します。  

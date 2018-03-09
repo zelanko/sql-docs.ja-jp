@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a32ff053-f38f-49d7-afdc-e19f59c88135
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6912b3c73f898335853ff3ffe78021fad75bb357
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bdf14cf2c3ac199c1108cd8d1178ede676976baa
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="synchronize-command-tmsl"></a>Synchronize コマンド (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/08/2017
 ||||  
 |-|-|-|  
 |**プロパティ**|**[Default]**|**Description**|  
-|database||同期するデータベース オブジェクトの名前。|  
+|[データベース]||同期するデータベース オブジェクトの名前。|  
 |source||移行元サーバーへの接続に使用する接続文字列。|  
 |synchronizeSecurity|skipMembership|ロールや権限など、セキュリティ定義を復元する方法を指定する列挙値。 有効な値には、skipMembership、copyAll、ignoresecurity のいずれかが含まれています。|  
 |applyCompression|True|True の場合、圧縮、同期操作中に適用されることを示すブール値それ以外の場合は false。|  

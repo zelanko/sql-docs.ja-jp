@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_jobschedule
 - sp_delete_jobschedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_jobschedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_jobschedule
 ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0787326286ef9cccf6f7b7b771256d0bc4b1d2ad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c03e34bb2cd4fcbbf2ad379d7fad374f77290dab
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +42,9 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>解説  
  ジョブ スケジュールはジョブとは別々に管理できます。 ジョブからスケジュールを削除するには、使用**sp_detach_schedule**です。 スケジュールを削除するを使用して**sp_delete_schedule**です。  
   
-> **注:****sp_delete_jobschedule**複数のジョブにアタッチされているスケジュールをサポートしていません。   既存のスクリプトを呼び出す場合**sp_delete_jobschedule**を 1 つ以上のジョブにアタッチされているスケジュールを削除するには、プロシージャがエラーを返します。  
+> **注:****sp_delete_jobschedule**複数のジョブにアタッチされているスケジュールをサポートしていません。 既存のスクリプトを呼び出す場合**sp_delete_jobschedule**を 1 つ以上のジョブにアタッチされているスケジュールを削除するには、プロシージャがエラーを返します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  

@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee5395145b72108b63256a7e3742eca6a9289e06
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
-ms.translationtype: MT
+ms.openlocfilehash: 3c08b4d991717d877ca33cd2d136d0dbf0d30483
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="rename-transact-sql"></a>名前の変更 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/20/2017
   内のユーザーが作成したテーブルの名前を変更[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]です。 ユーザーが作成したテーブルまたはデータベースの名前を変更[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]です。  
   
 > [!NOTE]  
->  データベースの名前を変更する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ストアド プロシージャを使用して[sp_renamedb &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Azure SQL データベースにおけるデータベースの名前を変更するには、 [ALTER DATABASE (Azure SQL データベース)](/statements/alter-database-azure-sql-database.md)ステートメントです。 
+>  データベースの名前を変更する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ストアド プロシージャを使用して[sp_renamedb &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Azure SQL Database でデータベースの名前を変更するには、[ALTER DATABASE (Azure SQL Database)](/statements/alter-database-azure-sql-database.md) ステートメントを使用します。 
   
 ## <a name="syntax"></a>構文  
   
@@ -56,12 +57,12 @@ RENAME DATABASE [::] database_name TO new_database_name
   
 ## <a name="arguments"></a>引数  
  オブジェクト [::] の名前変更します。   
-          [*database_name*です。 [ *schema_name* ] です。 ] |[ *schema_name*です。 ]*table_name* TO *new_table_name*  
+          [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*  
  **適用対象:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  ユーザー定義テーブルの名前を変更します。 1 つの 2 部、または 3 部構成の名前と名前を変更するテーブルを指定します。    新しいテーブルを指定して*new_table_name*を 1 つの要素名として。  
   
- データベース [::] の名前を変更します。   
+ RENAME DATABASE [::]   
           [ *database_name* TO *new_database_name*  
  **適用されます。**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -85,7 +86,7 @@ RENAME DATABASE [::] database_name TO new_database_name
   
 -   DWQueue  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  このコマンドを実行するには、このアクセス許可が必要です。  
   
 -   **ALTER**テーブルに対する権限  

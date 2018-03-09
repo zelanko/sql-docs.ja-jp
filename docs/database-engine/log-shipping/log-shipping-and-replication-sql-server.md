@@ -18,13 +18,13 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 074a97f74e322b75030d5a921ba4e2b453a59a49
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a80220d2c963dcf5879422ae9e754963a1bb287d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>ログ配布とレプリケーション (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ログ配布では単一のデータベースの 2 つのコピーを使用します。通常、これらのコピーは異なるコンピューターに配置されます。 クライアントが任意の時点において使用できるデータベースのコピーは 1 つだけです。 このコピーはプライマリ データベースと呼ばれます。 クライアントがプライマリ データベースに対して加えた更新は、ログ配布によってセカンダリ データベースと呼ばれるもう一方のコピー データベースに適用されます。 プライマリ データベースに対して行われた挿入、更新、および削除はすべてトランザクション ログに記録され、ログ配布によってこのトランザクション ログがセカンダリ データベースに適用されます。  
@@ -99,7 +99,7 @@ ms.lasthandoff: 11/20/2017
   
  **マージ レプリケーションとログ配布を構成するには**  
   
-1.  パブリケーション データベースに対してログ配布を構成します。 詳細については、「[ログ配布の構成 &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)」を参照してください。  
+1.  パブリケーション データベースに対してログ配布を構成します。 詳細については、「 [ログ配布の構成 &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)で導入されました。  
   
 2.  パブリッシャーに障害が発生した場合は、セカンダリ サーバーでコンピューター名を変更し、次にプライマリ サーバー名と一致するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名を変更します。 コンピューター名の変更の詳細については、Windows のマニュアルを参照してください。 サーバーの名前変更の詳細については、「 [SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) 」および「 [SQL Server のフェールオーバー クラスター インスタンスの名前変更](../../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md)」をご覧ください。  
   

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69cb7375808e3c11dd8d92bab48a3588693e30e8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5341eac5d18d222e2e0d1f97a006179ffa8927d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="records-and-provider-supplied-fields"></a>レコードとプロバイダーが指定したフィールド
 ときに、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトを開くと、そのソースは、開いているは、現在の行を指定できます[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)、絶対 URL または相対 URL、開いていると組み合わせて[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト.  
@@ -72,8 +73,8 @@ ms.lasthandoff: 12/21/2017
 |RESOURCE_CONTENTCLASS|AdVarWChar|などの形式を示す、ドキュメントの MIME の種類を示す"`text/html`"です。|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|コンテンツが格納されている言語を示します。|  
 |RESOURCE_CREATIONTIME|adFileTime|読み取り専用です。 FILETIME 構造体、リソースが作成された時刻を含んでいることを示します。 時刻は協定世界時 (UTC) 形式で報告されます。|  
-|RESOURCE_LASTACCESSTIME|adFileTime|読み取り専用です。 FILETIME 構造体、リソースの最終アクセス時刻が含まれることを示します。 時刻は UTC 形式です。 FILETIME メンバーは、プロバイダーがこの時間メンバーをサポートしていない場合に 0 をします。|  
-|RESOURCE_LASTWRITETIME|adFileTime|読み取り専用です。 FILETIME 構造体、リソースが最後に書き込まれた時刻を含んでいることを示します。 時刻は UTC 形式です。 FILETIME メンバーは、プロバイダーがこの時間メンバーをサポートしていない場合に 0 をします。|  
+|RESOURCE_LASTACCESSTIME|AdFileTime|読み取り専用です。 FILETIME 構造体、リソースの最終アクセス時刻が含まれることを示します。 時刻は UTC 形式です。 FILETIME メンバーは、プロバイダーがこの時間メンバーをサポートしていない場合に 0 をします。|  
+|RESOURCE_LASTWRITETIME|AdFileTime|読み取り専用です。 FILETIME 構造体、リソースが最後に書き込まれた時刻を含んでいることを示します。 時刻は UTC 形式です。 FILETIME メンバーは、プロバイダーがこの時間メンバーをサポートしていない場合に 0 をします。|  
 |RESOURCE_STREAMSIZE|asUnsignedBigInt|読み取り専用です。 (バイト単位) のリソースの既定のストリームのサイズを示します。|  
 |RESOURCE_ISCOLLECTION|adBoolean|読み取り専用です。 リソースがディレクトリなど、コレクションの場合は true。 リソースが単純なファイルである場合は false です。|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|リソースが構造化ドキュメントの場合は true。 False の場合は、リソースは、構造化ドキュメントではありません。 コレクションまたは単純なファイルがある可能性があります。|  

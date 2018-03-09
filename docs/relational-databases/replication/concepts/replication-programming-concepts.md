@@ -8,7 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - programming [SQL Server replication]
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb1ef22a3a460926dc99f2afda21d7c1ecc0ad11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01257c38de98453f4672ebcf0d9101bdeedd5ae9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-programming-concepts"></a>レプリケーションのプログラミング概念
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ ms.lasthandoff: 11/17/2017
 |<xref:Microsoft.SqlServer.Replication>|マネージ コード|同期|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|マネージ コード|カスタム ロジックとマージ同期プロセスを統合するためのビジネス ロジック ハンドラーの作成|  
 |[レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|スクリプトの作成|管理と監視。|  
-|[レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|スクリプトの作成|同期|  
+|[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|スクリプトの作成|同期|  
   
 ## <a name="example"></a>例  
  [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] では、データを世界中の 200 人の販売担当者にパブリッシュする必要があります。 販売担当者は頻繁に出張するため、ラップトップ コンピューターや携帯情報端末 (PDA) を使用して顧客データを変更したり、新しい発注を追加したりする必要があります。 販売担当者がラップトップ コンピューターをネットワークに接続したときに、このような変更をパブリッシャーと同期する必要があります。  

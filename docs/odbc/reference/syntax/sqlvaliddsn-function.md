@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: adcdae85d1d3f68c754c0a292f430b27ef9ae7d7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0c745b7ac285f09ff80478dab911b3cd3a9fc94d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN 関数
 **準拠**  
@@ -47,7 +47,7 @@ BOOL SQLValidDSN(
  *lpszDSN*  
  [入力]データ ソースの名前を確認します。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  関数は、データ ソース名が有効な場合に TRUE を返します。 データ ソース名が無効であるか、関数呼び出しが失敗した場合は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  

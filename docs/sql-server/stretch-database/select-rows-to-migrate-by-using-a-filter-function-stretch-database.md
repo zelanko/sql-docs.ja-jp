@@ -8,7 +8,8 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,21 +18,22 @@ helpviewer_keywords:
 - Stretch Database, inline table-valued functions
 - inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a898c757120d29a8c64de5623cec02c35c5b5ac1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: efb55816db5f692231b66ca53780ab26318da90c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>フィルター関数を使用して移行する行を選択する (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  コールド データを別のテーブルに保存している場合、そのテーブル全体を移行するように Stretch Database を構成できます。 一方、テーブルにホット データとコールド データの両方が含まれている場合は、移行する行を選択するフィルター述語を指定できます。 フィルター述語はインライン テーブル値関数です。 このトピックでは、移行する行を選択するインライン テーブル値関数を作成する方法について説明します。  
+
+  コールド データを別のテーブルに保存している場合、そのテーブル全体を移行するように Stretch Database を構成できます。 一方、テーブルにホット データとコールド データの両方が含まれている場合は、移行する行を選択するフィルター述語を指定できます。 フィルター述語はインライン テーブル値関数です。 この記事では、移行する行を選択するインライン テーブル値関数を作成する方法について説明します。  
   
 > [!IMPORTANT]
 > 指定したフィルター関数のパフォーマンスが低いと、データ移行のパフォーマンスも低くなります。 Stretch Database では、CROSS APPLY 演算子を使用してテーブルにフィルター関数を適用します。  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/05/2017
   
 -   ウィザードを終了した後、ALTER TABLE ステートメントを実行してフィルター関数を指定します。  
   
- 関数を追加するための ALTER TABLE 構文については、このトピックで後述します。  
+ 関数を追加するための ALTER TABLE 構文については、この記事で後述します。  
   
 ## <a name="basic-requirements-for-the-filter-function"></a>フィルター関数の基本的な要件  
  Stretch Database のフィルター述語に必要なインライン テーブル値関数は次の例のようになります。  
@@ -159,7 +161,7 @@ RETURN  SELECT 1 AS is_eligible
  サブクエリや非決定論的関数 (RAND() や GETDATE() など) は使用できません。  
   
 ## <a name="add-a-filter-function-to-a-table"></a>フィルター関数をテーブルに追加する  
- **ALTER TABLE** ステートメントを実行し、 **FILTER_PREDICATE** パラメーターの値として既存のインライン テーブル値関数を指定して、テーブルにフィルター関数を追加します。 例:  
+ **ALTER TABLE** ステートメントを実行し、 **FILTER_PREDICATE** パラメーターの値として既存のインライン テーブル値関数を指定して、テーブルにフィルター関数を追加します。 例 :  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -491,7 +493,7 @@ COMMIT ;
     ```  
   
 ## <a name="how-stretch-database-applies-the-filter-function"></a>Stretch Database がフィルター関数を適用するしくみ  
- Stretch Database では、CROSS APPLY 演算子を使用してテーブルにフィルター関数を適用し、対象となる行を決定します。 例:  
+ Stretch Database では、CROSS APPLY 演算子を使用してテーブルにフィルター関数を適用し、対象となる行を決定します。 例 :  
   
 ```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
@@ -500,7 +502,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
  関数から行の空ではない結果が返された場合、その行は移行の対象になります。  
   
 ## <a name="replacePredicate"></a>既存のフィルター関数の置き換え  
- 以前に指定したフィルター関数を置き換えるには、 **ALTER TABLE** ステートメントをもう一度実行し、 **FILTER_PREDICATE** パラメーターに新しい値を指定します。 例:  
+ 以前に指定したフィルター関数を置き換えるには、 **ALTER TABLE** ステートメントをもう一度実行し、 **FILTER_PREDICATE** パラメーターに新しい値を指定します。 例 :  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -595,7 +597,7 @@ GO
 ```  
   
 ## <a name="remove-a-filter-function-from-a-table"></a>テーブルからのフィルター関数の削除  
- 選択した行ではなく、テーブル全体を移行するには、 **FILTER_PREDICATE**  を null に設定して既存の関数を削除します。 例:  
+ 選択した行ではなく、テーブル全体を移行するには、 **FILTER_PREDICATE**  を null に設定して既存の関数を削除します。 例 :  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  

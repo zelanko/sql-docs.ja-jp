@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_monitor_TSQL
 - sp_help_log_shipping_monitor
-dev_langs: TSQL
-helpviewer_keywords: sp_help_log_shipping_monitor
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_log_shipping_monitor
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85677235addc7a6508f482dfa7f944518efddd0d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 96e9b3f2fa8e040789b15e0969fbb4de6ccb9e00
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelplogshippingmonitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,16 +57,16 @@ sp_help_log_shipping_monitor
 |-----------------|---------------|-----------------|  
 |**ステータス**|**bit**|ログ配布データベースのエージェントに関する全般的な状態。<br /><br /> **0**正常な状態でないエージェントの障害を = です。<br /><br /> **1** = それ以外の場合。|  
 |**is_primary**|**bit**|この行がプライマリ データベースのものかどうか。<br /><br /> **1** = 行は、プライマリ データベースです。<br /><br /> **0** = 行は、セカンダリ データベースです。|  
-|**サーバー (server)**|**sysname**|このデータベースが存在するプライマリまたはセカンダリ サーバーの名前。|  
+|**server**|**sysname**|このデータベースが存在するプライマリまたはセカンダリ サーバーの名前。|  
 |**database_name**|**sysname**|データベース名です。|  
 |**time_since_last_backup**|**int**|前回のログ バックアップから経過した時間 (分単位)。<br /><br /> NULL = 情報が使用できないか該当しません。|  
-|**last_backup_file**|**nvarchar (500)**|前回正常に作成されたログ バックアップ ファイルの名前。<br /><br /> NULL = 情報が使用できないか該当しません。|  
-|**backup_threshold**|**int**|前回のバックアップが行われてから、threshold_alert エラーが発生するまでの期間 (分単位)。 **backup_threshold**は**int**、既定値は**60 分**です。<br /><br /> NULL = 情報が使用できないか該当しません。<br /><br /> 使用して、この値を変更することができます[sp_add_log_shipping_primary_database (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
-|**is_backup_alert_enabled**|**bit**|アラートがあるかどうかを示す場合に発生**backup_threshold**を超過します。 いずれかの値 (**1**) で、既定値は、アラートを発行することを意味します。<br /><br /> NULL = 情報が使用できないか該当しません。<br /><br /> 使用して、この値を変更することができます[sp_add_log_shipping_primary_database (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
+|**last_backup_file**|**nvarchar(500)**|前回正常に作成されたログ バックアップ ファイルの名前。<br /><br /> NULL = 情報が使用できないか該当しません。|  
+|**backup_threshold**|**int**|前回のバックアップが行われてから、threshold_alert エラーが発生するまでの期間 (分単位)。 **backup_threshold**は**int**、既定値は**60 分**です。<br /><br /> NULL = 情報が使用できないか該当しません。<br /><br /> 使用して、この値を変更することができます[sp_add_log_shipping_primary_database (& a) #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)。|  
+|**is_backup_alert_enabled**|**bit**|アラートがあるかどうかを示す場合に発生**backup_threshold**を超過します。 いずれかの値 (**1**) で、既定値は、アラートを発行することを意味します。<br /><br /> NULL = 情報が使用できないか該当しません。<br /><br /> 使用して、この値を変更することができます[sp_add_log_shipping_primary_database (& a) #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)。|  
 |**time_since_last_copy**|**int**|前回のログ バックアップがコピーされてから経過した時間 (分単位)。<br /><br /> NULL = 情報が使用できないか該当しません。|  
-|**last_copied_file**|**nvarchar (500)**|前回正常にコピーされたログ バックアップ ファイルの名前。<br /><br /> NULL = 情報が使用できないか該当しません。|  
+|**last_copied_file**|**nvarchar(500)**|前回正常にコピーされたログ バックアップ ファイルの名前。<br /><br /> NULL = 情報が使用できないか該当しません。|  
 |**time_since_last_restore**|**int**|前回のログ バックアップが復元されてから経過した時間 (分単位)。<br /><br /> NULL = 情報が使用できないか該当しません。|  
-|**last_restored_file**|**nvarchar (500)。**|前回正常に復元されたログ バックアップ ファイルの名前。<br /><br /> NULL = 情報が使用できないか該当しません。|  
+|**last_restored_file**|**nvarchar(500).**|前回正常に復元されたログ バックアップ ファイルの名前。<br /><br /> NULL = 情報が使用できないか該当しません。|  
 |**last_restored_latency**|**int**|前回バックアップを作成してから復元するまでに経過した時間 (分単位)。<br /><br /> NULL = 情報が使用できないか該当しません。|  
 |**restore_threshold**|**int**|復元操作が始まってから警告が生成されるまでの許容経過時間 (分単位)。 **restore_threshold** NULL にすることはできません。|  
 |**is_restore_alert_enabled**|**bit**|アラートが発生するかどうかを指定と**restore_threshold**を超過します。 いずれかの値 (**1**) で、既定値は、アラートが発生したことを意味します。<br /><br /> NULL = 情報が使用できないか該当しません。<br /><br /> 復元のしきい値を設定するには、使用[sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)です。|  
@@ -71,11 +74,11 @@ sp_help_log_shipping_monitor
 ## <a name="remarks"></a>解説  
  **sp_help_log_shipping_monitor**から実行する必要があります、**マスター**監視サーバー上のデータベースです。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  
- [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [ログ配布 &#40; についてSQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

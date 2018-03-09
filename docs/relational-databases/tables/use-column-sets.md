@@ -16,15 +16,15 @@ helpviewer_keywords:
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0871c2e084749a9ceb79192e55e3a99cb24eb351
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fece12352dc2691fdab3906a00f8cb64151590b2
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-column-sets"></a>列セットの使用
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -133,7 +133,7 @@ GO
   
  **  なし = 列セットでの選択操作時に、対象の属性に対して値が出力されません。 挿入または更新操作で列セットに対して指定された XML 表記で呼び出し元がこの属性に値を指定すると、エラーが発生します。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
  列セットのセキュリティ モデルは、テーブルと列の間に介在するセキュリティ モデルと同じように機能します。 列セットはミニテーブルとして視覚化できます。選択操作は、このミニテーブルに対する SELECT * 操作と同様です。 ただし、列セットとスパース列は、厳密なコンテナーではなくグループ化の関係にあります。 セキュリティ モデルでは、列セットの列に対してセキュリティがチェックされ、基になるスパース列で DENY 操作が適用されます。 セキュリティ モデルには、これ以外に次のような特性があります。  
   
 -   列セットの列に対し、テーブル内の他の列と同様に、セキュリティ権限を与えたり取り消したりすることができます。  

@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.publisherinfo.commonjobs.f1
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af0fc926fff97f6c20331002d92aec47749e9d7b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: da6c5ffe47ed35e4389fef6fe5924d1b0ec1ae25
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publisher-information-agents"></a>パブリッシャー情報、[エージェント]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[エージェント]** タブには、パブリッシャーに関連するエージェントおよびメンテナンス ジョブに関する詳細情報が表示されます。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  これらのジョブの詳細については、「[Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md)」 (レプリケーション エージェントの管理) を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  エージェントまたはジョブに関する情報を表示するには、 **[エージェントとジョブの種類]** メニューから選択します。 エージェントまたはジョブに関する詳細情報やタスクを調べるには、対象のエージェントまたはジョブの行を右クリックし、ショートカット メニューのオプションをクリックします。 グリッドにデータを表示する方法を変更するには、グリッドを右クリックし、次のいずれかのオプションをクリックします。  
   
 -   **[並べ替え]**: **[列の並べ替え]** ダイアログ ボックスで、1 つ以上の列を基準にして並べ替えを行います。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
  この後のセクションでは、このタブでエージェントまたはジョブごとに表示されるデータについて説明します。  
   
 ### <a name="snapshot-agent"></a>スナップショット エージェント  
- **[状態]**  
+ **ステータス**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
 -   [エラー]  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
  エージェントが最後に実行されたときにディストリビューション データベースでコミットされたコマンドの数です。 更新などのデータ変更がコマンドに相当します。  
   
 ### <a name="log-reader-agent"></a>ログ リーダー エージェント (Log Reader Agent)  
- **[状態]**  
+ **ステータス**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
 -   [エラー]  
@@ -137,7 +137,7 @@ ms.lasthandoff: 11/17/2017
  エージェントが最後に実行されたときの 1 トランザクションあたりの平均コマンド数です。  
   
 ### <a name="queue-reader-agent"></a>キュー リーダー エージェント (Queue Reader Agent)  
- **[状態]**  
+ **ステータス**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
 -   [エラー]  
@@ -176,7 +176,7 @@ ms.lasthandoff: 11/17/2017
  エージェントが最後に実行されたときの 1 トランザクションあたりの平均コマンド数です。  
   
 ### <a name="maintenance-jobs"></a>メンテナンス ジョブ  
- **[状態]**  
+ **ステータス**  
  それぞれのジョブの状態。 表示される状態の種類を、次に示します。  
   
 -   [エラー]  

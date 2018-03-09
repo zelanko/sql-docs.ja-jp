@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.mirroring.f1
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 caps.latest.revision: "86"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 267091bc845fdcbfa1c2eafd49bca20c673f966b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f1dece952a9aba10ef1dff5fe92d7747ae11f711
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-mirroring-page"></a>[データベースのプロパティ] \([ミラーリング] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページにはプリンシパル データベースからアクセスし、データベース ミラーリングのプロパティを構成および変更します。 また、データベース ミラーリング セキュリティ構成ウィザードを起動し、ミラーリング セッションの状態の確認やデータベース ミラーリング セッションの一時停止または削除を行うこともできます。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[セキュリティの構成]**  
  このボタンをクリックすると、 **データベース ミラーリング セキュリティ構成ウィザード**が起動します。  
   
@@ -78,7 +78,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 -   ミラーリング データベースが存在している。  
   
-     ミラーリングを開始するには、NORECOVERY を指定して最新の完全バックアップを復元し、ミラーリング データベースを作成しておく必要があります。さらに状況に応じて、プリンシパル データベースのログ バックアップをミラー サーバーに復元する必要があります。 詳細については、「[ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)」を参照してください。  
+     ミラーリングを開始するには、NORECOVERY を指定して最新の完全バックアップを復元し、ミラーリング データベースを作成しておく必要があります。さらに状況に応じて、プリンシパル データベースのログ バックアップをミラー サーバーに復元する必要があります。 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)を使用します。  
   
 -   プリンシパル サーバー インスタンスとミラー サーバー インスタンスの TCP アドレスが既に指定されている (**[サーバー ネットワーク アドレス]** セクション)。  
   
@@ -126,7 +126,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  動作モードの詳細については、「 [データベース ミラーリングの動作モード](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)」を参照してください。  
   
- **[状態]**  
+ **ステータス**  
  ミラーリングが開始された後、 **[状態]** パネルには **[ミラーリング]** ページを選択したときのデータベース ミラーリング セッションの状態が表示されます。 **[状態]** パネルを更新するには、 **[最新の情報に更新]** ボタンをクリックします。 表示される状態は次のとおりです。  
   
 |状態|説明|  
@@ -143,7 +143,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **[更新]**  
  クリックすると、 **[状態]** ボックスが更新されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データベース ミラーリングについて詳しく理解していない場合は、「 [データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)をクリックします。  
   
 ### <a name="adding-a-witness-to-an-existing-session"></a>既存のセッションへのミラーリング監視の追加  

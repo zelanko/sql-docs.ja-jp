@@ -1,38 +1,36 @@
 ---
-title: "列の削除 (SSAS 表形式) |Microsoft ドキュメント"
+title: "列の削除 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 703db83b-e554-450e-813e-23ad08c1cdad
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e8b03c05cb27cdd2e736ad8bc57225408334827e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c18504b3e6430807f124938b60d7f022a8050379
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="delete-a-column-ssas-tabular"></a>列の削除 (SSAS テーブル)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]このトピックでは、テーブル モデル テーブルから列を削除する方法について説明します。  
+# <a name="delete-a-column"></a>列の削除 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+この記事では、テーブル モデル テーブルから列を削除する方法について説明します。  
   
 ## <a name="delete-a-model-table-column"></a>モデル テーブルの列の削除  
   
 > [!NOTE]  
->  モデル テーブルから列を削除しても、列はパーティションのクエリ定義からは削除されません。 削除する列がパーティションの一部である場合、パーティションのクエリ定義から手動で列を削除する必要があります。 パーティションのクエリ定義から列を削除しない場合、列にクエリが実行されてデータが返されますが、モデル テーブルには処理操作時に値が設定されません。 詳細については、「 [パーティション (SSAS テーブル)](../../analysis-services/tabular-models/partitions-ssas-tabular.md)」を参照してください。  
+>  モデル テーブルから列を削除しても、列はパーティションのクエリ定義からは削除されません。 削除する列がパーティションの一部である場合、パーティションのクエリ定義から手動で列を削除する必要があります。 パーティションのクエリ定義から列を削除しない場合、列にクエリが実行されてデータが返されますが、モデル テーブルには処理操作時に値が設定されません。 詳細については、次を参照してください。[パーティション](../../analysis-services/tabular-models/partitions-ssas-tabular.md)です。  
   
 #### <a name="to-delete-a-model-table-column"></a>モデル テーブルの列を削除するには  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/08/2017
 3.  **[テーブルのプロパティの編集]** ダイアログ ボックスのテーブル プレビュー ウィンドウで、削除する列をオフにしてから、 **[OK]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [列のテーブルへの追加 (SSAS テーブル)](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)   
- [パーティション (SSAS テーブル)](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
+ [テーブルに列を追加します。](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)   
+ [パーティション](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
   
   

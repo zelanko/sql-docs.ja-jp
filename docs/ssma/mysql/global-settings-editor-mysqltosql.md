@@ -1,7 +1,7 @@
 ---
 title: "グローバル設定 (エディター) (MySQLToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 440303d56fc621d811c67147fa4ebe665ac51341
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cedd977a396116621741fce43993e4dcecc3c494
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-editor-mysqltosql"></a>グローバル設定 (エディター) (MySQLToSQL)
 エディター ページを使用して、**グローバル設定** ダイアログ ボックスのコード エディター ウィンドウの設定を指定します。  
   
 エディターの設定にアクセスする、**ツール**メニューの **グローバル設定**をクリックして**GUI**クリックし、左側のウィンドウの下部にある**エディター**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **エディターで行番号を表示します。**  
 コード エディター ウィンドウで、行番号を表示するには、選択**True**です。  
   

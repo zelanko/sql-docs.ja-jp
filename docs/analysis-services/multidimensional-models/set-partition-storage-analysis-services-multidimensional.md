@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,19 +27,20 @@ helpviewer_keywords:
 - ROLAP
 - medium latency MOLAP
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 82b81fb4ee7b4c9df136b519922807fdf94cfa77
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 42823cdd118d3fb52df6265671eaca0fd25be96c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>パーティション ストレージの設定 (Analysis Services - 多次元)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]とキャッシュ オプションのストレージ モードにいくつかの標準的なストレージ構成を提供します。 これにより、更新通知、待機時間、およびデータの再構築に一般的に使用される構成が提供されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]とキャッシュ オプションのストレージ モードにいくつかの標準的なストレージ構成を提供します。 これにより、更新通知、待機時間、およびデータの再構築に一般的に使用される構成が提供されます。  
   
  パーティションのストレージは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]のキューブの [パーティション] タブ、または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のパーティション プロパティ ページで指定できます。  
   
@@ -87,6 +85,6 @@ ms.lasthandoff: 12/08/2017
  **[設定をディメンションに適用する]** チェック ボックスをオンにした場合は、メジャー グループに関連するディメンションに同じストレージ設定が適用されます。 ディメンションの値は、最初はパーティション値と同じになります。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデル内のパーティション](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)  
+ [多次元モデルではパーティション](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)  
   
   

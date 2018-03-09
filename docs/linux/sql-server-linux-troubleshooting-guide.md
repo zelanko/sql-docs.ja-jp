@@ -3,31 +3,34 @@ title: "SQL Server on Linux のトラブルシューティング |Microsoft ド�
 description: "SQL Server 2017 を使用して Linux 上のトラブルシューティングのヒントを提供します。"
 author: annashres
 ms.author: anshrest
-manager: jhubbard
-ms.date: 05/08/2017
+manager: craigg
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: a65ee3607cb2bbe2a1a30135950e611e4456f8ba
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b3dc37601859ee4125f9f7885592e3a0653e8d0c
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux をトラブルシューティングします。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このドキュメントでは、Linux または、Docker コンテナーで実行されている Microsoft SQL Server のトラブルシューティングを行う方法について説明します。 Linux に SQL Server のトラブルシューティングを行うときサポートされる機能およびにおける既知の制限を確認してください、 [SQL Server on Linux のリリース ノート](sql-server-linux-release-notes.md)です。
+このドキュメントでは、Linux または、Docker コンテナーで実行されている Microsoft SQL Server のトラブルシューティングを行う方法について説明します。 SQL Server on Linux のトラブルシューティングを行うときにサポートされる機能の既知の制限事項を確認するのに注意してください、 [SQL Server on Linux のリリース ノート](sql-server-linux-release-notes.md)です。
 
-## <a id="connection"></a>接続エラーをトラブルシューティングします。
+> [!TIP]
+> よく寄せられる質問に対する回答については、次を参照してください。、 [SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)です。
+
+## <a id="connection"></a> 接続エラーをトラブルシューティングします。
 Linux SQL Server への接続に問題が発生した場合は、いくつかを確認します。 
 
 - サーバー名または IP アドレスが、クライアント コンピューターから到達可能であることを確認します。
@@ -51,7 +54,7 @@ Linux SQL Server への接続に問題が発生した場合は、いくつかを
 
 - ユーザー名とパスワードを含まないこと誤りがないか、余分なスペースか不適切な大文字小文字の区別を確認します。
 
-- 次のようにサーバー名でプロトコルとポート番号を明示的に設定しようとしています: **tcp:servername、1433**です。
+- 次の例のようにサーバー名でプロトコルとポート番号を明示的に設定しようとしています: **tcp:servername、1433**です。
 
 - 接続エラーとタイムアウトもネットワーク接続の問題があります。 接続情報とネットワーク接続を確認した後、再度接続を再試行してください。
 
@@ -61,7 +64,7 @@ Linux SQL Server への接続に問題が発生した場合は、いくつかを
 
 ### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>Red Hat Enterprise Linux (RHEL) および Ubuntu で mssql サーバー サービスを管理します。 
 
-このコマンドを使用して SQL Server サービスのステータスのステータスを確認します。
+このコマンドを使用して SQL Server サービスの状態を確認します。
 
    ```bash
    sudo systemctl status mssql-server
@@ -77,7 +80,7 @@ Linux SQL Server への接続に問題が発生した場合は、いくつかを
 
 ### <a name="manage-the-execution-of-the-mssql-docker-container"></a>Mssql Docker コンテナーの実行を管理します。
 
-(ID は、"コンテナー ID"列の下にあるされます)、次のコマンドを実行して、最新バージョンに作成された SQL Server の Docker コンテナーの状態およびコンテナーの ID を取得できます。
+次のコマンドを実行して最新作成された SQL Server の Docker コンテナーの状態およびコンテナーの ID を取得できます (下の ID が、**コンテナー ID**列)。
 
    ```bash
    sudo docker ps -l
@@ -151,7 +154,7 @@ SQLCMD でのシングル ユーザー モードで SQL Server を起動しま�
 > [!WARNING]  
 >  スタートアップに関する将来の問題を防ぐため、Linux 上の SQL Server は "mssql" ユーザーで起動してください。 たとえば、"sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]" などとします。 
 
-別のユーザーと、SQL Server を開始している誤って場合、systemd で SQL Server を開始する前に 'mssql' ユーザーに SQL Server データベース ファイルの所有権を変更する必要があります。 たとえば、'mssql' ユーザーに/var/opt/mssql 下にあるすべてのデータベース ファイルの所有権を変更するに次のコマンドを実行します。
+別のユーザーと、SQL Server を開始している誤って場合、は、systemd で SQL Server を開始する前に 'mssql' ユーザーに SQL Server データベース ファイルの所有権を変更する必要があります。 たとえば、'mssql' ユーザーに/var/opt/mssql 下にあるすべてのデータベース ファイルの所有権を変更するに次のコマンドを実行します。
 
    ```bash
    chown -R mssql:mssql /var/opt/mssql/
@@ -159,9 +162,9 @@ SQLCMD でのシングル ユーザー モードで SQL Server を起動しま�
 
 ## <a name="common-issues"></a>一般的な問題
 
-1. リモート SQL Server インスタンスに接続することができません。
+1. リモート SQL Server インスタンスに接続することはできません。
 
-   トピックの「トラブルシューティング」を参照してください[Linux に SQL Server への接続](#connection)です。
+   記事の「トラブルシューティング」を参照してください[Linux に SQL Server への接続](#connection)です。
 
 2. エラー: ホスト名は 15 文字である必要があります以下です。
 
@@ -169,10 +172,10 @@ SQLCMD でのシングル ユーザー モードで SQL Server を起動しま�
 
 3. システム管理者 (SA) パスワードをリセットしています。
 
-   システム管理者 (SA) パスワードを忘れてしまったか、何らかの理由でリセットする必要が次の手順に従ってください。
+   システム管理者 (SA) パスワードを忘れてしまった何らかの理由でリセットする必要があるか、以下の手順を実行します。
 
    > [!NOTE]
-   > 次の手順は、SQL Server サービスを一時的に停止します。
+   > 次の手順では、SQL Server サービスを一時的に停止します。
 
    ホスト端末にログインし、次のコマンドを実行し、SA パスワードをリセットする指示に従います。
 
@@ -200,12 +203,4 @@ SQLCMD でのシングル ユーザー モードで SQL Server を起動しま�
    リソース:[特殊文字](http://tldp.org/LDP/abs/html/special-chars.html)
    [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
 
-## <a name="support"></a>サポート
-
-サポート、コミュニティを通じて使用エンジニア リング チームによって監視できます。 質問については、次のリソースを使用します。
-
-- [DBA スタック Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): データベースの管理の質問
-- [スタックのオーバーフロー](http://stackoverflow.com/questions/tagged/sql-server): 開発の質問
-- [MSDN フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): 技術的な質問
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): バグ、および要求機能の報告
-- [Reddit](https://www.reddit.com/r/SQLServer/): SQL Server の説明
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

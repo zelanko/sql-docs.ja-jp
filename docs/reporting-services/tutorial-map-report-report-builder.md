@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2250158376315b0eb05dc0b95bc7cd78a333aec9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5e5cbb6a1ac4cb9edf2baff1eb68c341c8187872
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-map-report-report-builder"></a>チュートリアル: マップ レポート (レポート ビルダー)
 この [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] チュートリアルでは、地図を背景として、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートのデータを表示するときに使用できるマップ機能について学習できます。 
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/05/2017
     
     ![report-builder-map-ny-counties](../reporting-services/media/report-builder-map-ny-counties.png)
   
-7.  **[次へ]**をクリックします。  
+7.  **[次へ]** をクリックします。  
   
 8.  **[空間データとマップ ビューのオプションを選択]** ページで、既定値をそのまま使用し、 **[次へ]**をクリックします。 
  
@@ -140,7 +140,7 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     > 適切な権限を持っている限り、選択するデータ ソースは重要ではありません。 データ ソースからはデータを取得しません。 詳細については、[「別の方法でデータ接続を取得する &#40;レポート ビルダー&#41;」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
   
-6.  **[次へ]**をクリックします。  
+6.  **[次へ]** をクリックします。  
   
 7.  **[クエリのデザイン]** ページで、 **[テキストとして編集]**をクリックします。  
   
@@ -188,7 +188,7 @@ ms.lasthandoff: 12/05/2017
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
   
-10. **[次へ]**をクリックします。  
+10. **[次へ]** をクリックします。  
   
     DataSet1 という名前のレポート データセットが作成されます。 ウィザードを完了したら、レポート データ ペインにフィールド コレクションが表示されます。  
   
@@ -196,9 +196,9 @@ ms.lasthandoff: 12/05/2017
   
     マップ ビューに、各店舗の場所を示す円が表示されます。  
   
-12. **[次へ]**をクリックします。  
+12. **[次へ]** をクリックします。  
   
-13. [マップの視覚エフェクトの選択] ページで、マップの種類として、データに基づきサイズが変化するマーカーを表示する **[バブル マップ]** をクリックします。 **[次へ]**をクリックします。  
+13. [マップの視覚エフェクトの選択] ページで、マップの種類として、データに基づきサイズが変化するマーカーを表示する **[バブル マップ]** をクリックします。 **[次へ]** をクリックします。  
   
 14. **[分析データセットの選択]** ページで [DataSet1] をクリックし、 **[次へ]**をクリックします。 このデータセットには、新しいポイント レイヤーに表示される分析データと空間データの両方が含まれています。   
   
@@ -251,7 +251,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  **[SQL Server 空間データ ソースへの接続の選択]**で、最初の手順で使用したデータ ソースを選択します。  
   
-6.  **[次へ]**をクリックします。  
+6.  **[次へ]** をクリックします。  
   
 7.  **[クエリのデザイン]** ページで、 **[テキストとして編集]**をクリックします。 クエリ デザイナーがテキスト ベース モードに切り替わります。  
   
@@ -264,7 +264,7 @@ ms.lasthandoff: 12/05/2017
        -73.4728622833178 44.7028831413324)' AS geography) as Route  
     ```  
   
-9. **[次へ]**をクリックします。  
+9. **[次へ]** をクリックします。  
   
     3 つの店舗を接続するパスがマップに表示されます。  
   
@@ -272,7 +272,7 @@ ms.lasthandoff: 12/05/2017
   
     マップ ビューに、New York 州の北部にある店舗から New York 州の南部にある店舗へのパスが表示されます。  
   
-11. **[次へ]**をクリックします。  
+11. **[次へ]** をクリックします。  
   
 12. **[マップの視覚エフェクトを選択]** ページで、 **[基本線マップ]**をクリックし、 **[次へ]**をクリックします。  
   
@@ -545,7 +545,7 @@ ms.lasthandoff: 12/05/2017
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 これで、レポートにマップを追加する方法のチュートリアルは終了です。  
   
 詳細については、「[マップ &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md)」を参照してください。  

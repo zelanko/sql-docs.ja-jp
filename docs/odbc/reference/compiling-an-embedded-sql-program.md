@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 996e0cc19a0828fe7ca7a7ba1bd1a95402ebbe81
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: aeb3dbb46b8ac3e5e715a479923694cdea28a97f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiling-an-embedded-sql-program"></a>埋め込み SQL プログラムのコンパイル
 埋め込み SQL プログラムには、SQL とホスト言語のステートメントの組み合わせが含まれている、ために、ホスト言語のコンパイラに直接送信することはできません。 代わりに、複数の手順の手順は、コンパイルします。 このプロセスには、製品が異なる場合は、操作は、ほぼすべての製品と同じです。  

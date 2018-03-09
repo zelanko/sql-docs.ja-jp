@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,21 +18,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cf871f0b6353d569106768deeeb5cc3e6d65b12d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4980545b408bde4c30047eae60e000f2518eb107
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>レプリケーション、変更の追跡、変更データ キャプチャ - Always On 可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、高可用性と追加のデータベース復旧機能を提供します。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、高可用性と追加のデータベース復旧機能を提供します。  
   
 ##  <a name="Overview"></a> 可用性グループによるレプリケーションの概要  
   
@@ -196,7 +197,7 @@ Always On 可用性グループに含まれるデータベースで変更デー�
 ##  <a name="Prereqs"></a> レプリケーションの使用に関する前提条件、制限、および考慮事項  
  ここでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]でレプリケーションを配置する際の前提条件、制限、推奨などの考慮事項について説明します。  
   
-### <a name="prerequisites"></a>前提条件  
+### <a name="prerequisites"></a>Prerequisites  
   
 -   単一の可用性グループ内でトランザクション レプリケーションとパブリッシング データベースを使用する場合は、パブリッシャーとディストリビューターの両方が少なくとも [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]を実行する必要があります。 サブスクライバーは、それより低いレベルの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を使用することもできます。  
   
@@ -216,10 +217,10 @@ Always On 可用性グループに含まれるデータベースで変更デー�
 |||||  
 |-|-|-|-|  
 ||**パブリッシャー**|**ディストリビューター***\*|**サブスクライバー (Subscriber)**|  
-|**トランザクション**|可<br /><br /> 注: 双方向の相互トランザクション レプリケーションのサポートは含まれません。|いいえ|可|  
+|**トランザクション**|はい<br /><br /> 注: 双方向の相互トランザクション レプリケーションのサポートは含まれません。|いいえ|はい|  
 |**P2P**|いいえ|いいえ|いいえ|  
-|**Merge**|可|いいえ|可*|  
-|**スナップショット**|可|いいえ|可*|  
+|**Merge**|はい|いいえ|可*|  
+|**スナップショット**|はい|いいえ|可*|  
   
  * レプリカ データベースへのフェールオーバーは手動で行います。 自動フェールオーバーは提供されていません。  
   
@@ -236,9 +237,9 @@ Always On 可用性グループに含まれるデータベースで変更デー�
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **レプリケーション**  
   
--   [Always On 可用性グループ用のレプリケーションの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
+-   [AlwaysOn 可用性グループ用のレプリケーションの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   
--   [Always On パブリケーション データベースのメンテナンス &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
+-   [AlwaysOn パブリケーション データベースのメンテナンス &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
 -   [管理 &#40;レプリケーション&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
   

@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1a1f8208a30e1ff24e76465fd9210a60ef1ec849
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ac8292e9319bef3d535ff6f3977b50ac22805e27
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services の高可用性とスケーラビリティ
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services データベースの高を行うための最もよく使用される手法について説明と拡張性を利用します。 それぞれの目的に個別に対処できますが、実際のところ、この 2 つはほとんどのケースで連携しています。つまり、大規模なクエリまたは処理ワークロードをスケーラブルな方法で配置すると、通常は、高可用性を期待できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+この記事では、Analysis Services データベースの高可用性とスケーラビリティを確保するために最もよく使用される手法について説明します。 それぞれの目的に個別に対処できますが、実際のところ、この 2 つはほとんどのケースで連携しています。つまり、大規模なクエリまたは処理ワークロードをスケーラブルな方法で配置すると、通常は、高可用性を期待できます。  
   
  ただし、その逆については必ずしも正しいとは限りません。 ミッションクリティカルで中程度のクエリ ワークロードに対して厳格なサービス レベル契約が存在する場合は、スケーラビリティが伴わない高可用性が唯一の目的になることがあります。  
   

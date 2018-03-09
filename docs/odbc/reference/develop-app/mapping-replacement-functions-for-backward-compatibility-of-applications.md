@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4fc2b4027039cf110caaf96bc2a197e2b10f1f62
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c93ea22e03f401580a968dacb1ca15910c7eb44b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>アプリケーションの旧バージョンとの互換性のための置換関数のマップ
 ODBC 3*.x* ODBC 3 での作業アプリケーション*.x*ドライバー マネージャーは、ODBC 2 に対して動作します*。x*ドライバー限り、新しい機能は使用されません。 重複している両方の機能および動作の変更を行う方法に影響するただしを ODBC 3 です。*x* ODBC 2 にアプリケーションが動作します*。x*ドライバー。 ODBC 2 を使用場合します。*x*ドライバー、ドライバー マネージャーは、次の ODBC 3 にマップします*。x*関数で、1 つまたは複数の ODBC 2 が置き換えられます*。x*関数は、対応する ODBC 2 にします*。x*関数。  

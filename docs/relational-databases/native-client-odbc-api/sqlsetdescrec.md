@@ -8,21 +8,21 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: SQLSetDescRec function
 ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 03db037c6048261681a1f2857be910ebf800c5ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 26821deb5f1d2404d1ea41ede439cfde403c265b
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 |パラメーター|テーブル値パラメーター以外のパラメーターの型 (テーブル値パラメーター列など) の関連属性|テーブル値パラメーターに関連する属性|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*型*|SQL_DESC_TYPE|SQL_SS_TABLE|  
-|*サブタイプ*|無視|SQL_DATETIME 型または SQL_INTERVAL 型のレコードの場合は、これに SQL_DESC_DATETIME_INTERVAL_CODE を設定します。|  
+|*SubType*|無視|SQL_DATETIME 型または SQL_INTERVAL 型のレコードの場合は、これに SQL_DESC_DATETIME_INTERVAL_CODE を設定します。|  
 |*長さ*|SQL_DESC_OCTET_LENGTH|テーブル値パラメーターの型名の長さ。 型名が null 終端、または 0 場合、テーブル値パラメーターの名前を入力する必要はない場合は、SQL_NTS にできます。|  
 |*有効桁数*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
 |*Scale*|SQL_DESC_SCALE|未使用。 このパラメーターは 0 にする必要があります。|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>SQLSetDescRec による機能強化された日付と時刻のサポート  
  日付型または時刻型に対して許可される値を次に示します。  
   
-||*型*|*サブタイプ*|*長さ*|*有効桁数*|*Scale*|  
+||*型*|*SubType*|*長さ*|*有効桁数*|*Scale*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
  **SQLSetDescRec**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)です。  
   
 ## <a name="see-also"></a>参照  
- [Sqlsetdescrec による](http://go.microsoft.com/fwlink/?LinkId=80704)   
+ [SQLSetDescRec](http://go.microsoft.com/fwlink/?LinkId=80704)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

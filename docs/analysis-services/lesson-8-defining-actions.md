@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 605c4ae52c6e6f51ff03eb5ff161603b9fb082e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c34913be54a2eb74401d602f1ecafee25d5921c6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-8-defining-actions"></a>レッスン 8 : アクションの定義
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]このレッスンでの動作を定義する学習、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プロジェクト。 アクションは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] に格納される多次元式 (MDX) ステートメントです。アクションはクライアント アプリケーションに統合することができ、ユーザーによって開始可能です。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+このレッスンでは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトでアクションを定義する方法を学習します。 アクションは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] に格納される多次元式 (MDX) ステートメントです。アクションはクライアント アプリケーションに統合することができ、ユーザーによって開始可能です。  
   
 > [!NOTE]  
 > このチュートリアルの各レッスンの操作内容が反映されたプロジェクトを、オンラインで入手できます。 途中のレッスンから開始する場合は、前のレッスンの操作内容が反映されたプロジェクトを作業の開始点として使用できます。 このチュートリアルのサンプル プロジェクトをダウンロードするには、[ここ](http://go.microsoft.com/fwlink/?LinkID=221866) をクリックしてください。  
@@ -44,23 +47,23 @@ ms.lasthandoff: 12/08/2017
 |ステートメントから削除してください。|OLE DB コマンドを実行します。|  
 |[URL]|インターネット ブラウザーで動的 Web ページを表示します。|  
   
-アクションを使用すると、アプリケーションを起動したり、選択したアイテムのコンテキスト内で他のステップを実行することができます。 詳細については、 [アクション &#40;Analysis Services - 多次元データ&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)および [「多次元モデルのアクション」](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
+アクションを使用すると、アプリケーションを起動したり、選択したアイテムのコンテキスト内で他のステップを実行することができます。 詳細については、[「アクション (Analysis Services - 多次元データ)」](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md) および [「多次元モデルのアクション」](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md) を参照してください。  
   
 > [!NOTE]  
 > アクション例については、[計算ツール] ペインの [テンプレート] タブか、 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW サンプル データ ウェアハウスのアクション例を参照してください。 このデータベースのインストールの詳細については、「 [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](../analysis-services/install-sample-data-and-projects.md)」 を参照してください。  
   
 このレッスンの内容は次のとおりです。  
   
-[ドリルスルー アクションの定義と使用](../analysis-services/lesson-8-1-defining-and-using-a-drillthrough-action.md)  
+[定義とドリルスルー アクションの使用](../analysis-services/lesson-8-1-defining-and-using-a-drillthrough-action.md)  
 この作業では、このチュートリアルで以前に定義したファクト ディメンションのリレーションシップによって、ドリルスルー アクションの定義、使用、変更を行います。  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 9 : パースペクティブと翻訳の定義](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+[レッスン 9: Defining Perspectives and Translations](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>参照  
 [Analysis Services のチュートリアル シナリオ](../analysis-services/analysis-services-tutorial-scenario.md)  
 [多次元モデリング (Adventure Works チュートリアル)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-[アクション &#40;Analysis Services - 多次元データ&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
+[アクションと #40 です。Analysis Services - 多次元データ &#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
 [「多次元モデルのアクション」](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

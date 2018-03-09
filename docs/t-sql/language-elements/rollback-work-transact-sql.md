@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ROLLBACK WORK
 - ROLLBACK_WORK_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - transaction rollbacks [SQL Server]
 - erasing data modifications [SQL Server]
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - rolling back transactions, ROLLBACK WORK
 - savepoints [SQL Server]
 ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ea67c2015519a5d276fec9898258a8f3bf67ced
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 12fbcc7758c2cc1a299607959f6210df2a68b99b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +57,7 @@ ROLLBACK [ WORK ]
   
  トランザクションを入れ子にする場合 ROLLBACK WORK 常にロールバック、最も外側の BEGIN TRANSACTION ステートメントとデクリメント、@@TRANCOUNTシステム関数を 0 にします。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ROLLBACK WORK 権限は、特に指定のない限り有効なすべてのユーザーに与えられます。  
   
 ## <a name="see-also"></a>参照  

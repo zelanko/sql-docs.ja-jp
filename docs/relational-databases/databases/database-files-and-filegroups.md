@@ -1,14 +1,15 @@
 ---
 title: "データベース ファイルとファイル グループ | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2017
+ms.date: 01/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - primary files [SQL Server]
 - file types [SQL Server]
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3eae1aea0305e2838f29f1259d9a21c9b33f4e2e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8306f3c4fb55d441eef744ff1ef9a84256b9eb76
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="database-files-and-filegroups"></a>データベース ファイルとファイル グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各データベースには、データ ファイルとログ ファイルという少なくとも 2 つのオペレーティング システム ファイルがあります。 データ ファイルには、テーブル、インデックス、ストアド プロシージャ、およびビューなどのデータおよびオブジェクトが含まれます。 ログ ファイルには、データベース内のすべてのトランザクションを復旧するために必要な情報が含まれます。 データ ファイルは、割り当てと管理の目的でファイル グループにまとめることができます。  
@@ -62,27 +63,36 @@ ms.lasthandoff: 01/02/2018
  既定では、データとトランザクション ログは同一のドライブおよびパス上に配置されます。 これは、単一のディスク システムを処理するために行われますが、 実稼働環境では最適ではない場合があります。 そのため、データとログ ファイルは別のディスクに配置することをお勧めします。  
 
 ### <a name="logical-and-physical-file-names"></a>論理ファイル名と物理ファイル名
-SQL Server のファイルには、それぞれ 2 つの名前があります。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイルにはファイル名の種類が 2 つあります。 
 
-**logical_file_name:**  logical_file_name はすべての Transact-SQL ステートメントで物理ファイルを参照するために使用する名前です。 論理ファイル名は、SQL Server の識別子の規則に従っている必要があります。また、データベース内の論理ファイル名は互いに一意にする必要があります。
+**logical_file_name:**  logical_file_name はすべての Transact-SQL ステートメントで物理ファイルを参照するために使用する名前です。 論理ファイル名は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の識別子の規則に従っている必要があります。また、データベース内の論理ファイル名は互いに一意にする必要があります。 これは `ALTER DATABASE` の `NAME` 引数で設定されます。 詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。
 
-**os_file_name:** os_file_name はディレクトリ パスを含む物理ファイルの名前です。 この名前はオペレーティング システムのファイル名の規則に従っている必要があります。
+**os_file_name:** os_file_name はディレクトリ パスを含む物理ファイルの名前です。 この名前はオペレーティング システムのファイル名の規則に従っている必要があります。 これは `ALTER DATABASE` の `FILENAME` 引数で設定されます。 詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。
 
-SQL Server のデータとログ ファイルは、FAT または NTFS のいずれかのファイル システムに配置できます。 NTFS のセキュリティの方が強力なので、NTFS ファイル システムを使用することをお勧めします。 読み書き可能なデータ ファイル グループとログ ファイルは、圧縮された NTFS ファイル システムに配置できません。 圧縮された NTFS ファイル システムに配置できるのは、読み取り専用データベースと読み取り専用セカンダリ ファイル グループだけです。
+> [!IMPORTANT]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータとログ ファイルは、FAT または NTFS のいずれかのファイル システムに配置できます。 Windows システムの場合、NTFS のセキュリティの方が強力なので、NTFS ファイル システムを使用することをお勧めします。 
 
-1 台のコンピューターで SQL Server の複数のインスタンスを実行すると、インスタンスごとに異なる既定のディレクトリが与えられ、そのインスタンスで作成したデータベースのファイルがそのディレクトリで保持されます。 詳細については、「 [SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)」を参照してください。
+> [!WARNING]
+> 読み書き可能なデータ ファイル グループとログ ファイルは、圧縮された NTFS ファイル システムに配置できません。 圧縮された NTFS ファイル システムに配置できるのは、読み取り専用データベースと読み取り専用セカンダリ ファイル グループだけです。
+> 領域を節約するために、ファイル システムの圧縮ではなく、[データの圧縮](../../relational-databases/data-compression/data-compression.md)を強くお勧めします。
+
+1 台のコンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスを実行すると、インスタンスごとに異なる既定のディレクトリが与えられ、そのインスタンスで作成したデータベースのファイルがその既定のディレクトリで保持されます。 詳細については、「 [SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)」を参照してください。
 
 ### <a name="data-file-pages"></a>データ ファイルのページ
-SQL Server のデータ ファイルのページには、ファイル内の最初のページを 0 として、順に番号が付けられています。 データベース内の各ファイルには一意のファイル ID 番号が付けられています。 データベース内のページを一意に識別するには、ファイル ID とページ番号の両方が必要です。 次の例は、4 MB のプライマリ データ ファイルと 1 MB のセカンダリ データ ファイルがあるデータベースのページ番号を示しています。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイルのページには、ファイル内の最初のページを 0 として、順に番号が付けられています。 データベース内の各ファイルには一意のファイル ID 番号が付けられています。 データベース内のページを一意に識別するには、ファイル ID とページ番号の両方が必要です。 次の例は、4 MB のプライマリ データ ファイルと 1 MB のセカンダリ データ ファイルがあるデータベースのページ番号を示しています。
 
 ![data_file_pages](../../relational-databases/databases/media/data-file-pages.gif)
 
-各ファイルの 1 ページ目はファイル ヘッダー ページで、そのファイルの属性に関する情報が格納されています。 また、ファイルの先頭にある数ページには、アロケーション マップなどのシステム情報が格納されています。 プライマリ データ ファイルと最初のログ ファイルの両方に格納されているシステム ページの 1 つは、データベースの属性情報が格納されているデータベース ブート ページです。 ページとページの種類の詳細については、「ページとエクステントについて」を参照してください。
+各ファイルの 1 ページ目はファイル ヘッダー ページで、そのファイルの属性に関する情報が格納されています。 また、ファイルの先頭にある数ページには、アロケーション マップなどのシステム情報が格納されています。 プライマリ データ ファイルと最初のログ ファイルの両方に格納されているシステム ページの 1 つは、データベースの属性情報が格納されているデータベース ブート ページです。 ページとページの種類の詳細については、「[ページとエクステントのアーキテクチャ ガイド](../..//relational-databases/pages-and-extents-architecture-guide.md)」を参照してください。
 
 ### <a name="file-size"></a>ファイル サイズ
-SQL Server のファイルは、最初に指定したサイズから自動拡張するように設定できます。 ファイルを定義するときに、拡張の増分値を指定できます。 ファイルの空き容量がなくなるたびに、ファイルのサイズは指定した増分値だけ拡張されます。 ファイル グループに複数のファイルが存在する場合、すべてのファイルの空き容量がなくなるまで、ファイル グループ内のファイルは自動拡張しません。 すべてのファイルに空き容量がなくなると、ラウンド ロビン方式で拡張されます。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のファイルは、最初に指定したサイズから自動拡張するように設定できます。 ファイルを定義するときに、拡張の増分値を指定できます。 ファイルの空き容量がなくなるたびに、ファイルのサイズは指定した増分値だけ拡張されます。 ファイル グループに複数のファイルが存在する場合、すべてのファイルの空き容量がなくなるまで、ファイル グループ内のファイルは自動拡張しません。 すべてのファイルに空き容量がなくなると、ラウンド ロビン方式の[比例配分](../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill)で拡張されます。
 
-各ファイルに最大サイズを指定することもできます。 最大サイズを指定しなかった場合、ファイルはディスクの空き領域を使い果たすまで拡張し続けます。 この機能は、ユーザーがシステム管理者と簡単に連絡を取れない状況にあり、SQL Server をアプリケーションに埋め込んだデータベースとして使用している場合に特に便利です。 ユーザーは、必要に応じてファイルを自動拡張するようにし、データベースの空き領域の監視や追加領域を手動で割り当てる管理上の負担を軽減できます。 
+各ファイルに最大サイズを指定することもできます。 最大サイズを指定しなかった場合、ファイルはディスクの空き領域を使い果たすまで拡張し続けます。 この機能は、ユーザーがシステム管理者と簡単に連絡を取れない状況にあり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアプリケーションに埋め込んだデータベースとして使用している場合に特に便利です。 ユーザーは、必要に応じてファイルを自動拡張するようにし、データベースの空き領域の監視や追加領域を手動で割り当てる管理上の負担を軽減できます。  
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で[ファイルの瞬時初期化 (IFI)](../../relational-databases/databases/database-instant-file-initialization.md) を有効にすると、データ ファイルに新しい領域を割り当てるとき、最小限のオーバーヘッドが発生します。
+
+トランザクション ログ ファイル管理の詳細については、「[トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)」を参照してください。   
 
 ## <a name="database-snapshot-files"></a>データベース スナップショット ファイル
 スナップショットがユーザーによって作成されるか、内部的に使用されるかに応じて、copy-on-write (書き込まれるたびにコピー) のデータを保存するためにデータベース スナップショットで使用されるファイル形式が決まります。
@@ -93,19 +103,29 @@ SQL Server のファイルは、最初に指定したサイズから自動拡張
 ## <a name="filegroups"></a>ファイル グループ  
  各データベースには、1 つのプライマリ ファイル グループがあります。 プライマリ ファイル グループには、プライマリ データ ファイル、および他のファイル グループに配置されていないセカンダリ ファイルが含まれます。 ユーザー定義のファイル グループを作成して、データベースの管理、データの割り当て、および配置をしやすくするために、データ ファイルをグループ化できます。  
   
- たとえば、3 つのディスク ドライブ上に 1 つずつ、合計 3 つのファイル (Data1.ndf、Data2.ndf、Data3.ndf) を作成し、これらのファイルをファイル グループ **fgroup1**にまとめます。 次に、ファイル グループ **fgroup1**上にテーブルを作成します。 このテーブル内にあるデータに対するクエリが 3 つのディスクにわたって分散されるため、パフォーマンスが向上します。 RAID (Redundant Array of Independent Disks) ストライプ セットにファイルを 1 つ作成しても、同じくらいパフォーマンスを向上させることができます。 ただし、ファイルとファイル グループを使用すれば、新しいファイルを新しいディスクに容易に追加できます。  
+ たとえば、3 つのファイル (`Data1.ndf`、`Data2.ndf`、`Data3.ndf`) をそれぞれ 3 つのディスク ドライブ上に作成し、ファイル グループ `fgroup1` に割り当てることができます。 その後、ファイル グループ `fgroup1` にテーブルを作成することができます。 このテーブル内にあるデータに対するクエリが 3 つのディスクにわたって分散されるため、パフォーマンスが向上します。 RAID (Redundant Array of Independent Disks) ストライプ セットにファイルを 1 つ作成しても、同じくらいパフォーマンスを向上させることができます。 ただし、ファイルとファイル グループを使用すれば、新しいファイルを新しいディスクに容易に追加できます。  
   
  すべてのデータ ファイルは、次の表に一覧表示されているファイル グループに格納されます。  
   
 |[ファイル グループ]|Description|  
 |---------------|-----------------|  
 |プライマリ|プライマリ ファイルが含まれているファイル グループ。 すべてのシステム テーブルがプライマリ ファイル グループに割り当てられます。|  
+|メモリ最適化データ|メモリ最適化ファイル グループは filestream ファイル グループに基づきます。|  
+|Filestream||    
 |ユーザー定義|ユーザーがデータベースを最初に作成したとき、または後で変更したときに、ユーザーが特別に作成したファイル グループ。|  
   
-### <a name="default-filegroup"></a>既定のファイル グループ  
+### <a name="default-primary-filegroup"></a>既定の (プライマリ) ファイル グループ  
  所属させるファイル グループを指定せずにデータベース内にオブジェクトを作成すると、そのオブジェクトは既定のファイル グループに割り当てられます。 どのような場合でも、必ず 1 つのファイル グループが既定のファイル グループとして指定されます。 既定のファイル グループ内のファイルは、他のファイル グループに割り当てられない新しいオブジェクトを十分に格納できる大きさである必要があります。  
   
  PRIMARY ファイル グループは、ALTER DATABASE ステートメントを使用して変更しない限り、既定のファイル グループです。 システム オブジェクトとシステム テーブルは、変更後の既定のファイル グループではなく、引き続き PRIMARY ファイル グループに格納されます。  
+ 
+### <a name="memory-optimized-data-filegroup"></a>メモリ最適化データ ファイル グループ
+
+メモリ最適化ファイル グループの詳細については、「[メモリ最適化ファイル グループ](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)」を参照してください。
+
+### <a name="filestream-filegroup"></a>filestream ファイル グループ
+
+filestream ファイル グループの詳細については、「[FILESTREAM](../../relational-databases/blob/filestream-sql-server.md#filestream-storage)」と「[FILESTREAM が有効なデータベースを作成する方法](../../relational-databases/blob/create-a-filestream-enabled-database.md)」を参照してください。
 
 ### <a name="file-and-filegroup-example"></a>ファイルおよびファイル グループの例
  次の例では、SQL Server のインスタンスにデータベースを作成します。 このデータベースにはプライマリ データ ファイル、ユーザー定義のファイル グループ、およびログ ファイルが含まれます。 プライマリ データ ファイルはプライマリ ファイル グループ内にあり、ユーザー定義ファイル グループには 2 つのセカンダリ データ ファイルがあります。 ALTER DATABASE ステートメントにより、このユーザー定義のファイル グループは既定のファイル グループになります。 その後、ユーザー定義のファイル グループを指定してテーブルを作成します。 (この例では、SQL Server のバージョンの指定を回避するため、一般的なパス `c:\Program Files\Microsoft SQL Server\MSSQL.1` を使用しています。)
@@ -114,7 +134,7 @@ SQL Server のファイルは、最初に指定したサイズから自動拡張
 USE master;
 GO
 -- Create the database with the default data
--- filegroup and a log file. Specify the
+-- filegroup, filstream filegroup and a log file. Specify the
 -- growth increment and the max size for the
 -- primary data file.
 CREATE DATABASE MyDB
@@ -137,7 +157,10 @@ FILEGROUP MyDB_FG1
        'c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\data\MyDB_FG1_2.ndf',
     SIZE = 1MB,
     MAXSIZE=10MB,
-    FILEGROWTH=1MB)
+    FILEGROWTH=1MB),
+FILEGROUP FileStreamGroup1 CONTAINS FILESTREAM
+  ( NAME = 'MyDB_FG_FS',
+    FILENAME = 'c:\Data\filestream1')
 LOG ON
   ( NAME='MyDB_log',
     FILENAME =
@@ -157,9 +180,17 @@ CREATE TABLE MyTable
     colb char(8) )
 ON MyDB_FG1;
 GO
+
+-- Create a table in the filestream filegroup
+CREATE TABLE MyFSTable
+(
+    cola int PRIMARY KEY,
+  colb VARBINARY(MAX) FILESTREAM NULL
+)
+GO
 ```
 
-次の図は、上の例を結果をまとめたものです。
+次の図は、上の例の結果をまとめたものです (filestream データを除く)。
 
 ![filegroup_example](../../relational-databases/databases/media/filegroup-example.gif)
 
@@ -174,21 +205,22 @@ GO
 - ファイルは 1 つのファイル グループにしか所属できません。
 - トランザクション ログ ファイルをファイル グループに格納することはできません。
 
-## <a name="recommendations"></a>推奨事項
+## <a name="Recommendations"></a> 推奨事項
 ファイルとファイル グループを使用して作業するときの一般的な推奨事項を次に示します。 
 - 大部分のデータベースは、1 つのデータ ファイルと 1 つのトランザクション ログ ファイルで正常に機能します。
-- 複数のファイルを使用する場合は、追加ファイル用に 2 番目のファイル グループを作成し、既定のファイル グループとして設定します。 これにより、プライマリ ファイルにはシステム テーブルとシステム オブジェクトだけが格納されます。
+- 複数のデータ ファイルを使用する場合は、追加ファイル用に 2 番目のファイル グループを作成し、既定のファイル グループとして設定します。 これにより、プライマリ ファイルにはシステム テーブルとシステム オブジェクトだけが格納されます。
 - パフォーマンスを最適化するには、できるだけ、使用可能な異なるディスクにファイルまたはファイル グループを作成します。 また、大きな記憶域を占有する可能性のあるオブジェクトは、別々のファイル グループに配置します。
 - ファイル グループを使用すると、特定の物理ディスク上にオブジェクトを配置できます。
 - 同じ結合クエリで使用する各テーブルは別のファイル グループに配置してください。 これにより、結合されるデータが並列ディスク I/O によって検索されるので、パフォーマンスが向上します。
 - アクセス頻度が高いテーブルとそれらのテーブルに属する非クラスター化インデックスは、別々のファイル グループに配置してください。 これにより、ファイルが別の物理ディスク上にある場合に並列 I/O が行われるので、パフォーマンスが向上します。
 - トランザクション ログ ファイルは、他のファイルやファイル グループと同じ物理ディスク上に配置しないでください。
 
+トランザクション ログ ファイル管理の推奨事項については、「[トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)」を参照してください。   
+
 ## <a name="related-content"></a>関連コンテンツ  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
-  
- [ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
-  
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)    
+ [ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)      
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
-  
- [SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md) 
+ [SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)    
+ [ページとエクステントのアーキテクチャ ガイド](../../relational-databases/pages-and-extents-architecture-guide.md)    
+ [トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)     

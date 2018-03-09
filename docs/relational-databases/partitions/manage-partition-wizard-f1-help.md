@@ -25,15 +25,15 @@ f1_keywords:
 helpviewer_keywords: wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25be7d99d07300731a9395b096f316faef973eef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: edef05d3a9cd1ae3a363a4cdead10130ee42459f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-partition-wizard-f1-help"></a>パーティションの管理ウィザードの F1 ヘルプ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **パーティションの管理ウィザード**を使用すると、パーティションの切り替えやスライディング ウィンドウ シナリオの実装によって、既存のパーティション テーブルを管理および変更することができます。 このウィザードによって、パーティションの管理が容易になり、テーブル内外へのデータの通常の移行が簡単になります。  
@@ -120,7 +120,7 @@ ms.lasthandoff: 11/17/2017
  **[切り替え元テーブル]**  
  データの切り替え元となる新しいテーブルまたは既存のテーブルを選択します。  
   
- **新規**  
+ **[新規作成]**  
  現在の切り替え元テーブルを切り替えるパーティションに使用するステージング テーブルの、新しい名前を入力します。  
   
  **Existing**  
@@ -169,7 +169,7 @@ ms.lasthandoff: 11/17/2017
  **Run immediately**  
  ウィザードで **[次へ]** または **[完了]**をクリックしたときにパーティションの変更が完了するようにします。  
   
-### <a name="schedule"></a>スケジュール  
+### <a name="schedule"></a>[スケジュール]  
  スケジュールした日時にテーブル パーティションを変更する場合に選択します。  
   
  **[スケジュールの変更]**  
@@ -180,7 +180,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="NewJob"></a> [新しいジョブ スケジュール] ページ  
  **[新しいジョブ スケジュール]** ページを使用すると、スケジュールのプロパティを表示したり、変更したりできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブに必要なスケジュールの種類を選択します。  
   
  **名前**  
@@ -272,14 +272,14 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="Progress"></a> [進行状況] ページ  
  **[進行状況]** ページを使用すると、 **パーティションの管理ウィザード**のアクションに関する状態情報を監視できます。 ウィザードで選択したオプションに応じて、 **[進行状況]** ページに 1 つまたは複数のアクションが含まれる可能性があります。 上部のボックスには、ウィザードの全体的な状態と受信した状態メッセージ、エラー メッセージ、および警告メッセージの数が表示されます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **詳細**  
  アクション、状態、およびウィザードで実行したアクションから返されたメッセージが提供されます。  
   
  **操作**  
  各アクションの種類と名前を指定します。  
   
- **[状態]**  
+ **ステータス**  
  全体としてウィザードのアクションが **[成功]** または **[失敗]**のいずれの値を返したかを示します。  
   
  **メッセージ**  

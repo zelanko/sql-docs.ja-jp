@@ -8,22 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: Extended Static Geography Methods
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Extended Static Geography Methods
 ms.assetid: a665a137-197c-4201-a2fb-ba639b5f3ca3
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b20aecfb9ae21f6e8b366c5da407c5050105ca24
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: c3a3b32f0218505de159c2269aa7b59ab6797dbc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extended-static-geography-methods"></a>拡張された静的な地理メソッド
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [[解析]](../../t-sql/spatial-geography/parse-geography-data-type.md)  
   
--   [Point](../../t-sql/spatial-geography/point-geography-data-type.md)  
+-   [ポイント](../../t-sql/spatial-geography/point-geography-data-type.md)  
   
 ## <a name="see-also"></a>参照  
  [静的集計地理メソッド](../../t-sql/spatial-geography/static-aggregate-geography-methods.md)   

@@ -3,27 +3,27 @@ title: "バックアップし、Linux 上の SQL Server データベースを復
 description: "バックアップおよび、Linux 上の SQL Server データベースを復元する方法を説明します。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.workload: On Demand
-ms.openlocfilehash: bd807454b9b1b946dc396ec53a920fd198c5b5c0
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 96450590b55a6cb9cf6fcf517380bc25a13c1431
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux 上のバックアップと復元の SQL Server データベース
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 他のプラットフォームと同じツールを使用して、Linux 上の SQL Server 2017 からのデータベースのバックアップを実行できます。 使用することができます、Linux サーバー **sqlcmd** SQL Server に接続し、バックアップを実行します。 Windows は、Linux 上の SQL Server に接続し、ユーザー インターフェイスとバックアップを実行します。 バックアップ機能は、プラットフォーム間で同じです。 ローカルをリモート ドライブ、またはデータベースをバックアップするなど、 [Microsoft Azure Blob ストレージ サービス](../relational-databases/backup-restore/sql-server-backup-to-url.md)です。
 
@@ -59,7 +59,7 @@ BACKUP DATABASE successfully processed 298 pages in 0.064 seconds (36.376 MB/sec
 データベースが完全復旧モデルの場合はより詳細な復元オプションのトランザクション ログ バックアップもすることができます。 次の例では、 **sqlcmd**ローカルの SQL Server インスタンスに接続し、トランザクション ログのバックアップを受け取る。
 
 ```bash
-sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
+sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak' WITH NOFORMAT, NOINIT, NAME = N'demodb_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
 ```
 
 ## <a name="restore-a-database"></a>データベースを復元します。
@@ -67,11 +67,11 @@ sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/da
 次の例で**sqlcmd**は SQL Server のローカル インスタンスに接続し、demodb データベースを復元します。 なお、`NORECOVERY`のログ ファイルのバックアップの復元を追加できるようにするオプションを使用します。 追加のログ ファイルを復元する予定がない場合は、削除、`NORECOVERY`オプション。
 
 ```bash
-sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'/var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE, NORECOVERY, STATS = 5"
+sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM DISK = N'/var/opt/mssql/data/demodb.bak' WITH FILE = 1, NOUNLOAD, REPLACE, NORECOVERY, STATS = 5"
 ```
 
 > [!TIP]
-> コマンドを実行を誤って、NORECOVERY を使用していて、追加のログ ファイルのバックアップはありません、`RESTORE DATABASE demodb`追加パラメーターなしでします。 これは、復元を完了.、データベースを運用状態
+> コマンドを実行を誤って、NORECOVERY を使用していて、追加のログ ファイルのバックアップはありません、`RESTORE DATABASE demodb`追加パラメーターなしでします。 これにより、復元を完了し、運用データベース状態のまま。
 
 ### <a name="restore-the-transaction-log"></a>トランザクション ログを復元します。
 

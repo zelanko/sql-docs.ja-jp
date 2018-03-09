@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SHUTDOWN_TSQL
 - SHUTDOWN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SQL Server, stopping
 - shutting down SQL Server
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - stopping SQL Server
 - immediately stopping SQL Server
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 10a6b2c5bf093eaee3eacf183f98ecb644d2fc68
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: df8ef0a3cfe0ac4adb6f45bddb0bef650fea6ff3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +71,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager です。  
   
--   実行して**net stop mssqlserver**の既定のインスタンス、またはを実行して、コマンド プロンプトから**「net stop mssql$***instancename*名前付きインスタンスのコマンド プロンプトからです。  
+-   実行して**net stop mssqlserver**の既定のインスタンス、またはを実行して、コマンド プロンプトから **「net stop mssql$ * * * instancename*名前付きインスタンスのコマンド プロンプトからです。  
   
 -   [コントロール パネル] の [サービス] を使用する。  
   
@@ -78,11 +80,11 @@ SHUTDOWN [ WITH NOWAIT ]
 > [!NOTE]  
 >  これらのメソッドのいずれかを使用して停止する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]送信、`SERVICE_CONTROL_STOP`メッセージごとに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにシャット ダウンのアクセス許可が割り当てられている、 **sysadmin**と**serveradmin**は、固定サーバー ロール、およびそれらに転送できません。  
   
 ## <a name="see-also"></a>参照  
- [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
+ [チェックポイント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/checkpoint-transact-sql.md)   
  [sp_lock &#40;です。TRANSACT-SQL と&#41;です。](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [sqlservr アプリケーション](../../tools/sqlservr-application.md)   

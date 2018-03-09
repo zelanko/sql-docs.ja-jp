@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_performance_counters_TSQL
 - dm_os_performance_counters_TSQL
 - sys.dm_os_performance_counters
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_performance_counters dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_performance_counters dynamic management view
 ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e0251869bd6dc3fb3ef39b5aebb31af346648b2d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 32640c1c4bbc1a40927bece5663401cfcad3ac05
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -40,12 +43,12 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**object_name**|**nchar (128)**|カウンターが属するカテゴリ。|  
-|**counter_name**|**nchar (128)**|カウンターの名前です。 これでカウンターの一覧から選択するトピックの名前は、の詳細については、カウンターを取得する[SQL Server オブジェクトの使用](../../relational-databases/performance-monitor/use-sql-server-objects.md)です。 |  
-|**instance_name**|**nchar (128)**|カウンターの特定インスタンスの名前。 多くの場合、データベース名が格納されます。|  
+|**object_name**|**nchar(128)**|カウンターが属するカテゴリ。|  
+|**counter_name**|**nchar(128)**|カウンターの名前です。 これでカウンターの一覧から選択するトピックの名前は、の詳細については、カウンターを取得する[SQL Server オブジェクトの使用](../../relational-databases/performance-monitor/use-sql-server-objects.md)です。 |  
+|**instance_name**|**nchar(128)**|カウンターの特定インスタンスの名前。 多くの場合、データベース名が格納されます。|  
 |**cntr_value**|**bigint**|カウンターの現在の値。<br /><br /> **注:** 1 秒あたりのカウンターでは、この値は累積されます。 レート値は、連続しない間隔で値をサンプリングして算出する必要があります。 2 つの連続するサンプル値の間隔は、使用される間隔のレートと同じです。|  
 |**cntr_type**|**int**|Windows パフォーマンス アーキテクチャによって定義されるカウンターの種類。 参照してください[WMI パフォーマンス カウンターの種類](http://msdn2.microsoft.com/library/aa394569.aspx)MSDN またはパフォーマンス カウンターの種類の詳細については、Windows Server のドキュメントです。|  
-|**pdw_node_id**|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|**pdw_node_id**|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
   
 ## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール インスタンスで Windows オペレーティング システムのパフォーマンス カウンターが表示されない場合は、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用して、パフォーマンス カウンターが無効になっていることを確認します。  

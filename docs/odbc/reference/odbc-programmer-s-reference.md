@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3fc868b66f6322d9769176671c8df2913d58150e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b934652505039a021d2b08c0fa5314614ce9c609
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC プログラマ &#39; リファレンス
 *ODBC プログラマ リファレンス*次のセクションが含まれています。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
  次の表記規則が使用されます。  
   
-|Format|使用目的|  
+|[形式]|使用目的|  
 |------------|--------------|  
 |選択 * から|大文字の使用は、SQL ステートメント、マクロ名、およびオペレーティング システム コマンド レベルで使用される用語を示します。|  
 |`RETCODE SQLFetch(hdbc)`|コマンドラインのサンプルとプログラム コードの固定幅フォントを使用します。|  

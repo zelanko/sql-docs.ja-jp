@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 837a052abb35ae767d313b2dd4241d79d2af6074
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6daf14afa71e4c91907e3212fe9c3f538fed4ec8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +43,10 @@ catalog.validate_project [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>引数  
  [ @folder_name = ] *folder_name*  
- プロジェクトを含むフォルダーの名前。 *folder_name* は **nvarchar (128)** です。  
+ プロジェクトを含むフォルダーの名前。 *folder_name* は **nvarchar(128)** です。  
   
  [ @project_name = ] *project_name*  
- プロジェクトの名前。 *project_name* は **nvarchar (128)** です。  
+ プロジェクトの名前。 *project_name* は **nvarchar(128)** です。  
   
  [ @validate_type = ] *validate_type*  
  実行する検証の種類を示します。 文字 `F` を使用すると、完全な検証を実行します。 *validate_type* は **char (1)** です。  
@@ -68,7 +69,7 @@ catalog.validate_project [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>結果セット  
  検証手順の出力は、結果セットの異なるセクションとして返されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャには、次の権限のいずれかが必要です。  
   
 -   プロジェクトの READ 権限と、該当する場合は、参照先の環境での READ 権限  
@@ -90,7 +91,7 @@ catalog.validate_project [ @folder_name = ] folder_name
   
 -   ユーザーに適切な権限がない  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  検証では、プロジェクトのパッケージが正常に実行されない問題を特定することができます。 検証の状態を監視するには、[catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) または [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) ビューを使用します。  
   
  検証で使用できるのは、ユーザーがアクセスできる環境のみです。 検証の出力は結果セットとしてクライアントに送信されます。  

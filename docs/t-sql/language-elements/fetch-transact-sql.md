@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FETCH
 - FETCH_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - FETCH statement
 - cursors [SQL Server], fetching
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ccf0fc44e9be488c7c07cdb159270056bba0adc6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: fae1e085c26c2bcbc6b2605187b4554dba414642
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +72,7 @@ FETCH
  LAST  
  カーソル内の最終行を返し、これを現在の行にします。  
   
- 絶対 {  *n* | @*nvar*}  
+ ABSOLUTE { *n*| @*nvar*}  
  場合 *n* または @*nvar*が正の値、行を返します *n* カーソルの先頭からの行し、新しい現在の行を返し、返した行です。 場合 *n* または @*nvar*負の場合、行を返します *n* カーソルの終端する前に行の行を新しい現在の行を返し、返した行です。 場合 *n* または @*nvar*は 0、行は返されません。 *n*整数定数でなければなりませんおよび @*nvar*する必要があります**smallint**、 **tinyint**、または**int**です。  
   
  相対 {  *n* | @*nvar*}  
@@ -85,7 +87,7 @@ FETCH
  @*cursor_variable_name*  
  フェッチが行われる、開いているカーソルを参照するカーソル変数の名前です。  
   
- INTO @*variable_name*[,...*n*]  
+ INTO @*variable_name*[ ,...*n*]  
  フェッチの列で得られたデータを、ローカル変数に設定します。 リスト内の各変数は、左から右に向かって、カーソル結果セット内の対応する列に関連付けられます。 各変数のデータ型は、対応する結果セット列のデータ型に一致するか、または暗黙的な型変換がサポートされていなければなりません。 変数の個数は、カーソル選択リスト内の列の個数と一致している必要があります。  
   
 ## <a name="remarks"></a>解説  
@@ -101,7 +103,7 @@ FETCH
   
  @@FETCH_STATUS関数が最後にフェッチ ステートメントの状態を報告します。 sp_describe_cursor で返されるカーソル内の fetch_status 列に、同じ情報が記録されます。 FETCH ステートメントで返されたデータに対して操作を行う前に、このステータス情報を使用してデータの妥当性を判断する必要があります。 詳細については、次を参照してください。 [@@FETCH_STATUS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/fetch-status-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  FETCH 権限は、特に指定のない限り有効なすべてのユーザーに与えられます。  
   
 ## <a name="examples"></a>使用例  

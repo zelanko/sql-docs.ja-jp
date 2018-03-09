@@ -3,7 +3,7 @@ title: "dta ユーティリティ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: "58"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 192a28c8833fb801e19d1dee7485b667ea56128d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e003329968d6ebd960f66c56051a20ac91523e47
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dta-utility"></a>dta ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Dta**ユーティリティは、データベース エンジン チューニング アドバイザーのコマンド プロンプト バージョンです。 **dta** ユーティリティは、データベース エンジン チューニング アドバイザーの機能をアプリケーションとスクリプトで使用するために作成されました。  
@@ -171,7 +171,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  **dta** が推奨設定に含む必要がある物理デザイン構造の種類を指定します。 次の表は、この引数で指定できる値の一覧と説明です。 値を指定しないと、 **dta** は既定の **-fa****IDX**を使用します。  
   
-|値|説明|  
+|[値]|Description|  
 |-----------|-----------------|  
 |IDX_IV|インデックスおよびインデックス付きビュー。|  
 |IDX|インデックスのみ。|  
@@ -181,7 +181,7 @@ dta -d AdventureWorks2012 ...
  **-fi**  
  フィルター選択されたインデックスが新しい推奨設定用と見なされるように指定します。 詳細については、「 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)」を参照してください。  
   
-**fc**  
+**-fc**  
  列ストア インデックスが新しい推奨設定用と見なされることを指定します。 DTA には、両方のクラスター化および非クラスター化列ストア インデックスが考慮されます。 詳細については、「    
 [列ストア インデックスの推奨設定データベース エンジン チューニング アドバイザー (DTA) で](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)です。
  ||  
@@ -192,7 +192,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  推奨設定を生成する際に **dta** が保持する必要のある既存の物理デザイン構造を指定します。 次の表は、この引数で指定できる値の一覧と説明です。  
   
-|値|説明|  
+|[値]|Description|  
 |-----------|-----------------|  
 |なし|既存の構造なし|  
 |ALL|既存のすべての構造|  
@@ -203,7 +203,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  **dta** によって提示される新しい物理デザイン構造 (インデックスおよびインデックス付きビュー) をパーティション分割する必要があるかどうか、およびパーティション分割の方法を指定します。 次の表は、この引数で指定できる値の一覧と説明です。  
   
-|値|説明|  
+|[値]|Description|  
 |-----------|-----------------|  
 |なし|パーティション分割しない。|  
 |FULL|完全パーティション分割 (選択するとパフォーマンスが向上します)。|  
@@ -231,7 +231,7 @@ dta -d AdventureWorks2012 ...
  チューニングの入力として使用するワークロード ファイルのパスとファイルの名前を指定します。 ファイルは、.trc (SQL Server Profiler トレース ファイル)、.sql (SQL ファイル)、.log ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トレース ファイル) のいずれかの形式になっている必要があります。 ワークロード ファイル、またはワークロード テーブルを 1 つ指定する必要があります。  
   
  **-it** *workload_trace_table_name*  
- チューニングのワークロード トレースを含むテーブルの名前を指定します。 名前は*[database_name*]**.**[*owner_name*]**.***table_name*の形式で指定します。  
+ チューニングのワークロード トレースを含むテーブルの名前を指定します。 形式で名前を指定します [*database_name*]**。** 。[*owner_name*] **. * * * table_name*です。  
   
  次の表は、各パラメーターの既定値を示しています。  
   
@@ -253,7 +253,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  物理デザイン構造をオンラインで作成するかどうかを指定します。 次の表は、この引数で指定できる値の一覧と説明です。  
   
-|値|説明|  
+|[値]|Description|  
 |-----------|-----------------|  
 |OFF|推奨される物理デザイン構造をオンラインで作成しません。|  
 |ON|推奨される物理デザイン構造をすべてオンラインで作成します。|  
@@ -306,7 +306,7 @@ dta -iq -I 48
  **-rl** *analysis_report_list*  
  生成する分析レポートのリストを指定します。 次の表は、この引数で指定できる値の一覧を示しています。  
   
-|値|レポート|  
+|[値]|レポート|  
 |-----------|------------|  
 |ALL|すべての分析レポート|  
 |STMT_COST|ステートメント コスト レポート|  
@@ -388,7 +388,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
   
  **C.チューニングするクエリの数を制限します。**  
   
- 次の例では、orders_wkld.sql ファイルから読み取るクエリの数を最大 10 に制限し (`-n 10`)、15 分間実行します (`-A 15`)。どちらを先に指定しても同じです。 10 個のクエリすべてをチューニングするために、 `-A 0`を使用してチューニング時間を無制限に指定します。 時間が重要な場合は、この例で示すように `-A` 引数でチューニングできる時間数を指定して、適切な制限時間を指定します。  
+ 次の例では、orders_wkld.sql ファイルから読み取るクエリの数を最大 10 に制限し (`-n 10`)、15 分間実行します (`-A 15`)。どちらを先に指定しても同じです。 10 個のクエリすべてをチューニングするために、`-A 0` を使用してチューニング時間を無制限に指定します。 時間が重要な場合は、この例で示すように `-A` 引数でチューニングできる時間数を指定して、適切な制限時間を指定します。  
   
 ```  
 dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  

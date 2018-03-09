@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.exportaspolicy.f1
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b80ac6401aab58168708470e0a93595562c9e3d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6d68124fea11952e85baeb531fd36241dbce4e0a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="export-as-policy-dialog-box"></a>[ポリシーとしてエクスポート] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このダイアログ ボックスを使用すると、ポリシー ベースの管理ファセットのプロパティ セットをポリシーとしてエクスポートできます。 ポリシーは、XML ファイルで保存することも、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の現在のインスタンスに直接保存することもできます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[ポリシー定義名]**  
  ポリシーの名前を入力します。  
   

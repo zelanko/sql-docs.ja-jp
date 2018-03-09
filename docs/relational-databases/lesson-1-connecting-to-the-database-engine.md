@@ -1,27 +1,28 @@
 ---
 title: "レッスン 1: データベース エンジンへの接続 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/05/2016
+ms.date: 02/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d58c2e12f7f25a067e643757afa4b86d2b47ff01
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: a7b0242b6c69f2ecb3b9ef077eae956d3f7d3f18
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>レッスン 1: データベース エンジンへの接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +40,9 @@ ms.lasthandoff: 12/14/2017
  - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] にはさまざまなツールが付属しています。 このトピックでは、作業に必要なツールを選択するときの参考となるよう、最初に必要となるツールについて説明します。 すべてのツールには、 **[スタート]** メニューからアクセスできます。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]など、一部のツールは既定ではインストールされません。 インストールするには、セットアップ中に、クライアント コンポーネントの一部としてツールを選択する必要があります。 以下のツールの詳細については、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックで検索してください。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] には、これらのツールのサブセットのみが付属しています。  
 
 ### <a name="basic-tools"></a>基本ツール
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) は、 [!INCLUDE[ssDE](../includes/ssde-md.md)] を管理し、 [!INCLUDE[tsql](../includes/tsql-md.md)] コードを記述するための主要なツールです。 このツールは、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] シェルでホストされます。 SSMS は、 [Microsoft ダウンロード センター](https://msdn.microsoft.com/library/mt238290.aspx)から無料でダウンロードできます。 最新バージョンを以前のバージョンの [!INCLUDE[ssDE_md](../includes/ssde-md.md)]で使用できます。  
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) は、[!INCLUDE[ssDE](../includes/ssde-md.md)]を管理し、[!INCLUDE[tsql](../includes/tsql-md.md)] コードを記述するための主要なツールです。 このツールは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] シェルでホストされます。 SSMS は、 [Microsoft ダウンロード センター](https://msdn.microsoft.com/library/mt238290.aspx)から無料でダウンロードできます。 最新バージョンを以前のバージョンの[!INCLUDE[ssDE_md](../includes/ssde-md.md)]で使用できます。  
 
-- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] およびクライアント ツールと共にインストールされます。 このツールを使用すると、サーバー プロトコルを有効化したり、TCP ポートなどのプロトコル オプション、サーバー サービスの自動開始、指定の方法によるクライアント コンピューターの接続などを構成することができます。 このツールはより詳細な接続要素を構成しますが、機能は有効にしません。  
+- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] およびクライアント ツールと共にインストールされます。 このツールを使用すると、サーバー プロトコルを有効化したり、TCP ポートなどのプロトコル オプション、サーバー サービスの自動開始、指定の方法によるクライアント コンピューターの接続などを構成することができます。 このツールはより詳細な接続要素を構成しますが、機能は有効にしません。  
 
 ### <a name="sample-database"></a>サンプル データベース
 サンプル データベースとサンプルは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に付属していません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックで説明されているほとんどの例では、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] サンプル データベースを使用しています。  
@@ -84,11 +85,12 @@ ms.lasthandoff: 12/14/2017
 
 ![オブジェクト エクスプ ローラー](../relational-databases/media/object-explorer.png)
 
-3.  **[サーバー名]** ボックスに、 [!INCLUDE[ssDE](../includes/ssde-md.md)]インスタンスの名前を入力します。 SQL Server の既定のインスタンスでは、サーバー名はコンピューター名です。 SQL Server の名前付きインスタンスでは、サーバー名は *<computer_name>***\\***<instance_name>* となります (**ACCTG_SRVR\SQLEXPRESS** など)。 次のスクリーン ショットは、"PracticeComputer" という名前のコンピューター上の、既定の (名前のない) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]インスタンスへの接続を示しています。 Windows にログオンしているユーザーは、Contoso ドメインの Mary です。 Windows 認証を使用する場合は、ユーザー名を変更することはできません。 
+3.  **[サーバー名]** ボックスに、 [!INCLUDE[ssDE](../includes/ssde-md.md)]インスタンスの名前を入力します。 SQL Server の既定のインスタンスでは、サーバー名はコンピューター名です。 SQL Server の名前付きインスタンスでは、サーバー名は *<コンピューター名>***\\***<インスタンス名>* となります (**ACCTG_SRVR\SQLEXPRESS** など)。 次のスクリーン ショットは、"PracticeComputer" という名前のコンピューター上の、既定の (名前のない) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]インスタンスへの接続を示しています。 Windows にログオンしているユーザーは、Contoso ドメインの Mary です。 Windows 認証を使用する場合は、ユーザー名を変更することはできません。 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 
-4.  **[接続]**をクリックします。  
+4.  **[接続]**をクリックします。
+
 > [!NOTE]
 > このチュートリアルでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を初めて使用し、接続時に特別な問題がないことを想定しています。 このような前提はほとんどのユーザーにとって十分であり、このチュートリアルが単純であるのはこのためです。 詳細なトラブルシューティングの手順については、「 [SQL Server データベース エンジンへの接続のトラブルシューティング](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)」を参照してください。 
 

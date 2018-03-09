@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: a01c079431b3ca574df80757f98b1d0670b6a9fe
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0ff7526517be55100400da6ac84b6f7c927fb50e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio を使用して Linux 上の SQL Server のデータベースを作成するには
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server Data Tools (SSDT) は、SQL Server on Linux の強力な開発およびデータベース ライフ サイクル管理 (DLM) 環境に Visual Studio をオンにします。 ことができますを開発、構築、テストおよびアプリケーション コードを開発するのと同じように、ソース管理されているプロジェクトからデータベースを発行します。
+SQL Server Data Tools (SSDT) は、SQL Server on Linux の強力な開発およびデータベース ライフ サイクル管理 (DLM) 環境に Visual Studio をオンにします。 ことができますを開発、構築、テスト、およびアプリケーション コードを開発するのと同じように、ソース管理のプロジェクトからデータベースを発行します。
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Visual Studio および SQL Server Data Tools をインストールします。
 
@@ -103,11 +103,11 @@ Linux 上の SQL Server 2017 は、SSDT 17.0 RC またはそれ以降のバー�
 
 5. 発行状態を確認して、**データ ツール操作**ウィンドウです。
 
-6. をクリックして**ビュー Reulst**または**スクリプトの表示**SQL Server on Linux での結果を発行、databsae の詳細を確認します。
+6. をクリックして**ビュー Reulst**または**スクリプトの表示**SQL Server on Linux での結果を発行、データベースの詳細を確認します。
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
-Linux 上の SQL Server インスタンスに新しいデータベースを作成し、ソース管理されているデータベース プロジェクトのデータベースの開発の基本を学習しました。
+Linux 上の SQL Server インスタンスに新しいデータベースを作成し、ソース管理の対象のデータベース プロジェクトを持つデータベースの開発の基本を学習しました。
 
 ## <a name="next-steps"></a>次の手順
 

@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - databases [Reporting Services], encryption
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f7ede2f08bd7f09eb4a3dd0be273225dc5ba6b8d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1b733d6f858f3d631c25b7861cc7f7b5546482ee
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS の暗号化キー - 暗号化されたレポート サーバー データの保存
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、暗号化された値がレポート サーバー データベースおよび構成ファイルに保存されます。 暗号化された値の大部分は資格情報です。これらの資格情報は、レポートにデータを提供する外部データ ソースへのアクセスに使用されます。 このトピックでは、暗号化される値、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で使用される暗号化機能、および理解が必要な他の種類の保存された機密データについて説明します。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/05/2017
  レポート サーバーのスケールアウト配置では、複数のレポート サーバー インスタンスが同じレポート サーバー データベースを共有しています。この配置では、1 つの対称キーをすべてのレポート サーバー ノードが使用します。 各ノードは共有する対称キーのコピーを持つ必要があります。 対称キーのコピーは、スケールアウト配置が構成されると自動的にノードごとに作成されます。 各ノードは、Windows サービス アカウント固有のキー ペアの公開キーを使用して、対称キーのコピーを暗号化します。 単一インスタンスおよびスケールアウト配置用に作成される対称キーの詳細については、「[レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)」を参照してください。  
   
 > [!NOTE]  
->  レポート サーバー Windows サービス アカウントを変更した場合、非対称キーは無効になり、サーバーの操作が中断される可能性があります。 この問題を回避するには、常に Reporting Services 構成ツールを使用して、サービス アカウントの設定を変更してください。 構成ツールを使用する場合、キーは自動的に更新されます。 詳細については、「[レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。  
+>  レポート サーバー Windows サービス アカウントを変更した場合、非対称キーは無効になり、サーバーの操作が中断される可能性があります。 この問題を回避するには、常に Reporting Services 構成ツールを使用して、サービス アカウントの設定を変更してください。 構成ツールを使用する場合、キーは自動的に更新されます。 詳細については、 [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。  
   
 ## <a name="other-sources-of-confidential-data"></a>機密データの各種のソース  
  レポート サーバーには暗号化されていない各種のデータが保存されますが、その中には保護が必要な重要な情報が含まれていることがあります。 特に、レポート履歴スナップショットおよびレポート実行スナップショットには、クエリ結果が含まれています。このクエリ結果には、権限を持つユーザー向けのデータが含まれることがあります。 機密データを含むレポートのスナップショット機能を使用している場合、レポート サーバー データベースでテーブルを開くことができるユーザーは、テーブルの内容を調べることで、保存されたレポートの一部を参照できる可能性があるという点に注意してください。  

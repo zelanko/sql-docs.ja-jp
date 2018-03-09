@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -26,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 44a329213b7bbe39167e8f0c6b85e473d2d58411
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bdffb139f9a2870a454c3cdec1318df9dcf4070f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX データ定義のメンバーを作成します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,10 +63,10 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  *Property_Value*  
  計算されるメンバー プロパティの値を定義する有効なスカラー式です。  
   
-## <a name="remarks"></a>解説  
- CREATE MEMBER ステートメントは、セッション全体で使用できる計算されるメンバーを定義します。作成した計算されるメンバーは、セッション内の複数のクエリで使用できます。 詳細については、次を参照してください。 [creating session-scoped 計算されるメンバーと #40 です。MDX と #41 です;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)。  
+## <a name="remarks"></a>Remarks  
+ CREATE MEMBER ステートメントは、セッション全体で使用できる計算されるメンバーを定義します。作成した計算されるメンバーは、セッション内の複数のクエリで使用できます。 詳細については、次を参照してください。 [creating session-scoped 計算されるメンバーと #40 です。MDX と #41 です](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)。  
   
- 1 つのクエリだけで使用する計算されるメンバーを定義することも可能です。 1 つのクエリに限定される計算されるメンバーを定義するには、SELECT ステートメントで WITH 句を使用します。 詳細については、次を参照してください。 [Creating Query-Scoped 計算されるメンバーと #40 です。MDX と #41 です;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)。  
+ 1 つのクエリだけで使用する計算されるメンバーを定義することも可能です。 1 つのクエリに限定される計算されるメンバーを定義するには、SELECT ステートメントで WITH 句を使用します。 詳細については、次を参照してください。 [Creating Query-Scoped 計算されるメンバーと #40 です。MDX と #41 です](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)。  
   
  *Property_Name*標準またはオプションの計算されるメンバー プロパティのどちらかを参照できます。 標準のメンバー プロパティの一覧は、このトピックの後半にあります。 計算されるメンバーをしない CREATE MEMBER で作成された、**セッション**値はセッションのスコープを設定します。 また、計算されるメンバーの定義に含まれる文字列は、二重引用符で区切ります。 この点は、OLE DB によって定義される方法と異なっています。OLE DB では、文字列を単一引用符で区切るように指定されています。  
   
@@ -78,7 +78,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  計算されるメンバーには、以下のいずれかのスコープを設定できます。  
   
  クエリ スコープ  
- 計算されるメンバーの表示設定と有効期間は、クエリに限定されます。 そのような計算されるメンバーは、個々のクエリの中で定義します。 クエリ スコープは、セッション スコープよりも優先されます。 詳細については、次を参照してください。 [Creating Query-Scoped 計算されるメンバーと #40 です。MDX と #41 です;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)。  
+ 計算されるメンバーの表示設定と有効期間は、クエリに限定されます。 そのような計算されるメンバーは、個々のクエリの中で定義します。 クエリ スコープは、セッション スコープよりも優先されます。 詳細については、次を参照してください。 [Creating Query-Scoped 計算されるメンバーと #40 です。MDX と #41 です](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)。  
   
  セッション スコープ  
  計算されるメンバーの表示設定と有効期間は、メンバーが作成されたセッションに限定されます。 計算されるメンバーに対して DROP MEMBER ステートメントが実行された場合、有効期間はセッションよりも短くなります。CREATE MEMBER ステートメントで作成する計算されるメンバーは、セッション スコープです。  
@@ -137,8 +137,8 @@ WHERE ProfitRatio
 |ASSOCIATED_MEASURE_GROUP|このメンバーが関連付けられているメジャー グループの名前です。|  
   
 ## <a name="see-also"></a>参照  
- [DROP MEMBER ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-drop-member.md)   
- [UPDATE MEMBER ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-update-member.md)   
- [MDX データ定義ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-statements-mdx.md)  
+ [DROP MEMBER ステートメント &#40;です。MDX と #41 です](../mdx/mdx-data-definition-drop-member.md)   
+ [UPDATE MEMBER ステートメント &#40;です。MDX と #41 です](../mdx/mdx-data-definition-update-member.md)   
+ [MDX データ定義ステートメント &#40;です。MDX と #41 です](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

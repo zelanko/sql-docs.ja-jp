@@ -1,6 +1,6 @@
 ---
 title: "Azure で SSIS パッケージの実行をスケジュールする | Microsoft Docs"
-ms.date: 09/25/2017
+ms.date: 01/16/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0b8dbc635523b33a480ad887b73d9f395d71c8d
-ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
+ms.openlocfilehash: 4724d7a306e59e05d17f466643146d868f372a7f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Azure で SSIS パッケージの実行をスケジュールする
 次のスケジュール設定のオプションのいずれかを選択して、Azure SQL Database サーバー上の SSISDB カタログ データベースに格納されているパッケージの実行をスケジュール設定することができます。
@@ -27,9 +28,42 @@ ms.lasthandoff: 12/12/2017
 
 ## <a name="agent"></a> SQL Server エージェントを使用してパッケージのスケジュールを設定する
 
-### <a name="prerequisite"></a>前提条件
+### <a name="prerequisite---create-a-linked-server"></a>前提条件 - リンク サーバーを作成する
 
-オンプレミスの SQL Server エージェントを使用して、Azure SQL Database サーバーに格納されているパッケージの実行をスケジュール設定するには、事前に SQL Database サーバーをリンク サーバーとして追加する必要があります。 詳細については、「[リンク サーバーの作成](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)」と「[リンク サーバー](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。
+オンプレミスの SQL Server エージェントを使用して、Azure SQL Database サーバーに格納されているパッケージの実行をスケジュール設定するには、事前に SQL Database サーバーをリンク サーバーとしてオンプレミス SQL Server に追加する必要があります。
+
+1.  **リンク サーバーを設定する**
+
+    ```sql
+    -- Add the SSISDB database on your Azure SQL Database as a linked server to your SQL Server on premises
+    EXEC sp_addlinkedserver
+        @server='myLinkedServer', -- Name your linked server
+        @srvproduct='',     
+        @provider='sqlncli', -- Use SQL Server native client
+        @datasrc='<server_name>.database.windows.net', -- Add your Azure SQL Database server endpoint
+        @location=‘’,
+        @provstr=‘’,
+        @catalog='SSISDB'  -- Add SSISDB as the initial catalog
+    ```
+
+2.  **リンク サーバーの資格情報を設定する**
+
+    ```sql
+    -- Add your Azure SQL DB server admin credentials
+    EXEC sp_addlinkedsrvlogin
+        @rmtsrvname = 'myLinkedServer’,
+        @useself = 'false’,
+        @rmtuser = 'myUsername', -- Add your server admin username
+        @rmtpassword = 'myPassword' -- Add your server admin password
+    ```
+
+3.  **リンク サーバーのオプションを設定する**
+
+    ```sql
+    EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;
+    ```
+
+詳細については、「[リンク サーバーの作成](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)」と「[リンク サーバー](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。
 
 ### <a name="create-a-sql-server-agent-job"></a>SQL Server エージェント ジョブを作成する
 
@@ -43,19 +77,21 @@ ms.lasthandoff: 12/12/2017
 
 4.  **[新しいジョブ ステップ]** ダイアログ ボックスで、`SSISDB` を**データベース**として選択します。
 
-5.  コマンド フィールドで、次の例に示されたスクリプトのような Transact-SQL スクリプトを入力します。
+5.  **[コマンド]** フィールドで、次の例に示されたスクリプトのような Transact-SQL スクリプトを入力します。
 
     ```sql
+    -- T-SQL script to create and start SSIS package execution using SSISDB stored procedures
     DECLARE @return_value int, @exe_id bigint 
 
     EXEC @return_value = [YourLinkedServer].[SSISDB].[catalog].[create_execution] 
-    @folder_name=N'folderName', @project_name=N'projectName', 
-    @package_name=N'packageName', @use32bitruntime=0, 
-    @runinscaleout=1, @useanyworker=1, @execution_id=@exe_id OUTPUT 
- 
-    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
+        @folder_name=N'folderName', @project_name=N'projectName', 
+        @package_name=N'packageName', @use32bitruntime=0, @runincluster=1, @useanyworker=1,
+        @execution_id=@exe_id OUTPUT 
 
-    GO
+    EXEC [YourLinkedServer].[SSISDB].[catalog].[set_execution_parameter_value] @exe_id,
+        @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
+
+    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
     ```
 
 6.  ジョブの構成とスケジュール設定を完了します。
@@ -64,7 +100,7 @@ ms.lasthandoff: 12/12/2017
 
 SQL Database のエラスティック ジョブに関する詳細については、「[スケールアウトされたクラウド データベースの管理](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)」を参照してください。
 
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>Prerequisites
 
 エラスティック ジョブを使用して、Azure SQL Database サーバー上の SSISDB カタログ データベースに格納されている SSIS パッケージをスケジュール設定するには、事前に次の作業を行う必要があります。
 
@@ -108,162 +144,11 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 
 ## <a name="sproc"></a> Azure Data Factory SQL Server ストアド プロシージャ アクティビティを使用してパッケージをスケジュール設定する
 
-> [!IMPORTANT]
-> 次の例では、Azure Data Factory バージョン 1 ストアド プロシージャ アクティビティで JSON スクリプトを使用します。
+Azure Data Factory ストアド プロシージャ アクティビティを使用して、SSIS パッケージをスケジュールする方法の詳細については、次の記事を参照してください。
 
-Azure Data Factory SQL Server ストアド プロシージャ アクティビティを使用してパッケージをスケジュール設定するには、次の作業を行います。
+-   Data Factory バージョン 2 の場合: [Azure Data Factory でのストアド プロシージャ アクティビティを使用した SSIS パッケージの呼び出し](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
 
-1.  データ ファクトリを作成する。
-
-2.  SSISDB をホストする SQL Database のリンク サービスを作成する。
-
-3.  スケジュール設定を駆動する出力データセットを作成する。
-
-4.  SSIS パッケージを実行する SQL Server ストアド プロシージャ アクティビティを使用するデータ ファクトリ パイプラインを作成する。
-
-このセクションでは、これらの手順の概要を説明します。 データ ファクトリの完全なチュートリアルは、この記事の範囲外です。 詳細については、「[SQL Server ストアド プロシージャ アクティビティ](https://docs.microsoft.com/azure/data-factory/data-factory-stored-proc-activity)」を参照してください。
-
-スケジュールされた実行が失敗し、ADF ストアド プロシージャ アクティビティから失敗した実行の実行 ID が提供されている場合は、SSIS カタログの SSMS でその ID の実行レポートを確認してください。
-
-### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>SSISDB をホストする SQL Database のリンク サービスを作成する
-リンク サービスは、データ ファクトリを SSISDB に接続することができます。
-
-```json
-{
-    "name": "AzureSqlLinkedService",
-    "properties": {
-        "description": "",
-        "type": "AzureSqlDatabase",
-        "typeProperties": {
-            "connectionString": "Data Source = tcp: YourSQLDBServer.database.windows.net, 1433; Initial Catalog = SSISDB; User ID = YourUsername; Password = YourPassword; Integrated Security = False; Encrypt = True; Connect Timeout = 30"
-        }
-    }
-}
-```
-
-### <a name="create-an-output-dataset"></a>出力データセットを作成する
-出力データセットには、スケジューリング情報が含まれます。
-
-```json
-{
-    "name": "sprocsampleout",
-    "properties": {
-        "type": "AzureSqlTable",
-        "linkedServiceName": "AzureSqlLinkedService",
-        "typeProperties": {
-            "tableName": "sampletable"
-        },
-        "availability": {
-            "frequency": "Hour",
-            "interval": 1
-        }
-    }
-}
-```
-### <a name="create-a-data-factory-pipeline"></a>データ ファクトリ パイプラインを作成する
-パイプラインは、SQL Server ストアド プロシージャ アクティビティを使用して SSIS パッケージを実行します。
-
-```json
-{
-    "name": "SprocActivitySamplePipeline",
-    "properties": {
-        "activities": [{
-            "name": "SprocActivitySample",
-            "type": "SqlServerStoredProcedure",
-            "typeProperties": {
-                "storedProcedureName": "sp_executesql",
-                "storedProcedureParameters": {
-                    "stmt": "Transact-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures"
-                }
-            },
-            "outputs": [{
-                "name": "sprocsampleout"
-            }],
-            "scheduler": {
-                "frequency": "Hour",
-                "interval": 1
-            }
-        }],
-        "start": "2017-10-01T00:00:00Z",
-        "end": "2017-10-01T05:00:00Z",
-        "isPaused": false
-    }
-}
-```
-
-SSIS パッケージの実行を作成および開始するために必要な Transact-SQL コマンドをカプセル化するため、新しいストアド プロシージャを作成する必要はありません。 スクリプト全体を前出の JSON サンプル内の `stmt` パラメーターの値として提供できます。 次にサンプル スクリプトを示します。
-
-```sql
--- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures
-DECLARE @return_value INT,@exe_id BIGINT,@err_msg NVARCHAR(150)
-
--- Create the exectuion
-EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'folderName', @project_name=N'projectName', @package_name=N'packageName', @use32bitruntime=0, @runinscaleout=1,@useanyworker=1, @execution_id=@exe_id OUTPUT
-
--- To synchronize SSIS package execution, set the SYNCHRONIZED execution parameter
-EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
-
--- Start the execution                                                         
-EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id,@retry_count=0
-                                          
--- Raise an error for unsuccessful package execution
--- Execution status values include the following:
--- created (1)
--- running (2)
--- canceled (3)
--- failed (4)
--- pending (5)
--- ended unexpectedly (6)
--- succeeded (7)
--- stopping (8)
--- completed (9) 
-IF(SELECT [status]
-   FROM [SSISDB].[catalog].[executions]
-   WHERE execution_id=@exe_id)<>7
-BEGIN
-    SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20))
-    RAISERROR(@err_msg,15,1)
-END
-GO
-```
-
-上記の SQL スクリプトを `stmt` パラメーターの値として提供する場合、通常は次の例のように 1 行にスクリプト全体を含める必要があります。 ([JSON 標準](https://json.org/)は、複数行の文字列の行を分割するために他の言語で使用された `\n` の改行制御文字を含む制御文字をサポートしません。)
-
-```json
-{
-    "name": "SprocActivitySamplePipeline",
-    "properties": {
-        "activities": [
-            {
-                "type": "SqlServerStoredProcedure",
-                "typeProperties": {
-                    "storedProcedureName": "sp_executesql",
-                    "storedProcedureParameters": {
-                        "stmt": "DECLARE @return_value INT, @exe_id BIGINT, @err_msg NVARCHAR(150)    EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'test', @project_name=N'TestProject', @package_name=N'STestPackage.dtsx', @use32bitruntime=0, @runinscaleout=1, @useanyworker=1, @execution_id=@exe_id OUTPUT    EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1    EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id, @retry_count=0    IF(SELECT [status] FROM [SSISDB].[catalog].[executions] WHERE execution_id=@exe_id)<>7 BEGIN SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20)) RAISERROR(@err_msg,15,1) END"
-                    }
-                },
-                "outputs": [
-                    {
-                        "name": "sprocsampleout"
-                    }
-                ],
-                "scheduler": {
-                    "frequency": "Minute",
-                    "interval": 15
-                },
-                "name": "SprocActivitySample"
-            }
-        ],
-        "start": "2017-12-06T12:00:00Z",
-        "end": "2017-12-06T12:30:00Z",
-        "isPaused": false,
-        "hubName": "test_hub",
-        "pipelineMode": "Scheduled"
-    }
-}
-```
-
-このスクリプトのコードの詳細については、「[ストアド プロシージャを使用した SSIS パッケージの配置と実行](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures)」を参照してください。
+-   Data Factory バージョン 1 の場合: [Azure Data Factory でのストアド プロシージャ アクティビティを使用した SSIS パッケージの呼び出し](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>次の手順
 SQL Server エージェントの詳細については、「[パッケージに対する SQL Server エージェント ジョブ](../packages/sql-server-agent-jobs-for-packages.md)」を参照してください。

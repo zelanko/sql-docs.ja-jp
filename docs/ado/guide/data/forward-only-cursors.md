@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - cursors [ADO], forward-only
 - forward-only cursors [ADO]
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b9357706047dbcf6e69968ce289fb59a7e055b6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b84ab8335e94adecf130fd2301f697a02eceee37
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="forward-only-cursors"></a>順方向専用カーソル
 順方向専用 (またはスクロールできない) のカーソルと呼ばれる代表的な既定カーソルの種類は、結果セットを前方に移動できます。 順方向専用カーソルがスクロール (結果セットに前方と後方に移動する機能) をサポートしていませんまた、先頭から、結果セットの末尾に行をフェッチのみサポートされます。 いくつか順方向専用カーソルで (など、SQL Server カーソル ライブラリで)、すべて insert、update、および delete ステートメントの現在のユーザーによって行われた (またはその他のユーザーによってコミットされる)、結果セットの行に影響を表示しているように、行をフェッチすることです。 カーソルを後方にスクロールすることはできません、ためただし、行のフェッチ後に、データベース内の行に加えられた変更は、カーソルによっては表示されません。  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a6e0b002c34e8bf35f4f2c9b42dd7b47293ac9b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7718a3d514c6862807cc4b47ecca8729c4c3a162
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="role-of-the-driver-manager"></a>ドライバー マネージャーの役割
 ドライバー マネージャーでは、生成された状態レコードを返す最終的な順序を決定します。 具体的には、どのレコードが最高のランクがありが最初に返されるを決定します。 ドライバーは、生成された状態レコードを順序付けします。 状態レコードは、ドライバー マネージャーとドライバーの両方によって送信されたが場合、は、ドライバー マネージャーを順序付ける担当します。 詳細については、次を参照してください。[状態レコードのシーケンス](../../../odbc/reference/develop-app/sequence-of-status-records.md)です。  

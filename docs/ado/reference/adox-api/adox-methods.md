@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - methods [ADOX]
 - ADOX, methods
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad8a7eb710e129b6ba9110694c8cebfddeab85d3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 73fcca57a0cb497694bf843f1569a51868282a89
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-methods"></a>ADOX メソッド
 |||  
@@ -37,9 +38,9 @@ ms.lasthandoff: 12/21/2017
 |[追加 (テーブル)](../../../ado/reference/adox-api/append-method-adox-tables.md)|新しく追加**テーブル**オブジェクトを**テーブル**コレクション。|  
 |[追加 (ユーザー)](../../../ado/reference/adox-api/append-method-adox-users.md)|新しく追加**ユーザー**オブジェクトを**ユーザー**コレクション。|  
 |[追加 (ビュー)](../../../ado/reference/adox-api/append-method-adox-views.md)|新しく追加**ビュー**オブジェクトを**ビュー**コレクション。|  
-|[パスワードの変更](../../../ado/reference/adox-api/changepassword-method-adox.md)|ユーザー アカウントのパスワードを変更します。|  
+|[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|ユーザー アカウントのパスワードを変更します。|  
 |[作成](../../../ado/reference/adox-api/create-method-adox.md)|新しいカタログを作成します。|  
-|[削除](../../../ado/reference/adox-api/delete-method-adox-collections.md)|コレクションからオブジェクトを削除します。|  
+|[Del](../../../ado/reference/adox-api/delete-method-adox-collections.md)|コレクションからオブジェクトを削除します。|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|カタログ内のオブジェクトの所有者を返します。|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|オブジェクトのグループまたはユーザーのアクセス許可を返します。|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|カタログ内のオブジェクトの所有者を指定します。|  

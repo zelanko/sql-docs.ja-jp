@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CONTAINS_TSQL
 - CONTAINS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - precise or fuzzy (less precise) matches [full-text search]
 - CONTAINS predicate (Transact-SQL)
@@ -35,16 +37,16 @@ helpviewer_keywords:
 - inflectional forms [full-text search]
 - prefix searches [full-text search]
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
-caps.latest.revision: "117"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 317b65134ca49dc3305fe03871a88b5c1ad3fadc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 81b231ce95ae1b87bbda2f2fd786d12cb709e9fe
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -178,7 +180,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  内で検索するテキストを示す*column_name*と一致するための条件。  
   
-*\<contains_search_condition >*は**nvarchar**です。 入力に他の文字データ型が使用された場合は、暗黙の変換が行われます。 大きな文字列データ型 nvarchar (max) および varchar (max) は使用できません。 次の例で、`@SearchWord`として定義されている変数`varchar(30)`で暗黙的な変換により、`CONTAINS`述語。
+*\<contains_search_condition>* is **nvarchar**. 入力に他の文字データ型が使用された場合は、暗黙の変換が行われます。 大きな文字列データ型 nvarchar (max) および varchar (max) は使用できません。 次の例で、`@SearchWord`として定義されている変数`varchar(30)`で暗黙的な変換により、`CONTAINS`述語。
   
 ```sql  
 USE AdventureWorks2012;  
@@ -207,23 +209,23 @@ WHERE CONTAINS(Description, @SearchWord);
  *word*  
  スペースまたは句読点なしの文字列を指定します。  
   
- *語句*  
+ *phrase*  
  単語の間をスペースで区切った 1 つ以上の単語を指定します。  
   
 > [!NOTE]  
 >  一部のアジア言語など、言語の中には、語句を構成するときに単語の間にスペースを挿入しないものがあります。  
   
-\<simple_term >  
+\<simple_term>  
 単語または語句に対する完全一致を指定します。 有効な単純語の例として、"blue berry"、blueberry、および "Microsoft SQL Server" などがあります。 語句は二重引用符 ("") で囲みます。 指定されていると同じ順序で語句内の単語が表示する必要があります *\<contains_search_condition >*データベース列に表示されます。 単語または語句内の文字の検索では、大文字と小文字は区別されません。 ノイズ ワード (または[ストップ ワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) (など、または)、フルテキスト インデックス化された列がフルテキスト インデックスに格納されません。 1 つの単語の検索にノイズ ワードを使用した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではクエリにノイズ ワードだけが指定されていることを示すエラーが返されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスのディレクトリ \Mssql\Binn\FTERef にノイズ ワードの標準リストがあります。  
   
  句読点は無視されます。 したがって、 `CONTAINS(testing, "computer failure")` "Where is my computer の値を持つ行が一致? Failure to find it would be expensive." がある行に一致します。 ワード ブレーカーの動作の詳細については、次を参照してください。[構成と管理ワード ブレーカーとステマーの検索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)です。  
   
- \<prefix_term >  
+ \<prefix_term>  
  指定のテキストで始まる単語または語句の照合を指定します。 プレフィックス語句を二重引用符で囲みます ("")、アスタリスクを追加し、(\*) 終了の引用符の前に、単純語句で始まるすべてのテキストを指定する前にアスタリスクが一致します。 こうすると、句を指定する必要があります:`CONTAINS (column, '"text*"')`です。 アスタリスクは、一致する文字がないか、1 つまたはそれ以上の文字に一致します。その単語または語句を語根とする文字も対象になります。 テキストとアスタリスクが二重引用符で区切られていないと、述語が読み取る内容は `CONTAINS (column, 'text*')` となり、フルテキスト検索でアスタリスクが文字と見なされ、`text*` への完全一致が検索されます。 フルテキスト エンジンには、ワードがアクタリスクは見つかりません (\*) 文字のため、ワード ブレーカーは、通常、このような文字を無視します。  
   
  ときに *\<prefix_term >*句の場合は、語句に含まれている各単語が独立したプレフィックスであると見なされます。 したがって、"local wine *" というプレフィックスを指定しているクエリでは、"local winery"、"locally wined and dined"などの行が一致します。  
   
- \<generation_term >  
+ \<generation_term>  
  指定されている原形の語または語句が、検索対象である元の単語の変形を含んでいる場合に、これらの単語も照合の対象であることを指定します。  
   
  INFLECTIONAL  
@@ -234,7 +236,7 @@ WHERE CONTAINS(Description, @SearchWord);
  THESAURUS  
  列のフルテキスト言語に対応する類義語、またはクエリで指定された言語が使用されます。 最も長いパターンまたはからパターン、  *\<simple_term >*類義語辞典の照合とを展開または元のパターンを置き換える追加の条件が生成されます。 一部またはすべての一致が見つからない場合、  *\<simple_term >*、一致しない部分として扱われます、 *simple_term*です。 フルテキスト検索の類義語辞典の詳細については、次を参照してください。 [、フルテキスト検索の類義語辞典ファイルの管理と構成](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)です。  
   
- \<generic_proximity_term >  
+ \<generic_proximity_term>  
  検索対象のドキュメントに含まれている必要がある単語または語句の照合を指定します。  
   
 > [!IMPORTANT]  
@@ -249,7 +251,7 @@ WHERE CONTAINS(Description, @SearchWord);
   
  汎用近接語句の詳細については、次を参照してください。[語句閉じるには、NEAR による他の単語の検索](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)です。  
   
- \<custom_proximity_term >  
+ \<custom_proximity_term>  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  単語または語句の照合と、必要に応じて検索語句間の許容最大距離を指定します。 指定する正確な順序で検索語句を検索することを指定することも (\<match_order >)。  
@@ -264,7 +266,7 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
   
  省略可能なパラメーターは次のとおりです。  
   
- \<maximum_distance >  
+ \<maximum_distance>  
  文字列と一致すると見なされるための、その文字列の先頭と末尾にある検索語句間の許容最大距離を指定します。  
   
  *整数 (integer)*  
@@ -291,12 +293,12 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  **MAX**  
  距離に関係なく、指定した語句が含まれているすべての行を返します。 これは既定値です。  
   
- \<match_order >  
+ \<match_order>  
  検索クエリによって返されるためには、語句が指定した順序で含まれている必要があるかどうかを指定します。 指定する\<match_order > を指定する必要がありますも\<maximum_distance >。  
   
  \<match_order > は、次の値のいずれか。  
   
- **場合は TRUE。**  
+ **TRUE**  
  語句を指定した順序が適用されます。 たとえば、`NEAR(A,B)`のみが一致する`A … B`です。  
   
  **FALSE**  
@@ -312,13 +314,13 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
   
  カスタム近接語句の使用に関する詳細については、次を参照してください。[語句閉じるには、NEAR による他の単語の検索](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)です。  
   
- \<weighted_term >  
+ \<weighted_term>  
  クエリによって取得された一致する行と、単語または語句のリストが照合されます。このリストの単語や語句のそれぞれには、オプションで重み付け値が指定されます。  
   
  ISABOUT  
  指定します、  *\<weighted_term >*キーワード。  
   
- 重み (*weight_value*)  
+ WEIGHT(*weight_value*)  
  0.0 ～ 1.0 の間で重み値を指定します。 内の各コンポーネント *\<weighted_term >*含めることができます、 *weight_value*です。 *weight_value*をさまざまなクエリの一部に影響を与える、クエリに一致するそれぞれの行に割り当てられる順位値を変更する方法を示します。 重み付けでは CONTAINS クエリが重みのランクに影響の結果には影響しません[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)クエリ。  
   
 > [!NOTE]  
@@ -333,7 +335,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  {なく | &! }  
  2 番目の検索条件が存在しないことを、一致条件として指定します。 アンパサンドとその次の感嘆符 (&!) は、AND NOT キーワードの代わりに使用して、AND NOT 演算子を表すことができます。  
   
- {または | |}  
+ { OR | | }  
  一致条件として、2 つの contains 検索条件のいずれかを満たすことを指定します。 垂直バー記号 (|) は、OR キーワードの代わりに使用して、OR 演算子を表すことができます。  
   
  ときに *\<contains_search_condition >*かっこで囲まれたグループ、グループが最初に評価のこれらのかっこで囲んだが含まれています。 かっこで囲まれたグループを評価した後は、contains 検索条件で使用される論理演算子に対して次の規則が適用されます。  
@@ -550,7 +552,7 @@ GO
  [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)   
- [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
+ [フル テキスト検索](../../relational-databases/search/full-text-search.md)   
  [フルテキスト検索クエリの作成 &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)   
  [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  

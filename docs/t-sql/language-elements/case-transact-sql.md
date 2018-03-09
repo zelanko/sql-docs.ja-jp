@@ -8,29 +8,31 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CASE_TSQL
 - CASE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CASE expression [Transact-SQL]
 - simple CASE expression
 - comparing expressions
 - searched CASE expression
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
-caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4d5241ddc65de92d7588e4c8d1ddb7c2e6b08528
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 0036e0ddf54eeef950bf81da2bf4a8997b4bef3c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,16 +81,16 @@ END
  *input_expression*  
  単純 CASE 形式を使用した場合に評価される式です。 *input_expression*は任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
- ときに*when_expression*  
+ WHEN *when_expression*  
  単純な式は、 *input_expression*単純 CASE 形式を使用する場合と比較されます。 *when_expression*有効な式です。 データ型*input_expression*とは、それぞれ*when_expression*同じである必要がありますか、暗黙的な変換をする必要があります。  
   
- *Result_expression*  
+ THEN *result_expression*  
  返される式の場合に*input_expression* equals *when_expression*を TRUE に評価または*Boolean_expression*を TRUE に評価します。 *式の結果*は任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
- ELSE*戻り値*  
+ ELSE *else_result_expression*  
  比較操作の評価がいずれも TRUE でなかった場合に返される式です。 この引数を省略し、比較操作のいずれも TRUE でなかった場合、CASE は NULL を返します。 *戻り値*有効な式です。 データ型*戻り値*と任意*result_expression*同じである必要がありますか、暗黙的な変換をする必要があります。  
   
- ときに*Boolean_expression*  
+ WHEN *Boolean_expression*  
  検索 CASE 形式で評価するブール式です。 *Boolean_expression*有効なブール式です。  
   
 ## <a name="return-types"></a>戻り値の型  
@@ -122,7 +124,7 @@ END
   
  CASE ステートメントは条件を順に評価していき、最初に条件が満たされた時点で評価を止めます。 CASE ステートメントには、評価された式の結果が入力として渡されることがあります。 こうした式の評価中にエラーが発生する可能性もあります。 CASE ステートメントの WHEN 引数に指定された集計式は、あらかじめ評価されて CASE ステートメントに渡されます。 たとえば、次のクエリでは、MAX 集計値を生成する際に 0 除算エラーが発生します。 このエラーが発生するのは、CASE 式が評価される前です。  
   
-```tsql  
+```sql  
 WITH Data (value) AS   
 (   
 SELECT 0   

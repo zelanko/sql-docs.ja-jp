@@ -8,28 +8,28 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - multidimensional data [Analysis Services], developer's guide
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a941a9f08482f78c762cbc25fc3f3eb28d7a8cf4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b20751879e566f85d12545238a890d4667190306
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services の開発者向けドキュメント
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services ではほとんどすべてのオブジェクトとワークロードは、プログラミング、および多くの場合からを選択する 1 つ以上の方法もあります。  マネージ コードの記述、スクリプト、または場合は、ソリューションの要件は、.NET framework を使用できないわけでは、XMLA および MSOLAP などのオープン スタンダードを使用して、オプションが含まれます。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+Analysis Services ではほとんどすべてのオブジェクトとワークロードは、プログラミング、および多くの場合からを選択する 1 つ以上の方法もあります。  マネージ コードの記述、スクリプト、または場合は、ソリューションの要件は、.NET framework を使用できないわけでは、XMLA および MSOLAP などのオープン スタンダードを使用して、オプションが含まれます。
 
 ## <a name="what-you-can-accomplish-in-code"></a>コードで行うことができます。
 一般的なプログラミング シナリオには、サーバーとデータベースの配置、管理、モデルとデータベースの作成、およびカスタム アプリケーションと Analysis Services データを使用するレポートのデータにアクセスが含まれます。 固定のアーキテクチャとオブジェクトの定義の階層、データ定義、処理、およびクエリのワークロードにまたがる周知の操作は、これらすべてのシナリオに一般的なのです。
@@ -82,5 +82,5 @@ Analysis Services には、コード内のソリューションをカスタマ�
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md)ドキュメントの管理の機能に加えて、汎用的な使用されるコマンドレット**Invoke ASCmd**を任意のスクリプトまたはクエリの入力として受け取るコマンドレット。
 
 ## <a name="see-also"></a>参照
-[テクニカル リファレンス &#40;です。SSAS &#41;](../analysis-services/powershell/technical-reference-ssas.md) 
+[テクニカル リファレンス](../analysis-services/powershell/technical-reference-ssas.md) 
 [クエリと式言語リファレンス &#40;です。Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)

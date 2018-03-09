@@ -1,40 +1,44 @@
 ---
 title: "Linux 上の SQL Server の設定の構成 |Microsoft ドキュメント"
-description: "このトピックでは、mssql conf ツールを使用して Linux 上の SQL Server 2017 設定を構成する方法について説明します。"
+description: "この記事では、mssql conf ツールを使用して Linux 上の SQL Server 2017 設定を構成する方法について説明します。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 09/20/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: 9aca5fe7905f06269bd07b7946c3bb6ef4e37492
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7b921f563b769a1a4c6a3edb5089a04050d0df74
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql conf ツールを使用して Linux 上の SQL Server を構成します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 **mssql conf** Red Hat Enterprise Linux、SUSE Linux Enterprise Server、および Ubuntu Server 2017 年 SQL と共にインストールされる構成スクリプトを示します。 このユーティリティを使用するには、次のパラメーターを設定します。
 
 |||
 |---|---|
-| [照合順序](#collation) | Linux 上の SQL Server の新しい照合順序を設定します。 |
+| [エージェント](#agent) | SQL Server エージェントを有効にします。 |
+| [[照合順序]](#collation) | Linux 上の SQL Server の新しい照合順序を設定します。 |
 | [お客様のフィードバック](#customerfeedback) | SQL Server が Microsoft にフィードバックを送信するかどうかを選択します。 |
 | [[データベース メール プロファイル]](#dbmail) | Linux 上の SQL Server の既定のデータベース メール プロファイルを設定します。 |
 | [既定のデータ ディレクトリ](#datadir) | 新しい SQL Server データベース データ ファイル (.mdf) の既定のディレクトリを変更します。 |
 | [既定のログ ディレクトリ](#datadir) | 新しい SQL Server データベースのログ (.ldf) ファイルの既定のディレクトリを変更します。 |
+| [既定の master データベース ファイル ディレクトリ](#masterdatabasedir) | 既存の SQL インストールで master データベース ファイルの既定のディレクトリを変更します。|
+| [既定の master データベース ファイル名](#masterdatabasename) | Master データベース ファイルの名前を変更します。 |
 | [既定のダンプ ディレクトリ](#dumpdir) | 新しいメモリ ダンプおよびその他のトラブルシューティング ファイルの既定のディレクトリを変更します。 |
+| [既定のエラー ログ ディレクトリ](#errorlogdir) | 新しい SQL Server エラー ログ、既定のプロファイラー トレース、システム正常性セッション XE、および Hekaton セッション XE ファイルの既定のディレクトリを変更します。 |
 | [既定のバックアップ ディレクトリ](#backupdir) | 新しいバックアップ ファイルの既定のディレクトリを変更します。 |
 | [ダンプの種類](#coredump) | 収集するダンプ メモリ ダンプ ファイルの種類を選択します。 |
 | [高可用性](#hadr) | 可用性グループを有効にします。 |
@@ -56,7 +60,25 @@ ms.lasthandoff: 12/01/2017
 
 * Mssql-conf でを実行するこれらの例は、完全なパスを指定します。 **/opt/mssql/bin/mssql-conf**です。 代わりにそのパスに移動する場合は、現在のディレクトリのコンテキストで mssql conf を実行します。 **。/mssql conf**です。
 
-## <a id="collation"></a>SQL Server 照合順序を変更します。
+## <a id="agent"></a> SQL Server エージェントを有効にします。
+
+**Sqlagent.enabled**設定有効[SQL Server エージェント](sql-server-linux-run-sql-server-agent-job.md)です。 既定では、SQL Server エージェントは無効です。
+
+この設定を変更するには、次の手順を使用します。
+
+1. SQL Server エージェントを有効にします。
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+   ```
+
+1. SQL Server サービスを再起動します。
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+## <a id="collation"></a> SQL Server 照合順序を変更します。
 
 **セット照合**オプションがサポートされる照合順序のいずれかに照合順序の値を変更します。
 
@@ -76,7 +98,7 @@ ms.lasthandoff: 12/01/2017
 
 サポートされる照合順序の一覧は、実行、 [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)関数:`SELECT Name from sys.fn_helpcollations()`です。
 
-## <a id="customerfeedback"></a>お客様のフィードバックを構成します。
+## <a id="customerfeedback"></a> お客様のフィードバックを構成します。
 
 **Telemetry.customerfeedback**設定か、SQL Server が Microsoft にフィードバックを送信するかどうかを変更します。 既定では、この値に設定**true**です。 値を変更するには、次のコマンドを実行します。
 
@@ -94,7 +116,7 @@ ms.lasthandoff: 12/01/2017
 
 詳細については、次を参照してください。 [for Linux に SQL Server カスタマー フィードバック](sql-server-linux-customer-feedback.md)です。
 
-## <a id="datadir"></a>既定のデータまたはログ ディレクトリの場所を変更します。
+## <a id="datadir"></a> 既定のデータまたはログ ディレクトリの場所を変更します。
 
 **Filelocation.defaultdatadir**と**filelocation.defaultlogdir**設定は、新しいデータベース ファイルとログ ファイルを作成する場所を変更します。 既定では、この場所は、/var/opt/mssql/data です。 これらの設定を変更するには、次の手順を使用します。
 
@@ -131,7 +153,89 @@ ms.lasthandoff: 12/01/2017
 
 1. このコマンドは、tmp/ログ ディレクトリが存在して、ユーザーとグループの下であることにも想定**mssql**です。
 
-## <a id="dumpdir"></a>既定のダンプ ディレクトリの場所を変更します。
+
+## <a id="masterdatabasedir"></a> Master データベース ファイル ディレクトリの既定の場所を変更します。
+
+**Filelocation.masterdatafile**と**filelocation.masterlogfile**設定の変更を SQL Server エンジンが master データベース ファイルを検索する場所です。 既定では、この場所は、/var/opt/mssql/data です。 
+
+これらの設定を変更するには、次の手順を使用します。
+
+1. 新しいエラー ログ ファイルのターゲット ディレクトリを作成します。 次の例は、新しい作成**tmp/masterdatabasedir**ディレクトリ。
+
+   ```bash
+   sudo mkdir /tmp/masterdatabasedir
+   ```
+
+1. 所有者とするディレクトリのグループを変更、 **mssql**ユーザー。
+
+   ```bash
+   sudo chown mssql /tmp/masterdatabasedir
+   sudo chgrp mssql /tmp/masterdatabasedir
+   ```
+
+1. Mssql conf を使用して、マスター データ ファイルとログ ファイルの既定の master データベースのディレクトリを変更する、**設定**コマンド。
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /tmp/masterdatabasedir/master.mdf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
+   ```
+
+1. SQL Server サービスを停止します。
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. Master.mdf と masterlog.ldf を移動するには。 
+
+   ```bash
+   sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf 
+   sudo mv /var/opt/mssql/data/mastlog.ldf /tmp/masterdatabasedir/mastlog.ldf
+   ```
+
+1. SQL Server サービスを開始します。
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+   
+> [!NOTE]
+> SQL Server は、指定したディレクトリ内 master.mdf ファイルおよび mastlog.ldf ファイルを見つけることができません、指定したディレクトリ内のシステム データベースのテンプレートのコピーが自動的に作成されます、および SQL Server は正常に場合を起動します。 ただし、ユーザー データベース、サーバーのログイン、サーバー証明書、暗号化キー、SQL エージェント ジョブ、または古い SA ログインのパスワードなどのメタデータは、新しいマスター データベースでは更新されません。 SQL Server を停止し、新しい指定した場所に古い master.mdf および mastlog.ldf を移動し、引き続き既存のメタデータを使用する SQL Server を開始する必要があります。 
+
+
+## <a id="masterdatabasename"></a> Master データベース ファイルの名前を変更します。
+
+**Filelocation.masterdatafile**と**filelocation.masterlogfile**設定の変更を SQL Server エンジンが master データベース ファイルを検索する場所です。 既定では、この場所は、/var/opt/mssql/data です。 これらの設定を変更するには、次の手順を使用します。
+
+1. SQL Server サービスを停止します。
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. Mssql conf を使用して、マスター データ ファイルとログ ファイルの予想されるマスター データベースの名前を変更する、**設定**コマンド。
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data /mastlognew.ldf
+   ```
+
+1. Master データベースのデータとログ ファイルの名前を変更します。 
+
+   ```bash
+   sudo mv /var/opt/mssql/data/master.mdf /var/opt/mssql/data/masternew.mdf
+   sudo mv /var/opt/mssql/data/mastlog.ldf /var/opt/mssql/data/mastlognew.ldf
+   ```
+
+1. SQL Server サービスを開始します。
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+
+
+
+## <a id="dumpdir"></a> 既定のダンプ ディレクトリの場所を変更します。
 
 **Filelocation.defaultdumpdir**設定の変更をメモリと SQL ダンプが生成される場所、クラッシュが発生するたびに既定の場所。 既定では、これらのファイルは/var/opt/mssql/log で生成されます。
 
@@ -162,7 +266,39 @@ ms.lasthandoff: 12/01/2017
    sudo systemctl restart mssql-server
    ```
 
-## <a id="backupdir"></a>既定のバックアップ ディレクトリの場所を変更します。
+## <a id="errorlogdir"></a> 既定のエラー ログ ファイル ディレクトリ場所を変更します。
+
+**Filelocation.errorlogfile**設定の変更を新しいエラー ログ、既定のプロファイラー トレース、システム正常性セッション XE および Hekaton セッション XE ファイルが作成される場所です。 既定では、この場所は、/var/opt/mssql/log です。 SQL エラー ログ ファイルが設定されているディレクトリでは、他のログの既定のログ ディレクトリになります。
+
+これらの設定を変更します。
+
+1. 新しいエラー ログ ファイルのターゲット ディレクトリを作成します。 次の例は、新しい作成**tmp/ログ**ディレクトリ。
+
+   ```bash
+   sudo mkdir /tmp/logs
+   ```
+
+1. 所有者とするディレクトリのグループを変更、 **mssql**ユーザー。
+
+   ```bash
+   sudo chown mssql /tmp/logs
+   sudo chgrp mssql /tmp/logs
+   ```
+
+1. Mssql conf を使用してで既定のエラー ログ ファイル名を変更する、**設定**コマンド。
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.errorlogfile /tmp/logs/errorlog
+   ```
+
+1. SQL Server サービスを再起動します。
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+
+## <a id="backupdir"></a> 既定のバックアップ ディレクトリの場所を変更します。
 
 **Filelocation.defaultbackupdir**設定の変更をバックアップ ファイルが生成される既定の場所。 既定では、これらのファイルは/var/opt/mssql/data で生成されます。
 
@@ -193,7 +329,7 @@ ms.lasthandoff: 12/01/2017
    sudo systemctl restart mssql-server
    ```
 
-## <a id="coredump"></a>コア ダンプ設定を指定します。
+## <a id="coredump"></a> コア ダンプ設定を指定します。
 
 SQL Server プロセスのいずれかで例外が発生する場合、SQL Server は、メモリ ダンプを作成します。
 
@@ -221,19 +357,19 @@ SQL Server では収集するメモリの種類を制御するダンプの 2 つ
 
     | 型 | Description |
     |-----|-----|
-    | **ミニ** | ミニは、最小のダンプ ファイルの種類です。 スレッドとプロセスのモジュールを確認するのに、Linux システム情報を使用します。 ダンプには、ホスト環境のスレッドのスタックとモジュールのみが含まれています。 これは、メモリの間接参照またはグローバル変数には含まれません。 |
+    | **mini** | ミニは、最小のダンプ ファイルの種類です。 スレッドとプロセスのモジュールを確認するのに、Linux システム情報を使用します。 ダンプには、ホスト環境のスレッドのスタックとモジュールのみが含まれています。 これは、メモリの間接参照またはグローバル変数には含まれません。 |
     | **miniplus** | MiniPlus がミニに似ていますが、追加のメモリが含まれています。 SQLPAL とダンプを次のメモリ領域を追加するホスト環境の内部構造を認識します。</br></br> さまざまなグローバル変数</br> -64 TB を超えるすべてのメモリ</br> -すべてのという名前で地域が見つかりません**/proc/$pid/マップ**</br> スレッド ウィンドウとスタックから間接メモリ</br> のスレッド情報</br> 関連付けられている Teb のおよび Peb</br> モジュール情報</br> VMM と VAD ツリー |
-    | **フィルター処理** | 減算に基づくフィルター処理された使用は、ここで、プロセス内のすべてのメモリが含まれる具体的には除外されていない限りをデザインします。 設計は、SQLPAL とダンプから特定の地域を除く、ホスト環境の内部構造を理解しています。
-    | **完全** | 完全をすべての領域を含む完全なプロセス ダンプ内にある**/proc/$pid/マップ**です。 これによって制御されない**coredump.captureminiandfull**設定します。 |
+    | **filtered** | 減算に基づくフィルター処理された使用は、ここで、プロセス内のすべてのメモリが含まれる具体的には除外されていない限りをデザインします。 設計は、SQLPAL とダンプから特定の地域を除く、ホスト環境の内部構造を理解しています。
+    | **full** | 完全をすべての領域を含む完全なプロセス ダンプ内にある**/proc/$pid/マップ**です。 これによって制御されない**coredump.captureminiandfull**設定します。 |
 
-## <a id="dbmail"></a>Linux 上の SQL Server の既定のデータベース メール プロファイルを設定します。
+## <a id="dbmail"></a> Linux 上の SQL Server の既定のデータベース メール プロファイルを設定します。
 
 **Sqlpagent.databasemailprofile**電子メール アラートの既定のデータベース メール プロファイルを設定することができます。
 
 ```bash
 sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
-## <a id="hadr"></a>高可用性
+## <a id="hadr"></a> 高可用性
 
 **Hadr.hadrenabled** SQL Server インスタンスで可用性グループを有効にします。 次のコマンドでは、可用性グループを有効に設定して**hadr.hadrenabled**を 1 にします。 有効にする設定の SQL Server を再起動する必要があります。
 
@@ -247,7 +383,7 @@ sudo systemctl restart mssql-server
 - [Linux 上の SQL Server の可用性グループで常に構成します。](sql-server-linux-availability-group-configure-ha.md)
 - [SQL Server on Linux の読み取りのスケールの可用性グループを構成します。](sql-server-linux-availability-group-configure-rs.md)
 
-## <a id="localaudit"></a>監査のローカル ディレクトリのセット
+## <a id="localaudit"></a> 監査のローカル ディレクトリのセット
 
 **Telemetry.userrequestedlocalauditdirectory**設定は、ローカルの監査を有効にし、ローカルの監査ログで、ディレクトリを設定できますが作成されます。
 
@@ -278,7 +414,7 @@ sudo systemctl restart mssql-server
 
 詳細については、次を参照してください。 [for Linux に SQL Server カスタマー フィードバック](sql-server-linux-customer-feedback.md)です。
 
-## <a id="lcid"></a>SQL Server のロケールを変更します。
+## <a id="lcid"></a> SQL Server のロケールを変更します。
 
 **Language.lcid**設定の変更をすべてサポートされている言語識別子 (LCID) に SQL Server のロケールです。 
 
@@ -294,7 +430,7 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
-## <a id="memorylimit"></a>メモリ制限を設定します。
+## <a id="memorylimit"></a> メモリ制限を設定します。
 
 **Memory.memorylimitmb** SQL Server にコントロールの量 (MB) で使用できる物理メモリを設定します。 既定では物理メモリの 80% です。
 
@@ -310,7 +446,7 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
-## <a id="tcpport"></a>TCP ポートを変更します。
+## <a id="tcpport"></a> TCP ポートを変更します。
 
 **Network.tcpport**設定の変更を SQL Server が接続をリッスンする場所、TCP ポート。 既定では、このポートは 1433 に設定します。 ポートを変更するには、次のコマンドを実行します。
 
@@ -332,7 +468,7 @@ sudo systemctl restart mssql-server
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
    ```
 
-## <a id="tls"></a>TLS の設定を指定します。
+## <a id="tls"></a> TLS の設定を指定します。
 
 次のオプションは、Linux で実行されている SQL Server のインスタンスの TLS を構成します。
 
@@ -341,13 +477,13 @@ sudo systemctl restart mssql-server
 |**network.forceencryption** |1 の場合、し[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]強制的にすべての接続を暗号化します。 既定では、このオプションは 0 です。 |
 |**network.tlscert** |証明書への絶対パスがファイルを[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は TLS を使用します。 例:`/etc/ssl/certs/mssql.pem`証明書ファイルは mssql アカウントでアクセスする必要があります。 使用してファイルのアクセスを制限することをお勧めします。`chown mssql:mssql <file>; chmod 400 <file>`です。 |
 |**network.tlskey** |秘密キーへの絶対パスがファイルを[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は TLS を使用します。 例:`/etc/ssl/private/mssql.key`証明書ファイルは mssql アカウントでアクセスする必要があります。 使用してファイルのアクセスを制限することをお勧めします。`chown mssql:mssql <file>; chmod 400 <file>`です。 |
-|**network.tlsprotocols** |SQL Server でどの TLS のプロトコルが許可されているコンマ区切り一覧。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]常にしようとすると、最も強力な許可されているプロトコルをネゴシエートします。 クライアントが、許可されているすべてのプロトコルをサポートしていない場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]接続の試行を拒否します。  互換性のため、すべてのサポートされているプロトコルが既定 (1.2、1.1、1.0) で許可されます。  TLS 1.2 をサポートして、クライアント場合は、TLS 1.2 のみを許可することをお勧めします。 |
+|**network.tlsprotocols** |SQL Server でどの TLS のプロトコルが許可されているコンマ区切り一覧。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 常にしようとすると、最も強力な許可されているプロトコルをネゴシエートします。 クライアントが、許可されているすべてのプロトコルをサポートしていない場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]接続の試行を拒否します。  互換性のため、すべてのサポートされているプロトコルが既定 (1.2、1.1、1.0) で許可されます。  TLS 1.2 をサポートして、クライアント場合は、TLS 1.2 のみを許可することをお勧めします。 |
 |**network.tlsciphers** |指定する暗号がによって許可[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]TLS 用です。 この文字列はに従って書式設定する必要があります[OpenSSL の暗号一覧形式](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html)です。 一般に、このオプションを変更する必要はありません。 <br /> 既定では、次の暗号は使用できます。 <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Kerberos keytab ファイルへのパス |
 
 TLS の設定を使用しての例は、次を参照してください。 [Linux に SQL Server への接続の暗号化](sql-server-linux-encrypted-connections.md)です。
 
-## <a id="traceflags"></a>トレース フラグを有効/無効にします。
+## <a id="traceflags"></a> トレース フラグを有効/無効にします。
 
 これは、**トレース フラグ**オプションを有効または SQL Server サービスのスタートアップ トレース フラグを無効にします。 有効/無効にするには、トレース フラグは、次のコマンドを使用します。
 
@@ -401,7 +537,7 @@ sudo cat /var/opt/mssql/mssql.conf
 
 このファイルに表示されていないすべての設定が既定値を使用していることに注意してください。 次のセクションでは、サンプルを提供**mssql.conf**ファイル。
 
-## <a name="mssqlconf-format"></a>mssql.conf 形式
+## <a name="mssqlconf-format"></a>mssql.conf format
 
 次**/var/opt/mssql/mssql.conf**ファイルは、各設定の例を示します。 この形式を使用してへの変更を手動で行うことができます、 **mssql.conf**必要に応じてファイルします。 場合は、ファイルを手動で変更しないでください、変更が適用される前に SQL Server を再起動する必要があります。 使用する、 **mssql.conf**ファイル Docker を使用する必要があります Docker [、データを永続化](sql-server-linux-configure-docker.md)です。 最初に完全な追加**mssql.conf**ホスト ディレクトリにファイルし、コンテナーを実行します。 この例は[お客様からのフィードバック](sql-server-linux-customer-feedback.md)です。
 

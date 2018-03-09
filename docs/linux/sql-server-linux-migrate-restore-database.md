@@ -1,38 +1,40 @@
----
+﻿---
 title: "Windows から Linux への SQL Server データベースの移行 |Microsoft Docs"
-description: "このチュートリアルでは、Windows 上のデータベースをバックアップし、SQL Server 2017 を実行している Linux サーバーに復元する方法を示します。"
+description: "このチュートリアルでは、Windows上のSQL Serverデータベースのバックアップし、Linuxコンピューターにて実行しているSQL Server 2017に復元する方法を示します。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/16/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
-ms.openlocfilehash: 6d54a849630bece0fba6456a516cbd68aecf2eb5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: f68f5aae50460dc1e39a24ac1213ac477c96d552
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
-# <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>バックアップと復元を使用して Windows から Linux へ SQL Server データベースを移行する。
+# <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>バックアップと復元を使用して Windows から Linux へ SQL Server データベースを移行する
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Windows 上の SQL Server から Linux 上の SQL Server 2017 にデータベースを移行させるには、SQL Serverのバックアップと復元機能を使用することをお勧めします。このチュートリアルでは、バックアップと復元の方法を使用して、データベースを Linux に移動させるのに必要な手順について説明します。
+Windows 上の SQL Server から Linux 上の SQL Server 2017 にデータベースを移行させるには、SQL Serverのバックアップと復元機能を使用することをお勧めします。 このチュートリアルでは、バックアップと復元の方法を使用して、データベースを Linux に移動させるのに必要な手順について説明します。
 
 > [!div class="checklist"]
 > * SSMS を使用して Windows にバックアップ ファイルを作成します。
-> * Windowsに、Bash シェルをインストールします。
+> * Windows上に、Bash シェルをインストールする
 > * Bash シェルから Linux にバックアップ ファイルを移動する
 > * Transact SQL を使用して Linux 上のバックアップ ファイルを復元します。
 > * 移行を検証するクエリを実行します。
+
+また、SQL Server Alwayson 可用性グループ Windows から Linux に SQL Server データベースを移行するを作成することができます。 参照してください[sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md)です。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -52,20 +54,20 @@ Windows 上のデータベースのバックアップ ファイルを作成す�
 
 1. Windows マシンで **SQL Server Management Studio** を起動します。
 
-2. 接続ダイアログで、「**localhost**」と入力します。
+1. 接続ダイアログで、「**localhost**」と入力します。
 
-3. オブジェクト エクスプローラーで、**データベース**を展開します。
+1. オブジェクト エクスプローラーで、**データベース** を展開します。
 
-4. ターゲット データベースを右クリックし、**タスク**を選択し、**バックアップ**をクリックします。
+1. ターゲット データベースを右クリックし、**タスク** を選択し、**バックアップ** をクリックします。
 
    ![SSMS を使用して、バックアップ ファイルを作成するには](./media/sql-server-linux-migrate-restore-database/ssms-create-backup.png)
 
-5. **データベースのバックアップ**ダイアログ ボックスで、**バックアップの種類**は**完全**、**バックアップ先**は**ディスク**であることを確認してください。ファイル名と場所に注意してください。 たとえば、SQL Server 2016での既定のバックアップ パスは**YourDB**という名前のデータベースの場合`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\YourDB.bak`となります。
+1. **データベースのバックアップ**ダイアログで、**バックアップの種類** は **完全**、**バックアップ先** は **ディスク** であることを確認します。 ファイル名と場所に注意します。 たとえば、SQL Server 2016 で **YourDB** という名前のデータベースの場合、既定のバックアップ パスは次のようになります。 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\YourDB.bak`
 
-6. **OK**をクリックしてデータベースをバックアップします。
+1. **OK** をクリックしてデータベースをバックアップします。
 
 > [!NOTE]
-> TRANSACT-SQL クエリを実行してバックアップ ファイルを作成することもできます。次の TRANSACT-SQL コマンドは、前の手順と同じ操作を **YourDB** と呼ばれるデータベースに対して実行します。
+> TRANSACT-SQL クエリを実行してバックアップ ファイルを作成することもできます。 次の TRANSACT-SQL コマンドは、前の手順と同じ操作を **YourDB** と呼ばれるデータベースに対して実行します。
 >
 > ```sql
 > BACKUP DATABASE [YourDB] TO  DISK =
@@ -75,20 +77,20 @@ Windows 上のデータベースのバックアップ ファイルを作成す�
 > GO
 > ```
 
-## <a name="install-a-bash-shell-on-windows"></a>Windows に Bash シェルをインストールする
+## <a name="install-a-bash-shell-on-windows"></a>Windows上に、Bash シェルをインストールする
 
-データベースを復元するには、Windows マシンからターゲットとなる Linux マシンにバックアップ ファイルを転送する必要があります。このチュートリアルでは、Windows で実行されている Bash シェル (ターミナル ウィンドウ) から Linux にファイルを移動させます。
+データベースを復元するには、Windows マシンからターゲットとなる Linux マシンにバックアップ ファイルを転送する必要があります。 このチュートリアルでは、Windows で実行されている Bash シェル (ターミナル ウィンドウ) から Linux にファイルを移動させます。
 
-1. **scp** (セキュリティで保護されたコピー) と **ssh** (リモート ログイン) コマンドをサポートする Windows マシンに Bash シェルをインストールします。2 つの例は次のとおりです。
+1. **scp** (セキュリティで保護されたコピー) と **ssh** (リモート ログイン) コマンドをサポートする Windows マシンに Bash シェルをインストールします。 2 つの例は次のとおりです。
 
    * [For Linux の Windows サブシステム](https://msdn.microsoft.com/commandline/wsl/about)(Windows 10)
    * Git Bash シェル ([https://git-scm.com/downloads](https://git-scm.com/downloads))
 
-2. "Windows で、Bash セッションを開きます。
+1. Windows で、Bash セッションを開きます。
 
-## <a id="scp"></a>Linuxにバックアップ ファイルをコピーします。
+## <a id="scp"></a> Linuxにバックアップ ファイルをコピーします。
 
-1. Bash セッションで、バックアップ ファイルを含むディレクトリに移動します。以下に例を示します。
+1. Bash セッションで、バックアップ ファイルを含むディレクトリに移動します。 以下に例を示します。
 
    ```bash
    cd 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\'
@@ -114,21 +116,21 @@ Windows 上のデータベースのバックアップ ファイルを作成す�
    ssh user1@192.0.2.9
    ```
 
-   リモートのLinux サーバーでコマンドを実行できるようになりました。
+   リモートのLinux サーバーでコマンドを実行できるようになりました。
 
-2. スーパー ユーザー モードに切り替えます。
+1. スーパー ユーザー モードに切り替えます。
 
    ```bash
    sudo su
    ```
 
-3. 新しいバックアップ ディレクトリを作成します。 -P パラメーターは、ディレクトリが既に存在する場合に、何も行われません。
+1. 新しいバックアップ ディレクトリを作成します。 Pパラメーターは、ディレクトリが既に存在する場合は、何も行いません。
 
    ```bash
    mkdir -p /var/opt/mssql/backup
    ```
 
-4. バックアップ ファイルをそのディレクトリに移動します。次の例では、バックアップ ファイルは*user1*のホーム ディレクトリにあります。 バックアップ ファイルの場所とファイル名と一致するようにコマンドを変更してください。
+1. バックアップ ファイルをそのディレクトリに移動します。 次の例では、バックアップ ファイルは *user1* のホーム ディレクトリにあります。 バックアップ ファイルの場所とファイル名と一致するようにコマンドを変更してください。
 
    ```bash
    mv /home/user1/YourDB.bak /var/opt/mssql/backup/
@@ -140,20 +142,21 @@ Windows 上のデータベースのバックアップ ファイルを作成す�
    exit
    ```
 
-## <a name="restore-your-database-on-linux"></a>Linux上にデータベースを復元します。
+## <a name="restore-your-database-on-linux"></a>Linux上にデータベースを復元する
 
 データベースのバックアップを復元する際、**データベースの復元**TRANSACT-SQL (TQL) コマンド。
 
 > [!NOTE]
-> 次の手順を使用して、 **sqlcmd**ツールです。 インストールを行っていないかどうかは SQL Server ツールを参照してください[Linux 上の SQL Server のインストール コマンド ライン ツール](sql-server-linux-setup-tools.md)です。
+> 次の手順では **sqlcmd** ツールを使用します。 インストールを行っていないかどうかは SQL Server ツールを参照してください[Linux 上の SQL Server のインストール コマンド ライン ツール](sql-server-linux-setup-tools.md)です。
 
-1. 同じターミナルで**sqlcmd**を起動します。 次の例は、**SA**ユーザーでローカルのSQL Serverインスタンスに接続します。メッセージが表示されたら、パスワードを入力します。もしくは**-p**パラメーターを追加して、パスワードを指定します。
+1. 同じターミナルで **sqlcmd** を起動します。 次の例は、**SA** ユーザーでローカルのSQL Serverインスタンスに接続します。 メッセージが表示されたら、パスワードを入力します。もしくは **-p** パラメーターを追加して、パスワードを指定します。
 
    ```bash
    sqlcmd -S localhost -U SA
    ```
 
-2. `>1`プロンプトで、次の**RESTORE DATABASE**コマンドを入力します。各行 (複数行のコマンド全体を一度にコピーして貼り付けることはできません) の後にENTERキーを押します。`YourDB`をすべてデータベースの名前に置き換えます。
+1. `>1` プロンプトで、次の **RESTORE DATABASE** コマンドを入力します。各行 (複数行のコマンド全体を一度にコピーして貼り付けることはできません) の後にENTERキーを押します。
+ `YourDB` をすべてデータベースの名前に置き換えます。
 
    ```sql
    RESTORE DATABASE YourDB
@@ -172,7 +175,7 @@ Windows 上のデータベースのバックアップ ファイルを作成す�
    GO
    ```
 
-4. 移行されたデータベースで、他のクエリを実行します。次のコマンドでは**YourDB**にデータベースコンテキストを切り替え、そのテーブルの1つから行を選択します。
+1. 移行されたデータベースで、他のクエリを実行します。 次のコマンドでは **YourDB** にデータベースコンテキストを切り替え、そのテーブルの1つから行を選択します。
 
    ```sql
    USE YourDB
@@ -190,11 +193,12 @@ Windows 上のデータベースのバックアップ ファイルを作成す�
 > [!div class="checklist"]
 > * SSMSとTransact SQLを使用して、Windows上のバックアップ ファイルを作成する
 > * Windows上に、Bash シェルをインストールする
-> * **scp**を使用してWindowsからLinuxにバックアップ ファイルを移動する
-> * **ssh**を使用してLinuxコンピューターにリモート接続する
+> * **scp** を使用してWindowsからLinuxにバックアップ ファイルを移動する
+> * **ssh** を使用してLinuxコンピューターにリモート接続する
 > * 復元処理の準備としてバックアップ ファイルを再配置する
-> * **sqlcmd**を使用してTRANSACT-SQLコマンドを実行する
-> * **RESTORE DATABASE**コマンドでデータベースのバックアップを復元する  
+> * **sqlcmd** を使用してTRANSACT-SQLコマンドを実行する
+> * **RESTORE DATABASE** コマンドでデータベースのバックアップを復元する 
+> * 移行を検証するクエリを実行します。
 
 > * 移行を検証するクエリを実行します。
 

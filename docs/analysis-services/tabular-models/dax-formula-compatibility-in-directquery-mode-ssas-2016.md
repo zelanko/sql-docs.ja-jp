@@ -1,32 +1,31 @@
 ---
-title: "DirectQuery モード (SSAS 2016) での DAX 数式の互換性 |Microsoft ドキュメント"
+title: "DirectQuery モードでの DAX 数式の互換性 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/06/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d2fbafe6-d7fb-437b-b32b-fa2446023fa5
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8ba414696dffec7b1477487e19b0ff4e45f6213e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 92c5801fe05dfa19e136e15f15227e50af64f769
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>DirectQuery モードでの DAX 数式の互換性 
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]テーブル 1200 以降モデルに対して DirectQuery モード、以前のバージョンで多くの機能制限適用されなくなります。 特に DAX 数式については、次のように改善されました。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+テーブル 1200 以降モデルに対して DirectQuery モード、以前のバージョンで多くの機能制限適用されなくなります。 特に DAX 数式については、次のように改善されました。
 
 - DirectQuery ではパフォーマンスを向上させるより単純なクエリを生成するようになりました。
 - DirectQuery モードでは、行レベルのセキュリティ (RLS) はサポートされています。
@@ -350,7 +349,7 @@ DirectQuery モードでは、この関数のパラメーターが 3 つ (列の
 
 
 ## <a name="see-also"></a>参照  
-[DirectQuery モード (SSAS テーブル)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[DirectQuery モード](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 
 

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Progress Reports event category
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fabf6b9f902d02462b6dc6dfe5beb5edfbb7bb88
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: eb8a5e4ba89eb9fc56b3498829e2ab2733c74b18
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="progress-reports-data-columns"></a>進行状況レポートのデータ列
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]進行状況レポート イベント カテゴリには、次のイベント クラスがあります。  
@@ -40,24 +40,24 @@ ms.lasthandoff: 12/08/2017
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。 有効な **サブクラス ID**と **サブクラス名** の組み合わせは次のとおりです。<br /><br /> 1: **Process**<br /><br /> 2: **Merge**<br /><br /> 3: **Delete**<br /><br /> 4: **DeleteOldAggregations**<br /><br /> 5: **Rebuild**<br /><br /> 6: **Commit**<br /><br /> 7: **Rollback**<br /><br /> 8: **CreateIndexes**<br /><br /> 9: **CreateTable**<br /><br /> 10: **InsertInto**<br /><br /> 11: **Transaction**<br /><br /> 12: **Initialize**<br /><br /> 13: **Discretize**<br /><br /> 14: **Query**<br /><br /> 15: **CreateView**<br /><br /> 16: **WriteData**<br /><br /> 17: **ReadData**<br /><br /> 18: **GroupData**<br /><br /> 19: **GroupDataRecord**<br /><br /> 20: **BuildIndex**<br /><br /> 21: **Aggregate**<br /><br /> 22: **BuildDecode**<br /><br /> 23: **WriteDecode**<br /><br /> 24: **BuildDMDecode**<br /><br /> 25: **ExecuteSQL**<br /><br /> 26: **ExecuteModifiedSQL**<br /><br /> 27: **Connecting**<br /><br /> 28: **BuildAggsAndIndexes**<br /><br /> 29: **MergeAggsOnDisk**<br /><br /> 30: **BuildIndexForRigidAggs**<br /><br /> 31: **BuildIndexForFlexibleAggs**<br /><br /> 32: **WriteAggsAndIndexes**<br /><br /> 33: **WriteSegment**<br /><br /> 34: **DataMiningProgress**<br /><br /> 35: **ReadBufferFullReport**<br /><br /> 36: **ProactiveCacheConversion**<br /><br /> 37: **Backup**<br /><br /> 38: **Restore**<br /><br /> 39: **Synchronize**<br /><br /> 40: **Build Processing Schedule**<br /><br /> 41: **Detach**<br /><br /> 42: **Attach**<br /><br /> 43: **Analyze\Encode Data**<br /><br /> 44: **Compress Segment**<br /><br /> 45: **Write Table Column**<br /><br /> 46: **Relationship Build Prepare**<br /><br /> 47: **Build Relationship Segment**<br /><br /> 48: **Load**<br /><br /> 49: **Metadata Load**<br /><br /> 50: **Data Load**<br /><br /> 51: **Post Load**<br /><br /> 52: **Metadata traversal during Backup**<br /><br /> 53: **VertiPaq**<br /><br /> 54: **Hierarchy processing**<br /><br /> 55: **Switching dictionary**|  
+|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
+|EventSubclass|@shouldalert|@shouldalert|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。 有効な **サブクラス ID**と **サブクラス名** の組み合わせは次のとおりです。<br /><br /> 1: **Process**<br /><br /> 2: **Merge**<br /><br /> 3: **Delete**<br /><br /> 4: **DeleteOldAggregations**<br /><br /> 5: **Rebuild**<br /><br /> 6: **Commit**<br /><br /> 7: **Rollback**<br /><br /> 8: **CreateIndexes**<br /><br /> 9: **CreateTable**<br /><br /> 10: **InsertInto**<br /><br /> 11: **Transaction**<br /><br /> 12: **Initialize**<br /><br /> 13: **Discretize**<br /><br /> 14: **Query**<br /><br /> 15: **CreateView**<br /><br /> 16: **WriteData**<br /><br /> 17: **ReadData**<br /><br /> 18: **GroupData**<br /><br /> 19: **GroupDataRecord**<br /><br /> 20: **BuildIndex**<br /><br /> 21: **Aggregate**<br /><br /> 22: **BuildDecode**<br /><br /> 23: **WriteDecode**<br /><br /> 24: **BuildDMDecode**<br /><br /> 25: **ExecuteSQL**<br /><br /> 26: **ExecuteModifiedSQL**<br /><br /> 27: **Connecting**<br /><br /> 28: **BuildAggsAndIndexes**<br /><br /> 29: **MergeAggsOnDisk**<br /><br /> 30: **BuildIndexForRigidAggs**<br /><br /> 31: **BuildIndexForFlexibleAggs**<br /><br /> 32: **WriteAggsAndIndexes**<br /><br /> 33: **WriteSegment**<br /><br /> 34: **DataMiningProgress**<br /><br /> 35: **ReadBufferFullReport**<br /><br /> 36: **ProactiveCacheConversion**<br /><br /> 37: **Backup**<br /><br /> 38: **Restore**<br /><br /> 39: **Synchronize**<br /><br /> 40: **Build Processing Schedule**<br /><br /> 41: **Detach**<br /><br /> 42: **Attach**<br /><br /> 43: **Analyze\Encode Data**<br /><br /> 44: **Compress Segment**<br /><br /> 45: **Write Table Column**<br /><br /> 46: **Relationship Build Prepare**<br /><br /> 47: **Build Relationship Segment**<br /><br /> 48: **Load**<br /><br /> 49: **Metadata Load**<br /><br /> 50: **Data Load**<br /><br /> 51: **Post Load**<br /><br /> 52: **Metadata traversal during Backup**<br /><br /> 53: **VertiPaq**<br /><br /> 54: **Hierarchy processing**<br /><br /> 55: **Switching dictionary**|  
 |CurrentTime|2|5|Reported イベントの現在の時刻を表します (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントが開始された時刻を表します (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
-|JobID|7|1|Reported イベントに関連付けられたジョブ ID を表します。|  
+|JobID|7|@shouldalert|Reported イベントに関連付けられたジョブ ID を表します。|  
 |SessionType|8|8|Reported イベントに関連付けられたセッションの種類 (イベントを発生させたエンティティ) を表します。 イベントを処理する場合、値は次のとおりです。<br /><br /> 1 = ユーザー<br /><br /> 2 = プロアクティブ キャッシュ<br /><br /> 3 = レイジー処理|  
 |ObjectID|11|8|Reported イベントに関連付けられたオブジェクト ID (文字列) を表します。|  
-|ObjectType|12|1|オブジェクトの種類が含まれます。|  
+|ObjectType|12|@shouldalert|オブジェクトの種類が含まれます。|  
 |ObjectName|13|8|Reported イベントに関連付けられたオブジェクトの名前を表します。|  
 |ObjectPath|14|8|Reported イベントに関連付けられたオブジェクトのオブジェクト パスを表します。パスは、オブジェクトの親を先頭に、コンマで区切った親のリストとして表されます。|  
 |ObjectReference|15|8|Reported イベントのオブジェクトの参照を表します。すべての親を XML としてエンコードし、オブジェクトを記述するタグを使用して表します。|  
-|ConnectionID|25|1|Reported イベントに関連付けられた一意の接続 ID を表します。|  
+|ConnectionID|25|@shouldalert|Reported イベントに関連付けられた一意の接続 ID を表します。|  
 |DatabaseName|28|8|Reported イベントが発生したデータベースの名前を表します。|  
 |NTUserName|32|8|Reported イベントに関連付けられた Windows ユーザー アカウントを表します。|  
 |NTDomainName|33|8|Reported イベントに関連付けられた Windows ドメイン アカウントを表します。|  
 |SessionID|39|8|Reported イベントに関連付けられたセッション ID を表します。|  
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|1|Reported イベントに関連付けられたユーザー セッションを一意に識別するサーバー プロセス ID (SPID) を表します。 SPID は、XML for Analysis (XMLA) で使用するセッション GUID に直接対応します。|  
+|SPID|41|@shouldalert|Reported イベントに関連付けられたユーザー セッションを一意に識別するサーバー プロセス ID (SPID) を表します。 SPID は、XML for Analysis (XMLA) で使用するセッション GUID に直接対応します。|  
 |TextData|42|9|Reported イベントに関連付けられたテキスト データを表します。|  
 |ServerName|43|8|Reported イベントが発生した [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
   
@@ -65,32 +65,32 @@ ms.lasthandoff: 12/08/2017
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。 有効な **サブクラス ID**と **サブクラス名** の組み合わせは次のとおりです。<br /><br /> 1: **Process**<br /><br /> 2: **Merge**<br /><br /> 3: **Delete**<br /><br /> 4: **DeleteOldAggregations**<br /><br /> 5: **Rebuild**<br /><br /> 6: **Commit**<br /><br /> 7: **Rollback**<br /><br /> 8: **CreateIndexes**<br /><br /> 9: **CreateTable**<br /><br /> 10: **InsertInto**<br /><br /> 11: **Transaction**<br /><br /> 12: **Initialize**<br /><br /> 13: **Discretize**<br /><br /> 14: **Query**<br /><br /> 15: **CreateView**<br /><br /> 16: **WriteData**<br /><br /> 17: **ReadData**<br /><br /> 18: **GroupData**<br /><br /> 19: **GroupDataRecord**<br /><br /> 20: **BuildIndex**<br /><br /> 21: **Aggregate**<br /><br /> 22: **BuildDecode**<br /><br /> 23: **WriteDecode**<br /><br /> 24: **BuildDMDecode**<br /><br /> 25: **ExecuteSQL**<br /><br /> 26: **ExecuteModifiedSQL**<br /><br /> 27: **Connecting**<br /><br /> 28: **BuildAggsAndIndexes**<br /><br /> 29: **MergeAggsOnDisk**<br /><br /> 30: **BuildIndexForRigidAggs**<br /><br /> 31: **BuildIndexForFlexibleAggs**<br /><br /> 32: **WriteAggsAndIndexes**<br /><br /> 33: **WriteSegment**<br /><br /> 34: **DataMiningProgress**<br /><br /> 35: **ReadBufferFullReport**<br /><br /> 36: **ProactiveCacheConversion**<br /><br /> 37: **Backup**<br /><br /> 38: **Restore**<br /><br /> 39: **Synchronize**<br /><br /> 40: **Build Processing Schedule**<br /><br /> 41: **Detach**<br /><br /> 42: **Attach**<br /><br /> 43: **Analyze\Encode Data**<br /><br /> 44: **Compress Segment**<br /><br /> 45: **Write Table Column**<br /><br /> 46: **Relationship Build Prepare**<br /><br /> 47: **Build Relationship Segment**<br /><br /> 48: **Load**<br /><br /> 49: **Metadata Load**<br /><br /> 50: **Data Load**<br /><br /> 51: **Post Load**<br /><br /> 52: **Metadata traversal during Backup**<br /><br /> 53: **VertiPaq**<br /><br /> 54: **Hierarchy processing**<br /><br /> 55: **Switching dictionary**|  
+|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
+|EventSubclass|@shouldalert|@shouldalert|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。 有効な **サブクラス ID**と **サブクラス名** の組み合わせは次のとおりです。<br /><br /> 1: **Process**<br /><br /> 2: **Merge**<br /><br /> 3: **Delete**<br /><br /> 4: **DeleteOldAggregations**<br /><br /> 5: **Rebuild**<br /><br /> 6: **Commit**<br /><br /> 7: **Rollback**<br /><br /> 8: **CreateIndexes**<br /><br /> 9: **CreateTable**<br /><br /> 10: **InsertInto**<br /><br /> 11: **Transaction**<br /><br /> 12: **Initialize**<br /><br /> 13: **Discretize**<br /><br /> 14: **Query**<br /><br /> 15: **CreateView**<br /><br /> 16: **WriteData**<br /><br /> 17: **ReadData**<br /><br /> 18: **GroupData**<br /><br /> 19: **GroupDataRecord**<br /><br /> 20: **BuildIndex**<br /><br /> 21: **Aggregate**<br /><br /> 22: **BuildDecode**<br /><br /> 23: **WriteDecode**<br /><br /> 24: **BuildDMDecode**<br /><br /> 25: **ExecuteSQL**<br /><br /> 26: **ExecuteModifiedSQL**<br /><br /> 27: **Connecting**<br /><br /> 28: **BuildAggsAndIndexes**<br /><br /> 29: **MergeAggsOnDisk**<br /><br /> 30: **BuildIndexForRigidAggs**<br /><br /> 31: **BuildIndexForFlexibleAggs**<br /><br /> 32: **WriteAggsAndIndexes**<br /><br /> 33: **WriteSegment**<br /><br /> 34: **DataMiningProgress**<br /><br /> 35: **ReadBufferFullReport**<br /><br /> 36: **ProactiveCacheConversion**<br /><br /> 37: **Backup**<br /><br /> 38: **Restore**<br /><br /> 39: **Synchronize**<br /><br /> 40: **Build Processing Schedule**<br /><br /> 41: **Detach**<br /><br /> 42: **Attach**<br /><br /> 43: **Analyze\Encode Data**<br /><br /> 44: **Compress Segment**<br /><br /> 45: **Write Table Column**<br /><br /> 46: **Relationship Build Prepare**<br /><br /> 47: **Build Relationship Segment**<br /><br /> 48: **Load**<br /><br /> 49: **Metadata Load**<br /><br /> 50: **Data Load**<br /><br /> 51: **Post Load**<br /><br /> 52: **Metadata traversal during Backup**<br /><br /> 53: **VertiPaq**<br /><br /> 54: **Hierarchy processing**<br /><br /> 55: **Switching dictionary**|  
 |CurrentTime|2|5|Reported イベントの現在の時刻を表します (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントが開始された時刻を表します (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントが終了した時刻を表します。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒) を表します。|  
 |CPUTime|6|2|イベントで使用された CPU 時間 (ミリ秒) を表します。|  
-|JobID|7|1|Reported イベントに関連付けられたジョブ ID を表します。|  
+|JobID|7|@shouldalert|Reported イベントに関連付けられたジョブ ID を表します。|  
 |SessionType|8|8|Reported イベントに関連付けられたセッションの種類 (イベントを発生させたエンティティ) を表します。 イベントを処理する場合、値は次のとおりです。<br /><br /> 1 = ユーザー<br /><br /> 2 = プロアクティブ キャッシュ<br /><br /> 3 = レイジー処理|  
-|ProgressTotal|9|1|Reported イベントの進行状況の合計を表します。|  
-|IntegerData|10|1|処理イベントに対して処理される行数の現在のカウントなど、Reported イベントに関連付けられた整数データを表します。|  
+|ProgressTotal|9|@shouldalert|Reported イベントの進行状況の合計を表します。|  
+|IntegerData|10|@shouldalert|処理イベントに対して処理される行数の現在のカウントなど、Reported イベントに関連付けられた整数データを表します。|  
 |ObjectID|11|8|Reported イベントに関連付けられたオブジェクト ID (文字列) を表します。|  
-|ObjectType|12|1|オブジェクトの種類が含まれます。|  
+|ObjectType|12|@shouldalert|オブジェクトの種類が含まれます。|  
 |ObjectName|13|8|Reported イベントに関連付けられたオブジェクトの名前を表します。|  
 |ObjectPath|14|8|Reported イベントに関連付けられたオブジェクトのオブジェクト パスを表します。パスは、オブジェクトの親を先頭に、コンマで区切った親のリストとして表されます。|  
 |ObjectReference|15|8|Reported イベントのオブジェクトの参照を表します。すべての親を XML としてエンコードし、オブジェクトを記述するタグを使用して表します。|  
-|Severity|22|1|Reported イベントに関連付けられた例外の重大度レベルを表します。 値は次のとおりです。<br /><br /> 0 = 成功<br /><br /> 1 = 情報<br /><br /> 2 = 警告<br /><br /> 3 = エラー|  
-|Success|23|1|Reported イベントの成功または失敗を表します。 値は次のとおりです。<br /><br /> 0 = 失敗<br /><br /> 1 = 成功|  
-|[エラー]|24|1|特定のイベントのエラー番号が含まれます。|  
-|ConnectionID|25|1|Reported イベントに関連付けられた一意の接続 ID を表します。|  
+|Severity|22|@shouldalert|Reported イベントに関連付けられた例外の重大度レベルを表します。 値は次のとおりです。<br /><br /> 0 = 成功<br /><br /> 1 = 情報<br /><br /> 2 = 警告<br /><br /> 3 = エラー|  
+|Success|23|@shouldalert|Reported イベントの成功または失敗を表します。 値は次のとおりです。<br /><br /> 0 = 失敗<br /><br /> 1 = 成功|  
+|[エラー]|24|@shouldalert|特定のイベントのエラー番号が含まれます。|  
+|ConnectionID|25|@shouldalert|Reported イベントに関連付けられた一意の接続 ID を表します。|  
 |DatabaseName|28|8|Reported イベントが発生したデータベースの名前を表します。|  
 |NTUserName|32|8|Reported イベントに関連付けられた Windows ユーザー アカウントを表します。|  
 |NTDomainName|33|8|Reported イベントに関連付けられた Windows ドメイン アカウントを表します。|  
 |SessionID|39|8|Reported イベントに関連付けられたセッション ID を表します。|  
 |NTCanonicalUserName|40|8|Reported イベントに関連付けられた Windows ユーザー名を表します。 ユーザー名は正規の形式です。 たとえば、engineering.microsoft.com/software/user などです。|  
-|SPID|41|1|Reported イベントに関連付けられたユーザー セッションを一意に識別するサーバー プロセス ID (SPID) を表します。 SPID は、XML for Analysis (XMLA) で使用するセッション GUID に直接対応します。|  
+|SPID|41|@shouldalert|Reported イベントに関連付けられたユーザー セッションを一意に識別するサーバー プロセス ID (SPID) を表します。 SPID は、XML for Analysis (XMLA) で使用するセッション GUID に直接対応します。|  
 |TextData|42|9|Reported イベントに関連付けられたテキスト データを表します。|  
 |ServerName|43|8|Reported イベントが発生した [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
   
@@ -98,23 +98,23 @@ ms.lasthandoff: 12/08/2017
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。 有効な **サブクラス ID**と **サブクラス名** の組み合わせは次のとおりです。<br /><br /> 1: **Process**<br /><br /> 2: **Merge**<br /><br /> 3: **Delete**<br /><br /> 4: **DeleteOldAggregations**<br /><br /> 5: **Rebuild**<br /><br /> 6: **Commit**<br /><br /> 7: **Rollback**<br /><br /> 8: **CreateIndexes**<br /><br /> 9: **CreateTable**<br /><br /> 10: **InsertInto**<br /><br /> 11: **Transaction**<br /><br /> 12: **Initialize**<br /><br /> 13: **Discretize**<br /><br /> 14: **Query**<br /><br /> 15: **CreateView**<br /><br /> 16: **WriteData**<br /><br /> 17: **ReadData**<br /><br /> 18: **GroupData**<br /><br /> 19: **GroupDataRecord**<br /><br /> 20: **BuildIndex**<br /><br /> 21: **Aggregate**<br /><br /> 22: **BuildDecode**<br /><br /> 23: **WriteDecode**<br /><br /> 24: **BuildDMDecode**<br /><br /> 25: **ExecuteSQL**<br /><br /> 26: **ExecuteModifiedSQL**<br /><br /> 27: **Connecting**<br /><br /> 28: **BuildAggsAndIndexes**<br /><br /> 29: **MergeAggsOnDisk**<br /><br /> 30: **BuildIndexForRigidAggs**<br /><br /> 31: **BuildIndexForFlexibleAggs**<br /><br /> 32: **WriteAggsAndIndexes**<br /><br /> 33: **WriteSegment**<br /><br /> 34: **DataMiningProgress**<br /><br /> 35: **ReadBufferFullReport**<br /><br /> 36: **ProactiveCacheConversion**<br /><br /> 37: **Backup**<br /><br /> 38: **Restore**<br /><br /> 39: **Synchronize**<br /><br /> 40: **Build Processing Schedule**<br /><br /> 41: **Detach**<br /><br /> 42: **Attach**<br /><br /> 43: **Analyze\Encode Data**<br /><br /> 44: **Compress Segment**<br /><br /> 45: **Write Table Column**<br /><br /> 46: **Relationship Build Prepare**<br /><br /> 47: **Build Relationship Segment**<br /><br /> 48: **Load**<br /><br /> 49: **Metadata Load**<br /><br /> 50: **Data Load**<br /><br /> 51: **Post Load**<br /><br /> 52: **Metadata traversal during Backup**<br /><br /> 53: **VertiPaq**<br /><br /> 54: **Hierarchy processing**<br /><br /> 55: **Switching dictionary**|  
+|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
+|EventSubclass|@shouldalert|@shouldalert|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。 有効な **サブクラス ID**と **サブクラス名** の組み合わせは次のとおりです。<br /><br /> 1: **Process**<br /><br /> 2: **Merge**<br /><br /> 3: **Delete**<br /><br /> 4: **DeleteOldAggregations**<br /><br /> 5: **Rebuild**<br /><br /> 6: **Commit**<br /><br /> 7: **Rollback**<br /><br /> 8: **CreateIndexes**<br /><br /> 9: **CreateTable**<br /><br /> 10: **InsertInto**<br /><br /> 11: **Transaction**<br /><br /> 12: **Initialize**<br /><br /> 13: **Discretize**<br /><br /> 14: **Query**<br /><br /> 15: **CreateView**<br /><br /> 16: **WriteData**<br /><br /> 17: **ReadData**<br /><br /> 18: **GroupData**<br /><br /> 19: **GroupDataRecord**<br /><br /> 20: **BuildIndex**<br /><br /> 21: **Aggregate**<br /><br /> 22: **BuildDecode**<br /><br /> 23: **WriteDecode**<br /><br /> 24: **BuildDMDecode**<br /><br /> 25: **ExecuteSQL**<br /><br /> 26: **ExecuteModifiedSQL**<br /><br /> 27: **Connecting**<br /><br /> 28: **BuildAggsAndIndexes**<br /><br /> 29: **MergeAggsOnDisk**<br /><br /> 30: **BuildIndexForRigidAggs**<br /><br /> 31: **BuildIndexForFlexibleAggs**<br /><br /> 32: **WriteAggsAndIndexes**<br /><br /> 33: **WriteSegment**<br /><br /> 34: **DataMiningProgress**<br /><br /> 35: **ReadBufferFullReport**<br /><br /> 36: **ProactiveCacheConversion**<br /><br /> 37: **Backup**<br /><br /> 38: **Restore**<br /><br /> 39: **Synchronize**<br /><br /> 40: **Build Processing Schedule**<br /><br /> 41: **Detach**<br /><br /> 42: **Attach**<br /><br /> 43: **Analyze\Encode Data**<br /><br /> 44: **Compress Segment**<br /><br /> 45: **Write Table Column**<br /><br /> 46: **Relationship Build Prepare**<br /><br /> 47: **Build Relationship Segment**<br /><br /> 48: **Load**<br /><br /> 49: **Metadata Load**<br /><br /> 50: **Data Load**<br /><br /> 51: **Post Load**<br /><br /> 52: **Metadata traversal during Backup**<br /><br /> 53: **VertiPaq**<br /><br /> 54: **Hierarchy processing**<br /><br /> 55: **Switching dictionary**|  
 |CurrentTime|2|5|Reported イベントの現在の時刻を表します (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントが開始された時刻を表します (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
-|JobID|7|1|Reported イベントに関連付けられたジョブ ID を表します。|  
+|JobID|7|@shouldalert|Reported イベントに関連付けられたジョブ ID を表します。|  
 |SessionType|8|8|Reported イベントに関連付けられたセッションの種類 (イベントを発生させたエンティティ) を表します。 イベントを処理する場合、値は次のとおりです。<br /><br /> 1 = ユーザー<br /><br /> 2 = プロアクティブ キャッシュ<br /><br /> 3 = レイジー処理|  
-|ProgressTotal|9|1|Reported イベントの進行状況の合計を表します。|  
-|IntegerData|10|1|処理イベントに対して処理される行数の現在のカウントなど、Reported イベントに関連付けられた整数データを表します。|  
+|ProgressTotal|9|@shouldalert|Reported イベントの進行状況の合計を表します。|  
+|IntegerData|10|@shouldalert|処理イベントに対して処理される行数の現在のカウントなど、Reported イベントに関連付けられた整数データを表します。|  
 |ObjectID|11|8|Reported イベントに関連付けられたオブジェクト ID (文字列) を表します。|  
-|ObjectType|12|1|オブジェクトの種類が含まれます。|  
+|ObjectType|12|@shouldalert|オブジェクトの種類が含まれます。|  
 |ObjectName|13|8|Reported イベントに関連付けられたオブジェクトの名前を表します。|  
 |ObjectPath|14|8|Reported イベントに関連付けられたオブジェクトのオブジェクト パスを表します。パスは、オブジェクトの親を先頭に、コンマで区切った親のリストとして表されます。|  
 |ObjectReference|15|8|Reported イベントのオブジェクトの参照を表します。すべての親を XML としてエンコードし、オブジェクトを記述するタグを使用して表します。|  
-|ConnectionID|25|1|Reported イベントに関連付けられた一意の接続 ID を表します。|  
+|ConnectionID|25|@shouldalert|Reported イベントに関連付けられた一意の接続 ID を表します。|  
 |DatabaseName|28|8|Reported イベントが発生したデータベースの名前を表します。|  
 |SessionID|39|8|Reported イベントに関連付けられたセッション ID を表します。|  
-|SPID|41|1|Reported イベントに関連付けられたユーザー セッションを一意に識別するサーバー プロセス ID (SPID) を表します。 SPID は、XML for Analysis (XMLA) で使用するセッション GUID に直接対応します。|  
+|SPID|41|@shouldalert|Reported イベントに関連付けられたユーザー セッションを一意に識別するサーバー プロセス ID (SPID) を表します。 SPID は、XML for Analysis (XMLA) で使用するセッション GUID に直接対応します。|  
 |TextData|42|9|Reported イベントに関連付けられたテキスト データを表します。|  
 |ServerName|43|8|Reported イベントが発生した [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
   
@@ -122,27 +122,27 @@ ms.lasthandoff: 12/08/2017
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。 有効な **サブクラス ID**と **サブクラス名** の組み合わせは次のとおりです。<br /><br /> 1: **Process**<br /><br /> 2: **Merge**<br /><br /> 3: **Delete**<br /><br /> 4: **DeleteOldAggregations**<br /><br /> 5: **Rebuild**<br /><br /> 6: **Commit**<br /><br /> 7: **Rollback**<br /><br /> 8: **CreateIndexes**<br /><br /> 9: **CreateTable**<br /><br /> 10: **InsertInto**<br /><br /> 11: **Transaction**<br /><br /> 12: **Initialize**<br /><br /> 13: **Discretize**<br /><br /> 14: **Query**<br /><br /> 15: **CreateView**<br /><br /> 16: **WriteData**<br /><br /> 17: **ReadData**<br /><br /> 18: **GroupData**<br /><br /> 19: **GroupDataRecord**<br /><br /> 20: **BuildIndex**<br /><br /> 21: **Aggregate**<br /><br /> 22: **BuildDecode**<br /><br /> 23: **WriteDecode**<br /><br /> 24: **BuildDMDecode**<br /><br /> 25: **ExecuteSQL**<br /><br /> 26: **ExecuteModifiedSQL**<br /><br /> 27: **Connecting**<br /><br /> 28: **BuildAggsAndIndexes**<br /><br /> 29: **MergeAggsOnDisk**<br /><br /> 30: **BuildIndexForRigidAggs**<br /><br /> 31: **BuildIndexForFlexibleAggs**<br /><br /> 32: **WriteAggsAndIndexes**<br /><br /> 33: **WriteSegment**<br /><br /> 34: **DataMiningProgress**<br /><br /> 35: **ReadBufferFullReport**<br /><br /> 36: **ProactiveCacheConversion**<br /><br /> 37: **Backup**<br /><br /> 38: **Restore**<br /><br /> 39: **Synchronize**<br /><br /> 40: **Build Processing Schedule**<br /><br /> 41: **Detach**<br /><br /> 42: **Attach**<br /><br /> 43: **Analyze\Encode Data**<br /><br /> 44: **Compress Segment**<br /><br /> 45: **Write Table Column**<br /><br /> 46: **Relationship Build Prepare**<br /><br /> 47: **Build Relationship Segment**<br /><br /> 48: **Load**<br /><br /> 49: **Metadata Load**<br /><br /> 50: **Data Load**<br /><br /> 51: **Post Load**<br /><br /> 52: **Metadata traversal during Backup**<br /><br /> 53: **VertiPaq**<br /><br /> 54: **Hierarchy processing**<br /><br /> 55: **Switching dictionary**|  
+|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
+|EventSubclass|@shouldalert|@shouldalert|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。 有効な **サブクラス ID**と **サブクラス名** の組み合わせは次のとおりです。<br /><br /> 1: **Process**<br /><br /> 2: **Merge**<br /><br /> 3: **Delete**<br /><br /> 4: **DeleteOldAggregations**<br /><br /> 5: **Rebuild**<br /><br /> 6: **Commit**<br /><br /> 7: **Rollback**<br /><br /> 8: **CreateIndexes**<br /><br /> 9: **CreateTable**<br /><br /> 10: **InsertInto**<br /><br /> 11: **Transaction**<br /><br /> 12: **Initialize**<br /><br /> 13: **Discretize**<br /><br /> 14: **Query**<br /><br /> 15: **CreateView**<br /><br /> 16: **WriteData**<br /><br /> 17: **ReadData**<br /><br /> 18: **GroupData**<br /><br /> 19: **GroupDataRecord**<br /><br /> 20: **BuildIndex**<br /><br /> 21: **Aggregate**<br /><br /> 22: **BuildDecode**<br /><br /> 23: **WriteDecode**<br /><br /> 24: **BuildDMDecode**<br /><br /> 25: **ExecuteSQL**<br /><br /> 26: **ExecuteModifiedSQL**<br /><br /> 27: **Connecting**<br /><br /> 28: **BuildAggsAndIndexes**<br /><br /> 29: **MergeAggsOnDisk**<br /><br /> 30: **BuildIndexForRigidAggs**<br /><br /> 31: **BuildIndexForFlexibleAggs**<br /><br /> 32: **WriteAggsAndIndexes**<br /><br /> 33: **WriteSegment**<br /><br /> 34: **DataMiningProgress**<br /><br /> 35: **ReadBufferFullReport**<br /><br /> 36: **ProactiveCacheConversion**<br /><br /> 37: **Backup**<br /><br /> 38: **Restore**<br /><br /> 39: **Synchronize**<br /><br /> 40: **Build Processing Schedule**<br /><br /> 41: **Detach**<br /><br /> 42: **Attach**<br /><br /> 43: **Analyze\Encode Data**<br /><br /> 44: **Compress Segment**<br /><br /> 45: **Write Table Column**<br /><br /> 46: **Relationship Build Prepare**<br /><br /> 47: **Build Relationship Segment**<br /><br /> 48: **Load**<br /><br /> 49: **Metadata Load**<br /><br /> 50: **Data Load**<br /><br /> 51: **Post Load**<br /><br /> 52: **Metadata traversal during Backup**<br /><br /> 53: **VertiPaq**<br /><br /> 54: **Hierarchy processing**<br /><br /> 55: **Switching dictionary**|  
 |CurrentTime|2|5|Reported イベントの現在の時刻を表します (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントが開始された時刻を表します (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントが終了した時刻を表します。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒) を表します。|  
-|JobID|7|1|Reported イベントに関連付けられたジョブ ID を表します。|  
+|JobID|7|@shouldalert|Reported イベントに関連付けられたジョブ ID を表します。|  
 |SessionType|8|8|Reported イベントに関連付けられたセッションの種類 (イベントを発生させたエンティティ) を表します。 イベントを処理する場合、値は次のとおりです。<br /><br /> 1 = ユーザー<br /><br /> 2 = プロアクティブ キャッシュ<br /><br /> 3 = レイジー処理|  
-|ProgressTotal|9|1|Reported イベントの進行状況の合計を表します。|  
-|IntegerData|10|1|処理イベントに対して処理される行数の現在のカウントなど、Reported イベントに関連付けられた整数データを表します。|  
+|ProgressTotal|9|@shouldalert|Reported イベントの進行状況の合計を表します。|  
+|IntegerData|10|@shouldalert|処理イベントに対して処理される行数の現在のカウントなど、Reported イベントに関連付けられた整数データを表します。|  
 |ObjectID|11|8|Reported イベントに関連付けられたオブジェクト ID (文字列) を表します。|  
-|ObjectType|12|1|オブジェクトの種類が含まれます。|  
+|ObjectType|12|@shouldalert|オブジェクトの種類が含まれます。|  
 |ObjectName|13|8|Reported イベントに関連付けられたオブジェクトの名前を表します。|  
 |ObjectPath|14|8|Reported イベントに関連付けられたオブジェクトのオブジェクト パスを表します。パスは、オブジェクトの親を先頭に、コンマで区切った親のリストとして表されます。|  
 |ObjectReference|15|8|Reported イベントのオブジェクトの参照を表します。すべての親を XML としてエンコードし、オブジェクトを記述するタグを使用して表します。|  
-|Severity|22|1|Reported イベントに関連付けられた例外の重大度レベルを表します。 値は次のとおりです。<br /><br /> 0 = 成功<br /><br /> 1 = 情報<br /><br /> 2 = 警告<br /><br /> 3 = エラー|  
-|[エラー]|24|1|特定のイベントのエラー番号が含まれます。|  
-|ConnectionID|25|1|Reported イベントに関連付けられた一意の接続 ID を表します。|  
+|Severity|22|@shouldalert|Reported イベントに関連付けられた例外の重大度レベルを表します。 値は次のとおりです。<br /><br /> 0 = 成功<br /><br /> 1 = 情報<br /><br /> 2 = 警告<br /><br /> 3 = エラー|  
+|Error|24|@shouldalert|特定のイベントのエラー番号が含まれます。|  
+|ConnectionID|25|@shouldalert|Reported イベントに関連付けられた一意の接続 ID を表します。|  
 |DatabaseName|28|8|Reported イベントが発生したデータベースの名前を表します。|  
 |SessionID|39|8|Reported イベントに関連付けられたセッション ID を表します。|  
-|SPID|41|1|Reported イベントに関連付けられたユーザー セッションを一意に識別するサーバー プロセス ID (SPID) を表します。 SPID は、XML for Analysis (XMLA) で使用するセッション GUID に直接対応します。|  
+|SPID|41|@shouldalert|Reported イベントに関連付けられたユーザー セッションを一意に識別するサーバー プロセス ID (SPID) を表します。 SPID は、XML for Analysis (XMLA) で使用するセッション GUID に直接対応します。|  
 |TextData|42|9|Reported イベントに関連付けられたテキスト データを表します。|  
 |ServerName|43|8|Reported イベントが発生した [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
   

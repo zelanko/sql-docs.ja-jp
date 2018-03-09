@@ -1,27 +1,29 @@
 ---
 title: "Linux 上の SQL Server のセキュリティの概要 |Microsoft ドキュメント"
-description: "このトピックでは、セキュリティの一般的なアクションを説明します。"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+description: "この記事では、セキュリティの一般的なアクションを説明します。"
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: cb8f44ae871d3e1ec81d576439d81508ac2c96f5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 8000ee26dd5118d4380f4e2ab33d39aa96967466
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>SQL Server on Linux のセキュリティ機能のチュートリアル
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server に新しい Linux ユーザーの場合は、次のタスクはセキュリティ タスクの一部を説明します。 これらは一意または Linux に固有でないですがさらに詳しく調査するには、領域の概念を付けると便利です。 各例では、リンクは、その領域の詳細なドキュメントに提供されます。
 
@@ -38,7 +40,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 ```
 
 >  [!NOTE]
->  上記のアスタリスクの代わりに、強力なパスワードを常に使用します。
+>  前のコマンドで、アスタリスクの代わりに、強力なパスワードが常に使用します。
 
 ログインでは、SQL Server に接続でき、限られたアクセス権を持つ)、master データベースにアクセスすることができます。 ユーザー データベースに接続するには、ログインには、データベース レベル、データベース ユーザーと呼ばれる、対応する id が必要があります。 ユーザーは各データベースに固有でありアクセスを許可するには、各データベースで個別に作成する必要があります。 次の例は、AdventureWorks2014 データベースに移動しを使用して、 [CREATE USER](../t-sql/statements/create-user-transact-sql.md) Larry をという名前のログインに関連付けられている Larry をという名前のユーザーを作成するステートメント。 ログインとユーザーは、(相互にマップされる) に関連する、さまざまなオブジェクトはします。 ログインは、サーバー レベルの原則です。 ユーザーは、データベース レベルのプリンシパルです。
 
@@ -64,7 +66,7 @@ GRANT ALTER ANY USER TO Jerry;
 GO   
 ```
 
-ログイン Jerry ことができますが、複数のログインを作成するようになりましたし Jerry は、ユーザーがより多くのユーザーを作成します。
+ログイン Larry が複数のログインを作成するようになりましたし Jerry は、ユーザーがより多くのユーザーを作成します。
 
 
 ## <a name="granting-access-with-least-privileges"></a>最小限の特権でのアクセス権の付与
@@ -101,7 +103,7 @@ ALTER ROLE Sales ADD MEMBER Jerry;
 
 [行レベルのセキュリティ](../relational-databases/security/row-level-security.md)クエリを実行するユーザーに基づくデータベース内の行へのアクセスを制限することができます。 この機能は、顧客が独自のデータにのみアクセスできますか、ワーカーが自分の部署に関連しているデータにアクセスできるのみのようなシナリオに便利です。   
 
-ユーザー設定の 2 つの異なるを通じて、次の手順の行レベルへのアクセス、`Sales.SalesOrderHeader`テーブル。 
+次の手順を別の行レベルのアクセス権を持つ 2 人のユーザーの設定方法を説明、`Sales.SalesOrderHeader`テーブル。 
 
 行レベルのセキュリティをテストする 2 つのユーザー アカウントを作成します。    
    
@@ -247,7 +249,7 @@ ALTER DATABASE AdventureWorks2014
 SET ENCRYPTION ON;   
 ```
 
-TDE を削除するには、次のように実行します。`ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+TDE を削除するには、次のように実行します。 `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
 暗号化および暗号化解除の操作は、SQL Server によってバック グラウンド スレッドでスケジュールされます。 これらの操作の状態は、この後の一覧に示すカタログ ビューおよび動的管理ビューを使用して確認できます。   
 

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: intrinsic member properties [MDX]
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cf5daff8843fab7cdf1aed4acd0fec0dec84e5ea
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 823c8c1c387d2fb234fcf042cd416ce6e1ebb550
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX メンバーのプロパティ - 固有メンバー プロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]固有プロパティをカスタム アプリケーションに追加のデータまたはメタデータを使用してを返すまたはモデルの調査や構築を支援するクエリに含めることができるディメンション メンバーを公開します。 SQL Server クライアント ツールを使用している場合は、SQL Server Management Studio (SSMS) で固有プロパティを表示できます。  
@@ -72,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 |**ID**|内部的に管理されるメンバー ID。|  
 |**Key**|元のデータ型でのメンバー キーの値。 MEMBER_KEY は、旧バージョンとの互換性のために用意されています。  MEMBER_KEY プロパティの値は、非複合キーについては KEY0 と等しく、複合キーについては NULL です。|  
 |**KEYx**|メンバーのキー (x はキーの序数で、0 から始まります)。 KEY0 は複合キーおよび非複合キーで使用できますが、主に複合キーで使用されます。<br /><br /> 複合キーの場合、KEY0、KEY1、KEY2 などは、全体として複合キーを形成します。 クエリでそれぞれを個別に使用すると、複合キーのその部分を返すことができます。 たとえば、KEY0 を指定すると複合キーの最初の部分が返され、KEY1 を指定すると複合キーの次の部分が返されます。<br /><br /> キーが非複合キーの場合、KEY0 は **Key**と同じです。<br /><br /> **KEYx** は、コンテキストの有無にかかわらず使用できることに注意してください。 このため、両方の一覧に表示されます。<br /><br /> このメンバー プロパティの使用方法の例については、「 [A Simple MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)」(単純な MDX の情報: Key0、Key1、Key2) を参照してください。|  
-|**Name**|メンバーの名前。|  
+|**名前**|メンバーの名前。|  
   
 ### <a name="properties-syntax-for-context-sensitive-properties"></a>状況依存プロパティの PROPERTIES の構文  
  この種類のメンバー プロパティは、特定のディメンションまたはレベルのコンテキストで使用し、特定のディメンションまたはレベルの各メンバーに関する値を提供します。  

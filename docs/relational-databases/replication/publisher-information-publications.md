@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.publisherinfo.publications.f1
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da42ef06ee4b803f0cb0b96e404d9b185106ab03
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b003b3d18832f83fc1c57ea34c83e6da9dfab46c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publisher-information-publications"></a>パブリッシャー情報、[パブリケーション]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[パブリケーション]** タブを使用すると、左ペインで選択したパブリッシャーにおけるすべてのパブリケーションに関する要約情報を取得できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  グリッドにデータを表示する方法を変更するには、グリッドを右クリックし、次のいずれかのオプションをクリックします。  
   
 -   **[並べ替え]**: **[列の並べ替え]** ダイアログ ボックスで、1 つ以上の列を基準にして並べ替えを行います。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
  フィルター設定は各グリッドに固有です。 列の選択と並べ替えは、各パブリッシャーのパブリケーション グリッドなど、同じ種類のすべてのグリッドに適用されます。  
   
- **[状態]**  
+ **ステータス**  
  各パブリケーションの状態です。これは、サブスクリプションの最も優先度の高い状態により決定されます。 既定では、パブリケーション情報を表示するグリッドは **[状態]** 列の順序で並べられています。 表示される状態の値と、その値の並べ替え順 (たとえば、エラーは常にグリッドの上部に表示されます) を次に示します。  
   
 -   [エラー]  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [失敗したコマンドの再試行]  
   
--   OK  
+-   [OK]  
   
  **[パフォーマンス クリティカル]** 状態は、トランザクション サブスクリプションとマージ サブスクリプションに関連しています。トランザクション サブスクリプションの場合は、しきい値が設定されている場合にのみ表示されます。 パフォーマンスの測定としきい値の設定については、「[Monitor Performance with Replication Monitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)」 (レプリケーション モニターを使用したパフォーマンスの監視) と「[レプリケーション モニターのしきい値と警告の設定](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 -   スナップショット レプリケーションが "同期" している場合、ディストリビューション エージェントは実行されており、データは現在レプリケートされています。  
   
  **[現在の平均パフォーマンス]** と **[現在の最低パフォーマンス]**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ。 それぞれ、パブリケーションに対するすべてのサブスクリプションの、平均パフォーマンスと最低パフォーマンスの評価を表します。 評価は、レプリケーション モニターにより取得された最新の計測結果に基づいています。サブスクリプションの経過的なパフォーマンスは反映されません。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 それぞれ、パブリケーションに対するすべてのサブスクリプションの、平均パフォーマンスと最低パフォーマンスの評価を表します。 評価は、レプリケーション モニターにより取得された最新の計測結果に基づいています。サブスクリプションの経過的なパフォーマンスは反映されません。  
   
  トランザクション レプリケーションの場合、レプリケーション モニターには、パフォーマンスしきい値が定義されているパブリケーションに対してのみ値が表示されます。 パブリケーションにパフォーマンスしきい値が定義されていない場合、この列には **[有効になっていません]**と表示されます。 マージ レプリケーションの場合、レプリケーション モニターには、50 以上の変更を伴う同期がそれぞれ同じ種類の接続 (ダイヤルアップまたは LAN) により 5 回行われた後で、値が表示されます。 50 以上の変更を伴う同期が 5 回未満の場合、または最新の同期における変更が 50 未満の場合には、この列は空白になります。  
   

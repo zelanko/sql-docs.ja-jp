@@ -1,7 +1,7 @@
 ---
 title: "更新からのデータベース (AccessToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6edfa45a12c2fa251960f8e19aa095f8eefc62e0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e9a312f8aef6485c880be227295cde48e2787d6a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="refresh-from-database-accesstosql"></a>データベース (AccessToSQL) からの更新します。
 **データベースから更新** ダイアログ ボックスを使用して、Access データベースから更新するには、どのオブジェクトを選択できます。 ダイアログ ボックス内の行が色分けされるメタデータの状態に基づいて。  

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,19 +25,20 @@ helpviewer_keywords:
 - time hierarchies [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2c0a46098b9f1793309ae31417f29f2b23772de0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f2767b84432f137bd8f43c4352f99277abb845df
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>ビジネス インテリジェンス ウィザードを使用したタイム インテリジェンス計算の定義
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]タイム インテリジェンス拡張機能は、時間の計算 (または時間ビュー) を追加するキューブ拡張機能を選択した階層にです。 この拡張機能では、次の計算のカテゴリがサポートされています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+タイム インテリジェンス拡張機能は、選択した階層に時間計算 (または時間ビュー) を追加するキューブ拡張機能です。 この拡張機能では、次の計算のカテゴリがサポートされています。  
   
 -   期間累計  
   
@@ -82,6 +80,6 @@ ms.lasthandoff: 12/08/2017
 |Cube|計算を実行する多次元式 (MDX) コードを定義する、計算されるメンバーを追加します。|  
   
 ## <a name="see-also"></a>参照  
- [計算されるメンバーの作成](../../analysis-services/multidimensional-models/create-calculated-members.md)  
+ [計算されるメンバーを作成します。](../../analysis-services/multidimensional-models/create-calculated-members.md)  
   
   

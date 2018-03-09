@@ -8,21 +8,21 @@ ms.service:
 ms.component: native-client-odbc-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: driver performance data [ODBC]
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f09e0a9accb1b5940823609fb9fbb7313fcc067
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2c4f977e3e70579d0555715bc174a5600e42a9a9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>ODBC ドライバー パフォーマンス データのプロファイル
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,13 +35,13 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>ODBC アドミニストレーターを使用してドライバーのパフォーマンス データをログに記録するには  
   
-1.  **コントロール パネルの **をダブルクリックして**管理ツール**順にダブルクリック**データ ソース (ODBC)**です。 または、odbcad32.exe を呼び出すことができます。  
+1.  **コントロール パネルの** をダブルクリックして**管理ツール**順にダブルクリック**データ ソース (ODBC)**です。 または、odbcad32.exe を呼び出すことができます。  
   
 2.  クリックして、**ユーザー DSN**、**システム DSN**、または**ファイル DSN**タブです。  
   
 3.  パフォーマンスのログを記録するデータ ソースをクリックします。  
   
-4.  をクリックして**構成**です。  
+4.  クリックして **構成**します。  
   
 5.  Microsoft SQL Server を構成する DSN ウィザードを使用してページに移動**ログ ファイルにログの ODBC ドライバーの統計**です。  
   

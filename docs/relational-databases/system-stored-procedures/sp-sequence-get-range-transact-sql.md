@@ -8,30 +8,32 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_sequence_get_range
 - sp_sequence_get_range_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sequence number object, sp_sequence_get_range procedure
 - sp_sequence_get_range
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2af750abc8715d2bcf2240ef08f765c6d2d7bff3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 58c36ec947eab4fbcc9511c67efae1af858ab6d0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   シーケンス オブジェクトからシーケンス値の範囲を返します。 シーケンス オブジェクトでは、要求された値の数を生成して発行し、その範囲に関連するメタデータをアプリケーションに提供します。  
   
@@ -58,13 +60,13 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  [  **@sequence_name**  =] **N**'*シーケンス*'  
  シーケンス オブジェクトの名前。 スキーマは省略可能です。 *sequence_name*は**nvarchar (776)**です。  
   
- [  **@range_size**  =] *range_size*  
+ [ **@range_size** = ] *range_size*  
  シーケンスからフェッチする値の数。 **@range_size****bigint**です。  
   
- [  **@range_first_value**  =] *range_first_value*  
+ [ **@range_first_value** = ] *range_first_value*  
  出力パラメーター。要求された範囲の計算に使用するシーケンス オブジェクトの最初 (最小または最大) の値を返します。 **@range_first_value****sql_variant**ととしての要求で使用されているシーケンス オブジェクトの同じ基本型です。  
   
- [  **@range_last_value**  =] *range_last_value*  
+ [ **@range_last_value** = ] *range_last_value*  
  省略可能な出力パラメーター。要求された範囲の最後の値を返します。 **@range_last_value****sql_variant**ととしての要求で使用されているシーケンス オブジェクトの同じ基本型です。  
   
  [  **@range_cycle_count**  =] range_cycle_count  
@@ -73,10 +75,10 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  [  **@sequence_increment**  =] *sequence_increment*  
  省略可能な出力パラメーター。要求された範囲の計算に使用するシーケンス オブジェクトの増分を返します。 **@sequence_increment****sql_variant**ととしての要求で使用されているシーケンス オブジェクトの同じ基本型です。  
   
- [  **@sequence_min_value**  =] *sequence_min_value*  
+ [ **@sequence_min_value** = ] *sequence_min_value*  
  省略可能な出力パラメーター。シーケンス オブジェクトの最小値を返します。 **@sequence_min_value****sql_variant**ととしての要求で使用されているシーケンス オブジェクトの同じ基本型です。  
   
- [  **@sequence_max_value**  =] *sequence_max_value*  
+ [ **@sequence_max_value** = ] *sequence_max_value*  
  省略可能な出力パラメーター。シーケンス オブジェクトの最大値を返します。 **@sequence_max_value****sql_variant**ととしての要求で使用されているシーケンス オブジェクトの同じ基本型です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -96,7 +98,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
   
  `The requested range for sequence object '%.*ls' exceeds the maximum or minimum limit. Retry with a smaller range.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  シーケンス オブジェクトまたはシーケンス オブジェクトのスキーマに対する UPDATE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

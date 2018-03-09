@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_sql_referencing_entities_TSQL
 - sys.dm_sql_referencing_entities_TSQL
 - dm_sql_referencing_entities
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_sql_referencing_entities dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8e4b889d1ee7ec8480c9f41a730ffafcd5888ef4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 35e2f1be36365c2b1f5c8801a9e0d7749c70de7d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 -   サーバー レベル DDL トリガー  
   
-**適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -70,7 +73,7 @@ sys.dm_sql_referencing_entities (
   
  *schema_name.referenced_entity_name*は**nvarchar (517)**です。  
   
- *< Referenced_class >* :: = {オブジェクト |型 |XML_SCHEMA_COLLECTION |PARTITION_FUNCTION}  
+ *<referenced_class>* ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }  
  参照先エンティティのクラスを指定します。 クラスは 1 つのステートメントに 1 つだけ指定できます。  
   
  *< referenced_class >*は**nvarchar**(60)。  
@@ -83,7 +86,7 @@ sys.dm_sql_referencing_entities (
 |referencing_entity_name|**sysname**|参照元エンティティの名前。 NULL 値は許可されません。|  
 |referencing_id|**int**|参照元エンティティの ID。 NULL 値は許可されません。|  
 |referencing_class|**tinyint**|参照元エンティティのクラス。 NULL 値は許可されません。<br /><br /> 1 = オブジェクト<br /><br /> 12 = データベース レベル DDL トリガー<br /><br /> 13 = サーバー レベル DDL トリガー|  
-|referencing_class_desc|**nvarchar (60)**|参照元エンティティのクラスの説明です。<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
+|referencing_class_desc|**nvarchar(60)**|参照元エンティティのクラスの説明です。<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|参照先エンティティが呼び出し元のスキーマに依存するため、参照先エンティティ ID の解決は実行時に行われることを示します。<br /><br /> この値が 1 の場合、参照元エンティティがエンティティを参照している可能性はあるものの、参照先エンティティ ID の解決は呼び出し元に依存するため特定できないことを示します。 これが該当するのは、EXECUTE ステートメント内で呼び出されるストアド プロシージャ、拡張ストアド プロシージャ、または、ユーザー定義関数に対する非スキーマ バインド参照だけです。<br /><br /> この値が 0 の場合、参照先エンティティは呼び出し元に依存しません。|  
   
 ## <a name="exceptions"></a>例外  
@@ -104,28 +107,28 @@ sys.dm_sql_referencing_entities (
   
 |エンティティの種類|参照元エンティティ|参照先エンティティ|  
 |-----------------|------------------------|-----------------------|  
-|テーブル|可*|可|  
-|表示|可|可|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ**|可|可|  
-|CLR ストアド プロシージャ (CLR stored procedure)|不可|可|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数|可|可|  
-|CLR ユーザー定義関数|不可|可|  
-|CLR トリガー (DML および DDL)|不可|不可|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガー|可|不可|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]データベース レベルの DDL トリガー|可|不可|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー レベルの DDL トリガー|可|不可|  
-|拡張ストアド プロシージャ|不可|可|  
-|キュー|不可|可|  
-|シノニム|不可|可|  
-|型 (別名および CLR ユーザー定義型)|不可|可|  
-|XML スキーマ コレクション|不可|可|  
-|パーティション関数|不可|可|  
+|Table|可*|はい|  
+|表示|はい|はい|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ * *|はい|はい|  
+|CLR ストアド プロシージャ (CLR stored procedure)|いいえ|はい|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数 (user-defined function)|はい|はい|  
+|CLR ユーザー定義関数|いいえ|はい|  
+|CLR トリガー (DML および DDL)|いいえ|いいえ|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガー (DML trigger)|はい|いいえ|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] データベース レベルの DDL トリガー|はい|いいえ|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー レベルの DDL トリガー|はい|いいえ|  
+|拡張ストアド プロシージャ|いいえ|はい|  
+|キュー|いいえ|はい|  
+|シノニム|いいえ|はい|  
+|型 (別名および CLR ユーザー定義型)|いいえ|はい|  
+|XML スキーマ コレクション|いいえ|はい|  
+|パーティション関数|いいえ|はい|  
   
  \*テーブルは、参照している場合にのみ、参照元エンティティとして追跡、[!INCLUDE[tsql](../../includes/tsql-md.md)]モジュール、ユーザー定義型、または計算列、CHECK 制約、または既定の制約の定義の XML スキーマ コレクションです。  
   
  ** 1 より大きな整数値を持つ番号付きストアド プロシージャは、参照元エンティティとしても、参照先エンティティとしても追跡されません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd--includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] – [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
@@ -148,7 +151,7 @@ sys.dm_sql_referencing_entities (
 ### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>A. 特定のエンティティを参照するエンティティを取得する  
  次の例では、現在のデータベース内で、指定したテーブルを参照するエンティティを取得します。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  
@@ -159,7 +162,7 @@ GO
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. 指定された型を参照するエンティティを取得する  
  次の例は、別名型を参照するエンティティを返します`dbo.Flag`です。 結果セットには、この型を使用する 2 つのストアド プロシージャが示されます。 `dbo.Flag`型は、いくつかの列の定義では使用も、`HumanResources.Employee`テーブルですただし、、の型が計算列、CHECK 制約、またはテーブルの既定の制約の定義ではない行は返されません、 `HumanResources.Employee`。テーブル。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  

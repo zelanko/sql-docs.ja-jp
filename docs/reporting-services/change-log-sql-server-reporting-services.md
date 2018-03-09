@@ -1,24 +1,25 @@
 ---
-title: "SQL Server Reporting Services の変更ログ | Microsoft Docs"
+title: "SQL Server Reporting Services の変更ログ (2017 以降) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/07/2017
-ms.prod: sql-non-specified
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: casualoak
 ms.author: deliant
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: ef823d2e633438262bd0f2dbbe19337d0e1fa4ef
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: d4cf71c25d2c1a6f7aadb57d6417fc4818c9ff2f
+ms.sourcegitcommit: 5763d63a3c455ec8743b75c057a2254a96a1d4fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="change-log-for-sql-server-reporting-services"></a>SQL Server Reporting Services の変更ログ
 
@@ -27,6 +28,9 @@ ms.lasthandoff: 12/04/2017
 この記事では、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の変更点について説明します。 
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services 
+  - *バージョン 14.0.600.594、リリース日: 2018 年 1 月 9 日*
+    - セキュリティ更新プログラム
+
   - *バージョン 14.0.600.490、リリース日: 2017 年 11 月 1 日* 
     - バグの修正:
         - SKU アップグレードの問題を解決

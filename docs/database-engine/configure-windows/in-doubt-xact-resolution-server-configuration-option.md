@@ -17,15 +17,15 @@ helpviewer_keywords:
 - in-doubt xact resolution option
 ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7c21c7ed24c1598ca51e0802d27bfd502d83be0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fce09d60d98c094e3b47440fb900ec7d6523daa6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>in-doubt xact resolution サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +34,10 @@ ms.lasthandoff: 11/20/2017
   
  次の表は、状態が不明なトランザクションの解決について考えられる結果の値を示しています。  
   
-|結果の値|説明|  
+|結果の値|Description|  
 |-------------------|-----------------|  
 |0|推測しません。 状態が不明なトランザクションを MS DTC で解決できない場合、復旧は失敗します。|  
-|1|コミットを推測します。 MS DTC の状態が不明なトランザクションは、コミットされたと見なされます。|  
+|@shouldalert|コミットを推測します。 MS DTC の状態が不明なトランザクションは、コミットされたと見なされます。|  
 |2|中断を推測します。 MS DTC の状態が不明なトランザクションは、中断されたと見なされます。|  
   
  次の例のように、長時間にわたるダウン タイムの可能性を最低限に抑えるために、管理者はコミットまたは中断を推測するようにこのオプションを設定できます。  

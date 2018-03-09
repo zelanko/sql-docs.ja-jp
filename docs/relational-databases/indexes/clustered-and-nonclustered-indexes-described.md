@@ -1,36 +1,36 @@
 ---
 title: "クラスター化インデックスと非クラスター化インデックスの概念 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 11/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - query optimizer [SQL Server], index usage
 - index concepts [SQL Server]
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 55498dc339c081da3e9c5fbeca1c464a93b2395e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fdf3562dbfbc4482d888f2e5e955b7941e2a6c76
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>クラスター化インデックスと非クラスター化インデックスの概念
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  > 以前のバージョンの SQL Server に関連するコンテンツについては、「[クラスター化インデックスと非クラスター化インデックスの概念](https://msdn.microsoft.com/en-US/library/ms190457(SQL.120).aspx)」を参照してください。
-
 
   インデックスとは、テーブルまたはビューに関連付けられたディスク上の構造で、テーブルやビューからの行の取得を高速化します。 インデックスには、テーブル内またはビュー内の 1 つ以上の列から構築されたキーが含まれています。 これらのキーは 1 つの構造 (B-Tree) 内に格納され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はその構造を使用して、キー値に関連した 1 つ以上の行を効率よく迅速に検出できます。  
   
@@ -68,9 +68,12 @@ ms.lasthandoff: 11/17/2017
   
  クエリ オプティマイザーでは、通常、クエリを実行するときに最も効率的な方法が選択されます。 ただし、インデックスが使用できなければ、クエリ オプティマイザーではテーブル スキャンを使用する必要があります。 クエリ オプティマイザーが効率的なインデックスを選択できるように、環境に最も適したインデックスを設計および作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][データベース エンジン チューニング アドバイザー](../../relational-databases/performance/database-engine-tuning-advisor.md) が用意されており、データベース環境の分析や適切なインデックスの選択に役立てることができます。  
   
-## <a name="related-tasks"></a>関連タスク  
+> [!IMPORTANT] 
+> インデックスの設計のガイドラインおよび内部構造の詳細については、「[SQL Server インデックス デザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)」を参照してください。
+
+## <a name="related-content"></a>関連コンテンツ  
+ [SQL Server インデックス デザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)     
  [クラスター化インデックスの作成](../../relational-databases/indexes/create-clustered-indexes.md)  
-  
  [非クラスター化インデックスの作成](../../relational-databases/indexes/create-nonclustered-indexes.md)  
   
   

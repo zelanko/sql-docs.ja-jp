@@ -8,28 +8,29 @@ ms.service:
 ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, overview
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
-ms.author: shkale
-manager: jhubbard
+ms.author: shkale;barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ab17b98a23afa3d209716145d7de39a6955cdf6d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77a50d48ee5c6d5baa8b05b327146e74b5eff815
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database を使用した処理グラフ
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]多対多リレーションシップをモデル化するグラフのデータベース機能を提供します。 グラフのリレーションシップに統合されて[!INCLUDE[tsql-md](../../includes/tsql-md.md)]を使用する利点を享受し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]基本的なデータベース管理システムとして。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 多対多リレーションシップをモデル化するグラフのデータベース機能を提供します。 グラフのリレーションシップに統合されて[!INCLUDE[tsql-md](../../includes/tsql-md.md)]を使用する利点を享受し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]基本的なデータベース管理システムとして。
 
 
 ## <a name="what-is-a-graph-database"></a>グラフのデータベースとは何ですか。  
@@ -46,12 +47,12 @@ ms.lasthandoff: 11/17/2017
 -   アプリケーションが複雑な多対多のリレーションシップです。アプリケーションの進化に伴って新しいリレーションシップが追加されます。
 -   相互接続されたデータとのリレーションシップを分析する必要があります。
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>導入されたグラフ機能[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>導入されたグラフ機能 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 SQL server、グラフ データの格納とクエリの実行が容易にグラフの拡張機能を追加する開始します。 最初のリリースでは、次の機能が導入されました。 
 
 
 ### <a name="create-graph-objects"></a>グラフのオブジェクトを作成します。
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]拡張機能はノードまたはエッジ テーブルを作成するようにします。 両方のノードとエッジは、それに関連付けられたプロパティを持つことができます。 以降、ノードとエッジがテーブルとして格納されている、リレーショナル テーブルでサポートされているすべての操作ノードまたはエッジ テーブルでサポートされます。 次に例を示します。  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 拡張機能はノードまたはエッジ テーブルを作成するようにします。 両方のノードとエッジは、それに関連付けられたプロパティを持つことができます。 以降、ノードとエッジがテーブルとして格納されている、リレーショナル テーブルでサポートされているすべての操作ノードまたはエッジ テーブルでサポートされます。 次に例を示します。  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

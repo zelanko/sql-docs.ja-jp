@@ -1,5 +1,5 @@
 ---
-title: "ENDPOINT (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE ENDPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CREATE ENDPOINT
 - ENDPOINT_TSQL
 - CREATE_ENDPOINT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database mirroring [SQL Server], endpoint
 - HTTP SOAP support [SQL Server]
@@ -32,16 +34,16 @@ helpviewer_keywords:
 - SERVICE_BROKER option
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-caps.latest.revision: "135"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a8ce3df8a9b6e7ead8e775b6bd0b2d31720b38a9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: c1d87ac5214da9a3458cdffd41bdd457a433afab
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -116,14 +118,14 @@ FOR DATABASE_MIRRORING (
  *endPointName*  
  作成するエンドポイントに割り当てられた名前です。 エンドポイントを更新または削除する場合に使用します。  
   
- 承認*ログイン*  
+ AUTHORIZATION *login*  
  指定する有効な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Windows ログインを新しく作成されたエンドポイント オブジェクトの所有権が割り当てられます。 AUTHORIZATION を指定しない場合、既定により、呼び出し元が新しく作成されたオブジェクトの所有者となります。  
   
  AUTHORIZATION を指定して所有権を割り当てる、呼び出し元は、指定した IMPERSONATE 権限が必要*ログイン*です。  
   
  所有権の再割り当て、次を参照してください。 [ALTER ENDPOINT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
- 状態 **=**  {開始 |**STOPPED** |無効になっている}  
+ STATE **=** { STARTED | **STOPPED** | DISABLED }  
  エンドポイントの作成時点での状態です。 エンドポイントの作成時点での状態を指定しない場合、既定値は STOPPED です。  
   
  STARTED  
@@ -132,7 +134,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  エンドポイントは無効です。 この状態では、サーバーはポートの要求をリッスンしますが、クライアントにはエラーを返します。  
   
- **停止しました**  
+ **STOPPED**  
  エンドポイントは停止しています。 この状態の場合、サーバーはエンドポイントのポートをリッスンしておらず、エンドポイントの使用要求にも応答しません。  
   
  状態を変更するには、使用[ALTER ENDPOINT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-endpoint-transact-sql.md).  
@@ -149,10 +151,10 @@ FOR DATABASE_MIRRORING (
   
  以下は、TCP プロトコル オプションにのみ適用されます。  
   
- LISTENER_PORT  **=**  *listenerPort*  
+ LISTENER_PORT **=***listenerPort*  
  Service Broker TCP/IP プロトコルによって接続を受信待ちされるポート番号を指定します。 通常は 4022 が使用されますが、1024 ～ 32767 の範囲であればどの番号でも有効です。  
   
- LISTENER_IP  **=** すべて |**(***4 一部 ip* **)** | **(** "*ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "*ip_address_v6*" **)**  
  エンドポイントが受信待ちする IP アドレスを指定します。 既定値は ALL です。 したがって、リスナーは任意の有効な IP アドレスでの接続を許可します。  
   
  データベース ミラーリングを完全修飾ドメイン名の代わりに IP アドレスを構成する場合 (`ALTER DATABASE SET PARTNER = partner_IP_address`または`ALTER DATABASE SET WITNESS = witness_IP_address`) を指定する必要が`LISTENER_IP =IP_address`の代わりに`LISTENER_IP=ALL`ミラーリング エンドポイントを作成する場合。  
@@ -164,30 +166,30 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  SERVICE_BROKER 固有のオプションについては、後の「SERVICE_BROKER オプション」を参照してください。 DATABASE_MIRRORING 固有のオプションについては、後の「DATABASE_MIRRORING オプション」を参照してください。  
   
- 認証 **=**  \<authentication_options > このエンドポイントの接続の TCP/IP 認証要件を指定します。 既定値は WINDOWS です。  
+ AUTHENTICATION **=** \<authentication_options> Specifies the TCP/IP authentication requirements for connections for this endpoint. 既定値は WINDOWS です。  
   
  サポートされている認証方法は NTLM または Kerberos、あるいはその両方です。  
   
 > [!IMPORTANT]  
 >  1 つのサーバー インスタンス上のすべてのミラーリング接続で、1 つのデータベース ミラーリング エンドポイントが使用されます。 追加のデータベース ミラーリング エンドポイントを作成しようとしても失敗します。  
   
- **\<authentication_options >:: =**  
+ **\<authentication_options> ::=**  
   
- **WINDOWS** [{NTLM |KERBEROS |**NEGOTIATE** }]  
+ **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
  エンドポイントが、エンドポイントの認証方法として Windows 認証プロトコルを使用して接続することを指定します。 これは既定値です。  
   
  1 つの認証方法 (NTLM または KERBEROS) を指定した場合、その方法が常に認証プロトコルとして使用されます。 既定値の NEGOTIATE を指定すると、エンドポイントは Windows ネゴシエーション プロトコルを使用して NTLM か Kerberos のどちらかを選択します。  
   
- 証明書*certificate_name*  
+ CERTIFICATE *certificate_name*  
  エンドポイントが指定された証明書を使用して接続を認証することを示す*certificate_name*認証用の id を確立するためにします。 反対側のエンドポイントは、指定された証明書の秘密キーと一致する公開キー付きの証明書を持っている必要があります。  
   
- WINDOWS [{NTLM |KERBEROS |**NEGOTIATE** }]証明書*certificate_name*  
+ WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  エンドポイントが Windows 認証を使用して接続を試み、それが失敗した場合は指定された証明書を使用することを指定します。  
   
- 証明書*certificate_name* WINDOWS [{NTLM |KERBEROS |**NEGOTIATE** }]  
+ CERTIFICATE *certificate_name* WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
  エンドポイントが指定された証明書を使用して接続を試み、それが失敗した場合は Windows 認証を使用することを指定します。  
   
- 暗号化 = {無効になっている |サポートされている |**REQUIRED** } [アルゴリズム { **AES** |RC4 |AES RC4 |RC4 AES}]  
+ ENCRYPTION = { DISABLED | SUPPORTED | **REQUIRED** } [ALGORITHM { **AES** | RC4 | AES RC4 | RC4 AES } ]  
  プロセスで暗号化を使用するかどうかを指定します。 既定値は REQUIRED です。  
   
  DISABLED  
@@ -225,7 +227,7 @@ FOR DATABASE_MIRRORING (
   
  以下の引数は SERVICE_BROKER オプションに固有のものです。  
   
- MESSAGE_FORWARDING  **=**  {有効 |**無効になっている**}  
+ MESSAGE_FORWARDING **=** { ENABLED | **DISABLED** }  
  このエンドポイントで受信された、別の場所にあるサービスのメッセージを転送するかどうかを指定します。  
   
  ENABLED  
@@ -234,14 +236,14 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  別の場所にあるサービスのメッセージを破棄します。 これは既定値です。  
   
- MESSAGE_FORWARD_SIZE  **=**  *forward_size*  
+ MESSAGE_FORWARD_SIZE **=***forward_size*  
  転送するメッセージを格納する際に使用するエンドポイントに対して割り当てる最大記憶容量を、MB 単位で指定します。  
   
  **DATABASE_MIRRORING オプション**  
   
  以下の引数は DATABASE_MIRRORING オプションに固有のものです。  
   
- ロール **=**  {ミラーリング監視サーバー |パートナー |すべて}  
+ ROLE **=** { WITNESS | PARTNER | ALL }  
  エンドポイントがサポートするデータベース ミラーリング ロールを指定します。  
   
  WITNESS  
@@ -272,8 +274,8 @@ FOR DATABASE_MIRRORING (
   
 -   エンドポイントで CONNECT 権限を与えられたユーザーまたはグループ  
   
-## <a name="permissions"></a>Permissions  
- CREATE ENDPOINT 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。 詳細については、「[GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
+## <a name="permissions"></a>権限  
+ CREATE ENDPOINT 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。 詳細については、「 [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
   
 ## <a name="example"></a>例  
   
@@ -293,8 +295,8 @@ GO
   
 ## <a name="see-also"></a>参照  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
- [暗号化アルゴリズムの選択](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [暗号化アルゴリズムを選択します。](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
+ [DROP ENDPOINT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

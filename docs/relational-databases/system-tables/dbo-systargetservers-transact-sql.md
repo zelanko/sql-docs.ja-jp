@@ -1,5 +1,5 @@
 ---
-title: "dbo.systargetservers (TRANSACT-SQL) |Microsoft ドキュメント"
+title: dbo.systargetservers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dbo.systargetservers
 - systargetservers_TSQL
 - systargetservers
-dev_langs: TSQL
-helpviewer_keywords: systargetservers system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- systargetservers system table
 ms.assetid: 479d1314-be37-4d19-ac9c-419fc9110e53
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c46f7d8861376b5bc8a25f4befc3c46dad31342
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a5f8975f4bbdf2370437efab583f3641f998538c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosystargetservers-transact-sql"></a>dbo.systargetservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +41,14 @@ ms.lasthandoff: 11/27/2017
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|サーバー id。|  
-|**サーバー名**|**sysname**|サーバー名。|  
-|**場所**|**nvarchar (200)**|指定した対象サーバーの場所。|  
+|**server_name**|**sysname**|サーバー名。|  
+|**location**|**nvarchar(200)**|指定した対象サーバーの場所。|  
 |**time_zone_adjustment**|**int**|グリニッジ標準時 (GMT) との時差 (時間数単位)。|  
 |**enlist_date**|**datetime**|指定した対象サーバーが参加した日付と時刻。|  
 |**last_poll_date**|**datetime**|日付と時刻の指定した対象サーバーではマルチ サーバーの最後を呼び出した**sysdownloadlist**システム テーブルのジョブを実行します。|  
 |**ステータス**|**int**|対象サーバーの状態。<br /><br /> **1** = 標準<br /><br /> **2** = 保留中の再同期<br /><br /> **4** = オフラインの疑いがあります。|  
 |**local_time_at_last_poll**|**datetime**|ジョブ操作について、対象サーバーがポーリングされた前回の日付と時刻。|  
-|**enlisted_by_nt_user**|**nvarchar (100)**|実行しているユーザーのユーザー名**sp_msx_enlist**対象サーバーにします。|  
+|**enlisted_by_nt_user**|**nvarchar(100)**|実行しているユーザーのユーザー名**sp_msx_enlist**対象サーバーにします。|  
 |**poll_internal**|**int**|対象サーバーが、新規のダウンロード命令についてマスター サーバーをポーリングするまでに経過した秒数。|  
   
   

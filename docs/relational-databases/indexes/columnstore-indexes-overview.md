@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,26 +19,25 @@ helpviewer_keywords:
 - columnstore index, described
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
-caps.latest.revision: "80"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7ee09bc377beed53a4af3a43111deeec03830e98
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a7a01a3b1aab2ffa1850434928f4de3bce39bcd4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---overview"></a>列ストア インデックス - 概要
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  *列ストア インデックス* は、大規模なデータ ウェアハウス ファクト テーブルを格納し、そのテーブルにクエリを実行するための標準です。 このインデックスは列ベースのデータ ストレージとクエリ処理を使用して、データ ウェアハウスで最大 **10 倍のクエリ パフォーマンス** (従来の行指向ストレージと比較)、および最大 **10 倍のデータ圧縮** (非圧縮データ サイズと比較) を実現します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、列ストア インデックスでは運用分析が可能になり、トランザクション ワークロードでパフォーマンスの高いリアルタイム分析を実行することができます。  
+*列ストア インデックス* は、大規模なデータ ウェアハウス ファクト テーブルを格納し、そのテーブルにクエリを実行するための標準です。 このインデックスは列ベースのデータ ストレージとクエリ処理を使用して、データ ウェアハウスで最大 **10 倍のクエリ パフォーマンス** (従来の行指向ストレージと比較)、および最大 **10 倍のデータ圧縮** (非圧縮データ サイズと比較) を実現します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、列ストア インデックスでは運用分析が可能になり、トランザクション ワークロードでパフォーマンスの高いリアルタイム分析を実行することができます。  
   
  シナリオに移動:  
   
--   [データ ウェアハウスの列ストア インデックス](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
-  
+-   [データ ウェアハウスの列ストア インデックス](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
 -   [列ストアを使用したリアルタイム運用分析の概要](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
   
 ## <a name="what-is-a-columnstore-index"></a>列ストア インデックスとは  
@@ -50,21 +50,19 @@ ms.lasthandoff: 11/17/2017
  *列ストア* は、行と列を含むテーブルとして論理的に編成され、列方向のデータ形式で物理的に格納されているデータです。  
   
  行ストア  
- *行ストア* は、行と列を含むテーブルとして論理的に編成され、行方向のデータ形式で物理的に格納されているデータです。 これは、リレーショナル テーブル データを格納する従来の方法です。 SQL Server では、行ストアは、基になるデータ ストレージ形式が、ヒープ、クラスター化インデックス、またはメモリ最適化テーブルであるテーブルを示します。  
+ *行ストア* は、行と列を含むテーブルとして論理的に編成され、行方向のデータ形式で物理的に格納されているデータです。 これは、リレーショナル テーブル データを格納する従来の方法です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、行ストアは、基になるデータ ストレージ形式が、ヒープ、クラスター化インデックス、またはメモリ最適化テーブルであるテーブルを示します。  
   
 > [!NOTE]  
->  列ストア インデックスの説明では、データ ストレージの形式を強調する目的で *行ストア* と *列ストア* という用語を使用しています。  
+> 列ストア インデックスの説明では、データ ストレージの形式を強調する目的で *行ストア* と *列ストア* という用語を使用しています。  
   
  行グループ  
  *行グループ* は、同時に列ストア形式に圧縮される行のグループです。 通常、1 つの行グループには、行グループあたりの最大行数である 1,048,576 行が含まれます。  
   
  高パフォーマンスと高い圧縮率を実現するために、列ストア インデックスは、テーブルを行グループと呼ばれる行のグループにスライスし、各行グループを列方向に圧縮します。 行グループ内の行数は、高い圧縮率が実現される程度に多く、インメモリ操作の利点を得られる程度に少なくなければなりません。  
-  
  列セグメント  
  *列セグメント* は、行グループ内のデータ列です。  
   
 -   それぞれの行グループには、テーブルの 1 つの列につき 1 つの列セグメントが含まれます。  
-  
 -   それぞれの列セグメントは一緒に圧縮され、物理メディアに格納されます。  
   
  ![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
@@ -121,41 +119,25 @@ ms.lasthandoff: 11/17/2017
 ### <a name="can-i-combine-rowstore-and-columnstore-on-the-same-table"></a>行ストアと列ストアを同じテーブルで結合できますか。  
  可能。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、更新可能な非クラスター化列ストア インデックスを、行ストア テーブルに作成できます。 列ストア インデックスには、選択された列のコピーが格納されるため追加の空き領域が必要ですが、圧縮機能が平均で 10 に倍向上します。 これにより、同時に、列ストア インデックスの分析と行ストア インデックスのトランザクションを同時に実行できます。 行ストア テーブルでデータが変更されると列ストアが更新されます。したがって、両方のインデックスが、同じデータに対して作業を行うことになります。  
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、列ストア インデックスでは、1 つ以上の非クラスター化行ストア インデックスを使用できます。 これにより、基になる列ストアで、効率的なテーブル シークを実行できます。 他のオプションも使用できます。 たとえば、行ストア テーブルで UNIQUE 制約を使用することで、主キー制約を適用できます。 一意でない値は行ストア テーブルに挿入できないため、SQL Server でその値を列ストアに挿入することはできません。  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、列ストア インデックスでは、1 つ以上の非クラスター化行ストア インデックスを使用できます。 これにより、基になる列ストアで、効率的なテーブル シークを実行できます。 他のオプションも使用できます。 たとえば、行ストア テーブルで UNIQUE 制約を使用することで、主キー制約を適用できます。 一意でない値は行ストア テーブルに挿入できないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でその値を列ストアに挿入することはできません。  
   
 ## <a name="metadata"></a>メタデータ  
  列ストア インデックス内のすべての列は、付加列としてメタデータに格納されます。 列ストア インデックスにキー列はありません。  
+
+|||
+|-|-|  
+|[sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
+|[sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|  
+|[sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
+|[sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|  
+|[sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
+|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|  
+|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)||  
   
--   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
+## <a name="related-tasks"></a>Related Tasks  
+ クラスター化列ストア インデックスとしてリレーショナル テーブルを指定していない限り、そのリレーショナル テーブルでは、行ストアが、基になるデータ形式として使用されます。 `WITH CLUSTERED COLUMNSTORE INDEX` オプションを指定しない場合、`CREATE TABLE` によって行ストア テーブルが作成されます。  
   
--   [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
-  
--   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)  
-  
--   [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)  
-  
--   [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
-  
--   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
-  
--   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
-  
--   [sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)  
-  
--   [sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)  
-  
--   [sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)  
-  
--   [sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)  
-  
--   [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)  
-  
--   [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
-  
-## <a name="related-tasks"></a>関連タスク  
- クラスター化列ストア インデックスとしてリレーショナル テーブルを指定していない限り、そのリレーショナル テーブルでは、行ストアが、基になるデータ形式として使用されます。 WITH CLUSTERED COLUMNSTORE INDEX オプションを指定しない限り、CREATE TABLE では行ストア テーブルが作成されます。  
-  
- CREATE TABLE ステートメントでテーブルを作成するとき、そのテーブルを列ストアとして作成するには、WITH CLUSTERED COLUMNSTORE INDEX オプションを指定します。 既に、行ストア テーブルがある場合、その行ストアは、CREATE COLUMNSTORE INDEX ステートメントを使用して列ストアに変換できます。 例については、次を参照してください。  
+ `CREATE TABLE` ステートメントでテーブルを作成するとき、そのテーブルを列ストアとして作成するには、`WITH CLUSTERED COLUMNSTORE INDEX` オプションを指定します。 既に、行ストア テーブルがある場合、その行ストアは、`CREATE COLUMNSTORE INDEX` ステートメントを使用して列ストアに変換できます。  
   
 |タスク|参照トピック|注|  
 |----------|----------------------|-----------|  
@@ -181,7 +163,9 @@ ms.lasthandoff: 11/17/2017
  [列ストア インデックスのクエリ パフォーマンス](~/relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [列ストアを使用したリアルタイム運用分析の概要](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [データ ウェアハウスの列ストア インデックス](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [列ストア インデックスの最適化](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+ [列ストア インデックスの最適化](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)   
+ [SQL Server インデックス デザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)   
+ [列ストア インデックスのアーキテクチャ](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)   
   
   
 

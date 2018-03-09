@@ -1,7 +1,7 @@
 ---
 title: "プロジェクトの設定 (変換) (DB2ToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e40e6f4d56f3c246516de617dbdc4a7c9516db9c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5f459472409e9fc85322aca5067d0953bd24831a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-conversion-db2tosql"></a>プロジェクトの設定 (変換) (DB2ToSQL)
 [変換] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA が DB2 構文に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]構文です。  
@@ -383,7 +383,7 @@ ISNULL ステートメントは、DB2 の動作をエミュレートするため
   
 -   YES  
   
--   NO  
+-   いいえ  
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
@@ -396,7 +396,7 @@ ISNULL ステートメントは、DB2 の動作をエミュレートする CONCA
   
 -   YES  
   
--   NO  
+-   いいえ  
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   

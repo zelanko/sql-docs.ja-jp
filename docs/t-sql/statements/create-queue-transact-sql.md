@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CREATE QUEUE
 - QUEUE
 - CREATE_QUEUE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE QUEUE statement
 - internal activation [Service Broker]
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-caps.latest.revision: "67"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 168ba93fdfbf999cb325d985c3c29601cc21b4ed
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 7bd20267a78f9a0fcaf2d854b6e94553b7c80167
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,10 +80,10 @@ CREATE QUEUE <object>
 ```  
   
 ## <a name="arguments"></a>引数  
- *database_name* (オブジェクト)  
+ *database_name* (object)  
  新しいキューを作成するデータベースの名前を指定します。 *database_name*既存のデータベースの名前を指定する必要があります。 ときに*database_name*が提供されていない場合、現在のデータベースにキューを作成します。  
   
- *schema_name* (オブジェクト)  
+ *schema_name* (object)  
  新しいキューが所属するスキーマの名前を指定します。 省略すると、ステートメントを実行するユーザーの既定のスキーマが使用されます。 Sysadmin 固定サーバー ロールのメンバーが CREATE QUEUE ステートメントが実行されるかによって指定されたデータベースの固定データベース ロールを db_dbowner または db_ddladmin のメンバー場合*database_name*、 *schema_name* 、現在の接続のログインに関連付けられている以外のスキーマを指定できます。 それ以外の場合、 *schema_name*ステートメントを実行しているユーザーの既定のスキーマをする必要があります。  
   
  *queue_name*  
@@ -102,13 +104,13 @@ CREATE QUEUE <object>
  STATUS (Activation)   
  指定するかどうか[!INCLUDE[ssSB](../../includes/sssb-md.md)]ストアド プロシージャを開始します。 STATUS = ON の場合は、現在実行中のプロシージャの数が MAX_QUEUE_READERS より少なく、ストアド プロシージャによるメッセージの受信よりも早くメッセージがキューに到着する場合に、PROCEDURE_NAME で指定されるストアド プロシージャがキューによって開始されます。 STATUS = OFF の場合は、キューによってストアド プロシージャは開始されません。 この句を指定しない場合、既定値は ON になります。  
   
- PROCEDURE_NAME =\<手順 >  
+ PROCEDURE_NAME = \<procedure>  
  このキュー内のメッセージを処理するために開始するストアド プロシージャの名前を指定します。 この値である必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別子。  
   
- *database_name*(プロシージャ)  
+ *database_name*(procedure)  
  ストアド プロシージャを含むデータベースの名前を指定します。  
   
- *schema_name*(プロシージャ)  
+ *schema_name*(procedure)  
  ストアド プロシージャを含むスキーマの名前を指定します。  
   
  *procedure_name*  
@@ -134,7 +136,7 @@ CREATE QUEUE <object>
   
  有害なメッセージの処理が OFF に設定されているキューは、トランザクションのロールバックが連続して 5 回実行されても無効になりません。 これにより、カスタムの有害なメッセージの処理システムをアプリケーションで定義できます。  
   
- ON *filegroup |***[既定]**  
+ ON *filegroup |* **[DEFAULT]**  
  指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ファイル グループをこのキューを作成します。 使用することができます、 *filegroup*ファイル グループを識別または service broker データベースの既定のファイル グループを使用する既定の識別子を使用するパラメーターです。 この句のコンテキストでは、DEFAULT はキーワードとして扱われないため、識別子として区切り記号で区切る必要があります。 ファイル グループを指定しない場合、キューの作成ではデータベースの既定のファイル グループが使用されます。  
   
 ## <a name="remarks"></a>解説  
@@ -168,11 +170,11 @@ CREATE QUEUE <object>
 |service_contract_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メッセージ交換が従うコントラクトのオブジェクト識別子です。|  
 |message_type_name|**nvarchar (256)**|メッセージの種類を示すメッセージ型の名前。|  
 |message_type_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メッセージを記述するメッセージの種類のオブジェクト識別子です。|  
-|validation|**nchar(2)**|メッセージに使用される検証。<br /><br /> E = 空<br /><br /> N = なし<br /><br /> X = XML|  
+|validation|**nchar(2)**|メッセージに使用される検証。<br /><br /> E = 空<br /><br /> N = なし<br /><br /> X=XML|  
 |message_body|**varbinary(max)**|メッセージの内容。|  
 |message_id|**uniqueidentifier**|メッセージの一意識別子。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  キューを作成する権限では、db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーを使用します。  
   
  キューに対する REFERENCES 権限は、既定ではキューの所有者、db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。  

@@ -1,19 +1,18 @@
 ---
 title: "AMO の補足的なクラスとメソッドのプログラミング |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - restores [AMO]
 - assemblies [AMO]
@@ -24,19 +23,19 @@ helpviewer_keywords:
 - traces [AMO]
 - backups [AMO]
 ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cf80edb799a7082034d3bd359cabb42082e070ce
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ea3f2a07cc5d6e39bec7db5faf333986a56062f9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>AMO の補足的なクラスとメソッドのプログラミング
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]このトピックには、次のセクションが含まれています。  
+  このトピックには、次のセクションが含まれます。  
   
 -   [アセンブリ クラス](#Assembly)  
   
@@ -46,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [CaptureLog クラスと CaptureXML 属性](#CL)  
   
-##  <a name="Assembly"></a>アセンブリ クラス  
+##  <a name="Assembly">アセンブリ クラス</a>  
  アセンブリにより、ユーザーの機能を拡張[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]によって新しいストアド プロシージャや多次元式 (MDX) 関数を追加します。 詳細については、次を参照してください。 [AMO のその他のクラスとメソッド](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)です。  
   
  アセンブリの追加や削除は簡単で、オンラインで実行できます。 アセンブリをデータベースに追加するにはデータベース管理者である必要があり、サーバー オブジェクトに追加するにはサーバー管理者である必要があります。  
@@ -80,7 +79,7 @@ static public void CreateStoredProcedures(Database db)
   
 ```  
   
-##  <a name="BU"></a>バックアップと復元方法  
+##  <a name="BU"></a> バックアップと復元方法  
  管理者は、Backup メソッドと Restore メソッドを使用して、データベースのバックアップや復元を行えます。  
   
  次のサンプルは、指定されたサーバーのすべてのデータベースのバックアップを作成します。 バックアップ ファイルが既に存在する場合は上書きします。 バックアップ ファイルは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データ フォルダーの BackUp フォルダーに保存されます。  
@@ -107,7 +106,7 @@ static public void RestoreAdventureWorks(Server svr)
 }  
 ```  
   
-##  <a name="TRC"></a>Trace クラス  
+##  <a name="TRC">Trace クラス</a>  
  サーバーの利用状況を監視するには、セッション トレースとサーバー トレースの 2 種類のトレースを使用する必要があります。 サーバーをトレースすると、現在のタスクがサーバーでどのように処理されているかを確認したり (セッション トレース)、サーバーの全体的な利用状況をサーバーに接続せずに確認したり (サーバー トレース) できます。  
   
  現在の利用状況のトレース (セッション トレース) では、現在のアプリケーションがサーバーで発生させているイベントに関する通知がサーバーからそのアプリケーションに送信されます。 イベントは、現在のアプリケーションのイベント ハンドラーを使用してキャプチャされます。 セッション トレースを開始するには、まず、イベントを処理するルーチンを <xref:Microsoft.AnalysisServices.SessionTrace> オブジェクトに割り当てます。  
@@ -240,7 +239,7 @@ static public void TestServerTraces(Server svr)
 }  
 ```  
   
-##  <a name="CL"></a>CaptureLog 属性と CaptureXml 属性  
+##  <a name="CL"></a> CaptureLog 属性と CaptureXml 属性  
  CaptureLog 属性を使用すると、AMO の操作から XMLA バッチ ファイルを作成できます。 CaptureLog では、データベース、キューブ、ディメンション、マイニング構造などのサーバー オブジェクトのスクリプトを作成できます。  
   
  CaptureLog を作成するには、次の手順を実行します。  

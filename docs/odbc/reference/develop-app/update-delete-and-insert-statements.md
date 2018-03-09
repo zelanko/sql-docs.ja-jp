@@ -5,10 +5,11 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,35 +19,35 @@ helpviewer_keywords:
 - INSERT [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7bfdd769bdea98e21cec4031bf140ca6ee8bdd3d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 592d135ccf66f8a9fde2cc064a51dc25617cf127
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE、DELETE、および INSERT ステートメント
 SQL ベースのアプリケーションを実行してテーブルに変更を加える、**更新**、**削除**、および**挿入**ステートメントです。 これらのステートメントでは、Minimum SQL 文法の準拠レベルの一部であるし、すべてのドライバーとデータ ソースでサポートする必要があります。  
   
  これらのステートメントの構文です。  
   
- **更新***テーブル名*   
+ **UPDATE**  *table-name*  
   
  **設定***列識別子*  **=**  {*式*&#124; です。**NULL**}  
   
  [**、** *列識別子*  **=**  {*式*&#124; です。**NULL**}].  
   
- [**場所***検索条件*]  
+ [**WHERE** *search-condition*]  
   
- **DELETE FROM** *テーブル名*[**場所***検索条件*]  
+ **DELETE FROM** *table-name*[**WHERE** *search-condition*]  
   
- **INSERT INTO** *テーブル名*[**(***列識別子*[**、** *列識別子*]...**)**]  
+ **INSERT INTO** *table-name*[**(***column-identifier* [**,** *column-identifier*]...**)**]  
   
- {*クエリ仕様*&#124; です。**値 (***挿入値*[**、** *挿入値*].**)**}  
+ {*クエリ仕様*&#124;です。**値 (* * * 挿入値*[* *、** *挿入値*].**)**}  
   
  なお、*クエリ仕様*要素は、コアと拡張 SQL 文法とするでのみ有効、*式*と*検索条件*要素の詳細になりますコアと拡張 SQL 文法で複雑です。  
   

@@ -8,26 +8,28 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 931c88853bc5f2b0ecca65aa40cf5d4b4f29bd48
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ebf0e74709450f3f6bcee076c6ac4921996c54b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   Stretch Database 用にテーブルを構成するには、SQL Server Management Studio でテーブルに対して **[ストレッチ]、[有効にする]** の順に選択し、**[テーブルのストレッチの有効化]** ウィザードを開きます。 Transact-SQL を使用して、既存のテーブルで Stretch Database を有効にしたり、Stretch Database が有効になっている新しいテーブルを作成することもできます。  
   
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 -   テーブルにホット データとコールド データの両方が含まれている場合は、移行する行を選択するフィルター関数を指定できます。    
  
- **前提条件**。 テーブルに対して **[ストレッチ]、[有効にする]** の順に選択した場合、データベースに対して Stretch Database がまだ有効になっていないと、ウィザードは最初に Stretch Database 用にデータベースを構成します。 このトピックの手順ではなく、「 [Stretch ウィザードに対するデータベースの有効化を実行して開始する](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) 」の手順に従います。  
+ **前提条件**。 テーブルに対して **[ストレッチ]、[有効にする]** の順に選択した場合、データベースに対して Stretch Database がまだ有効になっていないと、ウィザードは最初に Stretch Database 用にデータベースを構成します。 この記事の手順ではなく、「[Stretch ウィザードに対するデータベースの有効化を実行して開始する](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)」の手順に従います。  
   
  **権限**: データベースまたはテーブルで Stretch Database を有効にするには、db_owner 権限が必要です。 テーブルで Stretch Database を有効にするには、テーブルに対する ALTER 権限も必要です。  
 
@@ -58,20 +60,20 @@ ms.lasthandoff: 12/05/2017
   
 -   ウィザードを終了し、ALTER TABLE ステートメントを実行してテーブルの Stretch を有効にして、フィルター関数を指定します。  
   
--   ウィザードを終了した後、ALTER TABLE ステートメントを実行してフィルター関数を指定します。 必要な手順については、「 [ウィザードの実行後、フィルター関数を追加する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz)」を参照してください。  
+-   ウィザードを終了した後、ALTER TABLE ステートメントを実行してフィルター関数を指定します。 必要な手順については、「 [Add a filter function after running the Wizard](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz)」 (ウィザードの実行後、フィルター関数を追加する) を参照してください。  
   
- ALTER TABLE 構文については、このトピックで後ほど説明します。  
+ ALTER TABLE 構文については、この記事で後ほど説明します。  
   
  **概要**  
  ウィザードで入力した値および選択したオプションを確認します。 次に、 **[完了]** を選択してストレッチを有効にします。  
   
- **[結果]**  
+ **結果**  
  結果を確認します。  
   
 ##  <a name="EnableTSQLTable"></a> Transact-SQL を使用してテーブルで Stretch Database を有効にする  
  Transact-SQL を使用して、既存のテーブルで Stretch Database を有効にしたり、Stretch Database が有効になっている新しいテーブルを作成したりできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  CREATE TABLE または ALTER TABLE を実行してテーブルで Stretch Database を有効にする場合は、次のオプションを使用します。  
   
 -   テーブルにホット データとコールド データの両方が含まれている場合は、オプションで `FILTER_PREDICATE = <function>` 句を使用して、移行する行を選択する関数を指定します。 この述語でインライン テーブル値関数を呼び出す必要があります。 詳細については、「 [フィルター関数を使用して、移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」を参照してください。 フィルター関数を指定しない場合、テーブル全体が移行されます。  

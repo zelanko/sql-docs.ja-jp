@@ -3,7 +3,7 @@ title: "テスト_ケース (SybaseToSQL) を実行している |Microsoft ド�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 686e7701014a85e141fed9d4f9bbcecdb029f015
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0b78d26a492a73964c39b15c678103537cd9abe1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-test-cases-sybasetosql"></a>テスト_ケース (SybaseToSQL) を実行します。
 SSMA テスト担当者がテスト_ケースを実行すると、テスト用に選択されたオブジェクトを実行し、検証結果に関するレポートを作成します。 結果が両方のプラットフォームで同一の場合、テストが成功しました。 Sybase 間のオブジェクトの対応付けと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA プロジェクトを現在のスキーマ マッピングの設定に従って決定されます。  
@@ -43,7 +43,7 @@ SSMA テスト担当者がテスト_ケースを実行すると、テスト用�
   
 ## <a name="test-case-execution-steps"></a>テスト_ケースの実行手順  
   
-### <a name="prerequisites"></a>前提条件  
+### <a name="prerequisites"></a>Prerequisites  
 SSMA テスターは、テストの開始前にテストの実行のすべての前提条件を満たしているかどうかを確認します。 一部の条件が満たされない場合、エラー メッセージが表示されます。  
   
 ### <a name="initialization"></a>初期化  
@@ -53,11 +53,11 @@ SSMA テスターは、テストの開始前にテストの実行のすべての
   
 SSMATESTER2005db または SSMATESTER2008db データベース中および、Sybase で、次のオブジェクトが作成された[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ssmatesterdb_syb データベースにします。  
   
-|名前|型|Description|  
+|[オブジェクト名]|型|Description|  
 |--------|--------|---------------|  
 |USER_TABLE$ Trg|トリガー|検証済みのテーブルで変更の監査をトリガーします。|  
-|USER_TABLE$ Aud|Table|テーブルな行が削除され、上書きを保存します。|  
-|USER_TABLE$ AudID|Table|追加または変更された行が保存されているテーブルです。|  
+|USER_TABLE$ Aud|テーブル|テーブルな行が削除され、上書きを保存します。|  
+|USER_TABLE$ AudID|テーブル|追加または変更された行が保存されているテーブルです。|  
 |USER_TABLE|表示|テーブルの変更の簡略化された表現。|  
 |新しい USER_TABLE $|表示|挿入、および上書きされた行の簡略化された表現。|  
 |USER_TABLE$ new_id|表示|挿入および変更された行の id です。|  
@@ -65,7 +65,7 @@ SSMATESTER2005db または SSMATESTER2008db データベース中および、Syb
   
 Sybase で検証済みのテーブルのデータベースで次のオブジェクトを作成し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
   
-|名前|型|Description|  
+|[オブジェクト名]|型|Description|  
 |--------|--------|---------------|  
 |USER_TABLE$ Trg|トリガー|検証済みのテーブルで変更の監査をトリガーします。|  
   

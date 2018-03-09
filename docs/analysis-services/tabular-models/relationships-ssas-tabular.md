@@ -1,32 +1,31 @@
 ---
-title: "リレーションシップ (SSAS テーブル) |Microsoft ドキュメント"
+title: "リレーションシップ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e8e5f1a6224a72fbda958adf4969f357db58d6d4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ff8d2460b53eed9189b230fea270b97e323ac0b9
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="relationships-ssas-tabular"></a>リレーションシップ (SSAS テーブル)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]テーブル モデルでは、リレーションシップは、データの 2 つのテーブル間の接続です。 これにより、2 つのテーブルのデータの関連付けの方法が決まります。 たとえば、Customers テーブルと Orders テーブルを関連付けると、各注文に関連付けられた顧客名を表示できます。  
+# <a name="relationships"></a>リレーションシップ 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+テーブル モデルでは、リレーションシップは 2 つのデータ テーブル間の接続を表します。 これにより、2 つのテーブルのデータの関連付けの方法が決まります。 たとえば、Customers テーブルと Orders テーブルを関連付けると、各注文に関連付けられた顧客名を表示できます。  
   
  テーブルのインポート ウィザードを使用して同じデータ ソースからインポートする場合に、データ ソースのテーブルに既に存在するリレーションシップをインポートするよう選択すると、そのリレーションシップはモデル内に再作成されます。 ダイアグラム ビューのモデル デザイナーまたは [リレーションシップの管理] ダイアログ ボックスを使用すると、自動的に検出および再作成されたリレーションシップを表示できます。 また、ダイアグラム ビューのモデル デザイナーを使用するか、[リレーションシップの作成] ダイアログ ボックスまたは [リレーションシップの管理] ダイアログ ボックスを使用すると、テーブル間に新しいリレーションシップを手動で作成することもできます。  
   
@@ -105,7 +104,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="single-active-relationship-between-tables"></a>テーブル間に 1 つのアクティブなリレーションシップ  
  複数のリレーションシップを作成すると、テーブル間の依存関係があいまいになる可能性があります。 正確な計算を作成するには、テーブル間のパスを 1 つにする必要があります。 そのため、テーブルの各ペアの間に作成できるアクティブなリレーションシップは 1 つだけです。 たとえば、AdventureWorks DW 2012 の DimDate テーブルには、FactInternetSales テーブルの 3 つの異なる列 (OrderDate、DueDate、および ShipDate) に関連付けられた DateKey 列が含まれています。 これらのテーブルをインポートしようとした場合、最初のリレーションシップは正常に作成されますが、同じ列を使用する後続のリレーションシップに関して次のエラーが出力されます。  
   
- \*リレーションシップ: table [column 1] は table [column 2] の状態を ->: エラー - 理由: テーブル間のリレーションシップを作成できません\<テーブル 1 > と\<2 のテーブル > です。 2 つのテーブル間に作成できる直接的または間接的なリレーションシップは 1 つだけです。  
+ \* リレーションシップ: table [column 1] は table [column 2] の状態を ->: エラー - 理由: テーブル間のリレーションシップを作成できません\<テーブル 1 > と\<2 のテーブル > です。 2 つのテーブル間に作成できる直接的または間接的なリレーションシップは 1 つだけです。  
   
  2 つのテーブルの間に複数のリレーションシップが存在している場合は、参照列を含むテーブルのコピーを複数インポートし、テーブルの各ペアの間にリレーションシップを 1 つ作成します。  
   

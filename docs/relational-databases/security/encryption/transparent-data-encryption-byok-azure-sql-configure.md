@@ -18,16 +18,16 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: aliceku
-ms.openlocfilehash: 0acfd9faa668d1e86cb82496bdd97dc6a0ec2bc8
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 186db9581a3404fe04e4a748d6df06c5899bf810
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell: Azure Key Vault の自分のキーを使用して Transparent Data Encryption を有効にする
+# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault-preview"></a>PowerShell: Azure Key Vault の自分のキーを使用して Transparent Data Encryption を有効にする (プレビュー)
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-この操作方法ガイドでは、SQL Database または Data Warehouse で Transparent Data Encryption (TDE) 用の Azure Key Vault のキーを使用する手順について説明します。 Bring Your Own Key (BYOK) がサポートされた TDE の詳細については、「[TDE Bring Your Own Key to Azure SQL](transparent-data-encryption-byok-azure-sql.md)」(Azure SQL への TDE の Bring Your Own Key) を参照してください。 
+この操作方法ガイドでは、SQL Database または Data Warehouse で Transparent Data Encryption (TDE) 用の Azure Key Vault のキー (プレビュー) を使用する手順について説明します。 Bring Your Own Key (BYOK) がサポートされた TDE (プレビュー) の詳細については、「[TDE Bring Your Own Key to Azure SQL](transparent-data-encryption-byok-azure-sql.md)」 (Azure SQL への TDE の Bring Your Own Key) を参照してください。 
 
 ## <a name="prerequisites"></a>Prerequisites
 

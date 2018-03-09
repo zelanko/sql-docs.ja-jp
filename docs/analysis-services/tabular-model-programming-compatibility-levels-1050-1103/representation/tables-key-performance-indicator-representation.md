@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 42c48fb77362c07e31bf73517bb72ad82954d8cc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5b159965ba0428c267b62fd712cd34bc26cca833
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---key-performance-indicator-representation"></a>テーブルの主要業績評価指標表現
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]KPI は、対象の値に対するベース メジャーによって定義された、値のパフォーマンスを測定に使用されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+KPI は、対象の値に対するベース メジャーによって定義された、値のパフォーマンスを測定に使用されます。  
   
 ## <a name="key-performance-indicator-representation"></a>主要業績評価指標表現  
  テーブル オブジェクト モデルにおける主要業績評価指標 (KPI) とは、クライアント アプリケーションでグラフィカルに表示するための追加情報を含むメジャーです。 通常、KPI には、取得する目標に関する情報、目標と比較するメジャーの状態、クライアント ツールで状態をグラフィカルに表示する方法に関する情報が含まれています。  

@@ -8,27 +8,30 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: Azure SQL Database
-f1_keywords: sys.elastic_pool_resource_stats catalog view
+applies_to:
+- Azure SQL Database
+f1_keywords:
+- sys.elastic_pool_resource_stats catalog view
 helpviewer_keywords:
 - sys.elastic_pool_resource_stats_TSQL
 - sys.elastic_pool_resource_stats
 - elastic_pool_resource_stats_TSQL
 - elastic_pool_resource_stats
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9505470a81f88e457a8b2f0b9429cee60cef7dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7af69bdd1f98560d3a6ae9699551b4f3062f68c6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,9 +46,9 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|レポート間隔である 15 秒の開始を示す UTC 時刻です。|  
 |**end_time**|**datetime2**|レポート間隔である 15 秒の末尾を示す UTC 時刻です。|  
-|**elastic_pool_name**|**nvarchar (128)**|柔軟なデータベースのプールの名前。|  
+|**elastic_pool_name**|**nvarchar(128)**|柔軟なデータベースのプールの名前。|  
 |**avg_cpu_percent**|**decimal(5,2)**|プールの制限の割合で表した平均コンピューティング使用率。|  
-|**(avg_log_write_percent)**|**decimal(5,2)**|平均 I/O の使用率 (%) のプールの上限に基づきます。|  
+|**avg_data_io_percent**|**decimal(5,2)**|平均 I/O の使用率 (%) のプールの上限に基づきます。|  
 |**avg_log_write_percent**|**decimal(5,2)**|平均書き込みリソース使用率、プールの制限の割合。|  
 |**avg_storage_percent**|**decimal(5,2)**|プールの記憶域の制限の割合で記憶域使用率を平均します。|  
 |**max_worker_percent**|**decimal(5,2)**|プールの上限に基づく割合の最大同時実行ワーカー (要求)。|  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>解説  
  このビューは、論理サーバーの master データベースに存在します。 クエリに master データベースに接続する必要がある必要があります**sys.elastic_pool_resource_stats**です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーシップが必要、 **dbmanager**ロール。  
   
 ## <a name="examples"></a>使用例  

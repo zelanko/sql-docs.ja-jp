@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: SortOrder property [ADOX]
+dev_langs:
+- VB
+helpviewer_keywords:
+- SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77ac31157edfe36af85b112fffeaca6bb6cca86b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c65caf4436eead9a18df18b29b5d509691c0240
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder プロパティの例 (VB)
 この例で、 [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)のプロパティ、[列](../../../ado/reference/adox-api/column-object-adox.md)に追加された、[列](../../../ado/reference/adox-api/columns-collection-adox.md)のコレクション、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)です。 コードは、国の列に昇順のインデックスを追加、**従業員**テーブルし、レコードが表示されます。 コードでは、国の列に降順のインデックスを付加してから、**従業員**テーブルが表示され、レコードが再び表示されます。 昇順と降順のインデックスの違いが表示されます。  

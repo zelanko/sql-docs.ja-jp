@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_add_policy_category
 - sp_syspolicy_add_policy_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_add_policy_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_add_policy_category
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
-caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4335d14562eaa6abbc6854cf9916c51b74779c0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 90e8fdea1ed8f177526574c5911e69fd1bc01bff
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyaddpolicycategory-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +48,13 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@name=** ] **'***名前***'**  
+ [ **@name=** ] **'***name***'**  
  ポリシー カテゴリの名前を指定します。 *名前*は**sysname**が必要とします。 *名前*NULL または空の文字列にすることはできません。  
   
- [  **@mandate_database_subscriptions =** ] *mandate_database_subscriptions*  
+ [ **@mandate_database_subscriptions =** ] *mandate_database_subscriptions*  
  データベース サブスクリプションがポリシー カテゴリに対して必須であるかどうかを指定します。 *mandate_database_subscriptions*は、**ビット**既定値は 1 (有効) の値。  
   
- [  **@policy_category_id=** ] *policy_category_id*  
+ [ **@policy_category_id=** ] *policy_category_id*  
  ポリシー カテゴリの識別子を指定します。 *policy_category_id*は**int**、出力として返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -60,7 +63,7 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ## <a name="remarks"></a>解説  
  sp_syspolicy_add_policy_category は msdb システム データベースのコンテキストで実行する必要があります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  PolicyAdministratorRole 固定データベース ロールのメンバーシップが必要です。  
   
 > [!IMPORTANT]  
@@ -82,7 +85,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [ポリシー ベースの管理ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_add_policy_category_subscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
  [sp_syspolicy_delete_policy_category &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)  
   
   

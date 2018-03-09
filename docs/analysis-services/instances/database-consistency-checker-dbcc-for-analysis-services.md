@@ -5,29 +5,27 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1bf91c2e3c09b30f5e9ea48756ae2b7c9f889644
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8348c7c3ee60d7032f9c8af373ce5b9e1a026f8f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis Services 用 database Consistency Checker (DBCC)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]DBCC は、Analysis Services インスタンス上の多次元および表形式データベースのオンデマンドのデータベースの検証を提供します。 SQL Server Management Studio (SSMS) の MDX または XMLA クエリ ウィンドウで DBCC を実行し、SSMS の SQL Server Profiler または xEvent セッションで DBCC 出力をトレースできます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+DBCC には、Analysis Services インスタンスの多次元および表形式データベース向けに、オンデマンドのデータベース検証機能が用意されています。 SQL Server Management Studio (SSMS) の MDX または XMLA クエリ ウィンドウで DBCC を実行し、SSMS の SQL Server Profiler または xEvent セッションで DBCC 出力をトレースできます。  
 このコマンドはオブジェクト定義を受け取り、空の結果セットを返します。オブジェクトが破損している場合は詳細なエラー情報を返します。   この記事では、コマンドの実行方法、結果の解釈方法、発生した問題に対処する方法について説明します。  
   
  表形式データベースの場合、DBCC で実行する整合性チェックは、データベースの再読み込み、同期、復元のたびに自動実行される組み込みの検証と同等です。  対照的に、多次元データベースの整合性チェックは、オンデマンドで DBCC を実行した場合にのみ実行されます。  
@@ -175,7 +173,7 @@ Execution complete
   
 4.  SQL Server Profiler で、DBCC アクティビティは、DBCC のイベント サブクラスを持つ **Command** イベントで示されます。  
   
-     ![ssas dbcc プロファイラー eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas dbcc プロファイラー eventsubclass")  
+     ![ssas-dbcc-profiler-eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas-dbcc-profiler-eventsubclass")  
   
      イベント コード 32 は、DBCC の実行です。  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49755f29a54164f008e19bc542a9ca650e54b37b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a53a67bdd997f3daa8168f445ce8eada527b5608
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-a-trace"></a>トレースへのフィルターの適用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] フィルターを使用すると、トレースに出力するイベントを制限することができます。 フィルターが設定されていない場合は、選択したイベント クラスのすべてのイベントがトレースに出力されます。 たとえば、トレースに出力する Windows ユーザーとして特定のユーザー名を指定すると、それらのユーザーのデータのみが出力されます。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
  フィルターを適用できるかどうかは、データ列によって異なります。 一部のデータ列にはフィルターを適用できません。 フィルターの適用が可能なデータ列では、次の表に示す関係演算子を使用してフィルターを指定できます。  
   
-|関係演算子|演算子記号|説明|  
+|関係演算子|演算子記号|Description|  
 |-------------------------|---------------------|-----------------|  
 |Like|Like|イベントのトレース データが入力したテキストと同じでなければならないことを指定します。 複数の値を指定できます。|  
 |パターンに一致しない|パターンに一致しない|イベントのトレース データが入力したテキストと同じであってはならないことを指定します。 複数の値を指定できます。|  
@@ -112,7 +112,7 @@ ms.lasthandoff: 11/17/2017
 |**NestLevel**|=、<>、>=、<=|  
 |**NTDomainName**|LIKE、NOT LIKE|  
 |**NTUserName**|LIKE、NOT LIKE|  
-|**ObjectID**|=、<>、>=、<=|  
+|**Exchange Spill**|=、<>、>=、<=|  
 |**ObjectID2**|=、<>、>=、<=|  
 |**ObjectName**|LIKE、NOT LIKE|  
 |**ObjectType**|=、<>、>=、<=|  
@@ -120,7 +120,7 @@ ms.lasthandoff: 11/17/2017
 |**OwnerID**|=、<>、>=、<=|  
 |**OwnerName**|LIKE、NOT LIKE|  
 |**ParentName**|LIKE、NOT LIKE|  
-|**アクセス許可**|=、<>、>=、<=|  
+|**権限**|=、<>、>=、<=|  
 |**ProviderName**|LIKE、NOT LIKE|  
 |**Reads**|=、<>、>=、<=|  
 |**RequestID**|=、<>、>=、<=|  
@@ -133,7 +133,7 @@ ms.lasthandoff: 11/17/2017
 |**SqlHandle**|このデータ列のイベントにフィルターを適用するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「 [SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  
 |**StartTime**|>=、<=|  
 |**状態**|=、<>、>=、<=|  
-|**Success**|=、<>、>=、<=|  
+|**成功**|=、<>、>=、<=|  
 |**TargetLoginName**|LIKE、NOT LIKE|  
 |**TargetLoginSid**|このデータ列のイベントにフィルターを適用するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「 [SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  
 |**TargetUserName**|LIKE、NOT LIKE|  

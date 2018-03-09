@@ -1,79 +1,95 @@
 ---
 title: "MiniCRAN を使用して、ローカルのパッケージ リポジトリを作成 |Microsoft ドキュメント"
+titleSuffix: SQL Server
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 02/20/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27f2a1ce-316f-4347-b206-8a1b9eebe90b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f78470d347c96186f0960530a7482d22e4bc4e49
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 9d0a234b0b1112ee01f6eb6c67979ae84d72fd92
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="create-a-local-package-repository-using-minicran"></a>MiniCRAN を使用して、ローカルのパッケージ リポジトリを作成します。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-R パッケージを準備するにはインターネットにアクセスできないサーバーへのインストールの 2 つの方法はあります。
+[MiniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) Andre de Vries これらの一般的なシナリオをサポートするために、パッケージが作成されました。 
 
--   [1 つのローカル リポジトリを作成する miniCRAN パッケージを使用します。](#bkmk_miniCRAN)
++ パッケージの依存関係の 1 つのパッケージまたはパッケージのセットを分析します。
++ インターネットにアクセスせず、サーバーにインストールするための一連の R パッケージを準備しています。
 
-    [MiniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) CRAN のようなリポジトリから選択したパッケージから成る内部に矛盾のリポジトリを作成します。 ユーザーが、必要なパッケージのセットを指定し、miniCRAN を再帰的にはこれらのパッケージの依存関係ツリー読み込みますのみリストされているパッケージとその依存関係をダウンロードします。
+ユーザーが、必要なパッケージのセットを指定し、miniCRAN を再帰的にはこれらのパッケージの依存関係ツリー読み込みます CRAN または類似のリポジトリからのみ表示されているパッケージとその依存関係をダウンロードします。
 
-    このローカル リポジトリをサーバーに移動し、インターネットを使用せず、パッケージのインストールを続行できます。
+出力として miniCRAN は、選択したパッケージと必要なすべての依存関係で構成される内部に矛盾のリポジトリを作成します。 このローカル リポジトリをサーバーに移動し、インターネットを使用せず、パッケージのインストールを続行できます。
 
--   [手動でダウンロードして、1 つずつのパッケージをコピー](#bkmk_manual)
+経験豊富な R ユーザーは、多くの場合、ダウンロードしたパッケージの DESCRIPTION ファイル内の依存パッケージの一覧を探します。 ただし、パッケージに記載**Imports**第 2 レベルの依存関係のある可能性があります。 このため、ことをお勧めの使用、 **miniCRAN**メソッドです。
 
-この記事は、両方の方法を使用して、R パッケージ リポジトリを作成する方法について説明し、使用をお勧め、 **miniCRAN**パッケージです。
+## <a name="what-is-a-package-repository"></a>パッケージ リポジトリとは
 
-## <a name="prepare-packages-using-minicran"></a>MiniCRAN を使用してパッケージを準備します。
-
-ローカル パッケージ リポジトリを作成する目的は、インターネット アクセスが許可されていないサーバーに新しい R パッケージをインストールするサーバーの管理者または組織内の他のユーザーが使用できる 1 つの場所を提供します。
+ローカル パッケージ リポジトリを作成する目的は、インターネット アクセスが許可されていないサーバーに新しい R パッケージをインストールするサーバーの管理者または組織内の他のユーザーが使用できる 1 つの場所を提供します。 リポジトリを作成した後に、新しいパッケージを追加または既存のパッケージのバージョンのアップグレードによって変更できます。
 
 [MiniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html)によって R が書き込まれた用パッケージ[Andre de Vries](http://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html)は一貫性のある、作成を容易にできるように、組織用の R パッケージのセットを管理します。 
 
-MiniCRAN を使用してリポジトリを作成する多くの利点があります。
+パッケージのリポジトリには、これらのシナリオがあります。
 
--   **セキュリティ**: からダウンロードおよびインストールでは、R パッケージを新しい CRAN またはそのミラー サイトのいずれかに慣れている多くの R ユーザー。 ただし、セキュリティの理由により、実稼働サーバーが実行されている[!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)]通常、インターネット接続はありません。
+- **セキュリティ**: からダウンロードおよびインストールでは、R パッケージを新しい CRAN またはそのミラー サイトのいずれかに慣れている多くの R ユーザー。 ただし、セキュリティの理由により、実稼働サーバーが実行されている[!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)]通常、インターネット接続はありません。
 
--   **オフライン インストールを簡単に**: パッケージをインストールするサーバーがオフラインにする必要がありますダウンロードすることもすべてのパッケージの依存関係を使用する miniCRAN 簡単に正しい形式ですべての依存関係を取得します。
+- **オフライン インストールを簡単に**: パッケージをインストールするサーバーがオフラインにする必要がありますダウンロードすることもすべてのパッケージの依存関係を使用する miniCRAN 簡単に正しい形式ですべての依存関係を取得します。
 
--   **バージョン管理の改善**: マルチ ユーザー環境では、サーバー上の複数のパッケージ バージョンの無制限のインストールを回避する理由。
+    MiniCRAN を使用するをインストールするパッケージを準備する際に、パッケージの依存関係のエラーを回避できます、[外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)ステートメントです。
 
-リポジトリを作成した後に、新しいパッケージを追加または既存のパッケージのバージョンのアップグレードによって変更できます。
+- **バージョン管理の改善**: マルチ ユーザー環境では、サーバー上の複数のパッケージ バージョンの無制限のインストールを回避する理由。 ローカル リポジトリを使用すると、アナリストが使用するパッケージの一貫性のあるセットを提供できます。 
+
+> [!TIP]
+> また、Azure Machine Learning で使用するためのパッケージを準備するのに miniCRAN を使用することができます。 詳細については、このブログを参照してください: [Michele Usuelli での Azure ML で miniCRAN の使用](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
+
+## <a name="prepare-packages-using-minicran"></a>MiniCRAN を使用してパッケージを準備します。
+
+**MiniCRAN**パッケージ自体が他の 18 の CRAN パッケージを依存である間、 **RCurl**システムの依存関係のあるパッケージで、 **curl devel**パッケージです。 同様に、パッケージ**XML**に依存している**libxml2 devel**です。 
+
+これらすべての依存関係を簡単に満たすことができるように、これらの理由から、ローカル リポジトリ フル インターネットにアクセスできる、コンピューターで、最初にビルドを勧めします。 
+
+リポジトリが作成された後は、別の場所にリポジトリを行うことができます。
 
 ### <a name="step-1-install-the-minicran-package"></a>手順 1. MiniCRAN パッケージをインストールします。
 
-まず、ソースとして使用する miniCRAN リポジトリを作成します。 インターネットにアクセスできるコンピューターでこのリポジトリを作成する必要があります。
+作成することで開始する、 **miniCRAN**をソースとして使用するリポジトリです。 インターネットにアクセスできるコンピューターでこのリポジトリを作成する必要があります。
 
-1.  MiniCRAN パッケージと、必要なインストール**igraph**パッケージです。
+1. インストール、 **miniCRAN**パッケージと、必要な**igraph**パッケージです。 パッケージが既にインストールされているかどうか、この例が確認されますが、if をバイパスできますステートメントと、パッケージを直接インストールします。
 
     ```R
-    if(!require("miniCRAN")) install.packages("miniCRAN") if(!require("igraph"))
-    install.packages("igraph") library(miniCRAN)
+    if(!require("miniCRAN")) install.packages("miniCRAN") 
+    if(!require("igraph")) install.packages("igraph") 
+    library("miniCRAN")
     ```
 
 ### <a name="step-2-define-a-package-source-a-cran-mirror-or-an-mran-snapshot"></a>手順 2. パッケージ ソースの定義: CRAN ミラー、または MRAN スナップショット
 
-1. パッケージの取得中に使用するミラー サイトを指定します。
+1. パッケージの取得中に使用するミラー サイトを指定します。 たとえば、お住まいの地域を必要なパッケージを含む MRAN サイト、またはその他のサイトを使用する可能性があります。 ダウンロードに失敗した場合は、別のミラー サイトを再試行してください。
 
     ```R
-    CRAN_mirror \<- c(CRAN = "https://mran.microsoft.com/snapshot/2017-08-01")
+    CRAN_mirror <- c(CRAN = "https://mran.microsoft.com")
+    CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
     ```
 
-2.  収集されたパッケージを格納するローカル フォルダーを指定します。 フォルダー miniCRAN; 名前を付ける必要はありません。"GeneticsPackages"または"ClientRPackages1.0.2"のようなわかりやすい名前がある可能性があります。
+2. 収集されたパッケージを格納するローカル フォルダーの名前を入力します。 
 
-    フォルダーを事前に作成することを確認するだけです。 場合、エラーが発生、`local_repo`フォルダーでは、後で、R コードを実行するときに存在しません。
+    事前にフォルダーを作成することを確認します。 場合、エラーが発生、`local_repo`フォルダーでは、後で、R コードを実行するときに存在しません。
+
+    フォルダーには、わかりやすい名前が必要です。 ここで"miniCRAN"を使用しましたが、"miniCRANZooPackages"または"miniCRANMyRPackagev2"などのわかりやすい名前を使用する場合は、この手順を繰り返します多くの場合、おそらく必要があります。
 
     ```R
     local_repo <- "~/miniCRAN"
@@ -83,16 +99,16 @@ MiniCRAN を使用してリポジトリを作成する多くの利点があり�
 
 ### <a name="step-3-add-packages-to-the-repository"></a>手順 3. パッケージをリポジトリに追加します。
 
-1.  MiniCRAN をインストールした後は、その他のパッケージをダウンロードするを指定するリストを作成します。
+1. 後に**miniCRAN**はその他のパッケージをダウンロードするを指定するリストを作成する、インストールされています。
 
-    この初期の一覧には依存関係を追加しないでください。**igraph** miniCRAN によって使用されるパッケージの依存関係の一覧が生成されます。 このグラフを使用する方法の詳細については、次を参照してください。 [miniCRAN を使用して、パッケージの依存関係を識別する](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html)です。
+    **いない**この最初のリストに依存関係を追加します。 **Igraph**によって使用されるパッケージ**miniCRAN**依存関係の一覧が生成されます。 生成された依存関係グラフを使用する方法の詳細については、次を参照してください。 [miniCRAN を使用して、パッケージの依存関係を識別する](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html)です。
 
-    次の R スクリプトでは、対象パッケージ、"zoo"および「予測」を取得する方法を示します。
+    次の R スクリプトでは、"zoo"と「予測」変数には、ターゲットのパッケージを追加します。
 
     ```R
     pkgs_needed <- c("zoo", "forecast")
     ```
-2. 必要に応じて、わかりやすく、残りません依存関係グラフを描画します。
+2. にないために必要な依存関係グラフにプロットすることがわかりやすくことができます。
     
     ```R
     plot(makeDepGraph(pkgs_needed))
@@ -101,8 +117,8 @@ MiniCRAN を使用してリポジトリを作成する多くの利点があり�
 3. ローカル リポジトリを作成します。 必要に応じて、R バージョンを変更してください。
 
     ```R
-    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror)
-    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3")
+    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
+    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3");
     ```
 
     この情報から miniCRAN パッケージにパッケージをコピーする必要のあるフォルダー構造を作成、 [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)]以降。
@@ -112,9 +128,9 @@ MiniCRAN を使用してリポジトリを作成する多くの利点があり�
     MiniCRAN リポジトリに格納されているパッケージを一覧表示するには、次のコードを実行することができます。
 
     ```R
-    pdb <- as.data.frame(pkgAvail(local_repo, type = "win.binary", Rversion = "3.3"), stringsAsFactors = FALSE)
-    head(pdb)
-    pdb$Package
+    pdb <- as.data.frame(pkgAvail(local_repo, type = "win.binary", Rversion = "3.3"), stringsAsFactors = FALSE);
+    head(pdb);
+    pdb$Package;
     pdb[, c("Package", "Version", "License")]
     ```
 
@@ -122,17 +138,11 @@ MiniCRAN を使用してリポジトリを作成する多くの利点があり�
 
 リポジトリを作成し、必要なパッケージを追加した後、サーバー コンピューターにパッケージ リポジトリを移動、R パッケージが SQL Server で使用するため、適切なライブラリでインストールされていることを確認してください。
 
-SQL Server のバージョンによっては、SQL Server インスタンスに関連付けられた R ライブラリに新しいパッケージを追加するための 2 つのオプションがあります。
-
--   MiniCRAN リポジトリと R ツールを使用して、インスタンスのライブラリをインストールします。
-
--   SQL データベースにパッケージをアップロードし、外部ライブラリの作成ステートメントを使用して、データベースごとにパッケージをインストールします。 参照してください[SQL Server に追加の R パッケージをインストール](install-additional-r-packages-on-sql-server.md)です。
-
 次の手順では、R ツールを使用してパッケージをインストールする方法について説明します。
 
-1.  パッケージをインストールするサーバーにそのままで、miniCRAN リポジトリを含むフォルダーにコピーします。
+1. パッケージをインストールするサーバーをそのままで、miniCRAN リポジトリを含むフォルダーにコピーします。 フォルダーがこの構造体が通常: miniCRAN ルート > bin]->-> [windows contrib]-> [いいえバージョン]-> [すべてのパッケージ]-> [です。
 
-2.  インスタンスに関連付けられた R ツールを使用して、R コマンド プロンプトを開きます。
+2. インスタンスに関連付けられた R ツールを使用して、R コマンド プロンプトを開きます。
 
     - SQL Server 2017、既定のフォルダーは`C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library`します。
 
@@ -142,60 +152,54 @@ SQL Server のバージョンによっては、SQL Server インスタンスに�
 
     -  SQL Server を別のドライブにインストールしていたり、インストール パスにその他の変更を加えたりしている場合は、それらの変更もパスに反映するようにします。
 
-3.  (の場合はユーザー ディレクトリにしている) インスタンス ライブラリのパスを取得し、ライブラリ パスの一覧に追加します。
+3. インスタンス ライブラリのパスを取得し、ライブラリ パスの一覧に追加します。
 
     ```R
-    .libPaths()[1]  
-    lib \<- .libPaths()[1]
+    .libPaths()[1];
+    lib <- .libPaths()[1]
     ```
 
-    これは、"c:/program ファイルまたは Microsoft SQL Server/MSSQL14 インスタンス パスを返します。MSSQLSERVER/R_SERVICES/ライブラリ"
+    このコマンドで SQL Server などのインスタンスに関連付けられているライブラリのパスを返す必要があります:"c:/program ファイルまたは Microsoft SQL Server/MSSQL14 です。MSSQLSERVER/R_SERVICES/ライブラリ"
 
-2.  MininCRAN のリポジトリのコピー先サーバー上の場所を指定`server_repo`です。
+4. コピー先サーバーに新しい場所を指定、 **miniCRAN**リポジトリとして`server_repo`です。
 
-    この例では、リポジトリは、サーバーで、[ユーザー] フォルダーにコピーした想定しています。
+    この例では、リポジトリは、サーバー上の一時フォルダーにコピーした想定しています。
 
     ```R
-    R server_repo <- "C:\\Users\\MyUserName\\miniCRAN"
+    source_repo <- "C:\\temp\\miniCRAN"
     ```
 
-3.  サーバー上の新しい R ワークスペースを使用しているためにをインストールするパッケージの一覧も提供する必要があります。
+5. サーバー上の新しい R ワークスペースを使用しているためにをインストールするパッケージの一覧も提供する必要があります。
 
     ```R
     tspackages <- c("zoo", "forecast")
     ```
 
-4.  MiniCRAN リポジトリのローカル コピーへのパスを使用して、パッケージをインストールします。
+6. MiniCRAN リポジトリのローカル コピーへのパスを提供する、パッケージをインストールします。
 
     ```R
-    install.packages(tspackages, repos = file.path("file://", normalizePath(server_repo, winslash = "/")), lib = lib, type = "win.binary", dependencies = TRUE)
+    install.packages(tspackages, repos = file.path("file://", normalizePath;(source_repo, winslash = "/")), lib = lib, type = "win.binary", dependencies = TRUE);
     ```
 
-5.  インストールされているパッケージを表示するようになりました。
+7. インスタンス ライブラリからは、次のようなコマンドを使用してインストールされているパッケージを表示できます。
 
     ```R
     installed.packages()
     ```
 
 > [!NOTE] 
-> 
-> SQL Server の 2017 で、サーバー管理者がパッケージにアクセス許可を管理するのに役立つその他のデータベース ロールと T-SQL ステートメントが提供されます。 データベース管理者は、必要な場合は、R または T-SQL では、いずれかを使用して、パッケージをインストールするタスクを所有できます。 ただし、DBA は、独自のパッケージをインストールするのに機能をユーザーに提供するのにロールを使用することができますも。 詳細については、次を参照してください。 [for SQL Server の R パッケージの管理](r-package-management-for-sql-server-r-services.md)です。
-> 
-> SQL Server 2016 でサーバー管理者は、する必要がありますパッケージをインストール miniCRAN リポジトリからのインスタンスによって使用される既定のライブラリにします。 これを行うには、ツールを使用して、R での説明に従って、[上記](#bkmk_Rtools)です。
+> パッケージを使用して、SQL Server で、インスタンスによって使用される既定のライブラリにパッケージをインストールする必要があります。 
 
-## <a name="manually-download-single-packages"></a>手動で単一のパッケージをダウンロードします。
+## <a name="manually-install-a-single-package-from-a-zipped-file"></a>Zip ファイルから 1 つのパッケージを手動でインストールします。
 
-MiniCRAN を使用しないようにする場合、必要なパッケージとその依存関係を手動でダウンロードできます。 これを行うには、管理者またはサーバーの唯一の所有者をしている必要があります。
+依存関係を持たない 1 つのパッケージをインストールする場合または使用できない場合**miniCRAN**、する必要がありますパッケージを手動でダウンロードできます。 これを行うには、管理者またはサーバーの唯一の所有者をしている必要があります。
 
 パッケージをダウンロードした後は、zip 形式のファイルの場所から R パッケージをインストールします。
 
-1.  パッケージの zip ファイルをダウンロードしてローカル フォルダーに保存
+1. Zip 形式のファイルとしてパッケージをダウンロードし、ローカル フォルダーに保存
 
-2.  そのフォルダーにコピー、 [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)]コンピューター。
+2. そのフォルダーにコピー、 [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)]コンピューター。
 
-3.  SQL Server インスタンスのライブラリに、パッケージをインストールします。
+3. 従来の R コマンドを使用して、SQL Server インスタンスのライブラリに、パッケージをインストールします。 パッケージが既にインストールされていない依存関係を持つ、それらを含めていなかった場合は、インストールが失敗する可能性があります。 
 
-> [!NOTE]
-> R ツールを使用してパッケージをインストールするときに、全体として、インスタンスにインストールされます。 
-> 
-> データベースにパッケージをインストールし、パッケージをデータベース ロールを使用しているユーザーと共有する場合は、外部ライブラリの作成ステートメントを使用して、ライブラリをアップロードする必要があります。 参照してください[SQL サーバーに追加の R パッケージをインストールします。](install-additional-r-packages-on-sql-server.md)
+使用して、SQL Server 2017 のインスタンスに個々 のパッケージをアップロードすることも、[外部ライブラリの作成ステートメント](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)です。 このプロセスでは、管理アクセス権も必要です。

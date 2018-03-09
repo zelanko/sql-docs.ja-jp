@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_moretext function
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cf6f4c23f600403c7061d9ed5cb2bfd337660e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5a273980a28a31334653feec576fde85de007c38
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,12 +54,12 @@ RETCODE bcp_moretext (
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信する、サポートされている長い可変長データ チャンクへのポインターです。  
   
 ## <a name="returns"></a>返します。  
- 成功または失敗します。  
+ SUCCEED または FAIL。  
   
 ## <a name="remarks"></a>解説  
  この関数を組み合わせて使用できます[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)と[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)値をコピーする long、可変長のデータを SQL Server に小さなチャンクの数。 **bcp_moretext**次の SQL Server データ型を持つ列で使用できます:**テキスト**、 **ntext**、**イメージ**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、ユーザー定義型 (UDT)、および XML です。 **bcp_moretext**データの変換はサポートされませんが、指定したデータが対象列のデータ型と一致する必要があります。  
   
- 場合**bcp_bind**が null 以外で呼び出された*pData*でサポートされているデータ型のパラメーター **bcp_moretext**、 **bcp_sendrow**送信全体のデータ値の長さに関係なく。 場合、ただし、 **bcp_bind** 、null *pData*サポートされるデータ型のパラメーター **bcp_moretext** から正常に戻った後すぐにデータをコピーするために使用します。**bcp_sendrow**存在するデータを含むバインドされた列が処理されたことを示すです。  
+ 場合**bcp_bind**が NULL 以外で呼び出された*pData*でサポートされているデータ型のパラメーター **bcp_moretext**、 **bcp_sendrow**送信全体のデータ値の長さに関係なく。 場合、ただし、 **bcp_bind** 、null *pData*サポートされるデータ型のパラメーター **bcp_moretext** から正常に戻った後すぐにデータをコピーするために使用します。**bcp_sendrow**存在するデータを含むバインドされた列が処理されたことを示すです。  
   
  使用する場合**bcp_moretext**行でサポートされているデータ型の 1 つの列を送信する必要がありますもために使用する行の他のすべてのサポートされているデータ型の列を送信します。 列はスキップされません。 サポートされるデータ型は、SQLTEXT、SQLNTEXT、SQLIMAGE、SQLUDT、および SQLXML です。 列の型が varchar(max)、nvarchar(max)、または varbinary(max) の場合、SQLCHARACTER、SQLVARCHAR、SQNCHAR、SQLBINARY、SQLVARBINARY も、サポート対象となります。  
   

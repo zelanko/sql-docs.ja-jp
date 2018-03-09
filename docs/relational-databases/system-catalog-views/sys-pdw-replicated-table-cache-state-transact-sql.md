@@ -1,5 +1,5 @@
 ---
-title: "sys.pdw_replicated_table_cache_state (TRANSACT-SQL) |Microsoft ドキュメント"
+title: sys.pdw_replicated_table_cache_state (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/03/2017
 ms.prod: 
@@ -8,29 +8,31 @@ ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 author: ronortloff
 ms.author: rortloff;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 700ebe6ee06ebbcccf9c1388cb3a4f8015a26669
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a718827a478137a877b7b1130f3e80a5cbd05fc9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syspdwreplicatedtablecachestate-transact-sql"></a>sys.pdw_replicated_table_cache_state (TRANSACT-SQL)
+# <a name="syspdwreplicatedtablecachestate-transact-sql"></a>sys.pdw_replicated_table_cache_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
   レプリケートされたテーブルに関連付けられているキャッシュの状態を返す**object_id**です。  
   
 |列名|データ型|Description|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|object_id|**int**|テーブルのオブジェクト ID。 参照してください[sys.objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **object_id**はこのビューのキーです。||  
-|state|**nvarchar (40)**|このテーブルのレプリケートされたテーブルのキャッシュの状態。|' 準備不完了 '、'準備完了'|  
+|object_id|**int**|テーブルのオブジェクト ID。 参照してください[sys.objects &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。<br /><br /> **object_id**はこのビューのキーです。||  
+|state|**nvarchar(40)**|このテーブルのレプリケートされたテーブルのキャッシュの状態。|'NotReady','Ready'|  
   
 ## <a name="example"></a>例
 この例では、テーブル名と、レプリケートされたテーブルのキャッシュの状態を取得する sys.tables で sys.pdw_replicated_table_cache_state を結合します。

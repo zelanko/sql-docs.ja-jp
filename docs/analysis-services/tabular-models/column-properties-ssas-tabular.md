@@ -1,34 +1,33 @@
 ---
-title: "列のプロパティ (SSAS テーブル) |Microsoft ドキュメント"
+title: "列のプロパティ |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 05/23/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.columnprop.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.columnprop.f1
 ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ce23f4ec3f28ed2057ac2433615b1ab4fb98938a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b4198d0d71f5c0d14c12391426f4ac4397ede93c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="column-properties-ssas-tabular"></a>Column Properties (SSAS Tabular)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]このトピックでは、表形式モデルの列のプロパティについて説明します。  
+# <a name="column-properties"></a>[列のプロパティ] 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+この記事では、表形式モデルの列のプロパティについて説明します。  
   
 >  [!NOTE]  
 >  一部のプロパティは、すべての互換性レベルではサポートされません。    
@@ -48,7 +47,7 @@ ms.lasthandoff: 12/08/2017
 |**データ形式**|インポート時に自動的に決定します。|この列のデータに使用される表示形式を指定します。 このプロパティには、次のオプションがあります。<br /><br /> **全般**<br /><br /> **10 進数**<br /><br /> **整数**<br /><br /> **Currency**<br /><br /> **[パーセント]**<br /><br /> **[指数]**<br /><br /> データ形式を定義したら、各形式に固有のプロパティを設定できます。 たとえば、 **[通貨]** 形式を選択した場合は、表示される小数点以下の桁数の設定、桁区切り記号の選択、および通貨記号の選択を行います。<br /><br /> <br /><br /> 列の値に画像が含まれる場合は、「 **基本画像**」を参照してください。|  
 |**データ型**|インポート時に自動的に決定します。|列のすべての値のデータ型を指定します。|  
 |**Description**||列の説明文です。<br /><br /> 特定のレポート クライアントで、フィールド一覧のこの列にエンド ユーザーがカーソルを重ねると、ツールヒントとしてこの説明が表示されます。|  
-|**[非表示]**|False|レポート クライアント フィールドの一覧で、列を非表示にするかどうかを指定します。<br /><br /> このプロパティを **[True]** に設定すると、この列は非表示になります。 たとえば、識別子またはキーを含む列は、通常はエンド ユーザーにとっては役に立ちません。<br /><br /> レポート クライアントで列を非表示にしても、そのフィールドはモデル データでは非表示にはなりません。 モデルに対するクエリを作成すると、そのフィールドが表示されます。 非表示の列は、引き続きグループ化または並べ替えに使用できます。<br /><br /> **[非表示]** プロパティは、データ セキュリティはまったく考慮されません。 データのセキュリティを確保するため、"ロール" では行フィルターを使用してください。 詳細については、「 [ロール (SSAS テーブル)](../../analysis-services/tabular-models/roles-ssas-tabular.md)」を参照してください。|  
+|**[非表示]**|False|レポート クライアント フィールドの一覧で、列を非表示にするかどうかを指定します。<br /><br /> このプロパティを **[True]** に設定すると、この列は非表示になります。 たとえば、識別子またはキーを含む列は、通常はエンド ユーザーにとっては役に立ちません。<br /><br /> レポート クライアントで列を非表示にしても、そのフィールドはモデル データでは非表示にはなりません。 モデルに対するクエリを作成すると、そのフィールドが表示されます。 非表示の列は、引き続きグループ化または並べ替えに使用できます。<br /><br /> **[非表示]** プロパティは、データ セキュリティはまったく考慮されません。 データのセキュリティを確保するため、"ロール" では行フィルターを使用してください。 詳細については、次を参照してください。[ロール](../../analysis-services/tabular-models/roles-ssas-tabular.md)です。|  
 |**列で並べ替え**||この列の値を並べ替えるために使用するもう 1 つの列を指定します。 2 つの列の間にリレーションシップが存在する必要があります。<br /><br /> この値には、既存の列の名前を指定してください。 数式またはメジャーを指定することはできません。|  
 
  **雑費**  
@@ -76,7 +75,7 @@ ms.lasthandoff: 12/08/2017
 2.  **[プロパティ]** ウィンドウで、プロパティをクリックして値を入力するか、下矢印をクリックして設定オプションを選択します。  
   
 ## <a name="see-also"></a>参照  
- [Power View レポート プロパティ](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)   
+ [Power View レポートのプロパティ](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)   
  [非表示にするか、列を固定](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)   
  [テーブルへの列の追加](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)  
   

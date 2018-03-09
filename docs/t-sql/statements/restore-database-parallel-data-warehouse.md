@@ -8,20 +8,21 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cd72d13f4c953f9b15963655d437709bfc71fa7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 5ba8aa12f38fce6ac00f88f0015008da25a59b88
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>データベース (並列データ ウェアハウス) を復元します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -60,7 +61,7 @@ RESTORE HEADERONLY
 ```  
   
 ## <a name="arguments"></a>引数  
- データベースの復元*database_name*  
+ RESTORE DATABASE *database_name*  
  ユーザー データベースと呼ばれるデータベースを復元することを指定*database_name*です。 復元されたデータベースでは、バックアップされているソース データベースとは異なる名前を持つことができます。 *database_name*先アプライアンス上のデータベースとして存在することはできません。 詳細について許可されたデータベースの名前に「オブジェクトの名前付け規則」を参照してください、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
   
  ユーザー データベースを復元するデータベースの完全バックアップを復元し、アプライアンスに必要に応じて差分バックアップを復元します。 ユーザー データベースの復元には、復元するデータベース ユーザー、およびデータベース ロールが含まれています。  
@@ -90,7 +91,7 @@ RESTORE HEADERONLY
   
  RESTORE HEADERONLY の結果は、後でパターン化、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY の結果します。 結果は、50 以上の列で使用されるすべて[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]です。 内の列の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY の結果を参照してください[RESTORE HEADERONLY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  必要があります、 **CREATE ANY DATABASE**権限です。  
   
  アクセスして、バックアップ ディレクトリから読み取る権限を持つ Windows アカウントが必要です。 Windows アカウント名とパスワードを格納する必要がありますも[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]します。  

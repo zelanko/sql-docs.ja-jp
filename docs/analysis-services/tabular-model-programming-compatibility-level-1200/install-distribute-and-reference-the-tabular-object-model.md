@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e51769f7-aac7-4835-a5ae-91aac04aa476
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 60d264dccf042ec9447d92f17045f238597cd29e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4992c9a621964f8125178f114a930b1f4e007179
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>インストール、配布、および表形式オブジェクト モデルを参照
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]この記事では、ダウンロード、参照、および Analysis Services 表形式オブジェクト モデル (TOM)、c# ライブラリを作成および表形式モデルとマネージ コード内のデータベースを管理するための再配布する方法について説明します。  
@@ -39,7 +37,7 @@ SQL Server 2016 では、リファクタリングしたし、新しいコア、�
 アセンブリ  |機能  |重要なクラス |
 ---------|---------|--------------  |
 コア <br/>Microsoft.AnalysisServices.Core.dll | 表形式および多次元データベースの両方に共通します。 <br/><br/>例外処理、Analysis Services インスタンスと、データベースへの汎用的な接続と共通のプロパティとメソッドをサーバーおよびデータベース オブジェクトへのアクセスを提供します。 <br/><br/>SQL Server 2016 を対象とする任意の AMO ソリューションに必須です。 | コア&nbsp;サーバー<br/>コア&nbsp;データベース<br/>AmoException
-TOM<br/> Microsoft.AnalysisServices.Tabular.dll、13.0.1601.5 のバージョンまたはそれ以降。| 作成および表形式メタデータ オブジェクトを管理します。 | TOM&nbsp;サーバー <br/>TOM&nbsp;データベース<br /> [モデル]<br /> テーブル<br /> 列<br /> リレーションシップ
+TOM<br/> Microsoft.AnalysisServices.Tabular.dll、13.0.1601.5 のバージョンまたはそれ以降。| 作成および表形式メタデータ オブジェクトを管理します。 | TOM&nbsp;サーバー <br/>TOM&nbsp;データベース<br /> [モデル]<br /> テーブル<br /> [列]<br /> リレーションシップ
   AMO<br /> Microsoft.AnalysisServices.dll| 作成し、テーブル 1050 ~ 1103 データベースを含め、多次元メタデータ オブジェクトを管理します。 | AMO&nbsp;サーバー <br />AMO&nbsp;データベース <br /> Cube <br /> [ディメンション] <br /> [MeasureGroup] 
 Json<br/>Microsoft.AnalysisServices.Tabular.Json.dll | Analysis Services のワークロードでの JSON のシリアル化する機能的な変更を導入する際のリスクを削除する更新プログラムを制御する NewtonSoftJson.dll (JSON.NET) をラップする DLL のヘルパーです。 <br /> <br />この DLL は、TOM に依存関係として存在し、コード内で直接使用するものではありません。 | [なし] :  
   
@@ -106,7 +104,7 @@ Microsoft.AnalysisServices.Tabular.dll、せず Microsoft.AnalysisServices.dll �
    * Microsoft.AnalysisServices.Tabular  
    * Microsoft.AnalysisSerivces.Tabular.Json  
   
-3. **[OK]**をクリックします。  **ソリューション エクスプ ローラー**、[参照] フォルダー、アセンブリが存在することを確認します。
+3. **[OK]** をクリックします。  **ソリューション エクスプ ローラー**、[参照] フォルダー、アセンブリが存在することを確認します。
   
 4. コード ページを開き、データベースとモデルが 1200 の表形式またはより高い互換性レベルの場合、Microsoft.AnalysisServces.Tabular 名前空間を追加します。 
   

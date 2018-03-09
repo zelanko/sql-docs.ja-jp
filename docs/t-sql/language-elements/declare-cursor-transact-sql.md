@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CURSOR_TSQL
 - DECLARE CURSOR
 - CURSOR
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DECLARE CURSOR statement
 - cursors [SQL Server], attributes
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0641f87c36d3dbed886dc7bb81aa1f179148a8cd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 79bf3115ef4e1d929e3e4a1b3ff731a1977ba28e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +83,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  READ ONLY  
  このカーソルによる更新プログラムを防ぎます。 UPDATE または DELETE ステートメントの WHERE CURRENT OF 句で、このカーソルを参照することはできません。 このオプションは、更新対象のカーソルの既定の機能よりも優先されます。  
   
- 更新プログラム [の*column_name* [**、**.*n*]]  
+ UPDATE [OF *column_name* [**,**...*n*]]  
  カーソル内で更新できる列を定義します。 場合*column_name* [**、**..*.n*] が指定されているだけで示されている列には、変更ができるようにします。 列リストを伴わずに UPDATE を指定した場合は、すべての列を更新できます。  
   
  *cursor_name*  
@@ -170,7 +172,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
   
  一部として変数を使用することがあります、 *select_statement*カーソルを宣言します。 カーソルが宣言された後、カーソル変数の値は変更されません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  DECLARE CURSOR 権限は、特に指定のない限りカーソル内で使用されるビュー、テーブル、および列の SELECT 権限を持つユーザーに与えられます。
  
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項

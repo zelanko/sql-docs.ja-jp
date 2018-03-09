@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_account_sp
 - sysmail_update_account_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_update_account_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_update_account_sp
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
-caps.latest.revision: "51"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 312d700fce5cc48950b531a2a524bfee0d56aa8e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4be8c0c87771f89d92cc0344c207149467c4554c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,19 +59,19 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  更新するアカウント ID を指定します。 *account_id*は**int**、既定値は NULL です。 少なくとも 1 つの*account_id*または*account_name*指定する必要があります。 両方が指定されると、プロシージャによってアカウントの名前が変更されます。  
   
  [  **@account_name**  =] **'***account_name***'**  
  更新するアカウントの名前を指定します。 *account_name*は**sysname**、既定値は NULL です。 少なくとも 1 つの*account_id*または*account_name*指定する必要があります。 両方が指定されると、プロシージャによってアカウントの名前が変更されます。  
   
- [  **@email_address**  =] **'***email_address***'**  
+ [ **@email_address** = ] **'***email_address***'**  
  メッセージ送信元の新しい電子メール アドレスを指定します。 このアドレスにはインターネット電子メール アドレスを指定する必要があります。 アドレスのサーバー名は、データベース メールがこのアカウントからメールを送信する場合に使用するサーバーです。 *email_address*は**nvarchar (128)**、既定値は NULL です。  
   
- [  **@display_name**  =] **'***display_name***'**  
+ [ **@display_name** = ] **'***display_name***'**  
  このアカウントから送信する電子メール メッセージの新しい表示名を指定します。 *display_name*は**nvarchar (128)**、既定値はありません。  
   
- [  **@replyto_address**  =] **'***replyto_address***'**  
+ [ **@replyto_address** = ] **'***replyto_address***'**  
  このアカウントから送信する電子メール メッセージの [返信先] ヘッダーで使用する新しいアドレスを指定します。 *replyto_address*は**nvarchar (128)**、既定値はありません。  
   
  [  **@description**  =] **'***説明***'**  
@@ -77,10 +80,10 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  [  **@mailserver_name**  =] **'***server_name***'**  
  このアカウントに使用する SMTP メール サーバーの新しい名前を指定します。 実行するコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]解決できる必要があります、 *server_name* IP アドレス。 *server_name*は**sysname**、既定値はありません。  
   
- [  **@mailserver_type**  =] **'***server_type***'**  
+ [ **@mailserver_type** = ] **'***server_type***'**  
  メール サーバーの新しい種類を指定します。 *server_type*は**sysname**、既定値はありません。 値しか**'SMTP'**はサポートされています。  
   
- [  **@port**  =] *port_number*  
+ [ **@port** = ] *port_number*  
  メール サーバーの新しいポート番号を指定します。 *port_number*は**int**、既定値はありません。  
   
  [  **@timeout**  =] **'***タイムアウト***'**  
@@ -106,7 +109,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
  ストアド プロシージャ**sysmail_update_account_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマです。 現在のデータベースがない場合は、3 部構成の名前を持つプロシージャを実行する必要があります**msdb**です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

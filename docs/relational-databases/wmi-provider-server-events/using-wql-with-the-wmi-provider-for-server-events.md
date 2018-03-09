@@ -8,7 +8,8 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Server Events, WQL
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89b153d808010e26b5454d1a78058938ed2ea00b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d14958366c9dfa24343e244a8a5d5cb880fafa3e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>WMI Provider for Server Events と WQL の使用
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]アプリケーションの管理アクセス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]イベント for Server Events WMI Query Language (WQL) ステートメントを発行することで、WMI プロバイダーを使用します。 WQL は、WMI 特有の拡張機能を複数持つ、構造化照会言語 (SQL) の単純化されたサブセットです。 WQL を使用した場合、アプリケーションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンス、データベース、またはデータベース オブジェクト (現在サポートされているオブジェクトはキューのみ) に対してイベントの種類を取得します。 WMI Provider for Server Events は、クエリをターゲット データベースまたはデータベース スコープまたはオブジェクト スコープのイベント通知用に作成されるイベント通知に変換、**マスター**サーバー スコープのイベント用のデータベース通知です。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+管理アプリケーションは WQL (WMI Query Language) ステートメントを実行することにより、WMI Provider for Server Events を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントにアクセスすることができます。 WQL は、WMI 特有の拡張機能を複数持つ、構造化照会言語 (SQL) の単純化されたサブセットです。 WQL を使用した場合、アプリケーションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンス、データベース、またはデータベース オブジェクト (現在サポートされているオブジェクトはキューのみ) に対してイベントの種類を取得します。 WMI Provider for Server Events は、クエリをターゲット データベースまたはデータベース スコープまたはオブジェクト スコープのイベント通知用に作成されるイベント通知に変換、**マスター**サーバー スコープのイベント用のデータベース通知です。  
   
  たとえば、次の WQL クエリがあるとします。  
   
@@ -71,7 +73,7 @@ WHERE where_condition
  *event_property*  
  イベントのプロパティ。 例としては、 **PostTime**、 **SPID**、および**LoginName**です。 表示されている各イベントを検索[WMI Provider for Server Events のクラスとプロパティ](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)を保持しているプロパティを特定します。 たとえば、DDL_DATABASE_LEVEL_EVENTS イベントには、 **DatabaseName**と**UserName**プロパティです。 継承も、 **SQLInstance**、 **LoginName**、 **PostTime**、 **SPID**、および**ComputerName**プロパティとその親イベント。  
   
- **、** *.. .n*  
+ **,** *...n*  
  示します*event_property*照会できる、複数回コンマで区切っています。  
   
  \*  

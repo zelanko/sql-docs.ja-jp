@@ -7,25 +7,27 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2017
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 0bee2bcdee8eb5b46d59e43699399fa68cdf3d24
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: 1c97a15d3b70d42337d3054f97e2e695813ca6f8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>手順 2: PowerShell を使用して SQL server のデータをインポートします。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、チュートリアルのパート[SQL 開発者のためのデータベースでの Python analytics](sqldev-in-database-python-for-sql-developers.md)です。 
 
@@ -56,7 +58,7 @@ PowerShell スクリプトでは、表示、ダウンロードしたファイル
     - 名前またはアドレスの[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Python の Machine Learning のサービスがインストールされているインスタンス。
     - インスタンス上のアカウントのユーザー名とパスワード。 データベースを作成し、テーブルおよびストアド プロシージャを作成してデータの一括読み込みのテーブルに機能を使用するアカウントが必要です。 
     - ユーザー名とパスワードを指定しない場合は、SQL Server へのサインインに使用される、Windows id れ、パスワードの入力に昇格されます。
-    - ダウンロードしたばかりのサンプル データ ファイルのパスとファイル名。 たとえば、IPv4 アドレスの場合、「 `C:\temp\pysql\nyctaxi1pct.csv`
+    - ダウンロードしたばかりのサンプル データ ファイルのパスとファイル名。 例を次に示します。 `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
     > データを正常に読み込むには、ライブラリ xmlrw.dll は bcp.exe と同じフォルダーでなければなりません。

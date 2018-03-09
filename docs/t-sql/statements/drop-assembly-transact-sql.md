@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP ASSEMBLY
 - DROP_ASSEMBLY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - removing assemblies
 - DROP ASSEMBLY statement
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - dropping assemblies
 - WITH NO DEPENDENTS option
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e466c9be38de4706493f3d181ca1648c9027a19
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 9c6156ff11476e91f13285c1db7d4cc545d5e8e5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +57,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
   
  条件付きでは既に存在する場合にのみ、アセンブリを削除します。  
   
- *アセンブリ名*  
+ *assembly_name*  
  削除するアセンブリの名前を指定します。  
   
  WITH NO DEPENDENTS  
@@ -70,7 +72,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
   
  DROP ASSEMBLY は、アセンブリを参照する現在実行中のコードには影響を与えません。 ただし、DROP ASSEMBLY を実行した後では、アセンブリ コードの呼び出しは失敗します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  アセンブリの所有権、またはアセンブリに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

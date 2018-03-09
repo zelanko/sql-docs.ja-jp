@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - resources [Reporting Services], updating
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 caps.latest.revision: "17"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d88f10131832c28a00da5d8c4afca2413d99b54c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0a7662d051951a32d15138b8c47c7cf5e6451729
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="update-a-resource-report-manager"></a>リソースの更新 (レポート マネージャー)
   リソースを新しいバージョンに置換すると、リソースを更新することができます。 リソースは、レポート サーバーに格納されたアイテムです。このアイテムには、アップロードするファイルのコンテンツが含まれます。 新しいコンテンツまたは異なるコンテンツをインポートすると、既存のリソースを置換できます。 リソースの更新は、既存のプロパティやリソース上のセキュリティ設定を保持しながらコンテンツを更新する方法を提供します。  
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/05/2017
  更新するリソースにレポートで使用する画像が含まれる場合、更新された画像を表示するにはレポートを更新する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [[コンテンツ] ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [[コンテンツ] ページ (レポート マネージャー)](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [[ファイルのアップロード] ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [フォルダーへのファイルのアップロード](../../reporting-services/report-server/upload-files-to-a-folder.md)   
  [レポート マネージャー F1 ヘルプ](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  

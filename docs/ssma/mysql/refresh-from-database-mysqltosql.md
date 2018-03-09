@@ -1,7 +1,7 @@
 ---
 title: "更新からのデータベース (MySQLToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a59f32e2917048f385b130a5a19d44d8a5df429
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 18656f8929e52d23e10ccc5fafe8139544bf44a5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="refresh-from-database-mysqltosql"></a>データベース (MySQLToSQL) からの更新します。
 **データベースから更新** ダイアログ ボックスでは、MySQL データベースから更新するには、どのオブジェクトを選択することができます。 ダイアログ ボックス内の行が色分けされるメタデータの状態に基づいて。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
 アクセスする、**データベースから更新**ダイアログ ボックスで、クリックすると MySQL メタデータ エクスプ ローラー オブジェクトを右クリック**データベースから更新**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
   
 |||  
 |-|-|  

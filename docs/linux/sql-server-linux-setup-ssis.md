@@ -5,25 +5,25 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 13bd5bde7e4e4ec63bb7e3bd7d8959440f499672
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 70e5bddb584135585042d9521ab580777e0e8b5a
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux 上の SQL Server Integration Services (SSIS) のインストールします。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server Integration Services をインストールするには、この記事の手順に従います (`mssql-server-is`) on Linux です。 Linux 用の Integration Services のこのリリースでサポートされる機能については、次を参照してください。、 [Release Notes](sql-server-linux-release-notes.md)です。
 
@@ -32,7 +32,7 @@ SQL Server Integration Services をインストールするには、この記事
 - [Ubuntu](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-## <a name="ubuntu"></a>Ubuntu で SSIS をインストールします。
+## <a name="ubuntu"></a> Ubuntu で SSIS をインストールします。
 インストールする、 `mssql-server-is` Ubuntu でパッケージ化、これらの手順に従います。
 
 1. パブリック リポジトリ鍵キーをインポートします。
@@ -76,10 +76,10 @@ sudo apt-get install mssql-server-is
 ### <a name="remove-ssis"></a>SSIS を削除します。
 削除する`mssql-server-is`、次のコマンドを実行することができます。
 ```bash
-sudo apt-get remove msssql-server-is
+sudo apt-get remove mssql-server-is
 ```
 
-## <a name="RHEL"></a>RHEL に SSIS をインストールします。
+## <a name="RHEL"></a> RHEL に SSIS をインストールします。
 インストールする、 `mssql-server-is` RHEL にパッケージ化、これらの手順に従います。
 
 1. Microsoft SQL Server の Red Hat リポジトリの構成ファイルをダウンロードします。
@@ -120,8 +120,37 @@ sudo yum update mssql-server-is
 sudo yum remove mssql-server-is
 ```
 
+## <a name="unattended-installation"></a>無人インストール
+実行すると、無人インストールを実行する`ssis-conf setup`、次の機能を提供します。
+1.  指定して、 `-n` (プロンプトは表示されません) オプション。
+2.  環境変数を設定して、必要な値を提供します。
+
+次の例は、次の処理します。
+-   SSIS をインストールします。
+-   Developer エディションを指定の値を提供することによって、`SSIS_PID`環境変数。
+-   値を提供することで、使用許諾契約書を受け入れる、`ACCEPT_EULA`環境変数。
+-   指定して、無人インストールを実行、 `-n` (プロンプトは表示されません) オプション。
+
+```
+sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup 
+```
+
+### <a name="environment-variables-for-unattended-installation"></a>無人インストール用の環境変数
+
+| 環境変数 | Description |
+|---|---|
+| **ACCEPT_EULA** | 任意の値に設定すると、SQL Server の使用許諾契約書を受け入れる (たとえば、 `Y`)。|
+| **SSIS_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 使用可能な値を次に示します。<br/>Evaluation<br/>開発者<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>プロダクト キー<br/><br/>プロダクト キーを指定すると場合、プロダクト キーがあります形式で`#####-#####-#####-#####-#####`ここで、`#`はアルファベットまたは数字がします。  |
+| | |
+
 ## <a name="next-steps"></a>次の手順
 
 Linux で SSIS パッケージを実行するには、「[抽出変換、および SQL Server on Linux と SSIS データの読み込み](sql-server-linux-migrate-ssis.md)です。
 
 を Linux 上の SSIS の追加の設定を構成するのには、を参照してください。 [ssis conf Linux で SQL Server Integration Services を構成する](sql-server-linux-configure-ssis.md)です。
+
+## <a name="related-content-about-ssis-on-linux"></a>Linux 上の SSIS についての関連コンテンツ
+-   [抽出、変換、および SSIS Linux でのデータを読み込む](sql-server-linux-migrate-ssis.md)
+-   [Ssis conf で Linux 上の SQL Server Integration Services を構成します。](sql-server-linux-configure-ssis.md)
+-   [制限事項と Linux の SSIS の既知の問題](sql-server-linux-ssis-known-issues.md)
+-   [スケジュール SQL Server Integration Services パッケージの cron と Linux の実行](sql-server-linux-schedule-ssis-packages.md)

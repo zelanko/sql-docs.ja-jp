@@ -1,7 +1,7 @@
 ---
 title: "プロジェクトの設定 (移行) (MySQLToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8a9e6a74fda3bfce0f18aa2d8b987d8593d225fd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 97ea6eb0162b544f3c0666042b0ae70a5783fe43
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-migration-mysqltosql"></a>プロジェクトの設定 (移行) (MySQLToSQL)
 移行 ページ、**プロジェクト設定** ダイアログ ボックスには、どのように SSMA データが移行 MySQL から SQL Server をカスタマイズする設定が含まれています。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
 -   現在のプロジェクトの設定を指定する、**ツール**メニューの [**プロジェクト設定**、] をクリックして**全般**クリックして、左側のウィンドウの下部にある**移行**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
   
 ### <a name="bulk-copy"></a>一括コピー  
   

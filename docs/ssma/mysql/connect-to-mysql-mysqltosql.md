@@ -1,7 +1,7 @@
 ---
 title: "MySQL (MySQLToSQL) への接続 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e7e56b60fb754c34dafda5c08953bf50d01f478f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 068fe6585eac87830511515a95373a938cbcdca2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>MySQL (MySQLToSQL) への接続します。
 使用して、 **MySQL への接続**を移行する MySQL データベースに接続する ダイアログ ボックス。  
   
 このダイアログ ボックスにアクセスする、**ファイル**メニューの  **MySQL への接続**です。 以前接続した場合、コマンドは**MySQL への再接続**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **プロバイダー**  
   
 使用可能な MySQL プロバイダーは、MySQL 5.1 Odbc (信頼関係) です。  
@@ -48,7 +48,7 @@ MySQL サーバーの名前を入力します。 標準モードのオプショ�
   
 サーバーのポートを入力します。 既定のサーバーのポートは、3306 です。 標準モードのオプションです。  
   
-**ユーザー名**  
+**User name**  
   
 SSMA は、MySQL データベースへの接続に使用されるユーザー名を入力します。  
   

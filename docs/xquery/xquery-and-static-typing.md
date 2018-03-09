@@ -8,27 +8,30 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - XQuery, static typing
 - static typing
 - checking static types
 - inference [XQuery]
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2861a4b1460bebf51ea138678dd797e5f0048a41
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 41c21d1689e97b3939d4c479395e5af217e39897
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xquery-and-static-typing"></a>XQuery と静的な型指定
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +68,7 @@ ms.lasthandoff: 12/05/2017
   
  暗黙的な変換の後での静的な型チェックを必須にした場合、基数が正しく、許可された型の値のみが演算に渡されます。 「文字列」+ 1 の場合は"string"の静的な型は、ことを認識**xs:string**です。 これは、許可されている型ではないため、  **+** 操作、型エラーが発生します。  
   
- 任意の式 E1 の結果に任意の式 E2 を加算する (E1 + E2) 場合、静的な型の推定によって E1 および E2 の静的な型が判定されたうえで、それらの型が演算に許可されている型であるかどうかのチェックが行われます。 たとえば、E1 の静的な型には、いずれかを指定できる場合、 **xs:string**または**xs:integer**、静的な型チェック、型のエラーを発生させる、時の値も実行時可能性がありますの整数。 大文字と小文字 E1 の静的な型があった場合も同様**xs:integer\***です。  **+** 操作では、1 つの整数値のみが受け入れるや E1 は 0 を返すことが、1 つ以上の静的な型チェックでエラーが発生します。  
+ 任意の式 E1 の結果に任意の式 E2 を加算する (E1 + E2) 場合、静的な型の推定によって E1 および E2 の静的な型が判定されたうえで、それらの型が演算に許可されている型であるかどうかのチェックが行われます。 たとえば、E1 の静的な型には、いずれかを指定できる場合、 **xs:string**または**xs:integer**、静的な型チェック、型のエラーを発生させる、時の値も実行時可能性がありますの整数。 大文字と小文字 E1 の静的な型があった場合も同様**xs:integer\***です。 **+** 操作では、1 つの整数値のみが受け入れるや E1 は 0 を返すことが、1 つ以上の静的な型チェックでエラーが発生します。  
   
  既に説明したように、型の推定の結果、渡されるデータの型についてユーザーが認識しているよりも範囲の広い型が導かれることがよくあります。 そのような場合は、ユーザーがクエリを書き換える必要があります。 よく見られるケースを次に示します。  
   

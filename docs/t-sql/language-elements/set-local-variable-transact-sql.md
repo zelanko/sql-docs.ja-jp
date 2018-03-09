@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SET @local_variable
 - variables [SQL Server], assigning
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b7d855f491a4f9482308df6f3ed2dcca8b067398
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 56f38e166249f13bb50d1bf0188a5066da52ea78
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-localvariable-transact-sql"></a>設定@local_variable(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +76,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>引数  
- **@***local_variable*  
+ **@** *local_variable*  
  除く任意の型の変数の名前を指定**カーソル**、**テキスト**、 **ntext**、**イメージ**、または**テーブル**です。 変数名を記号には 1 つ開始する必要があります (**@**)。 変数名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。  
   
  *property_name*  
@@ -89,17 +91,17 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  { **.** | **::** }  
  CLR ユーザー定義型のメソッドを指定します。 (静的ではない) インスタンス メソッドでピリオドを使用 (**.**)。 静的メソッドでは、2 つのコロンを使用して (**::**)。 CLR ユーザー定義型のメソッド、プロパティ、またはフィールドを呼び出すには、その型に対する EXECUTE 権限が必要です。  
   
- *メソッド名が* **(** *引数*[ **、**.*n* ] **)**  
+ *method_name* **(** *argument* [ **,**... *n* ] **)**  
  ユーザー定義型のメソッドを指定します。このメソッドでは、あるデータ型のインスタンスの状態を変更する場合に 1 つ以上の引数を使用します。 静的メソッドはパブリックであることが必要です。  
   
- **@***SQLCLR_local_variable*  
+ **@** *SQLCLR_local_variable*  
  型がアセンブリに存在する変数を指定します。 詳細については、「[共通言語ランタイム &#40;CLR&#41; 統合のプログラミング概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)」をご覧ください。  
   
  *mutator_method*  
  オブジェクトの状態を変更できるアセンブリのメソッドを指定します。 このメソッドには SQLMethodAttribute.IsMutator が適用されます。  
   
  { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
- 複合代入演算子です。  
+ 複合代入演算子です:  
   
  + = 加算して割り当てる  
   
@@ -173,7 +175,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  READ ONLY  
  このカーソルによる更新を禁止します。 UPDATE または DELETE ステートメントの WHERE CURRENT OF 句で、このカーソルを参照することはできません。 このオプションは、更新対象のカーソルの既定の機能よりも優先されます。 このキーワードは、以前は READ_ONLY と表記していましたが、今後は、READ と ONLY の間にアンダースコアではなくスペースを指定するようになりました。  
   
- 更新プログラム [の*column_name*[ **、**.*n* ] ]  
+ UPDATE [OF *column_name*[ **,**... *n* ] ]  
  カーソル内で更新できる列を定義します。 場合*column_name* [**、**. *n* ] は、指定しただけで示されている列が変更を許可します。 一覧を指定しなかった場合は、カーソルを READ ONLY として定義していない限り、すべての列を更新できます。  
   
 ## <a name="remarks"></a>解説  
@@ -181,7 +183,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  変数は式の内部だけで使用でき、オブジェクト名やキーワードの代わりに使用することはできません。 動的 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを作成するには、EXECUTE を使用します。  
   
- セットの構文規則 **@**  *cursor_variable* LOCAL キーワードと GLOBAL キーワードを含めないでください。 ときに、セット **@**  *cursor_variable* = CURSOR... 構文を使用する、カーソルは default to local cursor データベース オプションの設定に応じて、GLOBAL または LOCAL として作成します。  
+ セットの構文規則 **@ * * * cursor_variable* LOCAL キーワードと GLOBAL キーワードを含めないでください。 ときに、セット **@ * * * cursor_variable* = CURSOR... 構文を使用する、カーソルは default to local cursor データベース オプションの設定に応じて、GLOBAL または LOCAL として作成します。  
   
  カーソル変数は、グローバル カーソルを参照する場合でも、常にローカルです。 カーソル変数でグローバル カーソルを参照する場合、カーソルに対してグローバル カーソル参照とローカル カーソル参照の両方が行われます。 詳細については、例 C を参照してください。  
   
@@ -191,8 +193,8 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  SELECT ステートメントで、値を連結する目的で (つまり、集計値を計算する目的で) 変数を使用しないでください。 予期しないクエリ結果が生じる可能性があります。 (代入を含め) SELECT リスト内のすべての式は、出力行ごとに 1 回のみ実行されると保証されていないことが原因です。 詳細については、次を参照してください。[このサポート技術情報記事](http://support.microsoft.com/kb/287515)です。  
   
-## <a name="permissions"></a>Permissions  
- public ロールのメンバーシップが必要です。 すべてのユーザーは、セットを使用できる **@**  *local_variable*です。  
+## <a name="permissions"></a>権限  
+ public ロールのメンバーシップが必要です。 すべてのユーザーは、セットを使用できる **@ * * * local_variable*です。  
   
 ## <a name="examples"></a>使用例  
   

@@ -11,18 +11,19 @@ ms.service:
 ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords: ADO, what's new
+helpviewer_keywords:
+- ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8be523be459914814d7e92541dd5cca21da006eb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4e76e56b9d1840d4e6e1f42acd10b3b9226a61d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-features-for-each-release"></a>ADO の各リリースの機能
 このトピックでは、ADO、ADO MD および ADOX の各リリースで導入された新機能を示します。
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/21/2017
  *信頼済みゾーンの外部ハード ドライブへのアクセスが許可されていません。*
 ドメイン間スクリプト信頼されていないサイトが関係する、次の操作は無効になっています: **Stream.SaveToFile**、 **Stream.LoadFromFile**、 **Recordset.Save**、および**Recordset.Open**、と共に使用される、 **adCmdFile**フラグ、または、Microsoft OLE DB 永続化プロバイダー (MSPersist)。
 
- **Recordset.Open** *、***Recordset.Save** *、***Stream.SaveToFile** *、および* **Stream.LoadFromFile***物理ファイルのみで動作します。* 
+ **Recordset.Open** *,*  **Recordset.Save** *,*  **Stream.SaveToFile** *, and*  **Stream.LoadFromFile**  *operate on physical files only.*
 これらのメソッドでは、ファイル ハンドルが物理ファイルのみを指しているようになりましたことを確認します。
 
  **Recordset.ActiveCommand***HTML/ASP ページから呼び出されたときにエラーが返されます。* 

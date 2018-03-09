@@ -8,7 +8,8 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -25,21 +26,22 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9097c3213bf64185c24814156e38d10584a7c20c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 976561b457dc1eac740df5075bf0a02fd5a95a23
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>まずはデータベースのストレッチの有効化ウィザードを実行する
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
- Stretch Database のデータベースを構成するには、データベースのストレッチの有効化ウィザードを実行します。  このトピックでは、入力する必要がある情報と、ウィザードで必要な選択について説明します。  
+
+ Stretch Database のデータベースを構成するには、データベースのストレッチの有効化ウィザードを実行します。  この記事では、入力する必要がある情報と、ウィザードで必要な選択について説明します。  
   
  Stretch Database の詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。 
  
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/05/2017
   
  ![Stretch Database ウィザードの [テーブルの選択] ページ](../../sql-server/stretch-database/media/stretch-wizard-2.png "Stretch Database ウィザードの [テーブルの選択] ページ")  
   
-|列|説明|  
+|[列]|Description|  
 |------------|-----------------|  
 |(タイトルなし)|選択したテーブルのストレッチを有効にするには、この列のチェック ボックスを選択します。|  
 |**名前**|データベースのテーブル名を指します。|  

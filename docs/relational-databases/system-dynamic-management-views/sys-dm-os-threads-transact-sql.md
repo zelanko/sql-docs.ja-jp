@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_threads
 - dm_os_threads
 - sys.dm_os_threads_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_threads dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_threads dynamic management view
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9108fa8c4af25be975394a3388cd26da99b9b595
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 41727f804fb31ed6773c671a40b63cb02ca6793b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,40 +43,40 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|thread_address|**varbinary (8)**|スレッドのメモリ アドレス (主キー)。|  
+|thread_address|**varbinary(8)**|スレッドのメモリ アドレス (主キー)。|  
 |started_by_sqlservr|**bit**|スレッドの開始元。<br /><br /> 1 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってスレッドが開始されました。<br /><br /> 0 = 別コンポーネント内から拡張ストアド プロシージャなど、スレッドの開始[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
 |os_thread_id|**int**|オペレーティング システムによって割り当てられたスレッドの ID。|  
 |ステータス|**int**|内部状態フラグ。|  
-|instruction_address|**varbinary (8)**|現在実行されている命令のアドレス。|  
+|instruction_address|**varbinary(8)**|現在実行されている命令のアドレス。|  
 |creation_time|**datetime**|スレッドが作成された日時。|  
 |kernel_time|**bigint**|スレッドで使用されたカーネル時間。|  
 |usermode_time|**bigint**|スレッドで使用されたユーザー時間。|  
-|stack_base_address|**varbinary (8)**|スレッドにおける最上位のスタック アドレスのメモリ アドレス。|  
-|stack_end_address|**varbinary (8)**|スレッドにおける最下位のスタック アドレスのメモリ アドレス。|  
+|stack_base_address|**varbinary(8)**|スレッドにおける最上位のスタック アドレスのメモリ アドレス。|  
+|stack_end_address|**varbinary(8)**|スレッドにおける最下位のスタック アドレスのメモリ アドレス。|  
 |stack_bytes_committed|**int**|スタックでコミットされたバイト数。|  
 |stack_bytes_used|**int**|スレッドでアクティブに使用されているバイト数。|  
 |affinity|**bigint**|このスレッドが実行されている CPU マスク。 これで構成される値は異なります、 **ALTER SERVER CONFIGURATION SET PROCESS AFFINITY**ステートメントです。 ソフト アフィニティの場合は、スケジューラと異なることがあります。|  
 |[Priority]|**int**|スレッドの優先度値。|  
 |ロケール|**int**|スレッド用にキャッシュされているロケール LCID。|  
-|トークン|**varbinary (8)**|スレッド用にキャッシュされている権限借用トークン ハンドル。|  
+|トークン|**varbinary(8)**|スレッド用にキャッシュされている権限借用トークン ハンドル。|  
 |is_impersonating|**int**|スレッドで Win32 権限借用が使用されているかどうかを示します。<br /><br /> 1 = スレッドではプロセスの既定値と異なるセキュリティ資格情報が使用されています。 これは、プロセスを作成したエンティティとは異なるエンティティの権限をスレッドで借用していることを示します。|  
 |is_waiting_on_loader_lock|**int**|スレッドでローダー ロックを待機中かどうかを示す、オペレーティング システムの状態。|  
-|fiber_data|**varbinary (8)**|スレッドで実行されている現在の Win32 ファイバー。 これは該当する場合に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]簡易プーリング用に構成されています。|  
-|thread_handle|**varbinary (8)**|内部使用のみです。|  
-|event_handle|**varbinary (8)**|内部使用のみです。|  
-|scheduler_address|**varbinary (8)**|スレッドに関連付けられているスケジューラのメモリ アドレス。 詳細については、次を参照してください。 [sys.dm_os_schedulers &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
-|worker_address|**varbinary (8)**|スレッドにバインドしているワーカーのメモリ アドレス。 詳細については、次を参照してください。 [sys.dm_os_workers &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|fiber_context_address|**varbinary (8)**|内部ファイバー コンテキスト アドレス。 これは該当する場合に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]簡易プーリング用に構成されています。|  
-|self_address|**varbinary (8)**|内部一貫性ポインター。|  
+|fiber_data|**varbinary(8)**|スレッドで実行されている現在の Win32 ファイバー。 これは該当する場合に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]簡易プーリング用に構成されています。|  
+|thread_handle|**varbinary(8)**|内部使用のみです。|  
+|event_handle|**varbinary(8)**|内部使用のみです。|  
+|scheduler_address|**varbinary(8)**|スレッドに関連付けられているスケジューラのメモリ アドレス。 詳細については、次を参照してください。 [sys.dm_os_schedulers &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。|  
+|worker_address|**varbinary(8)**|スレッドにバインドしているワーカーのメモリ アドレス。 詳細については、次を参照してください。 [sys.dm_os_workers &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。|  
+|fiber_context_address|**varbinary(8)**|内部ファイバー コンテキスト アドレス。 これは該当する場合に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]簡易プーリング用に構成されています。|  
+|self_address|**varbinary(8)**|内部一貫性ポインター。|  
 |processor_group|**smallint**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> プロセッサ グループ ID。|  
-|pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 階層が必要です、`VIEW DATABASE STATE`データベースの権限です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。  
   
 ## <a name="examples"></a>使用例  
- 起動時に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スレッドを開始して、ワーカー スレッドが関連付けられます。 ただし、拡張ストアド プロシージャなどの外部コンポーネントがでスレッドを開始できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]これらのスレッドの制御できません。 sys.dm_os_threads がリソースを消費する悪意のあるスレッドに関する情報を提供できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセスです。  
+ 起動時に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スレッドを開始して、ワーカー スレッドが関連付けられます。 ただし、拡張ストアド プロシージャなどの外部コンポーネントがでスレッドを開始できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]これらのスレッドの制御できません。 sys.dm_os_threads can provide information about rogue threads that consume resources in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process.  
   
  次のクエリがによって開始されなかったスレッドを実行している、実行に使用される時間と共にのワーカーの検索に使用される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   

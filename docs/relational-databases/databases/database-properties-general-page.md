@@ -16,20 +16,20 @@ f1_keywords:
 - sql13.swb.databaseproperties.segments.f1
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ccea14579d4d4e181e102241831a9217c21fe7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b5239b20134c58cf828b9c35a3bd3802e4b15bf9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-general-page"></a>[データベースのプロパティ] ([全般] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、選択されているデータベースのプロパティを表示または変更できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[最終データベース バックアップ]**  
  データベースが最後にバックアップされた日付を表示します。  
   
@@ -39,16 +39,16 @@ ms.lasthandoff: 11/17/2017
  **名前**  
  データベースの名前が表示されます。  
   
- **[状態]**  
+ **ステータス**  
  データベースの状態を表示します。 詳細については、「 [データベースの状態](../../relational-databases/databases/database-states.md)」を参照してください。  
   
- **所有者**  
+ **[所有者]**  
  データベースの所有者の名前を表示します。 所有者は、 **[ファイル]** ページで変更できます。  
   
  **[作成日]**  
  データベースが作成された日時を表示します。  
   
- **サイズ**  
+ **[サイズ]**  
  データベースのサイズをメガバイト単位で表示します。  
   
  **[使用可能領域]**  

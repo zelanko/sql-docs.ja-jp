@@ -8,26 +8,28 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - Send Mail task [Integration Services]
 - Script task [Integration Services], examples
 - Script task [Integration Services], HTML mail message
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 29b1dd04ab4be364b2569f783fe6c07f2929d925
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b153c58fffdf4ac0833c683555ba25d4bf2737b6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>スクリプト タスクによる HTML メール メッセージの送信
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の SendMail タスクでは、プレーン テキスト形式のメール メッセージのみがサポートされています。 ただし、.NET Framework のスクリプト タスクとメール機能を使用して、HTML メール メッセージを簡単に送信できます。  
@@ -42,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  `HtmlEmailTo`、`HtmlEmailFrom`、および `HtmlEmailSubject` という名前の文字列変数を作成し、これらに適切な値を割り当てて、有効なテスト メッセージを用意します。  
   
-2.  `HtmlEmailBody` という名前の文字列変数を作成し、HTML マークアップの文字列を割り当てます。 例:  
+2.  `HtmlEmailBody` という名前の文字列変数を作成し、HTML マークアップの文字列を割り当てます。 例 :  
   
     ```  
     <html><body><h1>Testing</h1><p>This is a <b>test</b> message.</p></body></html>  
@@ -85,10 +87,10 @@ ms.lasthandoff: 11/20/2017
 ```vb  
 Public Sub Main()  
   
-  Dim htmlMessageTo As String = _  
-    Dts.Variables("HtmlEmailTo").Value.ToString  
   Dim htmlMessageFrom As String = _  
     Dts.Variables("HtmlEmailFrom").Value.ToString  
+  Dim htmlMessageTo As String = _  
+    Dts.Variables("HtmlEmailTo").Value.ToString  
   Dim htmlMessageSubject As String = _  
     Dts.Variables("HtmlEmailSubject").Value.ToString  
   Dim htmlMessageBody As String = _  
@@ -97,7 +99,7 @@ Public Sub Main()
     Dts.Variables("HtmlEmailServer").Value.ToString  
   
   SendMailMessage( _  
-      htmlMessageTo, htmlMessageFrom, _  
+      htmlMessageFrom, htmlMessageTo, _  
       htmlMessageSubject, htmlMessageBody, _  
       True, smtpServer)  
   
@@ -106,7 +108,7 @@ Public Sub Main()
 End Sub  
   
 Private Sub SendMailMessage( _  
-    ByVal SendTo As String, ByVal From As String, _  
+    ByVal From As String, ByVal SendTo As String,  _  
     ByVal Subject As String, ByVal Body As String, _  
     ByVal IsBodyHtml As Boolean, ByVal Server As String)  
   
@@ -114,7 +116,7 @@ Private Sub SendMailMessage( _
   Dim mySmtpClient As SmtpClient  
   
   htmlMessage = New MailMessage( _  
-    SendTo, From, Subject, Body)  
+    From, SendTo, Subject, Body)  
   htmlMessage.IsBodyHtml = IsBodyHtml  
   
   mySmtpClient = New SmtpClient(Server)  
@@ -128,25 +130,25 @@ End Sub
 public void Main()  
         {  
   
-            string htmlMessageTo = Dts.Variables["HtmlEmailTo"].Value.ToString();  
             string htmlMessageFrom = Dts.Variables["HtmlEmailFrom"].Value.ToString();  
+            string htmlMessageTo = Dts.Variables["HtmlEmailTo"].Value.ToString();  
             string htmlMessageSubject = Dts.Variables["HtmlEmailSubject"].Value.ToString();  
             string htmlMessageBody = Dts.Variables["HtmlEmailBody"].Value.ToString();  
             string smtpServer = Dts.Variables["HtmlEmailServer"].Value.ToString();  
   
-            SendMailMessage(htmlMessageTo, htmlMessageFrom, htmlMessageSubject, htmlMessageBody, true, smtpServer);  
+            SendMailMessage(htmlMessageFrom, htmlMessageTo, htmlMessageSubject, htmlMessageBody, true, smtpServer);  
   
             Dts.TaskResult = (int)ScriptResults.Success;  
   
         }  
   
-        private void SendMailMessage(string SendTo, string From, string Subject, string Body, bool IsBodyHtml, string Server)  
+        private void SendMailMessage(string From, string SendTo, string Subject, string Body, bool IsBodyHtml, string Server)  
         {  
   
             MailMessage htmlMessage;  
             SmtpClient mySmtpClient;  
   
-            htmlMessage = new MailMessage(SendTo, From, Subject, Body);  
+            htmlMessage = new MailMessage(From, SendTo, Subject, Body);  
             htmlMessage.IsBodyHtml = IsBodyHtml;  
   
             mySmtpClient = new SmtpClient(Server);  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -22,19 +23,21 @@ f1_keywords:
 - CREATE_BROKER_TSQL
 - BROKER PRIORITY
 - BROKER_PRIORITY_TSQL
-dev_langs: TSQL
-helpviewer_keywords: CREATE BROKER PRIORITY statement
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CREATE BROKER PRIORITY statement
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 256536ee8fc56891b0b957498c7c5bcf4881f235
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 524909a3f12040460950448e77c177f3b1aeef8d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +97,7 @@ FOR CONVERSATION
   
  既定値は ANY です。  
   
- REMOTE_SERVICE_NAME = {'*RemoteServiceName*' |**ANY**}  
+ REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  メッセージ交換の優先度をメッセージ交換のエンドポイントに適用するかどうかを決定するための条件として使用するサービスの名前を指定します。  
   
  *RemoteServiceName*型のリテラルは、 **nvarchar (256)**です。 [!INCLUDE[ssSB](../../includes/sssb-md.md)]一致するように、バイトごとの比較を使用して、 *RemoteServiceName*文字列。 この比較では、大文字と小文字が区別され、現在の照合順序は考慮されません。 現在のインスタンスで、ターゲット サービスができる、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、またはリモート インスタンス、[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。  
@@ -162,7 +165,7 @@ FOR CONVERSATION
   
 -   すべて[!INCLUDE[ssSB](../../includes/sssb-md.md)]データベース内のメッセージ交換の優先度が作成されていない場合、データベースで操作が既定の優先度 5 を割り当てられています。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メッセージ交換の優先度を作成する権限は、既定では db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。 データベースに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

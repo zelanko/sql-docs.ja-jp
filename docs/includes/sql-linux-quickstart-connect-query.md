@@ -107,7 +107,7 @@ Windows で実行し、Linux 上の SQL Server に接続するその他のツー
 - [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
 - [SQL Server Data Tools (SSDT)](../linux/sql-server-linux-develop-use-ssdt.md)
 
-## <a name="next-steps"></a>次の手順
+## <a name="additional-resources"></a>その他のリソース
 
 他のインストール シナリオについては、次のリソースを参照してください。
 
@@ -118,6 +118,21 @@ Windows で実行し、Linux 上の SQL Server に接続するその他のツー
 | [無人インストール](../linux/sql-server-linux-setup.md#unattended) | プロンプトを表示せずにインストールするスクリプトを作成する方法を説明する |
 | [オフライン インストール](../linux/sql-server-linux-setup.md#offline) | オフライン インストール パッケージを手動でダウンロードする方法を説明する |
 
-SQL Server に接続して管理するその他の方法を調べるには、[Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) と [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md) に関するトピックを参照してください。
+接続し、SQL Server を管理するには、その他の方法を調査するには、次のツールについて説明します。
+
+|||
+|---|---|
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Mssql 拡張子を持つ TRANSACT-SQL ステートメントを実行しているクロスプラット フォームの GUI コード エディター。 |
+| [SQL Server の Operations Studio](../sql-operations-studio/index.md) | クロス プラットフォーム GUI データベース管理ユーティリティです。 |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | TRANSACT-SQL コマンドを実行している用のクロスプラット フォーム コマンドライン インターフェイスです。 |
+| [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md) | 接続し、Linux 上の SQL Server インスタンスを管理する Windows ベースの GUI のデータベース管理ユーティリティ。 |
 
 Transact-SQL ステートメントおよびクエリの作成の詳細については、「[Tutorial: Writing Transact-SQL Statements (チュートリアル: TRANSACT-SQL ステートメントの作成)](../t-sql/tutorial-writing-transact-sql-statements.md)」を参照してください。
+
+> [!TIP]
+> よく寄せられる質問に対する回答については、次を参照してください。、 [SQL Server on Linux に関する FAQ](../linux/sql-server-linux-faq.md)です。
+
+## <a name="next-steps"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [For SQL Server on Linux のチュートリアルでは、調査します。](../linux/sql-server-linux-migrate-restore-database.md)

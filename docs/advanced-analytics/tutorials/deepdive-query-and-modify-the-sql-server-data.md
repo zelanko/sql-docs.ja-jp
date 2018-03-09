@@ -7,26 +7,28 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 8c7007a9-9a8f-4dcd-8068-40060d4f6444
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 38273ac15673344ff00714d38ec87386ca5dae64
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 901ae76597dd9a9ab1136a35442cc27b6ea63e61
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>クエリおよび SQL Server のデータ (SQL と R deep dive) の変更
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事の内容を使用する方法について、データ サイエンス Deep Dive のチュートリアルの一部である[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server とします。
 
@@ -133,7 +135,7 @@ ms.lasthandoff: 12/20/2017
     
     *Var 2: 2 つの要素レベルの性別: 男性女性*
     
-    *Var 3: 51 要素レベルの状態: AK AL AR AZ CA しています.VT WA WI WV WY*
+    *Var 3: state   51 factor levels: AK AL AR AZ CA ...VT WA WI WV WY*
     
     *Var 4: カード会員 2 要素のレベル: プリンシパル セカンダリ*
     

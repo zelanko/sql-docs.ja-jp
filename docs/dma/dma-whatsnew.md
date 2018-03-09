@@ -1,33 +1,40 @@
 ---
 title: "データ Migration Assistant (SQL Server) の新機能 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 10/03/2017
+ms.date: 02/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-dma
+ms.technology:
+- sql-dma
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: 
-helpviewer_keywords: Data Migration Assistant, new features
+helpviewer_keywords:
+- Data Migration Assistant, new features
 ms.assetid: 
 caps.latest.revision: 
 author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07d72eb6c4d40c3e61f4292616f9eda99d6d4742
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9b72ea21423b96a1dbd19eb5fb8f0a3b99c59e0d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>データ Migration Assistant の新機能
 
 このトピックでは、各リリースで追加のデータ移行アシスタント (DMA) が一覧表示します。
+
+## <a name="dma-v34"></a>DMA v3.4
+DMA の v3.4 リリースには、次の追加機能が含まれています。
+- Azure SQL データベースへの移行のソースとして SQL Server 2017 をサポートします。
+- 安定性、パフォーマンス、および評価規則の正確性を強化します。
 
 ## <a name="dma-v33"></a>DMA v3.3
 DMA の v3.3 リリースでは、新しいバージョンの Windows と Linux の両方で、SQL Server 2017 を内部設置型 SQL Server インスタンスを移行できるようにします。 Windows と Linux の全体的な移行ワークフローでは、同じ for Linux は、SQL Server 2017 への移行には、いくつかの追加の考慮事項が必要です。
@@ -84,8 +91,8 @@ DMA の v1.0 リリースは、最初のリリースのとなります。
     - 非推奨機能
 
 - データベースのアップグレードから利点を活用できるターゲット SQL Server プラットフォームの新機能の検出。 機能の推奨事項として、発見が説明されているし、それらは、次の領域に分類されます。
-    - [パフォーマンス]
-    - Security
+    - パフォーマンス
+    - セキュリティ
     - ストレージ
 
 -   最新のユーザー エクスペリエンスの評価を実行します。

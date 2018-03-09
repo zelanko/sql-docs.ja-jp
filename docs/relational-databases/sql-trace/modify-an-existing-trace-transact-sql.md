@@ -8,26 +8,28 @@ ms.service:
 ms.component: sql-trace
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - traces [SQL Server], modifying
 - modifying traces
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15ed7f6f2eddbc9f53b2c77375ea6b0f5beb3c29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a35ea0dfbdebb71e2e67c1b8596b4b48741af48f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>既存のトレースの変更 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、ストアド プロシージャを使用して既存のトレースを変更する方法について説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+このトピックでは、ストアド プロシージャを使用して既存のトレースを変更する方法について説明します。  
   
 ### <a name="to-modify-an-existing-trace"></a>既存のトレースを変更するには  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
      **@on** パラメーターを変更する場合は、**@columnid** パラメーターとの相互作用を考慮してください。  
   
-    |ON|列 ID|結果|  
+    |ON|列 ID|[結果]|  
     |--------|---------------|------------|  
     |ON (**1**)|NULL|イベントはオンになります。 すべての列は消去されます。|  
     ||NOT NULL|指定されたイベントに対して列はオンになります。|  

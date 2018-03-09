@@ -8,26 +8,28 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account
 - FDHOST Launcher (MSSQLFDLauncher) [SQL Server]
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dea4f2872a3d60bc49b9cd028a3c19b32f7e3ce7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4f77e69ed4950e71302ef55d161fea96970789ea
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>フルテキスト フィルター デーモン ランチャーのサービス アカウントの設定
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、SQL フルテキスト フィルター デーモン ランチャー サービス (MSSQLFDLauncher) のサービス アカウントを設定または変更する方法について説明します。 SQL Server のセットアップで使われる既定のサービス アカウントは、`NT Service\MSSQLFDLauncher` です。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、SQL フルテキスト フィルター デーモン ランチャー サービス (MSSQLFDLauncher) のサービス アカウントを設定または変更する方法について説明します。 SQL Server のセットアップで使われる既定のサービス アカウントは、`NT Service\MSSQLFDLauncher` です。
   
   
 ## <a name="about-the-sql-full-text-filter-daemon-launcher-service"></a>SQL フルテキスト フィルター デーモン ランチャー サービスについて
@@ -39,7 +41,7 @@ SQL フルテキスト フィルター デーモン ランチャー サービス
   
 1.  **[スタート]** メニューの **[すべてのプログラム]** をポイントし、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] を展開して、**[SQL Server 2016 構成マネージャー]** をクリックします。  
   
-2.  **[SQL Server 構成マネージャー]**で、 **[SQL Server のサービス]**をクリックし、 **[SQL フルテキスト フィルター デーモン ランチャー (***インスタンス名***)]**を右クリックし、 **[プロパティ]**をクリックします。  
+2.  **[SQL Server 構成マネージャー]** で、**[SQL Server のサービス]** をクリックし、**[SQL フルテキスト フィルター デーモン ランチャー (<***インスタンス名***>)]** を右クリックし、**[プロパティ]** をクリックします。  
   
 3.  ダイアログ ボックスの **[ログオン]** タブをクリックし、SQL フルテキスト フィルター デーモン ランチャー サービスが開始するプロセスを実行するアカウントを選択または入力します。  
   

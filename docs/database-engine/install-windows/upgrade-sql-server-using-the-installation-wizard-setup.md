@@ -8,25 +8,29 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: feadacaccd6f2ba025de359de6f581a7e3685550
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: c5f13e2dff76b3dc2b3033d4f68fe62602b245a4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>インストール ウィザードを使用した SQL Server のアップグレード (セットアップ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでは、1 つの機能ツリーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントを最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にインプレース アップグレードできます。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでは、1 つの機能ツリーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントを最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にインプレース アップグレードできます。  
   
 >[!WARNING]  
 >[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアップグレードすると、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は上書きされ、コンピューター上に存在しなくなります。 
@@ -43,7 +47,7 @@ ms.lasthandoff: 11/20/2017
 > * [Analysis Services のアップグレード](../../database-engine/install-windows/upgrade-analysis-services.md)
 > * [Power Pivot for SharePoint のアップグレード](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 セットアップは管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、リモート共有に対する読み取り権限と実行権限を持つ、ローカル管理者のドメイン アカウントを使用する必要があります。  
   
 > [!WARNING]  
@@ -109,7 +113,7 @@ ms.lasthandoff: 11/20/2017
   
      **[インストール済みのインスタンス]**  : セットアップを実行中のコンピューター上にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがグリッドに表示されます。 既定のインスタンスが既にコンピューターにインストールされている場合、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]の名前付きインスタンスをインストールする必要があります。  
   
-13. このトピックの残りの部分のワーク フローは、インストールするように指定した機能に応じて異なります。 選択した機能によっては、表示されないページもあります。  
+13. この記事の残りの部分のワーク フローは、インストールするように指定した機能に応じて異なります。 選択した機能によっては、表示されないページもあります。  
   
 14. [サーバーの構成 - サービス アカウント] ページには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの既定のサービス アカウントが表示されます。 このページで実際に構成するサービスは、アップグレードする機能によって異なります。  
   
@@ -133,7 +137,7 @@ ms.lasthandoff: 11/20/2017
   
 20. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 セットアップ ログ ファイルの詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアップグレード後は、次の作業を実行します。  
   
 -   **サーバーの登録** : アップグレードすると、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのレジストリ設定が削除されます。 アップグレード後、サーバーを再登録する必要があります。  

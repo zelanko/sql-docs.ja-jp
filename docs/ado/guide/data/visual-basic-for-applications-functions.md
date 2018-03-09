@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 835dfeb15a84529baf553ce1daa171d02e8faca7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bdf33a21339147c9e6b24ff35f08fb2b483bb8f1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic アプリケーション関数
 データ シェイプの計算式では、アプリケーションの関数の次の Visual Basic を使用できます。  
@@ -33,11 +35,11 @@ ms.lasthandoff: 12/21/2017
 |||||||  
 |-|-|-|-|-|-|  
 |Abs|Asc|Atn|CBool|CByte|CCur|  
-|CDate|CDbl|Chr|Chrb 関数|ChrW|Chr$|  
+|CDate|CDbl|Chr|ChrB|ChrW|Chr$|  
 |Chrb 関数 $|CInt|CLng|Cos|CSng|CStr|  
-|Cvar|CVDate|CVErr|date|Date$|DateAdd|  
+|Cvar|CVDate|CVErr|日付|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|日|DDB|  
-|[エラー]|Error$|Exp|Fix|[形式]|Format$|  
+|[エラー]|Error$|Exp|Fix|形式|Format$|  
 |FV|Hex|Hex$|Hour|IIF|InStr|  
 |Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Left|  
@@ -45,9 +47,9 @@ ms.lasthandoff: 12/21/2017
 |LTrim$|Mid|Mid$|Minute|MIRR|Month|  
 |[今]|NPer|NPV|Oct|Oct$|Pmt|  
 |PPmt|PV|QBColor|Rate|RGB|Right|  
-|RightB|Right$|RightB $|Rnd|RTrim|RTrim $|  
+|RightB|Right$|RightB $|Rnd|RTrim|RTrim$|  
 |第 2 週|Sgn|Sin|SLN|Space|Space$|  
-|Sqr|Str|Str$|StrComp|StrConv|String|  
+|Sqr|Str|Str$|StrComp|StrConv|文字列|  
 |String$|SYD|Tan|[時刻]|Time$|Timer|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|Weekday|年||  

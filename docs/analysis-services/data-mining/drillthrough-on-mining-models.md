@@ -5,28 +5,27 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7bed3bba2747522da34c16ad97ec8efcdc080c99
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cc94d0226262eb6c40fce83370774e9fed08a8ab
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="drillthrough-on-mining-models"></a>マイニング モデルでのドリルスルー
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*ドリル スルー*モデルのマイニング モデルまたはマイニング構造のいずれかのクエリを実行し、詳細データを取得する機能が公開されていないことを意味します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  *ドリルスルー* とは、マイニング モデルまたはマイニング構造に対してクエリを実行し、モデルで公開されていない詳細データを取得する機能です。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、ケース データへのドリルスルーの 2 つのオプションを提供します。 データの作成に使用されたケースにドリルスルーすることも、マイニング構造のケースにドリルスルーすることもできます。  
   
@@ -64,9 +63,9 @@ ms.lasthandoff: 12/08/2017
   
 |処理手順|リンク|  
 |-----------|-----------|  
-|マイニング モデル ビューアーでドリルスルーを使用する|[モデル ビューアーからのドリルスルーの使用](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
-|ドリルスルーを使用してモデルのケース データを取得する|[マイニング モデルからケース データへのドリルスルー](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
-|既存のマイニング モデルのドリルスルーを有効にする|[マイニング モデルのドリルスルーの有効化](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
+|マイニング モデル ビューアーでドリルスルーを使用する|[モデル ビューアーからのドリルスルーを使用します。](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
+|ドリルスルーを使用してモデルのケース データを取得する|[マイニング モデルからケース データにドリルスルーします。](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
+|既存のマイニング モデルのドリルスルーを有効にする|[マイニング モデルのドリルスルーを有効にします。](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
 |特定のモデルの種類に対するドリルスルー クエリの例|[データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)|  
 |マイニング モデル ウィザードでドリルスルーを有効にする|[[ウィザードの完了] (データ マイニング ウィザード)](http://msdn.microsoft.com/library/6aef1548-35eb-42fd-ae87-63650a79eda1)|  
   

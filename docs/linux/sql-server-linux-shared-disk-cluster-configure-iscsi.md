@@ -3,26 +3,26 @@ title: "フェールオーバー クラスター インスタンス記憶域 iSC
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 9d4ab14772f78370563c6117553ea9e45203a8b9
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>フェールオーバー クラスター インスタンス - iSCSI: Linux 上の SQL Server を構成します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 この記事では、Linux 上のフェールオーバー クラスター インスタンス (FCI) の iSCSI 記憶域を構成する方法について説明します。 
 
@@ -41,7 +41,7 @@ iSCSI では、ネットワークを使用して、サーバーをターゲッ�
 
 このセクションでは、FCI のノードとして使用するサーバー上の iSCSI イニシエーターを構成する方法について説明します。 手順は RHEL および Ubuntu では、動作します。
 
-追加の詳細についてはサポートされている分布の iSCSI イニシエーターでは、次のリンクを参照してください。
+サポートされている分布の iSCSI イニシエーターの詳細については、次のリンクを参照してください。
 - [Red Hat](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
 - [SUSE](http://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
@@ -99,7 +99,7 @@ iSCSI では、ネットワークを使用して、サーバーをターゲッ�
     ```bash
     sudo grep “Attached SCSI” /var/log/messages
     ```
-    ![30 iSCSIattachedDisks][7]
+    ![30-iSCSIattachedDisks][7]
 
 7.  ISCSI ディスク上の物理ボリュームを作成します。
 
@@ -200,7 +200,7 @@ iSCSI では、ネットワークを使用して、サーバーをターゲッ�
     ls /var/opt/mssql/data
     ```
 
-    ![45 CopyMove][8]
+    ![45-CopyMove][8]
  
    *    型`exit`root ユーザーに戻る。
 
@@ -210,7 +210,7 @@ iSCSI では、ネットワークを使用して、サーバーをターゲッ�
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > ボリューム グループの名前を指定し、 \<LogicalVolumeName > が作成された論理ボリュームの名前を指定します。 次の構文の例では、上に作成された論理ボリュームとボリューム グループと一致します。
+    \<VolumeGroupName > ボリューム グループの名前を指定し、 \<LogicalVolumeName > が作成された論理ボリュームの名前を指定します。 次の構文の例では、前のコマンドからの論理ボリュームとボリューム グループと一致します。
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
@@ -278,7 +278,7 @@ iSCSI では、ネットワークを使用して、サーバーをターゲッ�
     mkdir <FolderName>
     ```
 
-    \<フォルダー名 > フォルダーの名前を指定します。 フォルダーの完全なパスを指定する必要は、適切な場所ではない場合。 次の例では、/var/opt/mssql/userdata をという名前のフォルダーを作成します。
+    \<フォルダー名 > フォルダーの名前を指定します。 フォルダーの完全なパスを指定する必要があります、適切な場所ではない場合。 次の例では、/var/opt/mssql/userdata をという名前のフォルダーを作成します。
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -324,7 +324,7 @@ iSCSI では、ネットワークを使用して、サーバーをターゲッ�
 
    *    テストするには、そのフォルダーにデータベースを作成します。 次に示す例では、sqlcmd を使用してデータベースを作成、コンテキストを切り替える、ファイルが、OS レベルが存在し、一時的な場所を削除します。 SSMS を使用することができます。
   
-    ![50 ExampleCreateSSMS][9]
+    ![50-ExampleCreateSSMS][9]
 
    *    共有のマウントを解除します。 
 
@@ -358,7 +358,7 @@ iSCSI では、ネットワークを使用して、サーバーをターゲッ�
 
     \<ListOfVGsNotUsedByPacemaker > は、FCI では使用されません手順 20 の出力からボリューム グループの一覧を示します。 コンマを引用符で囲まれたを分けてそれぞれの 1 つずつを配置します。 例を次に示します。
 
-    ![55 ListOfVGs][11]
+    ![55-ListOfVGs][11]
  
  
 17. Linux の開始時に、ファイル システムをマウントします。 ペースのみが iSCSI ディスクをマウントできることを確認するには、ルート ファイル システムのイメージを再構築します。 
@@ -397,8 +397,8 @@ FCI を構成する準備が整いました。
 
 |Distribution |トピック 
 |----- |-----
-|**HA アドオンで、Red Hat Enterprise Linux** |[構成](sql-server-linux-shared-disk-cluster-configure.md)<br/>[操作](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-|**HA アドオンに SUSE Linux Enterprise Server** |[構成](sql-server-linux-shared-disk-cluster-sles-configure.md)
+|**HA アドオンで、Red Hat Enterprise Linux** |[構成します。](sql-server-linux-shared-disk-cluster-configure.md)<br/>[操作](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+|**HA アドオンに SUSE Linux Enterprise Server** |[構成します。](sql-server-linux-shared-disk-cluster-sles-configure.md)
 
 ## <a name="next-steps"></a>次の手順
 

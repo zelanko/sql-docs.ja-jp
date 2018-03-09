@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_log_TSQL
 - syscollector_execution_log
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector view
 - syscollector_execution_log view
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df1ddcc6306078075821af7cfd1a1176a2e31861
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5beb35aa769b1c4755481a187c765fa62068ae2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syscollectorexecutionlog-transact-sql"></a>syscollector_execution_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +48,13 @@ ms.lasthandoff: 11/17/2017
 |finish_time|**datetime**|完了済みのパッケージおよびコレクション セットについて、実行が完了した日時を表します。 NULL 値が許可されます。|  
 |runtime_execution_mode|**smallint**|コレクション セットのアクティビティが、データの収集かデータのアップロードかを示します。 NULL 値が許可されます。<br /><br /> 値は次のとおりです。<br /><br /> 0 = コレクション<br /><br /> 1 = アップロード|  
 |ステータス|**smallint**|コレクション セットまたはコレクション パッケージの現在のステータスを示します。 NULL 値は許可されません。<br /><br /> 値は次のとおりです。<br /><br /> 0 = 実行中<br /><br /> 1 = 終了<br /><br /> 2 = 失敗|  
-|演算子 (operator)|**nvarchar (128)**|コレクション セットまたはコレクション パッケージをだれが開始したかを示します。 NULL 値は許可されません。|  
+|演算子 (operator)|**nvarchar(128)**|コレクション セットまたはコレクション パッケージをだれが開始したかを示します。 NULL 値は許可されません。|  
 |package_id|**uniqueidentifier**|このログを生成したコレクション セットまたはコレクション パッケージを識別します。 NULL 値が許可されます。|  
 |package_name|**nvarchar (4000)**|このログを生成したパッケージの名前です。 NULL 値が許可されます。|  
 |package_execution_id|**uniqueidentifier**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] ログ テーブルへのリンクを提供します。 NULL 値が許可されます。|  
-|failure_message|**nvarchar (2048)**|コレクション セットまたはコレクション パッケージでエラーが発生した場合に、そのコンポーネントの最近のエラー メッセージを表します。 NULL 値が許可されます。 詳細なエラー情報を取得するを使用して、 [fn_syscollector_get_execution_details (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)関数。|  
+|failure_message|**nvarchar(2048)**|コレクション セットまたはコレクション パッケージでエラーが発生した場合に、そのコンポーネントの最近のエラー メッセージを表します。 NULL 値が許可されます。 詳細なエラー情報を取得するを使用して、 [fn_syscollector_get_execution_details (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)関数。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  dc_operator に対する SELECT 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

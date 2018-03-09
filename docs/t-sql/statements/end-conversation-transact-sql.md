@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - END CONVERSATION
 - END_DIALOG_TSQL
 - END_CONVERSATION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - errors [Service Broker], conversations
 - dialogs [Service Broker], ending
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - conversations [Service Broker], ending
 - ending conversations [SQL Server]
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5f7f2dd42fd3d34073bbdfc223af339f2e867539
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d68dcecf84cb24b0c06876d40742c8f5ffe8124d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,10 +60,10 @@ END CONVERSATION conversation_handle
  *conversation_handle*  
  終了するメッセージ交換のメッセージ交換ハンドルを指定します。  
   
- エラー =*failure_code*  
+ WITH ERROR =*failure_code*  
  エラー コードを指定します。 *Failure_code*の種類は**int**です。このエラー コードはユーザー定義のコードで、メッセージ交換の相手側に送信するエラー メッセージの一部となります。 このエラー コードは 0 よりも大きい値にする必要があります。  
   
- 説明 =*failure_text*  
+ DESCRIPTION =*failure_text*  
  エラー メッセージです。 *Failure_text*の種類は**nvarchar (3000)**です。 このエラー テキストはユーザー定義のテキストで、メッセージ交換の相手側に送信するエラー メッセージの一部となります。  
   
  WITH CLEANUP  
@@ -88,7 +90,7 @@ END CONVERSATION conversation_handle
   
  END CONVERSATION は、ユーザー定義の関数では無効です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  アクティブなメッセージ交換を終了するには、そのメッセージ交換の所有者であるか、sysadmin 固定サーバー ロールまたは db_owner 固定データベース ロールのメンバーであることが必要です。  
   
  sysadmin 固定サーバー ロールまたは db_owner 固定データベース ロールのメンバーであれば、WITH CLEANUP を使用して、既に完了したメッセージ交換のメタデータを削除できます。  

@@ -8,11 +8,14 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: sql13.TSQLExpandPortal.f1
-dev_langs: TSQL
+f1_keywords:
+- sql13.TSQLExpandPortal.f1
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - conventions [SQL Server]
 - Applies to section in Transact-SQL topics
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 12291b23c9204aaf030c3a8f093fe05bf4712721
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7c4eb67190b5123296fbcffb3fac3f09e9ec2000
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 構文表記規則 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,14 +51,14 @@ ms.lasthandoff: 11/18/2017
 |大文字|[!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードを示します。|  
 |*斜体*|ユーザーが指定する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文のパラメーターを示します。|  
 |**太字**|記載されているとおりに入力する必要があるデータベース名、テーブル名、列名、インデックス名、ストアド プロシージャ、ユーティリティ、データ型名、テキストを示します。|  
-|**下線**|下線が引かれている値を含む句がステートメントから省略されているときに適用される既定値を示します。|  
+|**underline**|下線が引かれている値を含む句がステートメントから省略されているときに適用される既定値を示します。|  
 |(& a) #124 です。(縦棒)|角かっこ、または中かっこで囲まれた構文項目を区切ります。 使用できる項目は 1 つだけです。|  
 |`[ ]` (角かっこ)|省略可能な構文項目。 角かっこは入力しません。|  
 |{} (中かっこ)|必須の構文項目を示します。 中かっこは入力しません。|  
-|[**,**...*n*]|先行する項目を *n* 回繰り返せることを示します。 項目はコンマで区切ります。|  
-|[...*n*]|先行する項目を *n* 回繰り返せることを示します。 項目は空白で区切ります。|  
+|[**,**...*n*]|先行する項目が繰り返せることを示します *n* 回数。 項目はコンマで区切ります。|  
+|[...*n*]|先行する項目が繰り返せることを示します *n* 回数。 項目は空白で区切ります。|  
 |;|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのターミネータを示します。セミコロンは、このバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のほとんどのステートメントでは必須ではありませんが、将来のバージョンでは必須となる予定です。|  
-|\<ラベル >:: =|構文のブロックの名前を示します。 この表記規則は、1 つのステートメント内の複数の箇所で使用できる長い構文の一部、または構文の 1 単位について、グループ化してラベルを付ける際に使用します。 構文のブロックを使用できる箇所は山かっこで囲まれたラベル:\<ラベル >。<br /><br /> セットは、式のコレクションがたとえば\<セットをグループ化 >; 一覧は、セットのコレクションなどと\<複合要素一覧 >。|  
+|\<label> ::=|構文のブロックの名前を示します。 この表記規則は、1 つのステートメント内の複数の箇所で使用できる長い構文の一部、または構文の 1 単位について、グループ化してラベルを付ける際に使用します。 構文のブロックを使用できる箇所は山かっこで囲まれたラベル:\<ラベル >。<br /><br /> セットは、式のコレクションがたとえば\<セットをグループ化 >; 一覧は、セットのコレクションなどと\<複合要素一覧 >。|  
   
 ## <a name="multipart-names"></a>マルチパート名  
  特に指定のない限り、データベース オブジェクトの名前に対するすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 参照は、次のような 4 部構成の名前の形式をとります。  
@@ -66,9 +69,9 @@ ms.lasthandoff: 11/18/2017
   
  | *schema_name***.***object_name*  
   
- *|object_name*  
+ *| object_name*  
   
- *サーバー名*  
+ *server_name*  
  リンク サーバー名またはリモート サーバー名を示します。  
   
  *database_name*  
@@ -89,13 +92,13 @@ ms.lasthandoff: 11/18/2017
   
 |オブジェクト参照形式|Description|  
 |-----------------------------|-----------------|  
-|*サーバー* **です。** *データベース***です。** *スキーマ***です。** *オブジェクト*|4 部構成の名前です。|  
-|*サーバー* **です。** *データベース* **.** *オブジェクト*|スキーマ名を省略しています。|  
-|*サーバー* **.** *スキーマ***です。** *オブジェクト*|データベース名を省略しています。|  
-|*サーバー* **しています.** *オブジェクト*|データベースとスキーマ名を省略しています。|  
-|*データベース***です。** *スキーマ***です。** *オブジェクト*|サーバー名を省略しています。|  
-|*データベース* **.** *オブジェクト*|サーバーとスキーマ名を省略しています。|  
-|*スキーマ***です。** *オブジェクト*|サーバーとデータベース名を省略しています。|  
+|*server* **.** *database* **.** *schema* **.** *オブジェクト*|4 部構成の名前です。|  
+|*server* **.** *database* **..** *オブジェクト*|スキーマ名を省略しています。|  
+|*server* **..** *schema* **.** *オブジェクト*|データベース名を省略しています。|  
+|*server* **...** *object*|データベースとスキーマ名を省略しています。|  
+|*database* **.** *schema* **.** *オブジェクト*|サーバー名を省略しています。|  
+|*database* **..** *オブジェクト*|サーバーとスキーマ名を省略しています。|  
+|*schema* **.** *オブジェクト*|サーバーとデータベース名を省略しています。|  
 |*オブジェクト*|サーバー、データベース、およびスキーマ名を省略しています。|  
   
 ## <a name="code-example-conventions"></a>コード例の規則  
@@ -118,9 +121,9 @@ ms.lasthandoff: 11/18/2017
  多くのコード例は、文字で Unicode 文字列定数をプレフィックス**N**です。なし、 **N**プレフィックスは、文字列は、データベースの既定のコード ページに変換されます。 この既定のコード ページでは、一部の文字が認識されない場合があります。  
   
 ## <a name="applies-to-references"></a>"適用対象" リファレンス  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]参照に関連するトピックが含まれています[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、および[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]です。 各トピックの上部近くには、トピックのサブジェクトをサポートする製品を示すセクションがあります。 製品が省略されている場合は、トピックで説明されている機能は、その製品では使用できません。 たとえば、可用性グループで導入された[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]です。 **可用性グループの作成**トピックに適用されることを示します**SQL Server (SQL Server 2012 ~ 現行バージョン)**には適用されないため[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]リファレンスに関連する記事の内容は[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、および[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]です。 各記事の上部にある、記事の主題をサポートする製品を示すセクションです。 製品を省略すると、この記事で説明されている機能はその製品で使用できません。 たとえば、可用性グループで導入された[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]です。 **CREATE AVAILABILITY GROUP**記事に適用されることを示します**SQL Server (SQL Server 2012 ~ 現行バージョン)**には適用されないため[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- 場合によっては、トピックの一般的なサブジェクトは製品に使用できますが、すべての引数はサポートされていません。 たとえば、包含データベース ユーザーは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入されました。 **CREATE USER**ステートメントは、いずれかで使用できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]製品、ただし、 **WITH PASSWORD**構文は、以前のバージョンでは使用できません。 この場合、追加で**対象**セクションのトピックの本文に適切な引数の説明に挿入されます。  
+ 場合によっては、アーティクルの一般的な主題は製品で使用できますが、すべての引数はサポートされていません。 たとえば、包含データベース ユーザーは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入されました。 **CREATE USER**ステートメントは、いずれかで使用できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]製品、ただし、 **WITH PASSWORD**構文は、以前のバージョンでは使用できません。 この場合、追加で**対象**セクションの記事の本文に適切な引数の説明に挿入されます。  
   
 ## <a name="see-also"></a>参照  
  [TRANSACT-SQL リファレンス &#40;データベース エンジン&#41;](../../t-sql/transact-sql-reference-database-engine.md)  

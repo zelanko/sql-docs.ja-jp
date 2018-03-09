@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d7a5bcfea240af2477b3522f2baa849a6a5a6876
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dc06520b8dcf2fe5686d041e1c48e50cf5555b79
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>動作の変更と ODBC 3.x ドライバー
 環境属性 ODBC 2 が発生する必要があるかどうかがドライバーにまたを示します。*x*動作または ODBC 3*.x*動作します。 また環境属性を設定する方法は、アプリケーションによって異なります。 ODBC 3*.x*アプリケーションを呼び出す必要があります**SQLSetEnvAttr**を呼び出すことが後に、この属性を設定する**SQLAllocHandle**環境ハンドルの割り当てに呼び出しの前に、**SQLAllocHandle**接続ハンドルを割り当てられません。 ドライバー マネージャーを含む SQLSTATE HY010 を返しますこれに失敗した場合 (関数のシーケンス エラー) 後者の呼び出しに**SQLAllocHandle**です。  

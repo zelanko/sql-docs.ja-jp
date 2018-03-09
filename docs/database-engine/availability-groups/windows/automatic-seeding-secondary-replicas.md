@@ -10,20 +10,22 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Automatic seeding [SQL Server], secondary replica
+helpviewer_keywords:
+- Automatic seeding [SQL Server], secondary replica
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2dc72a3874e9742b3bf73d0bdaf2b3d0e00f33c4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 60bb5a01191de574b7fcac4eb11d73190c94aac8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>セカンダリ レプリカの自動シード処理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +37,8 @@ SQL Server 2012 および 2014 では、SQL Server Always On 可用性グルー�
 自動シード処理を使用する場合の考慮事項は次のとおりです。
 
 * [プライマリ レプリカへのパフォーマンスおよびトランザクション ログの影響](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [ディスク レイアウト](#disk-layout)
-* [セキュリティ](#security)
+* [ディスク レイアウト](#disklayout)
+* [Security](#security)
 
 
 ### <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>プライマリ レプリカへのパフォーマンスおよびトランザクション ログの影響
@@ -85,7 +87,7 @@ SQL Server 2017 では、可用性グループに参加するすべてのレプ�
 
 SQL Server 2016 以前の動作に戻すには、トレース フラグ 9571 を有効にします。 トレース フラグを有効にする方法については、「[DBCC TRACEON (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)」を参照してください。
 
-### <a name="security"></a>セキュリティ
+### <a name="security"></a>Security
 
 セキュリティのアクセス許可は、初期化されるレプリカの種類によって異なります。
 
@@ -155,9 +157,6 @@ ALTER AVAILABILITY GROUP [<AGName>]
 
 ![SQL Server ログ][2]
 
-
-
-
 ## <a name="combine-backup-and-restore-with-automatic-seeding"></a>バックアップおよび復元を自動シード処理と組み合わせる
 
 従来のバックアップ、コピー、および復元を自動シード処理と組み合わせることができます。 その場合は、まず、すべての使用可能なトランザクション ログを含め、セカンダリ レプリカでデータベースを復元します。 次に、ログ末尾のバックアップの復元の場合と同じように (「[ログ末尾のバックアップ (SQL Server)](../../../relational-databases/backup-restore/tail-log-backups-sql-server.md)」を参照)、セカンダリ レプリカのデータベースを "キャッチアップ" するための可用性グループを作成する際に自動シード処理を有効にします。
@@ -169,7 +168,7 @@ Transact-SQL または SQL Server Management Studio (SSMS、バージョン 17 �
 
 ## <a name="change-the-seeding-mode-of-a-replica"></a>レプリカのシード処理モードを変更する
 
-可用性グループの作成後にレプリカのシード処理モードを変更できます。したがって、自動シード処理を有効または無効にすることができます。 作成後に自動シード処理を有効にすれば、バックアップ、コピー、および復元で作成する場合と同じように、自動シード処理を使用して可用性グループにデータベースを追加できます。 例:
+可用性グループの作成後にレプリカのシード処理モードを変更できます。したがって、自動シード処理を有効または無効にすることができます。 作成後に自動シード処理を有効にすれば、バックアップ、コピー、および復元で作成する場合と同じように、自動シード処理を使用して可用性グループにデータベースを追加できます。 例 :
 
 ```sql
 ALTER AVAILABILITY GROUP [AGName]
@@ -249,7 +248,7 @@ GO
 
 次の表に、自動シード処理に関連する拡張イベントを示します。
 
-|名前|説明|
+|[オブジェクト名]|Description|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|シード処理要求メッセージ。|
 |hadr_physical_seeding_backup_state_change|物理シード処理のバックアップ側の状態変更。|

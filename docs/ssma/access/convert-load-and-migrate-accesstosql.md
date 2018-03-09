@@ -1,7 +1,7 @@
 ---
 title: "変換、読み込み、および移行 (AccessToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 89e343044e82f00a2d5d7978c2571bd32fa6d09b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 44683ae2b0650a86c04c5a184417f17e5b3acbef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>変換、読み込み、および (AccessToSQL) の移行
 **変換、読み込み、および移行** ダイアログ ボックスが、変換、読み込み、および移行ボタンまたは移行ウィザードを使用する場合に、移行の状態を報告します。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 **選択したオブジェクトのデータを移行**ページのセクションにも含まれています、**レポート**ボタンをクリックします。 データ移行レポートを表示するには、このボタンをクリックすることができます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **レポート**  
 関連付けられている変換または移行レポートを表示します。  
   

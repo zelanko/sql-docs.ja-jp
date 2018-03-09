@@ -1,36 +1,39 @@
 ---
 title: "多次元モデリング (Adventure Works チュートリアル) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 02/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - tutorials [Analysis Services]
 - Analysis Services, tutorials
 ms.assetid: db55e226-601a-4026-8651-573195555a59
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e19abcab353fd70636f552348d2488738ba203a7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: af9371e71223eedc44b7b7ec8cbeb3ab20423da8
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>多次元モデリング (Adventure Works チュートリアル)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]ようこそ、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]チュートリアルです。 このチュートリアルでは、架空の会社 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] の例を使用しながら、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] プロジェクトの開発と配置を行う方法を説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のチュートリアルへようこそ。 このチュートリアルでは、架空の会社 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] の例を使用しながら、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] プロジェクトの開発と配置を行う方法を説明します。  
   
-## <a name="what-you-will-learn"></a>学習する内容  
+## <a name="what-you-learn"></a>学習内容  
 このチュートリアルでは、次の内容を学習します。  
   
 -   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]プロジェクトにおいて、データ ソース、データ ソース ビュー、ディメンション、属性、属性リレーションシップ、階層、およびキューブを定義する方法  
@@ -50,26 +53,26 @@ ms.lasthandoff: 12/08/2017
   
 -   作業者が、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] コンピューターの Administrators ローカル グループのメンバーであるか、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスのサーバー管理ロールのメンバーである。  
   
--   作業者が、 **AdventureWorksDW2012** サンプル データベースでの読み取り権限を持っている。 このサンプル データベースは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] リリースで有効です。  
+-   アクセス許可の読み取りが必要、 **AdventureWorksDW**サンプル データベース。 このサンプル データベースは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] リリースで有効です。  
   
 ## <a name="lessons"></a>レッスン  
 このチュートリアルには次のレッスンが含まれています。  
   
 |レッスン|推定所要時間|  
 |----------|------------------------------|  
-|[レッスン 1 : Analysis Services プロジェクト内でのデータ ソース ビューの定義](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 分|  
-|[レッスン 2 : キューブの定義と配置](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)|30 分|  
-|[レッスン 3 : メジャー、属性、および階層の修正](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 分|  
-|[レッスン 4 : 高度な属性およびディメンションのプロパティの定義](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 分|  
-|[レッスン 5 : ディメンションおよびメジャー グループ間のリレーションシップの定義](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 分|  
-|[レッスン 6 : 計算の定義](../analysis-services/lesson-6-defining-calculations.md)|45 分|  
-|[レッスン 7: 主要業績評価指標 (KPI) の定義](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)|30 分|  
-|[レッスン 8 : アクションの定義](../analysis-services/lesson-8-defining-actions.md)|30 分|  
-|[レッスン 9 : パースペクティブと翻訳の定義](../analysis-services/lesson-9-defining-perspectives-and-translations.md)|30 分|  
-|[レッスン 10 : 管理ロールの定義](../analysis-services/lesson-10-defining-administrative-roles.md)|15 分|  
+|[レッスン 1: 分析結果内のデータ ソース ビューを定義するサービス プロジェクト](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 分|  
+|[レッスン 2: 定義して、キューブの展開](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)|30 分|  
+|[レッスン 3: メジャー、属性および階層を変更する](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 分|  
+|[レッスン 4: 高度な属性およびディメンションのプロパティを定義します。](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 分|  
+|[レッスン 5: ディメンションとメジャー グループ間のリレーションシップを定義します。](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 分|  
+|[レッスン 6: 計算の定義](../analysis-services/lesson-6-defining-calculations.md)|45 分|  
+|[レッスン 7: 主要業績評価指標を定義する &#40;です。Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)|30 分|  
+|[レッスン 8: アクションの定義](../analysis-services/lesson-8-defining-actions.md)|30 分|  
+|[レッスン 9: Defining Perspectives and Translations](../analysis-services/lesson-9-defining-perspectives-and-translations.md)|30 分|  
+|[レッスン 10: 管理ロールの定義](../analysis-services/lesson-10-defining-administrative-roles.md)|15 分|  
   
 > [!NOTE]  
-> このチュートリアルで作成するキューブ データベースは、CodePlex サイトでダウンロードできる Adventure Works サンプル データベースの一部である [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多次元モデル プロジェクトの簡易バージョンです。 Adventure Works 多次元データベースのチュートリアル バージョンは、すぐに習得することが望まれる特定のスキルを中心にして簡易化されています。 チュートリアルの終了後は、自分で多次元モデル プロジェクトを用意してさまざまな操作を行うと、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多次元モデリングの理解が深まります。  
+> このチュートリアルで作成するキューブ データベースの簡易バージョンでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] GitHub でダウンロードできる Adventure Works サンプル データベースの一部である多次元モデル プロジェクト。 Adventure Works 多次元データベースのチュートリアル バージョンは、すぐに習得することが望まれる特定のスキルを中心にして簡易化されています。 チュートリアルの終了後は、自分で多次元モデル プロジェクトを用意してさまざまな操作を行うと、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多次元モデリングの理解が深まります。  
   
 ## <a name="next-step"></a>次の手順  
 チュートリアルを開始するには、最初のレッスン「 [レッスン 1: Analysis Services プロジェクト内でのデータ ソース ビューの定義](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)」に進んでください。  

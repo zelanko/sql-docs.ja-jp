@@ -8,32 +8,35 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_certify_removable_TSQL
 - sp_certify_removable
-dev_langs: TSQL
-helpviewer_keywords: sp_certify_removable
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab84edebdbc4a8775e9ce4a50e3236b1377b3932
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4ca484db8104c1c1e817d08be0cf2a72ada76822
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   リムーバブル メディア上でデータベースが配布用に正しく構成されているかどうか確認し、問題があればユーザーにレポートします。  
   
-> **重要!!** [!含める[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md)代わりにします。  
+> **重要!!** [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) instead.  
   
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -47,10 +50,10 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@dbname=**] **'***dbname***'**  
+ [ **@dbname=**] **'***dbname***'**  
  確認するデータベースを指定します。 *dbname*は**sysname**です。  
   
- [  **@autofix=**] **'auto'**  
+ [ **@autofix=**] **'auto'**  
  データベースとすべてのデータベース オブジェクトの所有権をシステム管理者に与え、ユーザー作成のデータベース ユーザーと既定値以外の権限を削除します。 *自動*は**nvarchar (4)**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -83,9 +86,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   実行するだけで**sp_certify_removable**で、**自動**値。  
   
- このストアド プロシージャでは、ユーザーとユーザーの権限だけがチェックされます。 データベースにはグループを追加でき、そのグループに権限を与えることができます。 詳細については、「[GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)」を参照してください。  
+ このストアド プロシージャでは、ユーザーとユーザーの権限だけがチェックされます。 データベースにはグループを追加でき、そのグループに権限を与えることができます。 詳細については、「 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)と共に使用できるように構成する方法について説明します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  実行のアクセス許可がのメンバーに限定する、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  

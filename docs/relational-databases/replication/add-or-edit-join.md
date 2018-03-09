@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.addeditjoin.f1
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09a75529623523ea12d51263ef6fede558840410
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d9aece9102787b048d9a46f32a17013ae057a9da
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-or-edit-join"></a>結合の追加と編集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[結合の追加]** ダイアログ ボックスおよび **[結合の編集]** ダイアログ ボックスでは、マージ パブリケーションに使用する結合フィルターの追加と編集を行えます。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  結合フィルターに使用できるテーブルの数に制限はありませんが、多数のテーブルをフィルターに使用すると、マージ処理中のパフォーマンスに影響する場合があります。 テーブルが 5 つ以上の結合フィルターを生成する場合は、小さなテーブル、変更されないテーブル、プライマリ参照テーブルはフィルター選択しないという別の解決策を検討してください。 サブスクライバーの間で分割する必要があるテーブル間にのみ、結合フィルターを使用してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  このダイアログ ボックスでは、3 つの手順で 2 つのテーブル間の結合フィルターを作成します。 結合フィルターを複数作成するには、このダイアログ ボックスの手順を複数回繰り返す必要があります。  
   
 1.  **[フィルター選択されたテーブルを確認し、結合テーブルを選択します]**  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/17/2017
         > [!CAUTION]  
         >  このオプションを選択すると、結合フィルターにおける子テーブルと親テーブルのリレーションシップが一対一または一対多となるように指定されます。 親テーブル内の結合する列に一意性を保証する制約がある場合にのみ、このオプションを選択してください。 このオプションを適切に設定しなかった場合、データを収束できない可能性があります。  
   
-    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ。 既定で、マージ レプリケーションでは同期中に行ごとに変化が処理されます。 関連する変更をまとめて処理するには、 **[論理レコード : フィルター選択されたテーブルと結合テーブルの関連する変更を同期時にトランザクションとして扱う]**を選択します。 このオプションは、論理レコードを使用するために必要なアーティクルとパブリケーションの要件が満たされている場合にのみ使用できます。 詳細については、「[論理レコードによる関連行への変更のグループ化](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」の「Considerations for Using Logical Records」 (論理レコードの使用についての注意点) を参照してください。  
+    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 既定で、マージ レプリケーションでは同期中に行ごとに変化が処理されます。 関連する変更をまとめて処理するには、 **[論理レコード : フィルター選択されたテーブルと結合テーブルの関連する変更を同期時にトランザクションとして扱う]**を選択します。 このオプションは、論理レコードを使用するために必要なアーティクルとパブリケーションの要件が満たされている場合にのみ使用できます。 詳細については、「[論理レコードによる関連行への変更のグループ化](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」の「Considerations for Using Logical Records」 (論理レコードの使用についての注意点) を参照してください。  
   
  フィルターを追加または編集した後に、 **[OK]** をクリックして変更を保存し、ダイアログ ボックスを閉じます。 指定したフィルターは、SELECT 句のテーブルに対して解析され、実行されます。 フィルター ステートメントに構文エラーなどの問題がある場合には通知され、フィルター ステートメントを編集することができます。  
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 735811c38ce6073e9dee4dd5b35cf18645a74a3a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a0acf3ce891459589445e28b73ef762e3a82da8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-definition-language-ssrs"></a>レポート定義言語 (SSRS)
   レポート定義言語 (RDL) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート定義の XML 表現です。 レポート定義には、レポートのデータ取得とレイアウトの情報が含まれます。 RDL は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用に作成された XML 文法に準拠する XML 要素で構成されます。 レポート定義ファイル内のコード アセンブリにアクセスすることによって、レポート アイテムの値、スタイル、および書式設定を制御するために独自のカスタム機能を追加できます。  
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/05/2017
 |**言語**|米国英語を表す "en-us" などの言語文化コードを含むテキスト値を持つプロパティです。 値は、特定の言語か、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]で既定の言語が定義されたニュートラル言語である必要があります。|  
 |**名前**|文字列テキストの値を持つプロパティです。 名前は、アイテムの名前空間内で一意である必要があります。 指定しない場合、名前を持つ最も内側のオブジェクトが、アイテムの名前空間となります。|  
 |**NormalizedString**|正規化された文字列テキストの値を持つプロパティです。|  
-|**サイズ**|サイズ要素には、数値が含まれている必要があります (小数点としてピリオドを使用)。 数値の後には、cm、mm、in、pt、pc など、CSS 長さ単位の指定子を入力する必要があります。 数値と指定子の間のスペースは省略可能です。 サイズ指定子の詳細については、「 [CSS の長さ単位リファレンス](http://go.microsoft.com/fwlink/?LinkId=9257)」を参照してください。<br /><br /> RDL では、 **Size** の最大値は 160 インチで、 最小サイズは 0 インチです。|  
+|**[サイズ]**|サイズ要素には、数値が含まれている必要があります (小数点としてピリオドを使用)。 数値の後には、cm、mm、in、pt、pc など、CSS 長さ単位の指定子を入力する必要があります。 数値と指定子の間のスペースは省略可能です。 サイズ指定子の詳細については、「 [CSS の長さ単位リファレンス](http://go.microsoft.com/fwlink/?LinkId=9257)」を参照してください。<br /><br /> RDL では、 **Size** の最大値は 160 インチで、 最小サイズは 0 インチです。|  
 |**String**|文字列テキストの値を持つプロパティです。|  
 |**UnsignedInt**|符号なし整数 (uint32) 値を持つプロパティです。|  
 |**Variant**|任意の単純な XML 型を持つプロパティです。|  
@@ -88,10 +86,10 @@ ms.lasthandoff: 12/05/2017
   
 |**CLR 型**|**対応するデータ型**|  
 |-----------------------|---------------------------------|  
-|Boolean|Boolean|  
+|ブール値|Boolean|  
 |DateTime、DateTimeOffset|DateTime|  
 |Int16、Int32、UInt16、Byte、SByte|Integer|  
-|Single、Double|Float|  
+|Single、Double|float|  
 |String、Char、GUID、Timespan|String|  
   
 ## <a name="see-also"></a>参照  

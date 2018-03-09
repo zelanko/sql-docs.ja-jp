@@ -8,37 +8,28 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 98c99d91fcbd0452f0873c32e2ef6f4fbe7d356d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 10f572b6bb4dc81e2fb2ad87af058b3a114bd711
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>チェック リスト: PowerShell を使用して PowerPivot for SharePoint を確認する
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]いいえ[!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]インストール操作や復旧操作が信頼性の高い検証テスト合格、サービスのことを確認することがなく完了し、データが操作可能です。 この記事では、Windows PowerShell を使用してこのテストの手順を実行する方法について説明します。 各手順は個別のセクションで説明されています。これにより、特定のタスクを直接参照することもできます。 たとえば、メンテナンスやバックアップでサービス アプリケーションとコンテンツ データベースの名前の確認をスケジュールする必要がある場合は、このトピックの「 [データベース](#bkmk_databases) 」セクションのスクリプトを実行し、これらの名前を確認することができます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] のインストール操作や復旧操作を完了するには、信頼性の高い検証テストに合格する必要があります。このテストでは、サービスとデータが操作可能であるかどうかが確認されます。 この記事では、Windows PowerShell を使用してこのテストの手順を実行する方法について説明します。 各手順は個別のセクションで説明されています。これにより、特定のタスクを直接参照することもできます。 たとえば、メンテナンスやバックアップでサービス アプリケーションとコンテンツ データベースの名前の確認をスケジュールする必要がある場合は、このトピックの「 [データベース](#bkmk_databases) 」セクションのスクリプトを実行し、これらの名前を確認することができます。  
   
-|||  
-|-|-|  
-|![PowerShell 関連コンテンツ](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")|完全な PowerShell スクリプトは、トピックの最後に記載されています。 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] の完全な配置を監査するためのカスタム スクリプトを構築するには、完全なスクリプトをひな形として使用します。|  
+![PowerShell 関連コンテンツ](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")完全な PowerShell スクリプトは、トピックの最後に記載されています。 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] の完全な配置を監査するためのカスタム スクリプトを構築するには、完全なスクリプトをひな形として使用します。
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
-  
- **このトピックについて**: 次の目次に含まれている箇条書きの行頭文字が付いた項目は、ダイアグラムの各エリアに対応しています。 ダイアグラムでは、次を説明します。  
-  
-|||  
-|-|-|  
-|[PowerShell 環境を準備する](#bkmk_prerequisites)<br /><br /> [現象と推奨される操作](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services の Windows サービス](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService と PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Power Pivot サービス アプリケーションとプロキシ](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [データベース](#bkmk_databases)<br /><br /> [SharePoint 機能](#bkmk_features)<br /><br /> [タイマー ジョブ](#bkmk_timer_jobs)<br /><br /> [正常性ルール](#bkmk_health_rules)<br /><br /> **(E)** [Windows と ULS のログ](#bkmk_logs)<br /><br /> [MSOLAP プロバイダー](#bkmk_msolap)<br /><br /> [ADOMD.Net クライアント ライブラリ](#bkmk_adomd)<br /><br /> [正常性データの収集ルール](#bkmk_health_collection)<br /><br /> [ソリューション](#bkmk_solutions)<br /><br /> [手動による検証手順](#bkmk_manual)<br /><br /> [その他のリソース](#bkmk_more_resources)<br /><br /> [完全な PowerShell スクリプト](#bkmk_full_script)|![powerpivot の powershell による検証](../../../analysis-services/instances/install-windows/media/ssas-powershell-component-verification.png "powerpivot の powershell による検証")|  
   
 ##  <a name="bkmk_prerequisites"></a> PowerShell 環境を準備する  
  このセクションの手順では、PowerShell 環境を準備します。 この手順は必須ではありませんが、スクリプト環境が現在どのように構成されているかに応じて必要になります。  

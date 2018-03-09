@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: fd8afbe7-b57d-4b47-862d-eb7b2489c327
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c5a8d84d4e38cfb444f57392479332f328838aaf
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4e15a18c55318373b41c8a4fabe7377aad5d9f00
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="kpigoal-element-csdlbi"></a>KpiGoal 要素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]KpiGoal 要素は、主要業績評価指標 (KPI) での目標の定義に使用される列への参照を提供します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+KpiGoal 要素は、主要業績評価指標 (KPI) の目標値を定義するために使用されている列への参照を提供します。  
   
  CSDLBI では、KPI はメジャーに基づき、Measure 要素には数式 (ある場合) が含まれていますが、KPI と関連付けられている他のメタデータは [KPI 要素 &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md) の一部として定義されています。  Kpigoal 要素は Kpi 要素のサブタイプです。  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/08/2017
 |PropertyRef|可|KPI の目標値を含む列への参照。<br /><br /> Kpigoal 要素はただ 1 つの PropertyRef 要素を持つ必要があります。<br /><br /> 「[PropertyRef 要素 &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/propertyref-element-csdlbi.md)」を参照してください。|  
   
 ## <a name="example"></a>例  
- **テーブル**  
+ **表形式**  
   
  CSDLBI Version 1.1 における次の例では、AdventureWorks サンプル モデルからの KPI を示します。  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -35,13 +35,13 @@ ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6886fedeb7940ca56b23ea47333e0a87835383a8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 075cce0d10d02d5566f4a370b28466a4f79ab9c0
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="using-xml-data-types"></a>XML データ型の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,13 +91,13 @@ ms.lasthandoff: 11/17/2017
 |データ型|SQL Server の<br /><br /> **XML**|SQL Server の<br /><br /> **非 XML**|サーバーから<br /><br /> **XML**|サーバーから<br /><br /> **非 XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|パススルー<sup>6、7</sup>|エラー<sup>1</sup>|[OK]<sup>11、6</sup>|エラー<sup>8</sup>|  
-|DBTYPE_BYTES|パススルー<sup>6、7</sup>|該当なし<sup>2</sup>|[OK] <sup>11、6</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_WSTR|パススルー<sup>6、10</sup>|該当なし<sup>2</sup>|[OK]<sup>4、6、12</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_BSTR|パススルー<sup>6、10</sup>|該当なし<sup>2</sup>|[OK] <sup>3</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_STR|[OK]<sup>6、9、10</sup>|該当なし<sup>2</sup>|[OK]<sup>5、6、12</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|経由のバイト ストリーム**ISequentialStream**<sup>7</sup>|該当なし<sup>2</sup>|経由のバイト ストリーム**ISequentialStream**<sup>11</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124;です。VT_ARRAY)|パススルー<sup>6、7</sup>|該当なし<sup>2</sup>|なし|該当なし<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|パススルー<sup>6、10</sup>|該当なし<sup>2</sup>|[OK]<sup>3</sup>|該当なし<sup>2</sup>|  
+|DBTYPE_BYTES|パススルー<sup>6、7</sup>|N/A<sup>2</sup>|[OK] <sup>11、6</sup>|N/A <sup>2</sup>|  
+|DBTYPE_WSTR|パススルー<sup>6、10</sup>|N/A <sup>2</sup>|[OK]<sup>4、6、12</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BSTR|パススルー<sup>6、10</sup>|N/A <sup>2</sup>|OK <sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_STR|[OK]<sup>6、9、10</sup>|N/A <sup>2</sup>|[OK]<sup>5、6、12</sup>|N/A <sup>2</sup>|  
+|DBTYPE_IUNKNOWN|経由のバイト ストリーム**ISequentialStream**<sup>7</sup>|N/A <sup>2</sup>|経由のバイト ストリーム**ISequentialStream**<sup>11</sup>|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|パススルー<sup>6、7</sup>|N/A <sup>2</sup>|なし|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|パススルー<sup>6、10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
   
  <sup>1</sup>サーバー以外の型に dbtype_xml 型が指定された場合**icommandwithparameters::setparameterinfo**アクセサーの型が dbtype_xml 型、およびステートメントが実行されたときにエラーが発生した (DB_E_ERRORSOCCURRED、パラメーターの状態は dbstatus_e_badaccessor になります)。 データを、サーバーに送信するそれ以外の場合は、サーバーには、XML からパラメーターのデータ型への暗黙的な変換がないことを示すエラーが返されます。  
   

@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,19 +23,20 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 851262d2141413487aafe45456cba7748440fde6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: eb5669b2043c34cb9a960b92abae6b76df36daea
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="feature-selection-data-mining"></a>機能の選択 (データ マイニング)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*機能の選択*機械学習の重要な部分です。 機能の選択とは、処理や分析のための入力を減らしたり、最も意味のある入力を探したりするプロセスのことです。 関連用語である " *機能エンジニアリング* " (" *機能抽出*" ともいいます) とは、既存のデータから有益な情報や機能を抽出するプロセスのことです。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  "*機能の選択*" は、機械学習の重要な部分です。 機能の選択とは、処理や分析のための入力を減らしたり、最も意味のある入力を探したりするプロセスのことです。 関連用語である " *機能エンジニアリング* " (" *機能抽出*" ともいいます) とは、既存のデータから有益な情報や機能を抽出するプロセスのことです。  
   
 ## <a name="why-do-feature-selection"></a>機能の選択を行う理由  
  機能の選択は優れたモデル作りに不可欠ですが、それにはいくつか理由があります。 その 1 つは、機能の選択によってある程度 " *基数を削減*" し、モデルの作成時に考慮すべき属性の数を制限できる点にあります。 ほとんどすべての場合において、データには、モデルの作成に必要とされるよりも多くの情報、または間違った種類の情報が含まれています。 たとえば、顧客データを格納した 500 列のデータセットがあるとします。ここで、データ数の少ない列をモデルに追加してもほとんどメリットは得られません。また、データが重複した列を使用するとモデルに影響することがあります。  

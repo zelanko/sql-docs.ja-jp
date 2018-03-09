@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: EventLog event class
+helpviewer_keywords:
+- EventLog event class
 ms.assetid: ba4b4e15-b923-4fab-987e-6bede2e73f53
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5613acf3a5d41bc80d58f5122da3c7fbee8c9af
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 60fd9d171d0962bedef2303850c1d3e9b9c84200
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="eventlog-event-class"></a>EventLog イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] EventLog イベント クラスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows イベント ログにイベントが記録されたことを示します。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+EventLog イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows イベント ログにイベントが記録されたことを示します。  
   
 ## <a name="eventlog-event-class-data-columns"></a>EventLog イベント クラスのデータ列  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|Description|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |BinaryData|**image**|トレースでキャプチャされたイベント クラスに依存するバイナリ値。|2|はい|  
@@ -51,8 +54,8 @@ ms.lasthandoff: 11/17/2017
 |Severity|**int**|例外の重大度レベル。|20|はい|  
 |SPID|**int**|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|TextData|**ntext**|(取得できた場合) エラー メッセージのテキスト。|1|はい|  
-|TransactionID|**bigint**|システムによって割り当てられたトランザクション ID。|4|可|  
+|TextData|**ntext**|(取得できた場合) エラー メッセージのテキスト。|@shouldalert|はい|  
+|TransactionID|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
   
 ## <a name="see-also"></a>参照  
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)   

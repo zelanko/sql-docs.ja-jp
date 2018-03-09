@@ -1,70 +1,99 @@
 ---
 title: "SQL Server インデックス デザイン ガイド | Microsoft Docs"
 ms.custom: 
-ms.date: 10/06/2016
+ms.date: 12/1/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - index design guide
+- index design guidance
 - guide, index design
+- guidance, index design
+- index internals
+- index architecture
+- sql server index internals
+- sql server index architecture
+- sql server index design guide
+- sql server index design guidance
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: "3"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3f01a5120c0787afad67a3da51a6305bf54558dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c11d217a3818d872071bb466ac2221e2c8adc3f7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server インデックス デザイン ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-不完全なデザインのインデックスやインデックスの不備は、データベース アプリケーションのボトルネックの主な原因となります。 効率的なインデックスのデザインは、データベースとアプリケーションの高パフォーマンスを実現するための最優先事項です。 この SQL Server インデックス デザイン ガイドには、効果的なインデックスをデザインしてアプリケーションのニーズを満たすために役立つ情報および推奨事項が含まれています。  
+不完全なデザインのインデックスやインデックスの不備は、データベース アプリケーションのボトルネックの主な原因となります。 効率的なインデックスのデザインは、データベースとアプリケーションの高パフォーマンスを実現するための最優先事項です。 この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インデックス デザイン ガイドには、効果的なインデックスをデザインしてアプリケーションのニーズを満たすために役立つ情報および推奨事項が含まれています。  
     
-このガイドでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で使用できるインデックスの種類に関して一般的な知識があることを前提としています。 インデックスの種類に関する全般的な説明については、「 [インデックス](http://msdn.microsoft.com/library/ms175049.aspx)」を参照してください。  
-  
+このガイドでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で使用できるインデックスの種類に関して一般的な知識があることを前提としています。 インデックスの種類に関する全般的な説明については、「 [インデックス](../relational-databases/indexes/indexes.md)」を参照してください。  
+
+このガイドでは、次のインデックスの種類について説明します。
+
+-   クラスター化インデックス
+-   非クラスター化インデックス
+-   [一意]
+-   フィルター選択されたインデックス
+-   列ストア
+-   ハッシュ インデックス
+-   メモリ最適化された非クラスター化インデックス
+
+XML インデックスの詳細については、[XML インデックスの概要](../relational-databases/xml/xml-indexes-sql-server.md)に関するページを参照してください。
+
+空間インデックスについては、「[空間インデックスの概要](../relational-databases/spatial/spatial-indexes-overview.md)」を参照してください。
+
+フルテキスト インデックスの詳細については、「[フルテキスト インデックスの作成](../relational-databases/search/populate-full-text-indexes.md)」を参照してください。
   
 ##  <a name="Basics"></a> インデックスのデザインの基礎  
- インデックスとは、テーブルまたはビューに関連付けられたディスク上の構造で、テーブルやビューからの行の取得を高速化します。 インデックスには、テーブル内またはビュー内の 1 つ以上の列から構築されたキーが含まれています。 これらのキーは 1 つの構造 (B-Tree) 内に格納されます。SQL Server はこの構造を使用して、キー値に関連した 1 つ以上の行を効率よく迅速に検出できます。  
-  
+ インデックスとは、テーブルまたはビューに関連付けられたディスク上またはメモリ内の構造で、テーブルやビューからの行の取得を高速化します。 インデックスには、テーブル内またはビュー内の 1 つ以上の列から構築されたキーが含まれています。 ディスク上のインデックスの場合、これらのキーは 1 つの構造 (B-Tree) 内に格納されます。SQL Server はこの構造を使用して、キー値に関連した 1 つ以上の行を効率よく迅速に検出できます。  
+
+ インデックスは、論理的には、行と列があるテーブルとして編成されたデータを格納します。また物理的には、*行ストア* <sup>1</sup> と呼ばれる行単位のデータ形式、または*[列ストア](#columnstore_index)*という列単位のデータ形式で格納されます。  
+    
  データベースとワークロードに適したインデックスの選択は、クエリの速度と更新コストのバランスを取る必要がある複雑な作業です。 インデックス キー内の列数が少ないインデックスを使用すると、ディスク領域とメンテナンスのオーバーヘッドが少なくて済みます。 これに対して、列数の多いインデックスを使用すると、より多くのクエリに対応できます。 効率の高いインデックスを決定するには、さまざまなデザインをテストする必要があります。 インデックスは、データベース スキーマやアプリケーションのデザインに影響を与えずに追加、変更、および削除できます。 さまざまなデザインのインデックスを積極的にテストするようにしてください。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ オプティマイザーでは、多くの場合、最も効率的なインデックスが選択されます。 インデックスのデザインの全体的な考え方としては、クエリ オプティマイザーでインデックスを選択するための選択肢として、さまざまなデザインのインデックスを用意し、オプティマイザーに決定を任せる必要があります。 このようにすると、分析時間を短縮でき、さまざまな状況でパフォーマンスを向上できます。 クエリ オプティマイザーで特定のクエリに使用されるインデックスを確認するには、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で、 **[クエリ]** メニューの **[実際の実行プランを含める]**を選択します。  
   
  インデックスを使用しても、常にパフォーマンスが向上するわけではありません。また、パフォーマンスが優れていても、常にインデックスが効率的に使用されているわけでもありません。 インデックスを使用すれば常にパフォーマンスが向上するならば、クエリ オプティマイザーのジョブは単純です。 しかし実際には、不適切なインデックスを選択すると、最適なパフォーマンスを実現することはできません。 したがって、クエリ オプティマイザーでは、パフォーマンスの向上につながる場合にのみインデックスまたはインデックスの組み合わせが選択され、パフォーマンスの低下につながる場合、インデックス付き検索は実行されません。  
-  
+
+ <sup>1</sup> 列ストアは、リレーショナル テーブル データを格納する従来の方法です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、行ストアは、基になるデータ ストレージ形式が、ヒープ、B ツリー ([クラスター化インデックス](#Clustered))、またはメモリ最適化テーブルであるテーブルを示します。
+
 ### <a name="index-design-tasks"></a>インデックスのデザインの作業  
  インデックスをデザインするには、次の作業を行うことをお勧めします。  
   
-1.  データベース自体の特性を理解します。 たとえば、データが頻繁に変更されるオンライン トランザクション処理 (OLTP) データベースであるか、主に読み取り専用データが格納されており非常に大きなデータ セットの高速処理を要する意思決定支援システム (DSS) データベースまたはデータ ウェアハウジング (OLAP) データベースであるかを理解する必要があります。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]で、 *xVelocity メモリ最適化列ストア* インデックスは、一般的なデータ ウェアハウスのデータ セットに特に適しています。 列ストア インデックスによって、フィルター処理クエリ、集計クエリ、グループ化クエリ、スター結合クエリなどの一般的なデータ ウェアハウス クエリのパフォーマンスを向上することで、ユーザーが快適にデータ ウェアハウスを利用できるようになります。 詳細については、「 [Columnstore Indexes Guide](~/relational-databases/indexes/columnstore-indexes-overview.md)」 (列ストア インデックス ガイド) を参照してください。  
-  
+1.  データベース自体の特性を理解します。 
+    * たとえば、頻繁なデータ変更を伴い、高スループットを維持する必要があるオンライン トランザクション処理 (OLTP) データベースです。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 以降は、ラッチフリー デザインが提供されているため、このようなシナリオにはメモリ最適化テーブルとインデックスが特に適しています。 詳細については、「[メモリ最適化テーブルのインデックス](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)」、またはこのガイドの「[メモリ最適化非クラスター化インデックスのデザイン ガイドライン](#inmem_nonclustered_index)」と「[ハッシュ インデックスのデザイン ガイドライン](#hash_index)」を参照してください。
+    * また、大規模なデータセットをすばやく処理する必要がある意思決定支援システム (DSS) またはデータ ウェアハウス (OLAP) データベースの例があります。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降では、列ストア インデックスは、一般的なデータ ウェアハウスのデータ セットに特に適しています。 列ストア インデックスによって、フィルター処理クエリ、集計クエリ、グループ化クエリ、スター結合クエリなどの一般的なデータ ウェアハウス クエリのパフォーマンスを向上することで、ユーザーが快適にデータ ウェアハウスを利用できるようになります。 詳細については、「[列ストア インデックス - 概要](../relational-databases/indexes/columnstore-indexes-overview.md)」、またはこのガイドの「[列ストア インデックスのデザイン ガイドライン](#columnstore_index)」を参照してください。  
+
 2.  最もよく使用されるクエリの特性を理解します。 たとえば、よく使用されるクエリの中に、複数のテーブルを結合するクエリがあることを把握していると、使用する最適なインデックスの種類を決定するときに役立ちます。  
   
 3.  クエリで使用される列の特性を理解します。 たとえば、整数データ型を格納する列で、一意の列または NULL 値を許容しない列であれば、インデックスに適しています。 適切に定義されたデータのサブセットが含まれている列に対し、 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 以上のバージョンでは、フィルター選択されたインデックスを使用できます。 詳細については、このガイドの「 [フィルター選択されたインデックスのデザイン ガイドライン](#Filtered) 」を参照してください。  
   
-4.  インデックスの作成時またはメンテナンス時のパフォーマンスを向上させるインデックス オプションを決定します。 たとえば、既存の大きなテーブルにクラスター化インデックスを作成する際には ONLINE インデックス オプションが有益です。 ONLINE オプションを使用すると、インデックスの作成中または再構築中に、基になるデータで同時処理を続行できます。 詳細については、「 [インデックス オプションの設定](../relational-databases/indexes/set-index-options.md)」を参照してください。  
+4.  インデックスの作成時またはメンテナンス時のパフォーマンスを向上させるインデックス オプションを決定します。 たとえば、既存の大きなテーブルにクラスター化インデックスを作成する際には `ONLINE` インデックス オプションが有益です。 ONLINE オプションを使用すると、インデックスの作成中または再構築中に、基になるデータで同時処理を続行できます。 詳細については、「 [インデックス オプションの設定](../relational-databases/indexes/set-index-options.md)」を参照してください。  
   
 5.  インデックスの最適な格納場所を決定します。 非クラスター化インデックスは、基になるテーブルと同じファイル グループまたは別のファイル グループに格納できます。 インデックスの格納場所により、ディスク I/O のパフォーマンスが向上し、その結果クエリのパフォーマンスを向上させることができます。 たとえば、非クラスター化インデックスを、テーブル ファイル グループとは別のディスク上にあるファイル グループに格納すると、複数のディスクを同時に読み取ることができるため、パフォーマンスが向上します。  
-  
-     また、クラスター化インデックスと非クラスター化インデックスでは、複数のファイル グループにまたがってパーティション構成を使用できます。 大きなテーブルやインデックスをパーティション分割すると、コレクション全体の整合性を維持しながら、データのサブセットに対するアクセスや管理を迅速かつ効率的に行うことができるので、大きなテーブルやインデックスを管理しやすくなります。 詳しくは、「 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)」をご覧ください。 パーティション分割を検討するときは、インデックスを固定するかどうかを決定します。つまり、基本的にテーブルと同じ方法でパーティション分割するか、または別の方法でパーティション分割するかを決定するということです。  
-  
+     また、クラスター化インデックスと非クラスター化インデックスでは、複数のファイル グループにまたがってパーティション構成を使用できます。 大きなテーブルやインデックスをパーティション分割すると、コレクション全体の整合性を維持しながら、データのサブセットに対するアクセスや管理を迅速かつ効率的に行うことができるので、大きなテーブルやインデックスを管理しやすくなります。 詳しくは、「 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)」をご覧ください。 パーティション分割を検討するときは、インデックスを固定するかどうかを決定します。つまり、基本的にテーブルと同じ方法でパーティション分割するか、または別の方法でパーティション分割するかを決定するということです。   
+
 ##  <a name="General_Design"></a> インデックスのデザインの全般的なガイドライン  
  経験豊富なデータベース管理者であれば適切なインデックス セットをデザインできますが、それほど複雑でないデータベースとワークロードであっても、この作業はきわめて複雑で、時間がかかり、間違いを犯しやすいものです。 使用するデータベース、クエリ、データ列の特性を理解することが、最適なインデックスをデザインする際に役に立ちます。  
   
 ### <a name="database-considerations"></a>データベースに関する注意点  
  インデックスをデザインするときは、次のデータベースのガイドラインを考慮してください。  
   
--   1 つのテーブルに多数のインデックスがあると、テーブル内でのデータ変更に応じてインデックスをすべて調整する必要があるので、INSERT、UPDATE、DELETE、および MERGE の各ステートメントのパフォーマンスに影響します。 たとえば、列が複数のインデックスで使用されており、この列のデータを変更する UPDATE ステートメントを実行する場合は、その列が含まれている各インデックスも、基になるベース テーブル (ヒープまたはクラスター化インデックス) と同様に更新する必要があります。  
+-   1 つのテーブルに多数のインデックスがあると、テーブル内のデータが変更された場合にインデックスをすべて調整する必要があるので、`INSERT`、`UPDATE`、`DELETE`、および `MERGE` の各ステートメントのパフォーマンスに影響します。 たとえば、列が複数のインデックスで使用されており、この列のデータを変更する `UPDATE` ステートメントを実行する場合は、その列が含まれている各インデックスも、基になるベース テーブル (ヒープまたはクラスター化インデックス) と同様に更新する必要があります。  
   
     -   頻繁に更新するテーブルにはインデックスをデザインしすぎないようにし、インデックスの幅を狭く、つまり列数を可能な限り少なくします。  
   
@@ -112,14 +141,12 @@ ms.lasthandoff: 11/17/2017
  クエリにインデックスを設定することが適切であると判断した場合は、状況に応じて最適な種類のインデックスを選択します。 インデックスの特性は、次のとおりです。  
   
 -   クラスター化と非クラスター化  
-  
 -   一意と非一意  
-  
 -   単一列と複数列  
-  
 -   昇順と降順 (インデックス内の列の並び)  
-  
 -   テーブル全体の非クラスター化インデックスとフィルター選択された非クラスター化インデックス  
+-   列ストアと行ストア
+-   メモリ最適化テーブル用のハッシュ インデックスと非クラスター化インデックス
   
  インデックスを最初に保存したときの特性をカスタマイズし、FILLFACTOR などのオプションを設定してパフォーマンスやメンテナンスを最適化できます。 また、パフォーマンスを最適化するために、ファイル グループやパーティション構成を使用してインデックスの保存場所を決定することもできます。  
   
@@ -129,9 +156,7 @@ ms.lasthandoff: 11/17/2017
  既定では、インデックスが作成されるベース テーブルと同じファイル グループにインデックスも格納されます。 パーティション分割されていないクラスター化インデックスおよびベース テーブルは、常に同じファイル グループに存在します。 しかし、次の操作を実行できます。  
   
 -   ベース テーブルまたはクラスター化インデックスのファイル グループ以外のファイル グループに、非クラスター化インデックスを作成する。  
-  
 -   複数のファイル グループにまたがるクラスター化インデックスおよび非クラスター化インデックスをパーティション分割する。  
-  
 -   あるファイル グループから別のファイル グループにテーブルを移動する。この操作を行うには、クラスター化インデックスを削除して DROP INDEX ステートメントの MOVE TO 句に新しいファイル グループまたはパーティション構成を指定するか、DROP_EXISTING 句を指定した CREATE INDEX ステートメントを使用します。  
   
  異なるファイル グループに非クラスター化インデックスを作成した場合、そのファイル グループが独自のコントローラーを持つ異なる物理ドライブを使用していると、パフォーマンスの向上を実現できます。 データおよびインデックス情報は、複数のディスク ヘッドにより並列で読み込めるようになります。 たとえば、ファイル グループ `Table_A` の `f1` とファイル グループ `Index_A` の `f2` が同じクエリで使用される場合、両ファイル グループが競合することなく完全に使用されるため、パフォーマンスが向上します。 ただし、クエリによって `Table_A` がスキャンされる場合でも、 `Index_A` が参照されていないと、ファイル グループ `f1` のみが使用されます。 この場合、パフォーマンスは向上しません。  
@@ -154,7 +179,7 @@ ms.lasthandoff: 11/17/2017
   
  インデックスにキー値が格納される順序を指定することは、テーブルを参照しているクエリに ORDER BY 句があり、そのインデックスの 1 つ以上のキー列が ORDER BY 句によって異なる方向に指定されている場合に役立ちます。 このような場合、インデックスにより、クエリ プランで SORT 操作を実行する必要がなくなるので、クエリをより効率的に実行できるようになります。 たとえば、 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] の購買部のバイヤーが、業者から購入する製品の品質を評価する必要がある場合について考えてみます。 バイヤーにとって最も関心があるのは、これらの業者から配送された製品の中から、返品率の高い製品を見つけ出すことです。 次のクエリに示すように、この基準を満たすデータを取得するには、 `RejectedQty` テーブルの `Purchasing.PurchaseOrderDetail` 列を降順 (大から小) に並べ替え、 `ProductID` 列を昇順 (小から大) に並べ替える必要があります。  
   
-```  
+```sql  
 SELECT RejectedQty, ((RejectedQty/OrderQty)*100) AS RejectionRate,  
     ProductID, DueDate  
 FROM Purchasing.PurchaseOrderDetail  
@@ -165,10 +190,9 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  ![IndexSort1](../relational-databases/media/indexsort1.gif)
   
-  
  作成したインデックスのキー列がクエリの ORDER BY 句で使用するキー列と一致する場合、クエリ プランの SORT 操作を削除できるので、クエリ プランがより効率的になります。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX IX_PurchaseOrderDetail_RejectedQty  
 ON Purchasing.PurchaseOrderDetail  
     (RejectedQty DESC, ProductID ASC, DueDate, OrderQty);  
@@ -178,12 +202,29 @@ ON Purchasing.PurchaseOrderDetail
   
  ![InsertSort2](../relational-databases/media/insertsort2.gif)
   
-  
  [!INCLUDE[ssDE](../includes/ssde-md.md)] は、どちらの方向でも同じように効率的に移動します。 `(RejectedQty DESC, ProductID ASC)` として定義されたインデックスは、ORDER BY 句の列の並べ替え方向が逆転されたクエリで引き続き使用できます。 たとえば、ORDER BY 句 `ORDER BY RejectedQty ASC, ProductID DESC` が含まれたクエリでは、このインデックスを使用できます。  
   
  並べ替え順は、キー列のみに指定できます。 [sys.index_columns](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) カタログ ビューと INDEXKEY_PROPERTY 関数により、インデックス列が昇順と降順のどちらで格納されているかが報告されます。  
-  
-  
+
+## <a name="metadata"></a>メタデータ  
+これらのメタデータ ビューを使って、インデックスの属性を表示します。 多くのアーキテクチャ情報が、これらのビューの一部に埋め込まれます。
+
+> [!NOTE]
+> 列ストア インデックスの場合、すべての列は付加列としてメタデータに格納されます。 列ストア インデックスにキー列はありません。  
+
+||| 
+|-|-|
+|[sys.indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
+|[sys.partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|
+[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
+|[sys.column_store_segments &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
+|[sys.column_store_row_groups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
+|[sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
+|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|[sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql.md)| 
+|[sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)|[sys.dm_db_xtp_object_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-object-stats-transact-sql.md)|
+|[sys.dm_db_xtp_nonclustered_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-nonclustered-index-stats-transact-sql.md)|[sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)|
+|[sys.hash_indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
+
 ##  <a name="Clustered"></a> クラスター化インデックスのデザイン ガイドライン  
  クラスター化インデックスは、データ行をそのキー値に基づいて並べ替え、テーブル内に格納します。 データ行自体は 1 つの順序でしか並べ替えられないため、1 つのテーブルに設定できるクラスター化インデックスは 1 つだけです。 ほとんどの場合、各テーブルには、次の条件を満たす単一または複数の列に基づいて定義されたクラスター化インデックスを作成することをお勧めします。  
   
@@ -192,18 +233,18 @@ ON Purchasing.PurchaseOrderDetail
 -   一意性が高い。  
   
     > [!NOTE]  
-    >  PRIMARY KEY 制約を作成すると、単一または複数の列に基づく一意のインデックスが自動的に作成されます。 既定では、クラスター化インデックスが作成されますが、制約を作成する際に非クラスター化インデックスを作成するように指定することもできます。  
+    > PRIMARY KEY 制約を作成すると、単一または複数の列に基づく一意のインデックスが自動的に作成されます。 既定では、クラスター化インデックスが作成されますが、制約を作成する際に非クラスター化インデックスを作成するように指定することもできます。  
   
 -   範囲クエリで使用可能。  
   
- UNIQUE プロパティを指定せずにクラスター化インデックスが作成された場合、 [!INCLUDE[ssDE](../includes/ssde-md.md)] により、4 バイトの uniqueifier 列が自動的にテーブルに追加されます。 必要があれば、各キーを一意にするため、 [!INCLUDE[ssDE](../includes/ssde-md.md)] により自動的に uniqueifier 値が行に追加されます。 この列とその値は、内部的に使用されるもので、ユーザーが参照したりアクセスすることはできません。  
+ `UNIQUE` プロパティを指定せずにクラスター化インデックスが作成された場合、[!INCLUDE[ssDE](../includes/ssde-md.md)] により、4 バイトの uniqueifier 列が自動的にテーブルに追加されます。 必要があれば、各キーを一意にするため、 [!INCLUDE[ssDE](../includes/ssde-md.md)] により自動的に uniqueifier 値が行に追加されます。 この列とその値は、内部的に使用されるもので、ユーザーが参照したりアクセスすることはできません。  
   
 ### <a name="clustered-index-architecture"></a>クラスター化インデックスのアーキテクチャ  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]では、インデックスは B ツリーとして構成されます。 インデックス B ツリー内の各ページをインデックス ノードと呼びます。 B ツリーの最上位ノードはルート ノードといいます。 インデックス内の最下位ノードをリーフ ノードと呼びます。 ルート ノードとリーフ ノードの間にあるインデックス レベルは、総称して中間レベルといいます。 クラスター化インデックスでは、リーフ ノードに基になるテーブルのデータ ページが含まれています。 ルート ノードと中間レベル ノードには、インデックス行を保持するインデックス ページが含まれています。 各インデックス行には、キー値と、B ツリー内の中間レベル ページかインデックスのリーフ レベルのデータ行のいずれかへのポインターが含まれています。 インデックスの各レベルのページは、二重にリンクされた一覧でリンクされています。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、インデックスは B ツリーとして構成されます。 インデックス B ツリー内の各ページをインデックス ノードと呼びます。 B ツリーの最上位ノードはルート ノードといいます。 インデックス内の最下位ノードをリーフ ノードと呼びます。 ルート ノードとリーフ ノードの間にあるインデックス レベルは、総称して中間レベルといいます。 クラスター化インデックスでは、リーフ ノードに基になるテーブルのデータ ページが含まれています。 ルート ノードと中間レベル ノードには、インデックス行を保持するインデックス ページが含まれています。 各インデックス行には、キー値と、B ツリー内の中間レベル ページかインデックスのリーフ レベルのデータ行のいずれかへのポインターが含まれています。 インデックスの各レベルのページは、二重にリンクされた一覧でリンクされています。  
   
  クラスター化インデックスの場合、 [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)にはインデックスで使用されるパーティションごとに 1 つの行が含まれます。この場合、 **index_id** は 1 と等しくなります。 既定では、クラスター化インデックスのパーティションは 1 つです。 クラスター化インデックスにパーティションが複数ある場合、各パーティションは、そのパーティションのデータを保持する B ツリー構造になります。 たとえば、クラスター化インデックスに 4 つのパーティションがある場合、4 つの B ツリーを持つ構造になります。この場合、パーティションごとに 1 つの B ツリーがあります。  
   
- クラスター化インデックスのデータ型によっては、各クラスター化インデックスの構造に 1 つ以上のアロケーション ユニットが含まれ、そこに特定のパーティションのデータが格納され、管理されます。 各クラスター化インデックスには、パーティションごとに、少なくとも 1 つの IN_ROW_DATA アロケーション ユニットがあります。 また、クラスター化インデックスにラージ オブジェクト (LOB) 列が含まれている場合は、パーティションごとに 1 つの LOB_DATA アロケーション ユニットもあります。 さらに、行サイズの上限である 8,060 バイトを超える可変長列が含まれている場合は、パーティションごとに 1 つの ROW_OVERFLOW_DATA アロケーション ユニットがあります。  
+ クラスター化インデックスのデータ型によっては、各クラスター化インデックスの構造に 1 つ以上のアロケーション ユニットが含まれ、そこに特定のパーティションのデータが格納され、管理されます。 各クラスター化インデックスには、パーティションごとに、少なくとも 1 つの IN_ROW_DATA アロケーション ユニットがあります。 また、クラスター化インデックスにラージ オブジェクト (LOB) 列が含まれている場合は、パーティションごとに 1 つの *LOB_DATA* アロケーション ユニットもあります。 さらに、行サイズの上限である 8,060 バイトを超える可変長列が含まれている場合は、パーティションごとに 1 つの *ROW_OVERFLOW_DATA* アロケーション ユニットがあります。  
   
  データ チェーン内のページとページ内の行は、クラスター化インデックス キーの値に基づいて並べ替えられます。 挿入はすべて、挿入される行のキー値が、順序付けられた既存の行の並びの中に正しく収まる位置で行われます。  
   
@@ -214,15 +255,15 @@ ON Purchasing.PurchaseOrderDetail
 ### <a name="query-considerations"></a>クエリに関する注意点  
  クラスター化インデックスを作成する前に、データがどのようにアクセスされるかを理解しておいてください。 次の処理を行うクエリには、クラスター化インデックスを使用することを検討してください。  
   
--   BETWEEN、>、>=、<、<= などの演算子を使用して、ある範囲の値を返す。  
+-   `BETWEEN`、>、>=、<、<= などの演算子を使用して、ある範囲の値を返す。  
   
      クラスター化インデックスを使用して最初の値を持つ行が検索されると、後続のインデックス値がある行は物理的に必ず隣接しています。 たとえば、クエリである範囲内の販売注文番号を持つ行を取得する場合、 `SalesOrderNumber` 列のクラスター化インデックスを使用すると、最初の販売注文番号を含む行をすばやく検索して、最後の販売注文番号に達するまでテーブル内の後続の行をすべて取得できます。  
   
 -   大きな結果セットを返す。  
   
--   JOIN 句を使用する。通常、これらは外部キー列になります。  
+-   `JOIN` 句を使用する。通常、これらは外部キー列になります。  
   
--   ORDER BY 句または GROUP BY 句を使用する。  
+-   複数の `ORDER BY` 句または `GROUP BY` 句を使用する。  
   
      ORDER BY 句または GROUP BY 句の中で指定された列にインデックスが設定されている場合、行が既に並べ替えられているので、 [!INCLUDE[ssDE](../includes/ssde-md.md)] によるデータの並べ替えが必要ないことがあります。 このような場合は、クエリ パフォーマンスが向上します。  
   
@@ -231,13 +272,18 @@ ON Purchasing.PurchaseOrderDetail
   
 -   一意な値または多数の異なる値を含む。  
   
-     たとえば、従業員 ID は、従業員を一意に識別します。 `EmployeeID` 列にクラスター化インデックスまたは PRIMARY KEY 制約を設定すると、従業員 ID 番号に基づいて従業員情報を検索するクエリのパフォーマンスが向上します。 また、 `LastName`列、 `FirstName`列、 `MiddleName` 列を基にクラスター化インデックスを作成することもできます。従業員レコードは、これらの列でグループ化されたりクエリが実行されることが多く、これらの列を組み合わせると高い多様性が生まれます。  
+     たとえば、従業員 ID は、従業員を一意に識別します。 `EmployeeID` 列にクラスター化インデックスまたは [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) 制約を設定すると、従業員 ID 番号に基づいて従業員情報を検索するクエリのパフォーマンスが向上します。 また、 `LastName`列、 `FirstName`列、 `MiddleName` 列を基にクラスター化インデックスを作成することもできます。従業員レコードは、これらの列でグループ化されたりクエリが実行されることが多く、これらの列を組み合わせると高い多様性が生まれます。 
+
+     > [!TIP]
+     > 別の指定をしない場合、[PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) 制約を作成するときに、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってその制約をサポートする[クラスター化インデックス](#clustered_index)が作成されます。
+     > PRIMARY KEY として一意性を適用するために *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* を使用できますが、これは効率的なクラスター化キーではありません。
+     > PRIMARY KEY として *uniqueidentifier* を使用する場合は、非クラスター化インデックスとして作成し、`IDENTITY` などの別の列を使用してクラスター化インデックスを作成することをお勧めします。   
   
 -   順次アクセスされる。  
   
      たとえば、製品 ID は、 `Production.Product` データベースの [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] テーブルにある製品を一意に識別します。 `WHERE ProductID BETWEEN 980 and 999`など、順次検索が指定されているクエリでは、 `ProductID`列に基づくクラスター化インデックスによりパフォーマンスが向上する場合があります。 これは、行がこのキー列を基に並べ替えて格納されている場合があるためです。  
   
--   ID として定義されている。  
+-   `IDENTITY` として定義されている。  
   
 -   テーブルから取得したデータの並べ替えに頻繁に使用される。  
   
@@ -252,7 +298,6 @@ ON Purchasing.PurchaseOrderDetail
 -   広範なキー  
   
      広範なキーは、複数の列または複数のサイズの大きな列を組み合わせたものです。 クラスター化インデックスのキー値は、すべての非クラスター化インデックスにより、参照キーとして使用されます。 非クラスター化インデックスのエントリには、クラスター化キー以外に、非クラスター化インデックスのキー列も格納されるため、同じテーブルに非クラスター化インデックスが定義されている場合は、サイズがかなり大きくなります。  
-  
   
 ##  <a name="Nonclustered"></a> 非クラスター化インデックスのデザイン ガイドライン  
  非クラスター化インデックスには、インデックス キー値、およびテーブル データの格納場所を指す行ロケーターが含まれています。 1 つのテーブルまたはインデックス付きビューに複数の非クラスター化インデックスを作成できます。 一般に、非クラスター化インデックスは、頻繁に使用するクエリで、クラスター化インデックスで対応されないクエリのパフォーマンスを向上するようにデザインします。  
@@ -274,12 +319,11 @@ ON Purchasing.PurchaseOrderDetail
   
  非クラスター化インデックスの場合、[sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) にはインデックスで使用されるパーティションごとに 1 つの行が含まれます。この場合、**index_id** は 1 より大きくなります。 既定では、非クラスター化インデックスのパーティションは 1 つです。 非クラスター化インデックスにパーティションが複数ある場合、各パーティションは、その特定のパーティションに対してインデックス行を保持する B ツリー構造になります。 たとえば、非クラスター化インデックスに 4 つのパーティションがある場合、4 つの B ツリーを持つ構造になります。この場合、パーティションごとに 1 つの B ツリーがあります。  
   
- 非クラスター化インデックスのデータ型によっては、各非クラスター化インデックスの構造に 1 つ以上のアロケーション ユニットが含まれ、そこに特定のパーティションのデータが格納され、管理されます。 各非クラスター化インデックスには、インデックス B ツリーのページが格納されているパーティションごとに、少なくとも 1 つの IN_ROW_DATA アロケーション ユニットがあります。 また、非クラスター化インデックスにラージ オブジェクト (LOB) 列が含まれている場合は、パーティションごとに 1 つの LOB_DATA アロケーション ユニットもあります。 さらに、行サイズの上限である 8,060 バイトを超える可変長列が含まれている場合は、パーティションごとに 1 つの ROW_OVERFLOW_DATA があります。  
+ 非クラスター化インデックスのデータ型によっては、各非クラスター化インデックスの構造に 1 つ以上のアロケーション ユニットが含まれ、そこに特定のパーティションのデータが格納され、管理されます。 各非クラスター化インデックスには、インデックス B ツリーのページが格納されているパーティションごとに、少なくとも 1 つの *IN_ROW_DATA* アロケーション ユニットがあります。 また、非クラスター化インデックスにラージ オブジェクト (LOB) 列が含まれている場合は、パーティションごとに 1 つの *LOB_DATA* アロケーション ユニットもあります。 さらに、行サイズの上限である 8,060 バイトを超える可変長列が含まれている場合は、パーティションごとに 1 つの *ROW_OVERFLOW_DATA* があります。  
   
  次の図に、1 つのパーティション内の非クラスター化インデックスの構造を示します。  
 
 ![bokind1a](../relational-databases/media/bokind1a.gif)  
-  
   
 ### <a name="database-considerations"></a>データベースに関する注意点  
  非クラスター化インデックスをデザインするときは、データベースの特性を考慮してください。  
@@ -295,7 +339,7 @@ ON Purchasing.PurchaseOrderDetail
 ### <a name="query-considerations"></a>クエリに関する注意点  
  非クラスター化インデックスを作成する前に、データがどのようにアクセスされるかを理解しておいてください。 次に示す特徴があるクエリには非クラスター化インデックスを使用することを検討してください。  
   
--   JOIN 句または GROUP BY 句を使用している。  
+-   複数の `JOIN` 句または `GROUP BY` 句を使用する。  
   
      結合操作やグループ化操作に使用する列の非クラスター化インデックスを複数作成し、外部キー列にクラスター化インデックスを作成してください。  
   
@@ -328,24 +372,20 @@ ON Purchasing.PurchaseOrderDetail
  クエリ内のすべての列が、キー列または非キー列のいずれかとしてインデックスに含まれるているとき、非キー付加列を含むインデックスにより、クエリ パフォーマンスが大幅に向上します。 クエリ オプティマイザーではインデックス内のすべての列値を参照できるので、テーブルやクラスター化インデックスのデータにアクセスすることがなく、ディスク I/O 操作が少なくて済むため、パフォーマンスが向上します。  
   
 > [!NOTE]  
->  クエリによって参照されるすべての列がインデックスに含まれているときは、一般的に、そのインデックスはクエリをカバーしていると呼ばれます。  
+> クエリによって参照されるすべての列がインデックスに含まれているときは、一般的に、そのインデックスはクエリをカバーしていると呼ばれます。  
   
  キー列がインデックスのすべてのレベルに格納されている場合は、非キー列はリーフ レベルだけに格納されます。  
   
 ##### <a name="using-included-columns-to-avoid-size-limits"></a>サイズ制限を回避するための付加列の使用  
- 非クラスター化インデックスに非キー列を含めることで、現在のインデックス サイズの制限 (最大 16 個のキー列と最大 900 バイトのインデックス キーのサイズ) を超えないようにすることができます。 インデックス キー列の数やインデックス キーのサイズを計算するときに、 [!INCLUDE[ssDE](../includes/ssde-md.md)] では非キー列が考慮されません。  
-  
+ 非クラスター化インデックスに非キー列を含めることで、現在のインデックス サイズの制限 (最大 16 個のキー列と最大 900 バイトのインデックス キーのサイズ) を超えないようにすることができます。 インデックス キー列の数やインデックス キーのサイズを計算するときに、 [!INCLUDE[ssDE](../includes/ssde-md.md)] では非キー列が考慮されません。   
  たとえば、 `Document` テーブルにある次の列にインデックスを設定するとします。  
-  
- `Title nvarchar(50)`  
-  
- `Revision nchar(5)`  
-  
- `FileName nvarchar(400)`  
+ *  `Title nvarchar(50)`  
+ *  `Revision nchar(5)`  
+ *  `FileName nvarchar(400)`  
   
  **nchar** と **nvarchar** データ型は各文字に 2 バイトを要するため、これら 3 つの列が含まれるインデックスは 900 バイトのサイズ制限を 10 バイト超えます (455 * 2)。 `INCLUDE` ステートメントの `CREATE INDEX` 句を使用することにより、インデックス キーを (`Title, Revision`) として定義し、 `FileName` を非キー列として定義できます。 その結果、インデックス キーのサイズが 110 バイト (55 \* 2) になりましたが、インデックスには必要な列がすべて含まれています。 このようなインデックスは、次のステートメントで作成されます。  
   
-```  
+```sql  
 CREATE INDEX IX_Document_Title   
 ON Production.Document (Title, Revision)   
 INCLUDE (FileName);   
@@ -395,7 +435,7 @@ INCLUDE (FileName);
   
  たとえば、次のクエリをカバーするインデックスを設計するとします。  
   
-```  
+```sql  
 SELECT AddressLine1, AddressLine2, City, StateProvinceID, PostalCode  
 FROM Person.Address  
 WHERE PostalCode BETWEEN N'98000' and N'99999';  
@@ -405,7 +445,7 @@ WHERE PostalCode BETWEEN N'98000' and N'99999';
   
  次のステートメントにより、クエリをカバーする付加列インデックスが作成されます。  
   
-```  
+```sql  
 CREATE INDEX IX_Address_PostalCode  
 ON Person.Address (PostalCode)  
 INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
@@ -421,7 +461,6 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 -   インデックスのメンテナンスによって、基になるテーブルやインデックス付きビューに対する変更、挿入、更新、削除にかかる時間が長くなる場合があります。  
   
  データ変更によるパフォーマンスへの影響や追加ディスク領域の要件よりも、クエリのパフォーマンスから得られる利点の方が大きいかどうかを判断する必要があります。  
-  
   
 ##  <a name="Unique"></a> 一意インデックスのデザイン ガイドライン  
  一意インデックスを使用すると、インデックス キーの値が重複することがないので、テーブルのすべての行を一意にすることができます。 一意であることがデータ自体の特性である場合にだけ、一意インデックスを指定します。 たとえば、主キーが `NationalIDNumber` で、 `HumanResources.Employee` テーブルの `EmployeeID`列の値が必ず一意になるようにする場合は、 `NationalIDNumber` 列で UNIQUE 制約を作成します。 ユーザーが複数の従業員に対してその列に同じ値を入力しようとすると、エラー メッセージが表示され、重複する値は入力されません。  
@@ -450,9 +489,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 ##  <a name="Filtered"></a> フィルター選択されたインデックスのデザイン ガイドライン  
  フィルター選択されたインデックスは、最適化された非クラスター化インデックスであり、適切に定義されたデータのサブセットから選択するクエリに対応する際に特に適しています。 フィルター選択されたインデックスは、フィルター述語を使用して、テーブル内の一部の行にインデックスを作成します。 フィルター選択されたインデックスを適切にデザインすると、クエリのパフォーマンスが向上し、インデックスのメンテナンス コストを削減して、テーブル全体のインデックスと比較してインデックスのストレージ コストを削減することができます。  
   
-||  
-|-|  
-|**適用対象**: [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|  
+**適用対象**: [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
   
  フィルター選択されたインデックスは、テーブル全体のインデックスよりも次の点で優れています。  
   
@@ -484,22 +521,25 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 ### <a name="design-considerations"></a>デザインに関する考慮事項  
  フィルター選択されたインデックスを効果的にデザインするには、アプリケーションで使用されるクエリを把握し、そのクエリがデータのサブセットとどのように関連するかを理解することが重要です。 適切に定義されたサブセットを持つデータの例として、ほとんどが NULL 値の列、異種カテゴリの値を含む列、および異なる範囲の値を含む列が挙げられます。 次のデザインに関する考慮事項では、フィルター選択されたインデックスがテーブル全体のインデックスよりも優れている場合のさまざまなシナリオを示します。  
+ 
+> [!TIP] 
+> 非クラスター化[列ストア インデックス](#columnstore_index)の定義で、フィルター適用条件の使用をサポートします。 OLTP テーブルに列ストア インデックスを追加することによるパフォーマンスへの影響を最小限に抑えるには、フィルター条件を使って、用して、運用ワークロードのコールド データのみに、非クラスター化列ストア インデックスを作成します。 
   
 #### <a name="filtered-indexes-for-subsets-of-data"></a>データのサブセットのフィルター選択されたインデックス  
- クエリに関連する少数の値だけが列に含まれている場合、値のサブセットにフィルター選択されたインデックスを作成できます。 たとえば、列の値がほとんど NULL の場合に、クエリで常に NULL 以外の値を選択するときは、NULL 以外のデータ行にフィルター選択されたインデックスを作成できます。 作成したインデックスは、同じキー列に定義されているテーブル全体の非クラスター化インデックスよりも小さく、メンテナンス コストが少なくなります。  
+クエリに関連する少数の値だけが列に含まれている場合、値のサブセットにフィルター選択されたインデックスを作成できます。 たとえば、列の値がほとんど NULL の場合に、クエリで常に NULL 以外の値を選択するときは、NULL 以外のデータ行にフィルター選択されたインデックスを作成できます。 作成したインデックスは、同じキー列に定義されているテーブル全体の非クラスター化インデックスよりも小さく、メンテナンス コストが少なくなります。  
   
- たとえば、 `AdventureWorks2012` データベースには、 `Production.BillOfMaterials` という 2,679 行のテーブルがあります。 `EndDate` 列では、NULL 以外の値を含む行は 199 行だけで、他の 2,480 行には NULL が含まれています。 次のフィルター選択されたインデックスは、インデックスで定義された列を返し、 `EndDate`で NULL 以外の値を含む行のみを選択するクエリに対応します。  
+たとえば、 `AdventureWorks2012` データベースには、 `Production.BillOfMaterials` という 2,679 行のテーブルがあります。 `EndDate` 列では、NULL 以外の値を含む行は 199 行だけで、他の 2,480 行には NULL が含まれています。 次のフィルター選択されたインデックスは、インデックスで定義された列を返し、 `EndDate`で NULL 以外の値を含む行のみを選択するクエリに対応します。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX FIBillOfMaterialsWithEndDate  
     ON Production.BillOfMaterials (ComponentID, StartDate)  
     WHERE EndDate IS NOT NULL ;  
 GO  
 ```  
   
- フィルター選択されたインデックス `FIBillOfMaterialsWithEndDate` は、次のクエリに対して有効です。 クエリ実行プランを表示して、クエリ オプティマイザーでフィルター選択されたインデックスが使用されたかどうかを確認できます。  
+フィルター選択されたインデックス `FIBillOfMaterialsWithEndDate` は、次のクエリに対して有効です。 クエリ実行プランを表示して、クエリ オプティマイザーでフィルター選択されたインデックスが使用されたかどうかを確認できます。  
   
-```  
+```sql  
 SELECT ProductAssemblyID, ComponentID, StartDate   
 FROM Production.BillOfMaterials  
 WHERE EndDate IS NOT NULL   
@@ -507,30 +547,28 @@ WHERE EndDate IS NOT NULL
     AND StartDate > '20080101' ;  
 ```  
   
- フィルター選択されたインデックスの作成方法およびフィルター選択されたインデックスの述語式の定義方法の詳細については、「 [フィルター選択されたインデックスの作成](../relational-databases/indexes/create-filtered-indexes.md)」を参照してください。  
+フィルター選択されたインデックスの作成方法およびフィルター選択されたインデックスの述語式の定義方法の詳細については、「 [フィルター選択されたインデックスの作成](../relational-databases/indexes/create-filtered-indexes.md)」を参照してください。  
   
 #### <a name="filtered-indexes-for-heterogeneous-data"></a>異種データのフィルター選択されたインデックス  
  テーブルに異種データの行が含まれている場合、1 つ以上のカテゴリのデータに対してフィルター選択されたインデックスを作成できます。  
   
  たとえば、 `Production.Product` テーブルに示される製品がそれぞれ `ProductSubcategoryID`に割り当てられ、Bikes、Components、Clothing、Accessories の製品カテゴリに関連付けられています。 `Production.Product` テーブル内にあるこうしたカテゴリの列の値はあまり密接に関連していないので、異種カテゴリとなります。 たとえば、 `Color`、 `ReorderPoint`、 `ListPrice`、 `Weight`、 `Class`、および `Style` の各列には、各製品カテゴリで固有の特性があります。 サブカテゴリ 27 ～ 36 を含む付属品に対して頻繁に使用されるクエリがあるとします。 次の例に示すように、付属品のサブカテゴリにフィルター選択されたインデックスを作成することで、付属品に対するクエリのパフォーマンスを向上させることができます。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX FIProductAccessories  
     ON Production.Product (ProductSubcategoryID, ListPrice)   
         Include (Name)  
 WHERE ProductSubcategoryID >= 27 AND ProductSubcategoryID <= 36;  
-  
 ```  
   
  フィルター選択されたインデックス `FIProductAccessories` は次のクエリに対応します。  
   
  これは、クエリ結果がインデックスに含まれ、クエリ プランにベース テーブルの参照が含まれないためです。 たとえば、クエリ述語式 `ProductSubcategoryID = 33` はフィルター選択されたインデックスの述語 `ProductSubcategoryID >= 27` および `ProductSubcategoryID <= 36`のサブセットで、クエリ述語の `ProductSubcategoryID` 列と `ListPrice` 列はどちらもインデックスのキー列であり、名前は付加列としてインデックスのリーフ レベルに格納されます。  
   
-```  
+```sql  
 SELECT Name, ProductSubcategoryID, ListPrice  
 FROM Production.Product  
 WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;  
-  
 ```  
   
 #### <a name="key-columns"></a>[キー列]  
@@ -540,21 +578,21 @@ WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;
   
  フィルター選択されたインデックスの式がクエリ述語と同じであり、フィルター選択されたインデックスの式の列がクエリ結果と共に返されない場合、その式の列を、フィルター選択されたインデックスの定義でキー列または付加列にする必要はありません。 たとえば、クエリ述語がフィルター式と同じであり、 `FIBillOfMaterialsWithEndDate` がクエリ結果と共に返されないため、 `EndDate` は次のクエリに対応します。 `FIBillOfMaterialsWithEndDate` は、フィルター選択されたインデックスの定義のキー列または付加列として `EndDate` を必要としません。  
   
-```  
+```sql  
 SELECT ComponentID, StartDate FROM Production.BillOfMaterials  
 WHERE EndDate IS NOT NULL;   
 ```  
   
  フィルター選択されたインデックスの式と異なるクエリ述語で比較に列が使用される場合は、フィルター選択されたインデックスの式の列を、フィルター選択されたインデックスの定義でキー列または付加列にする必要があります。 たとえば、 `FIBillOfMaterialsWithEndDate` は、フィルター選択されたインデックスから行のサブセットを選択するので、次のクエリに対して有効です。 ただし、 `EndDate` が比較 `EndDate > '20040101'`で使用されるため、次のクエリには対応していません。この比較は、フィルター選択されたインデックスの式と異なります。 クエリ プロセッサでは、 `EndDate`の値を参照せずにこのクエリを実行することはできません。 したがって、 `EndDate` をフィルター選択されたインデックスの定義でキー列または付加列にする必要があります。  
   
-```  
+```sql  
 SELECT ComponentID, StartDate FROM Production.BillOfMaterials  
 WHERE EndDate > '20040101';   
 ```  
   
  フィルター選択されたインデックスの式の列がクエリ結果セットに含まれる場合、その列をフィルター選択されたインデックスの定義でキー列または付加列にする必要があります。 たとえば、 `FIBillOfMaterialsWithEndDate` はクエリ結果に含まれる `EndDate` 列を返すので、次のクエリに対応しません。 したがって、 `EndDate` をフィルター選択されたインデックスの定義でキー列または付加列にする必要があります。  
   
-```  
+```sql  
 SELECT ComponentID, StartDate, EndDate FROM Production.BillOfMaterials  
 WHERE EndDate IS NOT NULL;  
 ```  
@@ -566,33 +604,295 @@ WHERE EndDate IS NOT NULL;
   
  次の例では、さまざまなデータ型が含まれるテーブルを作成します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE dbo.TestTable (a int, b varbinary(4));  
-  
 ```  
   
  次のフィルター選択されたインデックスの定義では、列 `b` は、定数 1 と比較するために、整数データ型に暗黙的に変換されます。 これにより、フィルター選択された述語の演算子の左辺で変換が行われるため、エラー メッセージ 10611 が生成されます。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX TestTabIndex ON dbo.TestTable(a,b)  
 WHERE b = 1;  
 ```  
   
  解決策として、次の例に示すように、右辺の定数を、列 `b`と同じ型になるように変換します。  
   
-```  
+```sql  
 CREATE INDEX TestTabIndex ON dbo.TestTable(a,b)  
 WHERE b = CONVERT(Varbinary(4), 1);  
 ```  
   
  データ変換を比較演算子の左辺から右辺に移動すると、変換の意味が変わることがあります。 この例では、CONVERT 演算子を右辺に追加したときに、整数の比較から **varbinary** の比較に変わりました。  
   
+## <a name="columnstore_index"></a> 列ストア インデックスのデザイン ガイドライン
+
+*columnstore index* は、列ストアと呼ばれる列指向データ形式を使用してデータを格納、取得、および管理するためのテクノロジです。 詳細については、「[列ストア インデックス - 概要](../relational-databases/indexes/columnstore-indexes-overview.md)」を参照してください。 
+
+**適用対象**: [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]
+
+### <a name="columnstore-index-architecture"></a>列ストア インデックスのアーキテクチャ
+
+これらの基本を理解すると、効果的に使用する方法を説明する、その他の列ストアの記事を理解しやすくなります。
+
+#### <a name="data-storage-uses-columnstore-and-rowstore-compression"></a>データ ストレージでは列ストアと行ストアの圧縮を使用する
+列ストア インデックスの説明では、データ ストレージの形式を強調する目的で*行ストア*と*列ストア*という用語を使用しています。 列ストア インデックスでは、両方の種類のストレージを使用します。
+
+ ![Clustered Columnstore Index](../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")
+
+- **列ストア** は、行と列を含むテーブルとして論理的に編成され、列方向のデータ形式で物理的に格納されているデータです。
   
+列ストア インデックスでは、ほとんどのデータを列ストア形式で物理的に格納します。 列ストア形式では、データは列として圧縮および非圧縮されます。 クエリで要求されない行ごとに、その他の値を非圧縮する必要はありません。 このため、大規模なテーブルの列全体を高速にスキャンできます。 
+
+- **行ストア** は、行と列を含むテーブルとして論理的に編成され、行方向のデータ形式で物理的に格納されているデータです。 これは、ヒープまたはクラスター化された B ツリー インデックスなどのリレーショナル テーブル データを格納する従来の方法です。
+
+また、列ストア インデックスでは、デルタストアという行ストア形式で一部の行を物理的にも格納します。 デルタストア (デルタ行グループとも呼ばれます) は、列ストアへの圧縮に適合させるために、数が少なすぎる行を格納する場所です。 デルタ行グループはそれぞれ、クラスター化された B ツリー インデックスとして実装されます。 
+
+- **デルタストア**は、列ストアに圧縮するには数が少なすぎる行を保持する場所です。 デルタストアは行ストアです。 
+  
+#### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>操作は行グループと列セグメント上で実行される
+
+列ストア インデックスでは、行を管理可能な単位にグループ化します。 これらの単位はそれぞれ、行グループと呼ばれます。 最適なパフォーマンスを得るため、行グループ内の行数は、高い圧縮率が実現される程度に多く、インメモリ操作の利点を得られる程度に少ないです。
+
+* **行グループ**は、列ストア インデックスが管理および圧縮の操作を実行する行のグループです。 
+
+たとえば、列ストア インデックスは、行グループで次の操作を実行します。
+
+* 行グループを列ストアに圧縮します。 圧縮は、行グループ内の各列セグメントで実行されます。
+* ALTER INDEX REORGANIZE 操作中に行グループをマージします。
+* ALTER INDEX REBUILD 操作中に新しい行グループを作成します。
+* 動的管理ビュー (DMV) の行グループの正常性と断片化に関するレポートを行います。
+
+デルタストアは、デルタ行グループと呼ばれる 1 つ以上の行グループで構成されます。 各デルタ行グループは、列ストアに圧縮するには少なすぎる場合に、行を格納するクラスター化された B ツリー インデックスです。  
+
+* **デルタ行グループ**は、1,048,576 個の行が含まれるまで、またはインデックスが再構築されるまで、小規模の一括読み込みと挿入を格納するクラスター化された B ツリー インデックスです。  デルタ行グループに 1,048, 576 個の行が含まれると、閉じられたと見なされ、列ストアに圧縮するための組ムーバーと呼ばれるプロセスを待ちます。 
+
+それぞれの列には、行グループごとにその値の一部が含まれます。 これらの値は列セグメントと呼ばれます。 列ストア インデックスが行グループを圧縮する場合、各列セグメントを個別に圧縮します。 列全体を非圧縮する場合、列ストア インデックスでは、それぞれの行グループから列セグメントを 1 つ非圧縮するだけで列全体を非圧縮できます。
+
+* **列セグメント**は、行グループ内の列の値の一部です。 それぞれの行グループには、テーブルの 1 つの列につき 1 つの列セグメントが含まれます。 それぞれの列には、行グループごとに 1 つの列セグメントがあります。| 
+  
+ ![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+ 
+#### <a name="small-loads-and-inserts-go-to-the-deltastore"></a>小規模の読み込みと挿入はデルタストアに移動される
+列ストア インデックスは、一度に少なくとも 102,400 個の行を列ストア インデックスに圧縮することで、列ストア インデックスの圧縮とパフォーマンスを向上させています。 行を一括で圧縮するために、列ストア インデックスでは、小規模な読み込みを累積し、デルタストアに挿入します。 デルタストア操作は内部で処理されます。 列ストア インデックスは、正しいクエリ結果を返すために、列ストアとデルタストアの両方からのクエリ結果を結合します。 
+
+次の場合に、行はデルタストアに移動されます。
+* `INSERT INTO ... VALUES` ステートメントで挿入された場合。
+* 一括読み込みの最後で 102,400 未満の場合。
+* 更新済み。 更新はそれぞれ、削除および挿入として実装されます。
+
+また、デルタストアでは、削除済みとしてマークされているが、列ストアから物理的に削除されていない、削除された行の ID の一覧も格納します。 
+
+#### <a name="when-delta-rowgroups-are-full-they-get-compressed-into-the-columnstore"></a>デルタ行グループが満たされた場合、列ストアに圧縮される
+
+クラスター化列ストア インデックスでは、デルタ行グループごとに最大 1,048,576 個の列を収集してから、行グループを列ストアに圧縮します。 これにより、列ストア インデックスの圧縮が向上します。 デルタ行グループに 1,048,576 個の行が含まれている場合、列ストア インデックスは列グループが閉じられたと見なします。 *組ムーバー*というバックグラウンド プロセスでは、閉じられた行グループを見つけて、それを列ストアに圧縮します。 
+
+インデックスを再構築または再構成するには、[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) を使用してデルタ行グループを列ストアに強制的に圧縮することができます。  圧縮中にメモリ負荷がある場合、列ストア インデックスは圧縮行グループ内の行数を減らす可能性があることに注意してください。
+
+#### <a name="each-table-partition-has-its-own-rowgroups-and-delta-rowgroups"></a>各テーブル パーティションには、独自の行グループとデルタ行グループが含まれる
+
+パーティション分割の概念は、クラスター化インデックス、ヒープ、および列ストア インデックスのすべてにおいて同じです。 テーブルのパーティション分割では、列の値の範囲に従って、テーブルをより小規模の列のグループに分割します。 通常、これはデータを管理するために使用されます。 たとえば、データの年ごとにパーティションを作成して、パーティションの切り替えを使用し、データをコストが低いストレージにアーカイブすることができます。 パーティションの切り替えは、列ストア インデックス上で動作するため、データのパーティションを別の場所に移動しやすくなります。
+
+行グループは常に、テーブル パーティション内に定義されます。 列ストア インデックスがパーティション分割されると、各パーティションには独自の圧縮行グループとデルタ行グループが含まれます。
+
+##### <a name="each-partition-can-have-multiple-delta-rowgroups"></a>各パーティションに複数のデルタ行グループを含めることができる
+各パーティションに複数のデルタ行グループを含めることができます。 列ストア インデックスでデータをデルタ行グループに追加する必要があり、デルタ行グループがロックされている場合、列ストア インデックスでは、さまざまなデルタ行グループのロックを取得しようとします。 使用できるデルタ行グループがない場合は、列ストア インデックスでは新しいデルタ行グループが作成されます。  たとえば、パーティションが 10 個のテーブルには、簡単に 20 個以上のデルタ行グループを含めることができます。 
+
+#### <a name="you-can-combine-columnstore-and-rowstore-indexes-on-the-same-table"></a>同じテーブルで列ストア インデックスと行ストア インデックスを結合できる
+非クラスター化インデックスには、基になるテーブルの行と列の一部または全体のコピーが含まれています。 インデックスはテーブルの 1 つ以上の列として定義され、行のフィルター処理条件をオプションで設定できます。 
+
+[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 以降、更新可能な**非クラスター化列ストア インデックスを、行ストア テーブル**に作成できます。 列ストア インデックスは、データのコピーを格納するため、追加のストレージが必要です。 ただし、列ストア インデックス内のデータは、行ストア テーブルが必要とするサイズよりも小さいサイズに圧縮されます。  これにより、同時に、列ストア インデックスの分析と行ストア インデックスのトランザクションを同時に実行できます。 行ストア テーブルでデータが変更されると列ストアが更新されます。したがって、両方のインデックスが、同じデータに対して作業を行うことになります。  
+  
+[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 以降、列ストア インデックスでは、**1 つ以上の非クラスター化行ストア インデックス**を使用できます。 これにより、基になる列ストアで、効率的なテーブル シークを実行できます。 他のオプションも使用できます。 たとえば、行ストア テーブルで UNIQUE 制約を使用することで、主キー制約を適用できます。 一意でない値は行ストア テーブルに挿入できないため、SQL Server でその値を列ストアに挿入することはできません。  
+ 
+### <a name="performance-considerations"></a>パフォーマンスに関する考慮事項 
+
+-   非クラスター化列ストア インデックスの定義で、フィルター適用条件の使用をサポートします。 OLTP テーブルに列ストア インデックスを追加することによるパフォーマンスへの影響を最小限に抑えるには、フィルター条件を使って、用して、運用ワークロードのコールド データのみに、非クラスター化列ストア インデックスを作成します。 
+  
+-   インメモリ テーブルでは、列ストア インデックスを 1 つ使用できます。 これは、テーブルの作成時に作成することも、後で [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) を使用して追加することもできます。 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] より前のバージョンでは、列ストア インデックスを保持できたのはディスク ベースのテーブルのみでした。 
+
+詳細については、「[列ストア インデックス - クエリ パフォーマンス](../relational-databases/indexes/columnstore-indexes-query-performance.md)」を参照してください。
+
+### <a name="design-guidance"></a>設計ガイダンス 
+
+-   行ストア テーブルで、更新可能な非クラスター化列ストア インデックスを 1 つ使用できます。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] より前のバージョンでは、非クラスター化列ストア インデックスは読み取り専用でした。  
+ 
+詳細については、「[列ストア インデックス - 設計ガイダンス](../relational-databases/indexes/columnstore-indexes-design-guidance.md)」を参照してください。
+
+##  <a name="hash_index"></a> ハッシュ インデックスのデザイン ガイドライン 
+
+すべてのメモリ最適化テーブルには少なくとも 1 つのインデックスが必要です。このインデックスによって行が連結されるためです。 メモリ最適化テーブルでは、すべてのインデックスもメモリ最適化されます。 ハッシュ インデックスは、メモリ最適化テーブルで使用できるインデックスの種類の 1 つです。 詳細については、「[メモリ最適化テーブルのインデックス](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)」を参照してください。
+
+**適用対象**: [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+
+### <a name="hash-index-architecture"></a>ハッシュ インデックスのアーキテクチャ
+ハッシュ インデックスはポインターの配列で構成され、その配列の各要素はハッシュ バケットと呼ばれます。
+- 各バケットは 8 バイトであり、キー エントリのリンク リストのメモリ アドレスを格納するために使用されます。  
+- 各エントリは、インデックス キーの値と、基になるメモリ最適化テーブル内の対応する行のアドレスです。  
+- 各エントリは、すべて現在のバケットにチェーンされたエントリのリンク リスト内の次のエントリを指します。  
+
+バケットの数は、インデックスの定義時に指定する必要があります。
+- テーブルの行数または個別の値の数に対するバケット数の割合が低ければ低いほど、バケットの平均リンク リストは長くなります。  
+- 短いリンク リストは、長いリンク リストよりも高速で実行されます。
+- ハッシュ インデックスのバケットの最大数は 1,073,741,824 です。
+
+> [!TIP]
+> データの適切な `BUCKET_COUNT` を決定するには、「 [ハッシュ インデックスのバケット数の構成](#configuring_bucket_count)」を参照してください。
+
+ハッシュ関数はインデックス キー列に適用され、関数の結果によってキーがどのバケットに分類されるかが決まります。 各バケットには、ハッシュされたキー値がそのバケットにマップされている行へのポインターがあります。
+
+ハッシュ インデックスに使用するハッシュ関数には、以下の特徴があります。
+- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、あらゆるハッシュ インデックスに使用するハッシュ関数が 1 つ用意されています。
+- ハッシュ関数は決定的です。 入力キー値が同じであれば、常にハッシュ インデックスの同じバケットにマッピングされます。
+- インデックス キーが違っても、同じハッシュ バケットにマッピングされることがあります。
+- ハッシュ関数はバランスが取られます。つまり、通常、ハッシュ バケット上のインデックス キー値の分布は、平坦な線形分布ではなくポアソン分布またはベル カーブ分布に従います。
+- ポアソン分布は均等な分布ではありません。 インデックス キーの値は、ハッシュ バケットで均等に分散されません。
+- 2 つのインデックス キーが同じハッシュ バケットにマッピングされた場合には、*ハッシュの競合*となります。 ハッシュの競合が大量に発生した場合には、読み取り操作のパフォーマンスに影響を及ぼすおそれがあります。 現実的な目標は、バケットの 30% に 2 つの異なるキー値が含まれていることです。
+  
+ハッシュ インデックスとバケットの関係をまとめると、次の図のようになります。  
+  
+![hekaton_tables_23d](../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "インデックス キーがハッシュ関数に入力され、ハッシュ バケットのアドレスが出力されます。これはチェーンの先頭を示します。")  
+
+### <a name="configuring_bucket_count"></a> ハッシュ インデックスのバケット数の構成
+ハッシュ インデックスのバケット数はインデックス作成時に指定しますが、`ALTER TABLE...ALTER INDEX REBUILD` 構文を使用して変更することができます。  
+  
+ほとんどの場合、バケット数は、理想的にはインデックス キーの個別の値の数の 1 から 2 倍の範囲内にします。   
+特定のインデックス キーに値がどれぐらいあるかは、予測できないこともあります。 **BUCKET_COUNT** 値がキー値の実際の数の 10 倍以内であれば、パフォーマンスは通常まだ良好であり、低く見積もるよりは多く見積もりすぎるほうが一般的によい結果が得られます。  
+  
+**少なすぎる** バケットには、次の短所があります。  
+  
+- 個別のキー値のハッシュの競合の増加。  
+- 個別の値が、異なる個別の値を持つバケットの共有を強いられます。  
+- パケットごとの平均チェーン長が増えます。  
+- バケット チェーンが長ければ長いほど、インデックスでの等値検索の速度が遅くなります。  
+  
+**多すぎる** バケットには、次の短所があります。  
+  
+- バケット数が高すぎると、空のバケットを増やす結果になることがあります。  
+- 空のバケットは、フル インデックス スキャンのパフォーマンスに影響を与えます。 フル インデックス スキャンが普通に行われる場合は、インデックス キーの個別の値の数に近いバケット数を選択することを検討してください。  
+- 空のバケットは、それぞれが使用するのはわずか 8 バイトですが、メモリを使用します。  
+  
+> [!NOTE]
+> バケットを追加しても、重複する値を共有するエントリのチェーンが短くなることはありません。 値の重複の割合は、ハッシュが適切なインデックスの種類であるかどうかを決定するために使用され、バケット数を計算するために使用されることはありません。  
+
+### <a name="performance-considerations"></a>パフォーマンスに関する考慮事項  
+  
+ハッシュ インデックスのパフォーマンスは次のようになります。  
+  
+- `WHERE` 句の述語で、ハッシュ インデックス キーの各列の**正確な**値を指定する場合は極めて良好です。 ハッシュ インデックスは、非等値述語が指定されているとスキャンに戻ります。 
+- `WHERE` 句の述語でインデックス キーの値の**範囲**を探す場合は、よくありません。  
+- `WHERE` 句の述語で、2 列のハッシュ インデックス キーの**最初**の列について特定の値を指定し、キーの**他**の列については値を指定しない場合は、よくありません。  
+
+> [!TIP]
+> 述語はハッシュ インデックス キーのすべての列を含める必要があります。 ハッシュ インデックスでは、インデックスに対してシークを実行するための (ハッシュ用の) キーが必要です。 インデックス キーが 2 列で構成され、`WHERE` 句で最初の列しか指定されないと、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でハッシュ用とするキーが不完全になります。 この場合は、インデックス スキャン クエリ プランが作成されます。
+
+ハッシュ インデックスを使用し、一意のインデックス キーの数が行の数より 100 倍 (またはそれ以上) 多い場合は、大きい行チェーンを回避するために bucket_count を増やすか、代わりに[非クラスター化インデックス](#inmem_nonclustered_index)を使用することをお勧めします。
+
+### <a name="h3-b2-declaration-limitations"></a> 宣言に関する考慮事項  
+ハッシュ インデックスは、メモリ最適化テーブルにのみ存在できます。 ディスク ベース テーブルには存在できません。  
+  
+ハッシュ インデックスは、次のように宣言できます。  
+  
+- UNIQUE。そうしないと、既定の Non-Unique になります。  
+- NONCLUSTERED (既定値)。   
+  
+CREATE TABLE ステートメント外でハッシュ インデックスを作成する構文の例を次に示します。  
+  
+    ```sql
+    ALTER TABLE MyTable_memop  
+    ADD INDEX ix_hash_Column2 UNIQUE  
+    HASH (Column2) WITH (BUCKET_COUNT = 64);
+    ``` 
+
+### <a name="row-versions-and-garbage-collection"></a>行のバージョンとガベージ コレクション  
+メモリ最適化テーブルでは、行が `UPDATE` による影響を受ける場合、テーブルで行の更新バージョンが作成されます。 更新トランザクションの間、他のセッションは行の前のバージョンを読み取ることができるため、行ロックに関連するパフォーマンスの低下を回避することができます。  
+  
+ハッシュ インデックスに、更新に対応するための異なるバージョンのエントリも存在することがあります。  
+  
+後で前のバージョンが不要になったときに、ガベージ コレクション (GC) スレッドがバケットとそのリンク リストを横断して、前のエントリをクリーンアップします。 GC スレッドのパフォーマンスは、リンク リストのチェーン長が短い場合に優れています。 詳細については、「[インメモリ OLTP ガベージ コレクション](../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md)」を参照してください。 
+
+##  <a name="inmem_nonclustered_index"></a> メモリ最適化非クラスター化インデックスのデザイン ガイドライン 
+
+非クラスター化インデックスは、メモリ最適化テーブルで使用できるインデックスの種類の 1 つです。 詳細については、「[メモリ最適化テーブルのインデックス](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)」を参照してください。
+
+**適用対象**: [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+
+### <a name="in-memory-nonclustered-index-architecture"></a>インメモリ非クラスター化インデックスのアーキテクチャ
+
+インメモリ非クラスター化インデックスは、2011 年に Microsoft Research が独自に考案した Bw ツリーというデータ構造を使用して実装されています。 Bw ツリーは、B ツリーのロックおよびラッチフリーのバリエーションです。 詳細については、「[The Bw-Tree: A B-tree for New Hardware Platforms](http://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/)」(Bw ツリー: 新しいハードウェア プラットフォーム向けの B ツリー) を参照してください。 
+
+大まかに説明すると、Bw ツリーは、ページ ID (PidMap) で整理されたページのマップです。また、ページ ID (PidAlloc) と、ページ マップ内および相互にリンクされているページのセットを割り当て、再利用する機能があります。 これら 3 つの上位レベルのサブコンポーネントが、Bw ツリーの基本的な内部構造を構成します。
+
+Bw ツリーの構造は、各ページに並べ替えられたキー値のセットがあり、インデックス内にそれぞれが下位レベルを示すレベルがあり、リーフ レベルがデータ行を示すという点で、通常の B ツリーと似ています。 ただし、違いもいくつかあります。
+
+ハッシュ インデックスと同様に、複数のデータ行 (バージョン) をまとめてリンクできます。 レベル間のページ ポインターは論理ページ ID です。これは、ページ マッピング テーブルのオフセットなので、各ページの物理アドレスがあります。
+
+インデックス ページのインプレース更新はありません。 この目的のために新しいデルタ ページが導入されています。
+-  ページの更新のためにラッチやロックは必要ありません。
+-  インデックス ページは固定サイズではありません。
+
+図の各非リーフ レベル ページのキー値は、示された子が含む最大値であり、各行にはそのページの論理ページ ID も含まれます。 リーフレベルのページには、キー値と共に、データ行の物理アドレスが含まれています。
+
+ポイント ルックアップは、B ツリーと似ていますが、ページは 1 つの方向のみにリンクされているため、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] は、B ツリーのように最低値ではなく、各非リーフ ページに子の最大値がある適切なページ ポインターに従います。
+
+リーフレベルのページを変更する必要がある場合は、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] はページ自体を変更しません。 その代わり、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] では、変更を示す差分レコードが作成され、前のページに付加されます。 次に、前のページのページ マップ テーブル アドレスが、このページの物理アドレスになる差分レコードのアドレスに更新されます。
+
+Bw ツリーの構造を管理するために必要な 3 つの操作があります。統合、分割、マージです。
+
+#### <a name="delta-consolidation"></a>差分の統合
+差分レコードのチェーンが長くなると、インデックスの検索時に長いチェーンを横断することになるので、結果的に検索のパフォーマンスが遅くなる可能性があります。 要素数が既に 16 個のチェーンに新しい差分レコードが追加された場合、差分レコードの変更は参照されるインデックス ページに統合され、統合をトリガーした新しい差分レコードに示される変更を含むページが再構築されます。 新しく構築されたページのページ ID は同じですが、メモリ アドレスは新しくなります。 
+
+![hekaton_tables_23e](../relational-databases/in-memory-oltp/media/HKNCI_Delta.gif "差分レコードの統合")
+
+#### <a name="split-page"></a>ページの分割
+Bw ツリーのインデックス ページは、1 行の格納から最大 8 KB の格納まで必要に応じてサイズが大きくなります。 インデックス ページのサイズが 8 KB まで大きくなった後に新しく 1 行追加されると、インデックス ページは分割されます。 内部ページの場合は、別のキー値とポインターを追加する余地がなくなり、リーフ ページの場合は、すべての差分レコードを組み込んだ後に行のサイズが大きすぎてページに収まらなくなることを意味します。 リーフ ページのページ ヘッダーの統計情報では、差分レコードを統合するために必要な容量が追跡され、新しい差分レコードが追加されるたびにその情報が調整されます。 
+
+分割操作は、2 つのアトミック手順で実行されます。 下図では、値が 5 のキーが挿入されるため、リーフページで分割が強制実行されます。現在のリーフレベル ページの末尾を示す非リーフページ (キー値 4) が存在しなくなります。
+
+![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "ページの分割")
+
+**手順 1:** P1 と P2 という新しいページを割り当て、新しく挿入された行を含め、以前の P1 ページの行をこれらの新しいページに分割します。 ページ マッピング テーブルの新しいスロットは、ページ P2 の物理アドレスを格納するために使用されます。 P1 と P2 というこれらのページは、まだ同時実行の操作にはアクセスできません。 さらに、P1 から P2 への論理ポインターがセットされます。 次に、1 つのアトミック手順でページ マッピング テーブルが更新され、ポインターが古い P1 から新しい P1 に変更されます。 
+
+**手順 2:** 非リーフ ページは P1 を指しますが、非リーフ ページから P2 への直接ポインターはありません。 P2 は P1 を介してのみ到達可能です。 非リーフ ページから P2 へのポインターを作成するには、新しい非リーフ ページ (内部インデックス ページ) を割り当て、古い非リーフ ページのすべての行をコピーし、P2 を示す新しい行を追加します。 この手順が完了したら、1 つのアトミック手順で、ページ マッピング テーブルを更新して、ポインターを古い非リーフ ページから新しい非リーフ ページに変更します。
+
+#### <a name="merge-page"></a>ページのマージ
+`DELETE` 操作の結果、ページのサイズが最大ページ サイズ (現在は 8 KB) の 10% 未満になるか、ページ上の行数が 1 になると、そのページは連続するページにマージされます。
+
+ページから行が削除されると、その削除の差分データが追加されます。 さらに、インデックス ページ (非リーフ ページ) がマージ対象かどうかを判断するための確認が実行されます。 この確認で、行を削除した後の残領域が最大ページ サイズの 10% 未満になるかどうかが検証されます。 この条件を満たす場合、マージは 3 つのアトミック手順で実行されます。
+
+下図では、`DELETE` 操作でキー値 10 が削除されています。 
+
+![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "ページのマージ")
+
+**手順 1:** キー値 10 (青色の三角形) を表す差分ページが作成され、非リーフ ページ Pp1 内のそのポインターは新しい差分ページに設定されます。 さらに、特別なマージ差分ページ (緑色の三角形) が作成され、差分ページを示すようにリンクされます。 この段階では、両方のページ (差分ページとマージ差分ページ) は、同時のトランザクションには表示されません。 1 つのアトミック手順では、ページ マッピング テーブルのリーフレベル ページ P1 へのポインターはマージ差分ページを示すように更新されます。 この手順の後、Pp1 のキー値 10 のエントリはマージ差分ページを示すようになります。 
+
+**手順 2**: 非リーフ ページ Pp1 のキー値 7 を表す行を削除し、キー値 10 のエントリが P1 を示すように更新する必要があります。 この処理を実行するために、新しい非リーフ ページ Pp2 が割り当てられ、キー値 7 を表す行を除き、Pp1 のすべての行がコピーされます。キー値 10 の行はページ P1 を示すように更新されます。 この処理が完了すると、1 つのアトミック手順で、Pp1 を示すページ マッピング テーブルのエントリは Pp2 を示すように更新されます。 Pp1 には到達できなくなります。 
+
+**手順 3:** リーフレベル ページ P2 と P1 はマージされ、差分ページは削除されます。 この処理を実行するために、新しいページ P3 が割り当てられ、P2 と P1 の行がマージされ、差分ページの変更は新しい P3 に含まれます。 次に、1 つのアトミック手順で、ページ P1 を示すページ マッピング テーブルのエントリは、ページ P3 を示すように更新されます。 
+
+### <a name="performance-considerations"></a>パフォーマンスに関する考慮事項
+
+非等値述語でメモリ最適化テーブルを照会する場合は、非クラスター化ハッシュ インデックスより非クラスター化インデックスのパフォーマンスが高くなります。
+
+> [!NOTE]
+> メモリ最適化テーブルの列は、ハッシュ インデックスと非クラスター化インデックスの両方に含めることができます。
+
+> [!TIP]
+> 非クラスター化インデックス キーの列に、多数の重複値がある場合は、更新、挿入、および削除に関してパフォーマンスが低下します。 このような場合にパフォーマンスを改善する方法の 1 つは、非クラスター化インデックスに列を追加することです。
+
 ##  <a name="Additional_Reading"></a> その他の情報  
 [SQL Server 2008 のインデックス付きビューによるパフォーマンスの向上](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
-  
-  
-
+[主キーを作成する](../relational-databases/tables/create-primary-keys.md)    
+[メモリ最適化テーブルのインデックス](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
+[列ストア インデックス - 概要](../relational-databases/indexes/columnstore-indexes-overview.md)  
+[メモリ最適化テーブルのハッシュ インデックスのトラブルシューティング](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)    
+[メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
+[インデックス関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
+[計算列のインデックス](../relational-databases/indexes/indexes-on-computed-columns.md)   
+[インデックスと ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)   
+[CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
+[ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
+[CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
+[CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)  

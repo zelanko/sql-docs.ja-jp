@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Windows System Monitor [SQL Server], logs
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9bfe93f96bc9c5b4b2c887e3935916fc2fad01b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0c84f299a27b69def3acf965f7a3cf6d4ab74017
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>グラフ、警告、ログ、およびレポートの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] システム モニターを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを監視するためのグラフ、警告、ログ、およびレポートを作成できます。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
  現在発生しているイベントを監視する場合など、ローカル コンピューターまたはリモート コンピューターを短い時間、リアルタイムで監視するのにグラフは便利です。  
   
-## <a name="alerts"></a>警告  
+## <a name="alerts"></a>オブジェクト エクスプローラーには  
  システム モニターで警告を使用すると、特定のイベントを追跡して、要求に応じてそのイベントを通知できます。 警告ログは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のオブジェクトに対して選択したカウンターとインスタンスについて現在のパフォーマンスを監視できます。 カウンターが指定した値を超えたときに、ログはそのイベントの日付と時刻を記録します。 イベントはネットワーク警告を生成することもできます。 また、イベントが初めて発生したとき、またはイベントが発生するたびに、特定のプログラムを実行できます。 たとえば、警告はすべてのシステム管理者に対して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのディスク容量が不足していることを示すネットワーク メッセージを送信できます。  
   
 ## <a name="logs"></a>ログ  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
  ログ ファイルには、トラブルシューティングやプランニングに役立つ豊富な情報が記録されています。 現在の利用状況に関するグラフ、警告、およびレポートが即時のフィードバックを与えるのに対して、ログ ファイルは、長期間にわたってカウンターを追跡できます。 このため、情報をより徹底的に検査し、システムのパフォーマンスを文書化することができます。  
   
-## <a name="reports"></a>レポート  
+## <a name="reports"></a>[レポート]  
  レポートを使用すると、選択したオブジェクトに対して、絶えず変化し続けるカウンター値とインスタンス値を表示できます。 値は、各インスタンスの列に表示されます。 レポート間隔を調整したり、スナップショットを印刷したり、データをエクスポートすることもできます。 raw 番号を表示する必要がある場合には、レポートを使用します。  
   
  グラフ、警告、ログ、およびレポートの作成、または Windows オブジェクトとカウンターの詳細については、Windows のマニュアルを参照してください。  

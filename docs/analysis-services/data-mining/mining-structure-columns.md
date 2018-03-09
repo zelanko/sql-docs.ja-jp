@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - data sources [Analysis Services], mining structure columns
 - columns [data mining], mining structure columns
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 47ad74a70236b156db230ed229d2022cd6e057b0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f87ea88579145b0220be7a047d230d2f3d8d9a1e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-structure-columns"></a>マイニング構造列
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]外部データの列を選択し、データのモデリングに使用する方法を指定して、マイニング構造を作成する場合は、マイニング構造に列を定義します。 したがって、マイニング構造列は、単なるデータ ソースのデータのコピーではなく、マイニング モデルでソースのデータがどのように使用するかを定義するものです。 データの分離方法を決定するプロパティ (データ値の分布を記述するプロパティ) を割り当てることができます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+マイニング構造を作成するときは、外部データの列を選択し、データをどのようにモデリングに使用するかを指定して、マイニング構造の列を定義します。 したがって、マイニング構造列は、単なるデータ ソースのデータのコピーではなく、マイニング モデルでソースのデータがどのように使用するかを定義するものです。 データの分離方法を決定するプロパティ (データ値の分布を記述するプロパティ) を割り当てることができます。  
   
  マイニング構造列は、柔軟性と拡張性を併せ持つように設計されています。これは、マイニング モデルの作成に使用する各アルゴリズムによって、構造内のさまざまな列を使用してデータが解釈される場合があるためです。 モデルごとに 1 つずつデータ セットを用意する代わりに、1 つのマイニング構造を使用し、そこに含まれる列を使用して各モデルのデータをカスタマイズできます。  
   
@@ -67,7 +66,7 @@ ms.lasthandoff: 12/08/2017
 |マイニング構造列に含まれるデータのそれぞれの型に対して使用できるコンテンツの種類について説明します。 コンテンツの種類はデータ型に依存します。 コンテンツの種類はモデル レベルで割り当てられ、モデルで列データを使用する方法を決定します。|[コンテンツの種類 (データ マイニング)](../../analysis-services/data-mining/content-types-data-mining.md)|  
 |入れ子になったテーブルの概念を紹介し、入れ子になったテーブルをマイニング構造列としてデータ ソースに追加する方法について説明します。|[分類済みの列 (データ マイニング)](../../analysis-services/data-mining/classified-columns-data-mining.md)|  
 |予想される列の値の分布を指定するためにマイニング構造列に設定できる分布プロパティについて説明します。|[列の分布 (データ マイニング)](../../analysis-services/data-mining/column-distributions-data-mining.md)|  
-|分離 ( *ビン分割*と呼ばれることもあります) の概念について説明し、連続する数値データを分離するために Analysis Services に用意されている方法について説明します。|[分離メソッド (データ マイニング)](../../analysis-services/data-mining/discretization-methods-data-mining.md)|  
+|分離 (*ビン分割*と呼ばれることもあります) の概念について説明し、連続する数値データを分離するために Analysis Services に用意されている方法について説明します。|[分離メソッド (データ マイニング)](../../analysis-services/data-mining/discretization-methods-data-mining.md)|  
 |マイニング構造列に設定できるモデリング フラグについて説明します。|[モデリング フラグ (データ マイニング)](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
 |マイニング構造列どうしを関連付けるために使用できる特殊な列である分類済みの列について説明します。|[分類済みの列 (データ マイニング)](../../analysis-services/data-mining/classified-columns-data-mining.md)|  
 |マイニング構造列を追加および変更する方法について説明します。|[マイニング構造のタスクと操作方法](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)|  

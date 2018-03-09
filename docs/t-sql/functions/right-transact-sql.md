@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RIGHT_TSQL
 - RIGHT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - rightmost character of expression
 - RIGHT function
 - character strings [SQL Server], RIGHT
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 07ef676f68f2cd7778748d1f4c26c7817760120e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: b6680078aff2e103655a94ec157371a0d09f79be
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="right-transact-sql"></a>RIGHT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +51,7 @@ RIGHT ( character_expression , integer_expression )
  [式](../../t-sql/language-elements/expressions-transact-sql.md)の文字またはバイナリ データ。 *character_expression*定数、変数、または列を指定できます。 *character_expression*を除く任意のデータ型であることができます**テキスト**または**ntext**に暗黙的に変換する**varchar**または**nvarchar**です。 それ以外の場合を使用して、[キャスト](../../t-sql/functions/cast-and-convert-transact-sql.md)関数は明示的に変換する*character_expression*です。  
   
  *integer_expression*  
- 文字の数を指定する正の整数*character_expression*が返されます。 場合*であれば、任意*は負の場合、エラーが返されます。 場合*であれば、任意*は型です**bigint** 、大きな値を含むと*character_expression*などの大規模なデータ型でなければなりません**varchar(max)。**.  
+ 文字の数を指定する正の整数*character_expression*が返されます。 場合*であれば、任意*は負の場合、エラーが返されます。 場合*であれば、任意*は型です**bigint** 、大きな値を含むと*character_expression*などの大規模なデータ型でなければなりません**varchar(max)**。  
   
 ## <a name="return-types"></a>戻り値の型  
  返します**varchar**とき*character_expression*非 Unicode 文字データ型です。  
@@ -127,7 +129,13 @@ fg
 ```  
   
 ## <a name="see-also"></a>参照  
- [CAST および CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [左と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RTRIM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [部分文字列と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/substring-transact-sql.md)  
+ [トリム &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/trim-transact-sql.md)  
+ [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  
   

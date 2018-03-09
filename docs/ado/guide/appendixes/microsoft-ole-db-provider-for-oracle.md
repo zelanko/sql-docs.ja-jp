@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eb8cf771b758dc81bb80e38bc709c611d8125921
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35bd07e150d1d56a1ea94542b0bd5b3c1b46d3d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle の概要
 > [!IMPORTANT]
@@ -73,7 +74,7 @@ MSDAORA
 |**ウィンドウ ハンドル**|ウィンドウ ハンドルを使用して追加の情報を要求することを示します。|
 |**[Locale Identifier]**|32 ビットの一意の番号 (1033 など)、ユーザーの言語に関連する設定を指定することを示します。 これらの設定を示す日付と時刻を書式設定方法、項目はアルファベット順に並べ替えられます、文字列を比較してなります。|
 |**OLE DB サービス**|OLE DB サービスを有効または無効を指定するビットマスクを示します。|
-|**プロンプト**|接続が確立されるときにユーザーに確認するかどうかを示します。|
+|**Prompt**|接続が確立されるときにユーザーに確認するかどうかを示します。|
 |**拡張プロパティ**|プロバイダー固有の拡張された接続情報を含む文字列。 このプロパティを使用して、プロパティのメカニズムを通じてを記述できないプロバイダーに固有の接続情報に対してだけです。|
 
 ## <a name="see-also"></a>参照

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10012"
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 caps.latest.revision: "23"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 20cfc19fedbf8bc1369804c2795f180228b6a88b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e563d196486a20a9d7df43d807f8a1726df3c7cc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>リレーショナル クエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
   レポート ビルダーと [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーにはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーが用意されており、レポート データセットの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases リレーショナル データベース、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] からレポート データセットに取得するデータを指定するクエリの作成に使用できます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。 グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
@@ -111,7 +109,7 @@ ms.lasthandoff: 12/05/2017
 |Max|グループ内の最大値を返します。 SQL MAX 集計を実装します。|  
 |StDev|グループ内のすべての値の統計的標準偏差を返します。 SQL STDEV 集計を実装します。|  
 |StDevP|グループで指定された式のすべての値の母集団の統計的標準偏差を返します。 SQL STDEVP 集計を実装します。|  
-|Sum|グループ内のすべての値の合計を返します。 SQL SUM 集計を実装します。|  
+|SUM|グループ内のすべての値の合計を返します。 SQL SUM 集計を実装します。|  
 |Var|グループ内のすべての値の統計的変位を返します。 SQL VAR 集計を実装します。|  
 |VarP|グループ内のすべての値の母集団の統計的変位を返します。 SQL VARP 集計を実装します。|  
 |Avg Distinct|一意の平均値を返します。 AVG 集計と DISTINCT キーワードの組み合わせを実装します。|  
@@ -154,7 +152,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **フィールドの編集** : テーブル間のリレーションシップの追加や変更を行う **[関連フィールドの編集]** ダイアログ ボックスが開きます。 結合する左右のテーブルのフィールドを選択します。 左テーブルおよび右テーブルの複数のフィールドを結合すると、リレーションシップ内で複数の結合条件を指定できます。 左右のテーブルを結合する 2 つのフィールドは同じ名前でなくてもかまいません。 結合されるフィールドのデータ型は、互換性のあるデータ型である必要があります。  
   
--   **リレーションシップの削除**  : 選択したリレーションシップを削除します**。**  
+-   **リレーションシップの削除** : 選択したリレーションシップを削除します**。**  
   
 -   **[上へ移動]** および **[下へ移動]** : **[リレーションシップ]** ボックスの一覧内のリレーションシップを上下に移動します。 クエリ内のリレーションシップの配置順によっては、クエリ結果に影響が出る場合があります。 リレーションシップがクエリに追加される順序は、 **[リレーションシップ]** ボックスの一覧内でリレーションシップが表示される順序と同じです。  
   

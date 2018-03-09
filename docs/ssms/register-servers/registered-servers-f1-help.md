@@ -3,12 +3,13 @@ title: "[登録済みサーバー] の F1 ヘルプ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], help
 - SQL Server Management Studio Help [SQL Server], registered servers
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd228d9af6de24bc8e57a1ae640af9fa0e613695
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fec25c98a971d3f38d4113042d50a25469e56777
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="registered-servers-f1-help"></a>[登録済みサーバー] の F1 ヘルプ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] ここでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [登録済みサーバー] コンポーネントの F1 ヘルプについて説明します。 さまざまなオプションについて説明します。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+ここでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [登録済みサーバー] コンポーネントの F1 ヘルプについて説明します。 さまざまなオプションについて説明します。
   
  登録済みサーバーの詳細および登録済みサーバーの処理方法へのリンクについては、「 [登録済みサーバー](../../tools/sql-server-management-studio/register-servers.md) 」をご覧ください。 
  
@@ -40,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
  このページにアクセスするには、[登録済みサーバー] で、 **[登録済みサーバー]** ツール バーの **[Reporting Services]** をクリックし、登録済みサーバー グループ ( **[Reporting Services]**など) を右クリックして、 **[新規作成]**をポイントし、 **[サーバーの登録]**をクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **サーバーの種類**  
  [登録済みサーバー] を使用してサーバーを登録する場合、 **[サーバーの種類]** ボックスは読み取り専用になり、 **[登録済みサーバー]** ペインに表示されているサーバーの種類と一致する値が表示されます。 別の種類のサーバーを登録するには、 **[登録済みサーバー]** ツール バーで目的のサーバーをクリックした後で、新しいサーバーの登録を開始します。  
   
@@ -86,7 +88,7 @@ ms.lasthandoff: 12/05/2017
   
  このページにアクセスするには、[登録済みサーバー] で、[登録済みサーバー] ツール バーの **[Analysis Services]** をクリックし、 **Analysis Services**などの登録済みサーバー グループを右クリックして、 **[新規作成]**をポイントし、 **[サーバーの登録]**をクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **サーバーの種類**  
  [登録済みサーバー] を使用してサーバーを登録する場合、 **[サーバーの種類]** ボックスは読み取り専用になり、[登録済みサーバー] ペインに表示されているサーバーの種類と一致する値が表示されます。 別の種類のサーバーを登録するには、 **[登録済みサーバー]** ツール バーで目的のサーバーをクリックした後で、新しいサーバーの登録を開始します。  
   
@@ -120,7 +122,7 @@ ms.lasthandoff: 12/05/2017
   
  このページにアクセスするには、[登録済みサーバー] で、 **[登録済みサーバー]** ツール バーの **[Integration Services]** をクリックし、登録済みサーバー グループを右クリックして、 **[新規作成]**をポイントし、 **[サーバーの登録]**をクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **サーバーの種類**  
  [登録済みサーバー] でサーバーを登録する場合は、 **[サーバーの種類]** ボックスは読み取り専用になっており、そのサーバーは [登録済みサーバー] に表示されるサーバーの種類に一致します。 別の種類のサーバーを登録するには、新しいサーバーの登録を開始する前に、 **[登録済みサーバー]**, **[データベース エンジン]**, **[分析サーバー]**, **[Reporting Services]** 、**[SQL Server Compact]** **[Edition]** 、または **[Integration Services]** をクリックします。  
   

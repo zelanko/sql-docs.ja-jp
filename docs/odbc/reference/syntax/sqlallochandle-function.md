@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e355208a1ddcae70eaea4fd01e7d3193e3b2db47
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b8bf173bf0055dc06cf475aa72e137d9ca426222
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle 関数
 **準拠**  
@@ -70,7 +70,7 @@ SQLRETURN SQLAllocHandle(
  *OutputHandlePtr*  
  [出力]新しく割り当てられたデータ構造体へのハンドルを返すバッファーへのポインター。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_INVALID_HANDLE、または SQL_ERROR です。  
   
  場合に、環境ハンドル以外のハンドルを割り当てるときに**SQLAllocHandle** 、SQL_ERROR が返されます設定*OutputHandlePtr* SQL_NULL_HDBC、SQL_NULL_HSTMT、または SQL_NULL_HDESC、に応じて、値*HandleType*出力引数が null ポインターでない限り、します。 アプリケーション内のハンドルに関連付けられている診断データの構造から追加情報を取得できますし、 *InputHandle*引数。  

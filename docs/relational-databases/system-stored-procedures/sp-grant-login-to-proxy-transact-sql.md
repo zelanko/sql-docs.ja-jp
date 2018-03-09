@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_grant_login_to_proxy
 - sp_grant_login_to_proxy_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_grant_login_to_proxy
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_grant_login_to_proxy
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a1d3fb0ea64fc6e6545c5eb5754853d667ff4110
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b5a4788da049ef1d3c69f604aacdf9000f9ed624
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spgrantlogintoproxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +51,19 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@login_name**  =] **'***login_name***'**  
+ [ **@login_name** = ] **'***login_name***'**  
  アクセス権を与えるログイン名を指定します。 *Login_name*は**nvarchar (256)**、既定値は NULL です。 いずれかの **@login_name** 、  **@fixed_server_role** 、または **@msdb_role** 指定する必要がストアド プロシージャは失敗します。  
   
- [  **@fixed_server_role** =] **'***fixed_server_role***'**  
+ [ **@fixed_server_role**= ] **'***fixed_server_role***'**  
  アクセス権を与える固定サーバー ロールを指定します。 *Fixed_server_role*は**nvarchar (256)**、既定値は NULL です。 いずれかの **@login_name** 、  **@fixed_server_role** 、または **@msdb_role** 指定する必要がストアド プロシージャは失敗します。  
   
- [  **@msdb_role** =] '*msdb_role*'  
+ [ **@msdb_role**= ] '*msdb_role*'  
  データベース ロール、 **msdb**へのアクセスを許可するデータベース。 *Msdb_role*は**nvarchar (256)**、既定値は NULL です。 いずれかの **@login_name** 、  **@fixed_server_role** 、または **@msdb_role** 指定する必要がストアド プロシージャは失敗します。  
   
- [  **@proxy_id** =] *id*  
+ [ **@proxy_id**= ] *id*  
  アクセス権の対象となるプロキシの識別子を指定します。 *Id*は**int**、既定値は NULL です。 いずれかの **@proxy_id** または **@proxy_name** を指定してください、ストアド プロシージャは失敗します。  
   
- [  **@proxy_name** =] **'***proxy_name***'**  
+ [ **@proxy_name**= ] **'***proxy_name***'**  
  アクセス権の対象となるプロキシの名前を指定します。 *Proxy_name*は**nvarchar (256)**、既定値は NULL です。 いずれかの **@proxy_id** または **@proxy_name** を指定してください、ストアド プロシージャは失敗します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -69,7 +72,7 @@ sp_grant_login_to_proxy
 ## <a name="remarks"></a>解説  
  **sp_grant_login_to_proxy**から実行する必要があります、 **msdb**データベース。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールを実行**sp_grant_login_to_proxy**です。  
   
 ## <a name="examples"></a>使用例  

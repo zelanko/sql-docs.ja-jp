@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - sys.fn_builtin_permissions_TSQL
 - fn_builtin_permissions_TSQL
 - sys.fn_builtin_permissions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - compact permissions types
 - viewing permission hierarchy
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - displaying permission hierarchy
 - sys.fn_builtin_permissions function
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
-caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d36338abefd30103b80a202ebde030d73b6b071
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 41e53169a20ff3082afc0e4b8f10ab76e79ca87d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,19 +73,19 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  *empty_string*  
  DEFAULT と同じです。  
   
- **'**< securable_class >**'**  
- 1 つのセキュリティ保護可能なクラスの名前が呼び出されると、sys.fn_builtin_permissions はクラスに適用されるすべての権限を返します。 < securable_class > は、文字列リテラルで引用符が必要です。 **nvarchar (60)**  
+ **'**<securable_class>**'**  
+ 1 つのセキュリティ保護可能なクラスの名前が呼び出されると、sys.fn_builtin_permissions はクラスに適用されるすべての権限を返します。 < securable_class > は、文字列リテラルで引用符が必要です。 **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>返されたテーブル  
   
 |列名|データ型|[照合順序]|Description|  
 |-----------------|---------------|---------------|-----------------|  
-|class_desc|**nvarchar (60)**|サーバーの照合順序|セキュリティ保護可能なクラスの説明。|  
-|permission_name|**nvarchar (60)**|サーバーの照合順序|権限名。|  
+|class_desc|**nvarchar(60)**|サーバーの照合順序|セキュリティ保護可能なクラスの説明。|  
+|permission_name|**nvarchar(60)**|サーバーの照合順序|権限名。|  
 |型|**varchar (4)**|サーバーの照合順序|省略形式で示される、権限の種類のコード。 次の表で説明します。|  
-|covering_permission_name|**nvarchar (60)**|サーバーの照合順序|NULL でない場合、このクラスの権限で、このクラスの他の権限を含む権限の名前。|  
-|parent_class_desc|**nvarchar (60)**|サーバーの照合順序|NULL でない場合、現在のクラスを含む親クラスの名前。|  
-|parent_covering_permission_name|**nvarchar (60)**|サーバーの照合順序|NULL でない場合、親クラスの権限で、そのクラスの他の権限をすべて含む権限の名前。|  
+|covering_permission_name|**nvarchar(60)**|サーバーの照合順序|NULL でない場合、このクラスの権限で、このクラスの他の権限を含む権限の名前。|  
+|parent_class_desc|**nvarchar(60)**|サーバーの照合順序|NULL でない場合、現在のクラスを含む親クラスの名前。|  
+|parent_covering_permission_name|**nvarchar(60)**|サーバーの照合順序|NULL でない場合、親クラスの権限で、そのクラスの他の権限をすべて含む権限の名前。|  
   
 ### <a name="permission-types"></a>アクセス許可の種類  
   
@@ -117,7 +119,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AL|ALTER<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|SERVER ROLE|  
 |AL|ALTER|SERVICE|  
 |AL|ALTER|SYMMETRIC KEY|  
-|AL|ALTER|User|  
+|AL|ALTER|USER|  
 |AL|ALTER|XML SCHEMA COLLECTION|  
 |ALAA|ALTER ANY SERVER AUDIT|SERVER|  
 |ALAG|ALTER ANY AVAILABILITY GROUP<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|SERVER|  
@@ -184,7 +186,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|SERVICE|  
 |CL|CONTROL|SYMMETRIC KEY|  
 |CL|CONTROL|TYPE|  
-|CL|CONTROL|User|  
+|CL|CONTROL|USER|  
 |CL|CONTROL|XML SCHEMA COLLECTION|  
 |CO|CONNECT|DATABASE|  
 |CO|CONNECT|ENDPOINT|  
@@ -223,23 +225,23 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRTY|CREATE TYPE|DATABASE|  
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
-|DABO|ADMINISTER DATABASE BULK OPERATIONS<br /> **適用対象**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]|DATABASE|  
+|DABO|ADMINISTER DATABASE BULK OPERATIONS<br /> **に適用されます**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。|DATABASE|  
 |DL|DELETE|DATABASE|  
 |DL|DELETE|OBJECT|  
 |DL|DELETE|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|DATABASE|  
-|EX|CREATE ステートメントを実行する前に、|DATABASE|  
-|EX|CREATE ステートメントを実行する前に、|OBJECT|  
-|EX|CREATE ステートメントを実行する前に、|SCHEMA|  
-|EX|CREATE ステートメントを実行する前に、|TYPE|  
-|EX|CREATE ステートメントを実行する前に、|XML SCHEMA COLLECTION|  
+|EX|EXECUTE|DATABASE|  
+|EX|EXECUTE|OBJECT|  
+|EX|EXECUTE|SCHEMA|  
+|EX|EXECUTE|TYPE|  
+|EX|EXECUTE|XML SCHEMA COLLECTION|  
 |IAL|IMPERSONATE ANY LOGIN<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|SERVER|  
 |IM|IMPERSONATE|Login|  
-|IM|IMPERSONATE|User|  
+|IM|IMPERSONATE|USER|  
 |IN|INSERT|DATABASE|  
 |IN|INSERT|OBJECT|  
 |IN|INSERT|SCHEMA|  
-|KIDC|KILL DATABASE CONNECTION<br />**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|DATABASE|  
+|KIDC|KILL DATABASE CONNECTION<br />**に適用されます**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。|DATABASE|  
 |RC|RECEIVE|OBJECT|  
 |RF|REFERENCES|ASSEMBLY|  
 |RF|REFERENCES|ASYMMETRIC KEY|  
@@ -313,7 +315,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|SERVICE|  
 |VW|VIEW DEFINITION|SYMMETRIC KEY|  
 |VW|VIEW DEFINITION|TYPE|  
-|VW|VIEW DEFINITION|User|  
+|VW|VIEW DEFINITION|USER|  
 |VW|VIEW DEFINITION|XML SCHEMA COLLECTION|  
 |VWAD|VIEW ANY DEFINITION|SERVER|  
 |VWCK|列の暗号化キーの定義を表示します。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|DATABASE|  
@@ -341,27 +343,27 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 > このトピックの一部として、ポスターは、読み取るには小さすぎます。 データベース エンジンの権限ポスターは、 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)からダウンロードしてください。  
    
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-listing-all-built-in-permissions"></a>A. 組み込み権限を一覧表示する   
 使用して`DEFAULT`または空の文字列をすべてのアクセス許可を返します。   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT);
 SELECT * FROM sys.fn_builtin_permissions('');  
 ```  
   
 ### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>B. 対称キーに設定できる権限を一覧表示する   
 そのクラスのすべてのアクセス許可を返すクラスを指定します。   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(N'SYMMETRIC KEY');  
 ```  
   
 ### <a name="c-listing-classes-on-which-there-is-a-select-permission"></a>C. SELECT 権限があるクラスを一覧表示する   
   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT)   
     WHERE permission_name = 'SELECT';  
 ```  

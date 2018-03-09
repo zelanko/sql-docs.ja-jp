@@ -8,24 +8,26 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-caps.latest.revision: "154"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 387e808d57395db8978611b311f54df441eabc91
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: db010db48a42113c147751021404ac0dbc29ecaf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE ステートメントの引数 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +72,9 @@ ms.lasthandoff: 11/17/2017
  { *database_name* | **@***database_name_var*}  
  **サポートされる:**[復元  ](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- ログまたはデータベース全体の復元先データベースを指定します。 変数として指定する場合 (**@***database_name_var*)、この名前を指定できます文字列定数として指定 ( **@**  *database_name_var* = *データベース*_*名前*) または文字の文字列データ型の変数として以外の**ntext**または**テキスト**データ型。  
+ ログまたはデータベース全体の復元先データベースを指定します。 変数として指定する場合 (**@***database_name_var*)、この名前を指定できます文字列定数として指定 (**@***database_name_var*  = *データベース*_*名前 *) 文字の文字列データ型の変数として以外の**ntext**または**テキスト**データ型。  
   
- \<file_or_filegroup_or_page > [ **、**.*n* ]  
+ \<file_or_filegroup_or_page> [ **,**...*n* ]  
  **サポートされる:**[復元  ](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  RESTORE DATABASE または RESTORE LOG ステートメントに含める論理ファイル、論理ファイル グループ、またはページの名前を指定します。 ファイルまたはファイル グループのリストを指定できます。  
@@ -85,10 +87,10 @@ ms.lasthandoff: 11/17/2017
   
 -   バックアップにプライマリ ファイル グループが含まれており、部分バックアップを実行する場合。 この場合、バックアップ セットから自動的にログが復元されるので、復元ログは必要ありません。  
   
-ファイル **=**  { *logical_file_name_in_backup*| **@***logical_file_name_in_backup_var*}  
+ファイル **=**  { *logical_file_name_in_backup*| **@ * * * logical_file_name_in_backup_var*}  
  データベースの復元に含めるファイルの名前を指定します。  
   
-ファイル グループ **=**  { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
+FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
  データベースの復元に含めるファイル グループの名前を指定します。  
   
  **注**ファイル グループが単純復旧モデルで使用できる、指定したファイル グループは読み取り専用と部分復元は、(WITH PARTIAL を使用) の場合は、これは場合にのみです。 このとき、復元されなかった読み書き可能なファイル グループは機能していないとマークされ、ここで復元されたデータベースには以降復元できなくなります。  
@@ -96,16 +98,16 @@ ms.lasthandoff: 11/17/2017
 READ_WRITE_FILEGROUPS  
  読み書き可能なファイル グループをすべて選択します。 このオプションは、読み書き可能なファイル グループを復元した後で、読み取り専用のファイル グループを復元する場合に特に便利です。  
   
-ページ = **'***ファイル***:***ページ*[ **、**.*n* ]**'**  
+ページ =  **'***ファイル***: * * * ページ*[ **、**.*n *]**'**  
  ページ復元の対象となる 1 ページまたは複数ページのリストを指定します (ページ復元は、完全復旧モデルまたは一括ログ復旧モデルを使用しているデータベースに対してのみサポートされています)。 値は次のとおりです。  
   
 PAGE  
  1 つ以上のファイルおよびページで構成されるリストです。  
   
- *ファイル*  
+ *file*  
  復元する特定ページを含むファイルのファイル ID です。  
   
- *ページ*  
+ *page*  
  ファイル内の復元対象ページのページ ID です。  
   
  *n*  
@@ -121,7 +123,7 @@ PAGE
  [ **,**...*n* ]  
  複数のファイル、ファイル グループ、およびページをコンマ区切りリストに指定できることを示すプレースホルダーです。 数値の制限はありません。  
   
-{ \<Backup_device > [ **、**.*n* ]|\<database_snapshot >}通常、バックアップを復元するバックアップ デバイスを指定します。 または、RESTORE DATABASE ステートメントの中で FROM 句を使用して、データベースを元に戻すためのデータベース スナップショットの名前を指定することもできます。この場合、WITH 句は使用できません。  
+FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } Typically, specifies the backup devices from which to restore the backup. または、RESTORE DATABASE ステートメントの中で FROM 句を使用して、データベースを元に戻すためのデータベース スナップショットの名前を指定することもできます。この場合、WITH 句は使用できません。  
   
  FROM 句を省略した場合、バックアップの復元は行われず、 代わりにデータベースが復旧されます。 この機能により、NORECOVERY オプションで復元されているデータベースを復旧したり、スタンバイ サーバーに切り替えることができます。 FROM 句を省略する場合は、WITH 句の中で NORECOVERY、RECOVERY、または STANDBY を指定する必要があります。  
   
@@ -131,11 +133,9 @@ PAGE
   
  \<backup_device >:: = 次のように、バックアップ操作に使用する論理または物理バックアップ デバイスを指定します。  
   
- { *logical_backup_device_name* | **@***logical_backup_device_name_var* }  
- によって作成されたバックアップ デバイスの識別子の規則に従う必要があります、論理名は、 **sp_addumpdevice**からデータベースを復元します。 変数として指定する場合 (**@***logical_backup_device_name_var*)、バックアップ デバイス名を指定できます文字列定数として指定 ( **@** *logical_backup_device_name_var* = *logical_backup_device_name*) または文字の文字列データ型の変数として以外の**ntext**または**テキスト**データ型。  
+ { *logical_backup_device_name* | **@***logical_backup_device_name_var* } Is the logical name, which must follow the rules for identifiers, of the backup device(s) created by **sp_addumpdevice** from which the database is restored.変数として指定する場合 (**@***logical_backup_device_name_var*)、バックアップ デバイス名を指定できます文字列定数として指定 (**@ * * * logical_backup_device_name_var*  =  *logical_backup_device_name*) または文字の文字列データ型の変数として以外の**ntext**または**テキスト**データ型。  
   
- {ディスク |テープ}  **=**  { **'***physical_backup_device_name***'**  |   **@** *physical_backup_device_name_var* }  
- 指定したディスク デバイスまたはテープ デバイスから、バックアップを復元することを許可します。 デバイスの実際の名前 (たとえば、完全なパスとファイル名) でディスクとテープのデバイスの種類を指定する必要があります:`DISK ='Z:\SQLServerBackups\AdventureWorks.bak'`または`TAPE ='\\\\.\TAPE0'`です。 変数として指定されている場合 (**@***physical_backup_device_name_var*)、デバイス名を指定できます文字列定数として指定 ( **@**  *physical_backup_device_name_var* = '*physcial_backup_device_name*') または文字の文字列データ型の変数として以外の**ntext**または**テキスト**データ型。  
+ {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } Allows backups to be restored from the named disk or tape device.デバイスの実際の名前 (たとえば、完全なパスとファイル名) でディスクとテープのデバイスの種類を指定する必要があります:`DISK ='Z:\SQLServerBackups\AdventureWorks.bak'`または`TAPE ='\\\\.\TAPE0'`です。変数として指定されている場合 (**@***physical_backup_device_name_var*)、デバイス名を指定できます文字列定数として指定 (**@ * * * physical_backup_device_name_var* = '*physcial_backup_device_name *') または文字の文字列データ型の変数として以外の**ntext**または**テキスト**データ型。  
   
  ネットワーク サーバーを UNC 名で指定する場合は、デバイスの種類に DISK を指定してください (UNC 名にはマシン名を含める必要があります)。 UNC 名を使用する方法の詳細については、次を参照してください。[バックアップ デバイス &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -155,10 +155,10 @@ PAGE
 > [!NOTE]  
 >  ミラー化メディア セットからバックアップを復元する場合は、各メディア ファミリに対して 1 つのミラーだけを指定できます。 エラーが発生したとき、他に複数のミラーを用意しておくと復元に関する問題をすばやく解決できる場合があります。 損傷したメディア ボリュームは、別のミラーの対応するボリュームで代替できます。 オフライン復元のメディア ファミリより少ない数のデバイスから復元することができますが、各ファミリが 1 回だけ処理されることに注意してください。  
   
-\<database_snapshot >:: =  
+\<database_snapshot>::=  
 **サポートされる:**[データベースの復元  ](../../t-sql/statements/restore-statements-transact-sql.md)  
   
-DATABASE_SNAPSHOT  **=**  *database_snapshot_name*  
+DATABASE_SNAPSHOT **=***database_snapshot_name*  
  指定されたデータベース スナップショットにデータベースを元に戻します*database_snapshot_name*です。 DATABASE_SNAPSHOT オプションは、データベース全体の復元にのみ使用できます。 元に戻す操作では、データベース スナップショットがデータベース全体のバックアップの代わりとなります。  
   
  また、指定したデータベース スナップショットが、データベース上の唯一のデータベース スナップショットであることが必要です。 元に戻す操作の実行中は、データベース スナップショットと出力先データベースの両方が `In restore` としてマークされます。 詳細については、「解説」セクションを参照してください。 [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)です。  
@@ -176,9 +176,9 @@ DATABASE_SNAPSHOT  **=**  *database_snapshot_name*
   
  PARTIAL オプションは、RESTORE LOG ステートメントでは使用できません。  
   
- PARTIAL オプションによって段階的な部分復元の初期段階を開始できるようになりました。この場合、残りのファイル グループは後で復元することができます。 詳細については、「[段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)」を参照してください。  
+ PARTIAL オプションによって段階的な部分復元の初期段階を開始できるようになりました。この場合、残りのファイル グループは後で復元することができます。 詳細については、「[段階的な部分復元の実行 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)」を参照してください。  
   
- [**回復**|NORECOVERY |スタンバイ モード]  
+ [ **RECOVERY** | NORECOVERY | STANDBY ]  
  **サポートされる:**[復元  ](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  **回復**  
@@ -204,7 +204,7 @@ DATABASE_SNAPSHOT  **=**  *database_snapshot_name*
   
  場合によっては、RESTORE WITH NORECOVERY では、ロールフォワード セットがデータベースとの一貫性を保てるポイントまでロールフォワードされることがあります。 このような場合、ロールバックは発生せず、データはオフラインのままになります。これはこのオプションに想定されている動作ですが、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]からは情報メッセージが返され、RECOVERY オプションを使用してロールフォワード セットを復元できるようになったことが示されます。  
   
-スタンバイ **=**  *standby_file_name*  
+STANDBY **=***standby_file_name*  
  スタンバイ ファイルを指定します。このファイルを使用すると、復旧の結果を元に戻すことができます。 STANDBY オプションは、部分復元を含むオフライン復元で使用でき、 オンライン復元では使用できません。 オンライン復元操作に STANDBY オプションを指定すると、復元操作は失敗します。 また、データベースのアップグレードが必要な場合も、STANDBY は使用できません。  
   
  スタンバイ ファイルは、RESTORE WITH STANDBY の Undo パスにおいて変更されるページに対して、"書き込み時コピー" のプリイメージを保持するために使用されます。 スタンバイ ファイルを使用すると、トランザクション ログの復元の間では、読み取り専用でデータベースにアクセスできます。また、このファイルは、ウォーム スタンバイ サーバーを使用する場合や、特別な復旧状況 (ログの復元の間にデータベースを調査する場合など) で使用できます。 RESTORE WITH STANDBY 操作の後、次に RESTORE 操作を行うと、UNDO ファイルは自動的に削除されます。 次に RESTORE 操作を行う前にスタンバイ ファイルを手動で削除した場合は、データベース全体をもう一度復元する必要があります。 データベースが STANDBY の状態にある間、このスタンバイ ファイルは他のデータベース ファイルと同様に扱う必要があります。 ただし他のデータベース ファイルと異なり、このファイルは、アクティブな復元操作の実行中のみ、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって開かれたままになります。  
@@ -223,13 +223,13 @@ LOADHISTORY
   
  復元操作に情報を読み込むことを指定、 **msdb**履歴テーブルです。 LOADHISTORY オプションは、1 つのバックアップ セットの検証中には、約にについてを読み込みます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メディアに保存されたバックアップがバックアップに設定され、復元履歴テーブルに、 **msdb**データベース。 履歴テーブルの詳細については、次を参照してください。[システム テーブルと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/system-tables-transact-sql.md).  
   
-#### <a name="generalwithoptions--n-"></a>\<general_WITH_options > [、.. .n]  
+#### <a name="generalwithoptions--n-"></a>\<general_WITH_options> [ ,...n ]  
  RESTORE DATABASE および RESTORE LOG ステートメントでは、一般的な WITH オプションをすべて使用できます。 次に示すように、1 つまたは複数の補助ステートメントによって一部のオプションもサポートされます。  
   
 ##### <a name="restore-operation-options"></a>復元操作オプション  
  以下のオプションは、復元処理の動作に影響します。  
   
-移動**'***logical_file_name_in_backup***'** TO **'***operating_system_file_name* **'** [ ...*n* ]  
+移動**'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [.*n* ]  
  **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)と[RESTORE VERIFYONLY  ](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  ファイルを指定するデータまたはログで論理名が指定された*logical_file_name_in_backup*で指定された場所に復元することによって移動する必要があります*operating_system_file_name*です。 バックアップ セット内のデータ ファイルまたはログ ファイルの論理ファイル名は、バックアップ セットが作成されたときのデータベース内における論理名と同じです。  
@@ -289,7 +289,7 @@ RESTRICTED_USER
 ##### <a name="backup-set-options"></a>バックアップ セット オプション  
  以下のオプションは、復元されるバックアップを含んでいるバックアップ セットに適用されます。  
   
-ファイル **=** { *backup_set_file_number* | **@***backup_set_file_number* }  
+FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }  
  **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。  
   
  復元するバックアップ セットを特定します。 たとえば、 *1* の **backup_set_file_number** は、バックアップ 目での最初のバックアップ セットを示し、2 の *backup_set_file_number* は **2** 番目のバックアップ セットを示します。 バックアップ セットの *backup_set_file_number* を取得するには、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) ステートメントを使用します。  
@@ -297,9 +297,9 @@ RESTRICTED_USER
  指定されていない場合、既定値は**1**、RESTORE HEADERONLY を除き、メディア セット内のすべてのバックアップ セットが処理される場合。 詳細については、後の「バックアップ セットの指定」を参照してください。  
   
 > [!IMPORTANT]  
->  この FILE オプションは、データベース ファイル、ファイルを指定するためのファイル オプションに関連する **=**  { *logical_file_name_in_backup*  |   **@** *logical_file_name_in_backup_var* }。  
+>  この FILE オプションは、データベース ファイル、ファイルを指定するためのファイル オプションに関連する **=**  { *logical_file_name_in_backup* | **@ * * * logical_file_name_in_backup_var* }.  
   
- パスワード **=**  {*パスワード* | **@***password_variable* }  
+ PASSWORD  **=** { *password* | **@***password_variable* }  
  **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。  
   
  バックアップ セットのパスワードを指定します。 バックアップ セットのパスワードは文字列です。  
@@ -315,7 +315,7 @@ RESTRICTED_USER
 ##### <a name="media-set-options"></a>メディア セットのオプション  
  以下のオプションはメディア セット全般に適用されます。  
   
- MEDIANAME  **=**  { *media_name* | **@***media_name_variable*}  
+ MEDIANAME  **=**  { *media_name* | **@ * * * media_name_variable*}  
  **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。  
   
  メディアの名前を指定します。 メディア名を指定する場合、その名前がバックアップ ボリューム上のメディア名と一致している必要があります。一致していない場合、復元操作は終了します。 RESTORE ステートメントにメディア名を指定しない場合は、バックアップ ボリューム上のメディア名と一致するかどうかの確認は行われません。  
@@ -323,7 +323,7 @@ RESTRICTED_USER
 > [!IMPORTANT]  
 >  バックアップ操作と復元操作で同じメディア名を一貫して使用することで、復元操作で選択されたメディアに対する安全性チェックが強化されます。  
   
- MEDIAPASSWORD  **=**  { *mediapassword* | **@***mediapassword_variable* }  
+ MEDIAPASSWORD  **=**  { *mediapassword* | **@ * * * mediapassword_variable* }  
  **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。  
   
  メディア セットのパスワードを指定します。 メディア セットのパスワードは文字列です。  
@@ -336,7 +336,7 @@ RESTRICTED_USER
 > [!IMPORTANT]  
 >  このパスワードは、メディア セットを保護する手段としては強力なものではありません。 詳細については、各ステートメントの「アクセス許可」セクションを参照してください。  
   
- BLOCKSIZE  **=**  { *blocksize* | **@***blocksize_variable* }  
+ BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
  **サポートされる:**[復元  ](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  物理ブロック サイズをバイト単位で指定します。 サポートされるサイズは、512、1024、2048、4096、8192、16384、32768、および 65536 (64 KB) バイトです。 テープ デバイスの場合の既定値は 65536 バイトで、他のデバイスの場合の既定値は 512 バイトです。 通常は、RESTORE でデバイスに適するブロック サイズが自動的に選択されるので、このオプションは不要です。 ブロック サイズは、自動的に選択された値よりも明示的に指定された値が優先されます。  
@@ -349,14 +349,14 @@ RESTRICTED_USER
 ##### <a name="data-transfer-options"></a>データ転送オプション  
  このオプションでは、バックアップ デバイスからのデータ転送を最適化できます。  
   
- BUFFERCOUNT  **=**  { *buffercount* | **@***buffercount_variable* }  
+ BUFFERCOUNT  **=**  { *buffercount* | **@ * * * buffercount_variable* }  
  **サポートされる:**[復元  ](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  復元操作に使用される I/O バッファーの総数を指定します。 任意の正の整数を指定できますが、バッファー数が多いと Sqlservr.exe プロセスで仮想アドレス空間が不足し、"メモリ不足" エラーの原因となる場合があります。  
   
  バッファーで使用される領域の合計はによって決定されます。 *buffercount***\****maxtransfersize*です。  
   
- MAXTRANSFERSIZE  **=**  { *maxtransfersize* | **@***maxtransfersize_variable* }  
+ MAXTRANSFERSIZE  **=**  { *maxtransfersize* | **@ * * * maxtransfersize_variable* }  
  **サポートされる:**[復元  ](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  バックアップ メディアと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間で使用される最大転送単位をバイト単位で指定します。 有効値は 65536 バイト (64 KB) の倍数で、最大有効値は 4194304 バイト (4 MB) です。  
@@ -384,7 +384,7 @@ RESTRICTED_USER
  NO_CHECKSUM  
  復元操作によるチェックサムの検証を、明示的に無効にします。  
   
- {**場合は STOP_ON_ERROR** |CONTINUE_AFTER_ERROR}  
+ { **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR }  
  **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。  
   
  STOP_ON_ERROR  
@@ -396,7 +396,7 @@ RESTRICTED_USER
  バックアップに破損したページが含まれている場合は、エラーがない別のバックアップ、たとえばページが破損する前に作成したバックアップなどを使用して、復元操作をもう一度実行することをお勧めします。 ただし、最終的な手段として、復元ステートメントの CONTINUE_AFTER_ERROR オプションを使用して破損したバックアップを復元し、データの復旧を試みることもできます。  
   
 ##### <a name="filestream-options"></a>FILESTREAM オプション  
- FILESTREAM (DIRECTORY_NAME =*directory_name* )  
+ FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
  **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)と[RESTORE VERIFYONLY  ](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
 **適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -436,7 +436,7 @@ RESTRICTED_USER
 > [!NOTE]  
 >  インスタンスである NOREWIND を使用する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]巻き戻しやアンロードのいずれかのオプションを使用する同じプロセスで実行されているバックアップまたは復元ステートメントまたはサーバー インスタンスがシャット ダウンされるまで、テープ ドライブの所有権を保持します。 テープを開いたままにすると、他のプロセスはそのテープにアクセスできません。 開いているテープの一覧を表示して、開いているテープを閉じる方法については、次を参照してください。[バックアップ デバイス &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
- {**アンロード**|NOUNLOAD}  
+ { **UNLOAD** | NOUNLOAD }  
  **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、 [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。  
   
  このオプションはテープ デバイスにのみ適用されます。 テープ以外のデバイスが使用される場合、このオプションは無視されます。  
@@ -474,10 +474,10 @@ RESTRICTED_USER
   
  データベース ミラーリングでの変更データ キャプチャの使用については、次を参照してください。[変更データ キャプチャとその他の SQL Server 機能](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)します。  
   
-#### <a name="servicebrokerwithoptions"></a>\<service_broker_WITH_options >  
+#### <a name="servicebrokerwithoptions"></a>\<service_broker_WITH_options>  
  オンに[!INCLUDE[ssSB](../../includes/sssb-md.md)]メッセージ配信のオンまたはオフまたは、新しいセット[!INCLUDE[ssSB](../../includes/sssb-md.md)]識別子。 このオプションは、関連する場合にのみ、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] (アクティブ)、データベースのバックアップが作成されたときに有効にします。  
   
- {ENABLE_BROKER |ERROR_BROKER_CONVERSATIONS |NEW_BROKER}  
+ { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
  **サポートされる:**[データベースの復元  ](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  ENABLE_BROKER  
@@ -489,7 +489,7 @@ RESTRICTED_USER
  NEW_BROKER  
  データベースに新しい Service Broker 識別子を割り当てることを指定します。 データベースは新しい Service Broker と見なされるため、データベースにおける既存のメッセージ交換は、終了ダイアログ メッセージを生成せずに、直ちに削除されます。 古い Service Broker 識別子を参照するルートは、新しい識別子を使用して作成し直す必要があります。  
   
-#### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options >  
+#### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options>  
  **サポートされる:**[RESTORE {DATABASE |ログ}](../../t-sql/statements/restore-statements-transact-sql.md)および完全または一括ログ復旧モデルに対してのみです。  
   
  STOPAT、STOPATMARK、または STOPBEFOREMARK 句で目的の復旧ポイントを指定することで、特定の時点またはトランザクションにデータベースを復元できます。 指定された時間またはトランザクションへの復元は、常にログ バックアップから行われます。 復元シーケンスのすべての RESTORE ステートメントで、同一の STOPAT、STOPATMARK、STOPBEFOREMARK のいずれかの句で目的の時間またはトランザクションを指定する必要があります。  
@@ -501,8 +501,8 @@ RESTRICTED_USER
   
  { STOPAT | STOPATMARK | STOPBEFOREMARK }   
  
- STOPAT  **=**  { **'***datetime***'**  |   **@** *datetime_var* }  
- 日付と時刻で指定された時点の状態にデータベースを復元することを指定、 *datetime*または **@**  *datetime_var*パラメーター。 日付と時刻の指定方法の詳細については、次を参照してください[日付と時刻のデータ型および関数 &#40;。TRANSACT-SQL と #41 です。](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ STOPAT  **=**  { **'***datetime***'** | **@ * * * datetime_var* }  
+ 日付と時刻で指定された時点の状態にデータベースを復元することを指定、 *datetime*または **@ * * * datetime_var*パラメーター。 日付と時刻の指定方法の詳細については、次を参照してください[日付と時刻のデータ型および関数 &#40;。TRANSACT-SQL と #41 です。](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  STOPAT に変数を使用する場合、変数がある必要があります**varchar**、 **char**、 **smalldatetime**、または**datetime**データ型。 指定した日付と時刻以前に書き込まれたトランザクション ログ レコードだけが、データベースに適用されます。  
   
@@ -511,7 +511,7 @@ RESTRICTED_USER
   
  詳細については、「[SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
   
- STOPATMARK  **=**  { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [AFTER **'***datetime***'** ]  
+ STOPATMARK  **=**  { **'***mark_name***'** | **'**lsn:*lsn_number * * *'**} [AFTER **'***datetime***'** ]  
  復旧を、指定された復旧ポイントに指定します。 指定したトランザクションは復旧に含められますが、このトランザクションがコミットされるのは、トランザクションの実際の生成時に既にコミットされていた場合のみです。  
   
  RESTORE DATABASE と RESTORE LOG の両方のサポート、 *lsn_number*パラメーター。 このパラメーターは、ログ シーケンス番号を指定します。  
@@ -525,7 +525,7 @@ RESTRICTED_USER
   
  詳細については、次を参照してください[関連のデータベースを一貫して復旧 &#40; を使用してマークされたトランザクション。完全復旧モデル &#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)と[ログ シーケンス番号 &#40; への回復SQL Server &#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md).  
   
- STOPBEFOREMARK  **=**  { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [AFTER **'***datetime***'** ]  
+ STOPBEFOREMARK  **=**  { **'***mark_name***'** | **'**lsn:*lsn_number * * *'**} [AFTER **'***datetime***'** ]  
  復旧を、指定された復旧ポイントまでに指定します。 指定したトランザクションは復旧に含められず、WITH RECOVERY を使用していればロールバックされます。  
   
  RESTORE DATABASE と RESTORE LOG の両方のサポート、 *lsn_number*パラメーター。 このパラメーターは、ログ シーケンス番号を指定します。  
@@ -564,7 +564,7 @@ RESTRICTED_USER
   
  復元するバックアップ セットを指定するときのオプションは次のとおりです。  
   
- ファイル **=** { *backup_set_file_number* | **@***backup_set_file_number* }  
+ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }  
   
  ここで*backup_set_file_number*メディア セット内のバックアップの位置を示します。 A *backup_set_file_number* 1 (ファイル = 1) 最初のバックアップがバックアップ メディアのセットを示す、 *backup_set_file_number* 2 の (ファイル = 2) と 2 番目のバックアップ セットを示します。  
   
@@ -578,7 +578,7 @@ RESTRICTED_USER
 |RESTORE VERIFYONLY|既定値*backup_set_file_number*は 1 です。|  
   
 > [!NOTE]  
->  バックアップ セットを指定する FILE オプションは、データベース ファイル、ファイルを指定するためのファイル オプションに関連する **=**  { *logical_file_name_in_backup*  |  **@**  *logical_file_name_in_backup_var* }。  
+>  バックアップ セットを指定する FILE オプションは、データベース ファイル、ファイルを指定するためのファイル オプションに関連する **=**  { *logical_file_name_in_backup* | **@ * * * logical_file_name_in_backup_var* }。  
   
 ## <a name="summary-of-support-for-with-options"></a>WITH オプションと対応ステートメントの一覧  
  次のオプション、RESTORE ステートメントのみでサポートされる: BLOCKSIZE、BUFFERCOUNT、MAXTRANSFERSIZE、PARTIAL、KEEP_REPLICATION、{RECOVERY |NORECOVERY |STANDBY}、REPLACE、RESTART、RESTRICTED_USER、および {STOPAT |STOPATMARK |STOPBEFOREMARK}  
@@ -590,9 +590,9 @@ RESTRICTED_USER
   
 |オプションを使用|RESTORE|RESTORE FILELISTONLY|RESTORE HEADERONLY|RESTORE LABELONLY|RESTORE REWINDONLY|RESTORE VERIFYONLY|  
 |-----------------|-------------|--------------------------|------------------------|-----------------------|------------------------|------------------------|  
-|{ CHECKSUM<br /><br /> &#124;です。NO_CHECKSUM}|√|√|√|√|—|√|  
-|{ CONTINUE_AFTER_ERROR<br /><br /> &#124;です。場合は STOP_ON_ERROR}|√|√|√|√|—|√|  
-|ファイル<sup>1</sup>|√|√|√|—|—|√|  
+|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM }|√|√|√|√|—|√|  
+|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR }|√|√|√|√|—|√|  
+|FILE<sup>1</sup>|√|√|√|—|—|√|  
 |LOADHISTORY|—|—|—|—|—|√|  
 |MEDIANAME|√|√|√|√|—|√|  
 |MEDIAPASSWORD|√|√|√|√|—|√|  
@@ -602,9 +602,9 @@ RESTRICTED_USER
 |STATS|√|—|—|—|—|√|  
 |{0} のアンロードと #124 です。NOUNLOAD}|√|√|√|√|√|√|  
   
- <sup>1</sup>ファイル **=**  *backup_set_file_number*、別個のものである {ファイル |ファイル グループ}。  
+ <sup>1</sup> FILE **=***backup_set_file_number*, which is distinct from {FILE | FILEGROUP}.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  権限については、次のトピックを参照してください。  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  

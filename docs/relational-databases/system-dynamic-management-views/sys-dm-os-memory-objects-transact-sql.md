@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_memory_objects
 - sys.dm_os_memory_objects_TSQL
 - dm_os_memory_objects_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_memory_objects dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_memory_objects dynamic management view
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 92d9fc9b94f74a08f84c6f39307a4f88e48b847b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b0a468001a048f627996e65a5743d3f136e96909
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,31 +40,31 @@ ms.lasthandoff: 11/17/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**memory_object_address**|**varbinary (8)**|メモリ オブジェクトのアドレス。 NULL 値は許可されません。|  
-|**parent_address**|**varbinary (8)**|親メモリ オブジェクトのアドレス。 NULL 値が許可されます。|  
+|**memory_object_address**|**varbinary(8)**|メモリ オブジェクトのアドレス。 NULL 値は許可されません。|  
+|**parent_address**|**varbinary(8)**|親メモリ オブジェクトのアドレス。 NULL 値が許可されます。|  
 |**pages_allocated_count**|**int**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /><br /> メモリ オブジェクトによって割り当てられているページ数。 NULL 値は許可されません。|  
 |**pages_in_bytes**|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> メモリ オブジェクトのインスタンスによって割り当てられるメモリの量 (バイト単位)。 NULL 値は許可されません。|  
 |**creation_options**|**int**|内部使用のみです。 NULL 値が許可されます。|  
 |**bytes_used**|**bigint**|内部使用のみです。 NULL 値が許可されます。|  
-|**型**|**nvarchar (60)**|メモリ オブジェクトの種類。<br /><br /> メモリ オブジェクトが属するコンポーネント、またはメモリ オブジェクトの機能を示します。 NULL 値が許可されます。|  
-|**name**|**varchar (128)**|内部使用のみです。 Null 値を許容します。|  
-|**関連付けられています**|**smallint**|メモリ オブジェクトが使用しているメモリ ノードの ID。 NULL 値は許可されません。|  
+|**type**|**nvarchar(60)**|メモリ オブジェクトの種類。<br /><br /> メモリ オブジェクトが属するコンポーネント、またはメモリ オブジェクトの機能を示します。 NULL 値が許可されます。|  
+|**name**|**varchar(128)**|内部使用のみです。 Null 値を許容します。|  
+|**memory_node_id**|**smallint**|メモリ オブジェクトが使用しているメモリ ノードの ID。 NULL 値は許可されません。|  
 |**creation_time**|**datetime**|内部使用のみです。 NULL 値が許可されます。|  
 |**max_pages_allocated_count**|**int**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /><br /> メモリ オブジェクトによって割り当てられている最大ページ数。 NULL 値は許可されません。|  
 |**page_size_in_bytes**|**int**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> メモリ オブジェクトによって割り当てられているのページのサイズ (バイト単位)。 NULL 値は許可されません。|  
 |**max_pages_in_bytes**|**bigint**|メモリ オブジェクトによって使用されるメモリの最大量。 NULL 値は許可されません。|  
-|**page_allocator_address**|**varbinary (8)**|ページ アロケーターのメモリ アドレス。 NULL 値は許可されません。 詳細については、次を参照してください。 [sys.dm_os_memory_clerks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
-|**creation_stack_address**|**varbinary (8)**|内部使用のみです。 NULL 値が許可されます。|  
+|**page_allocator_address**|**varbinary(8)**|ページ アロケーターのメモリ アドレス。 NULL 値は許可されません。 詳細については、次を参照してください。 [sys.dm_os_memory_clerks &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
+|**creation_stack_address**|**varbinary(8)**|内部使用のみです。 NULL 値が許可されます。|  
 |**sequence_num**|**int**|内部使用のみです。 NULL 値が許可されます。|  
 |**partition_type**|**int**|パーティションの種類。<br /><br /> 0 - - 分割を可能なメモリ オブジェクト<br /><br /> 1-分割可能なメモリ オブジェクトを現在パーティション分割されていません。<br /><br /> 2-分割可能なメモリ オブジェクトの NUMA ノードでパーティション分割します。 1 つの NUMA ノードがある環境でこれは、1 と等価です。<br /><br /> 3-分割可能なメモリ オブジェクト。 CPU によってパーティションに分割します。|  
 |**contention_factor**|**real**|このメモリ オブジェクトの競合を競合れないことを意味する 0 を指定する値。 メモリ割り当ての指定した数にはその期間中に競合が反射が加えられるたびに、値が更新されます。 スレッド セーフ メモリ オブジェクトにのみ適用されます。|  
 |**waiting_tasks_count**|**bigint**|メモリ オブジェクトで発生する待機の数です。 このカウンターは、このメモリ オブジェクトから割り当てられたメモリされるたびに増加します。 増分値は、このメモリ オブジェクトにアクセスするを待機中のタスクの数です。 スレッド セーフ メモリ オブジェクトにのみ適用されます。 これは、正しいかどうかを待機せずに最適な残存作業時間値です。|  
 |**exclusive_access_count**|**bigint**|メモリ オブジェクトに排他アクセスがどのくらいの頻度を指定します。 スレッド セーフ メモリ オブジェクトにのみ適用されます。  これは、正しいかどうかを待機せずに最適な残存作業時間値です。|  
-|**pdw_node_id**|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
+|**pdw_node_id**|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
   
  **partition_type**、 **contention_factor**、 **waiting_tasks_count**、および**exclusive_access_count**で実装されていない[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 階層が必要です、`VIEW DATABASE STATE`データベースの権限です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。  
   
@@ -86,7 +89,7 @@ GO
   
 ## <a name="see-also"></a>参照  
   [SQL Server オペレーティング システム関連の動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_os_memory_clerks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
+ [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   
   
 

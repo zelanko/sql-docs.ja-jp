@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4dff68e0c4e50a755ec058602bd61208ccd9b7de
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6b0cb350ffccb7ad61335de314765f2b85dc0821
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>データベース スコープ ベースの資格情報 (TRANSACT-SQL) の作成します。
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -87,14 +87,14 @@ WITH IDENTITY = 'identity_name'
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)と[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)を使用してデータベース スコープの資格情報を Azure blob ストレージからデータにアクセスします。 詳細については、次を参照してください。[例の一括データにアクセスする Azure Blob ストレージに](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)です。 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  必要があります**コントロール**データベースに対する権限。  
   
 ## <a name="examples"></a>使用例  
 ### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>A. データベースを作成するには、アプリケーションの資格情報がスコープ設定されます。
  次の例と呼ばれるデータベース スコープ資格情報を作成する`AppCred`です。 データベース スコープ資格情報には、Windows ユーザーが含まれている`Mary5`とパスワード。  
   
-```tsql  
+```sql  
 -- Create a db master key if one does not already exist, using your own password.  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';  
   
@@ -106,7 +106,7 @@ GO
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. データベースを作成するには、共有アクセス署名の資格情報がスコープ設定されます。   
 次の例を作成するために使用するデータベース スコープ資格情報の作成、[外部データ ソース](../../t-sql/statements/create-external-data-source-transact-sql.md)を実行できるなどの一括操作について、 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)と[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). 共有アクセス署名は、SQL Server、AP、または SQL DW に PolyBase では使用できません。
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
@@ -118,7 +118,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 Azure Data Lake Store は、Azure Active Directory アプリケーションをサービスにサービスの認証を使用します。
 ください[AAD アプリケーションを作成](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)し、データベース スコープ資格情報を作成しようとする前に、client_id、OAuth_2.0_Token_EndPoint、およびキーを文書化します。
 
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
     IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>'

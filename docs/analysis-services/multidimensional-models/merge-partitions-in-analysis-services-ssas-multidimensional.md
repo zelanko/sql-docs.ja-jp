@@ -5,32 +5,30 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - partitions [Analysis Services], merging
 - merging partitions [Analysis Services]
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6eb1eaef5274537720663a67bfb4521dfc94ec9d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 519136d681c257d27f93894db6a7c2652d273f87
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Analysis Services でのパーティションのマージ (SSAS - 多次元)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]既存のパーティションをマージすることができます[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]同じメジャー グループの複数のパーティションからファクト データを統合するデータベース。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のパーティションをマージして、同じメジャー グループの複数のパーティションからファクト データを統合することができます。  
   
  [一般的なシナリオ](#bkmk_Scenario)  
   
@@ -128,7 +126,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  をクリックして**パーティションのマージ**を開くには、**パーティションのマージ\<パーティション名 >**  ダイアログ ボックス。  
   
-3.  **[基になるパーティション]**で、対象パーティションとマージする、基になる各パーティションの横のチェック ボックスをオンにし、 **[OK]**をクリックします。  
+3.  **[基になるパーティション]** で、対象パーティションとマージする、基になる各パーティションの横のチェック ボックスをオンにし、**[OK]** をクリックします。  
   
     > [!NOTE]  
     >  基になるパーティションは、対象パーティションにマージされた直後に削除されます。 マージが完了したら、[パーティション] フォルダーを更新してその内容を更新します。  
@@ -141,12 +139,12 @@ ms.lasthandoff: 12/08/2017
  詳細については、「[パーティションのマージ &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services オブジェクトの処理](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
- [パーティション &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [ローカル パーティションの作成と管理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
+ [処理の Analysis Services オブジェクト](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
+ [パーティションと &#40; です。Analysis Services - 多次元データと &#41; です。](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [作成し、ローカル パーティション &#40; を管理Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
  [作成し、管理、リモート パーティションと #40 です。Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [パーティションの書き戻しを設定します。](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
  [書き込み許可パーティション](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [ディメンションおよびパーティションの文字列ストレージの構成](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
+ [ディメンションおよびパーティションの文字列ストレージを構成します。](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
   
   

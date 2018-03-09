@@ -8,30 +8,33 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_net_changes_TSQL
 - fn_net_changes_TSQL
 - fn_net_changes
 - sys.fn_net_changes
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_net_changes_<capture_instance>
 - sys.fn_net_changes_<capture_instance>
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be3cd4da4aa890624dc33f36af135bd96dbc3057
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d95fad7337666594aa41552a20e6ab5d4f211995
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,8 +104,8 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 |列名|列の型|Description|  
 |-----------------|-----------------|-----------------|  
-|\<列@column_list>|**異なります**|指定されている列、 **column_list**ために sp_cdc_generate_wrapper_function 際ラッパーを作成するスクリプトを生成するために呼び出さに渡す引数。 場合*column_list* NULL の場合、ルールがすべての追跡対象ソース列が結果セットに表示されます。|  
-|__CDC_OPERATION|**nvarchar (2)**|ターゲット環境に行を適用するために必要な操作を表す操作コードです。 操作の引数の値は異なります*row_filter_option*次の呼び出し時に指定します。<br /><br /> *row_filter_option* = 'all'、'all with mask'<br /><br /> 'D' : 削除操作<br /><br /> 'I' : 挿入操作<br /><br /> 'UN' : 更新操作<br /><br /> *row_filter_option* = 'all with merge'<br /><br /> 'D' : 削除操作<br /><br /> 'M' : 挿入操作または更新操作|  
+|\<列@column_list>|**varies**|指定されている列、 **column_list**ために sp_cdc_generate_wrapper_function 際ラッパーを作成するスクリプトを生成するために呼び出さに渡す引数。 場合*column_list* NULL の場合、ルールがすべての追跡対象ソース列が結果セットに表示されます。|  
+|__CDC_OPERATION|**nvarchar(2)**|ターゲット環境に行を適用するために必要な操作を表す操作コードです。 操作の引数の値は異なります*row_filter_option*次の呼び出し時に指定します。<br /><br /> *row_filter_option* = 'all'、'all with mask'<br /><br /> 'D' : 削除操作<br /><br /> 'I' : 挿入操作<br /><br /> 'UN' : 更新操作<br /><br /> *row_filter_option* = 'all with merge'<br /><br /> 'D' : 削除操作<br /><br /> 'M' : 挿入操作または更新操作|  
 |\<列@update_flag_list>|**bit**|列名の後に "_uflag" が付加されている、ビット フラグです。 フラグが null 以外の値がされる場合にのみ*row_filter_option* **= 'all with mask'**と\__CDC_OPERATION **= 'UN'**です。 対応する列がクエリ ウィンドウ内で変更された場合は、1 に設定されます。 それ以外の場合は、0 に設定されます。|  
   
 ## <a name="remarks"></a>解説  
@@ -126,6 +129,6 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="see-also"></a>参照  
  [sys.sp_cdc_generate_wrapper_function &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [cdc.fn_cdc_get_net_changes_ &#60; capture_instance &#62;。&#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   
   

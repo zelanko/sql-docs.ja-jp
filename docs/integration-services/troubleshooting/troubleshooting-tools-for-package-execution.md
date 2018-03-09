@@ -8,7 +8,8 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44b2f3e043a672fd5c258c5dd5c73c3e4f00fa5a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c38f451a062f7280413950e89aa482cea2d23125
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>パッケージ実行のトラブルシューティング ツール
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージを完成して配置した後、そのパッケージの実行時のトラブルシューティングに使用できる機能とツールが含まれています。  
@@ -42,9 +43,9 @@ ms.lasthandoff: 11/20/2017
   
  次のヒントや技法を使用して、実行中のパッケージの問題を回避することもできます。  
   
--   **トランザクションを使ってデータの整合性の確認を支援する**。 詳細については、「 [Integration Services のトランザクション](../../integration-services/integration-services-transactions.md)」を参照してください。  
+-   **トランザクションを使ってデータの整合性の確認を支援する**。 詳細については、「 [Integration Services のトランザクション](../../integration-services/integration-services-transactions.md)」をご覧ください。  
   
--   **チェックポイントを使って、エラーが発生した時点からパッケージを再開する**。 詳細については、「 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
+-   **チェックポイントを使って、エラーが発生した時点からパッケージを再開する**。 詳細については、「 [チェックポイントを使用してパッケージを再開する](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>イベント ハンドラーを使用したパッケージ エラーのキャッチおよび処理  
  イベント ハンドラーを使用することにより、パッケージやパッケージ内のオブジェクトで発生する多くのイベントに対応できます。  
@@ -83,14 +84,14 @@ ms.lasthandoff: 11/20/2017
   
     1.  **パッケージを実行するたびにログを記録する親テーブルを作成する**。 この親テーブルにはパッケージを実行するたびに 1 行だけを記録し、ExecutionID を使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ログ記録テーブルの子レコードにリンクします。 各パッケージの最初に SQL 実行タスクを使用して、この新しい行を作成し、開始時刻を記録します。 次に、パッケージの終了時に別の SQL 実行タスクを使用して、終了時刻、実行時間、状態でその行を更新します。  
   
-    2.  **データ フローに監査情報を追加する**。 監査変換を使用して、各行を作成または変更したパッケージの実行に関する情報を、データ フロー内の行に追加できます。 監査変換は、PackageName や ExecutionInstanceGUID など、9 種類の情報を作成します。 詳細については、「 [Audit Transformation](../../integration-services/data-flow/transformations/audit-transformation.md)」を参照してください。 監査を目的として各行に含めるカスタム情報があれば、派生列変換を使用して、その情報をデータ フロー内の行に追加できます。 詳細については、「 [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md)」を参照してください。  
+    2.  **データ フローに監査情報を追加する**。 監査変換を使用して、各行を作成または変更したパッケージの実行に関する情報を、データ フロー内の行に追加できます。 監査変換は、PackageName や ExecutionInstanceGUID など、9 種類の情報を作成します。 詳細については、「 [監査変換](../../integration-services/data-flow/transformations/audit-transformation.md)」を参照してください。 監査を目的として各行に含めるカスタム情報があれば、派生列変換を使用して、その情報をデータ フロー内の行に追加できます。 詳細については、「 [派生列変換](../../integration-services/data-flow/transformations/derived-column-transformation.md)」を参照してください。  
   
     3.  **行数データのキャプチャを検討する**。 行数情報用に別のテーブルを作成することを検討します。このテーブルでは、パッケージ実行の各インスタンスを ExecutionID で識別します。 行数変換を使用して、データ フロー内の重要な時点の行数を一連の変数に保存します。 データ フローの終了後、SQL 実行タスクを使用してこの一連の値をテーブルの行に挿入すると、後の分析やレポートに役立ちます。  
   
      この方法の詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] のホワイト ペーパー「 [プロジェクト REAL: ビジネス インテリジェンス ETL のデザイン方法](http://go.microsoft.com/fwlink/?LinkId=96602)」の「ETL の監査とログ記録」を参照してください。  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>デバッグ ダンプ ファイルを使ったパッケージ実行のトラブルシューティング  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、パッケージの実行に関する情報を提供するデバッグ ダンプ ファイルを作成できます。 詳細については、「 [パッケージ実行用のダンプ ファイルを生成する](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、パッケージの実行に関する情報を提供するデバッグ ダンプ ファイルを作成できます。 詳細については、「[パッケージ実行用のダンプ ファイルを生成する](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)」を参照してください。  
   
 ## <a name="troubleshoot-run-time-validation-issues"></a>実行時検証問題のトラブルシューティング  
  パッケージ内の前のタスクの実行が完了するまで、データ ソースに接続できなかったり、パッケージの一部を検証できなかったりすることがあります。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、こうした状況が原因で発生する検証エラーを回避するための以下の機能が備わっています。  
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="troubleshoot-errors-without-a-description"></a>説明のないエラーのトラブルシューティング  
  説明のない [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エラーが発生した場合は、「 [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md) 」でエラー番号を検索することで、エラーの説明を参照できます。 現時点では、この一覧にトラブルシューティング情報は含まれていません。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  [データ フローのデバッグ](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  

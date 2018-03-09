@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32782c2fe59aaf36fa8741870a798163d923a3a1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c7ade62e1c7760b7542b1e4dd82668c11f2947c8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="relative-and-absolute-scrolling"></a>相対パスと絶対スクロール
 スクロール オプションのほとんど**SQLFetchScroll**相対的な現在の位置または絶対位置にカーソルを置きます。 **SQLFetchScroll** 、次のフェッチをサポートしています前に、最初と最後の行セット、相対パスとしてもフェッチとして (行セットをフェッチ *n* 現在の行セットの先頭からの行) と絶対フェッチ (fetch、。行セットの行で始まる *n* )。 場合 *n* は行が結果セットの最後から数えられます絶対フェッチで負の値。 したがって、– 1 の行の絶対フェッチは結果セットの最後の行で始まる行セットをフェッチすることです。  

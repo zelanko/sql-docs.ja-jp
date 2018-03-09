@@ -3,27 +3,27 @@ title: "SQL Server Linux (RHEL) でのフェールオーバー クラスター �
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Inactive
-ms.openlocfilehash: 20fe315ed12d8b510b03a82d2f8b77a08c840607
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 26ccd4389bd02f659110c0fe3ac2cd8b23b240db
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>SQL Server Linux (RHEL) でのフェールオーバー クラスター インスタンスを構成します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server の 2 つのノードの共有ディスク フェールオーバー クラスターのインスタンスは、高可用性のためのサーバー レベルの冗長性を提供します。 このチュートリアルでは、Linux に SQL Server の 2 ノード フェールオーバー クラスター インスタンスを作成する方法を学習します。 完了する具体的な手順は次のとおりです。
 
@@ -41,7 +41,7 @@ SQL Server の 2 つのノードの共有ディスク フェールオーバー �
 
 ## <a name="prerequisites"></a>前提条件
 
-次のエンド ツー エンド シナリオを完了するには、2 台のコンピューターを 2 つのノードのクラスターと記憶域を別のサーバーを展開する必要があります。 以下の手順には、これらのサーバーを構成する方法を説明します。
+次のエンド ツー エンドのシナリオを完了するには、2 台のコンピューターを 2 つのノードのクラスターと記憶域を別のサーバーを展開する必要があります。 以下の手順には、これらのサーバーを構成する方法を説明します。
 
 ## <a name="set-up-and-configure-linux"></a>設定し、Linux を構成します。
 
@@ -51,7 +51,7 @@ SQL Server の 2 つのノードの共有ディスク フェールオーバー �
 
 ## <a name="install-and-configure-sql-server"></a>SQL サーバー インストールし、構成
 
-1. インストールし、両方のノードに SQL Server をセットアップします。  詳細な手順についてを参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)です。
+1. インストールし、両方のノードに SQL Server をセットアップします。  詳細については、次を参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)です。
 1. プライマリ サーバーと、他の構成のために、セカンダリとして 1 つのノードを指定します。 これらの用語を使用して、次のこのガイドです。  
 1. セカンダリ ノードで停止し、SQL Server を無効にします。
     次の例では、停止して、SQL Server を無効にします。 
@@ -63,7 +63,7 @@ SQL Server の 2 つのノードの共有ディスク フェールオーバー �
     > [!NOTE] 
     > サーバーのマスター _ キーの SQL Server インスタンスの生成し、に配置時のセットアップで`var/opt/mssql/secrets/machine-key`です。 Linux では、SQL Server は、常に mssql と呼ばれるローカル アカウントとして実行されます。 ローカル アカウントであるために、その id は、ノード間で共有されません。 したがって、各ローカル mssql アカウント アクセスできるように、サーバーのマスター _ キーの暗号化を解除するは、各セカンダリ ノードにプライマリ ノードから、暗号化キーをコピーする必要があります。 
 
-1.  プライマリ ノードで、ペースの SQL server ログインの作成および実行する権限をログイン`sp_server_diagnostics`です。 ペースのどのノードは、SQL Server を実行していることを確認するのにアカウントが使用されます。 
+1.  プライマリ ノードで、ペースの SQL server ログインの作成および実行する権限をログイン`sp_server_diagnostics`です。 ペースでは、このアカウントを使用して、どのノードが SQL Server を実行していることを確認します。 
 
     ```bash
     sudo systemctl start mssql-server
@@ -207,7 +207,7 @@ FCI は、リソース グループに作成されます。 これは、機能�
 
     \<FolderToMountNFSShare > は、ディスクをマウントするフォルダーです (システム データベースと既定の場所は、なります/var/opt/mssql/data)
 
-     次に例を示します。
+    例を次に示します。
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr

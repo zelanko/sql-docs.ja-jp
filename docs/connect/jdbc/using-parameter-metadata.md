@@ -1,27 +1,28 @@
 ---
 title: "パラメーターのメタデータを使用して |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a046d61c95e4f687361939bed9b10be5ecd7746d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 812e8af3f3b08cf7cd25de64b157cb76657a6b6f
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="using-parameter-metadata"></a>パラメーターのメタデータの使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,9 +37,10 @@ ms.lasthandoff: 11/18/2017
     
 > [!NOTE]  
 準備されたステートメントでは、SQLServerParameterMetaData クラスを使用する場合は、いくつかの制限があります。 
-**Microsoft JDBC Driver 6.0 (またはそれ以上) for SQL Server**: JDBC ドライバーでは、これらのステートメントにサブクエリや結合が含まれていない限り、SELECT、DELETE、INSERT、および UPDATE ステートメントがサポートしている SQL Server 2008 または 2008 R2 を使用する場合。 クエリのマージもサポートされていません SQLServerParameterMetaData クラスの SQL Server 2008 または 2008 R2 を使用する場合。 SQL Server 2012 以降のバージョンの場合、複雑なクエリを持つパラメーター メタデータがサポートされます。 暗号化された列のパラメーター メタデータの取得はサポートされていません。 **Microsoft JDBC Driver 4.0、4.1 や 4.2 for SQL Server で**:、JDBC ドライバーは、これらのステートメントにサブクエリや結合が含まれていない限り、SELECT、DELETE、INSERT、および UPDATE ステートメントをサポートしています。 クエリのマージもサポートされていません SQLServerParameterMetaData クラス。  
+**Microsoft JDBC Driver 6.0 (またはそれ以上) for SQL Server**: JDBC ドライバーでは、これらのステートメントにサブクエリや結合が含まれていない限り、SELECT、DELETE、INSERT、および UPDATE ステートメントがサポートしている SQL Server 2008 または 2008 R2 を使用する場合。  
 
-## <a name="see-also"></a>参照  
- [JDBC ドライバーによるメタデータの処理](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)  
+クエリのマージもサポートされていません SQLServerParameterMetaData クラスの SQL Server 2008 または 2008 R2 を使用する場合。 SQL Server 2012 以降のバージョンの場合、複雑なクエリを持つパラメーター メタデータがサポートされます。  
+
+暗号化された列のパラメーター メタデータの取得はサポートされていません。 **Microsoft JDBC Driver 4.1 と 4.2 for SQL Server**:、JDBC ドライバーは、これらのステートメントにサブクエリや結合が含まれていない限り、SELECT、DELETE、INSERT、および UPDATE ステートメントをサポートしています。 クエリのマージもサポートされていません SQLServerParameterMetaData クラス。  
   
   

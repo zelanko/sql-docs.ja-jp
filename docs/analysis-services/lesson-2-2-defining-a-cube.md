@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 8aa4ac2d-857f-4048-baa0-0f314e207cf6
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 17fde2d95fb202712610a31769b1a50623bac7c7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6cfbba4598bad19dc0b581131f977fa2f3e9b40e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-2---defining-a-cube"></a>レッスン 2-2-キューブの定義
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]キューブ ウィザードでは、メジャー グループとキューブのディメンションを定義できます。 この実習では、キューブ ウィザードを使用してキューブを作成します。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+キューブ ウィザードを使用すると、キューブのメジャー グループとディメンションを定義できます。 この実習では、キューブ ウィザードを使用してキューブを作成します。  
   
 ### <a name="to-define-a-cube-and-its-properties"></a>キューブとそのプロパティを定義するには  
   
@@ -74,7 +77,7 @@ ms.lasthandoff: 12/08/2017
 15. **[ファイル]** メニューの **[すべてを保存]**をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[ディメンションへの属性の追加](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
+[属性をディメンションに追加する](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
   
 ## <a name="see-also"></a>参照  
 [多次元モデルのキューブ](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  

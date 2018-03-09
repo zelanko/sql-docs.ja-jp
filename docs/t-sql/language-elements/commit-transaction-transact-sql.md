@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - COMMIT TRANSACTION
 - COMMIT_TSQL
 - COMMIT_TRANSACTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ending transactions [SQL Server]
 - user-defined transactions [SQL Server]
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - COMMIT TRANSACTION statement
 - rolling back transactions, COMMIT TRANSACTION
 ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
-caps.latest.revision: "53"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b2f6bffa6a19007fc98796daa9ff34bda729bd4d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: a716ab7298d1ea678d6a23944849dccdebebd118
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -65,7 +67,7 @@ COMMIT [ TRAN | TRANSACTION ]
  
   
 ## <a name="arguments"></a>引数  
- *では無視*  
+ *transaction_name*  
  **適用対象:** SQL Server と Azure SQL Database
  
  は無視されます、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]です。 *では無視*前の BEGIN TRANSACTION により割り当てられるトランザクション名を指定します。 *では無視*識別子の規則に従う必要がありますが、32 文字を超えることはできません。 *では無視*プログラマは、BEGIN TRANSACTION と COMMIT TRANSACTION の関連を入れ子になったに指定することにより、読みやすさを目的として使用できます。  
@@ -93,7 +95,7 @@ COMMIT [ TRAN | TRANSACTION ]
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]ステートメントの開始時点のトランザクション数が 0 の場合にのみ、ステートメント内でトランザクション数が増加します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

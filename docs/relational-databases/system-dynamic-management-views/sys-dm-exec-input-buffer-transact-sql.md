@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_input_buffer _tsql
 - dm_exec_input_buffer
 - dm_exec_input_buffer_tsql
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_input_buffer dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_input_buffer dynamic management function
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ed224c77a502f81da57b232a68fddc0d4157338
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 456ae8af5d366f8fb5be006f944f1f704e382488
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
@@ -59,10 +62,10 @@ Request_id [sys.dm_exec_requests](../../relational-databases/system-dynamic-mana
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**event_type**|**nvarchar (256)**|特定の spid を入力バッファー内のイベントの種類。|  
-|**パラメーター**|**smallint**|ステートメントに指定されたパラメーターは任意です。|  
+|**parameters**|**smallint**|ステートメントに指定されたパラメーターは任意です。|  
 |**event_info**|**nvarchar(max)**|特定の spid の入力バッファー内のステートメントのテキスト。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ユーザーがのインスタンスで実行中のすべてのセッションを参照して、ユーザーに VIEW SERVER STATE 権限がある場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、それ以外のユーザーは、現在のセッションのみを参照してください。  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、ユーザーが実行中のすべてのセッションを参照して、ユーザーがデータベースの所有者である場合、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、それ以外のユーザーは、現在のセッションのみを参照してください。  
@@ -75,7 +78,7 @@ Request_id [sys.dm_exec_requests](../../relational-databases/system-dynamic-mana
 ### <a name="a-simple-example"></a>A. 簡単な例  
  次の例では、セッション id (SPID) と要求 id を関数に渡す方法を示します。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
 ```  
@@ -83,7 +86,7 @@ GO
 ### <a name="b-using-cross-apply-to-additional-information"></a>B. 追加情報への適用間を使用  
  次の例では、セッション id が 50 より大きいセッションについて、入力バッファーが一覧表示します。  
   
-```tsql  
+```sql  
 SELECT es.session_id, ib.event_info   
 FROM sys.dm_exec_sessions AS es  
 CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) AS ib  

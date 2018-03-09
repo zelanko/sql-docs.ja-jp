@@ -6,22 +6,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 341e80f5-3b59-4122-bbaa-969d7904297d
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 7618f4235a1d681800cc6b0d933d921f145947dc
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 40c76cba27559c8fcc314ce4c9761ee42edacac0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="microsoft-machine-learning-services"></a>マイクロソフトの機械学習サービス
+# <a name="microsoft-machine-learning-services"></a>Microsoft Machine Learning Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft Machine Learning のサービスの目的は、machine learning のサービスを使用するアプリケーションと機械学習タスクとツールを統合するため、拡張可能な拡張性の高いプラットフォームを提供します。 プラットフォーム必要がありますのニーズを満たすすべてのユーザー データの開発と、分析プロセスに関連するからデータ科学者、アーキテクトやデータベース管理者にします。
 
@@ -39,7 +40,7 @@ Microsoft Machine Learning のサービスの目的は、machine learning のサ
 
 SQL Server 2016 では、Microsoft は、一般的なオープン ソース R 言語をビジネス アプリケーションと統合するための 2 つのサーバー プラットフォームを起動しました。
 
-+ **との統合用の**SQL Server R Services (データベース内) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ **SQL Server R Services (In-database)**との統合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 + **Microsoft R Server**、Windows および Linux サーバーでエンタープライズ レベルの R のデプロイの
 
 SQL Server の 2017 でよく使われる Python 言語のサポートを反映するように名前が変更されました。
@@ -62,7 +63,7 @@ SQL Server の機械学習をインストールするときに、オープン �
 開始するには、これらのリソースを参照してください。
 
 + [SQL Server R サービス](sql-server-r-services.md)
-+ [SQL Server の Python サービス](../python/sql-server-python-services.md)
++ [SQL Server Python Services](../python/sql-server-python-services.md)
 + [機械学習のチュートリアル](../tutorials/machine-learning-services-tutorials.md)
 
 > [!NOTE]

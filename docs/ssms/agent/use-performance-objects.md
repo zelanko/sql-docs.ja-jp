@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - performance counters [SQL Server], SQL Server Agent
 - counters [SQL Server], SQL Server Agent
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34279a9ff92a6cda54ee76ebadad6bc9ed6ca5ef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f99696f644d5def145d4e4ff1c0b040ec29d6673
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="use-performance-objects"></a>パフォーマンス オブジェクトの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +44,10 @@ ms.lasthandoff: 12/21/2017
   
 |インスタンスの種類|オブジェクト名です。|  
 |-----------------|---------------|  
-|既定|**SQLAgent:***オブジェクト*:*カウンター*|  
-|名前付き|**SQLAgent$**<br /> **&#42;instance_name&#42; :***オブジェクト*:*カウンター*|  
+|既定|**SQLAgent:***object*:*counter*|  
+|名前付き|**SQLAgent$**<br /> **&#42;instance_name&#42; :***object*:*counter*|  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの次のパフォーマンス オブジェクトが含まれています。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの次のパフォーマンス オブジェクトが含まれています。  
   
 |オブジェクト名です。|Description|  
 |---------------|---------------|  

@@ -7,25 +7,27 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2017
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: c6e59f8e3e1b59b9225a95dbe787698dd5bf4f9e
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>SQL 開発者のためのデータベースでの Python の分析
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 このチュートリアルの目的は、SQL プログラマ環境に提供する実践的な機械学習の SQL Server で実行されている Python を使用したソリューションの構築です。 このチュートリアルでは、ストアド プロシージャに Python コードを追加してビルドし、モデルから予測するストアド プロシージャを実行する方法を学習します。
 
@@ -45,7 +47,7 @@ ms.lasthandoff: 12/20/2017
 
 データは、よく知られた NYC タクシー データ セットからです。 このチュートリアルを迅速かつ簡単には、データをサンプリングします。 かどうか特定トリップもそうでない、ヒントを取得する可能性の高い、時刻、距離、および収集場所などの列に基づいて予測する二項分類モデルを作成します。
 
-すべてのタスクを行うことができますを使用して[!INCLUDE[tsql](../../includes/tsql-md.md)]の使い慣れた環境でのストアド プロシージャ[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
+すべてのタスクを行うことができますを使用して[!INCLUDE[tsql](../../includes/tsql-md.md)]の使い慣れた環境でのストアド プロシージャ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
 - [手順 1: サンプル データのダウンロード](sqldev-py1-download-the-sample-data.md)
 
@@ -76,7 +78,7 @@ ms.lasthandoff: 12/20/2017
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>前提条件
 
 + Machine Learning のサービスと有効になっている Python には、SQL Server 2017 のインスタンスをインストールします。 詳細については、次を参照してください。 [Python の SQL Server マシン ラーニング Services セットアップ](../python/setup-python-machine-learning-services.md)です。
 + このチュートリアルで使用するログインでは、データベースやその他のオブジェクトを作成し、データをアップロードし、データを選択し、ストアド プロシージャを実行するためのアクセス許可が付与されている必要があります。
@@ -121,6 +123,6 @@ PowerShell の知識をお勧めします。
 |トレーニングし、T-SQL を使用してモデルを保存します。|0:15|
 |モデルを操作可能します。|0:40|
 
-## <a name="get-started"></a>作業を開始します。
+## <a name="get-started"></a>概要します。
 
   [手順 1: サンプル データのダウンロード](sqldev-py1-download-the-sample-data.md)

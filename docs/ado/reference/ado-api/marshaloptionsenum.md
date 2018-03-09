@@ -1,10 +1,11 @@
 ---
-title: "MarshalOptionsEnum |Microsoft ドキュメント"
+title: MarshalOptionsEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,27 +13,29 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: MarshalOptionsEnum
-helpviewer_keywords: MarshalOptionsEnum enumeration [ADO]
+f1_keywords:
+- MarshalOptionsEnum
+helpviewer_keywords:
+- MarshalOptionsEnum enumeration [ADO]
 ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f54d75168f07056ca1edb8aa74d78ae289f4fde
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 837e648bdc05324fe1a1618fec69d778b8cafd5d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 サーバーにどのレコードを返す必要がありますを指定します。  
   
-|定数|値|Description|  
+|定数|[値]|Description|  
 |--------------|-----------|-----------------|  
 |**adMarshalAll**|0|既定値です。 サーバーにすべての行を返します。|  
-|**adMarshalModifiedOnly**|@shouldalert|返しますでは、行をサーバーにのみ変更できます。|  
+|**adMarshalModifiedOnly**|1|返しますでは、行をサーバーにのみ変更できます。|  
   
 ## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
  パッケージ: **com.ms.wfc.data**  

@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COLLATE
 - COLLATE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - collations [SQL Server], COLLATE clause
 - COLLATE clause
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4192928157e3f6e534b8fb50c34e349dac3f5b8c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 7a206f638b78a5e4311ab7889a7902aa39a17413
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="collations"></a>照合順序
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +42,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 COLLATE { <collation_name> | database_default }  
 <collation_name> :: =   
      { Windows_collation_name } | { SQL_collation_name }  
@@ -87,11 +88,11 @@ COLLATE { <collation_name> | database_default }
   
  COLLATE は*collate_name*に SQL Server 照合順序または式、列定義、またはデータベース定義に適用する Windows 照合順序のいずれかの名前を参照します。 *collation_name*できますのみ指定*Windows_collation_name*または*SQL_collation_name*パラメーターは、リテラル値を含める必要があります。 *collation_name*変数または式で表されることはできません。  
   
- 照合順序は、通常、照合順序名によって識別します。ただし、セットアップ時は例外です。 セットアップ時には、Windows 照合順序にルート照合順序指定子 (照合ロケール) を指定してから、大文字と小文字の区別やアクセントの区別に関する並べ替えオプションを指定します。  
+ 照合順序は、通常、照合順序名によって識別します。ただし、セットアップ時は例外です。 セットアップでは、代わりに、Windows の照合順序のルートの照合順序指定子 (照合ロケール) を指定しは小文字またはアクセントを区別する並べ替えオプションを指定します。  
   
  システム関数を実行できる[fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) Windows 照合順序および照合順序の SQL Server のすべての有効な照合順序名の一覧を取得します。  
   
-```  
+```sql  
 SELECT name, description  
 FROM fn_helpcollations();  
 ```  
@@ -104,16 +105,18 @@ FROM fn_helpcollations();
   
 -   復元またはアタッチ、データベース、データベースの既定の照合順序、および任意の照合順序と**char**、 **varchar**、および**テキスト**列またはデータベース内のパラメーターオペレーティング システムでサポートする必要があります。  
   
-     コード ページ変換はサポートされて**char**と**varchar**データ型のではなく**テキスト**データ型。 コード ページ変換時のデータ損失はレポートされません。  
+> [!NOTE]
+> コード ページ変換はサポートされて**char**と**varchar**データ型のではなく**テキスト**データ型。 コード ページ変換時のデータ損失はレポートされません。  
   
- 指定された照合順序または参照先のオブジェクトによって使用される照合順序は、Windows でサポートされていないコード ページを使用している場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーが表示されます。  
+> [!NOTE]
+> 指定された照合順序または参照先のオブジェクトによって使用される照合順序は、Windows でサポートされていないコード ページを使用している場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーが表示されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-specifying-collation-during-a-select"></a>A. 選択時に照合順序を指定する  
  次の例では、単純なテーブルを作成し、4 つの行を挿入します。 例が、そのテーブルからデータを選択するときに、2 つの照合順序を適用し、デモンストレーション方法`Chiapas`は異なる方法で並べ替えられます。  
   
-```tsql  
+```sql  
 CREATE TABLE Locations  
 (Place varchar(15) NOT NULL);  
 GO  
@@ -132,39 +135,39 @@ COLLATE Traditional_Spanish_ci_ai ASC;
 GO  
 ```  
 
- 最初のクエリからの結果を次に示します。  
+最初のクエリからの結果を次に示します。  
   
- ```
- Place 
- ------------- 
- California 
- Chiapas 
- Cinco Rios 
- Colima
- ```  
+```
+Place 
+------------- 
+California 
+Chiapas 
+Cinco Rios 
+Colima
+```  
   
- 2 番目のクエリからの結果を次に示します。  
-  
- ```
- Place 
- ------------- 
- California 
- Cinco Rios 
- Colima 
- Chiapas
- ```  
+2 番目のクエリからの結果を次に示します。  
+ 
+```
+Place 
+------------- 
+California 
+Cinco Rios 
+Colima 
+Chiapas
+```  
   
 ### <a name="b-additional-examples"></a>B. その他の例  
- 使用するその他の例の**COLLATE**を参照してください[CREATE DATABASE &#40;です。SQL Server TRANSACT-SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)例**G. データベースを作成し、照合順序名とオプションを指定する**、および[ALTER TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-transact-sql.md)例**列の照合順序を変更する V.**です。  
+ 使用するその他の例の**COLLATE**を参照してください[CREATE DATABASE &#40;です。SQL Server TRANSACT-SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples)例**G. データベースを作成し、照合順序名とオプションを指定する**、および[ALTER TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-transact-sql.md#alter_column)例**列の照合順序を変更する V.**です。  
   
 ## <a name="see-also"></a>参照  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)   
- [照合順序の優先順位 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
- [定数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/constants-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [テーブルと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/table-transact-sql.md)  
+ [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [照合順序の優先順位 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
+ [定数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/constants-transact-sql.md)     
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
+ [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
+ [テーブルと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/table-transact-sql.md)     
   
   

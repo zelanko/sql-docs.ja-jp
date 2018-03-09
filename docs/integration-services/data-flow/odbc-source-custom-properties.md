@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4c5abcb4e12074bc1f0c23d404d0e4c2d69c732
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 99f561213fafe5b70c3d0f95af247780c9247137
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC 入力元のカスタム プロパティ
   次の表は、ODBC 入力元のカスタム プロパティを示しています。 すべてのプロパティは、SSIS プロパティ式から設定できます。  
@@ -36,13 +37,13 @@ ms.lasthandoff: 11/20/2017
 |DefaultCodePage|Integer|文字列の出力列に対して使用するコード ページ。<br /><br /> **注**: このプロパティは、 **ODBC 入力元エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
 |ExposeCharColumnsAsUnicode|ブール値|このプロパティは、コンポーネントが CHAR 型の列を公開する方法を決定します。 既定値は False で、CHAR 型の列がマルチバイト文字列 (DT_STR) として公開されることを示します。 True の場合、CHAR 型の列はワイド文字列 (DT_WSTR) として公開されます。<br /><br /> **注**: このプロパティは、 **ODBC 入力元エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
 |FetchMethod|Integer (列挙)|データの取得に使用されるメソッド。 有効なオプションは、行ごと (0) およびバッチ (1) です。 既定値はバッチ (1) です。<br /><br /> これらのオプションの詳細については、「 [ODBC ソース](../../integration-services/data-flow/odbc-source.md)」を参照してください。<br /><br /> **注**: このプロパティは、 **ODBC 入力元エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
-|SqlCommand|文字列|AccessMode が SQL コマンドに設定されている場合に実行される SQL コマンド。|  
+|SqlCommand|String|AccessMode が SQL コマンドに設定されている場合に実行される SQL コマンド。|  
 |StatementTimeout|Integer|エラーを返してアプリケーションに戻らず、SQL ステートメントが実行されるまで待機する秒数。 既定値は 120 です。 値 0 は、システムがタイムアウトしないことを示します。|  
-|TableName|文字列|AccessMode がテーブル名に設定されている場合に使用される、データが保存されているテーブルの名前。|  
+|TableName|String|AccessMode がテーブル名に設定されている場合に使用される、データが保存されているテーブルの名前。|  
 |LobChunckSize|Integer|LOB 列のチャンク サイズ割り当て。|  
 ||||  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [ODBC ソース](../../integration-services/data-flow/odbc-source.md)   
  [[ODBC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   

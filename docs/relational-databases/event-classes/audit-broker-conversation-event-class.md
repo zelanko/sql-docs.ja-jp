@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Broker Conversation event class
+helpviewer_keywords:
+- Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0255dd19ca58c79f48c136f33bd9d0a46754a59
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f6708839a1ca98810dd74a7ad1c36f1af43f3e8d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**Audit Broker Conversation** イベントを作成して、Service Broker のダイアログ セキュリティに関連した監査メッセージを報告します。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**Audit Broker Conversation** イベントを作成して、Service Broker のダイアログ セキュリティに関連した監査メッセージを報告します。  
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Audit Broker Conversation イベント クラスのデータ列  
   
-|データ列|型|説明|列番号|フィルターの適用|  
+|データ列|型|Description|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**BigintData1**|**bigint**|メッセージのメッセージ シーケンス番号。|52|いいえ|  
@@ -49,15 +52,15 @@ ms.lasthandoff: 11/17/2017
 |**ServerName**|**nvarchar**|トレースされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**Severity**|**int**|(このイベントによってエラーが報告された場合) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの重大度。|29|いいえ|  
 |**SPID**|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
-|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|可|  
+|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |**状態**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のソース コード内のイベントが生成された場所を示します。 イベントが生成された場所によって、状態コードが異なることがあります。 マイクロソフトのサポート エンジニアはこの状態コードを使用して、イベントが生成されたソース コード内の場所を特定することができます。|30|いいえ|  
-|**TextData**|**ntext**|エラーの場合、失敗理由を説明するメッセージが格納されます。 次の値のいずれかになります。<br /><br /> <br /><br /> **証明書が見つかりませんでした**: ダイアログ プロトコル セキュリティに指定されたユーザーが証明書を持っていません。<br /><br /> **無効な期間です**: ダイアログ プロトコル セキュリティに指定されたユーザーは証明書を持っていますが、その証明書の有効期限が切れています。<br /><br /> **証明書のサイズが、メモリ割り当てに対して大きすぎます**: ダイアログ プロトコル セキュリティに指定されたユーザーは証明書を持っていますが、その証明書のサイズが大きすぎます。 Service Broker でサポートされる証明書の最大サイズは、32,768 バイトです。<br /><br /> **秘密キーが見つかりません**: ダイアログ プロトコル セキュリティに指定されたユーザーは証明書を持っていますが、その証明書には秘密キーが関連付けられていません。<br /><br /> **証明書の秘密キー サイズと暗号化プロバイダーの互換性がありません**: 証明書の秘密キー サイズが、正常に処理できないサイズです。 秘密キー サイズは 64 バイトの倍数である必要があります。<br /><br /> **証明書の公開キー サイズと暗号化プロバイダーの互換性がありません**: 証明書の公開キー サイズが、正常に処理できないサイズです。 公開キー サイズは 64 バイトの倍数である必要があります。<br /><br /> **証明書の秘密キー サイズと暗号化されたキー交換のキーには互換性がありません**: キー交換のキーで指定されているキー サイズが、証明書の秘密キーのサイズと一致しません。 これは、一般に、リモート コンピューター上の証明書がデータベース内の証明書と一致しないことを示します。<br /><br /> **証明書の公開キー サイズとセキュリティ ヘッダーの署名には互換性がありません**: セキュリティ ヘッダーに、証明書の公開キーを使用して検証できない署名が含まれています。 これは、一般に、リモート コンピューター上の証明書がデータベース内の証明書と一致しないことを示します。|1|はい|  
+|**TextData**|**ntext**|エラーの場合、失敗理由を説明するメッセージが格納されます。 次の値のいずれかになります。<br /><br /> <br /><br /> **証明書が見つかりませんでした**: ダイアログ プロトコル セキュリティに指定されたユーザーが証明書を持っていません。<br /><br /> **無効な期間です**: ダイアログ プロトコル セキュリティに指定されたユーザーは証明書を持っていますが、その証明書の有効期限が切れています。<br /><br /> **証明書のサイズが、メモリ割り当てに対して大きすぎます**: ダイアログ プロトコル セキュリティに指定されたユーザーは証明書を持っていますが、その証明書のサイズが大きすぎます。 Service Broker でサポートされる証明書の最大サイズは、32,768 バイトです。<br /><br /> **秘密キーが見つかりません**: ダイアログ プロトコル セキュリティに指定されたユーザーは証明書を持っていますが、その証明書には秘密キーが関連付けられていません。<br /><br /> **証明書の秘密キー サイズと暗号化プロバイダーの互換性がありません**: 証明書の秘密キー サイズが、正常に処理できないサイズです。 秘密キー サイズは 64 バイトの倍数である必要があります。<br /><br /> **証明書の公開キー サイズと暗号化プロバイダーの互換性がありません**: 証明書の公開キー サイズが、正常に処理できないサイズです。 公開キー サイズは 64 バイトの倍数である必要があります。<br /><br /> **証明書の秘密キー サイズと暗号化されたキー交換のキーには互換性がありません**: キー交換のキーで指定されているキー サイズが、証明書の秘密キーのサイズと一致しません。 これは、一般に、リモート コンピューター上の証明書がデータベース内の証明書と一致しないことを示します。<br /><br /> **証明書の公開キー サイズとセキュリティ ヘッダーの署名には互換性がありません**: セキュリティ ヘッダーに、証明書の公開キーを使用して検証できない署名が含まれています。 これは、一般に、リモート コンピューター上の証明書がデータベース内の証明書と一致しないことを示します。|@shouldalert|はい|  
   
  次の表に、このイベント クラスのサブクラス値を示します。  
   
-|ID|サブクラス|説明|  
+|ID|サブクラス|Description|  
 |--------|--------------|-----------------|  
-|1|No Security Header|セキュリティで保護されたメッセージ交換時に、Service Broker がセッション キーを含んでいないメッセージを受信しました。 セキュリティで保護されたメッセージ交換が確立されると、ダイアログのプロトコルは、メッセージ交換で使用されるすべてのメッセージにセッション キーが含まれていることを必要とします。|  
+|@shouldalert|No Security Header|セキュリティで保護されたメッセージ交換時に、Service Broker がセッション キーを含んでいないメッセージを受信しました。 セキュリティで保護されたメッセージ交換が確立されると、ダイアログのプロトコルは、メッセージ交換で使用されるすべてのメッセージにセッション キーが含まれていることを必要とします。|  
 |2|No Certificate|メッセージ交換の送信者または受信者のどちらかの使用可能な証明書を Service Broker で検出できませんでした。 メッセージ交換をセキュリティで保護するには、メッセージ交換の送信者と受信者の両方が使用できる証明書がデータベースに格納されている必要があります。|  
 |3|Invalid Signature|送信者が送信者の証明書に公開キーを使用して提供したメッセージの署名を Service Broker で確認できませんでした。 これは、メッセージが破損していること、メッセージが改ざんされたこと、リモート サービスとローカル サービスが同じユーザー証明書を使用して構成されていないこと、または証明書の有効期限が切れていることを示している場合があります。|  
 |4|Run As Target Failure|送信先のユーザーが送信先のキューに対する受信権限を持っていません。 Service Broker では、許可されていないユーザーがメッセージを受信できないように、キューからメッセージを受け取れないユーザーを送信先とするメッセージをエンキューしません。これは、メッセージの送信元のユーザーにメッセージをエンキューする権限があるかどうかとは無関係です。|  

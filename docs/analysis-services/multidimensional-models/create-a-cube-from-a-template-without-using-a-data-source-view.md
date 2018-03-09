@@ -5,29 +5,27 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8ebf7113a80cecd58a98108a82caa26d21d5d158
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ed5bd7197fa455d5ea93f39e529961a16828ba77
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>データ ソース ビューを使用しないテンプレートからのキューブの作成
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]選択**キューブを構築するデータ ソースを使用せず**データ ソース ビューを使用せずにキューブを作成するキューブ ウィザードの最初のページにします。 後で、スキーマ生成ウィザードを使用して、キューブ (および場合によっては他の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクト) の構造に基づいて、データ ソース ビューのリレーショナル スキーマを作成できます。 スキーマ生成の詳細については、「[スキーマ生成ウィザード (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+キューブ ウィザードの最初のページで **[データ ソースを使用せずにキューブを構築する]** を選択すると、データ ソース ビューを使用せずにキューブを作成できます。 後で、スキーマ生成ウィザードを使用して、キューブ (および場合によっては他の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクト) の構造に基づいて、データ ソース ビューのリレーショナル スキーマを作成できます。 スキーマ生成の詳細については、「[スキーマ生成ウィザード (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)」を参照してください。  
   
 ## <a name="selecting-the-build-method"></a>構築方法の選択  
  キューブ ウィザードの **[構築方法の選択]** ページで、 **[データ ソースを使用せずにキューブを構築する]**をクリックします。 既存のキューブ テンプレートを使用してキューブを構築するには、 **[キューブ テンプレートを使用する]** チェック ボックスをオンにします。 」を参照してください。 テンプレートを使用しない場合は、手動でオプションを設定する必要があります。  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/08/2017
 |列|Description|  
 |------------|-----------------|  
 |**型**|テンプレート ディメンションのディメンションの種類が表示されます。 ディメンションについてディメンションの種類を変更するには、このセルをクリックします。 この列では、ディメンション オブジェクトの **"種類"** プロパティを設定します。|  
-|**Name**|ディメンションの名前を表示します。 別の名前を入力するには、このセルをクリックします。 この値は、ディメンション オブジェクトの **"名前"** プロパティを設定します。|  
+|**名前**|ディメンションの名前を表示します。 別の名前を入力するには、このセルをクリックします。 この値は、ディメンション オブジェクトの **"名前"** プロパティを設定します。|  
 |**[SCD]**|ディメンションが緩やかに変化するディメンション (SCD) であることを指定します。 このチェック ボックスをオンにすると、[SCD の開始日]、[SCD の終了日]、[SCD のオリジナル ID]、および [SCD の状態] の各属性がディメンションに追加されます。 **[SCD]** は、キューブの作成にテンプレートを使用する場合に既定で選択され、ウィザードがこれら 4 つの属性タイプをテンプレート ディメンションで検出します。|  
 |**属性**|ディメンション用に作成される属性を表示します。 一覧の各属性名の前には、ディメンション名が付きます。 この一覧は読み取り専用です。 ウィザードを終了した後、ディメンション デザイナーを使用して属性を編集できます。|  
   

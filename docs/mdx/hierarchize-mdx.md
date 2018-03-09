@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: HIERARCHIZE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e7d6cb02219e05e47d8563ca4f89e3ff8076edf0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 14719e4ec362b140cee189231f983ac772a567af
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ Hierarchize(Set_Expression [ , POST ] )
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Hierarchize**関数は階層の順序に指定されたセットのメンバーを編成します。 この関数は、常に重複部分を保持します。  
   
 -   場合**POST**が指定されていない、関数は、自然な順序でレベル内のメンバーを並べ替えます。 自然な順序とは、他の並べ替え条件が指定されていない場合の、階層に沿ったメンバーの既定の順序です。 子メンバーは親メンバーの直後になります。  

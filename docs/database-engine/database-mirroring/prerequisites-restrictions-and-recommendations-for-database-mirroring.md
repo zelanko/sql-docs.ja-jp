@@ -23,13 +23,13 @@ ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 caps.latest.revision: "55"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eab5346433b15163cf6bf9a757923e06d32d0985
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 99a526a432e0e7567022891e28129a12d5b09ef3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>データベース ミラーリングの前提条件、制限事項、および推奨事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/20/2017
   
 -   ミラーリング セッションのすべてのサーバー インスタンスが同じマスター コード ページと照合順序を使用する必要があります。 異なるマスター コード ページと照合順序を使用すると、ミラーリングの設定中にエラーが発生する可能性があります。  
   
--   必要に応じて、データベースのフェールオーバーにかかる時間を見積もり、必要なパフォーマンスを実現できるようにシステムを構成します。 詳細については、「[役割の交代中に発生するサービスの中断時間の算出 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)」を参照してください。  
+-   必要に応じて、データベースのフェールオーバーにかかる時間を見積もり、必要なパフォーマンスを実現できるようにシステムを構成します。 詳しくは、「 [役割の交代中に発生するサービスの中断時間の算出 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)という処理により、一般的にプリンシパルとミラーの役割を相互交換できます。  
   
 -   最適なパフォーマンスを得るには、ミラーリングに専用のネットワーク アダプター (ネットワーク インターフェイス カード) を使用します。  
   

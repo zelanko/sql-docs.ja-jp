@@ -1,7 +1,7 @@
 ---
 title: "統計 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/20/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,22 +26,22 @@ helpviewer_keywords:
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 caps.latest.revision: "70"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 73102f9a2640a9d3481b9e5fd0b613d50c6b1710
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2ed0124e677f79bd25b11a4ac994f60e65f8fe82
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="statistics"></a>統計
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] クエリ オプティマイザーでは、クエリのパフォーマンスを向上させるクエリ プランを作成するために統計を使用します。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、最適な結果を得るために追加の統計情報を作成したり、クエリのデザインを変更したりする必要がある場合もあります。 このトピックでは、クエリ最適化に関する統計の概念と、それを効果的に使用するためのガイドラインについて説明します。  
   
 ##  <a name="DefinitionQOStatistics"></a> コンポーネントおよび概念  
 ### <a name="statistics"></a>統計  
- クエリ最適化に関する統計は、テーブルまたはインデックス付きビューの 1 つまたは複数の列の値の分布に関する統計情報を格納するオブジェクトです。 クエリ オプティマイザーでは、これらの統計を使用してクエリ結果の*基数*、つまり行数を推定します。 これらの*基数の推定*に基づいて、クエリ オプティマイザーでは高品質なクエリ プランを作成できます。 たとえば、クエリ オプティマイザーは述語に応じて基数の推定を使用し、リソース消費の多い Index Scan 操作ではなく Index Seek 操作を選択することがあります。そうすることで、クエリのパフォーマンスが高まります。  
+ クエリ最適化に関する統計は、テーブルまたはインデックス付きビューの 1 つまたは複数の列の値の分布に関する統計情報を格納するバイナリ ラージ オブジェクト (BLOB) です。 クエリ オプティマイザーでは、これらの統計を使用してクエリ結果の*基数*、つまり行数を推定します。 これらの*基数の推定*に基づいて、クエリ オプティマイザーでは高品質なクエリ プランを作成できます。 たとえば、クエリ オプティマイザーは述語に応じて基数の推定を使用し、リソース消費の多い Index Scan 操作ではなく Index Seek 操作を選択することがあります。そうすることで、クエリのパフォーマンスが高まります。  
   
  統計オブジェクトは 1 つ以上のテーブル列で構成されるリストごとに作成され、それぞれに最初の列の値の分布を示す*ヒストグラム*が含まれます。 複数列の統計オブジェクトには、さらに、列間の値の相関関係に関する統計情報も格納されます。 これらの相関関係の統計情報 ( *密度*) は、個別の列値を持つ行の数から得られます。 
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/27/2017
 
 次の図は、6 つの区間があるヒストグラムを示しています。 最初の上限境界値の左側にある領域が最初の区間です。
   
-![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "ヒストグラム") 
   
 上記のヒストグラムの各区間は、以下のように表されます。
 -   太線は、上限境界値 (*range_high_key*) およびその出現回数 (*equal_rows*) を表します。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/27/2017
   
 -   点線は、範囲内にある個別の値の総数 (*distinct_range_rows*) および範囲内の値の総数 (*range_rows*) を推定するために使用されるサンプリングされた値を表します。 クエリ オプティマイザーでは、*range_rows* および *distinct_range_rows* を使用して *average_range_rows* を計算します。サンプリングされた値は格納されません。   
   
-#### <a name="density"></a> 密度ベクトル  
+#### <a name="density"></a>密度ベクトル  
 **密度**とは、特定の列または列の組み合わせにおける重複の数に関する情報であり、1/(個別の値の数) の式で計算されます。 クエリ オプティマイザーでは、同一のテーブルまたはインデックス付きビューから複数の列を返すクエリに対する基数の推定を向上させるために密度を使用します。 密度ベクトルには、統計オブジェクトの列のプレフィックスごとに 1 つの密度が格納されます。 
 
 > [!NOTE]
@@ -89,16 +89,16 @@ ms.lasthandoff: 11/27/2017
 
 ### <a name="filtered-statistics"></a>フィルター選択された統計情報  
  適切に定義されたデータのサブセットから選択するクエリでは、フィルター選択された統計情報を使用するとクエリのパフォーマンスを向上させることができます。 フィルター選択された統計情報では、統計情報に含まれるデータのサブセットを選択するためにフィルター述語を使用します。 統計情報を適切にフィルター選択すると、テーブル全体の統計情報を使用する場合と比べて、クエリ実行プランが向上します。 フィルター述語の詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」を参照してください。 フィルター選択された統計情報を作成する場合の詳細については、このトピックの「 [統計を作成する場合](#CreateStatistics) 」を参照してください。  
-  
+ 
 ### <a name="statistics-options"></a>統計オプション  
  統計の作成と更新のタイミングおよび方法を指定するための 3 つのオプションを設定できます。 これらのオプションは、データベース レベルでのみ設定されます。  
   
-#### <a name="autocreatestatistics-option"></a>AUTO_CREATE_STATISTICS オプション  
+#### <a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS オプション  
  統計の自動作成オプション [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) がオンの場合、クエリ プランの基数の推定を向上させるために、クエリ オプティマイザーによってクエリ述語内の個々の列に関する統計が必要に応じて作成されます。 これらの 1 列ずつの統計は、既存の統計オブジェクトにまだ[ヒストグラム](#histogram)がない列について作成されます。 AUTO_CREATE_STATISTICS オプションでは、インデックスに対する統計を作成するかどうかは判断されません。 また、フィルター選択された統計情報も生成されません。 このオプションは、テーブル全体の 1 列ずつの統計にのみ適用されます。  
   
  AUTO_CREATE_STATISTICS オプションを使用した結果としてクエリ オプティマイザーによって統計が作成された場合、その統計名は `_WA` で始まります。 次のクエリを使用すると、クエリ オプティマイザーでクエリ述語列の統計が作成されたかどうかを判断できます。  
   
-```t-sql  
+```sql  
 SELECT OBJECT_NAME(s.object_id) AS object_name,  
     COL_NAME(sc.object_id, sc.column_id) AS column_name,  
     s.name AS statistics_name  
@@ -118,8 +118,8 @@ ORDER BY s.name;
 
 * [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降で、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)が 130 未満の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル内の行数に基づいて調整された、より小さな値の動的な統計情報更新しきい値を使用します。 これは、現在のテーブルの基数を掛けた 1,000 の平方根として計算されます。 この変更により、大規模なテーブルの統計がより頻繁に更新されます。 ただし、データベースの互換性レベルが 130 未満の場合、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のしきい値が適用されます。  
 
-  > [!IMPORTANT]
-  > [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)が 130 未満の場合、[トレース フラグ 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル内の行数に基づいて調整された、より小さな値の動的な統計情報更新しきい値を使用します。
+> [!IMPORTANT]
+> [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)が 130 未満の場合、[トレース フラグ 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル内の行数に基づいて調整された、より小さな値の動的な統計情報更新しきい値を使用します。
   
 クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリをコンパイルする前は、クエリ オプティマイザーで、クエリ述語内の列、テーブル、およびインデックス付きビューを使用して古くなっている可能性がある統計が判断されます。 キャッシュされたクエリ プランを実行する前は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で、クエリ プランが最新の統計を参照しているかどうかが確認されます。  
   
@@ -143,25 +143,19 @@ AUTO_UPDATE_STATISTICS の制御の詳細については、「[SQL Server 内の
   
 * アプリケーションで統計の更新を待機している 1 つ以上のクエリによって、クライアント要求がタイムアウトする場合。 場合によっては、同期統計を待機していることが原因で、厳しいタイムアウト時間が設定されたアプリケーションが失敗することがあります。  
   
-#### <a name="incremental-stats"></a>INCREMENTAL STATS  
- ON の場合、作成される統計はパーティションごとの統計です。 OFF の場合、統計ツリーが削除され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって統計が再計算されます。 既定値は OFF です。 この設定は、データベース レベルの INCREMENTAL プロパティよりも優先されます。  
+#### <a name="incremental"></a>INCREMENTAL   
+ CREATE STATISTICS の INCREMENTAL オプションが ON の場合、作成される統計情報はパーティションごとの統計になります。 OFF の場合、統計ツリーが削除され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって統計が再計算されます。 既定値は OFF です。 この設定は、データベース レベルの INCREMENTAL プロパティよりも優先されます。 増分統計の作成の詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」を参照してください。 パーティションごとの統計を自動的に作成する方法の詳細については、「[[データベースのプロパティ] &#40;[オプション] ページ&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic)」と「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。 
   
  大きなテーブルに新しいパーティションを追加した場合、新しいパーティションが含まれるように統計を更新する必要があります。 ただし、テーブル全体のスキャン (FULLSCAN または SAMPLE オプション) に要する時間は非常に長くなることがあります。 また、新しいパーティションに対する統計のみが必要となるため、テーブル全体をスキャンする必要はありません。 増分オプションでは、パーティションごとの統計が作成され格納されるため、更新時には、新しい統計を必要とするそれらのパーティションの統計のみを更新します。  
   
  パーティションごとの統計がサポートされていない場合、このオプションは無視され、警告が生成されます。 次の種類の統計では、増分統計がサポートされていません。  
   
 * ベース テーブルにパーティションで固定されていないインデックスを使用して作成された統計。  
-  
 * Always On の読み取り可能なセカンダリ データベースに対して作成された統計。  
-  
 * 読み取り専用のデータベースに対して作成された統計。  
-  
 * フィルター選択されたインデックスに対して作成された統計。  
-  
 * ビューに対して作成された統計。  
-  
 * 内部テーブルに対して作成された統計。  
-  
 * 空間インデックスまたは XML インデックスを使用して作成された統計。  
   
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
@@ -179,12 +173,9 @@ CREATE STATISTICS ステートメントを使用して統計を作成する場�
   
 次のいずれかに該当する場合は、CREATE STATISTICS ステートメントを使用して統計を作成することを検討してください。  
 
-* [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーで統計を作成するように提示される。  
-
+* [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーで統計を作成するように提示される。 
 * 相関関係にある複数の列がクエリ述語に含まれているが、それらがまだ同じインデックスに存在しない。  
-
 * データのサブセットから選択するクエリを使用する。  
-
 * クエリに統計がない。  
   
 ### <a name="query-predicate-contains-multiple-correlated-columns"></a>相関関係にある複数の列がクエリ述語に含まれている  
@@ -196,7 +187,7 @@ CREATE STATISTICS ステートメントを使用して統計を作成する場�
   
 基数の推定に効果的な密度を作成するには、クエリ述語内の列が、統計オブジェクト定義内の列のいずれかのプレフィックスに一致する必要があります。 たとえば、次の例では、列 `LastName`、 `MiddleName`、および `FirstName`に対する複数列統計オブジェクトを作成しています。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.stats  
@@ -223,7 +214,7 @@ GO
   
 クエリ オプティマイザーでは、 `BikeWeights` というフィルター選択された統計情報を使用して、重量が `25`を超えるすべての自転車を選択する次のクエリのクエリ プランを向上させることができます。  
   
-```t-sql  
+```sql  
 SELECT P.Weight AS Weight, S.Name AS BikeName  
 FROM Production.Product AS P  
     JOIN Production.ProductSubcategory AS S   
@@ -241,9 +232,7 @@ GO
  統計がない場合は、次の手順を実行します。  
   
 * [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) と [AUTO_UPDATE_STATISTICS ](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) がオンになっていることを確認します。  
-  
 * データベースが読み取り専用ではないことを確認します。 データベースが読み取り専用の場合は、新しい統計オブジェクトを保存できません。  
-  
 * 存在しない統計を [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) ステートメントを使用して作成します。  
   
 読み取り専用データベースまたは読み取り専用スナップショットに関する統計が欠落しているか、古くなっている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、 **tempdb**に一時的な統計を作成して維持します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で一時的な統計を作成する場合は、一時的な統計と永続的な統計とを区別するためのサフィックス *_readonly_database_statistic* が統計名に付加されます。 サフィックス *_readonly_database_statistic* は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって生成される統計用に予約されています。 読み書き可能なデータベースでは、一時的な統計用のスクリプトを作成して再現できます。 スクリプトを作成する場合、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、統計名のサフィックスを *_readonly_database_statistic* から *_readonly_database_statistic_scripted* に変更します。  
@@ -251,7 +240,6 @@ GO
 一時的な統計を作成して更新できるのは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のみです。 ただし、永続的な統計の場合と同じツールを使用すると、一時的な統計を削除して、統計のプロパティを監視できます。  
   
 * [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md) ステートメントを使用して一時的な統計を削除します。  
-  
 * **[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)** カタログ ビューと **[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)** カタログ ビューを使用して統計を監視します。 **sys_stats** には、どの統計が一時的または永続的なものかを示すための **is_temporary** 列が含まれています。  
   
  一時的な統計は **tempdb**に格納されるので、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを再起動すると、一時的な統計はすべてなくなります。  
@@ -268,11 +256,9 @@ GO
  次のような場合は、統計を更新することを検討してください。  
   
 * クエリの実行に時間がかかる。  
-  
 * 昇順または降順のキー列に対して挿入操作を実行する。  
-  
 * メンテナンス操作の実行後。  
-  
+
 ### <a name="query-execution-times-are-slow"></a>クエリの実行に時間がかかる  
  クエリの応答時間が遅い場合や予測できない場合は、他のトラブルシューティング手順を実行する前に、クエリの統計が最新のものであることを確認してください。  
   
@@ -316,7 +302,7 @@ GO
   
      たとえば、次のストアド プロシージャ `Sales.GetRecentSales` では、`@date` が NULL の場合にパラメーター `@date` の値を変更します。  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -335,7 +321,7 @@ GO
   
      ストアド プロシージャ `Sales.GetRecentSales` の最初の呼び出しで `@date` パラメーターに NULL が渡された場合、クエリ オプティマイザーでは、クエリ述語が `@date = NULL` で呼び出されていなくても、 `@date = NULL`に対する基数の推定を使用してストアド プロシージャをコンパイルします。 この基数の推定は、実際のクエリ結果の行数と大きく異なる場合があります。 そのため、クエリ オプティマイザーにより、最適なクエリ プランが選択されないことがあります。 この問題を回避するには、ストアド プロシージャを次のように 2 つのプロシージャに書き換えます。  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetNullRecentSales', 'P') IS NOT NULL  
@@ -365,7 +351,7 @@ GO
   
  アプリケーションによっては、クエリを実行するたびに再コンパイルすると時間がかかりすぎる場合がありますが、 `OPTIMIZE FOR` クエリ ヒントは `RECOMPILE` オプションを使用しなくても役立つことがあります。 たとえば、ストアド プロシージャ Sales.GetRecentSales に `OPTIMIZE FOR` オプションを追加して、特定の日付を指定することができます。 Sales.GetRecentSales プロシージャに `OPTIMIZE FOR` オプションを追加する例を次に示します。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -392,7 +378,7 @@ GO
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
@@ -401,4 +387,5 @@ GO
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)   
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
- 
+ [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)

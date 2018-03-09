@@ -1,5 +1,5 @@
 ---
-title: "リモート テーブルとして選択 (並列データ ウェアハウス) を作成 |Microsoft ドキュメント"
+title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: 
@@ -8,22 +8,23 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b1c445662f29241d8a2a1a547ef498f7491590b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 1a44f5f46a60959b38b3e8121847e0c80c1ba82b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-remote-table-as-select-parallel-data-warehouse"></a>リモート テーブルとして選択 (並列データ ウェアハウス) を作成します。
+# <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   データを選択、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]データベースにあり、SMP で新しいテーブルにそのデータをコピー[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リモート サーバー上のデータベースです。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]MPP クエリのリモート コピーのデータを選択する、処理のすべての利点とアプライアンスを使用します。 このシナリオを使用を必要とする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能します。  
@@ -81,18 +82,18 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
  *user_name*  
  有効な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ログイン名。 最大文字数は 128 です。  
   
- *パスワード*  
+ *password*  
  ログイン パスワード。 最大文字数は 128 です。  
   
  *batch_size*  
  バッチごとの行数の最大数。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]行をバッチで移行先サーバーに送信します。 *Batch_size*正の整数 > = 0。 既定値は 0 です。  
   
- *Common_table_expression*  
- 共通テーブル式 (CTE) と呼ばれる一時的な名前付き結果セットを指定します。 詳細については、次を参照してください。[で common_table_expression と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ WITH *common_table_expression*  
+ 共通テーブル式 (CTE) と呼ばれる一時的な名前付き結果セットを指定します。 詳細については、次を参照してください。[で common_table_expression と #40 です。TRANSACT-SQL と #41 です](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
  選択\<select_criteria > 新しいリモート テーブルを構成するデータを指定するクエリ述語です。 詳細については、SELECT ステートメントは、次を参照してください[SELECT &#40;。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  必要です。  
   
 -   SELECT 句内の各オブジェクトのアクセス許可を選択します。  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a3aeb96b361386eee3de4365ec9c7d9fe2512af5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9159ca1e27f8ddf22c85dcb4ad24e695f5275bf5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="enabling-visual-studio-analyzer"></a>Visual Studio Analyzer を有効にします。
 > [!IMPORTANT]  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  をクリックして**Visual Studio Analyzer のトレースを開始**です。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
  Visual Studio Analyzer イベント世代まで**Visual Studio Analyzer のトレースを停止**が選択されています。  
   

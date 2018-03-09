@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 caps.latest.revision: "88"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5c661e39ca7e011e185b68867be5955e2cfc280
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c524b1ad61453b835402816102a8f428adfe42d1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Web 同期用の IIS の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ここでは、マージ レプリケーション用に Web 同期を構成する 2 番目の手順を説明します。 この手順は、Web 同期用にパブリケーションを有効にした後に実行します。 構成プロセスの概要については、「 [[Web 同期の構成]](../../relational-databases/replication/configure-web-synchronization.md)」を参照してください。 ここでの手順を完了したら、続いて、Web 同期が使用されるようにサブスクリプションを構成する 3 番目の手順を実行してください。 3 番目の手順については、次のトピックで説明します。  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
   
     4.  Web サーバー証明書ウィザードを実行します。  
   
-4.  クリックして **OK**です。  
+4.  **[OK]** をクリックします。  
   
  CA からサーバー証明書を取得できない場合は、テスト用に証明書を指定できます。 テスト用に IIS 6.0 を構成するには、SelfSSL ユーティリティを使用して証明書をインストールします。 このユーティリティは、IIS 6.0 リソース キットで使用できます。 ツールは、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=30958)からダウンロードできます。 IIS 5.0 の場合は、 [Microsoft ヘルプとサポート](http://go.microsoft.com/fwlink/?LinkId=46229)を参照してください。  
   
@@ -163,7 +163,7 @@ ms.lasthandoff: 11/17/2017
   
     2.  **[パス]** ボックスに、仮想ディレクトリのパスを入力します。 たとえば、 **[別名]** ボックスに「 **websync1** 」と入力した場合は、 **[パス]** ボックスに「 **C:\Inetpub\wwwroot\websync1** 」と入力します。 **[次へ]**をクリックします。  
   
-    3.  両方のダイアログ ボックスで **[はい]**をクリックします。 これにより、新しいフォルダーを作成し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISAPI (インターネット サーバー API) の DLL をコピーします。 」を参照してください。  
+    3.  両方のダイアログ ボックスで **[はい]**をクリックします。 これにより、新しいフォルダーを作成し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISAPI (インターネット サーバー API) の DLL をコピーします。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
   
 7.  **[認証済みアクセス]** ページで以下の操作を行います。  
   
@@ -276,7 +276,7 @@ ms.lasthandoff: 11/17/2017
   
     6.  ディレクトリにアクセスする必要がないユーザーまたはグループを選択し、 **[削除]**をクリックします。  
   
-    7.  クリックして **OK**です。  
+    7.  **[OK]** をクリックします。  
   
 4.  **インターネット インフォメーション サービス (IIS) マネージャー**でアプリケーション プールを作成します。  
   
@@ -300,7 +300,7 @@ ms.lasthandoff: 11/17/2017
   
     4.  **[ユーザー名]** および **[パスワード]** フィールドに、手順 1. で作成したアカウントとパスワードを入力します。  
   
-    5.  クリックして **OK**です。  
+    5.  **[OK]** をクリックします。  
   
 6.  Web 同期に使用する仮想ディレクトリにアプリケーション プールを関連付けます。  
   
@@ -310,7 +310,7 @@ ms.lasthandoff: 11/17/2017
   
     3.  **[\<VirtualDirectoryName> のプロパティ]** ダイアログ ボックスの **[仮想ディレクトリ]** タブで、手順 5. で作成したアプリケーション プールを **[アプリケーション プール]** ボックスから選択します。  
   
-    4.  クリックして **OK**です。  
+    4.  **[OK]** をクリックします。  
   
 ## <a name="testing-the-connection-to-replisapidll"></a>replisapi.dll への接続のテスト  
  診断モードで Web 同期を実行すると、IIS を実行しているコンピューターへの接続をテストして、SSL (Secure Sockets Layer) 証明書が正しくインストールされているかどうかを確認できます。 診断モードで Web 同期を実行するには、IIS を実行しているコンピューターの管理者である必要があります。  
@@ -327,9 +327,9 @@ ms.lasthandoff: 11/17/2017
   
     4.  プロキシ サーバーを使用している場合は、 **[LAN にプロキシ サーバーを使用する]** と **[ローカル アドレスにはプロキシ サーバーを使用しない]**チェック ボックスをオンにします。  
   
-    5.  クリックして **OK**です。  
+    5.  **[OK]** をクリックします。  
   
-2.  サブスクライバー側の Internet Explorer から診断モードでサーバーに接続します。診断モードで接続するには、replisapi.dll のアドレスの後に「 `?diag` 」を追加します。 たとえば、 `https://server.domain.com/directory/replisapi.dll?diag`のようにします。  
+2.  サブスクライバー側の Internet Explorer から診断モードでサーバーに接続します。診断モードで接続するには、replisapi.dll のアドレスの後に「 `?diag` 」を追加します。 例: `https://server.domain.com/directory/replisapi.dll?diag`」を参照してください。  
   
 3.  IIS に指定した証明書が Windows オペレーティング システムによって認識されない場合は、 **[セキュリティの警告]** ダイアログ ボックスが表示されます。 証明書がテスト用の証明書であるか、Windows が認識しない証明機関 (CA) によって発行されていると、この警告が表示されます。  
   

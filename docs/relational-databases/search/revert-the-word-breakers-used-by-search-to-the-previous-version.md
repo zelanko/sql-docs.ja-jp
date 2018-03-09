@@ -8,25 +8,27 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 932ac3a8337af5871910c9aabd7a906508b1455d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a3ad97ccd909c55268cf2be050d913fdc931433a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>検索で使用するワード ブレーカーを以前のバージョンに戻す
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、フルテキスト検索でサポートされているすべての言語 (韓国語を除く) 用のワード ブレーカーおよびステマーのバージョンがインストールされ、有効になります。 このトピックでは、これらのコンポーネントのこのバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、フルテキスト検索でサポートされているすべての言語 (韓国語を除く) 用のワード ブレーカーおよびステマーのバージョンがインストールされ、有効になります。 この記事では、これらのコンポーネントのこのバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。  
   
- このトピックでは、次の言語については説明しません。  
+ この記事では、次の言語については説明しません。  
   
 -   **英語**。 英語のコンポーネントに戻す、または英語のコンポーネントを復元するには、「 [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)」を参照してください。  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 > [!WARNING]  
 >  現在のバージョンのファイル (NaturalLanguage6.dll) を別のバージョンに置き換えると、そのファイルを使用するすべての言語の動作が影響を受けます。  
   
- このトピックで説明するファイルは、 `MSSQL\Binn` インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フォルダーにインストールされる DLL ファイルです。 通常、完全なパスは次のようになります。  
+ この記事で説明するファイルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの `MSSQL\Binn` フォルダーにインストールされる DLL ファイルです。 通常、完全なパスは次のようになります。  
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
@@ -62,7 +64,7 @@ ms.lasthandoff: 11/17/2017
   
  **影響を受ける言語の一覧**  
   
-|言語|省略形<br />(レジストリで<br />使用)|LCID (LCID)|  
+|[言語]|省略形<br />(レジストリで<br />使用)|LCID (LCID)|  
 |--------------|---------------------------------------|----------|  
 |ベンガル語|ben|1093|  
 |ブルガリア語|bgr|1026|  
@@ -133,7 +135,7 @@ ms.lasthandoff: 11/17/2017
   
  **影響を受ける言語の一覧**  
   
-|言語|省略形<br />(レジストリで<br />使用)|LCID (LCID)|  
+|[言語]|省略形<br />(レジストリで<br />使用)|LCID (LCID)|  
 |--------------|---------------------------------------|----------|  
 |アラビア語|ara|1025|  
 |ドイツ語|deu|1031|  
@@ -228,7 +230,7 @@ ms.lasthandoff: 11/17/2017
 |以前の CLSID|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |以前のファイル名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |現在の CLSID|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|現在のファイル名|MSWB7.dll|MSWB7.dll|  
+|現在のファイル名|MsWb7.dll|MSWB7.dll|  
   
  **日本語 (jpn)、LCID 1041**  
   
@@ -246,7 +248,7 @@ ms.lasthandoff: 11/17/2017
 |以前の CLSID|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |以前のファイル名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |現在の CLSID|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|現在のファイル名|MSWB7.dll|MSWB7.dll|  
+|現在のファイル名|MsWb7.dll|MSWB7.dll|  
   
  **ロシア語 (rus)、LCID 1049**  
   
@@ -255,14 +257,14 @@ ms.lasthandoff: 11/17/2017
 |以前の CLSID|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |以前のファイル名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |現在の CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|現在のファイル名|MSWB7.dll|MSWB7.dll|  
+|現在のファイル名|MsWb7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> 以前と現在のファイル名がどちらも NaturalLanguage6.dll でない言語  
  次の表に示す言語では、以前のワード ブレーカーとステマーのファイル名が新しいバージョンのファイル名とは異なります。 以前と現在のファイル名はどちらも NaturalLanguage6.dll ではありません。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のセットアップでは、現在と以前の両方のバージョンのコンポーネントを Binn フォルダーにコピーするため、ファイルを置き換える必要はありません。 ただし、以前または現在のバージョンのコンポーネントを指定するようにレジストリ エントリのセットを変更する必要があります。  
   
  **影響を受ける言語の一覧**  
   
-|言語|省略形<br />(レジストリで<br />使用)|LCID (LCID)|  
+|[言語]|省略形<br />(レジストリで<br />使用)|LCID (LCID)|  
 |--------------|---------------------------------------|----------|  
 |簡体字中国語|chs|2052|  
 |繁体字中国語|cht|1028|  

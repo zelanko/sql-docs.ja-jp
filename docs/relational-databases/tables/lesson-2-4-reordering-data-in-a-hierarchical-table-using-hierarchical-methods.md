@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: HierarchyID
 ms.assetid: 7b8064c7-62c6-488d-84d2-57a5828fb907
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27cbbfc0bb1cf691a7bd22913af01d0b76a27423
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a3d15df3ae3bf757b54e2e4d48c55b94285540d9
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="lesson-2-4---reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>レッスン 2-4 - 階層的な手法を使用した階層テーブルのデータの並べ替え
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] 階層の再編成は、一般的なメンテナンス タスクです。 ここでは、UPDATE ステートメントを [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) メソッドと共に使用して、まず 1 つの行を階層内の新しい位置に移動します。 次に、サブツリー全体を新しい場所に移動します。  
@@ -118,7 +118,7 @@ Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title
 /            Ox      0        6          David   Marketing Manager  
 /1/          0x58    1        46         Sariya  Marketing Specialist  
 /1/1/        0x5AC0  2        269        Wanida  Marketing Assistant  
-/1/1//2      0x5AD0  3        291        Kevin   Marketing Intern  
+/1/1/1/      0x5AD0  3        291        Kevin   Marketing Intern  
 /2/          0x68    1        271        John    Marketing Specialist  
 /2/1/        0x6AC0  2        272        Mary    Marketing Assistant  
 /3/          0x78    1        119        Jill    Marketing Specialist  

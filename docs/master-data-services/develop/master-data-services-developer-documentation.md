@@ -8,21 +8,22 @@ ms.service:
 ms.component: develop
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf661093a0c0851bb0c8663251bf56f273038013
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21898c90044ec62c1a7d55fbcfa0cf03d46ba7ce
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-developer-documentation"></a>マスター データ サービスの開発者向けドキュメント
   ここでは、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] の操作方法を、コードの記述によってカスタマイズする方法について説明します。 具体的には、次の方法を学習します。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="web-server-namespaces"></a>Web サーバー名前空間  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は、一連のアセンブリを Web サーバー コンピューターにインストールします。 これらのアセンブリには、Web サーバー コンピューターの動作をカスタマイズする高度なシナリオに使用できる名前空間が含まれます。 次の表では、これらの名前空間について説明します。  
   
-|名前空間|Description|  
+|Namespace|Description|  
 |---------------|-----------------|  
 |<xref:Microsoft.MasterDataServices.Deployment>|モデルからの配置パッケージの作成と [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースへのパッケージの配置に使用できるクラスが含まれます。|  
 |<xref:Microsoft.MasterDataServices.Services>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを通じて Web サーバー コンピューターに対して行われた Web サービス操作を取得および処理するクラスが含まれます。|  

@@ -8,23 +8,24 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSCM.F1
 - sql14.dts.designer.afpadlscm.f1
 ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Lingxi-Li
 ms.author: lingxl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a5520dc00083bdd4522e10a2479e69fa000dc65
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9d98d6cf214a4d08e3a617ab19307bfd42b58189
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 接続マネージャー
 SQL Server Integration Services (SSIS) パッケージでは、Azure Data Lake Store 接続マネージャーを使用して、次の 2 つの認証の種類のいずれかで Azure Data Lake Store サービスに接続できます。
@@ -47,7 +48,7 @@ Azure Data Lake Store 接続マネージャー は、[SQL Server Integration Ser
     1.  **[Azure AD のユーザー ID]** 認証オプションを選択する場合は、次の操作を行います。
         1. **[ユーザー名]** と **[パスワード]** のフィールドに値を指定します。 
     
-        2. 接続をテストするには、**[接続テスト]** を選択します。 自分自身またはテナント管理者が SSIS から Azure Data Lake Store データへのアクセスに同意していない場合は、プロンプトが表示されたときに **[同意する]** を選択します。 この同意エクスペリエンスの詳細については、「 [Azure Active Directory とアプリケーションの統合](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-integrating-applications#updating-an-application)」を参照してください。
+        2. 接続をテストするには、**[接続テスト]** を選択します。 自分自身またはテナント管理者が SSIS から Azure Data Lake Store データへのアクセスに同意していない場合は、プロンプトが表示されたときに **[同意する]** を選択します。 この同意エクスペリエンスの詳細については、「[Azure Active Directory とアプリケーションの統合](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application)」を参照してください。
     
         >   [!NOTE] 
         > **[Azure AD のユーザー ID]** 認証オプションを選択する場合、多要素認証と Microsoft アカウント認証はサポートされません。
@@ -55,7 +56,7 @@ Azure Data Lake Store 接続マネージャー は、[SQL Server Integration Ser
     2. **[Azure AD のサービス ID]** 認証オプションを選択する場合は、次の操作を行います。
         1. Azure Data Lake データにアクセスするための Azure Active Directory (AAD) アプリケーションおよびサービス プリンシパルを作成します。
     
-        2. 適切な権限を割り当てて、この AAD アプリケーションが Azure Data Lake リソースにアクセスできるようにします。 この認証オプションの詳細については、「 [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal)」 (ポータルを使用して、リソースにアクセスできる Active Directory アプリケーションとサービス プリンシパルを作成する) を参照してください。
+        2. 適切な権限を割り当てて、この AAD アプリケーションが Azure Data Lake リソースにアクセスできるようにします。 この認証オプションの詳細については、「[Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)」 (ポータルを使用して、リソースにアクセスできる Active Directory アプリケーションとサービス プリンシパルを作成する) を参照してください。
     
         3. **[クライアント ID]**、**[シークレット キー]** および **[テナント名]** の各フィールドに値を指定します。
     

@@ -8,20 +8,21 @@ ms.service:
 ms.component: installing-mds-in-an-alwayson-group-environment
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
 caps.latest.revision: 
-author: smartysanthosh
-ms.author: nagavo
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2caabcb53e4386927b4103764c8abce34ccdefcd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8cd77bb7366fb1bb09d8f119a1b740bd8456344
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>マスター データ サービスの高可用性とディザスター リカバリー
 
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/20/2017
 
 WSFC は、アプリケーションやサービスの高可用性を改善する機能です。 Microsoft フェールオーバー クラスター サービスを実行する非依存 Windows Server インスタンスのグループで構成されています。 Windows Server インスタンス (ノードと呼ばれることもあります) は互いに通信できるように接続され、不具合の検出が可能になります。 WSFC は不具合の検出機能とフェールオーバー機能を提供します。 クラスターでノードやサービスに不具合が生じた場合、それが検出され、別のノードが、自動または手動で、不具合のあるノードでホストされているサービスの提供を開始します。 そのため、ユーザーにとっては、サービスの中断が最小限に抑えられます。サービスの可用性が向上します。  
 
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>Prerequisites
 
 Windows Server オペレーティング システムがすべてのインスタンスにインストールされており、あらゆる更新プログラムが適用されていること。
 
@@ -215,7 +216,7 @@ AG は、データベース レベルで高可用性を強化します。 AG (�
 FCI は、インスタンス レベルで高可用性を強化します。 SQL Server サービスと関連サービスはリソースとして WSFC に登録されます。 また、FCI ソリューションには、SAN または SMB ファイル共有など、対称的共有ディスク ストレージが必要です。対称的共有ディスク ストレージは、WFC クラスターのすべてのノードで利用できるようにする必要があります。
 
 
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>Prerequisites
 
 -   すべてのノードに SQL Server をインストールすること。 詳細については、「[SQL Server 2016 のインストール](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server)」を参照してください。
 
@@ -319,9 +320,9 @@ AG は既存のデータベースにのみ作成できます。 そのため、1
 
 8.  **[レプリカの指定]** ページで、**[リスナー]** タブをクリックし、次の操作を行います。 図 18 を参照してください。
 
-    a.  **[可用性グループ リスナーの作成]** をクリックし、MDS データベース接続の可用性グループ リスナーを設定します。
+    A.  **[可用性グループ リスナーの作成]** をクリックし、MDS データベース接続の可用性グループ リスナーを設定します。
 
-    b.  **[リスナーの DNS 名]** を入力します。たとえば、「MDSSQLServer」にします。
+    B.  **[リスナーの DNS 名]** を入力します。たとえば、「MDSSQLServer」にします。
 
     c.  **[ポート]** テキスト ボックスに既定の SQL ポートである 1433 を入力します。
 

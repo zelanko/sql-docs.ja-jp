@@ -8,25 +8,28 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - sequence type matching [XQuery]
 - XQuery, sequence type matching
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af693b0d47a92fdefc2ebf2104455d7ea5b782c5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5a86a8fdfbae6fb345839d281141c3606abae804
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-system---sequence-type-matching"></a>システム - 入力シーケンス型の照合
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 -   式から特定の名前や型の XML 要素または属性ノードが返されるかどうかを確認できます。  
   
- 使用することができます、`instance of`シーケンス型の照合のブール演算子。 詳細については、`instance of`式を参照してください[SequenceType 式 &#40;です。XQuery と #41 です。](../xquery/sequencetype-expressions-xquery.md).  
+ 使用することができます、`instance of`シーケンス型の照合のブール演算子。 詳細については、`instance of`式を参照してください[SequenceType 式 &#40;です。XQuery と #41 です](../xquery/sequencetype-expressions-xquery.md)。  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>式から返されるアトミック値の型の比較  
  式からアトミック値のシーケンスが返される場合、シーケンス内の値の型を確認することが必要な場合があります。 次の例は、シーケンス型の構文を使用して式から返されるアトミック値の型を評価する方法を示しています。  
@@ -234,7 +237,7 @@ SELECT @var.query('(/node())[1] instance of processing-instruction()')
 ### <a name="implementation-limitations"></a>実装の制限事項  
  これらは、特定の制限事項です。  
   
--   **document-node()**コンテンツの種類の構文はサポートされていません。  
+-   **document-node()** with content type syntax is not supported.  
   
 -   **processing-instruction (name)**構文がサポートされていません。  
   
@@ -430,7 +433,7 @@ RETURN
   
 -   **element (ElementName, TypeName)**はサポートされていません。  
   
--   **要素 (\*、TypeName)**はサポートされていません。  
+-   **element(\*, TypeName)** is not supported.  
   
 -   **schema-element()**はサポートされていません。  
   

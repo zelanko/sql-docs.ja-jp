@@ -1,7 +1,7 @@
 ---
 title: "SSMA コンソール (OracleToSQL) を実行 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -22,11 +22,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: ce380d48c1c8af960fac1153cbde8e60ab593566
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9c0109ed3c675b140cbce6d780c24256c0eb2bc9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>SSMA コンソール (OracleToSQL) を実行します。
 Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実行し、SSMA 動作を制御できます。 コンソール アプリケーションは、このセクションで、列挙型として特定の標準的なスクリプト ファイルのコマンドを使用します。  
@@ -167,7 +167,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
   metabase="<source/target>"/>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <force-load>  
@@ -280,7 +280,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <generate-assessment-report  
@@ -354,7 +354,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <convert-schema  
@@ -422,7 +422,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 </migrate-data>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <migrate-data  
@@ -511,7 +511,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <synchronize-target  
@@ -520,7 +520,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
    object-type="<object-category>"/>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <synchronize-target>  
@@ -576,7 +576,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <refresh-from-database  
@@ -585,7 +585,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
    object-type="<object-category>"/>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <refresh-from-database>  
@@ -635,7 +635,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <save-as-script  
@@ -711,7 +711,7 @@ sql ステートメントの変換
   
 </convert-sql-statement>  
 ```  
-または  
+内の複数の  
   
 ```  
 <convert-sql-statement  
@@ -734,7 +734,7 @@ sql ステートメントの変換
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-または  
+内の複数の  
   
 ```  
 <convert-sql-statement  

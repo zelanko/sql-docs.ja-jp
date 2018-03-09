@@ -1,7 +1,7 @@
 ---
 title: "Oracle スキーマをマッピングから SQL Server スキーマ (OracleToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 592c5385efd4c9457405ffec77eac723109fdf6e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 025f3f049b5efccb83e13d5baebacbe8b0fa2a1c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>SQL Server スキーマ (OracleToSQL) への Oracle スキーマのマッピング
 Oracle は、各データベースは、1 つまたは複数のスキーマを持っています。 既定では、SSMA は Oracle スキーマ内のすべてのオブジェクトを移行、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]スキーマという名前のデータベースです。 ただし、Oracle スキーマ間のマッピングをカスタマイズすることができ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。  
@@ -65,7 +65,7 @@ Oracle スキーマ間のマッピングをカスタマイズする場合は、[
   
 1.  スキーマのマッピング] タブで、[任意の行を選択し、をクリックして**既定値にリセット**既定のデータベースとスキーマを元に戻す。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 Oracle オブジェクトへの変換を分析するかどうかは[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト、することができます[変換レポートを作成する](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357)です。 それ以外の場合を実行できます[Oracle データベースのオブジェクトの定義の変換](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272)に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト定義します。  
   
 ## <a name="see-also"></a>参照  

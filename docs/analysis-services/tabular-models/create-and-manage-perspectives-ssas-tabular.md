@@ -1,46 +1,33 @@
 ---
-title: "作成および管理のパースペクティブ (SSAS テーブル) |Microsoft ドキュメント"
+title: "作成し、パースペクティブの管理 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.perspectivedb.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.perspectivedb.f1
 ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09f6afd1c10031647ba9f96e764d3bcd971ccaff
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5149052156082507c6c970512ab7db0194209ab5
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-perspectives-ssas-tabular"></a>パースペクティブの作成と管理 (SSAS テーブル)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]パースペクティブは、モデルの対象を絞った、ビジネス固有またはアプリケーション固有のビュー ポイントを提供するモデルの表示可能なサブセットを定義します。 このトピックのタスクでは、モデル デザイナーで **[パースペクティブ]** ダイアログ ボックスを使用して、パースペクティブを作成し管理する方法について説明します。  
-  
- このトピックでは、次のタスクについて説明します。  
-  
--   [パースペクティブを追加するには](#bkmk_add)  
-  
--   [パースペクティブを編集するには](#bkmk_edit)  
-  
--   [パースペクティブの名前を変更するには](#bkmk_rename)  
-  
--   [パースペクティブを削除するには](#bkmk_delete)  
-  
--   [パースペクティブをコピーするには](#bkmk_copy)  
+# <a name="create-and-manage-perspectives"></a>作成し、パースペクティブの管理 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+パースペクティブを使用すると、ビジネス固有またはアプリケーション固有のビューポイントをモデルに対して的を絞って作成するための、表示可能なサブセットを定義できます。 このトピックのタスクでは、モデル デザイナーで **[パースペクティブ]** ダイアログ ボックスを使用して、パースペクティブを作成し管理する方法について説明します。  
   
 ## <a name="tasks"></a>処理手順  
  パースペクティブを作成するには、 **[パースペクティブ]** ダイアログ ボックスを使用します。このダイアログ ボックスでは、パースペクティブの追加、編集、削除、コピー、表示の各操作を実行できます。 **[パースペクティブ]** ダイアログ ボックスを表示するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で **[モデル]** メニューをクリックし、 **[パースペクティブ]**をクリックします。  
@@ -67,8 +54,8 @@ ms.lasthandoff: 12/08/2017
   
 -   パースペクティブの列のヘッダーにマウス ポインターを合わせると、 **[コピー]** ボタンが表示されます。 そのパースペクティブのコピーを作成するには、 **[コピー]** ボタンをクリックします。 既存のパースペクティブの右側に、選択したパースペクティブのコピーが新しいパースペクティブとして追加されます。 新しいパースペクティブは、コピーしたパースペクティブの名前を継承しますが、名前の末尾には " *- コピー* " という注釈が追加されます。 たとえば、 *Sales* というパースペクティブのコピーを作成した場合、新しいパースペクティブの名前は " *Sales – コピー*" になります。  
   
-## <a name="see-also"></a>「  
- [パースペクティブ (SSAS テーブル)](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [階層 (SSAS テーブル)](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
+## <a name="see-also"></a>参照  
+ [パースペクティブ](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
+ [階層](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   
   

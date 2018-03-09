@@ -8,20 +8,21 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 52fb4e913a48b65544aaca84408f847af74412be
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 15c927bf78faa7705a27dafce3517de7f05e50d4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>クラスターにおける Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をクラスター化することはお勧めしません。[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、クラスター化されるサービスまたはクラスター対応サービスではなく、クラスター ノード間のフェールオーバーはサポートしません。 したがって、クラスター環境では、クラスターの各ノードで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールし、スタンドアロン サービスとして起動する必要があります。  
@@ -104,15 +105,15 @@ ms.lasthandoff: 11/20/2017
   
 4.  **[ファイル]** メニューの **[新規作成]**をポイントし、 **[リソース]**をクリックします。  
   
-5.  リソースの新規作成ウィザードの **[新しいリソース]** ページで、名前を入力し、 **[サービスの種類]** として **[汎用サービス]**を選択します。 **[グループ]**の値は変更せずに、 **[次へ]**をクリックします。  
+5.  リソースの新規作成ウィザードの **[新しいリソース]** ページで、名前を入力し、 **[サービスの種類]** として **[汎用サービス]**を選択します。 **[グループ]**の値は変更せずに、 **[次へ]** をクリックします。  
   
-6.  **[実行可能な所有者]** ページで、リソースの実行可能な所有者として、クラスターのノードを追加または削除し、 **[次へ]**をクリックします。  
+6.  **[実行可能な所有者]** ページで、リソースの実行可能な所有者として、クラスターのノードを追加または削除し、 **[次へ]** をクリックします。  
   
 7.  依存関係を追加するには、 **[依存関係]** ページで **[利用できるリソース]**からリソースを選択し、 **[追加]**をクリックします。 フェールオーバーが発生した場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がオンラインになる前に、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージが保存されている共有ディスクの両方がオンラインになる必要があります。 依存関係を選択したら、 **[次へ]**をクリックします。  
   
      詳細については、「 [Add Dependencies to a SQL Server Resource](../../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md)」を参照してください。  
   
-8.  **[汎用サービス パラメーター]** ページで、サービスの名前に「 **MsDtsServer** 」と入力し、 **[次へ]**をクリックします。  
+8.  **[汎用サービス パラメーター]** ページで、サービスの名前に「 **MsDtsServer** 」と入力し、 **[次へ]** をクリックします。  
   
 9. **[レジストリ レプリケーション]** ページで、 **[追加]** をクリックし、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルの場所を示すレジストリ キーを追加します。 このファイルは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスと同じリソース グループに属している共有ディスクに配置されている必要があります。  
   

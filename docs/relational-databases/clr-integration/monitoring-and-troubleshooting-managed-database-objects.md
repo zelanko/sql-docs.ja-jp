@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,22 +16,23 @@ helpviewer_keywords:
 - monitoring [CLR integration]
 - performance [CLR integration]
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 488b1caaab31a06f2bff4f611e0bc1e6affada68
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aed7ed72f65d504caf0ada54e9eab5ed620d5913
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>マネージ データベース オブジェクトの監視とトラブルシューティング
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このトピックは、マネージ データベース オブジェクトと実行されているアセンブリ監視およびトラブルシューティングに使用できるツールに関する情報を提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行されるマネージ データベース オブジェクトとアセンブリの監視およびトラブルシューティングに使用できるツールに関する情報を提供します。  
   
 ## <a name="profiler-trace-events"></a>プロファイラー トレース イベント  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、データベース エンジンで発生するイベントを監視するための SQL トレースとイベント通知が用意されています。 SQL トレースは、指定したイベントを記録することによって、パフォーマンスのトラブルシューティング、データベースの利用状況の監査、テスト環境のサンプル データの収集、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとストアド プロシージャのデバッグ、およびパフォーマンス分析ツール用のデータの収集に役立ちます。 詳細については、次を参照してください。 [SQL トレース](../../relational-databases/sql-trace/sql-trace.md)と[拡張イベント](../../relational-databases/extended-events/extended-events.md)です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンで発生するイベントを監視する SQL トレースとイベントの通知を提供します。 SQL トレースは、指定したイベントを記録することによって、パフォーマンスのトラブルシューティング、データベースの利用状況の監査、テスト環境のサンプル データの収集、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとストアド プロシージャのデバッグ、およびパフォーマンス分析ツール用のデータの収集に役立ちます。 詳細については、次を参照してください。 [SQL トレース](../../relational-databases/sql-trace/sql-trace.md)と[拡張イベント](../../relational-databases/extended-events/extended-events.md)です。  
   
 |イベント|Description|  
 |-----------|-----------------|  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 |[SQL:StmtStarting イベント クラス](../../relational-databases/event-classes/sql-stmtstarting-event-class.md)、 [SQL:StmtCompleted イベント クラス](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|CLR および [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンの実行の監視に使用されます。|  
   
 ## <a name="performance-counters"></a>パフォーマンス カウンター  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、システム モニターで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行しているコンピューターの利用状況の監視に使用できるオブジェクトとカウンターが用意されています。 オブジェクトとは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロックや Windows プロセスなど任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースです。 各オブジェクトには、監視するオブジェクトのさまざまな特性を示す 1 つ以上のカウンターが含まれます。 詳細については、「 [SQL Server オブジェクトの使用](../../relational-databases/performance-monitor/use-sql-server-objects.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトおよびカウンターのインスタンスを実行しているコンピューターでアクティビティを監視するシステム モニターで使用できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 オブジェクトとは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロックや Windows プロセスなど任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースです。 各オブジェクトには、監視するオブジェクトのさまざまな特性を示す 1 つ以上のカウンターが含まれます。 詳細については、「 [SQL Server オブジェクトの使用](../../relational-databases/performance-monitor/use-sql-server-objects.md)」を参照してください。  
   
 |オブジェクト|Description|  
 |------------|-----------------|  
@@ -76,18 +77,18 @@ ms.lasthandoff: 11/17/2017
 |[sys.types &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|データベースに登録されているシステム定義型およびユーザー定義型を返します。|  
   
 ## <a name="dynamic-management-views"></a>動的管理ビュー  
- 動的管理ビューと動的管理関数では、サーバーの状態情報が返されます。返された情報は、サーバー インスタンスのヘルス状態の監視、問題の診断、パフォーマンスのチューニングに使用できます。 詳細については、次を参照してください[動的管理ビューおよび関数 &#40;。TRANSACT-SQL と #41 です。](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ 動的管理ビューと動的管理関数では、サーバーの状態情報が返されます。返された情報は、サーバー インスタンスのヘルス状態の監視、問題の診断、パフォーマンスのチューニングに使用できます。 詳細については、次を参照してください[動的管理ビューおよび関数 &#40;。TRANSACT-SQL と #41 です](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 |DMV (DMV)|Description|  
 |---------|-----------------|  
 |[sys.dm_clr_appdomains &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|サーバー内の各アプリケーション ドメインに関する情報を提供します。|  
 |[sys.dm_clr_loaded_assemblies &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|サーバー上に登録されている各マネージ アセンブリを示します。|  
 |[sys.dm_clr_properties &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md)|ホストされている CLR に関する情報を返します。|  
-|[sys.dm_clr_tasks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md)|実行中のすべての CLR タスクを示します。|  
+|[sys.dm_clr_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md)|実行中のすべての CLR タスクを示します。|  
 |[sys.dm_exec_cached_plans &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)|クエリ実行を高速化するため [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でキャッシュされたクエリ実行プランに関する情報を返します。|  
 |[sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)|キャッシュされたクエリ プランの集計パフォーマンス統計を返します。|  
 |[sys.dm_exec_requests &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内で実行中の各要求に関する情報を返します。|  
-|[sys.dm_os_memory_clerks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|CLR メモリ クラークなど、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内でアクティブになっているすべてのメモリ クラークを返します。|  
+|[sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|CLR メモリ クラークなど、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内でアクティブになっているすべてのメモリ クラークを返します。|  
   
 ## <a name="see-also"></a>参照  
  [CLR &#40;共通言語ランタイム&#41; 統合のプログラミング概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

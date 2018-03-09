@@ -8,19 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3821b2849ef266437fb65c45004415727746d80f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 93a8df11a73ebb9abc21e94147c5ba2fbc0abd87
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="error-handling"></a>エラー処理
   Oracle CDC インスタンスでは、単一の Oracle ソース データベース (Oracle RAC クラスターは単一のデータベースと見なされます) から変更を検出し、対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに含まれる CDC データベースの変更テーブルにコミット済みの変更を書き込みます。  
@@ -39,13 +40,13 @@ ms.lasthandoff: 11/20/2017
   
  次の表に、Oracle CDC インスタンスの状態テーブルで報告されるさまざまな状態コードを示します。  
   
-|[状態]|Active 状態コード|Error 状態コード|Description|副状態|  
+|状態|Active 状態コード|Error 状態コード|Description|副状態|  
 |------------|------------------------|-----------------------|-----------------|---------------|  
-|ABORTED|0|1|Oracle CDC インスタンスが実行されていません。 ABORTED 副状態は、ACTIVE だった Oracle CDC インスタンスが予期せず停止したことを示します。|ABORTED 副状態になるのは、実行されていない Oracle CDC インスタンスの状態が ACTIVE になっていることが Oracle CDC Service のメイン インスタンスで検出された場合です。|  
-|[error]|0|1|Oracle CDC インスタンスが実行されていません。 ERROR 状態は、回復できないエラーが発生したために ACTIVE だった CDC インスタンスが無効になったことを示します。|MISCONFIGURED: 回復できない構成エラーが検出されました。<br /><br /> PASSWORD-REQUIRED: Change Data Capture Designer for Oracle by Attunity のパスワードが設定されていないか、構成されているパスワードが無効です。 サービスの非対称キーのパスワードが変更されたことが原因として考えられます。|  
-|RUNNING|1|0|CDC インスタンスが実行されていて、変更レコードが処理されています。|IDLE: すべての変更レコードが処理され、対象の制御 (**_CT**) テーブルに格納されました。 制御テーブルにアクティブなトランザクションはありません。<br /><br /> PROCESSING: 制御 (**_CT**) テーブルにまだ書き込まれていない、処理中の変更レコードがあります。|  
+|ABORTED|0|@shouldalert|Oracle CDC インスタンスが実行されていません。 ABORTED 副状態は、ACTIVE だった Oracle CDC インスタンスが予期せず停止したことを示します。|ABORTED 副状態になるのは、実行されていない Oracle CDC インスタンスの状態が ACTIVE になっていることが Oracle CDC Service のメイン インスタンスで検出された場合です。|  
+|[error]|0|@shouldalert|Oracle CDC インスタンスが実行されていません。 ERROR 状態は、回復できないエラーが発生したために ACTIVE だった CDC インスタンスが無効になったことを示します。|MISCONFIGURED: 回復できない構成エラーが検出されました。<br /><br /> PASSWORD-REQUIRED: Change Data Capture Designer for Oracle by Attunity のパスワードが設定されていないか、構成されているパスワードが無効です。 サービスの非対称キーのパスワードが変更されたことが原因として考えられます。|  
+|RUNNING|@shouldalert|0|CDC インスタンスが実行されていて、変更レコードが処理されています。|IDLE: すべての変更レコードが処理され、対象の制御 (**_CT**) テーブルに格納されました。 制御テーブルにアクティブなトランザクションはありません。<br /><br /> PROCESSING: 制御 (**_CT**) テーブルにまだ書き込まれていない、処理中の変更レコードがあります。|  
 |STOPPED|0|0|CDC インスタンスが実行されていません。|STOP 副状態は、ACTIVE だった CDC インスタンスが適切に停止されたことを示します。|  
-|SUSPENDED|1|1|CDC インスタンスが実行されていますが、回復可能なエラーにより処理が中断されています。|DISCONNECTED: ソース Oracle データベースとの接続を確立できません。 接続が回復すると処理が再開されます。<br /><br /> STORAGE: 記憶領域がいっぱいです。 記憶領域に空きができると処理が再開されます。 この状態は、状態テーブルを更新できないために表示されない場合があります。<br /><br /> LOGGER: ロガーは Oracle に接続されていますが、一時的な問題が発生しており、Oracle トランザクション ログを読み取ることができません。|  
+|SUSPENDED|@shouldalert|@shouldalert|CDC インスタンスが実行されていますが、回復可能なエラーにより処理が中断されています。|DISCONNECTED: ソース Oracle データベースとの接続を確立できません。 接続が回復すると処理が再開されます。<br /><br /> STORAGE: 記憶領域がいっぱいです。 記憶領域に空きができると処理が再開されます。 この状態は、状態テーブルを更新できないために表示されない場合があります。<br /><br /> LOGGER: ロガーは Oracle に接続されていますが、一時的な問題が発生しており、Oracle トランザクション ログを読み取ることができません。|  
 |DATAERROR|x|x|この状態コードは、 **xdbcdc_trace** テーブルにのみ使用されます。 **xdbcdc_state** テーブルには表示されません。 この状態のトレース レコードは、Oracle のログ レコードに問題があることを示します。 問題があるログ レコードは、 **[data]** 列に BLOB として格納されます。|BADRECORD: アタッチされたログ レコードを解析できませんでした。<br /><br /> CONVERT-ERROR: 一部の列のデータをキャプチャ テーブル内の対象の列に変換できませんでした。 この状態は、変換エラーについてのトレース レコードを生成するように構成で指定されている場合にのみ表示されます。|  
   
  Oracle CDC Service の状態は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納されるため、データベース内の状態の値にサービスの実際の状態が反映されていない場合もあります。 最も一般的なシナリオは、サービスと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間の接続が失われ、なんらかの理由で再開できない場合です。 この場合、 **cdc.xdbcdc_state** に最新の状態が格納されなくなります。 最終更新のタイムスタンプ (UTC) から 1 分以上経過していれば、古い状態を示していると考えられます。 この場合は、Windows イベント ビューアーを使用して、サービスの状態に関する詳しい情報を確認してください。  

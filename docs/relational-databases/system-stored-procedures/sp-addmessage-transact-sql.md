@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_addmessage
 - sp_addmessage_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_addmessage
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: efb582779e55287699cd60f642b50a88205ee992
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1b8b71c14da2b38bbc16c63b39143fd0a85ebf30
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +49,19 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@msgnum* * * =** ] *msg_id*  
+ [ **@msgnum****=** ] *msg_id*  
  メッセージの ID を指定します。 *msg_id*は**int**既定値は NULL です。 *msg_id*ユーザー定義エラー メッセージが 50,001 から 2,147, 483,647 までの整数を指定できます。 組み合わせ*msg_id*と*言語*一意である必要があります指定した言語の ID が既に存在する場合、エラーが返されます。  
   
- [  **@severity =** ]*重要度*  
+ [ **@severity =** ]*severity*  
  エラーの重大度レベルを指定します。 *重大度*は**smallint**既定値は NULL です。 有効なレベルは 1 ～ 25 です。 重大度レベルの詳細については、「 [データベース エンジン エラーの重大度](../../relational-databases/errors-events/database-engine-error-severities.md)」を参照してください。  
   
- [  **@msgtext =** ] **'***msg***'**  
+ [ **@msgtext =** ] **'***msg***'**  
  エラー メッセージのテキストを指定します。 *msg*は**nvarchar (255)**既定値は NULL です。  
   
  [  **@lang =** ] **'***言語***'**  
  このメッセージの言語を指定します。 *言語*は**sysname**既定値は NULL です。 複数の言語は、同じサーバーにインストールできる*言語*各メッセージを記述する言語を指定します。 ときに*言語*は省略すると、言語が既定の言語のセッションです。  
   
- [  **@with_log =** ] { **'**TRUE**'** | **'FALSE'** }  
+ [ **@with_log =** ] { **'**TRUE**'** | **'FALSE'** }  
  メッセージを、発生時に Windows のアプリケーション ログに書き込むかどうかを指定します。 **@with_log****varchar (5)**既定値は FALSE。 TRUE の場合は、エラーは常に Windows のアプリケーション ログに書き込まれます。 FALSE の場合、常に Windows のアプリケーション ログに書き込まれるわけではありませんが、エラーの発生状況によっては書き込まれることもあります。 メンバーにのみ、 **sysadmin**サーバーの役割は、このオプションを使用できます。  
   
 > [!NOTE]  
@@ -84,7 +87,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
  言語の構文に相違があるため、ローカライズされたメッセージのパラメーター番号は、元のメッセージと同じ順に出現しないことがあります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 メンバーシップが必要、 **sysadmin**または**serveradmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  

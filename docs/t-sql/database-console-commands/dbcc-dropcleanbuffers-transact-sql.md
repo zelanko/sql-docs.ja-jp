@@ -1,5 +1,5 @@
 ---
-title: "DBCC DROPCLEANBUFFERS (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC DROPCLEANBUFFERS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC_DROPCLEANBUFFERS_TSQL
 - DROPCLEANBUFFERS_TSQL
 - DBCC DROPCLEANBUFFERS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - clean buffers
 - cold buffer cache
@@ -25,21 +27,21 @@ helpviewer_keywords:
 - removing buffers
 - DBCC DROPCLEANBUFFERS statement
 ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b10e1d76e20fdb8859cb83cbb65d984b49b21c52
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 94830ffc100d0be451d34055a645e124a58325b7
+ms.sourcegitcommit: 03021482208259e6c67599b47df23fbbe8f3a393
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-バッファー プール、および columnstore オブジェクト プールからの列ストア オブジェクトからすべてのクリーン バッファーを削除します。
+バッファー プールのクリーン バッファーと、列ストア オブジェクト プールの列ストア オブジェクトをすべて削除します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,7 +51,7 @@ SQL Server の構文:
 ```sql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  
 ```  
-Azure SQL ウェアハウスと並列データ ウェアハウスの構文:
+Azure SQL Warehouse と Parallel Data Warehouse の構文:
 
 ```sql  
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
@@ -57,28 +59,28 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
   
 ## <a name="arguments"></a>引数  
  WITH NO_INFOMSGS  
- すべての情報メッセージを表示しないようにします。 情報メッセージがで抑制常に[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]です。  
+ すべての情報メッセージを表示しないようにします。 情報メッセージは通常、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では表示されません。  
   
  COMPUTE  
- すべての計算ノードには、クエリ プランのキャッシュを削除します。  
+ 各計算ノードからメモリ内のデータ キャッシュを消去します。  
   
  ALL  
- 各計算ノードおよび [管理] ノードからは、クエリ プランのキャッシュを消去します。 これは、値を指定しない場合の既定値です。  
+ 制御ノードから、および各計算ノードからメモリ内のデータ キャッシュを消去します。 値を指定しない場合、これが既定値になります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 サーバーのシャットダウンと再起動を行わずに、コールド バッファー キャッシュの状態でクエリをテストする場合は、DBCC DROPCLEANBUFFERS を使用します。
-Columnstore オブジェクト プールからバッファー プールと列ストア オブジェクトからクリーン バッファーを削除、コールド バッファー キャッシュを生成するために最初のチェックポイントを使用します。 これで、現在のデータベースのすべてのダーティ ページがディスクに書き込まれ、バッファーが削除されます。 その後、DBCC DROPCLEANBUFFERS コマンドを実行してバッファー プールからバッファーを削除します。
+バッファー プールのクリーン バッファーと列ストア オブジェクト プールの列ストア オブジェクトを削除するには、まず CHECKPOINT を使用してコールド バッファー キャッシュを作成します。 これで、現在のデータベースのすべてのダーティ ページがディスクに書き込まれ、バッファーが削除されます。 その後、DBCC DROPCLEANBUFFERS コマンドを実行してバッファー プールからバッファーを削除します。
   
 ## <a name="result-sets"></a>結果セット  
-DBCC DROPCLEANBUFFERS[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を返します。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の DBCC DROPCLEANBUFFERS では次の結果が返されます。
   
 ```sql
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
 
-適用されます SQL Server、並列データ ウェアハウス。 
+適用対象: SQL Server、Parallel Data Warehouse 
 
 - **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
 

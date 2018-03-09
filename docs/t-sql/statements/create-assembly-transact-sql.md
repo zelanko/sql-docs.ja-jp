@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - CREATE ASSEMBLY
 - CREATE_ASSEMBLY_TSQL
 - ASSEMBLY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - assemblies [CLR integration], validating
 - validating assemblies
 - CREATE ASSEMBLY statement
 - assemblies [CLR integration], creating
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
-caps.latest.revision: "94"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4e7587bfb20c110dd28e6b59bba0fde1e937cb6e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 3f937dc219eb317347cceeafcdcd8753244bcb07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,18 +63,18 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>引数  
- *アセンブリ名*  
+ *assembly_name*  
  アセンブリの名前を指定します。 名前は、データベースと、有効な内で一意である必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。  
   
- 承認*owner_name*  
+ AUTHORIZATION *owner_name*  
  アセンブリの所有者となるユーザーまたはロールの名前を指定します。 *owner_name*うち、現在のユーザーがメンバー、または現在のユーザーでは、に対する IMPERSONATE 権限が必要なロールの名前を指定するかする必要*owner_name*です。 このオプションを指定しない場合は、所有権は現在のユーザーに与えられます。  
   
- \<client_assembly_specifier >  
+ \<client_assembly_specifier>  
 アップロードされているアセンブリが置かれるローカル パスまたはネットワーク上の位置と、そのアセンブリに対応するマニフェスト ファイル名を指定します。  \<client_assembly_specifier >、固定文字列または変数に、固定文字列に評価される式として表現できます。 CREATE ASSEMBLY では、マルチモジュール アセンブリの読み込みはサポートされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]同じ場所にこのアセンブリの依存アセンブリの検索し、ルート レベル アセンブリとして、同じ所有者アップロードされます。 これらの依存アセンブリが検出されず、現在のデータベースに読み込まれていない場合、CREATE ASSEMBLY は失敗します。 依存アセンブリが現在のアセンブリに既に読み込まれている場合、これらのアセンブリの所有者は、新しく作成されたアセンブリの所有者と同じであることが必要です。
   
  \<client_assembly_specifier > でログオンしているユーザーが偽装されているかどうかは指定できません。  
   
- \<assembly_bits >  
+ \<assembly_bits>  
  アセンブリとその依存アセンブリを構成するバイナリ値のリストを指定します。 リストの最初の値は、ルート レベルのアセンブリとして扱われます。 依存アセンブリに対応する値は、任意の順序で指定できます。 ルート アセンブリの依存関係に対応していない値は無視されます。  
   
 > [!NOTE]  
@@ -84,7 +86,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  *varbinary_expression*  
  型の式は、 **varbinary**です。  
   
- PERMISSION_SET {**セーフ**|EXTERNAL_ACCESS |UNSAFE}  
+ PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE }  
  >  [!IMPORTANT]  
  >  `PERMISSION_SET`オプションの影響を受けました、`clr strict security`オプション、opening 警告で説明します。 ときに`clr strict security`が有効になっている、すべてのアセンブリとして扱われます`UNSAFE`です。
  
@@ -149,7 +151,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  詳細については、次を参照してください。[アセンブリの設計](../../relational-databases/clr-integration/assemblies-designing.md)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  CREATE ASSEMBLY 権限が必要です。  
   
  場合 PERMISSION_SET = EXTERNAL_ACCESS を指定する必要がありますと**EXTERNAL ACCESS ASSEMBLY**サーバーに対する権限。 場合 PERMISSION_SET = UNSAFE を指定する必要がありますと**UNSAFE ASSEMBLY**サーバーに対する権限。  

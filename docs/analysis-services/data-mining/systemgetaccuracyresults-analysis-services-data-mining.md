@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +16,20 @@ helpviewer_keywords:
 - SystemGetAccuracyResults
 - cross-validation [data mining]
 ms.assetid: 54ff584c-c6ce-4c31-9515-0a645719bd1a
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 183fbed8a59f4f6288b321b47d30895e4a7c7394
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1f6cc8a8bc3e35f6072e5998faed8fb9d51b768f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - データ マイニング)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]マイニング構造とクラスタ リング モデルを除く、すべての関連モデルのクロス検証の精度の基準を返します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+マイニング構造と関連するすべてのモデル (クラスター モデルを除く) に対するクロス検証の精度基準を返します。  
   
  このストアド プロシージャは、データセット全体の基準を 1 つのパーティションとして返します。 データセットをクロスセクションにパーティション分割し、各パーティションのメトリックを取得するには、 [SystemGetCrossValidationResults (Analysis Services - データ マイニング)](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)を使用します。  
   
@@ -88,19 +89,19 @@ SystemGetAccuracyResults(<mining structure>,
   
  既定値は **null**です。  
   
- (オプション)  
+ (省略可能)  
   
  *target threshold*  
  予測値が正確であると見なされる最小確率を示す 0.0 ～ 1 の範囲の数値。  
   
  既定値は **null**です。これは、すべての予測が正しいと見なされることを意味します。  
   
- (オプション)  
+ (省略可能)  
   
  *テスト リスト (test list)*  
  テスト オプションを指定する文字列。 このパラメーターは将来使用するために予約されています。  
   
- (オプション)  
+ (省略可能)  
   
 ## <a name="return-type"></a>戻り値の型  
  返される行セットには、各パーティションのスコアと、すべてのモデルの集計が含まれます。  
@@ -109,14 +110,14 @@ SystemGetAccuracyResults(<mining structure>,
   
 |列名|Description|  
 |-----------------|-----------------|  
-|モデル|テストされたモデルの名前。 **All** は、結果がすべてのモデルの集計であることを示します。|  
+|[モデル]|テストされたモデルの名前。 **All** は、結果がすべてのモデルの集計であることを示します。|  
 |AttributeName|予測可能列の名前。|  
 |AttributeState|予測可能列の対象の値。<br /><br /> この列に値が含まれる場合、指定した状態の基準だけが収集されます。<br /><br /> この値が指定されていない場合や Null の場合は、予測ごとに最も可能性の高い状態の基準が計算されます。|  
 |PartitionIndex|結果が適用されるパーティションを表します。<br /><br /> このプロシージャでは、常に 0 になります。|  
 |PartitionCases|基づいた、ケースのセット内の行の数を示す整数、 *\<データ セット >*パラメーター。|  
 |テスト|実行されたテストの種類。|  
 |[メジャー]|テストから返されたメジャーの名前。 各モデルのメジャーは、モデルの種類と、予測可能な値の型によって異なります。<br /><br /> 予測可能な型ごとに返されるメジャーの一覧については、「[相互検証レポートのメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)」をご覧ください。<br /><br /> 各メジャーの定義については、「[相互検証 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)」をご覧ください。|  
-|値|指定したメジャーの値。|  
+|[値]|指定したメジャーの値。|  
   
 ## <a name="remarks"></a>解説  
  次の表は、クロス検証に使用されるマイニング構造のデータを指定するために使用できる値の例を示しています。 クロス検証にテスト ケースを使用する場合、マイニング構造には、既にテスト データセットが含まれている必要があります。 マイニング構造の作成時にテスト データセットを定義する方法の詳細については、「 [トレーニング データ セットとテスト データ セット](../../analysis-services/data-mining/training-and-testing-data-sets.md)」をご覧ください。  
@@ -151,7 +152,7 @@ CALL SystemGetAccuracyResults (
   
  サンプルの結果 :  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|テスト|[メジャー]|値|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|テスト|[メジャー]|[値]|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |v Target Mail DT|Bike Buyer|1|0|1638|分類|True Positive|605|  
 |v Target Mail DT|Bike Buyer|1|0|1638|分類|False Positive|177|  
@@ -168,6 +169,6 @@ CALL SystemGetAccuracyResults (
  [SystemGetCrossValidationResults (Analysis Services - データ マイニング)](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

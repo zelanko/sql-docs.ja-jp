@@ -1,10 +1,11 @@
 ---
-title: "EventReasonEnum |Microsoft ドキュメント"
+title: EventReasonEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,26 +13,28 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: EventReasonEnum
-helpviewer_keywords: EventReasonEnum enumeration [ADO]
+f1_keywords:
+- EventReasonEnum
+helpviewer_keywords:
+- EventReasonEnum enumeration [ADO]
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f4f863b81149b2cc8e6166be3cf61621fc1cc98
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a49c3aac3b2f37421df9a68ae01b16770c696993
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 イベントを発生の原因となった理由を指定します。  
   
-|定数|値|Description|  
+|定数|[値]|Description|  
 |--------------|-----------|-----------------|  
-|**adRsnAddNew**|@shouldalert|操作は、新しいレコードを追加します。|  
+|**adRsnAddNew**|1|操作は、新しいレコードを追加します。|  
 |**adRsnClose**|9|操作の終了、 **Recordset**です。|  
 |**adRsnDelete**|2|操作は、レコードを削除します。|  
 |**adRsnFirstChange**|11|操作では、最初の変更を行い、レコードにします。|  

@@ -8,25 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3f8399c5430cf34d947e881586bacef5ade46587
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7efb5e145bbc4b481f73624a4c0d08d9698dc24c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Analysis Services AMO では、表形式オブジェクト モデル (TOM) の概要
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]表形式オブジェクト モデル (TOM) は、互換性レベル 1200 以上で作成された表形式モデルのプログラミング シナリオをサポートするために作成された、Analysis Services 管理オブジェクト (AMO) クライアント ライブラリの拡張です。 同様に、AMO は、TOM は、モデルを作成する、インポートとデータを更新するロールとアクセス許可の割り当てなどの管理機能を処理するプログラムによる方法を提供します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+表形式オブジェクト モデル (TOM) は、互換性レベル 1200 以上で作成された表形式モデルのプログラミング シナリオをサポートするために作成された、Analysis Services 管理オブジェクト (AMO) クライアント ライブラリの拡張です。 同様に、AMO は、TOM は、モデルを作成する、インポートとデータを更新するロールとアクセス許可の割り当てなどの管理機能を処理するプログラムによる方法を提供します。  
   
 TOM など、ネイティブの表形式メタデータを公開**モデル**、**テーブル**、**列**、および**リレーションシップ**オブジェクト。  以下に、オブジェクト モデル ツリーの概要を表示では、コンポーネント部分がどのように関連しているかを示します。  
   
@@ -55,7 +54,7 @@ TOM は多次元および表形式のデータベース互換性レベル 1200 �
 
 ### <a name="tom-and-xmla"></a>TOM と XMLA
 
-ネットワーク上で TOM、XMLA プロトコルを使用して、Analysis Services サーバーとの通信オブジェクトを管理します。 表ではないオブジェクトを管理するには、TOM を使用して[ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md)XMLA の Analysis Services スクリプト言語拡張機能です。 表形式オブジェクトを管理するには、TOM プロトコルを使って SSAS 表形式も XMLA の拡張機能です。 参照してください[MS-t SSAS SQL Server Analysis Services 表形式のプロトコルのドキュメント](https://msdn.microsoft.com/library/mt719260.aspx)詳細についてはします。
+ネットワーク上で TOM、XMLA プロトコルを使用して、Analysis Services サーバーとの通信オブジェクトを管理します。 表ではないオブジェクトを管理するには、TOM を使用して[ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md)XMLA の Analysis Services スクリプト言語拡張機能です。 表形式オブジェクトを管理するには、TOM は XMLA の拡張機能も MS SSAS 表形式のプロトコルを使用します。 参照してください[MS-t SSAS SQL Server Analysis Services 表形式のプロトコルのドキュメント](https://msdn.microsoft.com/library/mt719260.aspx)詳細についてはします。
 
 ### <a name="tom-and-json"></a>TOM と JSON
 

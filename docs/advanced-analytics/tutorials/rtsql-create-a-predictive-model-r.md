@@ -7,25 +7,26 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: c6f0117198cd7a548b9e56d228c14231b39ec35a
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 1b40295452da5b7da34a31e6825630da9c6c4861
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>予測モデル (SQL のクイック スタートで R) を作成します。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この手順では、R を使用してモデルをトレーニングしてから、モデルを SQL Server のテーブルに保存する方法について説明します。 モデルは、速度に基づいて自動車の停止距離を予測するシンプルな回帰モデルです。 使用して、`cars`は小型で簡単に理解するために、R に含まれているデータセットです。
 
@@ -147,7 +148,7 @@ VALUES (' latest model', @model)
 
 ![rslq_basictut_coefficients](media/rslq-basictut-coefficients.PNG)
 
-### <a name="summary"></a>[概要]
+### <a name="summary"></a>概要
 
 SQL パラメーターおよび R 変数を操作するため、これらの規則に従う`sp_execute_external_script`:
 

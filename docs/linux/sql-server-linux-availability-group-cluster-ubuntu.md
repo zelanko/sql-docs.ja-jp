@@ -3,38 +3,38 @@ title: "Ubuntu クラスターは、SQL Server 可用性グループを構成す
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.date: 03/17/2017
+manager: craigg
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 501fd7eac7f7905a03a2861a462d4c1179beb15c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 5f52c5f83ca91b196f0bf2f05e98fb73133b4c8a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu クラスターと可用性グループ リソースを構成します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このドキュメントでは、Ubuntu で 3 つのノードのクラスターを作成し、以前に作成した可用性グループをクラスター内のリソースとして追加する方法について説明します。 Linux 上の可用性グループ、可用性を高めるためには 3 つのノードが必要です - 参照[可用性グループの構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)です。
 
 > [!NOTE] 
-> この時点では、Linux 上のペースで SQL Server の統合は Windows での WSFC でとして結合します。 SQL 内ではありません、クラスターの存在についてのナレッジ、すべてのオーケストレーションが外であり、サービスは、スタンドアロン インスタンスとしてペースによって制御されます。 また、仮想ネットワーク名は、WSFC を特定、相当するのと同じペースではありません。 Always On 動的管理ビューに対してクエリ実行クラスター情報では、空の行を返します。 フェールオーバー後は、透過的な再接続に使用するリスナーを作成できますが、仮想 IP リソース (下記参照) を作成するために使用する ip アドレス、DNS サーバーで、リスナー名を手動で登録する必要があります。
+> この時点では、Linux 上のペースで SQL Server の統合は Windows での WSFC でとして結合します。 SQL 内ではありません、クラスターの存在についてのナレッジ、すべてのオーケストレーションの外部には、およびサービスが、スタンドアロン インスタンスとしてペースで制御されます。 また、仮想ネットワーク名は、WSFC を特定、相当するのと同じペースではありません。 Always On の動的管理ビューのクラスター情報を照会するには、空の行が返されます。 フェールオーバー後は、透過的な再接続に使用するリスナーを作成できますが、仮想 IP リソース (次のセクションで説明されている) を作成するために使用する ip アドレス、DNS サーバーで、リスナー名を手動で登録する必要があります。
 
 次のセクションでは、フェールオーバー クラスター ソリューションをセットアップする手順について説明します。 
 
 ## <a name="roadmap"></a>ロードマップ
 
-高可用性の Linux サーバーに可用性グループを作成する手順は、Windows Server フェールオーバー クラスター上の手順と異なります。 次に、高レベルの手順を説明します。 
+高可用性の Linux サーバーに可用性グループを作成する手順は、Windows Server フェールオーバー クラスター上の手順と異なります。 次に、手順の概要を説明します。 
 
 1. [クラスター ノードの SQL Server を構成する](sql-server-linux-setup.md)です。
 
@@ -95,18 +95,18 @@ sudo systemctl start pcsd
 sudo systemctl enable pacemaker
 ```
 >[!NOTE]
->Enable ペース コマンドで完了、エラー 'ペース既定の開始を含まないランレベルを中止しています ' 影響を与えませんが、クラスター構成を続行できます。 この問題を修正するためのクラスターのベンダーとフォロー アップおされます。
+>有効にするペース コマンドがエラーで完了可能性があります 'ペース既定の開始を含まないランレベルを中止しています ' 影響を与えませんが、クラスター構成を続行できます。 
 
 ## <a name="create-the-cluster"></a>クラスターを作成します。
 
 1. すべてのノードから、既存のクラスター構成を削除します。 
 
-   実行中の 'sudo apt get インストール pc' は、ペース、corosync、および pc を同時にインストールし、サービスのすべての 3 を実行を開始します。  テンプレートが生成される開始 corosync '/etc/cluster/corosync.conf' ファイル。  次の手順をこのファイルを正常に存在してはいけません – ペースを停止するため、回避策/corosync および削除 '/etc/cluster/corosync.conf'、し、次の手順は正常に完了とします。 'pc クラスターを破棄' 同じ操作を実行し、1 つとして使用することができますに初期クラスター セットアップの手順です。
+   Running 'sudo apt-get install pcs' installs pacemaker, corosync, and pcs at the same time and starts running all 3 of the services.  テンプレートが生成される開始 corosync '/etc/cluster/corosync.conf' ファイル。  次の手順をこのファイルを正常に存在してはいけません – 回避ペースを停止するには、/corosync および削除 '/etc/cluster/corosync.conf' とし、次の手順が正常に完了します。 'pc クラスターを破棄' 同じ操作を実行し、1 つとして使用することができますに初期クラスター セットアップの手順です。
    
    次のコマンドは、既存のクラスターの構成ファイルを削除し、すべてのクラスター サービスを停止します。 クラスターが完全に破棄します。 実稼働前環境の最初の手順として実行します。 注 'pc クラスターを破棄こと' は無効、ペースのサービスに再度有効にする必要があります。 すべてのノードで次のコマンドを実行します。
    
    >[!WARNING]
-   >コマンドが既存のクラスター リソースをすべて破棄されます。
+   >コマンドでは、すべて既存のクラスター リソースを破棄します。
 
    ```bash
    sudo pcs cluster destroy 
@@ -116,18 +116,18 @@ sudo systemctl enable pacemaker
 1. クラスターを作成します。 
 
    >[!WARNING]
-   >クラスタ リングの仕入先があり、調査して、開始する既知の問題によりクラスター ('pc クラスター start') は、以下のエラーで失敗します。 /Etc/corosync/corosync.conf で構成されているログ ファイルが正しくないためにです。 この問題を回避するには、ログ ファイルを変更:/var/log/corosync/corosync.log です。 また、/var/log/cluster/corosync.log ファイルを作成します。
+   >クラスタ リングの仕入先があり、調査して、開始する既知の問題により、クラスター ('pc クラスター start') は、次のエラーで失敗します。 ログ ファイルは、クラスター セットアップ コマンドが実行時に作成されて、間違った/etc/corosync/corosync.conf で構成されているためにです。 この問題を回避するには、ログ ファイルを変更:/var/log/corosync/corosync.log です。 また、/var/log/cluster/corosync.log ファイルを作成します。
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
    See "systemctl status corosync.service" and "journalctl -xe" for details.
    ```
   
-次のコマンドでは、3 つのノードのクラスターを作成します。 スクリプトを実行する前に、`**< ... >**` の間の値を置き換えます。 プライマリ ノードで次のコマンドを実行します。 
+次のコマンドでは、3 つのノードのクラスターを作成します。 スクリプトを実行する前に、`< ... >` の間の値を置き換えます。 プライマリ ノードで次のコマンドを実行します。 
 
    ```bash
-   sudo pcs cluster auth **<node1>** **<node2>** **<node3>** -u hacluster -p **<password for hacluster>**
-   sudo pcs cluster setup --name **<clusterName>** **<node1>** **<node2…>** **<node3>**
+   sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
+   sudo pcs cluster setup --name <clusterName> <node1> <node2…> <node3>
    sudo pcs cluster start --all
    ```
    
@@ -139,18 +139,18 @@ sudo systemctl enable pacemaker
 
 ペース クラスターのベンダーは、STONITH を有効にして、サポートされているクラスターのセットアップ用に構成されたフェンス操作デバイスが必要です。 ノードまたはノード上のリソースの状態を判断できないのは、クラスター リソース マネージャー、既知の状態をクラスターに戻すにフェンス操作が使用されます。 主ににより、リソース レベルのフェンス操作はリソースを構成することにより、障害が発生した場合、データの破損がないことです。 リソース レベルのフェンス操作を使用するインスタンスのように古くなった場合に、ノード上のディスクをマークする DRBD (レプリケート ブロック デバイスの分散) との通信リンクがダウンしました。 ノード レベルのフェンス操作により、ノードがすべてのリソースを実行できません。 ノードをリセットすることによってこれし、ペース実装は STONITH (これは、「head で、他のノードを撮影」の略) と呼ばれます。 例: 無停電電源装置または管理インターフェイスのサーバーのカードをペースがさまざまなデバイスのフェンス操作をサポートします。 詳細については、次を参照してください[を最初からペース クラスター](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)と[フェンス操作と Stonith。](http://clusterlabs.org/doc/crm_fencing.html) 
 
-フェンス構成ノードのレベルは、環境内に大きく依存するため (後で、構成できます) このチュートリアルでは、無効になります。 プライマリ ノードで、次のスクリプトを実行します。 
+フェンス構成ノードのレベルは、環境内に大きく依存するため無効に、このチュートリアルでは (後で、構成できます)。 プライマリ ノードで、次のスクリプトを実行します。 
 
 ```bash
 sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->テストのためだけには STONITH を無効にします。 実稼働環境でペースを使用する場合は、環境に応じて STONITH 実装を計画して有効にしておいてください。 この時点でがないことにクラウド環境でも (Azure を含む) や HYPER-V フェンス操作エージェントに注意してください。 ので、クラスターのベンダーでは、これらの環境で運用クラスターを実行するためのサポートは提供しません。 この時間差が将来のリリースで利用できるためのソリューションに取り組んでいます。
+>テストのためだけには STONITH を無効にします。 実稼働環境でペースを使用する場合は、環境に応じて STONITH 実装を計画して有効にしておいてください。 この時点でがないことにクラウド環境でも (Azure を含む) や HYPER-V フェンス操作エージェントに注意してください。 ので、クラスターのベンダーでは、これらの環境で運用クラスターを実行するためのサポートは提供しません。 
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>開始-障害が-致命的でクラスターのプロパティが false に設定します。
 
-`start-failure-is-fatal`ノードにリソースを起動しますの失敗によってそのノードに対して試行された開始でがさらにかどうかを示します。 設定すると`false`クラスターが、リソースの現在の失敗数と移行のしきい値に基づいて、もう一度同じノードで起動するかどうかを決定します。 そのため、フェールオーバーが発生した後にペース再試行、可用性グループ リソースで開始以前のプライマリ SQL インスタンスが使用可能にします。 ペースがセカンダリ レプリカにレベルを下げるし、可用性グループを自動的に再参加がします。 
+`start-failure-is-fatal` ノードにリソースを起動しますの失敗によってそのノードに対して試行された開始でがさらにかどうかを示します。 設定すると`false`クラスターは、リソースの現在の失敗数と移行のしきい値に基づいて、もう一度同じノードで起動するかどうかを決定します。 そのため、フェールオーバーが発生した後、SQL インスタンスが使用可能なペースの再試行回数が、可用性を開始には以前のプライマリ上のリソースがグループ化します。 ペースがセカンダリ レプリカを降格し、可用性グループを自動的に再度参加します。 
 
 プロパティの値を更新する`false`次のスクリプトを実行します。
 
@@ -160,7 +160,7 @@ sudo pcs property set start-failure-is-fatal=false
 
 
 >[!WARNING]
->自動フェールオーバーの後と`start-failure-is-fatal = true`リソース マネージャーは、リソースを開始を試みます。 手動で実行しなければならない場合、最初の試行に失敗した場合は`pcs resource cleanup <resourceName>`クリーンアップ リソース障害の数と構成をリセットします。
+>自動フェールオーバーの後と`start-failure-is-fatal = true`リソース マネージャーは、リソースを開始しようとしています。 手動で実行しなければならない場合、最初の試行に失敗した場合は`pcs resource cleanup <resourceName>`リソース障害の数をクリーンアップし、構成をリセットします。
 
 ## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>ペースで統合するための SQL Server リソースのエージェントをインストールします。
 
@@ -187,17 +187,17 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notif
 
 ## <a name="create-virtual-ip-resource"></a>仮想 IP リソースを作成します。
 
-仮想 IP アドレス リソースを作成するには、1 つのノードで次のコマンドを実行します。 ネットワークから使用可能な静的 IP アドレスを使用します。 スクリプトを実行する前に、までの値を置き換える`**< ... >**`有効な IP アドレスを使用します。
+仮想 IP アドレス リソースを作成するには、1 つのノードで次のコマンドを実行します。 ネットワークから使用可能な静的 IP アドレスを使用します。 スクリプトを実行する前に、までの値を置き換える`< ... >`有効な IP アドレスを使用します。
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 同じペースで仮想サーバー名がありません。 文字列のサーバー名を指す接続文字列を使用し、IP アドレスを使用しない、目的の仮想サーバー名と IP リソースのアドレスを DNS に登録します。 災害復旧構成のプライマリおよび災害復旧サイトの両方で DNS サーバーで、目的の仮想サーバー名と IP アドレスを登録します。
 
 ## <a name="add-colocation-constraint"></a>コロケーションの制約を追加します。
 
-ペース クラスターでは、リソースを実行する場所を選択するようのほとんどすべての意思決定は、スコアを比較することによって行われます。 スコアの計算リソース、およびクラスター リソース マネージャーは、特定のリソースのスコアが最も高いノードを選択します。 (ノードにリソースの負のスコアがある場合は、リソースで実行できませんノード。)制約で、クラスターの意思決定を操作できることです。 制約では、スコアがあります。 制約に無限大より小さいスコアがある場合は、推奨設定のみを勧めします。 無限大のスコアは、必要であるを意味します。 可用性グループと仮想のプライマリ ip リソースが実行されること、同じホスト上の無限大のスコアのコロケーション制約を定義しますのでことを確認します。 コロケーション制約を追加するには、1 つのノードで次のコマンドを実行します。 
+ペース クラスターでは、リソースを実行する場所を選択するようのほとんどすべての意思決定は、スコアを比較することによって行われます。 スコアの計算リソース、およびクラスター リソース マネージャーは、特定のリソースのスコアが最も高いノードを選択します。 (ノードにリソースの負のスコアがある場合は、リソースで実行できませんノード。)クラスターの意思決定を構成するのにには、制約を使用します。 制約では、スコアがあります。 制約に無限大より小さいスコアがある場合は、推奨設定のみを勧めします。 必須では無限大のスコアを意味します。 プライマリ レプリカと仮想 ip リソースが、同じホスト上にあることを確認、スコアの無限大のコロケーション制約を定義します。 コロケーション制約を追加するには、1 つのノードで次のコマンドを実行します。 
 
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master

@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Recordset object [ADO]
+helpviewer_keywords:
+- Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a861030b8ec30e176d7535d6e2f7976a87c0832a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b29d34907c7e4dcccc8494101c819cca05c02066
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="working-with-recordsets"></a>レコード セットの操作
 **Recordset**オブジェクトが組み込みの機能を指定する条件に基づいて特定のレコードを検索して、インデックスを使用してこれらの検索操作を最適化するためにも、結果セット内のデータの順序を変更することができます。 これらの機能を使用できるかどうかは、プロバイダーによって異なります: などの[インデックス](../../../ado/reference/ado-api/index-property.md)プロパティ — データ ソース自体の構造。  
@@ -119,10 +121,10 @@ ms.lasthandoff: 12/21/2017
 |定数|Description|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|最後に影響を受けるレコードのみを表示するためのフィルター**削除**、**再同期**、 **UpdateBatch**、または**CancelBatch**呼び出します。|  
-|**競合**|最後のバッチ更新が失敗したレコードを表示するためのフィルター。|  
+|**adFilterConflictingRecords**|最後のバッチ更新が失敗したレコードを表示するためのフィルター。|  
 |**adFilterFetchedRecords**|現在のキャッシュ内のレコードを表示するためのフィルター-つまり、データベースからレコードを取得するには、最後の呼び出しの結果。|  
 |**adFilterNone**|現在のフィルターを削除し、表示するためのすべてのレコードを復元します。|  
-|**行と列**|変更されましたが、サーバーにまだ送信されていないレコードだけを表示するためのフィルター。 バッチ更新モードにのみ適用できます。|  
+|**adFilterPendingRecords**|変更されましたが、サーバーにまだ送信されていないレコードだけを表示するためのフィルター。 バッチ更新モードにのみ適用できます。|  
   
  フィルター定数しやすく、最後の中に影響を受けたレコードを専用などを表示することにより、バッチ更新モード中に個々 のレコード競合を解決するのには**UpdateBatch**メソッドの呼び出しのように、次の例です。  
   

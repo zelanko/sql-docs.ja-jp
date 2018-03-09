@@ -23,22 +23,22 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 caps.latest.revision: "69"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 859646732d7add898319c11193aedebb77c7239a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae3c32d0636b37afb15005eb823629f7dfd5194e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>パラメーター化されたフィルター - パラメーター化された行フィルター
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] パラメーター化された行フィルターを使用すると、複数のパブリケーションを作成しなくても、パーティションの異なるデータを各サブスクライバーに送信できます (以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、パラメーター化されたフィルターは動的フィルターと呼ばれていました)。 パーティションとは、テーブル内の行のサブセットのことです。パラメーター化された行フィルターの作成時に選択した設定に基づき、パブリッシュされたテーブルの各行は、1 つのパーティションのみに属するか (重複しないパーティションが作成されます)、2 つ以上のパーティションに属します (重複するパーティションが作成されます)。  
   
  重複しないパーティションは、サブスクリプション間で共有するか、または 1 つのサブスクリプションのみが特定のパーティションを受け取るように制限することができます。 パーティションの動作を制御する設定については、このトピックの「適切なフィルター選択オプションの使用」で説明します。 これらの設定を使用すると、アプリケーションおよびパフォーマンスの要件に応じて、パラメーター化されたフィルター選択を調整できます。 一般に、重複するパーティションを使用すると柔軟性が向上し、重複しないパーティションを単一のサブスクリプションにレプリケートするとパフォーマンスが向上します。  
   
- パラメーター化されたフィルターは単一のテーブルで使用し、通常は関連するテーブルに対するフィルター選択を拡張するために結合フィルターと組み合わせて使用します。 詳細については、「 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)」を参照してください。  
+ パラメーター化されたフィルターは単一のテーブルで使用し、通常は関連するテーブルに対するフィルター選択を拡張するために結合フィルターと組み合わせて使用します。 詳しくは、「 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)」をご覧ください。  
   
  パラメーター化された行フィルターを定義または変更するには、「 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」を参照してください。  
   
@@ -113,7 +113,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 -   マージ エージェント: コマンド ラインまたはエージェント プロファイルで **-Hostname** パラメーターの値を指定します。 マージ エージェントの詳細については、「 [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)」を参照してください。 エージェント プロファイルの詳細については、「 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。  
   
 ## <a name="initializing-a-subscription-to-a-publication-with-parameterized-filters"></a>パラメーター化されたフィルターを使用したパブリケーションへのサブスクリプションの初期化  
- パラメーター化された行フィルターがマージ パブリケーションで使用される場合、レプリケーションは 2 つの要素から成るスナップショットを持つ各サブスクリプションを初期化します。 詳細については、「 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」を参照してください。  
+ パラメーター化された行フィルターがマージ パブリケーションで使用される場合、レプリケーションは 2 つの要素から成るスナップショットを持つ各サブスクリプションを初期化します。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」をご覧ください。  
   
 ## <a name="using-the-appropriate-filtering-options"></a>適切なフィルター選択オプションの使用  
  パラメーター化されたフィルターを使用する場合、制御できる主要な要素が 2 つあります。  
@@ -130,7 +130,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>[パーティションのオプション] の設定  
  **[パーティションのオプション]** プロパティの値は、アーティクルを作成するときに、フィルター選択されたテーブルのデータをサブスクライバーが共有する方法に応じて設定します。 このプロパティは、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)、および **[アーティクルのプロパティ]** ダイアログ ボックスを使用して、4 つの値のいずれかに設定できます。 このプロパティは、 **[フィルターの追加]** ダイアログ ボックスまたは **[フィルターの編集]** ダイアログ ボックスを使用して、2 つの値のいずれかに設定できます。これらのダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ]** ダイアログ ボックスから使用できます。 次の表は、利用可能な値をまとめたものです。  
   
-|説明|[フィルターの追加] および [フィルターの編集] の値|[アーティクルのプロパティ] の値|ストアド プロシージャ内の値|  
+|Description|[フィルターの追加] および [フィルターの編集] の値|[アーティクルのプロパティ] の値|ストアド プロシージャ内の値|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |パーティション内のデータは重複しています。サブスクライバーはパラメーター化されたフィルターで参照されている列を更新できます。|**[このテーブルの 1 行を複数のサブスクリプションに移動する]**|**[重複する]**|**0**|  
 |パーティション内のデータは重複しています。サブスクライバーはパラメーター化されたフィルターで参照されている列を更新できません。|なし*|**[重複する (パーティション外のデータ変更を禁止)]**|**1**|  
@@ -178,13 +178,13 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   アーティクルは 1 つのパブリケーションにのみ存在することができます。アーティクルを再パブリッシュすることはできません。  
   
--   パブリケーションでは、サブスクライバーによるスナップショット処理の開始を許可する必要があります。 詳細については、「 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」を参照してください。  
+-   パブリケーションでは、サブスクライバーによるスナップショット処理の開始を許可する必要があります。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」をご覧ください。  
   
 ##### <a name="additional-considerations-for-join-filters"></a>結合フィルターに関するその他の注意点  
   
 -   結合フィルター階層では、重複するパーティションのアーティクルを、重複しないパーティションのアーティクルよりも上位にすることはできません。 つまり、子アーティクルで重複しないパーティションを使用する場合、親アーティクルでも重複しないパーティションを使用する必要があります。 結合フィルターの詳細については、「 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)」を参照してください。  
   
--   重複しないパーティションを子に持つ結合フィルターでは、 **一意キーの結合** プロパティを 1 に設定する必要があります。 詳細については、「 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)」を参照してください。  
+-   重複しないパーティションを子に持つ結合フィルターでは、 **一意キーの結合** プロパティを 1 に設定する必要があります。 詳しくは、「 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)」をご覧ください。  
   
 -   アーティクルは、1 つのパラメーター化されたフィルターまたは結合フィルターのみを持っている必要があります。 パラメーター化されたフィルターを持ち、かつ結合フィルターの親になることは可能です。 パラメーター化されたフィルターを持ち、かつ結合フィルターの子になることはできません。 複数の結合フィルターを持つことはできません。  
   
@@ -192,7 +192,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 ## <a name="see-also"></a>参照  
  [時間ベースの行フィルターの推奨事項](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)   
- [パブリッシュされたデータのフィルター選択](../../../relational-databases/replication/publish/filter-published-data.md)   
+ [パブリッシュされたデータのフィルター処理](../../../relational-databases/replication/publish/filter-published-data.md)   
  [マージ レプリケーション用にパブリッシュされたデータのフィルター処理](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  
   
   

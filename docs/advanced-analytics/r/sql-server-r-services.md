@@ -6,22 +6,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 136df79ded4c86a183d78ecc39821550ca9c24c9
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 37362b8a3f6d8b41fe6b52f8445b9ba08ca54aa3
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-machine-learning-services"></a>SQL Server Machine Learning サービス
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017 Machine Learning サービス (以前 SQL Server 2016 R サービス) は、開発と新しい洞察を得るためのインテリジェント アプリケーションを展開するためのプラットフォームを提供します。 機械学習を統合しているため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データの近くで分析を行い、コストとデータの移動に関連付けられているセキュリティ上のリスクを削減できます。
   

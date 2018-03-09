@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 68fd71437779741489b5729379d3d5d3358915c0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 116f99d1a2dd5e904586978de4345111df278dab
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>位置指定更新ステートメントと Delete ステートメントをシミュレートします。
 場合は、データ ソースは位置指定更新はサポートされず、delete ステートメント、ドライバーはこれらをシミュレートできます。 たとえば、ODBC カーソル ライブラリは、位置指定更新をシミュレートし、ステートメントを削除します。 位置指定更新ステートメントと delete ステートメントをシミュレートするための一般的な戦略は、位置指定のステートメントを検索したものに変換するは。 これは、置き換えることで、 **WHERE CURRENT OF** 、検索結果を含む句**場所**現在の行を識別する句。  

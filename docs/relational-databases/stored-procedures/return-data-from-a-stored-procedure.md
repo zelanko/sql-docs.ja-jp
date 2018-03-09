@@ -8,29 +8,57 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [SQL Server], returning data
 - returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 785491c26c65252756c49e7b405d10cdbece831c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d4ec18d40f6777a2d72b838030e3b4305c891e6
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="return-data-from-a-stored-procedure"></a>ストアド プロシージャからデータを返す
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > 以前のバージョンの SQL Server に関連するコンテンツについては、「[ストアド プロシージャからデータを返す](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx)」を参照してください。
 
-  結果セットやプロシージャからのデータを呼び出し元のプログラムに返す手段には、出力パラメーターとリターン コードの 2 つがあります。 このトピックでは、両方のアプローチについて説明します。  
+  プロシージャからのデータを呼び出し元のプログラムに返す手段には、結果セット、出力パラメーター、リターン コードの 3 つがあります。 このトピックでは、3 つのアプローチについて説明します。  
+  
+  ## <a name="returning-data-using-result-sets"></a>結果セットを使用してデータを返す処理
+ ストアド プロシージャの本体に SELECT ステートメントを含める場合 (ただし、SELECT ...INTO でも、INSERT ...SELECT でもない)、SELECT ステートメントによって指定される行がクライアントに直接送信されます。  大規模な結果セットの場合、結果セットがクライアントに完全に送信されるまで、ストアド プロシージャ実行は次のステートメントに進みません。  小規模な結果セットの場合、クライアントに返すために結果がスプールされ、実行は続けられます。  ストアド プロシージャの実行中、このような SELECT ステートメントが複数実行された場合、複数の結果セットがクライアントに送信されます。  この動作は、入れ子になっている TSQL バッチ、入れ子になっているストアド プロシージャ、最上位の TSQL バッチにも当てはまります。
+ 
+ 
+ ### <a name="examples-of-returning-data-using-a-result-set"></a>結果セットを使用してデータを返す例 
+  次の例のストアド プロシージャでは、vEmployee ビューにも表示されるすべての SalesPerson 行に対して LastName 値と SalesYTD 値が返されます。
+  
+ ```  
+USE AdventureWorks2012;  
+GO  
+IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
+    DROP PROCEDURE Sales.uspGetEmployeeSalesYTD;  
+GO  
+CREATE PROCEDURE Sales.uspGetEmployeeSalesYTD  
+AS    
+  
+    SET NOCOUNT ON;  
+    SELECT LastName, SalesYTD  
+    FROM Sales.SalesPerson AS sp  
+    JOIN HumanResources.vEmployee AS e ON e.BusinessEntityID = sp.BusinessEntityID  
+    
+RETURN  
+GO  
+  
+```  
+
   
 ## <a name="returning-data-using-an-output-parameter"></a>出力パラメーターを使用してデータを返す処理  
  プロシージャの定義でパラメーターに OUTPUT キーワードを指定すると、プロシージャの終了時に、そのパラメーターの現在値を呼び出し元のプログラムに返すことができます。 呼び出し元のプログラムで使用できる変数にパラメーターの値を保存するには、呼び出し元のプログラムがプロシージャを実行する際に OUTPUT キーワードを使用する必要があります。 出力パラメーターとして使用できるデータ型の詳細については、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)」を参照してください。  
@@ -114,7 +142,7 @@ GO
   
 ### <a name="examples-of-cursor-output-parameters"></a>cursor 出力パラメーターの例  
  次の例では、**cursor** データ型の出力パラメーター `@currency_cursor` を指定したプロシージャを作成します。 作成したプロシージャはバッチで呼び出します。  
-  
+ 
  まず、Currency テーブルに対してカーソルを宣言し、そのカーソルを開くプロシージャを作成します。  
   
 ```  
@@ -161,7 +189,7 @@ DECLARE @result int;
 EXECUTE @result = my_proc;  
 ```  
   
- リターン コードは、可能性のあるエラー状態ごとにリターン コードの値を設定するために、プロシージャのフロー制御ブロックの中でよく使用されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの後で @@ERROR 関数を使用すると、ステートメントの実行中にエラーが発生したかどうかを検出できます。  
+ リターン コードは、可能性のあるエラー状態ごとにリターン コードの値を設定するために、プロシージャのフロー制御ブロックの中でよく使用されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの後で @@ERROR 関数を使用すると、ステートメントの実行中にエラーが発生したかどうかを検出できます。  TSQL に TRY/CATCH/THROW エラー処理が導入される前は、ストアド プロシージャの成功と失敗を判断するためにリターン コードが必要になることがありました。  ストアド プロシージャは常に、リターン コードではなく、エラー (必要に応じて、THROW/RAISERROR で生成される) で失敗を示さなければなりません。  また、リターン コードでアプリケーション データを返す行為は避けるべきです。
   
 ### <a name="examples-of-return-codes"></a>リターン コードの例  
  次の例では、さまざまなエラーに特別なリターン コード値を設定するエラー処理を含む `usp_GetSalesYTD` プロシージャを示します。 次の表では、可能性のある各エラーに対してプロシージャによって割り当てられる整数値と、各値に相当する意味を示します。  
@@ -169,7 +197,7 @@ EXECUTE @result = my_proc;
 |リターン コードの値|意味|  
 |-----------------------|-------------|  
 |0|実行に成功しました。|  
-|1|必要なパラメーター値が指定されていません。|  
+|@shouldalert|必要なパラメーター値が指定されていません。|  
 |2|指定されたパラメーター値が無効です。|  
 |3|売上高の値を取得中にエラーが発生しました。|  
 |4|販売員の売上高の値に NULL 値が検出されました。|  

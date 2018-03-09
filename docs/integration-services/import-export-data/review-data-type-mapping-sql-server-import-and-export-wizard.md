@@ -8,23 +8,25 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.reviewissues.f1
+f1_keywords:
+- sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f73734f20bcda435f099066852d84101192fb212
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8f9c2ddd8834d5ff3dbef2d0aff725343fae4f41
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>[データ型マッピングの確認] (SQL Server インポートおよびエクスポート ウィザード)
+# <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>[データ型マッピングの確認]\(SQL Server インポートおよびエクスポート ウィザード)
 指定したデータ型マッピングが **[列マッピング]** ダイアログ ボックスの **[マッピング]** 一覧で成功しなかった場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [インポートおよびエクスポート ウィザード] に **[データ型マッピングの確認]** ページが表示されます。 このページでは、変換元のデータと変換先のデータの互換性を確保するためにウィザードで実行する必要があるデータ型変換についての詳細情報を確認します。 この情報には、成功すると予測されるデータ型変換と、エラーまたは切り捨てが発生する可能性があるデータ型変換を区別するための視覚的な手掛かりが含まれています。 変換ごとに、ウィザードによって提案された変換を受け入れるかどうかを決定したり、発生したエラーの処理方法を指定したりします。   
   
 > [!TIP]
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
  次の表では、 **[テーブル]** 一覧の列について説明します。  
   
-|列|Description|  
+|[列]|Description|  
 |------------|-----------------|  
 |(変換元アイコン)|データ型変換が成功する確率を示します。<br /> - **緑色** のチェック マーク アイコンは、このテーブルに対するデータ型変換がすべて成功するとウィザードが予測していることを示します。<br />- **黄色** の警告アイコンは、ウィザードが実行する変換をユーザーが個別に確認する必要があることを示します。 これらの変換を確認するには、テーブルを選択し、 **[データ型マッピング]** の一覧内の個々の列に対する変換を確認します。<br />- **赤色** のエラー アイコンは、ウィザードがこのテーブルに対する変換の一部を確実に実行することができないことを示します。|  
 |**変換元**|ソース テーブルの名前です。|  
@@ -65,7 +67,7 @@ ms.lasthandoff: 11/20/2017
 
 次の表では、 **[データ型マッピング]** 一覧の列について説明します。 
 
-|列|Description|  
+|[列]|Description|  
 |------------|-----------------|  
 |(変換アイコン)|データ型変換が成功する確率を示します。<br /> - **緑色** のチェック マーク アイコンは、この列に対するデータ型変換が成功するとウィザードが予測していることを示します。<br />- **黄色** の警告アイコンは、ウィザードが実行する変換をユーザーが確認する必要があることを示します。 変換を確認するには、列をダブルクリックして **[列変換の詳細]** ダイアログ ボックスを表示します。 詳細については、 [[列変換の詳細]](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md)ダイアログ ボックスを参照してください。<br />- **赤色** のエラー アイコンは、ウィザードが変換を確実に実行することができないことを示します。|  
 |**変換元列**|変換元列の名前です。|  

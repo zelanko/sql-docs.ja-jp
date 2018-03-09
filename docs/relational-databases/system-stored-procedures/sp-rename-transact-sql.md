@@ -1,7 +1,7 @@
 ---
 title: "sp_rename (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eb402624e8b25f43a1969a91df85cfe5fa85d9af
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 158974d93e031d689318ea22f3bd0ba8189553ee
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @objname =] '*object_name*'  
+ [ @objname = ] '*object_name*'  
  ユーザー オブジェクトやデータ型に関する現在の修飾名または非修飾名を指定します。 名前を変更するオブジェクトがテーブルの列の場合*object_name*という形式にする必要があります*table.column*または*schema.table.column*です。 名前を変更するオブジェクトが、インデックスの場合*object_name*という形式にする必要があります*table.index*または*schema.table.index*です。 名前を変更するオブジェクトが、制約の場合*object_name*という形式にする必要があります*schema.constraint*です。  
   
  引用符は、修飾オブジェクトを指定する場合のみ必要です。 データベース名を含む完全修飾名を指定する場合、データベース名は現在のデータベースの名前である必要があります。 *object_name*は**nvarchar (776)**、既定値はありません。  
@@ -62,10 +62,10 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 > [!NOTE]  
 >  トリガー名の先頭に # または ## は使用できません。  
   
- [ @objtype =] '*object_type*'  
+ [ @objtype = ] '*object_type*'  
  名前を変更するオブジェクトの種類を指定します。 *object_type*は**varchar (13)**、既定値は NULL、これらの値のいずれかを指定できます。  
   
-|値|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |COLUMN|名前を変更する列。|  
 |DATABASE|ユーザー定義のデータベース。 データベースの名前を変更する場合は、このオブジェクトの種類が必要です。|  
@@ -84,11 +84,11 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  sp_rename は、プライマリおよびセカンダリ XML インデックスの名前を変更する場合に使用できます。  
   
- ストアド プロシージャ、関数、ビュー、またはトリガーの名前を変更してもの definition 列に対応するオブジェクト名の名前は変更されません、 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログ ビューです。 したがって、これらのオブジェクトの種類の名前を変更する場合は、sp_rename を使用しないことをお勧めします。 代わりに、オブジェクトを削除して新しい名前で再作成してください。  
+ ストアド プロシージャ、関数、ビュー、またはトリガーは変更されません、対応するオブジェクトの名前の定義列のいずれか、 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログ ビューまたはを使用して取得、 [object _定義](../../t-sql/functions/object-definition-transact-sql.md)組み込み関数。 したがって、これらのオブジェクトの種類の名前を変更する場合は、sp_rename を使用しないことをお勧めします。 代わりに、オブジェクトを削除して新しい名前で再作成してください。  
   
- テーブルや列などのオブジェクトの名前を変更しても、そのオブジェクトに対する参照は自動的には変更されません。 名前を変更したオブジェクトを参照しているオブジェクトに対しては、手動で変更を加える必要があります。 たとえば、テーブルの列の名前を変更するとき、その列がトリガーで参照されている場合は、新しい列名が反映されるようにトリガーに変更を加える必要があります。 使用して[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)名前を変更する前に、オブジェクトの一覧の従属関係をします。  
+ テーブルや列などのオブジェクトの名前を変更しても、そのオブジェクトに対する参照は自動的には変更されません。 名前を変更したオブジェクトを参照しているオブジェクトに対しては、手動で変更を加える必要があります。 たとえば、テーブルの列の名前を変更するとき、その列がトリガーで参照されている場合は、新しい列名が反映されるようにトリガーに変更を加える必要があります。 オブジェクトの名前を変更する前には、 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) を使ってオブジェクトの従属関係を一覧表示できます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  オブジェクト、列、およびインデックスの名前を変更するには、そのオブジェクトに対する ALTER 権限が必要です。 ユーザー定義型の名前を変更するには、その型に対する CONTROL 権限が必要です。 データベースの名前を変更するには、sysadmin 固定サーバー ロールまたは dbcreator 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,19 +30,20 @@ helpviewer_keywords:
 - CRISP-DM
 - accuracy testing [data mining]
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e20e18e5f2a41150a74b54575b582fd4e9dc3492
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bf43af38fc18b67c37ec5409ccb90a1d8e798259
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="testing-and-validation-data-mining"></a>テストおよび検証 (データ マイニング)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]検証は、実際のデータに対するマイニング モデルの性能を評価するためのプロセスです。 運用環境に配置する前に品質や特性を理解してマイニング モデルを検証しておくことが重要です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+検証とは、実際のデータに対するマイニング モデルの性能を評価するプロセスです。 運用環境に配置する前に品質や特性を理解してマイニング モデルを検証しておくことが重要です。  
   
  このセクションでは、モデルの品質に関するいくつかの基本的な概念について説明し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に用意されているモデル検証のための戦略について説明します。 大規模なデータ マイニング プロセス内でモデルの検証がどのように位置付けられているかの概要については、「 [データ マイニング ソリューション](../../analysis-services/data-mining/data-mining-solutions.md)」を参照してください。  
   
@@ -93,14 +92,14 @@ ms.lasthandoff: 12/08/2017
   
 |トピック|リンク|  
 |------------|-----------|  
-|ウィザードまたは DMX コマンドを使用してテスト用データ セットを設定する方法を学ぶ|[トレーニング データ セットとテスト データ セット](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
-|マイニング構造内のデータの分布と代表性をテストする方法を学ぶ|[相互検証 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|指定された精度チャートの種類について説明します。|[リフト チャート (Analysis Services - データ マイニング)](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [利益チャート (Analysis Services - データ マイニング)](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散布図 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|真陽性、偽陽性、真陰性、および偽陰性の実際の数値を評価する分類マトリックス (混同マトリックスと呼ばれることもある) の作成方法について学びます。|[分類マトリックス (Analysis Services - データ マイニング)](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
+|ウィザードまたは DMX コマンドを使用してテスト用データ セットを設定する方法を学ぶ|[トレーニング セットとテスト データ セット](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
+|マイニング構造内のデータの分布と代表性をテストする方法を学ぶ|[クロス検証 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|指定された精度チャートの種類について説明します。|[リフト チャート &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [利益チャート &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散布図 &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|真陽性、偽陽性、真陰性、および偽陰性の実際の数値を評価する分類マトリックス (混同マトリックスと呼ばれることもある) の作成方法について学びます。|[分類マトリックス &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング ツール](../../analysis-services/data-mining/data-mining-tools.md)   
  [データ マイニング ソリューション](../../analysis-services/data-mining/data-mining-solutions.md)   
- [テストおよび検証タスク、および操作方法 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [テストおよび検証タスクと操作方法 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

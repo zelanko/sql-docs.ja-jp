@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_operator_TSQL
 - sp_update_operator
-dev_langs: TSQL
-helpviewer_keywords: sp_update_operator
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a297d3a5dd0252dce89a5cf5a779c8b3fa06d8d5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 38da9010e434570fbcd75e026f11c50450e10691
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,25 +78,25 @@ sp_update_operator
  [ @weekday_pager_start_time=] *weekday_pager_start_time*  
  月曜日から金曜日までの間で、このオペレーターに対してポケットベル通知を開始する時間を指定します。 *weekday_pager_start_time*は**int**、既定値は NULL、24 時間制の HHMMSS 形式で使用するためで入力する必要があります。  
   
- [ @weekday_pager_end_time=]*エージェント*  
+ [ @weekday_pager_end_time=] *weekday_pager_end_time*  
  月曜日から金曜日までの間で、指定したオペレーターに対してポケットベル通知を終了する時間を指定します。 *エージェント*は**int**、既定値は NULL、24 時間制の HHMMSS 形式で使用するためで入力する必要があります。  
   
- [ @saturday_pager_start_time=]*エージェント*  
+ [ @saturday_pager_start_time=] *saturday_pager_start_time*  
  毎週土曜日に、指定したオペレーターに対してポケットベル通知を開始する時間を指定します。 *エージェント*は**int**、既定値は NULL、24 時間制の HHMMSS 形式で使用するためで入力する必要があります。  
   
- [ @saturday_pager_end_time=] *@saturday_pager_end_time*  
+ [ @saturday_pager_end_time=] *saturday_pager_end_time*  
  毎週土曜日に、指定したオペレーターに対してポケットベル通知を終了する時間を指定します。 *@saturday_pager_end_time*は**int**、既定値は NULL、24 時間制の HHMMSS 形式で使用するためで入力する必要があります。  
   
- [ @sunday_pager_start_time=]*エージェント*  
+ [ @sunday_pager_start_time=] *sunday_pager_start_time*  
  毎週日曜日に、指定したオペレーターに対してポケットベル通知を開始する時間を指定します。 *エージェント*は**int**、既定値は NULL、24 時間制の HHMMSS 形式で使用するためで入力する必要があります。  
   
- [ @sunday_pager_end_time=]*エージェント*  
+ [ @sunday_pager_end_time=] *sunday_pager_end_time*  
  毎週日曜日に、指定したオペレーターに対してポケットベル通知を終了する時間を指定します。 *エージェント*は**int**、既定値は NULL、24 時間制の HHMMSS 形式で使用するためで入力する必要があります。  
   
  [ @pager_days=] *pager_days*  
  オペレーターがポケットベルのメッセージを受信できる曜日を指定します (指定した開始/終了時刻を前提とします)。 *pager_days*は**tinyint**、NULL の場合、既定値から値を指定する必要があります**0**を通じて**127**です。 *pager_days*必要となる曜日の個々 の値を加算して計算されます。 たとえば、月曜日から金曜日までからは**2**+**4**+**8**+**16** + **32** = **64**です。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|日曜日|  
 |**2**|月曜日|  
@@ -104,7 +107,7 @@ sp_update_operator
 |**64**|土曜日|  
   
  [ @netsend_address=] '*netsend_address*'  
- ネットワーク メッセージの送信先オペレーターのネットワーク アドレスを指定します。 *netsend_address*は**nvarchar (100)**、既定値は NULL です。  
+ ネットワーク メッセージの送信先オペレーターのネットワーク アドレスを指定します。 *netsend_address*is **nvarchar(100)**, with a default of NULL.  
   
  [ @category_name=] '*カテゴリ*'  
  警告のカテゴリの名前を指定します。 *カテゴリ*は**sysname**、既定値は NULL です。  
@@ -115,7 +118,7 @@ sp_update_operator
 ## <a name="remarks"></a>解説  
  sp_update_operator は、msdb データベースから実行する必要があります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  Sysadmin 固定サーバー ロールのメンバーにこのプロシージャの既定値を実行する権限です。  
   
 ## <a name="examples"></a>使用例  

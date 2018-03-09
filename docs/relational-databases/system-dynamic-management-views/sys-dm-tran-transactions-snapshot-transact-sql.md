@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_tran_transactions_snapshot
 - sys.dm_tran_transactions_snapshot_TSQL
 - dm_tran_transactions_snapshot_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_transactions_snapshot dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_transactions_snapshot dynamic management view
 ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab16132fd9b9bca0b0c2e0f12eedfbfe87fae530
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f73b2955b25e17cd9c4aea963acb277f11bc3351
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtrantransactionssnapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,13 +79,13 @@ dm_tran_transactions_snapshot
 |**snapshot_id**|**int**|それぞれのスナップショット ID [!INCLUDE[tsql](../../includes/tsql-md.md)] read committed を使用して下にあるステートメントが開始された行のバージョン管理します。 この ID を使用して、トランザクション全体で一貫性のあるデータベース ビューを生成し、行バージョンを使用する READ COMMITTED で実行される各クエリをサポートできます。|  
 |**snapshot_sequence_num**|**bigint**|スナップショット トランザクションが開始したときに有効となっていたトランザクション シーケンス番号。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 階層には、データベースの VIEW DATABASE STATE 権限が必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard および Basic 階層が必要です、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理者アカウントです。  
   
 ## <a name="remarks"></a>解説  
- スナップショット トランザクションの開始時に、[!INCLUDE[ssDE](../../includes/ssde-md.md)]その時点でアクティブになっているトランザクションがすべて記録します。 **sys.dm_tran_transactions_snapshot**すべての現在アクティブなスナップショット トランザクションのこの情報を報告します。  
+ スナップショット トランザクションの開始時に、[!INCLUDE[ssDE](../../includes/ssde-md.md)]その時点でアクティブになっているトランザクションがすべて記録します。 **sys.dm_tran_transactions_snapshot** reports this information for all currently active snapshot transactions.  
   
  各トランザクションは、トランザクションの開始時に割り当てられたトランザクション シーケンス番号によって識別されます。 トランザクションは、BEGIN TRANSACTION または BEGIN WORK ステートメントが実行されたときに開始されますが、 トランザクション シーケンス番号は、BEGIN TRANSACTION または BEGIN WORK ステートメントの後、最初にデータにアクセスする [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントが実行されたときに[!INCLUDE[tsql](../../includes/tsql-md.md)]によって割り当てられます。 トランザクション シーケンス番号は 1 ずつ増加します。  
   

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Execute21 method [RDS]
+helpviewer_keywords:
+- Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b94d4cdb75cbdcfaa2dfece8d7172e2935d6759d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fd79bbbd0ccce5e5e2f2bef181ba958c76f6afb5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute21-method-rds"></a>Execute21 メソッド (RDS)
 要求を実行し、ADO 2.1 で使用する ADO レコード セットを作成します。  
@@ -45,7 +47,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *HandlerString*  
  文字列は、この実行で使用するハンドラーを識別します。 文字列には、2 つの部分が含まれています。 最初の部分には、使用するハンドラーの名前 (ProgID) が含まれています。 文字列の 2 番目の部分には、ハンドラーに渡される引数が含まれています。 特定のハンドラーには、引数文字列を解釈する方法です。 (ただし、引数文字列には、追加のコンマを含めることができます)、2 つの部分は、コンマ、文字列内の最初のインスタンスで区切られます。 引数は省略できます。  
   
- *クエリ文字列*  
+ *QueryString*  
  接続文字列で識別される OLE DB プロバイダーによってサポートされるコマンド言語でのコマンド。 SQL ベースのプロバイダーでは、含まれる、[!INCLUDE[tsql](../../../includes/tsql_md.md)]ステートメントでは、コマンドしますが、非 SQL プロバイダー (たとえば、MSDataShape) とは限りません、[!INCLUDE[tsql](../../../includes/tsql_md.md)]ステートメントのクエリを実行します。  
   
  ハンドラーが使用されている (ハンドラーを使用することを強くお勧め) 場合、ハンドラーを変更したり、ここで指定した値を置換できます。 たとえば、ハンドラーは、通常に置き換えられます*QueryString* .ini ファイルからクエリ文字列を使用します。 既定では、Msdfmap.ini ファイルが使用されます。  

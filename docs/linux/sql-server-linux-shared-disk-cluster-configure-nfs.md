@@ -3,26 +3,26 @@ title: "フェールオーバー クラスター インスタンスの記憶域�
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 1b944d36e968234d5ea77a861c595e440cbbb15b
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 368fce4b3c9595f89ea14ca310049a52cf180a28
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>フェールオーバー クラスター インスタンス: NFS - Linux に SQL Server を構成します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 この記事では、Linux 上のフェールオーバー クラスター インスタンス (FCI) の NFS の記憶域を構成する方法について説明します。 
 
@@ -33,8 +33,8 @@ NFS、またはネットワーク ファイル システムは、Linux の世界
 NFS (Linux サーバーまたは別のもの) をホストしているソース必要がありますを使用して/に準拠する 4.2 以降のバージョン。 以前のバージョンは、SQL Server on Linux では機能しません。
 
 NFS サーバーで共有するフォルダーを構成するときに、これらのガイドラインの全般的なオプションに従っていることを確認してください。
-- `rw`確認するフォルダーから読み取られたしてに書き込まれます
-- `sync`フォルダーへの書き込みを保証されることを確認するには
+- `rw` 確認するフォルダーから読み取られたしてに書き込まれます
+- `sync` フォルダーへの書き込みを保証されることを確認するには
 - 使用しないでください`no_root_squash`オプションとしてと見なされます、セキュリティ上のリスク
 - フォルダーが適用されるすべての権利 (777) を確認してください。
 
@@ -167,7 +167,7 @@ NFS サーバーで共有するフォルダーを構成するときに、これ�
     sudo systemctl status mssql-server
     ```
     
-   * セキュリティが正しくセットアップされているかをテストするデータベースを作成します。 TRANSACT-SQL; 経由で実行されていることを次の例が表示されます。SSMS を使用して実行できます。
+   * セキュリティが正しくセットアップされているかをテストするデータベースを作成します。 次の例は TRANSACT-SQL; 経由で実行されていることを示していますSSMS を使用して実行できます。
  
     ![CreateTestdatabase][3]
 
@@ -204,7 +204,7 @@ NFS サーバーで共有するフォルダーを構成するときに、これ�
     mkdir <FolderName>
     ```
 
-    \<フォルダー名 > フォルダーの名前を指定します。 フォルダーの完全なパスを指定する必要は、適切な場所ではない場合。 次の例では、/var/opt/mssql/userdata をという名前のフォルダーを作成します。
+    \<フォルダー名 > フォルダーの名前を指定します。 フォルダーの完全なパスを指定する必要があります、適切な場所ではない場合。 次の例では、/var/opt/mssql/userdata をという名前のフォルダーを作成します。
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -230,7 +230,7 @@ NFS サーバーで共有するフォルダーを構成するときに、これ�
   
    * スーパー ユーザーを使用できなくする exit」と入力します。
 
-   * テストするには、そのフォルダーにデータベースを作成します。 次に示す例では、sqlcmd を使用してデータベースを作成、コンテキストを切り替える、ファイルが、OS レベルが存在し、一時的な場所を削除します。 SSMS を使用することができます。
+   * テストするには、そのフォルダーにデータベースを作成します。 次の例では、sqlcmd を使用して、データベースを作成、コンテキストを切り替える、ファイルが、OS レベルが存在し、一時的な場所が削除されます。 SSMS を使用することができます。
 
     ![15 createtestdatabase][4]
  

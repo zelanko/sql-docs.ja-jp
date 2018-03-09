@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_notification_TSQL
 - sp_update_notification
-dev_langs: TSQL
-helpviewer_keywords: sp_updatenotification
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44b2755dca0a8d3cd2dae7d11e12cc16a708fe1e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9574169f49b8ae2c0736a99d657fd7ef5d17cc48
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,10 +59,10 @@ sp_update_notification
  [  **@notification_method =**]*通知*  
  オペレーターが通知を受ける方法を指定します。 *通知*は**tinyint**, で、既定値はありませんはこれらの値の 1 つ以上指定します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**1**|電子メール|  
-|**2**|ポケットベル|  
+|**1**|[電子メール]|  
+|**2**|[ポケットベル]|  
 |**4**|**net send**|  
 |**7**|すべての方法|  
   
@@ -71,7 +74,7 @@ sp_update_notification
   
  通知を更新するには、指定されたを使用して必要なアドレス情報を持っていないユーザーのオペレーターの*notification_method*です。 電子メールのメッセージやポケットベルによる通知に失敗した場合は、Microsoft SQL Server エージェント エラー ログに失敗がレポートされます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  このストアド プロシージャを実行するユーザーに付与する必要があります、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  

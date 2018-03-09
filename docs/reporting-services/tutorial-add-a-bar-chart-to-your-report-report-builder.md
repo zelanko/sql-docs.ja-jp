@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6039892e8cdd711102c2c3f647b0a201723b0eef
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e8d12b916eaa9ae355730e71a5564fb3d13b5740
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)
 このチュートリアルでは、ウィザードを使用して、 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] で [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートに横棒グラフを作成します。 次にフィルターを追加してグラフを強化します。 
@@ -94,7 +94,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  (省略可) [実行] ボタン (**!**) をクリックして、グラフの基になるデータを確認します。  
   
-9. **[次へ]**をクリックします。  
+9. **[次へ]** をクリックします。  
   
 ## <a name="ChartType"></a>2.横棒グラフを作成する  
  
@@ -110,7 +110,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  SalesYear2014 を SalesYear2015 の値ペインにドラッグします。 SalesYear2014 は、2014 年の各販売員の売上高を表します。  
   
-6.  **[次へ]**をクリックします。  
+6.  **[次へ]** をクリックします。  
   
 7.  **[完了]**をクリックします。  
   
@@ -302,7 +302,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  **[保存]**をクリックします。   
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 これで、「レポートへの横棒グラフの追加」チュートリアルを終了します。 グラフの詳細については、「 [グラフ](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 」と「 [横棒グラフ](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

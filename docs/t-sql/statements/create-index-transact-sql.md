@@ -1,14 +1,15 @@
 ---
 title: "CREATE INDEX (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - INDEX
 - INDEX_TSQL
 - CREATE_INDEX_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE XML INDEX statement
 - PRIMARY XML INDEX statement
@@ -54,26 +56,28 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-caps.latest.revision: "223"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 92e32f9a86265376a67466aa389f29ec9608a061
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
-ms.translationtype: MT
+ms.openlocfilehash: 48d755dcd5257a3208c087db44df1e9fd262ddcc
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  テーブルまたはビューをリレーショナル インデックスを作成します。 行ストア インデックスは、いずれかのクラスター化または非クラスター化 btree インデックスであるためにも呼び出されます。 テーブルにデータが前に、行ストア インデックスを作成することができます。 クエリでは、特定の列から選択するか、特定の順序で並べ替えの基準値を要求する場合は特に、クエリのパフォーマンスを向上させるために、行ストア インデックスを使用します。  
-  
+テーブルまたはビューをリレーショナル インデックスを作成します。 行ストア インデックスは、いずれか、クラスター化または非クラスター化 B ツリー インデックスになっているためにも呼び出されます。 テーブルにデータが前に、行ストア インデックスを作成することができます。 クエリでは、特定の列から選択するか、特定の順序で並べ替えの基準値を要求する場合は特に、クエリのパフォーマンスを向上させるために、行ストア インデックスを使用します。  
   
 > [!NOTE]  
->  Azure SQL Data Warehouse と Parallel Data Warehouse 現在では、一意の制約はサポートされません。 Unique 制約を参照している例は、SQL Server と Azure SQL データベースに適用可能なのみ    
-  
+> [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]および[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]現在、Unique 制約はサポートされていません。 Unique 制約を参照している例にのみ適用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。    
+
+> [!TIP]
+> インデックスのデザイン ガイドラインについてを参照してください、 [SQL Server インデックス デザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)です。
+
  **簡単な例:**  
   
 ```  
@@ -95,17 +99,15 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
   
  **主要なシナリオ:**  
   
--   SQL Server 2016 と Azure SQL データベースでデータ ウェアハウスのクエリのパフォーマンスを向上させるために列ストア インデックスに非クラスター化インデックスを使用します。 参照してください[列ストア インデックスのデータ ウェアハウス](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
+-   以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]と[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、データ ウェアハウスのクエリのパフォーマンスを向上させるために、列ストア インデックスに非クラスター化インデックスを使用します。 詳細については、次を参照してください。[列ストア インデックスのデータ ウェアハウス](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)です。  
   
- **別の種類のインデックスを作成する必要がありますか。**  
+**別の種類のインデックスを作成する必要がありますか。**  
   
 -   [XML インデックス &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-xml-index-transact-sql.md)  
-  
 -   [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)  
+-   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)     
   
--   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
-  
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -168,12 +170,12 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 <range> ::=   
 <partition_number_expression> TO <partition_number_expression>  
   
-Backward Compatible Relational Index  
-Important   The backward compatible relational index syntax structure 
-will be removed in a future version of SQL Server. Avoid using this 
-syntax structure in new development work, and plan to modify 
-applications that currently use the feature. Use the syntax structure 
-specified in <relational_index_option> instead.  
+Backward Compatible Relational Index
+
+> [!IMPORTANT]
+> The backward compatible relational index syntax structure will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+> Avoid using this syntax structure in new development work, and plan to modify applications that currently use the feature. 
+> Use the syntax structure specified in <relational_index_option> instead.  
   
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON <object> ( column_name [ ASC | DESC ] [ ,...n ] )   
@@ -206,17 +208,16 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
         ( { column [ ASC | DESC ] } [ ,...n ] )  
     WITH ( DROP_EXISTING = { ON | OFF } )  
 [;]  
-  
 ```  
   
 ## <a name="arguments"></a>引数  
- UNIQUE  
- テーブルまたはビューに一意のインデックスを作成します。 一意のインデックスとは、どの 2 つの行にも同じインデックス キー値が設定されていないインデックスです。 ビューのクラスター化インデックスは一意である必要があります。  
+UNIQUE  
+テーブルまたはビューに一意のインデックスを作成します。 一意のインデックスとは、どの 2 つの行にも同じインデックス キー値が設定されていないインデックスです。 ビューのクラスター化インデックスは一意である必要があります。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、IGNORE_DUP_KEY が ON に設定されているかどうかに関係なく、重複する値が既に含まれている列に対して一意のインデックスを作成できません。 作成しようとすると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ではエラー メッセージが表示されます。 1 行または複数行に対して一意のインデックスを作成するには、先に重複する値を削除しておく必要があります。 一意のインデックスに使用する列は NOT NULL に設定してください。一意のインデックスを作成するとき、複数の NULL 値は重複した値と見なされます。  
   
- CLUSTERED  
- キー値の論理的順序がテーブル内にある対応する行の物理的な順序を決めるインデックスを作成します。 クラスター化インデックスの最下位レベル (リーフ レベル) には、テーブルの実際のデータ行が含まれます。 1 つのテーブルまたはビューに、同時に複数のクラスター化インデックスを定義することはできません。  
+CLUSTERED  
+キー値の論理的順序がテーブル内にある対応する行の物理的な順序を決めるインデックスを作成します。 クラスター化インデックスの最下位レベル (リーフ レベル) には、テーブルの実際のデータ行が含まれます。 1 つのテーブルまたはビューに、同時に複数のクラスター化インデックスを定義することはできません。  
   
  一意のクラスター化インデックスが定義されているビューは、インデックス付きビューと呼ばれます。 ビューに一意のクラスター化インデックスを作成すると、ビューを物理的に具体化することになります。 ビューにその他のインデックスを定義するには、まずそのビューに一意のクラスター化インデックスを作成する必要があります。 詳細については、「 [インデックス付きビューの作成](../../relational-databases/views/create-indexed-views.md)」を参照してください。  
   
@@ -225,18 +226,18 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  CLUSTERED を指定しない場合、非クラスター化インデックスが作成されます。  
   
 > [!NOTE]  
->  クラスター化インデックスおよびデータ ページのリーフ レベルは、定義では同一であるため、クラスター化インデックスを作成して、ON を使用して*partition_scheme_name*または ON *filegroup_name*句効果的にテーブルが作成されたファイル グループからテーブルを新しいパーティション構成またはファイル グループに移動します。 特定のファイル グループ上にテーブルまたはインデックスを作成する前に、使用可能なファイル グループとインデックス用の十分な空領域を確認しておいてください。  
+> クラスター化インデックスおよびデータ ページのリーフ レベルは、定義では同一であるため、クラスター化インデックスを作成して、ON を使用して*partition_scheme_name*または ON *filegroup_name*句効果的にテーブルが作成されたファイル グループからテーブルを新しいパーティション構成またはファイル グループに移動します。 特定のファイル グループ上にテーブルまたはインデックスを作成する前に、使用可能なファイル グループとインデックス用の十分な空領域を確認しておいてください。  
   
  場合によっては、クラスター化インデックスを作成すると、以前に無効化されたインデックスが有効になることがあります。 詳細については、次を参照してください。 [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md)と[無効にするインデックスと制約](../../relational-databases/indexes/disable-indexes-and-constraints.md)です。  
   
- **非クラスター化**  
- テーブルの論理順序を示すインデックスを作成します。 非クラスター化インデックスの場合、データ行の物理的な順序は、そのインデックスが作成された順序とは関係ありません。  
+**非クラスター化**  
+テーブルの論理順序を示すインデックスを作成します。 非クラスター化インデックスの場合、データ行の物理的な順序は、そのインデックスが作成された順序とは関係ありません。  
   
  インデックスの作成方法に関係なく、PRIMARY KEY および UNIQUE 制約で暗黙的に作成する場合も、CREATE INDEX で明示的に作成する場合も、各テーブルには 999 個までの非クラスター化インデックスを作成できます。  
   
  インデックス付きビューの場合は、既に一意のクラスター化インデックスが作成されているビューにのみ、非クラスター化インデックスを作成できます。  
   
- 既定値は NONCLUSTERED です。  
+ 特に指定しない場合、既定のインデックスの種類は NONCLUSTERED です。  
   
  *index_name*  
  インデックスの名前。 インデックス名は、テーブルまたはビュー内では一意である必要がありますが、データベース内で一意である必要はありません。 インデックス名の規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。  
@@ -278,18 +279,18 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
  フィルター選択されたインデックスは、XML インデックスおよびフルテキスト インデックスには適用されません。 UNIQUE インデックスの場合、一意のインデックス値を持つ必要があるのは選択した行のみです。 フィルター選択されたインデックスでは IGNORE_DUP_KEY オプションを使用できません。  
   
- ON *partition_scheme_name***(***column_name***)**  
- **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+ON *partition_scheme_name* **( *column_name* )**  
+**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
   
  ファイル グループが定義されているパーティション構成を指定します。このファイル グループは、パーティション インデックスのパーティションのマップ先となります。 パーティション構成はいずれかの操作を実行することによって、データベース内に存在する必要があります[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)または[ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)です。 *column_name*パーティション インデックスのパーティション分割される対象の列を指定します。 この列はデータ型、長さ、一致する必要があります関数および有効桁数の引数のパーティションを*partition_scheme_name*を使用しています。 *column_name*インデックス定義内の列に限定されません。 ときに、一意のインデックスをパーティション分割を除く、ベース テーブルの任意の列を指定することができます*column_name*一意のキーとして使用されるものの中から選択する必要があります。 この制限により、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、単一のパーティション内だけでキー値の一意性を確認できます。  
   
 > [!NOTE]  
->  一意でないクラスター化インデックスをパーティション分割するとき、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では既定により、まだ指定されていない場合、パーティション分割列がクラスター化インデックス キーのリストに追加されます。 非一意の非クラスター化インデックスをパーティション分割するとき、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が指定されていない場合は、インデックスの非キー (付加) 列として、パーティション分割列を追加します。  
+> 一意でないクラスター化インデックスをパーティション分割するとき、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では既定により、まだ指定されていない場合、パーティション分割列がクラスター化インデックス キーのリストに追加されます。 非一意の非クラスター化インデックスをパーティション分割するとき、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が指定されていない場合は、インデックスの非キー (付加) 列として、パーティション分割列を追加します。  
   
  場合*partition_scheme_name*または*filegroup*が指定されていないと、テーブルがパーティション分割、インデックスは基になるテーブルとして同じのパーティション分割列を使用して、同じパーティション構成に配置されます。  
   
 > [!NOTE]  
->  XML インデックスにはパーティション構成を指定できません。 ベース テーブルがパーティション分割される場合、XML インデックスではテーブルと同じパーティション構造が使用されます。  
+> XML インデックスにはパーティション構成を指定できません。 ベース テーブルがパーティション分割される場合、XML インデックスではテーブルと同じパーティション構造が使用されます。  
   
  詳細については、インデックスのパーティション分割の[Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)です。  
   
@@ -366,7 +367,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  FILLFACTOR 設定は、インデックスが作成または再構築されるときのみ適用されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ページ内の空き領域の指定された割合動的に保持しません。 表示するには、fill factor 設定を使用して、 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)カタログ ビューです。  
   
 > [!IMPORTANT]  
->  100 未満、fillfactor の値をクラスター化インデックスを作成するため、データが占める記憶域スペースの量、影響、[!INCLUDE[ssDE](../../includes/ssde-md.md)]クラスター化インデックスを作成するときに、データを再分配します。  
+> 100 未満、fillfactor の値をクラスター化インデックスを作成するため、データが占める記憶域スペースの量、影響、[!INCLUDE[ssDE](../../includes/ssde-md.md)]クラスター化インデックスを作成するときに、データを再分配します。  
   
  詳細については、「 [インデックスの FILL FACTOR の指定](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)」を参照してください。  
   
@@ -412,12 +413,12 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  自動統計更新を復元するには、STATISTICS_NORECOMPUTE を OFF に設定するか、NORECOMPUTE 句を指定せずに UPDATE STATISTICS を実行します。  
   
 > [!IMPORTANT]  
->  分布統計の自動再計算を無効にすると、クエリ オプティマイザーで、テーブルが関与するクエリの最適実行プランが選択されなくなる場合があります。  
+> 分布統計の自動再計算を無効にすると、クエリ オプティマイザーで、テーブルが関与するクエリの最適実行プランが選択されなくなる場合があります。  
   
  旧バージョンと互換性のある構文では、WITH STATISTICS_NORECOMPUTE は WITH STATISTICS_NORECOMPUTE = ON と同じです。  
   
- STATISTICS_INCREMENTAL = {ON |**OFF** }  
- ときに**ON**、作成される統計は、パーティションごとの統計はします。 ときに**OFF**、統計ツリーが削除されると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]統計が再計算します。 既定値は**OFF**です。  
+STATISTICS_INCREMENTAL = {ON |**OFF** }  
+ときに**ON**、作成される統計は、パーティションごとの統計はします。 ときに**OFF**、統計ツリーが削除されると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]統計が再計算します。 既定値は**OFF**です。  
   
  パーティションごとの統計がサポートされていない場合、このオプションは無視され、警告が生成されます。 次の種類の統計では、増分統計がサポートされていません。  
   
@@ -429,8 +430,8 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 -   内部テーブルに対して作成された統計。  
 -   空間インデックスまたは XML インデックスを使用して作成された統計。  
   
- DROP_EXISTING = {ON |**OFF** }  
- 削除、変更した列の仕様を既存のクラスター化または非クラスター化インデックスを再構築し、インデックスの同じ名前を保持するオプションです。 既定値は OFF です。  
+DROP_EXISTING = {ON |**OFF** }  
+削除、変更した列の仕様を既存のクラスター化または非クラスター化インデックスを再構築し、インデックスの同じ名前を保持するオプションです。 既定値は OFF です。  
   
  ON  
  削除し、パラメーターと同じ名前を持つ必要がある既存のインデックスを再構築することを指定*index_name*です。  
@@ -438,23 +439,22 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  OFF  
  削除し、既存のインデックスを再構築をしないように指定します。 SQL Server では、指定したインデックス名が既に存在する場合、エラーが表示されます。  
   
- With DROP_EXISTING を変更することができます。  
+With DROP_EXISTING を変更することができます。  
   
 -   クラスター化行ストア インデックスに非クラスター化行ストア インデックスです。  
   
- With DROP_EXISTING を変更することはできません。  
+With DROP_EXISTING を変更することはできません。  
   
 -   非クラスター化行ストア インデックスをクラスター化行ストア インデックスです。  
-  
 -   任意の種類の行ストア インデックスをクラスター化列ストア インデックスです。  
   
- 旧バージョンと互換性のある構文では、WITH DROP_EXISTING は WITH DROP_EXISTING = ON と同じです。  
+旧バージョンと互換性のある構文では、WITH DROP_EXISTING は WITH DROP_EXISTING = ON と同じです。  
   
- ONLINE = {ON |**OFF** }  
- インデックス操作時に、基になるテーブルや関連するインデックスをクエリやデータ変更で使用できるかどうかを指定します。 既定値は OFF です。  
+ONLINE = {ON |**OFF** }  
+インデックス操作時に、基になるテーブルや関連するインデックスをクエリやデータ変更で使用できるかどうかを指定します。 既定値は OFF です。  
   
 > [!NOTE]  
->  オンラインでのインデックス操作は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
+> オンラインでのインデックス操作は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
  ON  
  長期のテーブル ロックは、インデックス操作の間は保持されません。 インデックス操作の主なフェーズでは、基になるテーブル、インテント共有 (IS) ロックのみが保持されます。 これにより、基になるテーブルやインデックスに対するクエリや更新を続行できます。 操作の開始時、非常に短い時間ですが、ソース オブジェクトの共有 (S) ロックが保持されます。 操作の終了時、短い時間ですが、非クラクタ化インデックスが作成される場合は、ソース オブジェクト上で共有 (S) ロックの取得が行われます。また、クラスター化インデックスがオンラインで作成または削除され、クラスター化または非クラスター化インデックスが再構築される場合は、SCH-M (スキーマ修正) ロックが取得されます。 インデックスがローカルの一時テーブルに作成される場合、ONLINE は ON にできません。  
@@ -473,10 +473,10 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 -   基になるテーブルに LOB データ型が含まれている場合、クラスター化インデックス:**イメージ**、 **ntext**、**テキスト**、および空間型です。  
 -   **varchar (max)**と**varbinary (max)**列がインデックスの一部にすることはできません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) し、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]テーブルが含まれている場合、 **varchar (max)**または**varbinary (max)**列、他の列を含むクラスター化インデックスを指定できます構築または再構築を使用して、**オンライン**オプション。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]許可しない、**オンライン**オプション、ベース テーブルが含まれている**varchar (max)**または**varbinary (max)**列です。  
   
- 詳しくは、「 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)」をご覧ください。  
+詳しくは、「 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)」をご覧ください。  
   
- ALLOW_ROW_LOCKS = { **ON** |オフ}  
- **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+ALLOW_ROW_LOCKS = { **ON** |オフ}  
+**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
   
  行ロックを許可するかどうかを指定します。 既定値は ON です。  
   
@@ -486,8 +486,8 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  OFF  
  行ロックは使用されません。  
   
- ALLOW_PAGE_LOCKS = { **ON** |オフ}  
- **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+ALLOW_PAGE_LOCKS = { **ON** |オフ}  
+**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
   
  ページ ロックを許可するかどうかを指定します。 既定値は ON です。  
   
@@ -497,14 +497,14 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  OFF  
  ページ ロックは使用されません。  
   
- MAXDOP = *max_degree_of_parallelism*  
- **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+MAXDOP = *max_degree_of_parallelism*  
+**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
   
  上書き、**並列処理の次数の最大**インデックス操作の実行中の構成オプション。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
   
  *max_degree_of_parallelism*を指定できます。  
   
- 1  
+ @shouldalert  
  並列プラン生成を抑制します。  
   
  \>1  
@@ -516,7 +516,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
   
 > [!NOTE]  
->  並列インデックス操作はすべてのエディションで使用できない[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
+> 並列インデックス操作はすべてのエディションで使用できない[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[エディションと SQL Server 2016 のサポートされる機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)と[エディションとサポートされる機能の SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)です。  
   
  DATA_COMPRESSION  
  指定したインデックス、パーティション番号、またはパーティション範囲に、データ圧縮オプションを指定します。 次のオプションがあります。  
@@ -532,22 +532,21 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
  圧縮の詳細については、次を参照してください。[データ圧縮](../../relational-databases/data-compression/data-compression.md)です。  
   
- パーティションで**(** { \<partition_number_expression > |\<範囲 >}[ **,**... *n*  ] **)** **対象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+パーティションで**(** { \<partition_number_expression > |\<範囲 >}[ **,**...*n* ] **)**      
+**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
   
  DATA_COMPRESSION 設定を適用するパーティションを指定します。 インデックスがパーティション分割されていない場合に ON PARTITIONS 引数を使用すると、エラーが発生します。 ON PARTITIONS 句を指定しないと、パーティション インデックスのすべてのパーティションに対して DATA_COMPRESSION オプションが適用されます。  
   
  \<partition_number_expression > 次のように指定することができます。  
   
 -   ON PARTITIONS (2) などのように、1 つのパーティションの番号を指定します。  
-  
 -   ON PARTITIONS (1, 5) などのように、複数のパーティションのパーティション番号をコンマで区切って指定します。  
-  
 -   ON PARTITIONS (2, 4, 6 TO 8) などのように、範囲と個別のパーティションの両方を指定します。  
   
  \<範囲 > パーティション番号など、to で区切って指定できます: ON PARTITIONS (6 TO 8)。  
   
  さまざまなパーティションにさまざまな種類のデータ圧縮を設定するには、次のように DATA_COMPRESSION オプションを複数回指定します。  
-  
+ 
 ```  
 REBUILD WITH   
 (  
@@ -585,7 +584,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  パーティション分割されているテーブルにインデックスを作成し、インデックスを配置するファイル グループを指定しない場合、インデックスは基になるテーブルと同じ方法でパーティション分割されます。 これは、既定では、インデックスは基になるテーブルと同じファイル グループに配置され、パーティション分割されたテーブルの場合、同じパーティション分割列を使用する同じパーティション構成に配置されるためです。 インデックスの値は、インデックスを使用する場合、同じパーティション構成とパーティション分割列のテーブルと*揃え*テーブルにします。  
   
 > [!WARNING]  
->  固定されていないインデックスをパーティションが 1, 000 個以上あるテーブルに作成または再構築することは可能ですが、サポートされていません。 このような操作を行うと、操作中にパフォーマンスが低下したりメモリが過度に消費される可能性があります。 パーティションの数が 1, 000 個を超えた場合は、固定されたインデックスのみを使用することをお勧めします。  
+> 固定されていないインデックスをパーティションが 1, 000 個以上あるテーブルに作成または再構築することは可能ですが、サポートされていません。 このような操作を行うと、操作中にパフォーマンスが低下したりメモリが過度に消費される可能性があります。 パーティションの数が 1, 000 個を超えた場合は、固定されたインデックスのみを使用することをお勧めします。  
   
  一意でないクラスター化インデックスをパーティション分割するとき、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は既定では、まだ指定されていないパーティション分割列をクラスター化インデックス キーのリストに追加します。  
   
@@ -600,9 +599,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  次の条件のいずれかに該当する場合、"必要な値" 列の SET オプションが必要となります。  
   
 -   フィルター選択されたインデックスを作成するとき。  
-  
 -   INSERT、UPDATE、DELETE、MERGE のいずれかの操作で、フィルター選択されたインデックスのデータを変更するとき。  
-  
 -   フィルター選択されたインデックスは、クエリ プランを生成するために、クエリ オプティマイザーによって使用されます。  
   
     |SET オプション|必要な値|既定のサーバー値|既定値<br /><br /> OLE DB および ODBC 値|既定値<br /><br /> DB-Library 値|  
@@ -620,9 +617,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  SET オプションが正しくないと、次の状態が発生する場合があります。  
   
 -   フィルター選択されたインデックスが作成されません。  
-  
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]エラーが発生し、インデックス内のデータを変更する INSERT、UPDATE、DELETE、または MERGE ステートメントをロールバックします。  
-  
 -   Transact-SQL ステートメントの実行プランで、クエリ オプティマイザーがインデックスを無視します。  
   
  フィルター選択されたインデックスの詳細については、次を参照してください。 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)です。  
@@ -639,7 +634,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  非クラスター化インデックスのリーフ レベルに非キー列を含めることができます。 これらの列が考慮されない、[!INCLUDE[ssDE](../../includes/ssde-md.md)]インデックス キーのサイズを計算するときにします。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。  
   
 > [!NOTE]  
->  テーブルがパーティション分割、パーティション分割キー列が一意でないクラスター化インデックスに存在しない場合、ユーザーは追加のインデックスを[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。 インデックス付きの列の合計サイズ (付加列は含みません) と追加されるパーティション分割列のサイズの合計は、一意でないクラスター化インデックスでは 1800 バイトを超えることはできません。  
+> テーブルがパーティション分割、パーティション分割キー列が一意でないクラスター化インデックスに存在しない場合、ユーザーは追加のインデックスを[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。 インデックス付きの列の合計サイズ (付加列は含みません) と追加されるパーティション分割列のサイズの合計は、一意でないクラスター化インデックスでは 1800 バイトを超えることはできません。  
   
 ## <a name="computed-columns"></a>計算列  
  インデックスを計算列に作成できます。 また、計算列にプロパティ PERSISTED を設定することができます。 その場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によってテーブルに計算値が格納され、計算列が依存している他の列が更新されるとその計算値も更新されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、列にインデックスを作成するとき、およびインデックスがクエリで参照されるときに、これらの保存値を使用します。  
@@ -647,7 +642,6 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  計算列のインデックスを作成するには、計算列が決定的で正確である必要があります。 ただし、PERSISTED プロパティを使用した場合、インデックス作成が可能となる計算列の種類は、次のようになります。  
   
 -   計算列に基づく[!INCLUDE[tsql](../../includes/tsql-md.md)]CLR 関数およびユーザーによって決定的とマークされた CLR ユーザー定義型のメソッドです。  
-  
 -   計算列の定義に従って決定論的である式に基づく、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が不正確です。  
   
  保存される計算列に対しては、前の「インデックス付きビューに必要な SET オプション」で示すように、次の SET オプションを設定する必要があります。  
@@ -658,14 +652,14 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  計算列にインデックスを作成すると、以前は機能していた挿入または更新の操作が失敗することがあります。 このような失敗は、計算列の結果が算術エラーになる場合に発生する可能性があります。 たとえば、次のテーブルでは、計算列 `c` は計算エラーになりますが、`INSERT` ステートメントは正常に実行されます。  
   
-```  
+```sql  
 CREATE TABLE t1 (a int, b int, c AS a/b);  
 INSERT INTO t1 VALUES (1, 0);  
 ```  
   
  これに対し、テーブルの作成後に計算列 `c` にインデックスを作成すると、同じ `INSERT` ステートメントは失敗します。  
   
-```  
+```sql  
 CREATE TABLE t1 (a int, b int, c AS a/b);  
 CREATE UNIQUE CLUSTERED INDEX Idx1 ON t1(c);  
 INSERT INTO t1 VALUES (1, 0);  
@@ -677,13 +671,11 @@ INSERT INTO t1 VALUES (1, 0);
  付加列と呼ばれる非キー列は、非クラスター化インデックスのリーフ レベルに追加でき、クエリに対応することによりクエリ パフォーマンスを向上できます。 この場合、クエリで参照されるすべての列は、キー列または非キー列としてインデックスに含まれます。 これにより、クエリ オプティマイザーではテーブルまたはクラスター化インデックス データにアクセスすることなく、インデックス スキャンによって必要な情報をすべて特定できます。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。  
   
 ## <a name="specifying-index-options"></a>インデックス オプションの指定  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]導入された新しいインデックス オプションしもオプションが指定されている方法を変更します。 旧バージョンとの互換性のある構文では WITH *option_name*は WITH に相当**(** \<option_name >  **=**  ON **)**. インデックス オプションを設定する場合は、次の規則が適用されます。 
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]導入された新しいインデックス オプションしもオプションが指定されている方法を変更します。 旧バージョンとの互換性のある構文では WITH *option_name*は WITH に相当**(** \<option_name > **= ON)**です。 インデックス オプションを設定する場合は、次の規則が適用されます。 
   
--   WITH を使用して新しいインデックス オプションを指定することができますのみ**(***option_name*  **=**  ON |OFF**)**です。  
-  
--   同じステートメントで、旧バージョンとの互換性がある構文と新しい構文の両方を使ってオプションを指定することはできない。 たとえば、WITH を指定する**(**DROP_EXISTING**、**オンライン **=**  ON**)**により、ステートメントが失敗します。  
-  
--   WITH を使用して、オプションを指定する必要があります XML インデックスを作成するときに**(***option_name*  **=**  ON |OFF**)**です。  
+-   新しいインデックス オプションは、WITH を使用してのみ指定できます (***option_name* = ON |OFF**)。  
+-   同じステートメントで、旧バージョンとの互換性がある構文と新しい構文の両方を使ってオプションを指定することはできない。 たとえば、WITH を指定する (**DROP_EXISTING、ONLINE = ON**) により、ステートメントが失敗します。  
+-   WITH を使用して、オプションを指定する必要があります XML インデックスを作成するときに (***option_name*= ON |OFF**)。  
   
 ## <a name="dropexisting-clause"></a>DROP_EXISTING 句  
  DROP_EXISTING 句を使用して、インデックスの再構築、列の追加または削除、オプションの変更、列の並べ替え順の変更、パーティション構成またはファイル グループの変更を行うことができます。  
@@ -702,9 +694,7 @@ INSERT INTO t1 VALUES (1, 0);
  インデックス操作をオンラインで実行する場合は、次のガイドラインが適用されます。  
   
 -   オンライン インデックス操作の実行中、基になるテーブルは変更、切り捨て、削除できない。  
-  
 -   インデックス操作中は、追加の一時ディスク領域が必要。  
-  
 -   オンライン操作は、パーティション インデックスや、保存される計算列を含むインデックス、または付加列で実行できる。  
   
  詳しくは、「 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)」をご覧ください。  
@@ -721,45 +711,39 @@ INSERT INTO t1 VALUES (1, 0);
  データ圧縮は、トピックに記載されて[データ圧縮](../../relational-databases/data-compression/data-compression.md)です。 特に次の点に注意してください。  
   
 -   圧縮を使用すると、ページに格納できる行数が増えますが、最大行サイズは変更されません。  
-  
 -   インデックスの非リーフ ページでは、ページの圧縮は行われませんが、行の圧縮は可能です。  
-  
 -   非クラスター化インデックスにはそれぞれ個別の圧縮設定があり、基になるテーブルの圧縮設定は継承されません。  
-  
 -   ヒープにクラスター化インデックスを作成する場合、圧縮状態を特に指定しない限り、ヒープの圧縮状態がクラスター化インデックスに継承されます。  
   
  パーティション インデックスには次の制限が適用されます。  
   
 -   固定されていないインデックスがテーブルにある場合、そのパーティションの圧縮設定を変更できません。  
-  
 -   ALTER INDEX \<index >.REBUILD PARTITION ... 構文は、そのインデックスの指定のパーティションを再構築します。  
-  
 -   ALTER INDEX \<index >.REBUILD WITH ... 構文は、そのインデックスのすべてのパーティションを再構築します。  
   
  圧縮状態の変更による、テーブル、インデックス、またはパーティションへの影響を評価するには、 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) ストアド プロシージャを使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]および[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、作成することはできません。  
   
--   列ストア インデックスが既に存在する場合は、データ ウェアハウスのテーブルにクラスター化または非クラスター化行ストア インデックスです。 この動作は同じテーブル上に共存する行ストアと列ストアの両方のインデックス使用できる SMP SQL サーバーと異なるです。  
-  
+-   列ストア インデックスが既に存在する場合は、データ ウェアハウスのテーブルにクラスター化または非クラスター化行ストア インデックスです。 この動作は、SMP から異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行ストアと列ストアの両方のインデックスが、同じテーブル上に共存できるようにします。  
 -   ビューにインデックスを作成できません。  
   
 ## <a name="metadata"></a>メタデータ  
  既存のインデックス情報を表示するにはクエリ、 [sys.indexes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)カタログ ビューです。  
   
 ## <a name="version-notes"></a>バージョンのメモ  
- SQL データベースは、ファイル グループと filestream オプションをサポートしていません。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ファイル グループと filestream オプションをサポートしていません。  
   
 ## <a name="examples-all-versions-uses-the-adventureworks-database"></a>例: すべてのバージョン。 AdventureWorks データベースを使用します。  
   
 ### <a name="a-create-a-simple-nonclustered-rowstore-index"></a>A. 単純な非クラスター化行ストア インデックスを作成します。  
  次の例では、非クラスター化インデックスを作成で、`VendorID`の列、`Purchasing.ProductVendor`テーブル。  
   
-```  
+```sql  
 CREATE INDEX IX_VendorID ON ProductVendor (VendorID);  
 CREATE INDEX IX_VendorID ON dbo.ProductVendor (VendorID DESC, Name ASC, Address DESC);  
 CREATE INDEX IX_VendorID ON Purchasing..ProductVendor (VendorID);  
@@ -768,21 +752,21 @@ CREATE INDEX IX_VendorID ON Purchasing..ProductVendor (VendorID);
 ### <a name="b-create-a-simple-nonclustered-rowstore-composite-index"></a>B. 単純な非クラスター化行ストア複合インデックスを作成します。  
  次の例では、非クラスター化複合インデックスを作成で、`SalesQuota`と`SalesYTD`の列、`Sales.SalesPerson`テーブル。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX IX_SalesPerson_SalesQuota_SalesYTD ON Sales.SalesPerson (SalesQuota, SalesYTD);  
 ```  
   
 ### <a name="c-create-an-index-on-a-table-in-another-database"></a>C. 別のデータベース内のテーブルにインデックスを作成します。  
  次の例では、非クラスター化インデックスを作成で、`VendorID`の列、`ProductVendor`テーブルに、`Purchasing`データベース。  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID ON Purchasing..ProductVendor (VendorID);   
 ```  
   
 ### <a name="d-add-a-column-to-an-index"></a>D. インデックスに列を追加します。  
  次の例では、dbo から 2 つの列をインデックス IX_FF を作成します。FactFinance テーブルです。  次のステートメントでは、1 つ以上の列にインデックスを再構築し、既存の名前を保持します。  
   
-```  
+```sql  
 CREATE INDEX IX_FF ON dbo.FactFinance ( FinanceKey ASC, DateKey ASC );  
   
 --Rebuild and add the OrganizationKey  
@@ -795,14 +779,14 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="e-create-a-unique-nonclustered-index"></a>E. 一意非クラスター化インデックスを作成します。  
  次の例では、一意の非クラスター化インデックスを作成で、`Name`の列、`Production.UnitMeasure`テーブルに、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。 このインデックスでは、`Name` 列に挿入されるデータが一意である必要があります。  
   
-```  
+```sql  
 CREATE UNIQUE INDEX AK_UnitMeasure_Name   
     ON Production.UnitMeasure(Name);  
 ```  
   
  次のクエリでは、既存の行と同じ値の行を挿入することによって、一意性の制約をテストします。  
   
-```  
+```sql  
 --Verify the existing value.  
 SELECT Name FROM Production.UnitMeasure WHERE Name = N'Ounces';  
 GO  
@@ -820,7 +804,7 @@ Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_Un
 ### <a name="f-use-the-ignoredupkey-option"></a>F. IGNORE_DUP_KEY オプションを使用します。  
  次の例の効果を示して、`IGNORE_DUP_KEY`オプションに設定するオプションを使用して最初に一時テーブルに複数の行を挿入して`ON`およびオプションに設定を使用して`OFF`です。 2 番目の複数行の `#Test` ステートメントを実行するときには、`INSERT` テーブルに、重複する値となる 1 行を意図的に挿入します。 テーブル内の行数としては、挿入された行数が返されます。  
   
-```  
+```sql  
 CREATE TABLE #Test (C1 nvarchar(10), C2 nvarchar(50), C3 datetime);  
 GO  
 CREATE UNIQUE INDEX AK_Index ON #Test (C2)  
@@ -849,7 +833,7 @@ Number of rows
   
  もう一度同じステートメントが実行される`IGNORE_DUP_KEY`'éý'`OFF`です。  
   
-```  
+```sql  
 CREATE TABLE #Test (C1 nvarchar(10), C2 nvarchar(50), C3 datetime);  
 GO  
 CREATE UNIQUE INDEX AK_Index ON #Test (C2)  
@@ -881,20 +865,19 @@ Number of rows
 ### <a name="g-using-dropexisting-to-drop-and-re-create-an-index"></a>G. DROP_EXISTING を使ってインデックスを削除し再作成する  
  次の例では、`ProductID` オプションを使って、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにある`Production.WorkOrder` テーブルの `DROP_EXISTING` 列にある既存のインデックスを削除して再作成します。 ここではオプション `FILLFACTOR` および `PAD_INDEX` も設定されています。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX IX_WorkOrder_ProductID  
     ON Production.WorkOrder(ProductID)  
     WITH (FILLFACTOR = 80,  
         PAD_INDEX = ON,  
         DROP_EXISTING = ON);  
 GO  
-  
 ```  
   
 ### <a name="h-create-an-index-on-a-view"></a>H. ビューにインデックスを作成します。  
  次の例では、ビューとそのビューのインデックスを作成します。 ここでは、インデックス付きビューを使用する 2 つのクエリを実行します。  
   
-```  
+```sql  
 --Set the options to support indexed views.  
 SET NUMERIC_ROUNDABORT OFF;  
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT,  
@@ -937,13 +920,12 @@ FROM Sales.SalesOrderDetail AS od
 GROUP BY OrderDate  
 ORDER BY OrderDate ASC;  
 GO  
-  
 ```  
   
 ### <a name="i-create-an-index-with-included-non-key-columns"></a>I. (非キー) の付加列を含むインデックスを作成します。  
  次の例では、1 つのキー列 (`PostalCode`) と 4 つの非キー列 (`AddressLine1`、`AddressLine2`、`City`、`StateProvinceID`) を使って非クラクタ化インデックスを作成します。 次に、そのインデックスが対応するクエリを実行します。 クエリ オプティマイザーによって選択されたインデックスを表示する、**クエリ**メニューの[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**実際の実行プランを表示**クエリを実行する前にします。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX IX_Address_PostalCode  
     ON Person.Address (PostalCode)  
     INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
@@ -959,7 +941,7 @@ GO
   
 **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX IX_TransactionHistory_ReferenceOrderID  
     ON Production.TransactionHistory (ReferenceOrderID)  
     ON TransactionsPS1 (TransactionDate);  
@@ -969,7 +951,7 @@ GO
 ### <a name="k-creating-a-filtered-index"></a>K. フィルター選択されたインデックスを作成する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの Production.BillOfMaterials テーブルにフィルター選択されたインデックスを作成します。 フィルター述語では、フィルター選択されたインデックスに非キー列を含めることができます。 この例の述語では、EndDate が NULL 以外の行だけを選択します。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX "FIBillOfMaterialsWithEndDate"  
     ON Production.BillOfMaterials (ComponentID, StartDate)  
     WHERE EndDate IS NOT NULL;  
@@ -978,7 +960,7 @@ CREATE NONCLUSTERED INDEX "FIBillOfMaterialsWithEndDate"
 ### <a name="l-create-a-compressed-index"></a>L. 圧縮されたインデックスを作成します。  
  次の例では、行の圧縮を使用して、非パーティション テーブルのインデックスを作成します。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX IX_INDEX_1   
     ON T1 (C2)  
 WITH ( DATA_COMPRESSION = ROW ) ;   
@@ -987,7 +969,7 @@ GO
   
  次の例では、インデックスのすべてのパーティションに行の圧縮を使用して、パーティション テーブルのインデックスを作成します。  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX IX_PartTab2Col1  
 ON PartitionTable1 (Col1)  
 WITH ( DATA_COMPRESSION = ROW ) ;  
@@ -996,7 +978,7 @@ GO
   
  次の例は、パーティションをページの圧縮を使用してパーティション テーブルのインデックスを作成`1`パーティションに対するインデックスと行の圧縮の`2`を通じて`4`のインデックス。  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX IX_PartTab2Col1  
 ON PartitionTable1 (Col1)  
 WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1),  
@@ -1008,7 +990,7 @@ GO
   
 ### <a name="m-basic-syntax"></a>M. 基本構文  
   
-```  
+```sql  
 CREATE INDEX IX_VendorID   
     ON ProductVendor (VendorID);  
 CREATE INDEX IX_VendorID   
@@ -1020,7 +1002,7 @@ CREATE INDEX IX_VendorID
 ### <a name="n-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>N. 現在のデータベース内のテーブルに非クラスター化インデックスを作成します。  
  次の例では、非クラスター化インデックスを作成で、`VendorID`の列、`ProductVendor`テーブル。  
   
-```  
+```sql  
 CREATE INDEX IX_ProductVendor_VendorID   
     ON ProductVendor (VendorID);   
 ```  
@@ -1028,12 +1010,14 @@ CREATE INDEX IX_ProductVendor_VendorID
 ### <a name="o-create-a-clustered-index-on-a-table-in-another-database"></a>O.  別のデータベース内のテーブルにクラスター化インデックスを作成します。  
  次の例では、非クラスター化インデックスを作成で、`VendorID`の列、`ProductVendor`テーブルに、`Purchasing`データベース。  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID   
     ON Purchasing..ProductVendor (VendorID);   
 ```  
   
 ## <a name="see-also"></a>参照  
+ [SQL Server インデックス デザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)   
+ [インデックスと ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)     
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
