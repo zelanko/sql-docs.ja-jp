@@ -1,4 +1,4 @@
----
+﻿---
 title: "For SQL Server、Visual Studio Code mssql 拡張機能を使用して |Microsoft ドキュメント"
 description: "このチュートリアルでは、VS Code の mssql 拡張機能を使用する方法を示します。 この拡張機能を使用すると、VS Code で Transact-SQL スクリプトを編集し、実行できます。"
 author: erickangMSFT

@@ -1,4 +1,4 @@
----
+﻿---
 title: "SQL Server の既存のインスタンスのアンインストール (セットアップ) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/27/2017
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/09/2018
   
 4.  **適切な権限を持つアカウントの使用。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントを使用するか、同等の権限を持つアカウントを使用して、サーバーにログオンします。 たとえば、ローカルの Administrators グループのメンバーであるアカウントを使用してサーバーにログオンできます。  
   
-### <a name="to-uninstall-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>のインスタンスをアンインストールするには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="to-uninstall-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをアンインストールするには
   
 1.  アンインストール プロセスを開始するには、 **コントロール パネル** で **[プログラムと機能]**をクリックします。  
   

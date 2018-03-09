@@ -1,4 +1,4 @@
----
+﻿---
 title: "Wide World Importers のドキュメント |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified

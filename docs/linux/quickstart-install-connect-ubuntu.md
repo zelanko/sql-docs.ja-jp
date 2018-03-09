@@ -1,4 +1,4 @@
----
+﻿---
 title: "Ubuntu の SQL Server 2017 の概要 |Microsoft ドキュメント"
 description: "このクイック スタート チュートリアルでは、Ubuntu に SQL Server 2017 をインストールし、sqlcmd によりデータベースを作成してクエリを実行する方法を示します。"
 author: rothja
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/24/2018
 このクイック スタート チュートリアルでは、初めに Ubuntu 16.04 に SQL Server 2017 をインストールします。 その後 **sqlcmd** で接続して最初のデータベースを作成し、クエリを実行します。
 
 > [!TIP]
-> このチュートリアルでは、ユーザー入力と、インターネット接続が必要です。 [無人](sql-server-linux-setup.md#unattended) または [オフライン](sql-server-linux-setup.md#offline) インストール手順に興味のある場合、[Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md) を参照してください。
+> このチュートリアルでは、ユーザーの入力と、インターネット接続が必要です。 [無人](sql-server-linux-setup.md#unattended)または[オフライン](sql-server-linux-setup.md#offline)インストールに興味がある場合、次の手順を参照してください。[Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md)
 
 ## <a name="prerequisites"></a>前提条件
 

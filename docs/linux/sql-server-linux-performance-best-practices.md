@@ -1,4 +1,4 @@
----
+﻿---
 title: "Linux 上の SQL Server のパフォーマンスのベスト プラクティス |Microsoft ドキュメント"
 description: "このトピックでは、Linux で SQL Server 2017 を実行する場合の、パフォーマンスのベスト プラクティスとガイドラインを提供します。"
 author: rgward
@@ -114,6 +114,6 @@ SQL Server のデータおよびログ ファイルを格納するファイル �
 
 ## <a name="next-steps"></a>次の手順
 
-パフォーマンスを向上させる SQL Server 機能の詳細については、次を参照してください。[パフォーマンス機能の概要](sql-server-linux-performance-get-started.md)です。
+パフォーマンスを向上させる SQL Server 機能の詳細については、次を参照してください。[パフォーマンス機能の概要](sql-server-linux-performance-get-started.md)です。 
 
 Linux 上の SQL Server に関する詳細については、次を参照してください。 [Linux の SQL Server の概要](sql-server-linux-overview.md)です。
