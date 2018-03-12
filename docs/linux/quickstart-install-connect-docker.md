@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Docker で SQL Server 2017 の使用を開始する | Microsoft Docs"
 description: "このクイック スタートでは、Docker を使用して SQL Server 2017 コンテナー イメージを実行する方法を示します。 その次に、sqlcmd でデータベースを作成し、クエリを実行します。"
 author: rothja
@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/08/2018
 ---
-# <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>クイック スタート: Docker を使用した SQL Server 2017 コンテナー イメージを実行します。
+# <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>クイック スタート: Docker を使用して SQL Server 2017 コンテナー イメージを実行する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -79,13 +79,13 @@ ms.lasthandoff: 03/08/2018
 
    | パラメーター | 説明 |
    |-----|-----|
-   | **e ' ACCEPT_EULA = Y'** | **ACCEPT_EULA** 変数に [使用許諾契約書](http://go.microsoft.com/fwlink/?LinkId=746388) の同意を確認するための任意の値を設定します。 SQL Server イメージの設定が必要です。 |
-   | **e ' MSSQL_SA_PASSWORD =\<YourStrong!Passw0rd\>'** | 8 文字以上で、 [SQL Server のパスワード要件](../relational-databases/security/password-policy.md) を満たす強力なパスワードを指定します。 SQL Server イメージに必須の設定です。 |
-   | **-p 1401:1433** | ホスト環境の TCP ポート (最初の値) を コンテナーの TCP ポート (2 番目の値) にマップします。この例では、 SQL Server はコンテナーの TCP 1433 でリッスンし、これがホストのポート 1401 に公開されます。 |
+   | **-e 'ACCEPT_EULA=Y'** |  **ACCEPT_EULA** 変数に [使用許諾契約書](http://go.microsoft.com/fwlink/?LinkId=746388) の同意を確認するための任意の値を設定します。 SQL Server イメージの設定が必要です。 |
+   | **-e 'MSSQL_SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 8 文字以上で、 [SQL Server のパスワード要件](../relational-databases/security/password-policy.md) を満たす強力なパスワードを指定します。 SQL Server イメージに必須の設定です。 |
+   | **-p 1401:1433** | ホスト環境の TCP ポート (最初の値) を コンテナーの TCP ポート (2 番目の値) にマップします。 この例では、 SQL Server はコンテナーの TCP 1433 でリッスンし、これがホストのポート 1401 に公開されます。 |
    | **--name sql1** | ランダムに生成されたものではなく、コンテナーのカスタム名を指定します。 2 つ以上のコンテナーを実行する場合、同じ名前を再利用することはできません。 |
    | **microsoft/mssql-server-linux:2017-latest** | SQL Server 2017 Linux コンテナー イメージ。 |
 
-1. Docker コンテナーを表示するには、 `docker ps` コマンドを使用します。
+1. Docker コンテナーを表示するには、`docker ps` コマンドを使用します。
 
    ```bash
    sudo docker ps -a
@@ -102,7 +102,6 @@ ms.lasthandoff: 03/08/2018
 1. **[STATUS]** 列に **[Up]** の状態が表示されている場合、SQL Server はコンテナーで実行されており、**[PORTS]** 列に指定されたポートでリッスンしています。 SQL Server コンテナーの **[STATUS]** 列に **[Exited]** と表示されている場合は、[構成ガイドのトラブルシューティングのセクション](sql-server-linux-configure-docker.md#troubleshooting)を参照してください。
 
 `-h` (ホスト名) のパラメーターも役に立ちますが、簡略化のためこのチュートリアルでは使用しません。 これにより、コンテナーの内部名がカスタム値に変更されます。 これは、次の Transact-SQL クエリで返される名前です。
-
 
 ```sql
 SELECT @@SERVERNAME,
@@ -140,11 +139,11 @@ SELECT @@SERVERNAME,
    > [!TIP]
    > コマンド ラインでパスワードを省略すると、入力を求められます。
 
-1. 成功すると、**sqlcmd** のコマンド プロンプトである `1>` が表示されます。
+1. 成功すると、**sqlcmd** コマンド プロンプト `1>` が表示されます。
 
-## <a name="create-and-query-data"></a>データの作成とクエリ 
+## <a name="create-and-query-data"></a>データの作成とクエリ
 
-次のセクションでは、**sqlcmd** と Transact-SQL を使用して新しいデータベースを作成し、データを追加して簡単なクエリを実行します。
+以下のセクションでは、**sqlcmd** と Transact-SQL を使用して新しいデータベースを作成し、データを追加して簡単なクエリを実行します。
 
 ### <a name="create-a-new-database"></a>新しいデータベースの作成
 
@@ -172,7 +171,7 @@ SELECT @@SERVERNAME,
 
 次に、新しいテーブル `Inventory` を作成し、2 つの新しい行を挿入します。
 
-1. **sqlcmd** のコマンド プロンプトで、新しい `TestDB` データベースのコンテキストに切り替えます。
+1. **sqlcmd** のコマンド プロンプトで、コンテキストを新しい `TestDB` データベースに切り替えます。
 
    ```sql
    USE TestDB
@@ -196,11 +195,11 @@ SELECT @@SERVERNAME,
    GO
    ```
 
-### <a name="select-data"></a>データの取得
+### <a name="select-data"></a>データの選択
 
 ここで、`Inventory` テーブルからデータを返すクエリを実行します。
 
-1. **sqlcmd** のコマンド プロンプトで、quantity が 152 より大きい `Inventory` テーブルから行を返すクエリを入力します。
+1. **sqlcmd** のコマンド プロンプトで、数量が 152 より大きい`Inventory` テーブルから行を返すクエリを入力します。
 
    ```sql
    SELECT * FROM Inventory WHERE quantity > 152;
@@ -220,7 +219,7 @@ SELECT @@SERVERNAME,
    QUIT
    ```
 
-1. 終了するには、コンテナー内の対話型のコマンド プロンプトを入力`exit`です。 コンテナーは、対話型 bash シェルを終了した後に実行を続けます。
+1. コンテナー内で対話型のコマンド プロンプトを終了するには、`exit` と入力します。 コンテナーは、対話型の Bash シェルを終了した後も引き続き実行されます。
 
 ## <a id="connectexternal"></a> コンテナーの外からの接続
 
@@ -242,7 +241,7 @@ SQL 接続をサポートする外部の Linux、Windows、macOS ツールから
 
 1. Transact-SQL コマンドを実行します。 終わったら、`QUIT` と入力します。
 
-SQL Server に接続するその他の一般的なツールには次のものがあります:
+SQL Server に接続するその他の一般的なツールには次のものがあります。
 
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [Windows の SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
@@ -251,7 +250,7 @@ SQL Server に接続するその他の一般的なツールには次のものが
 
 ## <a name="remove-your-container"></a>コンテナーの削除
 
-このチュートリアルで使用した SQL Server のコンテナーを削除する場合は、次のコマンドを実行します:
+このチュートリアルで使用した SQL Server のコンテナーを削除する場合は、次のコマンドを実行します。
 
 ```bash
 sudo docker stop sql1
@@ -272,7 +271,7 @@ Docker の SQL Server コンテナー イメージを使用すると、開発と
 
 > [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T152/player]
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 データベース バックアップファイルをコンテナーに復元する方法については、「[Restore a SQL Server database in a Linux Docker container](tutorial-restore-backup-in-sql-server-container.md)」(Linux の Docker コンテナーで SQL Server データベースを復元する) を参照してください。 複数のコンテナーの実行、データの永続性、トラブルシューティングなどのその他のシナリオを調べるには、「[Configure SQL Server 2017 container images on Docker](sql-server-linux-configure-docker.md)」(Docker で SQL Server 2017 コンテナー イメージを構成する) を参照してください。
 
