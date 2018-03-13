@@ -31,10 +31,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 53e7c263916e9a07504fea6b9756f034e8e570fd
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="multiple-flat-files-connection-manager"></a>複数フラット ファイル接続マネージャー
   複数フラット ファイル接続マネージャーを使用すると、パッケージで複数のフラット ファイルのデータにアクセスできます。 たとえば、データ フロー タスクが For ループ コンテナーなどのループ コンテナーの内部にある場合は、フラット ファイル ソースで複数フラット ファイル接続マネージャーを使用できます。 コンテナーの各ループで、フラット ファイル ソースは、複数フラット ファイル接続マネージャーが提供する次のファイル名からデータを読み込みます。  
@@ -74,22 +74,22 @@ ms.lasthandoff: 02/15/2018
   
  プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
-## <a name="multiple-flat-files-connection-manager-editor-general-page"></a>[複数フラット ファイル接続マネージャー エディター] ([全般] ページ)
+## <a name="multiple-flat-files-connection-manager-editor-general-page"></a>[複数フラット ファイル接続マネージャー エディター] \([全般] ページ)
   **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、同じデータ形式を持つファイルのグループを選択したり、そのデータ形式を指定したりできます。 複数フラット ファイル接続は、パッケージが同じ形式のテキスト ファイルのグループに接続できるようにします。  
   
  複数フラット ファイル接続マネージャーの詳細については、「 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>および  
- **接続マネージャー名**  
+### <a name="options"></a>オプション  
+ **[接続マネージャー名]**  
  ワークフローにおける複数フラット ファイル接続の一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
- **[説明]**  
+ **Description**  
  接続の説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続の目的について記述することをお勧めします。  
   
  **ファイル名**  
  複数フラット ファイル接続で使用するパスおよびファイル名を入力します。 複数のファイルを指定するには、たとえば、"C:\\*.txt" のようにワイルドカード文字を使用するか、縦棒パイプ文字 (|) をファイル名の区切り文字として使用します。 すべてのファイルのデータ形式が同じである必要があります。  
   
- **[参照]**  
+ **参照**  
  複数フラット ファイル接続で使用するファイルの名前を参照します。 複数のファイルを選択できます。 すべてのファイルのデータ形式が同じである必要があります。  
   
  **ロケール**  
@@ -101,10 +101,10 @@ ms.lasthandoff: 02/15/2018
  **コード ページ**  
  非 Unicode テキストのコード ページを指定します。  
   
- **形式**  
+ **Format**  
  区切り形式、固定幅形式、または幅合わせしない形式を使用するかどうかを示します。 すべてのファイルのデータ形式が同じである必要があります。  
   
-|ReplTest1|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |[区切り記号]|列は、 **[列]** ページで指定した区切り記号で区切られます。|  
 |[固定幅]|列は、 **[列]** ページでマーカー ラインをドラッグして指定した幅に固定されます。|  
@@ -116,7 +116,7 @@ ms.lasthandoff: 02/15/2018
  **[ヘッダー行区切り記号]**  
  ヘッダー行の区切り記号の一覧から選択するか、区切り記号テキストを入力します。  
   
-|ReplTest1|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|ヘッダー行は、復帰と改行の組み合わせで区切られます。|  
 |**{CR}**|ヘッダー行は、復帰で区切られます。|  
@@ -133,16 +133,16 @@ ms.lasthandoff: 02/15/2018
  **[先頭データ行を列名として使用する]**  
  先頭データ行を列名として使用するか、ここに列名を指定するかを示します。  
   
-## <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>[複数フラット ファイル接続マネージャー エディター] ([列] ページ)
+## <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>[複数フラット ファイル接続マネージャー エディター] \([列] ページ)
   **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[列]** ノードを使用すると、行と列の情報を指定し、最初に選択したファイルをプレビューできます。  
   
  複数フラット ファイル接続マネージャーの詳細については、「 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)」を参照してください。  
   
 ### <a name="static-options"></a>静的オプション  
- **接続マネージャー名**  
+ **[接続マネージャー名]**  
  ワークフローにおける複数フラット ファイル接続の一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
- **[説明]**  
+ **Description**  
  接続の説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続の目的について記述することをお勧めします。  
   
 ### <a name="flat-file-format-dynamic-options"></a>フラット ファイル形式の動的オプション  
@@ -151,7 +151,7 @@ ms.lasthandoff: 02/15/2018
  **[行区切り記号]**  
  使用できる行区切り記号の一覧から選択するか、区切り記号テキストを入力します。  
   
-|ReplTest1|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|行は、復帰と改行の組み合わせで区切られます。|  
 |**{CR}**|行は、復帰で区切られます。|  
@@ -165,7 +165,7 @@ ms.lasthandoff: 02/15/2018
  **列区切り記号**  
  使用できる列区切り記号の一覧から選択するか、区切り記号テキストを入力します。  
   
-|ReplTest1|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|列は、復帰と改行の組み合わせで区切られます。|  
 |**{CR}**|列は、復帰で区切られます。|  
@@ -206,7 +206,7 @@ ms.lasthandoff: 02/15/2018
  **[行区切り記号]**  
  使用できる行区切り記号の一覧から選択するか、区切り記号テキストを入力します。  
   
-|ReplTest1|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|行は、復帰と改行の組み合わせで区切られます。|  
 |**{CR}**|行は、復帰で区切られます。|  
@@ -220,18 +220,18 @@ ms.lasthandoff: 02/15/2018
  **[列のリセット]**  
  元の列以外のすべての列を削除するには、 **[列のリセット]**をクリックします。  
   
-## <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>[複数フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)
+## <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>[複数フラット ファイル接続マネージャー エディター]\ ([詳細設定] ページ)
   **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、フラット ファイル接続マネージャーが接続するテキスト ファイルの各列のデータ型や区切り記号などのプロパティを設定できます。  
   
  既定では、文字列の列の長さは 50 文字です。 サンプル データを評価し、これらの列の長さを自動的に変更して、データが切り捨てられたり、列の幅が広くなりすぎないようにできます。 また、変換先列と互換性を持つように他のメタデータも更新できます。 たとえば、整数データのみを含む列のデータ型を、DT_I2 などの数値データ型に変更するなどの操作を行えます。  
   
  複数フラット ファイル接続マネージャーの詳細については、「 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>および  
- **接続マネージャー名**  
+### <a name="options"></a>オプション  
+ **[接続マネージャー名]**  
  ワークフロー内の複数フラット ファイル接続マネージャーの一意な名前を指定します。 指定された名前は、 **デザイナーの** [接続マネージャー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 領域内に表示されます。  
   
- **[説明]**  
+ **Description**  
  接続マネージャーの説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続マネージャーの目的について記述することをお勧めします。  
   
  **[各列のプロパティを構成します。]**  
@@ -249,31 +249,31 @@ ms.lasthandoff: 02/15/2018
 |**[データ精度]**|数値データの精度を指定します。 精度とは、桁数です。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|  
 |**[入力列の幅]**|格納する値をバイト数で指定します。Unicode ファイルの場合、これは文字数として表示されます。 区切られた列の場合、この値は無視されます。<br /><br /> **注** オブジェクト モデルでは、このプロパティの名前は ColumnWidth です。|  
   
- **[新規作成]**  
+ **新規**  
  **[新規作成]**をクリックして新しい列を追加します。 既定では、 **[新規作成]** ボタンをクリックすると、新しい列がリストの末尾に追加されます。 さらにこのボタンのドロップダウン リストには、次のオプションがあります。  
   
-|ReplTest1|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |**[列の追加]**|新しい列をリストの末尾に追加します。|  
 |**[前に挿入]**|選択した列の前に新しい列を追加します。|  
 |**[後に挿入]**|選択した列の後に新しい列を追加します。|  
   
- **削除**  
+ **Del**  
  列を選択して **[削除]**をクリックすると、列が削除されます。  
   
  **[型の推測]**  
  **[列の型の推測]** ダイアログ ボックスを使用して、最初に選択されたファイルのサンプル データを評価し、各列のデータ型と長さの推測を取得します。 詳細については、「 [[列の型の推測] ダイアログ ボックスの UI リファレンス](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)」を参照してください。  
   
-## <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>[複数フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)
+## <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>[複数フラット ファイル接続マネージャー エディター] \([プレビュー] ページ)
   **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[プレビュー]** ページを使用すると、最初に選択したソース ファイルの内容をユーザーの定義に従って列に分割して表示できます。  
   
  複数フラット ファイル接続マネージャーの詳細については、「 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>および  
- **接続マネージャー名**  
+### <a name="options"></a>オプション  
+ **[接続マネージャー名]**  
  ワークフローにおける複数フラット ファイル接続の一意な名前を指定します。 指定された名前は、 **デザイナーの** [接続マネージャー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 領域内に表示されます。  
   
- **[説明]**  
+ **Description**  
  接続の説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続の目的について記述することをお勧めします。  
   
  **[スキップするデータ行数]**  
@@ -285,6 +285,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>参照  
  [[フラット ファイル ソース]](../../integration-services/data-flow/flat-file-source.md)   
  [フラット ファイル変換先](../../integration-services/data-flow/flat-file-destination.md)   
- [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services &#40;です。SSIS &#41;接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

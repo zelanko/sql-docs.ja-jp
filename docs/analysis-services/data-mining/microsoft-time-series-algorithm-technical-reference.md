@@ -35,14 +35,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムには、時系列を分析するための 2 つの異なるアルゴリズムが含まれています。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムには、時系列を分析するための 2 つの異なるアルゴリズムが含まれています。  
   
 -   ARTXP アルゴリズム。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]で導入されたアルゴリズムで、系列内で最も近い値の予測に適しています。  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/15/2018
  このトピックでは、各アルゴリズムがどのように実装されているのかについての追加情報を紹介し、パラメーターを設定してアルゴリズムをカスタマイズすることによって分析や予測の結果を微調整する方法を説明します。  
   
 ## <a name="implementation-of-the-microsoft-time-series-algorithm"></a>Microsoft タイム シリーズ アルゴリズムの実装  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムに基づいた実装で、SQL Server 2005 で使用されていた最初の ARTXP アルゴリズムを開発しました。 そのため、ARTXP アルゴリズムは周期的な時系列データを表す自己回帰ツリー モデルとして説明できます。 このアルゴリズムでは、さまざまな数の過去のアイテムが、予測する現在の各アイテムに関連付けられます。 ARTXP という名前は、過去の不明な状態が複数ある場合に ART アルゴリズム (自己回帰ツリー法) が適用されることに由来しています。 ARTXP アルゴリズムの詳細については、「 [時系列分析の自動回帰ツリー モデル](http://go.microsoft.com/fwlink/?LinkId=45966)」を参照してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]研究開発の最初の ARTXP アルゴリズムに基づく実装で、SQL Server 2005 で使用されていた、[!INCLUDE[msCoName](../../includes/msconame-md.md)]デシジョン ツリー アルゴリズムです。 そのため、ARTXP アルゴリズムは周期的な時系列データを表す自己回帰ツリー モデルとして説明できます。 このアルゴリズムでは、さまざまな数の過去のアイテムが、予測する現在の各アイテムに関連付けられます。 ARTXP という名前は、過去の不明な状態が複数ある場合に ART アルゴリズム (自己回帰ツリー法) が適用されることに由来しています。 ARTXP アルゴリズムの詳細については、「 [時系列分析の自動回帰ツリー モデル](http://go.microsoft.com/fwlink/?LinkId=45966)」を参照してください。  
   
  ARIMA アルゴリズムは、長期的な予測の精度を向上させるために SQL Server 2008 で Microsoft タイム シリーズ アルゴリズムに追加されたアルゴリズムです。 このアルゴリズムには、Box と Jenkins によって説明された自己回帰和分移動平均を計算するためのプロセスが実装されています。 ARIMA 法では、時間的に連続して行われる観測の依存関係を特定することが可能であり、モデルの一部としてランダム ショックを組み込むこともできます。 ARIMA 法はまた増殖性の周期もサポートします。 ARIMA アルゴリズムについて詳しく理解するには、Box と Jenkins による著書を読むことをお勧めします。このセクションは、Microsoft タイム シリーズ アルゴリズムに ARIMA 法がどのように実装されているかという点について、具体的に説明することを目的としています。  
   

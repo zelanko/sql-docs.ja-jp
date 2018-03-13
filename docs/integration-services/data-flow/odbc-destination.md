@@ -123,7 +123,7 @@ ms.lasthandoff: 02/15/2018
 #### <a name="preview"></a>プレビュー  
  **[プレビュー]** をクリックすると、選択したテーブルのデータが最大で 200 行表示されます。  
   
-## <a name="odbc-destination-editor-mappings-page"></a>[ODBC 変換先エディター] ([マッピング] ページ)
+## <a name="odbc-destination-editor-mappings-page"></a>[ODBC 変換先エディター]\([マッピング] ページ)
   **[ODBC 入力先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
 ### <a name="options"></a>および  

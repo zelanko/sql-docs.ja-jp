@@ -25,10 +25,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 62c240d11e15eea39fb7246d147680b39370c7a6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="data-profiling-task"></a>データ プロファイル タスク
   データ プロファイル タスクでは、データ ソースについて詳細に理解し、解決する必要があるデータの問題を特定するために役立つさまざまなプロファイルが計算されます。  
@@ -123,7 +123,7 @@ ms.lasthandoff: 02/15/2018
 |**DataProfilingTaskTrace**|タスクの状態に関する説明情報を提供します。 メッセージには次の情報が含まれます。<br /><br /> 処理要求の開始<br /><br /> クエリの開始<br /><br /> クエリの終了<br /><br /> 計算要求の完了|  
   
 ## <a name="output-and-its-schema"></a>出力とそのスキーマ  
- データ プロファイル タスクでは、選択したプロファイルは DataProfile.xsd スキーマに従って構造化された XML に出力されます。 この XML 出力をファイルに保存するかパッケージ変数に保存するかを指定できます。 このスキーマは、 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)からオンラインで表示できます。 この Web ページから、スキーマのローカル コピーを保存できます。 その後、スキーマのローカル コピーを Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] やその他のスキーマ エディター、XML エディター、またはメモ帳などのテキスト エディターで表示できます。  
+ データ プロファイル タスクでは、選択したプロファイルは DataProfile.xsd スキーマに従って構造化された XML に出力されます。 この XML 出力をファイルに保存するかパッケージ変数に保存するかを指定できます。 このスキーマをオンラインで表示できます[ http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)です。 この Web ページから、スキーマのローカル コピーを保存できます。 その後、スキーマのローカル コピーを Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] やその他のスキーマ エディター、XML エディター、またはメモ帳などのテキスト エディターで表示できます。  
   
  データ品質情報に関するこのスキーマは、次の場合に役立ちます。  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 02/15/2018
   
 -   データ品質情報を処理するカスタム ツールを作成する場合  
   
- 対象名前空間は、 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)のスキーマで識別されます。  
+ ターゲットの名前空間がスキーマで識別される[ http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)です。  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>パッケージの条件ワークフローでの出力  
  データ プロファイル コンポーネントには、データ プロファイル タスクの出力に基づいて [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのワークフローに条件ロジックを実装する機能は組み込まれていません。 ただし、スクリプト タスクで最小限のプログラミングを行って、このロジックを簡単に追加することができます。 このコードでは、XML 出力に対して XPath クエリを実行し、その結果をパッケージ変数に保存します。 スクリプト タスクを後続のタスクに接続する優先順位制約では、ワークフローを決定する式を使用できます。 たとえば、スクリプト タスクによって、列の NULL 値の比率が特定のしきい値を超えていることを検出できます。 この条件が満たされた場合は、パッケージを中断し、問題を解決してから続行することができます。  

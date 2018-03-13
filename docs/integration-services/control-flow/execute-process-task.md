@@ -89,7 +89,7 @@ ms.lasthandoff: 01/25/2018
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
   
-## <a name="execute-process-task-editor-general-page"></a>[プロセス実行タスク エディター] ([全般] ページ)
+## <a name="execute-process-task-editor-general-page"></a>[プロセス実行タスク エディター]\ ([全般] ページ)
   **[プロセス実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、プロセス実行タスクの名前と説明を入力できます。  
   
 ### <a name="options"></a>および  
