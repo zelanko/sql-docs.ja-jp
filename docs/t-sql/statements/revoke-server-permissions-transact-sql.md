@@ -1,5 +1,5 @@
 ---
-title: "サーバーのアクセス許可 (TRANSACT-SQL) を取り消す |Microsoft ドキュメント"
+title: "REVOKE (サーバーの権限の取り消し) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -62,15 +62,15 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>引数  
- *アクセス許可*  
+ *permission*  
  サーバーで許可できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- {に |FROM} \<grantee_principal > 元となる、権限を取り消すプリンシパルを指定します。  
+ { TO | FROM } \<grantee_principal> 権限の取り消し元であるプリンシパルを指定します。  
   
- AS \<grantor_principal > このクエリを実行するプリンシパルの権限を取り消す権利の派生元のプリンシパルを指定します。  
+ AS \<grantor_principal> このクエリを実行するプリンシパルの、権限を取り消す権利の取得元であるプリンシパルを指定します。  
   
  GRANT OPTION FOR  
- 指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 その権限自体は失効しません。  
+ 指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
@@ -82,35 +82,35 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 >  WITH GRANT OPTION で許可されている権限を CASCADE で取り消すと、その権限の GRANT および DENY の両方が取り消されます。  
   
  *SQL_Server_login*  
- 指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
  *SQL_Server_login_mapped_to_Windows_login*  
- 指定します、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows ログインにマップされるログインです。  
+ Windows ログインにマップされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
  *SQL_Server_login_mapped_to_Windows_group*  
- 指定します、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows グループにマップされるログインです。  
+ Windows グループにマップされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
  *SQL_Server_login_mapped_to_certificate*  
  証明書にマップされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
  *SQL_Server_login_mapped_to_asymmetric_key*  
- 指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]非対称キーにマップされるログインです。  
+ 非対称キーにマップされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
  *server_role*  
  ユーザー定義サーバー ロールを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  サーバー スコープの権限を取り消すことができるのは、現在のデータベースが master のときだけです。  
   
  REVOKE では、GRANT と DENY の両方の権限が取り消されます。  
   
  指定した権限を許可するための権利を取り消すには、REVOKE GRANT OPTION FOR を使用します。 プリンシパルに、権限とその権限を許可する権利がある場合は、権限を許可する権利だけが取り消され、権限自体は取り消されません。 ただし、指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
   
- サーバー権限に関する情報を表示することができます、 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)でカタログ ビュー、およびサーバー プリンシパルに関する情報を表示できます、 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)カタログ ビューです。 サーバー ロールのメンバーシップに関する情報を表示できます、 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)カタログ ビューです。  
+ サーバー権限に関する情報は [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) カタログ ビュー、サーバー プリンシパルに関する情報は [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) カタログ ビューでそれぞれ確認できます。 サーバー ロールのメンバーシップに関する情報は、[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) カタログ ビューで確認できます。  
   
  サーバーは権限の階層の最上位となります。 次の表に、サーバーで取り消すことができる最も限定的な権限を示します。  
   
-|サーバーのアクセス許可|権限が含まれるサーバー権限|  
+|サーバー権限|権限が含まれるサーバー権限|  
 |-----------------------|----------------------------------|  
 |ADMINISTER BULK OPERATIONS|CONTROL SERVER|  
 |ALTER ANY AVAILABILITY GROUP<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
@@ -147,13 +147,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限、または sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-revoking-a-permission-from-a-login"></a>A. ログインから権限を取り消す  
- 次の例では失効`VIEW SERVER STATE`からのアクセス許可、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン`WanidaBenshoof`です。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `VIEW SERVER STATE` から、`WanidaBenshoof` 権限を取り消します。  
   
 ```  
 USE master;  
@@ -175,11 +175,11 @@ GO
 ## <a name="see-also"></a>参照  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [サーバーのアクセス許可 &#40; を拒否します。TRANSACT-SQL と #41 です。](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
- [サーバーのアクセス許可 (TRANSACT-SQL) の取り消し](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
+ [DENY (サーバーの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
+ [REVOKE (サーバーの権限の取り消し) (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
  [権限の階層 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

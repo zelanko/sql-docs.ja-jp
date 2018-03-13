@@ -1,5 +1,5 @@
 ---
-title: "[SET ANSI_NULLS] (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET ANSI_WARNINGS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で = (等号) 比較演算子と <> (不等号) 比較演算子を NULL 値に対して使用した場合の ISO 準拠動作を指定します。  
   
 > [!IMPORTANT]  
->  将来のバージョンで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ANSI_NULLS になり、オプションを OFF に明示的に設定するアプリケーションでエラーが発生します。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の今後のバージョンでは、ANSI_NULLS が ON になり、このオプションを明示的に OFF に設定するすべてのアプリケーションでエラーが発生します。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -62,12 +62,12 @@ SET ANSI_NULLS { ON | OFF }
 SET ANSI_NULLS ON
 ```
 
-## <a name="remarks"></a>解説  
- SET ANSI_NULLS が ON、WHERE を使用する SELECT ステートメントの場合*column_name* = **NULL**内の null 値がある場合でもゼロ行を返します*column_name*です。 WHERE を使用する SELECT ステートメント*column_name* <> **NULL**で null 以外の値がある場合でもゼロ行を返します*column_name*です。  
+## <a name="remarks"></a>Remarks  
+ SET ANSI_NULLS が ON の場合、WHERE *column_name* = **NULL** を使用する SELECT ステートメントを実行すると、*column_name* に NULL 値が指定されていても、0 行が返されます。 WHERE *column_name* <> **NULL** を使用する SELECT ステートメントでは、*column_name* に NULL 以外の値が指定されていても、0 行が返されます。  
   
- SET ANSI_NULLS が OFF の場合は、= (等号) 比較演算および <> (不等号) 比較演算の実行結果に、ISO 標準が適用されません。 WHERE を使用する SELECT ステートメント*column_name* = **NULL**に null 値を持つ行が返されます*column_name*です。 WHERE を使用する SELECT ステートメント*column_name* <> **NULL**を列に null 以外の値を持つ行を返します。 WHERE を使用する SELECT ステートメントも、 *column_name* <> *XYZ_value*れていないすべての行を返します*XYZ_value*が NULL でないとします。  
+ SET ANSI_NULLS が OFF の場合は、= (等号) 比較演算および <> (不等号) 比較演算の実行結果に、ISO 標準が適用されません。 WHERE *column_name* = **NULL** を使用する SELECT ステートメントでは、*column_name* に NULL 値を持つ行が返されます。 WHERE *column_name* <> **NULL** を使用する SELECT ステートメントでは、列に NULL 以外の値を持つ行が返されます。 また、WHERE *column_name* <> *XYZ_value* を使用する SELECT ステートメントでは、*XYZ_value* 以外の非 NULL 値を持つすべての行が返されます。  
   
- SET ANSI_NULLS が ON に設定されていると、NULL 値に対するすべての比較は UNKNOWN に評価されます。 SET ANSI_NULLS が OFF に設定されていて、データ値が NULL の場合は、NULL 値に対するすべてのデータ比較は TRUE に評価されます。 SET ANSI_NULLS が指定されていない場合は、現在のデータベースの ANSI_NULLS オプションの設定が適用されます。 ANSI_NULLS データベース オプションの詳細については、次を参照してください。 [ALTER DATABASE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md)  
+ SET ANSI_NULLS が ON に設定されていると、NULL 値に対するすべての比較は UNKNOWN に評価されます。 SET ANSI_NULLS が OFF に設定されていて、データ値が NULL の場合は、NULL 値に対するすべてのデータ比較は TRUE に評価されます。 SET ANSI_NULLS が指定されていない場合は、現在のデータベースの ANSI_NULLS オプションの設定が適用されます。 ANSI_NULLS データベース オプションについて詳しくは、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
  比較のオペランドの 1 つが NULL またはリテラル NULL のいずれかの変数であるとき、SET ANSI_NULLS が ON の場合のみ比較に影響します。 比較の両側が列または複合式の場合は、この設定は比較に影響しません。  
   
@@ -75,12 +75,12 @@ SET ANSI_NULLS ON
   
  分散クエリを実行する際には、SET ANSI_NULLS を ON に設定してください。  
   
- 計算列やインデックス付きビューのインデックスを作成または変更するときには、SET ANSI_NULLS を ON に設定する必要があります。 SET ANSI_NULLS が OFF の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューにおける CREATE、UPDATE、INSERT、および DELETE のステートメントはいずれも失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必要な値に違反しているすべての SET オプションの一覧を示すエラーを返します。 また、実行すると、SELECT ステートメントでは、SET ANSI_NULLS を OFF 場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]計算列やビュー上のインデックス値を無視し、テーブルまたはビューには、そのようなインデックスが存在しなかった場合、select 操作を解決します。  
+ 計算列やインデックス付きビューのインデックスを作成または変更するときには、SET ANSI_NULLS を ON に設定する必要があります。 SET ANSI_NULLS が OFF の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューにおける CREATE、UPDATE、INSERT、および DELETE のステートメントはいずれも失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、要求された値に違反するすべての SET オプションを一覧表示するエラーが返されます。 また、SELECT ステートメントの実行時に SET ANSI_NULLS が OFF の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は計算列やビュー上のインデックス値を無視し、テーブルやビューにそのようなインデックスがないものとして SELECT 操作を処理します。  
   
 > [!NOTE]  
 >  ANSI_NULLS は、計算列およびインデックス付きビューにおいてインデックスを操作するときに、指定された値に設定する必要がある 7 つの SET オプションの中の 1 つです。 オプションの ANSI_PADDING、ANSI_WARNINGS、ARITHABORT、QUOTED_IDENTIFIER、および CONCAT_NULL_YIELDS_NULL も ON に設定する必要があります。また、NUMERIC_ROUNDABORT は OFF に設定する必要があります。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続するときに、ON に ANSI_NULLS を自動的に設定します。 この設定は、ODBC データ ソースまたは ODBC 接続属性で構成でき、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続する前にアプリケーションの内部で設定される OLE DB 接続プロパティでも構成できます。 SET ANSI_NULLS の既定値は OFF です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、接続時に自動的に ANSI_NULLS が ON に設定されます。 この設定は、ODBC データ ソースまたは ODBC 接続属性で構成でき、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続する前にアプリケーションの内部で設定される OLE DB 接続プロパティでも構成できます。 SET ANSI_NULLS の既定値は OFF です。  
   
  SET ANSI_DEFAULTS が ON の場合には、SET ANSI_NULLS は有効 (ON) になります。  
   
@@ -95,11 +95,11 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、等号 (`=`) と不等号 (`<>`) と比較する比較演算子`NULL`と、テーブル内の null 以外の値。 例では、ことも示しています`IS NULL`は影響しません、`SET ANSI_NULLS`設定します。  
+ 次の例では、`=` (等号) 比較演算子と `<>` (不等号) 比較演算子を使用して、テーブル内の `NULL` 値と NULL 以外の値を比較します。 例は `IS NULL` が `SET ANSI_NULLS` 設定に影響されないことも示しています。  
   
 ```  
 -- Create table t1 and insert values.  
@@ -171,13 +171,13 @@ DROP TABLE dbo.t1;
   
 ## <a name="see-also"></a>参照  
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SESSIONPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/sessionproperty-transact-sql.md)   
- [= (& a) #40 です。等しい &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/equals-transact-sql.md)   
- [もし。。。ELSE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/if-else-transact-sql.md)   
- [(& m); 60 &#62;。&#40;です。等しい &#41; されません。&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)   
+ [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)   
+ [= &#40;等号&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/equals-transact-sql.md)   
+ [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
+ [&#60;&#62; &#40;不等号&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [[SET ansi_defaults] &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
- [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)   
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "SET ARITHIGNORE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET ARITHIGNORE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -57,10 +57,10 @@ SET ARITHIGNORE { ON | OFF }
 SET ARITHIGNORE OFF
 ```
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SET ARITHIGNORE の設定では、エラー メッセージを返すかどうかだけを制御できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの設定に関係なく、計算でオーバーフローや 0 除算のエラーが生じた場合には NULL が返されます。 SET ARITHABORT の設定を使用すると、クエリが終了されるかどうかを判別することができます。 この設定は、INSERT、UPDATE、および DELETE ステートメントで発生するエラーには影響しません。  
   
- SET ARITHABORT または SET ARITHIGNORE のいずれか OFF、SET ANSI_WARNINGS が ON、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 0 除算やオーバーフロー エラーが発生した場合もエラー メッセージが返されます。  
+ SET ARITHABORT と SET ARITHIGNORE のいずれかが OFF でも、SET ANSI_WARNINGS が ON の場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で 0 除算やオーバーフロー エラーが検出されるとエラー メッセージが返されます。  
   
  SET ARITHIGNORE は、解析時ではなく実行時に設定されます。  
   
@@ -73,7 +73,7 @@ SELECT @ARITHIGNORE AS ARITHIGNORE;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -105,8 +105,8 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例では、0 およびオーバーフロー エラーによる除算を示します。 この例は、これらのエラーのエラー メッセージを返さない ARITHIGNORE が OFF であるためです。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 次の例では、0 除算のエラーおよびオーバーフロー エラーを示します。 ARITHIGNORE が OFF のため、この例では各エラーのエラー メッセージが返されません。  
   
 ```  
 -- SET ARITHIGNORE OFF and testing.  
@@ -118,7 +118,7 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
   
 ## <a name="see-also"></a>参照  
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHABORT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-arithabort-transact-sql.md)  
+ [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   
 

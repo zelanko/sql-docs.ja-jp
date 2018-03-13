@@ -1,5 +1,5 @@
 ---
-title: "SET ARITHABORT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET ARITHABORT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -61,11 +61,11 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## <a name="remarks"></a>解説  
- ログオン セッションでは、ARITHABORT を常に ON に設定する必要があります。 ARITHABORT を OFF に悪影響をパフォーマンスの問題をクエリ最適化の設定です。  
+## <a name="remarks"></a>Remarks  
+ ログオン セッションでは、ARITHABORT を常に ON に設定する必要があります。 ARITHABORT を OFF に設定すると、クエリ最適化に悪影響を与え、パフォーマンスに関する問題が発生する可能性があります。  
   
 > [!WARNING]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の ARITHABORT の既定値は ON です。 ARITHABORT が OFF に設定されているクライアント アプリケーションは異なるクエリ プランを受け取り、パフォーマンスに問題のあるクエリのトラブルシューティングが困難になる場合があります。 つまり、同じクエリでも Management Studio 内では高速実行できますが、アプリケーション内では実行速度が低下する可能性があります。 クエリのトラブルシューティングを行う[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]常にクライアントの ARITHABORT 設定と一致します。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の ARITHABORT の既定値は ON です。 ARITHABORT が OFF に設定されているクライアント アプリケーションは異なるクエリ プランを受け取り、パフォーマンスに問題のあるクエリのトラブルシューティングが困難になる場合があります。 つまり、同じクエリでも Management Studio 内では高速実行できますが、アプリケーション内では実行速度が低下する可能性があります。 トラブルシューティングを行うとき、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用するクエリは常に、クライアントの ARITHABORT 設定と一致します。  
   
  SET ARITHABORT を ON にし、SET ANSI WARNINGS も ON にした場合、このエラー状態が発生するとクエリが終了します。  
   
@@ -74,15 +74,15 @@ SET ARITHABORT ON
  SET ARITHABORT が OFF で SET ANSI WARNINGS が OFF の場合に次に示すいずれかのエラーが発生すると、警告メッセージが表示され、算術演算の結果に NULL が割り当てられます。  
   
 > [!NOTE]  
->  SET ARITHABORT も SET ARITHIGNORE が設定されている場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]NULL が返され、クエリが実行された後に、警告メッセージが返されます。  
+>  SET ARITHABORT および SET ARITHIGNORE の両方とも設定しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では NULL 値が返され、クエリの実行後に警告メッセージが返されます。  
   
  ANSI_WARNINGS を ON に設定すると、データベース互換性レベルが 90 以上に設定されている場合、暗黙的に ARITHABORT が ON に設定されます。 データベース互換性レベルが 80 以下に設定されている場合、ARITHABORT オプションを明示的に ON に設定する必要があります。  
   
- 式の評価中に SET ARITHABORT が OFF の場合、INSERT、DELETE または UPDATE ステートメントが発生し、算術エラー、オーバーフロー、0 による除算、またはドメイン エラー[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を挿入します。 または、NULL 値を更新します。 出力先の列で NULL 値が許容されない場合は、挿入または更新処理は失敗し、エラーが返されます。  
+ SET ARITHABORT を OFF に設定して式を評価中に、INSERT、DELETE、または UPDATE ステートメントで算術演算エラー、オーバーフロー、0 除算、またはドメイン エラーが検出されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では NULL 値が挿入または更新されます。 出力先の列で NULL 値が許容されない場合は、挿入または更新処理は失敗し、エラーが返されます。  
   
- SET ARITHABORT または SET ARITHIGNORE のいずれか OFF、SET ANSI_WARNINGS が ON、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 0 除算やオーバーフロー エラーが発生した場合もエラー メッセージが返されます。  
+ SET ARITHABORT と SET ARITHIGNORE のいずれかが OFF でも、SET ANSI_WARNINGS が ON の場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で 0 除算やオーバーフロー エラーが検出されるとエラー メッセージが返されます。  
   
- SET ARITHABORT が OFF に設定されている、IF ステートメントのブール条件の評価中に中止エラーが発生した場合は、FALSE の分岐が実行されます。
+ SET ARITHABORT を OFF に設定し、IF ステートメントのブール条件の評価中に中止エラーが発生すると、FALSE の分岐が実行されます。
   
  計算列やインデックス付きビューのインデックスを作成または変更するときには、SET ARITHABORT を ON に設定する必要があります。 SET ARITHABORT が OFF の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューに対して CREATE、UPDATE、INSERT、または DELETE ステートメントを実行すると失敗します。
   
@@ -97,11 +97,11 @@ SELECT @ARITHABORT AS ARITHABORT;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、両方がある、0 除算やオーバーフロー エラー`SET ARITHABORT`設定します。  
+ 次の例では、`SET ARITHABORT` を ON に設定した場合の 0 除算のエラーおよびオーバーフロー エラーをそれぞれ示しています。  
   
 ```  
 -- SET ARITHABORT  
@@ -198,7 +198,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHIGNORE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-arithignore-transact-sql.md)   
- [SESSIONPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SET ARITHIGNORE &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithignore-transact-sql.md)   
+ [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

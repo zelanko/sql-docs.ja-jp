@@ -1,5 +1,5 @@
 ---
-title: "[SET noexec] (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET NOEXEC (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -50,18 +50,18 @@ ms.lasthandoff: 11/21/2017
 SET NOEXEC { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>解説  
- SET NOEXEC が ON の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各バッチをコンパイル[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントには実行されません。 SET NOEXEC が OFF の場合は、すべてのバッチがコンパイル後に実行されます。  
+## <a name="remarks"></a>Remarks  
+ SET NOEXEC が ON のとき、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの各バッチがコンパイルされますが、実行されません。 SET NOEXEC が OFF の場合は、すべてのバッチがコンパイル後に実行されます。  
   
- 内のステートメントの実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が 2 つのフェーズ: コンパイルおよび実行します。 この設定は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行時に [!INCLUDE[tsql](../../includes/tsql-md.md)] コード内の構文とオブジェクト名を検証する場合に便利です。 また、多数のステートメントで構成されたより大きなバッチ内のステートメントを部分的にデバッグする際にも利用できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のステートメントの実行には、コンパイルと実行の 2 つのフェーズがあります。 この設定は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行時に [!INCLUDE[tsql](../../includes/tsql-md.md)] コード内の構文とオブジェクト名を検証する場合に便利です。 また、多数のステートメントで構成されたより大きなバッチ内のステートメントを部分的にデバッグする際にも利用できます。  
   
  SET NOEXEC は、解析時ではなく実行時に設定されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では`NOEXEC`有効なクエリや、無効なオブジェクト名を持つクエリに不適切な構文でクエリをします。  
+ 次の例では、有効なクエリ、有効でないオブジェクト名を持つクエリ、および無効な構文を持つクエリを使用して、`NOEXEC` を実行します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -117,7 +117,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET SHOWPLAN_TEXT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "TRANSACTION ISOLATION LEVEL (TRANSACT-SQL) を設定 |Microsoft ドキュメント"
+title: SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  ロックおよび行のバージョン管理動作を制御[!INCLUDE[tsql](../../includes/tsql-md.md)]への接続によって実行されたステートメント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続によって発行される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの、ロックと行のバージョン管理に関する動作を制御します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -75,16 +75,16 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、コミットされていないデータ変更のダーティ リードが行われないようトランザクションを保護しながら、ロックの競合を最小限にすることもできます。これには、次のいずれかを使用します。  
   
--   READ_COMMITTED_SNAPSHOT データベース オプションを使用して READ COMMITTED 分離レベルは、ON に設定します。  
+-   READ COMMITTED 分離レベル。READ_COMMITTED_SNAPSHOT データベース オプションを ON に設定します。  
   
 -   SNAPSHOT 分離レベル。  
   
  READ COMMITTED  
- 他のトランザクションで変更されたが、まだコミットされていないデータを、ステートメントで読み取れないように指定します。 これにより、ダーティ リードを防ぐことができます。 現在のトランザクション内にある各ステートメント間では、他のトランザクションによるデータの変更が可能です。この結果、反復不能読み取りやファントム データが発生することがあります。 このオプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既定値です。  
+ 他のトランザクションで変更されたが、まだコミットされていないデータを、ステートメントで読み取れないように指定します。 これにより、ダーティ リードを防ぐことができます。 現在のトランザクション内にある各ステートメント間では、他のトランザクションによるデータの変更が可能です。この結果、反復不能読み取りやファントム データが発生することがあります。 これは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のオプションです。  
   
  READ COMMITTED の動作は、READ_COMMITTED_SNAPSHOT データベース オプションの設定によって異なります。  
   
--   READ_COMMITTED_SNAPSHOT が OFF に設定されている場合 (既定)、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では共有ロックが使用され、現在のトランザクションでの読み取り操作中に他のトランザクションによって行が変更されるのを防ぐことができます。 また、ステートメントが他のトランザクションで変更された行を読み取ろうとしても、そのトランザクションが完了するまでステートメントはブロックされます。 いつ解放されるかは、共有ロックの種類によって決まります。 行ロックは、次の行が処理される前に解放されます。 次のページが読み取られ、ステートメントの終了時にテーブル ロックがリリースされたときに、ページ ロックが解放されます。  
+-   READ_COMMITTED_SNAPSHOT が OFF に設定されている場合 (既定)、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では共有ロックが使用され、現在のトランザクションでの読み取り操作中に他のトランザクションによって行が変更されるのを防ぐことができます。 また、ステートメントが他のトランザクションで変更された行を読み取ろうとしても、そのトランザクションが完了するまでステートメントはブロックされます。 いつ解放されるかは、共有ロックの種類によって決まります。 行ロックは、次の行が処理される前に解放されます。 ページ ロックは次のページの読み取り時に解放され、テーブル ロックはステートメントの終了時に解放されます。  
   
     > [!NOTE]  
     >  READ_COMMITTED_SNAPSHOT が ON に設定されている場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では行のバージョン管理が使用され、各ステートメントでは、トランザクション全体で一貫性のあるデータのスナップショットが使用されます。このスナップショットは、ステートメント開始時点に存在したデータのスナップショットです。 ただし、他のトランザクションによるデータ更新を防ぐためのロックは使用されません。  
@@ -94,7 +94,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
  READ_COMMITTED_SNAPSHOT データベース オプションが ON の場合は、READ_COMMITTED 分離レベルで実行されるトランザクションの各ステートメントで行のバージョン管理を使用する代わりに、READCOMMITTEDLOCK テーブル ヒントを使用して共有ロックを要求することもできます。  
   
 > [!NOTE]  
->  READ_COMMITTED_SNAPSHOT オプションを設定すると、そのデータベースでは ALTER DATABASE コマンドを実行する接続のみが許可されます。 ALTER DATABASE が完了するまで、そのデータベースには他に開かれた接続が存在しないようにする必要があります。 データベースをシングル ユーザー モードに設定する必要はありません。  
+>  READ_COMMITTED_SNAPSHOT オプションを設定すると、そのデータベースでは ALTER DATABASE コマンドを実行する接続のみが許可されます。 ALTER DATABASE が完了するまで、そのデータベースには他に開かれた接続が存在しないようにする必要があります。 データベースをシングル ユーザー モードにする必要はありません。  
   
  REPEATABLE READ  
  他のトランザクションで変更されたが、コミットされていないデータをステートメントで読み取れないように指定すると共に、現在のトランザクションが完了するまでは現在のトランザクションで読み取ったデータを他のトランザクションで変更できないように指定します。  
@@ -128,7 +128,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  トランザクションで実行される各ステートメントの検索条件に一致するキー値の範囲には、範囲ロックが設定されます。 これにより、現在のトランザクションで実行されるステートメントの処理対象となる行はブロックされ、他のトランザクションによる行の更新や挿入ができなくなります。 つまり、トランザクションのステートメントが 2 度実行された場合は、2 度目も同じ行セットが読み取られます。 範囲ロックはトランザクションが完了するまで保持されます。 このオプションではキー範囲全体がロックされ、トランザクションが完了するまでその状態が保持されるので、これは最も制限の厳しい分離レベルといえます。 このオプションは同時実行性が低いため、必要なときにのみ使用してください。 このオプションは、トランザクション内のすべての SELECT ステートメントで、すべてのテーブルに対して HOLDLOCK を設定するのと同じ効果があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  分離レベル オプションは一度に 1 つだけ設定でき、設定したオプションは明示的に変更されない限り、その接続で継続的に使用されます。 ステートメントの FROM 句内にあるテーブル ヒントで、テーブルに対して別のロック動作やバージョン管理動作が指定されない限り、トランザクションのすべての読み取り操作は、指定した分離レベルのルールに従って実行されます。  
   
  トランザクションの分離レベルでは、読み取り操作に対して取得されるロックの種類が定義されます。 READ COMMITTED または REPEATABLE READ で取得される共有ロックは通常、行ロックです。読み取り操作でページまたはテーブルの行が大量に参照される場合は、ページ ロックまたはテーブル ロックに変更される場合があります。 トランザクションで行の読み取り後に変更が行われる場合、そのトランザクションでは排他ロックによって行が保護され、トランザクションが完了するまでその状態が保持されます。 たとえば REPEATABLE READ トランザクションで、行に対する共有ロックが取得され、その行が変更される場合、共有行ロックは排他行ロックに変わります。  
@@ -154,21 +154,21 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   READ COMMITTED (行のバージョン管理を使用する場合)  
   
- 一方、これらの分離レベルでクエリを実行すると、ヒープに対する最適化された一括読み込み操作がブロックされます。 一括読み込み操作の詳細については、次を参照してください。[一括インポートし、データ ファイルのエクスポート &#40;です。SQL Server &#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ 一方、これらの分離レベルでクエリを実行すると、ヒープに対する最適化された一括読み込み操作がブロックされます。 一括読み込み操作の詳細については、「[データの一括インポートと一括エクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)」を参照してください。  
   
  FILESTREAM が有効なデータベースでは、次のトランザクション分離レベルがサポートされています。  
   
 |分離レベル|Transact SQL アクセス|ファイル システム アクセス|  
 |---------------------|-------------------------|------------------------|  
 |READ UNCOMMITTED|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|サポートされていない|  
-|読み取りのコミット|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|READ COMMITTED|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |REPEATABLE READ|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|サポートされていない|  
 |Serializable|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|サポートされていない|  
 |READ COMMITTED SNAPSHOP|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |スナップショット|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
   
 ## <a name="examples"></a>使用例  
- 次の例のセット、`TRANSACTION ISOLATION LEVEL`セッションのです。 後続の各 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではトランザクションが完了するまですべての共有ロックが保持されます。  
+ 次の例では、セッションの `TRANSACTION ISOLATION LEVEL` を設定します。 後続の各 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではトランザクションが完了するまですべての共有ロックが保持されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -189,7 +189,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [DBCC USEROPTIONS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
+ [DBCC USEROPTIONS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  

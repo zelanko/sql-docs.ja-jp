@@ -1,5 +1,5 @@
 ---
-title: "[SET parseonly] (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET PARSEONLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/27/2017
 ms.prod: sql-non-specified
@@ -52,18 +52,18 @@ ms.lasthandoff: 12/01/2017
 SET PARSEONLY { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SET PARSEONLY が ON の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではステートメントの解析だけが行われます。 SET PARSEONLY が OFF の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではステートメントがコンパイルされ実行されます。  
   
  SET PARSEONLY は、実行時ではなく解析時に設定されます。  
   
  PARSEONLY は、ストアド プロシージャやトリガーでは使わないでください。 OFFSETS オプションが ON でエラーがない場合は、SET PARSEONLY はオフセットを返します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [セット オフセット &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-offsets-transact-sql.md)  
+ [SET OFFSETS &#40;Transact-SQL&#41;](../../t-sql/statements/set-offsets-transact-sql.md)  
   
   

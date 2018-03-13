@@ -1,5 +1,5 @@
 ---
-title: "JSON_VALUE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: JSON_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/28/2017
 
   JSON 文字列からには、スカラー値を抽出します。  
   
- スカラー値ではなく、JSON 文字列からオブジェクトまたは配列を抽出する、次を参照してください。 [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md). 間の相違点について**JSON_VALUE**と**JSON_QUERY**を参照してください[JSON_VALUE の比較と JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)です。  
+ JSON 文字列からスカラー値ではなくオブジェクトまたは配列を抽出する場合は、「[JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)」を参照してください。 **JSON_VALUE** と **JSON_QUERY** の違いについては、「[JSON_VALUE と JSON_QUERY を比較する](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,27 +50,27 @@ JSON_VALUE ( expression , path )
  *式 (expression)*  
  式。 通常、変数またはを JSON テキストを含む列の名前。  
  
- 場合**JSON_VALUE** JSON では無効ですが見つかった*式*で識別される値を検索する前に*パス*エラーを返します。 場合 **JSON_VALUE*で識別される値が検出されない*パス*, テキスト全体をスキャンし、JSON を検出した場合にエラーを返しますが、任意の場所で無効*式*です。
+ **JSON_VALUE** が、*path* によって識別される値を検出する前に *expression* で無効な JSON を検出した場合、関数はエラーを返します。 **JSON_VALUE* が *path* によって識別される値を検出できない場合、テキスト全体がスキャンされ、*expression* のどこかで無効な JSON を検出した場合はエラーを返します。
   
- *パス*  
- 抽出するプロパティを指定する JSON のパス。 詳細については、次を参照してください。 [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ *path*  
+ 抽出するプロパティを指定する JSON のパス。 詳細については、「[JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)」を参照してください。  
  
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]し、 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]、変数の値として使用できる*パス*です。
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] では、*path* の値として変数を指定できます。
   
- 場合の形式*パス*が有効でない**JSON_VALUE**はエラーを返します。  
+ *path* の書式が有効でない場合、**JSON_VALUE** はエラーを返します。  
   
 ## <a name="return-value"></a>戻り値  
  型 nvarchar (4000) の 1 つのテキスト値を返します。 返される値の照合順序は、入力された式の照合順序と同じです。  
   
  値が 4,000 文字を超える場合は。  
   
--   厳密でないモード、 **JSON_VALUE**は null を返します。  
+-   厳密でないモードでは、**JSON_VALUE** は null を返します。  
   
--   厳格モードで**JSON_VALUE**はエラーを返します。  
+-   厳格モードでは、**JSON_VALUE** はエラーを返します。  
   
- 返すスカラー値が 4,000 文字を超えていれば使用**OPENJSON**の代わりに**JSON_VALUE**です。 詳細については、「 [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)」をご覧ください。  
+ 4,000 文字を超えるスカラー値を返す必要がある場合は、**JSON_VALUE** の代わりに **OPENJSON** を使用します。 詳細については、「 [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)」をご覧ください。  
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 ### <a name="lax-mode-and-strict-mode"></a>厳密でないモードと厳格モード
 
@@ -93,25 +93,25 @@ SET @jsonInfo=N'{
  }'  
 ```  
   
- 次の表の動作を比較して**JSON_VALUE**厳密でないモードでは厳格モードでします。 省略可能なパス モードの仕様 (lax または strict) に関する詳細については、次を参照してください。 [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ 次の表は、厳密でないモードと厳格モードでの **JSON_VALUE** の動作を比較します。 省略可能なパス モード (厳密でない、または厳格) の指定について詳しくは、「[JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)」を参照してください。  
   
 |[パス]|厳密でないモードでの戻り値|厳格モードでの戻り値|詳細|  
 |----------|------------------------------|---------------------------------|---------------|  
-|$|NULL|[エラー]|スカラー値ではありません。<br /><br /> 使用して**JSON_QUERY**代わりにします。|  
+|$|NULL|[エラー]|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
 |$info.type。|N '1'|N '1'|該当なし|  
-|$info.address.town。|N'Bristol'|N'Bristol'|該当なし|  
-|$ .info。"アドレス|NULL|[エラー]|スカラー値ではありません。<br /><br /> 使用して**JSON_QUERY**代わりにします。|  
-|$info.tags。|NULL|[エラー]|スカラー値ではありません。<br /><br /> 使用して**JSON_QUERY**代わりにします。|  
+|$.info.address.town|N'Bristol'|N'Bristol'|該当なし|  
+|$ .info。"アドレス|NULL|[エラー]|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
+|$info.tags。|NULL|[エラー]|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
 |$info.type[0]。|NULL|[エラー]|配列ではありません。|  
 |$info.none。|NULL|[エラー]|プロパティが存在しません。|  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="example-1"></a>例 1  
- 次の例は、JSON のプロパティの値を使用して`town`と`state`クエリの結果にします。 **JSON_VALUE**が保存されますが、ソースでは、結果の並べ替え順序の照合順序の照合順序によって異なります、`jsonInfo`列です。 
+ 次の例では、クエリの結果に JSON のプロパティの値 `town` と `state` を使用します。 **JSON_VALUE** がソースの照合順序を保持するため、結果の並べ替え順序が `jsonInfo` 列の照合順序に依存します。 
 
 > [!NOTE]
-> (この例では、という名前のテーブル`Person.Person`が含まれています、 `jsonInfo` JSON テキストの列とこの列が厳密でないモードと厳格モードの詳細についての例で示した構造を持っています。 AdventureWorks サンプル データベースで、`Person`テーブルが実際に存在しない、`jsonInfo`列です)。
+> (この例では、`Person.Person` という名前のテーブルが JSON テキストの `jsonInfo` 列を含み、またこの列が、前の厳密でないモードと厳格モードの説明で示した構造を持っていることを前提としています。 AdventureWorks サンプル データベースでは、`Person` テーブルは実は `jsonInfo` 列を含んでいません。)
   
 ```sql  
 SELECT FirstName, LastName,
@@ -122,7 +122,7 @@ ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
 ```  
   
 ### <a name="example-2"></a>例 2  
- 次の例は、JSON のプロパティの値を抽出`town`ローカル変数に代入します。  
+ 次の例では、ローカル変数に JSON プロパティの値 `town` を抽出します。  
   
 ```sql  
 DECLARE @jsonInfo NVARCHAR(MAX)
@@ -148,7 +148,7 @@ CREATE TABLE dbo.Store
 ```  
   
 ## <a name="see-also"></a>参照  
- [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON データ &#40;です。SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+ [JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [JSON データ &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   
