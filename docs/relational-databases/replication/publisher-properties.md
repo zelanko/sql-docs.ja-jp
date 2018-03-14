@@ -8,23 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
-caps.latest.revision: "18"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d28b7bbebfa1e03bb408f5e9b65cf898b444ae3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0fd350e5c5d448b70a25dc2337c43f1bf381aed9
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publisher-properties"></a>パブリッシャーのプロパティ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ここでは、ディストリビューターおよびパブリッシャーで使用できるパブリケーションのプロパティの情報について紹介します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  ここでは、ディストリビューターおよびパブリッシャーで使用できるパブリケーションのプロパティの情報について紹介します。  
   
 -   [[パブリッシャーのプロパティ - ディストリビューター]](../../relational-databases/replication/publisher-properties-distributor.md)  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - merge replication precomputed partitions [SQL Server replication]
 - merge replication precomputed partitions [SQL Server replication], about precomputed partitions
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
-caps.latest.revision: "45"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5e5341614b3da26ec21f84017b0e776000a3bb5
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2a966f02fce5b76e8157de1422a6a38ffedd4176
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>パラメーター化されたフィルター - 事前計算済みパーティションの最適化
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 事前計算済みパーティションは、フィルター選択されたマージ パブリケーションのパフォーマンス最適化に使用されます。 フィルター選択されたパブリケーションで論理レコードを使用する場合にも事前計算済みパーティションが必要になります。 論理レコードの詳細については、「[論理レコードによる関連行への変更をグループ化](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」を参照してください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  事前計算済みパーティションは、フィルター選択されたマージ パブリケーションのパフォーマンス最適化に使用されます。 フィルター選択されたパブリケーションで論理レコードを使用する場合にも事前計算済みパーティションが必要になります。 論理レコードの詳細については、「[論理レコードによる関連行への変更をグループ化](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」を参照してください。  
   
  サブスクライバーがパブリッシャーに同期するとき、パブリッシャーはサブスクライバーのフィルターを評価して、サブスクライバーのパーティションまたはデータセットに属する行を識別する必要があります。 フィルター選択されたデータセットを受け取る各サブスクライバーに対して、パブリッシャーの変更内容のパーティション メンバーシップを決定する処理を *パーティション評価*と呼びます。 事前計算済みパーティションがない場合は、特定のサブスクライバーに対する最後のマージ エージェントの実行以降、パブリッシャーのフィルター選択された列に対して加えられた変更ごとにパーティション評価を実行する必要があります。さらに、パブリッシャーと同期するすべてのサブスクライバーについて、この処理を繰り返し行う必要があります。  
   

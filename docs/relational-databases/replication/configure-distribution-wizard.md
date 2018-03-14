@@ -8,26 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Configure Distribution Wizard
+helpviewer_keywords:
+- Configure Distribution Wizard
 ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
-caps.latest.revision: "22"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b700916165340f23dfe73e7364ff0bb27f2f984a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fb68c5d07b97f9bd55a6e0b7be819824dd271c56
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="configure-distribution-wizard"></a>ディストリビューションの構成ウィザード
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ここでは、ディストリビューションの構成ウィザードの次のページについて紹介します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  ここでは、ディストリビューションの構成ウィザードの次のページについて紹介します。  
   
--   [ディストリビューター](../../relational-databases/replication/distributor.md)  
+-   [[ディストリビューター]](../../relational-databases/replication/distributor.md)  
   
 -   [[スナップショット フォルダー]](../../relational-databases/replication/snapshot-folder.md)  
   
