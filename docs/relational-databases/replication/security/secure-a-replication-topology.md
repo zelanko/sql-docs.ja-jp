@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: replication [SQL Server], security
+helpviewer_keywords:
+- replication [SQL Server], security
 ms.assetid: d7292121-1c8e-4b8e-ac44-8eea36ae27fe
-caps.latest.revision: "38"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f5883fe3b649b2ad21deb3e9fde14c153df5416
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 06503486567ccc86fda076a12d4e147c9fa68fdc
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="secure-a-replication-topology"></a>レプリケーション トポロジのセキュリティ保護
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] レプリケーションに必要なセキュリティ アカウント、ログイン、およびパスワードは、レプリケーションの構成時とパブリケーションおよびサブスクリプションの作成時に指定します。 これらのセキュリティ設定は、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、レプリケーション ストアド プロシージャ、レプリケーション管理オブジェクト (RMO) を使用して、後から変更することもできます。 次のトピックでは、レプリケーションのセキュリティ設定を変更する方法について説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  レプリケーションに必要なセキュリティ アカウント、ログイン、およびパスワードは、レプリケーションの構成時とパブリケーションおよびサブスクリプションの作成時に指定します。 これらのセキュリティ設定は、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、レプリケーション ストアド プロシージャ、レプリケーション管理オブジェクト (RMO) を使用して、後から変更することもできます。 次のトピックでは、レプリケーションのセキュリティ設定を変更する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
