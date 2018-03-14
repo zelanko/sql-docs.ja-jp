@@ -16,18 +16,19 @@ f1_keywords:
 - sql13.rep.monitor.subscription.downlevelsynchhistory.f1
 ms.assetid: 0a0deab2-1c08-4371-9681-d9403e0236cc
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0462e11db4e712fb9e0b5b37494dacc0924e60a1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5f3a11814b1b7a00cb70882db920682d86437912
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="subscription-synchronization-history-merge-subscription-sql-server-2000"></a>サブスクリプション、[同期の履歴] \(マージ サブスクリプション、SQL Server 2000)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[同期の履歴]** タブには、マージ エージェントの状態、履歴、情報メッセージ、エラー メッセージなどの詳細情報が表示されます。  
+# <a name="subscription-synchronization-history-merge-subscription-sql-server-2000"></a>サブスクリプション、[同期の履歴]\(マージ サブスクリプション、SQL Server 2000)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **[同期の履歴]** タブには、マージ エージェントの状態、履歴、情報メッセージ、エラー メッセージなどの詳細情報が表示されます。  
   
 ## <a name="options"></a>および  
  表示するマージ エージェント セッションを **[表示]** メニューで選択した後、 **[マージ エージェントのセッション]**という名前のグリッドで特定のセッションを選択します。 このセッションの詳細情報は、 **[選択されたセッションのアクション]**というラベルのグリッドに表示されます。 選択したセッションがエラーで終了した場合は、 **[選択されたセッションのエラーの詳細またはメッセージ]** というラベルのテキスト領域も表示されます。  

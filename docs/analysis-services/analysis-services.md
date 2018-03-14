@@ -1,4 +1,4 @@
-﻿---
+---
 title: "SQL Server Analysis Services の概要 |Microsoft ドキュメント"
 ms.date: 02/21/2018
 ms.prod: analysis-services
