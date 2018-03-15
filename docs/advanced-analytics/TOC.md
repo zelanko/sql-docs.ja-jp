@@ -1,13 +1,8 @@
-# [作業の開始](getting-started-with-machine-learning-services.md)
-
 # 概要
-## [Microsoft Machine Learning サービスとは](r/r-services.md)
-## [Machine Learning の新機能](what-s-new-in-sql-server-machine-learning-services.md)
-## [新規および更新のアーティクル](new-updated-advanced-analytics.md)
-## [アーキテクチャと概要](architecture-overview-machine-learning.md)
-## [SQL Server のエディション間での Machine Learning 機能の相違点](r/differences-in-r-features-between-editions-of-sql-server.md)
-
-## [Azure SQL データベースでの R の使用](r/using-r-in-azure-sql-database.md)
+## [SQL Server Machine Learning Services とは](what-is-sql-server-machine-learning.md)
+## [新しい機能](what-s-new-in-sql-server-machine-learning-services.md)
+## [アーキテクチャの概要](architecture-overview-machine-learning.md)
+## [エディション別の機能](r/differences-in-r-features-between-editions-of-sql-server.md)
 
 # [Machine Learning サービス - R](r/sql-server-r-services.md)
 
@@ -97,8 +92,6 @@
 #### [モデルのトレーニングと保存](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [モデルを運用する](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python: スタンドアロン サーバーを使用してモデルを展開および使用する](../advanced-analytics/python/publish-consume-python-code.md)
-
 # [Machine Learning Server - スタンドアロン](r/r-server-standalone.md)
 ## [作業の開始](r/getting-started-with-microsoft-r-server-standalone.md)
 ## [Machine Learning Server スタンドアロンのセットアップ](r/create-a-standalone-r-server.md)
@@ -175,6 +168,8 @@
 
 ## [既知の問題](known-issues-for-sql-server-machine-learning-services.md)
 ## [リリース ノート](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
+## [新規および更新のアーティクル](new-updated-advanced-analytics.md)
+## [Azure SQL データベースでの R の使用](r/using-r-in-azure-sql-database.md)
 
 ## [セットアップとトラブルシューティングのヒント](machine-learning-troubleshooting-faq.md)
 ### [トラブルシューティングのためのデータの収集](data-collection-ml-troubleshooting-process.md)

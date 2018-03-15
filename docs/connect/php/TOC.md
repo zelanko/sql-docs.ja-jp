@@ -54,6 +54,7 @@
 ### [方法: SQLSRV ドライバーを使用する場合に SQL Server データ型を指定する](how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)
 ### [方法: PHP データ型を指定する](how-to-specify-php-data-types.md)
 ### [方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
+### [方法: Linux および macOS での ASCII データの送信と取得](how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
 ## [エラーおよび警告の処理](handling-errors-and-warnings.md)
 ### [方法: SQLSRV ドライバーを使用してエラーおよび警告処理を構成する](how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 ### [方法: SQLSRV ドライバーを使用してエラーと警告を処理する](how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)

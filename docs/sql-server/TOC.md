@@ -52,6 +52,7 @@
 ### [Channel 9 での SQL](https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year)
 
 ## フィードバックとヘルプ
+### [SQL ドキュメントへの投稿](sql-server-docs-contribute.md)
 ### [UserVoice - SQL Server の改善の提案](https://feedback.azure.com/forums/908035-sql-server)
 ### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
