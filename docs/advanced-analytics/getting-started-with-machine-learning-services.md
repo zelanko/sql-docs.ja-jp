@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 0abc11160704871799ec7cfcec19e86bb0f45a1b
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: 5ae4298fabb7147846b5ee87f391c1a0707cde3a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>SQL Server での機械学習の概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +74,7 @@ SQL Server 2016 をインストールするオプションを使う[!INCLUDE[rsq
 
   既にインストールされている場合、機械学習のサーバー製品のいずれか、この記事は、ツール、および必要なライブラリを含む、ソリューションの開発とテストは別のコンピューターを設定する方法に関する情報を提供します。
 
-+ [データ サイエンス仮想マシン](../advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
++ [Data Science Virtual Machine](../advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 
   機械学習ソリューション、Azure Marketplace からこの完全なマシンを取得することによって学習にエントリをすぐに開始します。 (頻繁に簡略化"DSVM") データ サイエンス仮想マシンには、SQL Server、Microsoft Machine Learning サーバー、およびすべての開発ツールが含まれています。
   
@@ -106,9 +106,6 @@ SQL Server 2016 をインストールするオプションを使う[!INCLUDE[rsq
 
    SQL 開発者のため、エンド ツー エンドのソリューションでは、SQL Server Management Studio から Python を実行する必要があります。 すべてのコードを提供します。
 
-+ [発行および Python コードを使用します。](../advanced-analytics/python/publish-consume-python-code.md)
-
-  このチュートリアルは、Machine Learning のサーバーを使用して web サービスにモデルを配置に必要なすべてのコードに付属します。
 
 ### <a name="product-samples-with-code"></a>コードでの製品サンプル
 

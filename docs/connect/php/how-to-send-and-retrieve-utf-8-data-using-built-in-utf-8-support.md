@@ -1,14 +1,15 @@
 ---
 title: "方法: 組み込みの utf-8 サポートを使用した utf-8 データの送受信 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - converting data types
 - updating data
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 89e34b2b9f113beaa0b170cdfc36c1afb5fcfc84
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 2d2763ec8906cc3100c1259aa25473ae7e8d8b22
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,10 +43,10 @@ UTF-8 でエンコードされたデータを送信または取得するには:
   
     接続オプションの一部として文字セットを指定すると、ドライバーは、その他の接続オプション文字列で同じ文字セットを使用すると見なします。 サーバー名およびクエリ文字列も同じ文字セットを使用すると見なします。  
   
-Utf-8 または SQLSRV_ENC_CHAR を渡すことができますに注意してください**CharacterSet** (SQLSRV_ENC_BINARY を渡すことはできません)。 既定のエンコーディングは SQLSRV_ENC_CHAR です。  
+Utf-8 または SQLSRV_ENC_CHAR を渡すことができます**CharacterSet** (SQLSRV_ENC_BINARY を渡すことはできません)。 既定のエンコーディングは SQLSRV_ENC_CHAR です。  
   
 ## <a name="example"></a>例  
-次の例では、接続の作成時に、UTF-8 文字セットを指定して、UTF-8 でエンコードされたデータを送信および取得する方法を示します。 この例では、Production.ProductReview テーブルの指定したレビュー ID の Comments 列を更新します。 この例では、新規に更新したデータも取得し、それを表示します。 なお、Comments 列は、型の**nvarcahr(3850) です。** なお、データがサーバーに送信される前に、PHP を使用してエンコーディング utf-8 に変換されます**utf8_encode**関数。 これはデモンストレーションのみを目的としています。 実際のアプリケーションのシナリオでは、UTF-8 でエンコード済みのデータで開始します。  
+次の例では、接続の作成時に、UTF-8 文字セットを指定して、UTF-8 でエンコードされたデータを送信および取得する方法を示します。 この例では、Production.ProductReview テーブルの指定したレビュー ID の Comments 列を更新します。 この例では、新規に更新したデータも取得し、それを表示します。 型の Comments 列は、 **nvarchar(3850) です。** なお、データがサーバーに送信される前に、PHP を使用してエンコーディング utf-8 に変換されます**utf8_encode**関数。 この手順は、デモの目的でのみ行われます。 実際のアプリケーション シナリオでは、utf-8 でエンコードされたデータで開始します。  
   
 この例では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 ブラウザーからこの例を実行すると、すべての出力はブラウザーに書き込まれます。  
   
@@ -226,7 +227,8 @@ sqlsrv_close( $conn);
   
 ## <a name="see-also"></a>参照  
 [データの取得](../../connect/php/retrieving-data.md)  
-[データの更新 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+[Windows 以外の ASCII データを扱う](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
+[データ更新&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
 [定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 [サンプル アプリケーション &#40;SQLSRV ドライバー&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

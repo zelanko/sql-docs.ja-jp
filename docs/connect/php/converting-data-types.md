@@ -1,27 +1,28 @@
 ---
 title: "データ型の変換 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3a0c956c00e21630aca34b4ea8cab2fd7760a66b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 177f4cc6c28a231fe37df65a46976c4c8836e912
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="converting-data-types"></a>データ型の変換
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,13 +31,14 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|説明|  
+|トピック|Description|  
 |---------|---------------|  
 |[既定の SQL Server のデータ型](../../connect/php/default-sql-server-data-types.md)|サーバーにデータを送信するときの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データ型について説明します。|  
 |[既定の PHP データ型](../../connect/php/default-php-data-types.md)|サーバーからデータを取得するときの既定の PHP データ型について説明します。|  
 |[方法: SQL Server データ型を指定する](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)|サーバーにデータを送信する際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データ型を指定する方法について説明します。|  
 |[方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)|サーバーからデータを取得するときに PHP データ型を指定する方法について説明します。|  
 |[方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|使用する方法を示します[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の utf-8 データの組み込みサポートします。<br /><br />バージョン 1.1 で utf-8 文字のサポートが追加されました、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]です。|  
+|[方法: Linux および macOS での ASCII データの送信と取得](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|使用する方法を示します[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の Linux または macOS ASCII データをサポートします。<br /><br />5.2 のバージョンのでない Windows 環境での ASCII 文字のサポートが追加されました、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]です。|
   
 ## <a name="see-also"></a>参照  
 [プログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)

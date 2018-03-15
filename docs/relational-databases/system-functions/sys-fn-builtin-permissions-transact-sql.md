@@ -34,16 +34,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41e53169a20ff3082afc0e4b8f10ab76e79ca87d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f0aeedb143b94958e949466ea84def760614478c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  サーバーの組み込み権限の階層に関する説明を返します。 `sys.fn_builtin_permissions`に対してのみ呼び出すことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、し、現在のプラットフォームでサポートされているかどうかに関係なくすべてのアクセス許可を返します。 ほとんどの権限はすべてのプラットフォームに適用されますがが、一部は適用されません。 たとえば SQL データベースでサーバー レベルの権限を付与できません。 各アクセス許可をサポートしているプラットフォームについてについては、次を参照してください。[アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)です。  
+  サーバーの組み込み権限の階層に関する説明を返します。 `sys.fn_builtin_permissions` に対してのみ呼び出すことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、し、現在のプラットフォームでサポートされているかどうかに関係なくすべてのアクセス許可を返します。 ほとんどの権限はすべてのプラットフォームに適用されますがが、一部は適用されません。 たとえば SQL データベースでサーバー レベルの権限を付与できません。 各アクセス許可をサポートしているプラットフォームについてについては、次を参照してください。[権限&#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -329,9 +329,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
 ## <a name="remarks"></a>解説  
- `sys.fn_builtin_permissions`テーブル値関数の定義済み権限の階層のコピーです。 この階層には、包含権限が含まれます。 `DEFAULT`結果セットには、ルートがある、権限の階層を有向非循環有向グラフがについて説明します (クラス = SERVER、権限 = CONTROL SERVER)。  
+ `sys.fn_builtin_permissions` テーブル値関数の定義済み権限の階層のコピーです。 この階層には、包含権限が含まれます。 `DEFAULT`結果セットには、ルートがある、権限の階層を有向非循環有向グラフがについて説明します (クラス = SERVER、権限 = CONTROL SERVER)。  
   
- `sys.fn_builtin_permissions`相関パラメーターは受け入れられません。  
+ `sys.fn_builtin_permissions` 相関パラメーターは受け入れられません。  
   
  有効でないクラス名で `sys.fn_builtin_permissions` を呼び出すと、空のセットが返されます。  
  
@@ -340,7 +340,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 ![データベース エンジンの権限](../../relational-databases/security/media/database-engine-permissions.PNG) 
 
 >[!NOTE]
-> このトピックの一部として、ポスターは、読み取るには小さすぎます。 データベース エンジンの権限ポスターは、 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)からダウンロードしてください。  
+> このトピックの一部として、ポスターは、読み取るには小さすぎます。 ダウンロードからデータベース エンジンの権限ポスター [ https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster)です。  
    
   
 ## <a name="permissions"></a>権限  
@@ -371,10 +371,10 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT)
 ## <a name="see-also"></a>参照  
  [権限の階層 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [スキーマ &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-schema-transact-sql.md)   
- [DROP SCHEMA &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [スキーマを作成する&#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [ドロップ スキーマ&#40;TRANSACT-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [sys.fn_my_permissions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

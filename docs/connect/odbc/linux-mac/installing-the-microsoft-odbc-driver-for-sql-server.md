@@ -1,7 +1,7 @@
 ---
 title: "Linux および macOS 上の SQL Server 用 Microsoft ODBC Driver をインストールする |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 03/13/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2f8b7e34ae99042012b88f9d83c0ee3af0ad18be
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: 4b5371302206f87f19632c55f90917de189b303a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux および macOS に Microsoft ODBC Driver for SQL Server をインストールする
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,6 +32,9 @@ ms.lasthandoff: 03/09/2018
 この記事をインストールする方法を説明します、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux と macOS、SQL Server の省略可能なコマンド ライン ツールに (`bcp`と`sqlcmd`) および unixODBC 開発ヘッダー。
 
 ## <a name="microsoft-odbc-driver-17-for-sql-server"></a>SQL Server 用 Microsoft ODBC Driver 17 
+
+> [!IMPORTANT]
+> V17 をインストールした場合`msodbcsql`について簡単に使用可能なパッケージを削除するかインストールする前に、`msodbcsql17`パッケージです。 これにより、競合が回避されます。 `msodbcsql17`でパッケージをインストールする、 `msodbcsql` v13 パッケージです。
 
 ### <a name="debian-8-and-9"></a>Debian 8 と 9
 ```
@@ -372,7 +375,7 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 終了したすべての依存パッケージを手動でダウンロード、インストール コンピューター上に一緒に配置し、各パッケージを手動でインストールに共通ではまた、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 パッケージです。
 
 #### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
-  - 最新版をダウンロード`msodbcsql``.rpm`ここから: http://packages.microsoft.com/rhel/7/prod/
+  - 最新版をダウンロード`msodbcsql``.rpm`ここから。 http://packages.microsoft.com/rhel/7/prod/
   - 依存関係と、ドライバーをインストールします。
   
 ```
@@ -381,7 +384,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### <a name="ubuntu-1604"></a>Ubuntu 16.04
-- 最新版をダウンロード`msodbcsql``.deb`ここから: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
+- 最新版をダウンロード`msodbcsql``.deb`ここから。 http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
 - 依存関係と、ドライバーをインストールします。 
 
 ```
@@ -390,7 +393,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
-- 最新版をダウンロード`msodbcsql``.rpm`ここから: http://packages.microsoft.com/sles/12/prod/
+- 最新版をダウンロード`msodbcsql``.rpm`ここから。 http://packages.microsoft.com/sles/12/prod/
 - 依存関係と、ドライバーをインストールします。
 
 ```
@@ -405,7 +408,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-linux"></a>Microsoft ODBC Driver 11 for SQL Server on Linux
 
-ドライバーを使用することができます、前に、unixODBC ドライバー マネージャーをインストールします。 詳細については、「 [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md) 」をご覧ください。  
+ドライバーを使用することができます、前に、unixODBC ドライバー マネージャーをインストールします。 詳細については、次を参照してください。 [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)です。
 
 **インストール手順**  
 

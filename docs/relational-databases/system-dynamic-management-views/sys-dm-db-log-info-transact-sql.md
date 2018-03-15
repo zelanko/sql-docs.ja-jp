@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_db_log_info (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/16/2017
+ms.date: 03/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -27,11 +27,11 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: 661647715d2fcff3a4821250dfaa65e0fea07d6e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 56064f19713bf3e5da29109520045762474d4539
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/08/2018
 sys.dm_db_log_info ( database_id )  
 ```  
 ## <a name="arguments"></a>引数  
- *database_id* |NULL |既定値  
+ *database_id* | NULL | DEFAULT  
  データベースの ID です。 *database_id*は**int**です。有効な入力値は、データベース、NULL、または既定の ID 番号です。 既定値は NULL です。 NULL および DEFAULT は同じ値に現在のデータベースのコンテキストでします。
  
  現在のデータベースの VLF 情報を返すには NULL を指定します。
@@ -69,7 +69,7 @@ sys.dm_db_log_info ( database_id )
 ## <a name="remarks"></a>解説
  `sys.dm_db_log_info`動的管理関数は、`DBCC LOGINFO`ステートメントです。 
  
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  必要があります、`VIEW DATABASE STATE`データベースの権限です。  
   
 ## <a name="examples"></a>使用例  
@@ -85,23 +85,37 @@ GROUP BY [name]
 HAVING COUNT(l.database_id) > 100
 ```
 
-### <a name="b-determing-the-status-of-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. 最後の状態を求める`VLF`ログ ファイルを圧縮する前にトランザクション ログに
+### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. 最後の位置を決定`VLF`ログ ファイルを圧縮する前にトランザクション ログに
 
-トランザクション ログを確認してトランザクション ログが圧縮できる場合に shrinkfile を実行する前に最新の VLF のステータスを確認するのには、次のクエリを使用できます。
+次のクエリは、トランザクション ログを確認してトランザクション ログが圧縮できる場合に shrinkfile を実行する前に最新のアクティブな VLF の位置を調べるために使用できます。
 
 ```sql
 USE AdventureWorks2016
 GO
 
-SELECT TOP 1 DB_NAME(database_id) AS "Database Name", file_id, vlf_size_mb, vlf_sequence_number, vlf_active, vlf_status
-FROM sys.dm_db_log_info(DEFAULT)
-ORDER BY vlf_sequence_number DESC
+;WITH cte_vlf AS (
+SELECT ROW_NUMBER() OVER(ORDER BY vlf_begin_offset) AS vlfid, DB_NAME(database_id) AS [Database Name], vlf_sequence_number, vlf_active, vlf_begin_offset, vlf_size_mb
+    FROM sys.dm_db_log_info(DEFAULT)),
+cte_vlf_cnt AS (SELECT [Database Name], COUNT(vlf_sequence_number) AS vlf_count,
+    (SELECT COUNT(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 0) AS vlf_count_inactive,
+    (SELECT COUNT(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 1) AS vlf_count_active,
+    (SELECT MIN(vlfid) FROM cte_vlf WHERE vlf_active = 1) AS ordinal_min_vlf_active,
+    (SELECT MIN(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 1) AS min_vlf_active,
+    (SELECT MAX(vlfid) FROM cte_vlf WHERE vlf_active = 1) AS ordinal_max_vlf_active,
+    (SELECT MAX(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 1) AS max_vlf_active
+    FROM cte_vlf
+    GROUP BY [Database Name])
+SELECT [Database Name], vlf_count, min_vlf_active, ordinal_min_vlf_active, max_vlf_active, ordinal_max_vlf_active,
+((ordinal_min_vlf_active-1)*100.00/vlf_count) AS free_log_pct_before_active_log,
+((ordinal_max_vlf_active-(ordinal_min_vlf_active-1))*100.00/vlf_count) AS active_log_pct,
+((vlf_count-ordinal_max_vlf_active)*100.00/vlf_count) AS free_log_pct_after_active_log
+FROM cte_vlf_cnt
+GO
 ```
-
 
 ## <a name="see-also"></a>参照  
 [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[データベース関連の動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[データベース関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[sys.dm_db_log_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
+[sys.dm_db_log_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b090579bd0a32b901d1c1cedcc26b290d7a68771
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 4b439725c8c9e522ed500f717686b8a9cf7d972a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="deploy-and-consume-analytics-using-mrsdeploy"></a>展開および mrsdeploy を使用して分析を使用します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,10 +56,6 @@ R Server のこの配置機能には、これらの利点があります。
   
   スコア付けの操作の速度を向上させるためにリアルタイムのサポートされている R モデル オブジェクトにスコア付けを行うこともできます。
 
-+ Web サービスとしての Python コードを発行します。
-
-  例については、次を参照してください。[発行 Python コードを使用すると](./python/publish-consume-python-code.md)です。
-
 + 非同期のバッチの消費量
 
   大規模な入力データに対して呼び出す web サービスは、バッチの実行を使用して非同期的にここで使用できます。
@@ -88,7 +84,7 @@ SQL Server 2017 CTP 2.0 以降には、以前 R Server でのみ利用可能だ�
 
 3. セットアップの完了後**Microsoft Machine Learning サーバー**を手動で、次のレジストリ キーの追加**mrsdeploy**、R_SERVER ファイルの基本フォルダーを指定します。 
 
-    + 新しいレジストリ キーを作成します。`H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
+    + 新しいレジストリ キーを作成します。 `H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
     + キーの値を設定`"C:\Program Files\Microsoft SQL Server\140\R_SERVER"`です。
 
 4. 終了したら、開く、[管理者ユーティリティ](https://docs.microsoft.com/r-server/operationalize/configure-use-admin-utility)です。
