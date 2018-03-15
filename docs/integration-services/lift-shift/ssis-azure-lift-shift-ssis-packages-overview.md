@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96384f918239772c3c6a859f523c04a4d53ec4d0
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 36a844cb2dcda45701c29066b825e64a864d5757
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする
 SQL Server Integration Services (SSIS) パッケージとワークロードを Azure クラウドに移動できるようになりました。
@@ -91,6 +91,8 @@ SQL Database でプロジェクトの配置と実行は、使い慣れたツー�
 -   コマンドライン ツール
 -   PowerShell
 -   C# と SSIS の管理オブジェクト モデル
+
+作業を開始する場合は、「[Azure で SSIS パッケージを配置、実行、および監視する](ssis-azure-deploy-run-monitor-tutorial.md)」を参照してください。
 
 ### <a name="monitor-packages"></a>パッケージの監視
 SSMS での実行中のパッケージを監視するには、SSMS で次のレポート作成ツールのいずれかを使用できます。

@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49cdcb7768103ba9cfd62a58bcdcbf5399ae09a1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b6ed067a54cc867ed091dd27f5a4af91954045f1
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>カスタム コンポーネントの複数バージョン対応のサポート
  SQL Server Data Tools (SSDT) で SSIS デザイナーを使用して、SQL Server 2016、SQL Server 2014、または SQL Server 2012 をターゲットとするパッケージを作成、管理、および実行できるようになりました。 Visual Studio 2015 用の SSDT を入手する方法については、「[最新の SQL Server Data Tools のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。 
@@ -104,7 +104,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 **エラー メッセージ。** 型 'System.__ComObject' の COM オブジェクトをインターフェイス型 'Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100' にキャストできません。 IID '{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}' が指定されたインターフェイスの COM コンポーネント上での QueryInterface 呼び出しのときに次のエラーが発生したため、この操作に失敗しました: インターフェイスがサポートされていません。(HRESULT からの例外: 0x80004002 (E_NOINTERFACE))。 (Microsoft.SqlServer.DTSPipelineWrap)。
 
-**解決方法。** カスタム拡張機能が、Microsoft.SqlServer.DTSPipelineWrap や Microsoft.SqlServer.DTSRuntimeWrap などの SSIS 相互運用機能アセンブリを参照する場合、**[相互運用機能型の埋め込み]** プロパティの値を **False" に設定します。
+**解決方法。** カスタム拡張機能が、Microsoft.SqlServer.DTSPipelineWrap や Microsoft.SqlServer.DTSRuntimeWrap などの SSIS 相互運用機能アセンブリを参照する場合、**[相互運用機能型の埋め込み]** プロパティの値を **False** に設定します。
 
 ![相互運用機能型の埋め込み](../../integration-services/extending-packages-custom-objects/media/embed-interop-types.png)
 

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bde92101af0b761df9f37171b35952fa3ab9d25b
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 7b17cdd39e1eb155581d070ef659d6c34c044b4d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Azure で SSIS パッケージを配置、実行、および監視する
 このチュートリアルでは、Azure SQL Database の SSISDB カタログ データベースに SQL Server Integration Services プロジェクトを配置する方法、Azure-SSIS Integration Runtime でのパッケージの実行方法、および実行中のパッケージの監視方法を示します。
@@ -29,9 +29,16 @@ ms.lasthandoff: 03/02/2018
 
 また、SSISDB データベースを設定し、Azure-SSIS Integration Runtime をプロビジョニングしていることを確認してください。 Azure で SSIS をプロビジョニングする方法については、「[Azure Data Factory UI を使用した Azure SSIS 統合ランタイムのプロビジョニング](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)」を参照してください。
 
+> [!NOTE]
+> Azure への配置では、プロジェクト配置モデルのみがサポートされます。
+
 ## <a name="connect-to-the-ssisdb-database"></a>SSISDB データベースに接続する
 
-SQL Server Management Studio を使用して、Azure SQL Database サーバー上の SSIS カタログに接続します。 詳細については、「[Azure 上の SSISDB カタログ データベースへの接続](ssis-azure-connect-to-catalog-database.md)」を参照してください。
+SQL Server Management Studio を使用して、Azure SQL Database サーバー上の SSIS カタログに接続します。 詳細とスクリーンショットについては、「[Azure 上の SSISDB カタログ データベースへの接続](ssis-azure-connect-to-catalog-database.md)」を参照してください。
+
+ここで、覚えるべき重要事項が 2 点あります。 これらの点については、以下の手順で説明されます。
+-   **mysqldbserver.database.windows.net** という形式で、Azure SQL Database サーバーの完全修飾名を入力します。
+-   接続するデータベースとして `SSISDB` を選択します。
 
 > [!IMPORTANT]
 > Azure SQL Database サーバーは、ポート 1433 でリッスンします。 企業のファイアウォール内から Azure SQL Database サーバーに接続しようとする場合、正常に接続するには、このポートを企業のファイアウォールで開ける必要があります。
@@ -56,12 +63,18 @@ SQL Server Management Studio を使用して、Azure SQL Database サーバー�
 
 ## <a name="deploy-a-project-with-the-deployment-wizard"></a>配置ウィザードを使用してプロジェクトを配置する
 
+パッケージの配置と配置ウィザードについて詳しくは、「[Integration Services (SSIS) プロジェクトとパッケージの配置](../packages/deploy-integration-services-ssis-projects-and-packages.md)」および「[Integration Services 配置ウィザード](../packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)」を参照してください。
+
 ### <a name="start-the-integration-services-deployment-wizard"></a>Integration Services 配置ウィザードを起動する
 1. SSMS のオブジェクト エクスプローラーで、**[Integration Services カタログ]** ノードと **[SSISDB]** ノードを展開した状態で、プロジェクト フォルダーを展開します。
 
 2.  **[プロジェクト]** ノードを選びます。
 
 3.  **[プロジェクト]** ノードを右クリックして、**[プロジェクトの配置]** を選びます。 Integration Services 配置ウィザードが開きます。 SSIS カタログ データベースから、またはファイル システムから、プロジェクトを配置することができます。
+
+    ![SSMS からプロジェクトを配置する](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project1.png)
+
+    ![SSIS 配置ウィザード ダイアログ ボックスの表示](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project2.png)
 
 ### <a name="deploy-a-project-with-the-deployment-wizard"></a>配置ウィザードを使用してプロジェクトを配置する
 1. 配置ウィザードの **[概要]** ページで、概要を確認します。 **[次へ]** を選択して、**[ソースの選択]** ページを開きます。

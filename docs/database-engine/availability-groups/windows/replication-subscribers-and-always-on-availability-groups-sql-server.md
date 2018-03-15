@@ -1,14 +1,15 @@
 ---
 title: "レプリケーション サブスクライバーと AlwaysOn 可用性グループ (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e868d03cfe57b78affa81b00f5f91376ae9a89e8
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6020be0ea9568611a0e427917bc02c2a3a53cc3a
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>レプリケーション サブスクライバーと AlwaysOn 可用性グループ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,15 +34,7 @@ ms.lasthandoff: 01/18/2018
   レプリケーション サブスクライバーであるデータベースを含む AlwaysOn 可用性グループがフェールオーバーすると、レプリケーション サブスクリプションが失敗することがあります。 トランザクション サブスクライバーの場合、サブスクリプションがサブスクライバーの可用性グループ リスナーの名前を使用していると、ディストリビューション エージェントは自動的にレプリケーションを継続します。 マージ サブスクライバーの場合、レプリケーション管理者はサブスクリプションを再作成して、手動でサブスクライバーを再構成する必要があります。  
   
 ## <a name="what-is-supported"></a>サポート対象  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションは、パブリッシャーの自動フェールオーバー、トランザクション サブスクライバーの自動フェールオーバー、およびマージ サブスクライバーの手動フェールオーバーをサポートします。 可用性データベース上のディストリビューターのフェールオーバーはサポートされていません。 AlwaysOn は、Websync および ssNoVersion Compact のシナリオと組み合わせることはできません。  
-  
- **マージ プル サブスクリプションのフェールオーバー**  
-  
- 可用性グループのフェールオーバー時のプル サブスクリプションは失敗します。これは、サーバー インスタンスの障害によってプライマリ レプリカが使用できなくなっており、プライマリ レプリカをホストするサーバー インスタンスの **msdb** データベースに格納されたジョブをプル エージェントが見つけることができないためです。  
-  
- **マージ プッシュ サブスクリプションのフェールオーバー**  
-  
- 可用性グループのフェールオーバー時のプッシュ サブスクリプションは失敗します。これは、プッシュ エージェントが元のサブスクライバーの元のサブスクリプション データベースに接続できなくなっているためです。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションでは、パブリッシャーの自動フェールオーバー、およびトランザクション サブスクライバーの自動フェールオーバーがサポートされます。 可用性データベース上のディストリビューターのフェールオーバーはサポートされていません。 マージ サブスクライバーを可用性グループに含めることは可能ですが、フェールオーバー後に新しいサブスクライバーを構成するには、手動アクションが必要です。 可用性グループは、Websync および ssNoVersion Compact のシナリオと組み合わせることはできません。  
   
 ## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>AlwaysOn 環境でトランザクション サブスクリプションを作成する方法  
  トランザクション レプリケーションの場合、サブスクライバーの可用性グループを構成およびフェールオーバーするために、次の手順を使用します。  
