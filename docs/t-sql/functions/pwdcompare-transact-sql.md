@@ -1,5 +1,5 @@
 ---
-title: "PWDCOMPARE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: PWDCOMPARE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パスワードをハッシュして既存のパスワードのハッシュと比較します。 PWDCOMPARE は空白の検索に使用できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン パスワードや、よくある脆弱なパスワード。  
+  パスワードをハッシュして既存のパスワードのハッシュと比較します。 PWDCOMPARE を使用すると、空白の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン パスワードや、よくある脆弱なパスワードを検索できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,28 +51,28 @@ PWDCOMPARE ( 'clear_text_password'
   
 ## <a name="arguments"></a>引数  
  **'** *clear_text_password* **'**  
- 暗号化されていないパスワードです。 *clear_text_password*は**sysname** (**nvarchar (128)**)。  
+ 暗号化されていないパスワードです。 *clear_text_password* is **sysname** (**nvarchar(128)**).  
   
  *password_hash*  
- パスワードの暗号化ハッシュです。 *password_hash*は**varbinary (128)**です。  
+ パスワードの暗号化ハッシュです。 * password_hash * が varbinary (128)*です。  
   
- *バージョン*  
- 場合は、1 に設定することができるパラメーターを廃止*password_hash*ログインから値を表すよりも前[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]に移行する[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降に変換されていないのか、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]システム。 *バージョン*は**int**です。  
+ *version*  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降に移行されたが [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] システムには変換されていない [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 以前のログインからの値を *password_hash* が表している場合に、1 に設定される可能性がある、古いパラメーターです。 バージョン *は int*です。  
   
 > [!CAUTION]  
->  このパラメーターは、旧バージョンと互換性のため、の提供されますが、パスワード ハッシュ blob にはここで、独自のバージョンの説明が含まれているために無視されます。 [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
+>  このパラメーターは旧バージョンとの互換性を維持するために提供されていますが、パスワード ハッシュ BLOB は独自のバージョンの説明を含んでいるため、無視されます。 [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
- 場合 1 を返しますのハッシュ、 *clear_text_password*と一致する、 *password_hash*パラメーターとそうでない場合は 0 です。  
+ 場合 1 を返しますのハッシュ、 clear_text_password *と一致する、 password_hash* パラメーター、および、そうでない場合は 0 です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  PWDCOMPARE 関数は、パスワード ハッシュの強度に対する脅威にはなりません。このテストは、最初のパラメーターとして渡されるパスワードを使用してログインしようとした場合に実行されるテストと同じテストです。  
   
- **PWDCOMPARE**包含データベース ユーザーのパスワードを使用することはできません。 該当する包含データベースは存在しません。  
+ PWDCOMPARE** 包含データベース ユーザーのパスワードを使用することはできません。 該当する包含データベースは存在しません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  PWDENCRYPT は、パブリックで使用できます。  
   
  sys.sql_logins の password_hash 列を調べるには CONTROL SERVER 権限が必要です。  
@@ -88,7 +88,7 @@ WHERE PWDCOMPARE('', password_hash) = 1 ;
 ```  
   
 ### <a name="b-searching-for-common-passwords"></a>B. よくあるパスワードを検索する  
- よくあるパスワードを見つけて変更できるように検索するには、そのパスワードを最初のパラメーターとして指定します。 たとえば、として指定されたパスワードを検索する次のステートメントを実行`password`です。  
+ よくあるパスワードを見つけて変更できるように検索するには、そのパスワードを最初のパラメーターとして指定します。 たとえば、次のステートメントを実行すると、`password` として指定されているパスワードが検索されます。  
   
 ```  
 SELECT name FROM sys.sql_logins   
@@ -96,7 +96,7 @@ WHERE PWDCOMPARE('password', password_hash) = 1 ;
 ```  
   
 ## <a name="see-also"></a>参照  
- [PWDENCRYPT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/pwdencrypt-transact-sql.md)   
+ [PWDENCRYPT &#40;Transact-SQL&#41;](../../t-sql/functions/pwdencrypt-transact-sql.md)   
  [セキュリティ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "ERROR_PROCEDURE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ERROR_PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ERROR_PROCEDURE ( )
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
 ## <a name="return-value"></a>戻り値  
  CATCH ブロックで呼び出された場合、エラーが発生したストアド プロシージャ名を返します。  
@@ -60,10 +60,10 @@ ERROR_PROCEDURE ( )
   
  CATCH ブロックの範囲外で呼び出された場合は NULL を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ERROR_PROCEDURE は、CATCH ブロックのスコープ内であればどこでも呼び出すことができます。  
   
- ERROR_PROCEDURE は、呼び出される回数や CATCH ブロックのスコープのどこで呼び出されるかに関係なく、エラーが発生したストアド プロシージャまたはトリガーの名前を返します。 これとは対照的関数など、@ERROR、または CATCH ブロックの最初のステートメントでエラーが発生した 1 つの直後のステートメントでは、エラー番号を返します。  
+ ERROR_PROCEDURE は、呼び出される回数や CATCH ブロックのスコープのどこで呼び出されるかに関係なく、エラーが発生したストアド プロシージャまたはトリガーの名前を返します。 これは @@ERROR のような関数とは対称的です。@@ERROR 関数では、エラーの発生元となるステートメントの直後にあるステートメント、または CATCH ブロックの最初のステートメントのエラー番号が返されます。  
   
  入れ子にされた CATCH ブロックを使用すると、ERROR_PROCEDURE では、参照される CATCH ブロックのスコープに固有のストアド プロシージャまたはトリガーの名前が返されます。 たとえば、TRY...CATCH 構造の CATCH ブロックには、TRY...CATCH が入れ子にされている場合があり、 入れ子にされた CATCH ブロック内では、ERROR_PROCEDURE によって、入れ子にされた CATCH ブロックを起動した、エラーの発生元となるストアド プロシージャまたはトリガーの名前が返されます。 ERROR_PROCEDURE が外側の CATCH ブロックで実行された場合は、外側の CATCH ブロックを起動した、エラーの発生元となるストアド プロシージャまたはトリガーの名前が返されます。  
   
@@ -128,7 +128,7 @@ BEGIN CATCH
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorprocedure-in-a-catch-block"></a>C. CATCH ブロックで ERROR_PROCEDURE を使用する  
  次の例では、0 除算エラーを生成したストアド プロシージャを示します。 `ERROR_PROCEDURE` ではエラーが発生したストアド プロシージャの名前が返されます。  
@@ -195,7 +195,7 @@ GO
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; です。TRANSACT-SQL と&#41; です。](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

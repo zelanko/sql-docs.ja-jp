@@ -1,5 +1,5 @@
 ---
-title: "システム関数 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "システム関数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="system-functions-transact-sql"></a>システム関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  次のシステム関数の操作を実行し、値、オブジェクト、および設定に関する情報を返す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  次のシステム関数は、値、オブジェクト、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内の設定値に対して操作を行い、それについての情報を返します。  
   
 |||  
 |-|-|  

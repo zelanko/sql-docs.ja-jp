@@ -1,5 +1,5 @@
 ---
-title: "MIN_ACTIVE_ROWVERSION (TRANSACT-SQL) |Microsoft ドキュメント"
+title: MIN_ACTIVE_ROWVERSION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.lasthandoff: 11/21/2017
 # <a name="minactiverowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  現在のデータベース内でアクティブな最小の **rowversion** 値を返します。 **rowversion** 値がアクティブになるのは、まだコミットされていないトランザクションで使用される場合です。 詳細については、次を参照してください。 [rowversion (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/rowversion-transact-sql.md).  
+  現在のデータベース内でアクティブな最小の **rowversion** 値を返します。 **rowversion** 値がアクティブになるのは、まだコミットされていないトランザクションで使用される場合です。 詳細については、を参照してください。 rowversion (& a) #40 です。TRANSACT-SQL と #41;[](../../t-sql/data-types/rowversion-transact-sql.md).  
   
 > [!NOTE]  
->  **Rowversion**データ型とも呼ばれます**タイムスタンプ**です。  
+>  **rowversion** データ型は、**timestamp** とも呼ばれます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,17 +49,17 @@ MIN_ACTIVE_ROWVERSION
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- 返します、 **binary (8)**値。  
+ 返します、 binary (8)** 値。  
   
-## <a name="remarks"></a>解説  
- MIN_ACTIVE_ROWVERSION はアクティブな最小を返す非決定的関数**rowversion**現在のデータベース内の値。 新しい **rowversion** 値は、通常、 **rowversion**型の列を含むテーブルに対して挿入または更新が実行されたときに生成されます。 データベースにアクティブな値がない場合は、MIN_ACTIVE_ROWVERSION は @ と同じ値を返します@DBTS+ 1 です。  
+## <a name="remarks"></a>Remarks  
+ MIN_ACTIVE_ROWVERSION は、現在のデータベースの最低のアクティブ **rowversion** 値を返す非決定的関数です。 新しい **rowversion** 値は、通常、 **rowversion**型の列を含むテーブルに対して挿入または更新が実行されたときに生成されます。 データベース内にアクティブな値がない場合は、MIN_ACTIVE_ROWVERSION は @@DBTS + 1 と同じ値を返します。  
   
- MIN_ACTIVE_ROWVERSION を使用するデータの同期などのシナリオに便利です**rowversion**グループ一連の変更の値。 アプリケーションが使用する場合@DBTSMIN_ACTIVE_ROWVERSION、代わりの同期時にアクティブなミス変更することができます。  
+ **rowversion** 値を使用して一連の変更をグループ化するデータ同期などのシナリオでは、MIN_ACTIVE_ROWVERSION が役立ちます。 アプリケーションで MIN_ACTIVE_ROWVERSION ではなく @@DBTS を使用する場合、同期が行われるときにアクティブな変更が失われる可能性があります。  
   
  MIN_ACTIVE_ROWVERSION 関数は、トランザクション分離レベルでの変更の影響を受けません。  
   
 ## <a name="examples"></a>使用例  
- 次の例を返します**rowversion**を使用して値`MIN_ACTIVE_ROWVERSION`と`@@DBTS`です。 データベース内にアクティブなトランザクションがない場合、値が異なることがわかります。  
+ 次の例では、`MIN_ACTIVE_ROWVERSION` および `@@DBTS` を使用して、**rowversion** 値を返します。 データベース内にアクティブなトランザクションがない場合、値が異なることがわかります。  
   
 ```  
 -- Create a table that has a ROWVERSION column in it.  

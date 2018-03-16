@@ -1,5 +1,5 @@
 ---
-title: "COLUMNS_UPDATED (TRANSACT-SQL) |Microsoft ドキュメント"
+title: COLUMNS_UPDATED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返します、 **varbinary**テーブルまたはビューを挿入または更新された列を示すビット パターンです。 COLUMNS_UPDATED は内部のどこでも使用、[!INCLUDE[tsql](../../includes/tsql-md.md)]トリガーは、特定のアクションを実行する必要があるかどうかをテストする INSERT または UPDATE トリガー。
+返します、 varbinary** テーブルまたはビューを挿入または更新された列を示すビット パターンです。 COLUMNS_UPDATED は、[!INCLUDE[tsql](../../includes/tsql-md.md)] の INSERT または UPDATE トリガーの内部のどこでも使用でき、そのトリガーが特定の動作を実行すべきかどうかをテストすることができます。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,12 +50,12 @@ COLUMNS_UPDATED ( )
 ## <a name="return-types"></a>戻り値の型
 **varbinary**
   
-## <a name="remarks"></a>解説  
-COLUMNS_UPDATED は、実行される UPDATE または INSERT アクションを複数の列でテストします。 使用してテストするには 1 つの列の UPDATE または INSERT の試行、 [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md)です。
+## <a name="remarks"></a>Remarks  
+COLUMNS_UPDATED は、実行される UPDATE または INSERT アクションを複数の列でテストします。 テストするには 1 つの列の UPDATE または INSERT の試行、次のように使用します。 UPDATE()[](../../t-sql/functions/update-trigger-functions-transact-sql.md)です。
   
 COLUMNS_UPDATED は、左から右に並べられた 1 つ以上のバイトを返します。各バイトの最下位ビットは右端になります。 左端のバイトの右端のビットがテーブル内の最初の列を表し、右から 2 番目のビットは 2 番目の列を、それ以下のビットも同様の順で列を表します。 トリガーが作成されるテーブルに列が 9 個以上ある場合、COLUMNS_UPDATED は複数のバイトを返します。最下位バイトが左端になります。 INSERT 動作では、列には明示的な値または暗黙的な (NULL) 値が挿入されるので、COLUMNS_UPDATED は、すべての列に対して TRUE を返します。
   
-特定の列に対する更新または挿入をテストするには、テスト対象列のビットごとの演算子および整数ビットマスクを使用した構文に従います。 たとえば、テーブル**t1**列が含まれる**C1**、 **C2**、 **C3**、 **C4**、および**C5**. 確認する列**C2**、 **C3**、および**C4**がすべて更新されて (テーブルと**t1** UPDATE トリガーがある)、の構文に従います**& 14**です。 のみかどうかをテストする列**C2**が更新されると、指定**& 2**です。
+特定の列に対する更新または挿入をテストするには、テスト対象列のビットごとの演算子および整数ビットマスクを使用した構文に従います。 たとえば、テーブル **t1** に、列 **C1**、**C2**、**C3**、**C4**、および **C5** があるとします。 列 **C2**、**C3**、および **C4** がすべて更新されている (テーブル **t1** に UPDATE トリガーがある場合) かどうかを検証するには、**& 14** を使用した構文に従います。 列 **C2** が更新されているかどうかだけをテストするには、**& 2** を指定します。
   
 COLUMNS_UPDATED は、[!INCLUDE[tsql](../../includes/tsql-md.md)] の INSERT または UPDATE トリガーの内部のどこでも使用できます。
   
@@ -72,7 +72,7 @@ WHERE TABLE_NAME = 'Person';
 ## <a name="column-sets"></a>列セット
 テーブルで列セットが定義されると、COLUMNS_UPDATED 関数は次のように動作します。
 -   列セットのメンバーである列が明示的に更新された場合は、その列の対応するビットが 1 に設定され、列セットのビットが 1 に設定されます。  
--   列セットが明示的に更新されると、列セットのビットが 1 に設定し、そのテーブル内のスパース列のすべてのビットが 1 に設定されます。  
+-   列セットが明示的に更新された場合は、列セットのビットが 1 に設定され、そのテーブル内のすべてのスパース列のビットが 1 に設定されます。  
 -   挿入操作では、すべてのビットが 1 に設定されます。  
   
      列セットを変更すると列セット内のすべての列のビットが 1 に設定されるため、変更されなかった列セットの列も変更されているように見えます。 列セットの詳細については、「 [列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。  
@@ -80,9 +80,9 @@ WHERE TABLE_NAME = 'Person';
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-columnsupdated-to-test-the-first-eight-columns-of-a-table"></a>A. COLUMNS_UPDATED を使用して、テーブルの最初の 8 列をテストする  
-次の例は、2 つのテーブルを作成します。`employeeData`と`auditEmployeeData`です。 人事部のメンバーは、機密扱いの従業員給与支払い名簿情報が格納された `employeeData` テーブルを修正できます。 従業員の社会保障番号 (SSN)、年間給与、または銀行口座番号に変更があると、監査レコードが生成され、`auditEmployeeData` 監査テーブルに挿入されます。
+次の例では、`employeeData` と `auditEmployeeData` という 2 つのテーブルを作成します。 人事部のメンバーは、機密扱いの従業員給与支払い名簿情報が格納された `employeeData` テーブルを修正できます。 従業員の社会保障番号 (SSN)、年間給与、または銀行口座番号に変更があると、監査レコードが生成され、`auditEmployeeData` 監査テーブルに挿入されます。
   
-使用して`COLUMNS_UPDATED()`従業員の機密情報を含む列への変更が迅速に行われたをテストします。 この方法で `COLUMNS_UPDATED()` が正しく動作するのは、テーブルの最初の 8 列に対する変更を検出する場合だけです。
+`COLUMNS_UPDATED()` を使用することで、機密扱いの従業員情報が格納されている列に対する変更も、短時間でテストすることができます。 この方法で `COLUMNS_UPDATED()` が正しく動作するのは、テーブルの最初の 8 列に対する変更を検出する場合だけです。
   
 ```sql
 USE AdventureWorks2012;  
@@ -188,7 +188,7 @@ GO
 ```  
   
 ### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. COLUMNS_UPDATED を使用して、9 列以上をテストする  
-テーブルの最初の 8 列以外の列に影響を与える更新をテストするには、`SUBSTRING` 関数を使用して、`COLUMNS_UPDATED` から返された正しいビットをテストします。 次の例は、列に影響を与える更新プログラムのテスト`3`、 `5`、および`9`で、`AdventureWorks2012.Person.Person`テーブル。
+テーブルの最初の 8 列以外の列に影響を与える更新をテストするには、`SUBSTRING` 関数を使用して、`COLUMNS_UPDATED` から返された正しいビットをテストします。 次の例では、`3` テーブルの列 `5`、`9`、および `AdventureWorks2012.Person.Person` に影響を与える更新をテストしています。
   
 ```sql
 USE AdventureWorks2012;  
@@ -211,8 +211,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照
-[ビット処理演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+[ビットごとの演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
-[UPDATE &#40; #41&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/update-trigger-functions-transact-sql.md)
+[UPDATE&#40;&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)
   
   

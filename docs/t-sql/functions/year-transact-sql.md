@@ -1,5 +1,5 @@
 ---
-title: "年 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: YEAR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -39,9 +39,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="year-transact-sql"></a>YEAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  指定した年を表す整数を返します*日付*です。  
+  指定された*日付*の年を表す整数を返します。  
   
- すべての概要については[!INCLUDE[tsql](../../includes/tsql-md.md)]日付と時刻のデータ型および関数を参照してください[日付と時刻のデータ型および関数 &#40;TRANSACT-SQL と #41 です。](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;[](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,31 +53,31 @@ YEAR ( date )
   
 ## <a name="arguments"></a>引数  
  *date*  
- 式に解決されることができるは、**時間**、**日付**、 **smalldatetime**、 **datetime**、 **datetime2**、または**datetimeoffset**値。 *日付*引数は、式、列式、ユーザー定義変数またはリテラル文字列を指定できます。  
+ **time**、**date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** の値に解決できる式です。 date* 引数には、式、列式、ユーザー定義変数、または文字列リテラルを指定できます。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
 ## <a name="return-value"></a>戻り値  
- 年と同じ値を返します[DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**年**、*日付*)。  
+ * * 年と同じ値を返す DATEPART[](../../t-sql/functions/datepart-transact-sql.md) (年、日). * *  
   
- 場合*日付*のみに時刻部分が含まれています、戻り値は基準年を 1900 年です。  
+ 日付には、時刻部分のみが含まれる、戻り値は基準年を 1900 年にです。  
   
 ## <a name="examples"></a>使用例  
- 次のステートメントから`2010`です。 これは、年を表す値です。  
+ 次のステートメントでは、`2010` が返されます。 これは、年を表す値です。  
   
 ```  
 SELECT YEAR('2010-04-30T01:01:01.1234567-07:00');  
 ```  
   
- 次のステートメントから`1900, 1, 1`です。 引数*日付*番号`0`です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]解釈`0`1900 年 1 月 1 日とします。  
+ 次のステートメントでは、`1900, 1, 1` が返されます。 *date*の引数は数値 `0`です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、`0` を 1900 年 1 月 1 日と解釈します。  
   
 ```  
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次のステートメントから`1900, 1, 1`です。 引数*日付*番号`0`です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]解釈`0`1900 年 1 月 1 日とします。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 次のステートメントでは、`1900, 1, 1` が返されます。 *date* の引数は数値 `0`です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、`0` を 1900 年 1 月 1 日と解釈します。  
   
 ```  
 SELECT TOP 1 YEAR(0), MONTH(0), DAY(0);  

@@ -1,5 +1,5 @@
 ---
-title: "SESSIONPROPERTY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SESSIONPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ SESSIONPROPERTY (option)
   
 ## <a name="arguments"></a>引数  
  *オプション*  
- このセッションの現在のオプション設定値です。 *オプション*値は次のいずれかを指定できます。  
+ このセッションの現在のオプション設定値です。 オプション* 値は次のいずれかを指定することができます。  
   
 |オプション|Description|  
 |------------|-----------------|  
@@ -60,16 +60,16 @@ SESSIONPROPERTY (option)
 |CONCAT_NULL_YIELDS_ NULL|連結の結果が NULL として取り扱われるのか、空文字列として取り扱われるのかを制御します。<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
 |NUMERIC_ROUNDABORT|式の丸め処理で精度が低下するときに、エラー メッセージおよび警告を出力するかどうかを指定します。<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
 |QUOTED_IDENTIFIER|識別子とリテラル文字列を区切る引用符の使用について、ISO 規則に従うかどうかを指定します。<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
-|\<その他の文字列 >|NULL = 無効な入力|  
+|\<その他の文字列>|NULL = 無効な入力|  
   
 ## <a name="return-types"></a>戻り値の型  
  **sql_variant**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SET オプションは、サーバー レベル、データベース レベル、およびユーザー指定のオプションを組み合わせることによって表されます。  
   
 ## <a name="examples"></a>使用例  
- 次の例の設定を返します、`CONCAT_NULL_YIELDS_NULL`オプション。  
+ 次の例では、`CONCAT_NULL_YIELDS_NULL` オプションの設定を返します。  
   
 ```  
 SELECT   SESSIONPROPERTY ('CONCAT_NULL_YIELDS_NULL')  

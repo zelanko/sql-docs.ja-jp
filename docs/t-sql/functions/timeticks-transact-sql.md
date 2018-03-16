@@ -1,5 +1,5 @@
 ---
-title: "@@TIMETICKS (TRANSACT-SQL) |Microsoft ドキュメント"
+title: '@@TIMETICKS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40timeticks-transact-sql"></a>&#x40;&#x40<です。TIMETICKS (TRANSACT-SQL)
+# <a name="x40x40timeticks-transact-sql"></a>&#x40;&#x40;TIMETICKS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   タイマーのティックをミリ秒数で返します。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>戻り値の型  
  **整数 (integer)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  1 ティックあたりの時間は、コンピューターによって異なります。 オペレーティング システムの各ティックは 31.25 ミリ秒 (32 分の 1 秒) です。  
   
 ## <a name="examples"></a>使用例  
@@ -62,6 +62,6 @@ SELECT @@TIMETICKS AS 'Time Ticks';
 ```  
   
 ## <a name="see-also"></a>参照  
- [システム統計関数 &#40;Transact-SQL&#41;す。](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [システム統計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

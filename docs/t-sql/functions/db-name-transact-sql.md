@@ -1,5 +1,5 @@
 ---
-title: "DB_NAME (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DB_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -50,13 +50,13 @@ DB_NAME ( [ database_id ] )
   
 ## <a name="arguments"></a>引数  
 *database_id*  
-名前が返されるデータベースの識別番号 (ID) を指定します。 *database_id*は**int**、既定値はありません。 ID の指定を省略すると、現在のデータベースの名前が返されます。
+名前が返されるデータベースの識別番号 (ID) を指定します。 database_id *は int*, 、既定値はありません。 ID の指定を省略すると、現在のデータベースの名前が返されます。
   
 ## <a name="return-types"></a>戻り値の型
-**nvarchar (128)**
+**nvarchar(128)**
   
-## <a name="permissions"></a>Permissions  
-場合、呼び出し元の**DB_NAME**データベースの所有者ではないと、データベースが**マスター**または**tempdb**、対応する行を表示するために必要な最小限のアクセス許可は、ALTER ANY DATABASE または VIEW ANY DATABASE のサーバー レベル権限、または CREATE DATABASE 権限、**マスター**データベース。 呼び出し元が接続しているデータベースは常に **sys.databases**で確認できます。
+## <a name="permissions"></a>アクセス許可  
+場合の呼び出し元 DB_NAME **、データベースの所有者ではないと、データベースが マスター** または tempdb**, 、対応する行を表示するために必要な最低限のアクセス許可には、ALTER ANY DATABASE または VIEW ANY DATABASE のサーバー レベルの権限、または CREATE DATABASE 権限、 マスター** データベース。 呼び出し元が接続しているデータベースは常に **sys.databases**で確認できます。
   
 > [!IMPORTANT]  
 >  既定は、パブリックのロールは、データベースの情報を表示するすべてのログインを許可する、VIEW ANY DATABASE 権限を持っています。 データベースを検出する機能からのログインをブロックするには、パブリックから VIEW ANY DATABASE 権限を取り消すまたは個別のログインの VIEW ANY DATABASE 権限を拒否します。  
@@ -81,16 +81,16 @@ SELECT DB_NAME(3)AS [Database Name];
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-return-the-current-database-name"></a>C. 現在のデータベース名を返す  
+### <a name="c-return-the-current-database-name"></a>C. 現在のデータベース名を取得する  
   
 ```sql
 SELECT DB_NAME() AS [Current Database];  
 ```  
   
-### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>D. データベース ID を使用して、データベースの名前を返す  
-次の例では、各データベースの database_id とデータベースの名前を返します。
+### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>D. データベース ID を使用してデータベースの名前を返す  
+次の例では、各データベースのデータベース名とデータベース ID を返します。
   
 ```sql
 SELECT DB_NAME(database_id) AS [Database], database_id  
@@ -98,8 +98,8 @@ FROM sys.databases;
 ```  
   
 ## <a name="see-also"></a>参照
-[DB_ID と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/db-id-transact-sql.md)  
-[メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)  
+DB_ID と #40 です。TRANSACT-SQL と #41 です。[](../../t-sql/functions/db-id-transact-sql.md)  
+メタデータ関数 (&) #40 です。TRANSACT-SQL と #41 です。[](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
   
   

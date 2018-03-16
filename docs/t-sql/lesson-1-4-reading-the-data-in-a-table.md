@@ -1,5 +1,5 @@
 ---
-title: "テーブル (チュートリアル) 内のデータを読み取る |Microsoft ドキュメント"
+title: "テーブルのデータの読み取り (チュートリアル) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-4---reading-the-data-in-a-table"></a>レッスン 1 ~ 4-テーブル内のデータの読み取り
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]SELECT ステートメントを使用して、テーブル内のデータを読み取る。 SELECT ステートメントは最も重要な [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの 1 つで、構文には多くのバリエーションがあります。 このチュートリアルでは、5 つの単純なバージョンを使用します。  
+# <a name="lesson-1-4---reading-the-data-in-a-table"></a>レッスン 1-4 - テーブルのデータの読み取り
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]テーブルのデータを読み取るには、SELECT ステートメントを使用します。 SELECT ステートメントは最も重要な [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの 1 つで、構文には多くのバリエーションがあります。 このチュートリアルでは、5 つの単純なバージョンを使用します。  
   
 ### <a name="to-read-the-data-in-a-table"></a>テーブルのデータを読み取るには  
   

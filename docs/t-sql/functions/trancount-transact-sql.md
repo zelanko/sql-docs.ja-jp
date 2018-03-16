@@ -1,5 +1,5 @@
 ---
-title: "@@TRANCOUNT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: '@@TRANCOUNT (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;です。TRANCOUNT (TRANSACT-SQL)
+# <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   現在の接続で実行された BEGIN TRANSACTION ステートメントの数を返します。  
@@ -50,13 +50,13 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>戻り値の型  
  **整数 (integer)**  
   
-## <a name="remarks"></a>解説  
- BEGIN TRANSACTION ステートメントをインクリメント@TRANCOUNTを 1 つです。 ROLLBACK TRANSACTION デクリメント @@TRANCOUNT ROLLBACK TRANSACTION を除く、0 に*savepoint_name*、これには影響しません@TRANCOUNTです。 COMMIT TRANSACTION または COMMIT WORK をデクリメント@TRANCOUNTを 1 つです。  
+## <a name="remarks"></a>Remarks  
+ @@TRANCOUNT の値は、BEGIN TRANSACTION ステートメントが実行されるごとに 1 ずつ増加します。 ROLLBACK TRANSACTION は、@@TRANCOUNT に影響しない ROLLBACK TRANSACTION *savepoint_name* を除き、@@TRANCOUNT を 0 にデクリメントします。 COMMIT TRANSACTION または COMMIT WORK は、@@TRANCOUNT を 1 ずつデクリメントします。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-showing-the-effects-of-the-begin-and-commit-statements"></a>A. BEGIN ステートメントと COMMIT ステートメントの影響を確認する  
- 次の例は、入れ子になっている効果を示しています。`BEGIN`と`COMMIT`ステートメントがある、`@@TRANCOUNT`変数。  
+ 次の例では、`BEGIN` ステートメントと `COMMIT` ステートメントを入れ子にした場合の `@@TRANCOUNT` 変数に対する影響を確認します。  
   
 ```  
 PRINT @@TRANCOUNT  
@@ -80,7 +80,7 @@ PRINT @@TRANCOUNT
 ```  
   
 ### <a name="b-showing-the-effects-of-the-begin-and-rollback-statements"></a>B. BEGIN ステートメントと ROLLBACK ステートメントの影響を確認する  
- 次の例は、入れ子になっている効果を示しています。`BEGIN TRAN`と`ROLLBACK`ステートメントがある、`@@TRANCOUNT`変数。  
+ 次の例では、`BEGIN TRAN` ステートメントと `ROLLBACK` ステートメントを入れ子にした場合の `@@TRANCOUNT` 変数に対する影響を確認します。  
   
 ```  
 PRINT @@TRANCOUNT  
@@ -105,6 +105,6 @@ PRINT @@TRANCOUNT
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [システム関数 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

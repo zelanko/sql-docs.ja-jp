@@ -1,5 +1,5 @@
 ---
-title: "ENCRYPTBYASYMKEY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ENCRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,21 +49,21 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
   
 ## <a name="arguments"></a>引数  
  *Asym_Key_ID*  
- データベース内の非対称キーの ID を指定します。 **int**です。  
+ データベース内の非対称キーの ID を指定します。 **int** です。  
   
- *クリア テキスト*  
+ *cleartext*  
  非対称キーで暗号化するデータの文字列を指定します。  
   
  **@plaintext**  
- 型の変数は、 **nvarchar**、 **char**、 **varchar**、**バイナリ**、 **varbinary**、または**nchar**非対称キーで暗号化されるデータを格納しています。  
+ 非同期キーを使用して暗号化されるデータを含む **nvarchar**、**char**、**varchar**、**binary**、**varbinary**、または **nchar** 型の変数を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** 8,000 バイトの最大サイズ。  
+ varbinary** 8,000 バイトの最大サイズ。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  非対称キーでの暗号化および暗号化解除は、対称キーの場合に比べて非常に時間がかかります。 テーブル内のユーザー データなど、大きなデータセットは、非対称キーを使用して暗号化しないことをお勧めします。 代わりに、強力な対称キーを使用してデータを暗号化し、非対称キーを使用してその対称キーを暗号化してください。  
   
- **EncryptByAsymKey**返す**NULL**場合は、入力が、アルゴリズムによっては、バイト数を超えています。 制限: 512 ビットの RSA キー暗号化最大 53 バイトを最大 117 バイトを暗号化できるは、1024 ビット キーおよび 2048 ビットのキーは、最大 245 バイトを暗号化できます。 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、証明書と非対称キーはどちらも RSA キーのラッパーです)。  
+ EncryptByAsymKey **返す NULL** 場合は、入力は、アルゴリズムによっては、バイト数を超えています。 この上限は、次のとおりです。512 ビットの RSA キーでは、最大 53 バイトを暗号化できます。1024 ビットのキーでは、最大 117 バイトを暗号化できます。2048 ビットのキーでは、最大 245 バイトを暗号化できます  ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、証明書と非対称キーはどちらも RSA キーのラッパーです)。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`@cleartext` に格納されているテキストを非対称キー `JanainaAsymKey02` を使用して暗号化します。 暗号化したデータは、`ProtectedData04` テーブルに挿入します。  
@@ -76,7 +76,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [DECRYPTBYASYMKEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/decryptbyasymkey-transact-sql.md)   
+ [DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "ALTER CRYPTOGRAPHIC PROVIDER (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/20/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-cryptographic-provider-transact-sql"></a>ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  内の暗号プロバイダーを変更[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]拡張キー管理 (EKM) プロバイダーからです。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内の暗号化サービス プロバイダーを拡張キー管理 (EKM: Extensible Key Management) プロバイダーから変更します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,12 +53,12 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  拡張キー管理プロバイダーの名前です。  
   
  *Path_of_DLL*  
- 実装する .dll ファイルのパス、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]拡張キー管理インターフェイスです。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張キー管理インターフェイスを実装する .dll ファイルのパスを指定します。  
   
  ENABLE | DISABLE  
  プロバイダーを有効にするか無効にするかを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で拡張キー管理を実装するために使用する .dll ファイルをプロバイダーから変更する場合、ALTER CRYPTOGRAPHIC PROVIDER ステートメントを使用する必要があります。  
   
  ALTER CRYPTOGRAPHIC PROVIDER ステートメントを使用して .dll ファイルのパスを更新すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では次の操作が実行されます。  
@@ -79,20 +79,20 @@ EKM プロバイダーの dll の作成に使用されたヘッダー ファイ�
   
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  暗号化サービス プロバイダーに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例と呼ばれる、暗号化サービス プロバイダーを変更する`SecurityProvider`で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、.dll ファイルの新しいバージョンにします。 この新しいバージョンの名前は`c:\SecurityProvider\SecurityProvider_v2.dll`がサーバーにインストールされているとします。 プロバイダーの証明書をサーバーにインストールする必要があります。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内の `SecurityProvider` という暗号化サービス プロバイダーを新しいバージョンの .dll ファイルに変更します。 この新しいバージョンの .dll ファイルは、`c:\SecurityProvider\SecurityProvider_v2.dll` という名前でサーバーにインストールされています。 プロバイダーの証明書をサーバーにインストールする必要があります。  
   
-1. アップグレードを実行するプロバイダーを無効にします。 これは、開いているすべての暗号化セッションを終了します。  
+1. アップグレードを実行するプロバイダーを無効にします。 これにより、開いているすべての暗号化セッションが終了します。  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 DISABLE;  
 GO  
 ```  
 
-2. プロバイダーの .dll ファイルをアップグレードします。 バージョンが異なる場合が、GUID では、以前のバージョンと同じ必要があります。  
+2. プロバイダーの .dll ファイルをアップグレードします。 GUID では必ず以前のバージョンと同じになりますが、バージョンは異なってもかまいません。  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider  
 FROM FILE = 'c:\SecurityProvider\SecurityProvider_v2.dll';  

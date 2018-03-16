@@ -1,5 +1,5 @@
 ---
-title: "ビューを作成するストアド プロシージャと |Microsoft ドキュメント"
+title: "ビューとストアド プロシージャの作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-3---creating-views-and-stored-procedures"></a>レッスン 2 ~ 3 で作成するビューおよびストアド プロシージャ
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]これで Mary にアクセスできる、 **TestData**データベース、可能性がある、ビューとストアド プロシージャなど、いくつかのデータベース オブジェクトを作成し、それらに Mary のアクセス権を付与します。 ビューは、格納された SELECT ステートメントで、ストアド プロシージャは、バッチとして実行される 1 つ以上の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントです。  
+# <a name="lesson-2-3---creating-views-and-stored-procedures"></a>レッスン 2-3 - ビューとストアド プロシージャの作成
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Mary が **TestData** データベースにアクセスできるようになったので、ビューやストアド プロシージャのようなデータベース オブジェクトを作成し、Mary にこれらのオブジェクトへのアクセス権を付与できます。 ビューは、格納された SELECT ステートメントで、ストアド プロシージャは、バッチとして実行される 1 つ以上の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントです。  
   
 ビューに対しては、テーブルと同じようにクエリが実行されます。パラメーターは使用できません。 ストアド プロシージャは、ビューよりも複雑です。 ストアド プロシージャは、入力と出力のパラメーターを指定でき、IF ステートメントや WHILE ステートメントなどの、コードの流れを制御するステートメントを含めることができます。 データベース内でのすべての繰り返し操作には、ストアド プロシージャを使用することをお勧めします。  
   

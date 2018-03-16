@@ -1,5 +1,5 @@
 ---
-title: "CRYPT_GEN_RANDOM (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CRYPT_GEN_RANDOM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -46,15 +46,15 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
   
 ## <a name="arguments"></a>引数  
 *length*  
-作成される数の長さ。 最大値は 8000 です。 *長さ*は型です。 **int**です。
+作成される数の長さ。 最大値は 8000 です。 長さ *は型です。 int*です。
   
-*シード*  
-ランダム シードとして使用するデータ (省略可能)。  以上である必要がある*長さ*データのバイト数。 *シード*は**varbinary (8000)**です。
+*seed*  
+ランダム シードとして使用するデータ (省略可能)。  以上である必要がありますが 長さ* データのバイト数。 シード *は varbinary (8000)*です。
   
-## <a name="returned-types"></a>返された型  
-**varbinary (8000)**
+## <a name="returned-types"></a>返される型  
+**varbinary(8000)**
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
 この関数はパブリックであり、特別な権限は必要ありません。
   
 ## <a name="examples"></a>使用例  
@@ -73,6 +73,6 @@ SELECT CRYPT_GEN_RANDOM(4, 0x25F18060) ;
 ```  
   
 ## <a name="see-also"></a>参照
-[Rand 関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rand-transact-sql.md)
+RAND (&) #40 です。TRANSACT-SQL と #41 です。[](../../t-sql/functions/rand-transact-sql.md)
   
   

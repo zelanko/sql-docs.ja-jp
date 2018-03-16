@@ -1,5 +1,5 @@
 ---
-title: "CURRENT_TRANSACTION_ID (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CURRENT_TRANSACTION_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -49,9 +49,9 @@ CURRENT_TRANSACTION_ID( )
 **bigint**
   
 ## <a name="return-value"></a>戻り値  
-取得した現在のセッションで現在のトランザクションのトランザクション ID [sys.dm_tran_current_transaction &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md).
+* *から取得した現在のセッションで、現在のトランザクションのトランザクション ID sys.dm_tran_current_transaction (&) #40 です。TRANSACT-SQL と #41;[](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md).**
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
 すべてのユーザーには、現在のセッションのトランザクション ID を返すことができます。
   
 ## <a name="examples"></a>使用例  
@@ -62,10 +62,10 @@ SELECT CURRENT_TRANSACTION_ID();
 ```  
   
 ## <a name="see-also"></a>参照
-[sp_set_session_context &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)  
-[SESSION_CONTEXT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/session-context-transact-sql.md)  
+[sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)  
+[SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md)  
 [行レベルのセキュリティ](../../relational-databases/security/row-level-security.md)  
-[CONTEXT_INFO &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/context-info-transact-sql.md)  
-[SET CONTEXT_INFO &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-context-info-transact-sql.md)
+[CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
+[SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)
   
   

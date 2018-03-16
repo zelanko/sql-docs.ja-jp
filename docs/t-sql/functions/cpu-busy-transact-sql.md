@@ -1,5 +1,5 @@
 ---
-title: "@@CPU_BUSY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: '@@CPU_BUSY (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -37,13 +37,13 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40cpubusy-transact-sql"></a>&#x40;&#x40;です。CPU_BUSY (TRANSACT-SQL)
+# <a name="x40x40cpubusy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-時間を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が前回起動されてからの作業に費やしたします。 結果は、CPU 時間単位、または「チックで」し、は、他のすべての Cpu の累積なので、実際の経過時間を超える可能性があります。 乗算 @@TIMETICKS (マイクロ秒) に変換します。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動してからの動作時間を返します。 結果は CPU 時間の増分 ("ティック") で返され、これはすべての CPU 時間を累積したものです。したがって、実際の経過時間を超える場合があります。 マイクロ秒に変換するには、@@TIMETICKS を乗算します。
   
 > [!NOTE]  
->  に時間が返された場合 @@CPU_BUSY または @@IO_BUSY 約 49 日の累積 CPU 時間を超える場合、演算オーバーフロー警告が表示されます。 その場合の値を @@CPU_BUSY 、 @@IO_BUSY および @@IDLE 変数が正確ではありません。  
+>  @@CPU_BUSY または @@IO_BUSY で返される時間が、約 49 日分の累積 CPU 時間を超えた場合は、演算オーバーフロー警告が表示されます。 その場合、@@CPU_BUSY@@IO_BUSY、および @@IDLE の各変数は正確ではありません。  
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -56,11 +56,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>戻り値の型
 **整数 (integer)**
   
-## <a name="remarks"></a>解説  
-いくつか含むレポートを表示する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CPU 利用状況などの統計情報の実行[sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)です。
+## <a name="remarks"></a>Remarks  
+いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU の利用状況などの統計情報の実行 [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)です。
   
 ## <a name="examples"></a>使用例  
-次の例では、現在のシステム上の日付と時刻における [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 利用状況を示します。 算術オーバーフローを避けるためには、値をマイクロ秒単位に変換するときに、例では、値のいずれかに変換、`float`データ型。
+次の例では、現在のシステム上の日付と時刻における [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 利用状況を示します。 値をマイクロ秒に変換するときに演算オーバーフローが発生しないようにするため、この例では値の 1 つを `float` 型に変換しています。
   
 ```sql
 SELECT @@CPU_BUSY * CAST(@@TIMETICKS AS float) AS 'CPU microseconds',   
@@ -76,10 +76,10 @@ CPU microseconds As of
 ```
   
 ## <a name="see-also"></a>参照
-[sys.dm_os_sys_info &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)  
+[sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)  
 [@@IDLE &#40;Transact-SQL&#41;](../../t-sql/functions/idle-transact-sql.md)  
 [@@IO_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/io-busy-transact-sql.md)  
-[sp_monitor &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)  
-[システム統計関数 &#40;Transact-SQL&#41;す。](../../t-sql/functions/system-statistical-functions-transact-sql.md)
+[sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md):  
+[システム統計関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/system-statistical-functions-transact-sql.md)
   
   

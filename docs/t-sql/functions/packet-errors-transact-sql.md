@@ -1,5 +1,5 @@
 ---
-title: "@@PACKET_ERRORS (TRANSACT-SQL) |Microsoft ドキュメント"
+title: '@@PACKET_ERRORS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40packeterrors-transact-sql"></a>&#x40;&#x40;です。@Packet_errors (TRANSACT-SQL)
+# <a name="x40x40packeterrors-transact-sql"></a>&#x40;&#x40;PACKET_ERRORS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動以降に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続で発生した、ネットワーク パケット エラーの数を返します。  
@@ -52,8 +52,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>戻り値の型  
  **整数 (integer)**  
   
-## <a name="remarks"></a>解説  
- いくつか含むレポートを表示する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パケットのエラーなどの統計情報の実行**sp_monitor**です。  
+## <a name="remarks"></a>Remarks  
+ いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パケットのエラーなどの統計情報の実行 sp_monitor**です。  
   
 ## <a name="examples"></a>使用例  
  次に、`@@PACKET_ERRORS` の使用例を示します。  
@@ -74,6 +74,6 @@ Packet Errors
  [@@PACK_RECEIVED &#40;Transact-SQL&#41;](../../t-sql/functions/pack-received-transact-sql.md)   
  [@@PACK_SENT &#40;Transact-SQL&#41;](../../t-sql/functions/pack-sent-transact-sql.md)   
  [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [システム統計関数 &#40;Transact-SQL&#41;す。](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [システム統計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

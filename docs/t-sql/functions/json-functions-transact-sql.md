@@ -1,5 +1,5 @@
 ---
-title: "JSON 関数 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "JSON 関数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -29,20 +29,20 @@ ms.lasthandoff: 11/17/2017
 # <a name="json-functions-transact-sql"></a>JSON 関数 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-このセクションのページで説明されている関数を使用して、検証または JSON テキストを変更または単純または複雑な値を抽出します。  
+このセクションのページで説明されている関数を使用して、JSON テキストを検証または変更するか、単純または複雑な値を抽出します。  
   
-|関数|Description|  
+|機能|説明|  
 |--------------|-----------------|  
 |[ISJSON](../../t-sql/functions/isjson-transact-sql.md)|有効な JSON を含む文字列であるかどうかをテストします。|  
 |[JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md)|JSON 文字列からには、スカラー値を抽出します。|  
 |[JSON_QUERY](../../t-sql/functions/json-query-transact-sql.md)|オブジェクトまたは配列を JSON 文字列から抽出します。|  
 |[JSON_MODIFY](../../t-sql/functions/json-modify-transact-sql.md)|JSON 文字列内のプロパティの値を更新し、更新された JSON 文字列を返します。|
 
- 詳細については、JSON での組み込みサポートの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[JSON データ &#40;です。SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での JSON の組み込みサポートの詳細については、「[SQL Server の JSON データ](../../relational-databases/json/json-data-sql-server.md)」を参照してください。  
     
 ## <a name="see-also"></a>参照  
- [検証、クエリ、および組み込み関数 &#40; を使用した JSON データの変更SQL Server &#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)   
- [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON データ &#40;です。SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+ [組み込み関数を使用した JSON データの検証、クエリ、変更 &#40;SQL Server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)   
+ [JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [JSON データ &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   

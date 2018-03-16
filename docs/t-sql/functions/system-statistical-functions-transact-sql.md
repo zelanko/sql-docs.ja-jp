@@ -1,5 +1,5 @@
 ---
-title: "システム統計関数 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "システム統計関数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 |[@@IO_BUSY](../../t-sql/functions/io-busy-transact-sql.md)|[@@TOTAL_READ](../../t-sql/functions/total-read-transact-sql.md)|  
 |[@@PACKET_ERRORS](../../t-sql/functions/packet-errors-transact-sql.md)|[@@TOTAL_WRITE](../../t-sql/functions/total-write-transact-sql.md)|  
   
- システム統計関数はすべて非決定的です。 つまり、これらの関数は、同じ一連の入力値を使用しても、呼び出されるたびに常に同じ結果を返すわけではありません。 関数の決定性の詳細については、次を参照してください。[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)です。  
+ システム統計関数はすべて非決定的です。 つまり、これらの関数は、同じ一連の入力値を使用しても、呼び出されるたびに常に同じ結果を返すわけではありません。 関数の決定性の詳細については、次を参照してください。 決定的関数と非決定的関数[](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)です。  
   
 ## <a name="see-also"></a>参照  
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  

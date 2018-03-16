@@ -1,5 +1,5 @@
 ---
-title: "レッスン 1: データベース オブジェクトの作成 |Microsoft ドキュメント"
+title: "レッスン 1: データベース オブジェクトの作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-1-creating-database-objects"></a>レッスン 1: データベース オブジェクトの作成
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]このレッスンでは、データベースを作成、データベースにテーブルを作成およびにアクセスして、テーブル内のデータを変更する方法を示します。 これは [!INCLUDE[tsql](../includes/tsql-md.md)]の入門レッスンであるため、これらのステートメントの各種オプションは使用せず、その説明も含まれていません。  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]このレッスンでは、データベースを作成する方法、データベースにテーブルを作成する方法、およびテーブル内のデータにアクセスして変更する方法を説明します。 これは [!INCLUDE[tsql](../includes/tsql-md.md)]の入門レッスンであるため、これらのステートメントの各種オプションは使用せず、その説明も含まれていません。  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントは次の方法で作成して [!INCLUDE[ssDE](../includes/ssde-md.md)] に送信できます。  
   

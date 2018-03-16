@@ -1,5 +1,5 @@
 ---
-title: "ビット (TRANSACT-SQL) |Microsoft ドキュメント"
+title: bit (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -36,10 +36,10 @@ ms.lasthandoff: 11/21/2017
 
   1、0、または NULL の値をとる整数型です。  
   
-## <a name="remarks"></a>解説  
-[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の記憶域を最適化**ビット**列です。 8 つ以内がある場合**ビット**列、テーブル内の列が 1 バイトとして格納されます。 9 ~ 16 がある場合**ビット**列、列は、2 (バイト単位) として保存されなどです。
+## <a name="remarks"></a>Remarks  
+[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の記憶域を最適化 ビット** 列です。 8 つ以内がある場合 ビット** 列、テーブル内の列は 1 バイトとして格納します。 9 ～ 16 がある場合 ビット** 列、列 2 バイトとして格納されている場合は、およびなどです。
   
-変換できる文字列値 TRUE および FALSE**ビット**値: TRUE は 1 に変換され、FALSE は 0 に変換されます。
+変換できる文字列値 TRUE および FALSE ビット** 値: TRUE は 1 に変換して、FALSE は 0 に変換されます。
   
 bit 型に変換すると、0 以外の値はすべて 1 になります。
   
@@ -47,10 +47,10 @@ bit 型に変換すると、0 以外の値はすべて 1 になります。
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
-[データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[データ型の変換 &#40;データベース エンジン"&"#41 です。](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
-[sys.types &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   

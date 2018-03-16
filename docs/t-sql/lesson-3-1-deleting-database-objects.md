@@ -1,5 +1,5 @@
 ---
-title: "データベース オブジェクトの削除 |Microsoft ドキュメント"
+title: "データベース オブジェクトの削除 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-3-1---deleting-database-objects"></a>レッスン 3-1-データベース オブジェクトの削除
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]このチュートリアルのすべてのトレースを削除するには、だけデータベースを削除する可能性があります。 ただし、このトピックでは、チュートリアルを進みながら実行したすべての操作を元に戻す手順を実行します。  
+# <a name="lesson-3-1---deleting-database-objects"></a>レッスン 3-1 - データベース オブジェクトの削除
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]このチュートリアルのすべてのトレースを削除するには、データベースを削除します。 ただし、このトピックでは、チュートリアルを進みながら実行したすべての操作を元に戻す手順を実行します。  
   
 ### <a name="removing-permissions-and-objects"></a>権限とオブジェクトの削除  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 11/21/2017
 これで、「 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの記述」のチュートリアルを終了します。 このチュートリアルは概要であり、使用できるステートメントのすべてのオプションが記載されているわけではありません。 効率のよいデータベース構造を設計して作成し、セキュリティ保護されたデータ アクセスを構成するには、このチュートリアルで示したデータベースよりも複雑なデータベースが必要です。  
   
 ## <a name="return-to-sql-server-tools-portal"></a>SQL Server ツールのポータルに戻る  
-[チュートリアル : Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)  
+[チュートリアル: Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>参照  
 [REVOKE &#40;Transact-SQL&#41;](../t-sql/statements/revoke-transact-sql.md)  

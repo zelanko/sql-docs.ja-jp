@@ -1,5 +1,5 @@
 ---
-title: "Sin 関数 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="sin-transact-sql"></a>SIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  ラジアンでと概数型の指定された角度の三角関数サインを返します**float**、式です。  
+  ラジアンでと概数型の場合、指定された角度の三角関数サインが返されます float**, 、式です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ SIN ( float_expression )
 
 ## <a name="arguments"></a>引数  
  *float_expression*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)型の**float**または float 型に暗黙的に変換できる型です。  
+ **float** 型、または暗黙的に float 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  
@@ -71,8 +71,8 @@ The SIN of the angle is: 0.929607
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例では、指定された角度の正弦を計算します。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 次の例では、指定された角度の sine を計算します。  
   
 ```  
 SELECT SIN(45.175643);  
@@ -86,7 +86,7 @@ SELECT SIN(45.175643);
 ```  
   
 ## <a name="see-also"></a>参照  
- [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

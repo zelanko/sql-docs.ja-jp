@@ -1,5 +1,5 @@
 ---
-title: "@@TOTAL_ERRORS (TRANSACT-SQL) |Microsoft ドキュメント"
+title: '@@TOTAL_ERRORS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40totalerrors-transact-sql"></a>&#x40;&#x40;です。TOTAL_ERRORS (TRANSACT-SQL)
+# <a name="x40x40totalerrors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動してから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で発生したディスクの書き込みエラーの数を返します。  
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>戻り値の型  
  **整数 (integer)**  
   
-## <a name="remarks"></a>解説  
- この関数によって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で発生したすべての書き込みエラーが返されるわけではありません。 致命的ではない書き込みエラーが発生した場合は、サーバー自身によって処理されることがあり、これはエラーとして扱われません。 いくつか含むレポートを表示する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]統計情報、エラーの合計数を含む実行**sp_monitor**です。  
+## <a name="remarks"></a>Remarks  
+ この関数によって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で発生したすべての書き込みエラーが返されるわけではありません。 致命的ではない書き込みエラーが発生した場合は、サーバー自身によって処理されることがあり、これはエラーとして扱われません。 いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] など、エラーの合計数の統計情報の実行 sp_monitor**です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、現在のシステム上の日付と時刻において、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で発生したエラー数を示します。  
@@ -73,6 +73,6 @@ Errors      As of
   
 ## <a name="see-also"></a>参照  
  [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [システム統計関数 &#40;Transact-SQL&#41;す。](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [システム統計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

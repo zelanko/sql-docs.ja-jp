@@ -1,5 +1,5 @@
 ---
-title: "ログインを作成する |Microsoft ドキュメント"
+title: "ログインの作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,20 +28,20 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-1---creating-a-login"></a>レッスン 2-1-ログインを作成します。
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]アクセスする、[!INCLUDE[ssDE](../includes/ssde-md.md)]ユーザーのログインが必要です。 ログインは、ユーザーの ID を Windows のアカウントまたは Windows グループのメンバーとして表すか、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のみに存在する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ログインを使用することができます。 できるだけ Windows 認証を使用してください。  
+# <a name="lesson-2-1---creating-a-login"></a>レッスン 2-1 - ログインの作成
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)]にアクセスするには、ユーザーのログインが必要です。 ログインは、ユーザーの ID を Windows のアカウントまたは Windows グループのメンバーとして表すか、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のみに存在する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ログインを使用することができます。 できるだけ Windows 認証を使用してください。  
   
 既定では、コンピューターの管理者には [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]へのフル アクセス権が与えられます。 このレッスンでは、これより特権の少ないユーザーが必要なので、コンピューターに新しいローカルの Windows 認証アカウントを作成します。 そのためには、コンピューターの管理者であることが条件となります。 その後、この新しいユーザーに [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]へのアクセス権を与えます。  
   
 ### <a name="to-create-a-new-windows-account"></a>新しい Windows アカウントを作成するには  
   
-1.  **[ スタート]** ボタン、**[ ファイル名を指定して実行]** の順にクリックし、**[ 名前 ]** ボックスに「 **%SystemRoot%\system32\compmgmt.msc /s**」と入力して、**[ OK ]** をクリックします。コンピューターの管理プログラムが開きます。  
+1.  **[スタート]** ボタン、**[ファイル名を指定して実行]** の順にクリックし、**[名前]** ボックスに「 **%SystemRoot%\system32\compmgmt.msc /s**」と入力して、**[OK]** をクリックします。コンピューターの管理プログラムが開きます。  
   
-2.  **[ システム ツール]** の **[ ローカル ユーザーとグループ]** を展開し、**[ ユーザー]** を右クリックして、**[ 新しいユーザー]** をクリックします。  
+2.  **[システム ツール]** の **[ローカル ユーザーとグループ]** を展開し、**[ユーザー]** を右クリックして、**[新しいユーザー]** をクリックします。  
   
-3.  **[ ユーザー名 ]** ボックスに、「 **Mary**」と入力します。  
+3.  **[ユーザー名]** ボックスに、「 **Mary**」と入力します。  
   
-4.  **[ パスワード ]** および **[ パスワードの確認入力 ]** ボックスに強力なパスワードを入力し、**[ 作成 ]** をクリックして、新しいローカルの Windows ユーザーを作成します。  
+4.  **[パスワード]** および **[パスワードの確認入力]** ボックスに強力なパスワードを入力し、**[作成]** をクリックして、新しいローカルの Windows ユーザーを作成します。  
   
 ### <a name="to-create-a-login"></a>ログインを作成するには  
   

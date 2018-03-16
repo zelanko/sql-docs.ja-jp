@@ -1,5 +1,5 @@
 ---
-title: "記号 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SIGN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -53,17 +53,17 @@ SIGN ( numeric_expression )
 
 ## <a name="arguments"></a>引数  
  *numeric_expression*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)の正確な型または概数の数値データのカテゴリを除く入力、**ビット**データ型。  
+ **bit** データ型を除く、真数データ型または概数データ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
 ## <a name="return-types"></a>戻り値の型  
   
-|指定した式|戻り値の型|  
+|指定した式|の戻り値の型 : |  
 |--------------------------|-----------------|  
 |**bigint**|**bigint**|  
-|**int、smallint、/tinyint**|**int**|  
-|**money または smallmoney**|**money**|  
-|**数値/10 進数**|**数値/10 進数**|  
-|**その他の種類**|**float**|  
+|**int/smallint/tinyint**|**int**|  
+|**money/smallmoney**|**money**|  
+|**numeric/decimal**|**numeric/decimal**|  
+|その他の型|**float**|  
   
 ## <a name="examples"></a>使用例  
  次の例では、-1 から 1 までの値の SIGN 値を返します。  
@@ -103,7 +103,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、3 つの数値の SIGN 値を返します。  
   
 ```  
@@ -118,7 +118,7 @@ SELECT SIGN(-125), SIGN(0), SIGN(564);
 ```  
   
 ## <a name="see-also"></a>参照  
- [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [数学関数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

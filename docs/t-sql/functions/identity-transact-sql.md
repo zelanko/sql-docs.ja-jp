@@ -1,5 +1,5 @@
 ---
-title: "@@IDENTITY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: '@@IDENTITY (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40identity-transact-sql"></a>&#x40;&#x40; です識別情報 (TRANSACT-SQL)。
+# <a name="x40x40identity-transact-sql"></a>&#x40;&#x40;IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   最後に挿入された ID 値を返すシステム関数です。  
@@ -49,26 +49,26 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>戻り値の型  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>解説  
- INSERT、SELECT INTO、または一括コピー ステートメントが完了、@@IDENTITYステートメントによって生成される最後の id 値が含まれています。 かどうか、ステートメントがテーブルに影響しません、id 列を持つ@IDENTITYは NULL を返します。 複数の行を挿入すると場合、は、複数の id 値を生成する、@IDENTITY生成された最後の id 値を返します。 を呼び出す場合は、ステートメントでは、id 値を生成する挿入操作を実行する 1 つまたは複数のトリガーが起動、@IDENTITYステートメントが、トリガーによって生成された最後の id 値を返した直後後。 場合は、id 列をあるテーブルで挿入操作の実行後、トリガーが起動され、トリガー @ に id 列がない別のテーブルに挿入@IDENTITY最初の挿入の id 値を返します。 @@IDENTITY値が、トランザクションがロールバックされた場合、INSERT または SELECT INTO ステートメント、または一括コピーが失敗した場合、または前の設定に戻すことはできません。  
+## <a name="remarks"></a>Remarks  
+ INSERT ステートメント、SELECT INTO ステートメント、または一括コピーが終了すると、@@IDENTITY にはステートメントが最後に生成した ID 値が含まれます。 ID 列のあるテーブルがステートメントによって影響されなかった場合、@@IDENTITY は NULL 値を返します。 複数の行を挿入して、複数の ID 値を生成する場合、@@IDENTITY は最後に生成した ID 値を返します。 ステートメントが、ID 値を生成する挿入操作を実行する 1 つ以上のトリガーを起動する場合、このステートメントの直後で @@IDENTITY を呼び出すと、トリガーにより最後に生成された ID 値が返されます。 ID 列のあるテーブルで挿入操作を行った後に起動されるトリガーによって、ID 列のない別のテーブルへの挿入操作が実行される場合、@@IDENTITY は最初の挿入の ID 値を返します。 INSERT ステートメントか SELECT INTO ステートメント、または一括コピーが失敗した場合、あるいは、トランザクションがロールバックされた場合、@@IDENTITY 値は前の設定に戻りません。  
   
  失敗したステートメントとトランザクションによって、テーブルに対する現在の ID が変更され、ID 列値に差異が生じる可能性があります。 ID 値がロールバックされることはありません。これは、テーブルに値を挿入するトランザクションがコミットされない場合でも同じです。 たとえば、INSERT ステートメントが IGNORE_DUP_KEY 違反のために失敗しても、テーブルの現在の ID 値は増分されます。  
   
- @@IDENTITYSCOPE_IDENTITY、および IDENT_CURRENT は、類似した関数のテーブルの ID 列に挿入された最後の値を返すためです。  
+ @@IDENTITY、SCOPE_IDENTITY、および IDENT_CURRENT は、すべてテーブルの IDENTITY 列に最後に挿入された値を返すという点で似ています。  
   
- @@IDENTITY SCOPE_IDENTITY は、現在のセッションで任意のテーブルで生成された最後の id 値を返すとします。 ただし、SCOPE_IDENTITY が現在のスコープ内でのみ値を返します@@IDENTITYは、特定のスコープに限定されません。  
+ @@IDENTITY と SCOPE_IDENTITY は、現在のセッション内の任意のテーブルで生成された最後の ID 値を返します。 ただし、SCOPE_IDENTITY が返す値は、現在のスコープの範囲内に限られます。@@IDENTITY の場合は、特定のスコープに限定されません。  
   
- IDENT_CURRENT はスコープとセッションには限定されませんが、特定のテーブルに限定されます。 IDENT_CURRENT は、任意のセッションとスコープの特定のテーブルに対して生成された ID 値を返します。 詳細については、次を参照してください。 [IDENT_CURRENT (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ident-current-transact-sql.md).  
+ IDENT_CURRENT はスコープとセッションには限定されませんが、特定のテーブルに限定されます。 IDENT_CURRENT は、任意のセッションとスコープの特定のテーブルに対して生成された ID 値を返します。 詳細については、を参照してください。 IDENT_CURRENT (& a) #40 です。TRANSACT-SQL と #41;[](../../t-sql/functions/ident-current-transact-sql.md).  
   
- スコープ、@@IDENTITY関数は、現在のセッションを実行するローカル サーバーにします。 この関数は、リモート サーバーまたはリンク サーバーには適用できません。 別のサーバーで ID 値を取得するには、そのリモート サーバーまたはリンク サーバーでストアド プロシージャを実行し、(リモート サーバーまたはリンク サーバーのコンテキスト内で実行されている) そのストアド プロシージャが ID 値を収集し、ローカル サーバー上の呼び出し元の接続にこれを返すようにします。  
+ @@IDENTITY 関数のスコープは、実行されるローカル サーバーの現在のセッションです。 この関数は、リモート サーバーまたはリンク サーバーには適用できません。 別のサーバーで ID 値を取得するには、そのリモート サーバーまたはリンク サーバーでストアド プロシージャを実行し、(リモート サーバーまたはリンク サーバーのコンテキスト内で実行されている) そのストアド プロシージャが ID 値を収集し、ローカル サーバー上の呼び出し元の接続にこれを返すようにします。  
   
- レプリケーションが変わる可能性があります、@@IDENTITY値、レプリケーション トリガーやストアド プロシージャ内で使用されているためです。 @@IDENTITY列がレプリケーション アーティクルの一部である場合、最新のユーザーが作成した id の信頼性の高いインジケーターではありません。 構文を使用できます、SCOPE_IDENTITY() 関数の代わりに @@IDENTITYです。 詳細については、次を参照してください。 [SCOPE_IDENTITY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/scope-identity-transact-sql.md)  
+ @@IDENTITY の値はレプリケーション トリガーやストアド プロシージャ内で使用されるため、レプリケーションによって影響を受けることがあります。 列がレプリケーション アーティクルの一部である場合、ユーザーが作成した最新の ID として @@IDENTITY を信頼することはできません。 @@IDENTITY の代わりに、SCOPE_IDENTITY() 関数の構文を使用できます。 詳細については、を参照してください。 SCOPE_IDENTITY (& a) #40 です。TRANSACT-SQL と #41;[](../../t-sql/functions/scope-identity-transact-sql.md)  
   
 > [!NOTE]  
->  呼び出し元のストアド プロシージャまたは[!INCLUDE[tsql](../../includes/tsql-md.md)]を使用するステートメントを書き直す必要があります、`SCOPE_IDENTITY()`関数で、そのユーザーのステートメントのスコープ内で使用される最新の id とにより使用される入れ子になったトリガーのスコープ内の id ではなくを返しますレプリケーション。  
+>  呼び出し元のストアド プロシージャまたは [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、そのユーザーのステートメントのスコープ内で使用される最新の id と、レプリケーションで使用する入れ子になったトリガーのスコープ内での id ではなく返す `SCOPE_IDENTITY()` 関数を使用して書き直す必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、id 列を持つテーブルに行を挿入 (`LocationID`) を使用して`@@IDENTITY`を新しい行に使用する id 値を表示します。  
+ 次の例では、ID 列 (`LocationID`) のあるテーブルに行を挿入し、`@@IDENTITY` を使用して新しい行で使用する ID 値を表示します。  
   
 ```  
 USE AdventureWorks2012;  

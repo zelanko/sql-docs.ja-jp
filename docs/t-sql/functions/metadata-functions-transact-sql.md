@@ -1,5 +1,5 @@
 ---
-title: "メタデータ関数 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "メタデータ関数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified

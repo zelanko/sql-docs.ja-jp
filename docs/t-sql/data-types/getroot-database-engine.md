@@ -1,5 +1,5 @@
 ---
-title: "GetRoot (データベース エンジン) |Microsoft ドキュメント"
+title: "GetRoot (データベース エンジン) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getroot-database-engine"></a>GetRoot (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-階層ツリーのルートを返します。 GetRoot() は、静的メソッドです。
+階層ツリーのルートを返します。 GetRoot() 静的メソッドです。
   
 ## <a name="syntax"></a>構文  
   
@@ -49,11 +49,11 @@ static SqlHierarchyId GetRoot ( )
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
-**SQL Server の戻り値の型: hierarchyid**
+SQL Server の戻り値の型: * ***hierarchyid * *
   
-**CLR の戻り値の型: SqlHierarchyId**
+**CLR 戻り値の型:SqlHierarchyId**
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 階層ツリーのルート ノードを確認するときに使用します。
   
 ## <a name="examples"></a>使用例  
@@ -68,7 +68,7 @@ WHERE OrgNode = hierarchyid::GetRoot()
 ```  
   
 ### <a name="b-clr-example"></a>B. CLR の例  
-次のコード スニペットは、GetRoot() メソッドを呼び出します。
+次のコード スニペットの呼び出し、 GetRoot() メソッド。
   
 ```sql
 SqlHierarchyId.GetRoot()  

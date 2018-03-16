@@ -1,5 +1,5 @@
 ---
-title: "TYPE_ID (TRANSACT-SQL) |Microsoft ドキュメント"
+title: TYPE_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
 ## <a name="arguments"></a>引数  
  *type_name*  
- データ型の名前を指定します。 *type_name*の種類は**nvarchar**です。 *type_name*は、システムまたはユーザー定義データ型。  
+ データ型の名前を指定します。 type_name *のデータ型は nvarchar*です。 type_name* は、システムまたはユーザー定義データ型。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
@@ -57,9 +57,9 @@ TYPE_ID ( [ schema_name ] type_name )
 ## <a name="exceptions"></a>例外  
  エラーが発生した場合、または呼び出し元にオブジェクトの表示権限がない場合は、NULL が返されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーは、ユーザーが所有するまたはをユーザーが許可されているアクセス許可のセキュリティ保護可能なメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (TYPE_ID など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (TYPE_ID など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  型名が有効でない場合、または呼び出し元に型を参照するための十分な権限がない場合、TYPE_ID は NULL を返します。  
   
 ## <a name="examples"></a>使用例  
@@ -90,9 +90,9 @@ SELECT TYPE_NAME(TYPE_ID('datetime')) AS [TYPE_NAME]
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C: ID を検索する型のシステム データ型  
+### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C: システム データ型の TYPE ID を検索する  
  次の例では、`TYPE ID` システム データ型の `datetime` が返されます。  
   
 ```  
@@ -101,10 +101,10 @@ SELECT TYPE_NAME(TYPE_ID('datetime')) AS typeName,
 ```  
   
 ## <a name="see-also"></a>参照  
- [TYPE_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/type-name-transact-sql.md)   
- [TYPEPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/typeproperty-transact-sql.md)   
+ [TYPE_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/type-name-transact-sql.md)   
+ [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
- [メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)  
+ [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
   
   
 

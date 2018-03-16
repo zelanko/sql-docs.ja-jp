@@ -1,5 +1,5 @@
 ---
-title: "ENCRYPTBYKEY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ENCRYPTBYKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,32 +52,32 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
   
 ## <a name="arguments"></a>引数  
  *key_GUID*  
- 暗号化に使用するキーの GUID、*クリアテキスト*です。 **uniqueidentifier**です。  
+ *cleartext*. **uniqueidentifier** の暗号化に使用する、キーの GUID です。  
   
- '*クリアテキスト*'  
+ '*cleartext*'  
  キーで暗号化されるデータを指定します。  
   
  @cleartext  
- 型の変数は、 **nvarchar**、 **char**、 **varchar**、**バイナリ**、 **varbinary**、または**nchar**キーで暗号化されているデータが含まれます。  
+ キーで暗号化されるデータを含む **nvarchar**、**char**、**varchar****binary**、**varbinary**、または **nchar** 型の変数です。  
   
  *add_authenticator*  
- と共に認証子を暗号化するかどうかを*クリアテキスト*です。 認証子を使用する場合は 1 にする必要があります。 **int**です。  
+ *cleartext* と共に認証子を暗号化するかどうかを指定します。 認証子を使用する場合は 1 にする必要があります。 **int**.  
   
  @add_authenticator  
- と共に認証子を暗号化するかどうかを*クリアテキスト*です。 認証子を使用する場合は 1 にする必要があります。 **int**です。  
+ *cleartext* と共に認証子を暗号化するかどうかを指定します。 認証子を使用する場合は 1 にする必要があります。 **int**.  
   
- *認証子*  
- 認証子の派生元のデータを指定します。 **sysname**です。  
+ *authenticator*  
+ 認証子の派生元のデータを指定します。 **sysname**.  
   
  @authenticator  
  認証子の派生元のデータを含む変数を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** 8,000 バイトの最大サイズ。  
+ varbinary** 8,000 バイトの最大サイズ。  
   
  キーが開かれていない場合、キーが存在しない場合、またはキーが非推奨の RC4 キーでデータベースの互換性レベルが 110 以上の場合、NULL を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  EncryptByKey では対称キーが使用されます。 このキーは開いている必要があります。 対称キーが現在のセッションで既に開いている場合、クエリのコンテキストで再度開く必要はありません。  
   
  認証子を使用すると、暗号化されたフィールド全体が外部から置き換えられるのを防ぐことができます。 次の給与データの表を例として説明します。  
@@ -97,10 +97,10 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  対称キーの暗号化と暗号化解除は比較的高速なので、データが大きい場合に適しています。  
   
 > [!IMPORTANT]  
->  使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ANSI_PADDING OFF 設定と共に暗号化関数には暗黙的な変換によってデータが失われる可能性があります。 ANSI_PADDING の詳細については、次を参照してください。 [SET ANSI_PADDING &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の暗号化関数を ANSI_PADDING OFF 設定で使用すると、暗黙的な変換によってデータが失われる可能性があります。 詳細については、ANSI_PADDING、を参照してください。 ANSI_PADDING の設定 (&) #40 です。TRANSACT-SQL と #41;[](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>使用例  
- キーに基づいて、次の例に示すように機能し、証明書を作成[操作方法: 列のデータを暗号化](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)です。  
+ 次の例に示されている機能を実行するには、「[データ列を暗号化する方法](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)」で作成するキーと証明書が必要です。  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. 対称キーで文字列を暗号化する  
  次の例では、`Employee` テーブルに列を追加した後、`NationalIDNumber` 列に格納された社会保障番号の値を暗号化します。  
@@ -150,11 +150,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [DECRYPTBYKEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/decryptbykey-transact-sql.md)   
+ [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [HASHBYTES &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/hashbytes-transact-sql.md)  
+ [HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
   
   

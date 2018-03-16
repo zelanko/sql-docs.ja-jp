@@ -1,5 +1,5 @@
 ---
-title: "SUSER_NAME (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SUSER_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -53,27 +53,27 @@ SUSER_NAME ( [ server_user_id ] )
   
 ## <a name="arguments"></a>引数  
  *server_user_id*  
- ユーザーのログイン ID 番号です。 *server_user_id*、これは省略可能では、 **int**です。*server_user_id*任意のログイン id 番号を指定できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows ユーザーまたはグループのインスタンスに接続する権限を持つ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 場合*server_user_id*が指定されていない、現在のユーザーのログインの識別名が返されます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。  
+ ユーザーのログイン ID 番号です。 *server_user_id*(省略可能)。**int**. *server_user_id* には、任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザーのログイン ID 番号、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するためのアクセス許可があるグループのログイン ID 番号を指定できます。 場合 server_user_id* はこのオプションを指定しないと、現在のユーザーのログインの識別名が返されます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。  
   
 ## <a name="return-types"></a>戻り値の型  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>解説  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン 7.0 では、セキュリティ id 番号 (SID) には、サーバー ユーザー識別番号 (SUID) が置き換えられます。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 では、サーバー ユーザー識別番号 (SUID) の代わりにセキュリティ識別番号 (SID) が使用されます。  
   
- SUSER_NAME は、内のエントリを持つログインに対してのみログイン名を返します、 **syslogins**システム テーブル。  
+ SUSER_NAME では、syslogins** システム テーブル内にエントリがあるログインに対してのみログイン名が返されます。  
   
  SUSER_NAME は、選択リストや WHERE 句、および式が許可される場所であればどこでも使用できます。ただし、パラメーターを指定しない場合であっても、その後に常にかっこを指定する必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次の例のログイン id 番号を持つユーザーのログインの識別名を返します`1`です。  
+ 次の例では、ログイン識別番号 `1` のユーザーのログイン識別名を返します。  
   
 ```  
 SELECT SUSER_NAME(1);  
 ```  
   
 ## <a name="see-also"></a>参照  
- [SUSER_ID と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/suser-id-transact-sql.md)   
+ [SUSER_ID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-id-transact-sql.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

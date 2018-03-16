@@ -1,5 +1,5 @@
 ---
-title: "IS_OBJECTSIGNED (TRANSACT-SQL) |Microsoft ドキュメント"
+title: IS_OBJECTSIGNED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/10/2016
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ IS_OBJECTSIGNED (
 ```  
   
 ## <a name="arguments"></a>引数  
- **' OBJECT'**  
+ **'OBJECT'**  
  セキュリティ保護可能なクラスの型。  
   
  *@object_id*  
- テストされるオブジェクトの object_id。 *@object_id*型は、 **int**です。  
+ テストされるオブジェクトの object_id。 * のデータ型は int@object_id 型です。  
   
  *@class*  
  オブジェクトのクラス :  
@@ -61,30 +61,30 @@ IS_OBJECTSIGNED (
   
 -   'asymmetric key'  
   
- *@class***sysname**です。  
+ * のデータ型は sysname@class です。  
   
  *@thumbprint*  
- オブジェクトの SHA 拇印。 *@thumbprint*型は、 **varbinary (32)**です。  
+ オブジェクトの SHA 拇印。 *@thumbprint* は **varbinary(32)** 型です。  
   
-## <a name="returned-types"></a>返された型  
+## <a name="returned-types"></a>返される型  
  **int**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  IS_OBJECTSIGNED は、次の値を返します。  
   
 |戻り値|Description|  
 |------------------|-----------------|  
-|NULL|オブジェクトが署名されていないか、オブジェクトが無効です。|  
-|0|オブジェクトは署名されていますが、署名が無効です。|  
-|1|オブジェクトは署名されています。|  
+|NULL|オブジェクトが署名されていないか、オブジェクトが有効ではありません。|  
+|0|オブジェクトは署名されていますが、署名が有効ではありません。|  
+|@shouldalert|オブジェクトは署名されています。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  証明書または非対称キーに対する VIEW DEFINITION 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-displaying-extended-properties-on-a-database"></a>A. データベースの拡張プロパティを表示する  
- 次の例をテスト spt_fallback_db テーブルの場合、**マスター**データベースは、スキーマ署名証明書で署名されました。  
+ 次の例では、master** データベースの spt_fallback_db テーブルがスキーマ署名証明書によって署名されているかどうかをテストします。  
   
 ```  
 USE master;  
@@ -108,6 +108,6 @@ IS_OBJECTSIGNED(
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.fn_check_object_signatures &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
+ sys.fn_check_object_signatures (&) #40 です。TRANSACT-SQL と #41 です。[](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
   
   

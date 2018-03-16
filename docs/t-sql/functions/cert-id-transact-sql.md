@@ -1,5 +1,5 @@
 ---
-title: "CERT_ID (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CERT_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -54,10 +54,10 @@ Cert_ID ( 'cert_name' )
 ## <a name="return-types"></a>戻り値の型
  **int**  
   
-## <a name="remarks"></a>解説  
-証明書の名前では表示、 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)カタログ ビューです。
+## <a name="remarks"></a>Remarks  
+証明書名は、 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) カタログ ビューです。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
 証明書に対する権限が必要です。呼び出し元で、証明書に対する VIEW DEFINITION 権限が拒否されていないことも条件となります。
   
 ## <a name="examples"></a>使用例  

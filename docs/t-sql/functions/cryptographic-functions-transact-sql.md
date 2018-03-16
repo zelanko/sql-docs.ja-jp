@@ -1,5 +1,5 @@
 ---
-title: "暗号化関数 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "暗号化関数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -33,12 +33,12 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="cryptographic-functions-transact-sql"></a>暗号化関数 (TRANSACT-SQL)
+# <a name="cryptographic-functions-transact-sql"></a>暗号化関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 次の関数は、暗号化、暗号化解除、デジタル署名、およびデジタル署名の検証をサポートします。
   
-## <a name="symmetric-encryption-and-decryption"></a>対称暗号化と復号化
+## <a name="symmetric-encryption-and-decryption"></a>対称暗号化および対称暗号化解除
   
 |||  
 |-|-|  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 |[DECRYPTBYKEYAUTOASYMKEY](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)|[KEY_NAME](../../t-sql/functions/key-name-transact-sql.md)|  
 |[SYMKEYPROPERTY](../../t-sql/functions/symkeyproperty-transact-sql.md)||  
   
-## <a name="asymmetric-encryption-and-decryption"></a>非対称暗号化と復号化
+## <a name="asymmetric-encryption-and-decryption"></a>非対称暗号化および非対称暗号化解除
   
 |||  
 |-|-|  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 |[SIGNBYCERT](../../t-sql/functions/signbycert-transact-sql.md)|[VERIGYSIGNEDBYCERT](../../t-sql/functions/verifysignedbycert-transact-sql.md)|  
 |[IS_OBJECTSIGNED](../../t-sql/functions/is-objectsigned-transact-sql.md)||  
   
-## <a name="symmetric-decryption-with-automatic-key-handling"></a>キーの処理を自動で対称復号化
+## <a name="symmetric-decryption-with-automatic-key-handling"></a>キーを自動的に処理する対称暗号化解除
   
 |||  
 |-|-|  
@@ -80,8 +80,8 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|[CERTENCODED &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/certencoded-transact-sql.md)||  
-|[CERTPRIVATEKEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/certprivatekey-transact-sql.md)||  
+|[CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)||  
+|[CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
   
 ## <a name="see-also"></a>参照
 [関数](../../t-sql/functions/functions.md)  

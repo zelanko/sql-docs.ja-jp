@@ -1,5 +1,5 @@
 ---
-title: "Parse (データベース エンジン) |Microsoft ドキュメント"
+title: "Parse (データベース エンジン) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="parse-database-engine"></a>Parse (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-正規文字列形式に変換する**hierarchyid**を**hierarchyid**値。 解析は、文字列型を変換するとき暗黙的に呼び出されます。 **hierarchyid**に発生します。 逆の役割を果たします[ToString](../../t-sql/data-types/tostring-database-engine.md)です。 Parse() は、静的メソッドです。
+正規文字列形式に変換する hierarchyid **を hierarchyid** 値。 解析 **から文字列型を変換するとき暗黙的に呼び出されます hierarchyid** が発生します。 逆の役割を果たします ToString[](../../t-sql/data-types/tostring-database-engine.md)です。 Parse() 静的メソッドです。
   
 ## <a name="syntax"></a>構文  
   
@@ -52,23 +52,23 @@ static SqlHierarchyId Parse ( SqlString input )
 ```  
   
 ## <a name="arguments"></a>引数  
-*入力*  
+*input*  
 [!INCLUDE[tsql](../../includes/tsql-md.md)] : 変換対象となる文字データ型の値。
   
 CLR : 評価される String 値。
   
 ## <a name="return-types"></a>戻り値の型  
-**SQL Server の戻り値の型: hierarchyid**
+SQL Server の戻り値の型: * ***hierarchyid * *
   
-**CLR の戻り値の型: SqlHierarchyId**
+**CLR 戻り値の型:SqlHierarchyId**
   
-## <a name="remarks"></a>解説  
-解析の有効な文字列表記ではない値を受信した場合、 **hierarchyid**例外が発生します。 たとえば場合、 **char**データ型には、末尾のスペースが含まれている、例外が発生します。
+## <a name="remarks"></a>Remarks  
+場合 解析 **の有効な文字列表記ではない値を受け取る、 hierarchyid**, 、例外が発生します。 たとえば場合、 char** データ型には、末尾のスペースが含まれている、例外が発生します。
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-converting-transact-sql-values-without-a-table"></a>A. テーブルを使用しない Transact-SQL 値の変換  
-次のコード例では`ToString`に変換する、 **hierarchyid**値を文字列と`Parse`文字列値を変換する、 **hierarchyid**です。
+次のコード例では、`ToString` を使用して **hierarchyid** 値を文字列に変換し、`Parse` を使用して文字列値を **hierarchyid** に変換します。
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  
@@ -89,7 +89,7 @@ hierarchyidRepresentation    StringRepresentation
 ```
   
 ### <a name="b-clr-example"></a>B. CLR の例  
-次のコード スニペットは、Parse() メソッドを呼び出します。
+次のコード スニペットの呼び出し、 Parse() メソッド。
   
 ```sql
 string input = “/1/2/”;  

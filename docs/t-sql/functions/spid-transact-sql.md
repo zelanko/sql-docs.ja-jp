@@ -1,5 +1,5 @@
 ---
-title: "@@SPID (TRANSACT-SQL) |Microsoft ドキュメント"
+title: '@@SPID (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;です。SPID (TRANSACT-SQL)
+# <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   現在のユーザー プロセスのセッション ID を返します。  
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>戻り値の型  
  **smallint**  
   
-## <a name="remarks"></a>解説  
- @@SPIDの出力には、現在のユーザー プロセスの識別に使用できる**sp_who**です。  
+## <a name="remarks"></a>Remarks  
+ @@SPID は、**sp_who** の出力で、現在のユーザー プロセスを識別する場合に使用できます。  
   
 ## <a name="examples"></a>使用例  
  次の例では、現在のユーザー プロセスのセッション ID、ログイン名、およびユーザー名を返します。  
@@ -71,8 +71,8 @@ ID     Login Name                     User Name
 54     SEATTLE\joanna                 dbo                             
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- この例を返します、[!INCLUDE[ssDW](../../includes/ssdw-md.md)]セッション ID、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ノード セッション ID、ログイン名、および現在のユーザー プロセスのユーザー名を制御します。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 次の例では、現在のユーザー プロセスに対応する [!INCLUDE[ssDW](../../includes/ssdw-md.md)] セッション ID、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 制御ノード、セッション ID、ログイン名、ユーザー名を返します。  
   
 ```  
 SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
@@ -80,7 +80,7 @@ SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', 
   
 ## <a name="see-also"></a>参照  
  [構成関数](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [sp_lock &#40;です。TRANSACT-SQL と&#41;です。](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   

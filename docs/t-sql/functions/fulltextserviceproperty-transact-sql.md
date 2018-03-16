@@ -1,5 +1,5 @@
 ---
-title: "FULLTEXTSERVICEPROPERTY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: FULLTEXTSERVICEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Full-Text Engine のプロパティに関する情報を返します。 これらのプロパティを設定しを使用して取得**sp_fulltext_service**です。  
+  Full-Text Engine のプロパティに関する情報を返します。 これらのプロパティは、**sp_fulltext_service** を使用して設定および取得できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,20 +49,20 @@ FULLTEXTSERVICEPROPERTY ('property')
 ```  
   
 ## <a name="arguments"></a>引数  
- *プロパティ*  
+ *property*  
  フルテキスト サービス レベルのプロパティ名を含む式を指定します。 次の表は、プロパティと、返される情報についての説明の一覧です。  
   
 > [!NOTE]  
->  将来のリリースでは、次のプロパティを削除予定[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**、 **DataTimeout**、および**ResourceUsage**です。 新しい開発作業では、これらのプロパティの使用は避け、現在これらのプロパティのいずれかを使用しているアプリケーションは修正するようにしてください。  
+>  次のプロパティは、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout**, and **ResourceUsage** の将来のリリースで削除される予定です。 新しい開発作業では、これらのプロパティの使用は避け、現在これらのプロパティのいずれかを使用しているアプリケーションは修正するようにしてください。  
   
-|プロパティ|値|  
+|プロパティ|ReplTest1|  
 |--------------|-----------|  
 |**ResourceUsage**|0 を返します。 旧バージョンとの互換性のためにのみサポートされています。|  
 |**ConnectTimeout**|0 を返します。 旧バージョンとの互換性のためにのみサポートされています。|  
-|**IsFulltextInstalled**|フルテキスト コンポーネントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在のインスタンスと共にインストールされます。<br /><br /> 0 = フルテキストはインストールされていない<br /><br /> 1 = フルテキストはインストールされている<br /><br /> NULL = 無効な入力またはエラー。|  
+|**IsFulltextInstalled**|フルテキスト コンポーネントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在のインスタンスと共にインストールされます。<br /><br /> 0 = フルテキストはインストールされていない<br /><br /> 1 = フルテキストはインストールされている<br /><br /> NULL = 無効な入力またはエラー|  
 |**DataTimeout**|0 を返します。 旧バージョンとの互換性のためにのみサポートされています。|  
-|**LoadOSResources**|オペレーティング システムのワード ブレーカーおよびフィルターが登録されているしのこのインスタンスで使用するかどうかを示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 既定では、このプロパティを防ぐための不注意による動作の変更にオペレーティング システム (OS) に加えられた更新プログラムで無効です。 言語のリソースへのアクセスを提供する OS リソースの使用を有効にし、ドキュメントの種類に登録されている[!INCLUDE[msCoName](../../includes/msconame-md.md)]Indexing Service では、それにインスタンス固有のリソースがインストールされているがありません。 OS リソースの読み込みを有効にした場合は、OS リソースが信頼された署名付きバイナリ; であることを確認します。それ以外の場合、読み込みができなくなる場合に**VerifySignature**が 1 に設定します。<br /><br /> 0 = この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス固有のフィルターとワード ブレーカーのみを使用<br /><br /> 1 = OS のフィルターとワード ブレーカーを読み込む|  
-|**VerifySignature**|によって、署名付きバイナリのみが読み込まれるかどうかを指定します、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search サービス。 既定では、信頼された署名付きバイナリのみが読み込まれます。<br /><br /> 0 を = バイナリが署名付きかどうかを確認できません。<br /><br /> 1 = 信頼された署名付きバイナリのみを確認して読み込む|  
+|**LoadOSResources**|オペレーティング システムのワード ブレーカーやフィルターを、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに登録し、使用するかどうかを指定します。 オペレーティング システム (OS) に行われた更新によって予期しない動作が起こるのを防ぐため、既定ではこのプロパティは無効になっています。 OS リソースの使用を有効にすると、インスタンス固有のリソースがインストールされていない [!INCLUDE[msCoName](../../includes/msconame-md.md)] Indexing Service に登録されている、言語とドキュメントの種類に応じたリソースにアクセスできます。 OS リソースの読み込みを有効にする場合は、OS リソースが信頼された署名付きバイナリであることを確認してください。信頼された署名付きバイナリでない場合、**VerifySignature** が 1 に設定されたときに、OS リソースを読み込むことができません。<br /><br /> 0 = この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス固有のフィルターとワード ブレーカーのみを使用<br /><br /> 1 = OS のフィルターとワード ブレーカーを読み込む|  
+|**VerifySignature**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Search サービスによって署名付きバイナリのみを読み込むかどうかを指定します。 既定では、信頼された署名付きバイナリのみが読み込まれます。<br /><br /> 0 = バイナリが署名付きかどうかを確認しない<br /><br /> 1 = 信頼された署名付きバイナリのみを確認して読み込む|  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
@@ -81,7 +81,7 @@ SELECT fulltextserviceproperty('VerifySignature');
 0  
 ```  
   
- 署名の検証をその既定値の 1 に設定する、次を使用できる注`sp_fulltext_service`ステートメント。  
+ 署名の検証を既定値の 1 に戻すには、次の `sp_fulltext_service` ステートメントを使用できます。  
   
 ```  
 EXEC sp_fulltext_service @action='verify_signature', @value=1;  
@@ -89,8 +89,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [FULLTEXTCATALOGPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
+ [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
   
   

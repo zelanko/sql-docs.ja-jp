@@ -1,5 +1,5 @@
 ---
-title: "IS_ROLEMEMBER (TRANSACT-SQL) |Microsoft ドキュメント"
+title: IS_ROLEMEMBER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,48 +48,48 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ```  
   
 ## <a name="arguments"></a>引数  
- **'** *ロール* **'**  
- 確認するデータベース ロールの名前を指定します。 *ロール*は**sysname**です。  
+ **'** *role* **'**  
+ 確認するデータベース ロールの名前を指定します。 *role* は **sysname**です。  
   
  **'** *database_principal* **'**  
- 確認するデータベース ユーザー、データベース ロール、またはアプリケーション ロールの名前を指定します。 *database_principal*は**sysname**、既定値は NULL です。 値を指定しない場合、結果は現在の実行コンテキストに基づきます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。  
+ 確認するデータベース ユーザー、データベース ロール、またはアプリケーション ロールの名前を指定します。 *database_principal* は **sysname**, 、既定値は NULL です。 値を指定しない場合、結果は現在の実行コンテキストに基づきます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
 |戻り値|Description|  
 |------------------|-----------------|  
-|0|*database_principal*のメンバーではない*ロール*です。|  
-|1|*database_principal*のメンバーである*ロール*です。|  
-|NULL|*database_principal*または*ロール*が有効でないか、ロールのメンバーシップを表示するアクセス許可がありません。|  
+|0|database_principal *のメンバーではない ロール*です。|  
+|@shouldalert|database_principal *のメンバーである ロール*です。|  
+|NULL|database_principal *または ロール* が有効でないか、ロールのメンバーシップを表示する権限がありません。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  IS_ROLEMEMBER は、現在のユーザーがデータベース ロールの権限を必要とするアクションを実行できるかどうかを判断するために使用します。  
   
- 場合*database_principal* contoso \mary5、IS_ROLEMEMBER は NULL を返します、しない限りなど、Windows ログインに基づくが、 *database_principal*許可またはへの直接アクセスが拒否されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ unless the *database_principal* が許可または拒否された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への直接アクセスである場合を除き、*database_principal* が Contoso\Mary5 などの Windows ログインに基づいている場合、IS_ROLEMEMBER は NULL を返します。  
   
- 場合、省略可能な*database_principal*パラメーターを指定しない場合、 *database_principal*ベースは、Windows ドメイン ログインに Windows グループのメンバーシップを通じて、データベース ロールのメンバーである可能性があります. そのような間接的なメンバーシップを解決するために、IS_ROLEMEMBER は、Windows グループのメンバーシップ情報をドメイン コントローラーに要求します。 ドメイン コントローラーにアクセスできないか、またはドメイン コントローラーが応答しない場合、IS_ROLEMEMBER はユーザーとそのローカル グループのみを考慮したロール メンバーシップ情報を返します。 指定されたユーザーが現在のユーザーでない場合、IS_ROLEMEMBER が返す値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対する認証システム (Active Directory など) の最後のデータ更新と異なることがあります。  
+ 場合、省略可能な database_principal *パラメーターを指定しない場合、 database_principal* ベースは、Windows ドメイン ログインに Windows グループのメンバーシップを通じて、データベース ロールのメンバーである可能性があります。 そのような間接的なメンバーシップを解決するために、IS_ROLEMEMBER は、Windows グループのメンバーシップ情報をドメイン コントローラーに要求します。 ドメイン コントローラーにアクセスできないか、またはドメイン コントローラーが応答しない場合、IS_ROLEMEMBER はユーザーとそのローカル グループのみを考慮したロール メンバーシップ情報を返します。 指定されたユーザーが現在のユーザーでない場合、IS_ROLEMEMBER が返す値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対する認証システム (Active Directory など) の最後のデータ更新と異なることがあります。  
   
- 場合、省略可能な*database_principal*パラメーターを指定し、クエリが実行されるデータベース プリンシパルは、sys.database_principals 内に存在する必要がありますまたは IS_ROLEMEMBER は NULL を返します。 これが示す、 *database_principal*はこのデータベースでは無効です。  
+ 省略可能な *database_principal* パラメーターが指定された場合、照会されるデータベース プリンシパルが sys.database_principals に存在している必要があります。そうでない場合、IS_ROLEMEMBER は NULL を返します。 これが示す、 database_principal* はこのデータベースでは無効です。  
   
- ときに、 *database_principal*パラメーターがに基づいてドメイン ログインまたは Windows グループに基づくと、ドメイン コント ローラーにアクセスできなくなって、IS_ROLEMEMBER の呼び出しは失敗し、不正確または不完全なデータを返す場合があります。  
+ ときに、 database_principal* パラメーターがに基づいてドメイン ログインか、Windows グループに基づく、ドメイン コント ローラーにアクセスできなくなって、IS_ROLEMEMBER の呼び出しは失敗し、不正確または不完全なデータを返す場合があります。  
   
- ローカル Windows アカウントなど、Windows プリンシパルをローカルで認証できる場合、IS_ROLEMEMBER の呼び出しが正確な情報を返す、ドメイン コント ローラーが使用できない場合、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。  
+ ドメイン コントローラーを利用できなくても、Windows プリンシパルをローカルで認証できる場合 (ローカル Windows アカウントや [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの場合など) は、IS_ROLEMEMBER の呼び出しで正確な情報が返されます。  
   
- **IS_ROLEMEMBER** Windows グループは、データベース プリンシパル引数として使用され、この Windows グループ、さらに、指定されたデータベース ロールのメンバーでは別の Windows グループのメンバーである場合に常に 0 を返します。  
+ IS_ROLEMEMBER** は、Windows グループをデータベース プリンシパル引数として使用され、この Windows グループは、さらに、指定されたデータベース ロールのメンバー、別の Windows グループのメンバーである場合は、常に 0 を返します。  
   
- ユーザー アカウント制御 (UAC) が見つかった[!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]し、Windows Server 2008 は、異なる結果を返すも可能性があります。 これは、ユーザーがサーバーに Windows グループのメンバーとしてアクセスしたか、特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーとしてアクセスしたかによります。  
+ [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] および Windows Server 2008 にあるユーザー アカウント制御 (UAC) も異なる結果を返す場合があります。 これは、ユーザーがサーバーに Windows グループのメンバーとしてアクセスしたか、特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーとしてアクセスしたかによります。  
   
- この関数で評価されるのはロールのメンバーシップであって、基になる権限ではありません。 たとえば、 **db_owner**固定データベース ロールには、 **CONTROL DATABASE**権限です。 ユーザーがある場合、 **CONTROL DATABASE**権限はない、ロールのメンバーと、この関数は、ユーザーがのメンバーではないことを報告して正しく、 **db_owner**ロールで、ユーザーがある同じ場合でもアクセス許可です。  
+ この関数で評価されるのはロールのメンバーシップであって、基になる権限ではありません。 たとえば、 db_owner **固定データベース ロールには、 CONTROL DATABASE** 権限です。 ユーザーがいる場合、 CONTROL DATABASE **権限はない、ロールのメンバーと、この関数は、ユーザーがのメンバーではないことを報告して正しく、 db_owner** ロールでは、ユーザーは、同じアクセス許可を持っている場合でもです。  
   
 ## <a name="related-functions"></a>関連する関数  
- 現在のユーザーが指定された Windows グループのメンバーであるかどうかを確認するのにまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース ロールを使用して[IS_MEMBER (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/is-member-transact-sql.md). 確認するかどうか、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン サーバー ロールのメンバーを使用して[IS_SRVROLEMEMBER (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
+ 現在のユーザーが指定された Windows グループのメンバーであるかどうかを判断するまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してデータベース ロールを IS_MEMBER (& a) #40 です。TRANSACT-SQL と #41;[](../../t-sql/functions/is-member-transact-sql.md). 確認するかどうか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してログインがサーバー ロールのメンバーを IS_SRVROLEMEMBER (& a) #40 です。TRANSACT-SQL と #41;[](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  データベース ロールに対する VIEW DEFINITION 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、現在のユーザーがのメンバーであるかどうかを示す、`db_datareader`固定データベース ロール。  
+ 次の例では、現在のユーザーが `db_datareader` 固定データベース ロールのメンバーであるかどうかを示しています。  
   
 ```  
 IF IS_ROLEMEMBER ('db_datareader') = 1  
@@ -101,14 +101,14 @@ ELSE IF IS_ROLEMEMBER ('db_datareader') IS NULL
 ```  
   
 ## <a name="see-also"></a>参照  
- [ROLE &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-role-transact-sql.md)   
- [ALTER ROLE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-role-transact-sql.md)   
- [DROP ROLE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-role-transact-sql.md)   
- [SERVER ROLE &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-server-role-transact-sql.md)   
- [ALTER SERVER ROLE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-server-role-transact-sql.md)   
- [DROP SERVER ROLE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-server-role-transact-sql.md)   
- [IS_MEMBER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/is-member-transact-sql.md)   
- [IS_SRVROLEMEMBER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/is-srvrolemember-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+ [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+ [CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
+ [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)   
+ [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
+ [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)   
+ [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)   
  [セキュリティ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

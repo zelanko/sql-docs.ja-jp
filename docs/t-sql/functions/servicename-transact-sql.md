@@ -1,5 +1,5 @@
 ---
-title: "@@SERVICENAME (TRANSACT-SQL) |Microsoft ドキュメント"
+title: '@@SERVICENAME (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -33,10 +33,10 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;です。SERVICENAME (TRANSACT-SQL)
+# <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;SERVICENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  レジストリ キーの名前を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されています。 @@SERVICENAME 'MSSQLSERVER' を返す場合、現在のインスタンスの既定のインスタンスでは、現在のインスタンスが名前付きインスタンスの場合、この関数は、インスタンス名を返します。  
+  実行中の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対応するレジストリ キーの名前を返します。 現在のインスタンスが既定のインスタンスの場合、@@SERVICENAME では 'MSSQLSERVER' が返されます。現在のインスタンスが名前付きインスタンスの場合は、インスタンス名が返されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,8 +49,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar**  
   
-## <a name="remarks"></a>解説  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MSSQLServer という名前のサービスとして実行されます。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は MSSQLServer という名前のサービスとして実行されます。  
   
 ## <a name="examples"></a>使用例  
  次に、`@@SERVICENAME` の使用例を示します。  

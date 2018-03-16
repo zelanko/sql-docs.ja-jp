@@ -1,5 +1,5 @@
 ---
-title: "FILEPROPERTY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: FILEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -52,12 +52,12 @@ FILEPROPERTY ( file_name , property )
   
 ## <a name="arguments"></a>引数  
  *file_name*  
- プロパティ情報を返す基になる、現在のデータベースに関連付けられたファイルの名前を含む式を指定します。 *file_name*は**nchar (128)**です。  
+ プロパティ情報を返す基になる、現在のデータベースに関連付けられたファイルの名前を含む式を指定します。 file_name *は nchar (128)*です。  
   
- *プロパティ*  
- 返されるファイル プロパティの名前を含む式を指定します。 *プロパティ*は**varchar (128)**値は次のいずれかを指定できます。  
+ *property*  
+ 返されるファイル プロパティの名前を含む式を指定します。 プロパティ *は varchar (128)*, 、値は次のいずれかを指定することができます。  
   
-|値|Description|返される値|  
+|ReplTest1|Description|返される値|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|ファイル グループが読み取り専用であるかどうかを示します。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 無効な入力|  
 |**IsPrimaryFile**|ファイルがプライマリ ファイルであるかどうかを示します。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 無効な入力|  
@@ -67,11 +67,11 @@ FILEPROPERTY ( file_name , property )
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>解説  
- *file_name*に対応する、**名前**内の列、 **sys.master_files**または**sys.database_files**カタログ ビューです。  
+## <a name="remarks"></a>Remarks  
+ file_name *に対応する、 名前* 内の列、 sys.master_files **または sys.database_files** カタログ ビューです。  
   
 ## <a name="examples"></a>使用例  
- 次の例の設定を返します、`IsPrimaryFile`プロパティを`AdventureWorks_Data`内のファイル名[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
+ 次の例では、`IsPrimaryFile` データベース内のファイル名 `AdventureWorks_Data` の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] プロパティに対する設定を返します。  
   
 ```  
   
@@ -89,8 +89,8 @@ Primary File
 ```  
   
 ## <a name="see-also"></a>参照  
- [FILEGROUPPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/filegroupproperty-transact-sql.md)   
- [メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [FILEGROUPPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/filegroupproperty-transact-sql.md)   
+ [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  

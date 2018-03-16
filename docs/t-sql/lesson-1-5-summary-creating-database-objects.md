@@ -1,5 +1,5 @@
 ---
-title: "概要: データベース オブジェクトの作成 |Microsoft ドキュメント"
+title: "要約: データベース オブジェクトの作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -28,11 +28,11 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-5---summary---creating-database-objects"></a>レッスン 1 ~ 5 の概要 - を作成するデータベース オブジェクト
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]作成したこのチュートリアルでは、データベースにテーブルを作成、データベース テーブルにデータを挿入、データを変更およびテーブルからデータを読み取る。 ステートメントに使用した構文は基本的なもののみで、構文の各種オプションについては説明しませんでした。 これらのステートメントの詳細については、SQL Server オンライン ブックでステートメントの全構文を参照し、そのトピックに含まれている多数の例を見てください。  
+# <a name="lesson-1-5---summary---creating-database-objects"></a>レッスン 1-5 - 要約: データベース オブジェクトの作成
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]このレッスンでは、データベースを作成し、データベースにテーブルを作成して、データを挿入しました。次に、データを変更して、テーブルから読み取りました。 ステートメントに使用した構文は基本的なもののみで、構文の各種オプションについては説明しませんでした。 これらのステートメントの詳細については、SQL Server オンライン ブックでステートメントの全構文を参照し、そのトピックに含まれている多数の例を見てください。  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 2: データベース オブジェクトに対する権限の構成](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
+[レッスン 2: データベース オブジェクトに対するアクセス許可の構成](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
   
 ## <a name="see-also"></a>参照  
 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../t-sql/statements/create-database-sql-server-transact-sql.md)  

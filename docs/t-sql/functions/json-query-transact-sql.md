@@ -1,5 +1,5 @@
 ---
-title: "JSON_QUERY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: JSON_QUERY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 
  オブジェクトまたは配列を JSON 文字列から抽出します。  
   
- オブジェクトまたは配列ではなく、JSON 文字列からスカラー値を抽出する、次を参照してください。 [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md). 間の相違点について**JSON_VALUE**と**JSON_QUERY**を参照してください[JSON_VALUE の比較と JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)です。  
+ オブジェクトまたは配列ではなく JSON 文字列からスカラー値を抽出する場合は、「[JSON_VALUE &#40;TRANSACT-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)」を参照してください。 **JSON_VALUE** と **JSON_QUERY** の違いについては、「[JSON_VALUE と JSON_QUERY を比較する](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,29 +50,29 @@ JSON_QUERY ( expression [ , path ] )
  *式 (expression)*  
  式。 通常、変数またはを JSON テキストを含む列の名前。  
   
- 場合**JSON_QUERY** JSON では無効ですが見つかった*式*で識別される値を検索する前に*パス*エラーを返します。 場合**JSON_QUERY**で識別される値が検出されない*パス*, テキスト全体をスキャンし、JSON を検出した場合にエラーを返しますが、任意の場所で無効*式*です。  
+ **JSON_QUERY** が、*path* によって識別される値を検出する前に *expression* で無効な JSON を検出した場合、関数はエラーを返します。 **JSON_QUERY** が *path* によって識別される値を検出できない場合、テキスト全体がスキャンされ、*expression* のどこかで無効な JSON を検出した場合はエラーを返します。  
   
- *パス*  
+ *path*  
  オブジェクトまたは抽出先の配列を指定する JSON のパス。
 
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]し、 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]、変数の値として使用できる*パス*です。
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] では、*path* の値として変数を指定できます。
 
-JSON のパスを解析するための lax または strict モードを指定できます。 解析モードを指定しない場合は、既定値は lax モードです。 詳細については、次を参照してください。 [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+JSON のパスを解析するための厳密でないまたは strict モードを指定できます。 解析モードの指定がない場合は、厳密でないモードが既定で指定されます。 詳細については、「[JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)」を参照してください。  
 
-既定値*パス*'$' がします。 値を指定しない場合、結果として*パス*、 **JSON_QUERY** 、入力を返します*式*です。
+*path* の既定値は '$' です。 この結果、*path* の値を指定しない場合、**JSON_QUERY** は、入力された *expression* を返します。
 
-場合の形式*パス*が有効でない**JSON_QUERY**はエラーを返します。  
+*path* の書式が有効でない場合、**JSON_QUERY** はエラーを返します。  
   
 ## <a name="return-value"></a>戻り値  
  型 nvarchar (max) の JSON フラグメントを返します。 返される値の照合順序は、入力された式の照合順序と同じです。  
   
  場合は、値は、オブジェクトまたは配列には。  
   
--   厳密でないモード、 **JSON_QUERY**は null を返します。  
+-   厳密でないモードで JSON_QUERY** は null を返します。  
   
--   厳格モードで**JSON_QUERY**はエラーを返します。  
+-   厳格モードで JSON_QUERY** はエラーを返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 
 ### <a name="lax-mode-and-strict-mode"></a>厳密でないモードと厳格モード
 
@@ -93,28 +93,28 @@ JSON のパスを解析するための lax または strict モードを指定�
 } 
 ```  
   
- 次の表の動作を比較して**JSON_QUERY**厳密でないモードでは厳格モードでします。 省略可能なパス モードの仕様 (lax または strict) に関する詳細については、次を参照してください。 [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ 次の表は、lax モードと strict モードでの **JSON_MODIFY** の動作を比較します。 省略可能なパス モード (lax または strict) の指定の詳細については、「[JSON パス式 Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)」を参照してください。  
   
 |[パス]|厳密でないモードでの戻り値|厳格モードでの戻り値|詳細|  
 |----------|------------------------------|---------------------------------|---------------|  
-|$|全体の JSON テキストを返します。|全体の JSON テキストを返します。|該当なし|  
-|$info.type。|NULL|[エラー]|いないオブジェクトまたは配列。<br /><br /> 使用して**JSON_VALUE**代わりにします。|  
-|$info.address.town。|NULL|[エラー]|いないオブジェクトまたは配列。<br /><br /> 使用して**JSON_VALUE**代わりにします。|  
-|$ .info。"アドレス|N'{「町」:「板紙」で、"郡": ある"Avon"、「国」:"England"}'|N'{「町」:「板紙」で、"郡": ある"Avon"、「国」:"England"}'|該当なし|  
-|$info.tags。|N '[「スポーツ」、「Water ポーロ」]'|N '[「スポーツ」、「Water ポーロ」]'|該当なし|  
+|$|全体の JSON テキストを返します|全体の JSON テキストを返します|該当なし|  
+|$info.type。|NULL|[エラー]|オブジェクトまたは配列されません。<br /><br /> 代わりに **JSON_VALUE** を使用します。|  
+|$.info.address.town|NULL|[エラー]|オブジェクトまたは配列されません。<br /><br /> 代わりに **JSON_VALUE** を使用します。|  
+|$ .info。"アドレス|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|該当なし|  
+|$info.tags。|N'[ "Sport", "Water polo"]'|N'[ "Sport", "Water polo"]'|該当なし|  
 |$info.type[0]。|NULL|[エラー]|配列ではありません。|  
 |$info.none。|NULL|[エラー]|プロパティが存在しません。|  
 
-### <a name="using-jsonquery-with-for-json"></a>FOR JSON と JSON_QUERY を使用します。
+### <a name="using-jsonquery-with-for-json"></a>JSON_QUERY と FOR JSON の使用
 
-**JSON_QUERY**有効な JSON フラグメントを返します。 その結果、 **FOR JSON**内の特殊文字をエスケープしない、 **JSON_QUERY**値を返します。
+**JSON_QUERY** は、有効な JSON フラグメントを返します。 その結果、**FOR JSON** は、**JSON_QUERY** 戻り値内の特殊文字をエスケープしません。
 
-FOR JSON で結果を返す場合、(列または式の結果として) の JSON 形式では既にデータを含むしている場合は、ラップを使用して JSON データ**JSON_QUERY**せず、*パス*パラメーター。
+FOR JSON を使用して結果を返すときに (列内または式の結果として) 既に JSON 形式になっているデータを含める場合は、*path* パラメーターなしで **JSON_QUERY** を使用して JSON データをラップします。
 
 ## <a name="examples"></a>使用例  
   
 ### <a name="example-1"></a>例 1  
- 次の例からの JSON フラグメントを返す方法を示しています、`CustomFields`クエリ結果内の列です。  
+ 次の例では、クエリの結果内の `CustomFields` 列から JSON フラグメントを返す方法を示します。  
   
 ```sql  
 SELECT PersonID,FullName,
@@ -134,5 +134,5 @@ FOR JSON PATH
 ```  
   
 ## <a name="see-also"></a>参照  
- [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON データ &#40;です。SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+ [JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [JSON データ &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

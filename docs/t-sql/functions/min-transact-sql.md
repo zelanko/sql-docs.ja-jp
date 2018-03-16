@@ -1,5 +1,5 @@
 ---
-title: "MIN (TRANSACT-SQL) |Microsoft ドキュメント"
+title: MIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  式内の最小値を返します。 続くことがあります、 [OVER 句](../../t-sql/queries/select-over-clause-transact-sql.md)です。  
+  式内の最小値を返します。 続くことがあります、 OVER 句[](../../t-sql/queries/select-over-clause-transact-sql.md)です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,18 +67,18 @@ MIN ( expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )
  重複する値は 1 つだけカウントします。 DISTINCT は MIN では意味がなく、ISO との互換性を保つためだけに指定可能になっています。  
   
  *式 (expression)*  
- 定数、列名、関数、および算術演算子、ビット演算子、文字列演算子の組み合わせを指定します。 使用できる最小**数値**、 **char**、 **varchar**、 **uniqueidentifier**、または**datetime**列が、**ビット**列です。 集計関数とサブクエリは使用できません。  
+ 定数、列名、関数、および算術演算子、ビット演算子、文字列演算子の組み合わせを指定します。 使用できる最小 数値**, 、char**, 、varchar**, 、一意識別子**, 、または datetime **、列は使用できません ビット** 列です。 集計関数とサブクエリは使用できません。  
   
  詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
- 経由で**(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause*関数を適用するパーティションに FROM 句で生成される結果セットに分割します。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause*操作が実行される論理的順序を決定します。 *order_by_clause*が必要です。 詳細については、次を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* 操作が実行される論理的順序を決定します。 *order_by_clause* は必須です。 詳細については、を参照してください。 経由句 (&) #40 です。TRANSACT-SQL と #41;[](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>戻り値の型  
- 値を返しますと同じ*式*です。  
+ 式*と同じ値を返します。  
   
-## <a name="remarks"></a>解説  
- 最小値には、null 値が無視されます。  
+## <a name="remarks"></a>Remarks  
+ MIN は NULL 値をすべて無視します。  
   
  文字型列の場合は、並べ替え順での最小の値が返されます。  
   
@@ -87,7 +87,7 @@ MIN ( expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-simple-example"></a>A. 簡単な例  
- 次の例は、最低 (最小) 税率を返します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース  
+ 次の例は、最低 (最小) 税率を返します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。  
   
 ```  
 SELECT MIN(TaxRate)  
@@ -106,7 +106,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. OVER 句を使用する  
- 次の例では、OVER 句と共に、MIN、MAX、AVG、COUNT 関数をで部署ごとの集計値を指定する、`HumanResources.Department`テーブルに、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
+ 次の例では、MIN、MAX、AVG、および COUNT 関数を OVER 句と共に使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `HumanResources.Department` テーブルの部署ごとに集計値を入力します。  
   
 ```  
 SELECT DISTINCT Name  
@@ -148,10 +148,10 @@ Tool Design                   8.62                  29.8462               23.505
  (16 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-min"></a>C. 最小値を使用します。  
- 次の例では、MIN 集計関数を使用して、指定された販売注文のセットで最も安価な (最小) 製品の価格を返します。  
+### <a name="c-using-min"></a>C. MIN を使用する  
+ 次の例では、MIN 集計関数を使用して、指定された一連の販売注文の中で最も低額 (最小値) の製品価格を返します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -168,8 +168,8 @@ WHERE SalesOrderNumber IN (N'SO43659', N'SO43660', N'SO43664');
  5.1865
  ```  
   
-### <a name="d-using-min-with-over"></a>D. OVER での最小値の使用  
- 次の例では、MIN OVER() 分析関数を使用して、販売注文ごとに、最も安価な製品の価格を返します。 結果セットがパーティション分割、`SalesOrderID`列です。  
+### <a name="d-using-min-with-over"></a>D. OVER と共に MIN を使用する  
+ 次の例では、MIN OVER() 分析関数を使用して、各販売注文で最も低額の製品価格を返します。 結果セットは、`SalesOrderID` 列によってパーティション分割されています。  
   
 ```  
 -- Uses AdventureWorks  
@@ -192,9 +192,9 @@ LeastExpensiveProduct SalesOrderID
 ```  
   
 ## <a name="see-also"></a>参照  
- [集計関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [最大 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/max-transact-sql.md)   
- [句 &#40; 経由TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md)  
+ [集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [MAX &#40;Transact-SQL&#41;](../../t-sql/functions/max-transact-sql.md)   
+ [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

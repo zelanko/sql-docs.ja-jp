@@ -1,5 +1,5 @@
 ---
-title: "ISNUMERIC (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ISNUMERIC (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -51,12 +51,12 @@ ISNUMERIC ( expression )
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)に評価されます。  
+ 評価対象となる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ISNUMERIC は、入力式が有効な数値データ型であると判断される場合に 1 を返します。それ以外の場合は 0 を返します。 有効な数値データ型は次のとおりです。  
   
 |||  
@@ -68,10 +68,10 @@ ISNUMERIC ( expression )
 |**decimal**|**real**|  
   
 > [!NOTE]  
->  ISNUMERIC は、数字以外の一部の文字に対して 1 を返します。たとえばプラス (+)、マイナス (-)、ドル記号 ($) などの通貨記号がこれに該当します。 通貨記号の一覧については、次を参照してください。 [money および smallmoney &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
+>  ISNUMERIC は、数字以外の一部の文字に対して 1 を返します。たとえばプラス (+)、マイナス (-)、ドル記号 ($) などの通貨記号がこれに該当します。 通貨記号の完全な一覧を参照してください money および smallmoney &#40;です。TRANSACT-SQL と #41;[](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
   
 ## <a name="examples"></a>使用例  
- 次の例では`ISNUMERIC`を数値の値ではないすべての郵便番号コードを返します。  
+ この例では、`ISNUMERIC` を使用して数値型でないすべての郵便番号を返しています。  
   
 ```  
 USE AdventureWorks2012;  
@@ -82,8 +82,8 @@ WHERE ISNUMERIC(PostalCode)<> 1;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例では`ISNUMERIC`を数値の値ではないすべての郵便番号コードを返します。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ この例では、`ISNUMERIC` を使用して数値型でないすべての郵便番号を返しています。  
   
 ```  
 USE master;  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   

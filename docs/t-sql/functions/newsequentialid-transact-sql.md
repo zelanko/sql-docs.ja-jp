@@ -1,5 +1,5 @@
 ---
-title: "NEWSEQUENTIALID (TRANSACT-SQL) |Microsoft ドキュメント"
+title: NEWSEQUENTIALID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/08/2015
 ms.prod: sql-non-specified
@@ -40,10 +40,10 @@ ms.lasthandoff: 11/21/2017
 > [!IMPORTANT]  
 >  プライバシーを重視する場合は、この関数は使用しないでください。 次に生成される GUID の値が予測されるため、その GUID に関連するデータへのアクセスが発生する可能性があります。  
   
- NEWSEQUENTIALID は、windows のラッパーを[UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027)でいくつかの関数[バイトをシャッフル適用](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/)です。
+ NEWSEQUENTIALID は、Windows の [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) 関数のラッパーであり、何らかの[バイト シャッフルが適用されます](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/)。
   
 > [!WARNING]  
->  UuidCreateSequential の関数には、ハードウェアの依存関係があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、連続した値のクラスターがデータベース (包含データベース) などがその他のコンピューターに移動したときに開発できます。 Always On を使用する場合とで[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、連続した値のクラスターが、データベースが別のコンピューターにフェールオーバーした場合に開発できます。  
+>  UuidCreateSequential の関数には、ハードウェアの依存関係があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 、データベース (包含データベースの場合) などは、他のコンピューターに移動すると、連続した値のクラスターを開発できます。 Always On を [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] で使用するとき、データベースの別のコンピューターへのフェールオーバーが失敗した場合、シーケンシャル値のクラスターが発生する可能性があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,8 +57,8 @@ NEWSEQUENTIALID ( )
 ## <a name="return-type"></a>戻り値の型  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>解説  
- NEWSEQUENTIALID() は、型のテーブル列の既定の制約でのみ使用できます**uniqueidentifier**です。 例:  
+## <a name="remarks"></a>Remarks  
+ NEWSEQUENTIALID() は、型のテーブル列の既定の制約でのみ使用できます uniqueidentifier**です。 例 :  
   
 ```  
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT NEWSEQUENTIALID());   
@@ -70,7 +70,7 @@ CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT NEWSEQUENTIALID());
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT dbo.myfunction(NEWSEQUENTIALID()));  
 ```  
   
- 前の例では、 `myfunction()` 、スカラー ユーザー定義スカラー値関数を受け入れて返す、`uniqueidentifier`値。  
+ この例で、`myfunction()` は、`uniqueidentifier` 値を受け入れて返すユーザー定義スカラー関数です。  
   
  クエリで NEWSEQUENTIALID を参照することはできません。  
   
@@ -79,7 +79,7 @@ CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT dbo.myfunction(NEWSEQUENT
  NEWSEQUENTIALID を使用して生成された各 GUID は、そのコンピューター上で一意です。 NEWSEQUENTIALID を使用することによって生成された GUID は、ソース コンピューターにネットワーク カードがある場合にのみ、複数のコンピューター間で一意になります。  
   
 ## <a name="see-also"></a>参照  
- [NEWID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/newid-transact-sql.md)   
- [比較演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
+ [NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)   
+ [比較演算子 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
   
   

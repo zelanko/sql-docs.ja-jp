@@ -1,5 +1,5 @@
 ---
-title: "ERROR_SEVERITY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ERROR_SEVERITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -56,17 +56,17 @@ ERROR_SEVERITY ( )
   
  CATCH ブロックの範囲外で呼び出された場合は NULL を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ERROR_SEVERITY は、CATCH ブロックのスコープ内の任意の場所で呼び出すことができます。  
   
- ERROR_SEVERITY は、その実行回数、または実行される CATCH ブロックのスコープ内の場所に関係なく、エラーの重大度を返します。 これは、@ などの関数とは対照的@ERROR、または CATCH ブロックの最初のステートメントでは、エラーが発生した直後後のステートメントでのみエラー番号が返されます。  
+ ERROR_SEVERITY は、その実行回数、または実行される CATCH ブロックのスコープ内の場所に関係なく、エラーの重大度を返します。 これは、@@ERROR などの関数とは対照的です。これらの関数がエラー番号を返すのは、エラーが発生したステートメントの直後のステートメントか、CATCH ブロックの最初のステートメントだけです。  
   
  入れ子になった CATCH ブロックでは、ERROR_SEVERITY は、参照されている CATCH ブロックのスコープに固有のエラーの重大度を返します。 たとえば、外側の TRY...CATCH 構造の CATCH ブロックには、TRY...CATCH 構造が入れ子にされている場合があります。 この場合、入れ子になった CATCH ブロック内では、ERROR_SEVERITY は、入れ子になった CATCH ブロックを呼び出したエラーの重大度を返します。 ERROR_SEVERITY が外部の CATCH ブロックで実行された場合は、その CATCH ブロックを呼び出したエラーの重大度が返されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-errorseverity-in-a-catch-block"></a>A. CATCH ブロックで ERROR_SEVERITY を使用する  
- 次の例は、 `SELECT` 0 除算エラーを生成するステートメント。 エラーの重大度が返されます。  
+ 次の例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 エラーの重大度が返されます。  
   
 ```  
   
@@ -81,7 +81,7 @@ GO
 ```  
   
 ### <a name="b-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>B. CATCH ブロックで ERROR_SEVERITY を他のエラー処理ツールと一緒に使用する  
- 次の例は、 `SELECT` 0 による除算を生成するステートメント。 重大度と共にエラーに関する情報が返されます。  
+ 次の例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 重大度と共にエラーに関する情報が返されます。  
   
 ```  
   
@@ -101,10 +101,10 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>C. CATCH ブロックで ERROR_SEVERITY を他のエラー処理ツールと一緒に使用する  
- 次の例は、 `SELECT` 0 による除算を生成するステートメント。 重大度と共にエラーに関する情報が返されます。  
+ 次の例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 重大度と共にエラーに関する情報が返されます。  
   
 ```  
   
@@ -130,7 +130,7 @@ GO
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
- [ERROR_STATE &#40; です。TRANSACT-SQL と&#41; です。](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

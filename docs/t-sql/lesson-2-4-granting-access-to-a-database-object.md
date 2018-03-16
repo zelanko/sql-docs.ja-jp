@@ -1,5 +1,5 @@
 ---
-title: "データベース オブジェクトにアクセス権の付与 |Microsoft ドキュメント"
+title: "データベース オブジェクトへのアクセス権の付与 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-4---granting-access-to-a-database-object"></a>レッスン 2-4-データベースのオブジェクトへのアクセスを許可します。
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]管理者からの SELECT を実行することができます、**製品**テーブルおよび**vw_Names**表示、および実行、 **pr_Names**プロシージャであるただし、Mary ことはできません。 Mary に必要な権限を付与するには、GRANT ステートメントを使用します。  
+# <a name="lesson-2-4---granting-access-to-a-database-object"></a>レッスン 2-4 - データベース オブジェクトへのアクセス権の付与
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]管理者は **Products** テーブルおよび **vw_Names** ビューから SELECT を実行し、 **pr_Names** プロシージャを実行できますが、ユーザー Mary は実行できません。 Mary に必要な権限を付与するには、GRANT ステートメントを使用します。  
   
 ### <a name="procedure-title"></a>手順のタイトル  
   

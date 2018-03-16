@@ -1,5 +1,5 @@
 ---
-title: "日付と時刻の種類 |Microsoft ドキュメント"
+title: "日付と時刻の型 | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -26,21 +26,21 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="date-and-time-types"></a>日付と時刻型
+# <a name="date-and-time-types"></a>日付/時刻型
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次の日付と時刻型をサポートしています。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、以下の日付および時刻の型がサポートされています。
   
 ## <a name="in-this-section"></a>このセクションの内容
 [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)  
-[datetime &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/datetime-transact-sql.md)  
+[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)  
 [datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)  
 [datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
-[smalldatetime &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/smalldatetime-transact-sql.md)  
-[時間と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/time-transact-sql.md)
+[smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
+[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)
   
 ## <a name="see-also"></a>参照
-[日付および時刻データ型および関数 &#40;TRANSACT-SQL と #41 です。](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-[タイム ゾーンと &#40;です。TRANSACT-SQL と&#41; です。](../../t-sql/queries/at-time-zone-transact-sql.md)
+[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   

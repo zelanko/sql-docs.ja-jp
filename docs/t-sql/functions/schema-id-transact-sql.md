@@ -1,5 +1,5 @@
 ---
-title: "SCHEMA_ID (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SCHEMA_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -52,14 +52,14 @@ SCHEMA_ID ( [ schema_name ] )
   
 |項目|定義|  
 |----------|----------------|  
-|*schema_name*|スキーマの名前を指定します。 *schema_name*は、 **sysname**です。 場合*schema_name*が指定されていない、SCHEMA_ID は、呼び出し元の既定のスキーマの ID を返します。|  
+|*schema_name*|スキーマの名前を指定します。 *schema_name* は、 **sysname**です。 場合 schema_name* が指定されていない、SCHEMA_ID は、呼び出し元の既定のスキーマの ID を返します。|  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
- 場合は NULL が返されます*schema_name*有効なスキーマではありません。  
+ 場合に、NULL が返される schema_name* 有効なスキーマではありません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SCHEMA_ID は、システム スキーマ ID とユーザー定義スキーマ ID を返します。 SCHEMA_ID は、選択リストの中、WHERE 句の中、また、式を使える所であればどこでも呼び出すことができます。  
   
 ## <a name="examples"></a>使用例  
@@ -77,9 +77,9 @@ SELECT SCHEMA_ID('dbo');
 ```  
   
 ## <a name="see-also"></a>参照  
- [メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [SCHEMA_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/schema-name-transact-sql.md)   
- [sys.schemas &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)  
+ [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [SCHEMA_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/schema-name-transact-sql.md)   
+ [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)  
   
   
 

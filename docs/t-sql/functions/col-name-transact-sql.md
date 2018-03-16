@@ -1,5 +1,5 @@
 ---
-title: "COL_NAME (TRANSACT-SQL) |Microsoft ドキュメント"
+title: COL_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -49,10 +49,10 @@ COL_NAME ( table_id , column_id )
   
 ## <a name="arguments"></a>引数  
 *table_id*  
-列を含むテーブルの ID 番号を指定します。 *table_id*の種類は**int**です。
+列を含むテーブルの ID 番号を指定します。 table_id *のデータ型は int*です。
   
 *column_id*  
-列の ID 番号を指定します。 *column_id*パラメーターの型は**int**です。
+列の ID 番号を指定します。 column_id *パラメーター型のデータは int*です。
   
 ## <a name="return-types"></a>戻り値の型
 **sysname**
@@ -62,13 +62,13 @@ COL_NAME ( table_id , column_id )
   
 ユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なリソースのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (COL_NAME など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。
   
-## <a name="remarks"></a>解説  
-*Table_id*と*column_id*パラメーターは同時に、列名文字列を生成します。
+## <a name="remarks"></a>Remarks  
+Table_id *と column_id* パラメーターが同時に、列名文字列を生成します。
   
-テーブルと列の id 番号の取得の詳細については、次を参照してください。 [OBJECT_ID (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/object-id-transact-sql.md).
+テーブルと列の id 番号を取得する方法の詳細については、を参照してください。 [OBJECT_ID (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/object-id-transact-sql.md).
   
 ## <a name="examples"></a>使用例  
-次の例は、サンプルでは、最初の列の名前を返します`Employee`テーブル。
+次の例では、サンプルの `Employee` テーブル内の最初の列の名前を返します。
   
 ```sql
 -- Uses AdventureWorks  
@@ -87,9 +87,9 @@ BusinessEntityID
   
 ## <a name="see-also"></a>参照
 [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[メタデータ関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)  
-[COL_LENGTH &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/col-length-transact-sql.md)
+[COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md)
   
   
 

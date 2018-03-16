@@ -1,5 +1,5 @@
 ---
-title: "トリガー関数 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "トリガー関数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/08/2017
 ms.prod: sql-non-specified

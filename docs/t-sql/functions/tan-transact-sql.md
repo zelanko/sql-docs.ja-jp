@@ -1,5 +1,5 @@
 ---
-title: "Tan 関数 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: TAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -47,13 +47,13 @@ TAN ( float_expression )
   
 ## <a name="arguments"></a>引数  
  *float_expression*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)型の**float**または型に暗黙的に変換できる**float**、ラジアンとして解釈されます。  
+ ラジアン数として解釈される、**float** 型または暗黙的に **float** 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  
   
 ## <a name="examples"></a>使用例  
- 次の例は、角度のタンジェントを返します`PI()/2`です。  
+ 次の例では、`PI()/2` のタンジェントを返します。  
   
 ```  
 SELECT TAN(PI()/2);  
@@ -66,8 +66,8 @@ SELECT TAN(PI()/2);
 1.6331778728383844E+16  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例では、.45 のタンジェントを返します。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 次の例では、45 のタンジェントを返します。  
   
 ```  
 SELECT TAN(.45);  
@@ -81,7 +81,7 @@ SELECT TAN(.45);
 ```  
   
 ## <a name="see-also"></a>参照  
- [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

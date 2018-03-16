@@ -1,5 +1,5 @@
 ---
-title: "SYSTEM_USER (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SYSTEM_USER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -55,19 +55,19 @@ SYSTEM_USER
 ## <a name="return-types"></a>戻り値の型  
  **nchar**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SYSTEM_USER 関数は、CREATE TABLE および ALTER TABLE ステートメント内で DEFAULT 制約と共に使用できます。 標準的な関数としても使用できます。  
   
  ユーザー名とログイン名が異なる場合、SYSTEM_USER ではログイン名が返されます。  
   
- 現在のユーザーにログオンしている場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows 認証を使用すると、SYSTEM_USER が形式で Windows ログインの識別名を返します:*ドメイン*\\*user_login_name*. 現在のユーザーが SQL Server 認証によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインした場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの識別名が返されます。たとえば、`WillisJo` としてログインしたユーザーの場合は `WillisJo` が返されます。  
+ 現在のユーザーが Windows 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインしている場合、*ドメイン*\\*user_login_name* という形式で SYSTEM_USER は Windows ログインの識別名を返します。 現在のユーザーが SQL Server 認証によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインした場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの識別名が返されます。たとえば、`WillisJo` としてログインしたユーザーの場合は `WillisJo` が返されます。  
   
  SYSTEM_USER では、現在の実行コンテキストの名前が返されます。 EXECUTE AS ステートメントを使用してコンテキストが切り替えられていた場合、SYSTEM_USER では権限が借用されたコンテキストの名前が返されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-systemuser-to-return-the-current-system-user-name"></a>A. SYSTEM_USER を使用して現在のシステム ユーザー名を返す  
- 次の例で、`char`変数の現在の値を格納する`SYSTEM_USER`の変数、インストールし、変数に格納されている値を出力します。  
+ 次の例では、`char` 変数を宣言し、`SYSTEM_USER` の現在の値をこの変数に格納した後、変数に格納されている値を出力します。  
   
 ```  
 DECLARE @sys_usr char(30);  
@@ -112,7 +112,7 @@ VALUES (24283, '19981130');
 GO  
 ```  
   
- すべての情報を選択する次のクエリ、`Sales_Tracking`テーブル。  
+ 次のクエリでは、`Sales_Tracking` テーブルのすべての情報を選択します。  
   
 ```  
 SELECT * FROM Sales_Tracking ORDER BY Rep_id;  
@@ -133,10 +133,10 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
 (5 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C: では、SYSTEM_USER を使用して、現在のシステム ユーザー名を取得するには  
- 次の例は、の現在の値を返します`SYSTEM_USER`です。  
+### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C: SYSTEM_USER を使用して現在のシステム ユーザー名を返す  
+ 次の例では、`SYSTEM_USER` の現在の値を返します。  
   
 ```  
 SELECT SYSTEM_USER;  
@@ -145,11 +145,11 @@ SELECT SYSTEM_USER;
 ## <a name="see-also"></a>参照  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [CURRENT_USER と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/current-user-transact-sql.md)   
- [SESSION_USER と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/session-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
+ [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
  [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [ユーザーと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/user-transact-sql.md)  
+ [USER &#40;Transact-SQL&#41;](../../t-sql/functions/user-transact-sql.md)  
   
   
 

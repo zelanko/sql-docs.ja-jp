@@ -1,5 +1,5 @@
 ---
-title: "ATN2 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ATN2 (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ ATN2 ( float_expression , float_expression )
 ```  
   
 ## <a name="arguments"></a>引数  
-*float_expression*は、[式](../../t-sql/language-elements/expressions-transact-sql.md)の**float**データ型。
+*float_expression* は、 [式](../../t-sql/language-elements/expressions-transact-sql.md) の **float** データ型。
   
 ## <a name="return-types"></a>戻り値の型
 **float**
@@ -71,7 +71,7 @@ The ATN2 of the angle is: 0.265345
 ## <a name="see-also"></a>参照
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [float、real および #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/float-and-real-transact-sql.md)  
-[数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[数学関数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

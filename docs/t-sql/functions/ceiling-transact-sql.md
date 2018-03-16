@@ -1,5 +1,5 @@
 ---
-title: "CEILING (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CEILING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ CEILING ( numeric_expression )
   
 ## <a name="arguments"></a>引数  
 *numeric_expression*  
-[式](../../t-sql/language-elements/expressions-transact-sql.md)の正確な型または概数の数値データのカテゴリを除く入力、**ビット**データ型。
+**bit** データ型を除く、真数データ型または概数データ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。
   
 ## <a name="return-types"></a>戻り値の型
 *numeric_expression*と同じ型を返します。
@@ -71,6 +71,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照
-[システム関数 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   

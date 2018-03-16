@@ -1,5 +1,5 @@
 ---
-title: "ToString (データベース エンジン) |Microsoft ドキュメント"
+title: ToString (Database Engine) | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="tostring-database-engine"></a>ToString (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-文字列の論理表現を返します*この*です。 変換するとき暗黙的に呼び出されます ToString **hierarchyid**を文字列型が発生します。 逆の役割を果たします[Parse &#40;データベース エンジン&#41;](../../t-sql/data-types/parse-database-engine.md)です。
+this* の論理的表現に基づく文字列を返します ToString **から変換するとき暗黙的に呼び出されます hierarchyid** を文字列型が発生します。 逆の役割を果たします #40 を解析する (& a)";"データベース エンジン&#41;[](../../t-sql/data-types/parse-database-engine.md).
   
 ## <a name="syntax"></a>構文  
   
@@ -52,12 +52,12 @@ string ToString  ( )
 ```  
   
 ## <a name="return-types"></a>戻り値の型
-**SQL Server の戻り値 type:nvarchar(4000)**
+**SQL Server の戻り値の型 :nvarchar(4000)**
   
-**CLR の戻り値の型: 文字列**
+**CLR の戻り値の型: String**
   
-## <a name="remarks"></a>解説  
-階層内での論理的な位置を返します。 たとえば、 `/2/1/` 4 番目の行を表します ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])、ファイル システムの次の階層構造で。
+## <a name="remarks"></a>Remarks  
+階層内での論理的な位置を返します。 たとえば、`/2/1/` は、ファイル システムの次の階層構造における 4 行目 ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) を表します。
   
 ```sql
 /        C:\  
@@ -71,7 +71,7 @@ string ToString  ( )
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-transact-sql-example-in-a-table"></a>A. テーブルでの Transact-SQL の例  
-次の例には、両方が返されます、`OrgNode`両方と列、 **hierarchyid**データ型およびより読みやすい文字列形式。
+次の例では、`OrgNode` 列が、**hierarchyid** データ型の読み取り可能な文字列形式で返されます。
   
 ```sql
 SELECT OrgNode,  
@@ -95,7 +95,7 @@ OrgNode   Node
 ```  
   
 ### <a name="b-converting-transact-sql-values-without-a-table"></a>B. テーブルを使用しない Transact-SQL 値の変換  
-次のコード例では`ToString`に変換する、 **hierarchyid**値を文字列と`Parse`文字列値を変換する、 **hierarchyid**です。
+次のコード例では、`ToString` を使用して **hierarchyid** 値を文字列に変換し、`Parse` を使用して文字列値を **hierarchyid** に変換します。
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  
@@ -116,7 +116,7 @@ hierarchyidRepresentation    StringRepresentation
 ```
   
 ### <a name="c-clr-example"></a>C. CLR の例  
-次のコード スニペットは、ToString() メソッドを呼び出します。
+次のコード スニペットの呼び出し、 ToString() メソッド。
   
 ```sql
 this.ToString()  
