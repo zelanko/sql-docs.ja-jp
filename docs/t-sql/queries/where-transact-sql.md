@@ -1,5 +1,5 @@
 ---
-title: "ここで (TRANSACT-SQL) |Microsoft ドキュメント"
+title: WHERE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>引数  
-\<*search_condition* > 返される行が満たす条件を定義します。 検索条件に含まれる述語の数に制限はありません。 検索条件および述語の詳細については、次を参照してください。[検索条件 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md)  
+\< *search_condition* > 返される行が満たす条件を定義します。 検索条件に含まれる述語の数に制限はありません。 検索条件および述語の詳細については、「[検索条件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
  以下の例は、`WHERE` 句でいくつかの一般的な検索条件を使用する方法を示しています。  
@@ -64,7 +64,7 @@ FROM DimEmployee
 WHERE LastName = 'Smith' ;  
 ```  
   
-### <a name="b-finding-rows-that-contain-a-value-as-part-of-a-string"></a>B. 文字列の一部として値を含む行を検索  
+### <a name="b-finding-rows-that-contain-a-value-as-part-of-a-string"></a>B. 値を文字列の一部として含む行を検索する  
   
 ```  
 -- Uses AdventureWorks  
@@ -126,8 +126,8 @@ WHERE EmployeeKey Between 100 AND 200;
   
 ## <a name="see-also"></a>参照  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [述語 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/queries/predicates.md)   
- [検索条件 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md)   
+ [述語 &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md)   
+ [検索条件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  

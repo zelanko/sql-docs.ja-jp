@@ -1,5 +1,5 @@
 ---
-title: "CREATE SPATIAL INDEX (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CREATE SPATIAL INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の指定したテーブルと列に空間インデックスを作成します。 インデックスはテーブル内にデータがなくても作成できます。 データベース名を修飾して指定することにより、他のデータベース内のテーブルまたはビューにインデックスを作成することもできます。 空間インデックスでは、テーブルにクラスター化主キーが含まれる必要があります。 空間インデックスについては、次を参照してください。[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の指定したテーブルと列に空間インデックスを作成します。 インデックスはテーブル内にデータがなくても作成できます。 データベース名を修飾して指定することにより、他のデータベース内のテーブルまたはビューにインデックスを作成することもできます。 空間インデックスでは、テーブルにクラスター化主キーが含まれる必要があります。 空間インデックスについては、「[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)」をご覧ください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -222,12 +222,12 @@ BOUNDING_BOX = ( {
   
 ## <a name="arguments"></a>引数  
  *index_name*  
- インデックスの名前。 インデックス名は、テーブル内では一意である必要がありますが、データベース内で一意である必要はありません。 インデックス名の規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。  
+ インデックスの名前。 インデックス名は、テーブル内では一意である必要がありますが、データベース内で一意である必要はありません。 インデックス名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
- ON\<オブジェクト > ( *spatial_column_name* )  
+ ON \<object> ( *spatial_column_name* )  
  インデックスを作成するオブジェクト (データベース、スキーマ、またはテーブル) と空間列の名前を指定します。  
   
- *spatial_column_name*インデックスの基になる空間列を指定します。 1 つだけの空間列は、1 つの空間インデックス定義で指定できます。しかしで複数の空間インデックスを作成することができます、 **geometry**または**geography**列です。  
+ *spatial_column_name* には、インデックスの基準となる空間列を指定します。 単一の空間インデックス定義には 1 つの空間列しか指定できませんが、1 つの **geometry** 列または **geography** 列に複数の空間インデックスを作成できます。  
   
  USING  
  空間インデックスのテセレーション スキームを指定します。 このパラメーターは、次の表に示す型固有の値を使用します。  
@@ -241,21 +241,21 @@ BOUNDING_BOX = ( {
   
  空間インデックスは、 **geometry** 型または **geography**型の列にのみ作成できます。 それ以外の場合は、エラーが発生します。 また、指定された型に対して無効なパラメーターが渡された場合も、エラーが発生します。  
   
- 方法については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、テセレーションの実装を参照してください[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がテセレーションを実装するしくみについては、「[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)」をご覧ください。  
   
  ON *filegroup_name*  
- **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定したファイル グループに、指定したインデックスを作成します。 位置の指定がなく、テーブルがパーティション分割されていない場合、インデックスには、基になるテーブルと同じファイル グループが使用されます。 ファイル グループは既に存在している必要があります。  
   
  ON "default"  
- **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  既定のファイル グループに、指定したインデックスを作成します。  
   
  この文脈での default という語はキーワードではありません。 default は、既定ファイル グループの識別子なので、ON "default" または ON [default] のように区切る必要があります。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
- **\<オブジェクト >:: =**  
+ **\<object>::=**  
   
  インデックスを作成するオブジェクトを、完全修飾または部分的な修飾の形式で指定します。  
   
@@ -270,26 +270,26 @@ BOUNDING_BOX = ( {
   
  Windows Azure SQL データベースでは、database_name が現在のデータベースの場合、または database_name が tempdb で、object_name が # で始まる場合に、3 つの要素で構成された名前形式 database_name.[schema_name].object_name をサポートします。  
   
-### <a name="using-options"></a>オプションを使用します。  
+### <a name="using-options"></a>USING オプション  
  GEOMETRY_GRID  
- 指定します、 **geometry**グリッド テセレーション スキームを使用しています。 GEOMETRY_GRID の列にのみ指定できます、 **geometry**データ型。  GEOMETRY_GRID を使用すると、テセレーション スキームを手動で調整できます。  
+ 使用している **geometry** グリッド テセレーション スキームを指定します。 GEOMETRY_GRID は、**geometry** データ型の列にのみ指定できます。  GEOMETRY_GRID を使用すると、テセレーション スキームを手動で調整できます。  
   
  GEOMETRY_AUTO_GRID  
- **適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  geometry データ型の列にのみ指定できます。 これはこのデータ型の既定値なので、指定しなくてもかまいません。  
   
  GEOGRAPHY_GRID  
- 地理グリッド テセレーション スキームを指定します。 GEOGRAPHY_GRID の列にのみ指定できます、 **geography**データ型。  
+ 地理グリッド テセレーション スキームを指定します。 GEOGRAPHY_GRID は、**geography** データ型の列にのみ指定できます。  
   
  GEOGRAPHY_AUTO_GRID  
- **適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  geography データ型の列にのみ指定できます。  これはこのデータ型の既定値なので、指定しなくてもかまいません。  
   
 ### <a name="with-options"></a>WITH オプション  
 BOUNDING_BOX  
-数値 4 つの組、境界ボックスの 4 つの座標を定義するを指定します。 左下隅の x 座標と y の最小の座標と右上隅の x 座標と y の最大の座標。  
+境界ボックスの 4 つの座標を定義する 4 つの数値の組を指定します。x-min と y-min は左下隅の座標で、x-max と y-max は右上隅の座標です。  
   
  *xmin*  
  境界ボックスの左下隅の x 座標を指定します。  
@@ -318,7 +318,7 @@ BOUNDING_BOX
  > [!NOTE]
  > 境界ボックスの座標は、USING GEOMETRY_GRID 句内でのみ適用されます。  
  >
- > *xmax*より大きくなければなりません*xmin*と*ymax*より大きくなければなりません*ymin*です。 任意の有効なを指定できます[float](../../t-sql/data-types/float-and-real-transact-sql.md)値の表現であると仮定して: *xmax* > *xmin*と*ymax*  >  *ymin*です。 それ以外の場合は、該当するエラーが発生します。  
+ > *xmax* は *xmin* よりも大きく、*ymax* は *ymin* よりも大きい必要があります。 *xmax* > *xmin* かつ *ymax* > *ymin* であることを前提に、任意の有効な [float](../../t-sql/data-types/float-and-real-transact-sql.md) 値表現を指定できます。 それ以外の場合は、該当するエラーが発生します。  
  > 
  > 既定値はありません。  
  >
@@ -326,19 +326,19 @@ BOUNDING_BOX
   
  プロパティ名を指定するには、それぞれ一度だけ指定する必要があります。 これらは任意の順序で指定できます。 たとえば、次の 2 つの句は同等です。  
   
--   BOUNDING_BOX = (XMIN =*xmin*、YMIN =*ymin*、XMAX =*xmax*、YMAX =*ymax* )  
+-   BOUNDING_BOX =( XMIN =*xmin*, YMIN =*ymin*, XMAX =*xmax*, YMAX =*ymax* )  
   
--   BOUNDING_BOX = (XMIN =*xmin*、XMAX =*xmax*、YMIN =*ymin*、YMAX =*ymax*)  
+-   BOUNDING_BOX =( XMIN =*xmin*, XMAX =*xmax*, YMIN =*ymin*, YMAX =*ymax*)  
   
 GRIDS  
 テセレーション スキームの各レベルにおけるグリッド密度を定義します。 GEOMETRY_AUTO_GRID と GEOGRAPHY_AUTO_GRID を選択すると、このオプションは無効になります。  
   
- テセレーションの詳細については、次を参照してください。[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)です。  
+ テセレーションについて詳しくは、「[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)」をご覧ください。  
   
  GRIDS のパラメーターは次のとおりです。  
   
  LEVEL_1  
- 第 1 レベル (最上位) グリッドを指定します。  
+ 第 1 レベル (最上位) のグリッドを指定します。  
   
  LEVEL_2  
  第 2 レベルのグリッドを指定します。  
@@ -352,8 +352,8 @@ GRIDS
  LOW  
  そのレベルのグリッドに最も低い密度を指定します。 LOW は、16 個のセル (4 × 4 のグリッド) に相当します。  
   
- **[中]**  
- そのレベルのグリッドに中程度の密度を指定します。 メディアは、64 個のセル (8 × 8 のグリッド) に相当します。  
+ **MEDIUM**  
+ そのレベルのグリッドに中程度の密度を指定します。 MEDIUM は、64 個のセル (8 × 8 のグリッド) に相当します。  
   
  HIGH  
  そのレベルのグリッドに最も高い密度を指定します。 HIGH は、256 個のセル (16 × 16 のグリッド) に相当します。  
@@ -365,7 +365,7 @@ GRIDS
 > 無効な密度を指定すると、エラーが発生します。  
   
 CELLS_PER_OBJECT =*n*  
-オブジェクトあたりのテセレーション セル数を指定します。テセレーション プロセスでインデックスの単一空間オブジェクトに使用できるセル数です。 *n*1 ~ 8192 の整数を指定できます。 無効な数値が渡されるか、指定されたテセレーションの最大セル数より数値が大きい場合は、エラーが発生します。  
+オブジェクトあたりのテセレーション セル数を指定します。テセレーション プロセスでインデックスの単一空間オブジェクトに使用できるセル数です。 *n* には、1 ～ 8192 の整数を指定できます。 無効な数値が渡されるか、指定されたテセレーションの最大セル数より数値が大きい場合は、エラーが発生します。  
   
  CELLS_PER_OBJECT の既定値は次のとおりです。  
   
@@ -378,38 +378,38 @@ CELLS_PER_OBJECT =*n*
   
  オブジェクトがセルで指定された数よりについて説明している場合は、最上位レベルに *n*、数のセルに応じて使用して完全な最上位レベルのテセレーションを提供する、インデックスを作成します。 その場合、オブジェクトには指定されたセル数よりも多くのセルが割り当てられることがあります。 この場合、最大数は、密度に応じて最上位レベルのグリッドで生成されたセルの数となります。  
   
- CELLS_PER_OBJECT 値は、オブジェクトごとのセル数のテセレーション ルールで使用されます。 テセレーション ルールについては、次を参照してください。[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)です。  
+ CELLS_PER_OBJECT 値は、オブジェクトごとのセル数のテセレーション ルールで使用されます。 テセレーション ルールについて詳しくは、「[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)」をご覧ください。  
   
-PAD_INDEX = {ON |**OFF** }  
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+PAD_INDEX = { ON | **OFF** }  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  インデックスの埋め込みを指定します。 既定値は OFF です。  
   
  ON  
- 示すで指定されている、空き領域のパーセンテージを*fillfactor*インデックスの中間レベル ページに適用されます。  
+ *fillfactor* で指定される空き領域のパーセンテージが、インデックスの中間レベルのページに適用されることを示します。  
   
- OFF または*fillfactor*が指定されていません  
+ OFF または *fillfactor* の指定なし  
  中間レベルのページはほぼ全容量が使用されることを示します。ただし、中間ページにあるキーのセットを考慮して、インデックスに割り当てることのできる、少なくとも 1 行の最大サイズが収まる分の領域は残されます。  
   
- PAD_INDEX では FILLFACTOR で指定されるパーセンテージが使用されるので、PAD_INDEX オプションは、FILLFACTOR が指定されている場合にのみ有効です。 FILLFACTOR で指定されるパーセンテージが 1 つの行を許可するのに十分な大きさがない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]内部的に最小値を許可する比率をオーバーライドします。 中間インデックス ページ上の行の番号 2 にはなりません未満の値をどのように低に関係なく*fillfactor*です。  
+ PAD_INDEX では FILLFACTOR で指定されるパーセンテージが使用されるので、PAD_INDEX オプションは、FILLFACTOR が指定されている場合にのみ有効です。 FILLFACTOR で指定されるパーセンテージで 1 行分のデータを格納できない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では内部的に、最小サイズを格納できるパーセンテージが使用されます。 中間インデックス ページの行数は、*fillfactor* の値がどれだけ小さくなっても 2 未満にはなりません。  
   
 FILLFACTOR =*fillfactor*  
- **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- インデックスの作成時または再構築時に、[!INCLUDE[ssDE](../../includes/ssde-md.md)] が各インデックス ページのリーフ レベルをどの程度まで埋めるかを、パーセント値で指定します。 *fillfactor* 1 から 100 までの整数値にする必要があります。 既定値は 0 です。 場合*fillfactor*が 100 または 0 の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]全容量リーフ ページを含むインデックスを作成します。  
+ インデックスの作成時または再構築時に、[!INCLUDE[ssDE](../../includes/ssde-md.md)] が各インデックス ページのリーフ レベルをどの程度まで埋めるかを、パーセント値で指定します。 *fillfactor* 値には、1 ～ 100 の整数値を指定してください。 既定値は 0 です。 *fillfactor* が 100 または 0 の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では全容量を使用するリーフ ページでインデックスが作成されます。  
   
 > [!NOTE]  
->  Fill factor 値 0 と 100 は、すべての点で同じです。  
+>  FILL FACTOR 値 0 と 100 の機能は、まったく同じです。  
   
- FILLFACTOR 設定は、インデックスが作成または再構築されるときのみ適用されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ページ内の空き領域の指定された割合動的に保持しません。 表示するには、fill factor 設定を使用して、 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)カタログ ビューです。  
+ FILLFACTOR 設定は、インデックスが作成または再構築されるときのみ適用されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ページ内で指定されたパーセント分の空領域は動的に保持されません。 FILL FACTOR 設定を表示するには、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) カタログ ビューを使用します。  
   
 > [!IMPORTANT]  
-> 100 未満、fillfactor の値をクラスター化インデックスを作成するため、データが占める記憶域スペースの量、影響、[!INCLUDE[ssDE](../../includes/ssde-md.md)]クラスター化インデックスを作成するときに、データを再分配します。  
+> [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、クラスター化インデックスの作成時にデータが再分配されるため、100 未満の FILLFACTOR 値を使ってクラスター化インデックスを作成すると、データ用のストレージ領域のサイズに影響が生じます。  
   
  詳細については、「 [インデックスの FILL FACTOR の指定](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)」を参照してください。  
   
-SORT_IN_TEMPDB = {ON |**OFF** }  
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+SORT_IN_TEMPDB = { ON | **OFF** }  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  tempdb に一時的な並べ替え結果を格納するかどうかを指定します。 既定値は OFF です。  
   
@@ -419,12 +419,12 @@ SORT_IN_TEMPDB = {ON |**OFF** }
  OFF  
  中間の並べ替え結果はインデックスと同じデータベースに格納されます。  
   
- インデックスを作成するためにユーザー データベース内に必要となる領域の他に、tempdb には、並べ替えの中間結果を格納するためにほぼ同じ大きさの追加領域が必要になります。 詳細については、次を参照してください。[インデックスの SORT_IN_TEMPDB オプション](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)です。  
+ インデックスを作成するためにユーザー データベース内に必要となる領域の他に、tempdb には、並べ替えの中間結果を格納するためにほぼ同じ大きさの追加領域が必要になります。 詳しくは、「[インデックスの SORT_IN_TEMPDB オプション](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)」をご覧ください。  
   
 IGNORE_DUP_KEY =**OFF**  
 インデックスの種類が一意になることはないので、空間インデックスには影響しません。 このオプションを ON に設定すると、エラーが発生します。  
   
-STATISTICS_NORECOMPUTE = {ON |**OFF**}  
+STATISTICS_NORECOMPUTE = { ON | **OFF**}  
 分布統計を再計算するかどうかを指定します。 既定値は OFF です。  
   
  ON  
@@ -438,8 +438,8 @@ STATISTICS_NORECOMPUTE = {ON |**OFF**}
 > [!IMPORTANT]  
 > 分布統計の自動再計算を無効にすると、クエリ オプティマイザーで、テーブルが関与するクエリの最適実行プランが選択されなくなる場合があります。  
   
-DROP_EXISTING = {ON |**OFF** }  
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+DROP_EXISTING = { ON | **OFF** }  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  名前付きの、既存の空間インデックスを削除および再構築することを指定します。 既定値は OFF です。  
   
@@ -452,15 +452,15 @@ DROP_EXISTING = {ON |**OFF** }
  DROP_EXISTING を使用してインデックスの種類を変更することはできません。  
   
 ONLINE =**OFF**  
-インデックス操作中に、基となるテーブルとそれに関連する各インデックスに対してクエリやデータ変更を行えないことを指定します。 このバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、空間インデックスに対するオンラインのインデックス構築操作はサポートされていません。 空間インデックスに対してこのオプションを ON に設定すると、エラーが発生します。 ONLINE オプションを省略するか、ONLINE を OFF に設定してください。  
+インデックス操作中に、基となるテーブルとそれに関連する各インデックスに対してクエリやデータ変更を行えないことを指定します。 このバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、空間インデックスに対するオンラインのインデックス構築操作はサポートされていません。 空間インデックスに対してこのオプションを ON に設定すると、エラーが発生します。 ONLINE オプションを省略するか、ONLINE を OFF に設定してください。  
   
  オフラインのインデックス操作で、空間インデックスの作成、再構築、または削除を行う場合は、テーブルで Sch-M (スキーマ修正) ロックが取得されます。 このため、操作中は、すべてのユーザーは基になるテーブルにアクセスできません。  
   
 > [!NOTE]  
 > オンラインでのインデックス操作は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
-ALLOW_ROW_LOCKS = { **ON** |オフ}  
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+ALLOW_ROW_LOCKS = { **ON** | OFF }  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  行ロックを許可するかどうかを指定します。 既定値は ON です。  
   
@@ -470,26 +470,26 @@ ALLOW_ROW_LOCKS = { **ON** |オフ}
  OFF  
  行ロックは使用されません。  
   
-ALLOW_PAGE_LOCKS = { **ON** |オフ}  
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+ALLOW_PAGE_LOCKS = { **ON** | OFF }  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  ページ ロックを許可するかどうかを指定します。 既定値は ON です。  
   
  ON  
- ページにアクセスするとき、行ロックが許可されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ページ ロックを使用する場合を決定します。  
+ ページにアクセスするとき、行ロックが許可されます。 いつページ ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって決定されます。  
   
  OFF  
  ページ ロックは使用されません。  
   
 MAXDOP =*max_degree_of_parallelism*  
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- 上書き、`max degree of parallelism`インデックス操作の実行中の構成オプション。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
+ インデックス操作中は、`max degree of parallelism` 構成オプションを無効にします。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
   
 > [!IMPORTANT]  
 > MAXDOP オブションは構文的にサポートされていますが、CREATE SPATIAL INDEX では、現在は常に単一のプロセッサしか使用されません。  
   
- *max_degree_of_parallelism*を指定できます。  
+ *max_degree_of_parallelism* には次の値を指定できます。  
   
  @shouldalert  
  並列プラン生成を抑制します。  
@@ -503,10 +503,10 @@ MAXDOP =*max_degree_of_parallelism*
  詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
   
 > [!NOTE]  
-> 並列インデックス操作はすべてのエディションで使用できない[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
+> 並列インデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
 DATA_COMPRESSION = {NONE | ROW | PAGE}  
-**適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  インデックスで使用されるデータ圧縮のレベルを決定します。  
   
@@ -519,18 +519,18 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  PAGE  
  インデックスでデータのページの圧縮が使用されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  すべてのオプションは、CREATE SPATIAL INDEX ステートメントごとに 1 回しか指定できません。 オプションを重複して指定すると、エラーが発生します。  
   
  空間インデックスは、テーブルの各空間列に 249 個まで作成できます。 特定の空間列に複数の空間インデックスを作成すると、1 つの列の異なるテセレーション パラメーターのインデックスを作成する場合などに便利です。  
   
 > [!IMPORTANT]  
-> 空間インデックスの作成には、そのほかにもいくつかの制限があります。 詳細については、次を参照してください。[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)です。  
+> 空間インデックスの作成には、そのほかにもいくつかの制限があります。 詳しくは、「[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)」をご覧ください。  
   
  インデックスの構築では、プロセスの並列処理を利用することはできません。  
   
 ## <a name="methods-supported-on-spatial-indexes"></a>空間インデックスでサポートされるメソッド  
- 空間インデックスは、特定の条件下で、いくつかのセット指向のジオメトリ メソッドをサポートします。 詳細については、次を参照してください。[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)です。  
+ 空間インデックスは、特定の条件下で、いくつかのセット指向のジオメトリ メソッドをサポートします。 詳しくは、「[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)」をご覧ください。  
   
 ## <a name="spatial-indexes-and-partitioning"></a>空間インデックスとパーティション分割  
  既定では、空間インデックスをパーティション分割されたテーブルに作成すると、インデックスは、テーブルのパーティション構成に従ってパーティション分割されます。 これによって、インデックス データと関連する行が同じパーティションに格納されます。  
@@ -540,7 +540,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
 ## <a name="spatial-indexes-and-filegroups"></a>空間インデックスとファイル グループ  
  既定では、空間インデックスは、インデックスが指定されたテーブルと同じファイル グループにパーティション分割されます。 ファイル グループを指定するとそちらが優先されます。  
   
- [ON { *filegroup_name* |"default"}]  
+ [ ON { *filegroup_name* | "default" } ]  
   
  空間インデックスにファイル グループを指定すると、インデックスは、テーブルのパーティション構成に関係なく指定したファイル グループに配置されます。  
   
@@ -553,16 +553,16 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
  各空間インデックスのテセレーション スキームおよびパラメーターに関する情報を表します。  
   
-## <a name="additional-remarks-about-creating-indexes"></a>インデックスの作成に関する詳細説明  
- インデックスの作成の詳細については、「解説」セクションを参照してください。 [CREATE INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-index-transact-sql.md).  
+## <a name="additional-remarks-about-creating-indexes"></a>インデックスの作成に関する解説  
+ インデックス作成について詳しくは、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」の「解説」をご覧ください。  
   
 ## <a name="permissions"></a>アクセス許可  
- ユーザーは、テーブルまたはビューに対する ALTER 権限か、sysadmin 固定サーバー ロールまたは db_ddladmin および db_owner 固定データベース ロールのメンバーである必要があります。  
+ ユーザーは、テーブルまたはビューに対する ALTER 権限を持っているか、sysadmin 固定サーバー ロールまたは db_ddladmin および db_owner 固定データベース ロールのメンバーである必要があります。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. 空間インデックスを geometry 列に作成する  
- 次の例は、という名前のテーブルを作成`SpatialTable`を格納している、 **geometry**型の列で`geometry_col`です。 次に、空間インデックス `SIndx_SpatialTable_geometry_col1` を `geometry_col` に作成します。 この例では、既定のテセレーション スキームを使用し、境界ボックスを指定します。  
+ 次の例では、**geometry** 型の列 `geometry_col` を含む `SpatialTable` というテーブルを作成します。 次に、空間インデックス `SIndx_SpatialTable_geometry_col1` を `geometry_col` に作成します。 この例では、既定のテセレーション スキームを使用し、境界ボックスを指定します。  
   
 ```sql  
 CREATE TABLE SpatialTable(id int primary key, geometry_col geometry);  
@@ -572,7 +572,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1
 ```  
   
 ### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>B. 空間インデックスを geometry 列に作成する  
- 次の例は、2 番目の空間インデックスを作成`SIndx_SpatialTable_geometry_col2`の`geometry_col`で、`SpatialTable`テーブル。 この例で指定`GEOMETRY_GRID`テセレーション スキームとして。 境界ボックス、グリッド レベルごとに異なる密度、オブジェクトごとのセル数に 64 をそれぞれ指定します。 また、インデックスの埋め込みに設定`ON`です。  
+ 次の例では、`SpatialTable` テーブルの `geometry_col` に 2 番目の空間インデックス `SIndx_SpatialTable_geometry_col2` を作成します。 この例では、テセレーション スキームとして `GEOMETRY_GRID` を指定します。 境界ボックス、グリッド レベルごとに異なる密度、オブジェクトごとのセル数に 64 をそれぞれ指定します。 また、インデックスの埋め込みを `ON` に設定します。  
   
 ```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2  
@@ -586,7 +586,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2
 ```  
   
 ### <a name="c-creating-a-spatial-index-on-a-geometry-column"></a>C. 空間インデックスを geometry 列に作成する  
- 次の例は、3 番目の空間インデックスを作成`SIndx_SpatialTable_geometry_col3`の`geometry_col`で、`SpatialTable`テーブル。 この例では、既定のテセレーション スキームを使用します。 境界ボックスを指定し、第 3 レベルと第 4 レベルに異なるセル密度を使用しますが、オブジェクトごとのセル数には既定値を使用します。  
+ 次の例では、`SpatialTable` テーブルの `geometry_col` に 3 番目の空間インデックス `SIndx_SpatialTable_geometry_col3` を作成します。 この例では、既定のテセレーション スキームを使用します。 境界ボックスを指定し、第 3 レベルと第 4 レベルに異なるセル密度を使用しますが、オブジェクトごとのセル数には既定値を使用します。  
   
 ```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3  
@@ -608,7 +608,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
 ```  
   
 ### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>E. 空間インデックスを geography 列に作成する  
- 次の例は、という名前のテーブルを作成`SpatialTable2`を格納している、 **geography**型の列で`geography_col`です。 次に、空間インデックス `SIndx_SpatialTable_geography_col1` を `geography_col` に作成します。 この例では、GEOGRAPHY_AUTO_GRID テセレーション スキームの既定のパラメーター値を使用します。  
+ 次の例では、**geography** 型の列 `geography_col` を含む `SpatialTable2` というテーブルを作成します。 次に、空間インデックス `SIndx_SpatialTable_geography_col1` を `geography_col` に作成します。 この例では、GEOGRAPHY_AUTO_GRID テセレーション スキームの既定のパラメーター値を使用します。  
   
 ```sql  
 CREATE TABLE SpatialTable2(id int primary key, object GEOGRAPHY);  
@@ -620,7 +620,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1
 >  地理グリッド インデックスには、境界ボックスは指定できません。  
   
 ### <a name="f-creating-a-spatial-index-on-a-geography-column"></a>F. 空間インデックスを geography 列に作成する  
- 次の例は、2 番目の空間インデックスを作成`SIndx_SpatialTable_geography_col2`の`geography_col`で、`SpatialTable2`テーブル。 この例で指定`GEOGRAPHY_GRID`テセレーション スキームとして。 レベルごとに異なるグリッド密度、オブジェクトごとのセル数に 64 をそれぞれ指定します。 また、インデックスの埋め込みに設定`ON`です。  
+ 次の例では、`SpatialTable2` テーブルの `geography_col` に 2 番目の空間インデックス `SIndx_SpatialTable_geography_col2` を作成します。 この例では、テセレーション スキームとして `GEOGRAPHY_GRID` を指定します。 レベルごとに異なるグリッド密度、オブジェクトごとのセル数に 64 をそれぞれ指定します。 また、インデックスの埋め込みを `ON` に設定します。  
   
 ```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2  
@@ -650,12 +650,12 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-index-transact-sql.md)   
+ [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.spatial_index_tessellations &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)   
- [sys.spatial_indexes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)   
+ [sys.spatial_index_tessellations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)   
+ [sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)   
  [空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

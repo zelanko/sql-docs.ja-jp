@@ -1,5 +1,5 @@
 ---
-title: "DBCC CHECKFILEGROUP (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC CHECKFILEGROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]割り当てとすべてのテーブルと、現在のデータベースの指定したファイル グループのインデックス付きビューの構造的整合性をチェックします。
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 現在のデータベースで、指定されたファイル グループのすべてのテーブルおよびインデックス付きビューの割り当てと構造的整合性をチェックします。
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
@@ -66,8 +66,8 @@ DBCC CHECKFILEGROUP
   
 ## <a name="arguments"></a>引数  
  *filegroup_name*  
- 現在のデータベースで、テーブルの割り当てと構造的整合性をチェックするファイル グループの名前を指定します。 指定しない場合、または 0 を指定した場合、既定はプライマリ ファイル グループとなります。 ファイル グループ名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。  
- *filegroup_name* FILESTREAM ファイル グループをすることはできません。  
+ 現在のデータベースで、テーブルの割り当てと構造的整合性をチェックするファイル グループの名前を指定します。 指定しない場合、または 0 を指定した場合、既定はプライマリ ファイル グループとなります。 ファイル グループ名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
+ *filegroup_name* に FILESTREAM ファイル グループは指定できません。  
   
  *filegroup_id*  
  現在のデータベースで、テーブルの割り当てと構造的整合性をチェックするファイル グループの ID 番号を指定します。  
@@ -98,30 +98,30 @@ DBCC CHECKFILEGROUP
 >  PHYSICAL_ONLY を指定すると、DBCC CHECKFILEGROUP で FILESTREAM データのチェックがすべてスキップされるようになります。  
   
  MAXDOP  
- **適用されます**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を通じて 2014 SP2[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)します。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 から[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで  
   
- 上書き、**並列処理の次数の最大**構成オプションの**sp_configure**ステートメントです。 MAXDOP では、sp_configure で構成されている値を超えることができます。 MAXDOP では、リソース ガバナーで構成されている値を超えると、データベース エンジンは、ALTER WORKLOAD GROUP (TRANSACT-SQL)」に記載のリソース ガバナーの MAXDOP 値を使用します。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
+ ステートメントの **sp_configure** の **max degree of parallelism** 構成オプションを無効にします。 MAXDOP では、sp_configure で構成されている値を超えることができます。 MAXDOP では、リソース ガバナーで構成されている値を超えると、データベース エンジンは、ALTER WORKLOAD GROUP (TRANSACT-SQL)」に記載のリソース ガバナーの MAXDOP 値を使用します。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
   
 > [!CAUTION]  
 >  MAXDOP が 0 に設定されている場合、サーバーでは最大限の並列処理が実行されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 DBCC CHECKFILEGROUP と DBCC CHECKDB はほぼ同じ DBCC コマンドです。 主な相違点は、DBCC CHECKFILEGROUP の対象が、指定された単一のファイル グループと必要なテーブルのみに限定されることです。
 DBCC CHECKFILEGROUP は、次のコマンドを実行します。
--   [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)ファイル グループのです。  
--   [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)のすべてのテーブルおよびインデックス付きビューのファイル グループにします。  
+-   ファイル グループの [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)。  
+-   ファイル グループ内のすべてのテーブルおよびインデックス付きビューの [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)。  
   
 DBCC CHECKALLOC または DBCC CHECKTABLE を DBCC CHECKFILEGROUP と分けて実行する必要はありません。
   
 ## <a name="internal-database-snapshot"></a>内部データベース スナップショット  
-DBCC CHECKFILEGROUP は、内部データベースのスナップショットを使用して、これらのチェックを実行するために必要なトランザクションの一貫性を実現します。 詳細については、次を参照してください[データベース スナップショット &#40; のスパース ファイルのサイズを表示。TRANSACT-SQL と #41 です。](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 「DBCC 内部データベース スナップショットの使用」」、および[DBCC &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+DBCC CHECKFILEGROUP は、内部データベースのスナップショットを使用して、これらのチェックを実行するために必要なトランザクションの一貫性を実現します。 詳細については、「[データベース スナップショットのスパース ファイルのサイズを表示する方法 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)」および「[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)」の「DBCC 内部データベース スナップショットの使用」セクションを参照してください。
 スナップショットを作成できない場合や TABLOCK オプションが指定されている場合、DBCC CHECKFILEGROUP はロックを取得して必要な一貫性を実現します。 この場合、割り当てのチェックを行うための排他データベース ロックと、テーブルのチェックを行うための共有テーブル ロックが必要です。 TABLOCK の作用によって負荷の高いデータベースでも DBCC CHECKFILEGROUP の実行速度が速くなりますが、DBCC CHECKFILEGROUP の実行中、データベースでの同時実行性は低下します。
   
 > [!NOTE]  
 >  tempdb に対して DBCC CHECKFILEGROUP を実行しても、割り当てのチェックは行われず、共有テーブル ロックを取得してテーブルのチェックを行う必要があります。 これは、パフォーマンス上の理由から、データベースのスナップショットが tempdb では利用できないためです。 つまり、必要なトランザクションの一貫性を実現できないためです。  
   
 ## <a name="checking-objects-in-parallel"></a>オブジェクトの並列チェック  
-既定では、DBCC CHECKFILEGROUP はオブジェクトの並列チェックを実行します。 並列処理の次数は、クエリ プロセッサによって自動的に決定されます。 並列処理の次数の最大値は、並列クエリと同様に構成します。 使用して DBCC チェックに利用できるプロセッサの最大数を制限するには、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)です。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。
+既定では、DBCC CHECKFILEGROUP はオブジェクトの並列チェックを実行します。 並列処理の次数は、クエリ プロセッサによって自動的に決定されます。 並列処理の次数の最大値は、並列クエリと同様に構成します。 DBCC チェックに利用できるプロセッサの最大数を制限するには、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用します。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。
 並列チェックはトレース フラグ 2528 を使用して無効にできます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。
   
 ## <a name="nonclustered-indexes-on-separate-filegroups"></a>異なるファイル グループの非クラスター化インデックス  
@@ -135,7 +135,7 @@ DBCC CHECKFILEGROUP は、内部データベースのスナップショットを
 パーティション テーブルが複数のファイル グループに分散している場合、DBCC CHECKFILEGROUP によってチェックされるのは指定したファイル グループに存在しているパーティション行セットのみで、他のファイル グループの行セットは無視されます。 チェックされなかったパーティションは、情報メッセージ 2594 に示されます。 指定したファイル グループにない非クラスター化インデックスはチェックされません。
   
 ## <a name="understanding-dbcc-error-messages"></a>DBCC エラー メッセージについて  
-メッセージが書き込まれます DBCC CHECKFILEGROUP コマンドの終了後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー ログ。 DBCC コマンドが正常に実行された場合、メッセージでは正常完了とコマンド実行時間が示されます。 エラーのため、チェックを完了する前に、DBCC コマンドが停止すると、メッセージは、コマンドが終了した、状態の値とコマンド実行時間の量を示します。 次の表は、メッセージに含まれる可能性がある状態値の一覧と説明です。
+DBCC CHECKFILEGROUP コマンドの終了後、メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに書き込まれます。 DBCC コマンドが正常に実行された場合、メッセージでは正常完了とコマンド実行時間が示されます。 エラーが発生して DBCC コマンドが完了前に停止した場合、メッセージではコマンドが終了したことと、状態の値、コマンド実行時間が示されます。 次の表は、メッセージに含まれる可能性がある状態値の一覧と説明です。
   
 |状態|Description|  
 |-----------|-----------------|  
@@ -147,8 +147,8 @@ DBCC CHECKFILEGROUP は、内部データベースのスナップショットを
 |5|不明なエラーが発生し、DBCC コマンドが終了しました。|  
   
 ## <a name="error-reporting"></a>[エラー報告]  
-ミニ ダンプ ファイル (SQLDUMP*nnnn*.txt) で作成された、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBCC CHECKFILEGROUP は、破損エラーを検出するたびに、ログ ディレクトリ。 インスタンスの機能の使用状況データ収集およびエラー レポート機能が有効な場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に、ファイルが自動的に転送[!INCLUDE[msCoName](../../includes/msconame-md.md)]です。 収集されたデータは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能向上のために使用されます。
-このダンプ ファイルには、DBCC CHECKFILEGROUP コマンドの結果と追加の診断出力が含まれます。 また、制限付きの随意アクセス制御リスト (DACL) が割り当てられます。 アクセスが制限されて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウントとのメンバー、 **sysadmin**ロール。 既定では、 **sysadmin**ロールには、Windows の builtin \administrators グループとローカル管理者のグループのすべてのメンバーが含まれています。 データ収集プロセスが失敗しても、DBCC コマンドは失敗しません。
+DBCC CHECKFILEGROUP により破損エラーが検出されるたびに、ミニ ダンプ ファイル (SQLDUMP*nnnn*.txt) が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の LOG ディレクトリに生成されます。 機能の使用状況データ収集とエラー報告機能が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して有効になっている場合、ダンプ ファイルは自動的に [!INCLUDE[msCoName](../../includes/msconame-md.md)] に転送されます。 収集されたデータは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能向上のために使用されます。
+このダンプ ファイルには、DBCC CHECKFILEGROUP コマンドの結果と追加の診断出力が含まれます。 また、制限付きの随意アクセス制御リスト (DACL) が割り当てられます。 アクセスが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントと **sysadmin** ロールのメンバーに制限されます。 既定では、**sysadmin** ロールには Windows の BUILTIN\Administrators グループとローカルの管理者グループのすべてのメンバーが含まれます。 データ収集プロセスが失敗しても、DBCC コマンドは失敗しません。
   
 ## <a name="resolving-errors"></a>エラーの解決  
 DBCC CHECKFILEGROUP によってエラーが報告される場合は、データベース バックアップからデータベースを復元することをお勧めします。 DBCC CHECKFILEGROUP に修復オプションを指定することはできません。
@@ -198,7 +198,7 @@ Estimated TEMPDB space needed for CHECKTABLES (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。
   
 ## <a name="examples"></a>使用例  
@@ -212,7 +212,7 @@ GO
 ```  
   
 ### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>B. 非クラスター化インデックスを除く AdventureWorks データベースの PRIMARY ファイル グループをチェックする  
-次の例のチェック、`AdventureWorks2012`データベース プライマリ ファイル グループ (非クラスター化インデックスを除く) を指定して、プライマリ ファイル グループの識別番号を指定することによって`NOINDEX`です。
+次の例では、プライマリ ファイル グループの ID 番号を指定し、`NOINDEX` オプションを指定することによって、非クラスター化インデックスを除く `AdventureWorks2012` データベースのプライマリ ファイル グループをチェックします。
   
 ```sql  
 USE AdventureWorks2012;  
@@ -233,10 +233,10 @@ WITH ESTIMATEONLY;
   
 ## <a name="see-also"></a>参照  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[FILEGROUP_ID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/filegroup-id-transact-sql.md)  
-[sp_helpfile を実行 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)  
-[sp_helpfilegroup &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)  
-[sys.sysfilegroups &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-compatibility-views/sys-sysfilegroups-transact-sql.md)  
+[FILEGROUP_ID &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-id-transact-sql.md)  
+[sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)  
+[sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)  
+[sys.sysfilegroups &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysfilegroups-transact-sql.md)  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [DBCC CHECKALLOC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)  
 [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)

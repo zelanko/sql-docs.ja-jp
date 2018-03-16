@@ -1,5 +1,5 @@
 ---
-title: "対称キー (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -77,13 +77,13 @@ CREATE SYMMETRIC KEY key_name
   
 ## <a name="arguments"></a>引数  
  *Key_name*  
- 対称キーをデータベースで認識するための、一意の名前を指定します。 一時キーの名前は、シャープ (#) 記号で始める必要があります。 たとえば、 **#temporarykey900007**です。 2 つ以上の # で始まる名前の対称キーは作成できません。 EKM プロバイダーを使用して一時対称キーを作成することはできません。  
+ 対称キーをデータベースで認識するための、一意の名前を指定します。 一時キーの名前は、シャープ (#) 記号で始める必要があります。 たとえば、**#temporaryKey900007** のように指定します。 2 つ以上の # で始まる名前の対称キーは作成できません。 EKM プロバイダーを使用して一時対称キーを作成することはできません。  
   
- 承認*owner_name*  
+ AUTHORIZATION *owner_name*  
  対称キーを所有するデータベース ユーザーまたはアプリケーション ロールの名前を指定します。  
   
- プロバイダーから*provider_name*  
- 拡張キー管理 (EKM) プロバイダーと名前を指定します。 EKM デバイスからはキーがエクスポートされません。 最初に CREATE PROVIDER ステートメントを使用してプロバイダーを定義する必要があります。 外部キー プロバイダーの作成の詳細については、次を参照してください。[拡張キー管理 &#40;です。EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ FROM PROVIDER *provider_name*  
+ 拡張キー管理 (EKM) プロバイダーと名前を指定します。 EKM デバイスからはキーがエクスポートされません。 最初に CREATE PROVIDER ステートメントを使用してプロバイダーを定義する必要があります。 外部キー プロバイダーの作成について詳しくは、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」をご覧ください。  
   
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
@@ -100,47 +100,47 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
- CREATION_DISPOSITION  **=**  CREATE_NEW  
+ CREATION_DISPOSITION **=** CREATE_NEW  
  拡張キー管理デバイス上で新しいキーを作成します。  デバイスにキーが既に存在する場合は、ステートメントがエラーで失敗します。  
   
- CREATION_DISPOSITION  **=**  OPEN_EXISTING  
- マップ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]対称キーを既存の拡張キー管理キー。 CREATION_DISPOSITION = OPEN_EXISTING が指定されない場合、この既定値は CREATE_NEW です。  
+ CREATION_DISPOSITION **=** OPEN_EXISTING  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の対称キーを、既存の拡張キー管理キーにマップします。 CREATION_DISPOSITION = OPEN_EXISTING が指定されない場合、この既定値は CREATE_NEW です。  
   
  *certificate_name*  
  対称キーの暗号化に使用する証明書の名前を指定します。 証明書はデータベース内に存在する必要があります。  
   
- **'** *パスワード* **'**  
- 対称キーを保護する TRIPLE_DES キーの派生元パスワードを指定します。 *パスワード*のインスタンスを実行しているコンピューターの Windows パスワード ポリシーの要件を満たす必要がある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 常に強力なパスワードを使用します。  
+ **'** *password* **'**  
+ 対称キーを保護する TRIPLE_DES キーの派生元パスワードを指定します。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。 強力なパスワードを常に使用してください。  
   
  *symmetric_key_name*  
- 対称キーを指定します。 作成されるキーを暗号化するために使用します。 指定したキーはデータベース内に存在し、開かれている必要があります。  
+ 作成するキーの暗号化に使用する対称キーを指定します。 指定したキーはデータベース内に存在し、開かれている必要があります。  
   
  *asym_key_name*  
- 非対称キー、指定が作成されるキーを暗号化するために使用します。 この非対称キーはデータベース内に存在する必要があります。  
+ 作成するキーの暗号化に使用する非対称キーを指定します。 この非対称キーはデータベース内に存在する必要があります。  
   
- \<アルゴリズム >  
+ \<algorithm>  
 暗号化アルゴリズムを指定します。   
 > [!WARNING]  
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、AES_128、AES_192、AES_256 以外のすべてのアルゴリズムが使用されなくなりました。 (推奨しません)、古いアルゴリズムを使用するには、120 以下、データベース互換性レベルを設定する必要があります。  
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、AES_128、AES_192、AES_256 以外のすべてのアルゴリズムが使用されなくなりました。 古いアルゴリズムを使用する場合は (推奨されません)、データベース互換性レベルを 120 以下に設定する必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  対称キーを作成するときには、証明書、パスワード、対称キー、非対称キー、PROVIDER のうち少なくとも 1 つを使用して対称キーを暗号化する必要があります。 キーには種類ごとの暗号化を複数指定できます。 つまり、1 つの対称キーを、複数の証明書、パスワード、対称キー、および非対称キーを使用して同時に暗号化できます。  
   
 > [!CAUTION]  
->  対称キーが、証明書 (または別のキー) の代わりに、パスワードで暗号化されている場合、TRIPLE DES 暗号化アルゴリズムは、パスワードの暗号化に使用されます。 このため、AES など、強力な暗号化アルゴリズムで作成されたキーでも、キー自身はそれより弱いアルゴリズムで保護されます。  
+>  証明書ではなくパスワードを使用して対称キーを暗号化する場合は、パスワードの暗号化に TRIPLE DES 暗号化アルゴリズムが使用されます。 このため、AES など、強力な暗号化アルゴリズムで作成されたキーでも、キー自身はそれより弱いアルゴリズムで保護されます。  
   
  キーを複数のユーザーに配布する前に、追加パスワードを使用して対称キーを暗号化できます。  
   
  一時キーは、そのキーを作成したユーザーが所有します。 また一時キーは、現在のセッションでのみ有効です。  
   
- IDENTITY_VALUE では、新しい対称キーで暗号化されるデータをタグ付けするための GUID が生成されます。 このタグ付けは、キーと暗号化データの照合に使用できます。 特定の句で生成された GUID は、常に同じです。 句を使用して GUID を生成した後は、句を使用してアクティブになっているセッションが 1 つでもあると、同じ句を再度使用することはできません。 IDENTITY_VALUE は省略可能な句ですが、一時キーで暗号化したデータを保存する場合はこの句を使用することをお勧めします。  
+ IDENTITY_VALUE では、新しい対称キーで暗号化されるデータをタグ付けするための GUID が生成されます。 このタグ付けは、キーと暗号化データの照合に使用できます。 特定の句で生成された GUID は常に同じになります。 句を使用して GUID を生成した後は、句を使用してアクティブになっているセッションが 1 つでもあると、同じ句を再度使用することはできません。 IDENTITY_VALUE は省略可能な句ですが、一時キーで暗号化したデータを保存する場合はこの句を使用することをお勧めします。  
   
  既定の暗号化アルゴリズムはありません。  
   
 > [!IMPORTANT]  
 >  重要なデータの保護には RC4 および RC4_128 ストリーム暗号を使用しないことをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、こうしたキーで実行された暗号化をそれ以上エンコードしません。  
   
- 対称キーに関する情報は、 [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)カタログ ビューです。  
+ 対称キーに関する情報は、[sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) カタログ ビューで確認できます。  
   
  暗号プロバイダーから作成された対称キーによって、対称キーを暗号化することはできません。  
   
@@ -152,7 +152,7 @@ CREATE SYMMETRIC KEY key_name
   
  **非推奨の RC4 アルゴリズム:**  
   
- に、同一の RC4 キーで繰り返し使用される同じ RC4 または RC4_128 KEY_GUID、データの異なるブロックに対して結果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自動的に salt を行いません。 同一の RC4 キーを繰り返し使用することは、暗号強度を著しく低下させる既知のエラーです。 そのため、RC4 キーワードおよび RC4_128 キーワードは推奨します。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+ 異なるデータ ブロックに対して同じ RC4 または RC4_128 KEY_GUID を繰り返し使用すると、同一の RC4 キーが生成されます。これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が自動的に salt を提供しないためです。 同一の RC4 キーを繰り返し使用することは、暗号強度を著しく低下させる既知のエラーです。 そのため、RC4 キーワードおよび RC4_128 キーワードは使用しないことをお勧めします。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!WARNING]  
 >  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  
@@ -163,7 +163,7 @@ CREATE SYMMETRIC KEY key_name
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-creating-a-symmetric-key"></a>A. 対称キーを作成する  
- 次の例は、という対称キーを作成`JanainaKey09`を使用して、`AES 256`アルゴリズム、証明書で新しいキーを暗号化および`Shipping04`です。  
+ 次の例では、`AES 256` アルゴリズムを使用して対称キー `JanainaKey09` を作成し、新しいキーを証明書 `Shipping04` を使用して暗号化します。  
   
 ```  
 CREATE SYMMETRIC KEY JanainaKey09   
@@ -187,7 +187,7 @@ GO
 ```  
   
 ### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>C. 拡張キー管理 (EKM) デバイスを使用して対称キーを作成する  
- 次の例では、という対称キー`MySymKey`と呼ばれるプロバイダーを使用して`MyEKMProvider`のキー名と`KeyForSensitiveData`です。 承認を割り当てて`User1`、システム管理者と呼ばれるプロバイダーは既に登録ことを前提としています`MyEKMProvider`で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ 次の例では、`MyEKMProvider` というプロバイダーとキー名 `KeyForSensitiveData` を使用して、`MySymKey` という対称キーを作成します。 `User1` に承認を割り当てています。また、システム管理者が `MyEKMProvider` というプロバイダーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に既に登録していることを前提としています。  
   
 ```  
 CREATE SYMMETRIC KEY MySymKey  
@@ -204,7 +204,7 @@ GO
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [sys.symmetric_keys &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "DECRYPTBYKEYAUTOCERT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DECRYPTBYKEYAUTOCERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/09/2015
 ms.prod: sql-non-specified
@@ -50,40 +50,40 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
   
 ## <a name="arguments"></a>引数  
  *cert_ID*  
- 対称キーの保護に使用されている証明書の ID です。 *cert_ID*は**int**です。  
+ 対称キーの保護に使用されている証明書の ID です。 Cert_ID *は int*です。  
   
  *cert_password*  
- 証明書の秘密キーを保護するパスワードを指定します。 秘密キーがデータベースのマスター キーで保護されている場合は NULL を指定できます。 *cert_password*は**nvarchar**です。  
+ 証明書の秘密キーを保護するパスワードを指定します。 秘密キーがデータベースのマスター キーで保護されている場合は NULL を指定できます。 cert_password *は nvarchar*です。  
   
- '*暗号化テキスト*'  
- キーで暗号化されたデータです。 *暗号化テキスト*は**varbinary**です。  
+ '*ciphertext*'  
+ キーで暗号化されたデータです。 暗号化テキスト *は varbinary*です。  
   
  @ciphertext  
- 型の変数は、 **varbinary**キーで暗号化されたデータが含まれます。  
+ キーを使用して暗号化されたデータを含む **varbinary** 型の変数を指定します。  
   
  *add_authenticator*  
- 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 データを暗号化するときに EncryptByKey に渡されたものと同じ値にする必要があります。**1**認証子が使用された場合。 *add_authenticator*は**int**です。  
+ 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 データを暗号化するときに EncryptByKey に渡されたものと同じ値である必要があります。 1** 認証子が使用された場合。 add_authenticator *は int*です。  
   
  @add_authenticator  
  認証子がプレーン テキストと共に暗号化されているかどうかを示します。 データを暗号化する際に EncryptByKey に渡された値と同じである必要があります。  
   
- *認証子*  
- 認証子の生成元のデータを指定します。 EncryptByKey に渡された値と一致する必要があります。 *認証子*は**sysname**です。  
+ *authenticator*  
+ 認証子の生成元のデータを指定します。 EncryptByKey に渡された値と一致する必要があります。 認証システム *は sysname*です。  
   
  @authenticator  
  認証子の生成元のデータを含む変数を指定します。 EncryptByKey に渡された値と一致する必要があります。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** 8,000 バイトの最大サイズ。  
+ varbinary** 8,000 バイトの最大サイズ。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  DecryptByKeyAutoCert は、OPEN SYMMETRIC KEY および DecryptByKey の機能を組み合わせたもので、 対称キーの暗号化解除と、そのキーを使用した暗号化テキストの暗号化解除を 1 回の操作で行います。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  対称キーに対する VIEW DEFINITION 権限と、証明書に対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 例を次にどのように`DecryptByKeyAutoCert`を復号化を実行するコードを簡略化するために使用できます。 このコードを実行する必要があります、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース マスター _ キーを既には持たないデータベース。  
+ 次の例では、`DecryptByKeyAutoCert` を使用して暗号化解除の実行コードを簡素化する方法を示します。 このコードは、データベース マスター キーが存在しない [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで実行する必要があります。  
   
 ```  
 --Create the keys and certificate.  
@@ -134,8 +134,8 @@ SELECT NationalIDNumber, EncryptedNationalIDNumber
   
 ## <a name="see-also"></a>参照  
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [ENCRYPTBYKEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [DECRYPTBYKEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/decryptbykey-transact-sql.md)   
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

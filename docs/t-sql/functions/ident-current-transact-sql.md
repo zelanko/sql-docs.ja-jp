@@ -1,5 +1,5 @@
 ---
-title: "IDENT_CURRENT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: IDENT_CURRENT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ IDENT_CURRENT( 'table_name' )
   
 ## <a name="arguments"></a>引数  
  *table_name*  
- ID 値が返されるテーブルの名前を指定します。 *table_name*は**varchar**、既定値はありません。  
+ ID 値が返されるテーブルの名前を指定します。 *table_name* は **varchar** で、既定値はありません。  
   
 ## <a name="return-types"></a>戻り値の型  
  **numeric(38,0)**  
@@ -58,14 +58,14 @@ IDENT_CURRENT( 'table_name' )
 ## <a name="exceptions"></a>例外  
  エラーが発生した場合、または呼び出し元にオブジェクトの表示権限がない場合は、NULL が返されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーは、ユーザーが所有するまたはをユーザーが許可されているアクセス許可のセキュリティ保護可能なメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (IDENT_CURRENT など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (IDENT_CURRENT など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
- IDENT_CURRENT がに似ていますが、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] id 関数 SCOPE_IDENTITY および @@IDENTITYです。 3 つの関数とも、最後に生成された ID 値を返します。 ただし、スコープとセッションが*最後*はこれらの各関数で定義されている異なります。  
+## <a name="remarks"></a>Remarks  
+ IDENT_CURRENT は、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] の ID 関数 SCOPE_IDENTITY および @@IDENTITY に似ています。 3 つの関数とも、最後に生成された ID 値を返します。 ただし、各関数の中で、*last* が定義されるスコープとセッションがそれぞれ異なります。  
   
 -   IDENT_CURRENT は、任意のセッションおよび任意のスコープ内の特定のテーブルに対して生成された最後の ID 値を返します。  
   
--   @@IDENTITYすべてのスコープ全体で任意のテーブルの現在のセッションで生成された最後の id 値を返します。  
+-   @@IDENTITY は、すべてのスコープを対象に、現在のセッション内の任意のテーブルに対して生成された最後の ID 値を返します。  
   
 -   SCOPE_IDENTITY は、現在のセッションと現在のスコープ内の任意のテーブルに対して生成された最後の ID 値を返します。  
   
@@ -78,7 +78,7 @@ IDENT_CURRENT( 'table_name' )
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-the-last-identity-value-generated-for-a-specified-table"></a>A. 指定したテーブルに対して生成された最新の ID 値を返す  
- 次の例は、に対して生成された最後の id 値を返します、`Person.Address`テーブルに、`AdventureWorks2012`データベース。  
+ 次の例では、`AdventureWorks2012` データベースの `Person.Address` テーブルに対して生成された最新の ID 値を返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -87,7 +87,7 @@ SELECT IDENT_CURRENT ('Person.Address') AS Current_Identity;
 GO  
 ```  
   
-### <a name="b-comparing-identity-values-returned-by-identcurrent-identity-and-scopeidentity"></a>B. IDENT_CURRENT、によって返された id 値を比較する@IDENTITYおよび SCOPE_IDENTITY  
+### <a name="b-comparing-identity-values-returned-by-identcurrent-identity-and-scopeidentity"></a>B. IDENT_CURRENT、@@IDENTITY、および SCOPE_IDENTITY により返された ID 値を比較する  
  次の例では、`IDENT_CURRENT`、`@@IDENTITY`、および `SCOPE_IDENTITY` によって返される異なる ID 値を示しています。  
   
 ```  
@@ -147,9 +147,9 @@ SELECT IDENT_CURRENT('t7');
 ## <a name="see-also"></a>参照  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
  [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
- [IDENT_INCR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ident-incr-transact-sql.md)   
- [IDENT_SEED &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ident-seed-transact-sql.md)   
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [システム関数 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

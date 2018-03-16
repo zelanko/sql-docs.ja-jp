@@ -1,5 +1,5 @@
 ---
-title: "FILE_ID (TRANSACT-SQL) |Microsoft ドキュメント"
+title: FILE_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/02/2018
   現在のデータベースの中にある、指定された論理ファイル名のファイル識別 (ID) 番号を返します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用して[FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,15 +55,15 @@ FILE_ID ( file_name )
   
 ## <a name="arguments"></a>引数  
  *file_name*  
- 型の式は、 **sysname**ファイル ID を返す対象のファイルの名前を表す  
+ **sysname** 型の式です。ファイル ID を返すファイルの名前を表します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **smallint**  
   
-## <a name="remarks"></a>解説  
- *file_name* sys.master_files または sys.database_files カタログ ビューで name 列に表示される論理ファイル名に対応しています。  
+## <a name="remarks"></a>Remarks  
+ *file_name* は、カタログ ビュー sys.master_files または sys.database_files の、name 列に表示される論理ファイル名に対応します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、フルテキスト カタログに割り当てられているファイルの識別番号が 32767 を超える。 FILE_ID 関数の戻り値の型があるため**smallint**、フルテキスト ファイルのこの関数は使用できません。 使用して[FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)代わりにします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、フルテキスト カタログに 32,767 より大きいファイル識別番号が割り当てられます。 FILE_ID 関数の戻り値の型は **smallint** であるため、この関数をフルテキスト ファイルに使用することはできません。 代わりに [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) を使用してください。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`AdventureWorks_Data` というファイルのファイル ID が返されます。  
@@ -86,8 +86,8 @@ File ID
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2016 データベース エンジンの非推奨機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [FILE_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/file-name-transact-sql.md)   
- [メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [FILE_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/file-name-transact-sql.md)   
+ [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

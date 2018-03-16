@@ -1,5 +1,5 @@
 ---
-title: "GetReparentedValue (データベース エンジン) |Microsoft ドキュメント"
+title: "GetReparentedValue (データベース エンジン) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-ルートからのパスは、パスのノードを返しますに*ページャー*からのパスと、その後*oldRoot*に*この*です。
+ルートからのパスは、パスのノードを返しますに してページャー*, からのパスと、その後 oldRoot* に この*です。
   
 ## <a name="syntax"></a>構文  
   
@@ -50,23 +50,23 @@ SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newR
   
 ## <a name="arguments"></a>引数  
 *oldRoot*  
-A **hierarchyid**を変更するのには、階層のレベルを表すノードはします。
+変更される階層のレベルを表すノードである **hierarchyid**。
   
-*してページャー*  
-A **hierarchyid**入れ替えられるノードを表す、 *oldRoot*ノードを移動するために現在のノードのセクションでします。
+*newRoot*  
+ノードを移動するために現在のノードの *oldRoot* セクションを置き換えるノードを表す **hierarchyid**。
   
 ## <a name="return-types"></a>戻り値の型  
-**SQL Server の戻り値の型: hierarchyid**
+SQL Server の戻り値の型: * ***hierarchyid * *
   
-**CLR の戻り値の型: SqlHierarchyId**
+**CLR 戻り値の型:SqlHierarchyId**
   
-## <a name="remarks"></a>解説  
-ノードを移動して、ツリーを変更するために使用する*oldRoot*に*ページャー*です。 GetReparentedValue を使用すると、ある階層のノードを階層内の新しい位置に移動できます。 **Hierarchyid**データ型を表しますが、階層構造は強制されません。 ユーザーは、hierarchyid が新しい位置に対して正しく構成されていることを確認する必要があります。 一意のインデックス、 **hierarchyid**データ型のエントリの重複を防ぐのに役立ちます。 サブツリー全体を移動の例は、次を参照してください。[階層データ &#40;です。SQL Server &#41;](../../relational-databases/hierarchical-data-sql-server.md).
+## <a name="remarks"></a>Remarks  
+ノードを移動して、ツリーを変更するために使用する oldRoot *に してページャー*です。 GetReparentedValue を使用すると、ある階層のノードを階層内の新しい位置に移動できます。 Hierarchyid** データ型を表しますが、階層構造は強制されません。 ユーザーは、hierarchyid が新しい位置に対して正しく構成されていることを確認する必要があります。 一意のインデックス、 hierarchyid** エントリの重複を防止のデータ型に役立ちます。 サブツリー全体の移動例については、「[階層データ &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)」を参照してください。
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-comparing-two-node-locations"></a>A. 2 つのノードの位置の比較  
-次の例は、ノードの現在の hierarchyid と、 表示、 **hierarchyid**ノードのなりますの子孫に移動したかどうか、  **@NewParent** ノード。 この例では、`ToString()` メソッドを使用して階層関係を表示しています。
+次の例は、ノードの現在の hierarchyid と、 それは、ノードが移動されて **@NewParent** ノードの子孫になる場合のノードの **hierarchyid** も示します。 この例では、`ToString()` メソッドを使用して階層関係を表示しています。
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  
@@ -88,7 +88,7 @@ GO
 ```  
   
 ### <a name="b-updating-a-node-to-a-new-location"></a>B. 新しい位置へのノードの更新  
-次の例では`GetReparentedValue()`ノードを元の場所から、階層内の新しい場所に移動する UPDATE ステートメントで。
+次の例では、UPDATE ステートメントで `GetReparentedValue()` を使用して、ノードを階層内の古い位置から新しい位置に移動しています。
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  
@@ -110,7 +110,7 @@ WHERE LoginID = 'adventure-works\gail0' ; -- Now node /2/3/2/
 ```  
   
 ### <a name="c-clr-example"></a>C. CLR の例  
-次のコード スニペットは、GetReparentedValue () メソッドを呼び出します。
+次のコード スニペットの呼び出し、 GetReparentedValue () メソッド。
   
 ```sql
 this. GetReparentedValue(oldParent, newParent)  

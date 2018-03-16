@@ -1,5 +1,5 @@
 ---
-title: "変換 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: TRANSLATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -29,10 +29,10 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/18/2018
 ---
-# <a name="translate-transact-sql"></a>変換 (TRANSACT-SQL)
+# <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-2 番目の引数で指定されたいくつかの文字は、移行先の一連の文字に変換した後、最初の引数として指定された文字列を返します。
+2 番目の引数で指定された一部の文字が対象の文字セットに変換された後に、最初の引数として指定された文字列を返します。
 
 ## <a name="syntax"></a>構文   
 ```
@@ -42,29 +42,29 @@ TRANSLATE ( inputString, characters, translations)
 ## <a name="arguments"></a>引数   
 
 inputString   
-[式](../../t-sql/language-elements/expressions-transact-sql.md)任意の文字型 (nvarchar、varchar、nchar、char)。
+任意の文字型 (つまり nvarchar、varchar、nchar、または char) の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。
 
-文字   
-[式](../../t-sql/language-elements/expressions-transact-sql.md)任意の文字型文字を置き換える必要があります。
+characters   
+置換対象の文字を含む任意の文字型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。
 
 翻訳   
-文字[式](../../t-sql/language-elements/expressions-transact-sql.md)型と長さが 2 番目の引数に一致します。
+型と長さが 2 番目の引数と一致する文字[式](../../t-sql/language-elements/expressions-transact-sql.md)です。
 
 ## <a name="return-types"></a>戻り値の型   
-同じ型の文字式を返します`inputString`2 番目の引数からの文字が 3 番目の引数の一致する文字に置き換えられます。
+2 番目の引数の文字が 3 番目の引数の一致する文字に置き換えられる、`inputString` と同じ型の文字式を返します。
 
-## <a name="remarks"></a>解説   
+## <a name="remarks"></a>Remarks   
 
-`TRANSLATE`関数には文字と翻訳の長さが異なる場合に、エラーが返されます。 `TRANSLATE`関数は、null 値が文字または置換引数として指定される場合、変更されていない入力を返す必要があります。 動作、`TRANSLATE`関数と同じにする必要があります、[置換](../../t-sql/functions/replace-transact-sql.md)関数。   
+文字と翻訳の長さが異なる場合、`TRANSLATE` 関数はエラーを返します。 文字または置換の引数として null 値が指定された場合、`TRANSLATE` 関数は変更されていない入力を返します。 `TRANSLATE` 関数の動作は、[REPLACE](../../t-sql/functions/replace-transact-sql.md) 関数と同じと考えられます。   
 
-動作、`TRANSLATE`関数は複数の使用と同じ`REPLACE`関数。
+`TRANSLATE` 関数の動作は、複数の `REPLACE` 関数を使用した場合と同じです。
 
-`TRANSLATE`常に SC の照合順序に注意してください。
+`TRANSLATE` は常に SC 照合順序を認識しています。
 
 ## <a name="examples"></a>使用例   
 
-### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. 四角形と中かっこを正規の中かっこに置き換える    
-次のクエリでは、かっこを入力文字列内の四角形と中かっこが置き換えられます。
+### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. 角かっこと中かっこを通常のかっこで置き換える    
+次のクエリは、入力文字列の角かっこと中かっこを通常のかっこで置き換えます。
 ```
 SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 ```
@@ -74,11 +74,11 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 ```
 
 >  [!NOTE]
->  `TRANSLATE`この例では関数と同じですが、次のステートメントを使用するよりもはるかにある`REPLACE`:`SELECT REPLACE(REPLACE(REPLACE(REPLACE('2*[3+4]/{7-2}','[','('), ']', ')'), '{', '('), '}', ')');` 
+>  この例の `TRANSLATE` 関数は、`REPLACE` を使用する次のステートメントと同等ですが、はるかに簡単です。`SELECT REPLACE(REPLACE(REPLACE(REPLACE('2*[3+4]/{7-2}','[','('), ']', ')'), '{', '('), '}', ')');` 
 
 
-###  <a name="b-convert-geojson-points-into-wkt"></a>B. WKT GeoJSON ポイントに変換します。    
-GeoJSON は、さまざまな地理的なデータ構造体のエンコード形式です。 `TRANSLATE`関数の場合、開発者は、GeoJSON ポイント WKT 形式またはその逆を簡単に変換できます。 次のクエリでは、正規の中かっこを入力内の四角形と波かっこが置き換えられます。   
+###  <a name="b-convert-geojson-points-into-wkt"></a>B. GeoJSON ポイントを WKT に変換する    
+GeoJSON は、さまざまな地理的データ構造をエンコードするための形式です。 `TRANSLATE` 関数を使用すると、開発者は GeoJSON ポイントから WKT 形式への変換とその逆の変換に簡単に実行できます。 次のクエリは、入力の角かっこと中かっこを通常のかっこで置き換えます。   
 ```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
@@ -93,14 +93,14 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 
 ## <a name="see-also"></a>参照
- [CONCAT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/concat-ws-transact-sql.md)  
- [FORMATMESSAGE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/formatmessage-transact-sql.md)  
- [QUOTENAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/quotename-transact-sql.md)  
- [置換 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/replace-transact-sql.md)  
- [リバース &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/reverse-transact-sql.md)  
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
  [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/stuff-transact-sql.md)  
- [文字列関数 (TRANSACT-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [文字列関数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
 

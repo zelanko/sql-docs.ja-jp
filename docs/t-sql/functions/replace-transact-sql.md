@@ -1,5 +1,5 @@
 ---
-title: "置換 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: REPLACE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
@@ -50,28 +50,28 @@ REPLACE ( string_expression , string_pattern , string_replacement )
   
 ## <a name="arguments"></a>引数  
  *string_expression*  
- 文字列は、[式](../../t-sql/language-elements/expressions-transact-sql.md)検索します。 *string_expression*文字またはバイナリ データ型であることができます。  
+ 検索する文字列[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *string_expression* 文字またはバイナリ データ型であることができます。  
   
  *string_*pattern  
- 検索するサブストリングを指定します。 *string_pattern*文字またはバイナリ データ型であることができます。 *string_pattern*空の文字列 (") にすることはできませんし、ページに収まる最大バイト数を超えない必要があります。  
+ 検索するサブストリングを指定します。 *string_pattern* 文字またはバイナリ データ型であることができます。 *string_pattern* には空の文字列 ("") は指定できません。また、1 ページに収まる最大バイト数を超えないようにしてください。  
   
  *string_*replacement  
- 置き換え後の文字列を指定します。 *string_replacement*文字またはバイナリ データ型であることができます。  
+ 置き換え後の文字列を指定します。 *string_replacement* 文字またはバイナリ データ型であることができます。  
   
 ## <a name="return-types"></a>戻り値の型  
- 返します**nvarchar**が、入力引数のいずれかの場合、 **nvarchar**データ型以外の場合はそれ以外の場合、置換を返します**varchar**です。  
+ 返します **nvarchar** が、入力引数のいずれかの場合、 **nvarchar** データが入力のそれ以外の場合を返します。 を置き換える **varchar** です。  
   
  いずれかの引数が NULL の場合は、NULL を返します。  
   
- 場合*string_expression*型ではありません**varchar (max)**または**nvarchar (max)、置換**戻り値が 8,000 バイトで切り捨てられます。 8,000 バイトより大きい値を返す*string_expression*大きな値のデータ型に明示的にキャストする必要があります。  
+ 場合 *string_expression* の種類はありません **varchar (max)** または **nvarchar (max)、* ***置換 * * は 8,000 バイトで戻り値を切り捨てます。 8,000 バイトを超える値を返すには、大きな値を格納できるデータ型に *string_expression* を明示的にキャストする必要があります。  
   
-## <a name="remarks"></a>解説  
- REPLACE は、入力の照合順序に基づいて比較を行います。 使用することを指定した照合順序で比較を実行する[COLLATE](~/t-sql/statements/collations.md)入力に明示的な照合順序を適用します。  
+## <a name="remarks"></a>Remarks  
+ REPLACE は、入力の照合順序に基づいて比較を行います。 特定の照合順序で比較を行うには、[COLLATE](~/t-sql/statements/collations.md) を使用して、入力に明示的な照合順序を適用します。  
   
- 0x0000 (**char (0)**) の Windows 照合順序で未定義の文字は、REPLACE に含めることはできません。  
+ 0x0000 (**char(0)**) の Windows 照合順序で未定義の文字は、REPLACE に含めることができません。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、文字列を置換`cde`で`abcdefghi`で`xxx`です。  
+ 次の例では、`abcdefghi` にある文字列 `cde` を `xxx` に置換します。  
   
 ```sql  
 SELECT REPLACE('abcdefghicde','cde','xxx');  
@@ -86,7 +86,7 @@ abxxxfghixxx
 (1 row(s) affected)  
 ```  
   
- 次の例では、`COLLATE`関数。  
+ 次の例では、`COLLATE` 関数を使用します。  
   
 ```sql  
 SELECT REPLACE('This is a Test'  COLLATE Latin1_General_BIN,  
@@ -104,15 +104,15 @@ This is a desk
 
   
 ## <a name="see-also"></a>参照  
- [CONCAT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/concat-ws-transact-sql.md)  
- [FORMATMESSAGE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/formatmessage-transact-sql.md)  
- [QUOTENAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/quotename-transact-sql.md)  
- [リバース &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/reverse-transact-sql.md)  
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
  [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/stuff-transact-sql.md)  
- [変換 (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/translate-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   

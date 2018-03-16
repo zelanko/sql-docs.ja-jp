@@ -1,5 +1,5 @@
 ---
-title: "STUFF (TRANSACT-SQL) |Microsoft ドキュメント"
+title: STUFF (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -52,30 +52,30 @@ STUFF ( character_expression , start , length , replaceWith_expression )
   
 ## <a name="arguments"></a>引数  
  *character_expression*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)の文字データです。 *character_expression*定数、変数、または文字またはバイナリ データのいずれかの列を指定できます。  
+ 文字データの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *character_expression* には、文字データまたはバイナリ データの定数、変数、または列を使用できます。  
   
  *start*  
- 削除と挿入を開始する位置を整数で指定します。 場合*開始*が負の値または 0 の場合、null 文字列が返されます。 場合*開始*最初よりも長い*character_expression*、null 文字列が返されます。 *開始*型でも**bigint**です。  
+ 削除と挿入を開始する位置を整数で指定します。 *start* が負の値またはゼロの場合は、null 文字列が返されます。 *start* が最初の *character_expression* よりも長い場合は、null 文字列が返されます。 *start* には **bigint** 型を使用できます。  
   
- *長さ*  
- 削除する文字数を整数で指定します。 場合*長さ*は負の場合、null 文字列が返されます。 場合*長さ*最初よりも長い*character_expression*、文字までが削除最後に、最後の*character_expression*です。  場合*長さ*0 の場合は、カーソルが、文字列の最初の文字の前に発生します。 *長さ*型でも**bigint**です。
+ *length*  
+ 削除する文字数を整数で指定します。 *length* が負の値の場合は、null 文字列が返されます。 *length* が最初の *character_expression* よりも長い場合、最後の *character_expression* の末尾の文字まで削除が実行されます。  *length* がゼロの場合、文字列の先頭の文字の前に挿入が実行されます。 *length* には **bigint** 型を使用できます。
 
  *replaceWith_expression*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)の文字データです。 *character_expression*定数、変数、または文字またはバイナリ データのいずれかの列を指定できます。 この式が置き換えられます*長さ*の文字*character_expression*始点*開始*です。 提供する`NULL`として、 *replaceWith_expression*、何も挿入しないで文字を削除します。   
+ 文字データの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *character_expression* には、文字データまたはバイナリ データの定数、変数、または列を使用できます。 この式は、*character_expression* の *start* から始まる *length* 文字を置き換えます。 `NULL` に *replaceWith_expression* を指定すると、何も挿入されず、文字が削除されます。   
   
 ## <a name="return-types"></a>戻り値の型  
- 場合、データが文字を返します*character_expression*はサポートされている文字データ型の 1 つです。 場合、バイナリ データを返します*character_expression*はサポートされているバイナリ データ型の 1 つです。  
+ *character_expression* が、サポートされている文字データ型のいずれかの場合は、文字データが返されます。 *character_expression* が、サポートされているバイナリ データ型のいずれかの場合は、バイナリ データが返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  開始位置または長さが負の場合、または開始位置が 1 番目の文字列の長さを超える場合は NULL 文字列が返されます。 開始位置が 0 の場合は、NULL 値が返されます。 削除する長さが 1 番目の文字列より長い場合は、1 番目の文字列の最初の文字まで削除されます。  
 
 結果値が、戻り値の型でサポートされている最大値より大きい場合は、エラーが発生します。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
- SC の照合順序を使用する場合両方*character_expression*と*replaceWith_expression*サロゲート ペアを含めることができます。 長さのパラメーターが内の各サロゲートを数*character_expression*単一の文字として。  
+ SC の照合順序を使用する場合、*character_expression* と *replaceWith_expression* の両方にサロゲート ペアを含めることができます。 length パラメーターでは、*character_expression* 内の各サロゲートは 1 文字としてカウントされます。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、最初の文字列から 3 つの文字を削除することによって作成された文字列を返します`abcdef`位置から`2`で`b`と削除時点で 2 番目の文字列を挿入します。  
+ 次の例では、最初の文字列 (`abcdef`) の位置 `2` (`b`) から 3 文字を削除し、その位置に 2 番目に指定した文字列を挿入して生成される文字列を返します。  
   
 ```  
 SELECT STUFF('abcdef', 2, 3, 'ijklmn');  
@@ -92,14 +92,14 @@ aijklmnef
 ```  
   
 ## <a name="see-also"></a>参照  
- [CONCAT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/concat-ws-transact-sql.md)  
- [FORMATMESSAGE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/formatmessage-transact-sql.md)  
- [QUOTENAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/quotename-transact-sql.md)  
- [置換 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/replace-transact-sql.md)  
- [リバース &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/reverse-transact-sql.md)  
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
  [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [変換 (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/translate-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: "ROW_NUMBER (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ROW_NUMBER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/11/2017
 ms.prod: sql-non-specified
@@ -37,12 +37,12 @@ ms.lasthandoff: 01/02/2018
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  数値結果の出力を設定します。 具体的には、各パーティション内の最初の行の 1 から始まる、結果セットのパーティション内の行の連続番号を返します。 
+  結果セットの出力に番号を設定します。 具体的には、結果セットのパーティション内の行について、各パーティションの最初の行を 1 とした連続する数値を返します。 
   
-`ROW_NUMBER`および`RANK`は似ています。 `ROW_NUMBER`(たとえば 1、2、3、4, 5)、すべての数値は順番に行です。 `RANK`(たとえば 1、2、2、4, 5) 同順位の数値を提供します。   
+`ROW_NUMBER` と `RANK` は似ています。 `ROW_NUMBER` は、すべての行に順番に番号を付けます (たとえば 1、2、3、4、5)。 `RANK` は、同順位に対して同じ番号を付けます (たとえば 1、2、2、4、5)。   
   
 > [!NOTE]
-> `ROW_NUMBER`一時的な値は、クエリの実行時に計算されます。 テーブル内の数字を保持するため、次を参照してください。 [IDENTITY プロパティ](../../t-sql/statements/create-table-transact-sql-identity-property.md)と[シーケンス](../../t-sql/statements/create-sequence-transact-sql.md)です。 
+> `ROW_NUMBER` は、クエリの実行時に計算される一時的な値です。 番号をテーブルに保持するには、「[IDENTITY プロパティ](../../t-sql/statements/create-table-transact-sql-identity-property.md)」と「[SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)」をご覧ください。 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
@@ -56,30 +56,30 @@ ROW_NUMBER ( )
   
 ## <a name="arguments"></a>引数  
  PARTITION BY *value_expression*  
- によって生成される結果セットに分割、 [FROM](../../t-sql/queries/from-transact-sql.md)に句を ROW_NUMBER 関数が適用されるパーティションです。 *value_expression*結果セットがパーティション分割する列を指定します。 場合`PARTITION BY`が指定されていない、関数はクエリの結果として 1 つのグループ セットのすべての行を処理します。 詳細については、次を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ [FROM](../../t-sql/queries/from-transact-sql.md) 句で生成された結果セットを、ROW_NUMBER 関数が適用されるパーティションに分割します。 *value_expression* は、結果セットをパーティションに分割するときに使用する列を指定します。 `PARTITION BY` を指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 詳しくは、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) に関する記事をご覧ください。  
   
  *order_by_clause*  
- `ORDER BY`句は、一意の割り当ては、行順序を決定`ROW_NUMBER`指定したパーティション内で。 この引数は必須です。 詳細については、次を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ `ORDER BY` 句は、指定したパーティション内の行に一意の `ROW_NUMBER` を割り当てる順序を決定します。 この引数は必須です。 詳しくは、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) に関する記事をご覧ください。  
   
 ## <a name="return-types"></a>戻り値の型  
  **bigint**  
   
 ## <a name="general-remarks"></a>全般的な解説  
- 行が返される保証はありません、クエリを使用して`ROW_NUMBER()`は並べ替えられますとまったく同じ実行ごとに、次の条件が true でない場合。  
+ 以下の条件が満たされている場合を除き、`ROW_NUMBER()` を使用したクエリによって返される行が、実行ごとにまったく同じ順序になるという保証はありません。  
   
 1.  パーティション分割された行の値が一意である。  
   
-2.  値、`ORDER BY`列は一意です。  
+2.  `ORDER BY` 列の値が一意である。  
   
-3.  パーティション列の値の組み合わせと`ORDER BY`列は一意です。  
+3.  パーティション分割された列と `ORDER BY` 列の値の組み合わせが一意である。  
   
- `ROW_NUMBER()`非決定的です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
+ `ROW_NUMBER()` は非決定的です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-simple-examples"></a>A. 簡単な例 
 
-次のクエリでは、アルファベット順に 4 つのシステム テーブルを返します。
+次のクエリは、4 つのシステム テーブルをアルファベット順に返します。
 
 ```sql
 SELECT 
@@ -98,7 +98,7 @@ ORDER BY name ASC;
 |msdb |SIMPLE |
 |tempdb |SIMPLE |
 
-各行の前に行番号列を追加するを持つ列を追加、`ROW_NUMBER`ここではという名前の関数`Row#`です。 移動する必要があります、`ORDER BY`まで句、`OVER`句。
+各行の前に行番号列を追加するには、`ROW_NUMBER` 関数で列 (ここでは `Row#` という名前) を追加します。 `ORDER BY` 句を `OVER` 句まで移動する必要があります。
 
 ```sql
 SELECT 
@@ -110,14 +110,14 @@ WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|行の番号 |NAME    |recovery_model_desc |  
+|Row# |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |@shouldalert |master |SIMPLE |
 |2 |model |FULL |
 |3 |msdb |SIMPLE |
 |4 |tempdb |SIMPLE |
 
-追加する、`PARTITION BY`の句を`recovery_model_desc`列は振りときに、`recovery_model_desc`値の変更。 
+`recovery_model_desc` 列に `PARTITION BY` 句を追加すると、`recovery_model_desc` 値が変更されたときに番号付けが再開されます。 
  
 ```sql
 SELECT 
@@ -129,7 +129,7 @@ FROM sys.databases WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|行の番号 |NAME    |recovery_model_desc |  
+|Row# |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |@shouldalert |model |FULL |
 |@shouldalert |master |SIMPLE |
@@ -224,10 +224,10 @@ Shu        Ito                  Southwest            2458535.61    2
 Jae        Pak                  United Kingdom       4116871.22    1  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-returning-the-row-number-for-salespeople"></a>E. 販売員の行番号を返す  
- 次の例を返します、`ROW_NUMBER`営業担当者が、割り当てられている販売ノルマを基にします。  
+ 次の例は、割り当てられている販売ノルマに基づいて営業担当者の `ROW_NUMBER`を返します。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -243,7 +243,7 @@ WHERE e.SalesPersonFlag = 1
 GROUP BY LastName, FirstName;  
 ```  
   
- 部分的な結果セットを次に示します。  
+ 次に結果セットの一部を示します。  
 
 ```  
 
@@ -256,7 +256,7 @@ RowNumber  FirstName  LastName            SalesQuota
 ```
 
 ### <a name="f-using-rownumber-with-partition"></a>F. ROW_NUMBER() を PARTITION と共に使用する  
- 次の例では、`ROW_NUMBER` 関数を `PARTITION BY` 引数と共に使用します。 これにより、`ROW_NUMBER`に各パーティション内の行を番号関数。  
+ 次の例では、`ROW_NUMBER` 関数を `PARTITION BY` 引数と共に使用します。 これにより、`ROW_NUMBER` 関数は各パーティション内の行に番号を付けます。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -272,7 +272,7 @@ WHERE e.SalesPersonFlag = 1
 GROUP BY LastName, FirstName, SalesTerritoryKey;  
 ```  
   
- 部分的な結果セットを次に示します。  
+ 次に結果セットの一部を示します。  
  
 ```  
  
@@ -288,9 +288,9 @@ RowNumber  LastName            Territory  SalesQuota
 ```
   
 ## <a name="see-also"></a>参照  
- [ランクと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rank-transact-sql.md)   
- [DENSE_RANK &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/dense-rank-transact-sql.md)   
- [NTILE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ntile-transact-sql.md)  
+ [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
+ [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)  
   
   
 

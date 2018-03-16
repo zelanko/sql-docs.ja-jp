@@ -1,5 +1,5 @@
 ---
-title: "(TRANSACT-SQL) の間で |Microsoft ドキュメント"
+title: BETWEEN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/28/2017
 ms.prod: sql-non-specified
@@ -51,35 +51,35 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
   
 ## <a name="arguments"></a>引数  
  *test_expression*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)で定義された範囲内でテストする*で有効*と*式*です。 *な任意*両方と同じデータ型にする必要があります*で有効*と*式*です。  
+ *begin_expression* と *end_expression* で定義した範囲内でテストする[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *test_expression* のデータ型は、*begin_expression* および *end_expression* の両方と同じにする必要があります。  
   
- [NOT]  
+ NOT  
  述語の結果を否定することを指定します。  
   
  *begin_expression*  
- 有効な式を指定します。 *有効*両方と同じデータ型にする必要があります*な任意*と*式*です。  
+ 有効な式を指定します。 *begin_expression* のデータ型は、*test_expression* および *end_expression* の両方と同じにする必要があります。  
   
  *end_expression*  
- 有効な式を指定します。 *式*両方と同じデータ型にする必要があります*な任意*と*で有効*です。  
+ 有効な式を指定します。 *end_expression* のデータ型は、*test_expression* および *begin_expression* の両方と同じにする必要があります。  
   
- [AND]  
- 示すプレース ホルダーとして*な任意*によって示される範囲内である必要があります*で有効*と*式*です。  
+ AND  
+ *begin_expression* と *end_expression* で表される範囲内で *test_expression* をテストする必要があることを示すプレースホルダーとして動作します。  
   
 ## <a name="result-types"></a>戻り値の型  
  **ブール値**  
   
 ## <a name="result-value"></a>結果の値  
- リターンの間で**TRUE**場合の値*な任意*より大きいかの値に等しい*で有効*の値以下*式*です。  
+ *test_expression* の値が *begin_expression* の値以上で *end_expression* の値以下の場合、BETWEEN は **TRUE** を返します。  
   
- 返します間ではなく**TRUE**場合の値*な任意*がの値より小さい*で有効*かの値より大きい*式。*.  
+ *test_expression* の値が *begin_expression* の値より小さく *end_expression* の値より大きい場合、NOT BETWEEN は **TRUE** を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  両端を除いた範囲を指定するには、より大きいことを表す演算子 (>) と、より小さいことを表す演算子 (<) を使用します。 BETWEEN または NOT BETWEEN の述語に対する入力が NULL の場合、結果は UNKNOWN になります。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-between"></a>A. BETWEEN を使用する  
- 次の例では、データベースのデータベース ロールに関する情報を返します。 最初のクエリでは、すべてのロールを返します。 2 番目の例では、`BETWEEN`句を指定したロールを制限する`database_id`値。  
+ 次の例は、データベース内のデータベース ロールに関する情報を返します。 最初のクエリはすべてのロールを返します。 2 つ目の例では、`BETWEEN` 句を使用して、指定された `database_id` 値にロールを制限します。  
   
 ```sql  
 SELECT principal_id, name 
@@ -165,7 +165,7 @@ GO
 ```  
   
 ### <a name="d-using-between-with-datetime-values"></a>D. BETWEEN を datetime 値と共に使用する  
- 次の例では、ある行**datetime**値は、`'20011212'`と`'20020105'`、包括的です。  
+ 次の例では、**datetime** 値が `'20011212'` から `'20020105'` までの範囲内にある行を取得します。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -184,17 +184,17 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  4           2002-01-05 00:00:00.000  
  ```  
  
- 日付値のクエリであるために、クエリが予測される行を取得し、 **datetime**に格納された値、`RateChangeDate`日付の時刻部分なしの列が指定されています。 時刻部分は、指定されていなければ、既定で午前 12 時になります。 時刻部分として 2002 年 1 月 5 日の午前 12 時よりも後の値が格納されている行は、 2002-01-05 では返されませんこのクエリによって、範囲外になるためです。  
+ クエリ内の日付値と `RateChangeDate` 列の **datetime** 値は、時刻部分なしで日付が指定されているため、このクエリは予測される行を取得します。 時刻部分は、指定されていなければ、既定で午前 12 時になります。 時刻部分として 2002 年 1 月 5 日の午前 12 時よりも後の値が格納されている行は、 2002-01-05 は範囲外になるため、このクエリでは返されません。  
   
   
 ## <a name="see-also"></a>参照  
- [&#62;です。&#40;です。大きい (& a) #41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/greater-than-transact-sql.md)   
- [(& m); 60&#40;です。小さい (& a) #41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/less-than-transact-sql.md)   
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [&#62; &#40;より大きい&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
+ [&#60; &#40;より小さい&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/less-than-transact-sql.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "PATINDEX (TRANSACT-SQL) |Microsoft ドキュメント"
+title: PATINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/19/2016
 ms.prod: sql-non-specified
@@ -50,28 +50,28 @@ PATINDEX ( '%pattern%' , expression )
   
 ## <a name="arguments"></a>引数  
  *pattern*  
- 検索するシーケンスを含む文字式です。 ワイルドカード文字を使用できます。ただし、% 文字が前にし、次の必要があります*パターン*を除く最初と最後の文字を検索する場合)。 *パターン*文字の文字列データ型カテゴリの式を指定します。 *パターン*は 8,000 文字に制限されます。  
+ 検索するシーケンスを含む文字式です。 ワイルドカード文字も指定できますが、(先頭の文字または最後の文字を検索する場合を除き) *pattern* を % 文字で囲む必要があります。 *pattern* は文字列データ型に分類される式です。 *pattern* の上限は 8,000 文字です。  
   
  *式 (expression)*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)通常は、指定したパターンの検索条件となる列。 *式*は、文字列データ型に分類します。  
+ [式](../../t-sql/language-elements/expressions-transact-sql.md)です。通常は、指定したパターンで検索する列です。 *式*は文字列データ型に分類されます。  
   
 ## <a name="return-types"></a>戻り値の型  
- **bigint**場合*式*は、 **varchar (max)**または**nvarchar (max)**データ型以外の場合**int**です。  
+ *expression* が **varchar(max)** または **nvarchar(max)** データ型の場合は **bigint**。それ以外の場合は **int**。  
   
-## <a name="remarks"></a>解説  
- いずれか*パターン*または*式*が NULL の場合、PATINDEX は NULL を返します。  
+## <a name="remarks"></a>Remarks  
+ *pattern* または*式*が NULL の場合、PATINDEX は NULL を返します。  
   
  PATINDEX では、入力の照合順序に基づいて比較が行われます。 指定した照合順序で比較を実行するには、COLLATE を使って入力に明示的な照合順序を適用できます。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
- SC の照合順序を使用する場合、戻り値内、utf-16 のサロゲート ペアの数が、*式*パラメーターを 1 つの文字として。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
+ SC の照合順序を使用する場合、戻り値では、*expression* パラメーターの UTF-16 サロゲート ペアが 1 文字としてカウントされます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
- 0x0000 (**char (0)**) の Windows 照合順序で未定義の文字は、PATINDEX に含めることはできません。  
+ 0x0000 (**char(0)**) の Windows 照合順序で未定義の文字は、PATINDEX に含めることができません。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-simple-patindex-example"></a>A. PATINDEX の簡単な例  
- 次の例では、短い文字列 (`interesting data`) 文字の開始位置の`ter`します。  
+### <a name="a-simple-patindex-example"></a>A. 簡単な PATINDEX の例  
+ 次の例では、文字 `ter` の開始位置の短い文字列 (`interesting data`) を確認します。  
   
 ```  
 SELECT PATINDEX('%ter%', 'interesting data');  
@@ -99,10 +99,10 @@ GO
 (1 row(s) affected)
 ```  
   
- 使用して検索する行を制限しないかどうか、`WHERE`句、クエリは、テーブル内のすべての行を返し、パターンが検出された行は 0 以外の値とをパターンが見つからなかったすべての行に 0 を報告します。  
+ 検索する行を `WHERE` 句で限定しない場合は、クエリによりテーブル内のすべての行が返されます。パターンが見つかった行は 0 以外の値に、パターンが見つからなかったすべての行は 0 になります。  
   
 ### <a name="c-using-wildcard-characters-with-patindex"></a>C. PATINDEX でワイルドカード文字を使用する  
- 次の例では、% と _ ワイルドカード文字を使用する位置を検索するパターン`'en'`任意の 1 文字と、その後、 `'ure'` (インデックスは 1 から開始) の指定された文字列の開始。  
+ 次の例では、ワイルドカードの % と _ を使用して、指定した文字列で任意の 1 文字と `'en'` が続くパターン `'ure'` が始まる位置を探します (インデックスは 1 から開始)。  
   
 ```  
 SELECT PATINDEX('%en_ure%', 'please ensure the door is locked');  
@@ -115,12 +115,12 @@ SELECT PATINDEX('%en_ure%', 'please ensure the door is locked');
 8  
 ```  
   
- `PATINDEX`同様に動作します`LIKE`、任意のワイルドカードを使用できるようにします。 パターンを % で囲む必要はありません。 `PATINDEX('a%', 'abc')` は 1 を返し、`PATINDEX('%a', 'cba')` は 3 を返します。  
+ `PATINDEX` は `LIKE` と同様の機能を持つので、任意のワイルドカードを使用できます。 パターンを % で囲む必要はありません。 `PATINDEX('a%', 'abc')` は 1 を返し、`PATINDEX('%a', 'cba')` は 3 を返します。  
   
- 異なり`LIKE`、`PATINDEX`と同様の位置を返します`CHARINDEX`はします。  
+ `LIKE` とは異なり、`PATINDEX` は `CHARINDEX` と同様に位置を返します。  
   
 ### <a name="d-using-collate-with-patindex"></a>D. PATINDEX で COLLATE を使用する  
- 次の例では、`COLLATE`関数を明示的に検索する式の照合順序を指定します。  
+ 次の例では、`COLLATE` 関数を使って、検索する式の照合順序を明示的に指定します。  
   
 ```  
 USE tempdb;  
@@ -130,7 +130,7 @@ GO
 ```  
   
 ### <a name="e-using-a-variable-to-specify-the-pattern"></a>E. 変数を使用してパターンを指定する  
- 次の例では、変数を使用して、値を渡す、*パターン*パラメーター。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
+ 次の例では、変数を使用して *pattern* パラメーターに値を渡します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。  
   
 ```  
 DECLARE @MyValue varchar(10) = 'safety';   
@@ -149,14 +149,14 @@ WHERE DocumentNode = 0x7B40;
 
   
 ## <a name="see-also"></a>参照  
- [Charindex 関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/charindex-transact-sql.md)  
- [Len 関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/len-transact-sql.md)  
+ [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
+ [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)   
- [&#40;です。ワイルドカード - 文字 &#40; s &#41;一致と #41 です。&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
- [&#40;です。ワイルドカード - 文字 &#40; s &#41;一致と #41 です。&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)   
- [_ &#40;です。ワイルドカード - 一致する 1 文字 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)   
- [パーセント記号と #40 です。ワイルドカード - 文字 &#40; s &#41;一致と #41 です。&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [[ ] &#40;ワイルドカード - 一致する文字列&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+ [[^] &#40;ワイルドカード - 一致しない文字列&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)   
+ [_ &#40;ワイルドカード - 1 文字に一致&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)   
+ [パーセント文字 &#40;ワイルドカード - 一致する文字列&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
   
 

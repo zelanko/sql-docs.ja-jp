@@ -1,5 +1,5 @@
 ---
-title: "カーソル (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "カーソル (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="cursors-transact-sql"></a>カーソル (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、完全な結果セットを生成するステートメントがある場合、結果が最適な場合は、一度に 1 つの行を処理します。 結果セットの上でカーソルをオープンすると、結果セットを一度に 1 行ずつ処理できます。 変数またはパラメーターにカーソルを割り当てることができます、**カーソル**データ型。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントによって完全な結果セットが作成されますが、結果を一度に 1 行ずつ処理するのが最適な場合もあります。 結果セットの上でカーソルをオープンすると、結果セットを一度に 1 行ずつ処理できます。 **cursor** データ型を使用してカーソルを変数またはパラメーターに割り当てることができます。  
   
  カーソル操作は、次のステートメントでサポートされています。  
   

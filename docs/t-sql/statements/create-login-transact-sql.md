@@ -1,5 +1,5 @@
 ---
-title: "ログイン (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/15/2017
 ms.prod: sql-non-specified
@@ -103,14 +103,14 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
   
 ## <a name="arguments"></a>引数  
  *login_name*  
- 作成するログインの名前を指定します。 ログインには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン、Windows ログイン、証明書マッピング ログイン、非対称キー マッピング ログインの 4 種類があります。 Windows ドメイン アカウントからマップされるログインを作成するときの形式で windows 2000 より前のユーザー ログオン名を使用する必要があります [\<domainName >\\< login_name >] です。 形式の UPN を使用することはできませんlogin_name@DomainNameです。 例については、後の例 D を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ログインの種類**sysname**の規則に従っている必要があります[識別子](http://msdn.microsoft.com/library/ms175874.aspx)含めることはできません、'**\\**' です。 Windows ログインを含めることができます、'**\\**' です。 Active Directory ユーザーに基づくログインより小さい 21 文字の名前に制限されます。  
+ 作成するログインの名前を指定します。 ログインには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン、Windows ログイン、証明書マッピング ログイン、非対称キー マッピング ログインの 4 種類があります。 Windows ドメイン アカウントからマップされるログインを作成する場合は、Windows 2000 よりも前の Windows で使用されていた [\<domainName>\\<login_name>] 形式のユーザー ログイン名を使用する必要があります。 login_name@DomainName 形式の UPN は使用できません。 例については、後の例 D を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログインには型 **sysname** の規則に従っている必要があります [識別子](http://msdn.microsoft.com/library/ms175874.aspx) 含めることはできませんし、'**\\**' です。 Windows ログインには "**\\**" を含めることができます。 Active Directory ユーザーに基づくログインは、21 文字未満の名前に制限されます。  
   
- パスワード**='***パスワード***'**  
- 適用されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインのみです。 作成するログインのパスワードを指定します。 強力なパスワードを使用する必要があります。 詳細については、次を参照してください。[強力なパスワードの](../../relational-databases/security/strong-passwords.md)と[パスワード ポリシー](../../relational-databases/security/password-policy.md)です。 以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]保存されたパスワード情報はソルト化パスワードの sha-512 を使用して計算されます。  
+ PASSWORD **='***password***'**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインのみに適用されます。 作成するログインのパスワードを指定します。 強力なパスワードを使用する必要があります。 詳細については、次を参照してください。 [強力なパスワードの](../../relational-databases/security/strong-passwords.md) と [パスワード ポリシー](../../relational-databases/security/password-policy.md)です。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。  
   
- パスワードでは大文字と小文字が区別されます。 パスワードの長さは 8 文字以上 128 文字以下である必要があります。  パスワードには、a ～ z、A ～ Z、0 ～ 9 およびほとんどの英数字以外の文字を含めることができます。 パスワードは、単一引用符を含めることはできませんまたは*login_name*です。  
+ パスワードでは大文字と小文字が区別されます。 パスワードの長さは 8 文字以上 128 文字以下である必要があります。  パスワードには、a ～ z、A ～ Z、0 ～ 9 およびほとんどの英数字以外の文字を含めることができます。 パスワードには、単一引用符、または *login_name* を含めることはできません。  
   
- パスワード **=**  *hashed_password*  
+ PASSWORD **=***hashed_password*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  HASHED キーワードにのみ適用されます。 作成するログインのパスワードのハッシュ値を指定します。  
@@ -118,44 +118,44 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
  HASHED   
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 適用されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインのみです。 PASSWORD 引数の後に入力されたパスワードが、ハッシュ済みであることを示します。 このオプションを選択しなかった場合、パスワードとして入力した文字列は、ハッシュされてからデータベースに格納されます。 このオプションは、あるサーバーから別のサーバーにデータベースを移行する場合にのみ使用してください。 新しいログインを作成する場合は HASHED オプションを使用しないでください。 作成されたハッシュでは、HASHED オプションを使用できません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7 以降  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインのみに適用されます。 PASSWORD 引数の後に入力されたパスワードが、ハッシュ済みであることを示します。 このオプションを選択しなかった場合、パスワードとして入力した文字列は、ハッシュされてからデータベースに格納されます。 このオプションは、あるサーバーから別のサーバーにデータベースを移行する場合にのみ使用してください。 新しいログインを作成する場合は HASHED オプションを使用しないでください。 HASHED オプションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7 以前で作成されたハッシュでは使用できません。  
   
  MUST_CHANGE   
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 適用されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインのみです。 このオプションが含まれている場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]最初に、新しいログインを使用するとき、ユーザーに新しいパスワードを求められます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインのみに適用されます。 このオプションを指定した場合は、新しいログインを最初に使用するとき、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では新しいパスワードの入力求めるメッセージがユーザーに対して表示されます。  
   
- 資格情報 **=**  *credential_name*  
+ CREDENTIAL **=***credential_name*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 新しいにマップする資格情報の名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。 この資格情報はサーバー内に存在する必要があります。 現在このオプションは、資格情報をログインに関連付けるだけです。 資格情報は、システム管理者 (sa) ログインにマップすることはできません。  
+ 新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにマップする資格情報の名前を指定します。 この資格情報はサーバー内に存在する必要があります。 現在このオプションは、資格情報をログインに関連付けるだけです。 資格情報をシステム管理者 (sa) ログインにマップすることはできません。  
   
  SID = *sid*  
- ログインを再作成に使用されます。 適用されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ログインの場合のみ、Windows 認証ログインではありません。 新しい SID を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ログインです。 このオプションを使用しない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SID を自動的に割り当てられます。 SID 構造に依存、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン。  
+ ログインを再作成に使用されます。 適用されます [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインの場合のみ、Windows 認証ログインではありません。 新しい SID を指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインです。 このオプションを使用しない場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SID を自動的に割り当てられます。 SID 構造に依存、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンです。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン SID: 16 バイト (**binary (16)**) リテラル値は GUID に基づいています。 たとえば、 `SID = 0x14585E90117152449347750164BA00A7`があります。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン SID: 16 バイト (**binary (16)**) のリテラル値は GUID に基づいています。 たとえば、 `SID = 0x14585E90117152449347750164BA00A7`があります。  
   
--   [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ログイン SID。 SID 構造体の有効な[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]します。 通常、これは 32 バイト (**binary (32)**) から成るリテラル`0x01060000000000640000000000000000`16 バイトの GUID を表すとします。 たとえば、 `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`があります。  
+-   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ログイン SID。 SID 構造体の有効な [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。 通常、これは 32 バイト (**binary(32)**) で構成されるリテラル `0x01060000000000640000000000000000` 16 バイトの GUID を表すとします。 たとえば、 `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`があります。  
   
-DEFAULT_DATABASE  **=** *データベース*  
+DEFAULT_DATABASE **=***database*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  ログインに割り当てられる既定のデータベースを指定します。 このオプションを指定しない場合は、既定のデータベースが master に設定されます。  
   
-DEFAULT_LANGUAGE  **=** *言語*  
+DEFAULT_LANGUAGE **=**"*言語*"  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  ログインに割り当てられる既定の言語を指定します。 このオプションを指定しない場合は、サーバーの現在の既定の言語が既定の言語になります。 サーバーの既定の言語が将来変更されても、ログインの既定の言語は変更されません。  
   
-CHECK_EXPIRATION  **=**  {ON |**OFF** }  
+CHECK_EXPIRATION **=** { ON | **OFF** }  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 適用されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインのみです。 このログインに、パスワードの有効期限ポリシーを適用するかどうかを指定します。 既定値は OFF です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインのみに適用されます。 このログインに、パスワードの有効期限ポリシーを適用するかどうかを指定します。 既定値は OFF です。  
   
-CHECK_POLICY  **=**  { **ON** |オフ}  
+CHECK_POLICY **=** { **ON** | OFF }  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 適用されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインのみです。 指定するコンピューターの Windows パスワード ポリシー[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行中は、このログインに適用する必要があります。 既定値は ON です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインのみに適用されます。 このログインに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターの、Windows のパスワード ポリシーを適用するかどうかを指定します。 既定値は ON です。  
   
  Windows のポリシーで強力なパスワードが求められる場合は、次の 4 つの特性のうちの少なくとも 3 つをパスワードに含める必要があります。  
   
@@ -169,70 +169,70 @@ WINDOWS
   
  ログインを Windows ログインにマップするよう指定します。  
   
-証明書*証明書名*  
+CERTIFICATE *certname*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  ログインに関連付ける証明書の名前を指定します。 この証明書は、master データベース内に既に存在する必要があります。  
   
-非対称キー *asym_key_name*  
+ASYMMETRIC KEY *asym_key_name*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  ログインに関連付ける非対称キーの名前を指定します。 このキーは、master データベース内に既に存在する必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  パスワードでは大文字と小文字が区別されます。  
   
- パスワードのハッシュは作成する場合にのみサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。  
+ パスワードの事前ハッシュは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを作成するときにのみサポートされます。  
   
  MUST_CHANGE が指定された場合、CHECK_EXPIRATION および CHECK_POLICY は ON に設定されなければなりません。 ON に設定しない場合、ステートメントは失敗します。  
   
  CHECK_POLICY = OFF と CHECK_EXPIRATION = ON の組み合わせはサポートされていません。  
   
- CHECK_POLICY を OFF に設定したときに*lockout_time*はリセット CHECK_EXPIRATION が OFF に設定されているとします。  
+ CHECK_POLICY を OFF に設定すると、*lockout_time* はリセットされ、CHECK_EXPIRATION は OFF に設定されます。  
   
 > [!IMPORTANT]  
->  CHECK_EXPIRATION および CHECK_POLICY のみに適用されます[!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]およびそれ以降。 詳細については、「 [Password Policy](../../relational-databases/security/password-policy.md)」をご参照ください。  
+>  CHECK_EXPIRATION および CHECK_POLICY は、[!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 以降でのみ適用されます。 詳細については、「 [Password Policy](../../relational-databases/security/password-policy.md)」をご参照ください。  
   
- 証明書または非対称キーから作成されたログインはコード署名用にのみ使用されます。 接続には使用できません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 証明書または非対称キーからログインを作成できるのは、その証明書または非対称キーが master に存在している場合のみです。  
+ 証明書または非対称キーから作成されたログインはコード署名用にのみ使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続には使用できません。 証明書または非対称キーからログインを作成できるのは、その証明書または非対称キーが master に存在している場合のみです。  
   
- ログインを転送するスクリプトを次を参照してください。 [SQL Server 2005 のインスタンスと SQL Server 2008 の間で、ログインおよびパスワードを転送する方法](http://support.microsoft.com/kb/918992)です。  
+ スクリプトでログインを転送する場合は、「[SQL Server 2005 のインスタンス間でログインおよびパスワードを転送する方法](http://support.microsoft.com/kb/918992)」を参照してください。  
   
- ログインを自動的に作成する、新しいログインを有効にし、ログイン、サーバー レベルの付与**CONNECT SQL**権限です。  
+ ログインを作成すると、自動的に新しいログインが有効になり、ログインにサーバー レベルの **CONNECT SQL** 権限が与えられます。  
  
- サーバーの[認証モード](../../relational-databases/security/choose-an-authentication-mode.md)アクセスを許可するログインの種類に一致する必要があります。
+ アクセスを許可するにはサーバーの[認証モード](../../relational-databases/security/choose-an-authentication-mode.md)がログインの種類に一致する必要があります。
   
  権限システムの設計の詳細については、「 [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。  
   
-## <a name="includesssdsfullincludessssdsfull-mdmd-and-includesssdwincludessssdw-mdmd-logins"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]および[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ログイン  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 **CREATE LOGIN**ステートメントはバッチ内の唯一のステートメントである必要があります。  
+## <a name="includesssdsfullincludessssdsfull-mdmd-and-includesssdwincludessssdw-mdmd-logins"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ログイン  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)], 、 **CREATE LOGIN** ステートメントはバッチ内の唯一のステートメントである必要があります。  
   
- 接続のいくつかの方法で[!INCLUDE[ssSDS](../../includes/sssds-md.md)]など**sqlcmd**、追加する必要があります、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]サーバー名を使用して接続文字列内のログイン名を*\<ログイン >*@ *\<サーバー >*表記します。 たとえば、ログインが`login1`との完全修飾名、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]サーバーが`servername.database.windows.net`、*ユーザー名*接続文字列のパラメーターでなければなりません`login1@servername`です。 の合計の長さ、 *username*パラメーターは、128 文字まで*login_name*はサーバー名の長さマイナス 127 文字に制限されます。 例では、`login_name`ためにできるだけ 117 文字まで`servername`10 文字です。  
+ **sqlcmd** などの [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に接続するいくつかのメソッドでは、*\<login>*@*\<server>* の表記法を使用して、接続文字列のログイン名に [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバー名を追加する必要があります。 たとえば、ログインが `login1` で、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーの完全修飾名が `servername.database.windows.net` である場合、接続文字列の *username* パラメーターは `login1@servername` となる必要があります。 の合計の長さ、 *username* パラメーターには、128 文字まで *login_name* サーバー名の長さマイナス 127 文字に制限されます。 この例では、`login_name` が 10 文字であるため、`servername` には 117 文字までしか指定できません。  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]と[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]にログインを作成する master データベースに接続する必要がある必要があります。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] と [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、ログインを作成するには master データベースに接続する必要があります。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作成することがルール、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]形式の認証ログイン\<loginname > @\<サーバー名 >。 場合、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]サーバーが**myazureserver** 、ログインが **myemail@live.com** 、としてログインを指定する必要があります **myemail@live.com @myazureserver** .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ルールを使用すると、\<loginname>@\<servername> 形式の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインを作成できます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーが **myazureserver** で、ログインが **myemail@live.com** である場合、**myemail@live.com@myazureserver** としてログインを指定する必要があります。  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]接続の認証に必要なログイン データ、およびサーバー レベルのファイアウォール ルールは、各データベースでは一時的にキャッシュします。 このキャッシュは定期的に更新されます。 認証キャッシュの更新を強制し、データベースのログインの表に、最新バージョンがあることを確認、実行[DBCC FLUSHAUTHCACHE &#40;です。TRANSACT-SQL と #41 です](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、接続の認証に必要なログイン データおよびサーバー レベルのファイアウォール規則は、各データベースで一時的にキャッシュされます。 このキャッシュは定期的に更新されます。 認証キャッシュを強制的に更新し、データベースにログイン テーブルの最新バージョンがあることを確認するには、[DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) を実行します。  
   
- 詳細については[!INCLUDE[ssSDS](../../includes/sssds-md.md)]ログインを参照してください[Windows Azure SQL データベースにおけるデータベースの管理とログイン](http://msdn.microsoft.com/library/ee336235.aspx)です。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ログインについて詳しくは、[Windows Azure SQL Database におけるデータベースとログインの管理](http://msdn.microsoft.com/library/ee336235.aspx)に関する記事をご覧ください。  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が必要です**ALTER ANY LOGIN**メンバーシップまたはサーバーに対する権限、 **securityadmin**固定サーバー ロール。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サーバーに対する **ALTER ANY LOGIN** 権限または **securityadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、(準備プロセスによって作成される) サーバーレベルのプリンシパルのログインまたは master データベースの `loginmanager` データベース ロールのメンバーだけが新しいログインを作成できます。  
   
- 場合、**資格情報**オプションを使うと、必要もあります**ALTER ANY CREDENTIAL**サーバーに対する権限。  
+ **CREDENTIAL** オプションを使用する場合は、サーバーに対する **ALTER ANY CREDENTIAL** 権限も必要です。  
   
 ## <a name="next-steps"></a>Next Steps  
- ログインを作成するには、ログインに接続できる、[!INCLUDE[ssDE](../../includes/ssde-md.md)]または[!INCLUDE[ssSDS](../../includes/sssds-md.md)]のみに許可する権限を持つ、**パブリック**ロール。 次の操作のいくつかを実行することを検討してください。  
+ ログインが作成されたら、ログインは [!INCLUDE[ssDE](../../includes/ssde-md.md)] または [!INCLUDE[ssSDS](../../includes/sssds-md.md)] に接続できますが、**public** ロールに与えられた権限しか持ちません。 次の操作のいくつかを実行することを検討してください。  
   
 -   データベースに接続するには、ログイン用のデータベース ユーザーを作成する必要があります。 詳細については、「[CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)」を参照してください。  
   
--   使用して、ユーザー定義サーバー ロールを作成[CREATE SERVER ROLE &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/create-server-role-transact-sql.md)。 使用して**サーバーの役割が ALTER**しています. **メンバーの追加**ユーザー定義サーバー ロールに、新しいログインを追加します。 詳細については、次を参照してください。 [CREATE SERVER ROLE &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/create-server-role-transact-sql.md)と[ALTER SERVER ROLE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-server-role-transact-sql.md)。  
+-   を使用して、ユーザー定義サーバー ロールを作成 [#40 ですサーバーの役割を作成する (& a)。TRANSACT-SQL と #41;](../../t-sql/statements/create-server-role-transact-sql.md). 使用して **サーバー ロールの ALTER** しています. **メンバーの追加** をユーザー定義サーバー ロールに、新しいログインを追加します。 詳しくは、「[CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md)」および「[ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)」をご覧ください。  
   
--   使用して**sp_addsrvrolemember**固定サーバー ロールにログインを追加します。 詳細については、次を参照してください。[サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)と[sp_addsrvrolemember (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)。  
+-   固定サーバー ロールにログインを追加するには、**sp_addsrvrolemember** を使用します。 詳しくは、「[サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)」および「[sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)」をご覧ください。  
   
--   使用して、 **GRANT**ステートメントでは、新しいログインまたはログインを含むロールにサーバー レベルのアクセス許可を付与します。 詳細については、「 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)と共に使用できるように構成する方法について説明します。  
+-   新しいログインまたはログインを含むロールにサーバー レベルの権限を許可するには、**GRANT** ステートメントを使用します。 詳細については、「 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)と共に使用できるように構成する方法について説明します。  
   
 ## <a name="examples"></a>使用例  
   
@@ -291,7 +291,7 @@ GO
 ```  
   
 ### <a name="f-creating-a-login-from-a-sid"></a>F. SID からログインを作成します。  
- 次の例の最初の作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ログインし、ログインの SID を決定します。  
+ 次の例の最初の作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインし、ログインの SID を決定します。  
   
 ```  
 CREATE LOGIN TestLogin WITH PASSWORD = 'SuperSecret52&&';  
@@ -313,17 +313,17 @@ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';
 GO  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="g-creating-a-sql-server-authentication-login-with-a-password"></a>G. パスワードで SQL Server 認証ログインを作成します。  
- 次の例は、ログインを作成`Mary7`パスワードを持つ`A2c3456`します。  
+### <a name="g-creating-a-sql-server-authentication-login-with-a-password"></a>G. パスワード付きで SQL Server 認証ログインを作成する  
+ 次の例では、パスワード `A2c3456` のログイン `Mary7`を作成します。  
   
 ```sql  
 CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;  
 ```  
   
-### <a name="h-using-options"></a>H. オプションを使用します。  
- 次の例は、ログインを作成`Mary8`パスワードといくつかの省略可能な引数を使用します。  
+### <a name="h-using-options"></a>H. オプションを使用する  
+ 次の例では、ログイン `Mary8` をパスワードおよびいくつかのオプションの引数と共に作成します。  
   
 ```  
 CREATE LOGIN Mary8 WITH PASSWORD = 'A2c3456$#' MUST_CHANGE,  
@@ -332,7 +332,7 @@ CHECK_POLICY = ON;
 ```  
   
 ### <a name="i-creating-a-login-from-a-windows-domain-account"></a>I. Windows ドメイン アカウントからログインを作成する  
- 次の例は、という名前の Windows ドメイン アカウントからログインを作成`Mary`で、`Contoso`ドメイン。  
+ 次の例では、`Contoso` ドメイン内の `Mary` という名前の Windows ドメイン アカウントからログインを作成します。  
   
 ```  
 CREATE LOGIN [Contoso\Mary] FROM WINDOWS;  
@@ -344,7 +344,7 @@ GO
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [パスワード ポリシー](../../relational-databases/security/password-policy.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
- [DROP LOGIN &#40;TRANSACT-SQL と #41 です](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [ログインの作成](../../relational-databases/security/authentication-access/create-a-login.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "文字列演算子 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "文字列演算子 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="string-operators-transact-sql"></a>文字列演算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次の文字列演算子を提供します。 文字列連結演算子を使用すると、2 つ以上の文字列やバイナリ文字列、列、文字列と列名の組み合わせを 1 つの式に連結できます。 ワイルドカード文字列演算子は、LIKE や PATINDEX などの文字列比較操作で、1 つまたは複数の文字に一致します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、次の文字列演算子があります。 文字列連結演算子を使用すると、2 つ以上の文字列やバイナリ文字列、列、文字列と列名の組み合わせを 1 つの式に連結できます。 ワイルドカード文字列演算子は、LIKE や PATINDEX などの文字列比較操作で、1 つまたは複数の文字に一致します。  
   
 ## <a name="section-heading"></a>セクション見出し  
  [+ (文字列連結)](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
@@ -43,9 +43,9 @@ ms.lasthandoff: 01/25/2018
   
  [% (ワイルドカード - 一致する文字列)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
- [& #91。&#93;です。(ワイルドカード - 一致する文字列)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
+ [&#91; &#93; (ワイルドカード - 一致する文字列)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
   
- [& #91、^ (& a) #93 です。(ワイルドカード - 一致しない文字列)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
+ [&#91;^&#93; (ワイルドカード - 一致しない文字列)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
   
  [_ (ワイルドカード - 一致する 1 文字)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "+ (加算)(TRANSACT-SQL) |Microsoft ドキュメント"
+title: "+ (加算) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-addition-transact-sql"></a>+ (加算) (TRANSACT-SQL)
+# <a name="-addition-transact-sql"></a>+ (加算) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   2 つの値を加算します。 この加算算術演算子を使用して、日付に日数を加算することもできます。  
@@ -52,7 +52,7 @@ expression + expression
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)任意のデータのいずれかの型、数値カテゴリを除く、**ビット**データ型。 は使用できません**日付**、**時間**、 **datetime2**、または**datetimeoffset**データ型。  
+ 数値型に分類される任意のデータ型を持つ有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。ただし、**bit** データ型は除きます。 **date**、**time**、**datetime2**、または **datetimeoffset** データ型と共に使用することはできません。  
   
 ## <a name="result-types"></a>戻り値の型  
  優先順位が高い引数のデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
@@ -60,7 +60,7 @@ expression + expression
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>A. 加算演算子を使用して各従業員の不就労の合計時間数を計算する  
- この例では、休暇や病欠として実行される時間数にかかった時間の数を追加することで、各従業員の不就労の時間の合計数を検索します。  
+ 次の例では、休暇を取得した時間数と病気休暇の時間数を加算することによって、各従業員の不就労の合計時間数を計算しています。  
   
 ```  
 -- Uses AdventureWorks  
@@ -74,7 +74,7 @@ GO
 ```  
   
 ### <a name="b-using-the-addition-operator-to-add-days-to-date-and-time-values"></a>B. 加算演算子を使用して日付時刻値に日数を加算する  
- この例で追加する日数、`datetime`日付。  
+ この例では、`datetime` 型の日付に日数を加算します。  
   
 ```  
   
@@ -98,7 +98,7 @@ Start Date                  Add Date
  ```  
   
 ### <a name="c-adding-character-and-integer-data-types"></a>C. 文字型と整数型を加算する  
- 次の例では追加、 **int**データ、文字データ型に変換することによっての値と文字の値の型**int**です。無効な文字が存在する場合、 **char** 、文字列、[!INCLUDE[tsql](../../includes/tsql-md.md)]はエラーを返します。  
+ 次の例では、文字型を **int** 型に変換してこの値と **int** 型の値を加算します。有効でない文字が **char** 文字列内にあると、[!INCLUDE[tsql](../../includes/tsql-md.md)] はエラーを返します。  
   
 ```  
 DECLARE @addvalue int;  
@@ -115,10 +115,10 @@ SELECT '125127' + @addvalue;
 (1 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>D:、加算演算子を使用して各従業員の不就労の時間の合計数を計算するには  
- 次の例では、休暇や病欠として実行される時間数にかかった時間の数を加算して各従業員の不就労の時間の合計数を検索し、結果を昇順で並べ替えます。  
+### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>D. 加算演算子を使用して各従業員の不就労の合計時間数を計算する  
+ 次の例では、休暇を取得した時間数と病気休暇の時間数を加算することによって、各従業員の不就労の合計時間数を計算し、結果を昇順で並べ替えています。  
   
 ```  
 -- Uses AdventureWorks  
@@ -130,9 +130,9 @@ ORDER BY TotalHoursAway ASC;
 ```  
   
 ## <a name="see-also"></a>参照  
- [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
- [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [+ = (& a) #40 です。加算代入 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/add-equals-transact-sql.md)   
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [複合演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [+= &#40;加算代入&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
  [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: "トランザクション (TRANSACT-SQL) 保存 |Microsoft ドキュメント"
+title: SAVE TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -56,13 +56,13 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>引数  
  *savepoint_name*  
- セーブポイントに割り当てる名前を指定します。 セーブポイント名は識別子の規則に従う必要があります。文字数は半角 32 文字に制限されます。 *savepoint_name*は常に大文字と小文字、場合でも、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大文字小文字は区別されません。  
+ セーブポイントに割り当てる名前を指定します。 セーブポイント名は識別子の規則に従う必要があります。文字数は半角 32 文字に制限されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで大文字と小文字が区別されない場合であっても、*savepoint_name* では常に大文字と小文字が区別されます。  
   
  @*savepoint_variable*  
- 有効なセーブポイント名を含むユーザー定義の変数名を指定します。 変数を宣言する必要があります、 **char**、 **varchar**、 **nchar**、または**nvarchar**データ型。 この変数には 32 文字を超える文字列も渡されますが、使用されるのは最初の 32 文字だけです。  
+ 有効なセーブポイント名を含むユーザー定義の変数名を指定します。 変数は、**char**、**varchar**、**nchar**、または **nvarchar** データ型を使用して宣言する必要があります。 この変数には 32 文字を超える文字列も渡されますが、使用されるのは最初の 32 文字だけです。  
   
-## <a name="remarks"></a>解説  
- ユーザーは、トランザクション内にセーブポイントというマーカーを設定できます。 セーブポイントでは、トランザクションの一部が条件付きで取り消された場合に、トランザクションが戻ることのできる位置を定義します。 トランザクションがセーブポイントまでロールバックされた場合は、必要であれば追加の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと、COMMIT TRANSACTION ステートメントを使用して、トランザクションを最後まで実行します。最後まで実行しない場合は、開始位置までロールバックしてトランザクション全体を取り消す必要があります。 トランザクション全体を取り消す場合に、ROLLBACK transaction を使用して*では無視*です。 この場合、そのトランザクションのすべてのステートメントまたはプロシージャが取り消されます。  
+## <a name="remarks"></a>Remarks  
+ ユーザーは、トランザクション内にセーブポイントというマーカーを設定できます。 セーブポイントでは、トランザクションの一部が条件付きで取り消された場合に、トランザクションが戻ることのできる位置を定義します。 トランザクションがセーブポイントまでロールバックされた場合は、必要であれば追加の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと、COMMIT TRANSACTION ステートメントを使用して、トランザクションを最後まで実行します。最後まで実行しない場合は、開始位置までロールバックしてトランザクション全体を取り消す必要があります。 トランザクション全体を取り消す場合は、ROLLBACK TRANSACTION *transaction_name* を使用します。 この場合、そのトランザクションのすべてのステートメントまたはプロシージャが取り消されます。  
   
  1 つのトランザクションでは同じセーブポイント名を重複して指定できますが、ROLLBACK TRANSACTION ステートメントでそのセーブポイント名を指定した場合は、そのセーブポイント名を使用している最新の SAVE TRANSACTION のみにロールバックできます。  
   
@@ -71,7 +71,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
 > [!IMPORTANT]  
 >  ROLLBACK TRANSACTION ステートメントで savepoint_name を指定している場合、そのセーブポイントより後の時点で取得されたロックは解放されます。ただし、エスカレーションおよび変換が行われた場合、 これらのロックは解放されず、前のロック モードに戻ることはありません。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -170,16 +170,16 @@ GO
 ## <a name="see-also"></a>参照  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [コミット動作 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; です。TRANSACT-SQL と&#41; です。](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [ROLLBACK WORK &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)  
   

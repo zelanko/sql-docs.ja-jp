@@ -1,5 +1,5 @@
 ---
-title: "DBCC USEROPTIONS (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC USEROPTIONS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -77,10 +77,10 @@ isolation level              read committed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.
  ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 READ_COMMITTED_SNAPSHOT データベース オプションが ON に設定され、トランザクション分離レベルが "READ COMMITTED" に設定されている場合、DBCC USEROPTIONS は、"READ COMMITTED スナップショット" の分離レベルを報告します。 実際の分離レベルは READ COMMITTED です。
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 ロール **public** のメンバーシップが必要です。
   
 ## <a name="examples"></a>使用例  

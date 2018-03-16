@@ -1,5 +1,5 @@
 ---
-title: "INTO 句 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "INTO 句 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2017
 ms.prod: sql-non-specified
@@ -42,10 +42,10 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---into-clause-transact-sql"></a>SELECT - INTO Clause (Transact-SQL)
+# <a name="select---into-clause-transact-sql"></a>SELECT - INTO 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  SELECT...INTO は、既定のファイル グループに新しいテーブルを作成し、クエリの結果得られた行をそのテーブルに挿入します。 SELECT の完全な構文を表示するには、次を参照してください[SELECT &#40;。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-transact-sql.md).  
+  SELECT...INTO は、既定のファイル グループに新しいテーブルを作成し、クエリの結果得られた行をそのテーブルに挿入します。 SELECT の完全な構文を確認するには、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,16 +62,16 @@ ms.lasthandoff: 01/25/2018
  
   *filegroup*
  
- 新しいテーブルが作成されるファイル グループの名前を指定します。 指定されたファイル グループは存在他のデータベースで SQL Server エンジンがスローされますエラーです。 このオプションは、以降でのみサポートされます[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]です。
+ 新しいテーブルを作成するファイル グループの名前を指定します。 指定されたファイル グループがデータベースに存在する必要があります。存在しない場合は、SQL Server エンジンからエラーがスローされます。 このオプションは、[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降でのみサポートされています。
  
- 形式*new_table*は選択リスト内の式を評価することによって決定されます。 内の列*new_table*選択リストで指定された順序で作成されます。 内の各列*new_table*選択リスト内の対応する式と同じ名前、データ型、null 値許容属性、および値を持ちます。 列の IDENTITY プロパティは、「解説」の「ID 列の使用」に示されている条件に当てはまる場合を除いて転送されます。  
+ *new_table* の形式は、選択リスト内の式を評価することによって決まります。 *new_table* 内の列は、選択リストの指定順に作成されます。 *new_table* 内の各列の名前、データ型、NULL 値の許容属性、値は、選択リスト内の対応する式と同じになります。 列の IDENTITY プロパティは、「解説」の「ID 列の使用」に示されている条件に当てはまる場合を除いて転送されます。  
   
- 別のデータベースの同じインスタンスにテーブルを作成する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、指定*new_table*形式で完全修飾名として*database.schema.table_name*です。  
+ 同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの別のデータベースにテーブルを作成するには、*new_table* を *database.schema.table_name* の形式で完全修飾名として指定します。  
   
- 作成することはできません*new_table*リモート サーバーです。 ただし、設定できる*new_table*リモート データ ソースからです。 作成する*new_table*リモート ソース テーブルから指定の形式で 4 部構成の名前を使用してソース テーブル*linked_server*.*カタログ*.*スキーマ*.*オブジェクト*SELECT ステートメントの FROM 句でします。 また、使用することができます、 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)関数または[OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md)リモート データ ソースを指定する FROM 句内の関数。  
+ リモート サーバーに *new_table* を作成することはできませんが、*new_table* にリモート データ ソースのデータを設定することはできます。 リモート ソース テーブルから *new_table* を作成するには、SELECT ステートメントの FROM 句で、*linked_server*.*catalog*.*schema*.*object* という形式の 4 部構成の名前を使用してソース テーブルを指定します。 FROM 句で [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 関数か [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 関数を使用してリモート データ ソースを指定することもできます。  
   
 ## <a name="data-types"></a>データ型  
- FILESTREAM 属性は新しいテーブルに転送されません。 FILESTREAM Blob がコピーされ、新しいテーブルに格納されている**varbinary (max)** Blob です。 FILESTREAM 属性がない、 **varbinary (max)**データ型に 2 GB の制限があります。 FILESTREAM BLOB がこの値を超えると、エラー 7119 が発生して、ステートメントが中止されます。  
+ FILESTREAM 属性は新しいテーブルに転送されません。 FILESTREAM BLOB がコピーされ、**varbinary(max)** BLOB として新しいテーブルに格納されます。 FILESTREAM 属性がない場合、**varbinary(max)** データ型は 2 GB までに制限されます。 FILESTREAM BLOB がこの値を超えると、エラー 7119 が発生して、ステートメントが中止されます。  
   
  既存の ID 列が新しいテーブルに選択された場合は、次の条件のいずれかが満たされている場合を除き、新しい列には IDENTITY プロパティが継承されます。  
   
@@ -101,9 +101,9 @@ ms.lasthandoff: 01/25/2018
  リストに計算列が指定されている場合、新しいテーブル内の対応する列は計算列にはなりません。 新しい列の値は、SELECT...INTO が実行された時点の計算値になります。  
   
 ## <a name="logging-behavior"></a>ログ記録の動作  
- SELECT...INTO のログ記録量は、データベースに対して有効な復旧モデルによって異なります。 単純復旧モデルまたは一括ログ復旧モデルでは、一括操作は最小限しかログに記録されません。 選択 を使用して、最小ログ記録しています. ステートメントに効率的であるテーブルを作成すると、INSERT ステートメントを含むテーブルを作成します。 詳細については、「[トランザクションログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください.  
+ SELECT...INTO のログ記録量は、データベースに対して有効な復旧モデルによって異なります。 単純復旧モデルまたは一括ログ復旧モデルでは、一括操作は最小限しかログに記録されません。 選択 を使用して、最小ログ記録しています. ステートメントに効率的であるテーブルを作成すると、INSERT ステートメントを含むテーブルを作成します。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  対象となるデータベースの CREATE TABLE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -128,7 +128,7 @@ GO
 ```  
   
 ### <a name="b-inserting-rows-using-minimal-logging"></a>B. 最小ログ記録を使用して行を挿入する  
- 次の例は、テーブルを作成`dbo.NewProducts`から行を挿入し、`Production.Product`テーブル。 例では、復旧モデル、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースが FULL に設定します。 したがって、最小ログ記録が使用されるようにするために、行を挿入する前に [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの復旧モデルを BULK_LOGGED に設定し、SELECT...INTO ステートメントの後に FULL に戻しています。 これにより、SELECT...INTO ステートメントが使用するトランザクション ログの領域が最小化され、ステートメントが効率的に実行されるようになります。  
+ 次の例では、テーブル `dbo.NewProducts` を作成し、`Production.Product` テーブルの行を挿入します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの復旧モデルが FULL に設定されていると想定しています。 したがって、最小ログ記録が使用されるようにするために、行を挿入する前に [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの復旧モデルを BULK_LOGGED に設定し、SELECT...INTO ステートメントの後に FULL に戻しています。 これにより、SELECT...INTO ステートメントが使用するトランザクション ログの領域が最小化され、ステートメントが効率的に実行されるようになります。  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
@@ -144,7 +144,7 @@ GO
 ```  
   
 ### <a name="c-creating-an-identity-column-using-the-identity-function"></a>C. IDENTITY 関数を使用して ID 列を作成する  
- 次の例では、IDENTITY 関数を使用して、新しいテーブルに id 列を作成する`Person.USAddress`で、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。 この操作が必要になるのは、テーブルを定義する SELECT ステートメントに結合が含まれているため、IDENTITY プロパティが新しいテーブルに転送されないからです。 IDENTITY 関数で、ソース テーブル `AddressID` の `Person.Address` 列とは異なるシード値と増分値が指定されていることに注意してください。  
+ 次の例では、IDENTITY 関数を使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの新しいテーブル `Person.USAddress` に ID 列を作成します。 この操作が必要になるのは、テーブルを定義する SELECT ステートメントに結合が含まれているため、IDENTITY プロパティが新しいテーブルに転送されないからです。 IDENTITY 関数で、ソース テーブル `AddressID` の `Person.Address` 列とは異なるシード値と増分値が指定されていることに注意してください。  
   
 ```sql  
 -- Determine the IDENTITY status of the source column AddressID.  
@@ -171,9 +171,9 @@ WHERE name = 'AddressID';
 ```  
   
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. リモート データ ソースの列を指定してテーブルを作成する  
- 次の例は、ローカル サーバーで新しいテーブルをリモート データ ソースから作成するための 3 つの方法を示しています。 最初にリモート データ ソースへのリンクを作成した後、 リンク サーバー名、`MyLinkServer,`の最初の SELECT FROM 句で指定しています.2 番目の SELECT の OPENQUERY 関数とステートメントにしています.INTO ステートメントです。 3 つ目の SELECT...INTO ステートメントでは、OPENDATASOURCE 関数を使用して、リンク サーバー名を使用する代わりに直接リモート データ ソースを指定しています。  
+ 次の例は、ローカル サーバーで新しいテーブルをリモート データ ソースから作成するための 3 つの方法を示しています。 最初にリモート データ ソースへのリンクを作成した後、 リンク サーバー名の `MyLinkServer,` を、1 つ目の SELECT...INTO ステートメントの FROM 句と、2 つ目の SELECT...INTO ステートメントの OPENQUERY 関数に指定しています。 3 つ目の SELECT...INTO ステートメントでは、OPENDATASOURCE 関数を使用して、リンク サーバー名を使用する代わりに直接リモート データ ソースを指定しています。  
   
- **適用されます:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 ```sql
 USE master;  
@@ -214,7 +214,7 @@ GO
 ```  
   
 ### <a name="e-import-from-an-external-table-created-with--polybase"></a>E. PolyBase で作成された外部テーブルをインポートします。  
- Hadoop または Azure ストレージからデータを永続的なストレージの SQL Server にインポートします。 使用して`SELECT INTO`を SQL Server で永続的なストレージの外部テーブルで参照されるデータをインポートします。 リレーショナル テーブルにその場を作成し、2 番目の手順で、テーブルの上に列ストア インデックスを作成します。  
+ Hadoop または Azure ストレージからデータを永続的なストレージの SQL Server にインポートします。 `SELECT INTO` を使用して、SQL Server の永続記憶装置に、外部テーブルで参照されるデータをインポートします。 リレーショナル テーブルにその場を作成し、2 番目の手順で、テーブルの上に列ストア インデックスを作成します。  
   
  **適用対象:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]」を参照してください。  
   
@@ -231,10 +231,10 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 ORDER BY YearlyIncome  
   
 ```  
-### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 別のテーブルのコピーとして新しいテーブルを作成して、指定されたファイル グループを読み込む
-次の例では、別のテーブルのコピーとして新しいテーブルを作成して、ユーザーの既定のファイル グループから別の指定されたファイル グループに読み込むを示します。
+### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 新しいテーブルを別のテーブルのコピーとして作成し、指定したファイル グループに読み込む
+次の例は、新しいテーブルを別のテーブルのコピーとして作成し、ユーザーの既定のファイル グループとは異なる、指定したファイル グループに読み込む方法を示しています。
 
- **適用されます:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+ **適用対象:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
@@ -251,8 +251,8 @@ SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
   
 ## <a name="see-also"></a>参照  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [例 &#40; を選択します。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-examples-transact-sql.md)   
- [挿入 &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/insert-transact-sql.md)   
- [ID および #40 です。関数と #41 です。&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/identity-function-transact-sql.md)  
+ [SELECT の例 &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [IDENTITY &#40;関数&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)  
   
   

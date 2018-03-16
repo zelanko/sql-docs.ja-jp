@@ -1,5 +1,5 @@
 ---
-title: "(TRANSACT-SQL) で |Microsoft ドキュメント"
+title: IN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/29/2016
 ms.prod: sql-non-specified
@@ -53,27 +53,27 @@ test_expression [ NOT ] IN
   
 ## <a name="arguments"></a>引数  
  *test_expression*  
- 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+ 任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
  *subquery*  
- 1 列の結果セットを返すサブクエリです。 この列と同じデータ型を持つ必要があります*な任意*です。  
+ 1 列の結果セットを返すサブクエリです。 この列のデータ型は、*test_expression* と同じデータ型である必要があります。  
   
  *expression*[ **,**... *n* ]  
- 一致するかどうかのテストに使用する式のリストです。 すべての式と同じ型でなければなりません*な任意*です。  
+ 一致するかどうかのテストに使用する式のリストです。 すべての式は、*test_expression* と同じ型である必要があります。  
   
 ## <a name="result-types"></a>戻り値の型  
  **ブール値**  
   
 ## <a name="result-value"></a>結果の値  
- 場合の値*な任意*がによって返される任意の値に等しい*サブクエリ*と等しいか、または*式*コンマ区切りの一覧から、結果の値は TRUE です。それ以外の場合、結果の値は FALSE です。  
+ *test_expression* の値が *subquery* によって返される値と等しい場合、またはコンマ区切りの一覧内の任意の*式*と等しい場合、結果の値は TRUE です。それ以外の場合、結果の値は FALSE です。  
   
- 否定 NOT IN を使用して、*サブクエリ*値または*式*です。  
+ NOT IN を使用すると、*サブクエリ*値または*式*が否定されます。  
   
 > [!CAUTION]  
->  Null 値によって返される*サブクエリ*または*式*へと比較される*な任意*IN を使用するかではなく UNKNOWN が返されます。 IN または NOT IN と共に NULL 値を使用すると、予期しない結果が生じる可能性があります。  
+>  IN または NOT IN を使用して *test_expression* と比較される *subquery* または *expression* で NULL 値が返された場合は、すべて UNKNOWN が返されます。 IN または NOT IN と共に NULL 値を使用すると、予期しない結果が生じる可能性があります。  
   
-## <a name="remarks"></a>解説  
- IN 句に、かっこで囲まれた明示的に非常に多数の値 (何千ものコンマで区切られた値) を含む、リソースを消費し、エラー 8623 または 8632 が返されることができます。 この問題を回避するには、テーブルのボックスの一覧で項目を格納し、IN 句の中で SELECT サブクエリを使用します。  
+## <a name="remarks"></a>Remarks  
+ かっこで囲んだ極端に多くの値 (コンマで区切られた数千単位の値) を IN 句に明示的に含めると、リソースが消費されてエラー 8623 または 8632 が返される場合があります。 この問題を回避するには、項目をテーブルの IN リストに格納し、IN 句内に SELECT サブクエリを使用します。  
   
  エラー 8623:  
   
@@ -114,7 +114,7 @@ WHERE e.JobTitle IN ('Design Engineer', 'Tool Designer', 'Marketing Assistant');
 GO  
 ```  
   
- いずれかのクエリからの結果セットを次に示します。  
+ 次に各クエリの結果セットを示します。  
   
 ```  
 FirstName   LastName      Title  
@@ -132,7 +132,7 @@ Mary        Dempsey     Marketing Assistant
 ```  
   
 ### <a name="b-using-in-with-a-subquery"></a>B. IN とサブクエリを使用する  
- 次の例は、販売員のすべての Id を検索、`SalesPerson`年度の 250,000 ドルの販売ノルマがありからを選択し、従業員のテーブル、`Employee`テーブルのすべての従業員名、`EmployeeID`と一致する、結果、`SELECT`サブクエリ。  
+ 次の例では、年間の販売ノルマが 250,000 ドルを超えるすべての販売員の ID が `SalesPerson` テーブルから検索され、次に、`Employee` テーブルから、`SELECT` サブクエリの結果に一致する `EmployeeID` の従業員の名前がすべて選択されます。  
   
 ```  
 -- Uses AdventureWorks  
@@ -177,10 +177,10 @@ WHERE p.BusinessEntityID NOT IN
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-in-and-not-in"></a>D. ではなくを使用します。  
- 次の例は、すべてのエントリを検索、`FactInternetSales`テーブルと一致する`SalesReasonKey`の値が、`DimSalesReason`テーブル。  
+### <a name="d-using-in-and-not-in"></a>D. IN と NOT IN の使用  
+ 次の例では、`DimSalesReason` テーブルの `SalesReasonKey` 値と一致する `FactInternetSales` テーブルのすべてのエントリを検出します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -190,7 +190,7 @@ WHERE SalesReasonKey
 IN (SELECT SalesReasonKey FROM DimSalesReason);   
 ```  
   
- 次の例は、すべてのエントリを検索、`FactInternetSalesReason`テーブルと一致しない`SalesReasonKey`の値が、`DimSalesReason`テーブル。  
+ 次の例では、`DimSalesReason` テーブルの `SalesReasonKey` 値と一致しない `FactInternetSalesReason` テーブルのすべてのエントリを検出します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -200,8 +200,8 @@ WHERE SalesReasonKey
 NOT IN (SELECT SalesReasonKey FROM DimSalesReason);  
 ```  
   
-### <a name="e-using-in-with-an-expression-list"></a>E. 式のリストで使用します。  
- 次の例は、販売員のすべての Id を検索、`DimEmployee`最初を持つ従業員名のいずれかのテーブル`Mike`または`Michael`です。  
+### <a name="e-using-in-with-an-expression-list"></a>E. 式リストで IN を使用する  
+ 次の例は、`DimEmployee` テーブルで、名が `Mike` または `Michael` の従業員について、営業担当者の ID をすべて検出します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -212,14 +212,14 @@ WHERE FirstName IN ('Mike', 'Michael');
 ```  
   
 ## <a name="see-also"></a>参照  
- [場合 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/case-transact-sql.md)   
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)   
- [ALL と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/all-transact-sql.md)   
- [一部 &#124;です。いずれかと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/some-any-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
+ [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md)  
   
   
 

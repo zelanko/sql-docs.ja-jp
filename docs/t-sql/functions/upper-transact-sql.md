@@ -1,5 +1,5 @@
 ---
-title: "UPPER (TRANSACT-SQL) |Microsoft ドキュメント"
+title: UPPER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -51,15 +51,15 @@ UPPER ( character_expression )
   
 ## <a name="arguments"></a>引数  
  *character_expression*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)の文字データです。 *character_expression*定数、変数、または文字またはバイナリ データのいずれかの列を指定できます。  
+ 文字データの[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *character_expression* 定数、変数、または文字またはバイナリ データのいずれかの列を指定できます。  
   
- *character_expression*に暗黙的に変換できるデータ型でなければなりません**varchar**です。 それ以外の場合、使用[キャスト](../../t-sql/functions/cast-and-convert-transact-sql.md)明示的に変換する*character_expression*です。  
+ *character_expression* に暗黙的に変換できるデータ型である必要があります **varchar**です。 それ以外の場合、使用して [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) に明示的に変換する *character_expression*です。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varchar**または**nvarchar**  
+ **varchar** または **nvarchar**  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`UPPER`と`RTRIM`を内の人の姓を返す関数、`dbo.DimEmployee`大文字、切り捨て、名を連結した結果になるようにテーブルです。  
+ 次の例では、`UPPER` 関数と `RTRIM` 関数を使用して `dbo.DimEmployee` テーブル内の人の姓を返しています。関数により、姓を大文字にして空白を切り捨て、名と連結しています。  
   
 ```  
 -- Uses AdventureWorks  
@@ -69,7 +69,7 @@ FROM dbo.DimEmployee
 ORDER BY LastName;  
 ```  
   
- 部分的な結果セットを次に示します。  
+ 次に結果セットの一部を示します。  
   
  ```
 Name
@@ -81,8 +81,8 @@ ABOLROUS, Hazem
   
 ## <a name="see-also"></a>参照  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  
- [下位 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/lower-transact-sql.md)  
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [LOWER &#40;Transact-SQL&#41;](../../t-sql/functions/lower-transact-sql.md)  
   
   
 

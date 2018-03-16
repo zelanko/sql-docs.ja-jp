@@ -1,5 +1,5 @@
 ---
-title: "IsDescendantOf (データベース エンジン) |Microsoft ドキュメント"
+title: "IsDescendantOf (データベース エンジン) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-場合は true を返します*この*親の子孫であります。
+場合は true を返します。 この* 親の子孫であります。
   
 ## <a name="syntax"></a>構文  
   
@@ -49,15 +49,15 @@ SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )
 ```  
   
 ## <a name="arguments"></a>引数  
-*親*  
-**Hierarchyid** IsDescendantOf テストを実行するノードです。
+*parent*  
+IsDescendantOf テストを実行する必要がある **hierarchyid** ノード。
   
 ## <a name="return-types"></a>戻り値の型  
-**戻り値の型: ビット SQL Server**
+SQL Server の戻り値の型: * ***ビット * *
   
-**CLR の戻り値の型: SqlBoolean**
+CLR の戻り値の型:SqlBoolean**
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 親をルートとするサブツリー内のすべてのノードには true、それ以外のノードには false を返します。
   
 親はそれ自身の子孫と見なされます。
@@ -98,7 +98,7 @@ ELSE
 ```  
   
 ### <a name="c-calling-a-common-language-runtime-method"></a>C. 共通言語ランタイム メソッドを呼び出す  
-次のコード スニペットの呼び出し、`IsDescendantOf()`メソッドです。
+次のコード例では `IsDescendantOf()` メソッドを呼び出します。
   
 ```sql
 this.IsDescendantOf(Parent)  

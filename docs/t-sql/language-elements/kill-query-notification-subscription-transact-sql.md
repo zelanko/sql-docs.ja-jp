@@ -1,5 +1,5 @@
 ---
-title: "KILL QUERY NOTIFICATION SUBSCRIPTION (TRANSACT-SQL) |Microsoft ドキュメント"
+title: KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -54,17 +54,17 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
  インスタンス内のすべてのサブスクリプションを削除します。  
   
  *subscription_id*  
- サブスクリプション id でサブスクリプションを削除*subscription_id*です。  
+ *subscription_id* で指定したサブスクリプション ID のサブスクリプションを削除します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  KILL QUERY NOTIFICATION SUBSCRIPTION ステートメントでクエリ通知サブスクリプションを削除する際、通知メッセージは生成されません。  
   
- *subscription_id*動的管理ビューで示すように、サブスクリプションの id は、 [sys.dm_qn_subscriptions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md).  
+ *subscription_id* には、動的管理ビュー [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md) に表示されるサブスクリプションの ID を指定します。  
   
  指定したサブスクリプション ID が存在しない場合は、エラーが発生します。  
   
-## <a name="permissions"></a>権限  
- このステートメントを実行するアクセス許可がのメンバーに制限されます、 **sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ このステートメントの実行権限は、**sysadmin** 固定サーバー ロールのメンバーに制限されます。  
   
 ## <a name="examples"></a>使用例  
   
@@ -83,6 +83,6 @@ KILL QUERY NOTIFICATION SUBSCRIPTION 73 ;
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.dm_qn_subscriptions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md)  
+ [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md)  
   
   

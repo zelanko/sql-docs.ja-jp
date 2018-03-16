@@ -1,5 +1,5 @@
 ---
-title: "UNICODE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: UNICODE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,12 +48,12 @@ UNICODE ( 'ncharacter_expression' )
   
 ## <a name="arguments"></a>引数  
  **'** *ncharacter_expression* **'**  
- **Nchar**または**nvarchar**式。  
+ **nchar** または **nvarchar** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前の [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] のバージョンおよび [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、UNICODE 関数は UCS-2 コード ポイントを 0 から 0xFFFF までの範囲で返します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のエディションでは、SC 照合順序を使用すると、UNICODE は UTF-16 コード ポイントを 0 から 0x10FFFF までの範囲で返します。  
   
 ## <a name="examples"></a>使用例  
@@ -75,7 +75,7 @@ SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));
 ```  
   
 ### <a name="b-using-substring-unicode-and-convert"></a>B. SUBSTRING、UNICODE、CONVERT の各関数を使用する  
- 次の例では、 `SUBSTRING`、 `UNICODE`、および`CONVERT`関数は文字番号、Unicode 文字、および各文字列の文字の UNICODE 値を印刷する`Åkergatan 24`です。  
+ 次の例では、`SUBSTRING`、`UNICODE`、および `CONVERT` の各関数を使用して、文字列 `Åkergatan 24` の各文字の文字番号、Unicode 文字、および UNICODE 値を出力します。  
   
 ```  
 -- The @position variable holds the position of the character currently  
@@ -146,10 +146,10 @@ Character # Unicode Character UNICODE Value
 ```  
   
 ## <a name="see-also"></a>参照  
- [ASCII &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ascii-transact-sql.md)  
- [CHAR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/char-transact-sql.md)  
- [NCHAR と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/nchar-transact-sql.md)   
- [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)   
+ [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
+ [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
+ [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)   
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

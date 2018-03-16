@@ -1,5 +1,5 @@
 ---
-title: "LTRIM (TRANSACT-SQL) |Microsoft ドキュメント"
+title: LTRIM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/27/2017
 ms.prod: sql-non-specified
@@ -51,16 +51,16 @@ LTRIM ( character_expression )
   
 ## <a name="arguments"></a>引数  
  *character_expression*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)の文字またはバイナリ データ。 *character_expression*定数、変数、または列を指定できます。 *character_expression*を除くデータ型である必要があります**テキスト**、 **ntext**、および**イメージ**、つまりに暗黙的に変換**varchar**. それ以外の場合、使用[キャスト](../../t-sql/functions/cast-and-convert-transact-sql.md)明示的に変換する*character_expression*です。  
+ 文字またはバイナリ データの[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *character_expression* には定数、変数、または列を指定できます。 *character_expression* 以外のデータ型の場合は、ある必要があります **text**、**ntext**、および **image**、つまりに暗黙的に変換 **varchar**です。 それ以外の場合、使用して [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) に明示的に変換する *character_expression*です。  
   
 ## <a name="return-type"></a>戻り値の型  
- **varchar**または**nvarchar**  
+ **varchar** または **nvarchar**  
   
 ## <a name="examples"></a>使用例  
 
 ### <a name="a-simple-example"></a>A. 簡単な例   
 
- 次の例では、LTRIM を使用して、文字式から先頭のスペースを削除します。  
+ 次の例では、LTRIM を使用して文字式から先頭の空白を削除します。  
   
 ```sql  
 SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.databases;  
@@ -73,7 +73,7 @@ SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.d
   Five spaces are at the beginning of this string.
   ```  
 
-### <a name="b-example-using-a-variable"></a>B: 例の変数を使用します。   
+### <a name="b-example-using-a-variable"></a>B: 変数を使用した例   
   
  次の例では、`LTRIM` を使用して文字変数から先頭の空白を削除します。  
   
@@ -95,14 +95,14 @@ Original string Without spaces
 ```  
   
 ## <a name="see-also"></a>参照  
- [左と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/left-transact-sql.md)  
- [右 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/right-transact-sql.md)  
- [RTRIM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rtrim-transact-sql.md)  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
- [部分文字列と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/substring-transact-sql.md)  
- [トリム &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/trim-transact-sql.md)  
+ [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
+ [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

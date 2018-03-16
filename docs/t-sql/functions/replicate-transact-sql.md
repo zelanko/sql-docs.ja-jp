@@ -1,5 +1,5 @@
 ---
-title: "REPLICATE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: REPLICATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -48,16 +48,16 @@ REPLICATE ( string_expression ,integer_expression )
   
 ## <a name="arguments"></a>引数  
  *string_expression*  
- 文字列またはバイナリ データ型の式を指定します。 *string_expression*文字またはバイナリ データのいずれかを指定できます。  
+ 文字列またはバイナリ データ型の式を指定します。 *string_expression* 文字またはバイナリ データのいずれかを指定できます。  
   
 > [!NOTE]  
->  場合*string_expression*型ではありません**varchar (max)**または**nvarchar (max)**、戻り値が 8,000 バイトで切り捨てられます。 8,000 バイトより大きい値を返す*string_expression*適切な大きな値データ型に明示的にキャストする必要があります。  
+>  場合 *string_expression* の種類はありません **varchar (max)** または **nvarchar (max)**, 、戻り値が 8,000 バイトで切り捨てられます。 8,000 バイトの場合より大きい値を返す *string_expression* 適切な大きな値のデータ型に明示的にキャストする必要があります。  
   
  *integer_expression*  
- 任意の整数型の式を含む**bigint**です。 場合*であれば、任意*は負の場合、NULL が返されます。  
+ **bigint** を含む、整数型の式を指定します。 場合 *であれば、任意* は負の場合、NULL が返されます。  
   
 ## <a name="return-types"></a>戻り値の型  
- 同じ型を返します*string_expression*です。  
+ 同じ型を返します *string_expression*です。  
   
 ## <a name="examples"></a>使用例  
   
@@ -123,10 +123,10 @@ Varchar Column        Char Column
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-replicate"></a>C: が REPLICATE を使用します。  
- 次の例ではレプリケート、 `0` 4 回の前に文字、`ItemCode`値。  
+### <a name="c-using-replicate"></a>C. REPLICATE を使用する  
+ 次の例では、`ItemCode` 値の前に `0` という文字を 4 回繰り返します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -138,7 +138,7 @@ FROM dbo.DimProduct
 ORDER BY Name;  
 ```  
   
- 結果セットの最初の行のとおりです。  
+ ここでは結果セット内の最初の行を示します。  
   
  ```
 Name                     ItemCode       FullItemCode
@@ -152,9 +152,9 @@ BB Ball Bearing          BE-2349        0000BE-2349
  ```  
   
 ## <a name="see-also"></a>参照  
- [領域 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/space-transact-sql.md)  
+ [SPACE &#40;Transact-SQL&#41;](../../t-sql/functions/space-transact-sql.md)  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

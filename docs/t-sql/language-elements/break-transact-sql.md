@@ -1,5 +1,5 @@
 ---
-title: "中断 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: BREAK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="break-transact-sql"></a>BREAK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  WHILE ステートメント、または WHILE ループ内の IF...ELSE ステートメントで、最も内側のループを終了させます。 ループの終了位置を示す END キーワードの後にすべてのステートメントが実行されます。 BREAK は、常にではありませんが、IF ステートメントの分岐で起動されることがよくあります。  
+  WHILE ステートメント、または WHILE ループ内の IF...ELSE ステートメントで、最も内側のループを終了させます。 ループの終了位置を示す END キーワード以降のすべてのステートメントが実行されます。 BREAK は、常にではありませんが、IF ステートメントの分岐で起動されることがよくあります。  
   
 ## <a name="examples"></a>使用例  
   
@@ -54,8 +54,8 @@ END
 ```  
   
 ## <a name="see-also"></a>参照  
- [フロー制御言語 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md)   
- [中に &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/while-transact-sql.md)   
+ [フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)   
  [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
   
   

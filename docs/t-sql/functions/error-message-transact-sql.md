@@ -1,5 +1,5 @@
 ---
-title: "ERROR_MESSAGE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ERROR_MESSAGE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -56,17 +56,17 @@ ERROR_MESSAGE ( )
   
  CATCH ブロックの範囲外で呼び出された場合は NULL を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ERROR_MESSAGE は、CATCH ブロックのスコープ内であればどこでも呼び出すことができます。  
   
- ERROR_MESSAGE では、実行される回数や、CATCH ブロックのスコープ内のどこで実行されるかに関係なく、エラー メッセージが返されます。 これは、@ などの関数とは対照的@ERRORエラーが発生した直後後のステートメントでのみ、エラー番号が返されます、または CATCH の最初のステートメントをブロックします。  
+ ERROR_MESSAGE では、実行される回数や、CATCH ブロックのスコープ内のどこで実行されるかに関係なく、エラー メッセージが返されます。 これは、@@ERROR のような関数とは対照的です。@@ERROR 関数では、エラーが発生したステートメントの直後のステートメント、または CATCH ブロックの最初のステートメントでエラー番号が返されます。  
   
  入れ子にされた CATCH ブロックでは、ERROR_MESSAGE によって、参照される CATCH ブロックのスコープ固有のエラー メッセージが返されます。 たとえば、外側の TRY...CATCH 構造の CATCH ブロックには、TRY...CATCH 構造が入れ子にされている場合があります。 入れ子にされた CATCH ブロックでは、ERROR_MESSAGE によって、入れ子にされた CATCH ブロックを起動したエラーのメッセージが返されます。 ERROR_MESSAGE が外側の CATCH ブロックで実行された場合は、その CATCH ブロックを起動したエラーのメッセージが返されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-errormessage-in-a-catch-block"></a>A. CATCH ブロックで ERROR_MESSAGE を使用する  
- 次のコード例は、 `SELECT` 0 除算エラーを生成するステートメント。 ここではエラーのメッセージが返されます。  
+ 次の例では、0 除算エラーを生成する `SELECT` ステートメントを示します。 ここではエラーのメッセージが返されます。  
   
 ```  
   
@@ -81,7 +81,7 @@ GO
 ```  
   
 ### <a name="b-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>B. CATCH ブロックで、別のエラー処理ツールと一緒に ERROR_MESSAGE を使用する  
- 次のコード例は、 `SELECT` 0 除算エラーを生成するステートメント。 ここではエラー メッセージと共に、エラーに関連する情報が返されます。  
+ 次の例では、0 除算エラーを生成する `SELECT` ステートメントを示します。 ここではエラー メッセージと共に、エラーに関連する情報が返されます。  
   
 ```  
   
@@ -101,10 +101,10 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>C. CATCH ブロックで、別のエラー処理ツールと一緒に ERROR_MESSAGE を使用する  
- 次のコード例は、 `SELECT` 0 除算エラーを生成するステートメント。 ここではエラー メッセージと共に、エラーに関連する情報が返されます。  
+ 次の例では、0 除算エラーを生成する `SELECT` ステートメントを示します。 ここではエラー メッセージと共に、エラーに関連する情報が返されます。  
   
 ```  
   

@@ -1,5 +1,5 @@
 ---
-title: "DBCC OUTPUTBUFFER (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC OUTPUTBUFFER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-現在の出力バッファーを 16 進数と、指定された ASCII 形式で返します*session_id*です。
+指定した *session_id* の現在の出力バッファーを、16 進形式と ASCII 形式で返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,7 +54,7 @@ DBCC OUTPUTBUFFER ( session_id [ , request_id ])
   
  *request_id*  
  現在のセッション内で検索する具体的な要求 (バッチ) を指定します。  
- 次のクエリを返します*request_id*:  
+ 次のクエリは *request_id* を返します。  
   
 ```sql
 SELECT request_id   
@@ -62,14 +62,14 @@ FROM sys.dm_exec_requests
 WHERE session_id = @@spid;  
 ```  
   
- のすべてのメンションを  
- オプションを指定できます。  
+ WITH  
+ オプションの指定を許可します。  
   
  NO_INFOMSGS  
  重大度レベル 0 から 10 のすべての情報メッセージを表示しないようにします。  
   
-## <a name="remarks"></a>解説  
-DBCC OUTPUTBUFFER には、指定したクライアントに送信される結果が表示されます (*session_id*)。 ただし、出力ストリームを含まないプロセスでは、エラー メッセージが返されます。
+## <a name="remarks"></a>Remarks  
+DBCC OUTPUTBUFFER では、指定したクライアント (*session_id*) に送信された結果が表示されます。 ただし、出力ストリームを含まないプロセスでは、エラー メッセージが返されます。
   
 DBCC OUTPUTBUFFER で表示される結果を返したステートメントを表示するには、DBCC INPUTBUFFER を実行します。
   
@@ -90,11 +90,11 @@ Output Buffer
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールのメンバーシップが必要です。
   
 ## <a name="examples"></a>使用例  
-次の例は、セッションの ID が現在の出力バッファー情報を返します`52`です。
+次の例では、セッション ID が `52` の、現在の出力バッファー情報を返します。
   
 ```sql
 DBCC OUTPUTBUFFER (52);  

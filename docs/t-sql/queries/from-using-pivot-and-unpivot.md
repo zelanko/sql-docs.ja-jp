@@ -1,5 +1,5 @@
 ---
-title: "PIVOT および UNPIVOT を使用して |Microsoft ドキュメント"
+title: "PIVOT および UNPIVOT の使用 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -37,15 +37,15 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="from---using-pivot-and-unpivot"></a>PIVOT および UNPIVOT を使用して - から
+# <a name="from---using-pivot-and-unpivot"></a>FROM - PIVOT および UNPIVOT の使用
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  使用することができます、`PIVOT`と`UNPIVOT`関係演算子を別のテーブルにテーブル値式を変更します。 `PIVOT`出力では、複数の列に式で 1 つの列から一意の値にすることによって、テーブル値式を回転し、最終的な出力で必要な残りの列値に必要で集計を実行します。 `UNPIVOT`列の値にテーブル値式の列を回転して PIVOT 演算子の逆を実行します。  
+  関係演算子 `PIVOT` および `UNPIVOT` を使用すると、テーブル値式を別のテーブルに変更できます。 `PIVOT` 関係演算子は、テーブル値式の中のある列から一意の値を取得して出力側の複数の列に変換することで式を行列変換し、最終的な出力のそれ以外の列値に必要な集計を行います。 `UNPIVOT` 関係演算子の機能は PIVOT 関係演算子の逆で、テーブル値式の複数の列を列値に行列変換します。  
   
- 構文`PIVOT`提供は簡単で、それ以外の場合、複雑な一連の指定できる構文よりも読みやすく`SELECT...CASE`ステートメントです。 構文の詳細については`PIVOT`を参照してください[(TRANSACT-SQL) から](../../t-sql/queries/from-transact-sql.md)です。  
+ `PIVOT` の構文は、`SELECT...CASE` ステートメントを複雑に組み合わせて同じ操作を指定する場合よりも単純で読みやすくなります。 `PIVOT` の構文の詳細な説明については、「[FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
- 次の構文を使用する方法の概要を示します、`PIVOT`演算子。  
+ 次の構文では、`PIVOT` 演算子を使用する方法について説明します。  
   
 ```  
 SELECT <non-pivoted column>,  
@@ -67,8 +67,8 @@ FOR
 <optional ORDER BY clause>;  
 ```  
 
-## <a name="remarks"></a>解説  
-内の列識別子、`UNPIVOT`句がカタログ照合順序に従います。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]、照合順序は常に`SQL_Latin1_General_CP1_CI_AS`です。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]部分的包含データベースの照合順序は常に`Latin1_General_100_CI_AS_KS_WS_SC`です。 他の列では、collate 句に列を組み合わせた場合 (`COLLATE DATABASE_DEFAULT`) 競合を回避するために必要なです。  
+## <a name="remarks"></a>Remarks  
+`UNPIVOT` 句内の列識別子は、カタログ照合順序に従います。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] の場合、照合順序は常に `SQL_Latin1_General_CP1_CI_AS` です。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] の部分的包含データベースの場合、照合順序は常に `Latin1_General_100_CI_AS_KS_WS_SC` です。 列が他の列と結合されている場合、競合を回避するために COLLATE 句 (`COLLATE DATABASE_DEFAULT`) が必要です。  
 
   
 ## <a name="basic-pivot-example"></a>PIVOT の基本的な例  
@@ -94,9 +94,9 @@ GROUP BY DaysToManufacture;
  4                 949.4105
  ```
   
- 3 つの製品が定義されていない`DaysToManufacture`です。  
+ `DaysToManufacture` の値が 3 である製品が定義されていません。  
   
- 次のコードがピボットされる、同じ結果を表示できるように、`DaysToManufacture`値は、列見出しになります。 結果が `[3]` であっても、3 日目 `NULL` の列が表示されます。  
+ 次のコードでは、同じ結果が、`DaysToManufacture` 値を列見出しにピボット処理して表示されます。 結果が `[3]` であっても、3 日目 `NULL` の列が表示されます。  
   
 ```  
 -- Pivot table with one row and five columns  
@@ -122,7 +122,7 @@ AverageCost                    5.0885      223.88      359.1082    NULL        9
 ```
   
 ## <a name="complex-pivot-example"></a>PIVOT の複雑な例  
- 一般的なシナリオで`PIVOT`役に立ちますはデータを集計するクロス集計レポートを生成するときにします。 たとえば、クエリを実行する、`PurchaseOrderHeader`テーブルに、`AdventureWorks2014`特定の従業員で注文書の数を決定するサンプル データベースが配置されます。 このレポートを仕入先別に返すクエリを次に示します。  
+ `PIVOT` 関係演算子が役立つ一般的なシナリオは、データをまとめるためにクロス集計レポートを生成する場合です。 たとえば、`AdventureWorks2014` サンプル データベースの `PurchaseOrderHeader` テーブルにクエリを実行し、特定の従業員の発注数を抽出するとします。 このレポートを仕入先別に返すクエリを次に示します。  
   
 ```  
 USE AdventureWorks2014;  
@@ -140,7 +140,7 @@ FOR EmployeeID IN
 ORDER BY pvt.VendorID;  
 ```  
   
- 部分的な結果セットを次に示します。  
+ 次に結果セットの一部を示します。  
   
 ```
 VendorID    Emp1        Emp2        Emp3        Emp4        Emp5  
@@ -159,12 +159,12 @@ SELECT PurchaseOrderID, EmployeeID, VendorID
 FROM PurchaseOrderHeader;  
 ```  
   
- つまり、によって返される一意の値、`EmployeeID`最終的な結果セット自体になる列のフィールドです。 各列があるため、 `EmployeeID` pivot 句で指定した数値: この case の従業員の`164`、 `198`、 `223`、`231`と`233`です。 `PurchaseOrderID` 列は、最終的な出力に返される列をグループ化する (この列をグループ化列といいます) のための値列です。 この例では、グループ化列を `COUNT` 関数で集計しています。 従業員ごとに `PurchaseOrderID` 関数を計算する際に `COUNT` 列に表示されている NULL 値を無視したことを示す警告メッセージが表示されます。  
+ つまり、`EmployeeID` 列から返される一意の値そのものが、最終的な結果セットのフィールドになっています。 その結果、PIVOT 句で指定した `EmployeeID` 番号 (この例では、`164`、`198`、`223`、`231`、および `233`) ごとに列ができます。 `PurchaseOrderID` 列は、最終的な出力に返される列をグループ化する (この列をグループ化列といいます) のための値列です。 この例では、グループ化列を `COUNT` 関数で集計しています。 従業員ごとに `PurchaseOrderID` 関数を計算する際に `COUNT` 列に表示されている NULL 値を無視したことを示す警告メッセージが表示されます。  
   
 > [!IMPORTANT]  
->  集計関数を使用するときに`PIVOT`集計を計算するときに、[値] 列で null 値の存在は考慮されません。  
+>  `PIVOT` 関係演算子と集計関数を併用する場合、値列に存在する NULL 値は集計を実行する際に無視されます。  
   
- `UNPIVOT`ほぼ逆演算を実行`PIVOT`行に列を回転させるとします。 前の例としてデータベースに格納されているで作成されたテーブルと`pvt`、列の識別子を回転させると`Emp1`、 `Emp2`、 `Emp3`、 `Emp4`、および`Emp5`行に値を特定のベンダーに対応します。 そのためには、さらに 2 つの列を指定する必要があります。 回転する列の値を格納する列 (`Emp1`、 `Emp2`,...) が呼び出される`Employee`と呼び出される回転される列の下に現在格納されている値を保持する列`Orders`です。 これらの列に対応、 *pivot_column*と*value_column*をそれぞれで、[!INCLUDE[tsql](../../includes/tsql-md.md)]定義します。 クエリを次に示します。  
+ `UNPIVOT` 関係演算子で行われる操作は、基本的に `PIVOT` 演算子の逆で、列を行に変換します。 上記の例で作成されたテーブルが `pvt` という名前でデータベースに保存されていて、列 ID `Emp1`、`Emp2`、`Emp3`、`Emp4`、および `Emp5` を、特定の仕入先に対応する行の値に行列変換するとします。 そのためには、さらに 2 つの列を指定する必要があります。 行列変換する列値 (`Emp1`、`Emp2`、...) を格納する列を `Employee` といい、行列変換する列に現在格納されている値を保持する列を `Orders` といいます。 これらの列は、それぞれ [!INCLUDE[tsql](../../includes/tsql-md.md)] 定義の *pivot_column* と *value_column* に対応します。 このクエリは次のようになります。  
   
 ```  
 -- Create the table and insert values as portrayed in the previous example.  
@@ -189,7 +189,7 @@ UNPIVOT
 GO  
 ```  
   
- 部分的な結果セットを次に示します。  
+ 次に結果セットの一部を示します。  
   
 ```
 VendorID    Employee    Orders
@@ -207,12 +207,12 @@ VendorID    Employee    Orders
 ...
 ```
   
- 注意して`UNPIVOT`は正反対の`PIVOT`します。 `PIVOT`集計を実行し、そのため、マージ可能な複数の行出力内の単一行。 `UNPIVOT`行がマージされているため、元のテーブル値式の結果は再現しません。 入力内の値は null 以外にも、`UNPIVOT`が発生しました。 元の null 値の前に、入力、出力では、非表示になります、`PIVOT`操作します。  
+ `UNPIVOT` 関係演算子の動作は `PIVOT` 関係演算子の動作と正反対ではないことに注意してください。 `PIVOT` 関係演算子を実行すると集計が行われ、出力では複数になる可能性のある行が 1 つの行にマージされます。 `UNPIVOT` 関係演算子を実行しても、行が既にマージされているので、最初のテーブル値式の結果を再現することはできません。 また、`PIVOT` 関係演算子を使用して操作する前にテーブルに NULL 値が存在していたり、`UNPIVOT` 関係演算子で操作するテーブルに NULL 値が存在していたとしても、もともとあった NULL は出力結果に含まれません。  
   
- `Sales.vSalesPersonSalesByFiscalYears`で表示、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]サンプル データベースは`PIVOT`を各会計年度の各販売員の売上合計を返します。 ビューで、スクリプトを作成する[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、**オブジェクト エクスプ ローラー**、下にあるビューの検索、**ビュー**用のフォルダー、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。 ビュー名を右クリックし、**ビューをスクリプト**です。  
+ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースのビュー `Sales.vSalesPersonSalesByFiscalYears` では、`PIVOT` 関係演算子を使用して会計年度別に販売員ごとの総売上を返します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でビューをスクリプト化するには、**オブジェクト エクスプローラー**の [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの **[ビュー]** フォルダーで、スクリプト化するビューを探します。 ビュー名を右クリックし、**[ビューをスクリプト化]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [(TRANSACT-SQL) から](../../t-sql/queries/from-transact-sql.md)   
- [ケース (TRANSACT-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
+ [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   
   

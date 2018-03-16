@@ -1,5 +1,5 @@
 ---
-title: "シャット ダウン (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SHUTDOWN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -51,42 +51,42 @@ SHUTDOWN [ WITH NOWAIT ]
   
 ## <a name="arguments"></a>引数  
  WITH NOWAIT  
- 省略可。 シャット ダウン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]せず、すべてのデータベースでチェックポイントを実行します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]すべてのユーザー プロセスの停止を試行した後に終了します。 サーバーが再起動すると、完了しなかったトランザクションのロールバック操作が行われます。  
+ 省略可。 各データベースでチェックポイントを実行せずに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシャットダウンします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はすべてのユーザー プロセスの停止を試行した後に終了します。 サーバーが再起動すると、完了しなかったトランザクションのロールバック操作が行われます。  
   
-## <a name="remarks"></a>解説  
- シャット ダウンをシャット ダウン WITHNOWAIT オプションを使用すると、しない限り、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で。  
+## <a name="remarks"></a>Remarks  
+ WITHNOWAIT オプションを使用しない場合、SHUTDOWN では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が次のようにシャットダウンされます。  
   
-1.  ログインを無効にする (のメンバーを除く、 **sysadmin**と**serveradmin**固定サーバー ロール) です。  
+1.  ログインを無効にする (固定サーバー ロール **sysadmin** および **serveradmin** のメンバーを除く)。  
   
     > [!NOTE]  
-    >  現在のすべてのユーザーの一覧を表示するには実行**sp_who**です。  
+    >  現在のすべてのユーザーの一覧を表示するには、**sp_who** を実行します。  
   
-2.  現在実行中の Transact-SQL ステートメントまたはストアド プロシージャが終了するまで待機する。 すべてのアクティブなプロセスとロックの一覧を表示するには実行**sp_who**と**sp_lock**、それぞれします。  
+2.  現在実行中の Transact-SQL ステートメントまたはストアド プロシージャが終了するまで待機する。 すべてのアクティブなプロセスとロックの一覧を表示するには、それぞれ **sp_who** および **sp_lock** を実行します。  
   
 3.  各データベースにチェックポイントを挿入する。  
   
- SHUTDOWN ステートメントを使用して、最小限の自動復旧作業するときの必要のメンバー、 **sysadmin**固定サーバー ロールの再起動[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ SHUTDOWN ステートメントを使用すると、固定サーバー ロール **sysadmin** のメンバーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動したときに必要となる自動復旧作業が最小限に抑えられます。  
   
  後に示すツールや方法を使用しても [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止できます。 いずれの停止方法でも、すべてのデータベースでチェックポイントが発行されます。 コミットされたデータをデータ キャッシュからフラッシュして、サーバーを停止できます。  
   
--   使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager です。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用する。  
   
--   実行して**net stop mssqlserver**の既定のインスタンス、またはを実行して、コマンド プロンプトから **「net stop mssql$ * * * instancename*名前付きインスタンスのコマンド プロンプトからです。  
+-   既定のインスタンスのコマンド プロンプトから **net stop mssqlserver** を実行する。または、名前付きインスタンスのコマンド プロンプトから **net stop mssql$***instancename* を実行する。  
   
 -   [コントロール パネル] の [サービス] を使用する。  
   
- 場合**sqlservr.exe**が起動されてから、コマンド プロンプトで ctrl キーを押しながら C キーを押してがシャット ダウン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 Ctrl+C キーを押してもチェックポイントは挿入されません。  
+ **sqlservr.exe** をコマンド プロンプトから起動した場合は、Ctrl キーを押しながら C キーを押すと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がシャットダウンされます。 Ctrl+C キーを押してもチェックポイントは挿入されません。  
   
 > [!NOTE]  
->  これらのメソッドのいずれかを使用して停止する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]送信、`SERVICE_CONTROL_STOP`メッセージごとに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+>  どの方法で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止しても、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には `SERVICE_CONTROL_STOP` メッセージが送信されます。  
   
-## <a name="permissions"></a>権限  
- メンバーにシャット ダウンのアクセス許可が割り当てられている、 **sysadmin**と**serveradmin**は、固定サーバー ロール、およびそれらに転送できません。  
+## <a name="permissions"></a>アクセス許可  
+ SHUTDOWN アクセス許可は、既定では固定サーバー ロール **sysadmin** および **serveradmin** のメンバーに与えられています。このアクセス許可を譲渡することはできません。  
   
 ## <a name="see-also"></a>参照  
- [チェックポイント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/checkpoint-transact-sql.md)   
- [sp_lock &#40;です。TRANSACT-SQL と&#41;です。](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sp_who &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [sqlservr アプリケーション](../../tools/sqlservr-application.md)   
  [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   

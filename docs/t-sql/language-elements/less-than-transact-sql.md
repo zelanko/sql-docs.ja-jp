@@ -1,5 +1,5 @@
 ---
-title: "&lt;(より小さい)(TRANSACT-SQL) |Microsoft ドキュメント"
+title: "&lt; (より小さい) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -36,10 +36,10 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="lt-less-than-transact-sql"></a>&lt;(より小さい)(TRANSACT-SQL)
+# <a name="lt-less-than-transact-sql"></a>&lt; (より小さい) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  2 つの式を比較します (比較演算子)。 NULL でない式を比較したときに、左側のオペランドの値が右側のオペランドの値よりも小さい場合、結果は TRUE です。それ以外の場合、結果は FALSE です。 いずれかまたは両方のオペランドが NULL の場合は、トピックを参照してください。 [SET ANSI_NULLS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
+  2 つの式を比較します (比較演算子)。 NULL でない式を比較したときに、左側のオペランドの値が右側のオペランドの値よりも小さい場合、結果は TRUE です。それ以外の場合、結果は FALSE です。 どちらか一方、または両方のオペランドが NULL の場合は、トピック「[SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ expression < expression
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 両方の式とも、暗黙的に変換可能なデータ型でなければなりません。 変換の規則に依存[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)です。  
+ 任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 両方の式とも、暗黙的に変換可能なデータ型でなければなりません。 変換は、[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)のルールに依存します。  
   
 ## <a name="result-types"></a>戻り値の型  
  **ブール値**  
@@ -59,7 +59,7 @@ expression < expression
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using--in-a-simple-query"></a>A. 使用して < 簡単なクエリで  
- 次の例は、すべての行を返します、`HumanResources.Department`で値を持つテーブル`DepartmentID`値 3 より小さいされています。  
+ 次の例では、`HumanResources.Department` テーブル内で、`DepartmentID` の値が値 3 未満の行をすべて返します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -103,8 +103,8 @@ FALSE
 ```  
   
 ## <a name="see-also"></a>参照  
- [Iif 関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
+ [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)  
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

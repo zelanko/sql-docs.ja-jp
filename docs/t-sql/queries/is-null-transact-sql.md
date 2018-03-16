@@ -45,7 +45,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="is-null-transact-sql"></a>NULL (TRANSACT-SQL)
+# <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   指定した式が NULL かどうかを判定します。  
@@ -60,24 +60,24 @@ expression IS [ NOT ] NULL
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+ 任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
- [NOT]  
+ NOT  
  ブール値の結果を否定するよう指定します。 この述語によって返される値は反転されるので、値が NULL でない場合は TRUE、NULL の場合は FALSE が返されます。  
   
 ## <a name="result-types"></a>戻り値の型  
  **ブール値**  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 場合の値*式*は NULL、IS NULL、TRUE を返します。 それ以外の場合は FALSE を返します。  
+ *式*の値が NULL の場合、IS NULL では TRUE が返されます。それ以外の場合は FALSE が返されます。  
   
- 場合の値*式*は NULL、IS NOT NULL、FALSE を返します。 それ以外の場合、TRUE を返します。  
+ *式*の値が NULL の場合、IS NOT NULL では FALSE が返されます。それ以外の場合は TRUE が返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  式が NULL かどうかを判定するには、= や != などの比較演算子の代わりに、IS NULL または IS NOT NULL を使用してください。 比較演算子では、引数のいずれかまたは両方が NULL の場合、UNKNOWN が返されます。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、名前と重量、重みは、すべての製品のいずれかを返しますより小さい`10`ポンドまたは色が不明、または`NULL`です。  
+ 次の例では、重量が `10` ポンド未満または色が不明の全製品の名前と重量、または `NULL` を返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -89,8 +89,8 @@ ORDER BY Name;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例では、すべての従業員のミドル ネームの頭文字との完全名を返します。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 次の例では、ミドルネームのイニシャルがあるすべての従業員のフル ネームを返します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -102,19 +102,19 @@ ORDER BY LastName DESC;
 ```  
   
 ## <a name="see-also"></a>参照  
- [場合 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/case-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
+ [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [挿入 &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/insert-transact-sql.md)   
- [ような &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md)   
- [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
- [論理演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/logical-operators-transact-sql.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [論理演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
 

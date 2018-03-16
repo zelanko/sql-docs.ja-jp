@@ -1,5 +1,5 @@
 ---
-title: "データベース コンソール コマンド |Microsoft ドキュメント"
+title: "データベース コンソール コマンド | Microsoft Docs"
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified

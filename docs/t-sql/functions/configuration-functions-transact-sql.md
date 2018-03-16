@@ -1,5 +1,5 @@
 ---
-title: "構成関数 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "構成関数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,9 +47,9 @@ ms.lasthandoff: 11/21/2017
 |[@@MAX_PRECISION](../../t-sql/functions/max-precision-transact-sql.md)|[@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md)|  
 |[@@NESTLEVEL](../../t-sql/functions/nestlevel-transact-sql.md)||  
   
-構成関数はすべて非決定的です。 つまり、これらの関数は、同じ一連の入力値を使用しても、呼び出されるたびに常に同じ結果を返すわけではありません。 関数の決定性の詳細については、次を参照してください。[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)です。
+構成関数はすべて非決定的です。 つまり、これらの関数は、同じ一連の入力値を使用しても、呼び出されるたびに常に同じ結果を返すわけではありません。 関数の決定性の詳細については、「[Deterministic and Nondeterministic Functions決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
   
 ## <a name="see-also"></a>参照
-[関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/functions.md)
+[関数 &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)
   
   

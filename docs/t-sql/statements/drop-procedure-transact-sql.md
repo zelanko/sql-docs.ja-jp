@@ -1,5 +1,5 @@
 ---
-title: "ドロップ プロシージャ (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -60,7 +60,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ```  
   
 ## <a name="arguments"></a>引数  
- *場合に存在します。*  
+ *IF EXISTS*  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、プロシージャを削除します。  
@@ -68,22 +68,22 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
  *schema_name*  
  プロシージャが属するスキーマの名前を指定します。 サーバー名またはデータベース名は指定できません。  
   
- *プロシージャ*  
+ *procedure*  
  削除するストアド プロシージャまたはストアド プロシージャ グループの名前です。 番号の付いたプロシージャ グループ内の個々のプロシージャは削除できません。プロシージャ グループ全体が削除されます。  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
- ストアド プロシージャを削除する前に、依存オブジェクトを確認し、それらのオブジェクトを適切に修正します。 ストアド プロシージャを削除すると、依存オブジェクトとスクリプトが更新されていない場合、それらのオブジェクトがエラーになることがあります。 詳細については、次を参照してください[ストアド プロシージャの依存関係の表示。](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)  
+ ストアド プロシージャを削除する前に、依存オブジェクトを確認し、それらのオブジェクトを適切に修正します。 ストアド プロシージャを削除すると、依存オブジェクトとスクリプトが更新されていない場合、それらのオブジェクトがエラーになることがあります。 詳細については、「[ストアド プロシージャの依存関係の表示](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)」を参照してください  
   
 ## <a name="metadata"></a>メタデータ  
- 既存のプロシージャの一覧を表示するクエリ、 **sys.objects**カタログ ビューです。 プロシージャの定義を表示するには、クエリ、 **sys.sql_modules**カタログ ビューです。  
+ 既存のプロシージャの一覧を表示するには、**sys.objects** カタログ ビューに対してクエリを実行します。 プロシージャの定義を表示するには、**sys.sql_modules** カタログ ビューに対してクエリを実行します。  
   
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
- 必要があります**コントロール**、プロシージャに対する権限または**ALTER**メンバーシップまたは、プロシージャが所属するスキーマに対する権限、 **db_ddladmin**固定サーバー ロール.  
+ プロシージャの **CONTROL** 権限か、プロシージャが属しているスキーマに対する **ALTER** 権限、または **db_ddladmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、削除、`dbo.uspMyProc`ストアド プロシージャを現在のデータベースでします。  
+ 次の例では、現在のデータベースから `dbo.uspMyProc` ストアド プロシージャを削除します。  
   
 ```  
 DROP PROCEDURE dbo.uspMyProc;  
@@ -96,7 +96,7 @@ GO
 DROP PROCEDURE dbo.uspGetSalesbyMonth, dbo.uspUpdateSalesQuotes, dbo.uspGetSalesByYear;  
 ```  
   
- 次の例では、削除、`dbo.uspMyProc`ストアド プロシージャが存在するは、プロシージャが存在しない場合、エラーは発生しません。 この構文はで新しい[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。  
+ 次の例では、削除、 `dbo.uspMyProc` ストアド プロシージャが存在するが、プロシージャが存在しない場合のエラーは発生しません。 この構文はで新しい [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。  
   
 ```  
 DROP PROCEDURE IF EXISTS dbo.uspMyProc;  
@@ -107,7 +107,7 @@ GO
 ## <a name="see-also"></a>参照  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [sys.objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [ストアド プロシージャの削除](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)  
   

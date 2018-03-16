@@ -1,5 +1,5 @@
 ---
-title: "選択 (SQL グラフ) |Microsoft ドキュメント"
+title: "SELECT (SQL グラフ) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  データを選択します。   
+  データを選択します   
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,9 +44,9 @@ SELECT
 
 ## <a name="arguments"></a>引数  
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 
 ## <a name="examples"></a>使用例  
 

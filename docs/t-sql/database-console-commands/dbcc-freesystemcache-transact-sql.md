@@ -1,5 +1,5 @@
 ---
-title: "DBCC FREESYSTEMCACHE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC FREESYSTEMCACHE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -57,7 +57,7 @@ DBCC FREESYSTEMCACHE
 ## <a name="arguments"></a>引数  
  ( 'ALL' [,*pool_name* ] )  
  ALL はサポートされるすべてのキャッシュを指定します。  
- *pool_name*リソース ガバナー プール キャッシュを指定します。 このプールに関連付けられたエントリだけが解放されます。  
+ *pool_name* は Resource Governor プール キャッシュを指定します。 このプールに関連付けられたエントリだけが解放されます。  
   
  MARK_IN_USE_FOR_REMOVAL  
  現在使用しているエントリが使用されなくなったら、それぞれのキャッシュから非同期に解放します。 DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL の実行後にキャッシュ内に作成された新しいエントリには影響ありません。  
@@ -65,13 +65,13 @@ DBCC FREESYSTEMCACHE
  NO_INFOMSGS  
  すべての情報メッセージを表示しないようにします。  
   
-## <a name="remarks"></a>解説  
-インスタンスのプラン キャッシュをクリアする DBCC FREESYSTEMCACHE を実行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、'DBCC FREEPROCCACHE' 操作または 'DBCC FREESYSTEMCACHE' 操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました。" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
+## <a name="remarks"></a>Remarks  
+DBCC FREESYSTEMCACHE を実行すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのプラン キャッシュが消去されます。 プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、'DBCC FREEPROCCACHE' 操作または 'DBCC FREESYSTEMCACHE' 操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました。" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
 
 ## <a name="result-sets"></a>結果セット  
-DBCC FREESYSTEMCACHE を返します:"DBCC の実行が完了しました。 DBCC がエラー メッセージを出力した場合は、システム管理者に相談してください。"
+DBCC FREESYSTEMCACHE は次のメッセージを返します。"DBCC の実行が完了しました。 DBCC がエラー メッセージを出力した場合は、システム管理者に相談してください。"
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 サーバーに対する ALTER SERVER STATE 権限が必要です。
   
 ## <a name="examples"></a>使用例  

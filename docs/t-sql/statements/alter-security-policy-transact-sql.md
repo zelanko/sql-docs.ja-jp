@@ -1,5 +1,5 @@
 ---
-title: "セキュリティ ポリシーを変更 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER SECURITY POLICY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -67,7 +67,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  セキュリティ ポリシーの名前。 セキュリティ ポリシー名は識別子のルールに準拠し、データベースおよびそのスキーマで一意でなければなりません。  
   
  schema_name  
- セキュリティ ポリシーが属するスキーマの名前。 *schema_name*がスキーマ バインドのために必要です。  
+ セキュリティ ポリシーが属するスキーマの名前。 *schema_name* はスキーマのバインドのために必要です。  
   
  [フィルター | ブロック]  
  対象のテーブルにバインドされている関数のセキュリティの述語の型。 サイレント モードで、フィルター述語には、読み取り操作に使用できる行がフィルター処理します。 ブロックは述語述語の関数に違反しているブロックの書き込み操作では明示的にします。  
@@ -81,7 +81,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  *table_schema_name.table_name*  
  セキュリティ述語の適用先となるターゲット テーブル。 複数のセキュリティを無効になっているポリシーの特定の DML 操作では、1 つのテーブルを対象にできますが、任意の時点で、1 つのみを有効にすることができます。  
   
- *\<block_dml_operation >*  
+ *\<block_dml_operation>*  
  ブロックの述語を適用する特定の DML 操作します。 結局、DML 操作が実行される (INSERT または UPDATE) 後に、述語、行の値に評価することを指定します。 前に、DML の操作が実行される (更新または削除) する前に、述語は、行の値に評価することを指定します。 操作が指定されていない場合、述語は、すべての操作に適用されます。  
   
  操作は、述語を一意に識別するために使用されるためをブロックの述語を適用する、操作を変更することはできません。 代わりに、述語を削除し、新しい操作の新しいものを追加する必要があります。  
@@ -95,10 +95,10 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  table_schema_name.table_name  
  セキュリティ述語の適用先となるターゲット テーブル。 無効な複数のセキュリティ ポリシーは単一テーブルをターゲットにできますが、有効にできるのはどの時点でも 1 つだけです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ALTER SECURITY POLICY ステートメントは、トランザクションのスコープ内にあります。 トランザクションがロールバックされると、ステートメントもロールバックされます。  
   
- セキュリティ ポリシーを含める必要がありますをメモリ最適化テーブルで述語の関数を使用する場合**SCHEMABINDING**を使用して、 **WITH NATIVE_COMPILATION**コンパイルのヒント。 SCHEMABINDING の引数は、すべての述語に適用されるため、ALTER ステートメントを使用して変更できません。 スキーマ バインドを変更するには、削除して、セキュリティ ポリシーを再作成する必要があります。  
+ メモリ最適化テーブルで述語関数を使用する場合、セキュリティ ポリシーには **SCHEMABINDING** が含まれる必要があり、**WITH NATIVE_COMPILATION** コンパイル ヒントを使用する必要があります。 SCHEMABINDING の引数は、すべての述語に適用されるため、ALTER ステートメントを使用して変更できません。 スキーマ バインドを変更するには、削除して、セキュリティ ポリシーを再作成する必要があります。  
   
  ブロックの述語は、対応する DML 操作を実行した後に評価されます。 そのため、READ UNCOMMITTED のクエリでは、ロールバックは一時的な値を確認できます。  
   
@@ -112,7 +112,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
 -   引数として使用しているターゲット テーブルのすべての列に対する REFERENCES 権限。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、使用、 **ALTER SECURITY POLICY**構文です。 完全なセキュリティ ポリシーのシナリオの例は、次を参照してください。 [Row-level Security](../../relational-databases/security/row-level-security.md)です。  
+ 以下の例は、**ALTER SECURITY POLICY** 構文の使用法を示しています。 詳細なセキュリティ ポリシーのシナリオ例については、「[行レベルのセキュリティ](../../relational-databases/security/row-level-security.md)」をご覧ください。  
   
 ### <a name="a-adding-an-additional-predicate-to-a-policy"></a>A. ポリシーに別の述語を追加する  
  以下の構文はセキュリティ ポリシーを変更します。その際、`mytable` テーブルにフィルター述語を追加します。  
@@ -131,7 +131,7 @@ ALTER SECURITY POLICY pol1 WITH ( STATE = ON );
 ```  
   
 ### <a name="c-adding-and-dropping-multiple-predicates"></a>C. 複数の述語を追加または削除する  
- フィルター述語を追加する、セキュリティ ポリシーを変更する次の構文、`mytable1`と`mytable3`テーブル、およびにフィルター述語を削除する、`mytable2`テーブル。  
+ 以下の構文ではセキュリティ ポリシーを変更します。その際、`mytable1` テーブルと `mytable3` テーブルにフィルター述語を追加し、`mytable2` テーブルからフィルター述語を削除します。  
   
 ```  
 ALTER SECURITY POLICY pol1  
@@ -166,6 +166,6 @@ ALTER SECURITY POLICY rls.SecPol
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
  [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
- [sys.security_predicates &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
+ [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
   
   

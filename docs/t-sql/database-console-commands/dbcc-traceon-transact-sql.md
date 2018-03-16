@@ -1,5 +1,5 @@
 ---
-title: "DBCC TRACEON (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC TRACEON (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -60,14 +60,14 @@ DBCC TRACEON ( trace# [ ,...n ][ , -1 ] ) [ WITH NO_INFOMSGS ]
 WITH NO_INFOMSGS  
 すべての情報メッセージを表示しないようにします。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 稼働サーバーでは、予期しない動作を避けるため、次のいずれかの方法を使用してトレース フラグをサーバー規模でのみ有効にすることをお勧めします。
--   使用して、 **-t** Sqlservr.exe のコマンド ライン スタートアップ オプションです。 すべてのステートメントがトレース フラグを有効にした状態で実行されるので、この方法をお勧めします。 これらはスタートアップ スクリプトのコマンドに含まれています。 詳細については、「 [sqlservr Application](../../tools/sqlservr-application.md)」を参照してください。  
--   DBCC TRACEON を使用して **(* * * trace #* [* *、**.*.n*]**,-1)**ユーザーまたはアプリケーションが同時に実行されていないステートメント、システムの間だけです。  
+-   Sqlservr.exe のコマンド ライン スタートアップ オプション **-T** を使用します。 すべてのステートメントがトレース フラグを有効にした状態で実行されるので、この方法をお勧めします。 これらはスタートアップ スクリプトのコマンドに含まれています。 詳細については、「 [sqlservr Application](../../tools/sqlservr-application.md)」を参照してください。  
+-   DBCC TRACEON **(***trace#* [**,** ...*.n*]**,-1)** は、システムでユーザーまたはアプリケーションが同時にステートメントを実行していない場合にのみ使用します。  
 
-トレース フラグは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の動作を制御して特定の特性をカスタマイズするために使用されます。 トレース フラグは、有効になると、DBCC TRACEOFF ステートメントを実行して無効にするまで、サーバー内では有効のままです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、トレース フラグの 2 種類があります: セッションとグローバルです。 セッション トレース フラグは、1 つの接続についてアクティブで、その接続に対してのみ表示可能です。 グローバル トレース フラグは、サーバー レベルで設定され、サーバー上のすべての接続に対して表示可能です。 トレース フラグの状態を確認するには、DBCC TRACESTATUS を使用します。 トレース フラグを無効にするには、DBCC TRACEOFF を使用します。
+トレース フラグは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の動作を制御して特定の特性をカスタマイズするために使用されます。 トレース フラグは、有効になると、DBCC TRACEOFF ステートメントを実行して無効にするまで、サーバー内では有効のままです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、セッションとグローバルという 2 種類のトレース フラグがあります。 セッション トレース フラグは、1 つの接続についてアクティブで、その接続に対してのみ表示可能です。 グローバル トレース フラグは、サーバー レベルで設定され、サーバー上のすべての接続に対して表示可能です。 トレース フラグの状態を確認するには、DBCC TRACESTATUS を使用します。 トレース フラグを無効にするには、DBCC TRACEOFF を使用します。
   
-クエリ プランに影響するトレース フラグをオン後に実行`DBCC FREEPROCCACHE;`新しいプランに影響する動作を使用してキャッシュされたプランが再コンパイルできるようにします。
+クエリ プランに影響を与えるトレース フラグをオンにした後、`DBCC FREEPROCCACHE;` を実行すると、新しいプランに影響を与える動作を使用して、キャッシュされているプランが再コンパイルされます。
   
 ## <a name="result-sets"></a>結果セット  
  DBCC TRACEON は次の結果セット (メッセージ) を返します。  
@@ -76,7 +76,7 @@ WITH NO_INFOMSGS
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールのメンバーシップが必要です。
   
 ## <a name="examples"></a>使用例  
@@ -87,7 +87,7 @@ DBCC TRACEON (3205);
 GO  
 ```  
   
-次の例は、トレース フラグを切り替えます`3205`グローバルにします。
+次の例では、トレース フラグ `3205` をグローバルに有効にします。
   
 ```sql  
 DBCC TRACEON (3205, -1);  
@@ -104,8 +104,8 @@ GO
 ## <a name="see-also"></a>参照  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
-[DBCC TRACESTATUS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
+[DBCC TRACESTATUS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
 [トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
-[プランに影響する SQL Server クエリ オプティマイザーの動作を特定のクエリ レベルでのさまざまなトレース フラグによって制御できますを有効にします。](https://support.microsoft.com/kb/2801413)
+[特定のクエリ レベルに対応するさまざまなトレース フラグを使用して制御できる、プランが影響を及ぼす SQL Server クエリ オプティマイザーの動作の有効化](https://support.microsoft.com/kb/2801413)
   
   

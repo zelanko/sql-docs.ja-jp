@@ -1,5 +1,5 @@
 ---
-title: "DENSE_RANK (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DENSE_RANK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -48,16 +48,16 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
 ```  
   
 ## <a name="arguments"></a>引数  
- \<partition_by_clause >  
- によって生成される結果セットに分割、 [FROM](../../t-sql/queries/from-transact-sql.md)句のパーティションに DENSE_RANK 関数が適用されます。 PARTITION BY の構文を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ \<partition_by_clause>  
+ [FROM](../../t-sql/queries/from-transact-sql.md) 句で生成された結果セットをパーティションに分割します。このパーティションに DENSE_RANK 関数が適用されます。 PARTITION BY の構文については、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」をご覧ください。  
   
- \<order_by_clause >  
+ \<order_by_clause>  
  DENSE_RANK 関数がパーティション内の行に適用される順序を決定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **bigint**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  同じパーティションで複数の行が 1 つの順位を分け合う場合は、それぞれの行に同じ順位が付けられます。 たとえば、上位 2 人の販売員の SalesYTD 値が同じである場合は、両方に順位 1 が付けられます。 SalesYTD が次に高い販売員には、順位 2 が付きます。 これは、この行より前の行の番号に 1 を加えたものです。 したがって、DENSE_RANK 関数からは、常に番号のギャップが発生しない連続する順位番号が返されます。  
   
  クエリ全体に使用される並べ替え順序によって、結果における行の順序が決まります。 つまり、順位が 1 位である行が必ずしもパーティションの先頭の行とは限りません。  
@@ -131,7 +131,7 @@ BusinessEntityID Rate                  RankBySalary
 274              48.101                8  
 ```  
   
-## <a name="c-four-ranking-functions-used-in-the-same-query"></a>C. 同じクエリで使用される 4 つの順位付け関数  
+## <a name="c-four-ranking-functions-used-in-the-same-query"></a>C. 同じクエリで順位付け関数を 4 つ使う  
  以下の例では、同じクエリ内で 4 つの順位付け関数を使用します。 関数に固有の例については、各順位付け関数を参照してください。  
   
 ```  
@@ -156,11 +156,11 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 |FirstName|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
-|Michael|Blythe|1|1|1|1|4557045.0459|98027|  
-|Linda|Mitchell|2|1|1|1|5200475.2313|98027|  
-|Jillian|Carson|3|1|1|1|3857163.6332|98027|  
-|Garrett|Vargas|4|1|1|1|1764938.9859|98027|  
-|Tsvi|Reiter|5|1|1|2|2811012.7151|98027|  
+|Michael|Blythe|@shouldalert|@shouldalert|@shouldalert|@shouldalert|4557045.0459|98027|  
+|Linda|Mitchell|2|@shouldalert|@shouldalert|@shouldalert|5200475.2313|98027|  
+|Jillian|Carson|3|@shouldalert|@shouldalert|@shouldalert|3857163.6332|98027|  
+|Garrett|Vargas|4|@shouldalert|@shouldalert|@shouldalert|1764938.9859|98027|  
+|Tsvi|Reiter|5|@shouldalert|@shouldalert|2|2811012.7151|98027|  
 |Shu|Ito|6|6|2|2|3018725.4858|98055|  
 |José|Saraiva|7|6|2|2|3189356.2465|98055|  
 |David|Campbell|8|6|2|3|3587378.4257|98055|  
@@ -171,10 +171,10 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 |Ranjit|Varkey Chudukatil|13|6|2|4|3827950.238|98055| 
 
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-ranking-rows-within-a-partition"></a>D:、パーティション内の行に順位付け  
- 次の例では、売上合計に応じて販売区域ごとの販売担当者がランク付けします。 行セットは `SalesTerritoryGroup` によってパーティション分割され、`SalesAmountQuota` によって並べ替えられます。  
+### <a name="d-ranking-rows-within-a-partition"></a>D: パーティション内の行に順位付け  
+ 次の例では、売上合計に応じて販売区域ごとに販売担当者をランク付けします。 行セットは `SalesTerritoryGroup` によってパーティション分割され、`SalesAmountQuota` によって並べ替えられます。  
   
 ```  
 -- Uses AdventureWorks  
@@ -210,10 +210,10 @@ Tsoflias           1687000.0000  Pacific              1
 ```  
 
 ## <a name="see-also"></a>参照  
- [ランクと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rank-transact-sql.md)   
- [ROW_NUMBER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/row-number-transact-sql.md)   
- [NTILE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ntile-transact-sql.md)   
- [順位付け関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
+ [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)   
+ [順位付け関数 &#40;TRANSACT-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [関数](../../t-sql/functions/functions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "HAS_PERMS_BY_NAME (TRANSACT-SQL) |Microsoft ドキュメント"
+title: HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  セキュリティ保護可能なリソースに対して現在のユーザーが持つ有効な権限を評価します。 関連する関数は[fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)です。  
+  セキュリティ保護可能なリソースに対して現在のユーザーが持つ有効な権限を評価します。 関連する関数は [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,35 +52,35 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
 ```  
   
 ## <a name="arguments"></a>引数  
- *セキュリティ保護可能です*  
- セキュリティ保護可能なリソースの名前を指定します。 セキュリティ保護可能なリソースがサーバー自体の場合、この値は NULL に設定する必要があります。 *セキュリティ保護可能な*型のスカラー式は、 **sysname**です。 既定値はありません。  
+ *securable*  
+ セキュリティ保護可能なリソースの名前を指定します。 セキュリティ保護可能なリソースがサーバー自体の場合、この値は NULL に設定する必要があります。 *securable* には **sysname** 型のスカラー式を指定します。 既定値はありません。  
   
  *securable_class*  
- 権限を評価するセキュリティ保護可能なリソースのクラスの名前を指定します。 *securable_class*型のスカラー式は、 **nvarchar (60)**です。  
+ 権限を評価するセキュリティ保護可能なリソースのクラスの名前を指定します。 *securable_class* には **nvarchar(60)** 型のスカラー式を指定します。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Securable_class 引数は、次のいずれかに設定する必要があります:**データベース**、**オブジェクト**、**ロール**、**スキーマ**、または**ユーザー**です。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] において、securable_class 引数は、**DATABASE**、**OBJECT**、**ROLE**、**SCHEMA**、**USER** のうちのいずれか 1 つに設定する必要があります。  
   
- *アクセス許可*  
- 型の null でないスカラー式**sysname**チェックする権限の名前を表します。 既定値はありません。 権限名 ANY はワイルドカードとして扱われます。  
+ *permission*  
+ チェックする権限名を表す、NULL 以外の **sysname** 型のスカラー式を指定します。 既定値はありません。 権限名 ANY はワイルドカードとして扱われます。  
   
- *サブ セキュリティ保護可能です*  
- 型の省略可能なスカラー式**sysname**アクセス許可がテスト対象となるセキュリティ保護可能なサブエンティティの名前を表します。 既定値は NULL です。  
+ *sub-securable*  
+ 権限をチェックするセキュリティ保護可能なサブエンティティの名前を表す、**sysname** 型のスカラー式を指定します (省略可能)。 既定値は NULL です。  
   
 > [!NOTE]  
->  バージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、sub-securables には、形式で角かっこを使用することはできません**' [***sub 名***]'**です。 使用して**'***sub 名***'**代わりにします。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] までのバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、sub-securables に **'[***sub name***]'** の形式で角かっこを使用することはできません。 代わりに **'***sub name***'** を使用してください。  
   
  *sub-securable_class*  
- 型の省略可能なスカラー式**nvarchar (60)**セキュリティ保護可能なサブエンティティの対象となるアクセス許可クラスを表すです。 既定値は NULL です。  
+ 権限をチェックするセキュリティ保護可能なサブエンティティのクラスを表す、**nvarchar(60)** 型のスカラー式を指定します (省略可能)。 既定値は NULL です。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Sub-securable_class 引数が有効では、securable_class 引数に設定されている場合にのみ**オブジェクト**です。 Securable_class 引数に設定されている場合**オブジェクト**、sub-securable_class 引数に設定する必要があります**列**です。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、sub-securable_class 引数は、securable_class 引数が **OBJECT** に設定されている場合にのみ有効です。 securable_class 引数が **OBJECT** に設定されている場合、sub-securable_class 引数は **COLUMN** に設定する必要があります。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
  クエリが失敗した場合は NULL が返されます。  
   
-## <a name="remarks"></a>解説  
- この組み込み関数では、現在のプリンシパルが、指定したセキュリティ保護可能なリソースに対して、特定の有効な権限を保持しているかどうかが評価されます。 HAS_PERMS_BY_NAME は、セキュリティ保護可能なリソースに対する有効な権限がユーザーにある場合は 1 を返し、有効な権限がない場合は 0 を返します。また、セキュリティ保護可能なクラスまたは権限が無効である場合は NULL を返します。 有効な権限は、次のいずれかです。  
+## <a name="remarks"></a>Remarks  
+ この組み込み関数では、現在のプリンシパルが、指定したセキュリティ保護可能なリソースに対して、特定の有効な権限を保持しているかどうかが評価されます。 HAS_PERMS_BY_NAME は、セキュリティ保護可能なリソースに対する有効な権限がユーザーにある場合は 1 を返し、有効な権限がない場合は 0 を返します。また、セキュリティ保護可能なクラスまたは権限が無効である場合は NULL を返します。 有効な権限とは、次のような権限です。  
   
 -   プリンシパルに直接許可されており、拒否されていない権限。  
   
@@ -112,7 +112,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. サーバー レベルの VIEW SERVER STATE 権限を保持しているかどうかをチェックする  
   
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -120,7 +120,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>B. サーバー プリンシパル Ps に対する IMPERSONATE 権限を保持しているかどうかをチェックする  
   
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  
@@ -133,7 +133,7 @@ SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'ANY');
 ```  
   
 ### <a name="d-does-database-principal-pd-have-any-permission-in-the-current-database"></a>D. 現在のデータベースに、データベース プリンシパル Pd の権限があるかどうかをチェックする  
- 呼び出し元はプリンシパルで IMPERSONATE 権限を持つと仮定`Pd`です。  
+ 呼び出し元は、プリンシパル `Pd` に対する IMPERSONATE 権限を保持していることを前提としています。  
   
 ```  
 EXECUTE AS user = 'Pd'  
@@ -145,7 +145,7 @@ GO
 ```  
   
 ### <a name="e-can-i-create-procedures-and-tables-in-schema-s"></a>E. スキーマ S 内にプロシージャとテーブルを作成できるかどうかをチェックする  
- 次の例が必要です`ALTER`でアクセス許可`S`と`CREATE PROCEDURE`データベースと同様にテーブルのアクセスを許可します。  
+ 次の例では、`ALTER` に `S` 権限、データベースに `CREATE PROCEDURE` 権限、およびテーブルに同様の権限が必要です。  
   
 ```  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE PROCEDURE')  

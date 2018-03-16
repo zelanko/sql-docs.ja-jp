@@ -1,5 +1,5 @@
 ---
-title: "TRIGGER_NESTLEVEL (TRANSACT-SQL) |Microsoft ドキュメント"
+title: TRIGGER_NESTLEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
   
 ## <a name="arguments"></a>引数  
  *object_id*  
- トリガーのオブジェクト ID です。 場合*object_id*を指定すると、ステートメントが返されたについて、指定されたトリガーが実行された回数。 場合*object_id*が指定されていないステートメントが返されるすべてのトリガーが実行された回数。  
+ トリガーのオブジェクト ID です。 *object_id* を指定すると、指定したトリガーがステートメントに対して実行された回数が返されます。 *object_id* を指定しない場合は、そのステートメントに対して実行されたすべてのトリガーの実行回数が返されます。  
   
  **'** *trigger_type* **'**  
- AFTER トリガーと INSTEAD OF トリガーのどちらに TRIGGER_NESTLEVEL を適用するかを指定します。 指定**AFTER** AFTER トリガーの場合。 指定**IOT** INSTEAD OF トリガー。 場合*trigger_type*が指定されている*trigger_event_category*も指定する必要があります。  
+ AFTER トリガーと INSTEAD OF トリガーのどちらに TRIGGER_NESTLEVEL を適用するかを指定します。 AFTER トリガーの場合は **AFTER** を指定します。 INSTEAD OF トリガーの場合は **IOT** を指定します。 *trigger_type* を指定するときは *trigger_event_category* も指定する必要があります。  
   
  **'** *trigger_event_category* **'**  
- DML トリガーと DDL トリガーのどちらに TRIGGER_NESTLEVEL を適用するかを指定します。 指定**DML** DML トリガーです。 指定**DDL** DDL トリガー。 場合*trigger_event_category*が指定されている*trigger_type*も指定する必要があります。 のみです**AFTER**で指定できる**DDL**、DDL トリガーは AFTER トリガーのみできます。  
+ DML トリガーと DDL トリガーのどちらに TRIGGER_NESTLEVEL を適用するかを指定します。 DML トリガーの場合は **DML** を指定します。 DDL トリガーの場合は **DDL** を指定します。 *trigger_event_category* を指定するときは *trigger_type* も指定する必要があります。 **DDL** の場合は **AFTER** だけを指定できます。DDL トリガーは必ず AFTER トリガーであるためです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  パラメーターを指定しない場合、TRIGGER_NESTLEVEL は呼び出し履歴上のトリガーの合計数を返します。 この合計数にはそのトリガー自身も含まれます。 トリガーがコマンドを実行することにより、別のトリガーが起動されたり、トリガーを起動するセッションを作成するときはパラメーターを省略できます。  
   
- トリガーを特定の型とイベント カテゴリの呼び出し履歴上のトリガーの合計数を返すには指定*object_id* 0 を = です。  
+ 特定の種類のトリガーおよび特定のイベント カテゴリについて、呼び出し履歴上のトリガーの合計数を返すには、*object_id* に値 0 を指定します。  
   
  TRIGGER_NESTLEVEL をトリガーの外部で実行し、かつ、どのパラメーターも NULL でない場合は、0 が返されます。  
   

@@ -1,5 +1,5 @@
 ---
-title: "予約済みキーワード (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "予約済みキーワード (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,16 +34,16 @@ ms.lasthandoff: 01/25/2018
 # <a name="reserved-keywords-transact-sql"></a>予約済みキーワード (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースの定義、操作、アクセスに予約済みキーワードが使用されます。 予約済みキーワードの文法の一部である、[!INCLUDE[tsql](../../includes/tsql-md.md)]によって使用される言語[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を解析し、理解[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントとバッチです。 構文的に使用することはできますが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別子とオブジェクト名の予約済みキーワード[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト、これを行うを区切られた識別子を使用します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースの定義、操作、アクセスに予約済みキーワードが使用されます。 予約済みキーワードは [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語の文法の一部です。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの予約済みキーワードによって [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとバッチが解析され、理解されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の予約済みキーワードを識別子およびオブジェクト名として使用することは構文的に可能ですが、これは識別子を区切って使用するときに限られます。  
   
- 次の表にリスト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]予約済みキーワード。  
+ 次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の予約済みキーワードの一覧です。  
   
 ||||  
 |-|-|-|  
 |ADD|EXTERNAL|PROCEDURE|  
 |ALL|FETCH|PUBLIC|  
 |ALTER|FILE|RAISERROR|  
-|[AND]|FILLFACTOR|READ|  
+|AND|FILLFACTOR|READ|  
 |ANY|FOR|READTEXT|  
 |AS|FOREIGN|RECONFIGURE|  
 |ASC|FREETEXT|REFERENCES|  
@@ -78,27 +78,27 @@ ms.lasthandoff: 01/25/2018
 |CURRENT_TIME|NATIONAL|THEN|  
 |CURRENT_TIMESTAMP|NOCHECK|TO|  
 |CURRENT_USER|NONCLUSTERED|先頭に戻る|  
-|CURSOR|[NOT]|TRAN|  
+|CURSOR|NOT|TRAN|  
 |DATABASE|NULL|TRANSACTION|  
 |DBCC|NULLIF|TRIGGER|  
 |DEALLOCATE|OF|TRUNCATE|  
 |DECLARE|OFF|TRY_CONVERT|  
 |DEFAULT|OFFSETS|TSEQUAL|  
-|DELETE|ON|UNION|  
+|Del|ON|UNION|  
 |DENY|OPEN|UNIQUE|  
 |DESC|OPENDATASOURCE|UNPIVOT|  
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
 |DOUBLE|OPTION|USER|  
-|DROP|または|VALUES|  
+|DROP|OR|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
 |END|OVER|WAITFOR|  
 |ERRLVL|PERCENT|WHEN|  
 |ESCAPE|PIVOT|WHERE|  
 |EXCEPT|PLAN|WHILE|  
-|EXEC|PRECISION|のすべてのメンションを|  
+|EXEC|PRECISION|WITH|  
 |EXECUTE|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||  
@@ -106,7 +106,7 @@ ms.lasthandoff: 01/25/2018
  これに加えて、ISO 標準では予約済みキーワードの一覧が定義されています。 オブジェクト名と識別子には、ISO の予約済みキーワードを使用しないでください。 次の表にある ODBC の予約済みキーワードの一覧は、ISO の予約済みキーワードの一覧と同じです。  
   
 > [!NOTE]  
->  ISO 標準の予約済みキーワードの一覧に記載されているキーワードを使用するとき、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] よりも制限が厳しい場合もあれば、制限が緩やかな場合もあります。 たとえば、ISO 予約済みキーワードの一覧が含まれている**INT**です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれを予約済みキーワードとして区別する必要はありません。  
+>  ISO 標準の予約済みキーワードの一覧に記載されているキーワードを使用するとき、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] よりも制限が厳しい場合もあれば、制限が緩やかな場合もあります。 たとえば、ISO 予約済みキーワードの一覧には **INT** が含まれますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれを予約済みキーワードとして区別する必要はありません。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] の予約済みキーワードは、データベースやテーブル、列、ビューなどのデータベース オブジェクトの識別子や名前として使用できます。 識別子は引用符で囲むか区切り文字で区切って使用してください。 変数やストアド プロシージャ パラメーターの名前として予約済みキーワードを使用する場合は、制限はありません。  
   
@@ -123,8 +123,8 @@ ms.lasthandoff: 01/25/2018
 |**ADD**|**EXTERNAL**|**PASCAL**|  
 |**ALL**|**EXTRACT**|**POSITION**|  
 |**ALLOCATE**|**FALSE**|**PRECISION**|  
-|**ALTER**|**FETCH**|**準備します。**|  
-|**と**|**FIRST**|**PRESERVE**|  
+|**ALTER**|**FETCH**|**PREPARE**|  
+|**AND**|**FIRST**|**PRESERVE**|  
 |**ANY**|**FLOAT**|**PRIMARY**|  
 |**ARE**|**FOR**|**PRIOR**|  
 |**AS**|**FOREIGN**|**PRIVILEGES**|  
@@ -132,40 +132,40 @@ ms.lasthandoff: 01/25/2018
 |**ASSERTION**|**FOUND**|**PUBLIC**|  
 |**AT**|**FROM**|**READ**|  
 |**AUTHORIZATION**|**FULL**|**REAL**|  
-|**AVG**|**GET**|**参照**|  
+|**AVG**|**GET**|**REFERENCES**|  
 |**BEGIN**|**GLOBAL**|**RELATIVE**|  
 |**BETWEEN**|**GO**|**RESTRICT**|  
 |**BIT**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
 |**BOTH**|**GROUP**|**ROLLBACK**|  
-|**BY**|**持つ**|**ROWS**|  
+|**BY**|**HAVING**|**ROWS**|  
 |**CASCADE**|**HOUR**|**SCHEMA**|  
-|**CASCADED**|**ID**|**SCROLL**|  
+|**CASCADED**|**IDENTITY**|**SCROLL**|  
 |**CASE**|**IMMEDIATE**|**SECOND**|  
 |**CAST**|**IN**|**SECTION**|  
 |**CATALOG**|**INCLUDE**|**SELECT**|  
 |**CHAR**|**INDEX**|**SESSION**|  
 |**CHAR_LENGTH**|**INDICATOR**|**SESSION_USER**|  
-|**CHARACTER**|**最初に**|**SET**|  
-|**CHARACTER_LENGTH**|**内部**|**サイズ**|  
+|**CHARACTER**|**INITIALLY**|**SET**|  
+|**CHARACTER_LENGTH**|**INNER**|**SIZE**|  
 |**CHECK**|**INPUT**|**SMALLINT**|  
 |**CLOSE**|**INSENSITIVE**|**SOME**|  
 |**COALESCE**|**INSERT**|**SPACE**|  
 |**COLLATE**|**INT**|**SQL**|  
-|**照合順序**|**INTEGER**|**SQLCA**|  
+|**COLLATION**|**INTEGER**|**SQLCA**|  
 |**COLUMN**|**INTERSECT**|**SQLCODE**|  
 |**COMMIT**|**INTERVAL**|**SQLERROR**|  
-|**接続**|**INTO**|**SQLSTATE**|  
-|**接続**|**します。**|**SQLWARNING**|  
+|**CONNECT**|**INTO**|**SQLSTATE**|  
+|**CONNECTION**|**IS**|**SQLWARNING**|  
 |**CONSTRAINT**|**ISOLATION**|**SUBSTRING**|  
 |**CONSTRAINTS**|**JOIN**|**SUM**|  
 |**CONTINUE**|**KEY**|**SYSTEM_USER**|  
 |**CONVERT**|**LANGUAGE**|**TABLE**|  
 |**CORRESPONDING**|**LAST**|**TEMPORARY**|  
-|**COUNT**|**LEADING**|**し、**|  
+|**COUNT**|**LEADING**|**THEN**|  
 |**CREATE**|**LEFT**|**TIME**|  
 |**CROSS**|**LEVEL**|**TIMESTAMP**|  
-|**現在の**|**LIKE**|**TIMEZONE_HOUR**|  
+|**CURRENT**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**LOCAL**|**TIMEZONE_MINUTE**|  
 |**CURRENT_TIME**|**LOWER**|**宛先**|  
 |**CURRENT_TIMESTAMP**|**MATCH**|**TRAILING**|  
@@ -176,7 +176,7 @@ ms.lasthandoff: 01/25/2018
 |**DEALLOCATE**|**MONTH**|**TRUE**|  
 |**DEC**|**NAMES**|**UNION**|  
 |**DECIMAL**|**NATIONAL**|**UNIQUE**|  
-|**DECLARE**|**NATURAL**|**不明**|  
+|**DECLARE**|**NATURAL**|**UNKNOWN**|  
 |**DEFAULT**|**NCHAR**|**UPDATE**|  
 |**DEFERRABLE**|**NEXT**|**UPPER**|  
 |**DEFERRED**|**NO**|**USAGE**|  
@@ -184,14 +184,14 @@ ms.lasthandoff: 01/25/2018
 |**DESC**|**NOT**|**USING**|  
 |**DESCRIBE**|**NULL**|**VALUE**|  
 |**DESCRIPTOR**|**NULLIF**|**VALUES**|  
-|**診断**|**NUMERIC**|**VARCHAR**|  
-|**切断**|**OCTET_LENGTH**|**VARYING**|  
+|**DIAGNOSTICS**|**NUMERIC**|**VARCHAR**|  
+|**DISCONNECT**|**OCTET_LENGTH**|**VARYING**|  
 |**DISTINCT**|**OF**|**VIEW**|  
 |**DOMAIN**|**ON**|**WHEN**|  
-|**DOUBLE**|**のみ**|**WHENEVER**|  
+|**DOUBLE**|**ONLY**|**WHENEVER**|  
 |**DROP**|**OPEN**|**WHERE**|  
 |**ELSE**|**OPTION**|**WITH**|  
-|**END**|**または**|**WORK**|  
+|**END**|**OR**|**WORK**|  
 |**END-EXEC**|**ORDER**|**WRITE**|  
 |**ESCAPE**|**OUTER**|**YEAR**|  
 |**EXCEPT**|**OUTPUT**|**ZONE**|  
@@ -246,7 +246,7 @@ ms.lasthandoff: 01/25/2018
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
 |CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|TIMESTAMP|  
+|CUME_DIST|NEW|timestamp|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|いいえ|TIMEZONE_MINUTE|  
 |CURRENT_PATH|なし|TRAILING|  
@@ -255,14 +255,14 @@ ms.lasthandoff: 01/25/2018
 |CURRENT_TRANSFORM_GROUP_FOR_TYPE|OBJECT|TREAT|  
 |CYCLE|OCCURRENCES_REGEX|TRUE|  
 |DATA|OLD|UESCAPE|  
-|[DATE]|ONLY|UNDER|  
-|[DAY]|OPERATION|UNKNOWN|  
+|DATE|ONLY|UNDER|  
+|DAY|OPERATION|UNKNOWN|  
 |DEC|ORDINALITY|UNNEST|  
-|[DECIMAL]|OUT|USAGE|  
+|DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|VALUE|  
+|DEFERRED|OUTPUT|Value|  
 |DEPTH|PAD|VAR_POP|  
-|DEREF|パラメーター|VAR_SAMP|  
+|DEREF|PARAMETER|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
 |DESCRIPTOR|PARTIAL|VARIABLE|  
 |DESTROY|PARTITION|WHENEVER|  
@@ -280,9 +280,9 @@ ms.lasthandoff: 01/25/2018
 |EVERY|PRIVILEGES|XMLCONCAT|  
 |EXCEPTION|RANGE|XMLDOCUMENT|  
 |FALSE|READS|XMLELEMENT|  
-|FILTER|REAL|XMLEXISTS|  
+|FILTER|real|XMLEXISTS|  
 |FIRST|RECURSIVE|XMLFOREST|  
-|[FLOAT]|REF|XMLITERATE|  
+|FLOAT|REF|XMLITERATE|  
 |FOUND|REFERENCING|XMLNAMESPACES|  
 |FREE|REGR_AVGX|XMLPARSE|  
 |FULLTEXTTABLE|REGR_AVGY|XMLPI|  
@@ -295,7 +295,7 @@ ms.lasthandoff: 01/25/2018
 |HOLD|REGR_SYY|ZONE|  
   
 ## <a name="see-also"></a>参照  
- [SET QUOTED_IDENTIFIER と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [ALTER DATABASE 互換性レベル &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

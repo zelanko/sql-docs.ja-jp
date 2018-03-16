@@ -1,5 +1,5 @@
 ---
-title: "DBCC INPUTBUFFER (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-インスタンスに、クライアントから送信された最後のステートメントが表示されます[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。
+クライアントから [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに最後に送信されたステートメントを表示します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -58,13 +58,13 @@ DBCC INPUTBUFFER ( session_id [ , request_id ])
 *request_id*  
 現在のセッション内で検索する具体的な要求 (バッチ) を指定します。  
 
-次のクエリを返します*request_id*:  
+次のクエリは *request_id* を返します。  
 ```sql
 SELECT request_id   
 FROM sys.dm_exec_requests   
 WHERE session_id = @@spid;  
 ```  
-のすべてのメンションを  
+WITH  
 オプションを指定可能にします。  
   
 NO_INFOMSGS  
@@ -75,9 +75,9 @@ DBCC INPUTBUFFER では、次の列を含む結果セットが返されます。
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**EventType**|**nvarchar(30)**|イベントの種類。 これは、 **RPC イベント**または**言語イベント**です。 出力になります**No Event**と最後のイベントは検出されませんでした。|  
-|**パラメーター**|**smallint**|0 = テキスト<br /><br /> 1-  *n* パラメーターを =|  
-|**EventInfo**|**nvarchar (4000)**|**EventType** RPC の場合、 **EventInfo**はプロシージャ名だけが含まれています。 **EventType**言語のイベントの最初の 4,000 文字だけが表示されます。|  
+|**EventType**|**nvarchar(30)**|イベントの種類。 **RPC Event** または **Language Event** になります。 前回のイベントが検出されなかった場合、出力は **No Event** になります。|  
+|**パラメーター**|**smallint**|0 = テキスト<br /><br /> 1- *n* = パラメーター|  
+|**EventInfo**|**nvarchar (4000)**|**EventType** が RPC の場合、**EventInfo** にはプロシージャ名だけが含まれます。 **EventType** が Language の場合は、イベントの最初の 4,000 文字だけが表示されます。|  
   
 たとえば、DBCC INPUTBUFFER では、バッファー内の最後のイベントが DBCC INPUTBUFFER(11) である場合、次の結果セットが返されます。
   
@@ -92,19 +92,19 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
 
 > [!NOTE]
-> 以降で[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2 では、使用[sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)のインスタンスに送信されたステートメントに関する情報を返す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。
+> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 以降の場合は、[sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに送信されたステートメントに関する情報を返します。
 
-## <a name="permissions"></a>権限  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次のいずれかが必要です。
--   ユーザーのメンバーである必要があります、 **sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次のいずれかが必要です。
+-   ユーザーは、**sysadmin** 固定サーバー ロールのメンバーである必要があります。  
 -   ユーザーには VIEW SERVER STATE 権限が必要です。  
--   *session_id*コマンドを実行するセッション ID と同じである必要があります。 セッション ID を特定するには、次のクエリを実行します。  
+-   *session_id* は、コマンドが実行されるセッション ID と同じである必要があります。 セッション ID を特定するには、次のクエリを実行します。  
   
 ```sql
 SELECT @@spid;  
 ```
   
-[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 階層には、データベースの VIEW DATABASE STATE 権限が必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard および Basic 階層が必要です、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理者アカウントです。
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 階層の場合、データベースでは、VIEW DATABASE STATE アクセス許可が必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard および Basic 階層の場合、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 管理者アカウントが必要です。
   
 ## <a name="examples"></a>使用例  
 次の例では、前の接続で長いトランザクションが実行されている間に、2 番目の接続で `DBCC INPUTBUFFER` を実行します。

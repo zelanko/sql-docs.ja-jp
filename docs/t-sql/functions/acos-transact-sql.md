@@ -1,5 +1,5 @@
 ---
-title: "ACOS (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ACOS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="acos-transact-sql"></a>ACOS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-数学関数の角度を返す、そのコサインが指定された、ラジアン**float**式。 また呼び出し先のアーク コサイン。
+コサインが指定された、ラジアンの角度を返す数学関数 float** 式。 また呼び出し先のアーク コサイン。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,7 +48,7 @@ ACOS ( float_expression )
   
 ## <a name="arguments"></a>引数  
 *float_expression*  
-型の式は、 **float**または型に暗黙的に変換できる**float**、-1 ~ 1 の値を使用します。 この範囲外の値を指定すると、NULL が返され、ドメイン エラーが発生します。
+**float** 型または float に暗黙的に変換できる型で、-1 ～ 1 の値を持つ**式**を指定します。 この範囲外の値を指定すると、NULL が返され、ドメイン エラーが発生します。
   
 ## <a name="return-types"></a>戻り値の型  
 **float**
@@ -72,7 +72,7 @@ The ACOS of the number is: 3.14159
 (1 row(s) affected)  
 ```  
   
-### <a name="includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]そして[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
+### <a name="includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 」および「 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 
 次の例では、指定された数値の ACOS を返します。
   
@@ -92,7 +92,7 @@ The ACOS of the number is: 3.14159
 ```  
   
 ## <a name="see-also"></a>参照
-[数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [関数](../../t-sql/functions/functions.md)
   
   

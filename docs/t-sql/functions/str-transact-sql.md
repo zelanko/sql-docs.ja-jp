@@ -1,5 +1,5 @@
 ---
-title: "STR (TRANSACT-SQL) |Microsoft ドキュメント"
+title: STR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -49,22 +49,22 @@ STR ( float_expression [ , length [ , decimal ] ] )
   
 ## <a name="arguments"></a>引数  
  *float_expression*  
- 概数型の式です (**float**) 小数点付きのデータ型。  
+ 小数点付きの概数型 (**float**) の式を指定します。  
   
- *長さ*  
- 全体の長さを指定します。 これには小数点、負号、数字、空白文字も含まれます。 既定値は、10 です。  
+ *length*  
+ 全体の長さを指定します。 これには小数点、負号、数字、空白文字も含まれます。 既定値は 10 です。  
   
  *decimal*  
- 小数点以下の桁数を指定します。 *10 進*16 以下である必要があります。 場合*decimal* 16 を超える場合、結果は小数点の右側に 16 桁に切り捨てられます。  
+ 小数点以下の桁数を指定します。 *decimal* は 16 以下である必要があります。 *decimal* に 16 を超える値を指定した場合、結果は小数点以下 16 桁に切り捨てられます。  
   
 ## <a name="return-types"></a>戻り値の型  
  **varchar**  
   
-## <a name="remarks"></a>解説  
- 指定した場合、値を*長さ*と*decimal* STR には正の値にする必要があります。 数は、既定値または 0 は、10 進数のパラメーターが整数に丸められます。 指定する長さは、その数字の小数点より前の桁数に、符号があればその符号部分を加えた数以上にする必要があります。 短い*float_expression*は右揃えの指定した長さと、時間の長い*float_expression*は指定された小数点以下桁数に切り捨てられます。 たとえば、STR (12**、**10) は 12 の結果を生成します。 これは結果セットの中で右揃えされます。 ただし、STR (1223**、**2) に結果セットを切り捨てます。 * *。 文字列関数は入れ子にすることができます。  
+## <a name="remarks"></a>Remarks  
+ STR で *length* パラメーターと *decimal* パラメーターを指定する場合は、正の値を指定する必要があります。 数値は、既定では整数に丸められます。小数点以下桁数に 0 が指定された場合も同様です。 指定する長さは、その数字の小数点より前の桁数に、符号があればその符号部分を加えた数以上にする必要があります。 短い *float_expression* は、指定された長さで右揃えされ、長い *float_expression* は、指定された小数点以下桁数に切り捨てられます。 たとえば、STR(12**,**10) の結果は 12 になります。 これは結果セットの中で右揃えされます。 一方、STR(1223**,**2) と指定すると、結果は切り捨てられて ** になります。 文字列関数は入れ子にすることができます。  
   
 > [!NOTE]  
->  Unicode データに変換する場合、変換中で STR を使用または[キャスト](../../t-sql/functions/cast-and-convert-transact-sql.md)変換関数。  
+>  Unicode データに変換するには、CONVERT または [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 変換関数の中で STR を使用します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、5 つの数字と小数点で構成される式を、6 桁の文字列に変換します。 値の小数部は、小数点以下 1 桁になるように丸められます。  
@@ -83,7 +83,7 @@ GO
 (1 row(s) affected)  
 ```  
   
- 返される文字列に指定された長さを超えると、式`**`指定された長さに対してです。  
+ 式が指定した長さを超えた場合、STR では `**` が指定の長さだけ返されます。  
   
 ```  
 SELECT STR(123.45, 2, 2);  
@@ -117,8 +117,8 @@ GO
   
 ## <a name="see-also"></a>参照  
  [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
- [形式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/format-transact-sql.md)  
- [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  
+ [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

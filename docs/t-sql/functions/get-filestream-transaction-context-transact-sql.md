@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  セッションの現在のトランザクション コンテキストを表すトークンを返します。 アプリケーションでは、このトークンを使用して、FILESTREAM のファイル システム ストリーミング操作をトランザクションにバインドします。 FILESTREAM のトピックの一覧は、次を参照してください。[バイナリ ラージ オブジェクト &#40;です。Blob &#41;データ &#40;です。SQL Server &#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  セッションの現在のトランザクション コンテキストを表すトークンを返します。 アプリケーションでは、このトークンを使用して、FILESTREAM のファイル システム ストリーミング操作をトランザクションにバインドします。 FILESTREAM のトピック一覧については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,13 +51,13 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
 ## <a name="return-value"></a>戻り値  
  トランザクションが開始されていないか、キャンセルまたはコミットされている場合、NULL が返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  トランザクションは明示的にする必要があります。 BEGIN TRANSACTION に続けて、COMMIT TRANSACTION または ROLLBACK TRANSACTION を使用します。  
   
  GET_FILESTREAM_TRANSACTION_CONTEXT を呼び出すと、トランザクションへのファイル システム アクセス権が呼び出し元に与えられます。このアクセス権は、トランザクションが完了するまで有効です。 トランザクションに対するファイル システム経由のアクセスを別のユーザーに許可するには、EXECUTE AS を使用して、別のユーザーとして GET_FILESTREAM_TRANSACTION_CONTEXT を実行します。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`GET_FILESTREAM_TRANSACTION_CONTEXT`で、[!INCLUDE[tsql](../../includes/tsql-md.md)]トランザクションをトランザクション コンテキストを取得します。  
+ 次の例では、`GET_FILESTREAM_TRANSACTION_CONTEXT` を [!INCLUDE[tsql](../../includes/tsql-md.md)] トランザクションで使用して、トランザクション コンテキストを取得します。  
   
 ```csharp  
 using System;  
@@ -283,7 +283,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>参照  
- [パス名 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/pathname-transact-sql.md)   
+ [PathName &#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
  [バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   

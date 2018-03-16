@@ -1,5 +1,5 @@
 ---
-title: "ALTER SERVER AUDIT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER SERVER AUDIT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/02/2018
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  サーバー監査オブジェクトを使用して、変更、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]監査機能します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 機能を使用して、サーバー監査オブジェクトを変更します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -82,41 +82,41 @@ ALTER SERVER AUDIT audit_name
   
 ## <a name="arguments"></a>引数  
  TO {FILE | APPLICATION_LOG | SECURITY}  
- 監査ターゲットの場所を指定します。 オプションは、バイナリ ファイル、Windows アプリケーション ログまたは Windows セキュリティ ログです。  
+ 監査ターゲットの場所を指定します。 オプションは、バイナリ ファイル、Windows アプリケーション ログ、または Windows セキュリティ ログです。  
   
  FILEPATH **= '***os_file_path***'**  
  監査記録のパス。 ファイル名は、監査名と監査 GUID に基づいて生成されます。  
   
- MAXSIZE  **=**  *max_size*  
- 監査ファイルのサイズの上限を指定します。 *Max_size*値が続く整数を指定する必要があります**MB**、 **GB**、 **TB**、または**無制限**です。 に対して指定できる最小サイズ*max_size* 2 は、 **MB** 、最大数は 2,147, 483,647 **TB**です。 ときに**無制限**が指定されているディスクがいっぱいになるまでに、ファイルが拡張されます。 2 MB より小さい値を指定すると、MSG_MAXSIZE_TOO_SMALL エラーを発生させます。 既定値は**無制限**です。  
+ MAXSIZE **=***max_size*  
+ 監査ファイルのサイズの上限を指定します。 *max_size* の値は、整数の後に **MB**、**GB**、**TB** を付けて指定するか、または **UNLIMITED** を指定します。 *max_size* に指定できる最小サイズは 2 **MB**、最大サイズは 2,147,483,647 **TB** です。 **UNLIMITED** を指定した場合、ファイルはディスクがいっぱいになるまで拡張されます。 2 MB 未満の値を指定すると、MSG_MAXSIZE_TOO_SMALL エラーが発生します。 既定値は **UNLIMITED** です。  
   
- MAX_ROLLOVER_FILES  **=** *整数* | **無制限**  
- ファイル システム内に保持するファイルの最大数を指定します。 ときに max_rollover_files 設定 = 0、作成されるロール オーバー ファイルの数に課せられる制限はありません。 既定値は 0 です。 指定できるファイルの最大数は 2,147,483,647 です。  
+ MAX_ROLLOVER_FILES **=***integer* | **UNLIMITED**  
+ ファイル システム内に保持するファイルの最大数を指定します。 MAX_ROLLOVER_FILES=0 が設定されている場合、作成されるロールオーバー ファイルの数は制限されません。 既定値は 0 です。 指定できるファイルの最大数は 2,147,483,647 です。  
   
- MAX_FILES =*整数*  
- 作成できる監査ファイルの最大数を指定します。 持ち越されません最初のファイルに制限に達したときにします。 MAX_FILES の制限に達すると、追加の監査イベントを生成させる原因となる任意のアクションはエラーで失敗します。  
+ MAX_FILES =*integer*  
+ 作成できる監査ファイルの最大数を指定します。 制限に達しても、最初のファイルへのロールオーバーは行われません。 MAX_FILES の制限に達すると、追加の監査イベントを生成させるアクションは失敗し、エラーが発生します。  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- RESERVE_DISK_SPACE  **=**  {ON |オフ}  
+ RESERVE_DISK_SPACE **=** { ON | OFF }  
  このオプションは、ディスク上のファイルを MAXSIZE 値に事前に割り当てます。 MAXSIZE が UNLIMITED でない場合にのみ適用されます。 既定値は OFF です。  
   
- QUEUE_DELAY  **=** *整数*  
- 監査アクションの処理が強制されるまでの経過時間 (ミリ秒) を指定します。 値 0 は同期配信を表します。 クエリ遅延に設定可能な最小値は 1000 (1 秒) で、これが既定値です。 最大値は 2,147,483,647 (2,147,483.647 秒、つまり 24 日、20 時間、31 分、23.647 秒) です。 無効な数値を指定すると、MSG_INVALID_QUEUE_DELAY エラーを発生させます。  
+ QUEUE_DELAY **=***integer*  
+ 監査アクションの処理が強制されるまでの経過時間 (ミリ秒) を指定します。 値 0 は同期配信を表します。 クエリ遅延に設定可能な最小値は 1000 (1 秒) で、これが既定値です。 最大値は 2,147,483,647 (2,147,483.647 秒、つまり 24 日、20 時間、31 分、23.647 秒) です。 無効な数値を指定すると、MSG_INVALID_QUEUE_DELAY エラーが発生します。  
   
- ON_FAILURE  **=**  {続行 |シャット ダウン |FAIL_OPERATION}  
- かを示しますインスタンスのターゲットへの書き込み必要がありますが失敗する、続行するには場合、停止[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]監査ログに書き込むことはできません。  
+ ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が監査ログに書き込むことができない場合に、ターゲットへのインスタンスの書き込みをエラーにするか、続行するか、停止するかを示します。  
   
  CONTINUE  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作を続行します。 監査レコードは保持されません。 監査は、エラー状態が解決される場合に、イベントと再開をログに記録し続けます。 続行のオプションを選択すると、セキュリティ ポリシーに違反する可能性がありますを許すおそれのアクティビティを許可できます。 完全な監査を維持することより、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の操作を続行することの方が重要である場合に、このオプションを使用します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作を続行します。 監査レコードは保持されません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 [続行] オプションを選択すると、セキュリティ ポリシーに違反する可能性がある、監査されない活動を許すおそれがあります。 完全な監査を維持することより、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の操作を続行することの方が重要である場合に、このオプションを使用します。  
   
 SHUTDOWN  
-インスタンスを強制的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をシャット ダウン、if[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]監査ターゲットに何らかの理由のデータの書き込みに失敗します。 実行しているログイン、`ALTER`ステートメントが必要、`SHUTDOWN`内で権限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 シャット ダウンの問題が解決しない場合でも、`SHUTDOWN`実行されているログインから権限を取り消す以降。 ユーザーは、このアクセス許可を持っていない場合は、ステートメントが失敗し、監査は変更されません。 監査エラーによってシステムのセキュリティまたは整合性が阻害される可能性がある場合に、このオプションを使用します。 詳細については、次を参照してください。[シャット ダウン](../../t-sql/language-elements/shutdown-transact-sql.md)です。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がなんらかの理由で監査ターゲットへのデータの書き込みに失敗した場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを強制的をシャット ダウンします。 `ALTER` ステートメントを実行しているログインには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内での `SHUTDOWN` 権限が必要です。 実行中のログインから `SHUTDOWN` 権限が後で取り消された場合でも、シャットダウンの動作は継続します。 ユーザーがこの権限を持っていない場合は、ステートメントが失敗し、監査は変更されません。 監査エラーによってシステムのセキュリティまたは整合性が阻害される可能性がある場合に、このオプションを使用します。 詳しくは、「[SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)」をご覧ください。 
   
  FAIL_OPERATION  
- 監査イベントを発生させるデータベース アクションを失敗させます。 監査イベントを発生させないアクションは続行できますが、監査イベントは発生しません。 監査は、エラー状態が解決される場合に、イベントと再開をログに記録し続けます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]へのフル アクセスより、完全な監査の維持の方が重要である場合に、このオプションを使用します。  
+ 監査イベントを発生させるデータベース アクションを失敗させます。 監査イベントを発生させないアクションは続行できますが、監査イベントを発生させることはできません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]へのフル アクセスより、完全な監査の維持の方が重要である場合に、このオプションを使用します。  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]   
   
- 状態 **=**  {ON |オフ}  
+ STATE **=** { ON | OFF }  
  監査によるレコードの収集を有効または無効にします。 実行中の監査の状態を (ON から OFF に) 変更すると、監査が停止されたこと、監査を停止したプリンシパル、および監査が停止された時間を表す監査エントリが作成されます。  
   
  MODIFY NAME = *new_audit_name*  
@@ -127,21 +127,21 @@ SHUTDOWN
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  event_field_name  
- 述語ソースを識別するイベント フィールドの名前を指定します。 監査フィールドについては、「 [sys.fn_get_audit_file &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). `file_name` と `audit_file_offset` 以外のすべてのフィールドは、監査できます。  
+ 述語ソースを識別するイベント フィールドの名前を指定します。 監査フィールドについては、「[sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)」で説明されています。 `file_name` と `audit_file_offset` 以外のすべてのフィールドは、監査できます。  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  number  
- 任意の数値型を含む**decimal**です。 制限として、使用可能な物理メモリの不足、または 64 ビット整数として表すのに大きすぎる数字が挙げられます。  
+ **decimal** を含む任意の数値型を指定します。 制限として、使用可能な物理メモリの不足、または 64 ビット整数として表すのに大きすぎる数字が挙げられます。  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  ' string '  
  述語の比較に必要な ANSI 文字列または Unicode 文字列です。 述語比較関数に対しては、暗黙の文字列型変換は行われません。 無効な型を渡すとエラーになります。  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ALTER AUDIT を呼び出すときは、TO 句、WITH 句、MODIFY NAME 句のうち少なくとも 1 つを指定する必要があります。  
   
- 監査を変更する場合は、監査の状態を OFF オプションに設定する必要があります。 状態以外のオプションで、監査が有効な場合は、ALTER AUDIT を実行している場合 = OFF、MSG_NEED_AUDIT_DISABLED エラー メッセージが表示されます。  
+ 監査を変更する場合は、監査の状態を OFF オプションに設定する必要があります。 STATE=OFF 以外のオプションを使用して監査を有効にしているときに ALTER AUDIT を実行すると、MSG_NEED_AUDIT_DISABLED エラー メッセージが表示されます。  
   
  監査仕様の追加、変更、および削除は、監査を停止せずに実行できます。  
   
@@ -153,7 +153,7 @@ SHUTDOWN
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-changing-a-server-audit-name"></a>A. サーバー監査の名前を変更する  
- 次の例は、サーバー監査の名前を変更`HIPPA_Audit`に`HIPAA_Audit_Old`です。  
+ 次の例では、サーバー監査 `HIPPA_Audit` の名前を `HIPAA_Audit_Old` に変更します。  
   
 ```  
 USE master  
@@ -191,7 +191,7 @@ GO
 ```  
   
 ### <a name="c-changing-a-server-audit-where-clause"></a>C. サーバー監査 WHERE 句を変更する  
- 次の例は、where 句の例 C で作成した[CREATE SERVER AUDIT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-server-audit-transact-sql.md). 新しい WHERE 句は、27 の場合は、ユーザー定義のイベントのフィルター処理します。  
+ 次の例は、「[CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)」の例 C で作成した WHERE 句を変更します。 新しい WHERE 句は、ユーザー定義イベントを 27 でフィルター選択します。  
   
 ```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
@@ -216,7 +216,7 @@ ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = ON);
 GO  
 ```  
   
-### <a name="e-renaming-a-server-audit"></a>E. サーバー監査の名前を変更します。  
+### <a name="e-renaming-a-server-audit"></a>E. サーバー監査の名前を変更する  
  次の例では、サーバー監査の名前を `FilterForSensitiveData` から `AuditDataAccess` に変更します。  
   
 ```sql  
@@ -230,23 +230,23 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [DROP SERVER AUDIT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [サーバー監査の仕様 &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT SPECIFICATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT SPECIFICATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [データベース監査の仕様 &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
- [ALTER DATABASE AUDIT SPECIFICATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [DROP DATABASE AUDIT SPECIFICATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
- [ALTER AUTHORIZATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys.fn_get_audit_file &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
- [sys.server_audits &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [sys.server_file_audits &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
- [sys.server_audit_specifications &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
- [sys.server_audit_specification_details &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
- [sys.database_audit_specifications &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
- [sys.database_audit_specification_details &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [sys.dm_server_audit_status &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.dm_audit_actions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+ [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
+ [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
+ [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
+ [sys.server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys.server_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
+ [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [サーバー監査およびサーバー監査の仕様を作成する](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "ALTER スキーマ (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2018
 ms.prod: sql-non-specified
@@ -73,37 +73,37 @@ ALTER SCHEMA schema_name
  所有者を変更するエンティティのクラスを指定します。 既定値はオブジェクトです。  
   
  *securable_name*  
- スキーマ スコープの 1 つまたは 2 部構成の名前は、スキーマに移動するセキュリティ保護可能なです。  
+ 移動元のスキーマに含まれているセキュリティ保護可能なリソースの名前を指定します。このリソースが対象のスキーマに移動されます。名前を指定するときは、1 つまたは 2 つの要素で構成される名前を使用します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ユーザーとスキーマは完全に分離されています。  
   
  ALTER SCHEMA は、セキュリティ保護可能なリソースを同じデータベース内のスキーマ間で移動する場合にのみ使用できます。 スキーマ内のセキュリティ保護可能なリソースを変更または削除するには、そのリソースに対応した ALTER または DROP ステートメントを使用します。  
   
- 1 つの要素名が使用される場合*securable_name*、名前解決ルールに、現在有効に使用される、可能なリソースを検索します。  
+ *securable_name* に 1 つの要素から構成される名前を使用した場合、セキュリティ保護可能なリソースを特定するために、現在有効な名前解決規則が使用されます。  
   
  セキュリティ保護可能なリソースに関連付けられているすべての権限は、リソースが新しいスキーマに移動したときに削除されます。 セキュリティ保護可能なリソースの所有者が明示的に設定されている場合、所有者は変更されません。 セキュリティ保護可能なリソースの所有者が SCHEMA OWNER に設定されている場合、所有者は SCHEMA OWNER のままですが、移動後、SCHEMA OWNER は新しいスキーマの所有者に解決されます。 新しい所有者の principal_id は NULL になります。  
   
- ストアド プロシージャ、関数、ビュー、またはトリガーの移動名は変更されません、スキーマ、現在のところ、対応するオブジェクトの定義列のいずれかの場合、 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログ ビューまたはを使用して取得、 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)組み込み関数。 そのため、ALTER SCHEMA をこれらのオブジェクト タイプの移動に使用しないことをお勧めします。 代わりに、削除し、その新しいスキーマにオブジェクトを再作成します。  
+ ストアド プロシージャ、関数、ビュー、またはトリガーを移動しても、[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) カタログ ビューの definition 列にある対応するオブジェクト、または [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) 組み込み関数を使用して取得されたオブジェクトのスキーマ名は変更されません。 したがって、これらのオブジェクトの種類を移動する場合は、ALTER SCHEMA を使用しないことをお勧めします。 代わりに、オブジェクトを削除して新しいスキーマで再作成してください。  
   
- シノニム、テーブルなどのオブジェクト移動しても、そのオブジェクトへの参照が自動的に更新はされません。 転送されたオブジェクトを手動で参照するすべてのオブジェクトを変更する必要があります。 たとえば、テーブルを移動する、そのテーブルがトリガーで参照されている場合は、新しいスキーマの名前を反映するようにトリガーを変更する必要があります。 使用して[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)移動する前に、オブジェクトの一覧の従属関係をします。  
+ テーブルやシノニムなどのオブジェクトを移動しても、そのオブジェクトに対する参照は自動的には更新されません。 移動したオブジェクトを参照しているオブジェクトに対しては、手動で変更を加える必要があります。 たとえば、テーブルを移動するとき、そのテーブルがトリガーで参照されている場合は、新しいスキーマ名が反映されるようにトリガーに変更を加える必要があります。 オブジェクトを移動する前には、[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) を使ってオブジェクトの従属関係を一覧表示できます。  
 
- 使用して、テーブルのスキーマを変更する[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、オブジェクト エクスプ ローラーでテーブルを右クリックし、をクリックして**デザイン**です。 キーを押して**F4**プロパティ ウィンドウを開きます。 **スキーマ**ボックスで、新しいスキーマを選択します。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してテーブルのスキーマを変更するには、オブジェクト エクスプローラーでテーブルを右クリックし、**[デザイン]** をクリックします。 **F4** キーを押して [プロパティ] ウィンドウを開きます。 **[スキーマ]** ボックスで新しいスキーマを選択します。  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  他のスキーマからセキュリティ保護可能なリソースを移動する場合、現在のユーザーには、(スキーマではなく) セキュリティ保護可能なリソースに対する CONTROL 権限と対象スキーマに対する ALTER 権限が必要です。  
   
- セキュリティ保護可能な EXECUTE AS OWNER 仕様上にあり、所有者がスキーマの所有者に設定されている場合、ユーザーも必要 IMPERSONATE 権限、ターゲット スキーマの所有者にします。  
+ セキュリティ保護可能なリソースに EXECUTE AS OWNER の指定があり、所有者が SCHEMA OWNER に設定されている場合は、対象スキーマの所有者に対する IMPERSONATE 権限も必要です。  
   
  移動するセキュリティ保護可能なリソースに関連付けられているすべての権限は、移動時に削除されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-transferring-ownership-of-a-table"></a>A. テーブルの所有権を譲渡する  
- 次の例は、スキーマを変更`HumanResources`テーブルを転送することによって`Address`スキーマから`Person`スキーマにします。  
+ 次の例では、テーブル `Address` をスキーマ `Person` からスキーマ `HumanResources` に移動し、スキーマを変更します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -141,10 +141,10 @@ SELECT sys.types.name, sys.types.schema_id, sys.schemas.name
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. テーブルの所有権を譲渡する  
- 次の例は、テーブルを作成`Region`で、`dbo`スキーマを作成、`Sales`スキーマ、および、移動、`Region`からテーブル、`dbo`スキーマを`Sales`スキーマです。  
+ 次の例では、`dbo` スキーマで `Region` テーブルを作成し、`Sales` スキーマを作成し、`Region` テーブルを `dbo` スキーマから `Sales` スキーマに移動します。  
   
 ```  
 CREATE TABLE dbo.Region   
@@ -161,8 +161,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [スキーマ &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-schema-transact-sql.md)   
- [DROP SCHEMA &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

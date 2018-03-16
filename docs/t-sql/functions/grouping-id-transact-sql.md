@@ -1,5 +1,5 @@
 ---
-title: "GROUPING_ID (TRANSACT-SQL) |Microsoft ドキュメント"
+title: GROUPING_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  グループ化のレベルを計算する関数を指定します。 GROUPING_ID は、選択でのみ使用できます\<選択 > リスト、HAVING、または GROUP BY が指定されている場合は、ORDER BY 句。  
+  グループ化のレベルを計算する関数を指定します。 GROUPING_ID は、GROUP BY が指定されている場合に、SELECT \<select> リスト、HAVING 句、または ORDER BY 句でのみ使用できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,17 +47,17 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 ```  
   
 ## <a name="arguments"></a>引数  
- \<column_expression >  
- *Column_expression*で、 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)句。  
+ \<column_expression>  
+ [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 句の *column_expression* です。  
   
 ## <a name="return-type"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>解説  
- GROUPING_ID \<column_expression > GROUP BY リスト内の式と一致する必要があります。 たとえば、DATEPART でグループ化する場合 (yyyy, \<*列名*>)、GROUPING_ID を使用して (DATEPART (yyyy、 \<*列名*>));によってグループ化する場合、または\<*列名*>、GROUPING_ID を使用して (\<*列名*>)。  
+## <a name="remarks"></a>Remarks  
+ GROUPING_ID \<column_expression> は、GROUP BY リストの式と正確に一致させる必要があります。 たとえば、DATEPART (yyyy, \<*列名*>) でグループ化する場合は GROUPING_ID (DATEPART (yyyy, \<*列名*>)) を使用し、\<*列名* でグループ化する場合は GROUPING_ID (\<*列名*>) を使用します。  
   
 ## <a name="comparing-groupingid--to-grouping-"></a>GROUPING_ID () と GROUPING () の比較  
- GROUPING_ID (\<column_expression > [ **、**. *n*  ])、グループ化のと同等の入力 (\<column_expression >) 1 と 0 の文字列として各出力行では、その列リスト内の各列の戻り値。 GROUPING_ID は、その文字列を基数 2 の数値として解釈し、同等の整数を返します。 たとえば、次のステートメントについて考えてみます。`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`です。 GROUPING_ID () の入力値と出力値を次の表に示します。  
+ GROUPING_ID (\<列式> [ **,**...*n* ]) は、列リストの各列に関して返される GROUPING (\<列式>) に相当する値を、0 と 1 の文字列として各出力行に入力します。 GROUPING_ID は、その文字列を基数 2 の数値として解釈し、同等の整数を返します。 たとえば、`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>` というステートメントがあるものとします。 GROUPING_ID () の入力値と出力値を次の表に示します。  
   
 |集計列|GROUPING_ID (a, b, c) の入力 = GROUPING(a) + GROUPING(b) + GROUPING(c)|GROUPING_ID () の出力|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  
@@ -70,14 +70,14 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 |`abc`|`111`|`7`|  
   
 ## <a name="technical-definition-of-groupingid-"></a>GROUPING_ID () の技術的な定義  
- 各 GROUPING_ID 引数は、GROUP BY リストの要素でなければなりません。 GROUPING_ID () を返します、**整数**ビットマップが最下位 N ビットが点灯している可能性があります。 点灯した**ビット**対応する引数が指定した出力行のグループ化列ではないことを示します。 最も順位が低い**ビット**N、および、N-1 引数に対応<sup>th</sup>下位**ビット**引数 1 に対応します。  
+ 各 GROUPING_ID 引数は、GROUP BY リストの要素でなければなりません。 GROUPING_ID () は、最下位 N ビットが点灯する場合がある **integer** ビットマップを返します。 点灯した **bit** は、対応する引数が特定の出力行に対するグループ列でないことを示します。 最も順位が低い **bit** は引数 N に対応し、N-1<sup> </sup>番目に順位が低い **bit** は引数 1 に対応します。  
   
 ## <a name="groupingid--equivalents"></a>GROUPING_ID () の対応  
- 単一グループ クエリの場合は、グループ化 (\<column_expression >) は GROUPING_ID (\<column_expression >)、し、両方は 0 を返します。  
+ 単一グループ クエリの場合、GROUPING (\<列式>) は GROUPING_ID (\<列式>) に対応し、いずれも 0 を返します。  
   
  たとえば、次のステートメントは互いに対応しています。  
   
- ステートメント a:  
+ ステートメント A:  
   
 ```  
 SELECT GROUPING_ID(A,B)  
@@ -85,7 +85,7 @@ FROM T
 GROUP BY CUBE(A,B)   
 ```  
   
- ステートメント b:  
+ ステートメント B:  
   
 ```  
 SELECT 3 FROM T GROUP BY ()  
@@ -100,7 +100,7 @@ SELECT 0 FROM T GROUP BY A,B
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-groupingid-to-identify-grouping-levels"></a>A. GROUPING_ID を使用してグループ化レベルを識別する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Name` と `Title` ごとの従業員数、`Name,` ごとの従業員数、および会社の合計従業員数が返されます。 `GROUPING_ID()`内の各行の値の作成に使用される、`Title`集計レベルを識別する列。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Name` と `Title` ごとの従業員数、`Name,` ごとの従業員数、および会社の合計従業員数が返されます。 `GROUPING_ID()` は、集計レベルを示す `Title` 列の各行に対する値を作成するために使われます。  
   
 ```  
 SELECT D.Name  
@@ -145,21 +145,21 @@ GROUP BY ROLLUP(D.Name, E.JobTitle)
   
  フィルター処理していない結果セットは、次のようになります。  
   
-|名前|Title|グループ化レベル|従業員数|名前|  
+|[オブジェクト名]|[タイトル]|グループ化のレベル|従業員数|[オブジェクト名]|  
 |----------|-----------|--------------------|--------------------|----------|  
 |文書コントロール|コントロール スペシャリスト|0|2|文書コントロール|  
 |文書コントロール|文書コントロール アシスタント|0|2|文書コントロール|  
-|文書コントロール|文書コントロール マネージャー|0|1|文書コントロール|  
-|文書コントロール|NULL|1|5|文書コントロール|  
-|設備およびメンテナンス|設備管理アシスタント|0|1|設備およびメンテナンス|  
-|設備およびメンテナンス|設備マネージャー|0|1|設備およびメンテナンス|  
+|文書コントロール|文書コントロール マネージャー|0|@shouldalert|文書コントロール|  
+|文書コントロール|NULL|@shouldalert|5|文書コントロール|  
+|設備およびメンテナンス|設備管理アシスタント|0|@shouldalert|設備およびメンテナンス|  
+|設備およびメンテナンス|設備マネージャー|0|@shouldalert|設備およびメンテナンス|  
 |設備およびメンテナンス|管理人|0|4|設備およびメンテナンス|  
-|設備およびメンテナンス|メンテナンス スーパーバイザー|0|1|設備およびメンテナンス|  
-|設備およびメンテナンス|NULL|1|7|設備およびメンテナンス|  
+|設備およびメンテナンス|メンテナンス スーパーバイザー|0|@shouldalert|設備およびメンテナンス|  
+|設備およびメンテナンス|NULL|@shouldalert|7|設備およびメンテナンス|  
 |NULL|NULL|3|12|NULL|  
   
 #### <a name="complex-example"></a>複雑な例  
- 次の例では、`GROUPING_ID()` を使用して、複数のグループ化レベルが含まれた結果セットをグループ化レベルでフィルター処理します。 これと同様のコードを使用すると、複数のグループ化レベルがあるビューとストアド プロシージャを作成できます。このストアド プロシージャは、ビューをグループ化レベルでフィルター処理するパラメーターを渡すことによって、ビューを呼び出します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
+ 次の例では、`GROUPING_ID()` を使用して、複数のグループ化レベルが含まれた結果セットをグループ化レベルでフィルター処理します。 これと同様のコードを使用すると、複数のグループ化レベルがあるビューとストアド プロシージャを作成できます。このストアド プロシージャは、ビューをグループ化レベルでフィルター処理するパラメーターを渡すことによって、ビューを呼び出します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。  
   
 ```  
 DECLARE @Grouping nvarchar(50);  
@@ -243,15 +243,15 @@ ORDER BY
 ```  
   
 ### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>C. GROUPING_ID () を ROLLUP および CUBE と共に使用してグループ化レベルを識別する  
- コードの次の例を使用して表示する`GROUPING()`を計算する、`Bit Vector(base-2)`列です。 `GROUPING_ID()`対応する計算に使用`Integer Equivalent`列です。 `GROUPING_ID()` 関数の列順序は、`GROUPING()` 関数によって連結された列の列順序の逆になります。  
+ 以下は、`GROUPING()` を使用して `Bit Vector(base-2)` 列を計算するコードの例です。 `GROUPING_ID()` は、対応する `Integer Equivalent` 列を計算するために使用されます。 `GROUPING_ID()` 関数の列順序は、`GROUPING()` 関数によって連結された列の列順序の逆になります。  
   
- これらの例で`GROUPING_ID()`内の各行の値の作成に使用される、`Grouping Level`列をグループ化レベルを識別します。 常に 1 (0 1、2、... で始まる整数の連続する一覧がグループ化レベルではありません。*n*).  
+ これらの例では、グループ化レベルを示すための値を `Grouping Level` 列の各行に対して作成するために、`GROUPING_ID()` が使用されます。 グループ化レベルは、1 で始まる整数の連番リスト (0、1、2...*n*) になるとは限りません。  
   
 > [!NOTE]  
 >  GROUPING と GROUPING_ID は、結果セットをフィルター処理するために HAVING 句で使用できます。  
   
 #### <a name="rollup-example"></a>ROLLUP の例  
- この例では、すべてのグループ化レベルが次の CUBE 例の場合と同様に表示されるわけではありません。 `ROLLUP` リストの列の順序が変更された場合は、`Grouping Level` 列のレベル値も変更する必要があります。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
+ この例では、すべてのグループ化レベルが次の CUBE 例の場合と同様に表示されるわけではありません。 `ROLLUP` リストの列の順序が変更された場合は、`Grouping Level` 列のレベル値も変更する必要があります。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。  
   
 ```  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
@@ -309,22 +309,22 @@ ORDER BY GROUPING_ID(DATEPART(mm,OrderDate)
     ,DATEPART(dd,OrderDate);  
 ```  
   
- 部分的な結果セットを次に示します。  
+ 次に結果セットの一部を示します。  
   
-|年|Month|日|精算額|ビット ベクター (基数 2)|等価の整数|グループ化レベル|  
+|年|Month|日|精算額|ビット ベクター (基数 2)|等価の整数|グループ化のレベル|  
 |----------|-----------|---------|---------------|----------------------------|------------------------|--------------------|  
-|2007|1|1|1497452.6066|000|0|年月日|  
-|2007|1|2|21772.3494|000|0|年月日|  
-|2007|2|1|2705653.5913|000|0|年月日|  
+|2007|@shouldalert|@shouldalert|1497452.6066|000|0|年月日|  
+|2007|@shouldalert|2|21772.3494|000|0|年月日|  
+|2007|2|@shouldalert|2705653.5913|000|0|年月日|  
 |2007|2|2|21684.4068|000|0|年月日|  
-|2008|1|1|1908122.0967|000|0|年月日|  
-|2008|1|2|46458.0691|000|0|年月日|  
-|2008|2|1|3108771.9729|000|0|年月日|  
+|2008|@shouldalert|@shouldalert|1908122.0967|000|0|年月日|  
+|2008|@shouldalert|2|46458.0691|000|0|年月日|  
+|2008|2|@shouldalert|3108771.9729|000|0|年月日|  
 |2008|2|2|54598.5488|000|0|年月日|  
-|2007|1|NULL|1519224.956|100|1|年月|  
-|2007|2|NULL|2727337.9981|100|1|年月|  
-|2008|1|NULL|1954580.1658|100|1|年月|  
-|2008|2|NULL|3163370.5217|100|1|年月|  
+|2007|@shouldalert|NULL|1519224.956|100|@shouldalert|年月|  
+|2007|2|NULL|2727337.9981|100|@shouldalert|年月|  
+|2008|@shouldalert|NULL|1954580.1658|100|@shouldalert|年月|  
+|2008|2|NULL|3163370.5217|100|@shouldalert|年月|  
 |2007|NULL|NULL|4246562.9541|110|3|年|  
 |2008|NULL|NULL|5117950.6875|110|3|年|  
 |NULL|NULL|NULL|9364513.6416|111|7|総計|  
@@ -332,7 +332,7 @@ ORDER BY GROUPING_ID(DATEPART(mm,OrderDate)
 #### <a name="cube-example"></a>CUBE の例  
  この例では、`GROUPING_ID()` 関数を使用して、グループ化レベルを識別する値を `Grouping Level` 列の各行に対して作成します。  
   
- 異なり`ROLLUP`前の例では、`CUBE`すべてのグループ化レベルを出力します。 `CUBE` リストの列の順序が変更された場合は、`Grouping Level` 列のレベル値も変更する必要があります。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース  
+ 前の例の `ROLLUP` と異なり、`CUBE` ではすべてのグループ化レベルが出力されます。 `CUBE` リストの列の順序が変更された場合は、`Grouping Level` 列のレベル値も変更する必要があります。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。  
   
 ```  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
@@ -390,40 +390,40 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
     ,DATEPART(dd,OrderDate);  
 ```  
   
- 部分的な結果セットを次に示します。  
+ 次に結果セットの一部を示します。  
   
-|年|Month|日|精算額|ビット ベクター (基数 2)|等価の整数|グループ化レベル|  
+|年|Month|日|精算額|ビット ベクター (基数 2)|等価の整数|グループ化のレベル|  
 |----------|-----------|---------|---------------|----------------------------|------------------------|--------------------|  
-|2007|1|1|1497452.6066|000|0|年月日|  
-|2007|1|2|21772.3494|000|0|年月日|  
-|2007|2|1|2705653.5913|000|0|年月日|  
+|2007|@shouldalert|@shouldalert|1497452.6066|000|0|年月日|  
+|2007|@shouldalert|2|21772.3494|000|0|年月日|  
+|2007|2|@shouldalert|2705653.5913|000|0|年月日|  
 |2007|2|2|21684.4068|000|0|年月日|  
-|2008|1|1|1908122.0967|000|0|年月日|  
-|2008|1|2|46458.0691|000|0|年月日|  
-|2008|2|1|3108771.9729|000|0|年月日|  
+|2008|@shouldalert|@shouldalert|1908122.0967|000|0|年月日|  
+|2008|@shouldalert|2|46458.0691|000|0|年月日|  
+|2008|2|@shouldalert|3108771.9729|000|0|年月日|  
 |2008|2|2|54598.5488|000|0|年月日|  
-|2007|1|NULL|1519224.956|100|1|年月|  
-|2007|2|NULL|2727337.9981|100|1|年月|  
-|2008|1|NULL|1954580.1658|100|1|年月|  
-|2008|2|NULL|3163370.5217|100|1|年月|  
-|2007|NULL|1|4203106.1979|010|2|年日|  
+|2007|@shouldalert|NULL|1519224.956|100|@shouldalert|年月|  
+|2007|2|NULL|2727337.9981|100|@shouldalert|年月|  
+|2008|@shouldalert|NULL|1954580.1658|100|@shouldalert|年月|  
+|2008|2|NULL|3163370.5217|100|@shouldalert|年月|  
+|2007|NULL|@shouldalert|4203106.1979|010|2|年日|  
 |2007|NULL|2|43456.7562|010|2|年日|  
-|2008|NULL|1|5016894.0696|010|2|年日|  
+|2008|NULL|@shouldalert|5016894.0696|010|2|年日|  
 |2008|NULL|2|101056.6179|010|2|年日|  
 |2007|NULL|NULL|4246562.9541|110|3|年|  
 |2008|NULL|NULL|5117950.6875|110|3|年|  
-|NULL|1|1|3405574.7033|001|4|月日|  
-|NULL|1|2|68230.4185|001|4|月日|  
-|NULL|2|1|5814425.5642|001|4|月日|  
+|NULL|@shouldalert|@shouldalert|3405574.7033|001|4|月日|  
+|NULL|@shouldalert|2|68230.4185|001|4|月日|  
+|NULL|2|@shouldalert|5814425.5642|001|4|月日|  
 |NULL|2|2|76282.9556|001|4|月日|  
-|NULL|1|NULL|3473805.1218|101|5|Month|  
+|NULL|@shouldalert|NULL|3473805.1218|101|5|Month|  
 |NULL|2|NULL|5890708.5198|101|5|Month|  
-|NULL|NULL|1|9220000.2675|011|6|日|  
+|NULL|NULL|@shouldalert|9220000.2675|011|6|日|  
 |NULL|NULL|2|144513.3741|011|6|日|  
 |NULL|NULL|NULL|9364513.6416|111|7|総計|  
   
 ## <a name="see-also"></a>参照  
- [グループ化と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/grouping-transact-sql.md)   
- [GROUP BY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-group-by-transact-sql.md)  
+ [GROUPING &#40;Transact-SQL&#41;](../../t-sql/functions/grouping-transact-sql.md)   
+ [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "- (減算)(TRANSACT-SQL) |Microsoft ドキュメント"
+title: "- (減算) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="--subtraction-transact-sql"></a>-(減算) (TRANSACT-SQL)
+# <a name="--subtraction-transact-sql"></a>- (減算) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   2 つの値で減算を行います (算術減算演算子)。 日付から日数を減算することもできます。  
@@ -50,7 +50,7 @@ expression - expression
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)、数値のデータ型のいずれかのデータ型に分類を除く、**ビット**データ型。 は使用できません**日付**、**時間**、 **datetime2**、または**datetimeoffset**データ型。  
+ 数値のデータ型カテゴリのいずれかのデータ型の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。ただし、**bit** 型は除きます。 **date**、**time**、**datetime2**、または **datetimeoffset** データ型と共に使用することはできません。  
   
 ## <a name="result-types"></a>戻り値の型  
  優先順位が高い引数のデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
@@ -60,7 +60,7 @@ expression - expression
 ### <a name="a-using-subtraction-in-a-select-statement"></a>A. SELECT ステートメント内で減算を使用する  
  次の例では、最高税率の州または郡と最低税率の州または郡の間の税率の違いを計算します。  
   
- **適用されます**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
 ```  
 -- Uses AdventureWorks  
@@ -74,7 +74,7 @@ GO
  実行順序は、かっこを使用して変更できます。 かっこ内の計算は、先に評価されます。 かっこが入れ子にされている場合は、最も深く入れ子にされた計算が優先されます。  
   
 ### <a name="b-using-date-subtraction"></a>B. 日付の減算を使用する  
- 次の例からの日数を減算し、`datetime`日付。  
+ 次の例では、`datetime` 型の日付から日数を減算します。  
   
  適用対象: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
@@ -96,10 +96,10 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
  (1 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-subtraction-in-a-select-statement"></a>C: は、SELECT ステートメント内で減算を使用します。  
- 次の例からの最高の基本のレートで従業員と最低税率の従業員の違いを基本のレートでの計算、`dimEmployee`テーブル。  
+### <a name="c-using-subtraction-in-a-select-statement"></a>C. SELECT ステートメント内で減算を使用する  
+ 次の例では、基本給が最高の従業員と最低税率の従業員の間の基本給の差異を `dimEmployee` テーブルから計算します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -109,12 +109,12 @@ FROM DimEmployee;
 ```  
   
 ## <a name="see-also"></a>参照  
- [-= (& a) #40 です。減算代入 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
- [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)  
- [算術演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   
- [-(& a) #40 です。負の値&#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/unary-operators-negative.md)   
+ [-= &#40;減算&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
+ [複合演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [算術演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   
+ [- &#40;負の値&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/unary-operators-negative.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
   

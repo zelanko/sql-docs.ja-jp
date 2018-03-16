@@ -44,7 +44,7 @@ ms.lasthandoff: 01/25/2018
 プラン キャッシュからすべての要素を削除するか、プラン ハンドルまたは SQL ハンドルを指定して特定のプランを削除するか、指定したリソース プールに関連付けられたすべてのキャッシュ エントリを削除します。
 
 >[!NOTE]
->DBCC FREEPROCCACHE では、ネイティブ コンパイル ストアド プロシージャの実行統計は消去されません。 プロシージャ キャッシュには、ネイティブ コンパイル ストアド プロシージャに関する情報は含まれていません。 プロシージャの実行から収集された実行統計は、実行統計の Dmv に表示されます: [sys.dm_exec_procedure_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)と[sys.dm_exec_query_plan &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
+>DBCC FREEPROCCACHE では、ネイティブ コンパイル ストアド プロシージャの実行統計は消去されません。 プロシージャ キャッシュには、ネイティブ コンパイル ストアド プロシージャに関する情報は含まれていません。 プロシージャの実行から収集された実行統計は、実行統計の DMV に表示されます。「[sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)」と「[sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)」を参照してください。  
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,7 +55,7 @@ SQL Server の構文:
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
-Azure SQL Data Warehouse と並列データ ウェアハウスの構文:
+Azure SQL Data Warehouse と Parallel Data Warehouse の構文:
   
 ```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 
@@ -65,21 +65,21 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
 ## <a name="arguments"></a>引数  
  ( { *plan_handle* | *sql_handle* | *pool_name* } )  
-*plan_handle*を既に実行されていて、そのプランがプラン キャッシュに存在するバッチのクエリ プランを一意に識別します。 *plan_handle*は**varbinary (64)**され、次の動的管理オブジェクトから取得できます。  
+*plan_handle* は、既に実行されていて、そのプランがプラン キャッシュに格納されているバッチのクエリ プランを一意に識別します。 *plan_handle* は **varbinary(64)** 型であり、次の動的管理オブジェクトから取得できます。  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
-*sql_handle*が消去されるバッチの SQL ハンドルです。 *sql_handle*は**varbinary (64)**され、次の動的管理オブジェクトから取得できます。  
+*sql_handle* は、削除するバッチの SQL ハンドルです。 *sql_handle* は **varbinary(64)** 型であり、次の動的管理オブジェクトから取得できます。  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
  -   [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
-*pool_name*リソース ガバナー リソース プールの名前を指定します。 *pool_name*は**sysname**とクエリを実行して取得できます、 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)動的管理ビュー。  
- 関連付けるには、リソース ガバナー ワークロード グループをリソース プールに、クエリ、 [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)動的管理ビュー。 セッションのワークロード グループについては、クエリ、 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)動的管理ビュー。  
+*pool_name* は、Resource Governor リソース共有元の名前です *pool_name* は **sysname** 型であり、[sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 動的管理ビューに対してクエリを実行して取得できます。  
+ Resource Governor ワークロード グループをリソース共有元に関連付けるには、[sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 動的管理ビューに対してクエリを実行します。 セッションのワークロード グループの情報を表示するには、[sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 動的管理ビューに対してクエリを実行します。  
 
   
  WITH NO_INFOMSGS  
@@ -89,15 +89,15 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
  すべての計算ノードには、クエリ プランのキャッシュを削除します。 これが既定値です。  
   
  ALL  
- 各計算ノードおよび [管理] ノードからは、クエリ プランのキャッシュを消去します。  
+ 各計算ノードと各制御ノードからクエリ プラン キャッシュを消去します。  
 
 > [!NOTE]
-> 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、`ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`スコープ内のデータベースのプロシージャ (プラン) キャッシュをクリアします。
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降は、`ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` を使用してスコープ内のデータベースのプロシージャ (プラン) キャッシュをクリアします。
 
-## <a name="remarks"></a>解説  
-DBCC FREEPROCCACHE を使用してプラン キャッシュをクリアする際には注意が必要です。 以前にキャッシュされたプランを再使用せず、プロシージャ キャッシュとすべてのプランを削除して受信したクエリの実行は、新しいプランをコンパイル (プラン) を消去しています。 
+## <a name="remarks"></a>Remarks  
+DBCC FREEPROCCACHE を使用してプラン キャッシュをクリアする際には注意が必要です。 プロシージャ (プラン) キャッシュをクリアすると、すべてのプランが削除されます。その後にクエリを実行すると、以前にキャッシュされたプランは再利用されず、新しいプランがコンパイルされます。 
 
-これには、突然、一時的なクエリのパフォーマンス低下数の新しいコンパイル数の増加として可能性があります。 各キャッシュ ストアが消去、プラン キャッシュ内の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー ログには、次の情報メッセージにが含まれます"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キャッシュ ストアのために '%s' キャッシュ ストア (プラン キャッシュの一部) のフラッシュを %d 個検出が発生しました ' DBCC。FREEPROCCACHE' または ' DBCC FREESYSTEMCACHE' 操作です"。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
+そのため、新しいコンパイルの数が増えると、クエリのパフォーマンスが突然一時的に低下する可能性があります。 プラン キャッシュ内のキャッシュストアがクリアされるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、'DBCC FREEPROCCACHE' 操作または 'DBCC FREESYSTEMCACHE' 操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました。" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
 
 次の再構成操作でもプロシージャ キャッシュはクリアされます。
 -   access check cache bucket count  
@@ -118,35 +118,35 @@ DBCC FREEPROCCACHE を使用してプラン キャッシュをクリアする際
 -   user options  
   
 ## <a name="result-sets"></a>結果セット  
-WITH NO_INFOMSGS 句が指定されていない場合、DBCC FREEPROCCACHE を返します:"DBCC の実行が完了しました。 DBCC がエラー メッセージを出力した場合は、システム管理者に相談してください。"
+WITH NO_INFOMSGS 句が指定されていない場合は次のメッセージが表示されます。"DBCC の実行が完了しました。 DBCC がエラー メッセージを出力した場合は、システム管理者に相談してください。"
   
-## <a name="permissions"></a>権限  
-適用されます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
+## <a name="permissions"></a>アクセス許可  
+適用対象: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - サーバーに対する ALTER SERVER STATE 権限が必要です。  
 
-適用されます。[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+適用対象: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
 - DB_OWNER 固定サーバー ロールのメンバーシップが必要です。  
 
-## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>全般的な解説[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に関する全般的な解説  
 複数の DBCC FREEPROCCACHE コマンドは、同時に実行することができます。
-[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、プラン キャッシュをクリアすることができますが発生するクエリのパフォーマンスの一時的な低下着信クエリ、新しいプランをコンパイルすると、再利用するのではなく以前キャッシュされたプランです。 
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では、プラン キャッシュをクリアすると、以前にキャッシュされたプランが再利用されず、クエリの実行で新しいプランがコンパイルされるため、、クエリのパフォーマンスが一時的に低下する可能性があります。 
 
-DBCC FREEPROCCACHE (コンピューティング) でのみ発生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンピューティング ノードで実行された場合は、クエリを再コンパイルします。 行われません[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]コントロールのノードで生成される並列クエリ プランを再コンパイルします。
+計算ノードで DBCC FREEPROCCACHE (COMPUTE) を実行する場合にのみ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でクエリが再コンパイルされます。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の場合、制御ノードで生成される並列クエリ プランの再コンパイルは実行されません。
 実行中には、DBCC FREEPROCCACHE をキャンセルできます。
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>制限事項と制約の[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-DBCC FREEPROCCACHE をトランザクション内で実行できません。
-説明文では、DBCC FREEPROCCAHCE はサポートされていません。
+## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の制限事項と制約事項  
+DBCC FREEPROCCACHE はトランザクション内で実行できません。
+DBCC FREEPROCCAHCE は EXPLAIN ステートメント内でサポートされていません。
   
-## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>メタデータを[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] のメタデータ  
 DBCC FREEPROCCACHE を実行すると、新しい行が sys.pdw_exec_requests システム ビューに追加されます。
 
-## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>例:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>例: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. プラン キャッシュから特定のクエリ プランを削除する  
-次の例では、クエリ プラン ハンドルを指定して、プラン キャッシュから特定のクエリ プランを削除します。 まず、この例のクエリがプラン キャッシュに含まれるようにするために、クエリを実行します。 `sys.dm_exec_cached_plans`と`sys.dm_exec_sql_text`動的管理ビューは、クエリのプラン ハンドルを返すクエリを実行します。 
+次の例では、クエリ プラン ハンドルを指定して、プラン キャッシュから特定のクエリ プランを削除します。 まず、この例のクエリがプラン キャッシュに含まれるようにするために、クエリを実行します。 次に、動的管理ビューの `sys.dm_exec_cached_plans` および `sys.dm_exec_sql_text` に対してクエリを実行し、このクエリのプラン ハンドルを取得します。 
 
-結果セットからプラン ハンドルの値が、挿入、`DBCC FREEPROCACHE`プラン キャッシュからそのプランのみを削除するステートメント。
+その後、結果セットのプラン ハンドルの値を `DBCC FREEPROCACHE` ステートメントに挿入して、プラン キャッシュからそのプランのみを削除します。
   
 ```sql  
 USE AdventureWorks2012;  
@@ -177,14 +177,14 @@ GO
 ```  
   
 ### <a name="b-clearing-all-plans-from-the-plan-cache"></a>B. プラン キャッシュからすべてのプランを削除する  
-次の例では、プラン キャッシュからすべての要素を削除します。 WITH`NO_INFOMSGS`を情報メッセージが表示されていることを防ぐために句を指定します。
+次の例では、プラン キャッシュからすべての要素を削除します。 WITH `NO_INFOMSGS`句を指定して、情報メッセージが表示されないようにしています。
   
 ```sql  
 DBCC FREEPROCCACHE WITH NO_INFOMSGS;  
 ```  
   
 ### <a name="c-clearing-all-cache-entries-associated-with-a-resource-pool"></a>C. リソース プールに関連付けられたすべてのキャッシュ エントリを削除する  
-次の例では、指定したリソース プールに関連付けられているすべてのキャッシュ エントリを削除します。 `sys.dm_resource_governor_resource_pools`ビューが最初の値を取得するクエリを実行*pool_name*です。
+次の例では、指定したリソース プールに関連付けられているすべてのキャッシュ エントリを削除します。 最初に、`sys.dm_resource_governor_resource_pools` ビューに対してクエリを実行し、*pool_name* の値を取得します。
   
 ```sql  
 SELECT * FROM sys.dm_resource_governor_resource_pools;  
@@ -193,7 +193,7 @@ DBCC FREEPROCCACHE ('default');
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D. DBCC FREEPROCCACHE の基本的な構文の例  
 次の例では、コンピューティング ノードからすべての既存のクエリ プラン キャッシュを削除します。 コンテキストを UserDbSales に設定すると、すべてのデータベースのコンピューティング ノードのクエリ プラン キャッシュが削除されます。 WITH NO_INFOMSGS 句では、情報メッセージが結果に表示されることを防ぎます。  

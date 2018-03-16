@@ -1,5 +1,5 @@
 ---
-title: "@@OPTIONS (TRANSACT-SQL) |Microsoft ドキュメント"
+title: '@@OPTIONS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40options-transact-sql"></a>&#x40;&#x40;ですオプション (TRANSACT-SQL)。
+# <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   現在の SET オプションに関する情報を返します。  
@@ -49,19 +49,19 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>戻り値の型  
  **整数 (integer)**  
   
-## <a name="remarks"></a>解説  
- オプションは、の使用かられることができます、**設定**コマンドから、または、 **sp_configure ユーザー オプション**値。 セッションの値で構成されている、**設定**コマンドの上書き、 **sp_configure**オプション。 多くのツール (など[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]オプションの設定を自動的に構成します。 各ユーザーが、@@OPTIONS構成を表す関数。  
+## <a name="remarks"></a>Remarks  
+ オプションは、**SET** コマンドの使用または **sp_configure ユーザー オプション**値からのものです。 **SET** コマンドで構成されているセッション値は、**sp_configure** オプションを上書きします。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] などの多数のツールによって SET オプションは自動的に構成されます。 各ユーザーには、構成を表す @@OPTIONS 関数が用意されます。  
   
- SET ステートメントを使用することにより、特定のユーザー セッションの言語とクエリ処理オプションを変更できます。 **@@OPTIONS** を ON に設定されているオプションしか検出または OFF です。  
+ SET ステートメントを使用することにより、特定のユーザー セッションの言語とクエリ処理オプションを変更できます。 **@@OPTIONS** では、ON または OFF に設定されたオプションのみを検出できます。  
   
- **@@OPTIONS** 関数には、基本 10 (10 進数) 整数に変換された、オプションのビットマップが返されます。 ビット設定が、トピックの表で説明した場所に格納されている[user options サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)です。  
+ **@@OPTIONS** 関数によって、10 進数の整数に変換された、オプションのビットマップが返されます。 ビット設定は、「[user options サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)」トピックで説明されている場所に格納されます。  
   
- デコードする、 **@@OPTIONS** 値、によって返された整数に変換**@@OPTIONS** を binary、次の表では、値を検索および[user options サーバー構成構成オプション](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)です。 たとえば場合、`SELECT @@OPTIONS;`値を返します`5496`、Windows のプログラマ電卓を使用して (**calc.exe**) 10 進数に変換する`5496`バイナリにします。 結果は `1010101111000`です。 右端の文字 (バイナリ 1、2、および 4) が 0 の場合、テーブル内の最初の 3 つの項目が無効になっていることを示すです。 表を参照することを確認、 **DISABLE_DEF_CNST_CHK**と**IMPLICIT_TRANSACTIONS**、および**CURSOR_CLOSE_ON_COMMIT**です。 次の項目 (**ANSI_WARNINGS**で、`1000`位置) にします。 ただしビット マップで作業左を続行し、オプションの一覧で下向きのです。 一番左にあるオプションが 0 の場合は、型変換によって切り捨てられます。 ビットマップ `1010101111000` は実際は `001010101111000` であり、全部で 15 個のオプションを表しています。  
+ **@@OPTIONS** 値をデコードするには、**@@OPTIONS** によって返された整数をバイナリに変換し、その値を「[user options サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)」の表で検索します。 たとえば、`SELECT @@OPTIONS;` によって値 `5496` が返された場合、Windows のプログラマ電卓 (**calc.exe**) を使用して、10 進数の `5496` をバイナリに変換します。 結果は `1010101111000`です。 右端の文字 (バイナリ 1、2、および 4) は 0 で、テーブル内の最初の 3 つの項目がオフであることを示します。 表を見ると、これらは **DISABLE_DEF_CNST_CHK**、**IMPLICIT_TRANSACTIONS**、**CURSOR_CLOSE_ON_COMMIT** であることがわかります。 次の項目 (`1000` 位置の **ANSI_WARNINGS**) はオンです。 ビットマップを左へ、オプションの一覧を下へ見ていきます。 左端のオプションが 0 の場合、これらは型変換によって切り捨てられています。 ビットマップ `1010101111000` は実際は `001010101111000` であり、全部で 15 個のオプションを表しています。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-demonstration-of-how-changes-affect-behavior"></a>A. 変更が動作に与える影響の例  
- 次の例での 2 つの異なる設定による連結動作の違い、 **CONCAT_NULL_YIELDS_NULL**オプション。  
+ 次の例では、**CONCAT_NULL_YIELDS_NULL** オプションの 2 つの異なる設定による連結動作の違いを示します。  
   
 ```  
 SELECT @@OPTIONS AS OriginalOptionsValue;  
@@ -73,7 +73,7 @@ SELECT 'abc' + NULL AS ResultWhen_ON, @@OPTIONS AS OptionsValueWhen_ON;
 ```  
   
 ### <a name="b-testing-a-client-nocount-setting"></a>B. クライアントの NOCOUNT 設定のテスト  
- 次の例のセット`NOCOUNT``ON`の値をテストし、その`@@OPTIONS`です。 `NOCOUNT``ON`オプションを使用するセッションで各ステートメントについて、要求するクライアントに送信されるの影響を受ける行数に関するメッセージが表示されます。 `@@OPTIONS` の値は、`512` (0x0200) に設定されます。 これは NOCOUNT オプションを表します。 この例では、クライアントで NOCOUNT オプションが有効になっているかどうかを調べます。 たとえば、これはクライアントにおけるパフォーマンスの違いを調べるのに役立ちます。  
+ 次の例では、`NOCOUNT``ON` を設定し、`@@OPTIONS` の値を調べます。 `NOCOUNT``ON` オプションは、セッションで実行するすべてのステートメントごとに、要求するクライアントに対して影響を受ける行数に関するメッセージを戻さないようにします。 `@@OPTIONS` の値は、`512` (0x0200) に設定されます。 これは NOCOUNT オプションを表します。 この例では、クライアントで NOCOUNT オプションが有効になっているかどうかを調べます。 たとえば、これはクライアントにおけるパフォーマンスの違いを調べるのに役立ちます。  
   
 ```  
 SET NOCOUNT ON  

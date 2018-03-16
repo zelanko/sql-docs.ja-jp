@@ -1,5 +1,5 @@
 ---
-title: "DECRYPTBYCERT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DECRYPTBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,31 +50,31 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>引数  
  *certificate_ID*  
- データベース内の証明書の ID を指定します。 *証明書*_id のデータ型は**int**です。  
+ データベース内の証明書の ID を指定します。 certificate_ID *は int*です。  
   
- *暗号化テキスト*  
+ *ciphertext*  
  証明書の公開キーで暗号化されているデータの文字列を指定します。  
   
  @ciphertext  
- 型の変数は、 **varbinary**証明書で暗号化されたデータが含まれます。  
+ 証明書を使用して暗号化されているデータを含む **varbinary** 型の変数を指定します。  
   
  *cert_password*  
  証明書の秘密キーの暗号化に使用されたパスワードを指定します。 Unicode であることが必要です。  
   
  @cert_password  
- 型の変数は、 **nchar**または**nvarchar**証明書の秘密キーの暗号化に使用されたパスワードを格納しています。 Unicode であることが必要です。  
+ 証明書のプライベート キーを暗号化するために指定されたパスワードを含む **nchar** または **nvarchar** を指定します。 Unicode であることが必要です。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** 8,000 バイトの最大サイズ。  
+ varbinary** 8,000 バイトの最大サイズ。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数では、証明書の秘密キーを使ってデータの暗号化を解除します。 非対称キーを使用する暗号化変換では、リソースが大幅に消費されます。 このため、ユーザー データを日常的に暗号化する場合、EncryptByCert および DecryptByCert は適切ではありません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  証明書に対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例から行を選択する`[AdventureWorks2012].[ProtectedData04]`とマークされている`data encrypted by certificate JanainaCert02`です。 例では、証明書の秘密キーで暗号化を解除する`JanainaCert02`、まず、証明書のパスワードを使用して復号化`pGFD4bb925DGvbd2439587y`です。 復号化されたデータを変換**varbinary**に**nvarchar**です。  
+ 次の例では、`[AdventureWorks2012].[ProtectedData04]` とマークされた `data encrypted by certificate JanainaCert02` から行を選択し、 証明書 `JanainaCert02` の秘密キーを使って暗号化を解除します。最初に証明書のパスワード `pGFD4bb925DGvbd2439587y` を使って証明書の暗号化を解除する必要があります。 復号化されたデータを変換 varbinary **に nvarchar**です。  
   
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  
@@ -86,10 +86,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ENCRYPTBYCERT および #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/encryptbycert-transact-sql.md)   
+ [ENCRYPTBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbycert-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [証明書 &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

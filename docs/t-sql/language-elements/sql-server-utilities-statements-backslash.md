@@ -1,5 +1,5 @@
 ---
-title: "円記号 (行の連結) (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "円記号 (行の連結) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -44,10 +44,10 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="backslash-line-continuation-transact-sql"></a>円記号 (行の連結) (TRANSACT-SQL)
+# <a name="backslash-line-continuation-transact-sql"></a>円記号 (行の連結) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-`\`長い文字列定数、文字またはバイナリを読みやすくするための 2 つ以上の行に分割します。  
+`\` は、読みやすくするために、長い文字列定数、文字、またはバイナリを複数の行に改行します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,20 +59,20 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>引数  
- \<文字列の最初のセクション >  
+ \<文字列の最初のセクション>  
  文字列の先頭を指定します。  
   
- \<文字列のセクションの続き >  
+ \<文字列の継続するセクション>  
  文字列の 2 行目以降を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このコマンドは、文字列の 1 行目と 2 行目以降を 1 つの文字列として、円記号を含めずに返します。  
 
 ## <a name="examples"></a>使用例  
 
-### <a name="a-splitting-a-character-string"></a>A. 文字の文字列の分割  
+### <a name="a-splitting-a-character-string"></a>A. 文字列を分割する  
 
-次の例では、円記号と復帰を使用して、2 つの行に、文字の文字列を分割します。  
+次の例では、円記号と復帰を使用して文字列を 2 行に分けます。  
   
 ```  
 SELECT 'abc\  
@@ -88,9 +88,9 @@ def' AS [ColumnResult];
  abcdef
  ```    
 
-### <a name="b-splitting-a-binary-string"></a>B. バイナリ文字列の分割  
+### <a name="b-splitting-a-binary-string"></a>B. バイナリ文字列を分割する  
 
-次の例では、円記号と復帰を使用して、バイナリ文字列を 2 つの行に分割します。  
+次の例では、円記号と復帰を使用してバイナリ文字列を 2 行に分けます。  
 
 ```  
 SELECT 0xabc\  
@@ -109,9 +109,9 @@ def AS [ColumnResult];
 ## <a name="see-also"></a>参照  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
- [& # #40; 除算 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/divide-transact-sql.md)   
- [& # #40; 除算代入 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/divide-equals-transact-sql.md)   
- [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [&#40;除算&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-transact-sql.md)   
+ [&#40;除算代入&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [複合演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   

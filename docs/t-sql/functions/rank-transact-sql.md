@@ -1,5 +1,5 @@
 ---
-title: "順位 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: RANK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/25/2016
 ms.prod: sql-non-specified
@@ -39,10 +39,10 @@ ms.lasthandoff: 11/21/2017
 
   結果セットのパーティション内の各行の順位を返します。 行の順位は、その行より上にある順位の数に 1 を加えたものです。  
 
-  ROW_NUMBER とランク似ています。 (たとえば 1、2、3、4, 5)、すべて ROW_NUMBER 番号は順番に行です。 ランクは、(たとえば 1、2、2、4, 5) 同順位の数値を提供します。   
+  ROW_NUMBER と RANK は似ています。 ROW_NUMBER は、すべての行に順番に番号を付けます (例: 1、2、3、4、5)。 RANK は同順位に対して同じ番号を付けます (例: 1、2、2、4、5)。   
   
 > [!NOTE]
-> ランクは、一時的な値は、クエリの実行時に計算されます。 テーブル内の数字を保持するため、次を参照してください。 [IDENTITY プロパティ](../../t-sql/statements/create-table-transact-sql-identity-property.md)と[シーケンス](../../t-sql/statements/create-sequence-transact-sql.md)です。 
+> RANK は、クエリの実行時に計算される一時的な値です。 テーブル内の番号を保持するには、「[IDENTITY プロパティ](../../t-sql/statements/create-table-transact-sql-identity-property.md)」と「[SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)」をご覧ください。 
    
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,13 +53,13 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ```  
   
 ## <a name="arguments"></a>引数  
- 経由で**(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause*関数を適用するパーティションに FROM 句で生成される結果セットに分割します。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause*関数が適用される前に、データの順序を決定します。 *Order_by_clause*が必要です。 \<行または範囲句 > RANK 関数の over 句を指定することはできません。 詳細については、次を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* は、関数を適用する前にデータの順序を決定します。 *order_by_clause* は必須です。 OVER 句の \<rows or range clause> は、RANK 関数では指定できません。 詳しくは、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」をご覧ください。  
   
 ## <a name="return-types"></a>戻り値の型  
  **bigint**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  複数の行が 1 つの順位を分け合う場合は、それぞれの行に同じ順位が付けられます。 たとえば、上位 2 人の販売員の SalesYTD 値が同じである場合は、両方に順位 1 が付けられます。 SalesYTD が次に高い販売員には、順位 3 が付けられます。順位のより高い行が 2 つあるためです。 そのため、RANK 関数は連続した整数を返すとは限りません。  
   
  クエリ全体に使用される並べ替え順によって、結果セットにおける行の順序が決まります。  
@@ -135,10 +135,10 @@ BusinessEntityID Rate                  RankBySalary
 10               42.4808               9  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-ranking-rows-within-a-partition"></a>C:、パーティション内の行に順位付け  
- 次の例では、売上合計に応じて販売区域ごとの販売担当者がランク付けします。 行セットは `SalesTerritoryGroup` によってパーティション分割され、`SalesAmountQuota` によって並べ替えられます。  
+### <a name="c-ranking-rows-within-a-partition"></a>C: パーティション内の行に順位を付ける  
+ 次の例では、売上合計に応じて販売区域ごとに販売担当者をランク付けします。 行セットは `SalesTerritoryGroup` によってパーティション分割され、`SalesAmountQuota` によって並べ替えられます。  
   
 ```  
 -- Uses AdventureWorks  
@@ -174,10 +174,10 @@ Pak               10514000.0000  United Kingdom       1
 ```  
   
 ## <a name="see-also"></a>参照  
- [DENSE_RANK &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/dense-rank-transact-sql.md)   
- [ROW_NUMBER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/row-number-transact-sql.md)   
- [NTILE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ntile-transact-sql.md)   
- [順位付け関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)   
+ [順位付け関数 &#40;TRANSACT-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

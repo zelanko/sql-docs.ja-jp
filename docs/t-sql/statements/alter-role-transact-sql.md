@@ -1,5 +1,5 @@
 ---
-title: "ALTER ロール (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -38,10 +38,10 @@ ms.lasthandoff: 01/02/2018
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  追加またはデータベース ロールのメンバーを削除するか、ユーザー定義データベース ロールの名前を変更します。  
+  データベース ロールのメンバーを追加または削除するか、ユーザー定義のデータベース ロールの名前を変更します。  
   
 > [!NOTE]  
->  内のロールを変更する[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]を使用して[sp_addrolemember &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)と[sp_droprolemember &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md).  
+>  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] のロールを変更するには、[sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) と [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) を使用します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,51 +71,51 @@ ALTER ROLE role_name
   
 ## <a name="arguments"></a>引数  
  *role_name*  
- **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  変更するデータベース ロールを指定します。  
   
- メンバーの追加*database_principal*l  
- **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ ADD MEMBER *database_principal*l  
+ **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- データベース ロールのメンバーシップをデータベース プリンシパルを追加するように指定します。  
+ データベース ロールのメンバーシップにデータベース プリンシパルを追加することを指定します。  
   
--   *database_principal*がデータベース ユーザーまたはユーザー定義データベース ロール。  
+-   *database_principal* はデータベース ユーザーまたはユーザー定義データベース ロールです。  
   
--   *database_principal*固定データベース ロールまたはサーバー プリンシパルにすることはできません。  
+-   *database_principal* には固定データベース ロールまたはサーバー プリンシパルは指定できません。  
   
 DROP MEMBER *database_principal*  
- **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- データベース ロールのメンバーシップから、データベース プリンシパルを削除するように指定します。  
+ データベース ロールのメンバーシップからデータベース プリンシパルを削除することを指定します。  
   
--   *database_principal*がデータベース ユーザーまたはユーザー定義データベース ロール。  
+-   *database_principal* はデータベース ユーザーまたはユーザー定義データベース ロールです。  
   
--   *database_principal*固定データベース ロールまたはサーバー プリンシパルにすることはできません。  
+-   *database_principal* には固定データベース ロールまたはサーバー プリンシパルは指定できません。  
   
-NAME = *new_name*  
- **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+WITH NAME = *new_name*  
+ **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- ユーザー定義データベース ロールの名前を変更することを指定します。 新しい名前は、データベースに既に存在する必要があります。  
+ ユーザー定義データベース ロールの名前を変更することを指定します。 データベース内に存在しない新しい名前を指定してください。  
   
  データベース ロールの名前を変更しても、ロールの ID 番号、所有者、権限は変わりません。  
   
 ## <a name="permissions"></a>アクセス許可  
- このコマンドを実行するには、1 つ以上のこれらの権限またはメンバーシップが必要。  
+ このコマンドを実行するには、以下の権限またはメンバーシップの 1 つ以上が必要です。  
   
--   **ALTER**ロールに対する権限  
--   **ALTER ANY ROLE**データベースに対する権限  
--   メンバーシップ、 **db_securityadmin**固定データベース ロール  
+-   ロールに対する **ALTER** 権限  
+-   データベースに対する **ALTER ANY ROLE** 権限  
+-   **db_securityadmin** 固定データベース ロールのメンバーシップ  
   
-さらに、固定データベース ロールのメンバーシップを変更する必要があります。  
+また、固定データベース ロールのメンバーシップを変更するには以下が必要です。  
   
--   メンバーシップ、 **db_owner**固定データベース ロール  
+-   **db_owner** 固定データベース ロールのメンバーシップ  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- 固定データベース ロールの名前を変更することはできません。  
+ 固定データベース ロールの名前は変更できません。  
   
 ## <a name="metadata"></a>メタデータ  
- これらのシステム ビューは、データベース ロールとデータベース プリンシパルに関する情報を格納します。  
+ これらのシステム ビューには、データベース ロールとデータベース プリンシパルに関する情報が格納されます。  
   
 -   [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)  
   
@@ -123,19 +123,19 @@ NAME = *new_name*
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-change-the-name-of-a-database-role"></a>A. データベース ロールの名前を変更します。  
- **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+### <a name="a-change-the-name-of-a-database-role"></a>A. データベース ロールの名前の変更  
+ **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- 次の例は、ロールの名前を変更`buyers`に`purchasing`です。 [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ 次の例では、ロール `buyers` の名前を `purchasing` に変更します。 [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
 ```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
 ```  
   
-### <a name="b-add-or-remove-role-members"></a>B. 追加またはロールのメンバーを削除します。  
- **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+### <a name="b-add-or-remove-role-members"></a>B. ロール メンバーの追加または削除  
+ **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- この例は、という名前のデータベース ロールを作成`Sales`です。 メンバーシップ、Barry をという名前のデータベース ユーザーを追加し、Barry のメンバーを削除する方法を示します。 [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ この例では、`Sales` という名前のデータベース ロールを作成します。 メンバーシップに Barry という名前のデータベース ユーザーを追加してから、メンバー Barry を削除する方法を示します。 [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
 ```sql  
 CREATE ROLE Sales;  
@@ -144,9 +144,9 @@ ALTER ROLE Sales DROP MEMBER Barry;
 ```  
   
 ## <a name="see-also"></a>参照  
- [ROLE &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [DROP ROLE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-role-transact-sql.md)   
+ [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  

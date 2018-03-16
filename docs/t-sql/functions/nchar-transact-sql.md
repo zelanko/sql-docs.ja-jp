@@ -1,5 +1,5 @@
 ---
-title: "NCHAR (TRANSACT-SQL) |Microsoft ドキュメント"
+title: NCHAR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -47,16 +47,16 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>引数  
  *integer_expression*  
- データベースの照合順序に補助文字 (SC) フラグが含まれない場合、これは 0 ～ 65535 (0 ～ 0xFFFF) の正の整数です。 この範囲外の値を指定すると、NULL が返されます。 補助文字の詳細については、次を参照してください。 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)です。  
+ データベースの照合順序に補助文字 (SC) フラグが含まれない場合、これは 0 ～ 65535 (0 ～ 0xFFFF) の正の整数です。 この範囲外の値を指定すると、NULL が返されます。 補助文字の詳細については、次を参照してください。 [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)です。  
   
  データベースの照合順序が補助文字 (SC) フラグをサポートする場合、これは 0 ～ 1114111 (0 ～ 0x10FFFF) の正の整数です。 この範囲外の値を指定すると、NULL が返されます。  
   
 ## <a name="return-types"></a>戻り値の型  
- **nchar (1)**ときに既定のデータベース照合順序が補助文字をサポートされません。  
+ 既定のデータベースの照合順序が補助文字をサポートしない場合は **nchar(1)**。  
   
- **nvarchar (2)**既定のデータベース照合順序が補助文字をサポートしているときにします。  
+ 既定のデータベースの照合順序が補助文字をサポートする場合は **nvarchar(2)**。  
   
- 場合、パラメーター*であれば、任意*が 0 ~ 0 xffff の範囲内にある 1 つだけの文字が返されます。 値が大きい場合、NCHAR は対応するサロゲート ペアを返します。 `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)` を使用してサロゲート ペアを作成しないでください。 代わりに、補助文字をサポートするデータベース照合順序を使用し、サロゲート ペアの Unicode コード ポイントを指定します。 次の例では、サロゲート ペアを作成する古いスタイルの方法と、Unicode コード ポイントを指定する推奨される方法の両方を示します。  
+ パラメーター *integer_expression* が 0 ～ 0 xFFFF の範囲内にある場合、1 つの文字だけが返されます。 値が大きい場合、NCHAR は対応するサロゲート ペアを返します。 `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)` を使用してサロゲート ペアを作成しないでください。 代わりに、補助文字をサポートするデータベース照合順序を使用し、サロゲート ペアの Unicode コード ポイントを指定します。 次の例では、サロゲート ペアを作成する古いスタイルの方法と、Unicode コード ポイントを指定する推奨される方法の両方を示します。  
   
 ```  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
@@ -93,7 +93,7 @@ GO
 ```  
   
 ### <a name="b-using-substring-unicode-convert-and-nchar"></a>B. SUBSTRING、UNICODE、CONVERT、および NCHAR を使用する  
- 次の例では、 `SUBSTRING`、 `UNICODE`、 `CONVERT`、および`NCHAR`関数は文字番号、Unicode 文字、および文字列内の各文字の UNICODE 値を印刷する`København`です。  
+ 次の例では、`SUBSTRING` 関数、`UNICODE` 関数、`CONVERT` 関数、および `NCHAR` 関数を使用して、`København` という文字列の中の各文字の文字番号、Unicode 文字、および UNICODE 値を出力します。  
   
 ```  
 -- The @position variable holds the position of the character currently  
@@ -219,11 +219,11 @@ Character # Unicode Character UNICODE Value
 ```  
   
 ## <a name="see-also"></a>参照  
- [ASCII &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ascii-transact-sql.md)  
- [CHAR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/char-transact-sql.md)  
- [UNICODE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/unicode-transact-sql.md)  
+ [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
+ [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
+ [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)   
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "= (代入演算子) (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "= (代入演算子) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-assignment-operator-transact-sql"></a>= (代入演算子) (TRANSACT-SQL)
+# <a name="-assignment-operator-transact-sql"></a>= (代入演算子) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] の代入演算子は等号 (=) だけです。 次の例では、`@MyCounter` 変数を作成した後、代入演算子によって、`@MyCounter` を式で返される値に設定します。  
@@ -42,7 +42,7 @@ DECLARE @MyCounter INT;
 SET @MyCounter = 1;  
 ```  
   
- 代入演算子を使用すると、列見出しと、列の値を定義する式との関係を設定することもできます。 次の例には、列見出しが表示されて`FirstColumnHeading`と`SecondColumnHeading`です。 文字列`xyz`に表示される、`FirstColumnHeading`すべての行の列見出し。 次に、各製品 ID が、`Product`で一覧されているテーブル、`SecondColumnHeading`列見出し。  
+ 代入演算子を使用すると、列見出しと、列の値を定義する式との関係を設定することもできます。 次の例では、列見出しの `FirstColumnHeading` と `SecondColumnHeading` を表示します。 ここでは、すべての行の `xyz` 列見出しに文字列 `FirstColumnHeading` が表示され、 続けて、`Product` テーブルの各製品 ID が `SecondColumnHeading` 列見出しに一覧表示されます。  
   
 ```  
 -- Uses AdventureWorks  
@@ -54,8 +54,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
- [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [複合演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   

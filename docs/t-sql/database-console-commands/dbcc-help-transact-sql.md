@@ -1,5 +1,5 @@
 ---
-title: "DBCC HELP (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC HELP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -59,7 +59,7 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 ## <a name="result-sets"></a>結果セット  
 DBCC HELP は、指定された DBCC コマンドの構文を示す結果セットを返します。
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールのメンバーシップが必要です。
   
 ## <a name="examples"></a>使用例  

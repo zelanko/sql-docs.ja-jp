@@ -1,5 +1,5 @@
 ---
-title: "SCOPE_IDENTITY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SCOPE_IDENTITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/06/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  同じスコープ内の ID 列に挿入された最後の ID 値を返します。 スコープは、ストアド プロシージャ、トリガー、関数、バッチのいずれかのモジュールです。 したがって、2 つのステートメントが同じストアド プロシージャ、関数、またはバッチである場合は、同じスコープ内ではです。  
+  同じスコープ内の ID 列に挿入された最後の ID 値を返します。 スコープは、ストアド プロシージャ、トリガー、関数、バッチのいずれかのモジュールです。 したがって、2 つのステートメントが同じストアド プロシージャ、関数、またはバッチ内にある場合、これらのステートメントのスコープは同じになります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,23 +50,23 @@ SCOPE_IDENTITY()
 ## <a name="return-types"></a>戻り値の型  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>解説  
- SCOPE_IDENTITY、IDENT_CURRENT、および @@IDENTITY id 列に挿入される値を返すという同様の機能は、します。  
+## <a name="remarks"></a>Remarks  
+ SCOPE_IDENTITY、IDENT_CURRENT、および @@IDENTITY は、ID 列に挿入された値を返すという点で似ています。  
   
- IDENT_CURRENT はスコープとセッションには限定されませんが、特定のテーブルに限定されます。 IDENT_CURRENT では、任意のセッションとスコープ内の特定のテーブルに対して生成された値が返されます。 詳細については、次を参照してください。 [IDENT_CURRENT (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ident-current-transact-sql.md).  
+ IDENT_CURRENT はスコープとセッションには限定されませんが、特定のテーブルに限定されます。 IDENT_CURRENT では、任意のセッションとスコープ内の特定のテーブルに対して生成された値が返されます。 詳しくは、「[IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)」をご覧ください。  
   
- SCOPE_IDENTITY と @@IDENTITYは任意のテーブルで、現在のセッションで生成した最後の id 値を返します。 ただし、SCOPE_IDENTITY は、現在のスコープ内でのみ挿入された値を返します@@IDENTITYは、特定のスコープに限定されません。  
+ SCOPE_IDENTITY と @@IDENTITY では、現在のセッション内の任意のテーブルで生成された最後の ID 値が返されます。 ただし、SCOPE_IDENTITY で返される値は、現在のスコープ内で挿入された値に限られます。@@IDENTITY の場合は、特定のスコープに限定されません。  
   
  たとえば、T1 と T2 の 2 つのテーブルがあるとし、INSERT トリガーが T1 で定義されているとします。 T1 に行が挿入されると、トリガーが起動し、T2 に行を挿入します。 このシナリオでは、T1 上での挿入と、トリガーの結果として得られる T2 上での挿入という、2 つのスコープがあります。  
   
- 想定される T1 と T2 の両方が id 列をある@IDENTITYSCOPE_IDENTITY は、T1 で INSERT ステートメントの最後に異なる値を返すとします。 @@IDENTITY現在のセッションで任意のスコープにおいて挿入された最後の id 列の値を返します。 これは、T2 で挿入された値です。 SCOPE_IDENTITY() では、T1 に挿入された IDENTITY 値を返します。 これは、同じスコープ内で発生した最後の挿入です。 SCOPE_IDENTITY() 関数は、id 列への INSERT ステートメントのスコープ内で発生する前に、関数が呼び出された場合に、null 値を返します。  
+ T1 と T2 の両方に ID 列がある場合、T1 上で INSERT ステートメントが終了すると、@@IDENTITY と SCOPE_IDENTITY によってそれぞれ異なる値が返されます。 @@IDENTITY では、現在のセッションの任意のスコープにおいて挿入された最後の ID 列の値が返されます。 これは、T2 で挿入された値です。 SCOPE_IDENTITY() では、T1 に挿入された IDENTITY 値が返されます。 これは、同じスコープ内で発生した最後の挿入です。 ID 列への INSERT ステートメントがスコープ内で発生する前に SCOPE_IDENTITY() 関数が呼び出された場合、この関数では NULL 値が返されます。  
   
  失敗したステートメントとトランザクションによって、テーブルに対する現在の ID が変更され、ID 列値に差異が生じる可能性があります。 ID 値がロールバックされることはありません。これは、テーブルに値を挿入するトランザクションがコミットされない場合でも同じです。 たとえば、INSERT ステートメントが IGNORE_DUP_KEY 違反のために失敗しても、テーブルの現在の ID 値は増分されます。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. を使用して@IDENTITYおよび SCOPE_IDENTITY をトリガーで  
- 次の例は、2 つのテーブルを作成`TZ`と`TY`とに INSERT トリガー`TZ`です。 行が挿入されるテーブルに`TZ`、トリガー (`Ztrig`) が起動し、行を挿入`TY`です。  
+### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. @@IDENTITY および SCOPE_IDENTITY をトリガーで使用する  
+ 次の例では、`TZ` と `TY` の 2 つのテーブルを作成し、`TZ` に INSERT トリガーを作成します。 テーブル `TZ` に行が挿入されると、トリガー (`Ztrig`) が起動し、`TY` に行が挿入されます。  
   
 ```sql  
 USE tempdb;  
@@ -80,7 +80,7 @@ INSERT TZ
   
 SELECT * FROM TZ;  
 ```     
-結果セット: これは、どのようなテーブル TZ です。  
+結果セット: 次に示すのはテーブル TZ の内容です。  
   
 ```  
 Z_id   Z_name  
@@ -99,7 +99,7 @@ INSERT TY (Y_name)
   
 SELECT * FROM TY;  
 ```   
-結果セット: これは、どのような TY:  
+結果セット: 次に示すのは TY の内容です。  
 ```  
 Y_id  Y_name  
 ---------------  
@@ -108,7 +108,7 @@ Y_id  Y_name
 110   elevator  
 ```  
 
-TZ をテーブルに行が挿入されたときに、TY のテーブルに行を挿入するトリガーを作成します。  
+行がテーブル TZ に挿入されるとテーブル TY に行を挿入するトリガーを作成します。  
 ```sql  
 CREATE TRIGGER Ztrig  
 ON TZ  
@@ -117,7 +117,7 @@ FOR INSERT AS
    INSERT TY VALUES ('')  
    END;  
 ```  
-トリガーを起動しを入手する id 値を確認する、@@IDENTITYおよび SCOPE_IDENTITY 関数。   
+トリガーを起動し、@@IDENTITY および SCOPE_IDENTITY 関数で取得した ID 値を確認します。   
 ```sql
 INSERT TZ VALUES ('Rosalie');  
   
@@ -139,10 +139,10 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. を使用して@IDENTITYおよび SCOPE_IDENTITY() をレプリケーションで  
- 次の例を使用する方法を示して`@@IDENTITY`と`SCOPE_IDENTITY()`のマージ レプリケーション用にパブリッシュされるデータベースに挿入します。 両方のテーブルの例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]サンプル データベース:`Person.ContactType`はパブリッシュされず`Sales.Customer`が公開します。 マージ レプリケーションでは、パブリッシュされたテーブルにトリガーを追加します。 したがって、`@@IDENTITY`ユーザー テーブルへの挿入ではなく、レプリケーション システム テーブルに挿入値を返すことができます。  
+### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. @@IDENTITY および SCOPE_IDENTITY() をレプリケーションで使用する  
+ 次の例は、マージ レプリケーション用にパブリッシュされたデータベースへの挿入で、`@@IDENTITY` および `SCOPE_IDENTITY()` を使用する方法を示しています。 例のテーブルは両方とも [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースにあります。`Person.ContactType` はパブリッシュされておらず、`Sales.Customer` はパブリッシュされています。 マージ レプリケーションでは、パブリッシュされたテーブルにトリガーを追加します。 このため、`@@IDENTITY` では、値をユーザー テーブルに挿入する代わりにレプリケーション システム テーブルに挿入して返すことができます。  
   
- `Person.ContactType`テーブルには、最大 id 値の 20 です。 このテーブルに行を挿入する場合、`@@IDENTITY` と `SCOPE_IDENTITY()` は同じ値を返します。  
+ `Person.ContactType` テーブルの ID の最大値は 20 です。 このテーブルに行を挿入する場合、`@@IDENTITY` と `SCOPE_IDENTITY()` は同じ値を返します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -163,7 +163,7 @@ SCOPE_IDENTITY
 21
 ```  
   
- `Sales.Customer`テーブルに id 値の最大値は 29483 です。 テーブルに行を挿入する場合`@@IDENTITY`と`SCOPE_IDENTITY()`異なる値を返します。 `SCOPE_IDENTITY()` は値をユーザー テーブルに挿入して返すのに対し、`@@IDENTITY` は値をレプリケーション システム テーブルに挿入して返します。 挿入した ID 値にアクセスする必要があるアプリケーションには、`SCOPE_IDENTITY()` を使用してください。  
+ `Sales.Customer` テーブルの ID の最大値は 29483 です。 このテーブルに行を挿入する場合、`@@IDENTITY` と `SCOPE_IDENTITY()` は異なる値を返します。 `SCOPE_IDENTITY()` は値をユーザー テーブルに挿入して返すのに対し、`@@IDENTITY` は値をレプリケーション システム テーブルに挿入して返します。 挿入した ID 値にアクセスする必要があるアプリケーションには、`SCOPE_IDENTITY()` を使用してください。  
   
 ```sql  
 INSERT INTO Sales.Customer ([TerritoryID],[PersonID]) VALUES (8,NULL);  

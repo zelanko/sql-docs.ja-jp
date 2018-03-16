@@ -1,5 +1,5 @@
 ---
-title: "JSON_MODIFY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: JSON_MODIFY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -41,61 +41,61 @@ JSON_MODIFY ( expression , path , newValue )
  *式 (expression)*  
  式。 通常、変数またはを JSON テキストを含む列の名前。  
   
- **JSON_MODIFY**エラーが返されます*式*有効な JSON が含まれていません。  
+ JSON_MODIFY **エラーが返されます 式** 有効な JSON が含まれていません。  
   
- *パス*  
- JSON のパスを指定する式を更新するプロパティです。
+ *path*  
+ 更新するプロパティを指定する JSON path 式。
 
- *パス*に次の構文があります。  
+ *path* の構文は次のとおりです。  
   
  `[append] [ lax | strict ] $.<json path>`  
   
--   *追加します。*  
-    によって参照される配列を新しい値を追加することを指定する省略可能な修飾子 *\<json のパス >*です。  
+-   *append*  
+    *\<json path>* によって参照されるアレイに新しい値を追加する必要があることを指定する省略可能な修飾子。  
   
--   *厳密でないです。*  
-    プロパティによって参照されることを示す *\<json のパス >*が存在する必要はありません。 プロパティが存在しない場合、JSON_MODIFY は指定されたパスに新しい値を挿入しようとします。 プロパティは、パスを挿入することはできない場合に、挿入が失敗する可能性があります。 指定しない場合は*lax*または*厳密な*、 *lax*既定モードです。  
+-   *lax*  
+    *\<json path>* によって参照されるプロパティは存在する必要がないことを指定します。 プロパティが存在しない場合、JSON_MODIFY は指定されたパスに新しい値を挿入しようとします。 パスにプロパティを挿入できない場合、挿入は失敗する可能性があります。 *lax* または *strict* の指定がない場合の既定のモードは *lax* です。  
   
--   *厳密です*  
-    プロパティによって参照されることを示す *\<json のパス >* JSON 式である必要があります。 プロパティが存在しない場合、JSON_MODIFY はエラーを返します。  
+-   *strict*  
+    *\<json path>* によって参照されるパスが JSON 式内に存在する必要があることを指定します。 プロパティが存在しない場合、JSON_MODIFY はエラーを返します。  
   
--   *\<json のパス >*  
-    更新するプロパティのパスを指定します。 詳細については、次を参照してください。 [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+-   *\<json path>*  
+    更新するプロパティのパスを指定します。 詳細については、「[JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)」を参照してください。  
   
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]し、 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]、変数の値として使用できる*パス*です。
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] では、*path* の値として変数を指定できます。
 
-**JSON_MODIFY**エラーが返されますの形式*パス*が無効です。  
+*path* の書式が有効でない場合、**JSON_MODIFY** はエラーを返します。  
   
  *newValue*  
- 指定されたプロパティの新しい値*パス*です。  
+ *path* によって指定されるプロパティの新しい値。  
   
- 厳密でないモードでは、JSON_MODIFY は、新しい値が NULL の場合に、指定したキーを削除します。  
+ lax モードでは、新しい値が NULL の場合、JSON_MODIFY は指定されたキーを削除します。  
   
-JSON_MODIFY は、値の型が NVARCHAR または VARCHAR の場合、新しい値のすべての特殊文字をエスケープします。 適切である場合、テキスト値がエスケープされていない FOR JSON、JSON_QUERY、または JSON_MODIFY によって生成された JSON を書式設定します。  
+JSON_MODIFY は、値の型が NVARCHAR または VARCHAR の場合は、新しい値のすべての特殊文字をエスケープします。 テキスト値は、FOR JSON、JSON_QUERY、または JSON_MODIFY によって生成され、適切に書式設定された JSON の場合はエスケープされません。  
   
 ## <a name="return-value"></a>戻り値  
- 更新された値を返します*式*として正しく JSON テキストを書式設定します。  
+ *expression* の更新された値を、適切に書式設定された JSON テキストとして返します。  
   
 ## <a name="remarks"></a>解説  
- JSON_MODIFY 関数では、既存のプロパティの値を更新して、新しいキーと値のペアを挿入またはモードの組み合わせに基づいており、値を提供したキーを削除することができます。  
+ JSON_MODIFY 関数を使用して、既存のプロパティの値の更新、新しいキーと値のペアの挿入、またはモードと指定された組み合わせに基づくキーの削除を実行できます。  
   
- 次の表の動作を比較して**JSON_MODIFY**厳密でないモードでは厳格モードでします。 省略可能なパス モードの仕様 (lax または strict) に関する詳細については、次を参照してください。 [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ 次の表は、lax モードと strict モードでの **JSON_MODIFY** の動作を比較します。 省略可能なパス モード (lax または strict) の指定の詳細については、「[JSON パス式 Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)」を参照してください。  
   
 |既存の値|パスが存在します。|厳密でないモード|厳格モード|  
 |--------------------|-----------------|--------------|-----------------|  
-|NULL でないです。|可|既存の値を更新します。|既存の値を更新します。|  
-|NULL でないです。|不可|指定したパスに新しいキーと値のペアを作成しようとしてください。<br /><br /> これが失敗する可能性があります。 たとえば、パスを指定する場合`$.user.setting.theme`、JSON_MODIFY がキーを挿入できません`theme`場合、`$.user`または`$.user.settings`オブジェクトが存在しないかどうかの設定は、配列またはスカラー値またはします。|Error – INVALID_PROPERTY|  
-|NULL|可|既存のプロパティを削除します。|既存の値を null に設定します。|  
-|NULL|不可|操作はありません。 最初の引数は、結果として返されます。|Error – INVALID_PROPERTY|  
+|NULL でないです。|はい|既存の値を更新します。|既存の値を更新します。|  
+|NULL でないです。|いいえ|指定したパスに新しいキーと値のペアを作成しようとします。<br /><br /> これは失敗する場合があります。 たとえば、パス `$.user.setting.theme` を指定したときに、`$.user` または `$.user.settings` オブジェクトが存在しないか、設定がアレイまたはスカラー値の場合、JSON_MODIFY はキー `theme` を挿入しません。|Error – INVALID_PROPERTY|  
+|NULL|はい|既存のプロパティを削除します。|既存の値を null に設定します。|  
+|NULL|いいえ|NO ACTION 最初の引数が結果として返されます。|Error – INVALID_PROPERTY|  
   
- 厳密でないモードでは、JSON_MODIFY は、新しいキーと値のペアを作成しようとしていますが、場合によっては失敗する可能性があります。  
+ lax モードでは、JSON_MODIFY は、新しいキーと値のペアを作成しようとしますが、その操作は、場合によっては失敗します。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="example---basic-operations"></a>例 - 基本的な操作  
- 次の例では、JSON テキストを実行する基本的な操作を示します。  
+ 次の例では、JSON テキストを使用して実行できる基本的な操作を示します。  
   
- **Query**  
+ **クエリ**  
   
 ```sql  
 
@@ -128,7 +128,7 @@ SET @info=JSON_MODIFY(@info,'append $.skills','Azure')
 PRINT @info
 ```  
   
- **[結果]**  
+ **結果**  
   
 ```json  
 {
@@ -150,10 +150,10 @@ PRINT @info
 }
 ```  
   
-### <a name="example---multiple-updates"></a>例 - 複数の更新プログラム  
- JSON_MODIFY では、1 つのプロパティを更新できます。 複数の更新プログラムを実行していれば、JSON_MODIFY の複数の呼び出しを使用できます。  
+### <a name="example---multiple-updates"></a>例 - 複数の更新  
+ JSON_MODIFY では、1 つのプロパティのみを更新できます。 複数の更新を実行する必要がある場合は、複数の JSON_MODIFY 呼び出しを使用できます。  
   
- **Query**  
+ **クエリ**  
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -167,7 +167,7 @@ SET @info=JSON_MODIFY(JSON_MODIFY(JSON_MODIFY(@info,'$.name','Mike'),'$.surname'
 PRINT @info
 ```  
   
- **[結果]**  
+ **結果**  
   
 ```json  
 {
@@ -180,10 +180,10 @@ PRINT @info
 }
 ```  
   
-### <a name="example---rename-a-key"></a>例 - 名前、キーの変更  
- 次の例では、JSON_MODIFY 関数を含む JSON テキストでは、プロパティの名前を変更する方法を示します。 最初に既存のプロパティの値を取得し、新しいキーと値のペアとして挿入できます。 古いプロパティの値を NULL に設定して、以前のキーを削除することができます。  
+### <a name="example---rename-a-key"></a>例 - キーの名前変更  
+ 次の例では、JSON_MODIFY 関数を使用して、JSON テキスト内のプロパティの名前を変更する方法を示します。 最初に、既存のプロパティの値を取得し、それを新しいキーと値のペアとして挿入できます。 次に、古いプロパティの値を NULL に設定することで、古いキーを削除できます。  
   
- **Query**  
+ **クエリ**  
   
 ```sql  
 DECLARE @product NVARCHAR(100)='{"price":49.99}'
@@ -202,7 +202,7 @@ SET @product=
 PRINT @product
 ```  
   
- **[結果]**  
+ **結果**  
   
 ```json  
 {
@@ -212,12 +212,12 @@ PRINT @product
 }
 ```  
   
- 数値型に新しい値をキャストしない、JSON_MODIFY はテキストとして扱われ、二重引用符で囲みます。  
+ 新しい値が数値型にキャストされない場合、JSON_MODIFY は、それをテキストとして処理し、二重引用符で囲みます。  
   
-### <a name="example---increment-a-value"></a>増分値の使用例  
- 次の例では、JSON_MODIFY 関数を含む JSON テキスト内のプロパティの値をインクリメントする方法を示します。 まず、既存のプロパティの値を取得し、新しいキーと値のペアとして挿入できます。 古いプロパティの値を NULL に設定して、以前のキーを削除することができます。  
+### <a name="example---increment-a-value"></a>例 - 値の増分  
+ 次の例では、JSON_MODIFY 関数を使用して、JSON テキスト内のプロパティの値を変更する方法を示します。 最初に、既存のプロパティの値を取得し、それを新しいキーと値のペアとして挿入できます。 次に、古いプロパティの値を NULL に設定することで、古いキーを削除できます。  
   
- **Query**  
+ **クエリ**  
   
 ```sql  
 DECLARE @stats NVARCHAR(100)='{"click_count": 173}'
@@ -232,7 +232,7 @@ SET @stats=JSON_MODIFY(@stats,'$.click_count',
 PRINT @stats
 ```  
   
- **[結果]**  
+ **結果**  
   
 ```json  
 {
@@ -243,9 +243,9 @@ PRINT @stats
 ```  
   
 ### <a name="example---modify-a-json-object"></a>例 - JSON オブジェクトの変更  
- JSON_MODIFY の処理、 *newValue*引数を正しく含まれている場合でもプレーン テキストとして JSON テキストを書式設定します。 その結果、関数の JSON の出力は、二重引用符で囲まれてし、次の例で示すように、すべての特殊文字をエスケープします。  
+ JSON_MODIFY では、その中に適切に書式設定された JSON テキストが含まれている場合でも、*newValue* 引数をプレーン テキストとして処理します。 その結果、次の例に示すように、この関数の JSON の出力は二重引用符で囲まれ、すべての特殊文字がエスケープされます。  
   
- **Query**  
+ **クエリ**  
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -259,7 +259,7 @@ SET @info=JSON_MODIFY(@info,'$.skills','["C#","T-SQL","Azure"]')
 PRINT @info
 ```  
   
- **[結果]**  
+ **結果**  
   
 ```json  
 {
@@ -271,9 +271,9 @@ PRINT @info
 }
 ```  
   
- 自動エスケープを回避するには、 *newValue* JSON_QUERY 関数を使用しています。 JSON_MODIFY 認識 JSON_MODIFY によって返される値が適切に値をエスケープしないために、JSON を書式設定します。  
+ 自動エスケープを回避するには、JSON_QUERY 関数を使用して *newValue* を指定します。 JSON_MODIFY は、JSON_MODIFY によって返される値が適切に書式設定された JSON であることを認識するため、値をエスケープすることはありません。  
   
- **Query**  
+ **クエリ**  
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -287,7 +287,7 @@ SET @info=JSON_MODIFY(@info,'$.skills',JSON_QUERY('["C#","T-SQL","Azure"]'))
 PRINT @info
 ```  
   
- **[結果]**  
+ **結果**  
   
 ```json  
 {
@@ -310,7 +310,7 @@ WHERE EmployeeID=17
 ```  
   
 ## <a name="see-also"></a>参照  
- [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON データ &#40;です。SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+ [JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [JSON データ &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   

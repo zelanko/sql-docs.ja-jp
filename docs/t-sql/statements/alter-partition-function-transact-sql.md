@@ -1,5 +1,5 @@
 ---
-title: "ALTER PARTITION FUNCTION (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -65,20 +65,20 @@ ALTER PARTITION FUNCTION partition_function_name()
  変更するパーティション関数の名前です。  
   
  SPLIT RANGE ( *boundary_value* )  
- 1 つのパーティションをパーティション関数に追加します。 *boundary_value*新しいパーティションの範囲を決定し、パーティション関数の既存の境界範囲と異なる必要があります。 基づく*boundary_value*、[!INCLUDE[ssDE](../../includes/ssde-md.md)]を 2 つに分割します。 既存の範囲のいずれか。 これらの 2 つの 1 つの場所、新しい*boundary_value*が存在する、新しいパーティションと見なされます。  
+ 1 つのパーティションをパーティション関数に追加します。 *boundary_value* は、新しいパーティションの範囲を決定します。boundary_value は、そのパーティション関数の既存の境界範囲と異なるようにする必要があります。 *boundary_value* に基づき、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって既存の範囲が 2 つに分割されます。 この 2 つのうち、新しい *boundary_value* の含まれる方が、新しいパーティションと見なされます。  
   
  新しいパーティションを保持するには、ファイル グループがオンラインに存在し、このパーティション関数を使用するパーティション構成によって NEXT USED とマークされている必要があります。 ファイル グループは、CREATE PARTITION SCHEME ステートメントでパーティションに割り当てられます。 CREATE PARTITION SCHEME ステートメントで必要以上のファイル グループを割り当てた (CREATE PARTITION FUNCTION ステートメントで、パーティションを含めるファイル グループよりも少ないパーティションを作成した) 場合、割り当てられていないファイル グループができ、そのうちの 1 つがパーティション構成によって NEXT USED とマークされます。 このファイル グループに、新しいパーティションが保持されます。 パーティション構成によって NEXT USED とマークされたファイル グループがない場合、新しいパーティションを保持するには、ALTER PARTITION SCHEME を使用して、ファイル グループを追加するか、既存のファイル グループを指定する必要があります。 既にパーティションを保持するファイル グループは、追加のパーティションを保持するように指定できます。 1 つのパーティション関数を複数のパーティション構成に関連付けできるので、パーティションを追加するパーティション関数を使用するには、すべてのパーティション構成に NEXT USED ファイル グループが必要です。 NEXT USED ファイル グループがない場合、パーティション構成に NEXT USED ファイル グループが存在しないというエラーが表示され、ALTER PARTITION FUNCTION が失敗します。  
   
  すべてのパーティションを同じファイル グループ内に作成した場合、最初に、そのグループが自動的に NEXT USED ファイル グループに割り当てられます。 ただし、分割操作が実行されると、指定された NEXT USED ファイル グループがなくなります。 このファイル グループは、ALTER PARITION SCHEME を使用して NEXT USED ファイル グループになるように明示的に割り当てる必要があります。そうしないと、その後の分割操作は失敗します。  
   
 > [!NOTE]  
->  列ストア インデックスでの制限: 空のパーティション分割できるは、テーブルに列ストア インデックスが存在する場合。 削除するか、この操作を実行する前に、列ストア インデックスを無効にする必要があります。  
+>  列ストア インデックスに関する制限: テーブルに列ストア インデックスが存在する場合は、空のパーティションのみを分割できます。 この操作を実行する前に、列ストア インデックスを削除するか無効にする必要があります  
   
- マージ [範囲 ( *boundary_value*)]  
- パーティションを削除し、そのパーティションに存在する任意の値を残りのパーティションのうちの 1 つにマージします。 範囲 (*boundary_value*) を削除したパーティションの値がマージされた既存の境界値にする必要があります。 最初に保持されているファイル グループ*boundary_value*や、NEXT USED プロパティでマークされている残りのパーティションによって使用されていない限りは、パーティション構成から削除します。 マージされたパーティションは、ファイル グループに最初に保持されていなかった*boundary_value*です。 *boundary_value*変数 (ユーザー定義型の変数を含む) または関数 (ユーザー定義関数を含む) を参照できる定数式です。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 式を参照することはできません。 *boundary_value*必要があります一致または、対応するパーティション分割列のデータ型に暗黙的に変換できるように、暗黙的な変換中に切り捨てられることはできませんとサイズと値の小数点以下桁数が一致しないことの対応する*input_parameter_type*です。  
+ MERGE [ RANGE ( *boundary_value*) ]  
+ パーティションを削除し、そのパーティションに存在する任意の値を残りのパーティションのうちの 1 つにマージします。 RANGE (*boundary_value*) は、既存の境界値である必要があります。ここに、削除したパーティションの値がマージされます。 *boundary_value* が最初に保持されていたファイル グループは、残りのパーティションによって使用されている場合、または NEXT USED プロパティでマークされている場合を除き、パーティション構成から削除されます。 マージされたパーティションは、*boundary_value* が最初に保持されていなかったファイル グループにあります。 *boundary_value* は定数式であり、変数 (ユーザー定義型変数を含む) または関数 (ユーザー定義関数を含む) を参照できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 式を参照することはできません。 *boundary_value* は、対応するパーティション分割列のデータ型と同じであるか、そのデータ型に暗黙的に変換できる必要があります。また、暗黙的に変換している間は、対応する *input_parameter_type* と値のサイズおよび小数点以下桁数が異なる方法で切り捨てることはできません。  
   
 > [!NOTE]  
->  列ストア インデックスでの制限: 列ストア インデックスを含む 2 つの空でないパーティションをマージすることはできません。 削除するか、この操作を実行する前に、列ストア インデックスを無効にする必要があります。  
+>  列ストア インデックスに関する制限: 列ストア インデックスを含む 2 つの空でないパーティションをマージすることはできません。 この操作を実行する前に、列ストア インデックスを削除するか無効にする必要があります  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
  常にパーティション範囲の両端に空のパーティションを残しておき、パーティションの分割 (新しいデータを読み込む前) およびパーティションのマージ (古いデータをアンロードした後) によってデータの移動が発生しないようにします。 設定されたパーティションが分割またはマージされないようにします。 これが発生すると、ログの生成が最大で 4 倍になり、大量のロックが発生する場合もあるので、きわめて非効率的になる可能性があります。  
@@ -117,7 +117,7 @@ ALTER PARTITION FUNCTION partition_function_name()
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>A. パーティション テーブルまたはパーティション インデックスの 1 つのパーティションを 2 つのパーティションに分割する  
- 次の例では、テーブルまたはインデックスを 4 つのパーティションに分割するパーティション関数を作成します。 `ALTER PARTITION FUNCTION`5 つのパーティションの集計を作成するのには、2 には、1 つのパーティションを分割します。  
+ 次の例では、テーブルまたはインデックスを 4 つのパーティションに分割するパーティション関数を作成します。 `ALTER PARTITION FUNCTION` でこれらのパーティションのうちの 1 つを 2 つに分割して、合計 5 つのパーティションを作成します。  
   
 ```sql  
 IF EXISTS (SELECT * FROM sys.partition_functions  
@@ -153,19 +153,19 @@ MERGE RANGE (100);
 ```  
   
 ## <a name="see-also"></a>参照  
- [パーティション テーブルとインデックス](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
+ [パーティション テーブルとパーティション インデックス](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [DROP PARTITION FUNCTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-partition-function-transact-sql.md)   
+ [DROP PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [ALTER PARTITION SCHEME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
- [DROP PARTITION SCHEME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
+ [ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
+ [DROP PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [sys.partition_functions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
- [sys.partition_parameters &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)   
- [sys.partition_range_values &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
- [sys.partitions および #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.partition_functions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
+ [sys.partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)   
+ [sys.partition_range_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

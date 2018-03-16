@@ -1,5 +1,5 @@
 ---
-title: "ALTER INDEX (選択的 XML インデックス) |Microsoft ドキュメント"
+title: "ALTER INDEX (選択的 XML インデックス) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/02/2018
   
 -   インデックス オプション (WITH 句)。  
   
- 選択的セカンダリ XML インデックスを変更することはできません。 詳細については、次を参照してください。 [Create、Alter、およびセカンダリ選択的 XML インデックスのドロップ](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)です。  
+ 選択的セカンダリ XML インデックスを変更することはできません。 詳しくは、「[選択的セカンダリ XML インデックスの作成、変更、および削除](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)」をご覧ください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -120,7 +120,7 @@ identifier
  *index_name*  
  変更する既存のインデックスの名前です。  
   
- *\<table_object >*  
+ *\<table_object>*  
  インデックスを作成する XML 列が含まれるテーブルを指定します。 次のどちらかの形式を使用します。  
   
 -   `database_name.schema_name.table_name`  
@@ -131,20 +131,20 @@ identifier
   
 -   `table_name`  
   
- [WITH XMLNAMESPACES **(** \<xmlnamespace_list > **)**]  
- インデックスを作成するパスで使用される名前空間の一覧を指定します。 WITH XMLNAMESPACES 句の構文の詳細については、次を参照してください。 [WITH XMLNAMESPACES &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)**]  
+ インデックスを作成するパスで使用される名前空間の一覧を指定します。 WITH XMLNAMESPACES 句の構文については、「[WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)」をご覧ください。  
   
- **(** \<Promoted_node_path_action_list > **)**  
+ FOR **(** \<promoted_node_path_action_list> **)**  
  追加または削除するインデックス付きパスの一覧です。  
   
--   **パスを追加します。** パスを追加 (ADD) するときは、CREATE SELECTIVE XML INDEX ステートメントを使用してパスを作成するときと同じ構文を使用します。 CREATE または ALTER ステートメントで指定できるパスについては、次を参照してください。[パスを指定し、選択的 XML インデックスの最適化ヒント](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)です。  
+-   **パスを追加 (ADD) します。** パスを追加 (ADD) するときは、CREATE SELECTIVE XML INDEX ステートメントを使用してパスを作成するときと同じ構文を使用します。 CREATE または ALTER ステートメントで指定できるパスについては、「[選択的 XML インデックスのパスと最適化ヒントの指定](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)」をご覧ください。  
   
--   **パスを削除します。** パスを削除 (REMOVE) するときは、作成時にパスに付けた名前を指定します。  
+-   **パスを削除 (REMOVE) します。** パスを削除 (REMOVE) するときは、作成時にパスに付けた名前を指定します。  
   
- [で**(** \<index_options > **)**]  
- 指定できますのみ\<index_options > FOR 句なし ALTER INDEX を使用するとします。 ALTER INDEX を使用してインデックスのパスを追加または削除する場合、インデックス オプションは引数として無効です。 インデックス オプションについては、次を参照してください。 [CREATE XML INDEX &#40;です。選択的 XML インデックス &#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ [WITH **(** \<index_options> **)**]  
+ \<index_options> は、ALTER INDEX を FOR 句なしで使用する場合にのみ、指定することができます。 ALTER INDEX を使用してインデックスのパスを追加または削除する場合、インデックス オプションは引数として無効です。 インデックス オプションについては、「[CREATE XML INDEX &#40;選択的 XML インデックス&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)」をご覧ください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  ALTER INDEX ステートメントを実行すると、選択的 XML インデックスが常に再構築されます。 サーバーのリソースに対するこの処理の影響を考慮してください。  
@@ -177,7 +177,7 @@ PAD_INDEX = ON;
   
 ## <a name="see-also"></a>参照  
  [選択的 XML インデックス &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
- [作成、変更、および選択的 XML インデックスを削除します。](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
+ [選択的 XML インデックスの作成、変更、および削除](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
  [選択的 XML インデックスのパスと最適化ヒントの指定](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)  
   
   

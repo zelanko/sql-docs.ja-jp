@@ -1,5 +1,5 @@
 ---
-title: "ALTER PROCEDURE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -39,9 +39,9 @@ ms.lasthandoff: 01/02/2018
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  内の CREATE PROCEDURE ステートメントを実行することによって作成された以前に作成したプロシージャ変更[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、CREATE PROCEDURE ステートメントを使用して作成した既存のプロシージャを変更します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 (TRANSACT-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -91,46 +91,46 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  *procedure_name*  
  変更するプロシージャの名前を指定します。 プロシージャ名は、 [識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。  
   
- **;** *数*  
- 既存の省略可能な整数で使用される同じ名前のプロシージャをグループ化できるように、DROP PROCEDURE ステートメントを使用して、まとめて削除できます。  
+ **;** *number*  
+ 同じ名前のプロシージャをグループ化するために使用する既存の整数を指定します (省略可能)。グループ化されたプロシージャは、DROP PROCEDURE ステートメントを使用して一度に削除できます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- **@***パラメーター*  
+ **@** *parameter*  
  プロシージャ内のパラメーターです。 パラメーターは 2,100 個まで指定できます。  
   
- [ *type_schema_name***です。** *data_type*  
+ [ *type_schema_name***.** ] *data_type*  
  パラメーターのデータ型とそれが属するスキーマを指定します。  
   
- データ型の制限については、次を参照してください。 [CREATE PROCEDURE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-procedure-transact-sql.md).  
+ データ型の制約については、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)」をご覧ください。  
   
  VARYING  
- 出力パラメーターとしてサポートされている結果セットを指定します。 このパラメーターは、ストアド プロシージャによって動的に構築され、その内容を変更ことができます。 カーソル パラメーターにのみ適用されます。 このオプションは、CLR プロシージャでは無効です。  
+ 出力パラメーターとしてサポートされている結果セットを指定します。 このパラメーターはストアド プロシージャによって動的に作成され、その内容は変化します。 カーソル パラメーターにのみ適用されます。 このオプションは、CLR プロシージャでは無効です。  
   
- *既定値*  
+ *default*  
  パラメーターの既定値です。  
   
  OUT | OUTPUT  
  パラメーターが、戻りパラメーターであることを示します。  
   
  READONLY  
- パラメーターを更新またはプロシージャの本体内で変更できないことを示します。 パラメーターの型がテーブル値型の場合は、READONLY を指定する必要があります。  
+ パラメーターをプロシージャの本体内で更新または変更できないことを示します。 パラメーターの型がテーブル値型の場合は、READONLY を指定する必要があります。  
   
  RECOMPILE  
- 示します、[!INCLUDE[ssDE](../../includes/ssde-md.md)]実行時にこの手順と、プロシージャのプランが再コンパイルをキャッシュせずします。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、このプロシージャ用のプランをキャッシュせず、実行時にプロシージャを再コンパイルします。  
   
  ENCRYPTION  
- **適用されます**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]です。  
+ **適用対象**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) および [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]で、ALTER PROCEDURE ステートメントの元のテキストを、暗号化した形式に変換することを示します。 難読化の出力内のカタログ ビューのいずれかで直接表示がない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 システム テーブルまたはデータベース ファイルへのアクセスがないユーザーは、難読化テキストを取得できません。 ただし、テキストができるように特権を持つ経由でシステム テーブルにアクセスできるか、 [DAC ポート](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)または直接データベース ファイルにアクセスします。 また、サーバー プロセスにデバッガーをアタッチできるユーザーは、実行時にメモリから元のプロシージャを取得できます。 システム メタデータへのアクセスの詳細については、次を参照してください。 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)です。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]で、ALTER PROCEDURE ステートメントの元のテキストを、暗号化した形式に変換することを示します。 暗号化した形式の出力は、カタログ ビューのいずれかで直接表示することがない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。 システム テーブルまたはデータベース ファイルへのアクセス権を持たないユーザーは、暗号化した形式のテキストを取得できません。 ただし、[DAC ポート](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)経由でシステム テーブルにアクセスする権限、または直接データベース ファイルにアクセスする権限を持っているユーザーは、このテキストを使用できます。 また、サーバー プロセスにデバッガーをアタッチできるユーザーは、実行時、元のプロシージャをメモリから取得できます。 システム メタデータのアクセス方法について詳しくは、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
- このオプションで作成されたプロシージャは、の一部としてパブリッシュできません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レプリケーション。  
+ このオプションを使って作成したプロシージャを、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションの一部として発行することはできません。  
   
  このオプションは、共通言語ランタイム (CLR) のストアド プロシージャには指定できません。  
   
 > [!NOTE]  
->  アップグレードの際、[!INCLUDE[ssDE](../../includes/ssde-md.md)]に格納されている暗号化コメントを使用して**sys.sql_modules**プロシージャが再作成します。  
+>  [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、アップグレード中に、**sys.sql_modules** に格納されている暗号化コメントにより、プロシージャが再作成されます。  
   
  EXECUTE AS  
  アクセス後にストアド プロシージャを実行するセキュリティ コンテキストを指定します。  
@@ -145,15 +145,15 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
- {[BEGIN] *sql_statement* [;][ ... *n*  ] [終了]}  
- プロシージャの本体を構成する 1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定します。 省略可能な BEGIN キーワードと END キーワードを使用して、ステートメントを囲むことができます。 詳細については、セクションを参照して、ベスト プラクティス、全般的な解説と制限事項と制約で[CREATE PROCEDURE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-procedure-transact-sql.md).  
+ { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
+ プロシージャの本体を構成する 1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定します。 省略可能な BEGIN キーワードと END キーワードを使用して、ステートメントを囲むことができます。 詳しくは、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)」の「ベスト プラクティス」、「全般的な解説」、「制限事項と制約事項」をご覧ください。  
   
- 外部名*assembly_name***.***class_name***.***メソッド名が*  
+ EXTERNAL NAME *assembly_name***.***class_name***.***method_name*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- メソッドを指定します、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR アセンブリのストアド プロシージャで参照します。 *class_name*は有効な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別子、アセンブリ内のクラスとして存在する必要があります。 名前空間で修飾された名前が、期間を使用して、クラスにある場合 (**.**) 名前空間の部分を分割する、クラス名を角かっこで区切る必要があります (**:operator[]**) または引用符 (**""**). 指定するメソッドは、クラスの静的メソッドであることが必要です。  
+ CLR ストアド プロシージャで参照する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリのメソッドを指定します。 *class_name* は、有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子であること、およびアセンブリにクラスとして存在していることが必要です。 クラス名に名前空間とその区切り文字のピリオド (**.**) が含まれる場合は、クラス名をかっこ (**[ ]**) または引用符 (**""**) で区切る必要があります。 指定するメソッドは、クラスの静的メソッドであることが必要です。  
   
- 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は CLR コードを実行できません。 作成、変更、および共通言語ランタイム モジュール; を参照するデータベース オブジェクトを削除することができます。ただし、これらの参照を実行することはできません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有効にするまで、 [clr enabled オプション](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)です。 オプションを有効にするには、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)です。  
+ 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は CLR コードを実行できません。 共通言語ランタイム モジュールを参照するデータベース オブジェクトを作成、変更、および削除することはできますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこれらの参照を実行するには、[clr enabled オプション](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)を有効にする必要があります。 このオプションを有効にするには、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用します。  
   
 > [!NOTE]  
 >  CLR プロシージャは、包含データベースではサポートされていません。  
@@ -165,15 +165,15 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
   
  以前のプロシージャ定義が WITH ENCRYPTION または WITH RECOMPILE を使用して作成されている場合、これらのオプションは、ALTER PROCEDURE に指定されるときだけ有効になります。  
   
- ストアド プロシージャの詳細については、次を参照してください。 [CREATE PROCEDURE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-procedure-transact-sql.md).  
+ ストアド プロシージャについて詳しくは、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)」をご覧ください。  
   
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
- 必要があります**ALTER**プロシージャに対する権限のメンバーシップが必要か、 **db_ddladmin**固定データベース ロール。  
+ プロシージャの **ALTER** 権限、または **db_ddladmin** 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`uspVendorAllInfo` ストアド プロシージャを作成します。 この手順が供給するすべてのベンダーの名前を返します[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]が供給する製品、信用評価、および可用性。 このプロシージャを作成した後、別の結果セットを返すようプロシージャを変更します。  
+ 次の例では、`uspVendorAllInfo` ストアド プロシージャを作成します。 このプロシージャは、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] を提供するすべてのベンダーの名前と、そのベンダーの提供製品、信用格付け、およびベンダーが現時点で製品を提供できるかどうかを返します。 このプロシージャを作成した後、別の結果セットを返すようプロシージャを変更します。  
   
 ```  
   
@@ -242,11 +242,11 @@ Vision Cycles, Inc.  LL Crankarm   Superior  Yes
 
 ## <a name="see-also"></a>参照  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [DROP PROCEDURE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [DROP PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [実行 AS (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-transact-sql.md)   
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [ストアド プロシージャ &#40;データベース エンジン&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
- [sys.procedures &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)  
+ [sys.procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)  
   
   

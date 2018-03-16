@@ -1,5 +1,5 @@
 ---
-title: "OUTPUT 句 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "OUTPUT 句 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  UPDATE、INSERT、または DELETE ステートメントに OUTPUT 句があると、ステートメントでエラーが発生してロールバックされた場合にも、クライアントに行が返されます。 ステートメントの実行時にエラーが発生した場合は、結果を使用しないでください。  
   
- **使用されます。**  
+ **使用される場所:**  
   
  [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
@@ -84,18 +84,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  @*table_variable*  
- 指定します、**テーブル**呼び出し元に返されずに、返された行が挿入される変数です。 @*table_variable* INSERT、UPDATE、DELETE、または MERGE ステートメントの前に宣言する必要があります。  
+ 返される行を呼び出し元に返さずにテーブルに挿入する場合に、挿入先となる **table** 変数を指定します。 @*table_variable* は、INSERT、UPDATE、DELETE、または MERGE ステートメントの前に宣言する必要があります。  
   
- 場合*column_list*が指定されていない、**テーブル**変数は OUTPUT の結果セットと同数の列を持つ必要があります。 ただし、ID 列と計算列はスキップされるため、同じである必要はありません。 場合*column_list*指定は省略された列の null 値を許可するか既定値がある必要がありますに値を代入します。  
+ *column_list* を指定しない場合は、**table** 変数の列の数は OUTPUT の結果セットと同じであることが必要です。 ただし、ID 列と計算列はスキップされるため、同じである必要はありません。 *column_list* を指定した場合は、省略された列は NULL 値を許容しているか、既定値が割り当てられている必要があります。  
   
- 詳細については**テーブル**変数を参照してください[テーブル &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/table-transact-sql.md).  
+ **table** 変数の詳細については、「[table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)」を参照してください。  
   
  *output_table*  
- 返される行を呼び出し元に返さずにテーブルに挿入する場合に、挿入先となるテーブルを指定します。 *output_table*一時テーブルを指定することがあります。  
+ 返される行を呼び出し元に返さずにテーブルに挿入する場合に、挿入先となるテーブルを指定します。 *output_table* には一時テーブルを指定することもできます。  
   
- 場合*column_list*が指定されていない、テーブルは OUTPUT の結果セットと同数の列をいる必要があります。 ID 列と計算列は同じである必要はありません。 スキップされるためです。 場合*column_list*指定は省略された列の null 値を許可するか既定値がある必要がありますに値を代入します。  
+ *column_list* を指定しない場合は、テーブルの列数は OUTPUT の結果セットと同じであることが必要です。 ID 列と計算列は同じである必要はありません。 スキップされるためです。 *column_list* を指定した場合は、省略された列は NULL 値を許容しているか、既定値が割り当てられている必要があります。  
   
- *output_table*ことはできません。  
+ *output_table* には、次のテーブルを指定できません。  
   
 -   トリガーが定義され有効化されているテーブル  
   
@@ -104,10 +104,10 @@ ms.lasthandoff: 01/25/2018
 -   CHECK 制約が定義されているか、ルールが有効化されているテーブル  
   
 *column_list*  
- INTO 句の対象テーブル上のオプションの列名のリストです。 使用できる列リストに似ていますが、[挿入](../../t-sql/statements/insert-transact-sql.md)ステートメントです。  
+ INTO 句の対象テーブル上のオプションの列名のリストです。 [INSERT](../../t-sql/statements/insert-transact-sql.md) ステートメントで指定できる列リストと似ています。  
   
  *scalar_expression*  
- 単一の値に評価される、記号や演算子の任意の組み合わせです。 集計関数は使用できません*scalar_expression*です。  
+ 単一の値に評価される、記号や演算子の任意の組み合わせです。 集計関数を *scalar_expression* の中で使用することはできません。  
   
  テーブル内の変更する列への参照は、INSERTED プレフィックスまたは DELETED プレフィックスで修飾する必要があります。  
   
@@ -140,20 +140,20 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- 明示的な列参照です。 変更対象のテーブルへの参照正しく修飾して指定する、INSERTED または DELETED プレフィックス、適切な場合は、たとえば: INSERTED **. * * * column_name*です。  
+ 明示的な列参照です。 変更するテーブルへのすべての参照は、たとえば INSERTED**.***column_name* のように、INSERTED プレフィックスまたは DELETED プレフィックスで正しく修飾されている必要があります。  
   
  $action  
- MERGE ステートメントでのみ使用できます。 型の列を示す**nvarchar (10)**を返す行ごとに 3 つの値のいずれかの MERGE ステートメントで OUTPUT 句で: 'INSERT'、'UPDATE'、または 'DELETE'、その行に対して実行されたアクションに従ってします。  
+ MERGE ステートメントでのみ使用できます。 MERGE ステートメントの OUTPUT 句に **nvarchar(10)** 型の列を指定します。この MERGE ステートメントは、行に対して実行されたアクションに従って 'INSERT'、'UPDATE'、'DELETE' のいずれかの値をそれぞれの行について返します。  
   
-## <a name="remarks"></a>解説  
- 出力\<dml_select_list > 句、および出力\<dml_select_list > INTO {**@ * * * table_variable* | *output_table* } 句を定義することができます単一の INSERT、UPDATE、DELETE、または MERGE ステートメントでします。  
+## <a name="remarks"></a>Remarks  
+ OUTPUT \<dml_select_list> 句と OUTPUT \<dml_select_list> INTO { **@***table_variable* | *output_table* } 句を単一の INSERT ステートメント、UPDATE ステートメント、DELETE ステートメント、または MERGE ステートメントで定義することができます。  
   
 > [!NOTE]  
 >  特に指定しない限り、OUTPUT 句への参照は、OUTPUT 句と OUTPUT INTO 句の両方を参照します。  
   
  OUTPUT 句は、INSERT 操作や UPDATE 操作の後で ID 列や計算列の値を取得するのに便利です。  
   
- 計算列が含まれている場合、 \<dml_select_list >、出力テーブルまたはテーブル変数内の対応する列は計算列ではありません。 新しい列の値は、ステートメントが実行された時点で計算された値を持つ列になります。  
+ 計算列が \<dml_select_list> に含まれている場合、出力テーブルまたはテーブル変数内の対応する列は計算列ではありません。 新しい列の値は、ステートメントが実行された時点で計算された値を持つ列になります。  
   
  テーブルに対して変更が適用される順序と、出力テーブルやテーブル変数に行が挿入される順序が、対応する保証はありません。  
   
@@ -185,12 +185,12 @@ DELETE Sales.ShoppingCartItem
   
     -   ユーザー データやシステム データにアクセスするユーザー定義関数を定義に含む計算列  
   
-     ときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このような列を検出、OUTPUT 句でエラー 4186 が発生します。   
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が OUTPUT 句でそのような列を検出すると、エラー 4186 が発生します。   
   
 ## <a name="inserting-data-returned-from-an-output-clause-into-a-table"></a>OUTPUT 句から返されたデータのテーブルへの挿入  
  入れ子になった INSERT、UPDATE、DELETE、または MERGE ステートメント内の OUTPUT 句の結果を取得して対象のテーブルに挿入する場合は、以下の点に注意してください。  
   
--   この操作全体がアトミックです。 INSERT ステートメントおよび OUTPUT 句を含んでいる入れ子になった DML ステートメントの両方を実行、または、ステートメント全体が失敗します。  
+-   この操作全体がアトミックです。 INSERT ステートメントおよび OUTPUT 句を含んでいる入れ子になった DML ステートメントの両方が実行されるか、ステートメント全体が失敗します。  
   
 -   外部の INSERT ステートメントの対象には次の制限が適用されます。  
   
@@ -198,7 +198,7 @@ DELETE Sales.ShoppingCartItem
   
     -   対象に FOREIGN KEY 制約を含めたり、対象を FOREIGN KEY 制約で参照することはできません。  
   
-    -   ターゲットでは、トリガーを定義できません。  
+    -   対象に対してトリガーを定義することはできません。  
   
     -   対象を、マージ レプリケーションや、トランザクション レプリケーションの更新可能なサブスクリプションに加えることはできません。  
   
@@ -206,22 +206,22 @@ DELETE Sales.ShoppingCartItem
   
     -   リモート テーブルまたはパーティション ビューを対象にすることはできません。  
   
-    -   ソース自体を含めることはできません、 \<dml_table_source > 句。  
+    -   ソース自体に \<dml_table_source> 句を含めることはできません。  
   
--   含む INSERT ステートメントで OUTPUT INTO 句はサポートされていません、 \<dml_table_source > 句。  
+-   OUTPUT INTO 句は、\<dml_table_source> 句を含む INSERT ステートメントではサポートされません。  
   
--   @@ROWCOUNT外部の INSERT ステートメントによってのみ挿入された行を返します。  
+-   @@ROWCOUNT からは、外部の INSERT ステートメントによって挿入された行のみが返されます。  
   
--   @@IDENTITYSCOPE_IDENTITY、および IDENT_CURRENT は、入れ子になった DML ステートメントでのみ生成された id 値と外部の INSERT ステートメントによって生成されたを返します。  
+-   @@IDENTITY、SCOPE_IDENTITY、および IDENT_CURRENT は、入れ子になった DML ステートメントによって生成された ID 値のみを返し、外部の INSERT ステートメントによって生成された ID 値は返しません。  
   
--   クエリ通知は、1 つのエンティティとしてステートメントを扱うし、大幅な変更が外部の INSERT ステートメント自体から場合でも、作成されるすべてのメッセージの型は、入れ子になった DML の種類になります。  
+-   クエリ通知ではステートメントは単一のエンティティとして扱われ、作成されるメッセージの種類は入れ子になった DML の種類になります。これは、外部の INSERT ステートメント自体から大きな変更が加えられた場合でも同様です。  
   
--   \<Dml_table_source > 句、SELECT、および句がサブクエリ、集計関数、順位付け関数、フルテキスト述語、データ アクセスを実行するユーザー定義関数または TEXTPTR 関数を含めることはできません。  
+-   \<dml_table_source> 句では、SELECT 句および WHERE 句に、サブクエリ、集計関数、順位付け関数、フルテキスト述語、データにアクセスするユーザー定義関数、または TEXTPTR 関数を含めることはできません。  
 
-## <a name="parallelism"></a>並列処理
- クライアントに結果を返すには OUTPUT 句では、直列プランを常に使用されます。
+## <a name="parallelism"></a>Parallelism
+ 結果をクライアントに返す OUTPUT 句は、常に直列プランを使用します。
 
-互換性レベルを 130 以上に設定 insert データベースのコンテキストでしています.選択操作は、SELECT ステートメントの WITH (TABLOCK) ヒントを使用しも出力を使用しています.Insert、一時テーブルまたはユーザー テーブル、対象のテーブルに挿入するには.選択は、サブツリー コストによって並列処理の対象になります。  OUTPUT INTO 句で参照されているターゲット テーブルは、並列処理の対象となるにはできません。 
+互換性レベル 130 以上に設定されたデータベースのコンテキストでは、INSERT...SELECT 操作で SELECT ステートメントに WITH (TABLOCK) ヒントが使用され、OUTPUT...INTO を使用して一時テーブルまたはユーザー テーブルに挿入された場合、サブツリーのコストに応じて、INSERT...SELECT のターゲット テーブルが並列処理の対象となります。  OUTPUT INTO 句で参照されているターゲット テーブルは、並列処理の対象になりません。 
  
 ## <a name="triggers"></a>トリガー  
  OUTPUT から返される列は、INSERT ステートメント、UPDATE ステートメント、または DELETE ステートメントが完了した後、トリガーが実行される前のデータを反映します。  
@@ -233,7 +233,7 @@ DELETE Sales.ShoppingCartItem
  sp_configure オプション disallow results from triggers が設定されている場合に、INTO 句なしの OUTPUT 句をトリガー内で呼び出すと、ステートメントが失敗します。  
   
 ## <a name="data-types"></a>データ型  
- OUTPUT 句は、ラージ オブジェクト データ型をサポートしています: **nvarchar (max)**、 **varchar (max)**、 **varbinary (max)**、**テキスト**、 **ntext**、**イメージ**、および**xml**です。 使用する場合、します。WRITE 句を変更する UPDATE ステートメントで、 **nvarchar (max)**、 **varchar (max)**、または**varbinary (max)**列で前に、の値のイメージと後に、完全は参照されているかどうかに返されます。 式の一部として TEXTPTR () 関数は使用できません、**テキスト**、 **ntext**、または**イメージ**OUTPUT 句内の列です。  
+ OUTPUT 句は、ラージ オブジェクト データ型 **nvarchar(max)**、**varchar(max)**、**varbinary(max)**、**text**、**ntext**、**image**、および **xml** をサポートしています。 UPDATE ステートメント内で .WRITE 句を使用して 、**nvarchar(max)**、**varchar(max)**、または **varbinary(max)** の列を変更すると、参照されていれば、値の完全な前イメージと後イメージが返されます。 TEXTPTR( ) 関数を、OUTPUT 句内の **text**、**ntext**、または **image** 列に対する式の一部として使用することはできません。  
   
 ## <a name="queues"></a>キュー  
  OUTPUT を、テーブルをキューとして使用するアプリケーションで使用したり、中間結果セットを保持するために使用することができます。 つまり、アプリケーションは、テーブルに対して、常に行の追加または削除を行っています。 次の例では、DELETE ステートメント内で OUTPUT 句を使用し、削除された行を呼び出し元アプリケーションに返します。  
@@ -248,7 +248,7 @@ GO
   
 ```  
   
- この例では、一度のアクションで、キューとして使用されているテーブルから行を削除し、削除された値を処理アプリケーションに返します。 テーブルを使用したスタックの実装など、別のセマンティクスも実装できます。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は行を処理し、OUTPUT 句を使用する DML ステートメントによって返される順序は保証されません。 必要なセマンティクスを保証する適切な WHERE 句を含むかどうかはアプリケーションに依存します。また、複数の行が DML 操作の対象となる場合には順序が保証されないという点に注意してください。 次の例は、サブクエリを使用して、一意性がの特性を前提と、`DatabaseLogID`目的の順序付けセマンティクスを実装するために列です。  
+ この例では、一度のアクションで、キューとして使用されているテーブルから行を削除し、削除された値を処理アプリケーションに返します。 テーブルを使用したスタックの実装など、別のセマンティクスも実装できます。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、OUTPUT 句を使用した場合に DML ステートメントが行を処理する順序や返す順序は保証されません。 必要なセマンティクスを保証する適切な WHERE 句を含むかどうかはアプリケーションに依存します。また、複数の行が DML 操作の対象となる場合には順序が保証されないという点に注意してください。 次の例では、必要な順序付けセマンティクスを実装するために、サブクエリを使用します。この例では、`DatabaseLogID` 列が一意であるということを前提にしています。  
   
 ```  
 USE tempdb;  
@@ -313,15 +313,15 @@ DROP TABLE dbo.table1;
 > [!NOTE]  
 >  複数のアプリケーションの同じテーブルへの破壊的な読み取りを許可する場合は、UPDATE ステートメントおよび DELETE ステートメントで READPAST テーブル ヒントを使用します。 これにより、テーブル内の最初の該当レコードを別のアプリケーションが既に読み込み中である場合に発生するロックの問題が起こらなくなります。  
   
-## <a name="permissions"></a>権限  
- 使用して取得するすべての列に対する SELECT 権限が必要\<dml_select_list > で使用されているまたは\<scalar_expression >。  
+## <a name="permissions"></a>アクセス許可  
+ \<dml_select_list> で取得する列や、\<scalar_expression> で使用する列に対する SELECT 権限が必要です。  
   
- 指定された任意のテーブルに対する INSERT 権限が必要\<output_table >。  
+ \<output_table> で指定するテーブルに対する INSERT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-output-into-with-a-simple-insert-statement"></a>A. OUTPUT INTO を単純な INSERT ステートメントと共に使用する  
- 次の例 1 行の挿入、`ScrapReason`使用してテーブル、`OUTPUT`句をステートメントの結果を返す、`@MyTableVar``table`変数。 `ScrapReasonID` 列が IDENTITY プロパティで定義されているため、`INSERT` ステートメントではこの列の値を指定していません。 ただし、によって生成された値、[!INCLUDE[ssDE](../../includes/ssde-md.md)]でその列が返される、`OUTPUT`句で列`inserted.ScrapReasonID`です。  
+ 次の例では、`ScrapReason` テーブルに 1 行を挿入し、`OUTPUT` 句を使用してステートメントの結果を `@MyTableVar``table` 変数に返します。 `ScrapReasonID` 列が IDENTITY プロパティで定義されているため、`INSERT` ステートメントではこの列の値を指定していません。 ただし、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によってこの列用に生成された値が、`OUTPUT` 句で `inserted.ScrapReasonID` 列に返されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -344,7 +344,7 @@ GO
 ```  
   
 ### <a name="b-using-output-with-a-delete-statement"></a>B. OUTPUT を DELETE ステートメントと共に使用する  
- 次の例では、`ShoppingCartItem` テーブル内のすべての行を削除します。 句`OUTPUT deleted.*`ことを指定の結果、`DELETE`削除された行のすべての列では、ステートメントは、呼び出し元のアプリケーションに返されます。 `SELECT`に続くステートメントで、削除操作の結果を検証する、`ShoppingCartItem`テーブル。  
+ 次の例では、`ShoppingCartItem` テーブル内のすべての行を削除します。 `OUTPUT deleted.*` 句は、`DELETE` ステートメントの結果 (つまり削除された行のすべての列) を、呼び出し元アプリケーションに返すことを指定します。 後続の `SELECT` ステートメントは、`ShoppingCartItem` テーブルへの削除操作の結果を確認します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -360,7 +360,7 @@ GO
 ```  
   
 ### <a name="c-using-output-into-with-an-update-statement"></a>C. OUTPUT INTO を UPDATE ステートメントと共に使用する  
- 次の例では、`VacationHours` テーブル内の最初の 10 個の行について、`Employee` 列を 25% 増しに更新します。 `OUTPUT`句を返します、`VacationHours`適用する前に存在する値、`UPDATE`列内のステートメント`deleted.VacationHours`、列に、更新された値`inserted.VacationHours`を`@MyTableVar``table`変数。  
+ 次の例では、`VacationHours` テーブル内の最初の 10 個の行について、`Employee` 列を 25% 増しに更新します。 `OUTPUT` 句は、`UPDATE` ステートメントを適用する前の `deleted.VacationHours` 列の `VacationHours` の値と、`inserted.VacationHours` 列の更新後の値を `@MyTableVar``table` 変数に返します。  
   
  この後に、`SELECT` 内の値、および `@MyTableVar` テーブルの更新操作の結果を返す 2 つの `Employee` ステートメントが続きます。  
   
@@ -395,7 +395,7 @@ GO
 ```  
   
 ### <a name="d-using-output-into-to-return-an-expression"></a>D. OUTPUT INTO を使用して式を返す  
- 式を定義することで、次の例が例 C でビルド、`OUTPUT`の差として更新された句`VacationHours`値、および`VacationHours`値の更新プログラムが適用される前にします。 この式の値に返されます、`@MyTableVar``table`変数、列`VacationHoursDifference`です。  
+ 次の例は例 C を基に構築され、更新後の `VacationHours` の値と更新が適用される前の `VacationHours` の値の差として、`OUTPUT` 句の中で式を定義しています。 この式の値は、`VacationHoursDifference` 列の `@MyTableVar``table` 変数に返されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -429,7 +429,7 @@ GO
 ```  
   
 ### <a name="e-using-output-into-with-fromtablename-in-an-update-statement"></a>E. OUTPUT INTO を UPDATE ステートメント内で from_table_name と共に使用する  
- 次の例の更新プログラム、`ScrapReasonID`内の列、`WorkOrder`テーブルの指定したすべての作業指示`ProductID`と`ScrapReasonID`です。 `OUTPUT INTO` 句は、更新するテーブルの値 (`WorkOrder`) と、`Product` テーブルの値を返します。 更新する行を指定するために、`Product` テーブルを `FROM` 句の中で使用します。 `WorkOrder`テーブルには、 `AFTER UPDATE` 、定義されているトリガー、`INTO`キーワードが必要です。  
+ 次の例は、`WorkOrder` テーブルの `ScrapReasonID` 列の、指定された `ProductID` と `ScrapReasonID` を持つすべての作業指示を更新します。 `OUTPUT INTO` 句は、更新するテーブルの値 (`WorkOrder`) と、`Product` テーブルの値を返します。 更新する行を指定するために、`Product` テーブルを `FROM` 句の中で使用します。 `WorkOrder` テーブルには `AFTER UPDATE` トリガーが定義されているため、`INTO` キーワードが必要です。  
   
 ```  
 USE AdventureWorks2012;  
@@ -494,7 +494,7 @@ GO
 ```  
   
 ### <a name="g-using-output-into-with-a-large-object-data-type"></a>G. OUTPUT INTO をラージ オブジェクト データ型と共に使用する  
- 次の例では、`DocumentSummary` テーブル内の `nvarchar(max)` 列である `Production.Document` の部分的な値を、`.WRITE` 句を使用して更新します。 単語`components`は単語に置換`features`を置換する語、既存のデータと交換してください (長さ) を使用する文字数内で置換する単語の開始位置 (オフセット) を指定します。 この例では、`OUTPUT`句を返す前に、のイメージと後、`DocumentSummary`列を`@MyTableVar``table`変数。 なお前に、のイメージと後に、完全、`DocumentSummary`列が返されます。  
+ 次の例では、`DocumentSummary` テーブル内の `nvarchar(max)` 列である `Production.Document` の部分的な値を、`.WRITE` 句を使用して更新します。 置換する語、既存データ内で置換される語の開始位置 (オフセット)、置換する文字数 (長さ) を指定することにより、`components` という語が、`features` という語で置換されます。 またこの例では、`OUTPUT` 句を使用して、`DocumentSummary` 列の前イメージと後イメージを `@MyTableVar``table` 変数に返します。 `DocumentSummary` 列の完全な前イメージと後イメージが返される点に注意してください。  
   
 ```  
 USE AdventureWorks2012;  
@@ -517,7 +517,7 @@ GO
 ```  
   
 ### <a name="h-using-output-in-an-instead-of-trigger"></a>H. OUTPUT を INSTEAD OF トリガー内で使用する  
- 次の例では、トリガー内で `OUTPUT` 句を使用し、トリガー操作の結果を返しています。 まず、`ScrapReason` テーブルでビューを作成し、次にそのビューに対して `INSTEAD OF INSERT` トリガーを定義して、ユーザーがベース テーブルの `Name` 列しか変更できないようにします。 列 `ScrapReasonID` はベース テーブルの `IDENTITY` 列であるため、トリガーはユーザーが指定した値を無視します。 これにより、[!INCLUDE[ssDE](../../includes/ssde-md.md)]を自動的に正しい値を生成します。 ユーザーによって指定される値も、`ModifiedDate`は無視され、現在の日付に設定されています。 `OUTPUT`句に実際に挿入された値が返されます、`ScrapReason`テーブル。  
+ 次の例では、トリガー内で `OUTPUT` 句を使用し、トリガー操作の結果を返しています。 まず、`ScrapReason` テーブルでビューを作成し、次にそのビューに対して `INSTEAD OF INSERT` トリガーを定義して、ユーザーがベース テーブルの `Name` 列しか変更できないようにします。 列 `ScrapReasonID` はベース テーブルの `IDENTITY` 列であるため、トリガーはユーザーが指定した値を無視します。 これにより、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は正しい値を自動的に生成できるようになります。 また、ユーザーが `ModifiedDate` に指定した値も無視され、現在の日付が設定されます。 `OUTPUT` 句は、`ScrapReason` テーブルに実際に挿入された値を返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -549,7 +549,7 @@ GO
   
 ```  
   
- 以下に、2004 年 4 月 12 日 ('`2004-04-12'`) に生成された結果セットを示します。 注意して、`ScrapReasonIDActual`と`ModifiedDate`列で提供される値ではなく、トリガー操作によって生成される値の反映、`INSERT`ステートメントです。  
+ 以下に、2004 年 4 月 12 日 ('`2004-04-12'`) に生成された結果セットを示します。 `ScrapReasonIDActual` 列と `ModifiedDate` 列では、`INSERT` ステートメントで指定された値ではなく、トリガー操作で生成された値が反映されていることに注意してください。  
   
  ```
  ScrapReasonID  Name             ModifiedDate  
@@ -558,7 +558,7 @@ GO
  ```  
   
 ### <a name="i-using-output-into-with-identity-and-computed-columns"></a>I. OUTPUT INTO を、ID 列および計算列と共に使用する  
- 次の例を作成、`EmployeeSales`テーブルが表示され、いくつかの行を使用して挿入、`INSERT`ステートメントを`SELECT`ステートメントのソース テーブルからデータを取得します。 `EmployeeSales`テーブルに id 列が含まれています (`EmployeeID`) し、計算列 (`ProjectedSales`)。  
+ 次の例では、`EmployeeSales` テーブルを作成し、`INSERT` ステートメントを使用してこのテーブルに複数行を挿入します。基になるテーブルからデータを取得するために、`SELECT` ステートメントも使用します。 `EmployeeSales` テーブルには、ID 列 (`EmployeeID`) および計算列 (`ProjectedSales`) があります。  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -604,7 +604,7 @@ GO
 ```  
   
 ### <a name="j-using-output-and-output-into-in-a-single-statement"></a>J. OUTPUT と OUTPUT INTO を単一のステートメント内で使用する  
- 次の例では、`ProductProductPhoto` テーブルの行を、`FROM` ステートメントの `DELETE` 句内で定義された検索条件に基づいて削除します。 `OUTPUT INTO`句が削除されているテーブルから列を返します (`deleted.ProductID`、 `deleted.ProductPhotoID`) と列を`Product`テーブル、`@MyTableVar``table`変数。 `Product`でテーブルが使用される、`FROM`句を削除する行を指定します。 `OUTPUT`句を返します、 `deleted.ProductID`、`deleted.ProductPhotoID`から行を削除した列の日付と時間、`ProductProductPhoto`呼び出し元のアプリケーションにテーブルです。  
+ 次の例では、`ProductProductPhoto` テーブルの行を、`FROM` ステートメントの `DELETE` 句内で定義された検索条件に基づいて削除します。 `OUTPUT INTO` 句は削除するテーブルの各列 (`deleted.ProductID`、`deleted.ProductPhotoID`) と、`Product` テーブルの列を、`@MyTableVar``table` 変数に返します。 `Product` テーブルは、削除する行を指定するために `FROM` 句内で使用します。 `OUTPUT` 句は、`deleted.ProductID` 列、`deleted.ProductPhotoID` 列、および `ProductProductPhoto` テーブルから行を削除した日付と時刻を、呼び出し元アプリケーションに返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -635,7 +635,7 @@ GO
 ```  
   
 ### <a name="k-inserting-data-returned-from-an-output-clause"></a>K. OUTPUT 句から返されたデータを挿入する  
- 次の例では、`OUTPUT` ステートメントの `MERGE` 句から返されたデータをキャプチャし、そのデータを別のテーブルに挿入します。 `MERGE`ステートメントの更新プログラム、`Quantity`の列、`ProductInventory`テーブル内で処理される注文に基づいてでは、毎日、`SalesOrderDetail`テーブル。 また、在庫が `0` 以下になった製品の行を削除します。 例が削除され、別のテーブルに挿入される行はキャプチャ`ZeroInventory`、製品在庫がないを追跡します。  
+ 次の例では、`OUTPUT` ステートメントの `MERGE` 句から返されたデータをキャプチャし、そのデータを別のテーブルに挿入します。 `MERGE` ステートメントは、`SalesOrderDetail` テーブル内で処理された注文に基づいて、`ProductInventory` テーブルの `Quantity` 列を毎日更新します。 また、在庫が `0` 以下になった製品の行を削除します。 この例では、削除された行をキャプチャし、在庫がない製品を追跡する別のテーブル `ZeroInventory` に挿入します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -672,9 +672,9 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
   
 ## <a name="see-also"></a>参照  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [挿入 &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [テーブルと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   

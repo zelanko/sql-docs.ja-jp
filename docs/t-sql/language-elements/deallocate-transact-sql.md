@@ -1,5 +1,5 @@
 ---
-title: "(TRANSACT-SQL) の割り当てを解除 |Microsoft ドキュメント"
+title: DEALLOCATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  カーソル参照を削除します。 によって、カーソルを構成するデータ構造がリリースされたとき、カーソルの最後の参照を解放し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  カーソル参照を削除します。 最後のカーソル参照の割り当てが解除されると、カーソルを構成するデータ構造は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって解放されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,12 +51,12 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
   
 ## <a name="arguments"></a>引数  
  *cursor_name*  
- 宣言済みのカーソル名を指定します。 かどうか、グローバルとローカル カーソルの両方存在で*cursor_name* 、名前として*cursor_name* GLOBAL が指定されていない場合、GLOBAL が指定されている場合は、グローバル カーソルとローカル カーソルを参照します。  
+ 宣言済みのカーソル名を指定します。 *cursor_name* という名前のカーソルとして、グローバル カーソルとローカル カーソルの両方がある場合は、GLOBAL を指定すると *cursor_name* ではグローバル カーソルが参照され、GLOBAL を指定しないとローカル カーソルが参照されます。  
   
  @*cursor_variable_name*  
- 名前を指定、**カーソル**変数。 @*cursor_variable_name*型でなければなりません**カーソル**です。  
+ **cursor** 変数の名前を指定します。 @*cursor_variable_name* は **cursor** 型である必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  カーソルを操作するステートメントでは、カーソル名またはカーソル変数を使用してカーソルを参照します。 DEALLOCATE を実行すると、カーソルと、カーソル名またはカーソル変数との間の関係が削除されます。 名前または変数がカーソルを参照する最後のものである場合は、カーソルの割り当てが解除され、カーソルが使用しているリソースが解放されます。 フェッチの孤立を防ぐために使用するスクロール ロックは、DEALLOCATE で解放されます。 カーソルを介して行われる位置指定更新を含め、更新を保護するために使用するトランザクション ロックは、トランザクションの終了時まで保持されます。  
   
  DECLARE CURSOR ステートメントでは、カーソルを割り当て、カーソル名と関連付けます。  
@@ -85,7 +85,7 @@ SELECT * FROM Person.Person;
     SELECT * FROM Person.Person;  
     ```  
   
- DEALLOCATE @*cursor_variable_name*ステートメントがカーソルに名前付きの変数の参照のみを削除します。 変数の割り当ては、バッチ、ストアド プロシージャ、またはトリガーの終了時にその有効範囲が失われるまで、解除されることはありません。 DEALLOCATE @ 後*cursor_variable_name*ステートメントでは、変数に関連付けられる、SET ステートメントを使用して別のカーソル。  
+ DEALLOCATE @*cursor_variable_name* ステートメントでは、カーソルに対し、指定した変数の参照だけを削除します。 変数の割り当ては、バッチ、ストアド プロシージャ、またはトリガーの終了時にその有効範囲が失われるまで、解除されることはありません。 DEALLOCATE *@cursor_variable_name* ステートメントの後で SET ステートメントを使用して、変数を別のカーソルに関連付けることもできます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -104,7 +104,7 @@ GO
   
  カーソル変数は、明示的に割り当てを解除する必要はありません。 変数は、有効範囲を失うと暗黙的に割り当てが解除されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  DEALLOCATE 権限は、既定では、有効なユーザーであればどのユーザーにも与えられます。  
   
 ## <a name="examples"></a>使用例  
@@ -148,10 +148,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [閉じる &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/close-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [カーソル](../../relational-databases/cursors.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [フェッチ &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/fetch-transact-sql.md)   
- [開く &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/open-transact-sql.md)  
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   

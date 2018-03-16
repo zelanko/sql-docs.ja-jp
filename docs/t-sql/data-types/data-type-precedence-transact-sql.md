@@ -1,5 +1,5 @@
 ---
-title: "データ型の優先順位 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "データ型の優先順位 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="data-type-precedence-transact-sql"></a>データ型の優先順位 (TRANSACT-SQL)
+# <a name="data-type-precedence-transact-sql"></a>データ型の優先順位 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 演算子でデータ型が異なる 2 つの式を結合すると、データ型の優先順位の規則によって、優先順位の低いデータ型を優先順位の高いデータ型に変換することが指定されます。 暗黙的な変換がサポートされていない場合は、エラーが返されます。 両方のオペランド式が同じデータ型の場合は、演算の結果も同じデータ型になります。
@@ -63,12 +63,12 @@ ms.lasthandoff: 11/21/2017
 1. **image**  
 1. **timestamp**  
 1. **uniqueidentifier**  
-1. **nvarchar** (含む**nvarchar (max)** )  
+1. **nvarchar** (**nvarchar(max)** など)  
 1. **nchar**  
-1. **varchar** (含む**varchar (max)** )  
+1. **varchar** (**varchar(max)** など)  
 1. **char**  
-1. **varbinary** (含む**varbinary (max)** )  
-1. **バイナリ**(最低)  
+1. **varbinary** (**varbinary(max)** など)  
+1. **binary** (最低)  
   
 ## <a name="see-also"></a>参照
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

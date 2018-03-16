@@ -1,5 +1,5 @@
 ---
-title: "TYPEPROPERTY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: TYPEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,15 +50,15 @@ TYPEPROPERTY (type , property)
  *型*  
  データ型の名前を指定します。  
   
- *プロパティ*  
- この関数で取得するデータ型に関する情報の種類を指定します。 *プロパティ*値は次のいずれかになります。  
+ *property*  
+ この関数で取得するデータ型に関する情報の種類を指定します。 *property* は次のいずれかを指定することができます。  
   
 |プロパティ|Description|返される値|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|データ型で NULL 値が許容されるかどうか。|1 = True<br /><br /> 0 = False<br /><br /> NULL = データ型が見つからない|  
-|**OwnerId**|データ型の所有者。<br /><br /> 注: スキーマの所有者が必ずしも型の所有者|NULL 以外 = データ型所有者のデータベース ユーザー ID<br /><br /> NULL = サポートされないデータ型、またはデータ型の ID が無効|  
-|**[精度]**|データ型の有効桁数。|桁数または文字数<br /><br /> -1 = **xml**または大きな値データ型<br /><br /> NULL = データ型が見つからない|  
-|**[スケール]**|データ型の小数点以下桁数。|データ型の小数点以下桁数<br /><br /> NULL = データ型がない**数値**か見つかりません。|  
+|**OwnerId**|データ型の所有者。<br /><br /> 注: スキーマの所有者はデータ型の所有者である必要はありません。|NULL 以外 = データ型所有者のデータベース ユーザー ID<br /><br /> NULL = サポートされないデータ型、またはデータ型の ID が無効|  
+|**[精度]**|データ型の有効桁数。|桁数または文字数<br /><br /> -1 = **xml** または大きな値のデータ型<br /><br /> NULL = データ型が見つからない|  
+|**[スケール]**|データ型の小数点以下桁数。|データ型の小数点以下桁数<br /><br /> NULL = データ型が **numeric** でないか、見つからない|  
 |**UsesAnsiTrim**|データ型の作成時に ANSI による埋め込みがオンであるかどうか。|1 = True<br /><br /> 0 = False<br /><br /> NULL = データ型が見つからないか、データ型が binary と文字列型のどちらでもない|  
   
 ## <a name="return-types"></a>戻り値の型  
@@ -67,7 +67,7 @@ TYPEPROPERTY (type , property)
 ## <a name="exceptions"></a>例外  
  エラーが発生した場合、または呼び出し元にオブジェクトの表示権限がない場合は、NULL が返されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーは、ユーザーが所有するまたはをユーザーが許可されているアクセス許可のセキュリティ保護可能なメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (TYPEPROPERTY など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (TYPEPROPERTY など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
@@ -87,13 +87,13 @@ SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');
 ```  
   
 ## <a name="see-also"></a>参照  
- [TYPE_ID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/type-id-transact-sql.md)   
- [TYPE_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/type-name-transact-sql.md)   
- [COLUMNPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/columnproperty-transact-sql.md)   
- [メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [TYPE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/type-id-transact-sql.md)   
+ [TYPE_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/type-name-transact-sql.md)   
+ [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [ALTER AUTHORIZATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys.types &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
   
 

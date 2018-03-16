@@ -1,5 +1,5 @@
 ---
-title: "フィルター (geography データ型) |Microsoft ドキュメント"
+title: "Filter (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="filter-geography-data-type"></a>Filter (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  かどうかを高速のインデックス専用積集合メソッドを提供するメソッド、 **geography**インスタンスでは、他と交差する**geography**インスタンス、インデックスがあると仮定するとします。  
+  インデックスが使用可能である場合に、**geography** インスタンスが別の **geography** インスタンスと交差するかどうかを判断する、高速のインデックス専用積集合メソッドを提供するメソッドです。  
   
- 場合 1 を返します、 **geography**インスタンス可能性のある他と交差する**geography**インスタンス。 このメソッドは偽陽性の戻り値を生成する場合があり、正確な結果はプランによって異なります。 共通部分がない場合、正確な 0 値 (真陰性の戻り値) を返します**geography**インスタンスが見つかりませんでした。  
+ **geography** インスタンスがもう一方の **geography** インスタンスと交差している可能性がある場合、1 を返します。 このメソッドは偽陽性の戻り値を生成する場合があり、正確な結果はプランによって異なります。 **geography** インスタンスの交差が見つからない場合は、正確な 0 値 (真陰性の戻り値) を返します。  
   
- インデックスが使用できない場合、または、実行されていない場合、メソッドと同じ値を返します**STIntersects()**同じパラメーターで呼び出されるとします。  
+ インデックスが使用できない場合、または使用されていない場合、このメソッドは、同じパラメーターを使用して呼び出した場合の **STIntersects()** と同じ値を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,18 +50,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geography*  
- もう 1 つ**geography**呼び出す。 が呼び出されるインスタンスと比較するインスタンス。  
+ Filter() を呼び出したインスタンスと比較される、別の **geography** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **bit**  
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このメソッドは決定的でなく、正確ではありません。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`Filter()`2 どうかを判断`geography`互いに交差するインスタンス。  
+ `Filter()` を使用して 2 つの `geography` インスタンスが相互に交差しているかどうかを調べる例を次に示します。  
   
 ```  
 CREATE TABLE sample (id int primary key, g geography);  

@@ -1,5 +1,5 @@
 ---
-title: "ODBC スカラー関数 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "ODBC スカラー関数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC スカラー関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  使用することができます[ODBC スカラー関数](http://go.microsoft.com/fwlink/?LinkID=88579)で[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 これらのステートメントは、によって解釈されます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 具体的には、ストアド プロシージャやユーザー定義関数の中で、 文字列、数値、時刻、日付、間隔を扱う関数のほか、システム関数を使用することができます。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、[ODBC スカラー関数](http://go.microsoft.com/fwlink/?LinkID=88579)を使用できます。 これらのステートメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって解釈されます。 具体的には、ストアド プロシージャやユーザー定義関数の中で、 文字列、数値、時刻、日付、間隔を扱う関数のほか、システム関数を使用することができます。  
   
 ## <a name="usage"></a>使用方法  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
@@ -78,21 +78,21 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="string-functions"></a>文字列関数  
   
-|関数|Description|  
+|機能|Description|  
 |--------------|-----------------|  
 |BIT_LENGTH( string_exp ) (ODBC 3.0)|文字列式の長さ (ビット単位) を返します。<br /><br /> 引数は文字列データ型に限定されません。 そのため、string_exp から文字列型への暗黙的な変換は実行されず、指定されたデータ型の (内部的な) サイズを返します。|  
-|CONCAT( string_exp1,string_exp2) (ODBC 1.0)|string_exp1 に対して string_exp2 を連結した結果の文字列を返します。 結果の文字列は DBMS に依存します。 たとえば、string_exp1 によって表される列に NULL 値が含まれている場合は、DB2 が NULL を返しますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は NULL 以外の文字列を返します。|  
+|CONCAT( string_exp1,string_exp2) (ODBC 1.0)|string_exp1 に対して string_exp2 を連結した結果の文字列を返します。 結果の文字列は DBMS に依存します。 たとえば、string_exp1 に指定された列に NULL 値が格納されていた場合、DB2 では NULL が返されますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では非 NULL 文字列が返されます。|  
 |OCTET_LENGTH( string_exp ) (ODBC 3.0)|文字列式の長さ (バイト単位) を返します。 結果は、ビット数を 8 で割った値以上の最小の整数になります。<br /><br /> 引数は文字列データ型に限定されません。 そのため、string_exp から文字列型への暗黙的な変換は実行されず、指定されたデータ型の (内部的な) サイズを返します。|  
   
 ### <a name="numeric-function"></a>数値関数  
   
-|関数|Description|  
+|機能|Description|  
 |--------------|-----------------|  
-|TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|numeric_exp を、小数点の右側の integer_exp 桁までに切り詰めて返します。 Numeric_exp に切り捨てられます integer_exp が負の場合は、&#124; integer_exp &#124;です。小数点の左側に位置します。|  
+|TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|numeric_exp を、小数点の右側の integer_exp 桁までに切り詰めて返します。 integer_exp が負数の場合、numeric_exp は、小数点の左側 &#124;integer_exp&#124; 桁に切り詰められます。|  
   
 ### <a name="time-date-and-interval-functions"></a>時刻、日付、および間隔を扱う関数  
   
-|関数|Description|  
+|機能|Description|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|現在の日付を返します。|  
 |CURDATE( ) (ODBC 3.0)|現在の日付を返します。|  
@@ -183,7 +183,7 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-an-odbc-function-in-a-stored-procedure"></a>D. ODBC 関数をストアド プロシージャで使用する  
  次の例では、ストアド プロシージャで、ODBC 関数を使用します。  

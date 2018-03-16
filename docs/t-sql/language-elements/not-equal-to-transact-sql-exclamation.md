@@ -1,5 +1,5 @@
 ---
-title: "! = (等しくない) (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "!= (等しくない) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -35,13 +35,13 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="not-equal-to-transact-sql---exclamation"></a>いない Equal To (Transact SQL の場合)、感嘆符
+# <a name="not-equal-to-transact-sql---exclamation"></a>等しくない (Transact SQL) - 感嘆符
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  一方の式がもう一方の式と等しくないかどうかをテストします (比較演算子)。 どちらか一方、または両方のオペランドが NULL の場合、NULL が返されます。 同様に機能、[等しいにではなく) <>](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)比較演算子です。  
+  一方の式がもう一方の式と等しくないかどうかをテストします (比較演算子)。 どちらか一方、または両方のオペランドが NULL の場合、NULL が返されます。 機能は [<> (等しくない)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md) 比較演算子と同じです。  
   
 ## <a name="see-also"></a>参照  
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)  
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "論理演算子 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "論理演算子 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="logical-operators-transact-sql"></a>論理演算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  論理演算子は、条件の真偽をテストします。 論理演算子、比較演算子と同様に戻り、**ブール**値は TRUE、FALSE、または不明なデータを入力します。  
+  論理演算子は、条件の真偽をテストします。 論理演算子は、比較演算子と同様、TRUE、FALSE、または UNKNOWN を値にとる**ブール** データ型を返します。  
   
 |演算子|意味|  
 |--------------|-------------|  
@@ -52,6 +52,6 @@ ms.lasthandoff: 01/25/2018
 |[SOME](../../t-sql/language-elements/some-any-transact-sql.md)|比較セットのいくつかが TRUE の場合、TRUE を返します。|  
   
 ## <a name="see-also"></a>参照  
- [演算子の優先順位 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
+ [演算子の優先順位 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "(TRANSACT-SQL) が存在する |Microsoft ドキュメント"
+title: EXISTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ EXISTS ( subquery )
   
 ## <a name="arguments"></a>引数  
  *subquery*  
- 制限付きの SELECT ステートメントを指定します。 INTO キーワードは使用できません。 詳細については、内のサブクエリに関する情報を参照してください[SELECT &#40;。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-transact-sql.md).  
+ 制限付きの SELECT ステートメントを指定します。 INTO キーワードは使用できません。 詳細については、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」のサブクエリに関する情報を参照してください。  
   
 ## <a name="result-types"></a>戻り値の型  
  **ブール値**  
@@ -76,7 +76,7 @@ ORDER BY Name ASC ;
 ```  
   
 ### <a name="b-comparing-queries-by-using-exists-and-in"></a>B. EXISTS と IN を使用してクエリを比較する  
- 次の例では、意味的に等価な 2 つのクエリを比較します。 最初のクエリを使用して`EXISTS`2 番目のクエリを使用して`IN`です。  
+ 次の例では、意味的に等価な 2 つのクエリを比較します。 最初のクエリでは `EXISTS` を使用し、2 番目のクエリでは `IN` を使用します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -91,7 +91,7 @@ WHERE EXISTS
 GO  
 ```  
   
- 次のクエリは`IN`します。  
+ 次のクエリでは `IN` を使用します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -106,7 +106,7 @@ WHERE a.LastName IN
 GO  
 ```  
   
- いずれかのクエリの結果セットを次に示します。  
+ 次に各クエリの結果セットを示します。  
   
  ```
 FirstName                                          LastName
@@ -119,7 +119,7 @@ Willis                                             Johnson
  ```  
   
 ### <a name="c-comparing-queries-by-using-exists-and--any"></a>C. EXISTS と = ANY を使用してクエリを比較する  
- 次の例では、ベンダーと同じ名前の店を検索する 2 つのクエリを示します。 最初のクエリを使用して`EXISTS`と 2 番目の使用法`=``ANY`です。  
+ 次の例では、ベンダーと同じ名前の店を検索する 2 つのクエリを示します。 最初のクエリでは `EXISTS` を使用し、2 番目のクエリでは `=``ANY` を使用します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -133,7 +133,7 @@ WHERE EXISTS
 GO  
 ```  
   
- 次のクエリは`= ANY`します。  
+ 次のクエリでは `= ANY` を使用します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -147,7 +147,7 @@ GO
 ```  
   
 ### <a name="d-comparing-queries-by-using-exists-and-in"></a>D. EXISTS と IN を使用してクエリを比較する  
- 次の例で始まる部署の従業員を検索するクエリを示しています。`P`です。  
+ 次の例では、`P` で始まる部署の従業員を検索するクエリを示します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -166,7 +166,7 @@ WHERE EXISTS
 GO  
 ```  
   
- 次のクエリは`IN`します。  
+ 次のクエリでは `IN` を使用します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -184,7 +184,7 @@ GO
 ```  
   
 ### <a name="e-using-not-exists"></a>E. NOT EXISTS を使用する  
- NOT EXISTS は EXISTS とは逆の動作をします。 NOT EXISTS 内の WHERE 句の条件は、サブクエリから行が返されない場合に満たされます。 始まる部署に属していない従業員を検索する例を次`P`です。  
+ NOT EXISTS は EXISTS とは逆の動作をします。 NOT EXISTS 内の WHERE 句の条件は、サブクエリから行が返されない場合に満たされます。 次の例では、`P` で始まる部署に属していない従業員を検索します。  
   
 ```  
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -302,10 +302,10 @@ Peng                           Wu                             Quality Assurance 
 (91 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="f-using-exists"></a>F. EXISTS を使用します。  
- 次の例がかどうかを特定の行では、`ProspectiveBuyer`テーブルの行に一致する可能性があります、`DimCustomer`テーブル。 行が返されます場合にのみ両方、`LastName`と`BirthDate`2 つのテーブルの一致している値。  
+### <a name="f-using-exists"></a>F. EXISTS を使用する  
+ 次の例では、`ProspectiveBuyer` テーブルの行が `DimCustomer` テーブルの行と一致するかどうかを示しています。 2 つのテーブルの `LastName` と `BirthDate` の両方の値が一致する場合にのみ、クエリは行を返します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -319,7 +319,7 @@ WHERE EXISTS
 ```  
   
 ### <a name="g-using-not-exists"></a>G. NOT EXISTS を使用する  
- NOT EXISTS は EXISTS と逆として機能します。 NOT EXISTS 内の WHERE 句の条件は、サブクエリから行が返されない場合に満たされます。 次の例は、行を検索します。、 `DimCustomer` where の表に、`LastName`と`BirthDate`のエントリが一致しません、`ProspectiveBuyers`テーブル。  
+ NOT EXISTS の動作は EXISTS と逆です。 NOT EXISTS 内の WHERE 句の条件は、サブクエリから行が返されない場合に満たされます。 次の例では、`LastName` と `BirthDate` が `ProspectiveBuyers` テーブルのどのエントリとも一致しない `DimCustomer` テーブルの行を検出します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -333,9 +333,9 @@ WHERE NOT EXISTS
 ```  
   
 ## <a name="see-also"></a>参照  
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
 

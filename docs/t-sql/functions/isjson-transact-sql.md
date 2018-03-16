@@ -1,5 +1,5 @@
 ---
-title: "ISJSON (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ISJSON (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -48,17 +48,17 @@ ISJSON ( expression )
  テストする文字列です。  
   
 ## <a name="return-value"></a>戻り値  
- 有効な JSON です。 が、文字列に含まれている場合は 1 を返します。それ以外の場合は 0 を返します。 場合は null を返します*式*が null です。  
+ 有効な JSON です。 が、文字列に含まれている場合は 1 を返します。それ以外の場合は 0 を返します。 *式* が null の場合は null を返します。  
   
  エラーは返されません。  
   
-## <a name="remarks"></a>解説  
- **ISJSON**同じレベルのキーの一意性を確認しません。  
+## <a name="remarks"></a>Remarks  
+ **ISJSON** は、同じレベルのキーの一意性をチェックしません。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="example-1"></a>例 1  
-次の例、ステートメント ブロックが実行条件付きで場合、パラメーター値`@param`有効な JSON が含まれています。  
+次の例では、パラメーター値 `@param` に有効な JSON が含まれている場合は、ステートメント ブロックを条件付きで実行します。  
   
 ```sql  
 DECLARE @param <data type>
@@ -81,6 +81,6 @@ WHERE ISJSON(json_col) > 0
 ```  
   
 ## <a name="see-also"></a>参照  
- [JSON データ &#40;です。SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+ [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   

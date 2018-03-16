@@ -1,5 +1,5 @@
 ---
-title: "TRIM (TRANSACT-SQL) |Microsoft ドキュメント"
+title: TRIM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/20/2017
 ms.prod: sql-non-specified
@@ -31,35 +31,35 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/18/2018
 ---
-# <a name="trim-transact-sql"></a>TRIM (TRANSACT-SQL)
+# <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-空白文字を削除`char(32)`または開始または文字列の末尾から指定したその他の文字列。  
+文字列の先頭または末尾にあるスペース文字 `char(32)` または他の指定した文字を削除します。  
  
 ## <a name="syntax"></a>構文   
 ```
 TRIM ( [ characters FROM ] string ) 
 ```
-[//]: # "[両方 |先頭の |末尾] いないまだ使用可能です。"
+[//]: # "[ BOTH | LEADING | TRAILING ] はまだ使用できません。"
 
 ## <a name="arguments"></a>引数   
 
-文字   
-リテラル、変数、または任意の LOB ではない文字型の関数呼び出し (`nvarchar`、 `varchar`、 `nchar`、または`char`) を削除する文字を含むです。 `nvarchar(max)`および`varchar(max)`型は許可されません。
+characters   
+削除する必要がある文字を含む LOB 以外の任意の文字型 (`nvarchar`、`varchar`、`nchar`、または`char`) のリテラル、変数、または関数呼び出しです。 `nvarchar(max)` 型と `varchar(max)` 型は使用できません。
 
 string   
-任意の文字型の式です (`nvarchar`、 `varchar`、 `nchar`、または`char`) 文字を削除する必要があります。
+文字を削除する必要がある任意の文字型 (`nvarchar`、`varchar`、`nchar`、または`char`) の式です。
 
 ## <a name="return-types"></a>戻り値の型   
-文字列引数の型と文字列式を返します場所、空白文字`char(32)`またはその他の指定した文字は、両方の側から削除されます。 返します`NULL`入力文字列が場合`NULL`です。
+空白文字 `char(32)` または他の指定した文字が両側から削除される、文字列引数の型を持つ文字式を返します。 入力文字列が `NULL` の場合は `NULL` を返します。
 
-## <a name="remarks"></a>解説   
-既定では`TRIM`関数は、空白文字を削除`char(32)`両側からです。 これに相当`LTRIM(RTRIM(@string))`です。 動作`TRIM `指定された文字を持つ関数は、の動作と同じ`REPLACE`関数の先頭または末尾からの文字が空の文字列に置き換えられます。
+## <a name="remarks"></a>Remarks   
+`TRIM` 関数は、既定で、両側からスペース文字 `char(32)` を削除します。 これは、`LTRIM(RTRIM(@string))` と同じです。 文字が指定された `TRIM ` 関数の動作は、`REPLACE` 関数の動作 (先頭または末尾の文字が空白の文字列で置き換えられる) と同じです。
 
 
 ## <a name="examples"></a>使用例
-### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  文字列の両方の側から、空白文字を削除します。   
-次の例は前に、から、単語の後にスペースを削除`test`です。   
+### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  文字列の先頭と末尾からスペース文字を削除します。   
+次の例では、単語 `test` の前後からスペースを削除します。   
 ```sql
 SELECT TRIM( '     test    ') AS Result;
 ```
@@ -69,8 +69,8 @@ SELECT TRIM( '     test    ') AS Result;
 `test`
 
 
-### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  指定した文字列の両方の側からの文字を削除   
-次の例では、末尾にピリオドと末尾のスペースを削除します。
+### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  指定した文字を文字列の両側から削除します。   
+次の例では、末尾のピリオドと末尾のスペースを削除します。
 ```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 ```
@@ -80,10 +80,10 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 
 
 ## <a name="see-also"></a>参照
- [左と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/left-transact-sql.md)  
- [LTRIM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ltrim-transact-sql.md)  
- [右 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/right-transact-sql.md)  
- [RTRIM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rtrim-transact-sql.md)  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
- [部分文字列と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/substring-transact-sql.md)  
- [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)   
+ [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   

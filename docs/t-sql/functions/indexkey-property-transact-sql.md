@@ -1,5 +1,5 @@
 ---
-title: "INDEXKEY_PROPERTY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: INDEXKEY_PROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/02/2018
   インデックス キーについての情報を返します。 XML インデックスに対して NULL を返します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、 [sys.index_columns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、 [sys.index_columns (&) #40 です。TRANSACT-SQL と #41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,20 +54,20 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
   
 ## <a name="arguments"></a>引数  
  *object_ID*  
- テーブルまたはインデックス付きビューのオブジェクト ID 番号です。 *object_ID*は**int**です。  
+ テーブルまたはインデックス付きビューのオブジェクト ID 番号です。 *object_ID* は **int** です。  
   
  *index_ID*  
- インデックスの ID 番号です。 *index_ID*は**int**です。  
+ インデックスの ID 番号です。 *index_ID* は **int** です。  
   
- *key_id を指定*  
- インデックス キー列の位置です。 *key_ID*は**int**です。  
+ *key_ID*  
+ インデックス キー列の位置です。 *key_ID* は **int** です。  
   
- *プロパティ*  
- 情報を返す基になるプロパティの名前です。 *プロパティ*文字の文字列は、次の値のいずれかになります。  
+ *property*  
+ 情報を返す基になるプロパティの名前です。 *プロパティ* 、文字の文字列は、次の値のいずれかを指定することができます。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|**ColumnId**|列の ID で、 *key_ID*インデックスの位置。|  
+|**ColumnId**|列の ID で、*key_ID*、インデックスの位置。|  
 |**IsDescending**|インデックス列を格納する順序です。<br /><br /> 1 = 降順、0 = 昇順|  
   
 ## <a name="return-types"></a>戻り値の型  
@@ -102,9 +102,9 @@ Column ID   Asc or Desc order
 ```  
   
 ## <a name="see-also"></a>参照  
- [INDEX_COL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/index-col-transact-sql.md)   
+ [INDEX_COL &#40;Transact-SQL&#41;](../../t-sql/functions/index-col-transact-sql.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [sys.objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

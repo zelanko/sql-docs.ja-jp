@@ -1,5 +1,5 @@
 ---
-title: "CONCAT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CONCAT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-2 つ以上の文字列値を連結した結果の文字列を返します。 (連結中に分ける値を追加するを参照してください[CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md)。)。
+2 つ以上の文字列値を連結した結果の文字列を返します。 (連結時に区切り値を追加するには、「[CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md)」をご覧ください。)
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -51,23 +51,23 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 ## <a name="return-types"></a>戻り値の型
 入力に依存する文字列、長さ、および型です。
   
-## <a name="remarks"></a>解説  
-**CONCAT**可変個の文字列引数を受け取り、1 つの文字列に連結します。 最小で 2 つの入力値が必要です。それ以外の場合は、エラーが発生します。 すべての引数は、暗黙的に文字列型に変換され、連結されます。 Null 値は暗黙的に空の文字列に変換されます。 すべての引数が null、空の文字列型の場合**varchar**(1) が返されます。 文字列への暗黙の変換は、データ型変換の既存の規則に従います。 データ型変換の詳細については、次を参照してください。 [CAST および CONVERT &#40;です。TRANSACT-SQL と #41 です](../../t-sql/functions/cast-and-convert-transact-sql.md)。
+## <a name="remarks"></a>Remarks  
+**CONCAT** は、文字列引数の可変数を取得して、1 つの文字列に連結します。 最小で 2 つの入力値が必要です。それ以外の場合は、エラーが発生します。 すべての引数は、暗黙的に文字列型に変換され、連結されます。 Null 値は暗黙的に空の文字列に変換されます。 すべての引数が NULL の場合、**varchar(1)** 型の空の文字列が返されます。 文字列への暗黙の変換は、データ型変換の既存の規則に従います。 データ型変換についての詳細については、を参照してください。 [CAST および CONVERT &#40;です。TRANSACT-SQL と #41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 戻り値の型は、引数の種類によって異なります。 次の表に、マッピングを示します。
   
 |入力型|出力型と長さ|  
 |---|---|
 |引数が SQL CLR システム型、SQL CLR UDT、または `nvarchar(max)` の場合|**nvarchar(max)**|  
-|それ以外の場合、いずれかの引数は**varbinary (max)**または**varchar (max)**|**varchar (max)**パラメーターのいずれかがない限り、 **nvarchar**任意の長さ。 そのため、結果は場合**nvarchar (max)**です。|  
-|それ以外の場合、いずれかの引数は**nvarchar**(< = 4000)|**nvarchar**(< = 4000)|  
-|それ以外の他のすべての場合|**varchar**(< = 8000) パラメーターのいずれかの任意の長さの nvarchar でない限り、します。 そのため、結果は場合**nvarchar (max)**です。|  
+|それ以外の場合、引数が **varbinary (max)** または **varchar (max)** の場合|**varchar(max)**。ただし、いずれかのパラメーターが任意の長さの **nvarchar** である場合を除きます。 この場合、結果は **nvarchar (max)** です。|  
+|それ以外の場合、引数が **nvarchar**(<= 4000) の場合|**nvarchar**(<= 4000)|  
+|それ以外の他のすべての場合|**varchar**(<= 8000)。ただし、いずれかのパラメーターが任意の長さの nvarchar である場合を除きます。 この場合、結果は **nvarchar (max)** です。|  
   
-引数が < = 4000 の**nvarchar**、または < = 8000 の**varchar**、暗黙的な変換が、結果の長さを与えることができます。 他のデータ型は、暗黙的に文字列に変換された場合は異なる長さになります。 たとえば、 **int** (14) が、文字列の長さは 12 中、 **float**がの長さは 32 です。 このように 2 つの整数を連結した結果としての長さは少なくとも 24 です。
+引数が **nvarchar** では <= 4000 の場合、または **varchar** では <= 8000 の場合、暗黙的な変換は結果の長さに影響を与えます。 他のデータ型は、暗黙的に文字列に変換された場合は異なる長さになります。 たとえば、**int** (14) の文字列の長さは 12 ですが、**float** の長さは 32 です。 このように 2 つの整数を連結した結果としての長さは少なくとも 24 です。
   
 入力引数がサポートされるラージ オブジェクト (LOB) の型ではない場合、戻り値の型に関係なく、戻り値の型は長さ 8000 に切り詰められます。 この切り捨てではスペースが保持され、効率的なプラン生成をサポートします。
   
-CONCAT 関数は、バージョンでは、リンク サーバーでリモートで実行することができます[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降。 古いバージョンのリンク サーバー、CONCAT 操作が実行されるローカルで、非連結された値が、リンク サーバーから返された後です。
+バージョンでは、リンク サーバー上には CONCAT 関数をリモートで実行することができます [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 古いバージョンのリンク サーバー、CONCAT 操作が実行されるローカルで、非連結された値が、リンク サーバーから返された後です。
   
 ## <a name="examples"></a>使用例  
   
@@ -111,16 +111,16 @@ NameLastname
 ```  
   
 ## <a name="see-also"></a>参照
- [CONCAT_WS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/concat-ws-transact-sql.md)   
- [FORMATMESSAGE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/formatmessage-transact-sql.md)  
- [QUOTENAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/quotename-transact-sql.md)  
- [置換 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/replace-transact-sql.md)  
- [リバース &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/reverse-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)   
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
  [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/stuff-transact-sql.md)  
- [変換 (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/translate-transact-sql.md)  
- [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
 
 

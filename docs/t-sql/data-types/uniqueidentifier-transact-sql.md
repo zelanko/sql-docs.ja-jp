@@ -1,5 +1,5 @@
 ---
-title: "一意識別子 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: uniqueidentifier (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/1/2017
 ms.prod: sql-non-specified
@@ -38,23 +38,23 @@ ms.lasthandoff: 01/02/2018
 
 16 バイトの GUID です。
   
-## <a name="remarks"></a>解説  
-列またはのローカル変数**uniqueidentifier**データ型は、次の方法で値に初期化することができます。
--   使用して、 [NEWID](../../t-sql/functions/newid-transact-sql.md)または[NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md)関数。    
--   形式で文字列定数を変換することで*xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*して*、各*x*は 0 ~ 9 または a ~ f の 16 進数字です。 たとえば、6F9619FF-8B86-D011-B42D-00C04FC964FF は有効な**uniqueidentifier**値。  
+## <a name="remarks"></a>Remarks  
+列またはのローカル変数 **uniqueidentifier** データ型は、次の方法で値に初期化することができます。
+-   [NEWID](../../t-sql/functions/newid-transact-sql.md) または [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) 関数を使用する。    
+-   *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx* の形式の文字列定数を変換する。各 *x* は 0 ～ 9 または a ～ f の 16 進数です。 たとえば、6F9619FF-8B86-D011-B42D-00C04FC964FF は有効な **uniqueidentifier** 値です。  
   
-比較演算子で使用できます**uniqueidentifier**値。 ただし、2 つの値のビット パターンを比較することによる順序付けは行われません。 に対して実行できる操作のみ、 **uniqueidentifier**値には比較 (=、<>、 \<、>、 \<=、> =) と NULL (IS NULL と IS NOT NULL) をチェックします。 他の算術演算子は使用できません。 すべての列制約と、IDENTITY 以外のプロパティで使用できます、 **uniqueidentifier**データ型。
+比較演算子で使用できる **uniqueidentifier** 値。 ただし、2 つの値のビット パターンを比較することによる順序付けは行われません。 **uniqueidentifier** 型の値に対して行うことができる操作は、比較 (=、<>、\<、>、\<=、>) および NULL であるかどうかのチェック (IS NULL と IS NOT NULL) だけです。 他の算術演算子は使用できません。 **uniqueidentifier** データ型では、IDENTITY 以外のすべての列制約とプロパティを使用できます。
   
-マージ レプリケーションおよびトランザクション レプリケーションでサブスクリプションを使用して更新**uniqueidentifier**確実行がテーブルの複数のコピー間で一意に識別するために列です。
+更新サブスクリプションでのマージ レプリケーションとトランザクション レプリケーションでは、テーブルの複数のコピーの間で列を確実に一意に識別するため、**uniqueidentifier** 列が使用されます。
   
 ## <a name="converting-uniqueidentifier-data"></a>uniqueidentifier データの使用  
-**Uniqueidentifier**型と見なされます、文字の種類、文字式からの変換のためであるため、文字型に変換する場合は切り捨てルールの対象です。 つまり、文字式を異なるサイズの文字型に変換する場合、値が新しいデータ型にとって長すぎるときは、切り捨てられます。 「使用例」を参照してください。
+**uniqueidentifier** 型は、文字式からの変換のための文字型と見なされるため、文字型に変換する場合は切り捨てルールが適用されます。 つまり、文字式を異なるサイズの文字型に変換する場合、値が新しいデータ型にとって長すぎるときは、切り捨てられます。 「使用例」を参照してください。
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 
-これらのツールおよび機能をサポートしていない、`uniqueidentifier`データ型。
+これらのツールと機能では、`uniqueidentifier` データ型はサポートされません。
 - PolyBase
-- [dwloader の読み込みツール](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader)Parallel Data Warehouse の
+- Parallel Data Warehouse 用の [dwloader 読み込みツール](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader)
 
 ## <a name="examples"></a>使用例  
 次の例では、`uniqueidentifier` 型の値を `char` 型の値に変換します。
@@ -64,7 +64,7 @@ DECLARE @myid uniqueidentifier = NEWID();
 SELECT CONVERT(char(255), @myid) AS 'char';  
 ```  
   
-次の例は、変換後のデータ型に対して値が長すぎる場合のデータの切り捨てを示します。 **Uniqueidentifier**型は 36 文字に制限されて、その長さを超える文字は切り捨てられます。
+次の例は、変換後のデータ型に対して値が長すぎる場合のデータの切り捨てを示します。 **uniqueidentifier** 型は 36 文字に制限されているため、この長さを超える文字は切り捨てられます。
   
 ```sql
 DECLARE @ID nvarchar(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';  
@@ -87,8 +87,8 @@ String                                       TruncatedValue
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-[NEWID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/newid-transact-sql.md)  
-[NEWSEQUENTIALID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/newsequentialid-transact-sql.md)    
+[NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)  
+[NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
   

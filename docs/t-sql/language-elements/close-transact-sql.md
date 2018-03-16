@@ -1,5 +1,5 @@
 ---
-title: "閉じる (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CLOSE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -49,10 +49,10 @@ CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }
   
 ## <a name="arguments"></a>引数  
  GLOBAL  
- 指定する*cursor_name*はグローバル カーソルを参照します。  
+ *cursor_name* でグローバル カーソルを参照することを指定します。  
   
  *cursor_name*  
- 開いているカーソルの名前です。 グローバルとローカル カーソルの両方に存在しない場合*cursor_name* 、名前として*cursor_name*グローバル カーソルと GLOBAL が指定されている、それ以外の場合は*cursor_name*ローカル カーソルを参照します。  
+ 開いているカーソルの名前です。 グローバルとローカル カーソルの両方が存在かどうか *cursor_name* いう名前の *cursor_name* GLOBAL が指定されている、それ以外の場合はグローバル カーソルを参照 *cursor_name* は、ローカル カーソルを参照します。  
   
  *cursor_variable_name*  
  開いているカーソルに関連付けられたカーソル変数の名前です。  
@@ -77,8 +77,8 @@ GO
 ## <a name="see-also"></a>参照  
  [カーソル](../../relational-databases/cursors.md)   
  [カーソル &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
- [DEALLOCATE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/deallocate-transact-sql.md)   
- [フェッチ &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/fetch-transact-sql.md)   
- [開く &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/open-transact-sql.md)  
+ [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   

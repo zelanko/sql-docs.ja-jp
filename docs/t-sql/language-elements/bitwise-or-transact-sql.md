@@ -1,5 +1,5 @@
 ---
-title: "|(ビットごとの OR)(TRANSACT-SQL) |Microsoft ドキュメント"
+title: "| (ビット演算子 OR) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -51,21 +51,21 @@ expression | expression
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)整数データ型カテゴリに、または**ビット**、**バイナリ**、または**varbinary**データ型。 *式*はビットごとの演算に対して 2 進数として扱われます。  
+ 整数データ型に分類されるデータ型、または **bit**、または **binary** または **varbinary** データ型の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *式*は、ビットごとの演算に対して 2 進数として扱われます。  
   
 > [!NOTE]  
->  1 つだけ*式*として指定できる**バイナリ**または**varbinary**ビットごとの演算でのデータ型。  
+>  ビットごとの演算では、1 つの*式*のみが **binary** または **varbinary** データ型のいずれかになります。  
   
 ## <a name="result-types"></a>戻り値の型  
- 返します、 **int**場合は、入力値**int**、 **smallint**場合は、入力値**smallint**、または**tinyint**場合は、入力値**tinyint**です。  
+ 入力値が **int** の場合は **int**、入力値が **smallint** の場合は **smallint**、入力値が **tinyint** の場合は **tinyint** を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ビットごとの | 演算子は、2 つの式の対応するビットを対象にビットごとの論理和演算を実行します。 入力式の中で現在処理の対象にあるビットについて、いずれかのビットまたは両方のビットが 1 の値を持つ場合、結果セットのビットは 1 に設定されます。入力式のビットが両方とも 1 の値を持たない場合、結果セットのビットは 0 に設定されます。  
   
- 左と右の式が異なる整数データ型を持つかどうか (たとえば、左側*式*は**smallint**と右*式*は**int**)、小さいデータ型の引数が大きいデータ型に変換します。 この例では、**smallint * * * 式*に変換されますが、 **int**です。  
+ 左側の式と右側の式が異なる整数型の場合 (たとえば、左側の*式*が **smallint** 型で、右側の*式*が **int** 型の場合)、小さいデータ型の引数が大きいデータ型の引数に変換されます。 この例では、**smallint***expression* は **int** に変換されます。  
   
 ## <a name="examples"></a>使用例  
- 次の例を含むテーブルを作成する**int**データ型を元の値を表示して、テーブルに 1 行にします。  
+ この例では、元の値を示すために **int** データ型を使用するテーブルを作成し、このテーブルに 1 行挿入します。  
   
 ```sql  
 CREATE TABLE bitwise  
@@ -78,7 +78,7 @@ INSERT bitwise VALUES (170, 75);
 GO  
 ```  
   
- 次のクエリに対してビットごとの OR を実行する、 **a_int_value**と**b_int_value**列です。  
+ このクエリは、**a_int_value** 列と **b_int_value** 列との間でビットごとの論理和演算を実行します。  
   
 ```  
 SELECT a_int_value | b_int_value  
@@ -95,7 +95,7 @@ GO
 (1 row(s) affected)  
 ```  
   
- 170 のバイナリ表現 (**a_int_value**または`A`、下) は`0000 0000 1010 1010`します。 75 のバイナリ表現 (**b_int_value**または`B`、下) は`0000 0000 0100 1011`します。 これら 2 つの値に対してビットごとの OR 演算の実行結果はバイナリ`0000 0000 1110 1011`、これは、10 進数では 235 します。  
+ 170 (**a_int_value** または下記の `A`) をバイナリで表すと `0000 0000 1010 1010` です。 75 (**b_int_value** または下記の `B`) をバイナリで表すと `0000 0000 0100 1011` です。 この 2 つの値に対してビットごとの論理和演算を実行すると、結果はバイナリで `0000 0000 1110 1011`、10 進数では 235 になります。  
   
 ```  
 (A | B)  
@@ -106,10 +106,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
- [ビット処理演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [&#124; = (& a) #40 です。ビットごとの OR 代入 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
- [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [ビットごとの演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
+ [&#124;= &#40;ビットごとの OR 代入&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
+ [複合演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

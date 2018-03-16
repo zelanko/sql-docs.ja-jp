@@ -1,5 +1,5 @@
 ---
-title: "OPENXML (TRANSACT-SQL) |Microsoft ドキュメント"
+title: OPENXML (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XML ドキュメントに対して行セット ビューを提供します。 OPENXML を使用することができます OPENXML は行セット プロバイダーであるため、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントが行セット内のテーブル、ビュー、または OPENROWSET 関数などのプロバイダーを表示できます。  
+  XML ドキュメントに対して行セット ビューを提供します。 OPENXML は行セット プロバイダーなので、テーブル、ビュー、または OPENROWSET 関数など、行セット プロバイダーを指定できる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの中で使用できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,51 +50,51 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
 ## <a name="arguments"></a>引数  
  *idoc*  
- XML ドキュメントの内部表現のドキュメント ハンドルを指定します。 呼び出して XML ドキュメントの内部表現が作成された**sp_xml_preparedocument**です。  
+ XML ドキュメントの内部表現のドキュメント ハンドルを指定します。 XML ドキュメントの内部表現は、**sp_xml_preparedocument** を呼び出すことによって作成されます。  
   
  *rowpattern*  
- ノードを識別するために使用する XPath パターン (ハンドルが渡された XML ドキュメントで、 *idoc*パラメーター) 行として処理されるためです。  
+ 行として処理するノードを識別するときに使用する XPath パターンを指定します。XML ドキュメントの場合、そのハンドルは *idoc* パラメーターで渡されます。  
   
  *flags*  
- XML データとリレーショナル行セットとの間で使用するマッピング、およびオーバーフローした列の処理方法を指定します。 *フラグ*オプションの入力パラメーターは、次の値のいずれかになります。  
+ XML データとリレーショナル行セットとの間で使用するマッピング、およびオーバーフローした列の処理方法を指定します。 *flags* は省略可能な入力パラメーターで、次のいずれかの値を指定できます。  
   
 |バイト値|Description|  
 |----------------|-----------------|  
-|**0**|既定値は**属性中心**マッピングします。|  
-|**1**|使用して、**属性中心**マッピングします。 XML_ELEMENTS と組み合わせることができます。 この場合、**属性中心**マッピングは、最初に適用し、**要素中心**でまだ処理されていないすべての列のマッピングが適用されます。|  
-|**2**|使用して、**要素中心**マッピングします。 XML_ATTRIBUTES と組み合わせることができます。 ここでは、**属性中心**マッピングは、最初に適用し、**要素中心**処理されていないすべての列のマッピングが適用されます。|  
-|**8**|XML_ATTRIBUTES または XML_ELEMENTS と組み合わせる (論理和) ことができます。 このフラグがオーバーフロー プロパティを使用したデータをコピーしないことを示すコンテキストでは、取得できるように、  **@mp:xmltext**です。|  
+|**0**|既定では、**属性中心**のマッピングが使用されます。|  
+|**1**|**属性中心**のマッピングを使用します。 XML_ELEMENTS と組み合わせることができます。 この場合、まだ処理されていないすべての列に対して、まず**属性中心**のマッピングが適用され、次に**要素中心**のマッピングが適用されます。|  
+|**2**|**要素中心**のマッピングを使用します。 XML_ATTRIBUTES と組み合わせることができます。 この場合、まだ処理されていないすべての列に対して、まず**属性中心**のマッピングが適用され、次に**要素中心**のマッピングが適用されます。|  
+|**8**|XML_ATTRIBUTES または XML_ELEMENTS と組み合わせる (論理和) ことができます。 取得したコンテキストにおいて、このフラグは、使用したデータをオーバーフロー プロパティ **@mp:xmltext** にコピーしないことを示します。|  
   
  *SchemaDeclaration*  
- フォームのスキーマ定義です: *ColName * * ColType* [*ColPattern* | *メタプロパティ*] [**、* * *ColNameColType* [*ColPattern * |*メタプロパティ*]...]  
+ フォームのスキーマ定義です。*ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [*ColPattern* | *MetaProperty*]...]  
   
  *ColName*  
  行セット内の列名を指定します。  
   
  *ColType*  
- 行セット内の列の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を指定します。 基になると、列の型が異なる場合**xml**属性、強制型変換のデータ型が発生します。  
+ 行セット内の列の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を指定します。 列のデータ型が、基になる属性の **xml** データ型とは異なる場合、強制型変換が行われます。  
   
  *ColPattern*  
- XML ノードを列へマップする方法を表す標準 XPath パターンを指定します (省略可能)。 場合*ColPattern*が指定されていない、既定のマッピング (**属性中心**または**要素中心**で指定されたマッピング*フラグ*) 行われます。  
+ XML ノードを列へマップする方法を表す標準 XPath パターンを指定します (省略可能)。 *ColPattern* の指定を省略すると、既定のマッピング (*flags* で指定した**属性中心**または**要素中心**のマッピング) が適用されます。  
   
- として指定した XPath パターン*ColPattern*マッピングの特別な性質の指定に使用される (の場合、**属性中心**と**要素中心**マッピング) します。上書きまたは拡張によって示される既定のマッピング*フラグ*です。  
+ *ColPattern* として指定した XPath パターンは、**属性中心**のマッピングや**要素中心**のマッピングの場合に、*flags* で指定される既定のマッピングを上書きまたは拡張する、特殊なマッピング特性を指定するときに使用されます。  
   
- として指定する標準 XPath パターン*ColPattern*メタプロパティもサポートします。  
+ *ColPattern* で指定する標準 XPath パターンでは、メタプロパティもサポートされます。  
   
  *MetaProperty*  
- OPENXML で提供されるメタプロパティの 1 つを指定します。 場合*メタプロパティ*が指定されている列には、メタプロパティで提供される情報が含まれています。 これらのメタプロパティによって、XML ノードの情報 (相対的な位置や名前空間の情報など) を抽出でき、 これにより、テキストとして表示されている情報だけでなく、さらに多くの情報を取得することができます。  
+ OPENXML で提供されるメタプロパティの 1 つを指定します。 *MetaProperty* を指定すると、メタプロパティで提供される情報が列に格納されます。 これらのメタプロパティによって、XML ノードの情報 (相対的な位置や名前空間の情報など) を抽出でき、 これにより、テキストとして表示されている情報だけでなく、さらに多くの情報を取得することができます。  
   
  *TableName*  
- テーブル名を指定できます (の代わりに*SchemaDeclaration*) 目的のスキーマを持つテーブルが既に存在し、列パターンが必要ないかどうか。  
+ 目的のスキーマを備えたテーブルが既に存在し、列パターンが必要ない場合は、*SchemaDeclaration* の代わりにテーブル名を指定できます。  
   
-## <a name="remarks"></a>解説  
- WITH 句は、いずれかを使用して行セットの形式 (および必要に応じて、追加のマッピング情報) を提供*SchemaDeclaration* 、既存の指定または*TableName*です。 句を使用して、オプションが指定されていない場合、結果が返されます、**エッジ**テーブル形式です。 エッジ テーブルでは、1 つのテーブル内での詳細な XML ドキュメントの構造 (要素/属性名、ドキュメント階層、名前空間、PI など) が表されます。  
+## <a name="remarks"></a>Remarks  
+ WITH 句を、*SchemaDeclaration*、または既存の *TableName* と共に使用すると、行セットの形式、および必要に応じて追加のマッピング情報を指定できます。 WITH 句の指定を省略すると、結果は**エッジ** テーブル形式で返されます。 エッジ テーブルでは、1 つのテーブル内での詳細な XML ドキュメントの構造 (要素/属性名、ドキュメント階層、名前空間、PI など) が表されます。  
   
- 次の表の構造、**エッジ**テーブル。  
+ 次の表で、**エッジ** テーブルの構造について説明します。  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**bigint**|ドキュメント ノードの一意の ID。<br /><br /> ルート要素には、ID 値 0 があります。 負の ID 値は予約済みです。|  
+|**id**|**bigint**|ドキュメント ノードの一意の ID。<br /><br /> ルート要素の ID 値は 0 です。 負の ID 値は予約済みです。|  
 |**parentid**|**bigint**|ノードの親の識別子。 この ID によって識別される親のノードは、必ずしも要素ではなく、この ID によって親が識別されるノードの NodeType に依存します。 たとえば、ノードがテキスト ノードである場合、その親は属性ノードである場合もあります。<br /><br /> ノードが XML ドキュメントの最上位にある場合、その **ParentID** は NULL になります。|  
 |**nodetype**|**int**|ノードの型の識別子。 XML DOM ノードの型番号に対応する整数です。<br /><br /> ノードの型は次のとおりです。<br /><br /> 1 = 要素ノード<br /><br /> 2 = 属性ノード<br /><br /> 3 = テキスト ノード|  
 |**localname**|**nvarchar**|要素または属性のローカル名。 DOM オブジェクトに名前がない場合は NULL になります。|  
@@ -102,16 +102,16 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**namespaceuri**|**nvarchar**|ノードの名前空間 URI。 値が NULL の場合、名前空間はありません。|  
 |**datatype**|**nvarchar**|要素または属性行の実際のデータ型。それ以外の行は NULL になります。 データ型は、インライン DTD またはインライン スキーマから推定されます。|  
 |**prev**|**bigint**|前の兄弟要素の XML ID。 前に直接の兄弟がない場合は NULL になります。|  
-|**text**|**ntext**|属性の値またはテキスト形式での要素の内容が含まれています (場合は NULL、**エッジ**テーブル エントリの値は必要ありません)。|  
+|**text**|**ntext**|テキスト形式の、属性値または要素の内容。**エッジ** テーブル エントリに値が必要ない場合は NULL になります。|  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-a-simple-select-statement-with-openxml"></a>A. OPENXML と共に単純な SELECT ステートメントを使用する  
  次の例では、`sp_xml_preparedocument` を使用して XML イメージの内部表現を作成します。 次に、XML ドキュメントの内部表現に対して、`SELECT` 行セット プロバイダーを使用して `OPENXML` ステートメントを実行します。  
   
- *フラグ*に値が設定されている`1`です。 これを示します**属性中心**マッピングします。 したがって、XML 属性は行セット内の列にマップされます。 *Rowpattern*として指定された`/ROOT/Customer`を識別、`<Customers>`処理するノードをします。  
+ *flag* の値は、`1` に設定されています。 これは**属性中心**のマッピングを示します。 したがって、XML 属性は行セット内の列にマップされます。 *rowpattern* は `/ROOT/Customer` として指定します。これは `<Customers>` ノードを処理することを示します。  
   
- 省略可能な*ColPattern*列名には、XML 属性の名前が一致するので、(列パターン) パラメーターが指定されていません。  
+ 列名は XML 属性名と一致しているので、*ColPattern* (列パターン) パラメーターは省略します。  
   
  `OPENXML` 行セット プロバイダーでは、2 列の行セット (`CustomerID` および `ContactName`) が作成されます。`SELECT` ステートメントでは、これらの行セットから必要な列 (この場合はすべての列) を取得します。  
   
@@ -150,7 +150,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- 場合同じ`SELECT`ステートメントを実行すると*フラグ*'éý'`2`を示す、**要素中心**の値をマップします`CustomerID`と`ContactName`の両方に、。という名前の要素がないため、XML ドキュメント内の顧客は、NULL として返されます`CustomerID`または`ContactName`XML ドキュメントにします。  
+ **要素中心**のマッピングを示す、*flags* が `2` に設定されている `SELECT` ステートメントを実行すると、XML ドキュメント内の両方の顧客について `CustomerID` および `ContactName` の値は NULL として返されます。これは、`CustomerID` または `ContactName` という名前の要素が XML ドキュメント内に存在しないためです。  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -162,15 +162,15 @@ NULL       NULL
 ```  
   
 ### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>B. 列と XML 属性の間のマッピングに ColPattern を指定する  
- 次のクエリでは、XML ドキュメントから顧客 ID、注文日、製品 ID、および数量の属性を返します。 *Rowpattern*を識別、`<OrderDetails>`要素。 `ProductID` および `Quantity` は、`<OrderDetails>` 要素の属性です。 ただし、`OrderID`、`CustomerID`、および `OrderDate` は、親要素 (`<Orders>`) の属性です。  
+ 次のクエリでは、XML ドキュメントから顧客 ID、注文日、製品 ID、および数量の属性を返します。 *rowpattern* によって、`<OrderDetails>` 要素が識別されます。 `ProductID` および `Quantity` は、`<OrderDetails>` 要素の属性です。 ただし、`OrderID`、`CustomerID`、および `OrderDate` は、親要素 (`<Orders>`) の属性です。  
   
- 省略可能な*ColPattern*を指定します。 これは、次のことを示します。  
+ *ColPattern* は省略せず指定します。 これは、次のことを示します。  
   
--   `OrderID`、 `CustomerID`、および`OrderDate`で識別されるノードの親の属性を行セットのマップで*rowpattern* XML ドキュメントにします。  
+-   行セット内の `OrderID`、`CustomerID`、および `OrderDate` 列は、XML ドキュメント内の *rowpattern* によって識別されるノードの親の属性にマップされます。  
   
--   `ProdID`行セット内の列にマップされて、`ProductID`属性、および`Qty`行セット内の列にマップされて、`Quantity`で識別されたノードの属性*rowpattern*です。  
+-   行セット内の `ProdID` 列は `ProductID` 属性にマップされます。行セット内の `Qty` 列は *rowpattern* によって識別されるノードの `Quantity` 属性にマップされます。  
   
- ただし、**要素中心**マッピングを指定、*フラグ*パラメーターで指定したマッピング*ColPattern*このマッピングが上書きされます。  
+ *flags* パラメーターでは**要素中心**のマッピングを指定しますが、これは *ColPattern* で指定するマッピングで上書きされます。  
   
 ```  
 DECLARE @idoc int, @doc varchar(1000);   
@@ -216,11 +216,11 @@ OrderID CustomerID           OrderDate                 ProdID    Qty
 ```  
   
 ### <a name="c-obtaining-results-in-an-edge-table-format"></a>C. エッジ テーブル形式で結果を取得する  
- 次の例では、サンプルの XML ドキュメントから成る`<Customers>`、 `<Orders>`、および`<Order_0020_Details>`要素。 最初に、 **sp_xml_preparedocument**ドキュメント ハンドルを取得するために呼び出されます。 このドキュメント ハンドルに渡される`OPENXML`です。  
+ 次の例の XML ドキュメントは、`<Customers>`、`<Orders>`、および `<Order_0020_Details>` 要素で構成されています。 まず、**sp_xml_preparedocument** を呼び出してドキュメント ハンドルを取得します。 このドキュメント ハンドルは `OPENXML` に引き渡されます。  
   
- `OPENXML`ステートメント、 *rowpattern* (`/ROOT/Customers`) を識別、`<Customers>`処理するノードです。 WITH 句が指定されていないため`OPENXML`で行セットを返します、**エッジ**テーブル形式です。  
+ `OPENXML` ステートメントの *rowpattern* (`/ROOT/Customers`) によって、処理する `<Customers>` ノードが識別されます。 WITH 句は指定しません。したがって、`OPENXML` では行セットが**エッジ** テーブル形式で返されます。  
   
- 最後に、`SELECT`ステートメント内のすべての列を取得、**エッジ**テーブル。  
+ 最後に、`SELECT` ステートメントで、**エッジ** テーブルに含まれるすべての列を取得します。  
   
 ```  
 DECLARE @idoc int, @doc varchar(1000);   

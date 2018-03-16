@@ -1,5 +1,5 @@
 ---
-title: "[SET implicit_transactions] (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET IMPLICIT_TRANSACTIONS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/02/2018
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  BEGIN TRANSACTION モードに設定*暗黙*、接続します。  
+  接続に対して、BEGIN TRANSACTION モードを "*暗黙*" に設定します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,8 +50,8 @@ ms.lasthandoff: 01/02/2018
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>解説  
- ときに、システムが*暗黙的な*トランザクション モードです。 つまり、@@TRANCOUNT = 0 で、次の TRANSACT-SQL ステートメントのいずれかが新しいトランザクションを開始します。 これは、最初に実行されている見えない、BEGIN の TRANSACTION と同じです。  
+## <a name="remarks"></a>Remarks  
+ ON の場合、システムは "*暗黙*" トランザクション モードです。 つまり、@@TRANCOUNT = 0 の場合に、次の Transact-SQL ステートメントのいずれかが新しいトランザクションを開始します。 これは、最初に実行される目に見えない BEGIN TRANSACTION と同じです。  
   
 ||||  
 |-|-|-|  
@@ -61,21 +61,21 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |Del|OPEN|UPDATE|  
 |DROP|のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。|のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。|  
   
- ときに OFF、上記の T-SQL ステートメントの各に制限されます、含まれる未知の BEGIN TRANSACTION と含まれる未知の COMMIT TRANSACTION ステートメント。 OFF の場合、トランザクション モードは言う*autocommit*です。 T-SQL コードは、視覚的に、BEGIN TRANSACTION を発行した場合、トランザクション モードは言う*明示的な*します。  
+ OFF の場合、前の T-SQL ステートメントはそれぞれ目に見えない BEGIN TRANSACTION と目に見えない COMMIT TRANSACTION ステートメントによってバインドされます。 OFF の場合、トランザクション モードは "*オートコミット*" です。 T-SQL コードが明確に BEGIN TRANSACTION を発行する場合、トランザクション モードは "*明示的*" です。  
   
- 理解しておく clarifying いくつかの点があります。  
+ 理解しておくべき明確な点がいくつかあります。  
   
--   トランザクション モードは、暗黙の型が、含まれる未知の BEGIN TRANSACTION が発行されない場合に @@trancount > 0 は既にです。 ただし、明示的な BEGIN TRANSACTION ステートメントが @ 増分値をまだ@TRANCOUNTします。  
+-   トランザクション モードが暗黙のとき、既に @@trancount > 0 の場合は目に見えない BEGIN TRANSACTION は発行されません。 ただし、明示的な BEGIN TRANSACTION ステートメントは依然として @@TRANCOUNT を増やします。  
   
--   @ まで COMMIT TRANSACTION ステートメントを発行する必要があります、INSERT ステートメントと、作業単位に何が完了したら、@TRANCOUNTが 0 まで戻しますデクリメントします。 または、1 つの ROLLBACK TRANSACTION を発行することができます。  
+-   INSERT ステートメントと作業単位内の他のいずれかが完了したら、@@TRANCOUNT が 0 に減るまで COMMIT TRANSACTION ステートメントを発行する必要があります。 または、1 つの ROLLBACK TRANSACTION を発行することができます。  
   
 -   テーブルからの選択操作を伴わない SELECT ステートメントでは、暗黙のトランザクションは開始されません。 たとえば、`SELECT GETDATE();` や `SELECT 1, 'ABC';` にトランザクションは不要です。  
   
--   暗黙のトランザクションが予期せずがあります ON ANSI の既定値です。 詳細をご覧ください[SET ANSI_DEFAULTS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-defaults-transact-sql.md).  
+-   ANSI の既定値が原因で暗黙のトランザクションが予期せず ON になっている可能性があります。 詳しくは、「[SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)」をご覧ください。  
   
-     IMPLICIT_TRANSACTIONS ON は、人気のあるではないです。 IMPLICIT_TRANSACTIONS が ON ほとんどの場合、これは SET ANSI_DEFAULTS の選択が行われたためです。  
+     IMPLICIT_TRANSACTIONS ON は一般的ではありません。 ほとんどの場合、IMPLICIT_TRANSACTIONS が ON であるのは、SET ANSI_DEFAULTS ON の選択が行われたためです。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバーは、接続時に IMPLICIT_TRANSACTIONS を OFF に自動的に設定します。 SET IMPLICIT_TRANSACTIONS を OFF に、SQLClient マネージ プロバイダーとの接続でと既定で使用する HTTP エンドポイントを介して受信した SOAP 要求します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、接続時に自動的に IMPLICIT_TRANSACTIONS が OFF に設定されます。 接続でのオプションを off、SET IMPLICIT_TRANSACTIONS の既定値、 SQLClient マネージ プロバイダーで、HTTP エンドポイント経由で受信した SOAP 要求します。  
   
  IMPLICIT_TRANSACTIONS の現在の設定を表示するには、次のクエリを実行します。  
   
@@ -86,7 +86,7 @@ SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;
 ```  
   
 ## <a name="examples"></a>使用例  
- 次の TRANSACT-SQL スクリプトは、いくつかの異なるテスト_ケースを実行します。 テキスト出力は動作の詳細を表示され、各テスト・ケースの結果も提供されます。  
+ 次の Transact-SQL スクリプトは、いくつかの異なるテスト ケースを実行します。 動作の詳細と各テスト ケースの結果を示すテキスト出力も提供されます。  
   
 ```sql  
 -- Transact-SQL.  
@@ -169,7 +169,7 @@ DROP TABLE dbo.t1;
 go  
 ```  
   
- 次は、前述の TRANSACT-SQL スクリプトからのテキストの出力です。  
+ 次は、前述の Transact-SQL スクリプトからのテキスト出力です。  
   
 ```sql  
 -- Text output from Transact-SQL:  
@@ -207,17 +207,17 @@ go
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [DROP TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-table-transact-sql.md)   
- [フェッチ &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [開く &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/open-transact-sql.md)   
+ [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [[SET ansi_defaults] &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)   
- [TRUNCATE TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/truncate-table-transact-sql.md)   
+ [TRUNCATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/truncate-table-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
   

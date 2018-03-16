@@ -1,5 +1,5 @@
 ---
-title: "FILE_NAME (TRANSACT-SQL) |Microsoft ドキュメント"
+title: FILE_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -53,16 +53,16 @@ FILE_NAME ( file_id )
   
 ## <a name="arguments"></a>引数  
  *file_id*  
- ファイル名を返す基になるファイル識別番号です。 *file_id*は**int**です。  
+ ファイル名を返す基になるファイル識別番号です。 *file_id* は **int** です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>解説  
- *file_ID* sys.master_files または sys.database_files カタログ ビューの file_id 列に対応しています。  
+## <a name="remarks"></a>Remarks  
+ *file_ID* は、sys.master_files カタログ ビューまたは sys.database_files カタログ ビューの file_id 列に対応しています。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、のファイル名を返す`file_ID 1`と`file_ID`で、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `file_ID 1` および `file_ID` に対するファイル名を返します。  
   
 ```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  
@@ -80,8 +80,8 @@ AdventureWorks2012_Data   AdventureWorks2012_Log
 ``` 
   
 ## <a name="see-also"></a>参照  
- [FILE_IDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/file-idex-transact-sql.md)   
- [メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [FILE_IDEX &#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
+ [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

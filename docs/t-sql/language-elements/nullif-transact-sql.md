@@ -1,5 +1,5 @@
 ---
-title: "NULLIF (TRANSACT-SQL) |Microsoft ドキュメント"
+title: NULLIF (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  指定された 2 つの式が等しい場合に NULL 値を返します。 たとえば、 `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` 2 つの入力値が同じなので、(4 および 4) は、最初の列の NULL を返します。 2 番目の列は、2 つの入力値が異なるために、最初の値 (5) を返します。 
+  指定された 2 つの式が等しい場合に NULL 値を返します。 たとえば、`SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` の最初の列 (4 と 4) は、2 つの入力値が同じなので NULL を返します。 2 つ目の列は、2 つの入力値が異なるため、最初の値 (5) を返します。 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,19 +52,19 @@ NULLIF ( expression , expression )
  任意の有効なスカラー[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
 ## <a name="return-types"></a>戻り値の型  
- 最初と同じ型を返します*式*です。  
+ 最初の*式*と同じ型を返します。  
   
- NULLIF は最初を返します*式*2 つの式が等しくない場合。 NULLIF は最初の型の null 値を返しますの式が等しい場合は、*式*です。  
+ NULLIF は、2 つの式が等しくない場合、最初の*式*を返します。 式が等しい場合、NULLIF は最初の*式*のデータ型の NULL 値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  NULLIF は、2 つの式を比較し、その 2 つが等価な場合に NULL を返す検索 CASE 式と同じです。  
   
- NULLIF 関数の中では、RAND() など時間に依存する関数は使用しないことをお勧めします。 これには、関数に 2 回評価されると、2 つの呼び出しから異なる結果を返す可能性があります。  
+ NULLIF 関数の中では、RAND() など時間に依存する関数は使用しないことをお勧めします。 関数が 2 回呼び出されて評価され、それぞれ異なる結果が返されることがあります。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-budget-amounts-that-have-not-changed"></a>A. 変更のない予算額を返す  
- 次の例を作成、`budgets`部門を表示するテーブル (`dept`)、現在の予算 (`current_year`) とその前の予算 (`previous_year`)。 現在の年の`NULL`は部門に予算が前の年から変更されていないためと`0`予算がまだ決定されていないためです。 平均値を予算を受け取った部門についてだけを検索し、前年度の予算の値を追加する (を使用して、`previous_year`値、場所、`current_year`は`NULL`)、結合、`NULLIF`と`COALESCE`関数。  
+ 次の例では、部門 (`dept`)、今年度予算 (`current_year`)、および昨年度予算 (`previous_year`) で構成される `budgets` テーブルを作成します。 今年度予算が昨年度予算と変わらない部門については `NULL` を使用し、今年度予算がまだ決定していない場合は `0` を使用します。 昨年度予算の値を使用する場合も含めて (`previous_year` が `current_year` の場合は `NULL` の値を使用)、今年度予算を受け取った部門についてだけその平均値を求めるには、`NULLIF` 関数と `COALESCE` 関数を組み合わせて使用します。  
   
 ```sql  
 CREATE TABLE dbo.budgets  
@@ -96,7 +96,7 @@ GO
  ```  
   
 ### <a name="b-comparing-nullif-and-case"></a>B. NULLIF と CASE を比較する  
- 間の類似性を表示する`NULLIF`と`CASE`、次のクエリを評価するかどうかの値、`MakeFlag`と`FinishedGoodsFlag`列が同じです。 最初のクエリでは `NULLIF` を使用します。 2 番目のクエリでは `CASE` 式を使用します。  
+ `NULLIF` と `CASE` の類似性を示すため、次のクエリでは、`MakeFlag` 列と `FinishedGoodsFlag` 列の値が同じかどうかを評価します。 最初のクエリでは `NULLIF` を使用します。 2 番目のクエリでは `CASE` 式を使用します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -117,8 +117,8 @@ WHERE ProductID < 10;
 GO  
 ```  
 
-### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C: は、データがない予算額を返す  
- 次の例を作成、`budgets`テーブル、データを読み込んでを使用して`NULLIF`、どちらの場合、null を返す`current_year`も`previous_year`データが含まれています。  
+### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C. データを含まない予算額を返す  
+ 次の例では、`budgets` テーブルを作成し、データを読み込み、`current_year` と `previous_year` のいずれにもデータが含まれない場合は `NULLIF` を使用して null を返します。  
   
 ```sql  
 CREATE TABLE budgets (  
@@ -151,9 +151,9 @@ FROM budgets;
  ```  
   
 ## <a name="see-also"></a>参照  
- [場合 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/case-transact-sql.md)   
- [decimal および numeric 型 &#40;TRANSACT-SQL と #41 です。](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [システム関数 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [decimal 型と numeric 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
 

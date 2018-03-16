@@ -1,5 +1,5 @@
 ---
-title: "非対称キーを変更 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/12/2017
 ms.prod: sql-non-specified
@@ -71,33 +71,33 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  秘密キーの保護を変更します。  
   
  ENCRYPTION BY PASSWORD **='***stongPassword***'**  
- 秘密キーを保護するための新しいパスワードを指定します。 *パスワード*のインスタンスを実行しているコンピューターの Windows パスワード ポリシーの要件を満たす必要がある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 このオプションを省略した場合、秘密キーはデータベースのマスター キーで暗号化されます。  
+ 秘密キーを保護するための新しいパスワードを指定します。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。 このオプションを省略した場合、秘密キーはデータベースのマスター キーで暗号化されます。  
   
  DECRYPTION BY PASSWORD **='***oldPassword***'**  
  現在秘密キーが保護されている、古いパスワードを指定します。 秘密キーがデータベースのマスター キーで暗号化されている場合は指定する必要はありません。  
   
-## <a name="remarks"></a>解説  
- データベースのマスター キーがない場合は、ENCRYPTION BY PASSWORD オプションを指定する必要があります。パスワードを指定しないと、この操作は失敗します。 データベース マスター _ キーを作成する方法については、次を参照してください。 [CREATE MASTER KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-master-key-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ データベースのマスター キーがない場合は、ENCRYPTION BY PASSWORD オプションを指定する必要があります。パスワードを指定しないと、この操作は失敗します。 データベースのマスター キー作成方法については、「[CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)」をご覧ください。  
   
  秘密キーの保護を変更するには、ALTER ASYMMETRIC KEY を使用して、PRIVATE KEY オプションを次のように指定します。  
   
 |保護の変更対象|ENCRYPTION BY PASSWORD|DECRYPTION BY PASSWORD|  
 |----------------------------|----------------------------|----------------------------|  
-|古いパスワードから新しいパスワードへ|必須|必須|  
-|パスワードからマスター キーへ|[省略]|必須|  
-|マスター キーからパスワードへ|必須|[省略]|  
+|古いパスワードから新しいパスワードへ|Required|Required|  
+|パスワードからマスター キーへ|[省略]|Required|  
+|マスター キーからパスワードへ|Required|[省略]|  
   
- データベースのマスター キーを秘密キーの保護に使用するには、マスター キーを先に開いておく必要があります。 詳細については、次を参照してください。 [OPEN MASTER KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/open-master-key-transact-sql.md).  
+ データベースのマスター キーを秘密キーの保護に使用するには、マスター キーを先に開いておく必要があります。 詳しくは、「[OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)」をご覧ください。  
   
- 非対称キーの所有権を変更するには、使用[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)です。  
+ 非対称キーの所有権を変更するには、[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) を使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  秘密キーを削除する場合、非対称キーに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-changing-the-password-of-the-private-key"></a>A. 秘密キーのパスワードを変更する  
- 次の例は、非対称キーの秘密キーを保護するためのパスワードを変更`PacificSales09`です。 新しいパスワードになります`<enterStrongPasswordHere>`です。  
+ 次の例では、非対称キー `PacificSales09` の秘密キーの保護に使用するパスワードを変更します。 新しいパスワードは `<enterStrongPasswordHere>` です。  
   
 ```  
 ALTER ASYMMETRIC KEY PacificSales09   
@@ -108,7 +108,7 @@ GO
 ```  
   
 ### <a name="b-removing-the-private-key-from-an-asymmetric-key"></a>B. 非対称キーから秘密キーを削除する  
- 次の例から秘密キーを削除する`PacificSales19`、公開キーのみを終了します。  
+ 次の例では、`PacificSales19` から秘密キーを削除し、公開キーだけを残します。  
   
 ```  
 ALTER ASYMMETRIC KEY PacificSales19 REMOVE PRIVATE KEY;  
@@ -131,7 +131,7 @@ GO
  [SQL Server とデータベースの暗号化キー &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [MASTER KEY &#40; を開くTRANSACT-SQL と #41 です。](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
  [拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "USER_NAME (TRANSACT-SQL) |Microsoft ドキュメント"
+title: USER_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -52,13 +52,13 @@ USER_NAME ( [ id ] )
   
 ## <a name="arguments"></a>引数  
  *id*  
- データベース ユーザーに関連付けられている識別番号を指定します。 *id*は**int**です。かっこで囲む必要があります。  
+ データベース ユーザーに関連付けられている識別番号を指定します。 *id* は **int** です。かっこで囲む必要があります。  
   
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar (256)**  
   
-## <a name="remarks"></a>解説  
- ときに*id*は省略すると、現在のコンテキストで現在のユーザーが想定されます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。 指定せずに USER_NAME を呼び出したときに、 *id*実行後にステートメントとして USER_NAME が権限を借用したユーザーの名前を返します。 場合は、Windows プリンシパルをアクセスすると、グループのメンバーシップを使用して、データベース、ユーザー名の名前を返します、Windows グループではなくプリンシパル。  
+## <a name="remarks"></a>Remarks  
+ *id* を省略した場合は、現在のコンテキストの現在のユーザーであると見なされます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。 EXECUTE AS ステートメントの実行後に *id* を指定せずに USER_NAME を呼び出した場合、USER_NAME では権限を借用したユーザーの名前が返されます。 Windows プリンシパルがグループのメンバーシップを使ってデータベースにアクセスした場合、USER_NAME はグループではなく Windows プリンシパルの名前を返します。  
   
 ## <a name="examples"></a>使用例  
   
@@ -106,7 +106,7 @@ dbo
 ```  
   
 ### <a name="d-calling-username-during-impersonation-with-execute-as"></a>D. EXECUTE AS での権限借用中に USER_NAME を呼び出す  
- 例を次にどのように`USER_NAME`権限借用中に動作します。  
+ 次の例では、権限借用中の `USER_NAME` の動作を示します。  
   
 ```  
 SELECT USER_NAME();  
@@ -129,7 +129,7 @@ Zelig
 DBO
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-username-without-an-id"></a>E. ID を指定せずに USER_NAME を使用する  
  次の例では、ID を指定せずに、現在のユーザーの名前を検索します。  
@@ -138,7 +138,7 @@ DBO
 SELECT USER_NAME();  
 ```  
   
- 現在のログイン ユーザーの結果セットを次に示します。  
+ これは現在のログイン ユーザーの結果セットです。  
   
 ```  
 ------------------------------   
@@ -163,11 +163,11 @@ User7
 ## <a name="see-also"></a>参照  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [CURRENT_USER と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/current-user-transact-sql.md)   
- [SESSION_USER と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/session-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
+ [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
  [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [SYSTEM_USER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/system-user-transact-sql.md)  
+ [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
   
   
 

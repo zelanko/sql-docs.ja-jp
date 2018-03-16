@@ -1,5 +1,5 @@
 ---
-title: "ROLLBACK TRANSACTION (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ROLLBACK TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -57,31 +57,31 @@ ROLLBACK { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>引数  
  *transaction_name*  
- BEGIN TRANSACTION においてトランザクションに割り当てられた名前です。 *では無視*識別子の規則に従う必要がありますが、トランザクション名の最初の 32 文字だけが使用されます。 トランザクションを入れ子にする場合*では無視*最も外側の BEGIN TRANSACTION ステートメントから名前にする必要があります。 *では無視*、大文字小文字を区別は常に場合でも、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]小文字は区別されません。  
+ BEGIN TRANSACTION においてトランザクションに割り当てられた名前です。 *transaction_name* は識別子のルールに従っている必要があります。ただし、使用されるのはトランザクション名の先頭の 32 文字だけです。 トランザクションを入れ子にしている場合は、*transaction_name* は最も外側の BEGIN TRANSACTION ステートメントの名前である必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで大文字と小文字が区別されない場合であっても、*transaction_name* では常に大文字と小文字が区別されます。  
   
  **@** *tran_name_variable*  
- 有効なトランザクション名を格納しているユーザー定義変数の名前を指定します。 変数を宣言する必要があります、 **char**、 **varchar**、 **nchar**、または**nvarchar**データ型。  
+ 有効なトランザクション名を格納しているユーザー定義変数の名前を指定します。 変数は、**char**、**varchar**、**nchar**、または **nvarchar** データ型を使用して宣言する必要があります。  
   
  *savepoint_name*  
- *Savepoint_name* SAVE TRANSACTION ステートメントからです。 *savepoint_name*識別子の規則に従う必要があります。 使用して*savepoint_name*と条件付きのロールバックには影響は、トランザクションの一部のみです。  
+ SAVE TRANSACTION ステートメントの *savepoint_name* です。 *savepoint_name* は、識別子のルールに従っている必要があります。 *savepoint_name* は、条件付きのロールバックがトランザクションの一部にしか影響しない場合に使用します。  
   
  **@** *savepoint_variable*  
- 有効なセーブポイント名を格納しているユーザー定義変数の名前です。 変数を宣言する必要があります、 **char**、 **varchar**、 **nchar**、または**nvarchar**データ型。  
+ 有効なセーブポイント名を格納しているユーザー定義変数の名前です。 変数は、**char**、**varchar**、**nchar**、または **nvarchar** データ型を使用して宣言する必要があります。  
   
 ## <a name="error-handling"></a>エラー処理  
  ROLLBACK TRANSACTION ステートメントでは、ユーザーに対するメッセージは生成されません。 ストアド プロシージャまたはトリガーで警告が必要な場合は、RAISERROR ステートメントまたは PRINT ステートメントを使用します。 エラーを指示するには、RAISERROR ステートメントの方が適しています。  
   
 ## <a name="general-remarks"></a>全般的な解説  
- せずに ROLLBACK TRANSACTION、 *savepoint_name*または*では無視*トランザクションの先頭にロールバックします。 トランザクションを入れ子にしている場合は、同じステートメントが、内部のすべてのトランザクションを、最も外側の BEGIN TRANSACTION ステートメントにロールバックします。 どちらの場合も、ROLLBACK TRANSACTION デクリメント、@@TRANCOUNTシステム関数を 0 にします。 ROLLBACK TRANSACTION *savepoint_name* @ をデクリメントされません@TRANCOUNTです。  
+ *savepoint_name* または *transaction_name* を指定せずに ROLLBACK TRANSACTION を実行すると、トランザクションの先頭までロールバックします。 トランザクションを入れ子にしている場合は、同じステートメントが、内部のすべてのトランザクションを、最も外側の BEGIN TRANSACTION ステートメントにロールバックします。 どちらの場合も、ROLLBACK TRANSACTION では @@TRANCOUNT システム関数が 0 に減らされます。 ROLLBACK TRANSACTION *savepoint_name* で @@TRANCOUNT が減少することはありません。  
   
- ROLLBACK TRANSACTION が参照することはできません、 *savepoint_name* BEGIN DISTRIBUTED TRANSACTION で明示的に開始された分散トランザクションにまたはローカル トランザクションのエスカレートします。  
+ ROLLBACK TRANSACTION では、BEGIN DISTRIBUTED TRANSACTION によって明示的にまたはローカル トランザクションのエスカレートにより開始された分散型トランザクション内の *savepoint_name* は参照できません。  
   
- COMMIT TRANSACTION ステートメントの実行後は、トランザクションをロールバックできません。ただし、COMMIT TRANSACTION が、ロールバックするトランザクション内に含まれている入れ子にされたトランザクションに関連付けられている場合を除きます。 このインスタンスで、入れ子になったトランザクションはロールバックの COMMIT TRANSACTION を発行した場合でもされます。  
+ COMMIT TRANSACTION ステートメントの実行後は、トランザクションをロールバックできません。ただし、COMMIT TRANSACTION が、ロールバックするトランザクション内に含まれている入れ子にされたトランザクションに関連付けられている場合を除きます。 この場合、COMMIT TRANSACTION を発行していたとしても、入れ子にされたトランザクションはロールバックされます。  
   
  トランザクションの中で、同じセーブポイント名を重複して指定することができます。しかし、重複するセーブポイント名を使用する ROLLBACK TRANSACTION は、そのセーブポイント名を使用する最新の SAVE TRANSACTION にしかロールバックできません。  
   
 ## <a name="interoperability"></a>相互運用性  
- ストアド プロシージャ、せずに ROLLBACK TRANSACTION ステートメントで、 *savepoint_name*または*では無視*のすべてのステートメントを最も外側の BEGIN TRANSACTION にロールバックします。 @ 原因となったストアド プロシージャで ROLLBACK TRANSACTION ステートメント@TRANCOUNT別の値よりも、ストアド プロシージャが完了したときに、@@TRANCOUNT値ストアド プロシージャが呼び出されたときに、情報メッセージが生成されます。 このメッセージが出力されても、その後の処理に影響はありません。  
+ ストアド プロシージャの中で、*savepoint_name* または *transaction_name* を指定せずに ROLLBACK TRANSACTION ステートメントを実行すると、すべてのステートメントが最も外側の BEGIN TRANSACTION までロールバックされます。 ROLLBACK TRANSACTION ステートメントを実行するストアド プロシージャで、終了時の @@TRANCOUNT の値と呼び出し時の @@TRANCOUNT の値が異なる場合は、情報メッセージが出力されます。 このメッセージが出力されても、その後の処理に影響はありません。  
   
  ROLLBACK TRANSACTION がトリガー内で実行された場合  
   
@@ -91,7 +91,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 -   トリガーを起動したステートメントの後で、バッチ内のステートメントは実行されません。  
   
-@@TRANCOUNT自動コミット モードにある場合でも、トリガーに入るときに、1 が加算されます。 つまり、トリガーは暗黙の入れ子にされたトランザクションとして扱われます。  
+@@TRANCOUNT は、自動コミット モードの場合であっても、トリガーに入るたびに 1 ずつ増加します。 つまり、トリガーは暗黙の入れ子にされたトランザクションとして扱われます。  
   
 ストアド プロシージャで ROLLBACK TRANSACTION ステートメントを実行しても、そのプロシージャを呼び出したバッチ内にある次のステートメントには影響しません。 トリガーの中の ROLLBACK TRANSACTION ステートメントは、トリガーを起動したステートメントを含むバッチを終了します。バッチ内の以降のステートメントは実行されません。  
   
@@ -104,13 +104,13 @@ ROLLBACK { TRAN | TRANSACTION }
 3.  バッチを終了し、内部のロールバックを生成するエラーは、エラー ステートメントを含むバッチの中で宣言された、すべてのカーソルの割り当てを解除します。 すべてのカーソルは、そのタイプや CURSOR_CLOSE_ON_COMMIT の設定にかかわらず、割り当てを解除されます。 これには、エラー バッチによって呼び出されるストアド プロシージャで宣言されたカーソルも含まれます。 エラー バッチの前にバッチ内で宣言されたカーソルは、ルール 1 および 2 に従います。 このタイプのエラーの例としてはデッドロック エラーがあります。 トリガーの中で実行される ROLLBACK ステートメントも、このタイプのエラーを自動的に生成します。  
   
 ## <a name="locking-behavior"></a>ロック動作  
- ROLLBACK TRANSACTION ステートメントの指定、 *savepoint_name*エスカレーションおよび変換を除き、セーブポイントを超える取得されるロックは解放されます。 これらのロックは解放されず、前のロック モードに戻ることはありません。  
+ ROLLBACK TRANSACTION ステートメントで *savepoint_name* を指定している場合、そのセーブポイントより後の時点で取得されたロックは解放されます。ただし、エスカレーションおよび変換が行われた場合を除きます。 これらのロックは解放されず、前のロック モードに戻ることはありません。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、名前付きトランザクションをロールバックした場合の影響を示しています。 テーブルを作成すると、次のステートメント名前付きのトランザクションを開始、2 つの行を挿入し、変数に名前付きトランザクションをロールバックして@TransactionNameです。 名前付きのトランザクションの外部で別のステートメントでは、2 つの行を挿入します。 クエリでは、前のステートメントの結果を返します。   
+ 次の例は、名前付きトランザクションをロールバックした場合の影響を示しています。 テーブルを作成した後、次のステートメントで名前付きトランザクションが開始され、2 行が挿入され、変数 @TransactionName に指定されたトランザクションがロールバックされます。 名前付きトランザクション外の外側にあるもう 1 つのステートメントで 2 行が挿入されます。 クエリによって、前のステートメントの結果が返されます。   
   
 ```sql    
 USE tempdb;  
@@ -143,8 +143,8 @@ value
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [コミット動作 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/commit-work-transact-sql.md)   
- [ROLLBACK WORK &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   
   

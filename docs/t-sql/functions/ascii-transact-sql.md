@@ -1,5 +1,5 @@
 ---
-title: "ASCII (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ASCII (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -49,16 +49,16 @@ ASCII ( character_expression )
   
 ## <a name="arguments"></a>引数  
 *character_expression*  
-[式](../../t-sql/language-elements/expressions-transact-sql.md)型の**char**または**varchar**です。
+**char** 型または **varchar** 型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。
   
 ## <a name="return-types"></a>戻り値の型
  **int**  
   
-## <a name="remarks"></a>解説
-情報交換用米国標準コードの省略形は ASCII です。 コンピューターで使用されるエンコード文字であります。 ASCII 文字の一覧は、次を参照してください。、**印刷可能な文字**のセクション[ASCII](https://www.wikipedia.org/wiki/ASCII)です。
+## <a name="remarks"></a>Remarks
+ASCII は、American Standard Code for Information Interchange の略語です。 コンピューターで使用される文字エンコード標準です。 ASCII 文字の一覧については、「[ASCII](https://www.wikipedia.org/wiki/ASCII)」の**印刷可能文字**のセクションをご覧ください。
 
 ## <a name="examples"></a>使用例  
-次の例は、ASCII 文字セットを想定しを返します、 `ASCII` 6 文字の値。
+次の例では、ASCII 文字セットの使用を前提として、6 つの文字の `ASCII` 値を返します。
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   
@@ -75,10 +75,10 @@ A           B           a           b           1           2
 ```  
   
 ## <a name="see-also"></a>参照
- [CHAR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/char-transact-sql.md)  
- [NCHAR と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/nchar-transact-sql.md)  
- [UNICODE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/unicode-transact-sql.md)  
- [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)
+ [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
+ [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
+ [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

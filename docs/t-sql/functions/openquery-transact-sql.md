@@ -1,5 +1,5 @@
 ---
-title: "OPENQUERY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: OPENQUERY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ OPENQUERY ( linked_server ,'query' )
  *linked_server*  
  リンク サーバーの名前を表す識別子を指定します。  
   
- **'** *クエリ* **'**  
+ **'** *query* **'**  
  リンク サーバーで実行するクエリ文字列を指定します。 文字列の最大長は 8 KB です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  OPENQUERY の引数に変数は指定できません。  
   
  OPENQUERY を使用して、リンク サーバーで拡張ストアド プロシージャを実行することはできません。 ただし、4 つの要素で構成される名前を使用して、リンク サーバーで拡張ストアド プロシージャを実行することはできます。 例 :  
@@ -73,7 +73,7 @@ EXEC SeattleSales.master.dbo.xp_msver
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-executing-an-update-pass-through-query"></a>A. UPDATE パススルー クエリを実行する  
- 次の例は、パススルー`UPDATE`例 A で作成したリンク サーバーに対するクエリ  
+ 次の例では、例 A で作成したリンク サーバーに対して、`UPDATE` パススルー クエリを使用します。  
   
 ```sql  
 UPDATE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE id = 101')   
@@ -81,7 +81,7 @@ SET name = 'ADifferentName';
 ```  
   
 ### <a name="b-executing-an-insert-pass-through-query"></a>B. INSERT パススルー クエリを実行する  
- 次の例は、パススルー`INSERT`例 A で作成したリンク サーバーに対するクエリ  
+ 次の例では、例 A で作成したリンク サーバーに対して、`INSERT` パススルー クエリを使用します。  
   
 ```sql  
 INSERT OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles')  
@@ -96,7 +96,7 @@ DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitl
 ```  
   
 ### <a name="d-executing-a-select-pass-through-query"></a>D. SELECT パススルー クエリを実行する  
- 次の例は、パススルー`SELECT`例 C で挿入された行を選択するクエリ  
+ 次の例では、`SELECT` パススルー クエリを使用して、例 C で追加した行を選択します。  
   
 ```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
@@ -108,11 +108,11 @@ SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [行セット関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rowset-functions-transact-sql.md)   
+ [行セット関数 &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_serveroption &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   

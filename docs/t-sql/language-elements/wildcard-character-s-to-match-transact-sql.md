@@ -1,5 +1,5 @@
 ---
-title: "(ワイルドカード - 一致する文字列) (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "[ ] (ワイルドカード - 一致する文字列) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -34,14 +34,14 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="--wildcard---characters-to-match-transact-sql"></a>\[\] (ワイルドカード - 一致する文字列) (TRANSACT-SQL)
+# <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (ワイルドカード - 一致する文字列) (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  指定した範囲または角かっこの間で指定されているセット内の任意の 1 文字と一致する`[ ]`です。 これらのワイルドカード文字をパターンに一致するなどを含む文字列比較で使用できます`LIKE`と`PATINDEX`です。  
+  角かっこ `[ ]` で指定された範囲または集合の任意の 1 文字に一致します。 これらのワイルドカード文字は、`LIKE` や `PATINDEX` などのパターン検索を含む文字列比較で使用できます。  
   
 ## <a name="examples"></a>使用例  
 ### <a name="a-simple-example"></a>A: 簡単な例   
-次の例は、文字で始まるの名前を返します`m`です。 `[n-z]`2 番目の文字が、範囲内でどこかにする必要がありますを指定します`n`に`z`です。 ワイルドカードのパーセント記号`%`の先頭 3 文字またはない任意の文字が許可されています。 `model`と`msdb`データベースは、この条件を満たしています。 `master`データベースがないし、結果セットから除外されます。
+次の例では、文字 `m` で始まる名前を返します。 `[n-z]` は、2 番目の文字が `n` から `z` の範囲に含まれる必要があることを指定します。 パーセントのワイルドカード `%` は、2 文字に 0 個以上の任意の文字列が続くことを指定します。 `model` データベースと `msdb` データベースがこの条件を満たしています。 `master` データベースは結果セットに含まれません。
  
 ```sql
 SELECT name FROM sys.databases
@@ -55,7 +55,7 @@ name
 model
 msdb
 ```   
- インストールされている該当するデータベースを追加するがあります。
+ 他にも該当するデータベースがインストールされている可能性があります。
 
 
 ### <a name="b-more-complex-example"></a>B: より複雑な例   
@@ -84,10 +84,10 @@ EmployeeID      FirstName      LastName      PostalCode
 
   
 ## <a name="see-also"></a>参照  
- [ような &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md)   
- [PATINDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/patindex-transact-sql.md)   
-  [% &#40;です。ワイルドカード - 文字 &#40; s &#41;一致と #41 です。&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
- [& #91、^ (& a) #93 です。&#40;です。ワイルドカード - 文字 &#40; s &#41;一致と #41 です。&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
- [\_&#40;です。ワイルドカード - 一致する 1 文字 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
+  [% &#40;ワイルドカード - 一致する文字列&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
+ [&#91;^&#93; &#40;ワイルドカード - 一致しない文字列&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
+ [\_ &#40;ワイルドカード - 1 文字に一致&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
     
   

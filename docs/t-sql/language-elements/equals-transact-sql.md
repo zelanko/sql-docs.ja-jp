@@ -1,5 +1,5 @@
 ---
-title: "= (等しい) (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "= (等しい) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -49,21 +49,21 @@ expression = expression
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 2 つの式のデータ型が異なる場合、1 つの式のデータ型がもう一方の式のデータ型に暗黙的に変換可能である必要があります。 変換がの規則に基づいて[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)です。  
+ 任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 2 つの式のデータ型が異なる場合、1 つの式のデータ型がもう一方の式のデータ型に暗黙的に変換可能である必要があります。 変換は、[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)のルールに基づいています。  
   
 ## <a name="result-types"></a>戻り値の型  
  ブール値  
   
-## <a name="remarks"></a>解説  
- 2 つの NULL 式を比較するときに、結果が異なります、`ANSI_NULLS`設定。  
+## <a name="remarks"></a>Remarks  
+ 2 つの NULL 式を比較すると、結果は `ANSI_NULLS` の設定に応じて以下のように異なります。  
   
--   場合`ANSI_NULLS`設定が ON に、結果は NULL の場合、次のこと、NULL (または不明な) 値が別の NULL または不明な値と等しくないという ANSI 規則。  
+-   `ANSI_NULLS` が ON に設定されている場合、NULL (または不明) の値は別の NULL または不明の値と等しくないという ANSI 規則に従って、結果は NULL になります。  
   
--   場合`ANSI_NULLS`は NULL を NULL と比較の結果は TRUE を OFF に設定します。  
+-   `ANSI_NULLS` が OFF に設定されている場合、NULL と NULL を比較した結果は TRUE となります。  
 
 詳細については、「[SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)」をご覧ください。
   
- 常に NULL 以外の値に NULL 値を (不明) の比較、並べ替えの結果は FALSE。  
+ NULL 値 (未知数) と NULL 以外の値の比較は、常に FALSE になります。  
   
   
 ## <a name="examples"></a>使用例  
@@ -94,7 +94,7 @@ DepartmentID Name
 ```  
   
 ### <a name="b-comparing-null-and-non-null-values"></a>B. NULL 値と NULL 以外の値を比較する  
- 次の例は、等号 (`=`) と不等号 (`<>`) と比較する比較演算子`NULL`と、テーブル内の null 以外の値。 例では、ことも示しています`IS NULL`は影響しません、`SET ANSI_NULLS`設定します。  
+ 次の例では、`=` (等号) 比較演算子と `<>` (不等号) 比較演算子を使用して、テーブル内の `NULL` 値と NULL 以外の値を比較します。 例は `IS NULL` が `SET ANSI_NULLS` 設定に影響されないことも示しています。  
   
 ```  
 -- Create table t1 and insert 3 rows.  
@@ -228,7 +228,7 @@ NULL
   
 ## <a name="see-also"></a>参照  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)  
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

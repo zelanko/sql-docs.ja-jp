@@ -1,5 +1,5 @@
 ---
-title: "% (剰余) (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "% (剰余) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-modulus-transact-sql"></a>% (剰余) (TRANSACT-SQL)
+# <a name="-modulus-transact-sql"></a>% (剰余) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   ある値を別の値で除算した結果の余りを返します。  
@@ -53,21 +53,21 @@ dividend % divisor
   
 ## <a name="arguments"></a>引数  
  *dividend*  
- 除算される数値式です。 *被除数*は有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)、整数および通貨のデータ型カテゴリ内のデータ型のいずれかのまたは**数値**データ型。  
+ 除算される数値式です。 *dividend* には、整数および通貨型に分類されるデータ型、または **numeric** データ型の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定する必要があります。  
   
  *divisor*  
- 被除数を除算する数値式です。 *除数*、整数および通貨のデータ型カテゴリ内のデータ型のいずれかの有効な式にする必要がありますまたは**数値**データ型。  
+ 被除数を除算する数値式です。 *divisor* には、整数および通貨型に分類されるデータ型、または **numeric** データ型の任意の有効な式を指定する必要があります。  
   
 ## <a name="result-types"></a>戻り値の型  
  2 つの引数のデータ型によって決まります。  
   
-## <a name="remarks"></a>解説  
- 使用することができます、剰余列名の任意の組み合わせを含む SELECT ステートメントの選択リストでの算術演算子、数値定数、または、整数および通貨のデータの有効な式を入力カテゴリまたは**数値**データ入力します。  
+## <a name="remarks"></a>Remarks  
+ 剰余算術演算子は、SELECT ステートメントの選択リストの中で、列名、数値定数、整数や通貨型に分類されるデータ型、または **numeric** データ型の有効な式と組み合わせて使用できます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-simple-example"></a>A. 簡単な例  
- 次の例では、38 を 5 で割ります。 これは、結果の整数部分としての結果を 7 でおよび例示す方法 modulo 3 の残りの部分を返します。  
+ 次の例では、38 を 5 で割ります。 この結果は、答えの整数部分である 7 となります。また、剰余演算子を使用して余り 3 を返す方法も示しています。  
   
 ```  
 SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder ;  
@@ -86,10 +86,10 @@ FROM Sales.SalesOrderDetail;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-example"></a>C: 簡単な例  
- 次の例の結果を示しています、`%`演算子が 3 を 2 を除算したときにします。  
+### <a name="c-simple-example"></a>C. 簡単な例  
+ 次の例は、3 を 2 で割ったときの `%` 演算子の結果を示しています。  
   
 ```  
 -- Uses AdventureWorks  
@@ -106,11 +106,11 @@ SELECT TOP(1) 3%2 FROM dimEmployee;
   
 ## <a name="see-also"></a>参照  
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [ような &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md)   
- [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [% = &#40;です。剰余代入 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
- [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [%= &#40;剰余代入&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
+ [複合演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

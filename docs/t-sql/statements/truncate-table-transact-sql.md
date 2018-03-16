@@ -1,5 +1,5 @@
 ---
-title: "TRUNCATE TABLE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: TRUNCATE TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -76,26 +76,26 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
  テーブルが所属するスキーマの名前を指定します。  
   
  *table_name*  
- 切り捨てるまたはすべての行を削除するテーブルの名前を指定します。 *table_name*リテラルを指定する必要があります。 *table_name*することはできません、 **OBJECT_ID()**関数または変数です。  
+ 切り捨てるまたはすべての行を削除するテーブルの名前を指定します。 *table_name* はリテラルで指定する必要があります。 *table_name* することはできません、 **OBJECT_ID()** 関数または変数です。  
   
- 使用 (パーティション ({ \< *partition_number_expression*> |\<*範囲*>} [、.. .n]))  
-**適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+ WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)
   
- 切り捨てるパーティション、またはすべての行を削除するパーティションを指定します。 テーブルがパーティション分割されていない場合、**でパーティション**引数でエラーが発生します。 場合、**でパーティション**句が指定されていない、テーブル全体が切り捨てられます。  
+ 切り捨てるパーティション、またはすべての行を削除するパーティションを指定します。 テーブルがパーティション分割されていない場合に **WITH PARTITIONS** 引数を使用すると、エラーが発生します。 **WITH PARTITIONS** 句が指定されていない場合、テーブル全体が切り捨てられます。  
   
- *\<partition_number_expression >*次のように指定することができます。 
+ *\<partition_number_expression>* は以下の方法で指定できます。 
   
--   たとえば、パーティションの数を提供します。`WITH (PARTITIONS (2))`  
+-   `WITH (PARTITIONS (2))` などのようにパーティション番号を指定します  
   
--   たとえば、コンマで区切られた複数の個別のパーティションのパーティション番号を提供します。`WITH (PARTITIONS (1, 5))`  
+-   コンマで区切った複数の個別のパーティションのパーティション番号を提供します。たとえば次のとおりです: `WITH (PARTITIONS (1, 5))`  
   
--   たとえば範囲と個別のパーティションの両方を提供します。`WITH (PARTITIONS (2, 4, 6 TO 8))`  
+-   範囲と個別のパーティションの両方を提供します。たとえば次のとおりです: `WITH (PARTITIONS (2, 4, 6 TO 8))`  
   
--   *\<範囲 >*パーティション番号、word で区切って指定できます**TO**、例を示します。`WITH (PARTITIONS (6 TO 8))`  
+-   *\<範囲>* はパーティション番号として、**TO** で区切って指定できます。たとえば次のとおりです。`WITH (PARTITIONS (6 TO 8))`  
   
- パーティション テーブルの切り捨てを行うためのテーブルとインデックス必要がありますは整列する (同じパーティション関数でパーティション分割された)。  
+ パーティション テーブルの切り捨てを行うには、テーブルとインデックスが連携している (同じパーティション関数でパーティション分割されている) 必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  DELETE ステートメントと比較して、TRUNCATE TABLE には次の利点があります。  
   
 -   トランザクション ログが使用する領域が削減されます。  
@@ -127,22 +127,22 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
  TRUNCATE TABLE では、個別の行の削除がログに記録されないため、この操作によってトリガーをアクティブ化することはできません。 詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)」を参照してください。 
  
- [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
+ [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] と [!INCLUDE[sspdw](../../includes/sspdw-md.md)] では:
 
-- 説明文の中では、TRUNCATE TABLE は許可されていません。
+- EXPLAIN ステートメントでは TRUNCATE TABLE を使用できません。
 
 - TRUNCATE TABLE は、トランザクション内で実行できません。
   
 ## <a name="truncating-large-tables"></a>大きなテーブルの切り捨て  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を削除するか、削除に必要なすべてのエクステントに対する同時ロックを保持することがなく、128 を超えるエクステントを持つテーブルを切り捨てる権限を持ちます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、削除に必要なすべてのエクステントに対する同時ロックを保持することなく、128 を超えるエクステントを持つテーブルの削除または切り捨てを行う機能を備えています。  
   
 ## <a name="permissions"></a>アクセス許可  
- 必要な最小権限が ALTER *table_name*です。 TRUNCATE TABLE 権限は、特に指定のない限り、テーブル所有者、固定サーバー ロール sysadmin、および固定データベース ロール db_owner および db_ddladmin のメンバーに与えられ、譲渡できません。 ただし、TRUNCATE TABLE ステートメントをストアド プロシージャなどのモジュール内に組み込み、EXECUTE AS 句を使用してそのモジュールに適切な権限を与えることはできます。  
+ 最小限の権限として *table_name* に対する ALTER 権限が必要です。です。 TRUNCATE TABLE 権限は、特に指定のない限り、テーブル所有者、固定サーバー ロール sysadmin、および固定データベース ロール db_owner および db_ddladmin のメンバーに与えられ、譲渡できません。 ただし、TRUNCATE TABLE ステートメントをストアド プロシージャなどのモジュール内に組み込み、EXECUTE AS 句を使用してそのモジュールに適切な権限を与えることはできます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-truncate-a-table"></a>A. テーブルを切り捨てる  
- 次の例では、すべてのデータを`JobCandidate`テーブル。 `SELECT` ステートメントを `TRUNCATE TABLE` ステートメントの前後に挿入して結果を比較しています。  
+ 次の例では、`JobCandidate` テーブルからすべてのデータを削除しています。 `SELECT` ステートメントを `TRUNCATE TABLE` ステートメントの前後に挿入して結果を比較しています。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -159,9 +159,9 @@ GO
   
 ### <a name="b-truncate-table-partitions"></a>B. テーブル パーティションを切り捨てる  
   
-**適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)
   
- 次の例では、パーティション分割されたテーブルの指定パーティションを切り捨てます。 `WITH (PARTITIONS (2, 4, 6 TO 8))`構文によりパーティション番号 2、4、6、7、および 8 が切り捨てられます。  
+ 次の例では、パーティション分割されたテーブルの指定パーティションを切り捨てます。 `WITH (PARTITIONS (2, 4, 6 TO 8))` 構文によりパーティション番号、2、4、6、7、および 8 が切り捨てられます。  
   
 ```sql  
 TRUNCATE TABLE PartitionTable1   
@@ -171,7 +171,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [DROP TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-table-transact-sql.md)   
+ [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "照合順序 |Microsoft ドキュメント"
+title: "照合順序 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,32 +49,32 @@ COLLATE { <collation_name> | database_default }
   
 ## <a name="arguments"></a>引数  
  *collation_name*  
- 式、列定義、またはデータベース定義に適用する照合順序の名前を指定します。 *collation_name*できますのみ指定*Windows_collation_name*または*SQL_collation_name*です。 *collation_name*リテラル値でなければなりません。 *collation_name*変数または式で表されることはできません。  
+ 式、列定義、またはデータベース定義に適用する照合順序の名前を指定します。 *collat​​ion_name* には、指定された *Windows_collat​​ion_name* または *SQL_collat​​ion_name* のみを指定できます。 *collation_name* はリテラル値である必要があります。 *collation_name* を変数または式で表すことはできません。  
   
- *Windows_collation_name*の照合順序名には、 [Windows 照合順序名](../../t-sql/statements/windows-collation-name-transact-sql.md)です。  
+ *Windows_collation_name* は、「[Windows 照合順序名](../../t-sql/statements/windows-collation-name-transact-sql.md)」の照合順序名です。  
   
- *SQL_collation_name*の照合順序名には、 [SQL Server 照合順序名](../../t-sql/statements/sql-server-collation-name-transact-sql.md)です。  
+ *SQL_collation_name* は、「[SQL Server 照合順序名](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」の照合順序名です。  
   
  データベース定義レベルで照合順序を適用している場合、Unicode 専用の Windows 照合順序を COLLATE 句で使用することはできません。  
   
  **database_default**  
  COLLATE 句によって、現在のデータベースの照合順序が継承されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  COLLATE 句は、さまざまなレベルで指定できます。 その一部を次に示します。  
   
 1.  データベースの作成または変更  
   
-     CREATE DATABASE または ALTER DATABASE ステートメントの COLLATE 句を使用して、データベースの既定の照合順序を指定できます。 使用してデータベースを作成するときに、照合順序を指定することも[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。 照合順序を指定しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの既定の照合順序がデータベースに指定されます。  
+     CREATE DATABASE または ALTER DATABASE ステートメントの COLLATE 句を使用して、データベースの既定の照合順序を指定できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してデータベースを作成するときに、照合順序も指定できます。 照合順序を指定しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの既定の照合順序がデータベースに指定されます。  
   
     > [!NOTE]  
-    >  Windows Unicode 専用の照合順序のみ使用できます、COLLATE 句で照合順序を適用する、 **nchar**、 **nvarchar**、および**ntext**列レベルでのデータ型と式レベルのデータです。それらは、データベースまたはサーバー インスタンスの照合順序を変更する COLLATE 句で使用できません。  
+    >  Unicode 専用の Windows 照合順序は、COLLATE 句で **nchar**、**nvarchar**、および **ntext** の各データ型を列レベルおよび式レベルのデータに適用する場合にのみ使用できます。COLLATE 句でデータベースまたはサーバー インスタンスの照合順序を変更するために使用することはできません。  
   
 2.  テーブル列の作成または変更  
   
-     CREATE TABLE または ALTER TABLE ステートメントの COLLATE 句を使用して、文字型の各列に対して照合順序を指定できます。 使用してテーブルを作成するときに、照合順序を指定することも[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。 照合順序を指定しない場合、列には、データベースの既定の照合順序が指定されます。  
+     CREATE TABLE または ALTER TABLE ステートメントの COLLATE 句を使用して、文字型の各列に対して照合順序を指定できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してテーブルを作成するときに、照合順序も指定できます。 照合順序を指定しない場合、列には、データベースの既定の照合順序が指定されます。  
   
-     使用することも、 `database_default` COLLATE 句内のオプションの代わりに、接続の一時的なテーブルの列が現在のユーザー データベースの既定の照合順序を使用するように指定に**tempdb**です。  
+     また、COLLATE 句の `database_default` オプションを使用して、一時テーブルの列で、**tempdb** の代わりに、接続に対する現在のユーザー データベースの既定の照合順序が使用されるように指定することもできます。  
   
 3.  式の照合順序のキャスト  
   
@@ -84,37 +84,37 @@ COLLATE { <collation_name> | database_default }
   
  接続コンテキストが 1 つのデータベースに関連付けられたときに変数、GOTO ラベル、一時ストアド プロシージャおよび一時テーブルを作成し、コンテキストを別のデータベースに切り替えたときに、それらを参照することができます。 変数、GOTO ラベル、一時ストアド プロシージャ、および一時テーブルの各識別子は、サーバー インスタンスの既定の照合順序に従います。  
   
- COLLATE 句に対してのみ適用できる、 **char**、 **varchar**、**テキスト**、 **nchar**、 **nvarchar**、および**ntext**データ型。  
+ COLLATE 句は、**char**、**varchar**、**text**、**nchar**、**nvarchar**、および **ntext** データ型にのみ適用できます。  
   
- COLLATE は*collate_name*に SQL Server 照合順序または式、列定義、またはデータベース定義に適用する Windows 照合順序のいずれかの名前を参照します。 *collation_name*できますのみ指定*Windows_collation_name*または*SQL_collation_name*パラメーターは、リテラル値を含める必要があります。 *collation_name*変数または式で表されることはできません。  
+ COLLATE は *collate_name* を使用して、式、列定義、データベース定義に適用される SQL Server 照合順序または Windows 照合順序の名前を参照します。 *collation_name* に指定できるのは、指定された *Windows_collation_name* または *SQL_collation_name* だけで、パラメーターにはリテラル値を含める必要があります。 *collation_name* を変数または式で表すことはできません。  
   
- 照合順序は、通常、照合順序名によって識別します。ただし、セットアップ時は例外です。 セットアップでは、代わりに、Windows の照合順序のルートの照合順序指定子 (照合ロケール) を指定しは小文字またはアクセントを区別する並べ替えオプションを指定します。  
+ 照合順序は、通常、照合順序名によって識別します。ただし、セットアップ時は例外です。 セットアップ時には、Windows 照合順序にルート照合順序指定子 (照合ロケール) を指定してから、大文字と小文字の区別やアクセントの区別に関する並べ替えオプションを指定します。  
   
- システム関数を実行できる[fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) Windows 照合順序および照合順序の SQL Server のすべての有効な照合順序名の一覧を取得します。  
+ システム関数の [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) を実行すると、Windows 照合順序および SQL Server 照合順序のすべての有効な照合順序名の一覧を取得できます。  
   
 ```sql  
 SELECT name, description  
 FROM fn_helpcollations();  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]基になるオペレーティング システムでサポートされているコード ページのみをサポートできます。 照合順序に依存する動作を実行すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]参照先のオブジェクトによって使用される照合順序は、コンピューターで実行されているオペレーティング システムでサポートされているコード ページを使用する必要があります。 このようなアクションには、次のものがあります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、動作しているオペレーティング システムがサポートしているコード ページのみをサポートすることができます。 照合順序に依存するアクションを実行する場合、参照されるオブジェクトが使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序は、コンピューター上で実行されているオペレーティング システムがサポートしているコード ページを使用する必要があります。 このようなアクションには、次のものがあります。  
   
 -   データベースの作成または変更時に、データベースの既定の照合順序を指定する。  
   
 -   テーブルの作成または変更時に、列の照合順序を指定する。  
   
--   復元またはアタッチ、データベース、データベースの既定の照合順序、および任意の照合順序と**char**、 **varchar**、および**テキスト**列またはデータベース内のパラメーターオペレーティング システムでサポートする必要があります。  
+-   データベースの復元または接続を行う場合、データベースの既定の照合順序、およびデータベース内の **char** 型、**varchar** 型、および **text** 型の任意の列またはパラメーターの照合順序は、オペレーティング システムでサポートされている必要があります。  
   
 > [!NOTE]
-> コード ページ変換はサポートされて**char**と**varchar**データ型のではなく**テキスト**データ型。 コード ページ変換時のデータ損失はレポートされません。  
+> コード ページ変換は **char** および **varchar** データ型に対してはサポートされていますが、**text** データ型に対してはサポートされていません。 コード ページ変換時のデータ損失はレポートされません。  
   
 > [!NOTE]
-> 指定された照合順序または参照先のオブジェクトによって使用される照合順序は、Windows でサポートされていないコード ページを使用している場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーが表示されます。  
+> 指定した照合順序、または参照先のオブジェクトで使用される照合順序で、Windows でサポートされていないコード ページが使用されていると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でエラーが表示されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-specifying-collation-during-a-select"></a>A. 選択時に照合順序を指定する  
- 次の例では、単純なテーブルを作成し、4 つの行を挿入します。 例が、そのテーブルからデータを選択するときに、2 つの照合順序を適用し、デモンストレーション方法`Chiapas`は異なる方法で並べ替えられます。  
+ 次の例では、単純なテーブルを作成し、4 つの行を挿入します。 次に、テーブルからデータを選択するときに 2 つの照合順序を適用して、`Chiapas` が異なる方法で格納されることを示します。  
   
 ```sql  
 CREATE TABLE Locations  
@@ -158,16 +158,16 @@ Chiapas
 ```  
   
 ### <a name="b-additional-examples"></a>B. その他の例  
- 使用するその他の例の**COLLATE**を参照してください[CREATE DATABASE &#40;です。SQL Server TRANSACT-SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples)例**G. データベースを作成し、照合順序名とオプションを指定する**、および[ALTER TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-transact-sql.md#alter_column)例**列の照合順序を変更する V.**です。  
+ **COLLATE** を使用するその他の例については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples)」の例「**G. データベースを作成し、照合順序名とオプションを指定する**」と「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md#alter_column)」の例「**V. 列の照合順序を変更する**」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
  [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
  [照合順序の優先順位 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
- [定数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/constants-transact-sql.md)     
+ [定数 &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)     
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
+ [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)     
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
- [テーブルと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/table-transact-sql.md)     
+ [テーブル &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)     
   
   

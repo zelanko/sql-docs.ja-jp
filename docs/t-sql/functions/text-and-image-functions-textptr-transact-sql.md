@@ -1,5 +1,5 @@
 ---
-title: "TEXTPTR (TRANSACT-SQL) |Microsoft ドキュメント"
+title: TEXTPTR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -34,13 +34,13 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="text-and-image-functions---textptr-transact-sql"></a>テキストとイメージ関数の TEXTPTR (TRANSACT-SQL)
+# <a name="text-and-image-functions---textptr-transact-sql"></a>テキスト関数とイメージ関数 - TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返します。 テキスト ポインター値に対応する、**テキスト**、 **ntext**、または**イメージ**内の列**varbinary**形式です。 取得したテキスト ポインターの値は、READTEXT、WRITETEXT、および UPDATETEXT ステートメントで使用します。  
+  **text**、**ntext**、または **image** 列に対応するテキスト ポインターの値を **varbinary** 形式で返します。 取得したテキスト ポインターの値は、READTEXT、WRITETEXT、および UPDATETEXT ステートメントで使用します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代替機能は使用できません。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代替機能を使用することはできません。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,35 +52,35 @@ TEXTPTR ( column )
 ```  
   
 ## <a name="arguments"></a>引数  
- *列*  
- **テキスト**、 **ntext**、または**イメージ**に使用される列。  
+ *column*  
+ 使われる **text**、**ntext**、または **image** の列です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **varbinary**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  行内テキストがあるテーブルの場合、TEXTPTR は、処理されるテキストのハンドルを返します。 テキストの値が NULL である場合も、有効なテキスト ポインターを取得できます。  
   
- ビューの列に対して TEXTPTR 関数を使用することはできません。 テーブルの列に対してのみ使用できます。 ビューの列に対して TEXTPTR 関数を使用する必要があります、互換性レベルを設定する 80 を使用して[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)です。 場合と、テーブルに行内テキストがない場合、**テキスト**、 **ntext**、または**イメージ**列が UPDATETEXT ステートメントで初期化されていない、TEXTPTR は null ポインターを返します。  
+ ビューの列に対して TEXTPTR 関数を使用することはできません。 テーブルの列に対してのみ使用できます。 ビューの列に対して TEXTPTR 関数を使用するには、[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)を使用して互換性レベルを 80 に設定する必要があります。 テーブルに行内テキストがなく、**text**、**ntext**、または **image** 列が UPDATETEXT ステートメントで初期化されていない場合、TEXTPTR は NULL ポインターを返します。  
   
  テキスト ポインターが存在するかどうかをテストするには、TEXTVALID を使ってください。 有効なテキスト ポインターがないと、UPDATETEXT、WRITETEXT、READTEXT は使用できません。  
   
- これらの関数とステートメントにも役立ちますを操作するときに**テキスト**、 **ntext**、および**イメージ**データ。  
+ これらの関数とステートメントは、**text**、**ntext**、**image** データを操作する場合にも役立ちます。  
   
 |関数またはステートメント|Description|  
 |---------------------------|-----------------|  
-|PATINDEX**('***パターンを %***'、** *式***)**|指定された文字列内の文字位置を返します**テキスト**または**ntext**列です。|  
-|DATALENGTH**(***式***)**|内のデータの長さを返します**テキスト**、 **ntext**、および**イメージ**列です。|  
-|[SET TEXTSIZE]|制限 (バイト単位) を返します、**テキスト**、 **ntext**、または**イメージ**は SELECT ステートメントで返されるデータ。|  
-|部分文字列**(***text_column*、*開始*、*長さ***)**|返します、 **varchar**によって指定された文字列*開始*オフセットおよび*長さ*です。 長さは 8 KB 未満で指定してください。|  
+|PATINDEX**('***%pattern%***' ,** *expression***)**|**text** または **ntext** 列で指定された文字列の文字位置を返します。|  
+|DATALENGTH**(***expression***)**|**text**、**ntext**、**image** 列のデータの長さを返します。|  
+|[SET TEXTSIZE]|SELECT ステートメントで返される **text**、**ntext**、または **image** データの制限値をバイト単位で返します。|  
+|SUBSTRING**(***text_column*, *start*, *length***)**|指定された *start* オフセットと *length* で指定される **varchar** 文字列を返します。 長さは 8 KB 未満で指定してください。|  
   
 ## <a name="examples"></a>使用例  
   
 > [!NOTE]  
->  次の例を実行するにインストールする必要があります、 **pubs**データベース。  
+>  次の例を実行するには、**pubs** データベースをインストールする必要があります。  
   
 ### <a name="a-using-textptr"></a>A. TEXTPTR を使用する  
- 次の例では、`TEXTPTR`を検索する関数、**イメージ**列`logo`に関連付けられている`New Moon Books`で、`pub_info`のテーブル、`pubs`データベース。 テキスト ポインターは、ローカル変数 `@ptrval.` に格納されます。  
+ 次の例では、`TEXTPTR` 関数を使用して、`pubs` データベースの `pub_info` テーブル内の `New Moon Books` に関連付けられている **image** 列 `logo` を検索します。 テキスト ポインターは、ローカル変数 `@ptrval.` に格納されます。  
   
 ```  
 USE pubs;  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ### <a name="b-using-textptr-with-in-row-text"></a>B. TEXTPTR を行内テキストと使用する  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、行内テキスト ポインターの次の例に示すように、トランザクション内で使用する必要があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、行内テキスト ポインターは、次の例に示すように、トランザクション内で使用する必要があります。  
   
 ```  
 CREATE TABLE t1 (c1 int, c2 text);  
@@ -111,7 +111,7 @@ COMMIT;
 ```  
   
 ### <a name="c-returning-text-data"></a>C. テキスト データを返す  
- 次の例では、選択、`pub_id`列との 16 バイトのテキスト ポインター、`pr_info`列から、`pub_info`テーブル。  
+ 次の例では、`pub_info` テーブルから `pub_id` 列、および `pr_info` 列の 16 バイトのテキスト ポインターを選択します。  
   
 ```  
 USE pubs;  
@@ -170,7 +170,7 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ```  
   
 ### <a name="d-returning-specific-text-data"></a>D. 特定のテキスト データを返す  
- 次の例では検索、`text`列 (`pr_info`) に関連付けられている`pub_id``0736`で、`pub_info`のテーブル、`pubs`データベース。 まず、ローカル変数 `@val` が宣言されます。 テキスト ポインター (長いバイナリ文字列) が配置されます`@val`をパラメーターとして指定し、`READTEXT`ステートメントです。 これによって、5 番目のバイト (オフセットは 4) から開始して、10 バイトのデータが返されます。  
+ 次の例では、`pubs` データベースの `pub_info` テーブル内の `pub_id``0736` に関連付けられた `text` 列 (`pr_info`) を検索します。 まず、ローカル変数 `@val` が宣言されます。 次に、テキスト ポインター (長いバイナリ文字列) が `@val` に挿入され、`READTEXT` ステートメントにパラメーターとして指定されます。 これによって、5 番目のバイト (オフセットは 4) から開始して、10 バイトのデータが返されます。  
   
 ```  
 USE pubs;  
@@ -193,11 +193,11 @@ pr_info
 ```  
   
 ## <a name="see-also"></a>参照  
- [DATALENGTH &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/datalength-transact-sql.md)   
- [PATINDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/patindex-transact-sql.md)   
- [READTEXT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/readtext-transact-sql.md)   
- [[SET textsize] &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-textsize-transact-sql.md)   
- [テキストとイメージ関数 &#40;です。TRANSACT-SQL と #41 です。](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
+ [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
+ [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
+ [テキスト関数とイメージ関数 &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)   
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
   

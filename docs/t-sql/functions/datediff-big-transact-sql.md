@@ -1,5 +1,5 @@
 ---
-title: "DATEDIFF_BIG (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DATEDIFF_BIG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -34,12 +34,12 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (TRANSACT-SQL)
+# <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-指定された数 (符号付きの多倍長整数) を返します*datepart* 、指定された間の差*startdate*と*enddate*です。
+*startdate* と *enddate* で指定された 2 つの日付間の差を、指定された *datepart* 境界の数 (符号付き多倍長整数) で返します。
   
-すべての概要については[!INCLUDE[tsql](../../includes/tsql-md.md)]日付と時刻のデータ型および関数を参照してください[日付と時刻のデータ型および関数 &#40;TRANSACT-SQL と #41 です。](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+[!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のデータ型および関数の概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」をご覧ください。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -52,52 +52,52 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
   
 ## <a name="arguments"></a>引数  
 *datepart*  
-一部である*startdate*と*enddate*を超えました。 境界の種類を指定します。 次の表にリストのすべての有効な*datepart*引数。 ユーザー定義変数に相当するものは無効です。
+*startdate* と *enddate* の差を求めるときの単位に使用する要素を指定します。 次の表は、*datepart* 引数に有効なすべての値の一覧です。 ユーザー定義変数に相当するものは無効です。
   
 |*datepart*|省略形|  
 |---|---|
-|**1 年**|**yy、yyyy**|  
-|**四半期**|**qq、q**|  
-|**月**|**mm、m**|  
-|**dayofyear**|**dy、y**|  
-|**1 日**|**dd、d**|  
-|**週**|**wk、ww**|  
-|**1 時間**|**mm**|  
-|**1 分**|**mi、n**|  
-|**1 秒**|**ss、s**|  
-|**ミリ秒**|**ms**|  
-|**マイクロ秒**|**mcs**|  
-|**ナノ秒**|**ns**|  
+|**year**|**yy, yyyy**|  
+|**quarter**|**qq, q**|  
+|**month**|**mm, m**|  
+|**dayofyear**|**dy, y**|  
+|**day**|**dd, d**|  
+|**week**|**wk, ww**|  
+|**hour**|**mm**|  
+|**minute**|**mi, n**|  
+|**second**|**ss, s**|  
+|**millisecond**|**ms**|  
+|**microsecond**|**mcs**|  
+|**nanosecond**|**ns**|  
   
 *startdate*  
-式に解決されることができるは、**時間**、**日付**、 **smalldatetime**、 **datetime**、 **datetime2**、または**datetimeoffset**値。 *日付*できる式、列式、ユーザー定義変数または文字列リテラルです。 *startdate*から差し引かれます*enddate*です。  
-こうしたあいまいさを排除するため、4 桁の西暦を使用してください。 2 桁の年の詳細については、次を参照してください。[構成 two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)です。
+**time**、**date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** の値に解決できる式です。 *date* には、式、列式、ユーザー定義変数、または文字列リテラルを指定できます。 *startdate* が *enddate* から減算されます。  
+こうしたあいまいさを排除するため、4 桁の西暦を使用してください。 2 桁の年については、「[two digit year cutoff サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)」をご覧ください。
   
-*終了日*  
-参照してください*startdate*です。
+*enddate*  
+「*startdate*」をご覧ください。
   
 ## <a name="return-type"></a>戻り値の型  
  署名   
         **bigint**  
   
 ## <a name="return-value"></a>戻り値  
-指定した startdate と enddate 間の指定した datepart 境界を返します。 数 (符号付き bigint) を超えました。
--   各*datepart*とその省略形は、同じ値を返します。  
+startdate と enddate で指定された 2 つの日付間の差を、指定された datepart 境界の数 (符号付き多倍長整数) で返します。
+-   各 *datepart* とその省略形は、同じ値を返します。  
   
-戻り値が範囲外の場合**bigint** (9,223,372,036,854,775,807 に-9,223,372,036,854,775,808)、エラーが返されます。 **ミリ秒**、最大時間差*startdate*と*enddate*は、24 日 20 時間 31 分 23.647 秒です。 **2 番目**、差の最大値は 68 年です。
+戻り値が **bigint** の範囲 (-9,223,372,036,854,775,808 ～ 9,223,372,036,854,775,807) を超えた場合は、エラーが返されます。 **millisecond** の場合、*startdate* と *enddate* の差の最大値は 24 日 20 時間 31 分 23.647 秒です。 **second** の場合、差の最大値は 68 年です。
   
-場合*startdate*と*enddate*が両方割り当てられている時間の値のみ、 *datepart*時刻ではありません*datepart*0 が返されます。
+*startdate* と *enddate* の両方に時刻値を指定したにもかかわらず、*datepart* に時刻以外の *datepart* を指定した場合、0 が返されます。
   
-タイム ゾーン オフセットのコンポーネント*startdate*または*endate*戻り値の計算では使用されません。
+*startdate* または *enddate* のタイム ゾーン オフセット要素は、戻り値の計算には使用されません。
   
-[Smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)が 1 分間にのみが正確なときに、 **smalldatetime**の値が使用*startdate*または*enddate*秒ミリ秒は常に、戻り値で 0 に設定します。
+[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) の精度は分単位までなので、*startdate* または *enddate* に **smalldatetime** 値を使用した場合、戻り値では、秒とミリ秒が常に 0 に設定されます。
   
-日付データ型の変数に時刻値だけが割り当てられた場合、欠落している日付要素の値は既定値である 1900-01-01 に設定されます。 時刻データ型または日付データ型の変数に日付値だけが割り当てられた場合、欠落している時刻要素の値は既定値である 00:00:00 に設定されます。 いずれか*startdate*または*enddate*ある時刻部分のみおよびその他ののみ、日付部分、欠落している時刻および日付の部分は、既定値に設定されます。
+日付データ型の変数に時刻値だけが割り当てられた場合、欠落している日付要素の値は既定値である 1900-01-01 に設定されます。 時刻データ型または日付データ型の変数に日付値だけが割り当てられた場合、欠落している時刻要素の値は既定値である 00:00:00 に設定されます。 *startdate* または *enddate* のいずれか一方が時刻要素のみで、もう一方が日付要素のみであった場合、欠落している時刻要素と日付要素はそれぞれの既定値に設定されます。
   
-場合*startdate*と*enddate*の別の日付データ型は、1 つ以上の時刻の部分または秒の小数部の有効桁数よりも、他には、他の欠落している要素が 0 に設定されます。
+*startdate* と *enddate* に対して異なる日付データ型が使用されているとき、一方の時刻要素の数または 1 秒未満の秒の有効桁数が、もう一方のデータ型を超えている場合、欠落している要素は 0 に設定されます。
   
-## <a name="datepart-boundaries"></a>datepart 境界
-次のステートメントが同じである*startdate*と同じ*endate*です。 2 つの日付は隣接しており、時間的な差は .0000001 秒です。 間の違い、 *startdate*と*endate*の各ステートメント内の 1 つのカレンダーまたは時刻の境界を越えるその*datepart*です。 いずれのステートメントも戻り値は 1 です。 この例で異なる年を使用し、両方*startdate*と*endate*同じカレンダーの週の戻り値では、**週**0 になります。
+## <a name="datepart-boundaries"></a>datepart の差
+次の各ステートメントには、すべて同じ *startdate* と *enddate* が指定されています。 2 つの日付は隣接しており、時間的な差は .0000001 秒です。 各ステートメントにおける *startdate* と *enddate* の差は、どの要素をとっても、*datepart* の 1 単位分となるように配慮されています。 いずれのステートメントも戻り値は 1 です。 この例で異なる年を使用し、*startdate* と *enddate* の両方がカレンダー上の同じ週に存在した場合、**week** の戻り値は 0 になります。
 
 ```sql
 SELECT DATEDIFF_BIG(year, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -112,15 +112,15 @@ SELECT DATEDIFF_BIG(second, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.
 SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
   
-## <a name="remarks"></a>解説  
-選択リストで使用できます DATEDIFF_BIG WHERE、HAVING 句、GROUP BY および ORDER BY 句。
+## <a name="remarks"></a>Remarks  
+DATEDIFF_BIG は、選択リストのほか、WHERE 句、HAVING 句、GROUP BY 句、および ORDER BY 句で使用できます。
   
-DATEDIFF_BIG としての文字列リテラルを暗黙的にキャストする、 **datetime2**型です。 つまり、DATEDIFF_BIG サポートしていないこと YDM 形式、日付が文字列として渡される場合。 文字列を明示的にキャストする必要があります、 **datetime**または**smalldatetime** YDM 形式を使用する型。
+DATEDIFF_BIG は、文字列リテラルを **datetime2** 型として暗黙的にキャストします。 つまり、DATEDIFF_BIG では、日付が文字列として渡される場合、YDM 形式をサポートしません。 YDM 形式を使用するには、文字列を **datetime** 型または **smalldatetime** 型に明示的にキャストする必要があります。
   
-SET DATEFIRST を指定するのには影響しません DATEDIFF_BIG です。 常に DATEDIFF_BIG では、日曜日を週の最初の日としてを使用して、関数が決定的であることを確認します。
+SET DATEFIRST を指定しても DATEDIFF_BIG に影響はありません。 DATEDIFF_BIG では、週の最初の曜日として常に日曜日を使用し、関数が決定的であることを確認します。
   
 ## <a name="examples"></a>使用例  
-次の例の引数としてさまざまな種類の式を使用して、 *startdate*と*enddate*パラメーター。
+次の例では、*startdate* パラメーターと *enddate* パラメーターの引数として各種の式を使用しています。
   
 ### <a name="specifying-columns-for-startdate-and-enddate"></a>startdate と enddate に列を指定する  
 次の例では、テーブルの 2 つの列に日付を格納し、両者の差を日単位で計算しています。
@@ -138,10 +138,10 @@ FROM dbo.Duration;
 -- Returns: 1  
 ```  
   
-その他の多くの例は、密接に関連する例を参照してください[DATEDIFF &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/datediff-transact-sql.md).
+その他のれいについては、「[DATEDIFF &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-transact-sql.md)」の密接に関連する例をご覧ください。
   
 ## <a name="see-also"></a>参照
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[Datediff 関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/datediff-transact-sql.md)
+[DATEDIFF &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-transact-sql.md)
   
   

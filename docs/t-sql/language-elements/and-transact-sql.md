@@ -1,5 +1,5 @@
 ---
-title: "(TRANSACT-SQL) |Microsoft ドキュメント"
+title: AND (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  2 つのブール式を結合し、返します**TRUE**ときに両方の式が**TRUE**です。 ステートメントでは、1 つ以上の論理演算子を使用すると、 **AND**演算子が最初に評価されます。 かっこを使うと、演算の順序を変更することができます。  
+  2 つのブール式を結合し、両方の式が **TRUE** の場合、**TRUE** を返します。 1 つのステートメントの中で複数の論理演算子が使われている場合は、**AND** 演算子が最初に評価されます。 かっこを使うと、演算の順序を変更することができます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>引数  
  *boolean_expression*  
- 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)ブール値を返す: **TRUE**、 **FALSE**、または**不明な**します。  
+ **TRUE**、**FALSE** または、**UNKNOWN** のブール値を返す有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
 ## <a name="result-types"></a>戻り値の型  
  **ブール値**  
@@ -58,19 +58,19 @@ boolean_expression AND boolean_expression
 ## <a name="result-value"></a>結果の値  
  両方の式が TRUE の場合、TRUE を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次の表は、TRUE 値と FALSE 値を AND 演算子を使用して比較する場合の結果です。  
   
 ||TRUE|FALSE|UNKNOWN|  
 |------|----------|-----------|-------------|  
 |**TRUE**|TRUE|FALSE|UNKNOWN|  
 |**FALSE**|FALSE|FALSE|FALSE|  
-|**不明**|UNKNOWN|FALSE|UNKNOWN|  
+|**UNKNOWN**|UNKNOWN|FALSE|UNKNOWN|  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-the-and-operator"></a>A. AND 演算子の使用  
- 次の例は、両方のタイトルを持つ従業員に関する情報を選択の`Marketing Assistant`と複数の`41`休暇時間使用できます。  
+ 次の例では、役職が `Marketing Assistant` で、なおかつ、利用可能な休暇時間数が `41` 時間を超える従業員の情報を選択します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -82,7 +82,7 @@ AND VacationHours > 41 ;
 ```  
   
 ### <a name="b-using-the-and-operator-in-an-if-statement"></a>B. IF ステートメントでの AND 演算子の使用  
- 次の例は、IF ステートメントでの AND の使用方法を示しています。 最初のステートメントでは、両方とも`1 = 1`と`2 = 2`も true であるため、結果は true です。 2 つ目の例では、引数 `2 = 17` が false であるため、結果は false です。  
+ 次の例は、IF ステートメントでの AND の使用方法を示しています。 1 つ目のステートメントでは、`1 = 1` と `2 = 2` の両方が true であるため、結果は true です。 2 つ目の例では、引数 `2 = 17` が false であるため、結果は false です。  
   
 ```  
 IF 1 = 1 AND 2 = 2  
@@ -102,8 +102,8 @@ GO
   
 ## <a name="see-also"></a>参照  
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   

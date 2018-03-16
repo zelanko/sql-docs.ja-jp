@@ -1,5 +1,5 @@
 ---
-title: "IS_SRVROLEMEMBER (TRANSACT-SQL) |Microsoft ドキュメント"
+title: IS_SRVROLEMEMBER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="issrvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  示すかどうか、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインが指定されたサーバー ロールのメンバーです。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが、指定したサーバー ロールのメンバーであるかどうかを示します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,10 +48,10 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ```  
   
 ## <a name="arguments"></a>引数  
- **'** *ロール* **'**  
- 確認するサーバー ロールの名前です。 *ロール*は**sysname**です。  
+ **'** *role* **'**  
+ 確認するサーバー ロールの名前です。 *role* は **sysname** です。  
   
- 有効な値*ロール*ユーザー定義サーバー ロールは、次の固定サーバー ロール。  
+ *role* の有効な値は、ユーザー定義サーバー ロールと、次の固定サーバー ロールです。  
   
 |||  
 |-|-|  
@@ -61,41 +61,41 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |diskadmin|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> public|  
 |processadmin||  
   
- **'** *ログイン* **'**  
- 名前を指定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインを確認します。 *ログイン*は**sysname**、既定値は NULL です。 値が指定されていない場合、結果は現在の実行コンテキストに基づきます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。  
+ **'** *login* **'**  
+ 確認する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの名前です。 *login* のデータ型は **sysname** で、既定値は NULL です。 値を指定しない場合、結果は現在の実行コンテキストに基づきます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
 |戻り値|Description|  
 |------------------|-----------------|  
-|0|*ログイン*のメンバーではない*ロール*です。<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、このステートメントは常に 0 を返します。|  
-|1|*ログイン*のメンバーである*ロール*です。|  
-|NULL|*ロール*または*ログイン*が有効でないか、ロールのメンバーシップを表示するアクセス許可がありません。|  
+|0|*login* は *role* のメンバーではありません。<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、このステートメントは常に 0 を返します。|  
+|@shouldalert|*login* は *role* のメンバーです。|  
+|NULL|*role* または *login* が有効でないか、ロールのメンバーシップを表示する権限がありません。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  現在のユーザーがサーバー ロールの権限を必要とするアクションを実行できるかどうかを判断する UseIS_SRVROLEMEMBER です。  
   
- Contoso \mary5 などの Windows ログインが指定されてかどうか*ログイン*、 **IS_SRVROLEMEMBER**返します**NULL**ログインが許可またはへの直接アクセスが拒否されている場合を除き、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Contoso\Mary5 などの Windows ログインを *login* に指定した場合、**IS_SRVROLEMEMBER** は、そのログインに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への直接アクセスが許可または拒否されている場合を除き、**NULL** を返します。  
   
- 場合、省略可能な*ログイン*パラメーターを指定しない場合は*ログイン*は Windows ドメイン ログイン、Windows グループのメンバーシップを通じて、固定サーバー ロールのメンバーである可能性があります。 そのような間接的なメンバーシップを解決するために、IS_SRVROLEMEMBER は、Windows グループのメンバーシップ情報をドメイン コントローラーに要求します。 ドメイン コント ローラーはアクセスできないか、応答しない場合**IS_SRVROLEMEMBER**はユーザーとそのローカル グループのみを考慮したロール メンバーシップ情報を返します。 指定されたユーザーが現在のユーザーでない場合、IS_SRVROLEMEMBER が返す値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対する認証システム (Active Directory など) の最後のデータ更新と異なることがあります。  
+ 省略可能な *login* パラメーターを指定しない場合、*login* が Windows ドメインのログインであると、そのログインは、Windows グループのメンバーシップを通じて、固定サーバー ロールのメンバーになっている可能性があります。 そのような間接的なメンバーシップを解決するために、IS_SRVROLEMEMBER は、Windows グループのメンバーシップ情報をドメイン コントローラーに要求します。 ドメイン コントローラーにアクセスできないか、またはドメイン コントローラーが応答しない場合、**IS_SRVROLEMEMBER** はユーザーとそのローカル グループのみを考慮したロール メンバーシップ情報を返します。 指定されたユーザーが現在のユーザーでない場合、IS_SRVROLEMEMBER が返す値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対する認証システム (Active Directory など) の最後のデータ更新と異なることがあります。  
   
  省略可能な login パラメーターを指定する場合は、クエリの対象となる Windows ログインが sys.server_principals に存在する必要があります。存在しない場合、IS_SRVROLEMEMBER は NULL を返します。 これは、そのログインが無効であることを示します。  
   
  login パラメーターがドメイン ログインか、Windows グループに基づくログインである場合、ドメイン コントローラーにアクセスできないと、IS_SRVROLEMEMBER の呼び出しが失敗し、不正確なデータや不完全なデータが返される可能性があります。  
   
- ローカル Windows アカウントなど、Windows プリンシパルをローカルで認証できる場合、IS_SRVROLEMEMBER の呼び出しが正確な情報を返す、ドメイン コント ローラーが使用できない場合、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。  
+ ドメイン コントローラーを利用できなくても、Windows プリンシパルをローカルで認証できる場合 (ローカル Windows アカウントや [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの場合など) は、IS_SRVROLEMEMBER の呼び出しで正確な情報が返されます。  
   
- **IS_SRVROLEMEMBER** Windows グループがログイン引数として使用され、この Windows グループ、さらに、指定されたサーバー ロールのメンバーでは別の Windows グループのメンバーである場合に常に 0 を返します。  
+ Windows グループがログイン引数として使用されていて、この Windows グループが別の Windows グループのメンバーであり、さらにそのグループが指定されたサーバー ロールのメンバーである場合、**IS_SRVROLEMEMBER** は常に 0 を返します。  
   
  ユーザー アカウント制御 (UAC) の設定では、異なる結果が返されることもあります。 これは、ユーザーがサーバーに Windows グループのメンバーとしてアクセスしたか、特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーとしてアクセスしたかによります。  
   
- この関数で評価されるのはロールのメンバーシップであって、基になる権限ではありません。 たとえば、 **sysadmin**固定サーバー ロールには、 **CONTROL SERVER**権限です。 ユーザーがある場合、 **CONTROL SERVER**権限はない、ロールのメンバーと、この関数は、ユーザーがのメンバーではないことを報告して正しく、 **sysadmin**ロールで、ユーザーがある同じ場合でもアクセス許可です。  
+ この関数で評価されるのはロールのメンバーシップであって、基になる権限ではありません。 たとえば、**sysadmin** 固定サーバー ロールには **CONTROL SERVER** 権限があります。 **CONTROL SERVER** 権限を持っていても、**sysadmin** ロールに所属していなければ、そのユーザーはロールのメンバーではないと、この関数によって正確に報告されます。そのロールと同じ権限をユーザーが持っているとしても結果は変わりません。  
   
 ## <a name="related-functions"></a>関連する関数  
- 現在のユーザーが指定された Windows グループのメンバーであるかどうかを確認するのにまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース ロールを使用して[IS_MEMBER (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/is-member-transact-sql.md). 確認するかどうか、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインがデータベース ロールのメンバーを使用して[IS_ROLEMEMBER (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/is-rolemember-transact-sql.md).  
+ 現在のユーザーが指定された Windows グループまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロールのメンバーであるかどうかを判断するには、[IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md) を使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインがデータベース ロールのメンバーであるかどうかを判断するには、[IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md) を使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  サーバー ロールに対する VIEW DEFINITION 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -110,14 +110,14 @@ ELSE IF IS_SRVROLEMEMBER ('sysadmin') IS NULL
    print 'ERROR: The server role specified is not valid.';  
 ```  
   
- 次の例では、ドメイン ログイン Pat のメンバーであるかどうかを示す、 **diskadmin**固定サーバー ロール。  
+ 次の例では、ドメイン ログイン Pat が固定サーバー ロール **diskadmin** のメンバーであるかどうかを示します。  
   
 ```  
 SELECT IS_SRVROLEMEMBER('diskadmin', 'Contoso\Pat');  
 ```  
   
 ## <a name="see-also"></a>参照  
- [IS_MEMBER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/is-member-transact-sql.md)   
+ [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)   
  [セキュリティ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

@@ -28,9 +28,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-サイズと各パーティション内のテーブルの行の数を表示、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]データベース。
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] データベースに含まれるテーブルの各パーティションについて、サイズと行数を表示します。
   
-![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
   
@@ -44,24 +44,24 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
  [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
  1 つ、2 枚、または表示するテーブルの 3 部構成の名前。  2 つの 3 つの要素名、名前は、二重引用符で囲む必要がありますか ("")。 1 つの部分から成るテーブル名を囲む引用符を使用したはオプションです。  
   
-## <a name="permissions"></a>権限
-必要があります**VIEW SERVER STATE**権限です。
+## <a name="permissions"></a>アクセス許可
+**VIEW SERVER STATE** アクセス許可が必要です。
   
 ## <a name="result-sets"></a>結果セット  
 これは、DBCC PDW_SHOWPARTITIONSTATS コマンドの結果です。
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|partition_number|int|パーティション番号。|  
-|used_page_count|bigint|データの使用ページ数です。|  
-|reserved_page_count|bigint|パーティションに割り当てられたページの数。|  
-|row_count|bigint|パーティション内の行の数。|  
-|pdw_node_id|int|データのノードを計算します。|  
-|distribution_id|int|データの配布の id です。|  
+|partition_number|ssNoversion|パーティション番号。|  
+|used_page_count|BIGINT|データの使用ページ数です。|  
+|reserved_page_count|BIGINT|パーティションに割り当てられたページの数。|  
+|row_count|BIGINT|パーティション内の行の数。|  
+|pdw_node_id|ssNoversion|データのノードを計算します。|  
+|distribution_id|ssNoversion|データの配布の id です。|  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>A. DBCC PDW_SHOWPARTITIONSTATS の基本的な構文の例  
-次の例では、FactInternetSales テーブルのパーティションによって使用される領域と行の数を表示、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]データベース。
+次の例では、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] データベースの FactInternetSales テーブルについて、パーティションごとに使用されている領域と行数を表示しています。
   
 ```sql
 DBCC PDW_SHOWPARTITIONSTATS ("ssawPDW.dbo.FactInternetSales");  
@@ -70,5 +70,5 @@ DBCC PDW_SHOWPARTITIONSTATS (FactInternetSales);
 ```  
 ## <a name="see-also"></a>参照
 [DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
-[DBCC PDW_SHOWSPACEUSED &#40;です。TRANSACT-SQL と #41 です。](dbcc-pdw-showspaceused-transact-sql.md)  
+[DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)  
   

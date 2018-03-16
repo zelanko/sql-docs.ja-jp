@@ -1,5 +1,5 @@
 ---
-title: "DROP EVENT NOTIFICATION (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
   
 ## <a name="arguments"></a>引数  
  *notification_name*  
- 削除するイベント通知の名前を指定します。 複数のイベント通知を指定できます。 現在作成されているイベント通知の一覧を表示する[sys.event_notifications &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
+ 削除するイベント通知の名前を指定します。 複数のイベント通知を指定できます。 現在作成されているイベント通知の一覧を表示するには、「[sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)」を参照してください。  
   
  SERVER  
  イベント通知のスコープが現在のサーバーに適用されることを示します。 イベント通知の作成時に SERVER を指定した場合は、SERVER を指定する必要があります。  
@@ -61,10 +61,10 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  DATABASE  
  イベント通知のスコープが現在のデータベースに適用されることを示します。 イベント通知の作成時に DATABASE を指定した場合は、DATABASE を指定する必要があります。  
   
- キュー *queue_name*  
- イベント通知のスコープが指定したキューに適用されることを示します*queue_name*です。 イベント通知の作成時に QUEUE を指定した場合は、QUEUE を指定する必要があります。 *queue_name*キューの名前を指定しても指定する必要があります。  
+ QUEUE *queue_name*  
+ イベント通知のスコープが、*queue_name* で指定されたキューに適用されることを示します。 イベント通知の作成時に QUEUE を指定した場合は、QUEUE を指定する必要があります。 同様に、キューの名前である *queue_name* も指定する必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  イベント通知がトランザクションの中で発生し、同じトランザクションの中で削除された場合は、イベント通知のインスタンスが送信され、その後でイベント通知が削除されます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -91,9 +91,9 @@ ON DATABASE;
 ```  
   
 ## <a name="see-also"></a>参照  
- [イベント通知 &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-event-notification-transact-sql.md)   
+ [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.event_notifications &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
- [sys.events &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
+ [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
+ [sys.events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
   
   

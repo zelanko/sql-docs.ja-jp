@@ -1,5 +1,5 @@
 ---
-title: "例 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "SELECT の例 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="select-examples-transact-sql"></a>SELECT の例 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  このトピックの使用例を提供する、[選択](../../t-sql/queries/select-transact-sql.md)ステートメントです。  
+  ここでは、[SELECT](../../t-sql/queries/select-transact-sql.md) ステートメントの使用例を紹介します。  
   
 ## <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. SELECT を使用して行および列を取得する  
  3 つのプログラム例を次に示します。 最初の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内の `*` テーブルから、WHERE 句を指定せずにすべての行を返し、また `Product` を使用してすべての列を返しています。  
@@ -58,12 +58,12 @@ ms.lasthandoff: 01/25/2018
   
  [!code-sql[Select#SelectExamples2](../../t-sql/queries/codesnippet/tsql/select-examples-transact_2.sql)]  
   
- この例の行のみを返します`Product`製品の行がある`R`いて、つまり製造までの日数より小さい`4`です。  
+ この例では、製品ラインが `R` で、製造所要日数が `4` 日未満の `Product` の行のみを返しています。  
   
  [!code-sql[Select#SelectExamples3](../../t-sql/queries/codesnippet/tsql/select-examples-transact_3.sql)]  
   
 ## <a name="b-using-select-with-column-headings-and-calculations"></a>B. 列ヘッダーおよび計算処理と共に SELECT を使用する  
- 次の例は、のすべての行を返す、`Product`テーブル。 最初の例では、各製品の売上合計と売上割引を返します。 2 番目の例では、製品ごとの合計収入が計算されます。  
+ 次の例では、`Product` テーブルのすべての行を返します。 最初の例では、各製品の売上合計と売上割引を返します。 2 番目の例では、製品ごとの合計収入が計算されます。  
   
  [!code-sql[Select#SelectExamples4](../../t-sql/queries/codesnippet/tsql/select-examples-transact_4.sql)]  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  [!code-sql[Select#SelectExamples5](../../t-sql/queries/codesnippet/tsql/select-examples-transact_5.sql)]  
   
 ## <a name="c-using-distinct-with-select"></a>C. DISTINCT を SELECT と共に使用する  
- 次の例では`DISTINCT`重複しているタイトルを取得しないようにします。  
+ 次の例では、`DISTINCT` を使って重複しているタイトルを取得しないようにしています。  
   
  [!code-sql[Select#SelectExamples6](../../t-sql/queries/codesnippet/tsql/select-examples-transact_6.sql)]  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/25/2018
   
  [!code-sql[Select#SelectExamples7](../../t-sql/queries/codesnippet/tsql/select-examples-transact_7.sql)]  
   
- この 2 番目の例は、永続的なテーブルを作成`NewProducts`です。  
+ 2 番目の例では、`NewProducts` という名前のパーマネント テーブルを作成します。  
   
  [!code-sql[Select#SelectExamples8](../../t-sql/queries/codesnippet/tsql/select-examples-transact_8.sql)]  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 01/25/2018
  [!code-sql[Select#SelectExamples18](../../t-sql/queries/codesnippet/tsql/select-examples-transact_17.sql)]  
   
 ## <a name="k-using-the-having-clause"></a>K. HAVING 句を使用する  
- 最初の例、`HAVING`句、集計関数と共に使用します。 `SalesOrderDetail` テーブルの行を製品 ID 別にグループ化し、平均注文数が 5 以下の製品を除外しています。 2 番目の例では、`HAVING` 句を集計関数なしで使用しています。  
+ 最初の例では、`HAVING` 句を集計関数と共に使用しています。 `SalesOrderDetail` テーブルの行を製品 ID 別にグループ化し、平均注文数が 5 以下の製品を除外しています。 2 番目の例では、`HAVING` 句を集計関数なしで使用しています。  
   
  [!code-sql[Select#SelectExamples19](../../t-sql/queries/codesnippet/tsql/select-examples-transact_18.sql)]  
   
@@ -150,7 +150,7 @@ GO
 ```  
   
 ## <a name="l-using-having-and-group-by"></a>L. HAVING と GROUP BY を使用する  
- 次の例を使用して`GROUP BY`、 `HAVING`、 `WHERE`、および`ORDER BY`のいずれかの句`SELECT`ステートメントです。 これによって、$25 より高く平均注文数量が 5 未満の製品を除外した、グループとサマリー値が作成されます。 この結果は `ProductID` 別にまとめられます。  
+ 次の例では、1 つの `SELECT` ステートメントの中で `GROUP BY` 句、`HAVING` 句、`WHERE` 句、および `ORDER BY` 句を使用しています。 これによって、$25 より高く平均注文数量が 5 未満の製品を除外した、グループとサマリー値が作成されます。 この結果は `ProductID` 別にまとめられます。  
   
  [!code-sql[Select#SelectExamples21](../../t-sql/queries/codesnippet/tsql/select-examples-transact_19.sql)]  
   
@@ -159,7 +159,7 @@ GO
   
  [!code-sql[Select#SelectExamples22](../../t-sql/queries/codesnippet/tsql/select-examples-transact_20.sql)]  
   
- 大きいの総売り上げ高を持っている製品を表示する`$2000000.00`、このクエリを使用します。  
+ 売上合計が `$2000000.00` を超える製品を検索するには、このクエリを使用します。  
   
  [!code-sql[Select#SelectExamples23](../../t-sql/queries/codesnippet/tsql/select-examples-transact_21.sql)]  
   
@@ -168,7 +168,7 @@ GO
  [!code-sql[Select#SelectExamples24](../../t-sql/queries/codesnippet/tsql/select-examples-transact_22.sql)]  
   
 ## <a name="n-using-the-index-optimizer-hint"></a>N. INDEX オプティマイザー ヒントを使用する  
- 次の例を使用する 2 つの方法を示しています、`INDEX`オプティマイザー ヒント。 最初の例では、オプティマイザーで非クラスター化インデックスを使用し、テーブルから行を取得しています。2 番目の例では、index = 0 を使ってテーブル スキャンを実行しています。  
+ 次の例では、`INDEX` オプティマイザー ヒントの使用方法を 2 とおり示します。 最初の例では、オプティマイザーで非クラスター化インデックスを使用し、テーブルから行を取得しています。2 番目の例では、index = 0 を使ってテーブル スキャンを実行しています。  
   
  [!code-sql[Select#SelectExamples45](../../t-sql/queries/codesnippet/tsql/select-examples-transact_23.sql)]  
   
@@ -178,7 +178,7 @@ GO
  [!code-sql[Select#SelectExamples46](../../t-sql/queries/codesnippet/tsql/select-examples-transact_24.sql)]  
   
 ## <a name="o-using-the-union-query-hint"></a>O.  UNION クエリ ヒントを使用する  
- 次の例では、`MERGE UNION`クエリ ヒントです。  
+ 次の例では、`MERGE UNION` クエリ ヒントを使用します。  
   
  [!code-sql[Select#SelectExamples47](../../t-sql/queries/codesnippet/tsql/select-examples-transact_25.sql)]  
   
@@ -193,14 +193,14 @@ GO
  [!code-sql[Select#SelectExamples49](../../t-sql/queries/codesnippet/tsql/select-examples-transact_27.sql)]  
   
 ## <a name="r-using-union-of-two-select-statements-with-order-by"></a>R.  ORDER BY 句を指定した 2 つの SELECT ステートメントで UNION 句を使用する  
- UNION 句で使用するある種のパラメーターの順序には重要な意味があります。 次の例では、誤った方法と正しい使用`UNION`を 2 つ`SELECT`ステートメントは、列の出力に名前を変更します。  
+ UNION 句で使用するある種のパラメーターの順序には重要な意味があります。 次の例では、出力時に列名を変更する 2 つの `SELECT` ステートメントでの `UNION` の誤った使用法と正しい使用法を示しています。  
   
  [!code-sql[Select#SelectExamples50](../../t-sql/queries/codesnippet/tsql/select-examples-transact_28.sql)]  
   
 ## <a name="s-using-union-of-three-select-statements-to-show-the-effects-of-all-and-parentheses"></a>S.  3 つの SELECT ステートメントで UNION を使用して、ALL とかっこの効果を示す  
- 次の例を使用して`UNION`3 つのテーブルが同じ 5 行のデータがあるすべての結果を結合します。 最初の例では、`UNION ALL` を使用して、重複するレコードも含めて 15 行すべてを返します。 2 番目の例では`UNION`せず`ALL`、3 つの結合された結果から重複する行を削除する`SELECT`ステートメント、および 5 行を返します。  
+ 次の例では、`UNION` を使用して 3 つのテーブルのクエリ結果を結合します。これらのテーブルはすべて同じ 5 行のデータで構成されます。 最初の例では、`UNION ALL` を使用して、重複するレコードも含めて 15 行すべてを返します。 2 番目の例では、`ALL` を指定せずに `UNION` を使用して、3 つの `SELECT` ステートメントの結果を結合したものから重複する行を削除し、5 行を返します。  
   
- 3 番目の例では、最初の `ALL` と共に `UNION` を使用し、`UNION` を使用していない 2 番目の `ALL` をかっこで囲んでいます。 2 番目`UNION`最初に処理されますが、かっこでは、5 行を返すため、`ALL`オプションを使用しないと、重複を削除します。 これらの 5 行は、最初の結果の結合`SELECT`を使用して、`UNION ALL`キーワード。 これによって 2 組の 5 行の間での重複が削除されることはありません。 最終的な結果は 10 行になります。  
+ 3 番目の例では、最初の `ALL` と共に `UNION` を使用し、`UNION` を使用していない 2 番目の `ALL` をかっこで囲んでいます。 2 番目の `UNION` はかっこで囲まれているので、最初に処理されます。また、`ALL` オプションを使用せずに重複を削除するので、5 行を返します。 これらの 5 行は、`UNION ALL` キーワードを使用して最初の `SELECT` の結果と結合されます。 これによって 2 組の 5 行の間での重複が削除されることはありません。 最終的な結果は 10 行になります。  
   
  [!code-sql[Select#SelectExamples51](../../t-sql/queries/codesnippet/tsql/select-examples-transact_29.sql)]  
   
@@ -209,14 +209,14 @@ GO
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [挿入 &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/insert-transact-sql.md)   
- [ような &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md)   
- [共用体 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
- [除くおよび INTERSECT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [UNION &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
+ [EXCEPT および INTERSECT &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)   
- [パス名 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/pathname-transact-sql.md)   
- [句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-into-clause-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [PathName &#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
+ [INTO 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-into-clause-transact-sql.md)  
   
   

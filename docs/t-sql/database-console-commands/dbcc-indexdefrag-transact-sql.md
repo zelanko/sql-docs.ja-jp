@@ -1,5 +1,5 @@
 ---
-title: "DBCC INDEXDEFRAG (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC INDEXDEFRAG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -43,9 +43,9 @@ ms.lasthandoff: 01/25/2018
 指定されたテーブルまたはビューのインデックスをデフラグします。
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]使用して[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 代わりに [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) を使用してください。  
   
-**適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,7 +63,7 @@ DBCC INDEXDEFRAG
   
 ## <a name="arguments"></a>引数  
  *database_name* | *database_id* | 0  
- 断片化を解消するインデックスが含まれているデータベースを指定します。 0 を指定すると、現在のデータベースが選択されます。 データベース名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。  
+ 断片化を解消するインデックスが含まれているデータベースを指定します。 0 を指定すると、現在のデータベースが選択されます。 データベース名は、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。  
   
  *table_name* | *table_id* | *view_name* | *view_id*  
  断片化を解消するインデックスが含まれているテーブルまたはビューを指定します。 テーブル名とビュー名は、識別子の規則に従っている必要があります。  
@@ -77,7 +77,7 @@ DBCC INDEXDEFRAG
  WITH NO_INFOMSGS  
  重大度レベル 0 から 10 のすべての情報メッセージを表示しないようにします。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 DBCC INDEXDEFRAG は、リーフ ページの物理順序がリーフ ノードでの左から右への論理順序と一致するように、インデックスのリーフ レベルをデフラグするので、インデックスのスキャンのパフォーマンスが向上します。
   
 > [!NOTE]  
@@ -115,12 +115,12 @@ Pages Scanned Pages Moved Pages Removed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>権限  
-呼び出し元のテーブルを所有またはのメンバーである必要があります、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、または**db_ddladmin**固定データベース ロール。
+## <a name="permissions"></a>アクセス許可  
+呼び出し元はテーブルまたはインデックス付きビューを所有しているか、固定サーバー ロール **sysadmin**、固定データベース ロール **db_owner**、または固定データベース ロール **db_ddladmin** のメンバーである必要があります。
   
 ## <a name="examples"></a>使用例  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. DBCC INDEXDEFRAG を使用してインデックスの断片化を解消する  
-次の例は、すべてのパーティションをデフラグ、`PK_Product_ProductID`でインデックスを作成、`Production.Product`テーブルに、`AdventureWorks`データベース。
+次の例では、`AdventureWorks` データベースの `Production.Product` テーブルにある `PK_Product_ProductID` インデックスのすべてのパーティションをデフラグします。
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  

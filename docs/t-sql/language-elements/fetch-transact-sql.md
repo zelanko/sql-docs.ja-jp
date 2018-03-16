@@ -1,5 +1,5 @@
 ---
-title: "フェッチ (TRANSACT-SQL) |Microsoft ドキュメント"
+title: FETCH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -73,16 +73,16 @@ FETCH
  カーソル内の最終行を返し、これを現在の行にします。  
   
  ABSOLUTE { *n*| @*nvar*}  
- 場合 *n* または @*nvar*が正の値、行を返します *n* カーソルの先頭からの行し、新しい現在の行を返し、返した行です。 場合 *n* または @*nvar*負の場合、行を返します *n* カーソルの終端する前に行の行を新しい現在の行を返し、返した行です。 場合 *n* または @*nvar*は 0、行は返されません。 *n*整数定数でなければなりませんおよび @*nvar*する必要があります**smallint**、 **tinyint**、または**int**です。  
+ *n* または @*nvar* が正の値の場合は、カーソルの先頭から *n* 行目の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が負の値の場合は、カーソルの終端から *n* 行前の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が 0 の場合は、行を返しません。 *n* は整数の定数である必要があります。また、*nvar* は **smallint**、**tinyint**、または **int** である必要があります。  
   
- 相対 {  *n* | @*nvar*}  
- 場合 *n* または @*nvar*が正の値、行を返します *n* 現在の行を超えるし、新しい現在の行を返し、返した行です。 場合 *n* または @*nvar*負の場合、行を返します *n* 行の現在の行の前に、新しい現在の行を返し、返した行です。 場合 *n* または @*nvar*が 0 の場合、現在の行を返します。 FETCH RELATIVE を指定した場合に *n* または @*nvar*負の値またはカーソルに対して実行する最初のフェッチで 0 に設定すると、行は返されません。 *n*整数定数でなければなりませんおよび @*nvar*する必要があります**smallint**、 **tinyint**、または**int**です。  
+ RELATIVE { *n*| @*nvar*}  
+ *n* または @*nvar* が正の値の場合は、現在の行を先頭に *n* 行目の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が負の値の場合は、現在の行から *n* 行前の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が 0 の場合は、現在の行を返します。 カーソルに対して実行する最初のフェッチで、*n* または @*nvar* を負の値または 0 に設定して FETCH RELATIVE を指定した場合は、行を返しません。 *n* は整数の定数である必要があります。また、*nvar* は **smallint**、**tinyint**、または **int** である必要があります。  
   
  GLOBAL  
- 指定する*cursor_name*はグローバル カーソルを参照します。  
+ *cursor_name* でグローバル カーソルを参照することを指定します。  
   
  *cursor_name*  
- フェッチが行われる、開いているカーソルの名前です。 かどうか、グローバルとローカル カーソルの両方存在で*cursor_name* 、名前として*cursor_name* GLOBAL が指定されている場合は、グローバル カーソルと GLOBAL が指定されていない場合は、ローカル カーソルをします。  
+ フェッチが行われる、開いているカーソルの名前です。 *cursor_name* という名前のグローバル カーソルとローカル カーソルの両方がある場合、GLOBAL が指定されると *cursor_name* はグローバル カーソルを参照します。GLOBAL が指定されない場合は、ローカル カーソルを参照します。  
   
  @*cursor_variable_name*  
  フェッチが行われる、開いているカーソルを参照するカーソル変数の名前です。  
@@ -90,10 +90,10 @@ FETCH
  INTO @*variable_name*[ ,...*n*]  
  フェッチの列で得られたデータを、ローカル変数に設定します。 リスト内の各変数は、左から右に向かって、カーソル結果セット内の対応する列に関連付けられます。 各変数のデータ型は、対応する結果セット列のデータ型に一致するか、または暗黙的な型変換がサポートされていなければなりません。 変数の個数は、カーソル選択リスト内の列の個数と一致している必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ISO 形式の DECLARE CURSOR ステートメントに SCROLL オプションが指定されていない場合、サポートされる FETCH オプションは NEXT だけです。 ISO 形式の DECLARE CURSOR ステートメントに SCROLL が指定されている場合は、すべての FETCH オプションがサポートされます。  
   
- ときに、 [!INCLUDE[tsql](../../includes/tsql-md.md)] DECLARE カーソル拡張機能を使用する、これらの規則が適用されます。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] DECLARE カーソル拡張が使用されると、次のルールが適用されます。  
   
 -   FORWARD_ONLY と FAST_FORWARD のいずれかが指定されている場合、サポートされる FETCH オプションは NEXT だけです。  
   
@@ -101,15 +101,15 @@ FETCH
   
 -   DYNAMIC SCROLL カーソルは、ABSOLUTE 以外のすべての FETCH オプションをサポートします。  
   
- @@FETCH_STATUS関数が最後にフェッチ ステートメントの状態を報告します。 sp_describe_cursor で返されるカーソル内の fetch_status 列に、同じ情報が記録されます。 FETCH ステートメントで返されたデータに対して操作を行う前に、このステータス情報を使用してデータの妥当性を判断する必要があります。 詳細については、次を参照してください。 [@@FETCH_STATUS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/fetch-status-transact-sql.md).  
+ @@FETCH_STATUS 関数は、最後に実行された FETCH ステートメントのステータスを返します。 sp_describe_cursor で返されるカーソル内の fetch_status 列に、同じ情報が記録されます。 FETCH ステートメントで返されたデータに対して操作を行う前に、このステータス情報を使用してデータの妥当性を判断する必要があります。 詳細については、「[@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)」を参照してください。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  FETCH 権限は、特に指定のない限り有効なすべてのユーザーに与えられます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-fetch-in-a-simple-cursor"></a>A. 単純カーソル内での FETCH を使用する  
- 次の例は、単純カーソル内の行を宣言、`Person.Person`で始まる姓を持つテーブル`B`を使用して`FETCH NEXT`行をステップ実行します。 `FETCH` ステートメントは、`DECLARE CURSOR` の中で指定された列の値を、単一行の結果セットとして返します。  
+ この例では、`Person.Person` テーブル内の姓が `B` で始まる行に対して単純カーソルを宣言し、`FETCH NEXT` を使用して行を順番に移動します。 `FETCH` ステートメントは、`DECLARE CURSOR` の中で指定された列の値を、単一行の結果セットとして返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -137,7 +137,7 @@ GO
 ```  
   
 ### <a name="b-using-fetch-to-store-values-in-variables"></a>B. FETCH を使用して変数に値を格納する  
- 次の例は例 A で、出力のような`FETCH`ステートメントが直接クライアントに返されるのではなく、ローカル変数に格納します。 `PRINT` ステートメントは変数を 1 つの文字列に結合し、これをクライアントに返します。  
+ 次の例は例 A に似ていますが、`FETCH` ステートメントの出力をクライアントに直接返すのではなく、ローカル変数に格納します。 `PRINT` ステートメントは変数を 1 つの文字列に結合し、これをクライアントに返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -215,9 +215,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [閉じる &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/close-transact-sql.md)   
- [DEALLOCATE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [開く &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/open-transact-sql.md)  
+ [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   

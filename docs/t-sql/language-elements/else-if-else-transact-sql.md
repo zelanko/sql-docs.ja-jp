@@ -1,5 +1,5 @@
 ---
-title: "(場合に. その他。その他) (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ELSE (IF...ELSE) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  実行を条件を設定、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント (*sql_statement*) 次、 *Boolean_expression*場合に実行される、 *Boolean_expression*を TRUE に評価します。 オプションの ELSE キーワードは、代替[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントが実行すると実行*Boolean_expression* FALSE または NULL に評価します。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行する条件を設定します。 *Boolean_expression* が TRUE に評価された場合、*Boolean_expression* に続く [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント (*sql_statement*) が実行されます。 オプションの ELSE キーワードは、*Boolean_expression* が FALSE または NULL と評価される場合に、代わりに実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +51,10 @@ IF Boolean_expression
   
 ## <a name="arguments"></a>引数  
  *Boolean_expression*  
- TRUE または FALSE を返す式です。 場合、 *Boolean_expression* SELECT ステートメントを含む SELECT ステートメントをかっこで囲む必要があります。  
+ TRUE または FALSE を返す式です。 *Boolean_expression* が SELECT ステートメントを含む場合は、SELECT ステートメントをかっこで囲む必要があります。  
   
  { *sql_statement* | *statement_block* }  
- 有効な[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント ブロックで定義されているグループ化します。 ステートメント ブロック (バッチ) を定義するのには、BEGIN と END は、フロー制御言語キーワードを使用します。 すべて[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントは内では、開始しています.終了ブロックする場合に、特定[!INCLUDE[tsql](../../includes/tsql-md.md)]同じバッチ (ステートメント ブロック) 内で一緒にグループ化できないステートメントもする必要があります。  
+ 有効な 1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、またはステートメント ブロックとして定義した一連のステートメントです。 ステートメント ブロック (バッチ) を定義するのには、BEGIN と END は、フロー制御言語キーワードを使用します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントはすべて BEGIN...END ブロック内で有効ですが、同じバッチ (ステートメント ブロック) 内で一緒にグループ化できない [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントもあります。  
   
 ## <a name="result-types"></a>戻り値の型  
  **ブール値**  
@@ -62,14 +62,14 @@ IF Boolean_expression
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-a-simple-boolean-expression"></a>A. 簡単なブール式を使用する  
- 次の例が簡単なブール式 (`1=1`) が true であり、そのため、最初のステートメントを出力します。  
+ 次の例では、簡単なブール式 (`1=1`) があり、これは true であるため、最初のステートメントが出力されます。  
   
 ```  
 IF 1 = 1 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 ```  
   
- 次の例が簡単なブール式 (`1=2`) が false の場合、そのため、2 番目のステートメントを出力します。  
+ 次の例の簡単なブール式 (`1=2`) は false を返します。したがって、この例では 2 番目のステートメントが出力されます。  
   
 ```  
 IF 1 = 2 PRINT 'Boolean_expression is true.'  
@@ -91,7 +91,7 @@ GO
 ```  
   
 ### <a name="c-using-a-statement-block"></a>C. ステートメント ブロックを使用する  
- 次の例では、クエリをブール式の一部として実行してから、ブール式の結果に基づいて若干異なるステートメント ブロックを実行します。 各ステートメント ブロックが始まる`BEGIN`で終わります`END`です。  
+ 次の例では、クエリをブール式の一部として実行してから、ブール式の結果に基づいて若干異なるステートメント ブロックを実行します。 各ステートメント ブロックは `BEGIN` で始まり、`END` で終わります。  
   
 ```  
 USE AdventureWorks2012;  
@@ -140,10 +140,10 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E: ブール式の一部としてクエリを使用します。  
- 次の例で`IF…ELSE`内の項目の重み付けに基づいて、ユーザーを表示する 2 つの応答の決定、`DimProduct`テーブル。  
+### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E. クエリをブール式の一部として使用する  
+ 次の例では、`IF…ELSE` を使用し、`DimProduct` テーブルの項目の重み付けを基にして、2 つの応答のどちらをユーザーに表示するかを決定します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -159,7 +159,7 @@ ELSE
   
 ## <a name="see-also"></a>参照  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [フロー制御言語 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md)   
+ [フロー制御言語 &#40;TRANSACT-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
   

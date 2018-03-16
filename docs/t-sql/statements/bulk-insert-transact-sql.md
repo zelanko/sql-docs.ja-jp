@@ -1,5 +1,5 @@
 ---
-title: "一括挿入 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: BULK INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2017
 ms.prod: sql-non-specified
@@ -91,23 +91,23 @@ BULK INSERT
  指定のテーブルまたはビューが含まれているデータベース名を指定します。 指定しない場合、現在のデータベースが使用されます。  
   
  *schema_name*  
- テーブルまたはビューのスキーマの名前を指定します。 *schema_name*場合は、一括インポート操作を実行するユーザーの既定のスキーマは、指定したテーブルまたはビューのスキーマは省略します。 場合*スキーマ*が指定されていないと、一括インポート操作を実行するユーザーの既定のスキーマは、指定したテーブルまたはビューから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー メッセージ、および一括インポート操作が取り消されるを返します。  
+ テーブルまたはビューのスキーマの名前を指定します。 一括インポート操作を実行するユーザーの既定のスキーマが、指定したテーブルまたはビューのスキーマと同じ場合、*schema_name* は省略可能です。 *スキーマ*を指定せず、さらに一括インポート操作を実行するユーザーの既定のスキーマが、指定したテーブルまたはビューのスキーマと異なる場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラー メッセージが返され、一括インポート操作は取り消されます。  
   
  *table_name*  
- データの一括インポート先のテーブル名またはビュー名を指定します。 指定できるビューは、すべての列が同じベース テーブルを参照するビューだけです。 ビューにデータの読み込みの制限に関する詳細については、次を参照してください。 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)。  
+ データの一括インポート先のテーブル名またはビュー名を指定します。 指定できるビューは、すべての列が同じベース テーブルを参照するビューだけです。 データをビューに読み込むときの制限の詳細については、「[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)」を参照してください。  
   
  **'** *data_file* **'**  
  指定のテーブルまたはビューにインポートするデータが含まれているデータ ファイルの完全なパスを指定します。 BULK INSERT を使用して、ディスク (ネットワーク、フロッピー ディスク、ハード ディスクなど) からデータをインポートすることができます。   
  
- *data_file*をサーバーから有効なパスを指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されています。 場合*data_file*がリモート ファイル、汎用名前付け規則 (UNC) 名を指定します。 UNC 名の形式\\ \\ *Systemname*\\*ShareName*\\*パス*\\ *FileName*です。 たとえば、 `\\SystemX\DiskZ\Sales\update.txt`のようにします。   
+ *data_file* には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されているサーバーからの有効なパスを指定する必要があります。 *data_file* がリモート ファイルの場合は、UNC (汎用名前付け規則) 名を指定します。 UNC 名の形式は、\\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*です。 たとえば、 `\\SystemX\DiskZ\Sales\update.txt`のようにします。   
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-以降で[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP1.1、data_file は、Azure blob ストレージにすることができます。
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1 以降では、data_file は Azure Blob Storage に格納することができます。
 
 **'** *data_source_name* **'**   
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-名前付きの外部データ ソースがインポートされるファイルの Azure Blob ストレージの場所を指しています。 使用して、外部データ ソースを作成する必要があります、`TYPE = BLOB_STORAGE`オプションで追加された[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1 です。 詳細については、次を参照してください。 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)です。    
+インポートされるファイルの Azure Blob Storage の場所を指している名前付きの外部データ ソースです。 外部データ ソースは、[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 で追加された `TYPE = BLOB_STORAGE` オプションを使用して作成する必要があります。 詳しくは、「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」をご覧ください。    
   
- BATCHSIZE  **=**  *batch_size*  
+ BATCHSIZE **=***batch_size*  
  1 つのバッチに含まれている行の数を指定します。 それぞれのバッチは、1 回のトランザクションでサーバーにコピーされます。 コピーに失敗した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では各バッチのトランザクションがコミットまたはロールバックされます。 既定では、指定のデータ ファイル内にあるすべてのデータが 1 つのバッチになります。 パフォーマンスに関する考慮事項については、後の「解説」を参照してください。  
   
  CHECK_CONSTRAINTS  
@@ -116,48 +116,48 @@ BULK INSERT
 > [!NOTE]  
 >  UNIQUE および PRIMARY KEY 制約は常に適用されます。 NOT NULL 制約で定義された文字型列にインポートする場合、テキスト ファイルに値がなければ BULK INSERT は空白文字列を挿入します。  
   
- ある時点で、テーブル全体に対する制約を確認する必要があります。 一括インポート操作の実行時にテーブルが空でなかった場合は、制約の再検証を行うと、追加データに CHECK 制約を適用するよりもコストがかかる可能性があります。  
+ テーブル全体の制約は、任意の時点で必ず検証してください。 一括インポート操作の実行時にテーブルが空でなかった場合は、制約の再検証を行うと、追加データに CHECK 制約を適用するよりもコストがかかる可能性があります。  
   
- 入力データに制約違反の行が含まれている場合などは、制約を無効 (既定の動作) にできます。 CHECK 制約を無効になっているには、データをインポートし、使用することができます[!INCLUDE[tsql](../../includes/tsql-md.md)]を無効なデータを削除してステートメントです。  
+ 入力データに制約違反の行が含まれている場合などは、制約を無効 (既定の動作) にできます。 制約の CHECK を無効にした場合は、データをインポートした後 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して無効なデータを削除できます。  
   
 > [!NOTE]  
 >  MAXERRORS オプションは制約チェックには適用されません。  
   
- CODEPAGE  **=**  { **'**ACP**'** | **'**OEM**'**  | **'**RAW**'** | **'***code_page***'** }  
- データ ファイル内のデータのコード ページを指定します。 CODEPAGE は、データが含まれている場合にのみ関連する**char**、 **varchar**、または**テキスト**文字の値よりも大きい列**127**以下**32**です。  
+ CODEPAGE **=** { **'**ACP**'** | **'**OEM**'** | **'**RAW**'** | **'***code_page***'** }  
+ データ ファイル内のデータのコード ページを指定します。 CODEPAGE は、データに **char**、**varchar**、**text** 列 (文字値が **127** より大きいか、**32** 未満) が含まれている場合にのみ当てはまります。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)]内の各列の照合順序名を指定することをお勧め、[フォーマット ファイル](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)です。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、[フォーマット ファイル](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)の各列に対して照合順序名を指定することをお勧めします。  
   
 |CODEPAGE の値|Description|  
 |--------------------|-----------------|  
-|ACP|列の**char**、 **varchar**、または**テキスト**からデータ型を変換、 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] / [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コード ページ (ISO 1252) を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コード ページです。|  
-|OEM (既定値)|列の**char**、 **varchar**、または**テキスト**システム OEM コード ページからデータ型を変換、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コード ページです。|  
+|ACP|**char**、**varchar**、または **text** データ型の列は、[!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コード ページ (ISO 1252) から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード ページに変換されます。|  
+|OEM (既定値)|**char**、**varchar**、または **text** のデータ型の列は、システムの OEM コード ページから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード ページに変換されます。|  
 |RAW|1 つのコード ページから別のコード ページへの変換は行われません。このオプションを使用すると、最も高速に操作を完了できます。|  
-|*code_page*|850 など、特定のコード ページ番号を指定します。<br /><br /> **\*\*重要な\* \*** より前のバージョン[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]コード ページ 65001 (utf-8 エンコード) をサポートしていません。|  
+|*code_page*|850 など、特定のコード ページ番号を指定します。<br /><br /> **\*\* 重要 \*\*** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前のバージョンはコード ページ 65001 (UTF-8 エンコード) をサポートしません。|  
   
- DATAFILETYPE  **=**  { **'char'** | **'native'** | **'widechar'**  |  **widenative** }  
+ DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'** }  
  BULK INSERT で、指定したデータ ファイルの型の値に基づいてインポート操作を実行します。  
   
 |DATAFILETYPE の値|すべてのデータが示す形式|  
 |------------------------|------------------------------|  
 |**char** (既定値)|文字形式。<br /><br /> 詳細については、「[文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)」をご覧ください。|  
-|**ネイティブ**|ネイティブ (データベース) データ型。 データの一括インポートで、ネイティブ データ ファイルを作成する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して、 **bcp**ユーティリティです。<br /><br /> ネイティブ値を使用すると、char 型の値を使用するよりもパフォーマンスが向上します。<br /><br /> 詳細については、「[ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)」をご覧ください。|  
+|**native**|ネイティブ (データベース) データ型。 **bcp** ユーティリティを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からデータを一括インポートし、ネイティブ データ ファイルを作成します。<br /><br /> ネイティブ値を使用すると、char 型の値を使用するよりもパフォーマンスが向上します。<br /><br /> 詳細については、「[ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)」をご覧ください。|  
 |**widechar**|Unicode 文字。<br /><br /> 詳細については、「 [Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)」をご覧ください。|  
-|**widenative**|ネイティブ (データベース) データ型では可**char**、 **varchar**、および**テキスト**列、データが Unicode として格納されています。 作成、 **widenative**データ ファイルからデータの一括インポートを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して、 **bcp**ユーティリティです。<br /><br /> **Widenative**値に代わるより高いパフォーマンス手段を提供する**widechar**です。 データ ファイルが含まれている場合[!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]指定文字を拡張**widenative**です。<br /><br /> 詳細については、「 [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)」をご覧ください。|  
+|**widenative**|ネイティブ (データベース) データ型。ただし、データが Unicode として格納される **char**、**varchar**、**text** 列は除きます。 **bcp** ユーティリティを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からデータを一括インポートし、**widenative** データ ファイルを作成します。<br /><br /> **widenative** 値を使用すると、**widechar** 値を使用するよりもパフォーマンスが向上します。 データ ファイルに [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 拡張文字が含まれている場合は、**widenative** を指定します。<br /><br /> 詳細については、「 [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)」をご覧ください。|  
   
   ERRORFILE **='***file_name***'**  
  形式エラーがあり、OLE DB 行セットに変換できない行を収集するときに使用するファイルを指定します。 該当する行は、データ ファイルからこのエラー ファイルに "そのまま" コピーされます。  
   
  このエラー ファイルは、コマンドが実行されたときに作成されます。 ファイルが既に存在する場合はエラーが発生し、 拡張子 .ERROR.txt の制御ファイルが作成されます。 このファイルにはエラー ファイルの各行の参照と、エラーの診断が含まれています。 エラーが修正されるとすぐ、データは読み込み可能になります。   
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-以降で[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]、 `error_file_path` Azure blob ストレージにすることができます。
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、`error_file_path` は Azure Blob Storage に格納することができます。
 
-' errorfile_data_source_name'   
+'errorfile_data_source_name'   
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-名前付きの外部データ ソースは、インポート中に見つかったエラーを格納するエラー ファイルの Azure Blob ストレージの場所を指しています。 使用して、外部データ ソースを作成する必要があります、`TYPE = BLOB_STORAGE`オプションで追加された[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1 です。 詳細については、次を参照してください。 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)です。
+名前付きの外部データ ソースで、インポート中に見つかったエラーを格納するエラー ファイルの Azure Blob Storage の場所を指しています。 外部データ ソースは、[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 で追加された `TYPE = BLOB_STORAGE` オプションを使用して作成する必要があります。 詳しくは、「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」をご覧ください。
  
- FIRSTROW  **=**  *first_row*  
+ FIRSTROW **=***first_row*  
  読み込み開始行の行番号を指定します。 既定値は、指定されたデータ ファイルの先頭行です。 FIRSTROW は 1 から始まります。  
   
 > [!NOTE]  
@@ -168,38 +168,38 @@ BULK INSERT
   
  FIRE_TRIGGERS が指定されていない場合、挿入トリガーは実行されません。  
 
-FORMATFILE_DATASOURCE  **=**  'data_source_name'   
-**適用されます:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1 です。   
-名前付きの外部データ ソースは、インポートされたデータのスキーマを定義するフォーマット ファイルの Azure Blob ストレージの場所を指しています。 使用して、外部データ ソースを作成する必要があります、`TYPE = BLOB_STORAGE`オプションで追加された[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1 です。 詳細については、次を参照してください。 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)です。
+FORMATFILE_DATASOURCE **=** 'data_source_name'   
+**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1。   
+インポートされるデータのスキーマを定義するフォーマット ファイルの Azure Blob Storage の場所を指している名前付きの外部データ ソースです。 外部データ ソースは、[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 で追加された `TYPE = BLOB_STORAGE` オプションを使用して作成する必要があります。 詳しくは、「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」をご覧ください。
   
  KEEPIDENTITY  
- インポートしたデータ ファイルの ID 値 (複数可) を ID 列に使用することを指定します。 この列の id 値を検証するがインポートされない KEEPIDENTITY を指定しない場合および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル作成時に指定されたシードと増分値に基づいて一意の値を自動的に割り当てます。 データ ファイルにテーブルまたはビュー内の id 列の値が含まれていない場合は、フォーマット ファイルを使用して、テーブルまたはビュー内の id 列が、データをインポートするときにスキップすることを指定するには[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列の一意の値を自動的に割り当てます。 詳細については、「[DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)」をご覧ください。  
+ インポートしたデータ ファイルの ID 値 (複数可) を ID 列に使用することを指定します。 KEEPIDENTITY を指定しない場合、この列の ID 値は検証のみが行われ、インポートされません。この場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブルの作成時に指定された seed と増分値に基づいて、一意な値が自動的に割り当てられます。 データ ファイルにテーブルまたはビュー内の ID 列の値が含まれない場合は、フォーマット ファイルを使用して、データのインポート時にテーブルまたはビュー内の ID 列をスキップするよう指定します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの列に一意な値が自動的に割り当てられます。 詳細については、「[DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)」をご覧ください。  
   
- 詳細については、保持するかを参照してください。 特定の値を参照してください[維持の Id 値とデータの一括インポート &#40;です。SQL Server &#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
+ ID 値の保持について詳しくは、「[データの一括インポート時の ID 値の保持 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)」をご覧ください。  
   
  KEEPNULLS  
  一括インポート操作時、空の列が挿入される場合は NULL 値が保持されます。その列の既定値は格納されません。 詳細については、「[一括インポート中の NULL の保持または既定値の使用 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)」をご覧ください。  
   
- KILOBYTES_PER_BATCH  **=**  *kilobytes_per_batch*  
- バッチごとのデータのキロバイト (KB) のおおよその数を指定*kilobytes_per_batch*です。 KILOBYTES_PER_BATCH の既定値はありません。 パフォーマンスに関する考慮事項については、後の「解説」を参照してください。  
+ KILOBYTES_PER_BATCH **=** *kilobytes_per_batch*  
+ バッチあたりのデータの概算キロバイト数 (KB) を *kilobytes_per_batch* として指定します。 KILOBYTES_PER_BATCH の既定値はありません。 パフォーマンスに関する考慮事項については、後の「解説」を参照してください。  
   
  LASTROW**=***last_row*  
  読み込み終了行の行番号を指定します。 既定値は 0 で、これは指定のデータ ファイルの最終行を表します。  
   
- MAXERRORS  **=**  *max_errors*  
- 一括インポート操作時に許容されるデータの構文エラーの最大数を指定します。この最大数に達すると、操作は取り消されます。 一括インポート操作でインポートできない行は無視され、それぞれ 1 つのエラーとしてカウントされます。 場合*max_errors*が指定されていない、既定値は 10 です。  
+ MAXERRORS **=** *max_errors*  
+ 一括インポート操作時に許容されるデータの構文エラーの最大数を指定します。この最大数に達すると、操作は取り消されます。 一括インポート操作でインポートできない行は無視され、それぞれ 1 つのエラーとしてカウントされます。 *max_errors* を指定しない場合の既定値は 10 です。  
   
 > [!NOTE]  
->  MAX_ERRORS オプションは、制約チェックや変換には適用されません**money**と**bigint**データ型。  
+>  MAX_ERRORS オプションは、制約チェックや **money** および **bigint** のデータ型の変換には適用されません。  
   
- 順序 ({*列*[ASC |DESC]} [ **、**.*n* ] )  
+ ORDER ( { *column* [ ASC | DESC ] } [ **,**... *n* ] )  
  データ ファイル内のデータの並べ替え方法を指定します。 インポートするデータをテーブル上のクラスター化インデックスに従って並べ替えると、一括インポートのパフォーマンスが向上します。 データ ファイルが異なる順序で並んでいる場合、つまりクラスター化インデックス キーの順序以外の順で並んでいるか、テーブルにクラスター化インデックスが存在しない場合、ORDER 句は無視されます。 指定する列の名前は、インポート先のテーブル内で有効な列の名前であることが必要です。 既定では、一括挿入操作はデータ ファイルが並べ替えられていないことを前提に実行されます。 最適な一括インポートのため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、インポートするデータが並べ替えられているかどうかも検証されます。  
   
  *n*  
  複数の列を指定できることを示すプレースホルダーです。  
   
- ROWS_PER_BATCH  **=**  *rows_per_batch*  
- データ ファイル内のデータの行の概数を示します。  
+ ROWS_PER_BATCH **=***rows_per_batch*  
+ データ ファイル内にあるデータ行の概算数を示します。  
   
  既定では、データ ファイル内のすべてのデータは単一のトランザクションとしてサーバーに送られ、バッチ内の行数はクエリ オプティマイザーには通知されません。 ROWS_PER_BATCH を値 > 0 で指定した場合、サーバーでは一括インポート操作の最適化にこの値が使用されます。 ROWS_PER_BATCH に指定する値は、実際の行数とほぼ同じにする必要があります。 パフォーマンスに関する考慮事項については、後の「解説」を参照してください。  
   
@@ -207,20 +207,20 @@ FORMATFILE_DATASOURCE  **=**  'data_source_name'
  TABLOCK  
  一括インポート操作中にテーブル レベルのロックを取得します。 テーブルにインデックスがなく、TABLOCK を指定した場合は、複数のクライアントで同時に 1 つのテーブルを読み込むことができます。 既定では、ロック動作はテーブル オプション **table lock on bulk load**によって決定されます。 一括インポート操作中にロックを維持すると、テーブル ロックの競合が少なくなるので、場合によってはパフォーマンスが大幅に向上します。 パフォーマンスに関する考慮事項については、後の「解説」を参照してください。  
   
- 列ストア インデックスです。 複数の行セットに内部的に分かれているために、ロックの動作が異なります。  各スレッドは、同時実行データ読み込みのセッションで並列のデータの読み込みを許可する行セットで X ロックを取得して、それぞれの行セットに排他的にデータを読み込みます。 TABLOCK オプションの使用には、他の同時実行スレッドを同時にデータを読み込むようにする (従来の行セットの BU ロック) とは異なり、テーブルで、X ロックを実行するスレッドになります。  
+ 列ストア インデックスの場合。 複数の行セットに内部的に分かれているため、ロックの動作が異なります。  各スレッドは、行セットに対して X ロックを取得して同時実行データ読み込みセッションによる並列データ読み込みを許可することで、それぞれの行セットにデータを排他的に読み込みます。 TABLOCK オプションを使用すると、スレッドは (従来の行セットの BU ロックとは異なり) テーブルに対して X ロックを取得し、他の同時実行スレッドが同時にデータを読み込むのを防ぎます。  
 
-### <a name="input-file-format-options"></a>入力ファイル形式のオプション
+### <a name="input-file-format-options"></a>入力ファイル フォーマットのオプション
   
-形式 **=**  'CSV'   
+FORMAT **=** 'CSV'   
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-準拠しているコンマ区切り値ファイルを指定します、 [RFC 4180](https://tools.ietf.org/html/rfc4180)標準です。
+[RFC 4180](https://tools.ietf.org/html/rfc4180) 標準に準拠しているコンマ区切り値ファイルを指定します。
 
-FIELDQUOTE  **=**  'field_quote'   
+FIELDQUOTE **=** 'field_quote'   
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-CSV ファイルの引用符の文字として使用される文字を指定します。 指定されていない場合で定義されている、引用符の文字として引用符文字 (") を使用、 [RFC 4180](https://tools.ietf.org/html/rfc4180)標準です。
+CSV ファイルで引用符文字として使用される文字を指定します。 指定されていない場合は、[RFC 4180](https://tools.ietf.org/html/rfc4180) 標準の定義に従って引用符文字 (") が引用符文字として使用されます。
   
  FORMATFILE **='***format_file_path***'**  
- フォーマット ファイルの完全パスを指定します。 フォーマット ファイルを使用して作成された、格納された応答を含むデータ ファイルの説明、 **bcp**同じテーブルまたはビュー上のユーティリティ。 フォーマット ファイルは次の場合に使用します。  
+ フォーマット ファイルの完全パスを指定します。 フォーマット ファイルには、格納済みの応答を含むデータ ファイルの内容が記述されています。これらの応答は同じテーブルまたはビューに対し **bcp** ユーティリティを実行して作成されたものです。 フォーマット ファイルは次の場合に使用します。  
   
 -   データ ファイルに含まれる列の数が、テーブルまたはビューより多い、または少ない。  
   
@@ -228,34 +228,34 @@ CSV ファイルの引用符の文字として使用される文字を指定し�
   
 -   列の区切り記号が異なる。  
   
--   データ形式に他に異なる点がある。 フォーマット ファイルは、通常を使用して作成、 **bcp**ユーティリティし、必要に応じてテキスト エディターで修正します。 詳細については、「 [bcp Utility](../../tools/bcp-utility.md)」を参照してください。  
+-   データ形式に他に異なる点がある。 フォーマット ファイルは通常、**bcp** ユーティリティを使用して作成し、必要に応じてテキスト エディターで修正します。 詳細については、「 [bcp Utility](../../tools/bcp-utility.md)」を参照してください。  
 
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-以降で[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1、format_file_path は Azure blob ストレージにすることができます。
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降では、format_file_path は Azure Blob Storage に格納することができます。
 
  FIELDTERMINATOR **='***field_terminator***'**  
- 使用されるフィールド ターミネータを指定します**char**と**widechar**データ ファイル。 既定のフィールド ターミネータは \t (タブ文字) です。 詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。  
+ **char** および **widechar** 型のデータ ファイルに使用するフィールド ターミネータを指定します。 既定のフィールド ターミネータは \t (タブ文字) です。 詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。  
 
  ROWTERMINATOR **='***row_terminator***'**  
- 使用される行ターミネータを指定します**char**と**widechar**データ ファイル。 既定の行ターミネータは**\r\n** (改行文字)。  詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。  
+ **char** および **widechar** 型のデータ ファイルに使用する行ターミネータを指定します。 既定の行ターミネータは **\r\n** (改行文字) です。  詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。  
 
   
 ## <a name="compatibility"></a>互換性  
  BULK INSERT によって、ファイルから読み込んだデータに対して厳密なデータ検証とデータ チェックが実行されるので、無効なデータを使用して既存のスクリプトを実行すると、スクリプトは失敗する可能性があります。 たとえば、BULK INSERT では次の検証が行われます。  
   
--   ネイティブ表記**float**または**実際**データ型が無効です。  
+-   **float** データ型または **real** データ型のネイティブ表記が有効かどうか。  
   
 -   Unicode データが偶数バイト長かどうか。  
   
 ## <a name="data-types"></a>データ型  
   
 ### <a name="string-to-decimal-data-type-conversions"></a>文字列から 10 進数へのデータ型変換  
- BULK INSERT で使用される 10 進数の文字列データ型変換と同じ規則に従います、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [変換](../../t-sql/functions/cast-and-convert-transact-sql.md)関数で、科学的表記法を使用して数値を表す文字列を拒否します。 したがって、BULK INSERT を実行するときに、そのような文字列が無効な値として評価され、変換エラーが報告されます。  
+ BULK INSERT で使用される文字列から 10 進数へのデータ型変換には、[!INCLUDE[tsql](../../includes/tsql-md.md)] の [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) 関数と同じ規則が適用されるので、科学的表記法を使用した数値を表す文字列は拒否されます。 したがって、BULK INSERT を実行するときに、そのような文字列が無効な値として評価され、変換エラーが報告されます。  
   
- この動作を回避するには、一括インポートの科学的表記法、フォーマット ファイルを使用**float** 10 進数の列へのデータ。 フォーマット ファイルで明示的に記述する列として**実際**または**float**データ。 これらのデータ型の詳細については、次を参照してください。 [float、real および #40 です。TRANSACT-SQL と #41 です](../../t-sql/data-types/float-and-real-transact-sql.md)。  
+ この問題を回避するには、科学的表記法の **float** 型のデータを 10 進数の列に一括インポートするフォーマット ファイルを使用します。 フォーマット ファイルには、列のデータを明示的に **real** または **float** 型として記述します。 これらのデータ型の詳細については、を参照してください。 [float、real および #40 です。TRANSACT-SQL と #41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
   
 > [!NOTE]  
->  フォーマット ファイル**実際**データとして、 **SQLFLT4**データ型と**float**データとして、 **SQLFLT8**データ型。 XML 以外のフォーマット ファイルについては、次を参照してください[bcp &#40; を使用して、ファイル ストレージ型の指定。SQL Server &#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md).  
+>  フォーマット ファイル **real** データとして、 **SQLFLT4** データ型と **float** データとして、 **SQLFLT8** データ型。 XML 以外のフォーマット ファイルについては、「[bcp を使用したファイル ストレージ型の指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)」をご覧ください。  
   
 #### <a name="example-of-importing-a-numeric-value-that-uses-scientific-notation"></a>科学的表記法を使用した数値をインポートする例  
  この例では、次のテーブルを使用します。  
@@ -264,15 +264,15 @@ CSV ファイルの引用符の文字として使用される文字を指定し�
 CREATE TABLE t_float(c1 float, c2 decimal (5,4));  
 ```  
   
- ユーザーの一括たいデータのインポート、`t_float`テーブル。 データ ファイル C:\t_float-c.dat には、科学的表記法が含まれています。 **float**データ; 例。  
+ ここでの目的は、`t_float` テーブルにデータを一括インポートすることです。 データ ファイル C:\t_float-c.dat には、次のような科学的表記法の **float** 型のデータが含まれています。  
   
 ```  
 8.0000000000000002E-28.0000000000000002E-2  
 ```  
   
- しかし、テーブルの 2 番目の列 `t_float` で `c2` データ型を使用しているので、このデータを BULK INSERT によって `decimal` に直接インポートすることはできません。 そのため、フォーマット ファイルが必要です。 フォーマット ファイルは、科学的表記法をマップする必要があります**float**列の 10 進数形式にデータを`c2`です。  
+ しかし、テーブルの 2 番目の列 `t_float` で `c2` データ型を使用しているので、このデータを BULK INSERT によって `decimal` に直接インポートすることはできません。 そのため、フォーマット ファイルが必要です。 フォーマット ファイルでは、科学的表記法の **float** 型のデータを列 `c2` の 10 進形式にマップする必要があります。  
   
- 次のフォーマット ファイルでは、`SQLFLT8`データ型に 2 番目のデータ フィールドを 2 番目の列にマップします。  
+ 次のフォーマット ファイルでは、`SQLFLT8` データ型を使用して、2 番目のデータ フィールドを 2 番目の列にマップしています。  
   
  ```
  <?xml version="1.0"?> 
@@ -297,28 +297,28 @@ GO
   
 |データ型|結果|  
 |---------------|------------|  
-|SQLCHAR または SQLVARCHAR|データは、クライアント コード ページまたは照合順序で暗黙的に指定されるコード ページで送られます。 効果は DATAFILETYPE を指定すると同じ**= 'char'**フォーマット ファイルを指定せずします。|  
-|SQLNCHAR または SQLNVARCHAR|データは Unicode として送られます。 効果は DATAFILETYPE を指定すると同じ**= 'widechar'**フォーマット ファイルを指定せずします。|  
+|SQLCHAR または SQLVARCHAR|データは、クライアント コード ページまたは照合順序で暗黙的に指定されるコード ページで送られます。 フォーマット ファイルを指定せずに DATAFILETYPE **='char'** を指定した場合と同じ結果が得られます。|  
+|SQLNCHAR または SQLNVARCHAR|データは Unicode として送られます。 フォーマット ファイルを指定せずに DATAFILETYPE **= 'widechar'** を指定した場合と同じ結果が得られます。|  
 |SQLBINARY または SQLVARBIN|データは変換なしで送られます。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
- BULK INSERT ステートメント、INSERT ... 選択\*openrowset (bulk) からステートメントでは、および**bcp**コマンドを参照してください[一括インポートし、データ ファイルのエクスポート &#40;です。SQL Server &#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ BULK INSERT ステートメント、INSERT ... SELECT \* FROM OPENROWSET(BULK...) ステートメントおよび **bcp** コマンドについては、「[データの一括インポートと一括エクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)」をご覧ください。  
   
- データを一括インポートの準備については、次を参照してください[データを一括エクスポートまたはインポート &#40; を準備する。SQL Server &#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
+ データを一括インポート用に準備する方法については、「[一括エクスポートまたは一括インポートのデータの準備 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)」をご覧ください。  
   
- BULK INSERT ステートメントは、テーブルまたはビューにデータをインポートするために、ユーザー定義のトランザクション内で実行できます。 必要に応じて、一括インポート データの複数の一致を使用するために、トランザクションは BULK INSERT ステートメントで BATCHSIZE 句を指定できます。 複数のバッチのトランザクションがロールバックされた場合、トランザクションに送信したすべてのバッチ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がロールバックされます。  
+ BULK INSERT ステートメントは、テーブルまたはビューにデータをインポートするために、ユーザー定義のトランザクション内で実行できます。 必要に応じて、一括インポート データの複数の一致を使用するために、トランザクションは BULK INSERT ステートメントで BATCHSIZE 句を指定できます。 複数のバッチのトランザクションをロールバックする場合、トランザクションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信したすべてのバッチがロールバックされます。  
   
 ## <a name="interoperability"></a>相互運用性  
   
 ### <a name="importing-data-from-a-csv-file"></a>CSV ファイルからのデータのインポート  
-以降で[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1、一括挿入は、CSV 形式をサポートしています。  
-前に[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1 でコンマ区切り値 (CSV) ファイルはサポートされていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一括インポート操作します。 ただし、場合によっては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対してデータを一括インポートする際、CSV ファイルをデータ ファイルとして使用できます。 CSV データ ファイルからデータをインポートするための要件については、次を参照してください[一括エクスポートまたは一括インポートのデータの準備 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降では、BULK INSERT は CSV 形式をサポートしています。  
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 より前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一括インポート操作ではコンマ区切り値 (CSV) ファイルがサポートされていません。 ただし、場合によっては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対してデータを一括インポートする際、CSV ファイルをデータ ファイルとして使用できます。 CSV データ ファイルからデータをインポートするための要件については、「[一括エクスポートまたは一括インポートのデータの準備 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)」をご覧ください。  
   
 ## <a name="logging-behavior"></a>ログ記録の動作  
  一括インポートによって実行される行挿入操作がトランザクション ログに記録される条件について詳しくは、「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」をご覧ください。  
   
 ##  <a name="Limitations"></a> 制限  
- BULK INSERT でフォーマット ファイルを使用する場合、指定できるフィールド数は 1,024 個までです。 これは、テーブルに許容される最大列数と同じです。 1,024 個を超えるフィールドが含まれるデータ ファイルで BULK INSERT を使用すると、BULK INSERT によってエラー 4822 が生成されます。 [Bcp ユーティリティ](../../tools/bcp-utility.md)されていませんこの制限がある、そのため、1,024 個を超えるフィールドを含むデータ ファイルの使用、 **bcp**コマンド。  
+ BULK INSERT でフォーマット ファイルを使用する場合、指定できるフィールド数は 1,024 個までです。 これは、テーブルに許容される最大列数と同じです。 1,024 個を超えるフィールドが含まれるデータ ファイルで BULK INSERT を使用すると、BULK INSERT によってエラー 4822 が生成されます。 [bcp ユーティリティ](../../tools/bcp-utility.md)にはこのような制限がないため、1,024 個を超えるフィールドを含むデータ ファイルには、**bcp** コマンドを使用してください。  
   
 ## <a name="performance-considerations"></a>パフォーマンスに関する考慮事項  
  1 つのバッチでフラッシュされるページの数が内部しきい値を超えると、バッチのコミット時にフラッシュするページを特定するためにバッファー プールのフル スキャンが行われる可能性があります。 フル スキャンが行われると、一括インポートのパフォーマンスが低下します。 この内部しきい値の問題は、大きなバッファー プールと遅い I/O サブシステムの組み合わせでも発生します。 大規模なコンピューターでバッファー オーバーフローを防ぐには、TABLOCK ヒントを使用しないようにするか (一括インポートの最適化は行われなくなります)、バッチ サイズを小さくします (一括インポートの最適化は引き続き行われます)。  
@@ -330,14 +330,14 @@ GO
 ### <a name="security-account-delegation-impersonation"></a>セキュリティ アカウントの委任 (権限借用)  
  ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを使用する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス アカウントのセキュリティ プロファイルが使用されます。 SQL Server 認証を使用したログインは、データベース エンジン以外では認証できません。 そのため、SQL Server 認証を使用したログインによって BULK INSERT コマンドが開始されると、SQL Server プロセス アカウント (SQL Server データベース エンジン サービスで使用されるアカウント) のセキュリティ コンテキストを使用してデータへの接続が行われます。 ソース データを正しく読み取るには、SQL Server データベース エンジンで使用されるアカウントに対して、ソース データへのアクセス権を付与する必要があります。これに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーが Windows 認証を使用してログインした場合、そのユーザーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスのセキュリティ プロファイルに関係なく、そのユーザー アカウントでアクセス可能なファイルのみを読み取ることができます。  
   
- 使用して BULK INSERT ステートメントを実行するときに**sqlcmd**または**osql**、1 台のコンピューターからデータを挿入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]別のコンピューターを指定して、 *data_file* UNC パスを使用して 3 番目のコンピューターで 4861 エラーが発生する可能性があります。  
+ あるコンピューターで **sqlcmd** または **osql** を使用して BULK INSERT ステートメントを実行し、2 台目のコンピューターの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にデータを挿入し、UNC パスを使用して 3 台目のコンピューターの *data_file* を指定した場合、エラー 4861 が返されることがあります。  
   
- このエラーを解決するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を指定し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のセキュリティ プロファイルを使用するログインを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセス アカウント、または Windows セキュリティ アカウントの委任を有効にするを構成します。 ユーザー アカウントの信頼性を委任の対象として有効にする方法の詳細については、Windows ヘルプを参照してください。  
+ この問題を解決するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス アカウントのセキュリティ プロファイルを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。または、Windows の構成でセキュリティ アカウントの委任を有効にします。 ユーザー アカウントの信頼性を委任の対象として有効にする方法の詳細については、Windows ヘルプを参照してください。  
   
- このおよび BULK INSERT を使用するための他のセキュリティの考慮事項に関する詳細については、次を参照してください[を使用して BULK INSERT または OPENROWSET &#40; した一括データのインポート。BULK...&#41;&#40;です。SQL Server &#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ BULK INSERT を使用する場合のこのセキュリティの考慮事項またはその他のセキュリティの考慮事項について詳しくは、「[BULK INSERT または OPENROWSET&#40;BULK...&#41; を使用した一括データのインポート &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)」をご覧ください。  
   
 ### <a name="permissions"></a>アクセス許可  
- INSERT および ADMINISTER BULK OPERATIONS 権限が必要です。 Azure SQL データベースでは、INSERT および ADMINISTER データベース BULK OPERATIONS 権限が必要です。 ただし次の操作を 1 つ以上行う場合は、さらに ALTER TABLE 権限が必要になります。  
+ INSERT および ADMINISTER BULK OPERATIONS 権限が必要です。 Azure SQL Database では、INSERT および ADMINISTER DATABASE BULK OPERATIONS 権限が必要です。 ただし次の操作を 1 つ以上行う場合は、さらに ALTER TABLE 権限が必要になります。  
   
 -   制約が存在する場合に、CHECK_CONSTRAINTS オプションを指定しない。  
   
@@ -354,7 +354,7 @@ GO
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-pipes-to-import-data-from-a-file"></a>A. ファイルからのデータのインポートにパイプを使用する  
- 次の例に、注文明細情報のインポート、 `AdventureWorks2012.Sales.SalesOrderDetail` 、パイプを使用して、指定されたデータ ファイルからテーブル (`|`)、フィールド ターミネータとしてと`|\n`行ターミネータとして。  
+ 次の例では、パイプ (`|`) をフィールド ターミネータ、`|\n` を行ターミネータとして使用し、指定のデータ ファイルから `AdventureWorks2012.Sales.SalesOrderDetail` テーブルに、注文の詳細情報をインポートします。  
   
 ```  
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail  
@@ -392,10 +392,10 @@ EXEC(@bulk_cmd);
 ```  
   
 > [!NOTE]  
->  Microsoft Windows によるテキスト ファイルの処理方法によって**(\n**自動的に置き換え**\r\n)**です。  
+>  Microsoft Windows によるテキスト ファイルの処理方法によって、**(\n** は自動的に **\r\n)** に置き換えられます。  
   
 ### <a name="d-specifying-a-code-page"></a>D. コード ページの指定  
- 次の例では、コード ページを指定する方法を示します。  
+ コード ページを指定する例を次に示します。  
   
 ```  
 BULK INSERT MyTable  
@@ -406,16 +406,16 @@ WITH
     FIELDTERMINATOR = ','  
 );  
 ```  
-### <a name="e-importing-data-from-a-csv-file"></a>E. CSV ファイルからデータをインポートします。   
-次の例では、CSV ファイルを指定する方法を示します。   
+### <a name="e-importing-data-from-a-csv-file"></a>E. CSV ファイルからデータをインポートする   
+CSV ファイルを指定する例を次に示します。   
 ```
 BULK INSERT Sales.Invoices
 FROM '\\share\invoices\inv-2016-07-25.csv'
 WITH (FORMAT = 'CSV'); 
 ```
 
-### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Azure blob ストレージ内のファイルからデータをインポートします。   
-次の例は、Azure blob ストレージの場所に、外部データ ソースとして構成されている csv ファイルからデータを読み込む方法を示します。 これには、共有アクセス署名を使用してデータベース スコープ資格情報が必要です。    
+### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Azure Blob Storage 内のファイルからデータをインポートする   
+次の例では、外部データ ソースとして構成されている Azure Blob Storage の場所に csv ファイルからデータを読み込む方法を示します。 これには、Shared Access Signature を使用したデータベース スコープ資格情報が必要です。    
 
 ```sql
 BULK INSERT Sales.Invoices
@@ -424,10 +424,10 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV'); 
 ```
 
-完了`BULK INSERT`資格情報と外部データ ソースの構成などの例を参照してください[例の一括データにアクセスする Azure Blob ストレージに](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)です。
+資格情報と外部データ ソースの構成などの `BULK INSERT` の詳細な例については、「[Azure BLOB ストレージのデータに一括アクセスする例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)」をご覧ください。
   
 ### <a name="additional-examples"></a>その他の例  
- その他の`BULK INSERT`例については、次のトピックで説明します。  
+ `BULK INSERT` のその他の例については、次のトピックをご覧ください。  
   
 -   [XML ドキュメントの一括インポートと一括エクスポートの例 &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
@@ -454,10 +454,10 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
 ## <a name="see-also"></a>参照  
  [データの一括インポートと一括エクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [bcp ユーティリティ](../../tools/bcp-utility.md)   
- [インポートまたはエクスポート データ &#40; 用のフォーマット ファイルSQL Server &#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)   
+ [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [一括エクスポートまたはインポート &#40; のデータを準備します。SQL Server &#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
- [sp_tableoption &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
+ [一括エクスポートまたは一括インポートのデータの準備 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
+ [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
   
   

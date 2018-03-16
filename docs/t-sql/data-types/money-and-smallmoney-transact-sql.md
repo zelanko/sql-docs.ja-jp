@@ -1,5 +1,5 @@
 ---
-title: "money および smallmoney (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "money と smallmoney (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -42,27 +42,27 @@ ms.lasthandoff: 11/21/2017
 
 金銭や通貨の値を表す金額データ型です。
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 |データ型|範囲|ストレージ|  
 |---|---|---|
-|**money**|-922,337,203,685,477.5808 に 922,337,203,685,477.5807 (-922,337,203,685,477.58<br />Informatica の 922,337,203,685,477.58 to。  Informatica のみをサポートしている小数点以下 2 桁、4 されません。)|8 バイト|  
+|**money**|-922,337,203,685,477.5808 ～ 922,337,203,685,477.5807 (Informatica では -922,337,203,685,477.58 <br />～ 922,337,203,685,477.58。  Informatica では、小数点以下 4 桁ではなく、小数点以下 2 桁 のみをサポートします。)|8 バイト|  
 |**smallmoney**|- 214,748.3648 ～ 214,748.3647|4 バイト|  
   
-**Money**と**smallmoney**データ型を表している通貨単位の 10,000 の精度はします。 Informatica、用、 **money**と**smallmoney**データ型は、厳密には、それが表している通貨単位の 1 分です。
+Money **と smallmoney** データ型を表している通貨単位の 10,000 の精度はします。 Informatica では、**money** データ型と **smallmoney** データ型の精度は、それらが表している通貨単位の 1/100 です。
   
 すべての通貨単位からセントなどの部分通貨単位を区切るには、ピリオドを使用します。 たとえば、2.15 は 2 ドル 15 セントを表します。
   
 これらのデータ型は次の通貨記号を使用できます。
   
-![通貨記号、16 進値のテーブル](../../t-sql/data-types/media/money01.gif "通貨記号、16 進値のテーブル")
+![通貨記号と 16 進値の表](../../t-sql/data-types/media/money01.gif "通貨記号と 16 進値の表")
   
 通貨データまたは金額データは単一引用符 (') で囲む必要はありません。 通貨記号が前に付いた金額値を指定することはできますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はその記号に関連付けられた通貨情報を格納せず、数値のみを格納することに注意してください。
   
-## <a name="converting-money-data"></a>Money データを変換します。
-変換する場合**money**整数データ型から単位を想定して、通貨単位にします。 たとえば、4 の整数値に変換、 **money** 4 通貨単位に相当します。
+## <a name="converting-money-data"></a>money 型データの変換
+変換すると money** から整数データ型は、単位は金額であると仮定します。 4 の整数値を変換するなど、 money** 4 通貨単位に相当します。
   
-次の例では変換**smallmoney**と**money**値を**varchar**と**decimal**それぞれのデータ型します。
+次の例では、変換 smallmoney **と money** 値を varchar **と 10 進** それぞれのデータ型します。
   
 ```sql
 DECLARE @mymoney_sm smallmoney = 3148.29,  
@@ -81,12 +81,12 @@ SM_MONEY VARCHAR               MONEY DECIMAL
 ```  
   
 ## <a name="see-also"></a>参照
-[ALTER TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-transact-sql.md) 
- [CAST および CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md) 
-[テーブルを作成する &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql.md) 
-[データ型 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/data-types-transact-sql.md) 
- [DECLARE @local_variable &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/declare-local-variable-transact-sql.md) 
-[設定@local_variable&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/set-local-variable-transact-sql.md) 
- [sys.types &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)
+[CAST と CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)
+[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
+[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+[SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)
+[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   

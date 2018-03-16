@@ -1,5 +1,5 @@
 ---
-title: "ケース (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
@@ -79,22 +79,22 @@ END
   
 ## <a name="arguments"></a>引数  
  *input_expression*  
- 単純 CASE 形式を使用した場合に評価される式です。 *input_expression*は任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+ 単純 CASE 形式を使用した場合に評価される式です。 *input_expression* は任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
  WHEN *when_expression*  
- 単純な式は、 *input_expression*単純 CASE 形式を使用する場合と比較されます。 *when_expression*有効な式です。 データ型*input_expression*とは、それぞれ*when_expression*同じである必要がありますか、暗黙的な変換をする必要があります。  
+ 単純 CASE 形式を使用した場合に *input_expression* と比較される単純式です。 *when_expression* は任意の有効な式です。 *input_expression* と各 *when_expression* のデータ型は同一であるか、暗黙的な変換によって同一の型になる必要があります。  
   
  THEN *result_expression*  
- 返される式の場合に*input_expression* equals *when_expression*を TRUE に評価または*Boolean_expression*を TRUE に評価します。 *式の結果*は任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+ *input_expression* = *when_expression* が TRUE に評価されるとき、または *Boolean_expression* が TRUE に評価されるときに返される式です。 *result_expression* は任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
  ELSE *else_result_expression*  
- 比較操作の評価がいずれも TRUE でなかった場合に返される式です。 この引数を省略し、比較操作のいずれも TRUE でなかった場合、CASE は NULL を返します。 *戻り値*有効な式です。 データ型*戻り値*と任意*result_expression*同じである必要がありますか、暗黙的な変換をする必要があります。  
+ 比較操作の評価がいずれも TRUE でなかった場合に返される式です。 この引数を省略し、比較操作のいずれも TRUE でなかった場合、CASE は NULL を返します。 *else_result_expression* は任意の有効な式です。 *else_result_expression* とすべての *result_expression* のデータ型は同一であるか、暗黙的な変換によって同一の型になる必要があります。  
   
  WHEN *Boolean_expression*  
- 検索 CASE 形式で評価するブール式です。 *Boolean_expression*有効なブール式です。  
+ 検索 CASE 形式で評価するブール式です。 *Boolean_expression* は任意の有効なブール式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- 型のセットから最高の優先順位の型を返します*result_expressions*と、省略可能な*戻り値*です。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
+ *result_expressions* および省略可能な *else_result_expression* の一連の型から、最も優先順位の高い型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
 ### <a name="return-values"></a>戻り値  
  **単純 CASE 式:**  
@@ -103,24 +103,24 @@ END
   
 -   実行できるのは、等しいかどうかのチェックだけです。  
   
--   指定された順序で評価 input_expression when_expression 各 WHEN 句を = です。  
+-   各 WHEN 句の input_expression = when_expression を指定した順序で評価します。  
   
--   返します、 *result_expression*最初の*input_expression* = *when_expression* TRUE に評価します。  
+-   TRUE に評価される最初の *input_expression* = *when_expression* の *result_expression* を返します。  
   
--   ない場合は*input_expression* = *when_expression*を TRUE に評価される、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]を返します、*戻り値*ELSE 句がある場合指定された、または ELSE 句が指定されていない場合は、NULL 値です。  
+-   *input_expression* = *when_expression* の評価がいずれも TRUE でなかった場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、ELSE 句が指定されていれば *else_result_expression* を、ELSE 句が指定されていない場合は NULL を返します。  
   
- **検索 CASE 式。**  
+ **検索 CASE 式:**  
   
--   指定の順序で評価*Boolean_expression*各 WHEN 句。  
+-   各 WHEN 句の *Boolean_expression* を指定した順序で評価します。  
   
--   返します*result_expression*最初の*Boolean_expression* TRUE に評価します。  
+-   TRUE と評価された最初の *Boolean_expression* の *result_expression* を返します。  
   
--   ない場合は*Boolean_expression*を TRUE に評価される、[!INCLUDE[ssDE](../../includes/ssde-md.md)]を返します、*戻り値*ELSE 句が指定されている場合または ELSE 句が指定されていない場合は、NULL 値です。  
+-   *Boolean_expression* の評価がいずれも TRUE でなかった場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は、ELSE 句が指定されていれば *else_result_expression* を、ELSE 句が指定されていない場合は NULL を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Case 式に入れ子にできるのは 10 レベルまでです。  
   
- CASE 式を使用して、Transact-SQL ステートメント、ステートメント ブロック、ユーザー定義関数、およびストアド プロシージャの実行フローを制御することはできません。 フロー制御のメソッドの一覧は、次を参照してください。[フロー制御言語 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md).  
+ CASE 式を使用して、Transact-SQL ステートメント、ステートメント ブロック、ユーザー定義関数、およびストアド プロシージャの実行フローを制御することはできません。 フロー制御言語の一覧については、「[フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)」を参照してください。  
   
  CASE ステートメントは条件を順に評価していき、最初に条件が満たされた時点で評価を止めます。 CASE ステートメントには、評価された式の結果が入力として渡されることがあります。 こうした式の評価中にエラーが発生する可能性もあります。 CASE ステートメントの WHEN 引数に指定された集計式は、あらかじめ評価されて CASE ステートメントに渡されます。 たとえば、次のクエリでは、MAX 集計値を生成する際に 0 除算エラーが発生します。 このエラーが発生するのは、CASE 式が評価される前です。  
   
@@ -144,7 +144,7 @@ FROM Data ;
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-a-select-statement-with-a-simple-case-expression"></a>A. SELECT ステートメントを単純 CASE 式と共に使用する  
- 内で、`SELECT`ステートメントでは、単純な`CASE`式が等しいかどうか確認だけことができます。 他の比較は行われません。 `CASE` 式を使用して、製品ラインのカテゴリの表示をわかりやすいものに変更する例を次に示します。  
+ `SELECT` ステートメント内では、単純 `CASE` 式は等しいかどうかのチェックだけを実行できます。これ以外の比較操作は実行できません。 `CASE` 式を使用して、製品ラインのカテゴリの表示をわかりやすいものに変更する例を次に示します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -165,7 +165,7 @@ GO
 ```  
   
 ### <a name="b-using-a-select-statement-with-a-searched-case-expression"></a>B. SELECT ステートメントを検索 CASE 式と共に使用する  
- 内で、`SELECT`ステートメントでは、検索`CASE`式比較値に基づいて結果セット内で置換する値を許容します。 次の例では、表示価格を、製品の価格範囲に基づいたテキスト コメントとして表示しています。  
+ `SELECT` ステートメント内では、検索 `CASE` 式は比較値に基づいて結果セット内で値を置換できます。 次の例では、表示価格を、製品の価格範囲に基づいたテキスト コメントとして表示しています。  
   
 ```  
 USE AdventureWorks2012;  
@@ -185,7 +185,7 @@ GO
 ```  
   
 ### <a name="c-using-case-in-an-order-by-clause"></a>C. ORDER BY 句で CASE を使用する  
- 次の例では、ORDER BY 句で CASE 式を使用して、指定された列の値に基づいて行の並べ替え順序を決定しています。 最初の例では、値では、`SalariedFlag`の列、`HumanResources.Employee`テーブルが評価されます。 `SalariedFlag` が 1 に設定されている従業員は `BusinessEntityID` の降順で、 従業員が、 `SalariedFlag` 0 に設定するが order by 句で返される、`BusinessEntityID`で昇順に並べ替えます。 2 番目の例では、`TerritoryName` 列が 'United States' と等しい場合は結果セットが `CountryRegionName` 列の順序に従って並べ替えられ、他のすべての列は `CountryRegionName` の順序に従って並べ替えられます。  
+ 次の例では、ORDER BY 句で CASE 式を使用して、指定された列の値に基づいて行の並べ替え順序を決定しています。 最初の例では、`SalariedFlag` テーブルの `HumanResources.Employee` 列の値を評価します。 `SalariedFlag` が 1 に設定されている従業員は `BusinessEntityID` の降順で、 `SalariedFlag` が 0 に設定されている従業員は `BusinessEntityID` の昇順で返されます。 2 番目の例では、`TerritoryName` 列が 'United States' と等しい場合は結果セットが `CountryRegionName` 列の順序に従って並べ替えられ、他のすべての列は `CountryRegionName` の順序に従って並べ替えられます。  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  
@@ -206,7 +206,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
 ```  
   
 ### <a name="d-using-case-in-an-update-statement"></a>D. UPDATE ステートメントで CASE を使用する  
- 次の例では、UPDATE ステートメントで CASE 式を使って、列に対して設定されている値を決定する`VacationHours`を持つ従業員`SalariedFlag`を 0 に設定します。 10 時間差し引くと`VacationHours`負の値に結果`VacationHours`40 時間以外、それ以外の場合は、 `VacationHours` 20 時間が増加します。 OUTPUT 句は、この処理の前後の休暇の値を表示するために使用されています。  
+ 次の例では、UPDATE ステートメントで CASE 式を使用して、`SalariedFlag` が 0 に設定されている従業員の `VacationHours` 列の値を決定しています。 `VacationHours` の値を 10 時間差し引くと値がマイナスになる場合は `VacationHours` の値を 40 時間増やします。それ以外の場合は、`VacationHours` の値を 20 時間増やします。 OUTPUT 句は、この処理の前後の休暇の値を表示するために使用されています。  
   
 ```  
 USE AdventureWorks2012;  
@@ -225,7 +225,7 @@ WHERE SalariedFlag = 0;
 ```  
   
 ### <a name="e-using-case-in-a-set-statement"></a>E. SET ステートメントで CASE を使用する  
- 次の例は、テーブル値関数で SET ステートメントで CASE 式を使って`dbo.GetContactInfo`です。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベースでユーザーに関連するすべてのデータが格納されている、`Person.Person`テーブル。 たとえば、ユーザーには、従業員、仕入先の代表者、または顧客があります。 最初と最後の名前を返します、指定された`BusinessEntityID`とその人物の連絡先の種類。SET ステートメントで CASE 式を表示する列の値を決定`ContactType`の存在に基づいて、`BusinessEntityID`内の列、 `Employee`、 `Vendor`、または`Customer`テーブル。  
+ 次の例では、テーブル値関数 `dbo.GetContactInfo` の SET ステートメントで CASE 式を使用しています。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースでは、人に関連するデータはすべて `Person.Person` テーブルに格納されています。 たとえば、従業員、仕入先の代表者、消費者などはすべて人に関連するデータとして扱われます。 この関数は、指定された `BusinessEntityID` の氏名と連絡先タイプを返します。`ContactType` 列に表示される値は、SET ステートメント内の CASE 式により、`Employee`、`Vendor`、または `Customer` のどのテーブルに `BusinessEntityID` 列が含まれているかに基づいて決定されます。  
   
 ```  
   
@@ -299,7 +299,7 @@ FROM dbo.GetContactInformation(5);
 ```  
   
 ### <a name="f-using-case-in-a-having-clause"></a>F. HAVING 句で CASE を使用する  
- 次の例では、HAVING 句で CASE 式を使用して、SELECT ステートメントで返される行を制限しています。 ステートメント内の各役職の最も高い時給が返されます、`HumanResources.Employee`テーブル。 HAVING 句では、最も高い時給が男性の場合には 40 ドル、女性の場合には 42 ドルを超えている役職のみが返されるように制限しています。  
+ 次の例では、HAVING 句で CASE 式を使用して、SELECT ステートメントで返される行を制限しています。 このステートメントは、`HumanResources.Employee` テーブル内の各役職の最も高い時給を返します。 HAVING 句では、最も高い時給が男性の場合には 40 ドル、女性の場合には 42 ドルを超えている役職のみが返されるように制限しています。  
   
 ```  
 USE AdventureWorks2012;  
@@ -318,10 +318,10 @@ ORDER BY MaximumRate DESC;
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. CASE 式と共に SELECT ステートメントを使用します。  
- SELECT ステートメントでは、CASE 式では、比較値に基づいて結果セット内で置換する値。 次の例では、CASE 式を使用して、製品ラインのカテゴリをわかりやすく表示を変更します。 値が存在しない場合、テキスト"販売ではなく ' が表示されます。  
+### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. SELECT ステートメントを単純 CASE 式と共に使用する  
+ SELECT ステートメント内では、CASE 式は比較値に基づいて結果セット内で値を置換できます。 CASE 式を使用して、製品ラインのカテゴリの表示をわかりやすいものに変更する例を次に示します。 値が存在しない場合は、テキスト "Not for sale" が表示されます。  
   
 ```  
 -- Uses AdventureWorks  
@@ -340,7 +340,7 @@ ORDER BY ProductKey;
 ```  
   
 ### <a name="h-using-case-in-an-update-statement"></a>H. UPDATE ステートメントで CASE を使用する  
- 次の例では、UPDATE ステートメントで CASE 式を使って、列に対して設定されている値を決定する`VacationHours`を持つ従業員`SalariedFlag`を 0 に設定します。 10 時間差し引くと`VacationHours`負の値に結果`VacationHours`40 時間以外、それ以外の場合は、 `VacationHours` 20 時間が増加します。  
+ 次の例では、UPDATE ステートメントで CASE 式を使用して、`SalariedFlag` が 0 に設定されている従業員の `VacationHours` 列の値を決定しています。 `VacationHours` の値を 10 時間差し引くと値がマイナスになる場合は `VacationHours` の値を 40 時間増やします。それ以外の場合は、`VacationHours` の値を 20 時間増やします。  
   
 ```  
 -- Uses AdventureWorks   
@@ -357,11 +357,11 @@ WHERE SalariedFlag = 0;
 ```  
   
 ## <a name="see-also"></a>参照  
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [合体 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/coalesce-transact-sql.md)   
- [Iif 関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
- [選択 (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+ [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
+ [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
+ [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   
 

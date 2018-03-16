@@ -1,5 +1,5 @@
 ---
-title: "READTEXT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: READTEXT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
@@ -36,10 +36,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  読み取り**テキスト**、 **ntext**、または**イメージ**値から、**テキスト**、 **ntext**、または**イメージ**列で、指定されたオフセットから開始し、指定したバイト数を読み取るします。  
+  **text**、**ntext**、または **image** 列から **text**、**ntext**、または **image** 値を読み取ります。指定したオフセットから読み取りを開始し、指定したバイト数を読み取ります。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用して、 [SUBSTRING](../../t-sql/functions/substring-transact-sql.md)関数を使用します。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、[SUBSTRING](../../t-sql/functions/substring-transact-sql.md) 関数を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,35 +52,35 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
   
 ## <a name="arguments"></a>引数  
  *table* **.** *column*  
- 読み取り元のテーブルと列の名前です。 テーブルおよび列名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。 テーブル名と列名は必ず指定してください。しかし、データベース名と所有者の指定は省略可能です。  
+ 読み取り元のテーブルと列の名前です。 テーブル名と列名は、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。 テーブル名と列名は必ず指定してください。しかし、データベース名と所有者の指定は省略可能です。  
   
  *text_ptr*  
- 有効なテキスト ポインターです。 *text_ptr* must be **binary(16)**.  
+ 有効なテキスト ポインターです。 *text_ptr* は **binary(16)** 型である必要があります。  
   
  *offset*  
- バイトの数です (ときに、**テキスト**または**イメージ**データ型を使用) または文字 (ときに、 **ntext**データ型を使用)、の読み取りを開始する前にスキップする**テキスト**、**イメージ**、または**ntext**データ。  
+ **text**、**image**、または **ntext** データの読み取りを開始する前にスキップするバイト数 (**text** または **image** データ型が使用される場合) または文字数 (**ntext** データ型が使用される場合) です。  
   
  *size*  
- バイトの数です (ときに、**テキスト**または**イメージ**データ型を使用) または文字 (ときに、 **ntext**データ型を使用) 読み取るデータのです。 場合*サイズ*0 の場合は、4 kb のデータを読み取る。  
+ 読み取るデータのバイト数 (**text** または **image** データ型が使用される場合) または文字数 (**ntext** データ型が使用される場合) です。 *size* が 0 の場合は、4 KB のデータを読み取ります。  
   
  HOLDLOCK  
  トランザクションが終了するまでテキスト値の読み取りをロックします。 他のユーザーは読み取りはできますが、変更はできません。  
   
-## <a name="remarks"></a>解説  
- 使用して、 [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)有効なを取得する関数*text_ptr*値。 TEXTPTR をへのポインターを返します、**テキスト**、 **ntext**、または**イメージ**、指定された行または列、**テキスト**、 **ntext**、または**イメージ**1 つ以上の行が返される場合に、クエリによって返される最後の行の列です。 TEXTPTR は 16 バイトのバイナリ文字列を返すため、テキスト ポインターを保持するローカル変数を宣言し、READTEXT でその変数を使用することをお勧めします。 ローカル変数の宣言の詳細については、次を参照してください。 [DECLARE @local_variable &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ 有効な *text_ptr* 値を取得するには、[TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) 関数を使用します。 TEXTPTR は、指定された行の **text**、**ntext**、または **image** 列へのポインター、あるいは、複数の行が返される場合には、クエリにより最後に返された行の **text**、**ntext**、または **image** 列へのポインターを返します。 TEXTPTR は 16 バイトのバイナリ文字列を返すため、テキスト ポインターを保持するローカル変数を宣言し、READTEXT でその変数を使用することをお勧めします。 ローカル変数の宣言の詳細については、「[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)」を参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、行内テキスト ポインターが存在しても、有効なことができない可能性があります。 詳細については、**行内テキスト**オプションを参照してください[sp_tableoption &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). テキスト ポインターを無効化の詳細については、次を参照してください。 [sp_invalidate_textptr (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、行内テキスト ポインターが存在しても、有効ではない場合があります。 **text in row** オプションの詳細については、「[sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)」を参照してください。 テキスト ポインターを無効にする方法の詳細については、「[sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)」を参照してください。  
   
- 値、@@TEXTSIZE関数 READTEXT READTEXT の指定したサイズよりも小さい場合に指定されたサイズよりも優先されます。 @@TEXTSIZE関数は、SET TEXTSIZE ステートメントによってセットが返されるデータのバイト数の制限を指定します。 TEXTSIZE のセッションの設定を設定する方法の詳細については、次を参照してください。 [SET TEXTSIZE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-textsize-transact-sql.md).  
+ READTEXT で指定されたサイズよりも @@TEXTSIZE 関数の値の方が小さい場合は、READTEXT に代わってその関数の値が使用されます。 @@TEXTSIZE 関数は、SET TEXTSIZE ステートメントで設定される、返されるデータのバイト数の上限を指定します。 TEXTSIZE のセッション設定の設定方法の詳細については、「[SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)」を参照してください。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  READTEXT 権限は、特に指定のない限り指定されたテーブルで SELECT 権限を持つユーザーに与えられます。 SELECT 権限を譲渡した場合は、READTEXT 権限を譲渡できます。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`pr_info` テーブルの `pub_info` 列の 2 文字目から 26 文字目までを読み取ります。  
   
 > [!NOTE]  
->  この例を実行するにインストールする必要があります、 **pubs**サンプル データベース。  
+>  この例を実行するには、**pubs** サンプル データベースをインストールする必要があります。  
   
 ```  
 USE pubs;  

@@ -1,5 +1,5 @@
 ---
-title: "AsTextZM (geography データ型) |Microsoft ドキュメント"
+title: "AsTextZM (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="astextzm-geography-data-type"></a>AsTextZM (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Open Geospatial Consortium (OGC) Well-Known Text (WKT) 表現を返します、 **geography**インスタンスは、いずれかで補完された**Z** (標高) と**M** (メジャー)インスタンスの値。  
+  インスタンスに格納されている **Z** (標高) 値および **M** (メジャー) 値で補完された **geography** インスタンスについて、Open Geospatial Consortium (OGC) Well-Known Text (WKT) 表現を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,10 +50,10 @@ ms.lasthandoff: 01/25/2018
   
  CLR の戻り値の型: **SqlChars**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>使用例  
- 次の例を作成、`Point`インスタンスを含む**Z** (標高) と**M** (メジャー) 値です。 `STAsText()`WKT 値を選択 (-122.34900 47.65100) です。`AsTextZM()`同じ WKT 値を選択し、またの値を返します**Z**と**M**から生まれた (-122.34900 47.65100 10.3 12)。  
+ **Z** (標高) 値および **M** (メジャー) 値を含む `Point` インスタンスを作成する例を次に示します。 `STAsText()` は WKT 値 (-122.34900 47.65100) を選択します。`AsTextZM()` は同じ WKT 値を選択し、**Z** および **M** の値も返すため、(-122.34900 47.65100 10.3 12) が出力されます。  
   
 ```  
 DECLARE @g geography;  

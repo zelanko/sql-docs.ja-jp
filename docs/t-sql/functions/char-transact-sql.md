@@ -1,5 +1,5 @@
 ---
-title: "CHAR (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CHAR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-変換、 **int**文字の ASCII コード。
+**int** ASCII コードを文字に変換します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,15 +55,15 @@ CHAR ( integer_expression )
   
 ## <a name="arguments"></a>引数  
 *integer_expression*  
-0 ～ 255 の整数です。 `NULL`かどうか整数式がこの範囲内が返されます。
+0 ～ 255 の整数です。 整数型の式がこの範囲内にない場合は、`NULL` が返されます。
   
 ## <a name="return-types"></a>戻り値の型
 **char(1)**
   
-## <a name="remarks"></a>解説  
-`CHAR`文字の文字列に制御文字を挿入するために使用します。 次の表に、よく使用される制御文字の一部を示します。
+## <a name="remarks"></a>Remarks  
+`CHAR` を使って文字列に制御文字を挿入することができます。 次の表に、よく使用される制御文字の一部を示します。
   
-|制御文字|[値]|  
+|制御文字|ReplTest1|  
 |---|---|
 |タブ|**char(9)**|  
 |ライン フィード|**char(10)**|  
@@ -72,7 +72,7 @@ CHAR ( integer_expression )
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>A. ASCII と CHAR を使用して、文字列から ASCII 値を印刷するには  
-次の例の出力、ASCII 値と、文字列内の各文字の文字`New Moon`です。
+次の例では、`New Moon` という文字列の各文字とそれに対応する ASCII コードの値を出力します。
   
 ```sql
 SET TEXTSIZE 0;  
@@ -113,7 +113,7 @@ GO
 ```
   
 ### <a name="b-using-char-to-insert-a-control-character"></a>B. CHAR を使用して制御文字を挿入する  
-次の例では、結果がテキストで返されるときに、`CHAR(13)` を使用して、従業員の名前と電子メール アドレスを別々の行に出力します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。
+次の例では、結果がテキストで返されるときに、`CHAR(13)` を使用して、従業員の名前と電子メール アドレスを別々の行に出力します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。
   
 ```sql
 SELECT p.FirstName + ' ' + p.LastName, + CHAR(13)  + pe.EmailAddress   
@@ -132,10 +132,10 @@ ken0@adventure-works.com
 (1 row(s) affected)
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>C. ASCII と CHAR を使用して、文字列から ASCII 値を印刷するには  
-次の例では、ASCII 文字が設定され、ASCII 文字の数値の 6 文字の値を返すと仮定します。
+次の例では、ASCII 文字セットの使用を前提として、6 つの ASCII 文字の数値の文字値を返します。
   
 ```sql
 SELECT CHAR(65) AS [65], CHAR(66) AS [66],   
@@ -152,7 +152,7 @@ A    B    a    b    1    2
 ```
   
 ### <a name="d-using-char-to-insert-a-control-character"></a>D. CHAR を使用して制御文字を挿入する  
-次の例では`CHAR(13)`時に返されるデータベースに関する情報を別々 の行、結果がテキストで返されます。
+次の例では、結果がテキストで返されるときに、`CHAR(13)` を使用して、データベースに関する情報を別々の行で返します。
   
 ```sql
 SELECT name, 'was created on ', create_date, CHAR(13), name, 'is currently ', state_desc   
@@ -174,11 +174,11 @@ AdventureWorksPDW2012    is currently  ONLINE
 ```
   
 ## <a name="see-also"></a>参照
- [ASCII &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ascii-transact-sql.md)  
- [NCHAR と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/nchar-transact-sql.md)  
- [UNICODE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/unicode-transact-sql.md)  
- [+ (& a) #40 です。文字列の連結 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
- [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)
+ [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
+ [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
+ [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
+ [+ &#40;文字列連結&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

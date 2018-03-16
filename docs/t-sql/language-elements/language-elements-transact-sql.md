@@ -1,5 +1,5 @@
 ---
-title: "言語要素 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "言語要素 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -32,15 +32,15 @@ ms.lasthandoff: 01/25/2018
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、以下の言語要素がサポートされています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
-[--&#40;です。コメント &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/comment-transact-sql.md)  
+[-- &#40;コメント&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)  
   
-[スラッシュ スター &#40;です。ブロック コメント &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/slash-star-comment-transact-sql.md)  
+[スラッシュ スター &#40;ブロック コメント&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)  
  
-[診断セッション (TRANSACT-SQL) を作成します。](../../t-sql/language-elements/create-diagnostics-session-transact-sql.md)  
+[CREATE DIAGNOSTICS SESSION (Transact-SQL)](../../t-sql/language-elements/create-diagnostics-session-transact-sql.md)  
 
-[NULL および不明 (TRANSACT-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)
+[NULL と UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)
 
-[トランザクション (SQL データ ウェアハウス)](../../t-sql/language-elements/transactions-sql-data-warehouse.md)
+[トランザクション (SQL Data Warehouse)](../../t-sql/language-elements/transactions-sql-data-warehouse.md)
   
 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
   

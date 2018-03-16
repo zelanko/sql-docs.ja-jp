@@ -1,5 +1,5 @@
 ---
-title: "ERROR_NUMBER (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ERROR_NUMBER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -56,17 +56,17 @@ ERROR_NUMBER ( )
   
  CATCH ブロックの範囲外で呼び出された場合は NULL を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、CATCH ブロックのスコープ内の任意の場所で呼び出すことができます。  
   
- ERROR_NUMBER は、その実行回数、または実行される CATCH ブロックのスコープ内の場所に関係なく、エラー番号を返します。 これは、対照的に@ERRORのみ、エラーが発生した直後後のステートメントではエラー番号が返されます、または CATCH の最初のステートメントをブロックします。  
+ ERROR_NUMBER は、その実行回数、または実行される CATCH ブロックのスコープ内の場所に関係なく、エラー番号を返します。 これは、エラーを引き起こしたステートメントの直後のステートメント、または CATCH ブロックの最初のステートメントでのみエラー番号を返す @@ERROR とは対照的です。  
   
  入れ子になった CATCH ブロックでは、ERROR_NUMBER は、参照されている CATCH ブロックのスコープに固有のエラー番号を返します。 たとえば、外側の TRY...CATCH 構造の CATCH ブロックには、TRY...CATCH 構造が入れ子にされている場合があります。 入れ子になった CATCH ブロック内では、ERROR_NUMBER は、入れ子になった CATCH ブロックを呼び出したエラーの番号を返します。 ERROR_NUMBER が外部の CATCH ブロックで実行されると、その CATCH ブロックを呼び出したエラーの番号が返されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-errornumber-in-a-catch-block"></a>A. CATCH ブロックで ERROR_NUMBER を使用する  
- 次のコード例は、 `SELECT` 0 除算エラーを生成するステートメント。 エラーの番号が返されます。  
+ 次の例では、0 除算エラーを生成する `SELECT` ステートメントを示します。 エラーの番号が返されます。  
   
 ```  
 BEGIN TRY  
@@ -80,7 +80,7 @@ GO
 ```  
   
 ### <a name="b-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>B. CATCH ブロックで ERROR_NUMBER を他のエラー処理ツールと一緒に使用する  
- 次のコード例は、 `SELECT` 0 除算エラーを生成するステートメント。 エラー番号と共に、エラーに関連する情報が返されます。  
+ 次の例では、0 除算エラーを生成する `SELECT` ステートメントを示します。 エラー番号と共に、エラーに関連する情報が返されます。  
   
 ```  
   
@@ -100,10 +100,10 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>C. CATCH ブロックで ERROR_NUMBER を他のエラー処理ツールと一緒に使用する  
- 次のコード例は、 `SELECT` 0 除算エラーを生成するステートメント。 エラー番号と共に、エラーに関連する情報が返されます。  
+ 次の例では、0 除算エラーを生成する `SELECT` ステートメントを示します。 エラー番号と共に、エラーに関連する情報が返されます。  
   
 ```  
   
@@ -129,7 +129,7 @@ GO
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; です。TRANSACT-SQL と&#41; です。](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

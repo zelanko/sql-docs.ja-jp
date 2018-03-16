@@ -1,5 +1,5 @@
 ---
-title: "APP_NAME (TRANSACT-SQL) |Microsoft ドキュメント"
+title: APP_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 現在のセッションがアプリケーションによって設定されている場合、そのアプリケーションの名前を返します。
   
 > [!IMPORTANT]  
->  まったく確認されていないアプリケーション名がクライアントから提供されました。 使用しないでください**APP_NAME**セキュリティ チェックの一部として。  
+>  まったく確認されていないアプリケーション名がクライアントから提供されました。 使用しない APP_NAME** セキュリティ チェックの一部として。  
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,15 +53,15 @@ APP_NAME  ( )
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
-**nvarchar (128)**
+**nvarchar(128)**
   
-## <a name="remarks"></a>解説  
-使用して**APP_NAME**異なるアプリケーションに対して異なるアクションを実行する場合。 たとえば、それぞれのアプリケーションに対して日付を異なる形式で指定したり、特定のアプリケーションに情報メッセージを返したりする場合などです。
+## <a name="remarks"></a>Remarks  
+使用して APP_NAME** の異なるアプリケーションのさまざまな操作を実行する場合。 たとえば、それぞれのアプリケーションに対して日付を異なる形式で指定したり、特定のアプリケーションに情報メッセージを返したりする場合などです。
   
-アプリケーション名を設定する[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、**データベース エンジンへの接続**ダイアログ ボックスで、をクリックして**オプション**です。 **追加の接続パラメーター**  タブで、提供、**アプリ**形式で属性`;app='application_name'`
+アプリケーション名を設定する場合、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、[データベース エンジンへの接続] **ダイアログ ボックスで、[オプション]** をクリックします。 **[追加の接続パラメーター]** タブ上で、**app** 属性を `;app='application_name'` 形式で指定します。
   
 ## <a name="examples"></a>使用例  
-次の例は、このプロセスを開始したクライアント アプリケーションではあるかどうかを確認、`SQL Server Management Studio`セッションし、US または ANSI のいずれかの形式で日付を提供します。
+次の例では、このプロセスを開始したクライアント アプリケーションが `SQL Server Management Studio` セッションかどうかを確認し、日付を US または ANSI のいずれかの形式で指定します。
   
 ```sql
 USE AdventureWorks2012;  
@@ -74,7 +74,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照
-[システム関数 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+[システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
 [関数](../../t-sql/functions/functions.md)
   
   

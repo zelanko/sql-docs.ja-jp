@@ -1,5 +1,5 @@
 ---
-title: "CURRENT_REQUEST_ID (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CURRENT_REQUEST_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,8 +47,8 @@ CURRENT_REQUEST_ID()
 ## <a name="return-types"></a>戻り値の型
 **smallint**
   
-## <a name="remarks"></a>解説  
-現在のセッションおよび現在の要求についての正確な情報を調べるには、使用@SPIDおよび CURRENT_REQUEST_ID() をそれぞれします。
+## <a name="remarks"></a>Remarks  
+現在のセッションと現在の要求についての正確な情報を検索するには、それぞれ、@@SPID と CURRENT_REQUEST_ID() を使用します。
   
 ## <a name="see-also"></a>参照
 [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)

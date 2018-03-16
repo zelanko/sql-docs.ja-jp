@@ -1,5 +1,5 @@
 ---
-title: "PARSENAME (TRANSACT-SQL) |Microsoft ドキュメント"
+title: PARSENAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ PARSENAME ( 'object_name' , object_piece )
   
 ## <a name="arguments"></a>引数  
  '*object_name*'  
- 取得対象となるオブジェクトの名前を指定します。 *object_name*は**sysname**です。 このパラメーターには、オブジェクトの部分的な修飾名を指定します (省略可能)。 オブジェクト名のすべての部分が修飾される場合、この名前には、サーバー名、データベース名、所有者名、オブジェクト名の 4 つの部分を指定可能です。  
+ 取得対象となるオブジェクトの名前を指定します。 *object_name* は **sysname** です。 このパラメーターには、オブジェクトの部分的な修飾名を指定します (省略可能)。 オブジェクト名のすべての部分が修飾される場合、この名前には、サーバー名、データベース名、所有者名、オブジェクト名の 4 つの部分を指定可能です。  
   
  *object_piece*  
- 返すオブジェクトの部分を指定します。 *object_piece*の種類は**int**、これらの値を持つことができます。  
+ 返すオブジェクトの部分を指定します。 *object_piece* のデータ型は **int**, 、これらの値を持つことができます。  
   
  1 = オブジェクト名  
   
@@ -69,17 +69,17 @@ PARSENAME ( 'object_name' , object_piece )
 ## <a name="return-types"></a>戻り値の型  
  **nchar**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  PARSENAME では、次のいずれかの条件が真の場合に NULL が返されます。  
   
--   いずれか*object_name*または*object_piece*は NULL です。  
+-   いずれか *object_name* または *object_piece* は NULL です。  
   
 -   構文エラーがある。  
   
- 要求されたオブジェクトの部分が長さ 0 のであり、有効な[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別子。 オブジェクト名の長さが 0 の場合、修飾名全体が無効になります。  
+ 要求したオブジェクトの部分の長さが 0 で、有効な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子ではない。 オブジェクト名の長さが 0 の場合、修飾名全体が無効になります。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`PARSENAME`情報を返す、`Person`テーブルに、`AdventureWorks2012`データベース。  
+ 次の例では使用 `PARSENAME` 情報を返す、 `Person` テーブルに、 `AdventureWorks2012` データベース。  
   
 ```  
 -- Uses AdventureWorks  
@@ -119,10 +119,10 @@ Server Name
 ```
   
 ## <a name="see-also"></a>参照  
- [QUOTENAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/quotename-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [システム関数 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
 

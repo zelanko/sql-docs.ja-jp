@@ -1,5 +1,5 @@
 ---
-title: "LOGINPROPERTY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: LOGINPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -62,45 +62,45 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 ## <a name="arguments"></a>引数  
  *login_name*  
- 名前を指定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインのログイン プロパティの状態が返されます。  
+ ログイン プロパティの状態が返される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの名前です。  
   
- *プロパティ名*  
- ログインに返されるプロパティ情報を含む式を指定します。 *propertyname*値は次のいずれかになります。  
+ *propertyname*  
+ ログインに返されるプロパティ情報を含む式を指定します。 *propertyname* には次のいずれかの値を指定できます。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**BadPasswordCount**|正しくないパスワードで連続してログインが試行された回数を返します。|  
 |**BadPasswordTime**|正しくないパスワードで最後にログインが試行された時刻を返します。|  
 |**DaysUntilExpiration**|パスワードの有効期限が切れるまでの日数を返します。|  
-|**DefaultDatabase**|返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータに格納されているログインの既定のデータベースまたは**マスター**データベースが指定されていない場合。 場合は NULL を返しますではない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー (たとえば、Windows 認証) をプロビジョニングします。|  
-|**DefaultLanguage**|メタデータに格納されているログインの既定の言語を返します。 場合は NULL を返しますではない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供されるユーザー、たとえば、Windows が認証されたユーザー。|  
+|**DefaultDatabase**|データベースが指定されていない場合に、メタデータまたは **master** に格納されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの既定のデータベースを返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外でプロビジョニングされているユーザーの場合は NULL を返します (Windows 認証ユーザーなど)。|  
+|**DefaultLanguage**|メタデータに格納されているログインの既定の言語を返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外でプロビジョニングされているユーザーの場合は NULL を返します (Windows 認証ユーザーなど)。|  
 |**HistoryLength**|パスワード ポリシーの適用メカニズムを使用して、追跡されたログインのパスワードの数を返します。 パスワード ポリシーが適用されていない場合は 0 です。 パスワード ポリシーの適用は 1 から再開されます。|  
 |**IsExpired**|ログインの期限が切れているかどうかを示します。|  
 |**IsLocked**|ログインがロックされているかどうかを示します。|  
 |**IsMustChange**|次回の接続時にログイン パスワードを変更する必要があるかどうかを示します。|  
-|**LockoutTime**|日付を返しますと、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]許可されている失敗したログイン試行回数を超えたためにログインがロックアウトされました。|  
+|**LockoutTime**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが、ログイン試行に許容される失敗の回数を超えたためロックアウトされた日付を返します。|  
 |**PasswordHash**|パスワードのハッシュを返します。|  
 |**PasswordLastSetTime**|現在のパスワードが設定された日付を返します。|  
 |**PasswordHashAlgorithm**|パスワードのハッシュに使用されるアルゴリズムを返します。|  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  データ型は、要求する値によって異なります。  
   
- **IsLocked**、 **IsExpired**、および**IsMustChange**型**int**です。  
+ **IsLocked**、**IsExpired**、**IsMustChange** は **int** 型です。  
   
 -   ログインが指定した状態の場合は 1 です。  
   
 -   ログインが指定した状態でない場合は 0 です。  
   
- **BadPasswordCount**と**HistoryLength**型**int**です。  
+ **BadPasswordCount** および **HistoryLength** は **int** 型です。  
   
- **BadPasswordTime**、 **LockoutTime**、 **PasswordLastSetTime**型**datetime**です。  
+ **BadPasswordTime**、**LockoutTime**、**PasswordLastSetTime** は **datetime** 型です。  
   
- **PasswordHash**の種類は**varbinary**です。  
+ **PasswordHash** は **varbinary** 型です。  
   
  ログインが有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインでない場合は NULL です。  
   
- **DaysUntilExpiration**の種類は**int**です。  
+ **DaysUntilExpiration** は **int** 型です。  
   
 -   ログインの有効期限が切れているか、照会した当日に有効期限が切れる場合は 0 です。  
   
@@ -108,7 +108,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   ログインに対して CHECK_POLICY または CHECK_EXPIRATION が OFF であるか、オペレーティング システムがパスワード ポリシーをサポートしていない場合は NULL です。  
   
- **PasswordHashAlgorithm**は int 型です  
+ **PasswordHashAlgorithm** は int 型です。  
   
 -   SQL7.0 ハッシュの場合は 0  
   
@@ -118,16 +118,16 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   ログインが有効な SQL Server ログインでない場合は NULL  
   
-## <a name="remarks"></a>解説  
- この組み込み関数は、パスワードについての情報のポリシー設定を返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。 プロパティの名前はプロパティの名前など、大文字と小文字が区別されない**BadPasswordCount**と**badpasswordcount**は同等です。 値、 **PasswordHash、PasswordHashAlgorithm**、および**PasswordLastSetTime**のプロパティはのすべてのサポートされている構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が他のプロパティはのみ使用可能な場合に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行されて[!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]CHECK_POLICY と CHECK_EXPIRATION の両方が有効になっているとします。 詳細については、「 [Password Policy](../../relational-databases/security/password-policy.md)」をご参照ください。  
+## <a name="remarks"></a>Remarks  
+ この組み込み関数では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインのパスワード ポリシー設定に関する情報が返されます。 プロパティの名前の大文字と小文字は区別されません。したがって、**BadPasswordCount** と **badpasswordcount** は同じ意味です。 **PasswordHash、PasswordHashAlgorithm**、および **PasswordLastSetTime** プロパティの値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサポート対象の全構成で使用できますが、その他のプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] で実行され、CHECK_POLICY と CHECK_EXPIRATION の両方が有効な場合にのみ使用できます。 詳細については、「 [Password Policy](../../relational-databases/security/password-policy.md)」をご参照ください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  ログインに対する VIEW 権限が必要です。 パスワードのハッシュを要求する場合、CONTROL SERVER 権限も必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-checking-whether-a-login-must-change-its-password"></a>A. ログインがパスワードを変更する必要があるかどうかを確認する  
- 次の例をチェックするかどうか[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン`John3`、次回のインスタンスに接続するパスワードを変更する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `John3` が、次回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続するときにパスワードを変更する必要があるかどうかを確認します。  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsMustChange');  

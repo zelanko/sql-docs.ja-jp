@@ -1,5 +1,5 @@
 ---
-title: "GetDescendant (データベース エンジン) |Microsoft ドキュメント"
+title: "GetDescendant (データベース エンジン) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -50,17 +50,17 @@ SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )
   
 ## <a name="arguments"></a>引数  
 *child1*  
-NULL または**hierarchyid**の現在のノードの子です。
+NULL または現在のノードの子の **hierarchyid**。
   
 *child2*  
-NULL または**hierarchyid**の現在のノードの子です。
+NULL または現在のノードの子の **hierarchyid**。
   
 ## <a name="return-types"></a>戻り値の型  
-**SQL Server の戻り値の型: hierarchyid**
+SQL Server の戻り値の型: * ***hierarchyid * *
   
-**CLR の戻り値の型: SqlHierarchyId**
+**CLR 戻り値の型:SqlHierarchyId**
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 parent の子孫である 1 つの子ノードを返します。
 -   parent が NULL の場合、NULL を返します。  
 -   parent が NULL でなく、child1 と child2 の両方が NULL の場合、parent の子を返します。  
@@ -71,12 +71,12 @@ parent の子孫である 1 つの子ノードを返します。
 -   child2 が NULL でなく parent の子でない場合、例外が発生します。  
 -   child1 >= child2 の場合は、例外が発生します。  
   
-GetDescendant は決定的です。 したがって、GetDescendant が呼び出された場合、同じ入力で、同じ出力常に生成されます。 ただし、生成される子の実際の ID は、例 C に示すように、他のノードとの関係によって異なります。
+GetDescendant は決定的です。 そのため場合、 GetDescendant と呼ばれるは、同じ入力でが同じ出力常に生成されます。 ただし、生成される子の実際の ID は、例 C に示すように、他のノードとの関係によって異なります。
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>A. 最も小さい子孫ノードとして行を挿入  
-ノード `/3/1/` の既存の従業員の部下として新しい従業員が採用されました。 として新しい行のノードを指定する引数を指定せず、GetDescendant メソッドを使用して、新しい行を挿入する次のコード実行`/3/1/1/`:
+ノード `/3/1/` の既存の従業員の部下として新しい従業員が採用されました。 使用して、新しい行を挿入するには、次のコードの実行、 GetDescendant`/3/1/1/` メソッドとして、新しい行のノードを指定する引数を指定しないで /3 1/1/:
   
 ```sql
 DECLARE @Manager hierarchyid;   
@@ -89,7 +89,7 @@ VALUES
 ```  
   
 ### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>B. 大きい子孫ノードとして行を挿入  
-別の新しい従業員を雇用すると、レポートを A. の実行例と同じ上司ことを指定する、child 1 引数を使用して、GetDescendant メソッドを使用して、新しい行を挿入する次のコードを新しい行のノードがノードに続く例 A、になる`/3/1/2/`:
+別の新しい従業員を雇用すると、次のコードを使用して、新しい行を挿入することを A. の実行例と同じ上司に報告、 GetDescendant`/3/1/2/` メソッドは、child 1 引数を使用して、新しい行のノードが例 A でノードを従うことを指定するになる /3 1/2/:
   
 ```sql
 DECLARE @Manager hierarchyid, @Child1 hierarchyid;  
@@ -104,7 +104,7 @@ VALUES
 ```  
   
 ### <a name="c-inserting-a-row-between-two-existing-nodes"></a>C. 既存の 2 つのノードの間に行を挿入  
-3 つ目の従業員を雇用すると、例 A と同じ上司に報告します。この例より大きいノードに新しい行を挿入、 `FirstNewEmployee` 、例 A でとより小さい`SecondNewEmployee`GetDescendant メソッドを使用して、次のコード例で B. を実行します。 このコードでは、child1 引数と child2 引数の両方を使用して、新しい行のノードがノード `/3/1/1.1/` になるように指定しています。
+例 A と同じ上司の部下として 3 人目の従業員が採用されました。この例では、例 A の `FirstNewEmployee` より大きく例 B の `SecondNewEmployee` より小さいノードに新しい行を挿入します。GetDescendant メソッドを使用して次のコードを実行します。 このコードでは、child1 引数と child2 引数の両方を使用して、新しい行のノードがノード `/3/1/1.1/` になるように指定しています。
   
 ```sql
 DECLARE @Manager hierarchyid, @Child1 hierarchyid, @Child2 hierarchyid;  
@@ -120,7 +120,7 @@ VALUES
   
 ```  
   
-例 A、B、および C を完了すると、テーブルに追加されたノード ピアになります次**hierarchyid**値。
+A、B、および C# の例を完了すると、テーブルに追加されたノード ピアになります次 hierarchyid** 値。
   
 `/3/1/1/`
   
@@ -128,10 +128,10 @@ VALUES
   
 `/3/1/2/`
   
-ノード`/3/1/1.1/`ノードよりも大きい`/3/1/1/`が階層内の同じレベル。
+ノード `/3/1/1.1/` は、ノード `/3/1/1/` より大きいノードですが、階層のレベルは同じです。
   
 ### <a name="d-scalar-examples"></a>D. スカラーの例  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自由に挿入および削除のいずれかをサポートしている**hierarchyid**ノード。 GetDescendant() を使用すると、可能であれば常に任意の 2 つの間にノードを生成**hierarchyid**ノード。 次のコードを使用してサンプル ノードを生成する実行`GetDescendant`:
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自由に挿入および削除のいずれかをサポートしている hierarchyid** ノードです。 使用して GetDescendant()**, 、任意の 2 つの間のノードを生成することは常に hierarchyid** ノードです。 次のコードを実行すると、`GetDescendant` を使用してサンプル ノードが生成されます。
   
 ```sql
 DECLARE @h hierarchyid = hierarchyid::GetRoot();  
@@ -148,7 +148,7 @@ SELECT @c2.ToString();
 ```  
   
 ### <a name="e-clr-example"></a>E. CLR の例  
-次のコード スニペットの呼び出し、`GetDescendant()`メソッド。
+次のコード例では `GetDescendant()` メソッドを呼び出します。
   
 ```sql
 SqlHierarchyId parent, child1, child2;  

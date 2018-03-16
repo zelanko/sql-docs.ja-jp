@@ -1,5 +1,5 @@
 ---
-title: "DATABASE_PRINCIPAL_ID (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DATABASE_PRINCIPAL_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-現在のデータベースでのプリンシパルの ID 番号を返します。 プリンシパルの詳細については、次を参照してください。[プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)です。
+現在のデータベースでのプリンシパルの ID 番号を返します。 プリンシパルの詳細については、「[プリンシパル &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)」を参照してください。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,14 +49,14 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
   
 ## <a name="arguments"></a>引数  
 *principal_name*  
-型の式は、 **sysname**プリンシパルを表します。  
-ときに*principal_name*は省略すると、現在のユーザーの ID が返されます。 かっこで囲む必要があります。
+プリンシパルを表す **sysname** 型の式を指定します。  
+ときに principal_name* は省略すると、現在のユーザーの ID が返されます。 かっこで囲む必要があります。
   
 ## <a name="return-types"></a>戻り値の型
 **int**  
 データベース プリンシパルが存在しない場合は NULL です。
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 DATABASE_PRINCIPAL_ID は、選択リスト内、WHERE 句内、または式が使える場所ならどこにでも使用できます。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。
   
 ## <a name="examples"></a>使用例  
@@ -70,7 +70,7 @@ GO
 ```  
   
 ### <a name="b-retrieving-the-id-of-a-specified-database-principal"></a>B. 指定されたデータベース プリンシパルの ID を取得する  
-次の例は、データベース ロールのデータベース プリンシパル ID を返します`db_owner`です。
+次の例では、データベース ロール `db_owner` のデータベース プリンシパル ID を返します。
   
 ```sql
 SELECT DATABASE_PRINCIPAL_ID('db_owner');  

@@ -1,5 +1,5 @@
 ---
-title: "ALTER CERTIFICATE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/12/2017
 ms.prod: sql-non-specified
@@ -73,31 +73,31 @@ ALTER CERTIFICATE certificate_name
   
 ## <a name="arguments"></a>引数  
  *certificate_name*  
- データベースで証明書を認識する一意の名前です。  
+ データベースに認識される証明書の一意な名前を指定します。  
   
- ファイル**='***path_to_private_key***'**  
+ FILE **='***path_to_private_key***'**  
  秘密キーへの完全なパスを、ファイル名を含めて指定します。 このパラメーターには、ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。 このファイルには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストでアクセスします。 このオプションを使用するときには、サービス アカウントに、指定したファイルへのアクセス権があることを確認する必要があります。  
   
  DECRYPTION BY PASSWORD **='***key_password***'**  
  秘密キーの暗号化解除に必要なパスワードを指定します。  
   
- ENCRYPTION BY PASSWORD **='***パスワード***'**  
- データベース内の証明書の秘密キーを暗号化するために使用されるパスワードを指定します。 *パスワード*のインスタンスを実行しているコンピューターの Windows パスワード ポリシーの要件を満たす必要がある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 詳細については、「 [Password Policy](../../relational-databases/security/password-policy.md)」をご参照ください。  
+ ENCRYPTION BY PASSWORD **='***password***'**  
+ データベース内の証明書の秘密キーを暗号化するために使用されるパスワードを指定します。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。 詳細については、「 [Password Policy](../../relational-databases/security/password-policy.md)」をご参照ください。  
   
  REMOVE PRIVATE KEY  
  秘密キーをデータベース内で保持しないよう指定します。  
   
- ACTIVE FOR BEGIN_DIALOG  **=**  {ON |オフ}  
- 発信側に証明書を使用できるように、[!INCLUDE[ssSB](../../includes/sssb-md.md)]ダイアログ メッセージ交換します。  
+ ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換の発信側で証明書を使用できるようにします。  
   
-## <a name="remarks"></a>解説  
- 秘密キーがで指定されたパブリック キーに対応する必要があります*certificate_name*です。  
+## <a name="remarks"></a>Remarks  
+ 秘密キーは、*certificate_name* で指定する公開キーに対応している必要があります。  
   
  DECRYPTION BY PASSWORD 句は、ファイル内のパスワードが NULL パスワードで保護されている場合は省略できます。  
   
  データベースに既に存在する証明書の秘密キーをファイルからインポートするとき、その秘密キーはデータベース マスター キーにより自動的に保護されます。 秘密キーをパスワードで保護するには、ENCRYPTION BY PASSWORD 句を使用します。  
   
- REMOVE PRIVATE KEY オプションを指定すると、データベースから証明書の秘密キーが削除されます。 これを行う証明書は署名の検証に使用するときまたは[!INCLUDE[ssSB](../../includes/sssb-md.md)]秘密キーを必要としないシナリオです。 対称キーを保護する証明書の秘密キーを削除しないでください。  
+ REMOVE PRIVATE KEY オプションを指定すると、データベースから証明書の秘密キーが削除されます。 このオプションは、署名の確認に証明書が使用される場合、または秘密キーを必要としない [!INCLUDE[ssSB](../../includes/sssb-md.md)] シナリオの場合に指定できます。 対称キーを保護する証明書の秘密キーを削除しないでください。  
   
  秘密キーがデータベース マスター キーを使って暗号化される場合は、暗号化解除のパスワードを指定する必要はありません。  
   
@@ -106,7 +106,7 @@ ALTER CERTIFICATE certificate_name
   
  WITH PRIVATE KEY オプションは、包含データベースでは使用できません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  証明書に対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -148,7 +148,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [証明書 &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

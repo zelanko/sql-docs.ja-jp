@@ -1,5 +1,5 @@
 ---
-title: "SUM (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SUM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -68,13 +68,13 @@ SUM ( [ ALL | DISTINCT ] expression )
  一意な値の合計を返すことを指定します。  
   
  *式 (expression)*  
- 定数、列、関数、および算術演算子、ビット演算子、文字列演算子の組み合わせを指定します。 *式*が、正確な型または概数の数値データ型カテゴリの式を除く、**ビット**データ型。 集計関数とサブクエリは使用できません。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
+ 定数、列、関数、および算術演算子、ビット演算子、文字列演算子の組み合わせを指定します。 *expression* は、**bit** データ型を除く、真数データ型または概数データ型の式です。 集計関数とサブクエリは使用できません。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
- 経由で**(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause*関数を適用するパーティションに FROM 句で生成される結果セットに分割します。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause*操作が実行される論理的順序を決定します。 *order_by_clause*が必要です。 詳細については、次を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* は、演算が実行される論理的順序を指定します。 *order_by_clause* は必須です。 詳しくは、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」をご覧ください。  
   
 ## <a name="return-types"></a>戻り値の型  
- すべての合計を返します*式*最も正確な値*式*データ型。  
+ 最も有効桁数の大きい *expression* のデータ型で、すべての *expression* 値の合計を返します。  
   
 |式の結果|戻り値の型|  
 |-----------------------|-----------------|  
@@ -82,17 +82,17 @@ SUM ( [ ALL | DISTINCT ] expression )
 |**smallint**|**int**|  
 |**ssNoversion**|**int**|  
 |**bigint**|**bigint**|  
-|**10 進**型 (p, s)|**10 進数 (38、s)**|  
-|**money**と**smallmoney**カテゴリ|**money**|  
-|**float**と**実際**カテゴリ|**float**|  
+|**decimal** カテゴリ (p, s)|**decimal(38, s)**|  
+|**money** および **smallmoney** カテゴリ|**money**|  
+|**float** および **real** カテゴリ|**float**|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SUM は、OVER 句や ORDER BY 句なしで使用される場合は決定的関数です。 OVER 句や ORDER BY 句と共に使用される場合は、非決定的関数です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-sum-to-return-summary-data"></a>A. SUM を使用して集計データを返す  
- 集計データを返す、SUM 関数を使用して、次の例に示す、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
+ 次の例では、SUM 関数を使用して [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの集計データを返す方法を示します。  
   
 ```  
 SELECT Color, SUM(ListPrice), SUM(StandardCost)  
@@ -118,7 +118,7 @@ White           19.00                 6.7926
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. OVER 句を使用する  
- 次の例で、OVER 句に各区域の年間売り上げの累積合計を提供する SUM 関数を使用する、`Sales.SalesPerson`テーブルに、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。 データがパーティション分割`TerritoryID`によって論理的に順序付けと`SalesYTD`です。 つまり、SUM 関数は年を基にして区域ごとに計算されます。 ことに注意して`TerritoryID`1 の場合、そこが 2005 年の 2 つの行を表す 2 つの販売員の売上その年です。 これら 2 行の累計売上が計算された後、2006 年の売上を表す 3 番目の行が計算に組み込まれます。  
+ 次の例では、OVER 句を指定した SUM 関数を使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Sales.SalesPerson` テーブルに各区域の年間売り上げの累積合計を入力します。 データは `TerritoryID` によってパーティションに分割され、`SalesYTD` によって論理的に順序付けされます。 つまり、SUM 関数は年を基にして区域ごとに計算されます。 `TerritoryID` 1 の 2005 年については、その年の 2 人の営業担当者を表す 2 行があります。 これら 2 行の累計売上が計算された後、2006 年の売上を表す 3 番目の行が計算に組み込まれます。  
   
 ```  
 SELECT BusinessEntityID, TerritoryID   
@@ -189,10 +189,10 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 (10 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-a-simple-sum-example"></a>C. 単純な合計例  
- 次の例では、2003 年に販売された製品ごとの合計数を返します。  
+### <a name="c-a-simple-sum-example"></a>C. 単純な SUM の例  
+ 次の例は、2003 年に販売された各製品の合計数を返します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -206,7 +206,7 @@ ORDER BY ProductKey;
   
 ```  
   
- 部分的な結果セットを次に示します。  
+ 次に結果セットの一部を示します。  
   
  ```
 ProductKey  TotalPerProduct
@@ -217,7 +217,7 @@ ProductKey  TotalPerProduct
 225          7956.1500
  ```
   
-### <a name="d-calculating-group-totals-with-more-than-one-column"></a>D. 1 つ以上の列でグループ合計を計算します。  
+### <a name="d-calculating-group-totals-with-more-than-one-column"></a>D. 複数の列でグループ合計を計算する  
  次の例では、`ListPrice` テーブルに一覧された色ごとに `StandardCost` と `Product` の合計を計算します。  
   
 ```  
@@ -230,7 +230,7 @@ GROUP BY Color
 ORDER BY Color;  
 ```  
   
- 結果セットの最初の部分は、次に示します。  
+ 結果セットの最初の部分を次に示します。  
   
  ```
 Color       TotalList      TotalCost
@@ -243,8 +243,8 @@ NA            3162.3564     1360.6185
  ```  
   
 ## <a name="see-also"></a>参照  
- [集計関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [句 &#40; 経由TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md)  
+ [集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

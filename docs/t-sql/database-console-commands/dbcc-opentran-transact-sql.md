@@ -1,5 +1,5 @@
 ---
-title: "DBCC OPENTRAN (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC OPENTRAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
 DBCC OPENTRAN はアクティブなトランザクションを識別するのに役立ち、ログの切り捨てを防ぐ目的でも使用できます。 DBCC OPENTRAN によって、指定したデータベースのトランザクション ログ内に存在する最も古いアクティブ トランザクション、および (存在する場合は) 最も古い分散型と非分散型のレプリケートされたトランザクションに関する情報が表示されます。 ログ内にアクティブ トランザクションが存在する場合、またはデータベースにレプリケーション情報が存在する場合にのみ、結果が表示されます。 ログ内にアクティブ トランザクションがない場合は、情報メッセージが表示されます。
   
 > [!NOTE]  
->  DBCC OPENTRAN はサポートされていません以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
+>  DBCC OPENTRAN は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーではサポートされていません。  
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,7 +63,7 @@ DBCC OPENTRAN
   
 ## <a name="arguments"></a>引数  
  *database_name* | *database_id*| 0  
- 最も古いトランザクションに関する情報を表示するデータベースの名前または ID を指定します。 値を指定しないか 0 を指定した場合は、現在のデータベースが使用されます。 データベース名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。  
+ 最も古いトランザクションに関する情報を表示するデータベースの名前または ID を指定します。 値を指定しないか 0 を指定した場合は、現在のデータベースが使用されます。 データベース名は、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。  
   
  TABLERESULTS  
  テーブルに読み込める表形式で結果を返すように指定します。 比較用としてテーブルに挿入できる表形式の結果を得たいときは、このオプションを指定します。 このオプションを指定しない場合、結果は読みやすい形式で返されます。  
@@ -71,7 +71,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  すべての情報メッセージを表示しないようにします。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 DBCC OPENTRAN は、開かれたトランザクションがトランザクション ログ内に存在するかどうかを調べるときに使用します。 BACKUP LOG ステートメントを使用した場合は、ログの使用されていない部分しか切り捨てることができないため、開かれたトランザクションが存在すると、ログを完全に切り捨てることができなくなります。 開かれたトランザクションを識別するには、sp_who を使用してシステム プロセス ID を取得します。
   
 ## <a name="result-sets"></a>結果セット  
@@ -82,7 +82,7 @@ No active open transactions.
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。
   
 ## <a name="examples"></a>使用例  
@@ -117,7 +117,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```
   
 > [!NOTE]  
->  "UID (ユーザー ID)"の結果は無意味であり、将来のバージョンで削除される予定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+>  "UID (ユーザー ID)" 結果は無意味であり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンでは削除される予定です。  
   
 ### <a name="b-specifying-the-with-tableresults-option"></a>B. WITH TABLERESULTS オプションを指定する  
 次の例では、DBCC OPENTRAN コマンドの結果を一時テーブルに読み込みます。
@@ -139,9 +139,9 @@ GO
   
 ## <a name="see-also"></a>参照  
 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)  
-[トランザクションをコミット &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
+[COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[DB_ID と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/db-id-transact-sql.md)  
-[ROLLBACK TRANSACTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
+[DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)  
+[ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
   
   

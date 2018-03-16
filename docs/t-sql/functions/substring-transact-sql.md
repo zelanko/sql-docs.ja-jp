@@ -1,5 +1,5 @@
 ---
-title: "部分文字列 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SUBSTRING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
@@ -52,16 +52,16 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- **文字**、**バイナリ**、**テキスト**、 **ntext**、または**イメージ**[式](../../t-sql/language-elements/expressions-transact-sql.md).  
+ **character**、**binary**、**text**、**ntext**、または **image** [式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
  *start*  
- 整数または**bigint**返される文字の開始位置を指定する式。 (番号は、式の最初の文字が 1 である 1 に基づいて、意味です) です。 場合*開始*が 1 より小さい、返される式で指定されている最初の文字から始まります*式*です。 返される文字数の合計の最大値は、この場合、*開始* + *長さ*- 1 と 0 です。 場合*開始*数よりも大きい値式の文字は、長さゼロの式が返されます。  
+ 返された文字の開始位置を示す integer 式または **bigint** 式です。 (番号は 1 から開始し、これは式の最初の文字が 1 であることを意味します)。 *start* に 1 より小さい値を指定した場合は、*expression* に指定された文字の先頭から値が返されます。 この場合、返される文字数は、*start* + *length*-1 の合計値か、0 のどちらか大きい方になります。 *start* が値式の文字数を上回る場合は、長さがゼロの式が返されます。  
   
- *長さ*  
- 正の整数または**bigint**文字数を指定する式、*式*が返されます。 場合*長さ*は負の場合、エラーが生成され、ステートメントは終了します。 場合の合計*開始*と*長さ*内の文字数よりも大きい*式*、値式全体で始まる*開始*が返されます。  
+ *length*  
+ *expression* で返す文字数を正の整数または **bigint** 式で指定します。 *length* が負の場合はエラーが生成され、ステートメントは終了します。 *start* と *length* の合計が *expression* の文字数を上回る場合は、*start* の先頭から値式全体が返されます。  
   
 ## <a name="return-types"></a>戻り値の型  
- 場合、データが文字を返します*式*はサポートされている文字データ型の 1 つです。 場合、バイナリ データを返します*式*はサポートされている 1 つ**バイナリ**データ型。 返される文字列のデータ型は、指定した式のデータ型と同じです。ただし、次の表の場合は例外です。  
+ *expression* が、サポートされている文字データ型の 1 つである場合は、文字データが返されます。 *expression* が、サポートされている **binary** データ型の 1 つである場合は、binary データが返されます。 返される文字列のデータ型は、指定した式のデータ型と同じです。ただし、次の表の場合は例外です。  
   
 |指定した式|戻り値の型|  
 |--------------------------|-----------------|  
@@ -69,18 +69,18 @@ SUBSTRING ( expression ,start , length )
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
-## <a name="remarks"></a>解説  
- 値は、*開始*と*長さ*の文字数で指定する必要があります**ntext**、 **char**、または**varchar**データ型とのバイト**テキスト**、**イメージ**、**バイナリ**、または**varbinary**データ型。  
+## <a name="remarks"></a>Remarks  
+ 値は、 *開始* と *長さ* の文字数で指定する必要があります **ntext**, 、**char**, 、または **varchar** データ型とのバイト **テキスト**, 、**イメージ**, 、**バイナリ**, 、または **varbinary** データ型。  
   
- *式*する必要があります**varchar (max)**または**varbinary (max)**ときに、*開始*または*長さ*2,147, 483,647 を超える値が含まれています。  
+ *式* する必要があります **varchar (max)** または **varbinary (max)**ときに、 *開始* または *長さ* 2,147, 483,647 を超える値が含まれています。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
- 補助文字 (SC) の照合順序を使用する場合両方*開始*と*長さ*内の各サロゲート ペアの数*式*単一の文字として。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
+ 補助文字 (SC) の照合順序を使用する場合、*start* と *length* では、*expression* の各サロゲート ペアが 1 文字としてカウントされます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-substring-with-a-character-string"></a>A. SUBSTRING に文字列を使用する  
- 次の例では、文字列の一部分のみを返す方法を示しています。 `sys.databases`テーブル、次のクエリ名を返します、システム データベース 最初の列では、2 番目の列で、データベースと最後の列に 3 番目と 4 番目の文字の最初の文字です。  
+ 次の例では、文字列の一部分のみを返す方法を示しています。 `sys.databases` テーブルから、このクエリは最初の列でシステム データベース名、2 番目の列でデータベースの最初の文字、最後の列で 3 番目と 4 番目の文字を返します。  
   
 ```  
 SELECT name, SUBSTRING(name, 1, 1) AS Initial ,
@@ -91,7 +91,7 @@ WHERE database_id < 5;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-|name |Initial |ThirdAndFourthCharacters|
+|NAME |Initial |ThirdAndFourthCharacters|
 |---|--|--|
 |master  |m  |st |
 |tempdb  |t  |mp |
@@ -100,7 +100,7 @@ WHERE database_id < 5;
 
 
   
- ここでは、2 つ目を表示する方法、3 番目と 4 番目の文字を文字列定数の`abcdef`します。  
+ 文字列定数 `abcdef` の 2 番目、3 番目、および 4 番目の文字を表示するには、次のようにします。  
   
 ```  
 SELECT x = SUBSTRING('abcdef', 2, 3);  
@@ -119,9 +119,9 @@ bcd
 ### <a name="b-using-substring-with-text-ntext-and-image-data"></a>B. SUBSTRING に text、ntext、および image 型のデータを使用する  
   
 > [!NOTE]  
->  次の例を実行するにインストールする必要があります、 **pubs**データベース。  
+>  次の例を実行するには、**pubs** データベースをインストールする必要があります。  
   
- 次の例のそれぞれから最初の 10 文字を返す方法を示しています、**テキスト**と**イメージ**内のデータ列、`pub_info`のテーブル、`pubs`データベース。 **テキスト**としてデータが返されます**varchar**、および**イメージ**としてデータが返される**varbinary**です。  
+ 次の例では、`pubs` データベースにある `pub_info` テーブルの **text** および **image** データ列から、それぞれ最初の 10 文字を返す方法を示します。 **テキスト** としてデータが返される **varchar**, 、および **イメージ** としてデータが返されます **varbinary**です。  
   
 ```  
 USE pubs;  
@@ -141,7 +141,7 @@ WHERE pub_id = '1756';
 (1 row(s) affected)
 ```  
   
- 次の例は、両方で SUBSTRING の効果を示します**テキスト**と**ntext**データ。 最初に、この例での新しいテーブルを作成、`pubs`という名前のデータベース`npub_info`です。 例を次に、作成、`pr_info`内の列、`npub_info`テーブルの最初の 80 文字から、`pub_info.pr_info`列を追加し、`ü`最初の文字として。 最後に、`INNER JOIN`すべてのパブリッシャー id 番号を取得し、`SUBSTRING`両方の**テキスト**と**ntext**パブリッシャー情報列です。  
+ 次の例では、**text** データと **ntext** データの両方に対する SUBSTRING の効果を示します。 この例では最初に、`npub_info` という名前の `pubs` データベースに新しいテーブルを作成します。 次に、`pr_info` 列の最初の 80 文字から `npub_info` テーブルの `pub_info.pr_info` 列を作成し、最初の文字として `ü` を追加します。 最後に、`INNER JOIN` を使って、**text** および **ntext** の両方のパブリッシャー情報列から、すべてのパブリッシャー ID 番号と `SUBSTRING` を取得します。  
   
 ```  
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   
@@ -183,7 +183,7 @@ FROM pub_info pr INNER JOIN npub_info npr
 ORDER BY pr.pub_id ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-substring-with-a-character-string"></a>C. SUBSTRING に文字列を使用する  
  次の例では、文字列の一部分のみを返す方法を示しています。 このクエリでは、`dbo.DimEmployee` テーブルから、最初の列に姓を、2 番目の列には名のイニシャルのみを返します。  
@@ -207,7 +207,7 @@ Barber               D
 Barreto de Mattos    P
 ```  
   
- 次の例は、2 つ目を返す方法を示します、3 番目と 4 番目の文字を文字列定数の`abcdef`します。  
+ 次の例では、文字列定数 `abcdef` の 2 番目、3 番目、4 番目の文字を返す方法を示します。  
   
 ```  
 USE ssawPDW;  
@@ -224,13 +224,13 @@ bcd
 ```  
   
 ## <a name="see-also"></a>参照  
- [左と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/left-transact-sql.md)  
- [LTRIM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ltrim-transact-sql.md)  
- [右 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/right-transact-sql.md)  
- [RTRIM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rtrim-transact-sql.md)  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
- [トリム &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/trim-transact-sql.md)  
- [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  
+ [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

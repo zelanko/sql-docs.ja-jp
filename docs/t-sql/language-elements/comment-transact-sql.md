@@ -1,5 +1,5 @@
 ---
-title: "-(コメント) (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "-- (コメント) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/25/2018
  *text_of_comment*  
  コメントのテキストを構成する文字列です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  1 行のコメントまたは入れ子にしたコメントには、2 つのハイフン (--) を使用します。 -- と共に挿入されるコメントは、改行文字で終了します。 コメントの長さには制限がありません。 次の表に、テキストのコメント化/コメント解除に使用できるキーボード ショートカットを示します。  
   
 |操作|Standard|  
@@ -61,9 +61,9 @@ ms.lasthandoff: 01/25/2018
 |選択したテキストをコメント化する|Ctrl + K、Ctrl + C|  
 |選択したテキストのコメント化を解除する|Ctrl + K、Ctrl + U|  
   
- キーボード ショートカットの詳細については、次を参照してください。 [SQL Server Management Studio のキーボード ショートカット](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)です。  
+ キーボード ショートカットの詳細については、「[SQL Server Management Studio のキーボード ショートカット](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)」を参照してください。  
   
- 複数行のコメントを参照してください。[スラッシュ スター &#40;です。ブロック コメント &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
+ 複数行のコメントについては、「[スラッシュ スター &#40;ブロック コメント&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
  次の例では、-- コメント文字を使用します。  
@@ -81,6 +81,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [フロー制御言語 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md)  
+ [フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   
