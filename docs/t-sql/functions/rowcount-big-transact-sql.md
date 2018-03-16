@@ -1,5 +1,5 @@
 ---
-title: "ROWCOUNT_BIG (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ROWCOUNT_BIG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="rowcountbig-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  直前に実行されたステートメントの影響を受けた行数を返します。 この関数のように動作する[@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md)ROWCOUNT_BIG の戻り値の型は点を除いて、 **bigint**です。  
+  直前に実行されたステートメントの影響を受けた行数を返します。 この関数は、[@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md) と同じように動作します。ただし、ROWCOUNT_BIG では、戻り値の型は **bigint** になります.  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ ROWCOUNT_BIG ( )
 ## <a name="return-types"></a>戻り値の型  
  **bigint**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SELECT ステートメントの後に使用すると、この関数は、その SELECT ステートメントで返された行数を返します。  
   
  INSERT、UPDATE、または DELETE ステートメントの後に使用すると、この関数はデータ変更ステートメントの影響を受けた行数を返します。  
@@ -60,7 +60,7 @@ ROWCOUNT_BIG ( )
  IF ステートメントなど、行を返さないステートメントの後に使用すると、この関数は 0 を返します。  
   
 ## <a name="see-also"></a>参照  
- [COUNT_BIG &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/count-big-transact-sql.md)   
+ [COUNT_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/count-big-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

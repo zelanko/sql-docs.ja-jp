@@ -1,5 +1,5 @@
 ---
-title: "@@PACK_SENT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: '@@PACK_SENT (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40packsent-transact-sql"></a>&#x40;&#x40;です。@Pack_sent (TRANSACT-SQL)
+# <a name="x40x40packsent-transact-sql"></a>&#x40;&#x40;PACK_SENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動してからネットワークに書き込まれた出力パケット数を返します。  
@@ -52,11 +52,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>戻り値の型  
  **整数 (integer)**  
   
-## <a name="remarks"></a>解説  
- いくつか含むレポートを表示する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]送信または受信されると、パケットをなどの統計情報の実行**sp_monitor**です。  
+## <a name="remarks"></a>Remarks  
+ いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 送信または受信されると、パケットをなどの統計情報の実行 sp_monitor**です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、の使用方法を示しています。`@@PACK_SENT`です。  
+ 次の例は、`@@PACK_SENT` の使用方法を示しています。  
   
 ```  
 SELECT @@PACK_SENT AS 'Pack Sent';  
@@ -73,6 +73,6 @@ Pack Sent
 ## <a name="see-also"></a>参照  
  [@@PACK_RECEIVED &#40;Transact-SQL&#41;](../../t-sql/functions/pack-received-transact-sql.md)   
  [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [システム統計関数 &#40;Transact-SQL&#41;す。](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [システム統計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

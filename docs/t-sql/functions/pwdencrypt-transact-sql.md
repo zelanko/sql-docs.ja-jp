@@ -1,5 +1,5 @@
 ---
-title: "PWDENCRYPT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: PWDENCRYPT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 
   現在のバージョンのパスワード ハッシュ アルゴリズムを使用して、入力値の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パスワード ハッシュを返します。  
   
- PWDENCRYPT は古い関数であり、将来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リリースではサポートされない可能性があります。 使用して[HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md)代わりにします。 HASHBYTES では、より多くのハッシュ アルゴリズムを使用できます。  
+ PWDENCRYPT は古い関数であり、将来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リリースではサポートされない可能性があります。 代わりに、[HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md) を使用します。 HASHBYTES では、より多くのハッシュ アルゴリズムを使用できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,17 +48,17 @@ PWDENCRYPT ( 'password' )
 ```  
   
 ## <a name="arguments"></a>引数  
- *パスワード*  
- 暗号化されるパスワードです。 *パスワード*は**sysname**です。  
+ *password*  
+ 暗号化されるパスワードです。 パスワード *は sysname*です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **varbinary (128)**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  PWDENCRYPT は、パブリックで使用できます。  
   
 ## <a name="see-also"></a>参照  
  [セキュリティ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
- [PWDCOMPARE と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/pwdcompare-transact-sql.md)  
+ [PWDCOMPARE &#40;Transact-SQL&#41;](../../t-sql/functions/pwdcompare-transact-sql.md)  
   
   

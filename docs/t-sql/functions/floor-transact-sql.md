@@ -1,5 +1,5 @@
 ---
-title: "FLOOR (TRANSACT-SQL) |Microsoft ドキュメント"
+title: FLOOR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ FLOOR ( numeric_expression )
   
 ## <a name="arguments"></a>引数  
  *numeric_expression*  
- 正確な型または概数の数値データ型カテゴリの式を除く、**ビット**データ型。  
+ **bit** データ型を除く、真数データ型または概数データ型の式です。  
   
 ## <a name="return-types"></a>戻り値の型  
  *numeric_expression*と同じ型を返します。  
@@ -60,21 +60,21 @@ FLOOR ( numeric_expression )
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- 結果は、計算値と同じデータ型の整数部分*numeric_expression*です。  
+ 結果には、計算値と同じデータ型の整数部分 numeric_expression*です。  
   
 ```  
 ---------      ---------     -----------  
 123            -124          123.0000     
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例は、数値、正の数値、負の値を表示し、値を`FLOOR`関数。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ この例では、正の数値、負の数値、および `FLOOR` 関数を使用した値を示します。  
   
 ```  
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- 結果は、計算値と同じデータ型の整数部分*numeric_expression*です。  
+ 結果には、計算値と同じデータ型の整数部分 numeric_expression*です。  
   
  ```
  -----   ---------    -----------  
@@ -83,7 +83,7 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
  ```  
   
 ## <a name="see-also"></a>参照  
- [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

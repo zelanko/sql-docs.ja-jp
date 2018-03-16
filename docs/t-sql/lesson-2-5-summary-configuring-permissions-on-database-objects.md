@@ -1,5 +1,5 @@
 ---
-title: "概要: データベース オブジェクトに対する権限の構成 |Microsoft ドキュメント"
+title: "概要: データベース オブジェクトに対するアクセス許可の構成 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-5---summary---configuring-permissions-on-database-objects"></a>レッスン 2 ~ 5 のデータベース オブジェクトでの概要 - を構成するアクセス許可
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]ログインに接続するユーザーのアクセス許可を付与する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]です。 このログインで、ユーザーは特定のデータベースにアクセスできます。 データの読み取り、アクセス、および変更を行う権限をユーザーに与えるには、GRANT ステートメントを使用します。  
+# <a name="lesson-2-5---summary---configuring-permissions-on-database-objects"></a>レッスン 2 ～ 5 - 概要 - データベース オブジェクトに対するアクセス許可の構成
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] ユーザーは、ログインすることで、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にに接続する権限を与えられます。 このログインで、ユーザーは特定のデータベースにアクセスできます。 データの読み取り、アクセス、および変更を行う権限をユーザーに与えるには、GRANT ステートメントを使用します。  
   
 ビューとは、1 つの SELECT ステートメントであり、ユーザーにはテーブルのように表示されます。 ストアド プロシージャは、バッチとして実行される 1 つ以上の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントです。  
   

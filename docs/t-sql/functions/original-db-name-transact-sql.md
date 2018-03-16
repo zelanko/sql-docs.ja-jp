@@ -1,5 +1,5 @@
 ---
-title: "ORIGINAL_DB_NAME (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ORIGINAL_DB_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="originaldbname-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ユーザーがデータベース接続文字列で指定したデータベース名を返します。 これは、データベースを使用して指定されている、 **sqlcmd d**オプション (使用*データベース*) または ODBC データ ソース式 (初期カタログ =*databasename*)。  
+  ユーザーがデータベース接続文字列で指定したデータベース名を返します。 これは、データベースを使用して指定されている、 sqlcmd * ***-d* オプション (使用 * データベース**) または ODBC データ ソース式 (初期カタログ =databasename*)。  
   
  このデータベースは、既定のユーザー データベースとは異なります。  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
 ORIGINAL_DB_NAME ()  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  初期データベースが指定されていない場合、この関数は空文字列を返します。  
   
 ## <a name="see-also"></a>参照  

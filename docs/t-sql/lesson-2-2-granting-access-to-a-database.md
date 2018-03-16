@@ -1,5 +1,5 @@
 ---
-title: "データベースにアクセス権の付与 |Microsoft ドキュメント"
+title: "データベース オブジェクトへのアクセス権の付与 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-2---granting-access-to-a-database"></a>レッスン 2-2-データベースへのアクセスを許可します。
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Mary のこのインスタンスへのアクセスを持つようになりました[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データベースにアクセスする権限はありません。 データベースのユーザーとして承認されるまでは、既定の **TestData** データベースにさえアクセスできません。  
+# <a name="lesson-2-2---granting-access-to-a-database"></a>レッスン 2-2 - データベースへのアクセス権の付与
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Mary は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスにアクセスできるようになりましたが、データベースにアクセスする権限はありません。 データベースのユーザーとして承認されるまでは、既定の **TestData** データベースにさえアクセスできません。  
   
 Mary にアクセス権を与えるには、 **TestData** データベースに切り替えてから CREATE USER ステートメントを使用して、Mary という名のユーザーにそのログインをマップします。  
   

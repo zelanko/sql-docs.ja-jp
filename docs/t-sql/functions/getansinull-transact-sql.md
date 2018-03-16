@@ -1,5 +1,5 @@
 ---
-title: "GETANSINULL (TRANSACT-SQL) |Microsoft ドキュメント"
+title: GETANSINULL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ GETANSINULL ( [ 'database' ] )
 ```  
   
 ## <a name="arguments"></a>引数  
- '*データベース*'  
- NULL 値を許容するかどうかの情報を返す対象データベースの名前です。 *データベース*か**char**または**nchar**です。 場合**char**、*データベース*暗黙的に変換されます**nchar**です。  
+ '*database*'  
+ NULL 値を許容するかどうかの情報を返す対象データベースの名前です。 データベース*は char* または nchar**です。 場合 char**, 、データベース** に暗黙的に変換が nchar*です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  指定したデータベースで NULL 値を許容するかどうかの設定で、NULL 値を許容し、列またはデータ型で NULL 値を許容するかどうかの設定が明示的に定義されていない場合、GETANSINULL は 1 を返します。 これは ANSI NULL の既定値です。  
   
  ANSI NULL の既定の動作を有効にするには、次のいずれかの条件を設定する必要があります。  
   
--   ALTER DATABASE *database_name* ANSI_NULL_DEFAULT ON の設定  
+-   ALTER DATABASE *database_name* SET ANSI_NULL_DEFAULT ON  
   
 -   SET ANSI_NULL_DFLT_ON ON  
   
@@ -86,6 +86,6 @@ GO
  ```  
   
 ## <a name="see-also"></a>参照  
- [システム関数 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

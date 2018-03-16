@@ -1,5 +1,5 @@
 ---
-title: "(TRANSACT-SQL) を圧縮解除 |Microsoft ドキュメント"
+title: DECOMPRESS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/30/2015
 ms.prod: sql-non-specified
@@ -29,10 +29,10 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="decompress-transact-sql"></a>圧縮解除 (TRANSACT-SQL)
+# <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  GZIP アルゴリズムを使用して、入力式を圧縮解除できません。 圧縮の結果は、バイト配列 (varbinary (max) 型) です。  
+  GZIP アルゴリズムを使用して、入力式の圧縮を解除します。 圧縮の結果は、バイト配列 (VARBINARY(MAX) 型) です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,17 +44,17 @@ DECOMPRESS ( expression )
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- **Varbinary (***n***)**、 **varbinary (max)**、または**バイナリ (** *n***)**. 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
+ **varbinary(***n***)**、**varbinary(max)**、または**binary(***n***)** を指定します。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
 ## <a name="return-types"></a>戻り値の型  
- データ型を返す**varbinary (max)**型です。 入力引数は、ZIP アルゴリズムを使用して圧縮が解除されます。 ユーザーは、必要な場合は、対象の種類に結果を明示的にキャストする必要があります。  
+ **varbinary (max)** データ型を返します。 入力引数は、ZIP アルゴリズムを使用して圧縮が解除されます。 ユーザーは、必要な場合は、結果をターゲットの型に明示的にキャストする必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-decompress-data-at-query-time"></a>A. クエリ時にデータを圧縮解除します。  
- 次の例では、圧縮するテーブルからデータを表示する方法を示します。  
+### <a name="a-decompress-data-at-query-time"></a>A. クエリ時にデータの圧縮を解除する  
+ 次の例では、テーブルから圧縮されたデータを表示する方法を示します。  
   
 ```  
 SELECT _id, name, surname, datemodified,  
@@ -62,8 +62,8 @@ SELECT _id, name, surname, datemodified,
 FROM player;  
 ```  
   
-### <a name="b-display-compressed-data-using-computed-column"></a>B. 計算列を使用して圧縮されたデータを表示します。  
- 次の例では、圧縮解除されたデータを格納するテーブルを作成する方法を示します。  
+### <a name="b-display-compressed-data-using-computed-column"></a>B. 計算列を使用して圧縮されたデータを表示する  
+ 次の例では、圧縮解除されたデータを格納するテーブルの作成方法を示しています。  
   
 ```  
 CREATE TABLE (  
@@ -76,7 +76,7 @@ CREATE TABLE (
 ```  
   
 ## <a name="see-also"></a>参照  
- [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)   
- [COMPRESS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/compress-transact-sql.md)  
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md)  
   
   

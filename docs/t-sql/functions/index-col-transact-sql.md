@@ -1,5 +1,5 @@
 ---
-title: "INDEX_COL (TRANSACT-SQL) |Microsoft ドキュメント"
+title: INDEX_COL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -58,13 +58,13 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  インデックスが組み込まれているスキーマの名前です。  
   
  *table_or_view_name*  
- テーブルまたはインデックス付きビューの名前です。 *table_or_view_name*単一引用符で区切る必要があるあり、データベース名とスキーマ名で完全に修飾することができます。  
+ テーブルまたはインデックス付きビューの名前です。 table_or_view_name* 単一引用符で区切る必要があるあり、データベース名とスキーマ名で完全に修飾することができます。  
   
  *index_id*  
- インデックスの ID です。 *index_ID*は**int**です。  
+ インデックスの ID です。 index_ID *は int*です。  
   
- *key_id を指定*  
- インデックス キー列の位置です。 *key_ID*は**int**です。  
+ *key_id*  
+ インデックス キー列の位置です。 key_ID *is int*.  
   
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar (128** **)**  
@@ -100,8 +100,8 @@ SalesOrderID        SalesOrderDetailID
 ```  
   
 ## <a name="see-also"></a>参照  
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

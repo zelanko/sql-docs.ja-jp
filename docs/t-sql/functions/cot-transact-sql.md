@@ -1,5 +1,5 @@
 ---
-title: "COT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: COT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="cot-transact-sql"></a>COT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-ラジアンで指定された、指定された角度の三角関数コタンジェントを返す数学関数**float**式。
+指定した、ラジアンで指定された角度の三角関数コタンジェントを返す数学関数 float** 式です。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,7 +47,7 @@ COT ( float_expression )
   
 ## <a name="arguments"></a>引数  
 *float_expression*  
-[式](../../t-sql/language-elements/expressions-transact-sql.md)型の**float**または型に暗黙的に変換できる**float**です。
+**float** 型、または暗黙的に **float** 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。
   
 ## <a name="return-types"></a>戻り値の型
 **float**
@@ -71,7 +71,7 @@ The COT of the angle is: -0.040312
 ```  
   
 ## <a name="see-also"></a>参照
-[数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

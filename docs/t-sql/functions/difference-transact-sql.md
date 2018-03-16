@@ -1,5 +1,5 @@
 ---
-title: "相違点 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DIFFERENCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -48,18 +48,18 @@ DIFFERENCE ( character_expression , character_expression )
   
 ## <a name="arguments"></a>引数  
  *character_expression*  
- 英数字で構成[式](../../t-sql/language-elements/expressions-transact-sql.md)の文字データです。 *character_expression*定数、変数、または列を指定できます。  
+ 文字データの英数字[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *character_expression* には定数、変数、または列を指定できます。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  返される整数は、2 つ式の SOUNDEX 値に、どの程度同じ文字が含まれているかを表します。 戻り値の範囲は 0 ～ 4 で、0 は類似性が低いか類似性がないことを示し、4 は類似性が高いか同じ値であることを示します。  
   
  DIFFERENCE と SOUNDEX は照合順序に依存します。  
   
 ## <a name="examples"></a>使用例  
- 次の例の最初の部分では、よく似た 2 つの文字列の `SOUNDEX` 値が比較されます。 Latin1_General の照合順序`DIFFERENCE`の値を返します`4`です。 次の例の 2 番目の部分で、`SOUNDEX`値どうしを比較する 2 つの大きく異なる文字列と Latin1_General の照合順序`DIFFERENCE`の値を返します`0`です。  
+ 次の例の最初の部分では、よく似た 2 つの文字列の `SOUNDEX` 値が比較されます。 Latin1_General の照合順序では、`DIFFERENCE` は値 `4` を返します。 次の例の 2 番目の部分では、大きく異なる 2 つの文字列の `SOUNDEX` 値が比較され、Latin1_General の照合順序では、`DIFFERENCE` は値 `0` を返します。  
   
 ```  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  
@@ -85,8 +85,8 @@ B432  G650  0
 ```  
   
 ## <a name="see-also"></a>参照  
- [SOUNDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/soundex-transact-sql.md)   
- [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  
+ [SOUNDEX &#40;Transact-SQL&#41;](../../t-sql/functions/soundex-transact-sql.md)   
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "DECRYPTBYASYMKEY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DECRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,28 +50,28 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>引数  
  *Asym_Key_ID*  
- データベース内の非対称キーの ID を指定します。 *Asym_Key_ID*は**int**です。  
+ データベース内の非対称キーの ID を指定します。 Asym_Key_ID *は int*です。  
   
- *暗号化テキスト*  
+ *ciphertext*  
  非対称キーを使って暗号化されているデータの文字列を指定します。  
   
  @ciphertext  
- 型の変数は、 **varbinary**非対称キーで暗号化されたデータが含まれます。  
+ 非対称キーを使用して暗号化されているデータを含む **varbinary** 型の変数を指定します。  
   
  *Asym_Key_Password*  
  データベース内の非対称キーを暗号化するのに使用されたパスワードを指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** 8,000 バイトの最大サイズ。  
+ **varbinary** (最大サイズは 8,000 バイト)。  
   
-## <a name="remarks"></a>解説  
- 非対称キーで暗号化/暗号化解除は、対称キーで暗号化/暗号化解除すると比較して非常に高コストです。 テーブル内のユーザー データのような大きなデータセットを扱う場合、非対称キーの使用は推奨されません。  
+## <a name="remarks"></a>Remarks  
+ 非対称キーでの暗号化/暗号化解除は、対称キーを使用した暗号化/暗号化解除に比べて非常に時間がかかります。 テーブル内のユーザー データのような大きなデータセットを扱う場合、非対称キーの使用は推奨されません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  非対称キーに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`JanainaAsymKey02` に格納されている、非対称キー `AdventureWorks2012.ProtectedData04` を使って暗号化された暗号文の暗号化を解除します。 返されるデータの暗号化は、非対称キー `JanainaAsymKey02` を使って解除されます。この非対称キーの暗号化は、パスワード `pGFD4bb925DGvbd2439587y` を使って解除されます。 プレーン テキストが型に変換されます**nvarchar**です。  
+ 次の例では、`JanainaAsymKey02` に格納されている、非対称キー `AdventureWorks2012.ProtectedData04` を使って暗号化された暗号文の暗号化を解除します。 返されるデータの暗号化は、非対称キー `JanainaAsymKey02` を使って解除されます。この非対称キーの暗号化は、パスワード `pGFD4bb925DGvbd2439587y` を使って解除されます。 プレーン テキストが型に変換されます nvarchar**です。  
   
 ```  
 SELECT CONVERT(nvarchar(max),  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ENCRYPTBYASYMKEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/encryptbyasymkey-transact-sql.md)   
+ [ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

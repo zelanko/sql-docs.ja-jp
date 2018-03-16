@@ -1,5 +1,5 @@
 ---
-title: "圧縮する (TRANSACT-SQL) |Microsoft ドキュメント"
+title: COMPRESS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -29,10 +29,10 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="compress-transact-sql"></a>圧縮する (TRANSACT-SQL)
+# <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-GZIP アルゴリズムを使用して、入力式が圧縮されます。 圧縮の結果は型のバイト配列**varbinary (max)**です。
+GZIP アルゴリズムを使用して、入力式を圧縮します。 圧縮の結果は、**varbinary(max)** 型のバイト配列です。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,20 +44,20 @@ COMPRESS ( expression )
   
 ## <a name="arguments"></a>引数  
 *式 (expression)*  
-**Nvarchar (***n***)**、 **nvarchar (max)**、 **varchar (** *n*  **)**、 **varchar (max)**、 **varbinary (**  *n*  **)**、 **varbinary (max)**、 **char (***n***)**、 **nchar (**  *n*  **)**、または**バイナリ (***n***)**式。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。
+**nvarchar(***n***)**、**nvarchar(max)**、**varchar(***n***)**、**varchar(max)**、**varbinary(***n***)**、**varbinary(max)**、**char(***n***)**、**nchar(***n***)**、または **binary(***n***)** 式を指定します。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。
   
 ## <a name="return-types"></a>戻り値の型
-データ型を返す**varbinary (max)**入力の圧縮されたコンテンツを表すです。
+圧縮された入力内容を表す**varbinary(max)** データ型を返します。
   
-## <a name="remarks"></a>解説  
-圧縮されたデータのインデックスを付けることはできません。
+## <a name="remarks"></a>Remarks  
+圧縮されたデータにインデックスを付けることはできません。
   
-COMPRESS 関数は、入力式として指定されたデータを圧縮し、データの圧縮の各セクションを呼び出す必要があります。 記憶域の中に、行またはページ レベルで自動圧縮は、次を参照してください。[データ圧縮](../../relational-databases/data-compression/data-compression.md)です。
+COMPRESS 関数は、入力式として指定されたデータを圧縮します。圧縮するデータのセクションごとに呼び出す必要があります。 ストレージ中の行またはページ レベルでの自動圧縮については、「[データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-compress-data-during-the-table-insert"></a>A. 表の挿入中にデータを圧縮します。  
-次の例では、テーブルに挿入されたデータを圧縮する方法を示します。
+### <a name="a-compress-data-during-the-table-insert"></a>A. 表の挿入中にデータを圧縮する  
+次の例では、テーブルに挿入されるデータを圧縮する方法を示します。
   
 ```sql
 INSERT INTO player (name, surname, info )  
@@ -68,8 +68,8 @@ INSERT INTO player (name, surname, info )
 VALUES (N'Michael', N'Raheem', compress(@info));  
 ```  
   
-### <a name="b-archive-compressed-version-of-deleted-rows"></a>B. 削除された行の圧縮バージョンをアーカイブします。  
-次のステートメントから古いレコードをプレーヤーの削除、`player`テーブルが表示され、内のレコードを格納、`inactivePlayer`テーブルに圧縮された形式の領域を節約します。
+### <a name="b-archive-compressed-version-of-deleted-rows"></a>B. 削除された行の圧縮バージョンをアーカイブする  
+次のステートメントは、`player` テーブルから古いプレーヤー レコードを削除し、削除したレコードを圧縮形式で `inactivePlayer`テーブルに格納して、領域を節約します。
   
 ```sql
 DELETE player  
@@ -79,7 +79,7 @@ INTO dbo.inactivePlayers ;
 ```  
   
 ## <a name="see-also"></a>参照
-[文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  
-[圧縮解除 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/decompress-transact-sql.md)
+[文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+[DECOMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/decompress-transact-sql.md)
   
   

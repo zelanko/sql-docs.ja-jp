@@ -1,5 +1,5 @@
 ---
-title: "HOST_ID (TRANSACT-SQL) |Microsoft ドキュメント"
+title: HOST_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,15 +49,15 @@ HOST_ID ()
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- **char (10)**  
+ **char(10)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  システム関数のパラメーターを指定しない場合は、現在のデータベース、ホスト コンピューター、サーバー ユーザー、またはデータベース ユーザーを指定したと見なされます。 組み込み関数の後には、必ずかっこが必要です。  
   
  システム関数は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用するテーブルを作成する`HOST_ID()`で、`DEFAULT`受注を記録テーブルに行を挿入するコンピューターの端末 ID を記録を定義します。  
+ 次の例では、受注を記録するテーブルに行を挿入するコンピューターの端末 ID を記録するために、`HOST_ID()` 定義内で `DEFAULT` を使用するテーブルを作成します。  
   
 ```  
 CREATE TABLE Orders  
@@ -71,7 +71,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [システム関数 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

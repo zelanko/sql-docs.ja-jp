@@ -1,5 +1,5 @@
 ---
-title: "ERROR_LINE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ERROR_LINE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -56,23 +56,23 @@ ERROR_LINE ( )
 ## <a name="return-value"></a>戻り値  
  CATCH ブロックで呼び出されると、次の値を返します。  
   
--   エラーが発生した行番号を返します。  
+-   -エラーが発生した行番号を返します。  
   
 -   ストアド プロシージャまたはトリガー内でエラーが発生した場合には、ルーチン内の行番号  
   
  CATCH ブロックの範囲外で呼び出された場合は NULL を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、CATCH ブロックのスコープ内の任意の場所で呼び出すことができます。  
   
- ERROR_LINE は、呼び出された回数や CATCH ブロックのスコープ内のどこで呼び出されたかにかかわらず、エラーが発生した行番号を返します。 これとは対照的関数など、@ERROR、または CATCH ブロックの最初のステートメントでエラーが発生した直後のステートメントでは、エラー番号を返します。  
+ ERROR_LINE は、呼び出された回数や CATCH ブロックのスコープ内のどこで呼び出されたかにかかわらず、エラーが発生した行番号を返します。 これは、エラーが発生したステートメントの直後のステートメントまたは CATCH ブロックの最初のステートメントでエラー番号を返す、@@ERROR などの関数とは異なります。  
   
  入れ子になった CATCH ブロックでは、ERROR_LINE は、参照されている CATCH ブロックのスコープに固有のエラー行番号を返します。 たとえば、TRY...CATCH 構造の CATCH ブロックに、入れ子になった TRY...CATCH 構造が含まれる場合があります。 入れ子になった CATCH ブロック内では、ERROR_LINE は、入れ子になった CATCH ブロックを呼び出したエラーの行番号を返します。 ERROR_LINE が外部の CATCH ブロックで実行されると、その CATCH ブロックを呼び出したエラーの行番号が返されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-errorline-in-a-catch-block"></a>A. CATCH ブロックで ERROR_LINE を使用する  
- 次のコード例は、 `SELECT` 0 除算エラーを生成するステートメント。 エラーが発生した行番号が返されます。  
+ 次の例では、0 除算エラーを生成する `SELECT` ステートメントを示します。 エラーが発生した行番号が返されます。  
   
 ```  
 BEGIN TRY  
@@ -86,7 +86,7 @@ GO
 ```  
   
 ### <a name="b-using-errorline-in-a-catch-block-with-a-stored-procedure"></a>B. ストアド プロシージャ内の CATCH ブロックで ERROR_LINE を使用する  
- 次のコード例では、0 除算エラーを生成するストアド プロシージャを示します。 `ERROR_LINE`エラーが発生したストアド プロシージャでは、行番号を返します。  
+ 次のコード例では、0 除算エラーを生成するストアド プロシージャを示します。 `ERROR_LINE` は、エラーが発生したストアド プロシージャの行番号を返します。  
   
 ```  
 -- Verify that the stored procedure does not already exist.  
@@ -112,7 +112,7 @@ GO
 ```  
   
 ### <a name="c-using-errorline-in-a-catch-block-with-other-error-handling-tools"></a>C. CATCH ブロックで ERROR_LINE を他のエラー処理ツールと一緒に使用する  
- 次のコード例は、 `SELECT` 0 除算エラーを生成するステートメント。 エラーが発生した行番号と共に、エラーに関する情報が返されます。  
+ 次の例では、0 除算エラーを生成する `SELECT` ステートメントを示します。 エラーが発生した行番号と共に、エラーに関する情報が返されます。  
   
 ```  
 BEGIN TRY  
@@ -138,7 +138,7 @@ GO
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; です。TRANSACT-SQL と&#41; です。](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

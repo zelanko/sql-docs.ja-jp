@@ -1,5 +1,5 @@
 ---
-title: "レッスン 3: データベース オブジェクトの削除 |Microsoft ドキュメント"
+title: "レッスン 3: データベース オブジェクトの削除 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-3-deleting-database-objects"></a>レッスン 3: データベース オブジェクトの削除
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]この短いレッスンでは、レッスン 1 とレッスン 2 で作成してから、データベースを削除するオブジェクトを削除します。  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] この短いレッスンでは、レッスン 1 とレッスン 2 で作成したオブジェクトを削除してから、データベースを削除します。  
   
 このレッスンのトピックは 1 つです。  
   

@@ -1,5 +1,5 @@
 ---
-title: "GETUTCDATE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: GETUTCDATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/02/2015
 ms.prod: sql-non-specified
@@ -51,12 +51,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="getutcdate-transact-sql"></a>GETUTCDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  現在のデータベース システムのタイムスタンプを返します、 **datetime**値。 データベースのタイム ゾーン オフセットは含まれません。 この値は現在の UTC 時刻 (協定世界時) を表します。 この値は、コンピューターのオペレーティング システムから派生したインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されています。  
+  として現在のデータベース システムのタイムスタンプを返す、 datetime** 値。 データベースのタイム ゾーン オフセットは含まれません。 この値は現在の UTC 時刻 (協定世界時) を表します。 この値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターのオペレーティング システムから取得されます。  
   
 > [!NOTE]  
 >  1 秒未満の有効桁数で比較すると、SYSDATETIME と SYSUTCDATETIME の方が GETDATE と GETUTCDATE よりも高い精度を得ることができます。 SYSDATETIMEOFFSET には、システムのタイム ゾーン オフセットが含まれます。 SYSDATETIME、SYSUTCDATETIME、および SYSDATETIMEOFFSET は、date 型と time 型の任意の変数に割り当てることができます。  
   
- すべての概要については[!INCLUDE[tsql](../../includes/tsql-md.md)]日付と時刻のデータ型および関数を参照してください[日付と時刻のデータ型および関数 &#40;TRANSACT-SQL と #41 です。](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のデータ型および関数のすべての概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,13 +69,13 @@ GETUTCDATE()
 ## <a name="return-types"></a>戻り値の型  
  **datetime**  
   
-## <a name="remarks"></a>解説  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを参照できる GETUTCDATE を参照できる任意の場所、 **datetime**式。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを参照できます GETUTCDATE を参照できる任意の場所、 datetime** 式です。  
   
  GETUTCDATE は、非決定的関数です。 この関数を列内で参照するビューと式には、インデックスを付けることができません。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、6 つを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付を返すには、現在の日付と時刻の時間を返すシステム関数またはその両方です。 値は順番に返されるため、秒の小数部が異なる可能性があります。  
+ 次の例では、現在の日付と時刻を返す 6 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム関数を使用して、日付、時刻、またはその両方を取得しています。 値は順番に返されるため、秒の小数部が異なる可能性があります。  
   
 ### <a name="a-getting-the-current-system-date-and-time"></a>A. 現在のシステム日付と時刻を取得する  
   
@@ -136,8 +136,8 @@ GETUTCDATE()             01:25:01.6930000
 ```  
   
 ## <a name="see-also"></a>参照  
- [CAST および CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [タイム ゾーンと &#40;です。TRANSACT-SQL と&#41; です。](../../t-sql/queries/at-time-zone-transact-sql.md)  
+ [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 
