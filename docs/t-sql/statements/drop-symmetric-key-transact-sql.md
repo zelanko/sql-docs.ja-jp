@@ -1,5 +1,5 @@
 ---
-title: "対称キーを削除 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,14 +56,14 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
  削除する対称キーの名前を指定します。  
   
  REMOVE PROVIDER KEY  
- EKM デバイスから拡張キー管理 (EKM) を削除します。 拡張キー管理の詳細については、次を参照してください。[拡張キー管理 &#40;です。EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ EKM デバイスから拡張キー管理 (EKM) を削除します。 拡張キー管理について詳しくは、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」をご覧ください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  現在のセッションでキーが開かれている場合、ステートメントは失敗します。  
   
- 非対称キーが EKM デバイスで拡張キー管理 (EKM) キーにマップされている場合、 **REMOVE PROVIDER KEY**オプションが指定されていない、キーは、データベースが、デバイスから削除して、警告が発行されます。  
+ 非対称キーが EKM デバイスの拡張キー管理 (EKM) にマップされており、**REMOVE PROVIDER KEY** オプションが指定されていない場合は、キーはデータベースから削除されますが、デバイスからは削除されず、警告が発行されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  対称キーに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -80,7 +80,7 @@ GO
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [CLOSE SYMMETRIC KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   

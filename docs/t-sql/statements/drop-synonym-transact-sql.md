@@ -1,5 +1,5 @@
 ---
-title: "DROP SYNONYM (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP SYNONYM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -50,23 +50,23 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 ```  
   
 ## <a name="arguments"></a>引数  
- *場合に存在します。*  
-**適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+ *IF EXISTS*  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)
   
  条件付きでは既に存在する場合にのみ、シノニムを削除します。  
   
- *スキーマ*  
- シノニムが存在するスキーマを指定します。 スキーマが指定されていない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]現在のユーザーの既定のスキーマを使用します。  
+ *schema*  
+ シノニムが存在するスキーマを指定します。 スキーマを指定しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって現在のユーザーの既定のスキーマが使用されます。  
   
  *synonym_name*  
  削除するシノニムの名前です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  シノニムへの参照はスキーマにバインドされていません。したがってシノニムはいつでも削除できます。 削除したシノニムへの参照は、実行時にのみ検出されます。  
   
  シノニムは、動的な SQL で作成、削除、および参照できます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  シノニムを削除するには、ユーザーは次の条件を少なくとも 1 つ 満たしている必要があります。  
   
 -   シノニムの現在の所有者である。  
@@ -76,7 +76,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 -   シノニムを含むスキーマに対する ALTER SCHEMA 権限を許可されている。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、シノニム、まずを作成`MyProduct`、し、シノニムを削除します。  
+ 次の例では、まずシノニム `MyProduct` を作成し、その後シノニムを削除します。  
   
 ```  
 USE tempdb;  
@@ -93,7 +93,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [シノニム &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-synonym-transact-sql.md)   
+ [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

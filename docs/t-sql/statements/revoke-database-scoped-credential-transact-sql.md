@@ -1,5 +1,5 @@
 ---
-title: "REVOKE データベース スコープ資格情報 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "REVOKE (データベース スコープの資格情報の取り消し) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -32,10 +32,10 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE データベース スコープ資格情報 (TRANSACT-SQL)
+# <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE (データベース スコープの資格情報の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  データベース スコープ資格情報に対する権限を取り消します。  
+  データベース スコープの資格情報に対する権限を取り消します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,16 +52,16 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 ## <a name="arguments"></a>引数  
  GRANT OPTION FOR  
- 指定した権限を与える許可を取り消します。 その権限自体は失効しません。  
+ 指定した権限を与える許可を取り消します。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
   
- *アクセス許可*  
- データベース スコープ資格情報を取り消すことのできる権限を指定します。 下の表をご覧ください。  
+ *permission*  
+ データベース スコープの資格情報で取り消すことができる権限を指定します。 下の表をご覧ください。  
   
- 証明書**::***credential_name*  
- これで、権限を取り消すデータベース スコープ資格情報を指定します。 スコープ修飾子 "::" が必要です。  
+ ON CERTIFICATE **::***credential_name*  
+ 権限を取り消すデータベース スコープの資格情報を指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  
  権限を取り消すプリンシパルを指定します。 次のいずれかです。  
@@ -72,15 +72,15 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   アプリケーション ロール (application role)  
   
--   Windows ログインにマップされるデータベース ユーザー  
+-   Windows ログインにマップされているデータベース ユーザー  
   
--   Windows グループにマップされるデータベース ユーザー  
+-   Windows グループにマップされているデータベース ユーザー  
   
--   証明書にマップされるデータベース ユーザー  
+-   証明書にマップされているデータベース ユーザー  
   
 -   非対称キーにマップされているデータベース ユーザー  
   
--   データベース ユーザーが、サーバー プリンシパルにマップされていません。  
+-   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
  CASCADE  
  このプリンシパルによって権限が許可されている他のプリンシパルからも、同じ権限が取り消されることを示します。  
@@ -97,20 +97,20 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   アプリケーション ロール (application role)  
   
--   Windows ログインにマップされるデータベース ユーザー  
+-   Windows ログインにマップされているデータベース ユーザー  
   
--   Windows グループにマップされるデータベース ユーザー  
+-   Windows グループにマップされているデータベース ユーザー  
   
--   証明書にマップされるデータベース ユーザー  
+-   証明書にマップされているデータベース ユーザー  
   
 -   非対称キーにマップされているデータベース ユーザー  
   
--   データベース ユーザーが、サーバー プリンシパルにマップされていません。  
+-   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>解説  
- データベース スコープ資格情報は、データベース レベルのセキュリティ保護可能な権限の階層で親となっているデータベースに含まれる、します。 データベース スコープ資格情報で取り消すことが最も限定的アクセス許可を暗黙的に含む一般的な権限と共に示します以下に挙げます。  
+## <a name="remarks"></a>Remarks  
+ データベース スコープの資格情報は、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次に、データベース スコープの資格情報で取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に一覧で示します。  
   
-|データベース スコープの資格情報のアクセス許可|含まれるデータベース スコープ資格情報の権限|権限が含まれるデータベース権限|  
+|データベース スコープの資格情報の権限|権限が含まれるデータベース スコープの資格情報の権限|権限が含まれるデータベース権限|  
 |----------------------------|---------------------------------------|------------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
@@ -118,13 +118,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
- データベース スコープ資格情報に対する CONTROL 権限が必要です。  
+## <a name="permissions"></a>アクセス許可  
+ データベース スコープの資格情報に対する CONTROL 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [REVOKE (TRANSACT-SQL)](../../t-sql/statements/revoke-transact-sql.md)      
- [GRANT データベース スコープ資格情報 (TRANSACT-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
- [データベース スコープ資格情報 (TRANSACT-SQL) を拒否します。](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
+ [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)      
+ [GRANT (データベース スコープの資格情報の許可) (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
+ [DENY (データベース スコープの資格情報の拒否) (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
  [アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  

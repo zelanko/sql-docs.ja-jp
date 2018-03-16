@@ -1,5 +1,5 @@
 ---
-title: "EXECUTE AS 句 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "EXECUTE AS 句 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -42,9 +42,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次のユーザー定義モジュールの実行コンテキストを定義することができます: 関数 (インライン テーブル値関数) を除く、プロシージャ、キュー、およびトリガーします。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、関数 (インライン テーブル値関数を除く)、プロシージャ、キュー、トリガーなどのユーザー定義モジュールの実行コンテキストを定義できます。  
   
- モジュールが実行されるコンテキストを指定することにより、[!INCLUDE[ssDE](../../includes/ssde-md.md)]がどのユーザー アカウントを使用して、モジュールによって参照されるオブジェクトの権限を検証するかを制御できます。 これにより、ユーザー定義モジュールとそれらのモジュールによって参照されるオブジェクト間に存在する、オブジェクトのチェーン全体に関する権限の管理を、さらに柔軟に制御できます。 のみ、モジュール自体に対する、参照先オブジェクトに対する明示的なアクセス許可を付与しなくてもユーザーに許可する必要があります。 モジュールによってアクセスされるオブジェクトに対する権限が必要なのは、そのモジュールを実行しているユーザーのみです。  
+ モジュールが実行されるコンテキストを指定することにより、[!INCLUDE[ssDE](../../includes/ssde-md.md)]がどのユーザー アカウントを使用して、モジュールによって参照されるオブジェクトの権限を検証するかを制御できます。 これにより、ユーザー定義モジュールとそれらのモジュールによって参照されるオブジェクト間に存在する、オブジェクトのチェーン全体に関する権限の管理を、さらに柔軟に制御できます。 ユーザーに付与する必要のある権限は、モジュール自体に対するもののみで、参照されるオブジェクトに対する明示的な権限の許可は必要ありません。 モジュールによってアクセスされるオブジェクトに対する権限が必要なのは、そのモジュールを実行しているユーザーのみです。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -79,20 +79,20 @@ DDL Triggers with Database Scope
 ```  
   
 ## <a name="arguments"></a>引数  
- **呼び出し元**  
+ **CALLER**  
  モジュール内のステートメントを、モジュールの呼び出し元のコンテキストで実行します。 モジュールを実行するユーザーは、モジュール自体に対してだけでなく、そのモジュールによって参照されるすべてのデータベース オブジェクトに対する、適切な権限を持っている必要があります。  
   
- 呼び出し元、キューを除くすべてのモジュールの既定値と同じ[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]動作します。  
+ CALLER はキュー以外のすべてのモジュールに対して、既定値となっています。またその動作は、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] の場合と同じです。  
   
  CALLER は、CREATE QUEUE または ALTER QUEUE ステートメントでは指定できません。  
   
  **SELF**  
- EXECUTE AS SELF は EXECUTE AS に相当*user_name*を指定したユーザーを作成またはモジュールを変更します。 作成またはモジュールを変更するユーザーの実際のユーザー ID が格納されている、 **execute_as_principal_id**内の列、 **sys.sql_modules**または**sys.service_queues**カタログ ビューです。  
+ EXECUTE AS SELF は、EXECUTE AS *user_name* と同等で、異なるのは指定されるユーザーがモジュールを作成または変更したユーザーであるという点です。 モジュールを作成または変更するユーザーの実際のユーザー ID は、**sys.sql_modules** または **sys.service_queues** カタログ ビューの **execute_as_principal_id** 列に格納されます。  
   
  SELF は、キューの場合の既定値です。  
   
 > [!NOTE]  
->  ユーザー ID を変更する、 **execute_as_principal_id**で、 **sys.service_queues**カタログ ビューを ALTER QUEUE ステートメントで設定として、実行を明示的に指定する必要があります。  
+>  **sys.service_queues** カタログ ビューの **execute_as_principal_id** 列のユーザー ID を変更するには、ALTER QUEUE ステートメントで EXECUTE AS 設定を明示的に指定する必要があります。  
   
  OWNER  
  モジュール内のステートメントを、モジュールの現在の所有者のコンテキストで実行します。 モジュールの所有者が指定されていない場合、そのモジュールのスキーマの所有者が使用されます。 OWNER は、DDL トリガーまたはログオン トリガーに対しては指定できません。  
@@ -101,18 +101,18 @@ DDL Triggers with Database Scope
 >  OWNER は、単一アカウントにマップする必要があります。ロールまたはグループにはマップできません。  
   
  **'** *user_name* **'**  
- 指定されたユーザーのコンテキストで、モジュール内のステートメントが実行を指定します*user_name*です。 に対して、モジュール内のすべてのオブジェクトに対するアクセス許可が検証されます*user_name*です。 *user_name*の DDL トリガー サーバー スコープまたはログオン トリガーを指定することはできません。 使用して*login_name*代わりにします。  
+ モジュール内のステートメントを、*user_name* で指定されたユーザーのコンテキスト内で実行します。 モジュール内のすべてのオブジェクトの権限は *user_name* に対して検証されます。 *user_name* は、サーバー スコープの DDL トリガーまたはログオン トリガーには指定できません。 代わりに *login_name* を使います。  
   
- *user_name*現在のデータベースに存在する必要があり、単一アカウントを指定する必要があります。 *user_name*グループ、ロール、証明書、キー、または NT authority \localservice、NT authority \networkservice、NT authority \localsystem などのビルトイン アカウントにすることはできません。  
+ *user_name* は、現在のデータベース内に存在し、単一アカウントである必要があります。 *user_name* には、グループ、ロール、証明書、キー、および、NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService、NT AUTHORITY\LocalSystem などのビルトイン アカウントを指定できません。  
   
- 実行コンテキストのユーザー ID がメタデータに格納されで表示できます、 **execute_as_principal_id**内の列、 **sys.sql_modules**または**sys.assembly_modules**カタログ ビューです。  
+ 実行コンテキストのユーザー ID はメタデータ内に格納され、**sys.sql_modules** または **sys.assembly_modules** カタログ ビューの **execute_as_principal_id** 列で参照できます。  
   
  **'** *login_name* **'**  
- コンテキストで、モジュール内のステートメントが実行を指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で指定されたログイン*login_name*です。 に対して、モジュール内のすべてのオブジェクトに対するアクセス許可が検証されます*login_name*です。 *login_name*の DDL トリガー サーバー スコープまたはログオン トリガーに対してのみ指定できます。  
+ モジュール内部のステートメントを、*login_name* で指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインのコンテキストで実行します。 モジュール内のすべてのオブジェクトの権限は *login_name* に対して検証されます。 *login_name* は、サーバー スコープの DDL トリガーまたはログオン トリガーのみに指定できます。  
   
- *login_name*グループ、ロール、証明書、キー、または NT authority \localservice、NT authority \networkservice、NT authority \localsystem などのビルトイン アカウントにすることはできません。  
+ *login_name* には、グループ、ロール、証明書、キー、および、NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService、NT AUTHORITY\LocalSystem などのビルトイン アカウントを指定できません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]による、モジュール内で参照されるオブジェクトに対する権限の評価方法は、呼び出し元のオブジェクトと参照されるオブジェクト間に存在する所有権の継承によって異なります。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、呼び出し元のユーザーに対して、参照されるすべてのオブジェクトへのアクセスを許可するためには、所有権の継承を使用する方法しかありませんでした。  
   
  所有権の継承には、次のような制限があります。  
@@ -125,7 +125,7 @@ DDL Triggers with Database Scope
   
  モジュール内で指定される実行コンテキストに関係なく、次の操作が常に適用されます。  
   
--   モジュールを実行すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]まずモジュールを実行するユーザーがそのモジュールに対する EXECUTE 権限を持っていることを確認します。  
+-   モジュールが実行されると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は、モジュールを実行するユーザーにそのモジュールに対する EXECUTE 権限が与えられていることを最初に確認します。  
   
 -   所有権の継承ルールは、引き続き適用されます。 つまり、呼び出し元のオブジェクトと呼び出されたオブジェクトの所有者が同一の場合、基になるオブジェクトに対する権限は確認されません。  
   
@@ -136,28 +136,28 @@ DDL Triggers with Database Scope
 ## <a name="specifying-a-user-or-login-name"></a>ユーザーまたはログイン名の指定  
  モジュールの EXECUTE AS 句で指定されたデータベース ユーザーまたはサーバー ログインは、モジュールが変更されて別のコンテキストで実行されるまでは削除できません。  
   
- EXECUTE AS 句で指定されたユーザーまたはログイン名がプリンシパルとして存在する必要があります**sys.database_principals**または**sys.server_principals**、それぞれ、またはそれ以外の場合、create または alter モジュールの操作が失敗します。. また、モジュールを作成または変更するユーザーには、そのプリンシパルに対する IMPERSONATE 権限が必要です。  
+ EXECUTE AS 句で指定されたユーザーまたはログイン名は、それぞれ **sys.database_principals** または **sys.server_principals** 内にプリンシパルとして存在する必要があります。存在しない場合、モジュールの作成または変更処理は失敗します。 また、モジュールを作成または変更するユーザーには、そのプリンシパルに対する IMPERSONATE 権限が必要です。  
   
  ユーザーが、Windows グループのメンバーシップを使って [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースまたはインスタンスに暗黙的にアクセスした場合、モジュールが作成されるときに次のいずれかの要件を満たしていれば、EXECUTE AS 句で指定されたユーザーが暗黙的に作成されます。  
   
--   指定したユーザーまたはログインのメンバーである、 **sysadmin**固定サーバー ロール。  
+-   指定されたユーザーまたはログインが、固定サーバー ロール **sysadmin** のメンバーであること。  
   
 -   モジュールを作成するユーザーに、プリンシパルを作成する権限が与えられていること。  
   
  これらの要件がどちらも満たされない場合、モジュールの作成操作は失敗します。  
   
 > [!IMPORTANT]  
->  場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ローカル (MSSQLSERVER) サービスを実行しているアカウント (local service またはローカル ユーザー アカウント) が、EXECUTE AS で指定されている Windows ドメイン アカウントのグループ メンバーシップを取得する権限は与えられません句。 このため、モジュールの実行は失敗します。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) サービスがローカル アカウント (ローカル サービスまたはローカル ユーザー アカウント) で実行されている場合、このサービスには、EXECUTE AS 句で指定されている Windows ドメイン アカウントのグループのメンバーシップを取得する権限は与えられません。 このため、モジュールの実行は失敗します。  
   
  たとえば、次のような条件を想定します。  
   
--   **\Sqlusers**グループへのアクセスには、 **Sales**データベース。  
+-   **CompanyDomain\SQLUsers** グループに **Sales** データベースへのアクセス権がある。  
   
--   **\Sqluser1**のメンバーである**SQLUsers**おり、したがってへのアクセス、 **Sales**データベース。  
+-   **CompanyDomain\SqlUser1** は **SQLUsers** のメンバーであり、したがって **Sales** データベースへのアクセスが許可されている。  
   
 -   モジュールを作成または変更するユーザーに、プリンシパルを作成する権限が与えられている。  
   
- ときに、次`CREATE PROCEDURE`ステートメントの実行、`CompanyDomain\SqlUser1`が暗黙的に作成、データベースでプリンシパル、`Sales`データベース。  
+ 次の `CREATE PROCEDURE` ステートメントが実行されると、`CompanyDomain\SqlUser1` が、`Sales` データベースのデータベース プリンシパルとして暗黙的に作成されます。  
   
 ```  
 USE Sales;  
@@ -189,22 +189,22 @@ GO
 ## <a name="using-execute-as-to-define-custom-permission-sets"></a>EXECUTE AS を使用したカスタム権限セットの定義  
  モジュールの実行コンテキストを指定すると、カスタム権限セットを定義する場合に非常に便利です。 たとえば、TRUNCATE TABLE などの操作には、許可できる権限がありません。 モジュール内に TRUNCATE TABLE ステートメントを組み込み、テーブルの変更権限を持つユーザーがモジュールを実行するように指定すると、モジュールの EXECUTE 権限を許可するユーザーに、テーブルを切り捨てる権限を拡張して与えることができます。  
   
- 表示するには、指定された実行コンテキストを持つモジュールの定義を使用して、 [sys.sql_modules &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログ ビューです。  
+ 実行コンテキストを指定したモジュールの定義を表示するには、[sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) カタログ ビューを使用します。  
   
 ## <a name="best-practice"></a>推奨事項  
  モジュール内で定義された操作を実行する場合に必要となる最低限の権限を持つログインまたはユーザーを指定します。 たとえば、データベース レベルの権限が必要とされない場合は、データベース所有者アカウントは指定しないでください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  EXECUTE AS で指定されたモジュールを実行するには、呼び出し元に、そのモジュールに対する EXECUTE 権限が必要です。  
   
  別のデータベースまたはサーバー内のリソースにアクセスする CLR モジュールを、EXECUTE AS で指定して実行する場合、対象のデータベースまたはサーバーは、モジュールが生成されたデータベース (基になるデータベース) の認証情報を信頼する必要があります。  
   
- モジュールを作成または変更するときに EXECUTE AS 句を指定するには、指定されたプリンシパルに対する IMPERSONATE 権限とそのモジュールを作成する権限が必要です。 ユーザー自身の権限は、常に借用できます。 実行コンテキストが指定されていないか、EXECUTE AS CALLER が指定されている、ときに IMPERSONATE 権限は必要ありません。  
+ モジュールを作成または変更するときに EXECUTE AS 句を指定するには、指定されたプリンシパルに対する IMPERSONATE 権限とそのモジュールを作成する権限が必要です。 ユーザー自身の権限は、常に借用できます。 実行コンテキストを指定しない場合、または EXECUTE AS CALLER を指定する場合、IMPERSONATE 権限は必要ありません。  
   
- 指定する、 *login_name*または*user_name*暗黙的にアクセスできる Windows グループのメンバーシップを介してデータベースに、データベースに対する管理アクセス許可が必要です。  
+ Windows グループのメンバーシップを使ってデータベースに暗黙的にアクセスできる *login_name* または *user_name* を指定するには、そのデータベースに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例のストアド プロシージャの作成、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースにあり、実行コンテキストを割り当てます`OWNER`です。  
+ 次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにストアド プロシージャを作成し、実行コンテキストを `OWNER` に割り当てます。  
   
 ```  
 CREATE PROCEDURE HumanResources.uspEmployeesInDepartment   
@@ -231,8 +231,8 @@ GO
 ## <a name="see-also"></a>参照  
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys.service_queues &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   
- [元に戻す (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revert-transact-sql.md)   
- [実行 AS (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-transact-sql.md)  
+ [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

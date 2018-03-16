@@ -1,5 +1,5 @@
 ---
-title: "ドロップ ロール (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -58,7 +58,7 @@ DROP ROLE role_name
 ```  
   
 ## <a name="arguments"></a>引数  
- *場合に存在します。*  
+ *IF EXISTS*  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、ロールを削除します。  
@@ -66,10 +66,10 @@ DROP ROLE role_name
  *role_name*  
  データベースから削除するロールを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  セキュリティ保護可能なリソースを所有するロールは、データベースから削除できません。 セキュリティ保護可能なリソースを所有するデータベース ロールを削除するには、最初に、セキュリティ保護可能なリソースの所有権を転送するか、リソースをデータベースから削除する必要があります。 メンバーを含むロールは、データベースから削除できません。 メンバーを含むロールを削除するには、最初にロールのメンバーを削除する必要があります。  
   
- データベース ロールからメンバーを削除するには使用[ALTER ROLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-role-transact-sql.md).  
+ データベース ロールからメンバーを削除するには、[ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md) を使います。  
   
  DROP ROLE を使用して、固定データベース ロールを削除することはできません。  
   
@@ -78,13 +78,13 @@ DROP ROLE role_name
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
- サーバーの役割を削除する使用[DROP SERVER ROLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-server-role-transact-sql.md).  
+ サーバー ロールを削除するには、[DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md) を使用します。  
   
-## <a name="permissions"></a>Permissions  
- 必要があります**ALTER ANY ROLE** 、データベースに対する権限または**コントロール**メンバーシップまたはロールに対する権限、 **db_securityadmin**です。  
+## <a name="permissions"></a>アクセス許可  
+ データベースに対する **ALTER ANY ROLE** アクセス許可、ロールに対する **CONTROL** アクセス許可、または **db_securityadmin** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、データベース ロールを削除`purchasing`から、`AdventureWorks2012`データベース。  
+ 次の例では、データベース ロール `purchasing` を `AdventureWorks2012` データベースから削除します。  
   
 ```  
 DROP ROLE purchasing;  
@@ -93,8 +93,8 @@ GO
   
   
 ## <a name="see-also"></a>参照  
- [ROLE &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-role-transact-sql.md)   
- [ALTER ROLE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   

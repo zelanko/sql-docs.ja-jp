@@ -1,5 +1,5 @@
 ---
-title: "暗号化サービス プロバイダー (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  内で、暗号化サービス プロバイダー[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]拡張キー管理 (EKM) プロバイダーからです。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内で、拡張キー管理 (EKM: Extensible Key Management) プロバイダーから暗号化サービス プロバイダーを作成します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,12 +59,12 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  拡張キー管理プロバイダーの名前を指定します。  
   
  *path_of_DLL*  
- 実装する .dll ファイルのパス、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]拡張キー管理インターフェイスです。 使用する場合、 **SQL Server コネクタ for Microsoft Azure Key Vault**既定の場所は**' C:\Program files \microsoft SQL Server コネクタの Microsoft Azure キー Vault\Microsoft.AzureKeyVaultService.EKM.dll'**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張キー管理インターフェイスを実装する .dll ファイルのパスを指定します。 **SQL Server コネクタ for Microsoft Azure Key Vault** を使うときの既定の場所は、**'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  プロバイダーによって作成されるキーはいずれも、プロバイダーをその GUID で参照します。 GUID は、DLL のすべてのバージョン間で保持されます。  
   
- SQLEKM インターフェイスを実装する DLL は、任意の証明書を使用して、デジタル署名する必要があります。 この署名は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって検証されます。 これには、その証明書チェーン、そのルートにインストールされている必要がありますが含まれます、 **Trusted Root Cert Authorities** Windows システム上の場所。 署名が正しく検証されない場合は、CREATE CRYPTOGRAPHIC PROVIDER ステートメントは失敗します。 証明書および証明書チェーンの詳細については、次を参照してください。 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)です。  
+ SQLEKM インターフェイスを実装する DLL は、任意の証明書を使用して、デジタル署名する必要があります。 この署名は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって検証されます。 これにはその証明書チェーンも含まれます。証明書チェーンのルートは、Windows システムの**信頼されたルート証明機関**がある場所にインストールされている必要があります。 署名が正しく検証されなかった場合は、CREATE CRYPTOGRAPHIC PROVIDER ステートメントが失敗します。 証明書と証明書チェーンについて詳しくは、「[SQL Server の証明書と非対称キー](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  
   
  EKM プロバイダーの dll で必要なメソッドの一部が実装されなかった場合は、CREATE CRYPTOGRAPHIC PROVIDER から次のエラー 33085 が返されることがあります。  
   
@@ -74,11 +74,11 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
   
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
-## <a name="permissions"></a>Permissions  
- CONTROL SERVER 権限またはメンバーシップが必要、 **sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ CONTROL SERVER 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例と呼ばれる暗号化サービス プロバイダーを作成する`SecurityProvider`で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].dll ファイルからです。 .Dll ファイルの名前は`c:\SecurityProvider\SecurityProvider_v1.dll`サーバーにインストールされているとします。 最初にプロバイダーの証明書をサーバーにインストールする必要があります。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で .dll ファイルから `SecurityProvider` という暗号化サービス プロバイダーを作成します。 この .dll ファイルは `c:\SecurityProvider\SecurityProvider_v1.dll` という名前でサーバーにインストールされています。 最初にプロバイダーの証明書をサーバーにインストールする必要があります。  
   
 ```  
 -- Install the provider  

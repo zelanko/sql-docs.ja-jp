@@ -1,5 +1,5 @@
 ---
-title: "DROP FULLTEXT STOPLIST (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="drop-fulltext-stoplist-transact-sql"></a>DROP FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  データベースからフルテキスト ストップ リストを削除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータベースからフルテキスト ストップリストを削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,23 +57,23 @@ DROP FULLTEXT STOPLIST stoplist_name
  *stoplist_name*  
  データベースから削除するフルテキスト ストップリストの名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  削除するフルテキスト ストップリストを参照するフルテキスト インデックスが 1 つでもあると、DROP FULLTEXT STOPLIST は失敗します。  
   
-## <a name="permissions"></a>Permissions  
- ストップ リストを削除するには、ストップ リストのメンバーシップまたはに対する DROP 権限を含める必要が、 **db_owner**または**db_ddladmin**固定データベース ロール。  
+## <a name="permissions"></a>アクセス許可  
+ ストップリストを削除するには、ストップリストの DROP 権限を持っているか、**db_owner** 固定データベース ロールまたは **db_ddladmin** 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、という名前のフルテキスト ストップ リストを削除`myStoplist`です。  
+ 次の例では、`myStoplist` というフルテキスト ストップリストを削除します。  
   
 ```  
 DROP FULLTEXT STOPLIST myStoplist;  
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER FULLTEXT STOPLIST &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
- [FULLTEXT STOPLIST &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
- [sys.fulltext_stoplists &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
+ [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
  [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)  
   
   

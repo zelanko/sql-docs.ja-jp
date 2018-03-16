@@ -1,5 +1,5 @@
 ---
-title: "SET IDENTITY_INSERT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET IDENTITY_INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -60,14 +60,14 @@ SET IDENTITY_INSERT [ database_name . [ schema_name ] . ] table { ON | OFF }
  *テーブル*  
  ID 列があるテーブルの名前を指定します。  
   
-## <a name="remarks"></a>解説  
- IDENTITY_INSERT プロパティを ON に設定できるのは、セッション内の 1 つのテーブルのみです。 テーブルは既にこのプロパティを ON に設定し、別のテーブルに対して SET IDENTITY_INSERT ON ステートメントが実行された場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SET IDENTITY_INSERT を示すエラー メッセージは既にとを ON に設定されているテーブルのレポートを返します。  
+## <a name="remarks"></a>Remarks  
+ IDENTITY_INSERT プロパティを ON に設定できるのは、セッション内の 1 つのテーブルのみです。 1 つのテーブルで既にこのプロパティが ON に設定されている状態で、別のテーブルに対して SET IDENTITY_INSERT ON ステートメントを実行すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では SET IDENTITY_INSERT が既に ON であるというエラー メッセージが返され、このプロパティが ON に設定されているテーブルがレポートされます。  
   
  挿入する値がテーブルの現在の ID 値よりも大きい場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では新しく挿入された値が現在の ID 値として自動的に使用されます。  
   
  SET IDENTITY_INSERT は、解析時ではなく実行時に設定されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  ユーザーはテーブルを所有しているか、テーブルに対する ALTER 権限を持っている必要があります。  
   
 ## <a name="examples"></a>使用例  

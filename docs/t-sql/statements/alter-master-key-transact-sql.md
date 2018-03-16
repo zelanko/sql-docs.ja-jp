@@ -1,5 +1,5 @@
 ---
-title: "ALTER MASTER KEY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -98,25 +98,25 @@ ALTER MASTER KEY <alter_option>
 ```  
   
 ## <a name="arguments"></a>引数  
- パスワード ='*パスワード*'  
- データベース マスター キーを暗号化または暗号化解除するパスワードを指定します。 *パスワード*のインスタンスを実行しているコンピューターの Windows パスワード ポリシーの要件を満たす必要がある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ PASSWORD ='*password*'  
+ データベース マスター キーを暗号化または暗号化解除するパスワードを指定します。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  REGENERATE オプションを指定すると、データベース マスター キーと、それによって保護されるすべてのキーが再作成されます。 これらのキーは、最初に元のマスター キーで暗号化解除され、次に新しいマスター キーで暗号化されます。 この操作はリソースを大量に消費するため、マスター キーのセキュリティに問題がある場合を除き、リソース要求が少ないときに実行するように考慮してください。  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] AES 暗号化アルゴリズムを使用してサービス マスター キー (SMK) とデータベース マスター キー (DMK) を保護します。 AES は、以前のバージョンで使用されていた 3DES よりも新しい暗号化アルゴリズムです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] にアップグレードした後で、マスター キーを AES にアップグレードするために SMK と DMK を再度生成する必要があります。 SMK の再作成の詳細については、次を参照してください。 [ALTER SERVICE MASTER KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-service-master-key-transact-sql.md).  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] AES 暗号化アルゴリズムを使用してサービス マスター キー (SMK) とデータベース マスター キー (DMK) を保護します。 AES は、以前のバージョンで使用されていた 3DES よりも新しい暗号化アルゴリズムです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] にアップグレードした後で、マスター キーを AES にアップグレードするために SMK と DMK を再度生成する必要があります。 SMK を再作成方法について詳しくは、「[ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)」をご覧ください。  
   
- FORCE オプションを指定すると、マスター キーを使用できなかった場合や、暗号化されているすべての秘密キーをサーバーで暗号化解除できなかった場合でも、キーの再生成が続行されます。 マスター _ キーを開けない場合を使用して、 [RESTORE MASTER KEY](../../t-sql/statements/restore-master-key-transact-sql.md)をバックアップから、マスター _ キーを復元するステートメント。 FORCE オプションは、マスター キーを取得できないか、暗号化解除が失敗する場合にのみ使用してください。 取得できないキーによってのみ暗号化されている情報は失われます。  
+ FORCE オプションを指定すると、マスター キーを使用できなかった場合や、暗号化されているすべての秘密キーをサーバーで暗号化解除できなかった場合でも、キーの再生成が続行されます。 マスター キーを開くことができない場合は、[RESTORE MASTER KEY](../../t-sql/statements/restore-master-key-transact-sql.md) ステートメントを使って、マスター キーをバックアップから復元してください。 FORCE オプションは、マスター キーを取得できないか、暗号化解除が失敗する場合にのみ使用してください。 取得できないキーによってのみ暗号化されている情報は失われます。  
   
  DROP ENCRYPTION BY SERVICE MASTER KEY オプションを指定すると、データベース マスター キーの暗号化がサービス マスター キーによって解除されます。  
   
  ADD ENCRYPTION BY SERVICE MASTER KEY を指定すると、マスター キーのコピーがサービス マスター キーを使用して暗号化され、現在のデータベースおよびマスターの両方に格納されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  データベースに対する CONTROL 権限が必要です。 データベース マスター キーがパスワードで暗号化されている場合は、パスワードの情報も必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、新しいデータベースのマスター_キー、`AdventureWorks`し、暗号化階層の下位にあるキーによりまで再び暗号化します。  
+ 次の例では、`AdventureWorks` の新しいデータベースのマスター キーを作成し、暗号化階層でこのマスター キーの下位にあるキーを再暗号化します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -124,8 +124,8 @@ ALTER MASTER KEY REGENERATE WITH ENCRYPTION BY PASSWORD = 'dsjdkflJ435907NnmM#sX
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例では、新しいデータベースのマスター_キー、`AdventureWorksPDW2012`暗号化階層の下にあるキーが再暗号化します。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 次の例では、`AdventureWorksPDW2012` の新しいデータベースのマスター キーを作成し、暗号化階層でこのマスター キーの下位にあるキーを再暗号化します。  
   
 ```  
 USE master;  
@@ -135,11 +135,11 @@ GO
   
 ## <a name="see-also"></a>参照  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [MASTER KEY &#40; を開くTRANSACT-SQL と #41 です。](../../t-sql/statements/open-master-key-transact-sql.md)   
- [CLOSE MASTER KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/close-master-key-transact-sql.md)   
- [BACKUP MASTER KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/backup-master-key-transact-sql.md)   
- [RESTORE MASTER KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-master-key-transact-sql.md)   
- [DROP MASTER KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-master-key-transact-sql.md)   
+ [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [CLOSE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
+ [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-master-key-transact-sql.md)   
+ [RESTORE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
+ [DROP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-master-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  

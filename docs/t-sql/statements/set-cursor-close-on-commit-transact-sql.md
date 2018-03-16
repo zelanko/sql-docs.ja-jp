@@ -1,5 +1,5 @@
 ---
-title: "[SET cursor_close_on_commit] (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SET CURSOR_CLOSE_ON_COMMIT が ON の場合、この設定では ISO に従い、コミット時またはロールバック時にオープン カーソルがすべてクローズされます。 SET CURSOR_CLOSE_ON_COMMIT が OFF の場合、トランザクションのコミット時にカーソルはクローズされません。  
   
 > [!NOTE]  
@@ -59,9 +59,9 @@ SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }
   
  SET CURSOR_CLOSE_ON_COMMIT が OFF の場合には、ROLLBACK ステートメントによってクローズされるカーソルは完全には作成されていない非同期カーソルだけです。 変更が加えられた後でオープンされた STATIC カーソルまたは INSENSITIVE カーソルは、変更がロールバックされた場合、データの状態を反映していません。  
   
- SET CURSOR_CLOSE_ON_COMMIT は、CURSOR_CLOSE_ON_COMMIT データベース オプションと同じ動作を制御します。 CURSOR_CLOSE_ON_COMMIT が ON または OFF に設定されている場合、その設定は接続で使用されます。 SET CURSOR_CLOSE_ON_COMMIT が指定されていない場合の値、 **is_cursor_close_on_commit_on**内の列、 **sys.databases**カタログ ビューが適用されます。  
+ SET CURSOR_CLOSE_ON_COMMIT は、CURSOR_CLOSE_ON_COMMIT データベース オプションと同じ動作を制御します。 CURSOR_CLOSE_ON_COMMIT が ON または OFF に設定されている場合、その設定は接続で使用されます。 SET CURSOR_CLOSE_ON_COMMIT が指定されていない場合は、**sys.databases** カタログ ビューにある **is_cursor_close_on_commit_on** 列の値が適用されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバー両方 CURSOR_CLOSE_ON_COMMIT を OFF に設定が接続時にします。 DB-Library は CURSOR_CLOSE_ON_COMMIT の値を自動的に設定しません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーはどちらも、接続時に CURSOR_CLOSE_ON_COMMIT を OFF に設定します。 DB-Library は CURSOR_CLOSE_ON_COMMIT の値を自動的に設定しません。  
   
  SET ANSI_DEFAULTS が ON の場合には、SET CURSOR_CLOSE_ON_COMMIT は有効 (ON) になります。  
   
@@ -75,7 +75,7 @@ IF ( (4 & @@OPTIONS) = 4 ) SET @CURSOR_CLOSE = 'ON';
 SELECT @CURSOR_CLOSE AS CURSOR_CLOSE_ON_COMMIT;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -134,10 +134,10 @@ GO
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [閉じる &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/close-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [[SET ansi_defaults] &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
   
   

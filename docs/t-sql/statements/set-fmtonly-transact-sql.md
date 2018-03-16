@@ -1,5 +1,5 @@
 ---
-title: "SET FMTONLY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET FMTONLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   メタデータだけをクライアントに返します。 クエリを実際に実行しなくても、応答の形式をテストすることができます。  
   
 > [!NOTE]  
->  この機能は使用しないでください。 この機能は置き換えられました[sp_describe_first_result_set &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)、 [sp_describe_undeclared_parameters &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)、 [sys.dm_exec_describe_first_result_set &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)、および[sys.dm_exec_describe_first_result_set_for_object &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md).  
+>  この機能は使用しないでください。 この機能は、[sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)、[sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)、[sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)、[sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) によって置き換えられています。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,18 +51,18 @@ ms.lasthandoff: 11/21/2017
 SET FMTONLY { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SET FMTONLY を ON に設定している場合、行は処理されず、また要求の結果としてクライアントに送られません。  
   
  SET FMTONLY は、解析時ではなく実行時に設定されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>A: は、実際にクエリを実行しなくても、クエリの列のヘッダー情報を表示します。  
- 次の例の変更、`SET FMTONLY`設定`ON`を実行し、`SELECT`ステートメントです。 この設定では、ステートメントから列情報だけが返され、行は返されません。  
+### <a name="a-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>A: 実際にクエリを実行することなく、クエリの列ヘッダー情報を表示します。  
+ 次の例では、`SET FMTONLY` の設定を `ON` に変更し、`SELECT` ステートメントを実行します。 この設定では、ステートメントから列情報だけが返され、行は返されません。  
   
 ```  
 USE AdventureWorks2012;  
@@ -76,10 +76,10 @@ SET FMTONLY OFF;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>B. 実際にクエリを実行しなくても、クエリの列のヘッダー情報を表示します。  
- 次の例では、クエリの列ヘッダー (メタデータ) の情報のみを返す方法を示します。 バッチは FMTONLY OFF に設定を開始し、FMTONLY を ON に、SELECT ステートメントの前に変更します。 これにより、列ヘッダーだけを返す SELECT ステートメントデータの行は返されません。  
+### <a name="b-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>B. 実際にクエリを実行することなく、クエリの列ヘッダー情報を表示します。  
+ 次の例では、クエリの列ヘッダー (メタデータ) 情報のみを返す方法を示します。 バッチは、OFF に設定された FMTONLY で始まり、SELECT ステートメントの前で FMTONLY を ON に変更します。 これにより、SELECT ステートメントは列ヘッダーのみを返し、データ行は返しません。  
   
 ```  
 -- Uses AdventureWorks  

@@ -1,5 +1,5 @@
 ---
-title: "型 (TRANSACT-SQL) の権限を取り消す |Microsoft ドキュメント"
+title: "REVOKE (型の権限の取り消し) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -59,16 +59,16 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>引数  
- *アクセス許可*  
+ *permission*  
  型で取り消すことができる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- 型に**::** [ *schema_name* ]**です。** *type_name*  
- 権限を取り消す型を指定します。 スコープ修飾子 (**::**) が必要です。 場合*schema_name*が指定されていない、既定のスキーマを使用します。 場合*schema_name*が指定されているスキーマのスコープ修飾子 (**.**) が必要です。  
+ ON TYPE **::** [ *schema_name* ] **.** *type_name*  
+ 権限を取り消す型を指定します。 スコープ修飾子 (**::**) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 (**.**) が必要です。  
   
- {から |} \<Database_principal > 元となる、権限を取り消すプリンシパルを指定します。  
+ { FROM | TO } \<database_principal> 権限を取り消すプリンシパルを指定します。  
   
  GRANT OPTION  
- 指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 その権限自体は失効しません。  
+ 指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
@@ -79,7 +79,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  WITH GRANT OPTION で許可されている権限を CASCADE で取り消すと、その権限の GRANT および DENY の両方が取り消されます。  
   
- AS \<database_principal > このクエリを実行するプリンシパルの権限を取り消す権利の派生元のプリンシパルを指定します。  
+ AS \<database_principal> このクエリを実行するプリンシパルが権限を取り消すには、その権限を派生元のプリンシパルを指定します。  
   
  *Database_user*  
  データベース ユーザーを指定します。  
@@ -88,54 +88,54 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  データベース ロールを指定します。  
   
  *Application_role*  
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  アプリケーション ロールを指定します。  
   
  *Database_user_mapped_to_Windows_User*  
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Windows ユーザーにマップされているデータベース ユーザーを指定します。  
   
  *Database_user_mapped_to_Windows_Group*  
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Windows グループにマップされているデータベース ユーザーを指定します。  
   
  *Database_user_mapped_to_certificate*  
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  証明書にマップされているデータベース ユーザーを指定します。  
   
  *Database_user_mapped_to_asymmetric_key*  
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  非対称キーにマップされているデータベース ユーザーを指定します。  
   
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  型は、スキーマ レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているスキーマに含まれています。  
   
 > [!IMPORTANT]  
->  **GRANT**、 **DENY、**と**取り消す**システム型にアクセス許可は適用されません。 ユーザー定義型には権限を許可できます。 ユーザー定義型の詳細については、次を参照してください。 [SQL Server のユーザー定義型の使用](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)です。  
+>  **GRANT**、**DENY,**、**REVOKE** の各権限は、システム型には適用されません。 ユーザー定義型には権限を許可できます。 ユーザー定義型について詳しくは、「[SQL Server でのユーザー定義型の使用](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)」をご覧ください。  
   
  次の表に、型で取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |型権限|権限が含まれる型権限|権限が含まれるスキーマ権限|  
 |---------------------|--------------------------------|----------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
-|CREATE ステートメントを実行する前に、|CONTROL|CREATE ステートメントを実行する前に、|  
+|EXECUTE|CONTROL|EXECUTE|  
 |REFERENCES|CONTROL|REFERENCES|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  型に対する CONTROL 権限が必要です。 AS オプションを使用する場合は、指定したプリンシパルが型を所有している必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次の例では失効`VIEW DEFINITION`ユーザー定義型の権限に対する`PhoneNumber`ユーザーから`KhalidR`です。 `CASCADE`オプションでは、ことを示します`VIEW DEFINITION`先に、権限がプリンシパルから取り消しますも`KhalidR`権限を許可します。 `PhoneNumber`スキーマ内にある`Telemarketing`です。  
+ 次の例では、ユーザー定義型 `PhoneNumber` に対する `VIEW DEFINITION` 権限を、ユーザー `KhalidR` から取り消します。 `CASCADE` オプションは、`KhalidR` が `VIEW DEFINITION` 権限を許可したプリンシパルからも権限を取り消すことを示します。 `PhoneNumber` はスキーマ `Telemarketing` にあります。  
   
 ```  
 REVOKE VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber   
@@ -144,8 +144,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [アクセス許可の付与の種類 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
- [型の権限 &#40; を拒否します。TRANSACT-SQL と #41 です。](../../t-sql/statements/deny-type-permissions-transact-sql.md)   
+ [GRANT (型の権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
+ [DENY (型の権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

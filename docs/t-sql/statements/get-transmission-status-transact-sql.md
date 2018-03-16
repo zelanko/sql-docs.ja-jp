@@ -1,5 +1,5 @@
 ---
-title: "GET_TRANSMISSION_STATUS (TRANSACT-SQL) |Microsoft ドキュメント"
+title: GET_TRANSMISSION_STATUS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
   
 ## <a name="arguments"></a>引数  
  *conversation_id*  
- メッセージ交換で使用するメッセージ交換ハンドルを指定します。 このパラメーターの型は**uniqueidentifier**です。  
+ メッセージ交換で使用するメッセージ交換ハンドルを指定します。 このパラメーターは **uniqueidentifier** 型です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **nchar**  
   
-## <a name="remarks"></a>解説  
- 指定したメッセージ交換に関する、最後の転送試行の状態を説明する文字列を返します。 最後の送信の試行が成功した場合、送信の試行がまだ行われていない場合、または場合に、空の文字列を返します、 *conversation_handle*存在しません。  
+## <a name="remarks"></a>Remarks  
+ 指定したメッセージ交換に関する、最後の転送試行の状態を説明する文字列を返します。 最後の転送が成功した場合、転送がまだ試行されていない場合、または *conversation_handle* が存在しない場合は、空の文字列が返されます。  
   
  この関数で返される情報は、管理ビュー sys.transmission_queue の last_transmission_error 列で表示される情報と同じです。 ただし、この関数を使用すると、転送キューに現在メッセージがないメッセージ交換の転送状態を検出できます。  
   
@@ -76,7 +76,7 @@ SELECT Status =
     GET_TRANSMISSION_STATUS('58ef1d2d-c405-42eb-a762-23ff320bddf0') ;  
 ```  
   
- 行の長さの編集、サンプルの結果セットを次に示します。  
+ 次に結果セットを示します。行の長さは編集されています。  
   
  ```
  Status  
@@ -84,10 +84,10 @@ SELECT Status =
  The Service Broker protocol transport is disabled or not configured.
  ```  
   
- この場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が使用できるように構成されていない[!INCLUDE[ssSB](../../includes/sssb-md.md)]ネットワーク経由で通信するためにします。  
+ この場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は [!INCLUDE[ssSB](../../includes/sssb-md.md)] がネットワーク経由で通信を行うように構成されていません。  
   
 ## <a name="see-also"></a>参照  
- [sys.conversation_endpoints &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [sys.transmission_queue &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
+ [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   
   

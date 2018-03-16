@@ -1,5 +1,5 @@
 ---
-title: "DROP SIGNATURE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP SIGNATURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,19 +56,19 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
 ```  
   
 ## <a name="arguments"></a>引数  
- *モジュール名*  
+ *module_name*  
  ストアド プロシージャ、関数、トリガー、アセンブリ、またはイベント通知の名前を指定します。  
   
- 証明書*cert_name*  
+ CERTIFICATE *cert_name*  
  ストアド プロシージャ、関数、トリガー、アセンブリ、またはイベント通知の署名に使用されている証明書の名前を指定します。  
   
- 非対称キー *Asym_key_name*  
+ ASYMMETRIC KEY *Asym_key_name*  
  ストアド プロシージャ、関数、アセンブリ、またはトリガーの署名に使用されている非対称キーの名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  署名に関する情報は、sys.crypt_properties カタログ ビューで確認できます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  オブジェクトに対する ALTER 権限と、証明書または非対称キーに対する CONTROL 権限が必要です。 関連付けられている秘密キーがパスワードで保護されている場合、ユーザーはそのパスワードも保持している必要があります。  
   
 ## <a name="examples"></a>使用例  
@@ -82,7 +82,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.crypt_properties &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [署名を追加する &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/add-signature-transact-sql.md)  
+ [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
+ [ADD SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/add-signature-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "EXECUTE (TRANSACT-SQL) AS |Microsoft ドキュメント"
+title: EXECUTE AS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 
   セッションの実行コンテキストを設定します。  
   
- 既定では、セッションはユーザーがログインしたときに開始し、ユーザーがログオフしたときに終了します。 セッション中のすべての操作で、ユーザーに対する権限の確認が行われます。 ときに、 **EXECUTE AS**ステートメントを実行する、指定されたログインまたはユーザー名に、セッションの実行コンテキストが切り替えられます。 相手の呼び出しではなく、そのアカウントのログインとユーザーのセキュリティ トークンに対して権限は確認コンテキストの切り替え後、 **EXECUTE AS**ステートメントです。 実質的に、ユーザーまたはログイン アカウントは、セッションまたはモジュールの実行中、あるいはコンテキスト スイッチが明示的に戻されるまで続けて借用されます。  
+ 既定では、セッションはユーザーがログインしたときに開始し、ユーザーがログオフしたときに終了します。 セッション中のすべての操作で、ユーザーに対する権限の確認が行われます。 **EXECUTE AS** ステートメントを実行するとき、セッションの実行コンテキストは指定したログインまたはユーザー名に切り替えられます。 コンテキスト切り替えの後は、**EXECUTE AS** ステートメントを呼び出したログインまたはユーザーではなく、コンテキスト スイッチのアカウントに関連するログインとユーザーのセキュリティ トークンに対して権限の確認が行われます。 実質的に、ユーザーまたはログイン アカウントは、セッションまたはモジュールの実行中、あるいはコンテキスト スイッチが明示的に戻されるまで続けて借用されます。  
   
 
   
@@ -66,88 +66,88 @@ ms.lasthandoff: 11/21/2017
  権限を借用する実行コンテキストがログインであることを指定します。 権限借用のスコープはサーバー レベルです。  
   
 > [!NOTE]  
->  このオプションが使用できるは、包含データベースまたは SQL データベースではできません。  
+>  このオプションは、包含データベースまたは SQL Database では使用できません。  
   
  User  
  権限を借用するコンテキストが、現在のデータベース内のユーザーであることを指定します。 権限借用のスコープは、現在のデータベースに限定されます。 コンテキスト スイッチの対象がデータベース ユーザーであっても、そのユーザーのサーバー レベルの権限は継承されません。  
   
 > [!IMPORTANT]  
->  データベース ユーザーに対するコンテキスト スイッチがアクティブであるときに、データベース外部のリソースへアクセスを試みると、ステートメントが失敗する原因となります。 Use*データベース*ステートメント、分散クエリ、および 3 部または 4 部構成の識別子を使用して別のデータベースを参照するクエリ。  
+>  データベース ユーザーに対するコンテキスト スイッチがアクティブであるときに、データベース外部のリソースへアクセスを試みると、ステートメントが失敗する原因となります。 たとえば、USE *database* ステートメントや分散クエリ、3 部または 4 部構成の識別子を使用する別のデータベースを参照するクエリなどは実行しないでください。  
   
- **'** *名前* **'**  
- 有効なユーザーまたはログイン名を指定します。 *名前*のメンバーである必要があります、 **sysadmin**固定サーバー ロール、またはプリンシパルとして存在[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)または[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)、それぞれします。  
+ **'** *name* **'**  
+ 有効なユーザーまたはログイン名を指定します。 *name* は、**sysadmin** 固定サーバー ロールのメンバーであるか、[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) または [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) のプリンシパルとして存在する必要があります。  
   
- *名前*ローカル変数として指定することができます。  
+ *name* はローカル変数として指定できます。  
   
- *名前*必要があります、単一アカウントであり、グループ、ロール、証明書、キー、または NT authority \localservice、NT authority \networkservice、NT authority \localsystem などのビルトイン アカウントにすることはできません。  
+ *name* には単一アカウントを指定する必要があり、グループ、ロール、証明書、キー、NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService、NT AUTHORITY\LocalSystem などのビルトイン アカウントにすることはできません。  
   
- 詳細については、次を参照してください。[ユーザーまたはログイン名を指定する](#_user)このトピックで後述します。  
+ 詳しくは、後の「[ユーザーまたはログイン名の指定](#_user)」をご覧ください。  
   
  NO REVERT  
- コンテキスト スイッチを以前のコンテキストに戻せないことを示します。 **NO REVERT**オプションは、アドホック レベルでのみ使用できます。  
+ コンテキスト スイッチを以前のコンテキストに戻せないことを示します。 **NO REVERT** オプションを使用できるのは、アドホック レベルでのみです。  
   
- 詳細については、以前のコンテキストに戻す、次を参照してください。 [REVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revert-transact-sql.md).  
+ 以前のコンテキストに戻す方法について詳しくは、「[REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)」をご覧ください。  
   
- COOKIE に **@**  *varbinary_variable*  
- 実行コンテキストできますのみ戻す前のコンテキストに戻す場合は、呼び出し元の REVERT WITH COOKIE ステートメントが含まれていますが、正しい指定 **@**  *varbinary_variable*値。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Cookie を **@**  *varbinary_variable*です。 **COOKIE に**オプションは、アドホック レベルでのみ使用できます。  
+ COOKIE INTO **@***varbinary_variable*  
+ REVERT WITH COOKIE ステートメントの呼び出し時に適切な **@***varbinary_variable* 値が含まれている場合にのみ、実行コンテキストを以前のコンテキストに戻せることを示します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は、Cookie を **@***varbinary_variable* に渡します。 **COOKIE INTO** オプションを使用できるのは、アドホック レベルでのみです。  
   
- **@***varbinary_variable*は**varbinary (8000)**です。  
+ **@** *varbinary_variable* は **varbinary(8000)** です。  
   
 > [!NOTE]  
->  Cookie**出力**のパラメーターが現在として記載されている**varbinary (8000)**な正しいの最大長。 ただし、現在の実装が返されます**varbinary (100)**です。 アプリケーションが予約**varbinary (8000)**アプリケーションのサイズの増加、将来のリリースでクッキーの戻り値が正しく動作を継続できるようにします。  
+>  Cookie の **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(100)** を返します。 将来のリリースでクッキーの戻り値のサイズが増えた場合にアプリケーションが引き続き正常に動作するように、アプリケーションでは **varbinary(8000)** を予約しておく必要があります。  
   
  CALLER  
  モジュール内で使用した場合、モジュールの呼び出し元のコンテキストで、モジュール内のステートメントが実行されます。  
   
  モジュール外で使用した場合、このステートメントでは何も処理されません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  実行コンテキストでの変更は、次のいずれかが行われるまで有効です。  
   
 -   別の EXECUTE AS ステートメントの実行  
   
 -   REVERT ステートメントの実行  
   
--   セッションが切断されます。  
+-   セッションの停止  
   
 -   コマンドが実行されたストアド プロシージャまたはトリガーの終了  
   
-複数のプリンシパルで複数回、EXECUTE AS ステートメントを呼び出すと、実行コンテキストのスタックを作成できます。 これを実行すると、REVERT ステートメントにより、コンテキスト スタックの次の上位レベルのログインまたはユーザーにコンテキストが切り替えられます。 この動作のデモについては、次を参照してください。[例 A](#_exampleA)です。  
+複数のプリンシパルで複数回、EXECUTE AS ステートメントを呼び出すと、実行コンテキストのスタックを作成できます。 これを実行すると、REVERT ステートメントにより、コンテキスト スタックの次の上位レベルのログインまたはユーザーにコンテキストが切り替えられます。 この動作のデモについては、「[例 A](#_exampleA)」をご覧ください。  
   
-##  <a name="_user"></a>ユーザーまたはログイン名を指定します。  
- EXECUTE AS で指定されたユーザーまたはログイン名\<context_specification > でプリンシパルとして存在する必要があります**sys.database_principals**または**sys.server_principals**、それぞれ、またはEXECUTE AS ステートメントは失敗します。 さらに、プリンシパルで IMPERSONATE 権限が許可されている必要があります。 呼び出し元は、データベース所有者またはのメンバーである場合を除き、 **sysadmin**固定サーバー ロール、プリンシパル必要がありますもときに、ユーザーがアクセスして、データベースまたはインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって、Windows グループのメンバーシップ。 たとえば、次のような条件を想定します。 
+##  <a name="_user"></a> ユーザーまたはログイン名の指定  
+ EXECUTE AS \<context_specification> で指定するユーザーまたはログイン名は、それぞれ **sys.database_principals** または **sys.server_principals** のプリンシパルとして存在する必要があります。存在しない場合、EXECUTE AS ステートメントは失敗します。 さらに、プリンシパルで IMPERSONATE 権限が許可されている必要があります。 呼び出し元がデータベース所有者または固定サーバー ロール **sysadmin** のメンバーでない場合は、ユーザーが Windows グループ メンバーシップによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースやインスタンスにアクセスしているときでも、プリンシパルは存在する必要があります。 たとえば、次のような条件を想定します。 
   
--   **\Sqlusers**グループへのアクセスには、 **Sales**データベース。  
+-   **CompanyDomain\SQLUsers** グループに **Sales** データベースへのアクセス権がある。  
   
--   **\Sqluser1**のメンバーである**SQLUsers**おり、そのため、暗黙のアクセスに、 **Sales**データベース。  
+-   **CompanyDomain\SqlUser1** は **SQLUsers** のメンバーであり、したがって **Sales** データベースへのアクセスが暗黙的に許可されている。  
   
- **\Sqluser1**メンバーシップを介してデータベースへのアクセスを持つ、 **SQLUsers** 、ステートメントをグループ`EXECUTE AS USER = 'CompanyDomain\SqlUser1'`ために失敗`CompanyDomain\SqlUser1`内のプリンシパルとして存在しませんデータベースです。  
+ この場合、**CompanyDomain\SqlUser1** は **SQLUsers** グループのメンバーシップを介してデータベースにアクセスできますが、`CompanyDomain\SqlUser1` がプリンシパルとしてデータベースに存在しないので、ステートメント `EXECUTE AS USER = 'CompanyDomain\SqlUser1'` は失敗します。  
   
-ユーザーが孤立している場合 (関連付けられたログインは存在しません)、およびユーザーが作成されませんでした**WITHOUT LOGIN**、 **EXECUTE AS**ユーザーに対しては失敗します。  
+ユーザーが孤立した (関連付けられたログインが存在しない) 状態になり、かつユーザーが **WITHOUT LOGIN** で作成されなかった場合、そのユーザーに対する **EXECUTE AS** は失敗します。  
   
 ## <a name="best-practice"></a>推奨事項  
  セッションで操作を実行する場合に必要となる最低限の権限を持つログインまたはユーザーを指定します。 たとえば、データベース レベルの権限だけが必要な場合、サーバー レベルの権限が与えられているログイン名は指定しません。また、データベース所有者アカウントは、データベース レベルの権限が必要とされない場合は指定しません。  
   
 > [!CAUTION]  
->  EXECUTE AS ステートメントを正常に実行限り、[!INCLUDE[ssDE](../../includes/ssde-md.md)]名前を解決することができます。 ドメイン ユーザーが存在する場合、Windows ユーザーに [!INCLUDE[ssDE](../../includes/ssde-md.md)] へのアクセス権がなくても、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のユーザーを解決できることがあります。 これにより、条件ログインへのアクセスなしで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]見えますにログインする権限を借用したログインは public または guest に許可する権限を持つのみです。  
+>  EXECUTE AS ステートメントは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が名前を解決できる限り、正常に実行できます。 ドメイン ユーザーが存在する場合、Windows ユーザーに [!INCLUDE[ssDE](../../includes/ssde-md.md)] へのアクセス権がなくても、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のユーザーを解決できることがあります。 これにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセス権のないログインがログインしているように見える場合もありますが、権限借用したログインの権限が public または guest に付与されているだけの場合があります。  
   
 ## <a name="using-with-no-revert"></a>WITH NO REVERT の使用  
  EXECUTE AS ステートメントにオプションの WITH NO REVERT 句が含まれている場合、REVERT を使用、または別の EXECUTE AS ステートメントを実行して、セッションの実行コンテキストを元に戻すことはできません。 ステートメントで設定されたコンテキストはセッションが削除されるまで有効です。  
   
- ときに、WITH NO REVERT COOKIE = @*varbinary_variabl*e 句を指定する、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] @ する cookie の値を渡します*varbinary_variabl*e です。 ステートメントできますのみ戻す前のコンテキストに場合は、呼び出し元の REVERT WITH COOKIE によって、実行コンテキストが設定 = @*varbinary_variable*ステートメントに含まれる同じ *@varbinary_variable* 値。  
+ WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定した場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]はクッキー値を @*varbinary_variable* に渡します。 そのステートメントで設定された実行コンテキストを以前のコンテキストに戻すことができるのは、REVERT WITH COOKIE = @*varbinary_variable* ステートメントの呼び出し時に、同じ *@varbinary_variable* 値が含まれている場合だけです。  
   
- このオプションは、接続プールが使用されている環境で役立ちます。 接続プールには、アプリケーション サーバーのアプリケーションで再利用できるよう、データベース接続のグループが保持されています。 値が渡されるため *@varbinary_variable*  EXECUTE AS の呼び出し元のみが知っているステートメントでは、呼び出し元保証できるほかの人に確立した実行コンテキストを変更することはできません。  
+ このオプションは、接続プールが使用されている環境で役立ちます。 接続プールには、アプリケーション サーバーのアプリケーションで再利用できるよう、データベース接続のグループが保持されています。 *@varbinary_variable* に渡される値を認識できるのは EXECUTE AS ステートメントの呼び出し元のみであるため、呼び出し元が確立した実行コンテキストは、他のアカウントによって変更されることはありません。  
   
 ## <a name="determining-the-original-login"></a>元のログインの特定  
- 使用して、 [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md)のインスタンスに接続したログインの名前を返す関数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 この関数を使用すると、明示的または暗黙的にコンテキストが何度も切り替えられるセッションにおける、元のログインの ID を取得できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続したログインの名前に戻すには、[ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) 関数を使用します。 この関数を使用すると、明示的または暗黙的にコンテキストが何度も切り替えられるセッションにおける、元のログインの ID を取得できます。  
   
-## <a name="permissions"></a>Permissions  
- 指定する**EXECUTE AS**呼び出し元には、ログインに**IMPERSONATE**指定したログインに対する権限名前を指定し、拒否されていない、 **IMPERSONATE ANY LOGIN**権限. 指定する**EXECUTE AS**呼び出し元には、データベース ユーザーで**IMPERSONATE**指定されたユーザー名に対するアクセス許可。 ときに**EXECUTE AS CALLER**が指定されている**IMPERSONATE**権限は必要ありません。  
+## <a name="permissions"></a>アクセス許可  
+ ログインで **EXECUTE AS** を指定するには、呼び出し元に、指定のログイン名に対する **IMPERSONATE** 権限が与えられている必要があり、また **IMPERSONATE ANY LOGIN** 権限が拒否されていないことも条件となります。 データベース ユーザーに **EXECUTE AS** を指定するには、呼び出し元に、指定のユーザー名に対する **IMPERSONATE** 権限が与えられている必要があります。 **EXECUTE AS CALLER** を指定した場合、**IMPERSONATE** 権限は必要ありません。  
   
 ## <a name="examples"></a>使用例  
   
 ###  <a name="_exampleA"></a> A. EXECUTE AS と REVERT を使用してコンテキストを切り替える  
- 次の例では、複数のプリンシパルを使用してコンテキスト実行スタックを作成した後、 `REVERT`前の呼び出し元に、実行コンテキストをリセットするステートメントを使用しています。 `REVERT`実行コンテキストが呼び出し元に設定されるまで、スタックの上層に向かって複数回実行ステートメントです。  
+ 次の例では、複数のプリンシパルを使用してコンテキスト実行スタックを作成した後、 `REVERT` ステートメントを使用して実行コンテキストを以前のコンテキストに戻します。 `REVERT` ステートメントは、実行コンテキストが最初の呼び出し元に設定されるまで、スタックの上層に向かって複数回実行されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -191,7 +191,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>B. WITH COOKIE 句を使用する  
- 次の例は、指定したユーザーのセッションの実行コンテキストを設定し、指定、WITH NO REVERT COOKIE = @*varbinary_variabl*e 句。 `REVERT`ステートメントに渡された値を指定する必要があります、`@cookie`に変数が、`EXECUTE AS`呼び出し元に戻すコンテキストを正常に戻すにはステートメントです。 この例を実行するには、例 A で作成したログイン `login1` とユーザー `user1` が存在している必要があります。  
+ 次の例では、セッションの実行コンテキストを、指定したユーザーに設定し、WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定します。 コンテキストを正常に呼び出し元に戻すには、`REVERT` ステートメントで、`EXECUTE AS` ステートメントの `@cookie` 変数に渡される値を指定する必要があります。 この例を実行するには、例 A で作成したログイン `login1` とユーザー `user1` が存在している必要があります。  
   
 ```  
 DECLARE @cookie varbinary(8000);  
@@ -213,8 +213,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [元に戻す (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revert-transact-sql.md)   
- [EXECUTE AS 句 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-clause-transact-sql.md)  
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
+ [EXECUTE AS 句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)  
   
   
 

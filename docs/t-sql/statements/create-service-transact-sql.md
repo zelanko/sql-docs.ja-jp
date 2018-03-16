@@ -1,5 +1,5 @@
 ---
-title: "サービス (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -55,41 +55,41 @@ CREATE SERVICE service_name
   
 ## <a name="arguments"></a>引数  
  *service_name*  
- 作成するサービスの名前を指定します。 新しいサービスは現在のデータベースで作成され、AUTHORIZATION 句で指定されるプリンシパルによって所有されます。 サーバー名、データベース名、スキーマ名は指定できません。 *Service_name*は有効な**sysname**です。  
+ 作成するサービスの名前を指定します。 新しいサービスは現在のデータベースで作成され、AUTHORIZATION 句で指定されるプリンシパルによって所有されます。 サーバー名、データベース名、スキーマ名は指定できません。 *service_name* は、有効な **sysname** でなければなりません。  
   
 > [!NOTE]  
->  作成しないキーワードを使用するサービスのいずれか、 *service_name*です。 CREATE BROKER PRIORITY でサービス名に ANY を指定した場合、優先度はすべてのサービスに適用されます。 名前が ANY であるサービスに限定されません。  
+>  *service_name* にキーワード ANY を使用するサービスは作成しないでください。 CREATE BROKER PRIORITY でサービス名に ANY を指定した場合、優先度はすべてのサービスに適用されます。 名前が ANY であるサービスに限定されません。  
   
- 承認*owner_name*  
- サービスの所有者を、指定したデータベース ユーザーまたはロールに設定します。 現在のユーザーの場合は**dbo**または**sa**、 *owner_name*任意の有効なユーザーまたはロールの名前にすることがあります。 それ以外の場合、 *owner_name*現在のユーザーの名前、現在のユーザーが、IMPERSONATE 権限を持っているユーザーの名前または現在のユーザーが所属するロールの名前にする必要があります。  
+ AUTHORIZATION *owner_name*  
+ サービスの所有者を、指定したデータベース ユーザーまたはロールに設定します。 現在のユーザーが **dbo** または **sa** の場合、*owner_name* には、任意の有効なユーザーまたはロールの名前を指定できます。 それ以外の場合、*owner_name* には、現在のユーザーの名前、現在のユーザーが IMPERSONATE 権限を持つユーザーの名前、または現在のユーザーが属するロールの名前を指定する必要があります。  
   
- ON のキュー [ *schema_name***です。** *queue_name*  
- サービス用のメッセージを受信するキューを指定します。 キューはサービスと同じデータベース内に存在する必要があります。 ない場合は*schema_name*は提供された場合、スキーマは、ステートメントを実行するユーザーの既定のスキーマです。  
+ ON QUEUE [ *schema_name***.** ] *queue_name*  
+ サービス用のメッセージを受信するキューを指定します。 キューはサービスと同じデータベース内に存在する必要があります。 *schema_name* を指定しない場合は、ステートメントを実行するユーザーに既定のスキーマが使用されます。  
   
  *contract_name*  
  このサービスのコントラクトを指定します。 サービス プログラムでは、指定したコントラクトを使用して、サービスに対するメッセージ交換が開始されます。 コントラクトを指定しない場合、サービスではメッセージ交換が開始されるだけです。  
   
- **[**既定**]**  
+ **[**DEFAULT**]**  
  サービスは、DEFAULT コントラクトに従ったメッセージ交換の発信先となります。 この句のコンテキストでは、DEFAULT はキーワードとして扱われないため、識別子として区切り記号で区切る必要があります。 DEFAULT コントラクトでは、メッセージ交換の両側で DEFAULT メッセージ型のメッセージを送信できます。 DEFAULT メッセージ型では、検証は NONE となります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  各サービスでは、関連付けられているコントラクトで提供される機能が、他のサービスでも使用できるよう公開されます。 CREATE SERVICE ステートメントでは、サービスに対するコントラクトを指定できます。 サービスは、指定されたコントラクトを使用するメッセージ交換の発信先となります。 コントラクトを指定しないサービスの機能は、他のサービスに公開されません。  
   
  サービスで開始されるメッセージ交換では、任意のコントラクトを使用できます。 サービスでメッセージ交換を開始するだけの場合は、コントラクトを指定しないでサービスを作成できます。  
   
- ときに[!INCLUDE[ssSB](../../includes/sssb-md.md)]新しいメッセージ交換を受け入れるリモート サービスから発信先サービスの名前が、ブローカーがメッセージ交換のメッセージを配置する場所のキューを決定します。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] でリモート サービスからの新しいメッセージ交換を受け入れるときには、発信先サービスの名前を基に、メッセージ交換のメッセージを格納するキューが決まります。  
   
-## <a name="permissions"></a>Permissions  
- メンバーにサービスを作成するアクセス許可が既定で、 **db_ddladmin**または**db_owner**固定データベース ロールおよび**sysadmin**固定サーバー ロール。 CREATE SERVICE ステートメントを実行するには、指定したキューとすべてのコントラクトに対して REFERENCES 権限が必要です。  
+## <a name="permissions"></a>アクセス許可  
+ サービスを作成する権限は、既定では **db_ddladmin** 固定データベース ロールまたは **db_owner** 固定データベース ロールのメンバー、および **sysadmin** 固定サーバー ロールのメンバーに与えられています。 CREATE SERVICE ステートメントを実行するには、指定したキューとすべてのコントラクトに対して REFERENCES 権限が必要です。  
   
- サービスに対する REFERENCES 権限は、既定では、サービスのメンバーの所有者、 **db_ddladmin**または**db_owner**固定データベース ロールのメンバー、 **sysadmin**固定サーバー ロール。 サービスのメンバーの所有者に、サービスの既定値の送信のアクセス許可、 **db_owner**固定データベース ロールのメンバー、 **sysadmin**固定サーバー ロール。  
+ サービスに対する REFERENCES 権限は、既定ではサービスの所有者、**db_ddladmin** 固定データベース ロールまたは **db_owner** 固定データベース ロールのメンバー、および **sysadmin** 固定サーバー ロールのメンバーに与えられています。 サービスに対する SEND 権限は、既定ではサービスの所有者、**db_owner** 固定データベース ロールのメンバー、および **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
- サービスは一時オブジェクトとして指定できません。 始まるサービス名 **#** 許可されますが、パーマネント オブジェクト。  
+ サービスは一時オブジェクトとして指定できません。 **#** で始まるサービス名は許可されますが、パーマネント オブジェクトになります。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-creating-a-service-with-one-contract"></a>A. 1 つのコントラクトでサービスを作成する  
- 次の例は、サービスを作成`//Adventure-Works.com/Expenses`上、`ExpenseQueue`のキュー、`dbo`スキーマです。 このサービスを対象とするダイアログ ボックスは、コントラクトに従う必要があります`//Adventure-Works.com/Expenses/ExpenseSubmission`です。  
+ 次の例では、`dbo` スキーマの `ExpenseQueue` キューにサービス `//Adventure-Works.com/Expenses` を作成します。 このサービスを対象とするダイアログは、コントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` に従う必要があります。  
   
 ```  
 CREATE SERVICE [//Adventure-Works.com/Expenses]  
@@ -98,7 +98,7 @@ CREATE SERVICE [//Adventure-Works.com/Expenses]
 ```  
   
 ### <a name="b-creating-a-service-with-multiple-contracts"></a>B. 複数のコントラクトでサービスを作成する  
- 次の例では、`//Adventure-Works.com/Expenses` キューにサービス `ExpenseQueue` を作成します。 このサービスを対象とするダイアログ ボックスでは、コントラクトを従う必要がありますか、`//Adventure-Works.com/Expenses/ExpenseSubmission`またはコントラクト`//Adventure-Works.com/Expenses/ExpenseProcessing`です。  
+ 次の例では、`//Adventure-Works.com/Expenses` キューにサービス `ExpenseQueue` を作成します。 このサービスを対象とするダイアログは、コントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` またはコントラクト `//Adventure-Works.com/Expenses/ExpenseProcessing` に従う必要があります。  
   
 ```  
 CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue  
@@ -107,15 +107,15 @@ CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue
 ```  
   
 ### <a name="c-creating-a-service-with-no-contracts"></a>C. コントラクトなしでサービスを作成する  
- 次の例は、サービスを作成`//Adventure-Works.com/Expenses on the ExpenseQueue`キュー。 このサービスにはコントラクト情報はありません。 したがって、このサービスはダイアログの開始だけを行えます。  
+ 次の例では、サービス `//Adventure-Works.com/Expenses on the ExpenseQueue` キューを作成します。 このサービスにはコントラクト情報はありません。 したがって、このサービスはダイアログの開始だけを行えます。  
   
 ```  
 CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue ;  
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER SERVICE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-service-transact-sql.md)   
- [サービス &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-service-transact-sql.md)   
+ [ALTER SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-transact-sql.md)   
+ [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

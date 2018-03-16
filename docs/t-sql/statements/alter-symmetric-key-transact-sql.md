@@ -1,5 +1,5 @@
 ---
-title: "ALTER SYMMETRIC KEY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -72,31 +72,31 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  DROP ENCRYPTION BY  
  指定の方法による暗号化を削除します。 対称キーからすべての暗号化を削除することはできません。  
   
- 証明書*Certificate_name*  
+ CERTIFICATE *Certificate_name*  
  対称キーの暗号化に使用されている証明書を指定します。 この証明書はデータベース内に存在する必要があります。  
   
- パスワード**='***パスワード***'**  
- 対称キーの暗号化に使用されるパスワードを指定します。 *パスワード*のインスタンスを実行しているコンピューターの Windows パスワード ポリシーの要件を満たす必要がある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ PASSWORD **='***password***'**  
+ 対称キーの暗号化に使用されるパスワードを指定します。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。  
   
- 対称キー *Symmetric_Key_Name*  
+ SYMMETRIC KEY *Symmetric_Key_Name*  
  変更する対称キーの暗号化に使用されている対称キーを指定します。 この対称キーはデータベースに存在し、開かれている必要があります。  
   
- 非対称キー *Asym_Key_Name*  
+ ASYMMETRIC KEY *Asym_Key_Name*  
  変更する対称キーの暗号化に使用されている非対称キーを指定します。 この非対称キーはデータベース内に存在する必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 > [!CAUTION]  
 >  データベースのマスター キーの公開キーではなく、パスワードを使用して対称キーを暗号化する場合は、TRIPLE_DES 暗号化アルゴリズムが使用されます。 このため、AES など、強力な暗号化アルゴリズムで作成されたキーでも、キー自身はそれより弱いアルゴリズムで保護されます。  
   
  対称キーの暗号化を変更するには、ADD ENCRYPTION および DROP ENCRYPTION 句を使用します。 キーからすべての暗号化を削除することはできません。 このため、古い形式の暗号化を削除する前には、新しい形式の暗号化を追加してください。  
   
- 対称キーの所有者を変更するには、使用[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)です。  
+ 対称キーの所有者を変更するには、[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) を使います。  
   
 > [!NOTE]  
 >  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  対称キーに対する ALTER 権限が必要です。 証明書または非対称キーを使って暗号化を追加する場合は、証明書または非対称キーに対する VIEW DEFINITION 権限が必要です。 証明書または非対称キーを使って暗号化を削除する場合は、証明書または非対称キーに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -120,7 +120,7 @@ CLOSE SYMMETRIC KEY JanainaKey043;
 ## <a name="see-also"></a>参照  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [CLOSE SYMMETRIC KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

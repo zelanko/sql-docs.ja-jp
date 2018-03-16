@@ -1,5 +1,5 @@
 ---
-title: "DROP VIEW (Transact SQL) |Microsoft ドキュメント"
+title: DROP VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -59,8 +59,8 @@ DROP VIEW [ schema_name . ] view_name
 ```  
   
 ## <a name="arguments"></a>引数  
- *場合に存在します。*  
- **適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)、 [!INCLUDE[sssds](../../includes/sssds-md.md)]). |  
+ *IF EXISTS*  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで、[!INCLUDE[sssds](../../includes/sssds-md.md)])。|  
   
  条件付きでは既に存在する場合にのみ、ビューを削除します。  
   
@@ -70,26 +70,26 @@ DROP VIEW [ schema_name . ] view_name
  *view_name*  
  削除するビューの名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ビューを削除すると、ビューの定義やビューに関するその他の情報がシステム カタログから削除されます。 ビューに対する権限もすべて削除されます。  
   
  DROP TABLE を使用して削除されたテーブルのすべてのビューは、DROP VIEW を使用して明示的に削除する必要があります。  
   
- DROP VIEW をインデックス付きビューに対して実行すると、ビューのすべてのインデックスが自動的に削除されます。 ビューのすべてのインデックスを表示する使用[sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)です。  
+ DROP VIEW をインデックス付きビューに対して実行すると、ビューのすべてのインデックスが自動的に削除されます。 ビューのすべてのインデックスを表示するには、[sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md) を使います。  
   
  ビューからクエリを実行すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、ステートメントで参照されているデータベース オブジェクトがすべて存在すること、データベース オブジェクトがステートメントのコンテキストで有効であること、およびデータ変更ステートメントがデータの整合性規則に違反していないことが確認されます。 確認に失敗すると、エラー メッセージが返されます。 確認に成功すると、指定した動作が、基になるテーブルに対する動作に変換されます。 ビューが作成された後で基になるテーブルやビューが変更された場合は、ビューを削除して再作成することが適切な場合があります。  
   
- 特定のビューの依存関係の確認の詳細については、次を参照してください。 [sys.sql_dependencies &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md).  
+ 特定のビューの依存関係を確認する方法について詳しくは、「[sys.sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)」をご覧ください。  
   
- ビューのテキストを表示する方法の詳細については、次を参照してください。 [sp_helptext &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md).  
+ ビューのテキストを表示する方法について詳しくは、「[sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)」をご覧ください。  
   
-## <a name="permissions"></a>Permissions  
- 必要があります**コントロール**、ビューに対する権限**ALTER**ビュー、またはメンバーシップが含まれているスキーマに対する権限、 **db_ddladmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ ビューの **CONTROL** 権限、ビューを含んでいるスキーマの **ALTER** 権限、または **db_ddladmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-drop-a-view"></a>A. ビューを削除します。  
- 次の例では、削除、ビュー`Reorder`です。  
+### <a name="a-drop-a-view"></a>A. ビューを削除する  
+ 次の例では、ビュー `Reorder` を削除します。  
   
 ```  
 DROP VIEW dbo.Reorder ;  
@@ -101,7 +101,7 @@ GO
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [使用 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/use-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
  

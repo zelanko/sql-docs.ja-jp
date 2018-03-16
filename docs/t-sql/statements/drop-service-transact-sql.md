@@ -1,5 +1,5 @@
 ---
-title: "DROP SERVICE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,26 +54,26 @@ DROP SERVICE service_name
  *service_name*  
  削除するサービスの名前を指定します。 サーバー名、データベース名、スキーマ名は指定できません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  サービスがメッセージ交換の優先度で参照されている場合、そのサービスは削除できません。  
   
- サービスを削除すると、そのサービスへのすべてのメッセージが、サービスで使用されるキューから削除されます。 [!INCLUDE[ssSB](../../includes/sssb-md.md)]サービスを使用するメッセージ交換のリモート側にエラーを送信します。  
+ サービスを削除すると、そのサービスへのすべてのメッセージが、サービスで使用されるキューから削除されます。 メッセージ交換でサービスが使用されている場合は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってリモート側にエラーが送信されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  サービスを削除する権限は、既定では、サービスの所有者、db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、サービスを削除`//Adventure-Works.com/Expenses`です。  
+ 次の例では、サービス `//Adventure-Works.com/Expenses` を削除します。  
   
 ```  
 DROP SERVICE [//Adventure-Works.com/Expenses] ;  
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER BROKER PRIORITY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [ALTER SERVICE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-service-transact-sql.md)   
+ [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [ALTER SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [DROP BROKER PRIORITY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

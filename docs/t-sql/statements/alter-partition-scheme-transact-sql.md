@@ -1,5 +1,5 @@
 ---
-title: "パーティション構成を変更 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER PARTITION SCHEME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -42,9 +42,9 @@ ms.lasthandoff: 12/07/2017
   パーティション構成にファイル グループを追加したり、パーティション構成の NEXT USED ファイル グループの指定を変更します。 
 
 >[!NOTE]
->Azure SQL データベースでは、プライマリ ファイル グループのみがサポートされます。  
+>Azure SQL Database では、プライマリ ファイル グループのみがサポートされます。  
   
- ![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事リンク アイコン") [TRANSACT-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -59,18 +59,18 @@ NEXT USED [ filegroup_name ] [ ; ]
  変更するパーティション構成の名前を指定します。  
   
  *filegroup_name*  
- パーティション構成により、NEXT USED とマークされるファイル グループを指定します。 ファイル グループを使用して作成される新しいパーティションを受け取ります。 つまり、 [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md)ステートメントです。  
+ パーティション構成により、NEXT USED とマークされるファイル グループを指定します。 これは、このファイル グループに、[ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md) ステートメントによって作成される新しいパーティションが受け入れられることを表します。  
   
- パーティション構成では、1 つのファイル グループのみを NEXT USED として指定できます。 これには空でないファイル グループを指定できます。 場合*filegroup_name*が指定されていると、現在は NEXT USED ファイル グループはマークされていない*filegroup_name* NEXT USED とマークされます。 場合*filegroup_name*を指定すると、NEXT USED プロパティを含むファイル グループが既に存在して、NEXT USED プロパティでは、既存のファイル グループから転送*filegroup_name*です。  
+ パーティション構成では、1 つのファイル グループのみを NEXT USED として指定できます。 これには空でないファイル グループを指定できます。 *filegroup_name* を指定した場合に、現在 NEXT USED とマークされているファイル グループがなければ、*filegroup_name* が NEXT USED としてマークされます。 *filegroup_name* を指定した場合に、NEXT USED プロパティの指定されているファイル グループが既にあれば、NEXT USED プロパティは既存のファイル グループから *filegroup_name* に移動します。  
   
- 場合*filegroup_name*が指定されていない、NEXT USED プロパティを含むファイル グループが既に存在して、そのファイル グループが NEXT USED ファイル グループがないように、NEXT USED 状態を失う*partition_scheme_name*.  
+ *filegroup_name* を指定しなかった場合に、NEXT USED プロパティの指定されているファイル グループが既にあれば、そのファイル グループの NEXT USED 指定は解除され、*partition_scheme_name* には、NEXT USED の指定されたファイル グループが存在しない状態になります。  
   
- 場合*filegroup_name*が指定されていない、NEXT USED ファイル グループはマークされていないと、ALTER PARTITION SCHEME で警告が返されます。  
+ *filegroup_name* を指定しなかった場合に、NEXT USED とマークされているファイル グループがなければ、ALTER PARTITION SCHEME から警告が返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ALTER PARTITION SCHEME の対象となるファイル グループは、オンラインになっている必要があります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  次の権限を使って ALTER PARTITION SCHEME を実行できます。  
   
 -   ALTER ANY DATASPACE 権限。 この権限は、既定では **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_ddladmin** 固定データベース ロールのメンバーに与えられています。  
@@ -80,28 +80,28 @@ NEXT USED [ filegroup_name ] [ ; ]
 -   パーティション構成が作成されたデータベースのサーバーに対する CONTROL SERVER または ALTER ANY DATABASE 権限。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、パーティション構成`MyRangePS1`とファイル グループ`test5fg`現在のデータベースに存在します。  
+ 次の例では、パーティション構成 `MyRangePS1` およびファイル グループ `test5fg` が現在のデータベースに存在することを前提としています。  
   
 ```  
 ALTER PARTITION SCHEME MyRangePS1  
 NEXT USED test5fg;  
 ```  
   
- ファイル グループ`test5fg`パーティション テーブルまたはインデックスを ALTER PARTITION FUNCTION ステートメントの結果としての追加パーティションが表示されます。  
+ ファイル グループ `test5fg` には、ALTER PARTITION FUNCTION ステートメントの結果として作成された、パーティション テーブルまたはインデックスの追加パーティションが受け入れられます。  
   
 ## <a name="see-also"></a>参照  
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [DROP PARTITION SCHEME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
+ [DROP PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [ALTER PARTITION FUNCTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-partition-function-transact-sql.md)   
- [DROP PARTITION FUNCTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-partition-function-transact-sql.md)   
+ [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md)   
+ [DROP PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.partition_schemes と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
- [sys.data_spaces と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- [sys.destination_data_spaces &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
- [sys.partitions および #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.partition_schemes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [sys.destination_data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

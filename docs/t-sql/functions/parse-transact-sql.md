@@ -1,5 +1,5 @@
 ---
-title: "解析 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: PARSE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/05/2017
 ms.prod: sql-non-specified
@@ -47,22 +47,22 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 ## <a name="arguments"></a>引数  
  *string_value*  
- **nvarchar**(4000) 値が指定されたデータ型に解析する書式設定された値を表すです。  
+ 指定したデータ型に解析する、書式設定された値を表す **nvarchar**(4000) 値。  
   
- *string_value*エラー解析が発生し、要求されたデータ型の有効な表現をする必要があります。  
+ *string_value* は、要求されたデータ型の有効な表現である必要があります。そうでない場合、PARSE でエラーが発生します。  
   
  *data_type*  
  結果に要求されたデータ型を表すリテラル値。  
   
- *カルチャ*  
- 使用されるカルチャを識別する省略可能な文字列*string_value*は書式設定します。  
+ *culture*  
+ *string_value* が書式設定されるカルチャを識別する文字列です (省略可能)。  
   
- 場合、*カルチャ*引数が指定されていない場合は、現在のセッションの言語が使用されます。 この言語には、SET LANGUAGE ステートメントを使用して、暗黙的または明示的には設定されます。 *カルチャ*、.NET Framework でサポートされている任意のカルチャを受け入れますで明示的にサポートされる言語に限定されるわけで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 場合、*カルチャ*引数が無効、解析エラーが発生します。  
+ *culture* 引数が指定されていない場合は、現在のセッションの言語が使用されます。 この言語は、SET LANGUAGE ステートメントを使用して、暗黙的または明示的に設定されます。 *culture* は、.NET Framework でサポートされている任意のカルチャを受け入れます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で明示的にサポートされている言語に制限されません。 *culture* 引数が有効でない場合は、PARSE でエラーが発生します。  
   
 ## <a name="return-types"></a>戻り値の型  
  要求されたデータ型に変換された式の結果を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  PARSE への引数として渡される null の値は、2 つの方法で扱われます。  
   
 1.  null 定数が渡されると、エラーが発生します。 null の値をカルチャに対応する方法で異なるデータ型に解析することはできません。  
@@ -71,36 +71,36 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
  PARSE は、文字列型から日付/時刻型および数値型への変換にのみ使用します。 一般的な型変換では、引き続き CAST または CONVERT を使用します。 一定のパフォーマンス オーバーヘッドが文字列値を解析中に注意してください。  
   
- 解析は、.NET Framework 共通言語ランタイム (CLR) の存在に依存しています。  
+ PARSE は、.NET Framework の共通言語ランタイム (CLR) の存在に依存しています。  
   
  この関数は、CLR の存在に依存するため、リモート処理は行われません。 CLR が必要な関数をリモート処理すると、リモート サーバー上でエラーが発生します。  
   
- **Data_type パラメーターの詳細について**  
+ **data_type パラメーターの詳細**  
   
- 値、 *data_type*パラメーターは、スタイルと共に、次の表に示す型に制限します。 スタイル情報は、許可するパターンの種類を決定するために提供されます。 スタイルの詳細については、.NET Framework ドキュメントを参照して、 **System.Globalization.NumberStyles**と**DateTimeStyles**列挙体です。  
+ *data_type* パラメーターの値は、スタイルと共に、次の表に示す型に制限されます。 スタイル情報は、許可するパターンの種類を決定するために提供されます。 スタイルについて詳しくは、.NET Framework のドキュメントで **System.Globalization.NumberStyles** および **DateTimeStyles** 列挙型を参照してください。  
   
 |カテゴリ|型|.NET Framework 型|使用されるスタイル|  
 |--------------|----------|-------------------------|-----------------|  
-|数値|bigint|Int64|NumberStyles.Number|  
-|数値|int|Int32|NumberStyles.Number|  
-|数値|smallint|Int16|NumberStyles.Number|  
-|数値|tinyint|Byte|NumberStyles.Number|  
-|数値|decimal|Decimal|NumberStyles.Number|  
-|数値|numeric|Decimal|NumberStyles.Number|  
-|数値|float|Double|NumberStyles.Float|  
-|数値|real|Single|NumberStyles.Float|  
+|数値|BIGINT|Int64|NumberStyles.Number|  
+|数値|ssNoversion|Int32|NumberStyles.Number|  
+|数値|SMALLINT|Int16|NumberStyles.Number|  
+|数値|TINYINT|Byte|NumberStyles.Number|  
+|数値|Decimal|Decimal|NumberStyles.Number|  
+|数値|NUMERIC|Decimal|NumberStyles.Number|  
+|数値|FLOAT|Double|NumberStyles.Float|  
+|数値|REAL|Single|NumberStyles.Float|  
 |数値|smallmoney|Decimal|NumberStyles.Currency|  
 |数値|money|Decimal|NumberStyles.Currency|  
-|日時|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124;です。DateTimeStyles.AssumeUniversal|  
-|日時|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124;です。DateTimeStyles.AssumeUniversal|  
-|日時|datetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124;です。DateTimeStyles.AssumeUniversal|  
-|日時|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124;です。DateTimeStyles.AssumeUniversal|  
-|日時|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124;です。DateTimeStyles.AssumeUniversal|  
-|日時|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124;です。DateTimeStyles.AssumeUniversal|  
+|日時|日付|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日時|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日時|DATETIME|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日時|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日時|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日時|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
   
- **カルチャ パラメーターの詳細について**  
+ **culture パラメーターの詳細**  
   
- 次の表は、マッピングから[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].NET Framework カルチャへの言語です。  
+ 次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 言語から .NET Framework カルチャへのマッピングを示します。  
   
 |完全名|別名|LCID (LCID)|特定のカルチャ|  
 |---------------|-----------|----------|----------------------|  
@@ -126,12 +126,12 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |ΕΛΛΗΝΙΚΆ|ギリシャ語|1032|El-GR|  
 |БЪЛГАРСКИ|ブルガリア語|1026|bg-BG|  
 |РУССКИЙ|ロシア語|1049|Ru-RU|  
-|トルコ語|トルコ語|1055|Tr-TR|  
+|Türkçe|トルコ語|1055|Tr-TR|  
 |British|英語 (U.K.)|2057|en-GB|  
 |eesti|エストニア語|1061|Et-EE|  
 |latviešu|ラトビア語|1062|lv-LV|  
 |lietuvių|リトアニア語|1063|lt-LT|  
-|ポルトガル語 (ブラジル)|(ブラジル)|1046|pt-BR|  
+|ポルトガル語 (ブラジル)|ブラジル|1046|pt-BR|  
 |繁體中文|繁体字中国語|1028|zh-TW|  
 |한국어|韓国語|1042|Ko-KR|  
 |简体中文|簡体字中国語|2052|zh-CN|  

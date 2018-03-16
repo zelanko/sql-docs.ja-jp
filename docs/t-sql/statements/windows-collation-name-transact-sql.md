@@ -1,5 +1,5 @@
 ---
-title: "Windows 照合順序名 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "Windows 照合順序名 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="windows-collation-name-transact-sql"></a>Windows 照合順序名 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  COLLATE 句での Windows 照合順序名の指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 Windows 照合順序名は、照合順序指定子と比較形式で構成されます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で COLLATE 句に Windows 照合順序名を指定します。 Windows 照合順序名は、照合順序指定子と比較形式で構成されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,24 +66,24 @@ CollationDesignator_<ComparisonStyle>
 -   Turkish: コード ページ 1254 が使用されます。  
   
  *CaseSensitivity*  
- **CI**区別されず、指定**CS**大文字小文字を区別を指定します。  
+ **CI** を指定すると大文字小文字は区別されず、**CS** を指定すると大文字小文字が区別されます。  
   
  *AccentSensitivity*  
- **AI**アクセントを区別しない指定**AS**アクセントを区別を指定します。  
+ **AI** を指定するとアクセントは区別されず、**AS** を指定するとアクセントが区別されます。  
   
  *KanatypeSensitive*  
- **省略すると**指定かなを区別しない、 **KS**かなを区別を指定します。  
+ **Omitted** を指定するとかなは区別されず、**KS** を指定するとかなが区別されます。  
   
  *WidthSensitivity*  
- **省略すると**指定の幅を区別しない、 **WS**文字幅を区別を指定します。  
+ **Omitted** を指定すると文字幅は区別されず、**WS** を指定すると文字幅が区別されます。  
   
- **箱**  
+ **BIN**  
  旧バージョンとの互換性のあるバイナリ並べ替え順を使用します。  
   
  **BIN2**  
  コード ポイントの比較セマンティクスを使用するバイナリ並べ替え順を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  照合順序のバージョンによっては、一部のコード ポイントは未定義の場合があります。 たとえば、次の比較を行います。  
   
 ```  
@@ -114,20 +114,20 @@ GO
      照合順序に、コード ページ 1252 とバイナリ並べ替え規則が使用されます。 Latin1 一般辞書の並べ替え規則は無視されます。  
   
 ## <a name="windows-collations"></a>Windows 照合順序  
- インスタンスでサポートされている Windows 照合順序の一覧に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、次のクエリを実行します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスでサポートされている Windows 照合順序の一覧を表示するには、次のクエリを実行します。  
   
 ```  
 SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';  
 ```  
   
- 次の表に、すべての Windows 照合順序でサポートされる[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。  
+ 次の表に、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でサポートされるすべての Windows 照合順序を示します。  
   
 |Windows ロケール|照合順序バージョン 100|照合順序バージョン 90|  
 |--------------------|---------------------------|--------------------------|  
 |アルザス語 (フランス)|Latin1_General_100_|使用不可|  
 |アムハラ語 (エチオピア)|Latin1_General_100_|使用不可|  
 |アルメニア語 (アルメニア)|Cyrillic_General_100_|使用不可|  
-|アッサム語 (インド)|Assamese_100 _ <sup>1</sup>|使用不可|  
+|アッサム語 (インド)|Assamese_100_ <sup>1</sup>|使用不可|  
 |バシキール語 (ロシア)|Bashkir_100_|使用不可|  
 |バスク語 (バスク)|Latin1_General_100_|使用不可|  
 |ベンガル語 (バングラデシュ)|Bengali_100_<sup>1</sup>|使用不可|  
@@ -219,23 +219,23 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |イ語 (PRC)|Latin1_General_100_|使用不可|  
 |ヨルバ語 (ナイジェリア)|Latin1_General_100_|使用不可|  
 |ズールー語 (南アフリカ)|Latin1_General_100_|使用不可|  
-|非推奨、サーバー レベルで使用不可[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降|ヒンディー語|ヒンディー語|  
-|非推奨、サーバー レベルで使用不可[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降|Korean_Wansung_Unicode|Korean_Wansung_Unicode|  
-|非推奨、サーバー レベルで使用不可[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降|Lithuanian_Classic|Lithuanian_Classic|  
-|非推奨、サーバー レベルで使用不可[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降|Macedonian|Macedonian|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では非推奨であり、サーバー レベルでは利用できません|ヒンディー語|ヒンディー語|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では非推奨であり、サーバー レベルでは利用できません|Korean_Wansung_Unicode|Korean_Wansung_Unicode|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では非推奨であり、サーバー レベルでは利用できません|Lithuanian_Classic|Lithuanian_Classic|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では非推奨であり、サーバー レベルでは利用できません|Macedonian|Macedonian|  
   
- <sup>1</sup>Unicode 専用の Windows 照合順序は、列レベルまたは式レベルのデータにのみ適用できます。 これらの照合順序は、サーバーまたはデータベースの照合順序としては使用できません。  
+ <sup>1</sup> Unicode 専用の Windows 照合順序は、列レベルまたは式レベルのデータにのみ適用できます。 これらの照合順序は、サーバーまたはデータベースの照合順序としては使用できません。  
   
- <sup>2</sup>中国語 (台湾) の照合順序と同様に、中国語 (マカオ) は、簡体字中国語の規則を使用して; 中国語 (台湾) とは異なり、コード ページ 950 を使用します。  
+ <sup>2</sup> 中国語 (台湾) の照合順序と同様に、中国語 (マカオ) は簡体中国語の規則を使用し、中国語 (台湾) とは異なるコード ページ 950 を使用します。  
   
 ## <a name="see-also"></a>参照  
  [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [定数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/constants-transact-sql.md)   
+ [定数 &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [テーブルと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/table-transact-sql.md)   
+ [テーブル &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)  
   
   

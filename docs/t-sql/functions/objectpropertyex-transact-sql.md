@@ -1,5 +1,5 @@
 ---
-title: "OBJECTPROPERTYEX (TRANSACT-SQL) |Microsoft ドキュメント"
+title: OBJECTPROPERTYEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  現在のデータベース内のスキーマ スコープ オブジェクトに関する情報を返します。 これらのオブジェクトの一覧は、次を参照してください。 [sys.objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). OBJECTPROPERTYEX は、データ定義言語 (DDL) トリガーやイベント通知などの非スキーマ スコープ オブジェクトには使用できません。  
+  現在のデータベース内のスキーマ スコープ オブジェクトに関する情報を返します。 これらのオブジェクトの一覧については、「[sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」をご覧ください。 OBJECTPROPERTYEX は、データ定義言語 (DDL) トリガーやイベント通知などの非スキーマ スコープ オブジェクトには使用できません。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,13 +50,13 @@ OBJECTPROPERTYEX ( id , property )
   
 ## <a name="arguments"></a>引数  
  *id*  
- 現在のデータベース内のオブジェクトの ID を表す式を指定します。 *id*は**int**は現在のデータベース コンテキストでのスキーマ スコープ オブジェクトであると仮定します。  
+ 現在のデータベース内のオブジェクトの ID を表す式を指定します。 *id* のデータ型は **int** で、現在のデータベース コンテキストでのスキーマ スコープ オブジェクトであることが前提となっています。  
   
- *プロパティ*  
- ID で指定したオブジェクトについて、返される情報を含む式を指定します。戻り値の型は**sql_variant**です。 次の表は、各プロパティ値に対する基本のデータ型です。  
+ *property*  
+ ID で指定したオブジェクトについて、返される情報を含む式を指定します。戻り値の型は **sql_variant** です。 次の表は、各プロパティ値に対する基本のデータ型です。  
   
 > [!NOTE]  
->  明記しない限り、NULL が返されます*プロパティ*有効なプロパティ名ではない*id* 、有効なオブジェクト ID ではありません*id*は、指定された、サポートされていないオブジェクト型です。*プロパティ*、か、呼び出し元に、オブジェクトのメタデータを表示するアクセス許可がありません。  
+>  *property* が有効なプロパティ名でない場合、*id* が有効なオブジェクト ID でない場合、*id* が指定した *property* でサポートされていないオブジェクトの種類であった場合、または呼び出し側にオブジェクトのメタデータを表示する権限がない場合は、特に指定のない限り、NULL が返されます。  
   
 |プロパティ名|オブジェクトの種類|説明と戻り値|  
 |-------------------|-----------------|-------------------------------------|  
@@ -70,7 +70,7 @@ OBJECTPROPERTYEX ( id , property )
 |CnstIsNotTrusted|制約|既存の行を確認せずに制約が有効化されており、 すべての行に制約が保持されない可能性があります。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |CnstIsUpdateCascade|制約|ON UPDATE CASCADE オプションを指定した FOREIGN KEY 制約。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |ExecIsAfterTrigger|トリガー|AFTER トリガー。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
-|ExecIsAnsiNullsOn|[!INCLUDE[tsql](../../includes/tsql-md.md)]関数、[!INCLUDE[tsql](../../includes/tsql-md.md)]プロシージャ[!INCLUDE[tsql](../../includes/tsql-md.md)]トリガー、ビュー|作成時に ANSI_NULLS の設定です。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
+|ExecIsAnsiNullsOn|[!INCLUDE[tsql](../../includes/tsql-md.md)] 関数、[!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャ、[!INCLUDE[tsql](../../includes/tsql-md.md)] トリガー、ビュー|作成時における ANSI_NULLS の設定。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |ExecIsDeleteTrigger|トリガー|DELETE トリガー。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |ExecIsFirstDeleteTrigger|トリガー|テーブルに対して DELETE を実行するときに最初に起動されるトリガー。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |ExecIsFirstInsertTrigger|トリガー|テーブルに対して INSERT を実行するときに最初に起動されるトリガー。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
@@ -80,7 +80,7 @@ OBJECTPROPERTYEX ( id , property )
 |ExecIsLastDeleteTrigger|トリガー|テーブルに対して DELETE を実行するときに最後に起動されるトリガー。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |ExecIsLastInsertTrigger|トリガー|テーブルに対して INSERT を実行するときに最後に起動されるトリガー。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |ExecIsLastUpdateTrigger|トリガー|テーブルに対して UPDATE を実行するときに最後に起動されるトリガー。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
-|ExecIsQuotedIdentOn|[!INCLUDE[tsql](../../includes/tsql-md.md)]関数、[!INCLUDE[tsql](../../includes/tsql-md.md)]プロシージャ[!INCLUDE[tsql](../../includes/tsql-md.md)]トリガー、ビュー|作成時における QUOTED_IDENTIFIER の設定。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
+|ExecIsQuotedIdentOn|[!INCLUDE[tsql](../../includes/tsql-md.md)] 関数、[!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャ、[!INCLUDE[tsql](../../includes/tsql-md.md)] トリガー、ビュー|作成時における QUOTED_IDENTIFIER の設定。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |ExecIsStartup|手順|スタートアップ プロシージャ。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |ExecIsTriggerDisabled|トリガー|トリガーの無効化。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |ExecIsTriggerNotForRepl|トリガー|NOT FOR REPLICATION として定義されているトリガー。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
@@ -91,38 +91,38 @@ OBJECTPROPERTYEX ( id , property )
 |HasInsertTrigger|テーブル、ビュー|テーブルまたはビューに INSERT トリガーがあります。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |HasInsteadOfTrigger|テーブル、ビュー|テーブルまたはビューに INSTEAD OF トリガーがあります。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |HasUpdateTrigger|テーブル、ビュー|テーブルまたはビューに UPDATE トリガーがあります。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
-|IsAnsiNullsOn|[!INCLUDE[tsql](../../includes/tsql-md.md)]関数、[!INCLUDE[tsql](../../includes/tsql-md.md)]プロシージャ、テーブル、[!INCLUDE[tsql](../../includes/tsql-md.md)]トリガー、ビュー|テーブルに対する ANSI NULLS オプションの設定をオンに指定します。NULL 値に対するすべての比較は UNKNOWN として評価されます。 この設定は、テーブルが存在する限り、計算列や制約をはじめとするテーブル定義内のすべての式に適用されます。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
+|IsAnsiNullsOn|[!INCLUDE[tsql](../../includes/tsql-md.md)] 関数、[!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャ、テーブル、[!INCLUDE[tsql](../../includes/tsql-md.md)] トリガー、ビュー|テーブルに対する ANSI NULLS オプションの設定をオンに指定します。NULL 値に対するすべての比較は UNKNOWN として評価されます。 この設定は、テーブルが存在する限り、計算列や制約をはじめとするテーブル定義内のすべての式に適用されます。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsCheckCnst|任意のスキーマ スコープ オブジェクト|CHECK 制約。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsConstraint|任意のスキーマ スコープ オブジェクト|制約。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsDefault|任意のスキーマ スコープ オブジェクト|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 既定のバインド。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsDefaultCnst|任意のスキーマ スコープ オブジェクト|DEFAULT 制約。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsDeterministic|スカラーおよびテーブル値関数、ビュー|関数またはビューの決定性を示すプロパティ。<br /><br /> 1 = 決定的<br /><br /> 0 = 非決定的<br /><br /> 基本データ型: **int**|  
-|IsEncrypted|[!INCLUDE[tsql](../../includes/tsql-md.md)]関数、[!INCLUDE[tsql](../../includes/tsql-md.md)]プロシージャ、テーブル、[!INCLUDE[tsql](../../includes/tsql-md.md)]トリガー、ビュー|モジュール ステートメントの元のテキストが、暗号化した形式に変換されたことを示します。 難読化の出力内のカタログ ビューのいずれかで直接表示がない[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。 システム テーブルまたはデータベース ファイルにアクセスすることがなくユーザーには、難読化されたテキストを取得できません。 ただし、テキストは経由でシステム テーブルにアクセスするか、ユーザーが使用できる、 [DAC ポート](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)または直接データベース ファイルにアクセスします。 また、サーバー プロセスにデバッガーをアタッチできるユーザーは、実行時、元のプロシージャをメモリから取得できます。<br /><br /> 1 = 暗号化<br /><br /> 0 = 暗号化されていません。<br /><br /> 基本データ型: **int**|  
+|IsEncrypted|[!INCLUDE[tsql](../../includes/tsql-md.md)] 関数、[!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャ、テーブル、[!INCLUDE[tsql](../../includes/tsql-md.md)] トリガー、ビュー|モジュール ステートメントの元のテキストが、暗号化した形式に変換されたことを示します。 暗号化した形式の出力は、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 内のどのカタログ ビューでも直接見ることはできません。 システム テーブルまたはデータベース ファイルへのアクセス権を持たないユーザーは、暗号化した形式のテキストを取得できません。 ただし、[DAC ポート](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)経由でシステム テーブルにアクセスする権限、または直接データベース ファイルにアクセスする権限を持っているユーザーは、このテキストを使用できます。 また、サーバー プロセスにデバッガーをアタッチできるユーザーは、実行時、元のプロシージャをメモリから取得できます。<br /><br /> 1 = 暗号化<br /><br /> 0 = 暗号化なし<br /><br /> 基本データ型: **int**|  
 |IsExecuted|任意のスキーマ スコープ オブジェクト|オブジェクトは実行可能 (ビュー、プロシージャ、関数、またはトリガー)。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsExtendedProc|任意のスキーマ スコープ オブジェクト|拡張プロシージャ。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsForeignKey|任意のスキーマ スコープ オブジェクト|FOREIGN KEY 制約。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
-|IsIndexed|テーブル、ビュー|テーブルまたはインデックス付きのビュー。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
-|IsIndexable|テーブル、ビュー|テーブルまたはビューのインデックスが作成されます。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
-|IsInlineFunction|関数|インライン関数。<br /><br /> 1 = インライン関数<br /><br /> 0 = インライン関数ではない<br /><br /> 基本データ型: **int**|  
-|IsMSShipped|任意のスキーマ スコープ オブジェクト|インストール中に作成されたオブジェクト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
+|IsIndexed|テーブル、ビュー|インデックス付きのテーブルまたはビュー。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
+|IsIndexable|テーブル、ビュー|インデックスを作成できるテーブルまたはビュー。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
+|IsInlineFunction|機能|インライン関数。<br /><br /> 1 = インライン関数<br /><br /> 0 = インライン関数ではない<br /><br /> 基本データ型: **int**|  
+|IsMSShipped|任意のスキーマ スコープ オブジェクト|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール中に作成されたオブジェクト。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsPrecise|計算列、関数、ユーザー定義型、ビュー|浮動小数点演算など、不正確な計算を含むオブジェクトかどうかを示します。<br /><br /> 1 = 正確<br /><br /> 0 = 不正確<br /><br /> 基本データ型: **int**|  
 |IsPrimaryKey|任意のスキーマ スコープ オブジェクト|PRIMARY KEY 制約。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsProcedure|任意のスキーマ スコープ オブジェクト|プロシージャ。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
-|IsQuotedIdentOn|CHECK 制約、DEFAULT 定義、[!INCLUDE[tsql](../../includes/tsql-md.md)]関数、[!INCLUDE[tsql](../../includes/tsql-md.md)]プロシージャ、テーブル、[!INCLUDE[tsql](../../includes/tsql-md.md)]トリガー、ビュー|オブジェクトの引用符で囲まれた識別子の設定をオンに指定します。オブジェクト定義に含まれるすべての式の識別子は、二重引用符によって区切られます。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
+|IsQuotedIdentOn|CHECK 制約、DEFAULT 定義、[!INCLUDE[tsql](../../includes/tsql-md.md)] 関数、[!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャ、テーブル、[!INCLUDE[tsql](../../includes/tsql-md.md)] トリガー、ビュー|オブジェクトの引用符で囲まれた識別子の設定をオンに指定します。オブジェクト定義に含まれるすべての式の識別子は、二重引用符によって区切られます。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsQueue|任意のスキーマ スコープ オブジェクト|Service Broker キュー。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsReplProc|任意のスキーマ スコープ オブジェクト|レプリケーション プロシージャ。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsRule|任意のスキーマ スコープ オブジェクト|ルールのバインド。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
-|IsScalarFunction|関数|スカラー値関数。<br /><br /> 1 = スカラー値関数<br /><br /> 0 = スカラー値関数ではない<br /><br /> 基本データ型: **int**|  
+|IsScalarFunction|機能|スカラー値関数。<br /><br /> 1 = スカラー値関数<br /><br /> 0 = スカラー値関数ではない<br /><br /> 基本データ型: **int**|  
 |IsSchemaBound|関数、プロシージャ、ビュー|SCHEMABINDING を使用して作成されたスキーマ バインド関数またはビュー。<br /><br /> 1 = スキーマ バインド<br /><br /> 0 = 非スキーマ バインド<br /><br /> 基本データ型: **int**|  
 |IsSystemTable|テーブル|システム テーブル。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsSystemVerified|計算列、関数、ユーザー定義型、ビュー|オブジェクトの精度と決定性のプロパティを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で確認できます。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsTable|テーブル|テーブル。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
-|IsTableFunction|関数|テーブル値関数。<br /><br /> 1 = テーブル値関数<br /><br /> 0 = テーブル値関数ではない<br /><br /> 基本データ型: **int**|  
-|IsTrigger|任意のスキーマ スコープ オブジェクト|トリガーです。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
+|IsTableFunction|機能|テーブル値関数。<br /><br /> 1 = テーブル値関数<br /><br /> 0 = テーブル値関数ではない<br /><br /> 基本データ型: **int**|  
+|IsTrigger|任意のスキーマ スコープ オブジェクト|トリガー。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsUniqueCnst|任意のスキーマ スコープ オブジェクト|UNIQUE 制約。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsUserTable|テーブル|ユーザー定義テーブル。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsView|表示|ビュー。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
-|OwnerId|任意のスキーマ スコープ オブジェクト|オブジェクトの所有者です。<br /><br /> **注:**必ずしもオブジェクト所有者がスキーマの所有者ではありません。 たとえば、子オブジェクト (いる*parent_object_id*が null でない) は常に、親と同じ所有者の ID を返します。<br /><br /> NULL 以外 = オブジェクト所有者のデータベース ユーザー ID<br /><br /> NULL = サポートされていないオブジェクトの種類、またはオブジェクト ID が有効でない<br /><br /> 基本データ型: **int**|  
+|OwnerId|任意のスキーマ スコープ オブジェクト|オブジェクトの所有者。<br /><br /> **注:** スキーマ所有者はオブジェクト所有者である必要はありません。 たとえば、子オブジェクト (*parent_object_id* が NULL でないオブジェクト) では、常に親オブジェクトと同じ所有者 ID が返されます。<br /><br /> NULL 以外 = オブジェクト所有者のデータベース ユーザー ID<br /><br /> NULL = サポートされていないオブジェクトの種類、またはオブジェクト ID が有効でない<br /><br /> 基本データ型: **int**|  
 |SchemaId|任意のスキーマ スコープ オブジェクト|オブジェクトに関連付けられているスキーマの ID。<br /><br /> NULL 以外 = オブジェクトのスキーマ ID<br /><br /> 基本データ型: **int**|  
 |SystemDataAccess|関数、ビュー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンス内にある、システム データ、システム カタログ、または仮想システム テーブルにオブジェクトがアクセスします。<br /><br /> 0 = なし<br /><br /> 1 = 読み取り<br /><br /> 基本データ型: **int**|  
 |TableDeleteTrigger|テーブル|テーブルに DELETE トリガーがあります。<br /><br /> >1 = 指定された種類の最初のトリガーの ID<br /><br /> 基本データ型: **int**|  
@@ -131,12 +131,12 @@ OBJECTPROPERTYEX ( id , property )
 |TableFullTextBackgroundUpdateIndexOn|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> テーブルでは、フルテキスト インデックスのバックグラウンド更新 (自動変更の追跡) が有効になっています。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> 基本データ型: **int**|  
 |TableFulltextCatalogId|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> テーブルのフルテキスト インデックス データが存在する、フルテキスト カタログの ID。<br /><br /> 0 以外 = フルテキスト インデックス テーブル内の行を識別する一意なインデックスに関連付けられた、フルテキスト カタログ ID。<br /><br /> 0 = テーブルにフルテキスト インデックスはない。<br /><br /> 基本データ型: **int**|  
 |TableFullTextChangeTrackingOn|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> テーブルでは、フルテキストの変更の追跡が有効になっています。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> 基本データ型: **int**|  
-|TableFulltextDocsProcessed|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> フルテキスト インデックス作成の開始以降に処理された行の数。 フルテキスト検索用にインデックスが作成されるテーブルでは、1 行のすべての列が、インデックスが作成される 1 つのドキュメントの一部と見なされます。<br /><br /> 0 = アクティブ クロールまたはフルテキスト インデックス作成は完了していない<br /><br /> > 0 = 次のいずれか (A または B): A) で挿入または更新操作が開始されてからの完全、増分、または手動の変更を追跡します処理されたドキュメントの数。B) 挿入または更新操作の変更の追跡をバック グラウンド更新インデックス作成が有効になっているため、フルテキスト インデックス スキーマの変更、フルテキスト カタログの再構築すると、またはのインスタンスによって処理された行の数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]再起動とにします。<br /><br /> NULL = テーブルにフルテキスト インデックスはない。<br /><br /> 基本データ型: **int**<br /><br /> **注**このプロパティを監視または削除された行をカウントしません。|  
-|TableFulltextFailCount|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> フルテキスト検索でインデックスが作成されなかった行の数。<br /><br /> 0 = 作成完了<br /><br /> > 0 = 次のいずれか (A または B): A) Full、Incremental、および手動更新の変更が追跡; が開始されてからインデックスが作成されなかったドキュメントの数B) の変更の追跡を背景には、インデックス、インデックスを作成の開始または母集団の再起動以降インデックスが作成されなかった行の数を更新します。 これは、スキーマ変更、カタログの再構築、サーバーの再起動などにより発生する場合があります。<br /><br /> NULL = テーブルにフルテキスト インデックスはない<br /><br /> 基本データ型: **int**|  
+|TableFulltextDocsProcessed|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> フルテキスト インデックス作成の開始以降に処理された行の数。 フルテキスト検索用にインデックスが作成されるテーブルでは、1 行のすべての列が、インデックスが作成される 1 つのドキュメントの一部と見なされます。<br /><br /> 0 = アクティブ クロールまたはフルテキスト インデックス作成は完了していない<br /><br /> > 0 = 次のいずれか (A または B): A) 完全、増分、または手動による変更追跡の作成開始以降、挿入操作や更新操作で処理されたドキュメントの数です。B) バックグラウンド更新インデックス作成の有効化、フルテキスト インデックス スキーマの変更、フルテキスト カタログの再構築、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの再起動などの変更の追跡以降、挿入操作や更新操作で処理された行数。<br /><br /> NULL = テーブルにフルテキスト インデックスはない。<br /><br /> 基本データ型: **int**<br /><br /> **注** このプロパティは、削除された行を監視またはカウントしません。|  
+|TableFulltextFailCount|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> フルテキスト検索でインデックスが作成されなかった行の数。<br /><br /> 0 = 作成完了<br /><br /> > 0 = 次のいずれか (A または B): A) 完全、増分、または手動更新による変更追跡の作成開始以降に、インデックスが作成されなかったドキュメントの数。B) インデックスのバックグラウンド更新による変更追跡の場合、作成の開始または再開以降にインデックスが作成されなかった行数。 これは、スキーマ変更、カタログの再構築、サーバーの再起動などにより発生する場合があります。<br /><br /> NULL = テーブルにフルテキスト インデックスはない<br /><br /> 基本データ型: **int**|  
 |TableFulltextItemCount|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> NULL 以外 = フルテキスト インデックスが正常に作成された行の数。<br /><br /> NULL = テーブルにフルテキスト インデックスはない。<br /><br /> 基本データ型: **int**|  
 |TableFulltextKeyColumn|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> フルテキスト インデックスとセマンティック インデックスの定義の一部である、一意な単一列インデックスに関連付けられた列の ID。<br /><br /> 0 = テーブルにフルテキスト インデックスはない。<br /><br /> 基本データ型: **int**|  
 |TableFulltextPendingChanges|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 変更の追跡が処理されていないエントリ数。<br /><br /> 0 = 変更の追跡は有効でない<br /><br /> NULL = テーブルにフルテキスト インデックスはない。<br /><br /> 基本データ型: **int**|  
-|TableFulltextPopulateStatus|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 0 = アイドル状態<br /><br /> 1 = 全体を作成中<br /><br /> 2 = 増分作成中<br /><br /> 3 = 追跡した変更を伝達中<br /><br /> 4 = バック グラウンド更新インデックスは、自動変更の追跡などの進行中です。<br /><br /> 5 = フルテキスト インデックス作成が絞り込みまたは停止された<br /><br /> 6 = エラーが発生しました。 詳細については、クロール ログを確認します。 詳細については、次を参照してください。、**フルテキスト作成 (クロール) でのエラーのトラブルシューティング**のセクション[、フルテキスト インデックスの作成](../../relational-databases/search/populate-full-text-indexes.md)です。<br /><br /> 基本データ型: **int**|  
+|TableFulltextPopulateStatus|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 0 = アイドル状態<br /><br /> 1 = 全体を作成中<br /><br /> 2 = 増分作成中<br /><br /> 3 = 追跡した変更を伝達中<br /><br /> 4 = 自動変更の追跡など、インデックスのバックグラウンド更新が進行中<br /><br /> 5 = フルテキスト インデックス作成が絞り込みまたは停止された<br /><br /> 6 = エラーが発生しました。 詳細については、クロール ログを確認します。 詳しくは、「[フルテキスト インデックスの作成](../../relational-databases/search/populate-full-text-indexes.md)」の「**フルテキスト作成 (クロール) で発生したエラーのトラブルシューティング**」セクションをご覧ください。<br /><br /> 基本データ型: **int**|  
 |TableFullTextSemanticExtraction|テーブル|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> テーブルでセマンティック インデックス作成が有効になっています。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |TableHasActiveFulltextIndex|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> テーブルにアクティブなフルテキスト インデックスがあります。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |TableHasCheckCnst|テーブル|テーブルに CHECK 制約があります。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
@@ -150,24 +150,24 @@ OBJECTPROPERTYEX ( id , property )
 |TableHasInsertTrigger|テーブル|オブジェクトに INSERT トリガーがあります。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |TableHasNonclustIndex|テーブル|テーブルに非クラスター化インデックスがあります。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |TableHasPrimaryKey|テーブル|テーブルに主キーがあります。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
-|TableHasRowGuidCol|テーブル|テーブルの ROWGUIDCOL には、 **uniqueidentifier**列です。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
-|TableHasTextImage|テーブル|テーブルには、**テキスト**、 **ntext**、または**イメージ**列です。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
-|TableHasTimestamp|テーブル|テーブルには、**タイムスタンプ**列です。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
+|TableHasRowGuidCol|テーブル|テーブルには、**uniqueidentifier** 列用の ROWGUIDCOL があります。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
+|TableHasTextImage|テーブル|テーブルには、**text**、**ntext**、または **image** 列があります。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
+|TableHasTimestamp|テーブル|テーブルには、**timestamp** 列があります。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |TableHasUniqueCnst|テーブル|テーブルに UNIQUE 制約があります。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |TableHasUpdateTrigger|テーブル|オブジェクトに UPDATE トリガーがあります。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
-|TableHasVarDecimalStorageFormat|テーブル|テーブルが有効になって**vardecimal**ストレージ形式です。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasVarDecimalStorageFormat|テーブル|テーブルで **vardecimal** ストレージ形式が有効になっています。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableInsertTrigger|テーブル|テーブルに INSERT トリガーがあります。<br /><br /> >1 = 指定された種類の最初のトリガーの ID<br /><br /> 基本データ型: **int**|  
 |TableInsertTriggerCount|テーブル|テーブルに、指定された数の INSERT トリガーがあります。<br /><br /> >0 = INSERT トリガーの数<br /><br /> 基本データ型: **int**|  
-|TableIsFake|テーブル|テーブルは実在せず、 オンデマンドで内部的に具体化されて、[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
-|TableIsLockedOnBulkLoad|テーブル|テーブルがロックされているため、 **bcp**または BULK INSERT ジョブです。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
+|TableIsFake|テーブル|テーブルは実在せず、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]によって、要求時に実際の領域が内部で確保されます。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
+|TableIsLockedOnBulkLoad|テーブル|**bcp** または BULK INSERT ジョブによってテーブルがロックされています。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |TableIsMemoryOptimized|テーブル|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> テーブルはメモリ最適化されています<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**<br /><br /> 詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。|  
-|TableIsPinned|テーブル|テーブルは固定され、データ キャッシュに確保されています。<br /><br /> 0 = False<br /><br /> この機能はサポートされていません[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョン。|  
-|TableTextInRowLimit|テーブル|テーブルに text in row オプション セットがあります。<br /><br /> > 0 = text in row に許可されている最大バイト数。<br /><br /> 0 = テキスト行のオプションが設定されていません。<br /><br /> 基本データ型: **int**|  
+|TableIsPinned|テーブル|テーブルは固定され、データ キャッシュに確保されています。<br /><br /> 0 = False<br /><br /> この機能は [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンではサポートされていません。|  
+|TableTextInRowLimit|テーブル|テーブルに text in row オプション セットがあります。<br /><br /> > 0 = text in row に許可されている最大バイト数。<br /><br /> 0 = text in row オプションは設定されていません。<br /><br /> 基本データ型: **int**|  
 |TableUpdateTrigger|テーブル|テーブルに UPDATE トリガーがあります。<br /><br /> > 1 = 指定された種類の最初のトリガーの ID<br /><br /> 基本データ型: **int**|  
 |TableUpdateTriggerCount|テーブル|テーブルに、指定された数の UPDATE トリガーがあります。<br /><br /> > 0 = UPDATE トリガーの数<br /><br /> 基本データ型: **int**|  
 |UserDataAccess|関数、ビュー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンス内にある、ユーザー データやユーザー テーブルにオブジェクトがアクセスします。<br /><br /> 1 = 読み取り<br /><br /> 0 = なし<br /><br /> 基本データ型: **int**|  
 |TableHasColumnSet|テーブル|テーブルに列セットがあります。<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> 詳細については、「 [列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。|  
-|Cardinality|テーブル (システムまたはユーザー定義)、ビュー、またはインデックス|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 指定されたオブジェクト内の行数。|  
+|基数|テーブル (システムまたはユーザー定義)、ビュー、またはインデックス|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 指定されたオブジェクト内の行数。|  
 |TableTemporalType|テーブル|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> テーブルの種類を指定します。<br /><br /> 0 = 非一時的なテーブル<br /><br /> 1 = システムのバージョン情報のテーブルの履歴テーブル<br /><br /> 2 = システムのバージョン情報の一時的なテーブル|  
   
 ## <a name="return-types"></a>戻り値の型  
@@ -178,8 +178,8 @@ OBJECTPROPERTYEX ( id , property )
   
  ユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なリソースのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (OBJECTPROPERTYEX など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]であると推定*object_id*が現在のデータベース コンテキスト。 参照するクエリ、 *object_id*別のデータベースで NULL または不適切な結果が返されます。 たとえば、次のクエリでは現在のデータベース コンテキストは、マスター データベースです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]を指定されたプロパティの値を返そう*object_id*クエリで指定されているデータベースではなく、そのデータベースにします。 クエリが正しくない結果を返しますビュー `vEmployee` master データベースに含まれない。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、*object_id* が現在のデータベース コンテキスト内にあることが前提となっています。 別のデータベースの *object_id* を参照するクエリは、NULL または正しくない値を返します。 たとえば、次のクエリでは、現在のデータベース コンテキストは master データベースです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は、クエリ内で指定されたデータベースではなく、このデータベースの指定された *object_id* のプロパティ値を返します。 ビュー `vEmployee` は master データベース内にないため、このクエリでは正しくない結果が返されます。  
   
 ```  
 USE master;  
@@ -188,9 +188,9 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID(N'AdventureWorks2012.HumanResources.vEmployee'
 GO  
 ```  
   
- OBJECTPROPERTYEX (*view_i*d, 'IsIndexable') IsIndexable プロパティの評価は、ビュー定義、正規化、および部分最適化の解析が必要なために、多くのコンピューター リソースを使用することがあります。 IsIndexable プロパティではインデックスを作成できるテーブルまたはビューを指定しますが、特定のインデックス キーの要件が満たされない場合、インデックスの実際の作成は失敗します。 詳細については、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。  
+ OBJECTPROPERTYEX(*view_id*, 'IsIndexable') は、多くのコンピューター リソースを使用する可能性があります。これは、IsIndexable プロパティを評価するために、ビュー定義、正規化、および部分最適化の解析が必要なためです。 IsIndexable プロパティではインデックスを作成できるテーブルまたはビューを指定しますが、特定のインデックス キーの要件が満たされない場合、インデックスの実際の作成は失敗します。 詳細については、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。  
   
- OBJECTPROPERTYEX (*table_id*、'TableHasActiveFulltextIndex') はインデックス作成のため、テーブルの少なくとも 1 つの列が追加されたときに 1 (true) の値を返します。 インデックス作成で先頭の列が追加されるとすぐ、フルテキスト インデックス作成が自動的にアクティブになります。  
+ OBJECTPROPERTYEX(*table_id*, 'TableHasActiveFulltextIndex') は、テーブルの少なくとも 1 つの列にインデックスが作成されている場合は、1 (TRUE) を返します。 インデックス作成で先頭の列が追加されるとすぐ、フルテキスト インデックス作成が自動的にアクティブになります。  
   
  メタデータの表示に関する制限は、結果セットに適用されます。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
@@ -228,7 +228,7 @@ GO
 ```  
   
 ### <a name="c-finding-tables-that-have-a-foreign-key-constraint"></a>C. FOREIGN KEY 制約を含むテーブルを探す  
- 次の例では、 `TableHasForeignKey` FOREIGN KEY 制約があるすべてのテーブルを取得するプロパティです。  
+ 次の例では、`TableHasForeignKey` プロパティを使用し、FOREIGN KEY 制約を含むすべてのテーブルを返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -241,10 +241,10 @@ GO
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-finding-the-base-type-of-an-object"></a>D: オブジェクトの基本型を検索します。  
- 次の例は、の基本型を返します`dbo.DimReseller`オブジェクト。  
+### <a name="d-finding-the-base-type-of-an-object"></a>D: オブジェクトの基本型を検索する  
+ 次の例では、`dbo.DimReseller` オブジェクトの基本型を返します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -261,14 +261,14 @@ U
 ```  
   
 ## <a name="see-also"></a>参照  
- [シノニム &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-synonym-transact-sql.md)   
- [メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
+ [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
- [OBJECT_ID と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/object-id-transact-sql.md)   
- [OBJECT_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/object-name-transact-sql.md)   
- [sys.objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [ALTER AUTHORIZATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [TYPEPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/typeproperty-transact-sql.md)  
+ [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
+ [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)  
   
   
 

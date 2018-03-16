@@ -1,5 +1,5 @@
 ---
-title: "CLOSE SYMMETRIC KEY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CLOSE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -53,16 +53,16 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
  *Key_name*  
  閉じる対称キーの名前を指定します。  
   
-## <a name="remarks"></a>解説  
- 開いている対称キーは、セキュリティ コンテキストではなくセッションにバインドされており、 明示的に閉じられるか、セッションが終了するまで引き続き使用できます。 CLOSE ALL SYMMETRIC KEYS でを使用して、現在のセッションで開かれた任意のデータベース マスター _ キーが閉じ、 [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md)ステートメントです。  開いているキーに関する情報は、 [sys.openkeys &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md)カタログ ビューです。  
+## <a name="remarks"></a>Remarks  
+ 開いている対称キーは、セキュリティ コンテキストではなくセッションにバインドされており、 明示的に閉じられるか、セッションが終了するまで引き続き使用できます。 CLOSE ALL SYMMETRIC KEYS では、[OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) ステートメントによって現在のセッションで開いていた任意のデータベースのマスター キーが閉じられます。  開いているキーに関する情報は、[sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) カタログ ビューで確認できます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  対称キーを閉じるために、明示的な権限は必要ありません。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-closing-a-symmetric-key"></a>A. 対称キーを閉じる  
- 次の例は、対称キーを閉じます`ShippingSymKey04`です。  
+ 次の例では、対称キー `ShippingSymKey04` を閉じます。  
   
 ```  
 CLOSE SYMMETRIC KEY ShippingSymKey04;  
@@ -81,6 +81,6 @@ GO
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [DROP SYMMETRIC KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-symmetric-key-transact-sql.md)  
+ [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "(TRANSACT-SQL) を元に戻す |Microsoft ドキュメント"
+title: REVERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ REVERT
   
 ## <a name="arguments"></a>引数  
  WITH COOKIE = @*varbinary_variable*  
- 対応する作成されたクッキー指定[EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)スタンドアロンのステートメント。 *@varbinary_variable***varbinary (100)**です。  
+ 対応するスタンドアロンの [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) ステートメントで作成されたクッキーを指定します。 *@varbinary_variable* は **varbinary(100)** です。  
   
-## <a name="remarks"></a>解説  
- REVERT は、ストアド プロシージャまたはユーザー定義関数などのモジュール内、またはスタンドアロンのステートメントとして指定できます。 モジュール内で指定した場合、REVERT はモジュール内で定義された EXECUTE AS ステートメントにのみ適用されます。 たとえば、次のストアド プロシージャは、`EXECUTE AS`ステートメントの後に、`REVERT`ステートメントです。  
+## <a name="remarks"></a>Remarks  
+ REVERT は、ストアド プロシージャまたはユーザー定義関数などのモジュール内、またはスタンドアロンのステートメントとして指定できます。 モジュール内で指定した場合、REVERT はモジュール内で定義された EXECUTE AS ステートメントにのみ適用されます。 たとえば、次のストアド プロシージャでは、`EXECUTE AS` ステートメントの後に `REVERT` ステートメントが実行されます。  
   
 ```  
 CREATE PROCEDURE dbo.usp_myproc   
@@ -79,22 +79,22 @@ GO
 EXECUTE dbo.usp_myproc;   
 ```  
   
- `REVERT`ステートメント内で定義される`usp_myproc`モジュール内に設定された実行コンテキストを切り替えるには、モジュールの外部に設定された実行コンテキストは影響しません。 つまり、セッションの実行コンテキストに設定されたまま`login1`です。  
+ この場合、`usp_myproc` 内で定義された `REVERT` ステートメントでは、モジュール内で設定されている実行コンテキストが切り替えられますが、モジュール外で設定されている実行コンテキストに影響はありません。 つまり、セッションの実行コンテキストは `login1` のままです。  
   
  スタンドアロンのステートメントとして指定した場合、REVERT はバッチまたはセッション内で定義された EXECUTE AS に適用されます。 対応する EXECUTE AS ステートメントに WITH NO REVERT 句が含まれている場合、REVERT は無効です。 この場合、実行コンテキストはセッションが削除されるまで有効です。  
   
 ## <a name="using-revert-with-cookie"></a>REVERT WITH COOKIE の使用  
- EXECUTE をセッションの実行コンテキストを設定するために使用するステートメントに WITH NO REVERT COOKIE のオプションの句を含めることができます = @*varbinary_variabl*e です。 このステートメントを実行すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] @ する cookie を渡します*varbinary_variabl*e です。 実行コンテキスト設定いるステートメントできますのみ戻す前のコンテキストに場合は、呼び出し元の REVERT WITH COOKIE = @*varbinary_variable*ステートメントが含まれていますが、正しい *@varbinary_variable* 値。  
+ セッションの実行コンテキストの設定に使われる EXECUTE AS ステートメントには、WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定できます。 このステートメントを実行すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ではクッキーが @*varbinary_variable* に渡されます。 そのステートメントで設定された実行コンテキストを以前のコンテキストに戻すことができるのは、REVERT WITH COOKIE = @*varbinary_variable* ステートメントの呼び出し時に、適切な *@varbinary_variable* 値が含まれている場合だけです。  
   
- このメカニズムは、接続プールが使用される環境で役立ちます。 接続プールには、複数のエンド ユーザーがアプリケーションで再利用するデータベース接続のグループが管理されています。 値が渡されるため *@varbinary_variable*  EXECUTE の呼び出し元のみが知っている呼び出し元ステートメントとして (この場合は、アプリケーション)、エンドユーザーが確立した実行コンテキストを変更できないことを保証できますアプリケーションが起動します。 実行コンテキストが戻された後、アプリケーションではコンテキストを他のプリンシパルに切り替えることができます。  
+ このメカニズムは、接続プールが使用される環境で役立ちます。 接続プールには、複数のエンド ユーザーがアプリケーションで再利用するデータベース接続のグループが管理されています。 *@varbinary_variable* に渡される値は、EXECUTE AS ステートメントの呼び出し元 (この場合はアプリケーション) だけが認識できるため、呼び出し元が確立した実行コンテキストは、アプリケーションを呼び出すエンド ユーザーによって変更されることはありません。 実行コンテキストが戻された後、アプリケーションではコンテキストを他のプリンシパルに切り替えることができます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  権限は必要ありません。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-execute-as-and-revert-to-switch-context"></a>A. EXECUTE AS と REVERT を使用してコンテキストを切り替える  
- 次の例では、複数のプリンシパルを使用してコンテキスト実行スタックを作成します。 REVERT ステートメントを使用して実行コンテキストを以前のコンテキストに戻します。 REVERT ステートメントは、実行コンテキストが最初の呼び出し元に設定されるまで、スタックの上層に向かって複数回実行されます。  
+ 次の例では、複数のプリンシパルを使用してコンテキスト実行スタックを作成した後、 REVERT ステートメントを使用して実行コンテキストを以前のコンテキストに戻します。 REVERT ステートメントは、実行コンテキストが最初の呼び出し元に設定されるまで、スタックの上層に向かって複数回実行されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -138,7 +138,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>B. WITH COOKIE 句を使用する  
- 次の例は、指定したユーザーのセッションの実行コンテキストを設定し、指定、WITH NO REVERT COOKIE = @*varbinary_variabl*e 句。 `REVERT`ステートメントに渡された値を指定する必要があります、`@cookie`に変数が、`EXECUTE AS`呼び出し元に戻すコンテキストを正常に戻すにはステートメントです。 この例を実行するには、例 A で作成したログイン `login1` とユーザー `user1` が存在している必要があります。  
+ 次の例では、セッションの実行コンテキストを、指定したユーザーに設定し、WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定します。 コンテキストを正常に呼び出し元に戻すには、`REVERT` ステートメントで、`EXECUTE AS` ステートメントの `@cookie` 変数に渡される値を指定する必要があります。 この例を実行するには、例 A で作成したログイン `login1` とユーザー `user1` が存在している必要があります。  
   
 ```  
 DECLARE @cookie varbinary(100);  
@@ -160,11 +160,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [実行 AS (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-transact-sql.md)   
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [EXECUTE AS 句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [SUSER_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/suser-name-transact-sql.md)   
- [USER_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/user-name-transact-sql.md)   
+ [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)   
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)  
   

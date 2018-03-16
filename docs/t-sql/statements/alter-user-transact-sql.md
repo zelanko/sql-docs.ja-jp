@@ -1,5 +1,5 @@
 ---
-title: "ALTER USER (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER USER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/05/2017
 ms.prod: sql-non-specified
@@ -111,63 +111,63 @@ ALTER USER userName
 ```  
   
 ## <a name="arguments"></a>引数  
- *ユーザー名*  
+ *userName*  
  データベース内でユーザーを識別する名前を指定します。  
   
- ログイン **=**  *loginName*  
+ LOGIN **=***loginName*  
  ユーザーのセキュリティ識別子 (SID) を別のログインの SID に一致するように変更することで、ユーザーを別のログインに再マップします。  
   
  ALTER USER ステートメントが SQL のバッチ内の唯一のステートメントである場合、Windows Azure SQL データベースでは WITH LOGIN 句がサポートされます。 ALTER USER ステートメントが SQL のバッチ内の唯一のステートメントではない場合、または動的 SQL で実行されていない場合、WITH LOGIN 句はサポートされません。  
   
- 名前 **=**  *newUserName*  
- このユーザーの新しい名前を指定します。 *newUserName*現在のデータベースには存在しない必要があります。  
+ NAME **=***newUserName*  
+ このユーザーの新しい名前を指定します。 *newUserName* は現在のデータベースに存在しない名前にする必要があります。  
   
- DEFAULT_SCHEMA  **=**  { *schemaName* |NULL}  
+ DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
  このユーザー用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。 既定のスキーマを NULL に設定すると、既定のスキーマが Windows グループから削除されます。   Windows ユーザーでは NULL オプションは使用できません。  
   
- パスワード **=**  '*パスワード*'  
- **適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+ PASSWORD **=** '*password*'  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  変更するユーザーのパスワードを指定します。 パスワードでは大文字と小文字が区別されます。  
   
 > [!NOTE]  
->  このオプションは、包含ユーザーに対してのみ使用できます。 参照してください[Contained Databases](../../relational-databases/databases/contained-databases.md)と[sp_migrate_user_to_contained (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)詳細についてはします。  
+>  このオプションは、包含ユーザーに対してのみ使用できます。 詳しくは、「[包含データベース](../../relational-databases/databases/contained-databases.md)および「[sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)」をご覧ください。  
   
- OLD_PASSWORD  **=**  *'oldpassword'*  
- **適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+ OLD_PASSWORD **=***'oldpassword'*  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- 現在のユーザー パスワードによって置き換えられる '*パスワード*' です。 パスワードでは大文字と小文字が区別されます。 *OLD_PASSWORD*がない限り、パスワードの変更に必要な**ALTER ANY USER**権限です。 必要とする*OLD_PASSWORD*とユーザーを防止**偽装**からパスワードを変更する権限です。  
+ '*password*' で置き換える現在のユーザー パスワードです。 パスワードでは大文字と小文字が区別されます。 **ALTER ANY USER** 権限がない場合、パスワードを変更するには、*OLD_PASSWORD* が必要です。 *OLD_PASSWORD* を必須にすることで、**IMPERSONATION** 権限を持つユーザーによるパスワードの変更を防止できます。  
   
 > [!NOTE]  
 >  このオプションは、包含ユーザーに対してのみ使用できます。  
   
- DEFAULT_LANGUAGE  **=**  *{NONE |\<lcid > |\<言語名 > |\<言語の別名 >}*  
+ DEFAULT_LANGUAGE **=***{ NONE | \<lcid> | \<language name> | \<language alias> }*  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- ユーザーに割り当てる既定の言語を指定します。 このオプションを NONE に設定した場合、既定の言語はデータベースの現在の既定の言語に設定されます。 データベースの既定の言語が将来変更されても、ユーザーの既定の言語は変更されません。 *DEFAULT_LANGUAGE*ローカル ID (lcid)、言語、または言語の別名の名前を指定できます。  
+ ユーザーに割り当てる既定の言語を指定します。 このオプションを NONE に設定した場合、既定の言語はデータベースの現在の既定の言語に設定されます。 データベースの既定の言語が将来変更されても、ユーザーの既定の言語は変更されません。 *DEFAULT_LANGUAGE* には、ローカル ID (LCID)、言語の名前、または言語の別名を指定できます。  
   
 > [!NOTE]  
 >  このオプションは包含データベースでのみ指定でき、また、包含ユーザーに対してのみ指定できます。  
   
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ON |**OFF** ]  
- **適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]  
+ **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
- 一括コピー操作で、サーバーに対する暗号化メタデータ チェックを抑制します。 これにより、データの暗号化を解除せずにテーブルまたはデータベース間でデータを一括コピーを暗号化するユーザー。 既定値は OFF です。  
+ 一括コピー操作でのサーバーの暗号化メタデータ チェックを抑制します。 これによりユーザーは、データを暗号化解除することなく、テーブルまたはデータベース間で暗号化データを一括コピーできます。 既定値は OFF です。  
   
 > [!WARNING]  
->  このオプションを不適切に使用すると、データが破損する場合があります。 詳細については、次を参照してください。[機密性の高いデータで保護された移行 Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)です。  
+>  このオプションを不適切に使用すると、データが破損する場合があります。 詳細については、「[Always Encrypted で保護された機微なデータの移行](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  既定のスキーマは、このデータベース ユーザー用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマになります。 特に指定しない限り、このデータベース ユーザーによって作成されたオブジェクトの所有者になるのは、既定のスキーマです。  
   
- ユーザーに既定のスキーマが設定されている場合は、その既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが所属しているグループに既定のスキーマが指定されている場合は、グループの既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが複数のグループに所属している場合、ユーザーの既定のスキーマは、最も小さい principle_id と明示的に設定された既定のスキーマを持つ Windows グループのスキーマになります。 で、ユーザーの既定のスキーマを特定できない場合、 **dbo**スキーマが使用されます。  
+ ユーザーに既定のスキーマが設定されている場合は、その既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが所属しているグループに既定のスキーマが指定されている場合は、グループの既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが複数のグループに所属している場合、ユーザーの既定のスキーマは、最も小さい principle_id と明示的に設定された既定のスキーマを持つ Windows グループのスキーマになります。 ユーザーに対する既定のスキーマを決定できない場合は、**dbo** スキーマが使用されます。  
   
  DEFAULT_SCHEMA には、データベースに現在存在しないスキーマも設定できます。 したがって、スキーマが作成される前に DEFAULT_SCHEMA をユーザーに割り当てることができます。  
   
  証明書または非対称キーにマップされているユーザーに対して DEFAULT_SCHEMA を指定することはできません。  
   
 > [!IMPORTANT]  
->  ユーザーのメンバーである場合、DEFAULT_SCHEMA の値は無視されます、 **sysadmin**固定サーバー ロール。 すべてのメンバー、 **sysadmin**固定サーバー ロールの既定のスキーマのある`dbo`です。  
+>  ユーザーが固定サーバー ロール **sysadmin** のメンバーである場合、DEFAULT_SCHEMA の値は無視されます。 固定サーバー ロール **sysadmin** のすべてのメンバーには、`dbo` の既定のスキーマが割り当てられます。  
   
  Windows のログインまたはグループにマップされているユーザーの名前を変更できるのは、新しいユーザー名の SID とデータベースに記録されている SID が一致する場合だけです。 この条件により、データベースにおける Windows ログインのなりすましを防止できます。  
   
@@ -185,31 +185,31 @@ ALTER USER userName
   
  これらの条件を満たさない場合は、呼び出し元が NAME 句を追加で呼び出さない限り、ユーザーの名前は変更されません。  
   
-マップされたユーザーの名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン、証明書または非対称キーは、バック スラッシュ文字を含めることはできません (\\)。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログイン、証明書、非対称キーにマップされているユーザーの名前には、円記号 (\\) を含めることはできません。  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
 > [!NOTE]  
->  持つユーザーは**ALTER ANY USER**権限は、すべてのユーザーの既定のスキーマを変更できます。 変更されたスキーマを所有するユーザーは、知らずに間違ったテーブルからデータを選択したり、間違ったスキーマからコードを実行する可能性があります。  
+>  **ALTER ANY USER** 権限を持つユーザーは、任意のユーザーの既定のスキーマを変更できます。 変更されたスキーマを所有するユーザーは、知らずに間違ったテーブルからデータを選択したり、間違ったスキーマからコードを実行する可能性があります。  
   
-### <a name="permissions"></a>Permissions  
- ユーザーの名前を変更する必要があります、 **ALTER ANY USER**権限です。  
+### <a name="permissions"></a>アクセス許可  
+ ユーザーの名前を変更するには、**ALTER ANY USER** 権限が必要です。  
   
- ユーザーの対象ログインを変更する必要があります、**コントロール**データベースに対する権限。  
+ ターゲットを変更するには、ユーザーのログインにデータベースの **CONTROL** 権限が必要です。  
   
- 持つユーザーのユーザー名を変更する**コントロール**データベースに対する権限が必要です、**コントロール**データベースに対する権限。  
+ データベースに対する **CONTROL** 権限を持つユーザーのユーザー名を変更するには、データベースに対する **CONTROL** 権限が必要です。  
   
- 既定のスキーマまたは言語を変更する必要があります。 **ALTER**ユーザーに対する権限。 ユーザーは自分が所有する既定のスキーマまたは言語を変更できます。  
+ 既定のスキーマまたは言語を変更するには、ユーザーに対する **ALTER** 権限が必要です。 ユーザーは自分が所有する既定のスキーマまたは言語を変更できます。  
   
 ## <a name="examples"></a>使用例  
 
 すべての例は、ユーザー データベースで実行されます。  
 
 ### <a name="a-changing-the-name-of-a-database-user"></a>A. データベース ユーザーの名前を変更する  
- 次の例は、データベース ユーザーの名前を変更`Mary5`に`Mary51`です。  
+ 次の例では、データベース ユーザー `Mary5` の名前を `Mary51` に変更します。  
   
 ```  
 ALTER USER Mary5 WITH NAME = Mary51;  
@@ -217,7 +217,7 @@ GO
 ```  
   
 ### <a name="b-changing-the-default-schema-of-a-user"></a>B. ユーザーの既定のスキーマを変更する  
- 次の例は、ユーザーの既定のスキーマを変更`Mary51`に`Purchasing`です。  
+ 次の例では、ユーザー `Mary51` の既定のスキーマを `Purchasing` に変更します。  
   
 ```  
 ALTER USER Mary51 WITH DEFAULT_SCHEMA = Purchasing;  
@@ -241,10 +241,10 @@ GO
   
 ## <a name="see-also"></a>参照  
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [DROP USER &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [包含データベース](../../relational-databases/databases/contained-databases.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sp_migrate_user_to_contained &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)  
+ [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)  
   
   
 

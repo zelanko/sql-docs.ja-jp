@@ -1,5 +1,5 @@
 ---
-title: "非対称キー (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
@@ -77,60 +77,60 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
 ```  
   
 ## <a name="arguments"></a>引数  
- *Asym_Key_Source*  
+ FROM *Asym_Key_Source*  
  非対称キー ペアの読み込み元を指定します。  
   
- 承認*database_principal_name*  
+ AUTHORIZATION *database_principal_name*  
  非対称キーの所有者を指定します。 所有者にロールとグループは指定できません。 このオプションを省略した場合、所有者は現在のユーザーになります。  
   
- ファイル ='*path_to_strong name_file*'  
+ FILE ='*path_to_strong-name_file*'  
  キー ペアの読み込み元となる、厳密な名前のファイルのパスを指定します。  
   
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
- 実行可能ファイル ='*path_to_executable_file*'  
+ EXECUTABLE FILE ='*path_to_executable_file*'  
  公開キーの読み込み元となる、アセンブリ ファイルを指定します。 Windows API の MAX_PATH による 260 文字までの制限があります。  
   
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
- アセンブリ*アセンブリ名*  
+ ASSEMBLY *Assembly_Name*  
  公開キーの読み込み元となる、アセンブリの名前を指定します。  
   
-ENCRYPTION BY  *\<key_name_in_provider >*キーの暗号化方法を指定します。 証明書、パスワード、または非対称キーを指定できます。  
+ENCRYPTION BY *\<key_name_in_provider>* キーを暗号化する方法を指定します。 証明書、パスワード、または非対称キーを指定できます。  
   
  KEY_NAME ='*key_name_in_provider*'  
- 外部プロバイダーからキー名を指定します。 外部キー管理の詳細については、次を参照してください。[拡張キー管理 &#40;です。EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ 外部プロバイダーからキー名を指定します。 外部キーの管理について詳しくは、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」をご覧ください。  
   
  CREATION_DISPOSITION = CREATE_NEW  
- 拡張キー管理デバイス上で新しいキーを作成します。 デバイス上のキー名を指定するには、PROV_KEY_NAME を使用する必要があります。 デバイスでキーが既に存在する場合、ステートメントはエラーで失敗します。  
+ 拡張キー管理デバイス上で新しいキーを作成します。 デバイス上のキー名を指定するには、PROV_KEY_NAME を使用する必要があります。 デバイスにキーが既に存在する場合は、ステートメントがエラーで失敗します。  
   
  CREATION_DISPOSITION = OPEN_EXISTING  
- マップ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]非対称のキーを既存の拡張キー管理キー。 デバイス上のキー名を指定するには、PROV_KEY_NAME を使用する必要があります。 CREATION_DISPOSITION = OPEN_EXISTING が指定されない場合、既定値は CREATE_NEW です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の非対称キーを、既存の拡張キー管理キーにマップします。 デバイス上のキー名を指定するには、PROV_KEY_NAME を使用する必要があります。 CREATION_DISPOSITION = OPEN_EXISTING が指定されない場合、既定値は CREATE_NEW です。  
   
- アルゴリズム =\<アルゴリズム >  
- 5 つのアルゴリズムを指定することができます。RSA_4096、RSA_3072、RSA_2048、RSA_1024、および RSA_512 です。  
+ ALGORITHM = \<algorithm>  
+ 指定できるアルゴリズムは、RSA_4096、RSA_3072、RSA_2048、RSA_1024、RSA_512 の 5 つです。  
   
- RSA_1024 と RSA_512 が推奨されていません。 RSA_1024 または RSA_512 (推奨されません) を使用する 120 以下をデータベース互換性レベルを設定する必要があります。  
+ RSA_1024 と RSA_512 は非推奨です。 RSA_1024 または RSA_512 を使う場合は (推奨されません)、データベース互換性レベルを 120 以下に設定する必要があります。  
   
- パスワード = '*パスワード*'  
- 秘密キーを暗号化するパスワードを指定します。 この句がない場合、秘密キーはデータベースのマスター キーで暗号化されます。 *パスワード*は最大 128 文字です。 *パスワード*のインスタンスを実行しているコンピューターの Windows パスワード ポリシーの要件を満たす必要がある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ PASSWORD = '*password*'  
+ 秘密キーを暗号化するパスワードを指定します。 この句がない場合、秘密キーはデータベースのマスター キーで暗号化されます。 *password* は最大 128 文字です。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。  
   
-## <a name="remarks"></a>解説  
- *非対称キー*は、データベース レベルのセキュリティ保護可能なエンティティです。 既定の形式では、このエンティティには公開キーと秘密キーの両方が含まれます。 FROM 句を使用せずに CREATE ASYMMETRIC KEY を実行した場合は、新しいキー ペアが作成されます。 FROM 句を使用して CREATE ASYMMETRIC KEY を実行した場合は、キー ペアがファイルからインポートされるか、公開キーがアセンブリからインポートされます。  
+## <a name="remarks"></a>Remarks  
+ "*非対称キー*" は、データベース レベルのセキュリティ保護可能なエンティティです。 既定の形式では、このエンティティには公開キーと秘密キーの両方が含まれます。 FROM 句を使用せずに CREATE ASYMMETRIC KEY を実行した場合は、新しいキー ペアが作成されます。 FROM 句を使用して CREATE ASYMMETRIC KEY を実行した場合は、キー ペアがファイルからインポートされるか、公開キーがアセンブリからインポートされます。  
   
  既定では、秘密キーはデータベースのマスター キーによって保護されます。 データベースのマスター キーが作成されていない場合、秘密キーを保護するにはパスワードが必要です。 データベースのマスター キーが存在する場合、パスワードは省略可能です。  
   
  秘密キーは、512、1,024、または 2,048 ビットの長さで指定できます。  
   
-## <a name="permissions"></a>Permissions  
- データベースに対する CREATE ASYMMETRIC KEY 権限が必要です。 AUTHORIZATION 句を指定する場合は、データベース プリンシパルに対する IMPERSONATE 権限、またはアプリケーション ロールに対する ALTER 権限が必要です。 Windows のログインのみに使用する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン、およびアプリケーション ロールは、非対称キーを所有できます。 グループとロールは非対称キーを所有できません。  
+## <a name="permissions"></a>アクセス許可  
+ データベースに対する CREATE ASYMMETRIC KEY 権限が必要です。 AUTHORIZATION 句を指定する場合は、データベース プリンシパルに対する IMPERSONATE 権限、またはアプリケーション ロールに対する ALTER 権限が必要です。 非対称キーを所有できるのは、Windows ログイン、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン、およびアプリケーション ロールだけです。 グループとロールは非対称キーを所有できません。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-creating-an-asymmetric-key"></a>A. 非対称キーを作成する  
- という名前の非対称キーを作成する例を次`PacificSales09`を使用して、`RSA_2048`アルゴリズム、およびパスワードで秘密キーを保護します。  
+ 次の例では、`RSA_2048` アルゴリズムを使って `PacificSales09` という非対称キーを作成し、パスワードで秘密キーを保護します。  
   
 ```  
 CREATE ASYMMETRIC KEY PacificSales09   
@@ -150,7 +150,7 @@ GO
 ```  
   
 ### <a name="c-creating-an-asymmetric-key-from-an-ekm-provider"></a>C. EKM プロバイダーから非対称キーを作成する  
- 次の例では、ファイルに格納されたキー ペアから非対称キー `EKM_askey1` を作成します。 暗号化と呼ばれる拡張キー管理プロバイダーを使用して`EKMProvider1`、し、そのプロバイダーは、キーと呼ばれる`key10_user1`です。  
+ 次の例では、ファイルに格納されたキー ペアから非対称キー `EKM_askey1` を作成します。 さらに、`EKMProvider1` という拡張キー管理プロバイダー、およびそのプロバイダー上の `key10_user1` というキーを使って、作成した非対称キーを暗号化します。  
   
 ```  
 CREATE ASYMMETRIC KEY EKM_askey1   

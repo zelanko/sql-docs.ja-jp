@@ -1,5 +1,5 @@
 ---
-title: "CREATE SYNONYM (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CREATE SYNONYM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
@@ -70,28 +70,28 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
 ## <a name="arguments"></a>引数  
  *schema_name_1*  
- シノニムを作成するスキーマを指定します。 場合*スキーマ*が指定されていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]現在のユーザーの既定のスキーマを使用します。  
+ シノニムを作成するスキーマを指定します。 *schema* を指定しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって現在のユーザーの既定のスキーマが使用されます。  
   
  *synonym_name*  
  新しいシノニムの名前です。  
   
- *サーバー名*  
+ *server_name*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  ベース オブジェクトがあるサーバーの名前です。  
   
  *database_name*  
- ベース オブジェクトがあるデータベースの名前です。 場合*database_name*が指定されていない、現在のデータベースの名前を使用します。  
+ ベース オブジェクトがあるデータベースの名前です。 *database_name* を指定しない場合、現在のデータベース名が使用されます。  
   
  *schema_name_2*  
- ベース オブジェクトのスキーマの名前です。 場合*schema_name*が指定されていない、現在のユーザーの既定のスキーマが使用されます。  
+ ベース オブジェクトのスキーマの名前です。 *schema_name* を指定しない場合、現在のユーザーの既定のスキーマが使用されます。  
   
  *object_name*  
  シノニムが参照するベース オブジェクトの名前です。  
   
  Windows Azure SQL データベースでは、database_name が現在のデータベースの場合、または database_name が tempdb で、object_name が # で始まる場合に、3 つの要素で構成された名前形式 database_name.[schema_name].object_name をサポートします。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  シノニムの作成時にベース オブジェクトが存在している必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ベース オブジェクトが存在することを実行時に確認します。  
   
  次の種類のオブジェクトに対してシノニムを作成することができます。  
@@ -105,13 +105,13 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 |SQL インラインテーブル値関数|SQL ストアド プロシージャ|  
 |表示|テーブル<sup>1</sup> (ユーザー定義)|  
   
- <sup>1 には、ローカルおよびグローバル一時テーブルが含まれています。</sup>  
+ <sup>1 ローカル一時テーブルとグローバル一時テーブルが含まれます。</sup>  
   
  4 部構成の関数ベース オブジェクト名はサポートされません。  
   
  シノニムは、動的な SQL で作成、削除、および参照できます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  ユーザーが特定のスキーマ内にシノニムを作成するには、CREATE SYNONYM 権限が必要であり、さらにスキーマを所有しているか ALTER SCHEMA 権限が与えられている必要があります。  
   
  CREATE SYNONYM 権限は、譲与可能な権限です。  
@@ -152,7 +152,7 @@ GO
 ``` 
   
 ### <a name="b-creating-a-synonym-to-remote-object"></a>B. リモート オブジェクトに対してシノニムを作成する  
- 次の例では、ベース オブジェクト`Contact`、という名前のリモート サーバー上にある`Server_Remote`です。  
+ 次の例では、ベース オブジェクト `Contact` は、`Server_Remote` というリモート サーバー上にあります。  
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
@@ -166,7 +166,7 @@ GO
 ```  
   
 ### <a name="c-creating-a-synonym-for-a-user-defined-function"></a>C. ユーザー定義関数に対してシノニムを作成する  
- 次の例は、という名前の関数を作成`dbo.OrderDozen`ちょうど 1 ダース単位に注文の金額を増加します。 次に、シノニム `dbo.CorrectOrder` を `dbo.OrderDozen` 関数に対して作成します。  
+ 次の例では、注文量をちょうど 1 ダース単位に増やす `dbo.OrderDozen` という名前の関数を作成します。 次に、シノニム `dbo.CorrectOrder` を `dbo.OrderDozen` 関数に対して作成します。  
   
 ```  
 -- Creating the dbo.OrderDozen function  
@@ -200,7 +200,7 @@ SELECT @Amt AS OriginalOrder, dbo.CorrectOrder(@Amt) AS ModifiedOrder;
 ```  
   
 ## <a name="see-also"></a>参照  
- [DROP SYNONYM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-synonym-transact-sql.md)   
+ [DROP SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/drop-synonym-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

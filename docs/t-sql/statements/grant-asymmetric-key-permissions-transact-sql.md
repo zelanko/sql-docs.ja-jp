@@ -1,5 +1,5 @@
 ---
-title: "非対称キー アクセス許可の付与 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "GRANT (非対称キーの権限の許可) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
@@ -49,10 +49,10 @@ GRANT { permission  [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>引数  
- *アクセス許可*  
+ *permission*  
  非対称キーに対して許可できる権限を指定します。 下の表をご覧ください。  
   
- 非対称キーに対する**::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::***asymmetric_key_name*  
  権限を許可する非対称キーを指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  
@@ -61,11 +61,11 @@ GRANT { permission  [ ,...n ] }
 -   データベース ユーザー  
 -   データベース ロール (database role)  
 -   アプリケーション ロール (application role)  
--   Windows ログインにマップされるデータベース ユーザー  
--   Windows グループにマップされるデータベース ユーザー  
--   証明書にマップされるデータベース ユーザー  
+-   Windows ログインにマップされているデータベース ユーザー  
+-   Windows グループにマップされているデータベース ユーザー  
+-   証明書にマップされているデータベース ユーザー  
 -   非対称キーにマップされているデータベース ユーザー  
--   データベース ユーザーが、サーバー プリンシパルにマップされていません。  
+-   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
 GRANT OPTION  
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
@@ -76,13 +76,13 @@ AS *granting_principal*
 -   データベース ユーザー  
 -   データベース ロール (database role)  
 -   アプリケーション ロール (application role)  
--   Windows ログインにマップされるデータベース ユーザー  
--   Windows グループにマップされるデータベース ユーザー  
--   証明書にマップされるデータベース ユーザー  
+-   Windows ログインにマップされているデータベース ユーザー  
+-   Windows グループにマップされているデータベース ユーザー  
+-   証明書にマップされているデータベース ユーザー  
 -   非対称キーにマップされているデータベース ユーザー  
--   データベース ユーザーが、サーバー プリンシパルにマップされていません。  
+-   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  非対称キーは、データベース レベルの保護可能なアイテムで、権限の階層で親となっているデータベースに含まれています。 次に、非対称キーで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |非対称キーの権限|権限が含まれる非対称キー権限|権限が含まれるデータベース権限|  
@@ -93,25 +93,25 @@ AS *granting_principal*
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  権限の許可者 (または AS オプションで指定されたプリンシパル) は、GRANT OPTION によって与えられた権限を保持しているか、権限が暗黙的に与えられる上位の権限を保持している必要があります。  
   
  AS オプションを使用する場合は、次の追加要件があります。  
   
 |AS *granting_principal*|必要な追加権限|  
 |------------------------------|------------------------------------|  
-|データベース ユーザー|メンバーシップ ユーザーに対する IMPERSONATE 権限、 **db_securityadmin**固定データベース ロール、メンバーシップ、 **db_owner**固定データベース ロールのメンバーシップまたは、 **sysadmin**固定サーバー ロール。|  
-|Windows ログインにマップされているデータベース ユーザー|メンバーシップ ユーザーに対する IMPERSONATE 権限、 **db_securityadmin**固定データベース ロール、メンバーシップ、 **db_owner**固定データベース ロールのメンバーシップまたは、 **sysadmin**固定サーバー ロール。|  
-|Windows グループにマップされているデータベース ユーザー|メンバーシップである Windows グループのメンバーシップ、 **db_securityadmin**固定データベース ロール、メンバーシップ、 **db_owner**固定データベース ロールのメンバーシップまたは、 **sysadmin**固定サーバー ロール。|  
-|証明書にマップされているデータベース ユーザー|メンバーシップ、 **db_securityadmin**固定データベース ロール、メンバーシップ、 **db_owner**固定データベース ロールのメンバーシップまたは、 **sysadmin**固定サーバー ロール。|  
-|非対称キーにマップされるデータベース ユーザー|メンバーシップ、 **db_securityadmin**固定データベース ロール、メンバーシップ、 **db_owner**固定データベース ロールのメンバーシップまたは、 **sysadmin**固定サーバー ロール。|  
-|任意のサーバー プリンシパルにマップされていないデータベース ユーザー|メンバーシップ ユーザーに対する IMPERSONATE 権限、 **db_securityadmin**固定データベース ロール、メンバーシップ、 **db_owner**固定データベース ロールのメンバーシップまたは、 **sysadmin**固定サーバー ロール。|  
-|データベース ロール|メンバーシップ、ロールに対する ALTER 権限、 **db_securityadmin**固定データベース ロール、メンバーシップ、 **db_owner**固定データベース ロールのメンバーシップまたは、 **sysadmin**固定サーバー ロール。|  
-|アプリケーション ロール|メンバーシップ、ロールに対する ALTER 権限、 **db_securityadmin**固定データベース ロール、メンバーシップ、 **db_owner**固定データベース ロールのメンバーシップまたは、 **sysadmin**固定サーバー ロール。|  
+|データベース ユーザー|ユーザーに対する IMPERSONATE 権限、**db_securityadmin** 固定データベース ロールのメンバーシップ、**db_owner** 固定データベース ロールのメンバーシップ、または **sysadmin** 固定サーバー ロールのメンバーシップ。|  
+|Windows ログインにマップされているデータベース ユーザー|ユーザーに対する IMPERSONATE 権限、**db_securityadmin** 固定データベース ロールのメンバーシップ、**db_owner** 固定データベース ロールのメンバーシップ、または **sysadmin** 固定サーバー ロールのメンバーシップ。|  
+|Windows グループにマップされているデータベース ユーザー|Windows グループのメンバーシップ、**db_securityadmin** 固定データベース ロールのメンバーシップ、**db_owner** 固定データベース ロールのメンバーシップ、または **sysadmin** 固定サーバー ロールのメンバーシップ。|  
+|証明書にマップされているデータベース ユーザー|**db_securityadmin** 固定データベース ロールのメンバーシップ、**db_owner** 固定データベース ロールのメンバーシップ、または **sysadmin** 固定サーバー ロールのメンバーシップ。|  
+|非対称キーにマップされているデータベース ユーザー|**db_securityadmin** 固定データベース ロールのメンバーシップ、**db_owner** 固定データベース ロールのメンバーシップ、または **sysadmin** 固定サーバー ロールのメンバーシップ。|  
+|サーバー プリンシパルにマップされていないデータベース ユーザー|ユーザーに対する IMPERSONATE 権限、**db_securityadmin** 固定データベース ロールのメンバーシップ、**db_owner** 固定データベース ロールのメンバーシップ、または **sysadmin** 固定サーバー ロールのメンバーシップ。|  
+|データベース ロール|ロールに対する ALTER 権限、**db_securityadmin** 固定データベース ロールのメンバーシップ、**db_owner** 固定データベース ロールのメンバーシップ、または **sysadmin** 固定サーバー ロールのメンバーシップ。|  
+|アプリケーション ロール|ロールに対する ALTER 権限、**db_securityadmin** 固定データベース ロールのメンバーシップ、**db_owner** 固定データベース ロールのメンバーシップ、または **sysadmin** 固定サーバー ロールのメンバーシップ。|  
   
  オブジェクトの所有者は、所有するオブジェクトの権限を許可できます。 セキュリティ保護可能なリソースに対して CONTROL 権限があるプリンシパルは、そのリソースの権限を許可できます。  
   
- メンバーなど、CONTROL SERVER 権限の付与、 **sysadmin**固定サーバー ロールは、いずれかに対する権限を許可できるサーバーのセキュリティ保護可能な。 メンバーなど、データベースに対する CONTROL 権限の付与、 **db_owner**固定データベース ロールがいずれかに対する権限を許可できるデータベースのセキュリティ保護可能な。 スキーマに対する CONTROL 権限が許可されているユーザーは、スキーマ内のオブジェクトに対する権限を許可できます。  
+ **sysadmin** 固定サーバー ロールのメンバーなど、CONTROL SERVER 権限が許可されているユーザーは、サーバー内のセキュリティ保護可能なリソースに対する権限を許可できます。 **db_owner** 固定データベース ロールのメンバーなど、データベースに対する CONTROL 権限が許可されているユーザーは、データベース内のセキュリティ保護可能なリソースに対する権限を許可できます。 スキーマに対する CONTROL 権限が許可されているユーザーは、スキーマ内のオブジェクトに対する権限を許可できます。  
   
 ## <a name="see-also"></a>参照  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
@@ -119,6 +119,6 @@ AS *granting_principal*
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [APPLICATION ROLE &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-application-role-transact-sql.md)  
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)  
   
   

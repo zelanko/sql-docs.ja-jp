@@ -1,5 +1,5 @@
 ---
-title: "リモート サービス バインド (TRANSACT-SQL) の削除 |Microsoft ドキュメント"
+title: DROP REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,11 +54,11 @@ DROP REMOTE SERVICE BINDING binding_name
  *binding_name*  
  削除するリモート サービス バインドの名前を指定します。 サーバー名、データベース名、スキーマ名は指定できません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  リモート サービス バインドを削除する権限は、既定では、リモート サービス バインドの所有者、db_owner 固定データベース ロールのメンバー、sysadmin 固定サーバー ロールのメンバーに与えられています。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、リモート サービス バインドを削除`APBinding`データベースからです。  
+ 次の例では、データベースからリモート サービス バインド `APBinding` を削除します。  
   
 ```  
 DROP REMOTE SERVICE BINDING APBinding ;  
@@ -66,7 +66,7 @@ DROP REMOTE SERVICE BINDING APBinding ;
   
 ## <a name="see-also"></a>参照  
  [CREATE REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
- [リモート サービス バインド &#40; を ALTER します。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
+ [ALTER REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

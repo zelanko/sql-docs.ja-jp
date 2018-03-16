@@ -1,5 +1,5 @@
 ---
-title: "アセンブリの権限 (TRANSACT-SQL) を取り消す |Microsoft ドキュメント"
+title: "REVOKE (アセンブリの権限の取り消し) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -49,16 +49,16 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 ## <a name="arguments"></a>引数  
  GRANT OPTION FOR  
- 指定した権限を与えるまたは拒否する許可を取り消します。 その権限自体は失効しません。  
+ 指定した権限を与えるまたは拒否する許可を取り消します。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
   
- *アクセス許可*  
+ *permission*  
  アセンブリで取り消すことができる権限を指定します。 下の表をご覧ください。  
   
- アセンブリの**::***アセンブリ名*  
- 権限を取り消すアセンブリを指定します。 スコープ修飾子**::**が必要です。  
+ ON ASSEMBLY **::***assembly_name*  
+ 権限を取り消すアセンブリを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  
  権限を取り消すプリンシパルを指定します。 次のいずれかです。  
@@ -69,15 +69,15 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 -   アプリケーション ロール (application role)  
   
--   Windows ログインにマップされるデータベース ユーザー  
+-   Windows ログインにマップされているデータベース ユーザー  
   
--   Windows グループにマップされるデータベース ユーザー  
+-   Windows グループにマップされているデータベース ユーザー  
   
--   証明書にマップされるデータベース ユーザー  
+-   証明書にマップされているデータベース ユーザー  
   
 -   非対称キーにマップされているデータベース ユーザー  
   
--   データベース ユーザーが、サーバー プリンシパルにマップされていません。  
+-   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
  CASCADE  
  このプリンシパルによって権限が許可または拒否されている他のプリンシパルからも、同じ権限が取り消されることを示します。  
@@ -94,17 +94,17 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 -   アプリケーション ロール (application role)  
   
--   Windows ログインにマップされるデータベース ユーザー  
+-   Windows ログインにマップされているデータベース ユーザー  
   
--   Windows グループにマップされるデータベース ユーザー  
+-   Windows グループにマップされているデータベース ユーザー  
   
--   証明書にマップされるデータベース ユーザー  
+-   証明書にマップされているデータベース ユーザー  
   
 -   非対称キーにマップされているデータベース ユーザー  
   
--   データベース ユーザーが、サーバー プリンシパルにマップされていません。  
+-   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  アセンブリは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次に、アセンブリで取り消すことのできる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |アセンブリ権限|権限が含まれるアセンブリ権限|権限が含まれるデータベース権限|  
@@ -115,17 +115,17 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
- アセンブリに対する CONTROL 権限が必要です。  
+## <a name="permissions"></a>アクセス許可  
+ アセンブリに対する CONTROL 権限が必要です  
   
 ## <a name="see-also"></a>参照  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [アセンブリ &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-assembly-transact-sql.md)   
+ [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [APPLICATION ROLE &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

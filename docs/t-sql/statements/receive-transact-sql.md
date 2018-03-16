@@ -1,5 +1,5 @@
 ---
-title: "受信 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: RECEIVE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/21/2017
  WAITFOR  
  現在メッセージが存在しない場合、RECEIVE ステートメントは、キューにメッセージが到着するのを待機します。  
   
- 上部 (  *n*  )  
+ TOP( *n* )  
  返されるメッセージの最大数を指定します。 この句を指定しない場合、ステートメントの条件に合致したすべてのメッセージが返されます。  
   
  \*  
@@ -93,55 +93,55 @@ ms.lasthandoff: 11/21/2017
  取得するメッセージが含まれているキューを指定します。  
   
  *database_name*  
- メッセージを受信するキューが含まれているデータベースの名前です。 ない場合*データベース名*が提供される、既定値は、現在のデータベースです。  
+ メッセージを受信するキューが含まれているデータベースの名前です。 *database_name* を指定しない場合、既定では現在のデータベースが使用されます。  
   
  *schema_name*  
- メッセージを受信するキューを所有するスキーマの名前です。 ない場合*スキーマ名*が提供される、既定値は、現在のユーザーの既定のスキーマです。  
+ メッセージを受信するキューを所有するスキーマの名前です。 *schema_name* を指定しない場合、既定では現在のユーザーに関する既定のスキーマが使用されます。  
   
  *queue_name*  
  メッセージを受信するキューの名前です。  
   
- *Table_variable*  
+ INTO *table_variable*  
  RECEIVE によってメッセージを格納するテーブル変数を指定します。 テーブル変数の列数は、メッセージ内の列数と同じである必要があります。 テーブル変数の各列のデータ型は、メッセージ内の対応する列のデータ型に暗黙的に変換できる必要があります。 INTO を指定しない場合、メッセージは結果セットとして返されます。  
   
  WHERE  
  受信するメッセージのメッセージ交換、またはメッセージ交換グループを指定します。 指定しない場合、次に使用可能なメッセージ交換グループからのメッセージが返されます。  
   
  conversation_handle = *conversation_handle*  
- 受信するメッセージのメッセージ交換を指定します。 *メッセージ交換ハンドル*必要がありますを指定する、 **uniqueidentifer**、または型に変換できる**uniqueidentifier**です。  
+ 受信するメッセージのメッセージ交換を指定します。 指定する *conversation_handle* は、**uniqueidentifer** 型であるか、または **uniqueidentifier** に変換可能な型である必要があります。  
   
  conversation_group_id = *conversation_group_id*  
- 受信するメッセージのメッセージ交換グループを指定します。 *られているメッセージ交換グループ ID*提供する必要がありますする、 **uniqueidentifier**に変換できる型または**uniqueidentifier**です。  
+ 受信するメッセージのメッセージ交換グループを指定します。 指定する *conversation_group_id* は、**uniqueidentifer** 型であるか、または **uniqueidentifier** に変換可能な型である必要があります。  
   
- タイムアウト*タイムアウト*  
- ステートメントでメッセージを待機する時間をミリ秒で指定します。 この句は、WAITFOR 句と共にのみ使用できます。 この句が指定されていないか、タイムアウトが -**1**、待機時間は無制限です。 タイムアウトの時間を過ぎると、RECEIVE では空の結果セットが返されます。  
+ TIMEOUT *timeout*  
+ ステートメントでメッセージを待機する時間をミリ秒で指定します。 この句は WAITFOR 句と共に使用する必要があります。 この句を指定しないか、タイムアウトが -**1** の場合、待機時間は無制限になります。 タイムアウトの時間を過ぎると、RECEIVE では空の結果セットが返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  RECEIVE ステートメントがバッチまたはストアド プロシージャで最初のステートメントではない場合は、前のステートメントの後にセミコロン (;) を指定する必要があります。  
   
- RECEIVE ステートメントでは、キューからメッセージが読み取られ、結果セットが返されます。 結果セットには 0 以上の行が含まれ、各行には 1 つのメッセージが含まれます。 INTO 句を使用しない場合および*column_specifier*値が割り当てられないローカル変数に、ステートメントが呼び出し元のプログラムに結果セットを返します。  
+ RECEIVE ステートメントでは、キューからメッセージが読み取られ、結果セットが返されます。 結果セットには 0 以上の行が含まれ、各行には 1 つのメッセージが含まれます。 INTO 句が使用されず、*column_specifier* でローカル変数に値が割り当てられない場合、このステートメントでは呼び出し元のプログラムに結果セットが返されます。  
   
- RECEIVE ステートメントによって返されるメッセージには、さまざまなメッセージ型があります。 アプリケーションを使用して、 **message_type_name**をコードに各メッセージをルーティングする列が関連付けられているメッセージの種類を処理します。 メッセージ型には、次の 2 種類があります。  
+ RECEIVE ステートメントによって返されるメッセージには、さまざまなメッセージ型があります。 アプリケーションでは、**message_type_name** 列を使用して、関連付けられているメッセージ型を処理するコードに各メッセージをルーティングできます。 メッセージ型には、次の 2 種類があります。  
   
--   CREATE MESSAGE TYPE ステートメントを使用して作成されたアプリケーション定義のメッセージ型。 によって、メッセージ交換で許可されているアプリケーション定義のメッセージ型のセットが定義されている、[!INCLUDE[ssSB](../../includes/sssb-md.md)]メッセージ交換に対して指定されているコントラクト。  
+-   CREATE MESSAGE TYPE ステートメントを使用して作成されたアプリケーション定義のメッセージ型。 メッセージ交換で使用できるアプリケーション定義のメッセージ型のセットは、メッセージ交換に指定されている [!INCLUDE[ssSB](../../includes/sssb-md.md)] コントラクトで定義されます。  
   
--   [!INCLUDE[ssSB](../../includes/sssb-md.md)]システムでは、その戻り値の状態やエラー情報をメッセージです。  
+-   状態やエラー情報を返す [!INCLUDE[ssSB](../../includes/sssb-md.md)] システム メッセージ。  
   
- キューにメッセージ保有期間が指定されていない場合、RECEIVE ステートメントでは受信したメッセージがキューから削除されます。 キューの保有期間の設定が ON、RECEIVE ステートメントの更新プログラムの場合、**ステータス**列**0**し、キューにメッセージのままにします。 RECEIVE ステートメントを含むトランザクションがロールバックされる場合は、そのトランザクションでキューに行われたすべての変更もロールバックされ、キューにメッセージが戻されます。  
+ キューにメッセージ保有期間が指定されていない場合、RECEIVE ステートメントでは受信したメッセージがキューから削除されます。 キューの RETENTION 設定が ON になっている場合、RECEIVE ステートメントでは **status** 列が **0** に更新され、メッセージはキューに残ります。 RECEIVE ステートメントを含むトランザクションがロールバックされる場合は、そのトランザクションでキューに行われたすべての変更もロールバックされ、キューにメッセージが戻されます。  
   
- RECEIVE ステートメントで返されるメッセージは、すべて同じメッセージ交換グループに属しています。 RECEIVE ステートメントでは、ステートメントを含むトランザクションが完了するまで、返されるメッセージのメッセージ交換グループがロックされます。 RECEIVE ステートメントを持つメッセージが返されます、**ステータス**の**1 です。** RECEIVE ステートメントで返された結果セットは暗黙的に並べ替えられます。  
+ RECEIVE ステートメントで返されるメッセージは、すべて同じメッセージ交換グループに属しています。 RECEIVE ステートメントでは、ステートメントを含むトランザクションが完了するまで、返されるメッセージのメッセージ交換グループがロックされます。 RECEIVE ステートメントでは、**status** が **1** のメッセージが返されます。 RECEIVE ステートメントで返された結果セットは暗黙的に並べ替えられます。  
   
 -   複数のメッセージ交換のメッセージが WHERE 句の条件を満たす場合、RECEIVE ステートメントでは、1 つのメッセージ交換のメッセージがすべて返されてから、他のメッセージ交換のメッセージが返されます。 メッセージ交換は、優先度レベルの降順に処理されます。  
   
--   指定されたメッセージ交換を昇順に、RECEIVE ステートメントでメッセージが返されます**message_sequence_number**順序。  
+-   指定されたメッセージ交換に対して、RECEIVE ステートメントでは、メッセージが **message_sequence_number** の値で昇順に並べ替えられて返されます。  
   
- RECEIVE ステートメントの WHERE 句は、いずれかを使用する 1 つの検索条件を含めることができますのみ**conversation_handle**または**conversation_group_id**です。 検索条件にキューの他の列を 1 つ以上含めることはできません。 **Conversation_handle**または**conversation_group_id**式を指定することはできません。 返されるメッセージのセットは、WHERE 句で指定した条件によって決まります。  
+ RECEIVE ステートメントの WHERE 句には、**conversation_handle** または **conversation_group_id** のいずれかを使用した検索条件を 1 つだけ含めることができます。 検索条件にキューの他の列を 1 つ以上含めることはできません。 **conversation_handle** または **conversation_group_id** を式にすることはできません。 返されるメッセージのセットは、WHERE 句で指定した条件によって決まります。  
   
--   場合**conversation_handle**を指定すると、受信キューで使用できる指定されたメッセージ交換からのすべてのメッセージが返されます。  
+-   **conversation_handle** を指定した場合、RECEIVE では、指定したメッセージ交換から、キュー内の使用できるメッセージがすべて返されます。  
   
--   場合**conversation_group_id**を指定すると、RECEIVE では、キュー、指定したメッセージ交換グループのメンバーである任意のメッセージ交換からで使用できるすべてのメッセージが返されます。  
+-   **conversation_group_id** を指定した場合、RECEIVE では、指定したメッセージ交換グループのメンバーである任意のメッセージ交換から、キュー内の使用できるメッセージがすべて返されます。  
   
 -   WHERE 句がない場合は、RECEIVE によって、次の条件を満たすメッセージ交換グループに決定されます。  
   
@@ -155,7 +155,7 @@ ms.lasthandoff: 11/21/2017
   
  WHERE 句で指定したメッセージ交換ハンドルまたはメッセージ交換グループの識別子が存在しないか、指定したキューに関連付けられていない場合、RECEIVE ステートメントではエラーが返されます。  
   
- RECEIVE ステートメントで指定されたキューに、キューの状態を OFF に設定がある場合、ステートメントは失敗し、[!INCLUDE[tsql](../../includes/tsql-md.md)]エラーです。  
+ RECEIVE ステートメントで指定したキューの状態が OFF に設定されている場合、ステートメントは失敗し、[!INCLUDE[tsql](../../includes/tsql-md.md)] エラーが返されます。  
   
  WAITFOR 句を指定した場合、ステートメントは指定のタイムアウト時間が経過するか結果セットが使用可能になるまで待機します。 ステートメントが待機しているときに、キューが削除されたり、キューの状態が OFF に設定されると、ステートメントでは直ちにエラーが返されます。 RECEIVE ステートメントでメッセージ交換グループまたはメッセージ交換ハンドルを指定したが、メッセージ交換で使用するサービスが削除されたり、他のキューに移動された場合、RECEIVE ステートメントでは [!INCLUDE[tsql](../../includes/tsql-md.md)] エラーがレポートされます。  
   
@@ -164,39 +164,39 @@ ms.lasthandoff: 11/21/2017
  RECEIVE ステートメントには、優先度のスタベーション防止はありません。 1 つの RECEIVE ステートメントによってメッセージ交換グループがロックされ、優先度の低いメッセージ交換から大量のメッセージが取得されると、そのグループ内の優先度の高いメッセージ交換からメッセージを受信できなくなります。 このような状態を回避するには、優先度の低いメッセージ交換からメッセージを取得する場合に、TOP 句を使用して、各 RECEIVE ステートメントによって取得されるメッセージ数を制限します。  
   
 ## <a name="queue-columns"></a>キューの列  
- 次の表は、キュー内の列を示します。  
+ 次の表は、キューの列の一覧です。  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**ステータス**|**tinyint**|メッセージの状態。 メッセージの受信コマンドによって返される場合、状態は常に**0**します。 キューのメッセージには、次のいずれかの値が含まれます。<br /><br /> **0**= 準備完了**1**受信したメッセージを =**2**= 未完了**3**= 保持されているメッセージを送信|  
-|**優先順位**|**tinyint**|メッセージに適用されているメッセージ交換の優先度レベル。|  
+|**ステータス**|**tinyint**|メッセージの状態。 RECEIVE コマンドで返されるメッセージの状態は常に **0** です。 キューのメッセージには、次のいずれかの値が含まれます。<br /><br /> **0** = 準備完了。**1** = 受信メッセージ。**2** = 未完了。**3** = 保持されている送信済みメッセージ。|  
+|**priority**|**tinyint**|メッセージに適用されているメッセージ交換の優先度レベル。|  
 |**queuing_order**|**bigint**|キュー内のメッセージの順序番号。|  
-|**conversation_group_id**|**uniqueidentifier**|このメッセージが属するメッセージ交換グループの識別子。|  
+|**conversation_group_id**|**uniqueidentifier**|メッセージが属するメッセージ交換グループの識別子。|  
 |**conversation_handle**|**uniqueidentifier**|メッセージが属するメッセージ交換のハンドル。|  
 |**message_sequence_number**|**bigint**|メッセージ交換内でのメッセージのシーケンス番号。|  
 |**service_name**|**nvarchar(512)**|メッセージ交換の対象サービスの名前。|  
-|**service_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メッセージ交換のサービスのオブジェクト識別子です。|  
+|**service_id**|**int**|メッセージ交換の対象サービスに関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト識別子。|  
 |**service_contract_name**|**nvarchar (256)**|メッセージ交換が従うコントラクトの名前。|  
-|**service_contract_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メッセージ交換が従うコントラクトのオブジェクト識別子です。|  
+|**service_contract_id**|**int**|メッセージ交換が従うコントラクトに関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト識別子。|  
 |**message_type_name**|**nvarchar (256)**|メッセージの形式を示すメッセージ型の名前。 メッセージは、アプリケーション メッセージ型か Broker システム メッセージのいずれかになります。|  
-|**message_type_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メッセージを記述するメッセージの種類のオブジェクト識別子です。|  
-|**検証**|**nchar(2)**|メッセージに使用される検証。<br /><br /> **E**= 空**N**= None**X**= XML|  
-|**message_body**|**varbinary (max)**|メッセージの内容。|  
+|**message_type_id**|**int**|メッセージの種類を示すメッセージ型に関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト識別子。|  
+|**validation**|**nchar(2)**|メッセージに使用される検証。<br /><br /> **E**= 空。**N**= なし。**X**= XML。|  
+|**message_body**|**varbinary(MAX)**|メッセージの内容。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  メッセージを受信するには、キューに対する RECEIVE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>A. メッセージ交換グループにあるすべてのメッセージの、すべての列を受信する  
- 次の例では、[次へ] の使用可能なメッセージ交換グループのすべての使用可能なメッセージを受信する、`ExpenseQueue`キュー。 このステートメントでは、メッセージが結果セットとして返されます。  
+ 次の例では、`ExpenseQueue` キューから、次に使用できるメッセージ交換グループに属している使用可能なすべてのメッセージを受信します。 このステートメントでは、メッセージが結果セットとして返されます。  
   
 ```  
 RECEIVE * FROM ExpenseQueue ;  
 ```  
   
 ### <a name="b-receiving-specified-columns-for-all-messages-in-a-conversation-group"></a>B. メッセージ交換グループにあるすべてのメッセージを対象として、指定した列を受信する  
- 次の例では、[次へ] の使用可能なメッセージ交換グループのすべての使用可能なメッセージを受信する、`ExpenseQueue`キュー。 このステートメントでは、列 `conversation_handle`、`message_type_name`、`message_body` を含むメッセージが結果セットとして返されます。  
+ 次の例では、`ExpenseQueue` キューから、次に使用できるメッセージ交換グループに属している使用可能なすべてのメッセージを受信します。 このステートメントでは、列 `conversation_handle`、`message_type_name`、`message_body` を含むメッセージが結果セットとして返されます。  
   
 ```  
 RECEIVE conversation_handle, message_type_name, message_body  
@@ -211,7 +211,7 @@ RECEIVE TOP (1) * FROM ExpenseQueue ;
 ```  
   
 ### <a name="d-receiving-all-messages-for-a-specified-conversation"></a>D. 指定したメッセージ交換のすべてのメッセージを受信する  
- 次の例から指定したメッセージ交換のすべての利用可能なメッセージを受信する、`ExpenseQueue`キューにその結果セットです。  
+ 次の例では、`ExpenseQueue` キューから、指定したメッセージ交換に属している使用可能なすべてのメッセージを結果セットとして受信します。  
   
 ```  
 DECLARE @conversation_handle UNIQUEIDENTIFIER ;  
@@ -270,7 +270,7 @@ WHERE conversation_group_id = @conversation_group_id ;
 ```  
   
 ### <a name="g-receiving-messages-and-waiting-indefinitely"></a>G. メッセージを受信して無制限に待機する  
- 次の例では、次の使用可能なメッセージ交換グループのすべての使用可能なメッセージを受信する、`ExpenseQueue`キュー。 このステートメントは、少なくとも 1 つのメッセージが使用可能になるまで待機し、その後すべてのメッセージ列を含む結果セットを返します。  
+ 次の例では、`ExpenseQueue` キューから、次に使用できるメッセージ交換グループに属している使用可能なすべてのメッセージを受信します。 このステートメントは、少なくとも 1 つのメッセージが使用可能になるまで待機し、その後すべてのメッセージ列を含む結果セットを返します。  
   
 ```  
 WAITFOR (  
@@ -279,7 +279,7 @@ WAITFOR (
 ```  
   
 ### <a name="h-receiving-messages-and-waiting-for-a-specified-interval"></a>H. メッセージを受信して指定の期間待機する  
- 次の例では、次の使用可能なメッセージ交換グループのすべての使用可能なメッセージを受信する、`ExpenseQueue`キュー。 このステートメントは、60 秒が経過するか、少なくとも 1 つのメッセージが使用可能になるまで待機します。 少なくとも 1 つのメッセージが使用可能である場合、このステートメントはすべてのメッセージ列を含む結果セットを返します。 それ以外の場合は、空の結果セットを返します。  
+ 次の例では、`ExpenseQueue` キューから、次に使用できるメッセージ交換グループに属している使用可能なすべてのメッセージを受信します。 このステートメントは、60 秒が経過するか、少なくとも 1 つのメッセージが使用可能になるまで待機します。 少なくとも 1 つのメッセージが使用可能である場合、このステートメントはすべてのメッセージ列を含む結果セットを返します。 それ以外の場合は、空の結果セットを返します。  
   
 ```  
 WAITFOR (  
@@ -289,7 +289,7 @@ TIMEOUT 60000 ;
 ```  
   
 ### <a name="i-receiving-messages-modifying-the-type-of-a-column"></a>I. メッセージを受信して列の型を変更する  
- 次の例では、次の使用可能なメッセージ交換グループのすべての使用可能なメッセージを受信する、`ExpenseQueue`キュー。 メッセージ型でメッセージに XML ドキュメントが含まれることが指定されている場合、このステートメントでは、メッセージ本文が XML に変換されます。  
+ 次の例では、`ExpenseQueue` キューから、次に使用できるメッセージ交換グループに属している使用可能なすべてのメッセージを受信します。 メッセージ型でメッセージに XML ドキュメントが含まれることが指定されている場合、このステートメントでは、メッセージ本文が XML に変換されます。  
   
 ```  
 WAITFOR (  
@@ -303,7 +303,7 @@ TIMEOUT 60000 ;
 ```  
   
 ### <a name="j-receiving-a-message-extracting-data-from-the-message-body-retrieving-conversation-state"></a>J. メッセージを受信し、メッセージ本文からデータを抽出して、メッセージ交換の状態を取得する  
- 次の例では、`ExpenseQueue` キューから、次に使用できるメッセージ交換グループに属している、次に使用可能なメッセージを取得します。 ときに、メッセージは型`//Adventure-Works.com/Expenses/SubmitExpense`ステートメントは、メッセージ本文から従業員 ID とアイテムの一覧を抽出します。 ステートメントからのメッセージ交換の状態も取得する、`ConversationState`テーブル。  
+ 次の例では、`ExpenseQueue` キューから、次に使用できるメッセージ交換グループに属している、次に使用可能なメッセージを取得します。 メッセージの型が `//Adventure-Works.com/Expenses/SubmitExpense` の場合、このステートメントでは、メッセージ本文から従業員 ID とアイテム一覧が抽出されます。 また、このステートメントでは `ConversationState` テーブルからメッセージ交換の状態も取得されます。  
   
 ```  
 WAITFOR(  
@@ -339,14 +339,14 @@ WAITFOR(
 ```  
   
 ## <a name="see-also"></a>参照  
- [BEGIN DIALOG CONVERSATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [BEGIN CONVERSATION TIMER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
- [END CONVERSATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/end-conversation-transact-sql.md)   
- [コントラクト &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-contract-transact-sql.md)   
- [メッセージの種類 &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-message-type-transact-sql.md)   
- [SEND &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/send-transact-sql.md)   
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md)   
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [ALTER QUEUE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-queue-transact-sql.md)   
- [DROP QUEUE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-queue-transact-sql.md)  
+ [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
+ [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)  
   
   

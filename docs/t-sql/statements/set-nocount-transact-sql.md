@@ -1,5 +1,5 @@
 ---
-title: "SET NOCOUNT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET NOCOUNT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-nocount-transact-sql"></a>SET NOCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  影響を受ける行の数の数を示すメッセージを停止する、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはストアド プロシージャ、結果の一部として返されるを設定します。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはストアド プロシージャで処理された行数を示すメッセージが結果セットの一部として返されないようにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,12 +51,12 @@ ms.lasthandoff: 11/21/2017
 SET NOCOUNT { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SET NOCOUNT が ON の場合、行数は返されません。 SET NOCOUNT が OFF の場合、行数が返されます。  
   
- @@ROWCOUNT SET NOCOUNT が ON の場合でも、関数が更新されました。  
+ SET NOCOUNT が ON の場合でも、@@ROWCOUNT 関数は更新されます。  
   
- SET NOCOUNT ON を指定すると、ストアド プロシージャ内の各ステートメントに対する DONE_IN_PROC メッセージは、クライアントに送信されなくなります。 多くの実際のデータを返さないいくつかのステートメントを含んでいるストアド プロシージャまたはを含むプロシージャの[!INCLUDE[tsql](../../includes/tsql-md.md)]ネットワーク トラフィックが大幅に縮小されるため、ループで、大幅なパフォーマンスを向上させることができます提供 SET NOCOUNT を ON に設定します。  
+ SET NOCOUNT ON を指定すると、ストアド プロシージャ内の各ステートメントに対する DONE_IN_PROC メッセージは、クライアントに送信されなくなります。 このため、実際に返すデータが少量のステートメントで構成されるストアド プロシージャ、または [!INCLUDE[tsql](../../includes/tsql-md.md)] ループを含むプロシージャの場合、ネットワーク通信量が大きく減少するので、SET NOCOUNT を ON に設定するとパフォーマンスが大きく向上します。  
   
  SET NOCOUNT で指定される設定は、解析時ではなく実行時に有効になります。  
   
@@ -69,7 +69,7 @@ SELECT @NOCOUNT AS NOCOUNT;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

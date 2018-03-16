@@ -1,5 +1,5 @@
 ---
-title: "サーバー プリンシパル アクセス許可の付与 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "GRANT (サーバー プリンシパルの権限の許可) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="grant-server-principal-permissions-transact-sql"></a>GRANT (サーバー プリンシパルの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  に対する権限を許可、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインに対する権限を許可します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,28 +63,28 @@ GRANT permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>引数  
- *アクセス許可*  
+ *permission*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインで許可できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ログイン**::** *SQL_Server_login*  
- 指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン権限が許可されています。 スコープ修飾子 (**::**) が必要です。  
+ LOGIN **::** *SQL_Server_login*  
+ 許可される権限の対象となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 スコープ修飾子 (**::**) が必要です。  
   
- サーバーの役割**::** *server_role*  
+ SERVER ROLE **::** *server_role*  
  権限を許可するユーザー定義のサーバー ロールを指定します。 スコープ修飾子 (**::**) が必要です。  
   
- \<Server_principal > を指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたはサーバー ロールの権限が許可されています。  
+ TO \<server_principal> 権限を許可する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたはサーバー ロールを指定します。  
   
  *SQL_Server_login*  
- 名前を指定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの名前を指定します。  
   
  *SQL_Server_login_from_Windows_login*  
- 名前を指定、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows ログインから作成されたログインします。  
+ Windows ログインから作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの名前を指定します。  
   
  *SQL_Server_login_from_certificate*  
- 名前を指定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]証明書にマップされるログインです。  
+ 証明書にマップされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの名前を指定します。  
   
  *SQL_Server_login_from_AsymKey*  
- 名前を指定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]非対称キーにマップされるログインです。  
+ 非対称キーにマップされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの名前を指定します。  
   
  *server_role*  
  ユーザー定義サーバー ロールの名前を指定します。  
@@ -93,14 +93,14 @@ GRANT permission [ ,...n ] }
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
   
  AS *SQL_Server_login*  
- 指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このクエリを実行するプリンシパルが権限を許可する権利の派生元となるログインします。  
+ このクエリを実行するプリンシパルが権限を許可する権利を取得した、元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  サーバー スコープの権限を許可できるのは、現在のデータベースが master のときだけです。  
   
- サーバー権限に関する情報は、 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)カタログ ビューです。 サーバー プリンシパルに関する情報は、 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)カタログ ビューです。  
+ サーバー権限に関する情報は、[sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) カタログ ビューで確認できます。 サーバー プリンシパルに関する情報は、[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) カタログ ビューで確認できます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインとサーバーの役割は、サーバー レベルのセキュリティ保護可能なです。 次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたはサーバー ロールで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインおよびサーバー ロールはサーバー レベルのセキュリティ保護可能なリソースです。 次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたはサーバー ロールで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |SQL Server ログインまたはサーバー ロールの権限|権限が含まれる SQL Server ログインまたはサーバー ロールの権限|権限が含まれるサーバー権限|  
 |------------------------------------------------|-----------------------------------------------------------|----------------------------------|  
@@ -109,7 +109,7 @@ GRANT permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  ログインの場合、ログインに対する CONTROL 権限、またはサーバーに対する ALTER ANY LOGIN 権限が必要です。  
   
  サーバー ロールの場合、サーバー ロールに対する CONTROL 権限、またはサーバーに対する ALTER ANY SERVER ROLE 権限が必要です。  
@@ -117,7 +117,7 @@ GRANT permission [ ,...n ] }
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-granting-impersonate-permission-on-a-login"></a>A. ログインの IMPERSONATE 権限を許可する  
- 次の例では付与`IMPERSONATE`に対する権限、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン`WanidaBenshoof`を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン、Windows のユーザーから作成された`AdvWorks\YoonM`です。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `WanidaBenshoof` の `IMPERSONATE` 権限を、Windows ユーザー `AdvWorks\YoonM` から作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインに許可します。  
   
 ```  
 USE master;  
@@ -126,7 +126,7 @@ GO
 ```  
   
 ### <a name="b-granting-view-definition-permission-with-grant-option"></a>B. GRANT OPTION を指定して VIEW DEFINITION 権限を許可する  
- 次の例`VIEW DEFINITION`上、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン`EricKurjan`を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン`RMeyyappan`で`GRANT OPTION`です。  
+ 次の例では、`GRANT OPTION` を指定して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `EricKurjan` の `VIEW DEFINITION` 権限を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `RMeyyappan` に許可します。  
   
 ```  
 USE master;  
@@ -136,7 +136,7 @@ GO
 ```  
   
 ### <a name="c-granting-view-definition-permission-on-a-server-role"></a>C. サーバー ロールの VIEW DEFINITION 権限を許可する  
- 次の例では付与`VIEW DEFINITION`上、`Sales`サーバーの役割を`Auditors`サーバーの役割です。  
+ 次の例では、`Auditors` サーバー ロールに対する `Sales` サーバー ロールの `VIEW DEFINITION` を許可します。  
   
 ```  
 USE master;  

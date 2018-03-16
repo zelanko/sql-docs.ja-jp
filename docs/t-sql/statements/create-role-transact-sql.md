@@ -1,5 +1,5 @@
 ---
-title: "ロール (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -57,11 +57,11 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  *role_name*  
  作成するロールの名前を指定します。  
   
- 承認*owner_name*  
+ AUTHORIZATION *owner_name*  
  新しいロールを所有するデータベース ユーザーまたはロールを指定します。 ユーザーを指定しない場合、ロールは CREATE ROLE を実行するユーザーが所有します。  
   
-## <a name="remarks"></a>解説  
- ロールはデータベース レベルのセキュリティ保護可能なリソースです。 ロールを作成した後は、GRANT、DENY、および REVOKE を使って、ロールのデータベース レベルの権限を構成します。 データベース ロールにメンバーを追加するには、使用[ALTER ROLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-role-transact-sql.md). 詳細については、次を参照してください。[データベース レベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)です。  
+## <a name="remarks"></a>Remarks  
+ ロールはデータベース レベルのセキュリティ保護可能なリソースです。 ロールを作成した後は、GRANT、DENY、および REVOKE を使って、ロールのデータベース レベルの権限を構成します。 データベース ロールにメンバーを追加するには、[ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md) を使います。 詳しくは、「[データベース レベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)」をご覧ください。  
   
  データベース ロールは、sys.database_role_members および sys.database_principals カタログ ビューで確認できます。  
   
@@ -70,8 +70,8 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
- 必要があります**CREATE ROLE**メンバーシップまたはデータベースに対する権限、 **db_securityadmin**固定データベース ロール。 使用すると、**承認**オプションでは、次のアクセス許可も必要です。  
+## <a name="permissions"></a>アクセス許可  
+ データベースの **CREATE ROLE** 権限、または **db_securityadmin** 固定データベース ロールのメンバーシップが必要です。 **AUTHORIZATION** オプションを使用する場合は、次の権限も必要です。  
   
 -   ロールの所有権を別のユーザーに割り当てるには、そのユーザーに対する IMPERSONATE 権限が必要です。  
   
@@ -80,10 +80,10 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 -   ロールの所有権をアプリケーション ロールに割り当てるには、アプリケーション ロールに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
-すべての次の例では、AdventureWorks データベースを使用します。   
+以下のすべての例では、AdventureWorks データベースを使います。   
 
 ### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>A. データベース ユーザーが所有するデータベース ロールを作成する  
- 次の例は、データベース ロールを作成`buyers`ユーザーによって所有されている`BenMiller`です。  
+ 次の例では、ユーザー `BenMiller` が所有するデータベース ロール `buyers` を作成します。  
   
 ```  
 CREATE ROLE buyers AUTHORIZATION BenMiller;  
@@ -91,7 +91,7 @@ GO
 ```  
   
 ### <a name="b-creating-a-database-role-that-is-owned-by-a-fixed-database-role"></a>B. 固定データベース ロールが所有するデータベース ロールを作成する  
- 次の例は、データベース ロールを作成`auditors`が所有する、`db_securityadmin`固定データベース ロール。  
+ 次の例では、固定データベース ロール `db_securityadmin` が所有するデータベース ロール `auditors` を作成します。  
   
 ```  
 CREATE ROLE auditors AUTHORIZATION db_securityadmin;  
@@ -100,8 +100,8 @@ GO
   
 ## <a name="see-also"></a>参照  
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [ALTER ROLE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-role-transact-sql.md)   
- [DROP ROLE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-role-transact-sql.md)   
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+ [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: "SET FIPS_FLAGGER (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET FIPS_FLAGGER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-fipsflagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  FIPS 127-2 標準に準拠しているかどうかをチェックします。 これは ISO 標準を基準にしています。 SQL Server の FIPS 準拠については、次を参照してください。 [FIPS 140-2 準拠モードで SQL Server 2016 の使用方法](https://support.microsoft.com/help/4014354/how-to-use-sql-server-2016-in-fips-140-2-compliant-mode)です。 
+  FIPS 127-2 標準に準拠しているかどうかをチェックします。 これは ISO 標準を基準にしています。 SQL Server の FIPS 準拠については、「[FIPS 140-2 準拠モードで SQL Server の 2016 を使用する方法](https://support.microsoft.com/help/4014354/how-to-use-sql-server-2016-in-fips-140-2-compliant-mode)」をご覧ください。 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,24 +49,24 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
 ```  
   
 ## <a name="arguments"></a>引数  
- **'** *レベル* **'**  
- FIPS 127-2 標準に対してすべてのデータベース操作の準拠性をチェックするレベルを指定します。 データベースの操作を選択すると、ISO 標準のレベルと競合する場合[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]警告が生成されます。  
+ **'** *level* **'**  
+ FIPS 127-2 標準に対してすべてのデータベース操作の準拠性をチェックするレベルを指定します。 データベース操作が、選択した ISO 標準のレベルと競合する場合、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では警告が生成されます。  
   
- *レベル*値は次のいずれかを指定する必要があります。  
+ *level* の値には次のいずれかを指定します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |ENTRY|ISO エントリレベルの準拠性の標準チェック|  
 |FULL|ISO 完全準拠性の標準チェック|  
 |INTERMEDIATE|ISO 中間レベルの準拠性の標準チェック|  
 |OFF|標準チェックなし|  
   
-## <a name="remarks"></a>解説  
- 設定は、`SET FIPS_FLAGGER`ではなく解析時に設定または実行時に。 解析時に設定を意味する SET ステートメントがバッチまたはストアド プロシージャに存在する場合は、有効になります、その場所が実際にまでコードが実行されるかどうかに関係なくおよび`SET`ステートメントが実行される前に、ステートメントは有効です。 などの場合であっても、`SET`ステートメントが、`IF...ELSE`決して到達しない場合、実行中にステートメント ブロック、`SET`ステートメントも反映ため、`IF...ELSE`ステートメント ブロックを解析します。  
+## <a name="remarks"></a>Remarks  
+ `SET FIPS_FLAGGER` は、実行時ではなく解析時に設定されます。 解析時に設定されるということは、SET ステートメントがバッチまたはストアド プロシージャ内に指定されている場合は、コードが実際にその場所まで実行されるかどうかに関係なく、設定が有効になることを意味します。つまり他のどのステートメントが実行されるよりも前に、`SET` ステートメントは有効になります。 たとえば、絶対に実行されることのない `IF...ELSE` ステートメント ブロックに `SET` ステートメントが指定されていたとしても、`IF...ELSE` ステートメント ブロックは解析されるので、`SET` ステートメントは有効になります。  
   
- 場合`SET FIPS_FLAGGER`ストアド プロシージャでの値に設定されている`SET FIPS_FLAGGER`制御がストアド プロシージャから返された後に復元します。 したがって、`SET FIPS_FLAGGER`動的 SQL で指定されたステートメントには、動的 SQL ステートメントに続くステートメントには影響はありません。  
+ `SET FIPS_FLAGGER` がストアド プロシージャで設定された場合、`SET FIPS_FLAGGER` の値は、制御がストアド プロシージャから返された後、元に戻されます。 したがって、動的 SQL に指定されている `SET FIPS_FLAGGER` ステートメントは、動的 SQL ステートメントの後にあるステートメントにまったく影響しません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  

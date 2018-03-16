@@ -1,5 +1,5 @@
 ---
-title: "送信 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SEND (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -57,21 +57,21 @@ SEND
 ```  
   
 ## <a name="arguments"></a>引数  
- メッセージ交換で*conversation_handle [..@conversation_handle_n]*  
- メッセージが属するメッセージ交換を指定します。 *Conversation_handle*は有効なメッセージ交換の識別子を含める必要があります。 同じメッセージ交換ハンドルを複数回使用することはできません。  
+ ON CONVERSATION *conversation_handle [.. @conversation_handle_n]*  
+ メッセージが属するメッセージ交換を指定します。 *conversation_handle* には、有効なメッセージ交換識別子が含まれている必要があります。 同じメッセージ交換ハンドルを複数回使用することはできません。  
   
- メッセージの種類*message_type_name*  
- 送信したメッセージのメッセージ型を指定します。 このメッセージ型は、これらのメッセージ交換で使用されるサービス コントラクトに含まれている必要があります。 これらのコントラクトによって、メッセージ型をメッセージ交換の発信側から送信できます。 たとえば、メッセージ交換の対象サービスは SENT BY TARGET または SENT BY ANY としてコントラクトに指定されたメッセージのみを送信できます。 この句が省略されると、メッセージは DEFAULT のメッセージ型になります。  
+ MESSAGE TYPE *message_type_name*  
+ 送信したメッセージのメッセージ型を指定します。 このメッセージ型は、これらのメッセージ交換で使用されるサービス コントラクトに含まれている必要があります。 これらのコントラクトによって、メッセージ型をメッセージ交換の発信側から送信できます。 たとえば、メッセージ交換の対象サービスは、SENT BY TARGET または SENT BY ANY としてコントラクトに指定されるメッセージのみを送信できます。 この句が省略されると、メッセージは DEFAULT のメッセージ型になります。  
   
  *message_body_expression*  
- メッセージ本文を表す式を指定します。 *Message_body_expression*は省略可能です。 ただし場合、 *message_body_expression*が存在する変換できる型の式があります**varbinary (max)**です。 この式が NULL になることはありません。 この句が省略されると、メッセージ本文は空になります。  
+ メッセージ本文を表す式を指定します。 *message_body_expression* は省略可能です。 ただし、*message_body_expression* を指定する場合は、**varbinary(max)** に変換できる型の式にする必要があります。 この式が NULL になることはありません。 この句が省略されると、メッセージ本文は空になります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  SEND ステートメントがバッチまたはストアド プロシージャで最初のステートメントではない場合は、前のステートメントの後にセミコロン (;) を指定する必要があります。  
   
- SEND ステートメントは 1 つまたは複数の一方の端にあるサービスからメッセージを送信[!INCLUDE[ssSB](../../includes/sssb-md.md)]これらのメッセージ交換の相手側のサービスにメッセージを交換します。 RECEIVE ステートメントは、対象サービスに関連付けられたキューから送信されたメッセージを取得するのには使用されます。  
+ SEND ステートメントは、1 つ以上の [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換の一方のエンドポイントにあるサービスからもう一方のエンドポイントにあるサービスに、メッセージを送信します。 次に RECEIVE ステートメントを使用して、送信されたメッセージを、ターゲット サービスに関連付けられたキューから取得します。  
   
  ON CONVERSATION 句に指定されるメッセージ交換ハンドルのソースは、次の 3 つのうちいずれかです。  
   
@@ -79,9 +79,9 @@ SEND
   
 -   別のサービスから以前に受信したメッセージに対して応答のメッセージを送信する場合、元のメッセージを返した RECEIVE ステートメントから返されるメッセージ交換ハンドルを使用します。  
   
- 多くの場合、SEND ステートメントを含むコードは別のメッセージ交換ハンドルを指定して、BEGIN DIALOG または受信のいずれかのステートメントを含むコードです。 そのような場合、メッセージ交換ハンドルは、SEND ステートメントが含まれたコードに渡される状態情報のデータ アイテムのいずれかである必要があります。  
+ 多くの場合、メッセージ交換ハンドルを提供する BEGIN DIALOG ステートメントや RECEIVE ステートメントが含まれたコードとは別のコードに、SEND ステートメントが含まれています。 そのような場合、メッセージ交換ハンドルは、SEND ステートメントが含まれたコードに渡される状態情報のデータ アイテムのいずれかである必要があります。  
   
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の別のインスタンス内のサービスに送信されるメッセージは、リモート インスタンスのサービス キューに送信できるようになるまでの間、現在のデータベースの転送キューに格納されます。 同じインスタンス内のサービスに送信されたメッセージ、[!INCLUDE[ssDE](../../includes/ssde-md.md)]これらのサービスに関連付けられたキューに直接配置されます。 ローカル メッセージを転送先サービス キューに直接配置できない条件がある場合は、その条件が解決されるまで転送キューに格納されることがあります。 これが発生するのは、特定のエラーが発生した場合や、転送先サービス キューが非アクティブな場合などです。 使用することができます、 **sys.transmission_queue**システム ビューを転送キューにメッセージを参照してください。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の別のインスタンス内のサービスに送信されるメッセージは、リモート インスタンスのサービス キューに送信できるようになるまでの間、現在のデータベースの転送キューに格納されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の同じインスタンス内のサービスに送信されるメッセージは、それらのサービスに関連付けられたキューに直接配置されます。 ローカル メッセージを転送先サービス キューに直接配置できない条件がある場合は、その条件が解決されるまで転送キューに格納されることがあります。 これが発生するのは、特定のエラーが発生した場合や、転送先サービス キューが非アクティブな場合などです。 **sys.transmission_queue** システム ビューを使用すると、転送キュー内のメッセージを表示できます。  
   
  SEND はアトミック ステートメントです。つまり、メッセージ交換がエラー状態の場合などに、複数のメッセージ交換でメッセージを送信する SEND ステートメントが失敗した場合、メッセージは転送キューまたは転送先サービス キューに格納されません。  
   
@@ -93,17 +93,17 @@ SEND
   
 -   優先度レベル内では、メッセージ交換における送信順序  
   
- メッセージ交換の優先度で指定された優先順位は、HONOR_BROKER_PRIORITY データベース オプションが ON に設定されている場合にのみ、転送キュー内のメッセージに割り当てられます。 HONOR_BROKER_PRIORITY データベース オプションが OFF に設定されている場合、そのデータベースの転送キューに配置されたすべてのメッセージには、既定の優先度レベル 5 が割り当てられます。 同じインスタンス内のサービス キューに直接メッセージを格納する場所、送信に優先度レベルは適用されません、[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。  
+ メッセージ交換の優先度で指定された優先順位は、HONOR_BROKER_PRIORITY データベース オプションが ON に設定されている場合にのみ、転送キュー内のメッセージに割り当てられます。 HONOR_BROKER_PRIORITY データベース オプションが OFF に設定されている場合、そのデータベースの転送キューに配置されたすべてのメッセージには、既定の優先度レベル 5 が割り当てられます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の同じインスタンス内のサービス キューにメッセージが直接配置される場合、SEND には優先順位が割り当てられません。  
   
  SEND ステートメントは、メッセージを送信する各メッセージ交換を個別にロックし、メッセージ交換ごとの順序でメッセージが配信されるようにします。  
   
  SEND は、ユーザー定義の関数では無効です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  メッセージを送信するには、現在のユーザーは、メッセージを送信するすべてのサービスのキューに対する RECEIVE 権限を持っている必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、ダイアログを開始し、ダイアログ ボックスで、XML メッセージを送信します。 例では、メッセージを送信するには xml オブジェクトに変換します**varbinary (max)**です。  
+ 次の例では、ダイアログを開始し、ダイアログ ボックスで、XML メッセージを送信します。 メッセージを送信するために、この例では xml オブジェクトを **varbinary(max)** に変換します。  
   
 ```  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
@@ -152,9 +152,9 @@ SEND ON CONVERSATION (@dialog_handle1, @dialog_handle2, @dialog_handle3)
 ```  
   
 ## <a name="see-also"></a>参照  
- [BEGIN DIALOG CONVERSATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [END CONVERSATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/end-conversation-transact-sql.md)   
- [受信 (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/receive-transact-sql.md)   
- [sys.transmission_queue &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "OPEN SYMMETRIC KEY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: OPEN SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -59,33 +59,33 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  *Key_name*  
  開く対称キーの名前を指定します。  
   
- 証明書*certificate_name*  
+ CERTIFICATE *certificate_name*  
  対称キーの暗号化解除に使用する秘密キーを備えた、証明書の名前を指定します。  
   
- 非対称キー *asym_key_name*  
+ ASYMMETRIC KEY *asym_key_name*  
  対称キーの暗号化解除に使用する秘密キーを備えた、非対称キーの名前を指定します。  
   
- パスワード ='*パスワード*'  
+ WITH PASSWORD ='*password*'  
  証明書の秘密キーまたは非対称キーの暗号化に使用されているパスワードを指定します。  
   
- 対称キー *decrypting_key_name*  
+ SYMMETRIC KEY *decrypting_key_name*  
  開く対称キーの暗号化解除に使用する対称キーの名前を指定します。  
   
- パスワード ='*パスワード*'  
+ PASSWORD ='*password*'  
  対称キーの保護に使用されているパスワードを指定します。  
   
-## <a name="remarks"></a>解説  
- 開いている対称キーは、セキュリティ コンテキストではなくセッションにバインドされており、 明示的に閉じられるか、セッションが終了するまで引き続き使用できます。 対称キーを開いてからコンテキストを切り替えた場合、キーは開かれたままになり、権限を借用したコンテキストでも使用できます。 開いている対称キーに関する情報は、 [sys.openkeys &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md)カタログ ビューです。  
+## <a name="remarks"></a>Remarks  
+ 開いている対称キーは、セキュリティ コンテキストではなくセッションにバインドされており、 明示的に閉じられるか、セッションが終了するまで引き続き使用できます。 対称キーを開いてからコンテキストを切り替えた場合、キーは開かれたままになり、権限を借用したコンテキストでも使用できます。 開いている対称キーに関する情報は、[sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) カタログ ビューで確認できます。  
   
  対称キーが別のキーで暗号化された場合は、そのキーを最初に開く必要があります。  
   
- 対称キーを既に開いている場合、クエリは、 **NO_OP**です。  
+ 対称キーが既に開いている場合、クエリは **NO_OP** となります。  
   
  対称キーの暗号化解除に指定したパスワード、証明書、またはキーが正しくない場合、クエリは失敗します。  
   
- 暗号化プロバイダーから作成された対称キーは、開くことはできません。 この種の対称キーを使用して暗号化および暗号化解除の操作が成功せず、**開く**ステートメント、暗号化サービス プロバイダーを開くと、キーを閉じるためです。  
+ 暗号化プロバイダーから作成された対称キーは、開くことはできません。 この種の対称キーを使用する暗号化および暗号化解除の操作は、**OPEN** ステートメントを使わなくても成功します。これは、暗号化プロバイダーがキーを開いたり閉じたりするためです。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  呼び出し元にはキーに対する権限が必要です。キーに対する VIEW DEFINITION 権限が拒否されていないことも必要になります。 また、暗号化解除メカニズムに応じた追加要件があります。  
   
 -   DECRYPTION BY CERTIFICATE の場合は、証明書に対する CONTROL 権限と、秘密キーを暗号化したパスワードの情報が必要です。  
@@ -107,7 +107,7 @@ GO
 ```  
   
 ### <a name="b-opening-a-symmetric-key-by-using-another-symmetric-key"></a>B. 別の対称キーを使用して対称キーを開く  
- 次の例は、対称キーを開きます`MarketingKey11`対称キーを使用して暗号化を解除して`HarnpadoungsatayaSE3`です。  
+ 次の例では、対称キー `MarketingKey11` を開き、対称キー `HarnpadoungsatayaSE3` を使って暗号化を解除します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -123,7 +123,7 @@ GO
 ## <a name="see-also"></a>参照  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
- [CLOSE SYMMETRIC KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  

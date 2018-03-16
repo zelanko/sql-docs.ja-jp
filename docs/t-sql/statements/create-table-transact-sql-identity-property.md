@@ -1,5 +1,5 @@
 ---
-title: "IDENTITY (プロパティ) (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "IDENTITY (プロパティ) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,13 +34,13 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="create-table-transact-sql-identity-property"></a>テーブル (TRANSACT-SQL) IDENTITY (プロパティ) を作成します。
+# <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (プロパティ)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  テーブルに ID 列を作成します。 このプロパティは、CREATE TABLE および ALTER TABLE で使用[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。  
+  テーブルに ID 列を作成します。 このプロパティは、[!INCLUDE[tsql](../../includes/tsql-md.md)] の CREATE TABLE ステートメントおよび ALTER TABLE ステートメントで使用します。  
   
 > [!NOTE]  
->  IDENTITY プロパティは、SQL-DMO を異なる**Identity**列の行 id プロパティを公開するプロパティです。  
+>  IDENTITY プロパティは、列の行 ID プロパティを示す SQL-DMO **Identity** プロパティとは異なります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,15 +52,15 @@ IDENTITY [ (seed , increment) ]
 ```  
   
 ## <a name="arguments"></a>引数  
- *シード*  
+ *seed*  
  テーブルに読み込まれる最初の行に使用される値です。  
   
- *増分値*  
+ *increment*  
  既に読み込まれている前の行の ID 値に加算される増分の値です。  
   
  seed と increment の両方を指定するか、またはどちらも指定しないでください。 どちらも指定しないときの既定値は (1,1) です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ID 列はキー値の生成に使用できます。 列の ID プロパティでは、次の点が保証されます。  
   
 -   新しい値はそれぞれ、現在のシードと増分値に基づいて生成されます。  
@@ -69,13 +69,13 @@ IDENTITY [ (seed , increment) ]
   
  列の ID プロパティでは、次の点は保証されません。  
   
--   **値の一意性**– を使用して、一意性を強制する必要があります、**主キー**または**UNIQUE**制約または**UNIQUE**インデックス。  
+-   **値の一意性**: **PRIMARY KEY** 制約、**UNIQUE** 制約、または **UNIQUE** インデックスを使用して、一意性を強制する必要があります。  
   
--   **トランザクション内での連続した値**– 複数の行を挿入するトランザクションが、テーブルに対するその他の同時実行の挿入が発生する可能性があるために、行の連続する値を取得する保証はありません。 値が連続している必要があるかどうか、トランザクションが、テーブルで排他ロックを使用してまたはを使用して、 **SERIALIZABLE**分離レベル。  
+-   **トランザクション内の連続する値**: 複数行を挿入するトランザクションは、テーブルで同時に他の挿入が実行される可能性があるため、その複数行の連続する値を取得するとは限りません。 連続した値にする必要がある場合、トランザクションはテーブル上で排他ロックを使用するか、**SERIALIZABLE** 分離レベルを使用する必要があります。  
   
--   **サーバーの再起動またはその他の失敗後の連続した値**–[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パフォーマンス上の理由から id 値をキャッシュする場合があり、割り当てられた値の一部が失われるデータベースの障害やサーバーの再起動中にします。 その結果、挿入時に非連続的な ID 値が生成される場合があります。 非連続的な値が許可されない場合、アプリケーションは独自のメカニズムを使用してキー値を生成する必要があります。 シーケンス ジェネレーターを使用して、 **NOCACHE**オプションは、トランザクションがコミットされないにギャップを制限できます。  
+-   **サーバーの再起動または他のエラーが発生した後の連続した値**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、パフォーマンス上の理由から ID 値をキャッシュすることがあります。割り当てられた値の一部は、データベースの障害やサーバーの再起動が発生したときに失われることがあります。 その結果、挿入時に非連続的な ID 値が生成される場合があります。 非連続的な値が許可されない場合、アプリケーションは独自のメカニズムを使用してキー値を生成する必要があります。 シーケンス ジェネレーターを **NOCACHE** オプションを指定して使用すると、非連続的な値を絶対にコミットされないトランザクションに制限することができます。  
   
--   **値の再利用**– 特定のシードと増分値は、エンジンによって再利用されません id を持つ特定の id プロパティ。 特定の挿入ステートメントが失敗した場合または挿入ステートメントがロールバックされた場合、使用した ID 値は失われ、再度生成されることはありません。 その結果、それ以降の ID 値が生成されると、連続しない場合があります。  
+-   **値の再利用**: 特定のシードと増分値が指定された特定の ID プロパティでは、ID 値がエンジンによって再利用されることはありません。 特定の挿入ステートメントが失敗した場合または挿入ステートメントがロールバックされた場合、使用した ID 値は失われ、再度生成されることはありません。 その結果、それ以降の ID 値が生成されると、連続しない場合があります。  
   
  これらの制限事項が仕様に含まれているのは、パフォーマンスを向上するため、および多くの一般的な状況で許容されるためです。 これらの制限事項が原因で ID 値を使用できない場合は、アプリケーションを使用して、現在の値を保持する別のテーブルを作成し、テーブルと番号の割り当てへのアクセスを管理します。  
   
@@ -119,7 +119,7 @@ VALUES
  次の例では、データが削除された場合に ID 値のギャップを検索する汎用構文を示します。  
   
 > [!NOTE]  
->  次の最初の部分[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプトは、例示のみを目的に設計されています。 実行できるのは、"`-- Create the img table`" というコメントで始まる [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトです。  
+>  次に示す [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトの最初の部分は、あくまでも参考です。 実行できるのは、"`-- Create the img table`" というコメントで始まる [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトです。  
   
 ```  
 -- Here is the generic syntax for finding identity value gaps in data.  
@@ -177,12 +177,12 @@ SET IDENTITY_INSERT img OFF;
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [IDENT_INCR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
- [ID および #40 です。関数と #41 です。&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/identity-function-transact-sql.md)   
- [IDENT_SEED &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [IDENTITY &#40;関数&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)   
+ [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [SET IDENTITY_INSERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-identity-insert-transact-sql.md)   
+ [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)   
  [ID 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
   

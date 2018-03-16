@@ -1,5 +1,5 @@
 ---
-title: "証明書をバックアップ (TRANSACT-SQL) |Microsoft ドキュメント"
+title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -82,19 +82,19 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  秘密キーを保存するファイルの完全なパスを、ファイル名を含めて指定します。 ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。 既定値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の DATA フォルダーのパスです。  
   
  *encryption_password*  
- バックアップ ファイルに秘密キーを書き込む前に、キーを暗号化するため使用するパスワードを指定します。 パスワードは、複雑性チェックの対象です。  
+ バックアップ ファイルに秘密キーを書き込む前に、キーを暗号化するため使用するパスワードを指定します。 パスワードに対しては、複雑性がチェックされます。  
   
  *decryption_password*  
  秘密キーをバックアップする前に、秘密キーの暗号化を解除するため使用するパスワードを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データベースで秘密キーがパスワードによって暗号化されている場合は、暗号化解除パスワードを指定する必要があります。  
   
  秘密キーをファイルにバックアップする場合は、暗号化が必要です。 バックアップした証明書の保護に使用するパスワードは、証明書の秘密キーの暗号化に使用するパスワードとは異なります。  
   
- を復元するバックアップ証明書を使用して、[証明書の作成](../../t-sql/statements/create-certificate-transact-sql.md)ステートメントです。  
+ バックアップした証明書を復元するには、[CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) ステートメントを使います。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  証明書に対する CONTROL 権限と、秘密キーの暗号化に使用するパスワードの情報が必要です。 証明書のパブリックの部分だけをバックアップする場合は、証明書の権限が必要です。また、呼び出し元に対して証明書の VIEW 権限が拒否されていないことも必要になります。  
   
 ## <a name="examples"></a>使用例  
@@ -118,7 +118,7 @@ GO
 ```  
   
 ### <a name="c-exporting-a-certificate-that-has-an-encrypted-private-key"></a>C. 秘密キーが暗号化されている証明書をエクスポートする  
- 次の例では、データベースで証明書の秘密キーが暗号化されています。 この秘密キーは、パスワード `9875t6#6rfid7vble7r` を使って暗号化を解除する必要があります。 秘密キーをパスワードで暗号化される証明書がバックアップ ファイルに保存されると、`9n34khUbhk$w4ecJH5gh`です。  
+ 次の例では、データベースで証明書の秘密キーが暗号化されています。 この秘密キーは、パスワード `9875t6#6rfid7vble7r` を使って暗号化を解除する必要があります。 証明書をバックアップ ファイルに保存するときには、秘密キーをパスワード `9n34khUbhk$w4ecJH5gh` で暗号化します。  
   
 ```  
 BACKUP CERTIFICATE sales09 TO FILE = 'c:\storedcerts\sales09cert'   
@@ -130,8 +130,8 @@ GO
   
 ## <a name="see-also"></a>参照  
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [証明書 &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-certificate-transact-sql.md)  
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
   
   
 

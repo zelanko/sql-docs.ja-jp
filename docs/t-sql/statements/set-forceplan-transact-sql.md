@@ -1,5 +1,5 @@
 ---
-title: "SET FORCEPLAN (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET FORCEPLAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -51,14 +51,14 @@ ms.lasthandoff: 11/21/2017
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SET FORCEPLAN は基本的に、クエリ オプティマイザーが [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの処理で使用するロジックを変更します。 SELECT ステートメントから返されるデータは同じであり、この設定とは無関係です。 唯一の違いは、クエリの要求を満たすために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がテーブルをどのように処理するかという点です。  
   
- クエリ オプティマイザー ヒントこともできますクエリに影響を与える方法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SELECT ステートメントを処理します。  
+ クエリ内でクエリ オプティマイザー ヒントを使用することによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SELECT ステートメントの処理方法を変更することもできます。  
   
  SET FORCEPLAN は、解析時ではなく実行時に設定されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  SET FORCEPLAN の実行権限は、特に指定のない限りすべてのユーザーに与えられます。  
   
 ## <a name="examples"></a>使用例  
@@ -110,7 +110,7 @@ GO
 ## <a name="see-also"></a>参照  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET SHOWPLAN_TEXT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

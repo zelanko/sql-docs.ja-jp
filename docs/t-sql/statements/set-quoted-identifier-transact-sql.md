@@ -1,5 +1,5 @@
 ---
-title: "SET QUOTED_IDENTIFIER (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET QUOTED_IDENTIFIER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/03/2016
 ms.prod: sql-non-specified
@@ -59,20 +59,20 @@ SET QUOTED_IDENTIFIER { ON | OFF }
 SET QUOTED_IDENTIFIER ON   
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SET QUOTED_IDENTIFIER が ON の場合は、識別子を二重引用符で区切ることができます。リテラルは単一引用符で区切る必要があります。 SET QUOTED_IDENTIFIER が OFF の場合、識別子を引用符で区切ることはできません。識別子に関しては [!INCLUDE[tsql](../../includes/tsql-md.md)] のすべての規則に従う必要があります。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。 リテラルは単一引用符と二重引用符のどちらで区切ることもできます。  
   
- SET QUOTED_IDENTIFIER が ON (既定値) の場合、二重引用符で区切られた文字列はすべてオブジェクト識別子として解釈されます。 したがって、引用符で区切られた識別子は、識別子に関する [!INCLUDE[tsql](../../includes/tsql-md.md)] の規則に従う必要はありません。 このような識別子では予約済みキーワードを使用でき、通常は [!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子として許可されない文字を含めることもできます。 リテラル文字列式を二重引用符で区切ることはできません。リテラル文字列を区切るには、単一引用符を使用する必要があります。 場合、単一引用符 (**'**) 一部であること、リテラルの文字列の 2 つの単一引用符で表すことが (**"**)。 データベース内のオブジェクト名に対して予約済みキーワードを使用する場合は、SET QUOTED_IDENTIFIER を ON にする必要があります。  
+ SET QUOTED_IDENTIFIER が ON (既定値) の場合、二重引用符で区切られた文字列はすべてオブジェクト識別子として解釈されます。 したがって、引用符で区切られた識別子は、識別子に関する [!INCLUDE[tsql](../../includes/tsql-md.md)] の規則に従う必要はありません。 このような識別子では予約済みキーワードを使用でき、通常は [!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子として許可されない文字を含めることもできます。 リテラル文字列式を二重引用符で区切ることはできません。リテラル文字列を区切るには、単一引用符を使用する必要があります。 単一引用符 (**'**) がリテラル文字列の一部に含まれている場合は、2 つの連続する単一引用符 (**''**) を使用してください。 データベース内のオブジェクト名に対して予約済みキーワードを使用する場合は、SET QUOTED_IDENTIFIER を ON にする必要があります。  
   
  SET QUOTED_IDENTIFIER が OFF (既定値) の場合、式の内部のリテラル文字列は、単一引用符と二重引用符のどちらで区切ることもできます。 リテラル文字列を二重引用符で区切る場合は、文字列の内部でアポストロフィなどの埋め込み単一引用符を使用できます。  
   
- 計算列やインデックス付きビューのインデックスを作成または操作するときには、SET QUOTED_IDENTIFIER を ON に設定する必要があります。 SET QUOTED_IDENTIFIER が OFF の場合、計算列上にインデックスが設定されているテーブルやインデックス付きビューに対して CREATE、UPDATE、INSERT、および DELETE ステートメントを実行しようとすると失敗します。 計算列でインデックス付きビューとインデックスを持つ必要な SET オプション設定に関する詳細についてを参照してください「の考慮事項とする SET ステートメントの使用」 [SET ステートメント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md).  
+ 計算列やインデックス付きビューのインデックスを作成または操作するときには、SET QUOTED_IDENTIFIER を ON に設定する必要があります。 SET QUOTED_IDENTIFIER が OFF の場合、計算列上にインデックスが設定されているテーブルやインデックス付きビューに対して CREATE、UPDATE、INSERT、および DELETE ステートメントを実行しようとすると失敗します。 インデックス付きビューおよび計算列上のインデックスに必要な SET オプション設定の詳細については、「[SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)」の「SET ステートメントの使用に関する留意事項」を参照してください。  
   
  フィルター選択されたインデックスを作成する場合は、SET QUOTED_IDENTIFIER を ON に設定する必要があります。  
   
  XML データ型のメソッドを呼び出す場合は、SET QUOTED_IDENTIFIER を ON に設定する必要があります。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続するときに、ON に QUOTED_IDENTIFIER を自動的に設定します。 これは、ODBC データ ソース、ODBC 接続属性、または OLE DB 接続プロパティを使って構成できます。 DB-Library アプリケーションからの接続に対しては、SET QUOTED_IDENTIFIER は既定で OFF に設定されています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、接続時に自動的に QUOTED_IDENTIFIER が ON に設定されます。 これは、ODBC データ ソース、ODBC 接続属性、または OLE DB 接続プロパティを使って構成できます。 DB-Library アプリケーションからの接続に対しては、SET QUOTED_IDENTIFIER は既定で OFF に設定されています。  
   
  テーブルの作成時に QUOTED IDENTIFIER オプションが OFF に設定されていても、作成されるテーブルのメタデータでは、このオプションは常に ON として格納されます。  
   
@@ -82,16 +82,16 @@ SET QUOTED_IDENTIFIER ON
   
  SET ANSI_DEFAULTS が ON の場合、SET QUOTED_IDENTIFIER は有効になります。  
   
- SET QUOTED_IDENTIFIER は、ALTER DATABASE の QUOTED_IDENTIFIER 設定にも対応します。 データベースの設定の詳細については、次を参照してください。 [ALTER DATABASE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md).  
+ SET QUOTED_IDENTIFIER は、ALTER DATABASE の QUOTED_IDENTIFIER 設定にも対応します。 データベースの設定について詳しくは、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」をご覧ください。  
   
- SET QUOTED_IDENTIFIER は解析時では、有効で、のみに影響を与える解析では、クエリを実行できません。  
+ SET QUOTED_IDENTIFIER は解析時に有効であり、解析に対してのみ影響を与え、クエリの実行には影響しません。  
   
- 最上位のアドホック バッチの解析を開始 QUOTED_IDENTIFIER のセッションの現在の設定を使用します。  バッチの解析し出現するすべての SET QUOTED_IDENTIFIER が、その時点から解析動作を変更し、そのセッションの設定を保存します。  したがって、バッチを解析して実行すると、セッションの QUOTED_IDENTIFER 設定はバッチで SET QUOTED_IDENTIFIER の最後に見つかったに従って設定されます。  
- ストアド プロシージャ内の静的な SQL を解析するには、ストアド プロシージャを変更または作成したバッチの QUOTED_IDENTIFIER 設定を有効に使用されます。  静的 SQL としてストアド プロシージャの本体に書き込まれたときは、SET QUOTED_IDENTIFIER を指定しても効果はありません。  
+ 最上位のアドホック バッチの場合、解析は QUOTED_IDENTIFIER に対するセッションの現在の設定を使って開始します。  バッチが解析される過程で、SET QUOTED_IDENTIFIER が出現すると、それ以降の解析動作が変更され、セッションのその設定が保存されます。  したがって、バッチが解析されて実行された後、セッションの QUOTED_IDENTIFER の設定は、バッチでの SET QUOTED_IDENTIFIER の最後の出現に従って設定されます。  
+ ストアド プロシージャ内の静的な SQL は、ストアド プロシージャを作成または変更したバッチで有効な QUOTED_IDENTIFIER の設定を使って解析されます。  SET QUOTED_IDENTIFIER は、静的 SQL としてストアド プロシージャの本体内に出現する場合は効果がありません。  
   
- Sp_executesql または exec() を使用して入れ子になったバッチの解析を開始、セッションの QUOTED_IDENTIFIER 設定を使用します。  文字列の解析 ストアド プロシージャ内の入れ子になったバッチがある場合は、ストアド プロシージャの QUOTED_IDENTIFIER 設定を使ってを起動します。  入れ子になったバッチが解析されると、出現するすべての SET QUOTED_IDENTIFIER は、その時点から解析動作を変更するが、セッションの QUOTED_IDENTIFIER 設定は更新されません。  
+ sp_executesql または exec() を使う入れ子になったバッチの場合、解析はセッションの QUOTED_IDENTIFIER の設定を使って開始します。  入れ子になったバッチがストアド プロシージャの内部にある場合は、解析はストアド プロシージャの QUOTED_IDENTIFIER の設定を使って開始します。  入れ子になったバッチが解析される過程で、SET QUOTED_IDENTIFIER が出現すると、それ以降の解析動作が変更されますが、セッションの QUOTED_IDENTIFIER の設定は更新されません。  
   
- 角かっこを使用して**[**と**]**識別子を区切るために、QUOTED_IDENTIFIER 設定の影響を受けません。  
+ 識別子を区切るための角かっこ (**[** および **]**) の使用は、QUOTED_IDENTIFIER オプションの設定に影響されません。  
   
  この設定の現在の設定を表示するには、次のクエリを実行します。  
   
@@ -102,7 +102,7 @@ SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -208,7 +208,7 @@ GO
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [[SET ansi_defaults] &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
- [sp_rename &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)  
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)  
   
   

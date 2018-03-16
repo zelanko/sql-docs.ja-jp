@@ -1,5 +1,5 @@
 ---
-title: "RESTORE SERVICE MASTER KEY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: RESTORE SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -53,16 +53,16 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>引数  
- ファイル**='***path_to_file***'**  
- 格納されているサービス マスター キーへの完全なパスを、ファイル名を含めて指定します。 *path_to_file*ローカル パスまたはネットワーク上の場所への UNC パスを指定できます。  
+ FILE **='***path_to_file***'**  
+ 格納されているサービス マスター キーへの完全なパスを、ファイル名を含めて指定します。 *path_to_file* には、ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。  
   
- パスワード**='***パスワード***'**  
+ PASSWORD **='***password***'**  
  ファイルからインポートされるサービス マスター キーの暗号化解除に必要なパスワードを指定します。  
   
  FORCE  
  データが失われる可能性があっても、強制的にサービス マスター キーを置換します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  サービス マスター キーを復元するとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、現在のサービス マスター キーで暗号化されているすべてのキーとシークレットの暗号化が解除され、次にそれらがバックアップ ファイルから読み込まれたサービス マスター キーで暗号化されます。  
   
  暗号化解除が 1 つでも失敗した場合、復元は失敗します。 FORCE オプションを使用するとエラーを無視できますが、暗号化を解除できないデータが失われる可能性があります。  
@@ -72,7 +72,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
   
  暗号化階層の再生成操作はリソースを大量に消費するため、 リソース要求が少ないときに実行するように考慮してください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -86,9 +86,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [サービス マスター _ キー](../../relational-databases/security/encryption/service-master-key.md)   
- [ALTER SERVICE MASTER KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
- [BACKUP SERVICE MASTER KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
+ [サービス マスター キー](../../relational-databases/security/encryption/service-master-key.md)   
+ [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
+ [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

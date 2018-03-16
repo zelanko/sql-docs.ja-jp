@@ -1,5 +1,5 @@
 ---
-title: "CREATE FULLTEXT CATALOG (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CREATE FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -45,10 +45,10 @@ ms.lasthandoff: 11/21/2017
 
   データベースのフルテキスト カタログを作成します。 1 つのフルテキスト カタログには複数のフルテキスト インデックスを格納できますが、1 つのフルテキスト インデックスは 1 つのフルテキスト カタログにしか格納できません。 各データベースには、任意の数のフルテキスト カタログを格納できます。  
   
- フルテキスト カタログを作成することはできません、**マスター**、**モデル**、または**tempdb**データベース。  
+ **master**、**model**、または **tempdb** の各データベースには、フルテキスト カタログは作成できません。  
   
 > [!IMPORTANT]  
->  以降で[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、フルテキスト カタログは、仮想オブジェクトで、任意のファイル グループに属していません。 フルテキスト カタログは、フルテキスト インデックスのグループを指す論理的概念です。  
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では、フルテキスト カタログは仮想オブジェクトであり、ファイル グループには属しません。 フルテキスト カタログは、フルテキスト インデックスのグループを指す論理的概念です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -70,31 +70,31 @@ CREATE FULLTEXT CATALOG catalog_name
   
 ## <a name="arguments"></a>引数  
  *catalog_name*  
- 新しいカタログの名前を指定します。 このカタログ名は、現在のデータベース内にあるすべてのカタログ名の中で一意であることが必要です。 また、フルテキスト カタログに対応するファイルの名前 (ON FILEGROUP を参照) は、データベース内にある全ファイルの中で一意であることが必要です。 カタログの名前が別のカタログ、データベースで既に使用されている場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はエラーを返します。  
+ 新しいカタログの名前を指定します。 このカタログ名は、現在のデータベース内にあるすべてのカタログ名の中で一意であることが必要です。 また、フルテキスト カタログに対応するファイルの名前 (ON FILEGROUP を参照) は、データベース内にある全ファイルの中で一意であることが必要です。 指定したカタログ名が、データベース内の別のカタログで既に使用されている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はエラーを返します。  
   
  カタログ名は半角 120 文字以内で指定してください。  
   
  ON FILEGROUP *filegroup*  
- 以降で[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、この句が影響を与えません。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、この句は無効です。  
   
- パスに**'***rootpath***'**  
+ IN PATH **'***rootpath***'**  
  > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- 以降で[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、この句が影響を与えません。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、この句は無効です。  
   
  ACCENT_SENSITIVITY = {ON|OFF}   
- カタログのフルテキスト インデックス作成でアクセントを区別するかどうかを指定します。 このプロパティを変更すると、インデックスの再構築が必要になります。 既定では、データベースの照合順序の指定に従って、アクセントの区別が決定されます。 表示するにはデータベースの照合順序を使用して、 **sys.databases**カタログ ビューです。  
+ カタログのフルテキスト インデックス作成でアクセントを区別するかどうかを指定します。 このプロパティを変更すると、インデックスの再構築が必要になります。 既定では、データベースの照合順序の指定に従って、アクセントの区別が決定されます。 データベースの照合順序を表示するには、**sys.databases** カタログ ビューを使います。  
   
- フルテキスト カタログの現在のアクセントの区別に関するプロパティの設定を確認するのに、FULLTEXTCATALOGPROPERTY 関数を使用して、 **accentsensitivity**プロパティの値に対して*catalog_name*です。 値 '1' が返された場合、フルテキスト カタログではアクセントが区別され、値 '0' が返された場合、アクセントは区別されません。  
+ フルテキスト カタログのアクセントの区別に関する現在のプロパティ設定を確認するには、*catalog_name* に対して、FULLTEXTCATALOGPROPERTY 関数を **accentsensitivity** プロパティ値と共に使用します。 値 '1' が返された場合、フルテキスト カタログではアクセントが区別され、値 '0' が返された場合、アクセントは区別されません。  
   
  AS DEFAULT   
  カタログが既定のカタログであることを指定します。 フルテキスト カタログを明示的に指定せずにフルテキスト インデックスを作成するときには、既定のカタログが使用されます。 既存のフルテキスト カタログが既に AS DEFAULT となっている場合、この新しいカタログを AS DEFAULT として設定すると、新しいカタログが既定のフルテキスト カタログになります。  
   
- 承認*owner_name*  
- フルテキスト カタログの所有者として、データベース ユーザーまたはロールの名前を設定します。 場合*owner_name*ロール、ロールがメンバーである現在のユーザー、ロールの名前にする必要がありますまたはステートメントを実行しているユーザーが、データベース所有者またはシステム管理者にする必要があります。  
+ AUTHORIZATION *owner_name*  
+ フルテキスト カタログの所有者として、データベース ユーザーまたはロールの名前を設定します。 *owner_name* がロールの場合、現在のユーザーがメンバーとなっているロールの名前を指定するか、ステートメントを実行するユーザーがデータベース所有者またはシステム管理者であることが必要です。  
   
- 場合*owner_name*は、ユーザー名、ユーザー名は、次のいずれかにする必要があります。  
+ *owner_name* がユーザー名の場合、次のいずれかを指定する必要があります。  
   
 -   ステートメントを実行するユーザーの名前。  
   
@@ -102,13 +102,13 @@ CREATE FULLTEXT CATALOG catalog_name
   
 -   コマンドを実行するユーザーがデータベース所有者またはシステム管理者であること。  
   
- *owner_name*指定されたフルテキスト カタログに対する TAKE OWNERSHIP 権限を与える必要もあります。  
+ *owner_name* には、指定したフルテキスト カタログの TAKE OWNERSHIP 権限も与えられている必要があります。  
   
-## <a name="remarks"></a>解説  
- フルテキスト カタログ Id は、00005 から開始され、新しいカタログが作成されるごとに 1 つがインクリメントされます。  
+## <a name="remarks"></a>Remarks  
+ フルテキスト カタログ ID は、00005 から始まり、新しいカタログが作成されるたびに 1 ずつ増加します。  
   
-## <a name="permissions"></a>Permissions  
- ユーザーが、データベースに対する CREATE FULLTEXT CATALOG 権限を持っているかのメンバーである必要があります、 **db_owner**、または**db_ddladmin**固定データベース ロール。  
+## <a name="permissions"></a>アクセス許可  
+ ユーザーは、データベースに対して CREATE FULLTEXT CATALOG 権限を持つか、**db_owner** 固定データベース ロールまたは **db_ddladmin** 固定データベース ロールのメンバーであることが必要です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、フルテキスト カタログとフルテキスト インデックスを作成します。  
@@ -123,9 +123,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.fulltext_catalogs &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
- [DROP FULLTEXT CATALOG &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
+ [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
  
   

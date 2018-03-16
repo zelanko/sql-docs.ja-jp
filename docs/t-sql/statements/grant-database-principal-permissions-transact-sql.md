@@ -1,5 +1,5 @@
 ---
-title: "データベース プリンシパル アクセス許可の付与 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "GRANT (データベース プリンシパルの権限の許可) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/12/2017
 ms.prod: sql-non-specified
@@ -71,23 +71,23 @@ GRANT permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>引数  
- *アクセス許可*  
+ *permission*  
  データベース プリンシパルに対して許可できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ユーザー::*database_user*  
+ USER ::*database_user*  
  権限を許可するユーザーのクラスと名前を指定します。 スコープ修飾子 (::) が必要です。  
   
- ロール::*database_role*  
+ ROLE ::*database_role*  
  権限を許可するロールのクラスと名前を指定します。 スコープ修飾子 (::) が必要です。  
   
- アプリケーション ロール::*application_role*  
+ APPLICATION ROLE ::*application_role*  
    
  権限を許可するアプリケーション ロールのクラスと名前を指定します。 スコープ修飾子 (::) が必要です。  
   
  WITH GRANT OPTION  
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。  
   
  *Database_user*  
@@ -97,12 +97,12 @@ GRANT permission [ ,...n ]
  データベース ロールを指定します。  
   
  *Application_role*  
- **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  アプリケーション ロールを指定します。  
   
  *Database_user_mapped_to_Windows_User*  
- Windows ユーザーにマップされるデータベース ユーザーを指定します。  
+ Windows ユーザーにマップされているデータベース ユーザーを指定します。  
   
  *Database_user_mapped_to_Windows_Group*  
   
@@ -119,13 +119,13 @@ GRANT permission [ ,...n ]
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>解説  
- データベース プリンシパルに関する情報は、 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)カタログ ビューです。 データベース レベルの権限に関する情報は、 [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)カタログ ビューです。  
+## <a name="remarks"></a>Remarks  
+ データベース プリンシパルに関する情報は、[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) カタログ ビューで確認できます。 データベース レベルの権限に関する情報は、[sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) カタログ ビューで確認できます。  
   
 ## <a name="database-user-permissions"></a>データベース ユーザー権限  
  データベース ユーザーは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、データベース ユーザーで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
-|データベース ユーザーのアクセス許可|権限が含まれるデータベース ユーザー権限|権限が含まれるデータベース権限|  
+|データベース ユーザー権限|権限が含まれるデータベース ユーザー権限|権限が含まれるデータベース権限|  
 |------------------------------|-----------------------------------------|------------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
 |IMPERSONATE|CONTROL|CONTROL|  
@@ -142,7 +142,7 @@ GRANT permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="application-role-permissions"></a>アプリケーション ロールの権限  
+## <a name="application-role-permissions"></a>アプリケーション ロール権限  
  アプリケーション ロールは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、アプリケーション ロールで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |アプリケーション ロール権限|権限が含まれるアプリケーション ロール権限|権限が含まれるデータベース権限|  
@@ -151,23 +151,23 @@ GRANT permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  権限の許可者 (または AS オプションで指定されたプリンシパル) は、GRANT OPTION によって与えられた権限を保持しているか、権限が暗黙的に与えられる上位の権限を保持している必要があります。  
   
- AS オプションを使用している場合は、次の追加要件が適用されます。  
+ AS オプションを使用している場合は、次の追加要件があります。  
   
 |AS *granting_principal*|必要な追加権限|  
 |------------------------------|------------------------------------|  
 |データベース ユーザー|ユーザーに対する IMPERSONATE 権限、db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
 |Windows ユーザーにマップされているデータベース ユーザー|ユーザーに対する IMPERSONATE 権限、db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
-|Windows グループにマップされるデータベース ユーザー|Windows グループのメンバーシップ、db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
+|Windows グループにマップされているデータベース ユーザー|Windows グループのメンバーシップ、db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
 |証明書にマップされているデータベース ユーザー|db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
-|非対称キーにマップされるデータベース ユーザー|Db_securityadminfixed データベース ロールのメンバーシップ、db_owner 固定データベース ロール、またはメンバーシップが sysadmin 固定サーバー ロール。|  
-|任意のサーバー プリンシパルにマップされていないデータベース ユーザー|ユーザーに対する IMPERSONATE 権限、db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
-|データベース ロール|役割、db_securityadminfixed データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップに対する ALTER 権限。|  
+|非対称キーにマップされているデータベース ユーザー|db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
+|サーバー プリンシパルにマップされていないデータベース ユーザー|ユーザーに対する IMPERSONATE 権限、db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
+|データベース ロール|ロールに対する ALTER 権限、db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
 |アプリケーション ロール|ロールに対する ALTER 権限、db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
   
- セキュリティ保護可能なことができますの CONTROL 権限を持っているプリンシパルのアクセス許可を付与するセキュリティ保護可能な。  
+ セキュリティ保護可能なリソースに対して CONTROL 権限があるプリンシパルは、そのリソースの権限を許可できます。  
   
  db_owner 固定データベース ロールのメンバーなど、データベースに対する CONTROL 権限が許可されているユーザーは、データベース内のセキュリティ保護可能なリソースに対する権限を許可できます。  
   
@@ -182,7 +182,7 @@ GO
 ```  
   
 ### <a name="b-granting-view-definition-permission-on-a-role-to-a-user-with-grant-option"></a>B. ロールに対する VIEW DEFINITION 権限を、GRANT OPTION を指定してユーザーに許可する  
- 次の例では付与`VIEW DEFINITION`に対する権限`AdventureWorks2012`ロール`SammamishParking`と共に`GRANT OPTION`データベース ユーザーに`JinghaoLiu`です。  
+ 次の例では、`AdventureWorks2012` のロール `SammamishParking` に対する `VIEW DEFINITION` 権限を、`GRANT OPTION` を指定して、データベース ユーザー `JinghaoLiu` に許可します。  
   
 ```  
 GRANT VIEW DEFINITION ON ROLE::SammamishParking   
@@ -191,9 +191,9 @@ GO
 ```  
   
 ### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. ユーザーに対する IMPERSONATE 権限をアプリケーション ロールに許可する  
- 次の例では付与`IMPERSONATE`ユーザーに対する権限`HamithaL`に`AdventureWorks2012`アプリケーション ロール`AccountsPayable17`です。  
+ 次の例では、ユーザー `HamithaL` に対する `IMPERSONATE` 権限を、`AdventureWorks2012` のアプリケーション ロール `AccountsPayable17` に許可します。  
   
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ```  
 GRANT IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  
@@ -201,13 +201,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース プリンシパルの権限 &#40; を拒否します。TRANSACT-SQL と #41 です。](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)   
- [データベース プリンシパルの権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
+ [DENY (データベース プリンシパルの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)   
+ [REVOKE (データベース プリンシパルの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [sys.database_permissions および #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [APPLICATION ROLE &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-application-role-transact-sql.md)   
- [ROLE &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

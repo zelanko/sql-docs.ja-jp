@@ -1,5 +1,5 @@
 ---
-title: "プロシージャ (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
@@ -62,20 +62,20 @@ ms.lasthandoff: 11/21/2017
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  作成、[!INCLUDE[tsql](../../includes/tsql-md.md)]共通言語ランタイム (CLR) ストアド プロシージャまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL Data Warehouse と並列データ ウェアハウスです。 ストアド プロシージャは、次のことを実行できる点で、他のプログラミング言語のプロシージャに似ています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL Data Warehouse、および Parallel Data Warehouse で、[!INCLUDE[tsql](../../includes/tsql-md.md)] または共通言語ランタイム (CLR) のストアド プロシージャを作成します。 ストアド プロシージャは、次のことを実行できる点で、他のプログラミング言語のプロシージャに似ています。  
   
 -   入力パラメーターを受け取り、呼び出し元のプロシージャまたはバッチに出力パラメーターの形式で複数の値を返す。  
   
 -   他のプロシージャの呼び出しなど、データベース内での操作を実行するプログラミング ステートメントを含む。  
   
--   呼び出し元のプロシージャまたはバッチの成功または失敗、および失敗の理由) を示すためにステータス値を返します。  
+-   呼び出し元のプロシージャまたはバッチにステータス値を返し、成功、失敗、および失敗の原因を示す。  
   
- このステートメントを使用して、現在のデータベースまたは一時プロシージャ内で永続的なプロシージャを作成する、 **tempdb**データベース。  
+ このステートメントを使用すると、現在のデータベースに永続的なプロシージャを作成したり、**tempdb** データベースに一時プロシージャを作成したりできます。  
   
 > [!NOTE]  
->  SQL Server への .NET Framework CLR の統合はこのトピックで説明します。 CLR 統合は、Azure には適用されません[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。
+>  このトピックでは、SQL Server への .NET Framework CLR の統合について説明します。 CLR 統合は、Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] には適用されません。
 
-ジャンプ[簡単な例を](#Simple)ストアド プロシージャの構文の詳細をスキップして、基本的なは簡単な例を取得します。
+構文の詳細を読まずに、基本的なストアド プロシージャの例を見るには、「[簡単な例](#Simple)」に進んでください。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -149,116 +149,116 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 ```  
   
 ## <a name="arguments"></a>引数
-または変更  
- **適用されます**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1)。  
+OR ALTER  
+ **適用対象**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降)。  
   
- 既に存在する場合は、プロシージャを変更します。
+ 既に存在するプロシージャを変更します。
  
  *schema_name*  
  プロシージャが属するスキーマの名前を指定します。 プロシージャはスキーマ バインドされています。 プロシージャの作成時にスキーマ名を指定しない場合は、プロシージャを作成しているユーザーの既定のスキーマが自動的に割り当てられます。  
   
  *procedure_name*  
- プロシージャの名前を指定します。 プロシージャ名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)スキーマ内で一意である必要があります。  
+ プロシージャの名前を指定します。 プロシージャ名は、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従うと共に、スキーマ内で一意であることが必要です。  
   
- 使用を避けるため、 **sp _**プロシージャの名前を付けるときにプレフィックスします。 このプレフィックスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でシステム プロシージャを指定するために使用されるものです。 このプレフィックスを使用すると、同じ名前のシステム プロシージャがある場合にアプリケーション コードが機能しなくなる可能性があります。  
+ プロシージャに名前を付けるときは、**sp_** プレフィックスを使用しないでください。 このプレフィックスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でシステム プロシージャを指定するために使用されるものです。 このプレフィックスを使用すると、同じ名前のシステム プロシージャがある場合にアプリケーション コードが機能しなくなる可能性があります。  
   
- ローカルまたはグローバル一時プロシージャは、前に 1 つのシャープ記号 (#) を使用して作成する*procedure_name* (*#procedure_name*)、ローカル一時プロシージャとグローバル一時の 2 つのシャープ記号のプロシージャ (*##0.00;($# procedure_name*)。 ローカル一時プロシージャは、そのプロシージャが作成された接続のみで表示でき、その接続が閉じられると削除されます。 グローバル一時プロシージャは、すべての接続で使用でき、そのプロシージャを使用する最後のセッションが終了すると削除されます。 CLR プロシージャには一時名は指定できません。  
+ ローカルまたはグローバルの一時プロシージャを作成するには、*procedure_name* の前に、ローカル一時プロシージャの場合は番号記号 (#) を 1 つ付加し (*#procedure_name*)、グローバル一時プロシージャの場合は番号記号を 2 つ付加します (*##procedure_name*)。 ローカル一時プロシージャは、そのプロシージャが作成された接続のみで表示でき、その接続が閉じられると削除されます。 グローバル一時プロシージャは、すべての接続で使用でき、そのプロシージャを使用する最後のセッションが終了すると削除されます。 CLR プロシージャには一時名は指定できません。  
   
  プロシージャまたはグローバル一時プロシージャの名前は、## を含め最大で半角 128 文字です。 ローカル一時プロシージャの名前は、# を含め最大で半角 116 文字です。  
   
- **;** *数*  
- **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+ **;** *number*  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  同じ名前のプロシージャのグループ化に使用される整数を指定します (省略可能)。 グループ化したプロシージャは、DROP PROCEDURE ステートメントの 1 回の実行でまとめて削除できます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- 番号付きプロシージャは使用できません、 **xml**または CLR ユーザー定義型し、プラン ガイドでは使用できません。  
+ 番号付きプロシージャでは **xml** または CLR ユーザー定義型を使用できません。また、番号付きプロシージャはプラン ガイドでは使用できません。  
   
- **@***パラメーター*  
- プロシージャ内で宣言されているパラメーターを指定します。 使用して、パラメーター名を指定、アット マーク (**@**) 最初の文字として。 パラメーター名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。 パラメーターはプロシージャに対してローカルです。同じパラメーター名を他のプロシージャで使用できます。  
+ **@** *parameter*  
+ プロシージャ内で宣言されているパラメーターを指定します。 最初の文字をアット マーク (**@**) にしてパラメーター名を指定します。 パラメーター名は[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。 パラメーターはプロシージャに対してローカルです。同じパラメーター名を他のプロシージャで使用できます。  
   
- 1 つ以上のパラメーター (最大 2,100 個) を宣言できます。 宣言される各パラメーターの値は、パラメーターに既定値が定義されていない場合、または別のパラメーターと同じ値を使用するよう設定されていない場合は、プロシージャの呼び出し時にユーザーが指定する必要があります。 プロシージャが含まれている場合[テーブル値パラメーター](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)パラメーターが呼び出しで不足していると、空のテーブルが渡されました。 パラメーターは定数式の代わりにのみ使用することができます。テーブル名、列名、またはその他のデータベース オブジェクト名の代わりにパラメーターを使用することはできません。 詳細については、「 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)」を参照してください。  
+ 1 つ以上のパラメーター (最大 2,100 個) を宣言できます。 宣言される各パラメーターの値は、パラメーターに既定値が定義されていない場合、または別のパラメーターと同じ値を使用するよう設定されていない場合は、プロシージャの呼び出し時にユーザーが指定する必要があります。 プロシージャに[テーブル値パラメーター](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)が含まれていて、そのパラメーターが呼び出しに含まれてない場合、空のテーブルが渡されます。 パラメーターは定数式の代わりにのみ使用することができます。テーブル名、列名、またはその他のデータベース オブジェクト名の代わりにパラメーターを使用することはできません。 詳細については、「 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)」を参照してください。  
   
  FOR REPLICATION を指定した場合、パラメーターは宣言できません。  
   
- [ *type_schema_name***です。** *data_type*  
+ [ *type_schema_name***.** ] *data_type*  
  パラメーターのデータ型とそのデータ型が属するスキーマを指定します。  
   
-**に関するガイドライン[!INCLUDE[tsql](../../includes/tsql-md.md)]プロシージャ**:  
+**[!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャに関するガイドライン**:  
   
--   すべて[!INCLUDE[tsql](../../includes/tsql-md.md)]データ型をパラメーターとして使用することができます。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] のすべてのデータ型をパラメーターとして使用できます。  
   
--   ユーザー定義テーブル型を使用して、テーブル値パラメーターを作成できます。 テーブル値パラメーターは、入力パラメーターとしてのみ指定でき、READONLY キーワードと共に使用する必要があります。 詳細については、次を参照してください[テーブル値パラメーター &#40;データベース エンジン&#41;。](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
+-   ユーザー定義テーブル型を使用して、テーブル値パラメーターを作成できます。 テーブル値パラメーターは、入力パラメーターとしてのみ指定でき、READONLY キーワードと共に使用する必要があります。 詳細については、「[テーブル値パラメーターの使用 &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)」を参照してください  
   
--   **カーソル**データ型の出力パラメーターであることができますのみと VARYING キーワードと共に使用する必要があります。  
+-   **cursor** データ型は、出力パラメーターとしてのみ指定でき、VARYING キーワードと共に使用する必要があります。  
   
 **CLR プロシージャに関するガイドライン**:  
   
--   マネージ コード内に同等の型を持つネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型であれば、どの型でもパラメーターとして使用できます。 CLR 型間の通信の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システム データ型を参照してください[CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)です。 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システム データ型とその構文を参照してください。[データ型 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/data-types-transact-sql.md).  
+-   マネージ コード内に同等の型を持つネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型であれば、どの型でもパラメーターとして使用できます。 CLR 型と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型の対応関係の詳細については、「[CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)」をご覧ください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型とその構文の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」をご覧ください。  
   
--   テーブル値または**カーソル**データ型をパラメーターとして使用することはできません。  
+-   テーブル値または **cursor** データ型をパラメーターとして使用することはできません。  
   
 -   パラメーターのデータ型が CLR ユーザー定義型の場合は、その型に対する EXECUTE 権限が必要です。  
   
 VARYING  
- 出力パラメーターとしてサポートされている結果セットを指定します。 このパラメーターはプロシージャによって動的に作成され、その内容は変化します。 のみ適用されます**カーソル**パラメーター。 このオプションは、CLR プロシージャでは無効です。  
+ 出力パラメーターとしてサポートされている結果セットを指定します。 このパラメーターはプロシージャによって動的に作成され、その内容は変化します。 **cursor** パラメーターにのみ適用されます。 このオプションは、CLR プロシージャでは無効です。  
   
-*既定値*  
- パラメーターの既定値。 既定値がパラメーターに定義されている場合は、そのパラメーターの値を指定せず、プロシージャを実行できます。 既定値は定数である必要があります、NULL にすることができます。 定数値はワイルドカードの形式で指定できるため、パラメーターをプロシージャに渡すときに LIKE キーワードを使用することができます。   
+*default*  
+ パラメーターの既定値です。 パラメーターの既定値が定義されている場合は、パラメーターに値を指定せずにプロシージャを実行できます。 既定値は定数にする必要がありますが、NULL にすることもできます。 定数値はワイルドカードの形式で指定できるため、パラメーターをプロシージャに渡すときに LIKE キーワードを使用することができます。   
   
- 既定値に記録される、 **sys.parameters.default** CLR プロシージャに対してのみの列です。 その列は NULL です[!INCLUDE[tsql](../../includes/tsql-md.md)]プロシージャのパラメーターです。  
+ 既定値は、CLR プロシージャの場合のみ、**sys.parameters.default** 列に記録されます。 この列は、[!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャ パラメーターでは NULL になります。  
   
 OUT | OUTPUT  
- パラメーターが出力パラメーターであることを示します。 プロシージャの呼び出し元に値を返すには、OUTPUT パラメーターを使用します。 **テキスト**、 **ntext**、および**イメージ**パラメーターは、プロシージャが CLR プロシージャでない限り、出力パラメーターとして使用できません。 出力パラメーターは、プロシージャが CLR プロシージャでない場合は、カーソルのプレースホルダーにできます。 テーブル値データ型をプロシージャの OUTPUT パラメーターとして指定することはできません。  
+ パラメーターが出力パラメーターであることを示します。 プロシージャの呼び出し元に値を返すには、OUTPUT パラメーターを使用します。 **text**、**ntext**、および **image** パラメーターは、プロシージャが CLR プロシージャでない限り、OUTPUT パラメーターとして使用できません。 出力パラメーターは、プロシージャが CLR プロシージャでない場合は、カーソルのプレースホルダーにできます。 テーブル値データ型をプロシージャの OUTPUT パラメーターとして指定することはできません。  
   
 READONLY  
- パラメーターを更新またはプロシージャの本体内で変更できないことを示します。 パラメーターの型がテーブル値型の場合は、READONLY を指定する必要があります。  
+ パラメーターをプロシージャの本体内で更新または変更できないことを示します。 パラメーターの型がテーブル値型の場合は、READONLY を指定する必要があります。  
   
 RECOMPILE  
- 示します、[!INCLUDE[ssDE](../../includes/ssde-md.md)]強制的コンパイルが実行されるたびに、この手順のクエリ プランをキャッシュしません。 強制的に再コンパイルの理由の詳細については、次を参照してください。[ストアド プロシージャを再コンパイル](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)です。 このオプションは、FOR REPLICATION を指定した場合または CLR プロシージャには使用できません。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]でこのプロシージャ用のクエリ プランをキャッシュせず、プロシージャが実行されるたびにコンパイルされるようにすることを示します。 再コンパイルを強制する理由の詳細については、「[ストアド プロシージャの再コンパイル](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)」をご覧ください。 このオプションは、FOR REPLICATION を指定した場合または CLR プロシージャには使用できません。  
   
- 指示するため、[!INCLUDE[ssDE](../../includes/ssde-md.md)]プロシージャ内の個々 のクエリのクエリ プランを破棄するには、クエリの定義で RECOMPILE クエリ ヒントを使用します。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]でプロシージャ内にある個々のクエリに対するクエリ プランを破棄するには、クエリの定義で RECOMPILE クエリ ヒントを使用します。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
 ENCRYPTION  
- **適用されます**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+ **適用対象**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CREATE PROCEDURE ステートメントの元のテキストを難読化された形式に変換します。 難読化の出力内のカタログ ビューのいずれかで直接表示がない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 システム テーブルまたはデータベース ファイルへのアクセス権を持たないユーザーは、暗号化した形式のテキストを取得できません。 ただし、テキストは経由でシステム テーブルにアクセスできるか、ユーザー特権を持つユーザーが使用できる、 [DAC ポート](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)または直接データベース ファイルにアクセスします。 また、サーバー プロセスにデバッガーをアタッチできるユーザーは、実行時に、暗号化を解除したプロシージャをメモリから取得できます。 システム メタデータへのアクセスの詳細については、次を参照してください。 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、CREATE PROCEDURE ステートメントの元のテキストを、暗号化した形式に変換することを示します。 暗号化した形式の出力は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内のどのカタログ ビューでも直接見ることはできません。 システム テーブルまたはデータベース ファイルへのアクセス権を持たないユーザーは、暗号化した形式のテキストを取得できません。 ただし、[DAC ポート](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)経由でシステム テーブルにアクセスする権限、または直接データベース ファイルにアクセスする権限を持っているユーザーは、このテキストを使用できます。 また、サーバー プロセスにデバッガーをアタッチできるユーザーは、実行時に、暗号化を解除したプロシージャをメモリから取得できます。 システム メタデータのアクセス方法について詳しくは、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
  このオプションは、CLR プロシージャでは無効です。  
   
- このオプションで作成されたプロシージャは、の一部としてパブリッシュできません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レプリケーション。  
+ このオプションを使って作成したプロシージャを、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションの一部として発行することはできません。  
   
-EXECUTE AS*句*  
+EXECUTE AS *clause*  
  プロシージャを実行するセキュリティ コンテキストを指定します。  
   
- 以降のネイティブ コンパイル ストアド プロシージャの[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]し、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、EXECUTE AS に制限はありません句。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SELF、OWNER、および*'user_name'*句は、ネイティブ コンパイル ストアド プロシージャでサポートされます。  
+ ネイティブ コンパイル ストアド プロシージャの場合、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、EXECUTE AS 句に対して制限はありません。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、SELF、OWNER、および *‘user_name’* 句は、ネイティブ コンパイル ストアド プロシージャでサポートされます。  
   
  詳細については、「[EXECUTE AS 句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)」を参照してください。  
   
 FOR REPLICATION  
- **適用されます**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+ **適用対象**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  プロシージャがレプリケーション用に作成されていることを指定します。 そのため、サブスクライバーでプロシージャを実行することはできません。 FOR REPLICATION オプションを指定して作成したプロシージャは、プロシージャ フィルターとして使用され、レプリケーション時にのみ実行されます。 FOR REPLICATION を指定した場合、パラメーターは宣言できません。 CLR プロシージャには FOR REPLICATION は指定できません。 RECOMPILE オプションは、FOR REPLICATION を使って作成されたプロシージャでは無視されます。  
   
- A`FOR REPLICATION`手順では、オブジェクトの種類**RF**で**sys.objects**と**sys.procedures**です。  
+ `FOR REPLICATION` プロシージャでは、**sys.objects** および **sys.procedures** でオブジェクトの種類 **RF** が指定されます。  
   
- {[BEGIN] *sql_statement* [;][ ... *n*  ] [終了]}  
+ { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  プロシージャの本体を構成する 1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定します。 省略可能な BEGIN キーワードと END キーワードを使用して、ステートメントを囲むことができます。 詳細については、後で説明する「ベスト プラクティス」、「全般的な解説」、および「制限事項と制約事項」をご覧ください。  
   
-外部名*assembly_name***.***class_name***.***メソッド名が*  
- **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+EXTERNAL NAME *assembly_name***.***class_name***.***method_name*  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- メソッドを指定します、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR プロシージャを参照するアセンブリ。 *class_name*は有効な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別子、アセンブリ内のクラスとして存在する必要があります。 クラスにピリオドを使用する名前空間で修飾された名前 (**.**) 名前空間の部分を分割する、クラス名を角かっこで区切る必要があります (**:operator[]**) または引用符 (**""**). 指定するメソッドは、クラスの静的メソッドであることが必要です。  
+ CLR プロシージャで参照する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリのメソッドを指定します。 *class_name* は、有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子であること、およびアセンブリにクラスとして存在していることが必要です。 名前空間部分を区切るためにピリオド (**.**) を使う名前空間修飾名がクラスにある場合は、クラス名をかっこ (**[ ]**) または引用符 (**""**) で区切る必要があります。 指定するメソッドは、クラスの静的メソッドであることが必要です。  
   
- 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は CLR コードを実行できません。 作成、変更、および共通言語ランタイム モジュール; を参照するデータベース オブジェクトを削除することができます。ただし、これらの参照を実行することはできません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有効にするまで、 [clr enabled オプション](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)です。 オプションを有効にするには、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)です。  
+ 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は CLR コードを実行できません。 共通言語ランタイム モジュールを参照するデータベース オブジェクトを作成、変更、および削除することはできますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこれらの参照を実行するには、[clr enabled オプション](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)を有効にする必要があります。 このオプションを有効にするには、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用します。  
   
 > [!NOTE]  
 >  CLR プロシージャは、包含データベースではサポートされていません。  
   
 ATOMIC WITH  
- **適用されます**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  アトミック ストアド プロシージャの実行を示します。 変更はコミットされるか、例外のスローによってすべての変更がロールバックされます。 ネイティブ コンパイル ストアド プロシージャには、ATOMIC WITH ブロックが必要です。  
   
@@ -277,127 +277,127 @@ SET オプションは、ATOMIC ブロック内部では変更できません。
   
 BEGIN、ROLLBACK、および COMMIT 操作は、アトミック ブロック内では使用できません。  
   
- ネイティブ コンパイル ストアド プロシージャごとに、プロシージャのスコープの外部に 1 つの ATOMIC ブロックがあります。 ブロックを入れ子にすることはできません。 Atomic ブロックに関する詳細については、次を参照してください。 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)です。  
+ ネイティブ コンパイル ストアド プロシージャごとに、プロシージャのスコープの外部に 1 つの ATOMIC ブロックがあります。 ブロックを入れ子にすることはできません。 ATOMIC ブロックについて詳しくは、「[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)」をご覧ください。  
   
-**NULL** |NOT NULL します。  
+**NULL** | NOT NULL  
  パラメーターで NULL 値を許すかどうかを示します。 NULL が既定値です。  
   
 NATIVE_COMPILATION  
- **適用されます**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- プロシージャがネイティブにコンパイルされることを示します。 NATIVE_COMPILATION、SCHEMABINDING、および EXECUTE AS は、任意の順序で指定できます。 詳細については、次を参照してください。 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)です。  
+ プロシージャがネイティブにコンパイルされることを示します。 NATIVE_COMPILATION、SCHEMABINDING、および EXECUTE AS は、任意の順序で指定できます。 詳しくは、「[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)」をご覧ください。  
   
 SCHEMABINDING  
- **適用されます**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- プロシージャによって参照されるテーブルを削除または変更できないようにします。 ネイティブ コンパイル ストアド プロシージャでは、SCHEMABINDING が必要です。 (詳細については、次を参照してください[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。)。SCHEMABINDING の制限は、ユーザー定義関数に対する場合と同じです。 詳細については、SCHEMABINDING のセクションを参照してください。 [CREATE FUNCTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-function-transact-sql.md).  
+ プロシージャによって参照されるテーブルを削除または変更できないようにします。 ネイティブ コンパイル ストアド プロシージャでは、SCHEMABINDING が必要です。 詳しくは、「[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)」をご覧ください。SCHEMABINDING の制限は、ユーザー定義関数に対する場合と同じです。 詳しくは、「[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)」の SCHEMABINDING のセクションをご覧ください。  
   
 LANGUAGE = [N] 'language'  
- **適用されます**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 等価[言語 &#40; を設定TRANSACT-SQL と #41 です。](../../t-sql/statements/set-language-transact-sql.md)セッション オプション。 LANGUAGE = [N] 'language' は必須です。  
+ [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) セッション オプションと同等です。 LANGUAGE = [N] 'language' は必須です。  
   
 TRANSACTION ISOLATION LEVEL  
- **適用されます**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  ネイティブ コンパイル ストアド プロシージャでは必要です。 ストアド プロシージャのトランザクション分離レベルを指定します。 次のオプションがあります。  
   
- これらのオプションの詳細については、次を参照してください。 [SET TRANSACTION ISOLATION LEVEL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ これらのオプションについて詳しくは、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」をご覧ください。  
   
 REPEATABLE READ  
- 他のトランザクションによって変更されていてもまだコミットされていないデータは、ステートメントで読み取ることができないことを指定します。 別のトランザクションが、現在のトランザクションが読み取ったデータを変更する場合、現在のトランザクションは失敗します。  
+ 他のトランザクションによって変更されていてもまだコミットされていないデータは、ステートメントで読み取ることができないことを指定します。 現在のトランザクションが読み取ったデータを他のトランザクションが変更した場合、現在のトランザクションは失敗します。  
   
 SERIALIZABLE  
  次のことを指定します。  
 -   他のトランザクションで変更されたが、まだコミットされていないデータは、ステートメントで読み取れない。  
--   別のトランザクションが、現在のトランザクションが読み取ったデータを変更する場合、現在のトランザクションは失敗します。  
--   別のトランザクションでは、現在のトランザクション内のステートメントで読み取ったキー範囲に該当するキーの値を持つ新しい行が挿入、現在のトランザクションは失敗します。  
+-   現在のトランザクションが読み取ったデータを他のトランザクションが変更した場合、現在のトランザクションは失敗します。  
+-   現在のトランザクションのいずれかのステートメントが読み取ったキー範囲に該当するキー値を持つ新しい行を、他のトランザクションが挿入した場合、現在のトランザクションは失敗します。  
   
 SNAPSHOT  
- トランザクションで任意のステートメントによって読み取られるデータのトランザクションの開始時に存在していたデータの一貫性のバージョンであることを指定します。  
+ トランザクションの各ステートメントで、トランザクション全体で一貫性のあるデータを読み取るように指定します。このデータは、トランザクション開始時点に存在したデータです。  
   
-DATEFIRST =*数*  
- **適用されます**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+DATEFIRST = *number*  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  週の最初の曜日を 1 ～ 7 の数値で指定します。 DATEFIRST は省略可能です。 指定しない場合、設定は指定された言語から推定されます。  
   
- 詳細については、次を参照してください。 [SET DATEFIRST &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-datefirst-transact-sql.md).  
+ 詳しくは、「[SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)」をご覧ください。  
   
-DATEFORMAT =*形式*  
- **適用されます**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+DATEFORMAT = *format*  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  date、smalldatetime、datetime、datetime2、datetimeoffset の各文字列を解釈する際の日付要素 (月、日、年) の順序を指定します。 DATEFORMAT は省略可能です。 指定しない場合、設定は指定された言語から推定されます。  
   
- 詳細については、次を参照してください。 [SET DATEFORMAT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-dateformat-transact-sql.md).  
+ 詳しくは、「[SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)」をご覧ください。  
   
 DELAYED_DURABILITY = { OFF | ON }  
- **適用されます**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によるトランザクションのコミットには、完全持続性、既定値、または遅延持続性が適用されます。  
   
- 詳細については、次を参照してください。[トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)です。  
+ 詳しくは、「[トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)」をご覧ください。  
 
-## <a name="Simple"></a>簡単な例
+## <a name="Simple"></a> 簡単な例
 
-作業を開始するために、2 つの簡単な例を次に示します。  
-`SELECT DB_NAME() AS ThisDB;`現在のデータベースの名前を返します。  
-など、ストアド プロシージャで、そのステートメントをラップすることができます。  
+作業を始めるときに役立つ 2 つの簡単な例を次に示します。  
+`SELECT DB_NAME() AS ThisDB;` は、現在のデータベースの名前を返します。  
+そのステートメントを次のようにストアド プロシージャにラップすることができます。  
 ```sql  
 CREATE PROC What_DB_is_this     
 AS   
 SELECT DB_NAME() AS ThisDB; 
 ```   
-ステートメントを使用してストアド プロシージャを呼び出します。`EXEC What_DB_is_this;`   
+`EXEC What_DB_is_this;` というステートメントを使ってストアド プロシージャを呼び出します。   
 
-やや複雑は、プロシージャの柔軟性を高めるへの入力パラメーターを提供することです。 例:  
+もう少し複雑な例として、プロシージャの柔軟性を高めるために入力パラメーターを提供します。 例 :  
 ```sql   
 CREATE PROC What_DB_is_that @ID int   
 AS    
 SELECT DB_NAME(@ID) AS ThatDB;   
 ```   
-プロシージャを呼び出すときは、データベースの id 番号を提供します。 たとえば、`EXEC What_DB_is_that 2;`返します`tempdb`です。   
+プロシージャを呼び出すときに、データベースの ID 番号を提供します。 たとえば、`EXEC What_DB_is_that 2;` では `tempdb` が返されます。   
 
-参照してください[例](#Examples)より多くの例は、このトピックの最後の方です。     
+他の例については、この記事の最後にある「[例](#Examples)」をご覧ください。     
     
 ## <a name="best-practices"></a>ベスト プラクティス  
  ここではベスト プラクティスをすべて網羅しているわけではありませんが、次の推奨事項に従うと、プロシージャのパフォーマンスが向上する場合があります。  
   
--   プロシージャの本体の最初のステートメントとして SET NOCOUNT ON ステートメントを使用する。 つまり、SET NOCOUNT ON ステートメントを AS キーワードの直後に配置します。 この有効にするメッセージ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SELECT、INSERT、UPDATE、MERGE、後に、クライアントに返送され、DELETE ステートメントが実行されます。 この不要なネットワーク オーバーヘッドを軽減することにより、データベースとアプリケーションの全体的なパフォーマンスが向上します。 詳細については、次を参照してください。 [SET NOCOUNT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-nocount-transact-sql.md).  
+-   プロシージャの本体の最初のステートメントとして SET NOCOUNT ON ステートメントを使用する。 つまり、SET NOCOUNT ON ステートメントを AS キーワードの直後に配置します。 これにより、SELECT、INSERT、UPDATE、MERGE、および DELETE ステートメントの実行後に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がクライアントに返すメッセージが表示されません。 この不要なネットワーク オーバーヘッドを軽減することにより、データベースとアプリケーションの全体的なパフォーマンスが向上します。 詳しくは、「[SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md)」をご覧ください。  
   
--   プロシージャ内のデータベース オブジェクトを作成または参照するときにスキーマ名を使用する。 処理時間がかかりません、[!INCLUDE[ssDE](../../includes/ssde-md.md)]複数のスキーマを検索するがあるない場合は、オブジェクト名を解決するのには。 また、権限とアクセスの問題が原因で、スキーマを指定せずに作成されたオブジェクトに割り当てられているユーザーの既定のスキーマも回避されます。  
+-   プロシージャ内のデータベース オブジェクトを作成または参照するときにスキーマ名を使用する。 これにより、複数のスキーマを検索する必要がない場合に、[!INCLUDE[ssDE](../../includes/ssde-md.md)]でオブジェクト名の解決に要する時間が短縮されます。 また、スキーマを指定せずにオブジェクトを作成したときに割り当てられるユーザーの既定のスキーマが原因で発生する権限とアクセスの問題を防ぐこともできます。  
   
 -   WHERE 句と JOIN 句で指定された列を関数でラップしないようにする。 ラップすると、列が非決定的になるため、クエリ プロセッサでインデックスを使用できなくなります。  
   
 -   多くのデータ行を返す SELECT ステートメントではスカラー関数を使用しない。 スカラー関数はすべての行に適用する必要があるため、結果として、行ベースの処理のような動作になり、パフォーマンスが低下します。  
   
--   使用を避ける`SELECT *`です。 代わりに、必要な列名を指定します。 これにより、プロシージャの実行を停止する[!INCLUDE[ssDE](../../includes/ssde-md.md)]のエラーのいくつかを回避できます。 たとえば、`SELECT *`数まで、12 列のテーブルからデータを返すし、そのデータを 12 列の一時テーブルに挿入するステートメントが成功するか、いずれかのテーブルの列の順序を変更します。  
+-   `SELECT *` は使わない。 代わりに、必要な列名を指定します。 これにより、プロシージャの実行を停止する[!INCLUDE[ssDE](../../includes/ssde-md.md)]のエラーのいくつかを回避できます。 たとえば、12 列のテーブルからデータを返し、そのデータを 12 列の一時テーブルに挿入する `SELECT *` ステートメントは、いずれかのテーブルの列数または列の順序が変更されない限り成功します。  
   
 -   非常に多くのデータを処理したり返したりしない。 プロシージャ コードによってできるだけ早く結果を絞り込むことで、プロシージャが実行する後続の操作で使用されるデータ セットをできる限り小さくします。 基本的なデータのみをクライアント アプリケーションに送信します。 その方が、ネットワーク経由で余分なデータを送信して、クライアント アプリケーションで不必要に大きな結果セットを処理させるよりも効率的です。  
   
--   開始/コミット トランザクションを使用して、明示的なトランザクションを使用して、トランザクションはできるだけ短くします。 トランザクションが長いほど、レコードのロックが長くなり、デッドロックが発生する可能性が高くなります。  
+-   BEGIN/COMMIT TRANSACTION による明示的なトランザクションを使用し、トランザクションをできるだけ短くする。 トランザクションが長いほど、レコードのロックが長くなり、デッドロックが発生する可能性が高くなります。  
   
 -   プロシージャ内のエラー処理に [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY...CATCH 機能を使用する。 TRY...CATCH は [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのブロック全体をカプセル化できます。 これにより、パフォーマンスのオーバーヘッドが低減されるだけでなく、記述するプログラムの数が大幅に削減され、エラー レポートの精度も向上します。  
   
--   プロシージャの本体の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント CREATE TABLE または ALTER TABLE によって参照されているすべてのテーブル列で DEFAULT キーワードを使用する。 これは、null 値を許容しない列に NULL を渡すようにします。  
+-   プロシージャの本体の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント CREATE TABLE または ALTER TABLE によって参照されているすべてのテーブル列で DEFAULT キーワードを使用する。 これにより、NULL 値を許可しない列に NULL が渡されるのを防ぐことができます。  
   
--   一時テーブルの各列に NULL または NOT NULL を使用する。 ANSI_DFLT_ON および ANSI_DFLT_OFF オプションを制御する方法、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] CREATE TABLE または ALTER TABLE ステートメントでは、これらの属性は指定されていないときに、列に NULL または NOT NULL 属性を割り当てます。 ある接続でこれらのオプションを使用してプロシージャを実行する場合、オプションの設定がプロシージャを作成した接続時と異なっていると、新しい接続で作成されるテーブルの列に対して、異なる NULL 許容属性や異なる動作を指定することができます。 各列に NULL または NOT NULL を明示的に宣言すると、プロシージャを実行するすべての接続に対して同じ NULL 許容属性を使用することにより、複数の一時テーブルが作成されます。  
+-   一時テーブルの各列に NULL または NOT NULL を使用する。 CREATE TABLE および ALTER TABLE ステートメントで NULL または NOT NULL 属性が指定されていない場合、ANSI_DFLT_ON および ANSI_DFLT_OFF オプションを使用すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が NULL や NOT NULL 属性を列に割り当てる方法を制御できます。 ある接続でこれらのオプションを使用してプロシージャを実行する場合、オプションの設定がプロシージャを作成した接続時と異なっていると、新しい接続で作成されるテーブルの列に対して、異なる NULL 許容属性や異なる動作を指定することができます。 各列に NULL または NOT NULL を明示的に宣言すると、プロシージャを実行するすべての接続に対して同じ NULL 許容属性を使用することにより、複数の一時テーブルが作成されます。  
   
--   NULL を変換する変更ステートメントを使用し、クエリから NULL 値を含む行を除外するロジックを含める。 注意してくださいで[!INCLUDE[tsql](../../includes/tsql-md.md)]"nothing"の値や NULL は、空ではありません。 NULL は不明な値を表すプレースホルダーのため、特に結果セットに対してクエリを実行している場合や集計関数を使用している場合は、予期しない動作が発生することがあります。  
+-   NULL を変換する変更ステートメントを使用し、クエリから NULL 値を含む行を除外するロジックを含める。 [!INCLUDE[tsql](../../includes/tsql-md.md)] では、NULL は空の値ではなく、"何もない" 値であることに注意してください。 NULL は不明な値を表すプレースホルダーのため、特に結果セットに対してクエリを実行している場合や集計関数を使用している場合は、予期しない動作が発生することがあります。  
   
 -   個別の値に対する特定のニーズがない限り、UNION 演算子または OR 演算子の代わりに UNION ALL 演算子を使用する。 フィルターによって重複が結果セットから除外されないため、UNION ALL 演算子の処理オーバーヘッドが少なくなります。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  プロシージャの最大サイズは、事前には定義されていません。  
   
- ユーザー定義の手順で指定された変数を指定できますまたはシステム環境変数のように @@SPIDです。  
+ プロシージャで指定する変数には、ユーザー定義変数や @@SPID などのシステム変数を使用できます。  
   
  プロシージャは最初の実行時にコンパイルされ、データを取得するための最適なアクセス プランが決定されます。 プロシージャが[!INCLUDE[ssDE](../../includes/ssde-md.md)]のプラン キャッシュに残っている場合、次にそのストアド プロシージャを実行するときには生成済みのプランを再使用できます。  
   
- 1 つ以上のプロシージャが自動的に実行できる場合に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を開始します。 システム管理者によって、プロシージャを作成する必要があります、**マスター**データベースし、で実行される、 **sysadmin**バック グラウンド プロセスとして固定サーバー ロール。 プロシージャに入力または出力パラメーターを指定することはできません。 詳細については、次を参照してください。[ストアド プロシージャを実行する](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に、1 つ以上のプロシージャを自動的に実行できます。 このプロシージャは、システム管理者によって **master** データベースに作成される必要があり、**sysadmin** 固定サーバー ロールの下でバックグラウンド プロセスとして実行される必要があります。 プロシージャに入力または出力パラメーターを指定することはできません。 詳しくは、「[ストアド プロシージャの実行](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)」をご覧ください。  
   
  プロシージャは、別のプロシージャを呼び出す場合、または CLR ルーチン、型、集計を参照してマネージ コードを実行する場合に入れ子になります。 プロシージャとマネージ コード参照は、32 レベルまで入れ子にすることができます。 入れ子のレベルは、呼び出されたプロシージャまたはマネージ コード参照の実行が開始されると 1 つ増加し、呼び出されたプロシージャまたはマネージ コード参照の実行が終了されると 1 つ減少します。 マネージ コード内から呼び出されたメソッドは、この入れ子レベルの制限としてはカウントされません。 ただし、CLR ストアド プロシージャで、SQL Server マネージ プロバイダーを利用してデータ アクセス操作が実行される場合、マネージ コードから SQL への移行時に入れ子のレベルが 1 つ追加されます。  
   
- 入れ子の最高レベルを越える呼び出しを行うと、一連の呼び出しが失敗します。 使用することができます、@@NESTLEVELを現在のストアド プロシージャの実行の入れ子レベルを返す関数。  
+ 入れ子の最高レベルを越える呼び出しを行うと、一連の呼び出しが失敗します。 @@NESTLEVEL 関数を使用すると、現在実行中のストアド プロシージャの入れ子レベルを返すことができます。  
   
 ## <a name="interoperability"></a>相互運用性  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] プロシージャを作成または変更すると、[!INCLUDE[tsql](../../includes/tsql-md.md)]では SET QUOTED_IDENTIFIER と SET ANSI_NULLS の両方の設定が保存されます。 これらの元の設定は、プロシージャの実行時に使用されます。 したがって、プロシージャの実行中は、SET QUOTED_IDENTIFIER と SET ANSI_NULLS のクライアント セッションの設定は無視されます。  
@@ -407,10 +407,10 @@ SELECT DB_NAME(@ID) AS ThatDB;
  SET ステートメントは、SET SHOWPLAN_TEXT および SET SHOWPLAN_ALL を除き、プロシージャ内部で指定できます。 バッチで同時に他のステートメントを実行することはできません。 選択した SET オプションは、プロシージャの実行中は有効で、実行後に元の設定に戻されます。  
   
 > [!NOTE]  
->  プロシージャまたはユーザー定義関数でパラメーターを渡す場合や、バッチ ステートメントで変数を宣言または設定する場合には、SET ANSI_WARNINGS は無視されます。 たとえば、として変数が定義されている**char**(3) とし、次の 3 つの文字を超える値に設定、データは切り捨てに定義されているサイズと、INSERT または UPDATE ステートメントは成功します。  
+>  プロシージャまたはユーザー定義関数でパラメーターを渡す場合や、バッチ ステートメントで変数を宣言または設定する場合には、SET ANSI_WARNINGS は無視されます。 たとえば、変数を **char**(3) と定義し、これに 4 文字以上の値を設定すると、データが定義されたサイズに合わせて切り捨てられてから、INSERT または UPDATE ステートメントが成功します。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- CREATE PROCEDURE ステートメントは、その他と組み合わせることはできません[!INCLUDE[tsql](../../includes/tsql-md.md)]1 つのバッチ内のステートメント。  
+ 1 つのバッチ内に CREATE PROCEDURE ステートメントと他の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを混在させることはできません。  
   
  次のステートメントは、ストアド プロシージャの本体では使用できません。  
   
@@ -418,11 +418,11 @@ SELECT DB_NAME(@ID) AS ThatDB;
 |-|-|-|  
 |CREATE AGGREGATE|CREATE SCHEMA|[SET SHOWPLAN_TEXT]|  
 |CREATE DEFAULT|CREATE TRIGGER または ALTER TRIGGER|SET SHOWPLAN_XML|  
-|CREATE FUNCTION または ALTER FUNCTION|CREATE VIEW または ALTER VIEW|使用して*database_name*|  
+|CREATE FUNCTION または ALTER FUNCTION|CREATE VIEW または ALTER VIEW|USE *database_name*|  
 |CREATE PROCEDURE または ALTER PROCEDURE|[SET PARSEONLY]||  
 |CREATE RULE|SET SHOWPLAN_ALL||  
   
- プロシージャはまだ存在していないテーブルを参照できます。 作成時には、構文チェックのみが行われます。 プロシージャは、最初の実行時までコンパイルされません。 プロシージャ内で参照されているすべてのオブジェクトが解決されるのは、コンパイル時のみです。 存在しないテーブルを参照する構文的に正しいプロシージャを正常に作成するそのため、ただし、参照先のテーブルが存在しない場合、プロシージャは実行時に失敗します。  
+ プロシージャはまだ存在していないテーブルを参照できます。 作成時には、構文チェックのみが行われます。 プロシージャは、最初の実行時までコンパイルされません。 プロシージャ内で参照されているすべてのオブジェクトが解決されるのは、コンパイル時のみです。 したがって、存在しないテーブルを参照するプロシージャは、構文が正しければ正常に作成できます。ただし、実行時に参照されるテーブルが存在しない場合、プロシージャは失敗します。  
   
  関数名を、パラメーターの既定値として指定したり、プロシージャの実行時にパラメーターに渡される値として指定したりできません。 ただし、次の例に示すように、関数を変数として渡すことができます。  
   
@@ -433,7 +433,7 @@ EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;
 GO  
 ```  
   
- プロシージャがのリモート インスタンス上の変更を行うかどうか[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変更をロールバックすることはできません。 リモート プロシージャはトランザクションにはかかわりません。  
+ このプロシージャによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリモート インスタンス上で変更を行うと、それらの変更はロールバックできません。 リモート プロシージャはトランザクションにはかかわりません。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]が .NET Framework でオーバーロードされるときに正しいメソッドを参照するようにするには、EXTERNAL NAME 句で指定されるメソッドに以下の特性が必要です。  
   
@@ -441,14 +441,14 @@ GO
   
 -   プロシージャのパラメーター数と同じ数のパラメーターを受け取る。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロシージャの対応するパラメーターのデータ型と互換性のあるパラメーター型を使用する。 一致については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型を[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]データ型を参照してください[CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)です。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロシージャの対応するパラメーターのデータ型と互換性のあるパラメーター型を使用する。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ型に一致する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型については、「[CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)」をご覧ください。  
   
 ## <a name="metadata"></a>メタデータ  
  次の表に、ストアド プロシージャに関する情報を返すために使用できるカタログ ビューおよび動的管理ビューを示します。  
   
 |表示|Description|  
 |----------|-----------------|  
-|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャの定義を返します。 使用して暗号化オプションで作成されたプロシージャのテキストを表示することはできません、 **sys.sql_modules**カタログ ビューです。|  
+|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャの定義を返します。 ENCRYPTION オプションで作成されるプロシージャのテキストは、**sys.sql_modules** カタログ ビューを使って表示できません。|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|CLR プロシージャに関する情報を返します。|  
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|プロシージャで定義されているパラメーターに関する情報を返します。|  
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)|プロシージャによって参照されるオブジェクトを返します。|  
@@ -461,20 +461,20 @@ GO
 ||Cache Pages|  
 ||Cache Object Counts*|  
   
- * アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)]、準備された [!INCLUDE[tsql](../../includes/tsql-md.md)]、プロシージャ、トリガーなど、キャッシュ オブジェクトの種類別にオブジェクトの数を調べることができます。 詳細については、次を参照してください。 [SQL Server、プランのキャッシュ オブジェクト](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)です。  
+ * アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)]、準備された [!INCLUDE[tsql](../../includes/tsql-md.md)]、プロシージャ、トリガーなど、キャッシュ オブジェクトの種類別にオブジェクトの数を調べることができます。 詳しくは、「[SQL Server の Plan Cache オブジェクト](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)」をご覧ください。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
- 必要があります**CREATE PROCEDURE** 、データベースの権限と**ALTER**プロシージャでは、作成中またはメンバーシップが必要です、スキーマに対する権限、 **db_ddladmin**固定データベース ロール。  
+### <a name="permissions"></a>アクセス許可  
+ データベースの **CREATE PROCEDURE** 権限およびプロシージャの作成先となるスキーマの **ALTER** 権限、または、**db_ddladmin** 固定データベース ロールのメンバーシップが必要です。  
   
- CLR ストアド プロシージャの場合は、EXTERNAL NAME 句で参照されるアセンブリの所有権が必要ですか**参照**そのアセンブリに対する権限。  
+ CLR ストアド プロシージャの場合は、EXTERNAL NAME 句で参照されるアセンブリの所有権、またはそのアセンブリの **REFERENCES** 権限が必要です。  
   
-##  <a name="mot"></a>CREATE PROCEDURE とメモリ最適化テーブル  
- メモリ最適化テーブルは、ネイティブ コンパイル、従来のストアド プロシージャからアクセスできます。 ネイティブ プロシージャより効率的な方法で、ほとんどの場合です。
-詳細については、次を参照してください。 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)です。  
+##  <a name="mot"></a> CREATE PROCEDURE とメモリ最適化テーブル  
+ メモリ最適化テーブルには、従来のストアド プロシージャとネイティブ コンパイル ストアド プロシージャの両方からアクセスできます。 ほとんどの場合、ネイティブ プロシージャの方が効率的です。
+詳しくは、「[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)」をご覧ください。  
   
- 次の例は、メモリ最適化テーブルにアクセスするネイティブ コンパイル ストアド プロシージャを作成する方法を示しています`dbo.Departments`:。  
+ 次のサンプルでは、メモリ最適化テーブル `dbo.Departments` にアクセスするネイティブ コンパイル ストアド プロシージャを作成する方法を示します。  
   
 ```sql  
 CREATE PROCEDURE dbo.usp_add_kitchen @dept_id int, @kitchen_count int NOT NULL  
@@ -491,21 +491,21 @@ GO
   
  NATIVE_COMPILATION なしで作成されたプロシージャをネイティブ コンパイル ストアド プロシージャに変更することはできません。 
   
- ネイティブ コンパイル ストアド プロシージャでのプログラミング機能の詳細については、クエリのセキュリティをサポートし、演算子を参照してください[ネイティブ コンパイル T-SQL モジュールでサポートされる機能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)します。  
+ ネイティブ コンパイル ストアド プロシージャでのプログラミング機能、サポートされるクエリ対象領域、および演算子について詳しくは、「[ネイティブ コンパイル T-SQL モジュールでサポートされる機能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)」をご覧ください。  
   
 ## <a name="Examples"></a> 使用例  
   
 |カテゴリ|主な構文要素|  
 |--------------|------------------------------|  
 |[基本構文](#BasicSyntax)|CREATE PROCEDURE|  
-|[パラメーターの引き渡し](#Parameters)|@parameter <br> &nbsp;&nbsp;• 既定値 = <br> &nbsp;&nbsp;• 出力 <br> &nbsp;&nbsp;• テーブル値パラメーターの型 <br> &nbsp;&nbsp;• CURSOR VARYING|  
+|[パラメーターの引き渡し](#Parameters)|@parameter <br> &nbsp;&nbsp;  • = default <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • テーブル値パラメーター型 <br> &nbsp;&nbsp; • CURSOR VARYING|  
 |[ストアド プロシージャを使用したデータの変更](#Modify)|UPDATE|  
-|[エラー処理](#Error)|TRY しています.CATCH|  
+|[エラー処理](#Error)|TRY…CATCH|  
 |[プロシージャの定義の難読化](#Encrypt)|WITH ENCRYPTION|  
-|[再コンパイルするプロシージャの強制](#Recompile)|WITH RECOMPILE|  
+|[プロシージャの強制再コンパイル](#Recompile)|WITH RECOMPILE|  
 |[セキュリティ コンテキストの設定](#Security)|EXECUTE AS|  
   
-###  <a name="BasicSyntax"></a>基本構文  
+###  <a name="BasicSyntax"></a> 基本構文  
  このセクションの例では、最低限必要な構文を使用して  CREATE PROCEDURE ステートメントの基本機能を示します。  
   
 #### <a name="a-creating-a-simple-transact-sql-procedure"></a>A. 単純な Transact-SQL プロシージャを作成する  
@@ -522,7 +522,7 @@ GO
 SELECT * FROM HumanResources.vEmployeeDepartment;  
 ```  
   
- `uspGetEmployees`プロシージャは、次の方法で実行できます。  
+ `uspGetEmployees` プロシージャは次のように実行されます。  
   
 ```sql  
 EXECUTE HumanResources.uspGetAllEmployees;  
@@ -546,9 +546,9 @@ GO
 ```  
   
 #### <a name="c-creating-a-clr-stored-procedure"></a>C. CLR ストアド プロシージャを作成する  
- 次の例を作成、`GetPhotoFromDB`を参照するプロシージャ、`GetPhotoFromDB`のメソッド、`LargeObjectBinary`クラス内で、`HandlingLOBUsingCLR`アセンブリ。 プロシージャが作成される前に、`HandlingLOBUsingCLR`ローカル データベースにアセンブリを登録します。  
+ 次の例では、`GetPhotoFromDB` プロシージャを作成します。このプロシージャでは、`HandlingLOBUsingCLR` アセンブリ内の `LargeObjectBinary` クラスの `GetPhotoFromDB` メソッドを参照します。 プロシージャが作成される前に、`HandlingLOBUsingCLR` アセンブリがローカル データベースに登録されます。  
   
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (から作成されたアセンブリを使用して場合*assembly_bits です。*  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (*assembly_bits* から作成されたアセンブリを使用する場合)。  
   
 ```sql  
 CREATE ASSEMBLY HandlingLOBUsingCLR  
@@ -564,7 +564,7 @@ AS EXTERNAL NAME HandlingLOBUsingCLR.LargeObjectBinary.GetPhotoFromDB;
 GO  
 ```  
   
-###  <a name="Parameters"></a>パラメーターの引き渡し  
+###  <a name="Parameters"></a> パラメーターの引き渡し  
  このセクションの例では、入力パラメーターと出力パラメーターを使用してストアド プロシージャ間で値を受け渡す方法を示します。  
   
 #### <a name="d-creating-a-procedure-with-input-parameters"></a>D. 入力パラメーターを使用したプロシージャを作成する  
@@ -587,7 +587,7 @@ GO
   
 ```  
   
- `uspGetEmployees`プロシージャは、次の方法で実行できます。  
+ `uspGetEmployees` プロシージャは次のように実行されます。  
   
 ```  
 EXECUTE HumanResources.uspGetEmployees N'Ackerman', N'Pilar';  
@@ -603,7 +603,7 @@ HumanResources.uspGetEmployees N'Ackerman', N'Pilar';
 ```  
   
 #### <a name="e-using-a-procedure-with-wildcard-parameters"></a>E. ワイルドカード パラメーターを含むプロシージャを使用する  
- 次の例では、従業員の姓と名を表す値のすべてまたは一部を渡して従業員に関する情報を返すストアド プロシージャを作成します。 この手順のパターンは、渡されたパラメーターを一致するか、指定されていない場合は、既定のプリセットを使用して (最後の文字で始まる名前`D`)。  
+ 次の例では、従業員の姓と名を表す値のすべてまたは一部を渡して従業員に関する情報を返すストアド プロシージャを作成します。 このプロシージャでは、渡されるパラメーターのパターン マッチが行われます。パラメーターが指定されない場合は、あらかじめ設定された既定値が使用されます (姓の先頭文字が `D`)。  
   
 ```sql  
 IF OBJECT_ID ( 'HumanResources.uspGetEmployees2', 'P' ) IS NOT NULL   
@@ -619,7 +619,7 @@ AS
     WHERE FirstName LIKE @FirstName AND LastName LIKE @LastName;  
 ```  
   
- `uspGetEmployees2`プロシージャは、多くの組み合わせで実行できます。 ここでは、一部の組み合わせのみを示します。  
+ `uspGetEmployees2` プロシージャは、多くの組み合わせで実行できます。 ここでは、一部の組み合わせのみを示します。  
   
 ```sql  
 EXECUTE HumanResources.uspGetEmployees2;  
@@ -635,8 +635,8 @@ EXECUTE HumanResources.uspGetEmployees2 N'Hesse', N'Stefen';
 EXECUTE HumanResources.uspGetEmployees2 N'H%', N'S%';  
 ```  
   
-#### <a name="f-using-output-parameters"></a>F. 出力パラメーターを使用します。  
- 次の例を作成、`uspGetList`プロシージャです。 このプロシージャは、指定の価格以下の製品の一覧を返します。 この例を使用して複数`SELECT`ステートメントと複数`OUTPUT`パラメーター。 OUTPUT パラメーターを使用すると、プロシージャの実行中に、外部プロシージャ、バッチ、または複数の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントから、値セットにアクセスできます。  
+#### <a name="f-using-output-parameters"></a>F. OUTPUT パラメーターを使用する  
+ 次の例では、`uspGetList` プロシージャを作成します。 このプロシージャは、指定の価格以下の製品の一覧を返します。 この例では、複数の `SELECT` ステートメントと複数の `OUTPUT` パラメーターを使用します。 OUTPUT パラメーターを使用すると、プロシージャの実行中に、外部プロシージャ、バッチ、または複数の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントから、値セットにアクセスできます。  
   
 ```sql  
 IF OBJECT_ID ( 'Production.uspGetList', 'P' ) IS NOT NULL   
@@ -664,10 +664,10 @@ SET @ComparePrice = @MaxPrice;
 GO  
 ```  
   
- `uspGetList` を実行し、`$700` より安い [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 製品 (バイク) の一覧を返します。 `OUTPUT`パラメーター`@Cost`と`@ComparePrices`内のメッセージを返すにはフロー制御言語と共に使用、**メッセージ**ウィンドウです。  
+ `uspGetList` を実行し、`$700` より安い [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 製品 (バイク) の一覧を返します。 ここではフロー制御言語と共に `OUTPUT` パラメーターの `@Cost` および `@ComparePrices` を使用して、**[メッセージ]** ウィンドウにメッセージを返します。  
   
 > [!NOTE]  
->  OUTPUT 変数は、プロシージャの作成時と変数の使用時に定義する必要があります。 パラメーター名と変数名は一致はありません。ただし、データ型とパラメーターの位置する必要があります一致しない限り、 `@ListPrice`  = *変数*を使用します。  
+>  OUTPUT 変数は、プロシージャの作成時と変数の使用時に定義する必要があります。 パラメーター名と変数名は一致する必要はありませんが、データ型とパラメーターの位置は一致する必要があります。ただし、`@ListPrice` = *variable* が使用されている場合を除きます。  
   
 ```sql  
 DECLARE @ComparePrice money, @Cost money ;  
@@ -743,7 +743,7 @@ GO
 ##### <a name="h-using-an-output-cursor-parameter"></a>H. OUTPUT カーソル パラメーターを使用する  
  次の例では、OUTPUT カーソル パラメーターを使用して、プロシージャに対してローカルになっているカーソルを、呼び出し側のバッチ、プロシージャ、またはトリガーに戻します。  
   
- 最初に、宣言し、カーソルをオープンするプロシージャを作成、`Currency`テーブル。  
+ まず、`Currency` テーブルに対してカーソルを宣言し、そのカーソルをオープンするプロシージャを作成します。  
   
 ```sql  
 CREATE PROCEDURE dbo.uspCurrencyCursor   
@@ -772,11 +772,11 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-###  <a name="Modify"></a>ストアド プロシージャを使用して、データの変更  
+###  <a name="Modify"></a> ストアド プロシージャを使用したデータの変更  
  このセクションの例では、プロシージャの定義にデータ操作言語 (DML) ステートメントを含めることで、テーブルまたはビューのデータを挿入または変更する方法を示します。  
   
 #### <a name="i-using-update-in-a-stored-procedure"></a>I. UPDATE をストアド プロシージャで使用する  
- 次の例では、UPDATE ステートメントをストアド プロシージャで使用しています。 このプロシージャは、1 つの入力パラメーター`@NewHours`と 1 つの出力パラメーター`@RowCount`です。 `@NewHours`パラメーターの値が列を更新する UPDATE ステートメントで使用される`VacationHours`表内の`HumanResources.Employee`します。 `@RowCount`をローカル変数に影響を受ける行の数を返す出力パラメーターを使用します。 `VacationHours` に設定する値は、SET 句で CASE 式を使用して条件に応じて決定しています。 ときに、従業員給与が時給ベース (`SalariedFlag` = 0)、`VacationHours`で指定された値の合計時間の現在の数に設定されている`@NewHours`、それ以外の`VacationHours`で指定された値に設定されている`@NewHours`です。  
+ 次の例では、UPDATE ステートメントをストアド プロシージャで使用しています。 このプロシージャには、1 つの入力パラメーター `@NewHours` と 1 つの出力パラメーター `@RowCount` があります。 その `@NewHours` パラメーター値を UPDATE ステートメントで使用して、`HumanResources.Employee` テーブルの `VacationHours` 列を更新します。 影響を受けた行数は、`@RowCount` 出力パラメーターを使用して、ローカル変数に返されます。 `VacationHours` に設定する値は、SET 句で CASE 式を使用して条件に応じて決定しています。 従業員の給与が時給ベース (`SalariedFlag` = 0) である場合、`VacationHours` は `@NewHours` で指定された値に現在の時間数を加算した値に設定されます。それ以外の場合は、`VacationHours` は `@NewHours` で指定された値に設定されます。  
   
 ```sql  
 CREATE PROCEDURE HumanResources.Update_VacationHours  
@@ -796,7 +796,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-###  <a name="Error"></a>エラー処理  
+###  <a name="Error"></a> エラー処理  
  このセクションの例では、ストアド プロシージャの実行時に発生する可能性のあるエラーの処理方法を示します。  
   
 #### <a name="j-using-trycatch"></a>J. TRY...CATCH の使用  
@@ -871,13 +871,13 @@ EXEC Production.uspDeleteWorkOrder 15;
 DROP PROCEDURE Production.uspDeleteWorkOrder;  
 ```  
   
-###  <a name="Encrypt"></a>プロシージャの定義の難読化  
+###  <a name="Encrypt"></a> プロシージャの定義の難読化  
  このセクションの例では、ストアド プロシージャの定義を難読化する方法を示します。  
   
 #### <a name="k-using-the-with-encryption-option"></a>K. WITH ENCRYPTION オプションを使用する  
- 次の例を作成、`HumanResources.uspEncryptThis`プロシージャです。  
+ 次の例では、`HumanResources.uspEncryptThis` プロシージャを作成します。  
   
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、SQL データベースです。  
+**A適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、SQL Database.  
   
 ```sql  
 CREATE PROCEDURE HumanResources.uspEncryptThis  
@@ -890,9 +890,9 @@ AS
 GO  
 ```  
   
- `WITH ENCRYPTION`オプションの次の例で示すようにシステム カタログに対するクエリまたはメタデータを使用して次のように機能するときに、プロシージャの定義を難読化します。  
+ 次の例に示すように、`WITH ENCRYPTION` オプションを使用すると、システム カタログにクエリを実行したりメタデータ関数を使用したりするときにプロシージャの定義を難読化します。  
   
- Run `sp_helptext`:  
+ `sp_helptext` を実行します。  
   
 ```sql  
 EXEC sp_helptext 'HumanResources.uspEncryptThis';  
@@ -902,7 +902,7 @@ EXEC sp_helptext 'HumanResources.uspEncryptThis';
   
  `The text for object 'HumanResources.uspEncryptThis' is encrypted.`  
   
- 直接クエリを実行、`sys.sql_modules`カタログ ビュー。  
+ `sys.sql_modules` カタログ ビューに直接クエリを実行します。  
   
 ```sql  
 SELECT definition FROM sys.sql_modules  
@@ -917,11 +917,11 @@ WHERE object_id = OBJECT_ID('HumanResources.uspEncryptThis');
  NULL  
  ```  
   
-###  <a name="Recompile"></a>再コンパイルするプロシージャの強制  
+###  <a name="Recompile"></a> プロシージャの強制再コンパイル  
  このセクションの例では、WITH RECOMPILE 句を使用して、プロシージャを実行するたびに再コンパイルするように強制します。  
   
 #### <a name="l-using-the-with-recompile-option"></a>L. WITH RECOMPILE オプションを使用する  
- `WITH RECOMPILE`句は、プロシージャに指定されたパラメーターは通常、使用されない場合と、新しい実行プランをキャッシュしたりしないでメモリに格納されている場合に役立ちます。  
+ `WITH RECOMPILE` 句は、プロシージャに指定するパラメーターが定型的でない場合や、新しい実行プランをメモリにキャッシュまたは保存したくない場合に役立ちます。  
   
 ```sql  
 IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
@@ -940,11 +940,11 @@ AS
     WHERE v.Name LIKE @Name;  
 ```  
   
-###  <a name="Security"></a>セキュリティ コンテキストの設定  
+###  <a name="Security"></a> セキュリティ コンテキストの設定  
  このセクションの例では、EXECUTE AS 句を使用して、ストアド プロシージャが実行されるセキュリティ コンテキストを設定します。  
   
 #### <a name="m-using-the-execute-as-clause"></a>M. EXECUTE AS 句を使用する  
- 次の例を使用して、 [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md)句を手順を実行できるセキュリティ コンテキストを指定します。 例では、オプションで`CALLER`を呼び出したユーザーのコンテキストでプロシージャを実行できることを指定します。  
+ 次の例では、[EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) 句を使用して、プロシージャを実行できるセキュリティ コンテキストを指定します。 この例では、オプションの `CALLER` により、プロシージャを呼び出したユーザーのコンテキストでプロシージャを実行できることを指定します。  
   
 ```sql  
 CREATE PROCEDURE Purchasing.uspVendorAllInfo  
@@ -972,10 +972,10 @@ WITH EXECUTE AS SELF
 AS TRUNCATE TABLE MyDB..MyTable;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="o-create-a-stored-procedure-that-runs-a-select-statement"></a>O.  SELECT ステートメントを実行するストアド プロシージャの作成します。  
- この例では、作成して、プロシージャを実行するための基本構文を使用します。 バッチを実行する場合、プロシージャの作成は最初のステートメントをする必要があります。 たとえば、次を作成するストアド プロシージャ[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]データベース コンテキストが最初に、設定、および CREATE PROCEDURE ステートメントを実行します。  
+### <a name="o-create-a-stored-procedure-that-runs-a-select-statement"></a>O.  SELECT ステートメントを実行するストアド プロシージャを作成します。  
+ この例では、プロシージャを作成して実行するための基本構文を示します。 バッチを実行する場合は、CREATE PROCEDURE を最初のステートメントにする必要があります。 たとえば、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] で次のストアド プロシージャを作成するには、最初にデータベース コンテキストを設定した後、CREATE PROCEDURE ステートメントを実行します。  
   
 ```sql  
 -- Uses AdventureWorksDW database  
@@ -996,26 +996,26 @@ EXEC Get10TopResellers;
   
 ## <a name="see-also"></a>参照  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
- [フロー制御言語 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md)   
+ [フロー制御言語 &#40;TRANSACT-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [カーソル](../../relational-databases/cursors.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [DROP PROCEDURE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [DROP PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [実行 AS (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-transact-sql.md)   
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [ストアド プロシージャ &#40;データベース エンジン&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
- [sp_procoption &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)   
- [sp_recompile &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)   
+ [sp_procoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)   
+ [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)   
  [sys.procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
- [sys.numbered_procedures &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)   
- [sys.numbered_procedure_parameters &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-numbered-procedure-parameters-transact-sql.md)   
+ [sys.numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)   
+ [sys.numbered_procedure_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedure-parameters-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
  [ストアド プロシージャの作成](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [使用してテーブル値パラメーター &#40; データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)   
+ [テーブル値パラメーターの使用 &#40;データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)   
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   

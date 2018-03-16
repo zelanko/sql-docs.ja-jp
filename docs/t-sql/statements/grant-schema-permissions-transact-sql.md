@@ -1,5 +1,5 @@
 ---
-title: "GRANT スキーマのアクセス許可 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "GRANT (スキーマ権限の許可) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/19/2017
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
 ```  
   
 ## <a name="arguments"></a>引数  
- *アクセス許可*  
- スキーマで許可できる権限を指定します。 アクセス許可の一覧は、このトピックの後半の「解説」セクションを参照してください.  
+ *permission*  
+ スキーマで許可できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ON SCHEMA **::**スキーマ*名 (_n)*  
- 権限を許可するスキーマを指定します。 スコープ修飾子**::**が必要です。  
+ ON SCHEMA **::** schema*_name*  
+ 権限を許可するスキーマを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  
  権限を許可するプリンシパルを指定します。 次のいずれかです。  
@@ -60,11 +60,11 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
 -   データベース ユーザー  
 -   データベース ロール (database role)  
 -   アプリケーション ロール (application role)  
--   Windows ログインにマップされるデータベース ユーザー  
--   Windows グループにマップされるデータベース ユーザー  
--   証明書にマップされるデータベース ユーザー  
+-   Windows ログインにマップされているデータベース ユーザー  
+-   Windows グループにマップされているデータベース ユーザー  
+-   証明書にマップされているデータベース ユーザー  
 -   非対称キーにマップされているデータベース ユーザー  
--   データベース ユーザーが、サーバー プリンシパルにマップされていません。  
+-   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
 GRANT OPTION  
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
@@ -75,26 +75,26 @@ AS *granting_principal*
 -   データベース ユーザー  
 -   データベース ロール (database role)  
 -   アプリケーション ロール (application role)  
--   Windows ログインにマップされるデータベース ユーザー  
--   Windows グループにマップされるデータベース ユーザー  
--   証明書にマップされるデータベース ユーザー  
+-   Windows ログインにマップされているデータベース ユーザー  
+-   Windows グループにマップされているデータベース ユーザー  
+-   証明書にマップされているデータベース ユーザー  
 -   非対称キーにマップされているデータベース ユーザー  
--   データベース ユーザーが、サーバー プリンシパルにマップされていません。  
+-   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  権限許可対象ユーザーは、ALTER 権限と REFERENCE 権限を組み合わせて使用することで、データを表示したり、許可されていない関数を実行できる場合があります。 たとえば、テーブルの ALTER 権限と関数の REFERENCE 権限を持つユーザーは、関数を介した計算列を作成して実行できます。 この場合、ユーザーも SELECT 権限が必要、計算列でします。  
+>  権限許可対象ユーザーは、ALTER 権限と REFERENCE 権限を組み合わせて使用することで、データを表示したり、許可されていない関数を実行できる場合があります。 たとえば、テーブルの ALTER 権限と関数の REFERENCE 権限を持つユーザーは、関数を介した計算列を作成して実行できます。 この場合、ユーザーには計算列の SELECT 権限も必要です。  
   
- スキーマとは、データベース レベルのセキュリティ保護可能な権限の階層で親となっているデータベースに含まれます。 次に、スキーマで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
+ スキーマは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次に、スキーマで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |スキーマ権限|権限が含まれるスキーマ権限|権限が含まれるデータベース権限|  
 |-----------------------|----------------------------------|------------------------------------|  
 |ALTER|CONTROL|ALTER ANY SCHEMA|  
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
-|DELETE|CONTROL|DELETE|  
-|CREATE ステートメントを実行する前に、|CONTROL|CREATE ステートメントを実行する前に、|  
+|Del|CONTROL|Del|  
+|EXECUTE|CONTROL|EXECUTE|  
 |INSERT|CONTROL|INSERT|  
 |REFERENCES|CONTROL|REFERENCES|  
 |SELECT|CONTROL|SELECT|  
@@ -116,7 +116,7 @@ AS *granting_principal*
   
  詳細については、サポート技術情報の資料 No. 914847 を参照してください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  権限の許可者 (または AS オプションで指定されたプリンシパル) は、GRANT OPTION によって与えられた権限を保持しているか、権限が暗黙的に与えられる上位の権限を保持している必要があります。  
   
  AS オプションを使用する場合は、次の追加要件があります。  
@@ -127,8 +127,8 @@ AS *granting_principal*
 |Windows ログインにマップされているデータベース ユーザー|ユーザーに対する IMPERSONATE 権限、db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
 |Windows グループにマップされているデータベース ユーザー|Windows グループのメンバーシップ、db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
 |証明書にマップされているデータベース ユーザー|db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
-|非対称キーにマップされるデータベース ユーザー|db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
-|任意のサーバー プリンシパルにマップされていないデータベース ユーザー|ユーザーに対する IMPERSONATE 権限、db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
+|非対称キーにマップされているデータベース ユーザー|db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
+|サーバー プリンシパルにマップされていないデータベース ユーザー|ユーザーに対する IMPERSONATE 権限、db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
 |データベース ロール|ロールに対する ALTER 権限、db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
 |アプリケーション ロール|ロールに対する ALTER 権限、db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
   
@@ -151,17 +151,17 @@ GRANT SELECT ON SCHEMA :: Person TO WilJo WITH GRANT OPTION;
 ```  
   
 ## <a name="see-also"></a>参照  
- [スキーマの権限 &#40; を拒否します。TRANSACT-SQL と #41 です。](../../t-sql/statements/deny-schema-permissions-transact-sql.md)   
- [スキーマの権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)   
+ [DENY (スキーマ権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)   
+ [REVOKE (スキーマ権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [APPLICATION ROLE &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

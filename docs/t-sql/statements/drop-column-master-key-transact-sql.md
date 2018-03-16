@@ -1,5 +1,5 @@
 ---
-title: "DROP 列の MASTER KEY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/20/2016
 ms.prod: sql-non-specified
@@ -51,16 +51,16 @@ DROP COLUMN MASTER KEY key_name;
  *key_name*  
  列のマスター_キーの名前です。  
   
-## <a name="remarks"></a>解説  
- 列のマスター_キーは、列の暗号化キーの値がない列のマスター_キーで暗号化された場合にのみ削除できます。 列暗号化キーの値を削除するには、使用、[列の DROP ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)ステートメントです。  
+## <a name="remarks"></a>Remarks  
+ 列のマスター_キーは、列の暗号化キーの値がない列のマスター_キーで暗号化された場合にのみ削除できます。 列の暗号化キーの値を削除するには、[DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md) ステートメントを使います。  
   
-## <a name="permissions"></a>Permissions  
- 必要があります**ALTER ANY COLUMN MASTER KEY**データベースに対する権限。  
+## <a name="permissions"></a>アクセス許可  
+ データベースに対する **ALTER ANY COLUMN MASTER KEY** 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-dropping-a-column-master-key"></a>A. 列のマスター_キーを削除します。  
- 次の例と呼ばれる列マスター _ キーを削除する`MyCMK`です。  
+ 次の例では、`MyCMK` という名前の列マスター キーを削除します。  
   
 ```  
 DROP COLUMN MASTER KEY MyCMK;  
@@ -70,7 +70,7 @@ GO
 ## <a name="see-also"></a>参照  
  [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [列暗号化キー &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+ [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_master_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)  
   

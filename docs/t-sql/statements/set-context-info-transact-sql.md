@@ -1,5 +1,5 @@
 ---
-title: "SET CONTEXT_INFO (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET CONTEXT_INFO (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -49,13 +49,13 @@ SET CONTEXT_INFO { binary_str | @binary_var }
   
 ## <a name="arguments"></a>引数  
  *binary_str*  
- **バイナリ**定数、またはに暗黙的に変換できる定数**バイナリ**、現在のセッションまたは接続に関連付ける。  
+ 現在のセッションまたは接続に関連付ける、**binary** 定数、または暗黙的に **binary** に変換できる定数を指定します。  
   
- **@***binary_var*  
- **Varbinary**または**バイナリ**を現在のセッションまたは接続に関連付けるコンテキスト値を保持する変数。  
+ **@** *binary_var*  
+ 現在のセッションまたは接続に関連付けるコンテキスト値を保持するための、**varbinary** または **binary** 変数を指定します。  
   
-## <a name="remarks"></a>解説  
- 現在のセッションのコンテキスト情報を取得するには、CONTEXT_INFO 関数を使用することをお勧めします。 セッション コンテキスト情報にも格納、 **context_info**次のシステム ビューの列。  
+## <a name="remarks"></a>Remarks  
+ 現在のセッションのコンテキスト情報を取得するには、CONTEXT_INFO 関数を使用することをお勧めします。 セッションのコンテキスト情報は、次のシステム ビューの **context_info** 列にも格納されます。  
   
 -   **sys.dm_exec_requests**  
   
@@ -65,14 +65,14 @@ SET CONTEXT_INFO { binary_str | @binary_var }
   
  SET CONTEXT_INFO は、ユーザー定義関数では指定できません。 値を保持するビューでは NULL 値が許可されないため、SET CONTEXT_INFO に NULL 値は指定できません。  
   
- SET CONTEXT_INFO には、定数または変数名以外の式を指定できません。 関数呼び出しの結果にコンテキスト情報を設定、内の関数呼び出しの結果を最初に含める必要があります、**バイナリ**または**varbinary**変数。  
+ SET CONTEXT_INFO には、定数または変数名以外の式を指定できません。 コンテキスト情報を関数呼び出しの結果に設定するには、最初に、**binary** または **varbinary** 型の変数に関数呼び出しの結果を格納する必要があります。  
   
  ストアド プロシージャまたはトリガーの中で SET CONTEXT_INFO を実行する場合は、他の SET ステートメントの場合とは異なり、コンテキスト情報に設定された新しい値がストアド プロシージャまたはトリガーの終了後も保持されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-setting-context-information-by-using-a-constant"></a>A. 定数を使用してコンテキスト情報を設定する  
- 次の例で`SET CONTEXT_INFO`を値を設定し、結果を表示します。 `sys.dm_exec_sessions` のクエリを実行するには SELECT および VIEW SERVER STATE の権限が必要ですが、CONTEXT_INFO 関数を使用するのにこれらの権限は必要ありません。  
+ 次の例では、`SET CONTEXT_INFO` に値を設定し、結果を表示します。 `sys.dm_exec_sessions` のクエリを実行するには SELECT および VIEW SERVER STATE の権限が必要ですが、CONTEXT_INFO 関数を使用するのにこれらの権限は必要ありません。  
   
 ```  
 SET CONTEXT_INFO 0x01010101;  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ### <a name="b-setting-context-information-by-using-a-function"></a>B. 関数を使用してコンテキスト情報を設定する  
- 次の例で、関数から値必要があります最初に配置する、コンテキスト値を設定する関数の出力を使用して、**バイナリ**変数。  
+ 次の例では、関数の出力を使用してコンテキスト値を設定します。最初に、**binary** 変数に関数からの値を格納する必要があります。  
   
 ```  
 DECLARE @BinVar varbinary(128);  
@@ -97,8 +97,8 @@ GO
   
 ## <a name="see-also"></a>参照  
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [sys.dm_exec_requests &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_exec_sessions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [CONTEXT_INFO &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/context-info-transact-sql.md)  
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
   
   

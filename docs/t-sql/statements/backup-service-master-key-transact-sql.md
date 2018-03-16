@@ -1,5 +1,5 @@
 ---
-title: "BACKUP SERVICE MASTER KEY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: BACKUP SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -54,16 +54,16 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>引数  
- ファイル**='***path_to_file***'**  
- サービス マスター キーのエクスポート先ファイルの完全なパスを、ファイル名を含めて指定します。 これには、ローカル パスまたはネットワーク上の場所への UNC パスがあります。  
+ FILE **='***path_to_file***'**  
+ サービス マスター キーのエクスポート先ファイルの完全なパスを、ファイル名を含めて指定します。 ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。  
   
- パスワード**='***パスワード***'**  
+ PASSWORD **='***password***'**  
  バックアップ ファイル内のサービス マスター キーの暗号化に使用されているパスワードを指定します。 このパスワードに対しては、複雑性がチェックされます。 詳細については、「 [Password Policy](../../relational-databases/security/password-policy.md)」をご参照ください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  サービス マスター キーは、バックアップして安全な別の場所に保存してください。 このバックアップの作成は、サーバー管理操作の最初の段階で実行します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -74,7 +74,7 @@ BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_key' EN
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER SERVICE MASTER KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
+ [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-service-master-key-transact-sql.md)  
   
   

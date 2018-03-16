@@ -1,5 +1,5 @@
 ---
-title: "SET STATISTICS TIME (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET STATISTICS TIME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -52,19 +52,19 @@ ms.lasthandoff: 11/21/2017
 SET STATISTICS TIME { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SET STATISTICS TIME が ON の場合、ステートメントの処理時間の統計が表示されます。 OFF の場合、時間の統計は表示されません。  
   
  SET STATISTICS TIME は、解析時ではなく実行時に設定されます。  
   
- Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を有効にしたときに起動されるファイバー モードで正確な統計情報を提供するようになって、**簡易プーリング**構成オプション。  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、**簡易プーリング**構成オプションを有効にしたときに起動されるファイバー モードでは正確な統計情報を提供できません。  
   
- **Cpu**内の列、 **sysprocesses** SET STATISTICS TIME が ON でクエリの実行時にのみ、テーブルが更新されます。 SET STATISTICS TIME が OFF の場合、 **0**が返されます。  
+ **sysprocesses** テーブル内の **cpu** 列が更新されるのは、SET STATISTICS TIME が ON の状態でクエリが実行されたときだけです。 SET STATISTICS TIME が OFF の場合は、**0** が返されます。  
   
  この設定が ON であるか OFF であるかによって、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [現在の利用状況] の [プロセス情報] ビューにある CPU 列にも影響します。  
   
-## <a name="permissions"></a>Permissions  
- SET STATISTICS TIME を使用するユーザーを実行する適切なアクセス許可が必要、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 SHOWPLAN 権限は必要ありません。  
+## <a name="permissions"></a>アクセス許可  
+ SET STATISTICS TIME を使用するには、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行するための適切な権限が必要です。 SHOWPLAN 権限は必要ありません。  
   
 ## <a name="examples"></a>使用例  
  次の例では、サーバーの実行、解析、コンパイルの時間を表示します。  
@@ -101,6 +101,6 @@ SQL Server parse and compile time:
   
 ## <a name="see-also"></a>参照  
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET STATISTICS IO &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statistics-io-transact-sql.md)  
+ [SET STATISTICS IO &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
   
   

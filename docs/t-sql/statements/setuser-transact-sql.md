@@ -1,5 +1,5 @@
 ---
-title: "SETUSER (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SETUSER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -37,10 +37,10 @@ ms.lasthandoff: 11/21/2017
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  メンバーは、 **sysadmin**固定サーバー ロールまたは別のユーザーの権限を借用するデータベースの所有者。  
+  固定サーバー ロール **sysadmin** のメンバーまたはデータベースの所有者が、別のユーザーの権限を借用できるようにします。  
   
 > [!IMPORTANT]  
->  SETUSER は旧バージョンとの互換性のためだけに用意されています。 SETUSER は、の将来のリリースではサポートされない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 使用することをお勧め[EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)代わりにします。  
+>  SETUSER は旧バージョンとの互換性のためだけに用意されています。 SETUSER は、将来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リリースではサポートされない可能性があります。 代わりに [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) を使用することをお勧めします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,26 +53,26 @@ SETUSER [ 'username' [ WITH NORESET ] ]
   
 ## <a name="arguments"></a>引数  
  **'** *username* **'**  
- 名前を指定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または権限が借用される現在のデータベース内の Windows ユーザーです。 ときに*username*が指定されていない、システム管理者またはデータベース所有者が、ユーザーの偽装の元の id をリセットします。  
+ 権限の借用の対象となる、現在のデータベース内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーまたは Windows ユーザーの名前です。 *username* を指定しない場合、ユーザーの権限を借用するシステム管理者またはデータベース所有者の元の ID 状態に戻ります。  
   
  WITH NORESET  
- 後続のことを示す SETUSER ステートメント (が指定されていない*username*) システム管理者またはデータベース所有者に、ユーザー id をリセットする必要があります。  
+ 後に *username* の指定されていない SETUSER ステートメントがあっても、システム管理者またはデータベース所有者の元の ID 状態にリセットされないことを指定します。  
   
-## <a name="remarks"></a>解説  
- SETUSER のメンバーで使用できる、 **sysadmin**固定サーバー ロールまたはその他のユーザーの権限をテストする別のユーザー id を借用するデータベースの所有者。 Db_owner 固定データベース ロールのメンバーシップが十分ではありません。  
+## <a name="remarks"></a>Remarks  
+ 固定サーバー ロール **sysadmin** のメンバーまたはデータベースの所有者は、SETUSER を使用して別のユーザーの ID を借用し、そのユーザーの権限をテストできます。 Db_owner 固定データベース ロールのメンバーシップが十分ではありません。  
   
- のみ SETUSER を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー。 SETUSER は Windows ユーザーに対してはサポートされていません。 SETUSER を使用して別のユーザーの ID の権限を借用している場合、権限を借用しているユーザーが作成するすべてのオブジェクトは、権限を借用されているユーザーによって所有されます。 たとえば、データベースの所有者には、ユーザーの id が前提としています**Margaret**というテーブルを作成および**orders**、 **orders**テーブルを所有**Margaret**、システム管理者ではありません。  
+ SETUSER は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーに対してだけ使用してください。 SETUSER は Windows ユーザーに対してはサポートされていません。 SETUSER を使用して別のユーザーの ID の権限を借用している場合、権限を借用しているユーザーが作成するすべてのオブジェクトは、権限を借用されているユーザーによって所有されます。 たとえば、データベース所有者が **Margaret** というユーザーの ID を借用し、**orders** というテーブルを作成する場合、**orders** テーブルは、システム管理者ではなく、**Margaret** によって所有されます。  
   
  SETUSER ステートメントは、別の SETUSER ステートメントを実行するか、現在のデータベースを USE ステートメントで変更するまで有効になります。  
   
 > [!NOTE]  
 >  SETUSER WITH NORESET を使用すると、データベース所有者またはシステム管理者が自分の権限を回復するには、いったんログ オフしてからもう一度ログ オンするしかありません。  
   
-## <a name="permissions"></a>Permissions  
- メンバーシップが必要、 **sysadmin**固定サーバー ロールまたはデータベースの所有者である必要があります。 メンバーシップ、 **db_owner**固定データベース ロールが不十分  
+## <a name="permissions"></a>アクセス許可  
+ **sysadmin** 固定サーバー ロールのメンバーシップを持っているか、またはデータベースの所有者である必要があります。 **db_owner** 固定データベース ロールのメンバーシップでは十分ではありません。  
   
 ## <a name="examples"></a>使用例  
- この例では、データベース所有者が別のユーザーの ID を借用する方法を示します。 ユーザー`mary`という名前のテーブルが作成`computer_types`です。 SETUSER を使用して、データベース所有者権限を借用`mary`ユーザーに与える`joe`へのアクセス、`computer_types`テーブル、および自分独自の id をリセットします。  
+ この例では、データベース所有者が別のユーザーの ID を借用する方法を示します。 ユーザー `mary` は、`computer_types` という名前のテーブルを作成しました。 SETUSER を使用して、データベース所有者は `mary` の権限を借用し、ユーザー `joe` に `computer_types` テーブルへのアクセス権を与え、その後自分自身の ID をリセットします。  
   
 ```  
 SETUSER 'mary';  

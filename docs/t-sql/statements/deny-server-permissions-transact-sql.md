@@ -1,5 +1,5 @@
 ---
-title: "サーバー アクセス許可 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "DENY (サーバーの権限の拒否) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -62,44 +62,44 @@ DENY permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>引数  
- *アクセス許可*  
+ *permission*  
  サーバーで拒否できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
  CASCADE  
  このプリンシパルによって権限が許可されている他のプリンシパルに対しても、同じ権限を拒否することを示します。  
   
- \<Server_principal >  
+ TO \<server_principal>  
  権限を拒否するプリンシパルを指定します。  
   
- AS \<grantor_principal >  
+ AS \<grantor_principal>  
  このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。  
   
  *SQL_Server_login*  
- 指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
  *SQL_Server_login_mapped_to_Windows_login*  
- 指定します、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows ログインにマップされるログインです。  
+ Windows ログインにマップされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
  *SQL_Server_login_mapped_to_Windows_group*  
- 指定します、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows グループにマップされるログインです。  
+ Windows グループにマップされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
  *SQL_Server_login_mapped_to_certificate*  
  証明書にマップされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
  *SQL_Server_login_mapped_to_asymmetric_key*  
- 指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]非対称キーにマップされるログインです。  
+ 非対称キーにマップされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
  *server_role*  
  サーバー ロールを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  サーバー スコープの権限を拒否できるのは、現在のデータベースが master のときだけです。  
   
- サーバー権限に関する情報を表示することができます、 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)でカタログ ビュー、およびサーバー プリンシパルに関する情報を表示できます、 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)カタログ ビューです。 サーバー ロールのメンバーシップに関する情報を表示できます、 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)カタログ ビューです。  
+ サーバー権限に関する情報は [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) カタログ ビュー、サーバー プリンシパルに関する情報は [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) カタログ ビューでそれぞれ確認できます。 サーバー ロールのメンバーシップに関する情報は、[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) カタログ ビューで確認できます。  
   
  サーバーは権限の階層の最上位となります。 次の表に、サーバーで拒否できる最も限定的な権限を示します。  
   
-|サーバーのアクセス許可|権限が含まれるサーバー権限|  
+|サーバー権限|権限が含まれるサーバー権限|  
 |-----------------------|----------------------------------|  
 |ADMINISTER BULK OPERATIONS|CONTROL SERVER|  
 |ALTER ANY AVAILABILITY GROUP<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
@@ -136,19 +136,19 @@ DENY permission [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>解説  
- 次の 3 つのサーバー アクセス許可が追加された[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]です。  
+## <a name="remarks"></a>Remarks  
+ 次の 3 つのサーバー権限が、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] で追加されました。  
   
- **任意のデータベースを接続**権限  
- Grant **CONNECT ANY DATABASE**ログインにその将来的に作成されるすべての新しいデータベースに現在存在しているすべてのデータベースに接続する必要があります。 接続以外の権限はどのデータベースにおいても一切付与されません。 組み合わせる**SELECT ALL USER SECURABLES**または**VIEW SERVER STATE**のインスタンスのすべてのデータやデータベースの状態を表示する監査プロセスを許可する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ **CONNECT ANY DATABASE** 権限  
+ 既存のあらゆるデータベースと今後作成されるすべての新規データベースに接続する必要のあるログインに、**CONNECT ANY DATABASE** を付与します。 接続以外の権限はどのデータベースにおいても一切付与されません。 **SELECT ALL USER SECURABLES** または **VIEW SERVER STATE** と組み合わせることによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス上ですべてのデータやデータベースの状態を確認する監査プロセスが可能になります。  
   
- **任意のログインの権限を借用**権限  
- この権限が付与されていると、中間層プロセスがデータベースに接続するときに、そこに接続するクライアントのアカウントの権限を借用できます。 この権限が拒否されていると、高い特権を持つログインが他のログインの権限を借用するのをブロックできます。 たとえばを持つログインが**CONTROL SERVER**から他のログインを借用する権限がブロックされることができます。  
+ **IMPERSONATE ANY LOGIN** 権限  
+ この権限が付与されていると、中間層プロセスがデータベースに接続するときに、そこに接続するクライアントのアカウントの権限を借用できます。 この権限が拒否されていると、高い特権を持つログインが他のログインの権限を借用するのをブロックできます。 たとえば、**CONTROL SERVER** 権限を持つログインが他のログインの権限を借用するのをブロックできます。  
   
- **選択 ALL USER SECURABLES**権限  
- 付与されていると、監査担当者などログインが、ユーザーが接続できるすべてのデータベースのデータを表示できます。 拒否されるにアクセスできなくなりますオブジェクトである場合を除いて、 **sys**スキーマです。  
+ **SELECT ALL USER SECURABLES** 権限  
+ 付与されていると、監査担当者などログインが、ユーザーが接続できるすべてのデータベースのデータを表示できます。 この権限が拒否されていると、オブジェクトが **sys** スキーマに含まれている場合を除き、オブジェクトへのアクセスが拒否されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限またはセキュリティ保護可能なリソースの所有権が必要です。 AS 句を使用する場合、指定されたプリンシパルは、権限が拒否されるセキュリティ保護可能なリソースを所有している必要があります。  
   
 ## <a name="examples"></a>使用例  
@@ -163,7 +163,7 @@ GO
 ```  
   
 ### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>B. AS オプションを使用して、SQL Server ログインに対し CREATE ENDPOINT 権限を拒否する  
- 次の例では、ユーザー `CREATE ENDPOINT` に対して `ArifS` 権限を拒否します。 この例では、`AS`を指定するオプション`MandarP`実行中のプリンシパルが、これを行う権限を派生元のプリンシパルとして。  
+ 次の例では、ユーザー `CREATE ENDPOINT` に対して `ArifS` 権限を拒否します。 この例では `AS` オプションを使って、このステートメントを実行するプリンシパルに権限を許可した、元のプリンシパルとして `MandarP` を指定します。  
   
 ```  
 USE master;  
@@ -174,11 +174,11 @@ GO
 ## <a name="see-also"></a>参照  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [サーバー アクセス許可 (TRANSACT-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
- [サーバーのアクセス許可 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
+ [DENY (サーバーの権限の拒否) (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
+ [REVOKE (サーバーの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
  [権限の階層 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

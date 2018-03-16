@@ -1,5 +1,5 @@
 ---
-title: "ENABLE TRIGGER (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ENABLE TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
   
 ## <a name="arguments"></a>引数  
  *schema_name*  
- トリガーが属するスキーマの名前を指定します。 *schema_name* DDL トリガーまたはログオン トリガーを指定することはできません。  
+ トリガーが属するスキーマの名前を指定します。 DDL トリガーまたはログオン トリガーでは *schema_name* を指定できません。  
   
  *trigger_name*  
  有効化するトリガーの名前です。  
@@ -61,23 +61,23 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
  ON 句のスコープで定義されたすべてのトリガーを有効化することを示します。  
   
  *object_name*  
- テーブルまたはビューを DML トリガーの名前を指定*trigger_name*が作成を実行します。  
+ DML トリガー *trigger_name* が実行用に作成されたテーブルまたはビューの名前を指定します。  
   
  DATABASE  
- DDL トリガーすることを示します*trigger_name*が作成またはデータベース スコープで実行するように変更します。  
+ DDL トリガーの場合、*trigger_name* が、データベース スコープで実行するために作成または変更されたことを示します。  
   
  ALL SERVER  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- DDL トリガーすることを示します*trigger_name*が作成または、サーバー スコープで実行するように変更します。 ALL SERVER はログオン トリガーにも適用されます。  
+ DDL トリガーの場合、*trigger_name* が、サーバー スコープで実行するために作成または変更されたことを示します。 ALL SERVER はログオン トリガーにも適用されます。  
   
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
-## <a name="remarks"></a>解説  
- トリガーを有効化しても、トリガーが再作成されるわけではありません。 無効化されたトリガーは、引き続き現在のデータベースのオブジェクトとして残りますが、起動されることはありません。 トリガーを有効化すると、そのトリガーがプログラムされている [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが実行されたときに起動されます。 使用してトリガーが無効になっている[DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md)です。 テーブルに定義された DML トリガーを指定できますも無効にするかを使用して有効になっている[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)です。  
+## <a name="remarks"></a>Remarks  
+ トリガーを有効化しても、トリガーが再作成されるわけではありません。 無効化されたトリガーは、引き続き現在のデータベースのオブジェクトとして残りますが、起動されることはありません。 トリガーを有効化すると、そのトリガーがプログラムされている [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが実行されたときに起動されます。 トリガーを無効化するには、[DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) を使います。 テーブルに定義された DML トリガーも、[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) を使って無効または有効にできます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  DML トリガーを有効化するには、少なくとも、そのトリガーが作成されたテーブルまたはビューに対する ALTER 権限が必要です。  
   
  サーバー スコープ (ON ALL SERVER) 付きの DDL トリガーまたはログオン トリガーを有効化するには、サーバーでの CONTROL SERVER 権限が必要です。 DDL トリガーをデータベース スコープ (ON DATABASE) で有効化するには、少なくとも、現在のデータベースでの ALTER ANY DATABASE DDL TRIGGER 権限が必要です。  
@@ -85,7 +85,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. テーブル上の DML トリガーを有効化する  
- 次の例には、トリガーが無効になります。`uAddress`テーブル上に作成された`Address`、AdventureWorks データベースされ有効になります。  
+ 次の例では、AdventureWorks データベースのテーブル `Address` 上に作成されたトリガー `uAddress` を無効化し、次に有効化します。  
   
 ```  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
@@ -95,7 +95,7 @@ GO
 ```  
   
 ### <a name="b-enabling-a-ddl-trigger"></a>B. DDL トリガーを有効化する  
- 次の例では、DDL トリガー`safety`とデータベースのスコープ、無効にし、それを有効にします。  
+ 次の例では、データベース スコープの DDL トリガー `safety` を作成し、無効にします。  
   
 ```  
 CREATE TRIGGER safety   

@@ -1,5 +1,5 @@
 ---
-title: "MASTER KEY (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -61,30 +61,30 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- パスワード ='*パスワード*'  
- データベース内のマスター キーの暗号化に使用されているパスワードを指定します。 *パスワード*のインスタンスを実行しているコンピューターの Windows パスワード ポリシーの要件を満たす必要がある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 *パスワード*が省略可能で[!INCLUDE[ssSDS](../../includes/sssds-md.md)]と[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]です。  
+ PASSWORD ='*password*'  
+ データベース内のマスター キーの暗号化に使用されているパスワードを指定します。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。 *password* は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] では省略可能です。  
   
-## <a name="remarks"></a>解説  
- データベース マスター キーは対称キーで、証明書の秘密キーやデータベース内に存在する非対称キーを保護するときに使用します。 データベース マスター キーを作成するときには、AES_256 アルゴリズムとユーザー指定のパスワードを使用してマスター キーを暗号化します。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]と[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、トリプル DES アルゴリズムを使用します。 マスター キーの暗号化を自動的に解除できるようにするには、サービス マスター キーを使用してキーのコピーを暗号化し、データベースと master の両方に格納します。 通常、master に格納されたコピーは、マスター キーが変更されるたびに暗黙的に更新されます。 この既定の DROP ENCRYPTION BY SERVICE MASTER KEY オプションを使用して変更できます[ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md)です。 使用して、サービス マスター _ キーによって暗号化されていないマスター _ キーを開く必要があります、 [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md)ステートメントとパスワード。  
+## <a name="remarks"></a>Remarks  
+ データベース マスター キーは対称キーで、証明書の秘密キーやデータベース内に存在する非対称キーを保護するときに使用します。 データベース マスター キーを作成するときには、AES_256 アルゴリズムとユーザー指定のパスワードを使用してマスター キーを暗号化します。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] では、トリプル DES アルゴリズムを使用します。 マスター キーの暗号化を自動的に解除できるようにするには、サービス マスター キーを使用してキーのコピーを暗号化し、データベースと master の両方に格納します。 通常、master に格納されたコピーは、マスター キーが変更されるたびに暗黙的に更新されます。 この既定の設定は、[ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md) の DROP ENCRYPTION BY SERVICE MASTER KEY オプションを使って変更できます。 サービス マスター キーによって暗号化されていないマスター キーは、[OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) ステートメントとパスワードを使って開かれている必要があります。  
   
  master 内の sys.databases カタログ ビューの is_master_key_encrypted_by_server 列には、データベース マスター キーがサービス マスター キーによって暗号化されているかどうかが示されます。  
   
  データベース マスター キーに関する情報は、sys.symmetric_keys カタログ ビューで確認できます。  
 
-SQL Server と Parallel Data Warehouse では、マスター _ キー通常およびにより保護されて、サービス マスター _ キーには、少なくとも 1 つのパスワード。 別のサーバー (ログ配布を復元するバックアップなど) に物理的に移動されているデータベースが発生した場合、データベースにが含まれます (この暗号化を使用して明示的に削除された場合を除き、元のサーバー サービス マスター _ キーによって暗号化されたマスター_キーのコピーにはALTER MASTER KEY DDL)、および CREATE MASTER KEY または後続の ALTER MASTER KEY DDL 操作のいずれかの中に指定された各パスワードによって暗号化されたコピーです。 マスター_キー、およびデータベースを移動した後は、キーの階層ではルートとして、マスター _ キーを使用して暗号化されたすべてのデータを回復するために、ユーザーが、マスター _ キーを保護するためのパスワードのいずれかを使用して、OPEN MASTER KEY ステートメントを使用するか、、マスター _ キーのバックアップを復元または、新しいサーバーでは、元のサービス マスター _ キーのバックアップを復元します。 
+SQL Server および Parallel Data Warehouse では、通常、マスター キーはサービス マスター キーと少なくとも 1 つのパスワードによって保護されています。 データベースが異なるサーバーに物理的に移動される場合 (ログ配布、バックアップの復元など)、データベースには、元のサーバーのサービス マスター キーによって暗号化されたマスター キーのコピーと (この暗号化が ALTER MASTER KEY DDL を使って明示的に削除されていない場合)、CREATE MASTER KEY または後続の ALTER MASTER KEY DDL 操作の間に指定された各パスワードによって暗号化されたそのコピーが含まれます。 データベースを移動した後、マスター キーと、マスター キーを使って暗号化されたすべてのデータを、キー階層のルートとして復旧するには、新しいサーバーで、マスター キーの保護に使われているパスワードの 1 つを指定して OPEN MASTER KEY ステートメントを使うか、マスター キーのバックアップを復元するか、または元のサービス マスター キーのバックアップを復元します。 
 
-[!INCLUDE[ssSDS](../../includes/sssds-md.md)]と[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]、パスワード保護と見なされないように、マスター _ キーのサービス マスター _ キーの保護は、データベースがの移動先 1 台のサーバーから別の状況でのデータ損失シナリオを防ぐために安全機構Microsoft Azure プラットフォームによって管理されます。 したがって、メーザ キーのパスワードは省略可能で[!INCLUDE[ssSDS](../../includes/sssds-md.md)]と[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]です。
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] の場合、マスター キーでのサービス マスター キーの保護は Microsoft Azure プラットフォームによって管理されるので、パスワード保護は、データベースがサーバー間で移動される可能性がある場合のデータ損失シナリオを防ぐための安全なメカニズムとは見なされません。 したがって、マスター キーのパスワードは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] では省略可能です。
   
 > [!IMPORTANT]  
->  使用して、マスター _ キーをバックアップする必要があります [BACKUP MASTER KEY](../../t-sql/statements/backup-master-key-transact-sql.md) し、オフサイトの安全な場所にバックアップを格納します。  
+>  マスター キーは [BACKUP MASTER KEY](../../t-sql/statements/backup-master-key-transact-sql.md) を使用してバックアップし、安全な別の場所に保存する必要があります。  
   
  サービス マスター キーとデータベース マスター キーは、AES-256 アルゴリズムを使用して保護されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  データベースに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、現在のデータベースのデータベース マスター _ キーを作成します。 パスワードを使用して、キーを暗号化`23987hxJ#KL95234nl0zBe`です。  
+ 次の例では、現在のデータベースのデータベース マスター キーを作成します。 このキーは、パスワード `23987hxJ#KL95234nl0zBe` を使用して暗号化されます。  
   
 ```  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe';  
@@ -93,12 +93,12 @@ GO
 
   
 ## <a name="see-also"></a>参照  
- [sys.symmetric_keys &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [MASTER KEY &#40; を開くTRANSACT-SQL と #41 です。](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
  [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)   
- [DROP MASTER KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-master-key-transact-sql.md)   
- [CLOSE MASTER KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/close-master-key-transact-sql.md)   
+ [DROP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-master-key-transact-sql.md)   
+ [CLOSE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

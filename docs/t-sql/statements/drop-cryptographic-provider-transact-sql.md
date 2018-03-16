@@ -1,5 +1,5 @@
 ---
-title: "DROP CRYPTOGRAPHIC PROVIDER (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="drop-cryptographic-provider-transact-sql"></a>DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  内の暗号化サービス プロバイダーを削除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内の暗号プロバイダーを削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,18 +49,18 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
  *provider_name*  
  拡張キー管理プロバイダーの名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  拡張キー管理 (EKM) プロバイダーを削除するには、そのプロバイダーを使用しているすべてのセッションを停止する必要があります。  
   
  EKM プロバイダーは、資格情報がマップされていない場合のみ削除できます。  
   
- キーの Guid にドロップしたときに、EKM プロバイダーにマップ キーがで格納されたままがある場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 後で同じキー GUID を使用してプロバイダーを作成すると、そのキーが再利用されます。  
+ キーがマップされている EKM プロバイダーを削除すると、そのキーの GUID が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内に格納されたままになります。 後で同じキー GUID を使用してプロバイダーを作成すると、そのキーが再利用されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  対称キーに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例と呼ばれる暗号化サービス プロバイダーを削除する`SecurityProvider`です。  
+ 次の例では、`SecurityProvider` という暗号プロバイダーを削除します。  
   
 ```  
 /* First, disable provider to perform the upgrade.  

@@ -1,5 +1,5 @@
 ---
-title: "RESTORE MASTER KEY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: RESTORE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -57,19 +57,19 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>引数  
- ファイル ='*path_to_file*'  
- 格納されているデータベース マスター キーへの完全なパスを、ファイル名を含めて指定します。 *path_to_file*ローカル パスまたはネットワーク上の場所への UNC パスを指定できます。  
+ FILE ='*path_to_file*'  
+ 格納されているデータベース マスター キーへの完全なパスを、ファイル名を含めて指定します。 *path_to_file* には、ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。  
   
- DECRYPTION BY PASSWORD ='*パスワード*'  
+ DECRYPTION BY PASSWORD ='*password*'  
  ファイルからインポートされるデータベース マスター キーの暗号化解除に必要なパスワードを指定します。  
   
- ENCRYPTION BY PASSWORD ='*パスワード*'  
+ ENCRYPTION BY PASSWORD ='*password*'  
  データベースに読み込まれた後、データベース マスター キーの暗号化に使用されるパスワードを指定します。  
   
  FORCE  
- 復元処理を続行する、現在のデータベース マスター_キーが開いていない場合でも、または場合を指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]いくつか使用して暗号化された秘密キーの暗号化を解除できません。  
+ 現在のデータベース マスター キーが開いていない場合や、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でマスター キーを使用して暗号化された秘密キーの一部を暗号化解除できない場合でも、RESTORE の処理を継続します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  マスター キーを復元するとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では現在アクティブなマスター キーによって暗号化されたすべてのキーの暗号化が解除された後、復元されたマスター キーを使用してこれらのキーが暗号化されます。 この操作はリソースを大量に消費するため、リソース要求が少ないときに実行するように考慮してください。 現在のデータベースのマスター キーが開いていないか、開けない場合、またはマスター キーで暗号化されたキーを 1 つでも暗号化解除できない場合、復元操作は失敗します。  
   
  FORCE オプションは、マスター キーを取得できないか、暗号化解除が失敗する場合にのみ使用してください。 取得できないキーによってのみ暗号化されている情報は失われます。  
@@ -78,7 +78,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
   
  現在のデータベースにマスター キーが存在しない場合は、RESTORE MASTER KEY を実行するとマスター キーが作成されます。 この新しいマスター キーは、サービス マスター キーで自動的に暗号化されません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  データベースに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

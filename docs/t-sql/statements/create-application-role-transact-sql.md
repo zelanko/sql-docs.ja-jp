@@ -1,5 +1,5 @@
 ---
-title: "アプリケーション ロール (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE APPLICATION ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -56,29 +56,29 @@ CREATE APPLICATION ROLE application_role_name
  *application_role_name*  
  アプリケーション ロールの名前を指定します。 この名前は、データベース内のどのプリンシパルへの参照にも使用されていない名前である必要があります。  
   
- パスワード**='***パスワード***'**  
- データベース ユーザーがアプリケーション ロールのアクティブ化に使用するパスワードを指定します。 複雑なパスワードの使用をお勧めします。 *パスワード*のインスタンスを実行しているコンピューターの Windows パスワード ポリシーの要件を満たす必要がある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ PASSWORD **='***password***'**  
+ データベース ユーザーがアプリケーション ロールのアクティブ化に使用するパスワードを指定します。 複雑なパスワードの使用をお勧めします。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。  
   
- DEFAULT_SCHEMA  **=**  *schema_name*  
- このロール用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。 DEFAULT_SCHEMA が定義されていない場合、アプリケーション ロールでは既定のスキーマとして DBO が使用されます。 *schema_name*データベースに存在しないスキーマを指定できます。  
+ DEFAULT_SCHEMA **=***schema_name*  
+ このロール用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。 DEFAULT_SCHEMA が定義されていない場合、アプリケーション ロールでは既定のスキーマとして DBO が使用されます。 *schema_name* にはデータベースに存在しないスキーマを指定できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  アプリケーション ロールのパスワードを設定するときには、パスワードの複雑性が確認されます。 アプリケーション ロールを呼び出すアプリケーションは、これらのパスワードを格納する必要があります。 アプリケーション ロールのパスワードは常に暗号化して保存する必要があります。  
   
- アプリケーション ロールは、 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)カタログ ビューです。  
+ アプリケーション ロールは、[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) カタログ ビューで参照できます。  
   
- アプリケーション ロールを使用する方法については、次を参照してください。[アプリケーション ロール](../../relational-databases/security/authentication-access/application-roles.md)です。  
+ アプリケーション ロールの使用方法については、「[アプリケーション ロール](../../relational-databases/security/authentication-access/application-roles.md)」をご覧ください。  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER ANY APPLICATION ROLE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例と呼ばれるアプリケーション ロールを作成する`weekly_receipts`パスワードを持つ`987Gbv876sPYY5m23`と`Sales`既定のスキーマとして。  
+ 次の例では、アプリケーション ロール `weekly_receipts` を作成します。このアプリケーション ロールのパスワードは `987Gbv876sPYY5m23` で、既定のスキーマは `Sales` です。  
   
 ```  
 CREATE APPLICATION ROLE weekly_receipts   
@@ -89,9 +89,9 @@ GO
   
 ## <a name="see-also"></a>参照  
  [アプリケーション ロール](../../relational-databases/security/authentication-access/application-roles.md)   
- [sp_setapprole と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
- [ALTER APPLICATION ROLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-application-role-transact-sql.md)   
- [DROP APPLICATION ROLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-application-role-transact-sql.md)   
+ [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
+ [ALTER APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
+ [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
  [パスワード ポリシー](../../relational-databases/security/password-policy.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

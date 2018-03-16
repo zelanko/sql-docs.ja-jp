@@ -1,5 +1,5 @@
 ---
-title: "SET ROWCOUNT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET ROWCOUNT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-rowcount-transact-sql"></a>SET ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  により[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定数の行が返された後、クエリの処理を停止します。  
+  指定の行数が返された後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクエリの処理を停止します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,15 +54,15 @@ SET ROWCOUNT { number | @number_var }
 ```  
   
 ## <a name="arguments"></a>引数  
- *数*| @*number_var*  
+ *number* | @*number_var*  
  特定のクエリを停止するまでに処理される行数を整数で指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  SQL Server の将来のリリースでは、SET ROWCOUNT を使用しても、DELETE、INSERT、および UPDATE ステートメントが影響を受けることはありません。 新しい開発作業で、DELETE、INSERT、および UPDATE ステートメントで SET ROWCOUNT の使用を避けるため、現在それを使用するアプリケーションの変更を検討してください。 同様の処理を行う場合は、TOP 構文を使用します。 詳細については、次を参照してください。 [TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
+>  SQL Server の将来のリリースでは、SET ROWCOUNT を使用しても、DELETE、INSERT、および UPDATE ステートメントが影響を受けることはありません。 新しい開発作業では DELETE、INSERT、および UPDATE ステートメントでの SET ROWCOUNT の使用を避け、現在 SET ROWCOUNT を使用しているアプリケーションは変更を検討してください。 同様の処理を行う場合は、TOP 構文を使用します。 詳細については、「[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)」を参照してください。  
   
- このオプションを off に設定して、すべての行が返されるように、するには、SET ROWCOUNT 0 を指定します。  
+ このオプションをオフにして、すべての行が返されるようにするには、SET ROWCOUNT 0 を指定します。  
   
  SET ROWCOUNT オプションを設定すると、大部分の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、指定した行数の処理が終わったところで処理が停止します。 これにはトリガーも含まれます。 ROWCOUNT オプションは動的カーソルには影響しませんが、このオプションによってキーセット カーソルと非反映型カーソルの行セットは制限されます。 このオプションの使用には注意が必要です。  
   
@@ -70,11 +70,11 @@ SET ROWCOUNT { number | @number_var }
   
  SET ROWCOUNT は、解析時ではなく実行時に設定されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- SET ROWCOUNT を指定した場合、指定した数の行が返されると処理は停止します。 次の例では、500 行での条件を満たすことに注意してください`Quantity`より小さい`300`です。 SET ROWCOUNT の適用後、すべての行が返されたわけではないことがわかります。  
+ SET ROWCOUNT を指定した場合、指定した数の行が返されると処理は停止します。 次の例では、500 行を超える行数は、`Quantity` が `300` より少ないという条件を満たしていますが、 SET ROWCOUNT の適用後、すべての行が返されたわけではないことがわかります。  
   
 ```  
 USE AdventureWorks2012;  
@@ -95,7 +95,7 @@ GO
  (1 row(s) affected)
  ```  
   
- これで、設定`ROWCOUNT`に`4`し 4 行だけが返されることを示すためにすべての行を返します。  
+ ここで `ROWCOUNT` を `4` に設定し、すべての行のうち、4 行だけが返されることを確認します。  
   
 ```  
 SET ROWCOUNT 4;  
@@ -107,8 +107,8 @@ GO
 (4 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- SET ROWCOUNT を指定した場合、指定した数の行が返されると処理は停止します。 次の例では、20 を超える行がの条件を満たすことに注意してください`AccountType = 'Assets'`です。 SET ROWCOUNT の適用後、すべての行が返されたわけではないことがわかります。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ SET ROWCOUNT を指定した場合、指定した数の行が返されると処理は停止します。 次の例では、20 より多くの行が `AccountType = 'Assets'` の条件を満たしていることに注意してください。 SET ROWCOUNT の適用後、すべての行が返されたわけではないことがわかります。  
   
 ```  
 -- Uses AdventureWorks  
@@ -118,7 +118,7 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
- すべての行を返すには、行カウントを 0 に設定します。  
+ すべての行を返すには、ROWCOUNT を 0 に設定します。  
   
 ```  
 -- Uses AdventureWorks  

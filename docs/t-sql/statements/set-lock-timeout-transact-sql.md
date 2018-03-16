@@ -1,5 +1,5 @@
 ---
-title: "SET LOCK_TIMEOUT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/11/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  ロックを解除するため、ステートメントが待機するミリ秒数を指定します。  
+  ロックが解除されるまでのステートメントの待ち時間をミリ秒単位で指定します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,11 +53,11 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="arguments"></a>引数  
  *timeout_period*  
- 前に渡されるミリ秒数[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ロック エラーが返されます。 値が -1 (既定値) の場合は、タイムアウトは設定されず、無期限に待機することになります。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がロック エラーを返すまでの経過時間をミリ秒単位で指定します。 値が -1 (既定値) の場合は、タイムアウトは設定されず、無期限に待機することになります。  
   
  ロックの待ち時間がタイムアウト値を超えると、エラーが返されます。 値が 0 の場合は、待ち時間はなく、ロックがかかるとすぐにメッセージが返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この設定には、接続の開始時に -1 が割り当てられます。 この値が変更されると、その接続の残りの期間については、新しい設定が適用されます。  
   
  SET LOCK_TIMEOUT は、解析時ではなく実行時に設定されます。  
@@ -66,29 +66,29 @@ SET LOCK_TIMEOUT timeout_period
   
  CREATE DATABASE、ALTER DATABASE、および DROP DATABASE ステートメントでは、SET LOCK_TIMEOUT の設定は無視されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A: ロックのタイムアウトを 1,800 ミリ秒に設定します。  
- 次の例では、ロックのタイムアウト値を設定`1800`(ミリ秒)。  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A: ロック タイムアウトを 1,800 ミリ秒に設定する  
+ 次の例では、ロック タイムアウトの待ち時間を `1800` ミリ秒に設定します。  
   
 ```sql  
 SET LOCK_TIMEOUT 1800;  
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>B. ロックが解放されるを無限に待機するロックのタイムアウトを設定します。  
- 次の例では、無期限に待機し、無期限にロックのタイムアウトを設定します。 これは、各接続の先頭には既に設定されている既定の動作です。  
+### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>B. ロックが解放されるまで無限に待機するようにロック タイムアウトを設定する。  
+ 次の例では、ロック タイムアウトを無期限に待機して期限切れにならないように設定します。 これは、各接続の開始時に既に設定されている既定の動作です。  
   
 ```sql  
 SET LOCK_TIMEOUT -1;  
 ```  
   
- 次の例では、ロックのタイムアウト値を設定`1800`(ミリ秒)。 このリリースで[!INCLUDE[ssDW](../../includes/ssdw-md.md)]ステートメントを正常に解析されますが、1800 値を無視するは、および引き続き既定の動作を使用します。  
+ 次の例では、ロック タイムアウトの待ち時間を `1800` ミリ秒に設定します。 このリリースの [!INCLUDE[ssDW](../../includes/ssdw-md.md)] は、ステートメントを正常に解析しますが、1800 という値は無視して既定の動作を使い続けます。  
   
 ```sql  
 SET LOCK_TIMEOUT 1800;  

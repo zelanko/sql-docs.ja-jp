@@ -1,5 +1,5 @@
 ---
-title: "DROP STATISTICS (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/22/2016
 ms.prod: sql-non-specified
@@ -60,26 +60,26 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 ```  
   
 ## <a name="arguments"></a>引数  
- *テーブル* | *ビュー*  
- 統計を削除する対象となるターゲット テーブルまたはインデックス付きビューの名前です。 テーブルとビューの名前は、規則に従う必要があります[データベース識別子](../../relational-databases/databases/database-identifiers.md)です。 テーブルまたはビューの所有者名の指定は省略可能です。  
+ *table* | *view*  
+ 統計を削除する対象となるターゲット テーブルまたはインデックス付きビューの名前です。 テーブル名とビュー名は、[データベース識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 テーブルまたはビューの所有者名の指定は省略可能です。  
   
  *statistics_name*  
  削除する統計グループの名前です。 統計の名前は、識別子の規則に従っている必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  統計を削除するときは注意が必要です。 統計を削除すると、クエリ オプティマイザーによって選択された実行プランに影響することがあります。  
   
  インデックスの統計を DROP STATISTICS で削除することはできません。 インデックスが存在する限り、統計は維持されます。  
   
- 統計情報の表示の詳細については、次を参照してください。 [DBCC SHOW_STATISTICS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
+ 統計の表示について詳しくは、「[DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)」をご覧ください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  テーブルまたはビューに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-dropping-statistics-from-a-table"></a>A. テーブルの統計を削除します。  
- 次の例では、2 つのテーブルの統計グループ (コレクション) を削除します。 `VendorCredit`の統計グループ (コレクション)、`Vendor`テーブルおよび`CustomerTotal`の統計情報 (コレクション)、`SalesOrderHeader`テーブルを削除します。  
+### <a name="a-dropping-statistics-from-a-table"></a>A. テーブルから統計を削除する  
+ 次の例では、2 つのテーブルの統計グループ (コレクション) を削除します。 `Vendor` テーブルの `VendorCredit` 統計グループ (コレクション) と `SalesOrderHeader` テーブルの `CustomerTotal` 統計グループ (コレクション) が削除されます。  
   
 ```  
 -- Create the statistics groups.  
@@ -96,10 +96,10 @@ DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerT
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-dropping-statistics-from-a-table"></a>B. テーブルの統計を削除します。  
- 次の例では、削除、`CustomerStats1`テーブルから統計`Customer`です。  
+### <a name="b-dropping-statistics-from-a-table"></a>B. テーブルから統計を削除する  
+ 次の例では、`CustomerStats1` 統計をテーブル `Customer` から削除します。  
   
 ```  
 DROP STATISTICS Customer.CustomerStats1;  
@@ -112,10 +112,10 @@ DROP STATISTICS dbo.Customer.CustomerStats1;
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [sys.stats_columns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)   
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sp_autostats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
- [sp_createstats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
+ [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  

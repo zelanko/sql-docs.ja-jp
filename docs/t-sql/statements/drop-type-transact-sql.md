@@ -1,5 +1,5 @@
 ---
-title: "ドロップ タイプ (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 ```  
   
 ## <a name="arguments"></a>引数  
- *場合に存在します。*  
+ *IF EXISTS*  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、型を削除します。  
@@ -59,17 +59,17 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
  *type_name*  
  削除する別名データ型またはユーザー定義型の名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次のいずれかに当てはまる場合には、DROP TYPE ステートメントは実行されません。  
   
--   削除しようとしている別名データ型またはユーザー定義型の列を含むテーブルがデータベースにある場合。 クエリを実行して別名またはユーザー定義型の列に関する情報を取得できます、 [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)または[sys.column_type_usages](../../relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md)カタログ ビューです。  
+-   削除しようとしている別名データ型またはユーザー定義型の列を含むテーブルがデータベースにある場合。 別名型またはユーザー定義型の列の情報は、[sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) カタログ ビューまたは [sys.column_type_usages](../../relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md) カタログ ビューをクエリすることによって取得できます。  
   
--   計算列、CHECK 制約、スキーマ バインド ビュー、およびスキーマ バインド関数の中には、別名型またはユーザー定義型への参照を含む定義を持つものもあります。 クエリを実行してこれらの参照に関する情報を取得することができます、 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)カタログ ビューです。  
+-   計算列、CHECK 制約、スキーマ バインド ビュー、およびスキーマ バインド関数の中には、別名型またはユーザー定義型への参照を含む定義を持つものもあります。 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) カタログ ビューに対してクエリを実行することによって、これらの参照についての情報を取得できます。  
   
--   データベースに関数、ストアド プロシージャ、またはトリガーが作成されていて、それらのルーチンが、削除しようとしている別名データ型またはユーザー定義型の変数やパラメーターを使用している場合。 クエリを実行して別名またはユーザー定義型のパラメーターに関する情報を取得できます、 [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)または[sys.parameter_type_usages](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)カタログ ビューです。  
+-   データベースに関数、ストアド プロシージャ、またはトリガーが作成されていて、それらのルーチンが、削除しようとしている別名データ型またはユーザー定義型の変数やパラメーターを使用している場合。 別名型またはユーザー定義型のパラメーターについての情報は、[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) カタログ ビューまたは [sys.parameter_type_usages](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md) カタログ ビューに対するクエリを実行することによって取得できます。  
   
-## <a name="permissions"></a>Permissions  
- に対する CONTROL 権限が必要です*type_name*に対する ALTER 権限または*schema_name*です。  
+## <a name="permissions"></a>アクセス許可  
+ *type_name* に対する CONTROL 権限、または *schema_name* に対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`ssn` という名前の型が現在のデータベースに既に作成されていることを前提としています。  

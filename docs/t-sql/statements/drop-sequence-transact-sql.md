@@ -1,5 +1,5 @@
 ---
-title: "ドロップ シーケンス (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP SEQUENCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ DROP SEQUENCE [ IF EXISTS ] { [ database_name . [ schema_name ] . | schema_name.
 ```  
   
 ## <a name="arguments"></a>引数  
- *場合に存在します。*  
+ *IF EXISTS*  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、シーケンスを削除します。  
@@ -59,9 +59,9 @@ DROP SEQUENCE [ IF EXISTS ] { [ database_name . [ schema_name ] . | schema_name.
  シーケンス オブジェクトが所属するスキーマの名前を指定します。  
   
  *sequence_name*  
- 削除するシーケンスの名前です。 種類は**sysname**です。  
+ 削除するシーケンスの名前です。 データ型は **sysname** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  番号の生成後、その番号とシーケンス オブジェクトは無関係になるため、生成された番号が使用されている場合でも、シーケンス オブジェクトは削除できます。  
   
  シーケンス オブジェクトはスキーマ バインドされないため、ストアド プロシージャまたはトリガーによって参照されているシーケンス オブジェクトは削除できます。 テーブルで既定値として参照されているシーケンス オブジェクトは削除できません。 シーケンスを参照しているオブジェクトの一覧がエラー メッセージに表示されます。  
@@ -76,13 +76,13 @@ SELECT sch.name + '.' + seq.name AS [Sequence schema and name]
 GO  
 ```  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>アクセス許可  
  スキーマに対する ALTER または CONTROL 権限が必要です。  
   
 ### <a name="audit"></a>監査  
- 監査する**DROP SEQUENCE**、モニター、 **SCHEMA_OBJECT_CHANGE_GROUP**です。  
+ **DROP SEQUENCE** を監査するには、**SCHEMA_OBJECT_CHANGE_GROUP** を監視します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、現在のデータベースから `CountBy1` という名前のシーケンス オブジェクトを削除します。  
@@ -93,9 +93,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER SEQUENCE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [SEQUENCE &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-sequence-transact-sql.md)   
- [次の値を &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

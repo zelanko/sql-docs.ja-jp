@@ -1,5 +1,5 @@
 ---
-title: "列暗号化キーの削除 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -52,16 +52,16 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
  *key_name*  
  列の暗号化は、データベースから削除するキーの名前です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データベース内のすべての列の暗号化に使用されている場合は、列の暗号化キーを削除することはできません。 列の暗号化キーを使用してすべての列を削除することが最初にする必要があります。  
   
-## <a name="permissions"></a>Permissions  
- 必要があります**ALTER ANY COLUMN ENCRYPTION KEY**データベースに対する権限。  
+## <a name="permissions"></a>アクセス許可  
+ データベースに対する **ALTER ANY COLUMN ENCRYPTION KEY** 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-dropping-a-column-encryption-key"></a>A. 列の暗号化キーを削除します。  
- 次の例と呼ばれる列の暗号化キーを削除する`MyCEK`です。  
+ 次の例では、列の暗号化キー `MyCEK` を削除します。  
   
 ```  
 DROP COLUMN ENCRYPTION KEY MyCEK;  
@@ -71,7 +71,7 @@ GO
 ## <a name="see-also"></a>参照  
  [Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [ALTER COLUMN ENCRYPTION KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
+ [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)  
   
   

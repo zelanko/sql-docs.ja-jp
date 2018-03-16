@@ -1,5 +1,5 @@
 ---
-title: "ALTER SERVICE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -58,22 +58,22 @@ ALTER SERVICE service_name
  *service_name*  
  変更するサービス名を指定します。 サーバー名、データベース名、スキーマ名は指定できません。  
   
- ON のキュー [ *schema_name***です。** *queue_name*  
- このサービス用の新しいキューを指定します。 [!INCLUDE[ssSB](../../includes/sssb-md.md)]このサービスのすべてのメッセージを現在のキューから新しいキューに移動します。  
+ ON QUEUE [ *schema_name***.** ] *queue_name*  
+ このサービス用の新しいキューを指定します。 このサービス用のすべてのメッセージは、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって現在のキューから新しいキューに移動されます。  
   
- 契約の追加*contract_name*  
+ ADD CONTRACT *contract_name*  
  このサービスで公開されるコントラクト セットに追加するコントラクトを指定します。  
   
  DROP CONTRACT *contract_name*  
- このサービスで公開されるコントラクト セットから削除するコントラクトを指定します。 [!INCLUDE[ssSB](../../includes/sssb-md.md)]このコントラクトを使用する既存のメッセージ交換をこのサービスでエラー メッセージを送信します。  
+ このサービスで公開されるコントラクト セットから削除するコントラクトを指定します。 このコントラクトを使用するサービスとのメッセージ交換が存在する場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってエラー メッセージが送信されます。  
   
-## <a name="remarks"></a>解説  
- ALTER SERVICE ステートメントによってサービスからコントラクトが削除されると、サービスは、このコントラクトを使用するメッセージ交換の対象から除外されます。 したがって、[!INCLUDE[ssSB](../../includes/sssb-md.md)]そのコントラクトに新しいメッセージ交換をサービスにはできません。 このコントラクトを使用する既存のメッセージ交換に影響はありません。  
+## <a name="remarks"></a>Remarks  
+ ALTER SERVICE ステートメントによってサービスからコントラクトが削除されると、サービスは、このコントラクトを使用するメッセージ交換の対象から除外されます。 したがって、[!INCLUDE[ssSB](../../includes/sssb-md.md)] では削除対象のコントラクトを使用するサービスとの新しいメッセージ交換は許可されません。 このコントラクトを使用する既存のメッセージ交換に影響はありません。  
   
  サービスの AUTHORIZATION を変更するには、ALTER AUTHORIZATION ステートメントを使用します。  
   
-## <a name="permissions"></a>Permissions  
- サービスを変更するためのアクセス許可の既定では、サービスのメンバーの所有者、 **db_ddladmin**または**db_owner**固定データベース ロールのメンバー、 **sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ サービスを変更する権限は、既定では、サービスの所有者、**db_ddladmin** または **db_owner** 固定データベース ロールのメンバー、および **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
 ## <a name="examples"></a>使用例  
   
@@ -86,7 +86,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
 ```  
   
 ### <a name="b-adding-a-new-contract-to-the-service"></a>B. サービスに新しいコントラクトを追加する  
- 次の例の変更、`//Adventure-Works.com/Expenses`サービス コントラクトのダイアログを許可する`//Adventure-Works.com/Expenses`です。  
+ 次の例では、コントラクト `//Adventure-Works.com/Expenses` のダイアログを許可するよう、`//Adventure-Works.com/Expenses` サービスを変更します。  
   
 ```  
 ALTER SERVICE [//Adventure-Works.com/Expenses]  
@@ -104,7 +104,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
   
 ## <a name="see-also"></a>参照  
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [サービス &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-service-transact-sql.md)   
+ [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

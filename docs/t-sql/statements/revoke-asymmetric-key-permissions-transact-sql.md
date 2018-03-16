@@ -1,5 +1,5 @@
 ---
-title: "非対称キーの権限 (TRANSACT-SQL) を取り消す |Microsoft ドキュメント"
+title: "REVOKE (非対称キーの権限の取り消し) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -55,11 +55,11 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
   
- *アクセス許可*  
+ *permission*  
  アセンブリで取り消すことができる権限を指定します。 下の表をご覧ください。  
   
- 非対称キーに対する**::***asymmetric_key_name*  
- 権限を取り消す非対称キーを指定します。 スコープ修飾子**::**が必要です。  
+ ON ASYMMETRIC KEY **::***asymmetric_key_name*  
+ 権限を取り消す非対称キーを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  
  権限を取り消すプリンシパルを指定します。 次のいずれかです。  
@@ -76,12 +76,12 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
   
 -   証明書にマップされているデータベース ユーザー  
   
--   非対称キーにマップされるデータベース ユーザー  
+-   非対称キーにマップされているデータベース ユーザー  
   
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
  CASCADE  
- このプリンシパルによって権限が許可または拒否されている他のプリンシパルからも、同じ権限が取り消されることを示します。 その権限自体は失効しません。  
+ このプリンシパルによって権限が許可または拒否されている他のプリンシパルからも、同じ権限が取り消されることを示します。 権限自体は取り消されません。  
   
 > [!CAUTION]  
 >  WITH GRANT OPTION で許可されている権限を CASCADE で取り消すと、その権限の GRANT および DENY の両方が取り消されます。  
@@ -101,11 +101,11 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
   
 -   証明書にマップされているデータベース ユーザー  
   
--   非対称キーにマップされるデータベース ユーザー  
+-   非対称キーにマップされているデータベース ユーザー  
   
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  非対称キーは、データベース レベルの保護可能なアイテムで、権限の階層で親となっているデータベースに含まれています。 次に、非対称キーで取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |非対称キーの権限|権限が含まれる非対称キー権限|権限が含まれるデータベース権限|  
@@ -116,7 +116,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  非対称キーに対する CONTROL 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
@@ -125,7 +125,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [APPLICATION ROLE &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

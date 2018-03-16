@@ -1,5 +1,5 @@
 ---
-title: "外部リソース プールを変更 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/13/2017
 ms.prod: sql-non-specified
@@ -30,17 +30,17 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="alter-external-resource-pool-transact-sql"></a>外部リソース プールを変更 (TRANSACT-SQL)
+# <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]と[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] および [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-外部プロセスで使用できるリソースを指定するリソース ガバナーの外部プールを変更します。 
+外部プロセスで使うことができるリソースを指定する Resource Governor 外部プールを変更します。 
 
-+ [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]で[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]、外部プールを管理`rterm.exe`、 `BxlServer.exe`、およびそれらにより生成された他のプロセスです。
++ [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] の [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] の場合、外部プールは `rterm.exe`、`BxlServer.exe`、およびそれらにより生成された他のプロセスを管理します。
 
-+ [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]外部プールが、以前のバージョンに登録されている R のプロセスを制御する SQL Server の 2017 だけでなく`python.exe`、 `BxlServer.exe`、およびそれらにより生成された他のプロセスです。
++ SQL Server 2017 の [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] の外部プールは、以前のバージョンおよび `python.exe`、`BxlServer.exe`、それらにより生成された他のプロセスに対してリストされている R プロセスを管理します。
 
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)です。
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="syntax"></a>構文
 
@@ -66,42 +66,42 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
   
 ## <a name="arguments"></a>引数
 
-{ *pool_name* |"default"}  
-既存のユーザー定義の外部リソース プールまたはときに作成される既定の外部リソース プールの名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされています。
-"default"は、引用符で囲む必要があります ("") または角かっこ () を使用すると`ALTER EXTERNAL RESOURCE POOL`と競合しないように`DEFAULT`、これは、システム予約語です。
+{ *pool_name* | "default" }  
+既存のユーザー定義の外部リソース プール、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールする際に作成される既定の外部リソース プールの名前です。
+"default" を `ALTER EXTERNAL RESOURCE POOL` で使用する場合は、システム予約語の `DEFAULT` と競合しないように、引用符 ("") または角かっこ ([]) で囲む必要があります。
 
 
-MAX_CPU_PERCENT =*値*  
-最大平均 CPU 帯域幅 CPU の競合がある場合、外部リソース プールのすべての要求を受信できることを指定します。 *値*で、既定の設定 100 の整数です。 許容範囲*値*は 1 ~ 100 です。
+MAX_CPU_PERCENT =*value*  
+CPU の競合がある場合に、この外部リソース プールのすべての要求が受け取ることのできる最大平均 CPU 帯域幅を指定します。 *value* は整数で、既定の設定は 100 です。 *value* の許容範囲は 1 ～ 100 です。
 
 
-アフィニティ {CPU = 自動 |( \<CPU_range_spec >) |NUMANODE = (\<NUMA_node_range_spec >)}  
-外部リソース プールを特定の Cpu にアタッチします。 既定値は AUTO です。
+AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}  
+外部リソース プールを特定の CPU にアタッチします。 既定値は AUTO です。
 
-アフィニティ CPU = **(** \<CPU_range_spec > **)**外部リソース プールをマップする、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定 CPU_IDs で識別される Cpu。 AFFINITY NUMANODE を使用すると = **(** \<NUMA_node_range_spec > **)**、外部リソース プールが関連付けられ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定した NUMA に対応する物理 Cpuノードまたはノードの範囲です。
-
-
-MAX_MEMORY_PERCENT =*値*  
-この外部リソース プールの要求で使用できる合計サーバー メモリを指定します。 *値*で、既定の設定 100 の整数です。 許容範囲*値*は 1 ~ 100 です。
+AFFINITY CPU = **(** \<CPU_range_spec> **)** maps the external resource pool to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPUs identified by the given CPU_IDs. AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** を使うと、外部リソース プールは、指定した NUMA ノードまたはノードの範囲に対応する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物理 CPU に関連付けられます。
 
 
-MAX_PROCESSES =*値*  
-外部リソース プールのプロセスの最大数を指定します。 その後、コンピューター リソースによってのみにバインドされていると、プールに対して無制限のしきい値を設定する場合は 0 を指定します。 既定値は 0 です。
+MAX_MEMORY_PERCENT =*value*  
+この外部リソース プールの要求で使用できる合計サーバー メモリを指定します。 *value* は整数で、既定の設定は 100 です。 *value* の許容範囲は 1 ～ 100 です。
 
-## <a name="remarks"></a>解説
 
-[!INCLUDE[ssDE](../../includes/ssde-md.md)]を実行するときに、リソース プールを実装して、 [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md)ステートメントです。
+MAX_PROCESSES =*value*  
+外部リソース プールに許されるプロセスの最大数を指定します。 0 を指定すると、プールのしきい値は無制限になり、その後はコンピューターのリソースによってのみ拘束されます。 既定値は 0 です。
 
-リソース プールの概要については、次を参照してください。[リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)、 [sys.resource_governor_external_resource_pools &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)、および[sys.dm_resource_governor_external_resource_pool_affinity &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md).  
+## <a name="remarks"></a>Remarks
 
-Machine learning のジョブを制御するために外部のリソース プールの使用に特有について、次を参照してください[機械学習で SQL Server のリソース管理](../../advanced-analytics/r/resource-governance-for-r-services.md)しています.。
-## <a name="permissions"></a>Permissions
+[ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) ステートメントを実行すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はリソース プールを実装します。
 
-必要があります`CONTROL SERVER`権限です。
+リソース プールの一般的な情報については、「[リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)」、「[sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)」、および「[sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)」をご覧ください。  
+
+外部リソース プールを使った Machine Learning ジョブの管理に固有の情報については、「[Resource governance for machine learning in SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md)」(SQL Server での Machine Learning のリソース管理) をご覧ください。
+## <a name="permissions"></a>アクセス許可
+
+`CONTROL SERVER` 権限が必要です。
 
 ## <a name="examples"></a>使用例
 
-次のステートメントでは、50% をコンピューターで使用可能なメモリの 25% の最大メモリ量の CPU 使用率を制限する、外部プールを変更します。
+次のステートメントは外部プールを変更して、CPU 使用率を 50% に、最大メモリ量をコンピューターで使用可能なメモリの 25% に制限します。
   
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
@@ -117,17 +117,17 @@ GO
 
 ## <a name="see-also"></a>参照
 
-[SQL Server での機械学習用リソース ガバナンス](../../advanced-analytics/r/resource-governance-for-r-services.md)
+[SQL Server での Machine Learning のリソース管理](../../advanced-analytics/r/resource-governance-for-r-services.md)
 
 [external scripts enabled サーバー構成オプション](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 
 [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
 
-[外部リソース プールの削除 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)
+[DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)
 
-[ALTER RESOURCE POOL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-resource-pool-transact-sql.md)
+[ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)
 
-[WORKLOAD GROUP &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-workload-group-transact-sql.md)
+[CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)
 
 [リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
 

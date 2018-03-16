@@ -1,5 +1,5 @@
 ---
-title: "システム オブジェクトの権限 (TRANSACT-SQL) を取り消す |Microsoft ドキュメント"
+title: "REVOKE (システム オブジェクトの権限の取り消し) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -44,34 +44,34 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
 ```  
   
 ## <a name="arguments"></a>引数  
- **[sys です。]** .  
- **Sys**カタログ ビューおよび動的管理ビューを参照している場合にのみ、修飾子が必要です。  
+ **[sys.]** .  
+ **sys** 修飾子は、カタログ ビューおよび動的カタログ ビューを指定する場合にのみ必要です。  
   
  *system_object*  
  権限を取り消すオブジェクトを指定します。  
   
- *プリンシパル*  
+ *principal*  
  権限を取り消すプリンシパルを指定します。  
   
-## <a name="remarks"></a>解説  
- このステートメントは、特定ストアド プロシージャ、拡張ストアド プロシージャ、テーブル値関数、スカラー関数、ビュー、カタログ ビュー、互換ビュー、INFORMATION_SCHEMA ビュー、動的管理ビュー、およびシステムに対する権限を取り消すために使用できます。によってインストールされているテーブル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 Resource データベースに一意なレコードとして存在するこれらのシステム オブジェクトの各 (**mssqlsystemresource**)。 リソース データベースは読み取り専用です。 オブジェクトへのリンクが内のレコードとして公開されている、 **sys**すべてのデータベースのスキーマです。  
+## <a name="remarks"></a>Remarks  
+ このステートメントを使用すると、特定のストアド プロシージャ、拡張ストアド プロシージャ、テーブル値関数、スカラー関数、ビュー、カタログ ビュー、互換ビュー、INFORMATION_SCHEMA ビュー、動的管理ビュー、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってインストールされたシステム テーブルに対する権限を取り消すことができます。 これらのシステム オブジェクトはそれぞれ、リソース データベース (**mssqlsystemresource**) に一意なレコードとして存在しています。 リソース データベースは読み取り専用です。 オブジェクトへのリンクは、各データベースの **sys** スキーマでは 1 レコードとして表されます。  
   
- 既定の名前解決では、修飾子のないプロシージャ名はリソース データベースとして解釈されます。 したがって、 **sys です。** 修飾子は、カタログ ビューと動的管理ビューを指定する場合にのみ必要です。  
+ 既定の名前解決では、修飾子のないプロシージャ名はリソース データベースとして解釈されます。 したがって、**sys.** 修飾子は、カタログ ビューおよび動的カタログ ビューを指定する場合にのみ必要です。  
   
 > [!CAUTION]  
->  システム オブジェクトに対する権限を取り消すと、そのシステム オブジェクトに依存するアプリケーションは失敗します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]使用してでは、カタログ ビューおよびカタログ ビューの既定のアクセス許可を変更するかどうかは、正常に機能しない可能性があります。  
+>  システム オブジェクトに対する権限を取り消すと、そのシステム オブジェクトに依存するアプリケーションは失敗します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ではカタログ ビューが使用されており、カタログ ビューの既定の権限を変更すると、正常に機能しなくなることがあります。  
   
  システム オブジェクトのトリガーおよび列に対する権限の取り消しはサポートされていません。  
   
- アップグレード中にシステム オブジェクトに対する権限は保持されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ システム オブジェクトの権限は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアップグレード時も維持されます。  
   
  システム オブジェクトは、 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) カタログ ビューで確認できます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では失効`EXECUTE`に対する権限`sp_addlinkedserver`から`public`です。  
+ 次の例では、`sp_addlinkedserver` に対する `EXECUTE` 権限を、`public` から取り消します。  
   
 ```  
 REVOKE EXECUTE ON sys.sp_addlinkedserver FROM public;  
@@ -79,9 +79,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.system_objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
- [sys.database_permissions および #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
- [システム オブジェクトの権限 &#40; を許可します。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)   
- [システム オブジェクトの権限 &#40; を拒否します。TRANSACT-SQL と #41 です。](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)  
+ [sys.system_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [GRANT (システム オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)   
+ [DENY (システム オブジェクトの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)  
   
   

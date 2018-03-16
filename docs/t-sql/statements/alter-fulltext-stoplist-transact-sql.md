@@ -1,5 +1,5 @@
 ---
-title: "ALTER FULLTEXT STOPLIST (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -60,47 +60,47 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
 ## <a name="arguments"></a>引数  
  *stoplist_name*  
- 変更するストップリストの名前を指定します。 *stoplist_name*最大 128 文字まで指定できます。  
+ 変更するストップリストの名前を指定します。 *stoplist_name* には、最大 128 文字まで指定できます。  
   
- **'** *ストップ ワード* **'**  
- 指定した言語で言語的な意味を持つ単語の場合や言語的な意味のないトークンの場合がある文字列を指定します。 *ストップ ワード*は最大トークン長 (64 文字) に制限されます。 ストップワードは Unicode 文字列として指定できます。  
+ **'** *stopword* **'**  
+ 指定した言語で言語的な意味を持つ単語の場合や言語的な意味のないトークンの場合がある文字列を指定します。 *stopword* の上限は最大トークン長 (64 文字) です。 ストップワードは Unicode 文字列として指定できます。  
   
- 言語*language_term*  
- 関連付ける言語を指定します、*ストップ ワード*追加または削除します。  
+ LANGUAGE *language_term*  
+ 追加または削除する *stopword* に関連付ける言語を指定します。  
   
- *language_term*文字列、整数、または次のように、言語のロケール識別子 (LCID) に対応する 16 進数の値として指定できます。  
+ *language_term* には、次のように、言語のロケール識別子 (LCID) に対応する文字列、整数、または 16 進数の値を指定できます。  
   
-|Format|Description|  
+|[形式]|Description|  
 |------------|-----------------|  
-|文字列|*language_term*に対応する、**エイリアス**列の値、 [sys.syslanguages (TRANSACT-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)互換性ビューです。 文字列は、ように、単一引用符で囲む必要があります**'***language_term***'**です。|  
-|Integer|*language_term*言語の LCID です。|  
-|16 進数|*language_term*は 0 x 後に LCID の 16 進数の値。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。 値を 2 バイト文字セット (DBCS) の形式で指定すると、SQL Server で Unicode に変換されます。|  
+|String|*language_term* には、[sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 互換性ビューの **alias** 列の値と同じ値を指定します。 文字列の場合は、**'***language_term***'** のように引用符 (') で囲む必要があります。|  
+|Integer|*language_term* には、言語の LCID を指定します。|  
+|16 進数|*language_term* には、"0x" の後に LCID の 16 進数の値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。 値を 2 バイト文字セット (DBCS) の形式で指定すると、SQL Server で Unicode に変換されます。|  
   
- 追加**'***ストップ ワード***'**言語*language_term*  
- 言語で指定された言語のストップ リストにストップ ワードを追加*language_term*です。  
+ ADD **'***stopword***'** LANGUAGE *language_term*  
+ LANGUAGE *language_term* で指定した言語のストップリストにストップワードを追加します。  
   
  指定したキーワードの組み合わせと言語の LCID 値がストップリスト内で一意でない場合、エラーが返されます。  LCID 値が登録言語に対応していない場合は、エラーが生成されます。  
   
- DROP { **'***ストップ ワード***'**言語*language_term* |すべての言語*language_term* |すべて}  
+ DROP { **'***stopword***'** LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
  ストップ リストからストップ ワードを削除します。  
   
- **'** *ストップ ワード* **'**言語*language_term*  
- 指定された言語の指定されたストップ ワード削除*language_term*です。  
+ **'** *stopword* **'** LANGUAGE *language_term*  
+ *language_term* で指定した言語の指定したストップ ワードを削除します。  
   
- すべての言語*language_term*  
- すべてで指定された言語のストップ ワードの削除*language_term*です。  
+ ALL LANGUAGE *language_term*  
+ *language_term* で指定した言語のストップ ワードをすべて削除します。  
   
  ALL  
  ストップリストのストップワードをすべて削除します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  CREATE FULLTEXT STOPLIST は互換性レベル 100 以上に対してのみサポートされます。 互換性レベル 80 および 90 の場合は、常にシステム ストップリストがデータベースに割り当てられます。  
   
-## <a name="permissions"></a>Permissions  
- ストップリストをデータベースの既定のストップリストとして指定するには、ALTER DATABASE 権限が必要です。 それ以外の場合、ストップ リストを変更するには、ストップ リストの所有者またはメンバーシップが必要、 **db_owner**または**db_ddladmin**固定データベース ロール。  
+## <a name="permissions"></a>アクセス許可  
+ ストップリストをデータベースの既定のストップリストとして指定するには、ALTER DATABASE 権限が必要です。 それ以外の変更をストップリストに対して行うには、ストップリストの所有者であるか、**db_owner** 固定データベース ロールまたは **db_ddladmin** 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、というストップ リストを変更`CombinedFunctionWordList`、用に追加、単語 'en' をまずスペイン語用、フランス語です。  
+ 次の例では、`CombinedFunctionWordList` というストップリストを変更して、単語 'en' をまずスペイン語用に、次にフランス語用に追加します。  
   
 ```  
 ALTER FULLTEXT STOPLIST CombinedFunctionWordList ADD 'en' LANGUAGE 'Spanish';  
@@ -108,11 +108,11 @@ ALTER FULLTEXT STOPLIST CombinedFunctionWordList ADD 'en' LANGUAGE 'French';
 ```  
   
 ## <a name="see-also"></a>参照  
- [FULLTEXT STOPLIST &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
- [DROP FULLTEXT STOPLIST &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
- [構成およびストップ ワードとストップ リストをフルテキスト検索の管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [sys.fulltext_stoplists &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
- [sys.fulltext_stopwords &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
+ [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
+ [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
  [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
   
   

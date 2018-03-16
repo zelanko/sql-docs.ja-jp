@@ -1,5 +1,5 @@
 ---
-title: "サーバー ロール (TRANSACT-SQL) を削除します |Microsoft ドキュメント"
+title: DROP SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -51,22 +51,22 @@ DROP SERVER ROLE role_name
  *role_name*  
  サーバーから削除するユーザー定義サーバー ロールを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  セキュリティ保護可能なリソースを所有するユーザー定義サーバー ロールは、サーバーから削除できません。 セキュリティ保護可能なリソースを所有するユーザー定義サーバー ロールを削除するには、最初に、セキュリティ保護可能なリソースの所有権を転送するか、リソースを削除する必要があります。  
   
- メンバーを含むユーザー定義サーバー ロールは削除できません。 メンバーを持つユーザー定義サーバー ロールを削除する必要がありますまず削除するロールのメンバーを使用して[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)です。  
+ メンバーを含むユーザー定義サーバー ロールは削除できません。 メンバーを含むユーザー定義サーバー ロールを削除するには、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) を使用して先にロールのメンバーを削除しておく必要があります。  
   
  固定サーバー ロールは削除できません。  
   
- ロールのメンバーシップに関する情報を表示するにはクエリを実行して、 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)カタログ ビューです。  
+ ロールのメンバーシップに関する情報を確認するには、[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) カタログ ビューに対してクエリを実行します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  サーバー ロールに対する CONTROL 権限か、ALTER ANY SERVER ROLE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-to-drop-a-server-role"></a>A. サーバー ロールを削除するには  
- 次の例は、サーバーの役割を削除`purchasing`です。  
+ 次の例では、サーバー ロール `purchasing` を削除します。  
   
 ```  
 DROP SERVER ROLE purchasing;  
@@ -74,7 +74,7 @@ GO
 ```  
   
 ### <a name="b-to-view-role-membership"></a>B. ロールのメンバーシップを表示するには  
- 表示するにはロールのメンバーシップを使用して、**サーバーの役割 (メンバー**) ページに[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または次のクエリを実行します。  
+ ロールのメンバーシップを表示するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[サーバー ロール (メンバー)]** ページを使用するか、次のクエリを実行します。  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
@@ -99,10 +99,10 @@ ORDER BY SP1.name ;
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER ROLE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-role-transact-sql.md)   
- [ROLE &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-role-transact-sql.md)   
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [DROP ROLE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-role-transact-sql.md)   
+ [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   

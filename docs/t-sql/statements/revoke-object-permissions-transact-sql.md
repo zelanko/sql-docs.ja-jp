@@ -1,5 +1,5 @@
 ---
-title: "取り消すオブジェクト権限 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "REVOKE (オブジェクトの権限の取り消し) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -63,7 +63,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>引数  
- *アクセス許可*  
+ *permission*  
  スキーマに含まれるオブジェクトで取り消すことができる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
  ALL  
@@ -73,25 +73,25 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
   
  テーブル値関数の権限の場合は、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
- ストアド プロシージャの権限: を実行します。  
+ ストアド プロシージャの権限の場合は、EXECUTE。  
   
  テーブルの権限の場合は、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
  ビューの権限の場合は、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
  PRIVILEGES  
- 含まれる[!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 準拠。 ALL の動作は変更されません。  
+ [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 準拠のために用意されています。 ALL の動作は変更されません。  
   
- *列*  
- 権限を取り消すテーブル、ビュー、またはテーブル値関数内の列の名前を指定します。 かっこ () は、必要があります。 列で拒否できるのは、SELECT、REFERENCES、および UPDATE の各権限だけです。 *列*permissions 句内、またはセキュリティ保護可能な名前の後に指定することができます。  
+ *column*  
+ 権限を取り消すテーブル、ビュー、またはテーブル値関数内の列の名前を指定します。 かっこ () は、必要があります。 列で拒否できるのは、SELECT、REFERENCES、および UPDATE の各権限だけです。 *column* は permission 句内、またはセキュリティ保護可能なリソースの名前の後に指定できます。  
   
- ON [オブジェクト::] [ *schema_name* ] です。 *object_name*  
- これで、権限を取り消すオブジェクトを指定します。 OBJECT 句は省略可能な場合は*schema_name*を指定します。 OBJECT 句を使用する場合は、スコープ修飾子 (::) が必要です。 場合*schema_name*が指定されていない、既定のスキーマを使用します。 場合*schema_name*を指定すると、スキーマ スコープ修飾子 (.) が必要です。  
+ ON [ OBJECT :: ] [ *schema_name* ] . *object_name*  
+ 権限を取り消すオブジェクトを指定します。 OBJECT 句は、*schema_name* を指定する場合は省略可能です。 OBJECT 句を使用する場合は、スコープ修飾子 (::) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 (.) が必要です。  
   
- {から |} \<Database_principal > 元となる、権限を取り消すプリンシパルを指定します。  
+ { FROM | TO } \<database_principal> 権限を取り消すプリンシパルを指定します。  
   
  GRANT OPTION  
- 指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 その権限自体は失効しません。  
+ 指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
@@ -102,7 +102,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 > [!CAUTION]  
 >  WITH GRANT OPTION で許可されている権限を CASCADE で取り消すと、その権限の GRANT および DENY の両方が取り消されます。  
   
- AS \<database_principal > このクエリを実行するプリンシパルの権限を取り消す権利の派生元のプリンシパルを指定します。  
+ AS \<database_principal> このクエリを実行するプリンシパルが権限を取り消すには、その権限を派生元のプリンシパルを指定します。  
   
  *Database_user*  
  データベース ユーザーを指定します。  
@@ -128,8 +128,8 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>解説  
- オブジェクトに関する情報は、各種カタログ ビューに表示されます。 詳細については、次を参照してください。[オブジェクト カタログ ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ オブジェクトに関する情報は、各種カタログ ビューに表示されます。 詳しくは、「[オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)」をご覧ください。  
   
  オブジェクトは、スキーマ レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているスキーマに含まれています。 次の表に、オブジェクトで取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
@@ -137,8 +137,8 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|DELETE|CONTROL|DELETE|  
-|CREATE ステートメントを実行する前に、|CONTROL|CREATE ステートメントを実行する前に、|  
+|Del|CONTROL|Del|  
+|EXECUTE|CONTROL|EXECUTE|  
 |INSERT|CONTROL|INSERT|  
 |RECEIVE|CONTROL|CONTROL|  
 |REFERENCES|CONTROL|REFERENCES|  
@@ -148,7 +148,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  オブジェクトに対する CONTROL 権限が必要です。  
   
  AS 句を使用する場合、指定されるプリンシパルは、権限が取り消されるオブジェクトを所有している必要があります。  
@@ -165,7 +165,7 @@ GO
 ```  
   
 ### <a name="b-revoking-execute-permission-on-a-stored-procedure"></a>B. ストアド プロシージャの EXECUTE 権限を取り消す  
- 次の例では失効`EXECUTE`ストアド プロシージャに対する権限`HumanResources.uspUpdateEmployeeHireInfo`をアプリケーション ロールからという`Recruiting11`です。  
+ 次の例では、ストアド プロシージャ `HumanResources.uspUpdateEmployeeHireInfo` の `EXECUTE` 権限を、アプリケーション ロール `Recruiting11` から取り消します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -187,13 +187,13 @@ GO
 ## <a name="see-also"></a>参照  
  [GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
  [DENY (オブジェクトの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)   
- [オブジェクト カタログ ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
- [sys.fn_my_permissions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
   
   
 

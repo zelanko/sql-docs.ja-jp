@@ -1,5 +1,5 @@
 ---
-title: "セキュリティ ポリシー (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE SECURITY POLICY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -67,7 +67,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  セキュリティ ポリシーの名前。 セキュリティ ポリシー名は識別子のルールに準拠し、データベースおよびそのスキーマで一意でなければなりません。  
   
  *schema_name*  
- セキュリティ ポリシーが属するスキーマの名前。 *schema_name*がスキーマ バインドのために必要です。  
+ セキュリティ ポリシーが属するスキーマの名前。 *schema_name* はスキーマのバインドのために必要です。  
   
  [フィルター | ブロック]  
  対象のテーブルにバインドされている関数のセキュリティの述語の型。 サイレント モードで、フィルター述語には、読み取り操作に使用できる行がフィルター処理します。 ブロックは述語述語の関数に違反しているブロックの書き込み操作では明示的にします。  
@@ -75,15 +75,15 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  *tvf_schema_name.security_predicate_function_name*  
  述語として使用され、ターゲット テーブルに対するクエリで実施されるインライン テーブル値関数。 特定のテーブルの特定の DML 操作に対して定義できるセキュリティ述語の数は 1 つです。 インライン テーブル値関数は、SCHEMABINDING オプションを使用して作成する必要があります。  
   
- { *column_name* | *引数*}  
+ { *column_name* | *arguments* }  
  セキュリティ述語関数のパラメーターとして使用される列名または式。 ターゲット テーブル上の任意の列を、述語関数の引数として使用できます。 リテラルを含む式、ビルトイン、および算術演算子を使用する式を利用できます。  
   
  *table_schema_name.table_name*  
  セキュリティ述語の適用先となるターゲット テーブル。 複数のセキュリティを無効になっているポリシーの特定の DML 操作では、1 つのテーブルを対象にできますが、任意の時点で、1 つのみを有効にすることができます。  
   
- *\<block_dml_operation >*ブロックの述語の適用対象の特定の DML 操作します。 結局、DML 操作が実行される (INSERT または UPDATE) 後に、述語、行の値に評価することを指定します。 前に、DML の操作が実行される (更新または削除) する前に、述語は、行の値に評価することを指定します。 操作が指定されていない場合、述語は、すべての操作に適用されます。  
+ *\<block_dml_operation>* ブロック述語が適用される特定の DML 操作。 結局、DML 操作が実行される (INSERT または UPDATE) 後に、述語、行の値に評価することを指定します。 前に、DML の操作が実行される (更新または削除) する前に、述語は、行の値に評価することを指定します。 操作が指定されていない場合、述語は、すべての操作に適用されます。  
   
- [状態 = {ON |**OFF** }]  
+ [ STATE = { ON | **OFF** } ]  
  セキュリティ ポリシーによるターゲット テーブルに対するセキュリティ述語の実施を有効または無効にします。 作成されているセキュリティ ポリシーが有効になっているが指定されていない場合。  
   
  [SCHEMABINDING = {ON |OFF}]  
@@ -92,15 +92,15 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  NOT FOR REPLICATION  
  レプリケーション エージェントがターゲット オブジェクトを変更するときにセキュリティ ポリシーを実行すべきではないことを示します。 詳細については、「[同期中にトリガと制約の動作を制御する方法 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)」を参照してください。  
   
- [*table_schema_name*]。*table_name*  
+ [*table_schema_name*.] *table_name*  
  セキュリティ述語の適用先となるターゲット テーブル。 無効な複数のセキュリティ ポリシーは単一テーブルをターゲットにできますが、有効にできるのはどの時点でも 1 つだけです。  
   
-## <a name="remarks"></a>解説  
- メモリ最適化テーブルで述語関数を使用するときに含める必要があります**SCHEMABINDING**を使用して、 **WITH NATIVE_COMPILATION**コンパイルのヒント。  
+## <a name="remarks"></a>Remarks  
+ メモリ最適化テーブルで述語関数を使用する場合、**SCHEMABINDING** を含め、**WITH NATIVE_COMPILATION** コンパイル ヒントを使う必要があります。  
   
  ブロックの述語は、対応する DML 操作を実行した後に評価されます。 そのため、READ UNCOMMITTED のクエリでは、ロールバックは一時的な値を確認できます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  スキーマに対する ALTER ANY SECURITY POLICY 権限と ALTER 権限が必要です。  
   
  また、追加される各述語に関しては次のアクセス許可も必要になります。  
@@ -112,7 +112,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
 -   引数として使用しているターゲット テーブルのすべての列に対する REFERENCES 権限。  
   
 ## <a name="examples"></a>使用例  
- 以下の例は、 **CREATE SECURITY POLICY** 構文の使用法を示しています。 完全なセキュリティ ポリシーのシナリオの例は、次を参照してください。 [Row-level Security](../../relational-databases/security/row-level-security.md)です。  
+ 以下の例は、 **CREATE SECURITY POLICY** 構文の使用法を示しています。 詳細なセキュリティ ポリシーのシナリオ例については、「[行レベルのセキュリティ](../../relational-databases/security/row-level-security.md)」をご覧ください。  
   
 ### <a name="a-creating-a-security-policy"></a>A. セキュリティ ポリシーを作成する  
  以下の構文は、Costomer テーブルにフィルター述語を使用してセキュリティ ポリシーを作成し、そのセキュリティ ポリシーを無効な状態のままにします。  
@@ -151,7 +151,7 @@ CREATE SECURITY POLICY rls.SecPol
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
  [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
- [sys.security_predicates &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
+ [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "DROP FULLTEXT CATALOG (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -51,15 +51,15 @@ DROP FULLTEXT CATALOG catalog_name
   
 ## <a name="arguments"></a>引数  
  *catalog_name*  
- 削除するカタログ名を指定します。 場合*catalog_name*が存在しない[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はエラーを返し、DROP 操作は実行されません。 フルテキスト カタログのファイル グループが OFFLINE または READONLY とマークされていると、コマンドは正常に機能しません。  
+ 削除するカタログ名を指定します。 *catalog_name* が存在しない場合、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はエラーを返し、DROP 操作は実行されません。 フルテキスト カタログのファイル グループが OFFLINE または READONLY とマークされていると、コマンドは正常に機能しません。  
   
-## <a name="permissions"></a>Permissions  
- ユーザーは、フルテキスト カタログの DROP 権限を持っているかのメンバーである必要があります、 **db_owner**、または**db_ddladmin**固定データベース ロール。  
+## <a name="permissions"></a>アクセス許可  
+ フルテキスト カタログの DROP 権限を持っているか、**db_owner** または **db_ddladmin** のいずれかの固定データベース ロールのメンバーであることが必要です。  
   
 ## <a name="see-also"></a>参照  
- [sys.fulltext_catalogs &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
- [フルテキスト カタログ &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)  
   
   

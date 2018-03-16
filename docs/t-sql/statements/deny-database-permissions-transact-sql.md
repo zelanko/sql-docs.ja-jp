@@ -1,5 +1,5 @@
 ---
-title: "データベース アクセス許可 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "DENY (データベースの権限の拒否) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -60,7 +60,7 @@ DENY <permission> [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>引数  
- *アクセス許可*  
+ *permission*  
  データベースで取り消すことができる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
  ALL  
@@ -72,8 +72,8 @@ DENY <permission> [ ,...n ]
  CASCADE  
  指定したプリンシパルが権限を許可したプリンシパルに対しても、権限を拒否することを示します。  
   
- AS \<database_principal >  
- このクエリを実行するプリンシパルが権限を拒否する権利の派生元のプリンシパルを指定します。  
+ AS \<database_principal>  
+ このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。  
   
  *Database_user*  
  データベース ユーザーを指定します。  
@@ -82,7 +82,7 @@ DENY <permission> [ ,...n ]
  データベース ロールを指定します。  
   
  *Application_role*  
- **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  アプリケーション ロールを指定します。  
   
@@ -101,7 +101,7 @@ DENY <permission> [ ,...n ]
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データベースは、セキュリティ保護可能なリソースで、権限の階層で親となっているサーバーに含まれています。 次の表に、データベースで拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |データベース権限|権限が含まれるデータベース権限|権限が含まれるサーバー権限|  
@@ -119,18 +119,18 @@ DENY <permission> [ ,...n ]
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|  
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|  
 |ALTER ANY DATABASE EVENT SESSION<br /> **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|ALTER|ALTER ANY EVENT SESSION|  
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br />  **適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。|CONTROL|CONTROL SERVER|  
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br />  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|  
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|  
 |すべての外部データ ソースを変更します。|ALTER|CONTROL SERVER|  
 |任意の外部のファイル形式を変更します。|ALTER|CONTROL SERVER|  
-|任意の外部ライブラリを変更します。 <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|CONTROL|CONTROL SERVER |    
+|ALTER ANY EXTERNAL LIBRARY <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|CONTROL|CONTROL SERVER |    
 |ALTER ANY FULLTEXT CATALOG|ALTER|CONTROL SERVER|  
 |任意のマスクを変更します。|CONTROL|CONTROL SERVER|  
 |ALTER ANY MESSAGE TYPE|ALTER|CONTROL SERVER|  
 |ALTER ANY REMOTE SERVICE BINDING|ALTER|CONTROL SERVER|  
 |ALTER ANY ROLE|ALTER|CONTROL SERVER|  
 |ALTER ANY ROUTE|ALTER|CONTROL SERVER|  
-|すべてのセキュリティ ポリシーを変更します。<br /> **適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。|CONTROL|CONTROL SERVER|  
+|すべてのセキュリティ ポリシーを変更します。<br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|CONTROL|CONTROL SERVER|  
 |ALTER ANY SCHEMA|ALTER|CONTROL SERVER|  
 |ALTER ANY SERVICE|ALTER|CONTROL SERVER|  
 |ALTER ANY SYMMETRIC KEY|ALTER|CONTROL SERVER|  
@@ -167,8 +167,8 @@ DENY <permission> [ ,...n ]
 |CREATE TYPE|ALTER|CONTROL SERVER|  
 |CREATE VIEW|ALTER|CONTROL SERVER|  
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|  
-|DELETE|CONTROL|CONTROL SERVER|  
-|CREATE ステートメントを実行する前に、|CONTROL|CONTROL SERVER|  
+|Del|CONTROL|CONTROL SERVER|  
+|EXECUTE|CONTROL|CONTROL SERVER|  
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]|CONTROL|CONTROL SERVER|   
 |INSERT|CONTROL|CONTROL SERVER|  
 |KILL DATABASE CONNECTION<br /> **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|CONTROL|ALTER ANY CONNECTION|  
@@ -179,12 +179,12 @@ DENY <permission> [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |マスク解除します。|CONTROL|CONTROL SERVER|  
 |UPDATE|CONTROL|CONTROL SERVER|  
-|任意の列暗号化キーを表示します。|CONTROL|VIEW ANY DEFINITION|  
+|VIEW ANY COLUMN ENCRYPTION KEY|CONTROL|VIEW ANY DEFINITION|  
 |任意のマスター_キーの定義の表示|CONTROL|VIEW ANY DEFINITION|  
 |VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  このステートメントを実行するプリンシパル (または AS オプションで指定したプリンシパル) には、データベースに対する CONTROL 権限、またはデータベースに対する CONTROL 権限を暗黙的に許可する上位レベルの権限が与えられている必要があります。  
   
  AS オプションを使用する場合、指定するプリンシパルはデータベースを所有している必要があります。  
@@ -203,7 +203,7 @@ GO
 ### <a name="b-denying-references-permission-to-an-application-role"></a>B. アプリケーション ロールに対して REFERENCES 権限を拒否する  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースでの `REFERENCES` 権限を、アプリケーション ロール `AuditMonitor` に対して拒否します。  
   
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ```  
 USE AdventureWorks2012;  
@@ -212,7 +212,7 @@ GO
 ```  
   
 ### <a name="c-denying-view-definition-with-cascade"></a>C. CASCADE を指定して VIEW DEFINITION を拒否する  
- 次の例を拒否`VIEW DEFINITION`に対する権限、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース ユーザー`CarmineEs`とすべてのプリンシパルに`CarmineEs`与え`VIEW DEFINITION`権限です。  
+ 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースでの `VIEW DEFINITION` 権限を、ユーザー `CarmineEs` と、`CarmineEs` が `VIEW DEFINITION` 権限を許可したすべてのプリンシパルに対して拒否します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -221,7 +221,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.database_permissions および #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

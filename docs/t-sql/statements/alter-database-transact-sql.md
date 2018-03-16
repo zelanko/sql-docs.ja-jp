@@ -1,5 +1,5 @@
 ---
-title: "ALTER DATABASE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/20/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベース、またはそのデータベースに関連付けられているファイルおよびファイル グループを変更します。 データベースに対するファイルやファイル グループの追加と削除、データベースおよびデータベースのファイルやファイル グループの属性の変更、データベースの照合順序の変更、データベース オプションの設定を行えます。 データベース スナップショットは変更できません。 レプリケーションに関連付けられたデータベース オプションを変更するには、使用[sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)です。  
+  データベース、またはそのデータベースに関連付けられているファイルおよびファイル グループを変更します。 データベースに対するファイルやファイル グループの追加と削除、データベースおよびデータベースのファイルやファイル グループの属性の変更、データベースの照合順序の変更、データベース オプションの設定を行えます。 データベース スナップショットは変更できません。 レプリケーションに関連するデータベース オプションを変更するには、[sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) を使用してください。  
    
  解説が長くなるため、ALTER DATABASE の構文は次の各トピックに分けて説明しています。  
   
@@ -53,23 +53,23 @@ ms.lasthandoff: 11/21/2017
  [ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
  データベースのファイルおよびファイル グループを追加したり削除したりするための構文のほか、ファイルおよびファイル グループの属性を変更するための構文について説明します。  
   
- [ALTER DATABASE SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
+ [ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
  ALTER DATABASE の SET オプションを使ってデータベースの属性を変更するための構文について説明します。  
   
  [ALTER DATABASE データベース ミラーリング](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)  
  ALTER DATABASE のデータベース ミラーリングに関連した SET オプションの構文について説明します。  
   
  [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)  
- 構文について説明、 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] Always On 可用性グループのセカンダリ レプリカでセカンダリ データベースを構成するための ALTER DATABASE のオプションです。  
+ Always On 可用性グループのセカンダリ レプリカ上のセカンダリ データベースを構成するための、ALTER DATABASE の [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] オプションの構文について説明します。  
   
  [ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
  ALTER DATABASE のデータベース互換性レベルに関連した SET オプションの構文について説明します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
-Azure SQL データベースでは、次を参照してください。 [ALTER DATABASE &#40;です。Azure SQL データベース &#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
-Azure SQL Data Warehouse では、次を参照してください。 [ALTER DATABASE &#40;です。Azure SQL Data Warehouse &#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
-並列データ ウェアハウスでは、次を参照してください。 [ALTER DATABASE &#40;です。並列データ ウェアハウス&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).
+Azure SQL Database については、「[ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)」をご覧ください  
+Azure SQL Data Warehouse については、「[ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)」をご覧ください。  
+Parallel Data Warehouse については、「[ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)」をご覧ください。
   
 ## <a name="syntax"></a>構文  
   
@@ -118,43 +118,43 @@ ALTER DATABASE { database_name  | CURRENT }
  変更するデータベースの名前を指定します。  
   
 > [!NOTE]  
->  このオプションでは、包含データベースで使用できません。  
+>  このオプションは、包含データベースでは使用できません。  
   
  CURRENT  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  使用中の現在のデータベースを変更することを指定します。  
   
- MODIFY NAME  **=**  *new_database_name*  
- として指定された名前のデータベースの名前を変更*new_database_name*です。  
+ MODIFY NAME **=***new_database_name*  
+ データベースの名前を、*new_database_name* で指定した名前に変更します。  
   
  COLLATE *collation_name*  
- データベースの照合順序を指定します。 *collation_name* Windows 照合順序名または SQL 照合順序名のいずれかを指定できます。 指定しない場合は、データベースに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの照合順序が割り当てられます。  
+ データベースの照合順序を指定します。 *collation_name* には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合は、データベースに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの照合順序が割り当てられます。  
   
- 既定の照合順序以外でデータベースを作成する場合、データベース内のデータは常に、指定された照合順序を優先します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して内部のカタログ情報を保持する、包含データベースを作成するときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既定の照合順序、 **Latin1_General_100_CI_AS_WS_KS_SC**です。  
+ 既定の照合順序以外でデータベースを作成する場合、データベース内のデータは常に、指定された照合順序を優先します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、包含データベースを作成する場合、内部カタログの情報は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定の照合順序、**Latin1_General_100_CI_AS_WS_KS_SC** を使用して維持されます。  
   
- Windows と SQL 照合順序名の詳細については、次を参照してください。 [COLLATE &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/statements/collations.md).  
+ Windows と SQL の照合順序名については、「[COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)」を参照してください。  
   
- **\<delayed_durability_option >:: =**  
+ **\<delayed_durability_option> ::=**  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 詳細については、次を参照してください。 [ALTER DATABASE SET Options &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md)と[トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)です。  
+ 詳しくは、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」および「[トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)」をご覧ください。  
   
- **\<file_and_filegroup_options >:: =**  
- 詳細については、次を参照してください[ALTER DATABASE の File および Filegroup オプション &#40;。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
+ **\<file_and_filegroup_options>::=**  
+ 詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
- データベースを削除するには使用[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)です。  
+## <a name="remarks"></a>Remarks  
+ データベースを削除するには、[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) を使用します。  
   
- データベースのサイズを小さくを使用して[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)です。  
+ データベースのサイズを縮小するには、[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) を使用します。  
   
  ALTER DATABASE ステートメントは自動コミット モード (既定のトランザクション管理モード) で実行する必要があり、明示的または暗黙的なトランザクション モードでは許可されません。  
   
- データベース ファイルの状態 (オンラインかオフラインかなど) は、データベースの状態とは別に保持されます。 詳細については、次を参照してください。[ファイルの状態](../../relational-databases/databases/file-states.md)です。 ファイル グループ内のファイルの状態は、ファイル グループ全体の可用性を決定します。 ファイル グループを使用可能にするには、ファイル グループ内のすべてのファイルがオンラインである必要があります。 ファイル グループがオフラインの場合、SQL ステートメントでそのファイル グループにアクセスを試行するとエラーが発生します。 SELECT ステートメントのクエリ プランを作成する場合、クエリ オプティマイザーは、オフラインのファイル グループにある非クラスター化インデックスやインデックス付きビューを回避します。 これにより、これらのステートメントは正常に実行できます。 ただし、オフラインのファイル グループに、対象テーブルのヒープやクラスター化インデックスが含まれている場合には、SELECT ステートメントは失敗します。 また、オフラインのファイル グループ内にあるインデックス付きのテーブルを変更する INSERT、UPDATE、または DELETE ステートメントは失敗します。  
+ データベース ファイルの状態 (オンラインかオフラインかなど) は、データベースの状態とは別に保持されます。 詳しくは、「[ファイルの状態](../../relational-databases/databases/file-states.md)」をご覧ください。 ファイル グループ内のファイルの状態は、ファイル グループ全体の可用性を決定します。 ファイル グループを使用可能にするには、ファイル グループ内のすべてのファイルがオンラインである必要があります。 ファイル グループがオフラインの場合、SQL ステートメントでそのファイル グループにアクセスを試行するとエラーが発生します。 SELECT ステートメントのクエリ プランを作成する場合、クエリ オプティマイザーは、オフラインのファイル グループにある非クラスター化インデックスやインデックス付きビューを回避します。 これにより、これらのステートメントは正常に実行できます。 ただし、オフラインのファイル グループに、対象テーブルのヒープやクラスター化インデックスが含まれている場合には、SELECT ステートメントは失敗します。 また、オフラインのファイル グループ内にあるインデックス付きのテーブルを変更する INSERT、UPDATE、または DELETE ステートメントは失敗します。  
   
  データベースが RESTORING 状態にある場合、大半の ALTER DATABASE ステートメントは失敗します。 ただし、データベース ミラーリング オプションの設定は例外です。 データベースが RESTORING 状態になるのは、アクティブな復元操作中や、バックアップ ファイルの破損によりデータベースまたはログ ファイルの復元操作が失敗した場合などです。  
   
- インスタンスのプラン キャッシュ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次のオプションのいずれかの設定ではオフにします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのプラン キャッシュは、次のいずれかのオプションを設定することにより消去されます。  
   
 |||  
 |-|-|  
@@ -164,9 +164,9 @@ ALTER DATABASE { database_name  | CURRENT }
 |COLLATE|MODIFY FILEGROUP READ_ONLY|  
 |READ_ONLY|PAGE_VERIFY|  
   
- プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 各キャッシュ ストアが消去、プラン キャッシュ内の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー ログには、次の情報メッセージが含まれています:"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キャッシュ ストア フラッシュをいくつかのデータベースのため '%s' キャッシュ ストア (プラン キャッシュの一部) を %d 個検出が発生しましたメンテナンス操作または再構成操作"です。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
+ プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに含まれます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
   
- 次のシナリオでは、プロシージャ キャッシュがフラッシュも。  
+ プロシージャ キャッシュは、次のシナリオでもフラッシュされます。  
   
 -   AUTO_CLOSE データベース オプションが ON に設定されている。 データベースを参照 (または使用) するユーザー接続が 1 つも存在しない場合、バックグラウンド タスクがデータベースを自動的に閉じてシャットダウンすることを試みます。  
   
@@ -187,7 +187,7 @@ ALTER DATABASE { database_name  | CURRENT }
   
 -   データベースの照合順序に依存するスキーマ バインド オブジェクトがない。  
   
-     データベース、ALTER DATABASE のかどうか、データベースの照合順序に依存する次のオブジェクトが存在*database_name*COLLATE ステートメントは失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ALTER アクションをブロックしている各オブジェクトのエラー メッセージを返します。  
+     データベースの照合順序に依存する次のオブジェクトがデータベース内に存在する場合、ALTER DATABASE*database_name*COLLATE ステートメントは失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ALTER アクションをブロックしているオブジェクトごとにエラー メッセージを返します。  
   
     -   SCHEMABINDING を指定して作成されたユーザー定義関数およびビュー  
   
@@ -203,7 +203,7 @@ ALTER DATABASE { database_name  | CURRENT }
   
 -   プロシージャ、テーブル、トリガー、ビューなどのオブジェクト名  
   
--   スキーマの名前。  
+-   スキーマ名。  
   
 -   グループ、ロール、ユーザーなどのプリンシパル  
   
@@ -215,12 +215,12 @@ ALTER DATABASE { database_name  | CURRENT }
   
 -   テーブル内のインデックス名  
   
-新しい照合順序の名前が重複すると、変更操作が失敗すると、および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重複が見つかった名前空間を示すエラー メッセージを返します。  
+新しい照合順序によって名前が重複すると、変更操作が失敗し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は重複が見つかった名前空間を示すエラー メッセージを返します。  
   
 ## <a name="viewing-database-information"></a>データベース情報の表示  
  カタログ ビュー、システム関数、およびシステム ストアド プロシージャを使用して、データベース、ファイルおよびファイル グループについての情報を返すことができます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -255,19 +255,19 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
-- [ALTER DATABASE &#40;です。Azure SQL データベース &#41;](alter-database-azure-sql-database.md)  
+- [ALTER DATABASE &#40;Azure SQL Database&#41;](alter-database-azure-sql-database.md)  
 - [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
 - [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 - [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
 - [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
 - [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
 - [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
-- [sp_spaceused &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
+- [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
 - [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
 - [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
-- [sys.database_mirroring_witnesses &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
-- [sys.data_spaces と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
-- [sys.filegroups &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+- [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
+- [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+- [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 - [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 - [システム データベース](../../relational-databases/databases/system-databases.md)  
   

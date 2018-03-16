@@ -1,5 +1,5 @@
 ---
-title: "型の権限 (TRANSACT-SQL) の拒否 |Microsoft ドキュメント"
+title: "DENY (型の権限の拒否) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -58,20 +58,20 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 ```  
   
 ## <a name="arguments"></a>引数  
- *アクセス許可*  
+ *permission*  
  型で拒否できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- 型に**::** [ *schema_name***です。** *type_name*  
- 権限を拒否する型を指定します。 スコープ修飾子 (**::**) が必要です。 場合*schema_name*が指定されていない、既定のスキーマを使用します。 場合*schema_name*が指定されているスキーマのスコープ修飾子 (**.**) が必要です。  
+ ON TYPE **::** [ *schema_name***.** ] *type_name*  
+ 権限を拒否する型を指定します。 スコープ修飾子 (**::**) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 (**.**) が必要です。  
   
- \<Database_principal >  
- アクセス許可を拒否するプリンシパルを指定します。  
+ TO \<database_principal>  
+ 権限を拒否するプリンシパルを指定します。  
   
  CASCADE  
  このプリンシパルによって権限が許可されている他のプリンシパルに対しても、同じ権限を拒否することを示します。  
   
- AS \<database_principal >  
- このクエリを実行するプリンシパルが権限を拒否する権利の派生元のプリンシパルを指定します。  
+ AS \<database_principal>  
+ このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。  
   
  *Database_user*  
  データベース ユーザーを指定します。  
@@ -102,27 +102,27 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  型は、スキーマ レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているスキーマに含まれています。  
   
 > [!IMPORTANT]  
->  **GRANT**、 **DENY、**と**取り消す**システム型にアクセス許可は適用されません。 ユーザー定義型には権限を許可できます。 ユーザー定義型の詳細については、次を参照してください。 [SQL Server のユーザー定義型の使用](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)です。  
+>  **GRANT**、**DENY,**、**REVOKE** の各権限は、システム型には適用されません。 ユーザー定義型には権限を許可できます。 ユーザー定義型について詳しくは、「[SQL Server でのユーザー定義型の使用](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)」をご覧ください。  
   
  次の表に、型で拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |型権限|権限が含まれる型権限|権限が含まれるスキーマ権限|  
 |---------------------|--------------------------------|----------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
-|CREATE ステートメントを実行する前に、|CONTROL|CREATE ステートメントを実行する前に、|  
+|EXECUTE|CONTROL|EXECUTE|  
 |REFERENCES|CONTROL|REFERENCES|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  型に対する CONTROL 権限が必要です。 AS 句を使用する場合、指定されるプリンシパルは、権限が拒否される型を所有している必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`VIEW DEFINITION` に対し、ユーザー定義型 `CASCADE` の `PhoneNumber` 権限を、`KhalidR` を指定して拒否します。 `PhoneNumber`スキーマ内にある`Telemarketing`です。  
+ 次の例では、`VIEW DEFINITION` に対し、ユーザー定義型 `CASCADE` の `PhoneNumber` 権限を、`KhalidR` を指定して拒否します。 `PhoneNumber` はスキーマ `Telemarketing` にあります。  
   
 ```  
 DENY VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber   
@@ -131,8 +131,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [アクセス許可の付与の種類 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
- [型の権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-type-permissions-transact-sql.md)   
+ [GRANT (型の権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
+ [REVOKE (型の権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   

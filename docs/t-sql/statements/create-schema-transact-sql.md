@@ -1,5 +1,5 @@
 ---
-title: "スキーマ (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/01/2016
 ms.prod: sql-non-specified
@@ -75,7 +75,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  *schema_name*  
  データベース内でスキーマを識別する名前を指定します。  
   
- 承認*owner_name*  
+ AUTHORIZATION *owner_name*  
  スキーマを所有するデータベース レベルのプリンシパルの名前を指定します。 このプリンシパルは他のスキーマを所有できますが、現在のスキーマを既定のスキーマとして使用することはできません。  
   
  *table_definition*  
@@ -93,10 +93,10 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  *deny_statement*  
  セキュリティ保護可能なリソース (ただし新しいスキーマを除く) に対する権限を拒否する DENY ステートメントを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]  
->  CREATE SCHEMA authorization が、名前を指定しないステートメントは、旧バージョンとの互換性のためにだけ許可されます。 ステートメントでエラーは発生しませんが、スキーマは作成されません。  
+>  ステートメントに CREATE SCHEMA AUTHORIZATION を使用し、スキーマ名を指定しなくても、このステートメントは許可されます。ただしこれは、旧バージョンとの互換性の維持を目的としたものです。 ステートメントでエラーは発生しませんが、スキーマは作成されません。  
   
  CREATE SCHEMA を使用すると、スキーマとそれに含まれるテーブルおよびビューを作成できます。また、単一のステートメントで、セキュリティ保護可能なリソースに対する権限を許可 (GRANT)、取り消し (REVOKE)、または拒否 (DENY) することもできます。 このステートメントは個別のバッチとして実行する必要があります。 CREATE SCHEMA ステートメントでは、作成するスキーマ内にオブジェクトが作成されます。  
   
@@ -116,11 +116,11 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
- **スキーマおよび暗黙的なユーザーの作成**  
+ **スキーマおよびユーザーの暗黙的な作成**  
   
  データベース ユーザー アカウント (データベース内のデータベース プリンシパル) がなくても、ユーザーがデータベースを使用できる場合があります。 このことは、次の状況で発生します。  
   
--   ログインが**CONTROL SERVER**特権です。  
+-   ログインが **CONTROL SERVER** 特権を持っている。  
   
 -   Windows ユーザーに個別のデータベース ユーザー アカウント (データベース内のデータベース プリンシパル) はないが、データベース ユーザー アカウント (Windows グループのデータベース プリンシパル) を持つ Windows グループのメンバーとしてデータベースにアクセスする。  
   
@@ -129,13 +129,13 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  この動作が必要なのは、ユーザーが Windows グループに基づいてオブジェクトを作成および所有できるようにするためです。 ただし、スキーマおよびユーザーが誤って作成される可能性があります。 ユーザーおよびスキーマが暗黙的に作成されないように、可能な限り、明示的にデータベース プリンシパルを作成して既定のスキーマを割り当てます。 または、データベース内にオブジェクトを作成するときに、2 部または 3 部構成のオブジェクト名を使用して既存のスキーマを明示的に指定します。  
 
 >  [!NOTE]
->  Azure Active Directory ユーザーの暗黙的な作成はできません[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。 ユーザーの作成がエラー 2760 で失敗外部プロバイダーから、Azure AD ユーザーを作成すると、AAD でユーザー状態を確認する必要があります、ため:**指定したスキーマ名"\<user_name@domain>"存在しないかまたはしていません使用する権限です。** してエラー 2759:**直前のエラーにより CREATE SCHEMA に失敗しました。** これらのエラーを回避するには、Azure AD ユーザー外部プロバイダーから最初作成し、オブジェクトを作成するステートメントを再実行します。
+>  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] では、Azure Active Directory ユーザーを暗黙的に作成することはできません。 外部プロバイダーからの Azure AD ユーザーの作成では AAD でユーザーの状態を確認する必要があるので、ユーザーの作成はエラー 2760 "**指定されたスキーマ名 "\<user_name@domain>" が存在しないか、そのスキーマ名を使用する権限がありません**"、 およびその後のエラー 2759 "**直前のエラーにより CREATE SCHEMA に失敗しました**" で失敗します。 これらのエラーを回避するには、最初に外部プロバイダーから Azure AD ユーザーを作成し、次にオブジェクト作成ステートメントを再実行します。
  
   
 ## <a name="deprecation-notice"></a>今後のバージョンでの使用  
  スキーマ名を指定しない CREATE SCHEMA ステートメントは、現在では旧バージョンとの互換性のためにのみサポートされています。 このようなステートメントは実際には、データベース内のスキーマを作成できませんが、テーブルやビューを作成し、アクセス許可を付与する操作を行います。 スキーマが作成されないので、以前の形式の CREATE SCHEMA を実行する際、プリンシパルには CREATE SCHEMA 権限は必要ありません。 この機能は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の今後のリリースでは削除される予定です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  データベースに対する CREATE SCHEMA 権限が必要です。  
   
  CREATE SCHEMA ステートメント内で指定するオブジェクトを作成するには、ユーザーは、オブジェクトに対応する CREATE 権限を持っている必要があります。  
@@ -147,8 +147,8 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-creating-a-schema-and-granting-permissions"></a>A. スキーマを作成して、権限の付与  
- 次の例では、スキーマ`Sprockets`所有`Annik`テーブルを含む`NineProngs`です。 このステートメントでは、`SELECT` に対して `Mandar` を許可し、`SELECT` に対して `Prasanna` を拒否します。 なお`Sprockets`と`NineProngs`単一のステートメントで作成されます。  
+### <a name="a-creating-a-schema-and-granting-permissions"></a>A. スキーマを作成して、権限を付与する  
+ 次の例では、`Annik` が所有するスキーマ `Sprockets` を作成します。このスキーマにはテーブル `NineProngs` が含まれます。 このステートメントでは、`SELECT` に対して `Mandar` を許可し、`SELECT` に対して `Prasanna` を拒否します。 `Sprockets` と `NineProngs` は単一のステートメントで作成されることに注意してください。  
   
 ```  
 USE AdventureWorks2012;  
@@ -160,10 +160,10 @@ CREATE SCHEMA Sprockets AUTHORIZATION Annik
 GO   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>B. スキーマのスキーマとテーブルを作成します。  
- 次の例では、スキーマ`Sales`テーブルを作成および`Sales.Region`そのスキーマでします。  
+### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>B. スキーマとスキーマ内のテーブルを作成する  
+ 次の例では、スキーマ `Sales` を作成した後、そのスキーマ内にテーブル `Sales.Region` を作成します。  
   
 ```  
 CREATE SCHEMA Sales;  
@@ -176,8 +176,8 @@ WITH (DISTRIBUTION = REPLICATE);
 GO  
 ```  
   
-### <a name="c-setting-the-owner-of-a-schema"></a>C. スキーマの所有者の設定  
- 次の例では、スキーマ`Production`所有`Mary`です。  
+### <a name="c-setting-the-owner-of-a-schema"></a>C. スキーマの所有者を設定する  
+ 次の例では、`Mary` が所有するスキーマ `Production` を作成します。  
   
 ```  
 CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];  
@@ -185,14 +185,14 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER SCHEMA &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-schema-transact-sql.md)   
- [DROP SCHEMA &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
+ [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.schemas &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
+ [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
  [データベース スキーマの作成](../../relational-databases/security/authentication-access/create-a-database-schema.md)  
   
   

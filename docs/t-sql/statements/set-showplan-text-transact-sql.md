@@ -1,5 +1,5 @@
 ---
-title: "SET SHOWPLAN_TEXT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET SHOWPLAN_TEXT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行せず、 代わりに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ステートメントの実行方法に関する詳細情報を返します。  
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行せず、 代わりに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はステートメントの実行方法に関する詳細情報を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,36 +54,36 @@ ms.lasthandoff: 11/21/2017
 SET SHOWPLAN_TEXT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SET SHOWPLAN_TEXT は、解析時ではなく実行時に設定されます。  
   
- SET SHOWPLAN_TEXT が ON の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ごとの実行情報を返します[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを実行することなしです。 返される情報は、このオプションが ON に設定されてから OFF に設定されるまでに発行されたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントに関する実行プラン情報です。 たとえば、CREATE TABLE ステートメントが実行中に SET SHOWPLAN_TEXT が ON、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定したテーブルが存在しないユーザーに通知を同じテーブルに関連する後続の SELECT ステートメントからエラー メッセージが返されます。 その後、このテーブルに対して行われる参照は失敗します。 SET SHOWPLAN_TEXT が OFF の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]せず、実行プラン情報を含むレポートを生成するステートメントを実行します。  
+ SET SHOWPLAN_TEXT が ON の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが実行されずに、各ステートメントの実行に関する情報が返されます。 返される情報は、このオプションが ON に設定されてから OFF に設定されるまでに発行されたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントに関する実行プラン情報です。 たとえば、SET SHOWPLAN_TEXT が ON のときに CREATE TABLE ステートメントが実行され、その後この同じテーブルを参照する SELECT ステートメントが発行されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では指定したテーブルが存在しないというエラー メッセージが返されます。 その後、このテーブルに対して行われる参照は失敗します。 SET SHOWPLAN_TEXT が OFF の場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は実行プラン情報に関するレポートを生成しないでステートメントを実行します。  
   
- SET SHOWPLAN_TEXT をなどの Microsoft Win32 コマンド プロンプト アプリケーションで読みやすい出力を返すものでは、 **osql**ユーティリティです。 SET SHOWPLAN_ALL を使用するとさらに詳細な出力が返され、その出力を取り扱うように設計されたプログラムで使用できます。  
+ SET SHOWPLAN_TEXT の目的は、**osql** ユーティリティなどの Microsoft Win32 コマンド プロンプト アプリケーションが読み取れる形式の出力を返すことです。 SET SHOWPLAN_ALL を使用するとさらに詳細な出力が返され、その出力を取り扱うように設計されたプログラムで使用できます。  
   
  SET SHOWPLAN_TEXT と SET SHOWPLAN_ALL は、ストアド プロシージャ内に指定できません。 またバッチ内で同時に他のステートメントを実行することもできません。  
   
- SET SHOWPLAN_TEXT がで実行される手順を表す階層ツリーを形成する行のセットとして情報を返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クエリ プロセッサの各ステートメントが実行されます。 出力結果には、ステートメントごとに、ステートメントのテキストを示す 1 行と、実行ステップの詳細を示す複数行が含まれます。 次の表に、出力結果に含まれる列を示します。  
+ SET SHOWPLAN_TEXT では情報が行セットとして返されます。これは階層構造になっており、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ プロセッサで各ステートメントが実行されるときのステップを表しています。 出力結果には、ステートメントごとに、ステートメントのテキストを示す 1 行と、実行ステップの詳細を示す複数行が含まれます。 次の表に、出力結果に含まれる列を示します。  
   
 |列名|Description|  
 |-----------------|-----------------|  
-|**StmtText**|この列は、種類 PLAN_ROW の場合は行のテキストを含む、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 PLAN_ROW 型の行の場合、この列には操作の説明が含まれます。 またこの列には物理操作と、必要に応じて論理操作が含まれます。 場合によっては、この列の後に説明が含まれます。説明が後に続くかどうかは、物理操作によって決まります。 物理演算子の詳細については、次を参照してください。、**引数**内の列[SET SHOWPLAN_ALL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-showplan-all-transact-sql.md).|  
+|**StmtText**|PLAN_ROW 型でない行の場合、この列には [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのテキストが含まれます。 PLAN_ROW 型の行の場合、この列には操作の説明が含まれます。 またこの列には物理操作と、必要に応じて論理操作が含まれます。 場合によっては、この列の後に説明が含まれます。説明が後に続くかどうかは、物理操作によって決まります。 物理操作の詳細については、「[SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)」の「**Argument**」列を参照してください。|  
   
- プラン表示出力でわかるように、物理および論理演算子の詳細については、次を参照してください[プラン表示の論理および物理演算子リファレンス。](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
+ プラン表示の出力に含まれる物理操作と論理操作の詳細については、「[プラン表示の論理操作と物理操作のリファレンス](../../relational-databases/showplan-logical-and-physical-operators-reference.md)」を参照してください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  SET SHOWPLAN_TEXT を使用するには、SET SHOWPLAN_TEXT の実行ステートメントを実行するための適切な権限が与えられている必要があります。また、参照されるオブジェクトを含むすべてのデータベースに対して、SHOWPLAN 権限が必要です。  
   
- SELECT、INSERT、UPDATE、DELETE、EXEC の*stored_procedure*と EXEC *user_defined_function*ステートメントをユーザーはプラン表示を作成します。  
+ SELECT、INSERT、UPDATE、DELETE、EXEC "*ストアド プロシージャ*"、EXEC "*ユーザー定義関数*" の各ステートメントの場合、プラン表示を作成するには、ユーザーに次の権限が必要です。  
   
--   実行する適切なアクセス許可、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行するための適切な権限。  
   
 -   SHOWPLAN 権限。これは、Transact-SQL ステートメントで参照されるオブジェクト (テーブルやビューなど) を含むすべてのデータベースに対して必要です。  
   
- DDL、USE など、他のすべてのステートメントの*database_name*、セット、DECLARE、動的 SQL、および実行する適切な権限のみで、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントが必要です。  
+ DDL、USE "*データベース名*"、SET、DECLARE、動的 SQL など、その他すべてのステートメントでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行するための適切な権限だけが必要です。  
   
 ## <a name="examples"></a>使用例  
- この例は、によってインデックスを使用する方法を示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ようにステートメントを処理します。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でステートメントを処理するときのインデックスの使用方法を示します。  
   
  インデックスを使用するクエリは次のとおりです。  
   
@@ -144,8 +144,8 @@ StmtText
 ```  
   
 ## <a name="see-also"></a>参照  
- [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-showplan-all-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)  
   
   

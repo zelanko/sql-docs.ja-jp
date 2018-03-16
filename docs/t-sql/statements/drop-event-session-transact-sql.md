@@ -1,5 +1,5 @@
 ---
-title: "イベント セッションを削除 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP EVENT SESSION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ ON SERVER
  *event_session_name*  
  既存のイベント セッションの名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  イベント セッションを削除すると、ターゲットやセッション パラメーターなどの構成情報がすべて完全に削除されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  ALTER ANY EVENT SESSION 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

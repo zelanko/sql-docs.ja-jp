@@ -1,5 +1,5 @@
 ---
-title: "ALTER FULLTEXT CATALOG (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -56,7 +56,7 @@ ALTER FULLTEXT CATALOG catalog_name
   
 ## <a name="arguments"></a>引数  
  *catalog_name*  
- 変更するカタログの名前を指定します。 指定した名前のカタログが存在しない場合[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーが返され、ALTER 操作は実行されません。  
+ 変更するカタログの名前を指定します。 指定した名前のカタログが存在しない場合、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラーが返され、ALTER 操作は実行されません。  
   
  REBUILD  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でカタログ全体を再構築することを指定します。 カタログの再構築では、既存のカタログが削除され、代わりに新しいカタログが作成されます。 フルテキスト インデックスの参照を持つすべてのテーブルが新しいカタログに関連付けられます。 再構築すると、データベース システム テーブル内のフルテキスト メタデータがリセットされます。  
@@ -64,12 +64,12 @@ ALTER FULLTEXT CATALOG catalog_name
  WITH ACCENT_SENSITIVITY = {ON|OFF}   
  変更するカタログのフルテキスト インデックス作成とクエリ処理において、アクセントを区別するかしないかを指定します。  
   
- フルテキスト カタログの現在のアクセントの区別に関するプロパティの設定を確認するのに、FULLTEXTCATALOGPROPERTY 関数を使用して、 **accentsensitivity**プロパティの値に対して*catalog_name*です。 この関数で '1' が返された場合、フルテキスト カタログではアクセントが区別され、'0' が返された場合、アクセントは区別されません。  
+ フルテキスト カタログのアクセントの区別に関する現在のプロパティ設定を確認するには、*catalog_name* に対して、FULLTEXTCATALOGPROPERTY 関数を **accentsensitivity** プロパティ値と共に使用します。 この関数で '1' が返された場合、フルテキスト カタログではアクセントが区別され、'0' が返された場合、アクセントは区別されません。  
   
  アクセントの区別は、既定ではカタログとデータベースで同じになっています。  
   
  REORGANIZE  
- 指示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行する、*マスター マージ*、1 つの大きなインデックスにインデックス作成プロセスで作成された小さいインデックスをマージする必要があります。 フルテキスト インデックス フラグメントをマージ、パフォーマンスが向上し、ディスクとメモリ リソースを解放することができます。 フルテキスト カタログが頻繁に変更される場合は、このコマンドを定期的に使用して、フルテキスト カタログを再構成してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で "*マスター マージ*" を実行することを指定します。マスター マージでは、インデックス処理の過程で作成された小さいインデックスを 1 つの大きなインデックスにマージする処理も行われます。 フルテキスト インデックス フラグメントをマージすると、パフォーマンスが向上し、ディスクとメモリのリソースを解放できます。 フルテキスト カタログが頻繁に変更される場合は、このコマンドを定期的に使用して、フルテキスト カタログを再構成してください。  
   
  REORGANIZE では、内部のインデックスおよびカタログの構造を最適化する処理も行われます。  
   
@@ -78,14 +78,14 @@ ALTER FULLTEXT CATALOG catalog_name
  AS DEFAULT   
  このカタログが既定のカタログであることを指定します。 カタログを指定せずにフルテキスト インデックスを作成すると、既定のカタログが使用されます。 既定のフルテキスト カタログが既に存在する場合、このカタログを AS DEFAULT に設定すると、既定の設定が上書きされます。  
   
-## <a name="permissions"></a>Permissions  
- ユーザーは、フルテキスト カタログに対する ALTER 権限を持っているかのメンバーである必要があります、 **db_owner**、 **db_ddladmin**固定データベース ロールまたは sysadmin 固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ フルテキスト カタログに対する ALTER 権限が与えられているか、**db_owner** 固定データベース ロール、**db_ddladmin** 固定データベース ロール、または sysadmin 固定サーバー ロールのメンバーであることが必要です。  
   
 > [!NOTE]  
 >  ALTER FULLTEXT CATALOG AS DEFAULT を使用するには、フルテキスト カタログに対する ALTER 権限およびデータベースに対する CREATE FULLTEXT CATALOG 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例の変更、`accentsensitivity`既定のフルテキスト カタログのプロパティ`ftCatalog`、これはアクセントを区別します。  
+ 次の例では、アクセントを区別する既定のフルテキスト カタログ `ftCatalog` の `accentsensitivity` プロパティを変更します。  
   
 ```  
 --Change to accent insensitive  
@@ -101,9 +101,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.fulltext_catalogs &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
- [フルテキスト カタログ &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [DROP FULLTEXT CATALOG &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)  
   
   

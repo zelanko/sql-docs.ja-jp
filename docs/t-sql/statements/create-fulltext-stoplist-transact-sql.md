@@ -1,5 +1,5 @@
 ---
-title: "FULLTEXT STOPLIST (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 
   現在のデータベースに新しいフルテキスト ストップリストを作成します。  
   
- ストップ ワードと呼ばれるオブジェクトを使用して、データベースで管理*ストップ リスト*です。 ストップリストは、フルテキスト インデックスに関連付けられている場合、そのインデックスのフルテキスト クエリに適用されるストップワードの一覧です。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)」を参照してください。  
+ ストップワードは、"*ストップリスト*" と呼ばれるオブジェクトを使用してデータベースで管理されます。 ストップリストは、フルテキスト インデックスに関連付けられている場合、そのインデックスのフルテキスト クエリに適用されるストップワードの一覧です。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  CREATE FULLTEXT STOPLIST、ALTER FULLTEXT STOPLIST、および DROP FULLTEXT STOPLIST は、互換性レベル 100 でのみサポートされています。 互換性レベルが 80 および 90 の場合、これらのステートメントはサポートされません。 ただし、システム ストップリストは、どの互換性レベルでも自動的に新しいフルテキスト インデックスに関連付けられます。  
@@ -63,26 +63,26 @@ CREATE FULLTEXT STOPLIST stoplist_name
   
 ## <a name="arguments"></a>引数  
  *stoplist_name*  
- ストップリストの名前です。 *stoplist_name*最大 128 文字まで指定できます。 *stoplist_name*現在のデータベース内のすべてのストップ リストで一意になるし、識別子の規則に準拠している必要があります。  
+ ストップリストの名前です。 *stoplist_name* には、最大 128 文字まで指定できます。 *stoplist_name* は、現在のデータベース内のすべてのストップリスト間で一意であり、識別子のルールに準拠している必要があります。  
   
- *stoplist_name*フルテキスト インデックスが作成されるときに使用されます。  
+ *stoplist_name* は、フルテキスト インデックスが作成されるときに使用されます。  
   
  *database_name*  
- ストップ リストがで指定されたデータベースの名前を指定*source_stoplist_name*が配置されています。 指定しない場合、 *database_name*既定値は、現在のデータベースです。  
+ *source_stoplist_name* で指定したストップリストが置かれているデータベースの名前です。 指定しない場合、*database_name* は現在のデータベースに設定されます。  
   
  *source_stoplist_name*  
- 既存のストップリストをコピーして新しいストップリストを作成するように指定します。 場合*source_stoplist_name*が存在しないデータベース ユーザーには、適切なアクセス許可はありません。 または、CREATE FULLTEXT STOPLIST がエラーで失敗します。 ソース ストップリストのストップワードに指定された言語が現在のデータベースに登録されていない場合、CREATE FULLTEXT STOPLIST は成功しますが、警告が表示され、対応するストップワードは追加されません。  
+ 既存のストップリストをコピーして新しいストップリストを作成するように指定します。 *source_stoplist_name* が存在しない場合、またはデータベース ユーザーに適切な権限がない場合は、CREATE FULLTEXT STOPLIST がエラーで失敗します。 ソース ストップリストのストップワードに指定された言語が現在のデータベースに登録されていない場合、CREATE FULLTEXT STOPLIST は成功しますが、警告が表示され、対応するストップワードは追加されません。  
   
  SYSTEM STOPLIST  
- 既定で存在するストップ リストから新しいストップ リストが作成されたことを指定します、 [Resource データベース](../../relational-databases/databases/resource-database.md)です。  
+ [リソース データベース](../../relational-databases/databases/resource-database.md)に既定で存在するストップリストから新しいストップリストを作成するように指定します。  
   
- 承認*owner_name*  
- ストップリストの所有者となるデータベース プリンシパルの名前を指定します。 *owner_name*うち、現在のユーザーがメンバー、または現在のユーザーでは、に対する IMPERSONATE 権限が必要、プリンシパルの名前を指定するかする必要*owner_name*です。 このオプションを指定しない場合は、所有権は現在のユーザーに与えられます。  
+ AUTHORIZATION *owner_name*  
+ ストップリストの所有者となるデータベース プリンシパルの名前を指定します。 *owner_name* に現在のユーザーがメンバーとなっているプリンシパルの名前を指定するか、または *owner_name* に対する IMPERSONATE 権限を現在のユーザーが持っている必要があります。 このオプションを指定しない場合は、所有権は現在のユーザーに与えられます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ストップリストの作成者はその所有者になります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  STOPLIST を作成するには、CREATE FULLTEXT CATALOG 権限が必要です。 ストップリストの所有者は、ストップリストに対して明示的に CONTROL 権限を付与することで、ユーザーによるワードの追加と削除、およびストップリストの削除を許可できます。  
   
 > [!NOTE]  
@@ -115,11 +115,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER FULLTEXT STOPLIST &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
- [DROP FULLTEXT STOPLIST &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
- [構成およびストップ ワードとストップ リストをフルテキスト検索の管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [sys.fulltext_stoplists &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
- [sys.fulltext_stopwords &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
+ [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
+ [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
+ [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
+ [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
  [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
   
   
