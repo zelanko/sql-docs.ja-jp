@@ -1,5 +1,5 @@
 ---
-title: "GETDATE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: GETDATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -46,12 +46,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="getdate-transact-sql"></a>GETDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  現在のデータベース システムのタイムスタンプを返します、 **datetime**データベース タイム ゾーン オフセットを持たない値。 この値は、コンピューターのオペレーティング システムから派生したインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されています。  
+  として現在のデータベース システムのタイムスタンプを返す、 datetime** 、データベース タイム ゾーン オフセットを持たない値。 この値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターのオペレーティング システムから取得されます。  
   
 > [!NOTE]  
 >  1 秒未満の有効桁数で比較すると、SYSDATETIME と SYSUTCDATETIME の方が GETDATE と GETUTCDATE よりも高い精度を得ることができます。 SYSDATETIMEOFFSET には、システムのタイム ゾーン オフセットが含まれます。 SYSDATETIME、SYSUTCDATETIME、および SYSDATETIMEOFFSET は、date 型と time 型の任意の変数に割り当てることができます。  
   
- すべての概要については[!INCLUDE[tsql](../../includes/tsql-md.md)]日付と時刻のデータ型および関数を参照してください[日付と時刻のデータ型および関数 &#40;TRANSACT-SQL と #41 です。](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。 [日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,12 +64,12 @@ GETDATE ( )
 ## <a name="return-type"></a>戻り値の型  
  **datetime**  
   
-## <a name="remarks"></a>解説  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを参照できる GETDATE を参照できる任意の場所、 **datetime**式。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを参照できます GETDATE を参照できる任意の場所、 datetime** 式です。  
   
  GETDATE は、非決定的関数です。 この関数を列内で参照するビューと式には、インデックスを付けることができません。  
   
- GETDATE() 関数で SWITCHOFFSET を使用すると、クエリの実行速度が低下する場合があります。クエリ オプティマイザーでは、GETDATE 値の正確な基数の推定を取得できないためです。 GETDATE 値を事前計算して、次の例に示すように、クエリでその値を指定することをお勧めします。 さらに、OPTION (RECOMPILE) クエリ ヒントを使用して、クエリ オプティマイザーが、次回同じクエリが実行されるクエリ プランを再コンパイルするようにします。 そうすると、オプティマイザーは、GETDATE() の正確な基数の推定を取得し、より効率的なクエリ プランを生成します。  
+ GETDATE() 関数で SWITCHOFFSET を使用すると、クエリの実行速度が低下する場合があります。クエリ オプティマイザーでは、GETDATE 値の正確な基数の推定を取得できないためです。 GETDATE 値を事前計算して、次の例に示すように、クエリでその値を指定することをお勧めします。 さらに、OPTION (RECOMPILE) クエリ ヒントを使用して、次に同じクエリが実行されるときに、クエリ オプティマイザーでクエリ プランが強制的に再コンパイルされるようにします。 そうすると、オプティマイザーは、GETDATE() の正確な基数の推定を取得し、より効率的なクエリ プランを生成します。  
   
 ```  
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   
@@ -79,7 +79,7 @@ WHERE c1 > @dt OPTION (RECOMPILE);
 ```  
   
 ## <a name="examples"></a>使用例  
- 次の例は、6 つを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返す現在の日付と時刻を日付、時刻、またはその両方を返すシステム関数です。 値は順番に返されるため、秒の小数部が異なる可能性があります。  
+ 次の例では、現在の日付と時刻を返す 6 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム関数を使用して、日付、時刻、またはその両方を取得しています。 値は順番に返されるため、秒の小数部が異なる可能性があります。  
   
 ### <a name="a-getting-the-current-system-date-and-time"></a>A. 現在のシステム日付と時刻を取得する  
   
@@ -149,8 +149,8 @@ GETDATE()          13:18:45.3470000
 GETUTCDATE()       20:18:45.3470000  
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例は、3 つを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返す現在の日付と時刻を日付、時刻、またはその両方を返すシステム関数です。 値は順番に返されるため、秒の小数部が異なる可能性があります。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 次の例では、現在の日付と時刻を返す 3 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム関数を使用して、日付、時刻、またはその両方を取得しています。 値は順番に返されるため、秒の小数部が異なる可能性があります。  
   
 ### <a name="d-getting-the-current-system-date-and-time"></a>D. 現在のシステム日付と時刻を取得する  
   
