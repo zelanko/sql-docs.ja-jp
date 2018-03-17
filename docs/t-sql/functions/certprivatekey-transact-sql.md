@@ -1,5 +1,5 @@
 ---
-title: "CERTPRIVATEKEY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CERTPRIVATEKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 証明書の秘密キーをバイナリ形式で返します。 この関数は 3 つの引数を受け取ります。
--   証明書の id。  
+-   証明書 ID。  
 -   キーがクリア テキストでユーザーに公開されないように、秘密キーのビットが関数によって返されたときにそのビットを暗号化するために使用する暗号化パスワード。  
 -   省略可能な暗号化解除パスワード。 暗号化解除パスワードを指定した場合は、そのパスワードを使用して、証明書の秘密キーの暗号化を解除します。それ以外の場合は、データベース マスター キーを使用します。  
   
@@ -54,7 +54,7 @@ CERTPRIVATEKEY
   
 ## <a name="arguments"></a>引数  
 *certificate_ID*  
-**Certificate_id**証明書のです。 使用してまたは sys.certificates から使用できます。 これは、 [CERT_ID (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cert-id-transact-sql.md)関数。 *cert_id*は型です**int。**
+証明書の **certificate_id**。 これは、を使用してまたは sys.certificates から使用できます。 [CERT_ID (& a) #40 です。TRANSACT-SQL と #41; ](../../t-sql/functions/cert-id-transact-sql.md)関数。 *cert_id* は型です **int**。
   
 *encryption_password*  
 返されたバイナリ値の暗号化に使用するパスワード。
@@ -65,11 +65,11 @@ CERTPRIVATEKEY
 ## <a name="return-types"></a>戻り値の型
 **varbinary**
   
-## <a name="remarks"></a>解説  
-**CERTENCODED**と**CERTPRIVATEKEY**一緒に使用するバイナリ形式で証明書の異なる部分を返します。
+## <a name="remarks"></a>Remarks  
+**CERTENCODED** と **CERTPRIVATEKEY** 一緒に使用すると、バイナリの形式で証明書の異なる部分を返します。
   
-## <a name="permissions"></a>Permissions  
-**CERTPRIVATEKEY**はパブリックに使用できます。
+## <a name="permissions"></a>アクセス許可  
+**CERTPRIVATEKEY** はパブリックに使用できます。
   
 ## <a name="examples"></a>使用例  
   
@@ -86,12 +86,12 @@ GO
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-使用するより複雑な例について**CERTPRIVATEKEY**と**CERTENCODED**証明書を別のデータベースにコピーするには、例 B のトピックを参照してください。 [CERTENCODED (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/certencoded-transact-sql.md).
+使用するより複雑な例について **CERTPRIVATEKEY** と **CERTENCODED** 証明書を別のデータベースにコピーするには、例 B をのトピックを参照してください。 [CERTENCODED (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/certencoded-transact-sql.md).
   
 ## <a name="see-also"></a>参照
 [セキュリティ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
-[証明書 &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-certificate-transact-sql.md) 
-[セキュリティ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/security-functions-transact-sql.md) 
- [sys.certificates &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
+[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)
+[セキュリティ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)
+[sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
   
   

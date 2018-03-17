@@ -46,7 +46,7 @@ CONNECTIONPROPERTY ( property )
   
 ## <a name="arguments"></a>引数  
 *property*  
-接続のプロパティです。 プロパティ* 値は次のいずれかを指定することができます。
+接続のプロパティです。 *プロパティ* 値は次のいずれかを指定することができます。
   
 |ReplTest1|データ型|Description|  
 |---|---|---|

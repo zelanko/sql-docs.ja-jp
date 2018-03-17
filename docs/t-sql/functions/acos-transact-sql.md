@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="acos-transact-sql"></a>ACOS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-コサインが指定された、ラジアンの角度を返す数学関数 float** 式。 また呼び出し先のアーク コサイン。
+コサインが指定された、ラジアンの角度を返す数学関数 **float** 式。 また呼び出し先のアーク コサイン。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

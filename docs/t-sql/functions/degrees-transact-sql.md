@@ -1,5 +1,5 @@
 ---
-title: "度 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DEGREES (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ DEGREES ( numeric_expression )
   
 ## <a name="arguments"></a>引数  
  *numeric_expression*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)の正確な型または概数の数値データのカテゴリを除く入力、**ビット**データ型。  
+ - **bit** データ型を除く、真数データ型または概数データ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  *numeric_expression*と同じ型を返します。  
@@ -70,7 +70,7 @@ The number of degrees in PI/2 radians is 90
 ```  
   
 ## <a name="see-also"></a>参照  
- [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 
