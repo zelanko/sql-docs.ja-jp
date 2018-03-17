@@ -1,5 +1,5 @@
 ---
-title: "SCHEMA_NAME (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SCHEMA_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,14 +49,14 @@ SCHEMA_NAME ( [ schema_id ] )
   
 |項目|定義|  
 |----------|----------------|  
-|*schema_id*|スキーマの ID を指定します。 *schema_id*は、 **int**です。場合*schema_id*が定義されていない、SCHEMA_NAME は、呼び出し元の既定のスキーマの名前が返すされます。|  
+|*schema_id*|スキーマの ID を指定します。 *schema_id* は、 **int**です。場合 *schema_id* が定義されていない場合、SCHEMA_NAME は、呼び出し元の既定のスキーマの名前が返すされます。|  
   
 ## <a name="return-types"></a>戻り値の型  
  **sysname**  
   
- ときに、NULL を返します*schema_id*有効な ID ではありません  
+ ときに、NULL を返します*schema_id* 、有効な ID ではありません  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SCHEMA_NAME は、システム スキーマとユーザー定義スキーマの名前を返します。 SCHEMA_NAME は、選択リストの中、WHERE 句の中、また、式を使える所であればどこでも呼び出すことができます。  
   
 ## <a name="examples"></a>使用例  
@@ -74,12 +74,12 @@ SELECT SCHEMA_NAME(1);
 ```  
   
 ## <a name="see-also"></a>参照  
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [SCHEMA_ID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/schema-id-transact-sql.md)   
- [sys.schemas &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [SCHEMA_ID &#40;Transact-SQL&#41;](../../t-sql/functions/schema-id-transact-sql.md)   
+ [sys.schemas (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)  
+ [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
 

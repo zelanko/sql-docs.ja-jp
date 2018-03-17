@@ -1,5 +1,5 @@
 ---
-title: "@@LANGUAGE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: '@@LANGUAGE (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40language-transact-sql"></a>&#x40;&#x40;です。言語 (TRANSACT-SQL)
+# <a name="x40x40language-transact-sql"></a>&#x40;&#x40;LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   現在使用されている言語の名前を返します。  
@@ -50,8 +50,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar**  
   
-## <a name="remarks"></a>解説  
- 有効な公式言語名を含めて、言語設定に関する情報を表示するには実行**sp_helplanguage**パラメーターを指定します。  
+## <a name="remarks"></a>Remarks  
+ 有効な公式言語名を含めて、言語の設定に関する情報を表示するには、パラメーターを指定しないで **sp_helplanguage** を実行します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、現在のセッションで使用されている言語を返します。  
@@ -70,8 +70,8 @@ us_english
   
 ## <a name="see-also"></a>参照  
  [構成関数 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [言語を設定する &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-language-transact-sql.md)   
- [sp_helplanguage &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
+ [言語を設定する (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-language-transact-sql.md)   
+ [sp_helplanguage (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
   
   
 

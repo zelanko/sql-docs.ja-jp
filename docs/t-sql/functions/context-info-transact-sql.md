@@ -1,5 +1,5 @@
 ---
-title: "CONTEXT_INFO (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CONTEXT_INFO (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="contextinfo--transact-sql"></a>CONTEXT_INFO (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返します、 **context_info**を使用して、現在のセッションまたはバッチに対して設定された値、 [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md)ステートメントです。
+[SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) ステートメントを使用して現在のセッションまたはバッチに設定された **context_info** 値を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,20 +49,20 @@ CONTEXT_INFO()
 ```  
   
 ## <a name="return-value"></a>戻り値
-値**context_info**です。
+**Context_info** 値。
   
-場合**context_info**が設定されませんでした。
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は NULL を返します。  
--   [!INCLUDE[ssSDS](../../includes/sssds-md.md)]セッション固有の一意の GUID を返します。  
+**Context_info** は設定されませんでした: 場合
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は NULL を返します。  
+-   * * -[!INCLUDE[ssSDS](../../includes/sssds-md.md)] で  、一意のセッション固有 GUID.* * を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 複数のアクティブな結果セット (MARS) によって、アプリケーションは複数のバッチまたは要求を同じ接続上で同時に実行できます。 MARS 接続上の 1 つのバッチで SET CONTEXT_INFO を実行する場合、CONTEXT_INFO 関数を SET ステートメントと同時に実行すると、新しいコンテキスト値が返されます。 接続上のその他の 1 つ以上のバッチで CONTEXT_INFO 関数を実行するには、SET ステートメントの実行が完了した後のバッチで開始しないと、新しい値は返されません。
   
-## <a name="permissions"></a>Permissions  
-特に必要な権限はありません。 コンテキスト情報にも格納、 **sys.dm_exec_requests**、 **sys.dm_exec_sessions**、および**sys.sysprocesses**システム ビューがビューを直接クエリSELECT および VIEW SERVER STATE 権限が必要です。
+## <a name="permissions"></a>アクセス許可  
+特に必要な権限はありません。 コンテキスト情報は、**sys.dm_exec_request**s、**sys.dm_exec_sessions**、および **sys.sysprocesses** システム ビュー内にも保存されますが、これらのビューを直接クエリする場合は SELECT および VIEW SERVER STATE 権限が必要です。
   
 ## <a name="examples"></a>使用例  
-次の簡単な例のセット、 **context_info**値`0x1256698456`、しを使用して、`CONTEXT_INFO`値を取得する関数。
+次の簡単な例では、**context_info** 値を `0x1256698456` に設定してから、`CONTEXT_INFO` 関数を使用して値を取得します。
   
 ```sql
 SET CONTEXT_INFO 0x1256698456;  
@@ -72,6 +72,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照
-[SET CONTEXT_INFO &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-context-info-transact-sql.md)
+[SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)
   
   

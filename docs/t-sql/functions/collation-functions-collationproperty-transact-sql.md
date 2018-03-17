@@ -47,10 +47,10 @@ COLLATIONPROPERTY( collation_name , property )
   
 ## <a name="arguments"></a>引数  
 *collation_name*  
-照合順序の名前を指定します。 collation_name *は nvarchar (128)*, 、既定値はありません。
+照合順序の名前を指定します。 *collation_name* は **nvarchar (128)**, 、既定値はありません。
   
 *property*  
-照合順序のプロパティを指定します。 プロパティ *は varchar (128)*, 、次の値のいずれかを指定できます。
+照合順序のプロパティを指定します。 *プロパティ* は **varchar (128)**, 、次の値のいずれかを指定できます。
   
 |プロパティ名|Description|  
 |---|---|

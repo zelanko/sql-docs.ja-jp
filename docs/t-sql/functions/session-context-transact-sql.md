@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  現在のセッションのコンテキストでは、指定したキーの値を返します。 値が、を使用して設定 sp_set_session_context (& a) #40 です。TRANSACT-SQL と #41;[](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md) プロシージャです。  
+  現在のセッションのコンテキストでは、指定したキーの値を返します。 値が、を使用して設定 [sp_set_session_context (& a) #40 です。TRANSACT-SQL と #41; ](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)プロシージャです。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,7 +61,7 @@ SESSION_CONTEXT(N'key')
  SESSION_CONTEXT の MARS の動作は CONTEXT_INFO の動作と同様です。 MARS バッチにキーと値のペアが設定された場合、新しい値を設定しているバッチが完了した後に他のバッチが開始された場合を除き、同じ接続上の他の MARS バッチで新しい値が返されることはありません。 接続上で複数の MARS バッチがアクティブな場合、値には "read_only" を設定できません。 これにより、どちらの値が "勝つ" かという観点での競合状態と非決定論を回避します。  
   
 ## <a name="examples"></a>使用例  
- 次のような単純な例は、キーのセッション コンテキスト値を設定 `user_id` 4、および、使用する、 SESSION_CONTEXT** 値を取得する関数。  
+ 次のような単純な例は、キーのセッション コンテキスト値を設定 `user_id` 4、および、使用する、 **SESSION_CONTEXT** 値を取得する関数。  
   
 ```  
 EXEC sp_set_session_context 'user_id', 4;  

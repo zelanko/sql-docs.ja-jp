@@ -1,5 +1,5 @@
 ---
-title: "FILEGROUPPROPERTY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: FILEGROUPPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -50,12 +50,12 @@ FILEGROUPPROPERTY ( filegroup_name , property )
   
 ## <a name="arguments"></a>引数  
  *filegroup_name*  
- 型の式は、 **sysname**を名前付きプロパティの情報を返す対象のファイル グループの名前を表します。  
+ 指定されたプロパティ情報を返すファイル グループの名前を表す **sysname** データ型の式を指定します。  
   
- *プロパティ*  
- 型の式は、 **varchar (128)**を返すファイル グループ プロパティの名前が含まれています。 *プロパティ*これらの値のいずれかになります。  
+ *property*  
+ 返される filegroup プロパティの名前を含む **varchar(128)** 型の式を指定します。 *プロパティ* これらの値のいずれかを指定することができます。  
   
-|値|Description|返される値|  
+|ReplTest1|Description|返される値|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|ファイル グループが読み取り専用であるかどうかを示します。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 無効な入力|  
 |**IsUserDefinedFG**|ファイル グループはユーザー定義のファイル グループです。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 無効な入力|  
@@ -64,8 +64,8 @@ FILEGROUPPROPERTY ( filegroup_name , property )
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>解説  
- *filegroup_name*に対応する、**名前**内の列、 **sys.filegroups**カタログ ビューです。  
+## <a name="remarks"></a>Remarks  
+ *filegroup_name* に対応する、 **名前** 内の列、 **sys.filegroups** カタログ ビューです。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`IsDefault` データベースのプライマリ ファイル グループに対する [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] プロパティの設定値を返します。  
@@ -87,10 +87,10 @@ Default Filegroup
 ```  
   
 ## <a name="see-also"></a>参照  
- [FILEGROUP_ID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/filegroup-id-transact-sql.md)   
- [FILEGROUP_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/filegroup-name-transact-sql.md)   
- [メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [FILEGROUP_ID (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/filegroup-id-transact-sql.md)   
+ [FILEGROUP_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
+ [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [sys.filegroups &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   

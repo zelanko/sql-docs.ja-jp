@@ -55,7 +55,7 @@ MAX ( [ ALL | DISTINCT ] expression )
  重複する値は 1 つだけカウントします。 DISTINCT は MAX では意味がなく、ISO との互換性を保つためだけに指定可能になっています。  
   
  *式 (expression)*  
- 定数、列名、関数、および算術演算子、ビット演算子、文字列演算子の組み合わせを指定します。 使用できる最大 数値**, 、文字**, 、一意識別子**, 、および datetime** 、列は使用できません ビット** 列です。 集計関数とサブクエリは使用できません。  
+ 定数、列名、関数、および算術演算子、ビット演算子、文字列演算子の組み合わせを指定します。 使用できる最大 **数値**, 、**文字**, 、**一意識別子**, 、および **datetime** 、列は使用できません **ビット** 列です。 集計関数とサブクエリは使用できません。  
   
  詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
@@ -63,7 +63,7 @@ MAX ( [ ALL | DISTINCT ] expression )
  *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* は、演算が実行される論理的順序を指定します。 *order_by_clause* は必須です。 詳しくは、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」をご覧ください。  
   
 ## <a name="return-types"></a>戻り値の型  
- 式*と同じ値を返します。  
+ *式*と同じ値を返します。  
   
 ## <a name="remarks"></a>Remarks  
  NULL 値はすべて無視されます。  

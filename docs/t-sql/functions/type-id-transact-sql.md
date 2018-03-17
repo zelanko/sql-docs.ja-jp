@@ -49,7 +49,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
 ## <a name="arguments"></a>引数  
  *type_name*  
- データ型の名前を指定します。 type_name *のデータ型は nvarchar*です。 type_name* は、システムまたはユーザー定義データ型。  
+ データ型の名前を指定します。 *type_name* のデータ型は **nvarchar**です。 *type_name* は、システムまたはユーザー定義データ型。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  

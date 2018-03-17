@@ -53,7 +53,7 @@ ms.lasthandoff: 11/21/2017
  **整数 (integer)**  
   
 ## <a name="remarks"></a>Remarks  
- いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行を含む、読み取りおよび書き込み動作では、統計、 sp_monitor**です。  
+ いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行を含む、読み取りおよび書き込み動作では、統計、 **sp_monitor**です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、現在のシステム上の日付と時刻におけるディスクの読み取りおよび書き込みの合計数が返されます。  

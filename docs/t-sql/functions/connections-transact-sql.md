@@ -1,5 +1,5 @@
 ---
-title: "@@CONNECTIONS (TRANSACT-SQL) |Microsoft ドキュメント"
+title: '@@CONNECTIONS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;です。接続 (TRANSACT-SQL)
+# <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動後に、成功または失敗した接続試行数を返します。
@@ -51,12 +51,12 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>戻り値の型
 **整数 (integer)**
   
-## <a name="remarks"></a>解説  
-接続の数はユーザーの数とは異なります。 アプリケーションはたとえば、に対して複数の接続を開くことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーの介入なし。
+## <a name="remarks"></a>Remarks  
+接続の数はユーザーの数とは異なります。 たとえば、アプリケーションでは、ユーザーの介入なしで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との間に複数の接続を確立できます。
   
-いくつか含むレポートを表示する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]統計情報、実行、接続試行を含む**sp_monitor**です。
+いくつか[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]含むレポートを表示する 実行の接続試行数などの統計情報 **sp_monitor**です。
   
-@@MAX_CONNECTIONS サーバーに同時に許可される接続の最大数です。 @@CONNECTIONS そのため、ログインが試行されるたびにインクリメントされます @@CONNECTIONS よりも大きくすることは @@MAX_CONNECTIONS します。
+@@MAX_CONNECTIONS は、サーバーに対して同時に許可される接続の最大数です。 @@CONNECTIONS はログインが試行されるたびに増えるため、@@CONNECTIONS は @@MAX_CONNECTIONS よりも大きくなる場合があります。
   
 ## <a name="examples"></a>使用例  
 次の例では、現在のシステム上の日付と時刻におけるログイン試行数を返します。
@@ -76,7 +76,7 @@ Today's Date and Time  Login Attempts
 ```  
   
 ## <a name="see-also"></a>参照
-[システム統計関数 &#40;Transact-SQL&#41;す。](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
-[sp_monitor &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
+[システム統計関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+[sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md):
   
   

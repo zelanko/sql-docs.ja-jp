@@ -56,7 +56,7 @@ NULL または現在のノードの子の **hierarchyid**。
 NULL または現在のノードの子の **hierarchyid**。
   
 ## <a name="return-types"></a>戻り値の型  
-SQL Server の戻り値の型: * ***hierarchyid * *
+**SQL Server の戻り値の型: * *hierarchyid * ***
   
 **CLR 戻り値の型:SqlHierarchyId**
   
@@ -76,7 +76,7 @@ GetDescendant は決定的です。 そのため場合、 GetDescendant と呼�
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>A. 最も小さい子孫ノードとして行を挿入  
-ノード `/3/1/` の既存の従業員の部下として新しい従業員が採用されました。 使用して、新しい行を挿入するには、次のコードの実行、 GetDescendant`/3/1/1/` メソッドとして、新しい行のノードを指定する引数を指定しないで /3 1/1/:
+ノード `/3/1/` の既存の従業員の部下として新しい従業員が採用されました。 使用して、新しい行を挿入するには、次のコードの実行、 GetDescendant メソッドとして、新しい行のノードを指定する引数を指定しないで /3 1/1/:`/3/1/1/`
   
 ```sql
 DECLARE @Manager hierarchyid;   
@@ -89,7 +89,7 @@ VALUES
 ```  
   
 ### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>B. 大きい子孫ノードとして行を挿入  
-別の新しい従業員を雇用すると、次のコードを使用して、新しい行を挿入することを A. の実行例と同じ上司に報告、 GetDescendant`/3/1/2/` メソッドは、child 1 引数を使用して、新しい行のノードが例 A でノードを従うことを指定するになる /3 1/2/:
+別の新しい従業員を雇用すると、次のコードを使用して、新しい行を挿入することを A. の実行例と同じ上司に報告、 GetDescendant メソッドは、child 1 引数を使用して、新しい行のノードが例 A でノードを従うことを指定するになる /3 1/2/:`/3/1/2/`
   
 ```sql
 DECLARE @Manager hierarchyid, @Child1 hierarchyid;  
@@ -120,7 +120,7 @@ VALUES
   
 ```  
   
-A、B、および C# の例を完了すると、テーブルに追加されたノード ピアになります次 hierarchyid** 値。
+A、B、および C# の例を完了すると、テーブルに追加されたノード ピアになります次 **hierarchyid** 値。
   
 `/3/1/1/`
   
@@ -131,7 +131,7 @@ A、B、および C# の例を完了すると、テーブルに追加された�
 ノード `/3/1/1.1/` は、ノード `/3/1/1/` より大きいノードですが、階層のレベルは同じです。
   
 ### <a name="d-scalar-examples"></a>D. スカラーの例  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自由に挿入および削除のいずれかをサポートしている hierarchyid** ノードです。 使用して GetDescendant()**, 、任意の 2 つの間のノードを生成することは常に hierarchyid** ノードです。 次のコードを実行すると、`GetDescendant` を使用してサンプル ノードが生成されます。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自由に挿入および削除のいずれかをサポートしている **hierarchyid** ノードです。 使用して GetDescendant(), 、任意の 2 つの間のノードを生成することは常に **hierarchyid** ノードです。 次のコードを実行すると、`GetDescendant` を使用してサンプル ノードが生成されます。
   
 ```sql
 DECLARE @h hierarchyid = hierarchyid::GetRoot();  

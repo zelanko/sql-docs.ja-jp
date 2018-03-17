@@ -1,5 +1,5 @@
 ---
-title: "Log10 関数 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: LOG10 (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="log10-transact-sql"></a>LOG10 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  指定した底 10 の対数を返します**float**式。  
+  指定した底 10 の対数を返します **float** 式です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,13 +49,13 @@ LOG10 ( float_expression )
   
 ## <a name="arguments"></a>引数  
  *float_expression*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)型の**float**または型に暗黙的に変換できる**float**です。  
+ **float** 型、または暗黙的に **float** 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  
   
-## <a name="remarks"></a>解説  
- LOG10 関数と POWER 関数は逆の意味で相互に関連付けられています。 たとえば、10 ^ LOG10 (*n*) =  *n*です。  
+## <a name="remarks"></a>Remarks  
+ LOG10 関数と POWER 関数は逆の意味で相互に関連付けられています。 たとえば、10 ^ LOG10(*n*) = *n* となります。  
   
 ## <a name="examples"></a>使用例  
   
@@ -93,10 +93,10 @@ SELECT POWER (10, LOG10(5));
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C: は、値の底 10 の対数を計算します。  
- 次の例では、計算、`LOG10`指定された値。  
+### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C: 値の 10 を底とする対数を計算する  
+ 次の例では、指定された値の `LOG10` を計算します。  
   
 ```  
 SELECT LOG10(145.175642);  
@@ -110,9 +110,9 @@ SELECT LOG10(145.175642);
 ```  
   
 ## <a name="see-also"></a>参照  
- [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [電源 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/power-transact-sql.md)   
- [ログ &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/log-transact-sql.md)  
+ [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [POWER &#40;Transact-SQL&#41;](../../t-sql/functions/power-transact-sql.md)   
+ [LOG &#40;Transact-SQL&#41;](../../t-sql/functions/log-transact-sql.md)  
   
   
 

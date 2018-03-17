@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-返します、 datetime** 指定した日付と時刻の値です。
+返します、 **datetime** 指定した日付と時刻の値です。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -70,7 +70,7 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-DATETIMEFROMPARTS **返しますが、完全に初期化された datetime** 値。 引数が有効でない場合は、エラーが発生します。 必要な引数が null の場合は、null が返されます。
+**DATETIMEFROMPARTS** 返しますが、完全に初期化された **datetime** 値。 引数が有効でない場合は、エラーが発生します。 必要な引数が null の場合は、null が返されます。
   
 この関数は、リモート処理は実行することのできる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー上とします。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前のバージョンをインストールしているサーバーには、リモート処理が行われません。
   
@@ -91,7 +91,7 @@ Result
 ```  
   
 ## <a name="see-also"></a>参照
-datetime (&) #40 です。TRANSACT-SQL と #41 です。[](../../t-sql/data-types/datetime-transact-sql.md)
+[datetime (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/datetime-transact-sql.md)
   
   
 

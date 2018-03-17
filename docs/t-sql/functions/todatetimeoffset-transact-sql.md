@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返します、 datetimeoffset **値から変換されたです、 datetime2** 式です。  
+  返します、 **datetimeoffset** 値から変換されたです、 **datetime2** 式です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ TODATETIMEOFFSET ( expression , time_zone )
  [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) 値に解決される[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
 > [!NOTE]  
->  型の式をすることはできません テキスト**, 、ntext**, 、または イメージ **に、これらの型を暗黙的に変換できないため varchar** または nvarchar**です。  
+>  型の式をすることはできません **テキスト**, 、**ntext**, 、または **イメージ** に、これらの型を暗黙的に変換できないため **varchar** または **nvarchar**です。  
   
  *time_zone*  
  タイム ゾーン オフセットを表す式です。たとえば、分単位で表す式 (整数の場合) は -120、時間と分単位で表す式 (文字列の場合) は '+13.00' です。 範囲は +14 ～ -14 (時間) です。 式は、指定された time_zone のローカル時刻で解釈されます。  
@@ -64,7 +64,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 >  式が文字列の場合、{+|-}TZH:THM の形式にする必要があります。  
   
 ## <a name="return-type"></a>戻り値の型  
- **datetimeoffset**. 小数部の有効桁数が同じ、 datetime* 引数。  
+ **datetimeoffset**. 小数部の有効桁数が同じ、 *datetime* 引数。  
   
 ## <a name="examples"></a>使用例  
   

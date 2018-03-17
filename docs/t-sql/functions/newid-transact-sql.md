@@ -1,5 +1,5 @@
 ---
-title: "NEWID (TRANSACT-SQL) |Microsoft ドキュメント"
+title: NEWID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  型の一意の値を作成**uniqueidentifier**です。  
+  型の一意の値を作成 **uniqueidentifier**です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,13 +49,13 @@ NEWID ( )
 ## <a name="return-types"></a>戻り値の型  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  `NEWID()` は RFC4122 に準拠しています。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-the-newid-function-with-a-variable"></a>A. NEWID 関数を変数と共に使用する  
- 次の例で`NEWID()`として宣言された変数に値を割り当てる、 **uniqueidentifier**データ型。 値、 **uniqueidentifier**値をテストする前に、データ型の変数を出力します。  
+ 次の例では、`NEWID()` を使用して、**uniqueidentifier** データ型として宣言された変数に値を割り当てます。 値、 **uniqueidentifier** 値をテストする前に、データ型の変数が出力されます。  
   
 ```  
 -- Creating a local variable with DECLARE/SET syntax.  
@@ -75,9 +75,9 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 ### <a name="b-using-newid-in-a-create-table-statement"></a>B. CREATE TABLE ステートメント内で NEWID を使用する  
   
-**適用されます**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**適用対象**:  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- 次の例を作成、`cust`を持つテーブル、 **uniqueidentifier**既定値を持つテーブルを入力するには、データ型、および NEWID を使用します。 `NEWID()` の既定値が代入されると、新しい行と既存の行の `CustomerID` 列にそれぞれ一意な値が設定されます。  
+ 次の例では、**uniqueidentifier** データ型を使用して `cust` テーブルを作成し、NEWID を使用してテーブルに既定値を入力します。 `NEWID()` の既定値が代入されると、新しい行と既存の行の `CustomerID` 列にそれぞれ一意な値が設定されます。  
   
 ```  
 -- Creating a table using NEWID for uniqueidentifier data type.  
@@ -115,7 +115,7 @@ GO
 ```  
   
 ### <a name="c-using-uniqueidentifier-and-variable-assignment"></a>C. uniqueidentifier と変数代入を使用する  
- 次の例と呼ばれるローカル変数を宣言する`@myid`の変数として**uniqueidentifier**データ型。 次に、変数に値が代入を使用して、`SET`ステートメントです。  
+ 次の例では、`@myid` という名前の変数を **uniqueidentifier** データ型の変数として宣言します。 この変数に、`SET` ステートメントを使用して値を代入します。  
   
 ```  
 DECLARE @myid uniqueidentifier ;  
@@ -125,13 +125,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [NEWSEQUENTIALID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/newsequentialid-transact-sql.md)   
+ [NEWSEQUENTIALID (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/newsequentialid-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [CAST および CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [一意識別子と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
+ [一意識別子 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
  [シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

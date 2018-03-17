@@ -1,5 +1,5 @@
 ---
-title: "@@DBTS (TRANSACT-SQL) |Microsoft ドキュメント"
+title: '@@DBTS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -48,13 +48,13 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>戻り値の型
 **varbinary**
   
-## <a name="remarks"></a>解説  
-@@DBTS現在のデータベースの最後に使用されたタイムスタンプ値を返します。 **timestamp** 列を含む行を追加または更新するたびに、タイムスタンプの新しい値が生成されます。
+## <a name="remarks"></a>Remarks  
+@@DBTS は、現在のデータベースで最後に使用されたタイムスタンプを返します。 **timestamp** 列を含む行を追加または更新するたびに、タイムスタンプの新しい値が生成されます。
   
-@@DBTS関数は、トランザクション分離レベルの変更による影響ありません。
+@@DBTS 関数は、トランザクション分離レベルでの変更の影響を受けません。
   
 ## <a name="examples"></a>使用例  
-次の例は、現在を返して**タイムスタンプ**から、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。
+次の例は、現在を返して **タイムスタンプ** から、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。
   
 ```sql
 USE AdventureWorks2012;  
@@ -63,9 +63,9 @@ SELECT @@DBTS;
 ```  
   
 ## <a name="see-also"></a>参照
-[構成関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/configuration-functions-transact-sql.md)  
+[構成関数 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)  
 [カーソルの同時実行 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[MIN_ACTIVE_ROWVERSION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/min-active-rowversion-transact-sql.md)
+[MIN_ACTIVE_ROWVERSION &#40;Transact-SQL&#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)
   
   

@@ -59,31 +59,31 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
   
 |戻り値|Description|  
 |------------------|-----------------|  
-|0|database_principal *のメンバーではない ロール*です。|  
-|@shouldalert|database_principal *のメンバーである ロール*です。|  
-|NULL|database_principal *または ロール* が有効でないか、ロールのメンバーシップを表示する権限がありません。|  
+|0|*database_principal* のメンバーではない *ロール*です。|  
+|@shouldalert|*database_principal* のメンバーである *ロール*です。|  
+|NULL|*database_principal* または *ロール* が有効でないか、ロールのメンバーシップを表示する権限がありません。|  
   
 ## <a name="remarks"></a>Remarks  
  IS_ROLEMEMBER は、現在のユーザーがデータベース ロールの権限を必要とするアクションを実行できるかどうかを判断するために使用します。  
   
  unless the *database_principal* が許可または拒否された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への直接アクセスである場合を除き、*database_principal* が Contoso\Mary5 などの Windows ログインに基づいている場合、IS_ROLEMEMBER は NULL を返します。  
   
- 場合、省略可能な database_principal *パラメーターを指定しない場合、 database_principal* ベースは、Windows ドメイン ログインに Windows グループのメンバーシップを通じて、データベース ロールのメンバーである可能性があります。 そのような間接的なメンバーシップを解決するために、IS_ROLEMEMBER は、Windows グループのメンバーシップ情報をドメイン コントローラーに要求します。 ドメイン コントローラーにアクセスできないか、またはドメイン コントローラーが応答しない場合、IS_ROLEMEMBER はユーザーとそのローカル グループのみを考慮したロール メンバーシップ情報を返します。 指定されたユーザーが現在のユーザーでない場合、IS_ROLEMEMBER が返す値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対する認証システム (Active Directory など) の最後のデータ更新と異なることがあります。  
+ 場合、省略可能な *database_principal* パラメーターを指定しない場合、 *database_principal* ベースは、Windows ドメイン ログインに Windows グループのメンバーシップを通じて、データベース ロールのメンバーである可能性があります。 そのような間接的なメンバーシップを解決するために、IS_ROLEMEMBER は、Windows グループのメンバーシップ情報をドメイン コントローラーに要求します。 ドメイン コントローラーにアクセスできないか、またはドメイン コントローラーが応答しない場合、IS_ROLEMEMBER はユーザーとそのローカル グループのみを考慮したロール メンバーシップ情報を返します。 指定されたユーザーが現在のユーザーでない場合、IS_ROLEMEMBER が返す値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対する認証システム (Active Directory など) の最後のデータ更新と異なることがあります。  
   
- 省略可能な *database_principal* パラメーターが指定された場合、照会されるデータベース プリンシパルが sys.database_principals に存在している必要があります。そうでない場合、IS_ROLEMEMBER は NULL を返します。 これが示す、 database_principal* はこのデータベースでは無効です。  
+ 省略可能な *database_principal* パラメーターが指定された場合、照会されるデータベース プリンシパルが sys.database_principals に存在している必要があります。そうでない場合、IS_ROLEMEMBER は NULL を返します。 これが示す、 *database_principal* はこのデータベースでは無効です。  
   
- ときに、 database_principal* パラメーターがに基づいてドメイン ログインか、Windows グループに基づく、ドメイン コント ローラーにアクセスできなくなって、IS_ROLEMEMBER の呼び出しは失敗し、不正確または不完全なデータを返す場合があります。  
+ ときに、 *database_principal* パラメーターがに基づいてドメイン ログインか、Windows グループに基づく、ドメイン コント ローラーにアクセスできなくなって、IS_ROLEMEMBER の呼び出しは失敗し、不正確または不完全なデータを返す場合があります。  
   
  ドメイン コントローラーを利用できなくても、Windows プリンシパルをローカルで認証できる場合 (ローカル Windows アカウントや [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの場合など) は、IS_ROLEMEMBER の呼び出しで正確な情報が返されます。  
   
- IS_ROLEMEMBER** は、Windows グループをデータベース プリンシパル引数として使用され、この Windows グループは、さらに、指定されたデータベース ロールのメンバー、別の Windows グループのメンバーである場合は、常に 0 を返します。  
+ **IS_ROLEMEMBER** は、Windows グループをデータベース プリンシパル引数として使用され、この Windows グループは、さらに、指定されたデータベース ロールのメンバー、別の Windows グループのメンバーである場合は、常に 0 を返します。  
   
  [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] および Windows Server 2008 にあるユーザー アカウント制御 (UAC) も異なる結果を返す場合があります。 これは、ユーザーがサーバーに Windows グループのメンバーとしてアクセスしたか、特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーとしてアクセスしたかによります。  
   
- この関数で評価されるのはロールのメンバーシップであって、基になる権限ではありません。 たとえば、 db_owner **固定データベース ロールには、 CONTROL DATABASE** 権限です。 ユーザーがいる場合、 CONTROL DATABASE **権限はない、ロールのメンバーと、この関数は、ユーザーがのメンバーではないことを報告して正しく、 db_owner** ロールでは、ユーザーは、同じアクセス許可を持っている場合でもです。  
+ この関数で評価されるのはロールのメンバーシップであって、基になる権限ではありません。 たとえば、 **db_owner** 固定データベース ロールには、 **CONTROL DATABASE** 権限です。 ユーザーがいる場合、 **CONTROL DATABASE** 権限はない、ロールのメンバーと、この関数は、ユーザーがのメンバーではないことを報告して正しく、 **db_owner** ロールでは、ユーザーは、同じアクセス許可を持っている場合でもです。  
   
 ## <a name="related-functions"></a>関連する関数  
- 現在のユーザーが指定された Windows グループのメンバーであるかどうかを判断するまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してデータベース ロールを IS_MEMBER (& a) #40 です。TRANSACT-SQL と #41;[](../../t-sql/functions/is-member-transact-sql.md). 確認するかどうか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してログインがサーバー ロールのメンバーを IS_SRVROLEMEMBER (& a) #40 です。TRANSACT-SQL と #41;[](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
+ 現在のユーザーが指定された Windows グループのメンバーであるかどうかを判断するまたは  を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース ロールを [IS_MEMBER (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/is-member-transact-sql.md). 確認するかどうか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してログインがサーバー ロールのメンバーを [IS_SRVROLEMEMBER (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
   
 ## <a name="permissions"></a>アクセス許可  
  データベース ロールに対する VIEW DEFINITION 権限が必要です。  

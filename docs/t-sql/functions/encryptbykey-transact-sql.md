@@ -73,7 +73,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  認証子の派生元のデータを含む変数を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
- varbinary** 8,000 バイトの最大サイズ。  
+ **varbinary** 8,000 バイトの最大サイズ。  
   
  キーが開かれていない場合、キーが存在しない場合、またはキーが非推奨の RC4 キーでデータベースの互換性レベルが 110 以上の場合、NULL を返します。  
   
@@ -97,7 +97,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  対称キーの暗号化と暗号化解除は比較的高速なので、データが大きい場合に適しています。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の暗号化関数を ANSI_PADDING OFF 設定で使用すると、暗黙的な変換によってデータが失われる可能性があります。 詳細については、ANSI_PADDING、を参照してください。 ANSI_PADDING の設定 (&) #40 です。TRANSACT-SQL と #41;[](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の暗号化関数を ANSI_PADDING OFF 設定で使用すると、暗黙的な変換によってデータが失われる可能性があります。 詳細については、ANSI_PADDING、を参照してください。 [ANSI_PADDING の設定 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>使用例  
  次の例に示されている機能を実行するには、「[データ列を暗号化する方法](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)」で作成するキーと証明書が必要です。  

@@ -49,7 +49,7 @@ PWDENCRYPT ( 'password' )
   
 ## <a name="arguments"></a>引数  
  *password*  
- 暗号化されるパスワードです。 パスワード *は sysname*です。  
+ 暗号化されるパスワードです。 *パスワード* は **sysname**です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **varbinary (128)**  

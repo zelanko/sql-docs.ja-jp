@@ -50,7 +50,7 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>引数  
  *Asym_Key_ID*  
- データベース内の非対称キーの ID を指定します。 Asym_Key_ID *は int*です。  
+ データベース内の非対称キーの ID を指定します。 *Asym_Key_ID* は **int**です。  
   
  *ciphertext*  
  非対称キーを使って暗号化されているデータの文字列を指定します。  
@@ -71,7 +71,7 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
  非対称キーに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`JanainaAsymKey02` に格納されている、非対称キー `AdventureWorks2012.ProtectedData04` を使って暗号化された暗号文の暗号化を解除します。 返されるデータの暗号化は、非対称キー `JanainaAsymKey02` を使って解除されます。この非対称キーの暗号化は、パスワード `pGFD4bb925DGvbd2439587y` を使って解除されます。 プレーン テキストが型に変換されます nvarchar**です。  
+ 次の例では、`JanainaAsymKey02` に格納されている、非対称キー `AdventureWorks2012.ProtectedData04` を使って暗号化された暗号文の暗号化を解除します。 返されるデータの暗号化は、非対称キー `JanainaAsymKey02` を使って解除されます。この非対称キーの暗号化は、パスワード `pGFD4bb925DGvbd2439587y` を使って解除されます。 プレーン テキストが型に変換されます **nvarchar**です。  
   
 ```  
 SELECT CONVERT(nvarchar(max),  

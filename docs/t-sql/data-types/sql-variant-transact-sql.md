@@ -1,5 +1,5 @@
 ---
-title: "sql_variant 型 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: sql_variant (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 9/12/2017
 ms.prod: sql-non-specified
@@ -47,27 +47,27 @@ ms.lasthandoff: 11/21/2017
 sql_variant  
 ```  
   
-## <a name="remarks"></a>解説  
-**sql_variant**列、パラメーター、変数、およびユーザー定義関数の戻り値で使用できます。 **sql_variant**他のデータ型の値をサポートするためにこれらのデータベース オブジェクトを有効にします。
+## <a name="remarks"></a>Remarks  
+**sql_variant** 列、パラメーター、変数、およびユーザー定義関数の戻り値で使用できます。 **sql_variant** 他のデータ型の値をサポートするためにこれらのデータベース オブジェクトを使用します。
   
-型の列**sql_variant**さまざまなデータ型の行を含めることがあります。 たとえば、列として定義されている**sql_variant**格納できます**int**、**バイナリ**、および**char**値。
+型の列 **sql_variant** 別のデータ型の行を含めることができます。 たとえば、列として定義されている **sql_varian**t 格納できる **int**, 、**バイナリ**, と **char** 値。
   
 **sql_variant** 8,016 バイトの最大長を持つことができます。 これには、基本データ型に関する情報と値の両方が含まれます。 実際の基本データ型値の最大長は、8,000 バイトです。
   
-A **sql_variant**加算や減算などの操作に参加する前にその基本データ型の値にデータ型がキャスト最初にする必要があります。
+A **sql_variant** 加算や減算などの操作に参加する前に、基本データ型の値にデータ型がキャスト最初にする必要があります。
   
-**sql_variant**既定値を割り当てることができます。 このデータ型は、基になる値として NULL を持つこともできますが、NULL 値には基本データ型は関連付けられていません。 また、 **sql_variant**別に持つことはできません**sql_variant**をその基本型です。
+**sql_variant** 既定値を割り当てることができます。 このデータ型は、基になる値として NULL を持つこともできますが、NULL 値には基本データ型は関連付けられていません。 また、 **sql_variant** 別に持つことはできません **sql_variant** をその基本型です。
   
-一意、主キー、または外部キーは、型の列を含めることがあります**sql_variant**、特定の行のキーを構成するデータ値の合計の長さはいけません、インデックスの最大長を超える。 この最大長は 900 バイトです。
+一意、主キー、または外部キーは、型の列を含めることが **sql_variant**, 、でも、特定の行のキーを構成するデータ値の合計の長さは、インデックスの最大長を超えるを使用できないする必要があります。 この最大長は 900 バイトです。
   
-テーブルは、任意の数を持つことができます**sql_variant**列です。
+テーブルは、任意の数を持つことができます **sql_variant** 列です。
   
 **sql_variant** CONTAINSTABLE と FREETEXTTABLE では使用できません。
   
-ODBC でサポートされていません**sql_variant**です。 したがって、複数のクエリ**sql_variant** Microsoft OLE DB Provider for ODBC (MSDASQL) を使用すると、列はバイナリ データとして返されます。 たとえば、 **sql_variant** '' ps2091 文字列データを含む列は 0x505332303931 として返されます。
+ODBC でサポートされていません **sql_variant**です。 クエリではそのため、 **sql_variant** Microsoft OLE DB Provider for ODBC (MSDASQL) を使用すると、列はバイナリ データとして返されます。 たとえば、 **sql_variant** "ps2091 という"文字列データが含まれている列は 0x505332303931 として返されます。
   
 ## <a name="comparing-sqlvariant-values"></a>sql_variant 値の比較  
-**Sql_variant**データ型変換のデータ型階層リストの上部に属しています。 **Sql_variant** 、比較、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型階層の順序はデータ型ファミリにグループ化します。
+**Sql_variant** データ型変換のためには、データ型階層リストの上部に属しています。 **Sql_variant** 、比較、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型階層の順序は、データ型ファミリにグループ化します。
   
 |データ型階層|データ型ファミリ|  
 |---|---|
@@ -96,16 +96,16 @@ ODBC でサポートされていません**sql_variant**です。 したがっ�
 |**[バイナリ]**|Binary|  
 |**uniqueidentifier**|一意識別子 |  
   
-次の規則を適用する**sql_variant**比較。
--   ときに**sql_variant**異なる基本データ型の値を比較し、基本データ型が、別のデータ型ファミリ、階層グラフでデータ型ファミリがより高い値が 2 つの値の大きいと見なされます。  
--   ときに**sql_variant**異なる基本データ型の値を比較し、基本データ型が同じデータ型ファミリが、階層グラフで基本データ型が低位の値は、他のデータ型に暗黙的に変換し、比較が行われます。  
--   ときに**sql_variant**の値、 **char**、 **varchar**、 **nchar**、または**nvarchar**データ型は、比較して、その照合順序がまず比較、次の条件に基づく: LCID、LCID バージョン、比較フラグ、および並べ替え id です。 これらの基準は、ここで示した順序に従って、それぞれ整数値として比較されます。 基準がすべて等しい場合は、照合順序に従って実際の文字列値が比較されます。  
+次の規則が適用 **sql_variant** 比較します。
+-   ときに **sql_variant** 異なる基本データ型の値が比較と基本データ型が、別のデータ型ファミリに、階層グラフでのデータ型ファミリがより高い値は 2 つの値の大きいと見なされます。  
+-   ときに **sql_variant** 異なる基本データ型の値が比較し基本データ型が同じデータ型ファミリには、階層グラフで基本データ型が低位の値は、その他のデータ型に暗黙的に変換、および、比較が行われます。  
+-   ときに **sql_variant** の値、 **char**, 、**varchar**, 、**nchar**, 、または **nvarchar** が、データ型の比較、照合順序がまず比較されます、次の条件に基づく: LCID、LCID バージョン、比較フラグ、および並べ替え id です。 これらの基準は、ここで示した順序に従って、それぞれ整数値として比較されます。 基準がすべて等しい場合は、照合順序に従って実際の文字列値が比較されます。  
   
 ## <a name="converting-sqlvariant-data"></a>sql_variant 型データの変換  
-処理するときに、 **sql_variant**データ型、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を他のデータ型を持つオブジェクトの暗黙的な変換をサポートしている、 **sql_variant**型です。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から暗黙的な変換をサポートしていません**sql_variant**の別のデータ型のオブジェクトへのデータ。
+処理するときに、 **sql_variant** データ型の場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] するには、他のデータ型のオブジェクトの暗黙的な変換をサポートしている、 **sql_variant** 型です。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からの暗黙的な変換をサポートしていない **sql_variant** 別のデータ型のオブジェクトへのデータです。
   
 ## <a name="restrictions"></a>制限  
-次の表は、値の型を使用して格納することはできません**sql_variant**:
+次の表は、種類の値を使用して格納することはできませんが **sql_variant**:
   
 |||  
 |-|-|  
@@ -119,8 +119,8 @@ ODBC でサポートされていません**sql_variant**です。 したがっ�
 
 ## <a name="examples"></a>使用例  
 
-### <a name="a-using-a-sqlvariant-in-a-table"></a>A. テーブルで、sql_variant 型の使用  
- 次の例では、sql_variant データ型を持つテーブルを作成します。 例を取得し、`SQL_VARIANT_PROPERTY`については、`colA`値`46279.1`場所`colB`  =`1689`こと、`tableA`が`colA`型である`sql_variant`と`colB`.  
+### <a name="a-using-a-sqlvariant-in-a-table"></a>A. テーブルで sql_variant を使用する  
+ 次の例では、sql_variant データ型でテーブルを作成します。 次の例では、`colA` の `colB` =`1689` 値 `46279.1` に関する `SQL_VARIANT_PROPERTY` 情報を取得しています。 `tableA` には `sql_variant` 型の `colA` と、`colB` が含まれているものとします。  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -132,7 +132,7 @@ FROM      tableA
 WHERE      colB = 1689  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]これら 3 つの値の各ことに注意してください、 **sql_variant**です。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] これら 3 つの値の各ことに注意してください、 **sql_variant**です。  
   
 ```  
 Base Type    Precision    Scale  
@@ -142,8 +142,8 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. 変数として、sql_variant 型の使用   
- 次の例では、sql_variant データ型を使用して変数を作成し、取得し、`SQL_VARIANT_PROPERTY`という名前の変数に関する情報@v1です。  
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. 変数として sql_variant を使用する   
+ 次の例では、sql_variant データ型を使用して変数を作成し、@v1 という名前の変数に関する `SQL_VARIANT_PROPERTY`情報を取得します。  
   
 ```sql    
 DECLARE @v1 sql_variant;  
@@ -156,6 +156,6 @@ SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');
 
 ## <a name="see-also"></a>参照
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[SQL_VARIANT_PROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/sql-variant-property-transact-sql.md)
+[SQL_VARIANT_PROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "@@PACK_RECEIVED (TRANSACT-SQL) |Microsoft ドキュメント"
+title: '@@PACK_RECEIVED (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40packreceived-transact-sql"></a>&#x40;&#x40;です。@Pack_received (TRANSACT-SQL)
+# <a name="x40x40packreceived-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動してからネットワークから読み取った入力パケット数を返します。  
@@ -49,11 +49,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>戻り値の型  
  **整数 (integer)**  
   
-## <a name="remarks"></a>解説  
- いくつか含むレポートを表示する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]送信または受信されると、パケットをなどの統計情報の実行**sp_monitor**です。  
+## <a name="remarks"></a>Remarks  
+ いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 送信または受信されると、パケットをなどの統計情報の実行 **sp_monitor** です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、の使用方法を示しています。`@@PACK_RECEIVED`です。  
+ 次の例は、`@@PACK_RECEIVED` の使用方法を示しています。  
   
 ```  
 SELECT @@PACK_RECEIVED AS 'Packets Received';   

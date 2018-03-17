@@ -59,10 +59,10 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  署名されるデータを含む **nvarchar**、**char**、**varchar**、または **nchar** 型の変数です。  
   
  **'** *password* **'**  
- 証明書の秘密キーを暗号化する場合に使用したパスワードを指定します。 password *は nvarchar (128)* です。  
+ 証明書の秘密キーを暗号化する場合に使用したパスワードを指定します。 *password* は **nvarchar (128)** です。  
   
 ## <a name="return-types"></a>戻り値の型  
- varbinary** 8,000 バイトの最大サイズ。  
+ **varbinary** 8,000 バイトの最大サイズ。  
   
 ## <a name="remarks"></a>Remarks  
  証明書に対する CONTROL 権限が必要です。  

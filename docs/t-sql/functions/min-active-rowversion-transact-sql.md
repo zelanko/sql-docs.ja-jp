@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="minactiverowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  現在のデータベース内でアクティブな最小の **rowversion** 値を返します。 **rowversion** 値がアクティブになるのは、まだコミットされていないトランザクションで使用される場合です。 詳細については、を参照してください。 rowversion (& a) #40 です。TRANSACT-SQL と #41;[](../../t-sql/data-types/rowversion-transact-sql.md).  
+  現在のデータベース内でアクティブな最小の **rowversion** 値を返します。 **rowversion** 値がアクティブになるのは、まだコミットされていないトランザクションで使用される場合です。 詳細については、を参照してください。[ rowversion (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/data-types/rowversion-transact-sql.md).  
   
 > [!NOTE]  
 >  **rowversion** データ型は、**timestamp** とも呼ばれます。  
@@ -49,7 +49,7 @@ MIN_ACTIVE_ROWVERSION
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- 返します、 binary (8)** 値。  
+ 返します、 **binary (8)** 値。  
   
 ## <a name="remarks"></a>Remarks  
  MIN_ACTIVE_ROWVERSION は、現在のデータベースの最低のアクティブ **rowversion** 値を返す非決定的関数です。 新しい **rowversion** 値は、通常、 **rowversion**型の列を含むテーブルに対して挿入または更新が実行されたときに生成されます。 データベース内にアクティブな値がない場合は、MIN_ACTIVE_ROWVERSION は @@DBTS + 1 と同じ値を返します。  

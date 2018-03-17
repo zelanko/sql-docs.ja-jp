@@ -1,5 +1,5 @@
 ---
-title: "PUBLISHINGSERVERNAME (TRANSACT-SQL) |Microsoft ドキュメント"
+title: PUBLISHINGSERVERNAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -32,10 +32,10 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="replication-functions---publishingservername"></a>レプリケーション機能 - PUBLISHINGSERVERNAME
+# <a name="replication-functions---publishingservername"></a>レプリケーション関数 - PUBLISHINGSERVERNAME
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベース ミラーリング セッションに参加している、パブリッシュされたデータベースの発行元パブリッシャーの名前を返します。 この関数は、のパブリッシャー インスタンス側で実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリケーション データベースでします。 パブリッシュされたデータベースの元のパブリッシャーを特定するときに使用してください。  
+  データベース ミラーリング セッションに参加している、パブリッシュされたデータベースの発行元パブリッシャーの名前を返します。 この関数は、パブリケーション データベース上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパブリッシャー インスタンス側で実行されます。 パブリッシュされたデータベースの元のパブリッシャーを特定するときに使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ PUBLISHINGSERVERNAME()
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  PUBLISHINGSERVERNAME は、すべての種類のレプリケーションで使用できます。  
   
  PUBLISHINGSERVERNAME は、パブリッシャーとミラーリング パートナー インスタンスの間のパブリケーション データベースでデータベース ミラーリング セッションが開かれているときに使用します。  
@@ -58,6 +58,6 @@ PUBLISHINGSERVERNAME()
   
 ## <a name="see-also"></a>参照  
  [データベース ミラーリングとレプリケーション &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
- [レプリケーション関数 &#40;です。TRANSACT-SQL と #41 です。](http://msdn.microsoft.com/library/53702dee-de58-47d5-a552-7f32000f77d4)  
+ [レプリケーションの動作 (&) #40 です。TRANSACT-SQL と #41 です。](http://msdn.microsoft.com/library/53702dee-de58-47d5-a552-7f32000f77d4)  
   
   

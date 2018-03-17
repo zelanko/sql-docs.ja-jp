@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  データベースでは、追加、または暗号化された値を削除する列の暗号化キーを変更します。 CEK には、これにより、対応する列のマスター キーのローテーション用に最大 2 つの値を持つことができます。 CEK は、[Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 機能を使って列を暗号化するときに使われます。 CEK 値を追加する前を使用して、値の暗号化に使用された列のマスター_キーを定義する必要があります [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または CREATE MASTER KEY[](../../t-sql/statements/create-column-master-key-transact-sql.md) ステートメントです。  
+  データベースでは、追加、または暗号化された値を削除する列の暗号化キーを変更します。 CEK には、これにより、対応する列のマスター キーのローテーション用に最大 2 つの値を持つことができます。 CEK は、[Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 機能を使って列を暗号化するときに使われます。 CEK 値を追加する前を使用して、値の暗号化に使用された列のマスター_キーを定義する必要があります [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) ステートメントです。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

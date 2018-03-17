@@ -50,13 +50,13 @@ DB_NAME ( [ database_id ] )
   
 ## <a name="arguments"></a>引数  
 *database_id*  
-名前が返されるデータベースの識別番号 (ID) を指定します。 database_id *は int*, 、既定値はありません。 ID の指定を省略すると、現在のデータベースの名前が返されます。
+名前が返されるデータベースの識別番号 (ID) を指定します。 *database_id* は **int**, 、既定値はありません。 ID の指定を省略すると、現在のデータベースの名前が返されます。
   
 ## <a name="return-types"></a>戻り値の型
 **nvarchar(128)**
   
 ## <a name="permissions"></a>アクセス許可  
-場合の呼び出し元 DB_NAME **、データベースの所有者ではないと、データベースが マスター** または tempdb**, 、対応する行を表示するために必要な最低限のアクセス許可には、ALTER ANY DATABASE または VIEW ANY DATABASE のサーバー レベルの権限、または CREATE DATABASE 権限、 マスター** データベース。 呼び出し元が接続しているデータベースは常に **sys.databases**で確認できます。
+場合の呼び出し元 **DB_NAME** 、データベースの所有者ではないと、データベースが **マスター** または **tempdb**, 、対応する行を表示するために必要な最低限のアクセス許可には、ALTER ANY DATABASE または VIEW ANY DATABASE のサーバー レベルの権限、または CREATE DATABASE 権限、 **マスター** データベース。 呼び出し元が接続しているデータベースは常に **sys.databases**で確認できます。
   
 > [!IMPORTANT]  
 >  既定は、パブリックのロールは、データベースの情報を表示するすべてのログインを許可する、VIEW ANY DATABASE 権限を持っています。 データベースを検出する機能からのログインをブロックするには、パブリックから VIEW ANY DATABASE 権限を取り消すまたは個別のログインの VIEW ANY DATABASE 権限を拒否します。  
@@ -98,8 +98,8 @@ FROM sys.databases;
 ```  
   
 ## <a name="see-also"></a>参照
-DB_ID と #40 です。TRANSACT-SQL と #41 です。[](../../t-sql/functions/db-id-transact-sql.md)  
-メタデータ関数 (&) #40 です。TRANSACT-SQL と #41 です。[](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[DB_ID と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/db-id-transact-sql.md)  
+[メタデータ関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
   
   

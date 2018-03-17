@@ -47,7 +47,7 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
   
 ## <a name="arguments"></a>引数  
  *Key_ID*  
- データベース内の対称キーの Key_ID を指定します。 キー名しかわからない場合に Key_ID を調べるには、SYMKEY_ID を使用します。 Key_ID* は、**int** データ型です。  
+ データベース内の対称キーの Key_ID を指定します。 キー名しかわからない場合に Key_ID を調べるには、SYMKEY_ID を使用します。 *Key_ID* は、**int** データ型です。  
   
  **'**algorithm_desc**'**  
  出力が対称キーのアルゴリズムの説明を返すように指定します。 EKM モジュールから作成された対称キーに対してのみ使用できます。  

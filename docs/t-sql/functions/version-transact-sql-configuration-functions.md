@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
  **nvarchar**  
   
 ## <a name="remarks"></a>Remarks  
- @@VERSION の結果は 1 つの nvarchar 文字列として表示されます。 を使用する SERVERPROPERTY (& a) #40 です。TRANSACT-SQL と #41;[](../../t-sql/functions/serverproperty-transact-sql.md) 個々 のプロパティの値を取得します。  
+ @@VERSION の結果は 1 つの nvarchar 文字列として表示されます。 を使用する [SERVERPROPERTY (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/serverproperty-transact-sql.md) 個々 のプロパティの値を取得します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、次の情報が返されます。  
   

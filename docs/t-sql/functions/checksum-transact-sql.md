@@ -1,5 +1,5 @@
 ---
-title: "チェックサム (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CHECKSUM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,18 +48,18 @@ CHECKSUM ( * | expression [ ,...n ] )
   
 ## <a name="arguments"></a>引数  
 \*  
-テーブルのすべての列を計算の対象とします。 列のいずれかが比較できないデータ型である場合、CHECKSUM ではエラーが返されます。 比較できないデータ型は**テキスト**、 **ntext**、**イメージ**、XML、および**カーソル**も**sql_variant**が基本型として、これらの型のいずれか。
+テーブルのすべての列を計算の対象とします。 列のいずれかが比較できないデータ型である場合、CHECKSUM ではエラーが返されます。 比較できないデータ型は **テキスト**, 、**ntext**, 、**イメージ**, 、XML、および **カーソル**, とも **sql_varian**t 、これらの型のいずれかをその基本データ型として。
   
 *式 (expression)*  
-[式](../../t-sql/language-elements/expressions-transact-sql.md)比較できないデータ型を除く任意の型。
+比較できないデータ型を除く、任意のデータ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。
   
 ## <a name="return-types"></a>戻り値の型
  **int**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 CHECKSUM では、一連の引数に対してハッシュ値 (チェックサム) が計算されます。 このハッシュ値はハッシュ インデックスの作成に使用されます。 CHECKSUM の引数に列を指定し、計算された CHECKSUM 値を基にインデックスを作成すると、結果はハッシュ インデックスになります。 このハッシュ インデックスは、列で等値検索を行うときに使用できます。
   
-CHECKSUM はハッシュ関数のプロパティとなります。CHECKSUM を任意の 2 つの式に適用した場合、その 2 つに対応する要素のデータ型が同じで、等号 (=) 演算子により比較した場合に等しければ、同じ値が返されます。 この定義では、指定した型が NULL 値である場合、これらの値は等しいものとして比較されます。 いずれかの式の値を変更した場合は通常、そのリストのチェックサムも変わりますが、 チェックサムが変わらない場合もわずかですがあります。 したがって、アプリケーションで値の変更をすべて検出する必要がある場合は、値の変更の検出に CHECKSUM を使用しないことをお勧めします。 使用を検討して[HashBytes](../../t-sql/functions/hashbytes-transact-sql.md)代わりにします。 MD5 ハッシュ アルゴリズムを指定した場合は、HashBytes から 2 つの異なる入力に対して同じ結果が返される可能性が CHECKSUM よりもはるかに低くなります。
+CHECKSUM はハッシュ関数のプロパティとなります。CHECKSUM を任意の 2 つの式に適用した場合、その 2 つに対応する要素のデータ型が同じで、等号 (=) 演算子により比較した場合に等しければ、同じ値が返されます。 この定義では、指定した型が NULL 値である場合、これらの値は等しいものとして比較されます。 いずれかの式の値を変更した場合は通常、そのリストのチェックサムも変わりますが、 チェックサムが変わらない場合もわずかですがあります。 したがって、アプリケーションで値の変更をすべて検出する必要がある場合は、値の変更の検出に CHECKSUM を使用しないことをお勧めします。 使用を検討して [HashBytes](../../t-sql/functions/hashbytes-transact-sql.md) 代わりにします。 MD5 ハッシュ アルゴリズムを指定した場合は、HashBytes から 2 つの異なる入力に対して同じ結果が返される可能性が CHECKSUM よりもはるかに低くなります。
   
 式の順序は、CHECKSUM の結果の値に影響します。 CHECKSUM(*) で使用される列の順序は、テーブルまたはビュー定義で指定される列の順序です。 これには、計算列が含まれます。
   
@@ -96,8 +96,8 @@ GO
 計算列にインデックスを作成するとチェックサム列が具体化され、`ProductName` 値を変更すると、それがどのような変更であってもチェックサム列に反映されます。 インデックスを作成する列に直接インデックスを作成することもできます。 ただし、キー値が長いと標準インデックスおよびチェックサム インデックスは機能しない可能性があります。
   
 ## <a name="see-also"></a>参照
-[CHECKSUM_AGG &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/checksum-agg-transact-sql.md)  
-[HASHBYTES &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/hashbytes-transact-sql.md)  
-[BINARY_CHECKSUM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/binary-checksum-transact-sql.md)
+[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
+[HASHBYTES (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/hashbytes-transact-sql.md)  
+[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
   
   

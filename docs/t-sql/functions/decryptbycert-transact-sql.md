@@ -50,7 +50,7 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>引数  
  *certificate_ID*  
- データベース内の証明書の ID を指定します。 certificate_ID *は int*です。  
+ データベース内の証明書の ID を指定します。 *certificate*_ID は **int**です。  
   
  *ciphertext*  
  証明書の公開キーで暗号化されているデータの文字列を指定します。  
@@ -65,7 +65,7 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
  証明書のプライベート キーを暗号化するために指定されたパスワードを含む **nchar** または **nvarchar** を指定します。 Unicode であることが必要です。  
   
 ## <a name="return-types"></a>戻り値の型  
- varbinary** 8,000 バイトの最大サイズ。  
+ **varbinary** 8,000 バイトの最大サイズ。  
   
 ## <a name="remarks"></a>Remarks  
  この関数では、証明書の秘密キーを使ってデータの暗号化を解除します。 非対称キーを使用する暗号化変換では、リソースが大幅に消費されます。 このため、ユーザー データを日常的に暗号化する場合、EncryptByCert および DecryptByCert は適切ではありません。  
@@ -74,7 +74,7 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
  証明書に対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`[AdventureWorks2012].[ProtectedData04]` とマークされた `data encrypted by certificate JanainaCert02` から行を選択し、 証明書 `JanainaCert02` の秘密キーを使って暗号化を解除します。最初に証明書のパスワード `pGFD4bb925DGvbd2439587y` を使って証明書の暗号化を解除する必要があります。 復号化されたデータを変換 varbinary **に nvarchar**です。  
+ 次の例では、`[AdventureWorks2012].[ProtectedData04]` とマークされた `data encrypted by certificate JanainaCert02` から行を選択し、 証明書 `JanainaCert02` の秘密キーを使って暗号化を解除します。最初に証明書のパスワード `pGFD4bb925DGvbd2439587y` を使って証明書の暗号化を解除する必要があります。 復号化されたデータを変換 **varbinary** に **nvarchar**です。  
   
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  

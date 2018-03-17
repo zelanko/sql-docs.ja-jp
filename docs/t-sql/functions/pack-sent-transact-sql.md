@@ -53,7 +53,7 @@ ms.lasthandoff: 11/21/2017
  **整数 (integer)**  
   
 ## <a name="remarks"></a>Remarks  
- いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 送信または受信されると、パケットをなどの統計情報の実行 sp_monitor**です。  
+ いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 送信または受信されると、パケットをなどの統計情報の実行 **sp_monitor**です。  
   
 ## <a name="examples"></a>使用例  
  次の例は、`@@PACK_SENT` の使用方法を示しています。  

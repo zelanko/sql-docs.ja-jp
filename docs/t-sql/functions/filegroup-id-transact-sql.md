@@ -1,5 +1,5 @@
 ---
-title: "FILEGROUP_ID (TRANSACT-SQL) |Microsoft ドキュメント"
+title: FILEGROUP_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,16 +51,16 @@ FILEGROUP_ID ( 'filegroup_name' )
   
 ## <a name="arguments"></a>引数  
  **'** *filegroup_name* **'**  
- 型の式は、 **sysname**をファイル グループ ID を返す対象のファイル グループの名前を表します。  
+ ファイル グループ ID を返すファイル グループの名前を表す **sysname** 型の式を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>解説  
- *filegroup_name*に対応する、**名前**内の列、 **sys.filegroups**カタログ ビューです。  
+## <a name="remarks"></a>Remarks  
+ *filegroup_name* に対応する、 **名前** 内の列、 **sys.filegroups** カタログ ビューです。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、という名前のファイル グループのファイル グループ ID を返します`PRIMARY`で、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
+ 次の例では、`PRIMARY` データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] という名前のファイル グループのファイル グループ ID を返します。  
   
 ```  
   
@@ -79,8 +79,8 @@ Filegroup ID
  ```  
   
 ## <a name="see-also"></a>参照  
- [FILEGROUP_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/filegroup-name-transact-sql.md)   
- [メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sys.filegroups &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+ [FILEGROUP_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
+ [メタデータ関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "IDENT_INCR (TRANSACT-SQL) |Microsoft ドキュメント"
+title: IDENT_INCR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  増分値を返します (として返される**数値**(**@@**MAXPRECISION, 0)) で、テーブルまたはビューを id 列を持つ id 列の作成時に指定します。  
+  増分値を返します (**数値** (**@@**MAXPRECISION, 0) として返される)。テーブルまたはビューを id 列を持つ id 列の作成時に指定します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,8 +48,8 @@ IDENT_INCR ( 'table_or_view' )
 ```  
   
 ## <a name="arguments"></a>引数  
- **'** *されることはありません* **'**  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)テーブルまたはビューの有効な id 増分値を確認するを指定します。 *されることはありません*引用符、変数、関数、または列名で囲まれた文字列定数を指定できます。 *されることはありません*は**char**、 **nchar**、 **varchar**、または**nvarchar**です。  
+ **'** *table_or_view* **'**  
+ 有効な ID 増分値を確認するためのテーブルまたはビューを表す[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *table_or_view* は引用符、変数、関数、または列名で囲まれた文字列定数を指定できます。 *table_or_view* は **char**、**nchar**、**varchar**、または **nvarchar**です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **numeric**  
@@ -57,7 +57,7 @@ IDENT_INCR ( 'table_or_view' )
 ## <a name="exceptions"></a>例外  
  エラーが発生した場合、または呼び出し元にオブジェクトの表示権限がない場合は、NULL が返されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーは、ユーザーが所有するまたはをユーザーが許可されているアクセス許可のセキュリティ保護可能なメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (IDENT_INCR など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (IDENT_INCR など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
@@ -72,7 +72,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-increment-value-from-multiple-tables"></a>B. 複数のテーブルの増分値を返す  
- 次の例でテーブルを返します、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]インクリメント値を持つ id 列を含むデータベース。  
+ 次の例では、増分値を持つ ID 列を含む、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースのテーブルを返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -83,7 +83,7 @@ FROM INFORMATION_SCHEMA.TABLES
 WHERE IDENT_INCR(TABLE_SCHEMA + '.' + TABLE_NAME) IS NOT NULL;  
 ```  
   
- 部分的な結果セットを次に示します。  
+ 次に結果セットの一部を示します。  
   
  ```
  TABLE_SCHEMA        TABLE_NAME                IDENT_INCR  
@@ -99,11 +99,11 @@ Production          BillOfMaterials                    1
 ```  
   
 ## <a name="see-also"></a>参照  
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   
- [IDENT_SEED &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [sys.identity_columns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [sys.identity_columns (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   

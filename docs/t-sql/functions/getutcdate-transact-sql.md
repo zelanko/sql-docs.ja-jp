@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getutcdate-transact-sql"></a>GETUTCDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  として現在のデータベース システムのタイムスタンプを返す、 datetime** 値。 データベースのタイム ゾーン オフセットは含まれません。 この値は現在の UTC 時刻 (協定世界時) を表します。 この値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターのオペレーティング システムから取得されます。  
+  として現在のデータベース システムのタイムスタンプを返す、 **datetime** 値。 データベースのタイム ゾーン オフセットは含まれません。 この値は現在の UTC 時刻 (協定世界時) を表します。 この値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターのオペレーティング システムから取得されます。  
   
 > [!NOTE]  
 >  1 秒未満の有効桁数で比較すると、SYSDATETIME と SYSUTCDATETIME の方が GETDATE と GETUTCDATE よりも高い精度を得ることができます。 SYSDATETIMEOFFSET には、システムのタイム ゾーン オフセットが含まれます。 SYSDATETIME、SYSUTCDATETIME、および SYSDATETIMEOFFSET は、date 型と time 型の任意の変数に割り当てることができます。  
@@ -70,7 +70,7 @@ GETUTCDATE()
  **datetime**  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを参照できます GETUTCDATE を参照できる任意の場所、 datetime** 式です。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを参照できます GETUTCDATE を参照できる任意の場所、 **datetime** 式です。  
   
  GETUTCDATE は、非決定的関数です。 この関数を列内で参照するビューと式には、インデックスを付けることができません。  
   

@@ -60,7 +60,7 @@ FILEGROUP_NAME ( filegroup_id )
  **nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
- filegroup_id *に対応する、 data_space_id* 内の列、 sys.filegroups** カタログ ビューです。  
+ *filegroup_id* に対応する、 **data_space_id** 内の列、 **sys.filegroups** カタログ ビューです。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`1` データベースでファイル グループ ID が [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] のファイル グループ名を返します。  

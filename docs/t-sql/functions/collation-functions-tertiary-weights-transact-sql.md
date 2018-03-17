@@ -51,7 +51,7 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 第 3 の SQL 照合順序で定義される **char**、**varchar**、または **varchar(max)** 型の[式](../../t-sql/language-elements/expressions-transact-sql.md) を指定します。 これらの照合順序の一覧については、「解説」を参照してください。
   
 ## <a name="return-types"></a>戻り値の型
-TERTIARY_WEIGHTS を返します varbinary **ときに non_Unicode_character_string_expression** は char *または varchar*, 、し、返します varbinary (max) **ときに non_Unicode_character_string_expression** は varchar (max)**です。
+TERTIARY_WEIGHTS を返します **varbinary** ときに *non_Unicode_character_string_expression* は **char** または **varchar**, 、し、返します **varbinary (max)** ときに *non_Unicode_character_string_expression* は **varchar (max)**です。
   
 ## <a name="remarks"></a>Remarks  
 TERTIARY_WEIGHTS returns NULL when *non_Unicode_character_string_expression* is not defined with an SQL tertiary collation. 次の表に、SQL の第 3 の照合順序を示します。
@@ -91,7 +91,7 @@ TERTIARY_WEIGHTS returns NULL when *non_Unicode_character_string_expression* is 
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-TERTIARY_WEIGHTS の値で定義されている計算列の定義で使用するためのもの、 char, 、varchar, 、または varchar (max) 列です。 計算の両方の列にインデックスを定義して、 char**, 、varchar**, 、または varchar (max) **列は、パフォーマンスを向上させることができるときに、 char**, 、varchar**, 、または varchar (max)** 列は、クエリの ORDER BY 句で指定します。
+TERTIARY_WEIGHTS の値で定義されている計算列の定義で使用するためのもの、 **char,** 、**varchar**, 、または **varchar (max)** 列です。 計算の両方の列にインデックスを定義して、 **char**, 、**varchar**, 、または **varchar (max)** 列は、パフォーマンスを向上させることができるときに、 **char,** 、**varchar**, 、または v**archar (max)** 列は、クエリの ORDER BY 句で指定します。
   
 ## <a name="examples"></a>使用例  
 次の例では、`TERTIARY_WEIGHTS` 関数を `char` 列の値に適用するテーブルに計算列を作成します。

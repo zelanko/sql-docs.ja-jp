@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-場合は true を返します。 この* 親の子孫であります。
+場合は true を返します。 *この* 親の子孫であります。
   
 ## <a name="syntax"></a>構文  
   
@@ -53,9 +53,9 @@ SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )
 IsDescendantOf テストを実行する必要がある **hierarchyid** ノード。
   
 ## <a name="return-types"></a>戻り値の型  
-SQL Server の戻り値の型: * ***ビット * *
+**SQL Server の戻り値の型: * *ビット * ***
   
-CLR の戻り値の型:SqlBoolean**
+**CLR の戻り値の型:SqlBoolean**
   
 ## <a name="remarks"></a>Remarks  
 親をルートとするサブツリー内のすべてのノードには true、それ以外のノードには false を返します。

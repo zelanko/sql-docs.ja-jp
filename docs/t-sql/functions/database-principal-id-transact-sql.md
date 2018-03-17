@@ -50,7 +50,7 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
 ## <a name="arguments"></a>引数  
 *principal_name*  
 プリンシパルを表す **sysname** 型の式を指定します。  
-ときに principal_name* は省略すると、現在のユーザーの ID が返されます。 かっこで囲む必要があります。
+ときに *principal_name* は省略すると、現在のユーザーの ID が返されます。 かっこで囲む必要があります。
   
 ## <a name="return-types"></a>戻り値の型
 **int**  

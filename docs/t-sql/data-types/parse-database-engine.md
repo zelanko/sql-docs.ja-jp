@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="parse-database-engine"></a>Parse (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-正規文字列形式に変換する hierarchyid **を hierarchyid** 値。 解析 **から文字列型を変換するとき暗黙的に呼び出されます hierarchyid** が発生します。 逆の役割を果たします ToString[](../../t-sql/data-types/tostring-database-engine.md)です。 Parse() 静的メソッドです。
+正規文字列形式に変換する **hierarchyid** を **hierarchyid** 値。 解析 から文字列型を変換するとき暗黙的に呼び出されます **hierarchyid** が発生します。 逆の役割を果たします [ToString](../../t-sql/data-types/tostring-database-engine.md)です。 Parse() 静的メソッドです。
   
 ## <a name="syntax"></a>構文  
   
@@ -58,12 +58,12 @@ static SqlHierarchyId Parse ( SqlString input )
 CLR : 評価される String 値。
   
 ## <a name="return-types"></a>戻り値の型  
-SQL Server の戻り値の型: * ***hierarchyid * *
+**SQL Server の戻り値の型: * *hierarchyid * ***
   
 **CLR 戻り値の型:SqlHierarchyId**
   
 ## <a name="remarks"></a>Remarks  
-場合 解析 **の有効な文字列表記ではない値を受け取る、 hierarchyid**, 、例外が発生します。 たとえば場合、 char** データ型には、末尾のスペースが含まれている、例外が発生します。
+場合 解析 の有効な文字列表記ではない値を受け取る、 **hierarchyid**, 、例外が発生します。 たとえば場合、 **cha**r データ型には、末尾のスペースが含まれている、例外が発生します。
   
 ## <a name="examples"></a>使用例  
   

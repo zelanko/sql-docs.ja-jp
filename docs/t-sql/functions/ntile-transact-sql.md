@@ -1,5 +1,5 @@
 ---
-title: "NTILE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: NTILE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -49,19 +49,19 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
   
 ## <a name="arguments"></a>引数  
  *integer_expression*  
- 各パーティションを分割するグループの数を表す正の整数定数式を指定します。 *あれば、任意*型でも**int**、または**bigint**です。  
+ 各パーティションを分割するグループの数を表す正の整数定数式を指定します。 *であれば、*任意 の型に**int**, 、または **bigint**です。  
   
- \<partition_by_clause >  
- によって生成される結果セットに分割、 [FROM](../../t-sql/queries/from-transact-sql.md)句のパーティション関数が適用されます。 PARTITION BY の構文を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ \<partition_by_clause>  
+ [ は、FROM](../../t-sql/queries/from-transact-sql.md) 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 PARTITION BY の構文で、を参照してください。[ 経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
- \<order_by_clause >  
- NTILE 値がパーティション内の行に割り当てられる順序を決定します。 整数は、列を表すことができないときに、 \<order_by_clause > は、順位付け関数で使用します。  
+ \<order_by_clause>  
+ NTILE 値がパーティション内の行に割り当てられる順序を決定します。 \<<order_by_clause> が順位付け関数で使用される場合、整数値で列を表すことはできません。  
   
 ## <a name="return-types"></a>戻り値の型  
  **bigint**  
   
-## <a name="remarks"></a>解説  
- パーティション内の行の数がで割り切れるかどうか*であれば、任意*、2 つのサイズが異なる 1 つのメンバーによってグループが生成されます。 OVER 句で指定される順序では、大きいグループが小さいグループよりも前になります。 たとえば、行の総数が 53 でグループの数が 5 の場合、最初の 3 つのグループに 11 行が割り当てられ、残りの 2 つのグループにはそれぞれ 10 行が割り当てられます。 一方、行の総数がグループの数で割り切れる場合、行はそれらのグループに均等に割り当てられます。 たとえば、行の総数が 50 で、5 つのグループがある場合、各グループに 10 行ずつ割り当てられます。  
+## <a name="remarks"></a>Remarks  
+ パーティション内の行の数がで割り切れるかどうか *であれば、任意,* 、2 つのサイズが異なる 1 つのメンバーによってグループが生成されます。 OVER 句で指定される順序では、大きいグループが小さいグループよりも前になります。 たとえば、行の総数が 53 でグループの数が 5 の場合、最初の 3 つのグループに 11 行が割り当てられ、残りの 2 つのグループにはそれぞれ 10 行が割り当てられます。 一方、行の総数がグループの数で割り切れる場合、行はそれらのグループに均等に割り当てられます。 たとえば、行の総数が 50 で、5 つのグループがある場合、各グループに 10 行ずつ割り当てられます。  
   
  NTILE は非決定的です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
   
@@ -112,7 +112,7 @@ Pamela         Ansman-Wolfe          4         1,352,577.13   98027
 ```  
   
 ### <a name="b-dividing-the-result-set-by-using-partition-by"></a>B. PARTITION BY を使用して結果セットを分割する  
- 次の例では追加、`PARTITION BY`例 A のコードに渡す引数行が最初にパーティション分割`PostalCode`ごとに 4 つのグループに分割し、`PostalCode`です。 この例では、変数もを宣言`@NTILE_Var`の値を指定する変数を使用して、*であれば、任意*パラメーター。  
+ 次の例では、`PARTITION BY` 引数を例 A のコードに追加します。まず、行を `PostalCode` でパーティション分割した後、それぞれの `PostalCode` 内で 4 つのグループに分割します。 この例では、`@NTILE_Var` 変数も宣言し、その変数を使用して *integer_expression* パラメーターの値を指定します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -156,10 +156,10 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 (14 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-dividing-rows-into-groups"></a>C. 行をグループに分割する  
- 次の例では、NTILE 関数を使用して、次の 4 つのグループごとに、割り当てられている販売ノルマ 2003 年の販売員のセットを分割します。 行の総数がグループの数で割り切れるにないため、最初のグループの 5 行あり、残りのグループを持っている 4 つの行。  
+ 次の例では、各自に割り当てられた 2003 年度の販売ノルマに基づいて、一連の販売員を 4 つのグループに分割します。 行の総数がグループの数で割り切れないため、最初のグループに 5 つの行が割り当てられ、残りのグループにはそれぞれ 4 つの行が割り当てられます。  
   
 ```  
 -- Uses AdventureWorks  
@@ -199,7 +199,7 @@ Tsoflias          4          867,000.00
 ```  
   
 ### <a name="d-dividing-the-result-set-by-using-partition-by"></a>D. PARTITION BY を使用して結果セットを分割する  
- 次の例は、例 A のコードに PARTITION BY 引数を追加します。行が最初にパーティション分割`SalesTerritoryCountry`ごとに 2 つのグループに分割し、`SalesTerritoryCountry`です。 OVER 句内の ORDER BY、NTILE を orders、ORDER BY、SELECT ステートメントの結果セットを並べ替えますことを確認します。  
+ 次の例では、PARTITION BY 引数を例 A のコードに追加します。まず、行を `SalesTerritoryCountry` でパーティション分割した後、それぞれの `SalesTerritoryCountry` 内で 2 つのグループに分割します。 OVER 句の ORDER BY は STDEV を並べ替え、SELECT ステートメントの NTILE と ORDER BY は結果セットを並べ替えることに注意してください。  
   
 ```  
 -- Uses AdventureWorks  
@@ -242,10 +242,10 @@ Ansman-Wolfe      2        1,183,000.00     United States
 ```  
   
 ## <a name="see-also"></a>参照  
- [ランクと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rank-transact-sql.md)   
- [DENSE_RANK &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/dense-rank-transact-sql.md)   
- [ROW_NUMBER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/row-number-transact-sql.md)   
- [順位付け関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
+ D[ENSE_RANK (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [ROW_NUMBER (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/row-number-transact-sql.md)   
+ [順位付け関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

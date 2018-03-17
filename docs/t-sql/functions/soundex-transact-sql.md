@@ -1,5 +1,5 @@
 ---
-title: "SOUNDEX (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SOUNDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,20 +50,20 @@ SOUNDEX ( character_expression )
   
 ## <a name="arguments"></a>引数  
  *character_expression*  
- 英数字で構成[式](../../t-sql/language-elements/expressions-transact-sql.md)の文字データです。 *character_expression*定数、変数、または列を指定できます。  
+ 文字データの英数字[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *character_expression* には定数、変数、または列を指定できます。  
   
 ## <a name="return-types"></a>戻り値の型  
  **varchar**  
   
-## <a name="remarks"></a>解説  
- SOUNDEX は、英数字の文字列を、文字列の音声表現に基づいた 4 文字のコードに変換します。 コードの最初の文字の最初の文字は、 *character_expression*大文字に変換されます。 コードの 2 番目から 4 番目までの文字は、式の中の文字を表す数字です。 A、E、I、O、U、H、W、Y の各文字は、文字列の先頭の文字である場合を除き無視されます。 4 文字のコードを生成するために必要な場合は、最後にゼロが追加されます。 SOUNDEX コードの詳細については、次を参照してください。 [The Soundex Indexing System](https://www.archives.gov/research/census/soundex.html)です。  
+## <a name="remarks"></a>Remarks  
+ SOUNDEX は、英数字の文字列を、文字列の音声表現に基づいた 4 文字のコードに変換します。 コードの最初の文字の最初の文字は *character_expression*, 、大文字に変換されます。 コードの 2 番目から 4 番目までの文字は、式の中の文字を表す数字です。 A、E、I、O、U、H、W、Y の各文字は、文字列の先頭の文字である場合を除き無視されます。 4 文字のコードを生成するために必要な場合は、最後にゼロが追加されます。 SOUNDEX コードの詳細については、次を参照してください。 [The Soundex Indexing System](https://www.archives.gov/research/census/soundex.html)です。  
   
  さまざまな文字列の SOUNDEX コードを比較して、文字列の音声表現の類似性を確認できます。 DIFFERENCE 関数は、2 つの文字列に対して SOUNDEX を実行し、それらの文字列の SOUNDEX コードの類似性を表す整数を返します。  
   
  SOUNDEX は照合順序に依存します。 文字列関数は入れ子にすることができます。  
   
 ## <a name="soundex-compatibility"></a>SOUNDEX の互換性  
- 以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、SOUNDEX 関数で SOUNDEX のルールのサブセットを適用します。 データベース互換性レベル 110 以上で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]より完全なセット、ルールが適用されます。  
+ 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、SOUNDEX 関数で SOUNDEX のルールのサブセットが適用されていました。 データベースの互換性レベルが 110 以上の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではより完全なルール セットが適用されます。  
   
  互換性レベル 110 以上へのアップグレード後に、SOUNDEX 関数を使用するインデックス、ヒープ、または CHECK 制約の再構築が必要になる場合があります。  
   
@@ -71,17 +71,17 @@ SOUNDEX ( character_expression )
   
 -   SOUNDEX で定義された CHECK 制約は、アップグレード時に無効になります。 無効になった制約を有効にするには、`ALTER TABLE <table> WITH CHECK CHECK CONSTRAINT ALL` ステートメントを実行します。  
   
--   ステートメントを実行して、インデックスが再構築されるまで、SOUNDEX で定義されている列をクエリすることはできません (インデックス付きビューを含む) を含む、永続化されたインデックスが計算された`ALTER INDEX ALL ON <object> REBUILD`です。  
+-   SOUNDEX で定義された保存される計算列を含むインデックス (インデックス付きビューを含む) は、`ALTER INDEX ALL ON <object> REBUILD` ステートメントを実行してインデックスが再構築されるまでクエリできません。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、SOUNDEX 関数、およびこれに関連した DIFFERENCE 関数を示しています。 最初の例では、標準的な`SOUNDEX`すべての子音に対して返される値。 母音、文字 `SOUNDEX`、2 文字の連続、および文字 `Smith` は含まれないため、`Smythe` と `y` に対する `h` では同じ結果が返されます。  
+ 次の例では、SOUNDEX 関数、およびこれに関連した DIFFERENCE 関数を示しています。 最初の例では、標準 `SOUNDEX` 値がすべての子音に対して返されます。 母音、文字 `SOUNDEX`、2 文字の連続、および文字 `Smith` は含まれないため、`Smythe` と `y` に対する `h` では同じ結果が返されます。  
   
 ```  
 -- Using SOUNDEX  
 SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Latin1_General の照合順序に対して有効です。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Latin1_General の照合順序に有効です。  
   
 ```  
   
@@ -91,7 +91,7 @@ S530  S530
 (1 row(s) affected)  
 ```  
   
- `DIFFERENCE`関数の違いを比較し、`SOUNDEX`パターンの結果。 次の例では、母音が違うだけの 2 つの文字列の場合を示しています。 差が返される`4`、最下位の可能な違いです。  
+ `DIFFERENCE` 関数は、`SOUNDEX` パターンの結果を比較します。 次の例では、母音が違うだけの 2 つの文字列の場合を示しています。 返される値は、類似性が最も高い `4` です。  
   
 ```  
 -- Using DIFFERENCE  
@@ -99,7 +99,7 @@ SELECT DIFFERENCE('Smithers', 'Smythers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Latin1_General の照合順序に対して有効です。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Latin1_General の照合順序に有効です。  
   
 ```  
 -----------   
@@ -108,14 +108,14 @@ GO
 (1 row(s) affected)  
 ```  
   
- 次の例では子音が異なります。したがって、返される値は`2`、大きな違いです。  
+ 次の例では子音が異なるため、類似性が低い `2` が返されます。  
   
 ```  
 SELECT DIFFERENCE('Anothers', 'Brothers');  
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Latin1_General の照合順序に対して有効です。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Latin1_General の照合順序に有効です。  
   
 ```  
 -----------   
@@ -125,8 +125,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [違い &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/difference-transact-sql.md)   
- [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)   
+ [DIFFERENCE &#40;Transact-SQL&#41;](../../t-sql/functions/difference-transact-sql.md)   
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [ALTER DATABASE 互換性レベル &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

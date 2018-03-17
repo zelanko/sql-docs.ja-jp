@@ -1,5 +1,5 @@
 ---
-title: "Db_id 関数 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DB_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -51,13 +51,13 @@ DB_ID ( [ 'database_name' ] )
   
 ## <a name="arguments"></a>引数  
 '*database_name*'  
-対応するデータベース ID を返す基になるデータベースの名前です。 *database_name*は**sysname**です。 場合*database_name*は省略すると、現在のデータベース ID が返されます。
+対応するデータベース ID を返す基になるデータベースの名前です。 *database_name* は **sysname** です。 場合 *database_name* は省略すると、現在のデータベース ID が返されます。
   
 ## <a name="return-types"></a>戻り値の型
 **int**
   
-## <a name="permissions"></a>Permissions  
-場合、呼び出し元の**DB_ID**データベースの所有者ではないと、データベースが**マスター**または**tempdb**、対応する行を表示するために必要な最小限のアクセス許可は、ALTER ANY DATABASE または VIEW ANY DATABASE のサーバー レベル権限、または CREATE DATABASE 権限、**マスター**データベース。 呼び出し元が接続しているデータベースは常に **sys.databases**で確認できます。
+## <a name="permissions"></a>アクセス許可  
+**DB_ID** の呼び出し元がデータベースの所有者ではなく、データベースが **master** でも **tempdb** でもない場合、対応する行を表示するには、少なくとも **master** データベースで、ALTER ANY DATABASE または VIEW ANY DATABASE のサーバーレベルの権限、あるいは、CREATE DATABASE の権限が必要です。 呼び出し元が接続しているデータベースは常に **sys.databases**で確認できます。
   
 > [!IMPORTANT]  
 >  既定は、パブリックのロールは、データベースの情報を表示するすべてのログインを許可する、VIEW ANY DATABASE 権限を持っています。 データベースを検出する機能からのログインをブロックするには、パブリックから VIEW ANY DATABASE 権限を取り消すまたは個別のログインの VIEW ANY DATABASE 権限を拒否します。  
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-database-id-of-a-specified-database"></a>B. 指定したデータベースのデータベース ID を返す  
-次の例、データベースの ID を返します、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。
+次の例は、データベースの ID を返して、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース。
   
 ```sql
 SELECT DB_ID(N'AdventureWorks2008R2') AS [Database ID];  
@@ -81,7 +81,7 @@ GO
 ```  
   
 ### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>C. DB_ID を使用してシステム関数パラメーターの値を指定する  
-次の例で`DB_ID`のデータベース ID を返す、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]システム関数でデータベース`sys.dm_db_index_operational_stats`です。 この関数はデータベース ID を最初のパラメーターとしてとります。
+この例では、`DB_ID` を使用して、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースのデータベース ID をシステム関数 `sys.dm_db_index_operational_stats` で返します。 この関数はデータベース ID を最初のパラメーターとしてとります。
   
 ```sql
 DECLARE @db_id int;  
@@ -103,25 +103,25 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-return-the-id-of-the-current-database"></a>D. 現在のデータベースの ID を返します  
+### <a name="d-return-the-id-of-the-current-database"></a>D. 現在のデータベースの ID を返す  
 この例では、現在のデータベースのデータベース ID を返します。
   
 ```sql
 SELECT DB_ID();  
 ```  
   
-### <a name="e-return-the-id-of-a-named-database"></a>E. 指定されたデータベースの ID を返します。  
-次の例では、AdventureWorksDW2012 データベースのデータベース ID を返します。
+### <a name="e-return-the-id-of-a-named-database"></a>E. 指定したデータベースの ID を返す  
+この例では、AdventureWorksDW2012 データベースのデータベース ID を返します。
   
 ```sql
 SELECT DB_ID('AdventureWorksPDW2012');  
 ```  
   
 ## <a name="see-also"></a>参照
-[DB_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/db-name-transact-sql.md)  
-[メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[DB_NAME (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/db-name-transact-sql.md)  
+[メタデータ関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
 [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)
   

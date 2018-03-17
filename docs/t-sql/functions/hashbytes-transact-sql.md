@@ -64,7 +64,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以前の場合、指定できる入力値は 8000 バイトまでに制限されます。  
   
 ## <a name="return-value"></a>戻り値  
- varbinary (最大 8,000 バイト)  
+ **varbinary** (最大 8,000 バイト)  
   
 ## <a name="examples"></a>使用例  
   

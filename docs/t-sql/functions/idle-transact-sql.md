@@ -55,7 +55,7 @@ ms.lasthandoff: 11/21/2017
  **整数 (integer)**  
   
 ## <a name="remarks"></a>Remarks  
- いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行の統計情報 sp_monitor**です。  
+ いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行の統計情報 **sp_monitor**です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時から現在までのアイドル時間をミリ秒単位で返します。 値をマイクロ秒に変換するときに演算オーバーフローが発生しないようにするため、この例では値の 1 つを `float` 型に変換しています。  

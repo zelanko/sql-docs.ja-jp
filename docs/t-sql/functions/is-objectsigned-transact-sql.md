@@ -52,7 +52,7 @@ IS_OBJECTSIGNED (
  セキュリティ保護可能なクラスの型。  
   
  *@object_id*  
- テストされるオブジェクトの object_id。 * のデータ型は int@object_id 型です。  
+ テストされるオブジェクトの object_id。 *@object_id* のデータ型は **int** 型です。  
   
  *@class*  
  オブジェクトのクラス :  
@@ -61,7 +61,7 @@ IS_OBJECTSIGNED (
   
 -   'asymmetric key'  
   
- * のデータ型は sysname@class です。  
+ *@class* のデータ型は **sysname** です。  
   
  *@thumbprint*  
  オブジェクトの SHA 拇印。 *@thumbprint* は **varbinary(32)** 型です。  
@@ -84,7 +84,7 @@ IS_OBJECTSIGNED (
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-displaying-extended-properties-on-a-database"></a>A. データベースの拡張プロパティを表示する  
- 次の例では、master** データベースの spt_fallback_db テーブルがスキーマ署名証明書によって署名されているかどうかをテストします。  
+ 次の例では、**master** データベースの spt_fallback_db テーブルがスキーマ署名証明書によって署名されているかどうかをテストします。  
   
 ```  
 USE master;  
@@ -108,6 +108,6 @@ IS_OBJECTSIGNED(
 ```  
   
 ## <a name="see-also"></a>参照  
- sys.fn_check_object_signatures (&) #40 です。TRANSACT-SQL と #41 です。[](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
+ [sys.fn_check_object_signatures (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
   
   

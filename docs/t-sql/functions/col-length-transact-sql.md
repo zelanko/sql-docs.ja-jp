@@ -1,5 +1,5 @@
 ---
-title: "COL_LENGTH (TRANSACT-SQL) |Microsoft ドキュメント"
+title: COL_LENGTH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ COL_LENGTH ( 'table' , 'column' )
 ```  
   
 ## <a name="arguments"></a>引数  
-**'** *テーブル* **'**  
-列の長さに関する情報を取得するテーブルの名前を指定します。 *テーブル*型の式は、 **nvarchar**です。
+**'** *table* **'**  
+列の長さに関する情報を取得するテーブルの名前を指定します。 *テーブル* 型の式は、 **nvarchar**です。
   
-**'** *列* **'**  
-長さを取得する列の名前を指定します。 *列*型の式は、 **nvarchar**です。
+**'** *column* **'**  
+長さを取得する列の名前を指定します。 ** 列* * 型の式は、 **nvarchar**です。
   
 ## <a name="return-type"></a>戻り値の型
 **smallint**
@@ -60,10 +60,10 @@ COL_LENGTH ( 'table' , 'column' )
 ## <a name="exceptions"></a>例外  
 エラーが発生した場合、または呼び出し元にオブジェクトの表示権限がない場合は、NULL が返されます。
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーは、ユーザーが所有するまたはをユーザーが許可されているアクセス許可のセキュリティ保護可能なメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (COL_LENGTH  など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有している、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (COL_LENGTH  など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。
   
-## <a name="remarks"></a>解説  
-型の列の**varchar**で宣言された、 **max**指定子 (**varchar (max)**)、COL_LENGTH では値-1 が返されます。
+## <a name="remarks"></a>Remarks  
+型の列の **varchar** で宣言された、 **max** 指定子 (**varchar (max)**)、COL_LENGTH では値-1 が返されます。
   
 ## <a name="examples"></a>使用例  
 次の例では、`varchar(40)` 型と `nvarchar(40)` 型の列の値を返します。
@@ -88,8 +88,8 @@ VarChar     NVarChar
   
 ## <a name="see-also"></a>参照
 [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)  
-[COL_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/col-name-transact-sql.md)  
+[メタデータ関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[COL_NAME (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/col-name-transact-sql.md)  
 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)
   
   

@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返します、 varbinary** テーブルまたはビューを挿入または更新された列を示すビット パターンです。 COLUMNS_UPDATED は、[!INCLUDE[tsql](../../includes/tsql-md.md)] の INSERT または UPDATE トリガーの内部のどこでも使用でき、そのトリガーが特定の動作を実行すべきかどうかをテストすることができます。
+返します、 **varbinary** テーブルまたはビューを挿入または更新された列を示すビット パターンです。 COLUMNS_UPDATED は、[!INCLUDE[tsql](../../includes/tsql-md.md)] の INSERT または UPDATE トリガーの内部のどこでも使用でき、そのトリガーが特定の動作を実行すべきかどうかをテストすることができます。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -51,7 +51,7 @@ COLUMNS_UPDATED ( )
 **varbinary**
   
 ## <a name="remarks"></a>Remarks  
-COLUMNS_UPDATED は、実行される UPDATE または INSERT アクションを複数の列でテストします。 テストするには 1 つの列の UPDATE または INSERT の試行、次のように使用します。 UPDATE()[](../../t-sql/functions/update-trigger-functions-transact-sql.md)です。
+COLUMNS_UPDATED は、実行される UPDATE または INSERT アクションを複数の列でテストします。 テストするには 1 つの列の UPDATE または INSERT の試行、次のように使用します。 [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md)です。
   
 COLUMNS_UPDATED は、左から右に並べられた 1 つ以上のバイトを返します。各バイトの最下位ビットは右端になります。 左端のバイトの右端のビットがテーブル内の最初の列を表し、右から 2 番目のビットは 2 番目の列を、それ以下のビットも同様の順で列を表します。 トリガーが作成されるテーブルに列が 9 個以上ある場合、COLUMNS_UPDATED は複数のバイトを返します。最下位バイトが左端になります。 INSERT 動作では、列には明示的な値または暗黙的な (NULL) 値が挿入されるので、COLUMNS_UPDATED は、すべての列に対して TRUE を返します。
   

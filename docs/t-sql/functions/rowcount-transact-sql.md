@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  最後のステートメントの影響を受けた行数を返します。 行の数が 20億を超える場合は、次のようを使用して ROWCOUNT_BIG[](../../t-sql/functions/rowcount-big-transact-sql.md)です。  
+  最後のステートメントの影響を受けた行数を返します。 行の数が 20億を超える場合は、次のようを使用して [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md)です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 -   @@ROWCOUNT を 0 にリセットしますが、クライアントにはその値を返しません。  
   
- 単純な割り当てを行うステートメントの場合、@@ROWCOUNT の値は常に 1 に設定されます。 行はクライアントに送信されません。 これらのステートメントの例を示します。 設定local_variable*, 、RETURN、READTEXT、および選択せずに、クエリ SELECT getdate や SELECT などのステートメントを実行する ' **一般テキスト*'**です。  
+ 単純な割り当てを行うステートメントの場合、@@ROWCOUNT の値は常に 1 に設定されます。 行はクライアントに送信されません。 これらのステートメントの例を示します。 設定*local_variable*, 、RETURN、READTEXT、および選択せずに、クエリ SELECT getdate や SELECT **'***などのステートメントを実行する* **'** *一般テキスト*'です。  
   
  クエリで割り当てを行うステートメント、またはクエリ セットで RETURN を使用するステートメントは、クエリに影響を受ける行数、またはクエリで読み取られる行数を @@ROWCOUNT 値に設定します。たとえば、SELECT @*local_variable* = c1 FROM t1 のようになります。  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
  USE、SET \<option>、DEALLOCATE CURSOR、CLOSE CURSOR、BEGIN TRANSACTION、COMMIT TRANSACTION などのステートメントは、ROWCOUNT 値を 0 にリセットします。  
   
- ネイティブ コンパイル ストアド プロシージャでは、直前の @@ROWCOUNT が維持されます。 ネイティブ コンパイル ストアド プロシージャ内の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、@@ROWCOUNT は設定しないでください。 詳細については、次を参照してください。 ネイティブ コンパイル ストアド プロシージャ[](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)です。  
+ ネイティブ コンパイル ストアド プロシージャでは、直前の @@ROWCOUNT が維持されます。 ネイティブ コンパイル ストアド プロシージャ内の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、@@ROWCOUNT は設定しないでください。 詳細については、次を参照してください。 [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`UPDATE` ステートメントを実行し、`@@ROWCOUNT` を使用して、変更された行があるかどうかを調べます。  

@@ -41,7 +41,7 @@ JSON_MODIFY ( expression , path , newValue )
  *式 (expression)*  
  式。 通常、変数またはを JSON テキストを含む列の名前。  
   
- JSON_MODIFY **エラーが返されます 式** 有効な JSON が含まれていません。  
+ **JSON_MODIFY** エラーが返されます *式* 有効な JSON が含まれていません。  
   
  *path*  
  更新するプロパティを指定する JSON path 式。

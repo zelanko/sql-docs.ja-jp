@@ -52,10 +52,10 @@ FILEPROPERTY ( file_name , property )
   
 ## <a name="arguments"></a>引数  
  *file_name*  
- プロパティ情報を返す基になる、現在のデータベースに関連付けられたファイルの名前を含む式を指定します。 file_name *は nchar (128)*です。  
+ プロパティ情報を返す基になる、現在のデータベースに関連付けられたファイルの名前を含む式を指定します。 *file_name* は **nchar (128)**です。  
   
  *property*  
- 返されるファイル プロパティの名前を含む式を指定します。 プロパティ *は varchar (128)*, 、値は次のいずれかを指定することができます。  
+ 返されるファイル プロパティの名前を含む式を指定します。 *プロパティ* は **varchar (128)**, 、値は次のいずれかを指定することができます。  
   
 |ReplTest1|Description|返される値|  
 |-----------|-----------------|--------------------|  
@@ -68,7 +68,7 @@ FILEPROPERTY ( file_name , property )
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- file_name *に対応する、 名前* 内の列、 sys.master_files **または sys.database_files** カタログ ビューです。  
+ *file_name* に対応する、 **名前** 内の列、 **sys.master_files** または **sys.database_files** カタログ ビューです。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`IsPrimaryFile` データベース内のファイル名 `AdventureWorks_Data` の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] プロパティに対する設定を返します。  

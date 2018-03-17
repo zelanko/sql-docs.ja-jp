@@ -47,14 +47,14 @@ ms.lasthandoff: 11/21/2017
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-として現在のデータベース システムのタイムスタンプを返す、 datetime** 、データベース タイム ゾーン オフセットを持たない値。 この値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターのオペレーティング システムから取得されます。
+として現在のデータベース システムのタイムスタンプを返す、 **datetime** 、データベース タイム ゾーン オフセットを持たない値。 この値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターのオペレーティング システムから取得されます。
   
 > [!NOTE]  
 >  1 秒未満の有効桁数で比較すると、SYSDATETIME と SYSUTCDATE の方が GETDATE と GETUTCDATE よりも高い精度を得ることができます。 SYSDATETIMEOFFSET には、システムのタイム ゾーン オフセットが含まれます。 SYSDATETIME、SYSUTCDATE、および SYSDATETIMEOFFSET は、date 型と time 型の任意の変数に割り当てることができます。  
   
-この関数には、等価な ANSI SQL GETDATE[](../../t-sql/functions/getdate-transact-sql.md)です。
+この関数には、等価な ANSI SQL [GETDATE](../../t-sql/functions/getdate-transact-sql.md)です。
   
-すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数を参照してください 日付と時刻のデータ型および関数[](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)です。
+すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] [日付と時刻のデータ型および関数](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)を参照してください 日付と時刻のデータ型および関数です。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -71,7 +71,7 @@ CURRENT_TIMESTAMP
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを参照できます CURRENT_TIMESTAMP を参照できる任意の場所、 datetime** 式です。
+ステートメントを参照[!INCLUDE[tsql](../../includes/tsql-md.md)]できます CURRENT_TIMESTAMP を参照できる任意の場所、 **datetime** 式です。
   
 CURRENT_TIMESTAMP は非決定的関数です。 この列を参照するビューと式には、インデックスを付けることができません。
   

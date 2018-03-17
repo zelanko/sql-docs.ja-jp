@@ -63,7 +63,7 @@ SIGN ( numeric_expression )
 |**int/smallint/tinyint**|**int**|  
 |**money/smallmoney**|**money**|  
 |**numeric/decimal**|**numeric/decimal**|  
-|その他の型|**float**|  
+|**その他の型**|**float**|  
   
 ## <a name="examples"></a>使用例  
  次の例では、-1 から 1 までの値の SIGN 値を返します。  

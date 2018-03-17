@@ -58,13 +58,13 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  インデックスが組み込まれているスキーマの名前です。  
   
  *table_or_view_name*  
- テーブルまたはインデックス付きビューの名前です。 table_or_view_name* 単一引用符で区切る必要があるあり、データベース名とスキーマ名で完全に修飾することができます。  
+ テーブルまたはインデックス付きビューの名前です。 *table_or_view_name* 単一引用符で区切る必要があるあり、データベース名とスキーマ名で完全に修飾することができます。  
   
  *index_id*  
- インデックスの ID です。 index_ID *は int*です。  
+ インデックスの ID です。 *index_ID* は **int**です。  
   
  *key_id*  
- インデックス キー列の位置です。 key_ID *is int*.  
+ インデックス キー列の位置です。 *key_ID* is **int**.  
   
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar (128** **)**  

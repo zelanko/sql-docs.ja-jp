@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-角度を持つサイン (正弦) は、指定されたラジアンで返します float** 式です。 これは、アークサイン (逆正弦) とも呼ばれます。
+角度を持つサイン (正弦) は、指定されたラジアンで返します **float** 式です。 これは、アークサイン (逆正弦) とも呼ばれます。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,7 +54,7 @@ ASIN ( float_expression )
 **float**
   
 ## <a name="examples"></a>使用例  
-次の例は、 float** 式と、指定された角度の ASIN を返します。
+次の例は、 **float** 式と、指定された角度の ASIN を返します。
   
 ```sql
 /* The first value will be -1.01. This fails because the value is   

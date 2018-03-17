@@ -50,31 +50,31 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
   
 ## <a name="arguments"></a>引数  
  *cert_ID*  
- 対称キーの保護に使用されている証明書の ID です。 Cert_ID *は int*です。  
+ 対称キーの保護に使用されている証明書の ID です。 *Cert_ID* は **int**です。  
   
  *cert_password*  
- 証明書の秘密キーを保護するパスワードを指定します。 秘密キーがデータベースのマスター キーで保護されている場合は NULL を指定できます。 cert_password *は nvarchar*です。  
+ 証明書の秘密キーを保護するパスワードを指定します。 秘密キーがデータベースのマスター キーで保護されている場合は NULL を指定できます。 *cert_password* は **nvarchar**です。  
   
  '*ciphertext*'  
- キーで暗号化されたデータです。 暗号化テキスト *は varbinary*です。  
+ キーで暗号化されたデータです。 *暗号化テキスト* は **varbinary**です。  
   
  @ciphertext  
  キーを使用して暗号化されたデータを含む **varbinary** 型の変数を指定します。  
   
  *add_authenticator*  
- 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 データを暗号化するときに EncryptByKey に渡されたものと同じ値である必要があります。 1** 認証子が使用された場合。 add_authenticator *は int*です。  
+ 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 データを暗号化するときに EncryptByKey に渡されたものと同じ値である必要があります。 **1** 認証子が使用された場合。 *add_authenticator* は **int**です。  
   
  @add_authenticator  
  認証子がプレーン テキストと共に暗号化されているかどうかを示します。 データを暗号化する際に EncryptByKey に渡された値と同じである必要があります。  
   
  *authenticator*  
- 認証子の生成元のデータを指定します。 EncryptByKey に渡された値と一致する必要があります。 認証システム *は sysname*です。  
+ 認証子の生成元のデータを指定します。 EncryptByKey に渡された値と一致する必要があります。 *認証システム* は **sysname**です。  
   
  @authenticator  
  認証子の生成元のデータを含む変数を指定します。 EncryptByKey に渡された値と一致する必要があります。  
   
 ## <a name="return-types"></a>戻り値の型  
- varbinary** 8,000 バイトの最大サイズ。  
+ **varbinary** 8,000 バイトの最大サイズ。  
   
 ## <a name="remarks"></a>Remarks  
  DecryptByKeyAutoCert は、OPEN SYMMETRIC KEY および DecryptByKey の機能を組み合わせたもので、 対称キーの暗号化解除と、そのキーを使用した暗号化テキストの暗号化解除を 1 回の操作で行います。  

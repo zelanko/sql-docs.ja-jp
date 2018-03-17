@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   データベース ユーザーの ID 番号を返します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して DATABASE_PRINCIPAL_ID[](../../t-sql/functions/database-principal-id-transact-sql.md) 代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して [DATABASE_PRINCIPAL_ID](../../t-sql/functions/database-principal-id-transact-sql.md) 代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,13 +55,13 @@ USER_ID ( [ 'user' ] )
   
 ## <a name="arguments"></a>引数  
  *user*  
- 使用するユーザー名を指定します。 ユーザー *は nchar*です。 場合、 char **値を指定すると、暗黙的に変換されます nchar**です。 かっこで囲む必要があります。  
+ 使用するユーザー名を指定します。 *ユーザー* は **nchar**です。 場合、 **char** 値を指定すると、暗黙的に変換されます **nchar**です。 かっこで囲む必要があります。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- ときに ユーザー* は省略すると、現在のユーザーと見なされます。 パラメーターに NULL が含まれていると、NULL が返されます。EXECUTE AS の後で USER_ID が呼び出されると、USER_ID は権限を借用したコンテキストの ID を返します。  
+ ときに *ユーザー* は省略すると、現在のユーザーと見なされます。 パラメーターに NULL が含まれていると、NULL が返されます。EXECUTE AS の後で USER_ID が呼び出されると、USER_ID は権限を借用したコンテキストの ID を返します。  
   
  特定のデータベース ユーザーにマップされない Windows プリンシパルがグループのメンバーシップでデータベースにアクセスした場合、USER_ID では 0 (public の ID) が返されます。 このプリンシパルがスキーマを指定せずにオブジェクトを作成した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では Windows プリンシパルにマップされた暗黙のユーザーとスキーマが作成されます。 このときに作成されたユーザーを使用して、データベースに接続することはできません。 暗黙のユーザーにマップされた Windows プリンシパルが USER_ID を呼び出すと、暗黙のユーザーの ID が返されます。  
   

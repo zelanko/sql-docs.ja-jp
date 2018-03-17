@@ -49,7 +49,7 @@ CURRENT_TRANSACTION_ID( )
 **bigint**
   
 ## <a name="return-value"></a>戻り値  
-* *から取得した現在のセッションで、現在のトランザクションのトランザクション ID sys.dm_tran_current_transaction (&) #40 です。TRANSACT-SQL と #41;[](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md).**
+* *から取得した現在のセッションで、現在のトランザクションのトランザクション ID [sys.dm_tran_current_transaction (&) #40 です。TRANSACT-SQL と #41;.**](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md)
   
 ## <a name="permissions"></a>アクセス許可  
 すべてのユーザーには、現在のセッションのトランザクション ID を返すことができます。

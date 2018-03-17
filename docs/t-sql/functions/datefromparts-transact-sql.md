@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-返します、 日付** 指定された年、月、および日の値です。
+返します、 **日付** 指定された年、月、および日の値です。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -58,12 +58,12 @@ DATEFROMPARTS ( year, month, day )
 **date**
   
 ## <a name="remarks"></a>Remarks  
-DATEFROMPARTS **返します、 日付** と値には、指定された年、月と日を設定する日付部分と時間部分では、既定値に設定します。 引数が有効でない場合は、エラーが発生します。 必要な引数が NULL の場合は、NULL が返されます。
+**DATEFROMPARTS** 返します、 **日付** と値には、指定された年、月と日を設定する日付部分と時間部分では、既定値に設定します。 引数が有効でない場合は、エラーが発生します。 必要な引数が NULL の場合は、NULL が返されます。
   
 この関数は、リモート処理は実行することのできる [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] サーバー上とします。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のバージョンのサーバーには、リモート処理が行われません。
   
 ## <a name="examples"></a>使用例  
-次の例で、* * * * DATEFROMPARTS 関数。
+次の例で、* * * * **DATEFROMPARTS** 関数。
   
 ```sql
 SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;  

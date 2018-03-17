@@ -50,31 +50,31 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
   
 ## <a name="arguments"></a>引数  
  *akey_ID*  
- 対称キーの保護に使用されている非対称キーの ID を指定します。 akey_ID *は int*です。  
+ 対称キーの保護に使用されている非対称キーの ID を指定します。 *akey_ID* は **int**です。  
   
  *akey_password*  
- 非対称キーの秘密キーを保護するパスワードを指定します。 秘密キーがデータベースのマスター キーで保護されている場合は NULL を指定できます。 akey_password *は nvarchar*です。  
+ 非対称キーの秘密キーを保護するパスワードを指定します。 秘密キーがデータベースのマスター キーで保護されている場合は NULL を指定できます。 *akey_password* は **nvarchar**です。  
   
  '*ciphertext*'  
- キーで暗号化されたデータです。 暗号化テキスト *は varbinary*です。  
+ キーで暗号化されたデータです。 *暗号化テキスト* は **varbinary**です。  
   
  @ciphertext  
  キーを使用して暗号化されたデータを含む **varbinary** 型の変数を指定します。  
   
  *add_authenticator*  
- 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 データを暗号化する際に EncryptByKey に渡された値と同じである必要があります。 認証子が使用されている場合は 1 です。 add_authenticator *は int*です。  
+ 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 データを暗号化する際に EncryptByKey に渡された値と同じである必要があります。 認証子が使用されている場合は 1 です。 *add_authenticato*r は **int**です。  
   
  @add_authenticator  
  認証子がプレーン テキストと共に暗号化されているかどうかを示します。 データを暗号化する際に EncryptByKey に渡された値と同じである必要があります。  
   
  *authenticator*  
- 認証子の生成元のデータを指定します。 EncryptByKey に渡された値と一致する必要があります。 認証システム *は sysname*です。  
+ 認証子の生成元のデータを指定します。 EncryptByKey に渡された値と一致する必要があります。 *認証システム* は **sysname**です。  
   
  @authenticator  
  認証子の生成元のデータを含む変数を指定します。 EncryptByKey に渡された値と一致する必要があります。  
   
 ## <a name="return-types"></a>戻り値の型  
- varbinary** 8,000 バイトの最大サイズ。  
+ **varbinary** 8,000 バイトの最大サイズ。  
   
 ## <a name="remarks"></a>Remarks  
  DecryptByKeyAutoAsymKey は、OPEN SYMMETRIC KEY および DecryptByKey の機能を組み合わせたもので、 対称キーの暗号化解除と、そのキーを使用した暗号化テキストの暗号化解除を 1 回の操作で行います。  

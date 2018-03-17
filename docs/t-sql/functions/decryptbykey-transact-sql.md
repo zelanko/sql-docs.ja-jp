@@ -51,22 +51,22 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>引数  
  *ciphertext*  
- キーで暗号化されたデータを指定します。 暗号化テキスト *は varbinary*です。  
+ キーで暗号化されたデータを指定します。 *ciphertext* は **varbinary**です。  
   
  **@ciphertext**  
  キーを使用して暗号化されているデータを含む **varbinary** 型の変数を指定します。  
   
  *add_authenticator*  
- 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 この値は、データの暗号化時に EncryptByKey に渡された値と同じである必要があります。 add_authenticator *は int*です。  
+ 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 この値は、データの暗号化時に EncryptByKey に渡された値と同じである必要があります。 *add_authenticator* は **int**です。  
   
  *authenticator*  
- 認証子を生成する基のデータを指定します。 EncryptByKey に渡された値と一致する必要があります。 認証システム *は sysname*です。  
+ 認証子を生成する基のデータを指定します。 EncryptByKey に渡された値と一致する必要があります。 *authenticator* は **sysname**です。  
   
  **@authenticator**  
  認証子の生成元のデータを含む変数を指定します。 EncryptByKey に渡された値と一致する必要があります。  
   
 ## <a name="return-types"></a>戻り値の型  
- varbinary** 8,000 バイトの最大サイズ。  
+ **varbinary** 8,000 バイトの最大サイズ。  
   
 ## <a name="remarks"></a>Remarks  
  DecryptByKey では対称キーが使用されます。 この対称キーはデータベースで開かれている必要があります。 複数のキーを同時に開いておくことができます。 暗号化テキストの暗号化解除をする直前にキーを開く必要はありません。  

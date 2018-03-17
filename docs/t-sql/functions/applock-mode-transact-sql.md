@@ -1,5 +1,5 @@
 ---
-title: "APPLOCK_MODE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: APPLOCK_MODE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -49,16 +49,16 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
   
 ## <a name="arguments"></a>引数  
 '*database_principal*'  
-データベース内のオブジェクトに対する権限を許可されるユーザー、ロール、またはアプリケーション ロールです。 関数の呼び出し元のメンバーである必要があります*database_principal*、関数を呼び出すに dbo、または db_owner 固定データベース ロール。
+データベース内のオブジェクトに対する権限を許可されるユーザー、ロール、またはアプリケーション ロールです。 関数を呼び出すには、*database_principal*、dbo、または固定データベース ロール db_owner のメンバーであることが必要です。
   
 '*resource_name*'  
-クライアント アプリケーションによって指定されたロック リソース名を指定します。 アプリケーション側では、リソース名が一意になるよう管理されている必要があります。 指定した名前は内部的にハッシュされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロック マネージャーに格納できる値に変換されます。 *resource_name*は**nvarchar (255)**既定値はありません。 *resource_name*はバイナリ比較し、現在のデータベースの照合順序の設定に関係なく大文字小文字を区別します。
+クライアント アプリケーションによって指定されたロック リソース名を指定します。 アプリケーション側では、リソース名が一意になるよう管理されている必要があります。 指定した名前は内部的にハッシュされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロック マネージャーに格納できる値に変換されます。 *resource_name*は **nvarchar (255**) 既定値はありません。 *resource_name* はバイナリ比較し、現在のデータベースの照合順序の設定に関係なく大文字小文字を区別します。
   
 '*lock_owner*'  
-これは、ロックの所有者である、 *lock_owner*ロックが要求されたときの値します。 *lock_owner*は**nvarchar (32)**、値は、いずれかを指定できます**トランザクション**(既定) または**セッション**です。
+ロックの所有者を指定します。これはロックが要求されたときの *lock_owner* 値です。 *lock_owner* は **nvarchar (32)**, 、値には、いずれかを指定して **トランザクション** (既定値) または **セッション**です。
   
 ## <a name="return-types"></a>戻り値の型
-**nvarchar (32)**
+**nvarchar(32)**
   
 ## <a name="return-value"></a>戻り値
 特定のアプリケーション リソースで、ロック所有者によって保持されているロック モードを返します。 ロック モードは次のいずれかの値になります。
@@ -67,16 +67,16 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 |-|-|-|  
 |**NoLock**|**Update**|**\*SharedIntentExclusive**|  
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
-|**共有**|**[Exclusive]**||  
+|**Shared**|**[Exclusive]**||  
   
 * このロック モードは他のロック モードの組み合わせであり、sp_getapplock を使用して明示的に取得することはできません。
   
 ## <a name="function-properties"></a>関数のプロパティ
 **非決定的**
   
-**Nonindexable**
+**インデックス不可**
   
-**Nonparallelizable**
+**並列不可**
   
 ## <a name="examples"></a>使用例  
 次の例では、個別にセッションを開いている 2 人のユーザー (ユーザー A とユーザー B) が、一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。
@@ -137,8 +137,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照
-[APPLOCK_TEST &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/applock-test-transact-sql.md)  
-[sp_getapplock &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
-[sp_releaseapplock &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
+[APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)  
+[sp_getapplock (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+[sp_releaseapplock (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
   
   

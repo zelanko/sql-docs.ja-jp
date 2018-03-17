@@ -58,7 +58,7 @@ NEWSEQUENTIALID ( )
  **uniqueidentifier**  
   
 ## <a name="remarks"></a>Remarks  
- NEWSEQUENTIALID() は、型のテーブル列の既定の制約でのみ使用できます uniqueidentifier**です。 例 :  
+ NEWSEQUENTIALID() は、型のテーブル列の既定の制約でのみ使用できます **uniqueidentifier**です。 例 :  
   
 ```  
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT NEWSEQUENTIALID());   

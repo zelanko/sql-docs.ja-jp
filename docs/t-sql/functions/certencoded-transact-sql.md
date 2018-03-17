@@ -1,5 +1,5 @@
 ---
-title: "CERTENCODED (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CERTENCODED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-証明書の公開部分をバイナリ形式で返します。 この関数は、証明書の ID を受け取り、エンコードされた証明書を返します。 結果はバイナリに渡すことが**証明書を作成しています.バイナリと**新しい証明書を作成します。
+証明書の公開部分をバイナリ形式で返します。 この関数は、証明書の ID を受け取り、エンコードされた証明書を返します。 バイナリの結果を **CREATE CERTIFICATE … WITH BINARY** に渡して、新しい証明書を作成できます。
   
 ## <a name="syntax"></a>構文  
   
@@ -44,21 +44,21 @@ CERTENCODED ( cert_id )
   
 ## <a name="arguments"></a>引数  
 *cert_id*  
-**Certificate_id**証明書のです。 使用してまたは sys.certificates から使用できます。 これは、 [CERT_ID (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cert-id-transact-sql.md)関数。 *cert_id*は型です**int。**
+証明書の **certificate_id** です。 これは、sys.certificates または [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md) 関数を使用して取得できます。 *cert_id* は **int** 型です。
   
 ## <a name="return-types"></a>戻り値の型
 **varbinary**
   
-## <a name="remarks"></a>解説  
-**CERTENCODED**と**CERTPRIVATEKEY**一緒に使用するバイナリ形式で証明書の異なる部分を返します。
+## <a name="remarks"></a>Remarks  
+**CERTENCODED** と **CERTPRIVATEKEY**を一緒に使用すると、バイナリの形式で証明書の異なる部分を返します。
   
-## <a name="permissions"></a>Permissions  
-**CERTENCODED**はパブリックに使用できます。
+## <a name="permissions"></a>アクセス許可  
+**CERTENCODED** はパブリックに使用できます。
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="simple-example"></a>簡単な例  
-次の例は、という証明書を作成`Shipping04`しを使用して、 **CERTENCODED**を証明書のバイナリ エンコードを返す関数。
+次の例では、`Shipping04` という名前の証明書を作成した後、その証明書のバイナリ エンコードを **CERTENCODED** 関数を使用して返します。
   
 ```sql
 CREATE DATABASE TEST1;  
@@ -74,7 +74,7 @@ SELECT CERTENCODED(CERT_ID('Shipping04'));
 ```  
   
 ### <a name="b-copying-a-certificate-to-another-database"></a>B. 別のデータベースへの証明書のコピー  
-次より複雑な例では、2 つのデータベースを作成する`SOURCE_DB`と`TARGET_DB`です。 この例では、`SOURCE_DB` に証明書を作成し、その証明書を `TARGET_DB` にコピーした後、`SOURCE_DB` 内の暗号化されたデータを `TARGET_DB` 内の証明書のコピーを使用して暗号化解除します。
+次のより複雑な例では、2 つのデータベース (`SOURCE_DB` と `TARGET_DB`) を作成します。 この例では、`SOURCE_DB` に証明書を作成し、その証明書を `TARGET_DB` にコピーした後、`SOURCE_DB` 内の暗号化されたデータを `TARGET_DB` 内の証明書のコピーを使用して暗号化解除します。
   
 この例の環境を作成するために、`SOURCE_DB` データベースと `TARGET_DB` データベースおよびそれぞれのマスター キーを作成します。 その後、`SOURCE_DB` に証明書を作成します。
   
@@ -133,7 +133,7 @@ UNION
 SELECT * FROM TARGET_DB.sys.certificates;  
 ```  
   
-1 つのバッチで暗号化されたデータが示すように実行される次のコード`SOURCE_DB`で復号化できる`TARGET_DB`です。
+単一のバッチとして実行される次のコードでは、`SOURCE_DB` 内の暗号化されたデータを、`TARGET_DB` に暗号化解除します。
   
 ```sql
 USE SOURCE_DB;  
@@ -162,7 +162,7 @@ GO
 ## <a name="see-also"></a>参照
 [セキュリティ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
-[CERTPRIVATEKEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/certprivatekey-transact-sql.md)  
+[CERTPRIVATEKEY (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/certprivatekey-transact-sql.md)  
 [sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "OBJECT_DEFINITION (TRANSACT-SQL) |Microsoft ドキュメント"
+title: OBJECT_DEFINITION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ OBJECT_DEFINITION ( object_id )
   
 ## <a name="arguments"></a>引数  
  *object_id*  
- 使用するオブジェクトの ID を指定します。 *object_id*は**int**、現在のデータベース コンテキスト内のオブジェクトが想定されます。  
+ 使用するオブジェクトの ID を指定します。 *object_id* は **int**, 、現在のデータベース コンテキスト内のオブジェクトが想定されます。  
   
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar(max)**  
@@ -60,8 +60,8 @@ OBJECT_DEFINITION ( object_id )
   
  ユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なリソースのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (OBJECT_DEFINITION など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]であると推定*object_id*が現在のデータベース コンテキスト。 オブジェクト定義の照合順序は、常に呼び出し元のデータベース コンテキストの照合順序と一致しています。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  を前提としています *object_id* が現在のデータベース コンテキストでします。 オブジェクト定義の照合順序は、常に呼び出し元のデータベース コンテキストの照合順序と一致しています。  
   
  OBJECT_DEFINITION は、次の種類のオブジェクトに適用されます。  
   
@@ -85,13 +85,13 @@ OBJECT_DEFINITION ( object_id )
   
 -   V = ビュー  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION のいずれかの権限を許可された人が表示できます。 これらの権限は **db_owner**、 **db_ddladmin**、および **db_securityadmin** 固定データベース ロールのメンバーが暗黙的に保有します。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-the-source-text-of-a-user-defined-object"></a>A. ユーザー定義オブジェクトのソース テキストを返す  
- 次の例では、ユーザー定義トリガー `uAddress` の定義を `Person` スキーマで返します。 組み込み関数は、`OBJECT_ID`するトリガーのオブジェクト ID を返すために使用、`OBJECT_DEFINITION`ステートメントです。  
+ 次の例では、ユーザー定義トリガー `uAddress` の定義を `Person` スキーマで返します。 組み込み関数 `OBJECT_ID` を使用して、トリガーのオブジェクト ID を `OBJECT_DEFINITION` ステートメントに返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,9 +111,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [OBJECT_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/object-name-transact-sql.md)   
- [OBJECT_ID と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/object-id-transact-sql.md)   
+ [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)   
+ [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.server_sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-sql-modules-transact-sql.md)  

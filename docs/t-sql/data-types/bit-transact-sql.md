@@ -37,9 +37,9 @@ ms.lasthandoff: 11/21/2017
   1、0、または NULL の値をとる整数型です。  
   
 ## <a name="remarks"></a>Remarks  
-[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の記憶域を最適化 ビット** 列です。 8 つ以内がある場合 ビット** 列、テーブル内の列は 1 バイトとして格納します。 9 ～ 16 がある場合 ビット** 列、列 2 バイトとして格納されている場合は、およびなどです。
+[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の記憶域を最適化**bit** 列です。 8 つ以内がある場合 **ビット** 列、テーブル内の列は 1 バイトとして格納します。 9 ～ 16 がある場合 **bit** 列、列 2 バイトとして格納されている場合は、およびなどです。
   
-変換できる文字列値 TRUE および FALSE ビット** 値: TRUE は 1 に変換して、FALSE は 0 に変換されます。
+変換できる文字列値 TRUE および FALSE **bit** 値: TRUE は 1 に変換して、FALSE は 0 に変換されます。
   
 bit 型に変換すると、0 以外の値はすべて 1 になります。
   

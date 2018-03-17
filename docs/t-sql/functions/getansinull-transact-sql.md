@@ -50,7 +50,7 @@ GETANSINULL ( [ 'database' ] )
   
 ## <a name="arguments"></a>引数  
  '*database*'  
- NULL 値を許容するかどうかの情報を返す対象データベースの名前です。 データベース*は char* または nchar**です。 場合 char**, 、データベース** に暗黙的に変換が nchar*です。  
+ NULL 値を許容するかどうかの情報を返す対象データベースの名前です。 *データベース*は **char** または **nchar**です。 場合 **char**, 、*データベース* に暗黙的に変換が **nchar**です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  

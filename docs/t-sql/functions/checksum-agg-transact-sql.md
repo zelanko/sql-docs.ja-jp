@@ -1,5 +1,5 @@
 ---
-title: "CHECKSUM_AGG (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CHECKSUM_AGG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -54,22 +54,22 @@ DISTINCT
 CHECKSUM_AGG で、一意な値のチェックサムを返します。
   
 *式 (expression)*  
-整数[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 集計関数とサブクエリは許可されません。
+整数[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 集計関数とサブクエリは使用できません。
   
 ## <a name="return-types"></a>戻り値の型
-すべてのチェックサムを返します*式*値として**int**です。
+すべてのチェックサムを返します *式* 値としての **int**です。
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 CHECKSUM_AGG は、テーブル内の変更を検出する場合に使用できます。
   
 テーブル内での行の順序は、CHECKSUM_AGG の結果に影響しません。 また、CHECKSUM_AGG 関数は、DISTINCT キーワードおよび GROUP BY 句と共に使用できます。
   
 いずれかの式の値を変更した場合は通常、そのリストのチェックサムも変わりますが、 チェックサムが変わらない場合もわずかですがあります。
   
-CHECKSUM_AGG には、他の集計関数とほぼ同じ機能があります。 詳細については、次を参照してください。[集計関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md).
+CHECKSUM_AGG には、他の集計関数とほぼ同じ機能があります。 詳細については、を参照してください。 [集計関数 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/aggregate-functions-transact-sql.md).
   
 ## <a name="examples"></a>使用例  
-次の例で`CHECKSUM_AGG`の変更を検出するために、`Quantity`の列、`ProductInventory`テーブルに、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。
+次の例では使用 `CHECKSUM_AGG` の変更を検出するために、 `Quantity` の列、 `ProductInventory` テーブルに、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース。
   
 ```sql
 --Get the checksum value before the column value is changed.  
@@ -103,7 +103,7 @@ FROM Production.ProductInventory;
 ```  
   
 ## <a name="see-also"></a>参照
-[チェックサム &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/checksum-transact-sql.md)  
-[句 &#40; 経由TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md)
+[チェックサム (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/checksum-transact-sql.md)  
+[句 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

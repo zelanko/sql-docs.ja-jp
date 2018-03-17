@@ -88,7 +88,7 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
  暗号文が暗号化されたときに認証子が含まれていた場合、暗号化を解除するときにその認証子を提供する必要があります。 暗号化を解除するときに提供された認証子の値が、そのデータで暗号化された認証子の値と一致しない場合、暗号化解除は失敗します。  
   
 ## <a name="examples"></a>使用例  
- 次の例で更新されたレコードの暗号化を解除 EncryptByPassPhrase[](../../t-sql/functions/encryptbypassphrase-transact-sql.md)です。  
+ 次の例で更新されたレコードの暗号化を解除 [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md)です。  
   
 ```  
 USE AdventureWorks2012;  

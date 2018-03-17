@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getlevel-database-engine"></a>GetLevel (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-ツリー内でのノード this* の深さを表す整数を返します。
+ツリー内でのノード *this* の深さを表す整数を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +49,7 @@ SqlInt16 GetLevel ( )
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
-SQL Server の戻り値の型: * ***smallint * *
+**SQL Server の戻り値の型: * *smallint * ***
   
 **CLR の戻り値の型: SqlInt16**
   
@@ -61,7 +61,7 @@ GetLevel 幅優先の検索のインデックスに非常に便利です。 詳�
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-the-hierarchy-level-as-a-column"></a>A. 階層レベルを列として返す  
-次の例のテキスト表現を返します、 hierarchyid**, 、階層レベル、 EmpLevel** テーブル内のすべての行の列。
+次の例のテキスト表現を返します、 **hierarchyid**, 、階層レベル、 **EmpLevel** テーブル内のすべての行の列。
   
 ```sql
 SELECT OrgNode.ToString() AS Text_OrgNode,   

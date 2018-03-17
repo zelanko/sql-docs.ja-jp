@@ -1,5 +1,5 @@
 ---
-title: "CURRENT_USER (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CURRENT_USER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ CURRENT_USER
 ## <a name="return-types"></a>戻り値の型
 **sysname**
   
-## <a name="remarks"></a>解説  
-CURRENT_USER では、現在のセキュリティ コンテキストの名前が返されます。 EXECUTE AS への呼び出しでコンテキストが切り替えられた後に CURRENT_USER を実行した場合、CURRENT_USER では権限を借用したコンテキストの名前が返されます。 Windows プリンシパルには、グループのメンバーシップを使用して、データベースがアクセスした場合は、グループの名前ではなく Windows プリンシパルの名前が返されます。
+## <a name="remarks"></a>Remarks  
+CURRENT_USER では、現在のセキュリティ コンテキストの名前が返されます。 EXECUTE AS への呼び出しでコンテキストが切り替えられた後に CURRENT_USER を実行した場合、CURRENT_USER では権限を借用したコンテキストの名前が返されます。 Windows プリンシパルがグループのメンバーシップを使ってデータベースにアクセスした場合、グループの名前ではなく Windows プリンシパルの名前が返されます。
   
-現在のユーザーのログインを返すを参照してください[SUSER_NAME (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/suser-name-transact-sql.md)と[SYSTEM_USER (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/system-user-transact-sql.md).
+現在のユーザーのログインを返すには、を参照してください。 SUSER_NAME (& a) #40 です。TRANSACT-SQL と #41;[ と ](../../t-sql/functions/suser-name-transact-sql.md)[SYSTEM_USER (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/system-user-transact-sql.md).
   
 ## <a name="examples"></a>使用例  
   
@@ -67,7 +67,7 @@ GO
 ```  
   
 ### <a name="b-using-currentuser-as-a-default-constraint"></a>B. DEFAULT 制約として CURRENT_USER を使用する  
-次の例を使用するテーブルを作成する`CURRENT_USER`として、`DEFAULT`の制約、 `order_person` sales 行の列です。
+次の例では、sales 行の `CURRENT_USER` 列に対する `DEFAULT` 制約として `order_person` を使用するテーブルを作成します。
   
 ```sql
 USE AdventureWorks2012;  
@@ -140,12 +140,12 @@ Wanida
 ```
   
 ## <a name="see-also"></a>参照
-[USER_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/user-name-transact-sql.md)  
-[SYSTEM_USER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/system-user-transact-sql.md)  
+[ユーザー名 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/user-name-transact-sql.md)  
+[SYSTEM_USER (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/system-user-transact-sql.md)  
 [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
-[システム関数 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   
 

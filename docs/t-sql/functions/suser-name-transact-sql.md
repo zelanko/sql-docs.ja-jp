@@ -53,7 +53,7 @@ SUSER_NAME ( [ server_user_id ] )
   
 ## <a name="arguments"></a>引数  
  *server_user_id*  
- ユーザーのログイン ID 番号です。 *server_user_id*(省略可能)。**int**. *server_user_id* には、任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザーのログイン ID 番号、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するためのアクセス許可があるグループのログイン ID 番号を指定できます。 場合 server_user_id* はこのオプションを指定しないと、現在のユーザーのログインの識別名が返されます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。  
+ ユーザーのログイン ID 番号です。 *server_user_id*(省略可能)。**int**. *server_user_id* には、任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザーのログイン ID 番号、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するためのアクセス許可があるグループのログイン ID 番号を指定できます。 場合 *server_user_id* はこのオプションを指定しないと、現在のユーザーのログインの識別名が返されます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。  
   
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar(128)**  
@@ -61,7 +61,7 @@ SUSER_NAME ( [ server_user_id ] )
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 では、サーバー ユーザー識別番号 (SUID) の代わりにセキュリティ識別番号 (SID) が使用されます。  
   
- SUSER_NAME では、syslogins** システム テーブル内にエントリがあるログインに対してのみログイン名が返されます。  
+ SUSER_NAME では、**syslogins** システム テーブル内にエントリがあるログインに対してのみログイン名が返されます。  
   
  SUSER_NAME は、選択リストや WHERE 句、および式が許可される場所であればどこでも使用できます。ただし、パラメーターを指定しない場合であっても、その後に常にかっこを指定する必要があります。  
   

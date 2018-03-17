@@ -68,9 +68,9 @@ JSON のパスを解析するための厳密でないまたは strict モード�
   
  場合は、値は、オブジェクトまたは配列には。  
   
--   厳密でないモードで JSON_QUERY** は null を返します。  
+-   厳密でないモードで **JSON_QUERY** は null を返します。  
   
--   厳格モードで JSON_QUERY** はエラーを返します。  
+-   厳格モードで **JSON_QUERY** はエラーを返します。  
   
 ## <a name="remarks"></a>Remarks  
 

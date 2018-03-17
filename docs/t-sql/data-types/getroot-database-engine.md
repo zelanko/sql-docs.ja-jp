@@ -49,7 +49,7 @@ static SqlHierarchyId GetRoot ( )
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
-SQL Server の戻り値の型: * ***hierarchyid * *
+**SQL Server の戻り値の型: * *hierarchyid * ***
   
 **CLR 戻り値の型:SqlHierarchyId**
   

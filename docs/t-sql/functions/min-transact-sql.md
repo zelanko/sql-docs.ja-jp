@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  式内の最小値を返します。 続くことがあります、 OVER 句[](../../t-sql/queries/select-over-clause-transact-sql.md)です。  
+  式内の最小値を返します。 続くことがあります、 [OVER 句](../../t-sql/queries/select-over-clause-transact-sql.md)です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,15 +67,15 @@ MIN ( expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )
  重複する値は 1 つだけカウントします。 DISTINCT は MIN では意味がなく、ISO との互換性を保つためだけに指定可能になっています。  
   
  *式 (expression)*  
- 定数、列名、関数、および算術演算子、ビット演算子、文字列演算子の組み合わせを指定します。 使用できる最小 数値**, 、char**, 、varchar**, 、一意識別子**, 、または datetime **、列は使用できません ビット** 列です。 集計関数とサブクエリは使用できません。  
+ 定数、列名、関数、および算術演算子、ビット演算子、文字列演算子の組み合わせを指定します。 使用できる最小 **数値**, 、**char**, 、**varchar**, 、**一意識別子**, 、または **datetime** 、列は使用できません **ビット** 列です。 集計関数とサブクエリは使用できません。  
   
  詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* 操作が実行される論理的順序を決定します。 *order_by_clause* は必須です。 詳細については、を参照してください。 経由句 (&) #40 です。TRANSACT-SQL と #41;[](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* 操作が実行される論理的順序を決定します。 *order_by_clause* は必須です。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>戻り値の型  
- 式*と同じ値を返します。  
+ *式*と同じ値を返します。  
   
 ## <a name="remarks"></a>Remarks  
  MIN は NULL 値をすべて無視します。  

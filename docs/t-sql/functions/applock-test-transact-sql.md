@@ -1,5 +1,5 @@
 ---
-title: "APPLOCK_TEST (TRANSACT-SQL) |Microsoft ドキュメント"
+title: APPLOCK_TEST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -50,16 +50,16 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
   
 ## <a name="arguments"></a>引数  
 **'** *database_principal* **'**  
-データベース内のオブジェクトに対する権限を許可されるユーザー、ロール、またはアプリケーション ロールです。 関数の呼び出し元のメンバーである必要があります*database_principal*、 **dbo**、または**db_owner**関数を正常に呼び出すために、固定データベース ロール。
+データベース内のオブジェクトに対する権限を許可されるユーザー、ロール、またはアプリケーション ロールです。 関数を呼び出すには、*database_principal*、**dbo**、または固定データベース ロール **db_owner** のメンバーであることが必要です。
   
 **'** *resource_name* **'**  
-クライアント アプリケーションによって指定されたロック リソース名を指定します。 アプリケーション側で、リソースが一意になるように管理しなければなりません。 指定した名前は内部的にハッシュされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロック マネージャーに格納できる値に変換されます。 *resource_name*は**nvarchar (255)**既定値はありません。 *resource_name*はバイナリ比較は、現在のデータベースの照合順序の設定に関係なく大文字小文字が区別されます。
+クライアント アプリケーションによって指定されたロック リソース名を指定します。 アプリケーション側で、リソースが一意になるように管理しなければなりません。 指定した名前は内部的にハッシュされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロック マネージャーに格納できる値に変換されます。 *resource_name*は **nvarchar (255**) 既定値はありません。 *resource_name* はバイナリ比較し、現在のデータベースの照合順序の設定に関係なく大文字小文字を区別します。
   
 **'** *lock_mode* **'**  
-特定のリソースに対して取得されるロック モードを指定します。 *lock_mode*は**nvarchar (32)**既定値はありません。 値は、次のいずれかを指定できます: **Shared**、**更新**、 **IntentShared**、 **IntentExclusive**、**排他**.
+特定のリソースに対して取得されるロック モードを指定します。 *lock_mode* は **nvarchar (32)** 、既定値はありません。 **Shared**、**Update**、**IntentShared**、**IntentExclusive**、**Exclusive** のいずれかの値をとります。
   
 **'** *lock_owner* **'**  
-これは、ロックの所有者である、 *lock_owner*ロックが要求されたときの値します。 *lock_owner*は**nvarchar (32)**です。 値を指定できます**トランザクション**(既定) または**セッション**です。 場合は既定値または**トランザクション**が明示的に指定されて、APPLOCK_TEST は、トランザクション内から実行する必要があります。
+ロックの所有者を指定します。これはロックが要求されたときの *lock_owner* 値です。 *lock_owner* は **nvarchar (32)**です。 この値は **Transaction** (既定値) または **Session** のいずれかです。 既定値または **Transaction** を明示的に指定した場合、APPLOCK_TEST はトランザクション内から実行する必要があります。
   
 ## <a name="return-types"></a>戻り値の型
 **smallint**
@@ -70,14 +70,14 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 ## <a name="function-properties"></a>関数のプロパティ
 **非決定的**
   
-**Nonindexable**
+**インデックス不可**
   
-**Nonparallelizable**
+**並列不可**
   
 ## <a name="examples"></a>使用例  
-次の例では、2 人のユーザー (**ユーザー A**と**ユーザー B**) の次のシーケンスを実行する個別のセッションで[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。
+次の例では、2 人のユーザー (**ユーザー A** と**ユーザー B**) の次のシーケンスを実行する個別のセッションで [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。
   
-**ユーザー A**を実行します。
+**ユーザー A** が次のステートメントを実行します。
   
 ```sql
 USE AdventureWorks2012;  
@@ -93,7 +93,7 @@ SELECT APPLOCK_MODE('public', 'Form1', 'Transaction');
 GO  
 ```  
   
-**ユーザー B**が実行されます。
+次に、**ユーザー B** が次のステートメントを実行します。
   
 ```sql
 Use AdventureWorks2012;  
@@ -110,14 +110,14 @@ SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');
 GO  
 ```  
   
-**ユーザー A**が実行されます。
+次に、**ユーザー A** が次のステートメントを実行します。
   
 ```sql
 EXEC sp_releaseapplock @Resource='Form1', @DbPrincipal='public';  
 GO  
 ```  
   
-**ユーザー B**が実行されます。
+次に、**ユーザー B** が次のステートメントを実行します。
   
 ```sql
 SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');  
@@ -125,7 +125,7 @@ SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');
 GO  
 ```  
   
-**ユーザー A**と**ユーザー B**し、両方を実行します。
+次に、**ユーザー A** と**ユーザー B** の両方が次のステートメントを実行します。
   
 ```sql
 COMMIT TRAN;  
@@ -133,8 +133,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照
-[APPLOCK_MODE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/applock-mode-transact-sql.md)  
-[sp_getapplock &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
-[sp_releaseapplock &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
+[APPLOCK_MODE &#40;Transact-SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)  
+[sp_getapplock (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+[sp_releaseapplock (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
   
   

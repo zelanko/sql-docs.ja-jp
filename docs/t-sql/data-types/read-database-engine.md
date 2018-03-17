@@ -1,5 +1,5 @@
 ---
-title: "読み取り (データベース エンジン) |Microsoft ドキュメント"
+title: "Read (データベース エンジン) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="read-database-engine"></a>Read (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-読み取りのバイナリ表現の読み取り**SqlHierarchyId**から渡された**BinaryReader**設定と、 **SqlHierarchyId**オブジェクトをその値にします。 使用して読み取りを呼び出すことができません[!INCLUDE[tsql](../../includes/tsql-md.md)]です。 代わりに、CAST または CONVERT を使用してください。
+読み取り のバイナリ表現を読み込む **SqlHierarchyId** から渡されるで **BinaryReader** し、設定、 **SqlHierarchyId** オブジェクトをその値にします。 読み取り [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して呼び出すことができない です。 代わりに、CAST または CONVERT を使用してください。
   
 ## <a name="syntax"></a>構文  
   
@@ -44,17 +44,17 @@ void Read( BinaryReader r )
   
 ## <a name="arguments"></a>引数  
 *r*  
- **BinaryReader**のバイナリ表現に対応するバイナリ ストリームを生成するオブジェクト、 **hierarchyid**ノード。  
+ **hierarchyid** ノードのバイナリ表現に対応するバイナリ ストリームを生成する **BinaryReader** オブジェクト。  
   
 ## <a name="return-types"></a>戻り値の型
- **CLR 型: void の戻り値**  
+ **CLR の戻り値の型: void**  
   
-## <a name="remarks"></a>解説  
- 読み取りでは、入力は検証されません。 無効な binary 入力を指定すると、読み取りで例外が発生する可能性があります。 または、成功し、生成、無効な可能性があります**SqlHierarchyId**オブジェクト メソッドを持つ予期しない結果が得られますか、例外が発生します。  
+## <a name="remarks"></a>Remarks  
+ 読み取り は、入力は検証されません。 無効なバイナリの入力を指定した場合 読み取り で例外が発生します。 または、成功し、生成、無効な場合があります、 **SqlHierarchyId** オブジェクト メソッドを持つ予期しない結果が得られますか、例外が発生します。  
   
- 読み取りのみ呼び出し可能で、新しく作成**SqlHierarchyId**オブジェクト。  
+ **読み取り はのみ呼び出すことで、新しく作成された SqlHierarchyId** オブジェクトです。  
   
- 読み取りが内部で使用される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]である場合など、必要なデータを書き込む場合**hierarchyid**列です。 間で変換が行われるときに、読み取りは内部的に呼び出されますも**varbinary**と**hierarchyid**です。  
+ 読み取り [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内部で使用される 必要な場合、ようにデータを書き込む場合 **hierarchyid** 列です。 読み取り 間で変換が行われるときに内部的に呼び出されますも **varbinary** と **hierarchyid**です。  
   
 ## <a name="examples"></a>使用例  
   
@@ -67,8 +67,8 @@ hid.Read(br);
 ```  
   
 ## <a name="see-also"></a>参照  
-[書き込み &#40;データベース エンジン&#41;](../../t-sql/data-types/write-database-engine.md)  
-[ToString &#40;データベース エンジン&#41;](../../t-sql/data-types/tostring-database-engine.md)  
+[書き込み &#40;データベース エンジン"&"#41 です。](../../t-sql/data-types/write-database-engine.md)  
+[ToString &#40;データベース エンジン"&"#41 です。](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [hierarchyid データ型メソッド リファレンス](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   

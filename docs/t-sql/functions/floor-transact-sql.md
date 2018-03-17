@@ -60,7 +60,7 @@ FLOOR ( numeric_expression )
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- 結果には、計算値と同じデータ型の整数部分 numeric_expression*です。  
+ 結果には、計算値と同じデータ型の整数部分 *numeric_expression*です。  
   
 ```  
 ---------      ---------     -----------  
@@ -74,7 +74,7 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- 結果には、計算値と同じデータ型の整数部分 numeric_expression*です。  
+ 結果には、計算値と同じデータ型の整数部分 *numeric_expression*です。  
   
  ```
  -----   ---------    -----------  

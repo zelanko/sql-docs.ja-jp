@@ -1,5 +1,5 @@
 ---
-title: "GetAncestor (データベース エンジン) |Microsoft ドキュメント"
+title: "GetAncestor (データベース エンジン) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getancestor-database-engine"></a>GetAncestor (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返します、 **hierarchyid**を表す、  *n*番目の先祖*この*です。
+*this* の *n*番目の先祖を表す **hierarchyid** が返されます。
   
 ## <a name="syntax"></a>構文  
   
@@ -50,24 +50,24 @@ SqlHierarchyId GetAncestor ( int n )
   
 ## <a name="arguments"></a>引数  
 *n*  
-**Int**階層で上へ移動するレベル数を表すです。
+n、 **int**, を階層を上がるレベル数を表します。
   
 ## <a name="return-types"></a>戻り値の型
-**SQL Server の戻り値の型: hierarchyid**
+**SQL Server の戻り値の型: * *hierarchyid * ***
   
-**CLR の戻り値の型: SqlHierarchyId**
+**CLR 戻り値の型:SqlHierarchyId**
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 出力の各ノードにとって、現在のノードが指定したレベルの先祖であるかどうかをテストするときに使用します。
   
-大きい数値[GetLevel()](../../t-sql/data-types/getlevel-database-engine.md)が渡されると、NULL が返されます。
+[GetLevel()](../../t-sql/data-types/getlevel-database-engine.md) より大きい数値が渡されると、NULL が返されます。
   
 負の数が渡されると、例外が発生します。
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-finding-the-child-nodes-of-a-parent"></a>A. 親の子ノードを検索する  
-`GetAncestor(1)`持つ従業員を返します`david0`としてその直接の先祖 (親)。 次の例で`GetAncestor(1)`です。
+`GetAncestor(1)` は、`david0` をその直接の先祖 (親) とする従業員を返します。 `GetAncestor(1)` の使用例を次に示します。
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid  
@@ -80,7 +80,7 @@ WHERE OrgNode.GetAncestor(1) = @CurrentEmployee ;
 ```  
   
 ### <a name="b-returning-the-grandchildren-of-a-parent"></a>B. 親の孫を返す  
-`GetAncestor(2)`2 つのレベルがダウンして、現在のノードから、階層内にある従業員を返します。 これは現在のノードの孫にあたります。 次の例で`GetAncestor(2)`です。
+`GetAncestor(2)` は、階層内で現在のノードより 2 つ下のレベルにある従業員を返します。 これは現在のノードの孫にあたります。 `GetAncestor(2)` の使用例を次に示します。
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid  
@@ -93,7 +93,7 @@ WHERE OrgNode.GetAncestor(2) = @CurrentEmployee ;
 ```  
   
 ### <a name="c-returning-the-current-row"></a>C. 現在の行を返す  
-使用して、現在のノードを返す`GetAncestor(0)`、次のコードを実行します。
+`GetAncestor(0)` を使用して現在のノードを返すには、次のコードを実行します。
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid  
@@ -106,7 +106,7 @@ WHERE OrgNode.GetAncestor(0) = @CurrentEmployee ;
 ```  
   
 ### <a name="d-returning-a-hierarchy-level-if-a-table-is-not-present"></a>D. テーブルが存在しない場合に階層レベルを返す  
-`GetAncestor` は、テーブルが存在しない場合でも、階層内の選択したレベルを返します。 たとえば、次のコードは、現在の従業員を指定しを返します、`hierarchyid`なしテーブルへの参照を現在の従業員の先祖のです。
+`GetAncestor` は、テーブルが存在しない場合でも、階層内の選択したレベルを返します。 たとえば、次のコードでは、現在の従業員を指定し、テーブルを参照せずに現在の従業員の先祖の `hierarchyid` を返します。
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid ;  
@@ -117,14 +117,14 @@ SELECT @TargetEmployee.ToString(), @TargetEmployee ;
 ```  
   
 ### <a name="e-calling-a-common-language-runtime-method"></a>E. 共通言語ランタイム メソッドを呼び出す  
-次のコード スニペットの呼び出し、`GetAncestor()`メソッドです。
+次のコード例では `GetAncestor()` メソッドを呼び出します。
   
 ```sql
 this.GetAncestor(1)  
 ```  
   
 ## <a name="see-also"></a>参照
-[IsDescendantOf &#40;データベース エンジン&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
+[IsDescendantOf &#40;データベース エンジン"&"#41 です。](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [hierarchyid データ型メソッド リファレンス](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [階層データ (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 
   指定された*日付*の年を表す整数を返します。  
   
- すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;[](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。[ 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,15 +53,15 @@ YEAR ( date )
   
 ## <a name="arguments"></a>引数  
  *date*  
- **time**、**date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** の値に解決できる式です。 date* 引数には、式、列式、ユーザー定義変数、または文字列リテラルを指定できます。  
+ **time**、**date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** の値に解決できる式です。 *date* 引数には、式、列式、ユーザー定義変数、または文字列リテラルを指定できます。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
 ## <a name="return-value"></a>戻り値  
- * * 年と同じ値を返す DATEPART[](../../t-sql/functions/datepart-transact-sql.md) (年、日). * *  
+ * * 年と同じ値を返す [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**年**、*日*). * *  
   
- 日付には、時刻部分のみが含まれる、戻り値は基準年を 1900 年にです。  
+ *日付*には、時刻部分のみが含まれる、戻り値は基準年を 1900 年にです。  
   
 ## <a name="examples"></a>使用例  
  次のステートメントでは、`2010` が返されます。 これは、年を表す値です。  

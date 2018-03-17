@@ -58,11 +58,11 @@ ms.lasthandoff: 11/21/2017
   
  @@IDENTITY と SCOPE_IDENTITY は、現在のセッション内の任意のテーブルで生成された最後の ID 値を返します。 ただし、SCOPE_IDENTITY が返す値は、現在のスコープの範囲内に限られます。@@IDENTITY の場合は、特定のスコープに限定されません。  
   
- IDENT_CURRENT はスコープとセッションには限定されませんが、特定のテーブルに限定されます。 IDENT_CURRENT は、任意のセッションとスコープの特定のテーブルに対して生成された ID 値を返します。 詳細については、を参照してください。 IDENT_CURRENT (& a) #40 です。TRANSACT-SQL と #41;[](../../t-sql/functions/ident-current-transact-sql.md).  
+ IDENT_CURRENT はスコープとセッションには限定されませんが、特定のテーブルに限定されます。 IDENT_CURRENT は、任意のセッションとスコープの特定のテーブルに対して生成された ID 値を返します。 詳細については、を参照してください。 [IDENT_CURRENT (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/ident-current-transact-sql.md).  
   
  @@IDENTITY 関数のスコープは、実行されるローカル サーバーの現在のセッションです。 この関数は、リモート サーバーまたはリンク サーバーには適用できません。 別のサーバーで ID 値を取得するには、そのリモート サーバーまたはリンク サーバーでストアド プロシージャを実行し、(リモート サーバーまたはリンク サーバーのコンテキスト内で実行されている) そのストアド プロシージャが ID 値を収集し、ローカル サーバー上の呼び出し元の接続にこれを返すようにします。  
   
- @@IDENTITY の値はレプリケーション トリガーやストアド プロシージャ内で使用されるため、レプリケーションによって影響を受けることがあります。 列がレプリケーション アーティクルの一部である場合、ユーザーが作成した最新の ID として @@IDENTITY を信頼することはできません。 @@IDENTITY の代わりに、SCOPE_IDENTITY() 関数の構文を使用できます。 詳細については、を参照してください。 SCOPE_IDENTITY (& a) #40 です。TRANSACT-SQL と #41;[](../../t-sql/functions/scope-identity-transact-sql.md)  
+ @@IDENTITY の値はレプリケーション トリガーやストアド プロシージャ内で使用されるため、レプリケーションによって影響を受けることがあります。 列がレプリケーション アーティクルの一部である場合、ユーザーが作成した最新の ID として @@IDENTITY を信頼することはできません。 @@IDENTITY の代わりに、SCOPE_IDENTITY() 関数の構文を使用できます。 詳細については、を参照してください。[ SCOPE_IDENTITY (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/scope-identity-transact-sql.md)  
   
 > [!NOTE]  
 >  呼び出し元のストアド プロシージャまたは [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、そのユーザーのステートメントのスコープ内で使用される最新の id と、レプリケーションで使用する入れ子になったトリガーのスコープ内での id ではなく返す `SCOPE_IDENTITY()` 関数を使用して書き直す必要があります。  

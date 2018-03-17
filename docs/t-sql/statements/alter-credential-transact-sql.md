@@ -1,5 +1,5 @@
 ---
-title: "ALTER 資格情報 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/19/2015
 ms.prod: sql-non-specified
@@ -57,23 +57,23 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  IDENTITY **='***identity_name***'**  
  サーバーの外部に接続するときに使用するアカウントの名前を指定します。  
   
- シークレット**='***シークレット***'**  
- 送信の認証に必要なシークレットを指定します。 *シークレット*は省略可能です。  
+ SECRET **='***secret***'**  
+ 送信の認証に必要なシークレットを指定します。 *シークレット* は省略可能です。  
   
-## <a name="remarks"></a>解説  
- 資格情報が変更されたとき、両方の値*identity_name*と*シークレット*リセットされます。 SECRET 引数を省略すると、格納されているシークレットの値は NULL に設定されます。  
+## <a name="remarks"></a>Remarks  
+ 資格情報が変更されたとき、両方の値 *identity_name* と *シークレット* がリセットされます。 SECRET 引数を省略すると、格納されているシークレットの値は NULL に設定されます。  
   
- シークレットは、サービス マスター_キーを使用して暗号化されます。 サービス マスター キーが再生成された場合、シークレットは新しいサービス マスター キーを使って再暗号化されます。  
+ シークレットはサービス マスター キーを使用して暗号化されます。 サービス マスター キーが再生成された場合、シークレットは新しいサービス マスター キーを使って再暗号化されます。  
   
- 資格情報に関する情報は、 **sys.credentials**カタログ ビューです。  
+ 資格情報に関する情報は、**sys.credentials** カタログ ビューで確認できます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  ALTER ANY CREDENTIAL 権限が必要です。 資格情報がシステム資格情報の場合は、CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-changing-the-password-of-a-credential"></a>A. 資格情報のパスワードを変更する  
- 次の例と呼ばれる、資格情報に格納されているシークレットを変更する`Saddles`です。 資格情報には、Windows ログイン `RettigB` とそのパスワードが含まれています。 新しいパスワードは、SECRET 句を使って資格情報に追加されます。  
+ 次の例では、`Saddles` という資格情報に格納されているシークレットを変更します。 資格情報には、Windows ログイン `RettigB` とそのパスワードが含まれています。 新しいパスワードは、SECRET 句を使って資格情報に追加されます。  
   
 ```  
 ALTER CREDENTIAL Saddles WITH IDENTITY = 'RettigB',   
@@ -92,8 +92,8 @@ GO
 ## <a name="see-also"></a>参照  
  [資格情報 &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [資格情報 &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-credential-transact-sql.md)   
- [ALTER データベース スコープの資格情報 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
+ [#40 です。 (&)、資格情報を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-credential-transact-sql.md)   
+ [#40 です。 (&)、データベース スコープ ベースの資格情報を変更します。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   

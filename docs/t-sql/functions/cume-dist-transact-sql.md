@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にある値のグループ内の値の累積分布を計算します。 つまり、CUME_DIST は、値のグループにおける指定された値の相対位置を計算します。 行の r*, cume_dist の昇順と仮定して、 r* の値以下の値を持つ行の数は r*, 、パーティションまたはクエリの結果セットで評価される行の数で割った値です。 CUME_DIST は、PERCENT_RANK 関数に似ています。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にある値のグループ内の値の累積分布を計算します。 つまり、CUME_DIST は、値のグループにおける指定された値の相対位置を計算します。 行の *r,* cume_dist の昇順と仮定して、 *r* の値以下の値を持つ行の数は *r*, 、パーティションまたはクエリの結果セットで評価される行の数で割った値です。 CUME_DIST は、PERCENT_RANK 関数に似ています。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,7 +49,7 @@ CUME_DIST( )
   
 ## <a name="arguments"></a>引数  
 OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
-*partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* は、演算が実行される論理的順序を指定します。 order_by_clause* が必要です。 OVER 構文の \<rows or range clause> は、CUME_DIST 関数では指定できません。 詳細については、を参照してください。 経由句 (&) #40 です。TRANSACT-SQL と #41;[](../../t-sql/queries/select-over-clause-transact-sql.md).
+*partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* は、演算が実行される論理的順序を指定します。 *order_by_clause* が必要です。 OVER 構文の \<rows or range clause> は、CUME_DIST 関数では指定できません。 詳細については、を参照してください。[ 経由句 (&) #40 です。TRANSACT-SQL と #41;.](../../t-sql/queries/select-over-clause-transact-sql.md)
   
 ## <a name="return-types"></a>戻り値の型
 **float(53)**

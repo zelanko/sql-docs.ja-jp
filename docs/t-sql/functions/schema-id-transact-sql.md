@@ -52,12 +52,12 @@ SCHEMA_ID ( [ schema_name ] )
   
 |項目|定義|  
 |----------|----------------|  
-|*schema_name*|スキーマの名前を指定します。 *schema_name* は、 **sysname**です。 場合 schema_name* が指定されていない、SCHEMA_ID は、呼び出し元の既定のスキーマの ID を返します。|  
+|*schema_name*|スキーマの名前を指定します。 *schema_name* は、 **sysname**です。 場合 *schema_name* が指定されていない、SCHEMA_ID は、呼び出し元の既定のスキーマの ID を返します。|  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
- 場合に、NULL が返される schema_name* 有効なスキーマではありません。  
+ 場合に、NULL が返される *schema_name* 有効なスキーマではありません。  
   
 ## <a name="remarks"></a>Remarks  
  SCHEMA_ID は、システム スキーマ ID とユーザー定義スキーマ ID を返します。 SCHEMA_ID は、選択リストの中、WHERE 句の中、また、式を使える所であればどこでも呼び出すことができます。  

@@ -1,5 +1,5 @@
 ---
-title: "ORIGINAL_LOGIN (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ORIGINAL_LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="originallogin-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  インスタンスに接続したログインの名前を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 この関数を使用すると、明示的または暗黙的にコンテキストが何度も切り替えられるセッションにおける、元のログインの ID を取得できます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続しているログインの名前を返します。 この関数を使用すると、明示的または暗黙的にコンテキストが何度も切り替えられるセッションにおける、元のログインの ID を取得できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,13 +52,13 @@ ORIGINAL_LOGIN( )
 ## <a name="return-types"></a>戻り値の型  
  **sysname**  
   
-## <a name="remarks"></a>解説  
- この関数は、元の接続コンテキストの ID を監査するときに便利です。 一方などの関数[SESSION_USER](../../t-sql/functions/session-user-transact-sql.md)と[CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md)戻り、現在実行中のコンテキスト、ORIGINAL_LOGIN を最初のインスタンスに接続したログインのidを返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、そのセッションでします。  
+## <a name="remarks"></a>Remarks  
+ この関数は、元の接続コンテキストの ID を監査するときに便利です。 [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) や [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) などの関数では、現在実行しているコンテキストが返されるのに対し、ORIGINAL_LOGIN では、そのセッションで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに最初に接続したログインの ID が返されます。  
   
- NULL を返します[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+ NULL を返します [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、現在のセッション内のステートメントの呼び出し元からの実行コンテキストを切り替える`login1`です。 関数は、`SUSER_SNAME`と`ORIGINAL_LOGIN`現在のセッションのユーザーを返すために使用されます (コンテキストの切り替え先ユーザー) と、元のログイン アカウントです。  
+ 次の例では、現在のセッションの実行コンテキストを、ステートメントの呼び出し元のログインから `login1` に切り替えます。 関数 `SUSER_SNAME` および `ORIGINAL_LOGIN` を使用すると、現在のセッションのユーザー (コンテキストの切り替え先のユーザー) と、元のログイン アカウントが返されます。  
   
 ```  
 USE AdventureWorks2012;  

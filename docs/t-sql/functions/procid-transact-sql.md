@@ -1,5 +1,5 @@
 ---
-title: "@@PROCID (TRANSACT-SQL) |Microsoft ドキュメント"
+title: '@@PROCID (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -38,10 +38,10 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;です。PROCID (TRANSACT-SQL)
+# <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  現在の [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールのオブジェクト識別子 (ID) を返します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールは、ストアド プロシージャ、ユーザー定義関数、またはトリガーです。 @@PROCID指定することはできません CLR モジュールやインプロセス データ アクセス プロバイダー。  
+  現在の [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールのオブジェクト識別子 (ID) を返します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールは、ストアド プロシージャ、ユーザー定義関数、またはトリガーです。 CLR モジュールやインプロセス データ アクセス プロバイダーでは @@PROCID は指定できません。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,9 +83,9 @@ EXECUTE dbo.usp_FindName 'P%', 'A%';
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sys.objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [RAISERROR と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

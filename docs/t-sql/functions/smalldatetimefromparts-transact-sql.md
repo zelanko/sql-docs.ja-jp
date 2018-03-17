@@ -1,5 +1,5 @@
 ---
-title: "SMALLDATETIMEFROMPARTS (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SMALLDATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  返します、 **smalldatetime**指定した日付と時刻の値。  
+  返します、 **smalldatetime** 指定した日付と時刻の値です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,28 +45,28 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
 ```  
   
 ## <a name="arguments"></a>引数  
- *1 年*  
+ *year*  
  年を指定する整数式。  
   
- *月*  
+ *month*  
  月を指定する整数式。  
   
- *1 日*  
+ *day*  
  日を指定する整数式。  
   
- *1 時間*  
+ *hour*  
  時間を指定する整数式。  
   
- *1 分*  
+ *minute*  
  分を指定する整数式。  
   
 ## <a name="return-types"></a>戻り値の型  
  **smalldatetime**  
   
-## <a name="remarks"></a>解説  
- この関数と同様に、完全に初期化されたのコンス トラクター **smalldatetime**値。 引数が有効でない場合は、エラーがスローされます。 必要な引数が NULL の場合は、NULL が返されます。  
+## <a name="remarks"></a>Remarks  
+ この関数は、完全に初期化された **smalldatetime** 値のコンストラクターと同様に動作します。 引数が有効でない場合は、エラーがスローされます。 必要な引数が NULL の場合は、NULL が返されます。  
   
- この関数は、リモート処理は実行することのできる[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]サーバー上とします。 以前のバージョンのサーバーに対してリモート処理は[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。  
+ この関数は、リモート処理は実行することのできる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー上とします。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 下のバージョンのサーバーには、リモート処理されません。  
   
 ## <a name="examples"></a>使用例  
   

@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-ルートからのパスは、パスのノードを返しますに してページャー*, からのパスと、その後 oldRoot* に この*です。
+ルートからのパスは、パスのノードを返しますに *して*ページャー, からのパスと、その後 *oldRoot に* この*です*。
   
 ## <a name="syntax"></a>構文  
   
@@ -56,12 +56,12 @@ SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newR
 ノードを移動するために現在のノードの *oldRoot* セクションを置き換えるノードを表す **hierarchyid**。
   
 ## <a name="return-types"></a>戻り値の型  
-SQL Server の戻り値の型: * ***hierarchyid * *
+**SQL Server の戻り値の型: * *hierarchyid * ***
   
 **CLR 戻り値の型:SqlHierarchyId**
   
 ## <a name="remarks"></a>Remarks  
-ノードを移動して、ツリーを変更するために使用する oldRoot *に してページャー*です。 GetReparentedValue を使用すると、ある階層のノードを階層内の新しい位置に移動できます。 Hierarchyid** データ型を表しますが、階層構造は強制されません。 ユーザーは、hierarchyid が新しい位置に対して正しく構成されていることを確認する必要があります。 一意のインデックス、 hierarchyid** エントリの重複を防止のデータ型に役立ちます。 サブツリー全体の移動例については、「[階層データ &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)」を参照してください。
+ノードを移動して、ツリーを変更するために使用する *oldRoot* に して*ページャー*です。 GetReparentedValue を使用すると、ある階層のノードを階層内の新しい位置に移動できます。 **Hierarchyid** データ型を表しますが、階層構造は強制されません。 ユーザーは、hierarchyid が新しい位置に対して正しく構成されていることを確認する必要があります。 一意のインデックス、 **hierarchyid** エントリの重複を防止のデータ型に役立ちます。 サブツリー全体の移動例については、「[階層データ &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)」を参照してください。
   
 ## <a name="examples"></a>使用例  
   

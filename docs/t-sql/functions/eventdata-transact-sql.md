@@ -75,9 +75,9 @@ EVENTDATA( )
  ログインのセキュリティを保護するために、CREATE LOGIN ステートメントまたは ALTER LOGIN ステートメントの実行時にパスワードは表示されません。  
   
 ## <a name="schemas-returned"></a>返されるスキーマ  
- EVENTDATA は、型の値を返す xml**です。 既定では、すべてのイベントのスキーマ定義は、[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd ディレクトリにインストールされます。  
+ EVENTDATA は、型の値を返す **xml**です。 既定では、すべてのイベントのスキーマ定義は、[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd ディレクトリにインストールされます。  
   
- イベント スキーマを公開する代わりに、 Microsoft SQL Server の XML スキーマ[](http://go.microsoft.com/fwlink/?LinkID=31850) Web ページ。  
+ イベント スキーマを公開する代わりに、 [Microsoft SQL Server の XML スキーマ](http://go.microsoft.com/fwlink/?LinkID=31850) Web ページ。  
   
  特定のイベントのスキーマを抽出するには、複合型 `EVENT_INSTANCE_\<event_type>` のスキーマを検索します。 たとえば、DROP_TABLE イベントのスキーマを抽出するには、`EVENT_INSTANCE_DROP_TABLE` のスキーマを検索します。  
   
@@ -113,7 +113,7 @@ GO
 ```  
   
 > [!NOTE]  
->  イベント データを返す場合は、**query()** メソッドの代わりに XQuery の **value()** を使用してください。 query()** メソッドでは、XML およびアンパサンドでエスケープされる復帰と改行 (CR/LF) インスタンスが出力に返されます。一方 **value()** メソッドでは、CR/LF インスタンスが出力に返されますが、表示はされません。  
+>  イベント データを返す場合は、**query()** メソッドの代わりに XQuery の **value()** を使用してください。 **query()** メソッドでは、XML およびアンパサンドでエスケープされる復帰と改行 (CR/LF) インスタンスが出力に返されます。一方 **value()** メソッドでは、CR/LF インスタンスが出力に返されますが、表示はされません。  
   
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. DDL トリガーでイベント データを含んだログ テーブルを作成する  
  次の例では、データベース レベルのすべてのイベントに関する情報を格納するテーブルを作成し、DDL トリガーでそのテーブルにデータを設定します。 イベントの種類および [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、`EVENTDATA` によって生成される XML データに対して XQuery を使用することでキャプチャされます。  
