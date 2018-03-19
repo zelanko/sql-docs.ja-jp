@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b1b8fba166243143cd9ab8c03303fcfd7448e7a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8121c4b5054bcf8f3144fee3c05e6979f2252293
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,6 +115,9 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="converting-date-and-time-data"></a>日付および時刻データ型の変換
 data データ型と time データ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付や時刻と認識できない値はすべて拒否されます。 CAST 関数および CONVERT 関数で日付と時刻のデータを使用する方法については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」をご覧ください。
+  
+### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>datetimeoffset データ型の他の日付/時刻データ型への変換
+ここでは、**datetimeoffset** データ型が他の日付/時刻データ型に変換される場合の処理について説明します。
   
 **date** への変換では、年、月、日がコピーされます。 次のコードでは、`datetimeoffset(4)` の値を `date` の値に変換した結果を示します。  
   
@@ -198,9 +201,6 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
   
 --(1 row(s) affected)  
 ```  
-  
-### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>datetimeoffset データ型の他の日付/時刻データ型への変換
-次の表では、**datetimeoffset** データ型が他の日付/時刻データ型に変換される場合の処理について説明します。
   
 ### <a name="converting-string-literals-to-datetimeoffset"></a>文字列リテラルの datetimeoffset への変換
 文字列リテラルから日付/時刻データ型への変換は、文字列のすべての部分が有効な形式になっている場合に可能になります。 それ以外の場合は実行時エラーが発生します。 日付/時刻データ型から文字列リテラルへの暗黙的な変換や、スタイルを指定しない明示的な変換では、現在のセッションの既定の形式が使用されます。 次の表では、文字列リテラルを **datetimeoffset** データ型に変換する規則を示します。

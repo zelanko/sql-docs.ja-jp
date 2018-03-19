@@ -1,5 +1,5 @@
 ---
-title: "文字列関数 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "文字列関数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/15/2016
 ms.prod: sql-non-specified
@@ -52,9 +52,9 @@ ms.lasthandoff: 11/21/2017
 
 
   
- 以外のすべての組み込み文字列関数`FORMAT`は決定的です。 つまり、特定の一連の入力値を使用して呼び出されるたびに、同じ値を返します。 関数の決定性の詳細については、次を参照してください。[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)です。  
+ `FORMAT` 以外の組み込みの文字列関数はすべて、決定的です。 つまり、特定の一連の入力値を使用して呼び出されるたびに、同じ値を返します。 関数の決定性の詳細については、次を参照してください。[決定的関数と非決定的関数です](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
- 文字列関数に文字列値以外の引数を渡すと、暗黙的に入力型が text データ型に変換されます。 詳細については、次を参照してください。[データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)です。  
+ 文字列関数に文字列値以外の引数を渡すと、暗黙的に入力型が text データ型に変換されます。 詳細については、次を参照してください[ データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)。  
   
 ## <a name="see-also"></a>参照  
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  

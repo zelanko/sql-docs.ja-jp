@@ -39,11 +39,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 645cb458c480fb0842f83bf60721f5228e434d4c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9c1d8692b634c1f6f71c112be59eb9e5ff84ea5e
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -251,7 +251,7 @@ OUTPUT 句
   
 -   マージ レプリケーションや、トランザクション レプリケーションの更新可能なサブスクリプションに加えることはできません。  
   
- データベース互換性レベルを 100 以上に設定する必要があります。 詳細については、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」を参照してください。  
+ データベース互換性レベルを 100 以上に設定する必要があります。 詳細については、を参照してください。 OUTPUT 句と #40 です。TRANSACT-SQL と #41;[](../../t-sql/queries/output-clause-transact-sql.md).  
   
  \<select_list>  
  Output 句から返された列のどれを挿入するかを指定するコンマ区切りのリストです。 \<select_list> 内の列は、値の挿入先である列と互換である必要があります。 \<select_list> では、集計関数または TEXTPTR を参照できません。 
@@ -398,7 +398,9 @@ MERGE ステートメントでの挿入操作の結果としてヒープに挿�
   
  TOP を INSERT と共に使用する場合、参照される行は任意の順序に並べられません。また、このステートメントで、ORDER BY 句を直接指定することはできません。 TOP を使用して意味のある順序で行を挿入する必要がある場合は、サブセレクト ステートメントで ORDER BY 句を指定して TOP を使用する必要があります。 例については、後の「例」のセクションを参照してください。
  
-SELECT と ORDER BY を使って行を作成する INSERT クエリでは、ID 値の計算方法は保証されますが、行の挿入順序は保証されません。    
+SELECT と ORDER BY を使って行を作成する INSERT クエリでは、ID 値の計算方法は保証されますが、行の挿入順序は保証されません。
+
+Parallel Data Warehouse では、ORDER BY 句は、TOP も一緒に指定しない限り、VIEWS、CREATE TABLE AS SELECT、INSERT SELECT、インライン関数、派生テーブル、サブクエリ、共通テーブル式では無効です。
   
 ## <a name="logging-behavior"></a>ログ記録の動作  
  INSERT ステートメントは、常に完全にログに記録されます。ただし、BULK キーワードを指定して OPENROWSET 関数を使用している場合、または `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` を使用している場合は除きます。 これらの操作のログへの記録は最小限にできます。 詳細については、前の「データの一括読み込みの推奨事項」を参照してください。  
