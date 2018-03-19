@@ -1,4 +1,4 @@
-﻿---
+---
 layout: HubPage
 hide_bc: 
 title: "Microsoft SQL ドキュメント |Microsoft Docs"
@@ -104,7 +104,7 @@ ms.lasthandoff: 02/09/2018
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardText">
-                                                <h3 class="bgdAccent1" style="padding:20px;">データ分析</h3>
+                                                <h3 class="bgdAccent1" style="padding:20px;">データ分析</h3>
                                                 <h4>分析</h4>
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services (2016、2017)</a></li>
