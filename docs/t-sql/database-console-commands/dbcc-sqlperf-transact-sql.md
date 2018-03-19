@@ -1,5 +1,5 @@
 ---
-title: "DBCC SQLPERF (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC SQLPERF (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/07/2018
 ms.prod: sql-non-specified
@@ -39,9 +39,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-すべてのデータベースを対象として、トランザクション ログ領域の使用状況に関する統計情報を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]待機およびラッチ統計情報のリセットを使用することもできます。
+すべてのデータベースを対象として、トランザクション ログ領域の使用状況に関する統計情報を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、待機統計情報とラッチ統計情報のリセットにも使用できます。
   
-**適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([一部の地域でプレビュー](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([一部の地域ではプレビュー版](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,13 +59,13 @@ DBCC SQLPERF
   
 ## <a name="arguments"></a>引数  
 LOGSPACE  
-データベースごとに、トランザクション ログの現在のサイズと使用されているログ領域の割合を返します。 この情報を使用すると、トランザクション ログに使用される領域の量を監視できます。
+データベースごとに、トランザクション ログの現在のサイズと使用されているログ領域の割合を返します。 この情報を利用して、トランザクション ログで使用されている領域の量を監視します。
 
 > [!IMPORTANT]
-> 以降でのトランザクション ログの領域使用率情報の詳細については[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を参照してください、[解説](#Remarks)」セクションを参照します。
+> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のトランザクション ログの容量利用情報については、このトピックの「[注釈](#Remarks)」セクションを参照してください。
   
 **"sys.dm_os_latch_stats"**, CLEAR  
-ラッチ統計をリセットします。 詳細については、次を参照してください。 [sys.dm_os_latch_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). [!INCLUDE[ssSDS](../../includes/sssds-md.md)]では、このオプションは使用できません。  
+ラッチ統計をリセットします。 詳細については、「[sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)」を参照してください。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]では、このオプションは使用できません。  
   
 **"sys.dm_os_wait_stats"**, CLEAR  
 待機統計をリセットします。 詳細については、「[sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]では、このオプションは使用できません。  
@@ -79,24 +79,24 @@ WITH NO_INFOMSGS
 |列名|定義|  
 |---|---|
 |**Database Name**|ログ統計情報を表示するデータベースの名前。|  
-|**ログのサイズ (MB)**|ログに割り当てられている現在のサイズ。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]では内部ヘッダー情報の格納用に少量のディスク容量が確保されるので、この値は最初にログ領域に割り当てられた容量よりも常に小さくなります。|  
-|**ログの領域使用率 (%)**|トランザクション ログ情報の格納に使用されているログ ファイルの割合。|  
-|**[状態]**|ログ ファイルの状態。 常に 0 です。|  
+|**ログ サイズ (MB)**|ログに割り当てられている現在のサイズ。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]では内部ヘッダー情報の格納用に少量のディスク容量が確保されるので、この値は最初にログ領域に割り当てられた容量よりも常に小さくなります。|  
+|**ログの使用済み領域 (%)**|現在トランザクション ログ情報の保存に使用されているログ ファイルのパーセンテージ。|  
+|**ステータス**|ログ ファイルの状態。 常に 0 です。|  
   
 ## <a name="Remarks"></a> 解説  
-以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を使用して、 [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)の代わりに DMV `DBCC SQLPERF(LOGSPACE)`、データベースあたりのトランザクション ログの領域使用状況情報を返します。    
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、データベース別のトランザクション ログの容量利用情報を返すには、`DBCC SQLPERF(LOGSPACE)` の代わりに [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) DMV を使用します。    
  
-トランザクション ログには、データベースで実行された各トランザクションが記録されます。 詳細については、次を参照してください。[トランザクション ログ &#40;です。SQL Server &#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)と[SQL Server トランザクション ログのアーキテクチャおよび管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)です。
+トランザクション ログには、データベースで実行された各トランザクションが記録されます。 詳細については、「[トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」と「[SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)」を参照してください。
   
-## <a name="permissions"></a>権限  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行する`DBCC SQLPERF(LOGSPACE)`必要があります`VIEW SERVER STATE`サーバーに対する権限。 待機およびラッチ統計をリセットする必要があります。`ALTER SERVER STATE`サーバーに対する権限。
+## <a name="permissions"></a>アクセス許可  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で `DBCC SQLPERF(LOGSPACE)` を実行するには、サーバーに対する `VIEW SERVER STATE` 権限が必要です。 待機統計情報とラッチ統計情報をリセットするには、サーバーに対する `ALTER SERVER STATE` 権限が必要です。
   
-[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 階層が必要です、`VIEW DATABASE STATE`データベースの権限です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard および Basic 階層が必要です、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理者アカウントです。 待機およびラッチ統計をリセットすることはできません。
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)] の Premium 階層では、データベースで `VIEW DATABASE STATE` 権限が必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の Standard 階層と Basic 階層では、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 管理者アカウントが必要です。 待機およびラッチ統計をリセットすることはできません。
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-displaying-log-space-information-for-all-databases"></a>A. すべてのデータベースのログ領域情報を表示する  
-次の例を表示`LOGSPACE`のインスタンスに含まれるすべてのデータベースの情報を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。
+次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに含まれているすべてのデータベースの `LOGSPACE` 情報を表示します。
   
 ```sql  
 DBCC SQLPERF(LOGSPACE);  
@@ -116,7 +116,7 @@ AdventureWorks 19.554688    17.748701          0
 ```  
   
 ### <a name="b-resetting-wait-statistics"></a>B. 待機統計をリセットする  
-次の例のインスタンスの待機の統計をリセットする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。
+次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの待機統計をリセットします。
   
 ```sql  
 DBCC SQLPERF("sys.dm_os_wait_stats",CLEAR);  
@@ -124,10 +124,10 @@ DBCC SQLPERF("sys.dm_os_wait_stats",CLEAR);
   
 ## <a name="see-also"></a>参照  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
-[sys.dm_os_latch_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)    
-[sys.dm_os_wait_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+[sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)    
+[sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
 [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
-[sys.dm_db_log_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)     
+[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)     
 

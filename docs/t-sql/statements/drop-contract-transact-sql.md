@@ -1,5 +1,5 @@
 ---
-title: "ドロップ コントラクト (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP CONTRACT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,12 +54,12 @@ DROP CONTRACT contract_name
  *contract_name*  
  削除するコントラクトの名前を指定します。 サーバー名、データベース名、スキーマ名は指定できません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  サービスまたはメッセージ交換の優先度でコントラクトが参照されている場合は、コントラクトを削除できません。  
   
  コントラクトを削除するとき、そのコントラクトを使用している既存のメッセージ交換は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってエラーと共に終了されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  コントラクトを削除する権限は、既定ではコントラクトの所有者、db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。  
   
 ## <a name="examples"></a>使用例  
@@ -71,11 +71,11 @@ DROP CONTRACT
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER BROKER PRIORITY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [ALTER SERVICE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-service-transact-sql.md)   
- [コントラクト &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-contract-transact-sql.md)   
- [DROP BROKER PRIORITY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [サービス &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-service-transact-sql.md)   
+ [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [ALTER SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-transact-sql.md)   
+ [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STPointOnSurface (geometry データ型) |Microsoft ドキュメント"
+title: "STPointOnSurface (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointonsurface-geometry-data-type"></a>STPointOnSurface (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-内部にある任意の地点を返します、 **geometry**インスタンス。
+**geometry** インスタンスの内部にある任意の地点を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
  CLR の戻り値の型: **SqlGeometry**  
   
- Open Geospatial Consortium (OGC) の型:**ポイント**  
+ Open Geospatial Consortium (OGC) の型: **Point**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  インスタンスが空の場合、このメソッドは NULL を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例を作成、`Polygon`使用して、インスタンス`STPointOnSurface()`インスタンスで、ポイントが見つかりません。  
+ `Polygon` インスタンスを作成し、`STPointOnSurface()` を使用してインスタンス上の地点を探す例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

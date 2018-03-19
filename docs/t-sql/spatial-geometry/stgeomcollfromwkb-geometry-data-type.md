@@ -1,5 +1,5 @@
 ---
-title: "STGeomCollFromWKB (geometry データ型) |Microsoft ドキュメント"
+title: "STGeomCollFromWKB (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返します、 **geometrycollection** Open Geospatial Consortium (OGC) Well-Known Binary (WKB) 表現からのインスタンス。
+Open Geospatial Consortium (OGC) の Well-Known Binary (WKB) 表現を基に **geometrycollection** インスタンスを返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,23 +45,23 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
 ## <a name="arguments"></a>引数  
  *WKB_geometrycollection*  
- WKB 表現です、 **geometrycollection**インスタンスを取得します。 *WKB_geometrycollection*は、 **varbinary (max)**式。  
+ 返される **geometrycollection** インスタンスの WKB 表現です。 *WKB_geometrycollection* は、**varbinary (max)** 式です。  
   
  *SRID*  
- **Int** 、空間を表す式の ID (SRID) を参照、 **geometry**インスタンスを取得します。  
+ 返される **geometry** インスタンスの SRID (spatial reference ID) を表す **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
- OGC の型の**geometry**によって返されるインスタンス`STGeomCollFromWKB()`に設定されている**GeomCollection**、 **MultiPolygon**、 **MultiLineString**、または**mulitpoint のいずれか**対応する WKB 入力に応じて、します。  
+## <a name="remarks"></a>Remarks  
+ `STGeomCollFromWKB()` によって返される **geometry** インスタンスの OGC 型は、対応する WKB 入力に基づき、**GeomCollection**、**MultiPolygon**、**MultiLineString**、**MulitPoint** のいずれかに設定されます。  
   
  このメソッドは、入力が適切な形式でない場合に、FormatException 例外をスローします。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`STGeomCollFromWKB()`を作成する、 **geometry**インスタンス。  
+ `STGeomCollFromWKB()` を使用して **geometry** インスタンスを作成する例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

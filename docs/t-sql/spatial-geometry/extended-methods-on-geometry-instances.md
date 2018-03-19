@@ -1,5 +1,5 @@
 ---
-title: "Geometry インスタンスのメソッドを拡張 |Microsoft ドキュメント"
+title: "Geometry インスタンスの拡張メソッド | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="extended-methods-on-geometry-instances"></a>geometry インスタンスの拡張メソッド
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Open Geospatial Consortium (OGC) の geometry インスタンスの多数の拡張メソッドをサポートしています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Open Geospatial Consortium (OGC) の geometry インスタンスの拡張メソッドを多数サポートしています。  
   
  OGC の仕様の詳細については、以下を参照してください。  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [InstanceOf &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/instanceof-geometry-data-type.md)  
   
--   [フィルター &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/filter-geometry-data-type.md)  
+-   [Filter &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/filter-geometry-data-type.md)  
   
 -   [HasM &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/hasm-geometry-datatype.md)  
   

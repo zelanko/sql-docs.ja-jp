@@ -1,5 +1,5 @@
 ---
-title: "変数 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "変数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -29,14 +29,14 @@ ms.lasthandoff: 01/25/2018
 # <a name="variables-transact-sql"></a>変数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-TRANSACT-SQL のローカル変数は、特定の種類の 1 つのデータ値を保持できるオブジェクトです。 バッチ内の変数とスクリプトは、通常、次の場合に使用されます。 
+Transact-SQL ローカル変数は、特定の型の単一データ値を保持できるオブジェクトです。 バッチ内の変数とスクリプトは、通常、次の場合に使用されます。 
 
 * ループの実行回数をカウントしたり、制御するカウンターとして使用する場合。
 * 流れ制御ステートメントによって検査されるデータ値を保持する場合。
 * ストアド プロシージャのリターン コードや関数の戻り値によって返されるデータ値を保存する場合。
 
 > [!NOTE]
-> 一部の TRANSACT-SQL システム関数名の先頭に 2 つ*で*マーク (@ @)。 以前のバージョンのでは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、@@functions呼びますにグローバル変数、として変数ではない、変数と同じ動作にはありません。 @@functionsシステム関数であり、構文の用法関数の規則に従います。
+> 一部の Transact-SQL システム関数の名前には、2 つの*アット* マーク (@@) で始まるものがあります。 初期のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、@@functions がグローバル変数と呼ばれていましたが、これらは変数ではなく、変数とは違った動作をします。 @@functions はシステム関数であり、構文の用法は関数の規則に従います。
 
 次のスクリプトは小さなテスト テーブルを作成し、そのテーブルに 26 行を設定する例です。 このスクリプトでは変数を使用して次の 3 つのことを行います。 
 
@@ -86,23 +86,23 @@ GO
 ```
 
 ## <a name="declaring-a-transact-sql-variable"></a>Transact-SQL 変数の宣言
-DECLARE ステートメントでは、TRANSACT-SQL 変数を初期化します。 
+DECLARE ステートメントでは、次の手順で Transact-SQL 変数が初期化されます。 
 * 名前を割り当てます。 名前は 1 つの @ で始まる必要があります。
 * システム提供のデータ型またはユーザー定義データ型と長さを割り当てます。 数値変数の場合は、有効桁数と小数点以下桁数も割り当てます。 XML 型の変数の場合は、省略可能なスキーマ コレクションを割り当てることができます。
 * 値を NULL に設定します。
 
-たとえば、次**DECLARE**ステートメントがという名前のローカル変数を作成 **@mycounter**  int データ型を持つ。  
+たとえば、次の **DECLARE** ステートメントでは、int データ型の **@mycounter** という名前のローカル変数が作成されます。  
 ```sql
 DECLARE @MyCounter int;
 ```
 複数のローカル変数を宣言するには、最初のローカル変数を定義した後にコンマを付け、次のローカル変数名とデータ型を指定します。
 
-たとえば、次**DECLARE**という 3 つのローカル変数を作成するステートメント **@LastName** 、  **@FirstName** と **@StateProvince** 、し、それぞれを NULL に初期化します。  
+たとえば、次の **DECLARE** ステートメントでは、**@LastName**、**@FirstName** 、および **@StateProvince** という 3 つのローカル変数が作成され、各変数が NULL に初期化されます。  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
 
-変数のスコープは、変数を参照できる範囲の TRANSACT-SQL ステートメントです。 変数のスコープは、その変数が宣言された時点で始まり、変数が宣言されたバッチやストアド プロシージャが終了した時点で終了します。 たとえば、次のスクリプトでは変数が宣言されたバッチと変数を参照するバッチが異なるため、構文エラーが発生します。  
+変数のスコープは、その変数を参照できる Transact-SQL ステートメントの範囲になります。 変数のスコープは、その変数が宣言された時点で始まり、変数が宣言されたバッチやストアド プロシージャが終了した時点で終了します。 たとえば、次のスクリプトでは変数が宣言されたバッチと変数を参照するバッチが異なるため、構文エラーが発生します。  
 ```sql
 USE AdventureWorks2014;
 GO
@@ -152,7 +152,7 @@ WHERE FirstName = @FirstNameVariable
 GO
 ```
 
-選択リストの中で変数を参照して、変数に値を代入することもできます。 選択リストの中で変数を参照する場合は、スカラー値を代入することをお勧めします。スカラー値を代入しないと、SELECT ステートメントからは 1 行しか返されません。 例:  
+選択リストの中で変数を参照して、変数に値を代入することもできます。 選択リストの中で変数を参照する場合は、スカラー値を代入することをお勧めします。スカラー値を代入しないと、SELECT ステートメントからは 1 行しか返されません。 例 :  
 
 ```sql
 USE AdventureWorks2014;
@@ -167,7 +167,7 @@ GO
 > [!WARNING]
 > 1 つの SELECT ステートメントに複数の代入句がある場合、SQL Server では式の評価順序が保証されません。 複数の代入の間に参照がある場合のみ、その影響を確認できることに注意してください。
 
-SELECT ステートメントは複数の行を返し、変数参照、非スカラー式場合、変数は、結果セットの最後の行に式の戻り値に設定されます。 たとえば、次のバッチで **@EmpIDVariable** に設定されている、 **BusinessEntityID** 1 である最後の行の値が返されます。  
+SELECT ステートメントが複数の行を返すときに、変数がスカラーではない式を参照している場合は、結果セットの最終行でその式に対して返された値が変数に設定されます。 たとえば、次のバッチの **@EmpIDVariable** は返された最終行の **BusinessEntityID** 値、つまり 1 に設定されます。  
 
 ```sql
 USE AdventureWorks2014;
@@ -183,10 +183,10 @@ GO
 ```
 
 ## <a name="see-also"></a>参照  
- [宣言@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
+ [Declare @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
  [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
  [SELECT @local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [複合演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   
   

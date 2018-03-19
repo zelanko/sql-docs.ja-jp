@@ -1,5 +1,5 @@
 ---
-title: "XML スキーマ コレクション (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -61,14 +61,14 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
  XML スキーマ コレクションの SQL 識別子を指定します。  
   
  *[式]*  
- 文字列定数またはスカラー変数を指定します。 **Varchar**、 **varbinary**、 **nvarchar**、または**xml**型です。  
+ 文字列定数またはスカラー変数を指定します。 **varchar**、**varbinary**、**nvarchar**、または **xml** 型です。  
   
-## <a name="remarks"></a>解説  
- コレクションに新しい名前空間を追加またはを使用して、コレクション内の既存の名前空間に新しいコンポーネントを追加することができますも[ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)です。  
+## <a name="remarks"></a>Remarks  
+ [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) を使用して、新しい名前空間をコレクションに追加したり、コレクションの既存の名前空間に新しいコンポーネントを追加したりすることもできます。  
   
- コレクションを削除する使用[DROP XML SCHEMA COLLECTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
+ コレクションを削除するには、[DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md) を使用します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  XML SCHEMA COLLECTION を作成するには、少なくとも次のいずれかの権限セットが必要です。  
   
 -   サーバーに対する CONTROL 権限  
@@ -165,20 +165,20 @@ Set @MySchemaCollection  = N' copy the schema collection here'
 CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection   
 ```  
   
- 変数の例では`nvarchar(max)`型です。 変数を指定できますも**xml**場合は、それを文字列に変換が暗黙的に、データを入力します。  
+ この例の変数のデータ型は `nvarchar(max)` です。 変数のデータ型としては **xml** も有効です。この場合、変数は暗黙的に文字列に変換されます。  
   
  詳細については、「 [格納されている XML スキーマ コレクションの表示](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)」を参照してください。  
   
- スキーマ コレクションを格納することがあります、 **xml**型の列です。 この場合、XML スキーマ コレクションを作成するには、次のようにします。  
+ スキーマ コレクションを格納する、**xml** 型の列です。 この場合、XML スキーマ コレクションを作成するには、次のようにします。  
   
-1.  SELECT ステートメントを使用して、列からスキーマ コレクションを取得しの変数に割り当てる**xml**型、または**varchar**型です。  
+1.  SELECT ステートメントを使用して列からスキーマ コレクションを取得し、**xml** 型または **varchar** 型の変数に割り当てます。  
   
 2.  CREATE XML SCHEMA COLLECTION ステートメントで変数名を指定します。  
   
  CREATE XML SCHEMA COLLECTION には、SQL Server で認識されるスキーマ コンポーネントだけが格納されます。XML スキーマ内のすべての要素がデータベースに格納されるわけではありません。 したがって、XML スキーマ コレクションを、提供されたときと同じ状態に戻す場合は、データベース列またはコンピューター上の他のフォルダーに XML スキーマを保存することをお勧めします。  
   
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. スキーマ コレクションに複数のスキーマ名前空間を指定する  
- XML スキーマ コレクションを作成するときには、複数の XML スキーマを指定できます。 例:  
+ XML スキーマ コレクションを作成するときには、複数の XML スキーマを指定できます。 例 :  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  
@@ -190,7 +190,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS N'
 </xsd:schema>';  
 ```  
   
- 次の例は、XML スキーマ コレクションを作成`ProductDescriptionSchemaCollection`2 つの XML スキーマ名前空間が含まれます。  
+ 次の例では、2 つの XML スキーマ名前空間を含む XML スキーマ コレクション `ProductDescriptionSchemaCollection` を作成します。  
   
 ```  
 CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS   
@@ -236,7 +236,7 @@ GO
 ```  
   
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. 対象の名前空間が指定されていないスキーマをインポートする  
- 含まれていないスキーマの場合は、 **targetNamespace**属性は、コレクションにインポートされて、そのコンポーネントは、次の例で示すように空の文字列のターゲットの名前空間に関連付けられています。 既定の空の文字列名前空間と関連付けられる可能性があるとは無関係) 複数のスキーマ コンポーネント コレクションにインポートされた 1 つまたは複数のスキーマの関連付けを行わない場合と、注意してください。  
+ 次の例に示すように、**targetNamespace** 属性が含まれていないスキーマをコレクションにインポートする場合、スキーマのコンポーネントは空文字列の対象の名前空間に関連付けられます。 コレクションにインポートされる 1 つ以上のスキーマについて関連付けを行わない場合は、複数のスキーマ コンポーネント (場合によっては関係のないコンポーネント) が既定の空文字列の名前空間に関連付けられるため注意してください。  
   
 ```  
 -- Create a collection that contains a schema with no target namespace.  
@@ -270,11 +270,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER XML SCHEMA COLLECTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
- [DROP XML SCHEMA COLLECTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
+ [ALTER XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
+ [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [DROP XML SCHEMA COLLECTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
+ [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [サーバー上の XML スキーマ コレクションの要件と制限](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

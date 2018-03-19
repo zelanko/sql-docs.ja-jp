@@ -1,5 +1,5 @@
 ---
-title: "STEquals (geometry データ型) |Microsoft ドキュメント"
+title: "STEquals (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stequals-geometry-data-type"></a>STEquals (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-場合 1 を返します、 **geometry**インスタンスが同じ地点の別のセットを表す**geometry**インスタンス。 そうでない場合は、0 を返します。
+**geometry** インスタンスが別の **geometry** インスタンスと同一地点を表している場合は 1 を返します。 表していない場合は 0 を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,18 +45,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- もう 1 つ**geometry**対象のインスタンスと比較するインスタンス`STEquals()`が呼び出されます。  
+ `STEquals()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR 戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- このメソッドは、場合常に null を返しますの spatial reference Id (Srid)、 **geometry**インスタンスが一致しません。  
+## <a name="remarks"></a>Remarks  
+ **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、2 つ作成されます`geometry`インスタンス`STGeomFromText()`は等価ですがほぼ同じ等しくではないとを使用している`STEquals()`等価性をテストします。  
+ `STGeomFromText()` を含むほぼ同じ `geometry` インスタンスを 2 つ作成し、`STEquals()` を使用して 2 つのインスタンスが同一であるかどうかをテストする例を次に示します。  
   
 ```  
 DECLARE @g geometry  

@@ -1,5 +1,5 @@
 ---
-title: "STTouches (geometry データ型) |Microsoft ドキュメント"
+title: "STTouches (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="sttouches-geometry-data-type"></a>STTouches (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-場合 1 を返します、 **geometry**インスタンスが空間的に接して別**geometry**インスタンス。 そうでない場合は、0 を返します。
+**geometry** インスタンスが別の **geometry** インスタンスに空間的に接している場合は、1 を返します。 そうでない場合は 0 を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,20 +45,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- もう 1 つ**geometry**対象のインスタンスと比較するインスタンス`STTouches()`が呼び出されます。  
+ `STTouches()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **bit**  
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- 2 つ**geometry**インスタンスが地点のセットが交差するが、その交差しない場合に修正します。  
+## <a name="remarks"></a>Remarks  
+ 2 つの **geometry** インスタンスの地点のセットは交差しているが、内部が交差していない場合、これらのインスタンスは接しています。  
   
- このメソッドは、場合常に null を返しますの spatial reference Id (Srid)、 **geometry**インスタンスが一致しません。  
+ **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`STTouches()`2 つのテストに`geometry`インスタンスに接しているかどうかを参照してください。  
+ `STTouches()` を使用して、2 つの `geometry` インスタンスが接しているかどうかをテストする例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

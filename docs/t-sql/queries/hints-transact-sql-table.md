@@ -1,5 +1,5 @@
 ---
-title: "テーブル ヒント (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "テーブル ヒント (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
@@ -50,13 +50,13 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="hints-transact-sql---table"></a>ヒント (TRANSACT-SQL) のテーブル
+# <a name="hints-transact-sql---table"></a>ヒント (Transact-SQL) - Table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  テーブル ヒントは、ロック手法、1 つまたは複数のインデックス、テーブル スキャンやインデックス シーク、またはその他のオプションなどのクエリ処理操作を指定することによって、データ操作言語 (DML) ステートメントの実行中、クエリ オプティマイザーの既定の動作をオーバーライドします。 テーブル ヒントは、DML ステートメントの FROM 句で指定され、その句で参照されるテーブルまたはビューのみに影響します。  
+  テーブル ヒントでは、ロック手法、1 つ以上のインデックス、クエリ処理操作 (テーブル スキャンやインデックスのシークなど)、またはその他のオプションを指定することによって、データ操作言語 (DML) ステートメントが存続する間だけ、クエリ オプティマイザーの既定の動作を無効にします。 テーブル ヒントは、DML ステートメントの FROM 句で指定され、その句で参照されるテーブルまたはビューのみに影響します。  
   
 > [!CAUTION]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通常、クエリ オプティマイザーがクエリの最適な実行プランを選択、ヒントは、経験を積んだ開発者やデータベース管理者が、最後の手段としてのみ使用することをお勧めします。  
+>  通常、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーでは、クエリにとって最適な実行プランが選択されるため、ヒントは、経験を積んだ開発者やデータベース管理者が最後の手段としてのみ使用することをお勧めします。  
   
  **適用対象:**  
   
@@ -135,7 +135,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 > [!IMPORTANT]  
 >  WITH キーワードを省略することは推奨されていません。[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- WITH キーワードの有無にかかわらず使用できるテーブル ヒントは、NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT、および NOEXPAND です。 これらのテーブル ヒントを WITH キーワードを使用せずに指定するときは、単独で指定してください。 例:  
+ WITH キーワードの有無にかかわらず使用できるテーブル ヒントは、NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT、および NOEXPAND です。 これらのテーブル ヒントを WITH キーワードを使用せずに指定するときは、単独で指定してください。 例 :  
   
 ```  
 FROM t (TABLOCK)  
@@ -160,7 +160,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  クラスター化インデックスがある場合、INDEX(0) はクラスター化インデックスのスキャンを実行し、INDEX(1) はクラスター化インデックスのスキャンまたはシークを実行します。 クラスター化インデックスがない場合、INDEX(0) はテーブル スキャンを実行し、INDEX(1) はエラーと見なされます。  
   
- 1 つのヒント リストの中で複数のインデックスが使用されている場合、重複するものは無視され、リスト内の残りのインデックスを使用してテーブルの行が取得されます。 インデックス ヒント内のインデックスの順番は重要です。 複数のインデックス ヒントはインデックスの AND 処理も設定し、クエリ オプティマイザーはアクセスされる各インデックスに可能な限り多くの条件を適用します。 後の残りの列を取得するフェッチが実行ヒントが指定されたインデックスのコレクションは、クエリによって参照されるすべての列を含めない場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のすべてのインデックス付き列を取得します。  
+ 1 つのヒント リストの中で複数のインデックスが使用されている場合、重複するものは無視され、リスト内の残りのインデックスを使用してテーブルの行が取得されます。 インデックス ヒント内のインデックスの順番は重要です。 複数のインデックス ヒントはインデックスの AND 処理も設定し、クエリ オプティマイザーはアクセスされる各インデックスに可能な限り多くの条件を適用します。 ヒント インデックスの集合に、クエリで参照される列のすべてが含まれているわけではない場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]がすべてのインデックス列を取得した後で、残りの列を取得するフェッチが実行されます。  
   
 > [!NOTE]  
 >  複数のインデックスを参照するインデックス ヒントが、スター結合のファクト テーブルで使用されている場合、オプティマイザーはそのインデックス ヒントを無視し、警告メッセージを返します。 また、インデックス論理和は、インデックス ヒントが指定されたテーブルでは許可されません。  
@@ -168,29 +168,29 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  テーブル ヒント内のインデックスの最大個数は、非クラスター化インデックスが 250 個です。  
   
  KEEPIDENTITY  
- BULK オプションを使用する場合は、INSERT ステートメントでのみ適用[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)です。  
+ INSERT ステートメントで、BULK オプションが [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) と一緒に使用されているときにのみ適用できます。  
   
  インポートしたデータ ファイルの ID 値 (複数可) を ID 列に使用することを指定します。 KEEPIDENTITY を指定しない場合、この列の ID 値は確認されるのみでインポートされません。クエリ オプティマイザーは、テーブルの作成時に指定された seed および increment の値を基に一意な値を自動的に割り当てます。  
   
 > [!IMPORTANT]  
->  テーブルやビューの ID 列の値がデータ ファイルに含まれておらず、ID 列がテーブルの最終列でもない場合は、その ID 列をスキップする必要があります。 詳細については、次を参照してください[データ フィールド &#40; をスキップするフォーマット ファイルの使用。SQL Server &#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md). Id 列が正常にスキップされる場合、クエリ オプティマイザーによってインポートされたテーブルの行に、id 列の一意の値が自動的に割り当てます。  
+>  テーブルやビューの ID 列の値がデータ ファイルに含まれておらず、ID 列がテーブルの最終列でもない場合は、その ID 列をスキップする必要があります。 詳細については、「[フォーマット ファイルを使用したデータ フィールドのスキップ &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)」を参照してください。 ID 列のスキップに成功すると、クエリ オプティマイザーは、その ID 列の一意な値を、インポートされたテーブル行に自動的に割り当てます。  
   
- このヒントを INSERT ...選択 * FROM openrowset (bulk) ステートメントの場合、次を参照してください。[維持の Id 値とデータの一括インポート &#40;です。SQL Server &#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
+ このヒントを INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントに使用する例については、「[データの一括インポート時の ID 値の保持 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)」を参照してください。  
   
- テーブルの id 値の確認方法については、次を参照してください。 [DBCC CHECKIDENT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
+ テーブルの ID 値の確認については、「[DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)」を参照してください。  
   
  KEEPDEFAULTS  
- BULK オプションを使用する場合は、INSERT ステートメントでのみ適用[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)です。  
+ INSERT ステートメントで、BULK オプションが [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) と一緒に使用されているときにのみ適用できます。  
   
  データ レコードにテーブルの列値が含まれていない場合に、NULL の代わりにテーブル列の既定値を挿入することを指定します。  
   
- このヒントを INSERT ...選択 * FROM openrowset (bulk) ステートメントの場合、次を参照してください。 [Null の保持または一括インポート中の既定値を使用する &#40;です。SQL Server &#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
+ このヒントを INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントに使用する例については、「[一括インポート中の NULL の保持または既定値の使用 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)」を参照してください。  
   
  FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
  クエリ オプティマイザーに対し、テーブルやビューのデータへのアクセス パスとしてインデックスのシーク操作のみを使用することを指定します。 SQL Server 2008 R2 SP1 以降では、インデックス パラメーターも指定できます。 その場合、一度でも指定されたインデックス列が使用されると、クエリ オプティマイザーでは指定されたインデックスを介したインデックスのシーク操作のみが検討されます。  
   
  *index_value*  
- インデックスの名前またはインデックスの ID 値です。 インデックス ID 0 (ヒープ) は指定できません。 インデックスの名前または ID を返す、クエリ、 **sys.indexes**カタログ ビューです。  
+ インデックスの名前またはインデックスの ID 値です。 インデックス ID 0 (ヒープ) は指定できません。 インデックスの名前または ID を返すには、**sys.indexes** カタログ ビューにクエリを実行します。  
   
  *index_column_name*  
  シーク操作に含めるインデックス列の名前です。 インデックス パラメーターを使用して FORCESEEK を指定することは、INDEX ヒントを使用して FORCESEEK を使用することと同じです。 ただし、シーク対象のインデックスとシーク操作で考慮するインデックス列の両方を指定することで、クエリ オプティマイザーで使用されるアクセス パスをより詳細に制御できるようになります。 オプティマイザーでは、必要に応じて、追加の列が検討される場合もあります。 たとえば、非クラスター化インデックスが指定されている場合、オプティマイザーでは、指定された列に加え、クラスター化インデックスのキー列を使用することもできます。  
@@ -205,7 +205,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  (インデックス パラメーターを使用するかどうかにかかわらず) FORCESEEK ヒントを使用する際は、次のガイドラインを考慮してください。  
   
--   ヒントは、テーブル ヒントまたはクエリ ヒントとして指定できます。 クエリ ヒントの詳細については、次を参照してください。[クエリ ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-query.md).  
+-   ヒントは、テーブル ヒントまたはクエリ ヒントとして指定できます。 クエリ ヒントの詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
 -   インデックス付きビューに FORCESEEK を適用するには、NOEXPAND ヒントも指定する必要があります。  
   
@@ -223,7 +223,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   少なくとも 1 列を指定する必要があり、先頭のキー列にする必要があります。  
   
--   追加のインデックス列を指定できますが、キー列は省略できません。 たとえば、指定したインデックスにキー列が含まれている場合`a`、 `b`、および`c`、有効な構文が含まれます`FORCESEEK (MyIndex (a))`と`FORCESEEK (MyIndex (a, b)`です。 無効な構文が含まれます`FORCESEEK (MyIndex (c))`と`FORCESEEK (MyIndex (a, c)`です。  
+-   追加のインデックス列を指定できますが、キー列は省略できません。 たとえば、指定されたインデックスに `a`、`b`、および `c` というキー列が含まれている場合、有効な構文には `FORCESEEK (MyIndex (a))` および `FORCESEEK (MyIndex (a, b)` が含まれます。 無効な構文には、`FORCESEEK (MyIndex (c))` と `FORCESEEK (MyIndex (a, c)` が含まれます。  
   
 -   ヒントで指定された列名の順序は、参照先のインデックスでの列の順序と一致させる必要があります。  
   
@@ -237,7 +237,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   ヒントは、FORCESCAN ヒントと組み合わせて指定することはできません。  
   
--   パーティション インデックスをパーティション分割列に暗黙的にによって追加[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]FORCESEEK ヒントで指定することはできません。  
+-   パーティション インデックスでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって暗黙的に追加されたパーティション分割列を FORCESEEK ヒントで指定できません。  
   
 > [!CAUTION]  
 >  パラメーターを使用して FORCESEEK を指定すると、オプティマイザーで考慮できるプラン数の制限は、パラメーターなしで FORCESEEK を指定した場合よりも多くなります。 これにより、"プランを生成できない" というエラーが生じる回数が増加する可能性があります。 将来のリリースでは、オプティマイザーに対して内部変更を行うため、より多くのプランを考慮できるようになります。  
@@ -265,16 +265,16 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  SERIALIZABLE に相当します。 詳細については、後の「SERIALIZABLE」を参照してください。 HOLDLOCK は、指定されたテーブルやビューに対してのみ、また、使用されているステートメントによって定義されたトランザクションの間のみ適用されます。 HOLDLOCK は、FOR BROWSE オプションを含む SELECT ステートメントでは使用できません。  
   
  IGNORE_CONSTRAINTS  
- BULK オプションを使用する場合は、INSERT ステートメントでのみ適用[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)です。  
+ INSERT ステートメントで、BULK オプションが [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) と一緒に使用されているときにのみ適用できます。  
   
- テーブルに対する制約を一括インポート操作時に無視することを指定します。 既定では、INSERT によってチェック[Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)と[Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md)です。 一括インポート操作の際に IGNORE_CONSTRAINTS を指定している場合、インポート対象のテーブルに対する制約が無視されます。 UNIQUE、PRIMARY KEY、または NOT NULL の各制約を無効にすることはできません。  
+ テーブルに対する制約を一括インポート操作時に無視することを指定します。 既定では、INSERT は [Unique 制約と CHECK 制約](../../relational-databases/tables/unique-constraints-and-check-constraints.md)および[主キー制約と外部キー制約](../../relational-databases/tables/primary-and-foreign-key-constraints.md)をチェックします。 一括インポート操作の際に IGNORE_CONSTRAINTS を指定している場合、インポート対象のテーブルに対する制約が無視されます。 UNIQUE、PRIMARY KEY、または NOT NULL の各制約を無効にすることはできません。  
   
- 制約に違反する行が入力データに含まれている場合に、CHECK 制約および FOREIGN KEY 制約を無効化することができます。 CHECK および FOREIGN KEY 制約を無効にするには、データをインポートし、使用することができます[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント、データをクリーンアップします。  
+ 制約に違反する行が入力データに含まれている場合に、CHECK 制約および FOREIGN KEY 制約を無効化することができます。 CHECK 制約および FOREIGN KEY 制約を無効化することによって、データをインポートしてから、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用してデータをクリーンアップできます。  
   
- ただし、CHECK 制約および FOREIGN KEY 制約が無視される場合、テーブルの各無視された制約はマークとして**is_not_trusted**で、 [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)または[sys.foreign_keys](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)操作後のカタログ ビューです。 テーブル全体の制約は、任意の時点で必ず検証してください。 一括インポート操作の前にテーブルが空白になっていない場合、制約の再検証にかかるコストは、CHECK 制約および FOREIGN KEY 制約を増分データに適用することによるコストを上回る可能性があります。  
+ ただし、CHECK 制約および FOREIGN KEY 制約を無視すると、操作の後、テーブルに設定されている制約のうち、無視された制約は [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) カタログ ビューまたは [sys.foreign_keys](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md) カタログ ビューで **is_not_trusted** とマークされます。 テーブル全体の制約は、任意の時点で必ず検証してください。 一括インポート操作の前にテーブルが空白になっていない場合、制約の再検証にかかるコストは、CHECK 制約および FOREIGN KEY 制約を増分データに適用することによるコストを上回る可能性があります。  
   
  IGNORE_TRIGGERS  
- BULK オプションを使用する場合は、INSERT ステートメントでのみ適用[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)です。  
+ INSERT ステートメントで、BULK オプションが [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) と一緒に使用されているときにのみ適用できます。  
   
  テーブルに対して定義されたトリガーを、一括インポート操作時に無視することを指定します。 既定では、INSERT はトリガーを適用します。  
   
@@ -284,25 +284,25 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  READUNCOMMITTED に相当します。 詳細については、後の「READUNCOMMITTED」を参照してください。  
   
 > [!NOTE]  
->  UPDATE または DELETE ステートメント。[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+>  UPDATE ステートメントまたは DELETE ステートメントの場合: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  NOWAIT  
- 指示、[!INCLUDE[ssDE](../../includes/ssde-md.md)]してテーブルで、ロックがかかったらすぐにメッセージを返します。 NOWAIT は、特定のテーブルに SET LOCK_TIMEOUT 0 を指定することに相当します。 NOWAIT ヒントは、TABLOCK ヒントも指定されている場合は機能しません。 TABLOCK ヒントを使用している場合に待機しないでクエリを終了するには、代わりにクエリの前に `SETLOCK_TIMEOUT 0;` を指定します。  
+ テーブルでロックがかかったらすぐにメッセージを返すように[!INCLUDE[ssDE](../../includes/ssde-md.md)]を設定します。 NOWAIT は、特定のテーブルに SET LOCK_TIMEOUT 0 を指定することに相当します。 NOWAIT ヒントは、TABLOCK ヒントも指定されている場合は機能しません。 TABLOCK ヒントを使用している場合に待機しないでクエリを終了するには、代わりにクエリの前に `SETLOCK_TIMEOUT 0;` を指定します。  
   
  PAGLOCK  
  通常使用される行やキーに対する個々のロックまたは単一のテーブル ロックの代わりに、ページ ロックを使用します。 既定では、操作に適したロック モードを使用します。 SNAPSHOT 分離レベルで実行中のトランザクションにおいてこのオプションを指定しても、UPDLOCK や HOLDLOCK など、ロックが必要な他のテーブル ヒントと組み合わせて指定しない限り、ページ ロックは取得されません。  
   
  READCOMMITTED  
- 読み取り操作が、ロックまたは行のバージョン管理を使用して、READ COMMITTED 分離レベルのルールに従うことを指定します。 データベース オプション READ_COMMITTED_SNAPSHOT が OFF の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]データが読み取られ、読み取り操作が完了したときにロックを解除に共有ロックを取得します。 データベース オプション READ_COMMITTED_SNAPSHOT が ON の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はロックを取得せずに行のバージョン管理を使用します。 分離レベルの詳細については、次を参照してください。 [SET TRANSACTION ISOLATION LEVEL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ 読み取り操作が、ロックまたは行のバージョン管理を使用して、READ COMMITTED 分離レベルのルールに従うことを指定します。 データベース オプション READ_COMMITTED_SNAPSHOT が OFF の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はデータの読み取り時に共有ロックを取得し、読み取り操作が完了するとロックを解除します。 データベース オプション READ_COMMITTED_SNAPSHOT が ON の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はロックを取得せずに行のバージョン管理を使用します。 分離レベルについての詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
->  UPDATE または DELETE ステートメント。[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+>  UPDATE ステートメントまたは DELETE ステートメントの場合: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  READCOMMITTEDLOCK  
- 読み取り操作が、ロックを使用して、READ COMMITTED 分離レベルのルールに従うことを指定します。 READ_COMMITTED_SNAPSHOT データベース オプションの設定にかかわらず、[!INCLUDE[ssDE](../../includes/ssde-md.md)] はデータの読み取り時に共有ロックを取得し、読み取り操作が完了するとロックを解除します。 分離レベルの詳細については、次を参照してください。 [SET TRANSACTION ISOLATION LEVEL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). このヒントは、INSERT ステートメントの対象のテーブルには指定できません。指定すると、エラー 4140 が返されます。  
+ 読み取り操作が、ロックを使用して、READ COMMITTED 分離レベルのルールに従うことを指定します。 READ_COMMITTED_SNAPSHOT データベース オプションの設定にかかわらず、[!INCLUDE[ssDE](../../includes/ssde-md.md)] はデータの読み取り時に共有ロックを取得し、読み取り操作が完了するとロックを解除します。 分離レベルについての詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。 このヒントは、INSERT ステートメントの対象のテーブルには指定できません。指定すると、エラー 4140 が返されます。  
   
  READPAST  
- 指定する、[!INCLUDE[ssDE](../../includes/ssde-md.md)]他のトランザクションによってロックされている行を読み取れません。 READPAST を指定すると、行レベル ロックがスキップされますが、ページ レベルのロックはスキップされません。 つまり、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ロックが解除されるまで、現在のトランザクションをブロックする代わりに行をスキップします。 たとえば、テーブル `T1` に整数型の列が 1 つあり、値 1、2、3、4、5 が格納されているとします。 このテーブルに対してトランザクション A で値 3 を 8 に変更し、この変更をまだコミットしていない間に SELECT * FROM T1 (READPAST) を実行すると、取得される値は 1、2、4、5 となります。 READPAST は主を使用する作業キューを実装する場合は、ロックの競合を減らすために使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。 READPAST を使用するキュー リーダーは、他のトランザクションによってロックされたキュー エントリを、ロックが解除されるまで待たずにスキップして、次に使用可能なキュー エントリへ進みます。  
+ 他のトランザクションによってロックされている行を、[!INCLUDE[ssDE](../../includes/ssde-md.md)] が読み取らないことを指定します。 READPAST を指定すると、行レベルのロックはスキップされますが、ページレベルのロックはスキップされません。 つまり、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は、ロックが解除されるまで現在のトランザクションをブロックする代わりに、行をスキップします。 たとえば、テーブル `T1` に整数型の列が 1 つあり、値 1、2、3、4、5 が格納されているとします。 このテーブルに対してトランザクション A で値 3 を 8 に変更し、この変更をまだコミットしていない間に SELECT * FROM T1 (READPAST) を実行すると、取得される値は 1、2、4、5 となります。 READPAST は主に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルを使用する作業キューの実装時に、ロックの競合を減らすために使用します。 READPAST を使用するキュー リーダーは、他のトランザクションによってロックされたキュー エントリを、ロックが解除されるまで待たずにスキップして、次に使用可能なキュー エントリへ進みます。  
   
  READPAST は、UPDATE ステートメントまたは DELETE ステートメントで参照されるテーブル、および FROM 句で参照されるテーブルで指定できます。 UPDATE ステートメントで READPAST を指定した場合、ステートメント内での指定場所にかかわらず、更新対象レコード特定のためのデータ読み取り時にだけ適用されます。 INSERT ステートメントの INTO 句では、テーブルに READPAST を指定することができません。 READPAST を使用する更新操作や削除操作は、外部キーやインデックス付きビューの読み取り時、またはセカンダリ インデックスの変更時にブロックを行う場合があります。  
   
@@ -321,10 +321,10 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  READUNCOMMITTED ヒントと NOLOCK ヒントはデータのロックにのみ適用されます。 READUNCOMMITTED ヒントおよび NOLOCK ヒントを含むクエリを含め、すべてのクエリは、コンパイル中と実行中にスキーマ安定度 (Sch-S) ロックを取得します。 このため、同時実行トランザクションがテーブルの Sch-M (スキーマ修正) ロックを保持している場合、クエリはブロックされます。 たとえば、データ定義言語 (DDL) 操作では、テーブルのスキーマ情報を変更する前にスキーマ修正 (Sch-M) ロックを取得します。 READUNCOMMITTED ヒントまたは NOLOCK ヒントを指定して実行しているクエリを含め、すべての同時実行クエリは、スキーマ安定度 (Sch-S) ロックを取得しようとするとブロックされます。 一方、スキーマ安定度 (Sch-S) ロックを保持するクエリによって、スキーマ修正 (Sch-M) ロックを取得しようとする同時実行トランザクションはブロックされます。  
   
- READUNCOMMITTED および NOLOCK は、挿入、更新、削除の各操作によって変更されるテーブルに対しては指定できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クエリ オプティマイザーは、READUNCOMMITTED ヒントおよび NOLOCK ヒントの from 句で UPDATE または DELETE ステートメントの対象のテーブルに適用されるを無視します。  
+ READUNCOMMITTED および NOLOCK は、挿入、更新、削除の各操作によって変更されるテーブルに対しては指定できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーは、UPDATE ステートメントまたは DELETE ステートメントの対象テーブルに適用する FROM 句内の READUNCOMMITTED ヒントおよび NOLOCK ヒントを無視します。  
   
 > [!NOTE]  
->  使用して、READUNCOMMITTED ヒントおよび NOLOCK ヒントの from 句で UPDATE または DELETE ステートメントの対象のテーブルに適用されるは、将来のバージョンで削除される予定のサポートを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 新しい開発作業ではこのコンテキストでのヒントの使用を避け、現在このヒントを使用しているアプリケーションは変更を検討してください。  
+>  FROM 句を UPDATE または DELETE ステートメントの対象テーブルに適用する場合、この句での READUNCOMMITTED ヒントおよび NOLOCK ヒントの使用は、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされなくなる予定です。 新しい開発作業ではこのコンテキストでのヒントの使用を避け、現在このヒントを使用しているアプリケーションは変更を検討してください。  
   
  次のいずれかを使用することによって、ロックの競合を最小限に抑えながら、コミットされていないデータ変更のダーティ リードからトランザクションを保護することができます。  
   
@@ -332,24 +332,24 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   SNAPSHOT 分離レベル。  
   
- 分離レベルの詳細については、次を参照してください。 [SET TRANSACTION ISOLATION LEVEL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ 分離レベルについての詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
 >  READUNCOMMITTED が指定されているときにエラー メッセージ 601 が表示された場合は、デッドロック エラー (1205) を解決するときと同じように解決し、ステートメントを再実行してください。  
   
  REPEATABLEREAD  
- REPEATABLE READ 分離レベルで実行しているトランザクションと同じロック セマンティクスでスキャンを実行することを指定します。 分離レベルの詳細については、次を参照してください。 [SET TRANSACTION ISOLATION LEVEL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ REPEATABLE READ 分離レベルで実行しているトランザクションと同じロック セマンティクスでスキャンを実行することを指定します。 分離レベルについての詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。  
   
  ROWLOCK  
  通常取得されるページ ロックまたはテーブル ロックの代わりに、行ロックを取得することを指定します。 SNAPSHOT 分離レベルで実行中のトランザクションにおいてこのオプションを指定しても、UPDLOCK や HOLDLOCK など、ロックが必要な他のテーブル ヒントと組み合わせて指定しない限り、行ロックは取得されません。  
   
  SERIALIZABLE  
- HOLDLOCK に相当します。 共有ロックがより制限的になります。テーブルまたはデータ ページが不要になったときに、トランザクションが完了しているかどうかにかかわらず共有ロックが解除されるのではなく、共有ロックはトランザクションが完了するまで保持されます。 SERIALIZABLE 分離レベルで実行しているトランザクションと同じセマンティクスで、スキャンが実行されます。 分離レベルの詳細については、次を参照してください。 [SET TRANSACTION ISOLATION LEVEL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ HOLDLOCK に相当します。 共有ロックがより制限的になります。テーブルまたはデータ ページが不要になったときに、トランザクションが完了しているかどうかにかかわらず共有ロックが解除されるのではなく、共有ロックはトランザクションが完了するまで保持されます。 SERIALIZABLE 分離レベルで実行しているトランザクションと同じセマンティクスで、スキャンが実行されます。 分離レベルについての詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。  
   
  SNAPSHOT  
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
- メモリ最適化されたテーブルは、SNAPSHOT 分離でアクセスされます。 SNAPSHOT は、メモリ最適化されたテーブルだけで使用できまます (ディスク ベースのテーブルでは使用できません)。 詳細については、次を参照してください。[メモリ最適化テーブルの概要](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)です。  
+ メモリ最適化されたテーブルは、SNAPSHOT 分離でアクセスされます。 SNAPSHOT は、メモリ最適化されたテーブルだけで使用できまます (ディスク ベースのテーブルでは使用できません)。 詳細については、「[メモリ最適化テーブルの概要](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)」を参照してください。  
   
 ```  
 SELECT * FROM dbo.Customers AS c   
@@ -361,7 +361,7 @@ LEFT JOIN dbo.[Order History] AS oh
  SPATIAL_WINDOW_MAX_CELLS = *integer*  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- geometry オブジェクトや geography オブジェクトのテセレーションに使用するセルの最大数を指定します。 *数*1 ~ 8192 の範囲の値です。  
+ geometry オブジェクトや geography オブジェクトのテセレーションに使用するセルの最大数を指定します。 *数*は、1 から 8192 の範囲の値です。  
   
  このオプションを使用すると、プライマリとセカンダリのフィルターの実行時間の間のトレードオフを調整することによって、クエリの実行時間を微調整できます。 値を大きくすると、セカンダリ フィルターの実行時間が短縮されますが、プライマリ フィルターの実行時間が増加します。値を小さくすると、プライマリ フィルターの実行時間が短縮されますが、セカンダリ フィルターの実行時間が増加します。 密度の高い空間データの場合は、大きい値を指定して、プライマリ フィルターでより適切な近似値を提供し、セカンダリ フィルターの実行時間を減少させることで、実行時間を短縮させます。 密度の低いデータでは、小さい値を指定して、プライマリ フィルターの実行時間を短縮させます。  
   
@@ -370,9 +370,9 @@ LEFT JOIN dbo.[Order History] AS oh
  TABLOCK  
  取得したロックがテーブル レベルで適用されることを指定します。 取得されるロックの種類は、実行されるステートメントによって異なります。 たとえば、SELECT ステートメントを実行すると、共有ロックが取得されます。 TABLOCK を指定することで、行レベルまたはページ レベルではなくテーブル全体に共有ロックが適用されます。 HOLDLOCK も指定してある場合は、テーブル ロックがトランザクション終了まで保持されます。  
   
- INSERT INTO を使用して、ヒープにデータをインポートするときに\<対象テーブル > 選択\<列 > FROM\<ソース テーブル > ステートメントでは、ログ記録とロックを指定して、ステートメントの最適化を有効ことができます、対象のテーブルに対して TABLOCK ヒント。 データベース復旧モデルが単純復旧モデルまたは一括ログ復旧モデルに設定されている必要もあります。 詳細については、「[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)」を参照してください。  
+ INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table> ステートメントを使用してデータをヒープにインポートするときに、対象テーブルに対して TABLOCK ヒントを指定すると、そのステートメントに対してログ記録とロックの最適化を有効にすることができます。 データベース復旧モデルが単純復旧モデルまたは一括ログ復旧モデルに設定されている必要もあります。 詳細については、「[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)」を参照してください。  
   
- 使用すると、 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)一括行セット プロバイダーで TABLOCK をテーブルにデータをインポートする複数のクライアントに同時にデータをログ記録とロックの最適化を使用して、対象テーブルに読み込むを有効にします。 詳細については、次を参照してください。[一括インポートで最小ログ記録の前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)です。  
+ テーブルにデータをインポートするため、[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 一括行セット プロバイダーで TABLOCK を使用すると、対象テーブルへのデータ読み込みを、ログ記録とロックを最適化して、複数のクライアントで同時に行うことができます。 詳細については、「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」次を参照してください。  
   
  TABLOCKX  
  テーブルに排他ロックを使用することを指定します。  
@@ -385,7 +385,7 @@ LEFT JOIN dbo.[Order History] AS oh
  XLOCK  
  排他ロックを使用することと、これをトランザクション終了まで保持することを指定します。 ROWLOCK、PAGLOCK、または TABLOCK と組み合わせて指定すると、排他ロックは適切な粒度レベルに適用されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  テーブルがクエリ プランによってアクセスされているのではない場合、テーブル ヒントは無視されます。 これは、オプティマイザーがテーブルにまったくアクセスしないことを選択した結果であるか、またはインデックス付きビューが代わりにアクセスされるためである可能性があります。 後者の場合、OPTION (EXPAND VIEWS) クエリ ヒントを使用することで、インデックス付きビューへのアクセスを防ぐことができます。  
   
  すべてのロック ヒントが、クエリ プランによってアクセスされているすべてのテーブルおよびビュー (ビューで参照されているテーブルおよびビューを含む) に反映されます。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、対応するロックの一貫性チェックを実行します。  
@@ -423,34 +423,34 @@ GO
  フィルター選択されたインデックスに必要な値が SET オプションにない場合、クエリ オプティマイザーはインデックス ヒントを無視します。 詳細については、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。  
   
 ## <a name="using-noexpand"></a>NOEXPAND の使用  
- NOEXPAND にのみ適用されます*インデックス付きビュー*です。 インデックス付きビューとは、一意なクラスター化インデックスが作成されているビューを示します。 インデックス付きビューおよびベース テーブルの両方に存在する列への参照がクエリに含まれていて、クエリ オプティマイザーがクエリの実行にインデックス付きビューを使用する方が最適であると判断した場合、クエリ オプティマイザーはビューのインデックスを利用します。 この機能が呼び出された*インデックス付きビューのマッチング*です。 前のバージョン[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1 では、クエリ オプティマイザーでインデックス付きビューを自動的に使用が特定のエディションでのみサポートされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
+ NOEXPAND は*インデックス付きビュー*にのみ適用できます。 インデックス付きビューとは、一意なクラスター化インデックスが作成されているビューを示します。 インデックス付きビューおよびベース テーブルの両方に存在する列への参照がクエリに含まれていて、クエリ オプティマイザーがクエリの実行にインデックス付きビューを使用する方が最適であると判断した場合、クエリ オプティマイザーはビューのインデックスを利用します。 この機能は、*インデックス付きビューのマッチング*と呼ばれます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 より前のバージョンでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のエディションでのみ、クエリ オプティマイザーではインデックス付きビューが自動的に使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
- ただし、オプティマイザーがインデックス付きビューのマッチングを検討するか、NOEXPAND ヒントで参照されているインデックス付きビューを使用するには、次の SET オプションを ON に設定する必要があります。  
+ ただし、オプティマイザーで、インデックス付きビューのマッチングを検討したり、NOEXPAND ヒントで参照されるインデックス付きビューを使用したりするには、以下の SET オプションを ON に設定する必要があります。  
  
 > [!NOTE]  
->  Azure SQL データベースでは、NOEXPAND ヒントを指定しないで自動的なインデックス付きビューの使用をサポートしています。
+>  Azure SQL Database では、NOEXPAND ヒントを指定しなくても、自動的なインデックス付きビューの使用がサポートされます。
   
 ||||  
 |-|-|-|  
 |ANSI_NULLS|ANSI_WARNINGS|CONCAT_NULL_YIELDS_NULL|  
 |ANSI_PADDING|ARITHABORT<sup>1</sup>|QUOTED_IDENTIFIER|  
   
- <sup>1</sup> ARITHABORT は ANSI_WARNINGS が ON に設定されているときに、暗黙的に ON に設定します。 したがって、この設定を手動で調整する必要はありません。  
+ <sup>1</sup> ARITHABORT は、ANSI_WARNINGS が ON に設定されている場合は、暗黙的に ON に設定されます。 したがって、この設定を手動で調整する必要はありません。  
   
  また、NUMERIC_ROUNDABORT オプションは OFF に設定する必要があります。  
   
  オプティマイザーがインデックス付きビューのインデックスを使用するように強制するには、NOEXPAND オプションを指定します。 このヒントは、ビューがクエリ内でも指定されている場合にのみ使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、FROM 句で直接ビューを指定していないクエリで、特定のインデックス付きビューが使用されるようにするヒントは用意されていません。しかし、クエリ オプティマイザーでは、インデックス付きビューがクエリで直接参照されていなくても、その使用が検討されます。  
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>クエリ ヒントとしてのテーブル ヒントの使用  
- *テーブル ヒント*OPTION (TABLE HINT) 句を使用して、クエリ ヒントとしても指定します。 コンテキストのみでのクエリ ヒントとしてのテーブル ヒントを使用することをお勧め、[プラン ガイド](../../relational-databases/performance/plan-guides.md)です。 アドホック クエリに対しては、これらのヒントをテーブル ヒントとしてのみ指定します。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
+ OPTION (TABLE HINT) 句を使用すると、*テーブル ヒント*をクエリ ヒントとして指定することもできます。 [プラン ガイド](../../relational-databases/performance/plan-guides.md)のコンテキスト内でのみ、テーブル ヒントをクエリ ヒントとして使用することをお勧めします。 アドホック クエリに対しては、これらのヒントをテーブル ヒントとしてのみ指定します。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  KEEPIDENTITY、IGNORE_CONSTRAINTS、IGNORE_TRIGGERS の各ヒントには、テーブルに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. TABLOCK ヒントを使用してロック手法を指定する  
- 次の例では、に対して共有ロックが行われることを指定します、`Production.Product`テーブルに、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースにあり、UPDATE ステートメントの終了まで保持されます。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `Production.Product` テーブルに対して共有ロックを使用することと、このロックを UPDATE ステートメントの終了まで保持することを指定します。  
   
 ```sql  
 UPDATE Production.Product  
@@ -461,7 +461,7 @@ GO
 ```  
   
 ### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>B. FORCESEEK ヒントを使用したインデックスのシーク操作の指定  
- 次の例で、インデックスを実行するクエリ オプティマイザーを強制するインデックスのシーク操作を指定せず、FORCESEEK ヒントを使用して、`Sales.SalesOrderDetail`テーブルに、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
+ 次の例では、インデックスを指定せずに FORCESEEK ヒントを使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `Sales.SalesOrderDetail` テーブルに対するインデックスのシーク操作を実行するようにクエリ オプティマイザーを設定します。  
   
 ```  
 SELECT *  
@@ -503,7 +503,7 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
   
 ## <a name="see-also"></a>参照  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql.md)   
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "演算子 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "演算子 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -38,11 +38,11 @@ ms.lasthandoff: 01/25/2018
 |-|-|  
 |[算術演算子](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)|[論理演算子](../../t-sql/language-elements/logical-operators-transact-sql.md)|  
 |[代入演算子](../../t-sql/language-elements/assignment-operator-transact-sql.md)|[スコープ解決演算子](../../t-sql/language-elements/scope-resolution-operator-transact-sql.md)|  
-|[ビット処理演算子](../../t-sql/language-elements/bitwise-operators-transact-sql.md)|[セット演算子](http://msdn.microsoft.com/library/1aa4c424-b92c-4409-a1c7-34a0264ee107)|  
+|[ビット処理演算子 &、^、|](../../t-sql/language-elements/bitwise-operators-transact-sql.md)|[セット演算子](http://msdn.microsoft.com/library/1aa4c424-b92c-4409-a1c7-34a0264ee107)|  
 |[比較演算子](../../t-sql/language-elements/comparison-operators-transact-sql.md)|[文字列連結演算子](../../t-sql/language-elements/string-operators-transact-sql.md)|  
 |[複合演算子](../../t-sql/language-elements/compound-operators-transact-sql.md)|[単項演算子](http://msdn.microsoft.com/library/c4748146-4049-4040-8826-56c464410878)|  
   
 ## <a name="see-also"></a>参照  
- [演算子の優先順位 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
+ [演算子の優先順位 &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "共用体 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: UNION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="set-operators---union-transact-sql"></a>集合演算子の和集合 (TRANSACT-SQL)
+# <a name="set-operators---union-transact-sql"></a>セット演算子 - UNION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   複数のクエリの結果を、1 つの結果セットに結合します。すべてのクエリの結果セットに含まれるすべての行は、その共用体に含まれます。 これは、2 つのテーブルの列を結合した結合列とは異なります。  
@@ -57,9 +57,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>引数  
-\<query_specification> | ( \<query_expression> ) Is a query specification or query expression that returns data to be combined with the data from another query specification or query expression. UNION 操作の一部である列の定義は同じである必要はありませんが、暗黙的な変換により一致させる必要があります。 規則に基づいて、結果のデータ型を決定するデータ型が異なる場合、[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)です。 型が同じで、有効桁数、小数点以下桁数、長さが異なる場合、結果は式の結合と同じ規則に基づいて決定されます。 詳しくは、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」をご覧ください。  
+\<query_specification> | ( \<query_expression> ) クエリの仕様または別のクエリ定義またはクエリ式からのデータと比較するデータを返すクエリ式。 UNION 操作の一部である列の定義は同じである必要はありませんが、暗黙的な変換により一致させる必要があります。 データ型が異なるとき、最終的なデータ型は[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)ルールに基づいて決定されます。 型が同じで、有効桁数、小数点以下桁数、長さが異なる場合、結果は式の結合と同じ規則に基づいて決定されます。 詳しくは、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」をご覧ください。  
   
- 列、 **xml**データ型は、同等である必要があります。 また、すべての列が XML スキーマに従って型指定されているか、型指定されていないかのいずれかでなければなりません。 型指定されている場合は、同じ XML スキーマ コレクションに従って型指定されている必要があります。  
+ **xml** データ型の列は同じである必要があります。 また、すべての列が XML スキーマに従って型指定されているか、型指定されていないかのいずれかでなければなりません。 型指定されている場合は、同じ XML スキーマ コレクションに従って型指定されている必要があります。  
   
  UNION  
  複数の結果セットを結合し、1 つの結果セットとして返すことを指定します。  
@@ -134,7 +134,7 @@ FROM dbo.ProductResults;
 ```  
   
 ### <a name="c-using-union-of-two-select-statements-with-order-by"></a>C. ORDER BY 句を指定した 2 つの SELECT ステートメントで UNION 句を使用する  
- UNION 句で使用するある種のパラメーターの順序には重要な意味があります。 次の例では、誤った方法と正しい使用`UNION`を 2 つ`SELECT`ステートメントは、列の出力に名前を変更します。  
+ UNION 句で使用するある種のパラメーターの順序には重要な意味があります。 次の例では、出力時に列名を変更する 2 つの `SELECT` ステートメントでの `UNION` の誤った使用法と正しい使用法を示しています。  
   
 ```  
 -- Uses AdventureWorks  
@@ -176,9 +176,9 @@ GO
 ```  
   
 ### <a name="d-using-union-of-three-select-statements-to-show-the-effects-of-all-and-parentheses"></a>D. 3 つの SELECT ステートメントで UNION を使用して、ALL とかっこの効果を示す  
- 次の例を使用して`UNION`3 つのテーブルが同じ 5 行のデータがあるすべての結果を結合します。 最初の例では、`UNION ALL` を使用して、重複するレコードも含めて 15 行すべてを返します。 2 番目の例では`UNION`せず`ALL`、3 つの結合された結果から重複する行を削除する`SELECT`ステートメント、および 5 行を返します。  
+ 次の例では、`UNION` を使用して 3 つのテーブルのクエリ結果を結合します。これらのテーブルはすべて同じ 5 行のデータで構成されます。 最初の例では、`UNION ALL` を使用して、重複するレコードも含めて 15 行すべてを返します。 2 番目の例では、`ALL` を指定せずに `UNION` を使用して、3 つの `SELECT` ステートメントの結果を結合したものから重複する行を削除し、5 行を返します。  
   
- 3 番目の例では、最初の `ALL` と共に `UNION` を使用し、`UNION` を使用していない 2 番目の `ALL` をかっこで囲んでいます。 2 番目`UNION`最初に処理されますが、かっこでは、5 行を返すため、`ALL`オプションを使用しないと、重複を削除します。 これらの 5 行は、最初の結果の結合`SELECT`を使用して、`UNION ALL`キーワード。 これによって 2 組の 5 行の間での重複が削除されることはありません。 最終的な結果は 10 行になります。  
+ 3 番目の例では、最初の `ALL` と共に `UNION` を使用し、`UNION` を使用していない 2 番目の `ALL` をかっこで囲んでいます。 2 番目の `UNION` はかっこで囲まれているので、最初に処理されます。また、`ALL` オプションを使用せずに重複を削除するので、5 行を返します。 これらの 5 行は、`UNION ALL` キーワードを使用して最初の `SELECT` の結果と結合されます。 これによって 2 組の 5 行の間での重複が削除されることはありません。 最終的な結果は 10 行になります。  
   
 ```  
 -- Uses AdventureWorks  
@@ -246,10 +246,10 @@ GO
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-a-simple-union"></a>E. 単純な UNION を使用する  
- 次の例では、結果セットには内容が含まれています、`CustomerKey`両方の列、`FactInternetSales`と`DimCustomer`テーブル。 ALL キーワードが使用されていないために、重複は結果から除外されます。  
+ 次の例では、結果セットに `FactInternetSales` テーブルと `DimCustomer` テーブルの `CustomerKey` 列の内容が含まれています。 ALL キーワードが使用されていないため、重複が結果から除外されます。  
   
 ```  
 -- Uses AdventureWorks  
@@ -263,7 +263,7 @@ ORDER BY CustomerKey;
 ```  
   
 ### <a name="f-using-union-of-two-select-statements-with-order-by"></a>F. ORDER BY 句を指定した 2 つの SELECT ステートメントで UNION 句を使用する  
- UNION ステートメント内のすべての SELECT ステートメントには、ORDER BY 句が含まれている場合は、すべての SELECT ステートメントの後にその句を配置する必要があります。 次の例では、誤った方法と正しい使用`UNION`を 2 つ`SELECT`ステートメントの列が ORDER BY で順序付けします。  
+ UNION ステートメント内の SELECT ステートメントに ORDER BY 句が含まれるとき、その句はすべての SELECT ステートメントの後に置いてください。 次の例では、列を ORDER BY で並べ替える 2 つの `UNION` ステートメントでの `SELECT` の誤った使用法と正しい使用法を示しています。  
   
 ```  
 -- Uses AdventureWorks  
@@ -288,8 +288,8 @@ FROM DimCustomer
 ORDER BY CustomerKey;  
 ```  
   
-### <a name="g-using-union-of-two-select-statements-with-where-and-order-by"></a>G. 場所を使用しての 2 つの SELECT ステートメントで UNION を使用して、ORDER BY  
- 次の例では、誤った方法と正しい使用`UNION`を 2 つ`SELECT`ステートメント パラメーターの説明、ORDER BY が必要です。  
+### <a name="g-using-union-of-two-select-statements-with-where-and-order-by"></a>G. WHERE 句と ORDER BY 句を指定した 2 つの SELECT ステートメントで UNION 句を使用する  
+ 次の例では、WHERE と ORDER BY を必要とする 2 つの `UNION` ステートメントでの `SELECT` の誤った使用法と正しい使用法を示しています。  
   
 ```  
 -- Uses AdventureWorks  
@@ -316,12 +316,12 @@ FROM DimCustomer
 ORDER BY CustomerKey;  
 ```  
   
-### <a name="h-using-union-of-three-select-statements-to-show-effects-of-all-and-parentheses"></a>H. 3 つの SELECT ステートメントで UNION を使用して、すべての効果とかっこを表示するには  
- 次の例を使用して`UNION`の結果を結合する**、同じテーブル**を使用する場合に、かっことすべての効果をデモンストレーションするために`UNION`です。  
+### <a name="h-using-union-of-three-select-statements-to-show-effects-of-all-and-parentheses"></a>H. 3 つの SELECT ステートメントで UNION を使用して、ALL とかっこの効果を示す  
+ 次の例では、`UNION` 利用時の ALL とかっこの効果を示す目的で、`UNION` を使用して**同じテーブル**の結果を結合しています。  
   
- 最初の例では`UNION ALL`重複するレコードを返す各テーブルの行のソース 3 回です。 2 番目の例では`UNION`せず`ALL`、3 つの結合された結果から重複する行を削除する`SELECT`ステートメントと、ソース テーブルから重複していない行のみを返します。  
+ 最初の例では `UNION ALL` を使用し、重複レコードを表示し、ソース テーブルの各行を 3 回返しています。 2 番目の例では、`ALL` を指定せずに `UNION` を使用して、3 つの `SELECT` ステートメントの結果を結合したものから重複する行を削除し、ソース テーブルから重複しない行のみ返します。  
   
- 3 番目の例では`ALL`最初で`UNION`と 2 番目を囲むかっこ`UNION`を使用していない`ALL`です。 2 番目`UNION`かっこ内になっているために最初に処理されます。 テーブルから重複していない行のみを返しますが、`ALL`オプションを使用しないと、重複は削除されます。 これらの行は、最初の結果の結合`SELECT`を使用して、`UNION ALL`キーワード。 これには、2 つのセット間での重複は削除されません。  
+ 3 番目の例では、最初の `UNION` と共に `ALL` を使用し、`ALL` を使用していない 2 番目の `UNION` をかっこで囲んでいます。 2 番目の `UNION` はかっこで囲まれているために最初に処理されます。 `ALL` オプションが使用されず、重複は削除されるため、重複なしの行のみがテーブルから返されます。 これらの行は、`SELECT` キーワードを使用して最初の `UNION ALL` の結果と結合されます。 これによって 2 組の間での重複が削除されることはありません。  
   
 ```  
 -- Uses AdventureWorks  
@@ -358,7 +358,7 @@ FROM DimCustomer
   
 ## <a name="see-also"></a>参照  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [例 &#40; を選択します。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-examples-transact-sql.md)  
+ [SELECT 例 &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)  
   
   
 

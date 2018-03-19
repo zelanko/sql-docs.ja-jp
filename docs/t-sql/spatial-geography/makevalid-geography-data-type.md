@@ -1,5 +1,5 @@
 ---
-title: "MakeValid (geography データ型) |Microsoft ドキュメント"
+title: "MakeValid (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,11 +31,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="makevalid-geography-data-type"></a>MakeValid (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  変換、 **geography**を有効な無効なインスタンス**geography**有効な Open Geospatial Consortium (OGC) 型のインスタンス。  
+  無効な **geography** インスタンスを、有効な Open Geospatial Consortium (OGC) 型の **geography** インスタンスに変換します。  
   
- 入力オブジェクト STIsValid()、False を返す場合`MakeValid()`が有効なインスタンスに無効なインスタンスに変換します。  
+ 入力オブジェクトが STIsValid() に対して False を返す場合、`MakeValid()` はこの無効なインスタンスを有効なインスタンスに変換します。  
   
- この geography データ型メソッドでサポート**FullGlobe**インスタンスまたは空間インスタンスは、半球より大きいをします。  
+ この geography データ型メソッドは、半球より大きい **FullGlobe** インスタンスまたは空間インスタンスをサポートします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,22 +45,22 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geography**  
   
  CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>解説  
- このメソッドの型を変更する可能性があります、 **geography**インスタンス。 さらのポイント、 **geography**インスタンスわずかに移動することがあります。 NumPoint() など一部のメソッドから結果が変わる可能性があります。  
+## <a name="remarks"></a>Remarks  
+ このメソッドにより、**geography** インスタンスの型が変更されることがあります。 さらに、**geography** インスタンスの地点がわずかに移動することもあります。 いくつかのメソッド (NumPoint() など) の結果が変更されることがあります。  
   
- 無効な空間インスタンスが赤道と交差して、EnvelopeAngle() が場合 = 180 で、 **FullGlobe**インスタンスが返されます。 `MakeValid()` **Geography**データ型のメソッドは有効なインスタンスを返すように最善の試みになりますが、結果が正確であるとは限りません。  
+ 無効な空間インスタンスが赤道と交差し、EnvelopeAngle() = 180 である場合、**FullGlobe** インスタンスが返されます。 `MakeValid()`**geography** データ型のメソッドは、有効なインスタンスを返すように試みますが、結果が正確であることは保証されません。  
   
 > [!NOTE]  
->  無効なオブジェクトをデータベースに格納することができます。 無効なインスタンスで実行できるメソッドは、有効性を確認またはエクスポートを許可するメソッドを (どの STIsValid() のそれらのインスタンスは False を返します)。 STIsValid()、MakeValid()、:stastext()、STAsBinary()、ToString()、AsTextZM()、および AsGml() です。  
+>  無効なオブジェクトをデータベースに格納することができます。 無効なインスタンス (STIsValid() が False を返すインスタンス) で実行可能なメソッドは、有効性を確認するメソッドまたはエクスポートを許可するメソッドであり、それらは次のとおりです: STIsValid()、MakeValid()、STAsText()、STAsBinary()、ToString()、AsTextZM()、および AsGml()。  
   
  このメソッドは正確ではありません。  
   
 ## <a name="examples"></a>使用例  
- 最初の例では、無効な`LineString`自体が重なるし、使用するインスタンス`STIsValid()`無効なインスタンスであることを確認します。 `STIsValid()`無効なインスタンスの場合は 0 の値を返します。  
+ 最初に、そのインスタンス自体が重なる、無効な `LineString` インスタンスを作成し、`STIsValid()` を使用して、無効なインスタンスであることを確認する例を示します。 `STIsValid()` は、無効なインスタンスに対して値 0 を返します。  
   
 ```  
 DECLARE @g geography;  
@@ -68,7 +68,7 @@ SET @g = geography::STGeomFromText('LINESTRING(0 2, 1 1, 1 0, 1 1, 2 2)', 4326);
 SELECT @g.STIsValid();  
 ```  
   
- 2 番目の例では`MakeValid()`インスタンスを有効にするため、インスタンスが実際に有効であるかをテストします。 `STIsValid()`有効なインスタンスの 1 の値を返します。  
+ 次に、`MakeValid()` を使用してインスタンスを有効にし、そのインスタンスが実際に有効であるかどうかをテストする例を示します。 `STIsValid()` は、有効なインスタンスに対して値 1 を返します。  
   
 ```  
 SET @g = @g.MakeValid();  
@@ -81,7 +81,7 @@ SELECT @g.STIsValid();
 SELECT @g.ToString();  
 ```  
   
- この例では、ときに、`LineString`インスタンスが選択されている、値を返す有効なと`MultiLineString`インスタンス。  
+ この例では、`LineString` インスタンスが選択されると、値は有効な `MultiLineString` インスタンスとして返されます。  
   
 ```  
 MULTILINESTRING ((0 2, 1 1, 2 2), (1 1, 1 0))  

@@ -1,5 +1,5 @@
 ---
-title: "開く (TRANSACT-SQL) |Microsoft ドキュメント"
+title: OPEN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  開きます、[!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー カーソルを実行して、カーソルを作成し、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントで DECLARE CURSOR または SET 指定*cursor_variable*ステートメントです。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー カーソルをオープンし、DECLARE CURSOR または SET *cursor_variable* ステートメントで指定される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することによって、カーソルを生成します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,18 +51,18 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
   
 ## <a name="arguments"></a>引数  
  GLOBAL  
- 指定する*cursor_name*はグローバル カーソルを参照します。  
+ *cursor_name* でグローバル カーソルを参照することを指定します。  
   
  *cursor_name*  
- 宣言済みのカーソルの名前を指定します。 グローバルとローカル カーソルの両方に存在しない場合*cursor_name* 、名前として*cursor_name* GLOBAL が指定された、それ以外の場合、グローバル カーソル参照*cursor_name*ローカル カーソルを参照します。  
+ 宣言済みのカーソルの名前を指定します。 *cursor_name* という名前のグローバル カーソルとローカル カーソルの両方がある場合、GLOBAL を指定すると、*cursor_name* はグローバル カーソルを参照します。GLOBAL を指定しないと、*cursor_name* はローカル カーソルを参照します。  
   
  *cursor_variable_name*  
  カーソルを参照するカーソル変数の名前を指定します。  
   
-## <a name="remarks"></a>解説  
- INSENSITIVE または STATIC オプションと共にカーソルが宣言されている場合、OPEN を実行すると結果セットを格納する一時テーブルが作成されます。 結果セットの任意の行のサイズが最大行サイズを超える OPEN は失敗[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。 KEYSET オプションと共にカーソルが宣言されている場合、OPEN を実行するとキーセットを格納する一時テーブルが作成されます。 一時テーブルは tempdb に格納されます。  
+## <a name="remarks"></a>Remarks  
+ INSENSITIVE または STATIC オプションと共にカーソルが宣言されている場合、OPEN を実行すると結果セットを格納する一時テーブルが作成されます。 結果セット内の行のサイズが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの最大行サイズを超えると、OPEN は失敗します。 KEYSET オプションと共にカーソルが宣言されている場合、OPEN を実行するとキーセットを格納する一時テーブルが作成されます。 一時テーブルは tempdb に格納されます。  
   
- カーソルを開いた後を使用して、@@CURSOR_ROWS条件を満たすの数を受け取る関数の行では、最後に開かれたカーソル。  
+ カーソルをオープンした後、最後にオープンしたカーソル内の該当する行数を受け取るには、@@CURSOR_ROWS 関数を使用します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、キーセット ドリブン カーソルまたは静的 [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソルの非同期な作成はサポートされません。 [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソル操作はバッチで行われます。したがって、 [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソルを非同期に生成する必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各カーソル操作におけるクライアントのラウンド トリップのため、待機時間が少ない OPEN が問題になるような非同期キーセット ドリブン カーソルまたは静的 API (アプリケーション プログラミング インターフェイス) サーバー カーソルは、 で引き続きサポートされます。  
@@ -89,10 +89,10 @@ DEALLOCATE Employee_Cursor;
 ```  
   
 ## <a name="see-also"></a>参照  
- [閉じる &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/close-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [@@CURSOR_ROWS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md)   
- [DEALLOCATE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [フェッチ &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/fetch-transact-sql.md)  
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
   
   

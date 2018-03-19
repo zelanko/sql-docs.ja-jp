@@ -1,5 +1,5 @@
 ---
-title: "STConvexHull (geography データ型) |Microsoft ドキュメント"
+title: "STConvexHull (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  凸包を表すオブジェクトを返します、 **geography**インスタンス。  
+  **geography** インスタンスの凸包を表すオブジェクトを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,21 +41,21 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR 戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>解説  
- 返します、`FullGlobe`オブジェクトに対する**geography**がエンベロープの角度が 90 度より大きいインスタンス。  
+## <a name="remarks"></a>Remarks  
+ エンベロープの角度が 90°より大きい **geography** インスタンスに対して `FullGlobe` オブジェクトを返します。  
   
- 空白を返します**geography** 、空のコレクション**geography**インスタンス。  
+ 空の **geography** インスタンスに対して空の **geography** コレクションを返します。  
   
- 返します**null** 、初期化されていない**geography**インスタンス。  
+ 初期化されていない **geography** インスタンスに対して **null** を返します。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>A. 初期化されていない geography インスタンスに STConvexHull() を使用する  
- 次の例で`STConvexHull()`、初期化されていない**geography**インスタンス。  
+ 次の例では、初期化されていない **geography** インスタンスに `STConvexHull()` を使用します。  
   
 ```
  DECLARE @g geography;  
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="b-using-stconvexhull-on-an-empty-geography-instance"></a>B. 空の geography インスタンスに STConvexHull を使用する  
- 次の例で`STConvexHull()`、空で`Polygon`インスタンス。  
+ 次の例では、空の `Polygon` インスタンスに `STConvexHull()` を使用します。  
   
 ```
  DECLARE @g geography = 'POLYGON EMPTY';  
@@ -71,7 +71,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="c-finding-the-convex-hull-of-a-non-convex-polygon-instance"></a>C. 凸のない Polygon インスタンスの凸包を見つける  
- 次の例で`STConvexHull()`を凸のないの凸包を見つける`Polygon`インスタンス。  
+ 次の例では、`STConvexHull()` を使用して、凸のない `Polygon` インスタンスの凸包を見つけます。  
   
 ```  
  DECLARE @g geography;  
@@ -80,7 +80,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>D. エンベロープの角度が 90 度より大きい geography インスタンスで凸包を見つける  
- 次の例で`STConvexHull()`上、 **geography**エンベロープの角度が 90 度より大きいインスタンス。  
+ 次の例では、エンベロープの角度が 90 度より大きい **geography** インスタンスで `STConvexHull()` を使用します。  
   
 ```
  DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';  

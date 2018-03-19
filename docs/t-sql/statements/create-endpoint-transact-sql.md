@@ -48,7 +48,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  エンドポイントを作成し、クライアント アプリケーションで使用可能なメソッドを含む、プロパティを定義します。 関連する権限については、次を参照してください。 [GRANT Endpoint Permissions &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+  エンドポイントを作成し、クライアント アプリケーションで使用可能なメソッドを含む、プロパティを定義します。 関連する権限については、「[GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
   
  CREATE ENDPOINT の構文は、論理的に次の 2 つの部分に分かれます。  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 01/25/2018
   
      この部分では、エンドポイントでサポートされているペイロードを定義します。 ペイロードには、サポートされている [!INCLUDE[tsql](../../includes/tsql-md.md)]、Service Broker、データベース ミラーリングのうちのいずれかを指定できます。 ここでは、言語固有の情報も指定できます。  
   
-> **注:**でネイティブ XML Web サービス (SOAP/HTTP エンドポイント) は削除された[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]です。  
+> **注:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] でネイティブ XML Web サービス (SOAP/HTTP エンドポイント) は削除されました。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -119,11 +119,11 @@ FOR DATABASE_MIRRORING (
  作成するエンドポイントに割り当てられた名前です。 エンドポイントを更新または削除する場合に使用します。  
   
  AUTHORIZATION *login*  
- 指定する有効な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Windows ログインを新しく作成されたエンドポイント オブジェクトの所有権が割り当てられます。 AUTHORIZATION を指定しない場合、既定により、呼び出し元が新しく作成されたオブジェクトの所有者となります。  
+ 新規に作成されたエンドポイント オブジェクトの所有権が割り当てられる有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または Windows ログインを指定します。 AUTHORIZATION を指定しない場合、既定により、呼び出し元が新しく作成されたオブジェクトの所有者となります。  
   
- AUTHORIZATION を指定して所有権を割り当てる、呼び出し元は、指定した IMPERSONATE 権限が必要*ログイン*です。  
+ AUTHORIZATION を指定して所有権を割り当てるには、呼び出し元は指定された *login* に対する IMPERSONATE 権限が必要です。  
   
- 所有権の再割り当て、次を参照してください。 [ALTER ENDPOINT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+ 所有権を再割り当てする場合は、「[ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)」を参照してください。  
   
  STATE **=** { STARTED | **STOPPED** | DISABLED }  
  エンドポイントの作成時点での状態です。 エンドポイントの作成時点での状態を指定しない場合、既定値は STOPPED です。  
@@ -137,7 +137,7 @@ FOR DATABASE_MIRRORING (
  **STOPPED**  
  エンドポイントは停止しています。 この状態の場合、サーバーはエンドポイントのポートをリッスンしておらず、エンドポイントの使用要求にも応答しません。  
   
- 状態を変更するには、使用[ALTER ENDPOINT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+ 状態を変更する場合は、「[ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)」を参照してください。  
   
  AS { TCP }  
  使用するトランスポート プロトコルを指定します。  
@@ -145,7 +145,7 @@ FOR DATABASE_MIRRORING (
  FOR { TSQL | SERVICE_BROKER | DATABASE_MIRRORING }  
  ペイロードの種類を指定します。  
   
- 現在ではない[!INCLUDE[tsql](../../includes/tsql-md.md)]言語固有の引数を渡す、`<language_specific_arguments>`パラメーター。  
+ 現時点では、`<language_specific_arguments>` パラメーターに渡す [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語固有の引数はありません。  
   
  **TCP プロトコル オプション**  
   
@@ -157,7 +157,7 @@ FOR DATABASE_MIRRORING (
  LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "*ip_address_v6*" **)**  
  エンドポイントが受信待ちする IP アドレスを指定します。 既定値は ALL です。 したがって、リスナーは任意の有効な IP アドレスでの接続を許可します。  
   
- データベース ミラーリングを完全修飾ドメイン名の代わりに IP アドレスを構成する場合 (`ALTER DATABASE SET PARTNER = partner_IP_address`または`ALTER DATABASE SET WITNESS = witness_IP_address`) を指定する必要が`LISTENER_IP =IP_address`の代わりに`LISTENER_IP=ALL`ミラーリング エンドポイントを作成する場合。  
+ 完全修飾ドメイン名の代わりに IP アドレスを使用してデータベース ミラーリングを構成する (`ALTER DATABASE SET PARTNER = partner_IP_address` または `ALTER DATABASE SET WITNESS = witness_IP_address`) 場合は、ミラーリング エンドポイントの作成時に `LISTENER_IP=ALL` の代わりに `LISTENER_IP =IP_address` を指定する必要があります。  
   
  **SERVICE_BROKER オプションと DATABASE_MIRRORING オプション**  
   
@@ -166,7 +166,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  SERVICE_BROKER 固有のオプションについては、後の「SERVICE_BROKER オプション」を参照してください。 DATABASE_MIRRORING 固有のオプションについては、後の「DATABASE_MIRRORING オプション」を参照してください。  
   
- AUTHENTICATION **=** \<authentication_options> Specifies the TCP/IP authentication requirements for connections for this endpoint. 既定値は WINDOWS です。  
+ AUTHENTICATION **=** \<authentication_options> このエンドポイントの接続に対する TCP/IP 認証要件を指定します。 既定値は WINDOWS です。  
   
  サポートされている認証方法は NTLM または Kerberos、あるいはその両方です。  
   
@@ -181,7 +181,7 @@ FOR DATABASE_MIRRORING (
  1 つの認証方法 (NTLM または KERBEROS) を指定した場合、その方法が常に認証プロトコルとして使用されます。 既定値の NEGOTIATE を指定すると、エンドポイントは Windows ネゴシエーション プロトコルを使用して NTLM か Kerberos のどちらかを選択します。  
   
  CERTIFICATE *certificate_name*  
- エンドポイントが指定された証明書を使用して接続を認証することを示す*certificate_name*認証用の id を確立するためにします。 反対側のエンドポイントは、指定された証明書の秘密キーと一致する公開キー付きの証明書を持っている必要があります。  
+ エンドポイントが、認証用の ID を設定するために *certificate_name* で指定された証明書を使用して接続を認証することを指定します。 反対側のエンドポイントは、指定された証明書の秘密キーと一致する公開キー付きの証明書を持っている必要があります。  
   
  WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  エンドポイントが Windows 認証を使用して接続を試み、それが失敗した場合は指定された証明書を使用することを指定します。  
@@ -204,13 +204,13 @@ FOR DATABASE_MIRRORING (
  必要に応じて、エンドポイントで使用される暗号化の形式を、ALGORITHM 引数を使用して次のように指定できます。  
   
  **AES**  
- エンドポイントで AES アルゴリズムを使用する必要があることを指定します。 これは既定で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]およびそれ以降。  
+ エンドポイントで AES アルゴリズムを使用する必要があることを指定します。 これは [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降の既定値です。  
   
  RC4  
- エンドポイントで RC4 アルゴリズムを使用する必要があることを指定します。 これは、既定値を通じて[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]です。  
+ エンドポイントで RC4 アルゴリズムを使用する必要があることを指定します。 これは [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] までの既定値です。  
   
 > [!NOTE]  
->  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]でき、以降のバージョンでは、RC4 または RC4_128 を使用して暗号化された素材を暗号化が解除されたどの互換性レベルです。  
+>  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のバージョンでは、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  
   
  AES RC4  
  2 つのエンドポイントが、AES アルゴリズムを優先するこのエンドポイントと暗号化アルゴリズムについてネゴシエートすることを指定します。  
@@ -250,7 +250,7 @@ FOR DATABASE_MIRRORING (
  エンドポイントがミラーリング プロセスにおいてミラーリング監視ロールを実行できるようにします。  
   
 > [!NOTE]  
->  [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)]、ミラーリング監視サーバーが利用可能な唯一のオプションです。  
+>  [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] の場合は、WITNESS が唯一の使用可能なオプションです。  
   
  PARTNER  
  エンドポイントがミラーリング プロセスにおいてパートナー ロールを実行できるようにします。  
@@ -258,29 +258,29 @@ FOR DATABASE_MIRRORING (
  ALL  
  エンドポイントが、ミラーリング プロセスにおいてミラーリング監視およびパートナーの両方のロールを実行できるようにします。  
   
- これらのロールの詳細については、次を参照してください。[データベース ミラーリング &#40;です。SQL Server &#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
+ これらのロールの詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
 >  DATABASE_MIRRORING には既定のポートはありません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ENDPOINT DDL ステートメントは、ユーザー トランザクション内では実行できません。 変更対象となるエンドポイントが、アクティブなスナップショット分離レベル トランザクションで使用されている場合でも、ENDPOINT DDL ステートメントは失敗しません。  
   
  ENDPOINT に対する要求は、次のユーザーが実行できます。  
   
--   メンバー **sysadmin**固定サーバー ロール  
+-   **sysadmin** 固定サーバー ロールのメンバー  
   
 -   エンドポイントの所有者  
   
 -   エンドポイントで CONNECT 権限を与えられたユーザーまたはグループ  
   
-## <a name="permissions"></a>権限  
- CREATE ENDPOINT 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。 詳細については、「 [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
+## <a name="permissions"></a>アクセス許可  
+ CREATE ENDPOINT 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。 詳細については、「 [GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
   
 ## <a name="example"></a>例  
   
-### <a name="creating-a-database-mirroring-endpoint"></a>データベース ミラーリング エンドポイントを作成します。  
- 次の例では、データベース ミラーリング エンドポイントを作成します。 エンドポイントはポート番号を使用して`7022`、任意の使用可能なポート番号は機能します。 エンドポイントは、Kerberos のみを使用する Windows 認証を使用するように構成されます。 `ENCRYPTION` オプションは既定値以外の `SUPPORTED` に設定され、暗号化データも暗号化されていないデータもサポートします。 エンドポイントは、パートナー ロールとミラーリング監視ロールの両方をサポートするように構成されます。  
+### <a name="creating-a-database-mirroring-endpoint"></a>データベース ミラーリング エンドポイントを作成する  
+ 次の例では、データベース ミラーリング エンドポイントを作成します。 使用可能などのポート番号も有効ですが、このエンドポイントではポート番号 `7022` を使用します。 エンドポイントは、Kerberos のみを使用する Windows 認証を使用するように構成されます。 `ENCRYPTION` オプションは既定値以外の `SUPPORTED` に設定され、暗号化データも暗号化されていないデータもサポートします。 エンドポイントは、パートナー ロールとミラーリング監視ロールの両方をサポートするように構成されます。  
   
 ```  
 CREATE ENDPOINT endpoint_mirroring  
@@ -295,8 +295,8 @@ GO
   
 ## <a name="see-also"></a>参照  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
- [暗号化アルゴリズムを選択します。](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [DROP ENDPOINT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [暗号化アルゴリズムの選択](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
+ [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "ToString (geometry データ型) |Microsoft ドキュメント"
+title: "ToString (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -43,17 +43,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **nvarchar(max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **nvarchar(max)**  
   
- CLR の戻り値の型: **SqlString**  
+ CLR 戻り値の型: **SqlString**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このメソッドは、NULL インスタンスで呼び出されたときに、文字列 "Null" を返します。  
   
- Null 以外のインスタンスでこのメソッドを使用するには`AsTextZM().`  
+ NULL 以外のインスタンスでは、このメソッドは `AsTextZM().` を使用することと同じです。  
   
 ## <a name="examples"></a>使用例  
- 次の例を作成、`LineString`使用して、インスタンス`ToString()`をインスタンスのテキストの説明を取得します。  
+ `LineString` インスタンスを作成し、`ToString()` を使用してこのインスタンスの記述をフェッチする例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

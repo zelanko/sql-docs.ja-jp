@@ -1,5 +1,5 @@
 ---
-title: "InstanceOf (geography データ型) |Microsoft ドキュメント"
+title: "InstanceOf (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="instanceof-geography-data-type"></a>InstanceOf (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  かどうか、 **geography**インスタンスが指定した型と同じです。  
+  **geography** インスタンスが、指定した型と同じであるかどうかをテストします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,26 +45,26 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *geography_type*  
- **Nvarchar (4000)**で公開されている 16 種類のいずれかを指定する文字列、 **geography**階層を入力します。  
+ **geography** 型の階層で公開されている 16 種類の型のうちの 1 つを指定する **nvarchar(4000)** 文字列です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **bit**  
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- 場合 1 を返しますの種類、 **geography**インスタンスは、指定された型と同じまたは指定した型が、インスタンスの型の先祖である場合は、0 を返しますそれ以外の場合。  
+## <a name="remarks"></a>Remarks  
+ **geography** インスタンスの型が指定した型と同じである場合、または指定した型がインスタンスの型の先祖である場合は 1 を返します。それ以外の場合は 0 を返します。  
   
- これは、 **geography**データ型メソッドでサポート**FullGlobe**インスタンスまたは空間インスタンスは、半球より大きいをします。  
+ この **geography** データ型メソッドは、半球より大きい **FullGlobe** インスタンスまたは空間インスタンスをサポートします。  
   
- メソッドの入力は、次のいずれかにする必要がありますジオメトリ、ポイント、曲線、LineString、CircularString、画面、Polygon、CurvePolygon、 **GeometryCollection**、 **MultiSurface**、  **。MultiPolygon、MultiCurve、MultiLineString**、 **MultiPoint**、または**FullGlobe**です。  
+ メソッドへの入力は、Geometry、Point、Curve、LineString、Surface、Polygon、CurvePolygon、**GeometryCollection**、**MultiSurface**、**MultiPolygon、MultiCurve、MultiLineString**、**MultiPoint**、**FullGlobe** のいずれかである必要があります。  
   
- このメソッドはスロー、`ArgumentException`と、入力の他の文字列が使用されます。  
+ このメソッドは、上記以外の文字列が入力に使用された場合、`ArgumentException` をスローします。  
   
  このメソッドは正確ではありません。  
   
 ## <a name="examples"></a>使用例  
- 次の例を作成、`MultiPoint`使用して、インスタンス`InstanceOf()`かどうかをインスタンス、`GeometryCollection`です。  
+ `MultiPoint` インスタンスを作成し、`InstanceOf()` を使用して、このインスタンスが `GeometryCollection` であるかどうかを判定する例を次に示します。  
   
 ```  
 DECLARE @g geography;  

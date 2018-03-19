@@ -1,5 +1,5 @@
 ---
-title: "M (geography データ型) |Microsoft ドキュメント"
+title: "M (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="m-geography-data-type"></a>M (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **M** (メジャー) 値、 **geography**インスタンス。 メジャー値のセマンティクスはユーザー自身が定義しますが、一般的には線分に沿った距離を指します。 たとえば、メジャー値を使用して、道路沿いのマイル標を追跡できます。  
+  **geography** インスタンスの **M** (メジャー) 値。 メジャー値のセマンティクスはユーザー自身が定義しますが、一般的には線分に沿った距離を指します。 たとえば、メジャー値を使用して、道路沿いのマイル標を追跡できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型: **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR 型: **SqlDouble**  
+ CLR の型: **SqlDouble**  
   
-## <a name="remarks"></a>解説  
- このプロパティの値が null 場合、 **geography**インスタンスではありません、**ポイント**,、およびこの**ポイント**が設定されていないためインスタンス化します。  
+## <a name="remarks"></a>Remarks  
+ **geography** インスタンスが **Point** ではない場合や、**Point** インスタンスにこのプロパティの値が設定されていない場合は、このプロパティの値は null になります。  
   
  このプロパティは読み取り専用です。  
   

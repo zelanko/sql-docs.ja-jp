@@ -1,5 +1,5 @@
 ---
-title: "(TRANSACT-SQL) の中に |Microsoft ドキュメント"
+title: WHILE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -62,10 +62,10 @@ WHILE Boolean_expression
   
 ## <a name="arguments"></a>引数  
  *Boolean_expression*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)を返す**TRUE**または**FALSE**です。 ブール式が SELECT ステートメントを含む場合は、SELECT ステートメントをかっこで囲む必要があります。  
+ **TRUE** または **FALSE** を返す[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 ブール式が SELECT ステートメントを含む場合は、SELECT ステートメントをかっこで囲む必要があります。  
   
  {*sql_statement* | *statement_block*}  
- いずれかである[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント ブロックで定義されているグループ化します。 ステートメント ブロックを定義するには、流れ制御キーワードの BEGIN と END を使用してください。  
+ 1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、またはステートメント ブロックとして定義した一連のステートメントです。 ステートメント ブロックを定義するには、流れ制御キーワードの BEGIN と END を使用してください。  
   
  BREAK  
  最も内側の WHILE ループから抜けます。 ループの終了位置を示す END キーワード以降のすべてのステートメントが実行されます。  
@@ -73,13 +73,13 @@ WHILE Boolean_expression
  CONTINUE  
  CONTINUE キーワード以降のすべてのステートメントを無視し、WHILE ループを再開します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  2 つ以上の WHILE ループを入れ子にする場合、内側の BREAK が終了すると、1 つ外側のループに出ます。 まず、この内側ループの終了の後にあるステートメントがすべて実行され、次にこの外側のループの実行が再開されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-break-and-continue-with-nested-ifelse-and-while"></a>A. BREAK と CONTINUE を、入れ子にされた IF...ELSE および WHILE と組み合わせて使用する  
- 次の例では、製品の平均表示価格が `$300` を下回る場合、`WHILE` ループが価格を倍にして、最高価格を選択します。 かどうか、最高価格より小さいかに等しい`$500`、`WHILE`ループが再開し、再び価格を倍にします。 このループでは、最高価格がよりも大きくなるまで、価格を倍増し続け`$500`、し、終了、`WHILE`ループし、メッセージを出力します。  
+ 次の例では、製品の平均表示価格が `$300` を下回る場合、`WHILE` ループが価格を倍にして、最高価格を選択します。 最高価格が `$500` 以下の場合は、`WHILE` ループが再開し、再び価格を倍にします。 このループは、最高価格が `$500` を超えるまで価格を倍増し続け、その後 `WHILE` ループから抜け出してメッセージを出力します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -116,10 +116,10 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-while-loop"></a>C: While ループ単純な  
- 次の例では、製品の平均表示価格が `$300` を下回る場合、`WHILE` ループが価格を倍にして、最高価格を選択します。 かどうか、最高価格より小さいかに等しい`$500`、`WHILE`ループが再開し、再び価格を倍にします。 このループでは、最高価格がよりも大きくなるまで、価格を倍増し続け`$500`、し、終了、`WHILE`ループします。  
+### <a name="c-simple-while-loop"></a>C: 単純な While ループ  
+ 次の例では、製品の平均表示価格が `$300` を下回る場合、`WHILE` ループが価格を倍にして、最高価格を選択します。 最高価格が `$500` 以下の場合は、`WHILE` ループが再開し、再び価格を倍にします。 このループは、最高価格が `$500` を超えるまで価格を倍増し続け、その後 `WHILE` ループから抜け出します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -137,7 +137,7 @@ END
   
 ## <a name="see-also"></a>参照  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [フロー制御言語 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md)   
+ [フロー制御言語 &#40;TRANSACT-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [カーソル &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  

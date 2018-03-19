@@ -1,5 +1,5 @@
 ---
-title: "(TRANSACT-SQL) から |Microsoft ドキュメント"
+title: FROM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  テーブル、ビュー、派生テーブル、および内のステートメントを DELETE、SELECT、および UPDATE の結合テーブルの使用を示す[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。 SELECT ステートメントでは、選択リストに定数、変数、および数式のみが含まれて列名が含まれていない場合を除き、FROM 句を指定する必要があります。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の DELETE、SELECT、および UPDATE ステートメントの中で使用される、テーブル、ビュー、派生テーブル、および結合テーブルを指定します。 SELECT ステートメントでは、選択リストに定数、変数、および数式のみが含まれて列名が含まれていない場合を除き、FROM 句を指定する必要があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -164,43 +164,43 @@ FROM { <table_source> [ ,...n ] }
   
 ## <a name="arguments"></a>引数  
 \<table_source>  
- 使用する別名の有無は、テーブル、ビュー、テーブル変数、または派生テーブル ソースを指定します、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 1 つのステートメント内で 256 個までのテーブル ソースを使用できますが、この上限値は、使用可能なメモリとクエリ内の他の式の複雑さに応じて変化します。 個別のクエリは、256 個までのテーブル ソースをサポートできません。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの中で使用する、テーブル、ビュー、テーブル変数、または派生テーブル ソースを指定します。別名を付けて指定することができます。 1 つのステートメント内で 256 個までのテーブル ソースを使用できますが、この上限値は、使用可能なメモリとクエリ内の他の式の複雑さに応じて変化します。 個別のクエリは、256 個までのテーブル ソースをサポートできません。  
   
 > [!NOTE]  
->  クエリのパフォーマンスは、クエリで参照される多くのテーブルによって低下する可能性があります。 コンパイルと最適化にかかる時間も、追加の要素によって影響を受けます。 インデックスおよびインデックス付きビューごとに存在するが含まれます\<table_source > のサイズ、 \<select_list > の SELECT ステートメントにします。  
+>  クエリのパフォーマンスは、クエリで参照される多くのテーブルによって低下する可能性があります。 コンパイルと最適化にかかる時間も、追加の要素によって影響を受けます。 これらの要素には、各 \<table_source> 上のインデックスとインデックス付きビューの存在、および SELECT ステートメント内の \<select_list> のサイズが含まれます。  
   
  FROM キーワードの後のテーブル ソースの順序は、返される結果セットには影響しません。 FROM 句内に重複した名前を指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はエラーを返します。  
   
  *table_or_view_name*  
  テーブルまたはビューの名前です。  
   
- テーブルまたはビューが別のデータベースの同じインスタンスに存在するかどうかは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、形式で完全修飾名を使用して*データベース*.*スキーマ*.*object_name*です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の同じインスタンス上の別のデータベース内にテーブルまたはビューが存在する場合は、*database*.*schema*.*object_name* という形式の完全修飾名を使用します。  
   
- インスタンスの外部にテーブルまたはビューが存在するかどうかは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l、4 部構成の名前を使用して、フォームで*linked_server*.*カタログ*.*スキーマ*.*オブジェクト*です。 詳細については、「 [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)からデータにアクセスする方法について説明します。 使用して作成されますが、4 部構成の名前、 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md)関数のように、名前のサーバー部分は、リモート テーブル ソースを指定するも使用できます。 OPENDATASOURCE を指定すると、 *database_name*と*schema_name*がすべてのデータ ソースに適用し、は、リモート オブジェクトにアクセスする OLE DB プロバイダーの機能の対象になります。  
+ テーブルまたはビューが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの外部に存在する場合は、*linked_server*.*catalog*.*schema*.*object* という形式の 4 部構成の名前を使用します。 詳細については、「 [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)からデータにアクセスする方法について説明します。 名前の中のサーバー部分として [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 関数を使用して構成される 4 部構成の名前は、リモート テーブル ソースを指定するためにも使用できます。 OPENDATASOURCE を指定した場合は、*database_name* および *schema_name* がすべてのデータ ソースに適用されるとは限らず、リモート オブジェクトにアクセスする OLE DB プロバイダーの機能により制限されます。  
   
  [AS] *table_alias*  
- エイリアス*table_source*利便性のために、またはテーブルまたはビューで、自己結合を区別またはサブクエリを使用できます。 別名にはテーブル名を短縮したものが指定されることが多く、結合されたテーブルの特定の列を参照するために使用されます。 同じ列名が、結合の 1 つ以上のテーブルに存在する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列名は、テーブル名、ビューの名前または別名で修飾する必要があります。 別名が定義されている場合、テーブル名は使用できません。  
+ *table_source* の別名です。別名は、便宜上、または自己結合やサブクエリでテーブルまたはビューを区別するために使用できます。 別名にはテーブル名を短縮したものが指定されることが多く、結合されたテーブルの特定の列を参照するために使用されます。 結合された複数のテーブルに同じ列名が存在する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル名、ビュー名、または別名で列名を修飾する必要があります。 別名が定義されている場合、テーブル名は使用できません。  
   
- 派生テーブル、行セットまたはテーブル値関数または演算子句 (PIVOT や UNPIVOT) を使用する場合、必要な*table_alias*句の末尾には、グループ化列を含むすべての列に関連付けられているテーブル名返されます。  
+ 派生テーブル、行セット、またはテーブル値関数、または演算子句 (PIVOT や UNPIVOT など) が使用されている場合、句の末尾に必要な *table_alias* は、グループ化列を含む、すべての返された列の関連テーブル名になります。  
   
  WITH (\<table_hint> )  
  クエリ オプティマイザーが、このテーブルを使用して、このステートメントに対し最適化またはロックを使用することを指定します。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
  *rowset_function*  
 
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- OPENROWSET など、テーブル参照の代わりに使用できるオブジェクトを返す行セット関数のいずれかを指定します。 行セット関数の一覧の詳細については、次を参照してください。[行セット関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rowset-functions-transact-sql.md).  
+ OPENROWSET など、テーブル参照の代わりに使用できるオブジェクトを返す行セット関数のいずれかを指定します。 行セット関数の一覧の詳細については、「[行セット関数 &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)」を参照してください。  
   
  OPENROWSET 関数および OPENQUERY 関数を使用したリモート オブジェクトの指定は、そのオブジェクトにアクセスする OLE DB プロバイダーの機能に依存します。  
   
  *bulk_column_alias*  
 
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- 結果セット内の列名に対する別名です。このパラメーターは省略可能です。 列の別名は、BULK オプションが指定された OPENROWSET 関数を使用する SELECT ステートメント内でのみ使用できます。 使用すると*bulk_column_alias*ファイル内の列と同じ順序で各テーブル列の別名を指定します。  
+ 結果セット内の列名に対する別名です。このパラメーターは省略可能です。 列の別名は、BULK オプションが指定された OPENROWSET 関数を使用する SELECT ステートメント内でのみ使用できます。 *bulk_column_alias* を使用する場合は、ファイル内の列と同じ順序ですべてのテーブル列に対して別名を指定します。  
   
 > [!NOTE]  
 >  この別名は、XML 形式のファイルの COLUMN 要素内に NAME 属性が存在する場合は、それを上書きします。  
@@ -210,22 +210,22 @@ FROM { <table_source> [ ,...n ] }
   
  OPENXML \<openxml_clause>  
 
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- XML ドキュメントに対して行セット ビューを提供します。 詳細については、次を参照してください。 [OPENXML &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/openxml-transact-sql.md).  
+ XML ドキュメントに対して行セット ビューを提供します。 詳細については、「[OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)」を参照してください。  
   
  *derived_table*  
- データベースから行を取得するサブクエリです。 *derived_table*外側のクエリに入力として使用されます。  
+ データベースから行を取得するサブクエリです。 *derived_table* は 1 つ上のレベルのクエリへの入力として使用されます。  
   
- *派生* *_table*使用できる、[!INCLUDE[tsql](../../includes/tsql-md.md)]テーブル値コンス トラクター機能を複数の行を指定します。 たとえば、 `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`のようにします。 詳細については、次を参照してください。[テーブル値コンス トラクターと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/table-value-constructor-transact-sql.md).  
+ *derived* *_table* では、[!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値コンストラクター機能を使用して、複数の行を指定できます。 たとえば、 `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`のようにします。 詳細については、「[テーブル値コンストラクター &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)」を参照してください。  
   
  *column_alias*  
  派生テーブルの結果セット内の列名に対する別名です。このパラメーターは省略可能です。 選択リストの各列の別名を 1 つずつ含みます。列の別名リスト全体をかっこで囲みます。  
   
- *table_or_view_name* FOR SYSTEM_TIME \<system_time >  
+ *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
-**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  データの特定のバージョンが、指定された時間的なテーブルとそのシステムのバージョン情報のリンクの履歴テーブルから返されることを指定します。  
@@ -237,22 +237,22 @@ FROM { <table_source> [ ,...n ] }
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードされたデータベースに対して TABLESAMPLE を使用するときは、データベースの互換性レベルは 110 以上に設定され、再帰共通テーブル式 (CTE) クエリでは PIVOT は許可されません。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
   
  SYSTEM  
- ISO 標準で指定された、実装に依存するサンプリング方法です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、これは、唯一のサンプリング方法と、既定で適用されます。 SYSTEM は、サンプルとしてテーブルからページがランダムに選択され、それらのページのすべての行がサンプル サブセットとして返される、ページ ベースのサンプリング方法を適用します。  
+ ISO 標準で指定された、実装に依存するサンプリング方法です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、これが唯一のサンプリング方法であり、既定で適用されます。 SYSTEM は、サンプルとしてテーブルからページがランダムに選択され、それらのページのすべての行がサンプル サブセットとして返される、ページ ベースのサンプリング方法を適用します。  
   
  *sample_number*  
- 行数または行数に対応する割合を表す真数または概数値の定数値式です。 PERCENT を指定したときに*sample_number*暗黙的に変換されます、 **float**値。 それ以外の場合、これはに変換**bigint**です。 PERCENT は既定値です。  
+ 行数または行数に対応する割合を表す真数または概数値の定数値式です。 PERCENT を使用して指定されている場合、*sample_number* は、暗黙的に **float** 値に変換されます。それ以外の場合は **bigint** に変換されます。 PERCENT は既定値です。  
   
  PERCENT  
- 指定する、 *sample_number*テーブルの行の割合は、テーブルから取得する必要があります。 PERCENT が指定されている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は指定された割合の概数を返します。 PERCENT が指定されている場合、 *sample_number*式は、0 ~ 100 の値に評価する必要があります。  
+ *sample_number* で指定した割合の行がテーブルから取得されることを指定します。 PERCENT が指定されている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は指定された割合の概数を返します。 PERCENT が指定されている場合、*sample_number* 式は、0 ～ 100 の値に評価する必要があります。  
   
  ROWS  
- つまり約を指定します*sample_number*の行が取得されます。 行を指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定数の行の概数を返します。 行を指定すると、 *sample_number*式は、0 より大きい整数値に評価される必要があります。  
+ *sample_number* に指定した概数の行が取得されることを指定します。 ROWS が指定されている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は指定した行数の概数を返します。 ROWS が指定されている場合、*sample_number* 式は、0 より大きい整数値に評価される必要があります。  
   
  REPEATABLE  
- 選択されたサンプルを再度返すことができることを示します。 指定すると、同じ*repeat_seed*値、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、テーブル内の行に変更が加えされていない限り、同じ行のサブセットを返します。 指定すると、別*repeat_seed*値、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返す可能性がありますをいくつかの異なるテーブル内の行のサンプルはします。 テーブルに対する挿入、更新、削除、インデックスの再構築またはデフラグ、およびデータベースの復元またはアタッチは、変更と見なされます。  
+ 選択されたサンプルを再度返すことができることを示します。 同じ *repeat_seed* 値を使用して指定されている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はテーブル内の行に変更が行われない限り同じ行のサブセットを返します。 異なる *repeat_seed* 値を使用して指定されている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、テーブル内の異なる行のサンプルをいくつか返す可能性があります。 テーブルに対する挿入、更新、削除、インデックスの再構築またはデフラグ、およびデータベースの復元またはアタッチは、変更と見なされます。  
   
  *repeat_seed*  
- によって使用される整数の定数式は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]乱数を生成します。 *repeat_seed*は**bigint**です。 場合*repeat_seed*が指定されていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]値をランダムに割り当てます。 特定の*repeat_seed*値、サンプルの結果は常に同じテーブルに変更が適用されていない場合。 *Repeat_seed*式は、0 より大きい整数に評価される必要があります。  
+ 乱数を生成するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって使用される整数の定数式です。 *repeat_seed* は **bigint**です。 *repeat_seed* が指定されていない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってランダムに値が割り当てられます。 テーブルに変更が適用されていない場合は、特定の *repeat_seed* 値に対して、サンプル結果は常に同じになります。 *repeat_seed* 式は、0 より大きい整数値に評価される必要があります。  
   
  \<joined_table>  
  2 つ以上のテーブルが組み合わされた結果セットです。 複数の結合については、かっこを使って結合の順序を変更できます。  
@@ -260,7 +260,7 @@ FROM { <table_source> [ ,...n ] }
 \<join_type>  
  結合操作の種類を指定します。  
   
- **内部**  
+ **INNER**  
  一致するすべての行をペアで返すことを指定します。 両方のテーブルで一致しない行は廃棄します。 結合の種類が指定されていない場合は、これが既定値になります。  
   
  FULL [ OUTER ]  
@@ -273,18 +273,18 @@ FROM { <table_source> [ ,...n ] }
  内部結合によって返されるすべての行に加えて、結合条件に合わない右側のテーブルのすべての行も結果セットに含まれます。左側のテーブルからの出力列は NULL に設定されることを指定します。  
   
 \<join_hint>  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、ことを指定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クエリ オプティマイザーがクエリの FROM 句で指定される結合ごと、1 つの結合ヒントまたは実行アルゴリズムを使用します。 詳細については、次を参照してください。[結合ヒント &#40;です。TRANSACT-SQL と #41 です](../../t-sql/queries/hints-transact-sql-join.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーが、クエリの FROM 句で指定される結合ごとに、1 つの結合ヒントまたは実行アルゴリズムを使用することを指定します。 詳細については、「[結合ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md)」を参照してください。  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、2 つのディストリビューションの互換性のない列上の内部結合にこれらの結合ヒントを適用します。 クエリの処理中に発生するデータの移動量を制限することでクエリのパフォーマンスを向上することができます。 許容される結合のヒント:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]とおりです。  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の場合、これらの結合ヒントは、2 つの配布互換性のない列での内部結合に適用されます。 これらは、クエリの処理中に発生するデータの移動量を制限することで、クエリのパフォーマンスを向上することができます。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の許容される結合ヒントは次のとおりです。  
   
- 削減  
- 互換性のある 2 つのディストリビューションの互換性のないテーブルを作成するために、テーブルの結合の右側に移動する行の数を減らします。 REDUCE ヒントは、半結合のヒントとも呼ばれます。  
+ REDUCE  
+ 2 つの配布互換性のないテーブルを互換にするため、結合の右側にあるテーブルに移動する行の数を減らします。 REDUCE ヒントは、semi-join ヒントとも呼ばれます。  
   
  REPLICATE  
- 値を結合する列のすべてのノードにレプリケートされる結合の左側にあるテーブルからさせます。 右側のテーブルは、これらの列のレプリケートされたバージョンに参加しています。  
+ 結合の左側にあるテーブルの結合する列にある値を、すべてのノードにレプリケートされるようにします。 右側のテーブルは、これらの列のレプリケートされたバージョンに結合されます。  
   
- 再配布します。  
- JOIN 句で指定された列に配布するフォースの 2 つのデータ ソース。 分散テーブル[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]シャッフル移動を実行します。 レプリケートされたテーブルの[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]トリムの移動を実行します。 これらの移動の種類を理解するには、「についてのクエリ プラン」のトピックで「DMS クエリ操作を計画する」セクションを参照してください。、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。 このヒントは、クエリ プランは、ディストリビューションの互換性のない結合を解決するのには、ブロードキャストの移動を使用している場合、パフォーマンスを向上させることができます。  
+ REDISTRIBUTE  
+ 2 つのデータ ソースの、JOIN 句で指定された列への配布を強制します。 配布されたテーブルに対し、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では SHUFFLE_MOVE が実行されます。 レプリケートされたテーブルに対し、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では TRIM_MOVE が実行されます。 これらの移動の種類を理解するには、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] にある「Understanding Query Plans」 (クエリ プランについて) トピックの「DMS Query Plan Operations」 (DMS クエリ プランの操作) セクションを参照してください。 このヒントは、クエリ プランで BROADCAST_MOVE を使用して配布互換性のない結合を解決する際のパフォーマンスを向上させることができます。  
   
  JOIN  
  指定されたテーブル ソースまたはビューの間で、指定された結合操作が行われることを指定します。  
@@ -304,17 +304,17 @@ ON (p.ProductID = v.ProductID);
   
  ON 句に、結合されるテーブルのいずれかだけを指定している述語がある場合があります。 このような述語は、クエリの WHERE 句にもある場合があります。 このように述語を指定した場合、INNER 結合に対しては同じ結果になりますが、OUTER 結合が関係するときは結果が異なることがあります。 ON 句内の述語は結合の前にテーブルに適用されるのに対し、WHERE 句は意味的に結合結果に適用されるためです。  
   
- 検索条件および述語の詳細については、次を参照してください。[検索条件 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md)  
+ 検索条件および述語の詳細については、「[検索条件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)」を参照してください。  
   
  CROSS JOIN  
  2 つのテーブルの結合を指定します。 SQL-92 形式でない旧形式の結合で WHERE 句が指定されていない場合と同じ行が返されます。  
   
  *left_table_source* { CROSS | OUTER } APPLY *right_table_source*  
- 指定する、 *right_table_source*適用の演算子がすべての行に対して評価されます、 *left_table_source*です。 この機能が便利な場合に、 *right_table_source*から列の値を受け取るテーブル値関数を含む、 *left_table_source*引数の 1 つとしてです。  
+ APPLY 演算子の *right_table_source* を *left_table_source* の各行に対して評価することを指定します。 この機能は、*right_table_source* に、引数として *left_table_source* から列の値を取得するテーブル値関数が含まれる場合に役立ちます。  
   
- CROSS または OUTER は、APPLY を使用して指定する必要があります。 行は生成されません CROSS を指定したときに、 *right_table_source*の指定された行に対して評価される、 *left_table_source*し、空の結果セットを返します。  
+ CROSS または OUTER は、APPLY を使用して指定する必要があります。 CROSS を指定した場合は、*left_table_source* の指定行に対して *right_table_source* を評価し、空の結果セットが返されると、行は生成されません。  
   
- 行ごとに 1 つの行が生成される OUTER を指定すると、 *left_table_source*場合でも、 *right_table_source*その行に対して評価し、空の結果セットを返します。  
+ OUTER を指定した場合は、*left_table_source* の各行に対して *right_table_source* を評価し、空の結果セットが返されても、各行に対して 1 行が生成されます。  
   
  詳細については、「解説」を参照してください。  
   
@@ -325,9 +325,9 @@ ON (p.ProductID = v.ProductID);
  前の引数で定義されたテーブル ソースです。 詳細については、「解説」を参照してください。  
   
  *table_source* PIVOT \<pivot_clause>  
- 指定する、 *table_source*に基づいてピボットされる、 *pivot_column*です。 *table_source*はテーブルまたはテーブル式。 出力は次のすべての列を含むテーブル、 *table_source*を除く、 *pivot_column*と*value_column*です。 列、 *table_source*、を除き、 *pivot_column*と*value_column*、pivot 演算子のグループ化列と呼ばれます。 PIVOT および UNPIVOT の詳細については、次を参照してください。[を使用して PIVOT および UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)です。  
+ *table_source* が *pivot_column* に基づいてピボットされることを指定します。 *table_source* はテーブルまたはテーブル式です。 出力は、*pivot_column* および *value_column* 以外の *table_source* のすべての列を含んでいるテーブルです。 *pivot_column* および *value_column* 以外の *table_source* の列は、ピボット演算子のグループ化列と呼ばれます。 PIVOT および UNPIVOT の詳細については、「[PIVOT および UNPIVOT の使用](../../t-sql/queries/from-using-pivot-and-unpivot.md)」を参照してください。  
   
- PIVOT は、グループ化列に関する入力テーブルに対してグループ化の操作を実行し、各グループごとに 1 行のデータを返します。 さらに、出力がで指定された値ごとに 1 つの列を含む、 *column_list*に表示される、 *pivot_column*の*input_table*です。  
+ PIVOT は、グループ化列に関する入力テーブルに対してグループ化の操作を実行し、各グループごとに 1 行のデータを返します。 さらに、出力では、*input_table* の *pivot_column* に表示される *column_list* で指定された値ごとに 1 列のデータが含まれます。  
   
  詳細については、後の「解説」を参照してください。  
   
@@ -337,47 +337,47 @@ ON (p.ProductID = v.ProductID);
  COUNT(*) システム集計関数は使用できません。  
   
  *value_column*  
- PIVOT 演算子の値列です。 UNPIVOT を使用すると*value_column*入力内の既存の列の名前にすることはできません*table_source*です。  
+ PIVOT 演算子の値列です。 UNPIVOT と共に使用される場合、*value_column* は、入力 *table_source* 内の既存の列の名前にすることはできません。  
   
  FOR *pivot_column*  
- PIVOT 演算子のピボット列です。 *pivot_column*暗黙的または明示的に変換できる型にする必要があります**nvarchar()**です。 この列にすることはできません**イメージ**または**rowversion**です。  
+ PIVOT 演算子のピボット列です。 *pivot_column* は、暗黙的または明示的に **nvarchar()** 型に変換できる型である必要があります。 この列は **image** または **rowversion** にすることはできません。  
   
- UNPIVOT が使用されるときに*pivot_column*から絞り込まれる出力列の名前を指定します、 *table_source*です。 既存の列が存在することはできません*table_source*その名前を持つ。  
+ UNPIVOT が使用される場合、*pivot_column* は、*table_source* から絞り込まれる出力列の名前です。 *table_source* 内に、この名前が付けられている既存の列がないことが条件となります。  
   
  IN (*column_list* )  
- PIVOT 句内の値の一覧、 *pivot_column*出力テーブルの列名になります。 一覧は、入力で既に存在する任意の列名を指定することはできません*table_source*をピボット処理されています。  
+ PIVOT 句で使用する場合は、出力テーブルの列名になる *pivot_column* の値の一覧を指定します。 この一覧では、ピボットの対象となっている入力 *table_source* 内に既に存在している列名は指定できません。  
   
- UNPIVOT 句で列が一覧表示*table_source*を 1 つに絞り込まれる*pivot_column*です。  
+ UNPIVOT 句で使用する場合は、単一の *pivot_column* に絞り込まれる *table_source* 内の列の一覧を指定します。  
   
  *table_alias*  
- 出力テーブルの別名です。 *pivot_table_alias*指定する必要があります。  
+ 出力テーブルの別名です。 *pivot_table_alias* を指定する必要があります。  
   
  UNPIVOT \< unpivot_clause >  
- 入力テーブルが複数の列から絞り込まれることを示す*column_list*と呼ばれる 1 つの列に*pivot_column*です。 PIVOT および UNPIVOT の詳細については、次を参照してください。[を使用して PIVOT および UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)です。  
+ 入力テーブルが *column_list* 内の複数の列から *pivot_column* と呼ばれる単一の列に絞り込まれることを指定します。 PIVOT および UNPIVOT の詳細については、「[PIVOT および UNPIVOT の使用](../../t-sql/queries/from-using-pivot-and-unpivot.md)」を参照してください。  
   
  AS OF \<date_time>  
 
-**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- これまでの時間内には、指定位置で行ごとに実際の値を含む (現在) の 1 つのレコードを含むテーブルを返します。 内部的には、共用体は、テンポラル テーブルとその履歴テーブルの間で実行し、結果はフィルター処理が有効であった時点で指定された時間内の行に値を返しますが、 *\<日付 _ 時刻 >*パラメーター。 行の値が有効と見なされます場合、 *system_start_time_column_name*値より小さいかと等しい、 *\<日付 _ 時刻 >*パラメーター値、および*system_end_time_column_name*値がより大きい、 *\<日付 _ 時刻 >*パラメーターの値。   
+ これまでの時間内には、指定位置で行ごとに実際の値を含む (現在) の 1 つのレコードを含むテーブルを返します。 内部的には、テンポラル テーブルとその履歴テーブルの結合が行われ、結果がフィルター処理されて、*\<date_time>* パラメーターで指定された特定の時点で有効だった行の値が返されます。 *system_start_time_column_name* 値が *\<date_time>* パラメーター値と等しいかそれよりも小さく、*system_end_time_column_name* 値が *\<date_time>* パラメーター値より大きい場合に、行の値は有効と見なされます。   
   
  FROM \<start_date_time> TO \<end_date_time>
 
-**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
   
- 前にアクティブなを起動するかどうかに関係なく、指定した時間範囲内でアクティブだったすべてのレコードのバージョンの値を持つテーブルを返します、  *\<start_date_time >*からのパラメーター値引数または後にアクティブながされているが中断されること、  *\<end_date_time >*パラメーターに引数の値。 内部的には、共用体が一時的なテーブルとその履歴テーブルの間実行され、結果をフィルター処理すると、指定した時間範囲の中にいつでもにアクティブだったすべての行のバージョンの値を返します。 FROM エンドポイントによって定義されている下限の境界で正確にアクティブになった行のサイズが含まれ、宛先エンドポイントによって定義された境界の上限で正確にアクティブになった行は含まれません。  
+ 指定した時間範囲内でアクティブだったすべての行バージョンの値を含むテーブルを返します。FROM 引数の *\<start_date_time>* パラメーター値の前にアクティブになったか、TO 引数の *\<end_date_time>* パラメーター値の後にアクティブでなくなったかに無関係です。 内部的には、共用体が一時的なテーブルとその履歴テーブルの間実行され、結果をフィルター処理すると、指定した時間範囲の中にいつでもにアクティブだったすべての行のバージョンの値を返します。 FROM エンドポイントによって定義されている下限の境界で正確にアクティブになった行のサイズが含まれ、宛先エンドポイントによって定義された境界の上限で正確にアクティブになった行は含まれません。  
   
- 間\<start_date_time > AND \<end_date_time >  
+ BETWEEN \<start_date_time> AND \<end_date_time>  
 
-**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- 上と同じで、 **FROM \<start_date_time > TO \<end_date_time >**説明、によって定義された上限の境界上でアクティブになった行が含まれています点を除いて、 \<end_date_time >エンドポイント。  
+ \<end_date_time> エンドポイントで定義された上限の境界によってアクティブになった行が含まれることを除き、上記の **FROM \<start_date_time> TO \<end_date_time>** の説明と同じです。  
   
- 含まれる IN (\<start_date_time >、 \<end_date_time >)  
+ CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
-**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  開き、含まれている IN 引数の 2 つの datetime 値で定義されている指定された時間範囲内で終了したすべてのレコードのバージョンの値を持つテーブルを返します。 行が下位の境界に正確に有効になったまたは上限の境界上だけでアクティブにされているが中断されることでは、含まれています。  
@@ -385,7 +385,7 @@ ON (p.ProductID = v.ProductID);
  ALL  
  現在のテーブルと、履歴テーブルの両方からのすべての行から値を持つテーブルを返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  FROM 句は、結合テーブルと派生テーブルに対して SQL-92-SQL 構文がサポートされています。 SQL-92 構文には、INNER、LEFT OUTER、RIGHT OUTER、FULL OUTER、および CROSS 結合演算子が用意されています。  
   
  FROM 句内での UNION と JOIN は、ビュー内で、および派生テーブルやサブクエリ内でサポートされています。  
@@ -395,41 +395,41 @@ ON (p.ProductID = v.ProductID);
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は列の分布統計を提供するリンク サーバーからの分布統計および基数統計を検討するので、REMOTE 結合ヒントを使用して結合をリモートから評価する必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ プロセッサはリモートの統計量を検討し、リモート結合の方法が適切かどうかを決定します。 REMOTE 結合ヒントは、列の分布統計を提供しないプロバイダーに対しては便利です。  
   
 ## <a name="using-apply"></a>APPLY の使用  
- APPLY 演算子の左右両方のオペランドはテーブル式です。 これらのオペランドの主な違いは、 *right_table_source*から列を取得するテーブル値関数を使用することができます、 *left_table_source*関数の引数の 1 つとしてです。 *Left_table_source*テーブル値関数を含めることができますからの列である引数を含めることはできません、 *right_table_source*です。  
+ APPLY 演算子の左右両方のオペランドはテーブル式です。 これらのオペランドの主な相違点は、*right_table_source* は関数の引数として *left_table_source* から列を取得するテーブル値関数を使用できるということです。 *left_table_source* には、テーブル値関数を含めることができますが、*right_table_source* からの列である引数を含めることはできません。  
   
  APPLY 演算子は、FROM 句のテーブル ソースを作成するために、次の方法で動作します。  
   
-1.  評価*right_table_source*の各行に対して、 *left_table_source*行セットを作成します。  
+1.  *left_table_source* の各行に対して *right_table_source* を評価し、行セットを作成します。  
   
-     内の値、 *right_table_source*依存*left_table_source*です。 *right_table_source*ほとんどこの方法を表すことができます:`TVF(left_table_source.row)`ここで、`TVF`テーブル値関数です。  
+     *right_table_source* の値は *left_table_source* に依存します。 *right_table_source* はほぼ `TVF(left_table_source.row)` の方式で表記できます (`TVF` はテーブル値関数)。  
   
-2.  評価の各行に対して生成されると、結果セットを結合*right_table_source*で、 *left_table_source* UNION ALL 操作を実行しています。  
+2.  UNION ALL 操作を実行し、*right_table_source* の評価の各行に対して作成された結果セットを *left_table_source* に結合します。  
   
-     APPLY 演算子の結果によって生成される列の一覧から列のセットは、 *left_table_source*をから列の一覧と組み合わせて使用する、 *right_table_source*です。  
+     APPLY 演算子の結果として作成される列の一覧は、*right_table_source* からの列の一覧と結合された *left_table_source* からの列セットです。  
   
 ## <a name="using-pivot-and-unpivot"></a>PIVOT および UNPIVOT の使用  
- *Pivot_column*と*value_column* PIVOT 演算子によって使用されている列をグループ化されます。 PIVOT は、次のプロセスに従って出力結果セットを取得します。  
+ *pivot_column* および *value_column* は、PIVOT 演算子によって使用されるグループ化列です。 PIVOT は、次のプロセスに従って出力結果セットを取得します。  
   
-1.  グループ化を実行、 *input_table*グループ化列と生成 1 つの出力行に対するグループごとにします。  
+1.  グループ化列に対して *input_table* 上で GROUP BY を実行し、各グループに対して 1 行の出力行を作成します。  
   
-     出力行のグループ化列でそのグループに対応する列の値を取得する、 *input_table*です。  
+     出力行内のグループ化列は、*input_table* 内の該当するグループに対応する列の値を取得します。  
   
 2.  次の処理を実行して、各出力行の列の一覧内の列に対して値を生成します。  
   
-    1.  さらに、GROUP BY に対して前の手順で生成された行をグループ化、 *pivot_column*です。  
+    1.  *pivot_column* に対して前の手順の GROUP BY で生成された行をさらにグループ化します。  
   
-         場合は、各出力列に対して、 *column_list*条件を満たすサブグループを選択します。  
+         *column_list* 内の各出力列に対して、次の条件を満たすサブグループを選択します。  
   
          `pivot_column = CONVERT(<data type of pivot_column>, 'output_column')`  
   
-    2.  *aggregate_function*に対して評価される、 *value_column*このサブグループされ、その結果が対応する値として返されます*output_column*です。 サブグループが空の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の null 値を生成*output_column*です。 集計関数が COUNT であり、サブグループが空である場合は、0 が返されます。  
+    2.  *aggregate_function* は、このサブグループ上の *value_column* に対して評価され、その結果は対応する *output_column* の値として返されます。 サブグループが空である場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、その *output_column* に対して null 値を生成します。 集計関数が COUNT であり、サブグループが空である場合は、0 が返されます。  
 
 > [!NOTE]
-> 内の列識別子、`UNPIVOT`句がカタログ照合順序に従います。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]、照合順序は常に`SQL_Latin1_General_CP1_CI_AS`です。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]部分的包含データベースの照合順序は常に`Latin1_General_100_CI_AS_KS_WS_SC`です。 他の列では、collate 句に列を組み合わせた場合 (`COLLATE DATABASE_DEFAULT`) 競合を回避するために必要なです。   
+> `UNPIVOT` 句内の列識別子は、カタログ照合順序に従います。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] の場合、照合順序は常に `SQL_Latin1_General_CP1_CI_AS` です。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] の部分的包含データベースの場合、照合順序は常に `Latin1_General_100_CI_AS_KS_WS_SC` です。 列が他の列と結合されている場合、競合を回避するために COLLATE 句 (`COLLATE DATABASE_DEFAULT`) が必要です。   
   
- PIVOT および UNPIVOT の例を含む詳細については、次を参照してください。[を使用して PIVOT および UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)です。  
+ 詳細については、PIVOT および UNPIVOT の例を含む、「[PIVOT および UNPIVOT の使用](../../t-sql/queries/from-using-pivot-and-unpivot.md)」を参照してください。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  DELETE、SELECT、または UPDATE ステートメントに対する権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -471,7 +471,7 @@ FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;
 ```  
   
 ### <a name="c-using-the-sql-92-cross-join-syntax"></a>C. SQL-92 CROSS JOIN 構文を使用する  
- 次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の 2 つのテーブル `Employee` と `Department` がクロスした結果を返します。 すべての組み合わせの一覧`BusinessEntityID`行とすべて`Department`名前の行が返されます。  
+ 次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の 2 つのテーブル `Employee` と `Department` がクロスした結果を返します。 `BusinessEntityID` 行とすべての `Department` の名前の行を組み合わせた場合に、作成される可能性があるすべての組み合わせの一覧が返されます。  
   
 ```wql    
 SELECT e.BusinessEntityID, d.Name AS Department  
@@ -481,7 +481,7 @@ ORDER BY e.BusinessEntityID, d.Name ;
 ```  
   
 ### <a name="d-using-the-sql-92-full-outer-join-syntax"></a>D. SQL-92 FULL OUTER JOIN 構文を使用する  
- 次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `SalesOrderDetail` テーブル内の製品名、および対応する販売注文を返します。 また、製品記載がない販売注文を返します、`Product`テーブル、およびすべての製品に表示されている別の販売注文、`Product`テーブル。  
+ 次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `SalesOrderDetail` テーブル内の製品名、および対応する販売注文を返します。 また、`Product` テーブル内に製品が一覧表示されていない販売注文、および `Product` テーブル内に一覧表示されている製品以外の販売注文に対する製品も返します。  
   
 ```sql  
 -- The OUTER keyword following the FULL keyword is optional.  
@@ -493,7 +493,7 @@ ORDER BY p.Name ;
 ```  
   
 ### <a name="e-using-the-sql-92-left-outer-join-syntax"></a>E. SQL-92 LEFT OUTER JOIN 構文を使用する  
- 次の例では、2 つのテーブルを結合に`ProductID`し、左テーブルから一致しない行を保持します。 `Product` テーブルは、各テーブル内の `SalesOrderDetail` 列について `ProductID` テーブルと照合されます。 注文されたかどうかにかかわらず、すべての製品が結果セットに表示されます。  
+ 次の例では、`ProductID` の 2 つのテーブルを結合し、左側のテーブルから一致しない行を取り出します。 `Product` テーブルは、各テーブル内の `SalesOrderDetail` 列について `ProductID` テーブルと照合されます。 注文されたかどうかにかかわらず、すべての製品が結果セットに表示されます。  
   
 ```sql    
 SELECT p.Name, sod.SalesOrderID  
@@ -517,7 +517,7 @@ ORDER BY p.Name ;
 ```  
   
 ### <a name="g-using-the-sql-92-right-outer-join-syntax"></a>G. SQL-92 RIGHT OUTER JOIN 構文を使用する  
- 次の例では、`TerritoryID` の 2 つのテーブルを結合し、右側のテーブルから一致しない行を取り出します。 `SalesTerritory`テーブルと対応している、`SalesPerson`テーブルに対して、`TerritoryID`各テーブル内の列です。 販売区域に割り当てられているかどうかに関係なく、すべての販売員は結果セットに表示されます。  
+ 次の例では、`TerritoryID` の 2 つのテーブルを結合し、右側のテーブルから一致しない行を取り出します。 `SalesTerritory` テーブルは、各テーブル内の `TerritoryID` 列について `SalesPerson` テーブルと照合されます。 販売区域に割り当てられているかどうかに関係なく、すべての販売員は結果セットに表示されます。  
   
 ```sql    
 SELECT st.Name AS Territory, sp.BusinessEntityID  
@@ -527,7 +527,7 @@ ON st.TerritoryID = sp.TerritoryID ;
 ```  
   
 ### <a name="h-using-hash-and-merge-join-hints"></a>H. HASH および MERGE 結合ヒントを使用する  
- 次の例の間で 3 つのテーブル結合を実行する、 `Product`、 `ProductVendor`、および`Vendor`製品とそのベンダーの一覧を生成するためにテーブルです。 クエリ オプティマイザーは、MERGE 結合を使用して `Product` と `ProductVendor` (`p` と `pv`) を結合します。 次に、`Product` と `ProductVendor` の MERGE 結合の結果が (`p` と `pv`)、`Vendor` テーブルに対して HASH 結合され、(`p` と `pv`) と `v` が作成されます。  
+ 次の例では、`Product`、`ProductVendor`、および `Vendor` テーブルの 3 つのテーブル結合を実行して、製品とその仕入先の一覧を作成します。 クエリ オプティマイザーは、MERGE 結合を使用して `Product` と `ProductVendor` (`p` と `pv`) を結合します。 次に、`Product` と `ProductVendor` の MERGE 結合の結果が (`p` と `pv`)、`Vendor` テーブルに対して HASH 結合され、(`p` と `pv`) と `v` が作成されます。  
   
 > [!IMPORTANT]  
 >  結合ヒントを指定すると、INNER キーワードを省略することはできません。INNER JOIN を明示的に指定して、実行する必要があります。  
@@ -575,9 +575,9 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
 -   `Employees`: `EmpID`, `EmpLastName`, `EmpFirstName`, `EmpSalary`  
   
- テーブル値関数は、`GetReports(MgrID)`すべての従業員の一覧を返す (`EmpID`、 `EmpLastName`、 `EmpSalary`) を指定された直接または間接の部下を`MgrID`です。  
+ 指定された `MgrID` の直接または間接の監督下にあるすべての従業員の一覧 (`EmpID`、`EmpLastName`、`EmpSalary`) を返すテーブル値関数 `GetReports(MgrID)` もあります。  
   
- この例では`APPLY`をその部門ですべての部門およびすべての従業員を返します。 特定の部門に従業員が存在しない場合は、その部門には行が返されません。  
+ この例では、`APPLY` を使用して、すべての部門と、各部門内のすべての従業員を返します。 特定の部門に従業員が存在しない場合は、その部門には行が返されません。  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
@@ -592,7 +592,7 @@ FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;
 ```  
   
 ### <a name="l-using-cross-apply"></a>L. CROSS APPLY を使用する  
- 次の例では、`sys.dm_exec_cached_plans` 動的管理ビューに対してクエリを実行し、キャッシュにあるすべてのクエリ プランのプラン ハンドルを取得することによって、プラン キャッシュにあるすべてのクエリ プランのスナップショットを取得します。 続いて、`CROSS APPLY`へのハンドルを渡す、計画、演算子が指定されて`sys.dm_exec_query_plan`です。 XML プラン表示の出力は、現在プラン キャッシュにある各プランは、`query_plan`返されるテーブルの列です。  
+ 次の例では、`sys.dm_exec_cached_plans` 動的管理ビューに対してクエリを実行し、キャッシュにあるすべてのクエリ プランのプラン ハンドルを取得することによって、プラン キャッシュにあるすべてのクエリ プランのスナップショットを取得します。 これにより、プラン ハンドルを `sys.dm_exec_query_plan` に渡すように `CROSS APPLY` 演算子が指定されます。 現在プラン キャッシュにある各プランの XML プラン表示の出力は、返されるテーブルの `query_plan` 列に格納されます。  
   
 ```sql
 USE master;  
@@ -605,9 +605,9 @@ GO
   
 ### <a name="m-using-for-systemtime"></a>M. FOR SYSTEM_TIME を使用します。  
   
-**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- 次の例では、SYSTEM_TIME の date_time_literal_or_variable 引数を使用して、2014 年 1 月 1 日の時点で実際の (現在) をされたテーブル行を返します。  
+ 次の例では、FOR SYSTEM_TIME AS OF date_time_literal_or_variable 引数を使用して、2014 年 1 月 1 日の時点の実際 (現在) のテーブル行を返します。  
   
 ```sql
 SELECT DepartmentNumber,   
@@ -619,7 +619,7 @@ FOR SYSTEM_TIME AS OF '2014-01-01'
 WHERE ManagerID = 5;
 ```  
   
- 次の例では、date_time_literal_or_variable 引数に FOR SYSTEM_TIME FROM date_time_literal_or_variable を使用して、2013 年 1 月 1 日に開始すると、2014 年 1 月 1 日で終わる定義されている期間中にアクティブだったすべての行を返します上限の境界の排他。  
+ 次の例では、FOR SYSTEM_TIME FROM date_time_literal_or_variable TO date_time_literal_or_variable 引数を使用して、境界の上限を除く、定義された期間 (2013 年 1 月 1 日から 2014 年 1 月 1 日まで) にアクティブだったすべての行を返します。  
   
 ```sql
 SELECT DepartmentNumber,   
@@ -631,7 +631,7 @@ FOR SYSTEM_TIME FROM '2013-01-01' TO '2014-01-01'
 WHERE ManagerID = 5;
 ```  
   
- 次の例では、SYSTEM_TIME 間で date_time_literal_or_variable と date_time_literal_or_variable 引数のすべての行を返すには、2013 年 1 月 1 日に始まり、2014 年 1 月 1 日で終わる定義されている期間中にアクティブだった上限の境界の包括的です。  
+ 次の例では、FOR SYSTEM_TIME BETWEEN date_time_literal_or_variable AND date_time_literal_or_variable 引数を使用して、境界の上限を含む、定義された期間 (2013 年 1 月 1 日から 2014 年 1 月 1 日まで) にアクティブだったすべての行を返します。  
   
 ```sql
 SELECT DepartmentNumber,   
@@ -643,7 +643,7 @@ FOR SYSTEM_TIME BETWEEN '2013-01-01' AND '2014-01-01'
 WHERE ManagerID = 5;
 ```  
   
- 次の例は、FOR SYSTEM_TIME CONTAINED IN (date_time_literal_or_variable、date_time_literal_or_variable) 引数を開きで、2013 年 1 月 1 日に開始および終了として定義されている期間中に終了されたすべての行を返す2014 年 1 月 1 日です。  
+ 次の例では、FOR SYSTEM_TIME CONTAINED IN ( date_time_literal_or_variable, date_time_literal_or_variable ) 引数を使用して、定義された期間 (2013 年 1 月 1 日から 2014 年 1 月 1 日まで) に開いて閉じられたすべての行を返します。  
   
 ```sql
 SELECT DepartmentNumber,   
@@ -670,10 +670,10 @@ FOR SYSTEM_TIME FROM @AsOfFrom TO @AsOfTo
 WHERE ManagerID = 5;
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="n-using-the-inner-join-syntax"></a>N. INNER JOIN 構文を使用します。  
- 次の例を返します、 `SalesOrderNumber`、 `ProductKey`、および`EnglishProductName`からの列、`FactInternetSales`と`DimProduct`テーブルの結合キー `ProductKey`、両方のテーブルに一致します。 `SalesOrderNumber`と`EnglishProductName`各列に存在テーブルのみのいずれかが示すように、これらの列を持つテーブルの別名を指定する必要はありません。 これらのエイリアスは読みやすくするために含まれます。 単語**AS**エイリアスの前に名前は必要ありませんが、ANSI 標準に準拠して読みやすくするためにはお勧めします。  
+### <a name="n-using-the-inner-join-syntax"></a>N. INNER JOIN 構文を使用する  
+ 次の例では、`FactInternetSales` テーブルと `DimProduct` テーブルから、結合キー `ProductKey` が両方のテーブルで一致する、`SalesOrderNumber`、`ProductKey`、`EnglishProductName` の列を返します。 `SalesOrderNumber` 列と`EnglishProductName` 列はそれぞれ、どちらか一方のテーブルにしか存在しないため、示されているように、これらの列を持つテーブルの別名を指定する必要はありません。これらの別名は読みやすくするために含まれています。 別名の前の **AS** という単語は必須ではありませんが、読みやすくするためと ANSI 標準に準拠するため、推奨されています。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -684,7 +684,7 @@ INNER JOIN DimProduct AS dp
     ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- 以降、`INNER`キーワードは、内部結合に必要なは、このクエリのように記述します。  
+ 内部結合には `INNER` キーワードは必要ないため、これと同じクエリを次のように記述することができます。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -695,7 +695,7 @@ JOIN DimProduct AS dp
 ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- A`WHERE`句こともできますこのクエリに結果を制限します。 次の例は、結果を制限`SalesOrderNumber`'SO5000' よりも大きい値。  
+ このクエリでも `WHERE` 句を使用して、結果を制限することができます。 次の例では、結果を 'SO5000' よりも大きい `SalesOrderNumber` 値に制限します。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -708,8 +708,8 @@ WHERE fis.SalesOrderNumber > 'SO50000'
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O.  LEFT OUTER JOIN、RIGHT OUTER JOIN 構文を使用します。  
- 次の例の結合、`FactInternetSales`と`DimProduct`でテーブル、`ProductKey`列です。 左外部結合の構文が左から一致しない行を保持 (`FactInternetSales`) テーブルです。 以降、`FactInternetSales`テーブル含まない`ProductKey`値と一致しない、`DimProduct`テーブルでは、このクエリは、最初の内部結合例と同じ行を返します。  
+### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O.  LEFT OUTER JOIN と RIGHT OUTER JOIN 構文を使用する  
+ 次の例では、`FactInternetSales` テーブルと `DimProduct` テーブルを `ProductKey` 列で結合します。 LEFT OUTER JOIN 構文は、左 (`FactInternetSales`) テーブルからの一致しない行を保持します。 `FactInternetSales` テーブルには `DimProduct` テーブルと一致しない `ProductKey` 値は含まれないため、このクエリは、上記の最初の内部結合例と同じ行を返します。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -720,9 +720,9 @@ LEFT OUTER JOIN DimProduct AS dp
     ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- このクエリは、せずも記述できます、`OUTER`キーワード。  
+ このクエリは、`OUTER` キーワードを使用しなくても記述できます。  
   
- 右外部結合、右テーブルから一致しない行が保持されます。 次の例では、上記の左外部結合の例と同じ行を返します。  
+ 右外部結合では、右テーブルからの一致しない行が保持されます。 次の例では、上記の左外部結合の例と同じ行を返します。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -733,7 +733,7 @@ RIGHT OUTER JOIN FactInternetSales AS fis
     ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- 次のクエリは、`DimSalesTerritory`左外部結合の左側のテーブルとしてテーブル。 取得、`SalesOrderNumber`値から、`FactInternetSales`テーブル。 特定の注文が存在しない場合`SalesTerritoryKey`、NULL が返されます、`SalesOrderNumber`その行に対してです。 このクエリが並べ、`SalesOrderNumber`列はこの列のいずれかが null に設定できるように、結果の上部に表示されます。  
+ 次のクエリは、左外部結合の左テーブルとして `DimSalesTerritory` テーブルを使用します。 `FactInternetSales` テーブルから `SalesOrderNumber` 値を取得します。 特定の `SalesTerritoryKey` に注文がない場合は、クエリはその行の `SalesOrderNumber` に対して NULL を返します。 このクエリは `SalesOrderNumber` 列で並べ替えられるため、この列内の NULL がすべて結果の上部に表示されます。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -745,7 +745,7 @@ LEFT OUTER JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
- このクエリは、同じ結果を取得する右外部結合で書き直すことができます。  
+ このクエリは、右外部結合で書き直して同じ結果を取得することができます。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -757,8 +757,8 @@ RIGHT OUTER JOIN DimSalesTerritory AS dst
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="p-using-the-full-outer-join-syntax"></a>P. FULL OUTER JOIN 構文を使用します。  
- 次の例では、両方の結合テーブルからすべての行を返しますが、別のテーブルと一致しない値は NULL を返しますが、完全外部結合を示します。  
+### <a name="p-using-the-full-outer-join-syntax"></a>P. FULL OUTER JOIN 構文を使用する  
+ 次の例では、両方の結合テーブルからすべての行を返しますが、別のテーブルと一致しない値には NULL を返す完全外部結合を示します。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -770,7 +770,7 @@ FULL OUTER JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
- このクエリは、せずも記述できます、`OUTER`キーワード。  
+ このクエリは、`OUTER` キーワードを使用しなくても記述できます。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -782,8 +782,8 @@ FULL JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="q-using-the-cross-join-syntax"></a>Q.  CROSS JOIN 構文を使用します。  
- 次の例のクロス積を返します、`FactInternetSales`と`DimSalesTerritory`テーブル。 すべての組み合わせの一覧`SalesOrderNumber`と`SalesTerritoryKey`が返されます。 ない場合に注意してください、`ON`クロス結合クエリ内の句。  
+### <a name="q-using-the-cross-join-syntax"></a>Q.  CROSS JOIN 構文を使用する  
+ 次の例では、`FactInternetSales` テーブルと `DimSalesTerritory` テーブルのクロス積を返します。 `SalesOrderNumber` と `SalesTerritoryKey` のすべての可能な組み合わせの一覧が返されます。 クロス結合クエリ内に `ON` 句がないことに注目してください。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -795,7 +795,7 @@ ORDER BY fis.SalesOrderNumber;
 ```  
   
 ### <a name="r-using-a-derived-table"></a>R.  派生テーブルを使用する  
- 次の例では、派生テーブル (、`SELECT`後のステートメント、`FROM`句) を返す、`CustomerKey`と`LastName`内の顧客すべての列、`DimCustomer`を持つテーブル`BirthDate`1 月 1 日より後の値1970、姓と名 'Smith' です。  
+ 次の例では、派生テーブル (`FROM` 句の後の `SELECT` ステートメント) を使用して、`DimCustomer` テーブル内で、`BirthDate` 値が 1970 年 1 月 1 日以降で、姓が ‘Smith’ のすべての顧客の `CustomerKey` 列と `LastName` 列を返します。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -808,8 +808,8 @@ WHERE LastName = 'Smith'
 ORDER BY LastName;  
 ```  
   
-### <a name="s-reduce-join-hint-example"></a>S.  結合ヒントの例を減らす  
- 次の例では、`REDUCE`結合ヒントをクエリ内で派生テーブルの処理を変更します。 使用する場合、`REDUCE`このクエリで結合ヒント、`fis.ProductKey`は射影、レプリケートされ、個別にし、参加していると`DimProduct`のランダム再生中に`DimProduct`で`ProductKey`です。 結果として得られる派生テーブルに分散させて`fis.ProductKey`です。  
+### <a name="s-reduce-join-hint-example"></a>S.  REDUCE 結合ヒントの例  
+ 次の例では、`REDUCE` 結合ヒントを使用して、クエリ内で派生テーブルの処理を変更します。 `REDUCE` 結合ヒントを使用する場合、`fis.ProductKey` は予測され、レプリケートされ、区別した後、`ProductKey` での `DimProduct` のシャッフル中に `DimProduct` に結合されます。 結果として得られる派生テーブルは、`fis.ProductKey` に配布されます。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -824,8 +824,8 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="t-replicate-join-hint-example"></a>T.  レプリケート結合ヒントの例  
- 次の例は、という点以外、前の例と同じクエリを示しています、`REPLICATE`の代わりに結合ヒントを使用、`REDUCE`結合ヒント。 使用、`REPLICATE`ヒント内の値の原因、 `ProductKey` (参加) の列から、`FactInternetSales`すべてのノードにレプリケートされるテーブル。 `DimProduct`テーブルは、それらの値のレプリケートされたバージョンに結合します。  
+### <a name="t-replicate-join-hint-example"></a>T.  REPLICATE 結合ヒントの例  
+ 次の例は、前の例と同じクエリを示していますが、`REDUCE` 結合ヒントの代わりに `REPLICATE` 結合ヒントを使用している点が異なります。 `REPLICATE` ヒントを使用すると、`FactInternetSales` テーブルの `ProductKey` (結合) 列の値がすべてのノードにレプリケートされます。 `DimProduct` テーブルは、これらの値のレプリケートされたバージョンに結合されます。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -840,10 +840,10 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>U.  ディストリビューションの互換性のない結合のため、ランダム再生の移動を保証するために REDISTRIBUTE ヒントを使用します。  
- 次のクエリは、ディストリビューションの互換性のない結合に再配布のクエリ ヒントを使用します。 これにより、クエリ オプティマイザーはクエリ プランで、ランダム再生の移動を使用します。 これは、クエリ プランは分散テーブルは、レプリケートされたテーブルに移動するブロードキャスト move を使用しないも保証されます。  
+### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>U.  REDISTRIBUTE ヒントを使用して、配布互換性のある結合に SHUFFLE_MOVE を保証する  
+ 次のクエリは、配布互換性のある結合で REDISTRIBUTE クエリ ヒントを使用します。 これにより、クエリ オプティマイザーがクエリ プランで SHUFFLE_MOVE を使用することが保証されます。 また、クエリ プランで分散テーブルをレプリケートされたテーブルに移動する、BROADCAST_MOVE を使用しないことも保証されます。  
   
- 次の例では REDISTRIBUTE ヒント強制的 ProductKey は DimProduct の配布] 列であり、FactInternetSales のディストリビューション列ではないため、FactInternetSales テーブルで、[ランダム再生の移動にします。  
+ 次の例では、REDISTRIBUTE ヒントが FactInternetSales テーブルでの SHUFFLE_MOVE を強制します。これは、ProductKey は DimProduct のディストリビューション列で、FactInternetSales のディストリビューション列ではないからです。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -859,9 +859,9 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [挿入 &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/insert-transact-sql.md)   
- [OPENQUERY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/openquery-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [演算子 &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

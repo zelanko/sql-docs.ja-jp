@@ -1,5 +1,5 @@
 ---
-title: "Geometry インスタンスの OGC メソッド |Microsoft ドキュメント"
+title: "geometry インスタンスの OGC メソッド | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ogc-methods-on-geometry-instances"></a>geometry インスタンスの OGC メソッド
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geometry インスタンスの Open Geospatial Consortium (OGC) メソッドをサポートしています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、geometry インスタンスに対して Open Geospatial Consortium (OGC) メソッドをサポートしています。  
   
  OGC の仕様の詳細については、以下を参照してください。  
   
@@ -134,7 +134,7 @@ ms.lasthandoff: 01/25/2018
 -   [STY](../../t-sql/spatial-geometry/sty-geometry-data-type.md)  
   
 ## <a name="see-also"></a>参照  
- [Geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [OGC の静的なジオメトリ メソッド](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)   
  [拡張された静的なジオメトリ メソッド](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   

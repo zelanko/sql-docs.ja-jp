@@ -1,5 +1,5 @@
 ---
-title: "STExteriorRing (geometry データ型) |Microsoft ドキュメント"
+title: "STExteriorRing (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-外部リングを返します、 **geometry**多角形であるインスタンスです。
+多角形の **geometry** インスタンスの外部リングを返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
  Open Geospatial Consortium (OGC) の型: **LineString**  
   
-## <a name="remarks"></a>解説  
- このメソッドが戻る**null**場合、 **geometry**インスタンスが多角形ではありません。  
+## <a name="remarks"></a>Remarks  
+ **geometry** インスタンスが多角形ではない場合、このメソッドは **NULL** を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例を作成、`Polygon`使用して、インスタンス`STExteriorRing()`として多角形の外部リングを返す、 **LineString**です。  
+ `Polygon` インスタンスを作成し、`STExteriorRing()` を使用して、多角形の外部リングを **LineString** として返す例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

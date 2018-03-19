@@ -1,5 +1,5 @@
 ---
-title: "実行 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: EXECUTE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-コマンド文字列または文字の文字列内で実行する[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ、または、次のモジュールのいずれかの: システム ストアド プロシージャ、ユーザー定義のストアド プロシージャ、CLR ストアド プロシージャ、スカラー値ユーザー定義関数、または拡張ストアド プロシージャです。 EXECUTE ステートメントを使用して、パススルー コマンドをリンク サーバーに送信できます。 さらに、文字列またはコマンドを実行するコンテキストを、明示的に設定できるようになりました。 WITH RESULT SETS オプションを使用すると、結果セットのメタデータを定義できます。
+[!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ内のコマンド文字列や文字の列、またはシステム ストアド プロシージャ、ユーザー定義のストアド プロシージャ、CLR ストアド プロシージャ、スカラー値ユーザー定義関数、または拡張ストアド プロシージャのモジュールのうちのいずれかを実行します。 EXECUTE ステートメントを使用して、パススルー コマンドをリンク サーバーに送信できます。 さらに、文字列またはコマンドを実行するコンテキストを、明示的に設定できるようになりました。 WITH RESULT SETS オプションを使用すると、結果セットのメタデータを定義できます。
   
 > [!IMPORTANT]  
 >  文字列で EXECUTE を呼び出す前には、文字列を検証してください。 また、検証されていないユーザー入力から作成されるコマンドは実行しないでください。  
@@ -206,22 +206,22 @@ Execute a character string
  @*return_status*  
  モジュールから返されるステータス番号を格納する整数型の変数を指定します (省略可能)。 この変数は、EXECUTE ステートメントで使う前に、バッチ、ストアド プロシージャ、または関数の中で宣言する必要があります。  
   
- スカラー値ユーザー定義関数を呼び出すために使用する場合、@*return_status*任意のスカラー データ型の変数にすることができます。  
+ @*return_status* 変数をユーザー定義のスカラー値関数の呼び出しに使用する場合は、任意のスカラー データ型を指定できます。  
   
  *module_name*  
- 呼び出されるストアド プロシージャやユーザー定義のスカラー値関数の、完全修飾名または部分的な修飾名を指定します。 モジュール名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。 拡張ストアド プロシージャの名前では、サーバーの照合順序に関係なく、常に大文字と小文字が区別されます。  
+ 呼び出されるストアド プロシージャやユーザー定義のスカラー値関数の、完全修飾名または部分的な修飾名を指定します。 モジュール名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 拡張ストアド プロシージャの名前では、サーバーの照合順序に関係なく、常に大文字と小文字が区別されます。  
   
- 別のデータベース内で作成されたモジュールを実行するには、実行するユーザーがモジュールを所有しているか、そのデータベース内のモジュールを実行する適切な権限がユーザーに与えられている必要があります。 モジュールを実行している別のサーバーで実行できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]モジュールを実行しているユーザーがそのサーバー (リモート アクセス) を使用して、そのデータベースにモジュールを実行するには、適切なアクセス許可を持っている場合。 サーバー名だけを指定してデータベース名を指定しない場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]では、ユーザーの既定のデータベース内でモジュールが検索されます。  
+ 別のデータベース内で作成されたモジュールを実行するには、実行するユーザーがモジュールを所有しているか、そのデータベース内のモジュールを実行する適切な権限がユーザーに与えられている必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行している別のサーバーでモジュールを実行するには、実行するユーザーに対して、そのサーバーを使用する適切な権限 (リモート アクセス) と、そのデータベース内のモジュールを実行する適切な権限が与えられている必要があります。 サーバー名だけを指定してデータベース名を指定しない場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]では、ユーザーの既定のデータベース内でモジュールが検索されます。  
   
  ;*number*  
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  同じ名前のプロシージャのグループ化に使用される整数です (省略可能)。 このパラメーターは、拡張ストアド プロシージャでは使用できません。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- プロシージャ グループの詳細については、次を参照してください。 [CREATE PROCEDURE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-procedure-transact-sql.md).  
+ プロシージャ グループの詳細については、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)」を参照してください。  
   
  @*module_name_var*  
  モジュール名を表すローカル変数の名前を指定します。  
@@ -229,7 +229,7 @@ Execute a character string
  ネイティブ コンパイル、スカラー ユーザー定義関数の名前を保持する変数を指定できます。  
   
  @*parameter*  
- パラメーターは、*モジュール名*モジュールで定義されています。 パラメーター名の先頭にはアット マーク (@) を付ける必要があります。 使用する場合、@*parameter_name*=*値*フォーム、パラメーター名と定数は、モジュールで定義されている順序で指定されることはありません。 ただし場合、@*parameter_name*=*値*任意のパラメーターの形式が使用される、すべての後続のパラメーターのために使用する必要があります。  
+ モジュールで定義される、*module_name* 用のパラメーターを指定します。 パラメーター名の先頭にはアット マーク (@) を付ける必要があります。 @*parameter_name*=*value* の形式で使用する場合、パラメーター名と定数は、モジュールで定義されている順序で指定する必要はありません。 ただし、@*parameter_name*=*value* の形式をパラメーターとして使用した場合は、以降のすべてのパラメーターは、この形式で指定する必要があります。  
   
  既定では、パラメーターに NULL 値は許容されます。  
   
@@ -250,9 +250,9 @@ Execute a character string
  OUTPUT  
  モジュールまたはコマンド文字列でパラメーターを返すよう指定します。 モジュールまたはコマンド文字列内で一致するパラメーターも、キーワード OUTPUT を使って作成されている必要があります。 このキーワードは、カーソル変数をパラメーターとして使用するときに指定します。  
   
- 場合*値*@ 対応への変更、リンク サーバーに対して実行するモジュールの OUTPUT として定義された*パラメーター*実行の最後に、変数に、プロバイダーをコピー、OLE DB で、モジュールの実行。  
+ リンク サーバーに対して実行するモジュールの OUTPUT として *value* を定義した場合、対応する @*parameter* に対して、OLE DB プロバイダーによる変更が加えられていると、その変更内容がモジュール実行の最後に変数にコピーされて戻されます。  
   
- 出力パラメーターが使用されている、その目的は、呼び出し元のバッチまたはモジュール内の他のステートメントで戻り値を使用する場合は、パラメーターの値渡す必要がありますを変数としてなど*パラメーター* = @*変数*. モジュール内で OUTPUT パラメーターとして定義されていないパラメーターには、OUTPUT を指定してモジュールを実行することはできません。 OUTPUT を使って定数をモジュールに引き渡すことはできません。戻りパラメーターには変数名が必要です。 プロシージャを実行する前に、必ず変数のデータ型を宣言し、値を割り当ててください。  
+ OUTPUT パラメーターを使用し、呼び出し元のバッチまたはモジュール内の他のステートメントで戻り値を使用する場合は、パラメーターの値を @*parameter* = @*variable* のように変数として渡す必要があります。 モジュール内で OUTPUT パラメーターとして定義されていないパラメーターには、OUTPUT を指定してモジュールを実行することはできません。 OUTPUT を使って定数をモジュールに引き渡すことはできません。戻りパラメーターには変数名が必要です。 プロシージャを実行する前に、必ず変数のデータ型を宣言し、値を割り当ててください。  
   
  リモート ストアド プロシージャに対して EXECUTE を使用する場合や、リンク サーバーに対してパススルー コマンドを実行する場合は、OUTPUT パラメーターにラージ オブジェクト (LOB) 型を指定することはできません。  
   
@@ -262,54 +262,54 @@ Execute a character string
  モジュールで定義されているパラメーターの既定値を使用します。 パラメーターに値を必要とするモジュールでパラメーターの既定値が定義されていない場合、パラメーターを指定しなかったり、DEFAULT キーワードを指定したりすると、エラーが発生します。  
   
  @*string_variable*  
- ローカル変数の名前を指定します。 @*string_variable*いずれかを指定できます**char**、 **varchar**、 **nchar**、または**nvarchar**データ型。 ように、 **(max)**データ型。  
+ ローカル変数の名前を指定します。 @*string_variable* には、**char**、**varchar**、**nchar**、または **nvarchar** のいずれかのデータ型を指定できます。 これには、**(max)** データ型が含まれます。  
   
  [N] '*tsql_string*'  
- 定数文字列を指定します。 *tsql_string*いずれかを指定できます**nvarchar**または**varchar**データ型。 として文字列は、N が含まれる場合は、 **nvarchar**データ型。  
+ 定数文字列を指定します。 *tsql_string* には、**nvarchar** または **varchar** のいずれかのデータ型を指定できます。 N が含まれる場合、文字列は **nvarchar** データ型として解釈されます。  
   
- AS \<context_specification >  
+ AS \<context_specification>  
  ステートメントを実行するコンテキストを指定します。  
   
  Login  
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  権限を借用するコンテキストがログインであることを指定します。 権限借用のスコープはサーバーです。  
   
- USER  
+ User  
  権限を借用するコンテキストが、現在のデータベース内のユーザーであることを指定します。 権限借用のスコープは、現在のデータベースに限定されます。 コンテキスト スイッチの対象がデータベース ユーザーであっても、そのユーザーのサーバー レベルの権限は継承されません。  
   
 > [!IMPORTANT]  
->  データベース ユーザーのコンテキストの切り替えがアクティブな間、データベース外部のリソースにアクセスしようとするとは、ステートメントが失敗になります。 Use*データベース*ステートメント、分散クエリ、および 3 部または 4 部構成の識別子を使用して別のデータベースを参照するクエリ。  
+>  データベース ユーザーに対するコンテキスト スイッチがアクティブであるときに、データベース外部のリソースへアクセスを試みると、ステートメントが失敗する原因となります。 たとえば、USE *database* ステートメントや分散クエリ、3 部または 4 部構成の識別子を使用する別のデータベースを参照するクエリなどは実行しないでください。  
   
  '*name*'  
- 有効なユーザーまたはログイン名を指定します。 *名前*sysadmin 固定サーバー ロールのメンバーであるかにプリンシパルとして存在している必要があります[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)または[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)、それぞれします。  
+ 有効なユーザーまたはログイン名を指定します。 *name* は、固定サーバー ロール sysadmin のメンバーであるか、[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) または [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) のプリンシパルとして存在する必要があります。  
   
- *名前*NT authority \localservice、NT authority \networkservice、NT authority \localsystem などのビルトイン アカウントにすることはできません。  
+ *name* には、NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService、NT AUTHORITY\LocalSystem などのビルトイン アカウントは指定できません。  
   
- 詳細については、次を参照してください。[ユーザーまたはログイン名を指定する](#_user)このトピックで後述します。  
+ 詳細については、後の「[ユーザーまたはログイン名の指定](#_user)」を参照してください。  
   
  [N] '*command_string*'  
- リンク サーバーにパススルーされるコマンドを含む定数文字列を指定します。 として文字列は、N が含まれる場合は、 **nvarchar**データ型。  
+ リンク サーバーにパススルーされるコマンドを含む定数文字列を指定します。 N が含まれる場合、文字列は **nvarchar** データ型として解釈されます。  
   
  [?]  
- 対象の値が指定されているパラメーターを示す、 \<arg リスト > EXEC('...', \<arg-list>) にで使用されているパススルー コマンドの\<linkedsrv > ステートメントです。  
+ パススルー コマンドの \<arg-list> で値が提供されるパラメーターを表します。このパススルー コマンドは、EXEC('…', \<arg-list>) AT \<linkedsrv> ステートメントで使用されるものです。  
   
  AT *linked_server_name*  
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- 指定する*command_string*に対してが実行される*linked_server_name*と、結果は存在する場合、クライアントに返されます。 *linked_server_name*ローカル サーバー内の既存のリンク サーバー定義を参照する必要があります。 使用してリンク サーバーが定義されている[sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)です。  
+ *command_string* を *linked_server_name* に対して実行し、結果が返された場合はそれをクライアントに返します。 *linked_server_name* は、ローカル サーバー内の既存のリンク サーバー定義を参照している必要があります。 リンク サーバーは、[sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使って定義されます。  
   
  WITH \<execute_option>  
  実行オプションは次のとおりです。 RESULT SETS オプションは INSERT…EXEC ステートメントで指定できません。  
   
 |項目|定義|  
 |----------|----------------|  
-|RECOMPILE|モジュール実行後に、新しいプランを強制的にコンパイル、使用、および破棄します。 モジュールに既存のクエリ プランがある場合、このプランはキャッシュに残ります。<br /><br /> 指定するパラメーターが一定しない場合であったり、データが大きく変更されたときにこのオプションを使用してください。 このオプションは、拡張ストアド プロシージャには使用しません。 このオプションは負荷を伴うので、あまり使用しないことをお勧めします。<br /><br /> **注:**は使用できません WITH RECOMPILE OPENDATASOURCE 構文を使用するストアド プロシージャを呼び出すときにします。 4 部構成のオブジェクト名が指定されている場合、WITH RECOMPILE オプションは無視されます。<br /><br /> **注:** RECOMPILE は、ネイティブ コンパイル、スカラー ユーザー定義関数ではサポートされません。 再コンパイルする必要がある場合を使用して[sp_recompile &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
-|**結果セットが定義されていません**|**適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。<br /><br /> このオプションを使用した場合、返される結果の種類は保証されず、定義は指定されません。 ステートメントは、何かの結果が返される場合でも、結果が返されない場合でも、問題なく実行されます。 result_sets_option を指定しない場合は、RESULT SETS UNDEFINED が既定の動作となります。<br /><br /> スカラー ユーザー定義の関数では、およびネイティブ コンパイルのスカラー ユーザー定義関数を解釈された、このオプションが機能していないため、関数は、結果セットを返すことはありません。|  
-|RESULT SETS NONE|**適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。<br /><br /> 実行ステートメントによって結果が一切返されなくなります。 結果が返された場合、バッチは中断されます。<br /><br /> スカラー ユーザー定義の関数では、およびネイティブ コンパイルのスカラー ユーザー定義関数を解釈された、このオプションが機能していないため、関数は、結果セットを返すことはありません。|  
-|*\<result_sets_definition>*|**適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。<br /><br /> result_sets_definition で指定されたとおりに結果が返されるようになります。 複数の結果セットを返すステートメントが複数指定して*result_sets_definition*セクションです。 各*result_sets_definition*でかっこ、コンマで区切られます。 詳細については、次を参照してください。 \<result_sets_definition > このトピックで後述します。<br /><br /> このオプションは常には、ネイティブ コンパイル済みのスカラー ユーザー定義関数のエラーが発生するため、関数は、結果セットを返すことはありません。|
+|RECOMPILE|モジュール実行後に、新しいプランを強制的にコンパイル、使用、および破棄します。 モジュールに既存のクエリ プランがある場合、このプランはキャッシュに残ります。<br /><br /> 指定するパラメーターが一定しない場合であったり、データが大きく変更されたときにこのオプションを使用してください。 このオプションは、拡張ストアド プロシージャには使用しません。 このオプションは負荷を伴うので、あまり使用しないことをお勧めします。<br /><br /> **注:** OPENDATASOURCE 構文を使用するストアド プロシージャを呼び出す場合、WITH RECOMPILE は使用できません。 4 部構成のオブジェクト名が指定されている場合、WITH RECOMPILE オプションは無視されます。<br /><br /> **注:** RECOMPILE は、ネイティブにコンパイルされるスカラー ユーザー定義関数ではサポートされていません。 再コンパイルする必要がある場合は、[sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md) を使用してください。|  
+|**RESULT SETS UNDEFINED**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> このオプションを使用した場合、返される結果の種類は保証されず、定義は指定されません。 ステートメントは、何かの結果が返される場合でも、結果が返されない場合でも、問題なく実行されます。 result_sets_option を指定しない場合は、RESULT SETS UNDEFINED が既定の動作となります。<br /><br /> スカラー ユーザー定義の関数では、およびネイティブ コンパイルのスカラー ユーザー定義関数を解釈された、このオプションが機能していないため、関数は、結果セットを返すことはありません。|  
+|RESULT SETS NONE|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 実行ステートメントによって結果が一切返されなくなります。 結果が返された場合、バッチは中断されます。<br /><br /> スカラー ユーザー定義の関数では、およびネイティブ コンパイルのスカラー ユーザー定義関数を解釈された、このオプションが機能していないため、関数は、結果セットを返すことはありません。|  
+|*\<result_sets_definition>*|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> result_sets_definition で指定されたとおりに結果が返されるようになります。 複数の結果セットを返すステートメントの場合は、複数の *result_sets_definition* セクションを指定してください。 その際には、各 *result_sets_definition* をかっこで囲み、コンマで区切ります。 詳細については、このトピックの「\<result_sets_definition>」を参照してください。<br /><br /> このオプションは常には、ネイティブ コンパイル済みのスカラー ユーザー定義関数のエラーが発生するため、関数は、結果セットを返すことはありません。|
   
-\<result_sets_definition >**対象**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+\<result_sets_definition> **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  実行されたステートメントによって返される結果セットの定義です。 result_sets_definition の句には、次の意味があります。  
   
@@ -331,12 +331,12 @@ Execute a character string
   
  実行中に返される実際の結果セットは、結果セットの数、列の数、列の名前、NULL 値の許容属性、およびデータ型のいずれかが WITH RESULT SETS 句を使用して定義された結果とは異なる場合があります。 結果セットの数が異なる場合は、エラーが発生し、バッチが中断されます。  
   
-## <a name="remarks"></a>解説  
- 使用するか、パラメーターを指定することができます*値*またはを使用して*parameter_name*=*値。* パラメーターは、トランザクションの一部ではないです。そのため、トランザクションが後でロールバックの値にパラメーターが変更された場合、パラメーター戻すことはできません前の値にします。 呼び出し元に返される値は常に、モジュールから戻る時点での値になります。  
+## <a name="remarks"></a>Remarks  
+ *value* を使用するか、@*parameter_name*=*value* を使用し、パラメーターを指定できます。 パラメーターは、トランザクションの一部ではないです。そのため、トランザクションが後でロールバックの値にパラメーターが変更された場合、パラメーター戻すことはできません前の値にします。 呼び出し元に返される値は常に、モジュールから戻る時点での値になります。  
   
- 1 つのモジュールで、別のモジュールが呼び出されるか、共通言語ランタイム (CLR) モジュール、ユーザー定義型、または集計の参照によりマネージ コードが実行されるとき、入れ子が発生します。 入れ子のレベルは、呼び出されたモジュールまたはマネージ コード参照の実行開始時に増加し、呼び出されたモジュールやマネージ コード参照の終了時に減少します。 入れ子のレベルが最大値 32 を超えると、呼び出しチェーン全体が失敗します。 現在の入れ子レベルは、@@NESTLEVELシステム関数です。  
+ 1 つのモジュールで、別のモジュールが呼び出されるか、共通言語ランタイム (CLR) モジュール、ユーザー定義型、または集計の参照によりマネージ コードが実行されるとき、入れ子が発生します。 入れ子のレベルは、呼び出されたモジュールまたはマネージ コード参照の実行開始時に増加し、呼び出されたモジュールやマネージ コード参照の終了時に減少します。 入れ子のレベルが最大値 32 を超えると、呼び出しチェーン全体が失敗します。 現在の入れ子レベルは、@@NESTLEVEL システム関数に格納されます。  
   
- リモート プロシージャと拡張ストアド プロシージャは、BEGIN DISTRIBUTED TRANSACTION ステートメントの中で実行されない限り、または各種の構成オプションと共に使用されない限り、トランザクションのスコープ外となります。したがって、これらのプロシージャを呼び出して実行したコマンドはロールバックできません。 詳細については、次を参照してください。[システム ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)と[分散トランザクション &#40; を開始TRANSACT-SQL と #41 です。](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
+ リモート プロシージャと拡張ストアド プロシージャは、BEGIN DISTRIBUTED TRANSACTION ステートメントの中で実行されない限り、または各種の構成オプションと共に使用されない限り、トランザクションのスコープ外となります。したがって、これらのプロシージャを呼び出して実行したコマンドはロールバックできません。 詳細については「[システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)」と「[BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)」を参照してください。  
   
  カーソル変数を使用するとき、カーソル変数にカーソルを渡すプロシージャを実行し、このカーソルがプロシージャに割り当てられているカーソルであった場合は、エラーが発生します。  
   
@@ -347,14 +347,14 @@ Execute a character string
 ## <a name="using-execute-with-stored-procedures"></a>ストアド プロシージャでの EXECUTE の使用  
  ステートメントがバッチ内の最初のステートメントの場合は、ストアド プロシージャを実行するときに EXECUTE キーワードを指定する必要はありません。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム ストアド プロシージャは、sp_ で始まります。 物理的に格納されている、 [Resource データベース](../../relational-databases/databases/resource-database.md)がすべてのシステムとユーザー定義のデータベースの sys スキーマに論理的に表示します。 システム ストアド プロシージャを、バッチ内、またはユーザー定義ストアド プロシージャや関数などのモジュール内で実行する場合は、ストアド プロシージャ名に sys スキーマ名を追加することをお勧めします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム ストアド プロシージャは、sp_ で始まります。 システム ストアド プロシージャは、物理的には[リソース データベース](../../relational-databases/databases/resource-database.md)に格納されますが、論理的にはシステムおよびユーザー定義の各データベースの sys スキーマに属します。 システム ストアド プロシージャを、バッチ内、またはユーザー定義ストアド プロシージャや関数などのモジュール内で実行する場合は、ストアド プロシージャ名に sys スキーマ名を追加することをお勧めします。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム拡張ストアド プロシージャは、文字 xp_ で始まり、master データベースの dbo スキーマに含まれています。 システム拡張ストアド プロシージャを、バッチ内、またはユーザー定義ストアド プロシージャや関数などのモジュール内で実行する場合は、ストアド プロシージャ名に master.dbo を追加することをお勧めします。  
   
- ユーザー定義ストアド プロシージャを、バッチ内、またはユーザー定義ストアド プロシージャや関数などのモジュール内で実行する場合は、ストアド プロシージャ名にスキーマ名を追加することをお勧めします。 ユーザー定義ストアド プロシージャに、システム ストアド プロシージャと同じ名前を付けることはお勧めしません。 ストアド プロシージャの実行の詳細については、次を参照してください。[ストアド プロシージャを実行する](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)です。  
+ ユーザー定義ストアド プロシージャを、バッチ内、またはユーザー定義ストアド プロシージャや関数などのモジュール内で実行する場合は、ストアド プロシージャ名にスキーマ名を追加することをお勧めします。 ユーザー定義ストアド プロシージャに、システム ストアド プロシージャと同じ名前を付けることはお勧めしません。 ストアド プロシージャの実行の詳細については、「[ストアド プロシージャの実行](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)」を参照してください。  
   
 ## <a name="using-execute-with-a-character-string"></a>文字列での EXECUTE の使用  
- 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、文字列は 8,000 バイトに制限されています。 このため、動的実行では大きな文字列を連結する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 **Varchar (max)**と**nvarchar (max)**最大 2 ギガバイトのデータを指定する文字列を可能にするデータ型を指定することができます。  
+ 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、文字列は 8,000 バイトに制限されています。 このため、動的実行では大きな文字列を連結する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**varchar(max)** 型と **nvarchar(max)** 型を指定でき、2 GB までの文字列データを使用できるようになりました。  
   
  データベース コンテキスト内の変更が維持されるのは、EXECUTE ステートメントの終了時までです。 たとえば、次のステートメントの `EXEC` を実行すると、データベース コンテキストは master になります。  
   
@@ -365,30 +365,30 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ## <a name="context-switching"></a>コンテキストの切り替え  
  `AS { LOGIN | USER } = ' name '` 句を使用して、動的ステートメントの実行コンテキストを切り替えることができます。 コンテキスト スイッチを `EXECUTE ('string') AS <context_specification>` のように指定した場合、コンテキスト スイッチは、実行するクエリのスコープでのみ有効になります。  
   
-###  <a name="_user"></a>ユーザーまたはログイン名を指定します。  
+###  <a name="_user"></a> ユーザーまたはログイン名の指定  
  `AS { LOGIN | USER } = ' name '` で指定するユーザーまたはログイン名は、sys.database_principals または sys.server_principals の各プリンシパルとして存在する必要があります。存在しない場合、ステートメントは失敗します。 さらに、プリンシパルで IMPERSONATE 権限が許可されている必要があります。 呼び出し元がデータベース所有者または sysadmin 固定サーバー ロールのメンバーでない場合は、ユーザーが Windows グループ メンバーシップによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースやインスタンスにアクセスしているときでも、プリンシパルは存在する必要があります。 たとえば、次のような条件を想定します。  
   
 -   CompanyDomain\SQLUsers グループに Sales データベースへのアクセス権がある。  
   
 -   CompanyDomain\SqlUser1 は SQLUsers のメンバーであり、したがって Sales データベースへのアクセスが暗黙的に許可されている。  
   
- Companydomain \sqluser1 は SQLUsers のメンバーシップを介してデータベースへのアクセスは、ステートメントをグループ`EXECUTE @string_variable AS USER = 'CompanyDomain\SqlUser1'`ために失敗`CompanyDomain\SqlUser1`データベース内のプリンシパルとして存在しません。  
+ この場合、CompanyDomain\SqlUser1 は SQLUsers グループのメンバーシップを介してデータベースにアクセスすることができますが、`CompanyDomain\SqlUser1` がプリンシパルとしてデータベースに存在していないので、ステートメント `EXECUTE @string_variable AS USER = 'CompanyDomain\SqlUser1'` は失敗します。  
   
 ### <a name="best-practices"></a>ベスト プラクティス  
- ステートメントまたはモジュールで定義されている操作の実行に必要な、最小の権限が与えられているログインまたはユーザーを指定します。 たとえば、サーバー レベルの権限を持つ、のみデータベース レベルの権限が必要です。 ログイン名を指定できません。または、これらのアクセス許可が必要でない場合は、データベース所有者アカウントを指定しません。  
+ ステートメントまたはモジュールで定義されている操作の実行に必要な、最小の権限が与えられているログインまたはユーザーを指定します。 たとえば、データベース レベルの権限だけが必要な場合、サーバー レベルの権限が与えられているログイン名は指定しません。また、データベース所有者アカウントは、データベース レベルの権限が必要とされない場合は指定しません。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  EXECUTE ステートメントの実行に権限は必要ありませんが、 EXECUTE 文字列内で参照されるセキュリティ保護可能なリソースに対しては権限が必要です。 たとえば、この文字列に INSERT ステートメントが含まれている場合、EXECUTE ステートメントの呼び出し元は対象のテーブルに対する INSERT 権限が必要です。 EXECUTE ステートメントは、モジュール内に含まれている場合でも、検出されるたびに権限が確認されます。  
   
  モジュールの EXECUTE 権限は、既定ではモジュールの所有者に与えられており、所有者はその権限を別のユーザーに譲渡できます。 文字列を実行するモジュールが実行されるとき、権限は、モジュールを作成したユーザーのコンテキストではなく、モジュールを実行しているユーザーのコンテキストに基づいて確認されます。 ただし、呼び出すモジュールと呼び出されるモジュールを所有するユーザーが同じ場合、2 番目のモジュールに対しては EXECUTE 権限の確認は行われません。  
   
  モジュールで他のデータベース オブジェクトにアクセスする場合は、モジュールに対する EXECUTE 権限があり、次のいずれかに該当する場合にのみ、実行は成功します。  
   
--   モジュールが EXECUTE AS USER または SELF としてマークされており、モジュール所有者が、参照されるオブジェクトに対して必要な権限を保持している。 モジュール内で権限借用の詳細については、次を参照してください。 [EXECUTE AS 句 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+-   モジュールが EXECUTE AS USER または SELF としてマークされており、モジュール所有者が、参照されるオブジェクトに対して必要な権限を保持している。 モジュール内の権限借用の詳細については、「[EXECUTE AS 句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)」を参照してください。  
   
 -   モジュールが EXECUTE AS CALLER としてマークされており、オブジェクトに対して必要な権限を保持している。  
   
--   モジュールが EXECUTE AS をマーク*user_name*と*user_name*オブジェクトに対応するアクセス許可を持っています。  
+-   モジュールが EXECUTE AS *user_name* としてマークされており、*user_name* が、オブジェクトに対して必要な権限を保持している。  
   
 ### <a name="context-switching-permissions"></a>コンテキスト切り替え権限  
  ログインに EXECUTE AS を指定するには、呼び出し元に、指定のログイン名に対する IMPERSONATE 権限が与えられている必要があります。 データベース ユーザーに EXECUTE AS を指定するには、呼び出し元に、指定のユーザー名に対する IMPERSONATE 権限が与えられている必要があります。 実行コンテキストを指定しない場合、または EXECUTE AS CALLER を指定する場合、IMPERSONATE 権限は必要ありません。  
@@ -396,7 +396,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-execute-to-pass-a-single-parameter"></a>A. EXECUTE を使用して 1 つのパラメーターを渡す  
- `uspGetEmployeeManagers`ストアド プロシージャ、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースに 1 つのパラメーターが必要ですが (`@EmployeeID`)。 次の例では、実行、`uspGetEmployeeManagers`ストアド プロシージャを`Employee ID 6`パラメーター値として。  
+ [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `uspGetEmployeeManagers` ストアド プロシージャでは、1 つのパラメーター (`@EmployeeID`) を設定する必要があります。 次の例では、`Employee ID 6` をパラメーター値として使用し、`uspGetEmployeeManagers` ストアド プロシージャを実行します。  
   
 ```  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -410,7 +410,7 @@ EXEC dbo.uspGetEmployeeManagers @EmployeeID = 6;
 GO  
 ```  
   
- バッチの最初のステートメントを次に示すかどうかまたは**osql**または**sqlcmd**スクリプト、EXEC は必要ありません。  
+ 次のコードがバッチまたは **osql** または **sqlcmd** スクリプト内の最初のステートメントの場合、EXEC は必要ありません。  
   
 ```  
 dbo.uspGetEmployeeManagers 6;  
@@ -421,7 +421,7 @@ GO
 ```  
   
 ### <a name="b-using-multiple-parameters"></a>B. 複数のパラメーターを使用する  
- 次の例を実行、`spGetWhereUsedProductID`ストアド プロシージャ、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。 ここでは、製品 ID (`819`) と、`@CheckDate,` 型の値をとる `datetime` の、2 つのパラメーターを引き渡します。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースで `spGetWhereUsedProductID` ストアド プロシージャを実行します。 ここでは、製品 ID (`819`) と、`@CheckDate,` 型の値をとる `datetime` の、2 つのパラメーターを引き渡します。  
   
 ```  
 DECLARE @CheckDate datetime;  
@@ -431,7 +431,7 @@ GO
 ```  
   
 ### <a name="c-using-execute-tsqlstring-with-a-variable"></a>C. EXECUTE 'tsql_string' を変数と共に使用する  
- 例を次にどのように`EXECUTE`変数を含む文字列を動的に構築されるハンドル。 この例で作成、`tables_cursor`カーソル内のすべてのユーザー定義テーブルの一覧を保持するために、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース、および、テーブルのすべてのインデックスを再構築するボックスの一覧を使用します。  
+ 次の例では、変数を含み、動的に構築される文字列が `EXECUTE` でどのように処理されるかを示します。 この例では、`tables_cursor` カーソルを作成します。このカーソルは、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内にあるすべてのユーザー定義テーブルの一覧を保持しています。次にその一覧を使用して、テーブルに対してすべてのインデックスを再構築します。  
   
 ```  
 DECLARE tables_cursor CURSOR  
@@ -457,9 +457,9 @@ GO
 ```  
   
 ### <a name="d-using-execute-with-a-remote-stored-procedure"></a>D. EXECUTE をリモート ストアド プロシージャと共に使用する  
- 次の例を実行、`uspGetEmployeeManagers`リモート サーバー上のストアド プロシージャ`SQLSERVER1`の成功または失敗を示す戻り値の状態を格納および`@retstat`です。  
+ 次の例では、リモート サーバー `SQLSERVER1` で `uspGetEmployeeManagers` ストアド プロシージャを実行し、`@retstat` に成功または失敗を示す戻りステータスを格納します。  
   
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 DECLARE @retstat int;  
@@ -496,7 +496,7 @@ GO
   
 ```  
   
- `Proc_Test_Defaults`ストアド プロシージャは、多くの組み合わせで実行することができます。  
+ `Proc_Test_Defaults` ストアド プロシージャは、多くの組み合わせで実行できます。  
   
 ```  
 -- Specifying a value only for one parameter (@p2).  
@@ -516,9 +516,9 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
 ```  
   
 ### <a name="g-using-execute-with-at-linkedservername"></a>G. EXECUTE を AT linked_server_name と共に使用する  
- 次の例では、コマンド文字列をリモート サーバーに渡します。 リンク サーバーを作成、`SeattleSales`の別のインスタンスを指す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DDL ステートメントを実行し、(`CREATE TABLE`) そのリンク サーバーに対してです。  
+ 次の例では、コマンド文字列をリモート サーバーに渡します。 ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の別のインスタンスをポイントするリンク サーバー `SeattleSales` を作成し、そのリンク サーバーに対して DDL ステートメント (`CREATE TABLE`) を実行します。  
   
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
@@ -529,7 +529,7 @@ GO
 ```  
   
 ### <a name="h-using-execute-with-recompile"></a>H. EXECUTE WITH RECOMPILE を使用する  
- 次の例を実行、`Proc_Test_Defaults`コンパイルする新しいクエリ プランが使用され、モジュールの実行後に破棄されたストアド プロシージャを強制的に実行します。  
+ 次の例では、`Proc_Test_Defaults` ストアド プロシージャを実行し、モジュール実行後に新しいクエリ プランを強制的にコンパイル、使用、および破棄します。  
   
 ```  
 EXECUTE dbo.Proc_Test_Defaults @p2 = 'A' WITH RECOMPILE;  
@@ -537,7 +537,7 @@ GO
 ```  
   
 ### <a name="i-using-execute-with-a-user-defined-function"></a>I. EXECUTE をユーザー定義関数と共に使用する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースでユーザー定義のスカラー関数 `ufnGetSalesOrderStatusText` を実行します。 変数を使用して`@returnstatus`関数によって返される値を格納します。 この関数には 1 つの入力パラメーター `@Status` が必要です。 これには、定義として、 **tinyint**データ型。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースでユーザー定義のスカラー関数 `ufnGetSalesOrderStatusText` を実行します。 ここでは、変数 `@returnstatus` を使用して、関数によって返される値を格納します。 この関数には 1 つの入力パラメーター `@Status` が必要です。 これは **tinyint** データ型として定義されます。  
   
 ```  
 DECLARE @returnstatus nvarchar(15);  
@@ -548,9 +548,9 @@ GO
 ```  
   
 ### <a name="j-using-execute-to-query-an-oracle-database-on-a-linked-server"></a>J. EXECUTE を使用して、リンク サーバー上の Oracle データベースに対してクエリを実行する  
- 次の例では、いくつか実行`SELECT`リモートの Oracle サーバーでのステートメント。 この例では、まず Oracle サーバーをリンク サーバーとして追加し、リンク サーバー ログインを作成します。  
+ 次の例では、いくつかの `SELECT` ステートメントを、リモートの Oracle サーバーで実行します。 この例では、まず Oracle サーバーをリンク サーバーとして追加し、リンク サーバー ログインを作成します。  
   
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 -- Setup the linked server.  
@@ -582,7 +582,7 @@ GO
 ```  
   
 ### <a name="k-using-execute-as-user-to-switch-context-to-another-user"></a>K. EXECUTE AS USER を使用して、コンテキストを別のユーザーに切り替える  
- 次の例を実行、[!INCLUDE[tsql](../../includes/tsql-md.md)]テーブルを作成しを指定する文字列、`AS USER`句を呼び出し元のステートメントの実行コンテキストを切り替える`User1`です。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の権限はチェック`User1`ステートメントを実行するとします。 `User1`データベース内のユーザーとして存在し、内のテーブルを作成する権限が必要、`Sales`スキーマ、または、ステートメントは失敗します。  
+ 次の例では、テーブルを作成する [!INCLUDE[tsql](../../includes/tsql-md.md)] 文字列を実行し、`AS USER` 句を指定して、ステートメントの実行コンテキストを呼び出し元から `User1` に切り替えます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ステートメントの実行時に `User1` の権限がチェックされます。 `User1` はデータベース内のユーザーとして存在し、`Sales` スキーマにテーブルを作成する権限が与えられている必要があります。そうでない場合、ステートメントは失敗します。  
   
 ```  
 EXECUTE ('CREATE TABLE Sales.SalesTable (SalesID int, SalesName varchar(10));')  
@@ -591,9 +591,9 @@ GO
 ```  
   
 ### <a name="l-using-a-parameter-with-execute-and-at-linkedservername"></a>L. EXECUTE および AT linked_server_name と共にパラメーターを使用する  
- 次の例は、疑問符 () を使用してリモート サーバーにコマンド文字列を渡します (`?`) パラメーターのプレース ホルダーです。 例では、リンク サーバーを作成する`SeattleSales`の別のインスタンスを指す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行し、`SELECT`そのリンク サーバーに対してステートメントです。 `SELECT` ステートメントでは、`ProductID` パラメーター (`952`) のプレースホルダーとして疑問符を使用します。このパラメーターは、ステートメントの後で提供されます。  
+ 次の例では、パラメーターのプレースホルダーとして疑問符 (`?`) を使用し、コマンド文字列をリモート サーバーに渡します。 ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の別のインスタンスをポイントするリンク サーバー `SeattleSales` を作成し、そのリンク サーバーに対して `SELECT` ステートメントを実行します。 `SELECT` ステートメントでは、`ProductID` パラメーター (`952`) のプレースホルダーとして疑問符を使用します。このパラメーターは、ステートメントの後で提供されます。  
   
-**適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 -- Setup the linked server.  
@@ -607,9 +607,9 @@ GO
 ```  
   
 ### <a name="m-using-execute-to-redefine-a-single-result-set"></a>M. EXECUTE を使用して単一の結果セットを再定義する  
- 実行前の例のいくつか`EXEC dbo.uspGetEmployeeManagers 6;`7 つの列が返されます。 次の例では、`WITH RESULT SET` 構文を使用して、返される結果セットの名前とデータ型を変更する方法を示します。  
+ 前のいくつかの例では、7 つの列を返す `EXEC dbo.uspGetEmployeeManagers 6;` を実行しました。 次の例では、`WITH RESULT SET` 構文を使用して、返される結果セットの名前とデータ型を変更する方法を示します。  
   
-**適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 EXEC uspGetEmployeeManagers 16  
@@ -627,9 +627,9 @@ WITH RESULT SETS
 ```  
   
 ### <a name="n-using-execute-to-redefine-a-two-result-sets"></a>N. EXECUTE を使用して 2 つの結果セットを再定義する  
- 複数の結果セットを返すステートメントを実行する場合は、予期される各結果セットを定義してください。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] の次の例では、2 つの結果セットを返すプロシージャを作成します。 使用して、手順を実行し、 **WITH RESULT SETS**句、および 2 つの結果を指定する定義を設定します。  
+ 複数の結果セットを返すステートメントを実行する場合は、予期される各結果セットを定義してください。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] の次の例では、2 つの結果セットを返すプロシージャを作成します。 作成したプロシージャはその後 **WITH RESULT SETS** 句を使用して実行され、2 つの結果セットの定義が指定されます。  
   
-**適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 --Create the procedure  
@@ -662,41 +662,41 @@ WITH RESULT SETS
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="example-o-basic-procedure-execution"></a>例 o: 基本的な手順の実行  
- ストアド プロシージャを実行しています。  
+### <a name="example-o-basic-procedure-execution"></a>例 O: 基本プロシージャの実行  
+ ストアド プロシージャの実行:  
   
 ```  
 EXEC proc1;  
 ```  
   
- 実行時に決定する名前を持つストアド プロシージャの呼び出し。  
+ 実行時に決定した名前を持つストアド プロシージャの呼び出し:  
   
 ```  
 EXEC ('EXEC ' + @var);  
 ```  
   
- ストアド プロシージャ内からストアド プロシージャの呼び出し。  
+ ストアド プロシージャ内からストアド プロシージャの呼び出し:  
   
 ```  
 CREATE sp_first AS EXEC sp_second; EXEC sp_third;  
 ```  
   
-### <a name="example-p-executing-strings"></a>例 p: 文字列を実行します。  
- SQL 文字列を実行するには。  
+### <a name="example-p-executing-strings"></a>例 P: 文字列の実行  
+ SQL 文字列の実行:  
   
 ```  
 EXEC ('SELECT * FROM sys.types');  
 ```  
   
- 入れ子になった文字列を実行するには。  
+ 入れ子になった文字列の実行:  
   
 ```  
 EXEC ('EXEC (''SELECT * FROM sys.types'')');  
 ```  
   
- 文字列変数を実行しています。  
+ 文字列変数の実行:  
   
 ```  
 DECLARE @stringVar nvarchar(100);  
@@ -704,8 +704,8 @@ SET @stringVar = N'SELECT name FROM' + ' sys.sql_logins';
 EXEC (@stringVar);  
 ```  
   
-### <a name="example-q-procedures-with-parameters"></a>パラメーターを使用して手順を例 q:  
- 次の例では、パラメーターを持つプロシージャを作成し、プロシージャを実行する 3 つの方法を示しています。  
+### <a name="example-q-procedures-with-parameters"></a>例 Q: パラメーターを持つプロシージャ  
+ 次の例では、パラメーターを持つプロシージャを作成し、プロシージャを実行する 3 通りの方法を示しています。  
   
 ```  
 -- Uses AdventureWorks  
@@ -734,14 +734,14 @@ GO
  [EXECUTE AS 句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
  [osql ユーティリティ](../../tools/osql-utility.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [元に戻す (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revert-transact-sql.md)   
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)   
- [SUSER_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/suser-name-transact-sql.md)   
+ [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [USER_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/user-name-transact-sql.md)   
- [OPENDATASOURCE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/opendatasource-transact-sql.md)   
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
+ [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [インメモリ OLTP でのユーザー定義のスカラー関数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)  
   
   

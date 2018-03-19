@@ -1,5 +1,5 @@
 ---
-title: "STGeomFromText (geography データ型) |Microsoft ドキュメント"
+title: "STGeomFromText (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -35,9 +35,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomfromtext-geography-data-type"></a>STGeomFromText (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返します、 **geography**いる Z (標高) 値および M (メジャー) 値で補完された、Open Geospatial Consortium (OGC) Well-Known Text (WKT) 表現からのインスタンスがインスタンスで実行します。
+インスタンスに格納されている Z (標高) 値および M (メジャー) 値で補完された、Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を基に **geography** インスタンスを返します。
   
-これは、 **geography**データ型メソッドでサポート**FullGlobe**インスタンスまたは空間インスタンスは、半球より大きいをします。
+この **geography** データ型メソッドは、半球より大きい **FullGlobe** インスタンスまたは空間インスタンスをサポートします。
   
 ## <a name="syntax"></a>構文  
   
@@ -48,23 +48,23 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
   
 ## <a name="arguments"></a>引数  
  *geography_tagged_text*  
- WKT 表現です、 **geography**インスタンスを返します。 *geography_tagged_text*は、 **nvarchar (max)**式。  
+ 返される **geography** インスタンスの WKT 表現です。 *geography_tagged_text* は **nvarchar(max)** 式です。  
   
  *SRID*  
- **Int** 、空間を表す式の ID (SRID) を参照、 **geography**インスタンスを返します。  
+ 返される **geography** インスタンスの SRID (spatial reference ID) を表す **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
  CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>解説  
- OGC の型の**geography** STGeomFromText() によって返されるインスタンスが、対応する WKT 入力に設定します。  
+## <a name="remarks"></a>Remarks  
+ STGeomFromText() によって返される **geography** インスタンスの OGC 型は、対応する WKT 入力に設定されています。  
   
- このメソッドはスロー、 **ArgumentException**場合は、入力に対蹠が含まれています。  
+ このメソッドは、この入力に対蹠点が含まれている場合、**ArgumentException** をスローします。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`STGeomFromText()`を作成する、`geography`インスタンス。  
+ `STGeomFromText()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  
 DECLARE @g geography;  

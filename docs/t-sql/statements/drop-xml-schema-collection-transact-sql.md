@@ -1,5 +1,5 @@
 ---
-title: "DROP XML SCHEMA COLLECTION (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -57,16 +57,16 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
  *sql_identifier*  
  削除する XML スキーマ コレクションの名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  XML スキーマ コレクションの削除は、トランザクション操作です。 つまり、トランザクション内で XML スキーマ コレクションを削除し、後でトランザクションをロールバックすると、XML スキーマ コレクションは削除されなかったことになります。  
   
  XML スキーマ コレクションは、使用中は削除できません。 つまり、削除するコレクションに、次のものは指定できません。  
   
--   いずれかに関連付けられている**xml**パラメーターまたは列を入力します。  
+-   いずれかに関連付けられている **xml** パラメーターまたは列を入力します。  
   
 -   任意のテーブル制約で指定されているコレクション。  
   
--   スキーマ バインド関数またはストアド プロシージャで参照されているコレクション。 たとえば、次の関数が XML スキーマ コレクションをロック`MyCollection`関数が指定されているので`WITH SCHEMABINDING`です。 このコレクションを削除すると、XML SCHEMA COLLECTION のロックはなくなります。  
+-   スキーマ バインド関数またはストアド プロシージャで参照されているコレクション。 たとえば、次の関数では `WITH SCHEMABINDING` が指定されるので、XML スキーマ コレクション `MyCollection` はロックされます。 このコレクションを削除すると、XML SCHEMA COLLECTION のロックはなくなります。  
   
     ```  
     CREATE FUNCTION dbo.MyFunction()  
@@ -80,7 +80,7 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
     END;  
     ```  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  XML SCHEMA COLLECTION を削除するには、コレクションに対する DROP 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -92,8 +92,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [XML スキーマ コレクション &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
- [ALTER XML SCHEMA COLLECTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
+ [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [ALTER XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [サーバー上の XML スキーマ コレクションの要件と制限](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: "STOverlaps (geometry データ型) |Microsoft ドキュメント"
+title: "STOverlaps (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-場合 1 を返します、 **geometry**重なって別インスタンス**geometry**インスタンス。 そうでない場合は、0 を返します。
+**geometry** インスタンスが別の **geometry** インスタンスと重なり合う場合、1 を返します。 重なり合わない場合は 0 を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,22 +45,22 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- もう 1 つ**geometry**対象のインスタンスと比較するインスタンス`STOverlaps()`が呼び出されます。  
+ `STOverlaps()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR 戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- 2 つ**geometry**インスタンスし、領域でいずれかのインスタンスが等しくないと、それぞれの積集合を表す領域がある、同じディメンション場合に、インスタンスが重なっています。  
+## <a name="remarks"></a>Remarks  
+ 2 つの **geometry** インスタンスが重なるのは、重なる部分を表す領域がインスタンスと同次元にあり、その領域がどちらのインスタンスとも異なる場合です。  
   
- `STOverlaps()`場合は、常に 0 を返します点で、 **geometry**インスタンスが交差、同じディメンションではありません。  
+ **geometry** インスタンスが重なる地点の次元が異なる場合、`STOverlaps()` は常に 0 を返します。  
   
- このメソッドは、場合常に null を返しますの spatial reference Id (Srid)、 **geometry**インスタンスが一致しません。  
+ **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`STOverlaps()`2 つのテストに**geometry**重複のインスタンス。  
+ `STOverlaps()` を使用して 2 つの **geometry** インスタンスが重なっているかどうかをテストするコード例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

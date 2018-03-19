@@ -1,5 +1,5 @@
 ---
-title: "拡張された静的なジオメトリ メソッド |Microsoft ドキュメント"
+title: "拡張された静的なジオメトリ メソッド | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [[解析]](../../t-sql/spatial-geometry/parse-geometry-data-type.md)  
   
--   [ポイント](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
+-   [Point](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
   
 ## <a name="see-also"></a>参照  
  [静的集計ジオメトリ メソッド](../../t-sql/spatial-geometry/static-aggregate-geometry-methods.md)   

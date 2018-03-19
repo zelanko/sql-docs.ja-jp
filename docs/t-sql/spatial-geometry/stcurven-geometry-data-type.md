@@ -1,5 +1,5 @@
 ---
-title: "STCurveN (geometry データ型) |Microsoft ドキュメント"
+title: "STCurveN (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurven-geometry-data-type"></a>STCurveN (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-指定された曲線を返して、 **geometry**インスタンス化されている、 **LineString**、 **CircularString**、 **CompoundCurve**、または**MultiLineString**です。
+**LineString**、**CircularString**、**CompoundCurve**、または **MultiLineString** である **geometry** インスタンスから指定された曲線を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -42,31 +42,31 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *curve_index*  
- **Int** 1 ~ 内の曲線の数の式、 **geometry**インスタンス。  
+ 1 から **geometry** インスタンス内の曲線の数までの **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="exceptions"></a>例外  
- 場合*curve_index* < 1、`ArgumentOutOfRangeException`がスローされます。  
+ *curve_index* < 1 の場合、`ArgumentOutOfRangeException` がスローされます。  
   
-## <a name="remarks"></a>解説  
- **NULL**ときに返される次のいずれかが発生します。  
+## <a name="remarks"></a>Remarks  
+ 次のいずれかの場合、**NULL** が返されます。  
   
--   **geometry**インスタンスが宣言されているが、インスタンス化されていません  
+-   **geometry** インスタンスが宣言されているが、インスタンス化されていない  
   
--   **geometry**インスタンスが空  
+-   **geometry** インスタンスが空  
   
--   *curve_index*内の曲線の数を超えています、 **geometry**インスタンス  
+-   *curve_index* が **geometry** インスタンス内の曲線の数を超えている  
   
--   **geometry**インスタンスが、**ポイント**、 **MultiPoint**、**多角形**、 **CurvePolygon**、または**MultiPolygon**  
+-   **geometry** インスタンスが **Point**、**MultiPoint**、**Polygon**、**CurvePolygon**、または **MultiPolygon** である  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-stcurven-on-a-circularstring-instance"></a>A. CircularString インスタンスに対して STCurveN() を使用する  
- 次の例では、2 番目の曲線を返して、`CircularString`インスタンス。  
+ 次の例では、`CircularString` インスタンスの 2 番目の曲線が返されます。  
   
 ```
  DECLARE @g geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
@@ -78,7 +78,7 @@ ms.lasthandoff: 01/25/2018
  `CIRCULARSTRING (3 6.3246, 0 7, -3 6.3246)`  
   
 ### <a name="b-using-stcurven-on-a-compoundcurve-instance-with-one-circularstring-instance"></a>B. 1 つの CircularString インスタンスを持つ CompoundCurve インスタンスに対して STCurveN() を使用する  
- 次の例では、2 番目の曲線を返して、`CompoundCurve`インスタンス。  
+ 次の例では、`CompoundCurve` インスタンスの 2 番目の曲線が返されます。  
   
 ```
  DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0))';  
@@ -104,7 +104,7 @@ ms.lasthandoff: 01/25/2018
  前の 3 つの例の結果が同じであることに注意してください。 同じ曲線シーケンスの入力にどの WKT (Well-known Text) 形式を使用しても、`STCurveN()` インスタンスを使用する場合、`CompoundCurve` によって返される結果は同じです。  
   
 ### <a name="d-validating-the-parameter-before-calling-stcurven"></a>D. STCurveN() を呼び出す前に、パラメーターを検証する  
- 次の例は、確認する方法を示しています。`@n`を呼び出す前に有効では、`STCurveN()`メソッド。  
+ 次の例では、`STCurveN()` メソッドを呼び出す前に `@n` が有効であることを確認する方法を示しています。  
   
 ```
  DECLARE @g geometry;  

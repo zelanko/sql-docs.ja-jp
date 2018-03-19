@@ -1,5 +1,5 @@
 ---
-title: "ShortestLineTo (geography データ型) |Microsoft ドキュメント"
+title: "ShortestLineTo (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  返します、 **LineString**を 2 つの間の最短距離を表す 2 つの点を持つインスタンス**geography**インスタンス。 長さ、 **LineString**返されるインスタンスは、2 つの間の距離**geography**インスタンス。  
+  2 つの **geography** インスタンスの間の最短距離を表す 2 つの点を持つ **LineString** インスタンスを返します。 返される **LineString** インスタンスの長さは、2 つの **geography** インスタンスの間の距離です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,20 +45,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *geography_other*  
- 2 番目の指定**geography**インスタンスが、呼び出し元**geography**インスタンスが最短距離を調べるましょう。  
+ 呼び出し元の **geography** インスタンスとの最短距離を調べる 2 つ目の **geography** インスタンスを指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geography**  
   
  CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>解説  
- このメソッドを返します、 **LineString**インスタンス、2 つの交差しないの境界上にあるエンドポイントを持つ**geography**比較対象となるインスタンスです。 長さ、 **LineString**返されたが、2 つの間で短距離**geography**インスタンス。 空**LineString**インスタンスが返される 2 つ**geography**互いに交差するインスタンス。  
+## <a name="remarks"></a>Remarks  
+ このメソッドでは、比較対象の 2 つの交差しない **geography** インスタンスの境界上にあるエンドポイントを持つ **LineString** インスタンスが返されます。 返される **LineString** インスタンスの長さは、2 つの **geography** インスタンスの間の最短距離です。 2 つの **geography** インスタンスが相互に交差している場合、空の **LineString** インスタンスが返されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-calling-shortestlineto-on-non-intersecting-instances"></a>A. 交差しないインスタンスに対して ShortestLineTo() を呼び出す  
- この例は、間の最短距離を検索、`CircularString`インスタンスおよび`LineString`インスタンスを返す、 `LineString` 2 つの点を結ぶインスタンス。  
+ この例では、`CircularString` インスタンスと `LineString` インスタンスの間の最短距離を調べ、その 2 つの点を結ぶ `LineString` インスタンスを返します。  
   
  ```
  DECLARE @g1 geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  

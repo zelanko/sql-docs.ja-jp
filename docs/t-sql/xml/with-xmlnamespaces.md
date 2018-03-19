@@ -1,5 +1,5 @@
 ---
-title: "WITH XMLNAMESPACES (TRANSACT-SQL) |Microsoft ドキュメント"
+title: WITH XMLNAMESPACES (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -70,12 +70,12 @@ DEFAULT <xml_namespace_uri>
   
 ## <a name="arguments"></a>引数  
  *xml_namespace_uri*  
- 宣言する XML 名前空間を識別する Uniform Resource Identifier (URI) を指定します。 *xml_namespace_uri* SQL 文字列です。  
+ 宣言する XML 名前空間を識別する Uniform Resource Identifier (URI) を指定します。 *xml_namespace_uri* は SQL 文字列です。  
   
  *xml_namespace_prefix*  
- マップされで指定された名前空間 URI 値に関連付けられているプレフィックスを指定します*xml_namespace_uri*です。 *xml_namespace_prefix*する必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別子。  
+ *xml_namespace_uri* で指定した名前空間 URI 値にマップされ、関連付けられるプレフィックスを指定します。 *xml_namespace_prefix* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子にする必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  共通テーブル式を含むステートメントで WITH XMLNAMESPACES 句を使用する場合は、ステートメント内で WITH XMLNAMESPACES 句を共通テーブル式より前に置く必要があります。  
   
  次は、WITH XMLNAMESPACES 句を使用するときに適用される一般的な構文規則です。  
@@ -96,7 +96,7 @@ DEFAULT <xml_namespace_uri>
   
 -   URI 文字列値は、現在のデータベースの照合順序のコード ページに基づいてエンコードされ、内部で Unicode に変換されます。  
   
--   XML 名前空間 URI は空白文字、XSD の空白文字を次に使用される規則を折りたたむ**xs:anyURI**です。 また、XML 名前空間 URI 値は、エンティティ化または非エンティティ化されないことに注意してください。  
+-   XML 名前空間 URI では、**xs:anyURI** で使用される XSD の空白短縮の規則に従って空白が短縮されます。 また、XML 名前空間 URI 値は、エンティティ化または非エンティティ化されないことに注意してください。  
   
 -   XML 名前空間 URI に対して、無効な XML 1.0 文字がないかどうかが確認され、検出された場合はエラーが生成されます (U+0007 など)。  
   
@@ -105,7 +105,7 @@ DEFAULT <xml_namespace_uri>
 -   XMLNAMESPACES キーワードは WITH 句のコンテキストでは予約されています。  
   
 ## <a name="examples"></a>使用例  
- 例については、次を参照してください。 [with XMLNAMESPACES を使用したクエリへの名前空間の追加](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)です。  
+ 例については、「 [WITH XMLNAMESPACES を使用したクエリへの名前空間の追加](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  

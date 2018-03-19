@@ -1,5 +1,5 @@
 ---
-title: "STNumGeometries (geography データ型) |Microsoft ドキュメント"
+title: "STNumGeometries (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  数を返します**ジオメトリ**を構成する、 **geography**インスタンス。  
+  **geography** インスタンスを構成する**ジオメトリ**の数を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **int**  
   
- CLR の戻り値の型: **SqlInt32**  
+ CLR 戻り値の型: **SqlInt32**  
   
-## <a name="remarks"></a>解説  
- 場合 1 を返します、 **geography**インスタンスではありません、 **MultiPoint**、 **MultiLineString**、 **MultiPolygon**、または**GeometryCollection**インスタンス、または 0 の場合、 **geography**インスタンスが空です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、**geography** インスタンスが **MultiPoint**、**MultiLineString**、**MultiPolygon**、**GeometryCollection** インスタンスではない場合に 1 を返し、**geography** インスタンスが空の場合に 0 を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例を作成、`MultiPoint`使用して、インスタンス`STNumGeometries()`方法多く**ジオメトリ**インスタンスが含まれます。  
+ `MultiPoint` インスタンスを作成し、`STNumGeometries()` を使用して**ジオメトリ**の数を確認する例を次に示します。  
   
 ```  
 DECLARE @g geography;  

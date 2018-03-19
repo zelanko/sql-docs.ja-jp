@@ -1,5 +1,5 @@
 ---
-title: "STGeomFromText (geometry データ型) |Microsoft ドキュメント"
+title: "STGeomFromText (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomfromtext-geometry-data-type"></a>STGeomFromText (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返します、 **geometry**いる Z (標高) 値および M (メジャー) 値で補完された、Open Geospatial Consortium (OGC) Well-Known Text (WKT) 表現からのインスタンスがインスタンスで実行します。
+インスタンスに格納されている Z (標高) 値と M (メジャー) 値で補完された、Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を基に **geometry** インスタンスを返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,23 +45,23 @@ STGeomFromText ( 'geometry_tagged_text' , SRID )
   
 ## <a name="arguments"></a>引数  
  *geometry_tagged_text*  
- WKT 表現です、 **geometry**インスタンスを取得します。 *geometry_tagged_text*は、 **nvarchar (max)**式。  
+ 返される **geometry** インスタンスの WKT 表現です。 *geometry_tagged_text* は **nvarchar(max)** 式です。  
   
  *SRID*  
- **Int** 、空間を表す式の ID (SRID) を参照、 **geometry**インスタンスを取得します。  
+ 返される **geography** インスタンスの SRID (spatial reference ID) を表す **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
  CLR の戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
- OGC の型の**geometry**によって返されるインスタンス`STGeomFromText()`が、対応する WKT 入力に設定します。  
+## <a name="remarks"></a>Remarks  
+ `STGeomFromText()` によって返された **geometry** インスタンスの OGC 型は、対応する WKT 入力に設定されます。  
   
- このメソッドはスロー、 **FormatException**入力が適切な形式でない場合。  
+ このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`STGeomeFromText()`を作成する、`geometry`インスタンス。  
+ `STGeomeFromText()` を使用して `geometry` インスタンスを作成する例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

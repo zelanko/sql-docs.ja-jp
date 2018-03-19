@@ -1,5 +1,5 @@
 ---
-title: "MinDbCompatibilityLevel (geometry データ型) |Microsoft ドキュメント"
+title: "MinDbCompatibilityLevel (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="mindbcompatibilitylevel-geometry-data-type"></a>MinDbCompatibilityLevel (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-認識する最小データベース互換性レベルを返します、 **geometry**データ型のインスタンス。
+**geometry** データ型のインスタンスを認識する最小データベース互換性レベルを返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -41,17 +41,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **int**  
   
  CLR の戻り値の型: **int**  
   
-## <a name="remarks"></a>解説  
- 使用して`MinDbCompatibilityLevel()`をデータベースで互換性レベルを変更する前に、互換性のための空間オブジェクトをテストします。  
+## <a name="remarks"></a>Remarks  
+ `MinDbCompatibilityLevel()` を使用すると、データベースで互換性レベルを変更する前に、空間オブジェクトの互換性をテストできます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-testing-circularstring-type-for-compatibility-with-compatibility-level-110"></a>A. 互換性レベル 110 で CircularString 型の互換性をテストする  
- 次の例のテスト、`CircularString`以前のバージョンの互換性のためインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ 次の例では、`CircularString` インスタンスの、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との互換性をテストします。  
   
 ```
  DECLARE @g geometry = 'CIRCULARSTRING(3 4, 8 9, 5 6)'; 

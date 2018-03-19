@@ -1,5 +1,5 @@
 ---
-title: "ALTER DATABASE (並列データ ウェアハウス) |Microsoft ドキュメント"
+title: "ALTER DATABASE (並列データ ウェアハウス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -27,9 +27,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (並列データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  レプリケートされたテーブル、分散テーブル、および内のトランザクション ログの最大データベース サイズのオプションを変更[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]です。 このステートメントを使用すると、それを拡大または縮小のサイズとデータベースのディスク領域の割り当てを管理できます。  
+  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の複製テーブル、分散テーブル、トランザクション ログの最大データベース サイズ オプションを変更します。 このステートメントを使用すると、サイズの増加または減少に合わせてデータベースのディスク領域割り当てを管理できます。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,42 +53,42 @@ ALTER DATABASE database_name
   
 ## <a name="arguments"></a>引数  
  *database_name*  
- 変更するデータベースの名前。 アプライアンス上のデータベースの一覧を表示する使用[sys.databases &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+ 変更するデータベースの名前。 アプライアンスでデータベースの一覧を表示するには、[sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) を使用します。  
   
  AUTOGROW = { ON | OFF }  
- 自動拡張オプションを更新します。 自動拡張が ON の場合、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]記憶域の要件の増大に対応するために必要とレプリケートされたテーブル、分散テーブル、およびトランザクション ログに割り当てられた領域を自動的に増加します。 自動拡張が OFF の場合、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]エラーを返します、テーブルをレプリケートされた場合に分散テーブル、またはトランザクション ログが最大サイズの設定を超えています。  
+ AUTOGROW オプションを更新します。 AUTOGROW が ON のとき、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、複製テーブル、分散テーブル、トランザクション ログの割り当て領域を必要に応じて自動的に増やし、記憶域要件の増加に対応します。 AUTOGROW が OFF のとき、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、複製テーブル、分散テーブル、トランザクション ログが最大サイズ設定を超過したときにエラーを返します。  
   
  REPLICATED_SIZE = *size* [GB]  
- 変更されているデータベース内のすべてのレプリケートされたテーブルを格納するためのコンピューティング ノードごとの新しい最大ギガバイト単位を指定します。 アプライアンスの記憶域スペースを計画している場合は、アプライアンスにコンピューティング ノードの数によって REPLICATED_SIZE を乗算する必要があります。  
+ 変更されているデータベースのすべての複製テーブルを格納するための新しい最大 GB を計算ノードごとに指定します。 アプライアンスの記憶域を計画している場合、アプライアンスの計算ノード数に REPLICATED_SIZE を掛ける必要があります。  
   
  DISTRIBUTED_SIZE = *size* [GB]  
- 変更されているデータベース内のすべての分散テーブルを格納するためのデータベースあたり最大ギガバイト単位の新しいを指定します。 サイズは、すべてのアプライアンスにコンピューティング ノードに分散されます。  
+ 変更されているデータベースのすべての分散テーブルを格納するための新しい最大 GB をデータベースごとに指定します。 このサイズは、アプライアンスの計算ノード全体で分散されます。  
   
  LOG_SIZE = *size* [GB]  
- 変更されているデータベース内のすべてのトランザクション ログを格納するためのデータベースあたり最大ギガバイト単位の新しいを指定します。 サイズは、すべてのアプライアンスにコンピューティング ノードに分散されます。  
+ 変更されているデータベースのすべてのトランザクション ログを格納するための新しい最大 GB をデータベースごとに指定します。 このサイズは、アプライアンスの計算ノード全体で分散されます。  
   
- 暗号化 {ON |オフ}  
- データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 暗号化のみに対して設定できる[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]とき[sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e)に設定されている**1**です。 透過的なデータ暗号化を構成する前に、データベース暗号化キーを作成する必要があります。 データベース暗号化の詳細については、次を参照してください。 [Transparent Data Encryption &#40;です。TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ ENCRYPTION { ON | OFF }  
+ データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の暗号化は、[sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) が **1** に設定されているときにのみ構成できます。 Transparent Data Encryption を構成するには、先にデータベース暗号化キーを作成する必要があります。 データベース暗号化の詳細については、「[Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER 権限が必要です。  
   
 ## <a name="general-remarks"></a>全般的な解説  
- REPLICATED_SIZE、DISTRIBUTED_SIZE、LOG_SIZE の値より大きい、同じか、またはデータベースの現在の値よりも小さいかを使用できます。  
+ REPLICATED_SIZE、DISTRIBUTED_SIZE、LOG_SIZE は、データベースの現在の値と同じ値か、それより大きい値か、それより小さい値に設定できます。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- 拡張し、圧縮操作はおおよそのものです。 結果として得られる実際のサイズは、サイズのパラメーターによって異なります。  
+ 増加と縮小はおおよそで行われます。 結果的に与えられる実際のサイズはサイズ パラメーターとは異なる場合があります。  
   
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]分割不可能な操作として、ALTER DATABASE ステートメントは実行されません。 ステートメントが実行中に中止されると、既に発生した変更は残ります。  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は ALTER DATABASE ステートメントを不可分操作として実行しません。 実行中、ステートメントが中止された場合、既に発生している変更はそのまま残ります。  
   
 ## <a name="locking-behavior"></a>ロック動作  
- データベース オブジェクトの共有ロックを取得します。 読み取りまたは書き込み用に別のユーザーが使用されているデータベースを変更することはできません。 これには、発行したセッションが含まれます、[使用](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15)データベース上のステートメント。  
+ DATABASE オブジェクトを共有ロックします。 別のユーザーが読み取りまたは書き込みをしているデータベースを変更することはできません。 データベースで [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) ステートメントを発行しているセッションもこれに該当します。  
   
-## <a name="performance"></a>パフォーマンス  
- データベースを圧縮すると、大量のデータベース内の実際のデータのサイズによっては、時間とシステムのリソースとディスクの断片化の量が実行できます。 たとえば、データベースの圧縮かかる場合があります数時間またはそれ以上です。  
+## <a name="performance"></a>[パフォーマンス]  
+ データベース内の実際のデータ サイズとディスクの断片化の量によっては、データベースの縮小に多大な時間とシステム リソースが必要となります。 たとえば、データベースを縮小に数時間かかることがあります。  
   
-## <a name="determining-encryption-progress"></a>暗号化の進行状況を判断します。  
- 割合で示したデータベース透過的なデータ暗号化の進行状況を判断するのにには、次のクエリを使用します。  
+## <a name="determining-encryption-progress"></a>暗号化の進捗状況を見る  
+ 次のクエリを使用すると、データベースの Transparent Data Encryption の進捗状況を割合で見ることができます。  
   
 ```  
 WITH  
@@ -132,36 +132,36 @@ INNER JOIN dek_percent_complete
 WHERE type = 'CONTROL';  
 ```  
   
- TDE を実装するすべての手順を示す包括的な例を参照してください。 [Transparent Data Encryption &#40;です。TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ TDE 実装の全手順を包括的な例で見るには、「[Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-altering-the-autogrow-setting"></a>A. 自動拡張の設定を変更します。  
- データベースの自動拡張を ON に設定`CustomerSales`です。  
+### <a name="a-altering-the-autogrow-setting"></a>A. AUTOGROW 設定を変更する  
+ データベース `CustomerSales` の AUTOGROW を ON に設定します。  
   
 ```  
 ALTER DATABASE CustomerSales  
     SET ( AUTOGROW = ON );  
 ```  
   
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. レプリケートされたテーブルの最大記憶域を変更します。  
- 次の例は、データベースの 1 GB にレプリケートされたテーブル記憶域の上限を設定`CustomerSales`です。 これは、コンピューティング ノードごとの記憶域の上限です。  
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. 複製テーブルの最大記憶域を変更する  
+ 次の例では、データベース `CustomerSales` の複製テーブルの記憶域上限を 1 GB に設定します。 これは計算ノードごとの記憶域上限になります。  
   
 ```  
 ALTER DATABASE CustomerSales  
     SET ( REPLICATED_SIZE = 1 GB );  
 ```  
   
-### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. 分散テーブルの最大記憶域を変更します。  
- 次の例では、1000 GB (1 テラバイト) を分散テーブル記憶域の上限を設定、データベースの`CustomerSales`します。 これは、コンピューティング ノードごとの記憶域制限しないすべてのコンピューティング ノードのアプライアンスにわたって結合された記憶域の上限です。  
+### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. 分散テーブルの最大記憶域を変更する  
+ 次の例では、データベース `CustomerSales` の分散テーブルの記憶域上限を 1000 GB (1 テラバイト) に設定します。 これは、計算ノードごとの記憶域上限ではなく、アプライアンス全体の全計算ノードの記憶域上限を 1 つにしたものになります。  
   
 ```  
 ALTER DATABASE CustomerSales  
     SET ( DISTRIBUTED_SIZE = 1000 GB );  
 ```  
   
-### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. トランザクション ログの最大記憶域を変更します。  
- 次の例は、データベースを更新`CustomerSales`する最大持つ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アプライアンスの 10 gb のトランザクション ログのサイズ。  
+### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. トランザクション ログの最大記憶域を変更する  
+ 次の例では、データベース `CustomerSales` を更新し、アプライアンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクション ログの最大サイズを 10 GB にします。  
   
 ```  
 ALTER DATABASE CustomerSales  
@@ -169,7 +169,7 @@ ALTER DATABASE CustomerSales
 ```  
   
 ## <a name="see-also"></a>参照  
- [DATABASE &#40; を作成します。並列データ ウェアハウス&#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   
+ [CREATE DATABASE &#40;並列データ ウェアハウス&#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
   

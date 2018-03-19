@@ -1,5 +1,5 @@
 ---
-title: "exist() メソッド (xml データ型) |Microsoft ドキュメント"
+title: "exist() メソッド (xml データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -32,13 +32,13 @@ ms.lasthandoff: 01/25/2018
 # <a name="exist-method-xml-data-type"></a>exist() メソッド (xml データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返します、**ビット**を表す、次の条件のいずれか。  
+  次のいずれかの状態を表す **bit** 型を返します。  
   
 -   1 (True)。クエリ内の XQuery 式により、空以外の結果が返されたことを示します。 つまり、少なくとも 1 つの XML ノードが返されます。  
   
 -   0 (False)。クエリ内の XQuery 式により、空の結果が返されたことを示します。  
   
--   NULL の場合、 **xml**クエリの実行対象となるデータ型のインスタンスには、NULL が含まれています。  
+-   NULL の場合、**xml**クエリの実行対象となるデータ型のインスタンスには、NULL が含まれています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,10 +51,10 @@ exist (XQuery)
  XQuery  
  文字列リテラルの XQuery 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]  
->  **Exist()**メソッドは、空でない結果を返す XQuery 式に対して 1 を返します。 指定する場合、 **true()**または**false()**の内部機能、 **exist()**メソッド、 **exist()**メソッドは 1、ため、関数**true()**と**false()**それぞれブール値 True および False を返します。 (つまり、空でない結果が返されます)。 したがって、 **exist()**は次の例で示すように 1 (True) を返します。  
+>  **exist()** メソッドは、空でない結果を返す XQuery 式に対して 1 を返します。 **exist()** メソッド内に **true()** 関数または **false()** 関数を指定した場合、**exist()** メソッドは 1 を返します。これは、**true()** 関数および **false()** 関数がブール値の True および False をそれぞれ返すためです (つまり、空でない結果が返されます)。 したがって、次の例に示すように **exist()** は 1 (True) を返します。  
   
 ```  
 declare @x xml;  
@@ -63,10 +63,10 @@ select @x.exist('true()');
 ```  
   
 ## <a name="examples"></a>使用例  
- 次の例を指定する方法を示して、 **exist()**メソッドです。  
+ **exist()** メソッドを指定する例を次に示します。  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>例 : xml 型の変数に対する exist() メソッドの指定  
- 次の例では、@xは、 **xml**型の変数 (型指定されていない xml) と@fによって返される値を格納する整数型の変数は、 **exist()**メソッドです。 **Exist()**メソッドは、XML インスタンスに格納されている日付の値がある場合に True (1) を返します`2002-01-01`です。  
+ 次の例の @x は **xml** 型の変数 (型指定されていない xml) です。また、@f は **exist()** メソッドにより返された値を格納する整数型の変数です。 **Exist()** メソッドは、XML インスタンスに格納されている日付の値が `2002-01-01` である場合に True (1) を返します。  
   
 ```  
 declare @x xml;  
@@ -76,15 +76,15 @@ set @f = @x.exist('/root[(@Somedate cast as xs:date?) eq xs:date("2002-01-01Z")]
 select @f;  
 ```  
   
- 日付を比較する、 **exist()**メソッドを次に注意してください。  
+ **exist()** メソッドで日付を比較する際は、次のことに注意してください。  
   
--   コード`cast as xs:date?`に値をキャストするために使用**xs:date**比較の目的の型。  
+-   コード `cast as xs:date?` は、比較する値を **xs:date** 型にキャストします。  
   
--   値、  **@Somedate** 属性に型指定されていません。 この値を比較する場合は暗黙的にキャスト、比較の右側にある型に、 **xs:date**型です。  
+-   **@Somedate** 属性の値は型指定されません。 この値は、比較するときに右側の比較対象の型である **xs:date** 型に暗黙的にキャストされます。  
   
--   代わりに**as xs:date() キャスト**、使用することができます、 **xs:date()**コンス トラクター関数。 詳細については、次を参照してください。[コンス トラクター関数 &#40;です。XQuery と #41 です。](../../xquery/constructor-functions-xquery.md).  
+-   **cast as xs:date()** の代わりに、**xs:date()** コンストラクター関数を使用できます。 詳細については、「[コンストラクター関数 &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md)」を参照してください。  
   
- 次の例は似ていますが、1 つ前に、<`Somedate`> 要素。  
+ 次の例は、1 つ前の例と似ていますが、<`Somedate`> 要素が含まれている点が異なります。  
   
 ```  
 DECLARE @x xml;  
@@ -96,14 +96,14 @@ SELECT @f;
   
  上のクエリに関して、次の点に注意してください。  
   
--   **Text()**メソッドを型指定されていない値を含むテキスト ノードを返します`2002-01-01`です。 (XQuery 型が**xdt:untypedAtomic**)。この型指定された値を明示的にキャストする必要があります**x**に**xsd:date**暗黙のキャストがここではサポートされていないため、します。  
+-   **text()** メソッドは、型指定されていない値 `2002-01-01` が含まれたテキスト ノードを返します (この値の XQuery の型は **xdt:untypedAtomic** です)。この場合、暗黙的なキャストはサポートされないので、この型指定された値は明示的に **x** 型から **xsd:date** 型にキャストする必要があります。  
   
 ### <a name="example-specifying-the-exist-method-against-a-typed-xml-variable"></a>例 : 型指定された xml 型の変数に対する exist() メソッドの指定  
- 次の例では、使用、 **exist()**メソッドに対して、 **xml**型の変数です。 この例で使用する変数は、スキーマ名前空間コレクション名 `ManuInstructionsSchemaCollection` を指定しているため、型指定された XML 変数です。  
+ 次の例では、**xml** 型の変数に対する **exist()** メソッドの使用方法について説明します。 この例で使用する変数は、スキーマ名前空間コレクション名 `ManuInstructionsSchemaCollection` を指定しているため、型指定された XML 変数です。  
   
- ドキュメントがこの変数に割り当てられた最初の製造手順の例でし、 **exist()**メソッドは、ドキュメントを含むかどうかを検索するため、<`Location`> 要素が**LocationID**属性値は 50 です。  
+ この例では、まず製造手順書ドキュメントを変数に代入してから、**exist()** メソッドを使用して、このドキュメントに **LocationID** 属性の値が 50 の <`Location`> 要素が含まれているかどうかを調べます。  
   
- **Exist()**に対して指定されたメソッド、@x変数は 1 を返します (True)、製造手順ドキュメントが含まれています、<`Location`> を持つ要素`LocationID=50`です。 それ以外の場合は 0 (False) を返します。  
+ @x 変数に対して指定された **exist()** メソッドは、製造手順書ドキュメントに `LocationID=50` の <`Location`> 要素が含まれている場合、1 (True) を返します。 それ以外の場合は 0 (False) を返します。  
   
 ```  
 DECLARE @x xml (Production.ManuInstructionsSchemaCollection);  
@@ -119,7 +119,7 @@ SELECT @f;
 ```  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>例 : xml 型の列に対する exist() メソッドの指定  
- 次のクエリは、製品モデル カタログの説明には、仕様を含めないでください Id を取得 <`Specifications`> 要素。  
+ 次のクエリでは、仕様書である <`Specifications`> 要素がカタログの説明に含まれていない製品モデル ID を取得します。  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -137,15 +137,15 @@ WHERE CatalogDescription.exist('
   
  上のクエリに関して、次の点に注意してください。  
   
--   WHERE 句の行だけを選択する、 **ProductDescription**に対して指定された条件を満たすテーブル、 **CatalogDescription xml**型の列です。  
+-   WHERE 句では、xml 型の **CatalogDescription** 列に対して指定された条件を満たす行のみが **ProductDescription** テーブルから選択されます。  
   
--   **Exist()**いずれかの XML が含まれない場合、WHERE 句を 1 (True) を返すメソッド <`Specifications`> 要素。 使用に注意してください、 [not() 関数 (XQuery)](../../xquery/functions-on-boolean-values-not-function.md)です。  
+-   WHERE 句の **exist()** メソッドは、XML に <`Specifications`> 要素が含まれていない場合、1 (True) を返します。 [not() 関数 (XQuery)](../../xquery/functions-on-boolean-values-not-function.md) が使用されていることに注意してください。  
   
--   [Sql:column() 関数 (XQuery)](../../xquery/xquery-extension-functions-sql-column.md)関数を使用して、XML 以外の列から値を取り込みます。  
+-   [sql:column() 関数 (XQuery)](../../xquery/xquery-extension-functions-sql-column.md) を使用して、XML 以外の列から値を取得しています。  
   
 -   このクエリでは、空の行セットが返されます。  
   
- クエリで指定**query()**と**exist()** xml データ型のメソッドとこれら両方の方法は、クエリ プロローグ内で同じ名前空間を宣言します。 この場合、WITH XMLNAMESPACES を使用してプレフィックスを宣言し、そのプレフィックスをこのクエリに使用できます。  
+ 上のクエリでは、xml データ型の **query()** メソッドと **exist()** メソッドが指定されています。また、これら両方のメソッドのクエリのプロローグで、同じ名前空間が宣言されています。 この場合、WITH XMLNAMESPACES を使用してプレフィックスを宣言し、そのプレフィックスをこのクエリに使用できます。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -165,6 +165,6 @@ WHERE CatalogDescription.exist('
  [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)   
- [XML データ変更言語 &#40;です。XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML データ変更言語 &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

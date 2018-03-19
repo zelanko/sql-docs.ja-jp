@@ -1,5 +1,5 @@
 ---
-title: "STNumCurves (geography データ型) |Microsoft ドキュメント"
+title: "STNumCurves (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  1 次元内の曲線の数を返します**geography**インスタンス。  
+  1 次元の **geography** インスタンスに含まれる曲線の数を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
  CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>解説  
- 1 次元の空間データ型は**LineString**、 **CircularString**、および**CompoundCurve**です。 空の 1 次元**geography**インスタンスは 0 を返します。  
+## <a name="remarks"></a>Remarks  
+ 1 次元の空間データ型には、**LineString**、**CircularString**、**CompoundCurve** があります。 空の 1 次元 **geography** インスタンスは 0 を返します。す。  
   
- `STNumCurves`() は単純型に対してのみ機能します。は機能しません**geography**コレクションと同様に**MultiLineString**です。 **NULL**ときに返される、 **geography**インスタンスが 1 次元のデータ型ではありません。  
+ `STNumCurves`() は単純型に対してのみ機能し、**MultiLineString** のような **geography** コレクションでは機能しません。 **geography** インスタンスが 1 次元のデータ型ではない場合、**NULL** が返されます。  
   
- **Null**初期化されていないに返される**geography**インスタンス。  
+ 初期化されていない **geography** インスタンスに対しては **Null** が返されます。  
   
 ## <a name="examples"></a>使用例  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="b-using-stnumcurves-on-a-compoundcurve-instance"></a>B. CompoundCurve インスタンスに対して STNumCurves() を使用する  
- 次の例で`STNumCurves()`内の曲線の数を返す、`CompoundCurve`インスタンス。  
+ 次の例では、`STNumCurves()` を使用して、`CompoundCurve` インスタンスに含まれる曲線の数を返します。  
   
 ```
  DECLARE @g geography;  

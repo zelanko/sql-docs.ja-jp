@@ -1,5 +1,5 @@
 ---
-title: "STNumPoints (geography データ型) |Microsoft ドキュメント"
+title: "STNumPoints (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  図形の各ポイントの合計数を返します、 **geography**インスタンス。  
+  **geography** インスタンス内の各図形に含まれる地点の合計数を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **int**  
   
  CLR の戻り値の型: **SqlInt32**  
   
-## <a name="remarks"></a>解説  
- このメソッドの説明内のポイントの数、 **geography**インスタンス。 重複する地点はカウントされます。ただし、セグメント間の接続点は 1 つとしてカウントされます。 対象となるインスタンスがコレクションの場合、このメソッドは、コレクション内の地点の合計数を返します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、**geography** インスタンスの記述に含まれている地点をカウントします。 重複する地点はカウントされます。ただし、セグメント間の接続点は 1 つとしてカウントされます。 対象となるインスタンスがコレクションの場合、このメソッドは、コレクション内の地点の合計数を返します。  
   
 ## <a name="examples"></a>使用例  
   
@@ -63,7 +63,7 @@ SELECT @g.STNumPoints();
 ```  
   
 ### <a name="b-retrieving-the-total-number-of-points-in-a-geometrycollection"></a>B. GeometryCollection 内の地点の合計数を取得する  
- 次の例は、すべての要素のポイントの合計を返して、`GeometryCollection`です。  
+ 次の例では、`GeometryCollection` 内のすべての要素の地点の合計数を返します。  
   
 ```  
 DECLARE @g geography = 'GEOMETRYCOLLECTION(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)  

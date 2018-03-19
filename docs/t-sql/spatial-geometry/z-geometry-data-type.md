@@ -1,5 +1,5 @@
 ---
-title: "Z (geometry データ型) |Microsoft ドキュメント"
+title: "Z (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型: **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR 型: **SqlDouble**  
+ CLR の型: **SqlDouble**  
   
-## <a name="remarks"></a>解説  
- このプロパティの値は、geometry インスタンスがない場合、ポイントは null になりますと**ポイント**が設定されていないためインスタンス化します。  
+## <a name="remarks"></a>Remarks  
+ geometry インスタンスが Point ではない場合や、**Point** インスタンスにこのプロパティの値が設定されていない場合は、このプロパティの値は null になります。  
   
  このプロパティは読み取り専用です。  
   

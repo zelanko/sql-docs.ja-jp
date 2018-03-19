@@ -1,5 +1,5 @@
 ---
-title: "STContains (geography データ型) |Microsoft ドキュメント"
+title: "STContains (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcontains--geography-data-type"></a>STContains (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  指定するかどうか、呼び出し元**geography**インスタンスが空間的に含まれている、 **geography**インスタンス メソッドに渡されます。  
+  呼び出し元の **geography** インスタンスに、メソッドに渡される **geography** インスタンスが空間的に含まれるかどうかを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,18 +42,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geography*  
- もう 1 つ**geography**対象のインスタンスと比較するインスタンス`STContains()`が呼び出されます。  
+ `STContains()` を呼び出したインスタンスと比較される、別の **geography** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **bit**  
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- 場合 1 を返します、呼び出し元**geography**インスタンスが空間的に含まれている、 **geography**インスタンスは、メソッドに渡され、そうでない場合は 0 を返します。 返します**null**場合、2 つの SRID **geography**インスタンスが同じではありません。  
+## <a name="remarks"></a>Remarks  
+ 呼び出し元の **geography** インスタンスに、メソッドに渡される **geography** インスタンスが空間的に含まれる場合は 1 を返します。それ以外の場合は 0 を返します。 2 つの **geography** インスタンスの SRID が同じでない場合は、**null** を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`STContains()`2 つのテストに`geography`最初のインスタンスに 2 番目のインスタンスが含まれているかどうか。  
+ `STContains()` を使用して、2 つの `geography` インスタンスの一方のインスタンスがもう一方のインスタンスを含むかどうかをテストする例を次に示します。  
   
 ```  
 DECLARE @g geography;  

@@ -1,5 +1,5 @@
 ---
-title: "TRY しています.CATCH (TRANSACT-SQL) |Microsoft ドキュメント"
+title: TRY...CATCH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  実装のエラー処理[!INCLUDE[tsql](../../includes/tsql-md.md)]での例外処理に似た、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c# と[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual C の言語です。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのグループを TRY ブロックで囲むことができます。 TRY ブロック内でエラーが発生すると、CATCH ブロックで囲まれた別のステートメントのグループに制御が渡されます。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] のエラー処理を実装します。これは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 言語および [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ 言語での例外処理に似ています。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのグループを TRY ブロックで囲むことができます。 TRY ブロック内でエラーが発生すると、CATCH ブロックで囲まれた別のステートメントのグループに制御が渡されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,17 +63,17 @@ END CATCH
   
 ## <a name="arguments"></a>引数  
  *sql_statement*  
- いずれかである[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。  
+ 任意の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。  
   
  *statement_block*  
- すべてのグループ[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ内のステートメントまたは BEGIN で囲むしています.終了ブロック。  
+ バッチ内、または BEGIN...END ブロックで囲まれた [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの任意のグループです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  TRY...CATCH 構造は、データベース接続を閉じない、重大度が 10 を超えるすべての実行エラーを検出します。  
   
  TRY ブロックの直後には、関連する CATCH ブロックを記述する必要があります。 END TRY ステートメントと BEGIN CATCH ステートメントの間に他のステートメントを含めると、構文エラーが生成されます。  
   
- TRY...CATCH 構造は複数のバッチをまたぐことはできません。 TRY しています.CATCH 構造での複数のブロックをまたぐことはできません[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 たとえば、試してみてください.CATCH 構造では、次の 2 つの開始をまたぐことはできません.最後のブロック[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント IF にまたがって配置できないとしています.それ以外の場合を構築します。  
+ TRY...CATCH 構造は複数のバッチをまたぐことはできません。 TRY...CATCH 構造は、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの複数のブロックをまたぐことはできません。 たとえば、TRY...CATCH 構造で [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの 2 つの BEGIN...END ブロックをまたいだり、IF...ELSE 構造をまたいだりすることはできません。  
   
  TRY ブロックで囲まれたコードでエラーが発生しなかった場合は、TRY ブロック内の最後のステートメントの実行が完了すると、END CATCH ステートメントの直後にあるステートメントに制御が渡されます。 TRY ブロックで囲まれたコードでエラーが発生した場合は、CATCH ブロック内の最初のステートメントに制御が渡されます。 END CATCH ステートメントがストアド プロシージャまたはトリガー内の最後のステートメントである場合は、そのストアド プロシージャの呼び出しまたはトリガーの起動を実行したステートメントに制御が渡されます。  
   
@@ -96,17 +96,17 @@ END CATCH
 ## <a name="retrieving-error-information"></a>エラー情報の取得  
  CATCH ブロックのスコープ内では、次のシステム関数を使用して、CATCH ブロックが実行される原因となったエラーに関する情報を取得できます。  
   
--   [ERROR_NUMBER()](../../t-sql/functions/error-number-transact-sql.md)エラーの数を返します。  
+-   [ERROR_NUMBER()](../../t-sql/functions/error-number-transact-sql.md) は、エラーの番号を返します。  
   
--   [ERROR_SEVERITY()](../../t-sql/functions/error-severity-transact-sql.md)重大度を返します。  
+-   [ERROR_SEVERITY()](../../t-sql/functions/error-severity-transact-sql.md) は、重大度を返します。  
   
--   [ERROR_STATE()](../../t-sql/functions/error-state-transact-sql.md)エラー状態番号を返します。  
+-   [ERROR_STATE()](../../t-sql/functions/error-state-transact-sql.md) は、エラー状態番号を返します。  
   
--   [ERROR_PROCEDURE()](../../t-sql/functions/error-procedure-transact-sql.md)エラーが発生したストアド プロシージャまたはトリガーの名前を返します。  
+-   [ERROR_PROCEDURE()](../../t-sql/functions/error-procedure-transact-sql.md) は、エラーが発生したストアド プロシージャまたはトリガーの名前を返します。  
   
--   [ERROR_LINE()](../../t-sql/functions/error-line-transact-sql.md)エラーを発生させたルーチン内の行番号を返します。  
+-   [ERROR_LINE()](../../t-sql/functions/error-line-transact-sql.md) は、エラーを発生させたルーチン内の行番号を返します。  
   
--   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md)エラー メッセージの全文を返します。 このテキストには、長さ、オブジェクト名、回数など、置き換え可能なパラメーターに提供される値が含まれます。  
+-   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) は、エラー メッセージのテキストの全文を返します。 このテキストには、長さ、オブジェクト名、回数など、置き換え可能なパラメーターに提供される値が含まれます。  
   
  CATCH ブロックのスコープの外側から呼び出されると、これらの関数は NULL を返します。 エラー情報は、CATCH ブロックのスコープ内のどこからでも、これらの関数を使用して取得できます。 たとえば、次のスクリプトでは、エラー処理関数を含んでいるストアド プロシージャを示しています。 `CATCH` 構造の `TRY…CATCH` ブロックでは、このストアド プロシージャを呼び出して、エラーに関する情報を返しています。  
   
@@ -138,7 +138,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- エラー\_ \*関数でも、動作、`CATCH`ブロック、[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)です。  
+ ERROR\_\* 関数は、[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)内の `CATCH` ブロックでも機能します。  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>TRY...CATCH 構造の影響を受けないエラー  
  TRY...CATCH 構造では、次の条件はトラップされません。  
@@ -155,13 +155,13 @@ END CATCH;
   
 -   構文エラーなど、バッチの実行を妨げるコンパイル エラー。  
   
--   名前の遅延解決のためのコンパイル後に発生するオブジェクト名の解決エラーなどのステートメント レベルの再コンパイル中に発生するエラーです。  
+-   ステートメントレベルの再コンパイルで発生するエラー (コンパイル後の名前の遅延解決により発生するオブジェクト名の解決エラーなど)。  
   
  これらのエラーは、バッチ、ストアド プロシージャ、またはトリガーを実行したレベルに返されます。  
   
  TRY ブロック内の下位の実行レベル (たとえば、sp_executesql またはユーザー定義のストアド プロシージャを実行しているとき) でのコンパイル中またはステートメントレベルの再コンパイル中にエラーが発生した場合、そのエラーは TRY...CATCH 構造よりも下位のレベルで発生し、関連する CATCH ブロックによって処理されます。  
   
- 次の例は、オブジェクト名の解決エラーの生成方法を示しています、`SELECT`ステートメントがによってキャッチされない、`TRY…CATCH`構築が、によってキャッチされました、`CATCH`をブロックするときに、同じ`SELECT`ステートメントが実行される格納された内部プロシージャです。  
+ 次の例は、`SELECT` ステートメントによって生成されたオブジェクト名解決エラーが `TRY…CATCH` 構造でキャッチされず、同じ `SELECT` ステートメントをストアド プロシージャ内で実行した場合には `CATCH` ブロックでキャッチされることを示しています。  
   
 ```sql  
 BEGIN TRY  
@@ -176,9 +176,9 @@ BEGIN CATCH
 END CATCH  
 ```  
   
- エラーはキャッチされず、制御からパスのうち、`TRY…CATCH`上位のレベルを構築します。  
+ このエラーはキャッチされず、制御は `TRY…CATCH` 構造から出て、1 つ上位のレベルに渡されます。  
   
- 実行している、`SELECT`ストアド プロシージャ内のステートメントより低いレベルで発生するエラーが発生、`TRY`ブロックします。 このエラーは `TRY…CATCH` 構造によって処理されます。  
+ この `SELECT` ステートメントをストアド プロシージャ内で実行すると、エラーは `TRY` ブロックよりも下位のレベルで発生します。 このエラーは `TRY…CATCH` 構造によって処理されます。  
   
 ```sql  
 -- Verify that the stored procedure does not exist.  
@@ -206,12 +206,12 @@ END CATCH;
 ## <a name="uncommittable-transactions-and-xactstate"></a>コミット不可能なトランザクションと XACT_STATE  
  TRY ブロックで生成されたエラーによって現在のトランザクションの状態が無効になる場合、トランザクションはコミット不可能なトランザクションとして分類されます。 通常は TRY ブロックの外部でトランザクションを終了させるエラーが、TRY ブロックの内部で発生すると、トランザクションはコミット不可能な状態になります。 コミット不可能なトランザクションでは、読み取り操作または ROLLBACK TRANSACTION のみを実行できます。 このトランザクションで、書き込み操作または COMMIT TRANSACTION を生成する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することはできません。 XACT_STATE 関数は、トランザクションがコミット不可能なトランザクションと分類されている場合、値 -1 を返します。 バッチが完了すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によってコミット不可能なトランザクションがロールバックされます。 トランザクションがコミット不可能な状態になったときにエラー メッセージが送信されなかった場合、バッチが完了すると、エラー メッセージがクライアント アプリケーションに送信されます。 これは、コミット不可能なトランザクションが検出され、ロールバックされたことを示します。  
   
- コミット不可能なトランザクションと XACT_STATE 関数の詳細については、次を参照してください。 [XACT_STATE (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/xact-state-transact-sql.md).  
+ コミット不可能なトランザクションと XACT_STATE 関数の詳細については、「[XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-trycatch"></a>A. TRY...CATCH の使用  
- 次の例は、 `SELECT` 0 除算エラーを生成するステートメント。 エラーが原因で、関連付けられているジャンプは実行`CATCH`ブロックします。  
+ 次の例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 このエラーにより、関連する `CATCH` ブロックに実行が移動します。  
   
 ```sql  
 BEGIN TRY  
@@ -231,7 +231,7 @@ GO
 ```  
   
 ### <a name="b-using-trycatch-in-a-transaction"></a>B. トランザクション内で TRY...CATCH を使用する  
- 次の例では、トランザクション内での `TRY…CATCH` ブロックの動作を示しています。 内のステートメント、`TRY`ブロックには、制約違反エラーが生成されます。  
+ 次の例では、トランザクション内での `TRY…CATCH` ブロックの動作を示しています。 `TRY` ブロック内のステートメントにより、制約違反エラーが生成されます。  
   
 ```sql  
 BEGIN TRANSACTION;  
@@ -260,7 +260,7 @@ GO
 ```  
   
 ### <a name="c-using-trycatch-with-xactstate"></a>C. TRY...CATCH と XACT_STATE を使用する  
- 次の例を使用する方法を示しています、`TRY…CATCH`コンストラクトをトランザクション内で発生するエラーを処理します。 `XACT_STATE` 関数により、トランザクションをコミットすべきか、またはロールバックすべきかが決定されます。 この例では `SET XACT_ABORT` は `ON` です。 これにより、制約違反エラーが発生したときに、トランザクションはコミット不可能になります。  
+ 次の例では、`TRY…CATCH` 構造を使用して、トランザクション内で発生するエラーを処理する方法を示しています。 `XACT_STATE` 関数により、トランザクションをコミットすべきか、またはロールバックすべきかが決定されます。 この例では `SET XACT_ABORT` は `ON` です。 これにより、制約違反エラーが発生したときに、トランザクションはコミット不可能になります。  
   
 ```sql  
 -- Check to see whether this stored procedure exists.  
@@ -326,10 +326,10 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-trycatch"></a>D. TRY...CATCH の使用  
- 次の例は、 `SELECT` 0 除算エラーを生成するステートメント。 エラーが原因で、関連付けられているジャンプは実行`CATCH`ブロックします。  
+ 次の例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 このエラーにより、関連する `CATCH` ブロックに実行が移動します。  
   
 ```sql  
 BEGIN TRY  
@@ -348,20 +348,20 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [THROW &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/throw-transact-sql.md)   
+ [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [データベース エンジン エラーの重大度](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; です。TRANSACT-SQL と&#41; です。](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
- [GOTO &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/goto-transact-sql.md)   
+ [GOTO &#40;Transact-SQL&#41;](../../t-sql/language-elements/goto-transact-sql.md)   
  [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [XACT_STATE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/xact-state-transact-sql.md)   
- [SET XACT_ABORT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-xact-abort-transact-sql.md)  
+ [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)   
+ [SET XACT_ABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   
   
 

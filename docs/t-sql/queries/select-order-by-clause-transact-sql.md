@@ -1,5 +1,5 @@
 ---
-title: "ORDER BY 句 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "ORDER BY 句 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/13/2017
 ms.prod: sql-non-specified
@@ -52,19 +52,19 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY Clause (Transact-SQL)
+# <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  クエリによって返されるデータを並べ替えます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 この句は次の場合に使用します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でクエリによって返されるデータを並べ替えます。 この句は次の場合に使用します。  
   
 -   指定した列リストでクエリの結果セットを並べ替え、必要に応じて、返される行を指定の範囲に制限する。 ORDER BY 句が指定されていない限り、結果セットとして返される行の順序は保証されません。  
   
--   これで順序を決定する[順位付け関数](../../t-sql/functions/ranking-functions-transact-sql.md)値が結果セットに適用されます。  
+-   [順位付け関数](../../t-sql/functions/ranking-functions-transact-sql.md)の値が結果セットに適用される順序を決定する。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
->  順序を選択/に BY はサポートされていませんまたはで作成テーブルとして選択 (CTAS) ステートメント[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]です。
+>  [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では、ORDER BY は SELECT/INTO または CREATE TABLE AS SELECT (CTAS) ステートメントでサポートされません。
 
 ## <a name="syntax"></a>構文  
   
@@ -106,7 +106,7 @@ ORDER BY order_by_expression
  ORDER BY 句で参照されている列名は、選択リスト内の列か、FROM 句で指定したテーブルで定義されている列と正確に対応している必要があります。  
   
  COLLATE *collation_name*  
- 指定された照合順序に従って ORDER BY 操作を実行する必要がありますを指定*collation_name*、テーブルまたはビューで定義されている列の照合順序ではなくです。 *collation_name* Windows 照合順序名または SQL 照合順序名のいずれかを指定できます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。 COLLATE は型の列に対してのみ適用**char**、 **varchar**、 **nchar**、および**nvarchar**です。  
+ テーブルまたはビューで定義した列の照合順序ではなく、*collation_name* で指定した照合順序に従って ORDER BY 操作を実行します。 *collation_name* には、Windows 照合順序名と SQL 照合順序名のいずれかを指定できます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。 COLLATE は、**char**、**varchar**、**nchar**、および **nvarchar** 型の列にのみ適用できます。  
   
  **ASC** | DESC  
  指定した列の値を昇順と降順のどちらで並べ替えるかを指定します。 ASC を指定した場合、最小値から最大値の順序で並べ替えられます。 DESC を指定した場合、最大値から最小値の順序で並べ替えられます。 ASC が既定の並べ替え順序です。 NULL 値は最小値として扱われます。  
@@ -114,31 +114,31 @@ ORDER BY order_by_expression
  OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  クエリ式から行を取得する前にスキップする行の数を指定します。 0 以上の整数の定数か式を指定できます。  
   
-**適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- *offset_row_count_expression*変数、パラメーター、または定数スカラー サブクエリを指定できます。 サブクエリを使用する場合は、クエリ スコープの外部で定義された列は参照できません。 つまり、外部のクエリと関連付けることはできません。  
+ *offset_row_count_expression* には、変数、パラメーター、または定数スカラー サブクエリを指定できます。 サブクエリを使用する場合は、クエリ スコープの外部で定義された列は参照できません。 つまり、外部のクエリと関連付けることはできません。  
   
  ROW と ROWS はシノニムで、ANSI 互換性を確保するために提供されています。  
   
- クエリ実行プランで、オフセット行数値が表示される、**オフセット**TOP クエリ演算子の属性です。  
+ クエリ実行プランでは、オフセット行数値は TOP クエリ演算子の **Offset** 属性に示されます。  
   
- フェッチ {最初 |[次へ]} { *integer_constant* | *fetch_row_count_expression* } {行 |行} のみ  
+ FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
  OFFSET 句が処理された後に取得する行の数を指定します。 1 以上の整数の定数か式を指定できます。  
   
-**適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- *fetch_row_count_expression*変数、パラメーター、または定数スカラー サブクエリを指定できます。 サブクエリを使用する場合は、クエリ スコープの外部で定義された列は参照できません。 つまり、外部のクエリと関連付けることはできません。  
+ *fetch_row_count_expression* には、変数、パラメーター、または定数スカラー サブクエリを指定できます。 サブクエリを使用する場合は、クエリ スコープの外部で定義された列は参照できません。 つまり、外部のクエリと関連付けることはできません。  
   
  FIRST と NEXT はシノニムで、ANSI 互換性を確保するために提供されています。  
   
  ROW と ROWS はシノニムで、ANSI 互換性を確保するために提供されています。  
   
- クエリ実行プランで、オフセット行数値が表示される、**行**または**上部**TOP クエリ演算子の属性です。  
+ クエリ実行プランでは、オフセット行数値は TOP クエリ演算子の **Rows** または **Top** 属性に示されます。  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
- 選択リスト内の列の位置を表すために、ORDER BY 句で整数を指定しないでください。 たとえば、`SELECT ProductID, Name FROM Production.Production ORDER BY 2` などのステートメントは有効ですが、実際の列名を指定した場合と比べて理解が難しくなります。 さらに、列の順序を変更するなど、選択リストに変更したり、新しい列を追加すると、予期しない結果を回避するために、ORDER BY 句を変更する必要があります。  
+ 選択リスト内の列の位置を表すために、ORDER BY 句で整数を指定しないでください。 たとえば、`SELECT ProductID, Name FROM Production.Production ORDER BY 2` などのステートメントは有効ですが、実際の列名を指定した場合と比べて理解が難しくなります。 さらに、列の順序を変更したり、新しい列を追加するなどして、選択リストに変更を加えた場合は、予期しない結果が生じないように ORDER BY 句を変更する必要が生じます。  
   
- SELECT top (*N*) ステートメントでは、常に ORDER BY 句を使用します。 これは、TOP の処理対象の行を指定するための唯一の方法です。 詳細については、次を参照してください。 [TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
+ SELECT TOP (*N*) ステートメントでは必ず ORDER BY 句を使用してください。 これは、TOP の処理対象の行を指定するための唯一の方法です。 詳細については、「[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)」を参照してください。  
   
 ## <a name="interoperability"></a>相互運用性  
  別のソースから行を挿入するときに、ORDER BY 句を SELECT…INTO ステートメントと共に使用する場合、行が指定した順序で挿入されるかどうかは保証されません。  
@@ -148,9 +148,9 @@ ORDER BY order_by_expression
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  ORDER BY 句で指定できる列の数に制限はありません、ただし、ORDER BY 句で指定した列の合計サイズが 8,060 バイトを超えることはできません。  
   
- 型の列**ntext**、**テキスト**、**イメージ**、 **geography**、 **geometry**、および**xml** ORDER BY 句では使用できません。  
+ **ntext**、**text**、**image**、**geography**、**geometry**、および **xml** 型の列は、ORDER BY 句では使用できません。  
   
- 整数または定数にすることはできない時に指定された*order_by_expression*に順位付け関数が表示されます。 詳細については、次を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ 順位付け関数に *order_by_expression* が使用されている場合、整数または定数は指定できません。 詳細については、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」を参照してください。  
   
  FROM 句でテーブルの別名を指定している場合、ORDER BY 句でその列を修飾する際に使用できるのは別名だけです。  
   
@@ -164,9 +164,9 @@ ORDER BY order_by_expression
   
 -   SELECT DISTINCT  
   
- さらに、ステートメントには、共用体が含まれています、EXCEPT、または、INTERSECT 演算子、列名、または列の別名は、最初の (左側) のクエリの選択のリストで指定する必要があります。  
+ これに加えて、ステートメントで UNION、EXCEPT、または INTERSECT 演算子を使用する場合は、列の名前または別名が、最初の (左側の) クエリの選択リストに指定されている必要があります。  
   
- UNION、EXCEPT、または INTERSECT 演算子を使用するクエリでは、ステートメントの末尾でのみ ORDER BY を使用できます。 この制限は次のものを除く、共用体の指定するとき、にのみ適用および INTERSECT をサブクエリではなく、最上位のクエリでします。 例については、後の「例」のセクションを参照してください。  
+ UNION、EXCEPT、または INTERSECT 演算子を使用するクエリでは、ステートメントの末尾でのみ ORDER BY を使用できます。 この制限が適用されるのは、UNION、EXCEPT、および INTERSECT をサブクエリではなく、最上位レベルのクエリで指定する場合のみです。 例については、後の「例」のセクションを参照してください。  
   
  TOP 句か、OFFSET 句と FETCH 句が指定されていない場合、ビュー、インライン関数、派生テーブル、およびサブクエリでは ORDER BY 句は無効です。 これらのオブジェクトで ORDER BY を使用する場合、この句は TOP 句か、OFFSET 句と FETCH 句で返される行の特定にのみ使用されます。 クエリ自体にも ORDER BY を指定しない限り、これらの構造をクエリしたときに、ORDER BY 句で順序どおりの結果が得られるかどうかは保証されません。  
   
@@ -187,31 +187,31 @@ ORDER BY order_by_expression
   
  ページング ソリューションとして OFFSET と FETCH を使用する場合は、クライアント アプリケーションに返されるデータの "ページ" ごとにクエリを 1 回実行する必要があります。 たとえば、10 行単位でクエリの結果を取得するには、クエリを 1 回実行して行 1 から行 10 を取得した後、クエリをもう一度実行して行 11 から行 20 を取得する必要があります。これ以降も、同様の処理が必要です。 各クエリは独立しており、相互に関連付けられることはありません。 つまり、クエリを 1 回実行してサーバーで状態を維持するカーソルを使用する場合とは異なり、状態の追跡はクライアント アプリケーションで行われます。 OFFSET と FETCH を使用してクエリ要求の結果に一貫性を持たせるためには、次の条件を満たす必要があります。  
   
-1.  クエリで使用される基になるデータが変更されていない。 つまり、クエリで処理される行が更新されていないか、クエリからのすべてのページ要求が、スナップショットまたはシリアル化可能なトランザクション分離を使用して単一のトランザクションで実行される必要があります。 これらのトランザクション分離レベルの詳細については、次を参照してください。 [SET TRANSACTION ISOLATION LEVEL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+1.  クエリで使用される基になるデータが変更されていない。 つまり、クエリで処理される行が更新されていないか、クエリからのすべてのページ要求が、スナップショットまたはシリアル化可能なトランザクション分離を使用して単一のトランザクションで実行される必要があります。 これらのトランザクション分離レベルの詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。  
   
 2.  ORDER BY 句に、一意であることが保証されている列または列の組み合わせが含まれている。  
   
  例については、このトピックの「例」セクションの「単一のトランザクションで複数のクエリを実行する」を参照してください。  
   
- ページング ソリューションにおいて、一貫性のある実行プランが重要な場合は、OFFSET および FETCH のパラメーターに OPTIMIZE FOR クエリ ヒントを使用することを検討してください。 例については、このトピックの「例」セクションの「OFFSET と FETCH の値として式を指定する」を参照してください。 Optimze FOR のに関する詳細については、次を参照してください。[クエリ ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-query.md).  
+ ページング ソリューションにおいて、一貫性のある実行プランが重要な場合は、OFFSET および FETCH のパラメーターに OPTIMIZE FOR クエリ ヒントを使用することを検討してください。 例については、このトピックの「例」セクションの「OFFSET と FETCH の値として式を指定する」を参照してください。 OPTIMZE FOR の詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
 |カテゴリ|主な構文要素|  
 |--------------|------------------------------|  
 |[基本構文](#BasicSyntax)|ORDER BY|  
-|[昇順と降順を指定します。](#SortOrder)|DESC および ASC|  
+|[昇順と降順の指定](#SortOrder)|DESC および ASC|  
 |[照合順序の指定](#Collation)|COLLATE|  
-|[条件付きの順序を指定します。](#Case)|CASE 式|  
-|[順位付け関数で ORDER BY の使用](#Rank)|順位付け関数|  
-|[返される行の数を制限します。](#Offset)|OFFSET および FETCH|  
-|[Order BY 句を使用して、和集合を EXCEPT、および INTERSECT](#Union)|UNION|  
+|[条件に基づく順序の指定](#Case)|CASE 式|  
+|[順位付け関数での ORDER BY の使用](#Rank)|順位付け関数|  
+|[返される行の数の制限](#Offset)|OFFSET および FETCH|  
+|[UNION、EXCEPT、および INTERSECT と ORDER BY の併用](#Union)|UNION|  
   
-###  <a name="BasicSyntax"></a>基本構文  
+###  <a name="BasicSyntax"></a> 基本構文  
  このセクションの例では、最低限必要な構文を使用して ORDER BY 句の基本機能を示します。  
   
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. 選択リストで定義されている単一の列を指定する  
- 次の例は、結果では、数値セットを並べ替えます`ProductID`列です。 特定の並べ替え順序が指定されていないため、既定の順序 (昇順) が使用されます。  
+ 次の例では、数値の `ProductID` 列を基準に結果セットを並べ替えます。 特定の並べ替え順序が指定されていないため、既定の順序 (昇順) が使用されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -258,7 +258,7 @@ ORDER BY DATEPART(year, HireDate);
   
 ```  
   
-###  <a name="SortOrder"></a>昇順と降順の並べ替え順序を指定します。  
+###  <a name="SortOrder"></a> 昇順と降順の並べ替え順序を指定する  
   
 #### <a name="a-specifying-a-descending-order"></a>A. 降順を指定する  
  次の例では、数値列 `ProductID` を基準に、結果セットを降順で並べ替えます。  
@@ -272,8 +272,8 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-an-ascending-order"></a>B. 昇順を指定します。  
- 次の例は、結果セットを並べ替えます、`Name`列で昇順に並べ替えます。 アルファベット順に、数値でない文字が並べ替えられます。 つまり、10 の位置は、2 の前になります。  
+#### <a name="b-specifying-an-ascending-order"></a>B. 昇順を指定する  
+ 次の例では、`Name` 列を基準に、結果セットを昇順で並べ替えます。 文字は数字ではなくアルファベット順に並べ替えられます。 つまり、10 の位置は、2 の前になります。  
   
 ```  
 USE AdventureWorks2012;  
@@ -296,7 +296,7 @@ ORDER BY FirstName ASC, LastName DESC ;
   
 ```  
   
-###  <a name="Collation"></a>照合順序の指定  
+###  <a name="Collation"></a> 照合順序の指定  
  次の例では、ORDER BY 句での照合順序の指定により、クエリ結果が返される順序がどう変化するかを示します。 作成されるテーブルには、大文字と小文字、およびアクセントを区別しない照合順序で定義された列が含まれます。 大文字と小文字、およびアクセントが混じった値が挿入されます。 ORDER BY 句で照合順序が指定されていないため、最初のクエリでは、値を並べ替えるときに列の照合順序が使用されます。 2 番目のクエリでは、大文字と小文字、およびアクセントを区別する照合順序が ORDER BY 句で指定されているため、行が返される順序が変わります。  
   
 ```  
@@ -317,8 +317,8 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
   
 ```  
   
-###  <a name="Case"></a>条件付きの順序を指定します。  
- 次の例では、ORDER BY 句で CASE 式を使用して、条件付きで指定された列の値に基づいて行の並べ替え順序を決定します。 最初の例では、値では、`SalariedFlag`の列、`HumanResources.Employee`テーブルが評価されます。 `SalariedFlag` が 1 に設定されている従業員は `BusinessEntityID` の降順で、 従業員が、 `SalariedFlag` 0 に設定するが order by 句で返される、`BusinessEntityID`で昇順に並べ替えます。 2 番目の例では、`TerritoryName` 列が 'United States' と等しい場合は結果セットが `CountryRegionName` 列の順序に従って並べ替えられ、他のすべての列は `CountryRegionName` の順序に従って並べ替えられます。  
+###  <a name="Case"></a> 条件に基づく順序の指定  
+ 次の例では、ORDER BY 句で CASE 式を使用して、指定された列の値に基づいて、条件に応じて行の並べ替え順序を決定しています。 最初の例では、`HumanResources.Employee` テーブルの `SalariedFlag` 列の値を評価します。 `SalariedFlag` が 1 に設定されている従業員は `BusinessEntityID` の降順で、 `SalariedFlag` が 0 に設定されている従業員は `BusinessEntityID` の昇順で返されます。 2 番目の例では、`TerritoryName` 列が 'United States' と等しい場合は結果セットが `CountryRegionName` 列の順序に従って並べ替えられ、他のすべての列は `CountryRegionName` の順序に従って並べ替えられます。  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  
@@ -338,7 +338,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
   
 ```  
   
-###  <a name="Rank"></a>順位付け関数で ORDER BY の使用  
+###  <a name="Rank"></a> 順位付け関数での ORDER BY の使用  
  次の例では、順序付け関数 ROW_NUMBER、RANK、DENSE_RANK、および NTILE で ORDER BY 句を使用しています。  
   
 ```  
@@ -359,13 +359,13 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 ```  
   
-###  <a name="Offset"></a>返される行の数を制限します。  
+###  <a name="Offset"></a> 返される行の数の制限  
  次の例では、OFFSET と FETCH を使用して、クエリによって返される行の数を制限します。  
   
-**適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. OFFSET と FETCH の値として整数の定数を指定する  
- 次の例では、OFFSET および FETCH 句の値として整数の定数を指定します。 最初のクエリは、列で並べ替えられたすべての行を返します`DepartmentID`です。 このクエリによって返される結果と、後の 2 つのクエリの結果を比べてみてください。 次のクエリ句を使用して`OFFSET 5 ROWS`を最初の 5 行をスキップして残りのすべての行を返します。 最後のクエリ句を使用して`OFFSET 0 ROWS`最初に、最初の行とし、使用して`FETCH NEXT 10 ROWS ONLY`並べ替えられた結果セットから 10 行に返される行を制限します。  
+ 次の例では、OFFSET および FETCH 句の値として整数の定数を指定します。 最初のクエリにより、`DepartmentID` 列で並べ替えられたすべての行が返されます。 このクエリによって返される結果と、後の 2 つのクエリの結果を比べてみてください。 次のクエリは、`OFFSET 5 ROWS` 句を使用して最初の 5 行をスキップし、残りのすべての行を返します。 最後のクエリでは、`OFFSET 0 ROWS` 句を使用して最初の行から処理を開始した後、`FETCH NEXT 10 ROWS ONLY` を使用して、返される行を、並べ替えられた結果セットからの 10 行に制限します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -390,7 +390,7 @@ ORDER BY DepartmentID
 ```  
   
 #### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. OFFSET と FETCH の値として変数を指定する  
- 次の例は、変数を宣言`@StartingRowNumber`と`@FetchRows`し、これらの変数を OFFSET および FETCH 句で指定します。  
+ 次の例では、変数 `@StartingRowNumber` および `@FetchRows` を宣言し、これらの変数を OFFSET および FETCH 句で指定しています。  
   
 ```  
 USE AdventureWorks2012;  
@@ -407,7 +407,7 @@ ORDER BY DepartmentID ASC
 ```  
   
 #### <a name="c-specifying-expressions-for-offset-and-fetch-values"></a>C. OFFSET と FETCH の値として式を指定する  
- 次の例は、式を使用して`@StartingRowNumber - 1`オフセット値と式を指定する`@EndingRowNumber - @StartingRowNumber + 1`FETCH の値を指定します。 さらに、クエリ ヒントの OPTIMIZE FOR も指定しています。 このヒントにより、クエリをコンパイルおよび最適化するときにローカル変数に特定の値を指定できます。 この値はクエリを最適化する過程でのみ使用され、クエリの実行時には使用されません。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
+ 次の例では、`@StartingRowNumber - 1` という式を使用して OFFSET 値を指定し、`@EndingRowNumber - @StartingRowNumber + 1` という式を使用して FETCH 値を指定しています。 さらに、クエリ ヒントの OPTIMIZE FOR も指定しています。 このヒントにより、クエリをコンパイルおよび最適化するときにローカル変数に特定の値を指定できます。 この値はクエリを最適化する過程でのみ使用され、クエリの実行時には使用されません。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
 ```  
 USE AdventureWorks2012;  
@@ -489,8 +489,8 @@ GO
   
 ```  
   
-###  <a name="Union"></a>Order BY 句を使用して、和集合を EXCEPT、および INTERSECT  
- クエリで UNION、EXCEPT、または INTERSECT 演算子を使用する場合は、ORDER BY 句をステートメントの末尾に指定する必要があります。この場合、結合されたクエリの結果が並べ替えられます。 赤または黄色と組み合わせてこの種類は、すべての製品を返す例を次の列によって一覧`ListPrice`です。  
+###  <a name="Union"></a> UNION、EXCEPT、および INTERSECT と ORDER BY の併用  
+ クエリで UNION、EXCEPT、または INTERSECT 演算子を使用する場合は、ORDER BY 句をステートメントの末尾に指定する必要があります。この場合、結合されたクエリの結果が並べ替えられます。 次の例では、赤色または黄色のすべての製品が返され、この結合リストが `ListPrice` 列を基準に並べ替えられます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -507,8 +507,8 @@ ORDER BY ListPrice ASC;
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例で、数値によって結果セットの順序付け`EmployeeKey`列で昇順に並べ替えます。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 次の例は、`EmployeeKey` の数値列を昇順で並べ替えた結果セットの順序付けを示しています。  
   
 ```  
 -- Uses AdventureWorks  
@@ -518,7 +518,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY EmployeeKey;  
 ```  
   
- 次の例は、数値によって結果セットを並べ替えます`EmployeeKey`列で降順にします。  
+ 次の例では、`EmployeeKey` の数値列を基準に降順で結果セットを並べ替えます。  
   
 ```  
 -- Uses AdventureWorks  
@@ -528,7 +528,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY EmployeeKey DESC;  
 ```  
   
- 次の例は、によって結果セットを並べ替えます、`LastName`列です。  
+ 次の例では、`LastName` 列を基準に結果セットを並べ替えます。  
   
 ```  
 -- Uses AdventureWorks  
@@ -538,7 +538,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName;  
 ```  
   
- 2 つの列で次の例の注文します。 このクエリは、まずで昇順に並べ替えます、`FirstName`列、および、並べ替えの一般的な`FirstName`値を降順、`LastName`列です。  
+ 次の例では、2 つの列を基準に並べ替えます。 このクエリでは、`FirstName` 列で昇順に並べ替えを行ってから、`LastName` 列の共通の `FirstName` 値を降順に並べ替えます。  
   
 ```  
 -- Uses AdventureWorks  
@@ -549,14 +549,14 @@ ORDER BY LastName, FirstName;
 ```  
   
 ## <a name="see-also"></a>参照  
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
- [順位付け関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ranking-functions-transact-sql.md)   
- [TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md)   
+ [順位付け関数 &#40;TRANSACT-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)   
  [クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)   
- [除くおよび INTERSECT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
- [共用体 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
+ [EXCEPT および INTERSECT &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
+ [UNION &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   

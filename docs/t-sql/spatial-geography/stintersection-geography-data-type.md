@@ -1,5 +1,5 @@
 ---
-title: "STIntersection (geography データ型) |Microsoft ドキュメント"
+title: "STIntersection (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersection-geography-data-type"></a>STIntersection (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  点を表すオブジェクトを返します場所、 **geography**インスタンスでは、他と交差する**geography**インスタンス。  
+  **geography** インスタンスが別の **geography** インスタンスと交差する地点を表すオブジェクトを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,26 +45,26 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geography*  
- もう 1 つ**geography** STIntersection() が呼び出されて、インスタンスと比較します。  
+ STIntersection() を呼び出したインスタンスと比較される、別の **geography** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
  CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  2 つの geography インスタンスが交差する地点が返されます。  
   
- STIntersection() は、場合常に null を返しますの spatial reference identifier (Srid)、 **geography**インスタンスが一致しません。  
+ **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、STIntersection() は常に null を返します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]半球より大きい空間インスタンスをサポートしています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]含めることが**FullGlobe**サーバーで使用可能な結果セット内のインスタンスが返されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、半球より大きい空間インスタンスをサポートしています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサーバーに返される結果セットには、**FullGlobe** インスタンスが含まれる場合があります。  
   
  結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-computing-the-intersection-of-a-polygon-and-a-linestring"></a>A. Polygon と LineString が交差する地点を計算する  
- 次の例で`STIntersection()`の積集合を計算する、`Polygon`と`LineString`です。  
+ `STIntersection()` を使用して、`Polygon` と `LineString` が交差する地点を計算する例を次に示します。  
   
 ```  
 DECLARE @g geography;  
@@ -86,7 +86,7 @@ SELECT @g.STIntersection(@h).ToString();
 ```  
   
 ### <a name="c-computing-the-symmetric-difference-with-fullglobe"></a>C. FullGlobe を使用して、対称差を計算する  
- 次の例の対称差を比較し、`Polygon`で`FullGlobe`です。  
+ `FullGlobe` を使用して、`Polygon` の対称差を比較する例を次に示します。  
   
 ```  
 DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  

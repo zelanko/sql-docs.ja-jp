@@ -1,5 +1,5 @@
 ---
-title: "メッセージ型 (TRANSACT-SQL) を削除 |Microsoft ドキュメント"
+title: DROP MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,10 +54,10 @@ DROP MESSAGE TYPE message_type_name
  *message_type_name*  
  削除するメッセージ型の名前を指定します。 サーバー名、データベース名、スキーマ名は指定できません。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  メッセージ型を削除する権限は、既定ではメッセージ型の所有者、db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  いずれかのコントラクトがメッセージ型を参照する場合は、そのメッセージ型を削除できません。  
   
 ## <a name="examples"></a>使用例  
@@ -68,8 +68,8 @@ DROP MESSAGE TYPE [//Adventure-Works.com/Expenses/SubmitExpense] ;
 ```  
   
 ## <a name="see-also"></a>参照  
- [メッセージの種類 &#40; を ALTER します。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-message-type-transact-sql.md)   
- [メッセージの種類 &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [ALTER MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
+ [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

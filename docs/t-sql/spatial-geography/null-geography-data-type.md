@@ -1,5 +1,5 @@
 ---
-title: "Null (geography データ型) |Microsoft ドキュメント"
+title: "Null (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="null-geography-data-type"></a>Null (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Null インスタンスを提供する読み取り専用プロパティ、 **geography**型です。
+**geography** 型の NULL インスタンスを提供する、読み取り専用プロパティです。
   
 ## <a name="syntax"></a>構文  
   
@@ -46,14 +46,14 @@ Null
 ## <a name="arguments"></a>引数  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型: **geography**  
   
  CLR 型: **SqlGeography**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>使用例  
- 次の例は、null 値を取得`geography`インスタンス。  
+ `geography` 型の NULL インスタンスを取得する例を次に示します。  
   
 ```  
 DECLARE @g geography;   

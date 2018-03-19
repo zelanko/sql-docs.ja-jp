@@ -1,5 +1,5 @@
 ---
-title: "+ (単項プラス)(TRANSACT-SQL) |Microsoft ドキュメント"
+title: "+ (単項プラス) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="unary-operators---positive"></a>単項演算子の正の値
+# <a name="unary-operators---positive"></a>単項演算子 - 正号
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 数値式の値を返します (単項演算子)。 単項演算子は、数値型に分類されるデータ型の 1 つの式に対してだけ操作を実行します。   
@@ -61,13 +61,13 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *numeric_expression*  
- 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)任意のデータのいずれかの型、数値データ型に分類を除く、 **datetime**と**smalldatetime**データ型。  
+ **datetime** および **smalldatetime** データ型を除く、数値データ型カテゴリ内のいずれかのデータ型の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
 ## <a name="result-types"></a>戻り値の型  
  データ型を返す *numeric_expression*です。  
   
-## <a name="remarks"></a>解説  
- 単項プラスは任意の数値式の前に付けることができますが、その式が返す値に対して何の操作も行いません。 つまり、負の式の値を正の値にして返すわけではありません。 負の式の正の値を返すを使用して、 [ABS](../../t-sql/functions/abs-transact-sql.md)関数。  
+## <a name="remarks"></a>Remarks  
+ 単項プラスは任意の数値式の前に付けることができますが、その式が返す値に対して何の操作も行いません。 つまり、負の式の値を正の値にして返すわけではありません。 負の式の値を正の値として返すには、[ABS](../../t-sql/functions/abs-transact-sql.md) 関数を使用します。  
   
 ## <a name="examples"></a>使用例  
   
@@ -113,8 +113,8 @@ GO
   
 ## <a name="see-also"></a>参照  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
- [ABS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/abs-transact-sql.md)  
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [ABS &#40;Transact-SQL&#41;](../../t-sql/functions/abs-transact-sql.md)  
   
   

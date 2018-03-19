@@ -1,5 +1,5 @@
 ---
-title: "STY (geometry データ型) |Microsoft ドキュメント"
+title: "STY (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="sty-geometry-data-type"></a>STY (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Y 座標プロパティ、**ポイント**インスタンス。
+**Point** インスタンスの Y 座標プロパティ。
   
 ## <a name="syntax"></a>構文  
   
@@ -44,15 +44,15 @@ Y 座標プロパティ、**ポイント**インスタンス。
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型: **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR 型: **SqlDouble**  
+ CLR の型: **SqlDouble**  
   
-## <a name="remarks"></a>解説  
- このプロパティの値が null にする場合、 **geometry**インスタンスが地点です。 このプロパティは読み取り専用です。  
+## <a name="remarks"></a>Remarks  
+ **geometry** インスタンスが地点である場合、このプロパティの値は null になります。 このプロパティは読み取り専用です。  
   
 ## <a name="examples"></a>使用例  
- 次の例を作成、`Point`使用して、インスタンス`STY`をインスタンスの Y 座標を取得します。  
+ `Point` インスタンスを作成し、`STY` を使用して、このインスタンスの Y 座標を取得する例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

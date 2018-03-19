@@ -1,5 +1,5 @@
 ---
-title: "STX (geometry データ型) |Microsoft ドキュメント"
+title: "STX (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stx-geometry-data-type"></a>STX (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-X 座標プロパティ、**ポイント**インスタンス。
+**Point** インスタンスの X 座標プロパティです。
   
 ## <a name="syntax"></a>構文  
   
@@ -44,12 +44,12 @@ X 座標プロパティ、**ポイント**インスタンス。
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型: **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR 型: **SqlDouble**  
+ CLR の型: **SqlDouble**  
   
-## <a name="remarks"></a>解説  
- このプロパティの値が null にする場合、 **geometry**インスタンスが地点ではありません。  
+## <a name="remarks"></a>Remarks  
+ **geometry** インスタンスが地点ではない場合、このプロパティの値は NULL になります。  
   
  このプロパティは読み取り専用です。  
   

@@ -1,5 +1,5 @@
 ---
-title: "UnionAggregate (geometry データ型) |Microsoft ドキュメント"
+title: "UnionAggregate (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -42,24 +42,24 @@ UnionAggregate ( geometry_operand )
   
 ## <a name="arguments"></a>引数  
  *geometry_operand*  
- **Geometry**型のテーブル列のセットを保持する**geometry**和集合演算を実行するオブジェクト。  
+ 和集合演算を実行する **geometry** オブジェクトのセットを保持する **geometry** 型のテーブルの列です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
 ## <a name="exceptions"></a>例外  
- 入力値が無効である場合は、`FormatException` をスローします。 参照してください[STIsValid (& a) #40; geometry データ型 &#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
+ 入力値が無効である場合は、`FormatException` をスローします。 「[STIsValid &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
- メソッドを返します。 **null**入力が空または入力がの Srid が異なる場合。 参照してください[空間参照識別子 &#40;です。Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="remarks"></a>Remarks  
+ メソッドは、入力が空か、入力にさまざまな SRID が含まれているときに **null** を返します。 「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
- メソッドは無視**null**入力します。  
+ メソッドは、**null** 入力を無視します。  
   
 > [!NOTE]  
->  メソッドを返します。 **null**入力されたすべての値が場合**null**です。  
+>  メソッドは、入力された値がすべて **null** の場合、**null** を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、一連の和集合を返します**geometry**テーブル変数内のオブジェクト。  
+ 次の例は、テーブル変数の **geometry** オブジェクトのセットの和集合を返します。  
  ```
  -- Setup table variable for UnionAggregate example 
  DECLARE @Geom TABLE 

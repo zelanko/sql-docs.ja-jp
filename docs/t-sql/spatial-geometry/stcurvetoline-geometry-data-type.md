@@ -1,5 +1,5 @@
 ---
-title: "STCurveToLine (geometry データ型) |Microsoft ドキュメント"
+title: "STCurveToLine (geometry データベース型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-多角形近似を返します、 **geometry**の円弧セグメントを格納しているインスタンス。
+円弧を含む **geometry** インスタンスの多角形近似を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -41,27 +41,27 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
  CLR の戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
- 空白を返します**GeometryCollection**空のインスタンス**geometry**インスタンス変数、および返します**NULL**初期化されていない**geometry**変数。  
+## <a name="remarks"></a>Remarks  
+ 空の **geometry** インスタンス変数に空の **GeometryCollection** インスタンスを返し、初期化されていない **geometry** 変数に **NULL** を返します。  
   
- メソッドを表す多角形近似によって異なります、 **geometry**メソッドを呼び出すために使用するインスタンス。  
+ メソッドによって返される多角形近似は、メソッドの呼び出しに使用した **geometry** インスタンスによって変わります。  
   
--   返します、 **LineString**インスタンスの場合、 **CircularString**または**CompoundCurve**インスタンス。  
+-   **CircularString** または **CompoundCurve** インスタンスに対して **LineString** インスタンスを返します。  
   
--   返します、**多角形**インスタンスの場合、 **CurvePolygon**インスタンス。  
+-   **CurvePolygon** インスタンスに対して **Polygon** インスタンスを返します。  
   
--   コピーを返します、 **geometry**インスタンスのインスタンスでない場合、 **CircularString**、 **CompoundCurve**、または**CurvePolygon**インスタンス. たとえば、`STCurveToLine`メソッドを返します、**ポイント**インスタンスの場合、 **geometry**インスタンス化されている、**ポイント**インスタンス。  
+-   そのインスタンスが **CircularString**、**CompoundCurve**、**CurvePolygon** インスタンスではない場合、**geometry** インスタンスのコピーを返します。 たとえば、**Point** インスタンスである **geometry** インスタンスに対しては、`STCurveToLine` メソッドは **Point** インスタンスを返します。  
   
- SQL/MM 仕様とは異なり、`STCurveToLine`メソッドは多角形近似の計算に z 座標値を使用しません。 メソッドは、呼び出し元に存在する任意の z 座標値を無視**geometry**インスタンス。  
+ SQL/MM 仕様とは異なり、`STCurveToLine` メソッドでは、多角形近似の計算に z 座標の値が使用されません。 このメソッドでは、呼び出し元 **geography** インスタンスに存在する z 座標値は無視されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. 初期化されていないジオメトリ変数と空のインスタンスを使用する  
- 次の例では、最初の**選択**ステートメントを使用して、初期化されていない**geometry**を呼び出すインスタンス、`STCurveToLine`メソッド、および 2 番目**選択**ステートメントは、空を使用して**geometry**インスタンス。 そのため、このメソッドが返されます**NULL**最初のステートメントに、 **GeometryCollection** 2 番目のステートメントのコレクション。  
+ 次の例では、最初の **SELECT** ステートメントで初期化されていない **geometry** インスタンスを使用して `STCurveToLine` メソッドを呼び出し、2 つ目の **SELECT** ステートメントで空の **geometry** インスタンスを使用します。 したがって、最初のステートメントには **NULL** が返され、2 つ目のステートメントには **GeometryCollection** コレクションが返されます。  
   
 ```
  DECLARE @g geometry; 
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="b-using-a-linestring-instance"></a>B. LineString インスタンスを使用する  
- **選択**ステートメントは次の例では使用して、 **LineString** STCurveToLine メソッドを呼び出すインスタンス。 そのため、このメソッドが返されます、 **LineString**インスタンス。  
+ 次の例の **SELECT** ステートメントでは、**LineString** インスタンスを使用して STCurveToLine メソッドを呼び出します。 したがって、**LineString** インスタンスが返されます。  
   
 ```
  DECLARE @g geometry; 
@@ -82,7 +82,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="c-using-a-circularstring-instance"></a>C. CircularString インスタンスを使用する  
- 最初の**選択**ステートメントは次の例では使用して、 **CircularString** STCurveToLine メソッドを呼び出すインスタンス。 そのため、このメソッドが返されます、 **LineString**インスタンス。 これは、**選択**ステートメントも同じでは約 2 つのインスタンスの長さの比較できます。  最後に、2 つ目**選択**ステートメントの各インスタンスのポイントの数を返します。  5 ポイントのみが返されます、 **CircularString**インスタンスは 65 個のポイントに対して、 **LineString**インスタンス。  
+ 次の例の最初の **SELECT** ステートメントでは、**CircularString** インスタンスを使用して STCurveToLine メソッドを呼び出します。 したがって、**LineString** インスタンスが返されます。 この **SELECT** ステートメントでは、ほとんど同じ 2 つのインスタンスの長さの比較も行います。  さらに、2 つ目の **SELECT** ステートメントは、各インスタンスのポイントの数を返します。  **CircularString** インスタンスについては 5 個だけポイントが返され、**LineString** インスタンスについては 65 個のポイントが返されます。  
   
 ```
  DECLARE @g1 geometry, @g2 geometry; 
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="d-using-a-curvepolygon-instance"></a>D. CurvePolygon インスタンスを使用する  
- **選択**ステートメントは次の例では使用して、 **CurvePolygon** STCurveToLine メソッドを呼び出すインスタンス。 そのため、このメソッドが返されます、**多角形**インスタンス。  
+ 次の例の **SELECT** ステートメントでは、**CurvePolygon** インスタンスを使用して STCurveToLine メソッドを呼び出します。 したがって、このメソッドでは **Polygon** インスタンスが返されます。  
   
 ```
  DECLARE @g1 geometry, @g2 geometry; 

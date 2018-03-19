@@ -1,5 +1,5 @@
 ---
-title: "EnvelopeAngle (geography データ型) |Microsoft ドキュメント"
+title: "EnvelopeAngle (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  によって返されるポイント間の最大角度を返します`EnvelopeCenter()`と特定の時点に、 **geography**度数でインスタンス。  
+  `EnvelopeCenter()` で返される地点と **geography** インスタンスの地点との間の最大角度 (度数) を返します。  
   
- これは、 **geography**データ型メソッドでサポート**FullGlobe**インスタンスまたは空間インスタンスは、半球より大きいをします。  
+ この **geography** データ型メソッドは、半球より大きい **FullGlobe** インスタンスまたは空間インスタンスをサポートします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,16 +46,16 @@ EnvelopeAngle( )
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **float**  
   
  CLR の戻り値の型: **SqlDouble**  
   
-## <a name="remarks"></a>解説  
- このメソッドが戻るポイント、 **geography**度数でインスタンス。 EnvelopeCenter() を使用すると`EnvelopeAngle()`の外接する円を返します、 **geography**インスタンス。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは **geography** インスタンスの地点を度数で返します。 EnvelopeCenter() と共に使用した場合、`EnvelopeAngle()` は、**geography** インスタンスの外接する円を返します。  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、このメソッドが拡張されて**FullGlobe**インスタンス。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、このメソッドは **FullGlobe** インスタンスに拡張されました。  
   
- 適用された半球に関する制限`EnvelopeAngle()`で[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]は削除されました。 ただし、90 度を超える角度のインスタンスの場合、180 度が返されます。 `EnvelopeAngle()`正確ではない**geography**複数の半球にまたがるインスタンス。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で `EnvelopeAngle()` に適用された半球に関する制限はなくなりました。 ただし、90 度を超える角度のインスタンスの場合、180 度が返されます。 `EnvelopeAngle()` は、複数の半球にまたがる **geography** インスタンスに関しては正確ではありません。  
   
 ## <a name="examples"></a>使用例  
   

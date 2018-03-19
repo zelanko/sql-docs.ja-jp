@@ -1,5 +1,5 @@
 ---
-title: "STCurveN (geography データ型) |Microsoft ドキュメント"
+title: "STCurveN (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurven-geography-data-type"></a>STCurveN (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  指定された曲線を返して、 **geography**インスタンス化されている、 **LineString**、 **CircularString**、または**CompoundCurve**です。  
+  **LineString**、**CircularString**、または **CompoundCurve** である **geography** インスタンスから指定された曲線を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,31 +45,31 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *n*  
- **Int** 1 ~ 内の曲線の数の式、 **geography**インスタンス。  
+ 1 から **geography** インスタンス内の曲線の数までの **int** 式。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR 戻り値の型: **SqlGeography**  
   
 ## <a name="exceptions"></a>例外  
- 場合 1 < n、 **ArgumentOutOfRangeException**がスローされます。  
+ n < 1 のとき、**ArgumentOutOfRangeException** がスローされます。  
   
-## <a name="remarks"></a>解説  
- **NULL**ときに返される次の条件が発生します。  
+## <a name="remarks"></a>Remarks  
+ 次の条件が発生するとき、**NULL** が返されます。  
   
--   **Geography**インスタンスは、宣言しますが、インスタンス化されていません  
+-   **geography** インスタンスが宣言されるが、インスタンス化されない  
   
--   **Geography**インスタンスが空  
+-   **geography** インスタンスが空である  
   
--   n が内の曲線の数を超えています、 **geography**インスタンス (を参照してください[STNumCurves (& a) #40; geography データ型 &#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)  
+-   n が **geography** インスタンスの曲線数を超える (「[STNumCurves &#40;geography データ型&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)」参照)  
   
--   ディメンション、 **geography**インスタンスが等しくない (を参照してください[STDimension &#40; geography データ型 &#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
+-   **geography** インスタンスのディメンションが等しくない (「[STDimension &#40;geography データ型&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)」参照)  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-stcurven-on-a-circularstring"></a>A. CircularString に対して STCurveN() を使用する  
- 次の例では、2 番目の曲線を返して、 **CircularString**インスタンス。  
+ 次の例では、**CircularString** インスタンスで 2 番目の曲線を返します。  
   
 ```
  DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/25/2018
  `CIRCULARSTRING (-122.348 47.658, -122.358 47.658, -122.358 47.653)`  
   
 ### <a name="b-using-stcurven-on-a-compoundcurve"></a>B. CompoundCurve に対して STCurveN() を使用する  
- 次の例では、2 番目の曲線を返して、 **CompoundCurve**インスタンス。  
+ 次の例では、**CompoundCurve** インスタンスで 2 番目の曲線を返します。  
   
 ```
  DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/25/2018
  `CIRCULARSTRING (-122.348 47.658, -122.358 47.658, -122.358 47.653)`  
   
 ### <a name="c-using-stcurven-on-a-compoundcurve-containing-three-circularstrings"></a>C. 3 つの CircularStrings を含む CompoundCurve に対して STCurveN() を使用する  
- 次の例では、 **CompoundCurve**を組み合わせた 3 つの異なるインスタンス**CircularString**インスタンスを同じ曲線シーケンスは、前の例として。  
+ 次の例では、3 つの異なる **CircularString** インスタンスを前の例と同じ曲線シーケンスに結合した **CompoundCurve** インスタンスを使用します。  
   
 ```
  DECLARE @g geography = 'COMPOUNDCURVE (CIRCULARSTRING (-122.358 47.653, -122.348 47.649, -122.348 47.658), CIRCULARSTRING(-122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -104,10 +104,10 @@ ms.lasthandoff: 01/25/2018
   
  `CIRCULARSTRING (-122.348 47.658, -122.358 47.658, -122.358 47.653)`  
   
- `STCurveN()`使用する Well-Known Text (WKT) 形式に関係なく同じ結果を返します。  
+ `STCurveN()` では、使用する Well-Known Text (WKT) 形式に関係なく、同じ結果が返されます。  
   
 ### <a name="d-testing-for-validity-before-calling-stcurve"></a>D. STCurve() を呼び出す前に有効性をテストする  
- 次の例は、ことを確認する方法を示しています。  *n*  STCurveN() メソッドを呼び出す前に有効では。  
+ 次の例では、STCurveN() メソッドを呼び出す前に *n* が有効かどうかを確認する方法を示しています。  
   
 ```
  DECLARE @g geography;  

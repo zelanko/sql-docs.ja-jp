@@ -1,5 +1,5 @@
 ---
-title: "InstanceOf (geometry データ型) |Microsoft ドキュメント"
+title: "InstanceOf (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-場合にテストするメソッド、 **geometry**インスタンスが指定した型と同じです。 場合 1 を返しますの種類、 **geometry**インスタンスは、指定された型と同じまたは指定した型が、インスタンスの型の先祖である場合は、0 を返しますそれ以外の場合。
+**geometry** インスタンスが指定の型と同じであるかどうかをテストするメソッド。 **geometry** インスタンスの型が指定の型と同じである場合、または指定の型がインスタンスの型の先祖である場合は 1 を返します。それ以外の場合は 0 を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *geometry_type*  
- **Nvarchar (4000)**で公開される 15 の型のいずれかを指定する文字列、 **geometry**階層を入力します。  
+ **geometry** 型の階層で公開されている 15 種類の型のうちの 1 つを指定する **nvarchar(4000)** 文字列です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR 戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- メソッドの入力は、次のいずれかにする必要があります: **Geometry**、**ポイント**、**曲線**、 **LineString**、 **CircularString**、 **CompoundCurve**、**画面**、**多角形**、 **CurvePolygon**、 **GeometryCollection**、 **MultiSurface**、 **MultiPolygon**、 **MultiCurve**、 **MultiLineString**、および**MultiPoint**です。 このメソッドはスロー、 **ArgumentException**と、入力の他の文字列が使用されます。  
+## <a name="remarks"></a>Remarks  
+ メソッドの入力は、**Geometry**、**Point**、**Curve**、**LineString**、**CircularString**、**CompoundCurve**、**Surface**、**Polygon**、**CurvePolygon**、**GeometryCollection**、**MultiSurface**、**MultiPolygon**、**MultiCurve**、**MultiLineString**、**MultiPoint** のうちのいずれかにする必要があります。 このメソッドは、上記以外の文字列が入力に使用された場合、**ArgumentException** をスローします。  
   
 ## <a name="examples"></a>使用例  
  `MultiPoint` インスタンスを作成し、`InstanceOf()` を使用して、このインスタンスが `GeometryCollection` であるかどうかを判定する例を次に示します。  

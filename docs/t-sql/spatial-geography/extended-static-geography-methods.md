@@ -1,5 +1,5 @@
 ---
-title: "拡張された静的な地理メソッド |Microsoft ドキュメント"
+title: "拡張された静的な地理メソッド | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="extended-static-geography-methods"></a>拡張された静的な地理メソッド
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Open Geospatial Consortium (OGC) の静的な地理メソッドをいくつかの拡張機能をサポートしています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Open Geospatial Consortium (OGC) の静的な地理メソッドの拡張をいくつかサポートしています。  
   
  OGC 仕様の詳細については、以下を参照してください。  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [[解析]](../../t-sql/spatial-geography/parse-geography-data-type.md)  
   
--   [ポイント](../../t-sql/spatial-geography/point-geography-data-type.md)  
+-   [Point](../../t-sql/spatial-geography/point-geography-data-type.md)  
   
 ## <a name="see-also"></a>参照  
  [静的集計地理メソッド](../../t-sql/spatial-geography/static-aggregate-geography-methods.md)   

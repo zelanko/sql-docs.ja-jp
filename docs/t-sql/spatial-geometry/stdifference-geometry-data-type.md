@@ -1,5 +1,5 @@
 ---
-title: "STDifference (geometry データ型) |Microsoft ドキュメント"
+title: "STDifference (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdifference-geometry-data-type"></a>STDifference (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-地点のセットを 1 つを表すオブジェクトを返します**geometry**別に重ならないインスタンス**geometry**インスタンス。
+別の **geometry** インスタンス内に含まれていない、任意の **geometry** インスタンスの地点のセットを表すオブジェクトを返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- もう 1 つ**geometry**を示すインスタンスをインスタンスから削除する`STDifference()`が呼び出されています。  
+ `STDifference()` を呼び出したインスタンスからどの地点を削除するかを示す、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
  CLR の戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
- このメソッドは、場合常に null を返しますの spatial reference Id (Srid)、 **geometry**インスタンスが一致しません。   結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
+## <a name="remarks"></a>Remarks  
+ **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。   結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
   
 ## <a name="examples"></a>使用例  
   

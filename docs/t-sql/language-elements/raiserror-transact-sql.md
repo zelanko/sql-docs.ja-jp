@@ -1,5 +1,5 @@
 ---
-title: "RAISERROR (TRANSACT-SQL) |Microsoft ドキュメント"
+title: RAISERROR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/21/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  エラー メッセージを生成し、セッションのエラー処理を開始します。 RAISERROR では、sys.messages カタログ ビューに格納されているユーザー定義のメッセージを参照することまたは、メッセージを動的に作成できます。 メッセージは、サーバー エラー メッセージとして、呼び出し元のアプリケーションまたは関連する TRY...CATCH 構造の CATCH ブロックに返されます。 新しいアプリケーションを使用する必要があります[スロー](../../t-sql/language-elements/throw-transact-sql.md)代わりにします。  
+  エラー メッセージを生成し、セッションのエラー処理を開始します。 RAISERROR では、sys.messages カタログ ビューに格納されているユーザー定義のメッセージを参照することまたは、メッセージを動的に作成できます。 メッセージは、サーバー エラー メッセージとして、呼び出し元のアプリケーションまたは関連する TRY...CATCH 構造の CATCH ブロックに返されます。 新しいアプリケーションでは、代わりに [THROW](../../t-sql/language-elements/throw-transact-sql.md) を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,18 +71,18 @@ RAISERROR ( { msg_str | @local_variable }
   
 ## <a name="arguments"></a>引数  
  *msg_id*  
- ユーザー定義エラー メッセージ番号は、sp_addmessage を使用して、sys.messages カタログ ビューに格納されます。 ユーザー定義エラー メッセージのエラー番号は、必ず 50000 より大きくなります。 ときに*msg_id*が指定されていない、RAISERROR はエラー番号 50000 のエラー メッセージを発生させます。  
+ sp_addmessage を使用して sys.messages カタログ ビューに格納されたユーザー定義エラー メッセージ番号です。 ユーザー定義エラー メッセージのエラー番号は、必ず 50000 より大きくなります。 *msg_id* を指定しないと、RAISERROR はエラー番号 50000 のエラー メッセージを表示します。  
   
  *msg_str*  
- 書式設定を含むユーザー定義メッセージをに似ていますが、 **printf** C 標準ライブラリ内の関数。 エラー メッセージの長さは最大 2,047 文字です。 メッセージの文字数が 2,048 文字を超えると、2,044 文字までだけ表示され、メッセージが途中で切れていることを示す省略記号が追加されます。 内部的な記憶動作が原因で、書式引数は出力として表示されるより多くの文字を使用することに注意してください。 置換パラメーターなど、 *%d* 2 の値が割り当てられる実際に生成されるメッセージ文字列内の 1 つの文字が、内部的にも記憶域の 3 つの追加の文字を占有します。 この記憶領域の要件により、メッセージ出力で使用できる文字数は少なくなります。  
+ C 標準ライブラリに含まれる **printf** 関数に似た形式のユーザー定義メッセージです。 エラー メッセージの長さは最大 2,047 文字です。 メッセージの文字数が 2,048 文字を超えると、2,044 文字までだけ表示され、メッセージが途中で切れていることを示す省略記号が追加されます。 内部的な記憶動作が原因で、書式引数は出力として表示されるより多くの文字を使用することに注意してください。 たとえば、2 という値が割り当てられる書式引数 *%d* は、実際にメッセージ文字列に表示されるのは 1 文字ですが、内部的にはさらに 3 文字分の記憶領域を必要とします。 この記憶領域の要件により、メッセージ出力で使用できる文字数は少なくなります。  
   
- ときに*msg_str*を指定すると、RAISERROR はエラー番号 50000 のエラー メッセージを発生させます。  
+ *msg_str* を指定した場合、RAISERROR はエラー番号 50000 のエラー メッセージを表示します。  
   
- *msg_str*省略可能な組み込みの変換が指定された文字の文字列を指定します。 各変換指定子は、引数リスト内の値を書式化およびフィールド内の変換指定の場所に配置する方法を定義します。 *msg_str*です。 変換指定の形式は、  
+ *msg_str* は、オプションで変換指定が埋め込まれた文字列です。 それぞれの変換指定で、引数リストの値をどのような形式にするかと、*msg_str* 内の変換指定の場所にあるフィールドにどのように配置するのかを定義します。 変換指定の形式は、  
   
  % [[*flag*] [*width*] [. *precision*] [{h | l}]] *type*  
   
- 使用できるパラメーター *msg_str*は。  
+ *msg_str* では、次のパラメーターを使用します。  
   
  *flag*  
   
@@ -98,7 +98,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  *width*  
   
- 引数値が配置されるフィールドの幅の最小値を定義する整数です。 引数の値の長さが同じかまたはよりも長いかどうか*幅*、埋め込みなしで、値を出力します。 値がよりも短い場合*幅*、値が指定された長さに埋め込まれた*幅*です。  
+ 引数値が配置されるフィールドの幅の最小値を定義する整数です。 引数値の長さが *width* 以上の場合、値は埋め込みなしで出力されます。 値が *width* より短い場合は、*width* で指定した長さまで埋め込まれます。  
   
  アスタリスク (*) は、width が引数リスト内の関連する引数によって指定されることを意味します。この引数は整数値である必要があります。  
   
@@ -106,33 +106,33 @@ RAISERROR ( { msg_str | @local_variable }
   
  文字列の値の引数値から取得される最大文字数です。 たとえば、文字列が 5 文字で、precision が 3 の場合、文字列の値の最初の 3 文字のみが使用されます。  
   
- 整数値の場合は、*精度*印刷桁の数字の最小数です。  
+ 整数値の場合、*precision* は出力される最小桁数です。  
   
  アスタリスク (*) は、precision が引数のリスト内の関連する引数により指定されることを意味します。この引数は整数値である必要があります。  
   
  {h | l} *type*  
   
- 文字の種類の d で使用される i、o、s、x、X、または u を作成および**shortint** (h) または**longint** (l) の値。  
+ d、i、o、s、x、X、u の各文字型で使われ、**shortint** (h) または **longint** (l) の値を作成します。  
   
-|型の仕様|表します|  
+|型の指定|表す内容|  
 |------------------------|----------------|  
 |d または i|符号付き整数|  
 |o|符号なし 8 進数|  
-|s|文字列|  
+|s|String|  
 |u|符号なし整数|  
 |x または X|符号なし 16 進数|  
   
 > [!NOTE]  
->  に対して定義されているに基づいてこれらの種類の仕様、 **printf** C 標準ライブラリ内の関数。 RAISERROR メッセージ文字列マップで使用されるタイプ仕様[!INCLUDE[tsql](../../includes/tsql-md.md)]で使用される仕様の中に、データ型**printf** C 言語のデータ型にマップします。 使用される仕様の入力**printf** RAISERROR でサポートされていないときに[!INCLUDE[tsql](../../includes/tsql-md.md)]C データ型が関連付けられているようなデータ型はありません。 たとえば、 *%p*ために、ポインターの仕様は RAISERROR でサポートされていません[!INCLUDE[tsql](../../includes/tsql-md.md)]ポインターのデータ型はありません。  
+>  これらの型指定は、C 標準ライブラリの **printf** 関数に対して定義されている型指定に基づいています。 RAISERROR メッセージ文字列に使用される型指定は [!INCLUDE[tsql](../../includes/tsql-md.md)] のデータ型にマップされ、**printf** で使用される型指定は C 言語のデータ型にマップされます。 **printf** で使用される型指定は、関連する C のデータ型に類似するデータ型が [!INCLUDE[tsql](../../includes/tsql-md.md)] にない場合、RAISERROR でサポートされません。 たとえば、ポインターに対する *%p* 指定は、[!INCLUDE[tsql](../../includes/tsql-md.md)] にポインターのデータ型がないため、RAISERROR でサポートされません。  
   
 > [!NOTE]  
->  値を変換する、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint**データ型、 **%i64d**です。  
+>  [!INCLUDE[tsql](../../includes/tsql-md.md)]**bigint** データ型に値を変換するには、**%I64d** を指定します。  
   
  **@** *local_variable*  
- 任意の有効な文字データ型と同じ方法で書式設定文字列を含む変数*msg_str*です。 **@ * * * local_variable*する必要があります**char**または**varchar**、これらのデータ型に暗黙的に変換することができるか。  
+ *msg_str* と同じ形式の文字列を含む有効な文字データ型の変数です。 **@***local_variable* のデータ型は **char** または **varchar** であるか、これらのデータ型に暗黙的に変換できるデータ型である必要があります。  
   
  *severity*  
- このメッセージに関連付けられたユーザー定義重大度レベルです。 使用する場合*msg_id* RAISERROR で指定された重大度を sp_addmessage を使用して作成されたユーザー定義のメッセージを発生させるには、sp_addmessage で指定された重大度をオーバーライドします。  
+ このメッセージに関連付けられたユーザー定義重大度レベルです。 sp_addmessage を使用して作成されたユーザー定義メッセージを、*msg_id* を使用して出力するときは、RAISERROR で指定された重大度が sp_addmessage で指定された重大度より優先されます。  
   
  0 から 18 までの重大度レベルはどのユーザーでも指定できます。 19 から 25 までの重大度レベルは、固定サーバー ロールまたはユーザー ALTER TRACE 権限を持つ、sysadmin のメンバーでのみ指定できます。 重大度レベル 19 から 25 までは、WITH LOG オプションを必要とします。 0 より小さい重大度レベルは 0 と解釈されます。 25 より大きい重大度レベルは 25 と解釈されます。  
   
@@ -153,24 +153,24 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  ```  
   
  *state*  
- 0 ～ 255 の整数です。 負の値を 1 に既定値です。 255 より大きい値には使用できません。 
+ 0 ～ 255 の整数です。 負の値は既定で 1 に設定されます。 255 より大きい値は使用できません。 
   
  同じユーザー定義エラーが複数の場所で発生する場合、それぞれの場所に対して一意の状態番号を使用すると、コードのどのセクションでエラーが発生しているのかを探すのに役立ちます。  
   
  *argument*  
- 定義された変数の代入に使用されるパラメーターは、 *msg_str*またはに対応するメッセージ*msg_id*です。 書式引数は指定しなくても、複数指定してもかまいませんが、合計で 20 を超えることはできません。 各置換パラメーターには、ローカル変数、またはこれらのデータ型のいずれかを指定できます: **tinyint**、 **smallint**、 **int**、 **char**、 **varchar**、 **nchar**、 **nvarchar**、**バイナリ**、または**varbinary**です。 その他のデータ型はサポートされません。  
+ *msg_str* で定義された変数、または *msg_id* に対応するメッセージの書式引数に使用されるパラメーターです。 書式引数は指定しなくても、複数指定してもかまいませんが、合計で 20 を超えることはできません。 書式引数にはローカル変数を指定するか、データ型として **tinyint**、**smallint**、**int**、**char**、**varchar**、**nchar**、**nvarchar**、**binary**、**varbinary** のいずれかを指定できます。 その他のデータ型はサポートされません。  
   
  *オプション*  
  エラーのカスタム オプションです。次の表のいずれかの値をとります。  
   
-|[値]|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|LOG|エラー ログとアプリケーション ログのインスタンスに、エラーがログ記録、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]です。 エラー ログに記録されるエラーは、現在のところ最高 440 バイトに制限されています。 Sysadmin 固定サーバー ロールまたは ALTER TRACE 権限を持つユーザーのメンバーだけでは、WITH LOG を指定できます。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|LOG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスについて、エラー ログとアプリケーション ログにエラーを記録します。 エラー ログに記録されるエラーは、現在のところ最高 440 バイトに制限されています。 Sysadmin 固定サーバー ロールまたは ALTER TRACE 権限を持つユーザーのメンバーだけでは、WITH LOG を指定できます。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|クライアントにすぐにメッセージを送信します。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
-|SETERROR|セット、@@ERRORおよび ERROR_NUMBER 値に*msg_id*または重大度レベルに関係なく、50000 します。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|SETERROR|重大度レベルとは無関係に、@@ERROR 値と ERROR_NUMBER 値に *msg_id* または 50000 を設定します。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   
-## <a name="remarks"></a>解説  
- RAISERROR によって生成されたエラーは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のコードによって生成されたエラーと同様に機能します。 RAISERROR で指定された値が報告されますで ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY、ERROR_STATE、および @@ERRORシステム関数です。 TRY ブロックで 11 以上の重大度で RAISERROR を実行すると、RAISERROR は関連する CATCH ブロックに制御を渡します。 RAISERROR が次の条件で実行されると、呼び出し元にエラーが返されます。  
+## <a name="remarks"></a>Remarks  
+ RAISERROR によって生成されたエラーは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のコードによって生成されたエラーと同様に機能します。 RAISERROR によって指定された値は、ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY、ERROR_STATE、@@ERROR システム関数によりレポートされます。 TRY ブロックで 11 以上の重大度で RAISERROR を実行すると、RAISERROR は関連する CATCH ブロックに制御を渡します。 RAISERROR が次の条件で実行されると、呼び出し元にエラーが返されます。  
   
 -   TRY ブロックのスコープの外で実行された場合  
   
@@ -178,13 +178,13 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
 -   データベース接続を終了させる 20 以上の重大度で実行された場合  
   
- CATCH ブロックは、ERROR_NUMBER や ERROR_MESSAGE などのシステム関数を使用して CATCH ブロックを呼び出したエラーを、RAISERROR を使用して再度スローし、元のエラー情報を取得できます。 @@ERROR 1 から 10 までの重大度がメッセージの既定で 0 に設定します。  
+ CATCH ブロックは、ERROR_NUMBER や ERROR_MESSAGE などのシステム関数を使用して CATCH ブロックを呼び出したエラーを、RAISERROR を使用して再度スローし、元のエラー情報を取得できます。 重大度レベルが 1 から 10 までのメッセージには、@@ERROR の値は既定で 0 に設定されます。  
   
- ときに*msg_id* sys.messages カタログ ビュー、RAISERROR のプロセスから利用可能なユーザー定義のメッセージが指定されたユーザー定義メッセージのテキストに適用されると、同じ規則を使用して、テキスト列からメッセージを指定します。使用して*msg_str*です。 ユーザー定義メッセージのテキストには変換指定を含めることができ、RAISERROR は引数値を変換指定にマップします。 ユーザー定義エラー メッセージを削除するには、ユーザー定義エラー メッセージと sp_dropmessage を追加するには、sp_addmessage を使用します。  
+ *msg_id* で sys.messages カタログ ビューから利用可能なユーザー定義メッセージを指定している場合、RAISERROR は、*msg_str* を使用して指定されたユーザー定義メッセージのテキストに適用されているのと同じルールで、テキスト列からのメッセージを処理します。 ユーザー定義メッセージのテキストには変換指定を含めることができ、RAISERROR は引数値を変換指定にマップします。 ユーザー定義エラー メッセージを追加するには sp_addmessage を使用し、ユーザー定義エラー メッセージを削除するには sp_dropmessage を使用します。  
   
- RAISERROR は、呼び出し元のアプリケーションにメッセージを返すために、PRINT の代わりに使用することができます。 RAISERROR の機能に類似した代替文字をサポートしている、 **printf** 、C 標準ライブラリ内の関数間、 [!INCLUDE[tsql](../../includes/tsql-md.md)] PRINT ステートメントは返しません。 RAISERROR が TRY ブロックで 11 から 19 の重大度で実行され、関連する CATCH ブロックに制御を渡す間、PRINT ステートメントは TRY ブロックの影響を受けません。 CATCH ブロックを呼び出さずに TRY ブロックからのメッセージを返すには、重大度を 10 以下に指定して RAISERROR を使用します。  
+ RAISERROR は、呼び出し元のアプリケーションにメッセージを返すために、PRINT の代わりに使用することができます。 RAISERROR では C 標準ライブラリの **printf** 関数の機能に類似した代替文字をサポートしますが、[!INCLUDE[tsql](../../includes/tsql-md.md)] の PRINT ステートメントではサポートしていません。 RAISERROR が TRY ブロックで 11 から 19 の重大度で実行され、関連する CATCH ブロックに制御を渡す間、PRINT ステートメントは TRY ブロックの影響を受けません。 CATCH ブロックを呼び出さずに TRY ブロックからのメッセージを返すには、重大度を 10 以下に指定して RAISERROR を使用します。  
   
- 通常、最初の引数が最初の変換指定を置き換え、2 番目の引数が 2 番目の変換指定を置き換えるというように、連続する引数が連続する変換指定を置き換えます。 たとえば、次の`RAISERROR`ステートメントでは、最初の引数`N'number'`の最初の変換指定を置き換える`%s`; および 2 番目の引数の`5`の 2 番目の変換指定を置き換えます`%d.`  
+ 通常、最初の引数が最初の変換指定を置き換え、2 番目の引数が 2 番目の変換指定を置き換えるというように、連続する引数が連続する変換指定を置き換えます。 たとえば、次の `RAISERROR` ステートメントは、最初の引数 `N'number'` で最初の変換指定 `%s` を置き換え、2 番目の引数 `5` で 2 番目の変換指定 `%d.` を置き換えます。  
   
 ```  
 RAISERROR (N'This is message %s %d.', -- Message text.  
@@ -198,7 +198,7 @@ GO
   
  変換指定の width または precision にアスタリスク (*) が指定されている場合、width または precision に使用される値は整数の引数値として指定されます。 この場合、1 つの変換指定で、width、precision、および置換値に対して 1 つずつ、最大 3 つまでの引数を使用できます。  
   
- たとえば、どちらも、次の`RAISERROR`ステートメントが同じ文字列を返します。 一方のステートメントでは引数リストで width と precision の値を指定し、もう一方のステートメントでは変換指定でこれらを指定しています。  
+ たとえば、次の `RAISERROR` ステートメントはどちらも同じ文字列を返します。 一方のステートメントでは引数リストで width と precision の値を指定し、もう一方のステートメントでは変換指定でこれらを指定しています。  
   
 ```  
 RAISERROR (N'<\<%*.*s>>', -- Message text.  
@@ -220,7 +220,7 @@ GO
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-error-information-from-a-catch-block"></a>A. CATCH ブロックからエラー情報を返す  
- 次のコード例は、使用する方法を示しています。`RAISERROR`内、`TRY`実行を、関連付けられている移動が発生するブロック`CATCH`ブロックします。 使用する方法も示します`RAISERROR`を呼び出したエラーに関する情報を返す、`CATCH`ブロックします。  
+ 次のコード例では、`TRY` ブロック内で `RAISERROR` を使用して、関連付けられている `CATCH` ブロックに実行を移動させる方法を示します。 また、`RAISERROR` を使用して、`CATCH` ブロックを呼び出したエラーについての情報を返す方法も示しています。  
   
 > [!NOTE]  
 >  RAISERROR では、1 から 127 までの状態番号のエラーだけが生成されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]では状態番号 0 のエラーが発生する場合があるため、ERROR_STATE によって返されるエラーの状態番号は、RAISERROR の state パラメーターの値として渡す前に確認することをお勧めします。  
@@ -255,7 +255,7 @@ END CATCH;
 ```  
   
 ### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>B. sys.messages 内でアドホック メッセージを作成する  
- 次の例では、sys.messages カタログ ビューに格納されているメッセージを生成する方法を示します。 使用して、メッセージが sys.messages カタログ ビューに追加された、`sp_addmessage`メッセージ番号としてのシステム ストアド プロシージャ`50005`です。  
+ 次の例では、sys.messages カタログ ビューに格納されているメッセージを生成する方法を示します。 メッセージは、`sp_addmessage` システム ストアド プロシージャを使用して、メッセージ番号 `50005` として sys.messages カタログ ビューに追加されています。  
   
 ```  
 sp_addmessage @msgnum = 50005,  
@@ -273,7 +273,7 @@ GO
 ```  
   
 ### <a name="c-using-a-local-variable-to-supply-the-message-text"></a>C. ローカル変数を使用してメッセージ テキストを指定する  
- 次のコード例は、ローカル変数を使用してメッセージ テキストを指定する方法を示しています、`RAISERROR`ステートメントです。  
+ 次のコード例では、ローカル変数を使用して、`RAISERROR` ステートメントのメッセージ テキストを指定する方法を示します。  
   
 ```  
 DECLARE @StringVariable NVARCHAR(50);  
@@ -291,17 +291,17 @@ GO
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
- [sp_addmessage &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_dropmessage &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [xp_logevent &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/xp-logevent-transact-sql.md)   
+ [xp_logevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logevent-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; です。TRANSACT-SQL と&#41; です。](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
   
   

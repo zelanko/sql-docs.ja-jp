@@ -1,5 +1,5 @@
 ---
-title: "外部テーブルを削除 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -45,9 +45,9 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
  [ *database_name* . [*schema_name*] . | *schema_name* . ] *table_name*  
  削除する外部テーブルの 1 つか 3 部構成の名前。 テーブル名は、スキーマ、または、データベースとスキーマ オプションで含めることができます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
   
--   必要があります**ALTER**テーブルが所属するスキーマに対する権限。  
+-   テーブルが属するスキーマに対する **ALTER** 権限が必要です。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  外部のテーブルを削除するには、すべてのテーブルに関連するメタデータを削除します。 外部のデータは削除されません。  
@@ -63,7 +63,7 @@ DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;
 ```  
   
 ### <a name="b-dropping-an-external-table-from-the-current-database"></a>B. 現在のデータベースから、外部テーブルを削除します。  
- 次の例では、削除、`ProductVendor1`テーブル、そのデータ、インデックス、および現在のデータベースからすべての従属ビューです。  
+ 次の例では、現在のデータベースから、`ProductVendor1` テーブル、そのデータ、インデックス、およびすべての依存ビューを削除します。  
   
 ```  
 DROP EXTERNAL TABLE ProductVendor1;  

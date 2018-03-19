@@ -1,5 +1,5 @@
 ---
-title: "メッセージ型 (TRANSACT-SQL) を ALTER |Microsoft ドキュメント"
+title: ALTER MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -58,10 +58,10 @@ ALTER MESSAGE TYPE message_type_name
  変更するメッセージ型の名前を指定します。 サーバー名、データベース名、スキーマ名は指定できません。  
   
  VALIDATION   
- 指定方法[!INCLUDE[ssSB](../../includes/sssb-md.md)]この種類のメッセージのメッセージ本文を検証します。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] によって、この型のメッセージの本文が検証される方法を指定します。  
   
  なし  
- 検証が実行されません。 メッセージ本文は、任意のデータが含まれます。 または NULL にすることがあります。  
+ 検証が実行されません。 メッセージ本文には何らかのデータが含まれることがあれば、NULL の場合もあります。  
   
  EMPTY  
  メッセージの本文は NULL であることが必要です。  
@@ -70,20 +70,20 @@ ALTER MESSAGE TYPE message_type_name
  メッセージの本文には、整形式の XML が含まれている必要があります。  
   
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
- メッセージの本文には、指定されたスキーマ コレクションのスキーマに準拠する XML が含まれている必要があります。 *Schema_collection_name*既存の XML スキーマ コレクションの名前を指定する必要があります。  
+ メッセージの本文には、指定されたスキーマ コレクションのスキーマに準拠する XML が含まれている必要があります。 *schema_collection_name* は、既存の XML スキーマ コレクションの名前であることが必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  メッセージ型の検証を変更しても、既にキューに配布されているメッセージには影響しません。  
   
  メッセージ型の AUTHORIZATION を変更するには、ALTER AUTHORIZATION ステートメントを使用します。  
   
-## <a name="permissions"></a>権限  
- メッセージの種類を変更するためのアクセス許可の既定では、メッセージの種類のメンバーの所有者、 **db_ddladmin**または**db_owner**固定データベース ロールのメンバー、 **sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ メッセージ型を変更する権限は、既定ではメッセージ型の所有者、**db_ddladmin** 固定データベース ロールまたは **db_owner** 固定データベース ロールのメンバーと **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
  ALTER MESSAGE TYPE ステートメントがスキーマ コレクションを指定する場合、ステートメントを実行するユーザーは、指定されているスキーマ コレクションに対する REFERENCES 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、メッセージの種類を変更`//Adventure-Works.com/Expenses/SubmitExpense`をメッセージ本文が整形式 XML ドキュメントを含めることが必要です。  
+ 次の例では、メッセージ型 `//Adventure-Works.com/Expenses/SubmitExpense` を変更し、メッセージ本文に整形式の XML ドキュメントが含まれることを要求します。  
   
 ```  
 ALTER MESSAGE TYPE  
@@ -93,8 +93,8 @@ ALTER MESSAGE TYPE
   
 ## <a name="see-also"></a>参照  
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [メッセージの種類 &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-message-type-transact-sql.md)   
- [メッセージの種類 &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-message-type-transact-sql.md)   
+ [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

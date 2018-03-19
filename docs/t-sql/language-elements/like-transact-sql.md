@@ -1,5 +1,5 @@
 ---
-title: "(TRANSACT-SQL) のような |Microsoft ドキュメント"
+title: LIKE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -67,10 +67,10 @@ match_expression [ NOT ] LIKE pattern
   
 ## <a name="arguments"></a>引数  
  *match_expression*  
- 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)の文字データ型。  
+ 文字型の任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
  *pattern*  
- 特定の文字列内で検索する文字の*match_expression*、次の有効なワイルドカード文字を含めることができます。 *パターン*8,000 バイトの最大数を指定できます。  
+ *match_expression* で検索する特定の文字列であり、次の有効なワイルドカード文字を含めることができます。 *pattern* は、最大 8,000 バイトにすることができます。  
   
 |ワイルドカード文字|Description|例|  
 |------------------------|-----------------|-------------|  
@@ -80,18 +80,18 @@ match_expression [ NOT ] LIKE pattern
 |[^]|指定した範囲 ([^a-f]) またはセット ([^abcdef]) 内にない任意の 1 文字です。|WHERE au_lname LIKE 'de[^l]%' と指定すると、姓が de で始まり、次の文字が l ではないすべての著者が検索されます。|  
   
  *escape_character*  
- 特定のワイルドカードがワイルドカードとしてではなく標準の文字として解釈されるようにするために、そのワイルドカードの前に配置する文字です。 *escape_character*既定されておらず、1 つだけの文字に評価される必要があります文字式です。  
+ 特定のワイルドカードがワイルドカードとしてではなく標準の文字として解釈されるようにするために、そのワイルドカードの前に配置する文字です。 *escape_character* は、既定値を持たない文字式であり、1 文字に評価される必要があります。  
   
 ## <a name="result-types"></a>戻り値の型  
  **ブール値**  
   
 ## <a name="result-value"></a>結果の値  
- ような場合に TRUE を返します、 *match_expression* 、指定された一致*パターン*です。  
+ *match_expression* が、指定された *pattern* と一致する場合、LIKE は TRUE を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  LIKE を使用して文字列の比較を行うときは、パターン文字列中のすべての文字が比較の対象になります。 これには、パターンの先頭の空白や後続する空白も含まれます。 クエリ内の比較で LIKE 'abc ' 文字列 (abc に空白が 1 つ続く) を含むすべての行が返される場合、列の値が"abc" (abc の後ろに空白がない) の行は返されません。 ただし、パターンが一致する式の中の後続する空白は無視されます。 クエリ内の比較で LIKE 'abc' 文字列 (abc の後ろに空白がない) を含むすべての行が返される場合、"abc" で始まり、0 または空白が後続するすべての行が返されます。  
   
- 含むパターンを使用して、文字列比較**char**と**varchar**データは、データの格納方法により、LIKE 比較をパスできません可能性があります。 各データ型の格納方法や、LIKE 比較ができない場合について理解しておく必要があります。 次の例では、ローカル**char**ストアド プロシージャとし、使用パターンと一致するすべての従業員の最後で始まる指定された文字のセットを検索する変数。  
+ **char** および **varchar** データのパターンを使用した文字列比較では、データの格納方法に制約があるため、LIKE 比較を渡すことができません。 各データ型の格納方法や、LIKE 比較ができない場合について理解しておく必要があります。 次の例では、ローカル変数 **char** をストアド プロシージャに渡し、パターン検索を使用して、姓が指定された文字列で始まるすべての従業員を検索します。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -107,9 +107,9 @@ EXEC FindEmployee @EmpLName = 'Barb';
 GO  
 ```  
   
- `FindEmployee`プロシージャ、行が返されないため、 **char**変数 (`@EmpLName`) 名前には、20 文字未満が含まれている場合、後続する空白が含まれています。 `LastName`列は**varchar**、末尾の空白を入れません。 後続する空白が意味を持つため、このプロシージャは失敗します。  
+ `FindEmployee` プロシージャでは、20 文字未満の名前の場合、必ず **char** 変数 (`@EmpLName`) に後続する空白が含まれるため、行は返されません。 `LastName` 列は **varchar** であるため、後続する空白は含まれていません。 後続する空白が意味を持つため、このプロシージャは失敗します。  
   
- ただし、次の例は成功を後続の空白が追加されないので、 **varchar**変数。  
+ 次の例では、後続する空白は **varchar** 変数に追加されないので、検索は成功します。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -135,7 +135,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
  ``` 
  
 ## <a name="pattern-matching-by-using-like"></a>LIKE を使用するパターン検索  
- LIKE では、ASCII パターン検索と Unicode パターン検索を行えます。 ときにすべての引数 (*match_expression*、*パターン*、および*escape_character*がある場合)、ASCII 文字データ型は、ASCII パターン マッチが行わします。 引数のいずれかが Unicode データ型の場合は、すべての引数が Unicode に変換され、Unicode パターン検索が行われます。 Unicode データを使用する場合 (**nchar**または**nvarchar**データ型) と同様、後続する空白は重要です。 ただし、非 Unicode データの末尾の空白は意味を持ちません。 Unicode LIKE は、ISO 標準と互換性があります。 ASCII LIKE は、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と互換性があります。  
+ LIKE では、ASCII パターン検索と Unicode パターン検索を行えます。 すべての引数 (*match_expression*、*pattern*、および *escape_character*) が ASCII 文字型の場合は、ASCII パターン検索が行われます。 引数のいずれかが Unicode データ型の場合は、すべての引数が Unicode に変換され、Unicode パターン検索が行われます。 LIKE で Unicode データ (**nchar** または **nvarchar** 型) を使用する場合、後続する空白は意味を持ちます。しかし、Unicode 以外のデータの場合、後続する空白は意味を持ちません。 Unicode LIKE は、ISO 標準と互換性があります。 ASCII LIKE は、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と互換性があります。  
   
  次の一連の例では、ASCII LIKE パターン検索と Unicode LIKE パターン検索で返される行の違いを示します。  
   
@@ -166,7 +166,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
 >  LIKE 比較は、照合順序の影響を受けます。 詳細については、「[COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)」を参照してください。  
   
 ## <a name="using-the--wildcard-character"></a>% ワイルドカード文字の使用  
- 場合、LIKE '5%' 記号を指定すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]続く 0 個以上の文字の文字列を数字の 5 を検索します。  
+ LIKE '5%' と指定すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は数字の 5 を先頭に 0 個以上の文字が続く文字列を検索します。  
   
  たとえば、次のクエリは、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内のすべての動的管理ビューを表示します。これらのすべての動的管理ビューは、文字 `dm` で始まるためです。  
   
@@ -179,9 +179,9 @@ WHERE Name LIKE 'dm%';
 GO  
 ```  
   
- 動的管理ビューではないすべてのオブジェクトを表示する`NOT LIKE 'dm%'`です。 仮に、オブジェクトの総数が 32、LIKE パターンに一致する名前が 13 件発見されるとすると、NOT LIKE では、LIKE パターンに一致しないオブジェクトを 19 件発見します。  
+ 動的管理ビューではないすべてのオブジェクトを表示するには、`NOT LIKE 'dm%'` を使用します。 仮に、オブジェクトの総数が 32、LIKE パターンに一致する名前が 13 件発見されるとすると、NOT LIKE では、LIKE パターンに一致しないオブジェクトを 19 件発見します。  
   
- `LIKE '[^d][^m]%'` のようなパターンと一致する名前が検索されるとは限りません。 19 名は、代わりにのみ 14 で始まるすべての名前を見つけることがあります`d`も`m`結果、および動的管理ビューの名前から削除する 2 番目の文字として。 これは、否定ワイルドカード文字を使用した検索文字列は 1 文字ずつ順番に評価されるために生じます。 評価のいずれかの段階で一致しなければ、削除されます。  
+ `LIKE '[^d][^m]%'` のようなパターンと一致する名前が検索されるとは限りません。 NOT LIKE の 19 件に対して、このパターンでは 14 件しか検索できません。`d` で始まる名前、または 2 文字目が `m` の名前は、すべて結果および動的管理ビュー名から削除されます。 これは、否定ワイルドカード文字を使用した検索文字列は 1 文字ずつ順番に評価されるために生じます。 評価のいずれかの段階で一致しなければ、削除されます。  
   
 ## <a name="using-wildcard-characters-as-literals"></a>リテラルとしてのワイルドカード文字の使用  
  ワイルドカード パターン検索文字をリテラル文字として使用できます。 ワイルドカード文字をリテラル文字として使用するには、ワイルドカード文字をかっこで囲みます。 次の表は、LIKE キーワードと [ ] ワイルドカード文字の使用例を示しています。  
@@ -202,7 +202,7 @@ GO
   
  LIKE パターンでエスケープ文字の後に文字がない場合、そのパターンは無効になり、LIKE は FALSE を返します。 エスケープ文字の後にある文字がワイルドカード文字ではない場合、このパターンの中ではエスケープ文字は破棄され、エスケープ文字の次の文字が通常の文字として扱われます。 これには、2 つの角かっこ ([ ]) に囲まれたパーセント記号 (%)、アンダースコア (_)、および左角かっこ ([) の各ワイルドカード文字が含まれます。 また、2 つの角かっこ ([ ]) で囲んだ場合は、エスケープ文字は使用することができ、キャレット (^)、ハイフン (-)、および右角かっこ (]) はエスケープできます。  
   
- 0x0000 (**char (0)**) の Windows 照合順序で未定義の文字は、LIKE に含めることはできません。  
+ 0x0000 (**char(0)**) の Windows 照合順序で未定義の文字は、LIKE に含めることができません。  
   
 ## <a name="examples"></a>使用例  
   
@@ -272,7 +272,7 @@ Gail                  Westover             305-555-0100
 ```  
 
 ### <a name="c-using-the-escape-clause"></a>C. ESCAPE 句を使用する  
- 次の例では、`ESCAPE`句とエスケープ文字を正確な文字の文字列を検索する`10-15%`列で`c1`の`mytbl2`テーブル。  
+ 次の例では、`ESCAPE` 句とエスケープ文字を使用して、`mytbl2` テーブルの列 `c1` 内にある文字列 `10-15%` と完全に一致する文字列を検索します。  
   
 ```sql
 USE tempdb;  
@@ -297,7 +297,7 @@ GO
 ```  
   
 ### <a name="d-using-the---wildcard-characters"></a>D. [ ] ワイルドカード文字を使用する  
- 次の例は、上の従業員を検索、`Person`の最初の名前を持つテーブル`Cheryl`または`Sheryl`です。  
+ 次の例では、`Person` テーブルで、名前が `Cheryl` または`Sheryl` である従業員を検索します。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -308,7 +308,7 @@ WHERE FirstName LIKE '[CS]heryl';
 GO  
 ```  
   
- 次の例では、内の従業員の行を検索、`Person`の最後の名前を持つテーブル`Zheng`または`Zhang`です。  
+ 次の例では、`Person` テーブルで、姓が `Zheng` または `Zhang` である従業員の行を検索します。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -320,10 +320,10 @@ ORDER BY LastName ASC, FirstName ASC;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. LIKE を % ワイルドカード文字と共に使用する  
- 次の例は、のすべての従業員を検索、`DimEmployee`で始まる電話番号を持つテーブル`612`です。  
+ 次の例では、`DimEmployee` テーブルで `612` で始まる電話番号を持つすべての従業員を検索します。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -335,7 +335,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. NOT LIKE を % ワイルドカード文字と共に使用する  
- 次の例は、内のすべての電話番号を検索、`DimEmployee`で始まらないテーブル`612`です。  」をご覧ください。  
+ 次の例では、`DimEmployee` テーブルで `612` 以外で始まるすべての電話番号を検索します。  のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -346,8 +346,8 @@ WHERE phone NOT LIKE '612%'
 ORDER by LastName;  
 ```  
   
-### <a name="g-using-like-with-the--wildcard-character"></a>G. 使用するようを _ のワイルドカード文字  
- 次の例で始まる市外局番を持つすべての電話番号を検索する`6`と最終`2`で、`DimEmployee`テーブル。 市外局番、電話番号の最初の部分と追加の文字が、列の値の後に存在するためには、% ワイルドカード文字が、検索パターンの末尾に含まれてもことに注意してください。  
+### <a name="g-using-like-with-the--wildcard-character"></a>G. LIKE を _ ワイルドカード文字と共に使用する  
+ 次の例では、`DimEmployee` テーブルで、`6` で始まり `2` で終る市外局番を持つすべての電話番号を検索します。 市外局番は電話番号の最初の部分で、追加の文字がその列の値の後に存在するため、% ワイルドカード文字も検索パターンの末尾に含まれることに注意してください。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -359,8 +359,8 @@ ORDER by LastName;
 ```  
   
 ## <a name="see-also"></a>参照  
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
  

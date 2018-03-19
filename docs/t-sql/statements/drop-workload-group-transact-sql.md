@@ -1,5 +1,5 @@
 ---
-title: "ワークロード グループの削除 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 
   既存のユーザー定義のリソース ガバナー ワークロード グループを削除します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)です。  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,10 +50,10 @@ DROP WORKLOAD GROUP group_name
  *group_name*  
  既存のユーザー定義のワークロード グループの名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  リソース ガバナーの内部グループや既定のグループに対して、DROP WORKLOAD GROUP ステートメントを使用することはできません。  
   
- DDL ステートメントを実行する場合、リソース ガバナーの状態について詳しく理解しておくことをお勧めします。 詳細については、次を参照してください。[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)です。  
+ DDL ステートメントを実行する場合、リソース ガバナーの状態について詳しく理解しておくことをお勧めします。 詳細については、「[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)」を参照してください。  
   
  アクティブなセッションが含まれているワークロード グループを削除したり別のリソース プールに移動したりした場合、その変更を適用するために ALTER RESOURCE GOVERNOR RECONFIGURE ステートメントを呼び出すと失敗します。 この問題を回避するには、次のいずれかの操作を実行します。  
   
@@ -65,11 +65,11 @@ DROP WORKLOAD GROUP group_name
   
 -   DROP WORKLOAD GROUP ステートメントを実行してから、変更適用のためにセッションを明示的に停止するのは不適切であると判断した場合、DROP ステートメントの実行前と同じ名前でグループを再作成し、このグループを元のリソース プールに移動することができます。 変更を適用するには、ALTER RESOURCE GOVERNOR RECONFIGURE ステートメントを実行します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、という名前のワークロード グループを削除`adhoc`です。  
+ 次の例では、`adhoc` という名前のワークロード グループを削除します。  
   
 ```  
 DROP WORKLOAD GROUP adhoc;  
@@ -79,7 +79,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
+ [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   

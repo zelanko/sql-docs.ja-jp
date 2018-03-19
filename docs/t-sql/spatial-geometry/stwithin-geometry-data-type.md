@@ -1,5 +1,5 @@
 ---
-title: "STWithin (geometry データ型) |Microsoft ドキュメント"
+title: "STWithin (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stwithin-geometry-data-type"></a>STWithin (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-場合 1 を返します、 **geometry**インスタンスが別内では完全に**geometry**インスタンスです。 それ以外の場合は 0 を返します。 `STWithin`コマンドは、大文字小文字を区別します。
+**geometry** インスタンスが別の **geometry** インスタンスに完全に含まれている場合は 1 を返します。それ以外の場合は 0 を返します。 `STWithin` コマンドでは大文字と小文字が区別されます。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,18 +45,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- もう 1 つ**geometry**対象のインスタンスと比較するインスタンス`STWithin()`が呼び出されます。  
+ `STWithin()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR 戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- このメソッドは、場合常に null を返しますの spatial reference Id (Srid)、 **geometry**インスタンスが一致しません。
+## <a name="remarks"></a>Remarks  
+ **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。
   
 ## <a name="examples"></a>使用例  
- 次の例で`STWithin()`2 つのテストに`geometry`インスタンスのかどうか、2 番目のインスタンス内で最初のインスタンスが完全にを参照してください。  
+ `STWithin()` を使用して、2 つの `geometry` インスタンスの一方のインスタンスがもう一方のインスタンスを完全に含むかどうかをテストする例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

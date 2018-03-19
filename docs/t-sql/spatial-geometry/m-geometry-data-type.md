@@ -1,5 +1,5 @@
 ---
-title: "M (geometry データ型) |Microsoft ドキュメント"
+title: "M (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="m-geometry-data-type"></a>M (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **M** (メジャー) 値、 **geometry**インスタンス。 メジャー値のセマンティクスはユーザー定義です。  
+  **geometry** インスタンスの **M** (メジャー) 値。 メジャー値のセマンティクスはユーザー定義です。  
 
 ## <a name="syntax"></a>構文  
   
@@ -46,16 +46,16 @@ ms.lasthandoff: 01/25/2018
 ## <a name="arguments"></a>引数  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型: **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR 型: **SqlDouble**  
+ CLR の型: **SqlDouble**  
   
-## <a name="remarks"></a>解説  
- このプロパティの値が null 場合、 **geometry**インスタンスではありません、**ポイント**,、およびこの**ポイント**が設定されていないためインスタンス化します。  
+## <a name="remarks"></a>Remarks  
+ **geometry** インスタンスが **Point** ではない場合や、**Point** インスタンスにこのプロパティの値が設定されていない場合は、このプロパティの値は null になります。  
   
  このプロパティは読み取り専用です。  
   
- **M**値は、ライブラリによる計算で使用されていないと、ライブラリによる計算によって渡されることはできません。  
+ **M** 値は、ライブラリによる計算で使用されていないと、ライブラリによる計算によって渡されることはありません。  
   
 ## <a name="examples"></a>使用例  
  次の例では、Z (標高) 値と M (メジャー) 値を含む `Point` インスタンスを作成し、`M` を使用してインスタンスの M 値をフェッチします。  

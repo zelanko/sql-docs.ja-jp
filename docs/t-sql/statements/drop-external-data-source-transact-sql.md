@@ -1,5 +1,5 @@
 ---
-title: "外部データ ソースを削除 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ DROP EXTERNAL DATA SOURCE external_data_source_name
 SELECT * FROM sys.external_data_sources;  
 ```  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  必要です、外部データ ソースを変更します。  
   
 ## <a name="locking"></a>ロック  

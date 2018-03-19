@@ -1,5 +1,5 @@
 ---
-title: "STNumCurves (geometry データ型) |Microsoft ドキュメント"
+title: "STNumCurves (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-このメソッド内の曲線の数を返します、 **geometry**インスタンス、インスタンスが 1 次元の空間データ型の場合。 1 次元の空間データ型は**LineString**、 **CircularString**、および**CompoundCurve**です。 `STNumCurves`() は単純型に対してのみ機能します。は機能しません**geometry**コレクションと同様に**MultiLineString**です。
+このメソッドは、**geometry** インスタンスが 1 次元の空間データ型の場合に、そこに含まれる曲線の数を返します。 1 次元の空間データ型には、**LineString**、**CircularString**、**CompoundCurve** があります。 `STNumCurves`() は単純型に対してのみ機能し、**MultiLineString** のような **geometry** コレクションでは機能しません。
   
 ## <a name="syntax"></a>構文  
   
@@ -41,12 +41,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
- 空の 1 次元**geometry**インスタンスは 0 を返します。 **NULL**ときに返される、 **geometry**インスタンスは 1 次元のインスタンスまたは初期化されていません。  
+## <a name="remarks"></a>Remarks  
+ 空の 1 次元 **geometry** インスタンスは 0 を返します。 **geometry** インスタンスが 1 次元のインスタンスではない場合や初期化されていない場合は、**NULL** が返されます。  
   
 ## <a name="examples"></a>使用例  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="b-using-stnumcurves-on-a-compoundcurve-instance"></a>B. CompoundCurve インスタンスに対して STNumCurves() を使用する  
- 次の例で`STNumCurves()`内の曲線の数を返す、`CompoundCurve`インスタンス。  
+ 次の例では、`STNumCurves()` を使用して、`CompoundCurve` インスタンスに含まれる曲線の数を返します。  
   
 ```
  DECLARE @g geometry;  

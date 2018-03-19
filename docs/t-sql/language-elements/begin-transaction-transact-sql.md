@@ -1,5 +1,5 @@
 ---
-title: "BEGIN TRANSACTION (TRANSACT-SQL) |Microsoft ドキュメント"
+title: BEGIN TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  明示的なローカル トランザクションの開始位置をマークします。 明示的なトランザクションでは、BEGIN TRANSACTION ステートメントで起動し、COMMIT または ROLLBACK ステートメントで終了します。  
+  明示的なローカル トランザクションの開始位置をマークします。 明示的なトランザクションは、BEGIN TRANSACTION ステートメントで始まり、COMMIT または ROLLBACK ステートメントで終了します。  
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -72,24 +72,24 @@ BEGIN { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>引数  
  *transaction_name*  
- **適用対象:** SQL Server (2008年以降)、Azure SQL Database
+ **適用対象:** SQL Server (2008 以降)、Azure SQL Database
  
- トランザクションに割り当てられた名前を指定します。 *では無視*識別子は 32 文字は使用できないよりも長い識別子の規則に従う必要があります。 トランザクション名は、入れ子にされた BEGIN...COMMIT ステートメントまたは BEGIN...ROLLBACK ステートメントの最も外側の組だけに使用します。 *では無視*は常に大文字と小文字、場合でも、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大文字小文字は区別されません。  
+ トランザクションに割り当てられた名前を指定します。 *transaction_name* は識別子の規則に従っている必要があり、32 文字以内で指定する必要があります。 トランザクション名は、入れ子にされた BEGIN...COMMIT ステートメントまたは BEGIN...ROLLBACK ステートメントの最も外側の組だけに使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで大文字と小文字が区別されない場合であっても、*transaction_name* では常に大文字と小文字が区別されます。  
   
  @*tran_name_variable*  
- **適用対象:** SQL Server (2008年以降)、Azure SQL Database
+ **適用対象:** SQL Server (2008 以降)、Azure SQL Database
  
- 有効なトランザクション名を格納しているユーザー定義変数の名前を指定します。 変数を宣言する必要があります、 **char**、 **varchar**、 **nchar**、または**nvarchar**データ型。 変数に 32 文字を超える文字が渡された場合は、最初の 32 文字だけが使用され、残りの文字は切り捨てられます。  
+ 有効なトランザクション名を格納しているユーザー定義変数の名前を指定します。 変数は、**char**、**varchar**、**nchar** または **nvarchar** データ型を使用して宣言する必要があります。 変数に 32 文字を超える文字が渡された場合は、最初の 32 文字だけが使用され、残りの文字は切り捨てられます。  
   
- WITH MARK ['*説明*']  
-**適用対象:** SQL Server (2008年以降)、Azure SQL Database
+ WITH MARK [ '*description*' ]  
+**適用対象:** SQL Server (2008 以降)、Azure SQL Database
 
-ログの中でトランザクションにマークを付けます。 *説明*マークを説明する文字列です。 A*説明*られてから msdb.dbo.logmarkhistory テーブルに格納されている 128 文字に切り捨てが 128 文字よりも長い時間です。  
+ログの中でトランザクションにマークを付けます。 *description* は、マーク名を示す文字列です。 *description* が 128 文字を超えている場合は、128 文字に切り捨てられてから msdb.dbo.logmarkhistory テーブルに格納されます。  
   
  WITH MARK を使用する場合は、トランザクション名を指定する必要があります。 WITH MARK によって、トランザクション ログを指定のマークに復元できます。  
   
 ## <a name="general-remarks"></a>全般的な解説
-BEGIN TRANSACTION はインクリメント@TRANCOUNTを 1 つです。
+BEGIN TRANSACTION では、@@TRANCOUNT は 1 ずつ増えます。
   
 BEGIN TRANSACTION は、接続で参照されるデータが論理的にも物理的にも一貫している位置を表します。 エラーが発生した場合は、BEGIN TRANSACTION 以降に加えられたすべてのデータ修正をロールバックし、一貫性が確認されている状態にデータを戻すことができます。 それぞれのトランザクションの終了時点は、エラーなく完了した場合は COMMIT TRANSACTION を実行して修正内容をデータベースに永久保存した時点になり、エラーが発生した場合は ROLLBACK TRANSACTION ステートメントですべての修正内容を消去した時点になります。  
   
@@ -101,24 +101,24 @@ BEGIN TRANSACTION では、ステートメントを実行する接続のロー�
   
  BEGIN TRANSACTION ステートメントがコミットまたはロールバックされる前に次の操作を実行すると、このステートメントで開始されたローカル トランザクションは、分散トランザクションにエスカレートされます。  
   
--   リンク サーバー上のリモート テーブルを参照する INSERT、DELETE、または UPDATE ステートメントを実行する。 リンク サーバーにアクセスするために使用する OLE DB プロバイダーが ITransactionJoin インターフェイスをサポートしていない場合、INSERT、UPDATE、または DELETE ステートメントが失敗します。  
+-   リンク サーバー上のリモート テーブルを参照する INSERT、DELETE、または UPDATE ステートメントを実行する。 リンク サーバーへのアクセスに使用する OLE DB プロバイダーで ITransactionJoin インターフェイスがサポートされていない場合、INSERT、UPDATE、または DELETE ステートメントは失敗します。  
   
 -   REMOTE_PROC_TRANSACTIONS オプションがオンのときに、リモート ストアド プロシージャを呼び出す。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル コピーはトランザクションのコントローラーになり、[!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) を使用して分散トランザクションを管理します。  
   
- BEGIN DISTRIBUTED TRANSACTION を使用して、トランザクションを分散トランザクションとして明示的に実行できます。 詳細については、次を参照してください。 [BEGIN DISTRIBUTED TRANSACTION &#40;です。TRANSACT-SQL と #41 です](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)。  
+ BEGIN DISTRIBUTED TRANSACTION を使用して、トランザクションを分散トランザクションとして明示的に実行できます。 詳細については、「[BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)」を参照してください。  
   
- SET IMPLICIT_TRANSACTIONS が ON に設定されている場合、BEGIN TRANSACTION ステートメントは 2 つの入れ子構造のトランザクションを作成します。 詳細については、「 [SET IMPLICIT_TRANSACTIONS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
+ SET IMPLICIT_TRANSACTIONS が ON に設定されている場合、BEGIN TRANSACTION ステートメントは 2 つの入れ子構造のトランザクションを作成します。 詳細については、「[SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)」を参照してください。  
   
 ## <a name="marked-transactions"></a>マーク付きのトランザクション  
- WITH MARK オプションを使用すると、トランザクション名がトランザクション ログに挿入されます。 データベースを以前の状態に復元する場合は、日付や時刻の代わりにマークが付いたトランザクションを使用できます。 詳細については、次を参照してください[関連のデータベースを一貫して復旧 &#40; を使用してマークされたトランザクション。完全復旧モデル &#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)と[復元 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-transact-sql.md).  
+ WITH MARK オプションを使用すると、トランザクション名がトランザクション ログに挿入されます。 データベースを以前の状態に復元する場合は、日付や時刻の代わりにマークが付いたトランザクションを使用できます。 詳細については、「[マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)」と「[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」を参照してください。  
   
  さらに、関連するデータベースのセットを論理的に一貫した状態に復元する必要がある場合は、トランザクション ログ マークが必要です。 分散トランザクションによって、関連するデータベースのトランザクション ログにマークを設定できます。 関連するデータベースのセットをこれらのマークに復元すると、トランザクションとして一貫性のあるデータベースのセットが作成されます。 関連するデータベースにマークを設定するには、特別な手順が必要です。  
   
  トランザクション ログにマークが設定されるのは、マーク付きのトランザクションによってデータベースが更新される場合のみです。 データを変更しないトランザクションには、マークは付きません。  
   
- BEGIN TRAN *new_name* WITH MARK は、マークされていない既存のトランザクション内でネストできます。 これを時に*new_name*トランザクションが既に与えられている名前に関係なく、トランザクションのマーク名になります。 次の例では、`M2`マークの名前を指定します。  
+ BEGIN TRAN *new_name* WITH MARK は、マークが付いていない既存のトランザクション内で入れ子にできます。 この場合、トランザクションに既に割り当てられている名前に関係なく、*new_name* がトランザクションのマーク名になります。 次の例では、`M2` がマーク名になります。  
   
 ```  
 BEGIN TRAN T1;  
@@ -145,15 +145,15 @@ COMMIT TRAN T1;
   
  "オプションは無視されます。"  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. 明示的なトランザクションを使用します。
-**適用対象:** SQL Server (2008年以降)、Azure SQL Database、Azure SQL Data Warehouse、Parallel Data Warehouse
+**適用対象:** SQL Server (2008 以降)、Azure SQL Database、Azure SQL Data Warehouse、Parallel Data Warehouse
 
-この例では、AdventureWorks で使用します。 
+この例では、AdventureWorks を使用します。 
 
 ```
 BEGIN TRANSACTION;  
@@ -163,7 +163,7 @@ COMMIT;
 ```
 
 ### <a name="b-rolling-back-a-transaction"></a>B. トランザクションのロールバック
-**適用対象:** SQL Server (2008年以降)、Azure SQL Database、Azure SQL Data Warehouse、Parallel Data Warehouse
+**適用対象:** SQL Server (2008 以降)、Azure SQL Database、Azure SQL Data Warehouse、Parallel Data Warehouse
 
 次の例では、トランザクションのロールバックの効果を示します。 この例で ROLLBACK ステートメントがロールバックされます、INSERT ステートメントでは、作成されたテーブルはそのまま残ります。
 
@@ -178,7 +178,7 @@ ROLLBACK;
 ```
 
 ### <a name="c-naming-a-transaction"></a>C. トランザクションの名前を指定する 
-**適用対象:** SQL Server (2008年以降)、Azure SQL Database
+**適用対象:** SQL Server (2008 以降)、Azure SQL Database
 
 次の例では、トランザクションの名前を指定する方法を示します。  
   
@@ -196,9 +196,9 @@ GO
 ```  
   
 ### <a name="d-marking-a-transaction"></a>D. トランザクションにマークを付ける  
-**適用対象:** SQL Server (2008年以降)、Azure SQL Database
+**適用対象:** SQL Server (2008 以降)、Azure SQL Database
 
-次の例では、トランザクションにマークを付ける方法を示します。 トランザクション`CandidateDelete`がマークされています。  
+次の例では、トランザクションにマークを付ける方法を示します。 トランザクション `CandidateDelete` にマークが付けられています。  
   
 ```  
 BEGIN TRANSACTION CandidateDelete  
@@ -216,9 +216,9 @@ GO
 ## <a name="see-also"></a>参照  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [コミット動作 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [ROLLBACK WORK &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   
   

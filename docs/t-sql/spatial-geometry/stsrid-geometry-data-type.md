@@ -1,5 +1,5 @@
 ---
-title: "STSrid (geometry データ型) |Microsoft ドキュメント"
+title: "STSrid (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsrid-geometry-data-type"></a>STSrid (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **STSrid**インスタンスの spatial reference identifier を表す整数します。  
+  **STSrid** はインスタンスの SRID (spatial reference identifier) を表す整数です。  
   
 このプロパティは変更できます。
   
@@ -46,12 +46,12 @@ STSrid
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型: **int**  
   
  CLR 型: **SqlInt32**  
   
 ## <a name="examples"></a>使用例  
- 最初の例では、作成、 **geometry** 13 と使用、SRID 値を持つインスタンス`STSrid`SRID を確認します。  
+ 最初に、SRID 値が 13 の **geometry** インスタンスを作成し、`STSrid` を使用して SRID を確認する例を示します。  
   
 ```  
 DECLARE @g geometry;  

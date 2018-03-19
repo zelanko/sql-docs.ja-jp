@@ -1,5 +1,5 @@
 ---
-title: "使用 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: USE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/28/2016
 ms.prod: sql-non-specified
@@ -50,16 +50,16 @@ USE { database_name }
   
 ## <a name="arguments"></a>引数  
  *database_name*  
- ユーザー コンテキストの切り替え先のデータベースまたはデータベース スナップショットの名前を指定します。 データベースとデータベース スナップショット名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。  
+ ユーザー コンテキストの切り替え先のデータベースまたはデータベース スナップショットの名前を指定します。 データベース名とデータベース スナップショットは、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、データベース パラメーターは現在のデータベースのみを参照できます。 現在のデータベース以外のデータベースが提供されているかどうか、`USE`ステートメントがないデータベースを切り替える、およびエラー コード 40508 が返されます。 データベースを変更するには、直接データベースに接続する必要があります。 たとえことがあるできますので、USE ステートメントがこのページの上部にある SQL データベースには適用されませんとしてマークされて、`USE`ステートメントのバッチで、何もしません。
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、データベース パラメーターは現在のデータベースのみを参照できます。 現在のデータベース以外のデータベースが提供されている場合、`USE` ステートメントではデータベースを切り替えず、エラー コード 40508 が返されます。 データベースを変更するには、直接データベースに接続する必要があります。 このページの上部で、USE ステートメントは SQL Database には該当しないとマークされているのは、バッチ内に `USE` ステートメントがあっても、何も実行されないためです。
   
-## <a name="remarks"></a>解説  
- ときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続するログイン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインが自動的に既定のデータベースに接続されているし、データベース ユーザーのセキュリティ コンテキストを取得します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン用のデータベース ユーザーが 1 人も作成されていない場合、ログインは guest として接続されます。 データベース ユーザーが、データベースに対する CONNECT 権限を持たない場合、USE ステートメントは失敗します。 ログインに既定のデータベースが割り当てられていない場合、既定のデータベースとして master が設定されます。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続すると、自動的に既定のデータベースに接続し、データベース ユーザーのセキュリティ コンテキストを取得できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン用のデータベース ユーザーが 1 人も作成されていない場合、ログインは guest として接続されます。 データベース ユーザーが、データベースに対する CONNECT 権限を持たない場合、USE ステートメントは失敗します。 ログインに既定のデータベースが割り当てられていない場合、既定のデータベースとして master が設定されます。  
   
  USE は、コンパイル時と実行時の両方で実行でき、その効果は直ちに有効になります。 したがって、バッチ内で USE ステートメントの後にあるステートメントは、指定したデータベースで実行されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  切り替え先のデータベースに対する CONNECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

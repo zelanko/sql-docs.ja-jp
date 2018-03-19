@@ -1,5 +1,5 @@
 ---
-title: "FREETEXT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: FREETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  使用される述語である、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [WHERE 句](../../t-sql/queries/where-transact-sql.md)の[!INCLUDE[tsql](../../includes/tsql-md.md)]SELECT ステートメントを実行する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フルテキスト検索をフルテキスト インデックス文字ベースのデータ型を含む列を作成します。 この述語は、検索条件の文字列の並びと正確に一致しなくても意味が合っている値を検索できます。 フルテキスト クエリ エンジンが、上、次の操作を内部で実行する FREETEXT を使用する場合、 *freetext_string*各語に重みを割り当てます、および一致を検索します。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの [!INCLUDE[tsql](../../includes/tsql-md.md)] [WHERE 句](../../t-sql/queries/where-transact-sql.md)で使用される述語です。文字ベースのデータ型を含むフルテキスト インデックス列で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索を実行します。 この述語は、検索条件の文字列の並びと正確に一致しなくても意味が合っている値を検索できます。 FREETEXT を使用すると、フルテキスト クエリ エンジンによって、*freetext_string* を基に次の内部操作が実行され、各語に重みが割り当てられた後、一致するものが検索されます。  
   
 -   単語の区切りに基づいて、文字列を個々の単語に分割。  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 -   類義語との一致に基づいて、語の拡張と置き換えの一覧を決定。  
   
 > [!NOTE]  
->  サポートされているフルテキスト検索の形式について[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[、フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)です。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされているフルテキスト検索の形式については、「[フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)」を参照してください。  
   
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。
   
@@ -63,22 +63,22 @@ FREETEXT ( { column_name | (column_list) | * }
   
 ## <a name="arguments"></a>引数  
  *column_name*  
- FROM 句で指定したテーブルのフルテキスト インデックス付きの列の名前を指定します。 型の列を指定できます**char**、 **varchar**、 **nchar**、 **nvarchar**、**テキスト**、 **ntext**、**イメージ**、 **xml**、 **varbinary**、または**varbinary (max)**です。  
+ FROM 句で指定したテーブルのフルテキスト インデックス付きの列の名前を指定します。 列には、**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml**、**varbinary**、**varbinary(max)** のいずれかの型を指定できます。  
   
  *column_list*  
- コンマ区切りで複数の列を指定できます。 *column_list*かっこで囲む必要があります。 しない限り、 *language_term*が指定されているすべての列の言語*column_list*同じである必要があります。  
+ コンマ区切りで複数の列を指定できます。 *column_list* は、かっこで囲む必要があります。 *language_term* を指定しない場合、*column_list* で指定するすべての列の言語は同じにする必要があります。  
   
  \*  
- 検索するフルテキスト検索に登録されているすべての列を使用することを示す、指定された*freetext_string*です。 複数のテーブルが FROM 句の場合\*テーブル名で修飾する必要があります。 しない限り、 *language_term*を指定すると、テーブルのすべての列の言語は同じである必要があります。  
+ フルテキスト検索用に登録されているすべての列を使用して、指定した *freetext_string* を検索します。 FROM 句に複数のテーブルが指定されている場合は、テーブル名で \* を限定する必要があります。 *language_term* を指定しない場合、テーブルのすべての列の言語は同じである必要があります。  
   
  *freetext_string*  
- 内で検索するテキスト、 *column_name*です。 単語、フレーズ、文など、あらゆるテキストを入力できます。 用語または一定の形式になっている用語がフルテキスト インデックス内に見つかった場合、一致するものと判断されます。  
+ *column_name* で検索するテキストです。 単語、フレーズ、文など、あらゆるテキストを入力できます。 用語または一定の形式になっている用語がフルテキスト インデックス内に見つかった場合、一致するものと判断されます。  
   
- 異なり、CONTAINS および CONTAINSTABLE で検索条件では AND で使用されている場合は、キーワード*freetext_string*単語 'と'、ノイズ ワードと見なされますまたは[ストップ ワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)、され破棄されます。  
+ CONTAINS と CONTAINSTABLE の検索条件では AND はキーワードになりますが、*freetext_string* では 'and' はノイズ語 ([ストップワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) と見なされ、破棄されます。  
   
- WEIGHT、FORMSOF、ワイルドカード、NEAR、およびその他の構文は使用できません。 *freetext_string*は単語、語幹に分割され、類義語辞典を通過します。  
+ WEIGHT、FORMSOF、ワイルドカード、NEAR、およびその他の構文は使用できません。 *freetext_string* は単語、語幹に分割され、類義語がチェックされて渡されます。  
   
- *freetext_string*は**nvarchar**です。 入力に他の文字データ型が使用された場合は、暗黙の変換が行われます。 大きな文字列データ型 nvarchar (max) および varchar (max) は使用できません。 次の例で、`@SearchWord`として定義されている変数`varchar(30)`で暗黙的な変換により、`FREETEXT`述語。  
+ *freetext_string* は **nvarchar** です。 入力に他の文字データ型が使用された場合は、暗黙の変換が行われます。 大きな文字列データ型 nvarchar (max) および varchar (max) は使用できません。 次の例では、`FREETEXT` 述語において、`varchar(30)` として定義されている変数 `@SearchWord` が暗黙に変換されます。  
   
 ```  
   
@@ -92,7 +92,7 @@ WHERE FREETEXT(Description, @SearchWord);
   
 ```  
   
- 「パラメーターを見つけ出す」は、変換では機能しません、ので使用**nvarchar**パフォーマンスが向上します。 例では、宣言`@SearchWord`として`nvarchar(30)`です。  
+ 変換では "パラメーターを見つけ出す" 動作が機能しないため、パフォーマンスの向上を目的とする場合には **nvarchar** を使用してください。 次の例では、`@SearchWord` を `nvarchar(30)` として宣言しています。  
   
 ```  
   
@@ -106,33 +106,33 @@ WHERE FREETEXT(Description, @SearchWord);
   
 ```  
   
- また、最適でないプランを生成する場合に OPTIMIZE FOR クエリ ヒントを使用することができます。  
+ 最適化されていないプランが生成される場合には、OPTIMIZE FOR クエリ ヒントを使用することもできます。  
   
- 言語*language_term*  
- クエリにおいて、単語区切り、語幹への分割、類義語のチェック、およびストップワードの破棄を行うときに使用する言語リソースの言語を指定します。 このパラメーターは省略可能で、言語のロケール識別子 (LCID) に対応する文字列、整数、または 16 進数の値を指定できます。 場合*language_term*を指定すると、その言語は検索条件のすべての要素に適用されます。 値を指定しなかった場合は、列のフルテキストの言語が使用されます。  
+ LANGUAGE *language_term*  
+ クエリにおいて、単語区切り、語幹への分割、類義語のチェック、およびストップワードの破棄を行うときに使用する言語リソースの言語を指定します。 このパラメーターは省略可能で、言語のロケール識別子 (LCID) に対応する文字列、整数、または 16 進数の値を指定できます。 *language_term* を指定した場合、その言語は検索条件のすべての要素に適用されます。 値を指定しなかった場合は、列のフルテキストの言語が使用されます。  
   
- 1 つの列に言語の異なる複数のドキュメントが BLOB (Binary Large Object) として格納されている場合、そのインデックスの作成に使用される言語は、そのドキュメントのロケール識別子 (LCID) によって決まります。 このような列のクエリを実行する場合を指定して*言語 * * language_term*とよく一致の確率を高めることができます。  
+ 1 つの列に言語の異なる複数のドキュメントが BLOB (Binary Large Object) として格納されている場合、そのインデックスの作成に使用される言語は、そのドキュメントのロケール識別子 (LCID) によって決まります。 そのような列に対してクエリを実行する場合は、*LANGUAGE**language_term* を指定すると検索結果の一致率が高まります。  
   
- 文字列として指定されている場合*language_term*に対応する、**エイリアス**彼は列の値[sys.syslanguages &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)互換性ビューです。  文字列は、ように、単一引用符で囲む必要があります '*language_term*' です。 整数として指定すると*language_term*言語を識別する実際の LCID です。 16 進数の値として指定する*language_term*は 0 x 後に LCID の 16 進数の値。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
+ *language_term* を文字列で指定する場合は、[sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 互換性ビューの **alias** 列の値と同じ値を指定します。  文字列の場合は、'*language_term*' のように引用符 (') で囲む必要があります。 *language_term* を整数で指定する場合は、その言語を表す実際の LCID を指定します。 *language_term* を 16 進数の値で指定する場合は、「0x」の後に LCID の 16 進数の値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
   
- 値が 2 バイト文字セット (DBCS) の形式である場合[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Unicode に変換されます。  
+ 値を 2 バイト文字セット (DBCS) の形式で指定すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で Unicode に変換されます。  
   
- 無効であるかが、指定された言語がない場合リソースがインストールされていません、その言語に対応している[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はエラーを返します。 ニュートラル言語リソースを使用するには、「0x0」を指定*language_term*です。  
+ 指定した言語が無効であるか、その言語に該当するリソースがインストールされていない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によりエラーが返されます。 ニュートラル言語リソースを使用するには、*language_term* に「0x0」を指定してください。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  フルテキストの述語と関数の対象は、FROM 述語で示される 1 つのテーブルです。 複数のテーブルを検索するには、FROM 句で結合テーブルを使用して、複数のテーブルが組み合わされた結果セットを検索します。  
   
-FREETEXT を使用するフルテキスト クエリは、CONTAINS を使用するフルテキスト クエリほど正確ではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フルテキスト検索エンジンは、重要な単語や語句を識別します。 予約済みキーワードやワイルドカード通常意味を持つ文字で指定するときに特別な意味を指定しない、 \<contains_search_condition > CONTAINS 述語のパラメーターです。
+FREETEXT を使用するフルテキスト クエリは、CONTAINS を使用するフルテキスト クエリほど正確ではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索エンジンでは、重要な単語と語句が識別されます。 予約済みキーワードやワイルドカード文字は、CONTAINS 述語の \<contains_search_condition> パラメーターに指定した場合は特別な意味が与えられますが、FREETEXT の場合は特別な意味はありません。
   
- フルテキスト述語は使用できません、 [OUTPUT 句](../../t-sql/queries/output-clause-transact-sql.md)データベースの互換性レベルを 100 に設定するとします。  
+ データベースの互換性レベルが 100 に設定されている場合、[OUTPUT 句](../../t-sql/queries/output-clause-transact-sql.md) でフルテキスト述語を使用することはできません。  
   
 > [!NOTE]  
->  FREETEXTTABLE 関数は、FREETEXT 述語と同様の検索に役立ちます。 通常のテーブル名のようにこの関数を参照することができます、[句から](../../t-sql/queries/from-transact-sql.md)SELECT ステートメントのです。 詳細については、次を参照してください。 [FREETEXTTABLE &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
+>  FREETEXTTABLE 関数は、FREETEXT 述語と同様の検索に役立ちます。 この関数は、SELECT ステートメントの [FROM 句](../../t-sql/queries/from-transact-sql.md)の中で通常のテーブル名のように参照できます。 詳細については、「[FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)」を参照してください。  
   
 ## <a name="querying-remote-servers"></a>リモート サーバーのクエリ  
- 4 部構成の名前を使用することができます、 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)または FREETEXT 述語をフルテキスト クエリには、リンク サーバー上の対象テーブルの列がインデックス付きです。 フルテキスト クエリを受け取るようリモート サーバーを準備するには、リモート サーバー上の検索対象のテーブルおよび列にフルテキスト インデックスを作成し、リモート サーバーをリンク サーバーとして追加します。  
+ [CONTAINS](../../t-sql/queries/contains-transact-sql.md) または FREETEXT 述語に 4 つの要素で構成される名前を使用して、リンク サーバー上にある対象テーブルのフルテキスト インデックス列にクエリを実行できます。 フルテキスト クエリを受け取るようリモート サーバーを準備するには、リモート サーバー上の検索対象のテーブルおよび列にフルテキスト インデックスを作成し、リモート サーバーをリンク サーバーとして追加します。  
   
-## <a name="comparison-of-like-to-full-text-search"></a>フルテキスト検索に LIKE の比較  
+## <a name="comparison-of-like-to-full-text-search"></a>LIKE とフルテキスト検索の比較  
  フルテキスト検索とは異なり、[LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 述語は、文字パターンにのみで動作します。 また、フォーマットされたバイナリ データのクエリには LIKE 述語を使用できません。 さらに、構造化されていない大量のテキスト データに対して LIKE クエリを実行すると、同じデータに対して同等のフルテキスト検索を実行する場合に比べてはるかに時間がかかります。 数百万行のテキスト データに対して LIKE クエリを実行すると、結果が得られるまでに数分かかる場合があります。一方、同じデータに対してフルテキスト クエリを実行すると、返される行数にもよりますが、数秒以内で結果を取得できます。  
   
 ## <a name="examples"></a>使用例  
@@ -165,8 +165,8 @@ GO
   
 ## <a name="see-also"></a>参照  
  [フルテキスト検索の概要](../../relational-databases/search/get-started-with-full-text-search.md)   
- [作成し、フルテキスト カタログの管理](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [フルテキスト カタログ &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [フルテキスト カタログの作成と管理](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [フルテキスト インデックスの作成と管理](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)   
@@ -175,6 +175,6 @@ GO
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   

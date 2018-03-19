@@ -1,5 +1,5 @@
 ---
-title: "CREATE FUNCTION (SQL データ ウェアハウス) |Microsoft ドキュメント"
+title: CREATE FUNCTION (SQL Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-function-sql-data-warehouse"></a>関数 (SQL データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でユーザー定義関数を作成します。 ユーザー定義関数は、[!INCLUDE[tsql](../../includes/tsql-md.md)]ルーチン パラメーターを受け取るが、複雑な計算などの操作を実行し、値として、そのアクションの結果を返します。 戻り値は、スカラー (単一) 値である必要があります。 このステートメントを使用して、次の方法で使用できる再利用可能なルーチンを作成します。  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でユーザー定義関数を作成します。 ユーザー定義の関数は、パラメーターを受け取り、複雑な計算などの操作を実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンであり、そのアクションの結果を値として返します。 戻り値は、スカラー (単一) 値である必要があります。 このステートメントを使用して、次の方法で使用できる再利用可能なルーチンを作成します。  
   
 -   SELECT などの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント内で使用する  
   
@@ -88,30 +88,30 @@ RETURNS return_data_type
  最初の文字をアット マーク (@) にしてパラメーター名を指定します。 パラメーター名は識別子のルールに従っている必要があります。 パラメーターは関数に対してローカルです。同じパラメーター名を他の関数で使用できます。 パラメーターは定数の代わりとしてのみ使用できます。パラメーターは、テーブル名、列名、またはその他のデータベース オブジェクト名の代わりに使用することはできません。  
   
 > [!NOTE]  
->  ストアド プロシージャまたはユーザー定義関数でパラメーターを渡すとき、あるいはバッチ ステートメントで変数を宣言して設定するときには、ANSI_WARNINGS が無視されます。 たとえば、として変数が定義されている**char (3)**とし、次の 3 つの文字を超える値に設定、データは切り捨てに定義されているサイズと、INSERT または UPDATE ステートメントは成功します。  
+>  ストアド プロシージャまたはユーザー定義関数でパラメーターを渡すとき、あるいはバッチ ステートメントで変数を宣言して設定するときには、ANSI_WARNINGS が無視されます。 たとえば、変数を **char(3)** と定義し、これに 4 文字以上の値を設定すると、データが定義されたサイズに合わせて切り捨てられてから、INSERT または UPDATE ステートメントが成功します。  
   
  *parameter_data_type*  
- パラメーターのデータ型です。 [!INCLUDE[tsql](../../includes/tsql-md.md)]関数でサポートされるすべてのスカラー データ型[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]は許可されています。 タイムスタンプ (rowversion) データ型はサポートされていません。  
+ パラメーター データ型。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数は、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でサポートされるすべてのスカラー データ型を許可します。 タイムスタンプ (rowversion) データ型はサポートされていません。  
   
- [=*既定*]  
- パラメーターの既定値です。 場合、*既定*値は、そのパラメーターの値を指定せず、関数を実行することができます。  
+ [ =*default* ]  
+ パラメーターの既定値です。 *default* 値が定義されている場合は、パラメーターに値を指定せずに関数を実行できます。  
   
  関数のパラメーターに既定値がある場合に、既定値を取得する目的でその関数を呼び出すときは、DEFAULT キーワードを指定する必要があります。 この動作は、ストアド プロシージャで既定値を持つパラメーターを使用する場合とは異なります。ストアド プロシージャの場合は、パラメーターを省略すると既定値が暗黙的に使用されます。  
   
  *return_data_type*  
- スカラー ユーザー定義関数の戻り値です。 [!INCLUDE[tsql](../../includes/tsql-md.md)]関数でサポートされるすべてのスカラー データ型[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]は許可されています。 タイムスタンプ (rowversion) データ型はサポートされていません。 カーソルとテーブルのスカラー型を指定することはできません。  
+ スカラー ユーザー定義関数の戻り値です。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数は、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でサポートされるすべてのスカラー データ型を許可します。 タイムスタンプ (rowversion) データ型はサポートされていません。 カーソルとテーブルの非スカラー型を指定することはできません。  
   
  *function_body*  
- 一連の[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。  Function_body は SELECT ステートメントを含めることはできませんし、データベースのデータを参照することはできません。  Function_body には、テーブルまたはビューを参照できません。 関数の本体では、その他の決定的な関数を呼び出すことができますが、非決定的関数を呼び出すことはできません。 
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの連続。  Function_body は SELECT ステートメントを含めることはできませんし、データベースのデータを参照することはできません。  Function_body は、テーブルまたはビューを参照できません。 関数の本体では、その他の決定的な関数を呼び出すことができますが、非決定的関数を呼び出すことはできません。 
   
- スカラー関数は、 *function_body*一連の[!INCLUDE[tsql](../../includes/tsql-md.md)]スカラー値にまとめて評価されるステートメントです。  
+ スカラー関数 *function_body* は、スカラー値にまとめて評価される一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。  
   
  *scalar_expression*  
  スカラー関数が返すスカラー値を指定します。  
   
  **\<function_option>::=** 
   
- 関数が、次のオプションの 1 つ以上を持つことを指定します。  
+ 関数に以下のオプションを 1 つ以上指定します。  
   
  SCHEMABINDING  
  参照するデータベース オブジェクトに対して、その関数がバインドされるように指定します。 SCHEMABINDING を指定した場合、ベース オブジェクトに対して関数定義に影響を与えるような変更は行えません。 まず関数定義を変更または削除して、変更するオブジェクトとの依存関係を解消する必要があります。  
@@ -135,7 +135,7 @@ RETURNS return_data_type
  SCHEMABINDING を使用して変更を削除するには  
   
  RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
- 指定します、 **OnNULLCall**スカラー値関数の属性です。 指定しない場合は、既定で CALLED ON NULL INPUT が暗黙的に使用されます。 つまり、NULL が引数として渡された場合でも、関数本体が実行されます。  
+ スカラー値関数の **OnNULLCall** 属性を指定します。 指定しない場合は、既定で CALLED ON NULL INPUT が暗黙的に使用されます。 つまり、NULL が引数として渡された場合でも、関数本体が実行されます。  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
  ユーザー定義関数の作成時に SCHEMABINDING 句を使用しないと、基になるオブジェクトに加えられた変更が関数の定義に影響して、関数が呼び出されたときに予期しない結果が生じる可能性があります。 基になるオブジェクトに対する変更によって関数が古くならないように、次のいずれかの操作を行うことをお勧めします。  
@@ -157,9 +157,9 @@ RETURNS return_data_type
  ユーザー定義関数は入れ子にすることができます。つまり、1 つのユーザー定義関数で、別のユーザー定義関数を呼び出すことができます。 呼び出された関数が実行を開始すると入れ子レベルが 1 つ上がり、呼び出された関数が実行を終了するとレベルが 1 つ下がります。 ユーザー定義関数は、32 レベルまで入れ子にすることができます。 入れ子レベルが最大値を超えると、関数チェーン全体の呼び出しが失敗します。   
   
 ## <a name="metadata"></a>メタデータ  
- このセクションでは、ユーザー定義関数に関するメタデータを返すに使用できるシステム カタログ ビューを一覧表示します。  
+ このセクションでは、ユーザー定義関数に関するメタデータを返すために使用できるシステム カタログ ビューを示します。  
   
- [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : の定義を表示[!INCLUDE[tsql](../../includes/tsql-md.md)]ユーザー定義関数です。 例:  
+ [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数の定義を表示します。 例 :  
   
 ```  
 SELECT definition, type   
@@ -171,17 +171,17 @@ GO
   
 ```  
   
- [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) : ユーザー定義関数で定義されているパラメーターに関する情報が表示されます。  
+ [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): ユーザー定義関数で定義されているパラメーターの情報を表示します。  
   
- [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : 関数が参照する基になるオブジェクトが表示されます。  
+ [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : 関数が参照する基になるオブジェクトを表示します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  データベースの CREATE FUNCTION 権限と、関数を作成するスキーマの ALTER 権限が必要です。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. ユーザー定義のスカラー値関数を使用して、データ型を変更するには  
- この単純な関数には、 **int**データ型として、入力を返す、 **decimal(10,2)**出力としてのデータ型。  
+ この単純な関数は、**int** データ型として入力を取り、**decimal(10,2)** データ型として出力を返します。  
   
 ```  
 CREATE FUNCTION dbo.ConvertInput (@MyValueIn int)  
@@ -199,7 +199,7 @@ SELECT dbo.ConvertInput(15) AS 'ConvertedValue';
   
 ## <a name="see-also"></a>参照  
  [ALTER FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/25ff3798-eb54-4516-9973-d8f707a13f6c)   
- [関数 (SQL Server PDW) を削除します](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
+ [DROP FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   
   
 

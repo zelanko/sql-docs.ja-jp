@@ -1,5 +1,5 @@
 ---
-title: "ドロップ キュー (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -58,22 +58,22 @@ DROP QUEUE <object>
   
 ## <a name="arguments"></a>引数  
  *database_name*  
- 削除するキューを含むデータベースの名前を指定します。 ない場合*database_name*が提供される、既定値は、現在のデータベースです。  
+ 削除するキューを含むデータベースの名前を指定します。 *database_name* を指定しない場合、既定では現在のデータベースが使用されます。  
   
  *schema_name (object)*  
- 削除するキューを所有するスキーマの名前を指定します。 ない場合*schema_name*が提供される、既定値は、現在のユーザーの既定のスキーマです。  
+ 削除するキューを所有するスキーマの名前を指定します。 *schema_name* を指定しない場合、既定では現在のユーザーに関する既定のスキーマが使用されます。  
   
  *queue_name*  
  削除するキューの名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  サービスでキューが参照されている場合は、キューを削除できません。  
   
-## <a name="permissions"></a>権限  
- キューを削除するためのアクセス許可の既定では、キューのメンバーの所有者、 **db_ddladmin**または**db_owner**固定データベース ロールのメンバー、 **sysadmin**固定サーバーの役割。  
+## <a name="permissions"></a>アクセス許可  
+ キューを削除する権限は、既定ではキューの所有者、**db_ddladmin** 固定データベース ロールまたは **db_owner** 固定データベース ロールのメンバー、および **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
 ## <a name="examples"></a>使用例  
- 次の例では削除、 **ExpenseQueue**現在のデータベースからキュー。  
+ 次の例では、現在のデータベースから **ExpenseQueue** キューを削除します。  
   
 ```  
 DROP QUEUE ExpenseQueue ;  
@@ -82,7 +82,7 @@ DROP QUEUE ExpenseQueue ;
   
 ## <a name="see-also"></a>参照  
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [ALTER QUEUE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-queue-transact-sql.md)   
+ [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STLength (geometry データ型) |Microsoft ドキュメント"
+title: "STLength (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stlength-geometry-data-type"></a>STLength (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-内の要素の長さの合計を返します、 **geometry**インスタンス。
+**geometry** インスタンス内の要素の合計長を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **float**  
   
- CLR の戻り値の型: **SqlDouble**  
+ CLR 戻り値の型: **SqlDouble**  
   
-## <a name="remarks"></a>解説  
- 場合、 **geometry**インスタンスが閉じて、その長さはインスタンスの周囲の合計長として計算です。 多角形の長さが周囲および地点の長さは 0 です。 任意の長さ**geometrycollection**型に含まれるの長さの合計は**geometry**インスタンス。  
+## <a name="remarks"></a>Remarks  
+ **geometry** インスタンスが閉じられている場合、長さはインスタンスの周囲の合計長として計算されます。多角形の長さとは、周囲の長さです。地点の長さは 0 です。 **geometrycollection** コレクション型の長さは、コレクションに含まれるすべての **geometry** インスタンスの長さの合計として計算されます。  
   
  STLength() は、LineString が有効でも無効でも動作します。 通常、LineString が無効になるのは、線分の重複のためです。これは、不正確な GPS のトレースなどの異常によって起きる場合があります。 STLength() は、重複する線分や無効な線分を削除しません。 返される長さの値には、重複する線分や無効な線分が含まれています。 MakeValid() メソッドは、LineString から重複する線分を削除できます。  
   
 ## <a name="examples"></a>使用例  
- 次の例を作成、`LineString`使用して、インスタンス`STLength()`インスタンスの長さが見つかりません。  
+ `LineString` インスタンスを作成し、`STLength()` を使用して、インスタンスの長さを取得する例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

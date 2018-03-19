@@ -1,5 +1,5 @@
 ---
-title: "geography (TRANSACT-SQL) |Microsoft ドキュメント"
+title: geography (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,14 +31,14 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="spatial-types---geography"></a>空間型、geography
+# <a name="spatial-types---geography"></a>空間型 - geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  地理空間データ型の**geography**は、.NET 共通言語ランタイム (CLR) データ型として実装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 この型は、球体地球座標系のデータを表します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** データ型は、GPS の緯度経度座標などの楕円体 (球体地球) データを格納します。  
+  地理空間データ型の **geography** は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では .NET 共通言語ランタイム (CLR) のデータ型として実装されています。 この型は、球体地球座標系のデータを表します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** データ型は、GPS の緯度経度座標などの楕円体 (球体地球) データを格納します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メソッドのセットをサポートしている、 **geography**空間データ型。 これは、上のメソッドが含まれます**geography** 、Open Geospatial Consortium (OGC) 標準とのセットで定義されている[!INCLUDE[msCoName](../../includes/msconame-md.md)]その標準の拡張機能です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、空間データ型 **geography** の一連のメソッドをサポートしています。 これには、Open Geospatial Consortium (OGC) 標準で定義されている **geography** に関するメソッドやその標準に基づいた [!INCLUDE[msCoName](../../includes/msconame-md.md)] の一連の拡張メソッドがあります。  
  
- エラーの許容範囲、 **geography**メソッドは 1.0 e サイズであることができます-7 * エクステントです。 エクステントは、点の間のおおよその最大距離を参照してください、 **geography**オブジェクト。
+ **geography** メソッドの許容誤差は、1.0e-7 * までです。 エクステントは、**geography** オブジェクトの地点間の最大近似距離です。
   
 
 ## <a name="registering-the-geography-type"></a>geography 型の登録  
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-showing-how-to-add-and-query-geography-data"></a>A. geography 型のデータの追加方法とクエリ方法を示す  
- 次の例は、geography 型のデータの追加方法とクエリ方法を示しています。 最初の例では、id 列を持つテーブルを作成し、`geography`列、`GeogCol1`です。 3 番目の列で、 `geography` 型の列をその Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現で示し、 `STAsText()` メソッドを使用します。 次に 2 つの行が挿入されます。1 つは、 `LineString` の `geography`インスタンスを含む行で、もう 1 つは `Polygon` インスタンスを含む行です。  
+ 次の例は、geography 型のデータの追加方法とクエリ方法を示しています。 最初の例では、ID 列と `geography` 型の `GeogCol1`列を含むテーブルを作成します。 3 番目の列で、 `geography` 型の列をその Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現で示し、 `STAsText()` メソッドを使用します。 次に 2 つの行が挿入されます。1 つは、 `LineString` の `geography`インスタンスを含む行で、もう 1 つは `Polygon` インスタンスを含む行です。  
   
 ```  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -83,7 +83,7 @@ SELECT @result.STAsText();
 ```  
   
 ### <a name="c-using-geography-in-a-computed-column"></a>C. 計算列で geography 型を使用する  
- 次の例では、テーブルを作成、保存される計算列を使用すると、 **geography**型です。  
+ 次の例では、**geography** 型を使用して、保存される計算列を持つテーブルを作成します。  
   
 ```  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   

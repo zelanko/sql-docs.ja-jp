@@ -1,5 +1,5 @@
 ---
-title: "XML スキーマ コレクション権限 (TRANSACT-SQL) を取り消す |Microsoft ドキュメント"
+title: "REVOKE (XML スキーマ コレクションの権限の許可) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -64,10 +64,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  XML スキーマ コレクションで取り消すことができる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
  ON XML SCHEMA COLLECTION :: [ *schema_name***.** ] *XML_schema_collection_name*  
- 権限を取り消す XML スキーマ コレクションを指定します。 スコープ修飾子 (::) が必要です。 場合*schema_name*が指定されていない、既定のスキーマが使用されます。 場合*schema_name*を指定すると、スキーマ スコープ修飾子 (.) が必要です。  
+ 権限を取り消す XML スキーマ コレクションを指定します。 スコープ修飾子 (::) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 (.) が必要です。  
   
  GRANT OPTION  
- 指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 その権限自体は失効しません。  
+ 指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
@@ -81,7 +81,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  { TO | FROM } \<*database_principal*>  
  権限を取り消すプリンシパルを指定します。  
   
- AS \<database_principal > このクエリを実行するプリンシパルの権限を取り消す権利の派生元のプリンシパルを指定します。  
+ AS \<database_principal>、このクエリを実行するプリンシパルが権限を取り消すには、その権限を派生元のプリンシパルを指定します。  
   
  *Database_user*  
  データベース ユーザーを指定します。  
@@ -107,8 +107,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>解説  
- XML スキーマ コレクションに関する情報は、 [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)カタログ ビューです。  
+## <a name="remarks"></a>Remarks  
+ XML スキーマ コレクションに関する情報は、[sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) カタログ ビューで確認できます。  
   
  GRANT OPTION で権限が許可されたプリンシパルから権限を取り消すときに CASCADE を指定しない場合、ステートメントは失敗します。  
   
@@ -123,11 +123,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>権限  
- XML スキーマ コレクションに対する CONTROL 権限が必要です。 AS オプションを使用する場合は、指定したプリンシパルが XML スキーマ コレクションを所有している必要があります。  
+## <a name="permissions"></a>アクセス許可  
+ XML スキーマ コレクションに対する CONTROL アクセス許可が必要です。 AS オプションを使用する場合は、指定したプリンシパルが XML スキーマ コレクションを所有している必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次の例では失効`EXECUTE`XML スキーマ コレクションに対する権限`Invoices4`ユーザーから`Wanida`です。 XML スキーマ コレクション`Invoices4`内にある、`Sales`のスキーマ、`AdventureWorks2012`データベース。  
+ 次の例では、XML スキーマ コレクション `Invoices4` の `EXECUTE` 権限を、ユーザー `Wanida` から取り消します。 XML スキーマ コレクション `Invoices4` は、`AdventureWorks2012` データベースの `Sales` スキーマ内にあります。  
   
  ```
  USE AdventureWorks2012;  
@@ -136,10 +136,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  ```  
   
 ## <a name="see-also"></a>参照  
- [XML スキーマ コレクションの権限 &#40; を許可します。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
- [XML スキーマ コレクションの権限 &#40; を拒否します。TRANSACT-SQL と #41 です。](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
- [sys.xml_schema_collections &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
- [XML スキーマ コレクション &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [GRANT (XML スキーマ コレクションのアクセス許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
+ [DENY (XML スキーマ コレクションの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
+ [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
+ [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

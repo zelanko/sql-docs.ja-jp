@@ -1,5 +1,5 @@
 ---
-title: "メッセージ型 (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  新しいメッセージ型を作成します。 メッセージの種類は、メッセージと検証の名前を定義する[!INCLUDE[ssSB](../../includes/sssb-md.md)]をその名前を持つメッセージを実行します。 メッセージ交換の両側で、同じメッセージ型を定義する必要があります。  
+  新しいメッセージ型を作成します。 メッセージ型によって、メッセージの名前と、その名前を持つメッセージに対し [!INCLUDE[ssSB](../../includes/sssb-md.md)] が実行する検証方法が定義されます。 メッセージ交換の両側で、同じメッセージ型を定義する必要があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,13 +64,13 @@ CREATE MESSAGE TYPE message_type_name
   
 ## <a name="arguments"></a>引数  
  *message_type_name*  
- 作成するメッセージ型の名前を指定します。 新しいメッセージ型が現在のデータベースで作成され、AUTHORIZATION 句で指定されるプリンシパルによって所有されます。 サーバー名、データベース名、スキーマ名は指定できません。 *Message_type_name*には最大 128 文字にすることができます。  
+ 作成するメッセージ型の名前を指定します。 新しいメッセージ型が現在のデータベースで作成され、AUTHORIZATION 句で指定されるプリンシパルによって所有されます。 サーバー名、データベース名、スキーマ名は指定できません。 *Message_type_name* には、最大 128 文字までを使用することができます。  
   
  AUTHORIZATION *owner_name*  
- メッセージ型の所有者を、指定したデータベース ユーザーまたはロールに設定します。 現在のユーザーの場合は**dbo**または**sa**、 *owner_name*任意の有効なユーザーまたはロールの名前を指定できます。 それ以外の場合、 *owner_name*現在のユーザーの名前、現在のユーザーが、IMPERSONATE 権限を持つユーザーの名前または現在のユーザーが所属するロールの名前にする必要があります。 この句を省略すると、メッセージ型は現在のユーザーに属します。  
+ メッセージ型の所有者を、指定したデータベース ユーザーまたはロールに設定します。 現在のユーザーが **dbo** または **sa** の場合、*owner_name* には、任意の有効なユーザーまたはロールの名前を指定できます。 それ以外の場合、*owner_name* には、現在のユーザーの名前、現在のユーザーが持つ IMPERSONATE 権限に対応するユーザーの名前、または現在のユーザーが所属するロールの名前を指定する必要があります。 この句を省略すると、メッセージ型は現在のユーザーに属します。  
   
  VALIDATION   
- 指定方法[!INCLUDE[ssSB](../../includes/sssb-md.md)]この種類のメッセージのメッセージ本文を検証します。 この句を指定しない場合、検証は既定で NONE に設定されます。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] によって、この型のメッセージの本文が検証される方法を指定します。 この句を指定しない場合、検証は既定で NONE に設定されます。  
   
  なし  
  検証を実行しないことを指定します。 メッセージの本文にはなんらかのデータが含まれているか、NULL の可能性があります。  
@@ -82,19 +82,19 @@ CREATE MESSAGE TYPE message_type_name
  メッセージの本文に、整形式の XML が含まれている必要があることを指定します。  
   
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
- メッセージ本文が指定されたスキーマ コレクション内のスキーマに準拠する XML を含める必要がありますを指定します、 *schema_collection_name*既存の XML スキーマ コレクションの名前を指定する必要があります。  
+ メッセージの本文に、指定されたスキーマ コレクション内のスキーマに準拠する XML が含まれている必要があることを指定します。*schema_collection_name* は、既存の XML スキーマ コレクションの名前にする必要があります。  
   
-## <a name="remarks"></a>解説  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)]受信メッセージを検証します。 メッセージに、指定された検証の種類に準拠しないメッセージの本文が含まれている場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって無効なメッセージが破棄され、メッセージを送信したサービスにエラー メッセージが返されます。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] では受信メッセージが検証されます。 メッセージに、指定された検証の種類に準拠しないメッセージの本文が含まれている場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって無効なメッセージが破棄され、メッセージを送信したサービスにエラー メッセージが返されます。  
   
  メッセージ交換の両側で、メッセージ型に同じ名前を定義する必要があります。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、メッセージ交換の両側で同じ検証を使用する必要はありませんが、トラブルシューティングで役立つように、通常はメッセージ交換の両側でメッセージ型に同じ検証を指定します。  
   
- メッセージ型は一時オブジェクトとして指定できません。 メッセージ型名で始まる **#** 許可されますが、パーマネント オブジェクト。  
+ メッセージ型は一時オブジェクトとして指定できません。 **#** で始まるメッセージ型名は許可されますが、パーマネント オブジェクトになります。  
   
-## <a name="permissions"></a>権限  
- メッセージの種類のメンバーに既定値を作成するためのアクセス許可、 **db_ddladmin**または**db_owner**固定データベース ロールおよび**sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ メッセージ型を作成する権限は、既定では **db_ddladmin** 固定データベース ロールまたは **db_owner** 固定データベース ロールのメンバー、および **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
- メッセージ型に対する REFERENCES 権限の既定では、メッセージの種類のメンバーの所有者、 **db_owner**固定データベース ロールのメンバー、 **sysadmin**固定サーバー ロール。  
+ メッセージ型に対する REFERENCES 権限は、既定では、メッセージ型の所有者、**db_owner** 固定データベース ロールのメンバー、および **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
  CREATE MESSAGE TYPE ステートメントがスキーマ コレクションを指定する場合、ステートメントを実行するユーザーは、指定されているスキーマ コレクションに対する REFERENCES 権限が必要です。  
   
@@ -167,8 +167,8 @@ CREATE MESSAGE TYPE
 ```  
   
 ## <a name="see-also"></a>参照  
- [メッセージの種類 &#40; を ALTER します。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-message-type-transact-sql.md)   
- [メッセージの種類 &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-message-type-transact-sql.md)   
+ [ALTER MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
+ [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

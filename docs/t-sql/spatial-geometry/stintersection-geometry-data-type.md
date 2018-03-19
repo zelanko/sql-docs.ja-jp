@@ -1,5 +1,5 @@
 ---
-title: "STIntersection (geometry データ型) |Microsoft ドキュメント"
+title: "STIntersection (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersection-geometry-data-type"></a>STIntersection (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-点を表すオブジェクトを返します場所、 **geometry**インスタンスでは、他と交差する**geometry**インスタンス。
+**geometry** インスタンスが別の **geometry** インスタンスと交差する地点を表すオブジェクトを返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- もう 1 つ**geometry**インスタンスをインスタンスと比較する`STIntersection()`が呼び出されているを交差するかを決定します。  
+ 交差する地点を特定するために、`STIntersection()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
- `STIntersection()`常に返す場合は null の spatial reference Id (Srid)、 **geometry**インスタンスが一致しません。 結果は、それらに含まれる入力インスタンス場合にのみ、円弧セグメントを含めることがあります。  
+## <a name="remarks"></a>Remarks  
+ **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、`STIntersection()` は常に null を返します。 結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
   
 ## <a name="examples"></a>使用例  
   

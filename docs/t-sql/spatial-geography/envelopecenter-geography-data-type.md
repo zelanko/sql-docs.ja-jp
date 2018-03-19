@@ -1,5 +1,5 @@
 ---
-title: "EnvelopeCenter (geography データ型) |Microsoft ドキュメント"
+title: "EnvelopeCenter (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,11 +34,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="envelopecenter-geography-data-type-"></a>EnvelopeCenter (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  外接する円の中心として使用できる点を返します、 **geography**インスタンス。  
+  **geography** インスタンスの外接する円の中心として使用できる点を返します。  
   
- 外接する円を決めるため、インスタンスの各点が地球の中心から地表上の点へのベクトルとして記述されます。 外接する円の中心点は、すべてのベクトルの平均として計算されます。 閉じたループのどちらかに、**多角形**インスタンスまたは**linestring**インスタンス、最初と最後のポイントが 1 回だけ使用します。  
+ 外接する円を決めるため、インスタンスの各点が地球の中心から地表上の点へのベクトルとして記述されます。 外接する円の中心点は、すべてのベクトルの平均として計算されます。 **polygon** インスタンスまたは **linestring** インスタンスの閉じたループの場合、最初と最後の点は一度しか使用されません。  
   
- これは、 **geography**データ型メソッドでサポート**FullGlobe**インスタンスまたは空間インスタンスは、半球より大きいをします。  
+ この **geography** データ型メソッドは、半球より大きい **FullGlobe** インスタンスまたは空間インスタンスをサポートします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,17 +48,17 @@ EnvelopeCenter( )
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
  CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>解説  
- このメソッドが戻る、**ポイント**です。 使用すると`EnvelopeAngle()`、`EnvelopeCenter()`の外接する円を返します、 **geography**インスタンス。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、**地点**を返します。 `EnvelopeAngle()` と共に使用した場合、`EnvelopeCenter()` は、**geography** インスタンスの外接する円を返します。  
   
 > [!NOTE]  
->  `EnvelopeCenter()`外接する円を返します、 **geography**最小の外接する円を生成するためには、インスタンスが、結果は保証はありません。 これに対し、 **geometry**データ型のメソッド`STEnvelope()`時に返される最小の境界ボックスに適用されていることが保証、 **geometry**インスタンス。  
+>  `EnvelopeCenter()` は **geography** インスタンスの外接する円を返しますが、結果が最小の外接する円になることは保証されません。 一方、**geometry** データ型のメソッド `STEnvelope()` は、**geometry** インスタンスに適用した場合に最小の境界ボックスを返します。  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、された、このインスタンスのエンベロープを表す円の中心を返すと、**ポイント**です。 定義されているすべてのラージ オブジェクトの`EnvelopeAngle()`= 180 で`EnvelopeCenter()`(90, 0) が返されます。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、このインスタンスのエンベロープを表す円の中心は**地点**として返されます。 `EnvelopeAngle()` = 180 で定義されているすべてのラージ オブジェクトでは、`EnvelopeCenter()` は (90,0) を返します。  
   
  このメソッドは正確ではありません。  
   

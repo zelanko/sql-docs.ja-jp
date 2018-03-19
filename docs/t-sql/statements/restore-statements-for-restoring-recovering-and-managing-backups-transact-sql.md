@@ -1,5 +1,5 @@
 ---
-title: "復元、復旧、バックアップ (T-SQL) の管理用の RESTORE ステートメント |Microsoft ドキュメント"
+title: "バックアップの復元、復旧、管理用の RESTORE ステートメント (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/25/2018
 |[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|RESTORE FILELISTONLY Transact-SQL ステートメントについて説明します。このステートメントでは、バックアップ セットに含まれるデータベースとログ ファイルの一覧を含む結果セットが返されます。|  
 |[RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|RESTORE HEADERONLY Transact-SQL ステートメントについて説明します。このステートメントでは、特定のバックアップ デバイス上にあるすべてのバックアップ セットに関して、すべてのバックアップ ヘッダー情報を含む結果セットが返されます。|  
 |[RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|RESTORE LABELONLY Transact-SQL ステートメントについて説明します。このステートメントでは、特定のバックアップ デバイスによって指定されるバックアップ メディアの情報を含む結果セットが返されます。|  
-|[RESTORE REWINDONLY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|RESTORE REWINDONLY Transact-SQL について説明します、このステートメントは、BACKUP または RESTORE ステートメントを NOREWIND オプションで実行した後、開いたままになっているテープ デバイスを巻き戻して閉じるときに使用します。|  
+|[RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|RESTORE REWINDONLY Transact-SQL について説明します、このステートメントは、BACKUP または RESTORE ステートメントを NOREWIND オプションで実行した後、開いたままになっているテープ デバイスを巻き戻して閉じるときに使用します。|  
 |[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)|RESTORE VERIFYONLY Transact-SQL ステートメントについて説明します。このステートメントではバックアップが検証されますが、復元は行われません。また、バックアップ セットが完全でありバックアップ全体が読み取り可能かどうかが確認されますが、データの構造は検証されません。|  
   
 ## <a name="see-also"></a>参照  

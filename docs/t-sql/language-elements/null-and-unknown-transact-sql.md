@@ -1,5 +1,5 @@
 ---
-title: "NULL および不明 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "NULL と UNKNOWN (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="null-and-unknown-transact-sql"></a>NULL および不明 (TRANSACT-SQL)
+# <a name="null-and-unknown-transact-sql"></a>NULL と UNKNOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   NULL では、値が不明であることを示します。 Null 値では、空または 0 の値と異なるです。 2 つの NULL 値は等しいとは限りません。 各 NULL の値が不明であるために、2 つの null 値または null 値とその他の値の間の比較は不明な返します。  
@@ -41,28 +41,28 @@ ms.lasthandoff: 01/25/2018
   
 -   Null 値は、主キーなど、またはディストリビューション キーなどの行の配信に使用される情報のテーブル内の別の行から、テーブル内の 1 つの行を区別するために必要な情報として使用できません。  
   
- データに NULL 値がある場合、論理演算子と比較演算子は、TRUE や FALSE ではなく UNKNOWN を返すことがあります。 このように 3 つの値を生成する論理は、アプリケーション エラーの原因になります。 論理演算子を未知の要素を含むブール式では、演算子の結果が不明な式に依存しない限り、UNKNOWN を返します。 これらのテーブルは、この動作の例を示します。  
+ データに NULL 値がある場合、論理演算子と比較演算子は、TRUE や FALSE ではなく UNKNOWN を返すことがあります。 このように 3 つの値を生成する論理は、アプリケーション エラーの原因になります。 UNKNOWN を含むブール式の論理演算子は、演算子の結果が UNKNOWN 式に依存しない限り、UNKNOWN を返します。 この動作の例をまとめたものが次の表です。  
   
- 次の表は、1 つの式に UNKNOWN が返されます次の 2 つのブール式を AND 演算子を適用した結果を示します。  
+ 次の表では、1 つの式が UNKNOWN を返す 2 つのブール式に AND 演算子を適用した結果を確認できます。  
   
-|1 の式|Expression 2|結果|  
+|式 1|式 2|[結果]|  
 |---------------|---------------|------------|  
 |TRUE|UNKNOWN|UNKNOWN|  
 |UNKNOWN|UNKNOWN|UNKNOWN|  
 |FALSE|UNKNOWN|FALSE|  
   
- 次の表は、1 つの式に UNKNOWN が返されます次の 2 つのブール式に OR 演算子を適用した結果を示します。  
+ 次の表では、1 つの式が UNKNOWN を返す 2 つのブール式に OR 演算子を適用した結果を確認できます。  
   
-|1 の式|Expression 2|結果|  
+|式 1|式 2|[結果]|  
 |---------------|---------------|------------|  
 |TRUE|UNKNOWN|TRUE|  
 |UNKNOWN|UNKNOWN|UNKNOWN|  
 |FALSE|UNKNOWN|UNKNOWN|  
   
 ## <a name="see-also"></a>参照  
- [および &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/and-transact-sql.md)   
- [または &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/or-transact-sql.md)   
- [いない &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/not-transact-sql.md)   
- [NULL と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/is-null-transact-sql.md)  
+ [AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md)   
+ [OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md)   
+ [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)   
+ [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md)  
   
   

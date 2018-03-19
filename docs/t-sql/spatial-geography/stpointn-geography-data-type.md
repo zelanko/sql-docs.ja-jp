@@ -1,5 +1,5 @@
 ---
-title: "STPointN (geography データ型) |Microsoft ドキュメント"
+title: "STPointN (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointn-geography-data-type"></a>STPointN (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  内の指定された地点を返します、 **geography**インスタンス。  
+  **geography** インスタンス内の指定した地点を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,21 +45,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- **Int** 1 ~ 内の地点の数の式、 **geography**インスタンス。  
+ 1 から **geography** インスタンス内の地点の数までの **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
  CLR の戻り値の型: **SqlGeography**  
   
- Open Geospatial Consortium (OGC) の型:**ポイント**  
+ Open Geospatial Consortium (OGC) の型: **Point**  
   
-## <a name="remarks"></a>解説  
- 場合、 **geography**インスタンスは、ユーザーが作成した、STPointN() が指定された地点を返します*式*によってを最初に入力した順序で地点を並べ替えます。  
+## <a name="remarks"></a>Remarks  
+ ユーザーが作成した **geography** インスタンスの場合、STPointN() は、最初に入力した順序で地点を並べ替えることで、*expression* で指定された地点を返します。  
   
- 場合、 **geography**インスタンスが、システムによって構築された、STPointN() が指定された地点を返します*式*同じ順序ですべての地点を並べ替えるによって出力される順序によって最初**。geography** (該当する場合)、インスタンス内のリングし、リング内の地点のインスタンス。 この順序は決定的です。  
+ システムによって作成された **geography** インスタンスの場合、STPointN() は、出力する順序ですべての地点を並べ替えることで、*式*で指定された地点を返します。出力する順序にするには、**geography** インスタンス、インスタンス内のリング (必要な場合)、リング内の地点の順に並べ替えます。 この順序は決定的です。  
   
- このメソッドは 1 より小さい値を含む、スロー、 **ArgumentOutOfRangeException**です。  
+ 1 未満の値を指定してこのメソッドを呼び出すと、**ArgumentOutOfRangeException** がスローされます。  
   
  インスタンス内の地点の数より大きい値を指定してこのメソッドを呼び出すと、メソッドは NULL を返します。  
   

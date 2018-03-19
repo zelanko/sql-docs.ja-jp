@@ -1,5 +1,5 @@
 ---
-title: "STDisjoint (geometry データ型) |Microsoft ドキュメント"
+title: "STDisjoint (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdisjoint-geometry-data-type"></a>STDisjoint (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  場合 1 を返します、 **geometry**インスタンスが別の空間的に離れて**geometry**インスタンス。 それ以外の場合は 0 を返します。  
+  任意の **geometry** インスタンスと別の **geometry** インスタンスが空間的に連結されていない場合、1 を返します。 それ以外の場合は 0 を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,20 +45,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- もう 1 つ**geometry**対象のインスタンスと比較するインスタンス`STDisjoint()`が呼び出されます。  
+ `STDisjoint()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **bit**  
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- 2 つ**geometry**インスタンスが地点のセットの積集合が空の場合、連結されます。  
+## <a name="remarks"></a>Remarks  
+ 地点のセットの交点が空である場合、2 つの **geography** インスタンスは連結されていません。  
   
- このメソッドは、場合常に null を返しますの spatial reference Id (Srid)、 **geometry**インスタンスが一致しません。  
+ **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`STDisjoint()`2 つのテストに**geometry**のインスタンスの空間不整合のあります。  
+ `STDisjoint()` を使用して 2 つの **geometry** インスタンスが空間的に連結されていないかどうかをテストする例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

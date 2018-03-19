@@ -1,5 +1,5 @@
 ---
-title: "すべて (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -51,13 +51,13 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
   
 ## <a name="arguments"></a>引数  
  *scalar_expression*  
- 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+ 任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
  比較演算子です。  
   
  *subquery*  
- 1 つの列の結果を返すサブクエリが設定されています。 返される列のデータ型は、データと同じ型のデータ型である必要があります*scalar_expression*です。  
+ 1 列の結果セットを返すサブクエリです。 返される列のデータ型は、*scalar_expression* のデータ型と同じである必要があります。  
   
  制限された SELECT ステートメントです。ORDER BY 句および INTO キーワードは使用できません。  
   
@@ -65,17 +65,17 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **ブール値**  
   
 ## <a name="result-value"></a>結果の値  
- 指定された比較が TRUE の場合は TRUE を返しますのすべてのペア (*scalar_expression***、***x)*、 *x*単一列セット内の値です。 それ以外の場合は FALSE を返します。  
+ 指定された比較が (*scalar_expression***,***x)* の任意の組で TRUE の場合、TRUE を返します。ここで、*x* は単一列セットの中の値です。それ以外の場合は、FALSE を返します。  
   
-## <a name="remarks"></a>解説  
- すべてが必要、 *scalar_expression*サブクエリによって返されるすべての値に対し肯定的な比較します。 インスタンスのサブクエリは 2 および 3 の値を返す場合は、 *scalar_expression* < = ALL (subquery) は TRUE と評価、 *scalar_expression* 2 のです。 サブクエリは 2 および 3 の値を返す場合*scalar_expression* = ALL (subquery) はサブクエリ (値 3) の値の一部は、式の条件を満たさないために、FALSE と評価します。  
+## <a name="remarks"></a>Remarks  
+ ALL の場合、*scalar_expression* ではサブクエリによって返されるすべての値に対し肯定的な比較を行う必要があります。 たとえば、サブクエリによって値 2 と 3 が返される場合、*scalar_expression* <= ALL (subquery) は、*scalar_expression* が 2 の場合、TRUE と評価されます。 サブクエリが 2 および 3 の値を返す場合、*scalar_expression* = ALL (subquery) は FALSE と評価されます。これは、サブクエリのいくつかの値 (値 3) が式の条件を満たさないためです。  
   
- ステートメントを必要とする、 *scalar_expression* 、サブクエリによって返される 1 つだけの値に対し肯定的な比較を参照してください。[一部 &#124;です。いずれかと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/some-any-transact-sql.md).  
+ サブクエリによって返される 1 つの値に対し肯定的な比較を行うために *scalar_expression* を必要とするステートメントについては、「[SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md)」を参照してください。  
   
- このトピックでは、ALL をサブクエリと共に使用する場合を想定しています。 すべてでも使用できます[共用体](../../t-sql/language-elements/set-operators-union-transact-sql.md)と[選択](../../t-sql/queries/select-transact-sql.md)です。  
+ このトピックでは、ALL をサブクエリと共に使用する場合を想定しています。 ALL は [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) および [SELECT](../../t-sql/queries/select-transact-sql.md) と共に使用できます。  
   
 ## <a name="examples"></a>使用例  
- 次の例を決定するストアド プロシージャを作成するかどうか、指定のすべてのコンポーネント`SalesOrderID`で、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースは、指定した日数で製造できます。 例では、数の一覧を作成するサブクエリを使用して`DaysToManufacture`、特定のコンポーネントのすべての値`SalesOrderID`、し確認をすべて、`DaysToManufacture`は日数内で指定します。  
+ 次の例では、ストアド プロシージャを作成し、`SalesOrderID` データベース内にある指定した [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] のすべての部品が、指定した日数で製造できるかどうかを判定します。 この例では、サブクエリを使用して、特定の `SalesOrderID` のすべての部品に対する `DaysToManufacture` の値一覧を作成し、その中のすべての `DaysToManufacture` が指定した日数以内であることを確認します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -116,13 +116,13 @@ EXECUTE DaysToBuild 49080, 1 ;
  `Some items for this order cannot be manufactured in specified number of days or less.`  
   
 ## <a name="see-also"></a>参照  
- [場合 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/case-transact-sql.md)   
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [ような &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md)   
- [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)   
- [IN &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/in-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
   
   

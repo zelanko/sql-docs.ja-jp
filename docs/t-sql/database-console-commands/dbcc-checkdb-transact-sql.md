@@ -1,5 +1,5 @@
 ---
-title: "DBCC CHECKDB (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC CHECKDB (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/14/2017
 ms.prod: sql-non-specified
@@ -53,12 +53,12 @@ ms.lasthandoff: 01/25/2018
 
 次の操作を実行し、指定したデータベース内のすべてのオブジェクトの論理的および物理的な整合性をチェックします。    
     
--   実行[DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)データベースでします。    
--   実行[DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)すべてのテーブルと、データベースのビューです。    
--   実行[DBCC CHECKCATALOG](../../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md)データベースでします。    
+-   データベースに対して [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) を実行。    
+-   データベース内にあるすべてのテーブルとビューに対して [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) を実行。    
+-   データベースに対して [DBCC CHECKCATALOG](../../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md) を実行。    
 -   データベース内にあるすべてのインデックス付きビューの内容を検証。    
--   格納する場合テーブル メタデータとファイル システムのディレクトリとファイルの間のリンクレベルの一貫性を検証**varbinary (max)** FILESTREAM を使用して、ファイル システム内のデータ。    
--   検証、[!INCLUDE[ssSB](../../includes/sssb-md.md)]データベース内のデータ。    
+-   FILESTREAM を使用して **varbinary(max)** データをファイル システムに格納する場合のテーブルのメタデータとファイル システムのディレクトリおよびファイルの間のリンクレベルの一貫性を検証。    
+-   データベースの [!INCLUDE[ssSB](../../includes/sssb-md.md)] データを検証。    
     
 DBCC CHECKALLOC、DBCC CHECKTABLE、または DBCC CHECKCATALOG コマンドは、DBCC CHECKDB と別に実行する必要はありません。 これらのコマンドで実行されるチェックに関する詳細については、各コマンドの説明を参照してください。    
  
@@ -93,10 +93,10 @@ DBCC CHECKDB
     
 ## <a name="arguments"></a>引数    
  *database_name* | *database_id* | 0  
- 整合性チェックを実行するデータベースの名前または ID です。 値を指定しないか 0 を指定した場合は、現在のデータベースが使用されます。 データベース名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。  
+ 整合性チェックを実行するデータベースの名前または ID です。 値を指定しないか 0 を指定した場合は、現在のデータベースが使用されます。 データベース名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
     
 NOINDEX  
- ユーザー テーブルの非クラスター化インデックスの集中チェックを実行しないように指定します。 これにより、全体の実行時間が短縮されます。 整合性チェックは、システム テーブル インデックスでは常に実行するため、NOINDEX はシステム テーブルを与えません。  
+ ユーザー テーブルの非クラスター化インデックスの集中チェックを実行しないように指定します。 これにより、全体の実行時間が短縮されます。 整合性チェックは、常にシステム テーブルのインデックスに対して実行されるため、NOINDEX はシステム テーブルに対しては無効です。  
     
 REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD  
  検出されたエラーを DBCC CHECKDB が修復するように指定します。 REPAIR オプションは、最後の手段としてのみ使用してください。 修復オプションを使用するには、指定するデータベースがシングル ユーザー モードになっている必要があります。以下の修復オプションを使用できます。  
@@ -105,7 +105,7 @@ REPAIR_ALLOW_DATA_LOSS
  報告されたすべてのエラーの修復を試みます。 修復を実行すると、データが失われることがあります。  
     
 > [!WARNING]
-> REPAIR_ALLOW_DATA_LOSS オプションはサポートされている機能いる可能性がありますいない常に物理的に一貫性のある状態にデータベースを取り込むに最適なオプションです。 成功した場合、REPAIR_ALLOW_DATA_LOSS オプションによりいくつかデータが失われることがあります。 実際には、ユーザーが最後の既知の良好なバックアップからデータベースを復元する場合よりも、失われるデータが多い場合があります。 
+> REPAIR_ALLOW_DATA_LOSS オプションは、サポートされている機能ですが、データベースを物理的に一貫性のある状態にするためには、必ずしも最適なオプションではない場合があります。 成功した場合、REPAIR_ALLOW_DATA_LOSS オプションによりいくつかデータが失われることがあります。 実際には、ユーザーが最後の既知の良好なバックアップからデータベースを復元する場合よりも、失われるデータが多い場合があります。 
 >
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、DBCC CHECKDB によって報告されたエラーから回復する主要な方法として、ユーザーが最後の既知の良好なバックアップから復元することが常に推奨されています。 REPAIR_ALLOW_DATA_LOSS オプションは、既知の適切なバックアップから復元する代替手段ではありません。 これは、緊急時の「最後の手段」のオプションで、バックアップからの復元ができない場合にのみ使用することをお勧めします。    
 >     
@@ -128,11 +128,11 @@ REPAIR_REBUILD
 > エラーの修復では、バックアップから復元することをお勧めします。 修復操作では、テーブルまたはテーブル間に制約があっても考慮されません。 指定したテーブルに 1 つでも関連する制約がある場合は、修復操作の後に DBCC CHECKCONSTRAINTS を実行することをお勧めします。 REPAIR を使用する必要がある場合は、修復オプションを指定せずに DBCC CHECKDB を実行して、使用する修復レベルを確認してください。 REPAIR_ALLOW_DATA_LOSS レベルを使用する場合は、このオプションを指定して DBCC CHECKDB を実行する前に、データベースをバックアップすることをお勧めします。    
     
 ALL_ERRORMSGS  
- オブジェクトごとに、報告されているすべてのエラーを表示します。 既定では、すべてのエラー メッセージが表示されます。 そのため、このオプションを指定しても省略しても影響はありません。 エラー メッセージはから生成されるメッセージを除き、オブジェクト ID で並べ替えられます[tempdb データベース](../../relational-databases/databases/tempdb-database.md)です。     
+ オブジェクトごとに、報告されているすべてのエラーを表示します。 既定では、すべてのエラー メッセージが表示されます。 そのため、このオプションを指定しても省略しても影響はありません。 [tempdb データベース](../../relational-databases/databases/tempdb-database.md)から生成されるメッセージを除き、エラー メッセージは、オブジェクト ID を基準として並べ替えられます。     
 
 EXTENDED_LOGICAL_CHECKS  
- 互換性レベルが 100 の場合 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) または存在する場合、以降では、インデックス付きビュー、XML インデックス、および空間インデックスは、論理的な一貫性チェックを実行します。  
- 詳細については、次を参照してください。*論理整合性チェックを実行してインデックスの*で、[解説](#remarks)このトピックで後述する「します。  
+ 互換性レベルが 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 以上の場合、インデックス付きビュー、XML インデックス、および空間インデックス (存在する場合) について、論理的な一貫性をチェックします。  
+ 詳細については、このトピックの「[解説](#remarks)」の「*インデックスに対する論理的な一貫性チェックの実行*」を参照してください。  
     
 NO_INFOMSGS  
  すべての情報メッセージを表示しないようにします。  
@@ -144,78 +144,78 @@ TABLOCK
 > TABLOCK では実行されるチェックが制限されます。DBCC CHECKCATALOG はデータベースに対して実行されず、[!INCLUDE[ssSB](../../includes/sssb-md.md)] データは検証されません。
     
 ESTIMATEONLY  
- その他のすべての指定したオプションで DBCC CHECKDB を実行するために必要な tempdb 領域の推定サイズが表示されます。 実際のデータベースのチェックは行われません。  
+ 必要な他のオプションをすべて指定した状態で、DBCC CHECKDB の実行時に必要となる tempdb 領域の予測サイズを表示します。 実際のデータベースのチェックは行われません。  
     
 PHYSICAL_ONLY  
  チェック内容を、ページとレコード ヘッダーの物理構造の整合性、およびデータベースの割り当ての一貫性に限定します。 このチェックは、データベースの物理的一貫性に関する低オーバーヘッド チェックを提供するように設計されているため、ユーザーのデータが損傷する可能性のある破損ページやチェックサム エラー、および一般的なハードウェア障害も検出できます。  
- 完全な DBCC CHECKDB を実行すると、完了するまでに以前のバージョンよりはるかに時間がかかることがあります。 この動作は、ために発生します。  
+ 完全な DBCC CHECKDB を実行すると、完了するまでに以前のバージョンよりはるかに時間がかかることがあります。 この動作が発生する原因は、次のとおりです。  
  -   論理チェックの対象範囲が広がった。  
  -   チェック対象の、基になる構造の一部が複雑になった。  
  -   新機能を含めるために多数の新しいチェックが導入された。  
  したがって、大規模なデータベースでは、PHYSICAL_ONLY オプションを使用すると DBCC CHECKDB の実行時間が大幅に短縮されることがあるため、実稼働システムで頻繁に使用する場合はこのオプションを使用することをお勧めします。 ただし、完全な DBCC CHECKDB を定期的に実行することもお勧めします。 実行する頻度は、それぞれの業務環境や運用環境に固有の要因によって異なります。    
-この argment 常に NO_INFOMSGS を暗黙的には、修復オプションのいずれかでは許可されていません。  
+この引数を指定した場合は常に NO_INFOMSGS も暗黙的に指定されるため、修復オプションを同時指定することはできません。  
     
 > [!WARNING] 
 > PHYSICAL_ONLY を指定すると、DBCC CHECKDB で FILESTREAM データのチェックがすべてスキップされるようになります。
     
 DATA_PURITY  
- DBCC CHECKDB が、データベース内の、値が無効または範囲外の列をチェックします。 たとえば、DBCC CHECKDB が日付と時刻の値がより大きいか、許容範囲よりも小さいかを含む列を検出、 **datetime**データ型または**decimal**型または概数データ型無効な小数点以下桁数または有効桁数の値を持つ列。  
- 列の値の整合性チェックは既定で有効になっているため、DATA_PURITY オプションを指定する必要はありません。 以前のバージョンからアップグレードしたデータベース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列の値は、DBCC CHECKDB WITH DATA_PURITY で実行されているエラーのないデータベースになるまでに既定で無効になってを確認します。 エラーなく実行されると、その後、DBCC CHECKDB は既定で列の値の整合性をチェックします。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からのデータベースのアップグレードによる CHECKDB への影響の詳細については、後の「解説」を参照してください。  
+ DBCC CHECKDB が、データベース内の、値が無効または範囲外の列をチェックします。 たとえば、DBCC CHECKDB は、**datetime** 型の許容範囲外となる日時の値を含む列や、小数点以下桁数または有効桁数の値が有効ではない **decimal** 型や概数型の列を検出します。  
+ 列の値の整合性チェックは既定で有効になっているため、DATA_PURITY オプションを指定する必要はありません。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードしたデータベースの場合は、列の値のチェックは既定では有効になっていないため、データベースで DBCC CHECKDB WITH DATA_PURITY を実行します。 エラーなく実行されると、その後、DBCC CHECKDB は既定で列の値の整合性をチェックします。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からのデータベースのアップグレードによる CHECKDB への影響の詳細については、後の「解説」を参照してください。  
     
 > [!WARNING]
 > PHYSICAL_ONLY を指定した場合は、列の整合性チェックは行われません。
     
- DBCC 修復オプションを使用して、このオプションによって報告された検証エラーを修正することはできません。 これらのエラーを手動で修正する方法については、サポート技術情報の資料 923247 を参照してください: [SQL Server 2005 およびそれ以降のバージョンでのトラブルシューティングの DBCC エラー 2570](http://support.microsoft.com/kb/923247)です。  
+ DBCC 修復オプションを使用して、このオプションによって報告された検証エラーを修正することはできません。 これらのエラーを手動で修正する方法の詳細については、サポート技術情報の資料 923247「[SQL Server 2005 以降のバージョンでの DBCC エラー 2570 のトラブルシューティング](http://support.microsoft.com/kb/923247)」を参照してください。  
     
  MAXDOP  
- **適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて SP2 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
     
- 上書き、**並列処理の次数の最大**構成オプションの**sp_configure**ステートメントです。 MAXDOP では、sp_configure で構成されている値を超えることができます。 MAXDOP 値を超える場合、リソース ガバナーで構成されている、[!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)]で説明されている、リソース ガバナーの MAXDOP 値を使用して[ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)です。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
+ ステートメントの **sp_configure** の **max degree of parallelism** 構成オプションを無効にします。 MAXDOP では、sp_configure で構成されている値を超えることができます。 MAXDOP の値がリソース ガバナーで構成されている値を超える場合は、「[ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)」で説明されているように、[!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)]でリソース ガバナーの MAXDOP 値が使用されます。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
  
 > [!WARNING] 
-> MAXDOP は、SQL Server を 0 に設定されている場合は、使用する並列処理の最大限度を選択します。    
+> MAXDOP が 0 に設定されている場合、SQL Server では使用する最大限の並列処理が選択されます。    
 
-## <a name="remarks"></a>解説    
-DBCC CHECKDB は、無効なインデックスについては検査しません。 無効化されたインデックスの詳細については、次を参照してください。[無効にするインデックスと制約](../../relational-databases/indexes/disable-indexes-and-constraints.md)です。    
+## <a name="remarks"></a>Remarks    
+DBCC CHECKDB は、無効なインデックスについては検査しません。 無効なインデックスの詳細については、「[インデックスと制約の無効化](../../relational-databases/indexes/disable-indexes-and-constraints.md)」を参照してください。    
 
-ユーザー定義型がバイト順としてマークされている場合、シリアル化されたユーザー定義型は 1 つだけ存在する必要があります。 シリアル化されたバイト順のユーザー定義型が一貫して存在していない場合、DBCC CHECKDB の実行中にエラー 2537 が発生します。 詳細については、次を参照してください。[ユーザー定義型の要件](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)です。    
+ユーザー定義型がバイト順としてマークされている場合、シリアル化されたユーザー定義型は 1 つだけ存在する必要があります。 シリアル化されたバイト順のユーザー定義型が一貫して存在していない場合、DBCC CHECKDB の実行中にエラー 2537 が発生します。 詳細については、「[ユーザー定義型の要件](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)」を参照してください。    
 
-[Resource データベース](../../relational-databases/databases/resource-database.md)はシングル ユーザー モードでは、コマンドは、上で直接実行することはできません、DBCC CHECKDB でのみ変更します。 ただし、DBCC CHECKDB が実行されるとに対して、 [master データベース](../../relational-databases/databases/master-database.md)、Resource データベースで次の CHECKDB が内部的に実行もします。 このため、DBCC CHECKDB が追加の結果を返す場合があります。 このコマンドでは、オプションが設定されていないか、PHYSICAL_ONLY または ESTIMATEONLY オプションが設定されている場合に、追加の結果セットが返されます。    
+[Resource データベース](../../relational-databases/databases/resource-database.md)はシングル ユーザー モードでしか修正できないため、このデータベースに対して DBCC CHECKDB コマンドを直接実行することはできません。 ただし、DBCC CHECKDB を [master データベース](../../relational-databases/databases/master-database.md)に対して実行すると、内部的に次の CHECKDB が Resource データベースに対して実行されます。 このため、DBCC CHECKDB が追加の結果を返す場合があります。 このコマンドでは、オプションが設定されていないか、PHYSICAL_ONLY または ESTIMATEONLY オプションが設定されている場合に、追加の結果セットが返されます。    
 
-以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]SP2 では、DBCC CHECKDB を実行する**不要になった**のインスタンスのプラン キャッシュが消去[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 前に[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]SP2 では、DBCC CHECKDB を実行するプラン キャッシュが消去されます。 プラン キャッシュをクリアする以降のすべての実行プランの再コンパイルとクエリのパフォーマンス、突然、一時的な低下が発生する可能性があります。 
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 以降では、DBCC CHECKDB を実行しても、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのプラン キャッシュは消去**されません**。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 より前のバージョンでは、DBCC CHECKDB を実行すると、プラン キャッシュが消去されます。 プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下する場合があります。 
     
 ## <a name="performing-logical-consistency-checks-on-indexes"></a>インデックスに対する論理的な一貫性チェックの実行    
 インデックスに対する論理的な一貫性チェックは、データベースの互換性レベルによって次のように異なります。
--   互換性レベルが 100 の場合 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) またはそれ以降。    
--   NOINDEX が指定されていない場合、DBCC CHECKDB は、1 つのテーブルとそのすべての非クラスター化インデックスについて、物理的な一貫性と論理的な一貫性の両方をチェックします。 ただし、XML インデックス、空間インデックス、およびインデックス付きビューのみに物理的な一貫性チェックが既定で実行されます。
+-   互換性レベルが 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 以上の場合:    
+-   NOINDEX が指定されていない場合、DBCC CHECKDB は、1 つのテーブルとそのすべての非クラスター化インデックスについて、物理的な一貫性と論理的な一貫性の両方をチェックします。 ただし、XML インデックス、空間インデックス、およびインデックス付きビューでは、既定で物理的な一貫性のみがチェックされます。
 -   WITH EXTENDED_LOGICAL_CHECKS が指定されている場合、インデックス付きビュー、XML インデックス、および空間インデックス (存在する場合) に対して論理チェックが実行されます。 既定では、論理的な一貫性のチェック前に物理的な一貫性がチェックされます。 NOINDEX も指定されている場合は、論理チェックのみが実行されます。
     
 この論理的な一貫性のチェックでは、インデックス オブジェクトの内部インデックス テーブルが参照先のユーザー テーブルと照合されます。 行の不整合を検出するために、内部テーブルとユーザー テーブルの完全な積集合を実行する内部クエリが作成されます。 このクエリを実行するとパフォーマンスに多大な影響を及ぼす可能性があり、その進行状況は追跡できません。 したがって、物理的な破損とは無関係のインデックスの問題があると考えられる場合、またはページ レベルのチェックサムがオフになっており、列レベルのハードウェアの破損が考えられる場合にのみ、WITH EXTENDED_LOGICAL_CHECKS を指定することをお勧めします。
 -   インデックスがフィルター選択されたインデックスである場合、DBCC CHECKDB は一貫性チェックを実行して、インデックス エントリがフィルター述語に適合していることを確認します。
 -   互換性レベルが 90 以下で NOINDEX が指定されていない場合、DBCC CHECKDB は、1 つのテーブルまたはインデックス付きビューと、そのすべての非クラスター化インデックスおよび XML インデックスについて、物理的な一貫性と論理的な一貫性の両方をチェックします。 空間インデックスはサポートされません。  
-- SQL Server 2016 以降で、既定では高価な式の評価を避けるために保存される計算列、UDT 列、およびフィルター選択されたインデックスに追加のチェックは実行されません。 この変更は、これらのオブジェクトを含むデータベースに対する CHECKDB の期間が大幅に削減します。 ただし、これらのオブジェクトの物理的な整合性チェックを常に完了しました。 EXTENDED_LOGICAL_CHECKS オプションを指定する場合にのみ、式の評価行われます (インデックス付きビュー、XML インデックス、および空間インデックス) の存在の論理チェックだけでなく、EXTENDED_LOGICAL_CHECKS オプションの一部として。   
+- SQL Server 2016 以降では、コストの高い式の評価を避けるため、既定では、保存される計算列、UDT 列、およびフィルター選択されたインデックスへの追加のチェックは実行されません。 この変更により、これらのオブジェクトを含むデータベースに対する CHECKDB の時間が大幅に短縮されます。 ただし、これらのオブジェクトの物理的な整合性チェックは常に実行されます。 EXTENDED_LOGICAL_CHECKS オプションが指定されている場合にのみ、既存の論理チェック (インデックス付きビュー、XML インデックス、および空間インデックス) に加え、EXTENDED_LOGICAL_CHECKS オプションの一部として式の評価が行われます。   
     
-**データベースの互換性レベルを調べる**
+**データベースの互換性レベルを調べるには**
 -   [データベースの互換性レベルの表示または変更](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>内部データベース スナップショット    
-DBCC CHECKDB では、チェックの実行に必要なトランザクションの一貫性を得るため、内部データベース スナップショットを使用します。 これにより、コマンド実行時のブロックや同時実行の問題を回避できます。 詳細については、次を参照してください[データベース スナップショット &#40; のスパース ファイルのサイズを表示。TRANSACT-SQL と #41 です。](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) DBCC 内部データベース スナップショットの使用」、および[DBCC &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-transact-sql.md). スナップショットを作成できない場合や TABLOCK が指定されていない場合、DBCC CHECKDB はロックを取得して必要な一貫性を実現します。 この場合、割り当てのチェックを行うための排他データベース ロックと、テーブルのチェックを行うための共有テーブル ロックが必要です。
+DBCC CHECKDB では、チェックの実行に必要なトランザクションの一貫性を得るため、内部データベース スナップショットを使用します。 これにより、コマンド実行時のブロックや同時実行の問題を回避できます。 詳細については、「[データベース スナップショットのスパース ファイルのサイズを表示する方法 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)」および「[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)」の「DBCC 内部データベース スナップショットの使用」セクションを参照してください。 スナップショットを作成できない場合や TABLOCK が指定されていない場合、DBCC CHECKDB はロックを取得して必要な一貫性を実現します。 この場合、割り当てのチェックを行うための排他データベース ロックと、テーブルのチェックを行うための共有テーブル ロックが必要です。
 DBCC CHECKDB は、内部データベース スナップショットを作成できない場合は、master に対して実行時に失敗します。
 Tempdb に対して DBCC CHECKDB を実行すると、すべて割り当てまたはカタログのチェックは実行されず、テーブルのチェックを実行する共有テーブル ロックを取得する必要があります。 これは、パフォーマンス上の理由から、データベースのスナップショットが tempdb では利用できないためです。 つまり、必要なトランザクションの一貫性を実現できないためです。
-Microsoft SQL Server 2012 または SQL Server の以前のバージョンでは、ReFS でフォーマットされたボリュームにファイルを持つデータベースに対して DBCC CHECKDB コマンドを実行するときにエラー メッセージが発生する可能性があります。 詳細については、サポート技術情報の記事 2974455 を参照してください: [ReFS ボリューム上の SQL Server データベースがある場合に DBCC CHECKDB 動作します。](https://support.microsoft.com/kb/2974455)    
+Microsoft SQL Server 2012 または SQL Server の以前のバージョンでは、ReFS でフォーマットされたボリュームにファイルがあるデータベースに対して DBCC CHECKDB コマンドを実行すると、エラー メッセージが表示される場合があります。 詳細については、サポート技術情報の資料 2974455「[DBCC CHECKDB behavior when the SQL Server database is located on an ReFS volume](https://support.microsoft.com/kb/2974455)」 (SQL Server データベースが ReFS ボリュームに配置されている場合の DBCC CHECKDB の動作) を参照してください。    
     
 ## <a name="checking-and-repairing-filestream-data"></a>FILESTREAM データのチェックと修復    
-データベースとテーブルの FILESTREAM が有効になって、必要に応じて保存できます**varbinary (max)**ファイル システム内のバイナリ ラージ オブジェクト (Blob)。 BLOB をファイル システムに格納するデータベースに対して DBCC CHECKDB を使用する場合は、DBCC によって、ファイル システムとデータベースの間のリンクレベルの一貫性がチェックされます。
-たとえば、テーブルが含まれている場合、 **varbinary (max)** FILESTREAM 属性を DBCC CHECKDB を使用する列はファイル システムのディレクトリおよびファイルとテーブルの行、列、および列の間の一対一のマッピングがあることを確認値。 REPAIR_ALLOW_DATA_LOSS オプションを指定すると、DBCC CHECKDB で破損を修復できます。 FILESTREAM の破損を修復するために、DBCC はファイル システム データが欠落しているテーブル行を削除します。
+データベースとテーブルに対して FILESTREAM が有効になっている場合、**varbinary(max)** バイナリ ラージ オブジェクト (BLOB) をファイル システムに格納することもできます。 BLOB をファイル システムに格納するデータベースに対して DBCC CHECKDB を使用する場合は、DBCC によって、ファイル システムとデータベースの間のリンクレベルの一貫性がチェックされます。
+たとえば、テーブルに FILESTREAM 属性を使用する **varbinary(max)** 列が含まれている場合、DBCC CHECKDB は、ファイル システムのディレクトリおよびファイルと、テーブルの行、列、および列の値とが一対一でマップされていることをチェックします。 REPAIR_ALLOW_DATA_LOSS オプションを指定すると、DBCC CHECKDB で破損を修復できます。 FILESTREAM の破損を修復するために、DBCC はファイル システム データが欠落しているテーブル行を削除します。
     
 ## <a name="best-practices"></a>ベスト プラクティス    
 実稼働システムで頻繁に使用する場合は PHYSICAL_ONLY オプションを使用することをお勧めします。 PHYSICAL_ONLY を使用すると、大規模データベースでの DBCC CHECKDB の実行時間を大幅に短縮できます。 また、定期的に、オプションを指定せずに DBCC CHECKDB を実行することもお勧めします。 DBCC CHECKDB を実行する頻度は、個々の業務とその運用環境によって変わります。
     
 ## <a name="checking-objects-in-parallel"></a>オブジェクトの並列チェック    
-既定では、DBCC CHECKDB はオブジェクトの並列チェックを実行します。 並列処理の次数は、クエリ プロセッサによって自動的に決定されます。 並列処理の次数の最大値は、並列クエリと同様に構成します。 使用して DBCC チェックに利用できるプロセッサの最大数を制限するには、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)です。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列チェックはトレース フラグ 2528 を使用して無効にできます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。
+既定では、DBCC CHECKDB はオブジェクトの並列チェックを実行します。 並列処理の次数は、クエリ プロセッサによって自動的に決定されます。 並列処理の次数の最大値は、並列クエリと同様に構成します。 DBCC チェックに利用できるプロセッサの最大数を制限するには、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用します。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列チェックはトレース フラグ 2528 を使用して無効にできます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。
     
 > [!NOTE]
-> この機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 詳細については、並列の整合性の RDBMS の管理性にチェックを参照してください。 [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)します。    
+> この機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 詳細については、「[SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」の「RDBMS の管理の容易性」で並列整合性チェックを確認してください。    
     
 ## <a name="understanding-dbcc-error-messages"></a>DBCC エラー メッセージについて    
 DBCC CHECKDB コマンドの終了後、メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに書き込まれます。 DBCC コマンドが正常に実行された場合、メッセージでは正常に処理されたこととコマンドの実行時間が示されます。 エラーが発生して DBCC コマンドが完了前に停止した場合、メッセージではコマンドが終了したことと、状態の値、およびコマンド実行時間が示されます。 次の表は、メッセージに含まれる可能性がある状態値の一覧と説明です。
@@ -223,25 +223,25 @@ DBCC CHECKDB コマンドの終了後、メッセージが [!INCLUDE[ssNoVersion
 |状態|Description|    
 |-----------|-----------------|    
 |0|エラー番号 8930 が発生しました。 このエラーは、メタデータの破損により DBCC コマンドが終了したことを示します。|    
-|1|エラー番号 8967 が発生しました。 内部 DBCC エラーがあります。|    
+|@shouldalert|エラー番号 8967 が発生しました。 内部 DBCC エラーがあります。|    
 |2|緊急モードのデータベース修復中にエラーが発生しました。|    
 |3|このエラーは、メタデータの破損により DBCC コマンドが終了したことを示します。|    
 |4|アサートまたはアクセス違反が検出されました。|    
 |5|不明なエラーが発生し、DBCC コマンドが終了しました。|    
     
 ## <a name="error-reporting"></a>[エラー報告]    
-ダンプ ファイル (`SQLDUMP*nnnn*.txt`) で作成された、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBCC CHECKDB で破損エラーが検出されるたびに、ログ ディレクトリ。 ときに、*機能の使用状況*データの収集と*エラー報告*のインスタンスの機能が有効になっている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に、ファイルが自動的に転送[!INCLUDE[msCoName](../../includes/msconame-md.md)]です。 収集されたデータは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能向上のために使用されます。
-このダンプ ファイルには、DBCC CHECKDB コマンドの結果と追加の診断出力が含まれます。 アクセスが制限されて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウントと sysadmin ロールのメンバーです。 既定では、sysadmin ロールに、Windows のすべてのメンバーが含まれています`BUILTIN\Administrators`グループとローカル管理者のグループです。 データ収集プロセスが失敗しても、DBCC コマンドは失敗しません。
+DBCC CHECKDB により破損エラーが検出されるたびに、ダンプ ファイル (`SQLDUMP*nnnn*.txt`) が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の LOG ディレクトリに生成されます。 *機能の使用状況*データ収集と*エラー報告*機能が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して有効になっている場合、ダンプ ファイルは自動的に [!INCLUDE[msCoName](../../includes/msconame-md.md)] に転送されます。 収集されたデータは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能向上のために使用されます。
+このダンプ ファイルには、DBCC CHECKDB コマンドの結果と追加の診断出力が含まれます。 アクセスが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントと sysadmin ロールのメンバーに制限されます。 既定では、sysadmin ロールには、Windows の `BUILTIN\Administrators` グループとローカルの管理者のグループのすべてのメンバーが含まれています。 データ収集プロセスが失敗しても、DBCC コマンドは失敗しません。
     
 ## <a name="resolving-errors"></a>エラーの解決    
-DBCC CHECKDB でエラーが報告された場合は、REPAIR を REPAIR オプションのいずれかを指定して実行するのではなく、データベースのバックアップからデータベースを復元することをお勧めします。 バックアップが存在しない場合は、修復を実行することによって報告されたエラーを修正します。 使用する修復オプションは、報告されたエラーのリストの末尾に指定されます。 ただし、REPAIR_ALLOW_DATA_LOSS オプションを使用してエラーを修正する場合は、一部のページ (データ) が削除されることがあります。    
+DBCC CHECKDB でエラーが報告された場合は、REPAIR を REPAIR オプションのいずれかを指定して実行するのではなく、データベースのバックアップからデータベースを復元することをお勧めします。 バックアップが存在しない場合は、修復を実行することによって報告されたエラーを修正します。 使用する修復オプションは、報告されたエラーの一覧の最後に指定されています。 ただし、REPAIR_ALLOW_DATA_LOSS オプションを使用してエラーを修正する場合は、一部のページ (データ) が削除されることがあります。    
 
 状況によっては、データベースに、列のデータ型に対して有効ではない値や範囲外の値が入力されていることがあります。 DBCC CHECKDB は、すべての列のデータ型について有効ではない列の値を検出します。 したがって、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードしたデータベースに対して DATA_PURITY オプションを指定して DBCC CHECKDB を実行すると、以前から存在していた列の値のエラーが検出される場合があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれらのエラーを自動的に修復することはできないため、列の値を手動で更新する必要があります。 CHECKDB でこのようなエラーが検出されると、CHECKDB は警告 (エラー番号 2570) を返し、影響を受ける行を特定してエラーを手動で修正するための情報を示します。    
 
-修復は、ユーザーが行われた変更をロールバックできるようにするユーザー トランザクションの下で実行できます。 修復をロールバックしたときは、データベースにエラーが残っているので、データベースをバックアップから復元する必要があります。 修復が完了したら、データベースをバックアップします。
+ユーザー トランザクションを利用して修復を実行できるので、後からユーザーが変更をロールバックすることができます。 修復をロールバックしたときは、データベースにエラーが残っているので、データベースをバックアップから復元する必要があります。 修復が完了したら、データベースをバックアップします。
     
 ## <a name="resolving-errors-in-database-emergency-mode"></a>データベース緊急モードでのエラーの解決    
-ときに、データベースが設定されて緊急モードを使用して、 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)ステートメントでは、DBCC CHECKDB を実行できますいくつかの特別な修復データベースの場合は、REPAIR_ALLOW_DATA_LOSS オプションを指定します。 このような修復により、通常は復旧不可能なデータベースを、物理的な一貫性のある状態でオンラインに戻すことができる場合があります。 このような修復は、バックアップからデータベースを復元できない場合にのみ、最終的な手段として使用してください。 データベースが緊急モードに設定されている場合は、データベースは READ_ONLY に設定し、ログ記録を無効にすると、アクセスは、sysadmin 固定サーバー ロールのメンバーに制限します。
+[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントによってデータベースが緊急モードに設定されている場合、REPAIR_ALLOW_DATA_LOSS オプションを指定して DBCC CHECKDB を実行すると、データベースに対していくつかの特別な修復を実行できます。 このような修復により、通常は復旧不可能なデータベースを、物理的な一貫性のある状態でオンラインに戻すことができる場合があります。 このような修復は、バックアップからデータベースを復元できない場合にのみ、最終的な手段として使用してください。 データベースが緊急モードに設定されている場合は、データベースは READ_ONLY に設定し、ログ記録を無効にすると、アクセスは、sysadmin 固定サーバー ロールのメンバーに制限します。
     
 > [!NOTE]
 > ユーザー トランザクション内で DBCC CHECKDB コマンドを緊急モードで実行したり、実行後にトランザクションをロールバックすることはできません。    
@@ -252,7 +252,7 @@ DBCC CHECKDB でエラーが報告された場合は、REPAIR を REPAIR オプ�
 -   トランザクション ログが壊れているためにデータベース復旧が失敗した場合、トランザクション ログは再構築されます。 ただし、トランザクション ログの再構築の結果、トランザクションの一貫性が失われる場合があります。    
     
 > [!WARNING]
-> REPAIR_ALLOW_DATA_LOSS オプションは、サポートされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能です。 ただし、データベースを物理的に一貫性のある状態にすることが、常に最適なオプションというわけではありません。 成功した場合、REPAIR_ALLOW_DATA_LOSS オプションによりいくつかデータが失われることがあります。 実際には、ユーザーが最後の既知の良好なバックアップからデータベースを復元する場合よりも、失われるデータが多い場合があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、DBCC CHECKDB によって報告されたエラーから回復する主要な方法として、ユーザーが最後の既知の良好なバックアップから復元することが常に推奨されています。 REPAIR_ALLOW_DATA_LOSS オプションは**いない**既知の良好なバックアップから復元するための代替です。 これは、緊急時の「最後の手段」のオプションで、バックアップからの復元ができない場合にのみ使用することをお勧めします。    
+> REPAIR_ALLOW_DATA_LOSS オプションは、サポートされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能です。 ただし、データベースを物理的に一貫性のある状態にすることが、常に最適なオプションというわけではありません。 成功した場合、REPAIR_ALLOW_DATA_LOSS オプションによりいくつかデータが失われることがあります。 実際には、ユーザーが最後の既知の良好なバックアップからデータベースを復元する場合よりも、失われるデータが多い場合があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、DBCC CHECKDB によって報告されたエラーから回復する主要な方法として、ユーザーが最後の既知の良好なバックアップから復元することが常に推奨されています。 REPAIR_ALLOW_DATA_LOSS オプションは、既知の適切なバックアップから復元する代替手段では**ありません**。 これは、緊急時の「最後の手段」のオプションで、バックアップからの復元ができない場合にのみ使用することをお勧めします。    
 >     
 >  ログの再構築後、完全な ACID の保証はありません。    
 >     
@@ -262,7 +262,7 @@ DBCC CHECKDB でエラーが報告された場合は、REPAIR を REPAIR オプ�
 >     
 >  トランザクション ログのサイズは、既定のサイズのままなので、最近のサイズに手動で調整する必要があります。    
     
-DBCC CHECKDB コマンドが正常に終了した場合、データベースでは物理的な一貫性が保たれ、データベースの状態は ONLINE に設定されます。 ただし、データベースにはトランザクション上一貫しない部分が 1 つ以上含まれる可能性があります。 実行することをお勧め[DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md)を任意のビジネス ロジックの欠陥を特定し、すぐにデータベースをバックアップします。
+DBCC CHECKDB コマンドが正常に終了した場合、データベースでは物理的な一貫性が保たれ、データベースの状態は ONLINE に設定されます。 ただし、データベースにはトランザクション上一貫しない部分が 1 つ以上含まれる可能性があります。 [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md) コマンドを実行してビジネス ロジックの不備を確認し、直ちにデータベースをバックアップすることをお勧めします。
 DBCC CHECKDB コマンドが失敗した場合、データベースを修復することはできません。
     
 ## <a name="running-dbcc-checkdb-with-repairallowdataloss-in-replicated-databases"></a>レプリケートされたデータベースでの、REPAIR_ALLOW_DATA_LOSS を指定した DBCC CHECKDB の実行    
@@ -371,13 +371,13 @@ ESTIMATEONLY を指定した場合、DBCC CHECKDB は以下の結果セットを
  DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 ```
     
-## <a name="permissions"></a>権限    
+## <a name="permissions"></a>アクセス許可    
 Sysadmin 固定サーバー ロールまたは db_owner 固定データベース ロールのメンバーシップが必要です。
     
 ## <a name="examples"></a>使用例    
     
 ### <a name="a-checking-both-the-current-and-another-database"></a>A. 現在のデータベースと別のデータベースの両方をチェックする    
-次の例では実行`DBCC CHECKDB`現在のデータベースと、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。
+次の例では、現在のデータベースと [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに対して `DBCC CHECKDB` を実行します。
     
 ```sql    
 -- Check the current database.    
@@ -399,6 +399,6 @@ GO
 ## <a name="see-also"></a>参照    
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [データベース スナップショットのスパース ファイルのサイズを表示する方法 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
-[sp_helpdb &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
-[システム テーブルと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+[sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
+[システム テーブル &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
 

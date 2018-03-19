@@ -1,35 +1,35 @@
 ---
-title: "SESSION_ID (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SESSION_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 06/10/2016
+ms.date: 02/23/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-ms.assetid: 2a0d500a-f6c8-490f-9abd-3ae824986404
-caps.latest.revision: "9"
+dev_langs:
+- TSQL
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07c52331f64cd9104deb8956b893cc2759371feb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: fbc453282e442e9adb5a378c216b2e5a83eb2bb0
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sessionid-transact-sql"></a>SESSION_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  現在の ID を返します[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]または[!INCLUDE[ssPDW_md](../../includes/sspdw-md.md)]セッションです。  
+  現在の [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW_md](../../includes/sspdw-md.md)] セッションの ID を返します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,14 +39,14 @@ SESSION_ID ( )
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 返します、 **nvarchar (32)**値。  
+ **nvarchar(32)** 値を返します。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  セッション ID は、接続が行われたときに、各ユーザー接続に割り当てられます。 これは、接続の間の永続化します。 接続の終了時に、セッション ID は解放されます。  
   
- セッション ID は、アルファベット文字 'SID' を開始します。 これらは、大文字とセッションの ID を使用するとき大文字で入力する必要があります[!INCLUDE[DWsql](../../includes/dwsql-md.md)]コマンド。  
+ セッション ID は、アルファベット文字 'SID' を開始します。 これらは大文字と小文字の区別があり、セッション ID が [!INCLUDE[DWsql](../../includes/dwsql-md.md)] コマンドで使われるときは大文字にする必要があります。  
   
- ビューをクエリする[sys.dm_pdw_exec_sessions](http://msdn.microsoft.com/en-us/5b656c55-427f-4306-8bd9-9d7987c203d9)をこの関数と同じ情報を取得します。  
+ ビュー [sys.dm_pdw_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md) をクエリして、この関数と同じ情報を取得できます。  
   
 ## <a name="examples"></a>使用例  
  次の例では、現在のセッション ID を返します。  
@@ -56,7 +56,7 @@ SELECT SESSION_ID();
 ```  
   
 ## <a name="see-also"></a>参照  
- [DB_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/db-name-transact-sql.md)   
- [バージョンと #40 です。SQL Data Warehouse &#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)
+ [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)   
+ [VERSION &#40;SQL Data Warehouse&#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)
   
   

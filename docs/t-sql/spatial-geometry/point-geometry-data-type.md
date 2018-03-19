@@ -1,5 +1,5 @@
 ---
-title: "ポイント (geometry データ型) |Microsoft ドキュメント"
+title: "Point (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="point-geometry-data-type"></a>Point (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-構築、 **geometry**インスタンスを表す、**ポイント**からその X と Y 値、および SRID のインスタンス。
+X 値、Y 値、および SRID (spatial reference identifier) から、**Point** インスタンスを表す **geometry** インスタンスを構築します。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,23 +45,23 @@ Point ( X, Y, SRID )
   
 ## <a name="arguments"></a>引数  
  *X*  
- **Float**の X 座標を表す式、**ポイント**生成されています。  
+ 生成される **Point** の X 座標を表す **float** 式です。  
   
  *Y*  
- **Float**の Y 座標を表す式、**ポイント**生成されています。  
+ 生成される **Point** の Y 座標を表す **float** 式です。  
   
  *SRID*  
- **Int** 、空間を表す式の ID (SRID) を参照、 **geometry**インスタンスを取得します。  
+ 返される **geography** インスタンスの SRID (spatial reference ID) を表す **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
  CLR の戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>使用例  
- 次の例で`Point()`を作成する、`geometry`インスタンス。  
+ `Point()` を使用して `geometry` インスタンスを作成する例を次に示します。  
   
 ```  
 DECLARE @g geometry;   

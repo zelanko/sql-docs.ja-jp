@@ -1,5 +1,5 @@
 ---
-title: "STIsEmpty (geography データ型) |Microsoft ドキュメント"
+title: "STIsEmpty (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisempty-geography-data-type"></a>STIsEmpty (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  場合 1 を返します、 **geography**インスタンスが空です。 場合 0 を返します、 **geography**インスタンスが空ではありません。  
+  **geography** インスタンスが空の場合 1 を返します。 **geography** インスタンスが空ではない場合 0 を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **bit**  
   
  CLR の戻り値の型: **SqlBoolean**  
   

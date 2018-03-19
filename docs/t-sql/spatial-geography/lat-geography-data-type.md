@@ -1,5 +1,5 @@
 ---
-title: "Lat (geography データ型) |Microsoft ドキュメント"
+title: "Lat (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="lat-geography-data-type"></a>Lat (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  緯度プロパティ、 **geography**インスタンス。  
+  **geography** インスタンスの緯度プロパティです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,12 +43,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型: **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR 型: **SqlDouble**  
+ CLR の型: **SqlDouble**  
   
-## <a name="remarks"></a>解説  
- OpenGIS モデルで Lat で定義されているのみ**geography**インスタンスは、単一のポイントで構成されます。 場合、このプロパティは NULL を返しますが**geography**インスタンスには、複数の単一のポイントが含まれています。 このプロパティは正確で、読み取り専用です。  
+## <a name="remarks"></a>Remarks  
+ OpenGIS モデルでは、Lat は単一地点のデータで構成される **geography** インスタンスにのみ定義されます。 **geography** インスタンスに複数の地点が含まれる場合、このプロパティは NULL を返します。 このプロパティは正確で、読み取り専用です。  
   
 ## <a name="examples"></a>使用例  
  この例では、ある地点を作成して、その地点の緯度を返します。  

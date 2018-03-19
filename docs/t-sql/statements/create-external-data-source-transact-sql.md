@@ -8,42 +8,42 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL DATA SOURCE
 - CREATE_EXTERNAL_DATA_SOURCE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - External
 - External, data source
 - PolyBase, create data source
-ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
-caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8e5f0a03ef6efa09218cc6740df4439a25eb7265
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: 9d7d610008b17db9fdec1e33b1577e38a3d9f3a9
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="create-external-data-source-transact-sql"></a>外部データ ソース (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  PolyBase、柔軟なデータベース クエリ、または Azure Blob ストレージの外部データ ソースを作成します。 シナリオによっては、構文が大幅に異なります。 PolyBase 用に作成されたデータ ソースは、弾力性データベースのクエリは使用できません。  同様に、PolyBase などの柔軟なデータベース クエリ用に作成されたデータ ソースを使用できません。 
+  PolyBase または Elastic Database クエリ用の外部データ ソースを作成します。 シナリオによっては、構文が大幅に異なります。 PolyBase 用に作成された外部データ ソースは、Elastic Database のクエリには使用できません。  同様に、Elastic Database のクエリ用に作成された外部データ ソースは、PolyBase などには使用できません。 
   
 > [!NOTE]  
->  PolyBase は、SQL Server 2016、Azure SQL Data Warehouse、および並列データ ウェアハウスでのみサポートされます。 弾力性データベースにクエリには、Azure SQL Database v12 でのみ、またはそれ以降はサポートされています。  
+>  PolyBase は、SQL Server 2016 以降、Azure SQL Data Warehouse、および Parallel Data Warehouse でのみサポートされています。 Elastic Database のクエリは、Azure SQL Database v12 以降でのみサポートされています。  
   
- PolyBase のシナリオで、外部データ ソースは、Hadoop ファイル システム (HDFS)、Azure ストレージ blob コンテナーの場合、または Azure Data Lake Store のいずれかです。 詳細については、「 [PolyBase 入門](../../relational-databases/polybase/get-started-with-polybase.md)」を参照してください。  
+ PolyBase のシナリオでは、外部データ ソースは、Hadoop ファイル システム (HDFS)、Azure Storage Blob コンテナー、または Azure Data Lake Store のいずれかになります。 詳細については、「 [PolyBase 入門](../../relational-databases/polybase/get-started-with-polybase.md)」を参照してください。  
   
- 弾力性データベース クエリ シナリオでは、外部のソースはシャードのマップ マネージャー (Azure SQL データベース) もありますが、上またはリモートのデータベース (Azure SQL データベース) 上のいずれかです。  使用して[sp_execute_remote &#40;です。Azure SQL データベース &#41;](../../relational-databases/system-stored-procedures/sp-execute-remote-azure-sql-database.md)外部データ ソースを作成した後です。 詳細については、次を参照してください。[柔軟なデータベース クエリ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)です。  
+ Elastic Database クエリのシナリオでは、外部のソースは Shard Map Manager (Azure SQL Database) 、またはリモート データベース (Azure SQL Database) のいずれかになります。  [sp_execute_remote &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-execute-remote-azure-sql-database.md) は、外部データ ソースの作成後に使用します。 詳細については、[Elastic Database クエリ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)に関するページを参照してください。  
 
-  Azure Blob ストレージの外部データ ソースのサポートしている`BULK INSERT`と`OPENROWSET`構文、PolyBase の Azure Blob ストレージとは異なるとします。
+  Azure Blob Storage の外部データ ソースでは、PolyBase の Azure Blob Storage とは異なり、`BULK INSERT` と `OPENROWSET` の構文がサポートされます。
     
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -133,31 +133,31 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 ```  
   
 ## <a name="arguments"></a>引数  
- *data_source_name*データ ソースのユーザー定義名を指定します。 名前は、SQL Server、Azure SQL データベース、および Azure SQL Data Warehouse でのデータベース内で一意にする必要があります。 名前は、Parallel Data Warehouse ではサーバー内で一意である必要があります。
+ *data_source_name*: データ ソースのユーザー定義名を指定します。 名前は、SQL Server、Azure SQL Databas、および Azure SQL Data Warehouse のデータベース内で一意にする必要があります。 名前は、Parallel Data Warehouse のサーバー内で一意である必要があります。
   
  TYPE = [ HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
- データ ソースの種類を指定します。 HADOOP を使用して、外部データ ソースが Hadoop または Azure ストレージ blob の Hadoop のです。 Azure SQL Database でシャーディングの柔軟なデータベース クエリの外部データ ソースを作成する場合は、SHARD_MAP_MANAGER を使用します。 RDBMS を外部データ ソースと Azure SQL データベースでエラスティック データベース クエリを使用してデータベースにまたがるクエリを使用します。  使用して一括操作を実行するときに、BLOB_STORAGE を使用して[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)または[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)で[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]です。
+ データ ソースの型を指定します。 外部データ ソースが Hadoop または Hadoop 用 Azure Storage Blob である場合は、HADOOP を使用します。 Azure SQL Database でのシャーディングの対象とする Elastic Database クエリ用の外部データ ソースを作成する場合は、SHARD_MAP_MANAGER を使用します。 Azure SQL Database で Elastic Database クエリを使用したデータベースにまたがるクエリには、RDBMS と外部データ ソースを使用します。  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] で [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) または [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) を使用して一括操作を実行する場合は、BLOB_STORAGE を使用します。
   
 LOCATION = \<location_path> **HADOOP**    
-Hadoop, Hadoop クラスターの Uniform Resource Indicator (URI) を指定します。  
+HADOOP の場合、Hadoop クラスターの Uniform Resource Indicator (URI) を指定します。  
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
-NameNode_URI: マシン名または IP アドレスの Hadoop クラスター Namenode です。  
-ポート: Namenode IPC ポートです。 これは、Hadoop fs.default.name 構成パラメーターによって示されます。 値が指定されていない場合、8020 は既定で使用されます。  
+NameNode_URI: Hadoop クラスター Namenode のマシン名または IP アドレスです。  
+port: Namenode IPC ポートです。 これは、Hadoop では、fs.default.name 構成パラメーターによって示されます。 値が指定されていない場合、8020 が既定で使用されます。  
 例: `LOCATION = 'hdfs://10.10.10.10:8020'`
 
-Hadoop と Azure blob ストレージ、Azure blob ストレージに接続するための URI を指定します。  
+Hadoop を使用する Azure Blob Storage の場合、Azure Blob Storage に接続するための URI を指定します。  
 `LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
-wasb [s]: Azure blob ストレージのプロトコルを指定します。 [S] は省略可能であり、セキュリティ保護された SSL 接続を指定します。SQL Server から送信されたデータは SSL プロトコルを使って安全に暗号化されます。 'Wasb' ではなく ' wasbs' を使用を強くお勧めします。 場所は wasb [s] ではなく asv [s] を使用できることに注意してください。 Asv [s] 構文は推奨されていません、将来のリリースでは削除されます。  
-コンテナー: Azure blob ストレージ コンテナーの名前を指定します。 ドメインのストレージ アカウントのルート コンテナーを指定するには、コンテナー名ではなく、ドメイン名を使用します。 ルート コンテナーは、データをバックアップ コンテナーに書き込むことはできませんのでは読み取り専用です。  
-account_name: Azure のストレージ アカウントの完全修飾ドメイン名 (FQDN) です。  
+wasb[s]: Azure Blob Storage のプロトコルを指定します。 [S] は省略可能であり、セキュリティ保護された SSL 接続を指定します。SQL Server から送信されたデータは SSL プロトコルを使って安全に暗号化されます。 'Wasb' ではなく ' wasbs' を使用を強くお勧めします。 LOCATION は、wasb [s] の代わりに asv [s] を使用できます。 Asv [s] 構文は推奨されていません、将来のリリースでは削除されます。  
+container: Azure Blob Storage コンテナーの名前を指定します。 ドメインのストレージ アカウントのルート コンテナーを指定するには、コンテナー名ではなく、ドメイン名を使用します。 ルート コンテナーは、データをバックアップ コンテナーに書き込むことはできませんのでは読み取り専用です。  
+account_name: Azure ストレージ アカウントの完全修飾ドメイン名 (FQDN) です。  
 例: `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
 
-Azure Data Lake Store には、場所は、Azure Data Lake Store に接続するための URI を指定します。
+Azure Data Lake Store の場合、LOCATION は、お使いの Azure Data Lake Store に接続するための URI を指定します。
 
 
 
 **SHARD_MAP_MANAGER**   
- Shard_map_manager、シャードのマップ マネージャーで、Azure SQL データベースまたは Azure の仮想マシン上の SQL Server データベースをホストする論理サーバー名を指定します。
+ SHARD_MAP_MANAGER の場合、Azure SQL Database または Azure 仮想マシン上の SQL Server データベースで Shard Map Manager をホストする論理サーバー名を指定します。
  
  ```
  CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -175,10 +175,10 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 ) ;
 ```
 
-ステップ バイ ステップ チュートリアルでは、次を参照してください。[柔軟なクエリ (水平パーティション分割) シャーディングの概要](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/)です。
+チュートリアルについては、[シャーディングのエラスティック クエリの概要 (行方向のパーティション分割)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/) のトピックを参照してください。
   
 **RDBMS**   
-Rdbms では、Azure SQL データベースでリモート データベースの論理サーバー名を指定します。  
+RDBMS の場合、Azure SQL Database でリモート データベースの論理サーバーの名前を指定します。  
 
 ```  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';  
@@ -195,23 +195,23 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 ) ;   
 ```  
   
-RDBMS のステップ バイ ステップ チュートリアルでは、次を参照してください。[データベースにまたがるクエリ (縦方向のパーティション分割) の概要](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/)です。  
+RDBMS のチュートリアルについては、[クロスデータベース クエリの概要 (列方向のパーティション分割)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/) のトピックを参照してください。  
 
 **BLOB_STORAGE**   
-一括操作のみ、`LOCATION`有効にする必要がありますの Azure Blob ストレージとコンテナーの URL。 配置しない **/** 、ファイル名、または共有アクセス署名のパラメーターの最後に、 `LOCATION` URL。   
-使用して、使用する資格情報を作成する必要があります`SHARED ACCESS SIGNATURE`id として。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。 Blob ストレージへのアクセスの例は、の例 F を参照してください。 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)です。 
+一括操作の場合のみ、`LOCATION` は Azure Blob Storage とコンテナーの有効な URL にする必要があります。 `LOCATION` URL の末尾に、**/**、ファイル名、または Shared Access Signature パラメーターを配置しないでください。   
+使用される資格情報は、`SHARED ACCESS SIGNATURE` を使用して ID として作成する必要があります。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。 Blob ストレージへのアクセスの例については、例 F の「[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。 
 
   
  RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  
- Hadoop のリソース マネージャーの場所を指定します。 指定した場合、クエリ オプティマイザーは MapReduce で Hadoop の計算の機能を使用して、PolyBase クエリのデータを事前処理コストベースの判断になります。 述語のプッシュ ダウンが呼び出されると、この Hadoop と SQL の間で転送されるデータ量を大幅に削減し、クエリのパフォーマンス向上します。  
+ Hadoop のリソース マネージャーの場所を指定します。 指定した場合、クエリ オプティマイザーは Hadoop の計算の機能と MapReduce を使用して、PolyBase クエリのデータを事前処理することをコストに基づいて決定できます。 述語のプッシュ ダウンが呼び出されると、この Hadoop と SQL の間で転送されるデータ量を大幅に削減し、クエリのパフォーマンス向上します。  
   
- これは、指定しない場合、PolyBase クエリの計算を Hadoop にプッシュが無効です。  
+ これを指定しない場合、Hadoop への計算のプッシュが、PolyBase クエリに対して無効になります。  
  
-ポートが指定されていない場合は、'hadoop connectivity' の設定の現在の設定を使用して、既定値が決まります。
+ポートが指定されていない場合、'hadoop connectivity' 構成の現在の設定を使用して、既定値が決まります。
 
-|Hadoop 接続|リソース マネージャーの既定のポート|
+|Hadoop Connectivity|Resource Manager の既定のポート|
 |-------------------|-----------------------------|
-|1|50300|
+|@shouldalert|50300|
 |2|50300|
 |3|8021|
 |4|8032|
@@ -219,24 +219,24 @@ RDBMS のステップ バイ ステップ チュートリアルでは、次を�
 |6|8032|
 |7|8050|
 
-Hadoop ディストリビューションと各接続値でサポートされているバージョンの一覧については、次を参照してください。 [PolyBase 接続構成 (TRANSACT-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)です。
+各接続値でサポートされている Hadoop ディストリビューションとバージョンの一覧については、「[PolyBase 接続構成 (TRANSACT-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)」を参照してください。
   
 > [!IMPORTANT]  
 >  RESOURCE_MANAGER_LOCATION 値は文字列であり、外部データ ソースを作成するときに検証されません。 正しくない値を入力すると、場所にアクセスするときに将来の遅延が発生することができます。  
   
  Hadoop の例:  
   
--   Hortonworks HDP 2.0、2.1、2.2 です。 Windows の 2.3:   
+-   Windows 上の Hortonworks HDP 2.0、2.1、2.2、 2.3:   
     ```  
     RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8032'  
     ```  
   
--   1.3 Windows 上の Hortonworks HDP:   
+-   Windows 上の Hortonworks HDP 1.3:   
     ```  
     RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:50300'  
     ```  
   
--   Hortonworks HDP 2.0、2.1、2.2、Linux の 2.3:   
+-   Linux 上の Hortonworks HDP 2.0、2.1、2.2、2.3:   
     ```  
     RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8050'  
     ```  
@@ -251,22 +251,22 @@ Hadoop ディストリビューションと各接続値でサポートされて�
     RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8021'  
     ```  
   
--   Linux 上の Cloudera 5.1 5.11:   
+-   Linux 上の Cloudera 5.1 - 5.11:   
     ```  
     RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8032'  
     ```  
   
  CREDENTIAL = *credential_name*  
- 外部データ ソースへの認証の資格情報をデータベース スコープを指定します。 例については、次を参照してください。 [C. が Azure blob ストレージの外部データ ソースを作成する](../../t-sql/statements/create-external-data-source-transact-sql.md#credential)です。 資格情報を作成するを参照してください。[資格情報の作成 (TRANSACT-SQL)](../../t-sql/statements/create-credential-transact-sql.md)です。 資格情報が匿名アクセスを許可するパブリック データ セットに必要ないことに注意してください。 
+ 外部データ ソースへの認証の資格情報のデータベース スコープを指定します。 例については、[C. Azure blob ストレージの外部データ ソースの作成](../../t-sql/statements/create-external-data-source-transact-sql.md#credential)を参照してください。 資格情報を作成するには、「[CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md)」を参照してください。 匿名アクセスを許可するパブリック データ セットには、CREDENTIAL は必要ありません。 
   
  DATABASE_NAME = *'QueryDatabaseName'*  
- (RDBMS) のシャードのマップ マネージャー (を SHARD_MAP_MANAGER) として機能するデータベースまたはリモートのデータベースの名前。  
+ Shard Map Manager (SHARD_MAP_MANAGER) またはリモート データベース (RDBMS) として機能するデータベースの名前です。  
   
  SHARD_MAP_NAME = *'ShardMapName'*  
- Shard_map_manager のみです。 シャードのマップの名前。 シャード マップの作成の詳細については、次を参照してください[柔軟なデータベース クエリの概要。](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/)  
+ SHARD_MAP_MANAGER のみの場合。 シャードのマップの名前。 シャード マップ作成の詳細については、[Elastic Database クエリの概要](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/)に関するトピックを参照してください。  
   
 ## <a name="polybase-specific-notes"></a>PolyBase 固有の注意事項  
-サポートされている外部データ ソースの完全な一覧を参照してください。 [PolyBase 接続構成 (TRANSACT-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)です。
+サポートされている外部データ ソースの一覧については、「[PolyBase 接続構成 (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)」を参照してください。
 
  PolyBase を使用するのには、これら 3 つのオブジェクトを作成する必要があります。  
   
@@ -276,11 +276,11 @@ Hadoop ディストリビューションと各接続値でサポートされて�
   
 -   外部データ ソースと外部のファイル形式を参照する外部テーブルです。  
   
-## <a name="permissions"></a>権限  
- SQL データ ウェアハウス、SQL Server、AP 2016 および SQL DB 内のデータベースに対する CONTROL 権限が必要です。
+## <a name="permissions"></a>アクセス許可  
+ SQL DW、SQL Server、APS 2016 および SQL DB 内のデータベースに対する CONTROL アクセス許可が必要です。
 
 > [!IMPORTANT]  
->  PDW の以前のリリースでは、外部データ ソースのために必要な ALTER ANY EXTERNAL DATA SOURCE のアクセス許可を作成します。
+>  PDW の以前のリリースでは、CREATE EXTERNAL DATA SOURCE には、ALTER ANY EXTERNAL DATA SOURCE アクセス許可が必要でした。
   
   
 ## <a name="error-handling"></a>エラー処理  
@@ -289,23 +289,23 @@ Hadoop ディストリビューションと各接続値でサポートされて�
  SQL エンジンでは、外部データ ソースのオブジェクトの作成時に、外部データ ソースの存在は検証されません。 データ ソースが存在しない場合、クエリの実行中にエラーが発生します。  
   
 ## <a name="general-remarks"></a>全般的な解説  
-PolyBase, 外部データ ソースは SQL Server と SQL データ ウェアハウスのデータベース スコープです。 これはサーバー スコープ Parallel Data Warehouse でです。
+PolyBase の場合、外部データ ソースは SQL Server と SQL Data Warehouse のデータベース スコープです。 これは Parallel Data Warehouse のサーバー スコープです。
   
-PolyBase, RESOURCE_MANAGER_LOCATION または JOB_TRACKER_LOCATION が定義されている場合、クエリ オプティマイザーを検討してください上のジョブ、外部の Hadoop ソースと計算をプッシュを削減するマップを開始することによって、各クエリの最適化します。 これは、コストベースの判断ではまったくです。  
+PolyBase の場合、RESOURCE_MANAGER_LOCATION または JOB_TRACKER_LOCATION が定義されると、クエリ オプティマイザーは、外部の Hadoop ソース上で Map Reduce ジョブを開始して、計算をプッシュダウンすることで、各クエリの最適化を検討します。 これは、コストベースの判断ではまったくです。  
 
-Hadoop NameNode フェールオーバーが発生した場合の成功の PolyBase クエリには、仮想 IP アドレスを使用して、Hadoop クラスターの NameNode を検討してください。 Hadoop NameNode の仮想 IP アドレスを使用しない場合、Hadoop NameNode フェールオーバーが発生する必要が新しい場所を指す ALTER EXTERNAL DATA SOURCE オブジェクト。  
+Hadoop NameNode フェールオーバーが発生した場合に PolyBase クエリを確実に成功させるには、Hadoop クラスターの NameNode に仮想 IP アドレスを使用することを検討してください。 Hadoop NameNode に仮想 IP アドレスを使用しない場合、Hadoop NameNode フェールオーバーが発生したときに、ALTER EXTERNAL DATA SOURCE オブジェクトが新しい場所をポイントするようにする必要があります。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- Hadoop クラスターの同じ場所で定義されているすべてのデータ ソースは、RESOURCE_MANAGER_LOCATION または JOB_TRACKER_LOCATION の同じ設定を使用する必要があります。 不整合がある場合は、実行時エラーが発生します。  
+ Hadoop クラスターの同じ場所で定義されているすべてのデータ ソースが、RESOURCE_MANAGER_LOCATION または JOB_TRACKER_LOCATION の同じ設定を使用する必要があります。 不整合がある場合は、実行時エラーが発生します。  
   
  Hadoop クラスターは、名前のセットアップ、外部データ ソースは、IP アドレスを使用してクラスターの場所の場合は、PolyBase をデータ ソースを使用する場合に、クラスター名を解決できないする必要があります。 名前を解決するのには、DNS フォワーダーを有効にする必要があります。  
   
 ## <a name="locking"></a>ロック  
  外部データ ソース オブジェクト上には、共有ロックを取得します。  
   
-##  <a name="examples"></a>例: SQL Server 2016  
+##  <a name="examples"></a> 例: SQL Server 2016  
   
-### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. Hadoop を参照する外部データ ソースを作成します。  
+### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. Hadoop を参照する外部データ ソースを作成する  
 Hortonworks または Cloudera Hadoop クラスターを参照する外部データ ソースを作成するには、マシン名または Hadoop Namenode とポートの IP アドレスを指定します。  
   
 ```sql  
@@ -317,8 +317,8 @@ WITH (
 
 ```  
   
-### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>B. プッシュ ダウンを有効になっている Hadoop を参照する外部データ ソースを作成します。  
-PolyBase クエリの Hadoop にプッシュ ダウン計算を有効にする RESOURCE_MANAGER_LOCATION オプションを指定します。 有効にすると、PolyBase はコストベースの判断を使用して、クエリの計算を Hadoop にプッシュする必要がありますか、SQL Server で、クエリの処理にすべてのデータを移動するかを判断します。
+### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>B. プッシュダウンが有効になっている Hadoop を参照する外部データ ソースを作成する  
+RESOURCE_MANAGER_LOCATION オプションを指定して、PolyBase クエリの Hadoop への計算のプッシュダウンを有効にします。 有効にすると、PolyBase はクエリの計算を Hadoop にプッシュするか、すべてのデータを移動して SQL Server でクエリを処理するかどうかをコストに基づいて決定します。
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
@@ -330,8 +330,8 @@ WITH (
 
 ```
   
-###  <a name="credential"></a> C. Kerberos でセキュリティ保護された Hadoop を参照する外部データ ソースを作成します。  
-Hadoop クラスターが Kerberos でセキュリティ保護されたことを確認するには、Hadoop core-site.xml hadoop.security.authentication プロパティの値を確認します。 Kerberos でセキュリティ保護された Hadoop クラスターを参照するには、Kerberos のユーザー名とパスワードを含むデータベース スコープ資格情報を指定する必要があります。 データベース マスター _ キーはデータベース スコープの資格情報シークレットの暗号化に使用されます。 
+###  <a name="credential"></a> C. Kerberos でセキュリティ保護された Hadoop を参照する外部データ ソースを作成する  
+Hadoop クラスターが Kerberos でセキュリティ保護されていることを確認するには、Hadoop core-site.xml で hadoop.security.authentication プロパティの値を確認します。 Kerberos でセキュリティ保護された Hadoop クラスターを参照するには、ご自分の Kerberos ユーザー名とパスワードを含むデータベース スコープの資格情報を指定する必要があります。 データベース マスター キーは、データベース スコープの資格情報シークレットの暗号化に使用されます。 
   
 ```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
@@ -351,12 +351,12 @@ CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
 );
 ```
 
-### <a name="d-create-external-data-source-to-reference-azure-blob-storage"></a>D. Azure blob ストレージを参照する外部データ ソースを作成します。
-Azure blob ストレージ コンテナーを参照する外部データ ソースを作成するには、Azure blob ストレージ URI と、Azure ストレージ アカウント キーを含むデータベース スコープ資格情報を指定します。
+### <a name="d-create-external-data-source-to-reference-azure-blob-storage"></a>D. Azure Blob Storage を参照する外部データ ソースを作成する
+お使いの Azure Blob Storage コンテナーを参照する外部データ ソースを作成するには、Azure Blob Storage URI と、ご自分の Azure ストレージ アカウント キーを含むデータベース スコープの資格情報を指定します。
 
-この例では、外部データ ソースは、Azure のストレージ アカウント名 myaccount の下にある dailylogs と呼ばれる Azure blob ストレージ コンテナーはします。 Azure ストレージの外部データ ソースはデータ転送だけです。述語のプッシュ ダウンをサポートしていません。
+この例では、外部データ ソースは、myaccount という Azure ストレージ アカウントの下の dailylogs という名前の Azure Blob Storage コンテナーです。 Azure ストレージの外部データ ソースはデータ転送のみで、述語のプッシュダウンはサポートされません。
 
-この例では、Azure ストレージへの認証データベース スコープ資格情報を作成する方法を示します。 データベースの資格情報シークレットでは、Azure ストレージ アカウント キーを指定します。 任意の文字列でデータベース スコープ資格情報 id、Azure ストレージへの認証は使用されませんを指定します。 次に、資格情報は、外部データ ソースを作成するステートメントで使用されます。
+この例では、Azure ストレージへの認証用にデータベース スコープ資格情報を作成する方法を示します。 データベースの資格情報シークレットで、Azure ストレージ アカウント キーを指定します。 Azure ストレージへの認証に使用しない、データベース スコープ資格情報 ID のすべての文字列を指定します。 次に、資格情報は、外部データ ソースを作成するステートメントで使用されます。
 
 ```
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
@@ -375,10 +375,10 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 );
 ```
 
-## <a name="examples-azure-sql-database"></a>例: Azure SQL データベース
+## <a name="examples-azure-sql-database"></a>例: Azure SQL Database
 
-### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. シャードのマップ manager の外部データ ソースを作成します。
-SHARD_MAP_MANAGER を参照する外部データ ソースを作成するには、Azure SQL Database または Azure の仮想マシンで SQL Server データベースにシャードのマップ manager をホストする論理サーバー名を指定します。
+### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. Shard Map Manager の外部データ ソースを作成する
+SHARD_MAP_MANAGER を参照する外部データ ソースを作成するには、Azure SQL Database または Azure 仮想マシン上の SQL Server データベースで Shard Map Manager をホストする論理サーバー名を指定します。
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -397,8 +397,8 @@ WITH (
 );
 ```
 
-### <a name="f-create-an-rdbms-external-data-source"></a>F. RDBMS の外部データ ソースを作成します。
-RDBMS を参照する外部データ ソースを作成するには、Azure SQL データベースでリモート データベースの論理サーバー名を指定します。
+### <a name="f-create-an-rdbms-external-data-source"></a>F. RDBMS の外部データ ソースを作成する
+RDBMS を参照する外部データ ソースを作成するには、Azure SQL Database でリモート データベースの論理サーバー名を指定します。
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -418,8 +418,8 @@ WITH (
 
 ## <a name="examples-azure-sql-data-warehouse"></a>例: Azure SQL Data Warehouse
 
-### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. Azure Data Lake Store を参照する外部データ ソースを作成します。
-Azure Data lake Store の接続は、ADLS URI と、Azure のアクティブなディレクトリ アプリケーションのサービス プリンシパルに基づいています。 このアプリケーションを作成するドキュメントはあります[Active Directory を使用してデータ lake store 認証](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)です。
+### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. Azure Data Lake Store を参照する外部データ ソースを作成する
+Azure Data Lake Store の接続は、お使いの ADLS URI と Azure Acitve Directory アプリケーションのサービス プリンシパルに基づいています。 このアプリケーションの作成に関するドキュメントは、「[Data Lake Store での Azure Active Directory を使用したサービス間認証](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)」で見つかります。
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -439,10 +439,10 @@ WITH (TYPE = HADOOP,
 
 
 
-## <a name="examples-parallel-data-warehouse"></a>例: 並列データ ウェアハウス
+## <a name="examples-parallel-data-warehouse"></a>例: Parallel Data Warehouse
 
-### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>H. プッシュ ダウンを有効になっている Hadoop を参照する外部データ ソースを作成します。
-PolyBase クエリの Hadoop にプッシュ ダウン計算を有効にする JOB_TRACKER_LOCATION オプションを指定します。 有効にすると、PolyBase はコストベースの判断を使用して、クエリの計算を Hadoop にプッシュする必要がありますか、SQL Server で、クエリの処理にすべてのデータを移動するかを判断します。 
+### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>H. プッシュダウンが有効になっている Hadoop を参照する外部データ ソースを作成する
+JOB_TRACKER_LOCATION オプションを指定して、PolyBase クエリの Hadoop への計算のプッシュダウンを有効にします。 有効にすると、PolyBase はクエリの計算を Hadoop にプッシュするか、すべてのデータを移動して SQL Server でクエリを処理するかどうかをコストに基づいて決定します。 
 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
@@ -453,10 +453,10 @@ WITH (
 );
 ```
 
-### <a name="i-create-external-data-source-to-reference-azure-blob-storage"></a>I. Azure blob ストレージを参照する外部データ ソースを作成します。
-外部を作成するには、データ ソース、外部のデータとして Azure blob ストレージ URI を指定する、Azure blob ストレージ コンテナーを参照するソースの場所。 認証用の PDW core-site.xml ファイルを Azure ストレージ アカウント キーを追加します。
+### <a name="i-create-external-data-source-to-reference-azure-blob-storage"></a>I. Azure Blob Storage を参照する外部データ ソースを作成する
+お使いの Azure Blob Storage コンテナーを参照するための外部データ ソースを作成するには、Azure Blob Storage URI を外部データ ソースの LOCATION として指定します。 ご自分の Azure ストレージ アカウント キーを認証用の PDW core-site.xml ファイルに追加します。
 
-この例では、外部データ ソースは、Azure のストレージ アカウント名 myaccount の下にある dailylogs と呼ばれる Azure blob ストレージ コンテナーはします。 Azure ストレージの外部データ ソースがデータ転送だけ、述語のプッシュ ダウンをサポートしていません。
+この例では、外部データ ソースは、myaccount という Azure ストレージ アカウントの下の dailylogs という名前の Azure Blob Storage コンテナーです。 Azure ストレージの外部データ ソースはデータ転送のみで、述語のプッシュダウンはサポートされません。
 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
@@ -466,9 +466,9 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ```
 
 ## <a name="examples-bulk-operations"></a>例: 一括操作   
-### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. 一括操作が Azure Blob ストレージからデータを取得する外部データ ソースを作成します。   
+### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. Azure Blob Storage からデータを取得する一括操作用の外部データ ソースを作成する   
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]」を参照してください。   
-一括操作を使用して次のデータ ソースを使用して[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)または[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)です。 使用して、使用する資格情報を作成する必要があります`SHARED ACCESS SIGNATURE`id として。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。   
+[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) または [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) を使用する一括操作に対し、次のデータ ソースを使用します。 使用される資格情報は、`SHARED ACCESS SIGNATURE` を使用して ID として作成する必要があります。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。   
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
@@ -477,15 +477,15 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
         CREDENTIAL = AccessAzureInvoices
     );   
 ```   
-この例では、使用してを参照してください[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)です。
+この使用例については、「[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)」をご覧ください。
   
 ## <a name="see-also"></a>参照
-[外部データ ソース (TRANSACT-SQL) を変更します](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
+[ALTER EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
 [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
 [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
-[EXTERNAL TABLE AS SELECT &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
-[テーブルとして選択 &#40; を作成します。Azure SQL Data Warehouse &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
-[sys.external_data_sources (TRANSACT-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
+[CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
+[CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
+[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   
 

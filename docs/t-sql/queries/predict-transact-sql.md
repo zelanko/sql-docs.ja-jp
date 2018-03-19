@@ -1,7 +1,7 @@
 ---
-title: "予測 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: PREDICT (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 02/25/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -14,21 +14,23 @@ ms.topic: language-reference
 f1_keywords:
 - PREDICT
 - PREDICT_TSQL
-dev_langs: TSQL
-helpviewer_keywords: PREDICT clause
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- PREDICT clause
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: b9aacbffa28783adf6e92d9260d2bf73d89a0cc4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: c4d6b3967807c83db75dd3171313e9a5869336a1
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/27/2018
 ---
-# <a name="predict-transact-sql"></a>予測 (TRANSACT-SQL)  
+# <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-予測値や保存されたモデルに基づいたスコアを生成します。  
+格納されているモデルに基づいて予測値やスコアを生成します。  
 
 ## <a name="syntax"></a>構文
 
@@ -57,64 +59,67 @@ MODEL = @model | model_literal
 
 **model**
 
-`MODEL`パラメーターを使用して、スコア付けまたは予測に使用するモデルを指定します。 モデルは、変数またはリテラル スカラー式として指定されます。
+`MODEL` パラメーターは、スコア付けまたは予測に使用するモデルを指定するために使用されます。 モデルは、変数、リテラル、またはスカラー式として指定されます。
 
 モデル オブジェクトは、R、Python または他のツールを使用して作成できます。
 
 **data**
 
-データ パラメーターを使用してをスコア付けまたは予測に使用するデータを指定します。 データは、クエリでテーブル ソースの形式で指定されます。 テーブル ソースには、テーブル、テーブルの別名、CTE のエイリアス、ビュー、またはテーブル値関数を指定できます。
+DATA パラメーターは、スコア付けまたは予測に使用するモデルを指定するために使用されます。 データは、クエリ内でテーブル ソースの形式で指定されます。 テーブル ソースには、テーブル、テーブルの別名、CTE の別名、ビュー、またはテーブル値関数のいずれかを指定できます。
 
 **parameters**
 
-パラメーターのパラメーターは、スコア付けまたは予測に使用される省略可能なユーザー定義のパラメーターを指定する使用されます。
+PARAMETERS パラメーターは、スコア付けまたは予測に使用される省略可能なユーザー定義のパラメーターを指定するために使用されます。
 
-各パラメーターの名前は、モデルの種類に固有です。 RevoScaleR で rxPredict 関数では、パラメーター、たとえば、 _@computeResiduals ビット_ロジスティック回帰モデルのスコア付けに残差の計算をサポートするためにします。  パラメーター名とその値を渡す可能性があります、`PREDICT`関数。
+各パラメーターの名前は、モデルの種類に固有です。 たとえば、RevoScaleR の [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 関数は、パラメーター `@computeResiduals` をサポートしています。これは、ロジスティック回帰モデルのスコア付け時に残差を計算するかどうかを示します。 互換性のあるモデルを呼び出している場合、そのパラメーター名と TRUE または FALSE 値を `PREDICT` 関数に渡すことができます。
 
-> [注]このオプションは、SQL Server 2017 のプレリリース版ではサポートされていませんしの将来の互換性の目的でのみが含まれます。
+> [!NOTE]
+> このオプションは、SQL Server 2017 のプレリリース版では機能しません。
 
-**WITH ( \<result_set_definition> )**
+**WITH ( <result_set_definition> )**
 
-によって返される出力のスキーマを指定すると、WITH 句が使用される、`PREDICT`関数。
+WITH 句は、`PREDICT` 関数によって返される出力のスキーマを指定するのに使用されます。
 
-によって返される列のほか、`PREDICT`関数自体は、データの一部であるすべての列がクエリで使用可能なを入力します。
+`PREDICT` 関数自体から返される列に加え、データ入力の一部であるすべての列がクエリで使用できます。
 
 ### <a name="return-values"></a>戻り値
 
-定義済みのスキーマがありません。SQL Server では、モデルの内容を検証しませんし、返される列の値を検証しません。  
-- `PREDICT`関数が入力として列を使用して渡します  
-- `PREDICT`関数では、新しい列の場合も生成されますが、列とそのデータ型の数は、予測に使用されたモデルの種類によって異なります。  
+定義済みのスキーマは使用できません。SQL Server では、モデルのコンテンツも返された列の値も検証しません。
 
-データに関連するすべてのエラー メッセージ、モデル、または列形式の関数から返される、基になる予測モデルに関連付けられています。  
-- RevoScaleR、同等の関数は[rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict)  
-- MicrosoftML、同等の関数は[rxPredict.mlModel](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxpredict)  
+- `PREDICT` 関数は入力として列を通過します。
+- `PREDICT` 関数では、新しい列も生成されますが、列の数とそのデータ型は、予測に使用されたモデルの種類に依存します。
 
-内部構造を使用してモデルを表示することはできません`PREDICT`です。 モデル自体の内容を理解する場合は、モデル オブジェクトを読み込み、逆シリアル化、適切な R コードを使用して、モデルを解析してください。
+データ、モデル、または列形式に関連するすべてのエラー メッセージは、モデルに関連付けられている基になる予測関数から返されます。
 
-## <a name="remarks"></a>解説
+- RevoScaleR の場合、同等の関数は [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)  
+- MicrosoftML の場合、同等の関数は [rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict)  
 
-`PREDICT`関数は、Linux を含む、SQL Server のすべてのエディションでサポートされています。
+`PREDICT` を使用してモデルの内部構造を表示することはできません。 モデル自体のコンテンツを理解するには、モデル オブジェクトを読み込み、逆シリアル化し、適切な R コードを使用してモデルを解析する必要があります。
 
-R、Python、または言語を習得する別のコンピューターを使用するサーバーにインストールすることが必要はありません、`PREDICT`関数。 別の環境でモデルをトレーニングし、SQL Server テーブルで使用するために保存できます`PREDICT`、保存されたモデルが SQL Server の別のインスタンスから、モデルを呼び出したりします。
+## <a name="remarks"></a>Remarks
 
-### <a name="supported-algorithms"></a>サポートされるアルゴリズム
+`PREDICT` 関数は、他の機械学習機能が有効になっているかどうかにかかわらず、Linux を含む SQL Server のすべてのエディション、および Azure SQL Database でサポートされています。 ただし、SQL Server 2017 以降が必要です。 
 
-モデルを使用する必要があります作成されている RevoScaleR パッケージからサポートされているアルゴリズムのいずれかを使用します。 現在サポートされているモデルの一覧は、次を参照してください。[リアルタイム スコアリング](../../advanced-analytics/real-time-scoring.md)です。
+`PREDICT` 関数を使用するサーバーに、R、Python、または別の機械学習言語をインストールする必要はありません。 別の環境でモデルをトレーニングし、`PREDICT` で使用するためにそれを SQL Server テーブルに保存することも、保存されたモデルがある SQL Server の別のインスタンスからモデルを呼び出すこともできます。
 
-### <a name="permissions"></a>権限
+### <a name="supported-algorithms"></a>サポートされているアルゴリズム
 
-アクセス許可は必要ありません`PREDICT`。 ただし、ユーザーのニーズ`EXECUTE`、データベースに対する権限と、入力として使用されるデータをクエリする権限です。 ユーザーも必要があります、テーブルからモデルを読み込むこと、モデルをテーブルに格納されている場合。
+使用するモデルは、RevoScaleR パッケージからサポートされているアルゴリズムのいずれかを使用して作成されている必要があります。 現在サポートされているモデルの一覧は、「[リアルタイム スコアリング](../../advanced-analytics/real-time-scoring.md)」を参照してください。
+
+### <a name="permissions"></a>アクセス許可
+
+`PREDICT` にはアクセス許可は必要ありませんが、ユーザーは、データベースに対する `EXECUTE` アクセス許可と、入力として使用される任意のデータをクエリするためのアクセス許可が必要です。 モデルがテーブルに格納されている場合、ユーザーはテーブルからモデルを読み込める必要もあります。
 
 ## <a name="examples"></a>使用例
 
-次の例では、呼び出し元の構文`PREDICT`です。
+次の例は、`PREDICT` を呼び出す構文を示しています。
 
-### <a name="call-a-stored-model-and-use-it-for-prediction"></a>保存されたモデルを呼び出すし、予測に使用
+### <a name="call-a-stored-model-and-use-it-for-prediction"></a>格納されているモデルを呼び出し、それを予測に使用する
 
-この例では、[models_table] テーブルに格納されている既存のロジスティック回帰モデルを呼び出します。 最新トレーニング済みモデル取得、SELECT ステートメントを使用し、予測関数を二項モデルを渡します。 入力値を表す機能です。出力では、モデルによって割り当てられた分類を表します。
+この例では、テーブル [models_table] に格納されている既存のロジスティック回帰モデルを呼び出します。 SELECT ステートメントを使用して、最新のトレーニング済みモデル取得してから、バイナリ モデルを PREDICT 関数に渡します。 入力値は機能を表します。出力は、モデルによって割り当てられた分類を表します。
 
 ```sql
-DECLARE @logit_model varbinary(max) = "SELECT TOP 1 @model from [models_table]";
+DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_table] ORDER BY [trained_date] DESC";
 DECLARE @input_qry = "SELECT ID, [Gender], [Income] from NewCustomers";
 
 SELECT PREDICT [class]
@@ -122,9 +127,9 @@ FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry
 WITH (class string);
 ```
 
-### <a name="using-predict-in-a-from-clause"></a>FROM 句での予測の使用
+### <a name="using-predict-in-a-from-clause"></a>FROM 句で PREDICT を使用する
 
-この例では参照、`PREDICT`で機能、`FROM`の句、`SELECT`ステートメント。
+この例では、`SELECT` ステートメントの `FROM` 句内の `PREDICT` 関数を参照します。
 
 ```sql
 SELECT d.*, p.Score
@@ -132,11 +137,11 @@ FROM PREDICT(MODEL = @logit_model,
   DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
-エイリアス**d**でテーブル ソースに指定された、_データ_dbo.mytable に属している列を参照するパラメーターを使用します。 エイリアス**p**向けに指定された、 **PREDICT** PREDICT 関数によって返される列を参照する関数を使用します。
+`DATA` パラメーターでテーブル ソースに指定された別名 **d** は、dbo.mytable に属する列を参照するために使用されます。 **PREDICT** 関数に指定された別名 **p** は、PREDICT 関数によって返される列を参照するために使用されます。
 
-### <a name="combining-predict-with-an-insert-statement"></a>INSERT ステートメントと予測の組み合わせ
+### <a name="combining-predict-with-an-insert-statement"></a>PREDICT を INSERT ステートメントと結合する
 
-入力データのスコアを生成し、テーブルに、予測された値を挿入すると予測のための一般的なユース ケースの 1 つです。 次の例では、呼び出し元のアプリケーションがテーブルに、予測される値を含む行を挿入するストアド プロシージャを使用することを前提としています。
+予測の一般的なユース ケースの 1 つは、入力データ用のスコアを生成してから、予測された値をテーブルに挿入することです。 次の例では、呼び出し元のアプリケーションがストアド プロシージャを使用して予測値を含む行をテーブルに挿入することを前提としています。
 
 ```sql
 CREATE PROCEDURE InsertLoanApplication
@@ -154,7 +159,7 @@ BEGIN
 END;
 ```
 
-プロシージャが、テーブル値パラメーターを使用して複数の行を受け取る場合に記述できますとおり。
+プロシージャが、テーブル値パラメーターを通じて複数の行を受け取る場合、次のように記述できます。
 
 ```sql
 CREATE PROCEDURE InsertLoanApplications (@new_applications dbo.loan_application_type)
@@ -168,26 +173,26 @@ BEGIN
 END;
 ```
 
-### <a name="creating-an-r-model-and-generating-scores-using-optional-model-parameters"></a>R モデルを作成して、省略可能なモデル パラメーターを使用してスコアの生成
+### <a name="creating-an-r-model-and-generating-scores-using-optional-model-parameters"></a>省略可能なモデル パラメーターを使用して、R モデルを作成しスコアを生成する
 
 > [!NOTE]
 > Release Candidate 1 では、パラメーターの引数の使用はサポートされていません。
 
-この例が共分散マトリックスを取り付けて、ロジスティック回帰モデルを使って作成したこのなど RevoScaleR への呼び出しを前提としています。
+この例では、次のような RevoScaleR への呼び出しを使用して、共分散マトリックスと一致するロジスティック回帰モデルを作成していることを前提としています。
 
 ```R
 logitObj <- rxLogit(Kyphosis ~ Age + Start + Number, data = kyphosis, covCoef = TRUE)
 ```
 
-SQL Server にバイナリ形式でモデルを格納する場合は、予測だけでなくエラーや信頼区間など、モデルの種類でサポートされている追加の情報を生成する予測関数を使用できます。
+モデルをバイナリ形式で SQL Server に格納する場合は、PREDICT 関数を使用して、予測だけでなく、モデルの種類でサポートされている、エラーや信頼区間などの追加の情報も生成することができます。
 
-次のコードは、rxPredict に R から、同等の呼び出しを示しています。
+次のコードは、R から [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) への同等の呼び出しです。
 
 ```R
 rxPredict(logitObj, data = new_kyphosis_data, computeStdErr = TRUE, interval = "confidence")
 ```
 
-使用して、同等の呼び出し、`PREDICT`関数にも、スコアが用意されています (予測値)、エラー、および信頼区間。
+`PREDICT` 関数を使用した同等の呼び出しでは、スコア (予測値)、エラー、および信頼区間も提供されます。
 
 ```sql
 SELECT d.Age, d.Start, d.Number, p.pred AS Kyphosis_Pred, p.stdErr, p.pred_lower, p.pred_higher
@@ -196,5 +201,3 @@ FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
   computeStdErr = 1, interval = 'confidence')
 WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 ```
-
-

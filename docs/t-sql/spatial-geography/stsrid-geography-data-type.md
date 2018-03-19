@@ -1,5 +1,5 @@
 ---
-title: "STSrid (geography データ型) |Microsoft ドキュメント"
+title: "STSrid (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsrid-geography-data-type"></a>STSrid (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **STSrid**インスタンスの spatial reference identifier (SRID) を表す整数します。  
+  **STSrid** はインスタンスの SRID (spatial reference identifier) を表す整数です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型: **int**  
   
  CLR 型: **SqlInt32**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このプロパティは変更できます。  
   
 ## <a name="examples"></a>使用例  
- 最初の例では、作成、`geography`使用してインスタンスの SRID 値 4326 (WGS84) `STSrid` SRID を確認します。  
+ 最初に、SRID 値 4326 (WGS84) の `geography` インスタンスを作成し、`STSrid` を使用して SRID を確認する例を示します。  
   
 ```  
 DECLARE @g geography;  
@@ -60,7 +60,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STSrid;  
 ```  
   
- 2 番目の例では使用`STSrid`にインスタンスの SRID 値を 4267 (NAD27) に変更し、変更された SRID 値を確認します。  
+ 次に、`STSrid` を使用してそのインスタンスの SRID 値を 4267 (NAD27) に変更し、変更された SRID 値を確認する例を示します。  
   
 ```  
 SET @g.STSrid = 4267;  
@@ -69,6 +69,6 @@ SELECT @g.STSrid;
   
 ## <a name="see-also"></a>参照  
  [Geography インスタンスの OGC メソッド](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [空間参照識別子 &#40;です。Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+ [&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
   

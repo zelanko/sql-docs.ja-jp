@@ -1,5 +1,5 @@
 ---
-title: "一致する (SQL グラフ) |Microsoft ドキュメント"
+title: "MATCH (SQL グラフ) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/05/2017
 ms.prod: sql-non-specified
@@ -32,10 +32,10 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="match-transact-sql"></a>一致する (TRANSACT-SQL)
+# <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-  グラフの検索条件を指定します。 一致は、WHERE 句の一部として、SELECT ステートメントで、グラフ ノードとエッジのテーブルでのみ使用できます。 
+  グラフの検索条件を指定します。 MATCH は、WHERE 句の一部として、SELECT ステートメントでグラフ ノードとエッジのテーブルでのみ使用できます。 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,24 +63,24 @@ MATCH (<graph_search_pattern>)
 
 ## <a name="arguments"></a>引数  
 *graph_search_pattern*  
-パターン検索またはグラフを走査するパスを指定します。 このパターンは、グラフ内のパスをスキャンするのに ASCII アートの構文を使用します。 パターンは、提供される矢印の方向のエッジを使用して別に 1 つのノードから移動します。 Parantheses 内部エッジ名前または別名が提供されます。 ノード名またはエイリアスは、2 つの矢印端に表示されます。 矢印は、パターンのどちらの方向に移動できます。
+グラフでの検索パターンまたは走査するパスを指定します。 このパターンは、グラフでパスを走査するために ASCII アート構文を使用します。 このパターンは、提供される矢印の方向でエッジを使用して 1 つのノードから別のノードに移動します。 エッジ名またはエイリアスは、かっこ内に表示されます。 ノード名またはエイリアスは、矢印の 2 つの端に表示されます。 矢印は、パターンのいずれの方向に移動できます。
 
 *node_alias*  
-名前または FROM 句で指定されたノードのテーブルの別名。
+FROM 句で指定されたノード テーブルの名前またはエイリアス。
 
 *edge_alias*  
-名前または FROM 句で指定されたエッジ テーブルの別名です。
+FROM 句で指定されたエッジ テーブルの名前またはエイリアス。
 
 
-## <a name="remarks"></a>解説  
-一致内のノード名を繰り返すことができます。  言い換えると、ノードは、同じクエリ内で時間の任意の数を走査します。  
-一致する内部エッジ名を繰り返すことはできません。  
-エッジは、どちらの方向ポイントできますが、明示的な方向である必要があります。  
-または、一致パターンでは、NOT 演算子はサポートされていません。 使用して他の式とは、WHERE 句で、一致を組み合わせることができます。 ただし、これを使用して他の式と組み合わせると OR がサポートされていません。 またはします。 
+## <a name="remarks"></a>Remarks  
+MATCH 内のノード名は繰り返すことができます。  つまり、ノードは、同じクエリ内でノードは任意の回数走査できます。  
+エッジ名は MATCH 内では繰り返すことはできません。  
+エッジは、いずれの方向もポイントできますが、明示的な方向が必要です。  
+MATCH パターンでは、OR および NOT 演算子はサポートされていません。 MATCH は、AND と WHERE 句を使用して他の式と組み合わせることができます。 ただし、OR または NOT を使用して他の式と組み合わせることはサポートされていません。 
 
 ## <a name="examples"></a>使用例  
-### <a name="a--find-a-friend"></a>A.  友達を検索します。 
- 次の例は、Person ノード テーブルと友人エッジ テーブルを作成、一部のデータを挿入し、一致を使用して、Alice、グラフ内のユーザーの友人を検索します。
+### <a name="a--find-a-friend"></a>A.  友達の検索 
+ 次の例では、Person ノード テーブルと friend エッジ テーブルを作成し、いくつかデータを挿入し、MATCH を使用して、グラフの Alice の友人を検索します。
 
  ```
  -- Create person node table
@@ -110,8 +110,8 @@ AND Person1.name = 'Alice';
 
  ```
 
- ### <a name="b--find-friend-of-a-friend"></a>B.  友人の友人を検索します。
- 次の例では、Alice の友人の友人を見つけようとします。 
+ ### <a name="b--find-friend-of-a-friend"></a>B.  友人の友人の検索
+ 次の例では、Alice の友人の友人の検索を試行します。 
 
  ```
 SELECT Person3.name AS FriendName 
@@ -121,8 +121,8 @@ AND Person1.name = 'Alice';
 
  ```
 
-### <a name="c--more-match-patterns"></a>C.  詳細`MATCH`パターン
- 内の一致パターンを指定するいくつか他の方法を次に示します。
+### <a name="c--more-match-patterns"></a>C.  その他の `MATCH` パターン
+ MATCH 内でパターンを指定する他のいくつかの方法を次に示します。
 
  ```
  -- Find a friend
@@ -153,6 +153,6 @@ AND Person1.name = 'Alice';
  
 
 ## <a name="see-also"></a>参照  
- [TABLE &#40; を作成します。グラフの SQL &#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [挿入 (SQL グラフ)](../../t-sql/statements/insert-sql-graph.md)]  
- [SQL Server 2017 を使用した処理グラフ](../../relational-databases/graphs/sql-graph-overview.md)  
+ [CREATE TABLE &#40;SQL グラフ&#41;](../../t-sql/statements/create-table-sql-graph.md)   
+ [INSERT (SQL グラフ)](../../t-sql/statements/insert-sql-graph.md)  
+ [SQL Server 2017 でのグラフ処理](../../relational-databases/graphs/sql-graph-overview.md)  

@@ -1,5 +1,5 @@
 ---
-title: "ALTER ROUTE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER ROUTE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  既存のルートに関するルート情報を変更[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既存のルートに関するルート情報を変更します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,12 +65,12 @@ WITH
  変更するルート情報を定義するための句を、WITH の後に指定します。  
   
  SERVICE_NAME **='***service_name***'**  
- このルートが示すリモート サービスの名前を指定します。 *Service_name*値に使用するリモート サービスの名前が一致する必要があります。 [!INCLUDE[ssSB](../../includes/sssb-md.md)]一致するように、バイトごとの比較を使用して、 *service_name*です。 つまり、この比較では大文字と小文字が区別され、現在の照合順序は考慮されません。 サービス名を持つルート**'SQL/ServiceBroker/BrokerConfiguration'** Broker Configuration Notice サービスへのルートです。 このサービスへのルートは、ブローカー インスタンスを指定できない場合があります。  
+ このルートが示すリモート サービスの名前を指定します。 *service_name* はリモート サービスで使用される名前と正確に一致する必要があります。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] は *service_name* 文字列をバイト単位で照合します。 つまり、この比較では大文字と小文字が区別され、現在の照合順序は考慮されません。 **'SQL/ServiceBroker/BrokerConfiguration'** というサービス名を持つルートは、Broker Configuration Notice サービスへのルートです。 このサービスへのルートは、ブローカー インスタンスを指定できない場合があります。  
   
  SERVICE_NAME 句を省略した場合、ルートのサービス名は変更されません。  
   
  BROKER_INSTANCE **='***broker_instance***'**  
- 発信先サービスをホストするデータベースを指定します。 *Broker_instance*パラメーターは、選択したデータベースで次のクエリを実行して取得できますが、リモート データベースのブローカー インスタンス識別子である必要があります。  
+ 発信先サービスをホストするデータベースを指定します。 *broker_instance* パラメーターは、リモート データベース用のブローカー インスタンス識別子である必要があります。これは選択したデータベースで次のクエリを実行することにより取得できます。  
   
 ```  
 SELECT service_broker_guid  
@@ -83,15 +83,15 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
- 有効期間 **= * * * route_lifetime*  
- 時間を秒単位で指定される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ルーティング テーブルにルートを保持します。 有効期間の最後に、ルートの有効期限、および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]新しいメッセージ交換のルートを選択するときに、ルートを不可と見なされます。 この句を省略した場合、ルートの有効期限は変更されません。  
+ LIFETIME **=***route_lifetime*  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がルーティング テーブルにルートを保持する時間を秒単位で指定します。 有効期間が終了するとルートは期限切れとなり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、新しいメッセージ交換用のルートを選択するときに、そのルートは考慮されなくなります。 この句を省略した場合、ルートの有効期限は変更されません。  
   
  ADDRESS **='***next_hop_address'*  
- ルート用のネットワーク アドレスを指定します。 *Next_hop_address*次の形式で TCP/IP アドレスを指定します。  
+ ルート用のネットワーク アドレスを指定します。 *next_hop_address* には、次の形式で TCP/IP アドレスを指定します。  
   
  **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
- 指定した*port_number*のポート番号に一致する必要があります、[!INCLUDE[ssSB](../../includes/sssb-md.md)]のインスタンスのエンドポイント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定したコンピューターにします。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
+ 指定した *port_number* は、指定したコンピューターにおける [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの [!INCLUDE[ssSB](../../includes/sssb-md.md)] エンドポイント用のポート番号と一致する必要があります。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
   
 ```  
 SELECT tcpe.port  
@@ -101,21 +101,21 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- ルート**'LOCAL'**の*next_hop_address*の現在のインスタンス内のサービスにメッセージを配信[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ ルートの *next_hop_address* が **'LOCAL'** になっている場合、メッセージは現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のサービスに配信されます。  
   
- ルート**'TRANSPORT'**の*next_hop_address*、ネットワーク アドレスは、サービスの名前のネットワーク アドレスに基づいて決定されます。 指定するルート**'TRANSPORT'**サービス名またはブローカー インスタンスを指定できます。  
+ ルートの *next_hop_address* が **'TRANSPORT'** になっている場合、ネットワーク アドレスは、サービス名の中にあるネットワーク アドレスに基づいて決まります。 **'TRANSPORT'** を指定するルートは、サービス名またはブローカー インスタンスを指定できます。  
   
- ときに、 *next_hop_address*プリンシパル サーバーは、データベース ミラーは、ミラー サーバーの MIRROR_ADDRESS も指定する必要があります。 それ以外の場合、このルートではミラー サーバーへの自動フェールオーバーは行われません。  
+ *next_hop_address* にデータベース ミラーのプリンシパル サーバーを指定した場合は、ミラー サーバーの MIRROR_ADDRESS も指定する必要があります。 それ以外の場合、このルートではミラー サーバーへの自動フェールオーバーは行われません。  
   
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
  MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
- ミラー サーバーがプリンシパル サーバーが、ミラー化のネットワーク アドレスを指定します、 *next_hop_address*です。 *Next_hop_mirror_address*次の形式で TCP/IP アドレスを指定します。  
+ プリンシパル サーバーが *next_hop_address* となっているミラーリング ペアのミラー サーバーのネットワーク アドレスを指定します。 *next_hop_mirror_address* は、次の形式で TCP/IP アドレスを指定します。  
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- 指定した*port_number*のポート番号に一致する必要があります、[!INCLUDE[ssSB](../../includes/sssb-md.md)]のインスタンスのエンドポイント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定したコンピューターにします。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
+ 指定した *port_number* は、指定したコンピューターにおける [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの [!INCLUDE[ssSB](../../includes/sssb-md.md)] エンドポイント用のポート番号と一致する必要があります。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
   
 ```  
 SELECT tcpe.port  
@@ -125,24 +125,24 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- MIRROR_ADDRESS が指定されている場合、ルートには SERVICE_NAME 句と BROKER_INSTANCE 句を指定する必要があります。 指定するルート**'LOCAL'**または**'TRANSPORT'**の*next_hop_address*ミラー アドレスを指定しない場合があります。  
+ MIRROR_ADDRESS が指定されている場合、ルートには SERVICE_NAME 句と BROKER_INSTANCE 句を指定する必要があります。 *next_hop_address* に **'LOCAL'** または **'TRANSPORT'** を指定するルートでは、ミラー アドレスが指定されない場合があります。  
   
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
-## <a name="remarks"></a>解説  
- ルートを格納するルーティング テーブルを読み取ることができるメタデータ テーブル、 **sys.routes**カタログ ビューです。 このルーティング テーブルは、CREATE ROUTE、ALTER ROUTE、および DROP ROUTE ステートメントでのみ更新できます。  
+## <a name="remarks"></a>Remarks  
+ ルートを格納するルーティング テーブルは、**sys.routes** カタログ ビューを使用して読み取ることができるメタデータ テーブルです。 このルーティング テーブルは、CREATE ROUTE、ALTER ROUTE、および DROP ROUTE ステートメントでのみ更新できます。  
   
  ALTER ROUTE コマンドで指定できない句に関する情報は、変更されません。 したがって、ALTER を使用して、ルートのタイムアウトを無効にしたり、ルートをすべてのサービス名やブローカー インスタンスと照合するような変更はできません。 このようなルート情報を変更するには、既存のルートを削除して新しいルートを作成し、新しい情報を指定する必要があります。  
   
- ルート**'TRANSPORT'**の*next_hop_address*、ネットワーク アドレスは、サービスの名前に基づいて決定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有効な形式でネットワーク アドレスで始まるサービス名を正常に処理できる、 *next_hop_address*です。 名前に有効なネットワーク アドレスが含まれているサービスは、そのサービス名のネットワーク アドレスにルートされます。  
+ ルートによって *next_hop_address* の **'TRANSPORT'** が指定されるとき、ネットワーク アドレスはサービスの名前に基づいて決定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*next_hop_address* のネットワーク アドレスが有効な形式であれば、このネットワーク アドレスで始まるサービス名が適切に処理されます。 名前に有効なネットワーク アドレスが含まれているサービスは、そのサービス名のネットワーク アドレスにルートされます。  
   
  ルートで指定されているサービス、ネットワーク アドレス、ブローカー インスタンス識別子のいずれか、またはすべてが同じであれば、ルーティング テーブルにはルートをいくつでも含めることができます。 このような場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)] でルートを選択するときには、メッセージ交換で指定された情報とルーティング テーブル内の情報を照合して、最も正確に一致する情報を取得するためのプロシージャが使用されます。  
   
  サービスの AUTHORIZATION を変更するには、ALTER AUTHORIZATION ステートメントを使用します。  
   
-## <a name="permissions"></a>権限  
- ルートを変更するためのアクセス許可の既定値は、ルートのメンバーの所有者、 **db_ddladmin**または**db_owner**固定データベース ロールのメンバー、 **sysadmin**固定サーバーの役割。  
+## <a name="permissions"></a>アクセス許可  
+ ルートを変更する権限は、既定ではルートの所有者、**db_ddladmin** 固定データベース ロールまたは **db_owner** 固定データベース ロールのメンバー、**sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
 ## <a name="examples"></a>使用例  
   
@@ -165,7 +165,7 @@ ALTER ROUTE ExpenseRoute
 ```  
   
 ### <a name="c-changing-the-address-for-a-route"></a>C. ルートのアドレスを変更する  
- 次の例は、ネットワーク アドレスを変更、 `ExpenseRoute` TCP ポートへのルート`1234`IP アドレスを持つホストで`10.2.19.72`です。  
+ 次の例では、IP アドレスが `10.2.19.72` のホストで、`ExpenseRoute` ルートのネットワーク アドレスが TCP ポート `1234` に変更されます。  
   
 ```  
 ALTER ROUTE ExpenseRoute   
@@ -185,7 +185,7 @@ ALTER ROUTE ExpenseRoute
   
 ## <a name="see-also"></a>参照  
  [CREATE ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
- [DROP ROUTE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-route-transact-sql.md)   
+ [DROP ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

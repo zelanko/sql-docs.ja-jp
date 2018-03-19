@@ -1,5 +1,5 @@
 ---
-title: "STNumPoints (geometry データ型) |Microsoft ドキュメント"
+title: "STNumPoints (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumpoints-geometry-data-type"></a>STNumPoints (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  図形の各ポイントの数の合計を返して、 **geometry**インスタンス。  
+  **geometry** インスタンス内の各図形に含まれる地点の合計数を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **int**  
   
- CLR の戻り値の型: **SqlInt32**  
+ CLR 戻り値の型: **SqlInt32**  
   
-## <a name="remarks"></a>解説  
- このメソッドの説明内のポイントの数、 **geometry**インスタンス。 重複する地点はカウントされます。 このインスタンスの場合、**コレクション**各要素の型では、このメソッドが戻るポイントの合計。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、**geometry** インスタンスの記述に含まれている地点をカウントします。 重複する地点はカウントされます。 このインスタンスが**コレクション**型の場合、このメソッドは各要素内の地点の合計数を返します。  
   
 ## <a name="examples"></a>使用例  
  `LineString` インスタンスを作成し、`STNumPoints()` を使用して、インスタンスの記述で使用されている地点の数を確認する例を次に示します。  

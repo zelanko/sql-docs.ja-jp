@@ -1,5 +1,5 @@
 ---
-title: "END CONVERSATION (TRANSACT-SQL) |Microsoft ドキュメント"
+title: END CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -61,24 +61,24 @@ END CONVERSATION conversation_handle
  終了するメッセージ交換のメッセージ交換ハンドルを指定します。  
   
  WITH ERROR =*failure_code*  
- エラー コードを指定します。 *Failure_code*の種類は**int**です。このエラー コードはユーザー定義のコードで、メッセージ交換の相手側に送信するエラー メッセージの一部となります。 このエラー コードは 0 よりも大きい値にする必要があります。  
+ エラー コードを指定します。 *Failure_code* のデータ型は **int**です。このエラー コードはユーザー定義のコードで、メッセージ交換の相手側に送信するエラー メッセージの一部となります。 このエラー コードは 0 よりも大きい値にする必要があります。  
   
  DESCRIPTION =*failure_text*  
- エラー メッセージです。 *Failure_text*の種類は**nvarchar (3000)**です。 このエラー テキストはユーザー定義のテキストで、メッセージ交換の相手側に送信するエラー メッセージの一部となります。  
+ エラー メッセージです。 *Failure_text* のデータ型は **nvarchar (3000)**です。 このエラー テキストはユーザー定義のテキストで、メッセージ交換の相手側に送信するエラー メッセージの一部となります。  
   
  WITH CLEANUP  
- 正常に完了できなかったメッセージ交換の一方の側のメッセージとカタログ ビュー エントリをすべて削除します。 メッセージ交換の相手側にはクリーンアップは通知されません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス キューのメッセージ交換のエンドポイント、転送キューにメッセージ交換のすべてのメッセージおよびメッセージ交換のすべてのメッセージを削除します。 管理者は、このオプションを使用して、正常に完了できなかったメッセージ交換のメッセージを削除できます。 たとえば、リモート サービスが永久的に削除された場合、管理者は WITH CLEANUP を使ってこのサービスに対するメッセージを削除できます。 コードでは WITH CLEANUP を使用しない、[!INCLUDE[ssSB](../../includes/sssb-md.md)]アプリケーションです。 受信エンドポイントでメッセージの受信を確認する前に END CONVERSATION WITH CLEANUP が実行されると、送信エンドポイントからそのメッセージが再び送信されます。 これにより、ダイアログが再実行される可能性があります。  
+ 正常に完了できなかったメッセージ交換の一方の側のメッセージとカタログ ビュー エントリをすべて削除します。 メッセージ交換の相手側にはクリーンアップは通知されません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、メッセージ交換のエンドポイントが削除され、転送キューおよびサービス キューにあるメッセージ交換のすべてのメッセージも削除されます。 管理者は、このオプションを使用して、正常に完了できなかったメッセージ交換のメッセージを削除できます。 たとえば、リモート サービスが永久的に削除された場合、管理者は WITH CLEANUP を使ってこのサービスに対するメッセージを削除できます。 WITH CLEANUP は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] アプリケーションのコードでは使用しないでください。 受信エンドポイントでメッセージの受信を確認する前に END CONVERSATION WITH CLEANUP が実行されると、送信エンドポイントからそのメッセージが再び送信されます。 これにより、ダイアログが再実行される可能性があります。  
   
-## <a name="remarks"></a>解説  
- メッセージ交換のロックを終了、メッセージ交換グループを指定した*conversation_handle*に属しています。 メッセージ交換の終了時に[!INCLUDE[ssSB](../../includes/sssb-md.md)]サービス キューからメッセージ交換のすべてのメッセージを削除します。  
+## <a name="remarks"></a>Remarks  
+ メッセージ交換を終了すると、指定した *conversation_handle* が属するメッセージ交換グループがロックされます。 メッセージ交換の終了時、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってこのメッセージ交換のすべてのメッセージがサービス キューから削除されます。  
   
  メッセージ交換が終了した後、アプリケーションではそのメッセージ交換のメッセージを送受信できなくなります。 メッセージ交換を完了するには、メッセージ交換の両方の参加者が END CONVERSATION を呼び出す必要があります。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] が、メッセージ交換の相手側から終了ダイアログ メッセージまたはエラー メッセージを受信しなかった場合は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] から相手側に、メッセージ交換が終了したことが通知されます。 この場合、このメッセージ交換のメッセージ交換ハンドルが無効になる一方、メッセージ交換のエンドポイントはアクティブなまま残り、この状態はリモート サービスをホストするインスタンスからメッセージの受信確認が返されるまで継続されます。  
   
- 場合[!INCLUDE[ssSB](../../includes/sssb-md.md)]がまだ処理されていない、終了ダイアログ メッセージまたは error メッセージ、メッセージ交換の[!INCLUDE[ssSB](../../includes/sssb-md.md)]メッセージ交換が終了したメッセージ交換のリモート側に通知します。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] からリモート サービスに送信されるメッセージは、指定されるオプションによって異なります。  
+ メッセージ交換の終了ダイアログ メッセージまたはエラー メッセージが [!INCLUDE[ssSB](../../includes/sssb-md.md)] でまだ処理されていない場合は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] からメッセージ交換のリモート側に、メッセージ交換が終了したことが通知されます。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] からリモート サービスに送信されるメッセージは、指定されるオプションによって異なります。  
   
--   リモート サービスがアクティブである場合は、メッセージ交換がエラー、およびへのメッセージ交換が終了[!INCLUDE[ssSB](../../includes/sssb-md.md)]型のメッセージを送信`http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog`リモート サービスにします。 [!INCLUDE[ssSB](../../includes/sssb-md.md)]このメッセージをメッセージ交換の順に転送キューに追加します。 現在転送キューにあるメッセージ交換のすべてのメッセージは、このメッセージが送信されるよりも前に、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって送信されます。  
+-   メッセージ交換がエラーなく終了し、リモート サービスへのメッセージ交換がアクティブな状態を継続していると、[!INCLUDE[ssSB](../../includes/sssb-md.md)] からリモート サービスに、`http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` のようなメッセージが送信されます。 このメッセージは、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってメッセージ交換の順に転送キューに追加されます。 現在転送キューにあるメッセージ交換のすべてのメッセージは、このメッセージが送信されるよりも前に、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって送信されます。  
   
--   メッセージ交換をエラーで終了し、リモート サービスへのメッセージ交換がアクティブである場合[!INCLUDE[ssSB](../../includes/sssb-md.md)]型のメッセージを送信`http://schemas.microsoft.com/SQL/ServiceBroker/Error`リモート サービスにします。 現在転送キューに残っているメッセージ交換のメッセージはすべて、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって削除されます。  
+-   メッセージ交換がエラーで終了し、リモート サービスへのメッセージ交換がアクティブな状態を継続していると、[!INCLUDE[ssSB](../../includes/sssb-md.md)] からリモート サービスに、`http://schemas.microsoft.com/SQL/ServiceBroker/Error` のようなメッセージが送信されます。 現在転送キューに残っているメッセージ交換のメッセージはすべて、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって削除されます。  
   
 -   データベース管理者は WITH CLEANUP 句を使用して、正常に完了しなかったメッセージ交換のメッセージを削除できます。 このオプションでは、メッセージ交換のすべてのメッセージとカタログ ビュー エントリが削除されます。 この場合、メッセージ交換のリモート側にはメッセージ交換が終了したことが通知されません。また、アプリケーションでは送信されたが、ネットワーク経由では転送されていなかったメッセージは受信できないことがあります。 メッセージ交換が正常に完了できない場合にのみ、このオプションを使用してください。  
   
@@ -90,7 +90,7 @@ END CONVERSATION conversation_handle
   
  END CONVERSATION は、ユーザー定義の関数では無効です。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  アクティブなメッセージ交換を終了するには、そのメッセージ交換の所有者であるか、sysadmin 固定サーバー ロールまたは db_owner 固定データベース ロールのメンバーであることが必要です。  
   
  sysadmin 固定サーバー ロールまたは db_owner 固定データベース ロールのメンバーであれば、WITH CLEANUP を使用して、既に完了したメッセージ交換のメタデータを削除できます。  
@@ -98,14 +98,14 @@ END CONVERSATION conversation_handle
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-ending-a-conversation"></a>A. メッセージ交換を終了する  
- 次の例で指定したダイアログを終了する`@dialog_handle`です。  
+ 次の例では、`@dialog_handle` で指定したダイアログを終了します。  
   
 ```  
 END CONVERSATION @dialog_handle ;  
 ```  
   
 ### <a name="b-ending-a-conversation-with-an-error"></a>B. メッセージ交換を終了し、エラーを返す  
- 次の例で指定したダイアログを終了する`@dialog_handle`処理中のステートメントがエラーを報告する場合はエラーです。 これは簡単なエラー処理であり、アプリケーションによってはこの方法が適切でない場合があります。  
+ 次の例では、処理中のステートメントでエラーがレポートされた場合に、`@dialog_handle` で指定したダイアログを終了し、エラーを返します。 これは簡単なエラー処理であり、アプリケーションによってはこの方法が適切でない場合があります。  
   
 ```  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
@@ -130,15 +130,15 @@ COMMIT TRANSACTION ;
 ```  
   
 ### <a name="c-cleaning-up-a-conversation-that-cannot-complete-normally"></a>C. 正常に完了しなかったメッセージ交換をクリーンアップする  
- 次の例で指定したダイアログを終了する`@dialog_handle`です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リモート サービスを通知することがなくサービス キューと転送キューからすべてのメッセージをすぐに削除します。 ダイアログのクリーンアップを終了するリモート サービスに通知しません、ためにのみ使用このリモート サービスが受信可能にできない場合、 **EndDialog**または**エラー**メッセージ。  
+ 次の例では、`@dialog_handle` で指定したダイアログを終了します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではサービス キューと転送キューからすべてのメッセージが直ちに削除され、リモート サービスに通知は送信されません。 このようにクリーンアップと共にダイアログを終了すると、リモート サービスに通知が送信されません。この方法は、リモート サービスで **EndDialog** または **Error** メッセージを受信できない場合にのみ使用してください。  
   
 ```  
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
 ```  
   
 ## <a name="see-also"></a>参照  
- [BEGIN CONVERSATION TIMER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
- [BEGIN DIALOG CONVERSATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [sys.conversation_endpoints &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

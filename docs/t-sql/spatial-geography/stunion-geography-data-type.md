@@ -1,5 +1,5 @@
 ---
-title: "STUnion (geography データ型) |Microsoft ドキュメント"
+title: "STUnion (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stunion-geography-data-type"></a>STUnion (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  和集合を表すオブジェクトを返します、 **geography**インスタンスと別**geography**インスタンス。  
+  **geography** インスタンスと別の **geography** インスタンスの和集合を表すオブジェクトを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,20 +45,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geography*  
- もう 1 つ**geography**インスタンス STUnion() が呼び出されて、インスタンスとの和集合を形成します。  
+ STUnion() を呼び出したインスタンスとの和集合を形成する、別の **geography** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR 戻り値の型: **SqlGeography**  
   
 ## <a name="exceptions"></a>例外  
- このメソッドは、 **ArgumentException**場合は、インスタンスに対蹠が含まれています。  
+ このメソッドは、このインスタンスに対蹠点が含まれている場合、**ArgumentException** をスローします。  
   
-## <a name="remarks"></a>解説  
- このメソッドは、場合常に null を返しますの spatial reference identifier (Srid)、 **geography**インスタンスが一致しません。  
+## <a name="remarks"></a>Remarks  
+ **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]半球より大きい空間インスタンスをサポートしています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、サーバー上で返される結果セットが拡張されて**FullGlobe**インスタンス。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、半球より大きい空間インスタンスをサポートしています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サーバー上で返される結果セットが **FullGlobe** インスタンスに拡張されています。  
   
  結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-computing-the-union-of-two-polygons"></a>A. 2 つの多角形の和集合を計算する  
- 次の例で`STUnion()`2 つの和集合を計算する`Polygon`インスタンス。  
+ `STUnion()` を使用して 2 つの `Polygon` インスタンスの和集合を計算する例を次に示します。  
   
 ```  
 DECLARE @g geography;  
@@ -87,7 +87,7 @@ SELECT @g.STUnion(@h).ToString();
  ```  
   
 ### <a name="c-producing-a-triagonal-hole-from-a-union-of-a-curvepolygon-and-a-traigonal-hole"></a>C. CurvePolygon と Polygon の和集合から三角形の穴を生成する  
- 次の例の和集合から三角形の穴を生成する、`CurvePolygon`で、`Polygon`インスタンス。  
+ `CurvePolygon` と `Polygon` インスタンスの和集合から三角形の穴を生成する例を次に示します。  
   
 ```
  DECLARE @g geography = 'POLYGON ((-0.5 0, 0 1, 0.5 0.5, -0.5 0))';  

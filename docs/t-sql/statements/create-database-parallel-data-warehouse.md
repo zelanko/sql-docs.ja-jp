@@ -1,5 +1,5 @@
 ---
-title: "データベース (並列データ ウェアハウス) を作成 |Microsoft ドキュメント"
+title: "CREATE DATABASE (並列データ ウェアハウス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-database-parallel-data-warehouse"></a>データベース (並列データ ウェアハウス) を作成します。
+# <a name="create-database-parallel-data-warehouse"></a>CREATE DATABASE (並列データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  新しいデータベースを作成、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]アプライアンスです。 このステートメントを使用する、アプライアンスのデータベースに関連付けられているすべてのファイルを作成して、最大サイズとデータベースのテーブルとトランザクション ログの自動拡張オプションを設定します。  
+  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] アプライアンスで新しいデータベースを作成します。 このステートメントを使用し、アプライアンス データベースに関連付けられているすべてのファイルを作成し、データベース テーブルとトランザクション ログの最大サイズと自動増加オプションを設定します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,42 +45,42 @@ WITH (
   
 ## <a name="arguments"></a>引数  
  *database_name*  
- 新しいデータベースの名前。 許可されているデータベース名の詳細についてを参照してください「オブジェクトの名前付け規則」と「データベース名の予約」、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
+ 新しいデータベースの名前。 許容されるデータベース名の詳細については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]の "オブジェクトの名前付け規則" と "予約済みデータベース名" を参照してください。  
   
- 自動拡張 = ON |**OFF**  
- 指定するかどうか、 *replicated_size*、 *distributed_size*、および*log_size*の指定を超える必要に応じて、このデータベースのパラメーターが自動的に拡大サイズ。 既定値は**OFF**です。  
+ AUTOGROW = ON | **OFF**  
+ このデータベースの *replicated_size*、*distributed_size*、*log_size* パラメーターを必要に応じ、指定サイズを超えて自動増加するのかどうかを指定します。 既定値は **OFF** です。  
   
- 自動拡張が ON の場合、 *replicated_size*、 *distributed_size*、および*log_size*として拡張されます (指定した初期のサイズのブロック) ではなく各データの挿入に必要なupdate、またはその他の操作を既に割り当てられているより多くのストレージを必要とします。  
+ AUTOGROW が ON の場合、*replicated_size*、*distributed_size*、*log_size* は、割り当て以上の記憶域を必要とするデータの挿入、更新、その他のアクションごとに、必要に応じて増加します (最初に指定したサイズのブロックではなく)。  
   
- 自動拡張がオフの場合は、サイズが自動的に拡張されません。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]必要な操作をしようとしたときにエラーが返されます*replicated_size*、 *distributed_size*、または*log_size*指定した値より大きくなることにします。  
+ AUTOGROW が OFF の場合、サイズは自動増加しません。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、*replicated_size*、*distributed_size*、*log_size* がその指定値を超えて増加することが要求されるアクションを試行するとエラーを返します。  
   
- いずれかのすべてのサイズのオンまたはオフにすべてのサイズが自動拡張します。 たとえば、自動拡張 ON に設定することはない*log_size*、に対して設定されていませんが、 *replicated_size*です。  
+ AUTOGROW はすべてのサイズに対して ON にするか、すべてのサイズに対して OFF にします。 たとえば、*log_size* に対して AUTOGROW を ON に設定し、*replicated_size* に対しては ON に設定しないということはできません。  
   
  *replicated_size* [ GB ]  
- 正の数値。 レプリケートされたテーブルと対応するデータに割り当てられた合計領域の整数または 10 進数ギガバイト単位でサイズを設定*各コンピューティング ノードで*です。 最小値と最大の*replicated_size*要件を参照してください「最小値と最大値」、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
+ 正の数。 *計算ノードごとに*、複製テーブルと対応データに割り当てる合計領域のサイズを設定します (整数または 10 進数の GB)。 *replicated_size* の最小要件と最大要件については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] の "最小値と最大値" を参照してください。  
   
- 自動拡張が ON の場合は、この制限を超えるレプリケートされたテーブルが許可されます。  
+ AUTOGROW が ON の場合、複製テーブルはこの上限を超えて増加できます。  
   
- 挿入を既存のレプリケートされたデータは、テーブル、または、既存の更新ではなくサイズが増加するようにテーブルがレプリケートされる場合は、ユーザーが、新しいレプリケートされたテーブルを作成しようとすると、エラーが返されます自動拡張がオフの場合は、 *replicated_size*.  
+ AUTOGROW が OFF の場合、ユーザーが新しい複製テーブルを作成しようとしたり、既存の複製テーブルにデータを挿入しようとしたり、サイズが *replicated_size* を超えるのに既存の複製テーブルを更新しようとするとエラーが返されます。  
   
- *distributed_size* [GB]  
- 正の数値。 分散テーブル (および対応するデータ) に割り当てられた合計領域を整数または 10 進数ギガバイト単位で、サイズ*アプライアンスにわたって*です。 最小値と最大の*distributed_size*要件を参照してください「最小値と最大値」、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
+ *distributed_size* [ GB ]  
+ 正の数。 *アプライアンス全体で*分散テーブル (と対応データ) に割り当てる合計領域のサイズ (整数または 10 進数の GB)。 *distributed_size* の最小要件と最大要件については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] の "最小値と最大値" を参照してください。  
   
- 自動拡張が ON の場合は、この制限を超える分散テーブルが許可されます。  
+ AUTOGROW が ON の場合、分散テーブルはこの上限を超えて増加できます。  
   
- Insert のデータを既存の分散がテーブル、またはを超えるサイズが増加するように既存の分散テーブルを更新する場合は、ユーザーが新しい分散テーブルを作成しようとすると、自動拡張がオフの場合、エラーが返されます*distributed_size*.  
+ AUTOGROW が OFF の場合、ユーザーが新しい分散テーブルを作成しようとしたり、既存の分散テーブルにデータを挿入しようとしたり、サイズが *distributed_size* を超えるのに既存の分散テーブルを更新しようとするとエラーが返されます。  
   
- *log_size* [GB]  
- 正の数値。 整数または 10 進数ギガバイト単位でのトランザクション ログのサイズ*アプライアンスにわたって*です。  
+ *log_size* [ GB ]  
+ 正の数。 *アプライアンス全体*のトランザクション ログのサイズ (整数または 10 進数の GB)。  
   
- 最小値と最大の*log_size*要件を参照してください「最小値と最大値」、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
+ *log_size* の最小要件と最大要件については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] の "最小値と最大値" を参照してください。  
   
- 自動拡張が ON の場合は、この制限を超えるログ ファイルが許可されています。 使用して、 [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)ステートメントを元のサイズにログ ファイルのサイズを小さきます。  
+ AUTOGROW が ON の場合、ログ ファイルはこの上限を超えて増加できます。 ログ ファイルのサイズを元のサイズまで減らすには、[DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) ステートメントを使用します。  
   
- アクション以外の個々 のコンピューティング ノードでログのサイズが増加するためにユーザーにエラーが返されます自動拡張がオフの場合は、 *log_size*です。  
+ AUTOGROW が OFF の場合、個々の計算ノードで、ログ サイズが *log_size* を超えて増加するようなアクションが行われると、ユーザーにエラーが返されます。  
   
-## <a name="permissions"></a>権限  
- 必要があります、 **CREATE ANY DATABASE**メンバーシップまたは、master データベースの権限、 **sysadmin**固定サーバー ロール。  
+## <a name="permissions"></a>アクセス許可  
+ master データベースの **CREATE ANY DATABASE** 許可または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
  次の例は、データベース ユーザー Fay にデータベースを作成する権限を与えます。  
   
@@ -92,31 +92,31 @@ GO
 ```  
   
 ## <a name="general-remarks"></a>全般的な解説  
- データベースが作成されます互換性は、データベース互換性レベル 120 とレベルを[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]です。 これにより、データベースがすべての使用できる、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] PDW を使用する機能。  
+ データベースはデータベース互換性レベル 120 で作成されます。これは [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] の互換性レベルです。 この互換性によって、PDW で使用されるすべての [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 機能をデータベースで使用できます。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- CREATE DATABASE ステートメントは、明示的なトランザクションでは許可されません。 詳細については、次を参照してください。[ステートメント](../../t-sql/statements/statements.md)です。  
+ CREATE DATABASE ステートメントは、明示的なトランザクションでは使用できません。 詳細については、「[ステートメント](../../t-sql/statements/statements.md)」を参照してください。  
   
- データベースでの最小値と最大の制約については、「最小値と最大値」を参照してください、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
+ データベースの制約の最小値と最大値については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] の "最小値と最大値" を参照してください。  
   
- データベースの作成時、必要がある十分な空き領域*各コンピューティング ノードで*を次のサイズの合計を割り当てます。  
+ データベースを作成するときは、次のサイズの組み合わせ合計を割り当てるために、*計算ノードごとに*十分な空き領域が必要になります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルを持つデータベースのサイズ*replicated_table_size*です。  
+-   テーブルのサイズが *replicated_table_size* の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルを持つデータベースのサイズ (*distributed_table_size* /コンピューティング ノードの数)。  
+-   テーブルのサイズが (*distributed_table_size* / 計算ノードの数) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログのサイズ (*log_size* /コンピューティング ノードの数)。  
+-   ログのサイズが (*log_size* / 計算ノードの数) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="locking"></a>ロック  
- データベース オブジェクトの共有ロックを取得します。  
+ DATABASE オブジェクトを共有ロックします。  
   
 ## <a name="metadata"></a>メタデータ  
- この操作に成功したら、エントリにこのデータベースが表示されますが、 [sys.databases &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)と[sys.objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)メタデータのビューです。  
+ この操作に成功すると、このデータベースのエントリがメタデータ ビューの [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) と [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) に表示されます。  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-basic-database-creation-examples"></a>A. 基本的なデータベースの作成例  
- 次の例は、データベースを作成`mytest`レプリケートされたテーブル、分散テーブルは、アプライアンスあたり 500 GB、100 GB あたりのトランザクション ログのアプライアンスにコンピューティング ノードあたり 100 GB の記憶域の割り当てとします。 この例では自動拡張は既定で無効です。  
+### <a name="a-basic-database-creation-examples"></a>A. 基本的データベース作成の例  
+ 次の例では、データベース `mytest` を作成します。複製テーブルの記憶域割り当ては計算ノードごとに 100 GB、分散テーブルの記憶域割り当てはアプライアンスごとに 500 GB、トランザクション ログの記憶域割り当てはアプライアンスごとに 100 GB です。 この例では、AUTOGROW は既定の OFF です。  
   
 ```  
 CREATE DATABASE mytest  
@@ -126,7 +126,7 @@ CREATE DATABASE mytest
    LOG_SIZE = 100 GB );  
 ```  
   
- 次の例は、データベースを作成`mytest`と上と同じパラメーターを除くその自動拡張がオンになっています。 これにより、データベース、指定したサイズのパラメーターの外側に拡張できます。  
+ 次の例では上の例と同じパラメーターでデータベース `mytest` を作成しますが、AUTOGROW を ON にします。 指定サイズ パラメーターを超えてデータベースは増加できます。  
   
 ```  
 CREATE DATABASE mytest  
@@ -137,8 +137,8 @@ CREATE DATABASE mytest
    LOG_SIZE = 100 GB);  
 ```  
   
-### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>B. 部分的なギガバイト サイズでデータベースを作成します。  
- 次の例は、データベースを作成`mytest`自動拡張オフ、1 つのレプリケートされたテーブルのコンピューティング ノードは 1.5 GB、分散テーブルは、アプライアンスごと 5.25 GB と 10 GB のトランザクション ログのアプライアンスごとの記憶域の割り当てを指定しています。  
+### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>B. 小数点以下を含む GB サイズでデータベースを作成する  
+ 次の例では、データベース `mytest` を作成します。AUTOGROW は OFF です。複製テーブルの記憶域割り当ては計算ノードごとに 1.5 GB、分散テーブルの記憶域割り当てはアプライアンスごとに 5.25 GB、トランザクション ログの記憶域割り当てはアプライアンスごとに 10 GB です。  
   
 ```  
 CREATE DATABASE mytest  
@@ -149,7 +149,7 @@ CREATE DATABASE mytest
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER DATABASE &#40;です。並列データ ウェアハウス&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)   
+ [ALTER DATABASE &#40;並列データ ウェアハウス&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
   

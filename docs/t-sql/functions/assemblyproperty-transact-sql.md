@@ -1,5 +1,5 @@
 ---
-title: "ASSEMBLYPROPERTY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ASSEMBLYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -50,9 +50,9 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 アセンブリの名前を指定します。
   
 *property_name*  
-情報を取得するプロパティの名前を指定します。 *property_name*値は次のいずれかになります。
+情報を取得するプロパティの名前を指定します。 *property_name* 値は次のいずれかを指定することができます。
   
-|[値]|Description|  
+|ReplTest1|Description|  
 |---|---|
 |**CultureInfo**|アセンブリのロケール。|  
 |**PublicKey**|アセンブリの公開キーまたは公開キー トークン。|  
@@ -69,7 +69,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 **sql_variant**
   
 ## <a name="examples"></a>使用例  
-次の例で、`HelloWorld`にアセンブリを登録、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。 詳細については、次を参照してください。 [Hello World サンプル](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)です。
+次の例は、`HelloWorld` アセンブリが [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで登録されていることを前提としています。 詳細については、「[Hello World サンプル](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)」を参照してください。
   
 ```sql
 USE AdventureWorks2012;  
@@ -78,7 +78,7 @@ SELECT ASSEMBLYPROPERTY ('HelloWorld' , 'PublicKey');
 ```  
   
 ## <a name="see-also"></a>参照
-[アセンブリ &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/create-assembly-transact-sql.md)  
-[アセンブリと &#40; を削除します。Transact SQL と &#41; です。](../../t-sql/statements/drop-assembly-transact-sql.md)
+[CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
+[DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)
   
   

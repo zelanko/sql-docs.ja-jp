@@ -1,5 +1,5 @@
 ---
-title: "DROP ENDPOINT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP ENDPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,14 +53,14 @@ DROP ENDPOINT endPointName
  *endPointName*  
  削除するエンドポイント名です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ENDPOINT DDL ステートメントは、ユーザー トランザクション内部では実行できません。  
   
-## <a name="permissions"></a>権限  
- ユーザーのメンバーである必要があります、 **sysadmin**固定サーバー ロール、エンドポイントの所有者か、エンドポイントに対する CONTROL 権限が与えられています。  
+## <a name="permissions"></a>アクセス許可  
+ 固定サーバー ロール **sysadmin** のメンバーであるか、そのエンドポイントの所有者であるか、またはエンドポイントに対する CONTROL 権限が許可されている必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次の例と呼ばれる以前に作成したエンドポイントを削除する`sql_endpoint`です。  
+ 次の例では、以前に作成したエンドポイント `sql_endpoint` を削除します。  
   
 ```  
 DROP ENDPOINT sql_endpoint;  

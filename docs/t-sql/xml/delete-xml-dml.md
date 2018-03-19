@@ -1,5 +1,5 @@
 ---
-title: "xml DML (XML) の削除 |Microsoft ドキュメント"
+title: delete (XML DML) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -45,12 +45,12 @@ delete Expression
   
 ## <a name="arguments"></a>引数  
  *[式]*  
- 削除するノードを特定する XQuery 式です。 この式で選択されたすべてのノードと、これらの選択されたノード内にあるすべてのノードまたは値が削除されます。 」の説明に従って[xml DML (XML) を挿入](../../t-sql/xml/insert-xml-dml.md)ドキュメント内の既存のノードへの参照でなければなりません。 構築されたノードは使用できません。 また、この式をルート (/) ノードにすることもできません。 この式で空のシーケンスが返されると、削除が行われず、エラーも返されません。  
+ 削除するノードを特定する XQuery 式です。 この式で選択されたすべてのノードと、これらの選択されたノード内にあるすべてのノードまたは値が削除されます。 「[insert (XML DML)](../../t-sql/xml/insert-xml-dml.md)」で説明したように、これはドキュメント内の既存のノードへの参照である必要があります。 構築されたノードは使用できません。 また、この式をルート (/) ノードにすることもできません。 この式で空のシーケンスが返されると、削除が行われず、エラーも返されません。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-deleting-nodes-from-a-document-stored-in-an-untyped-xml-variable"></a>A. 型指定されていない XML 変数に格納されているドキュメントからノードを削除する  
- 次の例では、ドキュメントのさまざまなノードを削除する方法を示します。 変数に XML インスタンスが最初に、割り当てられている**xml**型です。 その後、これに続く delete XML DML ステートメントにより、ドキュメントの各種ノードを削除しています。  
+ 次の例では、ドキュメントのさまざまなノードを削除する方法を示します。 まず、XML インスタンスが **xml** 型の変数に代入されます。 その後、これに続く delete XML DML ステートメントにより、ドキュメントの各種ノードを削除しています。  
   
 ```  
 DECLARE @myDoc xml  
@@ -92,7 +92,7 @@ SELECT @myDoc
 ```  
   
 ### <a name="b-deleting-nodes-from-a-document-stored-in-an-untyped-xml-column"></a>B. 型指定されていない XML 列に格納されているドキュメントからノードを削除する  
- 次の例で、**削除**XML DML ステートメントの 2 番目の子要素を削除する <`Features`> 列に格納されているドキュメントからです。  
+ 次の例では、**delete** XML DML ステートメントにより、列に格納されているドキュメントから <`Features`> の 2 番目の子要素を削除します。  
   
 ```  
 CREATE TABLE T (i int, x xml)  
@@ -119,14 +119,14 @@ FROM T
   
  上のクエリに関して、次の点に注意してください。  
   
--   [Modify() メソッド (xml データ型)](../../t-sql/xml/modify-method-xml-data-type.md)指定に使用される、**削除**XML DML キーワードです。  
+-   [modify() メソッド (xml データ型)](../../t-sql/xml/modify-method-xml-data-type.md) を使用して、**delete** XML DML キーワードを指定しています。  
   
--   [Query() メソッド (xml データ型)](../../t-sql/xml/query-method-xml-data-type.md)ドキュメントのクエリに使用されます。  
+-   [query() メソッド (XML データ型)](../../t-sql/xml/query-method-xml-data-type.md) を使用して、ドキュメントに対するクエリを実行しています。  
   
 ### <a name="c-deleting-nodes-from-a-typed-xml-column"></a>C. 型指定された xml 列からノードを削除する  
- この例では、ノードを削除、製造手順の XML ドキュメントに保存されてから、型指定された**xml**列です。  
+ 次の例では、型指定された **xml** 列に格納されている、製造手順の XML ドキュメントからノードを削除します。  
   
- 例では、まずテーブルを作成する (T) で、型指定された**xml** AdventureWorks データベース内の列です。 続いて、ProductModel テーブルの Instructions 列から製造手順の XML インスタンスをテーブル T にコピーし、このコピーされたドキュメントから 1 つ以上のノードを削除します。  
+ この例では、まず、型指定された **xml** 列を含むテーブル (T) を AdventureWorks データベースに作成します。 続いて、ProductModel テーブルの Instructions 列から製造手順の XML インスタンスをテーブル T にコピーし、このコピーされたドキュメントから 1 つ以上のノードを削除します。  
   
 ```  
 use AdventureWorks  
@@ -196,6 +196,6 @@ go
  [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)   
- [XML データ変更言語 &#40;です。XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML データ変更言語 &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

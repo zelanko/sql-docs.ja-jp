@@ -1,5 +1,5 @@
 ---
-title: "メッセージ交換の移動 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: MOVE CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -55,22 +55,22 @@ MOVE CONVERSATION conversation_handle
   
 ## <a name="arguments"></a>引数  
  *conversation_handle*  
- 移動するメッセージ交換のメッセージ交換ハンドルを含む、変数または定数。 *conversation_handle*型でなければなりません**uniqueidentifier**です。  
+ 移動するメッセージ交換のメッセージ交換ハンドルを含む、変数または定数。 *conversation_handle* は型 **uniqueidentifier** にする必要があります。  
   
  TO *conversation_group_id*  
- メッセージ交換の移動先となるメッセージ交換グループの識別子を含む、変数または定数。 *conversation_group_id*型でなければなりません**uniqueidentifier**です。  
+ メッセージ交換の移動先となるメッセージ交換グループの識別子を含む、変数または定数。 *conversation_group_id* は型 **uniqueidentifier** にする必要があります。  
   
-## <a name="remarks"></a>解説  
- MOVE CONVERSATION ステートメントで指定されたメッセージ交換の移動*conversation_handle*で識別されるメッセージ交換グループ*conversation_group_id*です。 同じキューに関連付けられているメッセージ交換グループ間でのみ、ダイアログをリダイレクトできます。  
+## <a name="remarks"></a>Remarks  
+ MOVE CONVERSATION ステートメントは、*conversation_handle* で指定されたメッセージ交換を、*conversation_group_id* で識別されるメッセージ交換グループに移動します。 同じキューに関連付けられているメッセージ交換グループ間でのみ、ダイアログをリダイレクトできます。  
   
 > [!IMPORTANT]  
->  前のステートメントをセミコロンで終了する必要があります、MOVE CONVERSATION ステートメントがバッチまたはストアド プロシージャの最初のステートメントでない場合 (**;**) では、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントのターミネータです。  
+>  MOVE CONVERSATION ステートメントがバッチまたはストアド プロシージャで最初のステートメントではない場合は、前のステートメントの後に、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのターミネータであるセミコロン (**;**) を指定する必要があります。  
   
- MOVE CONVERSATION ステートメントに関連付けられているメッセージ交換グループのロック*conversation_handle*とで指定されたメッセージ交換グループ*conversation_group_id*トランザクションまでステートメントを含むがコミットまたはロールバックします。  
+ MOVE CONVERSATION ステートメントは、ステートメントを含むトランザクションがコミットまたはロールバックされるまで、*conversation_handle* に関連付けられているメッセージ交換グループ、および *conversation_group_id* で指定されたメッセージ交換グループをロックします。  
   
  ユーザー定義の関数では、MOVE CONVERSATION は無効です。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  メッセージ交換を移動するには、そのメッセージ交換およびメッセージ交換グループの所有者であるか、固定サーバー ロール sysadmin または固定データベース ロール db_owner のメンバーである必要があります。  
   
 ## <a name="examples"></a>使用例  
@@ -89,10 +89,10 @@ MOVE CONVERSATION @conversation_handle TO @conversation_group_id ;
 ```  
   
 ## <a name="see-also"></a>参照  
- [BEGIN DIALOG CONVERSATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [GET CONVERSATION GROUP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/get-conversation-group-transact-sql.md)   
- [END CONVERSATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/end-conversation-transact-sql.md)   
- [sys.conversation_groups &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)   
- [sys.conversation_endpoints &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)   
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

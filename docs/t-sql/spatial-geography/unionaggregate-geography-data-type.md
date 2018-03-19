@@ -1,5 +1,5 @@
 ---
-title: "UnionAggregate (geography データ型) |Microsoft ドキュメント"
+title: "UnionAggregate (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -45,21 +45,21 @@ UnionAggregate ( geography_operand )
   
 ## <a name="arguments"></a>引数  
  *geography_operand*  
- **Geography**型のテーブル列のセットを保持する**geography**和集合演算を実行するオブジェクト。  
+ 和集合演算を実行する **geography** オブジェクトのセットを保持する **geography** 型のテーブルの列を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
-## <a name="remarks"></a>解説  
- メソッドを返します。 **null** 、入力の Srid が異なる場合。 参照してください[空間参照識別子 &#40;です。Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+## <a name="remarks"></a>Remarks  
+ 入力の SRID が異なる場合、**null** が返されます。 「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
- メソッドは無視**null**入力します。  
+ メソッドでは、**null** 入力は無視されます。  
   
 > [!NOTE]  
->  メソッドを返します。 **null**入力されたすべての値が場合**null**です。  
+>  入力されたすべての値が **null** の場合、**null** が返されます。  
   
 ## <a name="examples"></a>使用例  
- 次の例を実行、`UnionAggregate`のセットに対して**geography**市区町村内の場所。  
+ 次の例は、都市内の **geography** ロケーション ポイントのセットで `UnionAggregate` を実行します。  
   
  ```
  USE AdventureWorks2012  

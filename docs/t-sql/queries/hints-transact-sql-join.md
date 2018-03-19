@@ -1,5 +1,5 @@
-﻿ ---
-title: "結合ヒント (TRANSACT-SQL) |Microsoft ドキュメント"
+---
+title: "結合ヒント (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -36,13 +36,13 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="hints-transact-sql---join"></a>Hints (Transact-SQL) - Join
+# <a name="hints-transact-sql---join"></a>ヒント (Transact-SQL) - Join
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  結合ヒントにより、クエリ オプティマイザーで、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の 2 つのテーブル間の結合方法を設定します。 結合および結合の構文の詳細については、次を参照してください。 [FROM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/from-transact-sql.md).  
+  結合ヒントにより、クエリ オプティマイザーで、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の 2 つのテーブル間の結合方法を設定します。 結合および結合の構文に関する一般的な情報については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通常、クエリ オプティマイザーがクエリの最適な実行プランを選択、ヒントを含むことをお勧め\<join_hint >、経験を積んだ開発者、最後の手段としてのみ使用して、データベース管理者です。
+>  通常、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーでは、クエリにとって最適な実行プランが選択されるため、\<join_hint> を含むヒントは、経験を積んだ開発者やデータベース管理者が最後の手段としてのみ使用することをお勧めします。
   
  **適用対象:**  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-hash"></a>A. HASH を使用する  
- 次の例を指定する、`JOIN`によってクエリ内の操作を実行、`HASH`結合します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
+ 次の例では、クエリの `JOIN` 操作を `HASH` 結合によって実行することを指定します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。  
   
 ```  
 SELECT p.Name, pr.ProductReviewID  
@@ -92,7 +92,7 @@ ORDER BY ProductReviewID DESC;
 ```  
   
 ### <a name="b-using-loop"></a>B. LOOP を使用する  
- 次の例を指定する、`JOIN`によってクエリ内の操作を実行、`LOOP`結合します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
+ 次の例では、クエリの `JOIN` 操作を `LOOP` 結合によって実行することを指定します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。  
   
 ```  
 DELETE FROM Sales.SalesPersonQuotaHistory   
@@ -104,7 +104,7 @@ GO
 ```  
   
 ### <a name="c-using-merge"></a>C. MERGE を使用する  
- 次の例を指定する、`JOIN`によってクエリ内の操作を実行、`MERGE`結合します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
+ 次の例では、クエリの `JOIN` 操作を `MERGE` 結合によって実行することを指定します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。  
   
 ```  
 SELECT poh.PurchaseOrderID, poh.OrderDate, pod.ProductID, pod.DueDate, poh.VendorID   
@@ -115,6 +115,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql.md)  
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "スラッシュ スター (ブロック コメント) (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "スラッシュ アスタリスク (ブロック コメント) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="slash-star-block-comment-transact-sql"></a>スラッシュ スター (ブロック コメント) (TRANSACT-SQL)
+# <a name="slash-star-block-comment-transact-sql"></a>スラッシュ アスタリスク (ブロック コメント) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 
-  ユーザーが入力したテキストを示します。 テキストの間、/* と\*サーバーによっては評価されません。  
+  ユーザーが入力したテキストを示します。 サーバーが、/* と \*/ で囲まれたテキストを評価することはありません。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,12 +56,12 @@ text_of_comment
  *text_of_comment*  
  コメントのテキストです。 1 つ以上の文字列です。  
   
-## <a name="remarks"></a>解説  
- コメントは、単独行に指定したり、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの中に指定できます。 によって複数行のコメントを示す必要があります/* と\*/です。 複数行のコメントの多くの場合に使用されるスタイルの規則は、最初の行を開始する/\*後続の行は\*\*で終わります\*/です。  
+## <a name="remarks"></a>Remarks  
+ コメントは、単独行に指定したり、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの中に指定できます。 複数行のコメントは、/* と \*/ で示す必要があります。 複数行のコメントで使用されることが多いスタイル規則では、最初の行は /\* で始め、その後に続く行は \*\* で始め、最後は \*/ で終了します。  
   
  コメントの長さには制限がありません。  
   
- 入れ子になったコメントを使用できます。 場合、/* 文字パターンが既存のコメント内に任意の場所は入れ子になったコメントの始まりとして処理され、そのため、終了が必要です\*コメント マーク/です。 終了のコメント マークが存在しない場合は、エラーが生成されます。  
+ 入れ子になったコメントを使用できます。 /* 文字パターンが既存のコメント内のどこかに出現した場合、入れ子になったコメントの始まりであると見なされるため、終わりのコメント マーク \*/ が必要です。 終了のコメント マークが存在しない場合は、エラーが生成されます。  
   
  たとえば、次のコードではエラーが生成されます。  
   
@@ -109,8 +109,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [--&#40;です。コメント &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/comment-transact-sql.md)   
- [フロー制御言語 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md)  
+ [--&#40;コメント&#41; &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
+ [フロー制御言語 &#40;TRANSACT-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   
 

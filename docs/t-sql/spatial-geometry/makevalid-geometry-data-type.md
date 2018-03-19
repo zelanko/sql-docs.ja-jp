@@ -1,5 +1,5 @@
 ---
-title: "MakeValid (geometry データ型) |Microsoft ドキュメント"
+title: "MakeValid (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="makevalid-geometry-data-type"></a>MakeValid (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-変換の無効な**geometry**インスタンスを**geometry**有効な Open Geospatial Consortium (OGC) 型のインスタンス。
+無効な **geometry** インスタンスを有効な Open Geospatial Consortium (OGC) 型の **geometry** インスタンスに変換します。
   
 ## <a name="syntax"></a>構文  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
- このメソッドの型で、変更が発生する可能性があります、 **geometry**インスタンスだけでなく、ポイント、 **geometry**わずかに移動するインスタンス。  
+## <a name="remarks"></a>Remarks  
+ このメソッドにより、**geometry** インスタンスの型が変更されるだけでなく、**geometry** インスタンスの地点がわずかに移動する場合があります。  
   
 ## <a name="examples"></a>使用例  
- 最初の例では、無効な`LineString`自体が重なるし、使用するインスタンス`STIsValid()`無効なインスタンスであることを確認します。 `STIsValid()`無効なインスタンスの場合は 0 の値を返します。  
+ 最初に、そのインスタンス自体が重なる、無効な `LineString` インスタンスを作成し、`STIsValid()` を使用して、無効なインスタンスであることを確認する例を示します。 `STIsValid()` は、無効なインスタンスに対して値 0 を返します。  
   
 ```  
 DECLARE @g geometry;  
@@ -60,7 +60,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 2, 1 1, 1 0, 1 1, 2 2)', 0);
 SELECT @g.STIsValid();  
 ```  
   
- 2 番目の例では`MakeValid()`インスタンスを有効にするため、インスタンスが実際に有効であるかをテストします。 `STIsValid()`有効なインスタンスの 1 の値を返します。  
+ 次に、`MakeValid()` を使用してインスタンスを有効にし、そのインスタンスが実際に有効であるかどうかをテストする例を示します。 `STIsValid()` は、有効なインスタンスに対して値 1 を返します。  
   
 ```  
 SET @g = @g.MakeValid();  
@@ -73,7 +73,7 @@ SELECT @g.STIsValid();
 SELECT @g.ToString();  
 ```  
   
- この例では、ときに、`LineString`インスタンスが選択されている、値を返す有効なと`MultiLineString`インスタンス。  
+ この例では、`LineString` インスタンスが選択されると、値は有効な `MultiLineString` インスタンスとして返されます。  
   
 ```  
 MULTILINESTRING ((0 2, 1 1, 2 2), (1 1, 1 0))  

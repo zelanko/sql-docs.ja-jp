@@ -1,5 +1,5 @@
 ---
-title: "MinDbCompatibilityLevel (geography データ型) |Microsoft ドキュメント"
+title: "MinDbCompatibilityLevel (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  認識する最小データベース互換性を返します、 **geography**データ型。  
+  **geography** データ型を認識する最小データベース互換性を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **int**  
   
  CLR の戻り値の型: **int**  
   
-## <a name="remarks"></a>解説  
- 使用して`MinDbCompatibilityLevel()`をデータベースで互換性レベルを変更する前に、互換性のための空間オブジェクトをテストします。 無効な**geography**入力 110 が返されます。  
+## <a name="remarks"></a>Remarks  
+ `MinDbCompatibilityLevel()` を使用すると、データベースで互換性レベルを変更する前に、空間オブジェクトの互換性をテストできます。 無効な **geography** 型を入力すると 110 が返されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-testing-circularstring-type-for-compatibility-with-compatibility-level-110"></a>A. 互換性レベル 110 で CircularString 型の互換性をテストする  
- 次の例のテスト、`CircularString`以前のバージョンの互換性のためインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ 次の例では、`CircularString` インスタンスの、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との互換性がテストされます。  
   
 ```  
 DECLARE @g geometry = 'CIRCULARSTRING(-120.533 46.566, -118.283 46.1, -122.3 47.45)';  
@@ -78,7 +78,7 @@ END
 ```  
   
 ### <a name="c-testing-the-value-of-a-geography-instance-for-compatibility"></a>C. Geography インスタンスの値の互換性をテストする  
- 次の例は、2 つの互換性レベルを示します`geography`インスタンス。 一方は半球よりも小さく、もう一方は半球よりも大きくなっています。  
+ 次の例では、2 つの `geography` インスタンスの互換性レベルを表示します。 一方は半球よりも小さく、もう一方は半球よりも大きくなっています。  
   
 ```  
 DECLARE @g geography = geography::Parse('POLYGON((0 -10, 120 -10, 240 -10, 0 -10))');  
@@ -98,6 +98,6 @@ END
   
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [SQL Server データベース エンジンの旧バージョンと互換性](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+ [SQL Server データベース エンジンの旧バージョンとの互換性](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   

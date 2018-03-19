@@ -1,5 +1,5 @@
 ---
-title: "Point (geography データ型) |Microsoft ドキュメント"
+title: "Point (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="point-geography-data-type"></a>Point (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-構築、 **geography**インスタンスを表す、**ポイント**の緯度と経度の値から spatial reference ID (SRID) のインスタンス。
+**Point** インスタンスを緯度、経度、SRID (spatial reference identifier) で表す **geography** インスタンスを構築します。
   
 ## <a name="syntax"></a>構文  
   
@@ -46,24 +46,24 @@ Point ( Lat, Long, SRID )
   
 ## <a name="arguments"></a>引数  
  *Lat*  
- **Float**の x 座標を表す式、**ポイント**生成されています。  
+ 生成される **Point** の x 座標を表す **float** 式です。  
   
  *Long*  
- **Float**の y 座標を表す式、**ポイント**生成されています。 有効な経度と緯度の値の詳細については、次を参照してください。[ポイント](../../relational-databases/spatial/point.md)です。  
+ 生成される **Point** の y 座標を表す **float** 式です。 有効な経度と緯度の値の詳細については、「[Point](../../relational-databases/spatial/point.md)」をご覧ください。  
   
  *SRID*  
- **Int**の SRID を表す式、 **geography**インスタンスを取得します。  
+ 返される **geography** インスタンスの SRID を表す **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR 戻り値の型: **SqlGeography**  
   
 > [!NOTE]  
 >  Point (geography データ型) メソッドの引数は、WKT と比較して元に戻された座標を持ちます。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`Point()`を作成する、`geography`インスタンス。  
+ `Point()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  
 DECLARE @g geography;   

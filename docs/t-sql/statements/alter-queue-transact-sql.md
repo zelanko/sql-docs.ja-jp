@@ -1,5 +1,5 @@
 ---
-title: "ALTER キュー (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2016
 ms.prod: sql-non-specified
@@ -92,11 +92,11 @@ WITH
 ```  
   
 ## <a name="arguments"></a>引数  
- *database_name* (object)  
- 変更するキューを含むデータベースの名前を指定します。 ない場合*database_name*は提供された場合、既定値は、現在のデータベースです。  
+ *database_name* (オブジェクト)  
+ 変更するキューを含むデータベースの名前を指定します。 *database_name* が指定されていない場合、これは既定で現在のデータベースに設定されます。  
   
- *schema_name* (object)  
- 新しいキューが所属するスキーマの名前を指定します。 ない場合*schema_name*は提供された場合、既定値は、現在のユーザーの既定のスキーマです。  
+ *schema_name* (オブジェクト)  
+ 新しいキューが所属するスキーマの名前を指定します。 *schema_name* が指定されていない場合、これは既定で現在のユーザーに関する既定のスキーマに設定されます。  
   
  *queue_name*  
  変更するキューの名前を指定します。  
@@ -119,24 +119,24 @@ WITH
  REBUILD [ WITH \<queue_rebuild_options> ]  
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- キューの内部テーブルのすべてのインデックスを再構築します。 負荷が高いため、断片化の問題が発生した場合は、この機能を使用します。 MAXDOP は、唯一サポートされているキューの rebuild オプションです。 再構築は、常にオフライン操作です。  
+ キューの内部テーブルのすべてのインデックスを再構築します。 負荷が高いために断片化の問題が発生した場合は、この機能を使用します。 MAXDOP は、唯一サポートされているキューの rebuild オプションです。 REBUILD は常にオフライン操作です。  
   
  REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- キューの内部テーブルのすべてのインデックスを再編成します。   
-ユーザー テーブルに再編成とは異なり、キューに再編成は常に実行オフライン操作としてページ レベルのロックがキューで明示的に無効になっています。  
+ キューの内部テーブルのすべてのインデックスを再構成します。   
+ユーザー テーブルの REORGANIZE とは異なり、キューの REORGANIZE は常にオフライン操作として実行されます。これは、キューではページ レベルのロックが明示的に無効になっているためです。  
   
 > [!TIP]  
->  インデックスの断片化に関する一般的なガイダンス断片化が 5% ~ 30% には、インデックスが再編成します。 断片化が 30% を超える場合、インデックスを再構築します。 ただし、これらの番号、専用環境の開始点として一般的なガイダンスです。 インデックスの断片化の量を調べるには使用[sys.dm_db_index_physical_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) -例については、該当するアーティクル内の例 G を参照してください。  
+>  インデックスの断片化に関する一般的なガイダンスでは、断片化が 5% から 30% の場合、インデックスを再構成します。 断片化が 30% を超える場合は、インデックスを再構築します。 ただし、これらの数値は環境の開始点として一般的なガイダンスでのみ使用できます。 インデックスの断片化の量を確認するには、「[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)」を使用します。例については、この記事の例 G を参照してください。  
   
  MOVE TO { *file_group* | "default" }  
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- (インデックス) のキューの内部テーブルをユーザー指定のファイル グループに移動します。  読み取り専用のファイル グループにはできません。  
+ キューの内部テーブルを (そのインデックスと共に) ユーザー指定のファイル グループに移動します。  新しいファイル グループを読み取り専用にすることはできません。  
   
  PROCEDURE_NAME = \<procedure>  
- 処理するメッセージがキューに含まれているときにアクティブにするストアド プロシージャの名前を指定します。 この値である必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別子。  
+ 処理するメッセージがキューに含まれているときにアクティブにするストアド プロシージャの名前を指定します。 この値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の識別子にする必要があります。  
   
  *database_name* (プロシージャ)  
  ストアド プロシージャを含むデータベースの名前を指定します。  
@@ -148,16 +148,16 @@ WITH
  ストアド プロシージャの名前を指定します。  
   
  MAX_QUEUE_READERS =*max_reader*  
- キューで同時に開始するアクティブ化ストアド プロシージャのインスタンスの最大数を指定します。 値*max_readers* 0 から 32767 までの数値でなければなりません。  
+ キューで同時に開始する、アクティブ化ストアド プロシージャの最大インスタンス数を指定します。 *max_readers* の値は、0 から 32767 の数値にする必要があります。  
   
  EXECUTE AS  
- アクティブ化ストアド プロシージャを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ユーザー アカウントを指定します [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キューがストアド プロシージャをアクティブ化時にこのユーザーのアクセス許可を確認できる必要があります。 Microsoft Windows ドメイン ユーザーの場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がドメインに接続している必要があり、プロシージャがアクティブ化されたとき、またはアクティブ化が失敗したときに、指定したユーザーの権限を検証できる必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーの場合は、サーバーで常に権限を確認できます。  
+ アクティブ化ストアド プロシージャを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ユーザー アカウントを指定します キューによってストアド プロシージャがアクティブになったとき、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこのユーザーの権限を確認できる必要があります。 Microsoft Windows ドメイン ユーザーの場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がドメインに接続している必要があり、プロシージャがアクティブ化されたとき、またはアクティブ化が失敗したときに、指定したユーザーの権限を検証できる必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーの場合は、サーバーで常に権限を確認できます。  
   
  SELF  
  現在のユーザーとしてストアド プロシージャを実行します。 (対象の ALTER QUEUE ステートメントを実行しているデータベース プリンシパル)。  
   
  '*user_name*'  
- ストアド プロシージャを実行するユーザーの名前です。 *user_name*は有効な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]として指定されたユーザー、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別子。 現在のユーザーの IMPERSONATE 権限が必要、 *user_name*指定します。  
+ ストアド プロシージャを実行するユーザーの名前です。 *user_name* には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子として有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーを指定する必要があります。 現在のユーザーは、指定した *user_name* に対して IMPERSONATE 権限を保持している必要があります。  
   
  OWNER  
  キューの所有者としてストアド プロシージャを実行します。  
@@ -170,18 +170,18 @@ WITH
   
  有害なメッセージの処理が OFF に設定されているキューは、トランザクションのロールバックが連続して 5 回実行されても無効になりません。 これにより、カスタムの有害なメッセージの処理システムをアプリケーションで定義できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  指定されたアクティブ化ストアド プロシージャが存在するキューにメッセージが含まれている場合は、アクティブ化状態を OFF から ON に変更すると、すぐにアクティブ化ストアド プロシージャがアクティブになります。 アクティブ化状態を ON から OFF に変更すると、ストアド プロシージャのインスタンスのアクティブ化処理は停止しますが、現在実行中のストアド プロシージャのインスタンスは停止しません。  
   
  キューにアクティブ化ストアド プロシージャを追加しても、キューのアクティブ化の状態は変わりません。 キューのアクティブ化ストアド プロシージャを変更しても、現在実行中のアクティブ化ストアド プロシージャのインスタンスには影響しません。  
   
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、アクティブ化処理の一部として、キューに設定されているキュー リーダーの最大数が確認されます。 したがって、キューに対してキュー リーダーの最大数を増やすと、[!INCLUDE[ssSB](../../includes/sssb-md.md)] ではすぐにアクティブ化ストアド プロシージャのインスタンスを追加起動できるようになります。 キューに対してキュー リーダーの最大数を減らしても、現在実行中のアクティブ化ストアド プロシージャのインスタンスには影響しませんが、 ただし、[!INCLUDE[ssSB](../../includes/sssb-md.md)]はストアド プロシージャをアクティブ化のインスタンス数まで、ストアド プロシージャの新しいインスタンスが構成されている最大数を下回る開始されません。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、アクティブ化処理の一部として、キューに設定されているキュー リーダーの最大数が確認されます。 したがって、キューに対してキュー リーダーの最大数を増やすと、[!INCLUDE[ssSB](../../includes/sssb-md.md)] ではすぐにアクティブ化ストアド プロシージャのインスタンスを追加起動できるようになります。 キューに対してキュー リーダーの最大数を減らしても、現在実行中のアクティブ化ストアド プロシージャのインスタンスには影響しませんが、 ただし、アクティブ化ストアド プロシージャのインスタンスの数が、設定されている最大数より少なくなるまで、[!INCLUDE[ssSB](../../includes/sssb-md.md)] ではストアド プロシージャの新しいインスタンスは起動されません。  
   
- キューが使用できないときに[!INCLUDE[ssSB](../../includes/sssb-md.md)]はデータベースの転送キューにキューを使用するサービスのメッセージを保持します。 [Sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)カタログ ビューは、転送キューのビューを提供します。  
+ キューが使用できない場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)] では、データベースの転送キュー内にあるキューを使用するサービスのメッセージが保持されます。 [sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md) カタログ ビューでは、転送キューのビューが提供されます。  
   
- RECEIVE ステートメントまたは GET CONVERSATION GROUP ステートメントが使用できないキューを指定する場合、ステートメントは失敗し、[!INCLUDE[tsql](../../includes/tsql-md.md)]エラーです。  
+ RECEIVE ステートメントまたは GET CONVERSATION GROUP ステートメントで使用できないキューを指定すると、そのステートメントは失敗し、[!INCLUDE[tsql](../../includes/tsql-md.md)] エラーが返されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  既定では、キューを変更する権限は、キューの所有者、db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。  
   
 ## <a name="examples"></a>使用例  
@@ -194,7 +194,7 @@ ALTER QUEUE ExpenseQueue WITH STATUS = OFF ;
 ```  
   
 ### <a name="b-changing-the-activation-stored-procedure"></a>B. アクティブ化ストアド プロシージャを変更する  
- 次の例では、キューによって開始されるストアド プロシージャを変更します。 ストアド プロシージャを実行したユーザーとして実行、`ALTER QUEUE`ステートメントです。  
+ 次の例では、キューによって開始されるストアド プロシージャを変更します。 このストアド プロシージャは、`ALTER QUEUE` ステートメントを実行したユーザーとして実行されます。  
   
 ```  
 ALTER QUEUE ExpenseQueue  
@@ -211,7 +211,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;
 ```  
   
 ### <a name="d-changing-the-activation-stored-procedure-and-the-execute-as-account"></a>D. アクティブ化ストアド プロシージャと EXECUTE AS アカウントを変更する  
- 次の例は、ストアド プロシージャを変更する[!INCLUDE[ssSB](../../includes/sssb-md.md)]を開始します。 ストアド プロシージャ、ユーザーとして実行`SecurityAccount`です。  
+ 次の例では、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって開始されるストアド プロシージャを変更します。 このストアド プロシージャは、ユーザー `SecurityAccount` として実行されます。  
   
 ```  
 ALTER QUEUE ExpenseQueue  
@@ -234,27 +234,27 @@ ALTER QUEUE ExpenseQueue WITH RETENTION = ON ;
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;  
 ```  
   
-### <a name="g-rebuilding-queue-indexes"></a>G. キューのインデックスの再構築  
+### <a name="g-rebuilding-queue-indexes"></a>G. キュー インデックスを再構築する  
   
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 次の例は、キューのインデックスを再構築します。  
+ 次の例では、キュー インデックスを再構築します。  
   
 ```  
 ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)   
 ```  
   
-### <a name="h-reorganizing-queue-indexes"></a>H. キューのインデックスを再構成します。  
+### <a name="h-reorganizing-queue-indexes"></a>H. キュー インデックスを再構成する  
   
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 次の例は、キューのインデックスを再編成します。  
+ 次の例では、キュー インデックスを再構成します。  
   
 ```  
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
-### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I: キューの内部テーブルを別のファイル グループに移動します。  
+### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I: キューの内部テーブルを別のファイル グループに移動する  
   
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
@@ -264,7 +264,7 @@ ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]
   
 ## <a name="see-also"></a>参照  
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [DROP QUEUE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-queue-transact-sql.md)   
+ [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
   

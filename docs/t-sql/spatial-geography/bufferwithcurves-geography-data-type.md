@@ -1,5 +1,5 @@
 ---
-title: "BufferWithCurves (geography データ型) |Microsoft ドキュメント"
+title: "BufferWithCurves (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  返します、 **geography** 、呼び出し元からの距離の地点をすべてのセットを表すインスタンス**geography**インスタンスは、以下に、*距離*パラメーター。  
+  呼び出し元の **geography** インスタンスからの距離が *distance* パラメーターの値以下となる、すべての地点のセットを表す **geography** インスタンスを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,41 +45,41 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *distance*  
- **Float** geography インスタンスからするバッファーを形成する地点最大距離を示すことができます。  
+ バッファーを形成するポイントの、geography インスタンスからの最大距離を示す **float** を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR 戻り値の型: **SqlGeography**  
   
 ## <a name="exceptions"></a>例外  
- 次の条件がスローされます、 **ArgumentException**です。  
+ 次の条件を満たす場合、**ArgumentException** がスローされます。  
   
 -   パラメーター (`@g.BufferWithCurves()` など) がこのメソッドに渡されない。  
   
--   数値以外のパラメーターがなどのメソッドに渡されました。`@g.BufferWithCurves('a')`  
+-   `@g.BufferWithCurves('a')` のように、数値以外のパラメーターがメソッドに渡された。  
   
--   **NULL**など、メソッドに渡されました。`@g.BufferWithCurves(NULL)`  
+-   `@g.BufferWithCurves(NULL)` のように、**NULL** がメソッドに渡された。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次の表に、さまざまな distance 値に対して返される結果を示します。  
   
-|distance 値|ディメンションの種類|返される空間の種類|  
+|distance 値|型ディメンション|返される空間の種類|  
 |--------------------|---------------------|---------------------------|  
-|distance < 0|0 または 1|空**GeometryCollection**インスタンス|  
-|距離\<0|2 以上|A **CurvePolygon**または**GeometryCollection**バッファーが負の値を持つインスタンス。<br /><br /> 注: バッファーが負の値は、空を作成できます**GeometryCollection**|
-|distance = 0|すべてのディメンション|呼び出し元のコピー **geography**インスタンス|  
-|distance > 0|すべてのディメンション|**CurvePolygon**または**GeometryCollection**インスタンス|  
+|distance < 0|0 または 1|空の **GeometryCollection** インスタンス|  
+|distance \< 0|2 以上|バッファーが負の **CurvePolygon** または **GeometryCollection** インスタンス。<br /><br /> 注: 負の値のバッファーでは、空の **GeometryCollection** が作成されることがあります。|
+|distance = 0|すべてのディメンション|呼び出し元の **geography** インスタンスのコピー|  
+|distance > 0|すべてのディメンション|**CurvePolygon** または **GeometryCollection** インスタンス|  
   
 > [!NOTE]  
->  *距離*は、 **float**、非常に小さい値が、計算でゼロに時と見なされます。  これが発生すると、呼び出し元のコピー **geography**インスタンスが返されます。  
+>  *distance* は **float** であるため、非常に小さな値は計算においてゼロと同一視されることがあります。  その場合、呼び出し元の **geography** インスタンスのコピーが返されます。  
   
- 場合、**文字列**パラメーターは、メソッドに渡されますしに変換されます、 **float**スローするか、`ArgumentException`です。  
+ **string** パラメーターをこのメソッドに渡すと、**float** に変換されるか、`ArgumentException` がスローされます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geography-instance"></a>A. 1 次元の geography インスタンスに対して、パラメーターに 0 を下回る (< 0) 値を指定して、BufferWithCurves() を呼び出す  
- 次の例は、空白を返します`GeometryCollection`インスタンス。  
+ 次の例では、空の `GeometryCollection` インスタンスが返されます。  
   
  ```sql
  DECLARE @g geography= 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -87,7 +87,7 @@ ms.lasthandoff: 01/25/2018
 ``` 
   
 ### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geography-instance"></a>B. 2 次元の geography インスタンスに対して、パラメーターに 0 を下回る (< 0) 値を指定して、BufferWithCurves() を呼び出す  
- 次の例を返します、`CurvePolygon`バッファーが負の値を持つインスタンス。  
+ 次の例では、バッファーが負の値の `CurvePolygon` インスタンスが返されます。  
   
  ```sql
  DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -95,17 +95,17 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. パラメーターに 0 を下回る (< 0) 値を指定して、BufferWithCurves() を呼び出し、空の GeometryCollection を返す  
- 次の例は、何が発生したときに、*距離*パラメーターが-2。  
+ 次の例では、*distance* パラメーターが -2 の場合にどうなるかを示します。  
   
  ```sql
  DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
  SELECT @g.BufferWithCurves(-2).ToString();
  ```  
   
- これは、**選択**ステートメントから返される`GEOMETRYCOLLECTION EMPTY`  
+ この **SELECT** ステートメントからは `GEOMETRYCOLLECTION EMPTY` が返されます。  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. パラメーター値に 0 を指定して、BufferWithCurves() を呼び出す  
- 次の例は、呼び出し元のコピーを返します**geography**インスタンス。  
+ 次の例では、呼び出し元の **geography** インスタンスのコピーが返されます。  
 
  ```sql
  DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -113,7 +113,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>E. パラメーターに 0 以外の非常に小さい値を指定して、BufferWithCurves() を呼び出す  
- 次の例では、呼び出し元のコピーも返されます**geography**インスタンス。  
+ 次の例では、呼び出し元の **geography** インスタンスのコピーも返されます。  
 
  ```sql
  DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -122,14 +122,14 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="f-calling-bufferwithcurves-with-a-parameter-value--0"></a>F. パラメーターに 0 を上回る (> 0) 値を指定して、BufferWithCurves() を呼び出す  
- 次の例を返します、`CurvePolygon`インスタンス。  
+ 次の例では、`CurvePolygon` インスタンスが返されます。  
 
  ```sql
  DECLARE @g geography= 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
  SELECT @g.BufferWithCurves(2).ToString();
  ```  
 ### <a name="g-passing-a-valid-string-parameter"></a>G. 有効な文字列パラメーターを渡す  
- 次の例は、同じを返します`CurvePolygon`前述のインスタンスが、文字列パラメーターがメソッドに渡されます。  
+ 次の例では、前と同じように `CurvePolygon` インスタンスが返されますが、文字列パラメーターをメソッドに渡します。  
 
  ```sql
  DECLARE @g geography= 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -144,7 +144,7 @@ ms.lasthandoff: 01/25/2018
  SELECT @g.BufferWithCurves('a').ToString();
  ```  
   
- 前の 2 つの例では、文字列リテラルを `BufferWithCurves()` メソッドに渡しています。 最初の方の例は、文字列リテラルを数値に変換できるので機能します。 ただし、2 番目の例では、スロー、`ArgumentException`です。  
+ 前の 2 つの例では、文字列リテラルを `BufferWithCurves()` メソッドに渡しています。 最初の方の例は、文字列リテラルを数値に変換できるので機能します。 一方、2 番目の例では `ArgumentException` がスローされます。  
   
 ## <a name="see-also"></a>参照  
  [Geography インスタンスの拡張メソッド](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   

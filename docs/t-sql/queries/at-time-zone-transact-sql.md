@@ -1,5 +1,5 @@
 ---
-title: "タイム ゾーン (TRANSACT-SQL) で |Microsoft ドキュメント"
+title: AT TIME ZONE (Transact-SQL) | Microsoft Docs
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
@@ -29,12 +29,12 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="at-time-zone-transact-sql"></a>タイム ゾーン (TRANSACT-SQL)
+# <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  変換、 *inputdate* 、対応する*datetimeoffset*対象のタイム ゾーンの値。 場合*inputdate*関数があると仮定して、タイム ゾーンのオフセットを適用するオフセット情報がない場合は*inputdate*対象のタイム ゾーンで値を指定します。 場合*inputdate*として提供される、 *datetimeoffset*値よりも**AT TIME ZONE**句にタイム ゾーンの変換規則を使用して対象のタイム ゾーンに変換します。  
+  *inputdate* を対応する *datetimeoffset* 値に変換先のタイム ゾーンで変換します。 *inputdate* がオフセット情報なしで与えられる場合、 *inputdate* 値が変換先のタイム ゾーンで与えられるものと想定した上で、この関数はタイム ゾーンのオフセットを適用します。 *inputdate* が *datetimeoffset* 値として与えられる場合、**AT TIME ZONE** 句はタイム ゾーン変換規則を利用して変換先のタイム ゾーンにそれを変換します。  
   
- **タイム ゾーンで**実装を変換する Windows 機構に依存している**datetime**タイム ゾーン間での値。  
+ **AT TIME ZONE** の実装は、タイム ゾーン間で **datetime** 値を変換する Windows メカニズムに依存します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,21 +46,21 @@ inputdate AT TIME ZONE timezone
   
 ## <a name="arguments"></a>引数  
  *inputdate*  
- 式に解決されることができるは、 **smalldatetime**、 **datetime**、 **datetime2**、または**datetimeoffset**値。  
+ **smalldatetime**、**datetime**、**datetime2**、**datetimeoffset** 値に解決できる式です。  
   
  *timezone*  
- 変換先タイム ゾーンの名前です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows レジストリに格納されているタイム ゾーンに依存します。 次のレジストリ ハイブに、コンピューターにインストールされているすべてのタイム ゾーンが格納されている: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time ゾーン**です。 を通じてインストールされているタイム ゾーンの一覧が公開されても、 [sys.time_zone_info &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md)ビュー。  
+ 変換先のタイム ゾーンの名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は Windows レジストリに格納されているタイム ゾーンに依存します。 コンピューターにインストールされているタイム ゾーンはすべて、レジストリ ハイブ **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones** に格納されています。 インストールされているタイム ゾーンの一覧は [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) ビューでも閲覧できます。  
   
 ## <a name="return-types"></a>戻り値の型  
- データ型を返す**datetimeoffset**  
+ **datetimeoffset** のデータ型を返します  
   
 ## <a name="return-value"></a>戻り値  
- **Datetimeoffset**対象のタイム ゾーンの値。  
+ 変換先のタイム ゾーンの **datetimeoffset** 値。  
   
-## <a name="remarks"></a>解説  
- **タイム ゾーンで**入力値に変換するための特定の規則を適用**smalldatetime**、 **datetime**と**datetime2**に分類されるデータ型、間隔の影響を受ける DST 変更の影響。  
+## <a name="remarks"></a>Remarks  
+ **AT TIME ZONE** は、データ型 **smalldatetime**、**datetime**、**datetime2** の入力値が DST 変更の影響を受ける時間間隔に分類されるとき、特別な入力値変換ルールを適用します。  
   
--   クロックがどの期間は、クロックの調整の期間によって決まります。 ローカル時刻にギャップがあるし、事前設定されてと (通常 1 時間、ができるタイム ゾーンに応じて、30 ~ 45 分) です。 その場合は、この時間差に属している時点のオフセットを使用に変換されます*後*DST 変更します。  
+-   時計が進んでいると、継続時間が時計調整の継続時間に依存する現地時刻に隔たりが生じます (通常は 1 時間ですが、タイム ゾーンによっては、30 分か 45 分の場合もあります)。 その場合、DST 変更の*後*で、この隔たりに属する時点がオフセットで変換されます。  
   
     ```  
     /*  
@@ -91,7 +91,7 @@ inputdate AT TIME ZONE timezone
   
     ```  
   
-- クロックが戻る設定されている場合のローカル時間で 2 時間は 1 時間にオーバー ラップします。  その場合は、重複した間隔に属している時間内のポイントが表示されます、オフセット*する前に*クロックの変更。  
+- 時計が遅れていると、現地時刻の 2 時間が重なり、1 時間になります。  その場合、時計変更の*前*に、重なる時間間隔に属する時点がオフセットで表されます。  
   
     ```  
     /*  
@@ -123,12 +123,12 @@ inputdate AT TIME ZONE timezone
   
     ```  
 
-外部 (タイム ゾーンの規則) などのいくつかの情報を保持するため[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]不定期の変更されると、 **AT TIME ZONE**関数は、非決定的化されました。 
+一部の情報 (タイム ゾーン ルールなど) は [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] の外で保守管理され、時折変更されるため、**AT TIME ZONE** 関数は非決定的として分類されます。 
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. Datetime オフセット情報がない場合にターゲットのタイム ゾーン オフセットを追加します。  
- 使用して**AT TIME ZONE**ことがわかっている場合に、タイム ゾーンの規則に基づいてオフセットを追加する元**datetime**値は、同じタイム ゾーンで提供されます。  
+### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. オフセット情報なしで、変換先のタイム ゾーンのオフセットを datetime に追加する  
+ 元の **datetime** 値が同じタイム ゾーンで与えられることがわかっているとき、タイム ゾーン ルールに基づいてオフセットを追加するには、**AT TIME ZONE** を使用します。  
   
 ```  
 USE AdventureWorks2016;  
@@ -139,8 +139,8 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="b-convert-values-between-different-time-zones"></a>B. 異なるタイム ゾーン間の変換します。  
- 次の例では、異なるタイム ゾーン間で値に変換します。  
+### <a name="b-convert-values-between-different-time-zones"></a>B. 異なるタイム ゾーン間で値を変換する  
+ 次の例では、異なるタイム ゾーン間で値を変更します。  
   
 ```  
 USE AdventureWorks2016;  
@@ -153,7 +153,7 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="c-query-temporal-tables-using-local-time-zone"></a>C. ローカル タイム ゾーンを使用して、テンポラル テーブルをクエリします。  
+### <a name="c-query-temporal-tables-using-local-time-zone"></a>C. ローカル タイム ゾーンでテンポラル テーブルにクエリを実行する  
  次の例では、テンポラル テーブルからデータを選択します。  
   
 ```  
@@ -173,7 +173,7 @@ FOR SYSTEM_TIME AS OF @ASOF;
 ```  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻型](../../t-sql/data-types/date-and-time-types.md)   
- [日付および時刻データ型および関数 &#40;TRANSACT-SQL と #41 です。](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+ [日付型と時刻型](../../t-sql/data-types/date-and-time-types.md)   
+ [日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   

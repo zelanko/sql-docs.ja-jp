@@ -1,5 +1,5 @@
 ---
-title: "STArea (geometry データ型) |Microsoft ドキュメント"
+title: STArea (geometry Data Type) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="starea-geometry-data-type"></a>STArea (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  合計面積を返します、 **geometry**インスタンス。  
+  **geometry** インスタンスの合計面積を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **float**  
   
  CLR の戻り値の型: **SqlDouble**  
   
-## <a name="remarks"></a>解説  
- `STArea()`場合 0 を返します、 **geometry**インスタンスには、0-1 次元の図形のみが含まれています。 空である場合またはします。 `STArea()`返します**NULL**場合、 **geometry**インスタンスが初期化されていません。  
+## <a name="remarks"></a>Remarks  
+ **geometry** インスタンスに含まれるすべての図形が 0 次元または 1 次元の図形の場合、`STArea()` は 0 を返します。 **geometry** インスタンスが初期化されていない場合、`STArea()` は **NULL** を返します。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-computing-the-area-of-a-polygon-instance"></a>A. Polygon インスタンスの面積を計算する  
- 次の例を作成、`Polygon``geometry`をインスタンス化し、多角形の面積を計算します。  
+ `Polygon``geometry` インスタンスを作成し、ポリゴンの面積を計算する例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

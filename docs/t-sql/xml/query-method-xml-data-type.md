@@ -1,5 +1,5 @@
 ---
-title: "query() メソッド (xml データ型) |Microsoft ドキュメント"
+title: "query() メソッド (xml データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="query-method-xml-data-type"></a>query() メソッド (xml データ型)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  インスタンスに対して XQuery を指定、 **xml**データ型。 結果は**xml**型です。 このメソッドでは、型指定されていない XML のインスタンスを返します。  
+  **xml** データ型のインスタンスに対する XQuery を指定します。 結果は、**xml** 型の値になります。 このメソッドでは、型指定されていない XML のインスタンスを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,10 +46,10 @@ query ('XQuery')
  XML インスタンス内の XML ノード (要素や属性など) をクエリする XQuery 式の文字列です。  
   
 ## <a name="examples"></a>使用例  
- このセクションで説明の query() メソッドの使用例、 **xml**データ型。  
+ このセクションでは、**xml** データ型の query() メソッドの使用例について説明します。  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. xml 型変数に対する query() メソッドの使用  
- 次の例は、変数を宣言 **@myDoc** の**xml**を入力し、XML インスタンスを代入します。 **Query()**ドキュメントに対して XQuery を指定するメソッドを使用しています。  
+ 次の例では、**xml** 型の変数 **@myDoc** を宣言し、XML インスタンスをこれに代入します。 その後 **query()** メソッドを使用して、ドキュメントに対して XQuery を指定します。  
   
  次のクエリは、<`ProductDescription`> 要素の <`Features`> 子要素を取得します。  
   
@@ -76,7 +76,7 @@ SELECT @myDoc.query('/Root/ProductDescription/Features')
 ```  
   
 ### <a name="b-using-the-query-method-against-an-xml-type-column"></a>B. xml 型列に対する query() メソッドの使用  
- 次の例で、 **query()**に対して XQuery を指定するメソッドが使用される、 **CatalogDescription**の列**xml**に入力、 **AdventureWorks**データベース。  
+ 次の例では、**query()** メソッドを使用して、**AdventureWorks** データベースの **xml** 型の列 **CatalogDescription** に対して XQuery を指定します。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -92,11 +92,11 @@ declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-w
   
  上のクエリに関して、次の点に注意してください。  
   
--   CatalogDescription 列は、型指定された**xml**列です。 つまり、これには関連付けられたスキーマ コレクションがあります。 [XQuery プロローグ](../../xquery/modules-and-prologs-xquery-prolog.md)、**名前空間**キーワードの使用をクエリ本文で後で使用されるプレフィックスを定義します。  
+-   CatalogDescription 列は型指定された **xml** 列です。 つまり、これには関連付けられたスキーマ コレクションがあります。 [XQuery プロローグ](../../xquery/modules-and-prologs-xquery-prolog.md)では、**namespace** キーワードを使って、後でクエリ本文で使用するプレフィックスを定義しています。  
   
--   **Query()**メソッドは XML を構築、<`Product`> を持つ要素を**ProductModelID**されるは、属性、 **ProductModelID**属性の値データベースから取得します。 XML の構築の詳細については、次を参照してください。 [XML の構築と #40 です。XQuery と #41 です。](../../xquery/xml-construction-xquery.md).  
+-   **query()** メソッドは XML を構築します。<`Product`> 要素には **ProductModelID** 属性が指定されます。また、**ProductModelID** 属性値はデータベースから取得されます。 XML 構築の詳細については、「[XML 構築 &#40;XQuery&#41;](../../xquery/xml-construction-xquery.md)」を参照してください。  
   
--   [Exist() メソッド (XML データ型)](../../t-sql/xml/exist-method-xml-data-type.md)を含む行のみを検索する WHERE 句を使用することで、<`Warranty`> XML 内の要素。 もう一度、**名前空間**キーワードの使用を 2 つの名前空間プレフィックスを定義します。  
+-   WHERE 句の [exist() メソッド (XML データ型)](../../t-sql/xml/exist-method-xml-data-type.md) は、XML 内で <`Warranty`> 要素を含む行だけを検索することに使用されています。 **namespace** キーワードを使用して名前空間プレフィックスが定義されています。  
   
  結果の一部を次に示します。  
   
@@ -125,6 +125,6 @@ where CatalogDescription.exist('
  [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)   
- [XML データ変更言語 &#40;です。XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML データ変更言語 &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "解析 (geography データ型) |Microsoft ドキュメント"
+title: "Parse (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -32,9 +32,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="parse-geography-data-type"></a>Parse (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返します、 **geography** Open Geospatial Consortium (OGC) Well-Known Text (WKT) 表現からのインスタンス。 Parse() は等価[STGeomFromText](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)spatial reference ID (SRID) 4326 をパラメーターとして想定する点を除いて、します。 入力には、オプションとして Z (標高) 値と M (メジャー) 値が含まれる場合があります。
+Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を基に **geography** インスタンスを返します。 Parse() は、SRID (spatial reference ID) 4326 をパラメーターとして想定する点を除いて、[STGeomFromText](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md) と同じです。 入力には、オプションとして Z (標高) 値と M (メジャー) 値が含まれる場合があります。
   
-これは、 **geography**データ型メソッドでサポート**FullGlobe**インスタンスまたは空間インスタンスは、半球より大きいをします。
+この **geography** データ型メソッドは、半球より大きい **FullGlobe** インスタンスまたは空間インスタンスをサポートします。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,22 +45,22 @@ Parse ( 'geography_tagged_text' )
   
 ## <a name="arguments"></a>引数  
  *geography_tagged_text*  
- WKT 表現です、 **geography**インスタンスを返します。 *geography_tagged_text*は、 **nvarchar**式。  
+ 返される **geography** インスタンスの WKT 表現です。 *geography_tagged_text* は **nvarchar** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geography**  
   
  CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>解説  
- OGC の型の**geography**によって返されるインスタンス`Parse()`が、対応する WKT 入力に設定します。  
+## <a name="remarks"></a>Remarks  
+ `Parse()` によって返された **geography** インスタンスの OGC 型は、対応する WKT 入力に設定されます。  
   
- 'Null'、として解釈されます、null 文字列**geography**インスタンス。  
+ "NULL" 文字列は、**geography** の NULL インスタンスと解釈されます。  
   
- このメソッドはスロー **ArgumentException**場合は、入力に対蹠が含まれています。  
+ このメソッドは、入力に対蹠点が含まれている場合、**ArgumentException** をスローします。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`Parse()`を作成する、`geography`インスタンス。  
+ 次の例では、`Parse()` を使用して `geography` インスタンスを作成します。  
   
 ```  
 DECLARE @g geography;   
@@ -70,6 +70,6 @@ SELECT @g.ToString();
   
 ## <a name="see-also"></a>参照  
  [拡張された静的な地理メソッド](../../t-sql/spatial-geography/extended-static-geography-methods.md)   
- [STGeomFromText &#40;geography データ型&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
+ [STGeomFromText #40;geography データ型&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
   
   

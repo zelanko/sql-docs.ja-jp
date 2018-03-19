@@ -1,5 +1,5 @@
 ---
-title: "エイリアス (Azure SQL Data Warehouse、並列データ ウェアハウス) |Microsoft ドキュメント"
+title: "別名 (Azure SQL Data Warehouse、Parallel Data Warehouse) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>エイリアス (Azure SQL Data Warehouse、並列データ ウェアハウス)
+# <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>別名 (Azure SQL Data Warehouse、Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  エイリアスがあることでテーブルまたは列名の代わりに、短期的および覚えやすい文字列の一時的な置換[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)][!INCLUDE[DWsql](../../includes/dwsql-md.md)]クエリ。 テーブルの別名は、結合の構文は、列を参照するときに、完全修飾オブジェクト名を必要とするために多くの場合、結合クエリで使用されます。  
+  別名を利用すると、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][!INCLUDE[DWsql](../../includes/dwsql-md.md)] クエリで、テーブルや列の名前の代わりに短くて覚えやすい文字列を一時的に代用できます。 テーブル別名は JOIN クエリで頻繁に使用されます。JOIN 構文では、列を参照するときに完全修飾のオブジェクト名が必要になるためです。  
   
- エイリアスは、オブジェクトの名前付け規則に準拠している 1 つの単語である必要があります。 詳細については、「オブジェクトの名前付け規則」を参照してください、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。 エイリアスは、空白文字を含めることはできず、単一引用符または二重引用符で囲むことはできません。  
+ 別名には、オブジェクトの名前付け規則に準拠した 1 つの言葉を指定する必要があります。 詳細については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] の "オブジェクトの名前付け規則" を参照してください。 別名には、空のスペースを含めることができません。別名は一重引用符や二重引用符で囲むことができません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,17 +42,17 @@ object_source [ AS ] alias
  ソース テーブルまたは列の名前。  
   
  AS  
- 省略可能なエイリアス置くの場合。 範囲変数のエイリアスを使用する場合は、AS キーワードが禁止されています。  
+ 省略可能な別名の前置詞。 範囲変数の別名を使用するとき、AS キーワードは禁止されます。  
   
  *alias*  
- テーブルまたは列の目的の一時的な参照名。 任意の有効なオブジェクト名を使用できます。 詳細については、「オブジェクトの名前付け規則」を参照してください、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
+ テーブルまたは列の目的の一時的な参照名。 あらゆる有効な名前を使用できます。 詳細については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] の "オブジェクトの名前付け規則" を参照してください。  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例は、複数の結合のクエリを示しています。 この例では、テーブルと列の両方のエイリアスが示されています。  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 次の例では、クリエに複数の結合が含まれています。 この例では、テーブルと列の両方の別名を確認できます。  
   
--   列の別名: 両方の列と、選択リスト内の列を含む式は、この例で別名を指定します。 `SalesTerritoryRegion AS SalesTR`単純な列の別名を示しています。 `Sum(SalesAmountQuota) AS TotalSales`示します  
+-   列の別名: この例では、列と選択リストに列を含む式の両方に別名が与えられています。 `SalesTerritoryRegion AS SalesTR` では、単純な列の別名を確認できます。 `Sum(SalesAmountQuota) AS TotalSales` では、式の別名を確認できます。  
   
--   テーブル別名:`dbo.DimSalesTerritory AS st`の作成を示しています、`st`のエイリアス、`dbo.DimSalesTerritory`テーブル。  
+-   テーブル別名: `dbo.DimSalesTerritory AS st` では、`dbo.DimSalesTerritory` テーブルに `st` という別名を作成しています。  
   
 ```  
 -- Uses AdventureWorks  
@@ -67,7 +67,7 @@ GROUP BY LastName, SalesTerritoryRegion;
   
 ```  
   
- AS キーワードは、次のように、除外することが読みやすくするために含まれる多くの場合。  
+ AS キーワードは下の画像のように除外できますが、多くの場合、読みやすくするために除外しません。  
   
 ```  
 -- Uses AdventureWorks  
@@ -83,7 +83,7 @@ GROUP BY LastName, SalesTerritoryRegion;
   
 ## <a name="see-also"></a>参照  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [挿入 &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
   

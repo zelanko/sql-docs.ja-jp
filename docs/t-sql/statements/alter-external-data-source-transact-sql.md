@@ -1,5 +1,5 @@
 ---
-title: "外部データ ソース (TRANSACT-SQL) を ALTER |Microsoft ドキュメント"
+title: ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2018
 ms.prod: sql-non-specified
@@ -61,28 +61,28 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 ```  
   
 ## <a name="arguments"></a>引数  
- data_source_name では、データ ソースのユーザー定義の名前を指定します。 名前は一意である必要があります。
+ data_source_name: データ ソースのユーザー定義の名前を指定します。 名前は一意である必要があります。
   
- 場所 = 'server_name_or_IP' は、サーバーまたは IP アドレスの名前を指定します。
+ LOCATION = ‘server_name_or_IP’: サーバーまたは IP アドレスの名前を指定します。
   
- RESOURCE_MANAGER_LOCATION = ‘\<IP address;Port>’ Specifies the Hadoop Resource Manager location. 指定した場合、クエリ オプティマイザーは Hadoop の計算の機能を使用して、PolyBase クエリのデータを事前処理こともできます。 これは、コストベースの判断です。 述語のプッシュ ダウンが呼び出されると、この Hadoop と SQL の間で転送されるデータ量を大幅に削減し、クエリのパフォーマンス向上します。
+ RESOURCE_MANAGER_LOCATION = ‘\<IP address;Port>’: Hadoop リソース マネージャーの場所を指定します。 指定した場合、クエリ オプティマイザーは Hadoop の計算の機能を使用して、PolyBase クエリのデータを事前処理こともできます。 これは、コストベースの判断です。 述語のプッシュ ダウンが呼び出されると、この Hadoop と SQL の間で転送されるデータ量を大幅に削減し、クエリのパフォーマンス向上します。
   
- 資格情報の名前付きの資格情報 = Credential_Name を指定します。 参照してください[CREATE DATABASE SCOPED CREDENTIAL &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+ CREDENTIAL = Credential_Name: 名前付きの資格情報を指定します。 「[CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)」を参照してください。
 
 TYPE = BLOB_STORAGE   
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]」を参照してください。
-一括操作のみ、`LOCATION`有効にする必要があります Azure Blob ストレージへの URL。 配置しない **/** 、ファイル名、または共有アクセス署名のパラメーターの最後に、 `LOCATION` URL。
-使用して、使用する資格情報を作成する必要があります`SHARED ACCESS SIGNATURE`id として。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。
+一括操作の場合のみ、`LOCATION` は Azure BLOB ストレージの有効な URL にする必要があります。 **/**、ファイル名、共有アクセス署名パラメーターを `LOCATION` URL の末尾に入れないでください。
+使用される資格情報は、ID として `SHARED ACCESS SIGNATURE` を使用して作成する必要があります。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。
 
   
   
-## <a name="remarks"></a>解説
- 一度に 1 つのソースを変更できます。 同時実行の要求を同じソースを変更するには、待機する 1 つのステートメントが発生します。 ただし、さまざまなソースは、同時に変更できます。 このステートメントは、その他のステートメントと同時に実行できます。
+## <a name="remarks"></a>Remarks
+ 一度に 1 つのソースを変更できます。 同時実行の要求を同じソースを変更するには、待機する 1 つのステートメントが発生します。 ただし、さまざまなソースは、同時に変更できます。 このステートメントは、他のステートメントと同時実行できます。
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  任意の外部データ ソースの ALTER 権限が必要です。
  > [!IMPORTANT]  
- >  任意の外部データ ソースの ALTER 権限は、任意のプリンシパルを作成し、任意の外部データ ソース オブジェクトを変更する権限を付与し、そのため、データベース上のすべてのデータベース スコープ資格情報にアクセスする権限付与もします。 このアクセス許可する必要がありますと見なされる高度な権限し、そのため、システムで信頼されたプリンシパルにのみ付与する必要があります。
+ >  ALTER ANY EXTERNAL DATA SOURCE 権限は、あらゆる外部データ ソース オブジェクトを作成し、変更する能力をプリンシパルに与えます。そのため、あらゆるデータベース スコープ資格情報にアクセスする能力も与えます。 この権限は特権として考慮する必要があります。そのため、システム内の信頼できるプリンシパルにのみ与える必要があります。
 
   
 ## <a name="examples"></a>使用例  

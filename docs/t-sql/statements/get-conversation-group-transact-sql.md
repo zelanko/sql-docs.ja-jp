@@ -1,5 +1,5 @@
 ---
-title: "GET CONVERSATION GROUP (TRANSACT-SQL) |Microsoft ドキュメント"
+title: GET CONVERSATION GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -66,27 +66,27 @@ ms.lasthandoff: 01/25/2018
  現在メッセージが存在しない場合、GET CONVERSATION GROUP ステートメントは、キューにメッセージが到着するのを待機します。  
   
  *@conversation_group_id*  
- GET CONVERSATION GROUP ステートメントによって返されるメッセージ交換グループ ID が格納される変数です。 型の変数がある必要があります**uniqueidentifier**です。 使用できるメッセージ交換グループがない場合、この変数は NULL に設定されます。  
+ GET CONVERSATION GROUP ステートメントによって返されるメッセージ交換グループ ID が格納される変数です。 変数は **uniqueidentifier** 型である必要があります。 使用できるメッセージ交換グループがない場合、この変数は NULL に設定されます。  
   
  FROM  
  メッセージ交換グループを取得するキューを指定します。  
   
  *database_name*  
- メッセージ交換グループを取得するキューが含まれているデータベースの名前を指定します。 ない場合*database_name*が提供される、既定値は、現在のデータベースです。  
+ メッセージ交換グループを取得するキューが含まれているデータベースの名前を指定します。 *database_name* を指定しない場合、既定では現在のデータベースが使用されます。  
   
  *schema_name*  
- メッセージ交換グループを取得するキューを所有するスキーマの名前を指定します。 ない場合*schema_name*が提供される、既定値は、現在のユーザーの既定のスキーマです。  
+ メッセージ交換グループを取得するキューを所有するスキーマの名前を指定します。 *schema_name* を指定しない場合、既定では現在のユーザーに関する既定のスキーマが使用されます。  
   
  *queue_name*  
  メッセージ交換グループを取得するキューの名前を指定します。  
   
- タイムアウト*タイムアウト*  
- Service Broker が、キューにメッセージが到着するのを待機する時間を指定します (ミリ秒単位)。 この句は WAITFOR 句と共に使用する必要があります。 WAITFOR を使用するステートメントにこの句が含まれていない場合、または*タイムアウト*-1 で、待機時間は無制限です。 タイムアウトになると、GET CONVERSATION GROUP の設定、  *@conversation_group_id* 変数を NULL にします。  
+ TIMEOUT *timeout*  
+ Service Broker が、キューにメッセージが到着するのを待機する時間を指定します (ミリ秒単位)。 この句は WAITFOR 句と共に使用する必要があります。 WAITFOR 句を使用するステートメントにこの句が含まれないか、*timeout* が -1 の場合、待機時間は無制限になります。 タイムアウトになると、GET CONVERSATION GROUP では *@conversation_group_id* 変数に NULL が設定されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  前のステートメントをセミコロンで終了する必要があります、GET CONVERSATION GROUP ステートメントがバッチまたはストアド プロシージャの最初のステートメントでない場合 (**;**) では、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントのターミネータです。  
+>  GET CONVERSATION GROUP ステートメントがバッチまたはストアド プロシージャの最初のステートメントではない場合は、前のステートメントの後に、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのターミネータであるセミコロン (**;**) を指定する必要があります。  
   
  GET CONVERSATION GROUP ステートメントで指定したキューが使用できない場合、ステートメントは失敗し、[!INCLUDE[tsql](../../includes/tsql-md.md)] エラーが返されます。  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 01/25/2018
   
  GET CONVERSATION GROUP は、ユーザー定義の関数では無効です。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  メッセージ交換グループの識別子をキューから取得する場合、現在のユーザーは、そのキューに対する RECEIVE 権限を持っている必要があります。  
   
 ## <a name="examples"></a>使用例  
@@ -134,7 +134,7 @@ TIMEOUT 60000 ;
 ```  
   
 ### <a name="c-getting-a-conversation-group-returning-immediately"></a>C. 待機せず、メッセージ交換グループを取得する  
- 次の例では、`@conversation_group_id` にメッセージ交換グループの識別子を設定します。このメッセージ交換グループは、`ExpenseQueue` 上にあり、次に使用できるメッセージで使用されます。 メッセージが使用できない場合`GET CONVERSATION GROUP`変更せずにすぐに返す`@conversation_group_id`です。  
+ 次の例では、`@conversation_group_id` にメッセージ交換グループの識別子を設定します。このメッセージ交換グループは、`ExpenseQueue` 上にあり、次に使用できるメッセージで使用されます。 使用できるメッセージがない場合、`GET CONVERSATION GROUP` ステートメントでは、`@conversation_group_id` の値が変更されずにすぐに返されます。  
   
 ```  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
@@ -144,7 +144,7 @@ FROM AdventureWorks.dbo.ExpenseQueue ;
 ```  
   
 ## <a name="see-also"></a>参照  
- [BEGIN DIALOG CONVERSATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [メッセージ交換の移動 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/move-conversation-transact-sql.md)  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [MOVE CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)  
   
   

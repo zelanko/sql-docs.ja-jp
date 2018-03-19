@@ -1,5 +1,5 @@
 ---
-title: "ToString (geography データ型) |Microsoft ドキュメント"
+title: "ToString (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,9 +33,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="tostring-geography-data-type"></a>ToString (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Open Geospatial Consortium (OGC) Well-Known Text (WKT) 表現を返します、 **geography**いる Z (標高) 値および M (メジャー) 値で補完されたインスタンスがインスタンスで実行します。  
+  インスタンスに格納されている Z (標高) 値および M (メジャー) 値で補完された **geography** インスタンスについて、Open Geospatial Consortium (OGC) Well-Known Text (WKT) 表現を返します。  
   
- この geography データ型メソッドでサポート**FullGlobe**インスタンスまたは空間インスタンスは、半球より大きいをします。  
+ この geography データ型メソッドは、半球より大きい **FullGlobe** インスタンスまたは空間インスタンスをサポートします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **nvarchar(max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **nvarchar(max)**  
   
  CLR の戻り値の型: **SqlString**  
   
-## <a name="remarks"></a>解説  
- このメソッドは、NULL インスタンスで呼び出されたときに文字列 "Null" を返します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、サーバーで結果セットが拡張されて**FullGlobe**インスタンス。 このメソッドは、同じ値を返します`AsTextZM()`です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、NULL インスタンスで呼び出されたときに文字列 "Null" を返します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、サーバー上で使用可能な結果セットが **FullGlobe** インスタンスに拡張されています。 このメソッドは、`AsTextZM()` と同じ値を返します。  
   
  このメソッドは正確ではありません。  
   
 ## <a name="examples"></a>使用例  
- 次の例を作成、`LineString`使用して、インスタンス`ToString()`をインスタンスのテキスト説明を返します。  
+ `LineString` インスタンスを作成し、`ToString()` を使用してインスタンスの記述を返す例を次に示します。  
   
 ```  
 DECLARE @g geography;  

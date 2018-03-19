@@ -1,5 +1,5 @@
 ---
-title: "解析 (geometry データ型) |Microsoft ドキュメント"
+title: "Parse (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="parse-geometry-data-type"></a>Parse (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返します、 **geometry** Open Geospatial Consortium (OGC) Well-Known Text (WKT) 表現からのインスタンス。 `Parse()`等価[STGeomFromText()](../../t-sql/spatial-geometry/parse-geometry-data-type.md)、spatial を想定している例外に ID (SRID) を参照 0 をパラメーターとして。 入力には、オプションとして Z (標高) 値と M (メジャー) 値が含まれる場合があります。
+Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を基に **geometry** インスタンスを返します。 `Parse()` は、パラメーターとして SRID (spatial reference ID) の値を 0 と想定している点を除いて、[STGeomFromText()](../../t-sql/spatial-geometry/parse-geometry-data-type.md) と同じです。 入力には、オプションとして Z (標高) 値と M (メジャー) 値が含まれる場合があります。
   
 ## <a name="syntax"></a>構文  
   
@@ -42,22 +42,22 @@ Parse ( 'geometry_tagged_text' )
   
 ## <a name="arguments"></a>引数  
  *geometry_tagged_text*  
- WKT 表現です、 **geometry**インスタンスを取得します。 *geometry_tagged_text*は、 **nvarchar**式。  
+ 返される **geometry** インスタンスの WKT 表現です。 *geometry_tagged_text* は **nvarchar** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
  CLR の戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
- OGC の型の**geometry**によって返されるインスタンス`Parse()`が、対応する WKT 入力に設定します。  
+## <a name="remarks"></a>Remarks  
+ `Parse()` によって返された **geometry** インスタンスの OGC 型は、対応する WKT 入力に設定されます。  
   
- 'Null'、として解釈されます、null 文字列**geometry**インスタンス。  
+ "NULL" 文字列は、**geography** の NULL インスタンスと解釈されます。  
   
- このメソッドはスロー、 **FormatException**入力が適切な形式でない場合。  
+ このメソッドは、入力が正しい形式でない場合に、**FormatException** をスローします。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`Parse()`を作成する、`geometry`インスタンス。  
+ 次の例では、`Parse()` を使用して `geometry` インスタンスを作成します。  
   
 ```  
 DECLARE @g geometry;   

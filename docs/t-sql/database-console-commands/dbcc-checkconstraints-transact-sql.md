@@ -1,5 +1,5 @@
 ---
-title: "DBCC CHECKCONSTRAINTS (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC CHECKCONSTRAINTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -61,7 +61,7 @@ DBCC CHECKCONSTRAINTS
   
 ## <a name="arguments"></a>引数  
  *table_name* | *table_id* | *constraint_name* | *constraint_id*  
- チェックするテーブルまたは制約を指定します。 ときに*table_name*または*table_id*が指定すると、そのテーブルで有効になっているすべての制約がチェックされます。 ときに*constraint_name*または*constraint_id*が指定すると、その制約だけがチェックされます。 テーブル識別子も制約識別子も指定しない場合は、現在のデータベース内にあるすべてのテーブルで有効なすべての制約がチェックされます。  
+ チェックするテーブルまたは制約を指定します。 *table_name* または *table_id* を指定した場合は、そのテーブルで有効な制約がすべてチェックされます。 *constraint_name* または *constraint_id* を指定した場合は、その制約のみがチェックされます。 テーブル識別子も制約識別子も指定しない場合は、現在のデータベース内にあるすべてのテーブルで有効なすべての制約がチェックされます。  
  制約名によって、その制約が属するテーブルが一意に識別されます。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
  のすべてのメンションを  
@@ -76,7 +76,7 @@ DBCC CHECKCONSTRAINTS
  NO_INFOMSGS  
  すべての情報メッセージを表示しないようにします。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 DBCC CHECKCONSTRAINTS では、テーブルのすべての FOREIGN KEY 制約および CHECK 制約に対してクエリが作成され実行されます。
   
 たとえば、外部キー クエリは次のような形式になります。
@@ -93,19 +93,19 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 ```  
   
 クエリ データは temp テーブルに格納されます。 指定したすべてのテーブルまたは制約がチェックされた後、結果セットが返されます。
-DBCC CHECKCONSTRAINTS では、FOREIGN KEY 制約と CHECK 制約の整合性はチェックされますが、テーブルのディスク上のデータ構造に関する整合性はチェックされません。 使用してこれらのデータ構造のチェックを実行できる[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)と[DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)です。
+DBCC CHECKCONSTRAINTS では、FOREIGN KEY 制約と CHECK 制約の整合性はチェックされますが、テーブルのディスク上のデータ構造に関する整合性はチェックされません。 このようなデータ構造のチェックは、[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) および [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) で実行できます。
   
-**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
-場合*table_name*または*table_id*が指定されているシステムのバージョン管理を有効になっていると、DBCC CHECKCONSTRAINTS では、指定のテーブルにテンポラル データの一貫性チェックもを実行します。 ときに*NO_INFOMSGS*が指定されていない、このコマンドが返されます整合性違反は各出力行ごとにします。 出力の形式になります ([pkcol1]、[pkcol2]..) = (\<pkcol1_value >、 \<pkcol2_value >...)および\<テンポラル テーブルのレコードに問題は > します。
+*table_name* または *table_id* が指定されており、システムのバージョン管理で有効になっている場合、DBCC CHECKCONSTRAINTS では、指定したテーブルで、テンポラル データの整合性チェックも行います。 このコマンドでは、*NO_INFOMSGS* が指定されていない場合、それぞれの整合性違反を別の行に出力します。 出力は、([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>…) AND \<what is wrong with temporal table record> になります。
   
 |[確認]|チェックが失敗した場合の出力に追加の情報|  
 |-----------|-----------------------------------------------|  
-|PeriodEndColumn ≥ PeriodStartColumn (現在)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
-|PeriodEndColumn ≥ PeriodStartColumn (現在、履歴)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
-|PeriodStartColumn < current_utc_time (現在)|[sys_start] = '{0}' AND SYSUTCTIME|  
-|PeriodEndColumn < current_utc_time (履歴)|[sys_end] = '{0}' AND SYSUTCTIME|  
-|重複しています|(sys_start1、sys_end1)、(sys_start2 sys_end2) 2 つのレコードと重複します。<br /><br /> レコードが重複している 2 以上の場合がある場合、出力は、1 組の重複を示す複数の行でがあります。|  
+|PeriodEndColumn ≥ PeriodStartColumn (current)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
+|PeriodEndColumn ≥ PeriodStartColumn (current, history)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
+|PeriodStartColumn < current_utc_time (current)|[sys_start] = '{0}' AND SYSUTCTIME|  
+|PeriodEndColumn < current_utc_time (history)|[sys_end] = '{0}' AND SYSUTCTIME|  
+|重複|(sys_start1, sys_end1) , (sys_start2, sys_end2) 2 つの重複するレコード。<br /><br /> レコードが重複している 2 以上の場合がある場合、出力は、1 組の重複を示す複数の行でがあります。|  
   
 のみ一時的な整合性チェックを実行するために、constraint_name または constraint_id を指定する方法はありません。
   
@@ -118,7 +118,7 @@ DBCC CHECKCONSTRAINTS では、次の列を含む行セットが返されます�
 |Constraint Name|**varchar**|違反している制約の名前。|  
 |場所|**varchar**|制約に違反している 1 つ以上の行を識別する列値の割り当て。<br /><br /> この列の値は、制約に違反する行をクエリする SELECT ステートメントの WHERE 句で使用できます。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。
   
 ## <a name="examples"></a>使用例  

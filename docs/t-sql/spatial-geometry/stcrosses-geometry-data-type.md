@@ -1,5 +1,5 @@
 ---
-title: "STCrosses (geometry データ型) |Microsoft ドキュメント"
+title: "STCrosses (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-場合 1 を返します、 **geometry**インスタンスでは、他と交差する**geometry**インスタンス。 そうでない場合は、0 を返します。
+**geometry** インスタンスが別の **geometry** インスタンスと重なり合う場合、1 を返します。 含まれ交差しない場合は 0 を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,21 +45,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- もう 1 つ**geometry**対象のインスタンスと比較するインスタンス`STCrosses()`が呼び出されます。  
+ `STCrosses()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **bit**  
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- 2 つ**geometry**のインスタンスが交わるの両方の次の条件に該当する場合。  
+## <a name="remarks"></a>Remarks  
+ 次の条件が両方とも該当する場合、2 つの **geometry** インスタンスは交差します。  
   
--   2 つの交差部分**geometry**結果、ジオメトリの次元は、ソースの最大次元数よりも小さいをインスタンス化**geometry**インスタンス。  
+-   2 つの **geometry** インスタンスが交差すると、ジオメトリの次元は、基になる **geometry** インスタンスの最大次元数よりも小さくなります。  
   
--   積集合のセットが両方のソースに内部**geometry**インスタンス。  
+-   交差集合は、基になる **geometry** インスタンスの両方に含まれる部分です。  
   
- このメソッドは、場合常に null を返しますの spatial reference Id (Srid)、 **geometry**インスタンスが一致しません。  
+ **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
 ## <a name="examples"></a>使用例  
  `STCrosses()` を使用して 2 つの `geometry` インスタンスが交差かどうかをテストする例を次に示します。  

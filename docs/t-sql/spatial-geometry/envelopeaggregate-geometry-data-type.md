@@ -1,5 +1,5 @@
 ---
-title: "EnvelopeAggregate (geometry データ型) |Microsoft ドキュメント"
+title: "EnvelopeAggregate (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="envelopeaggregate-geometry-data-type"></a>EnvelopeAggregate (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-指定されたセットの境界ボックスを返します**geometry**オブジェクト。
+特定の **geometry** オブジェクト セットの境界ボックスを返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -42,21 +42,21 @@ EnvelopeAggregate ( geometry_operand )
   
 ## <a name="arguments"></a>引数  
  *geometry_operand*  
- **Geometry**型のテーブル列のセットを表す**geometry**オブジェクト。  
+ **geometry** オブジェクトのセットを表す **geometry** 型のテーブルの列を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
 ## <a name="exceptions"></a>例外  
- 入力値が無効である場合は、`FormatException` をスローします。 参照してください[STIsValid (& a) #40; geometry データ型 &#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
+ 入力値が無効である場合は、`FormatException` をスローします。 「[STIsValid &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
- メソッドを返します。 **null**入力が空または入力がの Srid が異なる場合。 参照してください[空間参照識別子 &#40;です。Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="remarks"></a>Remarks  
+ 入力が空である場合または入力の SRID が異なる場合は、**null** が返されます。 「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
- メソッドは無視**null**入力します。  
+ メソッドでは、**null** 入力は無視されます。  
   
 > [!NOTE]  
->  メソッドを返します。 **null**入力されたすべての値が場合**null**です。  
+>  入力されたすべての値が **null** の場合、**null** が返されます。  
   
 ## <a name="examples"></a>使用例  
  次の例は、テーブル変数列のオブジェクトのセットの境界ボックスを返します。  

@@ -1,5 +1,5 @@
 ---
-title: "STGeometryType (geometry データ型) |Microsoft ドキュメント"
+title: "STGeometryType (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeometrytype-geometry-data-type"></a>STGeometryType (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-によって表される Open Geospatial Consortium (OGC) 型の名前を返します、 **geometry**インスタンス。
+**geometry** インスタンスで表される Open Geospatial Consortium (OGC) の型名を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **nvarchar(4000)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **nvarchar(4000)**  
   
  CLR の戻り値の型: **SqlString**  
   
-## <a name="remarks"></a>解説  
- によって返される OGC の型名`STGeometryType()`は**ポイント**、 **LineString**、 **CircularString**、 **CompoundCurve**、**Polygon、CurvePolygon**、 **GeometryCollection**、 **MultiPoint**、 **MultiLineString**、および**MultiPolygon**です。  
+## <a name="remarks"></a>Remarks  
+ `STGeometryType()` によって返される OGC の型名は、**Point**、**LineString**、**CircularString**、**CompoundCurve**、**Polygon、CurvePolygon**、**GeometryCollection**、**MultiPoint**、**MultiLineString** および **MultiPolygon** です。  
   
 ## <a name="examples"></a>使用例  
  `Polygon` インスタンスを作成し、`STGeometryType()` を使用してこれが多角形であることを確認する例を次に示します。  

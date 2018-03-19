@@ -1,5 +1,5 @@
 ---
-title: "STEnvelope (geometry データ型) |Microsoft ドキュメント"
+title: "STEnvelope (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -44,9 +44,9 @@ STEnvelope ( )
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="examples"></a>使用例  
  `STGeomFromText()` を使用して `LineString` インスタンスをテキストから (0,0) ～ (2,3) の範囲で作成し、`STEnvelope()` を使用して `LineString` に外接する四角形を返す例を次に示します。  

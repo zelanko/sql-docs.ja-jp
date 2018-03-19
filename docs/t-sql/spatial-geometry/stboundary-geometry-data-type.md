@@ -1,5 +1,5 @@
 ---
-title: "STBoundary (geometry データ型) |Microsoft ドキュメント"
+title: "STBoundary (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stboundary-geometry-data-type"></a>STBoundary (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  境界を返す、 **geometry**インスタンス。  
+  **geometry** インスタンスの境界を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
- `STBoundary()`空白を返します**GeometryCollection**ときのエンドポイント、 **LineString**、 **CircularString**、または**CompoundCurve**インスタンス同じです。  
+## <a name="remarks"></a>Remarks  
+ **LineString**、**CircularString**、または **CompoundCurve** インスタンスのエンドポイントが同じである場合、`STBoundary()` は空白の **GeometryCollection** を返します。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-stboundary-on-a-linestring-instance-with-different-endpoints"></a>A. エンドポイントが異なる LineString インスタンスに STBoundary() を使用する  
- 次の例を作成、`LineString``geometry`インスタンス。 `STBoundary()`境界を返す、`LineString`です。  
+ 次の例では、`LineString``geometry` インスタンスを作成します。 `STBoundary()` は、`LineString` の境界を返します。  
   
 ```  
 DECLARE @g geometry;  
@@ -63,7 +63,7 @@ SELECT @g.STBoundary().ToString();
 ```  
   
 ### <a name="b-using-stboundary-on-a-linestring-instance-with-the-same-endpoints"></a>B. エンドポイントが同じである LineString インスタンスに STBoundary() を使用する  
- 次の例は、有効な作成`LineString`エンドポイントが同じでインスタンス。 `STBoundary()` は空の `GeometryCollection` を返します。  
+ 次の例では、同じエンドポイントを持つ有効な `LineString` インスタンスを作成します。 `STBoundary()` は空の `GeometryCollection` を返します。  
   
 ```
  DECLARE @g geometry;  
@@ -72,7 +72,7 @@ SELECT @g.STBoundary().ToString();
  ```  
   
 ### <a name="c-using-stboundary-on-a-curvepolygon-instance"></a>C. CurvePolygon インスタンスに STBoundary() を使用する  
- `STBoundary()` インスタンスで `CurvePolygon` を使用する例を次に示します。 `STBoundary()`返します、`CircularString`インスタンス。  
+ `STBoundary()` インスタンスで `CurvePolygon` を使用する例を次に示します。 `STBoundary()` は `CircularString` インスタンスを返します。  
   
 ```
  DECLARE @g geometry;  

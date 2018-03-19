@@ -1,5 +1,5 @@
 ---
-title: "STDimension (geometry データ型) |Microsoft ドキュメント"
+title: "STDimension (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdimension-geometry-data-type"></a>STDimension (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-最大次元数を返す、 **geometry**インスタンス。
+**geometry** インスタンスの最大次元数を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **int**  
   
  CLR の戻り値の型: **SqlInt32**  
   
-## <a name="remarks"></a>解説  
- `STDimension()`場合は-1 を返します、 **geometry**インスタンスが空です。  
+## <a name="remarks"></a>Remarks  
+ **geometry** インスタンスが空の場合、`STDimension()` は 1 を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例を保持するテーブル変数を作成する**geometry**をインスタンス化し、挿入、 `Point`、 `LineString`、および`Polygon`です。  使用して、`STDimension()`をそれぞれのディメンションを返す**geometry**インスタンス。  
+ **geometry** インスタンスを保持するテーブル変数を作成し、`Point`、`LineString`、`Polygon` を挿入する例を次に示します。  その後、`STDimension()` を使用して各 **geometry** インスタンスの次元を返します。  
   
 ```  
 DECLARE @temp table ([name] varchar(10), [geom] geometry);  
@@ -63,12 +63,12 @@ SELECT [name], [geom].STDimension() as [dim]
 FROM @temp;  
 ```  
   
- この例では、それぞれのディメンション、返されます`geometry`インスタンス。  
+ 次に、各 `geometry` インスタンスの次元を返す例を示します。  
   
-|name|dim|  
+|NAME|dim|  
 |----------|---------|  
 |ポイント|0|  
-|LineString|1|  
+|LineString|@shouldalert|  
 |多角形|2|  
   
 ## <a name="see-also"></a>参照  

@@ -1,5 +1,5 @@
 ---
-title: "STUnion (geometry データ型) |Microsoft ドキュメント"
+title: "STUnion (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stunion-geometry-data-type"></a>STUnion (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-和集合を表すオブジェクトを返します、 **geometry**インスタンスと別**geometry**インスタンス。
+ある **geometry** インスタンスと別の **geometry** インスタンスの和集合を表すオブジェクトを返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,20 +45,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- もう 1 つ**geometry**インスタンスをインスタンスとの和集合を形成`STUnion()`が呼び出されています。  
+ `STUnion()` を呼び出したインスタンスとの和集合を形成する、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
- このメソッドは、場合常に null を返しますの spatial reference Id (Srid)、 **geometry**インスタンスが一致しません。 結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
+## <a name="remarks"></a>Remarks  
+ **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。 結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-computing-the-union-of-two-polygon-instances"></a>A. 2 つの Polygon インスタンスの和集合を計算する  
- 次の例で`STUnion()`2 つの和集合を計算する`Polygon`インスタンス。  
+ `STUnion()` を使用して 2 つの `Polygon` インスタンスの和集合を計算する例を次に示します。  
   
 ```  
 DECLARE @g geometry;  
@@ -69,7 +69,7 @@ SELECT @g.STUnion(@h).ToString();
 ```  
   
 ### <a name="b-computing-the-union-of-a-polygon-instance-with-a-curvepolygon-instance"></a>B. Polygon インスタンスと CurvePolygon インスタンスの和集合を計算する  
- 次の例を返します、`GeometryCollection`円弧のセグメントを格納しているインスタンス。  
+ 次の例は、円弧が含まれた `GeometryCollection` インスタンスを返します。  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 -4, 4 0, 0 4, -4 0, 0 -4))';  

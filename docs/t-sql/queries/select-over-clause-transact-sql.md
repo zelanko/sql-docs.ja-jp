@@ -1,5 +1,5 @@
 ---
-title: "OVER 句 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "OVER 句 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
@@ -38,10 +38,10 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---over-clause-transact-sql"></a>OVER 句 (TRANSACT-SQL) の選択します。
+# <a name="select---over-clause-transact-sql"></a>SELECT - OVER 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  パーティション分割し、関連するウィンドウ関数が適用される前に、行セットの順序を決定します。 つまり、OVER 句はクエリ結果セット内のウィンドウまたはユーザー指定の行セットを定義します。 その後、ウィンドウ関数はウィンドウ内の各行の値を計算します。 OVER 句と関数を使用して、移動平均、累積集計、集計途中経過、グループ結果ごとの上位 N などの集計値を計算できます。  
+  関連するウィンドウ関数が適用される前に、行セットのパーティション処理と並べ替えを決定します。 つまり、OVER 句はクエリ結果セット内のウィンドウまたはユーザー指定の行セットを定義します。 その後、ウィンドウ関数はウィンドウ内の各行の値を計算します。 OVER 句と関数を使用して、移動平均、累積集計、集計途中経過、グループ結果ごとの上位 N などの集計値を計算できます。  
   
 -   [順位付け関数](../../t-sql/functions/ranking-functions-transact-sql.md)  
   
@@ -118,16 +118,16 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  クエリ結果セットをパーティションに分割します。 ウィンドウ関数は各パーティションに対して個別に適用され、各パーティションで計算が再開されます。  
   
  *value_expression*  
- 行セットをパーティションに分割するときに使用する列を指定します。 *value_expression* FROM 句で取得した列のみ参照できます。 *value_expression*選択リストの式または別名を参照できません。 *value_expression*列式、スカラー サブクエリ、スカラー関数、またはユーザー定義変数を指定できます。  
+ 行セットをパーティションに分割するときに使用する列を指定します。 *value_expression* で参照できるのは FROM 句で取得した列だけです。 *value_expression* は、選択リストの式または別名を参照できません。 *value_expression* には、列式、スカラー サブクエリ、スカラー関数、またはユーザー定義変数を指定できます。  
   
  \<ORDER BY clause>  
  結果セットの各パーティション内の行の論理的な順序を定義します。 つまり、ウィンドウ関数の計算が実行される論理的な順序を指定します。  
   
  *order_by_expression*  
- 並べ替えに使用する列または式を指定します。 *order_by_expression* FROM 句で取得した列のみ参照できます。 整数を使用して列の名前または別名を表すことはできません。  
+ 並べ替えに使用する列または式を指定します。 *order_by_expression* で参照できるのは FROM 句で取得した列だけです。 整数を使用して列の名前または別名を表すことはできません。  
   
  COLLATE *collation_name*  
- 指定された照合順序に従って ORDER BY 操作を実行する必要がありますを指定*collation_name*です。 *collation_name* Windows 照合順序名または SQL 照合順序名のいずれかを指定できます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。 COLLATE は型の列に対してのみ適用**char**、 **varchar**、 **nchar**、および**nvarchar**です。  
+ *collation_name* で指定した照合順序に従って ORDER BY 操作を実行することを指定します。 *collation_name* には、Windows 照合順序名または SQL 照合順序名を指定できます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。 COLLATE は、**char**、**varchar**、**nchar**、**nvarchar** 型の列にのみ適用できます。  
   
  **ASC** | DESC  
  指定した列の値を昇順と降順のどちらで並べ替えるかを指定します。 ASC が既定の並べ替え順序です。 NULL 値は最小値として扱われます。  
@@ -147,26 +147,26 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  ウィンドウがパーティションの最初の行から開始することを指定します。 UNBOUNDED PRECEDING はウィンドウの開始位置としてのみ指定できます。  
   
- \<値の指定の符号なし > PRECEDING  
- 指定された\<値の指定の符号なし > の行または現在の行の前に値の数を示します。 RANGE に対してはこの指定を使用できません。  
+ \<unsigned value specification> PRECEDING  
+ \<unsigned value specification> は、現在行より前にある行または値の数を示します。 RANGE に対してはこの指定を使用できません。  
   
  CURRENT ROW  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
  ウィンドウが現在の行 (ROWS の場合) または現在の値 (RANGE の場合) で開始または終了することを指定します。 CURRENT ROW は開始位置としても終了位置としても指定できます。  
   
- 間\<バインドされているウィンドウ フレーム > AND\<バインドされているウィンドウ フレーム >  
+ BETWEEN \<window frame bound > AND \<window frame bound >  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
- ROWS または RANGE で使用し、ウィンドウの下限 (開始) と上限 (終了) の境界位置を指定します。 \<バインドされているウィンドウ フレーム > 境界の開始位置を定義および\<バインドされているウィンドウ フレーム > 境界の終了位置を定義します。 上限を下限より小さくすることはできません。  
+ ROWS または RANGE で使用し、ウィンドウの下限 (開始) と上限 (終了) の境界位置を指定します。 前の \<window frame bound> は境界の開始位置を定義し、後の \<window frame bound> は境界の終了位置を定義します。 上限を下限より小さくすることはできません。  
   
  UNBOUNDED FOLLOWING  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
  ウィンドウがパーティションの最後の行で終了することを指定します。 UNBOUNDED FOLLOWING はウィンドウの終了位置としてのみ指定できます。 たとえば、RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING は、現在行から開始してパーティションの最後の行で終了するウィンドウを定義します。  
   
- \<値の指定の符号なし > 以下  
- 指定された\<値の指定の符号なし > の行または現在の行に値の数を示します。 ときに\<値の指定の符号なし > 次のウィンドウの開始位置として指定されたが、終了位置である必要があります\<値の指定の符号なし > 以下です。 たとえば、ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING は、現在行より後の 2 行目から開始して現在行より後の 10 行目で終了するウィンドウを定義します。 RANGE に対してはこの指定を使用できません。  
+ \<unsigned value specification> FOLLOWING  
+ \<unsigned value specification> は、現在行より後にある行または値の数を示します。 \<unsigned value specification> FOLLOWING をウィンドウの開始位置として指定するときは、終了位置を \<unsigned value specification> FOLLOWING にする必要があります。 たとえば、ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING は、現在行より後の 2 行目から開始して現在行より後の 10 行目で終了するウィンドウを定義します。 RANGE に対してはこの指定を使用できません。  
   
  unsigned integer literal  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -180,7 +180,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  
 ### <a name="important"></a>重要:
 
-ROWS/RANGE を指定した場合と\<前のウィンドウ フレーム > の使用は\<ウィンドウ フレームのエクステント > (短い構文) ウィンドウ フレーム境界の開始位置のこの仕様が使用され、現在の行は境界の終了を使用し、ポイントです。 たとえば、"ROWS 5 PRECEDING" は "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW" と同じです。  
+ROWS/RANGE を指定し、\<window frame preceding> を \<window frame extent> に対して使用すると (短い構文)、ウィンドウ フレーム境界の開始位置に対してはこの指定が使用され、境界の終了位置に対しては CURRENT ROW が使用されます。 たとえば、"ROWS 5 PRECEDING" は "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW" と同じです。  
   
 > [!NOTE]
 > ORDER BY を指定しないと、パーティション全体がウィンドウ フレームに対して使用されます。 これは、ORDER BY 句を必要としない関数にのみ適用されます。 ROWS/RANGE を指定しないで ORDER BY を指定すると、RANGE UNBOUNDED PRECEDING AND CURRENT ROW がウィンドウ フレームに対する既定値として使用されます。 これは、オプションの ROWS/RANGE 指定を受け入れることができる関数に対してのみ適用されます。 たとえば、順位付け関数は ROWS/RANGE を受け入れないため、ORDER BY があり、ROWS/RANGE がなくても、このウィンドウ フレームは適用されません。  
@@ -188,9 +188,9 @@ ROWS/RANGE を指定した場合と\<前のウィンドウ フレーム > の使
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  OVER 句を CHECKSUM 集計関数と共に使用することはできません。  
   
- 範囲は使用できません\<値の指定の符号なし > PRECEDING または\<値の指定の符号なし > 以下です。  
+ RANGE を \<unsigned value specification> PRECEDING または \<unsigned value specification> FOLLOWING と共に使用することはできません。  
   
- OVER 句で使用される順位付け、集計、または分析関数によって\<ORDER BY 句 > と\<ROWS and RANGE 句 > サポートされていない可能性があります。  
+ OVER 句と共に使用される順位付け関数、集計関数、または分析関数によっては、\<ORDER BY clause> と \<ROWS and RANGE clause> のどちらか一方または両方がサポートされない場合があります。  
   
 ## <a name="examples"></a>使用例  
   
@@ -278,7 +278,7 @@ SalesOrderID ProductID   OrderQty Total       Avg         Count       Min    Max
 43664        778         1        14          1           8           1      4  
 ```  
   
- 次の例を使用して、`OVER`計算値で、集計関数を含む句。  
+ 次の例では、`OVER` 句を集計関数と共に計算値の中で使用します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -292,7 +292,7 @@ WHERE SalesOrderID IN(43659,43664);
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]によって、集計が計算される`SalesOrderID`と`Percent by ProductID`はそれぞれの行ごとに計算`SalesOrderID`です。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 集計は `SalesOrderID` ごとに計算され、`Percent by ProductID` は各 `SalesOrderID` の各行に対して計算されることに注意してください。  
   
 ```  
 SalesOrderID ProductID   OrderQty Total       Percent by ProductID  
@@ -322,7 +322,7 @@ SalesOrderID ProductID   OrderQty Total       Percent by ProductID
 ```  
   
 ### <a name="c-producing-a-moving-average-and-cumulative-total"></a>C. 移動平均および累積合計を生成する  
- 次の例では、OVER 句を指定した AVG および SUM 関数を使用して、`Sales.SalesPerson` テーブルに各区域の年間売り上げの移動平均と累積合計を入力します。 データがパーティション分割`TerritoryID`によって論理的に順序付けと`SalesYTD`です。 つまり、AVG 関数は年を基にして区域ごとに計算されます。 ことに注意して`TerritoryID`1 の場合、そこが 2005 年の 2 つの行を表す 2 つの販売員の売上その年です。 これら 2 行の平均売上が計算された後、2006 年の売上を表す 3 番目の行が計算に組み込まれます。  
+ 次の例では、OVER 句を指定した AVG および SUM 関数を使用して、`Sales.SalesPerson` テーブルに各区域の年間売り上げの移動平均と累積合計を入力します。 データは `TerritoryID` によってパーティションに分割され、`SalesYTD` によって論理的に順序付けされます。 つまり、AVG 関数は年を基にして区域ごとに計算されます。 `TerritoryID` 1 の 2005 年については、その年の 2 人の営業担当者を表す 2 行があります。 これら 2 行の平均売上が計算された後、2006 年の売上を表す 3 番目の行が計算に組み込まれます。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -398,7 +398,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 次の例では、行句を使用して、現在の行として行を計算するウィンドウを定義し、 *N* (この例では 1 行) に続く行の数。  
+ 次の例では、ROWS 句を使用して、行の計算対象のウィンドウを、現在行からその後の *N* 行まで (この例では 1 行) と定義しています。  
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
@@ -459,10 +459,10 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. OVER 句を ROW_NUMBER 関数と共に使用する  
- 次の例では、営業担当者が、割り当てられている販売ノルマに基づくを ROW_NUMBER を返します。  
+ 次の例は、割り当てられている販売ノルマに基づいて営業担当者の ROW_NUMBER を返します。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -477,7 +477,7 @@ WHERE e.SalesPersonFlag = 1
 GROUP BY LastName, FirstName;  
 ```  
   
- 部分的な結果セットを次に示します。  
+ 次に結果セットの一部を示します。  
   
  ```
  RowNumber  FirstName  LastName            SalesQuota  
@@ -489,7 +489,7 @@ GROUP BY LastName, FirstName;
  ```
  
 ### <a name="f-using-the-over-clause-with-aggregate-functions"></a>F. OVER 句を集計関数と共に使用する  
- 次の例では、集計関数で OVER 句の使用を示します。 この例では、OVER 句を使用するサブクエリを使用するよりも効率的です。  
+ 次の例では、OVER 句を集計関数と共に使用します。 この例では、OVER 句を使用した方が、サブクエリを使用するより効率的です。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -521,7 +521,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  SO43664      235      1     2     1    2      1    1  
  ```
  
- 計算値で、集計関数を OVER 句を使用して次の例を示しています。 集計が計算される`SalesOrderNumber`とそれぞれの行ごとの販売注文の合計の割合を計算`SalesOrderNumber`です。  
+ 次の例では、OVER 句を集計関数と共に計算値の中で使用します。 集計は `SalesOrderNumber` ごとに計算され、受注合計の割合は各 `SalesOrderNumber` の各行に対して計算されることに注意してください。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -538,7 +538,7 @@ WHERE SalesOrderNumber IN(N'SO43659',N'SO43664') AND
 ORDER BY SalesOrderNumber,ProductKey;  
 ```  
   
- この結果セットの最初の開始は次のとおりです。  
+ この結果セットの最初の開始は次のようになります。  
   
  ```
  OrderNumber  Product  Qty  Total  PctByProduct  
@@ -550,8 +550,8 @@ ORDER BY SalesOrderNumber,ProductKey;
  ```
  
 ## <a name="see-also"></a>参照  
- [集計関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [分析関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/analytic-functions-transact-sql.md)   
- [ウィンドウ関数と、に関する sqlmag.com、によって Itzik Ben gan で上のすばらしいブログ記事](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
+ [集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [分析関数 &#40;Transact-SQL&#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
+ [sqlmag.com に Itzik Ben-Gan が投稿した、ウィンドウ関数と OVER に関する優れたブログ記事](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
   
   

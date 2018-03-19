@@ -1,5 +1,5 @@
 ---
-title: "STIsValid (geography データ型) |Microsoft ドキュメント"
+title: "STIsValid (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,9 +31,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisvalid-geography-data-type"></a>STIsValid (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  場合は true を返します、 **geography**インスタンスが整形式であり、Open Geospatial Consortium (OGC) 型に基づいて有効な geography オブジェクトとして認識されています。 場合は false を返します、 **geography**インスタンスが整形式ではありません。 このメソッドは正確です。  
+  **geography** インスタンスが整形式であり、Open Geospatial Consortium (OGC) 型に基づいて有効な geography オブジェクトとして認識されている場合に、true を返します。 **geography** インスタンスが整形式になっていない場合は false を返します。 このメソッドは正確です。  
   
- この geography データ型メソッドでサポート**FullGlobe**インスタンスまたは空間インスタンスは、半球より大きいをします。  
+ この geography データ型メソッドは、半球より大きい **FullGlobe** インスタンスまたは空間インスタンスをサポートします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,14 +43,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR 戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- OGC の型の**geography**インスタンスを呼び出すことによって判別できます[STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)です。  
+## <a name="remarks"></a>Remarks  
+ **geography** インスタンスの OGC 型は、[STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) を呼び出すことによって判別できます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のみの有効な生成**geography**インスタンスしますが、無効なインスタンスの取得と記憶域が可能です。 使用して、無効なインスタンスの同じ地点のセットを表す有効なインスタンスを取得することができます、`MakeValid()`メソッドです。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、有効な **geography** インスタンスのみを生成しますが、無効なインスタンスの取得と格納が可能です。 無効なインスタンスと同じ地点のセットを表す有効なインスタンスは、`MakeValid()` メソッドを使用して取得できます。  
   
 ## <a name="examples"></a>使用例  
  `geography` インスタンスを作成し、`STIsValid()` を使用してこのインスタンスが有効かどうかをテストする例を次に示します。  

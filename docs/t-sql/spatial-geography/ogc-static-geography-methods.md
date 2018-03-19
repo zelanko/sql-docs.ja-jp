@@ -1,5 +1,5 @@
 ---
-title: "OGC の静的な地理メソッド |Microsoft ドキュメント"
+title: "OGC の静的な地理メソッド | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ogc-static-geography-methods"></a>OGC の静的な地理メソッド
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Open Geospatial Consortium (OGC) の静的な地理メソッドをサポートしています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Open Geospatial Consortium (OGC) の静的な地理メソッドをサポートしています。  
   
  OGC 仕様の詳細については、以下を参照してください。  
   

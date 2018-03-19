@@ -1,5 +1,5 @@
 ---
-title: "OPTION 句 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "OPTION 句 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -74,7 +74,7 @@ OPTION ( <query_option> [ ,...n ] )
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. GROUP BY 句を含む OPTION 句を使用します。  
+### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. OPTION 句を GROUP BY 句と共に使用する  
  次の例では、`OPTION` 句と共に `GROUP BY` 句を使用する方法を示します。  
   
 ```  
@@ -89,10 +89,10 @@ OPTION (HASH GROUP, FAST 10);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. OPTION 句内のラベルを含む SELECT ステートメント  
- 次の例は、単純な[!INCLUDE[ssDW](../../includes/ssdw-md.md)]OPTION 句内のラベルを含む SELECT ステートメント。  
+### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. SELECT ステートメントと OPTION 句のラベル  
+ 次は、単純な [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT ステートメントと OPTION 句のラベルの例です。  
   
 ```  
 -- Uses AdventureWorks  
@@ -101,8 +101,8 @@ SELECT * FROM FactResellerSales
   OPTION ( LABEL = 'q17' );  
 ```  
   
-### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>C. OPTION 句でのクエリ ヒントを含む SELECT ステートメント  
- 次の例では、OPTION 句で HASH JOIN クエリ ヒントを使用する SELECT ステートメントを示します。  
+### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>C. SELECT ステートメントと OPTION 句のクエリ ヒント  
+ 次は、OPTION 句で HASH JOIN クエリ ヒントを使用する SELECT ステートメントの例です。  
   
 ```  
 -- Uses AdventureWorks  
@@ -113,8 +113,8 @@ ON (a.CustomerKey = b.CustomerKey)
 OPTION (HASH JOIN);  
 ```  
   
-### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. ラベルと OPTION 句で複数のクエリ ヒントを含む SELECT ステートメント  
- 次の例は、[!INCLUDE[ssDW](../../includes/ssdw-md.md)]ラベルと複数のクエリ ヒントを含む SELECT ステートメント。 コンピューティング ノードで、クエリの実行時に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]方針に従って、ハッシュ結合またはマージ結合を適用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]決定最も最適なです。  
+### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. SELECT ステートメントと OPTION 句のラベルと複数のクエリ ヒント  
+ 次は、ラベルと複数のクエリ ヒントを含む [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT ステートメントの例です。 クエリが計算ノードで実行されるとき、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で最適であると判断された方針に基づいて、ハッシュ結合またはマージ結合を適用します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -125,8 +125,8 @@ ON (a.CustomerKey = b.CustomerKey)
 OPTION ( Label = 'CustJoin', HASH JOIN, MERGE JOIN);  
 ```  
   
-### <a name="e-using-a-query-hint-when-querying-a-view"></a>E. ビューをクエリするときに、クエリ ヒントを使用します。  
- 次の例では、CustomerView をという名前のビューを作成し、ビューとテーブルを参照するクエリで HASH JOIN クエリ ヒントを使用します。  
+### <a name="e-using-a-query-hint-when-querying-a-view"></a>E. ビューにクエリを実行するとき、クエリ ヒントを使用する  
+ 次の例では、CustomerView という名前のビューを作成し、ビューとテーブルを参照するクエリで HASH JOIN クエリ ヒントを使用します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -144,8 +144,8 @@ DROP VIEW CustomerView;
   
 ```  
   
-### <a name="f-query-with-a-subselect-and-a-query-hint"></a>F. サブセレクトとクエリ ヒントとクエリ  
- 次の例では、サブセレクトとクエリ ヒントの両方を含むクエリを示します。 クエリ ヒントは、グローバルに適用されます。 クエリ ヒントは、サブセレクト ステートメントに追加するのには許可されません。  
+### <a name="f-query-with-a-subselect-and-a-query-hint"></a>F. サブセレクトとクエリ ヒントを含むクエリ  
+ 次は、サブセレクトとクエリ ヒントの両方が含まれるクエリの例です。 クエリ ヒントはグローバルに適用されます。 クエリ ヒントはサブセレクト ステートメントに追加できません。  
   
 ```  
 -- Uses AdventureWorks  
@@ -160,8 +160,8 @@ ON ( a.CustomerKey = b.CustomerKey )) AS t
 OPTION (HASH JOIN);  
 ```  
   
-### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>G. クエリの順序と一致する結合順序を強制します。  
- 次の例では、クエリで指定された結合順序を使用するのにクエリ プランを強制的に強制的に ORDER ヒントを使用します。 これによりいくつかのクエリのパフォーマンスが向上します。すべてのクエリ。  
+### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>G. クエリの順序どおりの結合順序を強制する  
+ 次の例では、FORCE ORDER ヒントを使用し、クエリで指定されている結合順序を使用するようにクエリ プランに強制します。 これですべてではありませんが、一部のクエリでパフォーマンスが改善されます。  
   
 ```  
 -- Uses AdventureWorks  
@@ -181,8 +181,8 @@ OPTION ( FORCE ORDER )
 ;  
 ```  
   
-### <a name="h-using-externalpushdown"></a>H. EXTERNALPUSHDOWN を使用します。  
- 次の例は、外部の Hadoop テーブルに対する MapReduce ジョブに WHERE 句のプッシュ ダウンを強制します。  
+### <a name="h-using-externalpushdown"></a>H. EXTERNALPUSHDOWN の使用  
+ 次の例では、外部 Hadoop テーブルで MapReduce ジョブに WHERE 句を強制的にプッシュダウンします。  
   
 ```  
 SELECT ID FROM External_Table_AS A   
@@ -190,7 +190,7 @@ WHERE ID < 1000000
 OPTION (FORCE EXTERNALPUSHDOWN);  
 ```  
   
- 次の例では、外部の Hadoop テーブルに対する MapReduce ジョブに WHERE 句のプッシュ ダウンができなくなります。 PDW の WHERE 句が適用されるには、すべての行が返されます。  
+ 次の例では、外部 Hadoop テーブルで MapReduce ジョブに WHERE 句を強制的にプッシュダウンする行為を防止します。 すべての行は、WHERE 句が適用される PDW に戻ります。  
   
 ```  
 SELECT ID FROM External_Table_AS A   
@@ -199,10 +199,10 @@ OPTION (DISABLE EXTERNALPUSHDOWN);
 ```  
   
 ## <a name="see-also"></a>参照  
- [ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql.md)   
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [マージ &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/merge-transact-sql.md)   
+ [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)  
   
   

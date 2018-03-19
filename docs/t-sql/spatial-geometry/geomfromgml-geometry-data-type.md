@@ -1,5 +1,5 @@
 ---
-title: "GeomFromGml (geometry データ型) |Microsoft ドキュメント"
+title: "GeomFromGml (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-構築、 **geometry** 、表現が指定されたインスタンス、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Geography Markup Language (GML) のサブセットです。
+GML (Geography Markup Language) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブセットによる表現が指定された **geometry** インスタンスを構築します。
   
 GML (Geography Markup Language) の詳細については、以下の Open Geospatial Consortium (OGC) 仕様を参照してください。
   
@@ -49,21 +49,21 @@ GeomFromGml ( GML_input, SRID )
   
 ## <a name="arguments"></a>引数  
  *GML_input*  
- XML 入力は、GML が値を返します。  
+ GML が返す値を含む XML 入力です。  
   
  *SRID*  
- **Int** 、空間を表す式の ID (SRID) を参照、 **geometry**インスタンスを取得します。  
+ 返される **geometry** インスタンスの SRID (spatial reference ID) を表す **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
- このメソッドはスロー、 **FormatException**入力が適切な形式でない場合。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、入力が整形式でない場合に、**FormatException** をスローします。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`GeomFromGml()`を作成する、`geometry`インスタンス。  
+ `GeomFromGml()` を使用して `geometry` インスタンスを作成する例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

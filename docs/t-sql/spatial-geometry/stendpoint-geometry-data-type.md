@@ -1,5 +1,5 @@
 ---
-title: "STEndpoint (geometry データ型) |Microsoft ドキュメント"
+title: "STEndpoint (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stendpoint-geometry-data-type"></a>STEndpoint (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-終点を返します、 **geometry**インスタンス。
+**geometry** インスタンスの終点を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -44,19 +44,19 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
- Open Geospatial Consortium (OGC) の型:**ポイント**  
+ Open Geospatial Consortium (OGC) の型: **Point**  
   
-## <a name="remarks"></a>解説  
- `STEndPoint()`相当[STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (x.numpoints()) です。  
+## <a name="remarks"></a>Remarks  
+ `STEndPoint()` は、[STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (x.NumPoints()) と同じです。  
   
- このメソッドは、空で呼び出された場合は null を返します**geometry**インスタンス。  
+ このメソッドは、空の **geometry** インスタンスに対して呼び出された場合は null を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例を作成、`LineString`インスタンス`STGeomFromText()`を使用して`STEndpoint()`の終点を取得する、`LineString`です。  
+ `STGeomFromText()` で `LineString` インスタンスを作成し、`STEndpoint()` を使用して `LineString` の終点を取得する例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

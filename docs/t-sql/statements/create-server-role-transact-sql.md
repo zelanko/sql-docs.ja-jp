@@ -1,5 +1,5 @@
 ---
-title: "サーバー ロール (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -58,16 +58,16 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
  AUTHORIZATION *server_principal*  
  新しいサーバー ロールを所有するログインです。 ログインを指定しない場合、サーバー ロールは CREATE SERVER ROLE を実行するログインが所有します。  
   
-## <a name="remarks"></a>解説  
- サーバー ロールは、サーバー レベルのセキュリティ保護可能なリソースです。 サーバー ロールを作成した後は、GRANT、DENY、および REVOKE を使って、ロールのサーバー レベルの権限を構成します。 使用するログインを追加またはサーバー ロールからログインを削除、 [ALTER SERVER ROLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-server-role-transact-sql.md). サーバーの役割を削除するには、使用[DROP SERVER ROLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-server-role-transact-sql.md). 詳細については、「[sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)」を参照してください。  
+## <a name="remarks"></a>Remarks  
+ サーバー ロールは、サーバー レベルのセキュリティ保護可能なリソースです。 サーバー ロールを作成した後は、GRANT、DENY、および REVOKE を使って、ロールのサーバー レベルの権限を構成します。 サーバー ロールのログインを追加または削除するには、[ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md) を使用します。 サーバー ロールを削除するには、[DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md) を使用します。 詳細については、「[sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)」を参照してください。  
   
- サーバーの役割を表示するにはクエリを実行して、 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)と[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)カタログ ビューです。  
+ [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) および [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) カタログ ビューに対してクエリを実行することで、サーバー ロールを確認できます。  
   
  データベース レベルのセキュリティ保護可能なリソースに対する権限をサーバー ロールに付与することはできません。 データベース ロールを作成するには、「[CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)」を参照してください。  
   
  権限システムの設計の詳細については、「 [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  CREATE SERVER ROLE 権限、または sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
  さらに、ログインのための *server_principal* に対する IMPERSONATE 権限、 *server_principal*として使用されるサーバー ロールのための ALTER 権限、または server_principal として使用される Windows グループのメンバーシップも必要です。  
@@ -101,7 +101,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [DROP SERVER ROLE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-server-role-transact-sql.md)   
+ [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   

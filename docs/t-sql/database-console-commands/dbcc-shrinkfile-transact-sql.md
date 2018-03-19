@@ -1,5 +1,5 @@
 ---
-title: "DBCC SHRINKFILE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC SHRINKFILE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -69,31 +69,31 @@ DBCC SHRINKFILE
 圧縮するファイルの論理名を指定します。
   
 *file_id*  
-圧縮するファイルの識別 (ID) 番号を指定します。 ファイル ID を取得するを使用して、 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)システム関数、またはクエリ、 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)カタログ ビューの現在のデータベースです。
+圧縮するファイルの識別 (ID) 番号を指定します。 ファイル ID を取得するには、システム関数 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) を使用するか、現在のデータベースで [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) カタログ ビューに対してクエリを実行します。
   
 *target_size*  
 ファイルのサイズを MB 単位で表す整数値を指定します。 この値を指定しない場合、DBCC SHRINKFILE では既定のファイル サイズまでサイズが圧縮されます。 既定のサイズは、ファイル作成時に指定されたサイズです。
   
 > [!NOTE]  
->  DBCC SHRINKFILE を使用して、空のファイルの既定のサイズを減らすことができます*target_size*です。 たとえば、5 MB のファイルを作成してから、ファイルがまだ空のうちに 3 MB に圧縮した場合、既定のファイル サイズは 3 MB に設定されます。 これは、データが含まれたことがない空のファイルにのみ該当します。  
+>  DBCC SHRINKFILE *target_size* を使用して、空のファイルの既定のサイズを小さくすることができます。 たとえば、5 MB のファイルを作成してから、ファイルがまだ空のうちに 3 MB に圧縮した場合、既定のファイル サイズは 3 MB に設定されます。 これは、データが含まれたことがない空のファイルにのみ該当します。  
   
 このオプションは、FILESTREAM ファイル グループ コンテナーではサポートされていません。  
-場合*target_size*を指定すると、DBCC SHRINKFILE は指定されたサイズに、ファイルを圧縮しようとしています。 解放されたファイル内の使用ページは、保持されるファイル部分の空き領域に移されます。 たとえば、DBCC SHRINKFILE 操作を実行すると、10 MB のデータ ファイルがある場合、 *target_size* 8 原因のすべての使用ページ、ファイルの末尾 2 MB でファイルの先頭 8 MB にある未割り当てのページに再割り当ています。 DBCC SHRINKFILE では、ファイル内に格納されているデータのサイズ以下に、ファイルを圧縮することはできません。 たとえば、次の 7 MB の 10 MB のデータ ファイルを使用すると、DBCC SHRINKFILE ステートメントを*target_size* 6 ののみを 7 MB に、6 MB しないファイルを圧縮します。
+*target_size* を指定した場合、DBCC SHRINKFILE では、指定されたサイズまでファイルの圧縮が試行されます。 解放されたファイル内の使用ページは、保持されるファイル部分の空き領域に移されます。 たとえば、10 MB のデータ ファイルの場合、*target_size* を 8 にして DBCC SHRINKFILE 操作を実行すると、ファイルの末尾 2 MB にあるすべての使用ページがファイルの先頭 8 MB にある未割り当てのページに再割り当てされます。 DBCC SHRINKFILE では、ファイル内に格納されているデータのサイズ以下に、ファイルを圧縮することはできません。 たとえば、10 MB のデータ ファイルのうち 7 MB が使用されている場合、*target_size* を 6 にして DBCC SHRINKFILE ステートメントを実行しても、ファイルは 7 MB にまでしか圧縮できず、6 MB にはなりません。
   
 EMPTYFILE  
-その他のファイルに指定したファイルからすべてのデータを移行、**同じファイル グループ**です。 つまり、EmptyFile は、同じファイル グループの他のファイルに、指定したファイルからデータが移行されます。 Emptyfile でにより、ファイルに新しいデータが追加されません。使用して、ファイルを削除することができます、 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)ステートメントです。
-FILESTREAM ファイル グループ コンテナーでは、FILESTREAM ガベージ コレクターが実行され、EMPTYFILE によって他のコンテナーにコピーされた不要なすべてのファイル グループ コンテナー ファイルが削除された後でなければ、ALTER DATABASE を使用してファイルを削除できません。 詳細については、次を参照してください。 [sp_filestream_force_garbage_collection (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
+指定したファイルから、**同じファイル グループ**内の他のファイルにすべてのデータを移動します。 つまり、EmptyFile は、指定したファイルから、同じファイル グループ内の他のファイルにデータを移動します。 Emptyfile により、ファイルに新しいデータが追加されなくなります。ファイルは [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用して削除することができます。
+FILESTREAM ファイル グループ コンテナーでは、FILESTREAM ガベージ コレクターが実行され、EMPTYFILE によって他のコンテナーにコピーされた不要なすべてのファイル グループ コンテナー ファイルが削除された後でなければ、ALTER DATABASE を使用してファイルを削除できません。 詳細については、「[sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)」を参照してください。
   
 > [!NOTE]  
->  FILESTREAM コンテナーの削除方法の詳細については、対応するセクションを参照してください[ALTER DATABASE の File および Filegroup オプション &#40;。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
+>  FILESTREAM コンテナーの削除については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」の対応するセクションを参照してください。  
   
 NOTRUNCATE  
-移動によって、データ ファイルの末尾からファイルでまたはを指定せずに、先頭の未割り当てページにページが割り当てられます。 *target_percent*です。 ファイル末尾の空き領域はオペレーティング システムに返されず、ファイルの物理サイズは変わりません。 したがって、NOTRUNCATE を指定した場合は、ファイルが圧縮されていないように見えます。
-NOTRUNCATE はデータ ファイルにのみ適用され、 ログ ファイルには影響しません。   このオプションは、FILESTREAM ファイル グループ コンテナーではサポートされていません。
+データ ファイル末尾の割り当て済みページをファイル先頭の未割り当てページに移動します。必要に応じて *target_percent* を指定することもできます。 ファイル末尾の空き領域はオペレーティング システムに返されず、ファイルの物理サイズは変わりません。 したがって、NOTRUNCATE を指定した場合は、ファイルが圧縮されていないように見えます。
+NOTRUNCATE はデータ ファイルにのみ適用され、 ログ ファイルは影響を受けません。   このオプションは、FILESTREAM ファイル グループ コンテナーではサポートされていません。
   
 TRUNCATEONLY  
 ファイル末尾のすべての空き領域をオペレーティング システムに渡します。ただし、ファイル内でのページの移動は行われません。 データ ファイルは、最後に割り当てられたエクステントを限度として圧縮されます。
-*target_size* TRUNCATEONLY と共に指定した場合は無視されます。  
+*target_size* は、TRUNCATEONLY と共に指定した場合、無視されます。  
 TRUNCATEONLY オプションは、ログ内で情報を移動させませんが、非アクティブな VLF をログ ファイルの末尾から削除します。 このオプションは、FILESTREAM ファイル グループ コンテナーではサポートされていません。
   
 WITH NO_INFOMSGS  
@@ -105,25 +105,25 @@ WITH NO_INFOMSGS
 |列名|Description|  
 |---|---|
 |**DbId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]で圧縮が試行されたファイルのデータベース識別番号。|  
-|**FileId**|ファイルのファイル識別番号、[!INCLUDE[ssDE](../../includes/ssde-md.md)]圧縮が試行されます。|  
+|**FileId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]で圧縮が試行されたファイルのファイル識別番号。|  
 |**CurrentSize**|ファイルが現在占有する 8 KB ページの数。|  
 |**MinimumSize**|ファイルが占有できる 8 KB ページの最小数。 この値は、ファイルの最小サイズまたは最初に作成されたサイズと一致します。|  
 |**UsedPages**|ファイルが現在使用している 8 KB ページの数。|  
 |**EstimatedPages**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]で推定されるファイル圧縮後の 8 KB ページの数。|  
   
-## <a name="remarks"></a>解説  
-DBCC SHRINKFILE は現在のデータベース内のファイルに適用されます。 現在のデータベースを変更する方法の詳細については、次を参照してください。[の使用 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/use-transact-sql.md).
+## <a name="remarks"></a>Remarks  
+DBCC SHRINKFILE は現在のデータベース内のファイルに適用されます。 現在のデータベースを変更する方法の詳細については、「[USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)」を参照してください。
   
 DBCC SHRINKFILE 操作は、プロセスのどの時点でも中断でき、中断時に完了していた作業は保持されます。
   
-DBCC SHRINKFILE 操作が失敗したときに、エラーが発生します。
+DBCC SHRINKFILE 操作が失敗すると、エラーが発生します。
   
- 圧縮されるデータベースは、シングル ユーザー モードになっている必要はありません。ファイルの圧縮中も、他のユーザーはそのデータベースで作業することができます。 インスタンスを実行する必要はありません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システム データベースの圧縮をシングル ユーザー モードにします。  
+ 圧縮されるデータベースは、シングル ユーザー モードになっている必要はありません。ファイルの圧縮中も、他のユーザーはそのデータベースで作業することができます。 システム データベースを圧縮するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをシングル ユーザー モードで実行する必要はありません。  
   
 ## <a name="shrinking-a-log-file"></a>ログ ファイルの圧縮  
-ログ ファイルの場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]を使用して*target_size*ログ全体の目標サイズを計算するため、 *target_size*圧縮操作後に、ログの空き領域の量は、します。 ログ全体の目標サイズは、各ログ ファイルの目標サイズに変換します。 DBCC SHRINKFILE では、各物理ログ ファイルの目標サイズへの圧縮がすぐに試行されます。 ただし、論理ログの一部が、目標サイズを超える仮想ログに存在する場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 、できるだけ多くの領域を解放し、情報メッセージを発行します。 このメッセージには、ファイルの末尾で仮想ログから論理ログを移動するために行う必要のある操作が説明されています。 この操作を実行した後、DBCC SHRINKFILE を使って、残りの領域を解放できます。
+ログ ファイルの場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では *target_size* を使用してログ全体の目標サイズが計算されるため、*target_size* は圧縮処理後のログ内の空き領域サイズになります。 計算の後、ログ全体の目標サイズは各ログ ファイルの目標サイズに変換されます。 DBCC SHRINKFILE では、各物理ログ ファイルの目標サイズへの圧縮がすぐに試行されます。 ただし、論理ログの一部が、目標サイズを超える仮想ログ内に存在する場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]により、できるだけ多くの領域が解放され、情報メッセージが発行されます。 このメッセージには、ファイルの末尾で仮想ログから論理ログを移動するために行う必要のある操作が説明されています。 この操作を実行した後、DBCC SHRINKFILE を使って、残りの領域を解放できます。
   
-ログ ファイルは仮想ログ ファイルの境界を越えて圧縮できないため、ログ ファイルを仮想ログ ファイルのサイズより小さく圧縮することはできません。これはログ ファイルが使用されていない場合でも同じです。 仮想ログ ファイルのサイズが動的に選択した、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ログ ファイルが作成または拡張します。
+ログ ファイルは仮想ログ ファイルの境界を越えて圧縮できないため、ログ ファイルを仮想ログ ファイルのサイズより小さく圧縮することはできません。これはログ ファイルが使用されていない場合でも同じです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、ログ ファイルの作成時または拡張時に仮想ログ ファイルのサイズが動的に選択されます。
   
 ## <a name="best-practices"></a>ベスト プラクティス  
 ファイルを圧縮する場合は次のことを考慮してください。
@@ -144,13 +144,13 @@ SELECT name ,size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0 AS 
 FROM sys.database_files;
 ```
 
--   実行、 [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)をトランザクション ログに使用される領域を返すコマンド。  
+-   [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md) コマンドを実行し、トランザクション ログで使用されている領域を返します。  
 使用できる空き領域が不十分な場合、圧縮操作ではこれ以上ファイル サイズを減らすことはできません。
   
 通常、圧縮されていないように見えるのはログ ファイルです。 これは多くの場合、ログ ファイルが切り捨てられなかった結果として起こります。 ログを切り捨てるには、データベース復旧モデルを SIMPLE に設定するか、ログをバックアップして再度 DBCC SHRINKFILE 操作を実行します。
   
 ### <a name="the-shrink-operation-is-blocked"></a>圧縮操作がブロックされる  
-圧縮操作で実行されているトランザクションによってブロックされるまでに可能であれば、[行のバージョン管理に基づく分離レベル](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)です。 たとえば、DBCC SHRINK DATABASE 操作を実行するときに、行のバージョン管理に基づく分離レベルでの大規模な削除操作が進行中の場合、圧縮操作は削除処理が完了してから実行され、ファイルが圧縮されます。 この場合、DBCC SHRINKFILE および DBCC SHRINKDATABASE 操作によって、最初の 1 時間は 5 分ごと、それ以降は 1 時間ごとに、情報メッセージ (SHRINKDATABASE は 5202、SHRINKFILE は 5203) が SQL Server エラー ログに出力されます。 たとえば、エラー ログに次のエラー メッセージが含まれている場合は、このエラーが発生します。
+[行のバージョン管理に基づく分離レベル](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)で実行されているトランザクションによって圧縮操作がブロックされる可能性があります。 たとえば、DBCC SHRINK DATABASE 操作を実行するときに、行のバージョン管理に基づく分離レベルでの大規模な削除操作が進行中の場合、圧縮操作は削除処理が完了してから実行され、ファイルが圧縮されます。 この場合、DBCC SHRINKFILE および DBCC SHRINKDATABASE 操作によって、最初の 1 時間は 5 分ごと、それ以降は 1 時間ごとに、情報メッセージ (SHRINKDATABASE は 5202、SHRINKFILE は 5203) が SQL Server エラー ログに出力されます。 たとえば、エラー ログに次のエラー メッセージが含まれている場合は、このエラーが発生します。
   
 ```sql
 DBCC SHRINKFILE for file ID 1 is waiting for the snapshot   
@@ -158,20 +158,20 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-これは、圧縮操作が、109 より古いタイムスタンプが存在する、圧縮操作の完了された最後のトランザクションがスナップショット トランザクションによってブロックされていることを意味します。 示して、 **transaction_sequence_num**、または**first_snapshot_sequence_num**内の列、 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)動的管理ビューには、値 15 が含まれています。 どちらの場合、 **transaction_sequence_num**、または**first_snapshot_sequence_num** (109) の圧縮操作が完了した最後のトランザクションより小さいビュー内の列が含まれています、圧縮操作はそれらのトランザクションを完了するまで待機します。
+これは、圧縮操作が、109 より古いタイムスタンプが存在する、圧縮操作の完了された最後のトランザクションがスナップショット トランザクションによってブロックされていることを意味します。 また、[sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 動的管理ビューの **transaction_sequence_num** 列または **first_snapshot_sequence_num** 列に、値 15 が含まれることも示しています。 このビューの **transaction_sequence_num** 列または **first_snapshot_sequence_num** 列のいずれかに、圧縮操作により完了した最後のトランザクション (109) より低い番号が含まれている場合は、それらのトランザクションが終了するまで圧縮操作は待機状態となります。
   
 この問題を解決するには、次のいずれかの作業を実行します。
 -   圧縮操作をブロックしているトランザクションを終了します。
 -   圧縮操作を終了します。 圧縮操作を終了した場合、完了済みの作業は保持されます。  
 -   何もせず、ブロックしているトランザクションが完了するまで圧縮操作を待機状態にしておきます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-shrinking-a-data-file-to-a-specified-target-size"></a>A. 指定した目標サイズにデータ ファイルを圧縮する  
-次の例は、という名前のデータ ファイルのサイズを縮小`DataFile1`で、`UserDB`を 7 MB にユーザー データベース。
+次の例では、`UserDB` ユーザー データベース内の `DataFile1` というデータ ファイルのサイズを 7 MB に圧縮します。
   
 ```sql  
 USE UserDB;  
@@ -181,7 +181,7 @@ GO
 ```  
   
 ### <a name="b-shrinking-a-log-file-to-a-specified-target-size"></a>B. 指定した目標サイズにログ ファイルを圧縮する  
-次の例で、ログ ファイルの圧縮、`AdventureWorks`データベース 1 MB です。 DBCC SHRINKFILE コマンドを使用してファイルを圧縮するため、まずデータベース復旧モデルを SIMPLE に設定してファイルを切り捨てます。
+次の例では、`AdventureWorks` データベース内のログ ファイルを 1 MB に圧縮します。 DBCC SHRINKFILE コマンドを使用してファイルを圧縮するため、まずデータベース復旧モデルを SIMPLE に設定してファイルを切り捨てます。
   
 ```sql  
 USE AdventureWorks2012;  
@@ -238,7 +238,7 @@ GO
 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
-[FILE_ID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/file-id-transact-sql.md)  
+[FILE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/file-id-transact-sql.md)  
 [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
 [ファイルの圧縮](../../relational-databases/databases/shrink-a-file.md)
   

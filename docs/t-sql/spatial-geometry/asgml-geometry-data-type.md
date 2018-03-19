@@ -1,5 +1,5 @@
 ---
-title: "AsGml (geometry データ型) |Microsoft ドキュメント"
+title: "AsGml (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -36,9 +36,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="asgml-geometry-data-type"></a>AsGml (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Geography Markup Language (GML) 表現を返します、 **geometry**インスタンス。
+**geometry** インスタンスの Geography Markup Language (GML) 表現を返します。
   
-Geography Markup Language の詳細については、次の Open Geospatial Consortium 仕様を参照してください:[OGC の仕様、Geography Markup Language。](http://go.microsoft.com/fwlink/?LinkId=93629)
+GML (Geography Markup Language) の詳細については、Open Geospatial Consortium (OGC) の仕様書「[OGC の仕様、Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)」を参照してください。
   
 ## <a name="syntax"></a>構文  
   
@@ -48,14 +48,14 @@ Geography Markup Language の詳細については、次の Open Geospatial Cons
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **xml**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **xml**  
   
- CLR の戻り値の型: **SqlXml**  
+ CLR 戻り値の型: **SqlXml**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>使用例  
- 次の例を作成、`LineString`使用して、インスタンス`AsGML()`をインスタンスの GML 説明を返します。  
+ `LineString` インスタンスを作成し、`AsGML()` を使用して、インスタンスの GML 表現を返す例を次に示します。  
   
 ```  
 DECLARE @g geometry;  
@@ -63,7 +63,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0)', 0)
 SELECT @g.AsGml();  
 ```  
   
- このメソッドが戻ると、説明、`LineString`インスタンス。  
+ このメソッドは、GML 表現を `LineString` インスタンスとして返します。  
   
 ```  
 <LineString xmlns="http://www.opengis.net/gml">  

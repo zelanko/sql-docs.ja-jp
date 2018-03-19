@@ -1,5 +1,5 @@
 ---
-title: "ALTER ENDPOINT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER ENDPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
 -   エンドポイントのプロパティを変更する。  
   
 > [!NOTE]  
->  このトピックでは、ALTER ENDPOINT に固有の構文および引数について説明します。 CREATE ENDPOINT と ALTER ENDPOINT の両方に共通する引数の説明については、次を参照してください。 [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
+>  このトピックでは、ALTER ENDPOINT に固有の構文および引数について説明します。 CREATE ENDPOINT と ALTER ENDPOINT の両方に共通する引数の説明については、「[CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)」を参照してください。  
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] からは、ネイティブ XML Web サービス (SOAP/HTTP エンドポイント) は削除されます。  
   
@@ -106,38 +106,38 @@ FOR DATABASE_MIRRORING (
 ## <a name="arguments"></a>引数  
   
 > [!NOTE]  
->  次の引数は、ALTER ENDPOINT に固有の引数です。 残りの引数の詳細については、次を参照してください。 [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
+>  次の引数は、ALTER ENDPOINT に固有の引数です。 その他の引数の説明については、「[CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)」を参照してください。  
   
  **AS** { **TCP** }  
- トランスポート プロトコルを変更することはできません**ALTER ENDPOINT**です。  
+ **ALTER ENDPOINT** ではトランスポート プロトコルを変更できません。  
   
  **AUTHORIZATION** *login*  
- **承認**オプションでは使用できません**ALTER ENDPOINT**です。 エンドポイントの作成時にのみ所有者を割り当てることができます。  
+ **ALTER ENDPOINT** では **AUTHORIZATION** オプションを使用できません。 エンドポイントの作成時にのみ所有者を割り当てることができます。  
   
  **FOR** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
- ペイロードの種類を変更することはできません**ALTER ENDPOINT**です。  
+ **ALTER ENDPOINT** ではペイロードの種類を変更できません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ALTER ENDPOINT を使用する場合、更新するパラメーターのみを指定します。 既存のエンドポイントのすべてのプロパティは、明示的に変更しない限り変更されません。  
   
  ENDPOINT DDL ステートメントは、ユーザー トランザクション内部では実行できません。  
   
- エンドポイントで使用する暗号化アルゴリズムの選択方法の詳細については、次を参照してください。 [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)です。  
+ エンドポイントに対して使用する暗号化アルゴリズムの選択については、「[暗号化アルゴリズムの選択](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)」を参照してください。  
   
 > [!NOTE]  
->  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]でき、以降のバージョンでは、RC4 または RC4_128 を使用して暗号化された素材を暗号化が解除されたどの互換性レベルです。  
+>  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のバージョンでは、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を復号できます。  
 >   
 >  RC4 は比較的弱いアルゴリズムで、AES は比較的強いアルゴリズムです。 しかし、AES は RC4 に比べて非常に処理が遅くなります。 速度よりもセキュリティを優先する場合は、AES を使用することをお勧めします。  
   
-## <a name="permissions"></a>権限  
- ユーザーのメンバーである必要があります、 **sysadmin**固定サーバー ロール、エンドポイントの所有者または ALTER ANY ENDPOINT 権限が与えられています。  
+## <a name="permissions"></a>アクセス許可  
+ 固定サーバー ロール **sysadmin** のメンバーであるか、そのエンドポイントの所有者であるか、または ALTER ANY ENDPOINT 権限が許可されている必要があります。  
   
- 既存のエンドポイントの所有権を変更するには、ALTER AUTHORIZATION ステートメントを使用する必要があります。 詳細については、次を参照してください。 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ 既存のエンドポイントの所有権を変更するには、ALTER AUTHORIZATION ステートメントを使用する必要があります。 詳細については、「[ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)」を参照してください。  
   
- 詳細については、「 [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
+ 詳細については、「 [GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [DROP ENDPOINT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

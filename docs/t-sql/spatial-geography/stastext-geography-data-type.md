@@ -1,5 +1,5 @@
 ---
-title: "STAsText (geography データ型) |Microsoft ドキュメント"
+title: "STAsText (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stastext-geography-data-type"></a>STAsText (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Open Geospatial Consortium (OGC) Well-Known Text (WKT) 表現を返します、 **geography**インスタンス。 このテキストは、インスタンスに格納されている Z (標高) 値または M (メジャー) 値を含みません。  
+  **geography** インスタンスの Open Geospatial Consortium (OGC) Well-Known Text (WKT) 表現を返します。 このテキストは、インスタンスに格納されている Z (標高) 値または M (メジャー) 値を含みません。  
   
- これは、 **geography**データ型メソッドでサポート**FullGlobe**インスタンスまたは空間インスタンスは、半球より大きいをします。  
+ この **geography** データ型メソッドは、半球より大きい **FullGlobe** インスタンスまたは空間インスタンスをサポートします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,17 +46,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **nvarchar(max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **nvarchar(max)**  
   
  CLR の戻り値の型: **SqlChars**  
   
-## <a name="remarks"></a>解説  
- OGC の型の**geography**インスタンスを呼び出すことによって判別できます[STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)です。  
+## <a name="remarks"></a>Remarks  
+ **geography** インスタンスの OGC 型は、[STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) を呼び出すことによって判別できます。  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、サーバー上で返される結果セットが拡張されて**FullGlobe**インスタンス。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、サーバー上で返される結果セットが **FullGlobe** インスタンスに拡張されています。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`STAsText()`を作成する、`LineString``geography`インスタンスから (-122.360, 47.656) に (-122.343, 47.656) テキストからです。 その後、結果をテキストで返します。  
+ `STAsText()` を使用して、`LineString``geography` インスタンスを、テキストから (-122.360, 47.656) ～ (-122.343, 47.656) の範囲で作成する例を次に示します。 その後、結果をテキストで返します。  
   
 ```  
 DECLARE @g geography;  

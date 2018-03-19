@@ -1,5 +1,5 @@
 ---
-title: "STPointN (geometry データ型) |Microsoft ドキュメント"
+title: "STPointN (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointn-geometry-data-type"></a>STPointN (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-内の指定された地点を返します、 **geometry**インスタンス。
+**geometry** インスタンス内の指定した地点を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,21 +45,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- **Int** 1 ~ 内の地点の数の式、 **geometry**インスタンス。  
+ 1 から **geometry** インスタンス内の地点の数までの **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
- Open Geospatial Consortium (OGC) の型:**ポイント**  
+ Open Geospatial Consortium (OGC) の型: **Point**  
   
-## <a name="remarks"></a>解説  
- 場合、 **geometry**インスタンスが作成されると、ユーザー`STPointN()`で指定された地点を返します*式*によってを最初に入力した順序で地点を並べ替えます。  
+## <a name="remarks"></a>Remarks  
+ ユーザーが作成した **geometry** インスタンスの場合、`STPointN()` は、最初に入力した順序で地点を並べ替えることで、*expression* で指定された地点を返します。  
   
- 場合、 **geometry**インスタンスが、システムによって作成された`STPointN()`で指定された地点を返します*式*と同じ順序ですべての地点を並べ替えるによって出力される順序: geometry、し、最初geometry (該当する場合)、内とし、リング内の地点のリングします。 この順序は決定的です。  
+ システムによって作成された **geometry** インスタンスの場合、`STPointN()` は、出力する順序ですべての地点を並べ替えることで、*expression* で指定された地点を返します。出力する順序にするには、geometry、geometry 内のリング (必要な場合)、リング内の地点の順序に並べ替えます。 この順序は決定的です。  
   
- このメソッドは 1 より小さい値を含む、スロー、 **ArgumentOutOfRangeException**です。  
+ 1 未満の値を指定してこのメソッドを呼び出すと、**ArgumentOutOfRangeException** がスローされます。  
   
  インスタンス内の地点の数より大きい値を指定してこのメソッドを呼び出すと、メソッドは NULL を返します。  
   

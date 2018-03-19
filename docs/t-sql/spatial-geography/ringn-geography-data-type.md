@@ -1,5 +1,5 @@
 ---
-title: "RingN (geography データ型) |Microsoft ドキュメント"
+title: "RingN (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ringn-geography-data-type"></a>RingN (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  指定したリングを返す、 **geography**インスタンス:`1 ≤ n ≤ NumRings()`です。  
+  `1 ≤ n ≤ NumRings()` の範囲で、**geography** インスタンスの指定したリングを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,18 +45,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- **Int** 1 ~ 内のリングの数の式、**多角形**インスタンス。  
+ 1 から **polygon** インスタンス内のリング数までの **int** 式です。  
   
 ## <a name="return-value"></a>戻り値  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geography**  
   
  CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>解説  
- 場合リング インデックスの値を **n**  1 未満の値は、このメソッドは、 **ArgumentOutOfRangeException です。** リング インデックス値は、1 以上、かつ `NumRings()` で返される数値以下である必要があります。  
+## <a name="remarks"></a>Remarks  
+ リング インデックス **n** の値が 1 未満の場合、このメソッドは、**ArgumentOutOfRangeException** をスローします。 リング インデックス値は、1 以上、かつ `NumRings()` で返される数値以下である必要があります。  
   
 ## <a name="examples"></a>使用例  
- この例で作成、 `Polygon` 2 つのインスタンスのリングし、2 つ目のリングを返します。  
+ 2 つのリングを含む `Polygon` インスタンスを作成し、2 番目のリングを返す例を次に示します。  
   
 ```  
 DECLARE @g geography;  

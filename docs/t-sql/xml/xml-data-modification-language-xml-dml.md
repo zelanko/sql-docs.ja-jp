@@ -1,5 +1,5 @@
 ---
-title: "XML データ変更言語 (XML DML) |Microsoft ドキュメント"
+title: "XML DML (XML データ変更言語) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="xml-data-modification-language-xml-dml"></a>XML DML (XML データ変更言語)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XML DML (XML データ変更言語) は、XQuery 言語の拡張言語です。 W3C で定義されているように、XQuery 言語には、データ操作の部分がありません。 このトピックでは、XQuery 言語で導入された XML DML は、完全に機能のクエリおよびデータ変更言語に対して使用することができますが、 **xml**データ型。  
+  XML DML (XML データ変更言語) は、XQuery 言語の拡張言語です。 W3C で定義されているように、XQuery 言語には、データ操作の部分がありません。 このトピックで紹介する XML DML および XQuery 言語には、**xml** データ型に対して使用できる完全な機能のクエリおよびデータ変更言語が提供されます。  
   
  XML DML では、XQuery に次のキーワードが追加されました。これらのキーワードでは、大文字と小文字が区別されます。  
   
@@ -46,34 +46,34 @@ ms.lasthandoff: 01/25/2018
   
 -   **delete**  
   
--   **値を置き換える**  
+-   **replace value of**  
   
- 」の説明に従って[XML データ型と列 &#40;です。SQL Server &#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md)の変数および列を作成することができます、 **xml**を入力し、それらに XML ドキュメントやフラグメントを割り当てます。 このような XML インスタンスを変更または更新するには、次の操作を実行します。  
+ 「[XML データ型と列 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md)」の説明に従って **XML** データ型の変数と列を作成し、それらに XML ドキュメントやフラグメントを割り当てることができます。 このような XML インスタンスを変更または更新するには、次の操作を実行します。  
   
--   使用して、 [modify() メソッドの xml データ型)](../../t-sql/xml/modify-method-xml-data-type.md)の**xml**データ型。  
+-   **xml** データ型の [modify() メソッド (xml データ型)](../../t-sql/xml/modify-method-xml-data-type.md) を使用します。  
   
--   内の適切な XML DML ステートメントの指定、 **modify()**メソッドです。  
+-   **modify()** メソッド内に適切な XML DML ステートメントを指定します。  
   
- 一部の属性では、挿入や削除、値の変更ができないので注意してください。 例:  
+ 一部の属性では、挿入や削除、値の変更ができないので注意してください。 例 :  
   
--   型指定の有無**xml、**属性は、 **xmlns**、 **xmlns:\***、および**xml:base**です。  
+-   **xml** の型指定の有無にかかわらず、属性には **xmlns**、**xmlns:\***、**xml:base** を使用します。  
   
--   型指定された**xml**属性は、のみ、 **xsi:nil**、および**xsi:type**です。  
+-   型指定された **xml** の場合のみ、属性に **xsi:nil**、および **xsi:type** を使用できます。  
   
  その他の制限には、次のようなものがあります。  
   
--   型指定の有無**xml**、属性を挿入する**xml:base**は失敗します。  
+-   **xml** の型指定の有無にかかわらず、**xml:base** 属性を挿入すると、エラーになります。  
   
--   型指定された**xml**、削除して、変更、 **xsi:nil**属性は失敗します。 型指定されていない**xml**属性を削除するか、その値を変更することができます。  
+-   型指定された **xml** の場合、**xsi:nil** 属性を削除または変更すると、エラーになります。 型指定されていない **xml** の場合は、この属性を削除したり、変更したりすることができます。  
   
--   型指定された**xml**の値を変更する、 **xs:type**属性は失敗します。 型指定されていない**xml**属性の値を変更することができます。  
+-   型指定された **xml** の場合、**xs:type** 属性の値を変更すると、エラーになります。 型指定されていない **xml** の場合は、この属性の値を変更できます。  
   
  型指定された xml インスタンスを変更する場合、最終的な形式が、その型の有効なインスタンスである必要があります。 そうでない場合は、検証エラーが返されます。  
   
 ## <a name="see-also"></a>参照  
- [insert &#40;です。XML DML&#41;](../../t-sql/xml/insert-xml-dml.md)   
- [delete &#40;です。XML DML&#41;](../../t-sql/xml/delete-xml-dml.md)   
- [置換値 &#40;です。XML DML&#41;](../../t-sql/xml/replace-value-of-xml-dml.md)   
+ [insert &#40;XML DML&#41;](../../t-sql/xml/insert-xml-dml.md)   
+ [delete &#40;XML DML&#41;](../../t-sql/xml/delete-xml-dml.md)   
+ [replace value of &#40;XML DML&#41;](../../t-sql/xml/replace-value-of-xml-dml.md)   
  [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)  

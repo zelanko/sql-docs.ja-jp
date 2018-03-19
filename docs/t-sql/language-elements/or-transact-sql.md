@@ -1,5 +1,5 @@
 ---
-title: "または (TRANSACT-SQL) |Microsoft ドキュメント"
+title: OR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ boolean_expression OR boolean_expression
   
 ## <a name="arguments"></a>引数  
  *boolean_expression*  
- 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)TRUE、FALSE、または UNKNOWN を返します。  
+ TRUE、FALSE または、UNKNOWN を返す有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
 ## <a name="result-types"></a>戻り値の型  
  **ブール値**  
@@ -56,17 +56,17 @@ boolean_expression OR boolean_expression
 ## <a name="result-value"></a>結果の値  
  OR は、いずれかの条件が TRUE の場合に TRUE を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次の表は、OR 演算子の結果です。  
   
 ||TRUE|FALSE|UNKNOWN|  
 |------|----------|-----------|-------------|  
 |**TRUE**|TRUE|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|UNKNOWN|  
-|**不明**|TRUE|UNKNOWN|UNKNOWN|  
+|**UNKNOWN**|TRUE|UNKNOWN|UNKNOWN|  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`vEmployeeDepartmentHistory`の名前を取得するビュー`Quality Assurance`夕方シフトまたは夜間のシフトのいずれかに仕事をするスタッフします。 かどうか、かっこは省略すると、クエリを返します`Quality Assurance`夕方シフトし、夜間のシフトに勤務するすべての従業員が勤務する従業員です。  
+ 次の例では、`vEmployeeDepartmentHistory` ビューを使用して、夕方または夜間のシフトで勤務する `Quality Assurance` の従業員の名前を取得します。 かっこを省略した場合、このクエリでは、夕方シフトで勤務する `Quality Assurance` の従業員と、夜間シフトで勤務するすべての従業員が返されます。  
   
 ```  
 -- Uses AdventureWorks  
@@ -86,8 +86,8 @@ WHERE Department = 'Quality Assurance'
  Sootha       Charncherngkha   Night
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例は、いずれかを獲得する従業員の名前を取得、 `BaseRate` 20 未満であることも、 `HireDate` 2001 年 1 月 1 日またはそれ以降。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 次の例は、20 未満の `BaseRate` を取得するか、2001 年 1 月 1 日以降の `HireDate` を持つ従業員の名前を取得します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -98,11 +98,11 @@ WHERE BaseRate < 10 OR HireDate >= '2001-01-01';
 ```  
   
 ## <a name="see-also"></a>参照  
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
 

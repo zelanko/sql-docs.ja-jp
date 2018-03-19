@@ -1,5 +1,5 @@
 ---
-title: "AsBinaryZM (geography データ型) |Microsoft ドキュメント"
+title: "AsBinaryZM (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="asbinaryzm-geography-data-type"></a>AsBinaryZM (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Open Geospatial Consortium (OGC) Well-Known Binary (WKB) 表現を返します、 **geometry**インスタンスは、いずれかで補完された**Z** (標高) と**M** (メジャー)インスタンスの値。  
+  インスタンスに格納されている **Z** (標高) 値と **M** (メジャー) 値で補完された **geometry** インスタンスについて、Open Geospatial Consortium (OGC) Well-Known Binary (WKB) 表現を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,9 +47,9 @@ ms.lasthandoff: 01/25/2018
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **varbinary(max)**  
   
- CLR の戻り値の型: **SqlBytes**  
+ CLR 戻り値の型: **SqlBytes**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>使用例  
   

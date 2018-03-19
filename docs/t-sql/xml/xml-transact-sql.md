@@ -1,5 +1,5 @@
 ---
-title: "xml (TRANSACT-SQL) |Microsoft ドキュメント"
+title: xml (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  XML データを格納するデータ型です。 保存できる**xml**インスタンスは、列や変数の**xml**型です。  
+  XML データを格納するデータ型です。 格納できる **xml** インスタンスは、列や変数の **xml** 型です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,20 +47,20 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
   
 ## <a name="arguments"></a>引数  
  CONTENT  
- 制限、 **xml**インスタンスを整形式の XML フラグメントです。 XML データの最上位レベルには、0 個以上の要素を複数含めることができ、 テキスト ノードも許可されます。  
+ **xml** インスタンスを整形式の XML フラグメントに制限します。 XML データの最上位レベルには、0 個以上の要素を複数含めることができ、 テキスト ノードも許可されます。  
   
  これは既定の動作です。  
   
  DOCUMENT  
- 制限、 **xml**インスタンスを整形式 XML ドキュメントです。 XML データにはルート要素を 1 つだけ含めることができます。 最上位レベルにテキスト ノードは許可されません。  
+ **xml** インスタンスを整形式の XML ドキュメントに制限します。 XML データにはルート要素を 1 つだけ含めることができます。 最上位レベルにテキスト ノードは許可されません。  
   
  *xml_schema_collection*  
- XML スキーマ コレクションの名前を指定します。 型指定されたを作成する**xml**列または変数、必要に応じて XML スキーマ コレクションの名前を指定することができます。 詳細については型指定された XML 型指定されていない、参照してください。[比較型指定された XML と型指定されていない XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)です。  
+ XML スキーマ コレクションの名前を指定します。 型指定された **xml** 列または変数を作成するには、必要に応じて、XML スキーマ コレクションの名前を指定することができます。 型指定された XML および型指定されていない XML に関する詳細については、「 [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
- ストアド表現**xml**データ型のインスタンスは、2 ギガバイト (GB) のサイズを超えることはできません。  
+## <a name="remarks"></a>Remarks  
+ ストアド表現 **xml** データ型のインスタンスは、サイズの 2 ギガバイト (GB) を超えることはできません。  
   
- CONTENT および DOCUMENT ファセットは型指定された XML にのみ適用されます。 詳細については、次を参照してください。[比較型指定された XML と型指定されていない XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)です。  
+ CONTENT および DOCUMENT ファセットは型指定された XML にのみ適用されます。 詳細については、「[型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   

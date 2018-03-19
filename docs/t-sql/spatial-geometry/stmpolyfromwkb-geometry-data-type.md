@@ -1,5 +1,5 @@
 ---
-title: "STMPolyFromWKB (geometry データ型) |Microsoft ドキュメント"
+title: "STMPolyFromWKB (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmpolyfromwkb-geometry-data-type"></a>STMPolyFromWKB (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返します、 **geometryMultiPolygon** Open Geospatial Consortium (OGC) Well-Known Binary (WKB) 表現からのインスタンス。
+Open Geospatial Consortium (OGC) Well-Known Binary (WKB) 表現から **geometryMultiPolygon** インスタンスを返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,22 +45,22 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
   
 ## <a name="arguments"></a>引数  
  *WKB_multipolygon*  
- WKB 表現です、 **geometryMultiPolygon**インスタンスを取得します。 *WKB_multipolygon*は、 **varbinary (max)**式。  
+ 返される **geometryMultiPolygon** インスタンスの WKB 表現です。 *WKB_multipolygon* は、**varbinary (max)** 式です。  
   
  *SRID*  
- **Int** 、空間を表す式の ID (SRID) を参照、 **geometryMultiPolygon**インスタンスを取得します。  
+ 返される **geometryMultiPolygon** インスタンスの SRID (spatial reference ID) を表す **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
  OGC の型: **MultiPolygon**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>使用例  
- 次の例で`STMPolyFromWKB()`を作成する、`geometry`インスタンス。  
+ `STMPolyFromWKB()` を使用して `geometry` インスタンスを作成する例を次に示します。  
   
 ```  
 DECLARE @g geometry;   

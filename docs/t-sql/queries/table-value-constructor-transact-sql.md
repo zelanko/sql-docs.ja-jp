@@ -1,5 +1,5 @@
 ---
-title: "テーブル値コンス トラクター (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "テーブル値コンストラクター (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="table-value-constructor-transact-sql"></a>テーブル値コンストラクター (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  テーブルに設定される行の値式のセットを指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値コンストラクターを使用すると、単一の DML ステートメントで複数行のデータを指定できます。 テーブル値コンス トラクターは、使用中の INSERT ステートメントの VALUES 句で指定できます\<ソース テーブル > 句と MERGE ステートメントの FROM 句の派生テーブルの定義でします。  
+  テーブルに設定される行の値式のセットを指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値コンストラクターを使用すると、単一の DML ステートメントで複数行のデータを指定できます。 テーブル値コンストラクターは、INSERT ステートメントの VALUES 句、MERGE ステートメントの USING \<ソース テーブル> 句、および FROM 句の派生テーブルの定義で指定できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,13 +64,13 @@ VALUES ( <row value expression list> ) [ ,...n ]
  定数、変数、または式を指定します。 式には EXECUTE ステートメントを含めることができません。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- テーブル値コンス トラクターは、2 つの方法のいずれかで使用できます挿入の値の一覧内で直接しています.。 値ステートメント、または、派生テーブルとして任意の場所を派生テーブルは許可します。 行の数が最大値を超えた場合、エラー 10738 が返されます。 制限は、複数の行を挿入するには、次のいずれかを使用します。  
+ テーブル値コンス トラクターは、2 つの方法のいずれかで使用できます挿入の値の一覧内で直接しています。 値ステートメント、または、派生テーブルとして任意の場所を派生テーブルは許可します。 行数が最大値を超えると、エラー 10738 が返されます。 許可される行数を超えて挿入するには、次のいずれかの方法を使用します。  
   
 -   複数の INSERT ステートメントを作成する  
   
--   派生テーブルを使用します。  
+-   派生テーブルを使用する  
   
--   使用してデータを一括インポート、 **bcp**ユーティリティまたは BULK INSERT ステートメント  
+-   **bcp** ユーティリティまたは BULK INSERT ステートメントを使用してデータを一括インポートする  
   
  単一のスカラー値だけが行の値式として使用できます。 複数の列が関係するサブクエリは行の値式として使用できません。 たとえば、次のコードでは、3 番目の行の値式のリストに複数の列を持つサブクエリが含まれているため、構文エラーが返されます。  
   
@@ -88,7 +88,7 @@ GO
   
 ```  
   
- ただし、このステートメントは、サブクエリ内の各列を個別に指定するように書き直すことができます。 次の例が正常に次の 3 つの行を挿入、`MyProducts`テーブル。  
+ ただし、このステートメントは、サブクエリ内の各列を個別に指定するように書き直すことができます。 次の例では、`MyProducts` テーブルに 3 つの行が正常に挿入されます。  
   
 ```  
 INSERT INTO dbo.MyProducts (Name, ListPrice)  
@@ -101,7 +101,7 @@ GO
 ```  
   
 ## <a name="data-types"></a>データ型  
- 複数行の INSERT ステートメントで指定された値は、UNION ALL 構文のデータ型変換プロパティに従います。 これは、結果の高い型に一致しない型の暗黙的な変換で[優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)です。 暗黙的な変換がサポートされていない場合は、エラーが返されます。 型の列に、次のステートメントが整数値と文字の値を挿入するなど、 **char**です。  
+ 複数行の INSERT ステートメントで指定された値は、UNION ALL 構文のデータ型変換プロパティに従います。 この結果、一致しない型は、[優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)の高い型に暗黙的に変換されます。 暗黙的な変換がサポートされていない場合は、エラーが返されます。 たとえば、次のステートメントでは、整数値と文字値が、**char** 型の列に挿入されます。  
   
 ```  
 CREATE TABLE dbo.t (a int, b char);  
@@ -110,7 +110,7 @@ INSERT INTO dbo.t VALUES (1,'a'), (2, 1);
 GO  
 ```  
   
- INSERT ステートメントの実行時に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換しようとしています。 の ' a' を整数データ型の優先順位がことを示します整数文字よりも高い型のです。 変換は失敗して、エラーが返されます。 必要に応じて値を明示的に変換することで、このようなエラーを回避できます。 たとえば、上記のステートメントは次のように記述できます。  
+ INSERT ステートメントが実行されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では "a" を整数に変換しようとします。データ型の優先順位では、文字型よりも整数型の優先順位が高いことが示されているからです。 変換は失敗して、エラーが返されます。 必要に応じて値を明示的に変換することで、このようなエラーを回避できます。 たとえば、上記のステートメントは次のように記述できます。  
   
 ```  
 INSERT INTO dbo.t VALUES (1,'a'), (2, CONVERT(CHAR,1));  
@@ -119,7 +119,7 @@ INSERT INTO dbo.t VALUES (1,'a'), (2, CONVERT(CHAR,1));
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-inserting-multiple-rows-of-data"></a>A. 複数行のデータを挿入する  
- 次の例は、テーブルを作成`dbo.Departments`し、テーブル値コンス トラクターを使用して、テーブルに 5 つの行を挿入します。 すべての列の値が指定され、テーブルの列と同じ順序で並んでいるため、列名を列リストで指定する必要はありません。  
+ 次の例では、テーブル `dbo.Departments` を作成し、テーブル値コンストラクターを使用して、そのテーブルに 5 行を挿入します。 すべての列の値が指定され、テーブルの列と同じ順序で並んでいるため、列名を列リストで指定する必要はありません。  
   
 ```  
 USE AdventureWorks2012;  
@@ -149,7 +149,7 @@ SELECT * FROM Sales.MySalesReason;
 ```  
   
 ### <a name="c-specifying-multiple-values-as-a-derived-table-in-a-from-clause"></a>C. FROM 句で複数の値を派生テーブルとして指定する  
- 次の例では、SELECT ステートメントの FROM 句で複数の値を指定するのにテーブル値コンス トラクターを使用します。  
+ 次の例では、テーブル値コンストラクターを使用して SELECT ステートメントの FROM 句で複数の値を指定します。  
   
 ```  
 SELECT a, b FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);  
@@ -163,7 +163,7 @@ ON a.Name = b.Name;
 ```  
   
 ### <a name="d-specifying-multiple-values-as-a-derived-source-table-in-a-merge-statement"></a>D. MERGE ステートメントで複数の行を派生ソース テーブルとして指定する  
- 次の例では、MERGE を使用し、行を更新または挿入することで `SalesReason` テーブルを変更します。 ときの値`NewName`テーブル ソース内の値に一致する、 `Name` 、対象のテーブルの列 (`SalesReason`) では、`ReasonType`ターゲット テーブルの列を更新します。 `NewName` の値が一致しない場合は、ソース行が対象テーブルに挿入されます。 ソース テーブルが使用する派生テーブル、[!INCLUDE[tsql](../../includes/tsql-md.md)]ソース テーブルの複数の行を指定するテーブル値コンス トラクターです。  
+ 次の例では、MERGE を使用し、行を更新または挿入することで `SalesReason` テーブルを変更します。 ソース テーブルの `NewName` の値が対象テーブル (`Name`) の `SalesReason` 列の値と一致すると、対象テーブルの `ReasonType` 列が更新されます。 `NewName` の値が一致しない場合は、ソース行が対象テーブルに挿入されます。 ソース テーブルは、[!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値コンストラクターを使用して複数の行を指定する派生テーブルです。  
   
 ```  
 USE AdventureWorks2012;  
@@ -189,8 +189,8 @@ GROUP BY Change;
 ```  
   
 ## <a name="see-also"></a>参照  
- [挿入 &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/insert-transact-sql.md)   
- [マージ &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/merge-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STAsBinary (geography データ型) |Microsoft ドキュメント"
+title: "STAsBinary (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stasbinary-geography-data-type"></a>STAsBinary (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Open Geospatial Consortium (OGC) Well-Known Binary (WKB) 表現を返します、 **geography**インスタンス。  
+  **geography** インスタンスについて Open Geospatial Consortium (OGC) の Well-Known Binary (WKB) 表現を返します。  
   
- これは、 **geography**データ型メソッドでサポート**FullGlobe**インスタンスまたは空間インスタンスは、半球より大きいをします。  
+ この **geography** データ型メソッドは、半球より大きい **FullGlobe** インスタンスまたは空間インスタンスをサポートします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,15 +46,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **varbinary(max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **varbinary(max)**  
   
  CLR の戻り値の型: **SqlBytes**  
   
-## <a name="remarks"></a>解説  
- OGC の型の**geography**インスタンスを呼び出すことによって判別できます[STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)です。  
+## <a name="remarks"></a>Remarks  
+ **geography** インスタンスの OGC 型は、[STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) を呼び出すことによって判別できます。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`STAsBinary()`を作成する、`LineString``geography`インスタンスから (-122.360, 47.656) に (-122.343, 47.656) テキストからです。 その後、結果を WKB で返します。  
+ `STAsBinary()` を使用して、`LineString``geography` インスタンスを、テキストから (-122.360, 47.656) ～ (-122.343, 47.656) の範囲で作成する例を次に示します。 その後、結果を WKB で返します。  
   
 ```  
 DECLARE @g geography;  

@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 
   ユーザー定義のリソース ガバナー リソース プールを削除します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)です。  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,14 +50,14 @@ DROP RESOURCE POOL pool_name
  *pool_name*  
  既存のユーザー定義のリソース プールの名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ワークロード グループが含まれている場合は、リソース プールを削除できません。  
   
  リソース ガバナーの既定のプールや内部プールを削除することはできません。  
   
- DDL ステートメントを実行する場合、リソース ガバナーの状態について詳しく理解しておくことをお勧めします。 詳細については、次を参照してください。[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)です。  
+ DDL ステートメントを実行する場合、リソース ガバナーの状態について詳しく理解しておくことをお勧めします。 詳細については、「[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)」を参照してください。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -71,7 +71,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
+ [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   

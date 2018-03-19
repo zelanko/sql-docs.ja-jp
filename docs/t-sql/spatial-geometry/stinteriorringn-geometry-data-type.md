@@ -1,5 +1,5 @@
 ---
-title: "STInteriorRingN (geometry データ型) |Microsoft ドキュメント"
+title: "STInteriorRingN (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-指定した内部リングを返す、 **Polygongeometry**インスタンス。
+**Polygongeometry** インスタンスの指定した内部リングを返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,20 +45,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- **Int** 1 ~ 内部リングの数の式、 **geometry**インスタンス。  
+ 1 から **geometry** インスタンスの内部リング数までの **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
  Open Geospatial Consortium (OGC) の型: **LineString**  
   
-## <a name="remarks"></a>解説  
- このメソッドが戻る**null**場合、 **geometry**インスタンスが多角形ではありません。 このメソッドはスローされても、 **ArgumentOutOfRangeException**式がリングの数よりも大きい場合。 使用してリングの数を返すことが`STNumInteriorRing``()`です。  
+## <a name="remarks"></a>Remarks  
+ **geometry** インスタンスが多角形ではない場合、このメソッドは **NULL** を返します。 また、式がリングの数より大きい場合、このメソッドは **ArgumentOutOfRangeException** をスローします。 リングの数は `STNumInteriorRing``()` を使用して返すことができます。  
   
 ## <a name="examples"></a>使用例  
- 次の例を作成、`Polygon`使用して、インスタンス`STInteriorRingN()`として多角形の内部リングを返す、 **LineString**です。  
+ `Polygon` インスタンスを作成し、`STInteriorRingN()` を使用して多角形の外部リングを **LineString** として返す例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

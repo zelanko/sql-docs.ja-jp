@@ -50,28 +50,28 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  変更対象のデータベース スコープの資格情報の名前を指定します。  
   
  IDENTITY **='***identity_name***'**  
- サーバーの外部に接続するときに使用するアカウントの名前を指定します。 Azure Blob ストレージからファイルをインポートするユーザー名がある必要があります`SHARED ACCESS SIGNATURE`です。  共有アクセス署名の詳細については、次を参照してください。[を使用して共有アクセス署名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)です。  
+ サーバーの外部に接続するときに使用するアカウントの名前を指定します。 Azure BLOB ストレージからファイルをインポートするには、ID 名が `SHARED ACCESS SIGNATURE` である必要があります。  Shared Access Signature の詳細については、「[Shared Access Signatures (SAS) の使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」をご覧ください。  
     
   
  SECRET **='***secret***'**  
- 送信の認証に必要なシークレットを指定します。 *シークレット*Azure Blob ストレージからファイルをインポートするが必要です。 *シークレット*他の目的で省略可能な場合があります。   
+ 送信の認証に必要なシークレットを指定します。 "*シークレット*" は、Azure BLOB ストレージからファイルをインポートするために必要です。 "*シークレット*" は、他の目的では省略可能な場合があります。   
 >  [!WARNING]
->  SAS キーの値が始まる可能性があります、'?'(疑問符)。 SAS キーを使用する場合は、先頭を削除する必要があります '?' です。 それ以外の場合、作業がブロックされる可能性があります。    
+>  SAS キー値は '?' (疑問符) で始まることがあります。 SAS キーを使用する場合は、先頭の '?' を削除する必要があります。 そうしないと、作業がブロックされる可能性があります。    
   
-## <a name="remarks"></a>解説  
- ときに、データベース スコープ資格情報は、変更、両方の値*identity_name*と*シークレット*リセットされます。 SECRET 引数を省略すると、格納されているシークレットの値は NULL に設定されます。  
+## <a name="remarks"></a>Remarks  
+ データベース スコープの資格情報が変更されたとき、*identity_name* の値と "*シークレット*" の値は両方ともリセットされます。 SECRET 引数を省略すると、格納されているシークレットの値は NULL に設定されます。  
   
- シークレットは、サービス マスター_キーを使用して暗号化されます。 サービス マスター キーが再生成された場合、シークレットは新しいサービス マスター キーを使って再暗号化されます。  
+ シークレットはサービス マスター キーを使用して暗号化されます。 サービス マスター キーが再生成された場合、シークレットは新しいサービス マスター キーを使って再暗号化されます。  
   
- データベース スコープ資格情報に関する情報は、 [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)カタログ ビューです。  
+ データベース スコープの資格情報に関する情報は、[sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) カタログ ビューで確認できます。  
   
-## <a name="permissions"></a>権限  
- 必要があります`ALTER`資格情報に対する権限。  
+## <a name="permissions"></a>アクセス許可  
+ 資格情報に対する `ALTER` 権限が必須です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>A. 資格情報をスコープするデータベースのパスワードを変更します。  
- 次の例と呼ばれるデータベース スコープ資格情報に格納されているシークレットを変更する`Saddles`です。 データベース スコープ資格情報には、Windows ログインが含まれています。`RettigB`とそのパスワードです。 新しいパスワードには、SECRET 句を使用して、データベース スコープの資格情報が追加されます。  
+ 次の例では、`Saddles` というデータベース スコープの資格情報に格納されているシークレットを変更します。 データベース スコープの資格情報には、Windows ログインが含まれています。`RettigB` とそのパスワードです。 新しいパスワードには、SECRET 句を使用して、データベース スコープの資格情報が追加されます。  
   
 ```  
 ALTER DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'RettigB',   
@@ -80,7 +80,7 @@ GO
 ```  
   
 ### <a name="b-removing-the-password-from-a-credential"></a>B. 資格情報からパスワードを削除する  
- 次の例は、名前付きデータベース スコープ資格情報からパスワードを削除`Frames`です。 データベース スコープ資格情報には、Windows ログインが含まれています。`Aboulrus8`とパスワード。 ステートメントを実行すると、後に、データベース スコープの資格情報は秘密のオプションが指定されていないためにパスワードは NULL があります。  
+ 次の例では、`Frames` というデータベース スコープ資格情報からパスワードを削除します。 データベース スコープの資格情報には、Windows ログインが含まれています。`Aboulrus8` とパスワードです。 ステートメントを実行すると、後に、データベース スコープの資格情報は秘密のオプションが指定されていないためにパスワードは NULL があります。  
   
 ```  
 ALTER DATABASE SCOPED CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';  
@@ -88,9 +88,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [資格情報 &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [データベース スコープの資格情報 &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
- [データベース スコープの資格情報 &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
+ [資格情報 (データベース エンジン)](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [データベース スコープの資格情報の作成 (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
+ [データベース スコープの資格情報の削除 (Transact-SQL)](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  

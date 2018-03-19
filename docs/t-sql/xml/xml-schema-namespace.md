@@ -1,5 +1,5 @@
 ---
-title: "xml_schema_namespace (TRANSACT-SQL) |Microsoft ドキュメント"
+title: xml_schema_namespace (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -51,26 +51,26 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
   
 ## <a name="arguments"></a>引数  
  *Relational_schema*  
- リレーショナル スキーマの名前です。 *Relational_schema*は**sysname**です。  
+ リレーショナル スキーマ名。 *Relational_schema* は **sysname** です。  
   
  *XML_schema_collection_name*  
- 再構築する XML スキーマ コレクションの名前を指定します。 *XML_schema_collection_name*は**sysname**です。  
+ 再構築する XML スキーマ コレクションの名前を指定します。 *XML_schema_collection_name* は **sysname** です。  
   
  *名前空間*  
- 再構築する XML スキーマの名前空間 URI を指定します。 上限は 1,000 文字です。 名前空間 URI を指定しない場合、XML スキーマ コレクション全体が再構築されます。 *Namespace*は**nvarchar (4000)**です。  
+ 再構築する XML スキーマの名前空間 URI を指定します。 上限は 1,000 文字です。 名前空間 URI を指定しない場合、XML スキーマ コレクション全体が再構築されます。 *名前空間*は **nvarchar(4000)** です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **xml**  
   
-## <a name="remarks"></a>解説  
- 使用して、データベース内の XML スキーマ コンポーネントをインポートすると[CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)または[ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)検証のために使用されるスキーマの情報が保持されます。 したがって、再構築されたスキーマは、元のスキーマ ドキュメントとは構文的に同じにならない可能性があります。 特に、コメント、空白、および注釈は失われ、暗黙的な型の情報が明示されます。 たとえば、 \<xs:element name ="e1"/> になります\<xs:element name ="e1"type ="xs:anyType"/>。 また、名前空間プレフィックスは保持されません。  
+## <a name="remarks"></a>Remarks  
+ [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) または [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) を使用してデータベース内の XML スキーマ コンポーネントをインポートする場合、検証に使用されたスキーマの情報が保持されます。 したがって、再構築されたスキーマは、元のスキーマ ドキュメントとは構文的に同じにならない可能性があります。 特に、コメント、空白、および注釈は失われ、暗黙的な型の情報が明示されます。 たとえば、\<xs:element name="e1" /> は \<xs:element name="e1" type="xs:anyType"/> になります。 また、名前空間プレフィックスは保持されません。  
   
  名前空間のパラメーターを指定した場合、結果のスキーマ ドキュメントにはその名前空間内のすべてのスキーマ コンポーネントの定義が含まれます。それらのコンポーネントが異なるスキーマ ドキュメントまたは DDL のステップ、あるいはその両方に追加された場合であっても、同様です。  
   
- XML スキーマ ドキュメントを構築するために、この関数を使用することはできません、 **sys.sys** XML スキーマ コレクションです。  
+ この関数を使用して、XML スキーマ ドキュメントを **sys.sys** XML スキーマ コレクションから構築することはできません。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、XML スキーマ コレクションを取得`ProductDescriptionSchemaCollection`、実稼働リレーショナル スキーマから、`AdventureWorks2012`データベース。  
+ 次の例では、XML スキーマ コレクション `ProductDescriptionSchemaCollection` を、`AdventureWorks2012` データベース内の運用リレーショナル スキーマから取得します。  
   
 ```  
 USE AdventureWorks2012;  

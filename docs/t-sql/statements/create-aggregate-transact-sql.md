@@ -1,5 +1,5 @@
 ---
-title: "集計 (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE AGGREGATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] のアセンブリのクラスで実装が定義される、ユーザー定義集計関数を作成します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]その実装に集計関数をバインドする、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]のインスタンスに、実装が含まれているアセンブリをアップロードする必要があります最初[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CREATE ASSEMBLY ステートメントを使用しています。  
+  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] のアセンブリのクラスで実装が定義される、ユーザー定義集計関数を作成します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が集計関数を実装にバインドするには、先に CREATE ASSEMBLY ステートメントを使用して、その実装を含む [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにアップロードしておく必要があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,13 +68,13 @@ EXTERNAL NAME assembly_name [ .class_name ]
  作成する集計関数の名前です。  
   
  **@** *param_name*  
- ユーザー定義集計で定義された 1 つまたは複数のパラメーター。 パラメーターの値は、集計関数の実行時にユーザーが指定する必要があります。 「アット」マークを使用して、パラメーター名を指定 (**@**) 最初の文字として。 パラメーター名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。 パラメーターは関数に対してローカルです。  
+ ユーザー定義集計で定義された 1 つまたは複数のパラメーター。 パラメーターの値は、集計関数の実行時にユーザーが指定する必要があります。 パラメーター名は、最初の文字を "アット" マーク (**@**) にして指定します。 パラメーター名は[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。 パラメーターは関数に対してローカルです。  
   
  *system_scalar_type*  
- 入力パラメーターの値または戻り値を保持する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムのスカラーのデータ型です。 すべてのスカラー データ型できますをパラメーターとして except に使用するユーザー定義集計**テキスト**、 **ntext**、および**イメージ**です。 などの非スカラー値型**カーソル**と**テーブル**を指定することはできません。  
+ 入力パラメーターの値または戻り値を保持する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムのスカラーのデータ型です。 **text**、**ntext**、**image** 以外のすべてのスカラーのデータ型は、ユーザー定義集計のパラメーターとして使用できます。 **cursor** や **table** など、スカラー型以外のデータ型は指定できません。  
   
  *udt_schema_name*  
- CLR ユーザー定義型が所属しているスキーマの名前です。 指定されていない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]参照*udt_type_name*次の順序で。  
+ CLR ユーザー定義型が所属しているスキーマの名前です。 指定しない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は次の順序で *udt_type_name* を参照します。  
   
 -   ネイティブ SQL 型の名前空間  
   
@@ -83,23 +83,23 @@ EXTERNAL NAME assembly_name [ .class_name ]
 -   現在のデータベースの **dbo** スキーマ。  
   
  *udt_type_name*  
- 現在のデータベースに既に作成されている CLR ユーザー定義型の名前です。 場合*udt_schema_name*が指定されていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型が現在のユーザーのスキーマに属していると仮定します。  
+ 現在のデータベースに既に作成されている CLR ユーザー定義型の名前です。 *udt_schema_name* を指定しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、型は現在のユーザーのスキーマに所属すると見なされます。  
   
  *assembly_name* [ **.***class_name* ]  
- ユーザー定義集計関数にバインドするアセンブリ、および必要に応じて、アセンブリが所属するスキーマの名前とユーザー定義集計を実装するアセンブリ内のクラス名を指定します。 アセンブリは、CREATE ASSEMBLY ステートメントを使用してデータベース内に作成されている必要があります。 *class_name*は有効な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別子と一致するアセンブリ内に存在するクラスの名前。 *class_name*クラスの記述に使用するプログラミング言語は、c# などの名前空間を使用している場合、名前空間で修飾された名前があります。 場合*class_name*が指定されていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と同じであると仮定*aggregate_name*です。  
+ ユーザー定義集計関数にバインドするアセンブリ、および必要に応じて、アセンブリが所属するスキーマの名前とユーザー定義集計を実装するアセンブリ内のクラス名を指定します。 アセンブリは、CREATE ASSEMBLY ステートメントを使用してデータベース内に作成されている必要があります。 *class_name* は有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子でなければならず、アセンブリに存在するクラスの名前と一致する必要があります。 C# など、クラスを記述するのに使用するプログラミング言語で名前空間を使用する場合、*class_name* には名前空間で修飾された名前を指定できます。 *class_name* を指定しない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*aggregate_name* と同じであると見なされます。  
   
-## <a name="remarks"></a>解説  
- 既定では、CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能はオフになっています。 インスタンスでこれらのモジュール内のコードは実行できませんが、作成、変更、およびマネージ コード モジュールを参照するデータベース オブジェクトを削除することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しない限り、 [clr enabled オプション](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)を使用して有効になっているは[sp _構成](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)です。  
+## <a name="remarks"></a>Remarks  
+ 既定では、CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能はオフになっています。 マネージ コード モジュールを参照するデータベース オブジェクトを作成、変更、削除できますが、これらのモジュールのコードは、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して [clr enabled option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) を有効にしない限り [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでは動作しません。  
   
- 参照されるアセンブリのクラス*assembly_name* 、そのメソッドのインスタンスで、ユーザー定義集計関数を実装するためのすべての要件を満たす必要がありますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 詳細については、次を参照してください。 [clr ユーザー定義集計](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)です。  
+ *assembly_name* とそのメソッドで参照されているアセンブリのクラスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでユーザー定義集計関数を実装するためのすべての要件を満たしている必要があります。 詳細については、「[CLR ユーザー定義集計](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)」を参照してください。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  EXTERNAL NAME 句で指定されているアセンブリ上に CREATE AGGREGATE 権限と REFERENCES 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、StringUtilities.csproj サンプル アプリケーションがコンパイルされていることを前提としています。 詳細については、次を参照してください。[文字列ユーティリティ関数サンプル](http://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c)です。  
+ 次の例は、StringUtilities.csproj サンプル アプリケーションがコンパイルされていることを前提としています。 詳細については、「[文字列ユーティリティ関数サンプル](http://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c)」を参照してください。  
   
- この例は集計 `Concatenate` を作成します。 集計が作成される前に、アセンブリ`StringUtilities.dll`がローカル データベースに登録します。  
+ この例は集計 `Concatenate` を作成します。 集計が作成される前に、アセンブリ `StringUtilities.dll` がローカル データベースに登録されます。  
   
 ```  
 USE AdventureWorks2012;  

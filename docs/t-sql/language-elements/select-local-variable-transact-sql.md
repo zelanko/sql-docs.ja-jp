@@ -1,5 +1,5 @@
 ---
-title: "選択@local_variable(TRANSACT-SQL) |Microsoft ドキュメント"
+title: SELECT @local_variable (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
@@ -38,12 +38,12 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select-localvariable-transact-sql"></a>選択@local_variable(TRANSACT-SQL)
+# <a name="select-localvariable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  式の値をローカル変数を設定します。  
+  ローカル変数を式の値に設定します。  
   
- 使用することお勧めを変数に割り当てる場合[設定@local_variable ](../../t-sql/language-elements/set-local-variable-transact-sql.md) @ SELECT ではなく*local_variable*です。  
+ 変数を割り当てるには、SELECT @*local_variable* ではなく、[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md) を使用することをお勧めします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,26 +61,26 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 {= | += | -= | \*= | /= | %= | &= | ^= | |= }   
 右側の値を左側の変数に代入します。  
   
-複合代入演算子です:  
+複合代入演算子です。  
   |演算子 (operator) |アクション (action) |   
   |-----|-----|  
-  | = | これに続く、式を変数に代入します。 |  
-  | += | 追加し、割り当てます |   
+  | = | 後続の式を変数に代入します。 |  
+  | += | 加算して代入 |   
   | -= | 減算して代入 |  
-  | \*= | 乗算し、割り当てください |  
+  | \*= | 乗算して代入 |  
   | /= | 除算して代入 |  
-  | %= | 剰余を割り当てると |  
-  | &= | ビットごとの AND と割り当て |  
-  | ^= | ビットごとの XOR と割り当て |  
-  | \|= | ビットごとの OR と割り当て |  
+  | %= | 剰余を代入 |  
+  | &= | ビットごとの AND 演算を行って代入 |  
+  | ^= | ビットごとの XOR 演算を行って代入 |  
+  | \|= | ビットごとの OR 演算を行って代入 |  
   
  *式 (expression)*  
- 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 これには、スカラー サブクエリが含まれます。  
+ 有効な [expression](../../t-sql/language-elements/expressions-transact-sql.md) です。 これには、スカラー サブクエリが含まれます。  
   
-## <a name="remarks"></a>解説  
- SELECT @*local_variable*は通常、変数に 1 つの値を返すに使用します。 ただし、*式*名前は、列の複数の値を返すことです。 SELECT ステートメントが複数の値を返した場合は、最後に返された値が変数に割り当てられます。  
+## <a name="remarks"></a>Remarks  
+ SELECT @*local_variable* は通常、変数に 1 つの値を返すときに使用します。 ただし、*expression* が列名の場合は、複数の値を返すことができます。 SELECT ステートメントが複数の値を返した場合は、最後に返された値が変数に割り当てられます。  
   
- SELECT ステートメントが行を返さない場合、変数は現在の値を保ちます。 場合*式*スカラー サブクエリを NULL に変数の値が設定されていないことを返します。  
+ SELECT ステートメントが行を返さない場合、変数は現在の値を保ちます。 *expression* が値を返さないスカラー サブクエリの場合、変数は NULL に設定されます。  
   
  1 つの SELECT ステートメントで複数のローカル変数を初期化できます。  
   
@@ -89,8 +89,8 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-use-select-localvariable-to-return-a-single-value"></a>A. Select を使用して@local_variableを 1 つの値を返す  
- 次の例では、変数`@var1`が割り当てられている`Generic Name`としてその値。 に対してクエリを`Store`テーブル行が返されなかったため、値が指定されているため`CustomerID`テーブルに存在しません。 変数が保持、`Generic Name`値。  
+### <a name="a-use-select-localvariable-to-return-a-single-value"></a>A. SELECT @local_variable を使用して値を 1 つ返す  
+ 次の例では、変数 `@var1` には、その値として `Generic Name` が割り当てられています。 `Store` に指定した値は `CustomerID` テーブル内に存在しないため、このテーブルに対するクエリは行を返しません。 変数の値は `Generic Name` のままです。  
   
 ```sql  
 -- Uses AdventureWorks    
@@ -111,8 +111,8 @@ SELECT @var1 AS 'Company Name';
  Generic Name  
  ```  
   
-### <a name="b-use-select-localvariable-to-return-null"></a>B. Select を使用して@local_variablenull を返します  
- 次の例では、`@var1` に値を割り当てるのにサブクエリを使用しています。 指定された値ため`CustomerID`が存在しない、サブクエリを返します。 値はありませんし、変数に設定されている`NULL`です。  
+### <a name="b-use-select-localvariable-to-return-null"></a>B. SELECT @local_variable を使用して NULL を返す  
+ 次の例では、`@var1` に値を割り当てるのにサブクエリを使用しています。 `CustomerID` に要求された値が存在しないため、サブクエリは値を返しません。変数は `NULL` に設定されます。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -135,8 +135,8 @@ NULL
   
 ## <a name="see-also"></a>参照  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [複合演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   

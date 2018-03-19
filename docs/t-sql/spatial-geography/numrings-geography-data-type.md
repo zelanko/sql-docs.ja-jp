@@ -1,5 +1,5 @@
 ---
-title: "NumRings (geography データ型) |Microsoft ドキュメント"
+title: "NumRings (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="numrings-geography-data-type"></a>NumRings (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  内のリングの合計数を返します、**多角形**インスタンス。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Geography**タイプ、外部、内部リングは区別されません、としてすべてのリングは、外部リングに扱われることができます。  
+  **Polygon** インスタンス内のリングの合計数を返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **geography** 型では、すべてのリングが外部リングとして扱われるため、外部リングと内部リングは区別されません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-type"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **int**  
   
  CLR の戻り値の型: **SqlInt32**  
   
-## <a name="remarks"></a>解説  
- このメソッドは NULL でない場合は、**多角形**インスタンスし、は、インスタンスが空の場合 0 を返します。 このメソッドは正確です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、対象となるインスタンスが **Polygon** インスタンスではない場合に NULL を返し、空のインスタンスの場合に 0 を返します。 このメソッドは正確です。  
   
 ## <a name="examples"></a>使用例  
  2 つのリングを含む `Polygon` インスタンスを作成し、リングが 2 つあることを確認する例を次に示します。  

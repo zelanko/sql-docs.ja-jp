@@ -1,5 +1,5 @@
 ---
-title: "ヒント (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "ヒント (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -37,10 +37,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="hints-transact-sql"></a>ヒント (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  ヒントは、オプションまたは方法によって強制用に指定された、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クエリ プロセッサでは、SELECT、INSERT、UPDATE、または DELETE ステートメント。 ヒントは、クエリ オプティマイザーがクエリのために選択するどの実行プランよりも優先されます。  
+  ヒントは、SELECT、INSERT、UPDATE、または DELETE の各ステートメントについて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ プロセッサが実施するように指定したオプションまたは方法です。 ヒントは、クエリ オプティマイザーがクエリのために選択するどの実行プランよりも優先されます。  
   
 > [!CAUTION]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通常、クエリ オプティマイザーがクエリの最適な実行プランを選択、ことをお勧め\<join_hint >、 \<query_hint >、および\<table_hint > 経験豊富な最後の手段としてのみ使用します。開発者やデータベース管理者です。
+>  通常、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーでは、クエリにとって最適な実行プランが選択されるため、\<join_hint>、\<query_hint> および \<table_hint> は、経験を積んだ開発者やデータベース管理者が最後の手段としてのみ使用することをお勧めします。
   
  ここでは、次のヒントについて説明します。  
   

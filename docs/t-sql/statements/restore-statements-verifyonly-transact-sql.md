@@ -1,5 +1,5 @@
 ---
-title: "RESTORE VERIFYONLY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: RESTORE VERIFYONLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -36,15 +36,15 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE ステートメントで VERIFYONLY (TRANSACT-SQL)
+# <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE ステートメント - VERIFYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  復元せずにバックアップを確認して、バックアップ セットが完全なものであること、およびバックアップのすべてが読み取り可能であることを確認します。 ただし、RESTORE VERIFYONLY ステートメントが、バックアップ ボリュームに含まれているデータの構造を確認することはありません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーの検出率を向上させるデータに対して追加のチェックを行う RESTORE VERIFYONLY が強化されました。 この機能の目的は、実際の復元操作にできるだけ近い状況を実現することです。 詳細については、「解説」を参照してください。  
+  復元せずにバックアップを確認して、バックアップ セットが完全なものであること、およびバックアップのすべてが読み取り可能であることを確認します。 ただし、RESTORE VERIFYONLY ステートメントが、バックアップ ボリュームに含まれているデータの構造を確認することはありません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データに対して追加のチェックを行い、エラーの検出率を高めることができるように RESTORE VERIFYONLY が強化されています。 この機能の目的は、実際の復元操作にできるだけ近い状況を実現することです。 詳細については、「解説」を参照してください。  
   
- バックアップが、有効な場合は、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]成功メッセージが返されます。  
+ バックアップが有効な場合は、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は正常に終了したことを知らせるメッセージを返します。  
   
 > [!NOTE]  
->  引数の説明については、次を参照してください。 [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+>  引数の説明については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -95,7 +95,7 @@ FROM <backup_device> [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>引数  
- RESTORE VERIFYONLY の引数の説明については、次を参照してください。 [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+ RESTORE VERIFYONLY 引数の説明については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)」を参照してください。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  メディア セットまたはバックアップ セットには、Microsoft Tape Format として解釈できるように最小限の正しい情報が含まれている必要があります。 含まれていない場合は、RESTORE VERIFYONLY が停止し、バックアップの形式が無効であることが示されます。  
@@ -114,15 +114,15 @@ FROM <backup_device> [ ,...n ]
 >  RESTORE VERIFYONLY は、データベース スナップショットでは動作しません。 元に戻す操作を行う前にデータベース スナップショットを確認するには、DBCC CHECKDB を実行してください。  
   
 > [!NOTE]  
->  スナップショットのバックアップでは、RESTORE VERIFYONLY は、バックアップ ファイルで指定された場所にスナップショットの存在を確認します。 スナップショット バックアップは新しい機能で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。 スナップショット バックアップの詳細については、次を参照してください。 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)です。  
+>  スナップショットのバックアップでは、RESTORE VERIFYONLY は、バックアップ ファイルで指定された場所にスナップショットの存在を確認します。 スナップショット バックアップは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の新機能です。 スナップショット バックアップの詳細については、「[Azure でのデータベース ファイルのスナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
   
-## <a name="security"></a>セキュリティ  
- バックアップ操作では、オプションで、メディア セットとバックアップ セットにそれぞれパスワードを設定できます。 メディア セットまたはバックアップ セットにパスワードが設定されている場合は、RESTORE ステートメントで正しいパスワードを指定する必要があります。 これらのパスワードが不正に復元操作を防ぐため、不正なメディアを使用するバックアップ セットの追加[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ツールです。 ただし、BACKUP ステートメントで FORMAT オプションが使用された場合、メディアの上書きを防ぐことはできません。  
+## <a name="security"></a>Security  
+ バックアップ操作では、オプションで、メディア セットとバックアップ セットにそれぞれパスワードを設定できます。 メディア セットまたはバックアップ セットにパスワードが設定されている場合は、RESTORE ステートメントで正しいパスワードを指定する必要があります。 これらのパスワードを設定しておくと、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使って不正に復元操作が行われたり、メディアにバックアップ セットが不正に追加されたりするのを防ぐことができます。 ただし、BACKUP ステートメントで FORMAT オプションが使用された場合、メディアの上書きを防ぐことはできません。  
   
 > [!IMPORTANT]  
->  パスワードによる保護は強力なものではありません。 使用して、正しくない復元を防止するものでは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ツールを承認またはユーザーです。 その他の手段によるバックアップ データの読み取りやパスワードの置き換えを防ぐわけではありません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]バックアップを保護するためのベスト プラクティスでは、安全な場所に、または十分なアクセス制御リスト (Acl) によって保護されているディスク ファイルへのバックアップ、バックアップ テープを保存します。 ACL は、バックアップを作成するディレクトリのルートに設定する必要があります。  
+>  パスワードによる保護は強力なものではありません。 権限の有無にかかわらず、ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使用して不適切な復元を行わないようにすることを目的としています。 その他の手段によるバックアップ データの読み取りやパスワードの置き換えを防ぐわけではありません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]バックアップ保護に最適な方法は、バックアップ テープを安全な場所に保管するか、バックアップしたディスク ファイルを適切なアクセス制御リスト (ACL) で保護することです。 ACL は、バックアップを作成するディレクトリのルートに設定する必要があります。  
   
-### <a name="permissions"></a>権限  
+### <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、バックアップ セットやバックアップ デバイスに関する情報の取得には CREATE DATABASE 権限が必要になります。 詳細については、「[GRANT (データベースの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

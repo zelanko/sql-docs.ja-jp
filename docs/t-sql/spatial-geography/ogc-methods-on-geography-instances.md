@@ -1,5 +1,5 @@
 ---
-title: "Geography インスタンスの OGC メソッド |Microsoft ドキュメント"
+title: "geography インスタンスの OGC メソッド | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ogc-methods-on-geography-instances"></a>geography インスタンスの OGC メソッド
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Open Geospatial Consortium (OGC) メソッドをサポート**geography**インスタンス。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**geography** インスタンスに対して Open Geospatial Consortium (OGC) メソッドをサポートしています。  
   
  OGC 仕様の詳細については、以下を参照してください。  
   

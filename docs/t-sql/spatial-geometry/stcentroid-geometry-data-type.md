@@ -1,5 +1,5 @@
 ---
-title: "STCentroid (geometry データ型) |Microsoft ドキュメント"
+title: "STCentroid (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-重心を返します、 **geometry** 1 つ以上の多角形で構成されているインスタンス。
+1 つ以上の多角形で構成されている **geometry** インスタンスの重心を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -44,19 +44,19 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
  CLR の戻り値の型: **SqlGeometry**  
   
- Open Geospatial Consortium (OGC) の型:**ポイント**  
+ Open Geospatial Consortium (OGC) の型: **Point**  
   
-## <a name="remarks"></a>解説  
- `STCentroid()`場合は null を返します、 **geometry**インスタンスではありません、 **Polygon、CurvePolygon**、または**MultiPolygon**型です。  
+## <a name="remarks"></a>Remarks  
+ **geometry** インスタンスが **Polygon, CurvePolygon** 型または **MultiPolygon** 型ではない場合、`STCentroid()` は NULL を返します。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-computing-the-centroid-of-a-polygon-instance"></a>A. Polygon インスタンスの重心を計算する  
- 次の例で`STCentroid()`の重心を計算する、`polygon``geometry`インスタンス。  
+ `STCentroid()` を使用して `polygon``geometry` インスタンスの重心を計算する例を次に示します。  
   
 ```  
 DECLARE @g geometry;  
@@ -65,7 +65,7 @@ SELECT @g.STCentroid().ToString();
 ```  
   
 ### <a name="b-computing-the-centroid-of-a-curvepolygon-instance"></a>B. CurvePolygon インスタンスの重心を計算する  
- 次の例の重心を計算する`CurvePolygon`インスタンス。  
+ `CurvePolygon` インスタンスの重心を計算する例を次に示します。  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))';  

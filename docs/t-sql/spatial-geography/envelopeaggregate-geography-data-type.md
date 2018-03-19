@@ -1,5 +1,5 @@
 ---
-title: "EnvelopeAggregate (geography データ型) |Microsoft ドキュメント"
+title: "EnvelopeAggregate (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="envelopeaggregate-geography-data-type"></a>EnvelopeAggregate (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-指定されたセットの境界オブジェクトが返されます**geography**オブジェクト。 その結果、 **geography**オブジェクトには、複数の円弧セグメントが含まれています。
+特定の **geography** オブジェクト セットの境界オブジェクトを返します。 結果として得られる **geography** オブジェクトには、複数の円弧セグメントが含まれます。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,23 +45,23 @@ EnvelopeAggregate ( geography_operand )
   
 ## <a name="arguments"></a>引数  
  *geography_operand*  
- **Geography**型のテーブル列のセットを保持する**geography**エンベロープを実行する対象のオブジェクトの集計操作です。  
+ エンベロープ集計操作を実行する **geography** オブジェクト セットを保持する **geography** 型のテーブルの列を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
-## <a name="remarks"></a>解説  
- A **FullGlobe**結果の境界オブジェクトが半球よりも大きい場合に、オブジェクトが返されます。 このメソッドは正確ではありません。  
+## <a name="remarks"></a>Remarks  
+ 結果の境界オブジェクトが半球より大きい場合は、**FullGlobe** オブジェクトが返されます。 このメソッドは正確ではありません。  
   
- メソッドを返します。 **null** 、入力の Srid が異なる場合。 参照してください[空間参照識別子 &#40;です。Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+ 入力の SRID が異なる場合、メソッドでは **null** が返されます。 「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
- メソッドは無視**null**入力します。  
+ メソッドでは、**null** 入力は無視されます。  
   
 > [!NOTE]  
->  メソッドを返します。 **null**入力されたすべての値が場合**null**です。  
+>  メソッドは、入力された値がすべて **null**の場合、**null** を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例を実行、`EnvelopeAggregate`のセットに対して**geography**市区町村内の場所。  
+ 次の例は、都市内の **geography** ロケーション ポイントのセットで `EnvelopeAggregate` を実行します。  
   
  ```
  USE AdventureWorks2012  

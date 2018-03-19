@@ -1,5 +1,5 @@
 ---
-title: "CurveToLineWithTolerance (geography データ型) |Microsoft ドキュメント"
+title: "CurveToLineWithTolerance (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  多角形近似を返します、 **geography**の円弧セグメントを格納しているインスタンス。  
+  円弧を含む **geography** インスタンスの多角形近似を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,29 +44,29 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>引数  
- *許容範囲*  
- **二重**元の円弧とその線形近似の間の最大誤差を定義する式。  
+ *tolerance*  
+ 元の円弧とその線形近似の間の最大誤差を定義する **double** 式です。  
   
  *relative*  
- **Bool**偏差に相対最大値を使用するかどうかを示す式。 relative を false (0) に設定すると、線形近似で許容される偏差に絶対最大値が設定されます。  relative を true (1) に設定すると、tolerance は tolerance パラメーターと空間オブジェクトに外接する四角形の直径の積として計算されます。  
+ 偏差に相対最大値を使用するかどうかを示す **bool** 式です。 relative を false (0) に設定すると、線形近似で許容される偏差に絶対最大値が設定されます。  relative を true (1) に設定すると、tolerance は tolerance パラメーターと空間オブジェクトに外接する四角形の直径の積として計算されます。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR 戻り値の型: **SqlGeography**  
   
 ## <a name="exceptions"></a>例外  
- 許容範囲を設定 < = 0 がスローされます、 **ArgumentOutOfRange**例外。  
+ tolerance <= 0 を設定すると、**ArgumentOutOfRange** 例外がスローされます。  
   
-## <a name="remarks"></a>解説  
- この方法により、結果を指定する許容誤差量**LineString**です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドでは、結果として得られる **LineString** に許容誤差量を指定できます。  
   
- **CurveToLineWithTolerance**メソッドは、 **LineString**インスタンスの場合、 **CircularString**または**CompoundCurve**インスタンスと**多角形**インスタンスの場合、 **CurvePolygon**インスタンス。  
+ **CurveToLineWithTolerance** メソッドでは、**CircularString** または **CompoundCurve** インスタンスに **LineString** インスタンスが返され、**CurvePolygon** インスタンスに **Polygon** インスタンスが返されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. CircularString インスタンスに対して異なる tolerance 値を使用する  
- 次の例は、許容範囲の設定方法に影響を示しています、`LineString`から返されるインスタンス、`CircularString`インスタンス。  
+ 次の例では、許容値の設定によって、`CircularString` から返される `LineString` インスタンスが変化するしくみを確認できます。  
   
  ```
  DECLARE @g geography;  
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 呼び出し元の CurvePolygon インスタンスに対して relative を true に設定する  
- 次の例では、`CurvePolygon`を呼び出すインスタンス`CurveToLineWithTolerance()`で*相対*true に設定します。  
+ 次の例では、`CurvePolygon` インスタンスを使用し、*relative* を true に設定して `CurveToLineWithTolerance()` を呼び出します。  
   
  ```
  DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';  

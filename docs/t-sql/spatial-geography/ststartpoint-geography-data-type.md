@@ -1,5 +1,5 @@
 ---
-title: "STStartPoint (geography データ型) |Microsoft ドキュメント"
+title: "STStartPoint (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ststartpoint-geography-data-type"></a>STStartPoint (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  始点を返します、 **geography**インスタンス。  
+  **geography** インスタンスの始点を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,14 +44,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
  CLR の戻り値の型: **SqlGeography**  
   
- Open Geospatial Consortium (OGC) の型:**ポイント**  
+ Open Geospatial Consortium (OGC) の型: **Point**  
   
-## <a name="remarks"></a>解説  
- STStartPoint() は相当[STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)`(1)`です。  
+## <a name="remarks"></a>Remarks  
+ STStartPoint() は、[STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)`(1)` と同じです。  
   
 ## <a name="examples"></a>使用例  
  `LineString` インスタンスを作成し、`STStartPoint()` を使用してこのインスタンスの始点を取得する例を次に示します。  

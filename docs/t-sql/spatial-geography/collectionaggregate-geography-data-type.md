@@ -1,5 +1,5 @@
 ---
-title: "CollectionAggregate (geography データ型) |Microsoft ドキュメント"
+title: "CollectionAggregate (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="collectionaggregate-geography-data-type"></a>CollectionAggregate (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-作成、 **GeometryCollection**インスタンスのセットから**geography**オブジェクト。
+**geography** オブジェクトのセットから **GeometryCollection** インスタンスを作成します。
   
 ## <a name="syntax"></a>構文  
   
@@ -42,24 +42,24 @@ ConvexHullAggregate ( geography_operand )
   
 ## <a name="arguments"></a>引数  
  *geography_operand*  
- **Geography**型のテーブル列のセットを表す**geography**に記述するオブジェクト、 **GeometryCollection**インスタンス。  
+ **GeometryCollection** インスタンスで列挙される **geography** オブジェクトのセットを表す **geography** 型のテーブルの列です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
 ## <a name="exception"></a>例外  
- 入力値が無効である場合は、`FormatException` をスローします。 参照してください[STIsValid (& a) #40; geography データ型 &#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
+ 入力値が無効である場合は、`FormatException` をスローします。 「[STIsValid &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
- メソッドを返します。 **null**入力が空または入力がの Srid が異なる場合。 参照してください[空間参照識別子 &#40;です。Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="remarks"></a>Remarks  
+ メソッドは、入力が空か、入力にさまざまな SRID が含まれているときに **null** を返します。 「[SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
- メソッドは無視**null**入力します。  
+ メソッドでは、**null** 入力は無視されます。  
   
 > [!NOTE]  
->  メソッドを返します。 **null**入力されたすべての値が場合**null**です。  
+>  メソッドは、入力された値がすべて **null**の場合、**null** を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例を返します、`GeometryCollection`のセットを含むインスタンス**geography**オブジェクト。  
+ 次の例は、**geography** オブジェクトのセットが含まれる `GeometryCollection` インスタンスを返します。  
   
  ```
  USE AdventureWorks2012  

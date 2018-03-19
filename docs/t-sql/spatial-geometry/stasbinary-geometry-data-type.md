@@ -1,5 +1,5 @@
 ---
-title: "STAsBinary (geometry データ型) |Microsoft ドキュメント"
+title: "STAsBinary (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **varbinary(max)**  
   
- CLR の戻り値の型: **SqlBytes**  
+ CLR 戻り値の型: **SqlBytes**  
   
 ## <a name="examples"></a>使用例  
  次の例では、(0,0) から (2,3) までの `LineString` geometry インスタンスをテキストから作成します。 `STAsBinary()` は結果を WKB で返します。  

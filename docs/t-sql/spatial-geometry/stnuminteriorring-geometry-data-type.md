@@ -1,5 +1,5 @@
 ---
-title: "STNumInteriorRing (geometry データ型) |Microsoft ドキュメント"
+title: "STNumInteriorRing (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-内部リングの数を返します、 **Polygongeometry**インスタンス。
+**Polygongeometry** インスタンスの内部リングの数を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **int**  
   
  CLR の戻り値の型: **SqlInt32**  
   
-## <a name="remarks"></a>解説  
- このメソッドは、場合に null を返します、 **geometry**インスタンスが多角形ではありません。  
+## <a name="remarks"></a>Remarks  
+ **geometry** インスタンスが多角形ではない場合、このメソッドは NULL を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例を作成、`Polygon`使用して、インスタンス`STNumInteriorRing()`が数の内部リングのインスタンスが見つかりません。  
+ `Polygon` インスタンスを作成し、`STNumInteriorRing()` を使用してインスタンスに含まれる内部リングの数を調べる例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

@@ -1,5 +1,5 @@
 ---
-title: "(Geography データ型) を削減 |Microsoft ドキュメント"
+title: "Reduce (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="reduce-geography-data-type-"></a>Reduce (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  近似を返します、指定された**geography**インスタンス指定された許容範囲を持つインスタンスに対して Douglas-peucker アルゴリズムを実行して生成します。  
+  指定した **geography** インスタンスを簡略化したものを返します。これは、指定された許容範囲で、特定のインスタンスに対して Douglas-Peucker アルゴリズムを実行することにより生成されます。  
   
- これは、 **geography**データ型メソッドでサポート**FullGlobe**インスタンスまたは空間インスタンスは、半球より大きいをします。  
+ この **geography** データ型メソッドは、半球より大きい **FullGlobe** インスタンスまたは空間インスタンスをサポートします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,28 +50,28 @@ ms.lasthandoff: 01/25/2018
 |||  
 |-|-|  
 |項目|定義|  
-|*許容範囲*|型の値は、 **float**です。 *トレランス*は、Douglas-peucker アルゴリズムに入力するための許容範囲です。 *トレランス*正数である必要があります。|  
+|*tolerance*|**float** 型の値です。 *tolerance* は、Douglas-Peucker アルゴリズムに入力する許容範囲です。 *tolerance* には正の数値を指定する必要があります。|  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR 戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>解説  
- コレクション型のこのアルゴリズムは個別に各**geography**インスタンスに含まれています。 このアルゴリズムは変更されません**ポイント**インスタンス。  
+## <a name="remarks"></a>Remarks  
+ コレクション型の場合、このアルゴリズムはインスタンスに含まれている **geography** ごとに個別に実行されます。 このアルゴリズムによって、**Point** インスタンスが変更されることはありません。  
   
- このメソッドはのエンドポイントを保持しようとします。 **LineString**インスタンスが有効な結果を保持するために失敗する可能性があります。  
+ このメソッドでは、**LineString** インスタンスのエンドポイントを保持しようとしますが、有効な結果を保持する目的でそれに失敗する場合があります。  
   
- 場合`Reduce()`が呼び出されたこのメソッドを生成する負の値と共に、 **ArgumentException**です。 `Reduce()` で使用される許容範囲は正の数値である必要があります。  
+ 負の値を指定して `Reduce()` が呼び出された場合、このメソッドでは **ArgumentException** が発生します。 `Reduce()` で使用される許容範囲は正の数値である必要があります。  
   
- 各で Douglas-peucker アルゴリズムの動作、曲線またはリング、 **geography**始点と終点を除くすべてのポイントを削除するインスタンス。 削除の各ポイントが、追加し、点がなくなるまで、遠く、外の点から始まる複数の*トレランス*結果からです。 有効な結果が保証されるように、必要に応じて結果が有効になります。  
+ Douglas-Peucker アルゴリズムでは、開始点と終了点以外のすべての点を取り除くことで、**geography** インスタンス内の各曲線またはリングを処理します。 その後、取り除かれた各点が、最も遠くの範囲外の点から始めて、結果から *tolerance* を超える点がなくなるまで戻されます。 有効な結果が保証されるように、必要に応じて結果が有効になります。  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、このメソッドが拡張されて**FullGlobe**インスタンス。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、このメソッドは **FullGlobe** インスタンスに拡張されました。  
   
  このメソッドは正確ではありません。  
   
 ## <a name="examples"></a>使用例  
- 次の例を作成、`LineString`使用して、インスタンス`Reduce()`のインスタンスを簡略化します。  
+ `LineString` インスタンスを作成し、`Reduce()` を使用してそのインスタンスを簡略化する例を次に示します。  
   
 ```  
 DECLARE @g geography = 'LineString(120 45, 120.1 45.1, 199.9 45.2, 120 46)'  

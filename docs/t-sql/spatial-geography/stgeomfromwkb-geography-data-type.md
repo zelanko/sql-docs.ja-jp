@@ -1,5 +1,5 @@
 ---
-title: "STGeomFromWKB (geography データ型) |Microsoft ドキュメント"
+title: "STGeomFromWKB (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomfromwkb-geography-data-type"></a>STGeomFromWKB (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返します、 **geography** Open Geospatial Consortium (OGC) Well-Known Binary (WKB) 表現からのインスタンス。
+Open Geospatial Consortium (OGC) Well-Known Binary (WKB) 表現から **geography** インスタンスを返します。
   
-これは、 **geography**データ型メソッドでサポート**FullGlobe**インスタンスまたは空間インスタンスは、半球より大きいをします。
+この **geography** データ型メソッドは、半球より大きい **FullGlobe** インスタンスまたは空間インスタンスをサポートします。
   
 ## <a name="syntax"></a>構文  
   
@@ -47,25 +47,25 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
   
 ## <a name="arguments"></a>引数  
  *WKB_geography*  
- WKB 表現です、 **geography**インスタンスを返します。 *WKB_geography*は、 **varbinary (max)**式。  
+ 返される **geography** インスタンスの WKB 表現です。 *WKB_geography* は、**varbinary (max)** 式です。  
   
  *SRID*  
- **Int** 、空間を表す式の ID (SRID) を参照、 **geography**インスタンスを返します。  
+ 返される **geography** インスタンスの SRID (spatial reference ID) を表す **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR 戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>解説  
- OGC の型の**geography**によって返されるインスタンス`STGeomFromText()`が、対応する WKB 入力に設定します。  
+## <a name="remarks"></a>Remarks  
+ `STGeomFromText()` によって返された **geography** インスタンスの OGC 型は、対応する WKB 入力に設定されます。  
   
- このメソッドは、 **FormatException**入力が適切な形式でない場合。  
+ このメソッドは、入力が整形式でない場合に、**FormatException** をスローします。  
   
- このメソッドはスロー **ArgumentException**場合は、入力に対蹠が含まれています。  
+ このメソッドは、入力に対蹠点が含まれている場合、**ArgumentException** をスローします。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`STGeomFromWKB()`を作成する、`geography`インスタンス。  
+ `STGeomFromWKB()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  
 DECLARE @g geography;  

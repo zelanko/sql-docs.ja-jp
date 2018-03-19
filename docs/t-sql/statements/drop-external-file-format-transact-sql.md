@@ -1,5 +1,5 @@
 ---
-title: "外部ファイル形式を削除 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP EXTERNAL FILE FORMAT (TRANSACT-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -46,13 +46,13 @@ DROP EXTERNAL FILE FORMAT external_file_format_name
  削除するには、外部のファイル形式の名前です。  
   
 ## <a name="metadata"></a>メタデータ  
- 外部ファイル形式の使用の一覧を表示する、 [sys.external_file_formats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)システム ビューです。  
+ 外部ファイル形式の一覧を表示するには、[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md) システム ビューを使用します。  
   
 ```  
 SELECT * FROM sys.external_file_formats;  
 ```  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  必要と任意の外部のファイル形式を変更します。  
   
 ## <a name="general-remarks"></a>全般的な解説  

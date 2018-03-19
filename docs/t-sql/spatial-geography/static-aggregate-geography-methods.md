@@ -1,5 +1,5 @@
 ---
-title: "静的集計地理メソッド |Microsoft ドキュメント"
+title: "静的集計地理メソッド | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Open Geospatial Consortium (OGC) の静的な地理メソッドに対する拡張として次の集計メソッドをサポートしています。  
   
 > [!NOTE]  
->  これらの集計メソッドはだけで公開されて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 Microsoft.SqlServer.Types アセンブリでは公開されていません。  
+>  これらの集計メソッドは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] だけで公開されています。 Microsoft.SqlServer.Types アセンブリでは公開されていません。  
   
  OGC 仕様の詳細については、以下を参照してください。  
   

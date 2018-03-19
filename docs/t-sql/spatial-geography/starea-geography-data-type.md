@@ -1,5 +1,5 @@
 ---
-title: "STArea (geography データ型) |Microsoft ドキュメント"
+title: "STArea (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="starea-geography-data-type"></a>STArea (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  合計面積を返します、 **geography**インスタンス。 STArea() の結果の空間参照識別子が使用する測定単位の平方で返されます、 **geography** ; のインスタンスなど、インスタンスの SRID が 4326 の場合は、STArea() 結果を返します平方メートル単位で。  
+  **geography** インスタンスの合計面積を返します。 STArea() の結果は、**geography** インスタンスの SRID が使用する測定単位の平方で返されます。たとえば、インスタンスの SRID が 4326 の場合、STArea() の結果は平方メートル単位で返されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,18 +44,18 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **float**  
   
  CLR の戻り値の型: **SqlDouble**  
   
-## <a name="remarks"></a>解説  
- STArea() は 0 を返します、 **geography**インスタンスには、0-1 次元の図形のみが含まれています。 空である場合またはします。  
+## <a name="remarks"></a>Remarks  
+ **geography** インスタンスに含まれるすべての図形が 0 次元または 1 次元の図形の場合、または空である場合、STArea() は 0 を返します。  
   
 > [!NOTE]  
->  メソッドを**geography**データ型の基準の戻り値は、メソッドで使用されるインスタンスの srid に応じて、異なる結果を生成します。 Srid の詳細については、次を参照してください。 [Spatial Reference Id &#40;です。Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+>  基準の戻り値を生成する、**geography** データ型のメソッドの結果は、メソッドで使用されるインスタンスの SRID に応じて異なります。 SRID の詳細については、「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`STArea()`を作成する、`Polygon``geography`をインスタンス化し、多角形の面積を計算します。  
+ `STArea()` を使用して、`Polygon``geography` インスタンスを作成し、多角形の面積を計算する例を次に示します。  
   
 ```  
 DECLARE @g geography;  

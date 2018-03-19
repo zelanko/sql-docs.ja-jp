@@ -1,7 +1,7 @@
 ---
-title: "SET SHOWPLAN_XML (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET SHOWPLAN_XML (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 06/10/2016
+ms.date: 02/22/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -31,64 +31,64 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bd4e6309f65bea4a71cc9e2de7d5bb5b806ab005
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: 80a04971bb82b1d4857eb08e7ff65083855ed7b3
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  により[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の実行を中止[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 代わりに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を適切に定義された XML ドキュメントの形式で実行するステートメントを移動する方法に関する詳細な情報を返します  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが実行されなくなります。 代わりに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はステートメントの実行方法に関する詳細情報を、整形式の XML ドキュメントで返します。  
  
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>構文
   
 ```  
   
 SET SHOWPLAN_XML { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SET SHOWPLAN_XML は、解析時ではなく実行時に設定されます。  
   
- SET SHOWPLAN_XML が ON の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行することがなく各ステートメントの実行プラン情報を返しますと[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントは実行されません。 返される情報は、このオプションが ON に設定されてから OFF に設定されるまでに発行されたすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに関する実行プラン情報です。 たとえば、CREATE TABLE ステートメントが実行中に SET SHOWPLAN_XML が ON、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーを返しますが、同じテーブルに関連する後続の SELECT ステートメントからメッセージ以外の場合は、指定したテーブルが存在しません。 その後、このテーブルに対して行われる参照は失敗します。 SET SHOWPLAN_XML が OFF の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではレポートを作成せずに、ステートメントを実行します。  
+ SET SHOWPLAN_XML が ON の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では各ステートメントの実行プラン情報だけが返され、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは実行されません。 返される情報は、このオプションが ON に設定されてから OFF に設定されるまでに発行されたすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに関する実行プラン情報です。 たとえば、SET SHOWPLAN_XML が ON のとき、CREATE TABLE ステートメントを実行した後で、同じテーブルを参照する SELECT ステートメントを実行すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では指定したテーブルが存在しないというエラー メッセージが返されます。 その後、このテーブルに対して行われる参照は失敗します。 SET SHOWPLAN_XML が OFF の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではレポートを作成せずに、ステートメントを実行します。  
   
- SET SHOWPLAN_XML のためのものとして出力を返す**nvarchar (max)**などのアプリケーション、 **sqlcmd**ユーティリティ、XML 出力が、後で使用されている他のツールで表示し、クエリの処理情報を計画します。  
+ SET SHOWPLAN_XML では、**sqlcmd** ユーティリティなどのアプリケーション用に、出力が **nvarchar(max)** 型で返されます。この XML 出力は、他のツールがクエリ プランの情報の表示や処理を行う場合に使用されます。  
   
 > [!NOTE]  
->  動的管理ビュー **sys.dm_exec_query_plan**、SET SHOWPLAN_XML とで同じ情報を返す、 **xml**データ型。 この情報から返される、 **query_plan**の列**sys.dm_exec_query_plan**です。 詳細については、次を参照してください。 [sys.dm_exec_query_plan &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
+>  動的管理ビュー **sys.dm_exec_query_plan** では、SET SHOWPLAN_XML と同じ情報が **xml** データ型で返されます。 この情報は、**sys.dm_exec_query_plan** の **query_plan** 列から返されます。 詳しくは、「[sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)」をご覧ください。  
   
  SET SHOWPLAN_XML はストアド プロシージャ内では指定できません。 このステートメントは、バッチ内にのみ指定できます。  
   
  SET SHOWPLAN_XML では、情報が XML ドキュメントのセットとして返されます。 SET SHOWPLAN_XML を ON にした後で実行された各バッチの情報は、それぞれ 1 つの出力ドキュメントに反映されます。 各ドキュメントには、バッチ内のステートメントのテキストと実行ステップの詳細が含まれ、 推定コスト、行数、アクセスしたインデックス、実行された演算子の種類、結合順序、および実行プランに関するその他の情報が示されます。  
   
- SET SHOWPLAN_XML による XML 出力がセットアップ中にマイクロソフト上のコンピューター上のローカル ディレクトリにコピーされるため、XML スキーマを含むドキュメント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされています。 含む、ドライブは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストール ファイルで。  
+ SET SHOWPLAN_XML による XML 出力用の XML スキーマを含んだドキュメントは、セットアップ時に、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされているコンピューター上のローカル ディレクトリへコピーされます。 このドキュメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール ファイルと同じドライブ上にあります。場所は次のとおりです。  
   
  \Microsoft SQL Server\130\Tools\Binn\schemas\sqlserver\2004\07\showplan\showplanxml.xsd  
   
- プラン表示スキーマもご覧に[この Web サイト](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)です。  
+ プラン表示スキーマは、[こちらの Web サイト](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)にもあります。  
   
 > [!NOTE]  
->  場合**実際の実行プランを含める**で選択した[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、この SET オプションでは、XML プラン表示出力は生成されません。 クリア、**実際の実行プランを含める**オプションを設定してこれを使用する前にボタンをクリックします。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[実際の実行プランを含める]** を選ぶと、この SET オプションによって XML プラン表示出力が生成されません。 SET オプションを使う前に、**[実際の実行プランを含める]** ボタンの選択を解除してください。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  SET SHOWPLAN_XML を使用するには、SET SHOWPLAN_XML の実行ステートメントを実行するための適切な権限が与えられている必要があります。また、参照されるオブジェクトを含むすべてのデータベースに対して、SHOWPLAN 権限が必要です。  
   
- SELECT、INSERT、UPDATE、DELETE、EXEC の*stored_procedure*と EXEC *user_defined_function*ステートメントをユーザーはプラン表示を作成します。  
+ SELECT、INSERT、UPDATE、DELETE、EXEC <*ストアド プロシージャ*>、EXEC <*ユーザー定義関数*> の各ステートメントの場合、プラン表示を作成するには、ユーザーに次の権限が必要です。  
   
--   実行する適切なアクセス許可、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行するための適切な権限。  
   
--   によって参照されるオブジェクトを含むすべてのデータベースに SHOWPLAN 権限、[!INCLUDE[tsql](../../includes/tsql-md.md)]テーブルやビューなどのステートメント。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで参照されるテーブルやビューなどのオブジェクトを含んでいるすべてのデータベースでの SHOWPLAN 権限。  
   
- DDL、USE など、他のすべてのステートメントの*database_name*、セット、DECLARE、動的 SQL、および実行する適切な権限のみで、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントが必要です。  
+ DDL、USE <*データベース名*>、SET、DECLARE、動的 SQL など、その他すべてのステートメントでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行するための適切な権限だけが必要です。  
   
 ## <a name="examples"></a>使用例  
  次の 2 つのステートメントは、SET SHOWPLAN_XML の設定を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でクエリ内のインデックスの使用状況を分析し最適化する方法を示しています。  
   
- 最初のクエリでは、インデックス列の WHERE 句で = (等しい) 比較演算子を使用しています。 2 番目のクエリでは、WHERE 句で LIKE 演算子を使用します。 これにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をクラスター化インデックス スキャンを使用して、WHERE 句の条件を満たすデータが検索されます。 内の値、 **EstimateRows**と**EstimatedTotalSubtreeCost**属性の方が小さく、ことを示すことが非常に高速に処理されるよりも少ないリソースを使用して、最初のインデックス付きクエリ、インデックス付けされていないクエリです。  
+ 最初のクエリでは、インデックス列の WHERE 句で = (等しい) 比較演算子を使用しています。 2 番目のクエリでは、WHERE 句で LIKE 演算子を使用します。 このように指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではクラスター化インデックス スキャンが行われ、WHERE 句の条件を満たすデータが検索されます。 **EstimateRows** 属性と **EstimatedTotalSubtreeCost** 属性の値は、インデックスが設定された最初のクエリの方が小さくなるので、インデックスが設定されていないクエリよりも速く処理が行われ、使用リソースが少なかったことがわかります。  
   
 ```  
 USE AdventureWorks2012;  

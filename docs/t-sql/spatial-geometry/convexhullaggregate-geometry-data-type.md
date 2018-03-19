@@ -1,5 +1,5 @@
 ---
-title: "ConvexHullAggregate (geometry データ型) |Microsoft ドキュメント"
+title: "ConvexHullAggregate (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="convexhullaggregate-geometry-data-type"></a>ConvexHullAggregate (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-指定されたセットの凸包を返します**geometry**オブジェクト。
+指定された一連の **geometry** オブジェクトに対して凸包を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -42,21 +42,21 @@ ConvexHullAggregate ( geometry_operand )
   
 ## <a name="arguments"></a>引数  
  *geometry_operand*  
- **Geometry** geometry オブジェクトのセットを表す型のテーブル列です。  
+ geometry オブジェクトのセットを表す **geometry** 型のテーブルです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
 ## <a name="exception"></a>例外  
- 入力値が無効である場合は、`FormatException` をスローします。 参照してください[STIsValid (& a) #40; geometry データ型 &#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
+ 入力値が無効である場合は、`FormatException` をスローします。 「[STIsValid &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
- メソッドを返します。 **null**入力が空または入力がの Srid が異なる場合。 参照してください[空間参照識別子 &#40;です。Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="remarks"></a>Remarks  
+ メソッドは、入力が空か、入力にさまざまな SRID が含まれているときに **null** を返します。 「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
- メソッドは無視**null**入力します。  
+ メソッドは、**null** 入力を無視します。  
   
 > [!NOTE]  
->  メソッドを返します。 **null**入力されたすべての値が場合**null**です。  
+>  メソッドは、入力された値がすべて **null** の場合、**null** を返します。  
   
 ## <a name="examples"></a>使用例  
  次の例は、テーブル変数列内の geometry オブジェクトのセットの凸包を返します。  

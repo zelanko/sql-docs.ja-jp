@@ -1,5 +1,5 @@
 ---
-title: "STEquals (geography データ型) |Microsoft ドキュメント"
+title: "STEquals (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stequals-geography-data-type"></a>STEquals (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  場合 1 を返します、 **geography**インスタンスが同じ地点の別のセットを表す**geography**インスタンス。 そうでない場合は、0 を返します。  
+  **geography** インスタンスが別の **geography** インスタンスと同一地点を表している場合は 1 を返します。 そうでない場合は 0 を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,18 +45,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geography*  
- もう 1 つ**geography**対象のインスタンスと比較するインスタンス`STEquals()`が呼び出されます。  
+ `STEquals()` を呼び出したインスタンスと比較される、別の **geography** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **bit**  
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- このメソッドは、場合常に null を返しますの spatial reference Id (Srid)、 **geography**インスタンスが一致しません。  
+## <a name="remarks"></a>Remarks  
+ 2 つの **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、2 つ作成されます`geography`インスタンス`STGeomFromText()`は等価ですがほぼ同じ等しくではないとを使用している`STEquals()`等価性をテストします。 インスタンスが等しいため`LINESTRING`と`POINT`内に含まれる、`POLYGON`です。  
+ `STGeomFromText()` を含むほぼ同じ `geography` インスタンスを 2 つ作成し、`STEquals()` を使用して 2 つのインスタンスが同一であるかどうかをテストする例を次に示します。 `POLYGON` の中に `LINESTRING` および `POINT` が含まれているため、2 つのインスタンスは等しいと見なされます。  
   
 ```  
 DECLARE @g geography;  

@@ -1,5 +1,5 @@
 ---
-title: "外部テーブルとして選択 (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE EXTERNAL TABLE AS SELECT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: 
@@ -33,24 +33,24 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-external-table-as-select-transact-sql"></a>外部テーブルとして選択 (TRANSACT-SQL) を作成します。
+# <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  外部テーブルを作成し、エクスポートすると、並列での結果、 [!INCLUDE[tsql](../../includes/tsql-md.md)] Hadoop または Azure Storage の Blob に SELECT ステートメント。  
+  外部テーブルを作成してから、Hadoop または Azure Storage Blob に [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの結果を並列でエクスポートします。  
   
- 作成する外部テーブルとして選択 (CETAS) ステートメントを使用します。  
+ 次のような場合に CREATE EXTERNAL TABLE AS SELECT (CETAS) ステートメントを使用します。  
   
--   データベース テーブルを Hadoop または Azure blob ストレージにエクスポートします。  
+-   Hadoop または Azure BLOB ストレージにデータベース テーブルをエクスポートする。  
   
--   Hadoop または Azure blob ストレージからデータをインポートし、データベースに保存します。  
+-   Hadoop または Azure BLOB ストレージからデータをインポートして、データベースに格納する。  
   
--   Hadoop または Azure blob ストレージからデータをクエリ、データベースのリレーショナル テーブルと結合し、結果を Hadoop または Azure blob ストレージに書き戻すします。  
+-   Hadoop または Azure BLOB ストレージのデータに対してクエリを実行して、データベースのリレーショナル テーブルと結合し、Hadoop または Azure BLOB ストレージに結果を書き戻す。  
   
--   Hadoop または Azure blob ストレージからデータをクエリ、データベースの高速処理の機能を使用して変換ジョブや Hadoop または Azure blob ストレージに書き込みます。  
+-   Hadoop または Azure BLOB ストレージのデータに対してクエリを実行して、データベースの高速処理機能を使用して変換し、Hadoop または Azure BLOB ストレージに書き戻す。  
   
  詳細については、「 [PolyBase 入門](../../relational-databases/polybase/get-started-with-polybase.md)」を参照してください。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -80,148 +80,148 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 ## <a name="arguments"></a>引数  
  [ [ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name*  
- 1 つを 3 つの部分の名前でデータベースを作成するテーブル。 外部テーブルのリレーショナル データベースのテーブルのメタデータのみが格納されます。  
+ データベースで作成するテーブルの 1 つから 3 つの部分で構成される名前。 外部テーブルの場合、テーブル メタデータのみがリレーショナル データベースに格納されます。  
   
  LOCATION =  '*hdfs_folder*'  
- 外部データ ソースに関する SELECT ステートメントの結果の書き込み先を指定します。 場所は、フォルダー名であり、Hadoop クラスターまたは Azure Storage の Blob のルート フォルダーに対応するパスを含めることができます必要に応じて。  PolyBase が既に存在しない場合、パスとフォルダーが作成されます。  
+ 外部データ ソースで SELECT ステートメントの結果を書き込む場所を指定します。 場所はフォルダー名であり、必要に応じて、Hadoop クラスターまたは Azure Storage Blob のルート フォルダーへの相対パスを含めることができます。  PolyBase ではパスとフォルダー (まだ存在しない場合) が作成されます。  
   
- 外部ファイルに書き込まれます*hdfs_folder*と名前付き*QueryID_date_time_ID.format*ここで、 *ID*増分識別子と*形式*エクスポートされたデータ形式です。 たとえば、QID776_20160130_182739_0.orc です。  
+ 外部ファイルは *hdfs_folder* に書き込まれ、*QueryID_date_time_ID.format* という名前が付けられます (*ID* は増分識別子、*format* はエクスポートされるデータ形式)。 たとえば、QID776_20160130_182739_0.orc です。  
   
  DATA_SOURCE = *external_data_source_name*  
- 外部のデータが格納されているまたはを格納する場所を含む外部データ ソース オブジェクトの名前を指定します。 場所は、Hadoop クラスターまたは Azure Storage の Blob のいずれか。 外部データ ソースを作成するには、使用[外部データ ソースの作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md)  
+ 外部データが格納されている、または格納される場所を含む、外部データ ソース オブジェクトの名前を指定します。 場所は、Hadoop クラスターまたは Azure Storage Blob のいずれかです。 外部データ ソースを作成するには、[CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用します。  
   
  FILE_FORMAT = *external_file_format_name*  
- 外部データ ファイルの形式を含む外部ファイル形式オブジェクトの名前を指定します。 外部ファイル形式を作成するには使用[CREATE EXTERNAL FILE FORMAT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-file-format-transact-sql.md)  
+ 外部データ ファイルの形式を含む、外部ファイル形式オブジェクトの名前を指定します。 外部ファイル形式を作成するには、[CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md) を使用します。  
   
  オプションを拒否します。  
- 拒否するオプションは、この CREATE EXTERNAL TABLE AS SELECT ステートメントの実行時に適用されません。 代わりに、それらは、ここで指定したデータベースが、外部テーブルからデータをインポートする場合、後で使用できるようにします。 後で、CREATE TABLE AS SELECT ステートメントを外部テーブルからデータを選択すると、データベース オプションを使用して、拒否数またはインポートを停止する前にインポートに失敗した行の割合を決定します。  
+ この CREATE EXTERNAL TABLE AS SELECT ステートメントの実行時に拒否オプションは適用されません。 代わりに、ここで指定し、後で外部テーブルからデータをインポートする際に、データベースで使用できるようにします。 後で CREATE TABLE AS SELECT ステートメントで外部テーブルからデータを選択するときに、データベースでは拒否オプションを使用して、インポートを停止するまでにインポートの失敗が許容される行の数または割合を決定します。  
   
  REJECT_VALUE = *reject_value*  
- またはデータベースのインポートを停止する前にインポートに失敗した行のパーセンテージの値を指定します。  
+ データベースでインポートを停止するまでに、インポートの失敗が許容される行の値または割合を指定します。  
   
- REJECT_TYPE =**値**| 割合  
+ REJECT_TYPE = **value** | percentage  
  REJECT_VALUE オプションは、リテラル値またはパーセントとして指定されているかどうか明確にします。  
   
  value  
- REJECT_VALUE は、リテラル値、パーセンテージではありません。  失敗した行の数を超えた場合に、外部データ ファイルから行をインポートするデータベースは停止*reject_value*です。  
+ REJECT_VALUE は、リテラル値、パーセンテージではありません。  失敗した行の数が *reject_value* を超えた場合、データベースは外部データ ファイルからの行のインポートを停止します。  
   
- たとえば場合、REJECT_VALUE = 5 と REJECT_TYPE = 値、5 行がインポートに失敗した後に行をインポートするデータベースは停止します。  
+ たとえば、REJECT_VALUE = 5 で、REJECT_TYPE = value の場合、データベースは、5 行のインポートが失敗した後、行のインポートを停止します。  
   
  割合  
- REJECT_VALUE では、リテラル値ではなく、パーセンテージです。 データベースの外部からの行のインポートが停止データ ファイルの場合、*割合*失敗した行を超えています*reject_value*です。 障害が発生した行の割合は、間隔で計算されます。  
+ REJECT_VALUE では、リテラル値ではなく、パーセンテージです。 失敗した行の *percentage* が *reject_value* を超えた場合、データベースは外部データ ファイルからの行のインポートを停止します。 障害が発生した行の割合は、間隔で計算されます。  
   
  REJECT_SAMPLE_VALUE = *reject_sample_value*  
- 場合に必須 REJECT_TYPE = 割合、これが、データベースが障害が発生した行の割合を再計算する前にインポートしようとする行の数を指定します。  
+ REJECT_TYPE= percentage の場合に必要です。これにより、データベースが失敗した行の割合を再計算する前に、インポートを試みる行の数が指定されます。  
   
- たとえば場合、REJECT_SAMPLE_VALUE = 1000、データベース外部のデータ ファイルから 1000 年行をインポートしようとしました後に失敗した行の比率が計算されます。 失敗した行の比率がある場合より小さい*reject_value*、データベースはもう 1 つの 1000 行をロードしようとしています。 データベースは、各追加の 1000 行をインポートする試みた後に障害が発生した行の割合を再計算を続行します。  
+ たとえば、REJECT_SAMPLE_VALUE = 1000 の場合、データベースは外部データ ファイルから 1000 行のインポートを試みた後、失敗した行の割合を計算します。 失敗した行の割合が *reject_value* 未満の場合、データベースは別の 1000 行の読み込みを試みます。 データベースは引き続き、その 1000 行のそれぞれのインポートを試みた後、失敗した行の割合を再計算します。  
   
 > [!NOTE]  
->  失敗した行の実際の割合を超える場合、データベースは、間隔で障害が発生した行の比率を計算、ため*reject_value*です。  
+>  データベースは一定の間隔で失敗した行の割合を計算するため、失敗した行の実際の割合が *reject_value* を超える場合があります。  
   
  例:  
   
  この例では、拒否の 3 つのオプションが相互にやり取りする方法を示します。 たとえば場合、REJECT_TYPE 割合、REJECT_VALUE を = = 30、および REJECT_SAMPLE_VALUE、次のシナリオが発生する可能性が 100 を =。  
   
--   データベースが、最初の 100 行を読み込むしようとしています。25 75、および失敗および成功します。  
+-   データベースは、最初の 100 行の読み込みを試みます。この場合、失敗が 25、成功が 75 です。  
   
--   障害が発生した行の割合は、これは、30% の拒否の値よりも小さい 25%、として計算されます。 そのため、負荷を停止する必要はありません。  
+-   障害が発生した行の割合は、これは、30% の拒否の値よりも小さい 25%、として計算されます。 そのため、読み込みを停止する必要はありません。  
   
--   データベースが、次の 100 行を読み込みしようとしています。この時刻の 25 が成功して、75 が失敗します。  
+-   データベースは次の 100 行の読み込みを試みます。今回は成功が 25、失敗が 75 です。  
   
 -   失敗した行の割合が 50% として再計算されます。 障害が発生した行の割合が 30% の拒否の値を超えました。  
   
--   読み込みに失敗失敗 50% の行を含む 200 の行をロードしようとした後は、指定された 30% 制限よりも大きいです。  
+-   200 行の読み込みを試みた後、失敗した行の割合が 50% で読み込みに失敗しています。この割合は、指定された制限の 30% を超えています。  
   
  WITH *common_table_expression*  
- 共通テーブル式 (CTE) と呼ばれる一時的な名前付き結果セットを指定します。 詳細については、次を参照してください。[で common_table_expression と #40 です。TRANSACT-SQL と #41 です](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
+ 共通テーブル式 (CTE) と呼ばれる一時的な名前付き結果セットを指定します。 詳細については、「[WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)」を参照してください。  
   
- 選択\<select_criteria > によって、SELECT ステートメントの結果を新しいテーブルを作成します。 *select_criteria*新しいテーブルにコピーするデータを決定する SELECT ステートメントの本文です。 SELECT ステートメントの概要については、次を参照してください[SELECT &#40;。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-transact-sql.md).  
+ SELECT \<select_criteria> 新しいテーブルに SELECT ステートメントの結果を設定します。 *select_criteria* は、新しいテーブルにコピーするデータを決定する SELECT ステートメントの本文です。 SELECT ステートメントについては、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
   
-## <a name="permissions"></a>権限  
- このコマンドを実行する、**データベース ユーザー**すべてこれらの権限またはメンバーシップ必要があります。  
+## <a name="permissions"></a>アクセス許可  
+ このコマンドを実行するには、**データベース ユーザー**は以下のすべての権限またはメンバーシップが必要です。  
   
--   **ALTER SCHEMA**のメンバーシップまたは新しいテーブルを格納するローカルのスキーマに対する権限、 **db_ddladmin**固定データベース ロール。  
+-   **db_ddladmin** 固定データベース ロールの新しいテーブルまたはメンバーシップを含む、ローカル スキーマに対する **ALTER SCHEMA** 権限。  
   
--   **CREATE TABLE**権限またはメンバーシップ、 **db_ddladmin**固定データベース ロール。  
+-   **db_ddladmin** 固定データベース ロールの **CREATE TABLE** 権限またはメンバーシップ。  
   
--   **選択**で参照されているすべてのオブジェクトに対する権限、 *select_criteria*です。  
+-   *select_criteria* で参照されるすべてのオブジェクトに対する **SELECT** 権限。  
   
- ログインには、すべてのこれらのアクセス許可が必要です。  
+ ログインには次のすべての権限が必要です。  
   
--   **ADMINISTER BULK OPERATIONS**権限  
+-   **ADMINISTER BULK OPERATIONS** 権限  
   
--   **ALTER ANY EXTERNAL DATA SOURCE**権限  
+-   **ALTER ANY EXTERNAL DATA SOURCE** 権限  
   
--   **任意の外部ファイル形式の ALTER**権限  
+-   **ALTER ANY EXTERNAL FILE FORMAT** 権限  
   
--   ログインで読み取りおよび書き込みを外部のフォルダーに、Hadoop クラスターまたは Azure Storage の Blob への書き込み権限が必要です。  
+-   ログインには、Hadoop クラスターまたは Azure Storage Blob で外部フォルダーを読み取りおよび書き込みを行うための書き込み権限が必要です。  
  
  > [!IMPORTANT]  
- >  任意の外部データ ソースの ALTER 権限は、任意のプリンシパルを作成し、任意の外部データ ソース オブジェクトを変更する権限を付与し、そのため、データベース上のすべてのデータベース スコープ資格情報にアクセスする権限付与もします。 このアクセス許可する必要がありますと見なされる高度な権限し、そのため、システムで信頼されたプリンシパルにのみ付与する必要があります。
+ >  ALTER ANY EXTERNAL DATA SOURCE 権限は、あらゆる外部データ ソース オブジェクトを作成し、変更する能力をプリンシパルに与えます。そのため、データベース上のすべてのデータベース スコープ資格情報にアクセスする能力も与えます。 この権限は特権として考える必要があります。したがって、システム内の信頼できるプリンシパルにのみ与える必要があります。
   
 ## <a name="error-handling"></a>エラー処理  
- データをテキストで区切られたファイルにエクスポートする CREATE EXTERNAL TABLE AS SELECT、ときに、エクスポートに失敗した行の却下ファイルがありません。  
+ CREATE EXTERNAL TABLE AS SELECT でデータをテキスト区切りファイルにエクスポートした場合、エクスポートに失敗した行に対する拒否ファイルはありません。  
   
- 外部テーブルを作成するときに、データベースは外部の Hadoop クラスターまたは Azure Storage の Blob への接続を試みます。 接続に失敗した場合、コマンドは失敗し、外部テーブルは作成されません。 コマンドの接続に失敗データベース再試行後に、少なくとも 3 倍を 1 分以上かかることができます。  
+ 外部テーブルの作成時に、データベースは外部の Hadoop クラスターまたは Azure Storage Blob への接続を試みます。 接続に失敗した場合、コマンドは失敗し、外部テーブルは作成されません。 データベースは接続を 3 回以上再試行するため、コマンドが失敗するまで 1 分以上かかる場合があります。  
   
- CREATE EXTERNAL TABLE AS SELECT が取り消されたか、失敗する場合、データベースが新しいファイルと、外部データ ソースに既に作成されたフォルダーを削除する 1 回限りの試行になります。  
+ CREATE EXTERNAL TABLE AS SELECT が取り消されたか、失敗した場合、データベースは、外部データ ソースで既に作成されている新しいファイルとフォルダーの削除を 1 回だけ試みます。  
   
- データベースには、データのエクスポート中に、外部データ ソースで発生する Java エラーが報告されます。  
+ データベースは、データのエクスポート時に外部データ ソースで発生したすべての Java エラーを報告します。  
   
-##  <a name="GeneralRemarks"></a>全般的な解説  
- 実行することができます、CETAS ステートメントが完了したら、[!INCLUDE[tsql](../../includes/tsql-md.md)]外部テーブルに対するクエリ。 これらの操作はデータをインポート、データベース クエリの実行中、CREATE TABLE AS SELECT ステートメントを使用してインポートする場合を除き。  
+##  <a name="GeneralRemarks"></a> 全般的な解説  
+ CETAS ステートメントが完了したら、外部テーブルに対して [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを実行できます。 CREATE TABLE AS SELECT ステートメントを使用してインポートする場合を除き、これらの操作ではクエリの実行中にデータをデータベースにインポートします。  
   
- 外部テーブルの名前と定義は、データベースのメタデータに格納されます。 データは、外部データ ソースに格納されます。  
+ 外部テーブルの名前と定義は、データベースのメタデータに格納されます。 データは外部データ ソースに格納されます。  
   
  外部ファイルの名前は *QueryID_date_time_ID.format*です ( *ID* は増分識別子、 *format* はエクスポートされるデータ形式)。 たとえば、QID776_20160130_182739_0.orc です。  
   
- CETAS ステートメントを常には、ソース テーブルがパーティション分割されている場合でも、非パーティション テーブルを作成します。  
+ CETAS ステートメントでは、ソース テーブルがパーティション分割されている場合でも、常に非パーティション テーブルが作成されます。  
   
- 説明を databaseuses ではクエリ プランの外部テーブルに対するこれらのクエリ プランの操作を作成します。  
+ EXPLAIN で作成されたクエリ プランの場合、データベースは外部テーブルに対して次のクエリ プラン操作を使用します。  
   
--   外部のシャッフル移動  
+-   外部シャッフル移動  
   
--   外部のブロードキャストを移動します。  
+-   外部ブロードキャスト移動  
   
--   外部のパーティションの移動  
+-   外部パーティション移動  
   
- **適用対象:**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]アプライアンス管理者を外部テーブルを作成するための前提条件、としては、hadoop の接続を構成する必要があります。 詳細については、マニュアルを参照して外部データ (Analytics Platform System) への接続を構成する APS からダウンロードできます[ここ](http://www.microsoft.com/download/details.aspx?id=48241)です。  
+ **適用対象:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]外部テーブルを作成するための前提条件として、アプライアンス管理者は Hadoop 接続を構成する必要があります。 詳細については、[ここ](http://www.microsoft.com/download/details.aspx?id=48241)からダウンロードできる、APS ドキュメントの外部データへの接続の構成 (Analytics Platform System) に関する記述を参照してください。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- 以降、データベース、バックアップの外部で外部テーブルのデータが存在して、復元操作は、データベースに格納されたデータにのみ作用します。 つまり、メタデータのみのバックアップおよび復元されます。  
+ 外部テーブル データがデータベースの外部にあるため、バックアップおよび復元操作ではデータベースに格納されているデータに対してのみ作用します。 つまり、メタデータのみがバックアップされ、復元されます。  
   
- データベースでは、外部テーブルを含むデータベースのバックアップを復元するときに、外部データ ソースへの接続は確認されません。 元のソースがアクセスできない場合は、外部テーブルのメタデータの復元も成功しますが、外部テーブルに対する SELECT 操作が失敗します。  
+ データベースでは、外部テーブルを含むデータベース バックアップを復元する際に、外部データ ソースへの接続は確認されません。 元のソースにアクセスできない場合でも、外部テーブルのメタデータの復元は正常に行われますが、外部テーブルでの SELECT 操作は失敗します。  
   
- データベースでは、外部データ用のデータベース間でデータの一貫性は保証されません。 、、顧客は、お客様が外部のデータとデータベース間の一貫性を維持します。  
+ データベースでは、データベースと外部テーブル間のデータの一貫性は保証されません。 外部データとデータベース間の一貫性を保つことだけは、お客様が行う必要があります。  
   
- データ操作言語 (DML) 操作は、テーブルの外部ではサポートされません。 たとえば、使用することはできません、 [!INCLUDE[tsql](../../includes/tsql-md.md)] update、insert、または delete[!INCLUDE[tsql](../../includes/tsql-md.md)]外部のデータを変更するステートメント。  
+ 外部テーブルでのデータ操作言語 (DML) 操作はサポートされていません。 たとえば、[!INCLUDE[tsql](../../includes/tsql-md.md)] の UPDATE、INSERT、DELETE [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、外部データを変更することはできません。  
   
- CREATE TABLE、DROP TABLE、CREATE STATISTICS、DROP STATISTICS、CREATE VIEW、および DROP VIEW は、テーブルの外部で許可される唯一のデータ定義言語 (DDL) 操作です。  
+ 外部テーブルで許可されるデータ定義言語 (DDL) 操作は、CREATE TABLE、DROP TABLE、CREATE STATISTICS、DROP STATISTICS、CREATE VIEW、DROP VIEW のみです。  
   
- PolyBase は 32 の同時実行 PolyBase クエリを実行している場合、最大で 1 つのフォルダーの 33 k ファイルを使用できます。 この最大数には、各 HDFS フォルダー内のファイルとサブフォルダーの両方が含まれます。 同時実行の程度が 32 未満である場合は、ユーザーは、複数の 33 k ファイルが含まれている HDFS のフォルダーに対して PolyBase クエリを実行できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]Hadoop と PolyBase のことをお勧めユーザーは、短いファイル パスを維持し、1 つの HDFS フォルダー 30 個を超える k ファイルを使用します。 ファイルが多すぎますが参照されている場合は、JVM のメモリ不足の例外が発生します。  
+ PolyBase は 32 の同時実行 PolyBase クエリを実行している場合、最大で 1 つのフォルダーの 33 k ファイルを使用できます。 この最大数には、各 HDFS フォルダー内のファイルとサブフォルダーの両方が含まれます。 同時実行の程度が 32 未満である場合は、ユーザーは、複数の 33 k ファイルが含まれている HDFS のフォルダーに対して PolyBase クエリを実行できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、Hadoop および PolyBase のユーザーがファイル パスを短くし、HDFS フォルダーごとに 30K 以下のファイルを使用することをお勧めします。 参照されているファイルが多すぎると、JVM のメモリ不足例外が発生します。  
   
- [SET ROWCOUNT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-rowcount-transact-sql.md)この CREATE EXTERNAL TABLE AS SELECT に影響を与えません。 同様の動作を実現するために使用[TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
+ この CREATE EXTERNAL TABLE AS SELECT では [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) の効果はありません。 同様の動作を実現するには、[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) を使用します。  
   
- CREATE EXTERNAL TABLE AS SELECT、RCFile から選択をしたときに、RCFile で列の値を含めないでくださいパイプ ' |' 文字です。  
+ CREATE EXTERNAL TABLE AS SELECT で RCFile から選択する場合、RCFile の列値にパイプ '|' 文字を含めることはできません。  
   
 ## <a name="locking"></a>ロック  
- SCHEMARESOLUTION オブジェクト上には、共有ロックを取得します。  
+ SCHEMARESOLUTION オブジェクトの共有ロックを取得します。  
   
 ##  <a name="Examples"></a> 使用例  
   
-### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>A. 作成する外部テーブルとして選択 (CETAS) を使用して Hadoop テーブルを作成します。  
- 次の例は、という名前の新しい外部テーブルを作成`hdfsCustomer`、列の定義と、ソース テーブルからデータを使用して`dimCustomer`です。  
+### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>A. CREATE EXTERNAL TABLE AS SELECT (CETAS) を使用して Hadoop テーブルを作成する  
+ 次の例では、ソース テーブル `dimCustomer` の列の定義とデータを使用して、`hdfsCustomer` という名前の新しい外部テーブルを作成します。  
   
- テーブルの定義は、データベースに格納され、SELECT ステートメントの結果にエクスポートする、'/pdwdata/customer.tbl' Hadoop の外部データ ソース上のファイル*customer_ds*です。 ファイルが外部ファイル形式に従って書式設定された*customer_ff*です。  
+ テーブル定義はデータベースに格納され、SELECT ステートメントの結果は、Hadoop 外部データソース *customer_ds* の '/pdwdata/customer.tbl' ファイルにエクスポートされます。 ファイルは、外部ファイル形式 *customer_ff* に従って書式設定されます。  
   
- ファイル名は、データベースによって生成され、それを生成するクエリを含んだファイルの配置が容易なクエリ ID が含まれています。  
+ ファイル名はデータベースによって生成され、クエリ ID を含みます。これにより、ファイルを生成元のクエリに合わせやすくなります。  
   
- パス`hdfs://xxx.xxx.xxx.xxx:5000/files/`前に、顧客ディレクトリに存在する必要があります。 ただし、顧客ディレクトリが存在しない場合、データベースは、ディレクトリを作成します。  
+ Customer ディレクトリの前のパス `hdfs://xxx.xxx.xxx.xxx:5000/files/` は既に存在している必要があります。 ただし、Customer ディレクトリが存在しない場合は、データベースでそのディレクトリが作成されます。  
   
 > [!NOTE]  
->  この例は、5000 を指定します。 ポートが指定されていない場合、データベースは、既定のポートとして 8020 を使用します。  
+>  この例では 5000 に指定されています。 ポートが指定されていない場合、データベースは既定のポートとして 8020 を使用します。  
   
- 場所とファイル名になります結果として得られる Hadoop`hdfs:// xxx.xxx.xxx.xxx:5000/files/Customer/ QueryID_YearMonthDay_HourMinutesSeconds_FileIndex.txt.`です。  
+ 結果の Hadoop の場所とファイル名は `hdfs:// xxx.xxx.xxx.xxx:5000/files/Customer/ QueryID_YearMonthDay_HourMinutesSeconds_FileIndex.txt.` です。  
   
 ```  
   
@@ -234,11 +234,11 @@ WITH (
 ) AS SELECT * FROM dimCustomer;  
 ```  
   
-### <a name="b-use-a-query-hint-with-create-external-table-as-select-cetas"></a>B. CREATE EXTERNAL TABLE AS を持つクエリ ヒントを使用する (CETAS) を選択します。  
- このクエリは、CETAS ステートメントと共にクエリの結合ヒントを使用するための基本構文を示しています。 データベースでは、ハッシュ結合の方法を使用して、クエリ プランを生成するクエリが送信されるとします。 結合ヒントや、OPTION 句を使用する方法の詳細については、次を参照してください。 [OPTION 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/option-clause-transact-sql.md).  
+### <a name="b-use-a-query-hint-with-create-external-table-as-select-cetas"></a>B. CREATE EXTERNAL TABLE AS SELECT (CETAS) でクエリ ヒントを使用する  
+ このクエリは、CETAS ステートメントでクエリ結合ヒントを使用する場合の基本構文を示しています。 クエリが送信された後、データベースではハッシュ結合方法を使用して、クエリ プランを生成します。 結合ヒントと OPTION 句の使用方法の詳細については、「[OPTION 句 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
->  この例は、5000 を指定します。 ポートが指定されていない場合、データベースは、既定のポートとして 8020 を使用します。  
+>  この例では 5000 に指定されています。 ポートが指定されていない場合、データベースは既定のポートとして 8020 を使用します。  
   
 ```  
   
@@ -259,9 +259,9 @@ OPTION ( HASH JOIN );
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
- [TABLE &#40; を作成します。Azure SQL Data Warehouse、並列データ ウェアハウス &#41;](~/t-sql/statements/create-table-azure-sql-data-warehouse.md)   
- [テーブルとして選択 &#40; を作成します。Azure SQL Data Warehouse &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
- [DROP TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-table-transact-sql.md)   
+ [CREATE TABLE &#40;Azure SQL Data Warehouse、Parallel Data Warehouse&#41;](~/t-sql/statements/create-table-azure-sql-data-warehouse.md)   
+ [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+ [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   

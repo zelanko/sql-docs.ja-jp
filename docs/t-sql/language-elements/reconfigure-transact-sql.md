@@ -1,5 +1,5 @@
 ---
-title: "RECONFIGURE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: RECONFIGURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/20/2016
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在構成されている値を更新 (、 **config_value**内の列、 **sp_configure**結果セット) では、構成オプションの変更、 **sp_configure**システムストアド プロシージャです。 RECONFIGURE が現在実行中の値を常に更新していない一部の構成オプションは、サーバーの停止と再起動を現在実行中の値を更新する必要があるため (、 **run_value**内の列、 **sp_configure**結果セット) の変更された構成値。    
+  **sp_configure** システム ストアド プロシージャで変更された構成オプションの現在の構成値 (**sp_configure** 結果セット内の **config_value** 列) に基づいて更新を行います。 構成オプションによっては、サーバーをいったん停止し、再起動しないと、現在実行中の値を更新できません。このため RECONFIGURE では、変更された構成値に対応する現在実行中の値 (**sp_configure** 結果セット内の **run_value** 列) は常に更新されるわけではありません。    
     
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
@@ -52,25 +52,25 @@ RECONFIGURE [ WITH OVERRIDE ]
     
 ## <a name="arguments"></a>引数    
  RECONFIGURE    
- 構成の設定でサーバーの停止と再起動を必要としない場合、現在実行中の値を更新することを指定します。 また、RECONFIGURE は無効な値のいずれかの新しい構成値を確認 (など、並べ替え順序の値に存在しない**syscharsets**) や非推奨値。 構成オプションでサーバーの停止と再起動を必要としない場合、RECONFIGURE を指定すると、構成オプションに関する現在実行中の値と現在の構成値は同じになります。    
+ 構成の設定でサーバーの停止と再起動を必要としない場合、現在実行中の値を更新することを指定します。 また RECONFIGURE では、新しい構成値が、無効な値 (**syscharsets** に存在しない並べ替え順など) や非推奨値になっていないかがチェックされます。 構成オプションでサーバーの停止と再起動を必要としない場合、RECONFIGURE を指定すると、構成オプションに関する現在実行中の値と現在の構成値は同じになります。    
     
  WITH OVERRIDE    
- 構成値のための (無効な値や非推奨値) のチェックを無効になります、**復旧間隔**詳細構成オプション。    
+ **recovery interval** 詳細構成オプションに関する、構成値のチェック (無効な値や非推奨値のチェック) を無効にします。    
     
- ただし、いくつかに致命的なエラーは回避も、WITH OVERRIDE オプションを使用して、ほとんどの構成オプションを再構成できます。 たとえば、**最小サーバー メモリ**で指定された値より大きい値を持つ構成オプションを構成することはできません、**サーバー メモリの最大**構成オプション。
+ WITH OVERRIDE オプションを使用してほとんどすべての構成オプションを再構成できますが、それでも一部の致命的なエラーは防止されています。 たとえば、**min server memory** 構成オプションを、**max server memory** 構成オプションで指定されている値よりも大きい値を使用して構成することはできません。
       
-## <a name="remarks"></a>解説    
- **sp_configure**は新しい構成オプションごとに文書化されている有効な範囲外の構成オプションの値を受け入れません。    
+## <a name="remarks"></a>Remarks    
+ **sp_configure** では、各構成オプションに定義されている有効値の範囲外の値を新しい構成オプションの値として使用することはできません。    
     
  RECONFIGURE は、明示的または暗黙的なトランザクションでは使用できません。 複数のオプションを同時に再構成すると、いずれかの再構成オプションが失敗した場合に、すべての再構成オプションが無効になります。    
     
- リソース ガバナーを再構成する際にの再構成オプションを参照してください[ALTER RESOURCE GOVERNOR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-resource-governor-transact-sql.md).    
+ リソース ガバナンスを最高する場合は、[ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md) の RECONFIGURE オプションを参照してください。    
     
-## <a name="permissions"></a>権限    
- RECONFIGURE 権限は、既定では ALTER SETTINGS 権限が与えられているユーザーに与えられます。 **Sysadmin**と**serveradmin**固定サーバー ロールが暗黙的にこのアクセス許可を保持します。    
+## <a name="permissions"></a>アクセス許可    
+ RECONFIGURE 権限は、既定では ALTER SETTINGS 権限が与えられているユーザーに与えられます。 **sysadmin** および **serveradmin** 固定サーバー ロールでは、この権限が暗黙的に保持されます。    
     
 ## <a name="examples"></a>使用例    
- 次の例の数の上限を設定する、`recovery interval`構成オプションを`75`時間 (分) を使用して`RECONFIGURE WITH OVERRIDE`をインストールします。 60 分より長い復旧間隔は推奨されず、既定では許可されせんが、 `WITH OVERRIDE` オプションが指定されているので、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では指定の値 (`90`) が `recovery interval` 構成オプションに対して有効かどうかはチェックされません。    
+ 次の例では、`recovery interval` 構成オプションの上限を `75` 分に設定し、`RECONFIGURE WITH OVERRIDE` を使用してインストールします。 60 分より長い復旧間隔は推奨されず、既定では許可されせんが、 `WITH OVERRIDE` オプションが指定されているので、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では指定の値 (`90`) が `recovery interval` 構成オプションに対して有効かどうかはチェックされません。    
     
 ```    
 EXEC sp_configure 'recovery interval', 75'    

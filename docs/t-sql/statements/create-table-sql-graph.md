@@ -1,5 +1,5 @@
 ---
-title: "テーブル (SQL グラフ) を作成 |Microsoft ドキュメント"
+title: CREATE TABLE (SQL Graph) | Microsoft Docs
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
@@ -45,13 +45,13 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-table-sql-graph"></a>テーブル (SQL グラフ) を作成します。
+# <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-いずれかで新しい SQL グラフ テーブルを作成、`NODE`または`EDGE`テーブル。 
+`NODE` または `EDGE` テーブルで新しい SQL グラフ テーブルを作成します。 
   
 > [!NOTE]   
->  標準の TRANSACT-SQL ステートメントでは、次を参照してください。 [CREATE TABLE (TRANSACT-SQL)](../../t-sql/statements/create-table-transact-sql.md)です。
+>  標準の TRANSACT-SQL ステートメントについては、「[CREATE TABLE (TRANSACT-SQL)](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,37 +67,37 @@ CREATE TABLE
   
   
 ## <a name="arguments"></a>引数  
-このドキュメントでは、SQL のグラフに関連する引数のみが一覧表示します。 完全な一覧とサポートされている引数の説明では、「 [CREATE TABLE (TRANSACT-SQL)](../../t-sql/statements/create-table-transact-sql.md)
+このドキュメントでは、SQL グラフに関連する引数のみを一覧表示します。 完全な一覧とサポートされている引数の説明については、「[CREATE TABLE (TRANSACT-SQL)](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。
 
  *database_name*    
- テーブルが作成されたデータベースの名前を指定します。 *database_name*既存のデータベースの名前を指定する必要があります。 指定しない場合、 *database_name*既定値は、現在のデータベースです。 現在の接続のログインがで指定されたデータベース内の既存のユーザー ID を関連付ける必要がある*database_name*、そのユーザー ID には、CREATE TABLE アクセス許可が必要とします。  
+ テーブルが作成されたデータベースの名前を指定します。 *database_name* には、既存のデータベース名を指定する必要があります。 指定しない場合、*database_name* の既定値は現在のデータベースです。 現在の接続に対するログインには、*database_name* で指定されたデータベース内の既存のユーザー ID を関連付け、そのユーザー ID に CREATE TABLE 権限を許可しておく必要があります。  
   
  *schema_name*    
  新しいテーブルが所属するスキーマの名前です。  
   
  *table_name*    
- ノードまたはエッジ テーブルの名前です。 テーブル名の規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。 *table_name*できるローカル一時テーブル名を除いて、128 文字の最大値 (名前は、1 つの番号記号で始まります (#)) 116 文字を超えることはできません。  
+ ノードまたはエッジ テーブルの名前です。 テーブル名は[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 116 文字までしか使用できないローカル一時テーブル名 (名前の先頭に 1 つの番号記号 (#) が付加されます) を除き、*table_name* には、最大 128 文字を使用できます。  
   
- ノード   
- ノードのテーブルを作成します。
+ NODE   
+ ノード テーブルを作成します。
 
- エッジ  
+ EDGE  
  エッジ テーブルを作成します。  
   
-## <a name="remarks"></a>解説  
-一時テーブル ノードまたはエッジ テーブルを作成することはできません。  
+## <a name="remarks"></a>Remarks  
+一時テーブルをノード テーブルまたはエッジ テーブルとして作成することはできません。  
 
-テンポラル テーブルとしてのノードまたはエッジ テーブルを作成することはサポートされていません。
+ノード テーブルまたはエッジ テーブルをテンポラル テーブルとして作成することはできません。
 
-ノードまたはエッジ テーブルの stretch database がサポートされていません。
+ノード テーブルまたはエッジ テーブルではデータベースの拡張はサポートされていません。
 
-ノードまたはエッジ テーブルは、テーブルの外部 (polybase はサポートされませんグラフ テーブル) にすることはできません。 
+ノードまたはエッジ テーブルは、外部テーブルにすることはできません (グラフ テーブルでは polybase はサポートされません)。 
   
  
 ## <a name="examples"></a>使用例  
   
-### <a name="a-create-a-node-table"></a>A. 作成、`NODE`テーブル
- 次の例を作成する方法を示しています、`NODE`テーブル
+### <a name="a-create-a-node-table"></a>A. `NODE` テーブルの作成
+ 次の例では、`NODE` テーブルの作成方法を示しています。
 
 ```
  CREATE TABLE Person (
@@ -107,8 +107,8 @@ CREATE TABLE
  ) AS NODE;
 ```
 
-### <a name="b-create-an-edge-table"></a>B. 作成、`EDGE`テーブル
-次の例を作成する方法を示して`EDGE`テーブル
+### <a name="b-create-an-edge-table"></a>B. `EDGE` テーブルの作成
+次の例では、`EDGE` テーブルの作成方法を示しています。
 
 ```
  CREATE TABLE friends (
@@ -127,6 +127,6 @@ CREATE TABLE
 
 ## <a name="see-also"></a>参照  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [挿入 (SQL グラフ)](../../t-sql/statements/insert-sql-graph.md)]  
- [SQL Server 2017 を使用した処理グラフ](../../relational-databases/graphs/sql-graph-overview.md)
+ [INSERT (SQL グラフ)](../../t-sql/statements/insert-sql-graph.md)  
+ [SQL Server 2017 でのグラフ処理](../../relational-databases/graphs/sql-graph-overview.md)
 

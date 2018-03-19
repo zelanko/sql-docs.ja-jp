@@ -1,5 +1,5 @@
 ---
-title: "STSymDifference (geography データ型) |Microsoft ドキュメント"
+title: "STSymDifference (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  いずれかであるすべてのポイントを表すオブジェクトを返します**geography**インスタンスと別**geography**インスタンスが両方のインスタンスに存在する地点されません。  
+  任意の **geography** インスタンスと別の **geography** インスタンスのいずれかに存在する地点すべてを表すオブジェクトを返します。つまり、両方のインスタンスに存在する地点は除外されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,24 +45,24 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geography*  
- もう 1 つ**geography**インスタンス STSymDistance() が呼び出されて、インスタンス。  
+ STSymDistance() を呼び出したインスタンスの対象となる、別の **geography** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR 戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>解説  
- このメソッドは、場合常に null を返しますの spatial reference identifier (Srid)、 **geography**インスタンスが一致しません。  
+## <a name="remarks"></a>Remarks  
+ **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]半球より大きい空間インスタンスをサポートしています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、サーバーで結果セットが拡張されて**FullGlobe**インスタンス。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、半球より大きい空間インスタンスをサポートしています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サーバー上で使用可能な結果セットが **FullGlobe** インスタンスに拡張されています。  
   
  結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-computing-the-symmetric-difference-of-two-polygons"></a>A. 2 つの多角形の対称差を計算する  
- 次の例で`STSymDifference()`2 つの対称差を計算する`Polygon`インスタンス。  
+ `STSymDifference()` を使用して 2 つの `Polygon` インスタンスの対称差を計算する例を次に示します。  
   
 ```  
 DECLARE @g geography;  
@@ -73,7 +73,7 @@ SELECT @g.STSymDifference(@h).ToString();
 ```  
   
 ### <a name="b-computing-the-symmetric-difference-with-fullglobe"></a>B. FullGlobe を使用して、対称差を計算する  
- 次の例の対称差を比較し、`Polygon`で`FullGlobe`です。  
+ `FullGlobe` を使用して、`Polygon` の対称差を比較する例を次に示します。  
   
 ```
  DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  

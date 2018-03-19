@@ -1,5 +1,5 @@
 ---
-title: "STIsClosed (geography データ型) |Microsoft ドキュメント"
+title: "STIsClosed (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  場合 1 を返します、始点と終点の指定された**geography**が同じをインスタンス化します。 1 を返します**geography**コレクション型の場合、含まれている各**geography**インスタンスが閉じています。 インスタンスが閉じていない場合は 0 を返します。  
+  指定された **geography** インスタンスの始点と終点が同じ場合は 1 を返します。 含まれている各 **geometry** インスタンスが閉じている場合は、**geometrycollection** 型に対して 1 を返します。 インスタンスが閉じていない場合は 0 を返します。  
   
- これは、 **geography**データ型メソッドでサポート**FullGlobe**インスタンスまたは空間インスタンスは、半球より大きいをします。  
+ この **geography** データ型メソッドは、半球より大きい **FullGlobe** インスタンスまたは空間インスタンスをサポートします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,16 +46,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **bit**  
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- このメソッドが存在する場合、0 を返しますの図形、 **geography**インスタンスが、ポイント、か、インスタンスが空です。  
+## <a name="remarks"></a>Remarks  
+ **geography** インスタンスの任意の図形が地点の場合、またはインスタンスが空の場合、このメソッドは 0 を返します。  
   
- 場合に、このメソッドが true を返します、 **FullGlobe**インスタンスが、**多角形**などその他の型のインスタンス。  
+ **FullGlobe** インスタンスが **Polygon** などの別の型のインスタンスの場合、このメソッドは true を返します。  
   
- すべて**多角形**インスタンスが閉じられたと見なされます。  
+ すべての **Polygon** インスタンスは閉じていると見なされます。  
   
 ## <a name="examples"></a>使用例  
  `Polygon` インスタンスを作成し、`STIsClosed()` を使用して `Polygon` が閉じているかどうかをテストする例を次に示します。  

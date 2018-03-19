@@ -1,5 +1,5 @@
 ---
-title: "DROP BROKER PRIORITY (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DROP BROKER PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -50,14 +50,14 @@ DROP BROKER PRIORITY ConversationPriorityName
  *ConversationPriorityName*  
  削除するメッセージ交換の優先度の名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  メッセージ交換の優先度を削除した場合、既存のメッセージ交換では、そのメッセージ交換の優先度から割り当てられた優先順位で操作が続行されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  メッセージ交換の優先度を作成する権限は、既定では db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。 データベースに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、という名前のメッセージ交換の優先度を削除`InitiatorAToTargetPriority`です。  
+ 次の例では、`InitiatorAToTargetPriority` という名前のメッセージ交換の優先度を削除します。  
   
 ```  
 DROP BROKER PRIORITY InitiatorAToTargetPriority;  
@@ -65,8 +65,8 @@ DROP BROKER PRIORITY InitiatorAToTargetPriority;
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER BROKER PRIORITY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [ブローカーの優先順位 &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-broker-priority-transact-sql.md)   
- [sys.conversation_priorities &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
+ [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+ [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   

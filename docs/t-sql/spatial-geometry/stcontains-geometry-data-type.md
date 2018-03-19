@@ -1,5 +1,5 @@
 ---
-title: "STContains (geometry データ型) |Microsoft ドキュメント"
+title: "STContains (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcontains-geometry-data-type"></a>STContains (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-場合 1 を返します、 **geometry**インスタンスに完全に含まれる別**geometry**インスタンス。 そうでない場合は、0 を返します。
+ある **geometry** インスタンスに別の **geometry** インスタンスが完全に含まれる場合、1 を返します。 含まれない場合は 0 を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,18 +45,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- もう 1 つ**geometry**対象のインスタンスと比較するインスタンス`STContains()`が呼び出されます。  
+ `STContains()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR 戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- `STContains()`常に返す場合は null の spatial reference Id (Srid)、 **geometry**インスタンスが一致しません。  
+## <a name="remarks"></a>Remarks  
+ **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、`STContains()` は常に null を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`STContains()`2 つのテストに`geometry`最初のインスタンスに 2 番目のインスタンスが含まれているかどうか。  
+ `STContains()` を使用して、2 つの `geometry` インスタンスの一方のインスタンスがもう一方のインスタンスを含むかどうかをテストする例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

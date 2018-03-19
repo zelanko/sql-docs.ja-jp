@@ -1,7 +1,7 @@
 ---
 title: "SQL Server で JSON データを操作する | Microsoft Docs"
 ms.custom: 
-ms.date: 01/31/2017
+ms.date: 02/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.component: json
@@ -20,16 +20,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a59a53bb9c279a8f66a4aa259212269179d477b1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 8ce81acc4134e1b8b9570d2eb871e1beb5565673
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server の JSON データ
-[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 JSON は、最新の Web アプリケーションとモバイル アプリケーションでデータを交換するために使用される、一般的なテキスト形式のデータ形式です。 また、JSON はログ ファイル内の非構造化データや Microsoft Azure Cosmos DB のような NoSQL データベースを格納するためも使用されます。 REST Web サービスの多くは結果を JSON テキスト形式で返し、データを JSON 形式で受け取ります。 たとえば、Azure Search、Azure Storage、Azure Cosmos DB などの Azure のほとんどのサービスには、JSON を返すか使用する REST エンドポイントがあります。 JSON は、AJAX 呼び出しを使用して Web ページおよび Web サーバー間でデータをやり取りするための主な形式でもあります。 
+
+SQL Server で JSON 関数を使うと、NoSQL とリレーショナルの概念を同じデータベースに結合できます。 従来のリレーショナル列と JSON テキスト形式のドキュメントを含む列を同じテーブルに結合したり、JSON ドキュメントを解析してリレーショナル構造にインポートしたり、リレーショナル データを JSON テキストに書式設定したりできます。 SQL Server と Azure SQL Database で JSON 関数がリレーショナルの概念と NoSQL の概念を結び付けるしくみについては、次のビデオをご覧ください。
+
+*NoSQL とリレーショナル環境間の架け橋としての JSON*
+> [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
  
 JSON テキストの例を次に示します。 
  
@@ -53,7 +58,10 @@ SQL Server の組み込みの関数と演算子を使用すると、JSON テキ�
 ![組み込みの JSON サポートの概要](../../relational-databases/json/media/jsonslides1overview.png "組み込みの JSON サポートの概要")  
   
 ## <a name="key-json-capabilities-of-sql-server-and-sql-database"></a>SQL Server と SQL Database の主な JSON 機能
-SQL Server がその組み込みの JSON サポートで提供する主な機能について以下に説明します。
+SQL Server がその組み込みの JSON サポートで提供する主な機能について以下に説明します。 JSON 関数と演算子の使い方については、次のビデオをご覧ください。
+
+*SQL Server 2016 と JSON のサポート*
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>JSON テキストから値を抽出し、それらをクエリで使用する
 データベース テーブルに格納されている JSON テキストがある場合は、組み込み関数を使用して JSON テキスト内の値を読み取るか、変更することができます。  
@@ -310,17 +318,14 @@ SQL Server 2016 のインスタンスにサンプル データベースを復元
 
 ### <a name="microsoft-videos"></a>Microsoft ビデオ
 
-SQL Server と Azure SQL Database に組み込まれている JSON のサポートの視覚的な紹介は、次のビデオをご覧ください。
-
-*SQL Server 2016 と JSON のサポート*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
+SQL Server と Azure SQL Database に組み込まれている JSON のサポートの概要は、次のビデオをご覧ください。
 
 *SQL Server 2016 と Azure SQL Database での JSON の使用*
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
 
-*NoSQL とリレーショナル環境間の架け橋としての JSON*
-> [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
-   
+*JSON 関数を使用した SQL Server での REST API の作成*
+> [!VIDEO https://www.youtube.com/watch?v=0m6GXF3-5WI]
+
 ### <a name="reference-articles"></a>関連記事  
   
 -   [FOR 句 (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md) (FOR JSON)  
@@ -330,5 +335,3 @@ SQL Server と Azure SQL Database に組み込まれている JSON のサポー�
     -   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)  
     -   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)  
     -   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)  
-  
-  

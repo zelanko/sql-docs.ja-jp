@@ -1,5 +1,5 @@
 ---
-title: "トランザクション (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "トランザクション (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 
   トランザクションは、1 つの作業を表す単位です。 トランザクションが成功すると、トランザクションの実行中に行われたすべてのデータ変更がコミットされ、データベースの変更が確定します。 エラーが発生したため、トランザクションを取り消すか、またはロールバックする必要がある場合、すべてのデータ変更は消去されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次のトランザクション モードでは動作します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、次のトランザクション モードで動作します。  
   
  自動コミット トランザクション  
  各ステートメントは 1 つのトランザクションです。  
@@ -50,14 +50,14 @@ ms.lasthandoff: 01/25/2018
  暗黙のトランザクション  
  新しいトランザクションは、前のトランザクションが終了すると暗黙的に開始しますが、各トランザクションは COMMIT または ROLLBACK ステートメントで明示的に終了します。  
   
- バッチ スコープのトランザクション  
- 複数のアクティブな結果セット (MARS) にのみ適用可能な[!INCLUDE[tsql](../../includes/tsql-md.md)]MARS セッションで開始された明示的または暗黙的なトランザクションがバッチ スコープのトランザクションになります。 バッチの完了時にコミットまたはロールバックされていないバッチスコープのトランザクションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により自動的にロールバックされます。  
+ バッチスコープのトランザクション  
+ 複数のアクティブな結果セット (MARS) にのみ該当します。MARS セッションで開始された [!INCLUDE[tsql](../../includes/tsql-md.md)] の明示的または暗黙的なトランザクションは、バッチスコープのトランザクションになります。 バッチの完了時にコミットまたはロールバックされていないバッチスコープのトランザクションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により自動的にロールバックされます。  
 
 > [!NOTE] 
-> データ ウェアハウスの製品に関連する特別な考慮事項を参照してください。[トランザクション (SQL データ ウェアハウス)](transactions-sql-data-warehouse.md)です。   
+> データ ウェアハウスに関連する特別な考慮事項については、「[トランザクション (SQL データ ウェアハウス)](transactions-sql-data-warehouse.md)」を参照してください。   
 
 ## <a name="in-this-section"></a>このセクションの内容  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次のトランザクション ステートメントを提供します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、次のトランザクション ステートメントが用意されています。  
   
 |||  
 |-|-|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/25/2018
 |[COMMIT WORK](../../t-sql/language-elements/commit-work-transact-sql.md)||  
   
 ## <a name="see-also"></a>参照  
- [[SET implicit_transactions] &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
+ [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "戻り値 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: RETURN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -57,20 +57,20 @@ RETURN [ integer_expression ]
  返される整数値です。 ストアド プロシージャは、呼び出しプロシージャまたはアプリケーションに整数値を返すことができます。  
   
 ## <a name="return-types"></a>戻り値の型  
- 必要に応じて返します**int**です。  
+ 必要に応じて **int** を返します。  
   
 > [!NOTE]  
 >  特に記述がない限り、すべてのシステム ストアド プロシージャでは値 0 が返されます。 これは成功を示し、0 以外の値は失敗を示します。  
   
-## <a name="remarks"></a>解説  
- ストアド プロシージャと一緒に使用する場合、RETURN は NULL 値を返すことができません。 プロシージャは、null 値を取得しようとした場合 (たとえば、戻り値を使用して@statusとき@statusnull)、警告メッセージが生成され、値 0 が返されます。  
+## <a name="remarks"></a>Remarks  
+ ストアド プロシージャと一緒に使用する場合、RETURN は NULL 値を返すことができません。 プロシージャが NULL 値を返そうとすると (たとえば、@status の値が NULL のときに RETURN @status を使用)、警告メッセージが生成されて値 0 が返されます。  
   
  現在のプロシージャを実行したバッチまたはプロシージャの中の後続の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに、返されたステータス値を指定できます。この場合、`EXECUTE @return_status = <procedure_name>` の形式で入力する必要があります。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-from-a-procedure"></a>A. プロシージャを終了する  
- 次の例は、パラメーターとしてユーザー名を指定しないかどうかと`findjobs`が実行される`RETURN`が原因で、ユーザーの画面にメッセージが送信された後に終了するプロシージャ。 ユーザー名が指定された場合は、そのユーザーが現在のデータベースに作成したすべてのオブジェクトの名前を、適切なシステム テーブルから取得します。  
+ 次の例では、`findjobs` を実行するときにユーザー名がパラメーターとして指定されていない場合、ユーザーの画面にメッセージを出力後、`RETURN` でプロシージャを終了します。 ユーザー名が指定された場合は、そのユーザーが現在のデータベースに作成したすべてのオブジェクトの名前を、適切なシステム テーブルから取得します。  
   
 ```  
 CREATE PROCEDURE findjobs @nm sysname = NULL  
@@ -90,7 +90,7 @@ ELSE
 ```  
   
 ### <a name="b-returning-status-codes"></a>B. ステータス コードを返す  
- 次の例では、指定した連絡先の ID の状態をチェックします。 状態が Washington 場合 (`WA`)、ステータスの`1`が返されます。 `2` が `WA` 以外の値であったり、`StateProvince` が行に一致しないなど、それ以外のすべての場合は、`ContactID` を返します。  
+ 次の例では、指定した連絡先の ID の状態をチェックします。 状態が Washington (`WA`) である場合は、`1` の状態が返されます。 `2` が `WA` 以外の値であったり、`StateProvince` が行に一致しないなど、それ以外のすべての場合は、`ContactID` を返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -141,7 +141,7 @@ GO
  2
  ```  
   
- 別の連絡先の電話番号を指定する、もう一度クエリを実行します。  
+ 別の連絡先番号を指定して、クエリを再び実行します。  
   
 ```  
 DECLARE @return_status int  

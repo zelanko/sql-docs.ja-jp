@@ -1,5 +1,5 @@
 ---
-title: "ALTER DATABASE (Azure SQL データベース) |Microsoft ドキュメント"
+title: ALTER DATABASE (Azure SQL Database) | Microsoft Docs
 ms.custom: 
 ms.date: 02/13/2018
 ms.prod: 
@@ -18,16 +18,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 80aa017e3876a7a41077f770d5328e4c6c49b5be
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 6c303c5abe51eaee2208028ea13991d2d557f1b3
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  変更、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。 データベース、結合、柔軟なプール、およびデータベース オプションのセットのデータベースでは、エディションおよびサービス目標の名前を変更します。  
+  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] を変更します。 データベース、結合、柔軟なプール、およびデータベース オプションのセットのデータベースでは、エディションおよびサービス目標の名前を変更します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -192,7 +192,7 @@ ALTER DATABASE { database_name }
 <temporal_history_retention>  ::=  TEMPORAL_HISTORY_RETENTION { ON | OFF }
 ```  
   
- Set オプションの詳しい説明については、次を参照してください。 [ALTER DATABASE SET Options &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md)と[ALTER DATABASE 互換性レベル &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
+ 設定オプションについて詳しくは、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」および「[ALTER DATABASE (TRANSACT-SQL) の互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」をご覧ください。  
   
 ## <a name="arguments"></a>引数  
  *database_name*  
@@ -202,7 +202,7 @@ ALTER DATABASE { database_name }
  使用中の現在のデータベースを変更することを指定します。  
   
  MODIFY NAME **=***new_database_name*  
- として指定された名前のデータベースの名前を変更*new_database_name*です。 次の例は、データベースの名前を変更`db1`に`db2`:   
+ データベースの名前を、*new_database_name* で指定した名前に変更します。 次の例では、`db1` データベースの名前を `db2` に変更します。   
 
 ```  
 ALTER DATABASE db1  
@@ -210,19 +210,19 @@ ALTER DATABASE db1
 ```    
 
  MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' ])    
- データベースのサービス階層を変更します。 'Premiumrs' のサポートは削除されました。 に関する質問については、この電子メール エイリアスを使用して:premium-rs@microsoft.comです。
+ データベースのサービス階層を変更します。 'premiumrs' のサポートは削除されました。 質問については、電子メール エイリアス premium-rs@microsoft.com を使用してください。
 
-次の例の変更するにはエディション`premium`:
+次の例では、エディションを `premium` に変更します。
   
 ```  
 ALTER DATABASE current 
     MODIFY (EDITION = 'premium');
 ``` 
 
-エディションの変更は、データベースの MAXSIZE プロパティがそのエディションでサポートされている有効な範囲外の値に設定されている場合に失敗します。  
+データベースの MAXSIZE プロパティがそのエディションでサポートされる有効な範囲内の値に設定されていない場合、EDITION の変更は失敗します。  
 
- 変更 (MAXSIZE  **=**  [100 MB | 500 MB | 1 | 1024.4096] GB)  
- データベースの最大サイズを指定します。 最大サイズは、データベースの EDITION プロパティの有効な値セットに準拠している必要があります。 データベースの最大サイズを変更すると、データベースの EDITION も変更される場合があります。 次の表のサポートされる MAXSIZE 値と既定値 (D) の一覧、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]サービス層です。  
+ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
+ データベースの最大サイズを指定します。 最大サイズは、データベースの EDITION プロパティの有効な値セットに準拠している必要があります。 データベースの最大サイズを変更すると、データベースの EDITION も変更される場合があります。 次の表では、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サービス層でサポートされる MAXSIZE 値と既定値 (D) を示します。  
   
 |**MAXSIZE**|**基本**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
@@ -246,43 +246,43 @@ ALTER DATABASE current
 |500 GB|なし|√|√|√ (D)|√|  
 |750 GB|なし|√|√|√|√|  
 |1024 GB|なし|√|√|√|√ (D)|  
-|1024 GB から最大 4096 GB 単位での 256 GB *|なし|なし|なし|なし|√|√|  
+|1024 GB から 4096 GB (256 GB ずつ増分)*|なし|なし|なし|なし|√|√|  
   
- \* P11 と P15 MAXSIZE を許可する最大 4 TB 1024 GB が既定のサイズをされているとします。  P11 および P15 は、追加料金なしで最大 4 TB の含まれる記憶域を使用できます。 Premium 階層で MAXSIZE が 1 TB を超えるは次の地域で現在使用可能な: 米国 East2、米国西部、米国 Gov バージニア、西ヨーロッパ、ドイツの中央、南東アジア、東日本、オーストラリア東部、カナダ中央、およびカナダ東部です。 現在の制限については、次を参照してください。[データベースをシングル](https://docs.microsoft.com/azure/sql-database-single-database-resources)です。  
+ \* P11 と P15 では 1024 GB を既定のサイズとして MAXSIZE が 4 TB まで許可されます。  P11 と P15 では、追加料金なしで付属のストレージを 4 TB まで使用できます。 次の地域の Premium レベルでは、現在 1 TB を超える MAXSIZE を使用できます: 米国東部 2、米国西部、米国政府バージニア、西ヨーロッパ、ドイツ中部、東南アジア、東日本、オーストラリア東部、カナダ中部、カナダ東部。 最新の制限については、[単一データベース](https://docs.microsoft.com/azure/sql-database-single-database-resources)に関するページを参照してください。  
 
   
  引数 MAXSIZE および EDITION には、以下の規則が適用されます。  
   
--   MAXSIZE 値指定すると場合、は、前の表に示すように有効な値であることができます。  
+-   MAXSIZE 値 (指定されている場合) は、上の表に示されている有効値である必要があります。  
   
 -   EDITION が指定され、MAXSIZE が指定されていない場合は、エディションの既定値が使用されます。 たとえばは、EDITION が Standard に設定し、MAXSIZE が指定されていない場合、MAXSIZE は自動的に 500 MB に設定します。  
   
 -   MAXSIZE も EDITION が指定されている場合、EDITION は、標準 (S0) に設定し、MAXSIZE は 250 GB に設定します。  
  
 
- 変更 (SERVICE_OBJECTIVE =\<サービス目標 >)  
- パフォーマンス レベルを指定します。 次の例の変更はサービスに premium データベースの目標`P6`:
+ MODIFY (SERVICE_OBJECTIVE = \<service-objective>)  
+ パフォーマンス レベルを指定します。 次の例では、Premium データベースのサービスの目標を `P6` に変更します。
  
 ```  
 ALTER DATABASE current 
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
- サービス目標の使用可能な値: `S0`、 `S1`、 `S2`、 `S3`、 `S4`、 `S6`、 `S7`、 `S9`、 `S12`、 `P1`、 `P2`、`P4`、 `P6`、 `P11`、または`P15`です。 サービス目標に関する説明と、サイズ、エディション、およびサービス目標の組み合わせの詳細については、次を参照してください。 [Azure SQL データベース サービス階層とパフォーマンス レベル](http://msdn.microsoft.com/library/azure/dn741336.aspx)です。 指定した SERVICE_OBJECTIVE が EDITION によってサポートされていません、エラーが表示されます。 SERVICE_OBJECTIVE の値を 1 つの階層から別の階層に変更する場合 (たとえば、S1 から P1) は、EDITION の値も変更する必要があります。 PR サービス目標のサポートが削除されました。 に関する質問については、この電子メール エイリアスを使用して:premium-rs@microsoft.comです。 
+ サービスの目標に使用できる値は、`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15` です。 サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせについて詳しくは、「[Azure SQL データベースのサービス階層とパフォーマンス レベル](http://msdn.microsoft.com/library/azure/dn741336.aspx)」をご覧ください。 指定した SERVICE_OBJECTIVE が EDITION によってサポートされていません、エラーが表示されます。 SERVICE_OBJECTIVE の値を 1 つの階層から別の階層に変更する場合 (たとえば、S1 から P1) は、EDITION の値も変更する必要があります。 PRS サービスの目標のサポートはなくなりました。 質問については、電子メール エイリアス premium-rs@microsoft.com を使用してください。 
   
- 変更 (SERVICE_OBJECTIVE 柔軟なを =\_プール (名前 = \<elastic_pool_name >)  
- 柔軟なプールには、既存のデータベースを追加するには、ELASTIC_POOL にデータベースの SERVICE_OBJECTIVE を設定し、柔軟なプールの名前を指定します。 同じサーバー内の別の柔軟なプールにデータベースを変更するのに、このオプションを使用することもできます。 詳細については、次を参照してください。[作成し、SQL Database の弾力性プールの管理](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)です。 柔軟なプールからデータベースを削除するには、ALTER DATABASE を使用して、SERVICE_OBJECTIVE を 1 つのデータベースのパフォーマンス レベルに設定します。  
+ MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)  
+ 柔軟なプールには、既存のデータベースを追加するには、ELASTIC_POOL にデータベースの SERVICE_OBJECTIVE を設定し、柔軟なプールの名前を指定します。 同じサーバー内の別の柔軟なプールにデータベースを変更するのに、このオプションを使用することもできます。 詳しくは、[SQL Database エラスティック プールの作成と管理](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)に関するページをご覧ください。 柔軟なプールからデータベースを削除するには、ALTER DATABASE を使用して、SERVICE_OBJECTIVE を 1 つのデータベースのパフォーマンス レベルに設定します。  
 
  ADD SECONDARY ON SERVER \<partner_server_name>  
- 主キー、地理的レプリケーションにローカルのデータベースを作成して、パートナー サーバーで同じ名前での地理的レプリケーションのセカンダリ データベースを作成し、非同期的に新しいセカンダリへのプライマリからのデータのレプリケーションを開始します。 セカンダリ上と同じ名前のデータベースが既に存在する場合、コマンドは失敗します。 コマンドは、プライマリとなるローカル データベースをホストしているサーバー上の master データベースで実行されます。  
+ 主キー、地理的レプリケーションにローカルのデータベースを作成して、パートナー サーバーで同じ名前での地理的レプリケーションのセカンダリ データベースを作成し、非同期的に新しいセカンダリへのプライマリからのデータのレプリケーションを開始します。 セカンダリ上に同じ名前のデータベースが既に存在する場合、コマンドは失敗します。 コマンドは、プライマリとなるローカル データベースをホストしているサーバーの master データベースで実行されます。  
   
- WITH ALLOW_CONNECTIONS { ALL | **NO** }  
- ALLOW_CONNECTIONS が指定されていない場合は、既定では NO に設定されます。 設定されている場合すべては、読み取り専用データベースを接続する適切なアクセス許可を持つすべてのログインを許可します。  
+ WITH ALLOW_CONNECTIONS { **ALL** | NO }  
+ ALLOW_CONNECTIONS が指定されていない場合は、既定では ALL に設定されます。 ALL に設定されている場合は、適切なアクセス許可を持つすべてのログインに接続を許可する読み取り専用データベースになります。  
   
  WITH SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3" | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15' }  
- SERVICE_OBJECTIVE が指定されていない場合、セカンダリ データベースがプライマリ データベースと同じサービス レベルで作成されます。 SERVICE_OBJECTIVE が指定されている場合は、指定されたレベルで、セカンダリ データベースが作成されます。 このオプションは、低価格のサービス レベルで地理的レプリケーションのセカンダリの作成をサポートします。 指定した SERVICE_OBJECTIVE がソースと同じエディション内になければなりません。 たとえば場合は、edition が premium S0 を指定することはできません。  
+ SERVICE_OBJECTIVE が指定されていない場合、セカンダリ データベースがプライマリ データベースと同じサービス レベルで作成します。 SERVICE_OBJECTIVE を指定した場合は、指定したレベルにセカンダリ データベースが作成されます。 このオプションは、低価格のサービス レベルで地理的レプリケーションのセカンダリの作成をサポートします。 指定する SERVICE_OBJECTIVE は、ソースと同じエディション内でなければなりません。 たとえば、エディションが Premium の場合、S0 を指定することはできません。  
   
  ELASTIC_POOL (name = \<elastic_pool_name)  
- ELASTIC_POOL が指定されていない場合、セカンダリ データベースは弾力性プールには作成されません。 ELASTIC_POOL が指定されている場合は、指定されたプールで、セカンダリ データベースが作成されます。  
+ ELASTIC_POOL が指定されていない場合、セカンダリ データベースはエラスティック プールに作成されません。 ELASTIC_POOL が指定されている場合、セカンダリ データベースが指定されたプールに作成されます。  
   
 > [!IMPORTANT]  
 >  セカンダリを追加のコマンドを実行するユーザーは、DBManager をプライマリ サーバー上にある、セカンダリ サーバー上でローカルのデータベースでは、および DBManager db_owner のメンバーシップがある必要があります。  
@@ -302,13 +302,13 @@ ALTER DATABASE current
   
 3.  セカンダリがプライマリになり、古いプライマリで非同期の地理的レプリケーションを開始すると、新しいセカンダリです。  
   
- このシーケンスにより、データ損失は発生しません。 両方のデータベースは使用できません期間は、役割の交代中に、0 ～ 25 の数秒です。 合計の操作は、約 1 分以内で実行する必要があります。 このコマンドが実行されたときに、プライマリ データベースが使用できない場合、コマンドは、プライマリ データベースが使用できないことを示すエラー メッセージで失敗します。 場合は、フェールオーバー プロセスが完了しない、スタックが表示されます、強制フェールオーバー コマンドを使用してデータが失われるをそのまま使用し、次に、データの損失を回復する必要がある場合は、呼び出す devops 失われたデータを回復するには、(CSS) およびできます。  
+ このシーケンスは、データの損失が発生しないことを保証します。 両方のデータベースは使用できません期間は、役割の交代中に、0 ～ 25 の数秒です。 合計の操作は、約 1 分以内で実行する必要があります。 このコマンドが実行されたときにプライマリ データベースが使用できない場合、プライマリ データベースが使用できないことを示すエラー メッセージで、コマンドは失敗します。 場合は、フェールオーバー プロセスが完了しない、スタックが表示されます、強制フェールオーバー コマンドを使用してデータが失われるをそのまま使用し、次に、データの損失を回復する必要がある場合は、呼び出す devops 失われたデータを回復するには、(CSS) およびできます。  
   
 > [!IMPORTANT]  
 >  フェールオーバー コマンドを実行するユーザーは、プライマリ サーバーとセカンダリ サーバーの両方で DBManager をする必要があります。  
   
  FORCE_FAILOVER_ALLOW_DATA_LOSS  
- セカンダリ データベースをコマンドをプライマリが実行され、降格されますが、現在のプライマリになる新しいセカンダリ geo レプリケーションの連携を昇格させます。 現在のプライマリが使用可能な不要になった場合にのみ、このコマンドを使用します。 設計されていますディザスター リカバリーのみの可用性を復元することが重要といくつかのデータの損失を許容します。  
+ セカンダリ データベースをコマンドをプライマリが実行され、降格されますが、現在のプライマリになる新しいセカンダリ geo レプリケーションの連携を昇格させます。 現在のプライマリが使用できない場合にのみ、このコマンドを使用します。 設計されていますディザスター リカバリーのみの可用性を復元することが重要といくつかのデータの損失を許容します。  
   
  : 強制フェールオーバー中に  
   
@@ -316,23 +316,23 @@ ALTER DATABASE current
   
 2.  元のプライマリは、新しいプライマリに再接続できますと、増分バックアップが元のプライマリ、新しいセカンダリが元のプライマリになります。  
   
-3.  この増分バックアップでは、古いプライマリからのデータを回復するには、ユーザーには、devops/CSS が関与します。 します。  
+3.  古いプライマリのこの増分バックアップからデータを復旧するには、ユーザーは devops/CSS である必要があります。  
   
-4.  その他のセカンダリがある場合は、新しいプライマリのセカンダリに自動的に再構成します。 このプロセスは非同期で、このプロセスが完了するまで、遅延が発生にすることがあります。 再構成が完了するまで、セカンダリは、古いプライマリのセカンダリに進みます。  
+4.  その他のセカンダリがある場合は、自動的に再構成されて新しいプライマリのセカンダリになります。 このプロセスは非同期で、このプロセスが完了するまで、遅延が発生にすることがあります。 再構成が完了するまで、セカンダリは古いプライマリのセカンダリであり続けます。  
   
 > [!IMPORTANT]  
 >  Force_failover_allow_data_loss の各コマンドを実行するユーザーは、プライマリ サーバーとセカンダリ サーバーの両方で DBManager をする必要があります。  
   
-## <a name="remarks"></a>解説  
- データベースを削除するには使用[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)です。  
+## <a name="remarks"></a>Remarks  
+ データベースを削除するには、[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) を使用します。  
   
- データベースのサイズを小さくを使用して[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)です。  
+ データベースのサイズを縮小するには、[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) を使用します。  
   
  ALTER DATABASE ステートメントは自動コミット モード (既定のトランザクション管理モード) で実行する必要があり、明示的または暗黙的なトランザクション モードでは許可されません。  
   
- プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 各キャッシュ ストアが消去、プラン キャッシュ内の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー ログには、次の情報メッセージが含まれています:"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キャッシュ ストア フラッシュをいくつかのデータベースのため '%s' キャッシュ ストア (プラン キャッシュの一部) を %d 個検出が発生しましたメンテナンス操作または再構成操作"です。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
+ プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに含まれます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
   
- 次のシナリオでは、プロシージャ キャッシュがフラッシュも。  
+ プロシージャ キャッシュは、次のシナリオでもフラッシュされます。  
   
 -   AUTO_CLOSE データベース オプションが ON に設定されている。 データベースを参照 (または使用) するユーザー接続が 1 つも存在しない場合、バックグラウンド タスクがデータベースを自動的に閉じてシャットダウンすることを試みます。  
   
@@ -347,7 +347,7 @@ ALTER DATABASE current
 ## <a name="viewing-database-information"></a>データベース情報の表示  
  カタログ ビュー、システム関数、およびシステム ストアド プロシージャを使用して、データベース、ファイルおよびファイル グループについての情報を返すことができます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  データベースを変更できるのは、(準備プロセスによって作成される) サーバーレベルのプリンシパルのログイン、または `dbmanager` データベース ロールのメンバーだけです。  
   
 > [!IMPORTANT]  
@@ -355,7 +355,7 @@ ALTER DATABASE current
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-check-the-edition-options-and-change-them"></a>A. Edition オプションを確認し、それらを変更します。
+### <a name="a-check-the-edition-options-and-change-them"></a>A. エディション オプションを確認して変更します。
 
 ```
 SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
@@ -366,7 +366,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJ
 ```
 
 ### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. データベースを別の柔軟なプールに移動します。  
- Pool1 をという名前のプールに、既存のデータベースを移動します。  
+ pool1 という名前のプールに既存のデータベースを移動します。  
   
 ```  
 ALTER DATABASE db1   
@@ -374,16 +374,16 @@ MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;
 ```  
   
 ### <a name="c-add-a-geo-replication-secondary"></a>C. 地理的レプリケーション セカンダリを追加します。  
- サーバー上の読み取り不可のセカンダリ データベース db1 の作成`secondaryserver`db1 ローカル サーバー上のです。  
+ ローカル サーバー上の db1 のサーバー `secondaryserver` に読み取り可能なセカンダリ データベース db1 を作成します。  
   
 ```  
 ALTER DATABASE db1   
 ADD SECONDARY ON SERVER secondaryserver   
-WITH ( ALLOW_CONNECTIONS = NO )  
+WITH ( ALLOW_CONNECTIONS = ALL )  
 ```  
   
 ### <a name="d-remove-a-geo-replication-secondary"></a>D. セカンダリ Geo レプリケーションを削除します。  
- サーバー上のセカンダリ データベース db1 の削除`secondaryserver`です。  
+ サーバー `secondaryserver` 上のセカンダリ データベース db1 を削除します。  
   
 ```  
 ALTER DATABASE db1   
@@ -391,26 +391,26 @@ REMOVE SECONDARY ON SERVER testsecondaryserver
 ```  
   
 ### <a name="e-failover-to-a-geo-replication-secondary"></a>E. 地理的レプリケーションのセカンダリにフェールオーバー  
- サーバー上のセカンダリ データベース db1 の昇格`secondaryserver`に新しいプライマリ データベース サーバーで実行されるときになる`secondaryserver`です。  
+ サーバー `secondaryserver` で実行されると、サーバー `secondaryserver` 上のセカンダリ データベース db1 を昇格させて新しいプライマリ データベースにします。  
   
 ```  
 ALTER DATABASE db1 FAILOVER  
 ```  
   
 ## <a name="see-also"></a>参照  
- [DATABASE &#40; を作成します。Azure SQL データベース &#41;](../../t-sql/statements/create-database-azure-sql-database.md)   
+ [CREATE DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/create-database-azure-sql-database.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
- [SET TRANSACTION ISOLATION LEVEL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
+ [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys.database_mirroring_witnesses &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [sys.data_spaces と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- [sys.filegroups &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [sys.master_files と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [システム データベース](../../relational-databases/databases/system-databases.md)  
   
   

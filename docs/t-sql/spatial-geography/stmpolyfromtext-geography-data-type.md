@@ -1,5 +1,5 @@
 ---
-title: "STMPolyFromText (geography データ型) |Microsoft ドキュメント"
+title: "STMPolyFromText (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmpolyfromtext-geography-data-type"></a>STMPolyFromText (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返します、 **geography**いる Z (標高) 値および M (メジャー) 値で補完された、Open Geospatial Consortium (OGC) Well-Known Text (WKT) 表現からのインスタンスがインスタンスで実行します。
+インスタンスに格納されている Z (標高) 値および M (メジャー) 値で補完された、Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を基に **geography** インスタンスを返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,23 +45,23 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
   
 ## <a name="arguments"></a>引数  
  *multipolygon_tagged_text*  
- WKT 表現です、 **geographyMultiPolygon**インスタンスを取得します。 *multipolygon_tagged_text*は、 **nvarchar (max)**式。  
+ 返される **geographyMultiPolygon** インスタンスの WKT 表現です。 *multipolygon_tagged_text* は **nvarchar(max)** 式です。  
   
  *SRID*  
- **Int** 、空間を表す式の ID (SRID) を参照、 **geographyMultiPolygon**インスタンスを取得します。  
+ 返される **geographyMultiPolygon** インスタンスの SRID (spatial reference ID) を表す **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **Sql Geography**  
+ CLR の戻り値の型:**Sql Geography**  
   
  OGC の型: **MultiPolygon**  
   
-## <a name="remarks"></a>解説  
- このメソッドは、 **FormatException**入力が適切な形式でない場合。  
+## <a name="remarks"></a>Remarks  
+ このメソッドでは、入力が適切な形式でない場合に、**FormatException** がスローされます。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`STMPolyFromText()`を作成する、`geography`インスタンス。  
+ `STMPolyFromText()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  
 DECLARE @g geography;  

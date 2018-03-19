@@ -1,5 +1,5 @@
 ---
-title: "コントラクト (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
+title: CREATE CONTRACT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,25 +56,25 @@ CREATE CONTRACT contract_name
   
 ## <a name="arguments"></a>引数  
  *contract_name*  
- 作成するコントラクトの名前を指定します。 新しいコントラクトは現在のデータベースで作成され、AUTHORIZATION 句で指定するプリンシパルによって所有されます。 サーバー名、データベース名、スキーマ名は指定できません。 *Contract_name*には最大 128 文字にすることができます。  
+ 作成するコントラクトの名前を指定します。 新しいコントラクトは現在のデータベースで作成され、AUTHORIZATION 句で指定するプリンシパルによって所有されます。 サーバー名、データベース名、スキーマ名は指定できません。 *contract_name* には、最大 128 文字までを指定できます。  
   
 > [!NOTE]  
->  作成しないキーワードを使用するコントラクトのいずれか、 *contract_name*です。 CREATE BROKER PRIORITY でコントラクト名に ANY を指定した場合、優先度はすべてのコントラクトに適用されます。 名前が ANY であるコントラクトに限定されません。  
+>  *contract_name* のキーワード ANY を使用するコントラクトは作成しないでください。 CREATE BROKER PRIORITY でコントラクト名に ANY を指定した場合、優先度はすべてのコントラクトに適用されます。 名前が ANY であるコントラクトに限定されません。  
   
  AUTHORIZATION *owner_name*  
- コントラクトの所有者を、指定したデータベース ユーザーまたはロールに設定します。 現在のユーザーの場合は**dbo**または**sa**、 *owner_name*任意の有効なユーザーまたはロールの名前を指定できます。 それ以外の場合、 *owner_name*現在のユーザーの名前、現在のユーザーが持つ、権限を借用するユーザーの名前または現在のユーザーが所属するロールの名前にする必要があります。 この句を省略すると、コントラクトは現在のユーザーに属します。  
+ コントラクトの所有者を、指定したデータベース ユーザーまたはロールに設定します。 現在のユーザーが **dbo** または **sa** の場合、*owner_name* には、任意の有効なユーザーまたはロールの名前を指定できます。 それ以外の場合、*owner_name* には、現在のユーザーの名前、現在のユーザーが持つ借用権限に対応するユーザーの名前、または現在のユーザーが所属するロールの名前を指定する必要があります。 この句を省略すると、コントラクトは現在のユーザーに属します。  
   
  *message_type_name*  
  コントラクトの一部として含まれる、メッセージ型の名前を指定します。  
   
  SENT BY  
- 指定したメッセージ型のメッセージを送信できるエンドポイントを指定します。 コントラクトには、サービスが特定のメッセージ交換で使用できるメッセージが記録されています。 各メッセージ交換が 2 つのエンドポイント:*イニシエーター*エンドポイントで、メッセージ交換を開始するサービス、および*ターゲット*エンドポイント、サービス、発信側です。  
+ 指定したメッセージ型のメッセージを送信できるエンドポイントを指定します。 コントラクトには、サービスが特定のメッセージ交換で使用できるメッセージが記録されています。 各メッセージ交換は、2 つのエンドポイントの間で行われます。1 つは*発信側*エンドポイントで、メッセージ交換を開始するサービスです。もう 1 つは*発信先*エンドポイントで、発信側のメッセージの送信先となるサービスです。  
   
  INITIATOR   
- メッセージ交換の発信側だけが、指定したメッセージ型のメッセージを送信できることを示します。 メッセージ交換を開始するサービスと呼びます、*イニシエーター*メッセージ交換の発信します。  
+ メッセージ交換の発信側だけが、指定したメッセージ型のメッセージを送信できることを示します。 メッセージ交換を開始するサービスをメッセージ交換の*発信側*といいます。  
   
  TARGET  
- メッセージ交換の発信先だけが、指定したメッセージ型のメッセージを送信できることを示します。 別のサービスによって開始されたメッセージ交換を受け付けるサービスと呼びます、*ターゲット*メッセージ交換の発信します。  
+ メッセージ交換の発信先だけが、指定したメッセージ型のメッセージを送信できることを示します。 別のサービスによって開始されたメッセージ交換を受け入れるサービスをメッセージ交換の*発信先*といいます。  
   
  ANY  
  指定した型のメッセージを、発信側と発信先の両方から送信できることを示します。  
@@ -82,26 +82,26 @@ CREATE CONTRACT contract_name
  [ DEFAULT ]  
  コントラクトで、既定のメッセージ型のメッセージがサポートされることを示します。 既定では、すべてのデータベースに DEFAULT というメッセージ型が含まれます。 このメッセージ型では、NONE の検証が行われます。 この句のコンテキストでは、DEFAULT はキーワードとして扱われないため、識別子として区切り記号で区切る必要があります。 Microsoft SQL Server では、DEFAULT メッセージ型を指定する DEFAULT コントラクトも提供されています。  
   
-## <a name="remarks"></a>解説  
- コントラクトのメッセージ型の順序は重要ではありません。 ターゲットが、最初のメッセージを受信した後[!INCLUDE[ssSB](../../includes/sssb-md.md)]をいつでもメッセージ交換の指定された側の許可されているすべてのメッセージを送信するメッセージ交換のどちらかの側を許可します。 たとえば、メッセージ交換の発信側がメッセージの種類を送信できます**//Adventure-Works.com/Expenses/SubmitExpense**、[!INCLUDE[ssSB](../../includes/sssb-md.md)]により、任意の数を送信するイニシエーター **SubmitExpense**中、メッセージ交換のメッセージ。  
+## <a name="remarks"></a>Remarks  
+ コントラクトのメッセージ型の順序は重要ではありません。 発信先が最初のメッセージを受信した後は、メッセージ交換のいずれの側からも、[!INCLUDE[ssSB](../../includes/sssb-md.md)] を介して、その側の許可されているメッセージをいつでも送信できるようになります。 たとえば、メッセージ交換の発信側でメッセージ型 **//Adventure-Works.com/Expenses/SubmitExpense** が許可されている場合、この発信側は [!INCLUDE[ssSB](../../includes/sssb-md.md)] を介して、メッセージ交換中に任意の数だけ **SubmitExpense** メッセージを送信できます。  
   
  コントラクトのメッセージ型と送信方向は変更できません。 コントラクトの AUTHORIZATION を変更するには、ALTER AUTHORIZATION ステートメントを使用します。  
   
  コントラクトでは、発信側からのメッセージ送信が許可されている必要があります。 コントラクトに、SENT BY ANY または SENT BY INITIATOR のメッセージ型のうち少なくとも 1 つが含まれていないと、CREATE CONTRACT ステートメントは失敗します。  
   
- 、コントラクトに関係なく、サービスは常にメッセージの種類を受信`http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer`、 `http://schemas.microsoft.com/SQL/ServiceBroker/Error`、および`http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog`です。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、アプリケーションへのシステム メッセージにこれらのメッセージ型が使用されます。  
+ コントラクトに関係なく、サービスは常にメッセージ型 `http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer`、`http://schemas.microsoft.com/SQL/ServiceBroker/Error`、`http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` を受信できます。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、アプリケーションへのシステム メッセージにこれらのメッセージ型が使用されます。  
   
  コントラクトは一時オブジェクトとして指定できません。 # で始まるコントラクト名は許可されますが、パーマネント オブジェクトになります。  
   
-## <a name="permissions"></a>権限  
- 既定では、メンバー、 **db_ddladmin**または**db_owner**固定データベース ロールおよび**sysadmin**固定サーバー ロールは、コントラクトを作成できます。  
+## <a name="permissions"></a>アクセス許可  
+ 既定では、**db_ddladmin** 固定データベース ロールまたは **db_owner** 固定データベース ロールのメンバーと **sysadmin** 固定サーバー ロールのメンバーがコントラクトを作成できます。  
   
- 既定では、メンバーは、コントラクトの所有者、 **db_ddladmin**または**db_owner**固定データベース ロールのメンバー、 **sysadmin**固定サーバー ロールの参照があります。コントラクトの権限です。  
+ コントラクトの REFERENCES 権限は、既定ではコントラクトの所有者、**db_ddladmin** 固定データベース ロールまたは **db_owner** 固定データベース ロールのメンバー、**sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
  CREATE CONTRACT ステートメントを実行するには、指定されているすべてのメッセージ型に対する REFERENCES 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- **A.コントラクトを作成します。**  
+ **A.コントラクトを作成する**  
   
  次の例では、3 つのメッセージ型に基づいて費用返済のコントラクトを作成します。  
   
@@ -130,7 +130,7 @@ CREATE CONTRACT
 ```  
   
 ## <a name="see-also"></a>参照  
- [コントラクト &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-contract-transact-sql.md)   
+ [DROP CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-contract-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

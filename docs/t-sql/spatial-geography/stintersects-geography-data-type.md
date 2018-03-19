@@ -1,5 +1,5 @@
 ---
-title: "STIntersects (geography データ型) |Microsoft ドキュメント"
+title: "STIntersects (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersects-geography-data-type"></a>STIntersects (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-  場合 1 を返します、 **geography**インスタンスでは、他と交差する**geography**インスタンス。 そうでない場合は、0 を返します。  
+  **geography** インスタンスがもう一方の **geography** インスタンスと交差している可能性がある場合、1 を返します。 含まれ交差しない場合は 0 を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geography*  
- もう 1 つ**geography**対象のインスタンスと比較する`STIntersects()`が呼び出されます。  
+ `STIntersects()` を呼び出したインスタンスと比較される、別の **geography** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR 戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- このメソッドは常に返します**NULL**場合の spatial reference Id (Srid)、 **geography**インスタンスが一致しません。  
+## <a name="remarks"></a>Remarks  
+ **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に **NULL** を返します。  
   
 ## <a name="examples"></a>使用例  
  `STIntersects()` を使用して 2 つの `geography` インスタンスが相互に交差しているかどうかを調べる例を次に示します。  

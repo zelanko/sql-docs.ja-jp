@@ -1,5 +1,5 @@
 ---
-title: "STCurveToLine (geography データ型) |Microsoft ドキュメント"
+title: "STCurveToLine (geography データベース型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  多角形近似を返します、 **geography**の円弧セグメントを格納しているインスタンス。  
+  円弧を含む **geography** インスタンスの多角形近似を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,18 +44,18 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
  CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>解説  
- 返します、 **LineString**インスタンスの場合、 **CircularString**または**CompoundCurve**インスタンス。  
+## <a name="remarks"></a>Remarks  
+ **CircularString** または **CompoundCurve** インスタンスに対して **LineString** インスタンスを返します。  
   
- 返します、**多角形**インスタンスの場合、 **CurvePolygon**インスタンス。  
+ **CurvePolygon** インスタンスに対して **Polygon** インスタンスを返します。  
   
- コピーを返す**geography**を含まないインスタンス**CircularString**、 **CompoundCurve**、または**CurvePolygon**インスタンス。  
+ **CircularString**、**CompoundCurve**、または **CurvePolygon** インスタンスを含まない **geography** インスタンスのコピーを返します。  
   
- は、SQL MM 仕様とは異なり、このメソッドは多角形近似の計算に z 座標値を使用しません。 呼び出し元に存在する任意の z 座標値**geography**インスタンスは無視されます。  
+ は、SQL MM 仕様とは異なり、このメソッドは多角形近似の計算に z 座標値を使用しません。 呼び出し元の **geography** インスタンスに含まれているすべての z-coordinate 値は無視されます。  
   
 ## <a name="examples"></a>使用例  
  次の例は、`LineString` インスタンスの多角形近似である `CircularString` インスタンスを返します。  

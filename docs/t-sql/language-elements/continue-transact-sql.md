@@ -1,5 +1,5 @@
 ---
-title: "続行 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CONTINUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -36,6 +36,6 @@ ms.lasthandoff: 01/25/2018
 # <a name="continue-transact-sql"></a>CONTINUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  WHILE ループを再開します。 CONTINUE キーワードの後ろにあるステートメントはすべて無視されます。 CONTINUE は、常にではありませんが、IF ステートメントの分岐で実行される場合があります。 詳細については、次を参照してください。[中 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/while-transact-sql.md)と[フロー制御言語 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md).  
+  WHILE ループを再開します。 CONTINUE キーワードの後ろにあるステートメントはすべて無視されます。 CONTINUE は、常にではありませんが、IF ステートメントの分岐で実行される場合があります。 詳細については、「[WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)」および「[フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)」を参照してください。  
   
   

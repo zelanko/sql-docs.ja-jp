@@ -1,5 +1,5 @@
 ---
-title: "データベースの復元 (並列データ ウェアハウス) |Microsoft ドキュメント"
+title: RESTORE DATABASE (Parallel Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -24,17 +24,17 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="restore-database-parallel-data-warehouse"></a>データベース (並列データ ウェアハウス) を復元します。
+# <a name="restore-database-parallel-data-warehouse"></a>RESTORE DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  復元、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]にデータベースのバックアップからユーザー データベース、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]アプライアンスです。 によって作成されたバックアップからデータベースを復元、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][データベースのバックアップ &#40;です。並列データ ウェアハウス&#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)コマンド。 バックアップを使用して操作と復元操作を災害復旧計画を作成したり、データベースを別の 1 つのアプライアンスに移動します。  
+  データベース バックアップから [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] アプライアンスに、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ユーザー データベースを復元します。 データベースは、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md) コマンドによって以前に作成されたバックアップから復元されます。 バックアップ操作および復元操作を使用してディザスター リカバリー計画を作成したり、アプライアンス間でデータベースを移動したりします。  
   
 > [!NOTE]  
->  Master の復元には、アプライアンスのログイン情報の復元が含まれます。 Master データベースを復元するを使用して、 [master データベース &#40; を復元TRANSACT-SQL と #41 です。](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md)  ページで、 **Configuration Manager**ツールです。 コントロールのノードへのアクセスを持つ管理者は、この操作を実行できます。  
+>  master データベースの復元には、アプライアンスのログイン情報の復元が含まれます。 master データベースを復元するには、**Configuration Manager** ツールの [[master データベースの復元 (Transact-SQL)]](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) ページを使用します。 制御ノードへのアクセス許可を持つ管理者は、この操作を実行することができます。  
   
- 詳細については[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]データベースのバックアップ「のバックアップと復元」を参照してください、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] データベース バックアップの詳細については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] の 「バックアップと復元」に関するセクションをご覧ください。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,97 +62,97 @@ RESTORE HEADERONLY
   
 ## <a name="arguments"></a>引数  
  RESTORE DATABASE *database_name*  
- ユーザー データベースと呼ばれるデータベースを復元することを指定*database_name*です。 復元されたデータベースでは、バックアップされているソース データベースとは異なる名前を持つことができます。 *database_name*先アプライアンス上のデータベースとして存在することはできません。 詳細について許可されたデータベースの名前に「オブジェクトの名前付け規則」を参照してください、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
+ ユーザー データベースを *database_name* と呼ばれるデータベースに復元するように指定します。 復元するデータベースには、バックアップされているソース データベースと異なる名前を付けることができます。 *database_name* は、復元先のアプライアンス上にデータベースとしてまだ存在することができません。 使用可能なデータベース名の詳細については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]の「オブジェクトの名前付け規則」を参照してください。  
   
- ユーザー データベースを復元するデータベースの完全バックアップを復元し、アプライアンスに必要に応じて差分バックアップを復元します。 ユーザー データベースの復元には、復元するデータベース ユーザー、およびデータベース ロールが含まれています。  
+ ユーザー データベースを復元すると、アプライアンスに対して、データベースの完全バックアップが復元され、その後、必要応じて差分バックアップが復元されます。 ユーザー データベースの復元には、データベース ユーザーとデータベース ロールの復元が含まれます。  
   
  FROM DISK = '\\\\*UNC_path*\\*backup_directory*'  
- 元のディレクトリとネットワーク パス[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]バックアップ ファイルが復元されます。 たとえば、FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup' です。  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] によって復元されるバックアップ ファイルが置かれているネットワーク パスとディレクトリ。 たとえば、FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'。  
   
  *backup_directory*  
- 完全バックアップまたは差分バックアップを格納するディレクトリの名前を指定します。 たとえば、完全または差分バックアップに対して RESTORE HEADERONLY 操作を実行できます。  
+ 完全バックアップまたは差分バックアップが格納されているディレクトリの名前を指定します。 たとえば、完全バックアップまたは差分バックアップに対して RESTORE HEADERONLY 操作を実行することができます。  
   
  *full_backup_directory*  
- 完全バックアップを格納するディレクトリの名前を指定します。  
+ 完全バックアップが格納されたディレクトリの名前を指定します。  
   
  *differential_backup_directory*  
- 差分バックアップを格納するディレクトリの名前を指定します。  
+ 差分バックアップが格納されたディレクトリの名前を指定します。  
   
--   パスとバックアップ ディレクトリは、既に存在する必要があり、完全修飾の汎用名前付け規則 (UNC) パスとして指定する必要があります。  
+-   パスとバックアップ ディレクトリが既に存在し、これらが完全に修飾された汎用名前付け規則 (UNC) パスとして指定されている必要があります。  
   
--   バックアップ ディレクトリへのパスがローカル パスにすることはできません、上のいずれかの場所をすることはできません、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]アプライアンスのノードです。  
+-   バックアップ ディレクトリのパスにはローカル パスを指定できません。[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] アプライアンス ノード上の場所とすることもできません。  
   
--   バックアップ ディレクトリの名前と UNC パスの最大長は、200 文字です。  
+-   UNC パスとバックアップ ディレクトリ名の最大長は 200 文字です。  
   
--   サーバーまたはホストは、IP アドレスとして指定する必要があります。  
+-   サーバーまたはホストは IP アドレスとして指定する必要があります。  
   
  RESTORE HEADERONLY  
- 1 人のユーザー データベースのバックアップ ヘッダー情報のみを返すように指定します。 他のフィールドの間では、ヘッダーには、バックアップ、およびバックアップの名前のテキストの説明が含まれます。 バックアップ名は、バックアップ ファイルを格納するディレクトリの名前と同じである必要はありません。  
+ ユーザー データベースの 1 つのバックアップに関するヘッダー情報のみを返すように指定します。 特に、ヘッダー フィールドにはバックアップに関するテキストの説明と、バックアップの名前が含まれます。 バックアップ名は、バックアップ ファイルを格納するディレクトリの名前と同じである必要はありません。  
   
- RESTORE HEADERONLY の結果は、後でパターン化、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY の結果します。 結果は、50 以上の列で使用されるすべて[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]です。 内の列の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY の結果を参照してください[RESTORE HEADERONLY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
+ RESTORE HEADERONLY の結果は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY の結果の後でパターン化されます。 結果には 50 を超える列が含まれます。ただし、全部が [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] で使用されるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY の結果に含まれる列の説明については、[RESTORE HEADERONLY &#40;TRANSACT-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) を参照してください。  
   
-## <a name="permissions"></a>権限  
- 必要があります、 **CREATE ANY DATABASE**権限です。  
+## <a name="permissions"></a>アクセス許可  
+ **CREATE ANY DATABASE** アクセス許可が必要です。  
   
- アクセスして、バックアップ ディレクトリから読み取る権限を持つ Windows アカウントが必要です。 Windows アカウント名とパスワードを格納する必要がありますも[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]します。  
+ バックアップ ディレクトリにアクセスし、そこから読み取るための権限を有する Windows アカウントが必要です。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に Windows アカウント名とパスワードを保存する必要もあります。  
   
-1.  確認する資格情報は既にを使用して[sys.dm_pdw_network_credentials &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
+1.  資格情報が既にあることを確認するには、[sys.dm_pdw_network_credentials &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) を使用します。  
   
-2.  を追加または資格情報を更新するには使用[sp_pdw_add_network_credentials (& a) #40 です。SQL Data Warehouse &#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
+2.  資格情報を追加または更新するには、[sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) を使用してください。  
   
-3.  資格情報を削除する[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]を使用して[sp_pdw_remove_network_credentials (& a) #40 です。SQL Data Warehouse &#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).  
+3.  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] からネットワーク資格情報を削除するには、[sp_pdw_remove_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) を使用してください。  
   
 ## <a name="error-handling"></a>エラー処理  
- データベースの復元コマンドは、次の条件下でエラーが得られます。  
+ RESTORE DATABASE を実行すると、次の条件下でエラーが発生します。  
   
--   既に復元するデータベースの名前は、ターゲット アプライアンスに存在します。 これを回避するには、一意のデータベースの名前を選択または復元を実行する前に、既存のデータベースを削除します。  
+-   復元するデータベースの名前が、ターゲット アプライアンス上に既に存在しています。 名前の衝突を回避するには、一意のデータベース名を選択するか、または復元を実行する前に既存のデータベースを削除します。  
   
--   バックアップ ディレクトリにバックアップ ファイルの無効なセットが存在します。  
+-   バックアップ ディレクトリ内に無効なバックアップ ファイル セットが存在します。  
   
--   ログイン権限は、データベースを復元するのに十分ではありません。  
+-   データベースを復元するにはログイン権限が不十分です。  
   
--   [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]バックアップ ファイルが配置されているネットワークの場所に適切なアクセス許可がありませんでした。  
+-   [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] には、バックアップが保存されているネットワーク上の場所にアクセスする適切な権限がありません。  
   
--   バックアップ ディレクトリのネットワークの場所が存在しないかは使用できません。  
+-   バックアップ ディレクトリ用のネットワーク上の場所が存在しないか、その場所が使用できません。  
   
--   コンピューティング ノードまたはノードのコントロールに十分なディスク領域があります。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]復元を開始する前に十分なディスク領域がアプライアンスに存在するとは限りません。 そのため、RESTORE DATABASE ステートメントの実行中にディスク領域不足エラーを生成することができます。 ディスク領域の不足が発生すると[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]復元をロールバックします。  
+-   計算ノードまたは制御コントロール上のディスク領域が不足しています。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では、復元を開始する前に、アプライアンス上に十分なディスク領域が存在するかどうかを確認しません。 そのため、RESTORE DATABASE ステートメントの実行中にディスク領域不足エラーが生成される可能性があります。 ディスク領域の不足が発生すると、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は復元をロールバックします。  
   
--   データベースが復元されるターゲット アプライアンスには、データベースがバックアップされたソース アプライアンスよりも少ないコンピューティング ノードがあります。  
+-   データベースを復元するターゲット アプライアンスにある計算ノードの数が、データベースがバックアップされたソース アプライアンス上の計算ノードの数と比べて少なくなっています。  
   
--   トランザクション内から、データベースの復元が試行されます。  
+-   データベースの復元は、トランザクション内から試行されます。  
   
 ## <a name="general-remarks"></a>全般的な解説  
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]データベースの復元の成功率を追跡します。 データベースの差分バックアップを復元する前に[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]データベースの完全復元が正常に完了したことを確認します。  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、データベースの復元が成功したかどうかを追跡します。 データベースの差分バックアップを復元する前に、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、データベースの完全復元が正常に完了していることを確認します。  
   
- 復元後、ユーザー データベースは、データベース互換性レベル 120 があります。 これはすべてのデータベースは元の互換性レベルに関係なく当てはまります。  
+ 復元後、ユーザー データベースのデータベース互換性レベルは 120 となります。 これは、元の互換性レベルに関係なく、すべてのデータベースに当てはまります。  
   
- **使用コンピューティング ノードの数が多いアプライアンスへの復元**  
-実行[DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)再配布のトランザクション ログが増加するため、大きい方に小さいアプライアンスからデータベースを復元した後です。  
+ **より多くの計算ノードを備えたアプライアンスへの復元**  
+小型のアプライアンスから大型のアプライアンスにデータベースを復元すると、再割り当てによってトランザクション ログが増えるため、[DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) を実行します。  
 
-使用コンピューティング ノードの数が多いアプライアンスにバックアップを復元すると、コンピューティング ノードの数に比例して、割り当てられているデータベースのサイズが大きくなります。  
+より多くの計算ノードを備えたアプライアンスにバックアップを復元すると、計算ノードの数に比例して、割り当てられるデータベースのサイズが大きくなります。  
   
-たとえば、60 GB を復元するデータベースは、2 つのノードのアプライアンス (ノードあたり 30 GB) から 6 ノード アプライアンスに[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]6 ノード アプライアンス上 180 GB のデータベース (6 ノード 30 GB を持つ 1 つのノード) を作成します。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ソースの構成と一致する 2 つのノードには、最初に、データベースを復元し、6 つのすべてのノードにデータを再分配します。  
+たとえば、2 つのノードを備えたアプライアンス (ノードあたり 30 GB) から 6 つのノードを備えたアプライアンスに 60 GB のデータベースを復元する場合、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、6 つのノードを備えたアプライアンス上に 180 GB のデータベース (6 ノード、ノードあたり 30 GB) を作成します。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] はまず 2 つのノードに復元することでソースの構成と一致させ、次に 6 つのノードすべてにデータを再割り当てします。  
   
- 再配布後にすべての計算ノードは、実際の低いデータと小さいソース アプライアンス上のすべての計算ノードよりも多くの空き領域に含まれます。 追加の領域を使用して、データベースにデータを追加します。 使用することができます、復元されたデータベースのサイズが大きい場合、必要以上、 [ALTER DATABASE &#40;です。並列データ ウェアハウス&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)データベース ファイルのサイズを縮小します。  
+ 再割り当て後の各計算ノードでは、小さい方のソース アプライアンス上の各計算ノードと比べて、含まれる実際のデータが少なくなり、空き領域が大きくなります。 追加の領域を使用して、データベースにデータを追加します。 復元されたデータベースのサイズが必要以上に大きい場合は、[ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md) を使用してデータベース ファイルのサイズを縮小することができます。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- これらの制限事項と制約を使用して、ソース アプライアンスは、アプライアンス元となるデータベースのバックアップが作成され、ターゲット アプライアンスは、データベースを復元するアプライアンスです。  
+ 以下の制限事項と制約において、ソース アプライアンスとはデータベースのバックアップが作成されたアプライアンスであり、ターゲット アプライアンスとはデータベースの復元先のアプライアンスです。  
   
- データベースの復元は自動的に再構築されません統計。  
+ データベースの復元によって、統計は自動的に再構築されません。  
   
- データベースの復元またはデータベースのバックアップを 1 つだけのステートメントは、アプライアンスの特定の時点で実行できます。 複数のバックアップと復元ステートメントが同時に送信された場合、アプライアンスはキューに配置し、いずれかの処理時、します。  
+ アプライアンス上で一度に実行できる RESTORE DATABASE ステートメントまたは BACKUP DATABASE ステートメントは 1 つだけです。 複数のバックアップ ステートメントと復元ステートメントが同時に送信された場合、アプライアンスはそれらをキューに配置し、一度に 1 つずつ処理します。  
   
- のみをデータベースのバックアップを復元することができます、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]同数またはソース アプライアンスよりも多くのコンピューティング ノードを持つターゲット アプライアンスです。 ターゲットのアプライアンスは、ソース アプライアンスよりも少ないコンピューティング ノードを持つことはできません。  
+ データベースのバックアップの復元先は、ソース アプライアンスと同数またはそれより多くのノードを備える [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ターゲット アプライアンスである必要があります。 ソース アプライアンスより計算ノード数が少ないアプライアンスをターゲットにすることはできません。  
   
- アプライアンスを持つ SQL Server 2008 R2 のハードウェアのあるアプライアンスに SQL Server 2012 PDW ハードウェアで作成されたバックアップを復元することはできません。 これは、アプライアンスが最初に SQL Server 2008 R2 PDW ハードウェアで購入した、SQL Server 2012 PDW ソフトウェアを実行している場合であっても true を保持します。  
+ SQL Server 2012 PDW のハードウェアを備えるアプライアンスで作成したバックアップを、SQL Server 2008 R2 のハードウェアを備えるアプライアンスに復元することはできません。 この制約は、当初 SQL Server 2008 R2 PDW のハードウェアを備えたアプライアンスを購入し、今はこのアプライアンスで SQL Server 2012 PDW のソフトウェアを実行している場合であっても適用されます。  
   
 ## <a name="locking"></a>ロック  
- データベース オブジェクトの排他ロックを取得します。  
+ DATABASE オブジェクトに対して排他的ロックを実行します。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-simple-restore-examples"></a>A. 単純な復元の例  
- 次の例への完全バックアップの復元、`SalesInvoices2013`データベース。 バックアップ ファイルが格納されている、 \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full ディレクトリ。 SalesInvoices2013 データベースにすでに存在するターゲット アプライアンスまたは、このコマンドはエラーで失敗します。  
+### <a name="a-simple-restore-examples"></a>A. RESTORE の単純な例  
+ 次の例では、完全バックアップを `SalesInvoices2013` データベースに復元します。 バックアップ ファイルは、\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full ディレクトリに格納されています。 SalesInvoices2013 データベースはターゲット アプライアンス上に存在することがまだ許可されていないので、このコマンドを実行しても失敗しエラーが返されます。  
   
 ```  
 RESTORE DATABASE SalesInvoices2013  
@@ -160,9 +160,9 @@ FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 ```  
   
 ### <a name="b-restore-a-full-and-differential-backup"></a>B. 完全および差分バックアップを復元します。  
- 次の例 SalesInvoices2013 データベースへのフルし、差分バックアップを復元します。  
+ 次の例では、完全バックアップを復元してから、差分バックアップを SalesInvoices2013 データベースに復元します。  
   
- 格納されている完全バックアップからデータベースの完全バックアップを復元します '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full' ディレクトリ。 復元が正常に完了すると、差分バックアップは SalesInvoices2013 データベースに復元します。  差分バックアップが格納されている、'\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff' ディレクトリ。  
+ データベースの完全バックアップは、'\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full' ディレクトリに格納されている完全バックアップから復元されます。 この復元が正常に完了すると、差分バックアップが SalesInvoices2013 データベースに復元されます。  差分バックアップは、'\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff' ディレクトリに格納されています。  
   
 ```  
 RESTORE DATABASE SalesInvoices2013  
@@ -173,7 +173,7 @@ RESTORE DATABASE SalesInvoices2013
 ```  
   
 ### <a name="c-restoring-the-backup-header"></a>C. バックアップ ヘッダーの復元  
- この例は、データベースのバックアップ ヘッダー情報を復元 '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full' です。 Invoices2013Full バックアップの情報の 1 つの行に、コマンドの結果。  
+ この例では、データベース バックアップ '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full' のヘッダー情報を復元します。 コマンドを実行すると、Invoices2013Full バックアップに関する情報を含む行が 1 つ生成されます。  
   
 ```  
 RESTORE HEADERONLY  
@@ -181,9 +181,9 @@ RESTORE HEADERONLY
 [;]  
 ```  
   
- ターゲット復元アプライアンスは、バックアップを復元する前に、ソース バックアップ アプライアンスと互換性のあるかどうかを確認したり、バックアップの内容を確認するヘッダー情報を使用できます。  
+ ヘッダー情報を使用すれば、バックアップの内容を確認したり、バックアップの復元を試みる前にターゲット復元アプライアンスが、ソース バックアップ アプライアンスと互換性があるかどうかを確認したりすることができます。  
   
 ## <a name="see-also"></a>参照  
- [データベースのバックアップ &#40;です。並列データ ウェアハウス&#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)  
+ [BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)  
   
   

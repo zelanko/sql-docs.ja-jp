@@ -1,5 +1,5 @@
 ---
-title: "STRelate (geometry データ型) |Microsoft ドキュメント"
+title: "STRelate (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="strelate-geometry-data-type"></a>STRelate (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  場合 1 を返します、 **geometry**インスタンスが相互に関連**geometry**リレーションシップが、Dimensionally Extended 9 Intersection Model (DE 9IM) パターンのマトリックス値で定義されている場合、インスタンス、0 を返します。  
+  任意の **geometry** インスタンスと別の **geometry** インスタンスとの間になんらかの関係がある場合は 1 を返します。ここでの関係は、Dimensionally Extended 9 Intersection Model (DE-9IM) パターンのマトリックス値で定義されます。関係がない場合は 0 を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,21 +45,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- もう 1 つ**geometry**対象のインスタンスと比較するインスタンス`STRelate()`が呼び出されます。  
+ `STRelate()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
   
  *intersection_pattern_matrix*  
- 型の文字列は、 **nchar(9)** DE 9IM パターンのマトリックス デバイス、2 つの間で許容される値をエンコード**geometry**インスタンス。  
+ **nchar(9)** 型の文字列です。2 つの **geometry** インスタンスの間にある、DE-9IM パターンのマトリックス デバイスで受け付けることができる値にエンコードされます。  
   
-## <a name="remarks"></a>解説  
- このメソッドは、場合常に null を返しますの spatial reference Id (Srid)、 **geometry**インスタンスが一致しません。 このメソッドはスロー、 **ArgumentException**場合は、マトリックスが整形式ではありません。  
+## <a name="remarks"></a>Remarks  
+ **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。 このメソッドは、マトリックスが整形式でない場合に、**ArgumentException** をスローします。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR 戻り値の型: **SqlBoolean**  
   
 ## <a name="examples"></a>使用例  
- 次の例で`STRelate()`2 つのテストに**geometry**空間不整合のあるパターンを使用して、明示的な DE 9IM のインスタンス。  
+ `STRelate()` を使用して、空間的に連結されていない 2 つの **geometry** インスタンスが明示的に DE-9IM パターンを使用しているかどうかをテストする例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

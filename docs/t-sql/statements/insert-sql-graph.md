@@ -1,6 +1,6 @@
 ---
-title: "挿入 (SQL グラフ) |Microsoft ドキュメント"
-description: "SQL のグラフのノードまたはエッジ テーブルの構文を挿入します。"
+title: "INSERT (SQL グラフ) | Microsoft Docs"
+description: "SQL のグラフ ノードまたはエッジ テーブルの INSERT 構文"
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
@@ -30,18 +30,18 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="insert-sql-graph"></a>挿入 (SQL グラフ)
+# <a name="insert-sql-graph"></a>INSERT (SQL グラフ)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  1 つまたは複数の行を追加、`node`または`edge`テーブルに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、1 つまたは複数の行を`node`や`edge`に追加します。 
 
 > [!NOTE]   
->  標準の TRANSACT-SQL ステートメントでは、次を参照してください。 [INSERT TABLE (TRANSACT-SQL)](../../t-sql/statements/insert-transact-sql.md)です。
+>  標準の TRANSACT-SQL ステートメントについては、「[INSERT TABLE (TRANSACT-SQL)](../../t-sql/statements/insert-transact-sql.md)」を参照してください。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="insert-into-node-table-syntax"></a>ノード Table 構文に挿入します。 
-ノードのテーブルに挿入するための構文は、通常のテーブルのと同じです。 
+## <a name="insert-into-node-table-syntax"></a>ノード テーブルへの INSERT 構文 
+ノード テーブルに挿入するための構文は、通常のテーブルの構文と同じです。 
 
 ```  
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -107,43 +107,43 @@ INSERT
   
  
 ## <a name="arguments"></a>引数  
- このドキュメントでは、SQL のグラフに関連する引数について説明します。 完全な一覧と INSERT ステートメントでサポートされている引数の説明では、「 [INSERT TABLE (TRANSACT-SQL)](../../t-sql/statements/insert-transact-sql.md)
+ このドキュメントでは、SQL グラフに関連する引数のみを説明します。 INSERT ステートメントの完全な一覧とサポートされている引数の説明については、「[INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)」を参照してください。
 
  INTO  
- オプションのキーワードの間で使用できる`INSERT`と対象のテーブルです。  
+ `INSERT` と対象のテーブルとの間で使用できるキーワードで、省略可能です。  
   
  *search_condition_with_match*   
- `MATCH`句は、ノードまたはエッジ テーブルへの挿入中に、サブクエリで使用できます。 `MATCH`ステートメントの構文を参照してください[グラフ一致 (TRANSACT-SQL)](../../t-sql/queries/match-sql-graph.md)
+ `MATCH` 句は、ノードまたはエッジ テーブルへの挿入中に、サブクエリで使用できます。 `MATCH` ステートメントの構文については、「[GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md)」を参照してください。
 
  *graph_search_pattern*   
- 指定された検索パターン`MATCH`グラフ述語の一部としての句。
+ グラフ述語の一部として `MATCH` 句に指定された検索パターン。
 
  *edge_table_column_list*   
- ユーザーがの値を指定する必要があります`$from_id`と`$to_id`エッジに挿入するときにします。 値が指定されていないか、null 値は、これらの列に挿入された場合、エラーが返されます。 
+ ユーザーが、エッジを挿入するときに `$from_id` と `$to_id` の値を指定する必要があります。 値が指定されていないか、null がこれらの列に挿入された場合、エラーが返されます。 
   
 
-## <a name="remarks"></a>解説  
-ノードへの挿入は、すべてのリレーショナル テーブルに挿入すると同じです。 $Node_id 列の値が自動的に生成されます。
+## <a name="remarks"></a>Remarks  
+ノードへの挿入は、すべてのリレーショナル テーブルへの挿入と同じです。 $Node_id 列の値が自動的に生成されます。
 
-エッジ テーブルを挿入中に、ユーザーがの値を指定する必要があります`$from_id`と`$to_id`列です。   
+ユーザーが、エッジを挿入するときに `$from_id` と `$to_id` の値を指定する必要があります。   
 
-一括挿入ノード テーブルは、リレーショナル テーブルのと同じままです。
+ノード テーブルの一括挿入は、リレーショナル テーブルの一括挿入と同じままです。
 
-エッジ テーブルに挿入する一括、前にノード テーブルをインポートする必要があります。 値を`$from_id`と`$to_id`から抽出できます、`$node_id`ノード テーブルの列およびエッジとして挿入します。 
+エッジ テーブルに一括挿入する前に、ノード テーブルをインポートする必要があります。 `$from_id` と `$to_id` の値をノード テーブルの `$node_id` 列から抽出し、エッジとして挿入できます。 
 
   
-### <a name="permissions"></a>権限  
+### <a name="permissions"></a>アクセス許可  
  対象のテーブルに対する INSERT 権限が必要です。  
   
- メンバーにアクセス許可の既定値の挿入、 **sysadmin**固定サーバー ロール、 **db_owner**と**db_datawriter**固定データベース ロール、およびテーブル所有者です。 メンバー、 **sysadmin**、 **db_owner**、および**db_securityadmin**ロール、およびテーブル所有者は、他のユーザーに権限を譲渡できます。  
+ INSERT 権限は、既定では **sysadmin** 固定サーバー ロール、**db_owner** 固定データベース ロール、および **db_datawriter** 固定データベース ロールのメンバーと、テーブル所有者に与えられています。 **sysadmin**、**db_owner**、および **db_securityadmin** ロールのメンバー、およびテーブル所有者は、他のユーザーに権限を譲渡できます。  
   
- OPENROWSET 関数の BULK オプションで、挿入を実行するには、メンバーである、 **sysadmin**固定サーバー ロールまたはの**bulkadmin**固定サーバー ロール。  
+ OPENROWSET 関数の BULK オプションで INSERT を実行するには、**sysadmin** 固定サーバー ロールまたは **bulkadmin** 固定サーバー ロールのメンバーであることが必要です。  
   
 
 ## <a name="examples"></a>使用例  
   
-#### <a name="a--insert-into-node-table"></a>A.  ノードのテーブルに挿入します。  
- 次の例では、Person ノード テーブルを作成し、そのテーブルに 2 行を挿入します。
+#### <a name="a--insert-into-node-table"></a>A.  ノード テーブルへの挿入  
+ 次の例では、Person のノードを作成し、2 つの行をテーブルに挿入します。
 
  ```
  -- Create person node table
@@ -154,8 +154,8 @@ INSERT
  INSERT INTO dbo.Person VALUES (2,'John');
  ```
   
-#### <a name="b--insert-into-edge-table"></a>B.  エッジ テーブルに挿入します。  
- 次の例では、フレンド エッジ テーブルを作成し、エッジ テーブルに挿入します。
+#### <a name="b--insert-into-edge-table"></a>B.  エッジ テーブルへの挿入  
+ 次の例では、friend エッジ テーブルを作成し、エッジをテーブルに挿入します。
 
  ```
  -- Create friend edge table
@@ -168,7 +168,7 @@ INSERT
 
   
 ## <a name="see-also"></a>参照  
- [TABLE &#40; を挿入します。TRANSACT-SQL と #41 です。](../../t-sql/statements/insert-transact-sql.md)   
- [SQL Server 2017 を使用した処理グラフ](../../relational-databases/graphs/sql-graph-overview.md)  
+ [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [SQL Server 2017 でのグラフ処理](../../relational-databases/graphs/sql-graph-overview.md)  
 
 

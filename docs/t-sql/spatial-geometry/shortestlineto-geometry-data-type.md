@@ -1,5 +1,5 @@
 ---
-title: "ShortestLineTo (geometry データ型) |Microsoft ドキュメント"
+title: "ShortestLineTo (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-返します、 **LineString**を 2 つの間の最短距離を表す 2 つの点を持つインスタンス**geometry**インスタンス。 長さ、 **LineString**返されるインスタンスは、2 つの間の距離**geometry**インスタンス。
+2 つの **geometry** インスタンスの間の最短距離を表す 2 つの点を持つ **LineString** インスタンスを返します。 返される **LineString** インスタンスの長さは、2 つの **geometry** インスタンスの間の距離です。
   
 ## <a name="syntax"></a>構文  
   
@@ -42,20 +42,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *geometry_other*  
- 2 番目**geometry**インスタンスが、呼び出し元**geometry**インスタンスが最短距離を調べるましょう。  
+ 呼び出し元の **geometry** インスタンスとの最短距離を判別するための 2 つ目の **geometry** インスタンス。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
- このメソッドを返します、 **LineString**インスタンス、2 つの交差しないの境界上にあるエンドポイントを持つ**geometry**比較対象となるインスタンスです。 長さ、 **LineString**返されたが、2 つの間で短距離**geometry**インスタンス。 空**LineString**インスタンスが返される 2 つ**geometry**互いに交差するインスタンス。  
+## <a name="remarks"></a>Remarks  
+ このメソッドでは、比較対象の 2 つの交差しない **geometry** インスタンスの境界上にあるエンドポイントを持つ **LineString** インスタンスが返されます。 返される **LineString** インスタンスの長さは、2 つの **geometry** インスタンスの間の最短距離です。 2 つの **geometry** インスタンスが相互に交差しているとき、空の **LineString** インスタンスが返されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-calling-shortestlineto-on-non-intersecting-instances"></a>A. 交差しないインスタンスに対して ShortestLineTo() を呼び出す  
- この例は、間の最短距離を検索、`CircularString`インスタンスおよび`LineString`インスタンスを返す、 `LineString` 2 つの点を結ぶインスタンス。  
+ この例では、`CircularString` インスタンスと `LineString` インスタンスの間の最短距離を調べ、その 2 つの点を結ぶ `LineString` インスタンスを返します。  
   
 ```
  DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  

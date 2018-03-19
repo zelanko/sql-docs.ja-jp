@@ -1,5 +1,5 @@
 ---
-title: "Geography インスタンスのメソッドを拡張 |Microsoft ドキュメント"
+title: "Geography インスタンスの拡張メソッド | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [EnvelopeCenter](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
   
--   [フィルター](../../t-sql/spatial-geography/filter-geography-data-type.md)  
+-   [[フィルター]](../../t-sql/spatial-geography/filter-geography-data-type.md)  
   
 -   [HasM &#40;geography データ型&#41;](../../t-sql/spatial-geography/hasm-geography-data-type.md)  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [NumRing](../../t-sql/spatial-geography/numrings-geography-data-type.md)  
   
--   [削減](../../t-sql/spatial-geography/reduce-geography-data-type.md)  
+-   [Reduce](../../t-sql/spatial-geography/reduce-geography-data-type.md)  
   
 -   [ReorientObject](../../t-sql/spatial-geography/reorientobject-geography-data-type.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "STIsSimple (geometry データ型) |Microsoft ドキュメント"
+title: "STIsSimple (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-場合 1 を返します、 **geometry**インスタンスが Open Geospatial Consortium (OGC) で定義されているとおりの単純な場合、します。 場合 0 を返します、 **geometry**インスタンスが単純ではありません。
+**geometry** インスタンスが Open Geospatial Consortium (OGC) で定義されているとおりの単純なものであれば 1 を返します。 **geometry** インスタンスが単純なものでない場合、0 を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -44,19 +44,19 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **bit**  
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- 簡単な**geometry**インスタンスはすべて、次の要件を満たしている必要があります。  
+## <a name="remarks"></a>Remarks  
+ 単純であると見なされるには、**geometry** インスタンスが次の要件をすべて満たしている必要があります。  
   
 -   インスタンスの各図形が終点以外で自己交差していてはいけない。  
   
 -   インスタンスの 2 つの図形が、両方の図形の境界外部の点で互いに交差していてはいけない。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、単純でない`LineString`インスタンスを使用して自己交差して`STIsSimple()`をテストするかどうか、`LineString`は単純です。  
+ 次は、それ自体と交差する単純ではない `LineString` インスタンスを作成し、`STIsSimple()` を使用して `LineString` が単純かどうかをテストする例です。  
   
 ```  
 DECLARE @g geometry;  

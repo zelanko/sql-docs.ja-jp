@@ -1,5 +1,5 @@
 ---
-title: "ReorientObject (geography データ型) |Microsoft ドキュメント"
+title: "ReorientObject (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  返します、 **geography**と外部領域が入れ替えられた内部の領域を持つインスタンス。  
+  内部領域と外部領域が入れ替えられた **geography** インスタンスを返します。  
   
- これは、 **geography**データ型メソッドでサポート**FullGlobe**インスタンスまたは空間インスタンスは、半球より大きいをします。  
+ この **geography** データ型メソッドは、半球より大きい **FullGlobe** インスタンスまたは空間インスタンスをサポートします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,17 +47,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *geography*  
- もう 1 つ**geography**インスタンス上に`ReorientObject()`が呼び出されます。  
+ `ReorientObject()` を呼び出したときの別の **geography** インスタンスです。  
   
 ## <a name="return-value"></a>戻り値  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
  CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>解説  
- このメソッドは、すべてのリングの方向を変更**多角形**で、 **GeometryCollection**削除または変更されませんが、**ポイント**または**Linestrings**で特定のコレクション。  
+## <a name="remarks"></a>Remarks  
+ このメソッドでは、**GeometryCollection** 内のすべての **Polygons** のリングの方向が変更されますが、指定されたコレクション内の **Points** または **Linestrings** はいずれも削除または変更されません。  
   
- 場合、 **GeometryCollection**渡されるこのメソッドには、コレクション内の各インスタンスは方向が、コレクション全体方向は変更されません。  
+ このメソッドに **GeometryCollection** を渡すと、そのコレクション内の各インスタンスの方向が変更されますが、コレクション全体の方向は変更されません。  
   
 ## <a name="examples"></a>使用例  
   

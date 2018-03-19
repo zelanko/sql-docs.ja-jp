@@ -1,5 +1,5 @@
 ---
-title: "WRITETEXT (TRANSACT-SQL) |Microsoft ドキュメント"
+title: WRITETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -40,10 +40,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  最小ログ記録、対話型が、既存の更新を許可**テキスト**、 **ntext**、または**イメージ**列です。 WRITETEXT は、影響のある列内の既存のすべてのデータを上書きします。 は、WRITETEXT を使用できません**テキスト**、 **ntext**、および**イメージ**ビュー内の列です。  
+  既存の **text**、**ntext**、または **image** 列の最小限ログに記録する対話型の更新を許可します。 WRITETEXT は、影響のある列内の既存のすべてのデータを上書きします。 WRITETEXT をビュー内の **text** 列、**ntext** 列、**image** 列に対して使用することはできません。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]大きな値データ型を使用し、 **.**WRITE 句、[更新](../../t-sql/queries/update-transact-sql.md)ステートメント代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、large-value データ型と [UPDATE](../../t-sql/queries/update-transact-sql.md) ステートメントの **.**WRITE 句を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,39 +61,39 @@ WRITETEXT [BULK]
  アップロード ツールによるバイナリ データ ストリームのアップロードを有効にします。 ストリームは、TDS プロトコル レベルでツールが提供する必要があります。 データ ストリームが存在しない場合、クエリ プロセッサは BULK オプションを無視します。  
   
 > [!IMPORTANT]  
->  BULK オプションで使用しないことをお勧め[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-ベースのアプリケーションです。 このオプションを変更またはの将来のバージョンで削除された可能性があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ベースのアプリケーションでの BULK オプションの使用はお勧めしません。 このオプションは将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では変更または削除される可能性があります。  
   
  *table* **.column**  
- テーブルの名前を指定および**テキスト**、 **ntext**、または**イメージ**列が更新されます。 テーブルおよび列名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。 データベース名と所有者名の指定は省略可能です。  
+ 更新するテーブルと **text**、**ntext**、または **image** 型の列の名前。 テーブル名と列名は、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。 データベース名と所有者名の指定は省略可能です。  
   
  *text_ptr*  
- ポインターを格納する値は、**テキスト**、 **ntext**、または**イメージ**データ。 *text_ptr* must be **binary(16)**.To create a text pointer, execute an [INSERT](../../t-sql/statements/insert-transact-sql.md) or [UPDATE](../../t-sql/queries/update-transact-sql.md) statement with data that is not null for the **text**, **ntext**, or **image** column.  
+ **text**、**ntext**、または **image** データへのポインターを保存する値です。 *text_ptr* は **binary(16)** にする必要があります。テキスト ポインターを作成するには、**text**、**ntext**、または **image** 列に対して NULL 以外のデータを使用する [INSERT](../../t-sql/statements/insert-transact-sql.md) ステートメントまたは [UPDATE](../../t-sql/queries/update-transact-sql.md) ステートメントを実行します。  
   
  WITH LOG  
- によって無視[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 ログ記録は、データベースで有効になっている復旧モデルによって異なります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では無視されます。 ログ記録は、データベースで有効になっている復旧モデルによって異なります。  
   
  *data*  
- 実際は**テキスト**、 **ntext**または**イメージ**格納するデータ。 *データ*リテラルまたはパラメーターを指定できます。 WRITETEXT を使用して対話的に挿入できるテキストの最大長は約 120 KB です**テキスト**、 **ntext**、および**イメージ**データ。  
+ 格納する実際の **text**、**ntext**、または **image** データです。 *data* には、リテラルまたはパラメーターを指定することができます。 WRITETEXT を使用して対話的に挿入可能なテキスト長の最大値は、**text**、**ntext**、および **image** データで約 120 KB です。  
   
-## <a name="remarks"></a>解説  
- WRITETEXT を使用してに置き換える**テキスト**、 **ntext**、および**イメージ**データとを変更する UPDATETEXT**テキスト**、 **ntext**、および**イメージ**データ。 UPDATETEXT より柔軟の一部だけを変更するため、**テキスト**、 **ntext**、または**イメージ**列全体ではなく列です。  
+## <a name="remarks"></a>Remarks  
+ WRITETEXT を使用して **text**、**ntext**、および **image** データを置き換え、UPDATETEXT を使用して **text**、**ntext**、および **image** データを変更します。 UPDATETEXT は、**text**、**ntext**、または **image** 列の全体ではなく一部のみを変更するため柔軟性があります。  
   
- 最適なパフォーマンスをことをお勧め**テキスト**、 **ntext**、および**イメージ**データを挿入または 8,040 バイトの倍数であるチャンクのサイズを更新します。  
+ 最高のパフォーマンスが得られるよう、8,040 バイトの倍数の単位で **text**、**ntext**、および **image** データを挿入または更新することをお勧めします。  
   
- データベースの復旧モデルが単純型または一括ログ記録場合**テキスト**、 **ntext**、および**イメージ**WRITETEXT を使用する操作は、新しいデータが、最小ログ記録操作挿入または追加します。  
+ データベース復旧モデルが単純復旧モデルまたは一括ログ復旧モデルである場合は、新しいデータを挿入または追加するときに、WRITETEXT を使用する **text**、**ntext**、および **image** 操作は最小限しかログに記録されません。  
   
 > [!NOTE]  
 >  既存の値を更新するときには、最小限のログ記録は使用されません。  
   
  WRITETEXT が正しく機能するためには、その列は既に有効なテキスト ポインターを含んでいる必要があります。  
   
- 行内のテキスト、テーブルがない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]初期化しないで領域を節約**テキスト**列で明示的または暗黙的な null 値が追加されると**テキスト**INSERT、およびなしのテキスト ポインターを持つ列を指定できますこのような null 値を取得します。 初期化するために**テキスト**列を NULL には、UPDATE ステートメントを使用します。 テーブルに行内テキストがある場合、テキスト列を初期化して NULL にする必要はなく、常にテキスト ポインターを取得できます。  
+ テーブルに行内テキストがない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、明示的または暗黙的な NULL 値が INSERT によって **text** 列に挿入されているときに **text** 列の初期化を省略することによって領域を節約しますが、そのような NULL に対するテキスト ポインターは取得できません。 **text** 列を初期化して NULL にするには、UPDATE ステートメントを使用します。 テーブルに行内テキストがある場合、テキスト列を初期化して NULL にする必要はなく、常にテキスト ポインターを取得できます。  
   
- ODBC SQLPutData 関数は高速であり、WRITETEXT よりも小さい動的メモリを使用します。 この関数の 2 ギガバイトを挿入できる**テキスト**、 **ntext**、または**イメージ**データ。  
+ ODBC SQLPutData 関数は、WRITETEXT に比べ高速で、使用する動的メモリの量も少なくなります。 この関数は、最大 2 GB までの **text**、**ntext**、または **image** データを挿入できます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の行内テキスト ポインター**テキスト**、 **ntext**、または**イメージ**データが存在しても、有効なことができない可能性があります。 Text in row オプションの詳細については、次を参照してください。 [sp_tableoption &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). テキスト ポインターを無効になります。 詳細については、次を参照してください。 [sp_invalidate_textptr (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**text**、**ntext**、または **image** データへの行内テキスト ポインターが存在しても、無効になる場合があります。 text in row オプションについては、「[sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)」を参照してください。 テキスト ポインターを無効にする方法の詳細については、「[sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)」を参照してください。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  指定したテーブルの UPDATE 権限が必要です。 UPDATE 権限が転送されるときに、この権限は譲渡できます。  
   
 ## <a name="examples"></a>使用例  
@@ -124,6 +124,6 @@ GO
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [UPDATETEXT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/updatetext-transact-sql.md)  
+ [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)  
   
   

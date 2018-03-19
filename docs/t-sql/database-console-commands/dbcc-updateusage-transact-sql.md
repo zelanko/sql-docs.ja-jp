@@ -1,5 +1,5 @@
 ---
-title: "DBCC UPDATEUSAGE (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC UPDATEUSAGE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -66,7 +66,7 @@ DBCC UPDATEUSAGE
   
 ## <a name="arguments"></a>引数  
 *database_name* | *database_id* | 0  
-領域使用状況の統計をレポートおよび修正するデータベースの名前または ID を指定します。 0 を指定すると、現在のデータベースが選択されます。 データベース名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。  
+領域使用状況の統計をレポートおよび修正するデータベースの名前または ID を指定します。 0 を指定すると、現在のデータベースが選択されます。 データベース名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
 *table_name* | *table_id* | *view_name* | *view_id*  
 領域使用状況の統計をレポートおよび修正するテーブルやインデックス付きビューの名前または ID を指定します。 テーブル名とビュー名は、識別子の規則に従っている必要があります。  
@@ -75,7 +75,7 @@ DBCC UPDATEUSAGE
 使用するインデックスの ID または名前を指定します。 これらを指定しない場合、ステートメントでは指定したテーブルまたはビューのすべてのインデックスが処理されます。  
   
 のすべてのメンションを  
-指定するオプションを使用できます。  
+オプションの指定を許可します。  
   
 NO_INFOMSGS  
 すべての情報メッセージを表示しないようにします。  
@@ -83,13 +83,13 @@ NO_INFOMSGS
 COUNT_ROWS  
 row count 列に、テーブルまたはビューの現在の行数カウントを反映します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 DBCC UPDATEUSAGE では、テーブルまたはインデックスのパーティションごとに、行、使用済みページ、予約済みページ、リーフ ページ、およびデータ ページのカウントが修正されます。 システム テーブルに情報の不一致がない場合、DBCC UPDATEUSAGE ではデータは返されません。 情報の不一致が検出および修正され、WITH NO_INFOMSGS が使用されていない場合、DBCC UPDATEUSAGE ではシステム テーブル内の更新された行と列が返されます。
   
 DBCC CHECKDB が強化され、ページや行のカウントが負になったことを検出します。 この問題が検出されると、DBCC CHECKDB の出力に警告が表示され、推奨される解決方法として DBCC UPDATEUSAGE を実行するよう示されます。
   
 ## <a name="best-practices"></a>ベスト プラクティス  
-次お勧めします。
+次をお勧めします。
 -   DBCC UPDATEUSAGE を定期的に実行しないでください。 DBCC UPDATEUSAGE は、大規模なテーブルやデータベースで実行すると時間がかかるため、sp_spaceused で返される値が正しくないと思われる場合以外は使用しないようにします。
 -   データベースでデータ定義言語 (DDL) の変更 (CREATE、ALTER、DROP などのステートメント) が頻繁に実行されている場合に限り、DBCC UPDATEUSAGE を定期的 (毎週など) に実行することを検討します。  
   
@@ -98,13 +98,13 @@ DBCC UPDATEUSAGE では次の情報が返されます (値は変わることが�
   
 `DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-updating-page-or-row-counts-or-both-for-all-objects-in-the-current-database"></a>A. 現在のデータベースのすべてのオブジェクトに対し、ページ数または行数、あるいはその両方を更新する  
-次の例では指定`0`データベース名と`DBCC UPDATEUSAGE`更新レポート ページまたは行のカウントの情報を現在のデータベースです。
+次の例では、データベース名に `0` を指定し、`DBCC UPDATEUSAGE` で現在のデータベースに対する更新されたページ数または行数をレポートします。
   
 ```sql
 DBCC UPDATEUSAGE (0);  
@@ -120,7 +120,7 @@ GO
 ```  
   
 ### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>C. Employee テーブルに対してページ数または行数、あるいはその両方を更新する  
-次の例では、レポートのページまたは行カウント情報が更新された、`Employee`テーブルに、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。
+次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの `Employee` テーブルに関して、更新されたページ数または行数をレポートします。
   
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');  
@@ -137,7 +137,7 @@ GO
   
 ## <a name="see-also"></a>参照  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[sp_spaceused &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
+[sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)
   
   

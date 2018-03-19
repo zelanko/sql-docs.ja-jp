@@ -1,5 +1,5 @@
 ---
-title: "STPointFromWKB (geometry データ型) |Microsoft ドキュメント"
+title: "STPointFromWKB (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointfromwkb-geometry-data-type"></a>STPointFromWKB (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返します、 **geometryPoint** Open Geospatial Consortium (OGC) Well-Known Binary (WKB) 表現からのインスタンス。
+Open Geospatial Consortium (OGC) Well-Known Binary (WKB) 表現を基に **geometryPoint** インスタンスを返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,23 +45,23 @@ STPointFromWKB ( 'WKB_point' , SRID )
   
 ## <a name="arguments"></a>引数  
  *WKB_point*  
- WKB 表現です、 **geometryPoint**インスタンスを取得します。 *WKB_point*は、 **varbinary (max)**式。  
+ 返される **geometryPoint** インスタンスの WKB 表現です。 *WKB_point* は、**varbinary(max)** 式です。  
   
  *SRID*  
- **Int** 、空間を表す式の ID (SRID) を参照、 **geometryPoint**インスタンスを取得します。  
+ 返される **geometryPoint** インスタンスの SRID (spatial reference ID) を表す **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
  CLR の戻り値の型: **SqlGeometry**  
   
- OGC の型:**ポイント**  
+ OGC の型: **Point**  
   
-## <a name="remarks"></a>解説  
- このメソッドはスロー、 **FormatException**入力が適切な形式でない場合。  
+## <a name="remarks"></a>Remarks  
+ このメソッドでは、入力が整形式でない場合、**FormatException** をスローします。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`STPointFromWKB()`を作成する、`geometry`インスタンス。  
+ `STPointFromWKB()` を使用して `geometry` インスタンスを作成する例を次に示します。  
   
 ```  
 DECLARE @g geometry;   

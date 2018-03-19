@@ -27,11 +27,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  データを選択、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]データベースにあり、SMP で新しいテーブルにそのデータをコピー[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リモート サーバー上のデータベースです。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]MPP クエリのリモート コピーのデータを選択する、処理のすべての利点とアプライアンスを使用します。 このシナリオを使用を必要とする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能します。  
+  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] データベースからデータを選択し、リモート サーバー上の SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内の新しいテーブルにデータをコピーします。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、MPP クエリのすべてのメリットを活用し、アプライアンスを使用して、リモート コピーのデータを選択します。 これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能を必要とするシナリオに使用します。  
   
- リモート サーバーを構成するのには「リモート テーブルのコピー」を参照してください、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
+ リモート サーバーを構成するには、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]の「リモート テーブルのコピー」を参照してください。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,97 +52,97 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
   
 ## <a name="arguments"></a>引数  
  *database_name*  
- リモート テーブルを作成するデータベースです。 *database_name*は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 既定値は、先にユーザーのログインの既定のデータベース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。  
+ リモート テーブルを作成するデータベースです。 *database_name* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースです。 既定値は、宛先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのユーザーのログインの既定のデータベースです。  
   
  *schema_name*  
- 新しいテーブルのスキーマです。 既定値は、先にユーザーのログインの既定のスキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。  
+ 新しいテーブルのスキーマです。 既定値は、宛先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのユーザーのログインの既定のスキーマです。  
   
  *table_name*  
- 新しいテーブルの名前です。 詳細についてはテーブル名を許可されているで「オブジェクトの名前付け規則」を参照してください、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
+ 新しいテーブルの名前です。 使用可能なテーブル名の詳細については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]の「オブジェクトの名前付け規則」を参照してください。  
   
- リモート テーブルがヒープとして作成されます。 Check 制約やトリガーはありません。 リモート テーブルの列の照合順序は、ソース テーブルの列の照合順序と同じです。 これは型の列に当てはまります**char**、 **nchar**、 **varchar**、および**nvarchar**です。  
+ リモート テーブルがヒープとして作成されます。 Check 制約やトリガーはありません。 リモート テーブルの列の照合順序は、ソース テーブルの列の照合順序と同じです。 これは、**char**、**nchar**、**varchar**、および **nvarchar** 型の列に適用されます。  
   
  *connection_string*  
- 文字の文字列を指定する、 `Data Source`、 `User ID`、および`Password`リモート サーバーとデータベースに接続するためのパラメーターです。  
+ リモート側およびデータベースに接続するための `Data Source`、`User ID`、および `Password` パラメーターを指定する文字列です。  
   
- 接続文字列は、キーと値のペアのセミコロンで区切られた一覧です。 キーワードは、大文字小文字が区別されません。 キーと値のペア間のスペースは無視されます。 ただし、値は、データ ソースによっては、大文字小文字が区別にあります。  
+ 接続文字列は、セミコロンで区切られたキーと値のペアの一覧です。 キーワードの大文字と小文字は区別されません。 キーと値のペア間のスペースは無視されます。 ただし、データ ソースによっては、値の大文字小文字が区別されます。  
   
  *[データ ソース]*  
- リモートの SMP のポート番号を名前または IP アドレスと TCP を指定するパラメーター[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ リモートの SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前、IP アドレス、および TCP ポート番号を指定するパラメーターです。  
   
- *ホスト名*または*IP_address*  
- リモート サーバー コンピューターまたはリモート サーバーの IPv4 アドレスの名前。 IPv6 アドレスはサポートされていません。 指定することができます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名前付きインスタンスの形式で**Computer_Name\Instance_Name**または**IP_address\Instance_Name**です。 サーバーは、リモートである必要があり、(local) として指定することはできません。  
+ *hostname* または *IP_address*  
+ リモート サーバー コンピューターの名前またはリモート サーバーの IPv4 アドレスです。 IPv6 アドレスはサポートされていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名前付きインスタンスを、**Computer_Name\Instance_Name** または **IP_address\Instance_Name** の形式で指定することができます。 サーバーは、リモートである必要があり、(local) として指定することはできません。  
   
- TCP*ポート*数  
- 接続の TCP ポート番号。 既定のポート 1433 でリッスンしていない SQL Server のインスタンスの 0 から 65535 までの TCP ポート番号を指定できます。 例: **ServerA 1450**または**10.192.14.27,1435**  
+ TCP *port* 番号  
+ 接続の TCP ポート番号。 既定のポート 1433 でリッスンしていない SQL Server のインスタンスに対して、0～65535 の TCP ポート番号を指定することができます。 例: **ServerA 1450** または **10.192.14.27,1435**  
   
 > [!NOTE]  
->  IP アドレスを使用してリモート サーバーに接続することをお勧めします。 構成によっては、ネットワーク、コンピューター名を使用して接続する、正しいサーバーに名前を解決するのには、非アプライアンスの DNS サーバーを使用する追加の手順が必要があります。 IP アドレスに接続するときに、この手順は必要ではありません。 詳細についてを参照してください「を解決する非アプライアンスの DNS 名 (Analytics Platform System) に、DNS フォワーダーを使用して」、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
+>  IP アドレスを使用してリモート サーバーに接続することをお勧めします。 ネットワーク構成によっては、コンピューター名を使用して接続するときに、正しいサーバーの名前を解決する非アプライアンス DNS サーバーを使用するために、追加の手順が必要になることがあります。 IP アドレスで接続するときには、この手順は必要ではありません。 詳細については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]の「Use a DNS Forwarder to Resolve Non-Appliance DNS Names (Analytics Platform System)」(DNS フォワーダーを使用して非アプライアンス DNS 名を解決する (分析プラットフォーム システム)) を参照してください。  
   
  *user_name*  
- 有効な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ログイン名。 最大文字数は 128 です。  
+ 有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログイン名。 最大文字数は 128 文字です。  
   
  *password*  
- ログイン パスワード。 最大文字数は 128 です。  
+ ログイン パスワード。 最大文字数は 128 文字です。  
   
  *batch_size*  
- バッチごとの行数の最大数。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]行をバッチで移行先サーバーに送信します。 *Batch_size*正の整数 > = 0。 既定値は 0 です。  
+ バッチごとの最大行数。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、行をバッチで移行先サーバーに送信します。 *Batch_size* は 0 以上の正の整数です。 既定値は 0 です。  
   
  WITH *common_table_expression*  
- 共通テーブル式 (CTE) と呼ばれる一時的な名前付き結果セットを指定します。 詳細については、次を参照してください。[で common_table_expression と #40 です。TRANSACT-SQL と #41 です](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
+ 共通テーブル式 (CTE) と呼ばれる一時的な名前付き結果セットを指定します。 詳細については、「[WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)」を参照してください。  
   
- 選択\<select_criteria > 新しいリモート テーブルを構成するデータを指定するクエリ述語です。 詳細については、SELECT ステートメントは、次を参照してください[SELECT &#40;。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-transact-sql.md).  
+ SELECT \<select_criteria> 新しいリモート テーブルに入力するデータを指定するクエリの述語です。 SELECT ステートメントの詳細については、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
   
-## <a name="permissions"></a>権限  
- 必要です。  
+## <a name="permissions"></a>アクセス許可  
+ 必須:  
   
--   SELECT 句内の各オブジェクトのアクセス許可を選択します。  
+-   SELECT 句内の各オブジェクトの SELECT アクセス許可。  
   
--   移行先 SMP データベースに対する CREATE TABLE 権限が必要です。  
+-   移行先 SMP データベースに対する CREATE TABLE アクセス許可が必要です。  
   
--   ALTER、INSERT、および送信先 SMP スキーマに対する SELECT 権限が必要です。  
+-   移行先 SMP スキーマに対する ALTER、INSERT、および SELECT アクセス許可が必要です。  
   
 ## <a name="error-handling"></a>エラー処理  
- リモート データベースへのデータのコピーに失敗した場合[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]操作を中止、エラー ログに記録され、リモート テーブルを削除しようとしています。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]新しいテーブルのクリーンアップは保証されません。  
+ リモート データベースへのデータのコピーに失敗した場合、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、操作を中止し、エラーをログに記録して、リモート テーブルを削除しようとします。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 新しいテーブルの正常なクリーンアップは保証されません。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- **移行先のリモート サーバー**:  
+ **リモート転送先サーバー**:  
   
--   TCP は、既定値は、およびプロトコルをリモート サーバーへの接続でのみサポートします。  
+-   TCP は、既定値であり、リモート サーバーへの接続でサポートされている唯一のプロトコルです。  
   
--   移行先サーバーは、非アプライアンス サーバーである必要があります。 CREATE REMOTE TABLE は、1 つのアプライアンス間でデータをコピーするには使用できません。  
+-   転送先サーバーは、非アプライアンス サーバーである必要があります。 CREATE REMOTE TABLE を使用して、1 つのアプライアンスから別のアプライアンスにデータをコピーすることはできません。  
   
--   CREATE REMOTE TABLE ステートメントには、新しいテーブルのみを作成します。 したがって、新しいテーブルは既に存在できません。 リモート データベースとスキーマが既に存在する必要があります。  
+-   CREATE REMOTE TABLE ステートメントは、新しいテーブルのみを作成します。 したがって、新しいテーブルが既に存在していることはありません。 リモート データベースとスキーマは既に存在している必要があります。  
   
--   リモート サーバーは、アプライアンスから転送されるデータの格納に使用可能な領域を持つ必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リモート データベース。  
+-   リモート サーバーは、アプライアンスから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リモート データベースに転送されるデータを格納するために使用できる領域を持っている必要があります。  
   
  **SELECT ステートメント**:  
   
 -   選択条件では、ORDER BY および TOP 句はサポートされていません。  
   
--   アクティブなトランザクション内部、または自動コミット オフ設定では、セッションがアクティブなときに、CREATE REMOTE TABLE を実行できません。  
+-   アクティブなトランザクション内、またはセッションで AUTOCOMMIT OFF 設定がアクティブなときには、CREATE REMOTE TABLE を実行できません。  
   
- [SET ROWCOUNT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-rowcount-transact-sql.md)このステートメントでも何も起こりません。 同様の動作を実現するために使用[TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
+ [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) は、このステートメントに効果はありません。 同様の動作を実現するには、[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) を使用します。  
   
 ## <a name="locking-behavior"></a>ロック動作  
- リモート テーブルを作成した後、コピーを開始するまで、変換先テーブルをロックしません。 したがって、別のプロセスを作成した後、およびコピーを開始する前に、リモート テーブルを削除することができます。 この場合、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]でエラーが発生し、コピーは失敗します。  
+ リモート テーブルを作成した後で、コピーを開始するまで、移行先テーブルはロックされません。 したがって、リモート テーブルが作成された後、コピーを開始する前に別のプロセスがリモート テーブルを削除する可能性があります。 これが発生した場合、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] はエラーを生成し、コピーは失敗します。  
   
 ## <a name="metadata"></a>メタデータ  
- 使用して[sys.dm_pdw_dms_workers &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md)リモート SMP サーバーへの選択したデータのコピーの進行状況を表示します。 PARALLEL_COPY_READER の種類を持つ行には、この情報が含まれています。  
+ 選択したデータのリモート SMP サーバーへのコピーの進行状況を表示するには、[sys.dm_pdw_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md) を使用します。 PARALLEL_COPY_READER 型の行に、この情報が含まれています。  
   
-## <a name="security"></a>セキュリティ  
- CREATE REMOTE TABLE を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リモートへの接続に認証[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスです。 Windows 認証は使用されません。  
+## <a name="security"></a>Security  
+ CREATE REMOTE TABLE は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して、リモートの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。Windows 認証は使用しません。  
   
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]の例外が、外部に公開されたネットワークをファイアウォール必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ポート、管理ポート、および管理のポートです。  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の外部に公開されたネットワークはファイアウォールが使用されている必要があります。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ポートおよび管理ポートは例外です。  
   
- 偶発的なデータの消失または破損を防ぐために、アプライアンスから転送先データベースにコピーするために使用するユーザー アカウントが、転送先データベースにのみ、最低限必要なアクセス許可が必要です。  
+ 偶発的なデータの消失または破損を防ぐために、アプライアンスから移行先データベースにコピーするために使用するユーザー アカウントは、移行先データベースに対して最低限必要なアクセス許可のみを持つようにする必要があります。  
   
- 接続設定では、SMP に接続できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー名とパスワードのデータを保護する SSL ではなく、実際のデータがクリア テキストで暗号化されずに送信されているインスタンス。 この場合、悪意のあるユーザーが CREATE REMOTE TABLE ステートメントのテキストが含まれてをインターセプトでした、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP にログオンするユーザー名とパスワード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 このリスクを避けるためには、SMP への接続でデータの暗号化を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。  
+ 接続設定では、SSL で保護されたユーザー名とパスワードのデータを使用して SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続できますが、実際のデータはクリア テキストで暗号化されずに送信されます。 この場合、悪意のあるユーザーが、SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにログオンするための [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー名とパスワードが含まれている CREATE REMOTE TABLE ステートメントのテキストを傍受する可能性があります。 このリスクを避けるためには、SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続ではデータの暗号化を使用してください。  
   
 ##  <a name="Examples"></a> 使用例  
   
-### <a name="a-creating-a-remote-table"></a>A. リモート テーブルを作成します。  
- この例で作成、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP のリモート テーブルと呼ばれる`MyOrdersTable`データベースで`OrderReporting`とスキーマ`Orders`です。 `OrderReporting`という名前のサーバーにあるデータベース`SQLA`を既定のポート 1433 をリッスンします。 サーバーへの接続がユーザーの資格情報を使用して`David`、パスワードの`e4n8@3`します。  
+### <a name="a-creating-a-remote-table"></a>A. リモート テーブルの作成  
+ この例では、`MyOrdersTable` という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP のリモート テーブルをデータベース `OrderReporting` およびスキーマ `Orders` に作成します。 `OrderReporting` データベースは、既定のポート 1433 でリッスンする `SQLA` というサーバー上にあります。 サーバーへの接続では、ユーザー `David` の資格情報を使用します。ユーザーのパスワードは `e4n8@3` です。  
   
 ```  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  
@@ -158,8 +158,8 @@ SELECT * FROM sys.dm_pdw_dms_workers
 WHERE type = 'PARALLEL_COPY_READER';  
 ```  
   
-### <a name="c-using-a-query-join-hint-with-create-remote-table"></a>C. リモート テーブルの作成とクエリの結合ヒントを使用します。  
- このクエリは、リモート テーブルの作成とクエリの結合ヒントを使用するための基本構文を示しています。 クエリは、コントロール ノードに送信された後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、コンピューティング ノードで実行されている、生成するときに、ハッシュ結合の方法を適用、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クエリ プラン。 結合ヒントや、OPTION 句を使用する方法の詳細については、次を参照してください。 [OPTION 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/option-clause-transact-sql.md).  
+### <a name="c-using-a-query-join-hint-with-create-remote-table"></a>C. CREATE REMOTE TABLE とクエリの結合ヒントを使用する  
+ このクエリは、CREATE REMOTE TABLE を使用してクエリの結合ヒントを使用するための基本構文を示しています。 クエリが、コントロール ノードに送信された後で、コンピューティング ノード上で実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ プランを生成するときにハッシュ結合の方法を適用します。 結合ヒントと OPTION 句の使用方法の詳細については、「[OPTION 句 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)」を参照してください。  
   
 ```  
 USE ssawPDW;  

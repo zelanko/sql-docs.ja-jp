@@ -1,5 +1,5 @@
 ---
-title: "- (負)(TRANSACT-SQL) |Microsoft ドキュメント"
+title: "- (負号) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="unary-operators---negative"></a>単項演算子 - 負の値
+# <a name="unary-operators---negative"></a>単項演算子 - 負号
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   数値式について負の値を返します (単項演算子)。 単項演算子は、数値型に分類されるデータ型の 1 つの式に対してだけ操作を実行します。   
@@ -55,10 +55,10 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *numeric_expression*  
- 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)日付以外の数値データ型カテゴリと時間のカテゴリのデータ型のいずれか。  
+ 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。データ型は、日付と時刻以外の数値データ型であることが必要です。  
   
 ## <a name="result-types"></a>戻り値の型  
- データ型を返す*numeric_expression*する点を除いて、符号なし**tinyint**式の昇格を符号付き**smallint**結果。  
+ *numeric_expression* のデータ型を返します。ただし符号なし **tinyint** 型の式は例外で、この場合の結果は符号ありの **smallint** 型になります。  
   
 ## <a name="examples"></a>使用例  
   
@@ -109,7 +109,7 @@ VariableValue NegativeValue
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-returning-the-negative-of-a-positive-constant"></a>C. 正の定数の負の値を返す  
  次の例では、正の定数の負の値を返します。  
@@ -120,7 +120,7 @@ USE ssawPDW;
 SELECT TOP (1) - 17 FROM DimEmployee;  
 ```  
   
- 返します。  
+ 戻り値  
   
 ```  
 -17  
@@ -135,14 +135,14 @@ USE ssawPDW;
 SELECT TOP (1) – ( - 17) FROM DimEmployee;  
 ```  
   
- 返します。  
+ 戻り値  
   
 ```  
 17  
 ```  
   
 ### <a name="e-returning-the-negative-of-a-column"></a>E. 列の負の値を返す  
- 次の例の負の値を返します、`BaseRate`内の各従業員の値、`dimEmployee`テーブル。  
+ 次の例では、`dimEmployee` テーブルの各従業員に対し、`BaseRate` 値の負の値を返します。  
   
 ```  
 USE ssawPDW;  
@@ -152,8 +152,8 @@ SELECT - BaseRate FROM DimEmployee;
   
 ## <a name="see-also"></a>参照  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)  
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
 

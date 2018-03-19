@@ -1,5 +1,5 @@
 ---
-title: "STBuffer (geography データ型) |Microsoft ドキュメント"
+title: "STBuffer (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stbuffer-geography-data-type"></a>STBuffer (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  すべての和集合を表す geography オブジェクトからの距離の地点を返します、 **geography**インスタンスは小さい値を指定します。  
+  **geography** インスタンスからの距離が指定した値以下となる、すべての地点の和集合を表す geography オブジェクトを返します。  
   
- この geography データ型メソッドでサポート**FullGlobe**インスタンスまたは空間インスタンスは、半球より大きいをします。  
+ この geography データ型メソッドは、半球より大きい **FullGlobe** インスタンスまたは空間インスタンスをサポートします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,32 +47,32 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *distance*  
- 型の値は、 **float** (**二重**.NET Framework の) からの距離を指定する、 **geography**バッファー計算の対象となるインスタンスです。  
+ **float** 型 (.NET Framework では **double** 型) の値であり、バッファー計算の対象とする **geography** インスタンスからの距離を指定します。  
   
- バッファーの最大距離は、0.999 を超えることはできません\* *π* * minorAxis \* minorAxis/#42/majoraxis (~0.999 \* 1/2 地球の円周) または全球。  
+ バッファーの最大距離は、0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 地球の円周の 1/2) で求められる値または全球を超えることはできません。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
  CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>解説  
- STBuffer() と同じ方法でバッファーを計算する[BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)を指定して、*トレランス*= abs (distance) \* .001 と*相対* = **false**です。  
+## <a name="remarks"></a>Remarks  
+ STBuffer() は、*tolerance* = abs(distance) \* .001 および *relative* = **false** を指定して [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md) を呼び出すのと同じ方法でバッファーを計算します。  
   
- バッファーが負の値の境界の指定した距離内のすべての地点を削除する、 **geography**インスタンス。  
+ バッファーに負の値を指定すると、**geography** インスタンスの境界から、指定された距離の範囲内にある地点がすべて削除されます。  
   
- `STBuffer()`返されます、 **FullGlobe**場合インスタンスなど、`STBuffer()`を返します、 **FullGlobe**インスタンス バッファーの距離が赤道から極地までの距離を超える場合。 バッファーは全球を超えることはできません。  
+ `STBuffer()` は、**FullGlobe** インスタンスを返すことがあります。たとえば、バッファーの距離が赤道から極地までの距離を超えている場合、`STBuffer()` は 2 つの極地の **FullGlobe** インスタンスを返します。 バッファーは全球を超えることはできません。  
   
- このメソッドはスロー、 **ArgumentException**で**FullGlobe**インスタンスが、バッファーの距離が次の制限を超えています。  
+ このメソッドは、バッファーの距離が次の制限値を超えている場合、**FullGlobe** インスタンスで **ArgumentException** をスローします。  
   
- 0.999 \* *π* * minorAxis \* minorAxis/#42/majoraxis (~0.999 \* 1/2 地球の円周の)  
+ 0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 地球の円周の 1/2)  
   
  最大距離の制限により、バッファーを構築する際の柔軟性が最大限に高まります。  
   
- 理論上と計算されたバッファー間の誤差が最大 (の許容範囲、エクステント * 1.E ~ 7) での許容範囲 = 距離\*.001 です。 エクステントの詳細については、次を参照してください。 [geography データ型メソッド リファレンス](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)です。  
+ 理論上のバッファーと計算されたバッファーの間の誤差は、max(tolerance, extents * 1.E-7) です。tolerance は distance \* .001 になります。 エクステントの詳細は、「[geography データ型メソッド リファレンス](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
- 次の例を作成、`LineString``geography`インスタンス。 使用して、 `STBuffer()` 1 メートル以内、インスタンスの領域を返します。  
+ 次の例では、`LineString``geography` インスタンスを作成します。 次に、`STBuffer()` を使用して、インスタンスから 1 m 以内にある領域を返します。  
   
 ```  
 DECLARE @g geography;  

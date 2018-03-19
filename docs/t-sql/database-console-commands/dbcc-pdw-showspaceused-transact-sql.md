@@ -1,5 +1,5 @@
 ---
-title: "DBCC PDW_SHOWSPACEUSED (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC PDW_SHOWSPACEUSED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: 
@@ -26,12 +26,12 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (TRANSACT-SQL)
+# <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-行の数、ディスク領域が予約されている、特定のテーブルまたはすべてのテーブルで使用されるディスク領域が表示されます、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]データベース。
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] データベースの特定のテーブルまたはすべてのテーブルの行数、予約済みのディスク領域、使用済みのディスク領域を表示します。
   
-![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
   
@@ -49,35 +49,35 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
  [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
  1 つ、2 枚、または表示するテーブルの 3 部構成の名前。 2 つの 3 つの要素名、名前は、二重引用符で囲む必要がありますか ("")。 1 つの部分から成るテーブル名を囲む引用符を使用したはオプションです。 テーブル名が指定されていない場合は、現在のデータベースの情報が表示されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 VIEW SERVER STATE 権限が必要です。
   
 ## <a name="result-sets"></a>結果セット  
 これは、すべてのテーブルの結果セットです。
   
-|列|データ型|Description|  
+|[列]|データ型|Description|  
 |------------|---------------|-----------------|  
-|reserved_space|bigint|領域の合計 (KB 単位) をデータベースに使用します。|  
-|data_space|bigint|(KB 単位) のデータに使用される領域です。|  
-|index_space|bigint|領域を kb 単位でのインデックスに使用します。|  
-|unused_space|bigint|な領域を予約した領域の一部であり、使用しない、(KB 単位)。|  
-|pdw_node_id|int|データの使用されているノードを計算します。|  
+|reserved_space|BIGINT|領域の合計 (KB 単位) をデータベースに使用します。|  
+|data_space|BIGINT|(KB 単位) のデータに使用される領域です。|  
+|index_space|BIGINT|領域を kb 単位でのインデックスに使用します。|  
+|unused_space|BIGINT|な領域を予約した領域の一部であり、使用しない、(KB 単位)。|  
+|pdw_node_id|ssNoversion|データの使用されているノードを計算します。|  
   
 これは、1 つのテーブルの結果セットです。
   
-|列|データ型|Description|範囲|  
+|[列]|データ型|Description|範囲|  
 |------------|---------------|-----------------|-----------|  
-|rows|bigint|行の数。||  
-|reserved_space|bigint|領域の合計 (KB 単位) のオブジェクト用に予約されています。||  
-|data_space|bigint|領域が kb 単位で、データに使用します。||  
-|index_space|bigint|領域を kb 単位でのインデックスに使用します。||  
-|unused_space|bigint|な領域を予約した領域の一部であり、使用しない、(KB 単位)。||  
-|pdw_node_id|int|領域の使用状況の報告に使用するためのコンピューティング ノードです。||  
-|distribution_id|int|領域の使用状況をレポートに使用する配布します。|値は、レプリケートされたテーブルの場合は-1 です。|  
+|rows|BIGINT|行の数。||  
+|reserved_space|BIGINT|領域の合計 (KB 単位) のオブジェクト用に予約されています。||  
+|data_space|BIGINT|領域が kb 単位で、データに使用します。||  
+|index_space|BIGINT|領域を kb 単位でのインデックスに使用します。||  
+|unused_space|BIGINT|な領域を予約した領域の一部であり、使用しない、(KB 単位)。||  
+|pdw_node_id|ssNoversion|領域の使用状況の報告に使用するためのコンピューティング ノードです。||  
+|distribution_id|ssNoversion|領域の使用状況をレポートに使用する配布します。|値は、レプリケートされたテーブルの場合は-1 です。|  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdwshowspaceused-basic-syntax"></a>A. DBCC PDW_SHOWSPACEUSED の基本的な構文  
-次の例は、行の数を表示、ディスク領域が予約されている複数の方法を表示し、FactInternetSales テーブルで使用されるディスク領域、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]データベース。
+次の例では、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] データベースの FactInternetSales テーブルの行数、予約済みのディスク領域、使用済みのディスク領域を表示する複数の方法を示します。
   
 ```sql
 -- Uses AdventureWorks  
@@ -89,7 +89,7 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
 ```  
   
 ### <a name="b-show-the-disk-space-used-by-all-tables-in-the-current-database"></a>B. 現在のデータベース内のすべてのテーブルで使用されるディスク領域を表示します。  
- 次の例では、予約されており、すべてのユーザー テーブルとシステム テーブルで使用されるディスク領域、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]データベース。  
+ 次の例では、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] のすべてのユーザー テーブルとシステム テーブルで使用される予約済みのディスク領域を示します。  
   
 ```sql
 -- Uses AdventureWorks  

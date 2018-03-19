@@ -1,5 +1,5 @@
 ---
-title: "Null (geometry データ型) |Microsoft ドキュメント"
+title: "Null (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="null-geometry-data-type"></a>Null (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Null インスタンスを提供する読み取り専用プロパティ、 **geometry**型です。
+**geography** 型の NULL インスタンスを提供する、読み取り専用プロパティです。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,14 +45,14 @@ Null
 ## <a name="arguments"></a>引数  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型: **geometry**  
   
  CLR 型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>使用例  
- 次の例は、null 値を取得`geometry`インスタンス。  
+ `geometry` 型の NULL インスタンスを取得する例を次に示します。  
   
 ```  
 DECLARE @g geometry;   

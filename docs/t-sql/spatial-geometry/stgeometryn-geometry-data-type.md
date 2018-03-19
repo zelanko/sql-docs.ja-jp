@@ -1,5 +1,5 @@
 ---
-title: "STGeometryN (geometry データ型) |Microsoft ドキュメント"
+title: "STGeometryN (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-指定されたジオメトリを返します、 **geometry コレクション**です。
+**geometry コレクション**で指定されたジオメトリを返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -45,18 +45,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- **Int**式 1 ~ 数**geometry**のインスタンスにある、 **geometrycollection**です。  
+ 1 から **geometrycollection** に含まれる **geometry** インスタンスの数までの数値を表す **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
  CLR の戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
- このメソッドが戻る**null**パラメーターがの結果よりも大きい場合`STNumGeometries()`とスローされます、 **ArgumentOutOfRangeException**場合、*式*パラメーターは、1 より小さいです。  
+## <a name="remarks"></a>Remarks  
+ パラメーターが `STNumGeometries()` の結果よりも大きい場合、このメソッドは **null** を返します。また、*expression* パラメーターが 1 より小さい場合は、**ArgumentOutOfRangeException** をスローします。  
   
 ## <a name="examples"></a>使用例  
- 次の例を作成、`MultiPoint``geometry collection`を使用して`STGeometryN()`をもう 1 つを検索する`geometry`コレクションのインスタンス。  
+ `MultiPoint``geometry collection` を作成し、`STGeometryN()` を使用してコレクションの 2 番目の `geometry` インスタンスを探す例を次に示します。  
   
 ```  
 DECLARE @g geometry;  

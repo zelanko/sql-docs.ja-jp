@@ -1,5 +1,5 @@
 ---
-title: "XML スキーマ コレクション権限 (TRANSACT-SQL) の拒否 |Microsoft ドキュメント"
+title: "DENY (XML スキーマ コレクションの権限の許可) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -68,16 +68,16 @@ DENY permission  [ ,...n ] ON
  XML スキーマ コレクションで拒否できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
  ON XML SCHEMA COLLECTION :: [ *schema_name***.** ] *XML_schema_collection_name*  
- 権限を拒否する XML スキーマ コレクションを指定します。 スコープ修飾子 (::) が必要です。 場合*schema_name*が指定されていない、既定のスキーマを使用します。 場合*schema_name*を指定すると、スキーマ スコープ修飾子 (.) が必要です。  
+ 権限を拒否する XML スキーマ コレクションを指定します。 スコープ修飾子 (::) が必要です。 場合 *schema_name* が指定されていない、既定のスキーマを使用します。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 (.) が必要です。  
   
  TO \<database_principal>  
- アクセス許可を拒否するプリンシパルを指定します。  
+ 権限を拒否するプリンシパルを指定します。  
   
  CASCADE  
  このプリンシパルによって権限が許可されている他のプリンシパルに対しても、同じ権限を拒否することを示します。  
   
  AS \<database_principal>  
- このクエリを実行するプリンシパルが権限を拒否する権利の派生元のプリンシパルを指定します。  
+ このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。  
   
  *Database_user*  
  データベース ユーザーを指定します。  
@@ -103,8 +103,8 @@ DENY permission  [ ,...n ] ON
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>解説  
- XML スキーマ コレクションに関する情報は、 [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)カタログ ビューです。  
+## <a name="remarks"></a>Remarks  
+ XML スキーマ コレクションに関する情報は、[sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) カタログ ビューで確認できます。  
   
  XML スキーマ コレクションは、スキーマ レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているスキーマに含まれています。 次の表に、XML スキーマ コレクションで拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
@@ -117,11 +117,11 @@ DENY permission  [ ,...n ] ON
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  XML スキーマ コレクションに対する CONTROL 権限が必要です。 AS オプションを使用する場合は、指定したプリンシパルが XML スキーマ コレクションを所有している必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次の例を拒否`EXECUTE`XML スキーマ コレクションに対する権限`Invoices4`をユーザーに`Wanida`です。 XML スキーマ コレクション`Invoices4`内にある、`Sales`のスキーマ、`AdventureWorks2012`データベース。  
+ 次の例では、XML スキーマ コレクション `Invoices4` の `EXECUTE` 権限を、ユーザー `Wanida` に対して拒否します。 XML スキーマ コレクション `Invoices4` は、`AdventureWorks2012` データベースの `Sales` スキーマ内にあります。  
   
 ```  
 USE AdventureWorks2012;  
@@ -130,10 +130,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [XML スキーマ コレクションの権限 &#40; を許可します。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
- [XML スキーマ コレクションの権限を REVOKE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
- [sys.xml_schema_collections &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
- [XML スキーマ コレクション &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [GRANT (XML スキーマ コレクションのアクセス許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
+ [REVOKE (XML スキーマ コレクションの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
+ [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
+ [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

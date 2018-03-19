@@ -1,5 +1,5 @@
 ---
-title: "ALTER DATABASE データベース ミラーリング (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "ALTER DATABASE データベース ミラーリング (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-non-specified
@@ -31,19 +31,19 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (TRANSACT-SQL) データベース ミラーリング 
+# <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (Transact-SQL) データベース ミラーリング 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用して[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用します。  
   
- データベースのデータベース ミラーリングを制御します。 データベース ミラーリング オプションで指定した値は、データベースのコピーと、データベース ミラーリング セッション全体の両方に適用されます。 1 つだけ\<database_mirroring_option > は ALTER DATABASE ステートメントごとに許可します。  
+ データベースのデータベース ミラーリングを制御します。 データベース ミラーリング オプションで指定した値は、データベースのコピーと、データベース ミラーリング セッション全体の両方に適用されます。 \<database_mirroring_option> は、ALTER DATABASE ステートメントごとに 1 つだけ指定できます。  
   
 > [!NOTE]  
->  構成は、パフォーマンスに影響を及ぼすために、オフピーク時間中にデータベース ミラーリングを構成することをお勧めします。  
+>  構成はパフォーマンスに影響する場合があるので、データベース ミラーリングの構成はピーク タイム以外の時間に行うことをお勧めします。  
   
- ALTER DATABASE オプションについては、次を参照してください。 [ALTER DATABASE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md). ALTER DATABASE SET オプションでは、次を参照してください。 [ALTER DATABASE SET Options &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ ALTER DATABASE オプションについては、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。 ALTER DATABASE SET オプションについては、「[ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -84,7 +84,7 @@ SET { <partner_option> | <witness_option> }
  PARTNER \<partner_option>  
  データベース ミラーリング セッションのフェールオーバー パートナー、およびそれらの動作を定義する、データベース プロパティを制御します。 SET PARTNER オプションには、パートナーのうちのいずれか一方で設定すればよいものと、プリンシパル サーバーとミラー サーバーのいずれか一方に限定されているものがあります。 詳細については、後述の各 PARTNER オプションを参照してください。 SET PARTNER 句は、それを指定したパートナーには関係なく、データベースの両方のコピーに影響します。  
   
- SET PARTNER ステートメントを実行するには、両方のパートナーのエンドポイントの STATE が、STARTED に設定されている必要があります。 また、それぞれのパートナー サーバー インスタンスのデータベース ミラーリング エンドポイントの ROLE は、PARTNER または ALL のいずれかに設定されている必要があります。 エンドポイントを指定する方法については、次を参照してください[、データベース ミラーリング エンドポイントで Windows 認証 &#40; を作成します。TRANSACT-SQL と #41 です。](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md). サーバー インスタンスのデータベース ミラーリング エンドポイントのロールおよび状態を確認するには、そのインスタンス上で、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用します。  
+ SET PARTNER ステートメントを実行するには、両方のパートナーのエンドポイントの STATE が、STARTED に設定されている必要があります。 また、それぞれのパートナー サーバー インスタンスのデータベース ミラーリング エンドポイントの ROLE は、PARTNER または ALL のいずれかに設定されている必要があります。 エンドポイントの指定の詳細については、「[Windows 認証でのデータベース ミラーリング エンドポイントを作成する &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)」を参照してください。 サーバー インスタンスのデータベース ミラーリング エンドポイントのロールおよび状態を確認するには、そのインスタンス上で、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用します。  
   
 ```  
 SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
@@ -93,38 +93,38 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **\<partner_option> ::=**  
   
 > [!NOTE]  
->  1 つだけ\<partner_option > SET PARTNER 句は許可します。  
+>  1 つの SET PARTNER 句で指定できる \<partner_option> は 1 つだけです。  
   
  **'** *partner_server* **'**  
- インスタンスのサーバー ネットワーク アドレスを指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に新しいデータベース ミラーリング セッションでのフェールオーバー パートナーとして機能します。 各セッションには 2 つのパートナーが必要です。一方はプリンシパル サーバーとして起動し、他方はミラー サーバーとして起動します。 これらのパートナーは、別々のコンピューター上に配置することをお勧めします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのサーバー ネットワーク アドレスが、新しいデータベース ミラーリング セッションでフェールオーバー パートナーとして動作することを指定します。 各セッションには 2 つのパートナーが必要です。一方はプリンシパル サーバーとして起動し、他方はミラー サーバーとして起動します。 これらのパートナーは、別々のコンピューター上に配置することをお勧めします。  
   
- このオプションは、各パートナーでのセッションごとに 1 回指定します。 2 つの ALTER DATABASE データベース ミラーリング セッションを開始する必要があります*データベース*SET PARTNER **='***partner_server***'**ステートメントです。 これらのステートメントの順序は非常に重要です。 最初に、ミラー サーバーに接続し、プリンシパル サーバー インスタンスを指定*partner_server* (SET PARTNER **='***principal_server***'**)。 次は、プリンシパル サーバーに接続し、としてミラー サーバー インスタンスの指定*partner_server* (SET PARTNER **='***mirror_server***'**) ですデータベースが起動。これら 2 つのパートナー間のセッションをミラーリングします。 詳細については、このトピックの「 [データベース ミラーリングの設定 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)」を参照してください。  
+ このオプションは、各パートナーでのセッションごとに 1 回指定します。 データベース ミラーリング セッションを開始するには、2 つの ALTER DATABASE *データベース* SET PARTNER **='***partner_server***'** ステートメントが必要です。 これらのステートメントの順序は非常に重要です。 最初に、ミラー サーバーに接続し、プリンシパル サーバー インスタンスを *partner_server* (SET PARTNER **='***principal_server***'**) として指定します。 次に、プリンシパル サーバーに接続し、ミラー サーバー インスタンスを *partner_server* (SET PARTNER **='***mirror_server***'**) として指定します。これにより、これら 2 つのパートナー間で、データベース ミラーリング セッションが開始されます。 詳細については、このトピックの「 [データベース ミラーリングの設定 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)」を参照してください。  
   
- 値*partner_server*サーバー ネットワーク アドレスです。 構文は次のとおりです。  
+ *partner_server* の値は、サーバー ネットワーク アドレスです。 構文は次のとおりです。  
   
  TCP**://***\<system-address>***:***\<port>*  
   
  パラメーターの説明  
   
--   *\<システム アドレス >*などのシステム名、完全修飾ドメイン名、または、対象のコンピューター システムを明確に識別する IP アドレスの文字列です。  
+-   *\<system-address>* は、システム名、完全修飾ドメイン名、IP アドレスなどの文字列です。対象のコンピューター システムを一意に識別します。  
   
--   *\<ポート >*パートナー サーバー インスタンスのミラーリング エンドポイントに関連付けられているポート番号です。  
+-   *\<port>* は、パートナー サーバー インスタンスのミラーリング エンドポイントに関連付けられているポート番号です。  
   
- 詳細については、「[サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)」を参照してください。  
+ 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)を使用します。  
   
- 次の例では、SET PARTNER **='***partner_server***'**句。  
+ SET PARTNER **='***partner_server***'** 句の例を次に示します。  
   
 ```  
 'TCP://MYSERVER.mydomain.Adventure-Works.com:7777'  
 ```  
   
 > [!IMPORTANT]  
->  かどうか、セッションは、セットアップの代わりに ALTER DATABASE ステートメントを使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、セッションが既定の (SAFETY が FULL に設定) で完全なトランザクションの安全性に設定し、自動フェールオーバーを伴わない高い安全性モードで実行します。 自動フェールオーバーを使用するにはミラーリング監視サーバーを構成し、高パフォーマンス モードで実行するにはトランザクションの安全性を無効 (SAFETY OFF) にします。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ではなく ALTER DATABASE ステートメントを使用してセットアップしたセッションでは、トランザクションの安全性が既定の完全な安全性に設定され (SAFETY の値が FULL)、セッションは自動フェールオーバーを伴わない高い安全性モードで実行されます。 自動フェールオーバーを使用するにはミラーリング監視サーバーを構成し、高パフォーマンス モードで実行するにはトランザクションの安全性を無効 (SAFETY OFF) にします。  
   
  FAILOVER  
  プリンシパル サーバーをミラー サーバーに手動でフェールオーバーします。 FAILOVER は、プリンシパル サーバー上でのみ指定できます。 このオプションは、SAFETY が FULL に設定されている (既定) 場合にのみ有効です。  
   
- フェールオーバー オプションには、**マスター**データベース コンテキストとして。  
+ FAILOVER オプションを指定する場合は、データベース コンテキストとして **master** が必要です。  
   
  FORCE_SERVICE_ALLOW_DATA_LOSS   
  データベースが非同期状態の場合、または自動フェールオーバーが行われずデータベースが同期状態の場合、プリンシパル サーバーで障害が発生すると、データベース サービスを強制的にミラー データベースにします。  
@@ -135,14 +135,14 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
 -   プリンシパル サーバーが停止している。  
   
--   WITNESS が OFF に設定またはミラーリング監視サーバーがミラー サーバーに接続します。  
+-   WITNESS が OFF に設定されているか、または監視サーバーがミラー サーバーに接続されている。  
   
  サービスの強制は、データベースにサービスを直ちに復元するために一部のデータが失われてもかまわないという場合にのみ行ってください。  
   
  サービスを強制すると、セッションが中断され、すべてのデータが一時的に元のプリンシパル データベースに保持されます。 元のプリンシパルが稼働し、新しいプリンシパル サーバーと通信できるようになると、データベース管理者はサービスを再開できます。 セッションを再開すると、すべての未送信ログ レコードと、それに対応する更新は失われます。  
   
  OFF  
- データベース ミラーリング セッションを削除し、データベースからミラーリングを削除します。 OFF は、どちらのパートナー上でも指定できます。 詳細については、ミラーリングの削除の影響について参照してください[データベース ミラーリングの削除 (&) #40 です。SQL Server &#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
+ データベース ミラーリング セッションを削除し、データベースからミラーリングを削除します。 OFF は、どちらのパートナー上でも指定できます。 ミラーリングの削除による影響の詳細については、「[データベース ミラーリングの削除 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)」を参照してください。  
   
  RESUME  
  中断状態のデータベース ミラーリング セッションを再開します。 RESUME は、プリンシパル サーバー上でのみ指定できます。  
@@ -150,7 +150,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  SAFETY { FULL | OFF }  
  トランザクションの安全性のレベルを設定します。 SAFETY は、プリンシパル サーバー上でのみ指定できます。  
   
- 既定値は FULL です。 データベース ミラーリング セッションを同期的に実行、safety が full (で*高い安全性モード*)。 データベース ミラーリング セッションが非同期的に実行の安全性が OFF に設定されている場合 (で*高パフォーマンス モード*)。  
+ 既定値は FULL です。 SAFETY が FULL の場合、データベース ミラーリング セッションは*高い安全性モード*で同期的に実行されます。 OFF の場合は、データベース ミラーリング セッションは*高パフォーマンス モード*で非同期的に実行されます。  
   
  高い安全性モードの動作は、次のように部分的にミラーリング監視に依存します。  
   
@@ -170,7 +170,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
  SUSPEND は、どちらのパートナー上でも指定できます。  
   
- タイムアウト*整数*  
+ TIMEOUT *整数*  
  タイムアウト時間を秒単位で指定します。 タイムアウト時間は、ミラーリング セッションの別のインスタンスからの PING メッセージを受信するために、サーバー インスタンスが待機する最大時間です。この時間を過ぎると、待機していたインスタンスは接続解除されたものと見なされます。  
   
  TIMEOUT オプションは、プリンシパル サーバー上でのみ指定できます。 このオプションを指定しない場合、この時間は既定で 10 秒に設定されます。 5 以上の値を指定すると、タイムアウト時間は指定した秒数に設定されます。 タイムアウト値に 0 ～ 4 秒を指定すると、タイムアウト時間は自動的に 5 秒に設定されます。  
@@ -181,11 +181,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  詳細については、「 [データベース ミラーリング中に発生する可能性のあるエラー](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)」を参照してください。  
   
  WITNESS \<witness_option>  
- データベースのミラーリング監視を定義するデータベース プロパティを制御します。 SET WITNESS 句は、データベースの両方のコピーに影響しますが、SET WITNESS はプリンシパル サーバー上でのみ指定できます。 クォーラムが、SAFETY の設定に関係なく、データベースの処理に必要な場合は、セッションのミラーリング監視サーバーを設定すると、詳細については、次を参照してください。[クォーラム: ミラーリング監視サーバー データベース可用性に与える影響 &#40; データベース ミラーリング &#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)です。  
+ データベースのミラーリング監視を定義するデータベース プロパティを制御します。 SET WITNESS 句は、データベースの両方のコピーに影響しますが、SET WITNESS はプリンシパル サーバー上でのみ指定できます。 ミラーリング監視がセッションに対して設定されている場合にデータベースを使用できるようにするには、SAFETY の設定に関係なく、クォーラムが必要です。詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
- ミラーリング監視とフェールオーバー パートナーは、別々のコンピューターに配置することをお勧めします。 詳細について、ミラーリング監視サーバーは、次を参照してください。[データベース ミラーリング監視サーバー](../../database-engine/database-mirroring/database-mirroring-witness.md)です。  
+ ミラーリング監視とフェールオーバー パートナーは、別々のコンピューターに配置することをお勧めします。 ミラーリング監視サーバーの詳細については、「[データベース ミラーリング監視サーバー](../../database-engine/database-mirroring/database-mirroring-witness.md)」を参照してください。  
   
- SET WITNESS ステートメントを実行するには、プリンシパル サーバー インスタンスおよびミラーリング監視サーバー インスタンスのエンドポイントの STATE が STARTED に設定されている必要があります。 また、ミラーリング監視サーバー インスタンスのデータベース ミラーリング エンドポイントの ROLE は、WITNESS または ALL のいずれかに設定されている必要があります。 エンドポイントの指定方法の詳細については、次を参照してください。[データベース ミラーリング エンドポイント &#40;です。SQL Server &#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
+ SET WITNESS ステートメントを実行するには、プリンシパル サーバー インスタンスおよびミラーリング監視サーバー インスタンスのエンドポイントの STATE が STARTED に設定されている必要があります。 また、ミラーリング監視サーバー インスタンスのデータベース ミラーリング エンドポイントの ROLE は、WITNESS または ALL のいずれかに設定されている必要があります。 エンドポイントの指定方法の詳細については、「[データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)」を参照してください。  
   
  サーバー インスタンスのデータベース ミラーリング エンドポイントのロールおよび状態を確認するには、そのインスタンス上で、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用します。  
   
@@ -199,22 +199,22 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **\<witness_option> ::=**  
   
 > [!NOTE]  
->  1 つだけ\<witness_option > SET WITNESS 句は許可します。  
+>  1 つの SET WITNESS 句で指定できる \<witness_option> は 1 つだけです。  
   
  **'** *witness_server* **'**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスが、データベース ミラーリング セッションのミラーリング管理サーバーとして動作することを指定します。 SET WITNESS ステートメントは、プリンシパル サーバー上でのみ指定できます。  
   
- SET witness **='***witness_server***'**ステートメントの構文では、 *witness_server*はの構文と同じ*partner_server*です。  
+ SET WITNESS **='***witness_server***'** ステートメントでは、syntax of *witness_server* の構文は、*partner_server* の構文と同じです。  
   
  OFF  
  データベース ミラーリング セッションから、ミラーリング監視を削除します。 ミラーリング監視を OFF に設定すると、自動フェールオーバーが無効化されます。 データベースが FULL SAFETY に設定され、ミラーリング監視が OFF に設定されている場合、ミラー サーバーに障害が発生すると、プリンシパル サーバーはデータベースを使用不可にします。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-creating-a-database-mirroring-session-with-a-witness"></a>A. ミラーリング監視を使用したデータベース ミラーリング セッションを作成する  
- ミラーリング監視を使用したデータベース ミラーリングをセットアップするには、セキュリティを構成し、ミラー データベースを準備し、ALTER DATABASE を使用してパートナーを設定する必要があります。 完全なセットアップ プロセスの例は、次を参照してください。[データベース ミラーリングの設定 (&) #40 です。SQL Server &#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+ ミラーリング監視を使用したデータベース ミラーリングをセットアップするには、セキュリティを構成し、ミラー データベースを準備し、ALTER DATABASE を使用してパートナーを設定する必要があります。 完全なセットアップ プロセスの例は、「[データベース ミラーリングの設定 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)」を参照してください。  
   
 ### <a name="b-manually-failing-over-a-database-mirroring-session"></a>B. データベース ミラーリング セッションを手動でフェールオーバーする  
  手動フェールオーバーは、どちらのデータベース ミラーリング パートナーからでも開始できます。 フェールオーバーする前に、現在プリンシパル サーバーであると思われるサーバーが、実際にプリンシパル サーバーであるかどうかを確認する必要があります。 たとえば、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの場合、現在プリンシパル サーバーであると思われるサーバー インスタンスで、次のクエリを実行します。  
@@ -228,7 +228,7 @@ WHERE db.name = N'AdventureWorks2012';
 GO  
 ```  
   
- そのサーバー インスタンスが実際にプリンシパルである場合、`mirroring_role_desc` の値は `Principal` になります。 このサーバー インスタンスがミラー サーバーの場合、`SELECT`ステートメントを返します`Mirror`です。  
+ そのサーバー インスタンスが実際にプリンシパルである場合、`mirroring_role_desc` の値は `Principal` になります。 このサーバー インスタンスがミラー サーバーの場合には、`SELECT` ステートメントは `Mirror` を返します。  
   
  次の例では、そのサーバーが現在のプリンシパルであることを前提としています。  
   
@@ -255,6 +255,6 @@ GO
 ## <a name="see-also"></a>参照  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
- [sys.database_mirroring_witnesses &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
+ [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "XML データ内部のリレーショナル データをバインド |Microsoft ドキュメント"
+title: "XML データ内部のリレーショナル データのバインド | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -36,22 +36,22 @@ ms.lasthandoff: 01/25/2018
 # <a name="binding-relational-data-inside-xml-data"></a>XML データ内部のリレーショナル データのバインド
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  指定できます[xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)に対して、 **xml**データ型の変数または列。 たとえば、[クエリ &#40; #41メソッド &#40;xml データ型&#41;](../../t-sql/xml/query-method-xml-data-type.md) XML インスタンスに対して指定した XQuery を実行します。 この方法で XML を構築するときに、XML 以外の型の列の値や Transact-SQL 変数を使用することもできます。 この処理を、XML 内部のリレーショナル データのバインドと呼びます。  
+  [xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)を **xml** データ型変数または列に対して指定できます。 たとえば、[query&#40;&#41; Method &#40;xml Data Type&#41;](../../t-sql/xml/query-method-xml-data-type.md) では、XML インスタンスに対して指定した XQuery が実行されます。 この方法で XML を構築するときに、XML 以外の型の列の値や Transact-SQL 変数を使用することもできます。 この処理を、XML 内部のリレーショナル データのバインドと呼びます。  
   
  XML 内部の XML 以外のリレーショナル データをバインドするために、SQL Server データベース エンジンには次の擬似関数が用意されています。  
   
--   [sql:column &#40; &#41;関数と #40 です。XQuery と #41 です。](../../xquery/xquery-extension-functions-sql-column.md) XQuery 式または XML DML 式で、リレーショナル列の値を使用することができます。  
+-   [sql:column&#40;&#41; Function &#40;XQuery&#41;](../../xquery/xquery-extension-functions-sql-column.md)。この関数を使用すると、リレーショナル列の値を XQuery 式または XML DML 式で使用できます。  
   
--   [sql:variable &#40; &#41;関数と #40 です。XQuery と #41 です。](../../xquery/xquery-extension-functions-sql-variable.md) . この関数を使用すると、SQL 変数の値を XQuery 式または XML DML 式で使用できます。  
+-   [sql:variable&#40;&#41; 関数 &#40;XQuery&#41;](../../xquery/xquery-extension-functions-sql-variable.md) . この関数を使用すると、SQL 変数の値を XQuery 式または XML DML 式で使用できます。  
   
- これらの関数を使用する**xml** XML 内部のリレーショナル値を公開するたびにデータ型のメソッドです。  
+ XML 内部でリレーショナル値を公開するときは、常に、**xml** データ型のメソッドと上記の関数を併用できます。  
   
- これらの関数を使用しての列や変数のデータを参照することはできません、 **xml**、CLR ユーザー定義型、datetime、smalldatetime、**テキスト**、 **ntext**、 **sql_variant**、および**イメージ**型です。  
+ **xml** 型の列や変数、CLR ユーザー定義型、datetime、smalldatetime、**text**、**ntext**、**sql_variant**、および **image** の各型のデータを参照する場合は、これらの関数は使用できません。  
   
- また、このバインドは読み取り専用です。 つまり、これらの関数を使用する列には、データを書き込めません。 For example, sql:variable("@x")="*some expression"* is not allowed.  
+ また、このバインドは読み取り専用です。 つまり、これらの関数を使用する列には、データを書き込めません。 たとえば、sql:variable("@x")="*some expression"* は許可されません。  
   
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>例 : sql:variable() を使用した複数の領域にまたがるクエリ  
- この例ではどのように**sql:variable()**クエリをパラメーター化するアプリケーションを有効にすることができます。 Isbn を保存が SQL 変数を使用して渡された@isbnです。 使用して、定数に置き換えることで**sql:variable()**クエリは、どの ISBN でも、ISBN が 0-7356-1588-2、1 つだけでなくの検索に使用することができます。  
+ 次の例では、**sql:variable()** を使用してアプリケーションでクエリをパラメーター化できるようにする方法を示します。 ISBN は、SQL 変数 @isbn を使用して渡されます。 定数を **sql:variable()** に置き換えたことにより、ISBN が 0-7356-1588-2 の書籍だけでなく、どの ISBN でも検索できます。  
   
 ```  
 DECLARE @isbn varchar(20)  
@@ -61,7 +61,7 @@ FROM    T
 WHERE   xCol.exist ('/book/@ISBN[. = sql:variable("@isbn")]') = 1  
 ```  
   
- **sql:column()**同様の方法で使用でき、その他のメリットを提供します。 コストベースのクエリ オプティマイザーの判断により、効率を上げるために列のインデックスが使用される場合があります。 また、昇格したプロパティが計算列に保存される場合があります。  
+ **sql:column()** も同様に使用できますが、より多くの利点があります。 コストベースのクエリ オプティマイザーの判断により、効率を上げるために列のインデックスが使用される場合があります。 また、昇格したプロパティが計算列に保存される場合があります。  
   
 ## <a name="see-also"></a>参照  
  [xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)  

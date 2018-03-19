@@ -1,5 +1,5 @@
 ---
-title: "STGeometryN (geography データ型) |Microsoft ドキュメント"
+title: "STGeometryN (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  指定したを返します**geography**内の要素、 **GeometryCollection**またはそのサブタイプのいずれか。 サブタイプで STGeometryN() を使用する場合、 **GeometryCollection**など**MultiPoint**または**MultiLineString**、このメソッドが戻る、 **geography** N = 1 で呼び出された場合をインスタンス化します。  
+  **GeometryCollection** またはそのサブタイプのいずれかに含まれる、指定した **geography** 要素を返します。 **MultiPoint** や **MultiLineString** のように、STGeometryN() が **GeometryCollection** のサブタイプで使用されるとき、このメソッドは N=1 で呼び出された場合、**geography** インスタンスを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,18 +44,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- **Int**式 1 ~ 数**geography**のインスタンスにある、 **GeometryCollection**です。  
+ 1 から **GeometryCollection** に含まれる **geography** インスタンスの数までの数値を表す **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
  CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>解説  
- このメソッドは、パラメーターがの結果よりも大きい場合は null を返します[STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md)とスローされます、 **ArgumentOutOfRangeException**場合、*式*パラメーターは、1 より小さいです。  
+## <a name="remarks"></a>Remarks  
+ パラメーターが [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) の結果よりも大きい場合、このメソッドは null を返します。*expression* パラメーターが 1 より小さい場合は、**ArgumentOutOfRangeException** をスローします。  
   
 ## <a name="examples"></a>使用例  
- 次の例を作成、`MultiPoint``geography`使用して、インスタンス`STGeometryN()`をもう 1 つを検索する`geography`のインスタンス、 **GeometryCollection**です。  
+ `MultiPoint``geography` インスタンスを作成し、`STGeometryN()` を使用して **GeometryCollection** の 2 番目の `geography` インスタンスを見つける例を次に示します。  
   
 ```  
 DECLARE @g geography;  

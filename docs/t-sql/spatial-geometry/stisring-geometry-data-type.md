@@ -1,5 +1,5 @@
 ---
-title: "STIsRing (geometry データ型) |Microsoft ドキュメント"
+title: "STIsRing (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,13 +34,13 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisring-geometry-data-type"></a>STIsRing (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-場合 1 を返します、 **geometry**インスタンスは、次の要件を満たします。
--   **LineString**インスタンス。  
+**geometry** インスタンスが次の要件を満たしている場合は 1 を返します。
+-   **LineString** インスタンスである。  
 -   閉じている。  
 -   単純である。  
--   場合 0 を返します、 **LineString**インスタンスが要件を満たしていません。  
+-   **LineString** インスタンスが要件を満たさない場合は 0 を返します。  
 
- **Geometry**が閉じていて、単純なインスタンス両方[STIsClosed()](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)と[STIsSimple()](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md)インスタンスで呼び出されたときに 1 を返す必要があります。 インスタンスの型を決定する、 **geometry**を使用して[STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)です。  
+ **geometry** インスタンスを閉じて、単純にする場合、[STIsClosed()](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md) と [STIsSimple()](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md) の両方がインスタンスで呼び出されたときに 1 を返す必要があります。 **geometry** のインスタンスの型を判断するには、[STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md) を使用します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,12 +50,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **bit**  
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- このメソッドは、インスタンスがない場合は null を返します、 **LineString**です。  
+## <a name="remarks"></a>Remarks  
+ インスタンスが **LineString** でない場合、このメソッドは null を返します。  
   
 ## <a name="examples"></a>使用例  
  `LineString` インスタンスを作成し、`STIsRing()` を使用して、このインスタンスがリングかどうかをテストする例を次に示します。  

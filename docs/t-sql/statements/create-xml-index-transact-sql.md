@@ -1,5 +1,5 @@
 ---
-title: "CREATE XML INDEX (TRANSACT-SQL) |Microsoft ドキュメント"
+title: CREATE XML INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
   指定したテーブルに XML インデックスを作成します。 インデックスはテーブル内にデータがなくても作成できます。 データベース名を修飾して指定することにより、他のデータベース内のテーブルに XML インデックスを作成することもできます。  
   
 > [!NOTE]  
->  リレーショナル インデックスを作成するを参照してください。 [CREATE INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-index-transact-sql.md). 空間インデックスを作成する方法については、次を参照してください。 [CREATE SPATIAL INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-spatial-index-transact-sql.md).  
+>  リレーショナル インデックスを作成するには、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。 空間インデックスを作成する方法については、「[CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -86,33 +86,33 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
 ## <a name="arguments"></a>引数  
  [PRIMARY] XML  
- 指定した XML インデックスを作成**xml**列です。 PRIMARY を指定した場合、クラスター化インデックスは、ユーザー テーブルのクラスター化キーと XML ノード識別子から構成されるクラスター化キーで作成されます。 各テーブルには 249 個までの XML インデックスを作成できます。 XML インデックスを作成するときには、次のことに注意してください。  
+ 指定した **xml** 列に、XML インデックスを作成します。 PRIMARY を指定した場合、クラスター化インデックスは、ユーザー テーブルのクラスター化キーと XML ノード識別子から構成されるクラスター化キーで作成されます。 各テーブルには 249 個までの XML インデックスを作成できます。 XML インデックスを作成するときには、次のことに注意してください。  
   
 -   クラスター化インデックスは、ユーザー テーブルの主キー上に存在する必要がある。  
   
 -   ユーザー テーブルのクラスター化キーは 15 列に制限されている。  
   
--   各**xml**テーブル内の列は、1 つのプライマリ XML インデックスと複数のセカンダリ XML インデックスを持つことができます。  
+-   テーブル内の各 **xml** 列には、1 つのプライマリ XML インデックスと、複数のセカンダリ XML インデックスを作成できます。  
   
--   プライマリ XML インデックス、 **xml**列にセカンダリ XML インデックスを作成する前に列が存在する必要があります。  
+-   列にセカンダリ XML インデックスを作成するには、**xml** 列にプライマリ XML インデックスが存在している必要があります。  
   
--   XML インデックスは、1 つのみ作成できます**xml**列です。 以外の XML インデックスを作成することはできません**xml**リレーショナル インデックスを作成する列を使うことも、 **xml**列です。  
+-   1 つの XML インデックスは単一の **xml** 列でのみ作成できます。 XML インデックスは **xml** 以外の列には作成できません。またリレーショナル インデックスは **xml** 列には作成できません。  
   
--   プライマリまたはセカンダリ XML インデックスを作成することはできません、 **xml**を持つテーブル値変数に、ビュー内の列**xml**列、または**xml**変数を入力します。  
+-   ビュー内の **xml** 列、**xml** 列を使用したテーブル値変数、および **xml** 型の変数には、プライマリまたはセカンダリのいずれの XML インデックスも作成できません。  
   
--   計算で、プライマリ XML インデックスを作成することはできません**xml**列です。  
+-   **xml** 計算列にプライマリ XML インデックスを作成することはできません。  
   
--   SET オプション設定は、インデックス付きビューおよび計算列インデックスに必要な設定と同じにする必要がある。 具体的には、オプション ARITHABORT 必要があります ON に設定する XML インデックスが作成されるときとで値の挿入、削除、または更新時に、 **xml**列です。  
+-   SET オプション設定は、インデックス付きビューおよび計算列インデックスに必要な設定と同じにする必要がある。 特に、XML インデックスを作成し、**xml** 列に値を挿入、削除、更新する場合は、オプション ARITHABORT が ON に設定されている必要があります。  
   
  詳細については、「[XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)」をご覧ください。  
   
  *index_name*  
- インデックスの名前。 インデックス名は、テーブル内では一意である必要がありますが、データベース内で一意である必要はありません。 インデックス名の規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。  
+ インデックスの名前。 インデックス名は、テーブル内では一意である必要がありますが、データベース内で一意である必要はありません。 インデックス名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
- プライマリ XML インデックスの名前は、次の文字を始めることはできません:  **#** 、  **##** 、  **@** 、または **@@** .  
+ プライマリ XML インデックス名は **#**、**##**、**@**、または **@@** で始めることはできません。  
   
  *xml_column_name*  
- **Xml**インデックスの基になる列。 1 つだけ**xml**列は、単一の XML インデックス定義で指定できます。 しかし、で複数のセカンダリ XML インデックスを作成することができます、 **xml**列です。  
+ インデックスの基準となる **xml** 列を指定します。 単一の XML インデックス定義には、1 つの **xml** 列しか指定できませんが、1 つの **xml** 列には複数のセカンダリ XML インデックスを作成できます。  
   
  USING XML INDEX *xml_index_name*  
  セカンダリ XML インデックスの作成でプライマリ XML インデックスを使用します。  
@@ -120,7 +120,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  FOR { VALUE | PATH | PROPERTY }   
  セカンダリ XML インデックスの種類を指定します。  
   
- VALUE  
+ Value  
  キー列がプライマリ XML インデックス (ノード値とパス) となっている列に、セカンダリ XML インデックスを作成します。  
   
  PATH  
@@ -150,36 +150,36 @@ CREATE [ PRIMARY ] XML INDEX index_name
  インデックスの埋め込みを指定します。 既定値は OFF です。  
   
  ON  
- によって指定される空き領域の割合*fillfactor*インデックスの中間レベル ページに適用されます。  
+ *fillfactor* で指定される空き領域のパーセンテージが、インデックスの中間レベルのページに適用されます。  
   
- OFF または*fillfactor*が指定されていません  
+ OFF または *fillfactor* の指定なし  
  中間レベルのページはほぼ全容量が使用されます。ただし、中間ページにあるキーのセットを考慮して、インデックスに割り当てることのできる、少なくとも 1 行の最大サイズが収まる分の領域は残されます。  
   
- PAD_INDEX では FILLFACTOR で指定されるパーセンテージが使用されるので、PAD_INDEX オプションは、FILLFACTOR が指定されている場合にのみ有効です。 FILLFACTOR で指定されるパーセンテージが 1 つの行を許可するのに十分な大きさがない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]内部的に最小値を許可する比率をオーバーライドします。 中間インデックス ページ上の行の番号 2 にはなりません未満の値をどのように低に関係なく*fillfactor*です。  
+ PAD_INDEX では FILLFACTOR で指定されるパーセンテージが使用されるので、PAD_INDEX オプションは、FILLFACTOR が指定されている場合にのみ有効です。 FILLFACTOR で指定されるパーセンテージで 1 行分のデータを格納できない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では内部的に、最小サイズを格納できるパーセンテージが使用されます。 中間インデックス ページの行数は、*fillfactor* の値がどれだけ小さくなっても 2 未満にはなりません。  
   
- FILLFACTOR **= * * * fillfactor*  
- インデックスの作成時または再構築時に、[!INCLUDE[ssDE](../../includes/ssde-md.md)] が各インデックス ページのリーフ レベルをどの程度まで埋めるかを、パーセント値で指定します。 *fillfactor* 1 から 100 までの整数値にする必要があります。 既定値は 0 です。 場合*fillfactor*が 100 または 0 の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]全容量リーフ ページを含むインデックスを作成します。  
+ FILLFACTOR **=***fillfactor*  
+ インデックスの作成時または再構築時に、[!INCLUDE[ssDE](../../includes/ssde-md.md)] が各インデックス ページのリーフ レベルをどの程度まで埋めるかを、パーセント値で指定します。 *fillfactor* 値には、1 ～ 100 の整数値を指定してください。 既定値は 0 です。 *fillfactor* が 100 または 0 の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では全容量を使用するリーフ ページでインデックスが作成されます。  
   
 > [!NOTE]  
->  Fill factor 値 0 と 100 は、すべての点で同じです。  
+>  FILL FACTOR 値 0 と 100 の機能は、まったく同じです。  
   
- FILLFACTOR 設定は、インデックスが作成または再構築されるときのみ適用されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ページ内の空き領域の指定された割合動的に保持しません。 表示するには、fill factor 設定を使用して、 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)カタログ ビューです。  
+ FILLFACTOR 設定は、インデックスが作成または再構築されるときのみ適用されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ページ内で指定されたパーセント分の空き領域は動的に保持されません。 FILL FACTOR 設定を表示するには、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) カタログ ビューを使用します。  
   
 > [!IMPORTANT]  
->  100 未満、fillfactor の値をクラスター化インデックスを作成するため、データが占める記憶域スペースの量、影響、[!INCLUDE[ssDE](../../includes/ssde-md.md)]クラスター化インデックスを作成するときに、データを再分配します。  
+>  [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、クラスター化インデックスの作成時にデータが再分配されるため、100 未満の FILLFACTOR 値を使ってクラスター化インデックスを作成すると、データ用のストレージ領域のサイズに影響が生じます。  
   
  詳細については、「 [インデックスの FILL FACTOR の指定](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)」を参照してください。  
   
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
- 一時的な並べ替え結果を格納するかどうかを示す**tempdb**です。 既定値は OFF です。  
+ **tempdb** に一時的な並べ替え結果を格納するかどうかを指定します。 既定値は OFF です。  
   
  ON  
- インデックスの構築に使用される並べ替えの中間結果が格納されている**tempdb**です。 場合、インデックスの作成に必要な時間が削減**tempdb**が別のユーザー データベースのディスク セットにします。 インデックスの構築中に使用されるディスク領域のサイズは増加します。  
+ インデックス構築に使用される中間の並べ替え結果が **tempdb** に格納されます。 **tempdb** がユーザー データベースとは異なるディスク セットにある場合は、インデックスの作成に要する時間が削減されます。 インデックスの構築中に使用されるディスク領域のサイズは増加します。  
   
  OFF  
  中間の並べ替え結果はインデックスと同じデータベースに格納されます。  
   
- ユーザー データベースで、インデックスを作成するために必要な容量に加えて**tempdb**について、一定の並べ替えの中間結果を格納する追加の領域がある必要があります。 詳細については、次を参照してください。[インデックスの SORT_IN_TEMPDB オプション](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)です。  
+ インデックスを作成するためにユーザー データベース内に必要となる領域の他に、**tempdb** には、並べ替えの中間結果を格納するためにほぼ同じ大きさの追加領域が必要になります。 詳細については、「[インデックスの SORT_IN_TEMPDB オプション](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)」を参照してください。  
   
  IGNORE_DUP_KEY **=OFF**  
  インデックスの種類が一意になることはないので、XML インデックスでは無効です。 このオプションを ON に設定すると、エラーが発生します。  
@@ -216,20 +216,20 @@ CREATE [ PRIMARY ] XML INDEX index_name
  ページ ロックを許可するかどうかを指定します。 既定値は ON です。  
   
  ON  
- ページにアクセスするとき、行ロックが許可されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ページ ロックを使用する場合を決定します。  
+ ページにアクセスするとき、行ロックが許可されます。 いつページ ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって決定されます。  
   
  OFF  
  ページ ロックは使用されません。  
   
  MAXDOP **=***max_degree_of_parallelism*  
- 上書き、 [max degree of parallelism サーバー構成オプションを構成する](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)インデックス操作の実行中の構成オプション。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
+ インデックス操作の間、[max degree of parallelism サーバー構成オプション](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)更新オプションを上書きします。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
   
 > [!IMPORTANT]  
 >  MAXDOP オプションはすべての XML インデックスで構文的にサポートされていますが、プライマリ XML インデックスの場合、CREATE XML INDEX では単一のプロセッサのみが使用されます。  
   
- *max_degree_of_parallelism*を指定できます。  
+ *max_degree_of_parallelism* は次のように指定できます。  
   
- 1  
+ @shouldalert  
  並列プラン生成を抑制します。  
   
  \>1  
@@ -241,17 +241,17 @@ CREATE [ PRIMARY ] XML INDEX index_name
  詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
   
 > [!NOTE]  
->  並列インデックス操作はすべてのエディションで使用できない[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
+>  並列インデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
-## <a name="remarks"></a>解説  
- 派生した計算列**xml**の型があるデータとしてインデックスを設定、キー列または付加非キー列、計算列のデータ型がインデックス キー列または非キー列として使用できる限り、します。 計算で、プライマリ XML インデックスを作成することはできません**xml**列です。  
+## <a name="remarks"></a>Remarks  
+ 計算列のデータ型をインデックス キー列または非キー列として使用できる限り、**xml** データ型から派生した計算列は、キー列または非キー列としてインデックスを設定できます。 **xml** 計算列にプライマリ XML インデックスを作成することはできません。  
   
- 表示するには XML インデックスに関する情報を使用して、 [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)カタログ ビューです。  
+ XML インデックスについての情報を表示するには、[sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md) カタログ ビューを使用します。  
   
- XML インデックスの詳細については、次を参照してください。 [XML インデックス &#40;です。SQL Server &#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
+ XML インデックスの詳細については、「[XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)」を参照してください。  
   
 ## <a name="additional-remarks-on-index-creation"></a>インデックス作成に関する詳細説明  
- インデックスの作成の詳細については、「解説」セクションを参照してください。 [CREATE INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-index-transact-sql.md).  
+ インデックスの作成の詳細については、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」の「解説」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
@@ -293,16 +293,16 @@ GO
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [空間インデックス &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-spatial-index-transact-sql.md)   
+ [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
+ [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-index-transact-sql.md)   
+ [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
  [XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys.xml_indexes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
+ [sys.xml_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   

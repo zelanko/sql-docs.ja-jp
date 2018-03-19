@@ -1,5 +1,5 @@
 ---
-title: "IsNull (geography データ型) |Microsoft ドキュメント"
+title: "IsNull (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="isnull-geography-data-type"></a>IsNull (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  場合を指定するプロパティ、 **geography**インスタンスが null です。 インスタンスが NULL の場合は "TRUE" を、NULL ではない場合は 0 を返します。  
+  **geography** インスタンスが NULL かどうかを指定するプロパティです。 インスタンスが NULL の場合は "TRUE" を、NULL ではない場合は 0 を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,14 +43,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型: **bit**  
   
- CLR 型: **SqlBoolean**  
+ CLR の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- `IsNull`テストに使用できるかどうか、 **geography**インスタンスが null です。 このテストの結果は若干複雑であるため注意してください。インスタンスが NULL でなければ 0 を返し、インスタンスが NULL であれば NULL を返します。  
+## <a name="remarks"></a>Remarks  
+ `IsNull` では、**geography** インスタンスが NULL かどうかをテストできます。 このテストの結果は若干複雑であるため注意してください。インスタンスが NULL でなければ 0 を返し、インスタンスが NULL であれば NULL を返します。  
   
- このメソッドは、主に使用、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インフラストラクチャをテストする T-SQL 述語の IS NULL を使用することをお勧めするかどうか、 **geography**インスタンスが null です。 T-SQL ステートメントの詳細については、IS NULL 述語は、「 [IS NULL と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/is-null-transact-sql.md).  
+ このメソッドは、主に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インフラストラクチャによって使用されます。**geography** インスタンスが NULL かどうかをテストするために T-SQL 述語の IS NULL を使用することをお勧めします。 T-SQL 述語の IS NULL の詳細については、「[IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   

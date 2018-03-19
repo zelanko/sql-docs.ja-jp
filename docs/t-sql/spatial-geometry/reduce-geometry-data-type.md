@@ -1,5 +1,5 @@
 ---
-title: "(Geometry データ型) を削減 |Microsoft ドキュメント"
+title: "Reduce (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="reduce-geometry-data-type"></a>Reduce (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-近似を返します、指定された**geometry**インスタンスは指定された許容範囲を持つインスタンスに対して Douglas-peucker アルゴリズムの拡張機能を実行して生成します。
+指定した **geometry** インスタンスの近似を返します。これは、指定された許容範囲で、特定のインスタンスに対して Douglas-Peucker アルゴリズムの拡張を実行することにより生成されます。
   
 ## <a name="syntax"></a>構文  
   
@@ -44,31 +44,31 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>引数  
- *許容範囲*  
- 型の値は、 **float**です。 *トレランス*は、近似アルゴリズムに入力する許容範囲です。  
+ *tolerance*  
+ **float** 型の値です。 *tolerance* は、近似アルゴリズムに入力する許容範囲です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
  CLR の戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
- コレクション型のこのアルゴリズムは個別に各**geometry**インスタンスに含まれています。  
+## <a name="remarks"></a>Remarks  
+ コレクションの場合、このアルゴリズムは個別に各 **geometry** インスタンスに含まれています。  
   
- このアルゴリズムは変更されません**ポイント**インスタンス。  
+ このアルゴリズムによって **Point** インスタンスが変更されることはありません。  
   
- **LineString**、 **CircularString**、および**CompoundCurve**インスタンス、近似アルゴリズムは、元の始点と、インスタンスの終点が保持されますと。追加、ポイントから、元のインスタンスの地点の結果から最も離れたを超えない、指定された許容範囲です。  
+ **LineString**、**CircularString**、**CompoundCurve** のインスタンスでは、近似アルゴリズムはインスタンスの元の始点と終点を保持し、指定された許容範囲を超えない範囲で、結果から最も離れた元のインスタンスの地点を追加する処理を繰り返します。  
   
- `Reduce()`返します、 **LineString**、 **CircularString**、または**CompoundCurve**インスタンス**CircularString**インスタンス。  `Reduce()`どちらかを返します、 **CompoundCurve**または**LineString**インスタンス**CompoundCurve**インスタンス。  
+ `Reduce()` は、**CircularString** インスタンスに対して **LineString**、**CircularString**、**CompoundCurve** インスタンスを返します。  `Reduce()` は、**CompoundCurve** インスタンスに対して **CompoundCurve** または **LineString** インスタンスを返します。  
   
- **多角形**各リングにインスタンスでは、近似アルゴリズムが個別に適用されます。 メソッドが生成されます、`FormatException`場合、返された**多角形**インスタンスが無効ですたとえば、有効でない**MultiPolygon**場合インスタンスが作成`Reduce()`それぞれを簡略化に適用されます。インスタンスのリングし、結果として得られるリングが重なっています。  **CurvePolygon**インスタンス外部リングと内部リングがない、`Reduce()`を返します、 **CurvePolygon**、 **LineString**、または**ポイント**インスタンス。  場合、 **CurvePolygon**内部リングを持つ、 **CurvePolygon**または**MultiPoint**インスタンスが返されます。  
+ **Polygon** インスタンスでは、近似アルゴリズムが各リングに個別に適用されます。 返された **Polygon** インスタンスが無効な場合、メソッドは `FormatException` を生成します。たとえば、インスタンス内の各リングを簡略化するために `Reduce()` が適用され、その結果リングが重なる場合、無効な **MultiPolygon** が作成されます。  外部リングがあり、内部リングがない **CurvePolygon** インスタンスでは、`Reduce()` は **CurvePolygon**、**LineString**、**Point** インスタンスを返します。  **CurvePolygon** に内部リングがある場合、**CurvePolygon** または **MultiPoint** インスタンスが返されます。  
   
  円弧が検出されると、指定された許容範囲の半分以内で弦によって円弧を近似できるかどうかが近似アルゴリズムによってチェックされます。  弦がこの条件を満たす場合、円弧は計算において弦で置き換えられます。 弦がこの条件を満たしていない場合は、円弧が保持され、近似アルゴリズムが残りのセグメントに適用されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-reduce-to-simplify-a-linestring"></a>A. Reduce() を使用して LineString を簡略化する  
- 次の例を作成、`LineString`使用して、インスタンス`Reduce()`のインスタンスを簡略化します。  
+ `LineString` インスタンスを作成し、`Reduce()` を使用してそのインスタンスを簡略化する例を次に示します。  
   
 ```  
 DECLARE @g geometry;  
@@ -77,7 +77,7 @@ SELECT @g.Reduce(.75).ToString();
 ```  
   
 ### <a name="b-using-reduce-with-varying-tolerance-levels-on-a-circularstring"></a>B. CircularString に対し許容レベルを変えて Reduce() を使用する  
- 次の例で`Reduce()`3 つの許容レベルで、 **CircularString**インスタンス。  
+ 次の例では、**CircularString** インスタンスに対して 3 つの許容レベルを適用して `Reduce()` を使用します。  
   
 ```
  DECLARE @g geometry = 'CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0)'; 
@@ -97,7 +97,7 @@ SELECT @g.Reduce(.75).ToString();
  返されるそれぞれのインスタンスには、終点 (0 0) と (24 0) が含まれます。  
   
 ### <a name="c-using-reduce-with-varying-tolerance-levels-on-a-compoundcurve"></a>C. CompoundCurve に対し許容レベルを変えて Reduce() を使用する  
- 次の例で`Reduce()`2 つの許容レベルで、 **CompoundCurve**インスタンス。  
+ 次の例では、**CompoundCurve** インスタンスに対して 2 つの許容レベルを適用して `Reduce()` を使用します。  
   
 ```
  DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0),(24 0, 20 4, 16 0))';  
@@ -105,10 +105,10 @@ SELECT @g.Reduce(.75).ToString();
  SELECT @g.Reduce(16).ToString();
  ```  
   
- この例では、2 つ目**選択**ステートメントから返される、 **LineString**インスタンス:`LineString(0 0, 16 0)`です。  
+ この例では、2 番目の **SELECT** ステートメントによって **LineString** インスタンス (`LineString(0 0, 16 0)`) が返されます。  
   
 ### <a name="showing-an-example-where-the-original-start-and-end-points-are-lost"></a>元の始点と終点が失われる例  
- 次の例では、元の始点と終点が結果のインスタンスで保持されない状況を示します。 元の始点を維持するためにこれが発生し、無効な終了点になる**LineString**インスタンス。  
+ 次の例では、元の始点と終点が結果のインスタンスで保持されない状況を示します。 この状況は、元の始点と終点を保持した結果、**LineString** インスタンスが無効となった場合に発生します。  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(0 0, 4 0, 2 .01, 1 0)';  

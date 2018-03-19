@@ -29,7 +29,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  指定したテーブルと XML 列に新しい選択的 XML インデックスを作成します。 選択的 XML インデックスは、クエリを通常行うノードのサブセットにのみインデックスを作成します。そのため、XML インデックス作成とクエリのパフォーマンスが向上します。 選択的セカンダリ XML インデックスを作成することもできます。 詳細については、次を参照してください。 [Create、Alter、およびセカンダリ選択的 XML インデックスのドロップ](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)です。  
+  指定したテーブルと XML 列に新しい選択的 XML インデックスを作成します。 選択的 XML インデックスは、クエリを通常行うノードのサブセットにのみインデックスを作成します。そのため、XML インデックス作成とクエリのパフォーマンスが向上します。 選択的セカンダリ XML インデックスを作成することもできます。 詳細については、「[選択的セカンダリ XML インデックスの作成、変更、および削除](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)」をご覧ください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -103,9 +103,9 @@ identifier
   
 ##  <a name="Arguments"></a> 引数  
  *index_name*  
- 作成する新しいインデックスの名前を指定します。 インデックス名は、テーブル内で一意である必要がありますが、データベース内で一意にする必要はありません。 インデックス名の規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。  
+ 作成する新しいインデックスの名前を指定します。 インデックス名は、テーブル内では一意である必要がありますが、データベース内で一意である必要はありません。 インデックス名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
- *\<table_object >*インデックスに XML 列を含むテーブルです。 次のどちらかの形式を使用します。  
+ *\<table_object>* インデックスに XML 列を含むテーブルです。 次のどちらかの形式を使用します。  
   
 -   `database_name.schema_name.table_name`  
   
@@ -116,13 +116,13 @@ identifier
 -   `table_name`  
   
  *xml_column_name*  
- インデックスへのパスを含む XML 列の名前です。  
+ インデックスを作成するパスが含まれる XML 列の名前を指定します。  
   
- [WITH XMLNAMESPACES **(**\<xmlnamespace_list>**)**] Is the list of namespaces used by the paths to index. WITH XMLNAMESPACES 句の構文の詳細については、次を参照してください。 [WITH XMLNAMESPACES &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(**\<xmlnamespace_list>**)**] インデックスを作成するパスで使用される名前空間の一覧を指定します。 WITH XMLNAMESPACES 句の構文については、「[WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)」をご覧ください。  
   
- **(**\<Promoted_node_path_list >**)**省略可能な最適化ヒントを使用してインデックスへのパスの一覧を示します。 パスと、CREATE または ALTER ステートメントで指定できる最適化のヒントについては、次を参照してください。[パスを指定し、選択的 XML インデックスの最適化ヒント](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)です。  
+ FOR **(**\<promoted_node_path_list>**)** 省略可能な最適化ヒントを使用してインデックスを作成するパスの一覧を指定します。 CREATE または ALTER ステートメントで指定できるパスと最適化ヒントについては、「[選択的 XML インデックスのパスと最適化ヒントの指定](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)」をご覧ください。  
   
- *\<Index_options >*インデックス オプションについては、次を参照してください。 [CREATE XML INDEX &#40;です。選択的 XML インデックス &#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ WITH *\<index_options>* インデックス オプションについては、「[CREATE XML INDEX &#40;選択的 XML インデックス&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)」を参照してください。  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
  ほとんどの場合、通常の XML インデックスではなく選択的 XML インデックスを作成すると、パフォーマンスが向上し、効率的な保管が可能になります。 ただし、選択的 XML インデックスは、次の条件のいずれかに該当する場合はお勧めしません。  
@@ -132,11 +132,11 @@ identifier
 -   不明な要素または不明な位置にある要素のクエリをサポートする必要がある場合。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- 制限事項と制約については、次を参照してください。[選択的 XML インデックス &#40;です。SXI &#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
+ この機能の制限および制約については、「[選択的 XML インデックス &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)」を参照してください。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>権限  
+### <a name="permissions"></a>アクセス許可  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
 ## <a name="examples"></a>使用例  
@@ -165,7 +165,7 @@ FOR ( path1 = '/myns:book/myns:author/text()' );
   
 ## <a name="see-also"></a>参照  
  [選択的 XML インデックス &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
- [作成、変更、および選択的 XML インデックスを削除します。](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
+ [選択的 XML インデックスの作成、変更、および削除](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
  [選択的 XML インデックスのパスと最適化ヒントの指定](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)  
   
   

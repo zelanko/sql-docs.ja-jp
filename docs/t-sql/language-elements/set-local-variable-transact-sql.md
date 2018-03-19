@@ -1,5 +1,5 @@
 ---
-title: "設定@local_variable(TRANSACT-SQL) |Microsoft ドキュメント"
+title: SET @local_variable (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -31,10 +31,10 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="set-localvariable-transact-sql"></a>設定@local_variable(TRANSACT-SQL)
+# <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  DECLARE @ を使用して作成された、指定されたローカル変数を設定する*local_variable*ステートメントでは、指定された値。  
+  DECLARE @ を使用して、以前に作成した、指定のローカル変数を設定する *local_variable* ステートメントは、指定された値にします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -77,7 +77,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
 ## <a name="arguments"></a>引数  
  **@** *local_variable*  
- 除く任意の型の変数の名前を指定**カーソル**、**テキスト**、 **ntext**、**イメージ**、または**テーブル**です。 変数名を記号には 1 つ開始する必要があります (**@**)。 変数名は、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。  
+ **cursor**、**text**、**ntext**、**image**、または **table** を除く任意の型の変数の名前です。 変数名の先頭には 1 つのアット マーク (**@**) を指定します。 変数名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
  *property_name*  
  ユーザー定義型のプロパティを指定します。  
@@ -89,7 +89,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  共通言語ランタイム (CLR) ユーザー定義型の名前を指定します。  
   
  { **.** | **::** }  
- CLR ユーザー定義型のメソッドを指定します。 (静的ではない) インスタンス メソッドでピリオドを使用 (**.**)。 静的メソッドでは、2 つのコロンを使用して (**::**)。 CLR ユーザー定義型のメソッド、プロパティ、またはフィールドを呼び出すには、その型に対する EXECUTE 権限が必要です。  
+ CLR ユーザー定義型のメソッドを指定します。 静的メソッド以外のインスタンス メソッドでは、ピリオド (**.**) を使用します。 静的メソッドでは、2 つのコロン (**::**) を使用します。 CLR ユーザー定義型のメソッド、プロパティ、またはフィールドを呼び出すには、その型に対する EXECUTE 権限が必要です。  
   
  *method_name* **(** *argument* [ **,**... *n* ] **)**  
  ユーザー定義型のメソッドを指定します。このメソッドでは、あるデータ型のインスタンスの状態を変更する場合に 1 つ以上の引数を使用します。 静的メソッドはパブリックであることが必要です。  
@@ -101,13 +101,13 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  オブジェクトの状態を変更できるアセンブリのメソッドを指定します。 このメソッドには SQLMethodAttribute.IsMutator が適用されます。  
   
  { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
- 複合代入演算子です:  
+ 複合代入演算子です。  
   
- + = 加算して割り当てる  
+ +=              加算して代入  
   
- -= 減算して代入  
+ -=               減算して代入  
   
- * = 乗算して代入  
+ *=              乗算して代入  
   
  /= 除算して代入  
   
@@ -120,7 +120,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  | = ビットごとの OR と割り当て  
   
  *式 (expression)*  
- 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+ 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
  *cursor_variable*  
  カーソル変数の名前を指定します。 ターゲットのカーソル変数が以前に他のカーソルを参照していた場合は、以前の参照は削除されます。  
@@ -141,9 +141,9 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  データの一時コピーを作成するためのカーソルを定義します。作成されるコピーは、カーソルで使用されます。 このカーソルに対する要求の応答は、すべて tempdb 内にある一時テーブルから取得されます。したがって、ベース テーブルへの修正は、このカーソルで取得したデータには反映されません。また、このカーソルで修正を行うこともできません。  
   
  KEYSET  
- カーソルを開くときに、カーソル内の行の構成要素と順序が固定されることを指定します。 行を一意に識別するキーのセットは、tempdb の keysettable に組み込まれています。 ベース テーブル内にあるキー以外の値に対する変更が、カーソル所有者によって実行されるか、または他のユーザーによってコミットされると、その変更は、カーソル所有者がカーソルの周囲をスクロールするときに表示されます。 他のユーザーによって行われた挿入は表示されず、および挿入が使用できる、[!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー カーソル。  
+ カーソルを開くときに、カーソル内の行の構成要素と順序が固定されることを指定します。 行を一意に識別するキーのセットは、tempdb の keysettable に組み込まれています。 ベース テーブル内にあるキー以外の値に対する変更が、カーソル所有者によって実行されるか、または他のユーザーによってコミットされると、その変更は、カーソル所有者がカーソルの周囲をスクロールするときに表示されます。 他のユーザーによって行われた挿入は表示されません。[!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー カーソルを介して、挿入を行うことはできません。  
   
- かどうか、行が削除された、行をフェッチしようとするを返します、@@FETCH_STATUS -2 です。 カーソルの外部からキー値の更新プログラムは、新しい行を挿入した後に、古い行の削除に似ています。 新しい値を持つ行が表示されないと、古い値を含む行をフェッチする試行を返す、@@FETCH_STATUS -2 です。 新しい値は、WHERE CURRENT OF 句を指定してカーソルから更新を実行した場合に表示されます。  
+ 行が削除された場合に、その行をフェッチしようとすると、@@FETCH_STATUS が -2 に設定されて返されます。 カーソル外部からキー値を更新するのは、古い行を削除した後で新しい行を挿入するのと同じです。 新しい値の行は表示されず、古い値の行をフェッチしようとすると @@FETCH_STATUS が -2 に設定されて返されます。 新しい値は、WHERE CURRENT OF 句を指定してカーソルから更新を実行した場合に表示されます。  
   
  DYNAMIC  
  結果セット内の行に対して行ったすべてのデータ変更を反映するカーソルを定義します。このデータ変更は、カーソル所有者がカーソルの周囲をスクロールするときに行われたものです。 行のデータ値、順序、構成要素は、各フェッチ操作で変化する可能性があります。 動的カーソルでは、絶対フェッチ オプションと相対フェッチ オプションはサポートされません。  
@@ -158,48 +158,48 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  カーソルによって行われる位置指定更新または位置指定削除の成功が保証されることを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はカーソルに読み取られた行をロックし、後で変更できることを保証します。 FAST_FORWARD を指定した場合、SCROLL_LOCKS は指定できません。  
   
  OPTIMISTIC  
- 行がカーソルに読み取られてから更新された場合に、カーソルによって行われる位置指定更新または位置指定削除が失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カーソルに読み取られるときは、行をロックしません。 代わりに timestamp 列の値を比較するか、テーブルに timestamp 列がない場合はチェックサム値を使用して、行がカーソルに読み込まれてから変更されたかどうかが判別されます。 行が変更されている場合、位置指定更新または位置指定削除の試行は失敗します。 FAST_FORWARD も指定した場合、OPTIMISTIC は指定できません。  
+ 行がカーソルに読み取られてから更新された場合に、カーソルによって行われる位置指定更新または位置指定削除が失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、行がカーソルに読み取られるとき、その行はロックされません。 代わりに timestamp 列の値を比較するか、テーブルに timestamp 列がない場合はチェックサム値を使用して、行がカーソルに読み込まれてから変更されたかどうかが判別されます。 行が変更されている場合、位置指定更新または位置指定削除の試行は失敗します。 FAST_FORWARD も指定した場合、OPTIMISTIC は指定できません。  
   
  TYPE_WARNING  
  カーソルの種類が、要求されたものから別のものに暗黙的に変換された場合、クライアントに警告メッセージが送信されます。  
   
- *Select_statement*  
- カーソルの結果セットを定義する標準の SELECT ステートメントです。 内で FOR BROWSE および INTO キーワードは許可されません、 *select_statement*カーソル宣言のです。  
+ FOR *select_statement*  
+ カーソルの結果セットを定義する標準の SELECT ステートメントです。 カーソル宣言の *select_statement* 内で FOR BROWSE および INTO キーワードは許可されません。  
   
- DISTINCT、UNION、GROUP BY または HAVING を使用すると、または集計式に含まれるかどうか、 *select_list*カーソルは STATIC として作成されます。  
+ *select_list* で、DISTINCT、UNION、GROUP BY、HAVING のいずれかが使用されるか、集計式が含まれる場合、カーソルは STATIC として作成されます。  
   
  基になる各テーブルに一意なインデックスがなく、ISO SCROLL カーソルまたは [!INCLUDE[tsql](../../includes/tsql-md.md)] KEYSET カーソルが要求された場合、カーソルは自動的に STATIC カーソルになります。  
   
- 場合*select_statement* ORDER BY 句が含まれている列は一意な行識別子、動的カーソルは変換カーソル、キーセット カーソルまたは静的カーソルにキーセット カーソルを開くことができない場合。 STATIC キーワードを指定せず、ISO 構文を使用して定義されたカーソルの場合も、同様の変換が行われます。  
+ *select_statement* に、列が一意な行識別子 (ROWID) になっていない ORDER BY 句が含まれる場合、DYNAMIC カーソルは KEYSET カーソルに変換されます。KEYSET カーソルを開くことができない場合、DYNAMIC カーソルは STATIC カーソルに変換されます。 STATIC キーワードを指定せず、ISO 構文を使用して定義されたカーソルの場合も、同様の変換が行われます。  
   
  READ ONLY  
  このカーソルによる更新を禁止します。 UPDATE または DELETE ステートメントの WHERE CURRENT OF 句で、このカーソルを参照することはできません。 このオプションは、更新対象のカーソルの既定の機能よりも優先されます。 このキーワードは、以前は READ_ONLY と表記していましたが、今後は、READ と ONLY の間にアンダースコアではなくスペースを指定するようになりました。  
   
  UPDATE [OF *column_name*[ **,**... *n* ] ]  
- カーソル内で更新できる列を定義します。 場合*column_name* [**、**. *n* ] は、指定しただけで示されている列が変更を許可します。 一覧を指定しなかった場合は、カーソルを READ ONLY として定義していない限り、すべての列を更新できます。  
+ カーソル内で更新できる列を定義します。 OF *column_name* [**,**...*n*] を指定した場合は、指定した列に対してのみ更新ができます。 一覧を指定しなかった場合は、カーソルを READ ONLY として定義していない限り、すべての列を更新できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  変数は宣言後、NULL に初期化されます。 宣言された変数に NULL 以外の値を代入するには、SET ステートメントを使用します。 変数に値を代入する SET ステートメントでは、1 つの値が返されます。 複数の変数を初期化する場合は、各ローカル変数に対して 1 つずつ、SET ステートメントを使用してください。  
   
  変数は式の内部だけで使用でき、オブジェクト名やキーワードの代わりに使用することはできません。 動的 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを作成するには、EXECUTE を使用します。  
   
- セットの構文規則 **@ * * * cursor_variable* LOCAL キーワードと GLOBAL キーワードを含めないでください。 ときに、セット **@ * * * cursor_variable* = CURSOR... 構文を使用する、カーソルは default to local cursor データベース オプションの設定に応じて、GLOBAL または LOCAL として作成します。  
+ SET **@***cursor_variable* の構文規則に、LOCAL キーワードと GLOBAL キーワードは含まれません。 SET **@***cursor_variable* = CURSOR... 構文を使用すると、カーソルは default to local cursor データベース オプションの設定に応じて、GLOBAL または LOCAL として作成されます。  
   
  カーソル変数は、グローバル カーソルを参照する場合でも、常にローカルです。 カーソル変数でグローバル カーソルを参照する場合、カーソルに対してグローバル カーソル参照とローカル カーソル参照の両方が行われます。 詳細については、例 C を参照してください。  
   
- 詳細については、次を参照してください。 [DECLARE CURSOR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
+ 詳細については、「[DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)」を参照してください。  
   
  複合代入演算子は、変数や、UPDATE、SELECT、および RECEIVE ステートメントの SET など、演算子の右側にある式で代入を行う任意の場所で使用できます。  
   
- SELECT ステートメントで、値を連結する目的で (つまり、集計値を計算する目的で) 変数を使用しないでください。 予期しないクエリ結果が生じる可能性があります。 (代入を含め) SELECT リスト内のすべての式は、出力行ごとに 1 回のみ実行されると保証されていないことが原因です。 詳細については、次を参照してください。[このサポート技術情報記事](http://support.microsoft.com/kb/287515)です。  
+ SELECT ステートメントで、値を連結する目的で (つまり、集計値を計算する目的で) 変数を使用しないでください。 予期しないクエリ結果が生じる可能性があります。 (代入を含め) SELECT リスト内のすべての式は、出力行ごとに 1 回のみ実行されると保証されていないことが原因です。 詳細については、[サポート技術情報の資料](http://support.microsoft.com/kb/287515)を参照してください。  
   
-## <a name="permissions"></a>権限  
- public ロールのメンバーシップが必要です。 すべてのユーザーは、セットを使用できる **@ * * * local_variable*です。  
+## <a name="permissions"></a>アクセス許可  
+ public ロールのメンバーシップが必要です。 すべてのユーザーは、SET **@***local_variable* を使用できます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-printing-the-value-of-a-variable-initialized-by-using-set"></a>A. SET によって初期化された変数の値を出力する  
- 次の例を作成、`@myvar`変数、文字列値では、変数におよびの値を表示、`@myvar`変数。  
+ 次の例では、`@myvar` 変数を作成し、文字列値を代入して、`@myvar` 変数の値を出力します。  
   
 ```  
 DECLARE @myvar char(20);  
@@ -253,7 +253,7 @@ DEALLOCATE my_cursor;
 ```  
   
 ### <a name="e-defining-a-cursor-by-using-set"></a>E. SET を使用してカーソルを定義する  
- 次の例では、`SET`ステートメントがカーソルを定義します。  
+ 次の例では、`SET` ステートメントを使用してカーソルを定義します。  
   
 ```  
 DECLARE @CursorVar CURSOR;  
@@ -288,7 +288,7 @@ SELECT @rows;
 ```  
   
 ### <a name="g-assigning-a-value-to-a-user-defined-type-variable-by-modifying-a-property-of-the-type"></a>G. ユーザー定義型のプロパティを変更してユーザー定義型変数に値を代入する  
- 次の例は、ユーザー定義型の値を設定`Point`プロパティの値を変更することにより`X`の型。  
+ 次の例では、ユーザー定義型の `Point` に対して `X` プロパティの値を変更し、値を設定します。  
   
 ```  
 DECLARE @p Point;  
@@ -298,7 +298,7 @@ GO
 ```  
   
 ### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>H. ユーザー定義型のメソッドを起動してユーザー定義型変数に値を代入する  
- 次の例は、ユーザー定義型の値を設定**ポイント**メソッドを呼び出すことによって`SetXY`型のです。  
+ 次の例では、ユーザー定義型の **point** に対して `SetXY` メソッドを起動し、値を設定します。  
   
 ```  
 DECLARE @p Point;  
@@ -316,10 +316,10 @@ DECLARE @p Point = CONVERT(Point, '')
 SET @p.SetXY(22, 23);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>J. SET によって初期化された変数の値を出力する  
- 次の例を作成、`@myvar`変数、文字列値では、変数におよびの値を表示、`@myvar`変数。  
+ 次の例では、`@myvar` 変数を作成し、文字列値を代入して、`@myvar` 変数の値を出力します。  
   
 ```  
 DECLARE @myvar char(20);  
@@ -329,7 +329,7 @@ SELECT top 1 @myvar FROM sys.databases;
 ```  
   
 ### <a name="k-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>K. SET によって値が代入されたローカル変数を、SELECT ステートメントで使用する  
- 次の例では、という名前のローカル変数`@dept`でこのローカル変数を使用して、`SELECT`で勤務するすべての従業員の姓と名を確認するステートメント、`Marketing`部門。  
+ 次の例では、`@dept` という名前のローカル変数を作成し、このローカル変数を `SELECT` ステートメントで使用して、`Marketing` 部門で働く全従業員の姓名を検索します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -369,7 +369,7 @@ SELECT TOP 1 @rows FROM sys.tables;
 ```  
   
 ## <a name="see-also"></a>参照  
- [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [複合演算子 &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

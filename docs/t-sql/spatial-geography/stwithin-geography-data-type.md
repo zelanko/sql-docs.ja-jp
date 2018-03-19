@@ -1,5 +1,5 @@
 ---
-title: "STWithin (geography データ型) |Microsoft ドキュメント"
+title: "STWithin (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stwithin-geography-data-type"></a>STWithin (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  場合 1 を返します、 **geography**インスタンスが別内に空間的に**geography**インスタンスです。 それ以外の場合は 0 を返します。  
+  **geography** インスタンスが別の **geography** インスタンスに空間的に含まれている場合は 1 を返します。それ以外の場合は 0 を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,18 +42,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geography*  
- もう 1 つ**geography**対象のインスタンスと比較するインスタンス`STWithin()`が呼び出されます。  
+ `STWithin()` を呼び出したインスタンスと比較される、別の **geography** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **bit**  
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- このメソッドは、場合常に null を返しますの spatial reference Id (Srid)、 **geography**インスタンスが一致しません。  
+## <a name="remarks"></a>Remarks  
+ 2 つの **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`STWithin()`2 つのテストに`geography`インスタンスのかどうか、2 番目のインスタンス内で最初のインスタンスが完全にを参照してください。  
+ `STWithin()` を使用して、2 つの `geography` インスタンスの一方のインスタンスがもう一方のインスタンスを完全に含むかどうかをテストする例を次に示します。  
   
 ```  
 DECLARE @g geography;  

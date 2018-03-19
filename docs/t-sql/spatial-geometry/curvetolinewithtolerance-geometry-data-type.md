@@ -1,5 +1,5 @@
 ---
-title: "CurveToLineWithTolerance (geometry データ型) |Microsoft ドキュメント"
+title: "CurveToLineWithTolerance (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-多角形近似を返します、 **geometry**の円弧セグメントを格納しているインスタンス。
+円弧を含む **geometry** インスタンスの多角形近似を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -41,45 +41,45 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>引数  
- *許容範囲*  
- **二重**元の円弧とその線形近似の間の最大誤差を定義する式。  
+ *tolerance*  
+ 元の円弧とその線形近似の間の最大誤差を定義する **double** 式です。  
   
  *relative*  
- **Bool**偏差に相対最大値を使用するかどうかを示す式です。 relative を false (0) に設定すると、線形近似で許容される偏差に絶対最大値が設定されます。 relative を true (1) に設定すると、tolerance は tolerance パラメーターと空間オブジェクトに外接する四角形の直径の積として計算されます。  
+ 偏差に相対最大値を使用するかどうかを示す **bool** 式です。 relative を false (0) に設定すると、線形近似で許容される偏差に絶対最大値が設定されます。 relative を true (1) に設定すると、tolerance は tolerance パラメーターと空間オブジェクトに外接する四角形の直径の積として計算されます。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ジオメトリ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="exceptions"></a>例外  
- 許容範囲を設定 < = 0 がスローされます、`ArgumentOutOfRange`例外。  
+ tolerance <= 0 に設定すると、`ArgumentOutOfRange` 例外がスローされます。  
   
-## <a name="remarks"></a>解説  
- このメソッドは、結果の許容誤差量を指定できます**LineString**です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドを使用すると、結果として得られる **LineString** の許容誤差量を指定できます。  
   
  次の表には、さまざまな種類の `CurveToLineWithTolerance()` によって返されるインスタンスの種類を示しています。  
   
 |呼び出し元のインスタンスの種類|返される空間の種類|  
 |----------------------------|---------------------------|  
-|空の geometry インスタンス|空**GeometryCollection**インスタンス|  
-|**ポイント**と**MultiPoint**|**ポイント**インスタンス|  
-|**MultiPoint**|**ポイント**または**MultiPoint**インスタンス|  
-|**CircularString**、 **CompoundCurve**、または**LineString**|**LineString**インスタンス|  
-|**MultiLineString**|**LineString**または**MultiLineString**インスタンス|  
-|**CurvePolygon**と**多角形**|**多角形**インスタンス|  
-|**MultiPolygon**|**多角形**または**MultiPolygon**インスタンス|  
-|**GeometryCollection**円弧セグメントが含まれていないインスタンスを 1 つ持つ|含まれているインスタンス、 **GeometryCollection**返されるインスタンスの種類を決定します。|  
-|**GeometryCollection** 1 つの 1 次元の円弧セグメントのインスタンスに (**CircularString**、 **CompoundCurve**)|**LineString**インスタンス|  
-|**GeometryCollection** 1 つの 2 次元の円弧セグメントのインスタンスに (**CurvePolygon**)|**多角形**インスタンス|  
-|**GeometryCollection**インスタンスを複数持つ 1 次元|**MultiLineString**インスタンス|  
-|**GeometryCollection**で複数の 2 次元のインスタンス|**MultiPolygon**インスタンス|  
-|**GeometryCollection**さまざまなディメンションの複数のインスタンス|**GeometryCollection**インスタンス|  
+|空の geometry インスタンス|空の **GeometryCollection** インスタンス|  
+|**Point** と **MultiPoint**|**Point** インスタンス|  
+|**MultiPoint**|**Point** または **MultiPoint** インスタンス|  
+|**CircularString**、**CompoundCurve**、または **LineString**|**LineString** インスタンス|  
+|**MultiLineString**|**LineString** または **MultiLineString** インスタンス|  
+|**CurvePolygon** と **Polygon**|**Polygon** インスタンス|  
+|**MultiPolygon**|**Polygon** または **MultiPolygon** インスタンス|  
+|円弧を含まないインスタンスを 1 つ持つ **GeometryCollection**|**GeometryCollection** に含まれているインスタンスによって、返されるインスタンスの型が決まります。|  
+|1 次元の円弧セグメント インスタンス (**CircularString**、**CompoundCurve**) を 1 つ持つ **GeometryCollection**|**LineString** インスタンス|  
+|2 次元の円弧セグメント インスタンス (**CurvePolygon**) を 1 つ持つ **GeometryCollection**|**Polygon** インスタンス|  
+|1 次元インスタンスを複数持つ **GeometryCollection**|**MultiLineString** インスタンス|  
+|2 次元のインスタンスを複数持つ **GeometryCollection**|**MultiPolygon** インスタンス|  
+|次元の異なるインスタンスを複数持つ **GeometryCollection**|**GeometryCollection** インスタンス|  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. CircularString インスタンスに対して異なる tolerance 値を使用する  
- 次の例は、許容範囲の設定方法に影響を示しています、`LineString`から返されるインスタンス、`CircularString`インスタンス。  
+ 次の例では、tolerance の設定が `CircularString` インスタンスから返される `LineString` インスタンスにどのように影響するかを示します。  
   
 ```
  DECLARE @g geometry; 
@@ -106,7 +106,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 呼び出し元の CurvePolygon インスタンスに対して relative を true に設定する  
- 次の例では、`CurvePolygon`を呼び出すインスタンス`CurveToLineWithTolerance()`で*相対*true に設定します。  
+ 次の例では、`CurvePolygon` インスタンスを使用し、*relative* を true に設定して、`CurveToLineWithTolerance()` を呼び出します。  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
@@ -114,7 +114,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="e-using-the-method-on-a-geometrycollection-instance"></a>E. GeometryCollection インスタンスに対してメソッドを使用する  
- 次の例では`CurveToLineWithTolerance()`上、`GeometryCollection`を含む、2 次元`CurvePolygon`インスタンスと 1 次元`CircularString`インスタンス。 `CurveToLineWithTolerance()`線のセグメントの種類を両方の円弧型を変換しで返されます、`GeometryCollection`型です。  
+ 次の例では、2 次元の `CurvePolygon` インスタンスと 1 次元の `CircularString` インスタンスを含む `GeometryCollection` に対して `CurveToLineWithTolerance()` を呼び出します。 `CurveToLineWithTolerance()` により、両方の円弧型が線分型に変換され、`GeometryCollection` 型で返されます。  
   
 ```
  DECLARE @g geometry; 

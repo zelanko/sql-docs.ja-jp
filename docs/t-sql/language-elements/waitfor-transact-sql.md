@@ -1,5 +1,5 @@
 ---
-title: "WAITFOR (TRANSACT-SQL) |Microsoft ドキュメント"
+title: WAITFOR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -65,36 +65,36 @@ WAITFOR
  バッチ、ストアド プロシージャ、またはトランザクションを実行する前に経過する必要のある、最大 24 時間までの指定された時間です。  
   
  '*time_to_pass*'  
- 待機する時間の長さです。 *time_to_pass*の使用可能な形式のいずれかで指定できる**datetime**データ、またはそれをローカル変数として指定することができます。 日付を指定することはできません。そのため、日付の部分の**datetime**値は許可されていません。  
+ 待機する時間の長さです。 *time_to_pass* は、**datetime** データに適合するいずれかの形式で指定することも、ローカル変数として指定することもできます。 日付を指定することはできません。したがって、**datetime** 値の日付の部分は許可されません。  
   
  TIME  
  バッチ、ストアド プロシージャ、またはトランザクションを実行するように指定された時間です。  
   
  '*time_to_execute*'  
- WAITFOR ステートメントが終了する時間です。 *time_to_execute*の使用可能な形式のいずれかで指定できる**datetime**データ、またはそれをローカル変数として指定することができます。 日付を指定することはできません。そのため、日付の部分の**datetime**値は許可されていません。  
+ WAITFOR ステートメントが終了する時間です。 *time_to_execute* は、**datetime** データに適合するいずれかの形式で指定することも、ローカル変数として指定することもできます。 日付を指定することはできません。したがって、**datetime** 値の日付の部分は許可されません。  
   
  *receive_statement*  
  有効な RECEIVE ステートメントです。  
   
 > [!IMPORTANT]  
->  指定された WAITFOR、 *receive_statement*にのみ適用[!INCLUDE[ssSB](../../includes/sssb-md.md)]メッセージ。 詳細については、次を参照してください。[受信 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/receive-transact-sql.md).  
+>  *receive_statement* が指定された WAITFOR は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージに対してのみ適用できます。 詳細については、「[RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)」を参照してください。  
   
  *get_conversation_group_statement*  
  有効な GET CONVERSATION GROUP ステートメントです。  
   
 > [!IMPORTANT]  
->  指定された WAITFOR、 *get_conversation_group_statement*にのみ適用[!INCLUDE[ssSB](../../includes/sssb-md.md)]メッセージ。 詳細については、次を参照してください。 [GET CONVERSATION GROUP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/get-conversation-group-transact-sql.md).  
+>  *get_conversation_group_statement* が指定された WAITFOR は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージに対してのみ適用できます。 詳細については、「[GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)」を参照してください。  
   
- タイムアウト*タイムアウト*  
+ TIMEOUT *timeout*  
  キューでメッセージの到着を待機する時間を、ミリ秒単位で指定します。  
   
 > [!IMPORTANT]  
->  TIMEOUT が指定された WAITFOR は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージに対してのみ適用できます。 詳細については、次を参照してください。[受信 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/receive-transact-sql.md)と[GET CONVERSATION GROUP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/get-conversation-group-transact-sql.md).  
+>  TIMEOUT が指定された WAITFOR は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージに対してのみ適用できます。 詳細については、「[RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)」と「[GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  WAITFOR ステートメントを実行している間は、トランザクションが実行され、その他のリクエストは同じトランザクションの下で実行することはできません。  
   
- 指定された時間から実際の遅延時間が異なる場合があります*time_to_pass*、 *time_to_execute*、または*タイムアウト*サーバーの利用状況のレベルに依存します。 時間のカウンターは、WAITFOR ステートメントに関連付けられたスレッドがスケジュールされた時点から開始します。 サーバーがビジーの場合、スレッドはすぐにスケジュールされない場合があります。したがって遅延時間は指定した時間よりも長くなることがあります。  
+ 実際の遅延時間は *time_to_pass*、*time_to_execute* または *timeout* で指定される時間によって異なり、サーバーの利用状況レベルにも依存します。 時間のカウンターは、WAITFOR ステートメントに関連付けられたスレッドがスケジュールされた時点から開始します。 サーバーがビジーの場合、スレッドはすぐにスケジュールされない場合があります。したがって遅延時間は指定した時間よりも長くなることがあります。  
   
  WAITFOR はクエリのセマンティクスを変更しません。 クエリが行を返すことができない場合、WAITFOR は待機状態のままか、TIMEOUT が指定されている場合は TIMEOUT に達するまで待機します。  
   
@@ -102,7 +102,7 @@ WAITFOR
   
  WAITFOR ステートメントでは、ビューを定義することはできません。  
   
- クエリが query wait オプションの値を超えると、WAITFOR ステートメントの引数を実行せずに完了できます。 構成オプションの詳細については、次を参照してください。 [query wait サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)です。 アクティブであり待機中の処理を表示する[sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)です。  
+ クエリが query wait オプションの値を超えると、WAITFOR ステートメントの引数を実行せずに完了できます。 構成オプションの詳細については、「[query wait サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)」を参照してください。 アクティブな待機中の処理を表示するには、[sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) を使用します。  
   
  各 WAITFOR ステートメントには、それに関連付けられたスレッドがあります。 同じサーバーに多くの WAITFOR ステートメントが指定されている場合、これらのステートメントの実行を待機することを中止できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、WAITFOR ステートメントに関連付けられたスレッドの数を監視し、スレッドが不足し始めるとランダムにこれらのスレッドのいくつかを選択し、終了させます。  
   
@@ -114,7 +114,7 @@ WAITFOR
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-waitfor-time"></a>A. WAITFOR TIME を使用する  
- 次の例では、午後 10 時 20 分に msdb データベースでストアド プロシージャ `sp_update_job` を実行します。 (`22:20`).  
+ 次の例では、午後 10 時 20 分に msdb データベースでストアド プロシージャ `sp_update_job` を実行します。 (`22:20`)。  
   
 ```  
 EXECUTE sp_add_job @job_name = 'TestJob';  
@@ -138,7 +138,7 @@ GO
 ```  
   
 ### <a name="c-using-waitfor-delay-with-a-local-variable"></a>C. ローカル変数と共に WAITFOR DELAY を使用する  
- 次の例で、ローカル変数を使用する方法を示しています、`WAITFOR DELAY`オプション。 ここでは、変更可能な時間が経過するまで待機し、経過した時間の時、分、秒の長さに関する情報をユーザーに返すストアド プロシージャを作成します。  
+ 次の例では、`WAITFOR DELAY` オプションでローカル変数を使用する方法を示します。 ここでは、変更可能な時間が経過するまで待機し、経過した時間の時、分、秒の長さに関する情報をユーザーに返すストアド プロシージャを作成します。  
   
 ```  
 IF OBJECT_ID('dbo.TimeDelay_hh_mm_ss','P') IS NOT NULL  
@@ -176,8 +176,8 @@ GO
  `A total time of 00:00:10, in hh:mm:ss, has elapsed. Your time is up.`  
   
 ## <a name="see-also"></a>参照  
- [フロー制御言語 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md)   
- [datetime &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/datetime-transact-sql.md)   
+ [フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   

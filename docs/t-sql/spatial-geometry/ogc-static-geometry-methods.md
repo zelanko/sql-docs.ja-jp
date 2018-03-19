@@ -1,5 +1,5 @@
 ---
-title: "OGC の静的なジオメトリ メソッド |Microsoft ドキュメント"
+title: "OGC の静的なジオメトリ メソッド | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [STGeomFromText &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)  
+-   [STGeomFromText#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)  
   
 -   [STPointFromText &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stpointfromtext-geometry-data-type.md)  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [STGeomFromWKB &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stgeomfromwkb-geometry-data-type.md)  
   
--   [STPointFromWKB &#40;geometry データ型e&#41;](../../t-sql/spatial-geometry/stpointfromwkb-geometry-data-type.md)  
+-   [STPointFromWKB &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stpointfromwkb-geometry-data-type.md)  
   
 -   [STLineFromWKB &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stlinefromwkb-geometry-data-type.md)  
   

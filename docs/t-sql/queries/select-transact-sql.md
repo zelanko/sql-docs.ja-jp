@@ -1,5 +1,5 @@
 ---
-title: "選択 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: SELECT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  データベースから行が取得され、1 つ以上のテーブルからの行または列の 1 つまたは複数を選択できるように[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 SELECT ステートメントの完全な構文は複雑ですが、主な句は次のとおりです:  
+  データベースから行を取得し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つ以上のテーブルから 1 つ以上の行または列を選択できるようにします。 SELECT ステートメントの完全な構文は複雑ですが、主な句は次のとおりです。  
   
 [ WITH { [ XMLNAMESPACES ,] [ \<common_table_expression> ] } ]
   
@@ -51,11 +51,11 @@ ms.lasthandoff: 01/25/2018
   
  [ GROUP BY *group_by_expression* ]  
   
- [持つ*search_condition* ]  
+ [ HAVING *search_condition* ]  
   
  [ ORDER BY *order_expression* [ ASC | DESC ] ]  
   
- UNION、EXCEPT、INTERSECT 演算子はクエリを結合または比較の結果の 1 つの結果セットの間で使用できます。  
+ UNION、EXCEPT、INTERSECT 演算子をクエリ間で使用すると、クエリの結果を結合または比較して単一の結果セットにできます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -106,28 +106,28 @@ SELECT <select_criteria>
   
 ```  
   
-## <a name="remarks"></a>解説  
- SELECT ステートメントは非常に複雑であるため、構文の構成要素と引数の詳細を句ごとに説明します:  
+## <a name="remarks"></a>Remarks  
+ SELECT ステートメントは非常に複雑であるため、構文の構成要素と引数の詳細を句ごとに説明します。  
   
 |||  
 |-|-|  
-|[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[持つ](../../t-sql/queries/select-having-transact-sql.md)|  
+|[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[HAVING](../../t-sql/queries/select-having-transact-sql.md)|  
 |[SELECT 句](../../t-sql/queries/select-clause-transact-sql.md)|[UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)|  
 |[INTO 句](../../t-sql/queries/select-into-clause-transact-sql.md)|[EXCEPT および INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)|  
 |[FROM](../../t-sql/queries/from-transact-sql.md)|[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)|  
 |[WHERE](../../t-sql/queries/where-transact-sql.md)|[FOR 句](../../t-sql/queries/select-for-clause-transact-sql.md)|  
-|[グループ化](../../t-sql/queries/select-group-by-transact-sql.md)|[OPTION 句](../../t-sql/queries/option-clause-transact-sql.md)|  
+|[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)|[OPTION 句](../../t-sql/queries/option-clause-transact-sql.md)|  
   
  SELECT ステートメント内の句の順序は重要です。 オプションの句は省略できます。ただし、オプションの句を使用する場合は、適切な順序で指定する必要があります。  
   
  ユーザー定義関数に SELECT ステートメントを指定できるのは、関数にとってローカルな変数に値を代入する式がステートメントの選択リストに含まれる場合だけです。  
   
- サーバー名の部分として OPENDATASOURCE 関数で構築された 4 部構成の名前は、テーブル名は、SELECT ステートメントで指定できるテーブル ソースとして使用できます。 4 部構成の名前を指定することはできません[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+ サーバー名要素として OPENDATASOURCE 関数を使用する 4 部構成の名前は、SELECT ステートメント内にテーブル名を指定できる任意の場所で、テーブル ソースとして使用できます。 4 部構成の名前を [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に対して指定することはできません。  
   
  リモート テーブルに関係する SELECT ステートメントには、構文の制約がいくつか適用されます。  
   
 ## <a name="logical-processing-order-of-the-select-statement"></a>SELECT ステートメントの論理的な処理順序  
- 以下のステップは、SELECT ステートメントの論理的な処理順序 (バインド順序) を示しています。 この順序によって、1 つのステップで定義されたオブジェクトが、以降のステップにおける句でいつ利用可能になるかが決まります。 たとえば、クエリ プロセッサが FROM 句で定義されているテーブルまたはビューにバインド (アクセス) できる場合、これらのオブジェクトとその列は、以降のすべてのステップで利用できます。 逆に、SELECT 句はステップ 8 にあるので、この句で定義されているすべての列の別名と派生列は、それより前の句では参照できません。 ただし、ORDER BY 句などの後続の句で参照されていることができます。 ステートメントの実際の物理的な実行は、クエリ プロセッサによって決定され、この一覧から、順序が異なる場合があります。  
+ 以下のステップは、SELECT ステートメントの論理的な処理順序 (バインド順序) を示しています。 この順序によって、1 つのステップで定義されたオブジェクトが、以降のステップにおける句でいつ利用可能になるかが決まります。 たとえば、クエリ プロセッサが FROM 句で定義されているテーブルまたはビューにバインド (アクセス) できる場合、これらのオブジェクトとその列は、以降のすべてのステップで利用できます。 逆に、SELECT 句はステップ 8 にあるので、この句で定義されているすべての列の別名と派生列は、それより前の句では参照できません。 ただし、ORDER BY 句などの後続の句で参照されていることができます。 ステートメントの実際の物理的な実行は、クエリ プロセッサによって決定され、このリストでの順序とは異なる場合があります。  
   
 1.  FROM  
 2.  ON  
@@ -142,18 +142,18 @@ SELECT <select_criteria>
 11. 先頭に戻る  
 
 > [!WARNING]
-> 上記の順序は、通常は true です。 ただしは一般的でない場合は、シーケンスが異なる場合があります。
+> 上記の順序は、通常は true です。 ただし、一般的ではないシーケンスが異なる場合があります。
 >
-> たとえば、ビューがいくつかのテーブル行を除外およびビューの SELECT 列リストから、データ型を変更する変換を使用して、ビューにクラスター化インデックスがある*varchar*に*整数*です。 このような状況では、変換は、WHERE 句を実行する前に実行できます。 珍しいことで実際にします。 多くの場合、方法がある場合で問題になる場合は、別のシーケンスを避けるためにビューを変更します。 
+> たとえば、ビューにクラスター化インデックスがいくつかあり、ビューがいくつかのテーブル行を除外しており、ビューの SELECT 列リストがデータ型を *varchar* から *integer* に変更するために CONVERT を使用しているとします。 このような状況では、WHERE 句が実行される前に CONVERT が実行される場合があります。 実際に珍しいです。 これが問題となる場合、しばしばビューを変更して、異なるシーケンスを回避する方法があります。 
 
-## <a name="permissions"></a>権限  
- データの選択にはテーブルまたはビューに対する **SELECT** 権限が必要です。この権限は、スキーマに対する **SELECT** 権限やテーブルに対する **CONTROL** 権限など上位スコープから継承されます。 メンバーシップが必要か、 **db_datareader**または**db_owner**固定データベース ロール、または**sysadmin**固定サーバー ロール。 使用して新しいテーブルを作成する**SELECTINTO**両方も必要、 **CREATETABLE**権限、および**ALTERSCHEMA**新しいテーブルを所有するスキーマに対する権限。  
+## <a name="permissions"></a>アクセス許可  
+ データの選択にはテーブルまたはビューに対する **SELECT** 権限が必要です。この権限は、スキーマに対する **SELECT** 権限やテーブルに対する **CONTROL** 権限など上位スコープから継承されます。 または、**db_datareader** または **db_owner** 固定データベース ロールまたは **sysadmin** 固定サーバー ロールのメンバーシップが必要です。 **SELECTINTO** を使用した新しいテーブルの作成には、**CREATETABLE** 権限、および新しいテーブルを所有するスキーマに対する **ALTERSCHEMA** 権限も必要です。  
   
 ## <a name="examples"></a>例 :   
 次の例では、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] データベースを使用します。
   
 ### <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. SELECT を使用して行および列を取得する  
- このセクションでは、次の 3 つのコード例を示します。 この最初のコード例には、(WHERE 句が指定されていない) すべての行とすべての列が返されます (を使用して、 `*`) から、`DimEmployee`テーブル。  
+ このセクションでは、次の 3 つのコード例を示します。 最初のコード例では、`DimEmployee` テーブルから、WHERE 句を指定せずにすべての行を返し、また `*` を使用してすべての列を返しています。  
   
 ```sql  
 SELECT *  
@@ -161,7 +161,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- テーブル別名を使用して、同じ結果を達成する次の例です。  
+ この次の例では、テーブルのエイリアシングを使用して同じ結果を得ようとしています。  
   
 ```sql  
 SELECT e.*  
@@ -169,7 +169,7 @@ FROM DimEmployee AS e
 ORDER BY LastName;  
 ```  
   
- この例は、(WHERE 句が指定されていない) すべての行と列のサブセットを返します (`FirstName`、 `LastName`、 `StartDate`) から、`DimEmployee`テーブルに、`AdventureWorksPDW2012`データベース。 3 番目の列見出しの名前を変更する`FirstDay`です。  
+ この例では、`AdventureWorksPDW2012` データベース内の `DimEmployee` テーブルから、WHERE 句を指定せずにすべての行と、一部の列 (`FirstName`、`LastName`、`StartDate`) を返しています。 3 番目の列見出しは `FirstDay` に名前変更されています。  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  
@@ -177,7 +177,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- この例の行のみを返します`DimEmployee`がある、`EndDate`が NULL でないと、`MaritalStatus`の AM' (結婚)。  
+ この例では、`EndDate` が NULL でない、`MaritalStatus` が ‘M’ (結婚している) の `DimEmployee` の行のみが返されます。  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  
@@ -188,7 +188,7 @@ ORDER BY LastName;
 ```  
   
 ### <a name="b-using-select-with-column-headings-and-calculations"></a>B. 列ヘッダーおよび計算処理と共に SELECT を使用する  
- 次の例は、すべての行を返します、`DimEmployee`テーブル、およびに基づいて各従業員の支給総額が計算されます、`BaseRate`と 40 時間稼働します。  
+ 次の例では、`DimEmployee` テーブルのすべての行が返され、各従業員の `BaseRate` と週 40 時間勤務に基いた、給与総額が計算されます。  
   
 ```sql  
 SELECT FirstName, LastName, BaseRate, BaseRate * 40 AS GrossPay  
@@ -197,7 +197,7 @@ ORDER BY LastName;
 ```  
   
 ### <a name="c-using-distinct-with-select"></a>C. DISTINCT を SELECT と共に使用する  
- 次の例で`DISTINCT`すべて一意のタイトルの一覧を生成する、`DimEmployee`テーブル。  
+ 次の例では、`DISTINCT` を使用し、`DimEmployee` テーブル内の一意のすべてのタイトルの一覧が生成されます。  
   
 ```sql  
 SELECT DISTINCT Title  
@@ -206,7 +206,7 @@ ORDER BY Title;
 ```  
   
 ### <a name="d-using-group-by"></a>D. GROUP BY を使用する  
- 次の例では、各日に、すべての売上の合計金額を検索します。  
+ 次の例では、各日のすべての売上の合計金額が検索されます。  
   
 ```sql  
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales  
@@ -215,10 +215,10 @@ GROUP BY OrderDateKey
 ORDER BY OrderDateKey;  
 ```  
   
- ため、`GROUP BY`句、毎日のすべての売上合計を含む 1 つだけの行が返されます。  
+ `GROUP BY` 句があるため、すべての売上の合計を含む 1 つの行のみが日ごとに返されます。  
   
 ### <a name="e-using-group-by-with-multiple-groups"></a>E. GROUP BY を複数のグループと共に使用する  
- 次の例は、1 日に、発注日および昇格キーによってグループ化に対して、平均価格とインターネット販売の合計を検索します。  
+ 次の例では、各日の平均価格とインターネット販売の合計を、発注日および昇格キーでグループ化して検索します。  
   
 ```sql  
 
@@ -229,7 +229,7 @@ ORDER BY OrderDateKey;
 ```  
   
 ### <a name="f-using-group-by-and-where"></a>F. GROUP BY と WHERE を使用する  
- 次の例では、受注日、2002 年 8 月 1 日より後の行のみを取得した後、結果がグループを格納します。  
+ 次の例では、注文日が 2002 年 8 月 1 日より遅い行のみを取得した後、結果をグループ化します。  
   
 ```sql  
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales  
@@ -249,7 +249,7 @@ GROUP BY (OrderDateKey * 10);
 ```  
   
 ### <a name="h-using-group-by-with-order-by"></a>H. ORDER BY と共に GROUP BY を使用する  
- 次の例では、1 日で日、および注文あたりの売り上げ高の合計を検索します。  
+ 次の例では、1 日の売り上げ高と注文額の合計を検索します。  
   
 ```sql  
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales  
@@ -259,7 +259,7 @@ ORDER BY OrderDateKey;
 ```  
   
 ### <a name="i-using-the-having-clause"></a>I. HAVING 句を使用する  
- このクエリを使用して、`HAVING`結果を制限する句。  
+ このクエリは、`HAVING` 句を使用して結果を制限しています。  
   
 ```sql  
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales  
@@ -270,7 +270,7 @@ ORDER BY OrderDateKey;
 ```  
   
 ## <a name="see-also"></a>参照  
- [例 &#40; を選択します。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-examples-transact-sql.md)  
- [ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql.md)
+ [SELECT 例 &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)  
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)
   
 

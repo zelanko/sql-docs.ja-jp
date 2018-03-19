@@ -1,5 +1,5 @@
 ---
-title: "STOverlaps (geography データ型) |Microsoft ドキュメント"
+title: "STOverlaps (geography データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stoverlaps-geography-data-type"></a>STOverlaps (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  場合 1 を返します、 **geography**インスタンス空間的に重なって別**geography**インスタンス、またはそうでない場合は 0 です。  
+  **geography** インスタンスが別の **geography** インスタンスと空間的に重複する場合は 1 を返します。それ以外の場合は 0 を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,18 +42,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geography*  
- もう 1 つ**geography**対象のインスタンスと比較するインスタンス`STOverlaps()`が呼び出されます。  
+ `STOverlaps()` を呼び出したインスタンスと比較される、別の **geography** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **bit**  
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
- このメソッドは、場合常に null を返しますの spatial reference Id (Srid)、 **geography**インスタンスが一致しません。  
+## <a name="remarks"></a>Remarks  
+ 2 つの **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`STOverlaps()`2 つのテストに**geography**重複のインスタンス。  
+ `STOverlaps()` を使用して 2 つの **geography** インスタンスが重なっているかどうかをテストする例を次に示します。  
   
 ```  
 DECLARE @g geography;  

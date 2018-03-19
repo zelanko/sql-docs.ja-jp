@@ -1,5 +1,5 @@
 ---
-title: "(TRANSACT-SQL) の説明 |Microsoft ドキュメント"
+title: EXPLAIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="explain-transact-sql"></a>説明 (TRANSACT-SQL)
+# <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  クエリ プランを返します、 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)]せず、ステートメントを実行するステートメント。 使用して**説明**プレビューがどのような操作データの移動が必要になり、クエリ操作の推定コストを表示します。  
+  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントを実行せずに、ステートメントのクエリ プランを返します。 **EXPLAIN** を使用して、どの操作でデータの移動が必要になるかをプレビューし、クエリ操作の推定コストを表示します。  
   
- クエリ プランの詳細についてを参照してください「クエリ プランを理解する」、[!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)]です。  
+ クエリ プランの詳細については、[!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)]にある「Understanding Query Plans」 (クエリ プランについて) を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,15 +41,15 @@ EXPLAIN SQL_statement
   
 ## <a name="arguments"></a>引数  
  *SQL_statement*  
- [!INCLUDE[DWsql](../../includes/dwsql-md.md)]をステートメント**説明**実行されます。 *SQL_statement*これらのコマンドのいずれかです:**選択**、**挿入**、**更新**、**削除**、 **CREATE TABLE AS SELECT**、**リモート テーブルを作成する**です。  
+ **EXPLAIN** を実行する [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントです。 *SQL_statement* には、**SELECT**、**INSERT**、**UPDATE**、**DELETE**、**CREATE TABLE AS SELECT**、**CREATE REMOTE TABLE** のいずれかのコマンドが使用できます。  
   
-## <a name="permissions"></a>権限  
- 必要があります、 **SHOWPLAN**アクセス許可、および実行する権限*SQL_statement*です。 参照してください[アクセス許可: GRANT、DENY、REVOKE &#40;です。Azure SQL Data Warehouse、並列データ ウェアハウス &#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
+## <a name="permissions"></a>アクセス許可  
+ **SHOWPLAN** アクセス許可と、*SQL_statement* を実行するためのアクセス許可が必要です。 「[アクセス許可: GRANT、DENY、REVOKE &#40;Azure SQL Data Warehouse、並列データ ウェアハウス&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md)」を参照してください。  
   
 ## <a name="return-value"></a>戻り値  
- 戻り値、**説明**コマンドは、次に示す構造を持つ XML ドキュメントです。 この XML ドキュメントが、指定したクエリのクエリ プランのすべての操作を示してで囲まれた各、`<dsql_operation>`タグ。 型の戻り値は、 **nvarchar (max)**です。  
+ **EXPLAIN** コマンドからの戻り値は、次に示す構造を持つ XML ドキュメントです。 この XML ドキュメントには、指定したクエリのクエリ プランのすべての操作が、それぞれ `<dsql_operation>` タグで囲まれて一覧表示されます。 戻り値の型は **nvarchar (max)** です。  
   
- 返されたクエリ プランは、シーケンシャルな SQL ステートメントを示しています。クエリの実行時、同時実行いくつかのステートメントが順番に表示される可能性がありますので、並列化された操作を伴う場合があります。  
+ 返されたクエリ プランは、シーケンシャル SQL ステートメントを表現します。クエリの実行時、並列化された操作を伴う場合があるため、表示されている一部のシーケンシャル ステートメントが同時に実行される可能性があります。  
   
 ```  
 \<?xml version="1.0" encoding="utf-8"?>  
@@ -65,37 +65,37 @@ EXPLAIN SQL_statement
 </dsql_query>  
 ```  
   
- XML タグは、この情報を含めます。  
+ XML タグには、次の情報が含まれます。  
   
 |XML タグ|概要、属性、およびコンテンツ|  
 |-------------|--------------------------------------|  
 |\<dsql_query>|最上位レベル/ドキュメントの要素。|
-|\<sql>|エコー *SQL_statement*です。|  
+|\<sql>|*SQL_statement* をエコーします。|  
 |\<params>|このタグは、この時点では使用されません。|  
-|\<dsql_operations>|まとめたものし、クエリの手順が含まれています、クエリのコスト情報が含まれています。 すべて含まれています、`<dsql_operation>`ブロックします。 このタグには、全体のクエリに対して行数の情報が含まれています。<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost*推定時間 (ミリ秒) を実行するクエリの合計がします。<br /><br /> *total_number_operations*クエリの操作の合計数です。 並列に処理して複数のノード上で実行される操作は、1 つの操作としてカウントされます。|  
-|\<dsql_operation>|クエリ プラン内で 1 回の操作について説明します。 \<Dsql_operation > タグに属性として操作の種類が含まれています。<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type*で見つかった値の 1 つ[クエリを実行するデータ (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c)です。<br /><br /> 内のコンテンツ、`\<dsql_operation>`ブロックは操作の種類に依存します。<br /><br /> 次の表を参照してください。|  
+|\<dsql_operations>|クエリの手順がまとめられて含まれ、クエリのコスト情報が含まれます。 すべての `<dsql_operation>` ブロックも含まれます。 このタグには、全体のクエリのカウント情報が含まれています。<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* は、クエリの実行にかかる推定合計時間 (ミリ秒) です。<br /><br /> *total_number_operations* は、クエリの操作の総数です。 並列化され複数のノードで実行される操作は、1 つの操作としてカウントされます。|  
+|\<dsql_operation>|クエリ プラン内の 1 つの操作について説明します。 \<dsql_operation> タグには、属性として操作の種類が含まれます。<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* は、[データのクエリ (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c) で見つかった値の 1 つです。<br /><br /> `\<dsql_operation>` ブロック内のコンテンツは、操作の種類によって異なります。<br /><br /> 次の表を参照してください。|  
   
 |操作の種類|コンテンツ|例|  
 |--------------------|-------------|-------------|  
-|BROADCAST_MOVE、DISTRIBUTE_REPLICATED_TABLE_MOVE、MASTER_TABLE_MOVE、PARTITION_MOVE、SHUFFLE_MOVE、および TRIM_MOVE|`<operation_cost>`これらの属性を持つ要素。 値は、ローカル操作のみを反映します。<br /><br /> -   *コスト*ローカル オペレーター コストは、(ミリ秒) を実行する操作の推定所要時間を示します。<br />-   *accumulative_cost*ミリ秒での並列処理の加算結果の値を含むプランに見られるすべての操作の合計です。<br />-   *average_rowsize*は、行の推定平均サイズ (バイト単位) を取得および操作中に渡される行のです。<br />-   *output_rows*出力 (ノード) の基数は、出力行の数を示します。<br /><br /> `<location>`: ノードまたは分布の操作を実行します。 オプションは、:「コントロール」、"ComputeNode"、"AllComputeNodes"、"AllDistributions"、"SubsetDistributions"、「配布」および"SubsetNodes"です。<br /><br /> `<source_statement>`: ソース データを、ランダムに移動します。<br /><br /> `<destination_table>`: 内部の一時テーブルにデータが移動されます。<br /><br /> `<shuffle_columns>`: (SHUFFLE_MOVE 操作にのみ該当)。 一時テーブルのディストリビューション列として使用される 1 つまたは複数の列です。|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
-|CopyOperation|`<operation_cost>`:「`<operation_cost>`上。<br /><br /> `<DestinationCatalog>`: 送信先ノードまたはノード。<br /><br /> `<DestinationSchema>`: DestinationCatalog で送信先スキーマです。<br /><br /> `<DestinationTableName>`: コピー先のテーブルまたは"TableName"の名前。<br /><br /> `<DestinationDatasource>`: 名前または接続情報の変換先データ ソース。<br /><br /> `<Username>``<Password>`: これらのフィールドを示すこと、ユーザー名とパスワード、変換先の必要があります。<br /><br /> `<BatchSize>`: コピー操作のバッチ サイズ。<br /><br /> `<SelectStatement>`: Select ステートメントのコピーを実行するために使用します。<br /><br /> `<distribution>`: コピーが実行される分布です。|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
-|MetaDataCreate_Operation|`<source_table>`: 操作のソース テーブル。<br /><br /> `<destionation_table>`: 操作の変換先テーブルです。|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
-|ON|`<location>`:「`<location>`上。<br /><br /> `<sql_operation>`: ノードで実行される SQL コマンドを識別します。|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
-|RemoteOnOperation|`<DestinationCatalog>`: 送信先のカタログ。<br /><br /> `<DestinationSchema>`: DestinationCatalog で送信先スキーマです。<br /><br /> `<DestinationTableName>`: コピー先のテーブルまたは"TableName"の名前。<br /><br /> `<DestinationDatasource>`: 変換先データ ソースの名前。<br /><br /> `<Username>``<Password>`: これらのフィールドを示すこと、ユーザー名とパスワード、変換先の必要があります。<br /><br /> `<CreateStatement>`: テーブルの作成ステートメント、移行先データベース。|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
+|BROADCAST_MOVE、DISTRIBUTE_REPLICATED_TABLE_MOVE、MASTER_TABLE_MOVE、PARTITION_MOVE、SHUFFLE_MOVE、および TRIM_MOVE|これらの属性を持つ `<operation_cost>` 要素。 値には、ローカル操作のみが反映されます。<br /><br /> -   *cost* は、ローカル オペレーター コストで、実行する操作の推定所要時間 (ミリ秒) を示します。<br />-   *accumulative_cost* は、プランで見られるすべての操作 (並列処理の合計値を含む) の合計です (ミリ秒)。<br />-   *average_rowsize*は、操作中に取得されて渡される行の推定平均サイズ (バイト) です。<br />-   *output_rows* は、出力 (ノード) カーディナリティで、出力行の数を示します。<br /><br /> `<location>`: 操作が実行されるノードまたはディストリビューション。 オプション: “Control”、"ComputeNode"、"AllComputeNodes"、"AllDistributions"、"SubsetDistributions"、"Distribution"、および "SubsetNodes"。<br /><br /> `<source_statement>`: SHUFFLE_MOVE のソース データ。<br /><br /> `<destination_table>`: データの移動先となる内部の一時テーブル。<br /><br /> `<shuffle_columns>`: (SHUFFLE_MOVE 操作にのみ適用可能)。 一時テーブルのディストリビューション列として使用される 1 つまたは複数の列。|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
+|CopyOperation|`<operation_cost>`: 上記の `<operation_cost>` を参照。<br /><br /> `<DestinationCatalog>`: 宛先ノード。<br /><br /> `<DestinationSchema>`: DestinationCatalog 内の宛先スキーマ。<br /><br /> `<DestinationTableName>`: 宛先テーブルの名前または “TableName”。<br /><br /> `<DestinationDatasource>`: 宛先データベースの接続の名前または情報。<br /><br /> `<Username>` と `<Password>`: これらのフィールドには、宛先で必要となるユーザー名とパスワードが示されます。<br /><br /> `<BatchSize>`: コピー操作のバッチ サイズ。<br /><br /> `<SelectStatement>`: コピーを実行するために使用される Select ステートメント。<br /><br /> `<distribution>`: コピーが実行されるディストリビューション。|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
+|MetaDataCreate_Operation|`<source_table>`: 操作のソース テーブル。<br /><br /> `<destionation_table>`: 操作の宛先テーブル。|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
+|ON|`<location>`: 上記の `<location>` を参照。<br /><br /> `<sql_operation>`: ノードで実行される SQL コマンドを識別します。|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
+|RemoteOnOperation|`<DestinationCatalog>`: 宛先カタログ。<br /><br /> `<DestinationSchema>`: DestinationCatalog 内の宛先スキーマ。<br /><br /> `<DestinationTableName>`: 宛先テーブルの名前または “TableName”。<br /><br /> `<DestinationDatasource>`: 宛先データソースの名前。<br /><br /> `<Username>` と `<Password>`: これらのフィールドには、宛先で必要となるユーザー名とパスワードが示されます。<br /><br /> `<CreateStatement>`: 宛先データベースのテーブルの作成ステートメント。|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
 |RETURN|`<resultset>`: 結果セットの識別子。|`<resultset>RS_19</resultset>`|  
 |RND_ID|`<identifier>`: 作成したオブジェクトの識別子。|`<identifier>TEMP_ID_260</identifier>`|  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- **説明**に適用できます*最適化*の結果に基づいて、クエリでのみ、向上または変更できるクエリである、**説明**コマンド。 サポートされている**説明**上に示されたコマンド。 使用しようとしています。**説明**サポートされていないクエリを使用して型はエラーを返しますまたは、クエリをエコーします。  
+ **EXPLAIN** は、*最適化可能な*クエリ、つまり、**EXPLAIN** コマンドの結果に基づいて、改善または修正できるクエリにのみ適用できます。 上記に一覧表示されている **EXPLAIN** コマンドがサポートされています。 **EXPLAIN** をサポートされていないクエリの型で使用しようとすると、エラーが返されるか、クエリがエコーされます。  
   
- **説明**ユーザー トランザクションでサポートされていません。  
+ **EXPLAIN** はユーザー トランザクションではサポートされていません。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、**説明**でコマンドを実行、**選択**ステートメント、および XML の結果。  
+ 次の例では、**SELECT**ステートメントで実行される **EXPLAIN** コマンドと、XML 結果を示します。  
   
- **説明文を送信します。**  
+ **EXPLAIN ステートメントの送信**  
   
- この例で送信されたコマンドです。  
+ この例で送信されたコマンド次のとおりです。  
   
 ```  
 -- Uses AdventureWorks  
@@ -118,21 +118,21 @@ EXPLAIN
 GO  
 ```  
   
- 使用して、ステートメントを実行した後、**説明**オプション、[メッセージ] タブには、という名前の単一行**説明**、XML 文字で始まると`\<?xml version="1.0" encoding="utf-8"?>`XML 内のテキスト全体を開くとをクリックして、XML のウィンドウです。 次のコメントをより深く理解するには、には、SSDT での行番号の表示をオンにする必要があります。  
+ **EXPLAIN** オプションを使用してステートメントを実行すると、メッセージ タブに **explain** という 1 行のタイトルと、`\<?xml version="1.0" encoding="utf-8"?>` で始まる XML テキストが示されます。XML をクリックすると、XML ウィンドウが開き、テキスト全体が表示されます。 次のコメントをより深く理解するには、SSDT で行番号の表示をオンにする必要があります。  
   
-#### <a name="to-turn-on-line-numbers"></a>行番号を有効にするには  
+#### <a name="to-turn-on-line-numbers"></a>行番号を表示するには  
   
-1.  表示される出力と、**説明**の SSDT では、tab キー、**ツール**メニューの **オプション**です。  
+1.  SSDT の **[explain]** タブに出力が表示されている状態で、**[ツール]** メニューの **[オプション]** を選択します。  
   
-2.  展開、**テキスト エディター**セクションで、展開**XML**、クリックして**全般**です。  
+2.  **[テキスト エディター]** セクションを拡大して **XML** を展開し、**[全般]** をクリックします。  
   
-3.  **表示**領域で、チェック**行番号**です。  
+3.  **[表示]** 領域で、**[行番号]** をオンにします。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
- **説明の出力の例**  
+ **EXPLAIN の出力例**  
   
- XML の結果、**説明**コマンドをオンになっている行番号です。  
+ **EXPLAIN** コマンドの行番号が表示された XML 結果を次に示します。  
   
 ```  
 1  \<?xml version="1.0" encoding="utf-8"?>  
@@ -282,31 +282,31 @@ GO
   
 ```  
   
- **説明の出力の意味**  
+ **EXPLAIN 出力の意味**  
   
- 上記の出力には、番号付き 144 の行が含まれています。 このクエリからの出力結果は若干異なる場合があります。 次の一覧では、重要なセクションについて説明します。  
+ 上記の出力には、144 の番号付きの行が含まれています。 実際の出力は、このクエリの出力結果とは若干異なる場合があります。 重要なセクションについて次のリストで説明します。  
   
--   行 3 から 16 までは、分析するクエリの説明を提供します。  
+-   行 3 から 16 は、分析するクエリの説明を提供しています。  
   
--   17 を行、操作の合計数は 9 になるように指定します。 によって、単語の各操作の開始を検索する**dsql_operation**です。  
+-   行 17 では、操作の合計数が 9 になるように指定しています。 各操作の開始は、**dsql_operation** という単語を検索することで見つけられます。  
   
--   18 行目では、1 の操作を開始します。 行 18、19 に示す、 **RND_ID**操作は、オブジェクトの説明に使用されるランダムな ID 番号を作成します。 上記の出力で説明されているオブジェクトが**TEMP_ID_16893**です。 お客様の番号が変更されます。  
+-   行 18 から操作 1 が始まります。 行 18 と 19 は、**RND_ID** 操作により、オブジェクトの説明に使用されるランダムな ID 番号が作成されることを示しています。 上記の出力で説明されているオブジェクトは、**TEMP_ID_16893** です。 実際の番号は異なる場合があります。  
   
--   20 行目では、2 の操作を開始します。 行から 25 までの 21: すべてのコンピューティング ノード、という名前の一時テーブルを作成する**TEMP_ID_16893**です。  
+-   行 20 から操作 2 が始まります。 行 21 から 25: すべての計算ノードで、**TEMP_ID_16893** という名前の一時テーブルを作成します。  
   
--   26 の行は、3 の操作を開始します。 行 27 37 ~: データの移動**TEMP_ID_16893**ブロードキャスト move を使用しています。 各計算ノードに送信されるクエリが提供されます。 37 の行では、コピー先のテーブルを指定**TEMP_ID_16893**です。  
+-   行 26 から操作 3 が始まります。 行 27 から 37: BROADCAST_MOVE を使用して、データを **TEMP_ID_16893** に移動します。 各計算ノードに送信されるクエリが提供されます。 行 37 では、宛先テーブルを **TEMP_ID_16893** として指定します。  
   
--   38 行目では、4 の操作を開始します。 線の 40 を通じて 39: テーブルのランダムな ID を作成します。 **TEMP_ID_16894**上記の例の ID 番号です。 お客様の番号が変更されます。  
+-   行 38 から操作 4 が始まります。 行 39 から 40: テーブルのランダムな ID を作成します。 **TEMP_ID_16894** は、上記の例の ID 番号です。 実際の番号は異なる場合があります。  
   
--   行 41 では、5 の操作を開始します。 行 46 を通じて 42: すべてのノードで、という名前の一時テーブルを作成します。 **TEMP_ID_16894**です。  
+-   行 41 から操作 5 が始まります。 行 42 から 46: すべてのノードで、**TEMP_ID_16894** という名前の一時テーブルを作成します。  
   
--   47 の行は、6 の操作を開始します。 行の値が 91 から 48: さまざまなテーブルからデータを移動 (など**TEMP_ID_16893**) テーブルに**TEMP_ID_16894**、ランダム再生を使用して、操作を移動します。 各計算ノードに送信されるクエリが提供されます。 行 90 と変換先テーブルを指定する**TEMP_ID_16894**です。 行の値が 91年では、列を指定します。  
+-   行 47 から操作 6 が始まります。 行 48 から 91: SHUFFLE_MOVE 操作を使用して、さまざまなテーブル (**TEMP_ID_16893** など) からテーブル **TEMP_ID_16894** にデータを移動します。 各計算ノードに送信されるクエリが提供されます。 行 90 では、宛先テーブルを **TEMP_ID_16894** として指定します。 行 91 では、列を指定します。  
   
--   行 92年 7 の操作を開始します。 97 を通じて行 93年: すべてのコンピューティング ノード、一時テーブルを削除**TEMP_ID_16893**です。  
+-   行 92 から操作 7 が始まります。 行 93 から 97: すべての計算ノードで、**TEMP_ID_16893** という名前の一時テーブルを破棄します。  
   
--   行 98年では、8 の操作を開始します。 135 を介して行 99年: クライアントに結果を返します。 結果を取得する指定したクエリを使用します。  
+-   行 98 から操作 8 が始まります。 行 99 から 135: クライアントに結果を返します。 指定したクエリを使用して結果を取得します。  
   
--   行 136 では、9 の操作を開始します。 行 140 を通じて 137: すべてのノードに一時テーブルの削除**TEMP_ID_16894**です。  
+-   行 136 から操作 9 が始まります。 行 137 から 140: すべてのノードで、一時テーブル **TEMP_ID_16894** を破棄します。  
   
   
 

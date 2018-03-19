@@ -1,5 +1,5 @@
 ---
-title: "STDistance (geometry データ型) |Microsoft ドキュメント"
+title: "STDistance (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdistance-geometry-data-type"></a>STDistance (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  ポイント間の最短距離を返します、 **geometry**インスタンスと別のポイント**geometry**インスタンス。  
+  任意の **geometry** インスタンスの地点と別の **geometry** インスタンスの地点との最短距離を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- もう 1 つ**geometry**インスタンスから対象のインスタンス間の距離が測定される`STDistance()`が呼び出されます。 場合*other_geometry*空のセット、`STDistance()`は null を返します。  
+ `STDistance()` を呼び出したインスタンスまでの距離が測定される、別の **geometry** インスタンスです。 *other_geometry* が空のセットである場合、`STDistance()` は NULL を返します。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **float**  
   
- CLR の戻り値の型: **SqlDouble**  
+ CLR 戻り値の型: **SqlDouble**  
   
-## <a name="remarks"></a>解説  
- `STDistance()`常に返す場合は null の spatial reference Id (Srid)、 **geometry**インスタンスが一致しません。  
+## <a name="remarks"></a>Remarks  
+ **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、`STDistance()` は常に null を返します。  
   
 ## <a name="examples"></a>使用例  
   

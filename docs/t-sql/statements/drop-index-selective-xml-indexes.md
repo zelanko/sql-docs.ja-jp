@@ -1,5 +1,5 @@
 ---
-title: "DROP INDEX (選択的 XML インデックス) |Microsoft ドキュメント"
+title: "DROP INDEX (選択的 XML インデックス) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX (選択的 XML インデックス)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  既存の選択的 XML インデックスまたは内のセカンダリ選択的 XML インデックスを削除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 詳細については、「[選択的 XML インデックス &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)」を参照してください。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で既存の選択的 XML インデックスまたは選択的セカンダリ XML インデックスを削除します。 詳細については、「[選択的 XML インデックス &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,7 +58,7 @@ DROP INDEX index_name ON <object>
  *index_name*  
  削除する既存のインデックスの名前です。  
   
- *\<オブジェクト >*インデックス付き XML 列を含むテーブルです。 次のどちらかの形式を使用します。  
+ *\< object>* インデックスが作成されている XML 列が含まれるテーブルを指定します。 次のどちらかの形式を使用します。  
   
 -   `database_name.schema_name.table_name`  
   
@@ -68,11 +68,11 @@ DROP INDEX index_name ON <object>
   
 -   `table_name`  
   
- *\<drop_index_option >*ドロップ インデックス オプションについては、次を参照してください。 [DROP INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-index-transact-sql.md).  
+ *\<drop_index_option>* DROP INDEX のオプションについては、「[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)」を参照してください。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>権限  
+### <a name="permissions"></a>アクセス許可  
  DROP INDEX を実行するには、少なくともテーブルまたはビューに対する ALTER 権限が必要です。 この権限は、固定サーバー ロール sysadmin と、固定データベース ロール db_ddladmin および db_owner に既定で許可されています。  
   
 ## <a name="example"></a>例  

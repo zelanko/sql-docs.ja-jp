@@ -1,5 +1,5 @@
 ---
-title: "STIsEmpty (geometry データ型) |Microsoft ドキュメント"
+title: "STIsEmpty (geometry データ型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisempty-geometry-data-type"></a>STIsEmpty (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-場合 1 を返します、 **geometry**インスタンスが空です。 場合 0 を返します、 **geometry**インスタンスが空ではありません。
+**geometry** インスタンスが空白である場合、1 を返します。 **geometry** インスタンスが空白ではない場合は、0 を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す:**ビット**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR 戻り値の型: **SqlBoolean**  
   
 ## <a name="examples"></a>使用例  
- 次の例は、空`geometry`使用して、インスタンス`STIsEmpty()`インスタンスが空かどうかをテストします。  
+ `geometry` インスタンスを作成し、`STIsEmpty()` を使用して、このインスタンスが空白かどうかをテストする例を次に示します。  
   
 ```  
 DECLARE @g geometry;  
