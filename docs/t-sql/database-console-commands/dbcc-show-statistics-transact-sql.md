@@ -1,5 +1,5 @@
 ---
-title: "DBCC show_statistics で (TRANSACT-SQL) |Microsoft ドキュメント"
+title: DBCC SHOW_STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/18/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/25/2018
 
 DBCC SHOW_STATISTICS では、テーブルまたはインデックス付きビューについての、現在のクエリの最適化に関する統計を表示します。 クエリ オプティマイザーでは、統計を使用してクエリ結果の基数や行数を推定することで、高品質のクエリ プランを作成できます。 たとえば、クエリ オプティマイザーでは、基数の推定に基づいて、クエリ プランで Index Scan 操作ではなく Index Seek 操作が使用される場合があります。この場合、リソースを大量に消費する Index Scan 操作を使用しないようにすることでパフォーマンスが向上します。
   
-クエリ オプティマイザーでは、テーブルまたはインデックス付きビューの統計を統計オブジェクトに格納します。 テーブルの場合、インデックスまたはテーブル列のリストに関する統計オブジェクトが作成されます。 統計オブジェクトには、統計オブジェクト、および列間の相関関係を測定する密度ベクトルの最初のキー列のヘッダー、統計に関するメタデータを値の分布のヒストグラムが含まれます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]統計オブジェクトのデータのいずれかと基数の推定値を計算できます。
+クエリ オプティマイザーでは、テーブルまたはインデックス付きビューの統計を統計オブジェクトに格納します。 テーブルの場合、インデックスまたはテーブル列のリストに関する統計オブジェクトが作成されます。 統計オブジェクトには、統計に関するメタデータが含まれるヘッダー、統計オブジェクトの最初のキー列の値の分布が含まれるヒストグラム、および列間の相関関係を測定する密度ベクトルが格納されています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、統計オブジェクトの任意のデータを使用して基数の推定を計算できます。
   
 DBCC SHOW_STATISTICS では、統計オブジェクトに格納されたデータに基づくヘッダー、ヒストグラム、および密度ベクトルを表示します。 この構文では、テーブルまたはインデックス付きビューを指定するときに、対象のインデックス名、統計名、または列名も指定することができます。 このトピックでは、統計の表示方法と表示される結果の意味について説明します。
   
@@ -86,8 +86,8 @@ DBCC SHOW_STATISTICS ( table_name , target )
  表示する統計情報を含むテーブルの名前。 テーブルには、外部テーブルをすることはできません。  
   
  *移行先*  
- 統計情報を表示するインデックス、統計、または列の名前。 *ターゲット*角かっこで囲まれた 1 つの引用符、二重引用符、または引用符を使用しません。 場合*ターゲット*既存のインデックスの名前か、テーブルまたはインデックス付きビュー、target に関する統計情報に関する統計情報が返されます。 場合*ターゲット*既存の列の名前を指定し、この列に、自動的に作成された統計が存在する場合、その自動作成された統計に関する情報が返されます。 target 列に自動的に作成された統計が存在しない場合は、エラー メッセージ 2767 が返されます。  
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、*ターゲット*列名にすることはできません。  
+ 統計情報を表示するインデックス、統計、または列の名前。 *target* は、角かっこ、一重引用符、二重引用符で囲まれるか、または引用符を使用しません。 *target* がテーブルまたはインデックス付きビューの既存のインデックスまたは統計の名前である場合は、その target に関する統計情報が返されます。 *target* が既存の列の名前であり、自動的に作成された統計がその列にある場合は、その自動作成された統計に関する情報が返されます。 target 列に自動的に作成された統計が存在しない場合は、エラー メッセージ 2767 が返されます。  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では、*target* を列名にすることはできません。  
   
  NO_INFOMSGS  
  重大度レベル 0 から 10 のすべての情報メッセージを表示しないようにします。  
@@ -102,25 +102,25 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 |列名|Description|  
 |-----------------|-----------------|  
-|名前|統計オブジェクトの名前。|  
-|[更新]|統計情報が最後に更新された日付と時刻。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md)関数は、この情報を取得することです。 詳細については、次を参照してください。、[解説](#Remarks)このページで、セクションです。|  
-|[行]|統計情報が最後に更新された時点のテーブルまたはインデックス付きビューの行の総数。 統計がフィルター選択されている場合、またはフィルター選択されたインデックスに対応している場合は、行数がテーブルの行数よりも少なくなることがあります。 詳細については、次を参照してください。[統計](../../relational-databases/statistics/statistics.md)です。|  
+|[オブジェクト名]|統計オブジェクトの名前。|  
+|[更新]|統計情報が最後に更新された日付と時刻。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 関数でこの情報を取得することもできます。 詳細については、このページの「[解説](#Remarks)」セクションを参照してください。|  
+|[行]|統計情報が最後に更新された時点のテーブルまたはインデックス付きビューの行の総数。 統計がフィルター選択されている場合、またはフィルター選択されたインデックスに対応している場合は、行数がテーブルの行数よりも少なくなることがあります。 詳細については、「[統計情報](../../relational-databases/statistics/statistics.md)」を参照してください。|  
 |[サンプリングされた行数]|統計の計算時にサンプリングされた行の合計数。 Rows Sampled < Rows の場合、表示されるヒストグラムおよび密度の結果は、サンプリングされた行に基づいて推定されます。|  
 |手順|ヒストグラムの区間の数。 各区間の範囲には、上限の列値までの列値の範囲が含まれます。 ヒストグラムの区間は、統計の最初のキー列に基づいて定義されます。 区間の最大数は 200 です。|  
 |[密度]|ヒストグラムの境界値を除く、統計オブジェクトの最初のキー列のすべての値について、"1 / *distinct values* " として計算されます。 この Density の値はクエリ オプティマイザーでは使用されません。[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のバージョンとの互換性を維持するために表示されます。|  
 |[キーの平均の長さ]|統計オブジェクトのすべてのキー列の、値ごとの平均バイト数。|  
-|String Index|Yes の場合は、統計オブジェクトに文字列の統計概要が含まれています。これにより、LIKE 演算子を使用するクエリ述語 ( `WHERE ProductName LIKE '%Bike'`など) に対する基数の推定が向上します。 文字列の概要統計情報は、ヒストグラムから個別に格納されているし、型であるときに、統計オブジェクトの最初のキー列に基づいて作成されます**char**、 **varchar**、 **nchar**、 **nvarchar**、 **varchar (max)**、 **nvarchar (max)**、**テキスト**、または**ntext。**です。|  
-|[フィルター式]|統計オブジェクトに含まれるテーブル行のサブセットの述語。 NULL = フィルター選択されていない統計情報です。 フィルター選択された述語の詳細については、次を参照してください。 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)です。 フィルター選択された統計に関する詳細については、次を参照してください。[統計](../../relational-databases/statistics/statistics.md)です。|  
+|String Index|Yes の場合は、統計オブジェクトに文字列の統計概要が含まれています。これにより、LIKE 演算子を使用するクエリ述語 ( `WHERE ProductName LIKE '%Bike'`など) に対する基数の推定が向上します。 文字列の統計概要は、ヒストグラムとは別に格納されます。この統計は、統計オブジェクトの最初のキー列について、その型が **char**、**varchar**、**nchar**、**nvarchar**、**varchar(max)**、**nvarchar(max)**、**text**、**ntext** である場合に作成されます。|  
+|[フィルター式]|統計オブジェクトに含まれるテーブル行のサブセットの述語。 NULL = フィルター選択されていない統計情報です。 フィルター選択された述語の詳細については、「[フィルター選択されたインデックスの作成](../../relational-databases/indexes/create-filtered-indexes.md)」を参照してください。 フィルター選択された統計情報の詳細については、「[統計情報](../../relational-databases/statistics/statistics.md)」を参照してください。|  
 |[フィルター処理なしの行数]|フィルター式を適用する前のテーブル内の行の合計数。 [フィルター式] が NULL の場合、[フィルター処理なしの行数] は [行数] と同じになります。|  
-|サンプル % を永続化|サンプリングの割合が明示的に指定されていない統計の更新プログラムの使用されるサンプルのパーセンテージを永続化されます。 値がゼロの場合、永続化されたサンプルのパーセンテージが設定されていないこの統計のです。<br /><br /> **適用されます:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
+|永続化されたサンプルのパーセンテージ|サンプリングの割合を明示的に指定しない統計情報の更新に使用される永続化されたサンプルのパーセンテージです。 値がゼロの場合、永続化されたサンプルのパーセンテージがこの統計に設定されていません。<br /><br /> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 **に適用されます**。| 
   
 次の表は、DENSITY_VECTOR を指定した場合に結果セットに返される列を示しています。
   
 |列名|Description|  
 |-----------------|-----------------|  
-|[すべての密度]|密度は "1 / *distinct values*" です。 結果には、統計オブジェクトの列の各プレフィックスに対する密度が、密度ごとに 1 行表示されます。 個別の値は、行および列プレフィックスごとの列値の個別のリストです。 たとえば、統計オブジェクトにキー列 (A, B, C) が含まれる場合、結果では列プレフィックス (A)、(A, B)、および (A, B, C) ごとに個別の値リストの密度が報告されます。 プレフィックス (A, B, C) を使用すると、これらの各リストは個別の値リスト (3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7) のようになります。 プレフィックス (A、B) を使用して、同じ列値がある個別の値リスト: (3, 5)、(4, 4) と (4, 5)|  
+|[すべての密度]|密度は "1 / *distinct values*" です。 結果には、統計オブジェクトの列の各プレフィックスに対する密度が、密度ごとに 1 行表示されます。 個別の値は、行および列プレフィックスごとの列値の個別のリストです。 たとえば、統計オブジェクトにキー列 (A, B, C) が含まれる場合、結果では列プレフィックス (A)、(A, B)、および (A, B, C) ごとに個別の値リストの密度が報告されます。 プレフィックス (A, B, C) を使用すると、これらの各リストは個別の値リスト (3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7) のようになります。 プレフィックス (A, B) を使用すると、同じ列値の個別の値リストが (3, 5)、(4, 4)、および (4, 5) になります。|  
 |[平均の長さ]|列プレフィックスの列値のリストを格納する平均の長さ (バイト単位)。 たとえば、リスト (3, 5, 6) の値ごとに 4 バイト必要な場合は、長さは 12 バイトになります。|  
-|列|[すべての密度] および [平均の長さ] を表示するプレフィックスの列の名前。|  
+|[列]|[すべての密度] および [平均の長さ] を表示するプレフィックスの列の名前。|  
   
 次の表は、HISTOGRAM オプションを指定した場合に結果セットに返される列を示しています。
   
@@ -134,7 +134,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 ## <a name="Remarks"></a> 解説 
 
-統計の更新の日付が格納されている、[統計 blob オブジェクト](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)と共に、[ヒストグラム](#histogram)と[密度ベクトル](#density)メタデータではなく、します。 統計情報データを生成するデータが読み取られず、統計情報の blob は作成されません、日付が使用できないと、*更新*列は NULL です。 これは、述語返さない行、または新しい空のテーブルのフィルター選択された統計の場合です。
+統計の更新日付は、メタデータではなく[統計 BLOB オブジェクト](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)に[ヒストグラム](#histogram)および[密度ベクトル](#density)と共に格納されます。 統計データを生成するためのデータが読み取られていない場合、統計 BLOB は作成されず、日付は使用できず、*updated* 列は NULL になります。 これは、述語が行を返さないフィルターされた統計や、新しい空のテーブルの場合です。
   
 ## <a name="histogram"></a> ヒストグラム  
 ヒストグラムでは、データセットの個別の値ごとに出現頻度を測定します。 クエリ オプティマイザーでは、統計オブジェクトの最初のキー列の列値に基づいてヒストグラムを計算し、行を統計的にサンプリングするかテーブルまたはビュー内のすべての行でフル スキャンを実行することによって列値を選択します。 サンプリングされた行のセットからヒストグラムを作成する場合、格納される行の総数および個別の値の数は推定値であり、必ずしも整数にはなりません。
@@ -164,30 +164,30 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="restrictions"></a>制限  
  DBCC SHOW_STATISTICS では、空間インデックスおよび xVelocity メモリ最適化列ストア インデックスの統計情報は提供されません。  
   
-## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>アクセス許可[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-統計オブジェクトを表示するために、ユーザー、テーブルを所有または、ユーザーのメンバーである必要があります、`sysadmin`固定サーバー ロール、`db_owner`固定データベース ロール、または`db_ddladmin`固定データベース ロール。
+## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のアクセス許可  
+統計オブジェクトを表示するには、テーブルを所有しているか、固定サーバー ロール `sysadmin`、固定データベース ロール `db_owner`、または固定データベース ロール `db_ddladmin` のメンバーである必要があります。
   
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 では、権限に関する制限が変更され、このコマンドを使用する SELECT 権限を持つことができます。 SELECT 権限でコマンドを実行するときは、次の要件に注意してください。
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 で、権限に関する制限が変更され、SELECT 権限でこのコマンドを使用できるようになりました。 SELECT 権限でコマンドを実行するときは、次の要件に注意してください。
 -   統計オブジェクトのすべての列に対する権限が必要です。  
 -   フィルター条件がある場合は、そのすべての列に対する権限が必要です。  
 -   テーブルには、行レベルのセキュリティ ポリシーを持つことはできません。  
   
 この動作を無効にするには、トレース フラグ 9485 を使用します。
   
-## <a name="permissions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>アクセス許可[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="permissions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] のアクセス許可  
 DBCC SHOW_STATISTICS では、次のいずれかのメンバーシップまたはテーブルに対する SELECT 権限が必要です。
 -   sysadmin 固定サーバー ロール  
 -   db_owner 固定データベース ロール  
 -   db_ddladmin 固定データベース ロール  
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>制限事項と制約の[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-DBCC SHOW_STATISTICS では、コントロールのノード レベルでのシェル データベースに格納されている統計情報を表示します。 によって自動作成される統計が表示されない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]計算ノード上。
+## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の制限事項と制約事項  
+DBCC SHOW_STATISTICS では、コントロールのノード レベルでのシェル データベースに格納されている統計情報を表示します。 計算ノード上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって自動的に作成される統計情報は表示されません。
   
 DBCC show_statistics では、テーブルの外部ではサポートされていません。
   
-## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>例:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>例: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 ### <a name="a-returning-all-statistics-information"></a>A. すべての統計情報を返す  
-次の例のすべての統計情報の表示、`AK_Address_rowguid`のインデックス、`Person.Address`テーブルに、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。
+次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `AK_Address_rowguid` テーブルの `Person.Address` インデックスに関するすべての統計情報を表示します。
   
 ```sql
 DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid);  
@@ -202,7 +202,7 @@ DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. 1 つの統計オブジェクトの内容を表示します。  
  次の例では、DimCustomer テーブル Customer_LastName 統計の内容を表示します。  
   
@@ -224,10 +224,10 @@ GO
 [統計](../../relational-databases/statistics/statistics.md)  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
-[DROP STATISTICS &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-statistics-transact-sql.md)  
-[sp_autostats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)  
-[sp_createstats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)  
+[DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)  
+[sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)  
+[sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)  
 [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
-[sys.dm_db_stats_properties (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
+[sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
 [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
