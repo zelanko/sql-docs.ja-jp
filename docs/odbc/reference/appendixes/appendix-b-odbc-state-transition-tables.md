@@ -23,10 +23,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>付録 b: ODBC 状態遷移のテーブル
 この付録の内容の表では、ODBC 関数による環境、接続、ステートメント、および記述子の状態の遷移の発生を示しています。 通常、環境、接続、ステートメント、または記述子の状態は、ハンドル (環境、接続、ステートメント、または記述子) の対応する型を使用する関数を呼び出すことができる場合は決定します。 環境、接続、ステートメント、および記述子の状態は次の図に示すようにほぼと重複します。 たとえば、接続の正確な重複の状態の C5 と C6、S1 S12 からはデータ ソースに依存する、さまざまなデータ ソースに異なる時刻でトランザクションを開始し、記述子の状態 (暗黙的に割り当てられた記述子) D1i 依存ステートメントの状態記述子が関連付けられているステートメントの状態、状態 (明示的に割り当てられた記述子) D1e 中には任意のステートメントの状態に依存しないです。 各状態の説明は、次を参照してください[環境遷移](../../../odbc/reference/appendixes/environment-transitions.md)、[接続遷移](../../../odbc/reference/appendixes/connection-transitions.md)、[ステートメント遷移](../../../odbc/reference/appendixes/statement-transitions.md)、および[記述子遷移。](../../../odbc/reference/appendixes/descriptor-transitions.md)、後の「します。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/15/2018
 -   **--** 、関数を実行した後状態は変更されません。  
   
 -   **E**  
-     ***n*** 、**C*n * * *、**S*n***、または**D * n***  — 環境、接続、ステートメント、または記述子の状態に移動します指定された状態です。  
+     ***n*** 、**C*n * * *、**S** n **、または**D * n***  — 環境、接続、ステートメント、または記述子の状態に移動します指定された状態です。  
   
 -   **(組み込み)** : 関数に無効なハンドルが渡されました。 場合は、ハンドルが null のハンドルか、誤った型の有効なハンドル — など、接続ハンドルが、ステートメント ハンドルが必要なときに渡されました: SQL_INVALID_HANDLE 以外を返しますそれ以外の場合の動作は未定義と致命的な可能性があります。 このエラーは、指定された状態で、関数の呼び出しの可能な唯一の結果である場合にのみに表示されます。 このエラーは、状態は変更されませんありが常に検出されたドライバー マネージャーによって、かっこで示されます。  
   
