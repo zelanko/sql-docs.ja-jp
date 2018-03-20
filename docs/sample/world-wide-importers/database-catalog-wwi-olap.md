@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 10/31/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ed65e42-527a-45e7-9a91-7179e892652e
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: d6b43b590e7a5e6117f6752e1eb1dec701ca645e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d3957abef7fb70698c04fd22d390d96ac4cd17b
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
-# <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW データベース カタログ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]スキーマ、テーブル、および WideWorldImportersDW データベース内のストアド プロシージャの説明。 
+# <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW database catalog
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+スキーマ、テーブル、および WideWorldImportersDW データベース内のストアド プロシージャの説明。 
 
 WideWorldImportersDW データベースは、データ ウェアハウスと分析処理に使用されます。 売り上げ高と購入に関するトランザクションのデータが、WideWorldImporters データベースに生成され、WideWorldImportersDW を使用してデータベースに読み込まれる、**毎日の ETL プロセス**です。
 
@@ -49,27 +51,27 @@ WideWorldImportersDW 内のデータしたがって WideWorldImporters、内の�
 
 WideWorldImportersDW には、次のディメンション テーブルがあります。 説明には、WideWorldImporters データベース内のソース テーブルとの関係が含まれています。
 
-|テーブル|ソース テーブル|
+|Table|ソース テーブル|
 |-----------------------------|---------------------|
 |City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |日付|日付、会計年度をなどに関する情報を含む新しいテーブル (年 11 月 1 日に基づく会計年度の開始)。|
-|Employee|`Application.People`」をご覧ください。|
+|Employee|`Application.People`」を参照してください。|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |業者|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|[支払い方法]|`Application.PaymentMethods`」をご覧ください。|
-|TransactionType|`Application.TransactionTypes`」をご覧ください。|
+|PaymentMethod|`Application.PaymentMethods`」を参照してください。|
+|TransactionType|`Application.TransactionTypes`」を参照してください。|
 
 ### <a name="fact-tables"></a>ファクト テーブル
 
 WideWorldImportersDW には、次のファクト テーブルがあります。 説明には、WideWorldImporters データベースだけでなく分析/レポート クエリの各ファクト テーブルを使用して通常のクラスのソース テーブルとの関係が含まれています。
 
-|テーブル|ソース テーブル|サンプルの分析|
+|Table|ソース テーブル|サンプルの分析|
 |-----------------------------|---------------------|---------------------|
-|書|`Sales.Orders`そして`Sales.OrderLines`|売上は、人、ピッカー/ため生産性とでは、注文を取得する時間です。 さらに、注文をバックアップするのには先頭の在庫の状況が低い。|
-|販売|`Sales.Invoices`そして`Sales.InvoiceLines`|販売日、出荷日、時間の経過と共に収益性、販売員による収益性。|
+|書|`Sales.Orders` と `Sales.OrderLines`|売上は、人、ピッカー/ため生産性とでは、注文を取得する時間です。 さらに、注文をバックアップするのには先頭の在庫の状況が低い。|
+|販売|`Sales.Invoices` と `Sales.InvoiceLines`|販売日、出荷日、時間の経過と共に収益性、販売員による収益性。|
 |注文書|`Purchasing.PurchaseOrderLines`|予期される vs 実際リード タイム|
-|トランザクション|`Sales.CustomerTransactions`そして`Purchasing.SupplierTransactions`|発行日 vs 終了日、および金額を測定します。|
+|トランザクション|`Sales.CustomerTransactions` と `Purchasing.SupplierTransactions`|発行日 vs 終了日、および金額を測定します。|
 |移動|`Warehouse.StockTransactions`|時間の経過と共に移動します。|
 |ストックの保持|`Warehouse.StockItemHoldings`|手の形で在庫レベルと値。|
 
@@ -97,7 +99,7 @@ WideWorldImportersDW には、次のファクト テーブルがあります。 
 ETL プロセスで使用されるプロシージャは、これらのカテゴリに分類されます。
 - ETL パッケージのすべての Get * プロシージャのヘルパー プロシージャです。
 - 移行するため、ETL パッケージで使用されるプロシージャは、DW のテーブルのすべての移行 * プロシージャにデータをステージングします。
-- `PopulateDateDimensionForYear`-1 年間でその年のすべての日付が設定されていることを確認、`Dimension.Date`テーブル。
+- `PopulateDateDimensionForYear` -1 年間でその年のすべての日付が設定されていることを確認、`Dimension.Date`テーブル。
 
 ### <a name="sequences-schema"></a>シーケンス スキーマ
 

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d07ffb9a-ac4f-4295-9aeb-ecfb97600134
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 6df15e0b16a8b3988da616106c6a29fe88f8debc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a4d1f7c55112efe127e2435d84fc1efadd954495
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW インストールと構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]WideWorldImportersDW データベースのインストールと構成の手順です。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+WideWorldImportersDW データベースのインストールと構成の手順です。
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (またはそれ以降) または[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)です。 サンプルの完全バージョンを使用するのには、SQL Server Evaluation/Developer または Enterprise Edition を使用します。
 - [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。 最良の結果は、2016 年 6 月リリースを使用またはそれ以降。
@@ -34,15 +36,15 @@ ms.lasthandoff: 12/05/2017
 
 サンプルの最新リリース。
 
-[wide world importers 社リリース](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 SQL Server または Azure SQL データベースのエディションにサンプル WideWorldImportersDW データベースのバックアップ/bacpac には、対応するをダウンロードします。
 
 サンプル データベースを再作成するソース コードは、次の場所から使用可能なです。 データ カタログの作成は、OLTP データベース (WideWorldImporters) から ETL に基づいていることに注意してください。
 
-[wide world importers 社ソース](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
 
-## <a name="install"></a>Install
+## <a name="install"></a>インストール
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -56,7 +58,7 @@ SQL Server インスタンスにバックアップを復元するには、Manage
 5. 必要な場合は、データのターゲットの場所を変更し、で、ログ ファイル、**ファイル**ウィンドウです。 ベスト プラクティスにデータを配置し、ログ ファイルを別のドライブにあることに注意してください。
 6. **[OK]**をクリックします。 データベースの復元が開始されます。 それが完了した後、データベース、SQL Server インスタンスにインストールされている WideWorldImporters があります。
 
-### <a name="azure-sql-database"></a>Azure SQL データベース
+### <a name="azure-sql-database"></a>Azure SQL Database
 
 新しい SQL データベースに bacpac をインポートするには、Management Studio を使用できます。
 
@@ -77,4 +79,4 @@ SQL Server インスタンスにバックアップを復元するには、Manage
 1. SQL Server Management Studio で WideWorldImportersDW データベースに接続し、新しいクエリ ウィンドウを開きます。
 2. データベースでの PolyBase の使用を有効にするのには、次の T-SQL コマンドを実行します。
 
-   [アプリケーション] を実行します。[Configuration_ApplyPolyBase]
+   EXECUTE [Application].[Configuration_ApplyPolyBase]

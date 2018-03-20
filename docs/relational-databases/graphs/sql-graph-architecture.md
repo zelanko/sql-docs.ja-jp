@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: 
 author: shkale-msft
-ms.author: shkale;barbkess
+ms.author: shkale
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b8652d59a4a2a6ad980c2d7659940ac0552bfeed
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 887ac78e70d529c404ee2ed3088f088ed53e4a54
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph のアーキテクチャ  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ SQL のグラフを構築する方法について説明します。 基本を知
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` 拡張された AS ノードまたは AS エッジ テーブルの作成をサポートするためにします。 エッジ テーブルがいるかが定義していないすべてのユーザー属性に注意してください。  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|ノードとエッジ テーブルにリレーショナル テーブルを使用して、同じ方法を変更することができます、`ALTER TABLE`です。 ユーザーでは、追加したり、ユーザー定義の列、インデックスまたは制約を変更することができます。 ただし、内部のグラフ列を変更するには、機会をいただいて`$node_id`または`$edge_id`エラーになります。  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |ユーザーは、擬似列とテーブルのノードとエッジ テーブル内のユーザー定義の列にインデックスを作成できます。 クラスター化および非クラスター化列ストア インデックスを含むすべてのインデックス型がサポートされます。  |
-|DROP TABLE |[DROP TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-table-transact-sql.md)  |リレーショナル テーブルを使用して、同じ方法 ノードとエッジ テーブルを削除することができます、`DROP TABLE`です。 ただし、このリリースで制約はありませんエッジ ポイントを削除したノードとノードまたはノードのテーブルの削除時に、エッジのカスケード削除はサポートされていないことを確認します。 ノードのテーブルが削除された場合、ユーザーを削除、グラフの整合性を維持するために手動でそのノードのテーブル内のノードに接続されているすべての端をお勧めします。  |
+|DROP TABLE |[DROP TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |リレーショナル テーブルを使用して、同じ方法 ノードとエッジ テーブルを削除することができます、`DROP TABLE`です。 ただし、このリリースで制約はありませんエッジ ポイントを削除したノードとノードまたはノードのテーブルの削除時に、エッジのカスケード削除はサポートされていないことを確認します。 ノードのテーブルが削除された場合、ユーザーを削除、グラフの整合性を維持するために手動でそのノードのテーブル内のノードに接続されているすべての端をお勧めします。  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>データ操作言語 (DML) ステートメント
@@ -159,7 +159,7 @@ SQL のグラフを構築する方法について説明します。 基本を知
 |タスク   |関連トピック  |注
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|ノードとエッジ テーブルとして内部的に格納されます、ノードとエッジ テーブルで SQL Server または Azure SQL データベースのテーブルでサポートされる操作のほとんどをサポートするため  |
-|MATCH  | [一致する &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/match-sql-graph.md)|一致する組み込みは、パターンに一致して、グラフの通過をサポートするために導入されました。  |
+|MATCH  | [一致&#40;TRANSACT-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|一致する組み込みは、パターンに一致して、グラフの通過をサポートするために導入されました。  |
 
 
 

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e47c0022-ce87-4ba5-a24b-df55efe66431
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 6d87a24e91f96957170671303af641c6bacc6599
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d458bc15530aa87bfa922787558fff3f07645f7
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters データベース カタログ
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WideWorldImporters データベースには、すべてのトランザクション情報と販売と購入の毎日のデータだけでなく車両とコールド ルームのセンサー データが含まれています。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+WideWorldImporters データベースには、すべてのトランザクション情報と販売と購入の毎日のデータだけでなく車両とコールド ルームのセンサー データが含まれています。
 
 ## <a name="schemas"></a>スキーマ
 
@@ -71,7 +73,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 
 パラメーターと共通の参照テーブル (その他の複数のスキーマに共通) と共に、ユーザー (ユーザーおよび連絡先) の詳細です。
 
-|テーブル|Description|
+|Table|Description|
 |-----------------------------|---------------------|
 |SystemParameters|システム全体の構成可能なパラメーターが含まれています。|
 |ユーザー|ユーザー名、および、ユーザーがお客様の組織において、Wide World importers 社を処理するため、アプリケーションを使用しているすべての連絡先の情報が含まれています。 これには、スタッフ、顧客、仕入先、およびその他の連絡先が含まれます。 システムまたは web サイトを使用するアクセス許可が付与されたユーザーのための情報には、ログインの詳細が含まれます。|
@@ -86,12 +88,12 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 
 在庫品目の購入および仕入先の詳細です。
 
-|テーブル|Description|
+|Table|Description|
 |-----------------------------|---------------------|
 |Suppliers|仕入先 (組織) のメイン エンティティ テーブル|
 |SupplierCategories|Suppliers (例: novelties、toys、clothing、パッケージ化など) のカテゴリ|
 |SupplierTransactions|供給業者に関連する (請求書払い) は、すべての財務トランザクション|
-|次の使用|供給業者の注文書の詳細|
+|PurchaseOrders|供給業者の注文書の詳細|
 |PurchaseOrderLines|発注書を業者から詳細行|
 
  
@@ -99,7 +101,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 
 顧客、販売員、および在庫品目の売上の詳細です。
 
-|テーブル|Description|
+|Table|Description|
 |-----------------------------|---------------------|
 |Customers|お客様 (組織や個人) にメイン エンティティ テーブル|
 |CustomerCategories|お客様 (ie 新奇ストア、スーパー マーケットなど) のカテゴリ|
@@ -107,7 +109,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 |CustomerTransactions|顧客に関連する (請求書払い) は、すべての財務トランザクション|
 |SpecialDeals|特別な価格設定です。 これにより、固定価格を含めることができます、割引ドル、割引率。|
 |Orders|顧客の注文の詳細|
-|Orderlines を追加|顧客の注文からの詳細行|
+|OrderLines|顧客の注文からの詳細行|
 |請求書|顧客の請求書の詳細|
 |InvoiceLines|顧客の請求書から詳細行|
 
@@ -115,7 +117,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 
 品目の在庫、保有およびトランザクションの詳細です。
 
-|テーブル|Description|
+|Table|Description|
 |-----------------------------|---------------------|
 |StockItems|ストックの項目のメイン エンティティ テーブル|
 |StockItemHoldings|品目の在庫の非テンポラル列です。 これらは、頻繁に更新される列です。|
@@ -170,7 +172,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 |手順|用途|
 |-----------------------------|---------------------|
 |ActivateWebsiteLogon|使用すると (から`Application.People`) が、web サイトにアクセスします。|
-|パスワードの変更|(外部の認証メカニズムを使用していないユーザー) 用のユーザーのパスワードを変更します。|
+|ChangePassword|(外部の認証メカニズムを使用していないユーザー) 用のユーザーのパスワードを変更します。|
 |InsertCustomerOrders|(注文明細行を含む) 1 つまたは複数の顧客注文の挿入を許可します。|
 |InvoiceCustomerOrders|請求される注文の一覧を取得し、請求書を処理します。|
 |RecordColdRoomTemperatures|リストを受け取り、センサー データ、テーブル値パラメーター (TVP) としてし、データの適用、`Warehouse.ColdRoomTemperatures`テンポラル テーブルです。|

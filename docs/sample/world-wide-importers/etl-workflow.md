@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 06/15/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 679e58fe-b062-4934-a94c-9bb916b0bcb0
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: bbda77b86b4c804ae0cf261f54f51fc487090e1d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0a9ccfb4f49e490cb681561aeaa5a0e9a8e86ad0
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
-# <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL ワークフロー
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WWI_Integration ETL パッケージを使用して、データの変化に応じて WideWorldImportersDW データベースへの WideWorldImporters データベースからデータを移行します。 パッケージを定期的に実行 (最もよく毎日) です。
+# <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL workflow
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+WWI_Integration ETL パッケージを使用して、データの変化に応じて WideWorldImportersDW データベースへの WideWorldImporters データベースからデータを移行します。 パッケージを定期的に実行 (最もよく毎日) です。
 
 ## <a name="overview"></a>概要
 
@@ -55,15 +57,15 @@ ms.lasthandoff: 12/05/2017
 
 サンプルの最新リリース。
 
-[wide world importers 社リリース](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 SSIS パッケージ ファイルをダウンロード**毎日 ETL.ispac**です。
 
 サンプル データベースを再作成するソース コードは、次の場所から使用可能なです。
 
-[wide world-importers 社](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
+[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
 
-## <a name="install"></a>Install
+## <a name="install"></a>インストール
 
 1. SSIS パッケージを展開します。
    - Windows エクスプ ローラーから、"日次 ETL.ispac"パッケージを開きます。 これにより、Integration Services 配置ウィザードが起動します。

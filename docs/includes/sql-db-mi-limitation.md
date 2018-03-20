@@ -1,0 +1,2 @@
+> [!IMPORTANT]  
+> [Azure SQL データベースのマネージ インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)、この T-SQL 機能には、特定の動作の変更。 参照してください[SQL Server から Azure SQL データベース管理されているインスタンスの T-SQL で違い](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information)すべて T-SQL 動作の変更の詳細。

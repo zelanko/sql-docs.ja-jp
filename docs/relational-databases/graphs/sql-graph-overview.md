@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: 
 author: shkale-msft
-ms.author: shkale;barbkess
+ms.author: shkale
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 77a50d48ee5c6d5baa8b05b327146e74b5eff815
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: b30234e0527252b01b3d0e88d7679255acc214fd
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database を使用した処理グラフ
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 ノードとエッジがテーブルとして格納されています。  
 
 ### <a name="query-language-extensions"></a>クエリ言語の拡張機能  
-新しい`MATCH`パターン マッチと graph を通じてマルチホップ ナビゲーションをサポートするために句が導入されました。 `MATCH`関数はパターン一致の ASCII アート形式の構文を使用します。 例:  
+新しい`MATCH`パターン マッチと graph を通じてマルチホップ ナビゲーションをサポートするために句が導入されました。 `MATCH`関数はパターン一致の ASCII アート形式の構文を使用します。 以下に例を示します。  
 
 ```   
 -- Find friends of John
