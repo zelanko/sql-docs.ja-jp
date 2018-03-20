@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 02/25/2018
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -21,11 +21,11 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: 0581957db73b82b9486f938d17b4c8938e20258d
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: e2fb628e2f832b7d1b73a2e3fefae1fb1d6b8e2b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -61,7 +61,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-既存のパッケージ ライブラリの名前を指定します。 ライブラリは、ユーザーに範囲指定されます。 つまり、ライブラリ名は、特定のユーザーまたは所有者のコンテキスト内で一意と見なされます。
+既存のパッケージ ライブラリの名前を指定します。 ライブラリは、ユーザーに範囲指定されます。 ライブラリ名は、特定のユーザーまたは所有者のコンテキスト内で一意と見なされる必要があります。
 
 ライブラリ名を任意に割り当てることはできません。 つまり、呼び出し元のランタイムがパッケージの読み込み時に想定している名前を使用する必要があります。
 
@@ -76,13 +76,6 @@ WITH ( LANGUAGE = 'R' )
 ファイルは、ローカル パスまたはネットワーク パスの形式で指定することができます。 データ ソース オプションが指定されている場合、ファイル名は `EXTERNAL DATA SOURCE` で参照されているコンテナーに対する相対パスにすることができます。
 
 必要に応じて、ファイルの OS プラットフォームを指定できます。 特定の言語またはランタイムの OS プラットフォームごとに 1 つのファイル成果物またはコンテンツのみが許可されます。
-
-**DATA_SOURCE = external_data_source_name**
-
-ライブラリ ファイルの場所を含む外部データ ソースの名前を指定します。 この場所は、Azure Blob Storage パスを参照する必要があります。 外部データ ソースを作成するには、[CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md) を使用します。
-
-> [!IMPORTANT] 
-> 現在、SQL Server 2017 リリースでは、BLOB はデータ ソースとしてサポートされていません。
 
 **library_bits**
 
@@ -104,7 +97,7 @@ R 言語の場合、Windows の .ZIP 拡張子を使用して、ZIP アーカイ
 
 ## <a name="permissions"></a>アクセス許可
 
-`ALTER ANY EXTERNAL LIBRARY` アクセス許可が必要です。 外部ライブラリを作成したユーザーは、その外部ライブラリを変更できます。
+既定では、**dbo** ユーザーまたはロール **db_owner** のすべてのメンバーが、ALTER EXTERNAL LIBRARY を実行する権限を持っています。 さらに、外部ライブラリを作成したユーザーも、その外部ライブラリを変更できます。
 
 ## <a name="examples"></a>使用例
 
@@ -135,10 +128,12 @@ EXEC sp_execute_external_script
 次の例では、新しいビットを 16 進数リテラルとして渡すことで、ライブラリを変更します。
 
 ```SQL
-ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+ALTER EXTERNAL LIBRARY customLibrary 
+SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-このサンプル コードでは、読みやすくするため、変数のコンテンツが切り詰められています。
+> [!NOTE]
+> このコード サンプルは構文のみを示しています。`CONTENT =` のバイナリ値は読みやすさのため切り捨てられており、作業ライブラリを作成しません。 バイナリ変数の実際の内容はこれよりも長くなります。
 
 ## <a name="see-also"></a>参照
 

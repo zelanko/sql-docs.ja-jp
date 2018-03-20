@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 02/25/2018
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -23,11 +23,11 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: e28716314837225586cf4bd1f80a37c5c6b824ab
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: a8c77b86fac722d43b1634ea7dc5052655bf560d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -67,7 +67,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-ライブラリは、ユーザーを対象としたデータベースに追加されます。 つまり、ライブラリ名は、特定のユーザーまたは所有者のコンテキスト内で一意と見なされます。また、ライブラリ名はユーザーごとに一意である必要があります。 たとえば、**RUser1** と **RUser2** の 2 人のユーザーは、どちらも個別に R ライブラリ `ggplot2` をアップロードできます。
+ライブラリは、ユーザーを対象としたデータベースに追加されます。 ライブラリ名は、特定のユーザーまたは所有者のコンテキスト内で一意と見なされる必要があります。 たとえば、**RUser1** と **RUser2** の 2 人のユーザーは、どちらも個別に R ライブラリ `ggplot2` をアップロードできます。 ただし、**RUser1** が新しいバージョンの `ggplot2` をアップロードする場合は、2 番目のインスタンスの名前を別のものにするか、既存のライブラリを置き換える必要があります。 
 
 ライブラリ名は任意に割り当てることはできません。ライブラリ名は R から R ライブラリを読み込むために必要な名前と同じにする必要があります。
 
@@ -107,11 +107,9 @@ R 言語の場合、ファイルを使用するときに、Windows の .ZIP 拡�
 
 インスタンスにアップロードされたライブラリは、パブリックまたはプライベートのいずれかにすることができます。 `dbo` のメンバーによってライブラリが作成された場合、そのライブラリはパブリックで、すべてのユーザーと共有することができます。 それ以外の場合、ライブラリはそのユーザーのみのプライベートになります。
 
-SQL Server 2017 リリースでは、BLOB をデータ ソースとして使用することはできません。
-
 ## <a name="permissions"></a>アクセス許可
 
-`CREATE ANY EXTERNAL LIBRARY` アクセス許可が必要です。
+`CREATE EXTERNAL LIBRARY` アクセス許可が必要です。 既定では、**db_owner** ロールのメンバーである **dbo** を持つすべてのユーザーに、外部ライブラリを作成する権限があります。 その他のすべてのユーザーには、特権として CREATE EXTERNAL LIBRARY を指定して、[GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) ステートメントを使用する権限を明示的に付与する必要があります。
 
 ライブラリを変更するには、別のアクセス許可 `ALTER ANY EXTERNAL LIBRARY` が必要です。
 
@@ -124,7 +122,7 @@ SQL Server 2017 リリースでは、BLOB をデータ ソースとして使用�
 ```sql
 CREATE EXTERNAL LIBRARY customPackage
 FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip') WITH (LANGUAGE = 'R');
-```  
+```
 
 ライブラリがインスタンスに正常にアップロードされたら、ユーザーが `sp_execute_external_script` プロシージャを実行して、ライブラリをインストールします。
 
@@ -145,9 +143,9 @@ EXEC sp_execute_external_script
 
 `packageA` を正常にインストールするには、`packageA` を SQL Server に追加するのと同時に、`packageB` と `packageC` 用のライブラリを作成する必要があります。 必要なパッケージのバージョンも必ず確認してください。
 
-実際には、一般的なパッケージのパッケージの依存関係は、通常、この単純な例よりもはるかに複雑です。 たとえば、ggplot2 には 30 を超えるパッケージが必要で、それらのパッケージには、サーバーで入手できない追加のパッケージが必要な場合があります。 パッケージが不足していたり、パッケージのバージョンが違っていたりすると、インストールが失敗する可能性があります。
+実際には、一般的なパッケージのパッケージの依存関係は、通常、この単純な例よりもはるかに複雑です。 たとえば、**ggplot2** には 30 を超えるパッケージが必要で、それらのパッケージには、サーバーで入手できない追加のパッケージが必要な場合があります。 パッケージが不足していたり、パッケージのバージョンが違っていたりすると、インストールが失敗する可能性があります。
 
-パッケージ マニフェストを見ただけでは、すべての依存関係を判断するのは難しいため、[miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) や [iGraph](http://igraph.org/redirect.html) などのパッケージを使用して、インストールを正常に完了させるために必要なすべてのパッケージを特定することをお勧めします。
+パッケージ マニフェストを見ただけでは、すべての依存関係を判断するのは難しいため、[miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) などのパッケージを使用して、インストールを正常に完了させるために必要なすべてのパッケージを特定することをお勧めします。
 
 + ターゲット パッケージとその依存関係をアップロードします。 すべてのファイルは、サーバーからアクセスできるフォルダー内にある必要があります。
 
@@ -180,38 +178,26 @@ EXEC sp_execute_external_script
     @script=N'
     # load the desired package packageA
     library(packageA)
-    # call function from package
-    OutputDataSet <- packageA.function()
+    print(packageVersion("packageA"))
     '
-    with result sets (([result] int));    
     ```
 
 ### <a name="c-create-a-library-from-a-byte-stream"></a>C. バイト ストリームからライブラリを作成する
 
-パッケージ ファイルをサーバー上の場所に保存できない場合は、パッケージのコンテンツを変数で渡すこともできます。 次の例では、ビットを 16 進数リテラルとして渡すことで、ライブラリを作成します。
+パッケージ ファイルをサーバー上の場所に保存できない場合は、パッケージのコンテンツを変数で渡すことができます。 次の例では、ビットを 16 進数リテラルとして渡すことで、ライブラリを作成します。
 
 ```SQL
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-ここでは読みやすくするために、16 進数の値が切り詰められています。
+> [!NOTE]
+> このコード サンプルは構文のみを示しています。`CONTENT =` のバイナリ値は読みやすさのため切り捨てられており、作業ライブラリを作成しません。 バイナリ変数の実際の内容はこれよりも長くなります。
 
 ### <a name="d-change-an-existing-package-library"></a>D. 既存のパッケージ ライブラリを変更する
 
 `ALTER EXTERNAL LIBRARY` DDL ステートメントは、新しいライブラリのコンテンツを追加または既存のライブラリのコンテンツを変更するために使用できます。 既存のライブラリを変更するには、`ALTER ANY EXTERNAL LIBRARY` アクセス許可が必要です。
 
 詳細については、「[ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md)」を参照してください。
-
-### <a name="e-delete-a-package-library"></a>E. パッケージ ライブラリを削除する
-
-データベースからパッケージ ライブラリを削除するには、ステートメントを実行します。
-
-```sql
-DROP EXTERNAL LIBRARY customPackage <user_name>;
-```
-
-> [!NOTE]
-> [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] の他の `DROP` ステートメントとは異なり、このステートメントは、ユーザーの権限を指定する省略可能なパラメーターをサポートしています。 このオプションは、所有権ロールを持つユーザーに、通常のユーザーによってアップロードされたライブラリを削除することを許可します。
 
 ## <a name="see-also"></a>参照
 
