@@ -1,7 +1,7 @@
 ---
 title: "sp_describe_first_result_set (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 03/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -25,16 +25,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1b0d3b22cfecff2fc09551400adfc338de341bd
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 76c5088e011f4111e67631a5e7cbfed1ff57059b
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  メタデータの最初の考えられる結果セットを返します、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ。 バッチから結果が返されない場合は、空の結果セットを返します。 エラーが発生、[!INCLUDE[ssDE](../../includes/ssde-md.md)]静的分析を実行することによって実行される最初のクエリのメタデータを特定できません。 動的管理ビュー [sys.dm_exec_describe_first_result_set &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)同じ情報を返します。  
+  メタデータの最初の考えられる結果セットを返します、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ。 バッチから結果が返されない場合は、空の結果セットを返します。 エラーが発生、[!INCLUDE[ssDE](../../includes/ssde-md.md)]静的分析を実行することによって実行される最初のクエリのメタデータを特定できません。 動的管理ビュー [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)同じ情報を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,11 +52,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 *Transact SQL_batch*あります**nvarchar (***n***)**または**nvarchar (max)**です。  
   
  [  **@params =** ] **N'***パラメーター***'**  
- @paramsパラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチは、これは、sp_executesql と同様にします。 パラメーターがあります**nvarchar (n)**または**nvarchar (max)**です。  
+ @params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチは、これは、sp_executesql と同様にします。 パラメーターがあります**nvarchar (n)**または**nvarchar (max)**です。  
   
- 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む、 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*です。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*追加のパラメーター定義を示すプレース ホルダー。 ステートメントで指定する各パラメーターを定義する必要があります@paramsです。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント内のバッチは、パラメーターを含まない@paramsは必要ありません。 このパラメーターの既定値は NULL はします。  
+ 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む、 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*です。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*追加のパラメーター定義を示すプレース ホルダーです。 ステートメントで指定する各パラメーターを定義する必要があります@paramsです。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント内のバッチは、パラメーターを含まない@paramsは必要ありません。 このパラメーターの既定値は NULL はします。  
   
- [  **@browse_information_mode =** ] *tinyint*  
+ [ **@browse_information_mode =** ] *tinyint*  
  追加のキー列とソース テーブル情報が返されるかどうかを指定します。 1 に設定すると、各クエリに FOR BROWSE オプションが含まれているように分析されます。 追加のキー列とソース テーブル情報が返されます。  
   
 -   0 に設定すると、情報は返されません。  
@@ -73,15 +73,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**is_hidden**|**ビット NOT NULL**|この列が、参照情報のために追加された余分な列で、実際に結果セットには表示されないかどうかを示します。|  
+|**is_hidden**|**bit NOT NULL**|この列が、参照情報のために追加された余分な列で、実際に結果セットには表示されないかどうかを示します。|  
 |**column_ordinal**|**int NOT NULL**|結果セット内の列の位置を示す序数を格納します。 最初の列の位置は 1 で指定されます。|  
 |**name**|**sysname NULL**|列の名前を確認できる場合は、その名前を格納します。 それ以外の場合、NULL が格納されます。|  
-|**によって is_nullable**|**ビット NOT NULL**|列が NULL を許可する場合は 1、NULL を許可しない場合は 0、NULL を許可するかどうかを特定できない場合は 1 を格納します。|  
+|**is_nullable**|**bit NOT NULL**|列が NULL を許可する場合は 1、NULL を許可しない場合は 0、NULL を許可するかどうかを特定できない場合は 1 を格納します。|  
 |**system_type_id**|**int NOT NULL**|Sys.types で指定された列のデータ型の system_type_id を格納します。 CLR 型の場合は、system_type_name 列が NULL を返しても、この列は値 240 を返します。|  
-|**system_type_name**|**nvarchar (256) NULL**|列のデータ型に指定されている名前と引数 (長さ、有効桁数、小数点以下桁数など) を格納します。 データ型がユーザー定義の別名型の場合は、基になるシステム型がここで指定されます。 CLR ユーザー定義型の場合は、この列には NULL が返されます。|  
+|**system_type_name**|**nvarchar(256) NULL**|列のデータ型に指定されている名前と引数 (長さ、有効桁数、小数点以下桁数など) を格納します。 データ型がユーザー定義の別名型の場合は、基になるシステム型がここで指定されます。 CLR ユーザー定義型の場合は、この列には NULL が返されます。|  
 |**max_length**|**smallint NOT NULL**|列の最大長 (バイト単位) です。<br /><br /> -1 = 列のデータ型は**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**です。<br /><br /> **テキスト**、列、 **max_length**値は 16 かによって設定された値になります**sp_tableoption 'text in row'**です。|  
-|**有効桁数**|**tinyint NOT NULL**|数値ベースの場合は、列の有効桁数です。 それ以外の場合は 0 を返します。|  
-|**小数点以下桁数**|**tinyint NOT NULL**|数値ベースの場合は、列の小数点以下桁数です。 それ以外の場合は 0 を返します。|  
+|**有効桁数 (precision)**|**tinyint NOT NULL**|数値ベースの場合は、列の有効桁数です。 それ以外の場合は 0 を返します。|  
+|**scale**|**tinyint NOT NULL**|数値ベースの場合は、列の小数点以下桁数です。 それ以外の場合は 0 を返します。|  
 |**collation_name**|**sysname NULL**|文字ベースの場合は、列の照合順序の名前です。 それ以外の場合は NULL を返します。|  
 |**user_type_id**|**int NULL**|CLR 型と別名型の場合、sys.types で指定された列のデータ型の user_type_id を格納します。 それ以外の場合は NULL です。|  
 |**user_type_database**|**sysname NULL**|CLR 型と別名型の場合、その型が定義されたデータベースの名前を格納します。 それ以外の場合は NULL です。|  
@@ -92,19 +92,19 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**xml_collection_database**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションが定義されているデータベースを格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
 |**xml_collection_schema**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションが定義されているスキーマを格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
 |**xml_collection_name**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションの名前を格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
-|**is_xml_document**|**ビット NOT NULL**|返されたデータ型が XML で、その型が XML フラグメントではなく完全な XML ドキュメント (ルート ノードを含む) であると保証される場合、1 を返します。 それ以外の場合は 0 を返します。|  
-|**is_case_sensitive**|**ビット NOT NULL**|この列が大文字と小文字を区別する文字列型の場合は 1、それ以外の場合は 0 を返します。|  
-|**is_fixed_length_clr_type**|**ビット NOT NULL**|ない場合は列が固定長の CLR 型と 0 の場合は、1 を返します。|  
+|**is_xml_document**|**bit NOT NULL**|返されたデータ型が XML で、その型が XML フラグメントではなく完全な XML ドキュメント (ルート ノードを含む) であると保証される場合、1 を返します。 それ以外の場合は 0 を返します。|  
+|**is_case_sensitive**|**bit NOT NULL**|この列が大文字と小文字を区別する文字列型の場合は 1、それ以外の場合は 0 を返します。|  
+|**is_fixed_length_clr_type**|**bit NOT NULL**|ない場合は列が固定長の CLR 型と 0 の場合は、1 を返します。|  
 |**source_server**|**sysname**|この結果内の列によって返された元のサーバーの名前です (リモート サーバーから発生する場合)。 Sys.servers に表示される、名前が与えられます。 この列がローカル サーバー上で発生した場合、または元のサーバーを特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
 |**source_database**|**sysname**|この結果内の列によって返された元のデータベースの名前です。 データベースを特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
 |**source_schema**|**sysname**|この結果内の列によって返された元のスキーマの名前です。 スキーマを特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
-|**ソース テーブル**|**sysname**|この結果内の列によって返された元のテーブルの名前です。 テーブルを特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
+|**source_table**|**sysname**|この結果内の列によって返された元のテーブルの名前です。 テーブルを特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
 |**source_column**|**sysname**|結果列から返された元の列の名前です。 列を特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
-|**is_identity_column**|**ビット NULL**|この列が ID 列の場合は 1、それ以外の場合は 0 を返します。 ID 列であることを確認できない場合は NULL を返します。|  
-|**is_part_of_unique_key**|**ビット NULL**|この列が一意インデックス (一意制約と主キー制約を含む) の一部である場合は 1、それ以外の場合は 0 を返します。 一意インデックスの一部であることを確認できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
-|**is_updateable**|**ビット NULL**|この列が更新可能である場合は 1、それ以外の場合は 0 を返します。 更新可能であることを確認できない場合は NULL を返します。|  
-|**is_computed_column**|**ビット NULL**|この列が計算列の場合は 1、それ以外の場合は 0 を返します。 この列が計算列を確認できない場合は、NULL を返します。|  
-|**is_sparse_column_set**|**ビット NULL**|この列がスパース列の場合は 1、それ以外の場合は 0 を返します。 列がスパース列セットの一部であることを確認できない場合は、NULL を返します。|  
+|**is_identity_column**|**bit NULL**|この列が ID 列の場合は 1、それ以外の場合は 0 を返します。 ID 列であることを確認できない場合は NULL を返します。|  
+|**is_part_of_unique_key**|**bit NULL**|この列が一意インデックス (一意制約と主キー制約を含む) の一部である場合は 1、それ以外の場合は 0 を返します。 一意インデックスの一部であることを確認できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
+|**is_updateable**|**bit NULL**|この列が更新可能である場合は 1、それ以外の場合は 0 を返します。 更新可能であることを確認できない場合は NULL を返します。|  
+|**is_computed_column**|**bit NULL**|この列が計算列の場合は 1、それ以外の場合は 0 を返します。 この列が計算列を確認できない場合は、NULL を返します。|  
+|**is_sparse_column_set**|**bit NULL**|この列がスパース列の場合は 1、それ以外の場合は 0 を返します。 列がスパース列セットの一部であることを確認できない場合は、NULL を返します。|  
 |**ordinal_in_order_by_list**|**smallint NULL**|ORDER BY リストにおけるこの列の位置を返します。 この列が ORDER BY リストにない場合、または ORDER BY リストを一意に特定できない場合は NULL を返します。|  
 |**order_by_list_length**|**smallint NULL**|ORDER BY リストの長さを返します。 ORDER BY リストがない場合、または ORDER BY リストを一意に特定できない場合は NULL を返します。 この値は、同じであることによって返されるすべての行に注意してください**sp_describe_first_result_set です。**|  
 |**order_by_is_descending**|**smallint NULL**|Ordinal_in_order_by_list が NULL でない場合、 **order_by_is_descending**列は、この列の ORDER BY 句の方向を報告します。 それ以外の場合は、NULL が報告されます。|  
@@ -160,7 +160,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set**間接再帰をサポートしていません。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  実行する権限が必要です、@tsql引数。  
   
 ## <a name="examples"></a>使用例  
@@ -199,9 +199,9 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|@shouldalert|b3|NULL|NULL|NULL|NULL|  
+|0|1|b3|NULL|NULL|NULL|NULL|  
   
  1 を使用した例は、クエリに FOR BROWSE オプションが含まれているかのように情報が返されることを示します。  
   
@@ -212,10 +212,10 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|@shouldalert|b3|dbo|t|B1|0|  
-|@shouldalert|2|a|dbo|t|a|@shouldalert|  
+|0|1|b3|dbo|t|B1|0|  
+|1|2|a|dbo|t|a|1|  
   
  2 を使用した例は、カーソルを準備しているかのように分析されることを示します。  
   
@@ -225,10 +225,10 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|@shouldalert|B3|dbo|v|B2|0|  
-|@shouldalert|2|ROWSTAT|NULL|NULL|NULL|0|  
+|0|1|B3|dbo|v|B2|0|  
+|1|2|ROWSTAT|NULL|NULL|NULL|0|  
   
 ### <a name="examples-of-problems"></a>問題の例  
  以下の例では、すべて 2 つのテーブルを使用します。 次のステートメントを実行して、これらのテーブルを作成します。  
@@ -292,7 +292,7 @@ ELSE
     SELECT d AS b FROM t2;'  
 ```  
   
- 結果: b **varchar (20) NULL**  
+ Result: b **varchar(20)NULL**  
   
 #### <a name="error-because-column-types-cannot-be-matched"></a>列の型の不一致によるエラー  
  考えられる、異なる最初の結果セットの間で、列の型が異なります。  
@@ -378,7 +378,7 @@ EXEC(@SQL)
     ); '  
 ```  
   
- 結果: Column1 **bigint NOT NULL**  
+ Result: Column1 **bigint NOT NULL**  
   
 #### <a name="error-caused-by-a-ambiguous-result-set"></a>あいまいな結果セットによるエラー  
  この例では、user1 という名前の別のユーザーが列を含む既定のスキーマ s1 内の t1 という名前のテーブル (、 **int NOT NULL**)。  
@@ -408,8 +408,7 @@ N'
  結果: **int NULL** dbo.t1.a と s1.t1.a 型であるため**int**と異なる null 許容属性です。  
   
 ## <a name="see-also"></a>参照  
- [sp_describe_undeclared_parameters &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set_for_object &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
-  
-  
+ [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ 

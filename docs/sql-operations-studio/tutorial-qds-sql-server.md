@@ -2,7 +2,7 @@
 title: "チュートリアル: 5 つを有効にする速度が遅かったクエリ サンプル ウィジェット - SQL 操作 Studio (プレビュー) |Microsoft ドキュメント"
 description: "このチュートリアルは、5 つ最も低速なクエリのサンプル ダッシュ ボードのウィジェット、データベースを有効にする方法を示します。"
 ms.custom: tools|sos
-ms.date: 11/16/2017
+ms.date: 03/15/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc30051dff2bef07ac3e7d06aa98d92d4e05e79e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 78c6ad929a3eea55669e9ebdcef149e605d594ef
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>チュートリアル: 追加、 *5 速度が遅かったクエリ*データベース ダッシュ ボードにウィジェットをサンプル
 
@@ -30,31 +30,34 @@ ms.lasthandoff: 12/21/2017
 > * データベースの速度が遅かったクエリに関する詳細を表示
 > * 低速のクエリのクエリ実行プランを表示します。
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]いくつか把握ウィジェットのすぐに含まれています。 このチュートリアルは、追加する方法を示します、*クエリのデータのストアの db の洞察を得る*ウィジェットが、手順は基本的に同じ任意のウィジェットを追加するためです。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] いくつか把握ウィジェットのすぐに含まれています。 このチュートリアルは、追加する方法を示します、*クエリのデータのストアの db の洞察を得る*ウィジェットが、手順は基本的に同じ任意のウィジェットを追加するためです。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルは、SQL Server または Azure SQL データベースが必要です。 *TutorialDB*です。 作成する、 *TutorialDB*データベースで、次のクイック スタートのいずれかを行います。
 
-- [接続してクエリを使用して SQL サーバー[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [接続してクエリを使用して Azure SQL データベース[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [接続してクエリを使用して SQL サーバー [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [接続してクエリを使用して Azure SQL データベース [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
 
 ## <a name="turn-on-query-store-for-your-database"></a>データベースに対してクエリ ストアを有効に
 
-この例では、ウィジェットが必要です*クエリのストア*データベースに対して次実行のための TRANSACT-SQL (T-SQL) ステートメントを有効にします。
+この例では、ウィジェットが必要です*クエリのストア*を有効にします。
+
+1. 右クリックして、 **TutorialDB**データベース (で、**サーバー**サイド バー) を選択して**新しいクエリ**です。
+2. クエリ エディターで、次の TRANSACT-SQL (T-SQL) ステートメントを貼り付け、をクリックして**実行**:
 
    ```sql
     ALTER DATABASE TutorialDB SET QUERY_STORE = ON
    ```
 
-## <a name="add-an-insight-widget-to-your-database-dashboard"></a>データベース ダッシュ ボードに insight ウィジェットを追加します。
+## <a name="add-the-slow-queries-widget-to-your-database-dashboard"></a>データベース ダッシュ ボードに速度の遅いクエリ ウィジェットを追加します。
 
-Insight ウィジェットをダッシュ ボードに追加するには、編集、 *dashboard.database.widgets*での設定、*ユーザー設定*ファイル。
+追加する、*速度の遅いクエリ ウィジェット*ダッシュ ボードを編集、 *dashboard.database.widgets*での設定、*ユーザー設定*ファイル。
 
 1. 開く*ユーザー設定*キーを押して**Ctrl + Shift + P**を開くには、*コマンド パレット*です。
-2. 型*設定*検索ボックスに、使用可能な設定ファイルから を選択**設定: ユーザー設定を開く**です。
+2. 型*設定*クリックし、[検索] ボックスで**設定: ユーザー設定を開く**です。
 
    ![開いているユーザー設定 コマンド](./media/tutorial-qds-sql-server/open-user-settings.png)
 
@@ -62,19 +65,11 @@ Insight ウィジェットをダッシュ ボードに追加するには、編�
 
    ![検索の設定](./media/tutorial-qds-sql-server/search-settings.png)
 
-3. カスタマイズする、 **dashboard.database.widgets**の左側にある鉛筆アイコンにマウスを設定する、 **dashboard.database.widgets**テキストをクリックして**編集** > **設定にコピーする**です。
+3. カスタマイズする、 **dashboard.database.widgets**設定を編集する必要があります、 **dashboard.database.widgets**内のエントリ、**ユーザー設定**セクション (内の列、右側にある)。 ある場合ありません**dashboard.database.widgets**で、**ユーザー設定**セクションで、ポインターを合わせる、 **dashboard.database.widgets**のテキスト列の既定の設定 をクリックします鉛筆アイコンをクリックして、テキストの左側に表示される**設定にコピーする**です。 ポップアップとされている場合**設定で置き換える**、クリックしてしないでください。 移動して、**ユーザー設定**右側の列を検索し、 **dashboard.database.widgets**セクションと、次の手順に進みます。
 
-4. 設定をコピーした後**dashboard.database.widgets**、キーを押して、角かっこの後に、行の末尾にカーソルを置きます**Enter**次のように、中かっこを追加し、(右中かっこ自動的に表示されます)。
-
-   ```json
-   "dashboard.database.widgets": [
-   {}
-   ```
-5. 中かっこにカーソルを合わせ、キーを押して**Ctrl + Space**選択と**名前**です。 
-6. ウィジェットの設定が完了したら、次のように表示されます。
+4. **Dashboard.database.widgets**セクションで、次の追加。
 
    ```json
-    "dashboard.database.widgets": [
         {
             "name": "slow queries widget",
             "gridItemConfig": {
@@ -84,13 +79,48 @@ Insight ウィジェットをダッシュ ボードに追加するには、編�
             "widget": {
                 "query-data-store-db-insight": null
             }
-        }
-    ...
+        },
     ```
 
-5. キーを押して**Ctrl + S** 、変更を保存する**ユーザー設定**です。
+1. これは、初めて新しいウィジェットを追加する場合、 **dashboard.database.widgets**セクションに次のようになります。
 
-6. 開く、*データベース ダッシュ ボード*に移動して**TutorialDB**で、*サーバー*サイド バーを右クリックし、**管理**です。
+   ```json
+   "dashboard.database.widgets": [
+       {
+           "name": "slow queries widget",
+           "gridItemConfig": {
+               "sizex": 2,
+               "sizey": 1
+           },
+           "widget": {
+               "query-data-store-db-insight": null
+           }
+       },
+       {
+           "name": "Tasks",
+           "gridItemConfig": {
+               "sizex": 1,
+               "sizey": 1
+           },
+           "widget": {
+               "tasks-widget": {}
+           }
+       },
+       {
+           "gridItemConfig": {
+               "sizex": 1,
+               "sizey": 2
+           },
+           "widget": {
+               "explorer-widget": {}
+           }
+       }
+   ]
+   ```
+
+1. キーを押して**Ctrl + S** 、変更を保存する**ユーザー設定**です。
+
+6. 開く、*データベース ダッシュ ボード*に移動して**TutorialDB**で、**サーバー**サイド バーを右クリックし、**管理**です。
 
    ![ダッシュ ボードを開く](./media/tutorial-qds-sql-server/insight-open-dashboard.png)
 
@@ -106,7 +136,7 @@ Insight ウィジェットをダッシュ ボードに追加するには、編�
 
    ![情報の詳細 ダイアログ](./media/tutorial-qds-sql-server/insight-details-dialog.png)
 
-3. 右クリック**query_sql_txt**で**項目の詳細** をクリック**コピー セル**です。
+3. 右側にあるセルを右クリックして**query_sql_txt**で**項目の詳細** をクリック**コピー セル**です。
 
 4. 閉じる、 **Insights**ウィンドウです。
 
@@ -118,7 +148,7 @@ Insight ウィジェットをダッシュ ボードに追加するには、編�
 
 3. をクリックして**説明**です。
 
-   ![Insight QDS の説明](./media/tutorial-qds-sql-server/insight-qds-explain.png)
+   ![Insight QDS Explain](./media/tutorial-qds-sql-server/insight-qds-explain.png)
 
 4. クエリの実行プランを表示します。
 
@@ -136,7 +166,7 @@ Insight ウィジェットをダッシュ ボードに追加するには、編�
 
 4. コピー元の計画をエディターに貼り付けます。
 
-5. キーを押して**Ctrl + S**ファイルを保存するファイル拡張子を変更して*.sqlplan*です。 このチュートリアルでは、ファイルに名前*slowquery.sqlplan*です。
+5. キーを押して**Ctrl + S**ファイルを保存するファイル拡張子を変更して*.sqlplan*です。 *.sqlplan*されていません、ファイル拡張子のドロップダウン リストに表示される、ためだけに入力します。 このチュートリアルでは、ファイルに名前*slowquery.sqlplan*です。
 
 6. クエリ プランを開きます[!INCLUDE[name-sos](../includes/name-sos-short.md)]のクエリ プランのビューアー。
 

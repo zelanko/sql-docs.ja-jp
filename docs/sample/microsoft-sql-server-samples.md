@@ -12,20 +12,21 @@ ms.component: samples
 ms.technology: 
 ms.topic: article
 ms.assetid: d67e31d0-49fb-40d3-b340-95c1fe00957f
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 40b094c6806e75f1535a1ba4d60ccc0387cd1d67
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 956488f4edf46c21441cebaf5f7019d8ac3b4446
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="microsoft-sql-server-samples"></a>Microsoft SQL Server のサンプル
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]このギャラリーには、サンプル データベースと SQL Server と Azure SQL データベースを含む Microsoft SQL 製品の他のサンプルが含まれています。   
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+このギャラリーには、サンプル データベースと SQL Server と Azure SQL データベースを含む Microsoft SQL 製品の他のサンプルが含まれています。   
 
 ## <a name="new-wide-world-importers-sample-database"></a>新機能！！ Wide World Importers のサンプル データベース
 
@@ -39,7 +40,7 @@ Wide World importers 社 (第一次世界大戦)、showcase データベース �
 内のコード サンプルにある、 [Microsoft SQL Server のサンプル](https://github.com/microsoft/sql-server-samples)GitHub リポジトリです。 各サンプルを実行し、サンプルを使用する方法を示す README ファイルが含まれています。 
 
 ## <a name="working-in-github"></a>GitHub での作業
-GitHub で作業をするには、https://github.com/microsoft/sql-server-samples に移動し、リポジトリの分岐します。 独自の分岐で作業し、変更を加えるか、最初に、サンプルをパブリッシュに送信する準備ができたら、ときに、sql server サンプルのマスター分岐にプル要求を送信します。 承認者のいずれかをリクエストを確認し、同意またはプル要求を拒否します。
+GitHub で作業をするにはhttps://github.com/microsoft/sql-server-samplesリポジトリをフォークします。 独自の分岐で作業し、変更を加えるか、最初に、サンプルをパブリッシュに送信する準備ができたら、ときに、sql server サンプルのマスター分岐にプル要求を送信します。 承認者のいずれかをリクエストを確認し、同意またはプル要求を拒否します。
 
 ## <a name="license"></a>ライセンス
 これらのサンプルとテンプレートのすべてのライセンスしますは、MIT ライセンス。 ルートにある license.txt ファイルを参照してください。

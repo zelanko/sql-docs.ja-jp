@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6dd1f09b-dcff-4627-899a-eca5162d9e5b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 967755e34b397f2dfac98277d34cb799655f5165
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: add5788063cdc5026d343061b8111cbec42e5a4d
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="installation-and-configuration"></a>インストールと構成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wide World importers 社の OLTP データベースのインストールと構成手順です。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Wide World importers 社の OLTP データベースのインストールと構成手順です。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -36,15 +38,15 @@ ms.lasthandoff: 12/05/2017
 
 サンプルの最新リリース。
 
-[wide world importers 社リリース](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 SQL Server または Azure SQL データベースのエディションにサンプル WideWorldImporters データベースのバックアップ/bacpac には、対応するをダウンロードします。
 
 サンプル データベースを再作成するソース コードは、次の場所から使用可能なです。 このサンプルを再作成する原因になるデータ、わずかに異なるデータ生成時に、ランダムな要素があるので注意してください。
 
-[wide world-importers 社](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
+[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
 
-## <a name="install"></a>Install
+## <a name="install"></a>インストール
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -58,7 +60,7 @@ SQL Server インスタンスにバックアップを復元するには、Manage
 5. 必要な場合は、データのターゲットの場所を変更し、で、ログ ファイル、**ファイル**ウィンドウです。 ベスト プラクティスにデータを配置し、ログ ファイルを別のドライブにあることに注意してください。
 6. **[OK]**をクリックします。 データベースの復元が開始されます。 それが完了した後、データベース、SQL Server インスタンスにインストールされている WideWorldImporters があります。
 
-### <a name="azure-sql-database"></a>Azure SQL データベース
+### <a name="azure-sql-database"></a>Azure SQL Database
 
 新しい SQL データベースに bacpac をインポートするには、Management Studio を使用できます。
 
@@ -77,7 +79,7 @@ SQL Server インスタンスにバックアップを復元するには、Manage
 サンプル データベースは、フルテキスト インデックス作成の使用することができます。 ただし、既定では SQL Server とその機能がインストールされていないに (Azure SQL データベース内の既定で有効には) SQL Server のセットアップ中に選択する必要があります。 そのため、インストール後の手順が必要です。
 
 1. SQL Server Management Studio では、WideWorldImporters データベースに接続し、新しいクエリ ウィンドウを開きます。
-2. データベースにフルテキスト インデックス作成の使用を有効にするのには、次の T-SQL コマンドを実行します。`EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. データベースにフルテキスト インデックス作成の使用を有効にするのには、次の T-SQL コマンドを実行します。  `EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>SQL Server Audit

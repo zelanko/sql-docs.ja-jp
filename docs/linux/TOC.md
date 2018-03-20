@@ -55,7 +55,6 @@
 ### [PowerShell を使用した管理](sql-server-linux-manage-powershell.md)
 ### [ログ配布の使用](sql-server-linux-use-log-shipping.md)
 ### [データベース メールと電子メール アラートの使用](sql-server-linux-db-mail-sql-agent.md)
-### [可用性の複数サブネットの構成](sql-server-linux-configure-multiple-subnet.md)
 
 ## [移行](sql-server-linux-migrate-overview.md)
 ### [Windows から BACPAC のエクスポートとインポート](sql-server-linux-migrate-ssms.md)
@@ -85,6 +84,7 @@
 ##### [Ubuntu での構成](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [[フェールオーバー]](sql-server-linux-availability-group-failover-ha.md)
 ##### [操作](sql-server-linux-availability-group-operate-ha.md)
+##### [可用性の複数サブネットの構成](sql-server-linux-configure-multiple-subnet.md)
 #### [読み取りスケールのみ用に作成する]()
 ##### [AG の構成](sql-server-linux-availability-group-configure-rs.md)
 #### [クロス プラットフォーム (Windows と Linux) の構成](sql-server-linux-availability-group-cross-platform.md)

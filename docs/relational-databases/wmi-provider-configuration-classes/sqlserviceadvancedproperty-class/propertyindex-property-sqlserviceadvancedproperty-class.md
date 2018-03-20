@@ -21,19 +21,19 @@ helpviewer_keywords:
 - PropertyIndex property
 ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa87a6944453adb11c1d1654e019679047fa0354
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e0547dca7df9b0c6b46b67a9907f88ac71b4a5c5
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>PropertyIndex プロパティ (SqlServiceAdvancedProperty クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-参照されたサービスに属する詳細プロパティの配列内で、詳細プロパティの位置を指定するプロパティ インデックスを取得または設定します。  
+  参照されたサービスに属する詳細プロパティの配列内で、詳細プロパティの位置を指定するプロパティ インデックスを取得または設定します。  
   
 ## <a name="syntax"></a>構文  
   

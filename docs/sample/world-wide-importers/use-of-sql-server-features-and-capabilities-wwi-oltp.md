@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 9a76e8c2bb70be5accc28d65de7f86db86dacd29
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 34535db5b43311e13d21fd663f5302327b24978e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>SQL Server の機能と機能の使用
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]SQL Server の機能と、OLTP データベースの機能の WideWorldImporters を使用します。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+SQL Server の機能と、OLTP データベースの機能の WideWorldImporters を使用します。
 
 SQL Server 2016 で導入された最新の機能をなど、SQL Server の主な機能の多くに対応させることは、WideWorldImporters は設計されています。 SQL Server の機能や機能、WideWorldImporters での使用方法の説明の一覧を次に示します。
 
@@ -42,7 +44,7 @@ SQL Server 2016 で導入された最新の機能をなど、SQL Server の主�
 |動的なデータ マスキング|データベース スキーマにデータ マスクに適用されている、テーブルにサプライヤーの保持銀行詳細`Purchasing.Suppliers`です。 管理者以外のスタッフには、この情報へのアクセスはありません。|
 |Always Encrypted|Always Encrypted のデモが含まれているダウンロード可能な samples.zip に含まれるは[サンプルのリリース](http://go.microsoft.com/fwlink/?LinkID=800630). デモでは、暗号化キー、暗号化を使用して、デリケートなデータと、テーブルにデータを挿入する小さなサンプル アプリケーションのテーブルを作成します。|
 |Stretch database|`Warehouse.ColdRoomTemperatures`テーブルは、テンポラル テーブルとして実装されているし、は、サンプル データベースの完全バージョンではメモリ最適化されています。 アーカイブ テーブルはディスク ベースであり、Azure にストレッチできます。|
-|フルテキスト インデックス|フルテキスト インデックスには、ユーザー、顧客、および StockItems の検索が向上します。 インデックスは、フルテキスト インデックスが、SQL Server インスタンスにインストールされている場合にのみ、クエリに適用されます。 フルテキスト StockItems テーブルでインデックス付けされているデータを作成するには、非永続的な計算列が使用します。<br/><br/>`CONCAT`フルテキスト インデックスは、SearchData を作成するフィールドを連結することの使用されます。<br/>有効にするには、サンプルのフルテキスト インデックスの使用はデータベースで、次のステートメントを実行します。<br/><br/>    `EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>プロシージャを作成、既定のフルテキスト カタログが既に存在しないいずれかの場合は、フルテキストのバージョンのこれらのビューの検索ビューに置換) します。<br/><br/>SQL Server でのフルテキスト インデックスを使用するには、インストール中に、フルテキスト オプションの選択が必要だことに注意してください。 Azure SQL データベースは必要ありません、特定の構成、フルテキスト インデックスを有効にします。|
+|フルテキスト インデックス|フルテキスト インデックスには、ユーザー、顧客、および StockItems の検索が向上します。 インデックスは、フルテキスト インデックスが、SQL Server インスタンスにインストールされている場合にのみ、クエリに適用されます。 フルテキスト StockItems テーブルでインデックス付けされているデータを作成するには、非永続的な計算列が使用します。<br/><br/>`CONCAT` フルテキスト インデックスは、SearchData を作成するフィールドを連結することの使用されます。<br/>有効にするには、サンプルのフルテキスト インデックスの使用はデータベースで、次のステートメントを実行します。<br/><br/>    `EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>プロシージャを作成、既定のフルテキスト カタログが既に存在しないいずれかの場合は、フルテキストのバージョンのこれらのビューの検索ビューに置換) します。<br/><br/>SQL Server でのフルテキスト インデックスを使用するには、インストール中に、フルテキスト オプションの選択が必要だことに注意してください。 Azure SQL データベースは必要ありません、特定の構成、フルテキスト インデックスを有効にします。|
 |保存される計算列のインデックスを作成します。|SupplierTransactions および CustomerTransactions で使用される保存される計算列のインデックスを作成します。|
 |CHECK 制約|比較的複雑な check 制約`Sales.SpecialDeals`です。 これにより、1 つの DiscountAmount、DiscountPercentage、1 つだけと、UnitPrice が構成されています。|
 |Unique 制約|多対多の構築 (および unique 制約) Warehouse.StockItemStockGroups' に対して設定されます。|
