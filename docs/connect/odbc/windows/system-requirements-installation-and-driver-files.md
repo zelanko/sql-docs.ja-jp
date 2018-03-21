@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f25aa61329742373cff9fcbb38b893500d5baa12
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: 8e23264905c2a8b706b32a906d7dbf2dc3dd165b
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>インストール、ドライバー ファイルの基本的なシステム要件
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -61,13 +61,13 @@ ODBC Driver 13 およびの 13.1 [!INCLUDE[ssNoVersion](../../../includes/ssnove
 
 並列でインストール済みであることができます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client です。  
 
-呼び出した場合`msodbcsql.msi`既定ではクライアント コンポーネントだけがインストールされます。 クライアント コンポーネントは、ドライバーを使用して開発されたアプリケーションの実行をサポートするファイルです。 SDK コンポーネントをインストールするには指定`ADDLOCAL=ALL`コマンド ラインでします。 例:  
+呼び出した場合`msodbcsql.msi`既定ではクライアント コンポーネントだけがインストールされます。 クライアント コンポーネントは、ドライバーを使用して開発されたアプリケーションの実行をサポートするファイルです。 SDK コンポーネントをインストールするには指定`ADDLOCAL=ALL`コマンド ラインでします。 以下に例を示します。  
   
 ```  
 msiexec /i msodbcsql.msi ADDLOCAL=ALL  
 ```  
   
- 指定`IACCEPTMSODBCSQLLICENSETERMS=YES`を使用する場合は、エンド ユーザー ライセンスの条項を受け入れるように、 `/passive`、 `/qn`、 `/qb`、または`/qr`をインストールするオプションです。 このオプションは、すべて大文字で指定する必要があります。 例:  
+ 指定`IACCEPTMSODBCSQLLICENSETERMS=YES`を使用する場合は、エンド ユーザー ライセンスの条項を受け入れるように、 `/passive`、 `/qn`、 `/qb`、または`/qr`をインストールするオプションです。 このオプションは、すべて大文字で指定する必要があります。 以下に例を示します。  
   
 ```  
 msiexec /quiet /passive /qn /i msodbcsql.msi IACCEPTMSODBCSQLLICENSETERMS=YES ADDLOCAL=ALL  
@@ -79,7 +79,7 @@ msiexec /quiet /passive /qn /i msodbcsql.msi IACCEPTMSODBCSQLLICENSETERMS=YES AD
 msiexec /quiet /passive /qn /uninstall msodbcsql.msi  
 ```  
   
-アプリケーションでは、ドライバーを使用するときに、アプリケーションが示されるはずインストール オプションを使ってドライバーに依存している`APPGUID`です。 これにより、ドライバーのインストーラーをレポートに依存するアプリケーションをアンインストールする前にできます。 ドライバーの依存関係を指定するには、設定、`APPGUID`コマンド ライン パラメーターを製品コード、ドライバーをサイレント モードでインストールするときにします。 (製品コードする必要がある作成してアプリケーションのセットアップ プログラムをバンドルする Microsoft インストーラーを使用する場合)。例:  
+アプリケーションでは、ドライバーを使用するときに、アプリケーションが示されるはずインストール オプションを使ってドライバーに依存している`APPGUID`です。 これにより、ドライバーのインストーラーをレポートに依存するアプリケーションをアンインストールする前にできます。 ドライバーの依存関係を指定するには、設定、`APPGUID`コマンド ライン パラメーターを製品コード、ドライバーをサイレント モードでインストールするときにします。 (製品コードする必要がある作成してアプリケーションのセットアップ プログラムをバンドルする Microsoft インストーラーを使用する場合)。以下に例を示します。  
   
 ```  
 msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }  
@@ -101,6 +101,7 @@ ODBC アプリケーションをコンパイルするときに、`msodbcsql11.li
 |コンポーネント|Description|  
 |---------------|-----------------|  
 |msodbcsql17.dll or <br> msodbcsql13.dll or <br> msodbcsql11.dll|ドライバーのすべての機能を含む DLL (ダイナミック リンク ライブラリ) ファイル。 このファイルは、%SYSTEMROOT%\System32 にインストールされます。|  
+|msodbcdiag17.dll or <br> msodbcdiag13.dll or <br> msodbcdiag11.dll|ドライバーの診断 (トレース) インターフェイスが含まれるダイナミック リンク ライブラリ (DLL) ファイル。 このファイルは、%SYSTEMROOT%\System32 にインストールされます。|
 |msodbcsqlr17.rll or <br> msodbcsqlr13.rll or <br> msodbcsqlr11.rll|ドライバー ライブラリに付随するリソース ファイル。 このファイルは、SYSTEMROOT%\System32\1033 にインストールされます。| 
 |s13ch_msodbcsql.chm or <br> s11ch_msodbcsql.chm |ドライバーのデータ ソースを作成する方法が説明されているデータ ソース ウィザードのヘルプ ファイルです。 このファイルは %SYSTEMROOT%\System32\1033 にインストールします。 <br /> <br /> **注:** ODBC ドライバーの 17 chm ファイルはありません。 |  
 |msodbcsql.h|すべてのドライバーを使用するために必要な新しい定義を含むヘッダー ファイル。<br /><br /> **注:**  msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> ODBC ドライバーの 17 または 13 msodbcsql.h は %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK にインストールされます。 <br /> ODBC Driver 11 の msodbcsql.h は %PROGRAMFILES%\Microsoft SQL Server\Client \odbc\110\sdk にインストールされます。| 
