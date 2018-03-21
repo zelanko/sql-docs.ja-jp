@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2143b576e3104ba2cf707e8fada75471a007a987
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 0e9f4351e74e73453182ff8e8f840f50f0085537
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning のサービスの既知の問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -94,7 +94,7 @@ Azure の仮想マシン数に制限は、SQL Server に付属する必要のあ
 
 **適用されます:** Python の SQL Server 2017
 
-### <a name="bkmk_sqlbindr"></a>使用して、クライアントから、古いバージョンの SQL Server R Services に接続するときに、互換性のないバージョンの警告[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+### <a name="bkmk_sqlbindr"></a> 使用して、クライアントから、古いバージョンの SQL Server R Services に接続するときに、互換性のないバージョンの警告 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 R コードを実行するときは、SQL Server 2016 の計算コンテキスト、次のエラーを表示する場合があります。
 
@@ -117,7 +117,7 @@ R コードを実行するときは、SQL Server 2016 の計算コンテキス�
 
 `C:\<path to installation media>\SQLServer2016-KB3164674-x64.exe /Action=Patch /IACCEPTROPENLICENSETERMS /MRCACHEDIRECTORY=<path to CU1 CAB files>`
 
-最新のインストーラーを取得するには、次を参照してください。[インターネットにアクセスできないマシン ラーニング コンポーネントをインストール](r/installing-ml-components-without-internet-access.md)です。
+最新のインストーラーを取得するには、次を参照してください。[インターネットにアクセスできないマシン ラーニング コンポーネントをインストール](install/sql-ml-component-install-without-internet-access.md)です。
 
 **適用されます:** SQL Server 2016 R Services、R Server バージョン 9.0.0 の以前のバージョン
 
@@ -155,7 +155,7 @@ Azure vm での回避策として開きます**セキュリティが強化され
 
 たとえば、SQL Server の Enterprise Edition を使用している場合でも R モードで実行シングル スレッド外部ツールを使用して、R コードを実行するとします。 SQL Server のパフォーマンスの利点を取得する SQL Server の接続を開始して[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)を外部スクリプトの実行時を呼び出します。
 
-一般に、機械学習の外部ツールから SQL Server で使用されるライブラリを呼び出すことを回避します。 デバッグ R または Python コードをする必要がある場合は、そのためには SQL Server の外部通常簡単です。 Microsoft R クライアントをインストールする SQL Server 内にある同じライブラリを取得するにまたは[Machine Learning サーバー](r/create-a-standalone-r-server.md)です。
+一般に、機械学習の外部ツールから SQL Server で使用されるライブラリを呼び出すことを回避します。 デバッグ R または Python コードをする必要がある場合は、そのためには SQL Server の外部通常簡単です。 Microsoft R クライアントをインストールする SQL Server 内にある同じライブラリを取得する[SQL Server 2017 Machine Learning サーバー (スタンドアロン)](install/sql-machine-learning-standalone-windows-install.md)、または[SQL Server 2016 R Server (スタンドアロン)](install/sql-r-standalone-windows-install.md)です。
 
 ### <a name="sql-server-data-tools-does-not-support-permissions-required-by-external-scripts"></a>SQL Server Data Tools は外部スクリプトで必要なアクセス許可をサポートしていません
 
@@ -183,7 +183,7 @@ Enterprise Edition では、外部スクリプト プロセスを管理するた
 
 ### <a name="access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>アクセスは、既定以外の場所に SQL Server で R スクリプトを実行するときに警告を拒否されました
 
-SQL Server のインスタンスがインストールされている場合、既定以外の場所になどの外部、`Program Files`フォルダー、ACCESS_DENIED は、パッケージをインストールするスクリプトを実行しようとしたときに発生する警告です。 例:
+SQL Server のインスタンスがインストールされている場合、既定以外の場所になどの外部、`Program Files`フォルダー、ACCESS_DENIED は、パッケージをインストールするスクリプトを実行しようとしたときに発生する警告です。 以下に例を示します。
 
 > *`normalizePath(path.expand(path), winslash, mustWork)` : パス [2] ="~ExternalLibraries/R/8/1": アクセスが拒否されました*
 
@@ -264,7 +264,7 @@ R コマンドを使用して R コードの実行中にオブジェクトのワ
 
 この問題を回避するには、変数およびその他のオブジェクトの区別しないで消去中にされないようにで R を実行している[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]です。 それが持つことができますが、ワークスペースをクリアする一般的な R コンソールで作業するとき、予想外の結果。
 
-* 特定の変数を削除するには、R を使用`remove`関数: たとえば、`remove('name1', 'name2', ...)`
+* 特定の変数を削除するには、R を使用`remove`関数: たとえば、 `remove('name1', 'name2', ...)`
 * 削除する変数が複数ある場合は、リストに一時変数の名前を保存し、ガベージ コレクションを定期的に実行します。
 
 ### <a name="restrictions-on-data-that-can-be-provided-as-input-to-an-r-script"></a>R スクリプトの入力として提供できるデータに対する制限事項
@@ -305,7 +305,7 @@ SQL でサポートされているすべてのデータ型は、R. のために�
 
 この制限は、同様の SQL Server および Python の間で渡されるデータに適用されます。 マルチバイト文字の utf-8 として渡され、Unicode として格納されている必要があります。
 
-### <a name="only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>型の値を 1 つだけ`raw`から返されることができます`sp_execute_external_script`
+### <a name="only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>型の値を 1 つだけ`raw`から返されることができます `sp_execute_external_script`
 
 ときに、バイナリ データ型 (R**生**データ型) が返されます、R から、値が出力データ フレームに送信する必要があります。
 
@@ -329,7 +329,7 @@ SQL でサポートされているすべてのデータ型は、R. のために�
 
 この問題が発生した場合は、 `f` の定義内の、通常 `g`が `g` を呼び出す場所より前の任意の場所に、 `f`の定義を組み込むことで問題を回避できます。
 
-例:
+以下に例を示します。
 
 ```r
 f <- function(x) { 2*x * 3 }
@@ -436,7 +436,7 @@ SQL Server 2017 CU2 以降では、次のメッセージが表示される場合
 
 > *外部スクリプトからの STDERR メッセージ:*
 > **~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
-> *SyntaxWarning: telemetry_stateグローバル宣言の前に使用されます。*
+> *SyntaxWarning: telemetry_state はグローバル宣言の前に使用します。*
 
 
 SQL Server 2017 累積更新プログラム 3 (CU3) で、この問題は修正されました。 

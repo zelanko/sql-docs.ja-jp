@@ -21,11 +21,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: d4810554e5ed40a300a902b96ca568f799c63899
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 488661c917690c2ec5af6db40a135c8eb3927db1
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>TRANSACT-SQL (SQL のクイック スタートで R) での R コードの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -84,7 +84,7 @@ R スクリプトを含む SQL クエリを実行するには、データベー�
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
-+ このクエリからエラーが発生した場合のインストールが完了できない可能性があります。 SQL Server セットアップ ウィザードを使用して機能を追加した後で、いくつかの追加手順を実行して外部コード ライブラリの使用を有効にする必要があります。  [SQL Server R Services のセットアップ](../r/set-up-sql-server-r-services-in-database.md)に関する記事をご覧ください。
++ このクエリからエラーが発生した場合のインストールが完了できない可能性があります。 SQL Server セットアップ ウィザードを使用して機能を追加した後で、いくつかの追加手順を実行して外部コード ライブラリの使用を有効にする必要があります。  参照してください[Services の学習の SQL Server 2017 マシンをインストール](../install/sql-machine-learning-services-windows-install.md)または[SQL Server 2016 の R Services をインストール](../install/sql-r-services-windows-install.md)です。
 
 + スタート パッド サービスが実行されていることを確認します。 環境によっては、SQL Server に接続するための R ワーカー アカウントの有効化、追加のネットワーク ライブラリのインストール、リモートでのコード実行の有効化、すべてを構成した後のインスタンスの再起動が必要な場合があります。 [R Services のインストールとアップグレードについての FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md) に関する記事をご覧ください
 

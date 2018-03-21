@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: af9896e9e0baa2899b9e9c95795907ca46463504
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>SQL Server の外部スクリプトの実行に関する一般的な問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -161,7 +161,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
     * *セキュリティ ログは、NT サービス アカウントがログオンできなかったことを示します*
 
-このユーザー グループに必要なアクセス許可を付与する方法については、次を参照してください。 [SQL Server R Services セットアップ](r/set-up-sql-server-r-services-in-database.md)です。
+このユーザー グループに必要なアクセス許可を付与する方法については、次を参照してください。 [SQL Server の 2016 R Services をインストール](install/sql-r-services-windows-install.md)です。
 
 > [!NOTE]
 > SQL ログインを利用し、リモート ワークステーションから R スクリプトを実行する場合、この制限は適用されません。
@@ -233,7 +233,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 R コンソールで作業するときは、一般的なは、ワークスペースをオフにして、そのことが予期しない結果に、SQL の計算コンテキスト。
 
-`revoScriptConnection`SQL Server から呼び出される R セッションに関する情報を含む R ワークスペースにオブジェクト。 ただしかどうか、R コードは ワークスペースをオフにするコマンド (など`rm(list=ls())`)、セッションとの R ワークスペースには、他のオブジェクトに関するすべての情報はもオフにします。
+`revoScriptConnection` SQL Server から呼び出される R セッションに関する情報を含む R ワークスペースにオブジェクト。 ただしかどうか、R コードは ワークスペースをオフにするコマンド (など`rm(list=ls())`)、セッションとの R ワークスペースには、他のオブジェクトに関するすべての情報はもオフにします。
 
 この問題を回避するには、SQL Server で R を実行しているときに、変数およびその他のオブジェクトの区別しないで消去しないでください。 使用して特定の変数を削除することができます、**削除**関数。
 

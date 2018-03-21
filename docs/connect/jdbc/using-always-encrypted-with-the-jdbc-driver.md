@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: af8b651364f58c3c4261666d5d6531e99e620efe
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 5a32f8269bb6787087b54d161c50cf6f06488482
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC ドライバーで Always Encrypted の使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -136,7 +136,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> JDBC ドライバーの SQLServerColumnEncryptionCertificateStoreProvider 実装は Windows オペレーティング システムのみで使用可能と、ドライバー パッケージで使用できる sqljdbc_auth.dll に依存しています。 このプロバイダーを使用するには、JDBC ドライバーがインストールされているコンピューター上の Windows システム パス上のディレクトリに sqljdbc_auth.dll ファイルをコピーします。 または、java.libary.path システム プロパティを設定して sqljdbc_auth.dll のディレクトリを指定することもできます。 32 ビットの Java 仮想マシン (JVM) を実行している場合は、オペレーティング システムのバージョンが x64 であっても、x86 フォルダーの sqljdbc_auth.dll ファイルを使用してください。 64 ビットの JVM を x64 プロセッサ上で実行している場合は、x64 フォルダーの sqljdbc_auth.dll ファイルを使用してください。 たとえば、32 ビットの JVM を使用している既定のディレクトリに、JDBC ドライバーがインストールされている場合は、Java アプリケーションの起動時に次の仮想マシン (VM) 引数を使用して、DLL の場所を指定できます。 `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> この記事で他のキー ストア プロバイダーは、ドライバーでサポートされているすべてのプラットフォームで使用できますが、JDBC ドライバーの SQLServerColumnEncryptionCertificateStoreProvider 実装は Windows オペレーティング システムでのみ使用可能なです。 ドライバー パッケージで使用できる sqljdbc_auth.dll に依存していること。 このプロバイダーを使用するには、JDBC ドライバーがインストールされているコンピューター上の Windows システム パス上のディレクトリに sqljdbc_auth.dll ファイルをコピーします。 または、java.libary.path システム プロパティを設定して sqljdbc_auth.dll のディレクトリを指定することもできます。 32 ビットの Java 仮想マシン (JVM) を実行している場合は、オペレーティング システムのバージョンが x64 であっても、x86 フォルダーの sqljdbc_auth.dll ファイルを使用してください。 64 ビットの JVM を x64 プロセッサ上で実行している場合は、x64 フォルダーの sqljdbc_auth.dll ファイルを使用してください。 たとえば、32 ビットの JVM を使用している既定のディレクトリに、JDBC ドライバーがインストールされている場合は、Java アプリケーションの起動時に次の仮想マシン (VM) 引数を使用して、DLL の場所を指定できます。 `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Java キー ストア プロバイダーを使用します。
 JDBC driver Java キー ストアの組み込みキー ストア プロバイダー実装が付属します。 場合、 **keyStoreAuthentication**接続文字列プロパティが接続文字列内に存在、"JavaKeyStorePassword"に設定されていると、ドライバーは自動的にインスタンス化し、Java キー ストアのプロバイダーを登録します。 Java キー ストア プロバイダーの名前は、MSSQL_JAVA_KEYSTORE です。 この名前は、SQLServerColumnEncryptionJavaKeyStoreProvider.getName() API を使用してもクエリを実行できます。 

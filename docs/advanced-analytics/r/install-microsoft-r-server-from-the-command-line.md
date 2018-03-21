@@ -17,10 +17,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 95f8e0c688a2f141ce066e3831e461509d72c1a9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>コマンドラインから Machine Learning Server (スタンドアロン) または Microsoft R Server (スタンドアロン) をインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,7 @@ SQL Server のコマンド ライン インストールを実行し、スクリ�
 インターネットへのアクセスを持たないコンピューターで Machine Learning のサーバーまたは Microsoft R Server (スタンドアロン) をインストールする場合は、R (または Python) の必須コンポーネントを事前にダウンロードし、ローカル フォルダーにコピーする必要があります。 ダウンロードの場所を参照してください。[インターネットにアクセスできないマシン ラーニング コンポーネントをインストールする](installing-ml-components-without-internet-access.md)です。
 
 
-## <a name="bkmk_mls2017"></a>マイクロソフトの機械学習のサーバー (スタンドアロン) のインストールします。
+## <a name="bkmk_mls2017"></a> マイクロソフトの機械学習のサーバー (スタンドアロン) のインストールします。
 
 **適用されます SQL Server 2017。**
 

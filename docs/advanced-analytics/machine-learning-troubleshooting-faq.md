@@ -1,7 +1,7 @@
 ---
 title: "トラブルシューティングと SQL Server での機械学習のよく寄せられる質問 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 06/16/2017
+ms.date: 03/16/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
@@ -11,20 +11,20 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d334aefbd43bf17e776a8b75a09a2cef8448542d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 5b9a5c6497781ef67d9d2ef9b9032a4d9ee250e5
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="troubleshoot-machine-learning"></a>機械学習をトラブルシューティングします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、マシン学習機能によって SQL Server のセットアップと構成に関連するトラブルシューティングの情報を提供します。 情報には、セットアップ ガイド、既知の問題、およびリリース ノートへのリンクが含まれています。 この記事から、SQL Server の machine learning ソリューションのパフォーマンスの最適化に関するアドバイスを提供する他のアーティクルがリンクされています。
+この記事では、セットアップ ガイド、既知の問題、およびリリース ノートにトラブルシューティングへのリンクを提供します。 この記事から、SQL Server の machine learning ソリューションのパフォーマンスの最適化に関するアドバイスを提供する他のアーティクルがリンクされています。
 
 トラブルシューティングのための既知の問題、一般的なセットアップの質問、およびプロシージャを検索するための開始点としてこのページを使用できます。
 
@@ -50,32 +50,18 @@ ms.lasthandoff: 02/11/2018
 
 ここから始めてください機械学習と SQL Server を設定していない場合、または機能を追加する場合。
 
-+ [R Services または R で Machine Learning のサービスのセットアップします。](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
-+ [Python の Machine Learning のサービスを設定します。](../advanced-analytics/python/setup-python-machine-learning-services.md)
-+ [セットアップに関する FAQ](../advanced-analytics/r/upgrade-and-installation-faq-sql-server-r-services.md)
-+ [SqlBindR を使用して R services のインスタンスをアップグレードするには](../advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
-
-次の記事では、SQL Server の学習機能をコンピューターのオフラインのセットアップに必要な追加の手順について説明します。
-
-+ [R Services の無人インストール](../advanced-analytics/r/unattended-installs-of-sql-server-r-services.md) 
-+ [Python の Machine Learning のサービスの無人インストール](../advanced-analytics/python/unattended-installs-of-sql-server-python-services.md)
-
-機械学習のインターネット接続がないコンピューターの機能をインストールする必要がある場合は、この記事の内容のリンクを使用して、セットアップを開始する前に、R、Python のコンポーネントをダウンロードします。
-
-+ [インターネットへのアクセスなしで Machine Learning コンポーネントをインストールする](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
++ [SQL Server 2017 Machine Learning Services (In-database) のインストールします。](install/sql-machine-learning-services-windows-install.md)
++ [SQL Server 2017 Machine Learning サーバー (スタンドアロン) のインストールします。](install/sql-machine-learning-standalone-windows-install.md)
++ [SQL Server 2016 R Services (In-database) のインストールします。](install/sql-r-services-windows-install.md)
++ [SQL Server 2016R Server (スタンドアロン) のインストールします。](install/sql-r-standalone-windows-install.md)
++ [コマンド プロンプトのセットアップ](install/sql-ml-component-commandline-install.md)
++ [オフラインのセットアップ (インターネットなし)](install/sql-ml-component-install-without-internet-access.md)
 
 ### <a name="configuration"></a>構成
 
 次の記事には、機械学習のインスタンス上の構成をカスタマイズする方法と既定値は、情報が含まれています。
 
-+ [SQL Server R Services のユーザー アカウント プールを変更します。](../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)  
-+ [構成および高度な分析拡張機能を管理します。](../advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md)  
++ [SQL Server R Services のユーザー アカウント プールを変更します。](r/modify-the-user-account-pool-for-sql-server-r-services.md)  
++ [構成および高度な分析拡張機能を管理します。](r/configure-and-manage-advanced-analytics-extensions.md)  
 + [リソース プールを作成する方法](r/how-to-create-a-resource-pool-for-r.md)
 + [R のワークロードの最適化](r/operationalizing-your-r-code.md)
-
-## <a name="related-tools-and-services"></a>関連ツールとサービス
-
-+ [Microsoft Machine Learning Server のスタンドアロンをセットアップします。](../advanced-analytics/r/create-a-standalone-r-server.md)
-+ [Azure VM での R サーバーをセットアップします。](../advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-+ [Windows 用の R Server をインストールします。](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
-+ [R Tools for Visual Studio を入手します。](https://www.visualstudio.com/vs/rtvs/)

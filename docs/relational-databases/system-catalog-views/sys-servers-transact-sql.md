@@ -27,28 +27,29 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 858fe45f817572eea387ce3971a52e72cc23f045
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cc6dcb18c9961bffcf65db5f918ad54f19ca78ae
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   登録されると、リンクまたはリモート サーバーごとに 1 行、1 行がローカル サーバーのデータを含む**server_id** 0 を = です。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|リンク サーバーのローカル ID です。|  
 |**name**|**sysname**|ときに**server_id** = 0、これは、サーバー名。<br /><br /> ときに**server_id** > 0 で、これは、リンク サーバーのローカル名。|  
 |**product**|**sysname**|リンク サーバーの製品名 "SQL Server" の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の別のインスタンスであることを示します。|  
-|**プロバイダー**|**sysname**|リンク サーバー接続用の OLE DB プロバイダー名です。|  
+|**provider**|**sysname**|リンク サーバー接続用の OLE DB プロバイダー名です。|  
 |**data_source**|**nvarchar (4000)**|OLE DB データ ソース接続プロパティです。|  
-|**場所**|**nvarchar (4000)**|OLE DB 場所接続プロパティです。 ない場合は NULL です。|  
+|**location**|**nvarchar (4000)**|OLE DB 場所接続プロパティです。 ない場合は NULL です。|  
 |**provider_string**|**nvarchar (4000)**|OLE DB プロバイダー文字列接続プロパティです。<br /><br /> 呼び出し側に ALTER ANY LINKED SERVER 権限がなければ NULL になります。|  
-|**カタログ**|**sysname**|OLEDB カタログ接続プロパティです。 ない場合は NULL です。|  
+|**catalog**|**sysname**|OLEDB カタログ接続プロパティです。 ない場合は NULL です。|  
 |**connect_timeout**|**int**|接続のタイムアウト (秒単位) です。ない場合は 0 です。|  
 |**query_timeout**|**int**|クエリのタイムアウト (秒単位) です。ない場合は 0 です。|  
 |**is_linked**|**bit**|0 = を使用して追加された旧形式のサーバーは、 **sp_addserver**さまざまな RPC および分散トランザクションの動作を指定しています。<br /><br /> 1 の場合、標準リンク サーバーです。|  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|1 の場合、リモート ストアド プロシージャを呼び出すと分散トランザクションが開始され、トランザクションは MS DTC に参加します。 詳細については、「 [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)からデータにアクセスする方法について説明します。|  
 |**modify_date**|**datetime**|サーバー情報が前回変更された日付です。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  値**provider_string**は呼び出し元に、ALTER ANY LINKED SERVER 権限がない限りに常に NULL です。  
   
  ローカル サーバーを表示する権限は必要ありません (**server_id** = 0) です。  
@@ -82,8 +83,8 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [リンク サーバーのカタログ ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [リンク サーバーのカタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
   

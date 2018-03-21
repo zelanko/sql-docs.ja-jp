@@ -1,7 +1,7 @@
 ---
 title: "SQL Server マシン ラーニング Services のエディションで利用可能な機能 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/07/2018
+ms.date: 03/17/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -12,55 +12,55 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 
 caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 16ca6c44b15c9fb7c1983d5a04175ebbade57895
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 4322211bcc3a5466976368b9562ed3e95ad7e331
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="feature-availability-across-editions-of-sql-server-machine-learning-services"></a>エディションの SQL Server マシン ラーニング Services 全体で利用可能な機能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
  SQL Server 2016 および SQL Server 2017 マシン学習機能を利用します。 この記事は、機能を提供するエディションを一覧表示、特定のエディションに適用される制限事項について説明し、特定のエディションでのみ使用できる機能の一覧します。
 
+
+## <a name="sql-server-2017-machine-learning-features"></a>SQL Server 2017 機械学習機能
+
+Enterprise および Developer エディションでは、エンタープライズ インストール用のソリューションをビルドするには同じコストをかけずにできるように、同じ機能カバレッジがあります。 エディションは、機能的 equivlanet、Developer Edition の使用は運用環境でサポートされていません。
+
+基本と高度な統合の違いは、小数点以下桁数です。 高度な統合は、コンピューターに対応できるサイズを問わず、データ セットの並列処理のすべての使用可能なコアを使用できます。 基本的な統合は、2 コアとメモリに収まるデータ セットに制限されています。 
+
+基本と高度な統合は、(In-database) のインスタンスに適用されます。 スタンドアロン サーバーでは、データベース エンジン インスタンス機能ではなく、開発者および Enterprise エディションでのみのインストール オプションとして提供しています。
+
+|機能|Enterprise|Standard|Web|Express with Advanced Services|Express 
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|基本的な R 統合|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|[ユーザー アカウント制御]|いいえ|   
+|高度な R 統合|はい|いいえ|いいえ|いいえ|いいえ| 
+|基本的な Python 統合|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|[ユーザー アカウント制御]|いいえ|
+|高度な Python 統合|はい|いいえ|いいえ|いいえ|いいえ| 
+|Machine Learning Server (スタンドアロン)|はい|いいえ|いいえ|いいえ|いいえ|   
+
  > [!NOTE]
- > 一般に、SQL Server の Machine Learning (In-database) は含まれません、[操作運用](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)スタンドアロン R サーバーまたは Machine Learning のサーバーのインストールに含まれている機能です。 操作運用では、web サービスの展開と、ホストが含まれていて、したがってその他の SQL Server 操作と同じリソースに対して競合します。
- > 
- > このため、web サービスとして予測モデルの展開をサポートするために別の物理サーバー上の SQL Server 2016 R Server (スタンドアロン) または SQL Server 2017 Machine Learning サーバー (スタンドアロン) のインストールをお勧めします。 
+ > (スタンドアロン) サーバーのみを提供、[操作運用](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)Microsoft (SQL-製以外) R サーバーまたは Machine Learning のサーバーのインストールに含まれている機能です。 操作運用には、web サービスの配置とホスティング機能が含まれています。
+>
+> (In-database) インストールでは、ソリューションの運用に同等のアプローチが機能を利用するデータベース エンジンのストアド プロシージャで実行できる関数にコードを変換する場合。
 
-## <a name="sql-server-2017-machine-learning-services-in-database-and-standalone"></a>SQL Server 2017 マシン ラーニング Services (In-database) および (スタンドアロン)
 
-Developer Edition では、Enterprise Edition のと同等のパフォーマンスを提供します。 運用環境には、Developer Edition の使用はサポートされていません。
+## <a name="sql-server-2016-r-features"></a>SQL Server 2016 の R の機能
 
-|機能|Enterprise|Standard|Web|Express with Advanced Services|Express| 
-|-------|----------|--------|---|------------------------------|-------|
-| R インタープリター & 独自のパッケージ | はい | [ユーザー アカウント制御] | いいえ | いいえ | いいえ | 
-| Python インタープリター & クライアント ライブラリ | はい | [ユーザー アカウント制御] | いいえ | いいえ | いいえ | 
-| データのチャンキング <br/>(大量の新機能には、メモリ内に収まる範囲を超えるのデータを処理) | はい | いいえ | いいえ | いいえ | いいえ |
-| スケール アップの処理 <br/>(2 つ以上のプロセッサ) | はい | いいえ | いいえ | いいえ | いいえ |
-| 操作運用 | はい | いいえ | いいえ | いいえ | いいえ |
-| [予測](../../t-sql/queries/predict-transact-sql.md)関数 <br/>(実行[ネイティブ スコアリング](../sql-native-scoring.md)事前トレーニング済みモデルは、必要なバイナリ形式で保存する前に) | はい | [ユーザー アカウント制御] | [ユーザー アカウント制御] | [ユーザー アカウント制御] | はい |
-| R のクライアントの互換性 | はい | [ユーザー アカウント制御] | いいえ | いいえ | いいえ | 
-| Microsoft R Open | はい | [ユーザー アカウント制御] | いいえ | いいえ | いいえ | 
-| Anaconda Python 3.5 | はい | [ユーザー アカウント制御] | いいえ | いいえ | いいえ | 
-
-## <a name="sql-server-2016-r-services-in-database-and-r-server-standalone"></a>SQL Server 2016 R Services (In-database) と R Server (スタンドアロン)
-
-使用可能な機能では、まず 2016年のリリースの含まれていない Python サポート マイナス、2017年と同じです。
+SQL Server 2016 には、R 統合のみが含まれています。 SQL Server 2016 では、基本と高度な R 統合は、SQL Server 2017 と同じです。
 
 ## <a name="r-feature-availability-in-azure-sql-database"></a>Azure SQL データベースで使用できる R 機能
   
-初期テストのリリースでは、後に R Services は現在**いない**保留中の開発ではさらに、Azure SQL データベースで使用できます。 
+初期テストのリリースでは、後に R Services は、保留中のさらなる開発 Azure SQL データベースから削除されました。 
 
 ## <a name="performance-expectations-for-enterprise-edition"></a>Enterprise Edition 用のパフォーマンスの予測
 
 Machine learning ソリューションでのパフォーマンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一般に従来の R を使用して、同じハードウェアを指定された実装を超えると予想されます。 SQL Server で R ソリューション実行できるサーバーのリソースを使用するためと、場合がありますを使用して複数のプロセスに配布する、 **RevoScaleR**関数。 
-
-パフォーマンスが Python ソリューションでは、評価されていない機能は、開発中は、適用する同じ利点の一部が必要とします。
 
 Vs の Enterprise Edition で実行された場合は、ソリューションを学習、同じコンピューターのパフォーマンスとスケーラビリティに大きな差異を表示することができますも期待します。Standard エディションです。 原因としては、これにより、RevoScaleR 関数をメモリに収まりきらない場合より多くのデータを処理を並列処理、機械学習に使用できる増加したスレッドおよびストリーミング (またはチャンキング) のサポートにあります。 
 

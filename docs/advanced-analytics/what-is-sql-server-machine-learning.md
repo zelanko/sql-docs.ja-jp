@@ -16,11 +16,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: 
-ms.openlocfilehash: 5e718755aeae67ba55165770dc323cad8d6a54a9
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: ccba60d0a3e0fe45f82215a045e53a265d6c0a92
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>SQL Server マシン学習サービスとは
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,12 +31,12 @@ Machine Learning のサービスのキーの価値提案は、スケール、お
 
 SQL Server で machine learning の機能を使用するための 2 つのオプションがあります。 
 
-+ **SQL Server マシン ラーニング Services (In-database)**データベース エンジン インスタンス、データベース エンジンと、計算エンジンが完全に統合されている範囲内で動作します。 ほとんどのインストールは、このオプションです。
-+ **SQL Server マシン ラーニング サーバー (スタンドアロン)**非 SQL インストールします。 サーバーをインストールする SQL Server セットアップを使用すると、SQL Server から完全に分離します。
++ [**SQL Server マシン ラーニング Services (In-database)** ](r/sql-server-r-services.md)データベース エンジン インスタンス、データベース エンジンと、計算エンジンが完全に統合されている範囲内で動作します。 ほとんどのインストールは、このオプションです。
++ [**SQL Server マシン ラーニング サーバー (スタンドアロン)** ](r/r-server-standalone.md)非 SQL インストールします。 サーバーをインストールする SQL Server セットアップを使用すると、SQL Server から完全に分離します。 機能的には、これは、SQL 以外に相当[Microsoft Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)です。
 
 ## <a name="r-and-python-packages"></a>R、Python パッケージ
 
-各言語のサポートは Microsoft の独自のパッケージを作成およびデータをスコア付けを基になるシステム リソースを使用して並列処理、各種のモデルを学習するためです。
+各言語のサポートは Microsoft の独自のパッケージを作成およびデータ、および基になるシステム リソースを使用して並列処理をスコア付けのさまざまな種類のモデルを学習するためです。
 
 独自のパッケージが構築されるためのオープン ソース R、Python ディストリビューション、スクリプトやコードが SQL Server で実行することができますも基本と関数を呼び出す SQL Server で提供される言語のバージョンと互換性のあるサード パーティのパッケージを使用して (Python 3.5 と最新バージョンの R、現在 3.3.3)。
 
@@ -84,12 +84,24 @@ SQL Server 2017 Machine Learning サービスとは、python に強化され、S
 
 SQL Server のドキュメントの最近のリリースは、バージョンに依存しません。 SQL Server マシン ラーニング services、Python はのみ使用できます 2017年以降では、R のサポートは、すべてのバージョンで中にします。 明記しない限り、R ドキュメント 2016 と 2017 の両方のバージョンに適用されますを想定することができます。
 
+
+## <a name="related-machine-learning-products"></a>関連の機械学習の製品
+
+ +  [Azure の仮想マシンのプロビジョニング](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+  
+  Azure marketplace には、Machine Learning のサーバーまたは R サーバーを含む複数の仮想マシン イメージが含まれています。 予測モデルの開発と配置を取得する最も簡単な方法は、Microsoft Azure でバーチャル マシンを作成します。 イメージを容易にアプリケーション内での分析を埋め込むとバックエンド システムと統合するスケーリングと、既に構成されている共有の機能が付属します。
+
++ [Data Science Virtual Machine](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)
+
+  データ サイエンス仮想マシンの最新バージョンには、マシン学習サーバー、SQL Server が含まれています。 plus 機械学習に最も一般的なツールの配列のすべてをプレインストールし、テストします。 作成 Jupyter ノートブック、ジュリアは、ソリューションを開発および MXNet、CNTK、TensorFlow など深層学習の GPU が有効なライブラリを使用します。
+
 <a name="next-steps"></a>
+
 ## <a name="next-steps"></a>次の手順
 
 **手順 1:**をインストールし、ソフトウェアを構成します。 
 
-+ [SQL Server 2017 Machine Learning Services (In-database) のインストールします。](python/setup-python-machine-learning-services.md#bkmk_installPythonInDatabase)
++ [SQL Server 2017 Machine Learning Services (In-database) のインストールします。](install/sql-machine-learning-services-windows-install.md)
 
 **手順 2:**これらのチュートリアルのいずれかを使用してコードで作業を開始します。
 

@@ -15,10 +15,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
 ms.openlocfilehash: 9ecd54dcb1fe829c51e0e05346abf04d80af3cf9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Python Machine Learning Services (In-database) を設定します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/11/2018
 
 無人インストールを実行するには、Python に固有の引数および SQL Server セットアップのコマンド ライン オプションを使用します。 詳細については、次を参照してください。 [Python Machine Learning のサービスと SQL server の無人インストール](unattended-installs-of-sql-server-python-services.md)です。
 
-##  <a name="bkmk_installPythonInDatabase"></a>手順 1: 機械学習の SQL Server 上のサービス (In-database) をインストールします。
+##  <a name="bkmk_installPythonInDatabase"></a> 手順 1: 機械学習の SQL Server 上のサービス (In-database) をインストールします。
 
 1. SQL Server 2017 のセットアップ ウィザードを実行します。
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/11/2018
   
          SQL Server では、Python を使用するには、データベース エンジンのインスタンスをインストールする必要があります。 既定または名前付きインスタンスのいずれかを使用することができます。
   
-    -   **機械学習の Services (In-database)**
+    -   **Machine Learning Services (データベース内)**
   
          このオプションは、Python スクリプトの実行をサポートするデータベースのサービスをインストールします。
 
@@ -105,7 +105,7 @@ ms.lasthandoff: 02/11/2018
 
 6. インストールが完了した後、コンピューターを再起動します。
 
-##  <a name="bkmk_enableFeature"></a>手順 2: Python スクリプトの実行を有効にします。
+##  <a name="bkmk_enableFeature"></a> 手順 2: Python スクリプトの実行を有効にします。
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を開きます。 
 
@@ -168,7 +168,7 @@ ms.lasthandoff: 02/11/2018
 > [!NOTE]
 > 列または Python スクリプトで使用される見出しでは返されませんをデザインします。 出力の列名を追加するには、戻り値のデータ セットのスキーマを指定する必要があります。 そのため、列の名前付けと SQL データ型を指定することは、ストアド プロシージャの結果にパラメーターを使用します。
 > 
-> たとえば、任意の列名を生成するのには、次の行を追加できます。`WITH RESULT SETS ((Col1 AS int))`
+> たとえば、任意の列名を生成するのには、次の行を追加できます。 `WITH RESULT SETS ((Col1 AS int))`
 
 ## <a name="step-4-additional-configuration"></a>手順 4: 追加の構成
 
@@ -180,7 +180,7 @@ ms.lasthandoff: 02/11/2018
 > 
 > 表示されているすべての変更が必要であり、必要なし があります。 要件は、SQL Server、およびデータベースに接続し、外部のスクリプトを実行するユーザーを想定する方法をインストールした、セキュリティ スキーマによって異なります。
 
-###  <a name="bkmk_configureAccounts"></a>スタート パッドのアカウントのグループの暗黙の認証を有効にします。
+###  <a name="bkmk_configureAccounts"></a> スタート パッドのアカウントのグループの暗黙の認証を有効にします。
 
 セットアップの間に、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] サービスのセキュリティ トークンの下でタスクを実行するために、新しい Windows ユーザー アカウントが多数作成されます。 ユーザーが、外部クライアントから Python または R スクリプトを送信[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用可能なワーカー アカウントをアクティブにします。 呼び出し元のユーザーの id にマップし、ユーザーの代理としてスクリプトを実行します。
 

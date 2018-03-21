@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 248b3b27a8df1320eb809c4cd537a12cefe4eacb
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 65398ab522f7a39aae08b1f438d2fa59291e4e8f
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>管理と machine learning のソリューションの監視
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,7 +63,5 @@ ms.lasthandoff: 02/11/2018
 詳細については、次のリソースをご覧ください。
 
 + [R Services のリソース管理](../r/resource-governance-for-r-services.md)
-
-+ [R Services の監視](../r/monitoring-r-services.md)
 
 + [構成および Advanced Analytics Extensions の管理](../r/configure-and-manage-advanced-analytics-extensions.md)

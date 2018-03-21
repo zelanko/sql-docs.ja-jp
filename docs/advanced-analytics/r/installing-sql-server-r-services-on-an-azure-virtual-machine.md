@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5d52dd25059dcc8204fbc2598a595de9e208f308
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 572aeffdc0d3c06a4c3bda17e3f3d438b2819183
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Azure の仮想マシンの機能を学習する SQL Server マシンにインストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="create-a-new-sql-server-2017-virtual-machine"></a>新しい SQL Server 2017 仮想マシンを作成します。
 
-SQL Server 2017 の R と Python を使用してする Windows ベースのバーチャル マシンを取得することを確認します。 [!INCLUDE[sscurrentlong-md](../../includes/sscurrentlong-md.md)]linux をサポートしている高速[ネイティブ スコアリング](../sql-native-scoring.md)T-SQL で予測関数しますが、他のマシン機能の学習を使用して利用できないこのエディションでまだです。
+SQL Server 2017 の R と Python を使用してする Windows ベースのバーチャル マシンを取得することを確認します。 [!INCLUDE[sscurrentlong-md](../../includes/sscurrentlong-md.md)] linux をサポートしている高速[ネイティブ スコアリング](../sql-native-scoring.md)T-SQL で予測関数しますが、他のマシン機能の学習を使用して利用できないこのエディションでまだです。
 
 SQL Server VM の内容の一覧は、この記事を参照してください:[概要 SQL Server の Azure Virtual Machines (Windows) で](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)です。
 
@@ -74,11 +74,10 @@ SQL Server VM の内容の一覧は、この記事を参照してください:[�
 機械学習なしの SQL Server を含む Azure の仮想マシンを作成する場合は、次の手順で機能を追加することができます。
 
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを再実行し、ウィザードの **[サーバーの構成]** ページで機能を追加します。
-2. 外部スクリプトの実行を有効化し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動します。 詳細については、次を参照してください。 [SQL Server R Services セットアップ](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)です。
+2. 外部スクリプトの実行を有効化し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動します。 詳細については、次を参照してください。 [SQL Server の 2016 R Services をインストール](../install/sql-r-services-windows-install.md)です。
 3. (省略可能) R ワーカー アカウントのデータベースへのアクセスを構成します (リモート スクリプトの実行に必要な場合)。
-   詳細については、「 [SQL Server R Services (In-Database) をセットアップする](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)」を参照してください。
-3. (省略可能) Azure 仮想マシンでファイアウォール規則を変更します (リモートのデータ サイエンス クライアントから R スクリプトを実行できるようにする場合)。 詳しくは、「[ファイアウォールのブロックを解除する](#firewall)」をご覧ください。
-4. 必要なネットワーク ライブラリをインストールまたは有効化します。 詳しくは、「[ネットワーク プロトコルを追加する](#network)」をご覧ください。
+4. (省略可能) Azure 仮想マシンでファイアウォール規則を変更します (リモートのデータ サイエンス クライアントから R スクリプトを実行できるようにする場合)。 詳しくは、「[ファイアウォールのブロックを解除する](#firewall)」をご覧ください。
+5. 必要なネットワーク ライブラリをインストールまたは有効化します。 詳しくは、「[ネットワーク プロトコルを追加する](#network)」をご覧ください。
 
 ## <a name="additional-steps"></a>追加の手順
 
@@ -101,13 +100,13 @@ SQL Server VM の内容の一覧は、この記事を参照してください:[�
 ### <a name="enable-odbc-callbacks-for-remote-clients"></a>リモート クライアントの ODBC コールバックを有効にする
 
 サーバーを呼び出すクライアントは、そのマシン学習ソリューションの一部として ODBC クエリを発行する必要があることを予定の場合、スタート パッドがリモート クライアントの代理として ODBC 呼び出しを実行できることを確認する必要があります。 これを行うには、スタート パッドによって使用される SQL ワーカー アカウントがインスタンスにログインするできるようにする必要があります。
-詳細については、「 [SQL Server R Services (In-Database) をセットアップする](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)」を参照してください。
+詳細については、次を参照してください。 [SQL Server の 2016 R Services をインストール](../install/sql-r-services-windows-install.md)です。
 
 ### <a name="network"></a>ネットワーク プロトコルを追加する
 
 + 名前付きパイプを有効にする
   
-  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] クライアントとサーバーのコンピューター間の接続と、一部の内部接続は、名前付きパイプ プロトコルを使用します。 名前付きパイプが有効になっていない場合は、Azure 仮想マシンと、サーバーに接続するデータ サイエンス クライアントの両方に名前付きパイプをインストールし、有効化する必要があります。
+  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] では、クライアントとサーバー コンピューター間の接続 (および一部の内部接続) に、名前付きパイプ プロトコルが使用されます。 名前付きパイプが有効になっていない場合は、Azure 仮想マシンと、サーバーに接続するデータ サイエンス クライアントの両方に名前付きパイプをインストールし、有効化する必要があります。
   
 + TCP/IP を有効にする
 

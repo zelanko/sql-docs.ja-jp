@@ -17,10 +17,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 810adfeca86bc12bf05561eb50d555261579a1a5
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Python Machine Learning Services (In-database) の無人インストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/11/2018
 
     > [!NOTE]
     > 
-    > Python のための新しいセットアップ フラグがある:`SQL_INST_MPY`と`IACCEPTPYTHONLICENSETERMS`
+    > Python のための新しいセットアップ フラグがある:`SQL_INST_MPY`と `IACCEPTPYTHONLICENSETERMS`
 
 2. 指示に従って、サーバーを再起動します。
 3. 説明に従って、インストール後の構成手順を行う[ここ](#bkmk_PostInstall)です。 SQL Server サービスをもう一度再起動が必要になります。
