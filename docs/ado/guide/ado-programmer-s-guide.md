@@ -1,5 +1,5 @@
 ---
-title: "ADO プログラマ &#39; s ガイド |Microsoft ドキュメント"
+title: "ADO プログラマ&#39;ガイド |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -20,12 +20,12 @@ ms.author: genemi
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6414a5691c89a2a399f207a3cf2059c17a00991c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="ado-programmer39s-guide-for-using-ado-objects"></a>ADO プログラマ &#39; ADO オブジェクトを使用するためのガイド
+# <a name="ado-programmer39s-guide-for-using-ado-objects"></a>ADO プログラマ&#39;ADO オブジェクトを使用するためのガイド
 このドキュメントでは、さまざまなデータ ソースからデータを操作する ADO オブジェクトを使用する方法の概要を示します。 最初に、導入は、新機能とインストール、使用、および ADO のコンポーネントを再配布するための要件をまとめます。 次のセクションでは、ADO オブジェクトのさまざまな種類の使用について説明します。 最後に、付録各種の Microsoft 提供のデータとサービス プロバイダー、エラー メッセージ、およびヒントについて議論のサンプルと用語集だけでなく、複数のプログラミング言語で ADO を使用する方法です。
 
  このセクションでは、次のトピックを扱います。
