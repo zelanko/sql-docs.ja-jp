@@ -14,19 +14,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b10dd4f325b79672d4b0c880186f9331bc71dc1b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 15f07a9dd757fe2cb392a42ab7ab726ccac1f8d1
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="application-level-partitioning"></a>アプリケーション レベルのパーティション分割
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-このアプリケーションは注文を処理します。 最近の注文には多くの処理が行われます。 以前の注文には多くの処理は行われません。 最近の注文は、メモリ最適化テーブルにあります。 以前の注文は、ディスク ベース テーブルにあります。 *hotDate* より後の注文は、メモリ最適化テーブルにあります。 *hotDate* より前の注文は、ディスク ベース テーブルにあります。 多くの同時トランザクションが含まれる極端な OLTP ワークロードを前提とします。 複数の同時実行トランザクションが *hotDate*を変更しようとしている場合でも、このビジネス ルール (メモリ最適化テーブルの最近の注文) を適用する必要があります。  
+  このアプリケーションは注文を処理します。 最近の注文には多くの処理が行われます。 以前の注文には多くの処理は行われません。 最近の注文は、メモリ最適化テーブルにあります。 以前の注文は、ディスク ベース テーブルにあります。 *hotDate* より後の注文は、メモリ最適化テーブルにあります。 *hotDate* より前の注文は、ディスク ベース テーブルにあります。 多くの同時トランザクションが含まれる極端な OLTP ワークロードを前提とします。 複数の同時実行トランザクションが *hotDate*を変更しようとしている場合でも、このビジネス ルール (メモリ最適化テーブルの最近の注文) を適用する必要があります。  
   
  このサンプルでは、ディスク ベース テーブルに対応するパーティション テーブルを使用せず、3 番目のテーブルを使用して 2 つのテーブルの間の明示的な分岐点を追跡します。 この分岐点を使用して、新しく挿入されるデータが日付に基づいて必ず適切なテーブルに挿入されることを保証できます。 また、どこでデータを検索するかを決定することもできます。 遅れて到着するデータも、引き続き適切なテーブルに配置されます。  
   

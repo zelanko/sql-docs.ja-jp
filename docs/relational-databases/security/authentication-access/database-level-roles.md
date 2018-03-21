@@ -45,11 +45,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96a567e1fe27c5302d9adf3857539af2336d5d6f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9fe700c3dc23125b21b24a749ca5ae5238d6a02c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="database-level-roles"></a>データベース レベルのロール
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/21/2017
 
 ユーザー定義データベース ロールの権限は、GRANT、DENY、および REVOKE ステートメントを使用してカスタマイズできます。 詳細については、「 [権限 (データベース エンジン)](../../../relational-databases/security/permissions-database-engine.md)」を参照してください。
 
-すべての権限の一覧については、 [データベース エンジンの権限](http://go.microsoft.com/fwlink/?LinkId=229142) ポスターを参照してください。 (サーバー レベルの権限をデータベース ロールに付与することはできません。 ログインおよびその他のサーバー レベル プリンシパル (サーバー ロールなど) は、データベース ロールに追加できません。 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]でのサーバー レベル セキュリティでは、代わりに [サーバー ロール](../../../relational-databases/security/authentication-access/server-level-roles.md) を使用します。 サーバー レベルの権限を [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]のロールを介して付与することはできません。)
+すべての権限の一覧については、 [データベース エンジンの権限](https://aka.ms/sql-permissions-poster) ポスターを参照してください。 (サーバー レベルの権限をデータベース ロールに付与することはできません。 ログインおよびその他のサーバー レベル プリンシパル (サーバー ロールなど) は、データベース ロールに追加できません。 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]でのサーバー レベル セキュリティでは、代わりに [サーバー ロール](../../../relational-databases/security/authentication-access/server-level-roles.md) を使用します。 サーバー レベルの権限を [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]のロールを介して付与することはできません。)
 
 ## <a name="fixed-database-roles"></a>固定データベース ロール
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/21/2017
   
 |msdb ロール名|Description|  
 |--------------------|-----------------|  
-|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|これらのデータベース ロールのメンバーは、 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]を管理および使用できます。 以前のバージョンからアップグレードされた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスには、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] ではなくデータ変換サービス (DTS) を使用して名前が付けられた古いバージョンのロールが含まれている場合があります。 詳細については、「[Integration Services のロール &#40;SSIS サービス&#40;](../../../integration-services/security/integration-services-roles-ssis-service.md)」を参照してください。|  
+|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|これらのデータベース ロールのメンバーは、 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]を管理および使用できます。 以前のバージョンからアップグレードされた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスには、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] ではなくデータ変換サービス (DTS) を使用して名前が付けられた古いバージョンのロールが含まれている場合があります。 詳細については、「[Integration Services のロール &#40;SSIS サービス&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md)」を参照してください。|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|これらのデータベース ロールのメンバーは、データ コレクターを管理および使用できます。 詳細については、「 [Data Collection](../../../relational-databases/data-collection/data-collection.md)」を参照してください。|  
 |**PolicyAdministratorRole**|**PolicyAdministratorRole** データベース ロールのメンバーは、ポリシー ベースの管理のポリシーと条件で、すべての構成作業とメンテナンス作業を実行できます。 詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)」を参照してください。|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|これらのデータベース ロールのメンバーは、登録済みサーバーのグループを管理および使用できます。|  
@@ -140,16 +140,16 @@ R Services がインストールされている場合は、パッケージの管
 |[sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)|メタデータ|現在のデータベースに含まれるロールのメンバーに関する情報を返します。|  
 |[sys.database_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)|メタデータ|データベース ロールのメンバーごとに 1 行のデータを返します。|  
 |[IS_MEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-member-transact-sql.md)|メタデータ|現在のユーザーが、指定された Microsoft Windows グループまたは Microsoft SQL Server データベース ロールのメンバーであるかどうかを示します。|  
-|[CREATE ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-role-transact-sql.md)|Command|現在のデータベースに新しいデータベース ロールを作成します。|  
-|[ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)|Command|データベース ロールの名前またはメンバーシップを変更します。|  
-|[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|Command|データベースからロールを削除します。|  
-|[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Command|現在のデータベースに新しいデータベース ロールを作成します。|  
-|[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Command|現在のデータベースからデータベース ロールを削除します。|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|データベース ユーザー、データベース ロール、Windows ログイン、または Windows グループを、現在のデータベースのデータベース ロールに追加します。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)]以外のすべてのプラットフォームでは代わりに `ALTER ROLE` を使用する必要があります。|  
-|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|現在のデータベースの SQL Server ロールからセキュリティ アカウントを削除します。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 以外のすべてのプラットフォームでは代わりに `ALTER ROLE` を使用する必要があります。|
-|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissions | ロールに権限を追加します。
-|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | ロールに対する権限を拒否します。
-|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissions | 以前に許可または拒否した権限を取り消します。
+|[CREATE ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-role-transact-sql.md)|コマンド|現在のデータベースに新しいデータベース ロールを作成します。|  
+|[ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)|コマンド|データベース ロールの名前またはメンバーシップを変更します。|  
+|[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|コマンド|データベースからロールを削除します。|  
+|[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|コマンド|現在のデータベースに新しいデータベース ロールを作成します。|  
+|[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|コマンド|現在のデータベースからデータベース ロールを削除します。|  
+|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|コマンド|データベース ユーザー、データベース ロール、Windows ログイン、または Windows グループを、現在のデータベースのデータベース ロールに追加します。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 以外のすべてのプラットフォームでは代わりに `ALTER ROLE` を使用する必要があります。|  
+|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|コマンド|現在のデータベースの SQL Server ロールからセキュリティ アカウントを削除します。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 以外のすべてのプラットフォームでは代わりに `ALTER ROLE` を使用する必要があります。|
+|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| アクセス許可 | ロールに権限を追加します。
+|[DENY](../../../t-sql/statements/deny-transact-sql.md)| アクセス許可 | ロールに対する権限を拒否します。
+|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| アクセス許可 | 以前に許可または拒否した権限を取り消します。
   
   
 ## <a name="public-database-role"></a>public データベース ロール  

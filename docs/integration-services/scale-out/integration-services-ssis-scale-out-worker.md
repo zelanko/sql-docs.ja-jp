@@ -18,11 +18,11 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cd80620f668e87eba8a77f1ac6a9e5faa2378da
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0e3fdf8e84b12315ef3ce500b933c4b4d6580f13
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) Scale Out Worker
 
@@ -43,8 +43,8 @@ StoreName|ワーカー証明書ストアの名前。|My
 AgentHeartbeatInterval|Scale Out Worker ハートビートの間隔。|00:01:00         
 TaskHeartbeatInterval|Scale Out Worker でのタスク状態のレポート間隔。|00:00:10         
 HeartbeatErrorTollerance|最後の正常なタスク ハートビート以降、この時間が経過すると、ハートビートのエラー応答が受信された場合にタスクは終了します。|00:10:00      
-TaskRequestMaxCPU|Scale Out Worker のタスク要求時の CPU の上限。 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 では使用しません。**|70.0         
-TaskRequestMinMemory|Scale Out Worker のタスク要求時のメモリの下限 (MB 単位)。 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 では使用しません。**|100.0         
+TaskRequestMaxCPU|Scale Out Worker のタスク要求時の CPU の上限。|70.0         
+TaskRequestMinMemory|Scale Out Worker のタスク要求時のメモリの下限 (MB 単位)。|100.0         
 MaxTaskCount|Scale Out Worker が保持できるタスクの最大数。|10         
 LeaseInternval|Scale Out Worker によって保持されているタスクのリース間隔。|00:01:00         
 TasksRootFolder|タスク ログのフォルダー。 値が空の場合、`\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` フォルダー パスが使用されます。 [アカウント] は、Scale Out Worker サービスを実行するアカウントです。 既定のアカウントは SSISScaleOutWorker140 です。|空         

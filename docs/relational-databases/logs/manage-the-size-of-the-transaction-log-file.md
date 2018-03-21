@@ -18,15 +18,15 @@ helpviewer_keywords:
 - log size, manage
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e9b13884c2c086265fa0a76dda9f98f4caba2abb
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: b604f834bbc1e3f08c30f3feae06d637036610d6
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>トランザクション ログ ファイルのサイズの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,9 +103,9 @@ ms.lasthandoff: 02/23/2018
   
       |[バージョンのオプション]|[既定値]|  
       |-------------|--------------------|  
-      |次のバージョン以降 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|データ 64 MB。 ログ ファイル 64 MB。|  
-      |次のバージョン以降 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|データ 1 MB。 ログ ファイル 10%。|  
-      |次のバージョンより前 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|データ 10%。 ログ ファイル 10%。|  
+      |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降|データ 64 MB。 ログ ファイル 64 MB。|  
+      |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降|データ 1 MB。 ログ ファイル 10%。|  
+      |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] の前|データ 10%。 ログ ファイル 10%。|  
 
 -   増分が少ないと小さな [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) が過度に生成され、パフォーマンスが低下します。 指定されたインスタンスにおいて、すべてのデータベースの現在のトランザクション ログ サイズに最適な VLF 配布と必要なサイズを得るために必要な増分を決定するには、この[スクリプト](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)をご覧ください。
 
