@@ -22,10 +22,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
 ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>SQL Server マシン ラーニング Services (In-database) セットアップします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/11/2018
 
 **適用されます:** SQL Server 2016、SQL Server 2017
 
-## <a name="bkmk_prereqs"></a>インストール前のチェックリスト
+## <a name="bkmk_prereqs"> </a> インストール前のチェックリスト
 
 + Machine learning データベース内には、SQL Server 2016 以降が必要です。 
 
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/11/2018
 
 + 機械学習フレームワークでは、セットアップが完了したら、追加の構成が必要です。 正確な手順は、組織とセキュリティ ポリシー、サーバーの構成、および想定されるユーザーによって異なります。 すべての手順を確認し、環境内で必要な追加の構成を確認することをお勧めします。
 
-## <a name="bkmk2016top"></a>SQL Server 2016 R Services (In-database) のインストールします。
+## <a name="bkmk2016top"></a> SQL Server 2016 R Services (In-database) のインストールします。
 
 > [!div class="checklist"]
 > * データベース エンジンと機械学習の機能をインストールします。
@@ -119,7 +119,7 @@ ms.lasthandoff: 02/11/2018
 7. インストールが完了したら、コンピューターを再起動します。
 
 
-## <a name="bkmk2017top"></a>SQL Server 2017 Machine Learning Services (In-database) のインストールします。
+## <a name="bkmk2017top"></a> SQL Server 2017 Machine Learning Services (In-database) のインストールします。
 
 > [!div class="checklist"]
 > * データベース エンジンと機械学習の機能をインストールします。
@@ -240,7 +240,7 @@ ms.lasthandoff: 02/11/2018
     + [省略可能なインストール後の手順: サービスと権限の構成](#bkmk_FollowUp) 
     + [機械学習で SQL Server のトラブルシューティング](upgrade-and-installation-faq-sql-server-r-services.md)
 
-## <a name="bkmk_FollowUp"></a>省略可能なインストール後の手順
+## <a name="bkmk_FollowUp"></a> 省略可能なインストール後の手順
 
 機械学習、ユース ケースによっては、サーバー、ファイアウォールが、サービス、またはデータベースのアクセス許可が使用するアカウントに追加の変更を加える必要があります。 変更する必要がありますはケースによって異なります。
 

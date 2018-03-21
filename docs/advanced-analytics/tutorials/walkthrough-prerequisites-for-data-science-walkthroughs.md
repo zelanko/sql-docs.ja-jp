@@ -19,11 +19,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6ac8e646c93c0371f959afc212601e5abe0de213
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 35738101548f3b0790131c8106bb37e482cc7316
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>SQL Server と R のデータ サイエンスのチュートリアルの前提条件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/11/2018
 + SQL Server 2017 の機械学習の Services (In-database)
 + SQL Server 2016 R Services
 
-詳細については、次を参照してください。 [SQL Server R Services の設定 (データベース内](../r/set-up-sql-server-r-services-in-database.md)です。
+詳細については、次を参照してください。 [SQL Server 2017 Machine Learning Services のインストール](../install/sql-machine-learning-services-windows-install.md)または[SQL Server の 2016 R Services をインストール](../install/sql-r-services-windows-install.md)です。
 
 > [!IMPORTANT]
 > SQL Server のバージョン以前 2016年より統合をサポートしない R とただし、ODBC データ ソースとして、以前の SQL データベースを使用できます。
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/11/2018
 
 - **Microsoft R クライアント**RevoScaleR パッケージを使用して R での開発をサポートする軽量の開発ツールです。 これを取得する方法については、「 [Get Started with Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)」 (Microsoft R Client の概要) を参照してください。
 
-- **RStudio** は R 開発用の最も一般的な環境の 1 つです。 詳しくは、 [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)参照してください。
+- **RStudio** は R 開発用の最も一般的な環境の 1 つです。 詳細については、次を参照してください。 [ https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)です。
 
     RStudio またはその他の環境の一般的なインストールを使用してこのチュートリアルを完了することはできません。また、Microsoft R Open の R パッケージと接続ライブラリをインストールする必要があります。 詳しくは、「 [データ サイエンス クライアントのセットアップ](../r/set-up-a-data-science-client.md)」を参照してください。
 

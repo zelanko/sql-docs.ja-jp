@@ -20,11 +20,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: dab1a9648865f13d1741917bd389eae287afd7f2
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>SQL 開発者のためのデータベースでの Python の分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +80,7 @@ ms.lasthandoff: 02/11/2018
 
 ### <a name="prerequisites"></a>前提条件
 
-+ Machine Learning のサービスと有効になっている Python には、SQL Server 2017 のインスタンスをインストールします。 詳細については、次を参照してください。 [Python の SQL Server マシン ラーニング Services セットアップ](../python/setup-python-machine-learning-services.md)です。
++ Machine Learning のサービスと有効になっている Python には、SQL Server 2017 のインスタンスをインストールします。 詳細については、次を参照してください。[インストール SQL Server 2017 Machine Learning Services (In-database)](../install/sql-machine-learning-services-windows-install.md)です。
 + このチュートリアルで使用するログインでは、データベースやその他のオブジェクトを作成し、データをアップロードし、データを選択し、ストアド プロシージャを実行するためのアクセス許可が付与されている必要があります。
 
 ### <a name="experience-level"></a>経験レベル

@@ -18,11 +18,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 5c6145d3af6918a5f3daa954aae5522ffffebb89
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 3cff0d963dc365b60404893c1b15eb7733dbdfeb
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="run-python-using-t-sql"></a>T-SQL を使用して実行の Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 03/08/2018
 
 ## <a name="prerequisites"></a>前提条件
 
-このチュートリアルを完了するは、まず SQL Server 2017 をインストールし、」の説明に従って、インスタンスで、Machine Learning のサービスを有効にする必要があります[この資料](../python/setup-python-machine-learning-services.md)です。 
+このチュートリアルを完了するは、まず SQL Server 2017 をインストールし、」の説明に従って、インスタンスで、Machine Learning のサービスを有効にする必要があります[インストール SQL Server 2017 Machine Learning Services (In-database)](../install/sql-machine-learning-services-windows-install.md)です。 
 
 インストールする必要がありますも[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)です。 代わりに、限り、サーバーおよびデータベースに接続して T-SQL クエリまたはストアド プロシージャを実行できますデータベース管理またはクエリ、別のツールを使用することができます。
 
@@ -388,7 +388,7 @@ Data.frame が表形式構造を必要とする場合、データ フレーム�
 
 + ストアド プロシージャを見つけることができません`sp_execute_external_script`しますか? 外部スクリプトの実行をサポートするためにインスタンスを構成する可能性があります終了していないことを示します。 SQL Server 2017 セットアップを実行し、機械学習の言語としての Python を選択すると、後にする必要があります明示的に有効にする機能を使用して、 `sp_configure`、インスタンスを再起動します。 
 
-    詳細については、「 [Python セットアップの Machine Learning サービス](../python/setup-python-machine-learning-services.md)です。
+    詳細については、「[インストール SQL Server 2017 Machine Learning Services (In-database)](../install/sql-machine-learning-services-windows-install.md)です。
 
 ## <a name="next-steps"></a>次の手順
 

@@ -15,11 +15,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 80b4898397cd0cb6460b379d91be81eb28cd9b87
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 160dae2d84c84aeaecaa07ec16be681fabde5534
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>SQL Server で使用するためのデータ サイエンス クライアントのセットアップします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,13 +38,13 @@ ms.lasthandoff: 02/11/2018
 
 + Microsoft R Server (for SQL Server 2016)
 
-    - SQL Server のセットアップからインストールするを参照してください[スタンドアロン R サーバーの作成。](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - SQL Server のセットアップからインストールするを参照してください[インストール SQL Server 2016 R Server (スタンドアロン)。](../install/sql-r-standalone-windows-install.md)
 
     - 別の Windows ベースのインストーラーを使用するのを参照してください[Machine Learning Server for Windows のインストール。](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 
 + 機械学習の (SQL Server 2017) 用サーバー
 
-    - SQL Server のセットアップからインストールするを参照してください[スタンドアロン R サーバーの作成。](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - SQL Server のセットアップからインストールするを参照してください[SQL Server サーバーをインストール 2017 Machine Learning (スタンドアロン)。](../install/sql-machine-learning-standalone-windows-install.md)
 
     - 別の Windows ベースのインストーラーを使用するのを参照してください[Windows 用の R Server 9.1 のインストール。](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
 

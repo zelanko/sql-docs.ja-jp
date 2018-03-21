@@ -1,5 +1,5 @@
 ---
-title: "R Server (スタンドアロン) | Microsoft Docs"
+title: "SQL Server マシン ラーニング Server (スタンドアロン) と R Server (スタンドアロン) |Microsoft ドキュメント"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 06/22/2017
@@ -13,97 +13,76 @@ ms.tgt_pltfrm:
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: ca9e48f1-67b8-4905-9b78-56752d7a4e81
+ms.assetid: 
 caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 3f0c567463c25a54829a988516890bead171f5ec
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: eb30dbfdfd03f5a6515d0559d7f60cdde7b9223c
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="r-server-standalone"></a>R Server (スタンドアロン)
+# <a name="sql-server-machine-learning-server-standalone-and-r-server-standalone"></a>SQL Server マシン ラーニング Server (スタンドアロン) と R Server (スタンドアロン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Microsoft SQL Server 2016 でリリースされた**R Server (スタンドアロン)**、エンタープライズ クラスの分析をサポートするためには、そのプラットフォームの一部として。  Microsoft R Server は、R 言語のスケーラビリティとセキュリティを提供し、オープン ソース r です。 のインメモリ制限に対処SQL Server R Services のようには、Microsoft R Server (スタンドアロン) は、データの並列処理とチャンクの処理に対し、メモリに収まらない非常に大きなデータを使用する R ユーザーの有効化を提供します。
+スタンドアロン サーバーは、SQL Server データベース エンジンのインスタンスとは無関係に実行される R、Python の特徴として表記、マシン学習コンポーネントのインストールです。 自体は、スタンドアロン サーバーをインストールするには SQL Server の依存関係のないとします。 スタンドアロン サーバーが SQL Server、構成および管理タスクから独立しており、ツールでについてを参照して、マシン学習サーバーの SQL 以外のバージョンと非常に似ているため[この資料](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)です。
 
-SQL Server 2017、学習、マシン コミュニティの広範なサポートを楽しんでいますし、テキスト分析、深層学習のための一般的なライブラリを含む Python 言語のサポートが追加されました。  この広範な言語を反映するようにしてもを名前変更に**Microsoft Machine Learning Server (スタンドアロン)**です。
+スタンドアロンの machine learning サーバーの目的は、小規模の大きいデータ セットを独自のパッケージおよび計算エンジンを使用して経由での R、Python のワークロードの分散および並列処理で、高機能な開発環境を提供するにはサーバーと共にインストールされます。 スタンドアロン サーバー上の R および Python パッケージは、コードの移植性のため、SQL Server (In-database) のインストールで提供されているものと同じと[コンピューティング コンテキストの切り替え](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context)です。
 
-## <a name="benefits-of-microsoft-r-server"></a>Microsoft R サーバーの利点
+主な理由は、開発者にとどまらず、オープン ソース R、Python のメモリと処理の制約は、スタンドアロンの machine learning サーバーを選択します。 スタンドアロン サーバーできますと複数のコアで大量のデータを処理を読み込んで 1 つの統合された出力に結果を集計します。 関数とアルゴリズムがスケールとユーティリティの両方のエンジニア リング: エンジニア リングおよびでサポートされている予測分析、統計的なモデリング、データの視覚化、および最先端の機械学習商用のサーバー製品でアルゴリズムを提供します。Microsoft です。
 
-Microsoft R Server を使用するには複数のプラットフォーム上の分散コンピューティング用です。 SQL Server のセットアップからインストールするときに発行および展開モデルの Windows ベースのサーバーとすべての必要なツールを取得します。 その他のプラットフォームの詳細については、MSDN ライブラリのリソースを参照してください。
+一般に、ことをお勧め (スタンドアロン) を処理している (In-database) のインストールに相互排他を十分なリソースがある場合は、リソースの競合を回避するのにはありません禁止これらの両方を同じ物理コンピューターにインストールする対象です。
 
-+ [Introducing Microsoft R Server (Microsoft R Server の概要)](https://msdn.microsoft.com/microsoft-r/rserver)
-+ [R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
+コンピューターの 1 つのスタンドアロン サーバーしか持てない: か[SQL Server 2017 Machine Learning サーバー (スタンドアロン)](../install/sql-machine-learning-standalone-windows-install.md)または[SQL Server 2016 R Server (スタンドアロン)](../install/sql-r-standalone-windows-install.md)です。 別のバージョンをインストールする前に、1 つのバージョンを手動でアンインストールする必要があります。
 
-また、RevoScaleR ライブラリおよび SQL Server に展開できる R ソリューションを作成するために必要なツールを取得する、開発クライアントとして使用する Microsoft R Server をインストールすることができます。
+## <a name="components-of-a-standalone-server"></a>スタンドアロン サーバーのコンポーネント
 
-## <a name="whats-new-in-microsoft-machine-learning-server"></a>Microsoft Machine Learning のサーバーの新機能
+SQL Server 2016 では、R がだけです。 SQL Server 2017 では、R と Python がサポートされています。 次の表では、各バージョンの機能について説明します。
 
-SQL Server 2017 セットアップを使用してマシン ラーニング サービス (スタンドアロン) をインストールする場合は、Python 言語を追加するオプション今すぐ必要です。 必然的に、R 言語が、サポートされているオプションと希望する場合でも、両方の言語をインストールできます。
- 
-SQL Server 2017 CTP 2.0 で、サーバーのインストールも含まれています、mrsdeploy パッケージおよびその他のユーティリティの運用モデルに使用します。 詳細については、次を参照してください。 [mrsdeploy と操作運用](../../advanced-analytics/operationalization-with-mrsdeploy.md)です。
+| コンポーネント | Description |
+|-----------|-------------|
+| R パッケージ | [RevoScaleR](revoscaler-overview.md)データ操作、変換、visualzation、および分析の機能と拡張性の高い R のプライマリ ライブラリは、します。  <br/>[MicrosoftML (R)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)テキスト分析、画像分析、およびセンチメント分析のカスタム モデルを作成する機械学習アルゴリズムを追加します。 <br/>[mrsdeploy](operationalization-with-mrsdeploy.md)オファー web サービスの展開で SQL Server 2017 のみ)。 <br/>[olapR](how-to-create-mdx-queries-using-olapr.md) R. の MDX クエリを指定するためには|
+| Microsoft R Open (MRO) | [MRO](https://mran.microsoft.com/open)は r です Microsoft のオープン ソース ディストリビューションには。パッケージおよびインタープリターが含まれます。 常にセットアップにバンドル MRO のバージョンを使用します。 |
+| R のツール | R コンソール ウィンドウとコマンド プロンプトは、R ディストリビューションで標準的なツールです。 \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64 で見つけることです。 |
+| R サンプルおよびスクリプト |  オープン ソース R と RevoScaleR パッケージには、作成したり、事前インストールされているデータを使用してスクリプトを実行できるように、組み込みのデータ セットが含まれます。 \Program files\Microsoft SQL Server\140\R_SERVER\library\datasets と \library\RevoScaleR でそれらを参照してください。 |
+| Python パッケージ | [revoscalepy](../python/what-is-revoscalepy.md)データ操作、変換、visualzation、および分析のための関数での Python の拡張性の高いは、プライマリ ライブラリです。 <br/>[microsoftml (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)テキスト分析、画像分析、およびセンチメント分析のカスタム モデルを作成する機械学習アルゴリズムを追加します。  |
+| Python tools | 組み込みの Python コマンド ライン ツールは、アドホック テストとタスクに役立ちます。 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe でツールを検索します。 |
+| Anaconda | Anaconda は、オープン ソースの Python と重要なパッケージです。 |
+| Python のサンプルとスクリプト | 同様に R、Python には、組み込みのデータ セットやスクリプトが含まれています。 \Program files\Microsoft SQL で revoscalepy データを見つける Server\140\PYTHON_SERVER\lib\site packages\revoscalepy\data\sample データ。 |
+| R、Python の事前トレーニング済みモデル | 事前トレーニング済みモデルはサポートされていると、スタンドアロン サーバーで使用できるが、SQL Server セットアップでインストールすることはできません。 Microsoft Machine Learning のサーバーのセットアップ プログラムをモデルでは、インストールすることができますを提供する無料です。 詳細については、次を参照してください。[インストールは、SQL Server 上の機械学習モデルを事前トレーニング済み](install-pretrained-models-sql-server.md)です。 |
 
-SQL Server の Machine Learning のエンタープライズ ユーザーは、Microsoft R Server のダウンロード可能なインストーラーを使用して、バインディングと呼ばれるプロセスでの R コンポーネントをアップグレードできます。 詳細については、次を参照してください[をアップグレードし SQL Server のインスタンスを使用して SqlBindR。](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+## <a name="get-started-step-by-step"></a>詳細な手順を開始します。
 
-## <a name="get-microsoft-r-server-or-machine-learning-server-standalone"></a>Microsoft R サーバーまたは Machine Learning Server (スタンドアロン) を取得します。
+セットアップを開始、バイナリを他の開発ツールにアタッチし、最初のスクリプトを記述します。
 
- Microsoft R Server のインストールに複数のオプションがあります。
+### <a name="step-1-install-the-software"></a>手順 1: ソフトウェアをインストールします。
 
-+ SQL Server セットアップ ウィザードを使用します。
+これらのバージョンのいずれかをインストールします。
 
-  [スタンドアロン R Server の作成](../r/create-a-standalone-r-server.md)
++ [SQL Server 2017 Machine Learning サーバー (スタンドアロン)](../install/sql-machine-learning-standalone-windows-install.md)
++ [SQL Server 2016 R Server (スタンドアロン) - R のみ](../install/sql-r-standalone-windows-install.md)
 
-  インストールする SQL Server 2016 セットアップを実行して**Microsoft R Server (スタンドアロン)**です。 既定では、R 言語を追加します。
-  または、SQL Server 2017 インストールするセットアップ プログラムを実行**Machine Learning Server (スタンドアロン)** R、Python またはその両方を選択します。
+### <a name="step-2-configure-a-development-tool"></a>手順 2: 開発ツールを構成します。
 
-  > [!IMPORTANT]
-  > サーバーをインストールするオプションは、**共有機能**セットアップのセクションでします。 その他のコンポーネントをインストールしません。
-  >
-  > 可能であれば、ここで SQL Server R Services または SQL Server マシン ラーニング サービスがインストールされているコンピューターでは、サーバーをインストールしません。
+Machine Learning のサーバーのバイナリを使用する開発ツールを構成します。 Python の詳細については、次を参照してください。[リンク Python バイナリ](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools)です。 R Studio 内で接続する方法については、次を参照してください。 [R の別のバージョンを使用して](https://support.rstudio.com/hc/en-us/articles/200486138-Using-Different-Versions-of-R)ツールを C:\Program files \microsoft SQL Server\140\R_SERVER\bin\x64 をポイントします。 試しても[R Tools for Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation)です。 
 
-+ SQL Server セットアップのコマンド ライン オプションを使用します。
+### <a name="step-3-write-your-first-script"></a>手順 3: 最初のスクリプトを記述します。
 
-  [コマンドラインから Microsoft R Server をインストールする](../r/install-microsoft-r-server-from-the-command-line.md)
-
-  SQL Server セットアップでは、豊富なコマンドライン引数を使用して無人インストールをサポートします。
-
-+ スタンドアロンのインストーラーを使用します。
-
-  [Windows 用 Microsoft R Server を実行](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)です。
-
-  新しい Windows インストーラーを使用して、Microsoft R Server または Microsoft Machine Learning のサーバーの新しいインスタンスを設定するようになりましたことができます。  Microsoft R サーバー (および Microsoft Machine Learning サーバー) には、SQL Server のエンタープライズ契約が必要です。 ただし、スタンドアロンのインストーラーを実行すると後で既存のインストールのサポート ポリシーは更新、新しいモダン ライフ サイクル ポリシーを使用します。 このサポート オプションは、machine learning のコンポーネントの更新プログラムが SQL Server のサービス リリースを使用する場合よりも頻繁に適用されることを確認します。
-
+RevoScaleR、revoscalepy、および、機械学習アルゴリズムから関数を使用して R または Python スクリプトを記述します。
   
-+ SQL Server インスタンスをアップグレードします。
+  + [R と RevoScaleR 25 関数での探索](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler): 基本的な R コマンドや、高いパフォーマンスを実現 RevoScaleR 配布可能な分析関数に進行状況をし、R ソリューションをスケーリングを開始します。 最も一般的な R モデリング パッケージ (K-平均法クラスタリング、デシジョン ツリー、デシジョン フォレストなど) の並列化可能なバージョンの多くと、データ操作のツールを含みます。
 
-  [SqlBindR を使用して R Services のインスタンスをアップグレードする](./use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
-  
-  R です。 最新バージョンを使用するのに SQL Server 2016 R Services のインスタンスをアップグレードするのにスタンドアロンのインストーラーを使用することができます。インストーラーを実行して最新のライフ サイクルのサポート ポリシーは、サーバーに適用されます、R コンポーネントがより頻繁に更新プログラムを取得します。
-  
-  > [!注} 現在この update メソッドは SQL Server 2016 の既存のインストールでのみ使用できます。 、アップグレードがサポートされる SQL Server 2017 の将来的にします。
+  + [クイック スタート: microsoftml Python パッケージに二項分類の例](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml): microsoftml とよく知られた乳がんのデータセットから関数を使用して二項分類モデルを作成します。
 
-## <a name="related-machine-learning-products"></a>関連の機械学習の製品
+タスクに最適な言語を選択します。 R は、SQL を使用して実装するが困難な統計の計算に最適です。 データに対するセットベースの操作での活用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]最大パフォーマンスを実現します。 列にわたって非常に高速計算用のメモリ内のデータベース エンジンを使用します。
 
-+ R Server と azure の仮想マシン
+### <a name="step-4-operationalize-your-solution"></a>手順 4: ソリューションを運用します。
 
-  [R Server の仮想マシンをプロビジョニングします。](../../advanced-analytics/r-services/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-  
-  Azure marketplace には、R サーバーを含む複数の仮想マシン イメージが含まれています。 開発と、予測モデルの配置で使用するサーバーをセットアップする最も簡単な方法は、Microsoft Azure で新しい R Server 仮想マシンを作成します。 イメージは、ため、アプリケーション内で R の分析を埋め込むと、バックエンド システムとは、R 統合を容易に対応するスケーリングと、既に構成されている共有の機能が付属します。
-
-+ データ サイエンス仮想マシン
-
-  [データ サイエンス仮想マシン - Windows 2016 Preview](http://aka.ms/dsvm/win2016)
-
-  データ サイエンス仮想マシンの最新バージョンには、R Server、SQL Server が含まれています。 plus 機械学習するための最も一般的なツールの配列のすべてをプレインストールし、テストします。 作成 Jupyter ノートブック、ジュリアは、ソリューションを開発および MXNet、CNTK、TensorFlow など深層学習の GPU が有効なライブラリを使用します。
-
-## <a name="resources"></a>リソース
-
-サンプル、チュートリアル、および Microsoft R Server の詳細についてを参照してください[Microsoft R 製品](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started)です。
+スタンドアロン サーバーを使用できます、[操作運用](https://docs.microsoft.com//machine-learning-server/what-is-operationalization)機能、SQL のノンブランドの[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)です。 により、これらの利点と操作運用のスタンドアロン サーバーを構成することができます。 展開および web サービス、診断の実行、テストの web サービスの容量に、コードをホストします。
 
 ## <a name="see-also"></a>参照
 
- [SQL Server R サービス](../../advanced-analytics/r/sql-server-r-services.md)
+ [SQL Server コンピューターのサービス (In-database) を学習](sql-server-r-services.md)
 

@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: f9ac8a72618cb432134d8fd87b0664b720085730
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: 8509556cd886f90dbac2211bc0282e8656bdc03e
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server に新しい Python パッケージをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="prerequisites"></a>前提条件
 
-+ Python 言語オプションと Machine Learning Services (In-database) をインストールする必要があります。 手順については、次を参照してください。 [Python Machine Learning のサービス設定](setup-python-machine-learning-services.md)です。
++ Python 言語オプションと Machine Learning Services (In-database) をインストールする必要があります。 手順については、次を参照してください。[インストール SQL Server 2017 Machine Learning Services (In-database)](../install/sql-machine-learning-services-windows-install.md)です。
 
 + 各サーバー インスタンスには、パッケージの個別のコピーをインストールする必要があります。 パッケージは、インスタンス間で共有することはできません。
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/28/2018
 
 + Python パッケージをインターネットにアクセスできないと、サーバーをインストールする場合は、別のコンピューターに WHL ファイルをダウンロードし、それをサーバーにコピーする必要があります。
 
-    たとえば、別のコンピューターにダウンロードできます WHL ファイルこのサイトから[https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)、ファイル コピー `cntk-2.1-cp35-cp35m-win_amd64.whl` SQL Server コンピューターのローカル フォルダーにします。
+    たとえば、別のコンピューターにダウンロードできます WHL ファイルこのサイトから[ https://cntk.ai/PythonWheel/CPU-Only ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)、ファイル コピー `cntk-2.1-cp35-cp35m-win_amd64.whl` SQL Server コンピューターのローカル フォルダーにします。
 
 + SQL Server 2017 は、Python 3.5 を使用します。 
 

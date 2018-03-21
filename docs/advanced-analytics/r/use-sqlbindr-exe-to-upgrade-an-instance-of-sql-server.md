@@ -1,7 +1,7 @@
 ---
-title: "SQL Server インスタンスの machine learning コンポーネントのアップグレード |Microsoft ドキュメント"
+title: "Machine learning のコンポーネントを SQL Server で Microsoft Machine Learning のサーバーにバインド |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 10/31/2017
+ms.date: 03/15/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -12,19 +12,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 applies_to:
 - SQL Server (starting with 2016 CTP3)
-ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
+ms.assetid: 
 caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 643d5062f14de70cec493fd9c2fab69989eb4dd6
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7c67d0accb7ac7be46105e5148028fac3f67aa0f
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>SQL Server インスタンスの machine learning コンポーネントをアップグレードします。
+# <a name="bind-machine-learning-components-on-sql-server-to-microsoft-machine-learning-server"></a>Machine learning のコンポーネントを SQL Server で Microsoft Machine Learning のサーバーにバインドします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事のプロセス説明_バインディング_コンピューターをアップグレードする SQL Server で使用されるコンポーネントの学習に使用できます。 バインドするプロセスのリリースの Machine Learning Server に基づいて更新リズムにサーバーをロックする、SQL Server を使用するのではなくリリースおよびスケジュールを更新します。
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/11/2018
 > 
 > SqlBindR.exe が見つかりませんか。 おそらくをダウンロードしていないこれらのコンポーネントです。 このユーティリティは、Machine Learning サーバー用の Windows インストーラーでのみ使用できます。
 
-1. 管理者としてコマンド プロンプトを開き、sqlbindr.exe を含むフォルダーに移動します。 既定の場所は`C:\Program Files\Microsoft\MLServer\Setup`
+1. 管理者としてコマンド プロンプトを開き、sqlbindr.exe を含むフォルダーに移動します。 既定の場所は `C:\Program Files\Microsoft\MLServer\Setup`
 
 2. 次のコマンドを入力して、使用可能なインスタンスの一覧を表示します。 `SqlBindR.exe /list`
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 02/11/2018
 
 3. 実行、 **SqlBindR.exe**コマンドと、 */bind*引数、し、前の手順で返されたインスタンス名を使用して、アップグレードするインスタンスの名前を指定します。
 
-   たとえば、既定のインスタンスをアップグレードするには、次のように入力します。`SqlBindR.exe /bind MSSQL14.MSSQLSERVER`
+   たとえば、既定のインスタンスをアップグレードするには、次のように入力します。  `SqlBindR.exe /bind MSSQL14.MSSQLSERVER`
 
 4. アップグレードが完了したら、変更されている任意のインスタンスに関連付けられている、スタート パッド サービスを再起動します。
 
@@ -135,7 +135,7 @@ ms.lasthandoff: 02/11/2018
 
     手順については、次を参照してください。 [Windows 用の Machine Learning サーバーのアンインストール](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-uninstall)です。 
 
-### <a name="bkmk_wizunbind"></a>ウィザードを使用してバインドを解除します。
+### <a name="bkmk_wizunbind"></a> ウィザードを使用してバインドを解除します。
 
 1. Machine Learning サーバー用のインストーラーを見つけます。 インストーラーを削除した場合は、もう一度、ダウンロードするか、別のコンピューターからコピーする必要があります。
 2. バインド解除するインスタンスがコンピューターでインストーラーを実行してください。
@@ -144,7 +144,7 @@ ms.lasthandoff: 02/11/2018
 4. ライセンス契約に同意します。 インストールするときへもライセンス条項の同意を示す必要があります。
 5. **[完了]**をクリックします。 プロセスがかかります。
 
-### <a name="bkmk_cmdunbind"></a>コマンドラインを使用してバインドを解除します。
+### <a name="bkmk_cmdunbind"></a> コマンドラインを使用してバインドを解除します。
 
 1. コマンド プロンプトを開き、前のセクションで説明したように **sqlbindr.exe** が含まれているフォルダーに移動します。
 
@@ -178,7 +178,7 @@ Microsoft R Server 9.0.1 に含まれているアップグレードのユーテ�
 ### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>バインド、またはバインドは、複数の一時フォルダーを残します
 
 場合があります、バインディングおよびバインド解除操作は、一時フォルダーをクリーンアップに失敗します。
-次のように名前を持つフォルダーを検索する場合、インストールが完了した後に削除できます。`R_SERVICES_<guid>`
+次のように名前を持つフォルダーを検索する場合、インストールが完了した後に削除できます。 `R_SERVICES_<guid>`
 
 > [!NOTE]
 > インストールが完了するまで待機することを確認します。 1 つのバージョンに関連付けられた R ライブラリを削除してから、新しい R ライブラリを追加するのに長時間かかることができます。 操作が完了したら、一時フォルダーは削除されます。

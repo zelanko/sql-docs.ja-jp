@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 5ae4298fabb7147846b5ee87f391c1a0707cde3a
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: a54400e73c7789dcea15cbd4929c2a7878297df5
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>SQL Server での機械学習の概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 03/15/2018
   SQL Server 2017 年 1 から始まり、SQL Server での Python コードをここで使用できます。 ソリューション (で以上になる!)、複数の言語と名前の広範なサポートを反映するように変更された[!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]です。 これで、R、または Python コードを実行する SQL ツールを使用して、機械学習タスクを自動化できます。 または、として、SQL Server コンピューターを使用して、_計算コンテキスト_リモート開発環境から起動されたジョブにします。
 
     + [SQL Server での Python のアーキテクチャの概要](../advanced-analytics/python/architecture-overview-sql-server-python.md)
-    + [SQL Server R Services または Machine Learning のサービスのセットアップします。](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
+    + [SQL Server 2017 Machine Learning Services をインストールします。](install/sql-machine-learning-services-windows-install.md)
 
 + SQL Server 2016
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/15/2018
   この統合により、データのセキュリティと使用して、管理、R. によって使用されるリソースのバランスをとる
 
     + [開始する契約 SQL Server R Services を取得します。](r/getting-started-with-sql-server-r-services.md)
-    + [SQL Server R Services または Machine Learning のサービスのセットアップします。](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
+    + [SQL Server 2016 R Services をインストールします。](install/sql-r-services-windows-install.md)
 
 ## <a name="microsoft-machine-learning-server-microsoft-r-server"></a>マイクロソフトの機械学習のサーバー (Microsoft R Server)
 
@@ -66,11 +66,11 @@ SQL Server 2016 をインストールするオプションを使う[!INCLUDE[rsq
 > [!IMPORTANT]
 > R Server を使用して Python を実行する場合は、必ず最新のバージョンをインストールする[!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]、を介してのみ使用される[!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]セットアップします。
 > 
->    + [Microsoft R Server または Machine Learning のサーバーのセットアップします。](../advanced-analytics/r/create-a-standalone-r-server.md)
+>    + [SQL Server 2017 Machine Learning サーバー (スタンドアロン) をインストール](install/sql-machine-learning-standalone-windows-install.md)または[SQL Server 2016 R Server (スタンドアロン) インストール](install/sql-r-standalone-windows-install.md)です。
 
 ## <a name="related-products"></a>関連する製品
 
-+ [データ サイエンス クライアントをセットアップします。](../advanced-analytics/r/set-up-a-data-science-client.md)
++ [データ サイエンス クライアントをセットアップする](../advanced-analytics/r/set-up-a-data-science-client.md)
 
   既にインストールされている場合、機械学習のサーバー製品のいずれか、この記事は、ツール、および必要なライブラリを含む、ソリューションの開発とテストは別のコンピューターを設定する方法に関する情報を提供します。
 

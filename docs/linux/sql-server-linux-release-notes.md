@@ -4,7 +4,7 @@ description: "ここでは、リリース ノートが含まれていて、Linux
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 23f93527aa295815304f76676f2efc3506fd9878
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: dea9cde5674dd684998894691c56e21e728bfe28
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -49,6 +49,7 @@ SQL Server を対象とするほとんどの既存クライアント ツール�
 
 | リリース | バージョン | リリース日 |
 |-----|-----|-----|
+| [CU5](#CU5) | 14.0.3023.8 | 3-2018 |
 | [CU4](#CU4) | 14.0.3022.28 | 2-2018 |
 | [CU3](#CU3) | 14.0.3015.40 | 1-2018 |
 | [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
@@ -66,9 +67,23 @@ SQL Server の既存のパッケージを更新する場合は、最新の累積
 - [SQL Server Integration Services のインストール](sql-server-linux-setup-ssis.md)
 - [SQL Server エージェントを有効にします。](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CU5"></a> CU5 (年 2018年 3 月)
+
+これは、SQL Server 2017 の累積的な更新プログラム 5 (CU5) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3023.8 です。 修正プログラムとこのリリースの機能強化については、次を参照してください。 [ https://support.microsoft.com/help/4092643](https://support.microsoft.com/help/4092643)です。
+
+### <a name="package-details"></a>パッケージの詳細
+
+手動またはオフラインのパッケージのインストールで、次の表の情報とパッケージの RPM と Debian パッケージをダウンロードできます。
+
+| [パッケージ] | パッケージ バージョン | ダウンロード |
+|-----|-----|-----|
+| Red Hat RPM パッケージ | 14.0.3023.8-4 | [エンジンは RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3023.8-4.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3023.8-4.x86_64.rpm)</br>[フルテキスト検索の 15,000 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3023.8-4.x86_64.rpm)</br>[SSIS パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM パッケージ | 14.0.3023.8-4 | [mssql server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3023.8-4.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3023.8-4.x86_64.rpm)</br>[フルテキスト検索の 15,000 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3023.8-4.x86_64.rpm) | 
+| Ubuntu 16.04 Debian パッケージ | 14.0.3023.8-4 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3023.8-4_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3023.8-4_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3023.8-4_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
 ## <a id="CU4"></a> CU4 (February 2018)
 
-これは、SQL Server 2017 の Cumulative Update 4 (CU4) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3022.28 です。 修正プログラムとこのリリースの機能強化については、次を参照してください。 [https://support.microsoft.com/en-us/help/4056498](https://support.microsoft.com/en-us/help/4056498)です。
+これは、SQL Server 2017 の Cumulative Update 4 (CU4) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3022.28 です。 修正プログラムとこのリリースの機能強化については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4056498](https://support.microsoft.com/en-us/help/4056498)です。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -85,7 +100,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の累積
 
 ## <a id="CU3"></a> CU3 (年 2018年 1 月)
 
-これは、SQL Server 2017 の累積更新プログラム 3 (CU3) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3015.40 です。 修正プログラムとこのリリースの機能強化については、次を参照してください。 [https://support.microsoft.com/en-us/help/4052987](https://support.microsoft.com/en-us/help/4052987)です。
+これは、SQL Server 2017 の累積更新プログラム 3 (CU3) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3015.40 です。 修正プログラムとこのリリースの機能強化については、次を参照してください。 [ https://support.microsoft.com/en-us/help/4052987](https://support.microsoft.com/en-us/help/4052987)です。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -99,7 +114,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の累積
 
 ## <a id="CU2"></a> CU2 (2017 年 11 月)
 
-これは、SQL Server 2017 の Cumulative Update 2 (CU2) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3008.27 です。 修正プログラムとこのリリースの機能強化については、次を参照してください。 [https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574)です。
+これは、SQL Server 2017 の Cumulative Update 2 (CU2) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3008.27 です。 修正プログラムとこのリリースの機能強化については、次を参照してください。 [ https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574)です。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -113,7 +128,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の累積
 
 ## <a id="CU1"></a> CU1 (2017 年 10 月)
 
-これは、SQL Server 2017 の Cumulative Update 1 (CU1) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3006.16 です。 修正プログラムとこのリリースの機能強化については、次を参照してください。 [https://support.microsoft.com/help/KB4053439](https://support.microsoft.com/help/4038634)です。
+これは、SQL Server 2017 の Cumulative Update 1 (CU1) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3006.16 です。 修正プログラムとこのリリースの機能強化については、次を参照してください。 [ https://support.microsoft.com/help/KB4053439](https://support.microsoft.com/help/4038634)です。
 
 ### <a name="package-details"></a>パッケージの詳細
 
