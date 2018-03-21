@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6234975f35a30fc956f4e8735771d09cea2d1e2e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4292564f8e3e392bd01d5b1e580e1f28251840bd
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>データベース エンジンの権限の概要
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -166,7 +166,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
 ## <a name="list-of-permissions"></a>権限の一覧  
  [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] には 230 の権限があります。 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] には 219 の権限があります。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] には 214 の権限があります。 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] には 195 の権限があります。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]、 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]、 [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] にはそれぞれ、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に適用されない権限が含まれているものの、データベース エンジンの一部のみを公開しているため、権限の数が少なくなっています。 次の図は、権限とそれらの関連性を示します。 一部の高いレベルの許可 ( `CONTROL SERVER`など) は複数回列挙されています。 このトピックのポスターは、読み取るには小さすぎます。 画像をクリックすると、**データベース エンジンのアクセス許可ポスター**を pdf 形式でダウンロードできます。  
   
-[![データベース エンジンの権限](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+[![データベース エンジンの権限](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
  
  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] プリンシパルとサーバーおよびデータベース オブジェクト間の関係を示す図については、「[権限の階層 &#40;データベース エンジン&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)」をご覧ください。  
   

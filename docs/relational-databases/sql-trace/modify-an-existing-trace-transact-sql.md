@@ -17,19 +17,19 @@ helpviewer_keywords:
 - modifying traces
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a35ea0dfbdebb71e2e67c1b8596b4b48741af48f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 9188e51ec1aeda560c8b55502e2016709ffb8a5e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>既存のトレースの変更 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-このトピックでは、ストアド プロシージャを使用して既存のトレースを変更する方法について説明します。  
+  このトピックでは、ストアド プロシージャを使用して既存のトレースを変更する方法について説明します。  
   
 ### <a name="to-modify-an-existing-trace"></a>既存のトレースを変更するには  
   
