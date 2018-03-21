@@ -4,18 +4,20 @@
 ## [アーキテクチャの概要](architecture-overview-machine-learning.md)
 ## [エディション別の機能](r/differences-in-r-features-between-editions-of-sql-server.md)
 
+# Install 
+## [Machine Learning Services (データベース内)](install/sql-machine-learning-services-windows-install.md)
+## [Machine Learning Server (スタンドアロン)](install/sql-machine-learning-standalone-windows-install.md)
+## SQL Server 2016
+### [R Services (データベース内)](install/sql-r-services-windows-install.md)
+### [R Server (スタンドアロン)](install/sql-r-standalone-windows-install.md)
+## [コマンド プロンプトのセットアップ](install/sql-ml-component-commandline-install.md)
+## [オフラインのセットアップ (インターネットなし)](install/sql-ml-component-install-without-internet-access.md)
+
 # [Machine Learning サービス - R](r/sql-server-r-services.md)
-
-## [作業の開始](r/getting-started-with-sql-server-r-services.md)
-### [SQL Server Machine Learning サービス (データベース内) のセットアップ](r/set-up-sql-server-r-services-in-database.md)
-### [Machine Learning サービスの無人インストール](r/unattended-installs-of-sql-server-r-services.md)
-
 ## [アーキテクチャ](r/architecture-overview-sql-server-r.md)
 ### [R の相互運用性](r/r-interoperability-in-sql-server.md)
 ### [R 統合を実現するコンポーネント](r/new-components-in-sql-server-to-support-r.md)
 ### [R のセキュリティ](r/security-overview-sql-server-r.md)
-
-## [監視](r/monitoring-r-services.md)
 
 ## [SQL Server の R チュートリアル](tutorials/sql-server-r-tutorials.md)
 
@@ -64,13 +66,10 @@
 
 # [Machine Learning サービス - Python](python/sql-server-python-services.md)
 
-## [作業の開始](python/setup-python-machine-learning-services.md)
-
 ## [アーキテクチャ](python/architecture-overview-sql-server-python.md)
 ### [Python の相互運用性](python/python-interoperability.md)
 ### [Python をサポートするコンポーネント](python/new-components-in-sql-server-to-support-python-integration.md)
 ### [Python のセキュリティ](python/security-overview-sql-server-python-services.md)
-## [監視](python/managing-and-monitoring-python-solutions.md)
 <!-- ### [How To Create a Resource Pool for Python](python/how-to-create-a-resource-pool-for-python.md)-->
 <!-- ### [Extended Events for Python](python/extended-events-for-python.md)-->
 <!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
@@ -93,10 +92,6 @@
 #### [モデルを運用する](tutorials/sqldev-py6-operationalize-the-model.md)
 
 # [Machine Learning Server - スタンドアロン](r/r-server-standalone.md)
-## [作業の開始](r/getting-started-with-microsoft-r-server-standalone.md)
-## [Machine Learning Server スタンドアロンのセットアップ](r/create-a-standalone-r-server.md)
-### [コマンドラインから Microsoft Machine Learning Server をインストールする](r/install-microsoft-r-server-from-the-command-line.md)
-### [データ サイエンス仮想マシンのプロビジョニング](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 
 # [操作方法](r/sql-server-machine-learning-tasks.md)
 
@@ -155,7 +150,7 @@
 
 ### [Web サービスを使用したモデルのデプロイと使用](operationalization-with-mrsdeploy.md)
 
-### [Machine Learning ソリューションの管理と監視](r/managing-and-monitoring-r-solutions.md)
+### [管理と監視ソリューション](r/managing-and-monitoring-r-solutions.md
 ### [Machine Learning Services のリソース管理](r/resource-governance-for-r-services.md)
 ### [Machine Learning 用のリソース プールの作成](r/how-to-create-a-resource-pool-for-r.md)
 ### [Machine Learning Services の拡張イベント](r/extended-events-for-sql-server-r-services.md)
@@ -172,18 +167,14 @@
 ## [Azure SQL データベースでの R の使用](r/using-r-in-azure-sql-database.md)
 
 ## [セットアップとトラブルシューティングのヒント](machine-learning-troubleshooting-faq.md)
+### [データ サイエンス仮想マシンのプロビジョニング](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [トラブルシューティングのためのデータの収集](data-collection-ml-troubleshooting-process.md)
-### [アップグレードとインストールに関してよく寄せられる質問](r/upgrade-and-installation-faq-sql-server-r-services.md)
-
+### [アップグレードとインストールに関する FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
 ### [外部スクリプト実行に関する一般的な問題](common-issues-external-script-execution.md)
-### [インターネットへのアクセスなしで Machine Learning コンポーネントをインストールする](r/installing-ml-components-without-internet-access.md)
-### [Azure 仮想マシンに SQL Machine Learning Services をインストールする](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [既存の Azure 仮想マシンに R を追加する](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [SqlBindR.exe を使ってインスタンスをアップグレードする](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
-### [コマンドラインから R Server をインストールする](r/install-microsoft-r-server-from-the-command-line.md)
-### [エンタープライズ データ サイエンス仮想マシンのプロビジョニング](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-### [データ サイエンス ツールをセットアップする](r/setup-or-configure-r-tools.md)
-### [データ サイエンス クライアントをセットアップする](r/set-up-a-data-science-client.md)
+## [Microsoft ML Server へのバインド](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+## [データ サイエンス ツールをセットアップする](r/setup-or-configure-r-tools.md)
+## [データ サイエンス クライアントをセットアップする](r/set-up-a-data-science-client.md)
+## [仮想マシンをセットアップする](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 
 ## ブログ
 
@@ -198,15 +189,12 @@
 # [リファレンス](r/machine-learning-services-r-reference.md)
 ## [MicrosoftML](using-the-microsoftml-package.md)
 ## [RevoScaleR](r/revoscaler-overview.md)
-### [SQL Server データ用の ScaleR 関数](r/scaler-functions-for-working-with-sql-server-data.md)
+### [SQL Server データ用の RevoScaleR 関数](r/scaler-functions-for-working-with-sql-server-data.md)
 ## [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 ## [OlapR](r/how-to-create-mdx-queries-using-olapr.md)
 ## [RevoScalePy](python/what-is-revoscalepy.md)
 
-# [チュートリアルおよびサンプル](tutorials/machine-learning-services-tutorials.md)
-
-## [SQL Server の Python チュートリアル](tutorials/sql-server-python-tutorials.md)
-## [SQL Server の R チュートリアル](tutorials/sql-server-r-tutorials.md)
+# [テンプレートとサンプル](tutorials/machine-learning-services-tutorials.md)
 
 ## [データ サイエンス ソリューション テンプレート](tutorials/data-science-scenarios-and-solution-templates.md)
 ## [SQL Server サンプル](https://github.com/Microsoft/sql-server-samples)
