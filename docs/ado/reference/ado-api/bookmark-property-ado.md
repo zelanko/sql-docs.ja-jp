@@ -1,16 +1,16 @@
 ---
-title: "Bookmark プロパティ (ADO) |Microsoft ドキュメント"
+title: Bookmark プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 03/20/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 f1_keywords:
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Bookmark property [ADO]
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c6076acd2bde7e82bf142bad76093d582106877
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 59cc184403fff8b152ee7eabbdf823abd6c3d4bc
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="bookmark-property-ado"></a>Bookmark プロパティ (ADO)
 ブックマークの現在のレコードを一意に識別することを示します、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトまたは現在のレコードを設定、**レコード セット**レコードの有効なブックマークによって識別されるオブジェクト。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
   
  開くと、 **Recordset**オブジェクトの一意のブックマークが各レコード。 現在のレコードのブックマークを保存するには、値を割り当てる、**ブックマーク**変数へのプロパティです。 戻るにはすぐにそのレコードにいつでも別のレコードに移動した後、次のように設定します。、 **Recordset**オブジェクトの**ブックマーク**プロパティをその変数の値にします。  
   
- ユーザーはできない、ブックマークの値を表示することがあります。 また、ユーザーでは、ブックマークを直接比較できることは期待しないで 同じレコードを参照する 2 つのブックマークは、異なる値を持つことがあります。  
+ ユーザーはできない、ブックマークの値を表示することがあります。 また、ユーザーには、同じレコードを参照する 2 つのブックマークに異なる値可能性があるために、直接比較するブックマークは限りません。  
   
  使用する場合、[クローン](../../../ado/reference/ado-api/clone-method-ado.md)のコピーを作成する方法、 **Recordset**オブジェクト、**ブックマーク**元と重複するプロパティの設定**レコード セット**オブジェクトが同じあり、置き換えて使用できます。 ただし、別のブックマークを使用することはできません**Recordset**同じソースまたはコマンドから作成された場合でも、同じ意味で、オブジェクトです。  
   

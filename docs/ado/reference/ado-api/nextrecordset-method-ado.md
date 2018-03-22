@@ -1,16 +1,16 @@
 ---
-title: "NextRecordset メソッド (ADO) |Microsoft ドキュメント"
+title: NextRecordset メソッド (ADO) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 03/20/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 f1_keywords:
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffbc85f40d684095b4f91512943f16911af3233f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b4e0e38fc9c01a65916d7979fddfae929d43acf1
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset メソッド (ADO)
 現在のクリア[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを返します**レコード セット**一連のコマンドを進めることで。  
@@ -54,7 +54,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 ## <a name="remarks"></a>解説  
  使用して、 **NextRecordset**複合コマンド ステートメントの次のコマンドまたは複数の結果を返すストアド プロシージャの結果を返すメソッド。 開く場合、**レコード セット**複合コマンド ステートメントに基づいて、オブジェクト (たとえば、"選択\*table1; からSELECT \* table2 の") を使用して、 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッドを[コマンド](../../../ado/reference/ado-api/command-object-ado.md)または[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドを**Recordset**、ADO は最初のコマンドのみを実行しに結果を返します*recordset*です。 ステートメント内の後続のコマンドの結果にアクセスするには、呼び出し、 **NextRecordset**メソッドです。  
   
- その他の結果がある限り、 **Recordset**複合ステートメントを含んでいない切断されているか、プロセス境界を越えてマーシャ リング、 **NextRecordset**メソッドは引き続き返す**Recordset**オブジェクト。 行を返すコマンドが正常に実行されますが、レコード、返されたが返されない場合**Recordset**オブジェクトは開いているが、空になります。 テストを作成することを確認して、この場合、 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)と[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)プロパティが両方とも**True**です。 ない場合は 行を返す実行するコマンドを正常に返された**レコード セット**オブジェクトが閉じ、テストによってことを確認することができますが、[状態](../../../ado/reference/ado-api/state-property-ado.md)プロパティを**レコード セット**です。 ない多くの結果がある場合に*recordset*に設定されます*Nothing*です。  
+ その他の結果がある限り、 **Recordset**複合ステートメントを含んでいない切断されているか、プロセス境界を越えてマーシャ リング、 **NextRecordset**メソッドは引き続き返す**Recordset**オブジェクト。 行を返すコマンドが正常に実行されますが、レコード、返されたが返されない場合**Recordset**オブジェクトは開いているが、空になります。 テストを作成することを確認して、この場合、 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)と[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)プロパティが両方とも**True**です。 かどうか、行を返す実行するコマンドを正常に返された**Recordset**オブジェクトが閉じ、テストすることによって確認できます、[状態](../../../ado/reference/ado-api/state-property-ado.md)プロパティを**Recordset**. ない多くの結果がある場合に*recordset*に設定されます*Nothing*です。  
   
  **NextRecordset**メソッドでは使用できません、切断されている**レコード セット**オブジェクト、場所[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)に設定されている**Nothing**(Microsoft Visual Basic で) またはその他の言語には NULL です。  
   
