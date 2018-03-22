@@ -1,16 +1,16 @@
 ---
-title: "Integration Services のアップグレード | Microsoft Docs"
-ms.custom: 
+title: Integration Services のアップグレード | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services, upgrading
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
 ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
 ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/20/2018
 ---
@@ -96,7 +96,7 @@ ms.lasthandoff: 03/20/2018
   
     -   ログ データを msdb.sysdtslog90 システム テーブルから msdb.sysssislog システム テーブルに移動します。  
   
--   新しい msdb.sysssis\* テーブルにデータを移動した後に、msdb.sysdts*90 システム テーブルとシステム テーブルへのアクセスに使用されるストアド プロシージャを削除します。 ただしアップグレードにより、sysdtslog90 テーブルは sysdtslog90 という名前のビューに置き換わります。 この新しい sysdtslog90 ビューでは、新しい msdb.sysssislog システム テーブルが公開されます。 これにより、ログ テーブルに基づいたレポートは、中断されることなく引き続き実行されます。  
+-   新しい msdb.sysssis\* テーブルにデータを移動した後に、msdb.sysdts\*90 システム テーブルとシステム テーブルへのアクセスに使用されるストアド プロシージャを削除します。 ただしアップグレードにより、sysdtslog90 テーブルは sysdtslog90 という名前のビューに置き換わります。 この新しい sysdtslog90 ビューでは、新しい msdb.sysssislog システム テーブルが公開されます。 これにより、ログ テーブルに基づいたレポートは、中断されることなく引き続き実行されます。  
   
 -   パッケージへのアクセスを制御するために、db_ssisadmin、db_ssisltduser、および db_ssisoperator という 3 つの固定データベース レベル ロールを新しく作成します。 db_dtsadmin、db_dtsltduser、および db_dtsoperator という [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ロールは削除されませんが、対応する新しいロールのメンバーになります。  
   
