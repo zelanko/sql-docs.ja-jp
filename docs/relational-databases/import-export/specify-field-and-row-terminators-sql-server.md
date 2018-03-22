@@ -1,16 +1,16 @@
 ---
-title: "フィールド ターミネータと行ターミネータの指定 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: フィールド ターミネータと行ターミネータの指定 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bcp utility [SQL Server], terminators
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 8d596be8f4ae978a3eafe58d1cf9e8e52241f49c
 ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/20/2018
 ---
@@ -46,13 +46,13 @@ ms.lasthandoff: 03/20/2018
 |改行文字|\n<br /><br /> 既定の行ターミネータです。|  
 |キャリッジ リターン/ライン フィード|\r|  
 |円記号*|\\\|  
-|NULL ターミネータ (表示されないターミネータ)**|\0|  
+|NULL ターミネータ (表示されないターミネータ)\*\*|\0|  
 |任意の印刷可能な文字 (NULL、タブ、改行、およびキャリッジ リターンを除き、制御文字は印刷可能ではありません)|(*、A、t、l など)|  
-|上に列挙したターミネータ文字の一部または全部を含む 10 文字までの印刷可能な文字列|(**\t\*\*、end、!!!!!!!!!!、\t?\n など)|  
+|上に列挙したターミネータ文字の一部または全部を含む 10 文字までの印刷可能な文字列|(\*\*\t\*\*、end、!!!!!!!!!!、\t?\n など)|  
   
  *円記号のエスケープ文字と共に制御文字として機能するのは、t、n、r、0 および '\0' だけです。  
   
- **印刷時には NULL 制御文字 (\0) が表示されませんが、データ ファイルでは 1 つの文字です。 つまり、フィールド ターミネータまたは行ターミネータとして NULL 制御文字を使用することと、フィールド ターミネータまたは行ターミネータをまったく使用しないことは異なります。  
+ \*\*印刷時には NULL 制御文字 (\0) が表示されませんが、データ ファイルでは 1 つの文字です。 つまり、フィールド ターミネータまたは行ターミネータとして NULL 制御文字を使用することと、フィールド ターミネータまたは行ターミネータをまったく使用しないことは異なります。  
   
 > [!IMPORTANT]  
 >  データ内にターミネータ文字が出現すると、データではなく、ターミネータとして解釈されます。その文字に続くデータは、次のフィールドまたは次のレコードに属すると解釈されます。 したがって、ターミネータがデータに出現することがないように、注意深くターミネータを選択してください。 たとえば、データに下位サロゲートが含まれている場合、フィールド ターミネータには下位サロゲート フィールド ターミネータは適していません。  
