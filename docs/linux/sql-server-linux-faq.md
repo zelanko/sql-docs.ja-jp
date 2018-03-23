@@ -1,24 +1,24 @@
 ---
-title: "SQL Server on Linux に関する FAQ |Microsoft ドキュメント"
-description: "この記事では、Linux で実行されている SQL Server に関するよく寄せられる質問に対する回答を提供します。"
+title: SQL Server on Linux に関する FAQ |Microsoft ドキュメント
+description: この記事では、Linux で実行されている SQL Server に関するよく寄せられる質問に対する回答を提供します。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 3fad3fb2892e5a91e42eefb5f00932c39d00064f
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 6fdf6679230141dd2dedb35a9ae7e9cc0fb1b9cb
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server on Linux Frequently Asked Questions (FAQ)
 
@@ -30,11 +30,11 @@ ms.lasthandoff: 02/24/2018
 
 1. **Linux プラットフォームがサポートされますか。**
 
-   SQL Server は Red Hat Enterprise Server、SUSE Linux Enterprise Server、および Ubuntu で現在サポートされています。 Docker によってコンテナーでも実行されます。 サポートされるバージョンに関する最新情報については、次を参照してください。[サポートされているプラットフォーム](sql-server-linux-setup.md#supportedplatforms)です。
+   SQL Server は Red Hat Enterprise Server、SUSE Linux Enterprise Server、および Ubuntu で現在サポートされています。 Docker によってコンテナーで実行されているでもサポートされます。 サポートされるバージョンに関する最新情報については、次を参照してください。[サポートされているプラットフォーム](sql-server-linux-setup.md#supportedplatforms)です。
 
 1. **他のプラットフォームで動作の SQL Server on Linux**しますか?
 
-   インストールして、Linux の他のディストリビューションで SQL Server を実行することができます可能性があります。 たとえば、CentOS は密接に関連して Red Hat Enterprise Server、ため、SQL Server の 15,000 RPM パッケージをインストールすることができます。 これは、密接に関連する他のディストリビューションをも true 可能性があります。 主な問題は、テストおよびサポートです。 SQL Server では、のみテストされていて、Red Hat Enterprise Linux、SUSE Linux Enterprise Server、および Ubuntu でのみサポートされます。
+   SQL Server をテストして、上記の配布の Linux ではサポートされています。 他の Linux ディストリビューションが密接に関連しているし、SQL Server を実行することができます (たとえば、CentOS、密接に関連して Red Hat Enterprise Server)。 サポートされていないオペレーティング システム上の SQL Server のインストールを選択する場合を確認してください、**サポート ポリシー**のセクションで、 [for Microsoft SQL Server の技術的なサポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)サポートを理解するには影響します。 いくつかコミュニティで維持される Linux ディストリビューションには、基になるオペレーティング システムが問題である場合は、サポートを受ける正式な方法はありません。 にも注意してください。
 
 1. **Linux でサポートされるは、SQL Server 機能ですか。**
 

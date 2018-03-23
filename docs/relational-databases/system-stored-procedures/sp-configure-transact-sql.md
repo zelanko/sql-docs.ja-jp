@@ -1,16 +1,16 @@
 ---
-title: "sp_configure (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_configure (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_configure
@@ -20,24 +20,26 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d6ff78066f307e70f37880eb57e2430774c242ae
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 63ab5d253d26375b3f53cb0f38ffa96f56e0a93d
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/t-sql-appliesto-ss-asdbmi-xxxx-pwd-md.md)]
 
-  現在のサーバーのグローバル構成設定を表示または変更します。  
+  現在のサーバーのグローバル構成設定を表示または変更します。
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 > [!NOTE]  
->  データベース レベルの構成オプションについては、次を参照してください。 [ALTER DATABASE SCOPED CONFIGURATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). ソフト NUMA を構成するのを参照してください。[ソフト NUMA &#40;です。SQL Server &#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
+>  データベース レベルの構成オプションについては、次を参照してください。 [ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)です。 ソフト NUMA を構成するのを参照してください。[ソフト NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,7 +71,7 @@ RECONFIGURE
  [ **@configname=** ] **'***option_name***'**  
  構成オプションの名前を指定します。 *option_name* は **varchar(35)**、既定値は NULL です。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]構成の名前に含まれている一意の文字列を認識します。 指定しない場合、オプションの完全な一覧が返されます。  
   
- 利用可能な構成オプションとその設定については、次を参照してください。[サーバー構成オプション &#40;です。SQL Server &#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ 利用可能な構成オプションとその設定については、次を参照してください。[サーバー構成オプション&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)です。  
   
  [ **@configvalue=** ] **'***value***'**  
  新しい構成設定を指定します。 *value* のデータ型は **int**で、既定値は NULL です。 最大値はオプションごとに異なります。  
@@ -89,8 +91,8 @@ RECONFIGURE
 |**name**|**nvarchar(35)**|構成オプションの名前。|  
 |**minimum**|**int**|構成オプションの最小値。|  
 |**maximum**|**int**|構成オプションの最大値。|  
-|**config_value**|**int**|構成オプションに設定する値を使用して**sp_configure** (値**sys.configurations.value**)。 これらのオプションの詳細については、次を参照してください。[サーバー構成オプション &#40;です。SQL Server &#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)と[sys.configurations &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
-|**run_value**|**int**|構成オプションの値を現在実行中 (値**sys.configurations.value_in_use**)。<br /><br /> 詳細については、次を参照してください。 [sys.configurations &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
+|**config_value**|**int**|構成オプションに設定する値を使用して**sp_configure** (値**sys.configurations.value**)。 これらのオプションの詳細については、次を参照してください。[サーバー構成オプション&#40;SQL Server&#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md)と[sys.configurations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)です。|  
+|**run_value**|**int**|構成オプションの値を現在実行中 (値**sys.configurations.value_in_use**)。<br /><br /> 詳細については、次を参照してください。 [sys.configurations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)です。|  
   
 ## <a name="remarks"></a>解説  
  使用して**sp_configure**を表示またはサーバー レベルの設定を変更します。 データベースレベルの設定を変更するには、ALTER DATABASE を使用します。 現在のユーザー セッションのみに影響する設定を変更するには、SET ステートメントを使用します。  
@@ -110,14 +112,14 @@ RECONFIGURE
 > [!NOTE]  
 >  指定した場合*値*が大きすぎる、オプションの**run_value**という事実を反映する列を[!INCLUDE[ssDE](../../includes/ssde-md.md)]無効な設定を使用するのではなく、動的メモリは、既定値がします。  
   
- 詳細については、次を参照してください。 [RECONFIGURE と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/reconfigure-transact-sql.md).  
+ 詳細については、次を参照してください。[再構成&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)です。  
   
 ## <a name="advanced-options"></a>[詳細設定オプション]  
  などのいくつかの構成オプション**関係マスク**と**復旧間隔**、高度なオプションとして指定されます。 既定では、これらのオプションを表示や変更に使用することはできません。 使用できるように、設定、 **ShowAdvancedOptions**構成オプションを 1 です。  
   
- 構成オプションとその設定の詳細については、次を参照してください。[サーバー構成オプション &#40;です。SQL Server &#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ 構成オプションとその設定の詳細については、次を参照してください。[サーバー構成オプション&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  パラメーターなしで、または最初のパラメーターだけを指定して **sp_configure** を実行する権限は、既定ですべてのユーザーに付与されます。 実行する**sp_configure**構成オプションを変更したり RECONFIGURE ステートメントを実行する両方のパラメーターを与える必要があります、ALTER SETTINGS サーバー レベル権限。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
   
 ## <a name="examples"></a>使用例  
@@ -150,7 +152,7 @@ EXEC sp_configure 'recovery interval', '3';
 RECONFIGURE WITH OVERRIDE;  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-list-all-available-configuration-settings"></a>C. すべての使用可能な構成設定を一覧表示する  
  次の例では、すべての構成オプションを一覧表示する方法を示します。  
@@ -168,10 +170,10 @@ EXEC sp_configure @configname='hadoop connectivity';
 ```  
   
 ### <a name="e-set-hadoop-connectivity"></a>E. Hadoop 接続を設定する  
- Hadoop 接続を設定するには、sp_configure を実行しているだけでなく、いくつかの手順が必要です。 完全な手順を参照してください。[外部データ ソースの作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+ Hadoop 接続を設定するには、sp_configure を実行しているだけでなく、いくつかの手順が必要です。 完全な手順を参照してください。 [CREATE EXTERNAL DATA SOURCE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)です。  
   
 ## <a name="see-also"></a>参照  
- [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+ [RECONFIGURE と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

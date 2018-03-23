@@ -1,25 +1,25 @@
 ---
-title: "Linux 上の SQL Server 2017 のためのインストール ガイド |Microsoft ドキュメント"
-description: "インストール、更新、および Linux に SQL Server をアンインストールします。 この記事では、オンライン、オフライン、および無人のシナリオについて説明します。"
+title: Linux 上の SQL Server 2017 のためのインストール ガイド |Microsoft ドキュメント
+description: インストール、更新、および Linux に SQL Server をアンインストールします。 この記事では、オンライン、オフライン、および無人のシナリオについて説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/08/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: d8f8cde3d3a299008d75c4b701be224c458880eb
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: ef5e2131681981e85971d734ebbe576e106e2b92
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上の SQL Server のインストールのガイダンス
 
@@ -47,12 +47,10 @@ Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、およ�
 | **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker エンジン** | 1.8+ | [Docker を取得します。](http://www.docker.com/products/overview)
 
+Microsoft では、展開して、OpenShift と Kubernetes を使用して SQL Server のコンテナーの管理もサポートします。
+
 > [!NOTE]
-> インストールし、他の密接に関連する Linux プラットフォームでは、SQL Server を実行することがありますが、SQL Server のみテストは、上記の表に、プラットフォームでサポートされます。
-
-Microsoft を展開して、OpenShift と Kubernetes を使用して SQL Server のコンテナーの管理をサポートします。
-
-SQL Server 2017 の最新のサポート ポリシーで、次を参照してください。 [for Microsoft SQL Server の技術的なサポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)です。
+> SQL Server をテストして、上記の配布の Linux ではサポートされています。 サポートされていないオペレーティング システム上の SQL Server のインストールを選択する場合を確認してください、**サポート ポリシー**のセクションで、 [for Microsoft SQL Server の技術的なサポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)サポートを理解するには影響します。
 
 ## <a id="system"></a> システム要件
 
@@ -170,7 +168,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 
 ## <a id="offline"></a> オフライン インストール
 
-かどうか、Linux コンピューターがアクセスできないで使用されるオンライン リポジトリに、[クイック スタート](#platforms)、パッケージ ファイルを直接ダウンロードできます。 これらのパッケージは、Microsoft リポジトリ [https://packages.microsoft.com](https://packages.microsoft.com) にあります。
+かどうか、Linux コンピューターがアクセスできないで使用されるオンライン リポジトリに、[クイック スタート](#platforms)、パッケージ ファイルを直接ダウンロードできます。 これらのパッケージが Microsoft リポジトリ内にある[ https://packages.microsoft.com](https://packages.microsoft.com)です。
 
 > [!TIP]
 > クイック スタートの手順に正常にインストールした場合は、ダウンロードしたり、SQL Server のパッケージを手動でインストールする必要はありません。 このセクションでは、オフラインのシナリオでのみです。
