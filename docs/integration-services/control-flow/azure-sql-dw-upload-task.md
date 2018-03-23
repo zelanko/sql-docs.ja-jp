@@ -1,29 +1,29 @@
 ---
-title: "Azure SQL DW アップロード タスク | Microsoft Docs"
-ms.custom: 
+title: Azure SQL DW アップロード タスク | Microsoft Docs
+ms.custom: ''
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPDWUPTASK.F1
 - sql14.dts.designer.afpdwuptask.f1
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2d6c95bda5faf7f3ccf8f6b9bc4774a66d482e51
 ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/20/2018
 ---
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/20/2018
 -----|-----------
 LocalDirectory|アップロードするデータ ファイルを含むローカル ディレクトリを指定します。
 Recursively|サブディレクトリを再帰的に検索するかどうかを指定します。
-FileName|特定の名前のパターンを持つファイルを選択する名前フィルターを指定します。 例: MySheet*.xsl\* の場合、MySheet001.xsl や MySheetABC.xslx などのファイルが含まれます。
+FileName|特定の名前のパターンを持つファイルを選択する名前フィルターを指定します。 例: MySheet\*.xsl\* の場合、MySheet001.xsl や MySheetABC.xslx などのファイルが含まれます。
 [RowDelimiter]|各行の終わりに印を付ける文字を指定します。
 [ColumnDelimiter]|各列の終わりに印を付ける 1 つ以上の文字を指定します。 例: &#124;(パイプ)、\t (タブ)、' (単一引用符)、" (二重引用符)、および 0x5c (バック スラッシュ)。
 IsFirstRowHeader|各データ ファイルの最初の行に実際のデータの代わりに列名を含めるかどうかを指定します。

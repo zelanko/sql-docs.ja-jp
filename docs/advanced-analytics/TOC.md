@@ -101,6 +101,8 @@
 
 ### [SQL Server に新しい Python パッケージをインストールする](python/install-additional-python-packages-on-sql-server.md)
 
+### [SQL Server で使用するために Python ツールを構成する](python/setup-python-client-tools-sql.md)
+
 ### [SQL Server インスタンスの R パッケージ管理を有効にする](r/r-package-how-to-enable-or-disable.md)
 
 ### [SQL Server にインストールされているパッケージの確認](r/determine-which-packages-are-installed-on-sql-server.md)
