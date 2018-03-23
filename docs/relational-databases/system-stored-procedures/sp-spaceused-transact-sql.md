@@ -1,16 +1,16 @@
 ---
-title: "sp_spaceused (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_spaceused (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_spaceused_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 670fc2eaf7d6e5c4e499ff57c3a5564bec903ac1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ef8781d5c6ab68b90aefcc9c7d01e0cb9f070a02
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -50,7 +50,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## <a name="arguments"></a>引数  
 
-[!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]と[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]、`sp_spacedused`名前付きパラメーターを指定する必要があります (たとえば`sp_spacedused (@objname= N'Table1');`パラメーターの序数位置によって証明書利用者のではなくです。 
+[!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]と[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]、`sp_spaceused`名前付きパラメーターを指定する必要があります (たとえば`sp_spaceused (@objname= N'Table1');`パラメーターの序数位置によって証明書利用者のではなくです。 
 
  [ **@objname=**] **'***objname***'** 
    
@@ -58,7 +58,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 場合*objname*が指定されていない、データベース全体の結果が返されます。  
 *objname*は**nvarchar (776)**、既定値は NULL です。  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)][!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]のみデータベースとテーブルのオブジェクトをサポートします。
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]のみデータベースとテーブルのオブジェクトをサポートします。
   
  [ **@updateusage=**] **'***updateusage***'**  
  領域の使用情報の更新に DBCC UPDATEUSAGE を使用するかどうかを示します。 ときに*objname*はデータベース全体に対して、ステートメントが実行; でステートメントを実行するそれ以外の場合、指定されていない*objname*です。 値は、 **true**または**false**です。 *updateusage*は**varchar (5)**、既定値は**false**です。  
@@ -68,7 +68,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *モード*引数は、次の値を持つことができます。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |ALL|オブジェクトまたはローカル部分およびリモートの部分の両方を含むデータベースの記憶域の統計を返します。|  
 |LOCAL_ONLY|オブジェクトまたはデータベースのローカル部分だけの記憶域の統計を返します。 返す場合と同様の統計情報の場合は、オブジェクトまたはデータベースがストレッチが有効な@mode= ALL です。|  
@@ -81,8 +81,8 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 |[値]|説明|  
 |-----------|-----------------|  
-|0|ときに *@objname* が null またはが指定されていない 2 つの結果セットが返されます。 2 つの結果セットは、既定の動作です。|  
-|1|ときに *@objname*  = null またはが指定されていない 1 つの結果セットが返されます。|  
+|0|ときに*@objname*が null またはが指定されていない 2 つの結果セットが返されます。 2 つの結果セットは、既定の動作です。|  
+|1|ときに*@objname* = null またはが指定されていない 1 つの結果セットが返されます。|  
   
  *oneresultset*は**ビット**、既定値は**0**します。  
 
@@ -174,7 +174,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**xtp_pending_truncation**|**varchar(18)**|状態 (KB 単位) の WAITING_FOR_LOG_TRUNCATION とチェックポイント ファイルの合計サイズ。 これは、ログの切り捨てが発生したら、クリーンアップ処理を待機しているチェックポイント ファイルに使用されるディスク領域です。 データベースには、少なくとも 1 つのコンテナーと、memory_optimized_data ファイル グループがない場合は、NULL を返します。 この列はのみが含まれる場合`@include_total_xtp_storage=1`です。|
 
 ## <a name="remarks"></a>解説  
- **database_size**の合計よりも大きいは常に**予約** + **未割り当て領域**ログ ファイルのサイズが含まれていますが、 **に予約されています**と**unallocated_space**データ ページのみを検討してください。  
+ **database_size**の合計よりも大きいは常に**予約** + **未割り当て領域**ログ ファイルのサイズが含まれていますが、 **に予約されて**と**unallocated_space**データ ページのみを検討してください。  
   
  XML インデックスとフルテキスト インデックスによって使用されているページに含まれる**index_size**両方の結果セットです。 ときに*objname*を指定すると、XML インデックスとオブジェクトのフルテキスト インデックスのページが合計でもカウント**予約**と**index_size**結果。  
   
@@ -211,7 +211,7 @@ GO
 ```  
   
 ### <a name="c-displaying-space-usage-information-about-the-remote-table-associated-with-a-stretch-enabled-table"></a>C. Stretch が有効なテーブルに関連付けられている領域の使用法、リモート テーブルに関する情報を表示します。  
- 次の例を使用して、Stretch が有効なテーブルに関連付けられているリモート テーブルで使用される領域をまとめたもの、  **@mode** リモート ターゲットを指定する引数。 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。  
+ 次の例を使用して、Stretch が有効なテーブルに関連付けられているリモート テーブルで使用される領域をまとめたもの、 **@mode**リモート ターゲットを指定する引数。 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。  
   
 ```sql  
 USE StretchedAdventureWorks2016  
@@ -256,13 +256,13 @@ GO
 ## <a name="see-also"></a>参照  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [DBCC UPDATEUSAGE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
+ [DBCC UPDATEUSAGE &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [sys.allocation_units &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys.objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.partitions および #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
