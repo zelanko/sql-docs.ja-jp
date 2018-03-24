@@ -1,6 +1,6 @@
 ---
-title: "ダウンロードし、インストールの Microsoft SQL 操作 Studio (プレビュー) |Microsoft ドキュメント"
-description: "ダウンロードおよびインストール Microsoft SQL 操作 (プレビュー) 対応の Studio Windows、macOS、または Linux"
+title: "Microsoft SQL Operations Studio (プレビュー) のダウンロードおよびインストール | Microsoft ドキュメント"
+description: "Windows、macOS、そして Linux に対応する Microsoft SQL Operations Studio (プレビュー) のダウンロードおよびインストール"
 ms.custom: tools|sos
 ms.date: 03/05/2018
 ms.prod: sql-non-specified
@@ -20,11 +20,11 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/08/2018
 ---
-# <a name="download-and-install-sql-operations-studio-preview"></a>ダウンロードして SQL 操作 Studio (プレビュー) のインストール
+# <a name="download-and-install-sql-operations-studio-preview"></a>SQL Operations Studio (プレビュー) のダウンロードおよびインストール
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] Windows、macOS、および Linux で実行されます。
+[!INCLUDE[name-sos](../includes/name-sos.md)] Windows、macOS、および Linux で動作します。
 
-ダウンロードし、最新のリリースをインストール、*年 2 月のパブリック プレビュー*:
+最新のリリース, *2 月のパブリック プレビュー* のダウンロードとインストール:
 
 |プラットフォーム|ダウンロード|リリース日| バージョン |
 |:---|:---|:---|:---|
@@ -32,36 +32,36 @@ ms.lasthandoff: 03/08/2018
 |macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=867999)|2018 年 2 月 15日 |0.26.7|
 |Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=868002)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=868001)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=868000)|2018 年 2 月 15日|0.26.7|
 
-最新のリリースに関する詳細については、次を参照してください。、[リリース ノート](release-notes.md)です。
+最新のリリースに関する詳細は、次の [リリース ノート](release-notes.md) を参照してください。
 
-## <a name="get-sql-operations-studio-preview-for-windows"></a>Windows 用の SQL 操作 Studio (プレビュー) の取得します。
+## <a name="get-sql-operations-studio-preview-for-windows"></a>SQL Operations Studio (プレビュー) for Windows の取得
 
-このリリースの[!INCLUDE[name-sos](../includes/name-sos-short.md)]標準的な Windows インストーラーのエクスペリエンスと .zip が含まれます。 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] のこのリリースは標準的な Windows インストーラーと .zip を含んでいます。
 
 **インストーラー**
 
-1. ダウンロードし、実行、 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=867998)です。
-1. 開始、[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]アプリ。
+1. ダウンロードし、[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=867998) を実行します。
+1. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] のアプリを開始します。
 
 
 **.zip file**
 
-1. ダウンロード[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows .zip](https://go.microsoft.com/fwlink/?linkid=867997)です。
-2. ダウンロードしたファイルを参照し、抽出しています。
-3. 実行します。 `\sqlops-windows\sqlops.exe`
+1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows .zip](https://go.microsoft.com/fwlink/?linkid=867997) をダウンロードします。
+2. ダウンロードしたファイルを参照し、展開します。
+3. `\sqlops-windows\sqlops.exe` を実行します。
 
 
-## <a name="get-sql-operations-studio-preview-for-macos"></a>MacOS の SQL 操作 Studio (プレビュー) を取得します。
+## <a name="get-sql-operations-studio-preview-for-macos"></a>SQL Operations Studio (プレビュー) for MacOS の取得
 
-1. ダウンロード[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] macOS の](https://go.microsoft.com/fwlink/?linkid=867999)します。
-2. Zip の内容を展開しをダブルクリックします。
-3. させる[!INCLUDE[name-sos](../includes/name-sos-short.md)]で使用できる、*スタート パッド*、ドラッグ*sqlops.app*を*アプリケーション*フォルダーです。
+1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] macOS の](https://go.microsoft.com/fwlink/?linkid=867999) をダウンロードします。
+2. zip の内容を展開し、ダブルクリックします。
+3. [!INCLUDE[name-sos](../includes/name-sos-short.md)] を *Launchpad* で有効にするため *sqlops.app* を *アプリケーション* フォルダーへドラッグします。
 
 
-## <a name="get-sql-operations-studio-preview-for-linux"></a>Linux 用の SQL 操作 Studio (プレビュー) の取得します。
+## <a name="get-sql-operations-studio-preview-for-linux"></a>SQL Operations Studio (プレビュー) for Linux の取得
 
-1. ダウンロード[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=868000)です。
-1. ファイルと起動を抽出する[!INCLUDE[name-sos](../includes/name-sos-short.md)]新しいターミナル ウィンドウを開きを次のコマンドを入力します。
+1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=868000) をダウンロードします。
+1. ファイルを展開し、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を起動するため、新しいターミナル ウィンドウを開いて次のコマンドを入力します。
 
    ```bash
    cd ~
@@ -71,8 +71,8 @@ ms.lasthandoff: 03/08/2018
    ```
 
    > [!NOTE]
-   > Debian、red Hat、および Ubuntu で見つからない依存関係があります。 Linux のバージョンに応じてこれらの依存関係をインストールするのにには、次のコマンドを使用します。
-   
+   > Debian、Redhat、および Ubuntu で、依存関係が見つからないことがあります。これらの依存関係をインストールするために、Linux のバージョンに応じて、次のコマンドを使用してください。
+
 
    **Debian:** 
    ```bash
@@ -94,28 +94,28 @@ ms.lasthandoff: 03/08/2018
    ```
 
 
-## <a name="uninstall-sql-operations-studio-preview"></a>SQL 操作 Studio (プレビュー) アンインストールします。
+## <a name="uninstall-sql-operations-studio-preview"></a>SQL Operations Studio (プレビュー) のアンインストール
 
-インストールした場合[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]すべての Windows アプリケーションを削除するのと同じ方法をアンインストールし、Windows インストーラーを使用します。
+Windows インストーラーを使用して [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] をインストールした場合、他の Windows アプリケーションの削除と同じ方法でアンインストールしてください。
 
-インストールした場合[!INCLUDE[name-sos-short](../includes/name-sos-short.md)].zip やその他のアーカイブは、単にファイルを削除します。
+.zip またはその他のアーカイブから [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] をインストールした場合、ファイルを削除してください。
 
 ## <a name="supported-operating-systems"></a>サポートされるオペレーティング システム
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows、macOS など、Linux で実行され、次のプラットフォームではサポートされています。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] は Windows、macOS、そして Linux で動作し、次のプラットフォームでサポートされています。
 
 ### <a name="windows"></a>Windows
 - Windows 10 (64 ビット)
 - Windows 8.1 (64 ビット)
 - Windows 8 (64 ビット)
-- Windows 7 (SP1) (64 ビット) - 必要があります[KB2533623](https://www.microsoft.com/en-us/download/details.aspx?id=26767)
+- Windows 7 (SP1) (64 ビット) - [KB2533623](https://www.microsoft.com/en-us/download/details.aspx?id=26767) が必要です
 - Windows Server 2016
 - Windows Server 2012 R2 (64 ビット)
 - Windows Server 2012 (64 ビット)
 - Windows Server 2008 R2 (64 ビット)
 
 ### <a name="macos"></a>macOS
-- macOS 10.13 高 Sierra
+- macOS 10.13 High Sierra
 - macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux
@@ -124,8 +124,8 @@ ms.lasthandoff: 03/08/2018
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
-## <a name="check-for-updates"></a>更新を確認する
-最新の更新プログラムを確認するに をクリックし、ウィンドウの左下の歯車アイコンをクリックして**更新プログラムの確認**
+## <a name="check-for-updates"></a>アップデートの確認
+最新のアップデートを確認するためには、ウィンドウの左下にある歯車アイコンをクリックして **更新プログラムの確認** をクリックしてください。
 
 ## <a name="next-steps"></a>次の手順
 
