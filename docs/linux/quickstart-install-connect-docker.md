@@ -1,6 +1,6 @@
 ---
-title: "Docker で SQL Server 2017 の使用を開始する | Microsoft Docs"
-description: "このクイック スタートでは、Docker を使用して SQL Server 2017 コンテナー イメージを実行する方法を示します。 その次に、sqlcmd でデータベースを作成し、クエリを実行します。"
+title: Docker で SQL Server 2017 の使用を開始する | Microsoft Docs
+description: このクイック スタートでは、Docker を使用して SQL Server 2017 コンテナー イメージを実行する方法を示します。 その次に、sqlcmd に接続して、最初のデータベースを作成し、クエリを実行します。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 03/07/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
@@ -27,14 +27,14 @@ ms.lasthandoff: 03/08/2018
 
 このクイック スタートでは、Docker を使用して SQL Server 2017 コンテナー イメージ [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) をプルして実行します。 次に、**sqlcmd** と接続して最初のデータベースを作成し、クエリを実行します。
 
-このイメージは Ubuntu 16.04 に基づく Linux で実行されている SQL Server で構成されます。 イメージは Linux の Docker エンジン 1.8+ または Mac/Windows 用 Docker で使用することができます。
+このイメージは、Ubuntu 16.04 の Linux で動作する SQL Server で構成されます。 Linux の Docker エンジン 1.8 + または Docker for Mac/Windows から使用できます。
 
 > [!NOTE]
-> このクイック スタートでは特に mssql-server-**linux**イメージを使用することに焦点を当てます。 Windows イメージについては言及しませんが、[mssql-server-windows-developer Docker Hub ページ](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)で詳細を確認できます。
+> このクイック スタートは mssql-server-**linux** イメージの使用に特にフォーカスしています。 Windows イメージについては触れていませんが、[mssql-server-windows-developer Docker Hub ページ](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/) で詳細情報を得ることができます。
 
 ## <a id="requirements"></a> 前提条件
 
-- サポートされているいずれかの Linux ディストリビューションの Docker エンジン 1.8+ または Mac/Windows 用 Docker。 詳細については、「[Install Docker](https://docs.docker.com/engine/installation/)」(Docker をインストールする) を参照してください。
+- サポートされている任意の Linux ディストリビューションの Docker エンジン 1.8 + または Docker for Mac/Windows。 詳細については「[Install Docker](https://docs.docker.com/engine/installation/)」(Docker のインストール) を参照してください。
 - 2 GB 以上のディスク領域
 - 2 GB 以上の RAM
 - [SQL Server on Linux のシステム要件](sql-server-linux-setup.md#system)。
@@ -51,7 +51,7 @@ ms.lasthandoff: 03/08/2018
    docker pull microsoft/mssql-server-linux:2017-latest
    ```
 
-   前のコマンドから、最新の SQL Server 2017 コンテナー イメージがプルされます。 特定のイメージをプルしたい場合、コロンとタグ名 (たとえば `microsoft/mssql-server-linux:2017-GA`) を追加します。 利用可能なすべてのイメージを表示する方法は、[mssql-server-linux Docker Hub ページ](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)を参照してください。
+   前のコマンドは、最新の SQL Server 2017 コンテナー イメージをプルします。 特定のイメージをプルするには、コロンとタグ名を追加します (たとえば、 `microsoft/mssql-server-linux:2017-GA`)。 利用可能なすべてのイメージを表示するには [mssql-server-linux Docker hub ページ](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/) を参照してください。
    
    この記事でバッシュ コマンド`sudo`を使用します。 Macos、`sudo`は必要ありません。 使用したくない場合は、Linux 上`sudo`Docker を実行することができます、 **docker**をグループ化し、そのグループにユーザーを追加します。 詳細については、次を参照してください。 [Linux のインストール後のステップ](https://docs.docker.com/install/linux/linux-postinstall/)です。
 
@@ -85,7 +85,7 @@ ms.lasthandoff: 03/08/2018
    | **--name sql1** | ランダムに生成されたものではなく、コンテナーのカスタム名を指定します。 2 つ以上のコンテナーを実行する場合、同じ名前を再利用することはできません。 |
    | **microsoft/mssql-server-linux:2017-latest** | SQL Server 2017 Linux コンテナー イメージ。 |
 
-1. Docker コンテナーを表示するには、`docker ps` コマンドを使用します。
+1. Docker コンテナーを表示するには、 `docker ps` コマンドを使用します。
 
    ```bash
    sudo docker ps -a
@@ -110,17 +110,17 @@ SELECT @@SERVERNAME,
     SERVERPROPERTY('ServerName')
 ```
 
-ターゲット コンテナーを特定しやすくするため、`-h` と `--name` を同じ値に設定することをお勧めします。
+`-h` と `--name` を同じ値に設定することは、対象のコンテナーを特定しやすくするためのひとつの良い方法です。
 
-## <a name="change-the-sa-password"></a>SA パスワードの変更
+## <a name="change-the-sa-password"></a>SA パスワードを変更する 
 
 [!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 
 ## <a name="connect-to-sql-server"></a>SQL Server への接続
 
-次の手順ではコンテナー内で SQL Server に接続するために SQL Server コマンド ライン ツールである **sqlcmd** を使用します。
+次の手順では、コンテナー内の SQL Server のコマンドライン ツール **sqlcmd** を使用して、SQL Server に接続します。 
 
-1. 実行中のコンテナー内で対話型の Bash シェルを開始するには、`docker exec -it` コマンドを使用します。 次の例の `sql1` は、コンテナーを作成したときに `--name` パラメーターによって指定された名前です。
+1. コマンド `docker exec -it` を使用して、実行中のコンテナー内の対話型 bash シェルを起動します。 次の例にある `sql1` は、コンテナーを作成したときに `--name` パラメーターで指定した名前です。 
 
    ```bash
    sudo docker exec -it sql1 "bash"
@@ -139,11 +139,11 @@ SELECT @@SERVERNAME,
    > [!TIP]
    > コマンド ラインでパスワードを省略すると、入力を求められます。
 
-1. 成功すると、**sqlcmd** コマンド プロンプト `1>` が表示されます。
+1. 成功すると、**sqlcmd** のコマンド プロンプトである `1>` が表示されます。 
 
 ## <a name="create-and-query-data"></a>データの作成とクエリ
 
-以下のセクションでは、**sqlcmd** と Transact-SQL を使用して新しいデータベースを作成し、データを追加して簡単なクエリを実行します。
+次のセクションでは、**sqlcmd** と Transact-SQL を使用して新しいデータベースを作成し、データを追加して簡単なクエリを実行します。 
 
 ### <a name="create-a-new-database"></a>新しいデータベースの作成
 
@@ -171,7 +171,7 @@ SELECT @@SERVERNAME,
 
 次に、新しいテーブル `Inventory` を作成し、2 つの新しい行を挿入します。
 
-1. **sqlcmd** のコマンド プロンプトで、コンテキストを新しい `TestDB` データベースに切り替えます。
+1. **sqlcmd** のコマンド プロンプトで、新しい `TestDB` データベースのコンテキストに切り替えます。 
 
    ```sql
    USE TestDB
@@ -195,7 +195,7 @@ SELECT @@SERVERNAME,
    GO
    ```
 
-### <a name="select-data"></a>データの選択
+### <a name="select-data"></a>データの取得
 
 ここで、`Inventory` テーブルからデータを返すクエリを実行します。
 
@@ -219,9 +219,9 @@ SELECT @@SERVERNAME,
    QUIT
    ```
 
-1. コンテナー内で対話型のコマンド プロンプトを終了するには、`exit` と入力します。 コンテナーは、対話型の Bash シェルを終了した後も引き続き実行されます。
+1. コンテナー内の対話型のコマンド プロンプトを終了するには、`exit`と入力します。 コンテナーは、対話型 bash シェルを終了した後に実行を続けます。
 
-## <a id="connectexternal"></a> コンテナーの外からの接続
+## <a id="connectexternal"></a> コンテナー外部から接続する
 
 SQL 接続をサポートする外部の Linux、Windows、macOS ツールから、Docker コンピューターの SQL Server インスタンスに接続することもできます。
 
@@ -239,16 +239,16 @@ SQL 接続をサポートする外部の Linux、Windows、macOS ツールから
    sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourNewStrong!Passw0rd>"
    ```
 
-1. Transact-SQL コマンドを実行します。 終わったら、`QUIT` と入力します。
+1. Transact-SQL コマンドを実行します。 終了したら `QUIT` を入力します。
 
 SQL Server に接続するその他の一般的なツールには次のものがあります。
 
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
-- [Windows の SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
+- [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-develop-use-ssms.md)
 - [SQL Server Operations Studio (プレビュー)](../sql-operations-studio/what-is.md)
 - [mssql-cli (プレビュー)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
-## <a name="remove-your-container"></a>コンテナーの削除
+## <a name="remove-your-container"></a>コンテナーを削除する
 
 このチュートリアルで使用した SQL Server のコンテナーを削除する場合は、次のコマンドを実行します。
 
@@ -271,8 +271,8 @@ Docker の SQL Server コンテナー イメージを使用すると、開発と
 
 > [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T152/player]
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 データベース バックアップファイルをコンテナーに復元する方法については、「[Restore a SQL Server database in a Linux Docker container](tutorial-restore-backup-in-sql-server-container.md)」(Linux の Docker コンテナーで SQL Server データベースを復元する) を参照してください。 複数のコンテナーの実行、データの永続性、トラブルシューティングなどのその他のシナリオを調べるには、「[Configure SQL Server 2017 container images on Docker](sql-server-linux-configure-docker.md)」(Docker で SQL Server 2017 コンテナー イメージを構成する) を参照してください。
 
-リソース、フィードバック、既知の問題について、[mssql-docker GitHub リポジトリ](https://github.com/Microsoft/mssql-docker)も参照してください。
+また、リソース、フィードバック、既知の問題については [mssql-docker GitHub リポジトリ](https://github.com/Microsoft/mssql-docker)をご確認ください。
