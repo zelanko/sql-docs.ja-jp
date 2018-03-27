@@ -1,15 +1,16 @@
 ---
-title: "SQL Server Profiler の実行 |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server Profiler の実行 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 7/7/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], starting
@@ -19,7 +20,7 @@ helpviewer_keywords:
 - SQL Server Profiler, running
 - running SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -33,7 +34,7 @@ ms.lasthandoff: 01/17/2018
 # <a name="run-sql-server-profiler"></a>SQL Server Profiler の実行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]実行することができます[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、さまざまな方法でのトレースの収集をサポートするために出力をさまざまなシナリオでします。 開始することができます[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、Windows 10 から**開始**] メニューの [から、**ツール**メニューの[!INCLUDE[ssDE](../../includes/ssde-md.md)]チューニング アドバイザーと複数の場所から[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。  
   
-初めて起動すると[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]選択**新しいトレース**から、**ファイル**メニューで、アプリケーションが表示されます、**サーバーへの接続**を指定する ダイアログ ボックス、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに接続します。  
+[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を初めて起動し、**ファイル** メニューから **新しいトレース** を選択すると、アプリケーションは **サーバーへの接続** のダイアログ ボックスを表示しますので、その画面から接続先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを指定することができます。  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>Windows 10 の [スタート] メニューから SQL Server Profiler を起動するには  
 -  [Windows] をクリックして**開始**アイコンまたはキーを押して、Windows キーおよび"SQL Server Profiler 17"の入力を開始します。 ときに、 **SQL Server Profiler 17**にタイルが表示されたら、 をクリックします。   
 
