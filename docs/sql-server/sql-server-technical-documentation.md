@@ -1,15 +1,15 @@
 ---
-title: "SQL Server のドキュメント | Microsoft Docs"
+title: SQL Server のドキュメント | Microsoft Docs
 ms.date: 02/28/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.portal.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - Books Online [SQL Server], home page
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
-caps.latest.revision: 
+caps.latest.revision: ''
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 84c0a18929883f0a58e75ed5ce20900d0bdf09e7
-ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
+ms.openlocfilehash: 8868bbce17a31e72d55cbdca3e7badb00e66666e
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sql-server-documentation"></a>SQL Server のドキュメント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +69,13 @@ SQL Server は Microsoft データ プラットフォームの中心部です。
 |![マスター データ サービス](../sql-server/media/master-data-services.png)|**[マスター データ サービス](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] は、マスター データ管理のための [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ソリューションです。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で構築されたソリューションを使用すると、正しい情報に基づいたレポート作成と分析を行うことができます。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]を使用すると、マスター データの中央リポジトリを作成できます。これにより、時間と共に変化するマスター データの記録を、監査およびセキュリティ保護が可能な形で管理できます。|
 
 ## <a name="migrate-and-move-data"></a>データの移行と移動
+
 - [SQL Server インポートおよびエクスポート ウィザードを使用してデータをインポートおよびエクスポートする](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
 - [SQL Server データベースを Azure SQL Database に移行する](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 
 ## <a name="earlier-sql-server-versions"></a>以前の SQL Server のバージョン
+
 - [SQL Server Update Center - サポート対象のすべてのバージョンのリンクと情報](https://msdn.microsoft.com/library/ff803383.aspx)
 - [SQL Server 2014 のドキュメント](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [SQL Server 2012 のドキュメント](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)
@@ -81,9 +83,12 @@ SQL Server は Microsoft データ プラットフォームの中心部です。
 - [SQL Server 2008 のドキュメント](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx)
 - [SQL Server 2005 アーカイブ ドキュメント](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)
 
-## <a name="samples"></a>サンプル  
+## <a name="samples"></a>サンプル
+
 - [Wide World Importers のサンプル データベース](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)
 - [SQL Server 2016 の AdventureWorks サンプル データベースとスクリプト](https://www.microsoft.com/download/details.aspx?id=49502) 
-- [GitHub の SQL Server サンプル](https://github.com/Microsoft/sql-server-samples) 
-   
+- [GitHub の SQL Server サンプル](https://github.com/Microsoft/sql-server-samples)
+
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

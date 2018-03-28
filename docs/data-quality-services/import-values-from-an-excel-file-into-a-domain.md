@@ -1,31 +1,32 @@
 ---
-title: "値を Excel ファイルからドメインへインポートする | Microsoft Docs"
-ms.custom: 
+title: 値を Excel ファイルからドメインへインポートする | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.importfailing.f1
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d4e8bb9372d6e9e19e674160f9039422cd87ebc
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: c6331f1f695bb2e1c9974d27d8af76e03da55315
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>値を Excel ファイルからドメインへインポートする
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で Excel ファイルからドメインにデータをインポートする方法について説明します。 Excel ファイルを使用して [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションにドメイン値をインポートすることで、ナレッジの生成処理を簡略化し、時間と労力を節約します。 この処理では、有効なデータ値の一覧が保存された Excel ファイルまたはテキスト ファイルを使用して、それらの値をドメインにインポートすることができます。 Excel ファイルからドメインにドメイン値をインポートしたり、ナレッジ ベースにドメインをインポートしたりできます (ナレッジ ベースへのドメインのインポートについて詳しくは、「[ナレッジ検出でドメインを Excel ファイルからインポートする](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)」をご覧ください)。Excel ファイルへのエクスポートはサポートされていません。  
@@ -109,7 +110,7 @@ ms.lasthandoff: 01/19/2018
   
 -   各行はドメイン値を表します。  
   
--   先頭の行は、 **[先頭の行を見出しとして使用]** チェック ボックスの設定に応じて、ドメインを表すか、最初のデータ値またはレコードになる .xslx ファイルまたは .xls ファイルを使用する場合に **Use First Row as header** をオンにすると、null の列名は自動的に F*n*に変換され、重複する列には番号が付加されます。  
+-   先頭の行は、 **[先頭の行を見出しとして使用]** チェック ボックスの設定に応じて、ドメインを表すか、最初のデータ値またはレコードになる .xslx ファイルまたは .xls ファイルを使用する場合に **[先頭の行を見出しとして使用]** をオンにすると、null の列名は自動的に F*n*に変換され、重複する列には番号が付加されます。  
   
 -   インポート操作を完了前に取り消した場合、操作がロールバックされ、データはインポートされません。  
   
