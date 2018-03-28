@@ -1,27 +1,28 @@
 ---
-title: "Pdo::errorcode |Microsoft ドキュメント"
-ms.custom: 
+title: PDO::errorCode | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5864b1d8-6814-41cd-a88d-415124484c13
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3342ebf997f8cd915efe939ead8baa5e868eb0f2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 143a7bef0a0be2d125068a7f003b0b941ff39617
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdoerrorcode"></a>PDO::errorCode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,9 +40,9 @@ mixed PDO::errorCode();
 PDO::errorCode は、5 文字の SQLSTATE を文字列として返すか、データベース ハンドルに操作がない場合、NULL を返されます。  
   
 ## <a name="remarks"></a>解説  
-PDO_SQLSRV ドライバーの PDO::errorCode は、一部の操作の完了時に警告を返します。 たとえば、接続に成功すると、PDO::errorCode は "01000" を返します。これは SQL_SUCCESS_WITH_INFO を示します。  
+PDO_SQLSRV ドライバーの pdo::errorcode は、一部の操作に関する警告を返します。 たとえば、正常に接続する、pdo::errorcode「01000」を示す SQL_SUCCESS_WITH_INFO を返します。  
   
-PDO::errorCode は、データベース接続で直接実行された操作のエラー コードのみを返します。 PDO::prepare または PDO::query で PDOStatement インスタンスを作成し、ステートメント オブジェクトでエラーを生成すると、PDO::errorCode はそのエラーを取得しません。 特定のステートメント オブジェクトで実行された操作のエラー コードを返すには、PDOStatement::errorCode を呼び出す必要があります。  
+PDO::errorCode は、データベース接続で直接実行された操作のエラー コードのみを返します。 Pdo::prepare で PDOStatement インスタンスを作成するか、または pdo::query し、エラーは、ステートメント オブジェクトで、pdo::errorcode はそのエラーを取得できません。 特定のステートメント オブジェクトで実行された操作のエラー コードを返すには、PDOStatement::errorCode を呼び出す必要があります。  
   
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
@@ -59,6 +60,7 @@ print $conn->errorCode();
 ```  
   
 ## <a name="see-also"></a>参照  
-[PDO クラス](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO クラス](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

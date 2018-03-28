@@ -1,30 +1,30 @@
 ---
-title: "T-SQL 言語要素の分析プラットフォーム システム Parallel Data Warehouse |Microsoft ドキュメント"
+title: T-SQL 言語要素の分析プラットフォーム システム Parallel Data Warehouse |Microsoft ドキュメント
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "TRANSACT-SQL (T-SQL) 言語要素の分析 Platform System (APS) SQL Server 並列データ ウェアハウス (PDW)。"
+description: TRANSACT-SQL (T-SQL) 言語要素の分析 Platform System (APS) SQL Server 並列データ ウェアハウス (PDW)。
 services: sql-data-warehouse
 documentationcenter: NA
-editor: 
+editor: ''
 ms.assetid: ea0b9a3e-e489-458e-addc-cc153e5cc158
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 35c8de2f1105bbbda05642b993d8fe0c88d76f39
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 0fa153859632739fe626a92dbf8d741a879dd74f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="language-elements"></a>言語要素
 TRANSACT-SQL (T-SQL) 言語要素の分析 Platform System (APS) SQL Server 並列データ ウェアハウス (PDW)。
@@ -61,7 +61,7 @@ TRANSACT-SQL (T-SQL) 言語要素の分析 Platform System (APS) SQL Server 並�
 * [- (負号)](../t-sql/language-elements/unary-operators-negative.md)
 * [- (減算)](../t-sql/language-elements/subtract-transact-sql.md)
 * [* (乗算)](../t-sql/language-elements/multiply-transact-sql.md)
-* [/ (Divide)](../t-sql/language-elements/divide-transact-sql.md)
+* [/ (除算)](../t-sql/language-elements/divide-transact-sql.md)
 * [剰余](../t-sql/language-elements/modulo-transact-sql.md)
 
 ## <a name="wildcard-characters-to-match"></a>一致するワイルドカード文字
@@ -71,7 +71,7 @@ TRANSACT-SQL (T-SQL) 言語要素の分析 Platform System (APS) SQL Server 並�
 * [> = (優れた以上)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [< = (以下を)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<> (等しくない)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
-* [! = (等しくない)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
+* [\!= (等しくない)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
@@ -266,9 +266,9 @@ TRANSACT-SQL (T-SQL) 言語要素の分析 Platform System (APS) SQL Server 並�
 ## <a name="set-statements"></a>SET ステートメント
 * [[SET ANSI_DEFAULTS]](../t-sql/statements/set-ansi-defaults-transact-sql.md)
 * [SET ANSI_NULL_DFLT_OFF](../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)
-* [セット ANSI_NULL_DFLT_ON](../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)
-* [[SET ANSI_NULLS]](../t-sql/statements/set-ansi-nulls-transact-sql.md)
-* [[SET ANSI_PADDING]](../t-sql/statements/set-ansi-padding-transact-sql.md)
+* [SET ANSI_NULL_DFLT_ON](../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)
+* [SET ANSI_NULLS](../t-sql/statements/set-ansi-nulls-transact-sql.md)
+* [SET ANSI_PADDING](../t-sql/statements/set-ansi-padding-transact-sql.md)
 * [[SET ANSI_WARNINGS]](../t-sql/statements/set-ansi-warnings-transact-sql.md)
 * [[SET ARITHABORT]](../t-sql/statements/set-arithabort-transact-sql.md)
 * [SET ARITHIGNORE](../t-sql/statements/set-arithignore-transact-sql.md)

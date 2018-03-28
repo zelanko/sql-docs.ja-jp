@@ -1,33 +1,35 @@
 ---
-title: "方法: SQLSRV ドライバーを使用してパラメーターの方向を指定 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: SQLSRV ドライバーを使用してパラメーターの方向を指定 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: stored procedure support
+helpviewer_keywords:
+- stored procedure support
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 692d1cd432a7d156a4bb9d8cc2c3bfcf57c02d6d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b4004fa498c01e73c99204bb0d36ac4bded66a9b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用してパラメーターの方向を指定する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-このトピックでは、ストアド プロシージャを呼び出す際に、SQLSRV ドライバーを使用して、パラメーターの方向を指定する方法について説明します。 パラメーターを構築するときに、パラメーターの方向が指定されているに注意してください (手順 3) に渡される配列[sqlsrv_query](../../connect/php/sqlsrv-query.md)または[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)です。  
+このトピックでは、ストアド プロシージャを呼び出す際に、SQLSRV ドライバーを使用して、パラメーターの方向を指定する方法について説明します。 パラメーターの方向に渡されるパラメーター配列 (手順 3) を構築する場合は、指定された[sqlsrv_query](../../connect/php/sqlsrv-query.md)または[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)です。  
   
 ### <a name="to-specify-parameter-direction"></a>パラメーターの方向を指定するには  
   
@@ -38,7 +40,7 @@ ms.lasthandoff: 11/18/2017
     ```  
   
     > [!NOTE]  
-    > 正規の構文を使用してストアド プロシージャを呼び出すことをお勧めします。 正規の構文の詳細については、「 [ストアド プロシージャの呼び出し](http://go.microsoft.com/fwlink/?linkid=119517)」を参照してください。  
+    > 正規の構文を使用してストアド プロシージャを呼び出すことをお勧めします。 正規の構文の詳細については、次を参照してください。[ストアド プロシージャの呼び出し](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)です。  
   
 2.  Transact-SQL クエリ内のプレースホルダーに対応する PHP 変数を初期化または更新します。 たとえば、次のコードは、UpdateVacationHours ストアド プロシージャの 2 つのパラメーターを初期化します。  
   
@@ -61,7 +63,7 @@ ms.lasthandoff: 11/18/2017
   
     一般に、パラメーターの方向を指定する構文を理解するため、 *$var1*、 *$var2*、および *$var3* はそれぞれ入力、出力、および双方向のパラメーターに対応するものとします。 パラメーターの方向は、次の方法のいずれかで指定できます。  
   
-    -   暗黙的に入力パラメーターを指定し、明示的に出力パラメーターを指定し、明示的に双方向のパラメーターを指定します。  
+    -   暗黙的にパラメーターを指定、入力、出力パラメーターを明示的に指定して双方向のパラメーターを明示的に指定します。  
   
         ```  
         array(   
@@ -71,7 +73,7 @@ ms.lasthandoff: 11/18/2017
                );  
         ```  
   
-    -   明示的入力パラメーターを指定し、明示的に出力パラメーターに指定し、明示的に双方向のパラメーターを指定します。  
+    -   入力パラメーターを明示的に指定、出力パラメーターを明示的に指定および双方向のパラメーターを明示的に指定します。  
   
         ```  
         array(   
@@ -88,6 +90,7 @@ ms.lasthandoff: 11/18/2017
     ```  
   
 ## <a name="see-also"></a>参照  
-[方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+[方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

@@ -1,29 +1,29 @@
 ---
-title: "SQL Server での Python の相互運用性 |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server での Python の相互運用性 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/03/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 1edd059c283a0f780f6dd1419d70ed2bedb23f03
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 3477c941d81f860996776cf89bfc3ffe7dbc81af
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="python-interoperability-with-sql-server"></a>SQL Server での Python の相互運用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このトピックは、この機能を有効にした場合にインストールされている Python コンポーネントについて説明**Machine Learning Services (In-database)**言語としての Python を選択します。
+機能を有効にした場合にインストールされている Python コンポーネントを説明**Machine Learning Services (In-database)**言語としての Python を選択します。
 
 ## <a name="python-components"></a>Python コンポーネント
 

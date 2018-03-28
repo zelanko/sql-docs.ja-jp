@@ -1,33 +1,35 @@
 ---
-title: "方法: Windows 認証を使用して接続 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/19/2017
+title: '方法: Windows 認証を使用して接続 |Microsoft ドキュメント'
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: connecting to the server, Windows Authentication
+helpviewer_keywords:
+- connecting to the server, Windows Authentication
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
-caps.latest.revision: "35"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7032726897facd93e88007a879e94c40dda809c2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7b82c96b78bb81e1b8749f6a0d3899662c54d780
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>方法: Windows 認証を使用して接続する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の既定では、Windows 認証を使用して SQL Server に接続します。 つまり、サーバーに接続するときに、ほとんどのシナリオでエンドユーザーの ID ではなく、Web サーバーのプロセス ID またはスレッド ID (Web サーバーが権限の借用を使用している場合) が使用されるという点が重要です。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の既定では、Windows 認証を使用して SQL Server に接続します。 ほとんどの場合、つまり、Web サーバーのプロセス id またはスレッド id (場合、Web サーバーは、権限借用を使用して) を使用して、エンドユーザーの id ではなく、サーバーに接続することに注意してくださいに重要です。  
   
 Windows 認証を使用して SQL Server に接続する場合は、次の点を考慮する必要があります。  
   
@@ -49,7 +51,7 @@ Windows 認証を使用できない場合、「 [How to: Connect Using SQL Serve
 ## <a name="example"></a>例  
 次の例では、Windows 認証で [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の SQLSRV ドライバーを使用して、SQL Server のローカル インスタンスに接続します。 接続が確立すると、サーバーに対して、データベースにアクセスしているユーザーのログインが照会されます。  
   
-この例では、SQL Server および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 ブラウザーからこの例を実行すると、すべての出力はブラウザーに書き込まれます。  
+例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 ブラウザーからこの例を実行すると、すべての出力はブラウザーに書き込まれます。  
   
 ```  
 <?php  
@@ -110,12 +112,19 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ```  
   
 ## <a name="see-also"></a>参照  
-[How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
-[プログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
-[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
-[SQL Server ログインを作成する方法](http://go.microsoft.com/fwlink/?LinkId=106325)  
-[データベース ユーザーを作成する方法](http://go.microsoft.com/fwlink/?LinkId=106327)  
-[ユーザー、ロール、およびログインの管理](http://go.microsoft.com/fwlink/?LinkId=106329)  
-[ユーザーとスキーマの分離](http://go.microsoft.com/fwlink/?LinkId=106330)  
-[オブジェクト アクセス許可 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=106332)  
+[方法: SQL Server 認証を使用して接続する](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+
+[For PHP for SQL Server の Microsoft drivers ガイドのプログラミング](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[方法: SQL Server ログインの作成](../../relational-databases/security/authentication-access/create-a-login.md)
+
+[方法: データベース ユーザーの作成](../../relational-databases/security/authentication-access/create-a-database-user.md)
+
+[ユーザー、ロール、およびログインの管理](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[ユーザーとスキーマの分離](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[オブジェクト アクセス許可 (TRANSACT-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

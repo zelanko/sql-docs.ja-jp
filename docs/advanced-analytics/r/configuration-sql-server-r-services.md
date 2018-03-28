@@ -1,26 +1,26 @@
 ---
-title: "構成と管理 |Microsoft ドキュメント"
-ms.custom: 
+title: 構成と管理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/31/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e0fd4554-60c6-4181-ac4c-2e366fb434f6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 63448281d0e1d135a52bc1c9d0c8afa097a87596
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f130f4a300351bb8384362affddc595aadf92148
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configuration-and-management"></a>構成と管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="r-package-management"></a>R パッケージの管理
 
-これらのトピックでは、SQL Server インスタンスに新しい R パッケージをインストール、R パッケージのライブラリの管理、およびデータベースの復元後にパッケージのライブラリを復元する方法について説明します。
+これらの記事では、SQL Server インスタンスに新しい R パッケージをインストール、R パッケージのライブラリの管理、およびデータベースの復元後にパッケージのライブラリを復元する方法について説明します。
 
 + [R パッケージのインストールと管理](installing-and-managing-r-packages.md)
 + [新しい R パッケージをインストールします。](install-additional-r-packages-on-sql-server.md)
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="service-configuration"></a>サービスの構成
 
-これらのトピックでは、拡張サービスに関連付けられているセキュリティ プリンシパルを管理する方法と、基になるサービス アーキテクチャに変更を加える方法について説明します。
+これらの記事では、拡張サービスに関連付けられているセキュリティ プリンシパルを管理する方法と、基になるサービス アーキテクチャに変更を加える方法について説明します。
 
 + [セキュリティに関する考慮事項](security-considerations-for-the-r-runtime-in-sql-server.md)
 + [SQL Server R サービスのユーザー アカウント プールを変更する](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="resource-governance"></a>リソース管理
 
-これらのトピックでは、Enterprise Edition でリソース ガバナー機能ボタンを使用して R または Python のジョブのリソース管理を実装する方法について説明します。
+これらの記事では、Enterprise Edition でリソース ガバナー機能ボタンを使用して R または Python のジョブのリソース管理を実装する方法について説明します。
 
 + [R Services のリソース管理](../../advanced-analytics/r/resource-governance-for-r-services.md)
 + [R のリソース プールを作成する方法](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
@@ -73,7 +73,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="initial-setup"></a>初期セットアップ
 
-初期セットアップと構成に関連する追加のヘルプは、次のトピックではあります。
+初期セットアップと構成に関連する追加のヘルプは、次の記事ではあります。
 
 + [アップグレードとインストールに関してよく寄せられる質問](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 + [セキュリティに関する考慮事項](../r/security-considerations-for-the-r-runtime-in-sql-server.md)

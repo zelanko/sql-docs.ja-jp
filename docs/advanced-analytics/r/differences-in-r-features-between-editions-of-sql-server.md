@@ -1,26 +1,26 @@
 ---
-title: "SQL Server マシン ラーニング Services のエディションで利用可能な機能 |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server マシン ラーニング Services のエディションで利用可能な機能 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 4322211bcc3a5466976368b9562ed3e95ad7e331
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 50c9f2c8f1039ce0bba25ed9c6b7c5564c1d10d2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="feature-availability-across-editions-of-sql-server-machine-learning-services"></a>エディションの SQL Server マシン ラーニング Services 全体で利用可能な機能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,9 +28,9 @@ ms.lasthandoff: 03/21/2018
  SQL Server 2016 および SQL Server 2017 マシン学習機能を利用します。 この記事は、機能を提供するエディションを一覧表示、特定のエディションに適用される制限事項について説明し、特定のエディションでのみ使用できる機能の一覧します。
 
 
-## <a name="sql-server-2017-machine-learning-features"></a>SQL Server 2017 機械学習機能
+## <a name="sql-server-2017-features"></a>SQL Server 2017 機能
 
-Enterprise および Developer エディションでは、エンタープライズ インストール用のソリューションをビルドするには同じコストをかけずにできるように、同じ機能カバレッジがあります。 エディションは、機能的 equivlanet、Developer Edition の使用は運用環境でサポートされていません。
+Enterprise および Developer エディションでは、エンタープライズ インストール用のソリューションをビルドするには同じコストをかけずにできるように、同じ機能カバレッジがあります。 各エディションでは、機能的に等価、Developer Edition の使用は運用環境でサポートされていません。
 
 基本と高度な統合の違いは、小数点以下桁数です。 高度な統合は、コンピューターに対応できるサイズを問わず、データ セットの並列処理のすべての使用可能なコアを使用できます。 基本的な統合は、2 コアとメモリに収まるデータ セットに制限されています。 
 

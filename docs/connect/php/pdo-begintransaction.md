@@ -1,27 +1,28 @@
 ---
-title: "Pdo::begintransaction |Microsoft ドキュメント"
-ms.custom: 
+title: Pdo::begintransaction |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4d5db438-9df7-4d22-9907-3ddc63bd2220
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 131edab231009e63c32a3c5b7a4d6ffccfc7d407
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 51a04874f23dcae77347d85ad0ebd284a1e3b03c
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,13 +40,13 @@ bool PDO::beginTransaction();
 メソッドの呼び出しに成功した場合は true、それ以外の場合は false。  
   
 ## <a name="remarks"></a>解説  
-PDO::beginTransaction で開始されたトランザクションは、 [PDO::commit](../../connect/php/pdo-commit.md) または [PDO::rollback](../../connect/php/pdo-rollback.md) が呼び出されたときに終了します。  
+Pdo::begintransaction で開始されたトランザクションが終了[pdo::commit](../../connect/php/pdo-commit.md)または[pdo::rollback](../../connect/php/pdo-rollback.md)と呼びます。  
   
 PDO::beginTransaction は PDO::ATTR_AUTOCOMMIT の値によって影響を受けず、PDO::ATTR_AUTOCOMMIT の値に影響を与えません。  
   
 前の PDO::beginTransaction が PDO::rollback または PDO::commit で終了する前に PDO::beginTransaction を呼び出すことはできません。  
   
-このメソッドが失敗した場合、接続は自動コミット モードに戻ります。  
+接続は、このメソッドが失敗した場合に、自動コミット モードを返します。  
   
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
@@ -66,6 +67,7 @@ PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]
 ```  
   
 ## <a name="see-also"></a>参照  
-[PDO クラス](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO クラス](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

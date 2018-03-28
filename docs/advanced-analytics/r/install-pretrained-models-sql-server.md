@@ -1,61 +1,62 @@
 ---
-title: "事前トレーニング済みの機械学習モデルを SQL Server のインストール |Microsoft ドキュメント"
+title: 事前トレーニング済みの機械学習モデルを SQL Server のインストール |Microsoft ドキュメント
 ms.date: 03/14/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+caps.latest.revision: ''
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: fd02766e4020e6f522d50bbd471c5f84c66a998b
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: a1228597a1781ca13952a249f554bdea0a990a4d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="install-pretrained-machine-learning-models-on-sql-server"></a>事前トレーニング済みの機械学習の SQL Server 上のモデルをインストールします。
+# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>事前トレーニング済みの機械学習の SQL Server 上のモデルをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、事前トレーニング済みモデルを SQL Server のインスタンスに追加済みの R Services または Machine Learning のサービスのインストール方法について説明します。
+この記事では、事前トレーニング済みモデルを SQL Server のインスタンスに追加済みの R Services または SQL Server の Machine Learning のサービスのインストール方法について説明します。 
 
-センチメント分析またはイメージの特性付けなどのタスクを実行する必要があり、大規模なデータセットを取得するか、複雑なモデルをトレーニングするためのリソースは持っていないユーザーを支援する MicrosoftML に含まれる事前トレーニング済みのモデルを作成しました。 Machine Learning サーバー チームが作成され、テキストおよびイメージの処理を効率的に作業を開始するため、これらのモデルをトレーニングします。 詳細については、次を参照してください。、[リソース](#bkmk_resources)この記事のセクションです。
+センチメント分析またはイメージの特性付けなどのタスクを実行する必要があり、大規模なデータセットを取得するか、複雑なモデルをトレーニングするためのリソースは持っていないユーザーを支援する事前トレーニング済みのモデルが存在します。 Machine Learning サーバー チームが作成され、テキストおよびイメージの処理を効率的に作業を開始するため、これらのモデルをトレーニングします。 詳細については、次を参照してください。、[リソース](#bkmk_resources)この記事のセクションです。
 
-SQL Server のデータを事前トレーニング済みモデルを使用する方法の例は、SQL Server の Machine Learning チームによってこのブログを参照してください。
+SQL Server のデータを事前トレーニング済みモデルを使用する方法の例を参照してくださいこのブログでは、SQL Server の Machine Learning チーム: [SQL Server の Machine Learning のサービスでの Python のセンチメント分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
-+ [SQL Server の Machine Learning のサービスでの Python のセンチメント分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
+## <a name="pre-trained-model-availability"></a>事前トレーニング済みモデルの可用性
 
-## <a name="install-the-pre-trained-models"></a>事前トレーニング済みモデルをインストールします。
+事前トレーニング済みモデルは、Microsoft Machine Learning のサーバー (または Microsoft R Server、SQL Server 2016 のインストールにモデルを追加する場合) のインストール メディアを使用してインストールされます。 空き Developer edition を使用して、モデルをインストールすることができます。 余分ながないモデルのインストールに関連するコストです。 
 
-事前トレーニング済みモデルは、次の製品で使用できます。
+事前トレーニング済みモデルは、次の製品と言語を使用します。 セットアップ プログラムは、言語の統合、MicrosoftML または microsoftml ライブラリを検出し、次に、事前トレーニング済みモデルを各自のライブラリに挿入します。 モデルのインストールが完了したら、ライブラリ関数を使用して、モデルにアクセスします。
 
-+ SQL Server 2016 R Services (In-database)
-+ SQL Server 2017 Machine Learning Services (In-database)
-+ Machine Learning Server (スタンドアロン)
++ SQL Server 2016 R Services (In-database) にのみ、R と、 [MicrosoftML ライブラリ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
++ SQL Server 2016 R Server (スタンドアロン) にのみ、R と、 [MicrosoftML ライブラリ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 マシン ラーニング Services (In-database) - [MicrosoftML ライブラリ] で R (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)、Python と、 [microsoftml ライブラリ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 マシン ラーニング サーバー (スタンドアロン) - [MicrosoftML ライブラリ] で R (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)、Python と、 [microsoftml ライブラリ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
 
 インストール プロセスは、SQL Server のバージョンによって若干異なります。 各バージョンの詳細については、次のセクションを参照してください。
 
 > [!NOTE]
-> パフォーマンスを向上させるために、ネイティブ形式を使用して圧縮されているために、読み取り、または事前トレーニング済みのモデルを変更することはありません。
+> 読み取り、または事前トレーニング済みモデルを変更することはできません。 パフォーマンスを向上させるためにネイティブ形式を使用して、圧縮されています。
 
-### <a name="obtain-files-for-an-offline-installation"></a>オフライン インストール用のファイルを取得します。
+## <a name="obtain-files-for-an-offline-installation"></a>オフライン インストール用のファイルを取得します。
 
 インターネット アクセスが許可されていないサーバー上の事前トレーニング済みモデルをインストールするには、事前に適切なインストーラーをダウンロードして、インストーラーをサーバー上のローカル フォルダーにコピーします。 
 
 R Server と Machine Learning のサーバーのすべてのインストーラーのダウンロード リンクについては、このページを参照してください:[オフライン インストール](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)
 
-### <a name="install-pretrained-models-with-sql-server-2016-r-services"></a>事前トレーニング済みモデルを SQL Server 2016 の R Services のインストールします。
+## <a name="install-pre-trained-models-on-sql-server-2016-r-services"></a>事前トレーニング済みモデルを SQL Server 2016 の R Services のインストールします。
 
 SQL Server 2016 には、インストールして、機械学習と呼ばれるプロセス内のコンポーネントを最初にアップグレードする場合にのみ事前トレーニング済みの R モデルを使用することができます**バインディング**です。 
 
-Microsoft R Server または Machine Learning のサーバーの別の Windows インストーラーを実行しているインスタンスまたはインスタンスを選択し、これを行う**バインド**です。 R. に頻繁に更新を許可するサポート ポリシーは、インスタンスに関連付けられているインスタンスと、バインドが変更されました。 
+削除するには Microsoft R Server の Machine Learning のサーバー インスタンスまたはインスタンスを選択して、SQL Server 2016 の R Services のインストールを持つコンピューター上の個別の Windows インストーラーを実行している**バインド**です。 R. に頻繁に更新を許可するサポート ポリシーは、インスタンスに関連付けられているインスタンスと、バインドが変更されました。 
 
 1. いずれかの Windows ベースの独立したインストーラーを起動して[R Server](https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server)または[Machine Learning サーバー](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)です。
 
@@ -113,7 +114,7 @@ SQL Server 2016 では、SQL Server 2016 インスタンス ライブラリで�
     + ResNet\_18\_Updated.model
     + ResNet\_50\_Updated.model
 
-### <a name="install-pretrained-models-on-sql-server-2017"></a>SQL Server 2017 に事前トレーニング済みモデルをインストールします。
+## <a name="install-pre-trained-models-on-sql-server-machine-learning-services-in-database"></a>事前トレーニング済みモデルを SQL Server マシン ラーニング Services (In-database) のインストールします。
 
 SQL Server 2017 をすでにインストールした場合は、2 つの方法で、事前トレーニング済みモデルを取得できます。
 
@@ -140,7 +141,7 @@ SQL Server 2017 で追加の構成は必要ありません。
 > 
 > Python のモデルでは Python コードから、モデル ファイルを呼び出すときにエラーが表示する可能性があります。 これは、現在の Python 実装の制限により、モデル ファイルへのパスの長さを制限します。 この問題は修正されており、今後のサービス リリースで提供されます。
 
-### <a name="installing-pretrained-models-with-r-server-standalone"></a>R Server (スタンドアロン) の事前トレーニング済みモデルをインストールします。
+## <a name="install-pre-trained-models-with-sql-server-standalone-r-server"></a>SQL Server のスタンドアロン R サーバーでの事前トレーニング済みモデルをインストールします。
 
 SQL Server 2016 セットアップを使用して R Server (スタンドアロン) の初期のバージョンをインストールした場合は、新しい Windows ベースのインストーラーを使用して R サーバーをアップグレードすることで、事前トレーニング済みモデルを使用する機能を追加できます。 
 
@@ -183,7 +184,7 @@ SQL Server 2016 セットアップを使用して R Server (スタンドアロ�
 
     `RSetup.exe /install /component MLM /version 9.3.0 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\130\R_SERVER\library\MicrosoftML\mxLibs\"`
 
-### <a name="installing-pretrained-models-with-machine-learning-server-standalone"></a>Machine Learning Server (スタンドアロン) を事前トレーニング済みモデルをインストールします。
+## <a name="install-pre-trained-models-with-sql-server-2017-standalone-server"></a>事前トレーニング済みモデルを SQL Server 2017 スタンドアロン サーバーにインストールします。
 
 SQL Server 2017 セットアップを使用して、マシン学習サーバーをインストールした場合は、Windows ベースのインストーラーを実行して事前トレーニング済みモデルを追加します。 R または Python のコンポーネントをアップグレードするオプションを選択し、同時に、事前トレーニング済みのモデルを追加できます。 
 
@@ -200,19 +201,19 @@ SQL Server 2017 セットアップを使用して、マシン学習サーバー�
 + ResNet-101
 + AlexNet
 
-これらの deep モデル、および ere 実装および方法 CNTK を使用してトレーニングの学習に使用されるアルゴリズムの詳細については、次の記事を参照してください。
+これらの深層学習モデルでは、その実装方法で使用されるアルゴリズムの詳細については、トレーニング CNTK を使用して、これらの記事を参照してください。
 
 + [Microsoft の調査担当者のアルゴリズム ImageNet チャレンジ マイルス トーンを設定します。](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
 
 + [Microsoft 計算ネットワーク Toolkit には、計算パフォーマンスを学習、最も効率的な分散深いが提供しています](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
 
-### <a name="how-to-use-pre-trained-models-for-text-analysis"></a>テキスト分析の事前トレーニング済みモデルを使用する方法
+## <a name="how-to-use-pre-trained-models-for-text-analysis"></a>テキスト分析の事前トレーニング済みモデルを使用する方法
 
 事前トレーニング済みのテキストの特性付けのモデルを使用してテキスト分類する方法の例については、次の例を参照してください。
 
 [テキスト フィーチャライザーを使用してセンチメント分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
-### <a name="how-to-use-pretrained-models-for-image-detection"></a>イメージの検出の事前トレーニング済みモデルを使用する方法
+## <a name="how-to-use-pre-trained-models-for-image-detection"></a>イメージの検出の事前トレーニング済みモデルを使用する方法
 
 イメージの事前トレーニング済みモデルには、指定したイメージの特徴化がサポートされています。 使用するには、モデルを呼び出す、 **featurizeImage**を変換します。 イメージが読み込まれた、サイズ変更、およびトレーニング済みモデルでの特徴です。 DNN featurizer の出力はイメージ分類の線形のモデルのトレーニングに使用されます。
 

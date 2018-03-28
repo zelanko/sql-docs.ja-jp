@@ -1,28 +1,30 @@
 ---
-title: "方法: SQL Server 認証を使用して接続 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/19/2017
+title: '方法: SQL Server 認証を使用して接続 |Microsoft ドキュメント'
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: connecting to the server, SQL Server Authentication
+helpviewer_keywords:
+- connecting to the server, SQL Server Authentication
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
-caps.latest.revision: "34"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5802ddf79f53fda9e03c842ce21def20cb99f6e3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7885d3d2be29b2ad8de9c4f576c7441b43b37726
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>方法: SQL Server 認証を使用して接続する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -57,7 +59,7 @@ SQL Server 認証を使用して SQL Server に接続する場合は、次の予
 ## <a name="example"></a>例  
 次の例では、SQL Server 認証で SQLSRV ドライバーを使用して、SQL Server のローカル インスタンスに接続します。 必須の値は、 *UID*と*PWD*接続属性は、アプリケーション固有のテキスト ファイルから取得*uid.txt*と*pwd.txt*で、 *C:\AppData*ディレクトリ。 接続が確立されると、ユーザーのログインを確認するためにサーバーが照会されます。  
   
-この例では、SQL Server および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 ブラウザーからこの例を実行すると、すべての出力はブラウザーに書き込まれます。  
+例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 ブラウザーからこの例を実行すると、すべての出力はブラウザーに書き込まれます。  
   
 ```  
 <?php  
@@ -135,13 +137,21 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>参照  
-[How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
-[プログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
-[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
-[SUSER_SNAME (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=106382)  
-[SQL Server ログインを作成する方法](http://go.microsoft.com/fwlink/?LinkId=106325)  
-[データベース ユーザーを作成する方法](http://go.microsoft.com/fwlink/?LinkId=106327)  
-[ユーザー、ロール、およびログインの管理](http://go.microsoft.com/fwlink/?LinkId=106329)  
-[ユーザーとスキーマの分離](http://go.microsoft.com/fwlink/?LinkId=106330)  
-[オブジェクト アクセス許可 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=106332)  
+[方法: SQL Server 認証を使用して接続する](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+
+[For PHP for SQL Server の Microsoft drivers ガイドのプログラミング](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
+
+[方法: SQL Server ログインの作成](../../relational-databases/security/authentication-access/create-a-login.md)
+
+[方法: データベース ユーザーの作成](../../relational-databases/security/authentication-access/create-a-database-user.md)
+
+[ユーザー、ロール、およびログインの管理](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[ユーザーとスキーマの分離](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[オブジェクト アクセス許可 (TRANSACT-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

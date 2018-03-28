@@ -1,32 +1,34 @@
 ---
-title: "sqlsrv_client_info |Microsoft ドキュメント"
-ms.custom: 
+title: sqlsrv_client_info |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_client_info
+apiname:
+- sqlsrv_client_info
 apitype: NA
 helpviewer_keywords:
 - API Reference, sqlsrv_client_info
 - sqlsrv_client_info
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
-caps.latest.revision: "47"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e409dd263583365e38cf02df3c13e0d27c86b9c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 6efb2546525b5ed5b4d35ff7b3825d68046a89db
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,7 +50,7 @@ sqlsrv_client_info( resource $conn)
   
 **PHP for SQL Server バージョン 3.2 および 3.1 用**:  
   
-|[キー]|説明|  
+|[キー]|Description|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (SQL Server 用 ODBC Driver 11)|  
 |DriverODBCVer|ODBC version (xx.yy)|  
@@ -57,7 +59,7 @@ sqlsrv_client_info( resource $conn)
   
 **PHP for SQL Server バージョン 3.0 および 2.0 用**:  
   
-|[キー]|説明|  
+|[キー]|Description|  
 |-------|---------------|  
 |DriverDllName|SQLNCLI10 です。DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]バージョン 2.0)|  
 |DriverODBCVer|ODBC version (xx.yy)|  
@@ -98,6 +100,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>参照  
-[SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
+[SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)
+
 [ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
   

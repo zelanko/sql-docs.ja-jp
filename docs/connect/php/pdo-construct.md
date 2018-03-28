@@ -1,27 +1,28 @@
 ---
-title: ": _ _Construct |Microsoft ドキュメント"
-ms.custom: 
+title: ': _ _Construct |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c615bf11081ee791a6a3a700c4c7bae514fe4fae
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 3a1c40e8e31cbba9eb93155c3f81f6dd03452b59
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +37,7 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$dsn*: プレフィックス名を表す文字列 (常に`sqlsrv`)、コロン、および、Server キーワード。 たとえば、 `"sqlsrv:server=(local)"`があります。 オプションで他の接続キーワードを指定することも可能です。 Server キーワードおよびその他の接続キーワードの詳細については、「 [Connection Options](../../connect/php/connection-options.md) 」を参照してください。 *$dsn* は全体が引用符で囲まれているので、各接続キーワードは個別に囲まないようにする必要があります。  
+*$dsn*: プレフィックス名を表す文字列 (常に`sqlsrv`)、コロン、および、Server キーワード。 たとえば、 `"sqlsrv:server=(local)"`のようにします。 オプションで他の接続キーワードを指定することも可能です。 Server キーワードおよびその他の接続キーワードの詳細については、「 [Connection Options](../../connect/php/connection-options.md) 」を参照してください。 *$dsn* は全体が引用符で囲まれているので、各接続キーワードは個別に囲まないようにする必要があります。  
   
 *$username*: 省略可です。 ユーザー名を含む文字列です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 認証を使用して接続する場合、ログイン ID を指定します。 Windows 認証を使用して接続するには、 `""`を指定します。  
   
@@ -53,9 +54,9 @@ PDOException
 ## <a name="remarks"></a>解説  
 インスタンスを null に設定して、接続オブジェクトを閉じることができます。  
   
-接続後、PDO::errorCode には 00000 の代わりに 01000 が表示されます。  
+接続後、pdo::errorcode には 00000 の代わりに 01000 が表示されます。  
   
-何らかの理由で PDO::__construct が失敗する場合、PDO::ATTR_ERRMODE が PDO::ERRMODE_SILENT に設定されていても例外がスローされます。  
+: _ _Construct では、何らかの理由で失敗した場合、例外をスローすると、pdo::attr_errmode が pdo::errmode_silent に設定されている場合でもです。  
   
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
@@ -93,6 +94,7 @@ PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]
 ```  
   
 ## <a name="see-also"></a>参照  
-[PDO クラス](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO クラス](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

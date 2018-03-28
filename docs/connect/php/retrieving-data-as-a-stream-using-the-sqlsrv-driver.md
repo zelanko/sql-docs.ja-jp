@@ -1,27 +1,28 @@
 ---
-title: "SQLSRV ドライバーを使用してストリームとしてデータを取得する |Microsoft ドキュメント"
-ms.custom: 
+title: SQLSRV ドライバーを使用してストリームとしてデータを取得する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53ff9f5cc78e1ccaec74425a47ac39bfca996aae
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: fa2d15dde596b9fb8ccd4d170281ef6fa4b2646f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>SQLSRV ドライバーを使用してデータをストリームとして取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,13 +49,14 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|説明|  
+|トピック|Description|  
 |---------|---------------|  
 |[SQLSRV ドライバーを使用したストリームでのデータ型のサポート](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|ストリームとして取得できる SQL Server データ型を一覧表示します。|  
 |[方法: SQLSRV ドライバーを使用したストリームとしての文字データの取得](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|文字データをストリームとして取得する方法を説明します。|  
 |[方法: SQLSRV ドライバーを使用してバイナリ データをストリームとして取得する](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|バイナリ データをストリームとして取得する方法を説明します。|  
   
 ## <a name="see-also"></a>参照  
-[データの取得](../../connect/php/retrieving-data.md)  
+[データの取得](../../connect/php/retrieving-data.md)
+
 [定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
   

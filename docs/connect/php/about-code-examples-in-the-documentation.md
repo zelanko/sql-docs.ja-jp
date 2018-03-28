@@ -1,44 +1,44 @@
 ---
-title: "ドキュメントのコード例について |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/19/2017
+title: ドキュメントのコード例について |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4e9218af7938f3d60548a145936ba1645d4db824
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a5515db3c5b98ddb0c3645016eade20ecf4f224b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="about-code-examples-in-the-documentation"></a>ドキュメントのコード例について
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
+## <a name="remarks-about-the-code-examples"></a>コード例については、「解説」
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] ドキュメントのコード例を実行する際に、いくつか注意する点があります。  
   
--   ほぼすべての例では、SQL Server 2005 以降 (バージョン 3.1 を使用している場合は SQL Server 2008 以降) と、AdventureWorks データベースがローカル コンピューターにインストールされていることを前提にしています。  
+-   ほぼすべての例では、SQL Server 2008 以降および AdventureWorks データベースがローカル コンピューターにインストールされていることを前提としています。  
   
     SQL Server の無償のエディションと評価版をダウンロードする方法については、「 [SQL Server](http://go.microsoft.com/fwlink/?LinkID=120193)」を参照してください。  
   
-    AdventureWorks データベースのダウンロード方法については、「 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=67739)」を参照してください。  
-  
-    AdventureWorks データベースをインストールする方法の詳細については、「 [チュートリアル: AdventureWorks データベースのインストール](http://go.microsoft.com/fwlink/?LinkID=65819)」を参照してください。  
+    ダウンロードして、AdventureWorks データベースをインストールする方法については、次を参照してください。、 [SQL Server のサンプルの Github リポジトリに AdventureWorks ページ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)です。
   
 -   このドキュメントのほぼすべてのコード例では、コマンド ラインから実行することを前提にしています。これにより、すべてのコード例は自動的にテストされます。 PHP をコマンドラインから実行する方法については、「 [コマンドラインからの PHP の使用](http://php.net/manual/en/features.commandline.php)」を参照してください。  
   
--   例はコマンド ラインから実行するよう記述されていますが、各例はスクリプトに変更を加えずに、ブラウザーから呼び出し実行することもできます。 Nice 出力の書式化を実現するで各"\n"を置き換えます"\<\/br >"ブラウザーから呼び出す前に、それぞれの例にします。  
+-   例については、コマンドラインから実行するものでは、それぞれの例はスクリプトに変更を加えずに、ブラウザーから呼び出すことによって実行できます。 出力を適切にフォーマットするで各"\n"を置き換えます。"\<\/br >"ブラウザーから呼び出す前に、それぞれの例にします。  
   
 -   各例の目的を絞るため、すべての例で正しいエラー処理はされていません。 **sqlsrv** 関数または PDO メソッドへのすべての呼び出しにエラーがないか確認し、アプリケーションの要件に従って処理することが推奨されます。  
   

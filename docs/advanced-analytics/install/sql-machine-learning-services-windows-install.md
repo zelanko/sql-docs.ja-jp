@@ -1,24 +1,24 @@
 ---
-title: "Windows サービス (In-database) を学習の SQL Server 2017 マシンのインストール |Microsoft ドキュメント"
-ms.custom: 
+title: Windows サービス (In-database) を学習の SQL Server 2017 マシンのインストール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/20/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 1904517351a23bfa736549a249d77be2932b3c07
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a620e7ede1976fbbc50c0c81a595f002410403c8
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-sql-server-2017-machine-learning-services-in-database-on-windows"></a>Windows サービス (In-database) を学習の SQL Server 2017 マシンをインストールします。 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ SQL Server の Machine Learning サービス コンポーネントは、デー�
 
 ## <a name="bkmk_prereqs"> </a> インストール前のチェックリスト
 
-+ SQL Server 2017 が必要です。 SQL Server 2016 があればをインストールしてください[SQL Server 2016 R Services (In-database)](sql-r-services-windows-install.md)代わりにします。
++ SQL Server 2017 セットアップは、R、Python、またはその両方の言語サポートの Machine Learning のサービスをインストールする場合に必要です。 代わりに SQL Server 2016 インストール メディアがあるを場合は、インストール[SQL Server 2016 R Services (In-database)](sql-r-services-windows-install.md) R 言語のサポートを取得します。
 
 + データベース エンジンのインスタンスが必要です。 R だけをインストールすることはできません Python 機能がありますが追加することもできますに増分既存のインスタンスにします。
 

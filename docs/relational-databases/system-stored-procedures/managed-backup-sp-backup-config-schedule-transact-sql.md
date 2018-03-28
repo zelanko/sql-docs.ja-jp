@@ -1,16 +1,16 @@
 ---
-title: "managed_backup.sp_backup_config_schedule (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: managed_backup.sp_backup_config_schedule (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_backup_config_schedule_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_schedule
 - sp_backup_config_schedule
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3ba08667f9eebe37cc5493903b714ee1bf0d67f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6325c940487b37fea083a923a20f884bd872a0b4
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="managedbackupspbackupconfigschedule-transact-sql"></a>managed_backup.sp_backup_config_schedule (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ EXEC managed_backup.sp_backup_config_schedule
  頻度の種類の管理対象のバックアップ操作で、'毎日' または '毎週' に設定することができます。  
   
  @days_of_week  
- バックアップの曜日と@full_backup_freq_type週 1 回に設定されています。 '月曜日' のような完全な文字列の名前を指定します。  複数の 1 日の名をコンマで区切って指定できます。 たとえば '月曜日、水曜日、金曜日' です。  
+ バックアップの曜日と@full_backup_freq_type週 1 回に設定されています。 '月曜日' のような完全な文字列の名前を指定します。  複数の 1 日の名をパイプで区切って指定できます。 たとえば N'Monday |水曜日 |金曜日 ' です。  
   
  @backup_begin_time  
  バックアップ ウィンドウの開始時刻です。 バックアップは開始されません。 外部の組み合わせで定義されている時間枠で@backup_begin_timeと@backup_durationです。  
@@ -73,7 +73,7 @@ EXEC managed_backup.sp_backup_config_schedule
  バックアップの時間帯の期間。 によって定義される時間枠中にバックアップが完了することの保証がないことに注意してください@backup_begin_timeと@backup_durationです。 この時間帯で開始されるウィンドウの期間を超えるバックアップ操作はキャンセルできません。  
   
  @log_backup_freq  
- これにより、トランザクション ログ バックアップの頻度が決まります。 これらのバックアップは、データベースのバックアップに指定されたスケジュールではなく、一定の間隔で発生します。 @log_backup_freq分または時間単位でき、0 が有効でないことを示しますログ バックアップ。 ログ バックアップを無効にするとだけ適用することが単純復旧モデルを含むデータベース。  
+ これにより、トランザクション ログ バックアップの頻度が決まります。 これらのバックアップは、データベースのバックアップに指定されたスケジュールではなく、一定の間隔で発生します。 @log_backup_freq 分または時間単位でき、0 が有効でないことを示しますログ バックアップ。 ログ バックアップを無効にするとだけ適用することが単純復旧モデルを含むデータベース。  
   
 > [!NOTE]  
 >  復旧モデルは、完全に単純なものから変更された場合は、0 以外の値を 0 から log_backup_freq を再構成する必要があります。  

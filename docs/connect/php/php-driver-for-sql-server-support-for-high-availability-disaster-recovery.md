@@ -1,29 +1,30 @@
 ---
-title: "PHP Driver for SQL Server の高可用性、災害復旧 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/19/2017
+title: 高可用性、災害復旧の Microsoft Drivers for PHP for SQL Server のサポート |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a4777aa2ffac5b3932815dee65eb237337d95784
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: ee0be974c5998d531e20ed64c871ca85892aa46f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="php-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>PHP Driver for SQL Server Support for High Availability, Disaster Recovery (高可用性、障害復旧の PHP Driver for SQL Server のサポート)
+# <a name="support-for-high-availability-disaster-recovery"></a>高可用性、障害復旧のサポート
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 このトピックについて説明[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]サポート (version 3.0 で追加) 高可用性、災害復旧--[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]です。  [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]は [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] で新たにサポートされました。 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] オンライン ブックを参照してください。  
@@ -38,7 +39,7 @@ Version 3.0 で、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の�
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover を使用した接続  
 **MultiSubnetFailover**接続プロパティは、可用性グループまたはフェールオーバー クラスター インスタンスで、アプリケーションが展開されていることを示します、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] プライマリ上のデータベースに接続しようとして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]すべての ip アドレスに接続しようとしてのインスタンスに対応します。 ときに**MultiSubnetFailover = true**が指定されている接続の場合、クライアントは、オペレーティング システムの既定の TCP 再転送間隔よりも高速接続試行を再試行します。 これにより、AlwaysOn 可用性グループまたは AlwaysOn フェールオーバー クラスター インスタンスのフェールオーバー後、再接続されるまでの時間を短縮することができます。単一サブネットとマルチサブネットの可用性グループ インスタンスおよびフェールオーバー クラスター インスタンスに適用することができます。  
   
-常に指定**MultiSubnetFailover = True** SQL Server 2012 可用性グループ リスナーまたは SQL Server 2012 フェールオーバー クラスター インスタンスに接続するときにします。 **MultiSubnetFailover** を指定することで、SQL Server 2012 のすべての可用性グループおよびフェールオーバー クラスター インスタンスに対して高速フェールオーバーが有効化され、単一サブネットおよびマルチサブネットの AlwaysOn トポロジにおけるフェールオーバー時間が大幅に短縮されます。 マルチサブネット フェールオーバーの際には、クライアントは複数の接続を並列で試行します。 サブネットのフェールオーバー中に、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]は積極的に TCP 接続を再試行します。  
+常に指定**MultiSubnetFailover = True** SQL Server 2012 可用性グループ リスナーまたは SQL Server 2012 フェールオーバー クラスター インスタンスに接続するときにします。 **MultiSubnetFailover**すべての可用性グループと SQL Server 2012 フェールオーバー クラスター インスタンスに対して高速フェールオーバーを有効にし、単一サブネットおよびマルチ サブネットの AlwaysOn トポロジにおけるフェールオーバー時間を大幅に削減します。 マルチサブネット フェールオーバーの際には、クライアントは複数の接続を並列で試行します。 サブネットのフェールオーバー中に、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]は積極的に TCP 接続を再試行します。  
   
 接続文字列キーワードの詳細については[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]を参照してください[接続オプション](../../connect/php/connection-options.md)です。  
   
@@ -83,7 +84,7 @@ Version 3.0 で、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の�
 読み取り専用ルーティングを有効にするには、**ApplicationIntent** キーワードを使用します。  
   
 ## <a name="read-only-routing"></a>読み取り専用ルーティング  
-読み取り専用のルーティングは、データベースの読み取り専用レプリカを使用可能にする機能です。 読み取り専用のルーティングを有効にするには  
+読み取り専用ルーティングは、データベースの読み取り専用レプリカの可用性を実現する機能です。 読み取り専用のルーティングを有効にするには  
   
 1.  AlwaysOn 可用性グループ リスナーに接続する必要があります。  
   
@@ -93,7 +94,7 @@ Version 3.0 で、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の�
   
 読み取り専用のルーティングを使用した複数の接続が同じ読み取り専用レプリカに接続されるとは限りません。 データベース同期の変更やサーバーのルーティング構成の変更によって、クライアントが別の読み取り専用レプリカに接続される場合があります。 すべての読み取り専用要求を同じ読み取り専用レプリカに接続するには、可用性グループ リスナーを **Server** 接続文字列キーワードに渡さないでください。 代わりに、読み取り専用インスタンスの名前を指定します。  
   
-読み取り専用ルーティングでは、最初にプライマリに接続した後で読み取り可能の最適なセカンダリを探すため、プライマリに接続する場合よりも時間がかかる場合があります。 このため、ログイン タイムアウトを大きくする必要があります。  
+読み取り専用ルーティングでは、最初にプライマリに接続した後、使用できる最善の読み取り可能セカンダリが検索されます。このため、読み取り専用ルーティングに要する時間は、プライマリに接続するよりも長くなります。 この場合、ログイン タイムアウトを増やす必要があります。  
   
 ## <a name="see-also"></a>参照  
 [サーバーへの接続](../../connect/php/connecting-to-the-server.md)  

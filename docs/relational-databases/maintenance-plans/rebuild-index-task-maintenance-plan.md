@@ -1,16 +1,16 @@
 ---
-title: "[インデックスの再構築タスク](メンテナンス プラン) | Microsoft Docs"
-ms.custom: 
+title: '[インデックスの再構築タスク] (メンテナンス プラン) | Microsoft Docs'
+ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - reindex
@@ -18,7 +18,7 @@ f1_keywords:
 helpviewer_keywords:
 - Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/17/2017
  **インデックスを埋め込む (Pad index)**  
  インデックスの埋め込みを指定します。  
   
- **[Keep index online] (オンラインのインデックスを保持する)**  
+ **[Keep index online] \(オンラインのインデックスを保持する)**  
  `ONLINE` オプションを使用すると、インデックス操作の実行中に、ユーザーは基になるテーブルまたはクラスター化インデックス データ、および任意の関連付けられた非クラスター化インデックスにアクセスできます。  
   
 > [!NOTE]  
@@ -93,10 +93,10 @@ ms.lasthandoff: 11/17/2017
  **MAXDOP**  
  並列プランの実行で使用されるプロセッサ数を制限する値を指定します。  
   
- **[Low Priority Used] (低優先度の使用)**  
+ **[Low Priority Used] \(低優先度の使用)**  
  優先度の低いロックを待機するには、このオプションを選択します。  
   
- **[Abort after Wait] (待機後に中止)**  
+ **[Abort after Wait] \(待機後に中止)**  
  **[最長期間]** で指定した時間が経過した後に行う処理を指定します。  
   
  **[最長期間]**  

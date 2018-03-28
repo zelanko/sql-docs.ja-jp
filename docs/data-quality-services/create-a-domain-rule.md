@@ -1,30 +1,31 @@
 ---
-title: "ドメイン ルールの作成 | Microsoft Docs"
-ms.custom: 
+title: ドメイン ルールの作成 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/08/2011
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-caps.latest.revision: "28"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5c7e6f027352d3d8fbd79304d6454340a438d9b
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 44c7b7392737306ffa78958d46e53f7904c688da
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="create-a-domain-rule"></a>ドメイン ルールの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメイン ルールを作成する方法について説明します。 ドメイン ルールとは、ドメイン値の検証、修正、および標準化のために使用される条件です。 ドメイン値が正確で、ビジネス要件に準拠していると見なされるためには、ドメイン ルールがドメイン全体に当てはまる必要があります。 ドメイン ルールには検証規則を含めることができます。検証規則は、データ品質プロジェクトでドメイン値の検証に使用され、データの修正には使用されません。 また、標準化規則を含めることもできます。標準化規則は、有効なデータに対して適用され、データ修正で使用されます。  

@@ -1,32 +1,34 @@
 ---
-title: "sqlsrv_free_stmt |Microsoft ドキュメント"
-ms.custom: 
+title: sqlsrv_free_stmt | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_free_stmt
+apiname:
+- sqlsrv_free_stmt
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_free_stmt
 - API Reference, sqlsrv_free_stmt
 ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
-caps.latest.revision: "21"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 74a114457d5f4ce3c65af6583f6ed08c0b85d007
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 2debeb602c6432a273ae194dd2715a8e8d5239bd
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvfreestmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,7 +52,7 @@ sqlsrv_free_stmt( resource $stmt)
 > この関数のパラメーターとして、**Null** は有効です。 これにより、スクリプトで複数回関数を呼び出すことが可能になります。 などの場合、エラー状態でステートメントを解放して、スクリプトの最後にもう一度解放して、2 つ目を呼び出して**sqlsrv_free_stmt**戻ります**true**ため、最初の呼び出しは**sqlsrv_free_stmt** (エラー条件) ステートメントのリソースに設定**null**です。  
   
 ## <a name="example"></a>例  
-次の例では、ステートメントのリソースを作成し、単純なクエリを実行し、このステートメントに関連付けられているすべてのリソースを解放する **sqlsrv_free_stmt** を呼び出します。 この例では、SQL Server および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、ステートメントのリソースを作成し、単純なクエリを実行し、このステートメントに関連付けられているすべてのリソースを解放する **sqlsrv_free_stmt** を呼び出します。 例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -88,6 +90,8 @@ sqlsrv_close( $conn);
   
 ## <a name="see-also"></a>参照  
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
+
 [sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)  
   

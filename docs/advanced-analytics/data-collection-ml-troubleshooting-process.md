@@ -1,28 +1,28 @@
 ---
-title: "機械学習でのデータ コレクション SQL Server のトラブルシューティングします。"
-ms.custom: 
+title: 機械学習でのデータ コレクション SQL Server のトラブルシューティングします。
+ms.custom: ''
 ms.date: 06/16/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ee3b5fb649d659ade9cca22292aa5c8715f515c8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 95b70a2992b5c43ebaefb8faa729ec16ac3c84f7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>機械学習のデータ コレクションをトラブルシューティングします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,7 +51,7 @@ SQL Server の 2017 のサポートは、Python 言語まで拡張されます�
 
 使用している SQL Server のエディションによっては、使用不可能、または制限付き一部の機械学習の機能可能性があります。
 
-Enterprise、Developer、Standard、および Express エディションで、マシン学習機能の一覧については、次のトピックを参照してください。
+Enterprise、Developer、Standard、および Express エディションの machine learning 機能の一覧については、次の記事を参照してください。
 
 * [エディションと SQL Server のサポートされる機能](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
 * [SQL Server のエディション間で R の機能の相違点](https://docs.microsoft.com/sql/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server)
@@ -146,7 +146,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 Machine Learning のサービスが実行されていない場合は、pythonlauncher.config ファイルを確認してインストールされている Python バージョンを指定できます。 作成し、任意のプロパティを誤って変更しないように、ファイルのコピーを開くことをお勧めします。
 
-1. SQL server 2017 場合のみ。`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
+1. SQL server 2017 場合のみ。 `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
 2. 値を取得**PYTHONHOME**です。
 3. 現在の作業ディレクトリの値を取得します。
 
@@ -262,7 +262,7 @@ SQL Server では、外部スクリプトの言語ランタイムに個別のロ
 
 たとえば、次のメッセージは、SQL Server extensibility framework に関連する一般的なシステム エラーです。 
 
-* *SQL Server スタート パッド (MSSQLSERVER) サービスは、次のエラーのため開始できませんでした。<text>*
+* *SQL Server スタート パッド (MSSQLSERVER) サービスは、次のエラーのため開始できませんでした。  <text>*
 
 * *サービスは、適切なタイミングで開始または制御要求に応答しませんでした。* 
 

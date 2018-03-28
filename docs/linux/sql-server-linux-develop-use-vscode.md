@@ -1,6 +1,6 @@
-﻿---
-title: "For SQL Server、Visual Studio Code mssql 拡張機能を使用して |Microsoft ドキュメント"
-description: "このチュートリアルでは、VS Code の mssql 拡張機能を使用する方法を示します。 この拡張機能を使用すると、VS Code で Transact-SQL スクリプトを編集し、実行できます。"
+---
+title: For SQL Server、Visual Studio Code mssql 拡張機能を使用して |Microsoft ドキュメント
+description: このチュートリアルでは、VS Code の mssql 拡張機能を使用する方法を示します。 この拡張機能を使用すると、VS Code で Transact-SQL スクリプトを編集し、実行できます。
 author: erickangMSFT
 ms.author: erickang
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
 ms.workload: Active
-ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: fa3fb3c1d807698ddf1fa28c6c710956a75d30ea
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Visual Studio Code を使用して SQL Server の Transact-SQL スクリプトを作成し、実行する
 
@@ -76,7 +76,7 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
 
 3. 代わりに、.sql ファイルの拡張子を持つ既存のファイルを開きます。 自動的には、言語モードが**SQL** .sql 拡張子を持つファイルです。  
 
-## <a name="connect-to-sql-server"></a>SQL Server に接続します。
+## <a name="connect-to-sql-server"></a>SQL Server への接続
 
 次の手順では、VS コードでの SQL Server に接続する方法を示します。
 
@@ -97,7 +97,7 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
 
    | 設定 | Description |
    |-----|-----|
-   | **サーバー名** | SQL Server インスタンス名。 このチュートリアルでは、使用**localhost**コンピューターにローカルの SQL Server インスタンスに接続します。 リモートの SQL Server への接続している場合、は、対象の SQL Server コンピューターまたは IP アドレスの名前を入力します。 |
+   | **サーバー名** | SQL Server インスタンス名。 このチュートリアルでは、使用**localhost**コンピューターにローカルの SQL Server インスタンスに接続します。 リモートの SQL Server への接続している場合、は、対象の SQL Server コンピューターまたは IP アドレスの名前を入力します。 SQL Server インスタンスのポートを指定する必要がある場合は、名前から分離するためにコンマを使用します。 たとえばポート 1401 で実行されているローカル サーバーの入力**localhost、1401**です。 |
    | **[オプション]データベース名** | 使用するデータベースです。 このチュートリアルの目的を指定しないと、データベース キーを押して**ENTER**を続行します。 |
    | **ユーザー名** | サーバー上のデータベースにアクセス権を持つユーザーの名前を入力します。 このチュートリアルでは、既定値を使用して**SA**アカウント、SQL Server のセットアップ中に作成します。 |
    | **パスワード (SQL ログイン)** | 指定したユーザーのパスワードを入力します。 | 
@@ -116,7 +116,7 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-connection-status.png" alt="Connection status" style="width: 500px;" />
 
-## <a name="create-a-database"></a>データベースを作成します。
+## <a name="create-a-database"></a>データベースの作成
 
 1. エディターで、次のように入力します。 **sql**編集可能なコード スニペットの一覧を表示します。 
 
