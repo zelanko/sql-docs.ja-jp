@@ -1,16 +1,16 @@
 ---
-title: "sys.fn_get_audit_file (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.fn_get_audit_file (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_audit_file_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.fn_get_audit_file function
 - fn_get_audit_file function
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3b7a7d79b8cbaf65e803d042efd86a790e2eeb1d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 982113b9acc85b0dd340e2850ad6efb463a500cb
+ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ fn_get_audit_file ( file_pattern,
  
  - **SQL Server**:
     
-    この引数には、パス (ドライブ文字またはネットワーク共有) とファイル名の両方を含める必要があります。ファイル名にはワイルドカードを使用できます。 監査ファイル セットから複数のファイルを収集する 1 つのアスタリスク (*) を使用できます。 例:  
+    この引数には、パス (ドライブ文字またはネットワーク共有) とファイル名の両方を含める必要があります。ファイル名にはワイルドカードを使用できます。 監査ファイル セットから複数のファイルを収集する 1 つのアスタリスク (*) を使用できます。 以下に例を示します。  
   
     -   **\<パス >\\ \*** 収集 - すべての監査ファイルを指定した場所にします。  
   
@@ -65,11 +65,11 @@ fn_get_audit_file ( file_pattern,
   
  - **Azure SQL データベース**:
  
-    この引数は (ストレージ エンドポイントとコンテナーを含む)、blob の URL を指定する使用されます。 アスタリスクのワイルドカードをサポートしていません、中には、このプレフィックスで始まる複数のファイル (blob) を収集する (完全 blob 名) ではなく、部分的なファイル (blob) 名のプレフィックスを使用できます。 例:
+    この引数は (ストレージ エンドポイントとコンテナーを含む)、blob の URL を指定する使用されます。 アスタリスクのワイルドカードをサポートしていません、中には、このプレフィックスで始まる複数のファイル (blob) を収集する (完全 blob 名) ではなく、部分的なファイル (blob) 名のプレフィックスを使用できます。 以下に例を示します。
  
-      - **\<Storage_endpoint\>/\<コンテナー\>/\<ServerName\>/\<DatabaseName\> /** -特定のデータベースのすべての監査ファイル (blob) を収集します。    
+      - **\<Storage_endpoint\>/\<コンテナー\>/\<ServerName\>/\<DatabaseName\> /**  -特定のデータベースのすべての監査ファイル (blob) を収集します。    
       
-      - **\<Storage_endpoint\>/\<コンテナー\>/\<ServerName\>/\<DatabaseName\> /\<AuditName\>/\<CreationDate\>/\<FileName\>.xel** -特定の監査ファイル (blob) を収集します。
+      - **\<Storage_endpoint\>/\<コンテナー\>/\<ServerName\>/\<DatabaseName\> / \<AuditName\>/\<CreationDate\>/\<FileName\>.xel** -特定の監査ファイル (blob) を収集します。
   
 > [!NOTE]  
 >  ファイル名のパターンがないパスを渡すとエラーが発生します。  
@@ -119,16 +119,18 @@ fn_get_audit_file ( file_pattern,
 |additional_information|**nvarchar (4000)**|単一のイベントに対してだけ適用される固有の情報が XML として返されます。 この種類の情報は、少数の監査可能なアクションに含まれます。<br /><br /> TSQL スタックが関連付けられているアクションに関して、XML 形式には、1 レベルの TSQL スタックが表示されます。 この XML 形式は次のとおりです。<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> frame nest_level は、フレームの現在の入れ子レベルを示します。 モジュール名は 3 つの部分 (database_name、schema_name、object_name) から成る形式で表されます。  モジュール名は無効な xml 文字をエスケープするために解析されます`'\<'`、 `'>'`、 `'/'`、`'_x'`です。 としてエスケープされます`_xHHHH\_`です。 HHHH は、その文字の 4 桁の 16 進数 UCS-2 コードを表しています。<br /><br /> NULL 値が許可されます。 イベントから追加情報が報告されない場合は NULL を返します。|  
 |file_name|**varchar(260)**|レコードの読み取り元の監査ログ ファイルのパスと名前。 NULL 値は許可されません。|  
 |audit_file_offset|**bigint**|監査レコードを含むファイルのバッファー オフセット。 NULL 値は許可されません。|  
-|user_defined_event_id|**smallint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 引数として渡されるユーザー定義のイベント id **sp_audit_write**です。 **NULL**システム イベント (既定値) のユーザー定義のイベントには 0 以外。 詳細については、次を参照してください。 [sp_audit_write &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)。|  
+|user_defined_event_id|**smallint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 引数として渡されるユーザー定義のイベント id **sp_audit_write**です。 **NULL**システム イベント (既定値) のユーザー定義のイベントには 0 以外。 詳細については、次を参照してください。 [sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)です。|  
 |user_defined_information|**nvarchar (4000)**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> ユーザーに記録する追加情報を記録するために使用 |監査ログを使用して、 **sp_audit_write**ストアド プロシージャです。|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | SQL Server のみ (2016年以降) |  
-|transaction_id |**bigint** | SQL Server のみ (2016年以降) |  
-|client_ip |**nvarchar(128)** | Azure SQL DB + SQL Server (2017 年以降) |  
-|application_name |**nvarchar(128)** | Azure SQL DB + SQL Server (2017 年以降) |  
-|duration_milliseconds |**bigint** | Azure SQL DB のみ |  
-|response_rows |**bigint** | Azure SQL DB のみ |  
-|affected_rows |**bigint** | Azure SQL DB のみ |  
+|sequence_group_id |**varbinary** | **適用されます**: SQL Server のみ (2016年以降) |  
+|transaction_id |**bigint** | **適用されます**: SQL Server のみ (2016年以降) |  
+|client_ip |**nvarchar(128)** | **適用されます**: Azure SQL DB + SQL Server (2017 年以降) |  
+|application_name |**nvarchar(128)** | **適用されます**: Azure SQL DB + SQL Server (2017 年以降) |  
+|duration_milliseconds |**bigint** | **適用されます**: Azure SQL DB のみ |  
+|response_rows |**bigint** | **適用されます**: Azure SQL DB のみ |  
+|affected_rows |**bigint** | **適用されます**: Azure SQL DB のみ |  
+|connection_id |GUID | **適用されます**: Azure SQL DB のみ |
+|data_sensitivity_information |nvarchar (4000) | **適用されます**: Azure SQL DB のみ |
   
 ## <a name="remarks"></a>解説  
  場合、 *file_pattern*に渡される引数**fn_get_audit_file**参照パスまたはファイルが存在しない、またはファイルが、監査ファイルではない場合、 **MSG_INVALID_AUDIT_FILE**エラー メッセージが返されます。  
@@ -151,7 +153,7 @@ fn_get_audit_file ( file_pattern,
   GO  
   ```  
 
-- **Azure SQL データベース**
+- **Azure SQL Database**
 
   この例は、という名前のファイルから読み取ります`ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`:  
   
@@ -176,29 +178,29 @@ fn_get_audit_file ( file_pattern,
   GO  
   ```
 
-監査を作成する方法に関する完全な例を参照してください。 [SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)です。
+監査を作成する方法の完全な例については、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」をご覧ください。
 
 Azure SQL Database の監査をセットアップする方法については、次を参照してください。 [SQL Database auditing 始める](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-auditing)です。
   
 ## <a name="see-also"></a>参照  
- [SERVER AUDIT &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-server-audit-transact-sql.md)   
- [ALTER SERVER AUDIT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [サーバー監査の仕様 &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT SPECIFICATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT SPECIFICATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [データベース監査の仕様 &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
- [ALTER DATABASE AUDIT SPECIFICATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [DROP DATABASE AUDIT SPECIFICATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
+ [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys.server_audits &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [sys.server_file_audits &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
- [sys.server_audit_specifications &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
+ [sys.server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
  [sys.server_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
- [sys.database_audit_specifications &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
  [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [sys.dm_server_audit_status &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.dm_audit_actions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+ [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [サーバー監査およびサーバー監査の仕様を作成する](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   

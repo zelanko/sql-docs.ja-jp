@@ -1,6 +1,7 @@
 # [概要](tabular-models-ssas.md)  
 
 # [テーブル モデルの作成](tabular-model-solutions-ssas-tabular.md)  
+## [1400 テーブル モデルでサポートされるデータ ソース](data-sources-supported-ssas-tabular-1400.md)  
 ## [1200 テーブル モデルでサポートされるデータ ソース](data-sources-supported-ssas-tabular.md)  
 ## [サポートされているデータ型](data-types-supported-ssas-tabular.md)  
 ## [テーブル モデル デザイナー](tabular-model-designer-ssas.md)  
@@ -23,6 +24,8 @@
 ### [既定のデータ モデルと配置プロパティの構成](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
 
 ## データのインポート
+
+### [1400 テーブル モデルでサポートされるデータ ソース](data-sources-supported-ssas-tabular-1400.md)  
 ### [1200 テーブル モデルでサポートされるデータ ソース](data-sources-supported-ssas-tabular.md)  
 ### [サポートされているデータ型](data-types-supported-ssas-tabular.md)  
 ### [権限借用](impersonation-ssas-tabular.md)  
