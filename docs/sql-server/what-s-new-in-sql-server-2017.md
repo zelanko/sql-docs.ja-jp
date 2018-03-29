@@ -1,30 +1,32 @@
 ---
-title: "SQL Server 2017 の新機能 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 2017 の新機能 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: server-general
-ms.tgt_pltfrm: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
-caps.latest.revision: "71"
+caps.latest.revision: ''
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 445de7e87daf3d7e083532a06269d810f574fa96
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 47d6f056dce4ad26a10e082d27119523fde303d0
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)] SQL Server 2017 は、SQL Server をプラットフォームとする方向に向けた大きな一歩を示します。そのプラットフォームは、SQL Server の機能を Linux、Linux ベースの Docker コンテナー、Windows に利用して、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムの選択肢を提供します。 このトピックは、特定の機能領域の新機能と、その詳細へのリンクをまとめたものです。 Linux 上の SQL Server の詳細については、[Linux 上の SQL Server に関するドキュメント](https://docs.microsoft.com/sql/linux/)をご覧ください
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+SQL Server 2017 は、SQL Server をプラットフォームとする方向に向けた大きな一歩を表します。そのプラットフォームは、SQL Server、Linux、Linux ベースの Docker コンテナー、および Windows の機能を利用することによって、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムの選択肢を提供します。 このトピックは、特定の機能領域の新機能と、その詳細へのリンクをまとめたものです。 Linux 上の SQL Server の詳細については、[Linux 上の SQL Server に関するドキュメント](https://docs.microsoft.com/sql/linux/)をご覧ください
 
 [![Evaluation Center からダウンロードする](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  **お試しください:** [SQL Server 2017 リリース (2017 年 10 月) をダウンロードする](http://go.microsoft.com/fwlink/?LinkID=829477)。
 
@@ -79,7 +81,7 @@ SQL Server 2017 には多くの新しいデータベース エンジン機能、
 - SQL Server 2012、SQL Server 2014、および SQL Server 2016 から SQL Server 2017 マスター データ サービスにアップグレードすると、エクスペリエンスとパフォーマンスが向上します。 
 - Web アプリケーションの**エクスプローラー** ページに、エンティティ、コレクション、階層の並べ替えられたリストを表示できるようになりました。
 - ステージング ストアド プロシージャを使用した、数百万ものレコードのステージングのパフォーマンスが向上しました。
-- モデル アクセス許可を割り当てる**グループの管理**ページの、**エンティティ**フォルダーを展開するときのパフォーマンスが改善されました。 **グループの管理**ページは、Web アプリケーションの**セキュリティ**セクション内にあります。 パフォーマンスの向上の詳細については、[https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview) を参照してください。 権限の割り当ての詳細については、「[Assign Model Object Permissions (Master Data Services) (モデル オブジェクト権限を割り当てる (マスター データ サービス))](../master-data-services/assign-model-object-permissions-master-data-services.md)」を参照してください。
+- モデル アクセス許可を割り当てる**グループの管理**ページの、**エンティティ**フォルダーを展開するときのパフォーマンスが改善されました。 **グループの管理**ページは、Web アプリケーションの**セキュリティ**セクション内にあります。 パフォーマンスの改善の詳細については、こちら ([https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview)) を参照してください。 権限の割り当ての詳細については、「[Assign Model Object Permissions (Master Data Services) (モデル オブジェクト権限を割り当てる (マスター データ サービス))](../master-data-services/assign-model-object-permissions-master-data-services.md)」を参照してください。
 
 ## <a name="sql-server-2017-analysis-services-ssas"></a>SQL Server 2017 Analysis Services (SSAS) 
 SQL Server Analysis Services 2017 には、表形式モデルの多くの機能強化が導入されています。 たとえば、次のオブジェクトにアクセスできます。
@@ -128,5 +130,7 @@ SQL Server での開発者は、オープン ソース エコシステムで入�
 - [SQL Server 2016 の新機能](what-s-new-in-sql-server-2016.md)を確認してください。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
