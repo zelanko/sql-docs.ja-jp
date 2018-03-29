@@ -13,6 +13,7 @@
 ## [バックアップと復元](tutorial-backup-restore-sql-server.md)
 # 操作方法ガイド
 ## [ダッシュボードおよび洞察のウィジェット](insight-widgets.md)
+## [拡張機能](extensions.md)
 ## [コード スニペット](code-snippets.md)
 ## [統合ターミナル (PowerShell、Bash)](integrated-terminal.md)
 ## [キーボード ショートカット](keyboard-shortcuts.md)
