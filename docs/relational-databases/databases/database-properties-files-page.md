@@ -1,21 +1,21 @@
 ---
-title: "「データベースのプロパティ」 ([ファイル] ページ) | Microsoft Docs"
-ms.custom: 
+title: 「データベースのプロパティ」 \([ファイル] ページ) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -26,8 +26,8 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/18/2018
 ---
-# <a name="database-properties-files-page"></a>[データベースのプロパティ] ([ファイル] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、新しいデータベースを作成したり、選択したデータベースのプロパティを表示または変更したりできます。 このトピックは、既存のデータベースの **[データベースのプロパティ] ([ファイル] ページ)** 、および **[新しいデータベース] ([全般] ページ)**に該当します。  
+# <a name="database-properties-files-page"></a>[データベースのプロパティ] \([ファイル] ページ)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、新しいデータベースを作成したり、選択したデータベースのプロパティを表示または変更したりできます。 このトピックは、既存のデータベースの **[データベースのプロパティ] ([ファイル] ページ)** 、および **[新しいデータベース] \([全般] ページ)**に該当します。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **データベース名**  

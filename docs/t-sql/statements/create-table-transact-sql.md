@@ -1,16 +1,16 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FILESTREAM_TSQL
@@ -49,28 +49,30 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ad0dd6ed4d8006a596ac05c35730a8132368d5df
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 33705d53cf51fa0aa32c386ff5cdf3fae54383ff
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で新しいテーブルを作成します。  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]   
 >  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 構文については、「[CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)」をご覧ください。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>構文  
+## <a name="simple-syntax"></a>簡単な構文  
   
 ```  
 --Simple CREATE TABLE Syntax (common if not using options)  
@@ -80,7 +82,7 @@ CREATE TABLE
 [ ; ]  
 ```  
   
-## <a name="syntax"></a>構文  
+## <a name="full-syntax"></a>完全な構文  
   
 ```  
 --Disk-Based CREATE TABLE Syntax  
@@ -359,7 +361,7 @@ column_name <data_type>
  新しいテーブルが所属するスキーマの名前です。  
   
  *table_name*  
- 新しいテーブルの名前です。 テーブル名は[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 *table_name* 、最大 128 文字では、ローカル一時テーブル名以外のできます (名前は、1 つの番号記号で始まります (#)) 116 文字を超えることはできません。  
+ 新しいテーブルの名前です。 テーブル名は[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 116 文字までしか使用できないローカル一時テーブル名 (名前の先頭に 1 つの番号記号 (#) が付加されます) を除き、*table_name* には、最大 128 文字を使用できます。  
   
  AS FileTable 
  
@@ -463,7 +465,7 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
  データ型 **varchar**、**nvarchar**、**varbinary** だけに適用され、2^31 バイトの文字データとバイナリ データ、および 2^30 バイトの Unicode データが格納されます。  
   
  CONTENT  
- *column_name* 内の **xml** データ型の各インスタンスに、複数のトップレベル要素を含められることを指定します。 コンテンツにのみ適用され、 **xml** データ入力し、する場合にのみ指定できます *xml_schema_collection* も指定しました。 指定しない場合は、CONTENT が既定の動作となります。  
+ *column_name* 内の **xml** データ型の各インスタンスに、複数のトップレベル要素を含められることを指定します。 CONTENT は、**xml** データ型のみに適用され、*xml_schema_collection* も指定されている場合にだけ指定できます。 指定しない場合は、CONTENT が既定の動作となります。  
   
  DOCUMENT  
  *column_name* 内の **xml** データ型の各インスタンスに、1 つのトップレベル要素のみを含められることを指定します。 ドキュメントにのみ適用され、 **xml** データ入力し、する場合にのみ指定できます *xml_schema_collection* も指定しました。  
@@ -566,10 +568,10 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
  ROWGUIDCOL プロパティは、列に格納されている値の一意性を設定しません。 また、ROWGUIDCOL プロパティは、テーブルに挿入される新しい行の値を自動的に生成しません。 各列に対して一意な値を生成するには、[INSERT](../../t-sql/statements/insert-transact-sql.md) ステートメントで [NEWID](../../t-sql/functions/newid-transact-sql.md) 関数または [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) 関数を使用するか、これらの関数を列の既定値として使用します。  
   
  使用して暗号化  
- 使用して暗号化の列を指定する、 [常に暗号化](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 機能します。  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 機能を使って暗号化列を指定します。  
   
  COLUMN_ENCRYPTION_KEY = *key_name*  
- 列の暗号化キーを指定します。 詳細については、[CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)を参照してください。  
+ 列の暗号化キーを指定します。 詳しくは、「[CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)」をご覧ください。  
   
  ENCRYPTION_TYPE = {決定的 |ランダム化}  
  **確定的な暗号化** は常に任意のプレーン テキストを指定した値の場合は、同じ暗号化された値を生成するメソッドを使用します。 確定的な暗号化を使用すると、グループ化、および暗号化された値に基づいて、等しいかどうかの結合を使用して、テーブルへの参加の等値比較を使用して検索をできますも確認するには、暗号化された列のパターンについては、暗号化された値を推測する承認されていないユーザーを許可することができます。 確定的に暗号化された列に 2 つのテーブルを結合すると、両方の列が同じ列の暗号化キーを使用して暗号化されている場合にのみ可能なです。 明確な暗号化では、バイナリ 2 文字型の列の並べ替え順序を持つ列の照合順序を使用する必要があります。  
@@ -583,12 +585,12 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
  ALGORITHM  
  必要があります **'AEAD_AES_256_CBC_HMAC_SHA_256'**です。  
   
- 詳しくは、「[Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」をご覧ください。  
+ 機能の制約などについて詳しくは、「[Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」をご覧ください。  
   
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  SPARSE  
- 列がスパース列であることを示します。 スパース列のストレージは NULL 値用に最適化されます。 スパース列を NOT NULL として指定することはできません。 スパース列のその他の制限事項と詳細については、「[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」をご覧ください。  
+ 列がスパース列であることを示します。 スパース列のストレージは NULL 値用に最適化されます。 スパース列を NOT NULL として指定することはできません。 スパース列のその他の制限事項と詳細については、「[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。  
   
  MASKED WITH ( FUNCTION = ' *mask_function* ')  
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -603,7 +605,7 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
   
 -   random()  
   
- 関数パラメーターの場合は、次を参照してください。 [動的データのマスキング](../../relational-databases/security/dynamic-data-masking.md)です。  
+ 関数のパラメーターについては、「[動的なデータ マスキング](../../relational-databases/security/dynamic-data-masking.md)」を参照してください。  
   
  FILESTREAM  
    
@@ -666,7 +668,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  作成されたテーブルの行が参照関係を持ち、参照される行が親テーブルから削除された場合に、その行に対して実行される操作を指定します。 既定値は NO ACTION です。  
   
  NO ACTION  
- NO ACTION を指定すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ではエラーが発生し、親テーブルでの行の削除操作がロールバックされます。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] がエラーを生成し、親テーブルでの行の削除操作がロールバックされます。  
   
  CASCADE  
  親テーブルから行が削除された場合に、参照元テーブルからもその行が削除されます。  
@@ -734,7 +736,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
 >  パーティション テーブルのパーティション分割列に加え、ALTER TABLE...SWITCH 操作のソースまたはターゲットとなっているパーティション分割されていないテーブルの列にも、NOT NULL を指定することをお勧めします。 こうすることで、パーティション分割列の CHECK 制約で NULL 値のチェックを行う必要がなくなります。  
   
  WITH FILLFACTOR **=***fillfactor*  
- インデックス データの格納に使用される個々のインデックス ページを[!INCLUDE[ssDE](../../includes/ssde-md.md)]がどの程度埋めるかを指定します。 ユーザー定義の *fillfactor* 値は、1 ～ 100 の範囲で指定できます。 値を指定しない場合の既定値は 0 です。 FILL FACTOR 値 0 と 100 の機能は、まったく同じです。  
+ インデックス データの格納に使用される個々のインデックス ページを[!INCLUDE[ssDE](../../includes/ssde-md.md)]がどの程度埋めるかを指定します。 ユーザーが指定できる *fillfactor* の値は、1 ～ 100 です。 値を指定しない場合の既定値は 0 です。 FILL FACTOR 値 0 と 100 の機能は、まったく同じです。  
   
 > [!IMPORTANT]  
 >  マニュアルには、WITH FILLFACTOR = *fillfactor* が PRIMARY KEY 制約または UNIQUE 制約に適用される唯一のインデックス オプションとして記述されていますが、これは旧バージョンとの互換性を維持するために記載されており、将来のリリースではこのような記述はなくなります。  
@@ -788,7 +790,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  非クラスター化列ストア インデックスとクラスター化列ストア インデックスの両方を含む列ストア インデックスにのみ適用されます。 COLUMNSTORE_ARCHIVE は、テーブルまたはパーティション サイズを小さく絞り込みますにさらに圧縮されます。 これは、保存用や、ストレージのサイズを減らす必要があり、しかも保存と取得に時間をかける余裕があるその他の状況で使用できます。  
   
- 圧縮の詳細については、「[データの圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
+ 圧縮の詳細については、「[データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
  ON PARTITIONS **(** { `<partition_number_expression>` | [ **,**...*n* ] **)**  
  DATA_COMPRESSION 設定を適用するパーティションを指定します。 テーブルがパーティション分割されていない場合に ON PARTITIONS 引数を使用すると、エラーが発生します。 ON PARTITIONS 句を指定しないと、パーティション テーブルのすべてのパーティションに対して DATA_COMPRESSION オプションが適用されます。  
@@ -845,7 +847,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  ON の場合、インデックスにアクセスするときに行ロックが許可されます。 いつ行ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって決定されます。 OFF の場合、行のロックは使用されません。 既定値は ON です。  
   
  ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
- ON の場合、インデックスにアクセスするときにページ ロックが許可されます。 いつページ ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって決定されます。 OFF の場合、ページ ロックは使用されません。 既定値は ON です。  
+ ON の場合、インデックスにアクセスするときにページ ロックが許可されます。 いつページ ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって決定されます。 OFF の場合、ページ ロックは使用されません。 既定値は ON です。  
   
  FILETABLE_DIRECTORY = *directory_name*  
    
@@ -892,7 +894,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
   
- データ型、null 値許容制約、および主キー制約の要件が満たされている場合は、テーブルのシステムのバージョン管理を有効にします。 場合、 **HISTORY_TABLE** 引数を使用しない場合は、システムは、2 つのテーブル間のリンクを作成するには、現在のテーブルと同じファイル グループ内の現在のテーブルのスキーマに一致する新しい履歴テーブルを生成し、により、システムは、履歴テーブルには、現在のテーブル内の各レコードの履歴を記録します。 この履歴テーブルの名前になります `MSSQL_TemporalHistoryFor<primary_table_object_id>`です。 履歴テーブルには既定では、 **PAGE** 圧縮します。 HISTORY_TABLE 引数を介してへのリンクを作成し、既存の履歴テーブルを使用する場合に、現在のテーブルと、指定したテーブルの間のリンクが作成されます。 現在のテーブルがパーティション分割する場合、履歴テーブルは、パーティション分割構成がレプリケートされていないために自動的に現在のテーブルから履歴テーブルに既定のファイル グループに作成されます。 履歴テーブルの作成時に履歴テーブルの名前を指定すると場合、は、スキーマとテーブルの名前を指定する必要があります。 既存の履歴テーブルへのリンクを作成する場合は、データの整合性チェックを実行することもできます。 このデータの整合性チェックでは、既存のレコードが重複しないことを確認します。 データを実行する一貫性チェックが、既定値です。 この引数を使用して、期間 FOR SYSTEM_TIME と生成された常に行と組み合わせて {開始 |終了} 引数を使用して、テーブルでのシステムのバージョン管理を有効にします。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。  
+ データ型、null 値許容制約、および主キー制約の要件が満たされている場合は、テーブルのシステムのバージョン管理を有効にします。 場合、 **HISTORY_TABLE** 引数を使用しない場合は、システムは、2 つのテーブル間のリンクを作成するには、現在のテーブルと同じファイル グループ内の現在のテーブルのスキーマに一致する新しい履歴テーブルを生成し、により、システムは、履歴テーブルには、現在のテーブル内の各レコードの履歴を記録します。 この履歴テーブルの名前は `MSSQL_TemporalHistoryFor<primary_table_object_id>` になります。 履歴テーブルには既定では、 **PAGE** 圧縮します。 HISTORY_TABLE 引数を介してへのリンクを作成し、既存の履歴テーブルを使用する場合に、現在のテーブルと、指定したテーブルの間のリンクが作成されます。 現在のテーブルがパーティション分割する場合、履歴テーブルは、パーティション分割構成がレプリケートされていないために自動的に現在のテーブルから履歴テーブルに既定のファイル グループに作成されます。 履歴テーブルの作成時に履歴テーブルの名前を指定すると場合、は、スキーマとテーブルの名前を指定する必要があります。 既存の履歴テーブルへのリンクを作成する場合は、データの整合性チェックを実行することもできます。 このデータの整合性チェックでは、既存のレコードが重複しないことを確認します。 データを実行する一貫性チェックが、既定値です。 この引数を使用して、期間 FOR SYSTEM_TIME と生成された常に行と組み合わせて {開始 |終了} 引数を使用して、テーブルでのシステムのバージョン管理を有効にします。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。  
   
  REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }  
    
@@ -901,9 +903,9 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Stretch Database が有効または無効になっている新しいテーブルを作成します。 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。  
   
- **テーブルに対する Stretch Database を有効にする**  
+ **テーブルに対して Stretch Database を有効にする**  
   
- `ON` を指定してテーブルに対して Stretch を有効にする場合は、オプションで `MIGRATION_STATE = OUTBOUND` を指定してデータの移行を即時に開始するか、`MIGRATION_STATE = PAUSED` を指定してデータの移行を延期できます。 既定値は `MIGRATION_STATE = OUTBOUND` です。 テーブルに対する Stretch の有効化について詳しくは、「[Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」をご覧ください。  
+ `ON` を指定してテーブルに対して Stretch を有効にする場合は、オプションで `MIGRATION_STATE = OUTBOUND` を指定してデータの移行を即時に開始するか、`MIGRATION_STATE = PAUSED` を指定してデータの移行を延期できます。 既定値は `MIGRATION_STATE = OUTBOUND` です。 テーブルに対して Stretch を有効にする方法については、「[データベースに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」を参照してください。  
   
  **前提条件**。 テーブルに対して Stretch を有効にする前に、サーバーおよびデータベースで Stretch を有効にする必要があります。 詳細については、「 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)」を参照してください。  
   
@@ -914,7 +916,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- オプションで、履歴データと現在のデータの両方を含むテーブルから移行する行を選択するためのフィルター述語を指定します。 この述語で決定論的インライン テーブル値関数を呼び出す必要があります。 詳しくは、「[Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」および「[フィルター関数を使用して移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」をご覧ください。 
+ 必要に応じて、履歴データと現在のデータの両方を含むテーブルから移行する行を選択するフィルター述語を指定します。 この述語で決定論的インライン テーブル値関数を呼び出す必要があります。 詳しくは、「[Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」および「[フィルター関数を使用して移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」をご覧ください。 
    
 > [!IMPORTANT]  
 >  指定したフィルター述語のパフォーマンスが低いと、データ移行のパフォーマンスも低くなります。 Stretch Database では、CROSS APPLY 演算子を使用してテーブルにフィルター述語を適用します。  
@@ -934,7 +936,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
      この操作によりデータ転送コストが発生し、取り消すことはできません。  
   
--   データの移行を一時停止または延期するには `PAUSED` を指定します。 詳しくは、「[データ移行の一時停止と再開 &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)」をご覧ください。  
+-   データの移行を一時停止または延期するには `PAUSED` を指定します。 詳細については、「[データ移行の一時停止と再開 &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)」を参照してください。  
   
  MEMORY_OPTIMIZED  
    
@@ -1468,7 +1470,7 @@ CREATE TABLE dbo.T1
 WITH (DATA_COMPRESSION = ROW);  
 ```  
   
- その他のデータの圧縮の例については、「[Data Compression](../../relational-databases/data-compression/data-compression.md)」をご覧ください。  
+ その他のデータ圧縮の例については、「[データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
 ### <a name="o-creating-a-table-that-has-sparse-columns-and-a-column-set"></a>O.  スパース列と列セットを含むテーブルを作成する  
  次の各例では、1 つのスパース列を含むテーブル、および 2 つのスパース列と 1 つの列セットを含むテーブルを作成する方法を示します。 これらの例では基本構文を使用します。 さらに複雑な例については、「[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」と「[列セットの使用](../../relational-databases/tables/use-column-sets.md)」をご覧ください。  

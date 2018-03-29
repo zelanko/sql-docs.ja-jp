@@ -1,16 +1,16 @@
 ---
 title: GRANT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GRANT_TSQL
@@ -27,23 +27,23 @@ helpviewer_keywords:
 - database-level securables [SQL Server]
 - permissions [SQL Server], granting
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 618e2068c1b1e9b99a68d0216c17c66e9b2cf3d1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6b470e1247c98d35aff96e19216d0cec36650749
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   セキュリティ保護可能なリソースに対する権限をプリンシパルに許可します。  一般的な考え方としては、GRANT \<権限> ON \<オブジェクト> TO \<ユーザー、ログイン、またはグループ> という形になります。 権限の概要については、「[権限 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)」を参照してください。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -83,7 +83,7 @@ GRANT
   
 ## <a name="arguments"></a>引数  
  ALL  
- このオプションは旧バージョンとの互換性のためだけに保持されており、使用は推奨されません。 実際にはすべての権限が許可されるわけではありません。 ALL を指定すると、次の権限が許可されます。  
+ このオプションは旧バージョンとの互換性のためだけに保持されており、使用は推奨されません。 実際にはすべての権限が許可されるわけではありません。 ALL を指定すると、次のアクセス許可が許可されます。 
   
 -   セキュリティ保護可能なリソースがデータベースの場合、BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE、および CREATE VIEW。  
   
@@ -101,7 +101,7 @@ PRIVILEGES
  ISO 準拠のために用意されています。 ALL の動作は変更されません。  
   
 *permission*  
- 権限の名前を指定します。 権限とセキュリティ保護可能なリソースの有効な組み合わせについては、後のトピックを参照してください。  
+ 権限の名前を指定します。 アクセス許可とセキュリティ保護可能なリソースの有効な組み合わせについては、後のトピックを参照してください。  
   
 *column*  
  権限を許可するテーブルの列の名前を指定します。 かっこ () で囲む必要があります。  
@@ -126,7 +126,7 @@ AS *principal*
 このステートメントで AS を使っても、別のユーザーを偽装できることは意味しません。 
   
 ## <a name="remarks"></a>Remarks  
- GRANT ステートメントの完全な構文は複雑です。 前の構文ダイアグラムは、構造をわかりやすくするために簡略化されています。 セキュリティ保護可能なリソースに対する権限を許可するための完全な構文については、後のトピックを参照してください。  
+ GRANT ステートメントの完全な構文は複雑です。 前の構文ダイアグラムは、構造をわかりやすくするために簡略化されています。 セキュリティ保護可能なリソースに対するアクセス許可を許可するための完全な構文については、後の記事を参照してください。  
   
  許可された権限を取り消す場合は REVOKE ステートメントを使用します。また、GRANT ステートメントによってプリンシパルに特定の権限が許可されないようにするには DENY ステートメントを使用します。  
   
@@ -154,17 +154,17 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 ```  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 権限の一覧表  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] のすべての権限を示した pdf 形式のポスター サイズの一覧表については、 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)を参照してください。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] のすべてのアクセス許可を示した pdf 形式のポスター サイズの一覧表については、[https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster) を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- 権限の許可者 (または AS オプションで指定されたプリンシパル) は、GRANT OPTION によって与えられた権限を保持しているか、権限が暗黙的に与えられる上位の権限を保持している必要があります。 AS オプションを使用する場合は、追加の要件を満たす必要があります。 詳細については、セキュリティ保護可能なリソース別のトピックを参照してください。  
+ 権限の許可者 (または AS オプションで指定されたプリンシパル) は、GRANT OPTION によって与えられた権限を保持しているか、権限が暗黙的に与えられる上位の権限を保持している必要があります。 AS オプションを使用する場合は、追加の要件を満たす必要があります。 詳細については、セキュリティ保護可能なリソース別の記事を参照してください。  
   
  オブジェクトの所有者は、所有するオブジェクトの権限を許可できます。 セキュリティ保護可能なリソースに対して CONTROL 権限があるプリンシパルは、そのリソースの権限を許可できます。  
   
  sysadmin 固定サーバー ロールのメンバーなど、CONTROL SERVER 権限が許可されているユーザーは、サーバー内のセキュリティ保護可能なリソースに対する権限を許可できます。 db_owner 固定データベース ロールのメンバーなど、データベースに対する CONTROL 権限が許可されているユーザーは、データベース内のセキュリティ保護可能なリソースに対する権限を許可できます。 スキーマに対する CONTROL 権限が許可されているユーザーは、スキーマ内のオブジェクトに対する権限を許可できます。  
   
 ## <a name="examples"></a>使用例  
- 次の表は、セキュリティ保護可能なリソースと、その構文について説明しているトピックの一覧です。  
+ 次の表は、セキュリティ保護可能なリソースと、その構文について説明している記事の一覧です。  
   
 |||  
 |-|-|  

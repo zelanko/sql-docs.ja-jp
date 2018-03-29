@@ -1,16 +1,16 @@
 ---
-title: "SQL Server Audit (データベース エンジン) | Microsoft Docs"
-ms.custom: 
+title: SQL Server Audit (データベース エンジン) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/21/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - audit
@@ -18,21 +18,23 @@ helpviewer_keywords:
 - SQL Server Audit
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 02c5d20286c4bcf688e9570a85d58ac89e2ffd06
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3ca903d27dc667095e8db79e3a92e8cb85737004
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (データベース エンジン)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   *のインスタンスや個々のデータベースの* 監査 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] では、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]で発生するイベントの追跡およびログ記録が行われます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の監査では、サーバー レベルのイベント用のサーバー監査仕様とデータベース レベルのイベント用のデータベース監査仕様を含めることができる、サーバー監査を作成できます。 監査イベントは、イベント ログまたは監査ファイルに書き込むことができます。  
+  
+[!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、個々のインストール環境についての政府や標準による要件に応じて、複数のレベルの監査を使用できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査には、サーバーおよびデータベースのさまざまなオブジェクトの監査を有効化、保存、および表示するためのツールとプロセスが用意されています。  
   
@@ -131,7 +133,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="database-mirroring-and-sql-server-audit"></a>データベース ミラーリングと SQL Server 監査  
  データベース監査の仕様が定義されていて、データベース ミラーリングを使用するデータベースには、そのデータベース監査の仕様が含まれます。 ミラー化された SQL インスタンスでも正しく機能するようにするには、以下の項目を構成する必要があります。  
   
--   データベース監査の仕様が監査レコードを書き込めるようにするには、同じ GUID を持つ監査をミラー サーバーに作成する必要があります。 これは、CREATE AUDIT WITH GUID**=**\<*ソース Server Audit の GUID*> コマンドを使用して構成できます。  
+-   データベース監査の仕様が監査レコードを書き込めるようにするには、同じ GUID を持つ監査をミラー サーバーに作成する必要があります。 これは、CREATE AUDIT WITH GUID**=***\<ソース Server Audit の GUID*> コマンドを使用して構成できます。  
   
 -   バイナリ ファイル ターゲットの場合は、監査記録が書き込まれる場所に対する適切なアクセス許可がミラー サーバーのサービス アカウントに必要です。  
   
@@ -188,7 +190,7 @@ ms.lasthandoff: 11/21/2017
 > [!CAUTION]  
 >  sysadmin ロールのプリンシパルによって監査コンポーネントが勝手に書き換えられることも、db_owner ロールのプリンシパルによってデータベース内の監査の仕様が勝手に書き換えられることもないとはいえません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査では、監査の仕様を作成または変更するログオンが、ALTER ANY DATABASE AUDIT 以上の権限を持っているかどうかが検証されます。 ただし、データベースにアタッチするときには検証は行われません。 すべてのデータベース監査の仕様は、sysadmin ロールまたは db_owner ロールのプリンシパルと同等の信頼性しかないと見なす必要があります。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  [サーバー監査およびサーバー監査の仕様を作成する](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
  [サーバー監査およびデータベース監査の仕様を作成する](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
@@ -202,10 +204,10 @@ ms.lasthandoff: 11/21/2017
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログインの監査をオンにする方法について説明します。 監査レコードは Windows アプリケーション ログに格納されます。  
   
  [c2 audit mode サーバー構成オプション](../../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の C2 セキュリティ準拠の監査モードについて説明します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の C2 セキュリティ準拠の監査モードについて説明します。  
   
  [Security Audit イベント カテゴリ &#40;SQL Server Profiler&#41;](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
- [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] で使用できる監査イベントについて説明します。 詳細については、「 [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md)」を参照してください。  
+ [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]で使用できる監査イベントについて説明します。 詳細については、「 [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md)」を参照してください。  
   
  [SQL トレース](../../../relational-databases/sql-trace/sql-trace.md)  
  SQL トレースを使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Profiler からではなく、ユーザー独自のアプリケーションからトレースを手動で作成する方法について説明します。  

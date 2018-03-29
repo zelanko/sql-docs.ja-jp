@@ -1,16 +1,16 @@
 ---
 title: FROM (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 08/09/2017
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - JOIN
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c1abc4a060dd275ba2f8500e88d634a5ba9244ee
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0a78b022ae6b344531130c55fb08bfc3684f8e23
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -137,11 +137,15 @@ FROM { <table_source> [ ,...n ] }
   
 <table_source> ::=   
 {  
-    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [<tablesample_clause>]  
     | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
     | <joined_table>  
 }  
   
+<tablesample_clause> ::=
+    TABLESAMPLE ( sample_number [ PERCENT ] ) -- SQL Data Warehouse only  
+ 
 <joined_table> ::=   
 {  
     <table_source> <join_type> <table_source> ON search_condition   
@@ -230,8 +234,10 @@ FROM { <table_source> [ ,...n ] }
   
  データの特定のバージョンが、指定された時間的なテーブルとそのシステムのバージョン情報のリンクの履歴テーブルから返されることを指定します。  
   
-\<tablesample_clause>  
- テーブルからのデータのサンプルが返されることを指定します。 サンプルは、概数になる可能性があります。 この句は、SELECT、UPDATE、または DELETE ステートメント内の主テーブルまたは結合テーブルで使用できます。 TABLESAMPLE はビューを使用して指定できません。  
+### <a name="tablesample-clause"></a>TABLESAMPLE 句
+**適用対象:** SQL Server、SQL Database 
+ 
+ テーブルからのデータのサンプルが返されることを指定します。 サンプルは、概数になる可能性があります。 この句は、SELECT または UPDATE ステートメント内の主テーブルまたは結合テーブルで使用できます。 TABLESAMPLE はビューを使用して指定できません。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードされたデータベースに対して TABLESAMPLE を使用するときは、データベースの互換性レベルは 110 以上に設定され、再帰共通テーブル式 (CTE) クエリでは PIVOT は許可されません。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
@@ -254,13 +260,22 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  乱数を生成するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって使用される整数の定数式です。 *repeat_seed* は **bigint**です。 *repeat_seed* が指定されていない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってランダムに値が割り当てられます。 テーブルに変更が適用されていない場合は、特定の *repeat_seed* 値に対して、サンプル結果は常に同じになります。 *repeat_seed* 式は、0 より大きい整数値に評価される必要があります。  
   
- \<joined_table>  
- 2 つ以上のテーブルが組み合わされた結果セットです。 複数の結合については、かっこを使って結合の順序を変更できます。  
+### <a name="tablesample-clause"></a>TABLESAMPLE 句
+**適用対象:** SQL Data Warehouse
+
+ テーブルからのデータのサンプルが返されることを指定します。 サンプルは、概数になる可能性があります。 この句は、SELECT または UPDATE ステートメント内の主テーブルまたは結合テーブルで使用できます。 TABLESAMPLE はビューを使用して指定できません。 
+
+ PERCENT  
+ *sample_number* で指定した割合の行がテーブルから取得されることを指定します。 PERCENT を指定すると、SQL Data Warehouse は指定された割合の概数を返します。 PERCENT を指定する場合、*sample_number* 式は 0 ～ 100 の値に評価される必要があります。  
+
+
+### <a name="joined-table"></a>結合テーブル 
+結合テーブルは、2 つ以上のテーブルの積である結果セットです。 複数の結合については、かっこを使って結合の順序を変更できます。  
   
-\<join_type>  
- 結合操作の種類を指定します。  
+### <a name="join-type"></a>[結合の種類]
+結合操作の種類を指定します。  
   
- **INNER**  
+ INNER  
  一致するすべての行をペアで返すことを指定します。 両方のテーブルで一致しない行は廃棄します。 結合の種類が指定されていない場合は、これが既定値になります。  
   
  FULL [ OUTER ]  
@@ -272,8 +287,8 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [OUTER]  
  内部結合によって返されるすべての行に加えて、結合条件に合わない右側のテーブルのすべての行も結果セットに含まれます。左側のテーブルからの出力列は NULL に設定されることを指定します。  
   
-\<join_hint>  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーが、クエリの FROM 句で指定される結合ごとに、1 つの結合ヒントまたは実行アルゴリズムを使用することを指定します。 詳細については、「[結合ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md)」を参照してください。  
+### <a name="join-hint"></a>結合ヒント  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーが、クエリの FROM 句で指定される結合ごとに、1 つの結合ヒントまたは実行アルゴリズムを使用することを指定します。 詳細については、「[結合ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md)」を参照してください。  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の場合、これらの結合ヒントは、2 つの配布互換性のない列での内部結合に適用されます。 これらは、クエリの処理中に発生するデータの移動量を制限することで、クエリのパフォーマンスを向上することができます。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の許容される結合ヒントは次のとおりです。  
   
@@ -324,6 +339,8 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  前の引数で定義されたテーブル ソースです。 詳細については、「解説」を参照してください。  
   
+### <a name="pivot-clause"></a>PIVOT 句
+
  *table_source* PIVOT \<pivot_clause>  
  *table_source* が *pivot_column* に基づいてピボットされることを指定します。 *table_source* はテーブルまたはテーブル式です。 出力は、*pivot_column* および *value_column* 以外の *table_source* のすべての列を含んでいるテーブルです。 *pivot_column* および *value_column* 以外の *table_source* の列は、ピボット演算子のグループ化列と呼ばれます。 PIVOT および UNPIVOT の詳細については、「[PIVOT および UNPIVOT の使用](../../t-sql/queries/from-using-pivot-and-unpivot.md)」を参照してください。  
   
@@ -854,6 +871,14 @@ FROM DimProduct AS dp
 INNER REDISTRIBUTE JOIN FactInternetSales AS fis  
     ON dp.ProductKey = fis.ProductKey;  
 ```  
+
+### <a name="v-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>V.  TABLESAMPLE を使用してテーブル内のサンプル行からデータを読み取る  
+ 次の例では、`TABLESAMPLE` 句内で `FROM` を使用して、`10` テーブル内にあるすべての行の約 `Customer`% を返します。  
+  
+```sql    
+SELECT *  
+FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
+```
   
 ## <a name="see-also"></a>参照  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
@@ -862,6 +887,6 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [演算子 &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

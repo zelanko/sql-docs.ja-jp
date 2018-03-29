@@ -1,16 +1,16 @@
 ---
-title: "チュートリアル : 所有権の継承とコンテキストの切り替え | Microsoft Docs"
-ms.custom: 
+title: 'チュートリアル : 所有権の継承とコンテキストの切り替え | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - context switching [SQL Server], tutorials
 - ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b473f9f36e66de356c92e627114c934022b37838
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1ec6c4b013fabd008d2de3388ea163eae0428dcb
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
-GRANT ステートメントの詳細については、「[GRANT (Transact-SQL)](../t-sql/statements/grant-transact-sql.md)」を参照してください。 ストアド プロシージャの詳細については、「[ストアド プロシージャ (データベース エンジン)](../relational-databases/stored-procedures/stored-procedures-database-engine.md)」を参照してください。 [!INCLUDE[ssDE](../includes/ssde-md.md)]のすべての権限を示したポスターについては、[http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142) を参照してください。  
+GRANT ステートメントの詳細については、「[GRANT (Transact-SQL)](../t-sql/statements/grant-transact-sql.md)」を参照してください。 ストアド プロシージャの詳細については、「[ストアド プロシージャ (データベース エンジン)](../relational-databases/stored-procedures/stored-procedures-database-engine.md)」を参照してください。 [!INCLUDE[ssDE](../includes/ssde-md.md)] のすべてのアクセス許可を示したポスターについては、[https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster) を参照してください。  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2.データにアクセスするストアド プロシージャを作成する  
 データベース内でコンテキストを切り替えるには、EXECUTE AS ステートメントを使用します。 EXECUTE AS を使用するには IMPERSONATE 権限が必要です。  

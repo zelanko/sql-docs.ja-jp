@@ -1,16 +1,16 @@
 ---
 title: OPENDATASOURCE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENDATASOURCE
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2ddb99a84c910c89aedaa086eb10e3f9de7abb9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b839da305714566169a95dc3636c00eac9286e94
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   リンク サーバー名を使用せずに、4 つの要素で構成されるオブジェクト名の一部としてアドホック接続情報を提供します。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  

@@ -1,23 +1,23 @@
 ---
-title: "[メンテナンス プラン]([デザイン] タブ) | Microsoft Docs"
-ms.custom: 
+title: '[メンテナンス プラン]\([デザイン] タブ) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.maint.maintplanproperties.optimizations.f1
 - sql13.swb.maint.planeditor.f1
 - sql13.swb.maint.subplaneditor.f1
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -28,7 +28,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/18/2018
 ---
-# <a name="maintenance-plan-design-tab"></a>[メンテナンス プラン] ([デザイン] タブ)
+# <a name="maintenance-plan-design-tab"></a>[メンテナンス プラン] \([デザイン] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[メンテナンス プラン] ([デザイン] タブ)** では、メンテナンス プランとそのサブプランのプロパティを指定します。 ツールボックスのタスクをプラン デザイナーにドラッグします。 タスクのグループを右クリックし、分岐する実行パスを作成します。 メンテナンス プランは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エージェント ジョブで実行される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージとして保存されます。  
   
 ## <a name="options"></a>および  
