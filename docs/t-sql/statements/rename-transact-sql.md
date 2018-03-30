@@ -1,28 +1,28 @@
 ---
 title: RENAME (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 11/20/2017
-ms.prod: 
+ms.custom: ''
+ms.date: 03/21/2018
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
-caps.latest.revision: 
+caps.latest.revision: ''
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3c08b4d991717d877ca33cd2d136d0dbf0d30483
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1766a9e1dbe040ed120aaaf5d35fe0ab858c4e7a
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 01/25/2018
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 内のユーザーが作成したテーブルの名前を変更します。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 内のユーザーが作成したテーブルまたはデータベースの名前を変更します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内のデータベースの名前を変更するには、ストアド プロシージャ [sp_renamedb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md) を使用します。 Azure SQL Database でデータベースの名前を変更するには、[ALTER DATABASE (Azure SQL Database)](/statements/alter-database-azure-sql-database.md) ステートメントを使用します。 
+>  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でデータベースの名前を変更するには、[ALTER DATABASE (Azure SQL Data Warehouse)](alter-database-azure-sql-data-warehouse.md) を使用します。  Azure SQL Database でデータベースの名前を変更するには、[ALTER DATABASE (Azure SQL Database)](alter-database-azure-sql-database.md) ステートメントを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内のデータベースの名前を変更するには、ストアド プロシージャ [sp_renamedb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md) を使用します。
   
 ## <a name="syntax"></a>構文  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 -- Syntax for Azure SQL Data Warehouse  
   
 -- Rename a table.  
-RENAME OBJECT [ :: ]  [ [ database_name .  [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name  
+RENAME OBJECT [::] [ [ database_name .  [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name  
 [;]  
   
 ```  
@@ -56,14 +56,12 @@ RENAME DATABASE [::] database_name TO new_database_name
 ```  
   
 ## <a name="arguments"></a>引数  
- RENAME OBJECT [::]   
-          [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*  
+ RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*  
  **適用対象:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  ユーザー定義テーブルの名前を変更します。 1、2、または 3 部構成の名前で名前を変更するテーブルを指定します。    新しいテーブル *new_table_name* を 1 部構成の名前として指定します。  
   
- RENAME DATABASE [::]   
-          [ *database_name* TO *new_database_name*  
+ RENAME DATABASE [::] [ *database_name* TO *new_database_name*  
  **適用対象:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  ユーザー定義のデータベースの名前を *database_name* から *new_database_name* に変更します。  これらの [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] で予約されたいずれかのデータベース名に名前を変更することはできません。  
@@ -87,7 +85,7 @@ RENAME DATABASE [::] database_name TO new_database_name
 -   DWQueue  
   
 ## <a name="permissions"></a>アクセス許可  
- このコマンドを実行するには、このアクセス許可が必要です。  
+ このコマンドを実行するには、次のアクセス許可が必要です。  
   
 -   テーブルに対する **ALTER** 権限。  
    
@@ -98,12 +96,12 @@ RENAME DATABASE [::] database_name TO new_database_name
 外部テーブル、インデックス、またはビューの名前は変更できません。 この名前を変更する代わりに、外部テーブル、インデックス、またはビューを削除し、新しい名前を指定して再作成することができます。
 
 ### <a name="cannot-rename-a-table-in-use"></a>使用中のテーブルの名前は変更できない  
- 使用中に、テーブルまたはデータベースの名前を変更することはできません。 テーブルの名前を変更するには、テーブルに排他ロックが必要です。 テーブルを使用している場合は、テーブルを使用しているセッションを終了する必要があります。 セッションを終了するには、KILL コマンドを使用することができます。 セッションが終了すると、コミットされていない作業はロールバックされるので、KILL は注意して使用してください。 SQL Data Warehouse 内のセッションには、'SID' が付きます。 KILL コマンドを呼び出すときに、これとセッション番号を含める必要があります。 この例では、アクティブまたはアイドル状態のセッションの一覧を表示し、'SID1234' のセッションを終了します。  
+ 使用中に、テーブルまたはデータベースの名前を変更することはできません。 テーブルの名前を変更するには、テーブルに排他ロックが必要です。 テーブルを使用している場合は、テーブルを使用しているセッションを終了する必要があります。 セッションを終了するには、KILL コマンドを使用することができます。 セッションが終了すると、コミットされていない作業はロールバックされるので、KILL は注意して使用してください。 SQL Data Warehouse 内のセッションには、'SID' が付きます。 KILL コマンドを呼び出すときは、'SID' とセッション番号を含めます。 この例では、アクティブまたはアイドル状態のセッションの一覧を表示し、'SID1234' のセッションを終了します。  
   
 ### <a name="views-are-not-updated"></a>ビューは更新されません。  
- データベースの名前を変更すると、以前のデータベース名を使用するすべてのビューは無効になります。 これは、データベースの内部と外部の両方のビューに適用されます。 たとえば、Sales データベースの名前を変更する場合、`SELECT * FROM Sales.dbo.table1` を含むビューが無効になります。 これを解決するには、ビューでは、3 部構成の名前は使用しないようにするか、新しいデータベース名を参照するようにビューを更新します。  
+ データベースの名前を変更すると、以前のデータベース名を使用するすべてのビューは無効になります。 この動作は、データベースの内部と外部の両方のビューに適用されます。 たとえば、Sales データベースの名前を変更する場合、`SELECT * FROM Sales.dbo.table1` を含むビューが無効になります。 この問題を解決するには、ビューでは、3 部構成の名前は使用しないようにするか、新しいデータベース名を参照するようにビューを更新します。  
   
- テーブルの名前を変更したときに、新しいテーブルの名前を参照するようにビューは更新されません。 元のテーブル名を参照するとデータベース内部と外部の各ビューは無効になります。 これを解決するために、新しいテーブルの名前を参照するように各ビューを更新することができます。  
+ テーブルの名前を変更したときに、新しいテーブルの名前を参照するようにビューは更新されません。 元のテーブル名を参照するとデータベース内部と外部の各ビューは無効になります。 この問題を解決するために、新しいテーブルの名前を参照するように各ビューを更新することができます。  
   
 ## <a name="locking"></a>ロック  
  テーブルの名前を変更するときは、DATABASE オブジェクトの共有ロック、SCHEMA オブジェクトの共有ロック、およびテーブルに対する排他ロックを取得します。  
@@ -141,7 +139,7 @@ RENAME OBJECT mydb.dbo.Customer TO Customer1;
 ### <a name="c-move-a-table-to-a-different-schema"></a>C. 別のスキーマにテーブルを移動する  
  **適用対象:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- オブジェクトを別のスキーマに移動する場合、[ALTER SCHEMA &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md) を使用します。 たとえば、これは、テーブルの項目を product スキーマから dbo スキーマに移動します。  
+ オブジェクトを別のスキーマに移動する場合、[ALTER SCHEMA &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md) を使用します。 たとえば、次のステートメントは、テーブルの項目を product スキーマから dbo スキーマに移動します。  
   
 ```  
 ALTER SCHEMA dbo TRANSFER OBJECT::product.item;  
@@ -150,7 +148,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 ### <a name="d-terminate-sessions-before-renaming-a-table"></a>D. テーブルの名前を変更する前にセッションを終了する  
  **適用対象:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- 使用中にはテーブル名を変更できないことに注意してください。 テーブル名を変更するには、テーブルに排他ロックが必要です テーブルを使用している場合は、テーブルを使用しているセッションを終了する必要があります。 セッションを終了するには、KILL コマンドを使用することができます。 セッションが終了すると、コミットされていない作業はロールバックされるので、KILL は注意して使用してください。 SQL Data Warehouse 内のセッションには、'SID' が付きます。 KILL コマンドを呼び出すときに、これとセッション番号を含める必要があります。 この例では、アクティブまたはアイドル状態のセッションの一覧を表示し、'SID1234' のセッションを終了します。  
+ 使用中にはテーブル名を変更できないことに注意してください。 テーブル名を変更するには、テーブルに排他ロックが必要です テーブルを使用している場合は、テーブルを使用しているセッションを終了する必要があります。 セッションを終了するには、KILL コマンドを使用することができます。 セッションが終了すると、コミットされていない作業はロールバックされるので、KILL は注意して使用してください。 SQL Data Warehouse 内のセッションには、'SID' が付きます。 KILL コマンドを呼び出すときに、'SID' とセッション番号を含める必要があります。 この例では、アクティブまたはアイドル状態のセッションの一覧を表示し、'SID1234' のセッションを終了します。  
   
 ```  
 -- View a list of the current sessions  

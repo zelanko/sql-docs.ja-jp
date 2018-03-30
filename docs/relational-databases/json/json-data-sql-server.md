@@ -1,30 +1,30 @@
 ---
-title: "SQL Server で JSON データを操作する | Microsoft Docs"
-ms.custom: 
+title: SQL Server で JSON データを操作する | Microsoft Docs
+ms.custom: ''
 ms.date: 02/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.component: json
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - JSON
 - JSON, built-in support
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 92bac08a5168cb60477f8d253a9fee1f0fb5caef
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 1e4e9f4a26b2d5ad3ee12975fa16d0442766f7e9
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server の JSON データ
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -172,7 +172,31 @@ FOR JSON PATH
 ```  
   
 詳細については、「[FOR JSON を使用してクエリ結果を JSON として書式設定する (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)」と「[FOR 句 (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)」を参照してください。  
-  
+
+## <a name="use-cases-for-json-data-in-sql-server"></a>SQL Server での JSON データのユース ケース
+
+SQL Server と Azure SQL Database での JSON のサポートにより、リレーショナルと NoSQL の概念が統合されます。 リレーショナルから半構造化データへの変換、およびその逆が簡単にできます。 しかし、JSON は既存のリレーショナル モデルに置き換わるものではありません。 ここでは、SQL Server と SQL Database での JSON サポートによる利点が得られるユース ケースをいくつか紹介します。 詳細については、「[JSON in SQL Server – Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/)」(SQL Server の JSON - ユース ケース) を参照してください。
+
+### <a name="simplify-complex-data-models"></a>複雑なデータ モデルを簡略化する
+
+複数の子テーブルの代わりに JSON フィールドでデータ モデルを非正規化することを検討してください。 詳細については、「[Simplify data access using de-normalized models](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/24/simplify-data-access-using-de-normalized-models/)」(非正規化モデルを使用してデータ アクセスを簡略化する) を参照してください。
+
+### <a name="store-retail-and-e-commerce-data"></a>小売および e コマースのデータを格納する
+
+柔軟性のために非正規化されたモデルにさまざまな変数属性による製品情報を格納します。 詳細については、「[Designing Product Catalogs in SQL Server using JSON](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/designing-product-catalogs-in-sql-server-2016-using-json/)」(JSON を使用した SQL Server の製品カタログの設計) および「[Indexing data in JSON product catalogs](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/indexing-data-in-json-product-catalogs/)」(JSON 製品カタログのデータのインデックス作成) を参照してください。
+
+### <a name="process-log-and-telemetry-data"></a>ログとテレメトリ データの処理
+
+Transact-SQL 言語を活用して JSON ファイルとして格納されたログ データの読み込み、クエリ、分析を行います。 詳細については、「[JSON in SQL Server – Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/)」(SQL Server の JSON - ユース ケース) の「*Log and telemetry data analysis*」(ログおよびテレメトリ データ分析) のセクションを参照してください。
+
+### <a name="store-semi-structured-iot-data"></a>半構造化された IoT データを格納する
+
+IoT データのリアルタイム分析が必要なときは、受信データをストレージの場所にステージングせずに、データベースに直接読み込みます。 詳細については、「[Working with Azure IoT data in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/23/working-with-azure-iot-data-in-azure-sql-database/)」(Azure SQL Database で Azure の IoT データを操作する) を参照してください。
+
+### <a name="simplify-rest-api-development"></a>REST API の開発を簡略化する
+
+データベースのリレーショナル データを、Web サイトをサポートする REST API で使用される JSON 形式に簡単に変換します。 詳細については、「[Simplify REST API development for modern Single-page apps with SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/29/simplify-rest-api-development-modern-single-page-apps-sql-server/)」(SQL Server を使用して最新の単一ページ アプリのための REST API の開発を簡略化する) を参照してください。
+
 ## <a name="combine-relational-and-json-data"></a>リレーショナル データと JSON データを結合する
 SQL Server は、標準の Transact-SQL 言語を使用してリレーショナル データと JSON データの両方を格納および処理するハイブリッド モデルを提供します。 テーブル内の JSON ドキュメントのコレクションを整理し、それらの間のリレーションシップを確立、テーブルに格納された厳密に型指定されたスカラー列を JSON 列に格納された柔軟なキーと値のペアに結合し、完全な Transact-SQL を使用して 1 つ以上のテーブルのスカラー値と JSON 値の両方についてクエリを実行します。
  
