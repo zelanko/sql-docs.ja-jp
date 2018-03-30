@@ -16,30 +16,30 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 0613d9352e7be20de52fb771fb8e28823556304b
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 9f633a8d624fd31913dc2aeb6fde34ff30b7645d
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>チュートリアル: SSMS を使用するためのヒントとテクニック
 この記事では、SQL Server Management Studio の使用に関する他のテクニックについて説明します。 以下の方法を示します。 
 
-   - Transact-SQL (T-SQL) のテキストをコメント化/コメント解除する
-   - テキストをインデントする
-   - オブジェクト エクスプローラーでオブジェクトをフィルター処理する
-   - SQL Server のエラー ログにアクセスする
-   - 使っている SQL Server インスタンスの名前を調べる
+> [!div class="checklist"]
+> * Transact-SQL (T-SQL) のテキストをコメント化/コメント解除する
+> * テキストをインデントする
+> * オブジェクト エクスプローラーでオブジェクトをフィルター処理する
+> * SQL Server のエラー ログにアクセスする
+> * 使っている SQL Server インスタンスの名前を調べる
 
 ## <a name="prerequisites"></a>Prerequisites
 このチュートリアルを実行するには、SQL Server Management Studio、SQL Server へのアクセス、および AdventureWorks データベースが必要です。 
 
 - [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) をインストールする。
-- [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードする。 
-    - SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
+- [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードする。 SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
 
-## <a name="commenting--uncommenting-your-t-sql"></a>T-SQL をコメント化/コメント解除する
+## <a name="comment--uncomment-your-t-sql-code"></a>T-SQL コードをコメント化する/コメント解除する
 ツール バーのコメント ボタンを使って、テキストの一部をコメント化したり、コメント解除したりできます。 コメント化されたテキストは実行されません。 
 
 1. SQL Server Management Studio を開きます。 
@@ -48,37 +48,40 @@ ms.lasthandoff: 03/21/2018
 4. 次の T-SQL コード スニペットをテキスト ウィンドウに貼り付けます。 
 
   ```sql
-  USE master
-GO
+    USE master
+    GO
 
--- Drop the database if it already exists
-IF  EXISTS (
-    SELECT name 
-        FROM sys.databases 
-        WHERE name = N'TutorialDB'
-)
-DROP DATABASE TutorialDB
-GO
+    -- Drop the database if it already exists
+    IF  EXISTS (
+        SELECT name 
+            FROM sys.databases 
+            WHERE name = N'TutorialDB'
+            )
 
-CREATE DATABASE TutorialDB
-GO
+    DROP DATABASE TutorialDB
+    GO
 
-ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
-GO
+    CREATE DATABASE TutorialDB
+    GO
+
+    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
+    GO
  ``` 
-2. テキストの **Alter Database** の部分を強調表示にして、ツール バーの **[コメント]** をクリックします。 
+
+
+5. テキストの **Alter Database** の部分を強調表示にして、ツール バーの **[コメント]** をクリックします。 
 
     ![解説](media/ssms-tricks/comment.png)
-3. **[実行]** をクリックして、テキストのコメント解除された部分を実行します。 
-4. **Alter Database** コマンド以外のすべての部分を強調表示にして、ツール バーの **[コメント]** をクリックします。
+6. **[実行]** をクリックして、テキストのコメント解除された部分を実行します。 
+7. **Alter Database** コマンド以外のすべての部分を強調表示にして、ツール バーの **[コメント]** をクリックします。
 
     ![すべてをコメント化する](media/ssms-tricks/commenteverything.png)
 
-5. **Alter Database** の部分を強調表示にして **[コメント解除]** をクリックし、コメントを解除します。
+8. **Alter Database** の部分を強調表示にして **[コメント解除]** をクリックし、コメントを解除します。
 
     ![コメントを解除する](media/ssms-tricks/uncomment.png)
     
-6. **[実行]** をクリックして、テキストのコメント解除された部分を実行します 
+9. **[実行]** をクリックして、テキストのコメント解除された部分を実行します。 
 
 ## <a name="indent-your-text"></a>テキストをインデントする
 インデント ボタンを使うと、テキストのインデントを増減することができます。 
@@ -87,33 +90,35 @@ GO
 2. 次の T-SQL コード スニペットをテキスト ウィンドウに貼り付けます。 
 
   ```sql
-  USE master
-GO
+    USE master
+    GO
 
--- Drop the database if it already exists
-IF  EXISTS (
-    SELECT name 
-        FROM sys.databases 
-        WHERE name = N'TutorialDB'
-)
-DROP DATABASE TutorialDB
-GO
+    -- Drop the database if it already exists
+    IF  EXISTS (
+        SELECT name 
+            FROM sys.databases 
+            WHERE name = N'TutorialDB'
+            )
 
-CREATE DATABASE TutorialDB
-GO
+    DROP DATABASE TutorialDB
+    GO
 
-ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
-GO
+    CREATE DATABASE TutorialDB
+    GO
+
+    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
+    GO
  ``` 
-2. テキストの **Alter Database** の部分を強調表示にし、ツール バーの **[インデント]** をクリックして、このテキストを右に移動します。
+ 
+3. テキストの **Alter Database** の部分を強調表示にし、ツール バーの **[インデント]** をクリックして、このテキストを右に移動します。
 
     ![[インデント]](media/ssms-tricks/increaseindent.png)
 
-3. テキストの **Alter Database** の部分を再び強調表示にし、今度は **[インデント解除]** をクリックして、このテキストを左に移動します。 
+4. テキストの **Alter Database** の部分を再び強調表示にし、今度は **[インデント解除]** をクリックして、このテキストを左に移動します。 
     ![インデント解除](media/ssms-tricks/decreaseindent.png)
 
 
-## <a name="filtering-objects-in-object-explorer"></a>オブジェクト エクスプローラーでオブジェクトをフィルター処理する
+## <a name="filter-objects-in-object-explorer"></a>オブジェクト エクスプローラーでオブジェクトをフィルター処理する
 データベースに多くのオブジェクトがある場合、特定のオブジェクトを見つけるのが難しい場合があります。 オブジェクトのフィルター処理機能を使って、簡単に見つけることができます。 このセクションではテーブルをフィルター処理する方法について説明しますが、**オブジェクト エクスプローラー**内の他のノードにも同じ手順を使用できます
 
 1. SQL Server に接続します。
@@ -135,10 +140,10 @@ GO
     
 
 
-## <a name="accessing-your-sql-server-error-log"></a>SQL Server のエラー ログにアクセスする
+## <a name="access-your-sql-server-error-log"></a>SQL Server のエラー ログにアクセスする
 エラー ログは、SQL Server 内で発生したことに関する詳細な情報を含むファイルです。 SSMS で参照してクエリを実行することができます。 ディスクで .log ファイルとして検索することもできます。
 
-### <a name="finding-your-error-log-if-you-cannot-connect-to-sql"></a>SQL に接続できない場合にエラー ログを検索する
+### <a name="find-your-error-log-if-you-cannot-connect-to-sql"></a>SQL に接続できない場合にエラー ログを検索する
 1. SQL Server 構成マネージャーを開きます。 
 2. **[サービス]** ノードを展開します。
 3. SQL Server インスタンスを右クリックして、**[プロパティ]** を選択します。
@@ -152,9 +157,9 @@ GO
     - この場所には複数の errorlog.* があることがわかります。 *.log で終わっているのが現在のものです。 数字で終わっているのは以前のログです。SQL Server が再起動するたびに、新しいログが作成されます。 
 6. このファイルをメモ帳で開きます。 
 
-### <a name="finding-your-error-log-if-youre-connected-to-sql"></a>SQL に接続されている場合にエラー ログを検索する
+### <a name="find-your-error-log-if-youre-connected-to-sql"></a>SQL に接続されている場合にエラー ログを検索する
 1. SQL Server に接続します。
-2. **[新しいクエリ]** ウィンドウを開きます 
+2. **[新しいクエリ]** ウィンドウを開きます。
 3. クエリ ウィンドウに次の T-SQL コード スニペットを貼り付けて、**[実行]** をクリックします。
 
 
@@ -174,8 +179,8 @@ GO
     ![SSMS でエラー ログを表示する](media/ssms-tricks/viewerrorloginssms.png)
 
 ### <a name="query-error-log-within-ssms"></a>SSMS でエラー ログのクエリを行う
-1. SQL Server に接続します
-2. **[新しいクエリ]** ウィンドウを開きます
+1. SQL Server に接続します。
+2. **[新しいクエリ]** ウィンドウを開きます。
 3. クエリ ウィンドウに次の T-SQL コード スニペットを貼り付けます。
 
  ```sql
@@ -186,26 +191,26 @@ GO
    
     ![エラー ログのクエリ](media/ssms-tricks/queryerrorlog.png)
 
-## <a name="determine-sql-server-instance-name"></a>SQL Server インスタンスの名前を確認する
+## <a name="determine-sql-server-instance-name"></a>SQL Server インスタンスの名前を確認する...
 SQL Server に接続する前と後では、インスタンスの名前を確認する方法が異なります。  
 
 ### <a name="when-you-dont-know-it"></a>...インスタンス名がわからないとき
-1. 手順に従って[ディスク上の SQL Server エラー ログ](#finding-your-error-log-if-you-cannot-connect-to-sql)を探します 
+1. 手順に従って[ディスク上の SQL Server エラー ログ](#finding-your-error-log-if-you-cannot-connect-to-sql)を探します。 
 2. メモ帳で errorlog.log を開きます。 
 3. "サーバー名は" で始まるテキストを探します。
   - 単一引用符で囲まれているのが、これから接続するインスタンスの名前です。![エラー ログでのサーバー名](media/ssms-tricks/servernameinlog.png)
 
-### <a name="once-youre-connected"></a>...接続した後
+### <a name="once-youre-connected-to-sql"></a>...SQL に接続した後 
 接続しているインスタンスを調べるには 3 つの場所があります。 
 
-1. サーバーの名前は、**オブジェクト エクスプローラー**に表示されます
+1. サーバーの名前は、**オブジェクト エクスプローラー**に表示されます。
 
     ![オブジェクト エクスプローラーでのインスタンス名](media/ssms-tricks/nameinobjectexplorer.png)
 2. サーバーの名前は、クエリ ウィンドウに表示されます。
 
     ![クエリ ウィンドウでの名前](media/ssms-tricks/nameinquerywindow.png)
 3. のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 サーバーの名前は、**プロパティ ウィンドウ**にも表示されます。
-    - アクセスするには、**[表示]** メニューを開き、**[プロパティ ウィンドウ]** を選択します
+    - アクセスするには、**[表示]** メニューを開き、**[プロパティ ウィンドウ]** を選択します。
 
     ![プロパティでの名前](media/ssms-tricks/nameinproperties.png)
 

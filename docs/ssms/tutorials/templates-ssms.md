@@ -18,18 +18,20 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 05a9883ff436991e5ee830ce1561ecced0fa9b60
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a01586f4ab3d002e33b7679f6fe2e5a165f260e1
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-using-templates-within-sql-server-management-studio"></a>チュートリアル: SQL Server Management Studio 内でテンプレートを使用する
 このチュートリアルでは、SQL Server Management Studio (SSMS) 内で使用できる作成済みの Transact-SQL (T-SQL) テンプレートについて説明します。 この記事では、次の内容を学習します。
-    - テンプレート ブラウザーを使用して T-SQL スクリプトを生成する
-    - 既存のテンプレートを編集する 
-    - ディスク上のテンプレートを探す
-    - 新しいテンプレートを作成する
+
+> [!div class="checklist"]
+> * テンプレート ブラウザーを使用して T-SQL スクリプトを生成する
+> * 既存のテンプレートを編集する 
+> * ディスク上のテンプレートを探す
+> * 新しいテンプレートを作成する
    
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -63,8 +65,8 @@ ms.lasthandoff: 03/21/2018
 ## <a name="edit-an-existing-template"></a>既存のテンプレートを編集する
 **[テンプレート ブラウザー]** では、既存のテンプレートを編集することもできます。  
 
-1. **[テンプレート ブラウザー]** で目的のテンプレートを見つけます
-2. テンプレートを右クリックし、**[編集]** を選択します
+1. **[テンプレート ブラウザー]** で目的のテンプレートを見つけます。
+2. テンプレートを右クリックし、**[編集]** を選択します。
 
     ![テンプレートを編集する](media/templates-ssms/edittemplate.png)
 
@@ -86,19 +88,19 @@ ms.lasthandoff: 03/21/2018
 ## <a name="create-a-new-template"></a>新しいテンプレートを作成する
 **[テンプレート ブラウザー]** では、新しいテンプレートを作成することもできます。 以下の手順では、新しいフォルダーを作成し、そのフォルダー内に新しいテンプレートを作成する方法を示します。 ただし、この手順では、既存のフォルダーにカスタム テンプレートを作成することもできます。 
 
-1. **[テンプレート ブラウザー]** を開きます
-2. [SQL Server テンプレート] を右クリックし、**[新規]** > **[フォルダー]** の順に選択します 
-3. このフォルダーの名前を「**カスタム テンプレート**」に設定します
+1. **[テンプレート ブラウザー]** を開きます。
+2. [SQL Server テンプレート] を右クリックし、**[新規]** > **[フォルダー]** の順に選択します。
+3. このフォルダーの名前を「**カスタム テンプレート**」に設定します。
 
     ![カスタム テンプレートの作成](media/templates-ssms/creatingcustomtemplate.png)
 
-4. 新しく作成した**カスタム テンプレート** フォルダーを右クリックし、**[新規]** > **[テンプレート]** の順に選択して、テンプレートの名前を指定します。 
+4. 新しく作成した**[カスタム テンプレート]** フォルダーを右クリックし、**[新規]** > **[テンプレート]** の順に選択して、テンプレートの名前を指定します。
  
     ![カスタム テンプレートを作成する](media/templates-ssms/createnewtemplate.png)
    
 5. 作成したテンプレートを右クリックして、**[編集]** を選択します。 **[新しいクエリ ウィンドウ]** が開きます。
 6. 保存する T-SQL のテキストを入力します。 
-7. **[ファイル]** メニューの **[保存]** を選択して、ファイルを保存します
+7. **[ファイル]** メニューの **[保存]** を選択して、ファイルを保存します。
 8. 既存の **[クエリ ウィンドウ]** を閉じて、新しいカスタム テンプレートを開きます。 
 
     
@@ -108,4 +110,4 @@ ms.lasthandoff: 03/21/2018
 
 詳細については、次の記事に進んでください
 > [!div class="nextstepaction"]
-> [次のステップ ボタン](ssms-tricks.md))
+> [次のステップ ボタン](ssms-tricks.md)
