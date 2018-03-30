@@ -10,21 +10,23 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 7b389c5b58dc0afde077f70e2fd8bec7c6cac4d0
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 6f4110a0ae1b4ca349cc9b990cc9a32f7d41764d
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-connect-and-query-sql-server-using-sql-server-management-studio"></a>チュートリアル: SQL Server Management Studio を使用して SQL Server に接続しクエリを行う
 このチュートリアルでは、SQL Server Management Studio (SSMS) を使って SQL Server インスタンスに接続し、いくつかの基本的な Transact-SQL (T-SQL) コマンドを実行する方法を説明します。 この記事では、以下のことを行う方法を示します。
-    - [SQL Server に接続する](#connect-to-a-sql-server)
-    - [新しいデータベース (**TutorialDB**) を作成する](#create-a-database)
-    - [新しいデータベースにテーブル (**Customers**) を作成する](#create-a-table)
-    - [新しい **Customers** テーブルに行を挿入する](#insert-rows)
-    - [**Customers** テーブルのクエリを行って結果を表示する](#view-query-results)
-    - [クエリ ウィンドウのテーブルを使用して接続のプロパティを確認する](#verify-your-query-window-connection-properties)
-    - [クエリ ウィンドウが接続するサーバーを変更する](#change-server-connection-within-query-window)
+
+> [!div class="checklist"]
+> * [SQL Server に接続する](#connect-to-a-sql-server)
+> * [新しいデータベース (**TutorialDB**) を作成する](#create-a-database)
+> * [新しいデータベースにテーブル (**Customers**) を作成する](#create-a-table)
+> * [新しい **Customers** テーブルに行を挿入する](#insert-rows)
+> * [**Customers** テーブルのクエリを行って結果を表示する](#view-query-results)
+> * [クエリ ウィンドウのテーブルを使用して接続のプロパティを確認する](#verify-your-query-window-connection-properties)
+> * [クエリ ウィンドウが接続するサーバーを変更する](#change-server-connection-within-query-window)
 
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -61,7 +63,7 @@ ms.lasthandoff: 03/21/2018
    ![成功した接続](media/connect-query-sql-server/successfulconnection.png)
 
 
-## <a name="create-a-database"></a>データベースを作成する
+## <a name="create-a-database"></a>データベースの作成
 次の手順では、TutorialDB という名前のデータベースを作成します。 
 
 1. **オブジェクト エクスプローラー**でサーバーを右クリックし、**[新しいクエリ]** を選択します。

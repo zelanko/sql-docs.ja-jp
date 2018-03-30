@@ -1,0 +1,5 @@
+# [FILESTREAM と OLE DB](filestream-and-ole-db.md)
+# [IBCPSession を使用した FILESTREAM 列のファイルへの読み取り (OLE DB)](read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)
+# [ISequentialStream を使用した FILESTREAM 列からのデータの取得 (OLE DB)](retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md)
+# [IRowsetFastUpload を使用した FILESTREAM 列へのデータの送信 (OLE DB)](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)
+# [FILESTREAM へのデータの送信 - ICommandText にバインドされた ISequentialStream](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)

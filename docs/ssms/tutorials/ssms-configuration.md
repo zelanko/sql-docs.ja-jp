@@ -10,21 +10,22 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: c9ede90c1232469797f85af353c7e3fced6851b5
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 8cdb4f258f62b425be78e9f6b4628d69e304c7ba
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>チュートリアル: SQL Server Management Studio のコンポーネントと構成
 このチュートリアルでは、SQL Server Management Studio (SSMS) 内のさまざまなウィンドウ コンポーネントと、ワークスペースに関する基本的な構成オプションについて説明します。 この記事では、次の内容を学習します。 
-- SSMS 環境を構成するさまざまなコンポーネント
-- 環境レイアウトの変更と、既定値へのリセット
-- クエリ エディターの最大化
-- 次のような基本設定の変更
-    - フォントの変更
-    - 起動オプションの構成
-    - 構成の既定値へのリセット
+
+> [!div class="checklist"]
+> * SSMS 環境を構成するさまざまなコンポーネント
+> * 環境レイアウトの変更と、既定値へのリセット
+> * クエリ エディターの最大化
+> * フォントの変更 
+> * 起動オプションの構成 
+> * 構成の既定値へのリセット 
 
 ## <a name="prerequisites"></a>Prerequisites
 このチュートリアルを実行するには、SQL Server Management Studio が必要です。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 03/21/2018
 
     
 
-## <a name="changing-the-environmental-layout"></a>環境レイアウトの変更 
+## <a name="change-the-environmental-layout"></a>環境レイアウトを変更する 
 ここでは、さまざまなウィンドウの移動など、環境レイアウトの操作について説明します。 
 
 -  ウィンドウの各コンポーネントは、タイトルをクリックしたままドラッグすることで、ウィンドウ内を移動できます。 
@@ -90,7 +91,7 @@ ms.lasthandoff: 03/21/2018
  
     ![元のウィンドウ レイアウトに戻す](media/ssms-configuration/resetwindowlayout.png)
     
-## <a name="maximizing-query-editor"></a>クエリ エディターの最大化
+## <a name="maximize-query-editor"></a>クエリ エディターを最大化する
 クエリ エディターを最大化して全画面表示モードにすることができます。
 
 1. クエリ エディター ウィンドウの任意の場所をクリックします。
@@ -100,7 +101,7 @@ ms.lasthandoff: 03/21/2018
 
 
 
-## <a name="changing-basic-settings"></a>基本設定の変更
+## <a name="change-basic-settings"></a>基本設定を変更する
 ここでは、SSMS のいくつかの基本設定を変更する方法について説明します。 これらのオプションは、**[ツール]** メニュー オプションにあります。
 
   ![[ツール] メニュー](media/ssms-configuration/tools.png)
@@ -110,18 +111,32 @@ ms.lasthandoff: 03/21/2018
 
     ![ツール バーのカスタマイズ](media/ssms-configuration/toolbar.png)
 
+### <a name="change-the-font"></a>フォントを変更する
 - フォントは、**[ツール]** > **[オプション]** > **[フォントおよび色]** メニューから変更できます。
 
      ![フォントおよび色](media/ssms-configuration/fontsandcolors.png)
 
+### <a name="change-the-startup-options"></a>起動オプションを変更する
 - SSMS を初めて起動したときのワークスペースの外観は、スタートアップ オプションによって決まります。 これらは、**[ツール]** > **[オプション]** > **[スタートアップ]** メニューから構成できます。
  
     ![スタートアップ オプション](media/ssms-configuration/startup.png)
 
+### <a name="reset-settings-to-default"></a>設定を既定値にリセットする
 - これらの設定はすべて、**[ツール]** > **[設定のインポートとエクスポート]** メニューからエクスポートおよびインポートできます。 
 
     ![インポートとエクスポートの設定](media/ssms-configuration/settings.png)
     - ここではまた、すべての設定を既定値にリセットすることもできます。 
+
+
+## <a name="next-steps"></a>次の手順
+次の記事では、SQL Server エラー ログと SQL インスタンス名の検索など、SSMS を使用するためのいくつかのヒントとテクニックについて説明します。 
+
+詳細については、次の記事に進んでください
+> [!div class="nextstepaction"]
+> [次のステップ ボタン](ssms-tricks.md)
+ 
+ 
+
 
 
 

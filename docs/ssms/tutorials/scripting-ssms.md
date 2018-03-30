@@ -19,19 +19,21 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 2ee56bc26c22f91af7bf156ea967c19b61eab881
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: bc20cc573c6b0890e5b16f4876636534f9fbb916
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>チュートリアル: SQL Server Management Studio でオブジェクトのスクリプトを作成する
 このチュートリアルでは、SQL Server Management Studio で見つかるさまざまなオブジェクトの Transact-SQL (T-SQL) スクリプトを生成する方法を説明します。  次のオブジェクトのスクリプトを作成する方法の例を示します。 
- - クエリ、GUI 内でアクションを実行する場合
- - データベース、2 種類の方法 ("スクリプト化" と "スクリプトの生成")
- - テーブル
- - ストアド プロシージャ
- - 拡張イベント
+
+> [!div class="checklist"]
+> * クエリ、GUI 内でアクションを実行する場合
+> * データベース、2 種類の方法 ("スクリプト化" と "スクリプトの生成")
+> * テーブル
+> * ストアド プロシージャ
+> * 拡張イベント
 
 このチュートリアルの内容をまとめると、**オブジェクト エクスプローラー**に表示されるすべてのオブジェクトは、オブジェクトを右クリックして **[Script Object As]\(スクリプト化\)** オプションを選択することでスクリプトを作成できます。 
 
@@ -41,14 +43,13 @@ ms.lasthandoff: 03/21/2018
 
 - [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) をインストールする。
-- [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードする。 
-    - SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
+- [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードする。 SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
 
 
 ## <a name="script-queries-from-gui"></a>GUI からクエリのスクリプトを作成する
 SSMS で GUI を使ってタスクを実行するときはいつでも、そのタスクに関連付けられている T-SQL コードも生成できます。 次の例では、データベースのバックアップを作成するときと、トランザクション ログを圧縮するときについて、その方法を示します。  GUI を使って行うすべてのアクションに、同じ手順を適用できます。 
 
-### <a name="scriptt-sql-when-backing-up-a-database"></a>データベースをバックアップするときの T-SQL をスクリプト化する
+### <a name="script-t-sql-when-backing-up-a-database"></a>データベースをバックアップするときの T-SQL をスクリプト化する
 1. SQL Server に接続します。
 2. **[データベース]** ノードを展開します。
 3. データベースを右クリックし、**[タスク]** > **[バックアップ]** の順に選択します。
@@ -124,7 +125,7 @@ SSMS で GUI を使ってタスクを実行するときはいつでも、その�
 2. **[データベース]** ノードを展開します。
 3. **AdventureWorks** データベースのノードを展開します。 
 4. **[テーブル]** ノードを展開します。
-5. スクリプトを作成するテーブルを右クリックして、**[テーブルをスクリプト化]** を選択します
+5. スクリプトを作成するテーブルを右クリックして、**[テーブルをスクリプト化]** を選択します。
     - ここには、テーブルの作成やデータの挿入などのさまざまなオプションがあります 
     
     ![Readme_ScriptTable](media/scripting-ssms/scripttable.png)
@@ -136,7 +137,7 @@ SSMS で GUI を使ってタスクを実行するときはいつでも、その�
 2. **[データベース]** ノードを展開します。
 3. **[プログラミング]** ノードを展開します。 
 4. **[ストアド プロシージャ]** ノードを展開します。
-5. 対象のストアド プロシージャを右クリックして、**[ストアド プロシージャをスクリプト化]** を選択します
+5. 対象のストアド プロシージャを右クリックして、**[ストアド プロシージャをスクリプト化]** を選択します。
     
     ![ストアド プロシージャをスクリプト化する](media/scripting-ssms/scriptstoredprocedure.PNG)
 
