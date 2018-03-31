@@ -1,31 +1,31 @@
 ---
-title: "プロパティ |Microsoft ドキュメント"
-ms.custom: 
+title: プロパティ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a609149d5f561519e6971f2c8c737d678315bb33
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/31/2018
 ---
 # <a name="properties"></a>プロパティ 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の表形式モデル プロジェクトには、プロジェクト、モデル、レポート、および配置の方法を定義するさまざまなプロパティがあります。 プロパティ設定は、Model.bim ファイルに XML 形式で保存されます。ただし、ここで説明するすべてのプロパティは、 **の** [プロパティ] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ウィンドウで構成できます。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の表形式モデル プロジェクトには、プロジェクト、モデル、レポート、および配置の方法を定義するさまざまなプロパティがあります。 プロパティ設定は、Model.bim ファイルに XML 形式で保存されます。ただし、ここで説明するすべてのプロパティは、 **の** [プロパティ] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ウィンドウで構成できます。  
   
 ## <a name="related-tasks"></a>関連タスク  
   
