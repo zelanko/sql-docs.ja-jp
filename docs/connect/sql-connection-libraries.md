@@ -11,13 +11,13 @@ ms.technology: dbe-data-tier-apps
 ms.custom: ''
 ms.workload: data-management
 ms.topic: article
-ms.date: 08/09/2017
+ms.date: 03/29/2018
 ms.author: genemi
-ms.openlocfilehash: 33df5e13dcdeb205a1dbc9fa9c1a5dc7efc754c2
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: c1f0f197fbc01863ab06164282d2d007c2bd8214
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL データベースを接続するモジュール
 
@@ -27,7 +27,6 @@ ms.lasthandoff: 03/28/2018
 - MacOS
 - Windows
 
-
 #### <a name="oop-to-relational-mismatch"></a>OOP リレーショナルが一致しません
 
 *リレーショナル*: 多くの場合、オブジェクト指向プログラミング (OOP) 言語で記述されたクライアント プログラムは、オブジェクト指向より以上のリレーショナル形式でクエリ データを返すことが SQL ドライバーを使用します。 ADO.NET を使用して、c#、1 つの例です。 OOP リレーショナル形式が一致しない場合がありますにより OOP コードが困難を記述して理解します。
@@ -35,7 +34,6 @@ ms.lasthandoff: 03/28/2018
 *ORM*: 他のドライバーやフレームワークには、不一致を回避する、OOP 形式でクエリ データを返します。 これらのドライバーは、特定の SQL テーブルのデータ列と一致するクラスが定義されていることを指定してくださいによって機能します。 ドライバーを実行し、*オブジェクト リレーショナル マッピング*(ORM) クラスのインスタンスにクエリ データを返すにします。 C# の場合は、Microsoft の Entity Framework (EF) と java の場合、休止状態は、次の 2 つの例です。
 
 この記事では、個別のセクションをリビルドこれら 2 つのドライバーの接続にします。
-
 
 <a name="anchor-20-drivers-relational-access" />
 
@@ -53,18 +51,16 @@ PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/
 although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
-
 | 言語 | SQL driver をダウンロードします。 |
 | :------- | :---------------------- |
-| C#       | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Ubuntu Linux 用の .NET core](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core、MacOS 用](https://www.microsoft.com/net/core#macos)<br />[Windows 用の .NET core](https://www.microsoft.com/net/core) |
-| C++      | [ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
-| Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
-| Node.js  | [Node.js ドライバー、インストール手順](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
-| PHP (PHP)      | *オペレーティング システム：*<br /><br />[Windows の PHP driver](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Github から Linux または macOS の PHP driver](http://github.com/Microsoft/msphpsql/) |
-| Python   | [pyodbc、インストール手順](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[ODBC をダウンロードします。](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
-| Ruby     | [Ruby ドライバー、インストール手順](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[ルビのダウンロード ページ](https://rubyinstaller.org/downloads/) |
+| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Ubuntu Linux 用の .NET core](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core、MacOS 用](https://www.microsoft.com/net/core#macos)<br />[Windows 用の .NET core](https://www.microsoft.com/net/core) |
+| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/oledb-driver-for-sql-server-programming.md) |
+| Java | [JDBC](./jdbc/microsoft-jdbc-driver-for-sql-server.md) |
+| Node.js | [Node.js ドライバー、インストール手順](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
+| PHP (PHP) | *オペレーティング システム：*<br /><br />[Windows の PHP driver](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Github から Linux または macOS の PHP driver](http://github.com/Microsoft/msphpsql/) |
+| Python | [pyodbc、インストール手順](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[ODBC をダウンロードします。](./odbc/download-odbc-driver-for-sql-server.md) |
+| Ruby | [Ruby ドライバー、インストール手順](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[ルビのダウンロード ページ](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
-
 
 <a name="anchor-40-drivers-orm-access" />
 
@@ -82,14 +78,11 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | Node.js | [Sequelize ORM](http://docs.sequelizejs.com) |
 | Python | [Django](http://www.djangoproject.com/) |
 | Ruby | [レールを ruby](http://rubyonrails.org/) |
-| &nbsp; | <br /> |
 
 
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>ビルドのアプリ、web ページ
-
-
 [http://aka.ms/sqldev](http://aka.ms/sqldev) セットに進み、*ビルドでアプリを*web ページ。 Web ページは、プログラミング言語、オペレーティング システム、および SQL 接続のドライバーのさまざまな組み合わせに関する情報を提供します。 ビルドのアプリ、web ページによって提供される情報は、次の項目です。
 
 - 言語 + オペレーティング システム、ドライバーの組み合わせごとに、最初から開始する方法についての詳細。
@@ -99,24 +92,16 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
     - ORM コードの例です。
     - パフォーマンスを向上させる多くの列ストア インデックス デモンストレーションします。
 
-
 #### <a name="first-page-of-build-an-app-webpages"></a>ビルドのアプリ、web ページの最初のページ
-
 ![ビルドのアプリ、web ページ、最初のページのスクリーン ショット][image-ref-163-buildanapp-webpages-first-page]
 
-
 #### <a name="menu-for-java---ubuntu-of-build-an-app-webpages"></a>Java のビルドのアプリ、web ページの Ubuntu のメニュー
-
 ![ビルドのアプリ、web ページ、Java Ubuntu メニュー][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
-
 
 &nbsp;
 
-
 ## <a name="related-links"></a>関連リンク
-
 - [Java およびその他の言語で、クラウド内の Azure SQL データベースに接続するための例のコード](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)です。
-
 
 <!-- Image references -->
 

@@ -1,31 +1,32 @@
 ---
-title: "パラメーターの配列をバインド |Microsoft ドキュメント"
-ms.custom: 
+title: パラメーターの配列をバインド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding parameter arrays [ODBC]
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad5bb4e2281802c231b4dc7abcfd356c8ca4b72c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 09b3a3c732b34a5a1a7a1d98e2ebe9740069f72e
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="binding-arrays-of-parameters"></a>パラメーターの配列のバインド
 パラメーターの配列を使用するアプリケーションでは、SQL ステートメントのパラメーターに、配列をバインドします。 バインディングの 2 つのスタイルがあります。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  既定値は、列方向のバインドします。 アプリケーション変更することも行方向のバインドから列方向のバインドに SQL_ATTR_PARAM_BIND_TYPE ステートメント属性を設定しています。 次の図は、列方向のバインドの動作を示します。  
   
- ![表示方法列 &#45; 賢明バインディング works](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
+ ![表示方法列&#45;ごとの連結の動作が](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
   
  たとえば、次のコードは 10 要素の配列を PartID、説明、および Price 列、パラメーターにバインドし、10 行を挿入するステートメントを実行します。 列方向のバインドを使用します。  
   
@@ -59,9 +60,9 @@ SQLINTEGER     PartIDIndArray[ARRAY_SIZE], DescLenOrIndArray[ARRAY_SIZE],
 SQLUSMALLINT   i, ParamStatusArray[ARRAY_SIZE];  
 SQLULEN ParamsProcessed;  
   
-memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray);  
-memset(PartIDIndArray, 0, sizeof(PartIDIndArray);  
-memset(PriceIndArray, 0, sizeof(PriceIndArray);  
+memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray));  
+memset(PartIDIndArray, 0, sizeof(PartIDIndArray));  
+memset(PriceIndArray, 0, sizeof(PriceIndArray));  
   
 // Set the SQL_ATTR_PARAM_BIND_TYPE statement attribute to use  
 // column-wise binding.  
@@ -134,7 +135,7 @@ Address = Bound Address + ((Row Number - 1) * Structure Size) + Offset
   
  ここで行の番号付けは 1、パラメーターのサイズに設定します。 定義されている場合は、オフセットは、SQL_ATTR_PARAM_BIND_OFFSET_PTR ステートメント属性によって示される値です。 次の図は、行方向のバインドの動作を示します。 パラメーターは、任意の順序で、構造に配置することができますが、わかりやすくするためのシーケンシャルな順序で表示されます。  
   
- ![行の表示 (& a) #45; 賢明バインディング works](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
+ ![行の表示&#45;ごとの連結の動作が](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
   
  次のコードは、PartID、説明、および価格の列に保存する値に対して要素を構造体を作成します。 これらの構造体の 10 要素配列が割り当てられますし、行方向のバインドを使用して、PartID、説明、および Price 列のパラメーターをバインドします。 10 行を挿入するステートメントを実行します。  
   

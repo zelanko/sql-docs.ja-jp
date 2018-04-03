@@ -1,29 +1,29 @@
 ---
-title: "ADO 履歴 |Microsoft ドキュメント"
-ms.custom: 
+title: ADO 履歴 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e76e56b9d1840d4e6e1f42acd10b3b9226a61d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 283d7ff395edf23668d1921e1f3f2c2e3c985446
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="ado-features-for-each-release"></a>ADO の各リリースの機能
 このトピックでは、ADO、ADO MD および ADOX の各リリースで導入された新機能を示します。
@@ -50,24 +50,24 @@ ms.lasthandoff: 02/09/2018
  *64 ビット プラットフォームのサポート*ADO 2.7 64 ビット プロセッサのサポートが導入されています。
 
 ## <a name="ado-26"></a>ADO 2.6
- **CubDef.GetSchemaObject***メソッド*ADO 2.6 以降では、ADO MD 取得できるオブジェクトで指定された一意の名前を使用して、 [UniqueName プロパティ (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)です。 親オブジェクトの名前は、既知である必要はありませんし、親のコレクションは、スキーマ オブジェクトを取得する事前設定する必要はありません。 参照してください[GetSchemaObject メソッド (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)です。
+ **CubDef.GetSchemaObject***メソッド*ADO 2.6 以降では、ADO MD 取得できるオブジェクトで指定された一意の名前を使用して、 [UniqueName プロパティ (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)です。   親オブジェクトの名前は、既知である必要はありませんし、親のコレクションは、スキーマ オブジェクトを取得する事前設定する必要はありません。 参照してください[GetSchemaObject メソッド (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)です。
 
  *コマンド ストリーム*、**コマンド**オブジェクトでは、ストリームの形式でコマンドをサポートを使用する代わりに、 **CommandText**プロパティです。 [CommandStream プロパティ (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) XML テンプレートまたはアップデート グラムとしてを指定するために使用する、**コマンド**for SQL Server、Microsoft OLE DB プロバイダーで入力します。
 
- **Dialect***プロパティ* [Dialect](../../ado/reference/ado-api/dialect-property.md)構文を定義する新しいプロパティは、一般的な規則を文字列またはストリームを解析するプロバイダーを使用することです。
+ **Dialect***プロパティ* [Dialect](../../ado/reference/ado-api/dialect-property.md)構文を定義する新しいプロパティは、一般的な規則を文字列またはストリームを解析するプロバイダーを使用することです。  
 
- **Command.Execute***メソッド*、[メソッドを実行する](../../ado/reference/ado-api/execute-method-ado-command.md)ADO の**コマンド**入力と出力にストリームを使用するオブジェクトが強化されました。
+ **Command.Execute***メソッド*、[メソッドを実行する](../../ado/reference/ado-api/execute-method-ado-command.md)ADO の**コマンド**入力と出力にストリームを使用するオブジェクトが強化されました。  
 
  *フィールド statusvalues*ユーザーを変更する場合、DB_E_ERRORSOCCURRED エラーが発生した場合、**フィールド**の**Recordset**、ADO に収まるようになりました、 **Field.Status**プロパティを適切なステータス情報を使用できるように、ユーザーの詳細については、どのような問題が発生しました。 参照してください[Status プロパティ (ADO フィールド)](../../ado/reference/ado-api/status-property-ado-field.md)です。
 
- **NamedParameters***プロパティ* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md)の新しいプロパティ、**コマンド**という名前のオブジェクトを示す、プロバイダーを使用する必要がありますパラメーター。
+ **NamedParameters***プロパティ* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md)の新しいプロパティ、**コマンド**という名前のオブジェクトを示す、プロバイダーを使用する必要がありますパラメーター。  
 
  *ストリームの結果セット*ADO は、データ ソースからの結果セットを返すことができます、**ストリーム**ではなく、 **Recordset**オブジェクト。 Microsoft OLE DB プロバイダーの最新バージョンを使用して、SQL Server 用、する XML 結果が得られますプロバイダーから"の XML"クエリを実行します。 A**ストリーム**結果セットを受け取る、ソースとして"XML の"コマンドを使用して開くことができます。 参照してください[ストリームに結果セットを取得する](../../ado/guide/data/retrieving-resultsets-into-streams.md)です。
 
  *1 つの行の結果セット*、ADO**レコード**オブジェクト開くことができるコマンド文字列にまたは**コマンド**プロバイダーからの 1 行のデータを表すオブジェクト。 これにより、MDAC 2.6 プロバイダーによるパフォーマンスの向上。 参照してください[メソッド (ADO レコード) を開く](../../ado/reference/ado-api/open-method-ado-record.md)です。
 
 ## <a name="ado-25"></a>ADO 2.5
- **レコード***オブジェクト*ADO 2.5 が導入されています、**レコード**表示してから行を管理するオブジェクト、 **Recordset**またはデータ プロバイダー、またはオブジェクトファイルやディレクトリなどの半構造化データをカプセル化します。
+ **レコード***オブジェクト*ADO 2.5 が導入されています、**レコード**表示してから行を管理するオブジェクト、**レコード セット**またはデータ プロバイダー、またはオブジェクトのカプセル化します。ファイルやディレクトリなど、半構造化データです。
 
  **ストリーム***オブジェクト*ADO 2.5 にも導入されています、**ストリーム**バイナリまたはテキスト データのストリームを表すオブジェクト。
 

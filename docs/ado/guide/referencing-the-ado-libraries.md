@@ -1,31 +1,31 @@
 ---
-title: "ADO ライブラリを参照する |Microsoft ドキュメント"
-ms.custom: 
+title: ADO ライブラリを参照する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - libraries [ADO]
 - referencing libraries [ADO]
 - ADO, libraries
 ms.assetid: 573f8f27-babd-4e2f-bf9a-270ee7024975
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fbbf07cf8087800990314b1059e7373cdbc5ba6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2a3cb13dc0fd465b0a3a061d1fda12010f6d3df0
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="referencing-the-ado-libraries"></a>ADO ライブラリを参照します。
 ADO の最新バージョンとしてパッケージ化*msado15.dll*です。 ADO MD と ADOX の最新バージョンとしてパッケージ化*msadom.dll*と*msadox.dll*、それぞれします。 既定でこれらのライブラリがインストールされている*$installDir*ここで、 *$installDir* ADO ライブラリがコンピューターにインストールされてされているディレクトリのパスを意味します。 ライブラリを使用するには、ADO アプリケーションで、する必要がありますに明示的に参照アプリケーション プロジェクトでします。  
