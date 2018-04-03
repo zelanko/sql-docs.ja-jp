@@ -1,0 +1,7 @@
+# [データ ソース オブジェクト (OLE DB)](data-source-objects-ole-db.md)
+# [データ ソース情報のプロパティ](data-source-information-properties.md)
+# [データ ソースのプロパティ (OLE DB)](data-source-properties-ole-db.md)
+# [初期化プロパティと承認プロパティ](initialization-and-authorization-properties.md)
+# [保存されるデータ ソース オブジェクト](persisted-data-source-objects.md)
+# [セッションのプロパティ - OLE DB Driver for SQL Server](session-properties-oledb-driver-for-sql-server.md)
+# [セッション](sessions.md)
