@@ -1,27 +1,27 @@
 ---
-title: "SQL Server で使用するためのデータ サイエンス クライアントのセットアップ |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server での R 開発用のデータ サイエンス クライアントのセットアップ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: d15ee956-918f-40e0-b986-2bf929ef303a
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 160dae2d84c84aeaecaa07ec16be681fabde5534
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.assetid: ''
+caps.latest.revision: ''
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 414410cdac959fb23989dda6569e0711b8a6fc23
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>SQL Server で使用するためのデータ サイエンス クライアントのセットアップします。
+# <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server での R 開発用のデータ サイエンス クライアントのセットアップします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 インスタンスを構成した後[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]機械学習をサポートするためには、リモート実行および配置用サーバーに接続できる開発環境を設定する必要があります。
@@ -47,6 +47,35 @@ ms.lasthandoff: 03/21/2018
     - SQL Server のセットアップからインストールするを参照してください[SQL Server サーバーをインストール 2017 Machine Learning (スタンドアロン)。](../install/sql-machine-learning-standalone-windows-install.md)
 
     - 別の Windows ベースのインストーラーを使用するのを参照してください[Windows 用の R Server 9.1 のインストール。](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
+
+## <a name="r-tools"></a>R のツール
+
+いずれかでインストールされているのと同じ R ツールを取得する SQL Server で R をインストールするときに**基本**RGui、Rterm などの R のインストール。 このため実際があるすべてのツールを開発し、R コードをテストする必要があります。
+
+次の標準的な R ツールが含まれている、*基本インストール*R のし、そのため、既定でインストールされます。
+
++ **RTerm**: R スクリプトを実行するためのコマンド ライン ターミナル
+
++ **RGui.exe**:  R のための単純な対話型エディター。コマンドライン引数は RGui.exe と RTerm で同じです。
+
++ **RScript**: R スクリプトをバッチ モードで実行するためのコマンドライン ツール。
+
+これらのツールを検索するには、SQL Server または機能を学習するスタンドアロンのマシンを設定するときにインストールされた R ライブラリを決定します。 たとえば、既定のインストールでは、R ツールはこれらのフォルダーにあります。
+
++ SQL Server 2016 R Services: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
++ Microsoft R Server のスタンドアロン: `~\Program Files\Microsoft R\R_SERVER\bin\x64`
++ SQL Server 2017 マシン サービスを学習します。 `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
++ 機械学習のサーバー (スタンドアロン)。 `~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`
+
+R ツールのヘルプを必要がある場合は、開く**RGui**をクリックして**ヘルプ**オプションのいずれかを選択
+
+## <a name="microsoft-r-client"></a>Microsoft R Client
+
+Microsoft R クライアントは、開発用に、RevoScaleR パッケージに対するアクセスを提供する無料でダウンロードします。 R のクライアントをインストールするには、SQL Server データベース内の分析、および Hadoop、Spark、または Machine Learning のサーバーを使用して Linux 上の分散 R コンピューティングを含む、すべてのサポートされているコンピューティング コンテキストで実行できる R ソリューションを作成できます。
+
+別の R 開発環境が既にインストールされている場合 RStudio などは、ライブラリおよび Microsoft R クライアントによって提供される実行可能ファイルを使用する環境を再構成します。 により、RevoScaleR パッケージのすべての機能を使用することができますが、パフォーマンスが制限されます。
+
+詳細については、次を参照してください。 [Microsoft R クライアントは何ですか。](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
 
 ## <a name="install-a-development-environment"></a>開発環境をインストールします。
 

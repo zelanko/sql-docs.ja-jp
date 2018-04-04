@@ -1,21 +1,21 @@
 ---
-title: "ポリシー ベースの管理ポリシーの作成 | Microsoft Docs"
-ms.custom: 
+title: ポリシー ベースの管理ポリシーの作成 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Policy-Based Management, creating policies
 ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/18/2018
   
 11. ポリシーを対象の種類のサブセットに制限するには、 **[サーバーの制限]** ボックスで制限条件を選択するか、新しい条件を作成します。  
   
-     **[新しいポリシーの作成]** ダイアログ ボックスで使用可能なオプションの詳細については、「 [Create New Policy or Open Policy Dialog Box, General Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) 」または「 [Create New Policy or Open Policy Dialog Box, Description Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)」を参照してください。  
+     **[新しいポリシーの作成]** ダイアログ ボックスで使用可能なオプションの詳細については、「 [[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [全般] ページ](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) 」または「 [[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [説明] ページ](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)」を参照してください。  
   
 12. 完了したら、 **[OK]**をクリックします。  
   

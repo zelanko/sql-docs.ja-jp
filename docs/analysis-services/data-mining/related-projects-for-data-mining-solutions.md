@@ -1,31 +1,31 @@
 ---
-title: "データ マイニング ソリューションの関連プロジェクト |Microsoft ドキュメント"
-ms.custom: 
+title: データ マイニング ソリューションの関連プロジェクト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: 
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7eebc2ae561e47481734c80dbc8f77ad381f4193
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 8093acbb0886699bcb9c781c636b37f249f96bee
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>データ マイニング ソリューションの関連プロジェクト
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ マイニング ソリューションに最低限必要なのは、データ ソース、データ ソース ビュー、マイニング構造、およびマイニング モデルを定義した、データ マイニング プロジェクトです。 ただし、データ マイニング モデルを日々の意志決定に使用する場合は、データ マイニングを予測分析ソリューションの他の部分と統合し、次のプロセスやコンポーネントを含めることが重要です。  
+  データ マイニング ソリューションに最低限必要なのは、データ ソース、データ ソース ビュー、マイニング構造、およびマイニング モデルを定義した、データ マイニング プロジェクトです。 ただし、データ マイニング モデルを日々の意志決定に使用する場合は、データ マイニングを予測分析ソリューションの他の部分と統合し、次のプロセスやコンポーネントを含めることが重要です。  
   
 -   データと変数の準備および選択。 データ クレンジング、複数のデータ ソースのメタデータ管理と統合のほか、データの変換、マージ、およびデータ ウェアハウスへのアップロードが含まれます。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/23/2018
  [セマンティック インデックスの作成](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ マイニング プロジェクトのデータ準備とトレーニングのフェーズに必要なコンポーネントと機能が用意されています。 さまざまなデータ クレンジング タスクやデータ準備タスクには、スクリプトをはじめとする他のツールを使用することもできますが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ マイニングに関して多数の利点があります。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]コンポーネントとデータの準備とトレーニング データ マイニング プロジェクトのフェーズに必要な機能を提供します。 さまざまなデータ クレンジング タスクやデータ準備タスクには、スクリプトをはじめとする他のツールを使用することもできますが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ マイニングに関して多数の利点があります。  
   
 -   繰り返し、自動化、分岐、および拡張が可能なワークフローの一部としてタスクを表現できます。  
   
@@ -209,6 +209,6 @@ ms.lasthandoff: 02/23/2018
   
 ## <a name="see-also"></a>参照  
  [多次元モデル ソリューション ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [テーブル モデル ソリューション](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [テーブル モデル ソリューション](../../analysis-services/tabular-models/tabular-models-ssas.md)  
   
   

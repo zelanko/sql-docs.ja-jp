@@ -1,42 +1,43 @@
 ---
-title: "PDF デバイス情報設定 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/16/2017
+title: PDF デバイス情報設定 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - device information settings [Reporting Services], PDF rendering
 - PDF [Reporting Services]
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
-caps.latest.revision: "41"
+caps.latest.revision: ''
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dccc67734b6cf54758ec14b326b171a6effef30b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0bd2635a54003fd663dadcf6d3bc5991c1841988
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="pdf-device-information-settings"></a>PDF デバイス情報の設定
   次の表は、PDF 形式のレポートを表示するデバイス情報の設定を示しています。  
   
 |設定|ReplTest1|  
 |-------------|-----------|  
+| **AccessiblePDF** | サイズは大きいが、読み上げと移動のためのスクリーン リーダーやその他の支援技術で使いやすい、アクセシブル/タグ付き PDF をレンダリングするかどうかを示します。 既定値は **false**です。 [Power BI Report Server (2018 年 3 月) 以降で使用可能です] |
 |**[列]**|レポートに設定する列の数。 この値により、レポートの元の設定は上書きされます。|  
 |**ColumnSpacing**|レポートに設定する列の間隔。 この値により、レポートの元の設定は上書きされます。|  
 |**DpiX**|出力デバイスの x 方向の解像度。|  
 |**DpiY**|出力デバイスの y 方向の解像度。|  
 |**EndPage**|表示するレポートの最後のページ。 既定値は **StartPage**の値です。|  
-|**HumanReadablePDF**|PDF を圧縮するかどうかを示します。圧縮することにより、ソースをより見やすくすることができます。 既定値は **false**です。|  
+|**HumanReadablePDF**|サイズは大きいが、プレーンテキスト エディターで人間が読みやすい、未圧縮の PDF ファイルをレンダリングするかどうかを示します。 既定値は **false**です。|  
 |**MarginBottom**|レポートに設定する下余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、1in)。 この値により、レポートの元の設定は上書きされます。|  
 |**MarginLeft**|レポートに設定する左余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、1in)。 この値により、レポートの元の設定は上書きされます。|  
 |**MarginRight**|レポートに設定する右余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、1in)。 この値により、レポートの元の設定は上書きされます。|  

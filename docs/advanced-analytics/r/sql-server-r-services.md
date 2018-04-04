@@ -1,32 +1,32 @@
 ---
-title: "SQL Server コンピューターの学習と R Services (In-database) |Microsoft ドキュメント"
+title: SQL Server コンピューターの学習と R Services (In-database) |Microsoft ドキュメント
 ms.date: 03/16/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 0d5bb56717eefa50a219db051eb611a82974a0bc
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: f84f61721bca14a78694a9df6c7af8b7f7d74ea7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQL Server コンピューターの学習と R Services (In-database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 機械学習のデータベースのインストールは、SQL Server インスタンスに常駐のデータを R、Python の外部スクリプトのサポートを提供する、SQL Server データベース エンジン インスタンスのコンテキスト内で動作します。 機械学習を統合しているため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データの近くで分析を行い、コストとデータの移動に関連付けられているセキュリティ上のリスクを削減できます。
 
-データベース エンジンは、複数のインスタンスであるために、1 つ以上のインスタンス、データベース内の分析、または古いでもと新しいバージョン サイド バイ サイドをインストールできます。 いずれかの選択肢を含める[SQL Server 2017 Machine Learning Services (In-database)](../install/sql-machine-learning-standalone-windows-install.md) R と、Python または[SQL Server 2016 R Services (データベース)](../install/sql-r-standalone-windows-install.md) R だけと 
+データベース エンジンは、複数のインスタンスであるために、1 つ以上のインスタンス、データベース内の分析、または古いでもと新しいバージョン サイド バイ サイドをインストールできます。 いずれかの選択肢を含める[SQL Server 2017 Machine Learning Services (In-database)](../install/sql-machine-learning-standalone-windows-install.md) R と、Python または[SQL Server 2016 R Services (In-database)](../install/sql-r-standalone-windows-install.md) R だけと 
 
 インスタンスにもとらわれないとして machine learning のコンポーネントをインストールすることも[スタンドアロン サーバー](r-server-standalone.md)です。 一般に、ことをお勧め (スタンドアロン) を処理している (In-database) のインストールと相互に、十分なリソースがある場合は、リソースの競合を避けるために限定されない禁止メッセージに対してこれらの両方を同じ物理コンピューターにインストールします。
 

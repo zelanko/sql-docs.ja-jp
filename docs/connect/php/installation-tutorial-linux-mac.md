@@ -1,192 +1,130 @@
 ---
-title: "PHP Linux、Mac ドライバー インストール チュートリアル |Microsoft ドキュメント"
-ms.date: 07/13/2017
+title: Linux および macOS Microsoft Drivers for PHP for SQL Server のインストール チュートリアル |Microsoft ドキュメント
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
 ms.suite: sql
-ms.custom: 
-ms.technology: drivers
+ms.custom: ''
+ms.technology:
+- drivers
 ms.topic: article
 author: ulvii
 ms.author: v-ulibra
-manager: Hadis Fard
+manager: v-mabarw
 ms.workload: Inactive
-ms.openlocfilehash: f57df5092dfa9a1eabe1e0dc04eba28cd256d978
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: f7c9542294be520b6861262e814b9fda31b06d5d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="php-linux-and-mac-drivers-installation-tutorial"></a>PHP の Linux および Mac のドライバーのインストールのチュートリアル
-以下の手順は、クリーンな環境を想定し、PHP 7.x、Microsoft ODBC ドライバー、Apache、および Microsoft PHP をインストールする方法を示して Ubuntu 15.10、16.04、Red Hat 7、Debian 8、および Mac OS X 上のドライバーです。
-## <a name="installing-the-drivers-on-ubuntu-1510-for-php-70"></a>PHP 7.0 Ubuntu 15.10 でドライバーのインストール
-Ubuntu 15.10 の使用可能な PHP 7.1 パッケージはありません。
+# <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Linux および macOS Microsoft Drivers for PHP for SQL Server のインストールのチュートリアル
+次の手順では、クリーンな環境を想定しており、PHP 7.x、Microsoft ODBC driver、Apache、および Microsoft Drivers for PHP および用のインストール Ubuntu と 16.04 17.10、RedHat 7 上の SQL Server、Debian 8 と 9、Suse 12 と macOS X 10.11 10.12 する方法を示します。 これらの手順では、PECL を使用してドライバーをインストールするよう指示がからビルド済みのバイナリをダウンロードすることも、 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github ページのプロジェクトおよび」の手順に従ってそれらをインストール[SQL server 用 Microsoft Drivers for PHP 読み込む](../../connect/php/loading-the-php-sql-driver.md)します。 拡張機能の読み込みと理由おに追加していない拡張機能 php.ini の詳細についてを参照してください[ドライバーを読み込む](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup)します。
+
+これらの命令インストール PHP 7.2 - 既定では、PHP 7.0 をインストールするには、各セクションまたは 7.1 の先頭にある注意事項を参照してください。
+
+## <a name="contents-of-this-page"></a>このページの内容:
+
+- [Ubuntu 16.04 および 17.10 にドライバーをインストールします。](#installing-the-drivers-on-ubuntu-1604-and-1710)
+- [Red Hat 7 に、ドライバーをインストールします。](#installing-the-drivers-on-red-hat-7)
+- [Debian 8. と 9. でドライバーをインストールします。](#installing-the-drivers-on-debian-8-and-9)
+- [Suse 12 に、ドライバーをインストールします。](#installing-the-drivers-on-suse-12)
+- [許可されておよび Sierra macos ドライバーをインストールします。](#installing-the-drivers-on-macos-el-capitan-and-sierra)
+
+## <a name="installing-the-drivers-on-ubuntu-1604-and-1710"></a>Ubuntu 16.04 および 17.10 にドライバーをインストールします。
+
+    > [!NOTE]
+    > To install PHP 7.0 or 7.1, replace 7.2 with 7.0 or 7.1 in the following commands.
+
 ### <a name="step-1-install-php"></a>手順 1. PHP をインストールします。
 ```
 sudo su
-sh -c 'echo "deb http://packages.dotdeb.org jessie all \ndeb-src http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list'
+add-apt-repository ppa:ondrej/php -y
 apt-get update
-apt-get install php7.0 php7.0-fpm php-pear php7.0-dev mcrypt php7.0-mcrypt php-mbstring php7.0-xml
+apt-get install php7.2 php7.2-dev php7.2-xml -y --allow-unauthenticated
 ```
 ### <a name="step-2-install-prerequisites"></a>手順 2. インストールの前提条件
-```
-sudo su 
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-curl https://packages.microsoft.com/config/ubuntu/15.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
-exit
-sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql mssql-tools
-sudo apt-get install unixodbc-dev
-echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
-source ~/.bashrc
-```
+Ubuntu 用の指示に従って、ODBC ドライバーをインストール、 [Linux や macOS のインストール ページ](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)です。
+
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>手順 3. Microsoft SQL Server 用 PHP ドライバーをインストールします。
 ```
-sudo pear config-set php_ini `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"` system
+sudo su
+echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
+echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
+exit
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 ```
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>手順 4. Apache をインストールし、ドライバーの読み込みの構成
 ```
 sudo su
-apt-get install libapache2-mod-php7.0 apache2
+apt-get install libapache2-mod-php7.2 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
-a2enmod php7.0
-echo "extension=sqlsrv.so" >> /etc/php/7.0/apache2/php.ini
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.0/apache2/php.ini
+a2enmod php7.2
+echo "extension=sqlsrv.so" >> /etc/php/7.2/apache2/php.ini
+echo "extension=pdo_sqlsrv.so" >> /etc/php/7.2/apache2/php.ini
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>手順 5. Apache を再起動し、サンプル スクリプトをテストします。
 ```
 sudo service apache2 restart
 ```
-インストールをテストするには、次を参照してください。 **、インストールをテスト**、このドキュメントの最後。
- 
-## <a name="installing-the-drivers-on-ubuntu-1604-for-php-70"></a>PHP 7.0 Ubuntu 16.04 でドライバーのインストール
-### <a name="step-1-install-php"></a>手順 1. PHP をインストールします。 
-```
-sudo su
-apt-get update
-apt-get -y install php7.0 mcrypt php7.0-mcrypt php-mbstring php-pear php7.0-dev php7.0-xml 
-```
-### <a name="step-2-install-prerequisites"></a>手順 2. インストールの前提条件
-```
-sudo su 
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
-exit
-sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql mssql-tools 
-sudo apt-get install unixodbc-dev
-echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
-source ~/.bashrc
-```
-### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>手順 3. Microsoft SQL Server 用 PHP ドライバーをインストールします。
-```
-sudo pear config-set php_ini `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"` system
-sudo pecl install sqlsrv
-sudo pecl install pdo_sqlsrv
-```
-### <a name="step-4-install-apache-and-configure-driver-loading"></a>手順 4. Apache をインストールし、ドライバーの読み込みの構成
-```
-sudo su
-apt-get install libapache2-mod-php7.0 apache2
-a2dismod mpm_event
-a2enmod mpm_prefork
-a2enmod php7.0
-echo "extension=sqlsrv.so" >> /etc/php/7.0/apache2/php.ini
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.0/apache2/php.ini
-```
-### <a name="step-5-restart-apache-and-test-the-sample-script"></a>手順 5. Apache を再起動し、サンプル スクリプトをテストします。
-```
-sudo service apache2 restart
-```
-インストールをテストするには、次を参照してください。 **、インストールをテスト**、このドキュメントの最後。
- 
-## <a name="installing-the-drivers-on-ubuntu-1604-for-php-71"></a>PHP 7.1 Ubuntu 16.04 でドライバーのインストール
-### <a name="step-1-install-php"></a>手順 1. PHP をインストールします。 
-```
-sudo su
-add-apt-repository ppa:ondrej/php
-apt-get update
-apt-get -y install php7.1 mcrypt php7.1-mcrypt php-mbstring php-pear php7.1-dev php7.1-xml
-```
-### <a name="step-2-install-prerequisites"></a>手順 2. インストールの前提条件
-```
-sudo su 
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
-exit
-sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql mssql-tools 
-sudo apt-get install unixodbc-dev
-echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
-source ~/.bashrc
-```
-### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>手順 3. Microsoft SQL Server 用 PHP ドライバーをインストールします。
-```
-sudo pear config-set php_ini `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"` system
-sudo pecl install sqlsrv
-sudo pecl install pdo_sqlsrv
-```
-### <a name="step-4-install-apache-and-configure-driver-loading"></a>手順 4. Apache をインストールし、ドライバーの読み込みの構成
-```
-sudo su
-apt-get install libapache2-mod-php7.1 apache2
-a2dismod mpm_event
-a2enmod mpm_prefork
-a2enmod php7.1
-echo "extension=sqlsrv.so" >> /etc/php/7.1/apache2/php.ini
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.1/apache2/php.ini
-```
-### <a name="step-5-restart-apache-and-test-the-sample-script"></a>手順 5. Apache を再起動し、サンプル スクリプトをテストします。
-```
-sudo service apache2 restart
-```
-インストールをテストするには、次を参照してください。 **、インストールをテスト**、このドキュメントの最後。
- 
-## <a name="installing-the-drivers-on-red-hat-7-for-php-70-and-71"></a>Red Hat 7 で PHP 7.0、7.1、ドライバーのインストール
-### <a name="step-1-install-php"></a>手順 1. PHP をインストールします。 
-PHP 7.1 をインストールするには、次のコマンドでの remi php71 を remi php70 に置き換えます。 
+インストールをテストするには、次を参照してください。 [、インストールをテスト](#testing-your-installation)、このドキュメントの最後。
+
+## <a name="installing-the-drivers-on-red-hat-7"></a>Red Hat 7 に、ドライバーをインストールします。
+
+    > [!NOTE]
+    > To install PHP 7.0 or 7.1, replace remi-php72 with remi-php70 or remi-php71 respectively in the following commands.
+
+### <a name="step-1-install-php"></a>手順 1. PHP をインストールします。
+
 ```
 sudo su
 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 wget http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 rpm -Uvh remi-release-7.rpm epel-release-latest-7.noarch.rpm
 subscription-manager repos --enable=rhel-7-server-optional-rpms
-yum-config-manager --enable remi-php70 
+yum-config-manager --enable remi-php72
 yum update
 yum install php php-pdo php-xml php-pear php-devel re2c gcc-c++ gcc
 ```
 ### <a name="step-2-install-prerequisites"></a>手順 2. インストールの前提条件
+次の手順の Red Hat 7 の ODBC ドライバーをインストール、 [Linux や macOS のインストール ページ](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)です。
+
+PHP 7.2 と PECL と PHP のドライバーをコンパイルするには、既定値よりも新しい GCC が必要です。
 ```
-sudo su
-curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
-exit
-sudo yum update
-sudo yum remove unixODBC-utf16-devel
-sudo ACCEPT_EULA=Y yum install msodbcsql mssql-tools 
-sudo yum install unixODBC-devel
-echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
-source ~/.bashrc
+sudo yum-config-manager --enable rhel-server-rhscl-7-rpms
+sudo yum install devtoolset-7
+scl enable devtoolset-7 bash
 ```
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>手順 3. Microsoft SQL Server 用 PHP ドライバーをインストールします。
 ```
+sudo su
+echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
+echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
+exit
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 ```
-### <a name="step-4-install-apache-and-configure-driver-loading"></a>手順 4. Apache をインストールし、ドライバーの読み込みの構成
+PECL で発生する問題は、GCC をアップグレードした場合でも、ドライバーの最新バージョンの正しいインストールにすることができなくなります。 インストールするには、パッケージをダウンロードし、手動でコンパイルします。
 ```
-sudo su
-yum install httpd
-echo "extension=sqlsrv.so" > /etc/php.d/sqlsrv.ini
-echo "extension=pdo_sqlsrv.so" > /etc/php.d/pdo_sqlsrv.ini
+pecl download sqlsrv
+tar xvzf sqlsrv-5.2.0.tgz
+cd sqlsrv-5.2.0/
+phpize
+./configure --with-php-config=/usr/bin/php-config
+make
+sudo make install
+```
+またはからビルド済みのバイナリをダウンロードすることができます、 [Github プロジェクト ページ](https://github.com/Microsoft/msphpsql/releases)、Remi リポジトリからインストールします。
+```
+sudo yum install php-sqlsrv php-pdo_sqlsrv
+```
+### <a name="step-4-install-apache"></a>手順 4. Apache をインストールします。
+```
+sudo yum install httpd
 ```
 SELinux は既定ではインストールし、Enforcing モードで実行します。 Apache SELinux を通じてデータベースに接続を許可するのには、次のコマンドを実行します。
 ```
@@ -196,138 +134,147 @@ sudo setsebool -P httpd_can_network_connect_db 1
 ```
 sudo apachectl restart
 ```
-インストールをテストするには、次を参照してください。 **、インストールをテスト**、このドキュメントの最後。
- 
-## <a name="installing-the-drivers-on-debian-8-for-php-70"></a>PHP 7.0 Debian 8 でのドライバーのインストール
-### <a name="step-1-install-php"></a>手順 1. PHP をインストールします。 
+インストールをテストするには、次を参照してください。 [、インストールをテスト](#testing-your-installation)、このドキュメントの最後。
+
+## <a name="installing-the-drivers-on-debian-8-and-9"></a>Debian 8. と 9. でドライバーをインストールします。
+
+    > [!NOTE]
+    > To install PHP 7.0 or 7.1, replace 7.2 in the following commands with 7.0 or 7.1.
+
+### <a name="step-1-install-php"></a>手順 1. PHP をインストールします。
 ```
 sudo su
 apt-get install curl apt-transport-https
-curl https://www.dotdeb.org/dotdeb.gpg | apt-key add -
-echo "deb http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list
-echo "deb-src http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list
-apt-get update
-apt-get install –y php7.0 php-pear php7.0-dev php7.0-xml
-```
-### <a name="step-2-install-prerequisites"></a>手順 2. インストールの前提条件
-```
-sudo su 
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-curl https://packages.microsoft.com/config/debian/8/prod.list > /etc/apt/sources.list.d/mssql-release.list
-apt-get install -y locales
-echo "en_US.UTF-8 UTF-8" > /etc/locale.gen 
-locale-gen
-exit
-sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql
-sudo apt-get install unixodbc-dev
-```
-### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>手順 3. Microsoft SQL Server 用 PHP ドライバーをインストールします。
-```
-sudo pear config-set php_ini `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"` system
-sudo pecl install sqlsrv
-sudo pecl install pdo_sqlsrv
-```
-### <a name="step-4-install-apache-and-configure-driver-loading"></a>手順 4. Apache をインストールし、ドライバーの読み込みの構成
-```
-sudo su
-apt-get install libapache2-mod-php7.0 apache2
-a2dismod mpm_event
-a2enmod mpm_prefork
-a2enmod php7.0
-echo "extension=sqlsrv.so" >> /etc/php/7.0/apache2/php.ini
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.0/apache2/php.ini
-```
-### <a name="step-5-restart-apache-and-test-the-sample-script"></a>手順 5. Apache を再起動し、サンプル スクリプトをテストします。
-```
-sudo service apache2 restart
-```
-インストールをテストするには、次を参照してください。 **、インストールをテスト**、このドキュメントの最後。
- 
-## <a name="installing-the-drivers-on-debian-8-for-php-71"></a>PHP 7.1 Debian 8 でのドライバーのインストール
-### <a name="step-1-install-php"></a>手順 1. PHP をインストールします。 
-```
-sudo su
-apt-get install curl apt-transport-https 
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
 apt-get update
-apt-get install –y php7.1 php-pear php7.1-dev php7.1-xml
+apt-get install –y php7.2 php7.2-dev php7.2-xml
 ```
 ### <a name="step-2-install-prerequisites"></a>手順 2. インストールの前提条件
+次の手順の Debian の ODBC ドライバーをインストール、 [Linux や macOS のインストール ページ](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)です。 
+
+また、ブラウザーで正しく表示する PHP の出力を取得する適切なロケールを生成する必要があります。 たとえば、en_US utf-8 ロケールの場合は、次のコマンドを実行します。
 ```
-sudo su 
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-curl https://packages.microsoft.com/config/debian/8/prod.list > /etc/apt/sources.list.d/mssql-release.list
-apt-get install -y locales
-echo "en_US.UTF-8 UTF-8" > /etc/locale.gen 
+sudo su
+sed -i 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
 locale-gen
-exit
-sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql
-sudo apt-get install unixodbc-dev
 ```
+
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>手順 3. Microsoft SQL Server 用 PHP ドライバーをインストールします。
 ```
-sudo pear config-set php_ini `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"` system
+sudo su
+echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
+echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
+exit
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 ```
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>手順 4. Apache をインストールし、ドライバーの読み込みの構成
 ```
 sudo su
-apt-get install libapache2-mod-php7.1 apache2
+apt-get install libapache2-mod-php7.2 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
-a2enmod php7.1
-echo "extension=sqlsrv.so" >> /etc/php/7.1/apache2/php.ini
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.1/apache2/php.ini
+a2enmod php7.2
+echo "extension=sqlsrv.so" >> /etc/php/7.2/apache2/php.ini
+echo "extension=pdo_sqlsrv.so" >> /etc/php/7.2/apache2/php.ini
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>手順 5. Apache を再起動し、サンプル スクリプトをテストします。
 ```
 sudo service apache2 restart
 ```
-インストールをテストするには、次を参照してください。 **、インストールをテスト**、このドキュメントの最後。
- 
-## <a name="installing-the-drivers-on-macos-el-capitan-and-sierra"></a>許可されて MacOS および Sierra にドライバーをインストールします。
-### <a name="step-1-install-php"></a>手順 1. PHP をインストールします。 
-PHP 7.1 をインストールするには、次のコマンドで php71 を php70 を置き換えます。
+インストールをテストするには、次を参照してください。 [、インストールをテスト](#testing-your-installation)、このドキュメントの最後。
+
+## <a name="installing-the-drivers-on-suse-12"></a>Suse 12 に、ドライバーをインストールします。
+
+    > [!NOTE]
+    > To install PHP 7.0, skip the command below adding the repository - 7.0 is the default PHP on suse 12.
+    > To install PHP 7.1, replace the repository URL below with the following URL:
+      `http://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
+
+### <a name="step-1-install-php"></a>手順 1. PHP をインストールします。
+```
+sudo su
+zypper -n ar -f http://download.opensuse.org/repositories/devel:languages:php/SLE_12/devel:languages:php.repo
+zypper --gpg-auto-import-keys refresh
+zypper -n install php7 php7-pear php7-devel
+```
+### <a name="step-2-install-prerequisites"></a>手順 2. インストールの前提条件
+次の手順の Suse 12 の ODBC ドライバーをインストール、 [Linux や macOS のインストール ページ](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)です。
+
+### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>手順 3. Microsoft SQL Server 用 PHP ドライバーをインストールします。
+```
+sudo su
+echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/pdo_sqlsrv.ini
+echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/sqlsrv.ini
+exit
+sudo pecl install sqlsrv
+sudo pecl install pdo_sqlsrv
+```
+### <a name="step-4-install-apache-and-configure-driver-loading"></a>手順 4. Apache をインストールし、ドライバーの読み込みの構成
+```
+sudo su
+zypper install apache2 apache2-mod_php7
+a2enmod php7
+echo "extension=sqlsrv.so" >> /etc/php7/apache2/php.ini
+echo "extension=pdo_sqlsrv.so" >> /etc/php7/apache2/php.ini
+```
+### <a name="step-5-restart-apache-and-test-the-sample-script"></a>手順 5. Apache を再起動し、サンプル スクリプトをテストします。
+```
+sudo systemctl restart apache2
+```
+インストールをテストするには、次を参照してください。 [、インストールをテスト](#testing-your-installation)、このドキュメントの最後。
+
+## <a name="installing-the-drivers-on-macos-el-capitan-and-sierra"></a>許可されておよび Sierra macos ドライバーをインストールします。
+
+既にがあるありませんが場合、は、次のように brew をインストールします。
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew tap 
+```
+
+    > [!NOTE]
+    > To install PHP 7.0 or 7.1, replace php72 with php70 or php71 respectively in the following commands.
+
+### <a name="step-1-install-php"></a>手順 1. PHP をインストールします。
+
+```
+brew tap
 brew tap homebrew/dupes
 brew tap homebrew/versions
 brew tap homebrew/homebrew-php
-brew install php70 --with-pear --with-httpd24 --with-cgi
+brew install php72 --with-pear --with-httpd24 --with-cgi
 echo 'export PATH="/usr/local/sbin:$PATH"' >> ~/.bash_profile
 echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
 source ~/.bash_profile
 ```
 ### <a name="step-2-install-prerequisites"></a>手順 2. インストールの前提条件
+次の手順の macOS の ODBC ドライバーをインストール、 [Linux や macOS のインストール ページ](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)です。 
+
+さらに、GNU 作成ツールをインストールする必要があります。
 ```
-brew tap microsoft/msodbcsql https://github.com/Microsoft/homebrew-mssql-release
-brew update
-brew install msodbcsql
-brew install mssql-tools
-brew install autoconf
+brew install autoconf automake libtool
 ```
+
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>手順 3. Microsoft SQL Server 用 PHP ドライバーをインストールします。
 ```
+chmod -R ug+w /usr/local/opt/php72/lib/php
+pear config-set php_ini /usr/local/etc/php/7.2/php.ini system
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 ```
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>手順 4. Apache をインストールし、ドライバーの読み込みの構成
 ```
-(echo "<FilesMatch .php$>"; echo "SetHandler application/x-httpd-php"; echo "</FilesMatch>";) >> /usr/local/etc/apache2/2.4/httpd.conf
+(echo "<FilesMatch .php$>"; echo "SetHandler application/x-httpd-php"; echo "</FilesMatch>";) >> /usr/local/etc/httpd/httpd.conf
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>手順 5. Apache を再起動し、サンプル スクリプトをテストします。
 ```
 sudo apachectl restart
 ```
-インストールをテストするには、次を参照してください。 **、インストールをテスト**、このドキュメントの最後。
- 
+インストールをテストするには、次を参照してください。 [、インストールをテスト](#testing-your-installation)、このドキュメントの最後。
+
 ## <a name="testing-your-installation"></a>インストールのテスト
-このサンプル スクリプトをテストするには、testsql.php/var www/html/で (/usr/ローカル/var/www/htdocs macos) という名前のファイルを作成し、サーバー、データベース、ユーザー名、および必要に応じてパスワードを交換して、次のスクリプトをコピーします。 
+
+このサンプル スクリプトをテストするには、システムのドキュメントのルートで testsql.php という名前のファイルを作成します。 これは`/var/www/html/`Ubuntu、Debian、および Redhat、 `/srv/www/htdocs` SUSE、上または`/usr/local/var/www`macos です。 サーバー、データベース、ユーザー名、および必要に応じてパスワードを交換して、次のスクリプトをコピーします。
 ```
 <?php
 $serverName = "yourServername";
@@ -377,5 +324,11 @@ function FormatErrors( $errors )
 }
 ?>
 ```
-http://localhost/testsql.php (macos http://localhost:8080/testsql.php) をお使いのブラウザーをポイントします。 SQL Server と Azure SQL データベースに接続できるようになりましたに。
+ブラウザーのポイントhttp://localhost/testsql.php(http://localhost:8080/testsql.php macos)。 SQL Server と Azure SQL データベースに接続できるようになりましたに。
 
+## <a name="see-also"></a>参照  
+[入門 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+
+[Microsoft Drivers for PHP SQL Server を読み込む](../../connect/php/loading-the-php-sql-driver.md)
+
+[システム要件の Microsoft Drivers for PHP for SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md)

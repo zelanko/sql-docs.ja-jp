@@ -1,27 +1,27 @@
 ---
-title: "Reporting Services モバイル レポート用に Excel データを準備する | Microsoft Docs"
-ms.custom: 
+title: Reporting Services モバイル レポート用に Excel データを準備する | Microsoft Docs
+ms.custom: ''
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b9f739a009fe8b80ce5005e8145b3fd95648e6f9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 57440dd767e421cb1448d8d365ebf894edbd065a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Reporting Services モバイル レポート用に Excel データを準備する
   
@@ -56,7 +56,7 @@ Excel ファイルをモバイル レポート用のデータセットとして�
   
 上記の例の最初の行には、列のメトリックの名前が含まれているのがわかります。 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] では、これらの列ヘッダーを、ギャラリー要素設定で簡単に参照できるように保持します。 ただし、列ヘッダーは必須ではありません。 列ヘッダーがない場合、 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] は Excel の生成規則 ( A、B、C、…、AA、BB、...) に従ってヘッダーを生成します。  
   
-[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]では、Excel ワークシートをインポートするとき、各列の最初の 2 つのセルのデータ型を比較することで、先頭行のヘッダーを自動的に検出します。 任意の列の最初の 2 つのセルのデータ型が一致しない場合、最初の行は列ヘッダーを含んでいると見なされます。 したがって、テーブルに数値列ヘッダーが含まれている場合は、それらがインポート処理時にヘッダーとして検出されるようにヘッダー名の頭に文字列が付けられます。  
+[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] は、Excel ワークシートをインポートするとき、各列の最初の 2 つのセルのデータ型を比較することで、先頭行のヘッダーを自動的に検出します。 任意の列の最初の 2 つのセルのデータ型が一致しない場合、最初の行は列ヘッダーを含んでいると見なされます。 したがって、テーブルに数値列ヘッダーが含まれている場合は、それらがインポート処理時にヘッダーとして検出されるようにヘッダー名の頭に文字列が付けられます。  
   
 ## <a name="cells"></a>[セル]  
   

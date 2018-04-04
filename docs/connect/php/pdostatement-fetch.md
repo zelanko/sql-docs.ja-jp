@@ -1,27 +1,28 @@
 ---
-title: "Pdostatement::fetch |Microsoft ドキュメント"
-ms.custom: 
+title: Pdostatement::fetch |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3f503ddd9d661d2b2bfa75a3c19219874f159c42
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a7326279bc150c25c712ca708dcd137a9e0d805d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -69,8 +70,8 @@ $*cursor_offset*: 場合にフェッチする行を指定する省略可能な (
 |PDO::FETCH_ORI_PRIOR|前の行を取得します。|  
 |PDO::FETCH_ORI_FIRST|1 番目の行を取得します。|  
 |PDO::FETCH_ORI_LAST|最後の行を取得します。|  
-|:Fetch_ori_abs、 *num*|$ で要求された行を取得する*cursor_offset*行番号。|  
-|Pdo::fetch_ori_rel、 *num*|$ で要求された行を取得する*cursor_offset*現在位置からの相対位置でします。|  
+|PDO::FETCH_ORI_ABS, *num*|$ で要求された行を取得する*cursor_offset*行番号。|  
+|PDO::FETCH_ORI_REL, *num*|$ で要求された行を取得する*cursor_offset*現在位置からの相対位置でします。|  
   
 $ 値が指定されている場合*cursor_offset*または $*cursor_orientation*結果セットの境界外に位置、フェッチは失敗します。  
   
@@ -147,6 +148,7 @@ PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]
 ```  
   
 ## <a name="see-also"></a>参照  
-[PDOStatement クラス](../../connect/php/pdostatement-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDOStatement クラス](../../connect/php/pdostatement-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

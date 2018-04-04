@@ -1,17 +1,19 @@
 ---
-title: "sqlsrv_connect |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/19/2017
+title: sqlsrv_connect |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_connect
+apiname:
+- sqlsrv_connect
 apitype: NA
 helpviewer_keywords:
 - connecting to the server
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - connection pooling support
 - sqlsrv_connect
 ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
-caps.latest.revision: "67"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f87b73eee57279a1f3b8bd39abb8f8986076b653
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: ae4132e7235ced3ab6863093a043365d91f2aa49
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvconnect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,11 +45,11 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$serverName*: 接続が確立されるサーバー名を指定する文字列です。 この文字列の一部には、インスタンス名 (たとえば、"myserver \instancename") またはポート番号 (たとえば、"myServer, 1521") を含めることができます。 このパラメーターに使用できるオプションの詳細については、「 [SQL Native Client での接続文字列キーワードの使用](http://go.microsoft.com/fwlink/?LinkId=105504)」の「ODBC ドライバー接続文字列キーワード」の Server キーワードの説明を参照してください。  
+*$serverName*: 接続が確立されるサーバー名を指定する文字列です。 この文字列の一部には、インスタンス名 (たとえば、"myserver \instancename") またはポート番号 (たとえば、"myServer, 1521") を含めることができます。 このパラメーターに使用できるオプションの詳細については、「ODBC ドライバー接続文字列キーワード」の Server キーワードを参照してください。 [SQL Native Client で接続文字列キーワードを使用して](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)です。  
   
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 3.0 以降では、 `"(localdb)\instancename"`で LocalDB インスタンスを指定することもできます。 詳細については、「 [PHP Driver for SQL Server Support for LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)」を参照してください。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 3.0 以降では、 `"(localdb)\instancename"`で LocalDB インスタンスを指定することもできます。 詳細については、次を参照してください。 [LocalDB のサポート](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)です。  
   
-また、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 3.0 以降では、AlwaysOn 可用性グループへの接続に仮想ネットワーク名を指定することもできます。 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]によるサポートの詳細については、「 [PHP Driver for SQL Server Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)」(高可用性、障害復旧の PHP Driver for SQL Server のサポート) を参照してください。  
+また、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 3.0 以降では、AlwaysOn 可用性グループへの接続に仮想ネットワーク名を指定することもできます。 詳細については[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]サポート[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]を参照してください[高可用性、災害復旧をサポート](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。  
   
 *$connectionInfo* [省略可能]: 連想**配列**接続属性を格納している (たとえば、**配列**("Database"= >"AdventureWorks"))。 配列でサポートしているキーの一覧については、「 [Connection Options](../../connect/php/connection-options.md) 」を参照してください。  
   
@@ -93,7 +95,9 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>参照  
-[SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Connecting to the Server](../../connect/php/connecting-to-the-server.md)  
+[SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Connecting to the Server](../../connect/php/connecting-to-the-server.md)
+
 [ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
   

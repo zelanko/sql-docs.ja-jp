@@ -1,27 +1,28 @@
 ---
-title: "Pdo::prepare |Microsoft ドキュメント"
-ms.custom: 
+title: PDO::prepare | Microsoft Docs
+ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
-caps.latest.revision: "28"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34fa1a4f5bfa9e37f698e15e835285e836a8d959
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 6fbac9059daa4af74aaeea4c6007d5ae1bf84a00
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,10 +49,10 @@ $*statement*: SQL ステートメントを含む文字列。
   
 次の表に、考えられる*key_pair*値。  
   
-|Key|Description|  
+|[キー]|Description|  
 |-------|---------------|  
-|PDO::ATTR_CURSOR|カーソル動作を定義します。 既定値は、PDO::CURSOR_FWDONLY です。 PDO::CURSOR_SCROLL は、静的カーソルです。<br /><br />たとえば、 `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`のようにします。<br /><br />PDO::CURSOR_SCROLL を使用する場合は、以下で説明するように、PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE を使用できます。<br /><br />参照してください[カーソルの種類 &#40;です。PDO_SQLSRV ドライバー &#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)結果セットと、PDO_SQLSRV ドライバーでのカーソルの詳細についてはします。|  
-|PDO::ATTR_EMULATE_PREPARES|Pdo::attr_emulate_prepares が on の場合は、準備されたステートメント内のプレース ホルダーがバインドされたパラメーターに置き換えられます。 なしのプレース ホルダーで完全な SQL ステートメントが実行時のデータベースに送信されます。 <br /><br />Pdo::attr_emulate_prepares は、SQL Server のいくつかの制限のバイパスを使用できます。 たとえば、SQL Server は、いくつかの TRANSACT-SQL 句で名前付きまたは位置指定パラメーターをできません。 SQL Server 2100 パラメーターのバインドの制限があります。<br /><br />Pdo::attr_emulate_prepares 属性を true に設定できます。 例:<br /><br />`PDO::ATTR_EMULATE_PREPARES => true`<br /><br />既定では、この属性は false に設定されます。<br /><br />**注:** `PDO::ATTR_EMULATE_PREPARES => true`を使用する場合、パラメーター化されたクエリのセキュリティは適用されません。 アプリケーションは、パラメーターにバインドされているデータに悪意のある TRANSACT-SQL コードが含まれていないことを確認します。<br /><br />**制限事項:**: input_output と出力パラメーターはサポートされないパラメーターがバインドされていないデータベースのパラメーター化クエリ機能を使用するためです。|  
+|PDO::ATTR_CURSOR|カーソル動作を定義します。 既定値は、PDO::CURSOR_FWDONLY です。 PDO::CURSOR_SCROLL は、静的カーソルです。<br /><br />たとえば、 `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`のようにします。<br /><br />PDO::CURSOR_SCROLL を使用する場合は、以下で説明するように、PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE を使用できます。<br /><br />参照してください[カーソルの種類&#40;PDO_SQLSRV ドライバー&#41; ](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)結果セットと、PDO_SQLSRV ドライバーでのカーソルの詳細についてはします。|  
+|PDO::ATTR_EMULATE_PREPARES|Pdo::attr_emulate_prepares が on の場合は、準備されたステートメント内のプレース ホルダーがバインドされたパラメーターに置き換えられます。 なしのプレース ホルダーで完全な SQL ステートメントが実行時のデータベースに送信されます。 <br /><br />Pdo::attr_emulate_prepares は、SQL Server のいくつかの制限のバイパスを使用できます。 たとえば、SQL Server は、いくつかの TRANSACT-SQL 句で名前付きまたは位置指定パラメーターをできません。 SQL Server 2100 パラメーターのバインドの制限があります。<br /><br />Pdo::attr_emulate_prepares 属性を true に設定できます。 以下に例を示します。<br /><br />`PDO::ATTR_EMULATE_PREPARES => true`<br /><br />既定では、この属性は false に設定されます。<br /><br />**注:** `PDO::ATTR_EMULATE_PREPARES => true`を使用する場合、パラメーター化されたクエリのセキュリティは適用されません。 アプリケーションは、パラメーターにバインドされているデータに悪意のある TRANSACT-SQL コードが含まれていないことを確認します。<br /><br />**制限事項:**: input_output と出力パラメーターはサポートされないパラメーターがバインドされていないデータベースのパラメーター化クエリ機能を使用するためです。|  
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (既定値)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|True の場合、直接クエリの実行を指定します。 False は、準備されたステートメントの実行です。 Pdo::sqlsrv_attr_direct_query の詳細については、次を参照してください。[直接ステートメント実行と準備されたステートメントの実行、PDO_SQLSRV ドライバー](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)です。|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|詳細については、「 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)」を参照してください。|  
@@ -64,9 +65,9 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
   
 次の表では、使用可能な PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE の値を示します。  
   
-|値|Description|  
+|[値]|Description|  
 |---------|---------------|  
-|PDO::SQLSRV_CURSOR_BUFFERED|クライアント側 (バッファー済み) の静的カーソルを作成します。 クライアント側のカーソルの詳細については、次を参照してください。[カーソルの種類 &#40;です。PDO_SQLSRV ドライバー &#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_CURSOR_BUFFERED|クライアント側 (バッファー済み) の静的カーソルを作成します。 クライアント側のカーソルの詳細については、次を参照してください。[カーソルの種類&#40;PDO_SQLSRV ドライバー&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)です。|  
 |PDO::SQLSRV_CURSOR_DYNAMIC|サーバー側 (バッファーなし) の動的カーソルを作成します。これは、任意の順序で行にアクセスすることができ、変更内容がデータベースに反映されます。|  
 |PDO::SQLSRV_CURSOR_KEYSET_DRIVEN|サーバー側のキーセット カーソルを作成します。 行がテーブルから削除される場合 (削除された行は、値なしで返されます)、キーセット カーソルは行の数を更新しません。|  
 |PDO::SQLSRV_CURSOR_STATIC|サーバー側の静的カーソルを作成します。これは、任意の順序で行にアクセスできますが、変更内容はデータベースに反映されません。<br /><br />PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL implies PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_STATIC.|  
@@ -101,7 +102,7 @@ $stmt = null
 ```  
   
 ## <a name="example"></a>例  
-この例では、クライアント側のカーソルで PDO::prepare メソッドを使用する方法を示します。 サーバー側カーソルを示すサンプルについては、次を参照してください。[カーソルの種類 &#40;です。PDO_SQLSRV ドライバー &#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).  
+この例では、クライアント側のカーソルで PDO::prepare メソッドを使用する方法を示します。 サーバー側カーソルを示すサンプルについては、次を参照してください。[カーソルの種類&#40;PDO_SQLSRV ドライバー&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)です。  
   
 ```  
 <?php  
@@ -141,6 +142,7 @@ print_r($row);
 ```  
   
 ## <a name="see-also"></a>参照  
-[PDO クラス](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO クラス](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

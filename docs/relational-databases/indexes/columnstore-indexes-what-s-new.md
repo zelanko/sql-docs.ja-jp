@@ -1,41 +1,39 @@
 ---
-title: "列ストア インデックス - 新機能 | Microsoft Docs"
-ms.custom: 
-ms.date: 12/1/2017
+title: 列ストア インデックス - 新機能 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/20/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
-caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 74b0f562bc50496df5fdbf88edac546e503d8718
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: f1a9ab49828410519b1aa5a36eb0804d4d7b50a5
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列ストア インデックス - 新機能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各バージョンで利用可能な列ストア機能の概要と、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Edition、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の最新リリース。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各バージョンで利用可能な列ストア機能の概要と、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の最新リリース。  
 
  > [!NOTE]
- > [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の場合、列ストア インデックスは Premium Edition でのみ使用できます。
+ > [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、列ストア インデックスが SQL Database Premium レベルおよび Standard レベル (S3 以上) で使用できます。 SQL Server (2016 SP1 以降) では、列ストア インデックスがすべてのエディションで使用できます。 SQL Server (2016 以前) では、列ストア インデックスが Enterprise Edition でのみ使用できます。
  
 ## <a name="feature-summary-for-product-releases"></a>製品リリースの機能の概要  
  列ストア インデックスの主な機能と、これらの機能を利用できる製品をまとめた表を次に示します。  
 
-|列ストア インデックスの機能|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|列ストア インデックスの機能|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
 |マルチ スレッド クエリのバッチ実行|はい|はい|はい|はい|はい|はい| 
 |シングル スレッド クエリのバッチ実行|||はい|はい|はい|はい|  

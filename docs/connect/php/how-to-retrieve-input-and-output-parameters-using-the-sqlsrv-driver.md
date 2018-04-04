@@ -1,33 +1,35 @@
 ---
-title: "方法: SQLSRV ドライバーを使用して I/O パラメーターの取得 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: SQLSRV ドライバーを使用して I/O パラメーターの取得 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: stored procedure support
+helpviewer_keywords:
+- stored procedure support
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 76423ca2d960951ecdc7a58181393eed792ab756
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 36a13b70c105ea6dfa27d7a261d2e926b122b569
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-このトピックでは、SQLSRV ドライバーを使用して 1 つのパラメーターが入力/出力パラメーターとして定義されているストアド プロシージャを呼び出す方法、およびその結果を取得する方法について説明します。 出力パラメーターまたは入出力パラメーターを取得する場合、返されるパラメーター値にアクセスできるようになる前に、ストアド プロシージャによって返されるすべての結果を使用する必要があります。  
+このトピックでは、SQLSRV ドライバーを使用して 1 つのパラメーターが入力/出力パラメーターとして定義されているストアド プロシージャを呼び出す方法、およびその結果を取得する方法について説明します。 出力パラメーターまたは入出力パラメーターを取得するには場合、は、返されるパラメーター値にアクセスする前に、ストアド プロシージャによって返されるすべての結果が使用する必要があります。  
   
 > [!NOTE]  
 > **null**、 **DateTime**、またはストリーム型に初期化または更新される変数は出力パラメーターとして使用できません。  
@@ -41,9 +43,9 @@ ms.lasthandoff: 11/18/2017
 ストアド プロシージャは、2 つの結果を返すため[sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)出力パラメーターの値を使用できるようにするストアド プロシージャが実行された後に呼び出す必要があります。 呼び出した後**sqlsrv_next_result**、 *$vacationHrs*ストアド プロシージャによって返される出力パラメーターの値が含まれています。  
   
 > [!NOTE]  
-> 正規の構文を使用してストアド プロシージャを呼び出すことをお勧めします。 正規の構文の詳細については、「 [ストアド プロシージャの呼び出し](http://go.microsoft.com/fwlink/?linkid=119517)」を参照してください。  
+> 正規の構文を使用してストアド プロシージャを呼び出すことをお勧めします。 正規の構文の詳細については、次を参照してください。[ストアド プロシージャの呼び出し](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)です。  
   
-この例では、SQL Server および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -128,7 +130,9 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>参照  
-[方法: SQLSRV ドライバーを使用してパラメーターの方向を指定する](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)  
-[方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+[方法: SQLSRV ドライバーを使用してパラメーターの方向を指定する](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+
+[方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [データの取得](../../connect/php/retrieving-data.md)  
   

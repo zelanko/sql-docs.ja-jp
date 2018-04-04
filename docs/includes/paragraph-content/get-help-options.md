@@ -1,6 +1,7 @@
 ##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) ヘルプの参照 
 - [UserVoice - SQL Server の機能強化を提案しますか。](https://feedback.azure.com/forums/908035-sql-server)
-- [スタック オーバーフロー (tag sql-server) - SQL 開発に関する質問](http://stackoverflow.com/questions/tagged/sql-server)
+- [DBA スタック Exchange (タグ sql server) の SQL Server 質問します。](https://dba.stackexchange.com/questions/tagged/sql-server)
+    - [スタックのオーバーフロー (タグ sql server) - SQL の開発に関するいくつか質問の回答があります。](http://stackoverflow.com/questions/tagged/sql-server) 
 - [セットアップとアップグレードの MSDN フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Data Tools - MSDN フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
 - [Reddit - SQL Server に関する一般的なディスカッション](https://www.reddit.com/r/SQLServer/)

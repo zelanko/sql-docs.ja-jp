@@ -1,33 +1,35 @@
 ---
-title: "方法: エラーと警告の SQLSRV ドライバーを使用して処理 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: エラーと警告の SQLSRV ドライバーを使用して処理 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: errors and warnings
+helpviewer_keywords:
+- errors and warnings
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 02aa17ddd031d351510f600f60dcd99b42a5d6e5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 4b7e2c9157cf37ab35987ebc9bb6a4d6615f80ba
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用してエラーと警告を処理する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-既定で、SQLSRV ドライバーは警告をエラーとして扱います。エラーまたは警告を生成する **sqlsrv** 関数の呼び出しは **false**を返します。 このトピックでは、この既定の動作を無効にする方法と、エラーとは別に警告を処理する方法について説明します。  
+既定では、SQLSRV ドライバーの警告をエラーとして扱います。呼び出し、 **sqlsrv**エラーまたは警告を生成する関数を返します**false**です。 このトピックでは、この既定の動作を無効にする方法と、エラーとは別に警告を処理する方法について説明します。  
   
 > [!NOTE]  
 > 警告をエラーとして扱う既定の動作にはいくつかの例外があります。 SQLSTATE 値 01000、01001、01003、および 01S02 に対応する警告はエラーとして扱われません。  
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/18/2017
   
 また、このコード例では、 **sqlsrv** 関数の各呼び出しの後に、エラーを確認しています。 これは推奨される方法です。  
   
-この例では、SQL Server および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。 AdventureWorks データベースの新規インストールに対してこの例を実行すると、3 つの警告と 2 つのエラーが生成されます。 最初の 2 つの警告は標準の警告であり、データベースへの接続時に発行されます。 3 つ目の警告は、従業員の使用可能な休暇時間が 0 未満の値に更新された場合に発生します。 エラーは、従業員の使用可能な球形時間が -40 時間未満の値に更新された場合に発生します。-40 は、テーブルの制限に違反している値です。  
+この例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。 AdventureWorks データベースの新規インストールに対してこの例を実行すると、3 つの警告と 2 つのエラーが生成されます。 最初の 2 つの警告は標準の警告であり、データベースへの接続時に発行されます。 3 つ目の警告は、従業員の使用可能な休暇時間が 0 未満の値に更新された場合に発生します。 エラーは、従業員の使用可能な球形時間が -40 時間未満の値に更新された場合に発生します。-40 は、テーブルの制限に違反している値です。  
   
 ```  
 <?php  
@@ -205,6 +207,7 @@ function DisplayWarnings()
 ```  
   
 ## <a name="see-also"></a>参照  
-[方法: SQLSRV ドライバーを使用してエラーおよび警告処理を構成する](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)  
+[方法: SQLSRV ドライバーを使用してエラーおよび警告処理を構成する](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
+
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
   

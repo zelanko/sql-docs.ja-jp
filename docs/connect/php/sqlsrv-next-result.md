@@ -1,17 +1,19 @@
 ---
-title: "sqlsrv_next_result |Microsoft ドキュメント"
-ms.custom: 
+title: sqlsrv_next_result |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_next_result
+apiname:
+- sqlsrv_next_result
 apitype: NA
 helpviewer_keywords:
 - multiple result sets
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - stored procedure support
 - API Reference, sqlsrv_next_result
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fb34a1e134bf13f797157fbe49d1cb210fb4f036
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 1158706ba73a97a358e43bbe32e84bd85f926409
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvnextresult"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -55,9 +57,9 @@ sqlsrv_next_result( resource $stmt )
 次の例では、 *Production.ProductReview* テーブルに製品のレビューに挿入するストアド プロシージャを作成して実行します。その後、指定した製品のすべてのレビューを選択します。 ストアド プロシージャの実行後、最初の結果 (の挿入クエリ、ストアド プロシージャの影響を受ける行の数) は呼び出さずに消費**sqlsrv_next_result**です。 次の結果 (ストアド プロシージャで SELECT クエリによって返される行) を使用可能を呼び出して**sqlsrv_next_result**を使用して消費[sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)です。  
   
 > [!NOTE]  
-> 正規の構文を使用してストアド プロシージャを呼び出すことをお勧めします。 正規の構文の詳細については、「 [ストアド プロシージャの呼び出し](http://go.microsoft.com/fwlink/?linkid=119517)」を参照してください。  
+> 正規の構文を使用してストアド プロシージャを呼び出すことをお勧めします。 正規の構文の詳細については、次を参照してください。[ストアド プロシージャの呼び出し](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)です。  
   
-この例では、SQL Server および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -190,7 +192,7 @@ sqlsrv_close( $conn );
 > [!NOTE]  
 > バッチ クエリまたはストアド プロシージャによって返される最初の (または唯一の) の結果を呼び出さなくてもアクティブな**sqlsrv_next_result**です。  
   
-この例では、 *AdventureWorks* データベースの [Purchasing.ProductReview](http://go.microsoft.com/fwlink/?linkid=67739) テーブルを使用します。また、このデータベースがサーバーにインストールされていることを前提としています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+この例では、 *Purchasing.ProductReview*のテーブル、 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースをこのデータベースがサーバーにインストールされていることを前提とします。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -270,9 +272,14 @@ sqlsrv_close( $conn );
 ```  
   
 ## <a name="see-also"></a>参照  
-[SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
-[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
-[データの取得](../../connect/php/retrieving-data.md)  
-[データの更新 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[サンプル アプリケーション &#40;SQLSRV ドライバー&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
+[SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[データの取得](../../connect/php/retrieving-data.md)
+
+[データの更新 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[サンプル アプリケーション &#40;SQLSRV ドライバー&#41;](../../connect/php/example-application-sqlsrv-driver.md)
+
   

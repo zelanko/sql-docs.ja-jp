@@ -1,28 +1,30 @@
 ---
-title: "アクティビティのログ記録 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/19/2017
+title: アクティビティのログ記録 |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: logging activity
+helpviewer_keywords:
+- logging activity
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c62afd5a581469af070b5a9d2c59f14264e1cf7
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 66e8f95354ac5353070cf312313282dfa97f9577
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="logging-activity"></a>アクティビティのログ記録
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,26 +43,26 @@ pdo_sqlsrv.log_severity = <number>
   
 **log_severity** は次のいずれかの値をとります。場所は次の値のいずれかです。  
   
-|値|説明|  
+|[値]|説明|  
 |---------|---------------|  
 |0|ログ記録は無効です (何も定義されていない場合は、これが既定です)。|  
-|-1|エラー、警告、および通知をログ記録することを指定します。|  
-|1|エラーをログ記録することを指定します。|  
-|2|警告をログ記録することを指定します。|  
-|4|通知をログ記録することを指定します。|  
+|-1|エラー、警告、および通知が記録するように指定します。|  
+|1|エラーを記録することを指定します。|  
+|2|警告を記録することを指定します。|  
+|4|通知を記録することを指定します。|  
   
-ログ記録の情報は、phperrors.log ファイルに追加されます。  
+ログ情報は、phperrors.log ファイルに追加されます。  
   
 PHP では、初期化時に構成ファイルを読み取り、データをキャッシュに格納します。また、PHP では、これらの設定を更新してすぐに使用するための API も提供し、構成ファイルに書き込まれます。 この API は、PHP を初期化した後でも、アプリケーションのスクリプトで設定を変更できるようにします。  
   
 ## <a name="logging-activity-using-the-sqlsrv-driver"></a>SQLSRV ドライバーを使用したアクティビティのログ記録  
-ログ記録をオンにするには、 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 関数を使用するか、php.ini ファイルを変更することができます。 初期化、接続、ステートメント、またはエラー関数のアクティビティをログ記録できます。 また、エラー、警告、通知、または 3 つすべてをログ記録するかどうかも指定できます。  
+ログ記録をオンにすることができますを使用して、 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)関数またはするには、php.ini ファイルを変更できます。 初期化、接続、ステートメント、またはエラー関数のアクティビティをログ記録できます。 また、エラー、警告、通知、または 3 つすべてをログ記録するかどうかも指定できます。  
   
 > [!NOTE]  
 > ログ ファイルの場所は php.ini ファイルで構成できます。  
   
 ### <a name="turning-logging-on"></a>ログ記録をオンにする  
-[sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 関数を使用して、 **LogSubsystems** 設定の値を指定し、ログ記録をオンにすることができます。 たとえば、次のコードの行は、接続時のアクティビティをログ記録するようにドライバーを構成します。  
+ログ記録をオンするを使用して、 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)の値を指定する関数、 **LogSubsystems**設定します。 たとえば、次のコードの行は、接続時のアクティビティをログ記録するようにドライバーを構成します。  
   
 `sqlsrv_configure("LogSubsystems", SQLSRV_LOG_SYSTEM_CONN);`  
   
@@ -79,16 +81,16 @@ PHP では、初期化時に構成ファイルを読み取り、データをキ�
   
 `sqlsrv_configure("LogSubsystems", SQLSRV_LOG_SYSTEM_CONN | SQLSRV_LOG_SYSTEM_STMT);`  
   
-また、php.ini ファイルの **LogSubsystems** 設定に整数値を指定して、ログ記録をオンにすることもできます。 たとえば、次の行を php.ini ファイルの `[sqlsrv]` セクションに追加すると、接続アクティビティのログ記録がオンになります。  
+することもログ記録を整数値を指定することによって、 **LogSubsystems** php.ini ファイルで設定します。 たとえば、次の行を追加する、 `[sqlsrv]` php.ini ファイルのセクションでは、接続アクティビティのログ記録をオンにします。  
   
 `sqlsrv.LogSubsystems = 2`  
   
-整数値をまとめて追加すると、一度に複数のオプションを指定できます。 たとえば、次の行を php.ini ファイルの `[sqlsrv]` セクションに追加すると、接続とステートメントのアクティビティのログ記録がオンになります。  
+整数値をまとめて追加すると、一度に複数のオプションを指定できます。 たとえば、次の行を追加する、 `[sqlsrv]` php.ini ファイルのセクションでは、接続とステートメントのアクティビティのログ記録をオンにします。  
   
 `sqlsrv.LogSubsystems = 6`  
   
 ### <a name="logging-errors-warnings-and-notices"></a>エラー、警告および通知のログ記録  
-ログ記録をオンにした後、ログ記録する内容を指定する必要があります。 次の 1 つ以上をログ記録することができます: エラー、警告および通知。 たとえば、次のコードの行では、警告のみをログ記録することを指定します。  
+ログ記録をオンにした後、ログ記録する内容を指定する必要があります。 次の 1 つ以上をログ記録することができます: エラー、警告および通知。 たとえば、次のコード行では、警告のみを記録することを指定します。  
   
 `sqlsrv_configure("LogSeverity", SQLSRV_LOG_SEVERITY_WARNING);`  
   
@@ -99,30 +101,34 @@ PHP では、初期化時に構成ファイルを読み取り、データをキ�
   
 |値 (かっこ内と同等の整数)|Description|  
 |-----------------------------------------------|---------------|  
-|SQLSRV_LOG_SEVERITY_ALL (-1)|エラー、警告、および通知をログ記録することを指定します。|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|エラーをログ記録することを指定します。 これは既定値です。|  
-|SQLSRV_LOG_SEVERITY_WARNING (2)|警告をログ記録することを指定します。|  
-|SQLSRV_LOG_SEVERITY_NOTICE (4)|通知をログ記録することを指定します。|  
+|SQLSRV_LOG_SEVERITY_ALL (-1)|エラー、警告、および通知が記録するように指定します。|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|エラーを記録することを指定します。 これは既定値です。|  
+|SQLSRV_LOG_SEVERITY_WARNING (2)|警告を記録することを指定します。|  
+|SQLSRV_LOG_SEVERITY_NOTICE (4)|通知を記録することを指定します。|  
   
 時刻に 1 つ以上の値を設定することができます、 **LogSeverity**論理 OR 演算子 (|) を使用して設定します。 たとえば、次のコードの行では、エラーと警告をログ記録することを指定します。  
   
 `sqlsrv_configure("LogSeverity", SQLSRV_LOG_SEVERITY_ERROR | SQLSRV_LOG_SEVERITY_WARNING);`  
   
 > [!NOTE]  
-> **LogSeverity** 設定の値を指定しても、ログ記録は有効になりません。 **LogSubsystems** 設定の値を指定してログ記録をオンにし、 **LogSeverity**の値を設定してログ内容の重大度を指定します。  
+> 値を指定する、 **LogSeverity**の設定もログ記録を有効になりません。 値を指定してログを有効にする必要があります、 **LogSubsystems**の値を設定してログ内容の重大度を指定し、設定、 **LogSeverity**です。  
   
 また、php.ini ファイルの整数値を使用して、 **LogSeverity** 設定の設定を指定することもできます。 たとえば、次の行を php.ini ファイルの `[sqlsrv]` セクションに追加すると、警告のログ記録のみが有効になります。  
   
 `sqlsrv.LogSeverity = 2`  
   
-整数値をまとめて追加すると、一度に複数のオプションを指定できます。 たとえば、次の行を php.ini ファイルの `[sqlsrv]` セクションに追加すると、エラーと警告のログ記録が有効になります。  
+整数値をまとめて追加すると、一度に複数のオプションを指定できます。 たとえば、次の行を追加する、 `[sqlsrv]` php.ini ファイルのセクションには、警告とエラーのログ記録が有効にします。  
   
 `sqlsrv.LogSeverity = 3`  
   
 ## <a name="see-also"></a>参照  
-[PHP SQL ドライバーのプログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
-[定数 &#40;です。Microsoft Drivers for PHP for SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[sqlsrv_configure](../../connect/php/sqlsrv-configure.md)  
-[sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
+[For PHP for SQL Server の Microsoft drivers ガイドのプログラミング](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[sqlsrv_configure](../../connect/php/sqlsrv-configure.md)
+
+[sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)
+
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
   

@@ -1,28 +1,29 @@
 ---
-title: "Analysis services 表形式モデルの互換性レベル |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 10/16/2017
+title: Analysis services 表形式モデルの互換性レベル |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.versioncompat.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.versioncompat.f1
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4dcc372bb9eac9887a06923cf517e4375ec1bbcb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6fbd08b52c50e8ea010f4fcc6664176935457322
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 表形式モデルの互換性レベル
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/08/2018
 主な機能を 1400 互換性レベルは次のとおりです。
 
 *  データ接続、表形式モデルにインポート新しいインフラストラクチャ TOM Api および TMSL スクリプトをサポートします。 これにより、Azure Blob ストレージなどの他のデータ ソースがサポートされます。 今後の更新プログラムにはで追加のデータ ソースがあることが含まれています。
-*  データ変換をデータの取得と M の式を使用してデータのマッシュ アップ機能します。
+*  データ変換を SSDT でデータの取得と M の式を使用して、データのマッシュ アップ機能します。
 *  メジャーでは、集約されたレポートから詳細なデータを Microsoft Excel ドリル ダウンなどの BI ツールを有効にする、DAX 式で、詳細行プロパティできるようになりました。 たとえば、エンドユーザーは、地域と月の売上合計を表示するときに、関連付けられている注文の詳細表示できます。 
 *  オブジェクト レベルのセキュリティをそこに含まれるデータに加え、テーブルと列の名前。
 *  不規則階層のサポートを強化します。
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/08/2018
 |1103|SQL Server 2017 *、SQL Server 2016、SQL Server 2014、SQL Server 2012 SP1|  
 |1100|SQL Server 2017 *、SQL Server 2016、SQL Server 2014、SQL Server 2012 SP1、SQL Server 2012| 
 
-\*SQL Server 2017 では、1100 と 1103 互換性レベルが廃止されました。
+\* SQL Server 2017 では、1100 と 1103 互換性レベルが廃止されました。
   
 ## <a name="set-compatibility-level"></a>互換性レベルの設定 
  新しいテーブル モデル プロジェクトで SQL Server Data Tools (SSDT) を作成するときに互換性レベルを指定できます、**表形式モデル デザイナー**ダイアログ。 

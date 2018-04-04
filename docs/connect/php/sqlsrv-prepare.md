@@ -1,33 +1,35 @@
 ---
-title: "sqlsrv_prepare |Microsoft ドキュメント"
-ms.custom: 
+title: sqlsrv_prepare | Microsoft Docs
+ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_prepare
+apiname:
+- sqlsrv_prepare
 apitype: NA
 helpviewer_keywords:
 - executing queries
 - API Reference, sqlsrv_prepare
 - sqlsrv_prepare
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
-caps.latest.revision: "52"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 56dbdc5aad9e0c9362ee7d5f9ddb5650a920130d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: dbfcece545b5fb66dbc8c2e8fd8afb1bcb9f9336
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -63,16 +65,16 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
     次の表では、これらの配列の要素を説明します。  
   
-    |要素|説明|  
+    |要素|Description|  
     |-----------|---------------|  
     |*&$value*|リテラル値または PHP の変数への参照。|  
-    |*$direction*[省略可能]|次のいずれかの**sqlsrv_param _\*** パラメーターの方向を示すために使用される定数: **SQLSRV_PARAM_IN**、 **SQLSRV_PARAM_OUT**、 **SQLSRV_PARAM_INOUT**です。 既定値は**SQLSRV_PARAM_IN**です。<br /><br />PHP 定数の詳細については、次を参照してください。[定数 &#40;です。Microsoft Drivers for PHP for SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$phpType*[省略可能]|A **sqlsrv_phptype _\*** 戻り値の PHP データ型を指定する定数。|  
-    |*$sqlType*[省略可能]|A **sqlsrv_sqltype _\*** 入力値の SQL Server データ型を指定する定数。|  
+    |*$direction*[省略可能]|次のいずれかの**sqlsrv_param _\*** パラメーターの方向を示すために使用される定数: **SQLSRV_PARAM_IN**、 **SQLSRV_PARAM_OUT**、 **SQLSRV_PARAM_INOUT**です。 既定値は**SQLSRV_PARAM_IN**です。<br /><br />PHP 定数の詳細については、次を参照してください。[定数&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)です。|  
+    |*$phpType*[OPTIONAL]|A **sqlsrv_phptype _\*** 戻り値の PHP データ型を指定する定数。|  
+    |*$sqlType*[OPTIONAL]|A **sqlsrv_sqltype _\*** 入力値の SQL Server データ型を指定する定数。|  
   
 *$options* [省略可能]: クエリのプロパティを設定する連想配列。 次の表は、サポートされているキーと対応する値を示します。  
   
-|Key|サポートされている値|説明|  
+|[キー]|サポートされている値|Description|  
 |-------|--------------------|---------------|  
 |QueryTimeout|正の整数値です。|クエリのタイムアウト (秒単位) を設定します。 既定では、ドライバーは結果を無制限に待機します。|  
 |SendStreamParamsAtExec|**true** または **false**<br /><br />既定値は **true**です。|すべてのストリームの実行時データを送信するドライバーを構成 (**true**)、またはストリーム データをチャンク単位で送信する (**false**)。 既定では、この値は **true**に設定されています。 詳細については、「 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)」を参照してください。|  
@@ -86,12 +88,12 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 組み合わせ**sqlsrv_prepare**と**sqlsrv_execute**離職ステートメントの準備とステートメントの実行で 2 つに関数呼び出しとパラメーター化クエリを実行するために使用できます。 この関数は、実行ごとに異なるパラメーター値を使用してステートメントを複数回実行する場合に適しています。  
   
-大量の情報の書き込みと読み取りを行う別の手法については、「 [Batches of SQL Statements (SQL ステートメントのバッチ)](http://go.microsoft.com/fwlink/?LinkId=104225) 」と「 [BULK INSERT](http://go.microsoft.com/fwlink/?LinkId=104226)」を参照してください。  
+別の手法の書き込みと読み取り大量の情報では、次を参照してください。 [SQL ステートメントのバッチ](../../odbc/reference/develop-app/batches-of-sql-statements.md)と[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)です。  
   
 詳細については、「 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
   
 ## <a name="example"></a>例  
-次の例では、ステートメントを準備して実行します。 ステートメントを実行すると (を参照してください[sqlsrv_execute](../../connect/php/sqlsrv-execute.md))、フィールドを更新、 *Sales.SalesOrderDetail* AdventureWorks データベースのテーブルです。 この例では、SQL Server および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、ステートメントを準備して実行します。 ステートメントを実行すると (を参照してください[sqlsrv_execute](../../connect/php/sqlsrv-execute.md))、フィールドを更新、 *Sales.SalesOrderDetail* AdventureWorks データベースのテーブルです。 例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -138,7 +140,7 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="example"></a>例  
-次の例では、ステートメントを準備し、異なるパラメーター値で再実行する方法を示します。 この例では、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルの *OrderQty* 列を更新します。 更新されたら、更新プログラムが成功したことを確認するため、データベースが照会されます。 この例では、SQL Server および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、ステートメントを準備し、異なるパラメーター値で再実行する方法を示します。 この例では、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルの *OrderQty* 列を更新します。 更新されたら、更新プログラムが成功したことを確認するため、データベースが照会されます。 例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -251,11 +253,17 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>参照  
-[SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
-[方法: パラメーター化クエリを実行する](../../connect/php/how-to-perform-parameterized-queries.md)  
-[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
-[方法: ストリームとしてデータを送信する](../../connect/php/how-to-send-data-as-a-stream.md)  
-[方向パラメーターを使用する](../../connect/php/using-directional-parameters.md)  
-[データの取得](../../connect/php/retrieving-data.md)  
-[データの更新 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-  
+[SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[方法: パラメーター化クエリを実行する](../../connect/php/how-to-perform-parameterized-queries.md)
+
+[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[方法: ストリームとしてデータを送信する](../../connect/php/how-to-send-data-as-a-stream.md)
+
+[方向パラメーターを使用する](../../connect/php/using-directional-parameters.md)
+
+[データの取得](../../connect/php/retrieving-data.md)
+
+[データの更新 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+

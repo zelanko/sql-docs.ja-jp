@@ -1,28 +1,30 @@
 ---
-title: "方法: トランザクションを実行 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: トランザクションを実行 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: transaction support
+helpviewer_keywords:
+- transaction support
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a759dbf523ff275f20436919b5f093225b2693e5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 15f4ba792e7657125c6964f098c6c1f7a9fe83f0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-transactions"></a>方法: トランザクションを実行する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,7 +60,7 @@ PDO_SQLSRV ドライバーには、トランザクションを実行する 3 つ
   
     既定では、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]自動コミット モードにします。 これは、すべてのクエリは、 **sqlsrv_begin_transaction**を使用してトランザクションを開始します。  
   
-    **sqlsrv_commit**を使用して明示的なトランザクションをコミットしない場合、接続の終了時またはスクリプトの終了時にロールバックされます。  
+    場合は、明示的なトランザクションを使用してコミットは**sqlsrv_commit**、時、接続の終了またはスクリプトの終了時にロールバックされます。  
   
     トランザクションの実行に、埋め込みの Transact SQL を使用しないでください。 たとえば、トランザクションを開始するために、"BEGIN TRANSACTION" を Transact-SQL クエリとして使用してステートメントを実行しないでください。 埋め込みの Transact-SQL を使用してトランザクションを実行した場合、予測されるトランザクションの動作は保証できません。  
   
@@ -66,7 +68,7 @@ PDO_SQLSRV ドライバーには、トランザクションを実行する 3 つ
   
 ## <a name="example"></a>例  
   
-### <a name="description"></a>説明  
+### <a name="description"></a>Description  
 次の例では、トランザクションの一部としていくつかのクエリを実行します。 すべてのクエリが成功すると、トランザクションはコミットされます。 いずれかのクエリが失敗すると、トランザクションはロールバックされます。  
   
 この例では、 *Sales.SalesOrderDetail* テーブルから販売注文を削除し、販売注文の各製品について *Product.ProductInventory* テーブルの製品インベントリ レベルを調整します。 データベースに注文および製品の入手の状態を正確に反映するには、これらのクエリすべてが成功する必要があるため、トランザクションに含まれています。  
@@ -75,7 +77,7 @@ PDO_SQLSRV ドライバーには、トランザクションを実行する 3 つ
   
 これらのクエリ (販売注文の削除と、製品在庫の数量の更新) の成功は、トランザクションの一部です。  
   
-この例では、SQL Server および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ### <a name="code"></a>コード  
   
@@ -155,10 +157,12 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>コメント  
-トランザクションの動作を重視するため、いくつかの推奨されるエラー処理は前の例には含まれていません。 実稼働アプリケーションでは、 **sqlsrv** 関数のすべての呼び出しは、エラーを確認し、それに応じて処理することをお勧めします。  
+トランザクションの動作を重視するため、いくつかの推奨されるエラー処理は前の例には含まれていません。 実稼働アプリケーションでは、確認をお勧めへの呼び出し、 **sqlsrv**エラー機能し、それに応じて処理します。
   
 ## <a name="see-also"></a>参照  
-[データの更新 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[トランザクション (データベース エンジン)](http://go.microsoft.com/fwlink/?LinkId=105862)  
+[データの更新 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[トランザクション (データベース エンジン)](https://msdn.microsoft.com/library/ms190612.aspx)
+
 [ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
   

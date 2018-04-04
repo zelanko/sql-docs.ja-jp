@@ -1,0 +1,113 @@
+---
+title: 行セットのプロパティと動作 |Microsoft ドキュメント
+description: 行セットのプロパティと OLE DB Driver for SQL Server での動作
+ms.custom: ''
+ms.date: 03/26/2018
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: ''
+ms.component: ole-db-rowsets
+ms.reviewer: ''
+ms.suite: sql
+ms.technology:
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+helpviewer_keywords:
+- rowsets [OLE DB], properties
+- OLE DB Driver for SQL Server, rowsets
+- properties [OLE DB]
+- OLE DB rowsets, properties
+author: pmasl
+ms.author: Pedro.Lopes
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 40a2d24c652b5ed24c16b1927ebf86b9220f9255
+ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/30/2018
+---
+# <a name="rowset-properties-and-behaviors"></a>行セットのプロパティと動作
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+  これらは、OLE DB Driver for SQL Server 行セットのプロパティです。  
+  
+|プロパティ ID|Description|  
+|-----------------|-----------------|  
+|DBPROP_ABORTPRESERVE|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : このプロパティで中止操作後の行セットの動作が決まります。<br /><br /> VARIANT_FALSE: 中止操作後は、行セットが、OLE DB Driver for SQL Server に無効にします。 行セット オブジェクトの機能は、ほぼ失われます。 のみをサポート**IUnknown**操作と、保留状態の行とアクセサー ハンドルのリリースです。<br /><br /> VARIANT_TRUE: SQL Server の OLE DB Driver は、有効な行セットを保持します。|  
+|DBPROP_ACCESSORDER|R/W 読み取り/書き込み<br /><br /> 既定値 : DBPROPVAL_AO_RANDOM <br /><br /> 説明 : アクセスの順序です。 行セット内の列にアクセスする順序を指定します。<br /><br /> DBPROPVAL_AO_RANDOM: 任意の順序で列にアクセスできます。<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS: ストレージ オブジェクトとしてバインドされている列は、列序数で決まるシーケンシャルな順序でしかアクセスできません。<br /><br /> DBPROPVAL_AO_SEQUENTIAL: すべての列には、列序数で決まるシーケンシャルな順序でアクセスする必要があります。|  
+|DBPROP_APPENDONLY|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
+|DBPROP_BLOCKINGSTORAGEOBJECTS|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: OLE DB 用のドライバー他の行セット メソッドを使用して SQL Server ストレージ オブジェクト ブロックします。|  
+|DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: SQL Server の OLE DB Driver ブックマークをサポートする行セットの行 id の DBPROP_BOOKMARKS または DBPROP_LITERALBOOKMARKS が VARIANT_TRUE の場合。<br /><br /> いずれかのプロパティを VARIANT_TRUE に設定しても、ブックマークによる行セットの位置指定が有効になるわけではありません。 ブックマークによる行セットの位置指定をサポートする行セットを作成するには、DBPROP_IRowsetLocate または DBPROP_IRowsetScroll を VARIANT_TRUE に設定します。<br /><br /> SQL Server の OLE DB ドライバーを使用して、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ブックマークを含む行セットをサポートするカーソル。 詳細については、次を参照してください。[行セットと SQL Server カーソル](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)です。<br /><br /> 注: 他の OLE DB Driver for SQL Server カーソルを定義するプロパティと競合してこれらのプロパティの設定エラーが発生します。 たとえば、DBPROP_OTHERINSERT が VARIANT_TRUE のときに、DBPROP_BOOKMARKS を VARIANT_TRUE に設定すると、コンシューマーが行セットを開く時点でエラーが発生します。|  
+|DBPROP_BOOKMARKSKIPPED|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: SQL Server の OLE DB Driver は、コンシューマーには、位置指定またはブックマークが付けられた行セットの検索時に無効なブックマークが示されている場合に DB_E_BADBOOKMARK を返します。|  
+|DBPROP_BOOKMARKTYPE|R/w 読み取り専用<br /><br /> 既定値 : DBPROPVAL_BMK_NUMERIC <br /><br /> 説明: SQL Server の OLE DB Driver は、数値ブックマークのみを実装します。 SQL Server のブックマークの OLE DB ドライバーが 32 ビット符号なし整数では、DBTYPE_UI4 を入力します。|  
+|DBPROP_CACHEDEFERRED|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
+|DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: SQL Server の OLE DB Driver は、旧バージョンとフェッチとスクロールの非シーケンシャル行セット内をサポートします。 SQL Server の OLE DB Driver は、DBPROP_CANFETCHBACKWARDS または DBPROP_CANSCROLLBACKWARDS が VARIANT_TRUE の場合、カーソルでサポートされている行セットを作成します。 詳細については、次を参照してください。[行セットと SQL Server カーソル](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)です。|  
+|DBPROP_CANHOLDROWS|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: 既定では、SQL Server の OLE DB Driver 返します DB_E_ROWSNOTRELEASED 場合、コンシューマーが保留中の変更中に、行セットの複数の行を取得しようとした場合に存在して、行セット内の既存。 この動作を変更できます。<br /><br /> DBPROP_CANHOLDROWS と DBPROP_IRowsetChange の両方が VARIANT_TRUE の場合は、ブックマークが設定された行セットになります。 両方のプロパティが VARIANT_TRUE の場合、 **IRowsetLocate**インターフェイスを使用して、行セットに、DBPROP_BOOKMARKS と DBPROP_LITERALBOOKMARKS 両方が VARIANT_TRUE です。<br /><br /> サポートされている OLE DB Driver for SQL Server 行セットを含むブックマーク[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]カーソル。|  
+|DBPROP_CHANGEINSERTEDROWS|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : 行セットがキーセット ドリブン カーソルを使用している場合、このプロパティには VARIANT_TRUE しか設定できません。|  
+|DBPROP_COLUMNRESTRICT|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: OLE DB Driver for SQL Server と、プロパティ設定を VARIANT_TRUE にコンシューマーが行セット内の列を変更することはできません。 行セットの他の列は、更新可能にできます。また、行自体を削除することもできます。<br /><br /> プロパティが VARIANT_TRUE の場合と、コンシューマーを調べて、 *dwFlags* DBCOLUMNINFO 構造体のメンバーか、個々 の列の値を書き込むことがあるかどうかを決定します。 変更可能な列は、 *dwFlags* DBCOLUMNFLAGS_WRITE が発生します。|  
+|DBPROP_COMMANDTIMEOUT|R/W 読み取り/書き込み<br /><br /> 既定値: 0<br /><br /> 説明: 既定では、SQL Server の OLE DB Driver はタイムアウトしません上、 **icommand::execute**メソッドです。|  
+|DBPROP_COMMITPRESERVE|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : このプロパティでコミット操作後の行セットの動作が決まります。<br /><br /> VARIANT_TRUE: SQL Server の OLE DB Driver は、有効な行セットを保持します。<br /><br /> VARIANT_FALSE: コミット操作後に、行セットが、OLE DB Driver for SQL Server に無効にします。 行セット オブジェクトの機能は、ほぼ失われます。 のみをサポート**IUnknown**操作と、保留状態の行とアクセサー ハンドルのリリースです。|  
+|DBPROP_DEFERRED|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: ときを VARIANT_TRUE に設定、OLE DB Driver for SQL Server が、行セットのサーバー カーソルを使用します。 **テキスト**、 **ntext**、および**イメージ**アプリケーションによってアクセスされるまでの列は、サーバーから返されません。|  
+|DBPROP_DELAYSTORAGEOBJECTS|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: SQL Server の OLE DB Driver は、ストレージ オブジェクトで即時更新モードをサポートします。<br /><br /> シーケンシャル ストリーム オブジェクトのデータに加えた変更は、直ちに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信されます。 変更は、行セットのトランザクション モードに基づいてコミットされます。|  
+|DBPROP_HIDDENCOLUMNS|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> **説明:**列数を非表示<br /><br /> DBPROP_UNIQUEROWS が VARIANT_TRUE の場合、DBPROP_HIDDENCOLUMNS プロパティは、行セット内の行を一意に識別するためにプロバイダーによって追加された追加の "非表示" 列の数を返します。 これらの列がによって返される**icolumnsinfo::getcolumninfo**と**icolumnsrowset::getcolumnsrowset**です。 ただし、これらは含まれませんによって返される行の数の*pcColumns*によって返される引数**icolumnsinfo::getcolumninfo**です。<br /><br /> 表される列の合計数を決定する、 *:getcolumninfo*によって返される構造体**icolumnsinfo::getcolumninfo**コンシューマーが dbprop _ の値を加算する非表示の列を含む返される列の数に HIDDENCOLUMNS **icolumnsinfo::getcolumninfo**で*pcColumns*です。 DBPROP_UNIQUEROWS が VARIANT_FALSE の場合、DBPROP_HIDDENCOLUMNS は 0 です。|  
+|DBPROP_IAccessor DBPROP_IColumnsInfo DBPROP_IConvertType DBPROP_IRowset DBPROP_IRowsetInfo|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: SQL Server の OLE DB Driver は、すべての行セットでこれらのインターフェイスをサポートします。|  
+|DBPROP_IColumnsRowset|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: SQL Server の OLE DB Driver のサポート、 **IColumnsRowset**インターフェイスです。|  
+|DBPROP_IConnectionPointContainer|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : IConnectionPointContainer。 VARIANT_TRUE の場合は、指定したインターフェイスを行セットがサポートします。 VARIANT_FALSE の場合は、指定したインターフェイスを行セットがサポートしません。 インターフェイスをサポートするプロバイダーは、VARIANT_TRUE を指定してインターフェイスに関連付けられたプロパティをサポートする必要があります。 これらのプロパティは、主に、CommandProperties::SetProperties を介してインターフェイスを要求するために使用されます。|  
+|DBPROP_IMultipleResults|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: SQL Server の OLE DB Driver のサポート、 **IMultipleResults**インターフェイスです。|  
+|DBPROP_IRowsetChange DBPROP_IRowsetUpdate|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: SQL Server の OLE DB Driver のサポート、 **IRowsetChange**と**IRowsetUpdate**インターフェイスです。<br /><br /> DBPROP_IRowsetChange を VARIANT_TRUE に設定して作成された行セットの動作は、即時更新モードの動作になります。<br /><br /> DBPROP_IRowsetUpdate が VARIANT_TRUE の場合、DBPROP_IRowsetChange も VARIANT_TRUE になります。 この場合は、行セットの動作は、遅延更新モードの動作になります。<br /><br /> SQL Server の OLE DB ドライバーを使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]いずれかを公開する行セットをサポートするためにカーソル**IRowsetChange**または**IRowsetUpdate**です。 詳細については、次を参照してください。[行セットと SQL Server カーソル](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)です。|  
+|DBPROP_IRowsetIdentity|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: SQL Server の OLE DB Driver のサポート、 **IRowsetIdentity**インターフェイスです。 行セットがこのインターフェイスをサポートする場合、同じ行を基準とする 2 つの行ハンドルは、常に同じデータと状態を示します。 コンシューマーが呼び出すことができます、 **IRowsetIdentity:: IsSameRow**メソッドを参照している、同じ行インスタンスに 2 つの行ハンドルを比較します。|  
+|DBPROP_IRowsetLocate DBPROP_IRowsetScroll|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: OLE DB Driver for SQL Server を公開できます、 **IRowsetLocate**と**IRowsetScroll**インターフェイスです。<br /><br /> DBPROP_IRowsetLocate が VARIANT_TRUE の場合、DBPROP_CANFETCHBACKWARDS および DBPROP_CANSCROLLBACKWARDS も VARIANT_TRUE になります。<br /><br /> DBPROP_IRowsetScroll が VARIANT_TRUE の場合、DBPROP_IRowsetLocate も VARIANT_TRUE になり、行セットでこの 2 つのインターフェイスが使用可能になります。<br /><br /> ブックマークは、いずれのインターフェイスにも必要です。 OLE DB Driver for SQL Server を設定でき、DBPROP_BOOKMARKS と DBPROP_LITERALBOOKMARKS を VARIANT_TRUE にコンシューマーがいずれのインターフェイスを要求したときにします。<br /><br /> SQL Server の OLE DB ドライバーを使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]をサポートするカーソル**IRowsetLocate**と**IRowsetScroll**です。 詳細については、次を参照してください。[行セットと SQL Server カーソル](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)です。<br /><br /> その他の OLE DB Driver for SQL Server カーソルを定義するプロパティと競合してこれらのプロパティを設定すると、エラーが発生します。 たとえば、DBPROP_OTHERINSERT が VARIANT_TRUE のときに、DBPROP_IRowsetScroll を VARIANT_TRUE に設定すると、コンシューマーが行セットを開く時点でエラーが発生します。|  
+|DBPROP_IRowsetResynch|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: OLE DB Driver for SQL Server の公開、 **IRowsetResynch**オンデマンド インターフェイスです。 SQL Server の OLE DB Driver は、任意の行セットのインターフェイスを公開できます。|  
+|DBPROP_ISupportErrorInfo|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: OLE DB Driver for SQL Server の公開、 **ISupportErrorInfo**行セット上のインターフェイスです。|  
+|DBPROP_ILockBytes|SQL Server の OLE DB ドライバーによって、このインターフェイスは実装されていません。 このプロパティの読み取りまたは書き込みを行うと、エラーが発生します。|  
+|DBPROP_ISequentialStream|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: OLE DB Driver for SQL Server の公開、 **ISequentialStream** long に格納された可変長データをサポートするインターフェイス[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。|  
+|DBPROP_IStorage|SQL Server の OLE DB ドライバーによって、このインターフェイスは実装されていません。 このプロパティの読み取りまたは書き込みを行うと、エラーが発生します。|  
+|DBPROP_IStream|SQL Server の OLE DB ドライバーによって、このインターフェイスは実装されていません。 このプロパティの読み取りまたは書き込みを行うと、エラーが発生します。|  
+|DBPROP_IMMOBILEROWS|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明 : このプロパティは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のキーセット カーソルの場合のみ VARIANT_TRUE になり、それ以外のカーソルの場合は VARIANT_FALSE になります。<br /><br /> VARIANT_TRUE: 行セットでは、挿入または更新された行は並べ替えられません。 **Irowsetchange::insertrow**、行セットの末尾に行が表示されます。 **Irowsetchange::setdata**、行セットが順序付けられていない場合、更新された行の位置は変更されません。 場合は、行セットが順序付けと**irowsetchange::setdata**行、行セットの並べ替えに使用される列がない変更を移動します。 行セットが一連のキー列を基に構築されている場合 (一般的には DBPROP_OTHERUPDATEDELETE が VARIANT_TRUE になっており、DBPROP_OTHERINSERT が VARIANT_FALSE になっている行セットの場合)、キー列の値を変更すると、通常は、現在の行が削除され、新しい行が挿入された場合と同じ結果になります。 したがって、DBPROP_OWNINSERT が VARIANT_FALSE の場合は、DBPROP_IMMOBILEROWS プロパティが VARIANT_TRUE でも、行が移動されたり、行セットから削除されたように見えることがあります。<br /><br /> VARIANT_FALSE: 行セットが順序付けられている場合、挿入された行は、行セットの順序に従った正しい位置に挿入されます。 行セットが順序付けられていない場合は、挿入された行は、行セットの最後に追加されます。 場合**irowsetchange::setdata**順序で行が移動するために使用される列を変更します。 行セットが順序付けされていない場合は、行の位置は変更されません。|  
+|DBPROP_LITERALIDENTITY|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明 : このプロパティは、常に VARIANT_TRUE です。|  
+|DBPROP_LOCKMODE|R/W 読み取り/書き込み<br /><br /> 既定値 : DBPROPVAL_LM_NONE<br /><br /> 説明 : 行セットが実行するロックのレベル (DBPROPVAL_LM_NONE、DBPROPVAL_LM_SINGLEROW) です。<br /><br /> 注: 行セットがキーセット カーソルまたは動的サーバー カーソルを使用して開かれ、ロック モードが DBPROPVAL_LM_SINGLEROW に設定されている場合は、スナップショット分離トランザクションでは、使用している場合、エラーが発生、トランザクションからその行が更新されている場合は、行をフェッチするときに開始されました。 他の種類のカーソルや他の種類のロック モードでは、トランザクションの開始後に別のユーザーが行を更新していても、その行の更新を試みない限り、エラーは発生しません。 どちらの場合も、エラーはサーバーで発生します。|  
+|DBPROP_MAXOPENROWS|R/w 読み取り専用<br /><br /> 既定値: 0<br /><br /> 説明: SQL Server の OLE DB ドライバーでは行セットでアクティブにできる行の数は制限されません。|  
+|DBPROP_MAXPENDINGROWS|R/w 読み取り専用<br /><br /> 既定値: 0<br /><br /> 説明: SQL Server の OLE DB ドライバーでは行セット内で保留中の変更の数は制限されません。|  
+|DBPROP_MAXROWS|R/W 読み取り/書き込み<br /><br /> 既定値: 0<br /><br /> 説明: 既定では、SQL Server の OLE DB Driver は制限されません、行セット内の行の数。 コンシューマーが DBPROP_MAXROWS 設定、ときに SQL Server の OLE DB Driver は、行セット内の行の数を制限するのに SET ROWCOUNT ステートメントを使用します。<br /><br /> SET ROWCOUNT を使用すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ステートメントの実行が予期しない結果になる可能性があります。 詳細については、次を参照してください。 [SET ROWCOUNT](../../../t-sql/statements/set-rowcount-transact-sql.md)です。|  
+|DBPROP_MAYWRITECOLUMN|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
+|DBPROP_MEMORYUSAGE|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
+|DBPROP_NOTIFICATIONGRANULARITY|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
+|DBPROP_NOTIFICATIONPHASES|R/w 読み取り専用<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> 説明: SQL Server の OLE DB Driver は、すべての通知フェーズをサポートします。|  
+|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|R/w 読み取り専用<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> 説明: SQL Server の通知フェーズの OLE DB Driver は示されている行セットの変更を実行する前にキャンセル可能なです。 SQL Server の OLE DB Driver は、実行が完了した後、フェーズのキャンセルをサポートしません。|  
+|DBPROP_ORDEREDBOOKMARKS|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
+|DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: 設定の可視性プロパティを変更すると、使用する SQL Server の OLE DB Driver[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]行セットをサポートするカーソル。 詳細については、次を参照してください。[行セットと SQL Server カーソル](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)です。|  
+|DBPROP_QUICKRESTART|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: が VARIANT_TRUE に設定すると、SQL Server の OLE DB Driver しようと、行セットのサーバー カーソルを使用します。|  
+|DBPROP_REENTRANTEVENTS|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: 行セットの SQL Server の OLE DB Driver 再入可能なコンシューマーが通知コールバックにより入可能でない行セットのメソッドにアクセスしようとする場合、DB_E_NOTREENTRANT を返すことができます。|  
+|DBPROP_REMOVEDELETED|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: への変更の可視性に基づくプロパティの値を変更する、OLE DB Driver for SQL Server、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]行セットによって公開されるデータ。<br /><br /> VARIANT_TRUE: コンシューマーまたは他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ユーザーが削除した行は、行セットを最新状態に更新すると行セットから削除されます。 DBPROP_OTHERINSERT は VARIANT_TRUE です。<br /><br /> VARIANT_FALSE: コンシューマーまたは他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ユーザーが削除した行は、行セットを最新状態に更新しても行セットから削除されません。 削除された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 行の行セット内の状態値は DBROWSTATUS_E_DELETED です。 DBPROP_OTHERINSERT は VARIANT_TRUE です。<br /><br /> このプロパティに含まれる値は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソルがサポートする行セットに関する値のみです。 詳細については、次を参照してください。[行セットと SQL Server カーソル](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)です。<br /><br /> DBPROP_REMOVEDELETED プロパティがキーセット カーソルの行セットとして実装された場合、削除された行はフェッチ時に削除およびの可能性がメソッドの行をフェッチなど**GetNextRows**と**GetRowsAt、**S_OK および要求よりも少ない行の両方を返します。 この動作は、DB_S_ENDOFROWSET の状態を示すものではないこと、また、返される行数は、残りの行がある場合は決して 0 にならないことに注意してください。|  
+|DBPROP_REPORTMULTIPLECHANGES|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
+|DBPROP_RETURNPENDINGINSERTS|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: 行をフェッチするメソッドが呼び出されると、SQL Server の OLE DB Driver は返しません保留中の挿入行。|  
+|DBPROP_ROWRESTRICT|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: 行セットの SQL Server の OLE DB Driver は、行に基づくアクセス権をサポートしていません。 場合、 **IRowsetChange**インターフェイスが、行セットで公開されている、 **SetData**コンシューマーでメソッドを呼び出すことができます。|  
+|DBPROP_ROWSET_ASYNCH|R/W 読み取り/書き込み<br /><br /> 既定値: 0<br /><br /> 説明 : 行セットの非同期処理を提供します。 このプロパティは、Rowset プロパティ グループおよび DBPROPSET_ROWSET プロパティ セットに含まれています。 型は VT_14 です。<br /><br /> SQL Server は、OLE DB ドライバーでサポートされるビットマスク内の値のみ**DBPROPVAL_ASYNCH_INITIALIZE**です。|  
+|DBPROP_ROWTHREADMODEL|R/w 読み取り専用<br /><br /> 既定値 : DBPROPVAL_RT_FREETHREAD <br /><br /> 説明: OLE DB Driver for SQL Server をサポートします。 アクセスのオブジェクトを 1 つのコンシューマーの複数の実行スレッドです。|  
+|DBPROP_SERVERCURSOR|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : このプロパティを設定すると、行セットのサポートに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソルが使われます。 詳細については、次を参照してください。[行セットと SQL Server カーソル](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)です。|  
+|DBPROP_SERVERDATAONINSERT|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : 挿入時にサーバー データを使用するかどうか。<br /><br /> VARIANT_TRUE: 挿入要求がサーバーに転送される時点で、プロバイダーがデータをサーバーから取得して、ローカルの行キャッシュを更新します。<br /><br /> VARIANT_FALSE: プロバイダーは新しく行を挿入するためにサーバーの値を取得しません。|  
+|DBPROP_STRONGIDENTITY|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明 : 厳密な行 ID を使用するかどうか。 挿入が行セットで許可されている場合 (か**IRowsetChange**または**IRowsetUpdate**が true)、DBPROP_UPDATABILITY が InsertRows をサポートするために設定されていると、DBPROP_STRONGIDENTITY の値は、dbprop _ によって異なります。CHANGEINSERTEDROWS プロパティが (VARIANT_FALSE になります DBPROP_CHANGEINSERTEDROWS プロパティの値が VARIANT_FALSE の場合)。|  
+|DBPROP_TRANSACTEDOBJECT|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: SQL Server の OLE DB Driver は、トランザクション処理されたオブジェクトのみをサポートします。 詳細については、次を参照してください。[トランザクション](../../oledb/ole-db-transactions/transactions.md)です。|  
+|DBPROP_UNIQUEROWS|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : 行を一意にするかどうか。<br /><br /> VARIANT_TRUE: 各行は、行の列の値で一意に識別されます。 行を一意に識別する列のセット dbcolumnflags_keycolumn に設定から返される DBCOLUMNINFO 構造体、 **GetColumnInfo**メソッドです。<br /><br /> VARIANT_FALSE: 行は、各行の列の値で一意に識別されない場合もあります。 またキー列は、DBCOLUMNFLAGS_KEYCOLUMN によって示されない場合があります。|  
+|DBPROP_UPDATABILITY|R/W 読み取り/書き込み<br /><br /> 既定値: 0<br /><br /> 説明: SQL Server の OLE DB Driver は、すべての DBPROP_UPDATABILITY 値をサポートします。 DBPROP_UPDATABILITY を設定しても、更新可能な行セットが作成されるわけではありません。 行セットを更新可能にするには、DBPROP_IRowsetChange または DBPROP_IRowsetUpdate を設定してください。|  
+  
+ SQL Server の OLE DB Driver は、次の表に示すように、プロバイダー固有のプロパティ セット DBPROPSET_SQLSERVERROWSET を定義します。  
+  
+|プロパティ ID|Description|  
+|-----------------|-----------------|  
+|SSPROP_COLUMN_ID|列 : ColumnID <br /><br /> R/w 読み取り専用<br /><br /> 型: VT_U12 &#124; VT_ARRAY<br /><br /> 既定値 : VT_EMPTY<br /><br /> 説明 :  現在の [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT ステートメント内にある COMPUTE 句の結果列の序数位置 (1 から始まります) を表す整数値の配列。 これは、ODBC SQL_CA_SS_COLUMN_ID 属性の該当するショートカットは SQL Server の OLE DB ドライバーです。|  
+|SSPROP_DEFERPREPARE|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: VARIANT_TRUE: 準備実行でコマンドの準備がまで延期**icommand::execute**が呼び出されたまたはメタプロパティ操作が実行されます。 プロパティが次の値に設定されている場合は、ステートメントの準備が行われます。<br /><br /> VARIANT_FALSE: ステートメントが準備**icommandprepare::prepare**を実行します。|  
+|SSPROP_IRowsetFastLoad|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: このプロパティを VARIANT_TRUE に設定を高速読み込み行セットを開く**iopenrowset::openrowset**です。 このプロパティを設定することはできません**icommandproperties::setproperties**です。|  
+|SSPROP_ISSAsynchStatus|列: いいえ。<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: このプロパティを VARIANT_TRUE に設定を使用して非同期操作を有効にする、 [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)インターフェイスです。|  
+|SSPROP_MAXBLOBLENGTH|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_I4<br /><br /> 既定値 : プロバイダーは、サーバーから返されるテキストのサイズを制限しません。このプロパティの値は、サーバーの最大値に設定されます。 たとえば、2147483647 に設定されます。<br /><br /> 説明: SQL Server の OLE DB Driver は、SELECT ステートメントで返されるバイナリ ラージ オブジェクト (BLOB) データの長さを制限する SET TEXTSIZE ステートメントを実行します。|  
+|SSPROP_NOCOUNT_STATUS|列 : NoCount <br /><br /> R/w 読み取り専用<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の SET NOCOUNT ON/OFF の状態を表すブール値です。<br /><br /> VARIANT_TRUE: SET NOCOUNT ON の場合<br /><br /> VARIANT_FALSE: SET NOCOUNT OFF の場合|  
+|SSPROP_QP_NOTIFICATION_MSGTEXT|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BSTR (許可される文字数 : 1 ～ 2,000 文字)<br /><br /> 既定値 : 空文字列<br /><br /> 説明 : クエリ通知のメッセージ テキストです。 これはユーザーが定義するので、定義済みの書式はありません。|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BSTR<br /><br /> 既定値 : 空文字列<br /><br /> 説明 : クエリ通知オプションです。 これらは `name=value` 形式の文字列で指定されます。 ユーザーがサービスを作成して、キューから通知を読み取る必要があります。 クエリ通知オプションの文字列の構文です。<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> 以下に例を示します。<br /><br /> `service=mySSBService;local database=mydb`|  
+|SSPROP_QP_NOTIFICATION_TIMEOUT|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_UI4 <br /><br /> 既定値 : 432,000 秒 (5 日)<br /><br /> 最小値 : 1 秒<br /><br /> 最大値 : 2^31-1 秒<br /><br /> 説明 : クエリ通知をアクティブのままにしておく秒数です。|  
+  
+## <a name="see-also"></a>参照  
+ [行セット](../../oledb/ole-db-rowsets/rowsets.md)  
+  
+  

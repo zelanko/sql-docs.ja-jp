@@ -1,35 +1,35 @@
 ---
-title: "SQL Server 2016 リリース ノート | Microsoft Docs"
-ms.date: 02/27/2018
+title: SQL Server 2016 リリース ノート | Microsoft Docs
+ms.date: 03/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - server-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - build notes
 - release issues
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6485ef83b940ab9d04b9406e461517d5254aec7f
-ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
+ms.openlocfilehash: 1a6d422098fdacb3a7bc6392b99fe63bb25c2c36
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-ここでは、SQL Server 2016 リリースでの制限事項と問題について説明します。 新機能については、「 [SQL Server 2016 の新機能](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016)」をご覧ください。
+  ここでは、SQL Server 2016 リリースでの制限事項と問題について説明します。Service Pack についても説明します。 新機能については、「 [SQL Server 2016 の新機能](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016)」をご覧ください。
 
 > [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** から SQL Server 2016 をダウンロードする
 >
@@ -37,12 +37,51 @@ ms.lasthandoff: 02/28/2018
 >
 > [![SSMS をダウンロードする](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) 最新版の SQL Server Management Studio を入手するには、「**[SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)**」をご覧ください。
 
-## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1) を使用できる
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 では、SQL Server 2016 のすべてのエディションとサービス レベルを SQL Server 2016 SP1 にアップグレードします。 この記事に記載されている修正プログラムに加えて、SQL Server 2016 SP1 には、SQL Server 2016 Cumulative Update 1 (CU1) から SQL Server 2016 CU3 に含まれていた修正プログラムが含まれています。
+## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 には、SQL Server 2016 RTM CU3 までのすべての修正が含まれ、セキュリティ更新プログラム MS16-136 も含まれます。 2016 年 11 月 8 日にリリースされた最新の累積的な更新プログラム CU3 とセキュリティ更新プログラム MS16-136 までを含む、SQL Server 2016 の累積的な更新プログラムで提供された解決策のロールアップが含まれています。 
 
-- [SQL Server 2016 SP1 ダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=54276)
-- [SQL Server 2016 Service Pack 1 リリース情報](https://support.microsoft.com/kb/3182545) SP1 で修正または変更されたバグ番号と問題を一覧します。
- - ![info_tip](../sql-server/media/info-tip.png) のサービス パックを含む、サポートされるすべてのバージョンのリンクと情報については、「[SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx)」を参照してください。 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
+次の機能は、SQL Server SP1 の Standard、Web、Express、および Local DB エディションで使用できます (注記されている例外を除きます)。
+- Always Encrypted
+- 変更データ キャプチャ (Express では使用できません)
+- 列ストア
+- 圧縮
+- 動的なデータ マスキング
+- 詳細な監査
+- インメモリ OLTP (Local DB では使用できません)
+- 複数の filestream コンテナー (Local DB では使用できません)
+- [パーティション分割]
+- PolyBase
+- 行レベルのセキュリティ
+
+次の表は、SQL Server 2016 SP1 で提供される主要な機能強化をまとめたものです。
+
+|機能|Description|詳細情報|
+|---|---|---|
+|TF 715 での自動 TABLOCK によるヒープへの一括挿入| トレース フラグ 715 は、非クラスター化インデックスのないヒープへの一括読み込み操作用に、テーブル ロックを有効にします。|[SAP ワークロードを SQL Server に 2.5 倍の速さで移行する](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
+|CREATE または ALTER|ストアド プロシージャ、トリガー、ユーザー定義関数、ビューなどのオブジェクトを展開します。|[SQL Server データベース エンジンのブログ](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
+|DROP TABLE によるレプリケーションのサポート|レプリケーションに対する DROP TABLE DDL のサポートにより、レプリケーション アーティクルを削除できます。|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
+|Filestream RsFx ドライバーの署名|Windows ハードウェア デベロッパー センター ダッシュボード ポータル (開発ポータル) を使って Filestream RsFx ドライバーに署名して認定することで、SQL Server 2016 SP1 Filestream RsFx ドライバーを Windows Server 2016/Windows 10 に問題なくインストールできます。|[SAP ワークロードを SQL Server に 2.5 倍の速さで移行する](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
+|SQL サービス アカウントに対する LPIM - プログラムでの識別|DBA は、サービスの開始時に Lock Pages in Memory (LPIM) 特権が有効になっているかどうかをプログラムで識別できます。|[開発者の選択: SQL Server の LPIM および IFI 特権をプログラムで識別する](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
+|変更の追跡の手動クリーンアップ|新しいストアド プロシージャは、必要に応じて変更の追跡の内部テーブルをクリーンアップします。| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
+|ローカル一時テーブルの並列 INSERT..SELECT の変更|INSERT..SELECT 操作での新しい並列 INSERT。|[SQL Server Customer Advisory Team](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)|
+|Showplan XML|クエリに対する許可の警告と最大メモリの有効化、トレース フラグの有効化、他の診断情報の表示など、診断機能の強化。 | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
+|ストレージ クラス メモリ|Windows Server 2016 でストレージ クラス メモリを使ってトランザクション処理を支援することで、トランザクションのコミット時間が桁違いに高速化します。|[SQL Server データベース エンジンのブログ](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
+|USE HINT|クエリ オプションを `OPTION(USE HINT('<option>'))` を使って、サポートされているクエリ レベルのヒントを使うクエリ オプティマイザーの動作を変更します。 QUERYTRACEON とは異なり、USE HINT オプションでは sysadmin 特権は必要ありません。|[開発者の選択: USE HINT クエリ ヒント](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
+|XEvent の追加|新しい Xevent および Perfmon 診断機能により、待機時間のトラブルシューティングが向上します。|[拡張イベント](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
+
+さらに、次の修正に注意してください。
+- DBA と SQL コミュニティからのフィードバックに基づき、SQL 2016 SP1 以降では Hekaton のログ メッセージが最小限に減ります。
+- 新しい[トレース フラグ](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)を確認してください。
+- SQL Server 2016 SP1 以降では、WideWorldImporters サンプル データベースの完全バージョンが Standard Edition と Express Edition で動作するようになります。このサンプルは、[Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) から入手できます。 サンプルを変更する必要はありません。 Enterprise Edition 用に RTM で作成されたデータベース バックアップが、SP1 の Standard と Express で動作します。 
+
+SQL Server 2016 SP1 のインストールでは、インストール後に再起動が必要な場合があります。 ベスト プラクティスとして、SQL Server 2016 SP1 インストール後の再起動を計画して実行することをお勧めします。
+
+### <a name="download-pages-and-more-information"></a>ダウンロード ページと詳細情報
+
+- [Microsoft SQL Server 2016 用 Service Pack 1 のダウンロード](https://www.microsoft.com/download/details.aspx?id=54276)
+- [リリース済み SQL Server 2016 Service Pack 1 (SP1)](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)
+- [SQL Server 2016 Service Pack 1 リリース情報](https://support.microsoft.com/kb/3182545)
+- ![info_tip](../sql-server/media/info-tip.png) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] のサービス パックを含む、サポートされているすべてのバージョンのリンクと情報がまとめられている [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) 
 
 ##  <a name="bkmk_2016_ga"></a>SQL Server 2016 Release - 一般公開 (GA)
 -   [データベース エンジン (GA)](#bkmk_ga_instalpatch) 

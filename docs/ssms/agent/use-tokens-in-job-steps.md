@@ -1,16 +1,16 @@
 ---
-title: "ジョブ ステップでのトークンの使用 | Microsoft Docs"
-ms.custom: 
+title: ジョブ ステップでのトークンの使用 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -19,20 +19,24 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dd6a236b2ead2c5891d1794a7b20ea7a72c4a4de
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 17ab22d0b8904dab6efce43fd4778bfbd5962f1e
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="use-tokens-in-job-steps"></a>ジョブ ステップでのトークンの使用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを使用すると、[!INCLUDE[tsql](../../includes/tsql_md.md)] ジョブ ステップ スクリプトでトークンを使用できます。 ジョブ ステップを記述するときにトークンを使用すると、ソフトウェア プログラムを記述するときの変数と同じような柔軟性が得られます。 ジョブ ステップ スクリプトにトークンを挿入した後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] サブシステムでジョブ ステップが実行される前に、 [!INCLUDE[tsql](../../includes/tsql_md.md)] エージェントにより実行時にトークンが置き換えられます。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> [Azure SQL Database マネージ インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database マネージ インスタンスと SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを使用すると、 [!INCLUDE[tsql](../../includes/tsql_md.md)] ジョブ ステップ スクリプトでトークンを使用できます。 ジョブ ステップを記述するときにトークンを使用すると、ソフトウェア プログラムを記述するときの変数と同じような柔軟性が得られます。 ジョブ ステップ スクリプトにトークンを挿入した後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] サブシステムでジョブ ステップが実行される前に、 [!INCLUDE[tsql](../../includes/tsql_md.md)] エージェントにより実行時にトークンが置き換えられます。  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 1 以降では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのジョブ ステップ トークンの構文が変更されています。 その結果、エスケープ マクロには、ジョブ ステップで使用するすべてのトークンを含める必要があります。すべてのトークンが含まれていないと、ジョブ ステップは失敗します。 エスケープ マクロの使用およびトークンを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのジョブ ステップの更新については、「トークンの使用について」、「[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのトークンとマクロ」、および「マクロを使用するジョブ ステップの更新」を参照してください。 さらに、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] エージェントのジョブ ステップ トークンの呼び出しに角かっこを使用していた [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の構文 (たとえば、"`[DATE]`") も変更されました。 つまり、トークン名はかっこで囲み、トークン構文の先頭にはドル記号 (`$`) を付けることが必要になりました。 例 :  
@@ -44,9 +48,9 @@ ms.lasthandoff: 02/23/2018
 > [!IMPORTANT]  
 > Windows イベント ログに対して書き込みのアクセス許可を持っている Windows ユーザーであればだれでも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの警告または WMI 警告によってアクティブ化されるジョブ ステップにアクセスできます。 このセキュリティ上のリスクを避けるために、警告によってアクティブになるジョブで使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント トークンは、既定で無効になっています。 このようなトークンには、**A-DBN**、**A-SVR**、**A-ERR**、**A-SEV**、**A-MSG**、**WMI(***property***)** があります。 このリリースでは、トークンの使用はすべての警告に拡張されていることに注意してください。  
 >   
-> これらのトークンを使用する必要がある場合は、まず、Administrators グループなどの信頼されている Windows セキュリティ グループのメンバーのみが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] が存在するコンピューターのイベント ログに対して書き込みのアクセス許可を持っていることを確認してください。 確認したら、[オブジェクト エクスプローラー] で **[SQL Server エージェント]** を右クリックし、**[プロパティ]** をクリックします。次に、**[警告システム]** ページで、**[警告に応答するすべてのジョブのトークンを置き換える]** チェック ボックスをオンにして、これらのトークンを有効にします。  
+> これらのトークンを使用する必要がある場合は、まず、Administrators グループなどの信頼されている Windows セキュリティ グループのメンバーのみが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] が存在するコンピューターのイベント ログに対して書き込みのアクセス許可を持っていることを確認してください。 確認したら、[オブジェクト エクスプローラー] で **[SQL Server エージェント]** を右クリックし、 **[プロパティ]**をクリックします。次に、 **[警告システム]** ページで、 **[警告に応答するすべてのジョブのトークンを置き換える]** チェック ボックスをオンにして、これらのトークンを有効にします。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのトークンの置換は簡単で効率的です。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントにより、トークンのリテラル文字列値にそのまま置き換えられます。 すべてのトークンには大文字と小文字の区別があります。 ジョブ ステップでは、この点を考慮し、使用するトークンを正しく引用したり、置換後の文字列を正しいデータ型に変換したりする必要があります。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのトークンの置換は簡単で効率的です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントにより、トークンのリテラル文字列値にそのまま置き換えられます。 すべてのトークンには大文字と小文字の区別があります。 ジョブ ステップでは、この点を考慮し、使用するトークンを正しく引用したり、置換後の文字列を正しいデータ型に変換したりする必要があります。  
   
 たとえば、ジョブ ステップでデータベースの名前を表示するときに、次のステートメントを使用する場合があります。  
   

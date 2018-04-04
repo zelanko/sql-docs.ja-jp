@@ -1,27 +1,27 @@
 ---
-title: "JSON ドキュメントの SQL Server へのインポート | Microsoft Docs"
-ms.custom: 
+title: JSON ドキュメントの SQL Server へのインポート | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.component: json
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
-caps.latest.revision: 
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e88356f3f8de8ba463b945c5806ea3cbed14bf2c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e16ca364f3e9ed5c65b89a1abdd554991558862e
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="import-json-documents-into-sql-server"></a>JSON ドキュメントの SQL Server へのインポート
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -144,10 +144,10 @@ SELECT value
 OPENROWSET は 1 つのテキスト値をファイルから読み取り、BulkColumn として返し、OPENJSON 関数に渡します。 OPENJSON は BulkColumn 配列内の JSON オブジェクトの配列を反復処理し、各行で JSON 形式の 1 冊の書籍を返します。
 
 ```json
-{"id":"978-0641723445″, "cat":["book","hardcover"], "name":"The Lightning Thief", … 
-{"id":"978-1423103349″, "cat":["book","paperback"], "name":"The Sea of Monsters", … 
-{"id":"978-1857995879″, "cat":["book","paperback"], "name":"Sophie’s World : The Greek … 
-{"id":"978-1933988177″, "cat":["book","paperback"], "name":"Lucene in Action, Second … 
+{"id":"978-0641723445", "cat":["book","hardcover"], "name":"The Lightning Thief", … }
+{"id":"978-1423103349", "cat":["book","paperback"], "name":"The Sea of Monsters", … }
+{"id":"978-1857995879", "cat":["book","paperback"], "name":"Sophie’s World : The Greek", … } 
+{"id":"978-1933988177", "cat":["book","paperback"], "name":"Lucene in Action, Second", … }
 ```
 
 ### <a name="example-3"></a>例 3

@@ -1,32 +1,34 @@
 ---
-title: "sqlsrv_configure |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/19/2017
+title: sqlsrv_configure |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_configure
+apiname:
+- sqlsrv_configure
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_configure
 - API Reference, sqlsrv_configure
 ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 68ed443c80b2eff8405bb5419da132edf49a6807
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: ea82fe41ac7a95fbdf1907709a34ad57f8a82495
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvconfigure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,13 +58,14 @@ sqlsrv_configure( string $setting, mixed $value )
 サポートされていない設定または値を使用して **sqlsrv_configure** 関数を呼び出すと、この関数は **false**を返します。 それ以外の場合は、 **true**を返します。  
   
 ## <a name="remarks"></a>解説  
-(1) のクライアント側クエリの詳細については、次を参照してください。[カーソルの種類 &#40;です。SQLSRV ドライバー &#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
+(1) のクライアント側クエリの詳細については、次を参照してください。[カーソルの種類&#40;SQLSRV ドライバー&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)です。  
   
 (2) のログ記録アクティビティの詳細については、次を参照してください。 [Logging Activity](../../connect/php/logging-activity.md)です。  
   
 (3) のエラーおよび警告の処理の構成に関する詳細については、次を参照してください。[する方法: エラーおよび警告の処理、SQLSRV ドライバーを使用して構成する](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)です。  
   
 ## <a name="see-also"></a>参照  
-[SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
-[プログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md) 
+[SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[For PHP for SQL Server の Microsoft drivers ガイドのプログラミング](../../connect/php/programming-guide-for-php-sql-driver.md) 
   

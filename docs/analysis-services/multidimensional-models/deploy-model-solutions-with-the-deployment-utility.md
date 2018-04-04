@@ -1,15 +1,15 @@
 ---
-title: "配置ユーティリティを使用したモデル ソリューションの展開 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
+title: 配置ユーティリティを使用したモデル ソリューションの展開 |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 03/27/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deploying [Analysis Services], command prompt
@@ -17,21 +17,25 @@ helpviewer_keywords:
 - Microsoft.AnalysisServices.Deployment utility
 - Analysis Services deployments, command prompt
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1e094ee032e236d39003fe6e2f572edfea6241a5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 38e91da35dc590b3acbe0f49517e3fad891510fc
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>配置ユーティリティを使用したモデル ソリューションの配置
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-**Microsoft.AnalysisServices.Deployment** ユーティリティを使用すると、コマンド プロンプトから [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Engine を起動することができます。 入力ファイルとして、このユーティリティは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]プロジェクトを構築することによって生成される XML 出力ファイルを使用します。 この入力ファイルを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの配置をカスタマイズするための変更を容易に行うことができます。 生成された配置スクリプトは直ちに実行することも、今後の配置のために保存することもできます。  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  **Microsoft.AnalysisServices.Deployment** ユーティリティを使用すると、コマンド プロンプトから [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Engine を起動することができます。 入力ファイルとして、このユーティリティは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]プロジェクトを構築することによって生成される XML 出力ファイルを使用します。 この入力ファイルを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの配置をカスタマイズするための変更を容易に行うことができます。 生成された配置スクリプトは直ちに実行することも、今後の配置のために保存することもできます。  
   
+> [!NOTE]
+> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を配置ウィザード/ユーティリティがインストールされている[SQL Server Managment Studio](../../ssms/download-sql-server-management-studio-ssms.md) (SSMS)。 最新バージョンを使用していることを確認します。 既定では、C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio を配置ウィザードの最新バージョンがインストールされています。 
+
 ## <a name="syntax"></a>構文  
   
 ```  
@@ -70,7 +74,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 ## <a name="remarks"></a>解説  
  **Microsoft.AnalysisServices.Deployment** ユーティリティは、オブジェクト定義、配置ターゲット、配置オプション、および構成設定を提供する一連のファイルを利用し、指定された配置オプションと構成設定を使用して、指定された配置ターゲットへのオブジェクト定義の配置を試みます。 このユーティリティは、アンサー ファイルまたは出力モードで呼び出された場合にはユーザー インターフェイスを提供することができます。 このユーティリティで提供されたユーザー インターフェイスを使用してアンサー ファイルを作成する方法の詳細については、「 [配置ウィザードを使用したモデル ソリューションの配置](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)」をご覧ください。  
   
- このユーティリティは、\Program files (x86)\Microsoft SQL Server\110\Binn\ManagementStudio フォルダーにあります。  
+ このユーティリティは、\Program files (x86) \Microsoft SQL Server\140\Binn\ManagementStudio フォルダーにあります。  
   
 ##  <a name="Modes"></a> モード  
  次の表は、このユーティリティを実行できるモードを示しています。  

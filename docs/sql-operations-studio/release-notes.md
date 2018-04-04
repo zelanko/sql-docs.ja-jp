@@ -1,28 +1,45 @@
 ---
-title: "Microsoft SQL 操作 Studio (プレビュー) のリリース ノート |Microsoft ドキュメント"
-description: "Microsoft SQL 操作 Studio (プレビュー) のリリース ノート"
+title: Microsoft SQL 操作 Studio (プレビュー) のリリース ノート |Microsoft ドキュメント
+description: Microsoft SQL 操作 Studio (プレビュー) のリリース ノート
 ms.custom: tools|sos
-ms.date: 02/15/2018
+ms.date: 03/28/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b8c5e3cce8f84f0565c764a47d3f3b7c1709454
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: ba86403e791af25de4f7bcd8b1cbd7b5f188897b
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL 操作 Studio (プレビュー) のリリース ノート
 
-**[2 月のパブリック プレビューをダウンロードします。](download.md)**
+**[年 3 月のパブリック プレビューをダウンロードします。](download.md)**
+
+## <a name="march-2018-march-public-preview"></a>年 3 月 2018 (パブリック プレビューの年 3 月)
+
+リリース日: 2018 年 3 月 28日  
+バージョン: 0.27.3
+
+*年 3 月のパブリック プレビュー*最上位の GitHub の問題に対処が続けられは、機能拡張ストーリーを向上させることに重点を置きます。 具体的には拡張機能マネージャーを有効にすると、ダッシュ ボードの管理の向上および SQL エージェントと insights 拡張機能を提供することです。 このリリースには、次の機能強化が含まれています。
+
+- タブ付き insights と構成ウィンドウをサポートするために、ダッシュ ボードの機能拡張モデルを拡張します。
+   - 拡張機能マネージャーでは、拡張機能の簡単な取得できるようにします。
+   - ダッシュ ボードから sp_whoisactive 拡張[whoisactive.com](http://www.whoisactive.com)です。
+   - 詳細については、「 [SQL 操作 Studio の機能拡張](extensions.md)です。
+- さらに追加[接続およびオブジェクト エクスプ ローラーの機能拡張 Api](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API)管理します。
+- 解決に影響する重要な顧客を継続[GitHub の問題](https://github.com/Microsoft/sqlopsstudio/issues)です。
+
+詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)です。
+
 
 ## <a name="february-2018-february-public-preview"></a>2 月 2018 (パブリック プレビューの年 2 月)
 
@@ -63,8 +80,6 @@ ms.lasthandoff: 02/19/2018
 - ドラッグ アンド ドロップの重大なバグのスクリプトを修正します。
 - 不適切な修正プログラムは、[スタート] メニューのアイコンをピン留めします。
 - 不足している Azure アカウントがアイコンをブランド化を修正します。
-
-詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)です。
 
 
 ## <a name="december-2017-december-public-preview"></a>2017 年 12 月 (パブリック プレビューの年 12 月)

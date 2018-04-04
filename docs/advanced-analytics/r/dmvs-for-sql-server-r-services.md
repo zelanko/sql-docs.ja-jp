@@ -1,31 +1,31 @@
 ---
-title: "SQL Server の Machine Learning のサービスの Dmv |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server の Machine Learning のサービスの Dmv |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b3643ea0-d9f3-463f-8ece-572127f32a24
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d3c90457c7d55071520546e6362a451427503a52
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2e51f5229eb085eb4b92a4f6f53cc7b28ebb7485
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dmvs-for-sql-server-machine-learning-services"></a>SQL Server の Machine Learning のサービスの Dmv
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-トピックには、システム カタログ ビューおよび SQL Server での機械学習に関連する Dmv が一覧表示します。
+アーティクルには、システム カタログ ビューおよび SQL Server での機械学習に関連する Dmv が一覧表示します。
 
 拡張イベントについては、次を参照してください。[機械学習の拡張イベント](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)です。
 
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/11/2018
   この DMV によって、インスタンスごとの外部スクリプトの次のカウンターが報告されます。
 
   + **実行の合計**: ローカルまたはリモートの呼び出しによって開始された外部プロセスの数
-  + **並列実行**: スクリプトが含まれている回数、  _@parallel_ 仕様と[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]生成して、並列クエリ プランを使用することが
+  + **並列実行**: スクリプトが含まれている回数、 _@parallel_仕様と[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]生成して、並列クエリ プランを使用することが
   + **実行のストリーミング**: ストリーミング機能が呼び出された回数
   + **CC の SQL 実行**: 外部のスクリプトを実行、呼び出しがリモートでインスタンス化され、計算コンテキストとして使用された SQL Server
   + **Implied Auth.ログイン**: を使用して ODBC ループバック呼び出しが行われた回数を超える暗黙の認証ですつまり、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]スクリプト要求を送信するユーザーに代わって呼び出すを実行。

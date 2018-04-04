@@ -1,4 +1,4 @@
-# [概要](multidimensional-models-ssas.md)
+# [多次元モデル](multidimensional-models-ssas.md)
  
 # [多次元ソリューションの比較](multidimensional-model-solutions-ssas.md)  
 ## [SQL Server データ ツール (SSDT) を使用した多次元モデルの作成](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  

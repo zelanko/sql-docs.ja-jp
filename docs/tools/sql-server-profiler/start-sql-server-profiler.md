@@ -1,15 +1,16 @@
 ﻿---
-title: "SQL Server Profiler の実行 |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server Profiler の実行 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 7/7/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], starting
@@ -19,7 +20,7 @@ helpviewer_keywords:
 - SQL Server Profiler, running
 - running SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg

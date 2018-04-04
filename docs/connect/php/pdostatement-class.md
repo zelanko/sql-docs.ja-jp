@@ -1,27 +1,28 @@
 ---
-title: "PDOStatement クラス |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/19/2017
+title: PDOStatement クラス |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ef2db0b3-b10e-4898-8bfc-d5e4baca18ef
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5250ca91c0a4a90d22742c078cc027d48fea3195
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: c978f6d7342cfc15a36232abf4753022312d2227
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdostatement-class"></a>PDOStatement クラス
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +32,6 @@ PDOStatement クラスは、ステートメントとステートメントの結�
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 PDOStatement {}  
 ```  
   
@@ -79,10 +79,15 @@ PDOStatement クラスには、次のメソッドが含まれています。
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
 ## <a name="see-also"></a>参照  
-[PDO_SQLSRV ドライバー リファレンス](../../connect/php/pdo-sqlsrv-driver-reference.md)  
-[PHP SQL ドライバーの概要](../../connect/php/overview-of-the-php-sql-driver.md)
-[定数 &#40;です。Microsoft Drivers for PHP for SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[プログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
-[作業の開始](../../connect/php/getting-started-with-the-php-sql-driver.md)
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO_SQLSRV ドライバー リファレンス](../../connect/php/pdo-sqlsrv-driver-reference.md) 
+
+[Microsoft Drivers for PHP for SQL Server の概要](../../connect/php/overview-of-the-php-sql-driver.md)
+
+[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[For PHP for SQL Server の Microsoft drivers ガイドのプログラミング](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[入門 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

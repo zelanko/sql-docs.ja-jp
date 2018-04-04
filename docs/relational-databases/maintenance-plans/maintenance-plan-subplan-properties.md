@@ -1,22 +1,22 @@
 ---
-title: "「メンテナンス プラン」\\ (サブプランのプロパティ) | Microsoft Docs"
-ms.custom: 
+title: 「メンテナンス プラン」\ (サブプランのプロパティ) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.maint.maintplanproperties.general.f1
 - sql13.swb.maint.subplanproperties.f1
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -27,8 +27,8 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/18/2018
 ---
-# <a name="maintenance-plan-subplan-properties"></a>[メンテナンス プラン] ([サブプランのプロパティ])
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[メンテナンス プラン] ([サブプランのプロパティ])** ダイアログ ボックスでは、メンテナンス プランのサブプランの名前、説明、およびスケジュールを指定します。 このダイアログ ボックスを表示するには、メンテナンス プランの **[デザイン]** タブで **[サブプランのプロパティ]** をクリックするか、デザイナー グリッドでサブプランをダブルクリックします。  
+# <a name="maintenance-plan-subplan-properties"></a>[メンテナンス プラン] \([サブプランのプロパティ])
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[メンテナンス プラン] \([サブプランのプロパティ])** ダイアログ ボックスでは、メンテナンス プランのサブプランの名前、説明、およびスケジュールを指定します。 このダイアログ ボックスを表示するには、メンテナンス プランの **[デザイン]** タブで **[サブプランのプロパティ]** をクリックするか、デザイナー グリッドでサブプランをダブルクリックします。  
   
 ## <a name="options"></a>および  
  **名前**  

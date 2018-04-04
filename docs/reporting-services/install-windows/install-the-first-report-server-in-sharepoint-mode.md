@@ -1,25 +1,25 @@
 ---
-title: "SharePoint モードでの最初のレポート サーバーのインストール | Microsoft Docs"
-ms.custom: 
+title: SharePoint モードでの最初のレポート サーバーのインストール | Microsoft Docs
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b266fbdf4801a4b2433590cc3ee2403250702666
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 796eed171b40234af4ab00877a5e73121b49368e
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint モードでの最初のレポート サーバーのインストール
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/09/2018
   
  **Reporting Services サービス アプリケーションの作成**  
   
--   Reporting Services サービスをインストールして登録した後、1 つ以上の Reporting Services サービス アプリケーションを作成します。 Reporting Services サービス アプリケーションを作成できるように、"SharePoint ファーム サービス アカウント" を一時的にローカルの Administrators グループのメンバーにする必要があります。 SharePoint 2013 のアカウント権限の詳細については、「 [SharePoint 2013 のアカウントのアクセス許可とセキュリティ設定](http://technet.microsoft.com/library/cc678863.aspx) 」(http://technet.microsoft.com/library/cc678863.aspx) をご覧ください。または、SharePoint 2016 の場合は、「 [SharePoint Server 2016 のアカウントのアクセス許可とセキュリティ設定](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx)」をご覧ください。  
+-   Reporting Services サービスをインストールして登録した後、1 つ以上の Reporting Services サービス アプリケーションを作成します。 Reporting Services サービス アプリケーションを作成できるように、"SharePoint ファーム サービス アカウント" を一時的にローカルの Administrators グループのメンバーにする必要があります。 SharePoint 2013 のアカウントのアクセス許可については、「[SharePoint 2013 のアカウントのアクセス許可とセキュリティ設定](http://technet.microsoft.com/library/cc678863.aspx)」 (http://technet.microsoft.com/library/cc678863.aspx)) を参照してください。SharePoint 2016 の場合は、「[SharePoint Server 2016 のアカウントのアクセス許可とセキュリティ設定](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx)」を参照してください。  
   
      セキュリティ上、SharePoint ファーム管理者アカウントがローカル オペレーティング システムの管理者アカウントを兼ねないことをお勧めします。 インストール プロセスの一環としてファーム管理者アカウントをローカルの Administrators グループに追加する場合は、インストールの完了後にローカルの Administrators グループからそのアカウントを削除することをお勧めします。  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/09/2018
  > SharePoint 2016 の場合、Reporting Services のインストール先の SharePoint サーバーは、**ユーザー定義**のサーバー ロールを持っている必要があります。 Reporting Services の展開は、**ユーザー定義**のロールでない SharePoint サーバーでも成功します。しかし、次回の SharePoint メンテナンス期間に、MinRole は、SharePoint 統合モードの Reporting Services が他のどの SharePoint サーバー ロールもサポートしていないことを検出するため、Reporting Services サービスを停止します。 Reporting Services サービス アプリケーションは、**ユーザー定義**のロールのみをサポートします。
  
  > [!NOTE]
- > Power Pivot サービスも SharePoint 2016 上にインストールする予定の場合は、Reporting Services をインストールする前にインストールしてください。 Power Pivot サービスは、 **ユーザー定義** のロールの SharePoint サーバーにはインストールできません。 これにより、ロールを何回も切り替えずに済みます。
+ > Power Pivot サービスも SharePoint 2016 上にインストールする予定の場合は、Reporting Services をインストールする前にインストールしてください。 Power Pivot サービスは、**カスタム** ロールの SharePoint サーバーにのみインストールできます。
  
  ### <a name="apply-the-custom-server-role-to-a-sharepoint-2016-server"></a>ユーザー定義のサーバー ロールを SharePoint 2016 サーバーに適用する
  

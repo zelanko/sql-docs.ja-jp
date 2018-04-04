@@ -1,27 +1,28 @@
 ---
-title: "Pdo::query |Microsoft ドキュメント"
-ms.custom: 
+title: PDO::query | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 42c24102f31df86ebf76d855d80487f5bba15e82
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b0ca9c3ffb50dc24d70f4db143d665a20794f65d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,16 +48,16 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 PDOException。  
   
 ## <a name="remarks"></a>解説  
-Pdo::query で実行されるクエリが準備されたいずれかのステートメントを実行できるまたは pdo::sqlsrv_attr_direct_query; の設定に応じて、直接参照してください[直接ステートメント実行と準備されたステートメントの実行、PDO_SQLSRV ドライバー](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)詳細についてはします。  
+Pdo::query で実行されるクエリが準備されたいずれかのステートメントを実行できる pdo::sqlsrv_attr_direct_query の設定に応じて、直接またはします。 詳細については、「 [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)」 (PDO_SQLSRV ドライバーでの直接ステートメント実行と準備されたステートメントの実行) を参照してください。  
   
-Pdo::sqlsrv_attr_query_timeout; pdo::exec の動作にも影響します。参照してください[pdo::setattribute](../../connect/php/pdo-setattribute.md)詳細についてはします。  
+Pdo::sqlsrv_attr_query_timeout; pdo::exec の動作にも影響します。詳細については、次を参照してください。 [pdo::setattribute](../../connect/php/pdo-setattribute.md)です。  
   
 次のオプションを指定するには $*fetch_style*です。  
   
 |style|Description|  
 |---------|---------------|  
-|Pdo::fetch_column、 *num*|指定された列内のデータを照会します。 テーブルの最初の列は 0 です。|  
-|Pdo::fetch_class、'*classname*'、配列 ( *arglist* )|クラスのインスタンスを作成し、列名をクラスのプロパティに割り当てます。 クラス コンストラクターに 1 つ以上のパラメーターを指定できる場合、 *arglist*を渡すこともできます。|  
+|PDO::FETCH_COLUMN, *num*|指定された列内のデータを照会します。 テーブルの最初の列は 0 です。|  
+|PDO::FETCH_CLASS, '*classname*', array( *arglist* )|クラスのインスタンスを作成し、列名をクラスのプロパティに割り当てます。 クラス コンストラクターに 1 つ以上のパラメーターを指定できる場合、 *arglist*を渡すこともできます。|  
 |Pdo::fetch_class、'*classname*'|既存のクラスのプロパティに列名を割り当てます。|  
   
 PDOStatement::closeCursor を呼び出して、PDOStatement オブジェクトに関連付けられたデータベース リソースを解放してから、もう一度 PDO::query を呼び出します。  
@@ -124,6 +125,7 @@ $stmt = null;
 ```  
   
 ## <a name="see-also"></a>参照  
-[PDO クラス](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO クラス](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

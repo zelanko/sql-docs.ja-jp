@@ -1,16 +1,16 @@
 ---
-title: "FileTableRootPath (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: FileTableRootPath (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FileTableRootPath_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - FileTableRootPath function
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1dd6d1b54d92142f3089b6323127257341ffe4d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8ec947c95930b1f705465e8dfd8b815dad2b2419
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
  FileTable の名前。 *FileTable_name*の種類は**nvarchar**です。 これは省略可能なパラメーターです。 既定値は、現在のデータベースです。 指定する*schema_name*も省略可能です。 NULL を渡すことが*FileTable_name*既定パラメーター値を使用するには  
   
  *@option*  
- パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 *@option*次の値のいずれかを持つことができます。  
+ パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 *@option* 次の値のいずれかを持つことができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|**0**|サーバー名を次のような NetBIOS 形式に変換して返します。<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> これが既定値です。|  
-|**1**|次のように、サーバー名を変換せずに返します。<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  
-|**2**|次のような、完全なサーバー パスを返します。<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDB`|  
+|**0**|サーバー名を次のような NetBIOS 形式に変換して返します。<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> これが既定値です。|  
+|**1**|次のように、サーバー名を変換せずに返します。<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
+|**2**|次のような、完全なサーバー パスを返します。<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
 ## <a name="return-type"></a>戻り値の型  
  **nvarchar (4000)**  
@@ -76,7 +76,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
  コードとアプリケーションが現在のコンピューターとデータベースから切り離された状態を維持するには、絶対ファイル パスに依存したコードを記述しないでください。 代わりに、完全なパス、ファイルの実行時に取得を使用して、 **FileTableRootPath**と**GetFileNamespacePath**関数を併用、次の例に示すようにします。 既定では、 **GetFileNamespacePath** 関数は、データベースのルート パスの下のファイルの相対パスを返します。  
   
 ```sql  
-USE MyDocumentDB;  
+USE MyDocumentDatabase;  
   
 @root varchar(100)  
 SELECT @root = FileTableRootPath();  
@@ -100,14 +100,14 @@ WHERE Name = N’document.docx’;
  次の例を呼び出す方法を示して、 **FileTableRootPath**関数。  
   
 ```  
-USE MyDocumentDB;  
--- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDB”  
+USE MyDocumentDatabase;  
+-- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDatabase”  
 SELECT FileTableRootPath();  
   
--- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDB\MyFileTable”  
+-- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDatabase\MyFileTable”  
 SELECT FileTableRootPath(N'dbo.MyFileTable');  
   
--- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDB\MyFileTable”  
+-- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDatabase\MyFileTable”  
 SELECT FileTableRootPath(N'MyFileTable');  
 ```  
   

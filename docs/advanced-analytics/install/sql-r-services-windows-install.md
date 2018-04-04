@@ -1,31 +1,31 @@
 ---
-title: "SQL Server 2016 R Services (In-database) のインストール |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server 2016 R Services (In-database) のインストール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
-- "SQL Server R Services のインストール"
-- "SQL Server の Machine Learning のサービスをインストールします。"
-- "R Services セットアップします。"
-- "SQL の機械学習をインストールします。"
-ms.assetid: 
-caps.latest.revision: 
+- SQL Server R Services のインストール
+- SQL Server の Machine Learning のサービスをインストールします。
+- R Services セットアップします。
+- SQL の機械学習をインストールします。
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 0012b48101085b7ccb18695fbda1f25c10a6b90b
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 7a00eb7f3151ad95818feee1d981170164f44345
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-sql-server-2016-r-services-in-database"></a>SQL Server 2016 R Services (In-Database) をインストールする 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/21/2018
 
 ## <a name="bkmk_prereqs"> </a> インストール前のチェックリスト
 
-+ SQL Server 2016 が必要です。 SQL Server 2016 があればをインストールしてください[SQL Server 2017 Machine Learning Services (In-database)](sql-machine-learning-services-windows-install.md)代わりにします。
++ SQL Server 2016 セットアップは、R Services をインストールする場合に必要です。 インストールする必要がある代わりに、SQL Server 2017 インストール メディアがあれば、 [SQL Server 2017 Machine Learning Services (In-database)](sql-machine-learning-services-windows-install.md)を SQL Server のバージョンの R 統合を取得します。
 
 + データベース エンジンのインスタンスが必要です。 だけ、R がありますが、既存のインスタンスを増分追加することができますをインストールすることはできません。
 

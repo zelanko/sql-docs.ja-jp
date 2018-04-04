@@ -1,33 +1,35 @@
 ---
-title: "sqlsrv_get_field |Microsoft ドキュメント"
-ms.custom: 
+title: sqlsrv_get_field |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_get_field
+apiname:
+- sqlsrv_get_field
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_get_field
 - API Reference, sqlsrv_get_field
 - retrieving data, as a single field
 ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
-caps.latest.revision: "28"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 814a7c0052afe9bbf7b98e8e15efed0dc6dd9faf
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: ff8f669772a8bd2ef0920992e9375c8795a7467b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvgetfield"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +48,7 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
   
 *$fieldIndex*: 取得するフィールドのインデックス。 インデックスは 0 から始まります。  
   
-*$getAsType* [省略可能]: A **SQLSRV**定数 (**sqlsrv_phptype _\***) 返されたデータの PHP データ型を決定します。 サポートされているデータ型については、次を参照してください。[定数 &#40;です。Microsoft Drivers for PHP for SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 戻り値の型が指定されていない場合、既定の PHP 型が返されます。 既定の PHP 型の詳細については、「 [Default PHP Data Types](../../connect/php/default-php-data-types.md)」を参照してください。 PHP データ型の指定については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
+*$getAsType* [省略可能]: A **SQLSRV**定数 (**sqlsrv_phptype _\***) 返されたデータの PHP データ型を決定します。 サポートされているデータ型については、次を参照してください。[定数&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)です。 戻り値の型が指定されていない場合、既定の PHP 型が返されます。 既定の PHP 型の詳細については、「 [Default PHP Data Types](../../connect/php/default-php-data-types.md)」を参照してください。 PHP データ型の指定については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
   
 ## <a name="return-value"></a>戻り値  
 フィールドのデータ。 *$getAsType* パラメーターを指定して、返されるデータの PHP データ型を指定できます。 戻り値のデータ型が指定されていない場合、既定の PHP データ型が返されます。 既定の PHP 型の詳細については、「 [Default PHP Data Types](../../connect/php/default-php-data-types.md)」を参照してください。 PHP データ型の指定については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
@@ -57,7 +59,7 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
 組み合わせ**sqlsrv_fetch**/**sqlsrv_get_field**結果のフィールドを 1 つだけがスクリプト メモリに行を設定し、php の負荷が型の仕様を返します。 (PHP 戻り値の型を指定する方法については、次を参照してください[する方法: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。)。また、この関数の組み合わせで、データをストリームとして取得することもできます (データをストリームとして取得する方法の詳細については、次を参照してください[SQLSRV ドライバーを使用して、ストリームとしてデータの取得](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)。)。  
   
 ## <a name="example"></a>例  
-次の例では、製品のレビューとレビュアー名を含むデータの行を取得します。 結果セットからデータを取得するには、 **sqlsrv_get_field** を使用します。 この例では、SQL Server および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、製品のレビューとレビュアー名を含むデータの行を取得します。 結果セットからデータを取得するには、 **sqlsrv_get_field** を使用します。 例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -117,6 +119,8 @@ sqlsrv_close( $conn);
   
 ## <a name="see-also"></a>参照  
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [データの取得](../../connect/php/retrieving-data.md)  
+
 [ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
   

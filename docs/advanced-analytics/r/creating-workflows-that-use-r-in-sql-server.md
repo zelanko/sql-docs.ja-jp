@@ -1,27 +1,27 @@
 ---
-title: "R での BI ワークフローの作成 |Microsoft ドキュメント"
+title: R での BI ワークフローの作成 |Microsoft ドキュメント
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/18/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dcfd7571f5dd555e6654eb65c4bbb7852f82feff
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: bd006f20f65b386a4351534e639b3b60db7e76de
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="creating-bi-workflows-with-r"></a>R での BI ワークフローの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,9 +30,9 @@ ms.lasthandoff: 02/11/2018
 
 これに対し、従来 R ソリューションが一般に依存をこれ以上のデータ探索およびモデリングを実行する、CSV 形式で多くの場合、さまざまなソースからデータをインポートします。 これは非効率であるだけでなく、危険な方法です。
 
-このトピックでは、一般的な落とし穴と machine learning のソリューションを開発して、データベース外部の場合に発生する可能性があるセキュリティ リスクを回避する SQL Server で R の統合シナリオを説明します。
+この記事では、一般的な落とし穴と machine learning のソリューションを開発して、データベース外部の場合に発生する可能性があるセキュリティ リスクを回避する SQL Server で R の統合シナリオについて説明します。
 
-Integration Services および Reportng Services、特に、ビジネス インテリジェンス アプリケーションの R コードとの対話およびデータまたは R. によって生成されたグラフィックスを処理できる方法の例についても説明します。
+ビジネス インテリジェンス アプリケーション、特に Integration Services および Reporting Services が R コードとの対話し、データまたは R. によって生成されたグラフィックスを使用する方法の例についても説明します。
 
 適用されます SQL Server 2016 の R Services、SQL Server 2017 機械学習のサービス。
 
@@ -44,7 +44,7 @@ Integration Services および Reportng Services、特に、ビジネス イン�
 
 + 速さ。 データベースは、セットベースの操作用に最適化されています。 インメモリ テーブルなどのデータベースの最新技術の概要と電光、集計を行いはデータ サイエンスを完全に補完します。
 
-+ 展開との統合の容易さ。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]その他の多くのデータ管理タスクやアプリケーションに対する操作の中央ポイントです。 データベースまたはレポート ウェアハウス内に存在するデータを使用すると、機械学習ソリューションによって使用されるデータが一貫して最新の状態であることを確認します。 
++ 展開との統合の容易さ。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] その他の多くのデータ管理タスクやアプリケーションに対する操作の中央ポイントです。 データベースまたはレポート ウェアハウス内に存在するデータを使用すると、機械学習ソリューションによって使用されるデータが一貫して最新の状態であることを確認します。 
 
 + クラウドとオンプレミス間の効率。 R でデータを処理する代わりに、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] や Azure Data Factory などのエンタープライズ データ パイプラインに依存できます。 Power BI や [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を使用して、結果や分析を簡単にレポートできます。
 
@@ -56,7 +56,7 @@ Integration Services および Reportng Services、特に、ビジネス イン�
 
 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] では Transact-SQL とストアド プロシージャを介して R で複雑な操作を実行できるため、再開発の最小限の作業も行わずに、既存の ETL プロセスに R 固有のタスクを統合できます。 はなく R のメモリを消費するタスクのチェーンを実行するよりもデータの準備を最適化できますを含む、最も効率的なツールを使用して[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]と[!INCLUDE[tsql](../../includes/tsql-md.md)]です。 
 
-ここでを使用してパイプラインをデータ、dmodeling の処理を自動化する方法のいくつか ideass [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
+ここでは、データ処理を自動化する方法のいくつかアイデアとモデリング パイプラインを使用して[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
 
 + 使用して[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]SQL データベースに必要なデータの機能を作成するタスク
 + 条件分岐を使用して、R ジョブの計算コンテキストを切り替える。
@@ -75,13 +75,13 @@ Integration Services および Reportng Services、特に、ビジネス イン�
 
 + スクリプト タスクと SQL 実行タスクを使用して、モデルのスコアリングを実行する
 
-##  <a name="bkmk_ssrs"></a>Reporting Services の視覚エフェクトを使用します。
+##  <a name="bkmk_ssrs"></a> Reporting Services の視覚エフェクトを使用します。
 
 R ではチャートや注意を引く視覚エフェクトを作成できますが、外部データ ソースに十分に統合されません。つまり、各チャートまたはグラフを個別に生成する必要があります。 共有も困難な可能性があります。
 
 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] を使用すれば、[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを介することで複雑な操作を R で実行できます。このストアド プロシージャは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] や Power BI などのさまざまなエンタープライズ レポート ツールで簡単に使用できます。
 
-+ 使用して R スクリプトから返されるグラフィック オブジェクトを視覚化します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
++ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
 + Power BI でテーブルを使用する
 
 ### <a name="examples"></a>使用例

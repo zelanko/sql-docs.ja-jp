@@ -1,30 +1,31 @@
 ---
-title: "既定の PHP データ型 |Microsoft ドキュメント"
-ms.custom: 
+title: 既定の PHP データ型 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
-caps.latest.revision: "40"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ff008fdf5cd27300da5912c5347f8c7089bdf53
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: ac611fe1d08c157dd9f6b4a67298ba318b62053f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="default-php-data-types"></a>既定の PHP データ型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -54,7 +55,7 @@ PDO_SQLSRV ドライバーを使用してデータが返される場合、デー
 |イメージ<sup>5</sup>|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  
 |int|Integer|8 ビット文字<sup>1</sup>|  
 |money|文字列|8 ビット文字<sup>1</sup>|  
-|nchar|文字列|8 ビット文字<sup>1</sup>|  
+|NCHAR|文字列|8 ビット文字<sup>1</sup>|  
 |numeric|文字列|8 ビット文字<sup>1</sup>|  
 |nvarchar|文字列|8 ビット文字<sup>1</sup>|  
 |nvarchar(MAX)|Stream<sup>2</sup>|8 ビット文字<sup>1</sup>|  
@@ -64,12 +65,12 @@ PDO_SQLSRV ドライバーを使用してデータが返される場合、デー
 |smallint|Integer|8 ビット文字<sup>1</sup>|  
 |smallmoney|文字列|8 ビット文字<sup>1</sup>|  
 |sql_variant<sup>7</sup>|文字列|8 ビット文字<sup>1</sup>|  
-|テキスト<sup>8</sup>|Stream<sup>2</sup>|8 ビット文字<sup>1</sup>|  
+|text<sup>8</sup>|Stream<sup>2</sup>|8 ビット文字<sup>1</sup>|  
 |time<sup>4</sup>|DateTime|適用なし|  
 |timestamp|文字列|8 ビット文字<sup>1</sup>|  
 |tinyint|Integer|8 ビット文字<sup>1</sup>|  
 |UDT (UDT)|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  
-|uniqueidentifier|文字列<sup>9</sup>|8 ビット文字<sup>1</sup>|  
+|uniqueidentifier|String<sup>9</sup>|8 ビット文字<sup>1</sup>|  
 |varbinary|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  
 |varbinary (max)|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  
 |varchar|文字列|8 ビット文字<sup>1</sup>|  
@@ -77,9 +78,9 @@ PDO_SQLSRV ドライバーを使用してデータが返される場合、デー
 |xml|Stream<sup>2</sup>|8 ビット文字<sup>1</sup>|  
   
 
-1.  データは、システムの Windows ロケール設定のコード ページで指定されている 8 ビット文字で返されます。 任意のマルチバイト文字またはこのコード ページにマップされていない文字は、1 バイトの疑問符 (?) 文字に置き換えられます。  
+1.  データは、システムの Windows ロケール設定のコード ページで指定されている 8 ビット文字で返されます。 任意のマルチバイト文字またはこのコード ページにマップされていない文字が 1 バイトの疑問符 (?) 文字で置き換えられます。  
   
-2.  [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) または [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) を使用して既定の PHP 型が Stream であるデータを取得する場合、データはストリームと同じエンコードの文字列として返されます。 たとえば、 **sqlsrv_fetch_array**を使用して SQL Server の binary 型を取得した場合、既定の戻り値の型はバイナリ文字列です。  
+2.  場合[sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)または[sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md)がストリームの既定の PHP 型を持つデータを取得するために使用、データが返されますを文字列としてのストリームと同じエンコーディング。 たとえば、SQL Server の binary 型が取得した場合を使用して**sqlsrv_fetch_array**既定の戻り型がバイナリ文字列です。  
   
 3.  データは、エンコードまたは変換されず、生のバイト ストリームとしてサーバーから返されます。  
 
@@ -103,10 +104,10 @@ SQL Server 2008 での新しいデータ型列 (テーブル値パラメータ�
   
 |機能|PHP のサポート|  
 |-----------|---------------|  
-|テーブル値パラメーター|不可|  
+|テーブル値パラメーター|いいえ|  
 |スパース列|部分的|  
-|Null ビット圧縮|可|  
-|大きな CLR ユーザー定義型 (UDT)|可|  
+|Null ビット圧縮|はい|  
+|大きな CLR ユーザー定義型 (UDT)|はい|  
 |サービス プリンシパル名|いいえ|  
 |MERGE|はい|  
 |FILESTREAM|部分的|  
@@ -114,9 +115,13 @@ SQL Server 2008 での新しいデータ型列 (テーブル値パラメータ�
 部分的な型のサポートとは、その列の型をプログラムでクエリできないことを意味します。  
   
 ## <a name="see-also"></a>参照  
-[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[Converting Data Types](../../connect/php/converting-data-types.md)  
-[PHP の型](http://go.microsoft.com/fwlink/?LinkId=109071)  
-[データ型 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=109068)  
+[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[Converting Data Types](../../connect/php/converting-data-types.md)
+
+[PHP の型](http://php.net/manual/en/language.types.php)
+
+[データ型 (TRANSACT-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
+
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
   

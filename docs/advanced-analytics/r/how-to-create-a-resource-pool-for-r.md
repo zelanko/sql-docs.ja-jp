@@ -1,31 +1,31 @@
 ---
-title: "機械学習用リソース プールを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 機械学習用リソース プールを作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/13/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c7f7f6e4-774d-4b45-b94a-f06c51718475
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dc7a1c26f38cb63cf678f71ec6b889f6051f5387
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 449b9b46b3f371ef7eca89a488201cdad05c232d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-resource-pool-for-machine-learning"></a>機械学習用リソース プールを作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このトピックでは、SQL Server の machine learning ワークロードを管理するためには、具体的には、リソース プールを作成する方法について説明します。 既にインストールしている、機械学習の機能を有効になっていると想定し、R、Python などの外部プロセスによって使用されているリソースのより詳細な管理をサポートするためにインスタンスを再構成します。
+この記事では、SQL Server の machine learning ワークロードを管理するためには、具体的には、リソース プールを作成する方法について説明します。 既にインストールしている、機械学習の機能を有効になっていると想定し、R、Python などの外部プロセスによって使用されているリソースのより詳細な管理をサポートするためにインスタンスを再構成します。
 
 プロセスには、複数のステップが含まれます。
 
@@ -175,7 +175,7 @@ ms.lasthandoff: 02/11/2018
     |2|既定値 (default)|Medium|25|0|0|0|0|2|2|
     |256|ds_wg|Medium|25|0|0|0|0|2|256|
   
-2.  新しいカタログ ビューを使用して[sys.resource_governor_external_resource_pools &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)、すべての外部リソース プールを表示します。
+2.  新しいカタログ ビューを使用して[sys.resource_governor_external_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)、すべての外部リソース プールを表示します。
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools;
@@ -203,7 +203,7 @@ ms.lasthandoff: 02/11/2018
 サーバー リソースの管理の詳細についてを参照してください。
 
 +  [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md) 
-+ [リソース ガバナー関連の動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
++ [リソース ガバナー関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
 機械学習のリソース管理の概要についてを参照してください。
 

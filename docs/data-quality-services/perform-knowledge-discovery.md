@@ -1,15 +1,16 @@
 ---
-title: "ナレッジ検出の実行 | Microsoft Docs"
-ms.custom: 
+title: ナレッジ検出の実行 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/04/2013
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.kbterms.f1
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: "38"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9c9cb4fb01f38cf1a65069dbd41ccc4d5d0aa91b
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 0958845553a92f18e64c5fd39a3a62229bf9ed7b
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="perform-knowledge-discovery"></a>ナレッジ検出の実行
   このトピックでは、ナレッジ検出を使用してナレッジ ベースを構築する方法について説明します。 検出プロセスでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) によって、コンピューター支援型のプロセスを使用してサンプル データ ソースのデータが分析され、取得されたナレッジがナレッジ ベースに追加されます。 そのナレッジは、ナレッジ検出アクティビティの **[ドメイン値の管理]** 手順か、ドメイン管理アクティビティで変更および強化できます。  

@@ -1,16 +1,16 @@
 ---
 title: CREATE DATABASE (Azure SQL Database) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/13/2018
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SERVICE_OBJECTIVE
@@ -29,22 +29,24 @@ helpviewer_keywords:
 - EDITION SQL Database
 - MAXSIZE SQL Database
 ms.assetid: 22b167f7-ae86-490b-adb3-ec02ca1c1508
-caps.latest.revision: 
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c61660015eb2f613148ad58b72386e42eb797db9
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: de82cfb595559b738ca8db7d72acd620101d3995
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   新しいデータベースを作成します。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 ## <a name="syntax"></a>構文  
   
 ``` 
@@ -134,6 +136,7 @@ CREATE DATABASE database_name
 |1024 GB から 4096 GB (256 GB ずつ増分)* |なし|なし|なし|なし|√|√|  
   
  \* P11 と P15 では 1024 GB を既定のサイズとして MAXSIZE が 4 TB まで許可されます。  P11 と P15 では、追加料金なしで付属のストレージを 4 TB まで使用できます。 次の地域の Premium レベルでは、現在 1 TB を超える MAXSIZE を使用できます: 米国東部 2、米国西部、米国政府バージニア、西ヨーロッパ、ドイツ中部、東南アジア、東日本、オーストラリア東部、カナダ中部、カナダ東部。 最新の制限については、[単一データベース](https://docs.microsoft.com/azure/sql-database-single-database-resources)に関するページを参照してください。  
+<!---Loc Comment: Link [Single databases] is not working---> 
   
  引数 MAXSIZE および EDITION には、以下の規則が適用されます。  
   
@@ -159,7 +162,7 @@ CREATE DATABASE database_name
  *source_database_name*  
  コピーするデータベースの名前。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で `CREATE DATABASE` ステートメントを使用する場合、次の引数およびオプションはサポートされません。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で `CREATE DATABASE` ステートメントを使用する場合、次の引数およびオプションはサポートされません。  
   
 -   \<filespec> や \<filegroup> などの、ファイルの物理的な場所に関連するパラメーター  
   

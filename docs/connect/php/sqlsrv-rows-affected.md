@@ -1,32 +1,34 @@
 ---
-title: "sqlsrv_rows_affected |Microsoft ドキュメント"
-ms.custom: 
+title: sqlsrv_rows_affected | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_rows_affected
+apiname:
+- sqlsrv_rows_affected
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_rows_affected
 - API Reference, sqlsrv_rows_affected
 ms.assetid: 6f43fbfc-fc92-449b-82d0-33fa780e8f09
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 62fd71d47b762680d9c85a24366c0c3b55cf9109
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 5d796398575bd84ed87f65832825d1bc325864bb
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvrowsaffected"></a>sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +49,7 @@ sqlsrv_rows_affected( resource $stmt)
 直前に実行されたステートメントによって変更された行数を示す整数です。 変更された行がない場合は、ゼロ (0) が返されます。 変更された行数に関する情報が使用できない場合は、マイナス 1 (-1) が返されます。 変更された行数の取得中にエラーが発生した場合は、 **false** が返されます。  
   
 ## <a name="example"></a>例  
-次の例では、UPDATE ステートメントによって変更された行の数が表示されます。 この例では、SQL Server および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、UPDATE ステートメントによって変更された行の数が表示されます。 例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -97,6 +99,9 @@ sqlsrv_close( $conn);
   
 ## <a name="see-also"></a>参照  
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
+
 [データの更新 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+
   
