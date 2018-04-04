@@ -1,29 +1,27 @@
 ---
-title: "SQL Server で MicrosoftML パッケージの使用 |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server で MicrosoftML パッケージの使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d6b3c17d4fadf639102c4090fceaabee37276bc2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 8d3cec4401f23e4cf7f187b1a937eb10b60dbcd0
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>SQL Server で MicrosoftML パッケージの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +50,7 @@ MicrosoftML には、さまざまな機械学習アルゴリズムとパフォ�
 
 - デシジョン ツリーとデシジョン フォレスト モデル: `rxFastTree` Bing で使用するために開発された FastRank と呼ばれる最初のブースト デシジョン ツリー アルゴリズムは、します。 最も速く最も人気のあるラーナーの 1 つです。 二項分類と回帰をサポートしています。
 
-  `rxFastForest`ロジスティック回帰モデルは、ランダム フォレスト メソッドに基づいています。 RevoScaleR の `rxLogit` 関数に似ていますが、L1 と L2 の規則化がサポートされています。 二項分類と回帰をサポートしています。
+  `rxFastForest` ロジスティック回帰モデルは、ランダム フォレスト メソッドに基づいています。 RevoScaleR の `rxLogit` 関数に似ていますが、L1 と L2 の規則化がサポートされています。 二項分類と回帰をサポートしています。
 
 - ロジスティック回帰:`rxLogisticRegression`ロジスティック回帰モデルをに似ていますが、 `rxLogit` L1 と L2 の正則化の追加サポートと共に、RevoScaleR 関数。 バイナリまたは多クラス分類をサポートしています。
 

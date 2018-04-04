@@ -1,30 +1,28 @@
 ---
-title: "PowerShell (チュートリアル) を使用してデータを準備する |Microsoft ドキュメント"
-ms.custom: 
+title: PowerShell (チュートリアル) を使用してデータを準備する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/10/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: a1ed4da0aca0b2876e2162c012aabc6c4043c567
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fbe74b101642ecabe0478a9d5b459e59f277da04
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>PowerShell (チュートリアル) を使用してデータを準備します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -112,7 +110,7 @@ SQL Server にパッケージをインストールできるように、さまざ
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - この例では、正規表現の R 関数を使用して、使用可能なパスのベクターを検索し、"Program Files"を含むパスを見つけます。 詳細については、 [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep)を参照してください。
+    - この例では、正規表現の R 関数を使用して、使用可能なパスのベクターを検索し、"Program Files"を含むパスを見つけます。 詳細については、次を参照してください。 [ http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep)です。
 
     - パッケージが既にインストールされている場合は、実行してインストールされているパッケージの一覧を確認します。`installed.packages()`です。
 
@@ -279,7 +277,7 @@ GitHub リポジトリからファイルをダウンロードするときに、�
 
 + パブリック データセット: [NYC タクシーとリムジン Commission] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
-+ [NYC タクシー データセットに対して Azure ML モデルの作成](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/です。
++ [NYC タクシー データセットに対して Azure ML モデルの作成](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
 
 ### <a name="powershell-and-r-script-files"></a>PowerShell と R のスクリプト ファイル
 

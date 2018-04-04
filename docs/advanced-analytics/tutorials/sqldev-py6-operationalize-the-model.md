@@ -1,30 +1,28 @@
 ---
-title: "手順 6: 運用 SQL Server を使用して、Python モデル |Microsoft ドキュメント"
-ms.custom: 
+title: '手順 6: 運用 SQL Server を使用して、Python モデル |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 10/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 18d90dfca8af630a129e03e73d3c3a4ee4681e18
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: a93461ee03122a3bf70dc37cc2d0f639531d1bcf
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>手順 6: 運用 SQL Server を使用して、Python モデル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -354,16 +352,16 @@ GO
 
 どちらの手順からの出力は、指定されたパラメーターや機能のあるタクシー旅行の有料されるヒントの確率です。
 
-### <a name="changes"></a>変更
+### <a name="changes"></a> 変更
 
 このセクションでは、このチュートリアルで使用するコードの変更を一覧表示します。 これらの変更は、最新バージョンを反映するように行われた**revoscalepy**バージョン。 API については、次を参照してください。 [Python 関数ライブラリ リファレンス](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)です。
 
 | 変更の詳細 | 注|
 | ----|----|
 | 削除`import pandas`内のすべてのサンプル| 既定で読み込まれてパンダ|
-| 関数`rx_predict_ex`に変更されました`rx_predict`| RTM およびプレリリース バージョンが必要`rx_predict_ex`|
-| 関数`rx_logit_ex`に変更されました`rx_logit`| RTM およびプレリリース バージョンが必要`rx_logit_ex`|
-| ` probList.append(probArray._results["tipped_Pred"])`変更されました`prob_list = prob_array["tipped_Pred"].values`| API への更新|
+| 関数`rx_predict_ex`に変更されました `rx_predict`| RTM およびプレリリース バージョンが必要 `rx_predict_ex`|
+| 関数`rx_logit_ex`に変更されました `rx_logit`| RTM およびプレリリース バージョンが必要 `rx_logit_ex`|
+| ` probList.append(probArray._results["tipped_Pred"])` 変更されました `prob_list = prob_array["tipped_Pred"].values`| API への更新|
 
 Python を SQL Server 2017 のプレリリース版を使用してサービスをインストールした場合、アップグレードすることをお勧めします。 Machine Learning のサーバーの最新のリリースを使用して、Python と R コンポーネントだけをアップグレードすることもできます。 詳細については、次を参照してください。[バインディングを使用して、SQL Server のインスタンスをアップグレードする](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
 

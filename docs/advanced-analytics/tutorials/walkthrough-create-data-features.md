@@ -1,30 +1,28 @@
 ---
-title: "R と SQL (チュートリアル) を使用してデータの機能を作成 |Microsoft ドキュメント"
-ms.custom: 
+title: R と SQL (チュートリアル) を使用してデータの機能を作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/23/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ecbdc28ac530dcee1ba9f5a3820d999ad4e0fcd9
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>R と SQL (チュートリアル) を使用してデータ機能を作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -242,7 +240,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, 
 時間は、ネットワークの速度、およびハードウェア構成によって大幅に異なる場合があります。 テスト構成、[!INCLUDE[tsql](../../includes/tsql-md.md)]関数アプローチは、カスタムの R 関数を使用するよりも高速でした。 そのため、使用示しました、[!INCLUDE[tsql](../../includes/tsql-md.md)]以降の手順でこれらの計算関数をします。
 
 > [!TIP]
-> 非常に多くの場合は、機能を使用してエンジニア リング[!INCLUDE[tsql](../../includes/tsql-md.md)]R. よりも高速になりますたとえば、T-SQL に高速の windowing と移動平均のローリングなどの一般的なデータ科学計算を適用できる、順位付け関数が含まれていますと *n* -タイルです。 データとタスクに基づいて、最も効率的な方法を選択してください。
+> 非常に多くの場合は、機能を使用してエンジニア リング[!INCLUDE[tsql](../../includes/tsql-md.md)]R. よりも高速になりますたとえば、T-SQL に高速の windowing と移動平均のローリングなどの一般的なデータ科学計算を適用できる、順位付け関数が含まれていますと*n*-タイルです。 データとタスクに基づいて、最も効率的な方法を選択してください。
 
 ## <a name="next-lesson"></a>次のレッスン
 

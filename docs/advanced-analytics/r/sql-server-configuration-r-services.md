@@ -1,26 +1,24 @@
 ---
-title: "SQL Server の構成 (R Services) | Microsoft Docs"
-ms.custom: 
+title: SQL Server の構成 (R Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 5716fced7dd2be49c580222b9ae155451cf8f426
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 794a15c6673a06ea261f66129035ea62ea31cb0e
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R で使用するための SQL Server の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -126,7 +124,7 @@ SQL Server でリソース統制では、その r です。 SQL Server で使用
 
 外部スクリプトによるメモリ消費の既定値は、SQL Server 自体の使用可能なメモリの合計の 20% に制限されます。 既定では、データベース サーバーに依存するすべてのタスクが深刻な影響を受けないこと長時間実行される R ジョブを確認してください。 には、この制限が適用されます。 ただし、これらの制限はデータベース管理者によって変更することもできます。 多くの場合では、20% の制限は重大なマシンのワークロードの学習をサポートするのに十分ではありません。
 
-サポートされる構成オプションは**MAX_CPU_PERCENT**、 **MAX_MEMORY_PERCENT**、および**MAX_PROCESSES**です。 現在の設定を表示するには、このステートメントを使用します。`SELECT * FROM sys.resource_governor_external_resource_pools`
+サポートされる構成オプションは**MAX_CPU_PERCENT**、 **MAX_MEMORY_PERCENT**、および**MAX_PROCESSES**です。 現在の設定を表示するには、このステートメントを使用します。 `SELECT * FROM sys.resource_governor_external_resource_pools`
 
 -  場合は、サーバーは、主に、R Services の使用、MAX_CPU_PERCENT を 40% または 60% まで増加すると役立つ場合があります。
 
@@ -134,11 +132,11 @@ SQL Server でリソース統制では、その r です。 SQL Server で使用
 
 割り当てられたリソースの値を変更するには、T-SQL ステートメントを使用します。
 
-+ このステートメントでは、メモリ使用量を 40% に設定します。`ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
++ このステートメントでは、メモリ使用量を 40% に設定します。 `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
 
-+ このステートメントは、次の 3 つすべての構成可能な値を設定します。`ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
++ このステートメントは、次の 3 つすべての構成可能な値を設定します。 `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
 
-+ メモリ、CPU、または max プロセス設定を変更し、設定をすぐに適用する場合は、このステートメントを実行します。`ALTER RESOURCE GOVERNOR RECONFIGURE`
++ メモリ、CPU、または max プロセス設定を変更し、設定をすぐに適用する場合は、このステートメントを実行します。 `ALTER RESOURCE GOVERNOR RECONFIGURE`
 
 ## <a name="soft-numa-hardware-numa-and-cpu-affinity"></a>ソフト NUMA、ハードウェア NUMA、CPU アフィニティ
 

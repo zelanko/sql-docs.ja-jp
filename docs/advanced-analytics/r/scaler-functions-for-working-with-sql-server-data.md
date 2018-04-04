@@ -1,28 +1,26 @@
 ---
-title: "SQL Server のデータを扱う RevoScaleR 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server のデータを扱う RevoScaleR 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/20/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 5f3c9864-9c75-4688-947d-0940045b2671
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: b1567bd6e4a419b293a963a7b3afe96c24409bcc
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 70591237d61d81dd78b09a5ce0c7d251a1b29796
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="revoscaler-functions-for-working-with-sql-server-data"></a>SQL Server のデータを扱う RevoScaleR 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +41,7 @@ ScaleR 関数およびその使用方法の完全な一覧については、 [Mi
 
 インスタンスおよびデータベースに必要なアクセス許可がある場合は、R から DDL ステートメントを実行できます。 次の関数では、ODBC 呼び出しを使用する DDL ステートメントを実行したり、データベース スキーマを取得します。
 
-+ `rxSqlServerTableExists`および[rxSqlServerDropTable](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdroptable)のドロップ、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]テーブル、またはデータベース テーブルまたはオブジェクトの有無を確認
++ `rxSqlServerTableExists` および[rxSqlServerDropTable](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdroptable)のドロップ、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]テーブル、またはデータベース テーブルまたはオブジェクトの有無を確認
 
 + [rxExecuteSQLDDL](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexecutesqlddl) -データ定義言語 (DDL) コマンドを定義またはデータベース オブジェクトの操作を実行します。 この関数は、データを返すことはできませんし、取得またはオブジェクトのスキーマまたはメタデータの変更にのみ使用されます。
 
@@ -55,7 +53,7 @@ ScaleR 関数およびその使用方法の完全な一覧については、 [Mi
 
 + [rxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver) - SQL Server 計算コンテキストを生成して、**ScaleR** 関数が SQL Server R Services で実行するようにします。 現在、この計算コンテキストは Windows の SQL Server インスタンスのみでサポートされています。
 
-+ `rxGetComputeContext`および[rxSetComputeContext](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetcomputecontext) - を取得またはアクティブなコンピューティング コンテキストを設定します。
++ `rxGetComputeContext` および[rxSetComputeContext](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetcomputecontext) - を取得またはアクティブなコンピューティング コンテキストを設定します。
 
 ## <a name="move-data-and-transform-data"></a>データを移動し、データを変換します。
 

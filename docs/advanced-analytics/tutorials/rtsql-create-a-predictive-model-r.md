@@ -1,29 +1,27 @@
 ---
-title: "予測モデル (SQL のクイック スタートで R) を作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 予測モデル (SQL のクイック スタートで R) を作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/26/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 dev_langs:
 - R
 - SQL
-ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 1b40295452da5b7da34a31e6825630da9c6c4861
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: c01d03ff9911a88851b5dd560aaa44e85d4c89ff
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>予測モデル (SQL のクイック スタートで R) を作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -152,7 +150,7 @@ VALUES (' latest model', @model)
 
 SQL パラメーターおよび R 変数を操作するため、これらの規則に従う`sp_execute_external_script`:
 
-+ 名前では R スクリプトにマップされているすべての SQL パラメーターを表示する必要があります、  _@params_ 引数。
++ 名前では R スクリプトにマップされているすべての SQL パラメーターを表示する必要があります、 _@params_引数。
 + これらのパラメーターのいずれかを出力するには、"_@params_" リストに OUTPUT キーワードを追加します。
 + マップされるパラメーターを一覧した後、"_@params_" リストの直後に SQL パラメーターから R 変数へのマッピングを 1 行ずつ指定します。
 

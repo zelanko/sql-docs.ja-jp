@@ -1,34 +1,32 @@
 ---
-title: "SQL Server での機械学習用リソース ガバナンス |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server での機械学習用リソース ガバナンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/16/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 18c9978a-aa55-42bd-9ab3-8097030888c9
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d1eb0f1cce23d084516b5446d39274ac3078b0b8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 11cfaba5f645824158e0c25103ec355e513fa075
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>SQL Server での機械学習用リソース ガバナンス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事は、リソース管理の概要を割り当てるし、R と Python スクリプトによって使用されているリソースのバランスをとるに役立つ SQL Server の機能を提供します。
 
-**適用されます:** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]
- [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]と [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
+**適用対象:** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]
+[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] そして [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
 
 ## <a name="goals-of-resource-governance-for-machine-learning"></a>機械学習用リソース ガバナンスの目的
 
@@ -90,7 +88,7 @@ SQL Server では、既定のリソース プールの次の 3 つの種類を�
 
 外部スクリプトのサポートは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップではオプションです。 機械学習機能をインストールした後でも、既定では、外部スクリプトを実行する機能は OFF です。 し、手動でプロパティを再構成し、スクリプトの実行を有効にするインスタンスを再起動する必要があります。
 
-そのため、すぐに、軽減する必要があるリソースの問題またはセキュリティ上の問題がある場合、管理者直ちにを無効にできます、外部スクリプトの実行を使用して[sp_configure &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)プロパティを設定および`external scripts enabled`FALSE または 0 にします。
+そのため、すぐに、軽減する必要があるリソースの問題またはセキュリティ上の問題がある場合、管理者直ちにを無効にできます、外部スクリプトの実行を使用して[sp_configure &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)プロパティを設定および`external scripts enabled`FALSE または 0 にします。
   
 ## <a name="see-also"></a>参照
 

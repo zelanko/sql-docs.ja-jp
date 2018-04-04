@@ -1,31 +1,29 @@
 ---
-title: "レッスン 2: PowerShell を使用して SQL server のデータのインポート |Microsoft ドキュメント"
-ms.custom: 
+title: 'レッスン 2: PowerShell を使用して SQL server のデータのインポート |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 07/26/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 - TSQL
-ms.assetid: 3c5b5145-fa57-455a-b153-0400fc062dc0
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 4aaaf0ec50d5bd3764a78c8a202ccac399255956
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 77709eedd7659fb833bcf2f046611d3bda1929ec
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="lesson-2-import-data-to-sql-server-using-powershell"></a>レッスン 2: PowerShell を使用して SQL server のデータをインポートします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +56,7 @@ ms.lasthandoff: 02/11/2018
   
     - インスタンス上のアカウントのユーザー名とパスワード。 アカウントは、データベースを作成、テーブルおよびストアド プロシージャを作成し、テーブルにデータをアップロードする権限が必要です。 ユーザー名とパスワードを指定しない場合、Windows id は SQL Server へのサインインに使用されます。
   
-    - ダウンロードしたばかりのサンプル データ ファイルのパスとファイル名。 例:
+    - ダウンロードしたばかりのサンプル データ ファイルのパスとファイル名。 以下に例を示します。
   
         `C:\tempRSQL\nyctaxi1pct.csv`
   
