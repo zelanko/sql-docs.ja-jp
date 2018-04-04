@@ -1,36 +1,36 @@
 ---
-title: "データベース エンジンの有効なアクセス許可の決定 | Microsoft Docs"
-ms.custom: 
+title: データベース エンジンの有効なアクセス許可の決定 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4d93f80a8a662edd4e84309aa95803dc0e3cc57c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>データベース エンジンの有効なアクセス許可の決定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-SQL Server データベース エンジンでは、さまざまなオブジェクトのアクセス許可が与えられます。このトピックでは、アクセス許可が与えられているユーザーを判断する方法について説明します。 SQL Server では、データベース エンジンのために 2 つのアクセス許可システムが実装されます。 固定ロールの古いほうのシステムでは、アクセス許可が事前構成されました。 SQL Server 2005 より、より柔軟で正確なシステムが利用できます。 (このトピックの情報は 2005 以降の SQL Server に適用されます。 SQL Server のバージョンによっては、利用できない種類のアクセス許可があります。)
+SQL Server データベース エンジンでは、さまざまなオブジェクトのアクセス許可が与えられます。この記事では、アクセス許可が与えられているユーザーを判断する方法について説明します。 SQL Server では、データベース エンジンのために 2 つのアクセス許可システムが実装されます。 固定ロールの古いほうのシステムでは、アクセス許可が事前構成されました。 SQL Server 2005 より、より柔軟で正確なシステムが利用できます。 (この記事の情報は 2005 以降の SQL Server に適用されます。 SQL Server のバージョンによっては、利用できない種類のアクセス許可があります。)
 
 >  [!IMPORTANT] 
 >  * 両方のアクセス許可システムの集合体が有効なアクセス許可となります。 
@@ -89,11 +89,11 @@ SELECT DP1.name AS DatabaseRoleName,
 
 ## <a name="newer-granular-permission-system"></a>新しく詳細なアクセス許可システム
 
-このシステムは非常に柔軟であり、非常に厳密に設定すると複雑になることがあります。 それは必ずしも悪いことではありません。金融機関であれば、正確であって欲しいものです。 簡単にするには、ロールを作成し、ロールにアクセス許可を割り当て、ロールにグループを追加します。 データベース開発チームがスキーマで活動を降りし、個々のテーブルやプロシージャではなく、スキーマ全体にロール アクセス許可を与えると、さらに簡単になります。 ただし、実世界は複雑であり、ビジネスでは予想外のセキュリティ要件が生まれることを想定する必要があります。   
+このシステムは柔軟であり、厳密に設定すると複雑になることがあります。 簡単にするには、ロールを作成し、ロールにアクセス許可を割り当て、ロールにグループを追加します。 データベース開発チームがスキーマで活動を降りし、個々のテーブルやプロシージャではなく、スキーマ全体にロール アクセス許可を与えると、さらに簡単になります。 現実のシナリオは複雑であり、ビジネス ニーズによって予想もしないようなセキュリティ要件が発生する可能性があります。   
 
-次の図は、権限とそれらの関連性を示します。 一部の高いレベルの許可 ( `CONTROL SERVER`など) は複数回列挙されています。 このトピックのポスターは、読み取るには小さすぎます。 画像をクリックすると、**データベース エンジンのアクセス許可ポスター**を pdf 形式でダウンロードできます。  
+次の図は、権限とそれらの関連性を示します。 一部の高いレベルの許可 ( `CONTROL SERVER`など) は複数回列挙されています。 この記事のポスターは、読み取るには小さすぎます。 画像をクリックすると、**データベース エンジンのアクセス許可ポスター**を pdf 形式でダウンロードできます。  
   
- [![データベース エンジンのアクセス許可](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+ [![データベース エンジンのアクセス許可](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
 
 ### <a name="security-classes"></a>セキュリティ クラス
 
@@ -105,7 +105,7 @@ SELECT DP1.name AS DatabaseRoleName,
 
 Windows ユーザーが Windows グループに基づくログインを使用して接続すると、一部のアクティビティでは、個々の Windows ユーザーを表すログインまたはユーザーを作成することが SQL Server で必要になります。 たとえば、ある Windows グループ (エンジニア) にユーザー (Mary、Todd、Pat) が含まれ、このエンジニア グループにデータベース ユーザー アカウントが与えられています。 Mary にアクセス許可が与えられ、テーブルを作成すると、ユーザー (Mary) がテーブルの所有者として作成されることがあります。 あるいは、エンジニア グループの他のメンバーに与えられているアクセス許可が Todd に与えられない場合、アクセス許可を追跡記録するためにユーザー (Todd) を作成する必要があります。
 
-Windows ユーザーは複数の Windows グループに属することがあります (エンジニア グループとマネージャー グループの両方など)。 エンジニア ログインに与えられた (または拒否された) アクセス許可、マネージャー ログインに与えられた (または拒否された) アクセス許可、個々のユーザーに与えられた (または拒否された) アクセス許可、ユーザーが属するロールに与えられた (または拒否された) アクセス許可をすべて集めた上で評価し、有効なアクセス許可が決定されます。 `HAS_PERMS_BY_NAME` 関数は、ユーザーまたはログインに特定のアクセス許可が与えられているかどうかを判断できます。 ただし、アクセス許可の承諾または拒否のソースを決定するこれといった方法はありません。 試行錯誤を重ねることも含め、アクセス許可の一覧を研究する必要があります。
+Windows ユーザーは複数の Windows グループに属することがあります (エンジニア グループとマネージャー グループの両方など)。 エンジニア ログインに与えられた (または拒否された) アクセス許可、マネージャー ログインに与えられた (または拒否された) アクセス許可、個々のユーザーに与えられた (または拒否された) アクセス許可、ユーザーが属するロールに与えられた (または拒否された) アクセス許可をすべて集めた上で評価し、有効なアクセス許可が決定されます。 `HAS_PERMS_BY_NAME` 関数は、ユーザーまたはログインに特定のアクセス許可が与えられているかどうかを判断できます。 ただし、アクセス許可の承諾または拒否のソースを決定するこれといった方法はありません。 試行錯誤を重ねることも含め、アクセス許可の一覧を研究してください。
 
 ## <a name="useful-queries"></a>便利なクエリ
 

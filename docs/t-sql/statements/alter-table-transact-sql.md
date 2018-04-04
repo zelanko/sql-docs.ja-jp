@@ -1,16 +1,16 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WAIT_AT_LOW_PRIORITY
@@ -61,22 +61,24 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 62bb3df1044b6acc580daefc75ace88bca441e53
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: b4a725960612c90a4619cf16587df0f67a68a3ba
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   列と制約の変更、追加、削除、パーティションの再割り当てと再構築、制約とトリガーの無効化や有効化などの方法で、テーブル定義を変更します。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
@@ -539,7 +541,7 @@ WITH CHECK | WITH NOCHECK
   
  *max_degree_of_parallelism* には次のいずれかの値を指定できます。  
   
- 1  
+ @shouldalert  
  並列プラン生成を抑制します。  
   
  \>1  
@@ -1742,7 +1744,7 @@ WITH
   
 |パーティション|データがある|境界の範囲|  
 |---------------|---------------|--------------------|  
-|1|はい|OrderDate < '2004-01-01'|  
+|@shouldalert|はい|OrderDate < '2004-01-01'|  
 |2|はい|'2004-01-01' <= OrderDate < '2005-01-01'|  
 |3|はい|'2005-01-01' <= OrderDate< '2006-01-01'|  
 |4|はい|'2006-01-01'<= OrderDate < '2007-01-01'|  

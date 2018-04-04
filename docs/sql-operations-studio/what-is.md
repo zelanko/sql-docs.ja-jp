@@ -1,6 +1,6 @@
 ---
-title: "SQL 操作 Studio (プレビュー) とは何ですか。 | Microsoft Docs"
-description: "SQL 操作 Studio (プレビュー) は無料で軽量のツール、SQL Server、Azure SQL データベース、および Azure SQL Data Warehouse; を管理するため、Windows、macOS など、Linux で実行しています。任意の場所を実行しています。"
+title: SQL Operations Studio (プレビュー) とは何ですか。 | Microsoft Docs
+description: SQL 操作 Studio (プレビュー) は無料で軽量のツール、SQL Server、Azure SQL データベース、および Azure SQL Data Warehouse; を管理するため、Windows、macOS など、Linux で実行しています。任意の場所を実行しています。
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: overview
 author: stevestein
 ms.author: sstein

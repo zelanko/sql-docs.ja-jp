@@ -1,33 +1,33 @@
 ---
-title: "Microsoft PHP Driver for SQL Server |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/19/2017
+title: Microsoft Drivers for PHP for SQL Server |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1b9464f25551d391004275fcb6dda33fc9b89e2f
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a7a78c55a54c5e020b26cee82e2e5a08ff09f5e0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="microsoft-php-driver-for-sql-server"></a>Microsoft SQL Server 用 PHP Driver
+# <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP
 
-![ダウンロード DownArrow 丸](../../ssdt/media/download.png)[SQL 用 PHP driver のダウンロードするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![ダウンロード DownArrow 丸](../../ssdt/media/download.png)[SQL 用の PHP のドライバーをダウンロードするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-SQL Server Driver for PHP は、PHP アプリケーションの SQL Server と統合できます。 ドライバーは、PHP スクリプトから SQL Server データの書き込みと読み取りを許可する PHP 拡張機能です。 ドライバーは、Azure SQL データベース、データにアクセスするすべてのエディションの SQL Server 2005 と後で (Express Editions を含む) のインターフェイスを提供します。 ドライバーが PHP を使用する機能 (ラージ オブジェクトを読み書きする PHP ストリームなど)。  
+Microsoft Drivers for PHP for SQL Server は、PHP アプリケーションの SQL Server との統合を有効にします。 ドライバーは、PHP スクリプトから SQL Server データの書き込みと読み取りを許可する PHP 拡張機能です。 ドライバーは、後で (Express Editions を含む) と SQL Server 2005 のすべてのエディションでの Azure SQL データベースでデータにアクセスするためのインターフェイスを提供します。 ドライバーは、PHP の機能を使用して、ラージ オブジェクトを読み書きする PHP ストリームを含むを確認します。  
   
 ## <a name="getting-started"></a>作業の開始  
 * [ステップ 1: PHP 開発用に開発環境を構成する](step-1-configure-development-environment-for-php-development.md)  
@@ -42,13 +42,13 @@ SQL Server Driver for PHP は、PHP アプリケーションの SQL Server と�
 * [セキュリティに関する考慮事項](security-considerations-for-php-sql-driver.md)
   
 ## <a name="community"></a>コミュニティ  
-* [PHP SQL Driver のサポート リソース](support-resources-for-the-php-sql-driver.md)
+* [サポート リソースを Microsoft Drivers for PHP for SQL Server](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>ダウンロード  
 * ![ダウンロード DownArrow 丸](../../ssdt/media/download.png)[SQL 用 PHP driver のダウンロードするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
   
 ## <a name="samples"></a>サンプル  
-* [PHP SQL ドライバーのコード サンプル](code-samples-for-php-sql-driver.md)
+* [Microsoft Drivers for PHP for SQL Server のサンプル コード](code-samples-for-php-sql-driver.md)
 * [Windows での PHP の使用を開始します。](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
 * [Macos PHP の概要](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
 * [Ubuntu での PHP の使用を開始します。](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)

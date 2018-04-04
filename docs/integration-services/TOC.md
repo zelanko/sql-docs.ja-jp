@@ -104,7 +104,9 @@
 
 # [データのインポートとエクスポート](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 
-# [変更データ キャプチャ](../integration-services/change-data-capture/change-data-capture-ssis.md)
+# [Excel との間でのデータの読み込み](load-data-to-from-excel-with-ssis.md)
+
+# [Change data capture](../integration-services/change-data-capture/change-data-capture-ssis.md)
 
 # [Microsoft Connector for SAP BW](microsoft-connector-for-sap-bw.md)
 ## [Microsoft Connector for SAP BW のインストール](installing-the-microsoft-connector-for-sap-bw.md)

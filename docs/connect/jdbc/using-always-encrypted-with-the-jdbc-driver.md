@@ -1,28 +1,28 @@
 ---
-title: "JDBC ドライバーで Always Encrypted の使用 |Microsoft ドキュメント"
-ms.custom: 
+title: JDBC ドライバーで Always Encrypted の使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 3/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5a32f8269bb6787087b54d161c50cf6f06488482
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 425f965c37e1d148a267566bd1980eb345cadfc6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC ドライバーで Always Encrypted の使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -408,7 +408,7 @@ Always Encrypted は、個々のクエリに対しても有効にすることが
 このプロパティの詳細については、次を参照してください。[を構成する方法の java.sql.Time 値は、サーバーに送信される](configuring-how-java-sql-time-values-are-sent-to-the-server.md)です。
 
 ### <a name="configuring-how-string-values-are-sent-to-the-server"></a>サーバーへの文字列値を送信する方法を構成します。
-**SendStringParametersAsUnicode**接続プロパティを使用して、SQL Server への文字列値を送信する方法を構成します。 場合は true の場合、文字列パラメーターに設定は、Unicode 形式でサーバーに送信されます。 場合は false の場合、文字列パラメーターに設定は、ASCII または Unicode ではなく、MBCS などの Unicode 以外の形式で送信されます。 このプロパティの既定値は true です。 Always Encrypted が有効になっているし、char/varchar/varchar(max) 列は暗号化されて、値の**sendStringParametersAsUnicode** (または既定のままにする) 場合に true に設定する必要があります。 このプロパティが false に設定されている場合、ドライバーでデータを暗号化された char/varchar/varchar(max) 列を挿入するときに例外がスローされます。 このプロパティの詳細については、次を参照してください。[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)です。
+**SendStringParametersAsUnicode**接続プロパティを使用して、SQL Server への文字列値を送信する方法を構成します。 場合は true の場合、文字列パラメーターに設定は、Unicode 形式でサーバーに送信されます。 場合は false の場合、文字列パラメーターに設定は、ASCII または Unicode ではなく、MBCS などの Unicode 以外の形式で送信されます。 このプロパティの既定値は true です。 Always Encrypted が有効になっているし、char/varchar/varchar(max) 列は暗号化されて、値の**sendStringParametersAsUnicode** false に設定する必要があります。 このプロパティ設定されている場合は true、ドライバーは例外をスロー Unicode 文字が含まれている暗号化された char/varchar/varchar(max) 列からデータを復号化するときにします。 このプロパティの詳細については、次を参照してください。[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)です。
   
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>取得して、暗号化された列のデータの変更
 有効にした場合は常に暗号化アプリケーション クエリに対して、標準の JDBC Api を使用してを取得または暗号化されたデータベース列のデータを変更することができます。 アプリケーションが必要なデータベース権限を持って、列マスター_キーにアクセスできる場合、ドライバーは暗号化された列をターゲットし、は、暗号化された列から取得されるデータを復号化するすべてのクエリ パラメーターを暗号化します。

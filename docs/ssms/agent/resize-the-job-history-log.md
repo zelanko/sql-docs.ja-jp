@@ -1,15 +1,16 @@
 ---
-title: "ジョブ履歴ログのサイズの変更 | Microsoft Docs"
-ms.custom: 
+title: ジョブ履歴ログのサイズの変更 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - jobs [SQL Server Agent], history
@@ -19,19 +20,24 @@ helpviewer_keywords:
 - SQL Server Agent jobs, history
 - historical information [SQL Server], jobs
 ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c04ed3df42c5dc14580e5343b876989144b97d1e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5a2f3f4cc468cb4f03e0b5fbb8a3bd05b740e1f1
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのジョブ履歴ログのサイズ制限を設定する方法について説明します。
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> [Azure SQL Database マネージ インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database マネージ インスタンスと SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+
+このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのジョブ履歴ログのサイズ制限を設定する方法について説明します。
   
 -   **作業を開始する準備:**  
   
@@ -48,7 +54,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="SSMS"></a>SQL Server Management Studio の使用  
   
-#### <a name="to-resize-the-job-history-log-based-on-raw-size"></a>生のサイズに基づいてジョブ履歴ログのサイズを変更するには  
+*生のサイズに基づいてジョブ履歴ログのサイズを変更するには*
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
@@ -60,7 +66,7 @@ ms.lasthandoff: 01/17/2018
   
 5.  **[ジョブごとのジョブ履歴の最大行数]** ボックスで、1 つのジョブに使用できるジョブ履歴の最大行数を入力します。  
   
-#### <a name="to-resize-the-job-history-log-based-on-time"></a>時間に基づいてジョブ履歴ログのサイズを変更するには  
+**時間に基づいてジョブ履歴ログのサイズを変更するには:**
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
@@ -68,5 +74,5 @@ ms.lasthandoff: 01/17/2018
   
 3.  **[履歴]** ページを選択し、 **[自動的にエージェントの履歴を削除する]**チェック ボックスをオンにします。  
   
-4.  適切な **[日]**、 **[週]**、または **[月]**を選択します。  
+4.  適切な **[日]**、 **[週]**、または **[月]** を選択します。  
   

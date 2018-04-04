@@ -1,16 +1,16 @@
 ---
-title: "Windows サービス アカウントとアクセス許可の構成 | Microsoft Docs"
-ms.custom: 
+title: Windows サービス アカウントとアクセス許可の構成 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - startup service states [SQL Server]
@@ -53,16 +53,16 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MikeRayMSFT
-ms.author: MikeRayMSFT
+ms.author: MikeRay
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 32412d70d3dcf52fb467c5c4854526feb2fafe9d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 4f037130b00871303648aefd3d35553e702091a8
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows サービス アカウントと権限の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -206,8 +206,8 @@ ms.lasthandoff: 02/23/2018
     |-------------|--------------------------|  
     |[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスの既定のインスタンス|**NT SERVICE\MSSQLSERVER**|  
     |[!INCLUDE[ssDE](../../includes/ssde-md.md)] という名前の **という名前の**サービスの名前付きインスタンス|**NT SERVICE\MSSQL$PAYROLL**|  
-    |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスのエージェント サービス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
-    |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という名前の **インスタンスの**エージェント サービス|**NT SERVICE\SQLAGENT$PAYROLL**|  
+    |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
+    |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PAYROLL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という名前の **という名前の**|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
  管理されたサービス アカウントと仮想アカウントの詳細については、「 **Service Accounts Step-by-Step Guide** 」 (サービス アカウントのステップ バイ ステップ ガイド) の「 [Managed service account and virtual account concepts](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx) 」 (管理されたサービス アカウントと仮想アカウントの概念) および「 [Managed Service Accounts Frequently Asked Questions (FAQ)](http://technet.microsoft.com/library/ff641729\(WS.10\).aspx)」 (管理されたサービス アカウントに関してよく寄せられる質問 (FAQ)) をご覧ください。  
   
@@ -362,7 +362,7 @@ ms.lasthandoff: 02/23/2018
 ||130\dts\binn|読み取り、実行|  
 ||130\shared|読み取り、実行|  
 ||130\shared\Errordumps|読み取り、書き込み|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|130\shared\ASConfig|Read|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ブラウザー|130\shared\ASConfig|Read|  
 ||130\shared|読み取り、実行|  
 ||130\shared\Errordumps|読み取り、書き込み|  
 |SQLWriter|N/A (ローカル システムとして実行)||  

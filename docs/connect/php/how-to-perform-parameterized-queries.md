@@ -1,30 +1,31 @@
 ---
-title: "方法: パラメーター化クエリを実行 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/19/2017
+title: '方法: パラメーター化クエリを実行 |Microsoft ドキュメント'
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data
 - parameterized queries
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 946380fdce8f3ac0d976840e569e35db077a4202
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 23660f3d7ddbaf45ac39674c4eba23092e3ae2d2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-parameterized-queries"></a>方法: パラメーター化クエリを実行する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/18/2017
   
 2.  Transact-SQL クエリ内のプレースホルダーに対応する PHP 変数を初期化または更新します。  
   
-3.  ステップ 2 の PHP 変数を使用して、Transact-SQL 文字列内のパラメーター プレースホルダーに順番に対応するパラメーター値の配列を作成または更新します。  
+3.  手順 2 からの PHP 変数を使用して作成または TRANSACT-SQL 文字列内のパラメーターのプレース ホルダーに対応するパラメーター値の配列を更新します。 配列内のパラメーター値は、それらを表すことを意図したプレース ホルダーと同じ順序でなければなりません。
   
 4.  クエリを実行します。  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/18/2017
   
 次の例では、データベースにクエリを発行して数量が正しく更新されたことを確認しています。 製品 ID は、SELECT クエリのパラメーターです。  
   
-この例では、SQL Server および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -121,7 +122,7 @@ sqlsrv_close( $conn);
 ## <a name="example"></a>例  
 次の例では、 **sqlsrv_prepare** 関数を使用するときに変数を暗黙的にバインドする方法を示します。 この例では、複数の注文を *Sales.SalesOrderDetail* テーブルに挿入します。 *$Params*配列がステートメントにバインドされている (*$stmt*) と**sqlsrv_prepare**と呼びます。 テーブルに新しい注文を挿入する各クエリを実行する前に、 *$params* 配列が注文の詳細に対応する新しい値で更新されます。 後続のクエリ実行では、新しいパラメーター値が使用されます。  
   
-この例では、SQL Server および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -194,8 +195,11 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>参照  
-[データ型の変換](../../connect/php/converting-data-types.md)  
-[セキュリティに関する考慮事項](../../connect/php/security-considerations-for-php-sql-driver.md)
-[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
+[データ型の変換](../../connect/php/converting-data-types.md)
+
+[セキュリティに関する考慮事項 Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
+
+[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)
+
 [sqlsrv_rows_affected](../../connect/php/sqlsrv-rows-affected.md)  
   

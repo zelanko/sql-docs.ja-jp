@@ -1,30 +1,31 @@
 ---
-title: "方法: SQLSRV ドライバーを使用する場合は、SQL Server データ型を指定 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: SQLSRV ドライバーを使用する場合は、SQL Server データ型を指定 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c3ad9f3e6aa9e136f76122f39079db21b31c30d3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: f88116134641d955c886bdee840982fa7710b934
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用する場合に SQL Server データ型を指定する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +37,7 @@ SQL Server データ型を指定するには、データを挿入または更新
 次の手順は、データをサーバーに送信する際に、SQL Server データ型を指定する方法をまとめています。  
   
 > [!NOTE]  
-> SQL Server データ型を指定しない場合、既定の型が使用されます。 既定の SQL Server データ型については、「 [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md)」を参照してください。  
+> SQL Server データ型が指定されていない場合は、既定の型が使用されます。 既定の SQL Server データ型については、「 [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md)」を参照してください。  
   
 1.  データを挿入または更新する Transact-SQL クエリを定義します。 クエリでパラメーター値のプレースホルダーとして疑問符 (?) を使用します。  
   
@@ -44,7 +45,7 @@ SQL Server データ型を指定するには、データを挿入または更新
   
 3.  クエリを準備または実行するときに使用する *$params* 配列を構築します。 SQL Server データ型を指定するときに、 *$params* 配列の各要素も配列にする必要があります。  
   
-4.  適切なを使用して目的の SQL Server データ型を指定する**sqlsrv_sqltype _\*** の各サブ配列の 4 番目のパラメーターとして定数、 *$params*配列。 完全な一覧については、 **sqlsrv_sqltype _\*** 定数、」の Sqltype セクションを参照してください[定数 &#40;です。Microsoft Drivers for PHP for SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). たとえば、下のコードで、 *$changeDate*、 *$rate*、および *$payFrequency* は、 **$params**配列に、それぞれ SQL Server 型 **datetime**、 **money** 、および *tinyint* として指定されています。 *$employeeId* には SQL Server 型が指定されておらず、整数に初期化されているため、既定の SQL Server 型の **integer** が使用されます。  
+4.  適切なを使用して目的の SQL Server データ型を指定する**sqlsrv_sqltype _\*** の各サブ配列の 4 番目のパラメーターとして定数、 *$params*配列。 完全な一覧については、 **sqlsrv_sqltype _\*** 定数、」の Sqltype セクションを参照してください[定数&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)です。 たとえば、下のコードで、 *$changeDate*、 *$rate*、および *$payFrequency* は、 **$params**配列に、それぞれ SQL Server 型 **datetime**、 **money** 、および *tinyint* として指定されています。 *$employeeId* には SQL Server 型が指定されておらず、整数に初期化されているため、既定の SQL Server 型の **integer** が使用されます。  
   
     ```  
     $employeeId = 5;  
@@ -60,9 +61,9 @@ SQL Server データ型を指定するには、データを挿入または更新
     ```  
   
 ## <a name="example"></a>例  
-次の例では、Adventureworks データベースの *HumanResources.EmployeePayHistory* テーブルにデータを挿入しています。 *$changeDate*、 *$rate*、および *$payFrequency* パラメーターに SQL Server 型が指定されています。 *$employeeId* パラメーターには既定の SQL Server 型が使用されています。 データが正常に挿入されたことを確認するため、同じデータを取得し、表示しています。  
+次の例にデータを挿入する、 *HumanResources.EmployeePayHistory* AdventureWorks データベースのテーブルです。 *$changeDate*、 *$rate*、および *$payFrequency* パラメーターに SQL Server 型が指定されています。 *$employeeId* パラメーターには既定の SQL Server 型が使用されています。 データが正常に挿入されたことを確認するため、同じデータを取得し、表示しています。  
   
-この例では、SQL Server および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+この例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -141,9 +142,13 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="see-also"></a>参照  
-[データの取得](../../connect/php/retrieving-data.md)  
-[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
-[方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)  
-[Converting Data Types](../../connect/php/converting-data-types.md)  
+[データの取得](../../connect/php/retrieving-data.md)
+
+[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)
+
+[データ型の変換](../../connect/php/converting-data-types.md)
+
 [方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)  
   

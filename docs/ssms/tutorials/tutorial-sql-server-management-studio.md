@@ -1,17 +1,19 @@
 ---
-title: "チュートリアル: SQL Server Management Studio (SSMS) | Microsoft Docs"
-ms.custom: 
+title: 'チュートリアル: SQL Server Management Studio (SSMS) | Microsoft Docs'
+ms.custom: ''
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-tutorial
-ms.reviewer: 
+ms.reviewer: sstein
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.tutorialstart.ssms.f1
+f1_keywords:
+- sql13.tutorialstart.ssms.f1
 helpviewer_keywords:
 - projects [SQL Server Management Studio], tutorials
 - templates [SQL Server], SQL Server Management Studio
@@ -23,46 +25,67 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
-caps.latest.revision: "22"
-author: stevestein
-ms.author: sstein
+caps.latest.revision: 22
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5e6ca96ba58cb6f32cdceb4a310ba5b94ce290ef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e6d1650a126991292680a40a0faa76f5ae8ffa42
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="tutorial-sql-server-management-studio"></a>チュートリアル: SQL Server Management Studio
+# <a name="tutorials-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のチュートリアル
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 SQL Server Management Studio (SSMS) のチュートリアルでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインフラストラクチャを管理するための統合環境について説明します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを構成、監視、および管理するためのグラフィカル インターフェイスを提供します。 さらに、データベースなどの、アプリケーションで使用されるデータ層コンポーネントを配置、監視、およびアップグレードすることもできます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、スクリプトを編集およびデバッグするための [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX、XML の各言語エディターも提供します。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
-このチュートリアルでは、SSMS での情報の操作方法とその機能の活用方法を学習します。
+
+これらのチュートリアルでは、SSMS での情報の操作方法とその機能の活用方法を学習します。
   
-SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 このチュートリアルでは、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能へのアクセス方法について説明します。  
+SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 これらのチュートリアルを行うと、SSMS 内で使用できるさまざまな機能に慣れることができます。  これらのチュートリアルでは、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能へのアクセス方法について説明します。  
+
+チュートリアルの内容は次のとおりです。 
+
   
-このチュートリアルは、次の 3 つのレッスンで構成されています。  
+- [チュートリアル: SSMS を使用した SQL Server に対する接続およびクエリ](connect-query-sql-server.md)
+
+    このセクションでは、SQL Server インスタンスに接続する方法を学習します。 新しいデータベースを作成してクエリを実行するための基本的な Transact-SQL (T-SQL) コマンドについても学習します。 
+
+- [チュートリアル: SSMS でオブジェクトのスクリプトを作成する](scripting-ssms.md)
+
+    このセクションでは、データベースやクエリなどのさまざまなオブジェクトのスクリプトを SSMS で作成する方法を学習します。 
+
+- [チュートリアル: SSMS でテンプレートを使用する](templates-ssms.md)
+   
+    このセクションでは、SSMS で構築済みのテンプレートを使う方法を学習します。 
+
+- [チュートリアル: SSMS を構成する](ssms-configuration.md)
+
+    このセクションでは、SSMS 環境の構成の基礎について学習します。 
   
-[レッスン 1 : SQL Server Management Studio での基本操作](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
-このレッスンでは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のコンポーネントを使用する方法、環境レイアウトを再構成する方法、および既定のレイアウトを復元する方法を学習します。  
-  
-[レッスン 2 : Transact-SQL の記述](lesson-2-writing-transact-sql.md)  
-このレッスンでは、クエリ エディターを開く方法、コードの管理方法、クエリ エディターのその他の機能を使用する方法を学習します。  
-  
-[レッスン 3: テンプレート、ソリューション、およびスクリプト プロジェクトの操作](lesson-3-working-with-templates-solutions-and-script-projects.md)  
-このレッスンでは、テンプレートを使用して、スクリプトをソリューションやプロジェクトにまとめる方法を学習します。  
+
+- [チュートリアル: SSMS を使用するためのヒントとテクニック](ssms-tricks.md)
+
+    このセクションでは、SSMS の使用に関するその他のヒントとテクニックを学習します。 このチュートリアルは次のような内容です。
+    - テキストのコメント化とコメント解除
+    - テキストのインデント
+    - オブジェクト エクスプローラーでのオブジェクトのフィルター
+    - SQL Server エラー ログへのアクセス
+    - インスタンスの名前の検索 
+ 
   
 ## <a name="requirements"></a>必要条件  
 このチュートリアルは、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] には慣れていないが、データベースの概念と [!INCLUDE[tsql](../../includes/tsql-md.md)] を理解している、熟練のデータベース管理者およびデータベース開発者を対象としています。  
   
 このチュートリアルを使用するには、以下のコンポーネントがインストールされている必要があります。  
 
-  
--   最新バージョンの [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) をインストールします。  
--   AdventureWorks サンプル データベースが含まれる SQL Server 2016 以降のバージョン。 AdventureWorks サンプル データベースをインストールするには、「[AdventureWorks2014](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2014)」を参照して AdventureWorks2014 (OLTP) データベースをインストールしてください。  
+  -   最新バージョンの [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) をインストールします。  
+
+最初のセクションではデータベースを作成する手順を説明しますが、[AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)では他のサンプル データベースが見つかります。 SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
+
 
   
 ## <a name="see-also"></a>参照  

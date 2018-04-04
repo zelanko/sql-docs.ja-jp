@@ -1,35 +1,36 @@
 ---
-title: "既存の階層データを使用したテーブルの設定 | Microsoft Docs"
-ms.custom: 
+title: 既存の階層データを使用したテーブルの設定 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09e5072fb37f7791f3f597ab3d2a6e382e302e47
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: e2582323d122a3b8cd8042fc028d8da73fb8a1a1
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="lesson-1-2---populating-a-table-with-existing-hierarchical-data"></a>レッスン 1-2 - 既存の階層データを使用したテーブルの設定
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] ここでは、新しいテーブルを作成して、そのテーブルに **EmployeeDemo** テーブルのデータを設定します。 この作業には、次の手順があります。  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+ここでは、新しいテーブルを作成して、そのテーブルに **EmployeeDemo** テーブルのデータを設定します。 この作業には、次の手順があります。  
   
 -   **hierarchyid** 列を含む新しいテーブルを作成します。 この列を、既存の **EmployeeID** 列や **ManagerID** 列の代わりに使用してもかまいません。 ただし、これらの列は保持する必要があります。 これは、既存のアプリケーションがこれらの列を参照している可能性があるためでもあり、転送後のデータをわかりやすくするためでもあります。 テーブル定義では、 **OrgNode** が主キーであることを指定します。したがって、この列には一意の値を格納する必要があります。 **OrgNode** 列のクラスター化インデックスは、 **OrgNode** シーケンスのデータを格納します。  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/18/2018
 -   クエリ エディター ウィンドウで、次のコードを実行し、 **HumanResources.NewOrg**という名前の新しいテーブルを作成します。  
   
     ```  
-    CREATE TABLE NewOrg  
+    CREATE TABLE HumanResources.NewOrg  
     (  
       OrgNode hierarchyid,  
       EmployeeID int,  
@@ -83,9 +84,8 @@ ms.lasthandoff: 01/18/2018
     INSERT #Children (EmployeeID, ManagerID, Num)  
     SELECT EmployeeID, ManagerID,  
       ROW_NUMBER() OVER (PARTITION BY ManagerID ORDER BY ManagerID)   
-    FROM EmployeeDemo  
-    GO  
-  
+    FROM HumanResources.EmployeeDemo  
+    GO 
     ```  
   
 2.  **#Children** テーブルを確認します。 **Num** 列に、各管理者の連続する番号がどのように格納されているかに注目してください。  
@@ -97,31 +97,24 @@ ms.lasthandoff: 01/18/2018
     ```  
   
     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-    `EmployeeID ManagerID Num`  
-  
-    `---------- --------- ---`  
-  
-    `1        NULL       1`  
-  
-    `2         1         1`  
-  
-    `3         1         2`  
-  
-    `4         2         1`  
-  
-    `5         2         2`  
-  
-    `6         2         3`  
-  
-    `7         3         1`  
-  
-    `8         3         2`  
-  
-    `9         4         1`  
-  
-    `10        4         2`  
-  
+
+    ```
+    EmployeeID  ManagerID   Num
+    1   NULL    1
+    2   1   1
+    16  1   2
+    25  1   3
+    234 1   4
+    263 1   5
+    273 1   6
+    3   2   1
+    4   3   1
+    5   3   2
+    6   3   3
+    7   3   4
+    ```
+
+
 3.  **NewOrg** テーブルを設定します。 GetRoot メソッドと ToString メソッドを使用して **Num** 値を **hierarchyid** 形式に連結し、結果の階層値で **OrgNode** 列を更新します。  
   
     ```  
@@ -131,7 +124,7 @@ ms.lasthandoff: 01/18/2018
     SELECT hierarchyid::GetRoot() AS OrgNode, EmployeeID   
     FROM #Children AS C   
     WHERE ManagerID IS NULL   
-  
+
     UNION ALL   
     -- This section provides values for all nodes except the root  
     SELECT   
@@ -141,23 +134,21 @@ ms.lasthandoff: 01/18/2018
     JOIN paths AS p   
        ON C.ManagerID = P.EmployeeID   
     )  
-    INSERT NewOrg (OrgNode, O.EmployeeID, O.LoginID, O.ManagerID)  
+    INSERT HumanResources.NewOrg (OrgNode, O.EmployeeID, O.LoginID, O.ManagerID)  
     SELECT P.path, O.EmployeeID, O.LoginID, O.ManagerID  
-    FROM EmployeeDemo AS O   
+    FROM HumanResources.EmployeeDemo AS O   
     JOIN Paths AS P   
        ON O.EmployeeID = P.EmployeeID  
-    GO  
-  
+    GO 
     ```  
   
 4.  **hierarchyid** 列は、文字形式に変換すると、よりわかりやすくなります。 次のコードを実行して、 **NewOrg** テーブルのデータを確認します。このコードには、 **OrgNode** 列の 2 つの表記が含まれています。  
   
     ```  
     SELECT OrgNode.ToString() AS LogicalNode, *   
-    FROM NewOrg   
+    FROM HumanResources.NewOrg   
     ORDER BY LogicalNode;  
     GO  
-  
     ```  
   
     **LogicalNode** 列は、階層を表す読みやすいテキスト形式に **hierarchyid** 列を変換します。 残りの作業では、 `ToString()` メソッドを使用して、 **hierarchyid** 列の論理形式を表示します。  

@@ -1,32 +1,34 @@
 ---
-title: "sqlsrv_cancel |Microsoft ドキュメント"
-ms.custom: 
+title: sqlsrv_cancel |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_cancel
+apiname:
+- sqlsrv_cancel
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_cancel
 - API Reference, sqlsrv_cancel
 ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3d16a6d3407f6533cbf9a0b3ed9ad440a8ad2ab1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 71de874d6f89bdec64011eb054f2de259bd47b01
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvcancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +49,7 @@ sqlsrv_cancel( resource $stmt)
 ブール値: 操作が成功した場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="example"></a>例  
-次の例では、 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースを使用してクエリを実行し、変数 *$salesTotal* が、指定した値に達するまで結果を消費してカウントします。 残りのクエリ結果は破棄されます。 この例では、ローカル コンピューターに SQL Server および AdventureWorks データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例のターゲット、 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)クエリを実行するデータベース、消費し、結果を変数までカウント*$salesTotal*が指定した値に達する。 残りのクエリ結果は破棄されます。 この例では、ローカル コンピューターに SQL Server および AdventureWorks データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -100,9 +102,14 @@ sqlsrv_cancel( $stmt);
 準備ができたし、の組み合わせを使用して実行するステートメント[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)と[sqlsrv_execute](../../connect/php/sqlsrv-execute.md)再実行することができます**sqlsrv_execute** を呼び出した後**sqlsrv_cancel**です。 実行すると、ステートメント[sqlsrv_query](../../connect/php/sqlsrv-query.md)呼び出した後に再実行することはできません**sqlsrv_cancel**です。  
   
 ## <a name="see-also"></a>参照  
-[SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
-[サーバーへの接続](../../connect/php/connecting-to-the-server.md)  
-[データの取得](../../connect/php/retrieving-data.md)  
-[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
-[sqlsrv_free_stmt](../../connect/php/sqlsrv-free-stmt.md)  
+[SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[サーバーへの接続](../../connect/php/connecting-to-the-server.md)
+
+[データの取得](../../connect/php/retrieving-data.md)
+
+[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[sqlsrv_free_stmt](../../connect/php/sqlsrv-free-stmt.md)
+
   

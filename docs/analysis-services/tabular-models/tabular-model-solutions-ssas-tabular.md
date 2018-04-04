@@ -1,31 +1,31 @@
 ---
-title: "テーブル モデル ソリューション |Microsoft ドキュメント"
+title: テーブル モデル ソリューション |Microsoft ドキュメント
 ms.date: 05/22/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0e9931ff-439e-4e1a-9ef2-5d3971187eb9
-caps.latest.revision: 
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 5b84ae0fa5911c0140213583462b20c9054f0f4b
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/31/2018
 ---
 # <a name="creating-tabular-models"></a>表形式モデルを作成します。
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-このセクションの各トピックでは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のテーブル モデル デザイナーを使用してテーブル モデルを作成する方法についての情報を示します。  
+  このセクションの各トピックでは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のテーブル モデル デザイナーを使用してテーブル モデルを作成する方法についての情報を示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [テーブル モデル デザイナー](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)  
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/23/2018
   
  [Excel で分析します。](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [表形式モデル ソリューションの配置](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [テーブル モデル ソリューションの配置](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Data Tools (SSDT) のダウンロードします。](../../ssdt/download-sql-server-data-tools-ssdt.md)   

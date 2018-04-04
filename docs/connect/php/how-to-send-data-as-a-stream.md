@@ -1,42 +1,43 @@
 ---
-title: "方法: データをストリームとして送信 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/19/2017
+title: '方法: データをストリームとして送信 |Microsoft ドキュメント'
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data
 - streaming data
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
-caps.latest.revision: "30"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe89454453e105ca264f5e04aacb8581dfb81cac
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b1821f922e9c45340365abf680f5f46a61d6eb1e
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-send-data-as-a-stream"></a>方法: ストリームとしてデータを送信する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] は、ラージ オブジェクトをサーバーに送信するために PHP ストリームを利用します。 このトピックの例では、ストリームとしてデータを送信する方法を示します。 最初の例では、SQLSRV ドライバーを使用して、クエリの実行時にすべてのストリーム データを送信する既定の動作を示します。 2 番目の例では、SQLSRV ドライバーを使用して、サーバーに一度に最大 8 キロバイト (8K) のストリーム データを送信する方法を示します。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] は、ラージ オブジェクトをサーバーに送信するために PHP ストリームを利用します。 このトピックの例では、ストリームとしてデータを送信する方法を示します。 最初の例では、SQLSRV ドライバーを使用して、クエリの実行時にすべてのストリーム データを送信する既定の動作を示します。 2 番目の例は、サーバーに一度にストリーム データの最大 8 キロバイト (8 kB) を送信するのに方法を示すの SQLSRV ドライバーを使用します。  
   
 3 番目の例では、PDO_SQLSRV ドライバーを使用して、サーバーにストリーム データを送信する方法を示します。  
   
-## <a name="example"></a>例  
+## <a name="example-sending-stream-data-at-execution"></a>例: 実行時にストリーム データを送信します。
 次の例では、AdventureWorks データベースの *Production.ProductReview* テーブルに行を挿入します。 顧客のコメント (*$comments*)、PHP でストリームとして開かれた[fopen](http://php.net/manual/en/function.fopen.php)関数し、クエリの実行時にサーバーにストリームされます。  
   
-この例では、SQL Server および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 すべての出力がコンソールに書き込まれます。  
+例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 すべての出力がコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -89,10 +90,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>例  
-次の例は上記の例と同じですが、実行時にすべてのストリーム データを送信する既定の動作は無効になっています。 この例では、 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) を使用して、ストリーム データをサーバーに送信します。 呼び出しごとに最大 8 キロバイト (8 K) のデータが送信される**sqlsrv_send_stream_data**です。 スクリプトでは、 **sqlsrv_send_stream_data** によって行われた呼び出しの数をカウントし、カウントをコンソールに表示します。  
+## <a name="example-sending-stream-data-using-sqlsrvsendstreamdata"></a>例: sqlsrv_send_stream_data のストリームを使用してデータを送信します。
+次の例は前の例と同じですが、実行時にすべてのストリーム データを送信するの既定の動作がになっています。 この例では、 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) を使用して、ストリーム データをサーバーに送信します。 呼び出しごとに最大 8 キロバイト (8 kB) のデータが送信される**sqlsrv_send_stream_data**です。 スクリプトでは、 **sqlsrv_send_stream_data** によって行われた呼び出しの数をカウントし、カウントをコンソールに表示します。  
   
-この例では、SQL Server および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 すべての出力がコンソールに書き込まれます。  
+例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 すべての出力がコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -156,7 +157,7 @@ sqlsrv_close( $conn);
   
 このトピックの例では文字データをサーバーに送信し、任意の形式のデータをストリームとして送信できます。 たとえば、このトピックで紹介されている手法を使用し、ストリームとしてバイナリ形式で画像を送信することもできます。  
   
-## <a name="example"></a>例  
+## <a name="example-sending-an-image-as-a-stream"></a>例: ストリームとして画像を送信します。 
   
 ```  
 <?php  
@@ -176,7 +177,9 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>参照  
-[データの更新 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[SQLSRV ドライバーを使用してデータをストリームとして取得する](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)  
+[データの更新 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[SQLSRV ドライバーを使用してデータをストリームとして取得する](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
+
 [ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
   

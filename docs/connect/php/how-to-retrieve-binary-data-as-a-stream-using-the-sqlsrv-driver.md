@@ -1,30 +1,31 @@
 ---
-title: "方法: SQLSRV ドライバーを使用してストリームとしてバイナリ データの取得 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: SQLSRV ドライバーを使用してストリームとしてバイナリ データの取得 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - retrieving data, as a binary stream
 - streaming data
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
-caps.latest.revision: "21"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fcc77b9da09f1cc59afb06cbd4a562213479251f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: f992cf6f54469da63d910e2fb1d53be4b026e06b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用してバイナリ データをストリームとして取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,9 +39,9 @@ ms.lasthandoff: 11/18/2017
 ## <a name="example"></a>例  
 次の例では、AdventureWorks データベースの *Production.ProductPhoto* テーブルからバイナリ データ (この場合は画像) を取得します。 画像はストリームとして取得されて、ブラウザーに表示されます。  
   
-ストリームとしての画像データの取得は、戻り値の型をバイナリ ストリームとして指定した [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) および [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) を使用して行われます。 戻り値の型が定数を使用して、指定された**SQLSRV_PHPTYPE_STREAM**です。 について**sqlsrv**定数を参照してください[定数 &#40;です。Microsoft Drivers for PHP for SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+ストリームとしての画像データの取得は、戻り値の型をバイナリ ストリームとして指定した [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) および [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) を使用して行われます。 戻り値の型が定数を使用して、指定された**SQLSRV_PHPTYPE_STREAM**です。 について**sqlsrv**定数を参照してください[定数&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)です。  
   
-この例では、SQL Server および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 ブラウザーからこの例を実行すると、すべての出力はブラウザーに書き込まれます。  
+例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 ブラウザーからこの例を実行すると、すべての出力はブラウザーに書き込まれます。  
   
 ```  
 <?php  
@@ -96,7 +97,9 @@ sqlsrv_close( $conn);
 この例の戻り値の型の指定では、バイナリ ストリームとして PHP の戻り値の型を指定する方法が示されています。 技術的には、これは必須でない例では、ため、 *LargePhoto*フィールド varbinary (max) 型の SQL Server があり、既定でバイナリ ストリームとして返されるためです。 既定の PHP データ型の詳細については、「 [Default PHP Data Types](../../connect/php/default-php-data-types.md)」を参照してください。 PHP の戻り値の型の指定方法の詳細については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
-[データの取得](../../connect/php/retrieving-data.md)  
-[SQLSRV ドライバーを使用してデータをストリームとして取得する](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)  
+[データの取得](../../connect/php/retrieving-data.md)
+
+[SQLSRV ドライバーを使用してデータをストリームとして取得する](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
+
 [ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
   

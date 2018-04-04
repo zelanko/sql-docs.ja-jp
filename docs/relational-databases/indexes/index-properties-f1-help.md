@@ -1,16 +1,16 @@
 ---
-title: "[インデックスのプロパティ] の F1 ヘルプ | Microsoft Docs"
-ms.custom: 
+title: '[インデックスのプロパティ] の F1 ヘルプ | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.indexproperties.filter.f1
@@ -21,7 +21,7 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 
+caps.latest.revision: ''
 author: barbkess
 ms.author: barbkess
 manager: craigg
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/23/2018
   
  [[インデックスのプロパティ] の [全般] ページ](#General)  
   
- [[<table name> から (インデックス) 列を選択] ダイアログ ボックス](#Columns)  
+ [から (インデックス) 列を選択 ダイアログ ボックス](#Columns)  
   
  [[インデックスのプロパティ] の [ストレージ] ページ](#Storage)  
   

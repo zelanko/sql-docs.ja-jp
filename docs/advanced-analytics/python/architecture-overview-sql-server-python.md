@@ -1,29 +1,29 @@
 ---
-title: "アーキテクチャ |Microsoft ドキュメント"
-ms.custom: 
+title: アーキテクチャ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/03/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5ca823bc7094c77a31cfd3178294cd49a360d77a
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 1cea2b772ec098a5354727ac9eca012ef443e3e6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>Python の Machine Learning のサービスのアーキテクチャの概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このトピックでは、Python を外部スクリプトの実行をサポートするデータベース エンジンと SQL Server での Python の相互運用性を有効にする新しいコンポーネントのセキュリティ モデルでは、コンポーネントを含む、SQL Server と統合する方法の概要を示します。 詳細については、リンク先のトピックを参照してください。
+この記事では、Python を外部スクリプトの実行をサポートするデータベース エンジンと SQL Server での Python の相互運用性を有効にする新しいコンポーネントのセキュリティ モデルでは、コンポーネントを含む、SQL Server と統合する方法の概要を示します。 詳細については、リンク先の記事を参照してください。
 
 > [!IMPORTANT]
 > Python のサポートは、SQL Server 2017 CTP 2.0 から使用可能です。 このプレリリース機能は変更されます。

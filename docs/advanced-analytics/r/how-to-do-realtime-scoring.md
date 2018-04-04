@@ -1,29 +1,29 @@
 ---
-title: "リアルタイムのスコアリングまたは SQL Server のネイティブのスコア付けを実行する方法 |Microsoft ドキュメント"
-ms.custom: 
+title: リアルタイムのスコアリングまたは SQL Server のネイティブのスコア付けを実行する方法 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/09/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9287a85017df7b05b3b354a855811ea528a3ad79
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2a79ab351f109959a743fecfb4cb6a0d186c6892
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>リアルタイムのスコアリングまたは SQL Server のネイティブのスコア付けを実行する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このトピックでは、SQL Server 2017 および SQL Server 2016 でネイティブのスコア付け機能と、リアルタイムのスコアリングを実行する方法の手順とサンプル コードを提供します。 リアルタイムのスコアリングとネイティブのスコア付けの両方の目的は、小さいバッチに分割のスコア付けの操作のパフォーマンスを向上させるためにです。
+この記事では、SQL Server 2017 および SQL Server 2016 でネイティブのスコア付け機能と、リアルタイムのスコアリングを実行する方法の手順とサンプル コードを提供します。 リアルタイムのスコアリングとネイティブのスコア付けの両方の目的は、小さいバッチに分割のスコア付けの操作のパフォーマンスを向上させるためにです。
 
 リアルタイムのスコアリングとネイティブのスコア付けの両方が機械学習モデルを R. をインストールすることがなくを使用するために設計されています必要なを行うには、互換性のある形式で事前トレーニング済みモデルを取得し、SQL Server データベースに保存します。
 
@@ -178,7 +178,7 @@ go
 
 セットアップに必要な手順を説明**リアルタイム**予測、および T-SQL から関数を呼び出す方法の例を示します。
 
-### <a name ="bkmk_enableRtScoring"></a>手順 1 です。 リアルタイムのプロシージャをスコア付けを有効にします。
+### <a name ="bkmk_enableRtScoring"></a> 手順 1 です。 リアルタイムのプロシージャをスコア付けを有効にします。
 
 スコア付けに使用する各データベースに対してこの機能を有効にする必要があります。 サーバーの管理者は、RevoScaleR パッケージに含まれている RegisterRExt.exe、コマンド ライン ユーティリティを実行する必要があります。
 
@@ -202,7 +202,7 @@ go
 3. RegisterRExt.exe では、次のオブジェクトを作成します。
 
     + 信頼されたアセンブリ
-    + ストアド プロシージャ`sp_rxPredict`
+    + ストアド プロシージャ `sp_rxPredict`
     + 新しいデータベース ロール、`rxpredict_users`です。 データベース管理者は、このロールを使用して、リアルタイムのスコア付けの機能を使用するユーザーに権限を与えることができます。
 
 4. 実行する必要がある任意のユーザーを追加`sp_rxPredict`新しいロールにします。
@@ -221,7 +221,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### <a name="step-3-call-sprxpredict"></a>手順 3. 呼び出し sp_rxPredict
 
-Sp を呼び出す\_rxPredict とすると、他のストアド プロシージャです。 現在のリリースでは、ストアド プロシージャは 2 つのパラメーターを受け取ります:  _@model_ バイナリ形式でモデルおよび _@inputData_  、スコアリングに使用するデータの有効な SQL クエリとして定義されている.
+Sp を呼び出す\_rxPredict とすると、他のストアド プロシージャです。 現在のリリースでは、ストアド プロシージャは 2 つのパラメーターを受け取ります: _@model_バイナリ形式でモデルおよび_@inputData_ 、スコアリングに使用するデータの有効な SQL クエリとして定義されている.
 
 バイナリ形式、PREDICT 関数によって使用される同じであるために、前の例から、モデルおよびデータ テーブルを使用できます。
 
@@ -246,7 +246,7 @@ EXEC sp_rxPredict
 
 ## <a name="disable-realtime-scoring"></a>リアルタイムのスコア付けを無効にします。
 
-リアルタイムのスコア付けの機能を無効にするには、管理者特権のコマンド プロンプトを開きし、次のコマンドを実行します。`RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
+リアルタイムのスコア付けの機能を無効にするには、管理者特権のコマンド プロンプトを開きし、次のコマンドを実行します。 `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>Microsoft R Server または Machine Learning Server スコアリング リアルタイム
 

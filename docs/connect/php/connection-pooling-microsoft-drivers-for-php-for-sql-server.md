@@ -1,28 +1,30 @@
 ---
-title: "接続のプール (Microsoft Drivers for PHP for SQL Server) |Microsoft ドキュメント"
-ms.custom: 
+title: 接続のプール (Microsoft Drivers for PHP for SQL Server) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: connection pooling support
+helpviewer_keywords:
+- connection pooling support
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5edf501c5a3a46fd30d21c4c5fdad81711c539d5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 287cba2cbca687ef5006ae0410b2cd6a0f2598b7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>接続のプール (Microsoft SQL Server 用 Drivers for PHP)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,13 +39,13 @@ ms.lasthandoff: 11/18/2017
   
 -   接続を閉じると、接続がプールに返されます。  
   
-接続のプールに関する詳細については、「 [ドライバー マネージャーの接続のプール](http://go.microsoft.com/fwlink/?linkid=119622)」を参照してください。  
+接続プールの詳細については、次を参照してください。[ドライバー マネージャーの接続のプール](../../odbc/reference/develop-app/driver-manager-connection-pooling.md)です。  
   
 ## <a name="enablingdisabling-connection-pooling"></a>有効化/無効にする接続プール
 ### <a name="windows"></a>Windows
 値を設定して (接続プールで同等の接続を探して) ではなく、新しい接続を作成するドライバーを強制することができます、 *ConnectionPooling*への接続文字列内の属性**false** (または 0) です。  
   
-場合、 *ConnectionPooling*属性が、接続文字列から省略するかに設定されているかどうか**true** (または 1) では、同等の接続が存在しない場合、ドライバーは新しい接続を作成だけが、接続プールです。  
+場合、 *ConnectionPooling*属性が、接続文字列から省略するかに設定されているかどうかは**true** (または 1)、ドライバーを作成するだけの新しい接続では、同等の接続が存在しない場合、接続プールです。  
   
 その他の接続属性の詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。  
 ### <a name="linux-and-mac-os-x"></a>Linux および Mac OS X
@@ -66,6 +68,7 @@ Pooling=No
 ```
   
 ## <a name="see-also"></a>参照  
-[方法: Windows 認証を使用して接続する](../../connect/php/how-to-connect-using-windows-authentication.md)  
+[方法: Windows 認証を使用して接続する](../../connect/php/how-to-connect-using-windows-authentication.md)
+
 [方法: SQL Server 認証を使用して接続する](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   

@@ -1,28 +1,28 @@
 ---
-title: "Azure Active Directory 認証を使用して接続する |Microsoft ドキュメント"
-ms.custom: 
+title: Azure Active Directory 認証を使用して接続する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
 ms.technology:
 - drivers
 ms.topic: article
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 28c8e53032cacb6620aeb304c228c35deec9e7a6
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: a0cbb8a2b6eff8e3a612039616f9b497a2ea2737
+ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 認証を使用して接続します。
 この記事では、SQL Server 用 Microsoft JDBC Driver 6.0 (またはそれ以上) は、Azure Active Directory の認証の機能を使用する Java アプリケーションを開発する方法について説明します。
@@ -212,16 +212,15 @@ You have successfully logged on as: <your user name>
 1.  Azure Active Directory で、サービスのアプリケーション アカウントを作成します。
     1. Azure 管理ポータルにサインインするには
     2. Azure Active Directory での左側にあるナビゲーション ウィンドウでをクリックします。
-    3. サンプル アプリケーションを登録したいディレクトリ テナントをクリックします。 これは、データベース (データベースをホストするサーバー) に関連付けられている同じディレクトリでなければなりません。
-    4. [アプリケーション] タブをクリックします。
-    5. ドロアーには、[追加] をクリックします。
-    6. 「自分の所属組織で開発中のアプリケーションを追加する」をクリックします。
-    7. アプリケーションのフレンドリ名として mytokentest を入力して、"Web Application and/or Web API"を選択し、[次へ] をクリックします。
-    8. このアプリケーションは、デーモン/サービスと web アプリケーションではないと仮定すると、必要はありません、サインイン URL またはアプリ ID URI。 これら 2 つのフィールドを http://mytokentest」と入力します。
-    9. Azure ポータルで、アプリケーションの構成 タブをクリックします。
-    10. クライアント ID 値を検索し、コピー別に、この後で場合に必要 (たとえば、a4bbfe26-dbaa-4fec-8ef5-223d229f647d) アプリケーションを構成します。 次のスナップショットを参照してください。
-    11. 「キー」セクションで、キーの期間を選択、構成を保存および後で使用できるキーをコピーします。 これは、クライアント シークレットです。
-    12. 下部で、「エンドポイントの表示」をクリックし、後で使用できる「OAUTH 2.0 承認エンドポイント」の下の URL をコピーします。 これは、STS の URL です。
+    3. 「アプリの登録」タブをクリックします。
+    4. ドロアーには、「新しいアプリケーションの登録」をクリックします。
+    5. アプリケーションのフレンドリ名として mytokentest を入力して、"Web アプリ/API"を選択します。
+    6. サインオン URL は不要です。 だけのものを指定して:"http://mytokentest"です。
+    7. 下部にある [作成] をクリックします。
+    9. Azure ポータルで、アプリケーションの [設定] タブをクリックし、[プロパティ] タブを開きます。
+    10. "アプリケーション ID"(別名クライアント ID) の値を検索し、コピー別に、この後で場合に必要 (たとえば、1846943b-ad04-4808-aa13-4702d908b5c1) アプリケーションを構成します。 次のスナップショットを参照してください。
+    11. "アプリ ID URL"の値を検索し、コピー別に、これは、STS の URL。
+    12. [「キー」] セクションでは、[名前] フィールドに情報を入力、キーの期間を選択し、(値フィールドを空のままにして) の構成を保存して、キーを作成します。 値フィールドにする必要があります、保存した後に生成された値をコピーする、自動的に入力します。 これは、クライアント シークレットです。
 
     ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
 2. Azure Active Directory 管理者と、アプリケーションのプリンシパルの T-SQL コマンド プロビジョニング、包含データベース ユーザーを使用して Azure SQL Server のユーザー データベースにログオンします。 参照してください、 [SQL データベースまたは SQL データ ウェアハウス認証を使用して Azure Active Directory に接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)を Azure Active Directory 管理者と包含データベース ユーザーを作成する方法の詳細についてはします。
@@ -253,8 +252,8 @@ public class TokenBasedExample {
 
         // Retrieve the access token from the AD.
         String spn = "https://database.windows.net/";
-        String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
-        String clientId = "a4bbfe26-dbaa-4fec-8ef5-223d229f647d"; // Replace with your client ID.
+        String stsurl = "https://microsoft.onmicrosoft.com/..."; // Replace with your STS URL.
+        String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 
         AuthenticationContext context = new AuthenticationContext(stsurl, false, Executors.newFixedThreadPool(1));

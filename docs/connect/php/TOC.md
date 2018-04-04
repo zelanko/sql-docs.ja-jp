@@ -1,11 +1,11 @@
 
-# [Microsoft SQL Server 用 PHP Driver](microsoft-php-driver-for-sql-server.md)
+# [Microsoft SQL Server 用 Drivers for PHP](microsoft-php-driver-for-sql-server.md)
 
 # [作業の開始](getting-started-with-the-php-sql-driver.md)
 ## [ステップ 1: PHP 開発用に開発環境を構成する](step-1-configure-development-environment-for-php-development.md)
 ## [ステップ 2: PHP 開発用の SQL データベースを作成する](step-2-create-a-sql-database-for-php-development.md)
-## [ステップ 3: PHP を使用した SQL への接続を概念実証する](step-3-proof-of-concept-connecting-to-sql-using-php.md)
-## [ステップ 4: PHP で SQL に弾性的に接続する](step-4-connect-resiliently-to-sql-with-php.md)
+## [ステップ 3: PHP を使用した SQL Server への接続を概念実証する](step-3-proof-of-concept-connecting-to-sql-using-php.md)
+## [ステップ 4: PHP で SQL Server に弾性的に接続する](step-4-connect-resiliently-to-sql-with-php.md)
 
 # [概要](overview-of-the-php-sql-driver.md)
 ## [システム要件](system-requirements-for-the-php-sql-driver.md)
@@ -15,6 +15,7 @@
 ## [リリース ノート](release-notes-for-the-php-sql-driver.md)
 ## [サポート リソース](support-resources-for-the-php-sql-driver.md)
 ## [コード サンプルについて](about-code-examples-in-the-documentation.md)
+## [SQL Server 用 Microsoft Drivers for PHP のサポート表](microsoft-php-drivers-for-sql-server-support-matrix.md)
 
 # [プログラミング ガイド](programming-guide-for-php-sql-driver.md)
 ## [サーバーへの接続](connecting-to-the-server.md)
@@ -25,8 +26,8 @@
 ### [接続のプール](connection-pooling-microsoft-drivers-for-php-for-sql-server.md)
 ### [方法: 複数のアクティブな結果セット (MARS) を無効にする](how-to-disable-multiple-active-resultsets-mars.md)
 ### [接続オプション](connection-options.md)
-### [LocalDB 用 PHP Driver for SQL Server のサポート](php-driver-for-sql-server-support-for-localdb.md)
-### [高可用性、ディザスター リカバリーの PHP Driver for SQL Server のサポート](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)
+### [LocalDB のサポート](php-driver-for-sql-server-support-for-localdb.md)
+### [高可用性およびディザスター リカバリーのサポート](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)
 ### [Microsoft Azure SQL Database への接続](connecting-to-microsoft-azure-sql-database.md)
 ### [接続の復元性](connection-resiliency.md)
 ## [実行関数の比較](comparing-execution-functions.md)
@@ -59,6 +60,7 @@
 ### [方法: SQLSRV ドライバーを使用してエラーおよび警告処理を構成する](how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 ### [方法: SQLSRV ドライバーを使用してエラーと警告を処理する](how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)
 ## [アクティビティのログ記録](logging-activity.md)
+## [SQL Server 用 PHP ドライバーと共に Always Encrypted を使用する](using-always-encrypted-php-drivers.md)
 ## [定数 (Microsoft Drivers for PHP for SQL Server)](constants-microsoft-drivers-for-php-for-sql-server.md)
 ## [SQLSRV ドライバー API リファレンス](sqlsrv-driver-api-reference.md)
 ### [sqlsrv_begin_transaction](sqlsrv-begin-transaction.md)

@@ -1,33 +1,35 @@
 ---
-title: "sqlsrv_fetch_array |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/19/2017
+title: sqlsrv_fetch_array |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_fetch_array
+apiname:
+- sqlsrv_fetch_array
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_fetch_array
 - retrieving data, as an array
 - API Reference, sqlsrv_fetch_array
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
-caps.latest.revision: "52"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 63fd8fa0274ed5e83774d6d9929023fe58ad6553
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 087d26284d99ee0021acded71b7bb5a2ff3e2cd6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +48,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [省略可能]: 定義済みの定数です。 このパラメーターには、次の表に示すいずれかの値を指定できます。  
   
-|値|Description|  
+|[値]|Description|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|次のデータ行は数値の配列として返されます。|  
 |SQLSRV_FETCH_ASSOC|次のデータ行は連想配列として返されます。 配列キーは、結果セットの列名です。|  
@@ -87,7 +89,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
 結果セットに名前のない複数の列が含まれている場合は、名前のない最後の列の値が、空の文字列 ("") キーに割り当てられます。  
   
 ## <a name="example"></a>例  
-次の例では、結果セットの各行を連想 **配列**として取得します。 この例では、SQL Server と [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、結果セットの各行を連想 **配列**として取得します。 例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -130,7 +132,7 @@ sqlsrv_close( $conn);
   
 この例から、製品情報を取得、 *Purchasing.PurchaseOrderDetail*を指定した日付と在庫数を持つ製品用の AdventureWorks データベースのテーブル (*StockQty*)指定した値より小さい。  
   
-この例では、SQL Server および [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  
@@ -186,8 +188,11 @@ sqlsrv_close( $conn);
 名前のないフィールドが取得された場合、配列要素の連想キーは空の文字列 ("") になります。 詳細については、「 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
-[SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
-[データの取得](../../connect/php/retrieving-data.md)  
-[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
-[プログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
+[SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[データの取得](../../connect/php/retrieving-data.md)
+
+[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[For PHP for SQL Server の Microsoft drivers ガイドのプログラミング](../../connect/php/programming-guide-for-php-sql-driver.md)
   

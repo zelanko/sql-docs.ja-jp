@@ -102,8 +102,8 @@
 ## [データ マイニング](data-mining-tutorials-analysis-services.md)  
 
 # 操作方法
-## [テーブル モデリング](../analysis-services/tabular-models/tabular-models-ssas.md)
-## [多次元モデリング](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
+## [テーブル モデル](../analysis-services/tabular-models/tabular-models-ssas.md)
+## [多次元モデル](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
 ## [データ マイニング](../analysis-services/data-mining/data-mining-ssas.md)
 ## [Power Pivot for SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)
 ## [サーバーの管理](../analysis-services/instances/analysis-services-instance-management.md)

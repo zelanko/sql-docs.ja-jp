@@ -1,34 +1,34 @@
 ---
-title: "SQL Server の Machine Learning のサービスのアーキテクチャの概要 |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server の Machine Learning のサービスのアーキテクチャの概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/03/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7993a93eec3bd657f4d37fbbbfbb16dd514453fa
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>SQL Server の Machine Learning のサービスのアーキテクチャの概要 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このトピックでは、SQL Server での Python と R スクリプトの実行をサポートする機能拡張フレームワークの目標について説明します。
+この記事では、SQL Server での Python と R スクリプトの実行をサポートする機能拡張フレームワークの目標について説明します。
 
 これらの目標を達成するアーキテクチャを設計する方法の概要についても用意されています。 R、Python のサポートと SQL Server、および統合のメリットで実行される方法です。
 
-全体的に見て、拡張性フレームワークは若干の違いと呼ばれる起動ツールの詳細、構成オプションなどの R、Python、ほぼ同じです。 特定の言語の実装の詳細については、これらのトピックを参照してください。
+全体的に見て、拡張性フレームワークは若干の違いと呼ばれる起動ツールの詳細、構成オプションなどの R、Python、ほぼ同じです。 特定の言語の実装の詳細については、次の記事を参照してください。
 
 - [SQL Server R Services のアーキテクチャの概要](r/architecture-overview-sql-server-r.md)
 - [SQL Server での Python のアーキテクチャの概要](python/architecture-overview-sql-server-python.md)
@@ -96,7 +96,7 @@ SQL Server によって管理されているセキュリティで保護された
 + [Microsoft R Server と Machine Learning サーバー](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)
 
   開発、配布、および machine learning のジョブを管理するための複数のプラットフォーム環境
-+ [データ サイエンス仮想マシン](https://docs.microsoft.com/azure/machine-learning/machine-learning-data-science-virtual-machine-overview)
++ [Data Science Virtual Machine](https://docs.microsoft.com/azure/machine-learning/machine-learning-data-science-virtual-machine-overview)
 
   すべてのツールの machine learning、プレインストールされている必要があります。 使用 Jupyter ノートブック、Python や r です。
   

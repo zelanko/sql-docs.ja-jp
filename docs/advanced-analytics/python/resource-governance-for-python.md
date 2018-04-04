@@ -1,24 +1,24 @@
 ---
-title: "Python のリソース管理 |Microsoft ドキュメント"
-ms.custom: 
+title: Python のリソース管理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/30/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 8accb9b8e050340ff980a1b5d9f1faf9283d8b89
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: c1bf3fb84629310c09f0dc181f6b7eaa6707fa88
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="resource-governance-for-python"></a>Python のリソース管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +64,7 @@ Python を使用しているため、SQL Server 2016 での R 言語が実装さ
 
 ## <a name="resource-management-using-resource-governor"></a>リソース ガバナーを使用したリソース管理
 
-リソース ガバナーを初めて使用する場合は、インスタンスの既定リソースの変更方法や新しい外部リソース プールの作成方法のチュートリアルとして、「[How To: Create a Resource Pool for R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)」(方法: R のリソース プールを作成する) をご覧ください。
+リソース ガバナーを新しい場合は、インスタンスの既定のリソースを変更し、新しい外部リソース プールを作成する方法の簡単なチュートリアルについては、この記事を参照してください: [How To: R のリソース プールの作成](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
 
 使用することができます、*外部リソース プール*次のサポートされている実行可能ファイルで使用したリソースを管理するためのメカニズム。
 

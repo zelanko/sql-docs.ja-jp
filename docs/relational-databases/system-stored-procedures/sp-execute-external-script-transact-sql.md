@@ -1,16 +1,16 @@
 ---
-title: "sp_execute_external_script (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_execute_external_script (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_execute_external_script_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 283db0150613d9d956cf5b0ec6b6fd295bc4444b
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.openlocfilehash: 487b669cc7d664194cd769bde564faec9454479b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/23/2018
 
 ```
 sp_execute_external_script   
-    @language = N'language,   
+    @language = N'language',   
     @script = N'script'  
     [ , @input_data_1 = N'input_data_1' ]   
     [ , @input_data_1_name = N'input_data_1_name' ]   
@@ -55,12 +55,12 @@ sp_execute_external_script
 ```
 
 ## <a name="arguments"></a>引数
- @language= N'*言語*'  
+ @language = N'*言語*'  
  スクリプト言語を示します。 *言語*は**sysname**です。  
 
  有効な値は `Python` または `R` です。 
   
- @script= N'*スクリプト*'  
+ @script = N'*スクリプト*'  
  外部の言語のスクリプト リテラルまたは変数の入力として指定します。 *スクリプト*は**nvarchar (max)**です。  
   
  [ @input_data_1_name = N'*input_data_1_name*' ]  
@@ -103,7 +103,7 @@ sp_execute_external_script
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]と共にインストールされるサーバー コンポーネントから成ります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、およびワークステーションのツールとの高パフォーマンスの環境にデータ サイエンティストを接続する接続ライブラリのセット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 機械学習中にコンポーネントをインストールする必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を外部スクリプトの実行を有効に設定します。 詳細については、次を参照してください。 [SQL Server マシン ラーニング Services セットアップ](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)です。  
   
-外部リソース プールを構成することによって、外部スクリプトで使用したリソースを制御できます。 詳細については、「[CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)」を参照してください。 ワークロードに関する情報は、リソース ガバナーのカタログ ビュー、DMV のカウンターから取得できます。 詳細については、次を参照してください。[リソース ガバナーのカタログ ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)、[リソース ガバナー関連の動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)、および[SQL Server、外部のスクリプト オブジェクト](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)です。  
+外部リソース プールを構成することによって、外部スクリプトで使用したリソースを制御できます。 詳細については、「[CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)」を参照してください。 ワークロードに関する情報は、リソース ガバナーのカタログ ビュー、DMV のカウンターから取得できます。 詳細については、次を参照してください[リソース ガバナーのカタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)、[リソース ガバナー関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)、および。[SQL Server、外部のスクリプト オブジェクト](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)です。  
 
 モニターの実行を使用してスクリプト[sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)と[sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)です。 
 
@@ -208,19 +208,19 @@ END;
 GO
 ```
 
-Python を使用して類似のモデルを生成するから言語識別子を変更する`@language=N'R'`に`@language = N'Python'`に必要な変更を加えると、`@script`引数。 すべてのパラメーターが、R. と同じように機能するそれ以外の場合
+Python を使って似たモデルを生成するには、言語識別子を `@language=N'R'` から `@language = N'Python'` に変更し、`@script` 引数を必要に応じて修正します。 そうしないと、すべてのパラメーターが R と同じように機能します。
 
 ### <a name="c-create-a-python-model-and-generate-scores-from-it"></a>C. Python モデルを作成し、そこからスコアを生成します。
 
-この例は、sp を使用する方法を示しています。\_実行\_外部\_Python の単純なモデルのスコアを生成するスクリプト。 
+この例では、\_execute\_external\_script を使って簡単な Python モデルでスコアを生成する方法を示します。 
 
 ```sql
 CREATE PROCEDURE [dbo].[py_generate_customer_scores]
 AS
 BEGIN
 
-## Input query to generate the customer data
-DECLARE @input_query NVARCHAR(MAX) = N'SELECT customer, orders, items, cost FROM dbo.Sales.Orders`
+-- Input query to generate the customer data
+DECLARE @input_query NVARCHAR(MAX) = N'SELECT customer, orders, items, cost FROM dbo.Sales.Orders'
 
 EXEC sp_execute_external_script @language = N'Python', @script = N'
 import pandas as pd
@@ -244,9 +244,9 @@ END;
 GO
 ```
 
-Python コードで使用されている列見出しが SQL Server; への出力ではありません。そのため、結果でステートメントを使用して、SQL を使用するためのデータ型と列名を指定します。
+Python コードで使われている列見出しは、SQL Server への出力ではありません。そのため、WITH RESULTS ステートメントを使って、SQL で使う列名とデータ型を指定します。
 
-スコア付け、ネイティブを使用することも[PREDICT](../../t-sql/queries/predict-transact-sql.md)関数で、通常ためにが、Python や R ランタイムを呼び出すことを回避できます。
+スコアリングには、ネイティブな [PREDICT](../../t-sql/queries/predict-transact-sql.md) 関数を使うこともできます。通常、これは Python や R のランタイムを呼び出さないので高速です。
 
 ## <a name="see-also"></a>参照
 
@@ -255,8 +255,8 @@ Python コードで使用されている列見出しが SQL Server; への出力
  [R ライブラリと R データ型](../../advanced-analytics/r/r-libraries-and-data-types.md)  
  [SQL Server R サービス](../../advanced-analytics/r/sql-server-r-services.md)   
  [SQL Server コンピューターのサービスの学習の既知の問題](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)   
- [外部ライブラリ &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-library-transact-sql.md)  
- [sp_prepare と #40 です。Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
+ [外部ライブラリの作成&#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
+ [sp_prepare &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [external scripts enabled サーバー構成オプション](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   

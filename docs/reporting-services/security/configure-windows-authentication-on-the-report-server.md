@@ -1,29 +1,29 @@
 ---
-title: "レポート サーバーで Windows 認証を構成する | Microsoft Docs"
-ms.custom: 
+title: レポート サーバーで Windows 認証を構成する | Microsoft Docs
+ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b948fea25ec62f338556b604812ff4d9574462ed
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e5ea30da8f6267bd864509ad48940b0a80f3d8c8
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>レポート サーバーで Windows 認証を構成する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、既定では、ネゴシエート認証または NTLM 認証を指定する要求を受け入れます。 これらのセキュリティ プロバイダーを使用するクライアント アプリケーションおよびブラウザーが配置に含まれている場合は、追加の構成なしで既定値を使用できます。 Windows 統合セキュリティの別のセキュリティ プロバイダーを使用する場合 (たとえば Kerberos を直接使用する場合)、または既定値を変更した後に元の設定を復元する場合は、このトピックの情報を使用して、レポート サーバーで認証設定を指定できます。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/09/2018
   
  次の追加要件も満たす必要があります。  
   
--   RSeportServer.config ファイルの **AuthenticationType** が、 **RSWindowsNegotiate**、 **RSWindowsKerberos**、または **RSWindowsNTLM**に設定されている必要があります。 レポート サーバー サービス アカウントが NetworkService または LocalSystem である場合、RSReportServer.config ファイルには、既定で **RSWindowsNegotiate** 設定が含まれます。それ以外の場合は、 **RSWindowsNTLM** 設定が使用されます。 Kerberos 認証のみを使用するアプリケーションがある場合は、 **RSWindowsKerberos** を追加できます。  
+-   RSReportServer.config ファイルの **AuthenticationType** が、**RSWindowsNegotiate**、**RSWindowsKerberos**、または **RSWindowsNTLM** に設定されている必要があります。 レポート サーバー サービス アカウントが NetworkService または LocalSystem である場合、RSReportServer.config ファイルには、既定で **RSWindowsNegotiate** 設定が含まれます。それ以外の場合は、 **RSWindowsNTLM** 設定が使用されます。 Kerberos 認証のみを使用するアプリケーションがある場合は、 **RSWindowsKerberos** を追加できます。  
   
     > [!IMPORTANT]  
     >  レポート サーバー サービスをドメイン ユーザー アカウントで実行するように構成し、かつそのアカウントのサービス プリンシパル名 (SPN) を登録していない場合は、 **RSWindowsNegotiate** を使用すると Kerberos 認証エラーが発生します。 詳細については、このトピックの「 [レポート サーバー接続時の Kerberos 認証エラーの解決](#proxyfirewallRSWindowsNegotiate) 」を参照してください。  

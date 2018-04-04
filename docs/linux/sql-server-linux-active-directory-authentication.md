@@ -1,6 +1,6 @@
 ---
-title: "Linux 上の SQL Server の active Directory 認証チュートリアル |Microsoft ドキュメント"
-description: "このチュートリアルでは、SQL Server on Linux の AAD 認証の構成手順を提供します。"
+title: Linux 上の SQL Server の active Directory 認証チュートリアル |Microsoft ドキュメント
+description: このチュートリアルでは、SQL Server on Linux の AAD 認証の構成手順を提供します。
 author: meet-bhagdev
 ms.date: 02/23/2018
 ms.author: meetb
@@ -8,19 +8,19 @@ manager: craigg
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: a0939dfa0f8304dc47a6925cf4c6f0375eb6a8df
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: f6acfbf1138507100a0b5b5a486d0e6288f8b372
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>SQL Server on Linux でのチュートリアル: を使用して Active Directory 認証
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/24/2018
 AD の認証を構成する前にする必要があります。
 
 * ネットワーク上の AD ドメイン コントローラ (Windows) の設定します。  
-* インストール [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+* [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストール
   * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -51,7 +51,7 @@ AD の認証を構成する前にする必要があります。
 
 参加を次の手順を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Active Directory ドメインにホストします。
 
-1. 使用して **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** ホスト コンピューターを AD ドメインに参加させる。 まだインストールしていない場合に、realmd と Kerberos クライアント パッケージの両方をインストール、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ホスト マシンの Linux ディストリビューションのパッケージ マネージャーを使用します。
+1. 使用して**[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)**ホスト コンピューターを AD ドメインに参加させる。 まだインストールしていない場合に、realmd と Kerberos クライアント パッケージの両方をインストール、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ホスト マシンの Linux ディストリビューションのパッケージ マネージャーを使用します。
 
    ```bash
    # RHEL
@@ -73,7 +73,7 @@ AD の認証を構成する前にする必要があります。
 
    - **Ubuntu**:
 
-      編集、`/etc/network/interfaces`ファイルの dns ネーム サーバーとして、AD ドメイン コント ローラーの IP アドレスが表示されるようにします。 例: 
+      編集、`/etc/network/interfaces`ファイルの dns ネーム サーバーとして、AD ドメイン コント ローラーの IP アドレスが表示されるようにします。 以下に例を示します。 
 
       ```/etc/network/interfaces
       <...>
@@ -137,6 +137,8 @@ AD の認証を構成する前にする必要があります。
    > エラーが表示するかどうかは、「必要なパッケージがインストールされていない」し、実行する前に、Linux ディストリビューションのパッケージ マネージャーを使用してそれらのパッケージをインストールする必要があります、`realm join`もう一度コマンドします。
    >
    > 「アクセス許可がありません、ドメインに参加する」、エラーが発生する場合は、Linux マシンをドメインに参加させるための十分なアクセス許可がある、ドメイン管理者に確認する必要があります。
+   >
+   > 「KDC 応答と一致しませんでした予測を行い、」、エラーが発生する場合を指定していないユーザーの適切な領域の名前。 領域名の大文字小文字を区別、通常の大文字、およびコマンドを使用して識別できる`realm discover contoso.com`です。
    
    > SQL Server は、ユーザー アカウントとグループをセキュリティ識別子 (SID) にマップするため、SSSD と NSS を使用します。 SSSD 構成され、AD ログインを正常に作成する SQL Server の順序で実行されている必要があります。 Realmd は、ドメインへの参加の一部として自動的にこれは通常が、場合によってはこれを行うとは別にします。
    >
@@ -145,7 +147,7 @@ AD の認証を構成する前にする必要があります。
   
 5. ドメインからユーザーに関する情報を収集できるようになりましたことと、そのユーザーとして Kerberos チケットを取得することを確認します。
 
-   次の例で**id**、  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**、および **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** このコマンド。
+   次の例で**id**、  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**、および**[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)**このコマンド。
 
    ```bash
    id user@contoso.com
@@ -206,7 +208,7 @@ AD の認証を構成する前にする必要があります。
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. Keytab ファイルを作成 **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** 前の手順で作成した AD ユーザー用です。 メッセージが表示されたらは、その AD アカウントのパスワードを入力します。
+2. Keytab ファイルを作成**[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**前の手順で作成した AD ユーザー用です。 メッセージが表示されたらは、その AD アカウントのパスワードを入力します。
 
    ```bash
    sudo ktutil

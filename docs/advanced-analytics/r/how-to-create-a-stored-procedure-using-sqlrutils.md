@@ -1,39 +1,39 @@
 ---
-title: "sqlrutils を使用してストアド プロシージャを作成する方法 | Microsoft Docs"
-ms.custom: 
+title: sqlrutils を使用してストアド プロシージャを作成する方法 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/16/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
 ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ad0cf99c59bcd3295acf0e1c29b14c8523f6f925
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fe1e05ee854fb6a094a66d88981d74287aa96beb
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>ストアド プロシージャを使用して sqlrutils を作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このトピックでは、T-SQL ストアド プロシージャとして実行する R コードを変換するための手順について説明します。 考えられる最良の結果を得るために、コードを少し変更し、すべての入力をパラメーター化できるようにする必要がある場合があります。
+この記事では、T-SQL ストアド プロシージャとして実行する R コードを変換するための手順について説明します。 考えられる最良の結果を得るために、コードを少し変更し、すべての入力をパラメーター化できるようにする必要がある場合があります。
 
 ## <a name="bkmk_rewrite"></a>手順 1. R スクリプトを書き直してください。
 
 最良の結果を R コードを 1 つの関数としてカプセル化することを書き直す必要があります。
 
-関数によって使用されているすべての変数は、関数内で定義する必要がありますか、入力パラメーターとして定義する必要があります。 このトピックの [サンプル コード](#samples) を参照してください。
+関数によって使用されているすべての変数は、関数内で定義する必要がありますか、入力パラメーターとして定義する必要があります。 参照してください、[のサンプル コード](#samples)この記事の内容。
 
 また、R 関数の入力パラメーターになるため、ストアド プロシージャを SQL の入力パラメーターを入力と出力が次の種類の要件に準拠していることを確認する必要があります。
 
@@ -69,8 +69,8 @@ ms.lasthandoff: 02/11/2018
 
 場合は、関数は、入力を受け取りますは、各入力には、次の関数を呼び出します。
 
-- `setInputData`入力がデータ フレームの場合
-- `setInputParameter`他のすべての入力の種類
+- `setInputData` 入力がデータ フレームの場合
+- `setInputParameter` 他のすべての入力の種類
 
 引数として渡すは後で R オブジェクトを作成する各関数の呼び出しを行うと`StoredProcedure`、完全なストアド プロシージャを作成します。
 
@@ -82,8 +82,8 @@ ms.lasthandoff: 02/11/2018
 
 ときに、リストへの変換や、リストから特定の項目を取得するは、これらの関数から選択します。
 
-- `setOutputData`変数を一覧から取得するが、データ フレームの場合
-- `setOutputParameter`一覧の他のすべてのメンバー
+- `setOutputData` 変数を一覧から取得するが、データ フレームの場合
+- `setOutputParameter` 一覧の他のすべてのメンバー
 
 引数として渡すは後で R オブジェクトを作成する各関数の呼び出しを行うと`StoredProcedure`、完全なストアド プロシージャを作成します。
 

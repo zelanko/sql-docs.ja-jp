@@ -1,0 +1,6 @@
+# [OLE DB Driver for SQL Server のアプリケーションの作成](creating-a-oledb-driver-for-sql-server-application.md)
+# [OLE DB プロパティについて](about-ole-db-properties.md)
+# [データ ソースへの接続の確立](establishing-a-connection-to-a-data-source.md)
+# [コマンドの実行](executing-a-command.md)
+# [結果の処理](processing-results.md)
+# [OLE DB Driver for SQL Server での OLE DB を使用した OUTPUT 句の使用](using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md)

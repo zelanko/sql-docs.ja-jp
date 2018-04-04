@@ -1,34 +1,34 @@
 ---
-title: DBCC SHRINKLOG (Azure SQL Data Warehouse) | Microsoft Docs
-ms.custom: 
-ms.date: 07/17/2017
+title: DBCC SHRINKLOG (Parallel Data Warehouse) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
-caps.latest.revision: 
+caps.latest.revision: ''
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d06917a784e507ab5568e28b4d34273f5fe71063
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fc02884ed88c056eb2a7fedb57f7de701377ee37
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/17/2018
 ---
-# <a name="dbcc-shrinklog-azure-sql-data-warehouse"></a>DBCC SHRINKLOG (Azure SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Parallel Data Warehouse)
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-現在の [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] データベースの*アプライアンス全体*でトランザクション ログのサイズを減らします。 トランザクション ログの圧縮するのには、データを最適化します。 時間の経過と共には、データベースのトランザクション ログが断片化されていない、非効率なになります。 断片化を軽減し、ログのサイズを小さくには、DBCC SHRINKLOG を使用します。
+現在の [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] データベースの "*アプライアンス全体*" でトランザクション ログのサイズを減らします。 トランザクション ログの圧縮するのには、データを最適化します。 時間の経過と共には、データベースのトランザクション ログが断片化されていない、非効率なになります。 断片化を軽減し、ログのサイズを小さくには、DBCC SHRINKLOG を使用します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -56,7 +56,7 @@ ALTER SERVER STATE アクセス許可が必要です。
 ## <a name="general-remarks"></a>全般的な解説  
 DBCC SHRINKLOG では、データベースのメタデータに格納されているログのサイズは変更されません。 CREATE DATABASE または ALTER DATABASE ステートメントで指定された LOG_SIZE パラメーターを格納するメタデータが続行します。
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples"></a>使用例 
 ### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>A. トランザクション ログの圧縮 データベースの作成で指定された元のサイズにします。  
 アドレスのデータベースが作成されたときに、アドレスのデータベースのトランザクション ログが 100 MB に設定があるとします。 つまり、アドレスの CREATE DATABASE ステートメントが LOG_SIZE 必要がある = 100 MB です。 ここで、150 MB、ログが大きくと、圧縮することを 100 MB にバックアップします。
   

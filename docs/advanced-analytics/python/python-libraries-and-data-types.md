@@ -1,40 +1,40 @@
 ---
-title: "Python ライブラリ |Microsoft ドキュメント"
-ms.custom: 
+title: Python ライブラリ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/30/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6292b9139f4ad43a0bdd8de4b1d849cb0caaa627
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 14691885d6dcdb91558ddc9566f4320c8119a9dd
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="python-libraries-and-data-types"></a>Python ライブラリとデータ型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このトピックでは、次の製品に含まれている Python ライブラリについて説明します。
+この記事では、次の製品に含まれている Python ライブラリについて説明します。
 
 + SQL Server コンピューターのサービス (In-database) を学習
 + マイクロソフトの機械学習のサーバー (スタンドアロン)
 
-このトピックは、サポートされていないデータ型も一覧表示されます。 し、リスト、データ型の Python と SQL Server の間でデータが渡されるときに暗黙的に実行することが変換します。
+この記事では、サポートされていないデータ型も一覧表示し、リスト、データ型の Python と SQL Server の間でデータが渡されるときに暗黙的に実行することが変換します。
 
 ## <a name="python-version"></a>Python のバージョン
 
 SQL Server 2017 CTP 2.0 には、Python 3.6、Anaconda ディストリビューションの部分が含まれています。
 
-RevoScaleR 機能のサブセット (rxLinMod、rxLogit、rxPredict、rxDTrees、rxBTrees、状況によって異なるいくつか他のユーザー) は新しい Python パッケージを使用して、Python の API を使用して提供**RevoScalePy**です。 このパッケージを使用して、パンダ データ フレームを使用してデータを操作することができます。XDF ファイル、またはデータの SQL クエリ。
+RevoScaleR 機能のサブセット (rxLinMod、rxLogit、rxPredict、rxDTrees、rxBTrees、状況によって異なるいくつか他のユーザー) は新しい Python パッケージを使用して、Python の Api を使用して提供**revoscalepy**です。 このパッケージを使用して、パンダ データ フレーム、XDF ファイル、またはデータの SQL クエリを使用してデータを操作することができます。
 
 詳細については、次を参照してください。 [revoscalepy のは何ですか?](what-is-revoscalepy.md)です。
 

@@ -1,33 +1,36 @@
 ---
-title: "SQL Server Analysis Services 表形式モデルでサポートされるデータ ソース |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 02/22/2018
+title: SQL Server Analysis Services 表形式の 1200 モデルでサポートされるデータ ソース |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 03/28/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8eb83ae398449673cfe22caeeaba0a7616cee02f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 14aa6597e533000c259f513c503825e7993da77c
+ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/29/2018
 ---
-# <a name="data-sources-supported-in-tabular-models"></a>テーブル モデルでサポートされるデータ ソース
+# <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>SQL Server Analysis Services 表形式モデル 1200 にサポートされるデータ ソース
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Azure Analysis Services では、次を参照してください。 [Azure Analysis Services でサポートされるデータ ソース](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)です。
+  
+この記事では、SQL Server Analysis Services 表形式モデル 1200 より低い互換性レベルで使用できるデータ ソースの種類について説明します。 
 
-  この記事では、表形式モデルで使用できるデータ ソースの種類について説明します。  
+1400 の互換性レベル モデルでは、次を参照してください。 [SQL Server Analysis Services 表形式の 1400 モデルでサポートされるデータ ソース](data-sources-supported-ssas-tabular-1400.md)です。
+
+Azure Analysis Services では、次を参照してください。 [Azure Analysis Services でサポートされるデータ ソース](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)です。
   
 ##  <a name="bkmk_supported_ds"></a> メモリ内のテーブル モデルに対してサポートされているデータ ソース  
 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールする際のセットアップで、各データ ソースに対して挙げられているプロバイダーはインストールされません。 その他のアプリケーションがコンピューター上で一部のプロバイダーをインストールする可能性があります。 それ以外の場合に、ダウンロードしてプロバイダーをインストールする必要があります。  
@@ -73,3 +76,9 @@ Teradata リレーショナル データベース    |  Teradata V2R6 以降    
 複数のデータ ソースに、類似データが格納されている列があれば、モデル デザイナー内でリレーションシップを作成する理由になります。 異種のデータ ソースを使用する場合は、同一データまたは類似データが格納されている他のデータ ソースのテーブルにマップできる列のあるテーブルを選択します。  
   
 OLE DB プロバイダーでは、大規模なデータに対して高いパフォーマンスを発揮します。 同じデータ ソースに対して数種類のプロバイダーの中から選択する場合は、最初に OLE DB プロバイダーを選択することをお勧めします。  
+
+## <a name="see-also"></a>参照
+
+[データ ソースが SQL Server Analysis Services で 1400 の表形式モデルをサポート](data-sources-supported-ssas-tabular-1400.md)
+
+[Azure Analysis Services でサポートされるデータ ソース](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)   

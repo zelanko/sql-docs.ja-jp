@@ -1,25 +1,25 @@
 ---
-title: "Azure での機械学習の仮想マシンをプロビジョニング |Microsoft ドキュメント"
-ms.custom: 
+title: Azure での機械学習の仮想マシンをプロビジョニング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.openlocfilehash: 62e1c347a3c5ee110e6865cd8c13ade76ba62b80
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Azure での機械学習の仮想マシンのプロビジョニングします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -130,7 +130,7 @@ Machine Learning のサーバーを含む仮想マシンを使用する場合は
 
 RevoScaleR または MicrosoftML などのパッケージを使用する場合は、追加の構成は必要ありません。
 
-## <a name="bkmk_list"></a>仮想マシンの一覧
+## <a name="bkmk_list"></a> 仮想マシンの一覧
 
 現時点では、次のバーチャル マシンでは、SQL Server での機械学習できます。
 

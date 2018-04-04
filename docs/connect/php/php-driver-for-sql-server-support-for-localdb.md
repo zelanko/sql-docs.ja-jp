@@ -1,38 +1,39 @@
 ---
-title: "PHP Driver for SQL Server Support for LocalDB |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 02/03/2017
+title: LocalDB のサポート |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: drivers
 ms.component: php
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4dcf9e36eb3928bc606053bdfda441520155864a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9315847a8e36520b360d16681ffe5b00f08d6975
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="php-driver-for-sql-server-support-for-localdb"></a>PHP Driver for SQL Server Support for LocalDB (LocalDB 用 SQL Server サポート用 PHP ドライバー)
+# <a name="support-for-localdb"></a>LocalDB のサポート
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-以降で[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]、軽量バージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]LocalDB というが表示されます。 ここでは、LocalDB インスタンス内のデータベースに接続する方法について説明します。
+LocalDB は、軽量バージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]これは以来、使用可能な[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]します。 ここでは、LocalDB インスタンス内のデータベースに接続する方法について説明します。
 
 ## <a name="remarks"></a>解説
 
 LocalDB をインストールして、LocalDB インスタンスを構成する方法を含む LocalDB の詳細については、次を参照してください。、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]でオンライン ブックの「 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB です。
 
-要約すると、LocalDB では次の操作を実行できます。
+簡単に説明すると、LocalDB を使用します。
 
 -   使用して**sqllocaldb.exe すれば**を既定のインスタンスの名前を検出します。
 
@@ -81,7 +82,7 @@ $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
     . 'database=myData', NULL, NULL);
 ```
 
-LocalDB をダウンロードすることができます、 [SQL Server 2012 機能パック ページ](http://go.microsoft.com/fwlink/?LinkID=236805)、または、 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express edition。 Sqlcmd が必要場合は、LocalDB インスタンスにデータを変更するのには、sqlcmd.exe を使用する、[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]からコマンド ライン ユーティリティのダウンロードで入手できる、 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Feature Pack のページです。
+LocalDB をインストールする方法の詳細については、次を参照してください。、 [LocalDB ドキュメント](../../database-engine/configure-windows/sql-server-2016-express-localdb.md)です。 必要があります sqlcmd.exe を使用して LocalDB インスタンスのデータを変更する場合、 [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)です。
 
 ## <a name="see-also"></a>参照
 
