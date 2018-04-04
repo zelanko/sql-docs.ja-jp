@@ -1,19 +1,19 @@
-# [概要](tabular-models-ssas.md)  
-
-# [テーブル モデルの作成](tabular-model-solutions-ssas-tabular.md)  
+# [テーブル モデル](tabular-models-ssas.md)  
+## [互換性レベル](compatibility-level-for-tabular-models-in-analysis-services.md)  
 ## [1400 テーブル モデルでサポートされるデータ ソース](data-sources-supported-ssas-tabular-1400.md)  
 ## [1200 テーブル モデルでサポートされるデータ ソース](data-sources-supported-ssas-tabular.md)  
 ## [サポートされているデータ型](data-types-supported-ssas-tabular.md)  
+
+# テーブル モデルの作成
 ## [テーブル モデル デザイナー](tabular-model-designer-ssas.md)  
 ## [ワークスペース データベース](workspace-database-ssas-tabular.md)  
-## [互換性レベル](compatibility-level-for-tabular-models-in-analysis-services.md)  
 
 ## [テーブル モデル プロジェクト](tabular-model-projects-ssas-tabular.md)  
 ### [新しいテーブル モデル プロジェクトの作成](create-a-new-tabular-model-project-analysis-services.md)  
 ### [Analysis Services からのインポート](import-from-analysis-services-ssas-tabular.md)  
 ### [Power Pivot からのインポート](import-from-power-pivot-ssas-tabular.md)  
 
-## [プロパティ](properties-ssas-tabular.md)  
+## [プロパティ]
 ### [Power View - レポート プロパティ](power-view-reporting-properties-ssas-tabular.md)  
 ### [Power View - 既定のフィールド セットの構成](power-view-configure-default-field-set-for-reports.md)  
 ### [Power View - テーブル動作プロパティの構成](power-view-configure-table-behavior-properties-for-reports.md)  
