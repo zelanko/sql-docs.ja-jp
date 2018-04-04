@@ -1,8 +1,8 @@
 ---
 layout: HubPage
-hide_bc: 
-title: "Microsoft SQL ドキュメント |Microsoft Docs"
-description: "SQL について"
+hide_bc: true
+title: Microsoft SQL ドキュメント |Microsoft Docs
+description: SQL について
 author: barbkess
 ms.author: barbkess
 ms.topic: article
