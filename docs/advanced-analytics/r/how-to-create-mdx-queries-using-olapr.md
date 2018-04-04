@@ -1,28 +1,26 @@
 ---
-title: "OlapR を使用して作成する MDX クエリする方法 |Microsoft ドキュメント"
-ms.custom: 
+title: OlapR を使用して作成する MDX クエリする方法 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/29/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: c12b988e-be7e-41ba-a84c-299a5c45d4ab
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 12c44fd21ab72975276e41c3107ca68d67dc2f82
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 9d917316a9d25b0634605e0f55eae3eda93f8669
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-to-create-mdx-queries-using-olapr"></a>OlapR を使用して MDX クエリを作成する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 02/11/2018
 + 新規の OLAP オブジェクトの作成
 + メジャーまたは値の計算を含むパーティションへの書き戻し
 
-## <a name="buildMDX"></a>R からの MDX クエリを構築します。
+## <a name="buildMDX"></a> R からの MDX クエリを構築します。
 
 1. OLAP データ ソース (SSAS インスタンス) および MSOLAP プロバイダーを指定する接続文字列を定義します。
 
@@ -51,8 +49,8 @@ ms.lasthandoff: 02/11/2018
 4. 以下のヘルパー関数を使って、MDX クエリに含めるディメンションとメジャーについての詳細を提供します。
 
      + `cube()` : SSAS データベースの名前を指定します。 名前付きインスタンスに接続する場合は、コンピューター名とインスタンス名を提供します。 
-     + `columns()`使用するメジャーの名前を指定、 **ON 列**引数。
-     + `rows()`使用するメジャーの名前を指定、 **ON 行**引数。
+     + `columns()` 使用するメジャーの名前を指定、 **ON 列**引数。
+     + `rows()` 使用するメジャーの名前を指定、 **ON 行**引数。
      + `slicers()` : スライサーとして使うフィールドまたはメンバーを指定します。 スライサーとは、すべての MDX クエリ データに適用されるフィルターのようなものです。
      
      + `axis()` : クエリで使う追加の軸の名前を指定します。 
@@ -66,7 +64,7 @@ ms.lasthandoff: 02/11/2018
   + `executeMD` : 多次元配列を返します
   + `execute2D` : 2 次元 (表形式) のデータ フレームを返します
 
-## <a name="executeMDX"></a>R からの有効な MDX クエリを実行します。
+## <a name="executeMDX"></a> R からの有効な MDX クエリを実行します。
 
 1. OLAP データ ソース (SSAS インスタンス) および MSOLAP プロバイダーを指定する接続文字列を定義します。
 
@@ -191,7 +189,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>指定したディメンションと階層のすべてのメンバーを取得するには
 
-ソースを定義してハンドルを作成した後、取得するキューブ、ディメンション、および階層を指定します。 戻り値の結果が付いている項目に **->** 前のメンバーの子を表します。
+ソースを定義してハンドルを作成した後、取得するキューブ、ディメンション、および階層を指定します。 戻り値の結果が付いている項目に**->**前のメンバーの子を表します。
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"

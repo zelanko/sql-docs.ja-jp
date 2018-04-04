@@ -1,31 +1,29 @@
 ---
-title: "単純なシミュレーション (SQL と R deep dive) を作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 単純なシミュレーション (SQL と R deep dive) を作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/14/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
 dev_langs:
 - R
-ms.assetid: f420b816-ddab-4a1a-89b9-c8285a2d33a3
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: cc613d303fa3200c3460face71399223e00272e6
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ca76aef56ef731d9190a8f40d8b4af2e9b04ca00
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>単純なシミュレーション (SQL と R deep dive) の作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -133,8 +131,8 @@ ms.lasthandoff: 02/11/2018
 大きなデータ ファイルのこのチュートリアルを再利用するには、データをダウンロードして各データ ソースの次のように変更します。
 
 1. 変数の変更`ccFraudCsv`と`ccScoreCsv`新しいデータ ファイルを指定するには
-2. 参照されるテーブルの名前を変更*sqlFraudTable*に`ccFraud10`
-3. 参照されるテーブルの名前を変更*sqlScoreTable*に`ccFraudScore10`
+2. 参照されるテーブルの名前を変更*sqlFraudTable*に `ccFraud10`
+3. 参照されるテーブルの名前を変更*sqlScoreTable*に `ccFraudScore10`
 
 ## <a name="additional-samples"></a>その他のサンプル
 

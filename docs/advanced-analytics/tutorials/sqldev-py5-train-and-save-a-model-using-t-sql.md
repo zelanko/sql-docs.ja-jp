@@ -1,30 +1,28 @@
 ---
-title: "手順 5: トレーニングおよび T-SQL を使用して、Python モデルを保存 |Microsoft ドキュメント"
-ms.custom: 
+title: '手順 5: トレーニングおよび T-SQL を使用して、Python モデルを保存 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 10/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: a2f0ffafb466030802b87dc96f905e9c875dd548
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: 1511be6615805e7842ace3e0065591c41f3b40eb
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>手順 5: トレーニングおよび T-SQL を使用して、Python モデルを保存
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -126,7 +124,7 @@ ms.lasthandoff: 02/11/2018
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    データの処理と、モデルの調整を行うには、最小のいくつかをかかる場合があります。 Python のパイプとメッセージ**stdout**にストリームが表示されます、**メッセージ**のウィンドウ[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。 例:
+    データの処理と、モデルの調整を行うには、最小のいくつかをかかる場合があります。 Python のパイプとメッセージ**stdout**にストリームが表示されます、**メッセージ**のウィンドウ[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。 以下に例を示します。
 
     *外部スクリプトからの STDOUT メッセージ:*
   *C:\Program files \microsoft SQL Server\MSSQL14 です。MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
@@ -191,7 +189,7 @@ ms.lasthandoff: 02/11/2018
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    データの処理と、モデルの調整を行う時間がかかります。 Python のパイプとメッセージ**stdout**にストリームが表示されます、**メッセージ**のウィンドウ[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。 例:
+    データの処理と、モデルの調整を行う時間がかかります。 Python のパイプとメッセージ**stdout**にストリームが表示されます、**メッセージ**のウィンドウ[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。 以下に例を示します。
 
     *外部スクリプトからの STDOUT メッセージ:*
   *C:\Program files \microsoft SQL Server\MSSQL14 です。MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*

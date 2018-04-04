@@ -1,24 +1,24 @@
 ---
-title: "ネイティブ スコアリング |Microsoft ドキュメント"
-ms.custom: 
+title: ネイティブ スコアリング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 09/19/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 14e2a86b3f85f5dd1cfec7ac634b6801bb0f319b
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 449773e8ca4f2e396dca4f8aed5299effb7aa49a
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="native-scoring"></a>ネイティブのスコアリング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -99,7 +99,7 @@ SQL Server マシン ラーニング サービス (および Microsoft Machine L
 + 事前に、サポートされているのいずれかを使用して、モデルをトレーニングする必要があります**rx**アルゴリズムです。 詳細については、「[アルゴリズムがサポートされている](#bkmk_native_supported_algos)です。
 + Microsoft R Server 9.1.0 で提供される新しいシリアル化の関数を使用して、モデルを保存する必要があります。 シリアル化の関数は、高速のスコア付けをサポートするために最適化されます。
 
-### <a name="bkmk_native_supported_algos"></a>ネイティブのスコア付けをサポートするアルゴリズム
+### <a name="bkmk_native_supported_algos"></a> ネイティブのスコア付けをサポートするアルゴリズム
 
 + RevoScaleR モデル
 

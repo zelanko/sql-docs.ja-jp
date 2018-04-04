@@ -1,26 +1,24 @@
 ---
-title: "R Services の結果とリソースのパフォーマンス |Microsoft ドキュメント"
-ms.custom: 
+title: R Services の結果とリソースのパフォーマンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/09/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 83c3590714660201d7411c360958f9ff4263240b
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 1a0d74c293f092e2c1eb3d9273c97d75b7034dfb
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services のパフォーマンス: 結果とリソース
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -136,7 +134,7 @@ metric time pct
 
 **高パフォーマンス**電源オプション。
 
-| テスト名 | 実行します。\# | 経過時間 | 平均時間 |
+| テスト名 | 実行します。 \# | 経過時間 | 平均時間 |
 |-----------|--------|--------------|--------------|
 | IntCol    | 1      | 3.57 秒 |              |
 |           | 2      | 3.45 秒 |              |
@@ -155,7 +153,7 @@ metric time pct
 
 **[バランス]** 電源オプション:
 
-| テスト名 | 実行します。\# | 経過時間 | 平均時間 |
+| テスト名 | 実行します。 \# | 経過時間 | 平均時間 |
 |-----------|--------|--------------|--------------|
 | IntCol    | 1      | 3.89 秒 |              |
 |           | 2      | 4.15 秒 |              |

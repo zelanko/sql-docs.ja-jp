@@ -1,26 +1,24 @@
 ---
-title: "SQL Server R Services での R の相互運用性 | Microsoft Docs"
-ms.custom: 
+title: SQL Server R Services での R の相互運用性 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/11/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 0506b950-34b3-4f11-8e2f-d067a58015bd
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 3dd916a0d91d5f237d7a60963c1b3fab1f90b5e9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 3464b9f051bef8a5403401b022b605b67f54d3df
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="r-interoperability-in-sql-server"></a>SQL Server での R の相互運用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,11 +31,11 @@ ms.lasthandoff: 02/11/2018
 
 ### <a name="open-source-r-components"></a>オープン ソースの R コンポーネント
 
-[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 基本の R パッケージとツールの完全な分布が含まれます。 基本のディストリビューションに何が含まれているかの詳細については、セットアップ中に既定の場所 (`C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`) にインストールされるドキュメントを参照してください。
+[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] には、基本の R パッケージとツールの完全なディストリビューションが含まれています。 基本のディストリビューションに何が含まれているかの詳細については、セットアップ中に既定の場所 (`C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`) にインストールされるドキュメントを参照してください。
 
 [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] のインストールの一環として、GNU Public License の条項に同意する必要があります。 その後、R の他のオープン ソース ディストリビューションと同じように、標準 R パッケージを変更なしで実行できます。
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 任意の方法で R ランタイムを変更しません。 R ランタイムは [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] プロセスの外部で実行され、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] とは無関係に実行できます。 ただし、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] で R を使用している間は、リソースの競合を避けるために、これらのツールを実行しないことを強くお勧めします。
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] が R ランタイムを何らかの方法で変更することはありません。 R ランタイムは [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] プロセスの外部で実行され、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] とは無関係に実行できます。 ただし、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] で R を使用している間は、リソースの競合を避けるために、これらのツールを実行しないことを強くお勧めします。
 
 特定の [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]インスタンスに関連付けられている R 基本パッケージ ディストリビューションは、インスタンスに関連付けられているフォルダーで見つけることができます。 たとえば、既定のインスタンスに R Services をインストールした場合、R ライブラリ内にあるこのフォルダー既定では。
 

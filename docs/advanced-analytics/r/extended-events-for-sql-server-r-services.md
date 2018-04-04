@@ -1,26 +1,24 @@
 ---
-title: "SQL Server の Machine Learning のサービスの拡張イベント |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server の Machine Learning のサービスの拡張イベント |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/21/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 4e90e057-aacb-4adc-8da6-64861f4e87df
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d2f43ab9235e6c16976789027f6308f95bf9d246
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2e16c8c468b4e82847e65e808f357e6eefb811f7
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>SQL Server の Machine Learning のサービスの拡張イベント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +51,7 @@ AND p.name = 'SQLSatellite';
 
 これを行う方法の詳細についてを参照してください、[外部プロセスからイベントを収集](#bkmk_externalevents)です。
 
-##  <a name="bkmk_xeventtable"></a>拡張イベントの表
+##  <a name="bkmk_xeventtable"></a> 拡張イベントの表
 
 |イベント|Description|注|  
 |-----------|-----------------|---------|  
@@ -88,7 +86,7 @@ AND p.name = 'SQLSatellite';
 |satellite_data_chunk_sent|サテライト接続が 1 つのデータ チャンクの送信を完了したときに発生します。|列数、行数、パケット数、チャンクの送信にかかった時間に関する情報を格納します。|  
 |satellite_sessionId_mismatch|メッセージのセッション ID が予期されたものではありません||  
   
-###  <a name="bkmk_externalevents"></a>外部プロセスからのイベントの収集
+###  <a name="bkmk_externalevents"></a> 外部プロセスからのイベントの収集
 
 SQL Server の Machine Learning のサービスは、SQL Server プロセスの外部で実行している一部のサービスを開始します。 これらの外部プロセスに関連するイベントをキャプチャするには、するには、イベント トレース構成ファイルを作成し、プロセスの実行可能ファイルと同じディレクトリにファイルを配置します。  
   

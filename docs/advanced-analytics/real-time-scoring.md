@@ -1,25 +1,25 @@
 ---
-title: "リアルタイムのスコアリング |Microsoft ドキュメント"
-ms.custom: 
+title: リアルタイムのスコアリング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/03/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: a8a37b57e5704136280360258223927c7d960eea
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f8473280725732f92d1156a65ea087677b3af170
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="realtime-scoring"></a>リアルタイムのスコアリング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,7 +59,7 @@ RxPredict する方法の例は、スコア付けの使用を参照してくだ�
 + SQL Server R Services 2016、Microsoft R Server 9.1.0 に R Services のインスタンスのアップグレードまたはそれ以降
 + Machine Learning Server (スタンドアロン)
 
-SQL Server の機能を事前にスコア付けリアルタイムを有効にする必要があります。 これは、機能には、SQL Server に ライブラリの CLR ベースのインストールが必要とするためです。
+SQL Server の機能を事前にスコア付けリアルタイムを有効にする必要があります。 これは、機能には、SQL Server に [ライブラリの CLR ベースのインストールが必要とするためです。
 
 リアルタイムに関する情報、Microsoft R Server に基づく分散環境でスコアリングを参照してください、 [publishService](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)関数で使用できる、 [mrsDeploy パッケージ](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)、サポートします。R Server で実行されている web サービスを新しいスコアリング リアルタイムのモデルを公開します。
 
@@ -118,7 +118,7 @@ SQL Server の機能を事前にスコア付けリアルタイムを有効にす
 
 ### <a name="known-issues"></a>既知の問題
 
-+ `sp_rxPredict`モデルと NULL 値が渡されるときに不正確なメッセージが返されます。"System.Data.SqlTypes.SqlNullValueException:Data で Null"です。
++ `sp_rxPredict` モデルと NULL 値が渡されるときに不正確なメッセージが返されます。"System.Data.SqlTypes.SqlNullValueException:Data で Null"です。
 
 ## <a name="next-steps"></a>次の手順
 

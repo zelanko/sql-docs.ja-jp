@@ -1,26 +1,24 @@
 ---
-title: "R Services - データの最適化のパフォーマンス |Microsoft ドキュメント"
-ms.custom: 
+title: R Services - データの最適化のパフォーマンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/12/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 0ca7a57b10787ca183c2979fe95a5e3fe446dc86
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6b320357d8978a97878d31943b48accee8898f9f
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services - データの最適化のパフォーマンス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +37,7 @@ SQL Server 2016 および 2017 で、いずれかを使用できる、**ロー�
 
 ## <a name="factors"></a>因子
 
-R 言語には、「要素」は、カテゴリ データに対する特別な変数は、の概念があります。 データ サイエンティストは、多くの場合、式で係数変数を使用でデータを確実要因としてのカテゴリの変数を処理するためは、machine learning 関数によって正しく処理です。 詳細については、次を参照してください。 [ダミーの R: 係数変数] (http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)。
+R 言語には、「要素」は、カテゴリ データに対する特別な変数は、の概念があります。 データ サイエンティストは、多くの場合、式で係数変数を使用でデータを確実要因としてのカテゴリの変数を処理するためは、machine learning 関数によって正しく処理です。 詳細については、次を参照してください。 [ダミーの R: 係数変数] (http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)です。
 
 仕様では、整数とストレージや処理用にもう一度、文字列から、係数の変数を変換します。 R`data.frame`関数は、係数の変数とすべての文字列を処理しない限り、引数*stringsAsFactors*に設定されている**False**です。 これは意味は文字列が自動的には、処理に整数に変換され、その後、元の文字列にマップします。
 
@@ -139,7 +137,7 @@ RevoScaleR アルゴリズムの多くは、トレーニング済みモデルを
 
 + [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
 
-    `rxDTree`サポートしている、`maxDepth`パラメーターで、デシジョン ツリーの深さを制御します。 として`maxDepth`は大きくしても、パフォーマンスが低下、ため、パフォーマンスの低下と深さを増やすことの利点を分析することが重要です。
+    `rxDTree` サポートしている、`maxDepth`パラメーターで、デシジョン ツリーの深さを制御します。 として`maxDepth`は大きくしても、パフォーマンスが低下、ため、パフォーマンスの低下と深さを増やすことの利点を分析することが重要です。
 
     などのパラメーターを調整することで時間の複雑さと予測の精度のバランスを制御することもできます。 `maxNumBins`、 `maxDepth`、 `maxComplete`、および`maxSurrogate`です。 深さを 10 または 15 を超えた値に増やすと、計算が非常に不経済になる可能性があります。
 

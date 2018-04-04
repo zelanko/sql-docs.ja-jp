@@ -1,27 +1,25 @@
 ---
-title: "R Services で使用するための R コードの変換 | Microsoft Docs"
+title: R Services で使用するための R コードの変換 | Microsoft Docs
 ms.date: 12/20/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 0b11ab52-b2f9-4a4f-b1ab-68ba09c8adcc
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 802ad1ee49920db65eadccfb29650c649c339d48
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 669f52d499b9479e23266af91c04e6bc084bb8ea
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="converting-r-code-for-execution-in-database"></a>データベース内の実行の R コードの変換
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +32,7 @@ R Studio や他の環境から SQL Server への R コードを移動すると�
 
 + ネットワークにアクセスするか、SQL Server にインストールされていることはできません、R ライブラリを使用するとします。
 + コードでは、Excel ワークシート、共有のファイルおよびその他のデータベースなどの SQL Server の外部データ ソースに別の呼び出しを行います。 
-+ コードを実行する、  *@script* のパラメーター [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)も、ストアド プロシージャのパラメーター化とします。
++ コードを実行する、 *@script*のパラメーター [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)も、ストアド プロシージャのパラメーター化とします。
 + 元のソリューションには、データ準備とトレーニング、スコア付け、またはレポート モデルと特徴エンジニア リングなど個別に、実行される場合は、実稼働環境でより効率的になる可能性がある複数のステップが含まれます。
 + 向上させるために必要なライブラリを変更する、並列実行を使用して、または SQL Server にいくつかの処理をオフロードすることによってパフォーマンスを最適化します。 
 

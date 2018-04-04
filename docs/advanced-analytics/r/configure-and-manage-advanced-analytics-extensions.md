@@ -1,27 +1,25 @@
 ---
-title: "Machine Learning のサービスの構成オプションの詳細 |Microsoft ドキュメント"
+title: Machine Learning のサービスの構成オプションの詳細 |Microsoft ドキュメント
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 042e36faee599de3ff31a6bbb8dee32f0a6999cf
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6001d30a38b1362db8b259d29fffbfcc268f706c
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>Machine Learning のサービスの高度な構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +28,7 @@ ms.lasthandoff: 02/11/2018
 
 **適用されます:** SQL Server 2016 の R Services、SQL Server 2017 機械学習のサービス
 
-##  <a name="bkmk_Provisioning"></a>その他のユーザーのプロビジョニング アカウントのマシンの学習
+##  <a name="bkmk_Provisioning"></a> その他のユーザーのプロビジョニング アカウントのマシンの学習
 
 外部スクリプトのプロセスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特権の低いローカル ユーザー アカウントのコンテキストで実行します。 個々 の低特権アカウントでこれらのプロセスを実行すると、次の利点があります。
 
@@ -45,13 +43,13 @@ Protext 機密性の高いリソースに、 [!INCLUDE[ssNoVersion](../../includ
 
 + ユーザー アカウント プールは、特定のインスタンスにリンクされます。 学習の有効などのコンピューターでインスタンスごとに、独立したプールのワーカー アカウントが必要です。 インスタンス間でアカウントを共有することはできません。
 
-+ プールのユーザー アカウント名は、SQLInstanceName*nn*に関連するその他のサービスの構成に軽微な変更を行うことができます。 たとえば、機械学習で既定のインスタンスを使用している場合、ユーザー アカウント プールは MSSQLSERVER01、MSSQLSERVER02 といったアカウント名をサポートします。
++ プールのユーザー アカウント名は、SQLInstanceName*nn*の形式になります。 たとえば、機械学習で既定のインスタンスを使用している場合、ユーザー アカウント プールは MSSQLSERVER01、MSSQLSERVER02 といったアカウント名をサポートします。
 
 + ユーザー アカウント プールのサイズは静的であり、既定値は 20 です。 同時に起動できる外部のランタイム セッションの数は、このユーザー アカウント プールのサイズによって制限されます。 この制限を変更するには、管理者は、SQL Server 構成マネージャーを使用する必要があります。
 
 ユーザー アカウント プールを変更する方法の詳細については、次を参照してください。 [SQL Server の Machine Learning のサービスのユーザー アカウント プールを変更する](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)です。
 
-##  <a name="bkmk_ManagingMemory"></a>外部スクリプトのプロセスによって使用されるメモリを管理します。
+##  <a name="bkmk_ManagingMemory"></a> 外部スクリプトのプロセスによって使用されるメモリを管理します。
 
 既定では、機械学習の外部スクリプトのランタイムは、合計マシン メモリの 20% 以下に制限されます。 システムに依存している場合が一般に、ありますこの制限のモデルのトレーニングまたは多くのデータ行の予測などの深刻な機械学習タスクが不十分であります。 
 
@@ -75,7 +73,7 @@ Protext 機密性の高いリソースに、 [!INCLUDE[ssNoVersion](../../includ
 
 SQL Server サービスの実行に必要なアクセス許可の詳細については、「[Configure Windows Service Accounts and Permissions (Windows サービス アカウントとアクセス許可の構成)](https://msdn.microsoft.com/library/ms143504.aspx#Windows)」をご覧ください。
 
-##  <a name="bkmk_ChangingConfig"></a>サービスの高度なオプションを変更します。
+##  <a name="bkmk_ChangingConfig"></a> サービスの高度なオプションを変更します。
 
 以前のバージョンの SQL Server 2016 の R Services では、編集して、サービスの一部のプロパティを変更する可能性があります、[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]構成ファイル。 
 
@@ -93,7 +91,7 @@ SQL Server サービスの実行に必要なアクセス許可の詳細につい
 
 **デバッグ設定を変更するには**
 
-いくつかのプロパティは、デバッグなど、限られた状況で役に立ちます可能性のある、スタート パッドの構成ファイルを使用してのみ変更できます。 中に、構成ファイルが作成された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップし、既定では、次の場所にプレーン テキスト ファイルとして保存します。`<instance path>\binn\rlauncher.config`
+いくつかのプロパティは、デバッグなど、限られた状況で役に立ちます可能性のある、スタート パッドの構成ファイルを使用してのみ変更できます。 中に、構成ファイルが作成された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップし、既定では、次の場所にプレーン テキスト ファイルとして保存します。 `<instance path>\binn\rlauncher.config`
 
 このファイルを変更するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターの管理者になる必要があります。 ファイルを編集する場合は、変更を保存する前に、バックアップ コピーを作成することをお勧めします。
 
