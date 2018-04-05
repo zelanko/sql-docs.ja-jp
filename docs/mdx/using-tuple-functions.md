@@ -1,20 +1,22 @@
 ---
-title: "組関数の使用 |Microsoft ドキュメント"
-ms.custom: 
+title: 組関数の使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: tuple functions
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- tuple functions
 ms.assetid: fe41e3e5-a675-4169-a966-b42c18e8d741
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: erikre

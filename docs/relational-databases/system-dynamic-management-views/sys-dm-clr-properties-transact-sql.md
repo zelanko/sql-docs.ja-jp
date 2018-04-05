@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_clr_properties (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_clr_properties (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_clr_properties
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77f8652347f0093b84be4853880bb504defc3b6c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1f26f5870db7794bb52da665a17a3f70198fc341
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/03/2018
   
  **Mscoree が読み込まれていない**と**Mscoree が読み込まれる**状態が、サーバー起動時における、ホストされる CLR の初期化の進行状況を表示して、表示することはありません。  
   
- **Mscoree で Locked CLR version**状態が表示され、ホストされる CLR が使用されていないと、そのため、これがまだ初期化されていません。 ホストされる CLR が初期化される DDL ステートメントを初めて (など[CREATE ASSEMBLY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-assembly-transact-sql.md)) またはマネージ データベース オブジェクトを実行します。  
+ **Mscoree で Locked CLR version**状態が表示され、ホストされる CLR が使用されていないと、そのため、これがまだ初期化されていません。 ホストされる CLR が初期化される DDL ステートメントを初めて (など[CREATE ASSEMBLY &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)) またはマネージ データベース オブジェクトが実行されます。  
   
  **CLR が初期化された**状態は、ホストされる CLR が正常に初期化されたことを示します。 この状態は、ユーザー CLR コードの実行が有効かどうかを表すものではないことに注意してください。 有効になっており、しを使用して無効になっている場合はユーザー CLR コードの実行は最初、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)ストアド プロシージャで、状態値が引き続きは**CLR が初期化された**です。  
   
@@ -78,10 +78,10 @@ ms.lasthandoff: 02/03/2018
  プロパティと値をこのビューの変更される可能性の将来のバージョン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CLR 統合機能の強化のためです。  
   
 ## <a name="permissions"></a>権限  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 階層には、データベースの VIEW DATABASE STATE 権限が必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard および Basic 階層が必要です、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理者アカウントです。  
-  
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+
 ## <a name="examples"></a>使用例  
  次の例では、ホストされる CLR に関する情報を取得します。  
   
@@ -92,6 +92,6 @@ FROM sys.dm_clr_properties;
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [共通言語ランタイム関連の動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
+ [共通言語ランタイム関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

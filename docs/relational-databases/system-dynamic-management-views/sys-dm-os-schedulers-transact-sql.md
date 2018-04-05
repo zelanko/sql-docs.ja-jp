@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_os_schedulers (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_os_schedulers (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_schedulers
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_schedulers dynamic management view
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
-caps.latest.revision: 
+caps.latest.revision: 55
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aa32726893d196cc4c2830e79703f5583d661793
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 9e42126c9abfe729e5f5890297dbf30e3dbf0970
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/03/2018
 |scheduler_address|**varbinary(8)**|スケジューラのメモリ アドレス。 NULL 値は許可されません。|  
 |parent_node_id|**int**|スケジューラが属するノード (親ノード) の ID。 これは非均質メモリ アクセス (NUMA) ノードを表します。 NULL 値は許可されません。|  
 |scheduler_id|**int**|スケジューラの ID です。 定期的なクエリの実行に使用されるスケジューラにはすべて、1048576 未満の ID 番号が付いています。 Id が 1048576 以上スケジューラが内部で使用される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、専用管理者接続のスケジューラなどです。 NULL 値は許可されません。|  
-|cpu_id|**smallint**|スケジューラに割り当てられた CPU ID。<br /><br /> NULL 値は許可されません。<br /><br /> **注:** 255 は示しませんありませんアフィニティと同じ[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。 参照してください[sys.dm_os_threads &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)関係の詳細についてをします。|  
+|cpu_id|**smallint**|スケジューラに割り当てられた CPU ID。<br /><br /> NULL 値は許可されません。<br /><br /> **注:** 255 は示しませんありませんアフィニティと同じ[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。 参照してください[sys.dm_os_threads &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)関係の詳細についてをします。|  
 |ステータス|**nvarchar(60)**|スケジューラの状態。 次の値のいずれかです。<br /><br /> 非オンライン<br />非オフライン<br />表示されているオンライン<br />表示されているオフライン<br />表示されているオンライン (DAC)<br />-   HOT_ADDED<br /><br /> NULL 値は許可されません。<br /><br /> 非表示スケジューラは、内部的な要求の処理に使用される、[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。 VISIBLE スケジューラは、ユーザーの要求の処理に使用されます。<br /><br /> OFFLINE スケジューラは、関係マスクでオフラインになっているプロセッサにマップされます。そのため、要求の処理には使用されません。 ONLINE スケジューラは、関係マスクでオンラインになっているプロセッサにマップされ、スレッドの処理に使用されます。<br /><br /> DAC は、スケジューラが専用管理者接続で動作していることを示します。<br /><br /> HOT ADDED は、スケジューラがホット アド CPU イベントに応答して追加されたことを示します。|  
 |is_online|**bit**|場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が構成されている、サーバーで使用可能なプロセッサの一部のみを使用する可能性が一部のスケジューラが、関係マスクに含まれていないプロセッサにマップされています。 これに該当する場合、この列には 0 が返されます。 この値は、スケジューラがクエリまたはバッチの処理に使用されていないことを意味します。<br /><br /> NULL 値は許可されません。|  
 |is_idle|**bit**|1 = スケジューラはアイドル状態です。 現在実行中のワーカーはありません。 NULL 値は許可されません。|  
@@ -59,20 +59,21 @@ ms.lasthandoff: 02/03/2018
 |active_workers_count|**int**|アクティブなワーカーの数。 アクティブなワーカーがプリエンプティブになることはなく、必ずタスクが関連付けられています。また、実行中、実行可能、または中断状態のいずれかになっています。 NULL 値は許可されません。|  
 |work_queue_count|**bigint**|保留キュー内のタスクの数。 保留キュー内のタスクは、ワーカーによる取得を待機しています。 NULL 値は許可されません。|  
 |pending_disk_io_count|**int**|完了を待機している保留中の I/O の数。 各スケジューラには保留中の I/O の一覧が保持されており、コンテキストが切り替えられるたび、これらの I/O が完了したかどうかを確認するために、この一覧がチェックされます。 要求が挿入されると、カウントは 1 増えます。 要求が完了すると、カウントは 1 減ります。 この数は、I/O の状態を示すわけではありません。 NULL 値は許可されません。|  
-|load_factor|**int**|スケジューラで認識されている負荷を示す内部値。 この値は、新しいタスクをこのスケジューラに指定するか、または他のスケジューラに指定するかを決定するために使用されます。 また、スケジューラの負荷が均等でないと思われる場合のデバッグに利用できます。 ルーティングはスケジューラの負荷に基づいて決定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ノードとスケジューラの占有率を最適なリソースを取得するのに場所を特定するためにも使用します。 タスクがエンキューされると、占有率は増加します。 タスクが完了すると、占有率は減少します。 占有率を利用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OS で負荷を効率よく分散できます。 NULL 値は許可されません。|  
+|load_factor|**int**|スケジューラで認識されている負荷を示す内部値。 この値は、新しいタスクをこのスケジューラに指定するか、または他のスケジューラに指定するかを決定するために使用されます。 また、スケジューラの負荷が均等でないと思われる場合のデバッグに利用できます。 ルーティングはスケジューラの負荷に基づいて決定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ノードとスケジューラの占有率を最適なリソースを取得するのに場所を特定するためにも使用します。 タスクがエンキューされると、占有率は増加します。 タスクが完了すると、占有率は減少します。 占有率を利用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OS で負荷を効率よく分散できます。 NULL 値は許可されません。|  
 |yield_count|**int**|スケジューラの進行状況を示すために使用される内部値。 この値は、スケジューラ モニターで、このスケジューラのワーカーが予定どおりに他のワーカーに変更されるかどうかを確認するために使用されます。 ワーカーまたはタスクが新しいワーカーに移行するわけではありません。 NULL 値は許可されません。|  
 |last_timer_activity|**bigint**|前回、スケジューラのタイマー キューがスケジューラにより確認された時間 (CPU ティック単位)。 NULL 値は許可されません。|  
 |failed_to_create_worker|**bit**|スケジューラで新しいワーカーを作成できなかった場合は 1 になります。 これは通常、メモリ制約が原因で発生します。 NULL 値が許可されます。|  
-|active_worker_address|**varbinary(8)**|現在アクティブなワーカーのメモリ アドレス。 NULL 値が許可されます。 詳細については、次を参照してください。 [sys.dm_os_workers &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。|  
+|active_worker_address|**varbinary(8)**|現在アクティブなワーカーのメモリ アドレス。 NULL 値が許可されます。 詳細については、次を参照してください。 [sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)です。|  
 |memory_object_address|**varbinary(8)**|スケジューラのメモリ オブジェクトのメモリ アドレス。 Null を許容しません。|  
-|task_memory_object_address|**varbinary(8)**|タスクのメモリ オブジェクトのメモリ アドレス。 NULL 値は許可されません。 詳細については、次を参照してください。 [sys.dm_os_memory_objects &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。|  
-|quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] SQLOS によって使用されるスケジューラ クォンタムを公開します。|  
+|task_memory_object_address|**varbinary(8)**|タスクのメモリ オブジェクトのメモリ アドレス。 NULL 値は許可されません。 詳細については、次を参照してください。 [sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)です。|  
+|quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]SQLOS によって使用されるスケジューラ クォンタムを公開します。|  
 |pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>権限
+
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 階層が必要です、`VIEW DATABASE STATE`データベースの権限です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
-  
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-monitoring-hidden-and-nonhidden-schedulers"></a>A. 非表示スケジューラと表示スケジューラを監視する  
@@ -133,13 +134,13 @@ active_workers_count work_queue_count
   
 -   出力では、23 のアクティブなタスクが示されています。 これらのタスクは、ユーザーの要求によって開始されたリソース管理タスクに加え[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 例として[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]タスクは、リソース モニター (NUMA ノードごとに 1 つ)、LAZY WRITER (NUMA ノードごとに 1 つ)、ロック モニター、チェックポイント、およびログ ライター。  
   
--   NUMA ノード `0` は CPU `1` にマップされており、NUMA ノード `1` は CPU `0` にマップされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通常、ノード 0 以外の NUMA ノードで起動します。  
+-   NUMA ノード `0` は CPU `1` にマップされており、NUMA ノード `1` は CPU `0` にマップされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通常、ノード 0 以外の NUMA ノードで起動します。  
   
 -   ここでは `runnable_tasks_count` に `0` が返されており、これはアクティブに実行中のタスクが存在しないことを意味します。 ただし、アクティブなセッションは存在する可能性があります。  
   
 -   スケジューラ`255`が DAC を表す`3`ワーカーが関連付けられています。 これらのワーカーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に割り当てられ、変更されることはありません。 これらのワーカーは DAC クエリの処理のみに使用されます。 このスケジューラ上の 2 つのタスクは、接続マネージャーとアイドル状態のワーカーを表します。  
   
--   `active_workers_count`タスクが関連付けられ、非プリエンプティブ モードで実行されているすべてのワーカーを表します。 ネットワーク リスナーなどの一部のタスクは、プリエンプティブなスケジュール設定で実行されます。  
+-   `active_workers_count` タスクが関連付けられ、非プリエンプティブ モードで実行されているすべてのワーカーを表します。 ネットワーク リスナーなどの一部のタスクは、プリエンプティブなスケジュール設定で実行されます。  
   
 -   非表示スケジューラでは、通常のユーザー要求は処理されません。 ただし、DAC スケジューラは例外です。 この DAC スケジューラには、要求を処理するためのスレッドが 1 つあります。  
   
@@ -147,7 +148,7 @@ active_workers_count work_queue_count
  次のクエリでは、負荷が高い表示スケジューラの状態を示します。このスケジューラでは、利用可能なワーカーの処理数を上回る要求が存在します。 この例では、256 のワーカーにタスクが割り当てられており、 一部のタスクはワーカーへの割り当てを待機中です。 実行可能なタスクの数が少ないということは、複数のタスクがリソースの待機中であることを意味します。  
   
 > [!NOTE]  
->  sys.dm_os_workers でクエリを実行すると、ワーカーの状態を確認できます。 詳細については、次を参照してください。 [sys.dm_os_workers &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。  
+>  sys.dm_os_workers でクエリを実行すると、ワーカーの状態を確認できます。 詳細については、次を参照してください。 [sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)です。  
   
  クエリを次に示します。  
   
@@ -193,7 +194,7 @@ current_workers_count active_workers_count work_queue_count
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Server オペレーティング システム関連の動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server オペレーティング システム関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

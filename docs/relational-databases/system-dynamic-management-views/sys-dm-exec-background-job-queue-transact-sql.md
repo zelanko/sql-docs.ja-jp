@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_exec_background_job_queue (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_exec_background_job_queue (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_background_job_queue
@@ -22,23 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_background_job_queue dynamic management function
 ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d80848491c46046ba260956fb02ce41e7becdd6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0494a05f4e047084cf76e02eac0fafbe9e2daf67
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmexecbackgroundjobqueue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   非同期 (バックグラウンド) で実行するようスケジュール設定されたクエリ プロセッサ ジョブごとに 1 行のデータを返します。  
   
-> **注:** これから **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** または **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** 、名前を使用して**sys.dm_pdw_nodes_exec_background_job_queue**です。  
+> **注:** これから**[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]**または**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**、名前を使用して**sys.dm_pdw_nodes_exec_background_job_queue**です。  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
@@ -56,10 +56,10 @@ ms.lasthandoff: 02/03/2018
 |**session_id**|**smallint**|セッション識別子。|  
 |**pdw_node_id**|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバーに対する VIEW SERVER STATE 権限が必要です。  
-  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 階層には、データベースの VIEW DATABASE STATE 権限が必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard および Basic 階層が必要です、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理者アカウントです。  
+## <a name="permissions"></a>権限
+
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
   
 ## <a name="remarks"></a>解説  
  このビューは、統計の非同期更新ジョブに関する情報のみを返します。 統計の非同期更新の詳細については、次を参照してください。[統計](../../relational-databases/statistics/statistics.md)です。  
@@ -83,9 +83,9 @@ GO
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [実行関連の動的管理ビューおよび関数 &#40;TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [統計情報](../../relational-databases/statistics/statistics.md)   
- [KILL STATS JOB と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/kill-stats-job-transact-sql.md)  
+ [実行関連の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [統計](../../relational-databases/statistics/statistics.md)   
+ [KILL STATS JOB &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)  
   
   
 

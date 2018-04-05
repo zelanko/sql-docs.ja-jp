@@ -24,11 +24,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 776562d89a12b544d6edbe475358067b39b58988
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 7917f0c1344ff8e79250791d1b262cece9ca3c4c
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>SQL Server の OLE DB ドライバーとの接続文字列キーワードを使用してください。
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,6 +94,7 @@ ms.lasthandoff: 03/30/2018
 |**FailoverPartnerSPN**|SSPROP_INIT_FAILOVERPARTNERSPN|フェールオーバー パートナーの SPN。 既定値は空の文字列です。 空の文字列は、OLE DB Driver for SQL Server、既定では、プロバイダーが生成した SPN を使用するとします。|  
 |**言語**|SSPROPT_INIT_CURRENTLANGUAGE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 言語。|  
 |**MarsConn**|SSPROP_INIT_MARSCONNECTION|その接続で MARS (複数のアクティブな結果セット) を有効または無効にします ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のサーバーの場合)。 有効値は、"yes" および "no" です。 既定値は "no" です。|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|常に指定**MultiSubnetFailover = [はい]**の可用性グループ リスナーに接続するときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性グループ、または[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス。 **MultiSubnetFailover = Yes** OLE DB Driver for SQL Server を迅速に検出し、(現在) アクティブなサーバーへの接続を提供するように構成します。 可能な値は **Yes** と **No**です。 既定値は**いいえ**です。 以下に例を示します。<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> SQL Server のサポートの OLE DB ドライバーの詳細については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[OLE DB Driver for SQL サーバーが高可用性、災害復旧のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|  
 |**net**|SSPROP_INIT_NETWORKLIBRARY|"Network" のシノニム。|  
 |**ネットワーク**|SSPROP_INIT_NETWORKLIBRARY|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立するために使用するネットワーク ライブラリ。|  
 |**ネットワーク ライブラリ**|SSPROP_INIT_NETWORKLIBRARY|"Network" のシノニム。|  
@@ -149,6 +150,7 @@ ms.lasthandoff: 03/30/2018
 |**初期ファイル名**|SSPROP_INIT_FILENAME|アタッチできるデータベースのプライマリ ファイルの名前 (完全なパス名を含む)。 使用する**AttachDBFileName**、プロバイダー文字列の DATABASE キーワードでデータベース名を指定することも必要があります。 場合は、データベースは、以前にアタッチされて、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に再アタッチしません (、アタッチされたデータベースの既定値として接続に使用)。|  
 |**統合セキュリティ**|DBPROP_AUTH_INTEGRATED|Windows 認証の値 "SSPI" を受け取ります。|  
 |**MARS 接続**|SSPROP_INIT_MARSCONNECTION|その接続で MARS (複数のアクティブな結果セット) を有効または無効にします。 認識できる値は "true" と "false" です。 既定値は "false" です。|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|常に指定**MultiSubnetFailover = True**の可用性グループ リスナーに接続するときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性グループ、または[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス。 **MultiSubnetFailover = True** OLE DB Driver for SQL Server を迅速に検出し、(現在) アクティブなサーバーへの接続を提供するように構成します。 指定できる値は、 **[True]** および **[False]**です。 既定値は **False**です。 以下に例を示します。<br /><br /> `MultiSubnetFailover=True`<br /><br /> SQL Server のサポートの OLE DB ドライバーの詳細については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[OLE DB Driver for SQL サーバーが高可用性、災害復旧のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|  
 |**ネットワーク アドレス**|SSPROP_INIT_NETWORKADDRESS|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのネットワーク アドレス。<br /><br /> 有効なアドレス構文の詳細については、の説明を参照して、**アドレス**キーワードは、このトピックの「します。|  
 |**ネットワーク ライブラリ**|SSPROP_INIT_NETWORKLIBRARY|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立するために使用するネットワーク ライブラリ。|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|ネットワーク パケットのサイズ。 既定値は 4096 です。|  
@@ -200,6 +202,7 @@ ms.lasthandoff: 03/30/2018
 |**初期ファイル名**|SSPROP_INIT_FILENAME|アタッチできるデータベースのプライマリ ファイルの名前 (完全なパス名を含む)。 使用する**AttachDBFileName**、プロバイダー文字列の DATABASE キーワードでデータベース名を指定することも必要があります。 場合は、データベースは、以前にアタッチされて、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に再アタッチしません (、アタッチされたデータベースの既定値として接続に使用)。|  
 |**統合セキュリティ**|DBPROP_AUTH_INTEGRATED|Windows 認証の値 "SSPI" を受け取ります。|  
 |**MARS 接続**|SSPROP_INIT_MARSCONNECTION|その接続で MARS (複数のアクティブな結果セット) を有効または無効にします ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のサーバーの場合)。 認識できる値は "true" と "false" です。既定値は "false" です。|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|常に指定**MultiSubnetFailover = True**の可用性グループ リスナーに接続するときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性グループ、または[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス。 **MultiSubnetFailover = True** OLE DB Driver for SQL Server を迅速に検出し、(現在) アクティブなサーバーへの接続を提供するように構成します。 指定できる値は、 **[True]** および **[False]**です。 既定値は **False**です。 以下に例を示します。<br /><br /> `MultiSubnetFailover=True`<br /><br /> SQL Server のサポートの OLE DB ドライバーの詳細については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[OLE DB Driver for SQL サーバーが高可用性、災害復旧のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|  
 |**ネットワーク アドレス**|SSPROP_INIT_NETWORKADDRESS|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのネットワーク アドレス。<br /><br /> 有効なアドレス構文の詳細については、の説明を参照して、**アドレス**キーワードは、このトピックの「します。|  
 |**ネットワーク ライブラリ**|SSPROP_INIT_NETWORKLIBRARY|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立するために使用するネットワーク ライブラリ。|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|ネットワーク パケットのサイズ。 既定値は 4096 です。|  
@@ -215,6 +218,6 @@ ms.lasthandoff: 03/30/2018
  **注**接続文字列で"Old Password"プロパティを設定 SSPROP_AUTH_OLD_PASSWORD、これは、現在 (または期限切れの) はないパスワードをプロバイダー文字列のプロパティ経由で入手できます。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server の OLE DB ドライバーとアプリケーションの構築](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [OLE DB Driver for SQL Server を使用したアプリケーションの構築](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
   
   
