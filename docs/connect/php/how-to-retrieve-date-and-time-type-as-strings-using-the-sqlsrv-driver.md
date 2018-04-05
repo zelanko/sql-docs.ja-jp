@@ -1,19 +1,21 @@
 ---
-title: "取得日付と時刻、SQLSRV ドライバーを使用して文字列として入力 |。Microsoft ドキュメント"
-ms.custom: 
+title: 取得日付と時刻、SQLSRV ドライバーを使用して文字列として入力 |。Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: date and time types, retrieving as strings
+helpviewer_keywords:
+- date and time types, retrieving as strings
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
