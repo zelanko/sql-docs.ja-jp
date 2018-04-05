@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_fts_index_population (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_fts_index_population (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_fts_index_population
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_index_population dynamic management view
 ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
-caps.latest.revision: 
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f118b1be30119e7328ee20477a0c18808fbdc3e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0cfb07b67f17deeba2c0995ceace90335082cccb
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/03/2018
 |**is_clustered_index_scan**|**bit**|設定では、クラスター化されたインデックスでのスキャンが行われるかどうかを示します。|  
 |**range_count**|**int**|インデックス設定が並列処理されたサブ範囲の数。|  
 |**completed_range_count**|**int**|処理が完了した範囲の数。|  
-|**outstanding_batch_count**|**int**|このインデックス設定で現在未解決のバッチの数。 詳細については、次を参照してください。 [sys.dm_fts_outstanding_batches &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)。|  
+|**outstanding_batch_count**|**int**|このインデックス設定で現在未解決のバッチの数。 詳細については、次を参照してください。 [sys.dm_fts_outstanding_batches &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)です。|  
 |**ステータス**|**int**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 設定の状態。 注 : 状態によっては、一時的なものもあります。 次のいずれかです。<br /><br /> 3 = 開始<br /><br /> 5 = 正常に処理中<br /><br /> 7 = 処理を停止<br /><br /> たとえば、この状態は自動マージの進行中に発生します。<br /><br /> 11 = 作成が中止されました<br /><br /> 12 = セマンティックな類似性の抽出を実行中|  
 |**status_description**|**nvarchar(120)**|作成の状態の説明。|  
 |**completion_type**|**int**|設定の完了の状態。|  
@@ -64,9 +64,10 @@ ms.lasthandoff: 02/03/2018
  フルテキスト インデックス作成に加えて統計的セマンティック インデックス作成が有効になっている場合は、キー フレーズのセマンティックな抽出と作成、およびドキュメントの類似性データの抽出が、フルテキスト インデックス作成と同時に実行されます。 ドキュメントの類似性に関するインデックスの作成は、2 番目のフェーズで実行されます。 詳細については、次を参照してください。[モニター セマンティック検索の管理と](../../relational-databases/search/manage-and-monitor-semantic-search.md)です。  
   
 ## <a name="permissions"></a>権限  
+
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 階層が必要です、`VIEW DATABASE STATE`データベースの権限です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。  
- 
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+  
 ## <a name="physical-joins"></a>物理結合  
  ![この動的管理ビューの重要な結合](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "この動的管理ビューの重要な結合")  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [フルテキスト検索およびセマンティック検索の動的管理ビューおよび関数 &#40;TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [フルテキスト検索とセマンティック検索の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   
 

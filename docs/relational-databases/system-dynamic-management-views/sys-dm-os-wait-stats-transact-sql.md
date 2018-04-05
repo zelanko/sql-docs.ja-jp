@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_os_wait_stats (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_os_wait_stats (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_wait_stats_TSQL
@@ -22,21 +22,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-caps.latest.revision: 
+caps.latest.revision: 111
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: afc91e5254a85d0863f2461e50d9ec55e0cb5bbd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d3add34699a2b0fa77d47d27ac8084f503802b43
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-実行されたスレッドにより検出されたすべての待機に関する情報を返します。 この集計ビューを使って、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および特定のクエリとバッチに関するパフォーマンスの問題を診断できます。 [sys.dm_exec_session_wait_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)セッションによって同様の情報を提供します。  
+実行されたスレッドにより検出されたすべての待機に関する情報を返します。 この集計ビューを使って、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および特定のクエリとバッチに関するパフォーマンスの問題を診断できます。 [sys.dm_exec_session_wait_stats &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)セッションによって同様の情報を提供します。  
   
 > [!NOTE] 
 > これから**[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** 、名前を使用して**sys.dm_pdw_nodes_os_wait_stats**です。  
@@ -50,11 +50,12 @@ ms.lasthandoff: 02/03/2018
 |signal_wait_time_ms|**bigint**|待機スレッドがシグナルを受け取ってから実行を開始するまでの時間。|  
 |pdw_node_id|**int**|この分布はでは、ノードの識別子。 <br/> **適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>権限
+
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 階層が必要です、`VIEW DATABASE STATE`データベースの権限です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。  
-  
-##  <a name="WaitTypes"></a>待機の種類  
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+
+##  <a name="WaitTypes"></a> 待機の種類  
  **リソース待機**リソース待機は、作業者は、リソースが他のワーカーによって使用されているかが使用できないために使用可能なないリソースへのアクセスを要求したときに発生します。 リソース待機の例としては、ロック、ラッチ、ネットワークおよびディクス I/O 待機があります。 ロック待機およびラッチ待機は、同期オブジェクトで発生する待機です。  
   
 **キュー待機**  
@@ -63,7 +64,7 @@ ms.lasthandoff: 02/03/2018
  **外部待機**  
  外部待機が発生するときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が終了するには、拡張ストアド プロシージャ呼び出しまたはリンク サーバー クエリなどの外部イベントのワーカーが待機しています。 ブロッキングの問題を診断するときには、外部待機が発生していてもワーカーがアイドル状態になっているとは限らないことに注意してください。ワーカーはアクティブ状態で外部コードを実行している可能性があるためです。  
   
- `sys.dm_os_wait_stats`既に終わった待機時間を示します。 この動的管理ビューでは、現在待機中の待機時間は示されません。  
+ `sys.dm_os_wait_stats` 既に終わった待機時間を示します。 この動的管理ビューでは、現在待機中の待機時間は示されません。  
   
  A[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ワーカー スレッドは、次のいずれかが当てはまる場合に待機するいると見なされません。  
   
@@ -943,7 +944,7 @@ GO
 |WAIT_XTP_CKPT_CLOSE |チェックポイントを完了するを待機しているときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_XTP_CKPT_ENABLED |チェックポイント処理が [無効] の待機中のチェックポイントを有効にするときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_XTP_CKPT_STATE_LOCK |チェックポイントの状態の確認を同期するときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|WAIT_XTP_COMPILE_WAIT |TBD <br /> **適用対象**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。| 
+|WAIT_XTP_COMPILE_WAIT |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_GUEST |データベース メモリ アロケーターが低いメモリ通知の受信を停止する必要があるときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_XTP_HOST_WAIT |待機がデータベース エンジンによってトリガーされ、ホストによって実装されるときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
@@ -1026,9 +1027,9 @@ GO
   
 ## <a name="see-also"></a>参照  
     
- [SQL Server オペレーティング システム関連の動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_exec_session_wait_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
- [sys.dm_db_wait_stats &#40;です。Azure SQL データベース &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
+ [SQL Server オペレーティング システム関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [sys.dm_exec_session_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [sys.dm_db_wait_stats &#40;Azure SQL データベース&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   
   
 

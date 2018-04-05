@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_os_sys_info (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_os_sys_info (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_sys_info_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - time [SQL Server], instance started
 - starting time
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
-caps.latest.revision: 
+caps.latest.revision: 57
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 21fe61d34a9b8823af499b64aef0eaef95c1a92e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d5284112257c5d1c2d23f354ec7690fab6abb90b
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/03/2018
 |**deadlock_monitor_serial_number**|**int**|現在のデッドロック監視シーケンスの ID を指定します。 Null を許容しません。|  
 |**sqlserver_start_time_ms_ticks**|**bigint**|表す、 **ms_tick**数と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]最後に起動します。 現在の ms_ticks 列と比較します。 Null を許容しません。|  
 |**sqlserver_start_time**|**datetime**|日付と時刻を示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]最後に起動します。 Null を許容しません。|  
-|**affinity_type**|**int**|**適用されます: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。<br /><br /> 現在使用中のサーバー CPU プロセス関係の種類を指定します。 Null を許容しません。 詳細については、次を参照してください。 [ALTER SERVER CONFIGURATION &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/alter-server-configuration-transact-sql.md).<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
+|**affinity_type**|**int**|**適用されます: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。<br /><br /> 現在使用中のサーバー CPU プロセス関係の種類を指定します。 Null を許容しません。 詳細については、次を参照してください。 [ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)です。<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
 |**affinity_type_desc**|**varchar(60)**|**適用されます:[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**です。<br /><br /> について説明します、 **affinity_type**列です。 Null を許容しません。<br /><br /> MANUAL = 少なくとも 1 台の CPU に関係が設定されています。<br /><br /> 自動 =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自由にスレッドを Cpu 間で移動できます。|  
 |**process_kernel_time_ms**|**bigint**|**適用されます:[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]から [です。INCLUDE [ssCurrent]**(../Token/ssCurrent_md.md)] です。<br /><br /> すべてにかかったミリ秒単位で時間の合計[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スレッドがカーネル モード。 この値にはサーバー上のすべてのプロセッサの時間が含まれるため、単一のプロセッサ クロックより大きくなる場合があります。 Null を許容しません。|  
 |**process_user_time_ms**|**bigint**|**適用されます:[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**です。<br /><br /> すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スレッドがユーザー モードで費やした合計時間 (ミリ秒)。 この値にはサーバー上のすべてのプロセッサの時間が含まれるため、単一のプロセッサ クロックより大きくなる場合があります。 Null を許容しません。|  
@@ -81,19 +81,19 @@ ms.lasthandoff: 02/03/2018
 |**process_physical_affinity**|**nvarchar(3072)** |**適用されます: で始まる[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]**です。<br /><br />今後登場する情報です。 |
 |**sql_memory_model**|**int**|**適用されます: [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 以降[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1**です。<br /><br />メモリの割り当てに SQL Server で使用されるメモリ モデルを指定します。 Null を許容しません。<br /><br />1 = コンベンショナル メモリ モデル<br />2 = lock Pages in Memory<br /> 3 = メモリ内のラージ ページ|
 |**sql_memory_model_desc**|**nvarchar(120)**|**適用されます: [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 以降[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1**です。<br /><br />メモリの割り当てに SQL Server で使用されるメモリ モデルを指定します。 Null を許容しません。<br /><br />**従来**= SQL Server は、コンベンショナル メモリ モデルを使用してメモリを割り当てることができます。 これは、SQL Server サービス アカウントがないときのページのロック メモリ特権での起動中に、既定の sql メモリ モデルです。<br />**LOCK_PAGES** = SQL server が Lock Pages メモリ内の使用メモリを割り当てられません。 これは、SQL Server サービス アカウントは、SQL Server の起動中に Memory 特権でのページのロックを所有しているときの既定の sql のメモリ マネージャーです。<br /> **LARGE_PAGES** = SQL Server がサイズの大きなページ メモリ内の使用メモリを割り当てられません。 SQL Server では、大きなページ アロケーターを使用して、サーバーの起動時に、トレース フラグ 834 がオンにすると、SQL Server サービス アカウントが Memory 特権でのページのロックを持つときに、Enterprise edition でのみメモリを割り当てます。|
-|**pdw_node_id**|**int**|**適用されます: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**<br /><br /> この分布はでは、ノードの識別子。|  
+|**pdw_node_id**|**int**|**適用されます: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**<br /><br /> この分布はでは、ノードの識別子。|  
 |**socket_count** |**int** | **適用されます: で始まる[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]**です。<br /><br />システム上の利用可能なプロセッサ ソケット数を指定します。 |  
 |**cores_per_socket** |**int** | **適用されます: で始まる[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].**です。<br /><br />システム上の 1 つのソケットの使用可能なプロセッサの数を指定します。 |  
 |**numa_node_count** |**int** | **適用されます: で始まる[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].**です。<br /><br />システムで使用可能な numa ノードの数を指定します。 この列には、ソフト numa ノードだけでなく、物理 numa ノードが含まれています。 |  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必要があります`VIEW SERVER STATE`サーバーに対する権限。  
-  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 階層が必要です、`VIEW DATABASE STATE`データベースの権限です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard および Basic 階層が必要です、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理者アカウントです。  
-  
+## <a name="permissions"></a>権限
+
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
+
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [SQL Server オペレーティング システム関連の動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server オペレーティング システム関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

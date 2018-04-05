@@ -1,27 +1,28 @@
 ---
-title: "データ ソース ウィザード画面 2 (SQL Server 用 ODBC Driver) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 09/27/2017
+title: データ ソース ウィザード画面 2 (SQL Server 用 ODBC Driver) |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
-ms.author: genemi
+ms.author: v-jizho2
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2291b951c0df4f365b76f80ebab3572a39375d1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 624888902e260baa03ad30aee8608f921deb73a4
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="data-source-wizard-screen-2"></a>データ ソース ウィザード画面 2
 
@@ -47,9 +48,13 @@ Azure Active Directory を使用して SQL Server へのドライバーの認証
 
 Azure Active Directory のログイン ID とパスワードを使用して SQL Server へのドライバーの認証を指定します。
 
+### <a name="with-active-directory-interactive-authentication"></a>Active Directory の 対話型の認証
+
+ログイン ID を提供することによって Azure Active Directory 対話型モードを使用して SQL Server へのドライバーの認証を指定します これにより、Windows Azure の認証プロンプト ダイアログがトリガーされます。
+
 ### <a name="login-id"></a>Login ID
 
-ドライバーで使用する場合は、SQL Server に接続するときにログイン ID を指定**で SQL Server 認証ログイン ID と、ユーザーが入力したパスワードを使用して**または**ログイン ID を使用して Active Directory パスワードによる認証ユーザーが入力したパスワード**が選択されています。 これは、サーバーの既定の設定を確認するために確立された接続のみに適用されます。そのため、データ ソースが作成された後にそのデータ ソースを使用して確立された以降の接続には適用されません。
+ドライバーで使用する場合は、SQL Server に接続するときにログイン ID を指定**で SQL Server 認証ログイン ID と、ユーザーが入力したパスワードを使用して**または**ログイン ID を使用して Active Directory パスワードによる認証ユーザーが入力したパスワード**または**ログイン ID を使用すると Active Directory 対話型の認証がユーザーによって入力**が選択されています。 これは、サーバーの既定の設定を確認するために確立された接続のみに適用されます。そのため、データ ソースが作成された後にそのデータ ソースを使用して確立された以降の接続には適用されません。
 
 ### <a name="password"></a>Password
 

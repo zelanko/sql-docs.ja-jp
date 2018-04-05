@@ -1,20 +1,22 @@
 ---
-title: "文字列関数の使用 |Microsoft ドキュメント"
-ms.custom: 
+title: 文字列関数の使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: string functions
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- string functions
 ms.assetid: 962e820a-a1f9-49b5-90f0-a05261e6682b
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre

@@ -1,30 +1,30 @@
 ---
-title: "Linux および macOS 上の SQL Server 用 Microsoft ODBC Driver をインストールする |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/13/2018
+title: Linux および macOS 上の SQL Server 用 Microsoft ODBC Driver をインストールする |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver, installing
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-caps.latest.revision: 
+caps.latest.revision: 69
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4b5371302206f87f19632c55f90917de189b303a
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 44afb66dfdc98ea2160f54d394f48e1ce03df1cd
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux および macOS に Microsoft ODBC Driver for SQL Server をインストールする
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -500,6 +500,40 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 -   [エラーの詳細 (http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
   
     URL (11001) に指定するエラー番号は、表示されたエラーに合わせて変更する必要があります。  
+  
+## <a name="driver-files"></a>ドライバー ファイル
+ODBC Driver on Linux and MacOS は、次のコンポーネントで構成されます。
+
+### <a name="linux"></a>Linux
+
+|コンポーネント|Description|  
+|---------------|-----------------|  
+|libmsodbcsql-17.X.so.X.X or libmsodbcsql-13.X.so.X.X|共有オブジェクト (`so`) のすべてのドライバーの機能を含むダイナミック ライブラリ ファイル。 このファイルがインストールされている`/opt/microsoft/msodbcsql17/lib64/`ドライバー 17 し`/opt/microsoft/msodbcsql/lib64/`Driver 13。|  
+|`msodbcsqlr17.rll`または`msodbcsqlr13.rll`|ドライバー ライブラリに付随するリソース ファイル。 このファイルはのインストールします。 `[driver .so directory]../share/resources/en_US/`| 
+|msodbcsql.h|すべてのドライバーを使用するために必要な新しい定義を含むヘッダー ファイル。<br /><br /> **注:**  msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> msodbcsql.h にインストールされている`/opt/microsoft/msodbcsql17/include/`ドライバー 17 し`/opt/microsoft/msodbcsql/include/`Driver 13。 |
+|LICENSE.txt|使用許諾契約書の用語を含むテキスト ファイル。 このファイルが配置されます`/usr/share/doc/msodbcsql17/`ドライバー 17 し`/usr/share/doc/msodbcsql/`Driver 13。|
+|RELEASE_NOTES|リリース ノートを含むテキスト ファイル。 このファイルが配置されます`/usr/share/doc/msodbcsql17/`ドライバー 17 し`/usr/share/doc/msodbcsql/`Driver 13。|
+
+
+### <a name="macos"></a>MacOS
+
+|コンポーネント|Description|  
+|---------------|-----------------|  
+|libmsodbcsql.17.dylib or libmsodbcsql.13.dylib|ダイナミック ライブラリ (`dylib`) のすべてのドライバーの機能を含むファイルです。 このファイルがインストールされている`/usr/local/lib/`です。|  
+|`msodbcsqlr17.rll`または`msodbcsqlr13.rll`|ドライバー ライブラリに付随するリソース ファイル。 このファイルがインストールされている`[driver .dylib directory]../share/msodbcsql17/resources/en_US/`ドライバー 17 し`[driver .dylib directory]../share/msodbcsql/resources/en_US/`Driver 13。 | 
+|msodbcsql.h|すべてのドライバーを使用するために必要な新しい定義を含むヘッダー ファイル。<br /><br /> **注:**  msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> msodbcsql.h にインストールされている`/usr/local/include/msodbcsql17/`ドライバー 17 し`/usr/local/include/msodbcsql/`Driver 13。 |
+|LICENSE.txt|使用許諾契約書の用語を含むテキスト ファイル。 このファイルが配置されます`/usr/local/share/doc/msodbcsql17/`ドライバー 17 し`/usr/local/share/doc/msodbcsql/`Driver 13。 |
+|RELEASE_NOTES|リリース ノートを含むテキスト ファイル。 このファイルが配置されます`/usr/local/share/doc/msodbcsql17/`ドライバー 17 し`/usr/local/share/doc/msodbcsql/`Driver 13。 |
+
+## <a name="resource-file-loading"></a>リソース ファイルの読み込み
+
+ドライバーは、機能するために、リソース ファイルを読み込む必要があります。 このファイルが呼び出され`msodbcsqlr17.rll`または`msodbcsqlr13.rll`ドライバーのバージョンによって異なります。 場所、`.rll`ドライバー自体の場所に対する相対ファイル パスです (`so`または`dylib`) 上の表で説明したとおり、します。 ドライバーは、読み込みにも試みますバージョン 17.1 の時点で、`.rll`既定値からディレクトリの相対パスから読み込む場合は失敗します。 リソース ファイルの既定のパスは次のとおりです。
+
+Linux: `/opt/microsoft/msodbcsql17/share/resources/en_US/`
+
+MacOS: `/usr/local/share/msodbcsql17/resources/en_US/`
+
+
   
 ## <a name="see-also"></a>参照
 
