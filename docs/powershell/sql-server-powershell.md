@@ -1,27 +1,28 @@
 ---
 title: SQL Server PowerShell | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql-non-specified
 ms.prod_service: powershell
-ms.service: 
+ms.service: ''
 ms.component: powershell
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ab19a8a86bba6cbdacbc0c7de1b44d42a263b692
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: d9dc11888ffd63ad97031e666d4e63893dc2db3e
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +40,7 @@ SQL PowerShell の更新プログラムを出荷するため、SQL PowerShell �
 
 **SQLPS モジュールをインポートする場合は PowerShell スクリプトを更新します。**
 
-`Import-Module -Name SQLPS` を実行する PowerShell スクリプトがあり、新しいプロバイダーの機能と新しいコマンドレットを活用したい場合は、これらを `Import-Module -Name SqlServer` に変更する必要があります。 新しいモジュールは `%Program Files\WindowsPowerShell\Modules\SqlServer` にインストールされます。 したがって、$env:PSModulePath 変数を更新する必要はありません。 **SqlServer** という名前の、サード パーティ製またはコミュニティ バージョンのモジュールを使用するスクリプトがある場合は、名前の競合を避けるため Prefix パラメーターを使用してください。 SQL Server エージェントで使用されるモジュールの変更はありません。 
+`Import-Module -Name SQLPS` を実行する PowerShell スクリプトがあり、新しいプロバイダーの機能と新しいコマンドレットを活用したい場合は、これらを `Import-Module -Name SqlServer` に変更する必要があります。 新しいモジュールは `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` フォルダーにインストールされます。 したがって、$env:PSModulePath 変数を更新する必要はありません。 **SqlServer** という名前の、サード パーティ製またはコミュニティ バージョンのモジュールを使用するスクリプトがある場合は、名前の競合を避けるため Prefix パラメーターを使用してください。 SQL Server エージェントで使用されるモジュールの変更はありません。 
 
   
 ## <a name="sql-server-powershell-components"></a>SQL Server PowerShell のコンポーネント  
