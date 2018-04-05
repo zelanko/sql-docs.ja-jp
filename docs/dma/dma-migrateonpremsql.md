@@ -1,20 +1,22 @@
 ---
-title: "内部設置型 SQL サーバー (データ Migration Assistant) の移行 |Microsoft ドキュメント"
-ms.custom: 
+title: 内部設置型 SQL サーバー (データ Migration Assistant) の移行 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 09/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-dma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-dma
+ms.tgt_pltfrm: ''
 ms.topic: article
-keywords: 
-helpviewer_keywords: Data Migration Assistant, on-premises SQL Server
-ms.assetid: 
-caps.latest.revision: 
+keywords: ''
+helpviewer_keywords:
+- Data Migration Assistant, on-premises SQL Server
+ms.assetid: ''
+caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
