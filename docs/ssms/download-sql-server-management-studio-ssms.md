@@ -26,16 +26,16 @@ keywords:
 - sql server ssms
 - ssms express
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
-caps.latest.revision: ''
+caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7b64f3d78ceafd5e1eac62e1e3dd1155827e8c61
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 014067623255c257ee611b8be8a0b8f49f5e57bc
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -141,7 +141,7 @@ SSMS の今回のリリースでは、最新の Service Pack を使用した次�
 ### <a name="minimize-installation-reboots"></a>インストール時の再起動を最小限に抑える
 
 * SSMS のセットアップでインストールの最後に再起動が必要になる可能性を低くするには、次の操作を実行します。
-  * 最新バージョンの Visual C++ 2013 再頒布可能パッケージを実行します。 バージョン 12.00.40649.5 (またはそれ以降) が必要です。 必要なのは x64 バージョンのみです。
+  * 最新バージョンの Visual C++ 2013 再頒布可能パッケージを実行します。 バージョン 12.0.40649.5 (またはそれ以降) が必要です。 必要なのは x64 バージョンのみです。
   * コンピューターの .NET Framework のバージョンが 4.6.1 (またはそれ以降) であることを確認します。
   * コンピューターで Visual Studio のインスタンスが他に開かれている場合はすべて閉じます。
   * OS の最新の更新プログラムがすべてコンピューターにインストールされていることを確認します。

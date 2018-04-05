@@ -16,11 +16,11 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 9f633a8d624fd31913dc2aeb6fde34ff30b7645d
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 792d6c7fe69a1b8ec77c70d0fbfa6ceaa92d808a
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>チュートリアル: SSMS を使用するためのヒントとテクニック
 この記事では、SQL Server Management Studio の使用に関する他のテクニックについて説明します。 以下の方法を示します。 
@@ -143,33 +143,6 @@ ms.lasthandoff: 03/22/2018
 ## <a name="access-your-sql-server-error-log"></a>SQL Server のエラー ログにアクセスする
 エラー ログは、SQL Server 内で発生したことに関する詳細な情報を含むファイルです。 SSMS で参照してクエリを実行することができます。 ディスクで .log ファイルとして検索することもできます。
 
-### <a name="find-your-error-log-if-you-cannot-connect-to-sql"></a>SQL に接続できない場合にエラー ログを検索する
-1. SQL Server 構成マネージャーを開きます。 
-2. **[サービス]** ノードを展開します。
-3. SQL Server インスタンスを右クリックして、**[プロパティ]** を選択します。
-
-    ![構成マネージャーのサーバーのプロパティ](media/ssms-tricks/serverproperties.PNG)
-
-4. **[起動時のパラメーター]** タブを選択します。
-5. **[Existing Parameters]\(既存のパラメーター\)** 領域で、"-e" の後のパスがエラー ログの場所です。 
-    
-    ![エラー ログ](media/ssms-tricks/errorlog.png)
-    - この場所には複数の errorlog.* があることがわかります。 *.log で終わっているのが現在のものです。 数字で終わっているのは以前のログです。SQL Server が再起動するたびに、新しいログが作成されます。 
-6. このファイルをメモ帳で開きます。 
-
-### <a name="find-your-error-log-if-youre-connected-to-sql"></a>SQL に接続されている場合にエラー ログを検索する
-1. SQL Server に接続します。
-2. **[新しいクエリ]** ウィンドウを開きます。
-3. クエリ ウィンドウに次の T-SQL コード スニペットを貼り付けて、**[実行]** をクリックします。
-
-
-  ```sql
-   SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location' 
-  ```
-3. 結果で、ファイル システム内のエラー ログの場所が示されます。 
-
-![クエリでエラー ログを見つける](media/ssms-tricks/finderrorlogquery.png)
-
 ### <a name="open-error-log-within-ssms"></a>SSMS でエラー ログを開く
 1. SQL Server に接続します。
 2. **[管理]** ノードを展開します。 
@@ -191,17 +164,45 @@ ms.lasthandoff: 03/22/2018
    
     ![エラー ログのクエリ](media/ssms-tricks/queryerrorlog.png)
 
-## <a name="determine-sql-server-instance-name"></a>SQL Server インスタンスの名前を確認する...
-SQL Server に接続する前と後では、インスタンスの名前を確認する方法が異なります。  
+
+### <a name="find-error-log-location-if-youre-connected-to-sql"></a>SQL に接続されている場合にエラー ログの場所を検索する
+1. SQL Server に接続します。
+2. **[新しいクエリ]** ウィンドウを開きます。
+3. クエリ ウィンドウに次の T-SQL コード スニペットを貼り付けて、**[実行]** をクリックします。
+
+ ```sql
+    SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
+  ``` 
+
+4. 結果で、ファイル システム内のエラー ログの場所が示されます。 
+
+    ![クエリでエラー ログを見つける](media/ssms-tricks/finderrorlogquery.png)
+
+### <a name="find-error-log-location-if-you-cannot-connect-to-sql"></a>SQL に接続できない場合にエラー ログの場所を検索する
+1. SQL Server 構成マネージャーを開きます。 
+2. **[サービス]** ノードを展開します。
+3. SQL Server インスタンスを右クリックして、**[プロパティ]** を選択します。
+
+    ![構成マネージャーのサーバーのプロパティ](media/ssms-tricks/serverproperties.PNG)
+
+4. **[起動時のパラメーター]** タブを選択します。
+5. **[Existing Parameters]\(既存のパラメーター\)** 領域で、"-e" の後のパスがエラー ログの場所です。 
+    
+    ![エラー ログ](media/ssms-tricks/errorlog.png)
+    - この場所には複数の errorlog.* があることがわかります。 *.log で終わっているのが現在のものです。 数字で終わっているのは以前のログです。SQL Server が再起動するたびに、新しいログが作成されます。 
+6. このファイルをメモ帳で開きます。 
+
+## <a name="determine-sql-server-name"></a>SQL Server 名を確認する...
+SQL Server に接続する前と後では、SQL Server 名を確認する方法が異なります。  
 
 ### <a name="when-you-dont-know-it"></a>...インスタンス名がわからないとき
 1. 手順に従って[ディスク上の SQL Server エラー ログ](#finding-your-error-log-if-you-cannot-connect-to-sql)を探します。 
 2. メモ帳で errorlog.log を開きます。 
 3. "サーバー名は" で始まるテキストを探します。
-  - 単一引用符で囲まれているのが、これから接続するインスタンスの名前です。![エラー ログでのサーバー名](media/ssms-tricks/servernameinlog.png)
+  - 単一引用符で囲まれているのが、これから接続する SQL Server の名前です。![エラー ログでのサーバー名](media/ssms-tricks/servernameinlog.png) 名前の形式は 'HOSTNAME\INSTANCENAME' です。 ホスト名しか表示されないが、既定のインスタンスをインストールしている場合、インスタンス名は 'MSSQLSERVER' です。 既定のインスタンスに接続している場合、SQL Server に接続するにはホスト名のみを入力する必要があります。  
 
 ### <a name="once-youre-connected-to-sql"></a>...SQL に接続した後 
-接続しているインスタンスを調べるには 3 つの場所があります。 
+接続している SQL Server は 3 つの場所で確認できます。 
 
 1. サーバーの名前は、**オブジェクト エクスプローラー**に表示されます。
 
@@ -209,7 +210,7 @@ SQL Server に接続する前と後では、インスタンスの名前を確認
 2. サーバーの名前は、クエリ ウィンドウに表示されます。
 
     ![クエリ ウィンドウでの名前](media/ssms-tricks/nameinquerywindow.png)
-3. のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 サーバーの名前は、**プロパティ ウィンドウ**にも表示されます。
+3. サーバーの名前は、**プロパティ ウィンドウ**にも表示されます。
     - アクセスするには、**[表示]** メニューを開き、**[プロパティ ウィンドウ]** を選択します。
 
     ![プロパティでの名前](media/ssms-tricks/nameinproperties.png)
