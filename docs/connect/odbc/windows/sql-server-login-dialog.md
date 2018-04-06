@@ -1,27 +1,28 @@
 ---
-title: "SQL Server ログイン ダイアログ ボックス (ODBC) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 09/27/2017
+title: SQL Server ログイン ダイアログ ボックス (ODBC) |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
-ms.author: genemi
+ms.author: v-jizho2
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5671f5213633d7efbb7693425a711db1e980d078
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 367559719da374be358f93821572df4365a278d7
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>[SQL Server ログイン] ダイアログ ボックス (ODBC)
 
@@ -44,6 +45,7 @@ SQL Server と同じコンピューターを使用しているときに"(local)"
 - **Windows 統合**現在のログイン ユーザーのアカウントを使用した認証
 - **Active Directory パスワード**ログイン ID とパスワードを使用
 - **Active Directory 統合**現在のログイン ユーザーのアカウントを使用した認証
+- **Active Directory の 対話型**ログイン id と認証
 
 参照してください[データ ソース ウィザード画面 2](../../../connect/odbc/windows/dsn-wizard-2.md)の詳細については、認証モードにします。
 
@@ -53,11 +55,11 @@ SQL Server と同じコンピューターを使用しているときに"(local)"
 
 ### <a name="login-id"></a>Login ID
 
-場合、接続に使用する SQL Server または Azure Active Directory のログイン ID を指定します**認証モード**に設定されている**SQL Server**または**Active Directory パスワード**です。 それ以外の場合、**ログイン ID**ボックスが無効になります。
+場合、接続に使用する SQL Server または Azure Active Directory のログイン ID を指定します**認証モード**に設定されている**SQL Server**または**Active Directory パスワード**または**対話型の active Directory**です。 それ以外の場合、**ログイン ID**ボックスが無効になります。
 
 ### <a name="password"></a>Password
 
-場合に、接続に使用される SQL Server または Azure Active Directory のログイン ID のパスワードを指定します**認証モード**に設定されている**SQL Server**または**Active Directory パスワード。**. それ以外の場合、**パスワード**ボックスが無効になります。
+場合に、接続に使用される SQL Server または Azure Active Directory のログイン ID のパスワードを指定します**認証モード**に設定されている**SQL Server**または**Active Directory パスワード**。 それ以外の場合、**パスワード**ボックスが無効になります。
 
 ### <a name="options"></a>オプション
 

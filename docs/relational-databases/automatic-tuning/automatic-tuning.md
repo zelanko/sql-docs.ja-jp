@@ -1,31 +1,31 @@
 ---
-title: "自動チューニング |Microsoft ドキュメント"
-description: "SQL Server と Azure SQL データベースで自動チューニングについてください。"
-ms.custom: 
+title: 自動チューニング |Microsoft ドキュメント
+description: SQL Server と Azure SQL データベースで自動チューニングについてください。
+ms.custom: ''
 ms.date: 08/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: automatic-tuning
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - performance tuning [SQL Server]
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 04d8ac47233e0556cd54ed9fb2b3d22080b4ee42
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 2f08de0fadb8fbc237af89a3132cfd747c9d62c7
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="automatic-tuning"></a>自動調整
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.lasthandoff: 02/12/2018
 
 データベースごとに自動調整を有効にし、プラン変更の機能低下が検出されたときは最後の正常なプランを適用することを指定できます。 自動調整は、次のコマンドを使って有効にします。
 
-```   
+```sql   
 ALTER DATABASE current
 SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON ); 
 ```
@@ -92,7 +92,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] すべての必要なビューとパフォーマンスを監視し、クエリのストア内の問題の解決に必要な手順を提供します。
 
-[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]クエリのストアのシステム ビューを使用してプランの選択による後退を見つけることができます。 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]を検出し、潜在的なプランの選択による後退と推奨される操作に適用されるを示しています、 [sys.dm_db_tuning_recommendations &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)ビュー。 問題の重要性の問題と識別されたクエリ、後退したプランの ID、比較については、基準として使用されていたプランの ID などの詳細についての情報を表示し、[!INCLUDE[tsql_md](../../includes/tsql_md.md)]修正を実行できるステートメント、問題があります。
+[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]クエリのストアのシステム ビューを使用してプランの選択による後退を見つけることができます。 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]を検出し、潜在的なプランの選択による後退と推奨される操作に適用されるを示しています、 [sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)ビュー。 問題の重要性の問題と識別されたクエリ、後退したプランの ID、比較については、基準として使用されていたプランの ID などの詳細についての情報を表示し、[!INCLUDE[tsql_md](../../includes/tsql_md.md)]修正を実行できるステートメント、問題があります。
 
 | 型 | description | datetime | score | 詳細情報 | … |
 | --- | --- | --- | --- | --- | --- |
@@ -104,11 +104,12 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
  - 説明情報を含む理由[!INCLUDE[ssde_md](../../includes/ssde_md.md)]このプランの変更が、潜在的なパフォーマンスの低下があると認識します。
  - 日時を設定すると、潜在的な回帰が検出されました。
  - この推奨事項のスコア付けします。 
- - 機能低下したプランを強制的に、問題を修正するプランの ID の ID、検出されたプランの ID などの問題に関する詳細[!INCLUDE[tsql_md](../../includes/tsql_md.md)]などの問題の修正を適用するスクリプト。詳細が格納されている[JSON 形式](../../relational-databases/json/index.md)です。
+ - 詳細については、検出されたプランを強制的に、問題を修正するプランの ID、後退したプランの ID の ID などの問題 [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
+ などの問題の修正を適用するスクリプトです。詳細が格納されている[JSON 形式](../../relational-databases/json/index.md)です。
 
 使用して、問題と、推定に関する追加情報を修正するスクリプトを入手する次のクエリが得られます。
 
-```   
+```sql   
 SELECT reason, score,
       script = JSON_VALUE(details, '$.implementationDetails.script'),
       planForceDetails.*,
@@ -171,16 +172,16 @@ Azure SQL データベースの自動調整を有効にし、自動調整機能�
 
 ### <a name="alternative---manual-index-management"></a>代わりに、手動のインデックスの管理
 
-自動インデックス管理なしユーザーが 手動でクエリを実行する必要があります[sys.dm_db_missing_index_details と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)可能性がありますがパフォーマンスを向上させる、このビューで詳細情報を使用してインデックスを作成し、クエリのパフォーマンスを監視して手動でインデックスを検索するビュー。 削除するインデックスを検索するには、するために、ユーザーはほとんど使用されない検索インデックスにインデックスの運用上の使用状況の統計を監視する必要があります。
+自動インデックス管理なしユーザーが 手動でクエリを実行する必要があります[sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)パフォーマンスを向上させることがあります、詳細を使用してインデックスを作成するインデックスを検索するビューこのビューを手動でクエリのパフォーマンスの監視で提供されます。 削除するインデックスを検索するには、するために、ユーザーはほとんど使用されない検索インデックスにインデックスの運用上の使用状況の統計を監視する必要があります。
 
 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] このプロセスを簡略化します。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] ワークロードを分析して、新しいインデックスを高速実行するクエリを識別し、使用されていないか、重複するインデックスを特定します。 詳細に変更する必要がありますのあるインデックスの id について[Azure ポータルで推奨インデックスを検索](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal)です。
 
 ## <a name="see-also"></a>参照  
- [ALTER DATABASE SET AUTOMATIC_TUNING &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [sys.database_automatic_tuning_options &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
- [sys.dm_db_tuning_recommendations &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
- [sys.dm_db_missing_index_details と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [sp_query_store_force_plan &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
- [sp_query_store_unforce_plan &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
+ [ALTER DATABASE SET AUTOMATIC_TUNING &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.database_automatic_tuning_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
+ [sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ [sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sp_query_store_force_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
+ [sp_query_store_unforce_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [JSON 関数](../../relational-databases/json/index.md)

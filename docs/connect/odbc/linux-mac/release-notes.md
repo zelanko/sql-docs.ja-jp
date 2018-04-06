@@ -1,29 +1,45 @@
 ---
-title: "リリース ノート - Microsoft ODBC Driver for SQL Server on Linux and macOS |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/19/2017
+title: リリース ノート - Microsoft ODBC Driver for SQL Server on Linux and macOS |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8fe5c32ed34d9056c69069d6b390a49fc71b396c
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: f193f7e58fa2cf24d02a345d60ca6c74e211fc7e
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Microsoft ODBC Driver for Linux と macOS 上の SQL Server のリリース ノート
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>新機能、[!INCLUDE[msCoName](../../../includes/msconame_md.md)]用 ODBC Driver 17.1 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] windows
+
+**追加された機能**:
+
+サポート`SQL_COPT_SS_CEKCACHETTL`と`SQL_COPT_SS_TRUSTEDCMKPATHS`接続属性 (詳細については、次を参照してください[for SQL Server ODBC ドライバーで Always Encrypted を使用して](../using-always-encrypted-with-the-odbc-driver.md))。
+- `SQL_COPT_SS_CEKCACHETTL` により、列暗号化キーのローカル キャッシュが存在する、時間を制御するだけでなく、フラッシュ
+- `SQL_COPT_SS_TRUSTEDCMKPATHS` により、アプリケーション リストだけを使用して、指定された列マスター_キーの AE 操作を制限するには
+
+
+
+読み込みのためのサポート、`.rll`既定の場所から (詳細については、次を参照してください[インストール ドキュメント内のセクションの 'リソース ファイルの読み込み中'](installing-the-microsoft-odbc-driver-for-sql-server.md#resource-file-loading))。
+
+[バグの修正](../bug-fixes.md)
+
+
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>新機能、[!INCLUDE[msCoName](../../../includes/msconame_md.md)]の ODBC ドライバーの 17 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux と macOS
 

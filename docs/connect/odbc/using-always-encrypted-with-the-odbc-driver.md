@@ -1,27 +1,28 @@
 ---
-title: "SQL Server 用 ODBC ドライバーで Always Encrypted を使用して |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server 用 ODBC ドライバーで Always Encrypted を使用して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 10/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: "3"
+caps.latest.revision: 3
 ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 1456db9e5474f2970508b4bc035915744172b3df
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーで Always Encrypted を使用します。
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -333,10 +334,16 @@ SQL Server では、パラメーターを暗号化する必要はありません
 
 ### <a name="column-encryption-key-caching"></a>列暗号化キーのキャッシュ
 
-列暗号化キーの暗号化を解除するための列マスター キー ストアへの呼び出しの数を減らすためには、ドライバーは、メモリ内でプレーン テキスト Cek をキャッシュします。 受信したらを使用して ECEK データベース メタデータから、ドライバーは、まず、キャッシュ内で暗号化されたキーの値に対応するプレーン テキスト CEK を検索を試みます。 ドライバーは、キャッシュに対応するプレーン テキスト CEK を見つけられない場合にのみ、CMK を含むキー ストアを呼び出します。
+列暗号化キーの暗号化を解除するための列マスター キー ストアへの呼び出しの数を減らすためには、ドライバーは、メモリ内でプレーン テキスト Cek をキャッシュします。 CEK キャッシュとは、ドライバーにグローバルであり、1 つの接続に関連付けられていません。 受信したらを使用して ECEK データベース メタデータから、ドライバーは、まず、キャッシュ内で暗号化されたキーの値に対応するプレーン テキスト CEK を検索を試みます。 ドライバーは、キャッシュに対応するプレーン テキスト CEK を見つけられない場合にのみ、CMK を含むキー ストアを呼び出します。
 
 > [!NOTE]
 > ODBC Driver for SQL Server では、キャッシュ内のエントリが 2 時間のタイムアウト後に削除されます。 つまり、特定の使用して ECEK のドライバーは、2 時間ごと、またはアプリケーションの有効期間中に 1 回だけキー ストアを取引先担当者、か小さい方です。
+
+SQL Server 用 ODBC ドライバー 17.1 から始めて、CEK のキャッシュのタイムアウトを使って調整できる、`SQL_COPT_SS_CEKCACHETTL`接続の属性は、キャッシュに残りますが、CEK の秒数を指定します。 グローバルの特性により、キャッシュ、ドライバーの有効な接続ハンドルのいずれかからこの属性を調整できます。 TTL が低下しているキャッシュ新しい ttl 値を超えて既存 CEKs も削除する時期。 0 の場合、Cek はキャッシュされません。
+
+### <a name="trusted-key-paths"></a>信頼されたキー パス
+
+SQL Server 用 ODBC ドライバー 17.1 で始まる、`SQL_COPT_SS_TRUSTEDCMKPATHS`接続属性を使用してアプリケーションを常に暗号化操作が指定された、キーのパスで識別される、Cmk の一覧のみを使用する必要があります。 既定では、この属性は、NULL の場合は、ドライバーが、キーのパスを受け入れることを意味するは。 この機能を使用する次のように設定します。`SQL_COPT_SS_TRUSTEDCMKPATHS`に null で区切られた、null で終わるワイド文字列に許可されているキーのパスの一覧を表示する をポイントします。 この属性によって示されるメモリのかどうかはこのサーバーのメタデータで指定された CMK パスが大文字小文字は基になるドライバーが確認されますが設定されている---接続ハンドルを使用して暗号化または暗号化解除の操作中に有効なまま必要があります。一覧です。 CMK パスが一覧にない場合は、操作は失敗します。 アプリケーションでは、この属性の属性をもう一度設定しなくても、信頼の Cmk のリストを変更するには、ポイント メモリの内容を変更できます。
 
 ## <a name="working-with-column-master-key-stores"></a>列マスター キー ストアを操作する
 
@@ -430,7 +437,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`CE203`|ライブラリに"CEKeyStoreProvider"エクスポート シンボルが見つかりませんでした。|
 |`CE203`|1 つまたは複数のプロバイダー ライブラリに既に読み込まれています。|
 
-`SQLSetConnectAttr`通常のエラーまたは成功を示す値、および追加情報は、の標準の ODBC 診断メカニズムによって発生したエラーを返します。
+`SQLSetConnectAttr` 通常のエラーまたは成功を示す値、および追加情報は、の標準の ODBC 診断メカニズムによって発生したエラーを返します。
 
 > [!NOTE]
 > アプリケーション プログラマは、それらを必要とする任意のクエリがすべて接続経由で送信される前に、カスタム プロバイダーが読み込まれたであることを確認する必要があります。 これを行うには、失敗した場合は、エラーが発生されます。
@@ -567,8 +574,8 @@ SQLPutData を使用してパーツでは、データを挿入または比較を
 
 |名前|Description|  
 |----------|-----------------|  
-|`ColumnEncryption`|指定できる値は`Enabled` /`Disabled`です。<br>`Enabled`-接続に対して Always Encrypted 機能を有効にします。<br>`Disabled`-接続に対して Always Encrypted 機能を無効にします。 <br><br>既定値は `Disabled` です。|  
-|`KeyStoreAuthentication` | 有効な値: `KeyVaultPassword`、`KeyVaultClientSecret` |
+|`ColumnEncryption`|指定できる値は`Enabled` /`Disabled`です。<br>`Enabled` -接続に対して Always Encrypted 機能を有効にします。<br>`Disabled` -接続に対して Always Encrypted 機能を無効にします。 <br><br>既定値は `Disabled` です。|  
+|`KeyStoreAuthentication` | 有効な値: `KeyVaultPassword`、 `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | ときに`KeyStoreAuthentication`  =  `KeyVaultPassword`、有効な Azure Active Directory ユーザー プリンシパル名にこの値を設定します。 <br>ときに`KeyStoreAuthetication`  =  `KeyVaultClientSecret`有効な Azure Active Directory アプリケーション クライアント ID に設定する値 |
 |`KeyStoreSecret` | ときに`KeyStoreAuthentication`  =  `KeyVaultPassword`対応するユーザー名のパスワードにこの値を設定します。 <br>ときに`KeyStoreAuthentication`  =  `KeyVaultClientSecret`有効な Azure Active Directory アプリケーション クライアント ID に関連付けられたアプリケーション シークレットにこの値を設定|
 
@@ -576,15 +583,17 @@ SQLPutData を使用してパーツでは、データを挿入または比較を
 
 |名前|型|Description|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|接続前|`SQL_COLUMN_ENCRYPTION_DISABLE`(0)--Always Encrypted を無効にします。 <br>`SQL_COLUMN_ENCRYPTION_ENABLE`(1) - Always Encrypted を有効にします。|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|接続前|`SQL_COLUMN_ENCRYPTION_DISABLE` (0)--Always Encrypted を無効にします。 <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) - Always Encrypted を有効にします。|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|接続後|[設定]CEKeystoreProvider をロードしようとしてください。<br>[取得]CEKeystoreProvider 名を返す|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|接続後|[設定]CEKeystoreProvider にデータを書き込む<br>[取得]CEKeystoreProvider からデータを読み取る|
+|`SQL_COPT_SS_CEKCACHETTL`|接続後|[設定]CEK キャッシュ TTL 設定します。<br>[取得]現在の CEK キャッシュ TTL を取得します。|
+|`SQL_COPT_SS_TRUSTEDCMKPATHS`|接続後|[設定]信頼されている CMK パス ポインターを設定します。<br>[取得]現在の信頼された CMK パス ポインターを取得します。|
 
 ### <a name="statement-attributes"></a>ステートメント属性
 
 |名前|Description|  
 |----------|-----------------|  
-|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED`(0)--ステートメントの always Encrypted が無効になっています <br>`SQL_CE_RESULTSETONLY`(1)--のみ復号化します。 結果セットと戻り値が復号化、およびパラメーターが暗号化されていません <br>`SQL_CE_ENABLED`(3)--always Encrypted が有効になっており、パラメーターと結果の両方の使用|
+|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0)--ステートメントの always Encrypted が無効になっています <br>`SQL_CE_RESULTSETONLY` (1)--のみ復号化します。 結果セットと戻り値が復号化、およびパラメーターが暗号化されていません <br>`SQL_CE_ENABLED` (3)--always Encrypted が有効になっており、パラメーターと結果の両方の使用|
 
 ### <a name="descriptor-fields"></a>記述子フィールド
 
