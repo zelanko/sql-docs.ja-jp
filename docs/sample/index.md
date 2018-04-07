@@ -1,8 +1,8 @@
 ---
 redirect_url: /sql/sample/microsoft-sql-server-samples
 ms.openlocfilehash: 307ebd7dc5d19a83b2839238a69051acf5a2c57d
-ms.sourcegitcommit: 0919a8184a1a5e398805775110b786c6e3c2e10a
-ms.translationtype: MT
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 04/07/2018
 ---
