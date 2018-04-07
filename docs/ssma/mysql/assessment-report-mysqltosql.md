@@ -1,41 +1,42 @@
 ---
-title: "評価レポート (MySQLToSQL) |Microsoft ドキュメント"
+title: 評価レポート (MySQLToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 5525d989-024c-402d-9e84-faa4721cc5b9
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e12233fc2506d7cbb7fd85b1068053cb26627b2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 37ea0744861296d4a3ec4a97f3736835bfd23b0b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="assessment-report-mysqltosql"></a>評価レポート (MySQLToSQL)
 評価 [レポート] ウィンドウは、データベース オブジェクトの変換結果を示しています。[!INCLUDE[tsql](../../includes/tsql_md.md)]構文、およびヘルプの複雑さと、移行プロジェクトの費用を見積もることができます。  
   
 ソース メタデータ エクスプ ローラーで、変換するオブジェクトの選択、評価レポートにアクセスを右クリックして**スキーマ**、し、**レポートの作成**です。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
   
 |||  
 |-|-|  
-|**項目**|**定義**|  
+|**項目**|**[定義]**|  
 |**変換の統計情報**|ステートメントの種類別の変換の統計情報を示します。 このウィンドウは、スキーマなどのグループ オブジェクトのときに表示されるまたは左側のウィンドウでコードがないオブジェクトを選択します。|  
 |**カテゴリ別にオブジェクト**|カテゴリ別のオブジェクトの数を示します。 このウィンドウは、スキーマなどのグループ オブジェクト場合にのみ表示または左側のウィンドウでコードがないオブジェクトを選択します。|  
 |**統計**|選択したオブジェクトの変換の統計情報を示します。 このウィンドウは、コードでは個々 のオブジェクトが左側のペインで選択されている場合にのみ表示されます。 展開する必要があります**統計**をすぐに、**ソース** ウィンドウでこのウィンドウを表示します。|  

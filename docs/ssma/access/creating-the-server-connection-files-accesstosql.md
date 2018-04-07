@@ -1,30 +1,31 @@
 ---
-title: "サーバー接続ファイル (AccessToSQL) |Microsoft ドキュメント"
+title: サーバー接続ファイル (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: acb3b2989b9d4807d39f7848202dd9ad1fa41b47
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 10cdd1a711d23d8934631c30a317aca4ca247a10
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>接続ファイル (AccessToSQL) サーバーを作成します。
 サーバーの情報は、スクリプト ファイルの [サーバー] セクションのいずれかを指定します。 サーバーの情報は、別のサーバー接続ファイルにも指定することができます。 サーバー接続ファイルのコマンド ライン パラメーターが`-c <serverconnectionfile>`です。 サーバーと同じ id がスクリプトとサーバーの両方の接続ファイルに存在する場合は、スクリプト ファイル内のサーバー定義と見なされます。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 12/21/2017
 ユーザーが、スキーマ定義ファイルに対する自分のサーバー接続ファイルを簡単に検証**'A2SSConsoleScriptServersSchema.xsd'** 'スキーマ' フォルダー内にあります。  
   
 ## <a name="next-step"></a>次の手順  
-コンソールの運用には、次の手順は[SSMA コンソール &#40; を実行します。AccessToSQL &#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
+コンソールの運用には、次の手順は[SSMA コンソールを実行する&#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
 ## <a name="see-also"></a>参照  
 [SSMA コンソール (アクセス) を実行します。](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  

@@ -1,15 +1,16 @@
 ---
-title: "Sybase コンソール (SybaseToSQL) for SSMA の概要 |Microsoft ドキュメント"
-ms.custom: 
+title: Sybase コンソール (SybaseToSQL) for SSMA の概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Sybase Console,Output Conventions
 - Sybase Console,Procedure for Using Console
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 689cd4339d926cd4f8e20c799a0c074adb29b81f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d63e1c4e3ecf3cd5f2537ec54db24be59a4d8ad5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Sybase コンソール (SybaseToSQL) for SSMA の概要
 このセクションを起動して、SSMA for Sybase コンソール アプリケーションの使用を開始するための手順について説明します。 記載されている表記規則ウィンドウで使用される、一般的な SSMA コンソール出力。  
@@ -45,13 +46,13 @@ SSMA コンソール アプリケーションを起動するのにには、次�
 ## <a name="using-the-ssma-console"></a>SSMA コンソールの使用  
 Windows システムで、コンソールを正常に起動した後は、作業を次の手順を使用できます。  
   
-1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの内容の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/creating-script-files-sybasetosql.md).  
+1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの内容の詳細については、次を参照してください。[スクリプト ファイルの作成&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)です。  
   
-2.  [変数値ファイル &#40; を作成します。SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
+2.  [変数の値のファイルを作成する&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
   
-3.  [サーバーの接続ファイル &#40; を作成します。SybaseToSQL &#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
+3.  [サーバー接続ファイルを作成する&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
   
-4.  [SSMA コンソール &#40; を実行します。SybaseToSQL &#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)プロジェクトのニーズに基づいています。 
+4.  [SSMA コンソールを実行する&#40;SybaseToSQL&#41; ](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)プロジェクトのニーズに基づいています。 
   
 追加機能:  
   
@@ -76,4 +77,4 @@ SSMA スクリプトのコマンドとオプションを実行すると、コン
 |シアン|開始、終了、および操作の結果|  
   
 ## <a name="see-also"></a>参照  
-[SSMA の SAP ASE &#40; のインストールSybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
+[SAP ASE 用 SSMA をインストールする&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  

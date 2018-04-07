@@ -1,26 +1,26 @@
 ---
-title: "管理コンソール (Analytics Platform System) を使用してアプライアンスを監視します。"
+title: 管理コンソール (Analytics Platform System) を使用してアプライアンスを監視します。
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
-caps.latest.revision: "26"
-ms.openlocfilehash: db27003d4e1efd54a179551f585fb23ce9c0ed82
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 26
+ms.openlocfilehash: 8da883797f8e9d09de0a5d160fc3383caf181590
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-the-appliance-by-using-the-admin-console"></a>管理コンソールを使用してアプライアンスを監視します。
 管理者コンソールは、アプライアンスの状態、ヘルス、およびパフォーマンス情報を表示する SQL Server PDW の web アプリケーションです。 ユーザーは、Internet Explorer で、管理コンソールに接続します。  
@@ -112,12 +112,12 @@ HDInsight の記憶域使用率の概要を示します。
 |-|-|  
 |**情報の種類**|**管理コンソールにアクセスする方法**|  
 |アプライアンスの全体的な状態|をクリックして**のアプライアンス状態**上部のメニューまたは**ホーム**です。|  
-|オブジェクト エクスプローラーには|をクリックして**アラート**です。 詳細については、次を参照してください。[管理者コンソールのアラートについて &#40;です。Analytics Platform System &#41;](understanding-admin-console-alerts.md).|  
+|警告|をクリックして**アラート**です。 詳細については、次を参照してください。[管理者コンソールのアラートについて&#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md)です。|  
 |アプライアンス コンポーネントとそれらの状態|をクリックして**のアプライアンス状態**上部のメニューまたは**ホーム**です。|  
 |要求 (クエリ、読み込み、バックアップ、復元など) を監視|をクリックして**セッション**を現在アクティブまたは最近使用したセッションを表示します。<br /><br />をクリックして**クエリ**を現在アクティブなまたは最近使用したクエリを参照してください。 クエリに表示される情報には、読み込み、バックアップ、および復元が含まれています。<br /><br />をクリックして**ロック**にアクティブなロックを参照してください。|  
 |読み込み、バックアップ、および復元に関する追加情報を監視します。|をクリックして**負荷**または**バックアップ/復元**です。|  
 |パフォーマンス情報|をクリックして**パフォーマンス モニター**です。|  
   
 ## <a name="see-also"></a>参照  
-[アプライアンスの監視 &#40;です。Analytics Platform System &#41;](appliance-monitoring.md)  
+[アプライアンス監視&#40;分析プラットフォーム システム&#41;](appliance-monitoring.md)  
   

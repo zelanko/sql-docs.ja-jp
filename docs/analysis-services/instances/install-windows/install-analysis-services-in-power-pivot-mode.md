@@ -1,33 +1,31 @@
 ---
-title: "Power Pivot モードで Analysis Services のインストール |Microsoft ドキュメント"
-ms.custom: 
+title: Power Pivot モードで Analysis Services のインストール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology:
-- setup-install
-- setup-install
-ms.tgt_pltfrm: 
+ms.technology: setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: 
+caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f3b10fdee9956b28273553755365b9251d073964
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2f7c09094c0a55337e2bb64b58e2ea14d6f2973f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Power Pivot モードでの Analysis Services のインストール
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-このトピックでは、SharePoint 配置の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードで [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーのシングル サーバー インストールを行う手順について説明します。 手順には、SQL Server インストール ウィザードの実行と、SharePoint サーバーの全体管理を使用する構成タスクが含まれます。  
+  このトピックでは、SharePoint 配置の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードで [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーのシングル サーバー インストールを行う手順について説明します。 手順には、SQL Server インストール ウィザードの実行と、SharePoint サーバーの全体管理を使用する構成タスクが含まれます。  
   
 ##  <a name="bkmk_background"></a> 背景情報  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint は、SharePoint 2016 (SharePoint 2013) ファームでの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] データ アクセスを提供する中間層のバックエンド サービスです。  
@@ -294,6 +292,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>参照  
  [SharePoint 2013 への Power Pivot の移行](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [Power Pivot for SharePoint アドインのインストールまたはアンインストール &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [ブックと定期データ更新 &#40; をアップグレードします。SharePoint 2013 &#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [ブックと定期データ更新 & #40; をアップグレードします。SharePoint 2013 & #41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

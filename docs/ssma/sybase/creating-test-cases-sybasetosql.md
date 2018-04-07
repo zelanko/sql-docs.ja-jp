@@ -21,13 +21,13 @@ ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
 caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8028f170d5f3154b9874cda16cc18bd7b36a84b8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0647f807a6a28eb1dc450d3e38b2e591f1b51dd2
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-test-cases-sybasetosql"></a>テスト_ケース (SybaseToSQL) の作成
 テストを作成するのにには、テスト ケース ウィザードを使用します。 このウィザードでは、テストおよび検証済みのオブジェクトを選択して、テストのパラメーターを指定して、テスト_ケースを作成できます。  
@@ -42,16 +42,16 @@ ms.lasthandoff: 12/21/2017
 ## <a name="overview-of-creating-test-cases-using-the-wizard"></a>ウィザードを使用してテスト_ケースの作成の概要  
 テスト_ケースを作成するプロセスは、5 つの手順で構成されます。  
   
-1.  [初期化中のテスト_ケースと #40 です。SybaseToSQL &#41;](../../ssma/sybase/initializing-test-cases-sybasetosql.md).  
+1.  [テスト_ケースの初期化&#40;SybaseToSQL&#41;](../../ssma/sybase/initializing-test-cases-sybasetosql.md)です。  
   
-2.  [選択とテスト &#40; オブジェクトの構成SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md).  
+2.  [選択して、テストするオブジェクトを構成&#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)です。  
   
-3.  [選択して、影響を受けるオブジェクト &#40; を構成します。SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md).  
+3.  [影響を受けたオブジェクトの選択と構成&#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)です。  
   
-4.  [呼び出し順序 &#40; をカスタマイズします。SybaseToSQL &#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md).  
+4.  [呼び出し順序のカスタマイズ&#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)です。  
   
-5.  [フィニッシュのテスト_ケースの準備 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md).  
+5.  [テスト_ケース準備を完了&#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)です。  
   
 ## <a name="see-also"></a>参照  
-[データベース オブジェクト &#40; 移行テストSybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[データベース オブジェクトを移行テスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

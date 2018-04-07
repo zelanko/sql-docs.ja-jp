@@ -1,30 +1,31 @@
 ---
-title: "オブジェクトの選択 (DB2ToSQL) 高度な |Microsoft ドキュメント"
+title: オブジェクトの選択 (DB2ToSQL) 高度な |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b246973c44b1d781ec191c8473b000fd4d54a1de
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 493812f151c4aa1eb4e80912fa871b09e750280c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="advanced-object-selection-db2tosql"></a>高度なオブジェクトの選択 (DB2ToSQL)
 **オブジェクト セクションの高度な** ダイアログ ボックスでは、オブジェクト名に文字列および部分文字列を使用してデータベース オブジェクトをフィルター処理し、選択するか、それらのオブジェクトの選択を解除することができます。 SSMA では、選択したオブジェクトでの変換と移行操作を実行します。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 このダイアログ ボックスを使用する前に、スキーマを変換するか、プロジェクトを保存してすべてのメタデータを読み込む SSMA を強制することができます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
 **すべての項目をチェックします。**  
 すべての項目の横にあるチェック マークを追加します。 これらの項目は、メタデータ エクスプ ローラーで、すぐに選択されます。  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/21/2017
 **読み込まれただけの項目が表示されます。**  
 カテゴリまたは項目の表示を切り替えます。 このボタンを選択すると、SSMA は、フィルター条件や以前に読み込まれたものと一致するすべての項目を示します。 このボタンを選択しない場合は、SSMA はカテゴリ フォルダーを示しています。  
   
-**Assert**  
+**フィルター**  
 項目をフィルター処理に使用する文字列を入力します。 たとえば、項目名に、"ID"、文字列が含まれる使用可能なすべての項目を検索を入力文字列"ID"、**フィルター**ボックス。  
   
 項目がフィルター条件に一致する場合は、文字列を入力すると、カテゴリまたは項目は表示されます。 一致する項目を表示するには、ことをお勧めをクリックすること、**読み込まれた項目のみを表示**ボタンをクリックします。  

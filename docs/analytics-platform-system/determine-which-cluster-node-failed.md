@@ -1,26 +1,26 @@
 ---
-title: "失敗した (Analytics Platform System) のクラスター ノードを特定します。"
+title: 失敗した (Analytics Platform System) のクラスター ノードを特定します。
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1e001117-a1b6-4357-bf25-e85aba3f1cf0
-caps.latest.revision: "21"
-ms.openlocfilehash: 14b68f56a89d5fec57ede1a49be4dedc435353b5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 21
+ms.openlocfilehash: 201d11f7c3e5e7d50e1138ab41edf4fbdb60a6b9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="determine-which-cluster-node-failed"></a>クラスター ノードでエラーの特定します。
 このトピックでは、クラスターのフェールオーバーが発生したし、クラスター フェールオーバーの警告が発生しましたが失敗した SQL Server PDW ノードの名前を確認する方法について説明します。 クラスターのフェイル オーバーのトラブルシューティングの一環として、問題を解決するためにマイクロソフトに連絡する前に失敗したノードの名前を決定する必要があります。  
@@ -34,7 +34,7 @@ SQL Server PDW で高可用性は、コントロールのノードとコンピ�
   
 #### <a name="to-find-the-name-of-the-node-that-failed"></a>失敗したノードの名前を検索するには  
   
-1.  管理コンソールを開きます。 管理者コンソールの詳細については、次を参照してください[アプライアンスを管理コンソール &#40; を使用して監視する。Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md). アラートの数でフェールオーバー イベントが含まれるフェールオーバーが発生した後、**ヘルス**ページ。 **ヘルス**PDW 地域、HDI 地域およびアプライアンスのファブリック領域のページが表示されます。 各正常性のページには、**アラート**タブです。アラートについての詳細については、正常性 ページで、アラート タブをクリックし、アラート をクリックします。  
+1.  管理コンソールを開きます。 管理者コンソールの詳細については、次を参照してください。[アプライアンスを管理コンソールを使用して監視&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)です。 アラートの数でフェールオーバー イベントが含まれるフェールオーバーが発生した後、**ヘルス**ページ。 **ヘルス**PDW 地域、HDI 地域およびアプライアンスのファブリック領域のページが表示されます。 各正常性のページには、**アラート**タブです。アラートについての詳細については、正常性 ページで、アラート タブをクリックし、アラート をクリックします。  
   
 ## <a name="SystemView"></a>システム ビューのソリューション  
 次の SQL ステートメントを使用する方法を示しています、 [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)失敗したサーバーの名前を検索するシステム ビューです。  

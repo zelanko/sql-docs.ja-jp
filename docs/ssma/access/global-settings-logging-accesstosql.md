@@ -1,37 +1,38 @@
 ---
-title: "グローバル設定 (ログ) (AccessToSQL) |Microsoft ドキュメント"
+title: グローバル設定 (ログ) (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07f20237ec7bdf7e7da927eeeb0b7b15bcb6ad7b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a349ef1a4ef3d0f628b32aa72dc1cba239cb1893
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="global-settings-logging-accesstosql"></a>グローバル設定 (ログ) (AccessToSQL)
 使用して、**グローバル設定**ダイアログ ボックスを SSMA のログ設定を指定します。 通常、製品のサポートを使用する場合にのみこれらの設定を変更するは。  
   
 このダイアログ ボックスにアクセスする、**ツール**メニューの **グローバル設定**をクリックし、**ログ**左側のウィンドウの下部にあるボタンをクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
 **メッセージ レベル**  
 次のオプションが 利用可能な**メッセージ レベル**:  
   

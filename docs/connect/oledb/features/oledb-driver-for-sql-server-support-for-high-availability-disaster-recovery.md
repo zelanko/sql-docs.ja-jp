@@ -10,23 +10,23 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05275a1f770ce4a01f583dda768872a26b5e3725
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
-ms.translationtype: MT
+ms.openlocfilehash: c915af2ec748c4b2c15882c9a643c8e200442e98
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>SQL Server Support for High Availability, Disaster Recovery の OLE DB ドライバー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  このトピックでは、SQL Server のサポートの OLE DB Driver がについて説明します (で追加された[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) の[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の詳細については、「[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」、「[可用性グループの作成と構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)」、「[フェールオーバー クラスタリングと AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」、および「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+  この記事では、SQL Server のサポートの OLE DB Driver がについて説明します (で追加された[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) の[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の詳細については、「[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」、「[可用性グループの作成と構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)」、「[フェールオーバー クラスタリングと AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」、および「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
  接続文字列で、特定の可用性グループの可用性グループ リスナーを指定できます。 OLE DB Driver for SQL Server アプリケーションがフェールオーバーする可用性グループ内のデータベースに接続されている場合は、元の接続が切断と、アプリケーションは、フェールオーバー後の作業を続行する新しい接続を開く必要があります。  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 04/03/2018
 読み取り専用ルーティングを有効にするには、**ApplicationIntent** キーワードを使用します。  
   
 ## <a name="read-only-routing"></a>読み取り専用ルーティング  
-読み取り専用のルーティングは、データベースの読み取り専用レプリカを使用可能にする機能です。 読み取り専用のルーティングを有効にするには  
+読み取り専用ルーティングは、データベースの読み取り専用レプリカの可用性を実現する機能です。 読み取り専用のルーティングを有効にするには  
   
 1.  AlwaysOn 可用性グループ リスナーに接続する必要があります。  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 04/03/2018
   
 読み取り専用のルーティングを使用した複数の接続が同じ読み取り専用レプリカに接続されるとは限りません。 データベース同期の変更やサーバーのルーティング構成の変更によって、クライアントが別の読み取り専用レプリカに接続される場合があります。 すべての読み取り専用要求が同じ読み取り専用レプリカに接続を確認してください、渡さないで、Always On 可用性グループ リスナーを**サーバー**接続文字列キーワードです。 代わりに、読み取り専用インスタンスの名前を指定します。  
   
-読み取り専用ルーティングでは、最初にプライマリに接続した後で読み取り可能の最適なセカンダリを探すため、プライマリに接続する場合よりも時間がかかる場合があります。 このため、ログイン タイムアウトを大きくする必要があります。  
+読み取り専用ルーティングでは、最初にプライマリに接続した後、使用できる最善の読み取り可能セカンダリが検索されます。このため、読み取り専用ルーティングに要する時間は、プライマリに接続するよりも長くなります。 このため、ログイン タイムアウトを大きくする必要があります。  
   
 ## <a name="ole-db"></a>OLE DB (OLE DB)  
 SQL Server の OLE DB Driver は、両方をサポート、 **ApplicationIntent**と**MultiSubnetFailover**キーワード。   
@@ -113,18 +113,15 @@ SQL Server の OLE DB Driver は、両方をサポート、 **ApplicationIntent*
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
-OLE DB Driver for SQL Server の OLE DB アプリケーションは、アプリケーションの目的を指定するのに方法のいずれかを使用できます。  
+OLE DB Driver for SQL Server アプリケーションは、アプリケーションの目的を指定するのにのいずれかを使用できます。  
   
- **Idbinitialize::initialize**  
+ -   **Idbinitialize::initialize**  
  **IDBInitialize::Initialize** は、あらかじめ構成された一連のプロパティを使用して、データ ソースを初期化し、データ ソース オブジェクトを作成します。 アプリケーション インテントは、プロバイダーのプロパティとして指定するか、拡張プロパティ文字列の一部として指定します。  
   
- **Idatainitialize::getdatasource**  
+ -   **Idatainitialize::getdatasource**  
  **IDataInitialize::GetDataSource** は **Application Intent** キーワードを格納できる入力接続文字列を受け取ります。  
   
- **IDBProperties::GetProperties**  
- **IDBProperties::GetProperties** は、現在データ ソースに設定されているプロパティの値を取得します。  **Application Intent** の値は、DBPROP_INIT_PROVIDERSTRING プロパティおよび SSPROP_INIT_APPLICATIONINTENT プロパティを通じて取得できます。  
-  
- **IDBProperties::SetProperties**  
+ -   **IDBProperties::SetProperties**  
  **ApplicationIntent** プロパティ値を設定するには、**IDBProperties::SetProperties** を呼び出して、"**ReadWrite**" または "**ReadOnly**" の値で **SSPROP_INIT_APPLICATIONINTENT** プロパティを渡すか、または "**ApplicationIntent=ReadOnly**" または "**ApplicationIntent=ReadWrite**" を含む値で **DBPROP_INIT_PROVIDERSTRING** プロパティを渡します。  
   
 アプリケーション インテントは、**[データ リンク プロパティ]** ダイアログ ボックスの [すべて] タブの [アプリケーション インテントのプロパティ] フィールドで指定できます。  
@@ -133,13 +130,22 @@ OLE DB Driver for SQL Server の OLE DB アプリケーションは、アプリ�
   
 ### <a name="multisubnetfailover"></a>MultiSubnetFailover
 
-同等の接続プロパティがあります。  
+対応する接続プロパティは次のとおりです。  
   
 -   **SSPROP_INIT_MULTISUBNETFAILOVER**  
+  
+-   **DBPROP_INIT_PROVIDERSTRING**  
 
-SSPROP_INIT_MULTISUBNETFAILOVER プロパティは、ブール型です。 プロパティは、VARIANT_TRUE または VARIANT_FALSE の値を指定できます。
+OLE DB Driver for SQL Server アプリケーションは、MultiSubnetFailover オプションの設定に、次のメソッドのいずれかを使用できます。  
 
-MultiSubnetFailover プロパティの値を設定するには、呼び出す**idbproperties::setproperties** SSPROP_INIT_MULTISUBNETFAILOVER プロパティに値を渡して**VARIANT_TRUE**または**VARIANT_FALSE**です。 
+ -   **Idbinitialize::initialize**  
+ **IDBInitialize::Initialize** は、あらかじめ構成された一連のプロパティを使用して、データ ソースを初期化し、データ ソース オブジェクトを作成します。 アプリケーション インテントは、プロバイダーのプロパティとして指定するか、拡張プロパティ文字列の一部として指定します。  
+  
+ -   **Idatainitialize::getdatasource**  
+ **Idatainitialize::getdatasource**は含めることができる入力接続文字列を受け取り、 **MultiSubnetFailover**キーワード。  
+
+-   **IDBProperties::SetProperties**  
+設定する、 **MultiSubnetFailover**プロパティ値、呼び出し**idbproperties::setproperties**を渡して、 **SSPROP_INIT_MULTISUBNETFAILOVER** の値を持つプロパティ**VARIANT_TRUE**または**VARIANT_FALSE**または**DBPROP_INIT_PROVIDERSTRING**プロパティを含む値を"**MultiSubnetFailover = Yes**「または」**MultiSubnetFailover = いいえ**"です。
 
 #### <a name="example"></a>例
 

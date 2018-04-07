@@ -1,15 +1,16 @@
 ---
-title: "サーバー接続ファイル (SybaseToSQL) |Microsoft ドキュメント"
-ms.custom: 
+title: サーバー接続ファイル (SybaseToSQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Sybase Console,Creating Server Connection Files
 - Sybase Console,Server Connection File Validation
 ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85c98038c589d57daeea1ba8c715d00b089b8f77
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a4466dff337914b4598442ab0377a9d3457aad8b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>サーバー接続ファイル (SybaseToSQL) を作成します。
 スクリプト ファイルの [サーバー] セクションで、または別のサーバー接続ファイルには、サーバー情報を指定することができます。 サーバー接続ファイルのコマンド ライン パラメーターは、`-c <serverconnectionfile>`です。 サーバーと同じ id が、スクリプト ファイルとサーバー接続ファイルの両方に存在する場合は、スクリプト ファイル内のサーバー定義と見なされます。  
@@ -115,7 +116,7 @@ ms.lasthandoff: 12/21/2017
 ユーザーが、スキーマ定義ファイルに対する自分のサーバー接続ファイルを簡単に検証**S2SSConsoleScriptServersSchema.xsd** 'スキーマ' フォルダー内にあります。  
   
 ## <a name="next-step"></a>次の手順  
-コンソールの運用には、次の手順は[SSMA コンソール &#40; を実行します。SybaseToSQL &#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
+コンソールの運用には、次の手順は[SSMA コンソールを実行する&#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
 ## <a name="see-also"></a>参照  
 [SSMA コンソールの実行](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  

@@ -21,13 +21,13 @@ ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73019709b3ce9b40dc05f678cc64d33305504213
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 13035f6ca6e0a2dc95b3b0f7907b066abdbda716
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>変換 (MySQLToSQL) の MySQL データベースを評価します。
 オブジェクトを読み込むし、データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure 移行が複雑な方法で、どれ時間だけを決定する必要があります、移行になります。 SSMA は、正常に変換されるオブジェクトの割合が表示される評価レポートを作成できます。 SSMA では、変換エラーが発生する特定の問題を表示することもできます。  
@@ -85,13 +85,13 @@ SSMA 変換を選択した MySQL データベース オブジェクトでこの�
   
 -   SSMA で MySQL 構文を更新します。 プロシージャおよび関数のみの構文を更新することができます。 構文を更新するには、MySQL メタデータ エクスプ ローラー ペインでオブジェクトを選択 をクリックして、 **SQL**タブをクリックし、SQL コードを変更します。 項目から移動するときに、更新された構文の保存が求められます。 表示するには、報告されたエラー オブジェクトを**レポート**タブです。  
   
--   MySQL では、削除するか、問題のあるコードを修正する MySQL オブジェクトを変更できます。 SSMA に、更新されたコードを読み込むするには、メタデータを更新する必要があります。 詳細については、次を参照してください[MySQL &#40; に接続する。MySQLToSQL &#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md).  
+-   MySQL では、削除するか、問題のあるコードを修正する MySQL オブジェクトを変更できます。 SSMA に、更新されたコードを読み込むするには、メタデータを更新する必要があります。 詳細については、次を参照してください。 [MySQL への接続&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)です。  
   
 -   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure メタデータ エクスプ ローラーと MySQL メタデータ エクスプ ローラーにオブジェクトを読み込む前に、アイテムの横のチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure と MySQL からデータを移行します。  
   
 ## <a name="next-step"></a>次の手順  
-[MySQL データベース &#40; を変換します。MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+[MySQL データベースを変換する&#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>参照  
-[SQL Server - Azure SQL DB &#40; への MySQL データベースの移行MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[SQL Server - Azure SQL DB にデータベースを移行する MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

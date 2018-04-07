@@ -1,26 +1,26 @@
 ---
-title: "ファイルの瞬時初期化構成 (Analytics Platform System)"
+title: ファイルの瞬時初期化構成 (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 58be8982-4d2e-4aa3-bcdd-874a062d2f9d
-caps.latest.revision: "20"
-ms.openlocfilehash: b7dda4bb925e08f49409ea1950cfe3649b4db3e0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 20
+ms.openlocfilehash: 1e28ff30c727dfe1132b5568bb12a333c51927d5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="instant-file-initialization-configuration"></a>ファイルの瞬時初期化の構成
 ファイルの瞬時初期化は、データ ファイルの操作をより迅速に実行を許可する SQL Server 機能です。 チェック ボックスをファイルの瞬時初期化を有効にすると、SQL Server PDW のパフォーマンスが向上します。 ただし、ビジネスのセキュリティ上のリスクを伴いますこの場合、オフのままにします。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="to-turn-instant-file-initialization-on-or-off"></a>ファイルの瞬時初期化を有効または無効にする  
   
-1.  構成マネージャーを起動します。 詳細については、次を参照してください[構成マネージャー &#40; を起動。Analytics Platform System &#41;](launch-the-configuration-manager.md).  
+1.  構成マネージャーを起動します。 詳細については、次を参照してください。[構成マネージャーを起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)です。  
   
 2.  構成マネージャーの左側のウィンドウでをクリックして**ファイルの瞬時初期化**です。  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/21/2017
     > [!WARNING]  
     > ファイルの瞬時初期化を無効にすると、機能の上で説明したセキュリティの考慮事項もファイルの瞬時初期化が有効化中に削除されたファイルに適用されます。  
   
-4.  **[適用]**をクリックします。 変更は、アプライアンスのサービスが再起動したときに、SQL Server PDW では、SQL Server インスタンスを介して反映されます。 アプライアンスのサービスを今すぐ再起動するには、次を参照してください。 [PDW サービスの状態と #40 です。Analytics Platform System &#41;](pdw-services-status.md).  
+4.  **[適用]**をクリックします。 変更は、アプライアンスのサービスが再起動したときに、SQL Server PDW では、SQL Server インスタンスを介して反映されます。 アプライアンスのサービスを今すぐ再起動するには、次を参照してください。 [PDW サービス ステータス&#40;Analytics Platform System&#41;](pdw-services-status.md)です。  
   
 5.  上記の手順を繰り返すことができます**バックアップ アカウントのアクセス許可の追加**を削除する、**ボリュームの保守タスクを実行**権限です。  
   

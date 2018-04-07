@@ -1,30 +1,31 @@
 ---
-title: "アクセス コンソール (AccessToSQL) for SSMA の概要 |Microsoft ドキュメント"
+title: アクセス コンソール (AccessToSQL) for SSMA の概要 |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc7b11e4317eb6f982a31bdd1fee17b9c54cbe04
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad49cf3dacefb44e86d7b752382dca62baf35827
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>アクセス コンソール (AccessToSQL) for SSMA の概要
 このセクションを起動し、Access のコンソール アプリケーションで作業を開始する手順について説明します。 一覧表示、ここで、規則ウィンドウで使用される、一般的な SSMA コンソール出力。  
@@ -41,13 +42,13 @@ SSMA コンソール アプリケーションを起動するのにには、次�
 ## <a name="procedure-for-using-the-ssma-console"></a>SSMA コンソールを使用する手順  
 Windows システムで、コンソールを正常に起動した後、次の手順を使用して作業する可能性があります。  
   
-1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの内容の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;です。AccessToSQL &#41;](../../ssma/access/creating-script-files-accesstosql.md).  
+1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの内容の詳細については、次を参照してください。[スクリプト ファイルの作成&#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md)です。  
   
-2.  [変数値ファイル &#40; を作成します。AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
+2.  [変数の値のファイルを作成する&#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   
-3.  [サーバーの接続ファイル &#40; を作成します。AccessToSQL &#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
+3.  [サーバー接続ファイルを作成する&#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-4.  [SSMA コンソール &#40; を実行します。AccessToSQL &#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)プロジェクトのニーズに基づく  
+4.  [SSMA コンソールを実行する&#40;AccessToSQL&#41; ](../../ssma/access/executing-the-ssma-console-accesstosql.md)プロジェクトのニーズに基づく  
   
 追加機能:  
   

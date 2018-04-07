@@ -1,16 +1,16 @@
 ---
-title: "スクリプト ファイル (MySQLToSQL) を作成する |Microsoft ドキュメント"
+title: スクリプト ファイル (MySQLToSQL) を作成する |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Creating script files, script file validation
 - Creating script files, server connection parameters
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddfe50aa62403c1dda26ebf1f2017bdf45bf7864
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1bef1029a5bfcde8f3cad7c83393c026e7d8a5d9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-script-files-mysqltosql"></a>スクリプト ファイル (MySQLToSQL) を作成します。
 最初の手順とスクリプト ファイルの作成には、SSMA コンソール アプリケーションを起動する前に、変数の値のファイルと、サーバー接続ファイルを作成するために必要な場合は。  
@@ -256,15 +256,15 @@ ms.lasthandoff: 12/21/2017
   
     -   off  
   
-    -   1 間隔の %  
+    -   every-1%  
   
-    -   毎回 ~ 2%  
+    -   every-2%  
   
-    -   すべての 5%  
+    -   every-5%  
   
-    -   すべての 10%  
+    -   every-10%  
   
-    -   すべての 20%  
+    -   every-20%  
   
     **例:**  
   
@@ -354,7 +354,7 @@ ms.lasthandoff: 12/21/2017
 -   **再接続の最大試行回数:**確立された接続はタイムアウトになるか、ネットワーク障害の原因を中断、する場合、サーバーが再接続する必要です。 最大まで再接続の試行が許可されている**5**後の再試行、コンソールが自動的に再接続を実行します。 自動再接続の機能には、スクリプトを再実行で、作業が軽減されます。  
   
 ## <a name="server-connection-parameters"></a>サーバーの接続パラメーター  
-スクリプト ファイル、またはサーバーの接続ファイルには、サーバー接続パラメーターを定義することができます。 参照してください、[サーバー接続ファイル &#40; を作成します。MySQLToSQL &#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)詳細についてはします。  
+スクリプト ファイル、またはサーバーの接続ファイルには、サーバー接続パラメーターを定義することができます。 参照してください、[サーバー接続ファイルを作成する&#40;MySQLToSQL&#41; ](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)詳細についてはします。  
   
 ## <a name="script-commands"></a>スクリプト コマンド  
 スクリプト ファイルには、XML 形式で移行ワークフロー コマンドのシーケンスが含まれています。 SSMA コンソール アプリケーションでは、スクリプト ファイルに表示されるコマンドの順序で移行を処理します。  
@@ -402,14 +402,14 @@ ms.lasthandoff: 12/21/2017
   
 妥当性をそこに表示されるパラメーターを変更した後は、テンプレート (ファイル) を実行できます。  
   
-スクリプト コマンドの完全な一覧は含まれて[SSMA コンソール &#40; を実行します。MySQLToSQL &#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
+スクリプト コマンドの完全な一覧は含まれて[SSMA コンソールを実行する&#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
 ## <a name="script-file-validation"></a>スクリプト ファイルの検証  
 ユーザーが、スキーマ定義ファイルに対して自分のスクリプト ファイルを簡単に検証**'M2SSConsoleScriptSchema.xsd'** 'スキーマ' フォルダー内にあります。  
   
 ## <a name="next-step"></a>次の手順  
-コンソールの運用には、次の手順は[変数値ファイルの作成 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
+コンソールの運用には、次の手順は[変数値のファイルを作成する&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)です。  
   
 ## <a name="see-also"></a>参照  
-[変数値ファイル &#40; を作成します。MySQLToSQL &#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
+[変数の値のファイルを作成する&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
   

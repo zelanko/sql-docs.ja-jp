@@ -21,13 +21,13 @@ ms.assetid: fa0e0797-d1fb-4e56-a5da-8458cc2d2401
 caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a62d9803867f6b1d7ea86e027426f28c893b860
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4a397b48e4c55cee98fd12cb7f1954ba17100854
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="initializing-test-cases-sybasetosql"></a>テスト_ケース (SybaseToSQL) の初期化
 この手順では、新しいテスト_ケースの初期の情報を指定します。  
@@ -46,8 +46,8 @@ ms.lasthandoff: 12/21/2017
 テスト_ケースの目的を識別する追加情報を入力します。  
   
 ## <a name="next-step"></a>次の手順  
-[選択とテスト &#40; オブジェクトの構成SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
+[選択して、テストするオブジェクトを構成&#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
   
 ## <a name="see-also"></a>参照  
-[データベース オブジェクト &#40; 移行テストSybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[データベース オブジェクトを移行テスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

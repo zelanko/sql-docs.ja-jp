@@ -10,7 +10,7 @@ ms.component: ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bbfdaf039668820a108c3f261ca7162c17cd4c09
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 336665f67245911fa560c8ac54cad77dc9c661c6
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB の日付と時刻の強化に対するデータ型のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -188,6 +188,6 @@ enum SQLVARENUM {
  アプリケーションに DBTYPE_DBTIMESTAMP を指定するときに*wType*へのマッピングをオーバーライドできます**datetime2**型の名前を指定することによって*pwszTypeName*です。 場合**datetime**が指定されている*bScale* 3 をする必要があります。 場合**smalldatetime**が指定されている*bScale* 0 にする必要があります。 場合*bScale*と整合性がありません*wType*と*pwszTypeName*DB_E_BADSCALE が返されます。  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻の強化 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [日付と時刻の強化 (&) #40";"OLE DB"&"#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

@@ -1,15 +1,16 @@
 ---
-title: "SQL Server (MySQLToSQL) への接続 |Microsoft ドキュメント"
+title: SQL Server (MySQLToSQL) への接続 |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - connecting to SQL Server 2008, SQL Server permission
 - connecting to SQL Server 2008, synchronization
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed92b4a6b8b54e797f6dd623153ea677743a6c7b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d35db5eb35e4e27a2ea9724cdc2d5d017a8e02e8
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>SQL Server (MySQLToSQL) に接続します。
 MySQL データベースを SQL Server に移行するには、SQL Server のターゲット インスタンスに接続する必要があります。 接続するときに、SSMA は SQL Server のインスタンス内のすべてのデータベースに関するメタデータを取得し、SQL Server メタデータ エクスプ ローラーでデータベースのメタデータを表示します。 SSMA は、パスワードは保存されませんに接続している SQL Server のインスタンスの情報を格納します。  
@@ -46,7 +47,7 @@ SQL Server への接続に使用されるアカウントには、アカウント
 ## <a name="establishing-a-sql-server-connection"></a>SQL Server の接続を確立します。  
 MySQL データベースのオブジェクトを SQL Server の構文に変換する前に、または複数の MySQL データベースを移行する SQL Server のインスタンスへの接続を確立する必要があります。  
   
-接続のプロパティを定義するときは、オブジェクトとデータを移行するデータベースを指定します。 SQL Server に接続した後は、MySQL スキーマ レベルでは、このマッピングをカスタマイズできます。 詳細については、次を参照してください[MySQL データベースを SQL Server スキーマ &#40; にマッピング。MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+接続のプロパティを定義するときは、オブジェクトとデータを移行するデータベースを指定します。 SQL Server に接続した後は、MySQL スキーマ レベルでは、このマッピングをカスタマイズできます。 詳細については、次を参照してください[MySQL データベースを SQL Server スキーマへのマッピング&#40;MySQLToSQL。&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
 > [!IMPORTANT]  
 > SQL Server に接続しようとすると、前に、SQL Server のインスタンスが実行されているとが接続を受け入れることを確認します。  
@@ -90,12 +91,12 @@ MySQL データベースのオブジェクトを SQL Server の構文に変換�
 ||||||||  
 |-|-|-|-|-|-|-|  
 |**プロジェクトの種類と対象サーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005<br /> (バージョン: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008<br /> (バージョン: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012<br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014<br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016<br />(Version:13.x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|可|可|可|可|可||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||可|可|可|可||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||可|可|可||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014||||可|可||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2016|||||可||  
-|SQL Azure||||||可|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||はい|[ユーザー アカウント制御]|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014||||はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2016|||||はい||  
+|SQL Azure||||||はい|  
   
 > [!IMPORTANT]  
 > バージョンに従っていませんが、プロジェクトの種類に従って、データベース オブジェクトの変換は実行が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に接続します。 場合に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005年プロジェクトの変換は実行が 1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 より新しいバージョンに接続している場合でも[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)](SQL Server 2008/SQL Server 2012]/[SQL Server 2014/SQL Server 2016)。  
@@ -116,14 +117,14 @@ SQL Server データベースについてのメタデータは自動的に更新
 ## <a name="next-step"></a>次の手順  
 次の手順では、プロジェクトのニーズによって異なります。  
   
--   MySQL のスキーマと SQL Server データベースおよびスキーマ間のマッピングをカスタマイズするを参照してください。[マッピング MySQL データベースを SQL Server スキーマと #40 です。MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+-   MySQL のスキーマと SQL Server データベースおよびスキーマ間のマッピングをカスタマイズするを参照してください[SQL Server スキーマへのマッピングの MySQL データベース&#40;MySQLToSQL。&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
--   プロジェクトの構成オプションをカスタマイズするを参照してください。[プロジェクト オプションの設定 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
+-   プロジェクトの構成オプションをカスタマイズするを参照してください[プロジェクト オプションの設定&#40;MySQLToSQL。&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
   
--   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください。[マッピング MySQL および SQL Server データ型 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+-   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください[マッピング MySQL および SQL Server データ型&#40;MySQLToSQL。&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
--   次のタスクを実行する必要はない場合、は、SQL Server オブジェクトの定義に MySQL のデータベース オブジェクトの定義を変換することができます。 詳細については、次を参照してください。 [MySQL データベースを変換する &#40;です。MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   次のタスクを実行する必要はない場合、は、SQL Server オブジェクトの定義に MySQL のデータベース オブジェクトの定義を変換することができます。 詳細については、次を参照してください[MySQL データベースを変換する&#40;MySQLToSQL。&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>参照  
-[SQL Server - Azure SQL DB &#40; への MySQL データベースの移行MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[SQL Server - Azure SQL DB にデータベースを移行する MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

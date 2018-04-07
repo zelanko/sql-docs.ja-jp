@@ -1,30 +1,31 @@
 ---
-title: "更新からのデータベース (MySQLToSQL) |Microsoft ドキュメント"
+title: 更新からのデータベース (MySQLToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18656f8929e52d23e10ccc5fafe8139544bf44a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1881df93e8b26463b4f7a638e5b1e94674442013
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="refresh-from-database-mysqltosql"></a>データベース (MySQLToSQL) からの更新します。
 **データベースから更新** ダイアログ ボックスでは、MySQL データベースから更新するには、どのオブジェクトを選択することができます。 ダイアログ ボックス内の行が色分けされるメタデータの状態に基づいて。  
@@ -37,15 +38,15 @@ ms.lasthandoff: 12/21/2017
   
 -   オブジェクトが新しい MySQL データベースの場合、行がピンク色です。  
   
-オブジェクトの更新の設定を既定値を指定することができます、**プロジェクト設定** ダイアログ ボックス。 詳細については、次を参照してください。[プロジェクトの設定 &#40;です。同期 &#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
+オブジェクトの更新の設定を既定値を指定することができます、**プロジェクト設定** ダイアログ ボックス。 詳細については、次を参照してください[プロジェクト設定&#40;同期&#41; &#40;MySQLToSQL。&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
 アクセスする、**データベースから更新**ダイアログ ボックスで、クリックすると MySQL メタデータ エクスプ ローラー オブジェクトを右クリック**データベースから更新**です。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
   
 |||  
 |-|-|  
-|**項目**|**定義**|  
+|**項目**|**[定義]**|  
 |**折りたたみ (-)**|個々 のオブジェクトを非表示にするすべてのオブジェクト グループを折りたたみます。|  
 |**展開 (+)**|個々 のオブジェクトを表示するすべてのオブジェクト グループを展開します。|  
 |**等しいオブジェクトを表示/非表示**|オブジェクトのメタデータが SSMA および MySQL のデータベースで同じである場合は、一覧からオブジェクトを非表示にします。|  

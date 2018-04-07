@@ -1,32 +1,32 @@
 ---
-title: "PDW の証明書 (Analytics Platform System) のプロビジョニング"
+title: PDW の証明書 (Analytics Platform System) のプロビジョニング
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "PDW 証明書の準備 ページの Analytics Platform System Configuration Manager では、インポートまたは PDW で使用される証明書を削除します。"
+description: PDW 証明書の準備 ページの Analytics Platform System Configuration Manager では、インポートまたは PDW で使用される証明書を削除します。
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: "22"
-ms.openlocfilehash: c6cbaf559e51103648a4238245d44425c4d5af77
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: 13e4f6ba3aeb105813ae53eee3a15ce41616273a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-certificate-provisioning"></a>PDW 証明書のプロビジョニング
 **PDW 証明書のプロビジョニング**Analytics Platform System のページ**Configuration Manager**をインポートまたは PDW で使用される証明書を削除します。 
 
 使用して、接続の暗号化に証明書は SQL Server クライアント、SQL Server PDW ドライバーを使用するツールを使ってコントロール ノードをセキュリティで保護された通信を支援できます、[管理コンソール](monitor-the-appliance-by-using-the-admin-console.md)、Integration Services で読み込まれるとします。 
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 証明書をインストールする前に、次の操作を行います。  
   
 1.  セキュリティで保護された証明書を取得します。 セキュリティで保護された証明書を取得する方法の詳細については、必要がある場合は、Microsoft サポートに問い合わせてください。  
@@ -53,7 +53,7 @@ Analytics Platform System を使用して**Configuration Manager**を追加ま�
 ### <a name="to-import-the-certificate"></a>証明書をインポートするには  
   
 1.  起動して、 **Configuration Manager**です。  
-詳細については、次を参照してください[構成マネージャー &#40; を起動。Analytics Platform System &#41;](launch-the-configuration-manager.md).  
+詳細については、次を参照してください。[構成マネージャーを起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)です。  
 
 2.  左側のウィンドウで、 **Configuration Manager**、展開**並列データ ウェアハウスのトポロジ**、クリックして**証明書**です。  
   
@@ -84,4 +84,4 @@ SQL Server PDW では、現在の接続の暗号化に続行されますが、�
 ![DWConfig アプライアンス PDW の証明書](media/dwconfig-appl-pdw-cert.png "DWConfig アプライアンス PDW の証明書")  
   
 ## <a name="see-also"></a>参照  
-[構成マネージャー &#40; を起動します。Analytics Platform System &#41;](launch-the-configuration-manager.md)  
+[構成マネージャーを起動&#40;分析プラットフォーム システム&#41;](launch-the-configuration-manager.md)  

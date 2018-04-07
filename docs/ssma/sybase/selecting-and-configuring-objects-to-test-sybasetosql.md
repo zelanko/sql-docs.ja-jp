@@ -1,15 +1,16 @@
 ---
-title: "選択して、テスト (SybaseToSQL) にオブジェクトの構成 |Microsoft ドキュメント"
-ms.custom: 
+title: 選択して、テスト (SybaseToSQL) にオブジェクトの構成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,22 +19,22 @@ helpviewer_keywords:
 - Tester Component,Parameter Comparision Setting
 - Tester Component,Selecting Objects
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23c5a636c3031fce08294de4640799fde34362d7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3ee6efee5172d5261c5f8fa5e23507b9bb2b931b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>選択して、テスト (SybaseToSQL) にオブジェクトの構成
 この手順では、テスト、およびプロシージャの関数の出力パラメーターと関数の戻り値を比較するための設定を構成するオブジェクトを選択します。  
   
 ## <a name="selection-of-objects-to-test"></a>テストするオブジェクトの選択  
-Sybase オブジェクト ツリーで、ウィンドウの左側にある、テスト プロセス中に、呼び出し先のオブジェクトを確認してください。 内のテストが容易なオブジェクトの完全な一覧を参照してください、[移行対象のデータベース オブジェクトのテストと #40 です。SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)トピックです。  
+Sybase オブジェクト ツリーで、ウィンドウの左側にある、テスト プロセス中に、呼び出し先のオブジェクトを確認してください。 内のテストが容易なオブジェクトの完全な一覧を参照してください、[移行対象のデータベース オブジェクトのテスト&#40;SybaseToSQL&#41; ](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)トピックです。  
   
 SSMA テスターによってサポートされないテスト用に選択されたオブジェクトのいずれかの場合は、ラベルの付いたリンクが表示されます**によって選択したオブジェクトには、エラーが含まれている**[オブジェクト] ツリー。 なぜこれらのオブジェクトをテストすることはできません、上の理由からや不適切なオブジェクトの選択を解除するは、このリンクをクリックします。  
   
@@ -45,7 +46,7 @@ SSMA テスターによってサポートされないテスト用に選択され
 ### <a name="use-during-comparisons"></a>比較の際に使用します。  
 テスト結果の比較では、選択したパラメーターの使用を有効にします。  
   
--   選択した場合**True**SSMA はで対応する値を持つ Sybase でプロシージャを実行した後はこのパラメーターの出力値を比較[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   選択した場合**True**SSMA はで対応する値を持つ Sybase でプロシージャを実行した後はこのパラメーターの出力値を比較 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
 -   選択した場合**False**パラメーター、結果の検証から除外されます。  
   
@@ -90,8 +91,8 @@ SSMA テスターによってサポートされないテスト用に選択され
 入力パラメーター値を指定することができます、**呼び出す値**ページ。 **の呼び出しの追加**ボタンは、空のパラメーター値を持つ新しい呼び出しを追加します。 **呼び出す削除**ボタンは、現在の呼び出しを削除します。  
   
 ## <a name="next-step"></a>次の手順  
-[選択して、影響を受けるオブジェクト &#40; を構成します。SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
+[影響を受けたオブジェクトの選択と構成&#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>参照  
-[データベース オブジェクト &#40; 移行テストSybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[データベース オブジェクトを移行テスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

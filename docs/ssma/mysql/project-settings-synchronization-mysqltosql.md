@@ -1,35 +1,36 @@
 ---
-title: "プロジェクトの設定 (同期) (MySQLToSQL) |Microsoft ドキュメント"
+title: プロジェクトの設定 (同期) (MySQLToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc7bd0c7dce1c8ad2b70cdaa6b66ed7872c5062d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3a53e15a5bdadae9b0ca67980419fd9ae299e258
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>プロジェクトの設定 (同期) (MySQLToSQL)
 同期**プロジェクト設定**SQL Server データベース オブジェクトと MySQL のデータベース オブジェクトを同期する方法を構成できます。  
   
-既定の操作は、MySQL データベースからオブジェクトを更新する場合と、SQL Server データベースとオブジェクトを同期するために、既定の設定を指定します。 詳細については、次を参照してください。[更新からのデータベース &#40;です。MySQLToSQL &#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)  
+既定の操作は、MySQL データベースからオブジェクトを更新する場合と、SQL Server データベースとオブジェクトを同期するために、既定の設定を指定します。 詳細については、次を参照してください[データベースから更新&#40;MySQLToSQL。&#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)  
   
 同じ設定を含む 2 つの異なる同期ページにアクセスできます。  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 -   現在のプロジェクトの設定を指定する、**ツール** メニューのをクリックして**プロジェクト設定**、クリックして**同期**左側のウィンドウの下部にあります。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
   
 ##### <a name="misc"></a>その他  
   

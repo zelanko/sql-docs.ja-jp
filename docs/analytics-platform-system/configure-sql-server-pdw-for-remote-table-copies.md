@@ -1,26 +1,26 @@
 ---
-title: "リモート テーブルのコピー (SQL Server PDW) の SQL Server PDW の構成します。"
+title: リモート テーブルのコピー (SQL Server PDW) の SQL Server PDW の構成します。
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 496b4214-5891-404c-8237-c2a1e09db6d5
-caps.latest.revision: "11"
-ms.openlocfilehash: 08257e4823eed7bf86977ddca1df41eee7f8bda2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 11
+ms.openlocfilehash: 46fdb88ce3a244946b89f14320229905793564ac
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-sql-server-pdw-for-remote-table-copies"></a>リモート テーブルのコピーの SQL Server PDW を構成します。
 SQL Server PDW アプライアンス以外のサーバー上の SMP SQL Server データベースにテーブルをコピーするリモート テーブルのコピー機能を使用するを構成する方法について説明します。  
@@ -30,7 +30,7 @@ SQL Server PDW アプライアンス以外のサーバー上の SMP SQL Server �
 ## <a name="before-you-begin"></a>はじめに  
 リモート テーブルのコピーを使用する SQL Server PDW を構成するのには、次の操作を行います。  
   
--   直接ログオンする権限を持つ分析プラットフォーム システム管理者アカウントがある、  ***appliance_domain*-AD01**と ***appliance_domain*-AD02**ノード。  
+-   直接ログオンする権限を持つ分析プラットフォーム システム管理者アカウントがある、***appliance_domain *-AD01**と ***appliance_domain *-AD02**ノード。  
   
 -   ホスト名または移行先サーバーの IP 名を知っています。  
   
@@ -39,7 +39,7 @@ SQL Server PDW アプライアンス以外のサーバー上の SMP SQL Server �
   
 次の手順では、DNS サーバーを更新する方法を説明します。  
   
-1.  作業中の AD ノードにログオン (通常 ***appliance_domain*-AD01**)。  
+1.  作業中の AD ノードにログオン (通常 ***appliance_domain *-AD01**)。  
   
 2.  DNS マネージャーを開きます。 これは、下にある **管理ツール**で、**開始**メニュー。  
   

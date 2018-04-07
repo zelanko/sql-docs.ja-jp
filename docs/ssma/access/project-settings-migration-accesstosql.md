@@ -1,15 +1,16 @@
 ---
-title: "プロジェクトの設定 (移行) (AccessToSQL) |Microsoft ドキュメント"
+title: プロジェクトの設定 (移行) (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Migration settings
 - Project Settings dialog box, Migration
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3ffb7f8fe3a50fc940bb3030fd2bed518006b01
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 83f7ad0fbda7ead76a24e40f971e9589719fb788
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-migration-accesstosql"></a>プロジェクトの設定 (移行) (AccessToSQL)
 移行プロジェクトの設定では、データに移行する方法を構成できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   使用して、**プロジェクト設定の既定の**ダイアログ ボックスをすべてのプロジェクトの構成オプションを設定します。 移行の設定にアクセスする、**ツール**メニューの **プロジェクト設定の既定の**、プロジェクトの種類を選択**移行のターゲット バージョン**コンボ ボックスの設定にアクセスをクリックする**全般**クリックして、左側のウィンドウの下部にある**移行**です。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
 **CHECK 制約**  
 テーブルにデータを追加する場合、SSMA が制約をチェックするかどうかを指定します。  
   
@@ -87,7 +88,7 @@ SSMA がデータの移行中のテーブルにデータを追加する場合に
 **サポートされていない日付を置き換えます**  
 SSMA はできるだけ早くより前のアクセスの日付を修正する必要があるかどうかを示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]datetime の日付 (1753 年 1 月 01日)。  
   
--   現在の日付値を保持する次のように選択します。**何もしない**です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]datetime 列には、01 1753 年 1 月より前に、の日付を受け入れません。 古い日付を使用する場合は、datetime 値を文字の値に変換する必要があります。  
+-   現在の日付値を保持する次のように選択します。**何もしない**です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] datetime 列には、01 1753 年 1 月より前に、の日付を受け入れません。 古い日付を使用する場合は、datetime 値を文字の値に変換する必要があります。  
   
 -   01 1753 年 1 月より前に、の日付を NULL に変換する選択**NULL 置き換えます**です。  
   

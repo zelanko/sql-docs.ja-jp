@@ -1,37 +1,38 @@
 ---
-title: "MySQL (MySQLToSQL) への接続 |Microsoft ドキュメント"
+title: MySQL (MySQLToSQL) への接続 |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 068fe6585eac87830511515a95373a938cbcdca2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cb5ed12698026172f7ef2ef080fd8e68d64cf51c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>MySQL (MySQLToSQL) への接続します。
 使用して、 **MySQL への接続**を移行する MySQL データベースに接続する ダイアログ ボックス。  
   
 このダイアログ ボックスにアクセスする、**ファイル**メニューの  **MySQL への接続**です。 以前接続した場合、コマンドは**MySQL への再接続**です。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
 **プロバイダー**  
   
 使用可能な MySQL プロバイダーは、MySQL 5.1 Odbc (信頼関係) です。  
@@ -48,7 +49,7 @@ MySQL サーバーの名前を入力します。 標準モードのオプショ�
   
 サーバーのポートを入力します。 既定のサーバーのポートは、3306 です。 標準モードのオプションです。  
   
-**User name**  
+**ユーザー名**  
   
 SSMA は、MySQL データベースへの接続に使用されるユーザー名を入力します。  
   
@@ -60,7 +61,7 @@ SSMA は、MySQL データベースへの接続に使用されるユーザー名
   
 MySQL に安全に接続する場合は、利用の Secure Socket Layer (SSL) をチェックして、 **SSL**チェック ボックスをオンします。  
   
-**構成**  
+**構成します。**  
   
 MySQL Secure Socket Layer (SSL) を介してへの接続を構成するオプションを提供します。  
   

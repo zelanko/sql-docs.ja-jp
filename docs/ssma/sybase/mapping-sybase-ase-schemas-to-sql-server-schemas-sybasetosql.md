@@ -21,13 +21,13 @@ ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e0b8dad8d5742782ed3b3828806c5122092b37b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2e06a6710b85621f9b0df66f38c42a0b8ebc05ce
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>SQL Server スキーマ (SybaseToSQL) にマッピング Sybase ASE スキーマ
 Sybase Adaptive Server Enterprise (ASE)、各データベースは、1 つまたは複数のスキーマを持っています。 既定では、SSMA は、同じデータベースおよびスキーマ内にデータベースおよびスキーマ内のすべてのオブジェクトを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 ただし、ASE 間のマッピングをカスタマイズすることができ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure データベースとスキーマです。  
@@ -71,9 +71,9 @@ ASE スキーマ間のマッピングをカスタマイズする場合は、[!IN
   
 1.  スキーマのマッピング] タブで、[任意の行を選択し、をクリックして**既定値にリセット**既定のデータベースとスキーマを元に戻す。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
 Sybase ASE オブジェクトへの変換を分析するかどうかは[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure オブジェクトを実行できます[変換レポートを作成する](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c)です。 それ以外の場合を実行できます[ASE データベース オブジェクトの定義の変換](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3)に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure オブジェクトの定義。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server - Azure SQL DB &#40; への Sybase ASE データベースの移行SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SQL Server - Azure SQL DB &#40;への Sybase ASE データベースの移行SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

@@ -1,30 +1,31 @@
 ---
-title: "プロジェクトの設定 (読み込みシステム オブジェクト) (DB2ToSQL) |Microsoft ドキュメント"
+title: プロジェクトの設定 (読み込みシステム オブジェクト) (DB2ToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0bf007faf72861607740d5af0f6ec418fefb71f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f0ec81e97380007724ba1cfeb9ee2580ca64edd0
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>プロジェクトの設定 (読み込みシステム オブジェクト) (DB2ToSQL)
 [システム オブジェクトの読み込み] ページ、**プロジェクト設定** ダイアログ ボックスでは、SSMA に変換し、読み込みます DB2 システム オブジェクトを指定できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
@@ -38,21 +39,21 @@ ms.lasthandoff: 12/21/2017
 ## <a name="default-settings"></a>既定の設定  
 システム オブジェクトを変換するシステム リソースを消費し、時間がかかります。 パフォーマンスを向上させるのには、SSMA は、次の一覧に示すように最もよく使用されるシステム オブジェクトのみを選択します。  
   
--   SYS です。DBMS_OUTPUT  
+-   SYS.DBMS_OUTPUT  
   
--   SYS です。DBMS_PIPE  
+-   SYS.DBMS_PIPE  
   
--   SYS です。DBMS_UTILITY  
+-   SYS.DBMS_UTILITY  
   
--   SYS です。標準  
+-   SYS.STANDARD  
   
--   SYS です。UTL_FILE  
+-   SYS.UTL_FILE  
   
--   SYS です。DBMS_LOB  
+-   SYS.DBMS_LOB  
   
--   SYS です。DBMS_SQL  
+-   SYS.DBMS_SQL  
   
--   SYS です。DBMS_SESSION  
+-   SYS.DBMS_SESSION  
   
 場合は、DB2 オブジェクトは、その他のシステム オブジェクトを参照して、それらのオブジェクトを選択します。 DB2 データベース オブジェクトによって参照されているシステム オブジェクトを選択しない場合は、SSMA で変換エラーを報告します。 システム オブジェクトの不足によって発生する変換エラーが発生した場合は、このダイアログ ボックスで、不足しているオブジェクトを選択します。 必要に応じて変換を行うことができます。  
   

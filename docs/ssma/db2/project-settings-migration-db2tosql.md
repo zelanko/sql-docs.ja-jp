@@ -1,30 +1,31 @@
 ---
-title: "プロジェクトの設定 (移行) (DB2ToSQL) |Microsoft ドキュメント"
+title: プロジェクトの設定 (移行) (DB2ToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf47fee6992ec74ca331972e711be931d4dfb34e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5d143857c00815a8d219b5add7b3281cf982723d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-migration-db2tosql"></a>プロジェクトの設定 (移行) (DB2ToSQL)
 [移行] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA は DB2 からからデータを移行する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 12/21/2017
 |**[NULL を保持する]**|SSMA では、SQL Server で指定されている既定値に関係なく、SQL Server にデータを追加する場合に、ソース データ内の null 値が保持されるかどうかを指定します。<br /><br />**既定のモード**: True<br /><br />**オプティミスティック モード**: True<br /><br />**Full モード**: True|  
 |**エラーのため、文字列のトリム操作にマークを付ける**|ターゲット列のサイズがソース文字列の長さよりも小さい場合は、値がトリミングされ、エラーとしてマークされています。<br /><br />**既定のモード**: はい<br /><br />**オプティミスティック モード**: はい<br /><br />**Full モード**: はい|  
 |**エラー時**|エラーが発生したときに、データの移行を停止します。 3 つのオプションがあります。<br /><br />**移行を停止します**データ移行操作を停止する。<br /><br />**次の表に進みます:**現在のテーブルへのデータ移行を停止し、次に進みます<br /><br />**次のバッチに進みます:**現在のバッチへのデータ移行を停止し、次に進みます<br /><br />**既定のモード**: 次のバッチに進む<br /><br />**オプティミスティック モード**: 次のバッチに進む<br /><br />**Full モード**: 次のバッチに進む|  
-|**サポートされていない日付を置き換えます**|SSMA では、できるだけ早くより前の日付を修正する必要があるかどうかを示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime**日付 (1753 年 1 月 01日)。<br /><br />現在の日付値を保持する次のように選択します。**何もしない**です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]datetime 列には、01 1753 年 1 月より前に、の日付を受け入れません。 古い日付を使用する場合は、datetime 値を文字の値に変換する必要があります。<br /><br />01 1753 年 1 月より前に、の日付を NULL に変換する選択**NULL 置き換えます**です。<br /><br />サポートされている日付の 01 1753 年 1 月より前に、の日付を置き換えるには選択**でサポートされる日付に最も近い置き換えます**です。<br /><br />**既定のモード**: 何もしません。<br /><br />**オプティミスティック モード**: 何もしません。<br /><br />**Full モード**: サポートされる日付に最も近いで置き換えます|  
+|**サポートされていない日付を置き換えます**|SSMA では、できるだけ早くより前の日付を修正する必要があるかどうかを示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime**日付 (1753 年 1 月 01日)。<br /><br />現在の日付値を保持する次のように選択します。**何もしない**です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] datetime 列には、01 1753 年 1 月より前に、の日付を受け入れません。 古い日付を使用する場合は、datetime 値を文字の値に変換する必要があります。<br /><br />01 1753 年 1 月より前に、の日付を NULL に変換する選択**NULL 置き換えます**です。<br /><br />サポートされている日付の 01 1753 年 1 月より前に、の日付を置き換えるには選択**でサポートされる日付に最も近い置き換えます**です。<br /><br />**既定のモード**: 何もしません。<br /><br />**オプティミスティック モード**: 何もしません。<br /><br />**Full モード**: サポートされる日付に最も近いで置き換えます|  
 |**[テーブル ロック]**|SSMA がデータの移行中のテーブルにデータを追加する場合に、テーブルをロックするかどうかを指定します。 一括コピー操作の間で一括更新ロックを取得します。 値が False の場合は、ロックは行レベルで設定されます。<br /><br />**既定のモード**: True<br /><br />**オプティミスティック モード**: True<br /><br />**Full モード**: True|  
   
 ## <a name="parallel-data-migration"></a>並列データの移行  

@@ -1,15 +1,16 @@
 ---
-title: "移行ウィザード (AccessToSQL) |Microsoft ドキュメント"
+title: 移行ウィザード (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - Migration Wizard, New Project
 - Migration Wizard, Selecting objects to migrate
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b8e039ef80efd41fabbaeeddbb9e3e1e9acc2ea
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 03b556d7fa5f49d69d9554d3416e3277adc4f504
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="migration-wizard-accesstosql"></a>移行ウィザード (AccessToSQL)
 移行ウィザードで、1 つまたは複数のデータベースの移行へのアクセスを[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 ウィザードを使用するがプロジェクトを作成、データベースをプロジェクトに追加されたら、オブジェクトを移行し、接続を選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 また変換、読み込むには、し、アクセスのスキーマとデータを移行します。 Access テーブルをリンクする必要に応じて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure のテーブルです。  
@@ -108,7 +109,7 @@ SQL Azure のページへの接続では、接続のプロパティを指定し�
 このページの詳細については、次を参照してください[変換、読み込み、および移行。](http://msdn.microsoft.com/en-us/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)  
   
 ## <a name="see-also"></a>参照  
-[For アクセス &#40; SQL Server Migration Assistant の概要AccessToSQL &#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
+[SQL Server Migration Assistant for Access の概要&#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [SQL Server へのアクセス データベースの移行](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [ユーザー インターフェイス Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

@@ -10,18 +10,18 @@ ms.component: oledb-driver-for-sql-server
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e50a02ebc2e83a73a3549175dff0545fab45e962
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: f253352e2cd014cda9d88144dd01795b0d048de0
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="using-the-output-clause-with-ole-db-in-ole-db-driver-for-sql-server"></a>SQL Server の OLE db OLE DB ドライバーで OUTPUT 句の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,6 +29,6 @@ ms.lasthandoff: 03/30/2018
   INSERT、UPDATE、DELETE、または MERGE コマンドで OUTPUT 句を使用した場合、処理された行数はわかりません。 アプリケーションは、OUTPUT 句によって返される行セットの行数をカウントする必要があります。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server アプリケーション用の OLE DB ドライバーを作成します。](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md) 
+ [OLE DB Driver for SQL Server のアプリケーションの作成](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md) 
   
   

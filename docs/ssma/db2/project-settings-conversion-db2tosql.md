@@ -1,30 +1,31 @@
 ---
-title: "プロジェクトの設定 (変換) (DB2ToSQL) |Microsoft ドキュメント"
+title: プロジェクトの設定 (変換) (DB2ToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f459472409e9fc85322aca5067d0953bd24831a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 389d5da7b3940464150ca52618595fd8bd518fb8
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-conversion-db2tosql"></a>プロジェクトの設定 (変換) (DB2ToSQL)
 [変換] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA が DB2 構文に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]構文です。  
@@ -100,7 +101,7 @@ SSMA ROWNUM 式が変換されるときに、TOP 句は、後に、式に、式�
 **既定/Optimistic/フル モード:** MERGE を使用するステートメント  
   
 ### <a name="convert-calls-to-subprograms-that-use-default-arguments"></a>既定の引数を使用してサブプログラムへの呼び出しに変換します。  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]関数は、関数呼び出しでパラメーターの省略をサポートしていません。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]関数およびプロシージャ パラメーターの既定値として式をサポートしています。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 関数は、関数呼び出しでパラメーターの省略をサポートしていません。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]関数およびプロシージャ パラメーターの既定値として式をサポートしています。  
   
 -   選択した場合**[はい]**関数呼び出しのパラメーターを省略して、SSMA は、キーワードを挿入する**既定**関数と、正しい場所に呼び出しにします。 次に、警告の呼び出しを設定します。  
   
@@ -115,7 +116,7 @@ SSMA ROWNUM 式が変換されるときに、TOP 句は、後に、式に、式�
   
 -   選択した場合**はい**SSMA は COUNT_BIG を使用するすべての数を変換します。  
   
--   選択した場合**いいえ**関数にカウントとして残ります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]関数が 2 よりも大きい値を返す場合、エラーが返されます<sup>31</sup>-1 です。  
+-   選択した場合**いいえ**関数にカウントとして残ります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 関数が 2 よりも大きい値を返す場合、エラーが返されます<sup>31</sup>-1 です。  
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
@@ -137,7 +138,7 @@ SSMA PL/SQL コレクション要素に対して FORALL ループを処理でき
 **フル モード:** [はい]  
   
 ### <a name="convert-foreign-keys-with-set-null-referential-action-on-column-that-is-not-null"></a>SET NULL 参照操作である列に指定された変換の外部キーが NOT NULL します。  
-DB2 は、ここで、SET NULL 操作可能性のある実行できませんでした参照先の列で null 値が許可されていないために、外部キー制約の作成をできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]このような外部キーの構成は許可されません。  
+DB2 は、ここで、SET NULL 操作可能性のある実行できませんでした参照先の列で null 値が許可されていないために、外部キー制約の作成をできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] このような外部キーの構成は許可されません。  
   
 -   選択した場合**はい**SSMA DB2 の場合と同様に参照動作が生成されますが、制約を読み込む前に手動で変更する必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 たとえば、SET NULL ではなく、NO ACTION を選択できます。  
   
@@ -176,7 +177,7 @@ SSMA は、テーブル ヒントに多くのロック TABLE ステートメン�
 |DB2 ロック モード|SQL Server のテーブル ヒント|  
 |行の共有|ROWLOCK、HOLDLOCK|  
 |排他行|ROWLOCK、XLOCK、HOLDLOCK|  
-|共有の更新プログラムの行の共有を =|ROWLOCK、HOLDLOCK|  
+|SHARE UPDATE = ROW SHARE|ROWLOCK、HOLDLOCK|  
 |共有|TABLOCK、HOLDLOCK|  
 |共有行の排他|TABLOCK、XLOCK、HOLDLOCK|  
 |排他的|TABLOCKX、HOLDLOCK|  
@@ -227,7 +228,7 @@ SSMA は、2 つの方法で PL/SQL サブタイプに変換できます。
   
 -   選択した場合**はい**、SSMA が作成されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ユーザー定義サブタイプを入力し、このサブタイプの各変数を使用します。  
   
--   選択した場合**いいえ**SSMA は基になる型とサブタイプのすべてのソース宣言を置き換えるし、通常どおりの結果を変換します。 この場合、その他の種類は作成されませんで[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   選択した場合**いいえ**SSMA は基になる型とサブタイプのすべてのソース宣言を置き換えるし、通常どおりの結果を変換します。 この場合、その他の種類は作成されませんで [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
@@ -317,7 +318,7 @@ INTO 句を伴う SELECT ステートメントがすべての行を返さない�
   
 -   選択した場合**はい**SSMA は、各 SELECT ステートメントの後に sysdb プロシージャ db_error_exact_one_row_check への呼び出しを追加します。 この手順では、NO_DATA_FOUND と TOO_MANY_ROWS の例外をエミュレートします。 これは既定値であり、できるだけ近くに DB2 動作を再現することができます。 常に選択する必要があります**はい**ソース コードにこれらのエラーを処理する例外ハンドラーがある場合。 ユーザー定義関数の内部で SELECT ステートメントが発生すると、このモジュールは、ストアド プロシージャを実行するためのストアド プロシージャに変換されますと、例外の発生と互換性がありません[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]関数のコンテキスト。  
   
--   選択した場合**いいえ**例外は生成されません。 SSMA は、ユーザー定義関数を変換し、内の関数のままにする場合に利用をでき[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   選択した場合**いいえ**例外は生成されません。 SSMA は、ユーザー定義関数を変換し、内の関数のままにする場合に利用をでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
@@ -370,7 +371,7 @@ SSMA に ROWID が生成される列に一意のインデックス列が生成�
 **既定/オプティミスティック/全モード:**インライン  
   
 ### <a name="use-isnull-in-string-concatenation"></a>文字列の連結で ISNULL を使用します。  
-DB2 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]文字列連結で NULL 値を含める場合は、異なる結果を返します。 DB2 では、NULL 値は、空の文字セットと同様に扱われます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]NULL を返します。  
+DB2 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]文字列連結で NULL 値を含める場合は、異なる結果を返します。 DB2 treats the NULL value like an empty character set. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] NULL を返します。  
   
 -   選択した場合**はい**、SSMA は、DB2 の連結文字 (|) を置き換えます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]連結文字 (+) です。 SSMA では、NULL 値を連結したものの両方の側の式も確認します。  
   
@@ -430,7 +431,7 @@ ISNULL ステートメントは、DB2 の動作をエミュレートする CONCA
 ## <a name="returning-clause-conversion"></a>句の変換を返す  
   
 ### <a name="convert-returning-clause-in-delete-statement-to-output"></a>DELETE ステートメント内での RETURNING 句を出力に変換します。  
-DB2 は、すぐに削除された値を取得する方法として、RETURNING 句を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]OUTPUT 句と共に、その機能を提供します。  
+DB2 は、すぐに削除された値を取得する方法として、RETURNING 句を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] OUTPUT 句と共に、その機能を提供します。  
   
 -   選択した場合**はい**SSMA が DELETE ステートメント内の RETURNING 句を OUTPUT 句に変換されます。 テーブルのトリガーには、値を変更できる、ので、返される値が異なることがあります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]DB2 の場合よりもします。  
   
@@ -441,7 +442,7 @@ DB2 は、すぐに削除された値を取得する方法として、RETURNING 
 **既定/オプティミスティック/全モード:** [はい]  
   
 ### <a name="convert-returning-clause-in-insert-statement-to-output"></a>INSERT ステートメントで RETURNING 句を出力に変換します。  
-DB2 は、すぐに挿入する値を取得する方法として、RETURNING 句を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]OUTPUT 句と共に、その機能を提供します。  
+DB2 は、すぐに挿入する値を取得する方法として、RETURNING 句を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] OUTPUT 句と共に、その機能を提供します。  
   
 -   選択した場合**はい**SSMA は、INSERT ステートメントで RETURNING 句を出力に変換されます。 テーブルのトリガーには、値を変更できる、ので、返される値が異なることがあります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]DB2 の場合よりもします。  
   
@@ -452,7 +453,7 @@ DB2 は、すぐに挿入する値を取得する方法として、RETURNING 句
 **既定/オプティミスティック/全モード:** [はい]  
   
 ### <a name="convert-returning-clause-in-update-statement-to-output"></a>UPDATE ステートメントで RETURNING 句を出力に変換します。  
-DB2 は、すぐに更新された値を取得する方法として、RETURNING 句を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]OUTPUT 句と共に、その機能を提供します。  
+DB2 は、すぐに更新された値を取得する方法として、RETURNING 句を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] OUTPUT 句と共に、その機能を提供します。  
   
 -   選択した場合**はい**SSMA は UPDATE ステートメントで RETURNING 句を OUTPUT 句に変換されます。 テーブルのトリガーには、値を変更できる、ので、返される値が異なることがあります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]DB2 の場合よりもします。  
   
@@ -489,5 +490,5 @@ SSMA では、SSMA シーケンス エミュレーターに DB2 シーケンス�
 -   選択した場合**いいえ**SSMA は、変換後のトリガーの外部には、エラーで CURRVAL をシーケンス処理を行うすべての参照としてマークされます。  
   
 ## <a name="see-also"></a>参照  
-[ユーザー インターフェイス リファレンス &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
+[ユーザー インターフェイス リファレンス&#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

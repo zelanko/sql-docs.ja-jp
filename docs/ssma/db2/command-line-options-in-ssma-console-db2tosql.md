@@ -1,30 +1,31 @@
 ---
-title: "SSMA コンソール (DB2ToSQL) でのコマンド ライン オプション |Microsoft ドキュメント"
+title: SSMA コンソール (DB2ToSQL) でのコマンド ライン オプション |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5eff60694cdcfdb4d2d147ae0531fbbc2ecfb32
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1ece5c9b4a72f588608103437b03902fd81cc89f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA コンソール (DB2ToSQL) でのコマンド ライン オプション
 Microsoft を実行し、SSMA 動作を制御する堅牢な一連のコマンド ライン オプションを提供します。 次のセクションでは、同じを詳しく説明します。  
@@ -92,7 +93,7 @@ Microsoft を実行し、SSMA 動作を制御する堅牢な一連のコマン�
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 出力のオプション: x/xmloutput [xmloutputfile]  
 このコマンドはコンソールにするか、xml ファイルを xml 形式でコマンドの出力メッセージを出力するために使用されます。  
   
-2 つのオプション使用できるが、xmloutput viz。  
+2 つのオプション使用できるが、xmloutput viz..,:  
   
 -   Xmloutput スイッチの後にファイル パスが指定した場合は、ファイルに出力がリダイレクトされます。  
   
@@ -162,21 +163,21 @@ SSMA コンソールのオプションの構文の概要が表示されます。
   
 `C:\>SSMAforDB2Console.EXE -?`  
   
-SSMA コンソール コマンド ライン オプションの表形式の表示を参照してください[付録 - 1 (&) #40 です。 DB2ToSQL &#41;](../../ssma/db2/appendix-1-db2tosql.md)です。  
+SSMA コンソール コマンド ライン オプションの表形式の表示を参照してください[付録 - 1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)です。  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>SecurePassword ヘルプ オプション: – securepassword-?/help  
 SSMA コンソールのオプションの構文の概要が表示されます。  
   
 `C:\>SSMAforDB2Console.EXE -securepassword -?`  
   
-SSMA コンソール コマンド ライン オプションの表形式の表示を参照してください[付録 - 1 (&) #40 です DB2ToSQL &#41;。](../../ssma/db2/appendix-1-db2tosql.md)  
+SSMA コンソール コマンド ライン オプションの表形式の表示を参照してください[付録 - 1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)  
   
 ### <a name="next-step"></a>次の手順  
 次の手順は、プロジェクトの要件によって異なります。  
   
-1.  パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[パスワードを管理する &#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md)です。  
+1.  パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[管理パスワード&#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md)です。  
   
-2.  レポートの生成に、次を参照してください。[レポートを生成する &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)です。  
+2.  レポートの生成に、次を参照してください。[を生成するレポート&#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)です。  
   
-3.  コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)です。  
+3.  コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)です。  
   

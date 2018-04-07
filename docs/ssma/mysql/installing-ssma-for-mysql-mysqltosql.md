@@ -21,13 +21,13 @@ ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
 caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b8984aaeb9240c8c3b309925e151e79688bc7be3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 40515884db1dc08b0d3ebe7384ba46b98a961342
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>インストールを実行する SSMA for MySQL (MySqlToSql)
 SQL Server Migration Assistant (SSMA) for MySQL に MySQL からの移行の実行に使用するクライアント アプリケーションから成る[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 移行されたデータベースのデータの移行と MySQL システム関数の使用をサポートする拡張機能パックも含まれています。  
@@ -42,10 +42,10 @@ MySQL SSMA の以降のバージョンにアップグレードする場合は、
 |||  
 |-|-|  
 |**トピック**|**Description**|  
-|[SSMA の MySQL クライアント &#40; のインストールMySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|SSMA クライアントをインストールするための手順と情報を提供します。|  
+|[SSMA の MySQL クライアントのインストール&#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|SSMA クライアントをインストールするための手順と情報を提供します。|  
 |[SQL server (MySQL to SQL) SSMA コンポーネントのインストール](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|インスタンスで拡張機能パックをインストールするための手順と情報を提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  
-|[MySQL コンポーネント &#40; に対して、SSMA を削除します。MySQLToSql &#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|クライアント プログラムをアンインストールする方法についてを説明します。|  
+|[MySQL コンポーネントに対して、SSMA を削除する&#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|クライアント プログラムをアンインストールする方法についてを説明します。|  
   
 ## <a name="see-also"></a>参照  
-[SQL Server - Azure SQL DB &#40; への MySQL データベースの移行MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[SQL Server - Azure SQL DB にデータベースを移行する MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

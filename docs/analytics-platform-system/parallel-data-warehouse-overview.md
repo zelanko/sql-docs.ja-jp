@@ -1,25 +1,25 @@
 ---
-title: "並列データ ウェアハウスの概要"
+title: 並列データ ウェアハウスの概要
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "このトピックでは、アプライアンス ソフトウェアおよび Analytics Platform System のアプライアンス以外のソフトウェア コンポーネントについて説明します。"
+description: このトピックでは、アプライアンス ソフトウェアおよび Analytics Platform System のアプライアンス以外のソフトウェア コンポーネントについて説明します。
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: db0c4a43-a66d-4c44-ab91-791c5785f71c
-caps.latest.revision: "20"
-ms.openlocfilehash: f2b6708f6e82340c971bdd3a6cc0cdb7e67f2d65
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 20
+ms.openlocfilehash: 42fb92c30c0487603f2ad8e870886f25b4c1655a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="parallel-data-warehouse-overview"></a>並列データ ウェアハウスの概要
 このトピックでは、アプライアンス ソフトウェアおよび Analytics Platform System のアプライアンス以外のソフトウェア コンポーネントについて説明します。  
@@ -248,15 +248,15 @@ Analytics Platform System がアプライアンス アクティビティを監�
 ### <a name="admin-console"></a>管理コンソール  
 管理コンソールでは、アプライアンスの正常性に関する現在の状態を表示することができます。 これにより、コントロールのノードで web アプリケーションとして実行れ、https 経由でアクセス可能です。  
   
-詳細については、次を参照してください[アプライアンスを管理コンソール &#40; を使用して監視する。Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+詳細については、次を参照してください[アプライアンスを管理コンソールを使用して監視&#40;分析プラットフォーム システム。&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 
 ### <a name="system-views"></a>システム ビュー  
 管理コンソールは、システム ビューのクエリに基づいています。 特定の必要な情報を取得するには、個別に、システム ビューを照会できます。  
 
-詳細については、次を参照してください[システム ビューの使用 &#40; によって、アプライアンスの監視。Analytics Platform System &#41;](monitor-the-appliance-by-using-system-views.md) 
+詳細については、次を参照してください[監視システム ビューを使用してアプライアンス&#40;分析プラットフォーム システム。&#41;](monitor-the-appliance-by-using-system-views.md) 
   
 ### <a name="system-center-operations-manager"></a>System Center Operations Manager  
 SQL Server PDW の System Center Operations Manager (SCOM) 管理パックがあります。 
 
-SCOM のアプライアンスを構成するを参照してください[で System Center Operations Manager の使用 &#40; アプライアンスをモニター。Analytics Platform System &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+SCOM のアプライアンスを構成するを参照してください[System Center Operations Manager を使用してアプライアンスをモニター&#40;分析プラットフォーム システム。&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   

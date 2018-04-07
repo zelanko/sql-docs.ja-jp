@@ -1,15 +1,16 @@
 ---
-title: "SQL Server - Azure SQL DB (MySQLToSQL) に MySQL データの移行 |Microsoft ドキュメント"
+title: SQL Server - Azure SQL DB (MySQLToSQL) に MySQL データの移行 |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Data Migration, server side data migration
 - Data Migration,client side data migration
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0887825cf16986b78cad5d1889a04d73dacf222a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5bef9d72e855f70d520323950b789c1c330bcde4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>SQL Server - Azure SQL DB (MySQLToSQL) に MySQL データの移行
 使用して変換されたオブジェクトが正常に同期後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure に MySQL からデータを移行することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。  
@@ -106,11 +107,11 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]  
     > SSMA for MySQL の拡張機能パックは、SQL Server のインスタンスにインストールされていない場合、**サーバー側のデータ移行のエンジン**が選択されている、ターゲット データベースにデータを移行中に、次のエラーが発生しました: ' SSMA データ移行のコンポーネントが見つかりませんでした、SQL Server のサーバー側のデータ移行を実行できなくなります。 拡張機能パックが正しくインストールされているかどうかを確認してください ' です。 をクリックして**キャンセル**データ移行を終了します。  
   
-5.  **MySQL への接続**ダイアログ ボックスで、接続の資格情報を入力し、をクリックして**接続**です。 MySQL への接続の詳細については、次を参照してください[MySQL &#40; への接続。MySQLToSQL &#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
+5.  **MySQL への接続**ダイアログ ボックスで、接続の資格情報を入力し、をクリックして**接続**です。 MySQL への接続の詳細については、次を参照してください[MySQL への接続&#40;MySQLToSQL。&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   
     ターゲット データベースが SQL Server の場合は、次を入力に接続の資格情報、 **SQL Server への接続** ダイアログ ボックスをクリック**接続**です。 SQL Server への接続の詳細については、次を参照してください[SQL Server への接続。](http://msdn.microsoft.com/en-us/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
-    ターゲット データベースが SQL Azure の場合は、接続の資格情報を入力してください。、 **SQL Azure への接続**ダイアログ ボックスで、とクリック**接続**です。 SQL Azure への接続の詳細については、次を参照してください[Azure SQL DB &#40; への接続。MySQLToSQL &#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)  
+    ターゲット データベースが SQL Azure の場合は、接続の資格情報を入力してください。、 **SQL Azure への接続**ダイアログ ボックスで、とクリック**接続**です。 SQL Azure への接続の詳細については、次を参照してください[Azure SQL DB への接続&#40;MySQLToSQL。&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)  
   
     メッセージが表示、**出力**ウィンドウです。 移行が完了すると、**データ移行レポート**が表示されます。 すべてのデータが移行されない場合、エラーを含む行をクリックし、をクリックして**詳細**です。 レポートが終了したら、をクリックして**閉じる**です。 データ移行のレポートの詳細については、次を参照してください[データ移行レポート (SSMA 共通)。](http://msdn.microsoft.com/en-us/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
@@ -118,5 +119,5 @@ ms.lasthandoff: 12/21/2017
 > SQL Express エディションは、対象データベースとして使用される、クライアント側のデータの移行のみが許可されているし、サーバー側のデータの移行はサポートされていません。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server - Azure SQL DB &#40; への MySQL データベースの移行MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[SQL Server - Azure SQL DB にデータベースを移行する MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

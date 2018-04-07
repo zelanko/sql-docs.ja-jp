@@ -1,15 +1,16 @@
 ---
-title: "パスワード (SybaseToSQL) を管理する |Microsoft ドキュメント"
-ms.custom: 
+title: パスワード (SybaseToSQL) を管理する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Sybase Console,Managing Passwords
 - Sybase Console,Securing Password
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ef75b192ee59854f1f0c53b9446a60da734351b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6c46c70586697101f8e1e1f22f3506e1978bb70f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="managing-passwords-sybasetosql"></a>パスワード (SybaseToSQL) を管理します。
 このセクションでは、データベースのパスワードとをインポートまたはサーバー間でそれらをエクスポートする手順のセキュリティ保護については。  
@@ -46,7 +47,7 @@ SSMA では、データベースのパスワードをセキュリティで保護
   
 1.  **クリア テキスト:** 'password' のノードの value 属性に、データベースのパスワードを入力します。 スクリプト ファイルまたはサーバー接続ファイルの [サーバー] セクションで、サーバーの定義ノードがあります。  
   
-    パスワードがクリア テキストでは、安全ではありません。 そのため、コンソール出力には、次の警告メッセージが発生: *"サーバー&lt;サーバー id&gt;パスワードが SSMA コンソール アプリケーションが暗号化によるパスワードの保護、詳細についてはヘルプ ファイルを SSMA で – securepassword オプションを参照してくださいするオプションを提供するクリア テキストのセキュリティ保護されていない形式で指定します"。*  
+    パスワードがクリア テキストでは、安全ではありません。 そのため、コンソール出力には、次の警告メッセージが発生: *"サーバー&lt;サーバー id&gt;パスワード SSMA コンソール アプリケーションが保護する オプションを提供するクリア テキストのセキュリティ保護されていない形式で提供されるは、暗号化を使用してパスワードを参照してください SSMA で – securepassword オプションの詳細についてはヘルプ ファイルです。"*  
   
     **暗号化されたパスワードは、**この場合、指定したパスワードが ProtectedStorage.ssma でローカル コンピューター上の暗号化された形式で保存はできます。  
   

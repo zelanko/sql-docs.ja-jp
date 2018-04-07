@@ -1,15 +1,16 @@
 ---
-title: "変数値ファイル (MySQLToSQL) を作成する |Microsoft ドキュメント"
+title: 変数値ファイル (MySQLToSQL) を作成する |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,26 +19,26 @@ helpviewer_keywords:
 - Creating variable value files
 - variable value file validation
 ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cd159682512255ab253630ac762fbeac104ab14
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 04b0efa56050e500277a62e52cbbbec9f6d261b2
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-variable-value-files-mysqltosql"></a>変数値ファイル (MySQLToSQL) を作成します。
 変数の値ファイルと同様に、送信元または送信先のサーバー名に 1 つのサーバーの移行を頻繁に変更するコマンドのパラメーター値で構成される XML ファイルです。 多数のデータベースの移行が発生すると、各送信元サーバーの値を格納するための複数の変数ファイルが作成されでマスター スクリプト ファイルで参照されている、 **– v**コマンド ライン スイッチです。 これは、複数の変数ファイルで変数の値を持ついくつかのスクリプト ファイルの静的な値を維持するために役立ちます。  
   
 > [!NOTE]  
 > 1.  変数の名前が始まるし、$ (ドル) 記号が付加されたものです。 変数が変数の値のファイルの値を割り当てられていない場合は、コンソールの実行プロセスの停止の結果として得られるスクリプト ファイルの解析中にエラーが発生します。  
-> 2.  The escape character for **$** is **$$**. パラメーターの変数または静的な値の値を含むかどうか **$** し (ドル) シンボル **$$** 変数の代わりに文字として扱うことを示す指定する必要があります。  
+> 2.  The escape character for **$** is **$$**. パラメーターの変数または静的な値の値を含むかどうか**$**し (ドル) シンボル**$$**変数の代わりに文字として扱うことを示す指定する必要があります。  
 > 3.  保守容易性のために、変数内で宣言できます`‘variable-group’`ユーザーの論理的な分離の要素は、変数を定義します。  この要素の使用は必須ではありません。  
   
-**使用例:**  
+**例 :**  
   
 **例 1:**  
   
@@ -100,7 +101,7 @@ ms.lasthandoff: 12/21/2017
 ユーザーがスキーマ定義ファイルに対して自分の変数値ファイルを簡単に検証**'ConsoleScriptVariablesSchema.xsd'** 'スキーマ' フォルダー内にあります。  
   
 ## <a name="next-step"></a>次の手順  
-コンソールの運用には、次の手順は[サーバー接続ファイル &#40; を作成します。MySQLToSQL &#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
+コンソールの運用には、次の手順は[サーバー接続ファイルを作成する&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
   
 ## <a name="see-also"></a>参照  
 [サーバー接続ファイル (MySQL) を作成します。](http://msdn.microsoft.com/en-us/df0e970c-da0b-4118-b359-c9dcbbad16d6)  

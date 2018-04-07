@@ -1,31 +1,31 @@
 ---
-title: "PDW の証明書 (Analytics Platform System) のプロビジョニング"
+title: PDW の証明書 (Analytics Platform System) のプロビジョニング
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: "22"
-ms.openlocfilehash: 9abee9638492368fe407f98a81beea2a48148971
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: a08a739c490f0cbd49f615441f557d5200107443
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-certificate-provisioning"></a>PDW 証明書のプロビジョニング
 **PDW 証明書のプロビジョニング**Analytics Platform System のページ**Configuration Manager**をインポートまたは PDW 地域で使用される証明書を削除します。 使用して、接続の暗号化に証明書は SQL Server クライアント、SQL Server PDW ドライバーを使用するツールを使ってコントロール ノードをセキュリティで保護された通信を支援できます、[管理コンソール](monitor-the-appliance-by-using-the-admin-console.md)、Integration Services で読み込まれるとします。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 証明書をインストールする前に、次の操作を行います。  
   
 1.  セキュリティで保護された証明書を取得します。 セキュリティで保護された証明書を取得する方法の詳細については、必要がある場合は、Microsoft サポートに問い合わせてください。  
@@ -51,7 +51,7 @@ Analytics Platform System を使用して**Configuration Manager**を追加ま�
   
 ### <a name="to-import-the-certificate"></a>証明書をインポートするには  
   
-1.  起動して、 **Configuration Manager**です。 詳細については、次を参照してください[構成マネージャー &#40; を起動。Analytics Platform System &#41;](launch-the-configuration-manager.md).  
+1.  起動して、 **Configuration Manager**です。 詳細については、次を参照してください。[構成マネージャーを起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)です。  
   
 2.  左側のウィンドウで、 **Configuration Manager**、展開**並列データ ウェアハウスのトポロジ**、クリックして**証明書**です。  
   
@@ -65,7 +65,7 @@ SQL Server PDW では、インポートした証明書を使用して、現在�
   
 ### <a name="to-remove-the-previously-imported-certificate"></a>以前にインポートした証明書を削除するには  
   
-1.  起動して、 **Configuration Manager**です。 詳細については、次を参照してください[構成マネージャー &#40; を起動。Analytics Platform System &#41;](launch-the-configuration-manager.md).  
+1.  起動して、 **Configuration Manager**です。 詳細については、次を参照してください。[構成マネージャーを起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)です。  
   
 2.  左側のウィンドウで、 **Configuration Manager**、展開**並列データ ウェアハウスのトポロジ**、クリックして**証明書**です。  
   
@@ -78,6 +78,6 @@ SQL Server PDW では、現在の接続の暗号化に続行されますが、�
 ![DWConfig アプライアンス PDW の証明書](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
   
 ## <a name="see-also"></a>参照  
-[構成マネージャー &#40; を起動します。Analytics Platform System &#41;](launch-the-configuration-manager.md)  
+[構成マネージャーを起動&#40;分析プラットフォーム システム&#41;](launch-the-configuration-manager.md)  
 <!-- MISSING LINKS [HDInsight Certificate Provisioning &#40;Analytics Platform System&#41;](hdinsight-certificate-provisioning.md)  -->  
   

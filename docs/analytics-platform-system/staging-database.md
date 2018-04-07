@@ -1,25 +1,25 @@
 ---
-title: "並列データ ウェアハウスのステージング データベースを作成します。"
+title: 並列データ ウェアハウスのステージング データベースを作成します。
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "SQL Server 並列データ ウェアハウス (PDW) では、ステージング データベースを使用して、読み込みプロセス中に一時的にデータを格納します。"
+description: SQL Server 並列データ ウェアハウス (PDW) では、ステージング データベースを使用して、読み込みプロセス中に一時的にデータを格納します。
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 6d0b2726-4772-4858-b700-885cc12219b2
-caps.latest.revision: "20"
-ms.openlocfilehash: 073dbb385d34d67b9274ac46828df5887abfe5a4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 20
+ms.openlocfilehash: c85a2490f9c74839f795a1dffab106f9a92c528c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="staging-database"></a>ステージング データベース 
 SQL Server 並列データ ウェアハウス (PDW) では、ステージング データベースを使用して、読み込みプロセス中に一時的にデータを格納します。 既定では、SQL Server PDW はテーブルの断片化が発生することができます、ステージング データベースと転送先データベースを使用します。 テーブルの断片化を解消するには、ユーザー定義のステージング データベースを作成できます。 または、読み込みエラーからのロールバックが問題ではないときに、一時テーブルをスキップし、変換先テーブルに直接読み込むでパフォーマンスを改善する、fastappend 読み込みモードを使用することができます。  

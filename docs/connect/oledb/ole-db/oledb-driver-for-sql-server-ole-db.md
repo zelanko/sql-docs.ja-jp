@@ -10,7 +10,7 @@ ms.component: ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b76f06a3e1eff17bd1aafb7da06d00feb7da1280
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: e14bb0a5154101c8d7bc90db91e0c1d0d34f1ccf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db"></a>OLE DB Driver for SQL Server (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 03/30/2018
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [SQL Server アプリケーション用の OLE DB ドライバーを作成します。](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
+-   [OLE DB Driver for SQL Server のアプリケーションの作成](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
 -   [データ ソース オブジェクト &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 03/30/2018
   
 -   [テーブル値パラメーター &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [日付と時刻の強化 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [日付と時刻の強化 (&) #40";"OLE DB"&"#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
 -   [大きな CLR ユーザー定義型&#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)  
   
@@ -80,6 +80,6 @@ ms.lasthandoff: 03/30/2018
 -   [OLE DB の操作方法に関するトピック](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## <a name="see-also"></a>参照  
- [SQL Server プログラミング用の OLE DB ドライバー](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [OLE DB Driver for SQL Server のプログラミング](../../oledb/oledb-driver-for-sql-server-programming.md)  
   
   

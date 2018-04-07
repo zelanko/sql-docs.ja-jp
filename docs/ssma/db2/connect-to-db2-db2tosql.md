@@ -1,37 +1,38 @@
 ---
-title: "DB2 への接続 (DB2ToSQL) |Microsoft ドキュメント"
+title: DB2 への接続 (DB2ToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e08da1c1922fce1154ec4ca16cd99a757ff973bd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 27b590cbfefdbc01e67e4049ffa3d920afd08b1f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-db2-db2tosql"></a>DB2 への接続 (DB2ToSQL)
 使用して、 **DB2 への接続**を移行する DB2 データベースに接続する ダイアログ ボックス。  
   
 このダイアログ ボックスにアクセスする、**ファイル**メニューの  **DB2 への接続**です。 以前接続した場合、コマンドは**DB2 への再接続**です。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
 **プロバイダー**  
 DB2 データベースへの接続用のデータ アクセス プロバイダーを選択します。 使用可能なプロバイダーは、DB2 クライアント プロバイダー、OLE DB プロバイダーです。 既定値は、DB2 クライアント プロバイダーです。  
   
@@ -65,7 +66,7 @@ TNSNAME モード オプションです。
   
 標準モードのオプションです。  
   
-**User name**  
+**ユーザー名**  
 SSMA が DB2 データベースへの接続に使用するユーザー名を入力します。  
   
 **Password**  

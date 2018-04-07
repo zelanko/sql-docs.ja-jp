@@ -1,37 +1,37 @@
 ---
-title: "Configuration Manager (Analytics Platform System) の起動します。"
+title: Configuration Manager (Analytics Platform System) の起動します。
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b914ba9a-e4ec-4750-934a-c447fc8909e3
-caps.latest.revision: "22"
-ms.openlocfilehash: 2ead82cd226a585d261eac2779cacb72cd5edbb6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: 0ea02f539633233b462cc6c4cc3cc7ba5d452da9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="launch-the-configuration-manager"></a>構成マネージャーを起動します。
 このトピックでは起動するための説明、 **Configuration Manager** Analytics Platform System アプライアンスです。  
   
 ## <a name="before-you-begin"></a>はじめに  
   
-### <a name="prerequisites"></a>Prerequisites  
-Analytics Platform System**Configuration Manager**アプライアンス ドメイン管理者によってのみ実行できます。 このツールを実行するには、アプライアンスのドメイン管理者のパスワードが必要です。 APS の追加の管理者を作成するを参照してください[APS ドメイン管理者 &#40; を作成します。APS&#41;](create-an-aps-domain-administrator-aps.md).  
+### <a name="prerequisites"></a>前提条件  
+Analytics Platform System**Configuration Manager**アプライアンス ドメイン管理者によってのみ実行できます。 このツールを実行するには、アプライアンスのドメイン管理者のパスワードが必要です。 APS の追加の管理者を作成するを参照してください。 [APS ドメイン管理者を作成する&#40;APS&#41;](create-an-aps-domain-administrator-aps.md)です。  
   
 ## <a name="Accessing"></a>Configuration Manager ツールを起動します。  
-Configuration Manager を実行するには、PDW 管理ノードに接続するリモート デスクトップを使用 (***PDW_region*-CTL01**) ノード、およびログインとして*appliance_domain* **\Administrator**です。 開始するときに、 **Configuration Manager**プログラムを使用して、**管理者として実行**管理者の資格情報を使用することを確認するにはオプションです。  
+Configuration Manager を実行するには、PDW 管理ノードに接続するリモート デスクトップを使用 (***PDW_region *-CTL01**) ノード、およびとしてログイン * appliance_domain ***\Administrator**です。 開始するときに、 **Configuration Manager**プログラムを使用して、**管理者として実行**管理者の資格情報を使用することを確認するにはオプションです。  
   
 #### <a name="to-launch-from-a-browser-window"></a>ブラウザー ウィンドウから起動するには  
   
@@ -54,5 +54,5 @@ Configuration Manager を実行するには、PDW 管理ノードに接続する
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
 ## <a name="see-also"></a>参照  
-[管理コンソール &#40; を使用してアプライアンスを監視します。Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+[管理者コンソールを使用してアプライアンスをモニター&#40;分析プラットフォーム システム&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

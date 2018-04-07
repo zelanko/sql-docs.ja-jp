@@ -1,26 +1,26 @@
 ---
-title: "Analytics Platform System を監視する SCOM を構成します。"
+title: Analytics Platform System を監視する SCOM を構成します。
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4dba9b50-1447-45fc-b219-b9fc99d47d8d
-caps.latest.revision: "10"
-ms.openlocfilehash: 435bbae75548d1959d509b9833bd9a6f7ec658e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 10
+ms.openlocfilehash: 53fc0bce73f2fd30553e2a834122e86cdb0a65fc
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-scom-to-monitor-analytics-platform-system"></a>Analytics Platform System を監視する SCOM を構成します。
 Analytics Platform System の System Center Operations Manager (SCOM) 管理パックを構成するこれらの手順に従います。 SCOM から分析プラットフォーム システムを監視する管理パックが必要です。  
@@ -30,7 +30,7 @@ Analytics Platform System の System Center Operations Manager (SCOM) 管理パ�
   
 System Center Operations Manager 2007 R2 は、インストールして実行する必要があります。  
   
-管理パックをインストールして構成する必要があります。 参照してください[SCOM 管理パック &#40; をインストールAnalytics Platform System &#41;](install-the-scom-management-packs.md)と[PDW &#40; を SCOM 管理パックのインポートAnalytics Platform System &#41;](import-the-scom-management-pack-for-pdw.md).  
+管理パックをインストールして構成する必要があります。 参照してください[SCOM 管理パックをインストール&#40;Analytics Platform System&#41; ](install-the-scom-management-packs.md)と[PDW の SCOM 管理パックをインポート&#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md)です。  
   
 ## <a name="ConfigureRunAsProfile"></a>System Center でのユーザーとして実行プロファイルを構成します。  
 System Center を構成するために次の手順を実行する必要。  
@@ -121,7 +121,7 @@ System Center を構成するために次の手順を実行する必要。
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   
 ## <a name="next-step"></a>次の手順  
-管理パックを構成したら、これでは、アプライアンスの監視を開始する準備ができたらです。 詳細については、次を参照してください[で System Center Operations Manager の使用 &#40; アプライアンスをモニター。Analytics Platform System &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md).  
+管理パックを構成したら、これでは、アプライアンスの監視を開始する準備ができたらです。 詳細については、次を参照してください。 [System Center Operations Manager を使用してアプライアンスをモニター &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)です。  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

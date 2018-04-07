@@ -1,25 +1,25 @@
 ---
-title: "Integration Services データの読み込み"
+title: Integration Services データの読み込み
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "SQL Server Integration Services (SSIS) パッケージを使用して SQL Server 並列データ ウェアハウスにデータを読み込むための参照および展開の情報を提供します。"
+description: SQL Server Integration Services (SSIS) パッケージを使用して SQL Server 並列データ ウェアハウスにデータを読み込むための参照および展開の情報を提供します。
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: "69"
-ms.openlocfilehash: f00f72886a10c8be05db6a28adf3df89f8116081
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 69
+ms.openlocfilehash: d32e6b97d036437f6a28b81622873d14854d304f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="load-data-with-integration-services"></a>Integration Services を使用してデータを読み込む
 SQL Server Integration Services (SSIS) パッケージを使用して SQL Server 並列データ ウェアハウスにデータを読み込むための参照および展開の情報を提供します。  
@@ -59,12 +59,12 @@ BIDS 内からパッケージを実行するパッケージを右クリックし
 SQL Server Data Tools 内からパッケージを実行するパッケージを右クリックし、選択**パッケージ実行**です。  
   
 ### <a name="run-from-powershell"></a>PowerShell から実行します。  
-Windows PowerShell からパッケージを実行するを使用して、 **dtexec**ユーティリティ。`dtexec /FILE <packagePath>`  
+Windows PowerShell からパッケージを実行するを使用して、 **dtexec**ユーティリティ。 `dtexec /FILE <packagePath>`  
   
-たとえば、IPv4 アドレスの場合、「 `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+例を次に示します。 `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Windows の実行からコマンド プロンプト 
-Windows コマンド プロンプトでパッケージを実行するを使用して、 **dtexec**ユーティリティ。`dtexec /FILE <packagePath>`  
+Windows コマンド プロンプトでパッケージを実行するを使用して、 **dtexec**ユーティリティ。 `dtexec /FILE <packagePath>`  
   
 例: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
@@ -89,7 +89,7 @@ Integration Services を使用して、SQL Server PDW のデータベースに�
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL、DT_I1、DT_I2、DT_I4、DT_I8、DT_NUMERIC、DT_UI1、DT_UI2、DT_UI4、DT_UI8|  
 |NVARCHAR|DT_WSTR、DT_STR|  
-|real|DT_R4|  
+|REAL|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1、DT_I2、DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -120,7 +120,7 @@ SQL Server PDW では、次の Integration Services データ型はサポート�
   
 SQL Server PDW にこれらのデータ型を含む列を読み込むには、データを互換性のあるデータ型に変換するデータ フローの上流データ変換の変換を追加する必要があります。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
 Integration Services 読み込みパッケージを実行するには、次の必要があります。  
   
 -   データベースに対する権限を読み込みます。  

@@ -1,30 +1,31 @@
 ---
-title: "SQL Server (MySQLToSQL) にデータベース オブジェクトを読み込み、変換された |Microsoft ドキュメント"
+title: SQL Server (MySQLToSQL) にデータベース オブジェクトを読み込み、変換された |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a635fd98723c8a878d07db06787f8e91cf7a5e86
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5baee887f8c3392c25a3bd683f6eb5850d33d78
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>SQL Server (MySQLToSQL) にデータベース オブジェクトを変換後の読み込み
 MySQL データベースを変換した後に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SQL Azure に作成されたデータベース オブジェクトを読み込むことができますか[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 SSMA は、オブジェクトを作成したか、またはオブジェクトのスクリプトを作成して、スクリプトを実行します。 SSMA によりの実際の内容で対象のメタデータを更新する、また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure データベース。  
@@ -111,8 +112,8 @@ SQL Server Management Studio では、スクリプト、または個々 のス�
 変換後のデータベース オブジェクトは、SQL Server に読み込まれたが後、は、付与し、これらのオブジェクトに対する権限の拒否できます。 そのために移行する前にことをお勧めデータを SQL Server。 SQL Server のセキュリティで保護されたオブジェクトを保護する方法については、「セキュリティの考慮事項のデータベースとデータベース アプリケーションの」SQL Server オンライン ブックを参照してください。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順は[MySQL データを SQL Server - Azure SQL DB &#40; を移行します。MySQLToSQL &#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
+移行プロセスの次の手順は[SQL Server - Azure SQL DB に MySQL のデータを移行する&#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   
 ## <a name="see-also"></a>参照  
-[SQL Server - Azure SQL DB &#40; への MySQL データベースの移行MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[SQL Server - Azure SQL DB にデータベースを移行する MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

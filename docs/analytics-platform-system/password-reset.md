@@ -1,26 +1,26 @@
 ---
-title: "パスワードのリセット (Analytics Platform System)"
+title: パスワードのリセット (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a0f808fc-e120-430b-b6c9-11f2b1c90bf3
-caps.latest.revision: "26"
-ms.openlocfilehash: 5b342aca4498816e59e0fafcb882c5c039fed501
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 26
+ms.openlocfilehash: 0574cf85dc4baaf6d92159aa423a0b1771042c59
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="password-reset"></a>パスワードのリセット
 **パスワード リセット** ページでは、分析プラットフォーム システムで使用される管理者アカウントのパスワードを変更することができます。  
@@ -30,10 +30,10 @@ ms.lasthandoff: 12/21/2017
   
 アプライアンスが配信されるときに、分析プラットフォーム システム パスワードが指定できます。 常に、アプライアンスを担当するときは、新しい値にパスワードを変更します。 3 つのパスワードを更新するにがあります。 パスワードを互いに同じである必要はありません。  
   
-**F <*xxxx*> \Administrator**  
+**F<*xxxx*>\Administrator**  
 **管理者**のアプライアンス ドメイン。  
   
-**。 \Administrator**  
+**.\Administrator**  
 ローカル**管理者**仮想マシンをホストするコンピューター上のアカウントです。  
   
 > [!IMPORTANT]  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="to-reset-a-password"></a>パスワードをリセットするには  
   
-1.  コントロールのノードと起動への接続、 **Configuration Manager** (**dwconfig.exe**)。 詳細については、次を参照してください[構成マネージャー &#40; を起動。Analytics Platform System &#41;](launch-the-configuration-manager.md).  
+1.  コントロールのノードと起動への接続、 **Configuration Manager** (**dwconfig.exe**)。 詳細については、次を参照してください。[構成マネージャーを起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)です。  
   
 2.  左側のウィンドウで、 **Configuration Manager**をクリックして**パスワード リセット**です。  
   
@@ -61,6 +61,6 @@ ms.lasthandoff: 12/21/2017
     ![SQL Server DWConfig パスワード](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
   
 ## <a name="see-also"></a>参照  
-[ディレクトリ サービス内の AD のノードにログオンするための管理者パスワードの設定の復元モード &#40;DSRM&#41;&#40;です。Analytics Platform System &#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
-[構成マネージャー &#40; を起動します。Analytics Platform System &#41;](launch-the-configuration-manager.md)  
+[ディレクトリ サービス復元モードでの AD ノードにログオンするための管理者パスワードの設定&#40;DSRM&#41; &#40;分析プラットフォーム システム&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
+[構成マネージャーを起動&#40;分析プラットフォーム システム&#41;](launch-the-configuration-manager.md)  
   

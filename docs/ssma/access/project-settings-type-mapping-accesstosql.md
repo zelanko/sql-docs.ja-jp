@@ -1,15 +1,16 @@
 ---
-title: "プロジェクトの設定 (型のマッピング) (AccessToSQL) |Microsoft ドキュメント"
+title: プロジェクトの設定 (型のマッピング) (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - SQL Server data types
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81c2512eacc634de526ecffb0d56d86dbcecca87
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 30586710c156ffe14028e8395b0e887419a36584
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>プロジェクトの設定 (型のマッピング) (AccessToSQL)
 プロジェクトの種類のマッピング設定では、SSMA プロジェクトの既定の型マッピングを設定できます。 個々 のデータベース オブジェクトの型マッピングを指定することもできます。 詳細については、次を参照してください。[マッピング ソースとターゲットのデータ型](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)です。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 -   使用して、**プロジェクト設定の既定の**ダイアログ ボックスをすべてのプロジェクトの構成オプションを設定します。 型マッピングの設定にアクセスする、**ツール**メニューの **プロジェクト設定の既定の**、対象の設定が表示する/から変更を必要な移行プロジェクトの種類を選択**移行のターゲット バージョン**ドロップダウンをクリックして**型マッピング**左側のウィンドウでします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
 **変換元の型**  
 アクセス データ型にマップします。  
   
@@ -53,22 +54,22 @@ ms.lasthandoff: 12/21/2017
   
 |Access のデータ型|SQL Server データ型|  
 |--------------------|------------------------|  
-|**バイナリ [\*..\*]**|**varbinary [\*]**|  
+|**binary[\*..\*]**|**varbinary[\*]**|  
 |**boolean**|**bit**|  
-|**バイト**|**tinyint**|  
-|**通貨**|**money**|  
+|**byte**|**tinyint**|  
+|**currency**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
 |**guid**|**uniqueidentifier**|  
 |**整数 (integer)**|**smallint**|  
-|**長い**|**int**|  
+|**long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
-|**メモ**|**nvarchar(max)**|  
+|**memo**|**nvarchar(max)**|  
 |**memo** - Access 97|**varchar(max)**|  
-|**1 つ**|**real**|  
-|**text[\*..\*]**|**nvarchar [\*]**|  
-|**text[\*..\*]** - Access 97|**varchar [\*]**|  
+|**single**|**real**|  
+|**text[\*..\*]**|**nvarchar[\*]**|  
+|**テキスト [\*..\*]** - Access 97|**varchar[\*]**|  
   
 **[追加]**  
 マッピングのリストに、データ型を追加する をクリックします。  

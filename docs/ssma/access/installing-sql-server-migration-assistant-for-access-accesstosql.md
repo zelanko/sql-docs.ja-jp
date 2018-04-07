@@ -1,15 +1,16 @@
 ---
-title: "SQL Server Migration Assistant for Access (AccessToSQL) をインストールする |Microsoft ドキュメント"
+title: SQL Server Migration Assistant for Access (AccessToSQL) をインストールする |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -28,26 +29,26 @@ helpviewer_keywords:
 - uninstalling SSMA
 - upgrading SSMA
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0ed2247057865624d0e365a5cac24e390295975a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0b60003c1d9c7c266d57f6c0fc583b977561be72
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant for Access (AccessToSQL) をインストールします。
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Access は Windows インストーラー ベースのウィザードを使用してインストールします。 このトピックでは、インストール前提条件については、SSMA の最新バージョンへのリンクとインストール、ライセンス、アンインストール、および SSMA をアップグレードするための手順を提供します。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) のアクセスは、Windows インストーラー ベースのウィザードを使用してインストールされます。 このトピックでは、インストール前提条件については、SSMA の最新バージョンへのリンクとインストール、ライセンス、アンインストール、および SSMA をアップグレードするための手順を提供します。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 SSMA をインストールする前に、システムが、次の要件を満たしていることを確認してください。  
   
 -   Windows 7 以降のバージョンまたは Windows Server 2008 またはそれ以降のバージョン。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows インストーラー 3.1 以降。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows インストーラー 3.1 以降。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework バージョン 4.0 またはそれ以降のバージョン。 .NET Framework バージョン 4.0 で使用できる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]製品ディスク、およびで情報を使用して、 [Microsoft .NET ガイド](https://docs.microsoft.com/en-us/dotnet/framework/)です。
   
@@ -69,7 +70,7 @@ SSMA は Web からダウンロードします。 最新バージョンをダウ
   
 **SSMA をインストールするには**  
   
-1.  SSMA for Access をダブルクリックして *n* .msi、場所 *n* ビルド番号です。  
+1.  SSMA for Access をダブルクリックして*n*.msi、場所*n*ビルド番号です。  
   
 2.  [ようこそ] ページで、をクリックして**次**です。  
   

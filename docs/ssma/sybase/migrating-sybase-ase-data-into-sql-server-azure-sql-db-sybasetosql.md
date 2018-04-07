@@ -1,15 +1,16 @@
 ---
-title: "SQL Server - Azure SQL DB に Sybase ASE データの移行 |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server - Azure SQL DB に Sybase ASE データの移行 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Migrating data,Client Side Data Migration
 - Migrating data,Server Side Data Migration
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ff0dfa9d72d7616d7e775361de03728fd951bea
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ab42e495eb4e76b6e9d7b6a2cca3d031eed12448
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>SQL Server - Azure SQL DB (SybaseToSQL) に Sybase ASE データの移行
 Sybase Adaptive Server Enterprise (ASE) データベース オブジェクトを正常に読み込んだ後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB に ASE からデータを移行することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB します。  
@@ -106,11 +107,11 @@ Sybase Adaptive Server Enterprise (ASE) データベース オブジェクトを
     > [!NOTE]  
     > SSMA for Sybase 拡張機能パックは、SQL Server のインスタンスにインストールされていない場合、**サーバー側のデータ移行のエンジン**が選択されている、ターゲット データベースにデータを移行中に、次のエラーが発生しました: ' SSMA データ移行のコンポーネントが見つかりませんでした、SQL Server のサーバー側のデータ移行を実行できなくなります。 拡張機能パックが正しくインストールされているかどうかを確認してください ' です。 をクリックして**キャンセル**データ移行を終了します。  
   
-5.  **Sybase ASE への接続**ダイアログ ボックスで、接続の資格情報を入力し、をクリックして**接続**です。 Sybase ASE への接続の詳細については、次を参照してください[Sybase &#40; への接続。SybaseToSQL &#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)  
+5.  **Sybase ASE への接続**ダイアログ ボックスで、接続の資格情報を入力し、をクリックして**接続**です。 Sybase ASE への接続の詳細については、次を参照してください[Sybase への接続&#40;SybaseToSQL。&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)  
   
     ターゲット データベースが SQL Server の場合は、次を入力に接続の資格情報、 **SQL Server への接続** ダイアログ ボックスをクリック**接続**です。 SQL Server への接続の詳細については、次を参照してください[SQL Server(SybaseToSQL) への接続。](http://msdn.microsoft.com/en-us/dd368a1a-45b0-40e9-b4d3-5cdb48c26606)  
   
-    ターゲット データベースが Azure SQL DB の場合は、接続の資格情報を入力してください。、 **Azure SQL DB への接続**ダイアログ ボックスで、とクリック**接続**です。 Azure SQL DB への接続の詳細については、次を参照してください[Azure SQL DB &#40; に接続する。SybaseToSQL &#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
+    ターゲット データベースが Azure SQL DB の場合は、接続の資格情報を入力してください。、 **Azure SQL DB への接続**ダイアログ ボックスで、とクリック**接続**です。 Azure SQL DB への接続の詳細については、次を参照してください[Azure SQL DB に接続する&#40;SybaseToSQL。&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   
     メッセージが表示、**出力**ウィンドウです。 移行が完了すると、**データ移行レポート**が表示されます。 すべてのデータが移行されない場合、エラーを含む行をクリックし、をクリックして**詳細**です。 レポートが終了したら、をクリックして**閉じる**です。 データ移行のレポートの詳細については、次を参照してください[データ移行レポート (SSMA 共通)。](http://msdn.microsoft.com/en-us/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
@@ -118,5 +119,5 @@ Sybase Adaptive Server Enterprise (ASE) データベース オブジェクトを
 > SQL Express エディションは、対象データベースとして使用される、クライアント側のデータの移行のみが許可されているし、サーバー側のデータの移行はサポートされていません。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server - Azure SQL DB &#40; への Sybase ASE データベースの移行SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SQL Server - Azure SQL DB &#40;への Sybase ASE データベースの移行SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

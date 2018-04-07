@@ -1,25 +1,25 @@
 ---
-title: "Analytics Platform System (APS) の InfiniBand ネットワーク アダプターを構成します。"
+title: Analytics Platform System (APS) の InfiniBand ネットワーク アダプターを構成します。
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "管理 ノード SQL Server 並列データ ウェアハウス (PDW) に接続する非アプライアンス クライアント サーバーの InfiniBand ネットワーク アダプターを構成する方法について説明します。"
+description: 管理 ノード SQL Server 並列データ ウェアハウス (PDW) に接続する非アプライアンス クライアント サーバーの InfiniBand ネットワーク アダプターを構成する方法について説明します。
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
-caps.latest.revision: 
-ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 15
+ms.openlocfilehash: 5724f5e61d458d19e8fc52d77fbff1401ca2afd3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Analytics Platform System の InfiniBand ネットワーク アダプターを構成します。
 管理 ノード SQL Server 並列データ ウェアハウス (PDW) に接続する非アプライアンス クライアント サーバーの InfiniBand ネットワーク アダプターを構成する方法について説明します。 読み込み、バックアップ、およびその他のプロセスがアクティブの InfiniBand ネットワークに自動的に接続できるように基本的な接続と高可用性は、これらの手順に従います。  

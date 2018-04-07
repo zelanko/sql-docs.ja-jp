@@ -10,7 +10,7 @@ ms.component: OLE DB Driver
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1a3d642eb3cef1f9f01accd8b50f571f5e4903ac
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: fe6342e3a61ecc59594917431c026681e51f8e63
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>SQL Server プログラミング用の OLE DB ドライバー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,24 +51,24 @@ ms.lasthandoff: 03/30/2018
  [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)  
  大幅な新しい OLE DB Driver for SQL Server の機能を一覧表示します。  
   
- [SQL Server の OLE DB ドライバーを使用する場合](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
+ [OLE DB Driver for SQL Server をいつ使用するか](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
  OLE DB Driver for SQL Server が適合するしくみで Microsoft データ アクセス テクノロジについて説明します。 どのように Windows DAC および ADO.NET と比較し、データ アクセス テクノロジを使用するかを決めるのポインターを提供します。  
   
- [SQL Server 機能の OLE DB ドライバー](../oledb/features/oledb-driver-for-sql-server-features.md )  
+ [OLE DB Driver for SQL Server の機能](../oledb/features/oledb-driver-for-sql-server-features.md )  
  SQL Server の OLE DB ドライバーでサポートされる機能をについて説明します。  
   
- [SQL Server の OLE DB ドライバーとアプリケーションの構築](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [OLE DB Driver for SQL Server を使用したアプリケーションの構築](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
  SQL Server の開発では、Windows DAC を使用するコンポーネントとは異なる方法、およびそれに ADO を使用する方法を含む OLE DB ドライバーの概要を示します。  
   
  このセクションでは、SQL Server のインストールと展開、SQL Server ライブラリの OLE DB ドライバーの再配布する方法を含む OLE DB Driver も説明します。  
   
- [SQL Server の OLE DB Driver のシステム要件](../oledb/system-requirements-for-oledb-driver-for-sql-server.md)  
+ [OLE DB Driver for SQL Server のシステム要件](../oledb/system-requirements-for-oledb-driver-for-sql-server.md)  
  SQL Server の OLE DB Driver を使用するために必要なシステム リソースについて説明します。  
   
  [OLE DB Driver for SQL Server &#40;OLE DB&#41;](../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  
  SQL Server の OLE DB Driver を使用する方法についてを説明します。  
   
- [SQL Server の情報を複数の OLE DB ドライバーを検索します。](../oledb/finding-more-oledb-driver-for-sql-server-information.md)  
+ [OLE DB Driver for SQL Server の詳細情報の検索](../oledb/finding-more-oledb-driver-for-sql-server-information.md)  
  外部リソースへのリンクを含むと参考資料ではさらに、SQL Server 用の OLE DB ドライバーに関する追加リソースを提供します。  
   
   

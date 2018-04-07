@@ -1,16 +1,16 @@
 ---
-title: "プロジェクトのオプション (MySQLToSQL) |Microsoft ドキュメント"
+title: プロジェクトのオプション (MySQLToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +18,16 @@ applies_to:
 helpviewer_keywords:
 - Setting project options,configuration options
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
-caps.latest.revision: 
+caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3aaec0d6811369af2ab4b5c52591af95fd944b57
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9de9ab5f01b0d6b5bf46c45d091e93430cfb8067
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="setting-project-options-mysqltosql"></a>プロジェクト オプションの設定 (MySQLToSQL)
 SSMA プロジェクトごとに、プロジェクト レベルのオプションを設定できます。 これらのオプションは、オブジェクトの変換方法、データの移行方法、および対象のデータ型へのソースのデータ型のマップ方法を指定します。  SQL Server または SQL Azure オブジェクトに変換したり、SQL Server または SQL Azure にデータを移行する前に、構成オプションには、プロジェクトの適切なことを確認します。  
@@ -53,7 +53,7 @@ SSMA では、プロジェクトの設定の 5 つのセットがあります。
   
 -   オプティミスティック  
   
--   [完全]  
+-   Full  
   
 -   Custom  
   
@@ -61,17 +61,17 @@ SSMA では、プロジェクトの設定の 5 つのセットがあります。
   
 設定と各モードの設定を適用する方法の詳細については、次のトピックを参照してください。  
   
--   [プロジェクトの設定 &#40;です。変換&#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
+-   [プロジェクト設定&#40;変換&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
   
--   [プロジェクトの設定 &#40;です。移行&#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
+-   [プロジェクト設定&#40;移行&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
 -   [プロジェクトの設定 (GUI) (SSMA 共通)](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
--   [プロジェクトの設定 &#40;です。型のマッピング &#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
+-   [プロジェクト設定&#40;種類のマッピング&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
   
--   [プロジェクトの設定 &#40;です。同期 &#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
+-   [プロジェクト設定&#40;同期&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
--   [プロジェクトの設定 &#40;です。Azure SQL DB &#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
+-   [プロジェクト設定&#40;Azure SQL DB&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
   
 ## <a name="setting-project-options"></a>プロジェクト オプションの設定  
 SSMA では、すべてのプロジェクトの既定の設定を構成できます。 これらの設定は SSMA 構成ファイルに保存して、作成した新しいプロジェクトに適用します。  
@@ -88,7 +88,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     3.  カスタム設定を指定するを選択するか、新しい設定または値を入力します。  
   
-3.  をクリックして**OK**設定を保存します。  
+3.  クリックして **OK** 、設定を保存します。  
   
 現在のプロジェクトの設定をカスタマイズすることもできます。 設定は、現在のプロジェクト ファイルに保存されます。  
   
@@ -102,15 +102,15 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     2.  カスタム モードを指定するには、次のように選択します。**カスタム**から、**モード** ボックスの一覧です。 適切なプロジェクト設定を選択します。  
   
-3.  をクリックして**OK**設定を保存します。  
+3.  クリックして **OK** 、設定を保存します。  
   
 ## <a name="next-step"></a>次の手順  
 次の手順では、プロジェクトのニーズによって異なります。  
   
--   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください。[マッピング MySQL および SQL Server データ型 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+-   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください[マッピング MySQL および SQL Server データ型&#40;MySQLToSQL。&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
--   それ以外の場合、SQL Server または SQL Azure オブジェクトの定義に、MySQL データベースのオブジェクトの定義を変換できます。 詳細については、次を参照してください。 [MySQL データベースを変換する &#40;です。MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   それ以外の場合、SQL Server または SQL Azure オブジェクトの定義に、MySQL データベースのオブジェクトの定義を変換できます。 詳細については、次を参照してください[MySQL データベースを変換する&#40;MySQLToSQL。&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>参照  
-[マッピング MySQL および SQL Server データ型 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+[MySQL および SQL Server データ型のマッピング&#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   

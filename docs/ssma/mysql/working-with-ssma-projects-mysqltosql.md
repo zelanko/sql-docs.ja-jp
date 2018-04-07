@@ -1,15 +1,16 @@
 ---
-title: "SSMA プロジェクト (MySQLToSQL) の使用 |Microsoft ドキュメント"
+title: SSMA プロジェクト (MySQLToSQL) の使用 |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Working with SSMA projects, Open project
 - Working with SSMA projects, Save project
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7fd7677d8194938fdc11dc364de8ceea9fe1414
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 04c7be6a8dd46d0f35b14eb66eb1c244a5abe5cc
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>SSMA プロジェクト (MySQLToSQL) での作業
 MySQL データベースを SQL Server または SQL Azure を移行するには、まず SSMA プロジェクトを作成する必要があります。 プロジェクトは、次の情報を含むファイルです。  
@@ -42,7 +43,7 @@ MySQL データベースを SQL Server または SQL Azure を移行するには
   
 -   プロジェクトの設定。  
   
-プロジェクトを開くときに、MySQL および SQL Server または SQL Azure から切断されています。 オフラインで作業することができます。 SQL Server への再接続の詳細については、次を参照してください[SQL Server &#40; に接続する。MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+プロジェクトを開くときに、MySQL および SQL Server または SQL Azure から切断されています。 オフラインで作業することができます。 SQL Server への再接続の詳細については、次を参照してください[SQL Server に接続する&#40;MySQLToSQL。&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
 ## <a name="reviewing-default-project-settings"></a>既定のプロジェクト設定を確認します。  
 SSMA は、変換してデータベースの読み込み、データの移行および同期 SSMA MySQL および SQL Server または SQL Azure でのいくつかの設定を格納します。 既定の設定は、多くのユーザーに適しています。 ただし、新しい SSMA プロジェクトを作成する前に、設定を確認する必要があります。 必要な場合は、すべての新しいプロジェクトに使用される既定の設定を変更できます。  
@@ -55,19 +56,19 @@ SSMA は、変換してデータベースの読み込み、データの移行お
   
 3.  左側のウィンドウでをクリックして**変換**です。  
   
-4.  右側のウィンドウで確認し、必要に応じて設定を変更します。 これらの設定の詳細については、次を参照してください。[プロジェクトの設定 &#40;です。変換&#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md) .  
+4.  右側のウィンドウで確認し、必要に応じて設定を変更します。 これらの設定の詳細については、次を参照してください。[プロジェクト設定&#40;変換&#41; &#40;MySQLToSQL&#41; ](../../ssma/mysql/project-settings-conversion-mysqltosql.md)です。  
   
 5.  移行、同期、SQL Azure、GUI、および種類のマッピングのページの手順 1. ~ 3. を繰り返します。  
   
--   移行設定については、次を参照してください。[プロジェクトの設定 &#40;です。移行&#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md).  
+-   移行設定については、次を参照してください。[プロジェクト設定&#40;移行&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)です。  
   
--   SQL Server への同期の設定については、次を参照してください。[プロジェクトの設定 &#40;です。同期 &#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md).  
+-   SQL Server への同期の設定については、次を参照してください。[プロジェクト設定&#40;同期&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)です。  
   
 -   GUI の設定については、次を参照してください。[プロジェクトの設定 (GUI) (SSMA 共通)](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693)です。  
   
--   データ型マッピングの設定については、次を参照してください。[プロジェクトの設定 &#40;です。型のマッピング &#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
+-   データ型マッピングの設定については、次を参照してください。[プロジェクト設定&#40;型マッピング&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)です。  
   
--   SQL Azure の設定については、次を参照してください。[プロジェクトの設定 &#40;です。Azure SQL DB &#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md).  
+-   SQL Azure の設定については、次を参照してください。[プロジェクト設定&#40;Azure SQL DB&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)です。  
   
 > [!NOTE]  
 > SQL Azure の設定が選択した場合にのみ表示されます**SQL Azure への移行**してプロジェクトを作成します。  
@@ -100,9 +101,9 @@ SQL Server または SQL Azure の MySQL データベースからデータを移
 SSMA では、プロジェクト ファイルを作成します。  
   
 ## <a name="customizing-project-settings"></a>プロジェクト設定のカスタマイズ  
-既定値を定義するだけでなく、すべての新しい SSMA プロジェクトに適用されるプロジェクトの設定は各プロジェクトの設定もカスタマイズできます。 詳細については、次を参照してください。[プロジェクト オプションの設定 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/setting-project-options-mysqltosql.md).  
+既定値を定義するだけでなく、すべての新しい SSMA プロジェクトに適用されるプロジェクトの設定は各プロジェクトの設定もカスタマイズできます。 詳細については、次を参照してください。[プロジェクト オプションの設定&#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)です。  
   
-ソースとターゲットのデータベース間のデータ型マッピングをカスタマイズする場合は、プロジェクト、データベース、またはオブジェクト レベルでは、マッピングを定義できます。 詳細については、次を参照してください。[マッピング MySQL および SQL Server データ型 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md).  
+ソースとターゲットのデータベース間のデータ型マッピングをカスタマイズする場合は、プロジェクト、データベース、またはオブジェクト レベルでは、マッピングを定義できます。 詳細については、次を参照してください。[マッピング MySQL および SQL Server データ型&#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)です。  
   
 ## <a name="saving-projects"></a>プロジェクトの保存  
 プロジェクトの保存機能は、本質的には、プロジェクトの設定と、必要に応じて、データベースのメタデータを SSMA プロジェクト ファイルに保存するユーザーを使用します。  
@@ -139,11 +140,11 @@ SSMA は、MySQL スキーマが解析され、プロジェクト ファイル�
 4.  SQL Azure への再接続、**ファイル**メニューの  **SQL Azure に再接続します。**  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順は[MySQL &#40; に接続します。MySQLToSQL &#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
+移行プロセスの次の手順は[MySQL への接続&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
 ## <a name="see-also"></a>参照  
-[MySQL &#40; に接続します。MySQLToSQL &#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
-[SQL Server - Azure SQL DB &#40; への MySQL データベースの移行MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
-[SQL Server &#40; に接続します。MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
-[Azure SQL DB &#40; に接続します。MySQLToSQL &#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+[MySQL への接続&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
+[SQL Server - Azure SQL DB にデータベースを移行する MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[SQL Server に接続する&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+[Azure SQL DB に接続する&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   
