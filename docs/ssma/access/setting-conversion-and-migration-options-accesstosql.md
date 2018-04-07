@@ -1,15 +1,16 @@
 ---
-title: "変換と移行オプション (AccessToSQL) の設定 |Microsoft ドキュメント"
+title: 変換と移行オプション (AccessToSQL) の設定 |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - project settings
 - schemas
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40be8e3f52464e7c6ae6f024d8c29f3d0acd04b9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 747a70560aaa3710429bb8708699dfa2dff9234b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>変換と移行オプション (AccessToSQL) の設定
 SSMA プロジェクトごとに、プロジェクト レベルのオプションを設定できます。 これらのオプションは、オブジェクトの変換方法、データの移行方法、および対象のデータ型へのソースのデータ型のマップ方法を指定します。 オブジェクトを変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure にデータを移行または[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure、設定オプションが、プロジェクトの適切なであることを確認します。  
@@ -69,7 +70,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     -   カスタム モードを指定するには、次のように選択します。**カスタム**で、**モード**ボックス、左ペインでオプションを選択、設定または右側のウィンドウで値をクリックし、選択するか、新しい設定または値を入力してください。  
   
-3.  をクリックして**OK**設定を保存します。  
+3.  クリックして **OK** 、設定を保存します。  
   
 現在のプロジェクトの設定をカスタマイズすることもできます。 これらの設定は、現在のプロジェクト ファイルに保存されます。  
   
@@ -83,9 +84,9 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     -   カスタム モードを指定するには、次のように選択します。**カスタム**で、**モード**ボックス、左ペインでオプションを選択、設定または右側のウィンドウで値をクリックし、選択するか、新しい設定または値を入力してください。  
   
-3.  をクリックして**OK**設定を保存します。  
+3.  クリックして **OK** 、設定を保存します。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
 次の手順では、プロジェクトのニーズによって異なります。  
   
 -   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください[マッピング ソースとターゲットのデータ型。](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)  

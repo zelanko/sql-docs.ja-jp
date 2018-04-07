@@ -1,31 +1,31 @@
 ---
-title: "Microsoft JDBC Driver for SQL Server |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft JDBC Driver for SQL Server |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0f9ec204daf3c0e0130be3fc1e4a44bf2982cb68
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a7ccbec6a54b6709f04d39659517aeae5415127d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft SQL Server 用 JDBC Driver
 
-![ダウンロード DownArrow 丸](../../ssdt/media/download.png)[JDBC ドライバーをダウンロードするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 相互運用性を継続的な取り組みでは、Microsoft は、SQL Server、および Azure SQL データベースで使用する Java Database Connectivity (JDBC) ドライバーを提供します。 このドライバーは追加料金なしで利用でき、あらゆる Java アプリケーション、アプリケーション サーバー、Java 対応アプレットからデータベースに接続できます。 このドライバーは、標準の JDBC アプリケーション プログラム インターフェイス (API) によってデータベース接続が提供される Type 4 JDBC ドライバーです。
 

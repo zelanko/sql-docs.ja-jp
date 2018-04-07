@@ -1,15 +1,16 @@
 ---
-title: "Azure SQL DB (MySQLToSQL) への接続 |Microsoft ドキュメント"
+title: Azure SQL DB (MySQLToSQL) への接続 |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Connecting to SQL Azure, SQL Azure permissions
 - Connecting to SQL Azure, synchronization
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb1ee676132fb2a87af01b2674aa45bbc756ec6b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9470c9f615a6c013e992e2b162701f64722d4a0f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-azure-sql-db-mysqltosql"></a>Azure SQL DB (MySQLToSQL) に接続します。
 MySQL データベースを SQL Azure に移行するには、SQL Azure のターゲット インスタンスに接続する必要があります。 接続するときに、SSMA は SQL Azure のインスタンス内のすべてのデータベースに関するメタデータを取得し、SQL Azure メタデータ エクスプ ローラーでデータベースのメタデータを表示します。 SSMA は、SQL Azure に接続しているが、パスワードを保存しないのインスタンスの情報を格納します。  
@@ -46,7 +47,7 @@ SQL Azure への接続に使用されるアカウントには、アカウント�
 ## <a name="establishing-a-sql-azure-connection"></a>SQL を確立する Azure の接続  
 MySQL データベースのオブジェクトを SQL Azure の構文に変換する前に、または複数の MySQL データベースを移行する SQL Azure のインスタンスへの接続を確立する必要があります。  
   
-接続のプロパティを定義するときは、オブジェクトとデータを移行するデータベースを指定します。 SQL Azure に接続した後、MySQL スキーマ レベルでは、このマッピングをカスタマイズすることができます。 詳細については、次を参照してください[MySQL データベースを SQL Server スキーマ &#40; にマッピング。MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+接続のプロパティを定義するときは、オブジェクトとデータを移行するデータベースを指定します。 SQL Azure に接続した後、MySQL スキーマ レベルでは、このマッピングをカスタマイズすることができます。 詳細については、次を参照してください[MySQL データベースを SQL Server スキーマへのマッピング&#40;MySQLToSQL。&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
 > [!IMPORTANT]  
 > SQL Azure に接続しようとすると、前に、SQL Azure のインスタンスを実行しているし、接続を受け入れることを確認してください。  
@@ -88,14 +89,14 @@ SQL Azure データベースについてのメタデータは自動的に更新�
 ## <a name="next-step"></a>次の手順  
 次の手順では、プロジェクトのニーズによって異なります。  
   
--   MySQL スキーマと SQL Azure データベースとスキーマの間のマッピングをカスタマイズするを参照してください。[マッピング MySQL データベースを SQL Server スキーマと #40 です。MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+-   MySQL スキーマと SQL Azure データベースとスキーマの間のマッピングをカスタマイズするを参照してください[SQL Server スキーマへのマッピングの MySQL データベース&#40;MySQLToSQL。&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
--   プロジェクトの構成オプションをカスタマイズするを参照してください。[プロジェクト オプションの設定 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
+-   プロジェクトの構成オプションをカスタマイズするを参照してください[プロジェクト オプションの設定&#40;MySQLToSQL。&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
   
--   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください。[マッピング MySQL および SQL Server データ型 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+-   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください[マッピング MySQL および SQL Server データ型&#40;MySQLToSQL。&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
--   場合は、次のタスクを実行する必要はありません、MySQL データベースのオブジェクトの定義を SQL Azure オブジェクトの定義に変換できます。 詳細については、次を参照してください。 [MySQL データベースを変換する &#40;です。MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   場合は、次のタスクを実行する必要はありません、MySQL データベースのオブジェクトの定義を SQL Azure オブジェクトの定義に変換できます。 詳細については、次を参照してください[MySQL データベースを変換する&#40;MySQLToSQL。&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>参照  
-[SQL Server - Azure SQL DB &#40; への MySQL データベースの移行MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[SQL Server - Azure SQL DB にデータベースを移行する MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

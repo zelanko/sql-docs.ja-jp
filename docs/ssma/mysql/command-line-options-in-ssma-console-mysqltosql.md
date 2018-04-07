@@ -1,15 +1,16 @@
 ---
-title: "SSMA コンソール (MySQLToSQL) でのコマンド ライン オプション |Microsoft ドキュメント"
+title: SSMA コンソール (MySQLToSQL) でのコマンド ライン オプション |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - Command line options, variable value file option
 - Command line options, XML output option
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa2e0210a3d59e41b9adf9d44b593e3bc83e9aef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 747d4fcd7825d718ee7216b0ff364954cc121059
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>SSMA コンソール (MySQLToSQL) でのコマンド ライン オプション
 Microsoft を実行し、SSMA 動作を制御する堅牢な一連のコマンド ライン オプションを提供します。 次のセクションでは、同じを詳しく説明します。  
@@ -102,7 +103,7 @@ Microsoft を実行し、SSMA 動作を制御する堅牢な一連のコマン�
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 出力のオプション: x/xmloutput [xmloutputfile]  
 このコマンドはコンソールにするか、xml ファイルを xml 形式でコマンドの出力メッセージを出力するために使用されます。  
   
-2 つのオプション使用できるが、xmloutput viz。  
+2 つのオプション使用できるが、xmloutput viz..,:  
   
 -   Xmloutput スイッチの後にファイル パスが指定した場合は、ファイルに出力がリダイレクトされます。  
   
@@ -172,21 +173,21 @@ SSMA コンソールのオプションの構文の概要が表示されます。
   
 `C:\>SSMAforMySQLConsole.EXE -?`  
   
-SSMA コンソール コマンド ライン オプションの表形式の表示を参照してください[付録 - 1 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/appendix-1-mysqltosql.md).  
+SSMA コンソール コマンド ライン オプションの表形式の表示を参照してください[付録 - 1 &#40;MySQLToSQL&#41;](../../ssma/mysql/appendix-1-mysqltosql.md)です。  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>SecurePassword ヘルプ オプション: – securepassword-?/help  
 SSMA コンソールのオプションの構文の概要が表示されます。  
   
 `C:\>SSMAforMySQLConsole.EXE -securepassword -?`  
   
-SSMA コンソール コマンド ライン オプションの表形式の表示を参照してください[付録 - 1 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/appendix-1-mysqltosql.md)  
+SSMA コンソール コマンド ライン オプションの表形式の表示を参照してください[付録 - 1 &#40;MySQLToSQL&#41;](../../ssma/mysql/appendix-1-mysqltosql.md)  
   
 ### <a name="next-step"></a>次の手順  
 次の手順は、プロジェクトの要件によって異なります。  
   
--   パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[パスワードの管理 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/managing-passwords-mysqltosql.md).  
+-   パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[管理パスワード&#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)です。  
   
--   レポートの生成に、次を参照してください。[レポートの生成 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
+-   レポートの生成に、次を参照してください。[を生成するレポート&#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)です。  
   
--   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング &#40;です。MySQLToSQL &#41;](../../ssma/mysql/troubleshooting-mysqltosql.md).  
+-   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)です。  
   

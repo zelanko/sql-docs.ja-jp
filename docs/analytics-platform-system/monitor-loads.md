@@ -1,25 +1,25 @@
 ---
-title: "並列データ ウェアハウスのモニターの読み込み"
+title: 並列データ ウェアハウスのモニターの読み込み
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Active と最近を監視する[dwloader](dwloader.md) Analytics Platform System (APS) 管理コンソールまたは並列データ ウェアハウス (PDW) システム ビューを使用して読み込みます。"
+description: Active と最近を監視する[dwloader](dwloader.md) Analytics Platform System (APS) 管理コンソールまたは並列データ ウェアハウス (PDW) システム ビューを使用して読み込みます。
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: c0c55c16-00bc-4676-8970-a8e10b3e9408
-caps.latest.revision: "6"
-ms.openlocfilehash: 988c34b248b0058941f53575a79e4f3b6acb4de0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 6
+ms.openlocfilehash: e520fa01eef0c25e1cf094ee412a9530afaf70b7
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-loads"></a>モニターを読み込みます
 Active と最近を監視する[dwloader](dwloader.md) Analytics Platform System (APS) 管理コンソールまたは並列データ ウェアハウス (PDW) を使用してロード[システム ビュー](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)です。 
@@ -31,7 +31,7 @@ Active と最近を監視する[dwloader](dwloader.md) Analytics Platform System
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 負荷を監視するために使用するメソッドにかかわらず、ログインは、基になるデータ ソースにアクセスする権限が必要です。 
 
 <!-- MISSING LINKS

@@ -1,26 +1,26 @@
 ---
-title: "ポーリング間隔 (Analytics Platform System) の決定します。"
+title: ポーリング間隔 (Analytics Platform System) の決定します。
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 062c0e3d-f7d0-44f1-aeab-a9bd17dc6fdd
-caps.latest.revision: "7"
-ms.openlocfilehash: 1dce371320f42df646e861b1323b352966ae9916
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 7
+ms.openlocfilehash: e67ab38c12000f3d78a9179a177ce5f673b8eaa2
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="determine-polling-frequency"></a>ポーリングの頻度を決定します。
 このトピックでは、SQL Server PDW アプライアンス通知のポーリング頻度を決定する方法について説明します。  
@@ -42,5 +42,5 @@ System Center によっても使用される、共通のアラートをポーリ
   
 ## <a name="see-also"></a>参照  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[アプライアンスの監視 &#40;です。Analytics Platform System &#41;](appliance-monitoring.md)  
+[アプライアンス監視&#40;分析プラットフォーム システム&#41;](appliance-monitoring.md)  
   

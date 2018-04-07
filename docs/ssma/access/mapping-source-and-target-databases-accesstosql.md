@@ -1,15 +1,16 @@
 ---
-title: "マッピングのソースとターゲット データベース (AccessToSQL) |Microsoft ドキュメント"
+title: マッピングのソースとターゲット データベース (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -23,22 +24,22 @@ helpviewer_keywords:
 - source database
 - target database
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48e87d2b6c84db3534a3c52ee6176e29fd34257f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eed81b1bf2d9f3f2e70f30a6744c4d7ad9bf33d3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>ソースとターゲット データベース (AccessToSQL) とのマッピング
 接続すると[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure 移行のターゲット データベースを指定する必要があります。 複数データベースにアクセスした場合に割り当てることに複数[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース (またはスキーマ) または接続されている SQL Azure データベースの下にある複数のスキーマにします。  
   
 ## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server または SQL Azure データベースのスキーマ  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースでは、スキーマの概念を使用して、データベース内のオブジェクトを論理グループに分けます。 たとえば、ライブラリ データベースでという 3 つのスキーマを使用して**ブック**、**オーディオ**、および**ビデオ**book、オーディオ、およびビデオのオブジェクトを互いから分離します。 既定では、access データベースがマップされている**マスター**データベースおよび**dbo**内のスキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]と接続されているデータベースと**dbo** SQL Azure でのスキーマです。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースでは、スキーマの概念を使用して、データベース内のオブジェクトを論理グループに分けます。 たとえば、ライブラリ データベースでという 3 つのスキーマを使用して**ブック**、**オーディオ**、および**ビデオ**book、オーディオ、およびビデオのオブジェクトを互いから分離します。 既定では、access データベースがマップされている**マスター**データベースおよび**dbo**内のスキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]と接続されているデータベースと**dbo** SQL Azure でのスキーマです。  
   
 各アクセス データベースの間のマッピングをカスタマイズしない限り、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースおよびスキーマを SSMA は、すべてのスキーマとマップされている既定のデータベースに access データベースに関連付けられているデータが移行されます。  
   

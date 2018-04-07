@@ -1,30 +1,31 @@
 ---
-title: "DB2 コンソール (DB2ToSQL) for SSMA の概要 |Microsoft ドキュメント"
+title: DB2 コンソール (DB2ToSQL) for SSMA の概要 |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cfffdb6df256ed0ee591965b1d1ac98cf3c1d721
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ec1529fcf61472119612062819a16190b7fe3dfd
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>DB2 コンソール (DB2ToSQL) for SSMA の概要
 このセクションを起動し、DB2 のコンソール アプリケーションで作業を開始する手順について説明します。 一覧表示、ここで、規則ウィンドウで使用される、一般的な SSMA コンソール出力。  
@@ -41,13 +42,13 @@ SSMA コンソール アプリケーションを起動するのにには、次�
 ## <a name="procedure-for-using-the-ssma-console"></a>SSMA コンソールを使用する手順  
 Windows システムで、コンソールを正常に起動した後、次の手順を使用して作業する可能性があります。  
   
-1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの内容の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;DB2ToSQL&#41;](../../ssma/db2/creating-script-files-db2tosql.md)です。  
+1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの内容の詳細については、次を参照してください。[スクリプト ファイルの作成&#40;DB2ToSQL&#41; ](../../ssma/db2/creating-script-files-db2tosql.md)です。  
   
-2.  [変数値ファイル &#40;DB2ToSQL&#41; の作成](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
+2.  [変数の値のファイルを作成する&#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
   
-3.  [サーバーの接続ファイル &#40;DB2ToSQL&#41; の作成](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
+3.  [サーバー接続ファイルを作成する&#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
   
-4.  [SSMA コンソール &#40;DB2ToSQL&#41; の実行](../../ssma/db2/executing-the-ssma-console-db2tosql.md)プロジェクトのニーズに基づく  
+4.  [SSMA コンソールを実行する&#40;DB2ToSQL&#41; ](../../ssma/db2/executing-the-ssma-console-db2tosql.md)プロジェクトのニーズに基づく  
   
 追加機能:  
   

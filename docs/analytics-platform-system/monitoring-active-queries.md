@@ -1,31 +1,31 @@
 ---
-title: "アクティブなクエリ (SQL Server PDW) の監視"
+title: アクティブなクエリ (SQL Server PDW) の監視
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bb73f790-0537-414b-8dc2-f1eb69b92362
-caps.latest.revision: "7"
-ms.openlocfilehash: 44f128124c8027bf4c37e34309d6c711006ac113
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 7
+ms.openlocfilehash: 8a792e8dc4f29a257568f37350ba1b2c792c88fe
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitoring-active-queries"></a>アクティブなクエリの監視
 このトピックでは、管理コンソールと、SQL Server PDW システム ビューを使用して、アクティブなクエリを監視する方法を示します。 参照してください[アプライアンスを管理コンソールを使用して監視](monitor-the-appliance-by-using-the-admin-console.md)と[システム ビュー](tsql-system-views.md)についてこれらのツールです。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 アクティブなクエリを監視するために使用するメソッドにかかわらず、ログインが「すべての 管理コンソールを使用して」で説明されているアクセス許可を持っている[管理コンソールを使用するアクセス許可を付与](grant-permissions.md#grant-permissions-to-use-the-admin-console)です。  
   
 ## <a name="PermsAdminConsole"></a>モニターのアクティブなクエリ  

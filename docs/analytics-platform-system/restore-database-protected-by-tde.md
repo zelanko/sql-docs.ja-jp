@@ -1,25 +1,25 @@
 ---
-title: "並列データ ウェアハウスでの TDE で保護されたデータベースを復元します。"
+title: 並列データ ウェアハウスでの TDE で保護されたデータベースを復元します。
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "透過的なデータ暗号化を使用して暗号化されたデータベースを復元するのにには、次の手順を使用します。"
+description: 透過的なデータ暗号化を使用して暗号化されたデータベースを復元するのにには、次の手順を使用します。
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: ffb681ca-8598-4614-b06c-660376333fc3
-caps.latest.revision: "4"
-ms.openlocfilehash: 5df3843a3e329901f8f77b65e5f6d4ff69cf6dbf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 4
+ms.openlocfilehash: 2421b618f9f1d736b90fd882aad9e3ab9aae82f5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="restore-a-database-protected-by-tde"></a>TDE で保護されたデータベースを復元します。
 透過的なデータ暗号化を使用して暗号化されたデータベースを復元するのにには、次の手順を使用します。  
@@ -64,7 +64,7 @@ RESTORE DATABASE AdventureWorksPDW2012
 ```  
   
 ## <a name="see-also"></a>参照  
-[データベースのバックアップ](../t-sql/statements/backup-database-parallel-data-warehouse.md)  
+[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)  
 [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md) 
 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  

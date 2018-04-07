@@ -1,30 +1,31 @@
 ---
-title: "DB2 データベース (DB2ToSQL) への接続 |Microsoft ドキュメント"
+title: DB2 データベース (DB2ToSQL) への接続 |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f718f75a750d376bdae9ff7bfab10f298107822d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 588fe34578ac6018ccefbc08f6ab70a017283353
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>DB2 データベース (DB2ToSQL) に接続します。
 DB2 データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、移行する DB2 データベースに接続する必要があります。 接続すると、SSMA は、すべての DB2 スキーマに関するメタデータを取得し、DB2 メタデータ エクスプ ローラー ペインに表示します。 SSMA は、データベース サーバーに関する情報を格納しますが、パスワードは保存されません。  
@@ -84,7 +85,7 @@ DB2 データベースについてのメタデータは自動的に更新され�
   
     `Data Source=MyDB2DB;Integrated Security=yes;`  
   
-    詳細については、次を参照してください。 [Oracle に接続 &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)です。  
+    詳細については、次を参照してください。 [Oracle に接続&#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)です。  
   
 ## <a name="reconnecting-to-db2"></a>DB2 への再接続  
 プロジェクトを終了するまで、データベース サーバーへの接続をアクティブに保ちます。 プロジェクトを再度開くと、データベースにアクティブに接続する場合を再接続する必要があります。 メタデータを更新するには、データベース オブジェクトに読み込む必要がなくなるまでオフラインで作業できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データを移行します。  
@@ -119,5 +120,5 @@ DB2 データベースについてのメタデータは、自動的に更新さ�
 -   移行プロセスの次の手順が、 [SQL Server に接続する](http://msdn.microsoft.com/en-us/b59803cb-3cc6-41cc-8553-faf90851410e)です。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server &#40;DB2ToSQL&#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[SQL Server にデータベースを移行する DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

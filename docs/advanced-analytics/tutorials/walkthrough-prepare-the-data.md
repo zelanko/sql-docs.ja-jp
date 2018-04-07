@@ -18,11 +18,11 @@ ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: fbe74b101642ecabe0478a9d5b459e59f277da04
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: a9edd0ba1b6a52dd7ce6ed36b8528283b42d8914
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>PowerShell (チュートリアル) を使用してデータを準備します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 04/04/2018
   
     ![PowerShell スクリプトの完了後](media/rsql-e2e-psscriptresults.PNG "PowerShell スクリプトの完了後")
   
-5.  PowerShell コンソールで、コマンド `ls` を実行すると、 *DestDir*にダウンロードされたファイルの一覧が表示されます。  詳細については、ファイルの次を参照してください。[含まれるもの](#What-the-Download-Includes)です。
+5.  PowerShell コンソールで、コマンド `ls` を実行すると、 *DestDir*にダウンロードされたファイルの一覧が表示されます。  詳細については、ファイルの次を参照してください。[含まれるもの](#whats-included-in-the-sample)です。
 
 ## <a name="2-install-required-r-packages"></a>2.必要な R パッケージのインストール
 

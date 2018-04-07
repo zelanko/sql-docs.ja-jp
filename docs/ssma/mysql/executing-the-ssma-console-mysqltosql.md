@@ -1,16 +1,16 @@
 ---
-title: "SSMA コンソール (MySQLToSQL) を実行 |Microsoft ドキュメント"
+title: SSMA コンソール (MySQLToSQL) を実行 |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - Script file commands, Report commands
 - Script file commands, Script generation commands
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
-caps.latest.revision: 
+caps.latest.revision: 25
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6faf8033f2210a68217fe6cf3e7021edc2b29b98
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2fb0022b9e4dd222fd3d19ed4dc3e6d03fc740bb
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>SSMA コンソール (MySQLToSQL) を実行します。
 Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実行し、SSMA 動作を制御できます。  
@@ -43,18 +43,18 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
 ## <a name="project--script-file-commands"></a>プロジェクト スクリプト ファイルのコマンド  
 **Command**  
   
---プロジェクトの新規作成します。   
+create-new-project:   
                    新しい SSMA プロジェクトを作成します。  
   
 プロジェクトのコマンドでは、プロジェクトの作成、開く、保存、およびプロジェクトの終了を処理します。  
   
 **[スクリプト]**  
   
-1.  `project-folder`プロジェクトの作成中のフォルダーを示します。  
+1.  `project-folder` プロジェクトの作成中のフォルダーを示します。  
   
-2.  `project-name`プロジェクトの名前を示します。 {文字列}  
+2.  `project-name` プロジェクトの名前を示します。 {string}  
   
-3.  `overwrite-if-exists`省略可能な属性は、既存のプロジェクトを上書きするかかどうかを示します。 {ブール}  
+3.  `overwrite-if-exists`省略可能な属性は、既存のプロジェクトを上書きするかかどうかを示します。 {boolean}  
   
 4.  `project-type:`省略可能な属性です。 プロジェクトの種類などの「sql server 2005」プロジェクトまたは「sql server 2008」のプロジェクトまたは「sql server 2012」または「sql server 2014」プロジェクトまたはプロジェクトの"sql azure"を示します。 既定値は、「sql server 2008」です。  
   
@@ -79,14 +79,14 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 **Command**  
   
-開かれたプロジェクト。   
+open-project:   
                   既存のプロジェクトを開きます。  
   
 **[スクリプト]**  
   
-1.  `project-folder`プロジェクトの作成中のフォルダーを示します。 指定したフォルダーが存在しない場合、コマンドが失敗します。  {文字列}  
+1.  `project-folder` プロジェクトの作成中のフォルダーを示します。 指定したフォルダーが存在しない場合、コマンドが失敗します。  {string}  
   
-2.  `project-name`プロジェクトの名前を示します。 指定されたプロジェクトが存在しない場合、コマンドが失敗します。  {文字列}  
+2.  `project-name` プロジェクトの名前を示します。 指定されたプロジェクトが存在しない場合、コマンドが失敗します。  {string}  
   
 **構文例:**  
   
@@ -115,7 +115,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
 ```  
 **Command**  
   
-閉じるプロジェクト  
+close-project  
                   : 移行プロジェクトを閉じます。  
   
 **[スクリプト]**  
@@ -127,7 +127,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
 ```  
 **Command**  
   
-閉じるプロジェクト  
+close-project  
                   : 移行プロジェクトを閉じます。  
   
 **[スクリプト]**  
@@ -150,11 +150,11 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 2.  **Windows 認証**と**ポート**パラメーターは、SQL Azure に接続する場合は適用されません。  
   
-3.  'を作成するスクリプト ファイル' の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/creating-script-files-mysqltosql.md).  
+3.  'を作成するスクリプト ファイル' の詳細については、次を参照してください。[スクリプト ファイルの作成&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)です。  
   
 **Command**  
   
-接続ソース データベース  
+connect-source-database  
   
 -   ソース データベースへの接続を実行し、ソース データベースが、すべてのメタデータの高レベルのメタデータを読み込みます。  
   
@@ -171,7 +171,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
 ```  
 **Command**  
   
-強制読み込み-ソース/ターゲット-データベース  
+force-load-source/target-database  
   
 -   ソースのメタデータを読み込みます。  
   
@@ -194,7 +194,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
 ```  
 **Command**  
   
-再接続ソース データベース  
+reconnect-source-database  
   
 1.  ソース データベースへの再接続がソース データベースの接続のコマンドとは異なり、すべてのメタデータが読み込まれない。  
   
@@ -209,7 +209,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
 ```  
 **Command**  
   
-接続先データベース  
+connect-target-database  
   
 1.  ターゲット SQL Server または SQL Azure データベースに接続して、メタデータではありませんが、ターゲット データベースの高レベルのメタデータを完全に読み込みます。  
   
@@ -226,7 +226,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
 ```  
 **Command**  
   
-再接続ターゲット データベース  
+reconnect-target-database  
   
 1.  ターゲット データベースへの再接続が、接続先データベースのコマンドとは異なり、すべてのメタデータが読み込まれない。  
   
@@ -245,7 +245,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 **Command**  
   
--評価-レポートの生成  
+generate-assessment-report  
   
 1.  元のデータベースに対して評価レポートを生成します。  
   
@@ -255,25 +255,25 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 **[スクリプト]**  
   
-1.  `assessment-report-folder:`評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
+1.  `assessment-report-folder:` 評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
   
-2.  `object-name:`(そのことがある個々 のオブジェクト名またはグループ オブジェクトの名前) 評価レポートの生成の対象オブジェクトを指定します。  
+2.  `object-name:` (そのことがある個々 のオブジェクト名またはグループ オブジェクトの名前) 評価レポートの生成の対象オブジェクトを指定します。  
   
-3.  `object-type:`(オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
+3.  `object-type:` (オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
   
-4.  `assessment-report-overwrite:`既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
+4.  `assessment-report-overwrite:` 既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
   
     **既定値:** false を指定します。 (省略可能な属性)  
   
-5.  `write-summary-report-to:`概要レポートを生成するパスを指定します。  
+5.  `write-summary-report-to:` 概要レポートを生成するパスを指定します。  
   
     フォルダー パスが示されているだけの場合、ファイルの名前で**AssessmentReport&lt;n&gt;です。XML**を作成します。 (省略可能な属性)  
   
     レポートの作成には、さらに 2 つのサブ カテゴリがあります。  
   
-    -   `report-errors`("true または false"、既定値は"false"(省略可能な属性) として = =)  
+    -   `report-errors` ("true または false"、既定値は"false"(省略可能な属性) として = =)  
   
-    -   `verbose`("true または false"、既定値は"false"(省略可能な属性) として = =)  
+    -   `verbose` ("true または false"、既定値は"false"(省略可能な属性) として = =)  
   
 **構文例:**  
   
@@ -296,7 +296,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 />  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <generate-assessment-report  
@@ -321,7 +321,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 **Command**  
   
-変換とスキーマ  
+convert-schema  
   
 1.  ソースからターゲット スキーマへのスキーマの変換を実行します。  
   
@@ -329,25 +329,25 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 **[スクリプト]**  
   
-1.  `conversion-report-folder:`評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
+1.  `conversion-report-folder:` 評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
   
-2.  `object-name:`スキーマ (持てる indivdual オブジェクト名またはグループのオブジェクト名) に変換する対象のオブジェクトを指定します。  
+2.  `object-name:` スキーマ (持てる indivdual オブジェクト名またはグループのオブジェクト名) に変換する対象のオブジェクトを指定します。  
   
-3.  `object-type:`(オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
+3.  `object-type:` (オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
   
-4.  `conversion-report-overwrite:`既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
+4.  `conversion-report-overwrite:` 既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
   
     **既定値:** false を指定します。 (省略可能な属性)  
   
-5.  `write-summary-report-to:`概要レポートを生成するパスを指定します。  
+5.  `write-summary-report-to:` 概要レポートを生成するパスを指定します。  
   
     フォルダー パスが示されているだけの場合、ファイルの名前で**SchemaConversionReport&lt;n&gt;です。XML**を作成します。 (省略可能な属性)  
   
     概要レポートの作成には、さらに 2 つのサブ カテゴリがあります。  
   
-    -   `report-errors`("true または false"、既定値は"false"(省略可能な属性) として = =)  
+    -   `report-errors` ("true または false"、既定値は"false"(省略可能な属性) として = =)  
   
-    -   `verbose`("true または false"、既定値は"false"(省略可能な属性) として = =)  
+    -   `verbose` ("true または false"、既定値は"false"(省略可能な属性) として = =)  
   
 **構文例:**  
   
@@ -370,7 +370,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 />  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <convert-schema  
@@ -393,19 +393,19 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 **[スクリプト]**  
   
-1.  `object-name:`移行すると見なされるソース オブジェクトを指定します (持てる indivdual オブジェクト名またはグループ オブジェクトの名前) データ。  
+1.  `object-name:` 移行すると見なされるソース オブジェクトを指定します (持てる indivdual オブジェクト名またはグループ オブジェクトの名前) データ。  
   
-2.  `object-type:`(オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
+2.  `object-type:` (オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
   
-3.  `write-summary-report-to:`概要レポートを生成するパスを指定します。  
+3.  `write-summary-report-to:` 概要レポートを生成するパスを指定します。  
   
     フォルダー パスが示されているだけの場合、ファイルの名前で**DataMigrationReport&lt;n&gt;です。XML**を作成します。 (省略可能な属性)  
   
     レポートの作成には、さらに 2 つのサブ カテゴリがあります。  
   
-    -   `report-errors`("true または false"、既定値は"false"(省略可能な属性) として = =)  
+    -   `report-errors` ("true または false"、既定値は"false"(省略可能な属性) として = =)  
   
-    -   `verbose`("true または false"、既定値は"false"(省略可能な属性) として = =)  
+    -   `verbose` ("true または false"、既定値は"false"(省略可能な属性) として = =)  
   
 **構文例:**  
   
@@ -430,7 +430,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 </migrate-data>  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <migrate-data  
@@ -449,15 +449,15 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 **Command**  
   
-マップとスキーマ  
+map-schema  
   
 ターゲット スキーマへのソース データベースのスキーマ マッピングです。  
   
 **[スクリプト]**  
   
-1.  `source-schema`移行する送信元スキーマを指定します。  
+1.  `source-schema` 移行する送信元スキーマを指定します。  
   
-2.  `sql-server-schema`移行させたい場所、ターゲット スキーマを指定します。  
+2.  `sql-server-schema` 移行させたい場所、ターゲット スキーマを指定します。  
   
 **構文例:**  
   
@@ -477,7 +477,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 **Command**  
   
-同期ターゲット  
+synchronize-target  
   
 1.  ターゲット データベースと、対象オブジェクトを同期します。  
   
@@ -487,19 +487,19 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 **[スクリプト]**  
   
-1.  `object-name:`ターゲット データベース (持てる indivdual オブジェクト名またはグループ オブジェクトの名前) との同期の対象オブジェクトを指定します。  
+1.  `object-name:` ターゲット データベース (持てる indivdual オブジェクト名またはグループ オブジェクトの名前) との同期の対象オブジェクトを指定します。  
   
-2.  `object-type:`(オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
+2.  `object-type:` (オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
   
-3.  `on-error:`同期エラーを警告またはエラーとして指定するかどうかを指定します。 エラー時に使用できるオプションは:  
+3.  `on-error:` 同期エラーを警告またはエラーとして指定するかどうかを指定します。 エラー時に使用できるオプションは:  
   
-    -   警告としてレポートの合計  
+    -   report-total-as-warning  
   
-    -   レポートの各-として-警告  
+    -   report-each-as-warning  
   
-    -   失敗するスクリプト  
+    -   fail-script  
   
-4.  `report-errors-to:`(省略可能な属性) の同期操作だけフォルダーのパスを指定すると、し、ファイル名では、エラー レポートの場所を指定**TargetSynchronizationReport.XML**を作成します。  
+4.  `report-errors-to:` (省略可能な属性) の同期操作だけフォルダーのパスを指定すると、し、ファイル名では、エラー レポートの場所を指定**TargetSynchronizationReport.XML**を作成します。  
   
 **構文例:**  
   
@@ -518,7 +518,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 />  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <synchronize-target  
@@ -527,7 +527,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
   object-type="<object-category>"/>  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <synchronize-target>  
@@ -542,7 +542,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
 ```  
 **Command**  
   
-データベースからの更新  
+refresh-from-database  
   
 1.  データベースからのソース オブジェクトを更新します。  
   
@@ -550,19 +550,19 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 **[スクリプト]**  
   
-1.  `object-name:`(持てる indivdual オブジェクト名またはグループ オブジェクトの名前)、転送元データベースから更新する場合と見なされるソース オブジェクトを指定します。  
+1.  `object-name:` (持てる indivdual オブジェクト名またはグループ オブジェクトの名前)、転送元データベースから更新する場合と見なされるソース オブジェクトを指定します。  
   
-2.  `object-type:`(オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
+2.  `object-type:` (オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
   
-3.  `on-error:`同期エラーを警告またはエラーとして指定するかどうかを指定します。 エラー時に使用できるオプションは:  
+3.  `on-error:` 同期エラーを警告またはエラーとして指定するかどうかを指定します。 エラー時に使用できるオプションは:  
   
-    -   警告としてレポートの合計  
+    -   report-total-as-warning  
   
-    -   レポートの各-として-警告  
+    -   report-each-as-warning  
   
-    -   失敗するスクリプト  
+    -   fail-script  
   
-4.  `report-errors-to:`(省略可能な属性) の同期操作だけフォルダーのパスを指定すると、し、ファイル名では、エラー レポートの場所を指定**SourceDBRefreshReport.XML**を作成します。  
+4.  `report-errors-to:` (省略可能な属性) の同期操作だけフォルダーのパスを指定すると、し、ファイル名では、エラー レポートの場所を指定**SourceDBRefreshReport.XML**を作成します。  
   
 コマンド ライン パラメーターとして 1 つまたはいくつかのメタベース ノードが必要です。  
   
@@ -583,7 +583,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 />  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <refresh-from-database  
@@ -592,7 +592,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
    object-type="<object-category>"/>  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <refresh-from-database>  
@@ -607,7 +607,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 **Command**  
   
--スクリプトとして保存  
+save-as-script  
   
 オブジェクトのスクリプトと示されているファイルを保存するために使用メタベース = target、どこでおスクリプトを取得し、実行、同じ対象のデータベースに同期コマンドには、このです。  
   
@@ -615,15 +615,15 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 コマンド ライン パラメーターとして 1 つまたはいくつかのメタベース ノードが必要です。  
   
-1.  `object-name:`あるスクリプトが保存されるオブジェクトを指定します。 (持てる indivdual オブジェクト名またはグループ オブジェクトの名前)  
+1.  `object-name:` あるスクリプトが保存されるオブジェクトを指定します。 (持てる indivdual オブジェクト名またはグループ オブジェクトの名前)  
   
-2.  `object-type:`(オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
+2.  `object-type:` (オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
   
-3.  `metabase:`ソースがあるかどうかを指定またはメタベースを対象にします。  
+3.  `metabase:` ソースがあるかどうかを指定またはメタベースを対象にします。  
   
-4.  `destination:`パスまたはスクリプトが保存されるファイル名が指定されていない場合、ファイル名形式 (object_name 属性値) .out でフォルダーを指定します  
+4.  `destination:` パスまたはスクリプトが保存されるファイル名が指定されていない場合、ファイル名形式 (object_name 属性値) .out でフォルダーを指定します  
   
-5.  `overwrite:`true の場合、上書きされます同じファイル名が存在しない場合。 値 (真/偽) 持つことができます。  
+5.  `overwrite:` true の場合、上書きされます同じファイル名が存在しない場合。 値 (真/偽) 持つことができます。  
   
 **構文例:**  
   
@@ -642,7 +642,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 />  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <save-as-script  
@@ -659,27 +659,27 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
 ```  
 **Command**  
   
-sql ステートメントの変換  
+convert-sql-statement  
   
-1.  `context`スキーマ名を指定します。  
+1.  `context` スキーマ名を指定します。  
   
-2.  `destination`ファイルに出力を保存するかどうかを指定します。  
+2.  `destination` ファイルに出力を保存するかどうかを指定します。  
   
     この属性が指定されていない場合、変換された T-SQL ステートメントは、コンソールに表示されます。 (省略可能な属性)  
   
-3.  `conversion-report-folder`評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
+3.  `conversion-report-folder` 評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
   
-4.  `conversion-report-overwrite`既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
+4.  `conversion-report-overwrite` 既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
   
     **既定値:** false を指定します。 (省略可能な属性)  
   
-5.  `write-converted-sql-to`ファイル (または)、変換された T-SQL が格納されるフォルダーのパスを指定します。 組み合わせて、フォルダー パスが指定されている場合、`sql-files`属性に、各ソース ファイルが対応するターゲットの T-SQL でファイルを指定したフォルダーの下に作成します。 組み合わせて、フォルダー パスが指定されている場合、`sql`属性、変換後の T-SQL では、指定したフォルダーの下にある Result.out をという名前のファイルに書き込まれます。  
+5.  `write-converted-sql-to` ファイル (または)、変換された T-SQL が格納されるフォルダーのパスを指定します。 組み合わせて、フォルダー パスが指定されている場合、`sql-files`属性に、各ソース ファイルが対応するターゲットの T-SQL でファイルを指定したフォルダーの下に作成します。 組み合わせて、フォルダー パスが指定されている場合、`sql`属性、変換後の T-SQL では、指定したフォルダーの下にある Result.out をという名前のファイルに書き込まれます。  
   
-6.  `sql`変換する、1 つまたは複数のステートメントの MySQL sql ステートメントを指定できる区切りを使用する、「;」  
+6.  `sql` 変換する、1 つまたは複数のステートメントの MySQL sql ステートメントを指定できる区切りを使用する、「;」  
   
-7.  `sql-files`T-SQL コードに変換する必要がある sql ファイルのパスを指定します。  
+7.  `sql-files` T-SQL コードに変換する必要がある sql ファイルのパスを指定します。  
   
-8.  `write-summary-report-to`概要レポートを生成するパスを指定します。 フォルダー パスが示されているだけの場合、ファイルの名前で**ConvertSQLReport.XML**を作成します。 (省略可能な属性)  
+8.  `write-summary-report-to` 概要レポートを生成するパスを指定します。 フォルダー パスが示されているだけの場合、ファイルの名前で**ConvertSQLReport.XML**を作成します。 (省略可能な属性)  
   
     レポートの作成が viz サブカテゴリの一覧をさらに 2します..,:  
   
@@ -718,7 +718,7 @@ sql ステートメントの変換
   
 </convert-sql-statement>  
 ```  
-内の複数の  
+または  
   
 ```  
 <convert-sql-statement  
@@ -743,7 +743,7 @@ sql ステートメントの変換
   
 />  
 ```  
-内の複数の  
+または  
   
 ```  
 <convert-sql-statement  
@@ -760,15 +760,15 @@ sql ステートメントの変換
 ```  
   
 ## <a name="next-step"></a>次の手順  
-コマンド ライン オプションについては、次を参照してください[SSMA コンソール &#40; コマンド ライン オプション。MySQLToSQL &#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md) .  
+コマンド ライン オプションについては、次を参照してください。 [SSMA コンソールでのコマンド ライン オプション&#40;MySQLToSQL&#41; ](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)です。  
   
-サンプル コンソール スクリプト ファイルの詳細については、次を参照してください[サンプル コンソール スクリプト ファイル &#40; の操作。MySQLToSQL &#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)  
+サンプル コンソール スクリプト ファイルの詳細については、次を参照してください[サンプル コンソール スクリプト ファイルで作業&#40;MySQLToSQL。&#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)  
   
 次の手順は、プロジェクトの要件によって異なります。  
   
-1.  パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[パスワードの管理 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/managing-passwords-mysqltosql.md).  
+1.  パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[管理パスワード&#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)です。  
   
-2.  レポートの生成に、次を参照してください。[レポートの生成 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
+2.  レポートの生成に、次を参照してください。[を生成するレポート&#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)です。  
   
-3.  コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング &#40;です。MySQLToSQL &#41;](../../ssma/mysql/troubleshooting-mysqltosql.md).  
+3.  コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)です。  
   

@@ -1,30 +1,31 @@
 ---
-title: "SSMA を削除する DB2 コンポーネント (DB2ToSQL) |Microsoft ドキュメント"
+title: SSMA を削除する DB2 コンポーネント (DB2ToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef9a64e458d03a0832ef3d5cd656747360e4a2db
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c1e32712de6585ae66d3035f1dfed1b486c966b5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>DB2 コンポーネント (DB2ToSQL) に対して SSMA を削除します。
 終了したらを DB2 からデータベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、SSMA コンポーネントをアンインストールする場合があります。 クライアント コンポーネントは、いつでもアンインストールできます。 ただしから、拡張機能パックをアンインストールする必要がありますいない[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、移行されたデータベースが不要になった関数を使用する場合を除き、 **ssma_DB2**のスキーマ、 **sysdb**データベース。  
@@ -44,6 +45,6 @@ SSMA をアンインストールするを使用**プログラム追加と削除*
 移行したデータベースが内のオブジェクトを使用しないことを確認する場合は、 **sysdb.ssma_DB2**スキーマ、スキーマから削除して、拡張機能パックを削除する – は Windows のアンインストールはありません  
   
 ## <a name="see-also"></a>参照  
-[SSMA の DB2 クライアント &#40;DB2ToSQL&#41; のインストール](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
-[SQL Server &#40;DB2ToSQL&#41; SSMA コンポーネントをインストールします。](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
+[SSMA の DB2 クライアントのインストール&#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
+[SSMA コンポーネントを SQL Server インストール&#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
   

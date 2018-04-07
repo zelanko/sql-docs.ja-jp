@@ -1,26 +1,26 @@
 ---
-title: "外部データ (Analytics Platform System) への接続を PolyBase を構成します。"
+title: 外部データ (Analytics Platform System) への接続を PolyBase を構成します。
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
-caps.latest.revision: 
-ms.openlocfilehash: d9777fb2bbfd9af2598a422fc072877ff0b78959
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+caps.latest.revision: 43
+ms.openlocfilehash: 42dc008855ea9de61c67365ac81927808491de13
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>外部データへの接続を PolyBase を構成します。
 外部 Hadoop または Microsoft Azure ストレージ blob のデータ ソースへの接続に SQL Server PDW で PolyBase を構成する方法について説明します。 PolyBase を使用して、Hadoop や Azure blob ストレージ、SQL Server PDW など、複数のソースからデータを統合するクエリを実行します。  
@@ -121,7 +121,7 @@ ms.lasthandoff: 01/29/2018
   
     HDInsight リージョンと外部の Hadoop 2.0 クラスターの両方に対して、PolyBase を実行するには、外部の Hadoop クラスターで yarn-site.xml 既定の設定を使用します。  
   
-6.  PDW 地域を再起動します。 これを行うには、Configuration Manager ツールを使用します。 参照してください[構成マネージャー &#40; を起動Analytics Platform System &#41;](launch-the-configuration-manager.md).  
+6.  PDW 地域を再起動します。 これを行うには、Configuration Manager ツールを使用します。 参照してください[構成マネージャーを起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)です。  
   
 7.  Hadoop 接続のセキュリティ設定を確認します。 場合、**弱い認証**側を使用して有効になって Hadoop `dfs.permission = true`、Hadoop ユーザーを作成する必要があります**pdw_user**すべて読み取りを許可し、このユーザーに書き込みアクセス許可。 SQL Server PDW と SQL Server PDW から対応する呼び出しとして常に発行**pdw_user**です。  これは、固定ユーザー名であり、このバージョンの Hadoop 接続および SQL Server PDW のリリースでは変更できません。 使用して Hadoop のセキュリティが無効になっている場合`dfs.permission = false`、それ以上の操作を実行する必要はありません。  
   
@@ -129,12 +129,12 @@ ms.lasthandoff: 01/29/2018
   
 9. Hadoop 接続の場合は、Hadoop に外部データ ソースを作成できるユーザーを決定します。 これらのユーザーの個々 の各 Hadoop 名前ノードの IP アドレスとポート番号を付与し、付与**ALTER ANY EXTERNAL DATA SOURCE**または**CONTROL SERVER**権限です。  
   
-10. WASB に接続すると、DNS 転送アプライアンスでの構成も必要です。 DNS の転送を構成するのを参照してください[非アプライアンス DNS 名を解決する &#40; を DNS フォワーダーを使用。Analytics Platform System &#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+10. WASB に接続すると、DNS 転送アプライアンスでの構成も必要です。 DNS の転送を構成するのを参照してください。[非アプライアンス DNS 名の解決に DNS フォワーダーを使用して&#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)です。  
   
 承認されたユーザーには、外部データ ソース、外部ファイル形式、および外部テーブルを作成できますようになりました。 これらを使用するとして Hadoop, を含む複数のソースからデータを統合するが、Microsoft Azure blob ストレージ、および SQL Server PDW です。  
 
 ## <a name="kerberos-configuration"></a>Kerberos の構成  
-Kerberos のセキュリティで保護されたクラスターに PolyBase が認証されると、ときに、hadoop.rpc.protection 設定する必要がありますに設定することの認証に注意してください。 これにより、データ通信が暗号化されていない Hadoop ノード間で残ります。 
+Kerberos のセキュリティで保護されたクラスターに PolyBase が認証されると、ときに、hadoop.rpc.protection 設定する必要がありますに設定することの認証に注意してください。 これにより、Hadoop ノード間のデータ通信が暗号化されなくなります。 
 
  [Using MIT KDC] Kerberos でセキュリティ保護された Hadoop クラスターに接続します。
    
@@ -161,9 +161,9 @@ Kerberos のセキュリティで保護されたクラスターに PolyBase が�
   
 4. 各 Hadoop ユーザーの認証情報を指定するデータベース スコープ資格情報オブジェクトを作成します。 「 [PolyBase T-SQL オブジェクト](../relational-databases/polybase/polybase-t-sql-objects.md)」を参照してください。  
 
-5. PDW 地域を再起動します。 これを行うには、Configuration Manager ツールを使用します。 参照してください[構成マネージャー &#40; を起動Analytics Platform System &#41;](launch-the-configuration-manager.md).
+5. PDW 地域を再起動します。 これを行うには、Configuration Manager ツールを使用します。 参照してください[構成マネージャーを起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)です。
  
 ## <a name="see-also"></a>参照  
-[アプライアンスの構成 &#40;です。Analytics Platform System &#41;](appliance-configuration.md)  
+[アプライアンス構成&#40;分析プラットフォーム システム&#41;](appliance-configuration.md)  
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  
   

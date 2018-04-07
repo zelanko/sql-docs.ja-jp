@@ -10,7 +10,7 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bda748c764d49044a76638ebd2e87a6d831ae66f
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 6c56a145ecfbb986c7ec0124202ff61e89036657
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>SQL Server 機能の OLE DB ドライバー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ ms.lasthandoff: 03/30/2018
  [サービス プリンシパル名&#40;SPN&#41;クライアント接続でのサポート](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)  
  あらゆるプロトコルでの相互認証を可能にする、サービス プリンシパル名 (SPN) のサポート強化について説明します。  
   
- [SQL Server の OLE DB ドライバーのスパース列のサポート](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)  
+ [OLE DB Driver for SQL Server のスパース列のサポート](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)  
  スパース列の SQL Server のサポートについては、OLE DB ドライバーを説明します。  
   
  [日付と時刻の強化機能](../../oledb/features/date-and-time-improvements.md)  
@@ -87,21 +87,21 @@ ms.lasthandoff: 03/30/2018
  [メタデータの検出](../../oledb/features/metadata-discovery.md)  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] で行われたメタデータ検出の機能強化について説明します。  
   
- [SQL Server の OLE DB ドライバーの utf-16 のサポート](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
+ [OLE DB Driver for SQL Server の UTF-16 のサポート](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] で導入された動作の変更について説明します。 列の結果または出力パラメーターをバインドするときに、固定長バッファーを指定した場合、 **wchar**終端文字がサロゲート ペアの上位サロゲート コード ポイントする前に、バッファーに書き込まれた文字、次へ**wchar**文字が下位サロゲート コード ポイントで、OLE DB Driver for SQL Server は、バッファーに上位サロゲート コード ポイントを追加しません。  
   
- [SQL Server Support for High Availability, Disaster Recovery の OLE DB ドライバー](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
+ [OLE DB Driver for SQL Server の高可用性、ディザスター リカバリーに関するサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
  機能が追加された高可用性、災害復旧を活用するために、アプリケーションを構成する方法について説明[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]です。  
   
  [拡張イベント ログの診断情報へのアクセス](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
  OLE DB Driver for SQL Server とリング バッファーおよび Xevent ログの診断情報にアクセスできるデータ トレース機能強化について説明します。  
   
- [SQL Server Support for LocalDB 用の OLE DB ドライバー](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
+ [LocalDB 用 OLE DB Driver for SQL Server のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  SQL Server LocalDB 機能のサポートの OLE DB Driver について説明します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server プログラミング用の OLE DB ドライバー](../../oledb/oledb-driver-for-sql-server-programming.md)      
  [OLE DB の操作方法に関するトピック](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   
- [SQL Server の OLE DB ドライバーをインストールします。](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
+ [OLE DB Driver for SQL Server のインストール](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
   
   

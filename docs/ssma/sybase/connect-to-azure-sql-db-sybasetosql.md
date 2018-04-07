@@ -1,49 +1,50 @@
 ---
-title: "Azure SQL DB (SybaseToSQL) への接続 |Microsoft ドキュメント"
-ms.custom: 
+title: Azure SQL DB (SybaseToSQL) への接続 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1267aecb68c344b6de0fad2c7c129a0b6ab2205c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c1656e76e6452c4394aad5eadb5d5b4073de9aac
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Azure SQL DB (SybaseToSQL) への接続します。
 Azure SQL DB ダイアログ ボックスに接続を使用すると、移行する Azure SQL DB データベースへの接続します。  
   
 このダイアログ ボックスにアクセスする、**ファイル**メニューの  **Azure SQL DB への接続**です。 以前接続した場合、コマンドは**Azure SQL DB に再接続します。**  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
 **[サーバー名]**  
   
 選択するか、Azure SQL DB に接続するためのサーバー名を入力します。  
   
-**[データベース]**  
+**データベース**  
   
 選択し、入力または**参照**データベース名。  
   
 > [!IMPORTANT]  
 > SSMA for Sybase は Azure SQL データベース内の master データベースへの接続をサポートしていません。  
   
-**User name**  
+**ユーザー名**  
   
 SSMA は、Azure SQL DB データベースへの接続を使用してユーザー名を入力します。  
   
@@ -51,7 +52,7 @@ SSMA は、Azure SQL DB データベースへの接続を使用してユーザ�
   
 ユーザー名に対応するパスワードを入力します。  
   
-**暗号化します。**  
+**Encrypt**  
   
 SSMA は、Azure SQL DB に、暗号化された接続をお勧めします。  
   

@@ -1,15 +1,16 @@
 ---
-title: "インベントリ スキーマ (AccessToSQL) にアクセス |Microsoft ドキュメント"
+title: インベントリ スキーマ (AccessToSQL) にアクセス |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -42,16 +43,16 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d3c34d87adbe5e854b9de2f49bda5492583298d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d68215dd768a2fbd4e6723d7ca98ef9a5c96c72d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>アクセスのインベントリ スキーマ (AccessToSQL)
 次のセクションへのアクセスのスキーマをエクスポートするときに、SSMA によって作成されるテーブルを記述する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
@@ -64,10 +65,10 @@ ms.lasthandoff: 12/21/2017
 |**DatabaseId**|**uniqueidentifier**|各データベースを一意に識別する GUID です。 この列は、テーブルの主キーもです。|  
 |**DatabaseName**|**nvarchar (4000)**|Access データベースの名前。|  
 |**ExportTime**|**datetime**|このメタデータが SSMA によって作成された日付と時刻。|  
-|**FilePath**|**nvarchar (4000)**|Access データベースの完全パスとファイル名。|  
-|**ファイル サイズ**|**bigint**|Access データベース (KB 単位) のサイズ。|  
+|**ファイル パス**|**nvarchar (4000)**|Access データベースの完全パスとファイル名。|  
+|**FileSize**|**bigint**|Access データベース (KB 単位) のサイズ。|  
 |**FileOwner**|**nvarchar (4000)**|Access データベースの所有者として指定されている Windows アカウント。|  
-|**作成日時**|**datetime**|日付と Access データベースが作成された時刻。|  
+|**DateCreated**|**datetime**|日付と Access データベースが作成された時刻。|  
 |**DateModified**|**datetime**|日付と Access データベースの最終変更時刻。|  
 |**TablesCount**|**int**|Access データベース内のテーブルの数。|  
 |**QueriesCount**|**int**|Access データベース内のクエリの数。|  
@@ -76,7 +77,7 @@ ms.lasthandoff: 12/21/2017
 |**ReportsCount**|**int**|Access データベース内のレポートの数。|  
 |**MacrosCount**|**int**|Access データベース内のマクロの数。|  
 |**AccessVersion**|**nvarchar (4000)**|データベースのアクセス バージョンです。|  
-|**照合順序**|**nvarchar (4000)**|Access データベースの照合順序です。 照合順序は、データベースの並べ替えし、文字列を比較する方法を決定します。|  
+|**[照合順序]**|**nvarchar (4000)**|Access データベースの照合順序です。 照合順序は、データベースの並べ替えし、文字列を比較する方法を決定します。|  
 |**JetVersion**|**nvarchar (4000)**|Jet データベース エンジンのバージョン。 Access データベースは、基になる Jet データベース エンジンを使用します。|  
 |**IsUpdatable**|**bit**|データベースを更新できるかどうかを示します。 値が 1 の場合は、データベースは更新可能です。 値が 0 の場合、データベースは読み取り専用です。|  
 |**QueryTimeout**|**int**|構成されている ODBC クエリのタイムアウト値 (秒) のデータベースです。 既定値は 60 秒です。|  
@@ -88,13 +89,13 @@ ms.lasthandoff: 12/21/2017
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|このテーブルを含むデータベースを識別します。|  
 |**TableId**|**uniqueidentifier**|テーブルを一意に識別する GUID です。 この列は、テーブルの主キーもです。|  
-|**テーブル名**|**nvarchar (4000)**|テーブルの名前です。|  
+|**TableName**|**nvarchar (4000)**|テーブルの名前です。|  
 |**RowsCount**|**int**|テーブルに含まれる行数です。|  
 |**ValidationRule**|**nvarchar (4000)**|テーブルの有効な入力を定義するルール。 検証規則が存在しない場合、このフィールドは空の文字列を含めます。|  
 |**LinkedTable**|**nvarchar (4000)**|別のテーブル、存在する場合、テーブルにリンクされています。 このテーブルを使用して、追加、削除、およびその他のテーブルを更新するをテーブルをリンクできます。|  
 |**ExternalSource**|**nvarchar (4000)**|データ ソースに存在する場合に関連付けられているテーブル。 テーブルがリンクされている場合、このフィールドで指定された外部データ ソースがあります。|  
   
-## <a name="columns"></a>[列]  
+## <a name="columns"></a>列  
 列のメタデータをエクスポート、 **SSMA_Access_InventoryColumns**テーブル。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|Description|  
@@ -160,7 +161,7 @@ ms.lasthandoff: 12/21/2017
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|このフォームが含まれるデータベースを識別します。|  
 |**FormId**|**int**|フォームを識別する増分する整数。 この列は、テーブルの主キーです。|  
-|**フォーム名**|**nvarchar (4000)**|フォームの名前。|  
+|**FormName**|**nvarchar (4000)**|フォームの名前。|  
   
 ## <a name="macros"></a>マクロ  
 マクロのメタデータをエクスポート、 **SSMA_Access_InventoryMacros**テーブル。 このテーブルには、次の列が含まれています。  
@@ -169,9 +170,9 @@ ms.lasthandoff: 12/21/2017
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|マクロが含まれるデータベースを識別します。|  
 |**MacroId**|**int**|マクロを識別する増分する整数。 この列は、テーブルの主キーです。|  
-|**マクロ名**|**nvarchar (4000)**|マクロの名前。|  
+|**MacroName**|**nvarchar (4000)**|マクロの名前。|  
   
-## <a name="reports"></a>[レポート]  
+## <a name="reports"></a>レポート  
 レポートのメタデータをエクスポート、 **SSMA_Access_InventoryReports**テーブル。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|Description|  

@@ -1,45 +1,46 @@
 ---
-title: "グローバル設定 (テスト担当者) (SybaseToSQL) |Microsoft ドキュメント"
-ms.custom: 
+title: グローバル設定 (テスト担当者) (SybaseToSQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b5ba92c5972df1e29bbe3c4cd3df4f093739a86
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8091140978d417fa33beed187f055b26af2b9d31
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="global-settings-tester-sybasetosql"></a>グローバル設定 (テスト担当者) (SybaseToSQL)
 テスト担当者のページを使用して、**グローバル設定**SSMA テスターの設定を指定 ダイアログ ボックス。  
   
 テスト担当者の設定にアクセスする、**ツール**メニューの [**グローバル設定**、] をクリック**Tester**左側のウィンドウの下部にあります。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
 **テストが容易なオブジェクトの分析**  
 この設定では、テスト可能なオブジェクトの分析を実行するかどうかを指定します。 選択**はい**SSMA Tester を分析し、依存オブジェクトを自動的にチェックする場合。 既定のオプション セットが**はい**です。  
   
 次のオプションは、この設定に使用されます。  
   
-1.  可  
+1.  はい  
   
-2.  不可  
+2.  いいえ  
   
 **補助テーブルの保存モード**  
 この設定は、テスト_ケースの実行中に作成された内部の補助テーブルを保存する方法を指定します。 この特定の設定には、次のオプションを設定できます。  
@@ -59,19 +60,19 @@ ms.lasthandoff: 12/21/2017
   
 次のオプションは、この設定に使用されます。  
   
-1.  可  
+1.  はい  
   
-2.  不可  
+2.  いいえ  
   
 **最初のエラーの後にテストの実行を停止します。**  
 実行中にエラーが発生した場合、この設定は現在実行中のテスト ケースを停止するかどうかを指定します。 既定のオプション セットが**はい**です。  
   
 次のオプションは、この設定に使用されます。  
   
-1.  可  
+1.  はい  
   
-2.  不可  
+2.  いいえ  
   
 ## <a name="see-also"></a>参照  
-[フィニッシュのテスト_ケースの準備 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
+[テスト_ケース準備を完了&#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   

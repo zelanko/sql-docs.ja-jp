@@ -1,36 +1,37 @@
 ---
-title: "マッピング DB2 と SQL Server データ型 (DB2ToSQL) |Microsoft ドキュメント"
+title: マッピング DB2 と SQL Server データ型 (DB2ToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88d98ac264e853a2bc94be002c2c2e4eeadee9ff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bb4f2a1e09861a701a83ef4cd66c6a5e979bc0fa
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>DB2 と SQL Server データ型 (DB2ToSQL) とのマッピング
 DB2 データベースの種類が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースの型。 DB2 データベース オブジェクトを変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト、DB2 からのデータ型にマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 既定のデータ型マッピングを受け入れることができますか、マップをカスタマイズするには、次のセクションで示すようにします。  
   
 ## <a name="default-mappings"></a>既定のマッピング  
-SSMA では、データ型マッピングの既定のセットがあります。 既定のマッピングの一覧で、次を参照してください。[プロジェクトの設定 &#40;です。型のマッピング &#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md).  
+SSMA では、データ型マッピングの既定のセットがあります。 既定のマッピングの一覧で、次を参照してください。[プロジェクト設定&#40;型マッピング&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)です。  
   
 ## <a name="type-mapping-inheritance"></a>型の継承のマッピング  
 プロジェクト レベル、オブジェクトのカテゴリ レベル (すべてのストアド プロシージャなど)、またはオブジェクト レベルでは、型マッピングをカスタマイズすることができます。 設定は、下位レベルでオーバーライドされない限りより高いレベルから継承されます。 たとえば、マップする**smallmoney**に**money**オブジェクトまたはカテゴリ レベルのマッピングをカスタマイズしない限り、このマッピング プロジェクト レベルでは、プロジェクト内のすべてのオブジェクトが使用されます。  
@@ -84,7 +85,7 @@ SSMA では、データ型マッピングの既定のセットがあります。
   
     4.  **ターゲット型**、ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型。  
   
-        一部の種類では、対象のデータ型の長さが必要です。 必要な場合は、入力で新しいデータの長さ、**置き換えます**ボックスで、し、[!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        一部の種類では、対象のデータ型の長さが必要です。 必要な場合は、入力で新しいデータの長さ、**置き換えます**ボックスで、し、 [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
 4.  カスタム データ型マッピングを削除するには、次の操作を行います。  
   
@@ -94,9 +95,9 @@ SSMA では、データ型マッピングの既定のセットがあります。
   
         継承されたマッピングを削除することはできません。 ただし、継承されたマッピングは、特定のオブジェクトまたはオブジェクト カテゴリにカスタムへのマッピングによって上書きされます。  
   
-## <a name="next-steps"></a>Next Steps  
-移行プロセスの次の手順は、いずれかに[評価レポート &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)または[DB2 スキーマを変換する &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)です。 評価レポートを作成する場合、DB2 オブジェクトは、評価時に自動的に変換されます。  
+## <a name="next-steps"></a>次の手順  
+移行プロセスの次の手順は、いずれかに[評価レポート&#40;DB2ToSQL&#41; ](../../ssma/db2/assessment-report-db2tosql.md)または[DB2 スキーマを変換する&#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)です。 評価レポートを作成する場合、DB2 オブジェクトは、評価時に自動的に変換されます。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server &#40;DB2ToSQL&#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[SQL Server にデータベースを移行する DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

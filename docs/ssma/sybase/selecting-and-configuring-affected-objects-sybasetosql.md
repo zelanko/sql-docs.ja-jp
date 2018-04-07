@@ -21,13 +21,13 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 102de8f523d91c34369ca84a4577e5978934349d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a9871370dc3e6e8ca9d148a4df2435ce94286903
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>影響を受けたオブジェクト (SybaseToSQL) の選択と構成
 このページでは、テーブルを選択して、SSMA、前の手順で選択されたオブジェクトの実行の結果を検証するときに、外部キーを変更とを比較する必要があります。 また、検証パラメーターをカスタマイズすることができます。  
@@ -37,7 +37,7 @@ Sybase オブジェクト ツリーで、ウィンドウの左側にある、テ
   
 SSMA テスターは、これらのオブジェクトのいずれかを確認できない場合、は、ラベルの付いたリンクが表示されます**によって選択したオブジェクトには、エラーが含まれている**[オブジェクト] ツリー。 なぜこれらのオブジェクトを比較することはできません、上の理由からや不適切なオブジェクトの選択を解除するは、このリンクをクリックします。  
   
-## <a name="table"></a>テーブル  
+## <a name="table"></a>Table  
 あるテーブル タブには、選択されたテーブルのグリッド ビューが含まれています。 グリッドには、選択したテーブルについては、次の情報が含まれています。  
   
 -   列名  
@@ -59,10 +59,10 @@ SSMA テスターは、これらのオブジェクトのいずれかを確認で
 ## <a name="sql"></a>Sql  
 [SQL] タブには、"Create table"が含まれています。 選択されたテーブルの SQL です。  
   
-## <a name="data"></a>data  
+## <a name="data"></a>Data  
 [データ] タブでは、選択されたテーブル内のデータが表示されます。  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
 [プロパティ] タブには、選択したテーブルのプロパティが表示されます。 次のフィールド、[プロパティ] タブの下。  
   
 -   作成または最後に変更されました。  
@@ -126,9 +126,9 @@ SSMA テスターによって生成された SELECT ステートメントを表�
 カスタム検証を提供するような SELECT ステートメントを編集することができます。 Sybase と変更を保存する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、ステートメントを使用して、**適用**これに対応して、ソースとターゲット SQL では、下にあるボタンをクリックします。  
   
 ## <a name="next-step"></a>次の手順  
-[呼び出し順序 &#40; をカスタマイズします。SybaseToSQL &#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
+[呼び出し順序のカスタマイズ&#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
   
 ## <a name="see-also"></a>参照  
-[実行中のテスト_ケースと #40 です。SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[データベース オブジェクト &#40; 移行テストSybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[テスト_ケースを実行する&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[データベース オブジェクトを移行テスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

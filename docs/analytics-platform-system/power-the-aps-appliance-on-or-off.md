@@ -1,31 +1,31 @@
 ---
-title: "電源オンまたはオフ (Analytics Platform System) APS アプライアンス"
+title: 電源オンまたはオフ (Analytics Platform System) APS アプライアンス
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2258f8e3-e7a1-4455-8a5e-10d4d15775d6
-caps.latest.revision: "45"
-ms.openlocfilehash: 5e96898197098556d256c46b517ea42650c4c3ac
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 45
+ms.openlocfilehash: 04473682d04a5b3ff26a5dec0081300d83052f09
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="power-the-aps-appliance-on-or-off"></a>APS アプライアンスの電源をオンまたはオフ
 このトピックでは、電源をオンまたは電源オフ、Analytics Platform Systemappliance で並列データ ウェアハウスを実行する HDInsight 領域を必要に応じて実行する方法について説明します。 使用してこのトピック Analytics Platform System アプライアンスを移動すると、または電源にアプライアンスで壊滅的な停電後です。  
   
-アプライアンスの電源オンとオフは、開始と停止、アプライアンスのサービスと同じではないです。 サブジェクトについては、次を参照してください。 [PDW サービスの状態と #40 です。Analytics Platform System &#41;](pdw-services-status.md). 詳細については、電源をオンまたはオフ、SQL Server 2008 並列データ ウェアハウス、SQL Server 2008 並列データ ウェアハウス ヘルプ ファイルを参照してください。 電源をオンまたはオフ、SQL Server 2012 AU1 または AU2 Parallel Data Warehouse の詳細については、これらのバージョンのヘルプ ファイルを参照してください。  
+アプライアンスの電源オンとオフは、開始と停止、アプライアンスのサービスと同じではないです。 サブジェクトについては、次を参照してください。 [PDW サービス ステータス&#40;Analytics Platform System&#41;](pdw-services-status.md)です。 詳細については、電源をオンまたはオフ、SQL Server 2008 並列データ ウェアハウス、SQL Server 2008 並列データ ウェアハウス ヘルプ ファイルを参照してください。 電源をオンまたはオフ、SQL Server 2012 AU1 または AU2 Parallel Data Warehouse の詳細については、これらのバージョンのヘルプ ファイルを参照してください。  
   
 接続は、ローカル接続されているデバイス (KVM) を使用してこれらの手順では、SQL Server PDW ノードへの接続を指定するとき、またはリモート デスクトップを使用したリモート接続します。 一部の操作が (オン、電源スイッチ)、物理ネットワークおよびシャット ダウン) などの一部にする必要があります Windows を使用してコマンドまたは物理的なことができます。  
   
@@ -45,7 +45,7 @@ SQL Server PDW ノードへの接続は、ノードとの間に割り当てら�
 > [!WARNING]  
 > 表示されているとおりの順序ですべての手順を実行する必要があり、各ステップが完了するまで、次の手順を実行すると、特に明記されない限りです。 順不同の有無を完了するには、各ステップの待機中の手順を実行すると、後で、アプライアンスの電源投入時にエラーが発生することができます。  
   
-1.  PDW 管理ノードに接続 (***PDW_region*-CTL01** ) Analytics Platform System アプライアンス ドメイン管理者アカウントを使用してログインします。  
+1.  PDW 管理ノードに接続 (***PDW_region *-CTL01** ) Analytics Platform System アプライアンス ドメイン管理者アカウントを使用してログインします。  
   
 2.  実行`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe`を開くには、 **Configuration Manager**です。  
   
@@ -53,9 +53,9 @@ SQL Server PDW ノードへの接続は、ノードとの間に割り当てら�
   
 4.  [HDInsight 領域がある場合、 **HDInsight トポロジ**] メニューのをクリックして、**サービスの状態**タブをクリックし、をクリックして**停止領域**HDInsight サービスを停止します。  
   
-5.  接続 ***appliance_domain*-HST01**アプライアンス ドメイン管理者アカウントを使用してログインします。  
+5.  接続 ***appliance_domain *-HST01**アプライアンス ドメイン管理者アカウントを使用してログインします。  
   
-6.  使用して、**フェールオーバー クラスター マネージャー**への接続、  ***appliance_domain*-WFOHST01**を自動的に接続する場合、クラスター化し、ナビゲーション ウィンドウで次のようにクリックします。**ロール**です。 **ロール**ウィンドウ。  
+6.  使用して、**フェールオーバー クラスター マネージャー**への接続、***appliance_domain *-WFOHST01**を自動的に接続する場合、クラスター化し、ナビゲーション ウィンドウで次のようにクリックします**ロール**. **ロール**ウィンドウ。  
   
     1.  仮想マシンをすべて選択しています。 それらを右クリックし **シャット ダウン**です。  
   
@@ -63,7 +63,7 @@ SQL Server PDW ノードへの接続は、ノードとの間に割り当てら�
   
 7.  HDInsight リージョンの場合。  
   
-    1.  HDInsight クラスターに接続します。 これを行うを右クリックし**フェールオーバー クラスター マネージャー****クラスターに接続する**、し、指定 ***appliance_domain*-WFOHST02**クラスター名です。  
+    1.  HDInsight クラスターに接続します。 これを行うを右クリックし**フェールオーバー クラスター マネージャー****クラスターに接続する**を指定 ***appliance_domain *-WFOHST02**クラスター名です。  
   
     2.  HDInsight クラスターでは、をクリックして**ロール**です。 **ロール**ウィンドウ。  
   
@@ -73,9 +73,9 @@ SQL Server PDW ノードへの接続は、ノードとの間に割り当てら�
   
 8.  閉じる、**フェールオーバー クラスター マネージャー**アプリケーションです。  
   
-9. 除くすべてのサーバーをシャット ダウン ***appliance_domain*-HST01**です。  
+9. 除くすべてのサーバーをシャット ダウン ***appliance_domain *-HST01**です。  
   
-10. シャット ダウン、  ***appliance_domain*-HST01**サーバー。  
+10. シャット ダウン、***appliance_domain *-HST01**サーバー。  
   
 11. 配電ユニット (Pdu) をシャット ダウンします。  
   
@@ -88,25 +88,25 @@ SQL Server PDW ノードへの接続は、ノードとの間に割り当てら�
   
 1.  電源を入れ、電力配分装置 (PDU)、スイッチの待機を自動的に開始します。  
   
-2.  電源オン、  ***appliance_domain*-HST01**サーバー。  
+2.  電源オン、***appliance_domain *-HST01**サーバー。  
   
-3.  ログインに ***appliance_domain*-HST01**アプライアンス ドメイン管理者として。  
+3.  ログイン ***appliance_domain *-HST01**アプライアンス ドメイン管理者として。  
   
-4.  開始、 **HYPER-V マネージャーで**プログラム (**virtmgmt.msc**) への接続と ***appliance_domain*-HST01**既定で接続されていない場合。  
+4.  開始、 **HYPER-V マネージャーで**プログラム (**virtmgmt.msc**) への接続と ***appliance_domain *-HST01**既定で接続されていない場合。  
   
-    1.  に、名前で接続できない場合、  ***PDW_region*-AD01**が実行されていない IP アドレスを使用して接続を再試行してください。  
+    1.  に、名前で接続できない場合、***PDW_region *-AD01**が実行されていない IP アドレスを使用して接続を再試行してください。  
   
-    2.  **仮想マシン** ウィンドウで、検索 ***PDW_region*-AD01**し、実行されていることを確認します。 ない場合は、この VM を起動しが完全に起動するまで待機します。  
+    2.  **仮想マシン** ウィンドウで、検索 ***PDW_region *-AD01**し、実行されていることを確認します。 ない場合は、この VM を起動しが完全に起動するまで待機します。  
   
 5.  アプライアンス内のサーバーの残りの部分の電源を入れます。  
   
 6.  **HST01**からアプライアンス ドメイン管理者としてログオンして**HYPER-V マネージャーで**:  
   
-    1.  接続 ***appliance_domain*-HST02**です。  
+    1.  接続 ***appliance_domain *-HST02**です。  
   
-    2.  **仮想マシン** ウィンドウで、検索 ***PDW_region*-AD02**し、実行されていることを確認します。  ない場合は、この VM を起動しが完全に起動するまで待機します。  
+    2.  **仮想マシン** ウィンドウで、検索 ***PDW_region *-AD02**し、実行されていることを確認します。  ない場合は、この VM を起動しが完全に起動するまで待機します。  
   
-7.  使用して、**フェールオーバー クラスター マネージャー**への接続、  ***appliance_domain*-WFOHST01**を自動的に接続する場合、次のクラスター、 **ナビゲーション** ウィンドウで、をクリックして**ロール**です。 **ロール**ウィンドウ。  
+7.  使用して、**フェールオーバー クラスター マネージャー**への接続、***appliance_domain *-WFOHST01**を自動的に接続する場合、次のクラスター、**ナビゲーション** ウィンドウで、をクリックして**ロール**です。 **ロール**ウィンドウ。  
   
     1.  すべての仮想マシン、それらを右クリックしをクリックし、複数選択**開始**です。  
   
@@ -114,7 +114,7 @@ SQL Server PDW ノードへの接続は、ノードとの間に割り当てら�
   
     3.  フェールオーバーした vm の場合、必要に応じて、シャット ダウンする、移動したり、およびそれらを適切なプライマリ ホスト上で再起動します。  
   
-8.  アプライアンスに HDInsight 領域がある場合は、HDInsight クラスターに接続します。 (これを行うを右クリックし**フェールオーバー クラスター マネージャー****クラスターに接続する**、し、指定 ***appliance_domain*-WFOHST01**クラスター名です。 の)  
+8.  アプライアンスに HDInsight 領域がある場合は、HDInsight クラスターに接続します。 (これを行うを右クリックし**フェールオーバー クラスター マネージャー****クラスターに接続する**を指定 ***appliance_domain *-WFOHST01**クラスター名です)。  
   
     1.  HDInsight クラスターでは、をクリックして**ロール**です。 **ロール**ウィンドウです。  
   
@@ -126,7 +126,7 @@ SQL Server PDW ノードへの接続は、ノードとの間に割り当てら�
   
 9. 切断**HST01**する場合。  
   
-10. 接続 ***PDW_region*-CTL01**アプライアンス ドメイン管理者アカウントを使用します。  
+10. 接続 ***PDW_region *-CTL01**アプライアンス ドメイン管理者アカウントを使用します。  
   
 11. 実行`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe`を起動する、 **Configuration Manager**です。  
   
@@ -135,8 +135,8 @@ SQL Server PDW ノードへの接続は、ノードとの間に割り当てら�
 13. アプライアンスいる HDInsight トポロジ メニューで、HDInsight 領域をクリックして、**サービスの状態**タブをクリックし、をクリックして**開始地域**HDInsight サービスを開始します。  
   
 ### <a name="to-verify-the-appliance-health"></a>アプライアンスの正常性を確認するには  
-アプライアンスが開始した後で開く、**管理コンソール**エラー状態を示す可能性があるアラートの正常性 ページを確認します。 詳細については、次を参照してください[アプライアンスを管理コンソール &#40; を使用して監視する。Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md).  
+アプライアンスが開始した後で開く、**管理コンソール**エラー状態を示す可能性があるアラートの正常性 ページを確認します。 詳細については、次を参照してください。[アプライアンスを管理コンソールを使用して監視&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)です。  
   
 ## <a name="see-also"></a>参照  
-[アプライアンスの管理タスクと #40 です。Analytics Platform System &#41;](appliance-management-tasks.md)  
+[アプライアンスの管理タスク&#40;分析プラットフォーム システム&#41;](appliance-management-tasks.md)  
   

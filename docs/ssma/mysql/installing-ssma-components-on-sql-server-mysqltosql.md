@@ -21,13 +21,13 @@ ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15e50ed4dd915f524a2e9980d4aa4997053af912
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5fd268b84300a15eb67b767858e7ac53ed2fdf3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>SQL server (MySQLToSql) SSMA コンポーネントのインストール
 SSMA をインストールするだけでなくする必要がありますコンポーネントもインストールを実行しているコンピューターで[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 これらのコンポーネントには、データの移行、およびサーバーからサーバーへの接続を有効にする MySQL プロバイダーをサポートする、SSMA 拡張機能パックが含まれます。  
@@ -37,10 +37,10 @@ SSMA の拡張機能パックは、データベースを追加**sysdb**のイン
   
 データを移行する場合にも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、SSMA 作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]サーバー側のデータ移行のエンジンがデータを移行するために使用されるときに、エージェント ジョブ。  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>前提条件  
 SSMA for MySQL server のコンポーネントをインストールする前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]コンピューターが、次の要件を満たしていることを確認します。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows インストーラー 3.1 以降。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows インストーラー 3.1 以降。  
   
 -   MySQL クライアント プロバイダー、および移行する MySQL データベースへの接続。 プロバイダーは、MySQL 製品メディアまたは MySQL の Web サイトからインストールできます。  
   
@@ -57,9 +57,9 @@ SSMA for MySQL server のコンポーネントをインストールする前に[
   
 **拡張機能パックをインストールするには**  
   
-1.  MySQL 拡張機能パックには、SSMA をコピーします。*n*.Install.exe、場所 *n* を実行しているコンピューターに、ビルド番号は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
+1.  MySQL 拡張機能パックには、SSMA をコピーします。*n*です。Install.exe、場所*n*を実行しているコンピューターに、ビルド番号は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
   
-2.  MySQL 拡張機能パックには、SSMA をダブルクリックします。*n*.Install.exe です。  
+2.  MySQL 拡張機能パックには、SSMA をダブルクリックします。*n*です。Install.exe です。  
   
 3.  [ようこそ] ダイアログ ボックスで、をクリックして**次**です。  
   
@@ -81,13 +81,13 @@ SSMA for MySQL server のコンポーネントをインストールする前に[
   
     Windows 認証は、Windows 資格情報を使用してのインスタンスにログオンしよう[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 選択した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を入力する必要があります、認証、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ログイン名とパスワード。  
   
-10. [次へ] ダイアログ ボックスで、次のように選択します。**ユーティリティ データベースのインストール**  *n*ここで、  *n* バージョン番号は、[] をクリック**次**です。  
+10. [次へ] ダイアログ ボックスで、次のように選択します。**ユーティリティ データベースのインストール** *n*ここで、 *n*バージョン番号は、[] をクリック**次**です。  
   
     **Sysdb**テーブルを持つデータベースが作成され (エンジンを使用してサーバー側のデータの移行) データの移行に必要なストアド プロシージャは、そのデータベースに作成されます。  
   
 11. 別のインスタンスにユーティリティをインストールする[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **[はい]**、順にクリック**[次へ]**です。 またはをクリックしてウィザードを終了するには、**いいえ**です。  
   
 ## <a name="see-also"></a>参照  
-[SSMA の MySQL クライアント &#40; のインストールMySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
-[SQL Server - Azure SQL DB &#40; への MySQL データベースの移行MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[SSMA の MySQL クライアントのインストール&#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
+[SQL Server - Azure SQL DB にデータベースを移行する MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

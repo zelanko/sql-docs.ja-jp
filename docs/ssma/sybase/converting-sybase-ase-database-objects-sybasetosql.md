@@ -21,13 +21,13 @@ ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38cd19ee1684b52aa7e98d4e9cd30897098e3b4e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7f906350096e57c5be0f238dabdfd838d050080a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>SAP ASE データベース オブジェクト (SybaseToSQL) を変換します。
 SAP Adaptive Server Enterprise (ASE) に接続すると後に、接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SAP Adaptive Server Enterprise (ASE) 使用するデータベース オブジェクトに変換するには Azure SQL およびプロジェクトの設定とデータのマッピング オプション、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベースオブジェクト。  
@@ -38,7 +38,7 @@ SAP Adaptive Server Enterprise (ASE) に接続すると後に、接続[!INCLUDE[
 SSMA は、変換中にメッセージを出力ウィンドウとエラー メッセージを出力するを出力、**エラー一覧**ウィンドウです。 ASE データベースまたは必要な変換の結果を得るため、変換プロセスを変更するのにかどうかを確認するのにには、出力とエラー情報を使用します。  
   
 ## <a name="setting-conversion-options"></a>変換オプションの設定  
-オブジェクトを変換する前に、プロジェクトの変換オプションを確認、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスを使用すると、SSMA で、関数およびグローバル変数がどのように変換されるかを設定できます。 詳細については、次を参照してください。[プロジェクトの設定 &#40;です。変換&#41;&#40;です。SybaseToSQL &#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md).  
+オブジェクトを変換する前に、プロジェクトの変換オプションを確認、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスを使用すると、SSMA で、関数およびグローバル変数がどのように変換されるかを設定できます。 詳細については、次を参照してください。[プロジェクト設定&#40;変換&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)です。  
   
 ## <a name="converting-ase-database-objects"></a>ASE データベース オブジェクトを変換します。  
 ASE データベース オブジェクトを変換するには、まず、変換するオブジェクトを選択し、SSMA が変換を実行します。 変換中に出力メッセージを表示する、**ビュー**メニューの **出力**です。  
@@ -129,7 +129,7 @@ SQL Server をオンプレミスでへの変換時の SAP ASE、次の T-SQL キ
   
 -   プロシージャやトリガーのソース コードを編集することができます、 **SQL**タブです。  
   
--   削除するか、問題のあるコードを変更するには、SAP ASE オブジェクトを変更することができます。 SSMA に、更新されたコードを読み込む、メタデータを更新する必要があります。 詳細については、次を参照してください[SAP ASE &#40; に接続する。SybaseToSQL &#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
+-   削除するか、問題のあるコードを変更するには、SAP ASE オブジェクトを変更することができます。 SSMA に、更新されたコードを読み込む、メタデータを更新する必要があります。 詳細については、次を参照してください。 [SAP ASE に接続する&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)です。  
   
 -   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL メタデータ エクスプ ローラーと Sybase メタデータ エクスプ ローラーにオブジェクトを読み込む前に、アイテムの横のチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Azure SQL や SAP ASE からデータを移行します。  
   
@@ -137,5 +137,5 @@ SQL Server をオンプレミスでへの変換時の SAP ASE、次の T-SQL キ
 移行プロセスの次の手順は[SQL Server に変換されたデータベース オブジェクトの読み込み/SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/en-us/4c59256f-99a8-4351-9559-a455813dbd06)です。  
   
 ## <a name="see-also"></a>参照  
-[SAP ASE データベースを移行するには、SQL Server - Azure SQL データベース &#40;です。SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SQL Server - Azure SQL データベースへの SAP ASE データベースの移行&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

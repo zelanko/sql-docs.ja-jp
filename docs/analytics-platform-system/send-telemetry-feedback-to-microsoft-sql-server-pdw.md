@@ -1,26 +1,26 @@
 ---
-title: "(SQL Server PDW) を Microsoft にフィードバックを製品利用統計情報"
+title: (SQL Server PDW) を Microsoft にフィードバックを製品利用統計情報
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
-caps.latest.revision: "18"
-ms.openlocfilehash: f78a9e7c1e66085dd84ba71e8e7b5f517131e18a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 18
+ms.openlocfilehash: 970533d5c0220ac651074977f7f522a480d5e2a4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="send-telemetry-feedback-to-microsoft"></a>製品利用統計情報のフィードバックをマイクロソフトに送信します。
 Analytics Platform System が、管理コンソールのデータを Microsoft に送信する省略可能な製品利用統計情報の機能です。 この製品の改善にご協力を有効にすることをお勧めします。  
@@ -39,11 +39,11 @@ Analytics Platform System が、管理コンソールのデータを Microsoft �
   
 #### <a name="to-enable-feedback"></a>フィードバックを有効にするには  
   
-1.  アプライアンス ドメインの管理者アカウントを使用してコントロールのノードに接続 (***appliance_domain*-CTL01**) し、Windows 管理者の資格情報を使用してコマンド プロンプトを開きます。  
+1.  アプライアンス ドメインの管理者アカウントを使用してコントロールのノードに接続 (***appliance_domain *-CTL01**) し、Windows 管理者の資格情報を使用してコマンド プロンプトを開きます。  
   
 2.  次のディレクトリに移動:`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`です。  
   
-3.  モジュールをインポートします。`Configure-RemoteMonitoring.ps1`  
+3.  モジュールをインポートします。 `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > インポートするには、必要があります 2 つのピリオド コマンド内で使用します。  
@@ -89,11 +89,11 @@ Analytics Platform System が、管理コンソールのデータを Microsoft �
   
 #### <a name="to-disable-telemetry"></a>製品利用統計情報を無効にするには  
   
-1.  アプライアンス ドメインの管理者アカウントを使用してコントロールのノードに接続 (***appliance_domain*-CTL01**) し、管理者特権で PowerShell ウィンドウを開きます。  
+1.  アプライアンス ドメインの管理者アカウントを使用してコントロールのノードに接続 (***appliance_domain *-CTL01**) し、管理者特権で PowerShell ウィンドウを開きます。  
   
 2.  次のディレクトリに移動:`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`です。  
   
-3.  モジュールをインポートします。`Configure-RemoteMonitoring.ps1`  
+3.  モジュールをインポートします。 `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > インポートするには、必要があります 2 つのピリオド コマンド内で使用します。  
@@ -117,8 +117,8 @@ Analytics Platform System が、管理コンソールのデータを Microsoft �
 実行中で害はありません、`Disable-RemoteMonitoring`コマンドを複数回です。  
   
 ## <a name="see-also"></a>参照  
-[管理コンソール &#40; を使用してアプライアンスを監視します。Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
-[システム ビュー &#40; を使用してアプライアンスを監視します。Analytics Platform System &#41;](monitor-the-appliance-by-using-system-views.md)  
-[System Center Operations Manager &#40; を使用してアプライアンスを監視します。Analytics Platform System &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
-[非アプライアンスの DNS 名 &#40; を解決するのには、DNS フォワーダーを使用します。Analytics Platform System &#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+[管理者コンソールを使用してアプライアンスをモニター&#40;分析プラットフォーム システム&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+[システム ビューを使用してアプライアンスをモニター&#40;分析プラットフォーム システム&#41;](monitor-the-appliance-by-using-system-views.md)  
+[System Center Operations Manager を使用してアプライアンスを監視する&#40;分析プラットフォーム システム&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+[非アプライアンスの DNS 名を解決するのには、DNS フォワーダーを使用して&#40;分析プラットフォーム システム&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
   

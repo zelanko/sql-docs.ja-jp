@@ -1,30 +1,31 @@
 ---
-title: "SQL Server (SybaseToSQL) へ SSMA コンポーネントのインストール |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server (SybaseToSQL) へ SSMA コンポーネントのインストール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d27ca7f0bc45c1d81118f0441d2ee4ff751d4c95
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 97c0e5dc529a6563212dc3ddedce5014ccfd463a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>SQL server (SybaseToSQL) SSMA コンポーネントのインストール
 サーバー側のデータ移行を使用するためには、SSMA をインストール、に加えて必要がありますもコンポーネントをインストールするを実行しているコンピューターで[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 これらのコンポーネントには、SSMA 拡張機能パックには、データの移行、および Sybase のプロバイダーをサーバーからサーバーへの接続を有効にするサポートが含まれます。  
@@ -42,9 +43,9 @@ SSMA 拡張機能パックには、データベースが追加されて**sysdb**
   
 **拡張機能パックをインストールするには**  
   
-1.  Sybase 拡張機能パックには、SSMA をコピーします。*n*.Install.exe、場所 *n* を実行しているコンピューターに、ビルド番号は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
+1.  Sybase 拡張機能パックには、SSMA をコピーします。*n*です。Install.exe、場所*n*を実行しているコンピューターに、ビルド番号は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
   
-2.  Sybase 拡張機能パックには、SSMA をダブルクリックします。*n*.Install.exe です。  
+2.  Sybase 拡張機能パックには、SSMA をダブルクリックします。*n*です。Install.exe です。  
   
 3.  [ようこそ] ページで、をクリックして**次**です。  
   
@@ -66,7 +67,7 @@ SSMA 拡張機能パックには、データベースが追加されて**sysdb**
   
     Windows 認証は、Windows 資格情報を使用してのインスタンスにログオンしよう[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 選択した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を入力する必要があります、認証、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ログイン名とパスワード。  
   
-10. [サーバーの管理] ページで、**ユーティリティ データベースのインストール**  *n*ここで、  *n* バージョン番号は、をクリックして**次**です。  
+10. [サーバーの管理] ページで、**ユーティリティ データベースのインストール** *n*ここで、 *n*バージョン番号は、をクリックして**次**です。  
   
     **Sysdb**データベースが作成され、そのデータベースにストアド プロシージャが作成されます。  
   
@@ -117,6 +118,6 @@ ASE からデータを移行する場合[!INCLUDE[ssNoVersion](../../includes/ss
 4.  選択した機能を確認し、をクリックして**完了**データ プロバイダーをインストールします。  
   
 ## <a name="see-also"></a>参照  
-[SSMA の Sybase クライアント &#40; のインストールSybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
-[SQL Server - Azure SQL DB &#40; への Sybase ASE データベースの移行SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SSMA の Sybase クライアントのインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
+[SQL Server - Azure SQL DB &#40;への Sybase ASE データベースの移行SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

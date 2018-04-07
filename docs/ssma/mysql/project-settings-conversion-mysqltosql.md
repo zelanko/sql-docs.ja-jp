@@ -1,30 +1,31 @@
 ---
-title: "プロジェクトの設定 (変換) (MySQLToSQL) |Microsoft ドキュメント"
+title: プロジェクトの設定 (変換) (MySQLToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9062c61ad2a799a20370c8b406843e0e4a209869
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e731155b4adadfe8a5a05edafd97f90bd3de263b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>プロジェクトの設定 (変換) (MySQLToSQL)
 変換 ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA に SQL Server または SQL Azure の構文に MySQL 構文を変換する方法をカスタマイズする設定が含まれています。  
@@ -35,20 +36,20 @@ ms.lasthandoff: 12/21/2017
   
 -   現在のプロジェクトの設定を指定する、**ツール**ボタンをクリックし**プロジェクト設定**、順にクリックして**全般**クリックして、左側のウィンドウの下部にある**変換**です。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
   
 ### <a name="collate-clause"></a>Collate 句  
   
 |||  
 |-|-|  
-|**項目**|**定義**|  
+|**項目**|**[定義]**|  
 |**COLLATE 句の明示的な変換**|COLLATE 句の明示的な変換オプションは、MySQL コードで COLLATE 句を明示的に変換する方法を指定します。 無視して警告マーク/エラーを生成可能な選択肢に。<br /><br />**既定のモード**: 無視して警告マーク<br /><br />**オプティミスティック モード**: 無視して警告マーク<br /><br />**Full モード**: 無視して警告マーク|  
   
 ### <a name="column-constraints"></a>列の制約  
   
 |||  
 |-|-|  
-|**項目**|**定義**|  
+|**項目**|**[定義]**|  
 |**列挙型のデータ型の列の制約を生成します。**|MySQL テーブルに存在しない場合は、SQL Server または SQL Azure の表に列挙型のデータ型の列に対する制約を生成します。 場合は、列挙データ型の変換後のすべての列が値を制御する CHECK 制約を伴います。<br /><br />**既定のモード**: いいえ<br /><br />**オプティミスティック モード**: いいえ<br /><br />**Full モード**: はい|  
 |**セットのデータ型の列の制約を生成します。**|MySQL テーブルに存在しない場合は、SQL Server または SQL Azure の表にセットのデータ型の列に対する制約を生成します。 場合は、値を制御する CHECK 制約のあるセットのデータ型の変換後のすべての列が伴います。<br /><br />**既定のモード**: いいえ<br /><br />**オプティミスティック モード**: いいえ<br /><br />**Full モード**: はい|  
 |**符号なし数値データ型の列の列の制約を生成します。**|負でない値の符号なし数値データ型の列にチェックを追加します。<br /><br />**既定のモード**: いいえ<br /><br />**オプティミスティック モード**: いいえ<br /><br />**Full モード**: はい|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|**項目**|**定義**|  
+|**項目**|**[定義]**|  
 |**列挙型のデータ型の変換**|NVARCHAR に変換または変換する数値としての MySQL 列挙データ型の変換方法を指定します<br /><br />**既定のモード**: を NVARCHAR に変換<br /><br />**オプティミスティック モード**: を NVARCHAR に変換<br /><br />**Full モード**: を NVARCHAR に変換|  
 |**セットのデータ型の変換**|データ型の MySQL 設定がどのようにするかを示す NVARCHAR (L) に変換すると、変換 BINARY(L) に変換します<br /><br />**既定のモード**: NVARCHAR(L) への変換<br /><br />**オプティミスティック モード**: NVARCHAR(L) への変換<br /><br />**Full モード**: NVARCHAR(L) への変換|  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|**項目**|**定義**|  
+|**項目**|**[定義]**|  
 |**列を挿入し、置換の既定値なし**|場合は 'Yes'、MyISAM および InnoDb 以外ストアド エンジンを使用するテーブルを参照するすべてのステートメントは、変換の警告メッセージでマークする必要があります。<br /><br />**既定のモード**: 列の一覧に追加<br /><br />**オプティミスティック モード**: 列の一覧に追加<br /><br />**Full モード**: 列の一覧に追加|  
 |**ゼロの変換による除算が生成されます。**|ERROR_FOR_DIVISION_BY_ZERO 動作せず MySQL をエミュレートするかどうかを指定します。<br /><br />**既定のモード**: エラー<br /><br />**オプティミスティック モード**: エラー<br /><br />**Full モード**: NULL|  
 |**IN 演算子**|MySQL IN 演算子を変換する方法を指定します。<br /><br />**既定のモード**: 内に常に変換<br /><br />**オプティミスティック モード**: 内に常に変換<br /><br />**Full モード**: 必要な場合の展開|  
@@ -79,14 +80,14 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|**項目**|**定義**|  
+|**項目**|**[定義]**|  
 |**既定のスキーマのマッピング**|MySQL データベースを SQL Server スキーマにマップする方法を指定します。<br /><br />**既定のモード**: データベース<br /><br />**オプティミスティック モード**: データベース<br /><br />**Full モード**: データベース|  
   
 ### <a name="procedures-and-functions"></a>プロシージャと関数  
   
 |||  
 |-|-|  
-|**項目**|**定義**|  
+|**項目**|**[定義]**|  
 |**既定の関数の変換**|かどうか関数で既定では変換するように指定 T-SQL 関数またはストアド プロシージャです。<br /><br />**既定のモード**: 関数への変換<br /><br />**オプティミスティック モード**: 関数への変換<br /><br />**Full モード**: 関数への変換|  
 |**SET XACT_ABORT を生成します。**|SET XACT_ABORT ON が変換後のプロシージャまたはトリガーの先頭に追加する必要があるかどうかを指定します。<br /><br />**既定のモード**: はい<br /><br />**オプティミスティック モード**: はい<br /><br />**Full モード**: はい|  
 |**SET NOCOUNT を生成します。**|SET NOCOUNT ON が変換後のプロシージャまたはトリガーの先頭に追加する必要があるかどうかを指定します。<br /><br />**既定のモード**: はい<br /><br />**オプティミスティック モード**: はい<br /><br />**Full モード**: はい|  
@@ -95,15 +96,15 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|**項目**|**定義**|  
-|**既定の境界ボックスの {XMAX &#124;です。XMIN &#124;です。YMAX &#124;です。YMIN} の空間インデックス**|{XMAX &#124; の既定値を定義します。XMIN &#124;です。YMAX &#124;です。境界ボックスの空間インデックスで使用されるの YMIN} パラメーター。<br /><br />**既定のモード**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**オプティミスティック モード**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**フル モード**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
+|**項目**|**[定義]**|  
+|**境界ボックスの既定 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} の空間インデックス**|既定値を定義 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} の境界ボックスの空間インデックスで使用されるパラメーター。<br /><br />**既定のモード**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**オプティミスティック モード**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**フル モード**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**空間インデックスのグリッド密度の既定値**|LEVEL_1、LEVEL_2、LEVEL_3、および空間インデックスで使用されるグリッド密度の LEVEL_4 を既定値を定義します。<br /><br />**既定のモード**<br /><br />LEVEL_1: 既定<br /><br />LEVEL_2: 既定<br /><br />LEVEL_3: 既定<br /><br />LEVEL_4: 既定<br /><br />**オプティミスティック モード**<br /><br />LEVEL_1: 既定<br /><br />LEVEL_2: 既定<br /><br />LEVEL_3: 既定<br /><br />LEVEL_4: 既定<br /><br />**フル モード**<br /><br />LEVEL_1: 既定<br /><br />LEVEL_2: 既定<br /><br />LEVEL_3: 既定<br /><br />LEVEL_4: 既定|  
   
 ### <a name="transactions"></a>トランザクション  
   
 |||  
 |-|-|  
-|**項目**|**定義**|  
+|**項目**|**[定義]**|  
 |**非トランザクション テーブル**|変換の警告メッセージでトランザクションをサポートしていないテーブルへのすべての参照をマークする必要があるかどうかを指定します。<br /><br />**既定のモード**: いいえ<br /><br />**オプティミスティック モード**: いいえ<br /><br />**Full モード**: はい|  
 |**トランザクション分離レベル**|どのようなトランザクション分離レベルは、新しいトランザクションのために使用する必要がありますを指定します。<br /><br />**既定のモード**: 既定<br /><br />**オプティミスティック モード**: 既定<br /><br />**Full モード**: Repeatable read|  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|**項目**|**定義**|  
+|**項目**|**[定義]**|  
 |**数値に変換する文字**|指定の数値データ型を文字データ型から暗黙的および明示的な変換を処理する方法です。<br /><br />**既定のモード**: オプティミスティック<br /><br />**オプティミスティック モード**: オプティミスティック<br /><br />**Full モード**: 正確な|  
 |**符号なし数値を制御します。**|符号なし数値変数とパラメーターに値を割り当てるコントロールです。<br /><br />**既定のモード**: いいえ<br /><br />**オプティミスティック モード**: いいえ<br /><br />**Full モード**: はい|  
 |**コントロールの符号なしの減算**|符号なしのデータ型のテーブルの列に挿入された値を負の値を変更します。<br /><br />**既定のモード**: 変換 ' としてでは、'<br /><br />**オプティミスティック モード**: 変換 ' としてでは、'<br /><br />**Full モード**: 警告マーク|  
@@ -121,5 +122,5 @@ ms.lasthandoff: 12/21/2017
 |**NOT NULL 列で 0-日付**|指定 NOT NULL 列 0 日の日付でゼロのまたは無効な日付/時刻値への割り当てを処理する方法です。<br /><br />**既定のモード**: GETDATE()<br /><br />**オプティミスティック モード**: GETDATE()<br /><br />**Full モード**: GETDATE()|  
   
 ## <a name="see-also"></a>参照  
-[ユーザー インターフェイス リファレンス &#40;です。MySQLToSQL &#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
+[ユーザー インターフェイス リファレンス&#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   

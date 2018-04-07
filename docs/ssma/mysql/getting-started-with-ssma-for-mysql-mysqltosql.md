@@ -1,15 +1,16 @@
 ---
-title: "入門 SSMA for MySQL (MySQLToSQL) |Microsoft ドキュメント"
+title: 入門 SSMA for MySQL (MySQLToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Getting started, SQL Server or SQL Azure metadata explorer
 - Getting started,Installing and licensing
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 961ab39ffc76be1ce2bd7dd36234163d3c8229bf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: efe3b32103e655213cecedbc9312233d5fd2c2d9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>入門 SSMA for MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) for MySQL を迅速に MySQL データベース スキーマを SQL Server または Azure SQL DB のスキーマに変換、SQL Server または Azure SQL DB に結果のスキーマをアップロードおよび MySQL から SQL Server または Azure SQL DB にデータを移行することができます。  
@@ -36,7 +37,7 @@ SQL Server Migration Assistant (SSMA) for MySQL を迅速に MySQL データベ�
 このトピックでは、インストール プロセスを導入し、し SSMA ユーザー インターフェイスを理解するために役立ちます。  
   
 ## <a name="installing-ssma"></a>SSMA のインストール  
-SSMA を使用するには、必要がありますに初めてインストールする SSMA クライアント プログラムのソースの MySQL データベースと SQL Server または Azure SQL DB のターゲット インスタンスの両方にアクセスできるコンピューター。 次に、SSMA クライアント プログラムを実行しているコンピューターに MySQL プロバイダー (MySQL 5.1 Odbc (信頼関係)) をインストールします。 インストール手順については、次を参照してください[SSMA MySQL &#40; for をインストールする。MySqlToSql &#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)  
+SSMA を使用するには、必要がありますに初めてインストールする SSMA クライアント プログラムのソースの MySQL データベースと SQL Server または Azure SQL DB のターゲット インスタンスの両方にアクセスできるコンピューター。 次に、SSMA クライアント プログラムを実行しているコンピューターに MySQL プロバイダー (MySQL 5.1 Odbc (信頼関係)) をインストールします。 インストール手順については、次を参照してください[for MySQL をインストールする SSMA &#40;MySqlToSql。&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)  
   
 SSMA を起動する をクリックして**開始**、 をポイント**すべてのプログラム**、 をポイント**SQL Server Migration Assistant for MySQL**、クリックして**SQL Server Migration Assistant for MySQL**です。  
   
@@ -61,7 +62,7 @@ SSMA がインストールされ、ライセンス後、は、SQL Server また�
   
 SQL Server または Azure SQL DB に変換されたスキーマを同期した後は、MySQL メタデータ エクスプ ローラーに戻っておよび MySQL のスキーマから SQL Server または Azure SQL DB データベースにデータを移行できます。  
   
-これらのタスクとその実行方法の詳細については、次を参照してください[MySQL データベースを移行する SQL Server - Azure SQL DB &#40;。MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md).  
+これらのタスクとその実行方法の詳細については、次を参照してください。 [SQL Server - Azure SQL DB への MySQL データベースの移行&#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)です。  
   
 次のセクションでは、SSMA ユーザー インターフェイスの機能を説明します。  
   
@@ -73,9 +74,9 @@ MySQL メタデータ エクスプ ローラーでは、MySQL スキーマにつ
   
 -   各スキーマ内のオブジェクトを参照します。  
   
--   変換に、オブジェクトを選択し、SQL Server の構文にオブジェクトを変換します。 詳細については、次を参照してください。 [MySQL データベースを変換する &#40;です。MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   変換に、オブジェクトを選択し、SQL Server の構文にオブジェクトを変換します。 詳細については、次を参照してください[MySQL データベースを変換する&#40;MySQLToSQL。&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
--   データ移行のためのテーブルを選択し、それらのテーブルからデータを SQL Server を移行します。 詳細については、次を参照してください[MySQL データを SQL Server - Azure SQL DB &#40; を移行する。MySQLToSQL &#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
+-   データ移行のためのテーブルを選択し、それらのテーブルからデータを SQL Server を移行します。 詳細については、次を参照してください[SQL Server - Azure SQL DB に MySQL のデータを移行する&#40;MySQLToSQL。&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   
 ### <a name="sql-server-or-azure-sql-db-metadata-explorer"></a>SQL Server または Azure SQL DB メタデータ エクスプ ローラー  
 SQL Server または Azure SQL DB メタデータ エクスプ ローラーは、SQL Server または Azure SQL DB のインスタンスに関する情報を表示します。 SQL Server または Azure SQL DB のインスタンスに接続するときに、SSMA はそのインスタンスに関するメタデータを取得し、プロジェクト ファイルに格納します。  
@@ -118,7 +119,7 @@ SSMA は 2 つのツールバー: プロジェクト ツールバー、および
 |||  
 |-|-|  
 |**メニュー**|**Description**|  
-|**[最近使ったファイル]**|プロジェクトで作業し、MySQL に接続し、SQL Server または Azure SQL DB に接続するためのコマンドが含まれています。|  
+|**ファイル**|プロジェクトで作業し、MySQL に接続し、SQL Server または Azure SQL DB に接続するためのコマンドが含まれています。|  
 |**[編集]**|検索して、詳細ページにテキストを含む作業用のコマンドが含まれています。 開くには**管理ブックマーク** ダイアログの 編集 メニューの ブックマークの管理 をクリックします。 ダイアログ ボックスでは、既存のブックマークの一覧が表示されます。 ダイアログ ボックスの右側にあるボタンを使用するには、それらのブックマークを管理します。|  
 |**[表示]**|含まれています、**メタデータ エクスプ ローラーの同期**コマンド。 MySQL メタデータ エクスプ ローラーと SQL Server または Azure SQL DB メタデータ エクスプ ローラーの間でオブジェクトを同期するとします。 コマンドを表示/非表示を含む、**出力**と**エラー一覧**ペインおよびオプション**レイアウト**レイアウトを管理します。|  
 |**ツール**|レポートを作成、スキーマの変換、データベースから更新、オブジェクトとデータの移行、およびスクリプトとして保存するためのコマンドが含まれています。 アクセスする、**グローバル設定、プロジェクト設定の既定の**と**プロジェクト設定** ダイアログ ボックス。|  
@@ -132,6 +133,6 @@ SSMA は 2 つのツールバー: プロジェクト ツールバー、および
 -   エラー一覧 ウィンドウは、並べ替え可能な一覧で、エラー、警告、および情報メッセージを示します。  
   
 ## <a name="see-also"></a>参照  
-[ユーザー インターフェイス リファレンス &#40;です。MySQLToSQL &#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
-[SQL Server - Azure SQL DB &#40; に MySQL データの移行MySQLToSQL &#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
+[ユーザー インターフェイス リファレンス&#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
+[SQL Server - Azure SQL DB に MySQL データの移行&#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   

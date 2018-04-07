@@ -1,30 +1,31 @@
 ---
-title: "変換する DB2 スキーマ (DB2ToSQL) |Microsoft ドキュメント"
+title: 変換する DB2 スキーマ (DB2ToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3684380a10f371952b2461907bb36a7b13f1107
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2483c178999952ed552c78016aa1a4d4c994512d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>DB2 スキーマ (DB2ToSQL) の変換
 接続されている DB2 に接続すると後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、DB2 データベース オブジェクトに変換するにはプロジェクトの設定とデータのマッピング オプションと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース オブジェクトです。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 変換中には、SSMA は、出力ウィンドウに出力メッセージとエラー一覧 ウィンドウにエラー メッセージを出力します。 出力とエラー情報を使用して、DB2 データベースまたは必要な変換の結果を得るため、変換プロセスを変更するかどうかを確認します。  
   
 ## <a name="setting-conversion-options"></a>変換オプションの設定  
-オブジェクトを変換する前に、プロジェクトの変換オプションを確認、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスを使用すると、SSMA で、関数およびグローバル変数がどのように変換されるかを設定できます。 詳細については、次を参照してください。[プロジェクトの設定 &#40;です。変換&#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-conversion-db2tosql.md).  
+オブジェクトを変換する前に、プロジェクトの変換オプションを確認、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスを使用すると、SSMA で、関数およびグローバル変数がどのように変換されるかを設定できます。 詳細については、次を参照してください。[プロジェクト設定&#40;変換&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)です。  
   
 ## <a name="conversion-results"></a>変換結果  
 次の表は、変換されますが、DB2 のオブジェクトし、結果として得られる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 12/21/2017
 |-----------|----------------------------|  
 |データ型|**SSMA は、以下に、次を除くすべての型をマップします。**<br /><br />CLOB: この種類の作業の一部のネイティブ関数はありません (例: CLOB_EMPTY()) のサポート<br /><br />BLOB: この種類の作業の一部のネイティブ関数はありません (例: BLOB_EMPTY()) のサポート<br /><br />DBLOB: この種類の作業の一部のネイティブ関数はありません (例: DBLOB_EMPTY()) のサポート|  
 |ユーザー定義型|**SSMA は、次をマップ ユーザー定義します。**<br /><br />別個の型<br /><br />構造化型<br /><br />SQL PL データ型: 注: 脆弱なカーソルの種類はサポートされていません。|  
-|特別なレジスタ|**SSMA のみ以下に示すレジスタにマップします。**<br /><br />現在のタイムスタンプ<br /><br />現在の日付<br /><br />現在の時刻<br /><br />現在のタイム ゾーン<br /><br />現在のユーザー<br /><br />SESSION_USER とユーザー<br /><br />SYSTEM_USER<br /><br />現在 CLIENT_APPLNAME<br /><br />現在 CLIENT_WRKSTNNAME<br /><br />現在のロックのタイムアウト<br /><br />現在のスキーマ<br /><br />現在のサーバー<br /><br />現在の分離<br /><br />SQL server のセマンティクスには、他の特別な登録はマップされていません。|  
+|特別なレジスタ|**SSMA のみ以下に示すレジスタにマップします。**<br /><br />現在のタイムスタンプ<br /><br />現在の日付<br /><br />現在の時刻<br /><br />現在のタイム ゾーン<br /><br />現在のユーザー<br /><br />SESSION_USER とユーザー<br /><br />SYSTEM_USER<br /><br />現在 CLIENT_APPLNAME<br /><br />CURRENT CLIENT_WRKSTNNAME<br /><br />現在のロックのタイムアウト<br /><br />現在のスキーマ<br /><br />現在のサーバー<br /><br />現在の分離<br /><br />SQL server のセマンティクスには、他の特別な登録はマップされていません。|  
 |CREATE TABLE|**SSMA は、次の例外が CREATE TABLE を割り当てます。**<br /><br />多次元のクラスタ リング (MDC) テーブル<br /><br />範囲-クラスター化テーブル (RCT)<br /><br />パーティション テーブル<br /><br />デタッチされたテーブル<br /><br />データのキャプチャ句<br /><br />非表示に IMPLICITLY オプション<br /><br />揮発性のオプション|  
 |CREATE VIEW|SSMA は、' WITH ローカル CHECK OPTION' をビューの作成をマップしますが、その他のオプションは、SQL server のセマンティクスにマップされていません|  
 |CREATE INDEX|**SSMA は、次の例外がインデックスの作成を割り当てます。**<br /><br />XML インデックス<br /><br />オーバー ラップせず BUSINESS_TIME オプション<br /><br />パーティション分割された句<br /><br />オプションの指定のみ<br /><br />オプションの拡張を使用します。<br /><br />MINPCTUSED オプション<br /><br />ページ分割オプション|  
@@ -76,7 +77,7 @@ ms.lasthandoff: 12/21/2017
 |WHILE ステートメント|マップされます。|  
 |GET 診断ステートメント|**SSMA は、次の例外診断の取得を割り当てます。**<br /><br />ROW_COUNT – がマップされます。<br /><br />DB2_RETURN_STATUS – がマップされます。<br /><br />テキスト – がマップされます。<br /><br />SQL Server のセマンティクスに DB2_SQL_NESTING_LEVEL - がマップされていません。<br /><br />SQL Server のセマンティクスに DB2_TOKEN_STRING - がマップされていません。|  
 |カーソル|**SSMA は、次の例外がカーソルをマップします。**<br /><br />ALLOCATE CURSOR ステートメントでは、SQL Server のセマンティクスにはマップされていません。<br /><br />SQL Server のセマンティクスに関連付けるロケーター ステートメントにもマップされません。<br /><br />DECLARE CURSOR ステートメント、Returnability 句は SQL server のセマンティクスにマップされていません<br /><br />FETCH ステートメント – 一部のマッピング。 ターゲットとして変数がのみサポートされています。 SQL server のセマンティクスに SQLDA 記述子がマップされていません|  
-|変数:|マップされます。|  
+|変数|マップされます。|  
 |例外、ハンドラー、および条件|**SSMA は、次の例外「例外の処理」を割り当てます。**<br /><br />終了ハンドラー – マップされます。<br /><br />ハンドラーを元に戻す – マップされます。<br /><br />ハンドラー – を続行することはマップされません。<br /><br />条件のことにマップされない SQL server のセマンティクスです。|  
 |動的 SQL|マップされていません。|  
 |エイリアス|マップされます。|  
@@ -151,7 +152,7 @@ DB2 データベース オブジェクトに変換するには、最初に、変
   
 -   プロシージャのソース コードを変更することができます、 **SQL**タブです。  
   
--   削除または問題のあるコードを変更する DB2 データベース内のオブジェクトを変更することができます。 SSMA に、更新されたコードを読み込むするには、メタデータを更新する必要があります。 詳細については、次を参照してください。 [DB2 データベース &#40;DB2ToSQL&#41; への接続](../../ssma/db2/connecting-to-db2-database-db2tosql.md)です。  
+-   削除または問題のあるコードを変更する DB2 データベース内のオブジェクトを変更することができます。 SSMA に、更新されたコードを読み込むするには、メタデータを更新する必要があります。 詳細については、次を参照してください。 [DB2 データベースに接続する&#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)です。  
   
 -   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラーと DB2 メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]と DB2 からデータを移行します。  
   

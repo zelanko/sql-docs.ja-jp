@@ -23,15 +23,15 @@ helpviewer_keywords:
 - sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 caps.latest.revision: 111
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d3add34699a2b0fa77d47d27ac8084f503802b43
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: c37a8f78d18a3315c188959f2f8403ef055c3155
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -1015,7 +1015,7 @@ GO
 |XTPPROC_PARTITIONED_STACK_CREATE |特定のプロシージャ (行う必要があります単一スレッド) ストアド プロシージャのキャッシュ構造 NUMA ノードごとの割り当てをネイティブ コンパイルされたときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|
 
   
- 次の Xevent は、パーティションに関連する**スイッチ**とオンライン インデックス再構築します。 構文については、次を参照してください。 [ALTER TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-transact-sql.md)と[ALTER INDEX &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-index-transact-sql.md)  
+ 次の Xevent は、パーティションに関連する**スイッチ**とオンライン インデックス再構築します。 構文については、次を参照してください。 [ALTER TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-transact-sql.md)と[ALTER INDEX & #40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-index-transact-sql.md)  
   
 -   lock_request_priority_state  
   
@@ -1023,7 +1023,7 @@ GO
   
 -   ddl_with_wait_at_low_priority  
   
- ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  
+ ロックの互換性対応表を参照してください。 [sys.dm_tran_locks & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  
   
 ## <a name="see-also"></a>参照  
     

@@ -1,30 +1,31 @@
 ---
-title: "プロジェクトの設定 (移行) (SybaseToSQL) |Microsoft ドキュメント"
-ms.custom: 
+title: プロジェクトの設定 (移行) (SybaseToSQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b032cb4f1453a3b9a2986e5d554d21c62e606001
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 23e575ca7b7094ee835ff8432cfbdb906c875ce9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-migration-sybasetosql"></a>プロジェクトの設定 (移行) (SybaseToSQL)
 [移行] ページ、**プロジェクト設定** ダイアログ ボックスには、どのように SSMA はデータ移行から Sybase Adaptive Server Enterprise (ASE) をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 |項目|定義|  
 |--------|--------------|  
-|**サポートされていない日付を置き換えます**|SSMA では、できるだけ早くより前の日付を修正する必要があるかどうかを示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime**日付 (1753 年 1 月 01日)。<br /><br />現在の日付値を保持する次のように選択します。**何もしない**です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]datetime 列には、01 1753 年 1 月より前に、の日付を受け入れません。 古い日付を使用する場合は、datetime 値を文字の値に変換する必要があります。<br /><br />01 1753 年 1 月より前に、の日付を NULL に変換する選択**NULL 置き換えます**です。<br /><br />サポートされている日付の 01 1753 年 1 月より前に、の日付を置き換えるには選択**でサポートされる日付に最も近い置き換えます**です。<br /><br />**既定のモード**: 何もしません。<br /><br />**オプティミスティック モード**: 何もしません。<br /><br />**Full モード**: サポートされる日付に最も近いで置き換えます|  
+|**サポートされていない日付を置き換えます**|SSMA では、できるだけ早くより前の日付を修正する必要があるかどうかを示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime**日付 (1753 年 1 月 01日)。<br /><br />現在の日付値を保持する次のように選択します。**何もしない**です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] datetime 列には、01 1753 年 1 月より前に、の日付を受け入れません。 古い日付を使用する場合は、datetime 値を文字の値に変換する必要があります。<br /><br />01 1753 年 1 月より前に、の日付を NULL に変換する選択**NULL 置き換えます**です。<br /><br />サポートされている日付の 01 1753 年 1 月より前に、の日付を置き換えるには選択**でサポートされる日付に最も近い置き換えます**です。<br /><br />**既定のモード**: 何もしません。<br /><br />**オプティミスティック モード**: 何もしません。<br /><br />**Full モード**: サポートされる日付に最も近いで置き換えます|  
   
 ## <a name="migration-engine"></a>移行エンジン  
   

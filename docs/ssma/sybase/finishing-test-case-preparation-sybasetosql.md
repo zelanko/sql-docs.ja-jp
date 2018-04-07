@@ -21,13 +21,13 @@ ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41a22720524b4105bff9eec3dcf38e7183f01cc3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 089bd7e6fe013f3cd590ff0c3e23929c367e67c8
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>テスト_ケース準備 (SybaseToSQL) の終了
 ウィザードの最終ページには、テスト_ケースの説明と、テストに関連するオブジェクトに関する情報が表示されます。 さらに、このページで設定できます、テストの実行オプション。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/21/2017
 -   選択した場合**いいえ**、すべてのテストの実行データの変更は保存されます。  
   
 ### <a name="auxiliary-tables-saving-mode"></a>補助テーブルの保存モード  
-テストの実行中に作成された補助テーブルの保存モードを定義します。 内の補助テーブルの説明を参照して、[テスト_ケースの実行 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)トピックです。  
+テストの実行中に作成された補助テーブルの保存モードを定義します。 内の補助テーブルの説明を参照して、[テスト_ケースを実行している&#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md)トピックです。  
   
 -   選択した場合**は常に保存**、補助テーブル データは、後で使用するため常に格納されます。  
   
@@ -66,10 +66,10 @@ ms.lasthandoff: 12/21/2017
   
 -   選択した場合**テーブルの比較に失敗した場合にユーザーに依頼**ユーザーは、エラーが発生する場合に必要な操作を選択できます。  
   
-クリックして、**完了**に準備されたテスト_ケースを保存するボタン[テスト リポジトリの使用 &#40;SybaseToSQL &#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
+をクリックして、**完了**に準備されたテスト_ケースを保存するボタン[テスト リポジトリを使用して&#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)です。  
   
 ## <a name="see-also"></a>参照  
-[テスト リポジトリ &#40; を使用します。SybaseToSQL &#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
-[実行中のテスト_ケースと #40 です。SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[データベース オブジェクト &#40; 移行テストSybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[テストのリポジトリを使用して&#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
+[テスト_ケースを実行する&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[データベース オブジェクトを移行テスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

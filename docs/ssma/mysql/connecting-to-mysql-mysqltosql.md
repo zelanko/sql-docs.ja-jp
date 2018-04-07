@@ -1,15 +1,16 @@
 ---
-title: "MySQL (MySQLToSQL) への接続 |Microsoft ドキュメント"
+title: MySQL (MySQLToSQL) への接続 |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Connecting to MySQL, MySQL permission
 - Connecting to MySQL,reconnecting
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 291f10d4f045747266297287903ba4cf900c09c5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5b36b626d611896a5af496a0ae02d25dcf44ac83
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>MySQL (MySQLToSQL) に接続します。
 MySQL データベースを他の SQL Server または SQL Azure に移行するには、移行する MySQL データベースに接続する必要があります。 接続すると、SSMA は、すべての MySQL スキーマに関するメタデータを取得し、MySQL メタデータ エクスプ ローラー ペインに表示します。 SSMA は、データベース サーバーに関する情報を格納しますが、パスワードは保存されません。  
@@ -90,7 +91,7 @@ MySQL データベースへの接続に使用されるアカウントが少な�
     > -   **OK**必要な情報が提供されているときにボタンが有効にします。 ファイルのパスのいずれかの情報が有効でない場合は、[OK] ボタンが無効になります。  
     > -   **キャンセル**ボタンがダイアログ ボックスを閉じますと**をオフに**SSL オプションで、メイン接続フォーム。  
   
-7.  詳細については、次を参照してください[MySQL &#40; への接続。MySQLToSQL &#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
+7.  詳細については、次を参照してください[MySQL への接続&#40;MySQLToSQL。&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   
 ## <a name="reconnecting-to-mysql"></a>MySQL への再接続  
 プロジェクトを終了するまで、データベース サーバーへの接続をアクティブに保ちます。 プロジェクトを再度開くと、データベースにアクティブに接続する場合を再接続する必要があります。 メタデータを更新して、SQL Server または SQL Azure にデータベース オブジェクトを読み込むし、データを移行するまで、オフライン作業できます。  
@@ -118,11 +119,11 @@ MySQL データベースについてのメタデータは、自動的に更新�
   
     -   色の設定の定義を表示する をクリックして、**凡例**ボタンをクリックします。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順は[SQL Server &#40; に接続します。MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+移行プロセスの次の手順は[SQL Server に接続する&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
 ## <a name="see-also"></a>参照  
-[SQL Server - Azure SQL DB &#40; への MySQL データベースの移行MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[SQL Server - Azure SQL DB にデータベースを移行する MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

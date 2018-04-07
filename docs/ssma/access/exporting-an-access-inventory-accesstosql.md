@@ -1,15 +1,16 @@
 ---
-title: "エクスポート アクセス インベントリ (AccessToSQL) |Microsoft ドキュメント"
+title: エクスポート アクセス インベントリ (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - inventories of Access databases
 - querying exported metadata
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f1ca36e752e0df28ca4b1fb3dcc7dff6f8895cf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 834b8d2b1be548a8be1114d6b536475eb52d4441
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>アクセス インベントリ (AccessToSQL) をエクスポートします。
 アクセスの複数のデータベースがあり、どれに移行するかわからない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]プロジェクト内のすべてのアクセス データベースのインベントリをエクスポートすることができます。 確認し、データベースと移行にこれらのデータベース内のオブジェクトを決定するインベントリのメタデータをクエリします。 このインベントリではすぐに、次のように、質問への回答を検索します。  
@@ -100,7 +101,7 @@ SSMA は、Access データベース、テーブル、列、インデックス�
   
     使用することができます、**すべて選択**と**すべてクリア**をオンまたはオフのすべてのデータベース一覧の上部にあるボタンです。 また、複数の行を選択するのには、CTRL キーを押ししたり、行の範囲を選択するように、SHIFT キーを保持できます。  
   
-7.  **[次へ]** をクリックします。  
+7.  **[次へ]**をクリックします。  
   
 8.  確認してください ページで、をクリックして**完了**です。  
   
@@ -124,7 +125,7 @@ SSMA は、Access データベース、テーブル、列、インデックス�
   
 5.  **認証**ドロップダウン メニューで、接続に使用する認証の種類を選択します。 現在の Windows アカウントを使用するのには、選択**Windows 認証**です。 使用する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ログインで、 **SQL Server 認証**、ユーザー名とパスワードを指定します。  
   
-接続の詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を参照してください[SQL Server &#40; に接続します。AccessToSQL &#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
+接続の詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を参照してください[SQL Server に接続する&#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md)です。  
   
 **インベントリ情報をエクスポートするには**  
   

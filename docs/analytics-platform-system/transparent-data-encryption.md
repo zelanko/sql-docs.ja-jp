@@ -1,25 +1,25 @@
 ---
-title: "並列データ ウェアハウスの transparent Data Encryption"
+title: 並列データ ウェアハウスの transparent Data Encryption
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "透過的なデータ暗号化 (TDE) は、データとトランザクション ログ ファイルと、特別な PDW ログ ファイルのリアルタイムの I/O の暗号化と解読を実行します。"
+description: 透過的なデータ暗号化 (TDE) は、データとトランザクション ログ ファイルと、特別な PDW ログ ファイルのリアルタイムの I/O の暗号化と解読を実行します。
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d
-caps.latest.revision: "22"
-ms.openlocfilehash: 6c96bd67d9a935756b8353999f6c778134d2ed57
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: d93d76018baeed1577b6831cbde359002c89416e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="transparent-data-encryption"></a>透過的なデータ暗号化
 データベースをセキュリティで保護するために、安全なシステムの設計、機密資産の暗号化、データベース サーバーに対するファイアウォールの構築などの予防策を講じることができます。 ただし、物理メディア (ドライブやバックアップ テープなど) が盗まれた場合は、悪意のある人物によってデータベースが復元またはアタッチされ、データが参照されるおそれがあります。 解決策の 1 つは、データベース内の機密データを暗号化し、データの暗号化に使用されるキーを証明書で保護することです。 これにより、キーを持たない人物によるデータの使用を防止できますが、このような保護は事前に計画する必要があります。  
@@ -125,9 +125,9 @@ TDE の証明書を次に示すステートメントで処理できるように�
   
 |コマンドまたは関数|用途|  
 |-----------------------|-----------|  
-|[データベース暗号化キーを作成します。](../t-sql/statements/create-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されるキーを作成します。|  
-|[データベース暗号化キーを変更します](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されるキーを変更します。|  
-|[データベース暗号化キーを削除します。](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されたキーを削除します。|  
+|[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されるキーを作成します。|  
+|[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されるキーを変更します。|  
+|[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されたキーを削除します。|  
 |[ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)|TDE を有効にするために使用される **ALTER DATABASE** オプションについて説明します。|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>カタログ ビューと動的管理ビュー  
@@ -139,7 +139,7 @@ TDE の証明書を次に示すステートメントで処理できるように�
 |[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|データベース内の証明書を表示するカタログ ビュー|  
 |[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|各ノードのデータベース、およびデータベースの暗号化の状態で使用される暗号化キーに関する情報を提供する動的管理ビュー。|  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
 TDE の各機能とコマンドには、上の表で説明されているように、個別の権限要件があります。  
   
 TDE に関係するメタデータを表示する必要があります、`CONTROL SERVER`権限です。  
@@ -284,8 +284,8 @@ TDE のパフォーマンスに与える影響は、データの種類がある�
   
 ## <a name="see-also"></a>参照  
 [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)  
-[マスター_キーを作成します。](../t-sql/statements/create-master-key-transact-sql.md)  
-[データベース暗号化キーを作成します。](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
+[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
+[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [sp_pdw_database_encryption_regenerate_system_keys](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  

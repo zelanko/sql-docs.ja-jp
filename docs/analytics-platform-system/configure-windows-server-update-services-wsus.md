@@ -1,31 +1,31 @@
 ---
-title: "Windows Server Update Services (WSUS) (Analytics Platform System) を構成します。"
+title: Windows Server Update Services (WSUS) (Analytics Platform System) を構成します。
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: 
-ms.openlocfilehash: cc95a4f26970b91f2346e3edfcfa937190694b43
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+caps.latest.revision: 41
+ms.openlocfilehash: 31427bc55017cf9c069e8cd4a467dfdb9608ca3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>Windows Server Update Services (WSUS) を構成します。
 これらの手順では、Windows Server Update Services (WSUS) の構成ウィザードを使用して、Analytics Platform System の WSUS を構成するための手順について説明します。 アプライアンスにソフトウェア更新プログラムを適用する前に、WSUS を構成する必要があります。 WSUS は、アプライアンスの VMM のバーチャル マシンに既にインストールされています。  
   
-WSUS の構成の詳細については、次を参照してください。、 [WSUS ステップ バイ ステップのインストール ガイド](http://go.microsoft.com/fwlink/?LinkId=202417)、WSUS web サイトです。 WSUS を構成した後、次を参照してください。[ダウンロードし、Microsoft 更新プログラムの適用 &#40;です。Analytics Platform System &#41;](download-and-apply-microsoft-updates.md)更新を開始します。  
+WSUS の構成の詳細については、次を参照してください。、 [WSUS ステップ バイ ステップのインストール ガイド](http://go.microsoft.com/fwlink/?LinkId=202417)、WSUS web サイトです。 WSUS を構成した後、次を参照してください。[ダウンロードと Microsoft 更新プログラムの適用&#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md)更新を開始します。  
   
 > [!WARNING]  
 > この構成プロセス中にエラーが発生した場合は、停止し、サポートにお問い合わせします。 エラーを無視したり、エラーが発生した後、プロセスの続行しないでください。  
@@ -41,7 +41,7 @@ WSUS を構成する必要があります。
   
 -   アプライアンスが上流サーバーまたは Microsoft Update にアクセスするプロキシ サーバーを使用する場合は、プロキシ サーバーの IP アドレスを把握します。  
   
--   ほとんどの場合、WSUS は、アプライアンスの外部のサーバーにアクセスする必要があります。 外部名を解決するのには外部 DNS サーバーを使用するには、Analytics Platform System ホストとバーチャル マシン (Vm) を許可する外部名転送をサポートするために分析プラットフォーム システム DNS を構成することができます、この使用シナリオをサポートするために、アプライアンスです。 詳細については、次を参照してください[非アプライアンス DNS 名を解決する &#40; を DNS フォワーダーを使用。Analytics Platform System &#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   ほとんどの場合、WSUS は、アプライアンスの外部のサーバーにアクセスする必要があります。 外部名を解決するのには外部 DNS サーバーを使用するには、Analytics Platform System ホストとバーチャル マシン (Vm) を許可する外部名転送をサポートするために分析プラットフォーム システム DNS を構成することができます、この使用シナリオをサポートするために、アプライアンスです。 詳細については、次を参照してください。[非アプライアンス DNS 名の解決に DNS フォワーダーを使用して&#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)です。  
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>Windows Server Update Services (WSUS) を構成するには  
   
@@ -67,7 +67,7 @@ WSUS を構成する必要があります。
   
         ![サーバー マネージャー ダッシュ ボード メニュー](./media/configure-windows-server-update-services-wsus/WSUS_Wiz0.png "WSUS_Wiz0")  
   
-    4.  初めての場合は、WSUS のウィザードを実行する、更新プログラムを格納するディレクトリを構成するように求められます可能性があります。 `C:\wsus`適切な場所にはただし、別のパスを指定する場合があります。  
+    4.  初めての場合は、WSUS のウィザードを実行する、更新プログラムを格納するディレクトリを構成するように求められます可能性があります。 `C:\wsus` 適切な場所にはただし、別のパスを指定する場合があります。  
   
         ![WSUS パス](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
   
@@ -179,7 +179,7 @@ WSUS を構成する必要があります。
 Analytics Platform System の WSUS を構成した後は、次の手順は、アプライアンスのサーバーをグループ化は。 に追加するすべてのアプライアンス サーバー グループには、WSUS が、アプライアンスのすべてのサーバーにソフトウェア更新プログラムを適用することができます。  
   
 > [!NOTE]  
-> WSUS システムは非同期に実行するよう設計されています。 アクティビティを開始する結果がありません常に、すぐに更新します。 そのため、コンピューターが WSUS ダイアログ ボックスに表示 まで、しばらくを待機する必要があります。 実行している、 `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` 、トピックの最後に説明されているコマンド[ダウンロードし、Microsoft 更新プログラムの適用 &#40;です。Analytics Platform System &#41;](download-and-apply-microsoft-updates.md)  ダイアログ ボックスを更新できます。  
+> WSUS システムは非同期に実行するよう設計されています。 アクティビティを開始する結果がありません常に、すぐに更新します。 そのため、コンピューターが WSUS ダイアログ ボックスに表示 まで、しばらくを待機する必要があります。 実行している、 `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` 、トピックの最後に説明されているコマンド[ダウンロードと Microsoft 更新プログラムの適用&#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md)  ダイアログ ボックスを更新できます。  
   
 #### <a name="to-group-the-appliance-servers"></a>アプライアンスのサーバーをグループ化するには  
   

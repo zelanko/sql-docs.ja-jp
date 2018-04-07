@@ -1,25 +1,25 @@
 ---
-title: "取得し、読み込みサーバー (SQL Server PDW) を構成します。"
+title: 取得し、読み込みサーバー (SQL Server PDW) を構成します。
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "取得し、SQL Server 並列データ ウェアハウスにデータが読み込まれたを送信するためのアプライアンス非 Windows システムと読み込みサーバーを構成します。"
+description: 取得し、SQL Server 並列データ ウェアハウスにデータが読み込まれたを送信するためのアプライアンス非 Windows システムと読み込みサーバーを構成します。
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: a434b174-a818-4f73-b218-264619bab664
-caps.latest.revision: "19"
-ms.openlocfilehash: d4a91dc3216945b3f473e1b5b131333ad8d210d3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 19
+ms.openlocfilehash: 566153d95f2affa5b8c5857d45f53c6b43a80a39
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="acquire-and-configure-a-loading-server"></a>取得し、読み込みサーバーを構成します。
 このトピックでは、取得、および読み込みサーバー データの読み込みに SQL Server 並列データ ウェアハウス (PDW) を送信するためのアプライアンス非 Windows システムとして構成する方法について説明します。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Windows Server 2012 または Windows Server 2012 R2。 これらのオペレーティング システムでは、FDR ネットワーク アダプターが必要です。  
   
--   Windows Server 2008 R2。 この OS では、DDR のネットワーク アダプターが必要です。  
+-   Windows Server 2008 R2. この OS では、DDR のネットワーク アダプターが必要です。  
   
 サーバーは、dwloader の読み込みのコマンド ライン ツールを使用するのには、EN-US ロケールを使用する必要があります。 dwloader は、他のロケールをサポートしていません。  
   
@@ -97,7 +97,7 @@ Dwloader をインストールするには、クライアント ツールから 
   
 2.  [ロードの概要](load-overview.md)  
   
-## <a name="performance"></a>[パフォーマンス]  
+## <a name="performance"></a>パフォーマンス  
 最もパフォーマンス Windows Server 2012 以降を読み込みは、ファイルの瞬時初期化でにデータが上書きされた場合、オペレーティング システムはデータは上書きされません既存を 0 で埋め込むようにします。 場合は、セキュリティ上のリスクは、前のデータがまだディスクに存在するためこれは、し、必ずファイルの瞬時初期化をオフにします。  
   
 ## <a name="Security"></a>セキュリティ通知  

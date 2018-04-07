@@ -1,26 +1,26 @@
 ---
-title: "リモート テーブルのコピー (SQL Server PDW)"
+title: リモート テーブルのコピー (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e00d948f-fede-4d41-a45d-67134770ce37
-caps.latest.revision: "23"
-ms.openlocfilehash: 3de6700957b48c5022c73c3d521bf6f6ed090553
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 23
+ms.openlocfilehash: fe6e808b8db8534f38db250d838d6a2cf132a30d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="remote-table-copy"></a>リモート テーブルのコピー
 リモート テーブルのコピー機能を使用して、SQL Server PDW のデータベースからテーブルをリモートの (非アプライアンス) SMP SQL Server データベースにコピーする方法について説明します。 SQL Server PDW のハブとスポークのシナリオを有効にするリモート テーブルのコピーを使用します。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 -   1 つの有効な SQL Server PDW を使用して選択可能なデータをコピーする必要があります[選択](../t-sql/queries/select-transact-sql.md)ステートメントです。  
   
--   移行先サーバーは、非アプライアンス サーバーである必要があります。 データは、このトピックの手順を使用して 1 つのアプライアンスから直接コピーすることはできません。  
+-   転送先サーバーは、非アプライアンス サーバーである必要があります。 データは、このトピックの手順を使用して 1 つのアプライアンスから直接コピーすることはできません。  
   
 -   移行先サーバーは、アプライアンスの Infiniband ネットワーク上のすべてのノードにアクセスする必要があります。  
   

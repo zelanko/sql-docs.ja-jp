@@ -1,31 +1,31 @@
 ---
-title: "SSMA コンソール (DB2ToSQL) を実行 |Microsoft ドキュメント"
+title: SSMA コンソール (DB2ToSQL) を実行 |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
-caps.latest.revision: 
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55415d575aac34cdee2ed2acdb8c9ceaade6465c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f491f5afc0beea80943e976c64785afba200ad7c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>SSMA コンソール (DB2ToSQL) を実行します。
 Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実行し、SSMA 動作を制御できます。 次のセクションでは、同じを詳しく説明します。 コンソール アプリケーションは、このセクションで、列挙型として特定の標準的なスクリプト ファイルのコマンドを使用します。  
@@ -35,17 +35,17 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 **Command**  
   
---プロジェクトの新規作成  
+create-new-project  
   
 新しい SSMA プロジェクトを作成します。  
   
 **[スクリプト]**  
   
--   `project-folder`プロジェクトの作成中のフォルダーを示します。  
+-   `project-folder` プロジェクトの作成中のフォルダーを示します。  
   
--   `project-name`プロジェクトの名前を示します。 {文字列}  
+-   `project-name` プロジェクトの名前を示します。 {string}  
   
--   `overwrite-if-exists`省略可能な属性は、既存のプロジェクトを上書きするかかどうかを示します。 {ブール}  
+-   `overwrite-if-exists`省略可能な属性は、既存のプロジェクトを上書きするかかどうかを示します。 {boolean}  
   
 -   `project-type:`省略可能な属性です。 プロジェクトの種類「sql server 2005」プロジェクトつまりまたは「sql server 2008」のプロジェクトまたはプロジェクトの「sql server 2012」または「sql server 2014」プロジェクトまたは"sql azure"を示します。 既定値は、「sql server 2014」です。  
   
@@ -70,15 +70,15 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 **Command**  
   
-開くプロジェクト  
+open-project  
   
 既存のプロジェクトを開きます。  
   
 **[スクリプト]**  
   
--   `project-folder`プロジェクトの作成中のフォルダーを示します。 指定したフォルダーが存在しない場合、コマンドが失敗します。  {文字列}  
+-   `project-folder` プロジェクトの作成中のフォルダーを示します。 指定したフォルダーが存在しない場合、コマンドが失敗します。  {string}  
   
--   `project-name`プロジェクトの名前を示します。 指定されたプロジェクトが存在しない場合、コマンドが失敗します。  {文字列}  
+-   `project-name` プロジェクトの名前を示します。 指定されたプロジェクトが存在しない場合、コマンドが失敗します。  {string}  
   
 **構文例:**  
   
@@ -95,7 +95,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 **Command**  
   
-プロジェクトの保存  
+save-project  
   
 移行プロジェクトを保存します。  
   
@@ -108,7 +108,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
 ```  
 **Command**  
   
-閉じるプロジェクト  
+close-project  
   
 移行プロジェクトを閉じます。  
   
@@ -129,11 +129,11 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 -   **参照**コンソールで、UI の機能がサポートされていません。  
   
--   'を作成するスクリプト ファイル' の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)です。  
+-   'を作成するスクリプト ファイル' の詳細については、次を参照してください。[スクリプト ファイルの作成&#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)です。  
   
 **Command**  
   
-接続ソース データベース  
+connect-source-database  
   
 -   ソース データベースへの接続を実行し、ソース データベースが、すべてのメタデータの高レベルのメタデータを読み込みます。  
   
@@ -150,7 +150,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
 ```  
 **Command**  
   
-強制読み込み-ソース/ターゲット-データベース  
+force-load-source/target-database  
   
 -   ソースのメタデータを読み込みます。  
   
@@ -169,7 +169,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
   metabase="<source/target>"/>  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <force-load>  
@@ -180,7 +180,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
 ```  
 **Command**  
   
-再接続ソース データベース  
+reconnect-source-database  
   
 -   ソース データベースへの再接続がソース データベースの接続のコマンドとは異なり、すべてのメタデータが読み込まれない。  
   
@@ -195,7 +195,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
 ```  
 **Command**  
   
-接続先データベース  
+connect-target-database  
   
 -   対象の SQL Server データベースに接続して、メタデータではありませんが、ターゲット データベースの高レベルのメタデータを完全に読み込みます。  
   
@@ -212,7 +212,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
 ```  
 **Command**  
   
-再接続ターゲット データベース  
+reconnect-target-database  
   
 -   ターゲット データベースへの再接続が、接続先データベースのコマンドとは異なり、すべてのメタデータが読み込まれない。  
   
@@ -231,7 +231,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 **Command**  
   
--評価-レポートの生成  
+generate-assessment-report  
   
 -   元のデータベースに対して評価レポートを生成します。  
   
@@ -241,25 +241,25 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 **[スクリプト]**  
   
--   `conversion-report-folder:`評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
+-   `conversion-report-folder:` 評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
   
--   `object-name:`評価レポートの生成 (持てる indivdual オブジェクト名またはグループ オブジェクトの名前) の対象オブジェクトを指定します。  
+-   `object-name:` 評価レポートの生成 (持てる indivdual オブジェクト名またはグループ オブジェクトの名前) の対象オブジェクトを指定します。  
   
--   `object-type:`(オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
+-   `object-type:` (オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
   
--   `conversion-report-overwrite:`既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
+-   `conversion-report-overwrite:` 既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
   
     **既定値:** false を指定します。 (省略可能な属性)  
   
--   `write-summary-report-to:`概要レポートを生成するパスを指定します。  
+-   `write-summary-report-to:` 概要レポートを生成するパスを指定します。  
   
     フォルダー パスが示されているだけの場合、ファイルの名前で**AssessmentReport&lt;n&gt;です。XML**を作成します。 (省略可能な属性)  
   
     レポートの作成には、さらに 2 つのサブ カテゴリがあります。  
   
-    -   `report-errors`("true または false"、既定値は"false"(省略可能な属性) として = =)  
+    -   `report-errors` ("true または false"、既定値は"false"(省略可能な属性) として = =)  
   
-    -   `verbose`("true または false"、既定値は"false"(省略可能な属性) として = =)  
+    -   `verbose` ("true または false"、既定値は"false"(省略可能な属性) として = =)  
   
 **構文例:**  
   
@@ -282,7 +282,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 />  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <generate-assessment-report  
@@ -305,7 +305,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 **Command**  
   
-変換とスキーマ  
+convert-schema  
   
 -   ソースからターゲット スキーマへのスキーマの変換を実行します。  
   
@@ -313,25 +313,25 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 **[スクリプト]**  
   
--   `conversion-report-folder:`評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
+-   `conversion-report-folder:` 評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
   
--   `object-name:`スキーマ (持てる indivdual オブジェクト名またはグループのオブジェクト名) に変換する対象とソース オブジェクトを指定します。  
+-   `object-name:` スキーマ (持てる indivdual オブジェクト名またはグループのオブジェクト名) に変換する対象とソース オブジェクトを指定します。  
   
--   `object-type:`(オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
+-   `object-type:` (オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
   
--   `conversion-report-overwrite:`既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
+-   `conversion-report-overwrite:` 既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
   
     **既定値:** false を指定します。 (省略可能な属性)  
   
--   `write-summary-report-to:`概要レポートを生成するパスを指定します。  
+-   `write-summary-report-to:` 概要レポートを生成するパスを指定します。  
   
     フォルダー パスが示されているだけの場合、ファイルの名前で**SchemaConversionReport&lt;n&gt;です。XML**を作成します。 (省略可能な属性)  
   
     レポートの作成には、さらに 2 つのサブ カテゴリがあります。  
   
-    -   `report-errors`("true または false"、既定値は"false"(省略可能な属性) として = =)  
+    -   `report-errors` ("true または false"、既定値は"false"(省略可能な属性) として = =)  
   
-    -   `verbose`("true または false"、既定値は"false"(省略可能な属性) として = =)  
+    -   `verbose` ("true または false"、既定値は"false"(省略可能な属性) として = =)  
   
 **構文例:**  
   
@@ -354,7 +354,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 />  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <convert-schema  
@@ -375,25 +375,25 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 **[スクリプト]**  
   
--   `conversion-report-folder:`評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
+-   `conversion-report-folder:` 評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
   
--   `object-name:`移行すると見なされるソース オブジェクトを指定します (持てる indivdual オブジェクト名またはグループ オブジェクトの名前) データ。  
+-   `object-name:` 移行すると見なされるソース オブジェクトを指定します (持てる indivdual オブジェクト名またはグループ オブジェクトの名前) データ。  
   
--   `object-type:`(オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
+-   `object-type:` (オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
   
--   `conversion-report-overwrite:`既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
+-   `conversion-report-overwrite:` 既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
   
     **既定値:** false を指定します。 (省略可能な属性)  
   
--   `write-summary-report-to:`概要レポートを生成するパスを指定します。  
+-   `write-summary-report-to:` 概要レポートを生成するパスを指定します。  
   
     フォルダー パスが示されているだけの場合、ファイルの名前で**DataMigrationReport&lt;n&gt;です。XML**を作成します。 (省略可能な属性)  
   
     レポートの作成には、さらに 2 つのサブ カテゴリがあります。  
   
-    -   `report-errors`("true または false"、既定値は"false"(省略可能な属性) として = =)  
+    -   `report-errors` ("true または false"、既定値は"false"(省略可能な属性) として = =)  
   
-    -   `verbose`("true または false"、既定値は"false"(省略可能な属性) として = =)  
+    -   `verbose` ("true または false"、既定値は"false"(省略可能な属性) として = =)  
   
 **構文例:**  
   
@@ -420,7 +420,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 </migrate-data>  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <migrate-data  
@@ -441,15 +441,15 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 **Command**  
   
-マップとスキーマ  
+map-schema  
   
 ターゲット スキーマへのソース データベースのスキーマ マッピングです。  
   
 **[スクリプト]**  
   
--   `source-schema`移行する送信元スキーマを指定します。  
+-   `source-schema` 移行する送信元スキーマを指定します。  
   
--   `sql-server-schema`移行させたい場所、ターゲット スキーマを指定します。  
+-   `sql-server-schema` 移行させたい場所、ターゲット スキーマを指定します。  
   
 **構文例:**  
   
@@ -462,15 +462,15 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
 ```  
 **Command**  
   
-マップとスキーマ  
+map-schema  
   
 ターゲット スキーマへのソース データベースのスキーマ マッピングです。  
   
 **[スクリプト]**  
   
-`source-schema`移行する送信元スキーマを指定します。  
+`source-schema` 移行する送信元スキーマを指定します。  
   
-`sql-server-schema`移行させたい場所、ターゲット スキーマを指定します。  
+`sql-server-schema` 移行させたい場所、ターゲット スキーマを指定します。  
   
 **構文例:**  
   
@@ -489,7 +489,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 **Command**  
   
-同期ターゲット  
+synchronize-target  
   
 -   ターゲット データベースと、対象オブジェクトを同期します。  
   
@@ -499,19 +499,19 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 **[スクリプト]**  
   
--   `object-name:`ターゲット データベース (持てる indivdual オブジェクト名またはグループ オブジェクトの名前) と同期するためと見なされるターゲット オブジェクトを指定します。  
+-   `object-name:` ターゲット データベース (持てる indivdual オブジェクト名またはグループ オブジェクトの名前) と同期するためと見なされるターゲット オブジェクトを指定します。  
   
--   `object-type:`(オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
+-   `object-type:` (オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
   
--   `on-error:`同期エラーを警告またはエラーとして指定するかどうかを指定します。 エラー時に使用できるオプションは:  
+-   `on-error:` 同期エラーを警告またはエラーとして指定するかどうかを指定します。 エラー時に使用できるオプションは:  
   
-    -   警告としてレポートの合計  
+    -   report-total-as-warning  
   
-    -   レポートの各-として-警告  
+    -   report-each-as-warning  
   
-    -   失敗するスクリプト  
+    -   fail-script  
   
--   `report-errors-to:`(省略可能な属性) の同期操作だけフォルダーのパスを指定すると、し、ファイル名では、エラー レポートの場所を指定**TargetSynchronizationReport.XML**を作成します。  
+-   `report-errors-to:` (省略可能な属性) の同期操作だけフォルダーのパスを指定すると、し、ファイル名では、エラー レポートの場所を指定**TargetSynchronizationReport.XML**を作成します。  
   
 **構文例:**  
   
@@ -530,7 +530,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 />  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <synchronize-target  
@@ -539,7 +539,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
    object-type="<object-category>"/>  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <synchronize-target>  
@@ -554,7 +554,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
 ```  
 **Command**  
   
-データベースからの更新  
+refresh-from-database  
   
 -   データベースからのソース オブジェクトを更新します。  
   
@@ -564,19 +564,19 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 コマンド ライン パラメーターとして 1 つまたはいくつかのメタベース ノードが必要です。  
   
--   `object-name:`(持てる indivdual オブジェクト名またはグループ オブジェクトの名前)、転送元データベースから更新する場合と見なされるソース オブジェクトを指定します。  
+-   `object-name:` (持てる indivdual オブジェクト名またはグループ オブジェクトの名前)、転送元データベースから更新する場合と見なされるソース オブジェクトを指定します。  
   
--   `object-type:`(オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
+-   `object-type:` (オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
   
--   `on-error:`更新エラーを警告またはエラーとして指定するかどうかを指定します。 エラー時に使用できるオプションは:  
+-   `on-error:` 更新エラーを警告またはエラーとして指定するかどうかを指定します。 エラー時に使用できるオプションは:  
   
-    -   警告としてレポートの合計  
+    -   report-total-as-warning  
   
-    -   レポートの各-として-警告  
+    -   report-each-as-warning  
   
-    -   失敗するスクリプト  
+    -   fail-script  
   
--   `report-errors-to:`エラー レポートの場所を指定します (省略可能な属性) の更新操作だけフォルダーのパスを指定すると、し、ファイル名で**SourceDBRefreshReport.XML**を作成します。  
+-   `report-errors-to:` エラー レポートの場所を指定します (省略可能な属性) の更新操作だけフォルダーのパスを指定すると、し、ファイル名で**SourceDBRefreshReport.XML**を作成します。  
   
 **構文例:**  
   
@@ -595,7 +595,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 />  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <refresh-from-database  
@@ -604,7 +604,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
    object-type="<object-category>"/>  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <refresh-from-database>  
@@ -619,7 +619,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 **Command**  
   
--スクリプトとして保存  
+save-as-script  
   
 オブジェクトのスクリプトと示されているファイルを保存するために使用メタベース = target、どこでおスクリプトを取得し、実行、同じ対象のデータベースに同期コマンドには、このです。  
   
@@ -627,15 +627,15 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 コマンド ライン パラメーターとして 1 つまたはいくつかのメタベース ノードが必要です。  
   
--   `object-name:`あるスクリプトが保存されるオブジェクトを指定します。 (そのことがある個々 のオブジェクト名またはグループ オブジェクトの名前)  
+-   `object-name:` あるスクリプトが保存されるオブジェクトを指定します。 (そのことがある個々 のオブジェクト名またはグループ オブジェクトの名前)  
   
--   `object-type:`(オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
+-   `object-type:` (オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
   
--   `metabase:`ソースがあるかどうかを指定またはメタベースを対象にします。  
+-   `metabase:` ソースがあるかどうかを指定またはメタベースを対象にします。  
   
--   `destination:`パスまたはスクリプトが保存されるファイル名が指定されていない場合、ファイル名形式 (object_name 属性値) .out でフォルダーを指定します  
+-   `destination:` パスまたはスクリプトが保存されるファイル名が指定されていない場合、ファイル名形式 (object_name 属性値) .out でフォルダーを指定します  
   
--   `overwrite:`true の場合、上書きされます同じファイル名が存在しない場合。 値 (真/偽) 持つことができます。  
+-   `overwrite:` true の場合、上書きされます同じファイル名が存在しない場合。 値 (真/偽) 持つことができます。  
   
 **構文例:**  
   
@@ -654,7 +654,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 />  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <save-as-script  
@@ -671,27 +671,27 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
 ```  
 **Command**  
   
-sql ステートメントの変換  
+convert-sql-statement  
   
--   `context`スキーマ名を指定します。  
+-   `context` スキーマ名を指定します。  
   
--   `destination`ファイルに出力を保存するかどうかを指定します。  
+-   `destination` ファイルに出力を保存するかどうかを指定します。  
   
     この属性が指定されていない場合、変換された T-SQL ステートメントは、コンソールに表示されます。 (省略可能な属性)  
   
--   `conversion-report-folder`評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
+-   `conversion-report-folder` 評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
   
--   `conversion-report-overwrite`既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
+-   `conversion-report-overwrite` 既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
   
     **既定値:** false を指定します。 (省略可能な属性)  
   
--   `write-converted-sql-to`ファイル (または)、変換された T-SQL が格納されるフォルダーのパスを指定します。 組み合わせて、フォルダー パスが指定されている場合、`sql-files`属性に、各ソース ファイルが対応するターゲットの T-SQL でファイルを指定したフォルダーの下に作成します。 組み合わせて、フォルダー パスが指定されている場合、`sql`属性に、変換後の T-SQL はという名前のファイルに書き込まれます。 **Result.out**指定したフォルダーの下。  
+-   `write-converted-sql-to` ファイル (または)、変換された T-SQL が格納されるフォルダーのパスを指定します。 組み合わせて、フォルダー パスが指定されている場合、`sql-files`属性に、各ソース ファイルが対応するターゲットの T-SQL でファイルを指定したフォルダーの下に作成します。 組み合わせて、フォルダー パスが指定されている場合、`sql`属性に、変換後の T-SQL はという名前のファイルに書き込まれます。 **Result.out**指定したフォルダーの下。  
   
--   `sql`変換する DB2 sql ステートメントの指定を使用して 1 つまたは複数のステートメントを区切ることができます、「;」  
+-   `sql` 変換する DB2 sql ステートメントの指定を使用して 1 つまたは複数のステートメントを区切ることができます、「;」  
   
--   `sql-files`T-SQL コードに変換する必要がある sql ファイルのパスを指定します。  
+-   `sql-files` T-SQL コードに変換する必要がある sql ファイルのパスを指定します。  
   
--   `write-summary-report-to`レポートを生成するパスを指定します。 フォルダー パスが示されているだけの場合、ファイルの名前で**ConvertSQLReport.XML**を作成します。 (省略可能な属性)  
+-   `write-summary-report-to` レポートを生成するパスを指定します。 フォルダー パスが示されているだけの場合、ファイルの名前で**ConvertSQLReport.XML**を作成します。 (省略可能な属性)  
   
     レポートの作成が viz サブカテゴリの一覧をさらに 2します..,:  
   
@@ -730,7 +730,7 @@ sql ステートメントの変換
   
 </convert-sql-statement>  
 ```  
-内の複数の  
+または  
   
 ```  
 <convert-sql-statement  
@@ -753,7 +753,7 @@ sql ステートメントの変換
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-内の複数の  
+または  
   
 ```  
 <convert-sql-statement  
@@ -768,15 +768,15 @@ sql ステートメントの変換
 ```  
   
 ## <a name="next-step"></a>次の手順  
-コマンド ライン オプションについては、次を参照してください。 [SSMA コンソール &#40;DB2ToSQL&#41; でのコマンド ライン オプション](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md)です。  
+コマンド ライン オプションについては、次を参照してください。 [SSMA コンソールでのコマンド ライン オプション&#40;DB2ToSQL&#41; ](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md)です。  
   
-サンプル コンソール スクリプト ファイルについては、次を参照してください[サンプル コンソール スクリプト ファイル &#40;DB2ToSQL&#41; の操作。](../../ssma/db2/working-with-the-sample-console-script-files-db2tosql.md)  
+サンプル コンソール スクリプト ファイルについては、次を参照してください[サンプル コンソール スクリプト ファイルで作業&#40;DB2ToSQL。&#41;](../../ssma/db2/working-with-the-sample-console-script-files-db2tosql.md)  
   
 次の手順は、プロジェクトの要件によって異なります。  
   
--   パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[パスワードを管理する &#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md)です。  
+-   パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[管理パスワード&#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md)です。  
   
--   レポートの生成に、次を参照してください。[レポートを生成する &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)です。  
+-   レポートの生成に、次を参照してください。[を生成するレポート&#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)です。  
   
--   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)です。  
+-   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)です。  
   

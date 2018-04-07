@@ -1,26 +1,26 @@
 ---
-title: "PDW (Analytics Platform System) 用管理パックの SCOM のインポートします。"
+title: PDW (Analytics Platform System) 用管理パックの SCOM のインポートします。
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa735041-8e58-4886-ae3b-36f3c6298b12
-caps.latest.revision: "6"
-ms.openlocfilehash: 179395b7befdf934fcc44532944f4b535b9d3c5a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 6
+ms.openlocfilehash: d8accd7106cce2274e60793e123779e87b8dfd49
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="import-the-scom-management-pack-for-pdw"></a>PDW の SCOM 管理パックをインポートします。
 SQL Server PDW の System Center Operations Manager (SCOM) 管理パックをインポートする手順に従います。 管理パックは、SCOM から SQL Server PDW の監視に必要なです。  
@@ -30,7 +30,7 @@ SQL Server PDW の System Center Operations Manager (SCOM) 管理パックをイ
   
 System Center Operations Manager 2007 R2 は、インストールして実行する必要があります。  
   
-管理パックをインストールする必要があります。 参照してください[SCOM 管理パック &#40; をインストールAnalytics Platform System &#41;](install-the-scom-management-packs.md).  
+管理パックをインストールする必要があります。 参照してください[SCOM 管理パックをインストール&#40;Analytics Platform System&#41;](install-the-scom-management-packs.md)です。  
   
 ## <a name="Step1"></a>手順 1: SQL Server アプライアンス ベースの管理パックをインポートします。  
   
@@ -83,7 +83,7 @@ System Center Operations Manager 2007 R2 は、インストールして実行す
     ![[閉じる] をクリックして](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   
 ## <a name="next-step"></a>次の手順  
-管理パックをインポートしたら、これでは、次の手順に進む:[モニター Analytics Platform System &#40; を構成する SCOMAnalytics Platform System &#41;](configure-scom-to-monitor-analytics-platform-system.md).  
+管理パックをインポートしたら、これでは、次の手順に進む:[モニター分析プラットフォーム システムに構成する SCOM &#40;Analytics Platform System&#41;](configure-scom-to-monitor-analytics-platform-system.md)です。  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

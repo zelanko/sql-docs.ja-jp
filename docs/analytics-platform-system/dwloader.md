@@ -1,25 +1,25 @@
 ---
-title: "dwloader Parallel Data Warehouse 用のコマンド ライン ローダー"
+title: dwloader Parallel Data Warehouse 用のコマンド ライン ローダー
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "**dwloader**を既存のテーブルに一括でテーブルの行を読み込む並列データ ウェアハウス (PDW) コマンド ライン ツールです。"
+description: '**dwloader**を既存のテーブルに一括でテーブルの行を読み込む並列データ ウェアハウス (PDW) コマンド ライン ツールです。'
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: 
-ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 90
+ms.openlocfilehash: 83d04928aa0c8f7fe0156f557466edccc36470dd
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="dwloader-command-line-loader"></a>dwloader のコマンド ライン ローダー
 **dwloader**を既存のテーブルに一括でテーブルの行を読み込む並列データ ウェアハウス (PDW) コマンド ライン ツールです。 行を読み込むときに、テーブルの末尾にすべての行を追加することができます (*追加モード*または*fastappend モード*)、新しい行を追加および既存の行を更新 (*upsert モード*)、またはすべてを削除します。既存の読み込みの前に行とし、空のテーブルにすべての行を挿入 (*モードを再読み込み*)。  
@@ -140,7 +140,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 パラメーター ファイルを使用する*parameter_file_name*、コマンド ライン パラメーターの代わりにします。 *parameter_file_name*以外のコマンド ライン パラメーターを含めることができます*user_name*と*パスワード*です。 パラメーターを指定してパラメーター ファイルのコマンドラインで、コマンドラインは、file パラメーターを上書きします。  
   
-せずパラメーター ファイルに 1 つのパラメーターが含まれています、  **-**  1 行のプレフィックス。  
+せずパラメーター ファイルに 1 つのパラメーターが含まれています、 **-** 1 行のプレフィックス。  
   
 例 :  
   
@@ -491,7 +491,7 @@ Char、nchar、varchar、および nvarchar のフィールドの右側と左側
 ## <a name="return-code-values"></a>リターン コードの値  
 0 (成功) またはその他の整数値 (失敗)  
   
-コマンド ウィンドウまたはバッチ ファイルで使用して`errorlevel`リターン コードを表示します。 例:  
+コマンド ウィンドウまたはバッチ ファイルで使用して`errorlevel`リターン コードを表示します。 以下に例を示します。  
   
 ```  
 dwloader  

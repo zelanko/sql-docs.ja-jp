@@ -1,24 +1,24 @@
 ---
-title: "[アクセス許可の付与]"
+title: '[アクセス許可の付与]'
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.openlocfilehash: d7d685d15eb0e5704698ebd2b79c20589f49ee16
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35542a9ea2544f0bdd357d3609937e1596e00a3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="grant-permissions"></a>[アクセス許可の付与]
 
@@ -221,7 +221,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 -->
 
 ## <a name="grant-permissions-to-monitor-the-appliance"></a>アプライアンスを監視するアクセス許可を付与します。
-SQL Server PDW アプライアンスは、管理コンソールまたは SQL Server PDW のいずれかのシステム ビューを使用して監視できます。 ログインには、サーバー レベルが必要な**VIEW SERVER STATE**アプライアンスを監視するアクセス許可。 ログインが必要な**ALTER ANY CONNECTION**管理者コンソールを使用して接続を終了する権限、または**KILL**コマンド。 管理者コンソールを使用して必要なアクセス許可については、次を参照してください[管理コンソール &#40; を使用するアクセス許可の付与。SQL Server PDW &#41;](#grant-permissions-to-use-the-admin-console).  
+SQL Server PDW アプライアンスは、管理コンソールまたは SQL Server PDW のいずれかのシステム ビューを使用して監視できます。 ログインには、サーバー レベルが必要な**VIEW SERVER STATE**アプライアンスを監視するアクセス許可。 ログインが必要な**ALTER ANY CONNECTION**管理者コンソールを使用して接続を終了する権限、または**KILL**コマンド。 管理者コンソールを使用して必要なアクセス許可については、次を参照してください。[管理コンソールを使用するアクセス許可を付与&#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console)です。  
   
 ### <a name="PermsAdminConsole"></a>システム ビューを使用してアプライアンスを監視するアクセス許可を付与します。  
 次の SQL ステートメントがという名前のログインを作成する`monitor_login`し、付与、 **VIEW SERVER STATE**するアクセス許可、`monitor_login`ログインします。  
@@ -249,7 +249,7 @@ GO
 管理者ログインを作成するを参照してください。[固定サーバー ロール](pdw-permissions.md#fixed-server-roles)です。  
   
 ## <a name="see-also"></a>参照
-[ログインを作成します。](../t-sql/statements/create-login-transact-sql.md)  
+[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [ユーザーを作成します。](../t-sql/statements/create-user-transact-sql.md)  
 [ロールを作成します。](../t-sql/statements/create-role-transact-sql.md)  
 [負荷](load-overview.md)  

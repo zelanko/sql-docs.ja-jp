@@ -10,7 +10,7 @@ ms.component: ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,11 +19,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 01bdcb939413fb0ff917d7e037a3ab5124bb4075
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 61d04588991764edb1d470f190ebd9b3ce08636c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>強化された日付と時刻型 (OLE DB) の一括コピーの変更
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,7 +87,7 @@ ms.lasthandoff: 03/30/2018
 ## <a name="bcp-types-in-msoledbsqlh"></a>Msoledbsql.h 内の BCP 型  
  次の種類は、msoledbsql.h で定義されます。 これらの型がで渡される、 *eUserDataType* ibcpsession::bcpcolfmt OLE DB でのパラメーターです。  
   
-|ファイル ストレージ型|ホスト ファイル データ型|Msoledbsql.h ibcpsession::bcpcolfmt で使用するために入力します。|[値]|  
+|ファイル ストレージ型|ホスト ファイル データ型|Msoledbsql.h ibcpsession::bcpcolfmt で使用するために入力します。|値|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |DateTime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
@@ -134,6 +134,6 @@ ms.lasthandoff: 03/30/2018
 |なし|既存の [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以前のバージョンの動作が維持されます。|  
   
 ## <a name="see-also"></a>参照     
- [日付と時刻の強化 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [日付と時刻の強化 (&) #40";"OLE DB"&"#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

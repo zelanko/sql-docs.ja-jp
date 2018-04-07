@@ -10,7 +10,7 @@ ms.component: ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 96f21a14b48e0cc5df2042149679f9bd848d38e6
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 4e89b51abc13d346ef0ed6d0ef77a5cb218157da
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="stored-procedures---calling"></a>ストアド プロシージャの呼び出し
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -122,7 +122,7 @@ ms.lasthandoff: 03/30/2018
 {rpc SalesByCategory}  
 ```  
   
- RPC エスケープ シーケンスを示すサンプル アプリケーションを参照してください[ストアド プロシージャ &#40; を実行。RPC 構文 &#41; を使用します。リターン コードと出力パラメーター &#40; OLE DB &#41; の処理](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ RPC エスケープ シーケンスを示すサンプル アプリケーションを参照してください[ストアド プロシージャ & #40; を実行。RPC 構文 & #41; を使用します。リターン コードと出力パラメーター (&) #40; OLE DB & #41; の処理](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Transact-SQL EXECUTE ステートメント  
  ODBC CALL エスケープ シーケンスおよび RPC エスケープ シーケンスは、ストアド プロシージャの呼び出しに推奨される方法ではなく、 [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md)ステートメントです。 SQL Server の OLE DB Driver は、の RPC 機構を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]コマンドの処理を最適化します。 この RPC プロトコルでは、サーバー側で実行されるパラメーター処理やステートメントの解析作業の多くを排除することで、パフォーマンスを向上しています。  

@@ -1,30 +1,31 @@
 ---
-title: "プロジェクトの設定 (変換) (SybaseToSQL) |Microsoft ドキュメント"
-ms.custom: 
+title: プロジェクトの設定 (変換) (SybaseToSQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64845d9450c412ca975d541f1171a725271ec502
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6822c6f320bf7057eb05f75719bf19edfb4d24e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>プロジェクトの設定 (変換) (SybaseToSQL)
 [変換] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA を Sybase Adaptive Server Enterprise (ASE) 構文に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure の構文。  
@@ -271,7 +272,7 @@ ASE プロキシ テーブルに変換されますを指定します[!INCLUDE[ss
 **既定/Optimistic/フル モード:**エラーでマーク  
   
 **RAISERROR の基本メッセージ数**  
-ASE ユーザー メッセージは、各データベースに格納されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ユーザー メッセージが集中的に格納されで利用できる、 **sys.messages**カタログ ビューです。 さらに ASE ユーザー メッセージ開始 20000 が[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]エラー メッセージが 50001 から開始します。  
+ASE ユーザー メッセージは、各データベースに格納されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ユーザー メッセージが集中的に格納されで利用できる、 **sys.messages**カタログ ビューです。 さらに ASE ユーザー メッセージ開始 20000 が[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]エラー メッセージが 50001 から開始します。  
   
 この設定に変換するメッセージ番号を ASE ユーザーを追加する数を指定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ユーザー メッセージです。 場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ユーザー メッセージを持つ、 **sys.messages**カタログ ビューでは、この番号は高い値を変更する必要があります。 これは、既存のメッセージ番号と変換後のメッセージ番号が競合しないようにします。  
   
@@ -334,7 +335,7 @@ ASE のすべての入力式が NULL である場合にのみ、CHARINDEX は NU
 **フル モード:** Replace 関数  
   
 **DATALENGTH 関数**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure と ASE DATALENGTH 関数から返される値は 1 つの領域値が異なります。 この場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/SQL Azure 0 ASE 1 を返します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] または SQL Azure と ASE DATALENGTH 関数から返される値は 1 つの領域値が異なります。 この場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/SQL Azure 0 ASE 1 を返します。  
   
 -   ASE 動作を使用するには、次のように選択します。 **Replace 関数**です。 DATALENGTH 関数へのすべての呼び出しは、Sybase ASE 動作をエミュレートするために CASE 式に置き換えられます。  
   
@@ -385,7 +386,7 @@ ASE を省略可能なサポート*user_id* INDEX_COL 関数に渡す引数た�
 **NEXT_IDENTITY 関数**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure の NEXT_IDENTITY システム関数ではありません。  
   
--   ASE 動作を使用するには、次のように選択します。**変換関数**です。 NEXT_IDENTITY 関数へのすべての呼び出しは、式 (IDENT_CURRENT(parameter Value) + Sybase ASE 動作をエミュレートする IDENT_INCR(parameter Value) で置き換えられます。  
+-   ASE 動作を使用するには、次のように選択します。**変換関数**です。 NEXT_IDENTITY 関数へのすべての呼び出しは、式 (IDENT_CURRENT(parameter Value) + Sybase ASE 動作をエミュレートする IDENT_INCR(parameter Value) で置き換えられます  
   
 -   エラー メッセージを印刷するは、その NEXT_IDENTITY が発生するたびに、**エラーでマーク**です。 SSMA は、関数への参照は変換されませんし、エラー コメントを指定してステートメントをマークします。  
   
@@ -455,5 +456,5 @@ ASE、関数で`SUBSTRING(expression, start, length)`式の文字数より大き
 > SQL Azure に接続しているときは、既定では True です。  
   
 ## <a name="see-also"></a>参照  
-[ユーザー インターフェイス リファレンス &#40;です。SybaseToSQL &#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
+[ユーザー インターフェイス リファレンス&#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
   

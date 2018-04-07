@@ -1,30 +1,31 @@
 ---
-title: "SQL Server (DB2ToSQL) にデータベース オブジェクトを読み込み、変換された |Microsoft ドキュメント"
+title: SQL Server (DB2ToSQL) にデータベース オブジェクトを読み込み、変換された |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d662bcab0fe8c804b75f7908ca6fc04f2e96a650
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3997b2e1284513d92c76aefbb582f6cbebb81c7b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>SQL Server (DB2ToSQL) にデータベース オブジェクトを変換後の読み込み
 DB2 スキーマを変換した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に結果として得られる、データベース オブジェクトを読み込むことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 SSMA は、オブジェクトを作成したか、またはオブジェクトのスクリプトを作成して、スクリプトを実行します。 SSMA によりの実際の内容で対象のメタデータを更新する、また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。  
@@ -99,7 +100,7 @@ SSMA を使用して作成する[!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **ファイル** メニューのをポイント**開く**、順にクリック**ファイル**です。  
   
-2.  **開く** ダイアログ ボックスで、スクリプト ファイルを選択し、[!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+2.  **開く** ダイアログ ボックスで、スクリプト ファイルを選択し、 [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
 3.  完全なスクリプトを実行するキーを押して、 **f5 キーを押して**キー。  
   

@@ -21,13 +21,13 @@ ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
 caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8eb96fb924a26d691db1ba6577d0b6f9c93e49ee
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4926712b260fe20dc42518ed1bccb70bb0ab306c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA コンソール (SybaseToSQL) でのコマンド ライン オプション
 Microsoft は、堅牢な一連の実行および SSMA アクティビティを制御するコマンド ライン オプションを提供します。 次のセクションでは、同じを詳しく説明します。  
@@ -95,7 +95,7 @@ Microsoft は、堅牢な一連の実行および SSMA アクティビティを�
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 出力のオプション: x/xmloutput [xmloutputfile]  
 このコマンドはコンソールにするか、xml ファイルを xml 形式でコマンドの出力メッセージを出力するために使用されます。  
   
-2 つのオプション使用できるが、xmloutput viz。  
+2 つのオプション使用できるが、xmloutput viz..,:  
   
 -   Xmloutput スイッチの後にファイル パスが指定した場合は、ファイルに出力がリダイレクトされます。  
   
@@ -165,21 +165,21 @@ SSMA コンソールのオプションの構文の概要が表示されます。
   
 `C:\>SSMAforSybaseConsole.EXE -?`  
   
-SSMA コンソール コマンド ライン オプションの表形式の表示を参照してください[付録 - 1 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/appendix-1-sybasetosql.md).  
+SSMA コンソール コマンド ライン オプションの表形式の表示を参照してください[付録 - 1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md)です。  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>SecurePassword ヘルプ オプション: – securepassword-?/help  
 SSMA コンソールのオプションの構文の概要が表示されます。  
   
 `C:\>SSMAforSybaseConsole.EXE -securepassword -?`  
   
-SSMA コンソール コマンド ライン オプションの表形式の表示を参照してください[付録 - 1 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/appendix-1-sybasetosql.md)  
+SSMA コンソール コマンド ライン オプションの表形式の表示を参照してください[付録 - 1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md)  
   
 ### <a name="next-step"></a>次の手順  
 次の手順は、プロジェクトの要件によって異なります。  
   
--   パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[パスワードの管理 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/managing-passwords-sybasetosql.md).  
+-   パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[管理パスワード&#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)です。  
   
--   レポートの生成に、次を参照してください。[レポートの生成 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
+-   レポートの生成に、次を参照してください。[を生成するレポート&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)です。  
   
--   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング &#40;です。SybaseToSQL &#41;](../../ssma/sybase/troubleshooting-sybasetosql.md).  
+-   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)です。  
   

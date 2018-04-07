@@ -1,30 +1,31 @@
 ---
-title: "SQL Server (DB2eToSQL) への接続 |Microsoft ドキュメント"
+title: SQL Server (DB2eToSQL) への接続 |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1530b84e785a0c707f4a0d8ca66b273ca697ccde
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a985f474e67c846fcb7d4b0428f8f61ba3e010e9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>SQL Server (DB2eToSQL) に接続します。
 DB2 データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014 または Azure の SQL DB がこれらのターゲット インスタンスのいずれかに接続する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 SSMA がのインスタンス内のすべてのデータベースに関するメタデータを取得して接続すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]でデータベースのメタデータを表示し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラー。 SSMA のインスタンスに関する情報を格納する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に接続しているが、パスワードは保存されません。  
@@ -49,7 +50,7 @@ DB2 データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnov
 ## <a name="establishing-a-sql-server-connection"></a>SQL Server の接続を確立します。  
 DB2 データベース オブジェクトを変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]構文のインスタンスへの接続を確立する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]DB2 データベースやデータベースを移行します。  
   
-接続のプロパティを定義するときは、オブジェクトとデータを移行するデータベースを指定します。 接続した後は、DB2 スキーマ レベルでは、このマッピングをカスタマイズすることができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 詳細については、次を参照してください。 [SQL Server スキーマ &#40;DB2ToSQL&#41; への DB2 スキーマのマッピング](../../ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md)です。  
+接続のプロパティを定義するときは、オブジェクトとデータを移行するデータベースを指定します。 接続した後は、DB2 スキーマ レベルでは、このマッピングをカスタマイズすることができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 詳細については、次を参照してください。 [SQL Server スキーマへの DB2 スキーマのマッピング&#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md)です。  
   
 > [!IMPORTANT]  
 > 接続しようとする前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、ことを確認して、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]が実行されていると、接続を受け入れることができます。  
@@ -91,10 +92,10 @@ DB2 データベース オブジェクトを変換する前に[!INCLUDE[ssNoVers
 ||||||  
 |-|-|-|-|-|  
 |**プロジェクトの種類と対象サーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 <br />(Version:13.x)|Azure SQL DB|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|可|可|可||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014||可|可||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014|||可||  
-|Azure SQL DB||||可|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|はい|[ユーザー アカウント制御]|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014||はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014|||はい||  
+|Azure SQL DB||||はい|  
   
 > [!IMPORTANT]  
 > バージョンに従っていませんが、プロジェクトの種類に従って、データベース オブジェクトの変換は実行が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に接続しています。 場合に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 または Azure SQL DB します。  
@@ -115,14 +116,14 @@ DB2 データベース オブジェクトを変換する前に[!INCLUDE[ssNoVers
 ## <a name="next-step"></a>次の手順  
 次の手順では、プロジェクトのニーズによって異なります。  
   
--   DB2 スキーマ間のマッピングをカスタマイズして[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースおよびスキーマを参照してください。 [SQL Server スキーマ &#40;DB2ToSQL&#41; への DB2 スキーマのマッピング](../../ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md)です。  
+-   DB2 スキーマ間のマッピングをカスタマイズして[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースおよびスキーマを参照してください。 [SQL Server スキーマへの DB2 スキーマのマッピング&#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md)です。  
   
--   プロジェクトの構成オプションをカスタマイズするを参照してください。[プロジェクトの設定 &#40;です。変換&#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)セクションを関連するとします。  
+-   プロジェクトの構成オプションをカスタマイズするを参照してください。[プロジェクト設定&#40;変換&#41; &#40;DB2ToSQL&#41; ](../../ssma/db2/project-settings-conversion-db2tosql.md)セクションを関連するとします。  
   
 -   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください。[マッピング DB2 と SQL Server データ型 &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)です。  
   
 -   DB2 データベース オブジェクトの定義を変換できる場合は、次のタスクを実行する必要はありません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト定義します。 詳細については、次を参照してください。 [DB2 スキーマを変換する &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)です。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server &#40;DB2ToSQL&#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[SQL Server にデータベースを移行する DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

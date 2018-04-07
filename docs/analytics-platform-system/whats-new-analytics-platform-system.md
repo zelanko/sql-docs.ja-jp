@@ -1,23 +1,23 @@
 ---
-title: "Analytics Platform System: スケール アウト データ ウェアハウスの新機能"
+title: 'Analytics Platform System: スケール アウト データ ウェアハウスの新機能'
 author: happynicolle
 ms.author: nicw;barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Microsoft® Analytics Platform System、MPP SQL Server 並列データ ウェアハウスをホストするスケール アウト、内部設置型アプライアンスの新機能を参照してください。"
+description: Microsoft® Analytics Platform System、MPP SQL Server 並列データ ウェアハウスをホストするスケール アウト、内部設置型アプライアンスの新機能を参照してください。
 ms.date: 11/28/2016
 ms.topic: article
-ms.openlocfilehash: eeeb41045527e72856edfb8bdb40becc462bde07
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6af71d6b7c2bc67aeea0fdc5c1af2e668f537c5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="whats-new-in-analytics-platform-system-2016-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System 2016、スケール アウト MPP データ ウェアハウスの新機能
 Microsoft® Analytics Platform System (APS) 2016、アプライアンスの最新の更新プログラムは、スケール アウト、内部設置型のアプライアンス MPP SQL Server 並列データ ウェアハウスをホストする新しい内容を確認します。 
@@ -32,7 +32,7 @@ APS 2016 では、それらの改良の T-SQL の互換性をサポートしま�
 
 - [列レベルの SQL 照合順序][]に加えて Windows 照合順序がサポートされています。
 - [クラスター化列ストア インデックスの非クラスター化インデックス][]クラスター化列ストア インデックスに特定の値を検索するクエリのパフォーマンスが向上します。 
-- [このオプションを選択するとしてください.に][] 
+- [SELECT...INTO][] 
 - [sp_spaceused()][]ディスク領域が使用されるか、テーブルまたはデータベースで予約されていますが表示されます。
 - [幅の広いテーブル][]サポートは SQL Server 2016 と同じです。 行サイズの 32 K の以前の制限は存在しません。 
 
@@ -40,7 +40,7 @@ APS 2016 では、それらの改良の T-SQL の互換性をサポートしま�
 
 - [Varchar (max)][]、 [nvarchar (max)][]と[varbinary (max)][]です。 これらの LOB データ型では、2 GB の最大サイズがあります。 オブジェクトによって使用されるこれらの読み込みに[bcp ユーティリティ][]です。 Polybase と dwloader は、これらのデータ型を現在サポートされません。 
 - [SYSNAME][]
-- [一意識別子][]
+- [UNIQUEIDENTIFIER][]
 - [数値][]および DECIMAL データ型。
 
 ### <a name="window-functions"></a>ウィンドウ関数
@@ -53,7 +53,7 @@ APS 2016 では、それらの改良の T-SQL の互換性をサポートしま�
 
 ### <a name="security-functions"></a>セキュリティ関数
 
-- [CHECKSUM()][]と[BINARY_CHECKSUM()][]
+- [CHECKSUM()][] and [BINARY_CHECKSUM()][]
 - [HAS_PERMS_BY_NAME()][]
 
 ### <a name="additional-functions"></a>追加の関数
@@ -99,12 +99,12 @@ APS 2016 へのアップグレードをインストールまたは方で、以�
 [nvarchar (max)]:https://msdn.microsoft.com/library/ms186939.aspx
 [varbinary (max)]:https://msdn.microsoft.com/library/ms188362.aspx
 [SYSNAME]:https://msdn.microsoft.com/library/ms188021.aspx
-[このオプションを選択するとしてください.に]:https://msdn.microsoft.com/library/ms188029.aspx
+[SELECT...INTO]:https://msdn.microsoft.com/library/ms188029.aspx
 [sp_spaceused()]:https://msdn.microsoft.com/library/ms188776.aspx
 [幅の広いテーブル]:https://msdn.microsoft.com/library/ms143432.aspx
 [BULK INSERT]:https://msdn.microsoft.com/library/ms188365.aspx
 [bcp ユーティリティ]:https://msdn.microsoft.com/library/ms162802.aspx
-[一意識別子]:https://msdn.microsoft.com/library/ms187942.aspx
+[UNIQUEIDENTIFIER]:https://msdn.microsoft.com/library/ms187942.aspx
 [数値]:https://msdn.microsoft.com/library/ms187746.aspx
 [ROWS または RANGE]:https://msdn.microsoft.com/library/ms189461.aspx
 [FIRST_VALUE]:https://msdn.microsoft.com/library/hh213018.aspx

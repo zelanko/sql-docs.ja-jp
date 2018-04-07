@@ -13,18 +13,21 @@ ms.technology:
 - drivers
 ms.topic: article
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a0cbb8a2b6eff8e3a612039616f9b497a2ea2737
-ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
+ms.openlocfilehash: ed4b2623b7a80358622b8153d316428b742ef31e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 認証を使用して接続します。
+
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
 この記事では、SQL Server 用 Microsoft JDBC Driver 6.0 (またはそれ以上) は、Azure Active Directory の認証の機能を使用する Java アプリケーションを開発する方法について説明します。
 
 Azure Active Directory (AAD) の認証は、Azure SQL Database v12 への接続機構を使用する Azure Active Directory で id を使用します。 SQL Server 認証の代わりとしてのデータベース ユーザーの id を一元的に管理するのにには、Azure Active Directory 認証を使用します。 JDBC ドライバーでは、Azure SQL DB に接続する JDBC 接続文字列で、Azure Active Directory の資格情報を指定することができます。 Azure Active Directory 認証を構成する方法については、次を参照してください。[認証して SQL Database を使用して Azure Active Directory に接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)です。 

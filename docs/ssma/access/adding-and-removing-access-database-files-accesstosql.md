@@ -1,15 +1,16 @@
 ---
-title: "追加して、アクセスを削除してデータベース ファイル (AccessToSQL) |Microsoft ドキュメント"
+title: 追加して、アクセスを削除してデータベース ファイル (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - scanning for database files
 - searching for database files
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64e1bc5dd6b78df1f24ee03b65cfdf6b796c0e39
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9553d01b1fb8c96281fd108d84645d785bd9f028
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>追加して、Access データベース ファイル (AccessToSQL) を削除します。
 アクセス データを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure、SSMA プロジェクトに 1 つまたは複数の Access データベースを追加する必要があります。 これらのデータベースは、Access 97 以降にする必要があります。 アクセスの以前のバージョンからのデータベースがある場合は、新しいバージョンにデータベースを変換する必要があります。 これを行うを開き、SSMA を追加する前に、Access 97 またはそれ以降のバージョンでデータベースを保存しています。  
@@ -94,7 +95,7 @@ SSMA プロジェクトに 1 つまたは複数のデータベースを追加し
   
     使用することができます、**すべて選択**と**すべてクリア**をオンまたはオフのすべてのデータベース一覧の上部にあるボタンです。 CTRL キーを押しながら複数のデータベースを選択したり、さまざまなデータベースを選択するように、SHIFT キーを保持できます。  
   
-7.  **[次へ]** をクリックします。  
+7.  **[次へ]**をクリックします。  
   
 8.  確認してください ページで、をクリックして**完了**です。  
   

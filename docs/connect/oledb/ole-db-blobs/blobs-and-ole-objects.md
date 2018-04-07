@@ -10,7 +10,7 @@ ms.component: ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,18 +23,18 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2afff6a5d9f19c0db2063ab0e0c486cc7460e971
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 6bc3707dca715ec5b6bee83d181c4792aea6c949
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB と OLE オブジェクト
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   OLE DB Driver for SQL Server を公開、 **ISequentialStream**コンシューマーへのアクセスをサポートするインターフェイス[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**、**テキスト**、**イメージ**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、および xml データ型とバイナリ ラージ オブジェクト (Blob)。 **読み取り**メソッド**ISequentialStream**コンシューマーが扱いやすい単位で多くのデータを取得することができます。  
   
- この機能を示すサンプルについては、次を参照してください。[大規模なデータの設定 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)です。  
+ この機能を示すサンプルについては、次を参照してください。[大規模なデータの設定 (&) #40";"OLE DB"&"#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)です。  
   
  コンシューマーに実装された、OLE DB Driver for SQL Server を使用できます**IStorage**データ変更のため、コンシューマーはアクセサーのインターフェイス ポインターを提供するときのインターフェイスがバインドされています。  
   
