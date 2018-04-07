@@ -1,27 +1,28 @@
 ---
-title: "Linux および macOS - 高可用性と災害復旧の ODBC ドライバー |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/19/2017
+title: Linux および macOS - 高可用性と災害復旧の ODBC ドライバー |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53553cc88d771aeb7ef7d537309583fb49e1aaa6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e69df64ad4e5c5e5319719fe14f380c745b0aeba
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux および macOS 高可用性と災害復旧のサポート上の ODBC ドライバー
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -74,29 +75,11 @@ DNS サーバーの最初の返された IP アドレスが接続可能でない
 2.  アプリケーションに **ApplicationIntent=ReadWrite** が使用されているが、セカンダリ レプリカの場所が読み取り専用アクセスとして構成されている。  
   
 プライマリ レプリカが読み取り専用ワークロードを拒否するように構成されているとき、接続文字列に **ApplicationIntent=ReadOnly**が含まれていると、接続は失敗します。  
-  
-## <a name="specifying-application-intent"></a>アプリケーション インテントの指定  
-**ApplicationIntent=ReadOnly**が指定されている場合、AlwaysOn が有効になっているデータベースにクライアントが接続するときに読み取りワークロードが要求されます。 サーバーは、接続時と USE データベース ステートメントの中にですが、AlwaysOn 対応データベースにのみ、インテントを強制します。
 
-**ApplicationIntent** キーワードは、従来の読み取り専用データベースに対しては無効です。  
 
-対象の AlwaysOn データベースのワークロードの読み取りを許可または禁止することができます (を使用して、 **ALLOW_CONNECTIONS**の句、 **PRIMARY_ROLE**と**SECONDARY_ROLE** [!INCLUDE[tsql](../../../includes/tsql_md.md)]ステートメントです)。  
-  
-読み取り専用ルーティングを有効にするには、 **ApplicationIntent** キーワードを使用します。  
-  
-## <a name="read-only-routing"></a>読み取り専用ルーティング  
-読み取り専用ルーティングは、データベースの読み取り専用レプリカの可用性を実現する機能です。 読み取り専用のルーティングを有効にするには  
-  
-1.  Always On 可用性グループ リスナーに接続します。  
-  
-2.  **ApplicationIntent** 接続文字列キーワードを **ReadOnly**に設定する必要があります。  
-  
-3.  データベース管理者は、読み取り専用ルーティングを有効にするように可用性グループを構成する必要があります。  
-  
-読み取り専用ルーティングを使用する複数の接続が、複数の読み取り専用レプリカに接続する可能性があります。 データベース同期の変更やサーバーのルーティング構成の変更によって、クライアントが別の読み取り専用レプリカに接続される場合があります。 すべての読み取り専用要求を同じ読み取り専用レプリカに接続するには、可用性グループ リスナーを **Server** 接続キーワードに渡さないでください。 代わりに、読み取り専用インスタンスの名前を指定します。  
-  
-読み取り専用ルーティングには、プライマリへの接続よりも接続時間が長くなることが予想されます。 したがって、ログイン タイムアウトを長くします。 読み取り専用ルーティングは、まずプライマリに接続し、次に使用できる読み取り可能なセカンダリを検索します。  
-  
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="odbc-syntax"></a>ODBC 構文
 
 2 つの ODBC 接続文字列キーワードをサポートして[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]:  
@@ -109,7 +92,7 @@ ODBC 接続文字列キーワードの詳細については、「 [SQL Server Na
   
 同等の接続属性は次のとおりです。
   
--   **された SQL_COPT_SS_APPLICATION_INTENT**  
+-   **SQL_COPT_SS_APPLICATION_INTENT**  
   
 -   **SQL_COPT_SS_MULTISUBNET_FAILOVER**  
   

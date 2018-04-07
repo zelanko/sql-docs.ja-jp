@@ -1,27 +1,28 @@
 ---
-title: "高可用性、災害復旧の JDBC ドライバー サポート |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/19/2017
+title: 高可用性、災害復旧の JDBC ドライバー サポート |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 621f31fbeddee6ec3705396b5d049f5496f4ae04
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 1e41503e9b319d1e4372d93d835c4791563fd2da
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>高可用性、障害回復のための JDBC Driver のサポート
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -63,7 +64,7 @@ MultiSubnetFailover を指定して、可用性グループまたはフェール
   
  指定する**multiSubnetFailover = true**可用性グループ リスナーまたはフェールオーバー クラスター インスタンス以外のものへの接続は負の値のパフォーマンスに影響されない可能性があり、サポートされていません。  
   
- セキュリティ マネージャーがインストールされていない場合、Java 仮想マシンにより仮想 IP アドレス (VIP) が期限付きでキャッシュされます。この期限は、既定で JDK 実装および Java プロパティ (networkaddress.cache.ttl および networkaddress.cache.negative.ttl) によって定義されます。 JDK セキュリティ マネージャーがインストールされている場合、Java 仮想マシンにより VIP がキャッシュされます。このキャッシュは、既定で更新されません。 Java 仮想マシン キャッシュの "有効期限" (networkaddress.cache.ttl) を 1 日に設定する必要があります。 既定値を 1 日 (またはその他の値) に変更しない場合、VIP が追加または更新されたときに古い値が削除されません。 Networkaddress.cache.ttl と networkaddress.cache.negative.ttl の詳細については、次を参照してください。 [http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)です。  
+ セキュリティ マネージャーがインストールされていない場合、Java 仮想マシンにより仮想 IP アドレス (VIP) が期限付きでキャッシュされます。この期限は、既定で JDK 実装および Java プロパティ (networkaddress.cache.ttl および networkaddress.cache.negative.ttl) によって定義されます。 JDK セキュリティ マネージャーがインストールされている場合、Java 仮想マシンにより VIP がキャッシュされます。このキャッシュは、既定で更新されません。 Java 仮想マシン キャッシュの "有効期限" (networkaddress.cache.ttl) を 1 日に設定する必要があります。 既定値を 1 日 (またはその他の値) に変更しない場合、VIP が追加または更新されたときに古い値が削除されません。 Networkaddress.cache.ttl と networkaddress.cache.negative.ttl の詳細については、次を参照してください。 [ http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)です。  
   
  可用性グループまたはフェールオーバー クラスター インスタンス内のサーバーに接続する際には、次のガイドラインに従います。  
   
@@ -93,29 +94,11 @@ MultiSubnetFailover を指定して、可用性グループまたはフェール
  アップグレードする場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]アプリケーション現在データベース ミラーリングを使用して、マルチ サブネットのシナリオでは、削除する必要あります、 **failoverPartner**接続プロパティと、コードに置き換えます**multiSubnetFailover** 'éý' **true**し、接続文字列でサーバー名を可用性グループ リスナーに置き換えます。 接続文字列で使用する場合**failoverPartner**と**multiSubnetFailover = true**ドライバーでエラーが発生します。 ただし、接続文字列で使用する場合**failoverPartner**と**multiSubnetFailover = false** (または**ApplicationIntent = ReadWrite**)、アプリケーション データベースが使用されますミラー化できます。  
   
  ドライバーが場合と、AG のプライマリ データベースでデータベース ミラーリングを使用する場合に、エラーが返されます**multiSubnetFailover = true**は可用性グループにはなく、プライマリ データベースに接続する接続文字列で使用リスナー。  
-  
-## <a name="specifying-application-intent"></a>アプリケーション インテントの指定  
- ときに**applicationIntent = ReadOnly**、AlwaysOn 対応データベースに接続するときに、クライアントが読み取り専用ワークロードを要求します。 サーバーは、接続時およびデータベース ステートメントの使用時にインテントを強制しますが、その対象は AlwaysOn 対応データベースのみです。  
-  
- **ApplicationIntent**キーワードは、レガシの読み取り専用データベースでは機能しません。  
-  
- 対象の AlwaysOn データベースのワークロードの読み取りを許可または禁止することができます (これは、**PRIMARY_ROLE** および **SECONDARY_ROLE**[!INCLUDE[tsql](../../includes/tsql_md.md)] ステートメントの **ALLOW_CONNECTIONS** 句で実行します)。  
-  
- **ApplicationIntent**読み取り専用ルーティングを有効にするキーワードを使用します。  
-  
-## <a name="read-only-routing"></a>読み取り専用ルーティング  
- 読み取り専用ルーティングは、データベースの読み取り専用レプリカの可用性を実現する機能です。 読み取り専用のルーティングを有効にするには  
-  
-1.  AlwaysOn 可用性グループの可用性グループ リスナーに接続している。  
-  
-2.  **ApplicationIntent**接続文字列キーワードに設定する必要があります**ReadOnly**です。  
-  
-3.  データベース管理者が可用性グループを構成し、読み取り専用のルーティングを有効にする必要があります。  
-  
- 読み取り専用のルーティングを使用した複数の接続が同じ読み取り専用レプリカに接続されるとは限りません。 データベース同期の変更やサーバーのルーティング構成の変更によって、クライアントが別の読み取り専用レプリカに接続される場合があります。 すべての読み取り専用要求が同じ読み取り専用レプリカに接続を確認してください、渡さないで、可用性グループ リスナーまたは仮想 IP アドレスを**serverName**接続文字列キーワードです。 代わりに、読み取り専用インスタンスの名前を指定します。  
-  
- 読み取り専用ルーティングでは、最初にプライマリに接続した後、使用できる最善の読み取り可能セカンダリが検索されます。このため、読み取り専用ルーティングに要する時間は、プライマリに接続するよりも長くなります。 このため、ログイン タイムアウトを大きくする必要があります。  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="new-methods-supporting-multisubnetfailover-and-applicationintent"></a>multiSubnetFailover および applicationIntent をサポートする新しいメソッド  
  次の方法では、プログラムによるアクセスを**multiSubnetFailover**、 **applicationIntent**と**transparentNetworkIPResolution**接続文字列キーワード:  
   
@@ -136,7 +119,7 @@ MultiSubnetFailover を指定して、可用性グループまたはフェール
  **GetMultiSubnetFailover**、 **setMultiSubnetFailover**、 **getApplicationIntent**、 **setApplicationIntent**、 **getTransparentNetworkIPResolution**と**setTransparentNetworkIPResolution**にメソッドが追加されても[SQLServerDataSource クラス](../../connect/jdbc/reference/sqlserverdatasource-class.md)、 [SQLServerConnectionPoolDataSource クラス](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)、および[SQLServerXADataSource クラス](../../connect/jdbc/reference/sqlserverxadatasource-class.md)です。  
   
 ## <a name="ssl-certificate-validation"></a>SSL 証明書の検証  
- 可用性グループは、複数の物理サーバーで構成されます。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]サポートが追加されました**サブジェクト代替名**で SSL 証明書の複数のホストは、同じ証明書を関連付けることができるようにします。 SSL の詳細については、次を参照してください。[について SSL サポート](../../connect/jdbc/understanding-ssl-support.md)です。  
+ 可用性グループは、複数の物理サーバーで構成されます。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] サポートが追加されました**サブジェクト代替名**で SSL 証明書の複数のホストは、同じ証明書を関連付けることができるようにします。 SSL の詳細については、次を参照してください。[について SSL サポート](../../connect/jdbc/understanding-ssl-support.md)です。  
   
 ## <a name="see-also"></a>参照  
  [JDBC ドライバーで SQL Server に接続します。](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
