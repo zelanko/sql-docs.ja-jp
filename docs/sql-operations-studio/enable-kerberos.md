@@ -1,6 +1,6 @@
 ---
-title: "SQL 操作 Studio (プレビュー) に接続するときに、Active Directory 認証 (Kerberos) を使用して |Microsoft ドキュメント"
-description: "SQL 操作 Studio (プレビュー) に Active Directory 認証を使用する Kerberos を有効にする方法を学習します。"
+title: SQL 操作 Studio (プレビュー) に接続するときに、Active Directory 認証 (Kerberos) を使用して |Microsoft ドキュメント
+description: SQL 操作 Studio (プレビュー) に Active Directory 認証を使用する Kerberos を有効にする方法を学習します。
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,25 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcc9e91255317d53a63dd9867f6060af591f36e3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dbd229a0106506f744074df760ee10f871474ebb
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>接続[!INCLUDE[name-sos](../includes/name-sos-short.md)]Windows 認証に Kerberos を使用して、SQL server 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]Kerberos を使用して SQL Server への接続をサポートします。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] Kerberos を使用して SQL Server への接続をサポートします。
 
 MacOS または Linux で統合認証 (Windows 認証) を使用するために設定する必要があります、 **Kerberos チケット**Windows ドメイン アカウントに、現在のユーザーをリンクします。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - Kerberos ドメイン コント ローラーを照会するのには Windows ドメインに参加しているコンピューターにアクセスします。
 - SQL Server は、Kerberos 認証を許可するように構成する必要があります。 Unix で実行されている、クライアント ドライバーは、統合認証のみがサポートされて Kerberos を使用します。 Kerberos を使用して認証を Sql Server を設定する方法の詳細についてはあります[ここ](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server)です。 接続しようとしている Sql Server のインスタンスごとに登録されている Spn を設定する必要があります。 SQL Server の Spn の形式に関する情報が記載されて[ここ](https://technet.microsoft.com/en-us/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
@@ -35,7 +35,7 @@ MacOS または Linux で統合認証 (Windows 認証) を使用するために�
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>かどうか、Sql Server は Kerberos セットアップの確認
 
 Sql Server のホスト コンピューターにログインします。 Windows コマンド プロンプトを使用して、`setspn -L %COMPUTERNAME%`ホストのすべてのサービス プリンシパル名の一覧を表示します。 つまり Sql Server は、SPN が登録し、Kerberos 認証を受け入れる準備ができて MSSQLSvc/HostName.Domain.com で始まるエントリが表示されます。 
-- Sql Server のホストへのアクセス権がないかどうかは、同じ Active Directory に参加している Windows OS 他から、コマンドを使用すること`setspn -L <SQLSERVER_NETBIOS>`< SQLSERVER_NETBIOS > は、Sql Server の hsot のコンピューター名。
+- Sql Server のホストへのアクセス権がないかどうかは、同じ Active Directory に参加している Windows OS 他から、コマンドを使用すること`setspn -L <SQLSERVER_NETBIOS>`< SQLSERVER_NETBIOS > は、Sql Server のホストのコンピューター名。
 
 
 ## <a name="get-the-kerberos-key-distribution-center"></a>Kerberos キー配布センターを取得します。
@@ -62,7 +62,7 @@ The command completed successfully
 sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
 ```
 
-編集、`/etc/network/interfaces`ファイルの dns ネーム サーバーとして、AD ドメイン コント ローラーの IP アドレスが表示されるようにします。 例 : 
+編集、`/etc/network/interfaces`ファイルの dns ネーム サーバーとして、AD ドメイン コント ローラーの IP アドレスが表示されるようにします。 以下に例を示します。 
 
 ```/etc/network/interfaces
 <...>
@@ -94,7 +94,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 * Success
 ```
    
-### <a name="redhat-enterprise-linux"></a>Red Hat Enterprise Linux
+### <a name="redhat-enterprise-linux"></a>RedHat Enterprise Linux
 ```bash
 sudo yum install realmd krb5-workstation
 ```
@@ -126,9 +126,9 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
    
 ```
 
-### <a name="macos"></a>MacOS
+### <a name="macos"></a>macOS
 
-- [次の手順] で、macOS を Active Directory ドメイン コント ローラーに参加させる (https://support.apple.com/kb/PH26282?viewlocale=en_US & ロケール en_US =)。
+- [次の手順] で、macOS を Active Directory ドメイン コント ローラーに参加させる (https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US)です。
 
 
 
@@ -170,7 +170,7 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>使用して接続します。[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>使用して接続します。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 * 新しい接続プロファイルを作成します。
 

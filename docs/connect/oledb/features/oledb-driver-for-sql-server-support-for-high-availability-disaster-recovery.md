@@ -2,7 +2,7 @@
 title: SQL Server Support for High Availability, Disaster Recovery の OLE DB Driver |Microsoft ドキュメント
 description: OLE DB Driver for SQL Server は、高可用性、災害復旧のサポートします。
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -17,9 +17,9 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c915af2ec748c4b2c15882c9a643c8e200442e98
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: HT
+ms.openlocfilehash: 1c23f1147b525ae35050ee47fe0c6278d03b3181
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/06/2018
 ---
@@ -72,29 +72,11 @@ ms.lasthandoff: 04/06/2018
 アップグレードする場合は、OLE DB Driver for SQL Server アプリケーションが現在そのデータベースがマルチ サブネット シナリオにミラーリングを使用して、削除する必要があります、 **Failover_Partner**接続プロパティと、コードに置き換えます**MultiSubnetFailover** 'éý'**はい**し、接続文字列でサーバー名を可用性グループ リスナーに置き換えます。 接続文字列で **Failover_Partner** および **MultiSubnetFailover=Yes** が使用されている場合、ドライバーでエラーが発生します。 ただし、接続文字列に **Failover_Partner** と **MultiSubnetFailover=No** (または **ApplicationIntent=ReadWrite**) が使用されている場合、アプリケーションはデータベース ミラーリングを使用します。  
   
 ドライバーは、可用性グループのプライマリ データベースでデータベース ミラーリングが使用されている場合、および可用性グループ リスナーではなくプライマリ データベースに接続する接続文字列内で **MultiSubnetFailover=Yes** が使用されている場合、エラーを返します。  
-  
-## <a name="specifying-application-intent"></a>アプリケーション インテントの指定  
-ときに**ApplicationIntent = ReadOnly**、Alwayson が有効なデータベースに接続するときに、クライアントが読み取りワークロードを要求します。 接続時に、中に、サーバーの目的は強制する、`USE`がデータベースにのみ、Alwayson が有効なステートメントをデータベースします。  
-  
-**ApplicationIntent** キーワードは、従来の読み取り専用データベースに対しては無効です。  
-  
-データベースでは、許可したり、対象の Always On データベース ワークロードの読み取りを許可しないようにすることができます。 (これは、**PRIMARY_ROLE** および **SECONDARY_ROLE**[!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントの **ALLOW_CONNECTIONS** 句で実行します)。  
-  
-読み取り専用ルーティングを有効にするには、**ApplicationIntent** キーワードを使用します。  
-  
-## <a name="read-only-routing"></a>読み取り専用ルーティング  
-読み取り専用ルーティングは、データベースの読み取り専用レプリカの可用性を実現する機能です。 読み取り専用のルーティングを有効にするには  
-  
-1.  AlwaysOn 可用性グループ リスナーに接続する必要があります。  
-  
-2.  **ApplicationIntent** 接続文字列キーワードを **ReadOnly**に設定する必要があります。  
-  
-3.  データベース管理者は、読み取り専用ルーティングを有効にする、Always On 可用性グループを構成する必要があります。  
-  
-読み取り専用のルーティングを使用した複数の接続が同じ読み取り専用レプリカに接続されるとは限りません。 データベース同期の変更やサーバーのルーティング構成の変更によって、クライアントが別の読み取り専用レプリカに接続される場合があります。 すべての読み取り専用要求が同じ読み取り専用レプリカに接続を確認してください、渡さないで、Always On 可用性グループ リスナーを**サーバー**接続文字列キーワードです。 代わりに、読み取り専用インスタンスの名前を指定します。  
-  
-読み取り専用ルーティングでは、最初にプライマリに接続した後、使用できる最善の読み取り可能セカンダリが検索されます。このため、読み取り専用ルーティングに要する時間は、プライマリに接続するよりも長くなります。 このため、ログイン タイムアウトを大きくする必要があります。  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="ole-db"></a>OLE DB (OLE DB)  
 SQL Server の OLE DB Driver は、両方をサポート、 **ApplicationIntent**と**MultiSubnetFailover**キーワード。   
   

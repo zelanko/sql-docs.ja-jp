@@ -1,17 +1,15 @@
 ---
-title: "エディションとサポートされる機能の SQL Server 2017 ~ Linux |Microsoft ドキュメント"
+title: エディションとサポートされる機能の SQL Server 2017 ~ Linux |Microsoft ドキュメント
 ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-linux
-- server-general
-ms.tgt_pltfrm: 
+ms.technology: sql-linux
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
@@ -30,16 +28,16 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd937ab176ef7c33f6ffa99090ac36b69182968c
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: da867b1125d4ee444a0e04e34d729484bee43514
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>エディションと SQL Server 2017 on Linux のサポートされる機能
 
@@ -62,12 +60,12 @@ Linux で使用できない SQL Server 機能の一覧は、次を参照して�
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] のエディション  
  次の表で、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のエディションについて説明します。 
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエディション|定義|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|定義|  
 |---------------------------------------|----------------|  
 |Enterprise|プレミアム製品で[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]Enterprise edition がミッション クリティカルなワークロードの高度なサービス レベルを有効にすると非常に高速パフォーマンスを包括的なハイエンド データ センター機能を提供します。|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition、部門や小規模組織がアプリケーションを実行するための基本的なデータ管理を提供し、オンプレミスとクラウドの一般的な開発ツールをサポートしています: 最小限の IT リソースで効果的なデータベース管理を有効にします。|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition は、大小さまざまな規模の Web 資産に対応できるスケーラビリティ、経済性、および管理性を備えた、Web ホスティング企業および Web VAP 向けの総保有コストの低いオプションです。|  
-|開発者|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition では、開発者が、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 上で動作するあらゆる種類のアプリケーションを開発できます。 このエディションには Enterprise Edition の機能がすべて含まれていますが、実稼動サーバーとして使用するのではなく、開発およびテスト システムとしての利用に対してライセンスが供与されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer は、アプリケーションを作成し、テストするユーザーに適しています。|  
+|開発者|開発者は、[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上で動作するあらゆる種類のアプリケーションを開発できます。 このエディションには Enterprise Edition の機能がすべて含まれていますが、実稼動サーバーとして使用するのではなく、開発およびテスト システムとしての利用に対してライセンスが供与されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer は、アプリケーションを作成し、テストするユーザーに適しています。|  
 |Express Edition|Express Edition はエントリレベルの無料のデータベースで、学習や、デスクトップおよび小規模サーバー データ ドリブン アプリケーションの構築などに適しています。 このエディションは、独立系ソフトウェア ベンダー、開発者、クライアント アプリケーションを趣味で開発する開発者などに最適です。 さらに高度なデータベース機能が必要な場合には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の他の上位バージョンにシームレスにアップグレードできます。|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] とクライアント/サーバー アプリケーションの使用  
@@ -93,9 +91,9 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |-------------|----------------|--------------|---------|------------------------|
 |1 つのインスタンスで使用される最大計算容量 - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|オペレーティング システムの最大容量|4 ソケットまたは 24 コアのいずれか小さいほうに制限|4 ソケットまたは 16 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限| 
 |1 つのインスタンスで使用される最大計算容量 - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] または [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|オペレーティング システムの最大容量|4 ソケットまたは 24 コアのいずれか小さいほうに制限|4 ソケットまたは 16 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|
-|インスタンスごとにバッファー プールの最大メモリ [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|オペレーティング システムの最大容量|128 GB|64 GB|1410 MB|
-|インスタンスごとに列ストア セグメントのキャッシュの最大メモリ [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|メモリ制限なし| 32 GB| 16 GB| 352 MB|  
-|データベースごとのメモリ最適化データの最大サイズ [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|メモリ制限なし| 32 GB| 16 GB| 352 MB|
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のインスタンスごとのバッファー プールの最大メモリ|オペレーティング システムの最大容量|128 GB|64 GB|1410 MB|
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のインスタンスごとの列ストア セグメント キャッシュの最大メモリ|メモリ制限なし| 32 GB| 16 GB| 352 MB|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のデータベースごとの最大メモリ最適化データ サイズ|メモリ制限なし| 32 GB| 16 GB| 352 MB|
 |リレーショナル データベースの最大サイズ|524 PB|524 PB|524 PB|10 GB|  
   
 <sup>1</sup> Enterprise edition with Server およびクライアント アクセス ライセンス (CAL) ベース ライセンス (新しい使用許諾契約は利用できません) は、最大で SQL Server インスタンスあたり 20 コアに制限されます。 コアベースのサーバー ライセンス モデルでは、制限はありません。 詳細については、次を参照してください。[エディションの SQL Server での計算容量制限](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)です。  

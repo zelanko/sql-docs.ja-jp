@@ -1,7 +1,7 @@
 ---
 title: 高可用性、災害復旧の Microsoft Drivers for PHP for SQL Server のサポート |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: ''
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ee0be974c5998d531e20ed64c871ca85892aa46f
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 6cb7f145f14861720d11401a3d60db0ce0efcfd9
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>高可用性、障害復旧のサポート
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,29 +73,11 @@ Version 3.0 で、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の�
 アップグレードする場合、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]アプリケーション現在データベース ミラーリングを使用して、マルチ サブネットのシナリオでは、削除する必要あります、 **Failover_Partner**接続プロパティと、コードに置き換えます**MultiSubnetFailover** 'éý'**はい**し、接続文字列でサーバー名を可用性グループ リスナーに置き換えます。 接続文字列で使用する場合**Failover_Partner**と**MultiSubnetFailover = true**ドライバーでエラーが発生します。 ただし、接続文字列で使用する場合**Failover_Partner**と**MultiSubnetFailover = false** (または**ApplicationIntent = ReadWrite**)、アプリケーション データベースが使用されますミラー化できます。  
   
 ドライバーが場合と、AG のプライマリ データベースでデータベース ミラーリングを使用する場合に、エラーが返されます**MultiSubnetFailover = true**は可用性グループにはなく、プライマリ データベースに接続する接続文字列で使用リスナー。  
-  
-## <a name="specifying-application-intent"></a>アプリケーション インテントの指定  
-**ApplicationIntent=ReadOnly** が指定されている場合、AlwaysOn 対応データベースにクライアントが接続すると、読み取りワークロードが要求されます。 サーバーは、接続時およびデータベース ステートメントの使用時にインテントを強制しますが、その対象は AlwaysOn 対応データベースのみです。  
-  
-**ApplicationIntent** キーワードは、従来の読み取り専用データベースに対しては無効です。  
-  
-対象の AlwaysOn データベースのワークロードの読み取りを許可または禁止することができます (これは、**PRIMARY_ROLE** および **SECONDARY_ROLE**[!INCLUDE[tsql](../../includes/tsql_md.md)] ステートメントの **ALLOW_CONNECTIONS** 句で実行します)。  
-  
-読み取り専用ルーティングを有効にするには、**ApplicationIntent** キーワードを使用します。  
-  
-## <a name="read-only-routing"></a>読み取り専用ルーティング  
-読み取り専用ルーティングは、データベースの読み取り専用レプリカの可用性を実現する機能です。 読み取り専用のルーティングを有効にするには  
-  
-1.  AlwaysOn 可用性グループ リスナーに接続する必要があります。  
-  
-2.  **ApplicationIntent** 接続文字列キーワードを **ReadOnly**に設定する必要があります。  
-  
-3.  データベース管理者が可用性グループを構成し、読み取り専用のルーティングを有効にする必要があります。  
-  
-読み取り専用のルーティングを使用した複数の接続が同じ読み取り専用レプリカに接続されるとは限りません。 データベース同期の変更やサーバーのルーティング構成の変更によって、クライアントが別の読み取り専用レプリカに接続される場合があります。 すべての読み取り専用要求を同じ読み取り専用レプリカに接続するには、可用性グループ リスナーを **Server** 接続文字列キーワードに渡さないでください。 代わりに、読み取り専用インスタンスの名前を指定します。  
-  
-読み取り専用ルーティングでは、最初にプライマリに接続した後、使用できる最善の読み取り可能セカンダリが検索されます。このため、読み取り専用ルーティングに要する時間は、プライマリに接続するよりも長くなります。 この場合、ログイン タイムアウトを増やす必要があります。  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="see-also"></a>参照  
 [サーバーへの接続](../../connect/php/connecting-to-the-server.md)  
   
