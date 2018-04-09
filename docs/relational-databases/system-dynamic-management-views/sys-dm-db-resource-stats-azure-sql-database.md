@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_resource_stats (Azure SQL データベース) |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 03/16/2016
+ms.date: 04/06/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 116c5875ad7933e1b3d68f0c65ca7d0cb4d2b661
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: f09cea24068fe63dd1609e26c7835662369d8f0d
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,8 @@ ms.lasthandoff: 04/05/2018
 |xtp_storage_percent|**10 進数 (5,2)**|記憶域使用率、インメモリ OLTP のサービス層の制限の割合で表した (したレポート期間の末尾)。 これには、次のインメモリ OLTP オブジェクトの格納に使用されるメモリが含まれます。 メモリ最適化テーブル、インデックス、およびテーブル変数。 ALTER TABLE 操作を処理するために使用されるメモリも含まれています。<br /><br /> インメモリ OLTP では、データベースで使用されていない場合は、0 を返します。|  
 |max_worker_percent|**10 進数 (5,2)**|データベースのサービス層の制限の割合の最大同時実行ワーカー (要求)。|  
 |max_session_percent|**10 進数 (5,2)**|データベースのサービス層の制限の割合の最大同時セッション数。|  
-|dtu_limit|**int**|現在データベースの最大 DTU このデータベースの設定この間隔中にします。|  
+|dtu_limit|**int**|現在データベースの最大 DTU このデータベースの設定この間隔中にします。 |
+|||
   
 > [!TIP]  
 >  これらの制限とサービス層に関する詳細コンテキストは、トピックを参照して[サービス階層](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)と[サービス層の機能と制限](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)です。  
@@ -58,13 +59,13 @@ ms.lasthandoff: 04/05/2018
  このビューには、VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="remarks"></a>解説  
- によって返されるデータ**sys.dm_db_resource_stats**は Basic、Standard、および Premium データベースを実行しているサービス階層/パフォーマンス レベルの DTU の制限を許可される最大のパーセンテージで表されます。
+ によって返されるデータ**sys.dm_db_resource_stats**は許可されている制限を実行しているサービス階層/パフォーマンス レベルの最大のパーセンテージで表されます。
  
  データベースは、最後の 60 分内の別のサーバーにフェールオーバーしたが、ビューはそのフェールオーバー以降、プライマリ データベースがされた時間のデータを返すのみです。  
   
  このデータの詳細度の低いビューでは、使用**sys.resource_stats**カタログ ビューの**マスター**データベース。 このビューでは、5 分ごとにデータをキャプチャし、履歴データを 14 日間保持します。  詳細については、次を参照してください。 [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)です。  
   
- データベースが、柔軟なプールのメンバーである場合は、割合の値として表されるリソースの統計情報は、柔軟なプールの構成で設定されているデータベースの最大の DTU 制限の割合として表されます。  
+ データベースが弾力性プールのメンバーである、パーセントの値として表されるリソースの統計情報は、弾力性プールの構成で設定されているデータベースの最大の制限の割合として表されます。  
   
 ## <a name="example"></a>例  
   

@@ -1,21 +1,21 @@
 ---
-title: "[データベースのプロパティ] ([クエリ ストア] ページ) | Microsoft Docs"
-ms.custom: 
+title: '[データベースのプロパティ] ([クエリ ストア] ページ) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/09/2015
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.databaseproperties.querystore.f1
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -53,11 +53,11 @@ ms.lasthandoff: 01/18/2018
  クエリのストアに割り当てられた合計領域を取得、および設定します。  
   
  Query Store Capture Mode (クエリ ストアのキャプチャ モード)  
- -   [None] (なし) に設定すると、新しいクエリがキャプチャされません。  
+ -   [None] \(なし) に設定すると、新しいクエリがキャプチャされません。  
   
--   [All] (すべて) に設定すると、すべてのクエリがキャプチャされます。  
+-   [All] \(すべて) に設定すると、すべてのクエリがキャプチャされます。  
   
--   [Auto] (自動) に設定すると、リソースの消費量に基づいてクエリがキャプチャされます。  
+-   [Auto] \(自動) に設定すると、リソースの消費量に基づいてクエリがキャプチャされます。  
   
  古いクエリのしきい値 (日)  
  古いクエリのしきい値を取得、および設定します。 STALE_QUERY_THRESHOLD_DAYS 引数を構成して、クエリのストア内にデータを保持する日数を指定します。  

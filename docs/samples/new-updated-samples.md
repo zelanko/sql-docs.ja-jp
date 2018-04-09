@@ -1,6 +1,6 @@
 ---
-title: 更新済み - SQL 操作 Studio docs |Microsoft ドキュメント
-description: 最近変更したドキュメントについては、SQL 操作 Studio の更新されたコンテンツのスニペットを表示します。
+title: 更新済み - SQL Server ドキュメントのサンプル |Microsoft ドキュメント
+description: 最近変更したドキュメントについては、Microsoft SQL Server のサンプルについては、更新されたコンテンツのスニペットを表示します。
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -8,15 +8,15 @@ ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.prod_service: sql-non-specified
-ms.component: ssops
+ms.component: samples
 ms.date: 02/03/2018
-ms.openlocfilehash: 339cf28ac985e1614b4aaece3fb099d0144a309a
+ms.openlocfilehash: 758ce1d48b6a8dc961635ee7dcb4023867d727d1
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>新規または最近の更新: SQL 操作 Studio docs
+# <a name="new-and-recently-updated-samples-for-sql-server"></a>新規または最近更新された: SQL Server のサンプル
 
 
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/08/2018
 
 
 - *"更新日の範囲:"* &nbsp; **2017 年 12 月 3 日**&nbsp;から&nbsp;**2018 年 2 月 3 日**
-- *サブジェクト領域:* &nbsp; **SQL 操作 Studio**です。
+- *サブジェクト領域:* &nbsp; **SQL Server のサンプル**です。
 
 
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/08/2018
 以下のリンクは、最近追加された新しい記事に移動します。
 
 
-1. [SQL 操作 Studio (プレビュー) のリリース ノート](release-notes.md)
+***今回は新しい記事はありません。***
 
 
 
@@ -67,53 +67,13 @@ ms.lasthandoff: 04/08/2018
 
 この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
-1. [ダウンロードして SQL 操作 Studio (プレビュー) のインストール](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1.&nbsp; [ダウンロードして SQL 操作 Studio (プレビュー) のインストール](download.md)
-
-*更新日: 2018 年 1 月 18 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 24.  ms.author= "sstein".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 092e48dd5607eecc0e322b5051b4adf0c5aeeb30 6b4f80ad54c599e4354303a736f62e9715f99a32  (PR=4662  ,  Filename=download.md  ,  Dirpath=docs\sql-operations-studio\  ,  MergeCommitSha40=6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f) -->
-
-
-
-|プラットフォーム|ダウンロード|リリース日|
-|:---|:---|:---|
-|Windows|[インストーラー](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|2018 年 1 月 17日 |
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|2018 年 1 月 17日 |
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|2018 年 1 月 17日|
-
-最新のリリースに関する詳細については、次を参照してください。、[リリース ノート](release-notes.md)です。
-
-**Windows 用の SQL 操作 Studio (プレビュー) の取得します。**
-
-
-このリリース SQL 操作 Studio (プレビュー) にはには、標準的な Windows インストーラーのエクスペリエンスと .zip が含まれます。
-
-**インストーラー**
-
-1. ダウンロードし、実行、 [SQL 操作 Studio (プレビュー) Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=866480)です。
-1. SQL 操作 Studio (プレビュー) アプリを起動します。
-
-
-**.zip file**
-
-1. ダウンロード[Windows 用の SQL 操作 Studio (プレビュー) .zip](https://go.microsoft.com/fwlink/?linkid=866479)です。
-
+***この領域内のアーティクルは更新されませんでした最近では、この時間。***
 
 
 

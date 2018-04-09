@@ -13,11 +13,11 @@ ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
-ms.openlocfilehash: f54d131868caf332351d7806881ea89238843236
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 21d4ea90d5ee29c68161f9cf2d59ed2d31002d0d
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Revoscalepy で Python を使用してモデルを作成するには
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,6 @@ ms.lasthandoff: 04/04/2018
 ## <a name="prerequisites"></a>前提条件
 
 + このレッスンでは、前のレッスンとは異なるデータを使用します。 最初に前のレッスンを完了する必要はありません。 ただし、前のレッスンを完了し、Python を実行するよう既に構成サーバーが存在する場合は、そのサーバーとデータベースとして使用コンピューティング コンテキスト。
-
 + 計算として SQL Server を使用する Python コードを実行するには、コンテキストには、SQL Server 2017 以降が必要です。 さらに、明示的にインストールし、機能を有効にする必要があります**Machine Learning サービス**、Python 言語オプションを選択します。
 
     SQL Server 2017 のプレリリース版をインストールした場合に更新するには、少なくとも RTM バージョン。 以降のサービス リリースを展開し、Python の機能を向上させるきました。 このチュートリアルの一部の機能は、以前のプレリリース バージョン動かないことがあります。
@@ -52,9 +51,9 @@ SQL Server での Python コードを実行する必要があります、 **revo
 
     ```sql
     CREATE DATABASE sqlpy;
-    GO;
+    GO
     USE sqlpy;
-    GO;
+    GO
     ```
 
     > [!IMPORTANT]
