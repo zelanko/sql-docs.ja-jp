@@ -1,16 +1,16 @@
 ---
-title: "メンテナンス プラン ウィザードの使用 | Microsoft Docs"
+title: メンテナンス プラン ウィザードの使用 | Microsoft Docs
 ms.date: 06/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ag.maintwiz.integrity.f1
@@ -37,7 +37,7 @@ helpviewer_keywords:
 - Database Maintenance Plan Wizard
 - Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -169,7 +169,7 @@ ms.lasthandoff: 01/18/2018
   
   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tempdb **およびユーザーが作成したデータベースを除く** システム データベースを対象として、このタスクを実行するメンテナンス プランを生成します。  
   
- **[すべてのユーザー データベース] (master、model、msdb、tempdb は対象外)**  
+ **[すべてのユーザー データベース] \(master、model、msdb、tempdb は対象外)**  
   
  - ユーザーが作成したすべてのデータベースを対象として、このタスクを実行するメンテナンス プランを生成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム データベースではメンテナンス タスクは実行されません。  
   
@@ -180,10 +180,10 @@ ms.lasthandoff: 01/18/2018
 **[インデックスを含める]** チェック ボックス  
  - すべてのインデックス ページおよびテーブル データ ページの整合性を確認します。  
   
-**[Physical only] (物理のみ)**  
+**[Physical only] \(物理のみ)**  
  - ページの物理構造の整合性、レコード ヘッダー、およびデータベースの割り当ての一貫性にチェックを限定します。 このオプションは、大規模なデータベースの DBCC CHECKDB の実行時間を大幅に短縮することがあるため、実稼働システムで頻繁に使用する場合にお勧めします。  
   
-**[Tablock] (Tablock)**  
+**[Tablock] \(Tablock)**  
  - DBCC CHECKDB が、内部データベースのスナップショットを使用せずに、ロックを取得します。 これにはデータベースの短期の排他 (X) ロックも含まれます。 このオプションを使用すると、負荷の高いデータベースでの DBCC CHECKDB の実行速度が速くなることがありますが、DBCC CHECKDB の実行中はデータベースでの同時実行性が低下します。  
   
 ## <a name="define-database-shrink-tasks"></a>データベースの圧縮タスクを定義する  

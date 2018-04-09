@@ -1,21 +1,21 @@
 ---
-title: "[データベースの復元]([オプション] ページ) | Microsoft Docs"
-ms.custom: 
+title: データベースの復元 ([オプション] ページ) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
-caps.latest.revision: 
+caps.latest.revision: 68
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/18/2018
 ---
-# <a name="restore-database-options-page"></a>[データベースの復元] ([オプション] ページ)
+# <a name="restore-database-options-page"></a>データベースの復元 ([オプション] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[データベースの復元]** ダイアログ ボックスの **[オプション]** ページを使用して、復元操作の動作と結果を変更します。  
   
  **SQL Server Management Studio を使用してデータベース バックアップを復元するには**  

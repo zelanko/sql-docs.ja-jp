@@ -60,7 +60,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>下位互換性  
-SQL Server の OLE DB Driver を使用してコンパイルしたクライアントとアプリケーションが接続する場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)])、し**varbinary (max)**動作を動作と互換性があります導入された[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client に[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]です。 返されるデータの最大サイズが 2 GB に制限されます。 大きな結果値が 2 GB の切り捨てが発生して、「文字列データ右側が切り捨てられました」警告が返されます。 
+SQL Server の OLE DB Driver を使用してコンパイルしたクライアントとアプリケーションが接続する場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)])、し**varbinary (max)**動作を動作と互換性があります導入された[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client に[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]です。 返されるデータの最大サイズが 2 GB に制限されます。 大きな結果値が 2 GB の切り捨てが発生して、「文字列データ右側が切り捨てられました」警告が返されます。 
   
 データ型の互換性が 80 に設定されている場合は、クライアントの動作で下位クライアントとの互換性が維持されます。  
   

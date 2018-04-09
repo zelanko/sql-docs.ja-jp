@@ -20,11 +20,11 @@ author: v-makouz
 ms.author: genemi
 manager: kenvh
 ms.workload: Active
-ms.openlocfilehash: dc71f74ca8e81f370037b82e42fd78957e096775
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 5187e07d18c6a967ce0a8fadbac370273684c9dc
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="list-of-bugs-fixed"></a>修正されたバグの一覧
 
@@ -38,10 +38,10 @@ ms.lasthandoff: 04/05/2018
 - 整数を小数点の数を浮動小数点に変換するときに、32 ビット Windows でまれなバグを修正
 - 問題を修正、ここでは Always Encrypted での 10 進数のフィールドに倍精度浮動小数点を挿入戻り値のデータの切り捨てエラー
 - MacOS インストーラーに、警告を修正
+- 固定接続の回復との接続プール両方が有効な場合、サーバーから削除するセッションの原因は、セッション復旧試行中に SQL Server に無効な状態を送信
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>バグの修正、[!INCLUDE[msCoName](../../includes/msconame_md.md)]の ODBC ドライバーの 17 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- 固定接続の回復との接続プール両方が有効な場合、サーバーから削除するセッションの原因は、セッション復旧試行中に SQL Server に無効な状態を送信
 - バグを修正、Kerberos 認証を使用して、一括挿入でした「アクセスが拒否されました」エラーで失敗します。
 - UnixODBC 2.3.1 以降のバージョンに存在バグの回避策を削除 (ドライバーには、unixODBC に渡される特定のバッファーのサイズが 2 倍に)
 - 接続の回復を固定 ColumnEncryption を使用するときにハング (再接続) = 有効になっています。

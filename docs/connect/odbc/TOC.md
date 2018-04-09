@@ -7,3 +7,6 @@
 # [ODBC Driver for SQL Server のダウンロード](download-odbc-driver-for-sql-server.md)
 
 # [DSN 接続文字列のキーワードと属性](dsn-connection-string-attribute.md)
+# [ODBC ドライバーでの Azure Active Directory の使用](using-azure-active-directory.md)
+
+# [バグの修正](bug-fixes.md)

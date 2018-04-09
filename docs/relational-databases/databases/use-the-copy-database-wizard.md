@@ -1,16 +1,16 @@
 ---
-title: "データベース コピー ウィザードの使用 | Microsoft Docs"
-ms.custom: 
+title: データベース コピー ウィザードの使用 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.cdw.packageconfiguration.f1
@@ -28,7 +28,7 @@ helpviewer_keywords:
 - Copy Database Wizard
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
-caps.latest.revision: 
+caps.latest.revision: 64
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -223,7 +223,7 @@ SQL Server 認証用のユーザー名とパスワードを入力して接続す
 
 -    **サーバー オブジェクトの一覧** 
 
-      -    **[ログイン] (既定で選択)** 
+      -    **[ログイン] \(既定で選択)** 
   
      -    **SQL Server エージェント ジョブ**  
   
