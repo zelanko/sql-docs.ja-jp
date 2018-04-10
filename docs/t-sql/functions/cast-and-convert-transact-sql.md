@@ -1,16 +1,16 @@
 ---
-title: "CAST および CONVERT (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-ms.date: 09/08/2017
+title: CAST および CONVERT (Transact-SQL) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/28/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CAST_TSQL
@@ -37,25 +37,32 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-caps.latest.revision: 
+caps.latest.revision: 136
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 56326d7862c004ac056e329e6cc05f7bbe056aea
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: cd868d10f9a7d6edab413341c18be9613962c981
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST および CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 あるデータ型の式を別のデータ型の式に変換します。  
-たとえば、次の例では、入力データ型を、有効桁数が異なる他の 2 つのデータ型に変更します。
+**例。** 入力データ型を変更します。
+
+**CAST**
 ```sql  
 SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
     CAST(9.5 AS decimal(6,4)) AS decimal;
+
+```  
+**[変換]**
+```sql  
+
 SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
     CONVERT(decimal(6,4), 9.5) AS decimal;
 ```  
@@ -64,8 +71,7 @@ SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int,
 |----|----|----|  
 |9.5 |9 |9.5000 |  
 
-> [!TIP]
-> このトピックの末尾で、多数の[例](#BKMK_examples)を紹介しています。  
+このトピックの末尾では、**さらに多くの[例](#BKMK_examples)**を紹介しています。 
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -149,7 +155,7 @@ CONVERT 関数で*式*を変換する方法を指定する整数式です。 ス
 ## <a name="float-and-real-styles"></a>float 型スタイルと real 型スタイル
 *式*が **float** 型または **real** 型の場合、*style* は次の表に示すいずれかの値になります。 その他の値は 0 として処理されます。
   
-|値|[出力]|  
+|ReplTest1|[出力]|  
 |---|---|
 |**0** (既定値)|最高 6 桁。 該当する場合は、科学的表記法で使用します。|  
 |**1**|常に 8 桁。 常に科学的表記法で使用します。|  
@@ -160,7 +166,7 @@ CONVERT 関数で*式*を変換する方法を指定する整数式です。 ス
 ## <a name="money-and-smallmoney-styles"></a>money 型スタイルと smallmoney 型スタイル
 *式*が **money** 型または **smallmoney** 型の場合、*style* は次の表に示すいずれかの値になります。 その他の値は 0 として処理されます。
   
-|値|[出力]|  
+|ReplTest1|[出力]|  
 |---|---|
 |**0** (既定値)|小数点位置から左へ 3 桁ごとの位置にはコンマを挿入しません。また、小数点右側には 2 桁をとります。たとえば 4235.98 のようになります。|  
 |**1**|小数点位置から左へ 3 桁ごとにコンマを挿入し、小数点右側には 2 桁をとります。たとえば 3,510.92 のようになります。|  
@@ -170,7 +176,7 @@ CONVERT 関数で*式*を変換する方法を指定する整数式です。 ス
 ## <a name="xml-styles"></a>xml スタイル
 *式*が **xml*** の場合、style* は次の表に示すいずれかの値になります。 その他の値は 0 として処理されます。
   
-|値|[出力]|  
+|ReplTest1|[出力]|  
 |---|---|
 |**0** (既定値)|既定の解析動作を使用します。つまり、余分な空白を破棄し、内部の DTD サブセットを許可しません。<br /> **注:** **xml** データ型への変換では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での余分な空白は XML 1.0 とは別の方法で処理されます。 詳細については、「[XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)」を参照してください。|  
 |**1**|余分な空白を保持します。 このスタイル設定では、既定の **xml:space** 処理が設定され、**xml:space="preserve"** が代わりに指定された場合と同じ動作が行われます。|  
@@ -180,7 +186,7 @@ CONVERT 関数で*式*を変換する方法を指定する整数式です。 ス
 ## <a name="binary-styles"></a>バイナリ スタイル
 *式*が **binary(n)**、**varbinary(n)**、**char(n)**、または **varchar(n)** の場合、*style* は次の表に示すいずれかの値になります。 表に記載されていないスタイル値の場合は、エラーが返されます。
   
-|値|[出力]|  
+|ReplTest1|[出力]|  
 |---|---|
 |**0** (既定値)|ASCII 文字をバイナリ バイトに変換するか、バイナリ バイトを ASCII 文字に変換します。 各文字またはバイトは 1:1 で変換されます。<br /> *data_type* がバイナリ型である場合、文字 0x が結果の左側に追加されます。|  
 |**1**、**2**|*data_type* がバイナリ型である場合、式は文字式であることが必要です。 *式*は偶数桁の 16 進数 (0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f) で構成される必要があります。 *style* が 1 に設定されている場合は、式の先頭の 2 文字を文字 0x にする必要があります。 式に奇数桁の文字が含まれているか、いずれかの文字が無効な場合は、エラーが発生します。<br /> 変換された式の長さが *data_type* の長さよりも長い場合、結果の右側が切り捨てられます。<br /> 変換された結果よりも長い固定長の *data_type* の場合、結果の右側に 0 が追加されます。<br /> data_type が文字型である場合、式はバイナリ式であることが必要です。 各バイナリ文字は、16 進値を表す 2 桁の英数文字に変換されます。 変換された式の長さが *data_type* の長さよりも長い場合は、右側が切り捨てられます。<br /> *data_type* が固定サイズの文字型で、変換された結果の長さが *data_type* の長さよりも短い場合、変換された式の右側に空白が追加され、偶数桁の 16 進数が維持されます。<br /> *style* が 1 の場合、変換された結果の左側に文字 0x が追加されます。|  
@@ -285,7 +291,7 @@ Gail        Erickson      Ms.    *
 |**money**|**int**|四捨五入|  
 |**money**|**numeric**|四捨五入|  
 |**float**|**int**|切り捨て|  
-|**float**|**numeric**|四捨五入<br /><br /> 指数表記を使用する **float** 値を **decimal** または **numeric** に変換すると、有効桁数が 17 桁のみの値に制限されます。 有効桁数が 17 より多い値はゼロに丸められます。|  
+|**float**|**numeric**|四捨五入<br /><br /> 変換 **float** 値を科学的表記法を使用する **decimal** または **数値** 17 桁のみを有効桁数の値に制限されます。 有効桁数が 17 より多い値はゼロに丸められます。|  
 |**float**|**datetime**|四捨五入|  
 |**datetime**|**int**|四捨五入|  
   
@@ -426,7 +432,7 @@ WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
-Name        UnitPrice
+Name        ListPrice
 ----------  ---------
 Long-Sleev  31.2437
 Long-Sleev  32.4935
@@ -450,7 +456,7 @@ GO
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
-FirstName        LastName            SalesYTD         SalesPersonID
+FirstName        LastName            SalesYTD         BusinessEntityID
 ---------------- ------------------- ---------------- -------------
 Tsvi             Reiter              2811012.7151      279
 Syed             Abbas               219088.8836       288
@@ -713,7 +719,7 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ```  
   
 ## <a name="see-also"></a>参照
- [データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+ [データ型の変換 (&) #40";"データベース エンジン"&"#41 です。](../../t-sql/data-types/data-type-conversion-database-engine.md)  
  [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
  [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  

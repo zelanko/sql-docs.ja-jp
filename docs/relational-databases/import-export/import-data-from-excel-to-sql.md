@@ -1,26 +1,26 @@
 ---
-title: "Excel から SQL にデータをインポートする | Microsoft Docs"
-ms.custom: 
-ms.date: 08/02/2017
+title: Excel から SQL にデータをインポートする | Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 158a6c72c0c172b061d79bb52a276bacc22c0fcd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b935bd332e5cbfa481f9400968a7c8188e2bc603
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel から SQL Server または Azure SQL Database にデータをインポートする
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,8 +34,10 @@ Excel ファイルからSQL Server または Azure SQL Database に、データ�
     -   BCP
     -   Azure Data Factory
 
+SSIS や Azure Data Factory のような複雑なツールとサービスの詳細については、この概要の範囲外です。 興味のあるソリューションの詳細については、詳細情報へのリンクを参照してください。
+
 > [!IMPORTANT]
-> SSIS や Azure Data Factory のような複雑なツールとサービスの詳細については、この概要の範囲外です。 興味のあるソリューションの詳細については、詳細情報へのリンクを参照してください。
+> Excel ファイルへの接続、および Excel から、または Excel へのデータの読み込みに関する制限事項と既知の問題については、「[Load data from or to Excel with SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md)」 (SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む) を参照してください。
 
 ## <a name="sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザード
 
@@ -209,6 +211,5 @@ Azure Data Factory でデータをコピーする方法の学習を開始する�
 -   [コピー アクティビティを使用したデータの移動](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
 -   [チュートリアル: コピー アクティビティがあるパイプラインを Azure Portal で作成する](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
-## <a name="next-steps"></a>次の手順
-
-興味のあるソリューションの詳細については、詳細情報へのリンクを参照してください。
+## <a name="see-also"></a>参照
+[SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む](../../integration-services/load-data-to-from-excel-with-ssis.md)

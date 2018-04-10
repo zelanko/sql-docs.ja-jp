@@ -1,16 +1,16 @@
 ---
 title: RESTORE (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 08/09/2016
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE DATABASE
@@ -42,19 +42,19 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-caps.latest.revision: 
+caps.latest.revision: 248
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: edafff7cc70224c67ef970ca4c13e47cce113f23
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ff7514b66515dbeac88a3506723f1cdb8a2279bd
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE ステートメント (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   BACKUP コマンドで作成したバックアップを復元します。 このコマンドを使用すると、次の復元シナリオを実行できます。  
   
@@ -70,6 +70,8 @@ ms.lasthandoff: 01/25/2018
   
 -   データベース スナップショットでキャプチャされた時点にデータベースを戻す。  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 復元シナリオの詳細については、「[復元と復旧の概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)」を参照してください。  引数の説明の詳細については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)」を参照してください。   別のインスタンスからデータベースを復元するときは、「 [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」の情報を考慮してください。
   
 > **注:** Windows Azure Blob Storage サービスからの復元の詳細については、「[Microsoft Azure Blob ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
@@ -132,7 +134,7 @@ RESTORE DATABASE { database_name | @database_name_var }
 [;]  
   
 --To Restore a Transaction Log:  
-RESTORE LOG { database_name | @database_name_var }   
+RESTORE LOG { database_name | @database_name_var }  -- Does not apply to SQL Database Managed Instance 
  [ <file_or_filegroup_or_pages> [ ,...n ] ]  
  [ FROM <backup_device> [ ,...n ] ]   
  [ WITH   
@@ -155,7 +157,10 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
 {   
    { logical_backup_device_name |  
       @logical_backup_device_name_var }  
- | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
+ | { DISK    -- Does not apply to SQL Database Managed Instance
+     | TAPE  -- Does not apply to SQL Database Managed Instance
+     | URL   -- Applies to SQL Server and SQL Database Managed Instance
+   } = { 'physical_backup_device_name' |  
       @physical_backup_device_name_var }   
 }   
 Note: URL is the format used to specify the location and the file name for the Windows Azure Blob. Although Windows Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seemless restore experince for all the three devices.  
@@ -194,7 +199,7 @@ Note: URL is the format used to specify the location and the file name for the W
 --Monitoring Options  
  | STATS [ = percentage ]   
   
---Tape Options  
+--Tape Options. Does not apply to SQL Database Managed Instance
  | { REWIND | NOREWIND }   
  | { UNLOAD | NOUNLOAD }   
   
@@ -334,7 +339,32 @@ Note: URL is the format used to specify the location and the file name for the W
  データベースを復元すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのプラン キャッシュが消去されます。 プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに含まれます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
   
  可用性データベースを復元するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにデータベースを復元した後、そのデータベースを可用性グループに追加します。  
-  
+
+## <a name="general-remarks---sql-database-managed-instance"></a>全般的な解説 - SQL Database マネージ インスタンス
+
+非同期復元では、クライアント接続が切断された場合でも復元は続行されます。 接続が切断された場合は、[sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) ビューで復元操作の状態 (と CREATE および DROP DATABASE) を確認できます。 
+
+次のデータベース オプションが設定または上書きされます。後で変更することはできません。
+
+- NEW_BROKER (.bak ファイルでブローカーが有効になっていない場合)
+- NEW_BROKER (.bak ファイルでブローカーが有効になっていない場合)
+- AUTO_CLOSE=OFF (.bak ファイル内のデータベースに AUTO_CLOSE=ON がある場合)
+- RECOVERY FULL (.bak ファイル内のデータベースに SIMPLE または BULK_LOGGED 回復モードがある場合)
+- メモリ最適化ファイルグループがソース .bak ファイルにない場合は、追加され、XTP と呼ばれます。 既存のメモリ最適化ファイルグループはすべて XTP に名前変更されます
+- SINGLE_USER および RESTRICTED_USER オプションは、MULTI_USER に変換されます
+
+## <a name="limitations---sql-database-managed-instance"></a>制限事項 - SQL Database マネージ インスタンス
+これらの制限が適用されます。
+
+- 複数のバックアップ セットを含む .BAK ファイルは復元できません。
+- 複数のログ ファイルを含む .BAK ファイルは復元できません。
+- .bak に FILESTREAM データが含まれている場合、復元は失敗します。
+- アクティブなインメモリ オブジェクトを持つデータベースが含まれているバックアップは、現在復元することができません。
+- 任意の時点でインメモリ オブジェクトが存在していたデータベースが含まれているバックアップは、現在復元することができません。
+- 読み取り専用モードのデータベースが含まれているバックアップは、現在復元することができません。 この制限は間もなく解除される予定です。
+
+詳細については、[マネージ インスタンス](/azure/sql-database/sql-database-managed-instance)に関するトピックを参照してください。
+
 ## <a name="interoperability"></a>相互運用性  
   
 ### <a name="database-settings-and-restoring"></a>データベースの設定と復元  

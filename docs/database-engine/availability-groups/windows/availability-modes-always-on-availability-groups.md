@@ -1,15 +1,16 @@
 ---
-title: "可用性モード (Always On 可用性グループ) | Microsoft Docs"
-ms.custom: 
+title: 可用性モード (Always On 可用性グループ) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7f1e90e1892eae4763b8afd1af575cc6b3ef16a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fd0254134d929dd14b1bddab09cae409b999b21d
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>可用性モード (AlwaysOn 可用性グループ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/18/2018
 -   [関連コンテンツ](#RelatedContent)  
   
 ##  <a name="SupportedAvModes"></a> サポートされる可用性モード  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、次のように、非同期コミット モードと同期コミット モードという 2 種類の可用性モードをサポートします。  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、次のように、非同期コミット モード、同期コミット モード、および構成のみモードの 3 種類の可用性モードをサポートします。  
   
 -   *非同期コミット モード* は、可用性レプリカが離れた距離に分散されている場合に正常に利用できる災害復旧ソリューションです。 すべてのセカンダリ レプリカが非同期コミット モードで実行されている場合、プライマリ レプリカは、いずれかのセカンダリ レプリカによりログが書き込まれるまで待機しません。 ログ レコードがローカル ログ ファイルに書き込まれるとすぐに、プライマリ レプリカはクライアントにトランザクションの確認を送信します。 プライマリ レプリカは、非同期コミット モードが構成されているセカンダリ レプリカに対して、トランザクションの遅延を最小限に抑えて実行されます。  現在のプライマリに非同期コミット可用性モードが構成されている場合、このプライマリは、セカンダリの個々の可用性モードの設定に関係なく、すべてのセカンダリ レプリカに対してトランザクションを非同期にコミットします。  
   

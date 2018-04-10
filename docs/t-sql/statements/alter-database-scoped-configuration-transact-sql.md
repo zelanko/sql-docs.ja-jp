@@ -1,16 +1,16 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 01/04/2018
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - ALTER_DATABASE_SCOPED_CONFIGURATION
@@ -24,21 +24,21 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 
+caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f9eb68c07f9e163dfba699627e41ea825b041540
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f7bac70742dee98e760f93c3345df0546a058932
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  このステートメントでは、複数のデータベース構成を**個別データベース** レベルで設定できます。 このステートメントは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降の [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で利用できます。 次のような設定があります。  
+  このステートメントでは、複数のデータベース構成を**個別データベース** レベルで設定できます。 このステートメントは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降の [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で利用できます。 次のような設定があります。  
   
 - プロシージャ キャッシュをクリアします。  
 - プライマリ データベースに対して、MAXDOP パラメーターを特定のデータベースに最適な内容に基づいて任意の値 (1、2、...) に設定し、(クエリ レポートなどに) 使用されるすべてのセカンダリ データベースに対して別の値 (0 など) を設定します。  
@@ -46,7 +46,8 @@ ms.lasthandoff: 01/25/2018
 - データベース レベルでパラメーター スニッフィングを有効または無効にします。
 - データベース レベルでのクエリ最適化の修正プログラムを有効または無効にします。
 - データベース レベルで ID キャッシュを有効または無効にします。
-- バッチが初めてコンパイルされるとき、コンパイルしたプラン スタブのキャッシュ保存を有効または無効にします。    
+- バッチが初めてコンパイルされるとき、コンパイルしたプラン スタブのキャッシュ保存を有効または無効にします。  
+- ネイティブ コンパイル T-SQL モジュールの実行統計コレクションを有効または無効にします。
   
  ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,6 +70,8 @@ ALTER DATABASE SCOPED CONFIGURATION
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
+    | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF } 
+    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }     
 }  
 ```  
   
@@ -133,7 +136,7 @@ CLEAR PROCEDURE_CACHE
 
 IDENTITY_CACHE **=** { **ON** | OFF }  
 
-**適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] と [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 データベース レベルで ID キャッシュを有効または無効にします。 既定値は **ON** です。 ID キャッシュは、ID 列が含まれるテーブルでの INSERT パフォーマンスを改善するために使用されます。 サーバーが突然再起動したか、セカンダリ サーバーにフェールオーバーしたときに ID 列の値に隔たりができることを回避するには、IDENTITY_CACHE オプションを無効にします。 このオプションは、サーバー レベルのみならずデータベース レベルで設定可能という点を除き、既存の[トレース フラグ 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) と似ています。   
 
@@ -142,9 +145,27 @@ IDENTITY_CACHE **=** { **ON** | OFF }
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }  
 
-**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 
 
 バッチが初めてコンパイルされるとき、コンパイルしたプラン スタブのキャッシュ保存を有効または無効にします。 既定値は OFF です。 あるデータベースに対してデータベース スコープ構成 OPTIMIZE_FOR_AD_HOC_WORKLOADS を有効にすると、バッチを初めてコンパイルしたとき、コンパイル済みのプラン スタブがキャッシュに保存されます。 プラン スタブのメモリ領域は、完全なコンパイル済みプランのサイズに比べて小さくなります。  バッチが再度コンパイルまたは実行されると、コンパイル済みプラン スタブは削除され、完全なコンパイル済みプランと置換されます。
+
+XTP_PROCEDURE_EXECUTION_STATISTICS  **=** { ON | **OFF** }  
+
+**適用対象**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 
+
+現在のデータベース内のすべてのネイティブ コンパイル T-SQL モジュールに対し、モジュール レベルで実行統計コレクションを有効また無効にします。 既定値は OFF です。 実行統計は [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) に反映されます。
+
+このオプションが ON の場合、または統計コレクションが [sp_xtp_control_proc_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) によって有効化されている場合は、ネイティブ コンパイル T-SQL モジュールのモジュール レベルの実行統計が収集されます。
+
+XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }  
+
+**適用対象**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+
+現在のデータベース内のすべてのネイティブ コンパイル T-SQL モジュールに対し、ステートメント レベルで実行統計コレクションを有効また無効にします。 既定値は OFF です。 実行統計は、[sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) および[クエリ ストア](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)に反映されます。
+
+このオプションが ON の場合、または統計コレクションが [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) によって有効化されている場合は、ネイティブ コンパイル T-SQL モジュールのステートメント レベルの実行統計が収集されます。
+
+ネイティブ コンパイル T-SQL モジュールのパフォーマンスの監視の詳細については、「[ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)」を参照してください。
 
 ##  <a name="Permissions"></a> Permissions  
  データベースで ALTER ANY DATABASE SCOPE CONFIGURATION を   

@@ -1,48 +1,53 @@
 ---
-title: "Employee テーブルの現在の構造の確認 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
+title: Employee テーブルの現在の構造の確認 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/27/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - examining the current structure of the employee
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
-caps.latest.revision: 
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dac77c64b9ebb2c47fcaf399e6366964bfcee50c
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: fa6d4693132ec646438ab7cd0f45f85569c4109f
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="lesson-1-1---examining-the-current-structure-of-the-employee-table"></a>レッスン 1-1 - Employee テーブルの現在の構造の確認
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] サンプル [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースには、**HumanResources** スキーマに含まれる **Employee** テーブルがあります。 元のテーブルを変更しないように、この手順では、 **Employee** テーブルのコピーを作成して **EmployeeDemo**という名前を付けます。 例を単純にするために、元のテーブルから 5 列だけをコピーします。 次に、 **HumanResources.EmployeeDemo** テーブルに対してクエリを実行し、 **hierarchyid** データ型が使用されていないテーブル内のデータ構造を確認します。  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+サンプル [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] (以降) データベースには、**HumanResources** スキーマに含まれる **Employee** テーブルがあります。 元のテーブルを変更しないように、この手順では、 **Employee** テーブルのコピーを作成して **EmployeeDemo**という名前を付けます。 例を単純にするために、元のテーブルから 5 列だけをコピーします。 次に、 **HumanResources.EmployeeDemo** テーブルに対してクエリを実行し、 **hierarchyid** データ型が使用されていないテーブル内のデータ構造を確認します。  
   
 ### <a name="to-copy-the-employee-table"></a>Employee テーブルをコピーするには  
   
-1.  クエリ エディターのウィンドウで、次のコードを実行し、 **Employee** テーブルから新しいテーブルの **EmployeeDemo**にテーブル構造とデータをコピーします。  
+1.  クエリ エディターのウィンドウで、次のコードを実行し、 **Employee** テーブルから新しいテーブルの **EmployeeDemo**にテーブル構造とデータをコピーします。 元のテーブルは既に hierarchyid を使用しているため、このクエリは従業員のマネージャーを取得するために必然的に階層をフラット化します。 この階層はこのレッスンの中で後ほど再構築します。
   
     ```  
     USE AdventureWorks ;  
     GO  
   
-    SELECT EmployeeID, LoginID, ManagerID, Title, HireDate   
+    SELECT emp.BusinessEntityID AS EmployeeID, emp.LoginID, 
+      (SELECT  man.BusinessEntityID FROM HumanResources.Employee man 
+            WHERE emp.OrganizationNode.GetAncestor(1)=man.OrganizationNode OR 
+                (emp.OrganizationNode.GetAncestor(1) = 0x AND man.OrganizationNode IS NULL)) AS ManagerID
+        , emp.JobTitle, emp.HireDate
     INTO HumanResources.EmployeeDemo   
-    FROM HumanResources.Employee ;  
-    GO  
+    FROM HumanResources.Employee emp ;
+    GO
     ```  
   
 ### <a name="to-examine-the-structure-and-data-of-the-employeedemo-table"></a>EmployeeDemo テーブルの構造とデータを確認するには  
@@ -51,8 +56,8 @@ ms.lasthandoff: 01/18/2018
   
     ```  
     SELECT   
-         Mgr.EmployeeID AS MgrID, Mgr.LoginID AS Manager,   
-         Emp.EmployeeID AS E_ID, Emp.LoginID, Emp.Title  
+        Mgr.EmployeeID AS MgrID, Mgr.LoginID AS Manager,   
+        Emp.EmployeeID AS E_ID, Emp.LoginID, Emp.JobTitle  
     FROM HumanResources.EmployeeDemo AS Emp  
     LEFT JOIN HumanResources.EmployeeDemo AS Mgr  
     ON Emp.ManagerID = Mgr.EmployeeID  
@@ -62,22 +67,22 @@ ms.lasthandoff: 01/18/2018
     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
     ```  
-    MgrID Manager                 E_ID LoginID                  Title  
-    NULL NULL                      109 adventure-works\ken0     Chief Executive Officer  
-    3    adventure-works\roberto0  4   adventure-works\rob0     Senior Tool Designer  
-    3    adventure-works\roberto0  9   adventure-works\gail0    Design Engineer  
-    3    adventure-works\roberto0  11  adventure-works\jossef0  Design Engineer  
-    3    adventure-works\roberto0  158 adventure-works\dylan0   Research and Development Manager  
-    3    adventure-works\roberto0  263 adventure-works\ovidiu0  Senior Tool Designer  
-    3    adventure-works\roberto0  267 adventure-works\michael8 Senior Design Engineer  
-    3    adventure-works\roberto0  270 adventure-works\sharon0  Design Engineer  
-    6    adventure-works\david0    2   adventure-works\kevin0   Marketing Assistant  
+    MgrID Manager                 E_ID LoginID                  JobTitle  
+    NULL    NULL    1   adventure-works\ken0    Chief Executive Officer
+    1   adventure-works\ken0    2   adventure-works\terri0  Vice President of Engineering
+    1   adventure-works\ken0    16  adventure-works\david0  Marketing Manager
+    1   adventure-works\ken0    25  adventure-works\james1  Vice President of Production
+    1   adventure-works\ken0    234 adventure-works\laura1  Chief Financial Officer
+    1   adventure-works\ken0    263 adventure-works\jean0   Information Services Manager
+    1   adventure-works\ken0    273 adventure-works\brian3  Vice President of Sales
+    2   adventure-works\terri0  3   adventure-works\roberto0    Engineering Manager
+    3   adventure-works\roberto0    4   adventure-works\rob0    Senior Tool Designer
     ...  
     ```  
   
     結果は合計 290 行にわたります。  
   
-**ORDER BY** 句を使用していることによって、出力では、各管理レベルの直属の部下がまとめて表示されていることに注意してください。 たとえば、 **MgrID** 3 (roberto0) の 7 人の直属の部下がすべて左右に並べて表示されています。 実際に **MgrID** 3 に直属するすべての人をグループ化することは、不可能ではありませんが、かなり難しくなります。  
+**ORDER BY** 句を使用していることによって、出力では、各管理レベルの直属の部下がまとめて表示されていることに注意してください。 たとえば、**MgrID** 1 (ken0) の 7 人の直属の部下がすべて左右に並べて表示されています。 実際に **MgrID** 1 に直属するすべての人をグループ化することは、不可能ではありませんが、かなり難しくなります。  
   
 次の作業では、 **hierarchyid** データ型を使用して新しいテーブルを作成し、この新しいテーブルにデータを移動します。  
   

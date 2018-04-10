@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
 |**origin_datasource_id**|**uniqueidentifier**|行変更が取り消された、または競合が失われたサブスクリプション。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

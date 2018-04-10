@@ -18,16 +18,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: ''
+caps.latest.revision: 53
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: 56b70314f149d8eb2f8a9a0143ac43aae3d31afc
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="upgrade-integration-services"></a>Integration Services のアップグレード
   [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 以降がコンピューターに現在インストールされている場合は、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]にアップグレードできます。  
@@ -43,12 +43,12 @@ ms.lasthandoff: 03/20/2018
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする前に、アップグレード アドバイザーを実行することをお勧めします。 アップグレード アドバイザーは、既存の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で使用される新しいパッケージ形式に移行する場合に発生する可能性がある問題を報告します。  
   
 > [!NOTE]  
->  現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、データ変換サービス (DTS) パッケージの移行または実行のサポートは廃止されました。 次の DTS 機能は廃止されました。  
+>  SQL Server 2012 では、データ変換サービス (DTS) パッケージの移行または実行のサポートは廃止されました。 次の DTS 機能は廃止されました。  
 >   
 >  -   DTS ランタイム  
 > -   DTS API  
-> -   DTS パッケージを次期バージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 用に移行するためのパッケージ移行ウィザード  
-> -   DTS パッケージのメンテナンスでのサポート[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+> -   DTS パッケージを次期バージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
+> -   DTS パッケージのメンテナンス機能のサポート [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   DTS 2000 パッケージ実行タスク  
 > -   アップグレード アドバイザーによる DTS パッケージのスキャン  
 >   
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/20/2018
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップを実行し、**[SQL Server 2008、SQL Server 2008 R2、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] からのアップグレード]** を選択します。  
   
--   コマンド プロンプトで **setup.exe** を実行し、**/ACTION=upgrade** オプションを指定します。 詳細については、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]「[コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」の「のインストール スクリプト」を参照してください。  
+-   コマンド プロンプトで **setup.exe** を実行し、**/ACTION=upgrade** オプションを指定します。 詳細については、「[コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」の「[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインストール スクリプト」セクションを参照してください。  
   
  アップグレードでは、次の操作は実行できません。  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 03/20/2018
   
     -   ログ データを msdb.sysdtslog90 システム テーブルから msdb.sysssislog システム テーブルに移動します。  
   
--   新しい msdb.sysssis\* テーブルにデータを移動した後に、msdb.sysdts\*90 システム テーブルとシステム テーブルへのアクセスに使用されるストアド プロシージャを削除します。 ただしアップグレードにより、sysdtslog90 テーブルは sysdtslog90 という名前のビューに置き換わります。 この新しい sysdtslog90 ビューでは、新しい msdb.sysssislog システム テーブルが公開されます。 これにより、ログ テーブルに基づいたレポートは、中断されることなく引き続き実行されます。  
+-   新しい msdb.sysssis\* テーブルにデータを移動した後に、msdb.sysdts*90 システム テーブルとシステム テーブルへのアクセスに使用されるストアド プロシージャを削除します。 ただしアップグレードにより、sysdtslog90 テーブルは sysdtslog90 という名前のビューに置き換わります。 この新しい sysdtslog90 ビューでは、新しい msdb.sysssislog システム テーブルが公開されます。 これにより、ログ テーブルに基づいたレポートは、中断されることなく引き続き実行されます。  
   
 -   パッケージへのアクセスを制御するために、db_ssisadmin、db_ssisltduser、および db_ssisoperator という 3 つの固定データベース レベル ロールを新しく作成します。 db_dtsadmin、db_dtsltduser、および db_dtsoperator という [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ロールは削除されませんが、対応する新しいロールのメンバーになります。  
   

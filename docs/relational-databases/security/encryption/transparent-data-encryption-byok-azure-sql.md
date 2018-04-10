@@ -17,13 +17,13 @@ ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.devlang: na
 ms.topic: article
-ms.date: 03/16/2018
+ms.date: 04/03/2018
 ms.author: aliceku
-ms.openlocfilehash: ae89e8496ce8f2aec87d80e36ce7b48acfd6a8cf
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: e39e6f8957c1fc2c4f50603af213055cde84d0b6
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database および Data Warehouse 用の Bring Your Own Key (プレビュー) サポートによる Transparent Data Encryption
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -109,33 +109,64 @@ Azure Key Vault で高可用性を構成する方法は、使用しているデ�
 
 ![1 つのサーバーの高可用性および geo-DR なし](./media/transparent-data-encryption-byok-azure-sql/SingleServer_HA_Config.PNG)
 
-2 つ目のケースでは、Azure Key Vault 内の TDE プロテクターの高可用性を維持するために、既存の SQL Database フェールオーバー グループまたはデータベースのアクティブ geo レプリケーションのコピーに基づいて、冗長な Azure Key Vault を構成する必要があります。  geo レプリケーションされたサーバーごとに、個別のキー コンテナーが必要で、同じ Azure リージョンにそのサーバーとして併置するのが理想的です。 プライマリ データベースは、1 つのリージョンの停止のためにアクセス不可になり、フェールオーバーがトリガーされた場合は、セカンダリ データベースが、セカンダリ キー コンテナーを使用して引き継ぐことができます。  
+## <a name="how-to-configure-geo-dr-with-azure-key-vault"></a>Azure Key Vault を使用して Geo-DR を構成する方法
+
+暗号化されたデータベースの TDE プロテクターの高可用性を維持するには、既存のまたは目的の SQL Database フェールオーバー グループまたはアクティブな geo レプリケーション インスタンスに基づいて、冗長な Azure Key Vault を構成する必要があります。  geo レプリケーションされたサーバーごとに、個別のキー コンテナーが必要で、同じ Azure リージョンにそのサーバーと併置する必要があります。 プライマリ データベースは、1 つのリージョンの停止のためにアクセス不可になり、フェールオーバーがトリガーされた場合は、セカンダリ データベースが、セカンダリ キー コンテナーを使用して引き継ぐことができます。 
+ 
+geo レプリケーションされた Azure SQL データベースの場合、Azure Key Vault の次の構成が必要です。
+- 地域内にキー コンテナーがあるプライマリ データベースとセカンダリデータベースを 1 つずつ。 
+- 少なくとも 1 つのセカンダリが必要です。最大 4 つのセカンダリがサポートされます。 
+- セカンダリのセカンダリ (チェーン) はサポートされていません。
+
+次のセクションでは、セットアップと構成手順について詳しく説明します。 
+
+### <a name="azure-key-vault-configuration-steps"></a>Azure Key Vault の構成手順
+
+- [PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0) のインストール 
+- キー コンテナーで [PowerShell で “soft-delete” プロパティを有効にする](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) (このオプションは AKV ポータルからはまだ使用できませんが、SQL で必要です) を使用して 2 つの異なる領域に 2 つの Azure Key Vault を作成します。 
+- 最初のキー コンテナーに次の新しいキーを作成します。  
+  - RSA/RSA-HSA 2048 キー 
+  - 有効期限なし 
+  - キーが有効で、get、wrap key、および unwrap key 操作を実行するアクセス許可があること 
+- 主キーをバックアップし、2 番目のキー コンテナーにキーを復元します。  「[Backup-AzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/backup-azurekeyvaultkey?view=azurermps-5.1.1)」と「[Restore-AzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/restore-azurekeyvaultkey?view=azurermps-5.5.0)」を参照してください。 
+
+### <a name="azure-sql-database-configuration-steps"></a>Azure SQL Database の構成手順
+
+次の構成手順は、新しい SQL でデプロイを開始するか、または既存の SQL Geo-DR のデプロイを使用するかによって異なります。  最初に新しいデプロイの構成手順を概説し、その後に Azure Key Vault に格納されている TDE プロテクターを、既に Geo-DR リンクが確立されている既存のデプロイに割り当てる方法を説明します。 
+
+新しいデプロイの手順:
+- 以前に作成したキー コンテナーと同じ 2 つの領域で、2 つの論理 SQL サーバーを作成します。 
+- 論理サーバー TDE ウィンドウを選択し、各論理 SQL Server に対して次のことを行います。  
+   - 同じ領域内で AKV を選択します。 
+   - TDE プロテクターとして使用するキーを選択します。各サーバーは TDE プロテクターのローカル コピーを使用します。 
+   - Portal でこれを行うと、論理 SQL Server の [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) が作成されます。この ID はキー コンテナーにアクセスするために論理 SQL Server のアクセス許可を割り当てるために使用されるため、削除しないでください。  代わりに Azure Key Vault でアクセス許可を削除することで、アクセス権を取り消すことができます。 Portal でこれを行うと、論理 SQL サーバーの AppID が作成されます。この ID はキー コンテナーにアクセスするために論理 SQL サーバーのアクセス許可を割り当てるために使用されるため、削除しないでください。  代わりに Azure Key Vault でアクセス許可を削除することで、アクセス権を取り消すことができます。 
+- プライマリ データベースを作成します。 
+- [アクティブ geo レプリケーションのガイダンス](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview)に従ってシナリオを完了します。この手順によりセカンダリ データベースが作成されます。
 
 ![グループと geo-DR のフェールオーバー](./media/transparent-data-encryption-byok-azure-sql/Geo_DR_Config.PNG)
 
-フェールオーバー中に Azure Key Vault 内の TDE プロテクターに継続的にアクセスできるようにするには、データベースをセカンダリ サーバーに複製またはフェールオーバーする前に、これを構成する必要があります。 プライマリ サーバーとセカンダリ サーバーの両方で、その他すべての Azure Key Vault に TDE プロテクターのコピーを格納する必要があります。つまり、この例では、同じキーが両方のキー コンテナーに格納されるということです。
-
-geo-DR のシナリオでの冗長性のためにはセカンダリ キー コンテナーを備えたセカンダリ データベースが必要であり、最大で 4 つのセカンダリがサポートされます。  チェーンつまりセカンダリに対するセカンダリの作成はサポートされていません。  初期セットアップ時に、サービスは、プライマリ キー コンテナーとセカンダリ キー コンテナーの両方に対してアクセス許可が正しく設定されていることを確認します。  これらのアクセス許可を維持し、適用されていることを定期的にテストすることが重要です。
-
 >[!NOTE]
->プライマリとセカンダリのサーバーにサーバー ID を割り当てるときは、最初にセカンダリ サーバーに ID を割り当てる必要があります。
+>データベース間の geo-link の確立を続行する前に、同じ TDE プロテクターが両方のキー コンテナーに存在することを確認することが重要です。
 >
 
-キー コンテナーの既存のキーを別のキー コンテナーに追加するには、[Add-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) コマンドレットを使用します。
+Geo-DR デプロイを使用した既存の SQL DB の手順:
 
- ```powershell
-   <# Include the version guid in the KeyId #>
-   Add-AzureRmSqlServerKeyVaultKey `
-   -KeyId <KeyVaultKeyId> `
-   -ServerName <LogicalServerName> `
-   -ResourceGroup <SQLDatabaseResourceGroupName>
-   ```
+論理 SQL Server が既に存在し、プライマリ データベースとセカンダリ データベースが既に割り当てられているため、Azure Key Vault を構成する手順は、次の順序で実行する必要があります。 
+- セカンダリ データベースをホストする論理 SQL Server から始めます。 
+   - 同じ領域にあるキー コンテナーを割り当てる 
+   - TDE プロテクターを割り当てる 
+- 次に、プライマリ データベースをホストする論理 SQL Server に移動します。 
+   - セカンダリ DB に使用したのと同じ TDE プロテクターを選択する
+   
+![グループと geo-DR のフェールオーバー](./media/transparent-data-encryption-byok-azure-sql/geo_DR_ex_config.PNG)
 
 >[!NOTE]
->Key Vault 名とキー名を組み合わせた文字の長さが、94 文字を超えることはできません。
+>キー コンテナーをサーバーに割り当てる場合、セカンダリ サーバーから開始することが重要です。  2 番目の手順では、キー コンテナーをプライマリ サーバーに割り当て、TDE プロテクターを更新します。この時点でレプリケートされたデータベースで使用される TDE プロテクターが両方のサーバーに使用できるため、Geo-DR リンクは引き続き機能します。
 >
+
+SQL Database Geo-DR シナリオに対し、Azure Key Vault で顧客が管理するキーを持つ TDE を有効にする前に、SQL Database の geo レプリケーションに使用されるのと同じ領域に同じコンテンツを持つ 2 つの Azure Key Vault を作成して維持することが重要です。  "同じコンテンツ" とは、具体的には、両方のサーバーがすべてのデータベースで使用される TDE プロテクターにアクセスできるように、両方のキー コンテナーに同じ TDE プロテクターのコピーが含まれている必要があることを意味します。  今後、両方のキー コンテナーを同期させておく必要があります。つまり、キー ローテーション後に両方のキー コンテナーに TDE プロテクターの同じコピーが含まれていて、ログ ファイルまたはバックアップに使用されるキーの古いバージョンを保持している必要があります。TDE プロテクターは同じキー プロパティを保持する必要があり、キー コンテナーは SQL の同じアクセス許可を保持する必要があります。  
  
-「[概要: フェールオーバー グループとアクティブ geo レプリケーション](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)」の手順に従って、これらのサーバーでアクティブ geo レプリケーションを構成し、フェールオーバーをトリガーします。 
+テストしてフェールオーバーをトリガーするには、[アクティブ geo レプリケーションの概要](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)の手順に従います。これは、両方のキー コンテナーへの SQL のアクセス許可が保持されていることを確認するため、定期的に行う必要があります。 
 
 
 ### <a name="backup-and-restore"></a>バックアップと復元

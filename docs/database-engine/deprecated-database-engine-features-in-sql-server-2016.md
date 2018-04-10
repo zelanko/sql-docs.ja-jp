@@ -1,31 +1,32 @@
 ---
-title: "SQL Server 2016 データベース エンジンの非推奨機能 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 2016 データベース エンジンの非推奨機能 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-engine
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: "215"
+caps.latest.revision: 215
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2c85ec6c5975b8053dfd5c87a575fe79f61d5170
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: ffe97ae02f04c6ff8df04755d24ea6f771133cc6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 データベース エンジンの非推奨機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |データベース オブジェクト|トリガーから結果セットを返す機能|なし|トリガーから結果を返す|12|  
 |暗号化|RC4 または RC4_128 を使用した暗号化は推奨されておらず、次のバージョンで削除される予定です。 RC4 および RC4_128 の暗号化解除は推奨されていません。|AES など、別の暗号化アルゴリズムを使用してください。|非推奨の暗号化アルゴリズム|253|  
 |リモート サーバー|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|リンク サーバーを使用してリモート サーバーを置き換えてください。 sp_addserver は、ローカル オプションでのみ使用できます。|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|リモート サーバー|@@remserver|リンク サーバーを使用してリモート サーバーを置き換えてください。|なし|なし|  
+|リモート サーバー|\@\@remserver|リンク サーバーを使用してリモート サーバーを置き換えてください。|なし|なし|  
 |リモート サーバー|SET REMOTE_PROC_TRANSACTIONS|リンク サーバーを使用してリモート サーバーを置き換えてください。|SET REMOTE_PROC_TRANSACTIONS|110|  
 |SET オプション|**SET ROWCOUNT** 、 **INSERT**、および **UPDATE**ステートメントの **DELETE**|TOP キーワード|SET ROWCOUNT|109|  
 |テーブル ヒント|HOLDLOCK table hint without parenthesis|かっこ付きの HOLDLOCK を使用します。|HOLDLOCK table hint without parenthesis|167|  
@@ -157,7 +158,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|DML ステートメントでの列名としての ROWGUIDCOL の使用|$rowguid を使用してください。|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|DML ステートメントでの列名としての IDENTITYCOL の使用|$identity を使用してください。|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|一時テーブル名および一時ストアド プロシージャ名としての #、## の使用|別の文字を少なくとも 1 文字は使用してください。|'#' and '##' as the name of temporary tables and stored procedures|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|[!INCLUDE[tsql](../includes/tsql-md.md)] 識別子としての @、@@、または @@ で始まる名前の使用|@、@@、または @@ で始まる名前を識別子として使用しないでください。|[!INCLUDE[tsql](../includes/tsql-md.md)] 識別子としての '@' と '@@' で始まる名前|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|[!INCLUDE[tsql](../includes/tsql-md.md)] 識別子としての \@、\@\@、または \@\@ で始まる名前の使用。|\@、\@\@、または \@\@ で始まる名前を識別子として使用しないでください。|[!INCLUDE[tsql](../includes/tsql-md.md)] 識別子としての '\@' と '\@\@' で始まる名前|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|既定値としての DEFAULT キーワードの使用|DEFAULT キーワードを既定値として使用しないでください。|既定値としての DEFAULT キーワード|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|テーブル ヒントの区切り文字としてのスペースの使用|テーブル ヒントはコンマを使用して区切ってください。|コンマで区切られていない複数のテーブル ヒント|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|集計インデックス付きビューの選択リストには、互換性モードが 90 の場合、COUNT_BIG (*) の指定が必要|COUNT_BIG (*) を使用してください。|COUNT_BIG(*) がないインデックス付きビューの選択リスト|2|  

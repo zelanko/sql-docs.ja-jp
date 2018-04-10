@@ -1,30 +1,30 @@
 ---
-title: "基になるクエリの指定 (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs"
-ms.custom: 
+title: 基になるクエリの指定 (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-caps.latest.revision: 
+caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4399fdeb68ee0768ac083e0193ae0513b221021d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 485faeca41d64c744a091c0efd4be8a05109a6b8
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>[基になるクエリの指定]\(SQL Server インポートおよびエクスポート ウィザード)
 コピーするデータを選択するためにクエリを提供するように指定した場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードに **[基になるクエリの指定]**が表示されます。 このページで、データ ソースから転送先にコピーするデータを選択する SQL クエリを書き込んでテストします。 保存されたクエリのテキストを貼り付けるか、ファイルからクエリ テキストを読み込むこともできます。
@@ -64,7 +64,10 @@ WHERE CommissionPct > 0.015
  **[開く]** ダイアログ ボックスを使用して、SQL クエリのテキストを含む保存ファイルを指定します。 ファイルを選択すると、そのファイルのテキストが **[SQL ステートメント]** テキスト ボックスにコピーされます。  
  
 ## <a name="excelQueries"></a> Excel のソース クエリを指定する
-### <a name="specify-excel-objects-in-queries"></a>クエリで Excel オブジェクトを指定する
+
+> [!IMPORTANT]
+> Excel ファイルへの接続、および Excel から、または Excel へのデータの読み込みに関する制限事項と既知の問題については、「[Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)」 (SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む) を参照してください。
+
 クエリに使用できる Excel オブジェクトは 3 種類あります。
 -   **ワークシート。** ワークシートをクエリするには、シート名の末尾に $ 文字を付加し、文字列を区切り文字で囲みます (例: **[Sheet1$]**)。
 
@@ -83,9 +86,6 @@ WHERE CommissionPct > 0.015
     ```sql
     SELECT * FROM [Sheet1$A1:B4]
     ```
-
-### <a name="prepare-the-excel-source-data"></a>Excel ソース データを準備する
-ソース テーブルとしてワークシートまたは範囲を指定した場合、ドライバーは、ワークシートまたは範囲の左上の空でない最初のセルから、 *連続した* セルのブロックを読み取ります。 その結果、ソース データに空行を含めることはできなくなります。 たとえば、列ヘッダーとデータ行の間に空行を含めることはできません。 ワークシートの一番上にタイトル行と空行があり、その後にデータ行がある場合、そのワークシートをクエリできません。 Excel では、データの範囲に名前を割り当て、ワークシートではなく名前付き範囲をクエリする必要があります。
 
 ## <a name="whats-next"></a>次の操作  
  コピーするデータを選択するための SQL クエリを記述してテストした後、次に表示されるページは、データの宛先によって異なります。  

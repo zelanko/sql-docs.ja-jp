@@ -1,35 +1,35 @@
 ---
-title: "ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/16/2017
+title: ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
-caps.latest.revision: 
+caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5f180e94f835adaa91812e0341dab85d382c2c2
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: 1912c692998f08f947b9fb147d049048b8101ad6
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  このトピックでは、ネイティブ コンパイル ストアド プロシージャのパフォーマンスを監視する方法を説明します。  
+  この記事では、ネイティブ コンパイル ストアド プロシージャとその他のネイティブ コンパイル T-SQL モジュールのパフォーマンスを監視する方法を説明します。  
   
 ## <a name="using-extended-events"></a>拡張イベントの使用  
- クエリの実行をトレースするには、 **sp_statement_completed** 拡張イベントを使用します。 このイベントを使用して拡張イベント セッションを作成し、オプションで、特定のネイティブ コンパイル ストアド プロシージャに対応する object_id でフィルター処理を実行します。各クエリの実行後に、拡張イベントが生成されます。 拡張イベントによって報告された CPU 時間と期間は、クエリが使用した CPU 時間と実行時間の長さを示します。 多くの CPU 時間を使用しているネイティブ コンパイル ストアド プロシージャには、パフォーマンスの問題が存在している可能性があります。  
+ クエリの実行をトレースするには、 **sp_statement_completed** 拡張イベントを使用します。 このイベントを使用して拡張イベント セッションを作成し、オプションで、特定のネイティブ コンパイル ストアド プロシージャに対応する object_id でフィルター処理を実行します。 各クエリの実行後に、拡張イベントが生成されます。 拡張イベントによって報告された CPU 時間と期間は、クエリが使用した CPU 時間と実行時間の長さを示します。 多くの CPU 時間を使用しているネイティブ コンパイル ストアド プロシージャには、パフォーマンスの問題が存在している可能性があります。  
   
  拡張イベント内の**line_number**と **object_id** を組み合わせて使用し、クエリを調査することができます。 次のクエリを使用して、プロシージャの定義を取得することができます。 行番号を使用して、定義内のクエリを特定できます:  
   
@@ -39,21 +39,39 @@ select [definition] from sys.sql_modules where object_id=object_id
   
  **sp_statement_completed** 拡張イベントの詳細については、「 [イベントの原因となったステートメントを取得する方法](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)」を参照してください。  
   
-## <a name="using-data-management-views"></a>データ管理ビューの使用  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、プロシージャ レベルとクエリ レベルの両方で、ネイティブ コンパイル ストアド プロシージャに関する実行の統計の収集をサポートしています。 パフォーマンスに与える影響が原因で、実行の統計の収集は既定では有効になっていません。  
-  
- ネイティブ コンパイル ストアド プロシージャに対する統計コレクションは、[sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) を使用して有効化または無効化することができます。  
-  
- [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) で統計コレクションを有効にすると、[sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) を使用してネイティブ コンパイル ストアド プロシージャのパフォーマンスを監視することができます。  
-  
- [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) で統計コレクションを有効にすると、[sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) を使用してネイティブ コンパイル ストアド プロシージャのパフォーマンスを監視することができます。  
-  
- 収集を開始するには、統計コレクションを有効にします。 次に、ネイティブ コンパイル ストアド プロシージャを実行します。 収集を終了するには、統計コレクションを無効にします。 次に、DMV によって返された実行の統計を分析します。  
-  
+## <a name="using-data-management-views-and-query-store"></a>データ管理ビューとクエリ ストアの使用
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDS](../../includes/sssds-md.md)] は、プロシージャ レベルとクエリ レベルの両方で、ネイティブ コンパイル ストアド プロシージャに関する実行の統計の収集をサポートしています。 パフォーマンスに与える影響が原因で、実行の統計の収集は既定では有効になっていません。  
+
+実行統計は、[sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) および [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) のシステム ビューと、[クエリ ストア](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)にも反映されます。
+
+### <a name="enabling-procedure-level-execution-statistics-collection"></a>プロシージャ レベルの実行統計コレクションを有効にする
+
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) を使用して、プロシージャ レベルでネイティブ コンパイル ストアド プロシージャの統計コレクションを有効または無効にします。  次のステートメントは、現在のインスタンス上のすべてのネイティブ コンパイル T-SQL モジュールに対し、プロシージャ レベルの実行統計のコレクションを有効にします。
+```sql
+EXEC sys.sp_xtp_control_proc_exec_stats 1
+```
+
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) オプション `XTP_PROCEDURE_EXECUTION_STATISTICS` を使用して、プロシージャ レベルでネイティブ コンパイル ストアド プロシージャの統計コレクションを有効または無効にします。 次のステートメントは、現在のデータベース内のすべてのネイティブ コンパイル T-SQL モジュールに対し、プロシージャ レベルの実行統計のコレクションを有効にします。
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON
+```
+
+### <a name="enabling-query-level-execution-statistics-collection"></a>クエリ レベルの実行統計コレクションを有効にする
+
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) を使用して、クエリ レベルでネイティブ コンパイル ストアド プロシージャの統計コレクションを有効または無効にします。  次のステートメントは、現在のインスタンス上のすべてのネイティブ コンパイル T-SQL モジュールに対し、クエリ レベルの実行統計のコレクションを有効にします。
+```sql
+EXEC sys.sp_xtp_control_query_exec_stats 1
+```
+
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) オプション `XTP_QUERY_EXECUTION_STATISTICS` を使用して、ステートメント レベルでネイティブ コンパイル ストアド プロシージャの統計コレクションを有効または無効にします。 次のステートメントは、現在のデータベース内のすべてのネイティブ コンパイル T-SQL モジュールに対し、クエリ レベルの実行統計のコレクションを有効にします。
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON
+```
+
+## <a name="sample-queries"></a>サンプル クエリ
+
  統計を収集した後、ネイティブ コンパイル ストアド プロシージャに関する実行の統計を要求するには、プロシージャに対して [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) を使用し、クエリに対して [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) を使用することが実行できます。  
-  
-> [!NOTE]  
->  ネイティブ コンパイル ストアド プロシージャに対する統計コレクションが有効になっている場合は、ワーカー時間がミリ秒単位で収集されます。 クエリが 1 ミリ秒未満で実行された場合は、値は 0 になります。 ネイティブ コンパイル ストアド プロシージャに関して、多くの実行が 1 ミリ秒未満である場合は、 **total_worker_time** は精度が高くない可能性があります。  
+ 
   
  次のクエリは、統計コレクションを有効にした後、現在のデータベース内で実行されたネイティブ コンパイル ストアド プロシージャに関するプロシージャ名と実行の統計を返します。  
   
@@ -99,7 +117,9 @@ where  st.dbid=db_id() and st.objectid in (select object_id
 from sys.sql_modules where uses_native_compilation=1)  
 order by qs.total_worker_time desc  
 ```  
-  
+
+## <a name="query-execution-plans"></a>クエリ実行プラン
+
  ネイティブ コンパイル ストアド プロシージャでは、SHOWPLAN_XML (推定実行プラン) がサポートされています。 推定実行プランを使用してクエリ プランを調査し、不適切なプランの問題を見つけることができます。 不適切なプランの一般的な理由は次のとおりです。  
   
 -   プロシージャを作成する前に統計を更新していません。  

@@ -1,16 +1,16 @@
 ---
-title: "SQL Server:Deprecated Features オブジェクト | Microsoft Docs"
-ms.custom: 
+title: SQL Server:Deprecated Features オブジェクト | Microsoft Docs
+ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 
+caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 336fea7b5f3ea9fec4dc559933477086f4cca5ed
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a9a674bac91e77945fd7493cee22a11f44639a75
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server:Deprecated Features オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |------------------------------------------------------|-----------------|  
 |'#' および ' ##' 一時テーブルおよびストアド プロシージャの名前として|# 以外の文字を含んでいない識別子が見つかりました。 別の文字を少なくとも 1 文字は使用してください。 コンパイルごとに 1 回発生します。|  
 |'::' 関数呼び出し構文|テーブル値関数で :: 関数呼び出し構文が見つかりました。 `SELECT column_list FROM`*< function_name>*`()` に置き換えてください。 たとえば、`SELECT * FROM ::fn_virtualfilestats(2,1)` は `SELECT * FROM sys.fn_virtualfilestats(2,1)` に置き換わります。 コンパイルごとに 1 回発生します。|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子としての '@' と '@@' で始まる名前|@ または @@ で始まる識別子が見つかりました。 @、@@、または @@ で始まる名前を識別子として使用しないでください。 コンパイルごとに 1 回発生します。|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子としての '\@' と '\@\@' で始まる名前|\@ または \@\@ で始まる識別子が見つかりました。 \@、\@v@、または \@\@ で始まる名前を識別子として使用しないでください。 コンパイルごとに 1 回発生します。|  
 |ADDING TAPE DEVICE|非推奨機能 sp_addumpdevice'**tape**' が見つかりました。 代わりに、sp_addumpdevice'**disk**' を使用してください。 使用するごとに 1 回発生します。|  
 |ALL 権限|GRANT ALL、DENY ALL、または REVOKE ALL 構文が見つかった合計回数。 特定の権限を拒否するように構文を変更してください。 クエリごとに 1 回発生します。|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|サーバー インスタンスの起動後に、ALTER DATABASE の非推奨機能 TORN_PAGE_DETECTION オプションが使用された合計回数。 代わりに、PAGE_VERIFY 構文を使用してください。 DDL ステートメントで使用するごとに 1 回発生します。|  
@@ -193,7 +193,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_defaultlanguage|sp_defaultlanguage プロシージャが見つかりました。 代わりに ALTER LOGIN を使用してください。 コンパイルごとに 1 回発生します。|  
 |sp_denylogin|sp_denylogin プロシージャが見つかりました。 代わりに ALTER LOGIN DISABLE を使用してください。 クエリごとに 1 回発生します。|  
 |sp_depends|sp_depends プロシージャが見つかりました。 代わりに sys.dm_sql_referencing_entities および sys.dm_sql_referenced_entities を使用してください。 クエリごとに 1 回発生します。|  
-|sp_detach_db @keepfulltextindexfile|sp_detach_db ステートメントで @keepfulltextindexfile 引数が見つかりました。 この引数は使用しないでください。|  
+|sp_detach_db \@keepfulltextindexfile|sp_detach_db ステートメントで \@keepfulltextindexfile 引数が見つかりました。 この引数は使用しないでください。|  
 |sp_dropalias|sp_dropalias プロシージャが見つかりました。 別名をユーザー アカウントとデータベース ロールの組み合わせで置き換えてください。 アップグレードされたデータベースで別名を削除するには、sp_dropalias を使用します。 コンパイルごとに 1 回発生します。|  
 |sp_dropapprole|sp_dropapprole プロシージャが見つかりました。 代わりに DROP APPLICATION ROLE を使用してください。 クエリごとに 1 回発生します。|  
 |sp_dropextendedproc|sp_dropextendedproc プロシージャが見つかりました。 代わりに CLR を使用してください。 コンパイルごとに 1 回発生します。|  
@@ -206,10 +206,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_fulltext_catalog|sp_fulltext_catalog プロシージャが見つかりました。 代わりに CREATE/ALTER/DROP FULLTEXT CATALOG を使用してください。 コンパイルごとに 1 回発生します。|  
 |sp_fulltext_column|sp_fulltext_column プロシージャが見つかりました。 代わりに、ALTER FULLTEXT INDEX を使用してください。 コンパイルごとに 1 回発生します。|  
 |sp_fulltext_database|sp_fulltext_database プロシージャが見つかりました。 代わりに ALTER DATABASE を使用してください。 コンパイルごとに 1 回発生します。|  
-|sp_fulltext_service @action=clean_up|sp_fulltext_service プロシージャの clean_up オプションが見つかりました。 クエリごとに 1 回発生します。|  
-|sp_fulltext_service @action=connect_timeout|sp_fulltext_service プロシージャの connect_timeout オプションが見つかりました。 クエリごとに 1 回発生します。|  
-|sp_fulltext_service @action=data_timeout|sp_fulltext_service プロシージャの data_timeout オプションが見つかりました。 クエリごとに 1 回発生します。|  
-|sp_fulltext_service @action=resource_usage|sp_fulltext_service プロシージャの resource_usage オプションが見つかりました。 このオプションには機能がありません。 クエリごとに 1 回発生します。|  
+|sp_fulltext_service \@action=clean_up|sp_fulltext_service プロシージャの clean_up オプションが見つかりました。 クエリごとに 1 回発生します。|  
+|sp_fulltext_service \@action=connect_timeout|sp_fulltext_service プロシージャの connect_timeout オプションが見つかりました。 クエリごとに 1 回発生します。|  
+|sp_fulltext_service \@action=data_timeout|sp_fulltext_service プロシージャの data_timeout オプションが見つかりました。 クエリごとに 1 回発生します。|  
+|sp_fulltext_service \@action=resource_usage|sp_fulltext_service プロシージャの resource_usage オプションが見つかりました。 このオプションには機能がありません。 クエリごとに 1 回発生します。|  
 |sp_fulltext_table|sp_fulltext_table プロシージャが見つかりました。 代わりに CREATE/ALTER/DROP FULLTEXT INDEX を使用してください。 コンパイルごとに 1 回発生します。|  
 |sp_getbindtoken|sp_getbindtoken プロシージャが見つかりました。 代わりに、複数のアクティブな結果セット (MARS) または分散トランザクションを使用してください。 コンパイルごとに 1 回発生します。|  
 |sp_grantdbaccess|sp_grantdbaccess プロシージャが見つかりました。 代わりに CREATE USER を使用してください。 クエリごとに 1 回発生します。|  

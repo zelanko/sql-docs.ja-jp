@@ -1,29 +1,29 @@
 ---
-title: "SQL Server の拡張イベントのターゲット | Microsoft Docs"
-ms.custom: 
-ms.date: 06/12/2017
+title: SQL Server の拡張イベントのターゲット | Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: extended-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: 
+caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3c0d634e359b9b3578ba46649d202beef3367dd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e75149107c4576a51737f77cf49679c62a2a0d42
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントのターゲット
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,6 +90,10 @@ SQL Server の拡張イベントは、Event Tracing for Windows (ETW) と連携�
 
 この ETW ターゲットは受信したデータを *同期的* に処理しますが、ほとんどのターゲットは *非同期的*に処理します。
 
+> [!NOTE]
+> Azure SQL Database データベースでは、ETW ターゲットはサポートされていません。 また、Azure SQL Database マネージ インスタンスもサポートされていません。
+
+<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
 <a name="h2_target_event_counter"></a>
 
@@ -152,6 +156,12 @@ CREATE EVENT SESSION [event_counter_1]
 
 
 - 指定したファイル名をプレフィックスとして使用し、その後に日時に基づく長い整数と、.xel 拡張子が付加されます。
+
+> [!NOTE]
+> Microsoft Azure SQL Database では、**event_file** ターゲットはサポートされていますが、Azure Storage で出力に BLOB を使用している場合にのみサポートされます。 SQL Database は、イベント出力をローカル ハード ドライブ上のファイルに格納できません。
+> 特に SQL Database (および SQL Database マネージ インスタンス) の **event_file** のコード例については、「[SQL Database の拡張イベントのためのイベント ファイル ターゲット コード](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file)」を参照してください。
+
+<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
 
 #### <a name="create-event-session-with-eventfile-target"></a>CREATE EVENT SESSION と **event_file** ターゲット
