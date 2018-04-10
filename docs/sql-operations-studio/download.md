@@ -40,7 +40,7 @@ ms.lasthandoff: 04/08/2018
 
 **インストーラー**
 
-1. ダウンロードし、実行、 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=870837)です。
+1. [Windows 用の [!INCLUDE[name-sos](../includes/name-sos-short.md)] インストーラー](https://go.microsoft.com/fwlink/?linkid=870837) ダウンロードして実行します。
 1. 開始、[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]アプリ。
 
 
@@ -53,8 +53,8 @@ ms.lasthandoff: 04/08/2018
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>MacOS の SQL 操作 Studio (プレビュー) を取得します。
 
-1. ダウンロード[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] macOS の](https://go.microsoft.com/fwlink/?linkid=870839)します。
-2. Zip の内容を展開しをダブルクリックします。
+1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=870839) をダウンロードします。
+2. zip のコンテンツを展開するには、ダブルクリックします。
 3. させる[!INCLUDE[name-sos](../includes/name-sos-short.md)]で使用できる、*スタート パッド*、ドラッグ*sqlops.app*を*アプリケーション*フォルダーです。
 
 
@@ -116,7 +116,7 @@ ms.lasthandoff: 04/08/2018
    ```
 
 
-## <a name="uninstall-sql-operations-studio-preview"></a>SQL 操作 Studio (プレビュー) アンインストールします。
+## <a name="uninstall-sql-operations-studio-preview"></a>SQL Operations Studio (プレビュー)</a> のアンインストール
 
 インストールした場合[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]すべての Windows アプリケーションを削除するのと同じ方法をアンインストールし、Windows インストーラーを使用します。
 
@@ -147,7 +147,7 @@ ms.lasthandoff: 04/08/2018
 - Ubuntu 16.04
 
 ## <a name="check-for-updates"></a>更新を確認する
-最新の更新プログラムを確認するに をクリックし、ウィンドウの左下の歯車アイコンをクリックして**更新プログラムの確認**
+最新の更新を確認するには、ウィンドウの左下にある歯車アイコンをクリックして **更新を確認する** をクリックしてください。
 
 ## <a name="next-steps"></a>次の手順
 
