@@ -1,16 +1,16 @@
 ---
-title: "レプリケーション エージェント プロファイルを操作する | Microsoft Docs"
-ms.custom: 
+title: レプリケーション エージェント プロファイルを操作する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - replication [SQL Server], agents and profiles
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - agents [SQL Server replication], profiles
 - profiles [SQL Server], replication agents
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
-caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 49
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88f10c5acea2106997a516aa968a8704b3bbcb7e
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: d593b1bb98508fa17bcc9be4bce1bdf448494dc6
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="work-with-replication-agent-profiles"></a>レプリケーション エージェント プロファイルを操作する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、レプリケーション エージェント プロファイルを操作する方法について説明します。 各レプリケーション エージェントの動作は、エージェント プロファイルで設定できる一連のパラメーターによって制御されます。 各エージェントには既定のプロファイルがあり、その一部には事前に定義された追加のプロファイルがあります。1 つのエージェントに対しては、1 つのプロファイルのみがアクティブになります。  
+  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、レプリケーション エージェント プロファイルを操作する方法について説明します。 各レプリケーション エージェントの動作は、エージェント プロファイルで設定できる一連のパラメーターによって制御されます。 各エージェントには既定のプロファイルがあり、その一部には事前に定義された追加のプロファイルがあります。1 つのエージェントに対しては、1 つのプロファイルのみがアクティブになります。  
   
  **このトピックの内容**  
   
@@ -178,7 +178,7 @@ ms.lasthandoff: 02/27/2018
   
 2.  ディストリビューターで、[sp_help_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id**をクリックします。 これにより、プロファイルのすべてのパラメーターが返されます。 変更するパラメーター、またはプロファイルから削除するパラメーターの名前を確認します。  
   
-3.  プロファイル内のパラメーターの値を変更するには、[sp_change_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id**に指定し、変更するパラメーターの名前を **@property**に、パラメーターの新しい値を **@value**をクリックします。  
+3.  プロファイル内のパラメーターの値を変更するには、[sp_change_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id**に指定し、変更するパラメーターの名前を **@parameter_name**に、パラメーターの新しい値を **@parameter_value**をクリックします。  
   
     > [!NOTE]  
     >  既存のエージェント プロファイルを変更して、エージェントの既定のプロファイルにすることはできません。 代わりに、前の手順に示すように、新しいプロファイルを既定のプロファイルとして作成する必要があります。  

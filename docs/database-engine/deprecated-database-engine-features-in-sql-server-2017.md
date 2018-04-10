@@ -1,32 +1,32 @@
 ---
-title: "SQL Server 2017 データベース エンジンの非推奨機能 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 2017 データベース エンジンの非推奨機能 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-engine
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee8ea46df926675535f1ed685c7df464af7d893f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 07f71e7efd6d2c43160cb7d6a0066ad8e57e5c69
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 データベース エンジンの非推奨機能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |データベース オブジェクト|トリガーから結果セットを返す機能|なし|トリガーから結果を返す|12|  
 |暗号化|RC4 または RC4_128 を使用した暗号化は推奨されておらず、次のバージョンで削除される予定です。 RC4 および RC4_128 の暗号化解除は推奨されていません。|AES など、別の暗号化アルゴリズムを使用してください。|非推奨の暗号化アルゴリズム|253|  
 |リモート サーバー|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|リンク サーバーを使用してリモート サーバーを置き換えてください。 sp_addserver は、ローカル オプションでのみ使用できます。|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|リモート サーバー|@@remserver|リンク サーバーを使用してリモート サーバーを置き換えてください。|なし|なし|  
+|リモート サーバー|\@\@remserver|リンク サーバーを使用してリモート サーバーを置き換えてください。|なし|なし|  
 |リモート サーバー|SET REMOTE_PROC_TRANSACTIONS|リンク サーバーを使用してリモート サーバーを置き換えてください。|SET REMOTE_PROC_TRANSACTIONS|110|  
 |SET オプション|**SET ROWCOUNT** 、 **INSERT**、および **UPDATE**ステートメントの **DELETE**|TOP キーワード|SET ROWCOUNT|109|  
 |テーブル ヒント|HOLDLOCK table hint without parenthesis|かっこ付きの HOLDLOCK を使用します。|HOLDLOCK table hint without parenthesis|167|  
@@ -137,7 +137,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |SQL Server エージェント|**net send** による通知<br /><br /> ポケットベルによる通知|電子メールによる通知<br /><br /> 電子メールによる通知 |なし|なし|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||なし|なし|  
 |システム ストアド プロシージャ|sp_db_increased_partitions|[なし] : [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]では、増加したパーティションのサポートを既定で使用できます。|sp_db_increased_partitions|253|  
-|システム テーブル|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|互換性ビュー。 詳細については、「[互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)」を参照してください。<br /><br /> **\*\* 重要 \*\*** 互換性ビューには、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]で導入された機能のメタデータが表示されません。 カタログ ビューを使用するようにアプリケーションをアップグレードすることをお勧めします。 詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> なし<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
+|システム テーブル|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|互換性ビュー。 詳細については、「[互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)」を参照してください。<br /><br /> **\*\* 重要 \*\***互換性ビューには、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]で導入された機能のメタデータが表示されません。 カタログ ビューを使用するようにアプリケーションをアップグレードすることをお勧めします。 詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> なし<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |システム テーブル|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|なし|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
 |システム関数|fn_virtualservernodes<br /><br /> fn_servershareddrives|sys.dm_os_cluster_nodes<br /><br /> sys.dm_io_cluster_shared_drives|fn_virtualservernodes<br /><br /> fn_servershareddrives|155<br /><br /> 156|  
 |システム ビュー|sys.sql_dependencies|sys.sql_expression_dependencies|sys.sql_dependencies|198|  
@@ -159,7 +159,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|DML ステートメントでの列名としての ROWGUIDCOL の使用|$rowguid を使用してください。|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|DML ステートメントでの列名としての IDENTITYCOL の使用|$identity を使用してください。|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|一時テーブル名および一時ストアド プロシージャ名としての #、## の使用|別の文字を少なくとも 1 文字は使用してください。|'#' and '##' as the name of temporary tables and stored procedures|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|[!INCLUDE[tsql](../includes/tsql-md.md)] 識別子としての @、@@、または @@ で始まる名前の使用|@、@@、または @@ で始まる名前を識別子として使用しないでください。|[!INCLUDE[tsql](../includes/tsql-md.md)] 識別子としての '@' と '@@' で始まる名前|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|[!INCLUDE[tsql](../includes/tsql-md.md)] 識別子としての \@、\@\@、または \@\@ で始まる名前の使用。|\@、\@\@、または \@\@ で始まる名前を識別子として使用しないでください。|[!INCLUDE[tsql](../includes/tsql-md.md)] 識別子としての '\@' と '\@\@' で始まる名前|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|既定値としての DEFAULT キーワードの使用|DEFAULT キーワードを既定値として使用しないでください。|既定値としての DEFAULT キーワード|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|テーブル ヒントの区切り文字としてのスペースの使用|テーブル ヒントはコンマを使用して区切ってください。|コンマで区切られていない複数のテーブル ヒント|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|集計インデックス付きビューの選択リストには、互換性モードが 90 の場合、COUNT_BIG (*) の指定が必要|COUNT_BIG (*) を使用してください。|COUNT_BIG(*) がないインデックス付きビューの選択リスト|2|  

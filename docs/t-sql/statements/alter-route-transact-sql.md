@@ -1,16 +1,16 @@
 ---
 title: ALTER ROUTE (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_ROUTE_TSQL
@@ -24,21 +24,24 @@ helpviewer_keywords:
 - removing routes
 - routes [Service Broker], modifying
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
-caps.latest.revision: 
+caps.latest.revision: 33
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9ae2ef58b234919dab8057b00afd64efa0cc89b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3a1b6e3b8ea236aec4104653a7a96cdc0a6a53f2
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既存のルートに関するルート情報を変更します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既存のルートに関するルート情報を変更します。 
+
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)] 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,7 +68,7 @@ WITH
  変更するルート情報を定義するための句を、WITH の後に指定します。  
   
  SERVICE_NAME **='***service_name***'**  
- このルートが示すリモート サービスの名前を指定します。 *service_name* はリモート サービスで使用される名前と正確に一致する必要があります。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] は *service_name* 文字列をバイト単位で照合します。 つまり、この比較では大文字と小文字が区別され、現在の照合順序は考慮されません。 **'SQL/ServiceBroker/BrokerConfiguration'** というサービス名を持つルートは、Broker Configuration Notice サービスへのルートです。 このサービスへのルートは、ブローカー インスタンスを指定できない場合があります。  
+ このルートが示すリモート サービスの名前を指定します。 *service_name* はリモート サービスで使用される名前と正確に一致する必要があります。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] は *service_name* をバイト単位で照合します。 つまり、この比較では大文字と小文字が区別され、現在の照合順序は考慮されません。 **'SQL/ServiceBroker/BrokerConfiguration'** というサービス名を持つルートは、Broker Configuration Notice サービスへのルートです。 このサービスへのルートは、ブローカー インスタンスを指定できない場合があります。  
   
  SERVICE_NAME 句を省略した場合、ルートのサービス名は変更されません。  
   
@@ -87,7 +90,10 @@ WHERE database_id = DB_ID();
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がルーティング テーブルにルートを保持する時間を秒単位で指定します。 有効期間が終了するとルートは期限切れとなり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、新しいメッセージ交換用のルートを選択するときに、そのルートは考慮されなくなります。 この句を省略した場合、ルートの有効期限は変更されません。  
   
  ADDRESS **='***next_hop_address'*  
- ルート用のネットワーク アドレスを指定します。 *next_hop_address* には、次の形式で TCP/IP アドレスを指定します。  
+
+ SQL Database マネージ インスタンスの場合、`ADDRESS` はローカルである必要があります。
+
+ ルート用のネットワーク アドレスを指定します。 *next_hop_address* の次の形式で TCP/IP アドレスを指定します。  
   
  **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
@@ -135,7 +141,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  ALTER ROUTE コマンドで指定できない句に関する情報は、変更されません。 したがって、ALTER を使用して、ルートのタイムアウトを無効にしたり、ルートをすべてのサービス名やブローカー インスタンスと照合するような変更はできません。 このようなルート情報を変更するには、既存のルートを削除して新しいルートを作成し、新しい情報を指定する必要があります。  
   
- ルートによって *next_hop_address* の **'TRANSPORT'** が指定されるとき、ネットワーク アドレスはサービスの名前に基づいて決定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*next_hop_address* のネットワーク アドレスが有効な形式であれば、このネットワーク アドレスで始まるサービス名が適切に処理されます。 名前に有効なネットワーク アドレスが含まれているサービスは、そのサービス名のネットワーク アドレスにルートされます。  
+ ルートが *next_hop_address* に **'TRANSPORT'** を指定した場合、ネットワーク アドレスはサービスの名前に基づいて決定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*next_hop_address* のネットワーク アドレスが有効な形式であれば、このネットワーク アドレスで始まるサービス名が適切に処理されます。 名前に有効なネットワーク アドレスが含まれているサービスは、そのサービス名のネットワーク アドレスにルートされます。  
   
  ルートで指定されているサービス、ネットワーク アドレス、ブローカー インスタンス識別子のいずれか、またはすべてが同じであれば、ルーティング テーブルにはルートをいくつでも含めることができます。 このような場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)] でルートを選択するときには、メッセージ交換で指定された情報とルーティング テーブル内の情報を照合して、最も正確に一致する情報を取得するためのプロシージャが使用されます。  
   

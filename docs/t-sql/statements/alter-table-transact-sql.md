@@ -61,16 +61,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: ''
+caps.latest.revision: 281
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b4a725960612c90a4619cf16587df0f67a68a3ba
-ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
+ms.openlocfilehash: 20df0676d819883937884d2b6d989d9f583c7fb4
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -413,7 +413,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
   
  指定した列に対して ROWGUIDCOL プロパティが追加または削除されます。 ROWGUIDCOL は、列が行の GUID 列であることを示します。 各テーブルでは 1 つの **uniqueidentifier** 列のみを ROWGUIDCOL 列として指定できます。ROWGUIDCOL プロパティは、**uniqueidentifier** 列にのみ割り当てることができます。 ROWGUIDCOL は、ユーザー定義データ型の列に割り当てることはできません。  
   
- ROWGUIDCOL では列に一意な値が格納されるわけではなく、またテーブルに挿入される新しい行に対して値は自動的に生成されません。 各列に一意な値を生成するには、INSERT ステートメントで NEWID 関数を使用するか、列の既定値として NEWID 関数を指定します。  
+ ROWGUIDCOL では列に一意な値が格納されるわけではなく、またテーブルに挿入される新しい行に対して値は自動的に生成されません。 各列に対して一意な値を生成するには、INSERT ステートメントで NEWID 関数または NEWSEQUENTIALID 関数を使用するか、NEWID 関数または NEWSEQUENTIALID 関数を列の既定値として使用します。  
   
  [ {ADD | DROP} PERSISTED ]  
  指定した列に対して PERSISTED プロパティが追加または削除されます。 列は、決定的な式で定義される計算列であることが必要です。 PERSISTED として指定した列では、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって物理的にテーブルに計算値が格納され、計算列が依存している他の列が更新されるとその計算値も更新されます。 計算列を PERSISTED とマークすることにより、決定的であるが不正確な式によって定義されている計算列にインデックスを作成できます。 詳細については、「 [計算列のインデックス](../../relational-databases/indexes/indexes-on-computed-columns.md)」を参照してください。  

@@ -1,28 +1,28 @@
 ---
-title: "簡単な例によるインポートおよびエクスポート ウィザードの概要 | Microsoft Docs"
-ms.custom: 
+title: 簡単な例によるインポートおよびエクスポート ウィザードの概要 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 169ad5455571c2b0e484fc0aa153e55141cdd1fd
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: a684f719495083d5ca4e79a2fbc0213ab83a95a6
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>簡単な例によるインポートおよびエクスポート ウィザードの概要
 Excel スプレッドシートから SQL Server データベースにデータをインポートするというよくあるシナリオを使って、SQL Server インポートおよびエクスポート ウィザードの機能について説明します。 別の変換元および別の変換先を使う予定の場合でも、このトピックを読むとウィザードの実行について知っておく必要があるほとんどのことがわかります。
@@ -62,9 +62,12 @@ Windows の [スタート] メニューの [Microsoft SQL Server 2016] グルー
 ## <a name="step-3---pick-excel-as-your-data-source"></a>ステップ 3 - データ ソースとして Excel を選ぶ
 次の **[データ ソースの選択]** ページで、データ ソースとして Microsoft Excel を選びます。 それから、Excel ファイルを参照して選びます。 最後に、ファイルの作成に使った Excel のバージョンを指定します。
 
+> [!IMPORTANT]
+> Excel ファイルへの接続、および Excel から、または Excel へのデータの読み込みに関する制限事項と既知の問題については、「[Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)」 (SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む) を参照してください。
+
 ![Excel データ ソースを選ぶ](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
 
-Excel への接続について詳しくは、「[Excel データ ソースに接続する](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。 ウィザードのこのページについて詳しくは、「[Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)」([データ ソースの選択]) をご覧ください。
+ウィザードのこのページについて詳しくは、「[Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)」([データ ソースの選択]) をご覧ください。
 
 ## <a name="step-4---pick-sql-server-as-your-destination"></a>ステップ 4 - 変換先として SQL Server を選択する
 次の **[変換先の選択]** ページで、Microsoft SQL Server に接続するデータ プロバイダーの 1 つを一覧で選ぶことで、変換先として SQL Server を選びます。 この例では、**[.Net Framework Data Provider for SQL Server]** を選びます。
@@ -162,4 +165,4 @@ SQL Server Management Studio で、ウィザードが SQL Server に作成した
 
 -   **データ ソースおよび変換先に接続する方法を学習する。** データへの接続方法についての情報を探している場合は、「[SQL Server インポートおよびエクスポート ウィザードを使用してデータ ソースに接続する](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)」の一覧から目的のページを選んでください。 いくつかの一般的に使用されるデータ ソースごとに個別のドキュメントのページがあります。
 
-
+-   **Excel から、または Excel にデータを読み込む詳細について。** Excel ファイルへの接続、および Excel から、または Excel へのデータの読み込みに関する制限事項と既知の問題に関する情報は、「[Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)」 (SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む) を参照してください。

@@ -1,16 +1,16 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: mathoma
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE TRIGGER
@@ -31,23 +31,23 @@ helpviewer_keywords:
 - triggers [SQL Server], creating
 - database-scoped triggers [SQL Server]
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
-caps.latest.revision: 
+caps.latest.revision: 140
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 21d9fd7428af28eec0d739da212887973592401c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 23cb33dffcc9753200d24116b4a6d279c8fe8db5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   DML トリガー、DDL トリガー、またはログオン トリガーを作成します。 トリガーとは、特殊な種類のストアド プロシージャであり、データベース サーバーでイベントが発生したときに自動的に実行されます。 DML トリガーは、ユーザーがデータ操作言語 (DML) イベントを介してデータを変更しようとしたときに実行されます。 DML イベントは、テーブルやビューに対する INSERT、UPDATE、または DELETE ステートメントによって発生するイベントです。 これらのトリガーは、テーブル行が影響を受けるかどうかにかかわらず、有効なイベントが発生したときに起動されます。 詳しくは、「 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)」をご覧ください。  
   
- DDL トリガーは、さまざまなデータ定義言語 (DDL) イベントに対応して実行されます。 本来、これらのイベントは、[!INCLUDE[tsql](../../includes/tsql-md.md)] の CREATE、ALTER、DROP ステートメント、および DDL に類似した処理を実行するシステム ストアド プロシージャに対応するものです。 ログオン トリガーは、ユーザー セッションの確立時に発生する LOGON イベントに応答して起動されます。 トリガーは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントから直接作成することも、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) 内に作成したアセンブリのメソッドから作成し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにアップロードすることもできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、特定のステートメントに対して複数のトリガーを作成できます。  
+ DDL トリガーは、さまざまなデータ定義言語 (DDL) イベントに対応して実行されます。 本来、これらのイベントは、[!INCLUDE[tsql](../../includes/tsql-md.md)] の CREATE、ALTER、DROP ステートメント、および DDL に類似した処理を実行するシステム ストアド プロシージャに対応するものです。 ログオン トリガーは、ユーザーのセッションの確立時に発生する LOGON イベントに応答して起動されます。 トリガーは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントから直接作成することも、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) 内に作成したアセンブリのメソッドから作成し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにアップロードすることもできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、特定のステートメントに対して複数のトリガーを作成できます。  
   
 > [!IMPORTANT]  
 >  上位の特権の下では、トリガー内の悪意のあるコードを実行できます。 この脅威を緩和する方法について詳しくは、「[トリガーのセキュリティの管理](../../relational-databases/triggers/manage-trigger-security.md)」をご覧ください。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -81,7 +81,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME <method specifier [ ; ] > }
   
 ```  
   
-```  
+```sql  
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a 
 -- table (DML Trigger on memory-optimized tables)  
@@ -100,7 +100,7 @@ AS { sql_statement  [ ; ] [ ,...n ] }
   
 ```  
   
-```  
+```sql  
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE or UPDATE statement (DDL Trigger)  
   
@@ -116,7 +116,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-```  
+```sql  
 -- Trigger on a LOGON event (Logon Trigger)  
   
 CREATE [ OR ALTER ] TRIGGER trigger_name   
@@ -133,7 +133,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
 -- Windows Azure SQL Database Syntax   
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -149,7 +149,7 @@ ON { table | view }
   
 ```  
   
-```  
+```sql  
 -- Windows Azure SQL Database Syntax  
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE, or UPDATE STATISTICS statement (DDL Trigger)   
@@ -255,7 +255,7 @@ OR ALTER
   
  DML トリガーでは、deleted および inserted 論理 (概念) テーブルが使用されます。 論理テーブルは、トリガーが定義されるテーブル、つまり、ユーザー操作の対象となるテーブルと構造的に類似しています。 deleted および inserted テーブルには、ユーザー操作によって変更される行の古い値または新しい値が格納されます。 たとえば、`deleted` テーブルのすべての値を取得するには、次のように指定します。  
   
-```  
+```sql  
 SELECT * FROM deleted;  
 ```  
   
@@ -277,7 +277,7 @@ SELECT * FROM deleted;
 > [!NOTE]  
 >  既定では、CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能はオフになっています。 マネージ コード モジュールを参照するデータベース オブジェクトを作成、変更、削除することはできますが、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) によって [clr enabled Option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) が有効化されていない場合、これらの参照は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでは実行されません。  
   
-## <a name="remarks-dml-triggers"></a>DML トリガーの解説  
+## <a name="remarks-for-dml-triggers"></a>DML トリガーの解説  
  DML トリガーは主に、ビジネス ルールとデータの整合性を設定するために使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ALTER TABLE と CREATE TABLE ステートメントで宣言参照整合性 (DRI) を使用できます。 ただし、DRI ではデータベース間の参照整合性は提供されません。 参照整合性とは、テーブルの主キーと外部キー間の関係についての規則です。 参照整合性を設定するには、ALTER TABLE と CREATE TABLE で、PRIMARY KEY と FOREIGN KEY 制約を使用します。 トリガー テーブルに制約が存在する場合、これらは INSTEAD OF トリガーが実行された後、AFTER トリガーが実行される前にチェックされます。 制約違反の場合は、INSTEAD OF トリガーの動作がロールバックされ、AFTER トリガーは起動しません。  
   
  テーブルで実行される最初と最後の AFTER トリガーを、sp_settriggerorder を使用して指定できます。 1 つのテーブルで、INSERT、UPDATE、DELETE の各操作に対して指定できる最初の AFTER トリガーと最後の AFTER トリガーはそれぞれ 1 つだけです。 同じテーブルに他の AFTER トリガーが指定されている場合、トリガーはランダムに実行されます。  
@@ -293,7 +293,7 @@ SELECT * FROM deleted;
  たとえば、あるビューに INSTEAD OF UPDATE トリガーが定義されており、そのトリガーによって同じビューを参照する UPDATE ステートメントが実行された場合、INSTEAD OF トリガーによって実行された UPDATE ステートメントでは、そのトリガーは再度呼び出されません。 トリガーによって実行された UPDATE ステートメントでは、ビューに INSTEAD OF トリガーが存在しないものとして処理が行われます。 この UPDATE によって変更された列は、単一のベース テーブルに対して解決される必要があります。 基になるベース テーブルを変更するたびに、制約の適用とそのテーブルに定義された AFTER トリガーの起動が連鎖的に開始されます。  
   
 ### <a name="testing-for-update-or-insert-actions-to-specific-columns"></a>特定の列に対する UPDATE または INSERT 操作のテスト  
- 特定の列に対する UPDATE または INSERT による変更に基づいて、操作を実行するよう [!INCLUDE[tsql](../../includes/tsql-md.md)] トリガーを設定できます。 これを行うには、トリガー内で [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md) または [COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md) を使用します。 UPDATE() では、1 つの列に対する UPDATE または INSERT の操作がテストされます。 COLUMNS_UPDATED では、複数の列に対する UPDATE 操作や INSERT 操作がテストされ、どの列が挿入または更新されたかを示すビット パターンが返されます。  
+ 特定の列に対する UPDATE または INSERT による変更に基づいて、操作を実行するよう [!INCLUDE[tsql](../../includes/tsql-md.md)] トリガーを設定できます。 これを行うには、トリガー内で [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md) または [COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md) を使用します。 UPDATE() では、1 つの列に対する UPDATE または INSERT の試行がテストされます。 COLUMNS_UPDATED では、複数の列に対する UPDATE 操作や INSERT 操作がテストされ、どの列が挿入または更新されたかを示すビット パターンが返されます。  
   
 ### <a name="trigger-limitations"></a>トリガーの制限  
  CREATE TRIGGER はバッチ内の最初のステートメントとして使用する必要があり、1 つのテーブルにのみ適用されます。  
@@ -330,9 +330,22 @@ SELECT * FROM deleted;
 |ALTER TABLE (次の操作で使用する場合)<br /><br /> 列の追加、変更、または削除<br /><br /> パーティションの切り替え<br /><br /> PRIMARY KEY 制約や UNIQUE 制約の追加または削除|||  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではシステム テーブルに対するユーザー定義トリガーがサポートされないため、システム テーブルに対してはユーザー定義トリガーを作成しないことをお勧めします。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではシステム テーブルに対するユーザー定義トリガーがサポートされないため、システム テーブルに対してはユーザー定義トリガーを作成しないことをお勧めします。 
+
+### <a name="optimizing-dml-triggers"></a>DML トリガーの最適化
+ トリガーは、トランザクションで (黙示的に、またはそれ以外の方法で) 機能し、開いている間はリソースをロックします。 トランザクションが (COMMIT で) 確認されるか、(ROLLBACK で) 拒否されるまで、ロックされた状態のままになります。 トリガーの実行時間が長くなるほど、別のプロセスがブロックされる可能性が高くなります。 そのため、可能な限り実行時間が短くなるようにトリガーを記述する必要があります。 これを実現するための 1 つの方法は、DML ステートメントが 0 行を変更する際にトリガーを解放することです。 
+
+どの行も変更しないコマンドに対してトリガーを解放するには、システム変数 [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql) を使用します。 
+
+これを行うには、次の T-SQL コード スニペットを使用します。これは各 DML トリガーの先頭にある必要があります。
+
+```sql
+IF (@@ROWCOUNT_BIG = 0)
+RETURN;
+```
   
-## <a name="remarks-ddl-triggers"></a>DDL トリガーの解説  
+  
+## <a name="remarks-for-ddl-triggers"></a>DDL トリガーの解説  
  DDL トリガーでは、標準のトリガーと同様、イベントに応答してストアド プロシージャが実行されますが、 標準のトリガーとは異なり、テーブルまたはビューの UPDATE、INSERT、DELETE ステートメントに応答して実行されることはありません。 このトリガーは、主にデータ定義言語 (DDL) ステートメントに応答して起動します。 このようなステートメントには、CREATE、ALTER、DROP、GRANT、DENY、REVOKE、UPDATE STATISTICS ステートメントなどがあります。 DDL と同様の操作を実行する特定のシステム ストアド プロシージャも DDL トリガーを起動できます。  
   
 > [!IMPORTANT]  
@@ -409,7 +422,7 @@ SELECT * FROM deleted;
 ### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>A. DML トリガーを事前通知と組み合わせて使用する  
  次の DML トリガーは、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `Customer` テーブルでデータの追加または変更が試行されたときに、クライアントに対してメッセージを表示します。  
   
-```  
+```sql  
 CREATE TRIGGER reminder1  
 ON Sales.Customer  
 AFTER INSERT, UPDATE   
@@ -420,7 +433,7 @@ GO
 ### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>B. DML トリガーを電子メール メッセージと組み合わせて使用する  
  次の例は、`MaryM` テーブルが変更されたときに、指定したユーザー (`Customer`) に電子メールを送信します。  
   
-```  
+```sql  
 CREATE TRIGGER reminder2  
 ON Sales.Customer  
 AFTER INSERT, UPDATE, DELETE   
@@ -438,13 +451,15 @@ GO
   
  次の例は、DML トリガーを AdventureWorks2012 データベースに作成します。 このトリガーでは、`PurchaseOrderHeader` テーブルに新しい発注を挿入しようとしたときに、ベンダーの信用格付けが良好であるかどうか (5 ではない) がチェックされます。 ベンダーの信用格付けを取得するには、`Vendor` テーブルを参照する必要があります。 信用格付けが低い場合は、メッセージが表示され、挿入は実行されません。  
   
-```  
+```sql  
 -- This trigger prevents a row from being inserted in the Purchasing.PurchaseOrderHeader 
 -- table when the credit rating of the specified vendor is set to 5 (below average).  
   
 CREATE TRIGGER Purchasing.LowCredit ON Purchasing.PurchaseOrderHeader  
 AFTER INSERT  
 AS  
+IF (@@ROWCOUNT_BIG  = 0)
+RETURN;
 IF EXISTS (SELECT *  
            FROM Purchasing.PurchaseOrderHeader AS p   
            JOIN inserted AS i   
@@ -485,11 +500,13 @@ GO
 ### <a name="d-using-a-database-scoped-ddl-trigger"></a>D. データベース スコープの DDL トリガーを使用する  
  次の例では、DDL トリガーを使用して、データベースのシノニムが削除されないようにします。  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_SYNONYM  
 AS   
+IF (@@ROWCOUNT = 0)
+RETURN;
    RAISERROR ('You must disable Trigger "safety" to drop synonyms!',10, 1)  
    ROLLBACK  
 GO  
@@ -503,7 +520,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-```  
+```sql  
 CREATE TRIGGER ddl_trig_database   
 ON ALL SERVER   
 FOR CREATE_DATABASE   
@@ -521,7 +538,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-```  
+```sql  
 USE master;  
 GO  
 CREATE LOGIN login_test WITH PASSWORD = '3KHJ6dhx(0xVYsdf' MUST_CHANGE,  
@@ -546,14 +563,16 @@ END;
 ### <a name="g-viewing-the-events-that-cause-a-trigger-to-fire"></a>G. トリガーを起動するイベントを表示する  
  次の例は、`sys.triggers` および `sys.trigger_events` カタログ ビューをクエリし、どの [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語イベントでトリガー `safety` が起動されるかを特定します。 `safety` は前の例で作成したものです。  
   
-```  
+```sql  
 SELECT TE.*  
 FROM sys.trigger_events AS TE  
 JOIN sys.triggers AS T ON T.object_id = TE.object_id  
 WHERE T.parent_class = 0 AND T.name = 'safety';  
 GO  
 ```  
-  
+
+    
+
 ## <a name="see-also"></a>参照  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   

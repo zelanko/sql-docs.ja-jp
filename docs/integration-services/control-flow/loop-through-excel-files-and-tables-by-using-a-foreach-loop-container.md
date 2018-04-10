@@ -1,37 +1,40 @@
 ---
-title: "Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する | Microsoft Docs"
-ms.custom: 
-ms.date: 03/17/2017
+title: Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する | Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connections [Integration Services], Excel
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8344f5e7ec975af0dea3b35a218347b8c1d6224f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3a6bda13eb448dd8071908de58206b31fc003181
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する
   このトピックの手順では、Foreach ループ コンテナーと適切な列挙子を使用して、フォルダー内の Excel ブックまたは Excel ブック内のテーブルをループ処理する方法について説明します。  
-  
-### <a name="to-loop-through-excel-files-by-using-the-foreach-file-enumerator"></a>Foreach File 列挙子を使用して Excel ファイルをループ処理するには  
+
+> [!IMPORTANT]
+> Excel ファイルへの接続、および Excel から、または Excel へのデータの読み込みに関する制限事項と既知の問題については、「[Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)」 (SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む) を参照してください。
+ 
+## <a name="to-loop-through-excel-files-by-using-the-foreach-file-enumerator"></a>Foreach File 列挙子を使用して Excel ファイルをループ処理するには  
   
 1.  ループの反復ごとに現在の Excel のパスとファイル名を受け取る文字列変数を作成します。 検証で問題が発生しないようにするには、変数の初期値として Excel の有効なパスとファイル名を割り当てます (この手順の後半で示すサンプル式では、 `ExcelFile`という変数名を使用します)。  
   
@@ -74,7 +77,7 @@ ms.lasthandoff: 02/15/2018
   
 11. Foreach ループ コンテナー内で、Excel 接続マネージャーを使用して、指定したファイルの場所とパターンに一致した各 Excel ブックに対して同じ操作を実行するタスクを作成します。  
   
-### <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Foreach ADO.NET Schema Rowset 列挙子を使用して Excel テーブルをループ処理するには  
+## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Foreach ADO.NET Schema Rowset 列挙子を使用して Excel テーブルをループ処理するには  
   
 1.  Microsoft Jet OLE DB Provider を使用して Excel ブックに接続する ADO.NET 接続マネージャーを作成します。 **[接続マネージャー]** ダイアログ ボックスの [すべて] ページで、Extended Properties プロパティの値として「Excel 8.0」と入力します。 詳細については、「 [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)」(パッケージでの接続マネージャーの追加、削除、または共有) を参照してください。  
   
@@ -98,6 +101,7 @@ ms.lasthandoff: 02/15/2018
 9. Foreach ループ コンテナー内で、Excel 接続マネージャーを使用して、指定したブック内の各 Excel テーブルに対して同じ操作を実行するタスクを作成します。 スクリプト タスクを使用して、列挙されるテーブル名を調べたり各テーブルを操作したりする場合、スクリプト タスクの ReadOnlyVariables プロパティに文字列変数を追加することを忘れないでください。  
   
 ## <a name="see-also"></a>参照  
+ [SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む](../load-data-to-from-excel-with-ssis.md)  
  [Foreach ループ コンテナーを構成する](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
  [プロパティ式を追加または変更する](../../integration-services/expressions/add-or-change-a-property-expression.md)   
  [Excel 接続マネージャー](../../integration-services/connection-manager/excel-connection-manager.md)   

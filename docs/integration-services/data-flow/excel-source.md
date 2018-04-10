@@ -1,16 +1,16 @@
 ---
-title: "Excel ソース | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
+title: Excel ソース | Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.excelsource.f1
@@ -21,20 +21,24 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 872ac8117bb87cb9f1709afedbacc32b2d1f1413
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6a9795de30c7d4fbe2ede9a17043a916e5953cd5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="excel-source"></a>Excel ソース
   Excel ソースは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブック内のワークシートまたは範囲からデータを抽出します。  
-  
+
+> [!IMPORTANT]
+> Excel ファイルへの接続、および Excel から、または Excel へのデータの読み込みに関する制限事項と既知の問題については、「[Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)」 (SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む) を参照してください。
+
+## <a name="access-mode"></a>アクセス モード
  Excel ソースでは、データを抽出するために、次の 4 つの異なるデータ アクセス モードが用意されています。  
   
 -   テーブルまたはビュー。  
@@ -44,9 +48,6 @@ ms.lasthandoff: 01/25/2018
 -   SQL ステートメントの結果。 クエリにはパラメーター化クエリを使用できます。  
   
 -   変数に格納された SQL ステートメントの結果。  
-  
-> [!IMPORTANT]  
->  Excel でのワークシートまたは範囲は、テーブルまたはビューに相当します。 Excel ソース エディターと Excel 変換先エディターで使用できるテーブルの一覧では、既存のワークシート (Sheet1$ など、ワークシート名に $ 記号を付加して識別) と名前付き範囲 (MyRange など、$ 記号が付かないことで識別) が表示されます。 詳細については、「使用に関する注意点」を参照してください。  
   
  Excel ソースは、Excel 接続マネージャーを使用してデータ ソースに接続します。Excel 接続マネージャーでは、使用する Excel ブック ファイルを指定します。 詳しくは、「 [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)」をご覧ください。  
   
@@ -205,13 +206,6 @@ ms.lasthandoff: 01/25/2018
  選択したセルにエラー処理オプションを適用します。  
   
 ## <a name="related-content"></a>関連コンテンツ  
-  
--   hrvoje.piasevoli.com のブログ「 [Importing data from 64-bit Excel in SSIS](http://go.microsoft.com/fwlink/?LinkId=217673)」(SSIS での 64 ビット バージョンの Excel からのデータ インポート)  
-  
--   dougbert.com のブログ「 [Integration Services における Excel (パート 1/3): 接続とコンポーネント](http://go.microsoft.com/fwlink/?LinkId=217674)」  
-  
--   dougbert.com のブログ「 [Integration Services における Excel (パート 2/3): テーブルとデータ型](http://go.microsoft.com/fwlink/?LinkId=217675)」  
-  
--   dougbert.com のブログ「 [Integration Services における Excel (パート 3/3): 問題点と対処法](http://go.microsoft.com/fwlink/?LinkId=217676)」  
-  
-  
+[SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む](../load-data-to-from-excel-with-ssis.md)
+[Excel 変換先](excel-destination.md)  
+[Excel 接続マネージャー](../connection-manager/excel-connection-manager.md)

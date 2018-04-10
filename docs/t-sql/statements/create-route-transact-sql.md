@@ -1,16 +1,16 @@
 ---
 title: CREATE ROUTE (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_ROUTE_TSQL
@@ -29,19 +29,19 @@ helpviewer_keywords:
 - activating routes
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: 
+caps.latest.revision: 42
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 767be5069d65c11dad849a8fc32f5b15296a4eda
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8ef29633b2585a139fdd9e009458f36f38f00c56
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   新しいルートを現在のデータベース用のルーティング テーブルに追加します。 送信メッセージについては、[!INCLUDE[ssSB](../../includes/sssb-md.md)] がローカル データベース内のルーティング テーブルを調べてルーティングを決定します。 転送されるメッセージなど、別のインスタンスで発生するメッセージ交換でのメッセージについては、[!INCLUDE[ssSB](../../includes/sssb-md.md)] が **msdb** 内のルートを調べます。  
   
@@ -90,7 +90,9 @@ WHERE database_id = DB_ID()
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がルーティング テーブルにルートを保持する時間を秒単位で指定します。 有効期間が終了するとルートは期限切れとなり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、新しいメッセージ交換用のルートを選択するときに、そのルートは考慮されなくなります。 この句を省略した場合、*route_lifetime* は NULL になり、ルートの有効期限が切れることはありません。  
   
  ADDRESS **='***next_hop_address***'**  
- ルート用のネットワーク アドレスを指定します。 *next_hop_address* の次の形式で TCP/IP アドレスを指定します。  
+SQL Database マネージ インスタンスの場合、`ADDRESS` はローカルである必要があります。 
+
+ルート用のネットワーク アドレスを指定します。 *next_hop_address* の次の形式で TCP/IP アドレスを指定します。  
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
   

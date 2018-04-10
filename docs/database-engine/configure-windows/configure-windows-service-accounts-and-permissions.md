@@ -53,16 +53,16 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: ''
+caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: MikeRay
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4f037130b00871303648aefd3d35553e702091a8
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 679dab613a948419e1407e66ef82b907465e1c2b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows サービス アカウントと権限の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -188,7 +188,7 @@ ms.lasthandoff: 03/22/2018
   
     SQL Server 2014 以降でグループ管理サービス アカウントを使用するには、オペレーティング システムが Windows Server 2012 R2 以降である必要があります。 Windows Server 2012 R2 のサーバーでは、パスワード変更直後に中断することなくサービスがログインできるためには、 [KB 2998082](http://support.microsoft.com/kb/2998082) を適用する必要があります。  
   
-    詳細については、「 [グループ管理サービス アカウント](http://technet.microsoft.com/library/hh831782.aspx)」を参照してください。  
+    詳細については、「[グループの管理されたサービス アカウントの概要](http://technet.microsoft.com/library/hh831782.aspx)」を参照してください。  
       
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスにグループ管理サービス アカウントを使用できるためには、その前にドメイン管理者が Active Directory でグループ管理サービス アカウントを作成しておく必要があります。  

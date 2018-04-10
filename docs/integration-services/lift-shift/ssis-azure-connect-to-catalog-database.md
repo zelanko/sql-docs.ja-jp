@@ -1,24 +1,24 @@
 ---
-title: "Azure 上の SSISDB カタログ データベースへの接続 | Microsoft Docs"
+title: Azure 上の SSISDB カタログ データベースへの接続 | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 218890a01c98c51c570255dce0ad2c34bc5c26db
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 148cd6e05063902fb0e171e498ce08c7e05b92e7
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Azure 上の SSISDB カタログ データベースへの接続
 
@@ -31,7 +31,7 @@ Azure SQL Database でホストされている SSIS カタログ データベー
 > この時点では、Azure Data Factory バージョン 2 での Azure SSIS Integration Runtime の作成とは切り離して、Azure SQL Database に SSISDB カタログ データベースを作成することはできません。 Azure SSIS IR は、Azure 上で SSIS パッケージを実行するからです。 詳細については、「[Azure Data Factory UI を使用した Azure SSIS 統合ランタイムのプロビジョニング](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)」を参照してください。 
 
 ## <a name="prerequisites"></a>Prerequisites
-始める前に、バージョン 17.2 以降の SQL Server Management Studio があることを確認します。 最新バージョンの SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
+始める前に、バージョン 17.2 以降の SQL Server Management Studio (SSMS) があることを確認します。 SSISDB カタログ データベースが SQL Database Managed Instance (プレビュー) でホストされている場合は、SSMS のバージョンが 17.6 以降であることを確認します。 最新バージョンの SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>Azure Portal から接続情報を取得する
 1. [Azure ポータル](https://portal.azure.com/)にログインします。

@@ -1,15 +1,15 @@
 ---
-title: "スクリプト タスクを使用した Excel ファイルの操作 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/17/2017
+title: スクリプト タスクを使用した Excel ファイルの操作 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-scripting-task-examples
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,39 +20,30 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bfbe8efdeab1af1ba6c802d69abdce4b1b4696fa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a533795d6d6017c885b887e35b8e996ab82493df
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>スクリプト タスクを使用した Excel ファイルの操作
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には Excel 接続マネージャー、Excel ソース、Excel 変換先が用意されており、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ファイル形式のスプレッドシートに保存されているデータを操作できます。 このトピックで説明する方法では、スクリプト タスクを使用して、使用可能な Excel のデータベース (ワークブック ファイル) およびテーブル (ワークシートおよび名前付き範囲) に関する情報を取得します。 これらのサンプルに簡単な変更を加えて、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB プロバイダーによってサポートされる他のすべてのファイルベース データ ソースを操作することができます。  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には Excel 接続マネージャー、Excel ソース、Excel 変換先が用意されており、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ファイル形式のスプレッドシートに保存されているデータを操作できます。 このトピックで説明する方法では、スクリプト タスクを使用して、使用可能な Excel のデータベース (ワークブック ファイル) およびテーブル (ワークシートおよび名前付き範囲) に関する情報を取得します。
   
- [サンプルをテストするためのパッケージの構成](#configuring)  
-  
- [例 1: Excel ファイルが存在するかどうかを確認する](#example1)  
-  
- [例 2: Excel テーブルが存在するかどうかを確認する](#example2)  
-  
- [例 3: フォルダー内の Excel ファイルの一覧を取得する](#example3)  
-  
- [例 4: Excel ファイル内のテーブルの一覧を取得する](#example4)  
-  
- [サンプルの結果の表示](#testing)  
-  
-> [!NOTE]  
->  複数のパッケージでより簡単に再利用できるタスクを作成する場合は、このスクリプト タスク サンプルのコードを基にした、カスタム タスクの作成を検討してください。 詳細については、「 [カスタム タスクの開発](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。  
-  
+> [!TIP]  
+>  複数のパッケージで再利用できるタスクを作成する場合は、このスクリプト タスク サンプルのコードを基にした、カスタム タスクの作成を検討してください。 詳細については、「 [カスタム タスクの開発](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。  
+
+> [!IMPORTANT]
+> Excel ファイルへの接続、および Excel から、または Excel へのデータの読み込みに関する制限事項と既知の問題については、「[Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)」 (SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む) を参照してください。
+ 
 ##  <a name="configuring"></a> サンプルをテストするためのパッケージの構成  
  このトピックのすべてのサンプルをテストする単一のパッケージを構成することができます。 これらのサンプルでは、同じパッケージ変数と同じ [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラスを数多く使用します。  
   
-#### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>このトピックの例で使用するパッケージを構成するには  
+### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>このトピックの例で使用するパッケージを構成するには  
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で新しい [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] プロジェクトを作成し、編集のために既定のパッケージを開きます。  
   
@@ -85,7 +76,7 @@ ms.lasthandoff: 01/25/2018
 ##  <a name="example1"></a> 例 1 の説明: Excel ファイルが存在するかどうかを確認する  
  この例では、`ExcelFile` 変数で指定された Excel ワークブック ファイルが存在するかどうかを判断し、その結果を `ExcelFileExists` 変数のブール値に設定します。 このブール値は、パッケージのワークフローを分岐させるために使用することができます。  
   
-#### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
+### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
   
 1.  パッケージに新しいスクリプト タスクを追加し、その名前を **ExcelFileExists** に変更します。  
   
@@ -155,7 +146,7 @@ public class ScriptMain
 ##  <a name="example2"></a> 例 2 の説明: Excel テーブルが存在するかどうかを確認する  
  この例では、`ExcelTable` 変数で指定された Excel ワークシートまたは名前付き範囲が `ExcelFile` 変数で指定された Excel ワークブック ファイル内に存在するかどうかを判断し、その結果を `ExcelTableExists` 変数のブール値に設定します。 このブール値は、パッケージのワークフローを分岐させるために使用することができます。  
   
-#### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
+### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
   
 1.  パッケージに新しいスクリプト タスクを追加し、その名前を **ExcelTableExists** に変更します。  
   
@@ -262,7 +253,7 @@ public class ScriptMain
 ##  <a name="example3"></a> 例 3 の説明: フォルダー内の Excel ファイルの一覧を取得する  
  この例では、`ExcelFolder` 変数の値で指定されたフォルダー内で検索された Excel ファイルの一覧を配列に代入し、その配列を `ExcelFiles` 変数にコピーします。 Foreach from Variable 列挙子を使用して、配列内のファイルを繰り返し処理することができます。  
   
-#### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
+### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
   
 1.  パッケージに新しいスクリプト タスクを追加し、その名前を **GetExcelFiles** に変更します。  
   
@@ -337,7 +328,7 @@ public class ScriptMain
 > [!NOTE]  
 >  Excel ブック内のテーブルの一覧には、ワークシート ($ サフィックスが付きます) と名前付き範囲が含まれます。 ワークシートまたは名前付き範囲のみを一覧からフィルター選択する必要がある場合は、そのためのコードを追加する必要があります。  
   
-#### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
+### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
   
 1.  パッケージに新しいスクリプト タスクを追加し、その名前を **GetExcelTables** に変更します。  
   
@@ -446,7 +437,7 @@ public class ScriptMain
 ##  <a name="testing"></a> サンプルの結果の表示  
  このトピックの各例を同じパッケージで構成した場合は、すべてのスクリプト タスクを、すべての例の出力を表示する追加のスクリプト タスクに接続することができます。  
   
-#### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>このトピックの例の出力を表示するスクリプト タスクを構成するには  
+### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>このトピックの例の出力を表示するスクリプト タスクを構成するには  
   
 1.  パッケージに新しいスクリプト タスクを追加し、その名前を **DisplayResults** に変更します。  
   
@@ -550,7 +541,7 @@ public class ScriptMain
 ```  
   
 ## <a name="see-also"></a>参照  
- [Excel 接続マネージャー](../../integration-services/connection-manager/excel-connection-manager.md)   
+ [SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む](../load-data-to-from-excel-with-ssis.md)  
  [Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

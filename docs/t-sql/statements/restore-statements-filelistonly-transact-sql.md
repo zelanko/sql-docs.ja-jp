@@ -1,16 +1,16 @@
 ---
 title: RESTORE FILELISTONLY (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/15/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE FILELISTONLY
@@ -24,22 +24,25 @@ helpviewer_keywords:
 - RESTORE FILELISTONLY statement
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-caps.latest.revision: 
+caps.latest.revision: 83
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 29cc42e61ff88ee1d7b1d61a2a4ed214d72b3e1d
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE ステートメント - FILELISTONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
+
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ セットに保存されているデータベースとログ ファイルのリストを含んだ結果セットを返します。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]  
 >  引数の説明については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)」を参照してください。  
   
@@ -93,7 +96,7 @@ FROM <backup_device>
 |LogicalName|**nvarchar(128)**|ファイルの論理名です。|  
 |PhysicalName|**nvarchar(260)**|ファイルの物理名またはオペレーティング システム名。|  
 |型|**char(1)**|ファイルの種類。次のいずれかになります。<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイル<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイル<br /><br /> **F** = フルテキスト カタログ<br /><br /> **S** = FileStream、FileTable、または [!INCLUDE[hek_2](../../includes/hek-2-md.md)] コンテナー|  
-|FileGroupName|**nvarchar(128)**|このファイルを含むファイル グループの名前。|  
+|FileGroupName|**nvarchar(128)** NULL|このファイルを含むファイル グループの名前。|  
 |サイズ|**numeric(20,0)**|現在のサイズ (バイト単位)。|  
 |MaxSize|**numeric(20,0)**|最大許容サイズ (バイト単位)。|  
 |FileID|**bigint**|データベース内で一意なファイル識別子。|  
@@ -105,13 +108,13 @@ FROM <backup_device>
 |BackupSizeInBytes|**bigint**|ファイルのバックアップ サイズ (バイト単位)。|  
 |SourceBlockSize|**int**|ファイルが格納されている物理デバイス (バックアップ デバイス以外) のバイト単位のブロック サイズ。|  
 |FileGroupID|**int**|ファイル グループの ID。|  
-|LogGroupGUID|**uniqueidentifier NULL**|NULL。|  
+|LogGroupGUID|**uniqueidentifier** NULL|NULL。|  
 |DifferentialBaseLSN|**numeric(25,0)** NULL|差分バックアップの場合、**DifferentialBaseLSN** 以上のログ シーケンス番号を持つ変更が差分に含まれます。<br /><br /> その他の種類のバックアップの場合、この値は NULL です。|  
-|DifferentialBaseGUID|**uniqueidentifier**|差分ベースの一意識別子 (差分バックアップの場合)。<br /><br /> その他の種類のバックアップの場合、この値は NULL です。|  
+|DifferentialBaseGUID|**uniqueidentifier** NULL|差分ベースの一意識別子 (差分バックアップの場合)。<br /><br /> その他の種類のバックアップの場合、この値は NULL です。|  
 |IsReadOnly|**bit**|**1** = ファイルは読み取り専用。|  
 |IsPresent|**bit**|**1** = ファイルはバックアップ済み。|  
-|TDEThumbprint|**varbinary(32)**|データベース暗号化キーの拇印を表示します。 暗号化の拇印とは、キーの暗号化で使用された証明書の SHA-1 ハッシュです。 データベース暗号化の詳細については、「[Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。|  
-|SnapshotURL|**nvarchar(360)**|FILE_SNAPSHOT バックアップに含まれているデータベース ファイルの Azure のスナップショットの URL。 FILE_SNAPSHOT バックアップがない場合は、NULL を返します。|  
+|TDEThumbprint|**varbinary(32)** NULL|データベース暗号化キーの拇印を表示します。 暗号化の拇印とは、キーの暗号化で使用された証明書の SHA-1 ハッシュです。 データベース暗号化の詳細については、「[Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。|  
+|SnapshotURL|**nvarchar(360)** NULL|FILE_SNAPSHOT バックアップに含まれているデータベース ファイルの Azure のスナップショットの URL。 FILE_SNAPSHOT バックアップがない場合は、NULL を返します。|  
   
 ## <a name="security"></a>Security  
  バックアップ操作では、オプションで、メディア セットとバックアップ セットにそれぞれパスワードを設定できます。 メディア セットまたはバックアップ セットにパスワードが設定されている場合は、RESTORE ステートメントで正しいパスワードを指定する必要があります。 これらのパスワードを設定しておくと、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使用して不正に復元操作が行われたり、メディアにバックアップ セットが不正に追加されたりするのを防ぐことができます。 ただし、BACKUP ステートメントで FORMAT オプションが使用された場合、メディアの上書きを防ぐことはできません。  

@@ -1,30 +1,30 @@
 ---
-title: "FINDSTRING (SSIS 式) | Microsoft Docs"
-ms.custom: 
+title: FINDSTRING (SSIS 式) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c2787fdb4663ea8c1495a811b44f878b896498eb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 56520a56a70622e23e7c407ed788f8f8f0ba3dc6
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (SSIS 式)
   文字式内の文字列のうち、指定された文字列が検出された場所を返します。 返される結果は、1 を基点とする検出場所のインデックスです。 文字列パラメーターは文字式に評価され、検出場所を示すパラメーターは整数に評価される必要があります。 文字列が見つからない場合、戻り値は 0 になります。 文字列の検出回数が、引数によって指定された数より少ない場合の戻り値は 0 です。  
@@ -71,10 +71,10 @@ FINDSTRING("New York, NY, NY", "NY", 1)
 FINDSTRING("New York, NY, NY", "NY", 3)   
 ```  
   
- この例では、 **Name** 列を使用します。 **Name** 列にある n の値の場所が返されます。 返される結果は、 **Name**の値によって異なります。 **Name** に Anderson が含まれる場合は、次の関数では 8 が返されます。  
+ この例では、 **Name** 列を使用します。 **Name** 列にある 2 番目の n の場所が返されます。 返される結果は、 **Name**の値によって異なります。 **Name** に Anderson が含まれる場合は、次の関数では 8 が返されます。  
   
 ```  
-FINDSTRING(Name,"n", 2)   
+FINDSTRING(Name, "n", 2)   
 ```  
   
  この例では、 **Name** および **Size** 列を使用します。 **Name** 列にある **Size** の値の左端の文字の場所が返されます。 返される結果は、列の値によって異なります。 **Name** の値が Mountain,500Red,42 で **Size** の値が 42 の場合、17 が返されます。  

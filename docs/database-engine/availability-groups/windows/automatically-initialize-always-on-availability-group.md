@@ -1,26 +1,27 @@
 ---
-title: "Always On 可用性グループを自動的に初期化する | Microsoft Docs"
-ms.custom: 
-ms.date: 08/23/2017
+title: Always On 可用性グループを自動的に初期化する | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: v-saume
 manager: craigg
-ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 44ff615a44427cdf0e5ed6e06937181762deb7a0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>AlwaysOn 可用性グループを自動的に初期化する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,6 +170,12 @@ FROM sys.dm_hadr_automatic_seeding
 ```sql
 SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 ```
+
+*total_disk_io_wait_time_ms* と *total_network_wait_time_ms* の 2 つの列は、自動シード処理プロセスにおけるパフォーマンスのボトルネックを特定するのに使用できます。 この 2 つの列は、*hadr_physical_seeding_progress* 拡張イベントにもあります。
+
+**total_disk_io_wait_time_ms** は、ディスクで待機中にバックアップ/復元スレッドで費やされた時間を表します。 この値は、シード処理操作が開始されてからの累積です。 ディスクがバックアップ ストリームの読み取りまたは書き込みに対して準備ができていない場合、バックアップ/復元スレッドはスリープ状態に移行し、1 秒ごとにウェイク アップしてディスクの準備ができたかどうかをチェックします。
+        
+**total_network_wait_time_ms** は、プライマリ レプリカとセカンダリ レプリカで解釈のされ方が異なります。 プライマリ レプリカでは、このカウンターはネットワーク フローの制御時間を表します。 セカンダリ レプリカでは、これはメッセージがディスクに書き込めるようになるまで復元スレッドが待機する時間を表します。
 
 ### <a name="diagnose-database-initialization-using-automatic-seeding-in-the-error-log"></a>エラー ログ内の自動シード処理を使用してデータベースの初期化を診断する
 
