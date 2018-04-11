@@ -1,30 +1,30 @@
 ---
-title: "カスタマイズ ファイルの概要 |Microsoft ドキュメント"
+title: カスタマイズ ファイルの概要 |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0597c403a9d716c155fe129ab8cb514268b27341
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="understanding-the-customization-file"></a>カスタマイズ ファイルの概要
 カスタマイズ ファイルの各セクション ヘッダーは、角かっこで構成されます (**:operator[]**) 型とパラメーターを格納します。 次の 4 つのセクションの種類は、リテラル文字列で示されます。**接続**、 **sql**、 **userlist**、または**ログ**です。 パラメーターでは、リテラル文字列、既定値、ユーザー指定の識別子では、または何も行われません。  

@@ -1,30 +1,30 @@
 ---
-title: "テーブルの計算列の指定 | Microsoft Docs"
-ms.custom: 
+title: テーブルの計算列の指定 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 95980febab6a2801ca2f751a0cadd22f14991c59
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="specify-computed-columns-in-a-table"></a>テーブルの計算列の指定
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -33,11 +33,11 @@ ms.lasthandoff: 02/23/2018
   
  **このトピックの内容**  
   
--   **作業を開始する準備:**  
+-   **開始する前に。**  
   
-     [制限事項と制約事項](#Limitations)  
+     [制限事項と制約](#Limitations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **計算列を指定する方法:**  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/23/2018
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Limitations"></a> 制限事項と制約事項  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/23/2018
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  テーブルに対する ALTER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -81,7 +81,7 @@ ms.lasthandoff: 02/23/2018
   
 1.  **オブジェクト エクスプローラー**で、変更する列が含まれているテーブルを右クリックし、 **[列]** フォルダーを展開します。  
   
-2.  計算列の数式を指定する列を右クリックし、 **[削除]**をクリックします。 **[OK]** をクリックします。  
+2.  計算列の数式を指定する列を右クリックし、 **[削除]**をクリックします。 クリックして **OK**です。  
   
 3.  前の手順に従って、新しい列を追加し、計算列の数式を指定して、新しい計算列を追加します。  
   

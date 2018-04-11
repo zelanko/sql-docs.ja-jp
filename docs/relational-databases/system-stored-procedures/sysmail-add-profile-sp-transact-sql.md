@@ -1,16 +1,16 @@
 ---
-title: "sysmail_add_profile_sp (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sysmail_add_profile_sp (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_profile_sp_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_profile_sp
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6295b1f239f136c43e00e047186ce408ab9a4a93
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
  [ **@profile_name** = ] **'***profile_name***'**  
  新しいプロファイルの名前を指定します。 *profile_name*は**sysname**、既定値はありません。  
   
- [  **@description**  =] **'***説明***'**  
+ [ **@description** =] **'***説明***'**  
  新しいプロファイルの説明を指定します (省略可能)。 *説明*は**nvarchar (256)**、既定値はありません。  
   
  [ **@profile_id** = ] *new_profile_id***OUTPUT**  
@@ -61,7 +61,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>解説  
- データベース メール プロファイルにはデータベース メール アカウントをいくつでも保持できます。 データベース メールのストアド プロシージャでは、このプロシージャで生成されたプロファイル名またはプロファイル ID によって、プロファイルを参照できます。 プロファイルにアカウントを追加する方法の詳細については、次を参照してください。 [sysmail_add_profileaccount_sp &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)。  
+ データベース メール プロファイルにはデータベース メール アカウントをいくつでも保持できます。 データベース メールのストアド プロシージャでは、このプロシージャで生成されたプロファイル名またはプロファイル ID によって、プロファイルを参照できます。 プロファイルにアカウントを追加する方法の詳細については、次を参照してください。 [sysmail_add_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)です。  
   
  ストアド プロシージャで、プロファイル名と説明を変更することができます**sysmail_update_profile_sp**プロファイル id は、プロファイルの有効期間中に、します。  
   
@@ -102,6 +102,6 @@ SELECT @profileId ;
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベース メール アカウントを作成します。](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [データベース メール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [データベース メールのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

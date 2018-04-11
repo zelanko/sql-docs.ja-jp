@@ -1,16 +1,16 @@
 ---
-title: "sp_addsubscription (TRANSACT-SQL) |Microsoft ドキュメント"
+title: sp_addsubscription (TRANSACT-SQL) |Microsoft ドキュメント
 ms.date: 10/28/2015
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addsubscription
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscription
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-caps.latest.revision: 
+caps.latest.revision: 53
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 860f2f99457344167af9035d0a9ccc21eebc2577
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @publication=] '*パブリケーション*'  
+ [ @publication=] '*publication*'  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [ @article=] '*記事*'  
@@ -117,7 +117,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |subscribed|サブスクリプションを初期化する必要があります。 場合、このオプションが設定の値*sync_type*は自動です。|  
   
  [ @subscription_type=] '*subscription_type*'  
- サブスクリプションの種類を指定します。 *subscription_type*は**nvarchar (4)**、既定値は push です。 push または pull に設定できます。 プッシュ サブスクリプションのディストリビューション エージェントは、ディストリビューター側に存在し、プル サブスクリプションのディストリビューション エージェントはサブスクライバーに存在します。 *subscription_type*パブリッシャーに認識されている名前付きプル サブスクリプションを作成するプルをすることができます。 詳細については、「[パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)」をご覧ください。  
+ サブスクリプションの種類を指定します。 *subscription_type*は**nvarchar (4)**、既定値は push です。 push または pull に設定できます。 プッシュ サブスクリプションのディストリビューション エージェントは、ディストリビューター側に存在し、プル サブスクリプションのディストリビューション エージェントはサブスクライバーに存在します。 *subscription_type*パブリッシャーに認識されている名前付きプル サブスクリプションを作成するプルをすることができます。 詳細については、「[パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)」を参照してください。  
   
 > [!NOTE]  
 >  匿名サブスクリプションの場合、このストアド プロシージャを使用する必要はありません。  
@@ -140,14 +140,14 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |値|Description|  
 |-----------|-----------------|  
-|true|ディストリビューション エージェントは、サブスクライバーで発生したトランザクションをサブスクライバーに戻しません。 双方向トランザクション レプリケーションで使用されます。 詳細については、「 [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)」を参照してください。|  
+|true|ディストリビューション エージェントは、サブスクライバーで発生したトランザクションをサブスクライバーに戻しません。 双方向トランザクション レプリケーションで使用されます。 詳細については、「 [双方向トランザクション レプリケーション](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)」を参照してください。|  
 |オプション|ディストリビューション エージェントは、サブスクライバーで発生したトランザクションをサブスクライバーに戻します。|  
 |NULL (既定値)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーの場合は true、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーの場合は false に自動設定されます。|  
   
  [ @frequency_type=] *frequency_type*  
  ディストリビューション タスクをスケジュールに組み込む頻度を指定します。 *frequency_type* int であり、これらの値のいずれかになります。  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |1|指定日時|  
 |2|[要求時]|  
@@ -164,7 +164,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_relative_interval=] *frequency_relative_interval*  
  ディストリビューション エージェントを実行する日付です。 このパラメーターが使用されるときに*frequency_type* 32 (月単位) に設定されています。 *frequency_relative_interval*は**int**、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |1|First|  
 |2|第 2 週|  
@@ -179,7 +179,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_subday=] *frequency_subday*  
  定義した期間にスケジュールを組み直す頻度を分単位で指定します。 *frequency_subday*は**int**、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |1|1 回。|  
 |2|第 2 週|  
@@ -211,37 +211,37 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
  使用、サブスクリプションを同期させるかどうかが[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 同期マネージャーです。 *enabled_for_syncmgr*は**nvarchar (5)**、既定値は FALSE。 false の場合、サブスクリプションは Windows 同期マネージャーに登録されません。 true の場合、サブスクリプションは Windows 同期マネージャーに登録され、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を起動せずに同期させることができます。 Oracle パブリッシャーに対してはサポートされていません。  
   
- [ @offloadagent=] '*remote_agent_activation*'  
+ [ @offloadagent= ] '*remote_agent_activation*'  
  エージェントをリモートから起動できることを指定します。 *remote_agent_activation*は**ビット**既定値は 0 です。  
   
 > [!NOTE]  
 >  このパラメーターは廃止されており、スクリプトの旧バージョンとの互換性のためのみ保持します。  
   
- [ @offloadserver=] '*remote_agent_server_name*'  
+ [ @offloadserver= ] '*remote_agent_server_name*'  
  リモート起動に使用されるサーバーのネットワーク名を指定します。 *remote_agent_server_name*は**sysname**、既定値は NULL です。  
   
- [ @dts_package_name=] '*dts_package_name*'  
+ [ @dts_package_name= ] '*dts_package_name*'  
  データ変換サービス (DTS) パッケージの名前。 *dts_package_name*は、 **sysname**既定値は NULL です。 たとえば、DTSPub_Package というパッケージを指定するには、パラメーターを `@dts_package_name = N'DTSPub_Package'` にする必要があります。 プッシュ サブスクリプションでは、このパラメーターを使用できます。 プル サブスクリプションに DTS パッケージ情報を追加するには、sp_addpullsubscription_agent を使用します。  
   
- [ @dts_package_password=] '*dts_package_password*'  
+ [ @dts_package_password= ] '*dts_package_password*'  
  パッケージのパスワード (ある場合) を指定します。 *dts_package_password*は**sysname**既定値は NULL です。  
   
 > [!NOTE]  
 >  場合は、パスワードを指定する必要があります*dts_package_name*を指定します。  
   
- [ @dts_package_location=] '*dts_package_location*'  
+ [ @dts_package_location= ] '*dts_package_location*'  
  パッケージの場所を指定します。 *dts_package_location*は、 **nvarchar (12)**、既定値は DISTRIBUTOR です。 パッケージの場所としては、distributor または subscriber を指定できます。  
   
- [ @distribution_job_name=] '*distribution_job_name*'  
+ [ @distribution_job_name= ] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @publisher=] '*パブリッシャー*'  
+ [ @publisher= ] '*publisher*'  
  指定以外[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  *パブリッシャー*を指定しないで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
   
- [ @backupdevicetype=] '*backupdevicetype*'  
+ [ @backupdevicetype= ] '*backupdevicetype*'  
  バックアップからサブスクライバーを初期化する際に使用するバックアップ デバイスの種類を指定します。 *backupdevicetype*は**nvarchar (20)**、これらの値のいずれかを指定できます。  
   
 |値|Description|  
@@ -252,28 +252,28 @@ sp_addsubscription [ @publication = ] 'publication'
   
  *backupdevicetype*場合のみ使用*sync_method*が initialize_with_backup に設定します。  
   
- [ @backupdevicename=] '*backupdevicename*'  
+ [ @backupdevicename= ] '*backupdevicename*'  
  バックアップからサブスクライバーを初期化する際に使用するデバイスの名前を指定します。 *backupdevicename*は**nvarchar (1000)**、既定値は NULL です。  
   
- [ @mediapassword=] '*mediapassword*'  
+ [ @mediapassword= ] '*mediapassword*'  
  メディア セットのパスワードを指定します (メディアをフォーマットしたときにパスワードを設定した場合)。 *mediapassword*は**sysname**既定値は NULL です。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- [ @password=] '*パスワード*'  
+ [ @password= ] '*password*'  
  バックアップのパスワードを指定します (バックアップを作成したときにパスワードを設定した場合)。 *パスワード*は**sysname**既定値は NULL です。  
   
- [ @fileidhint=] *fileidhint*  
+ [ @fileidhint= ] *fileidhint*  
  復元するバックアップ セットの序数値を識別します。 *fileidhint*は**int**既定値は NULL です。  
   
- [ @unload=]*アンロード*  
+ [ @unload= ] *unload*  
  バックアップからの初期化が完了した後テープ バックアップ デバイスをアンロードするかどうかを指定します。 *アンロード*は**ビット**で既定値は 1 です。 1 は、テープがアンロードされることを指定します。 *アンロード*場合のみ使用*backupdevicetype*テープします。  
   
- [ @subscriptionlsn=] *subscriptionlsn*  
+ [ @subscriptionlsn= ] *subscriptionlsn*  
  サブスクリプションでピア ツー ピア トランザクション レプリケーション トポロジのノードへの変更の配信を開始するログ シーケンス番号 (LSN) を指定します。 使用される、 @sync_type initialize from lsn を新しいノードに関連するすべてのトランザクションがレプリケートされるかどうかを確認の値。 詳細については、「 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。  
   
- [ @subscriptionstreams=] *subscriptionstreams*  
+ [ @subscriptionstreams= ] *subscriptionstreams*  
  単一のスレッドを使用しているときに、トランザクションに関連したさまざまな特性を維持しながら、サブスクライバーに対してバッチ変更を適用することのできる、ディストリビューション エージェントあたりの接続数です。 *subscriptionstreams*は**tinyint**既定値は NULL です。 サポートされている値の範囲は 1 ～ 64 です。 このパラメーターは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバー、Oracle パブリッシャー、およびピアツーピア サブスクリプションではサポートされていません。 サブスクリプション ストリームが使用されるたびに、msreplication_subscriptions テーブルに行が追加され (ストリームごとに 1 行)、agent_id が NULL に設定されます。  
   
 > [!NOTE]  
@@ -284,7 +284,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |値|Description|  
 |-----------|-----------------|  
-|0 (既定値)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー|  
+|0 (既定値)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバー|  
 |1|ODBC データ ソース サーバー|  
 |2|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet データベース|  
 |3|OLE DB プロバイダー|  
@@ -316,7 +316,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
  **sync_type** オプション *replication support only*、 *initialize with backup*、または *initialize from lsn*を選択した場合、 **sp_addsubscription**の実行後にログ リーダー エージェントを実行して、スクリプトの設定がディストリビューション データベースに書き込まれるようにする必要があります。 ログ リーダー エージェントが、 **sysadmin** 固定サーバー ロールのメンバーであるアカウントで実行されている必要があります。 **sync_type** オプションが *Automatic*に設定されている場合、特別なログ リーダー エージェントの操作は必要ありません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  sp_addsubscription を実行できるのは、固定サーバー ロール sysadmin または固定データベース ロール db_owner のメンバーだけです。 プル サブスクリプションの場合、パブリケーションのアクセス リストにログインのあるユーザーは sp_addsubscription を実行できます。  
   
 ## <a name="example"></a>例  
@@ -326,10 +326,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [SQL Server 以外のサブスクライバーのサブスクリプションの作成](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpushsubscription_agent &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
- [sp_changesubstatus &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_addpushsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
+ [sp_changesubstatus &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_dropsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

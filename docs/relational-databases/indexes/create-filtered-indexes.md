@@ -1,16 +1,16 @@
 ---
-title: "フィルター選択されたインデックスの作成 | Microsoft Docs"
-ms.custom: 
+title: フィルター選択されたインデックスの作成 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - filtered indexes [SQL Server], about filtered indexes
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], filtered
 - indexes [SQL Server], filtered
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
-caps.latest.revision: 
+caps.latest.revision: 73
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: a82b906e15ced291ab440f8c4f87bc307dc6b624
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
-# <a name="create-filtered-indexes"></a>フィルター選択されたインデックスの作成
+# <a name="create-filtered-indexes"></a>Create Filtered Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、フィルター選択されたインデックスを作成する方法について説明します。 フィルター選択されたインデックスは、最適化された非クラスター化インデックスであり、適切に定義されたデータのサブセットから選択するクエリに対応する際に特に適しています。 フィルター選択されたインデックスは、フィルター述語を使用して、テーブル内の一部の行にインデックスを作成します。 フィルター選択されたインデックスを適切にデザインすると、クエリのパフォーマンスが向上するだけでなく、テーブル全体のインデックスと比較してインデックスのメンテナンス コストおよびストレージ コストを削減できます。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 02/23/2018
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してフィルター選択されたインデックスを作成するには:**  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 02/23/2018
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Design"></a> デザインに関する考慮事項  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 02/23/2018
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。 フィルター選択されたインデックスの式を変更するには、CREATE INDEX WITH DROP_EXISTING を使用します。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -124,11 +124,11 @@ ms.lasthandoff: 02/23/2018
   
 7.  *[<テーブル名> から列を選択]* ダイアログ ボックスで、一意のインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
-8.  **[OK]** をクリックします。  
+8.  **[OK]**をクリックします。  
   
 9. **[フィルター]** ページで、 **[フィルター式]**に、フィルター選択されたインデックスの作成に使用する SQL 式を入力します。  
   
-10. **[OK]** をクリックします。  
+10. クリックして **OK**です。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

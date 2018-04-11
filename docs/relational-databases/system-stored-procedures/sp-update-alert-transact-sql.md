@@ -1,16 +1,16 @@
 ---
-title: "sp_update_alert (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_update_alert (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_alert_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ sp_update_alert
  [ **@include_event_description_in =**] *include_event_description_in*  
  指定するかどうかの説明、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows アプリケーション ログからエラーを通知メッセージに含める必要があります。 *include_event_description_in*は**tinyint**、既定値は NULL、1 つ以上のこれらの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|なし|  
 |**1**|[電子メール]|  
@@ -105,7 +105,7 @@ sp_update_alert
  警告に関連するデータベースの名前を指定します。警告を発するには、このデータベースでエラーが発生する必要があります。 *データベース*は**sysname です。** 角かっこ ([ ]) で囲まれた名前は使用できません。 既定値は NULL になります。  
   
  [ **@event_description_keyword =**] **'***event_description_keyword***'**  
- エラー メッセージ ログ内でエラーの説明を検索する場合に使用する文字シーケンスを指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)]LIKE 式のパターン検索文字を使用していることができます。 *event_description_keyword* is **nvarchar(100)**, with a default of NULL. このパラメーターは、オブジェクト名をフィルター処理用に (たとえば、 **%customer_table%**)。  
+ エラー メッセージ ログ内でエラーの説明を検索する場合に使用する文字シーケンスを指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 式のパターン検索文字を使用していることができます。 *event_description_keyword*は**nvarchar (100)**、既定値は NULL です。 このパラメーターは、オブジェクト名をフィルター処理用に (たとえば、 **%customer_table%**)。  
   
  [ **@job_id =**] *job_id*  
  ジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。 場合*job_id*が指定されている*job_name*省略する必要があります。  
@@ -137,13 +137,13 @@ sp_update_alert
  [ **@raise_snmp_trap =**] *raise_snmp_trap*  
  予約されています。  
   
- [  **@performance_condition =**] **'***performance_condition***'**  
+ [ **@performance_condition =**] **'***performance_condition***'**  
  形式で表す値を**'***itemcomparatorvalue***'**です。 *performance_condition*は**nvarchar (512)**、既定値は NULL、これらの要素で構成されています。  
   
 |形式の要素|Description|  
 |--------------------|-----------------|  
 |*アイテム*|パフォーマンス オブジェクト、パフォーマンス カウンター、またはカウンターの名前付きインスタンス。|  
-|*比較演算子*|これらの演算子のいずれかの:  **>** 、  **<** 、**=**|  
+|*比較演算子*|これらの演算子のいずれかの: **>**、 **<**、 **=**|  
 |*値*|カウンターの数値。|  
   
  [ **@category_name =**] **'***category***'**  
@@ -181,7 +181,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_help_alert &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
+ [sp_help_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

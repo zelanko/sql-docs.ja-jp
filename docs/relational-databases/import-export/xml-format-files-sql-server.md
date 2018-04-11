@@ -1,32 +1,32 @@
 ---
-title: "XML フォーマット ファイル (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: XML フォーマット ファイル (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - format files [SQL Server], XML format files
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-caps.latest.revision: 
+caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: d6b89e518ace2edd0e527f1908087922dabce2de
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="xml-format-files-sql-server"></a>XML フォーマット ファイル (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -205,9 +205,9 @@ ms.lasthandoff: 02/23/2018
   
  それぞれの \<FIELD> 要素は、他の要素から独立しています。 フィールドは、次の属性を使用して表現されます。  
   
-|FIELD 要素の属性|説明|省略可能 /<br /><br /> Required|  
+|FIELD 要素の属性|説明|省略可能 /<br /><br /> 必須|  
 |---------------------|-----------------|------------------------------|  
-|ID **="***fieldID***"**|データ ファイル内のフィールドの論理名を指定します。 フィールドの ID は、フィールドを参照する際に使用するキーになります。<br /><br /> \<FIELD ID**="***fieldID***"**/> は \<COLUMN SOURCE**="***fieldID***"**/> にマップします|Required|  
+|ID **="***fieldID***"**|データ ファイル内のフィールドの論理名を指定します。 フィールドの ID は、フィールドを参照する際に使用するキーになります。<br /><br /> \<FIELD ID**="***fieldID***"**/> は \<COLUMN SOURCE**="***fieldID***"**/> にマップします|必須|  
 |xsi:type **="***fieldType***"**|要素のインスタンスの種類を特定する XML コンストラクトです (これは属性のように使用します)。 *fieldType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。|必須 (データ型により異なる)|  
 |LENGTH **="***n***"**|固定長データ型のインスタンスの長さを定義します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
 |PREFIX_LENGTH **="***p***"**|バイナリ データ表現のプレフィックス長を定義します。 PREFIX_LENGTH 値の *p*は、1、2、4、または 8 のいずれかにする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
@@ -258,10 +258,10 @@ ms.lasthandoff: 02/23/2018
   
  フィールドは、次の属性を使用して、対象となるテーブルにマップされます。  
   
-|COLUMN 要素の属性|Description|省略可能 /<br /><br /> Required|  
+|COLUMN 要素の属性|Description|省略可能 /<br /><br /> 必須|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="***fieldID***"**|列にマップされているフィールドの ID を指定します。<br /><br /> \<COLUMN SOURCE**="***fieldID***"**/> は \<FIELD ID**="***fieldID***"**/> にマップします|Required|  
-|NAME = "*columnName*"|フォーマット ファイルで表している行セットの列の名前を指定します。 この列名は、結果セット内で列名を特定する際に使用されるので、対象のテーブルで使用されている列名に対応する必要はありません。|Required|  
+|SOURCE **="***fieldID***"**|列にマップされているフィールドの ID を指定します。<br /><br /> \<COLUMN SOURCE**="***fieldID***"**/> は \<FIELD ID**="***fieldID***"**/> にマップします|必須|  
+|NAME = "*columnName*"|フォーマット ファイルで表している行セットの列の名前を指定します。 この列名は、結果セット内で列名を特定する際に使用されるので、対象のテーブルで使用されている列名に対応する必要はありません。|必須|  
 |xsi**:**type **="***ColumnType***"**|要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 *ColumnType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。<br /><br /> 注: *ColumnType* に設定できる値と関連する属性値は、「[&lt;COLUMN&gt; 要素の xsi:type 値](#XsiTypeValuesOfCOLUMN)」セクションの \<COLUMN> 要素の表に示します。|省略可|  
 |LENGTH **="***n***"**|固定長データ型のインスタンスの長さを定義します。 LENGTH 属性は、xsi:type が文字列データ型の場合にのみ使用します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type が文字列データ型の場合にのみ使用可能)|  
 |PRECISION **="***n***"**|数値全体の桁数を示します。 たとえば、数字 123.45 の有効桁数は 5 桁です。<br /><br /> この値は、正の整数にする必要があります。|省略可能 (xsi:type が可変数値のデータ型の場合にのみ使用可能)|  
@@ -572,7 +572,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  [なし] :  
   
 ## <a name="see-also"></a>参照  
- [データの一括インポートと一括エクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
+ [一括データ &#40; のインポートとエクスポートSQL Server と &#41; です。](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  

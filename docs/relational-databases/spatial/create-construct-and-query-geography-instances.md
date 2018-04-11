@@ -1,36 +1,36 @@
 ---
-title: "geography インスタンスの作成、構築、およびクエリ | Microsoft Docs"
-ms.custom: 
+title: geography インスタンスの作成、構築、およびクエリ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: spatial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - geography data type [SQL Server]
 - geodetic data type [SQL Server]
 - geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 42259b77a2b40001824a88ab4e8bf744f25cf720
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography インスタンスの作成、構築、およびクエリ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-地理空間データ型の **geography**は、球体地球座標系のデータを表します。 この型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では .NET 共通言語ランタイム (CLR) のデータ型として実装されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** データ型は、GPS の緯度経度座標などの楕円体 (球体地球) データを格納します。  
+  地理空間データ型の **geography**は、球体地球座標系のデータを表します。 この型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では .NET 共通言語ランタイム (CLR) のデータ型として実装されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** データ型は、GPS の緯度経度座標などの楕円体 (球体地球) データを格納します。  
   
  **geography** 型は、各データベースで使用できるように事前に定義されています。 **geography** 型のテーブル列を作成し、システムが提供する他のデータ型を使用するときと同じように **geography** データを操作できます。  
   

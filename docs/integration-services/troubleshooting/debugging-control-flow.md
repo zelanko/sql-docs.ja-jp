@@ -1,16 +1,16 @@
 ---
-title: "制御フローのデバッグ | Microsoft Docs"
-ms.custom: 
+title: 制御フローのデバッグ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.setbreakpoints.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 9aba628aa426093485d820ea4383dd04076481cd
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="debugging-control-flow"></a>制御フローのデバッグ
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローのトラブルシューティングに使用できる、機能とツールが含まれています。  
@@ -136,7 +136,7 @@ ms.lasthandoff: 01/25/2018
   
     -   パッケージ制御フローにブレークポイントを設定するには、 **[制御フロー]** タブをクリックし、タスク、For ループ コンテナー、Foreach ループ コンテナー、またはシーケンス コンテナーを右クリックし、 **[ブレークポイントの編集]**をクリックします。  
   
-    -   イベント ハンドラーにブレークポイントを設定するには、 **[イベント ハンドラー]** タブをクリックし、タスク、For ループ コンテナー、Foreach ループ コンテナー、またはシーケンス コンテナーを右クリックし、 **[ブレークポイントの編集]**をクリックします。  
+    -   イベント ハンドラーにブレークポイントを設定するには、**[イベント ハンドラー]** タブをクリックし、タスク、For ループ コンテナー、Foreach ループ コンテナー、またはシーケンス コンテナーを右クリックし、**[ブレークポイントの編集]** をクリックします。  
   
 4.  **[ブレークポイントの設定 - \<コンテナー名>]** ダイアログ ボックスで、有効にするブレークポイントを選択します。  
   
@@ -147,7 +147,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="set-breakpoints"></a>[ブレークポイントの設定]
   **[ブレークポイントの設定]** ダイアログ ボックスを使用すると、ブレークポイントを有効にしてブレークポイントの動作を制御するためのイベントを指定できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>オプション  
  **有効**  
  選択すると、イベントのブレークポイントが有効になります。  
   
@@ -157,7 +157,7 @@ ms.lasthandoff: 01/25/2018
  **[ヒット カウントの種類]**  
  ブレークポイントがいつ有効になるかを指定します。  
   
-|ReplTest1|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |**毎回**|ブレークポイントにヒットすると、常に実行が中断されます。|  
 |**ヒット カウント (等しい)**|ブレークポイントの発生回数がヒット カウントと等しくなると実行が中断されます。|  

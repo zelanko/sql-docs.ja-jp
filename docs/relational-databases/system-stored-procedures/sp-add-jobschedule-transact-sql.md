@@ -1,16 +1,16 @@
 ---
-title: "sp_add_jobschedule (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_add_jobschedule (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/28/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_jobschedule
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobschedule
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b2da9a4bf2bc1fb7e2768922b6b5dd4d93452571
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@freq_type=** ] *frequency_type*  
  いつジョブを実行するかを示す値を指定します。 *frequency_type*は**int**、既定値は**0**値は次のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 回。|  
 |**4**|毎日。|  
@@ -89,7 +89,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@freq_interval=** ] *frequency_interval*  
  ジョブを実行する日を指定します。 *frequency_interval*は**int**、既定値は 0 の値に依存して*frequency_type*次の表に記載されています。  
   
-|[値]|結果|  
+|値|結果|  
 |-----------|------------|  
 |**1** (1 回)|*frequency_interval*は使用されません。|  
 |**4** (毎日)|各*frequency_interval*日数。|  
@@ -102,7 +102,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@freq_subday_type=** ] *frequency_subday_type*  
  単位を指定*frequency_subday_interval*です。 *frequency_subday_type*は**int**, で、既定値はありませんは、次の値のいずれかを指定します。  
   
-|[値]|説明 (単位)|  
+|値|説明 (単位)|  
 |-----------|--------------------------|  
 |**0x1**|指定した時間|  
 |**0x4**|Minutes|  
@@ -116,7 +116,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval*は**int**, で、既定値はありませんは、次の値のいずれかを指定します。  
   
-|[値]|説明 (単位)|  
+|値|説明 (単位)|  
 |-----------|--------------------------|  
 |**1**|First|  
 |**2**|第 2 週|  
@@ -185,11 +185,11 @@ EXEC msdb.dbo.sp_add_jobschedule
  [作成し、ジョブにスケジュールをアタッチ](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)   
  [ジョブのスケジュール設定します。](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
  [スケジュールを作成します。](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   
- [SQL Server エージェント ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_update_schedule &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_help_schedule &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
+ [SQL Server エージェント ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_update_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_help_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

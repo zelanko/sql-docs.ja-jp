@@ -1,16 +1,16 @@
 ---
-title: "UNIQUE 制約の作成 | Microsoft Docs"
-ms.custom: 
+title: UNIQUE 制約の作成 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/12/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - UNIQUE_TSQL
@@ -19,27 +19,27 @@ helpviewer_keywords:
 - constraints [SQL Server], creating
 - constraints [SQL Server], unique
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: e17b48e1575ba0be09eea74cb96d8f471d67185d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
-# <a name="create-unique-constraints"></a>UNIQUE 制約の作成
+# <a name="create-unique-constraints"></a>Create Unique Constraints
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して UNIQUE 制約を作成し、主キー以外の特定の列に重複した値が入力されないようにします。 UNIQUE 制約を作成すると、対応する一意なインデックスが自動的に作成されます。  
   
  **このトピックの内容**  
   
--   **作業を開始する準備:**  
+-   **開始する前に。**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **UNIQUE 制約を作成する方法:**  
   
@@ -47,11 +47,11 @@ ms.lasthandoff: 02/23/2018
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  テーブルに対する ALTER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  

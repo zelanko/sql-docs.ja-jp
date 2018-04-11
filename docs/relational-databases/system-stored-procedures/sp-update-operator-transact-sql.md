@@ -1,16 +1,16 @@
 ---
-title: "sp_update_operator (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_update_operator (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_operator_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 38da9010e434570fbcd75e026f11c50450e10691
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,13 +60,13 @@ sp_update_operator
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @name=] '*名前*'  
+ [ @name=] '*name*'  
  変更するオペレーターの名前を指定します。 *名前*は**sysname**、既定値はありません。  
   
  [ @new_name=] '*new_name*'  
  オペレーターの新しい名前を指定します。 この名前は一意であることが必要です。 *新しい名前*は**sysname**、既定値は NULL です。  
   
- [ @enabled=]*有効になっています。*  
+ [ @enabled=] *enabled*  
  オペレーターの現在の状態を示す数値 (**1**現在有効な場合、 **0**しない場合)。 *有効になっている*は**tinyint**、既定値は NULL です。 有効でない場合、オペレーターは警告通知を受信しません。  
   
  [ @email_address=] '*email_address*'  
@@ -96,7 +96,7 @@ sp_update_operator
  [ @pager_days=] *pager_days*  
  オペレーターがポケットベルのメッセージを受信できる曜日を指定します (指定した開始/終了時刻を前提とします)。 *pager_days*は**tinyint**、NULL の場合、既定値から値を指定する必要があります**0**を通じて**127**です。 *pager_days*必要となる曜日の個々 の値を加算して計算されます。 たとえば、月曜日から金曜日までからは**2**+**4**+**8**+**16** + **32** = **64**です。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|日曜日|  
 |**2**|月曜日|  
@@ -107,9 +107,9 @@ sp_update_operator
 |**64**|土曜日|  
   
  [ @netsend_address=] '*netsend_address*'  
- ネットワーク メッセージの送信先オペレーターのネットワーク アドレスを指定します。 *netsend_address*is **nvarchar(100)**, with a default of NULL.  
+ ネットワーク メッセージの送信先オペレーターのネットワーク アドレスを指定します。 *netsend_address*は**nvarchar (100)**、既定値は NULL です。  
   
- [ @category_name=] '*カテゴリ*'  
+ [ @category_name=] '*category*'  
  警告のカテゴリの名前を指定します。 *カテゴリ*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -140,9 +140,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_add_operator &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_delete_operator &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_help_operator &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_add_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_help_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

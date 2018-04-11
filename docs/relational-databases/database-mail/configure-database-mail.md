@@ -1,16 +1,16 @@
 ---
-title: "データベース メールの構成 | Microsoft Docs"
-ms.custom: 
+title: データベース メールの構成 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mail
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
@@ -42,26 +42,26 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="configure-database-mail"></a>データベース メールを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-このトピックでは、データベース メール構成ウィザードを使用してデータベース メールを有効化して構成する方法、およびテンプレートを使用してデータベース メール構成スクリプトを作成する方法について説明します。  
+  このトピックでは、データベース メール構成ウィザードを使用してデータベース メールを有効化して構成する方法、およびテンプレートを使用してデータベース メール構成スクリプトを作成する方法について説明します。  
   
--   **作業を開始する準備:**  [制限事項と制約事項](#Restrictions)、 [セキュリティ](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
 -   **データベース メールの構成:**  [データベース メール構成ウィザードの使用](#DBWizard)、 [テンプレートの使用](#Template)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
  **Database Mail XPs** オプションを使用して、サーバーのデータベース メールを有効にします。 詳細については、「 [Database Mail XPs サーバー構成オプション](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 」を参照してください。  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
@@ -148,7 +148,7 @@ ms.lasthandoff: 02/12/2018
  **アカウント名**  
  新しいアカウントの名前を入力します。  
   
- **[説明]**  
+ **Description**  
  アカウントの説明を入力します。 説明はオプションです。  
   
  **[電子メール アドレス]**  
@@ -195,10 +195,10 @@ ms.lasthandoff: 02/12/2018
  **アカウント名**  
  表示、更新、または削除するアカウントを選択します。  
   
- **削除**  
+ **Del**  
  選択されているアカウントを削除します。 関連付けられたプロファイルからこのアカウントを削除するか、選択したアカウントを削除する前にこのようなプロファイルを削除する必要があります。  
   
- **[説明]**  
+ **Description**  
  アカウントの説明を表示または更新します。 説明はオプションです。  
   
  **[電子メール アドレス]**  
@@ -225,7 +225,7 @@ ms.lasthandoff: 02/12/2018
  **基本認証**  
  SMTP サーバーで必要なユーザー名およびパスワードを指定します。  
   
- **User name**  
+ **ユーザー名**  
  データベース メールで SMTP サーバーへのログインに使用されるユーザー名を表示または更新します。 SMTP サーバーで基本認証が求められる場合、ユーザー名が必要になります。  
   
  **Password**  
@@ -247,7 +247,7 @@ ms.lasthandoff: 02/12/2018
  **[プロファイル名]**  
  新しいプロファイルの名前を入力します。 プロファイルはこの名前を使用して作成されます。 既存のプロファイルの名前を使用しないでください。  
   
- **[説明]**  
+ **Description**  
  プロファイルの説明を入力します。 説明はオプションです。  
   
  **[SMTP アカウント]**  
@@ -275,10 +275,10 @@ ms.lasthandoff: 02/12/2018
  **[プロファイル名]**  
  管理するプロファイルの名前を選択します。  
   
- **削除**  
+ **Del**  
  選択されているプロファイルを削除します。 確認のメッセージが表示されます。選択したプロファイルを削除し、未送信のメッセージを破棄する場合は **[はい]** を選択します。未送信のメッセージがないときのみ、選択したプロファイルを削除する場合は **[いいえ]** を選択します。  
   
- **[説明]**  
+ **Description**  
  選択されているプロファイルの説明を表示または変更します。 説明はオプションです。  
   
  **[SMTP アカウント]**  
@@ -369,7 +369,7 @@ ms.lasthandoff: 02/12/2018
   
  任意のプロファイルを既定のプロファイルとして指定できます。 それにより、ユーザーまたはロールは、プロファイルを明示的に指定しなくても、既定のプロファイルを使用して電子メールを送信できます。 電子メール メッセージを送信するユーザーまたはロールに既定のプライベート プロファイルがある場合、データベース メールではそのプロファイルが使用されます。 ユーザーまたはロールに既定のプライベート プロファイルがない場合、 **sp_send_dbmail** では、 **msdb** データベースの既定のパブリック プロファイルが使用されます。 ユーザーまたはロールに既定のプライベート プロファイルがなく、データベースに既定のパブリック プロファイルもない場合、 **sp_send_dbmail** はエラーを返します。  
   
- **User name**  
+ **ユーザー名**  
  **msdb** データベース内のユーザーまたはロールの名前を選択します。  
   
  **アクセス**  

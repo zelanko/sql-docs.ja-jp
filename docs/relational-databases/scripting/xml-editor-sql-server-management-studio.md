@@ -1,16 +1,16 @@
 ---
-title: "XML エディター (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: XML エディター (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.editor.xml.f1
@@ -20,19 +20,20 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-caps.latest.revision: 
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f434c04ccf8d15d5bddd9c91ffe06bb9c6f69b40
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML エディター (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] XML スキーマ、ADO.NET データセット、および XML ドキュメントを操作するためのビジュアルなツールのセットが用意されています。 XML デザイナーは、WC3 (World Wide Web Consortium) で定義されている XML スキーマ定義 (XSD) 言語をサポートします。 デザイナーは、DTD (文書型定義) や XDR (XML-Data Reduced) などのその他の XML スキーマ言語をサポートしません。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  XML スキーマ、ADO.NET データセット、および XML ドキュメントを操作するためのビジュアルなツールのセットが用意されています。 XML デザイナーは、WC3 (World Wide Web Consortium) で定義されている XML スキーマ定義 (XSD) 言語をサポートします。 デザイナーは、DTD (文書型定義) や XDR (XML-Data Reduced) などのその他の XML スキーマ言語をサポートしません。  
   
  デザイナーを表示するには、データセット、XML スキーマ、または XML ファイルをプロジェクトに追加するか、次の表に示す種類のファイルを開きます。  
   
@@ -41,9 +42,9 @@ ms.lasthandoff: 01/24/2018
   
  デザイナーで XML ファイル、XML スキーマ、およびデータセットを操作する場合は、次の 3 つのビュー (またはモード) を使用できます。  
   
-|表示|Description|サポートされるファイルの種類|  
+|表示|説明|サポートされるファイルの種類|  
 |----------|-----------------|--------------------------|  
-|**[スキーマ]**|XML スキーマおよび ADO.NET データセットをビジュアルに作成および変更するために使用します。|.xsd|  
+|**スキーマ**|XML スキーマおよび ADO.NET データセットをビジュアルに作成および変更するために使用します。|.xsd|  
 |**データ**|XML データ ファイルを構造化データ グリッドでビジュアルに変更するために使用します。|.xml|  
 |**XML**|XML を編集するために使用します。ソース エディターには、色分け表示機能や、入力候補およびメンバーの一覧を含む IntelliSense 機能があります。|.xml、.xsd、.xslt、.wsdl、.web、.resx、.tdl、.wsf、.hta、.disco、.vsdisco、.config|  
 |**プラン表示**|SET SHOWPLAN_XML ON オプションを使用して作成された XML クエリ プランを表示します。|.showplan|  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], categories
 - categories [SQL Server Agent jobs]
 ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2f46b6e05f402d43688ae6c11b821e7cea58b0a9
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-a-job-category"></a>ジョブ カテゴリの作成
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ ms.lasthandoff: 03/22/2018
   
 **このトピックの内容**  
   
--   **作業を開始する準備:**  
+-   **開始する前に。**  
   
-    [制限事項と制約事項](#Restrictions)  
+    [制限事項と制約](#Restrictions)  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **ジョブ カテゴリを作成する方法:**  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 03/22/2018
   
 6.  **[すべてのジョブを表示]** チェック ボックスをオンにします。 ジョブに対応するチェック ボックスをオンにして、新しいカテゴリのジョブを 1 つ以上選択します。  
   
-7.  **[OK]** をクリックします。  
+7.  **[OK]**をクリックします。  
   
 8.  *[ジョブ カテゴリの管理 - <サーバー名>]* ダイアログ ボックスで、**[最新の情報に更新]** をクリックして、新しいジョブ カテゴリをアクティブにします。 すべての設定が適切であることを確認したら、このダイアログ ボックスを閉じます。  
   

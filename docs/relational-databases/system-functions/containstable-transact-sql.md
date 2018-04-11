@@ -1,16 +1,16 @@
 ---
-title: "CONTAINSTABLE (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: CONTAINSTABLE (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/24/2015
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONTAINSTABLE
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - rankings [full-text search]
 - less precise (fuzzy) searches [full-text search]
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-caps.latest.revision: 
+caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: a9f4ab666351984b62e47d664d17d9e2769337cd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/03/2018
   
  CONTAINSTABLE は、同じ種類の照合、 [CONTAINS 述語](../../t-sql/queries/contains-transact-sql.md)CONTAINS として同じ検索条件を使用しています。  
   
- ただし、CONTAINS とは異なり、CONTAINSTABLE を使用するクエリでは、各行の関連順位値 (RANK) とフルテキスト キー (KEY) が返されます。  サポートされているフルテキスト検索の形式について[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[、フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)です。  
+ ただし、CONTAINS とは異なり、CONTAINSTABLE を使用するクエリでは、各行の関連順位値 (RANK) とフルテキスト キー (KEY) が返されます。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされているフルテキスト検索の形式については、「[フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -125,35 +125,35 @@ CONTAINSTABLE
  *テーブル*とサーバー名を指定できません。 リンク サーバーに対するクエリでは使用できません。  
   
  *column_name*  
- フルテキスト検索用にインデックスが作成される 1 つ以上の列の名前を指定します。 型の列を指定できます**char**、 **varchar**、 **nchar**、 **nvarchar**、**テキスト**、 **ntext**、**イメージ**、 **xml**、 **varbinary**、または**varbinary (max)**です。  
+ フルテキスト検索用にインデックスが作成される 1 つ以上の列の名前を指定します。 列には、**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml**、**varbinary**、**varbinary(max)** のいずれかの型を指定できます。  
   
  *column_list*  
- コンマ区切りで複数の列を指定できます。 *column_list*かっこで囲む必要があります。 しない限り、 *language_term*が指定されているすべての列の言語*column_list*同じである必要があります。  
+ コンマ区切りで複数の列を指定できます。 *column_list* は、かっこで囲む必要があります。 *language_term* を指定しない場合、*column_list* で指定するすべての列の言語は同じにする必要があります。  
   
  \*  
- すべてのフルテキスト インデックス内の列を作成することを示す*テーブル*指定された検索条件の検索に使用する必要があります。 しない限り、 *language_term*を指定すると、テーブルのすべての列の言語は同じである必要があります。  
+ すべてのフルテキスト インデックス内の列を作成することを示す*テーブル*指定された検索条件の検索に使用する必要があります。 *language_term* を指定しない場合、テーブルのすべての列の言語は同じである必要があります。  
   
- 言語*language_term*  
- リソースが単語区切り、語幹検索、および類義語辞典、およびノイズ ワードを使用する言語は、(または[ストップ ワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md))、クエリの一部として削除します。 このパラメーターは省略可能で、言語のロケール識別子 (LCID) に対応する文字列、整数、または 16 進数の値を指定できます。 場合*language_term*を指定すると、その言語は検索条件のすべての要素に適用されます。 値を指定しなかった場合は、列のフルテキストの言語が使用されます。  
+ LANGUAGE *language_term*  
+ リソースが単語区切り、語幹検索、および類義語辞典、およびノイズ ワードを使用する言語は、(または[ストップ ワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md))、クエリの一部として削除します。 このパラメーターは省略可能で、言語のロケール識別子 (LCID) に対応する文字列、整数、または 16 進数の値を指定できます。 *language_term* を指定した場合、その言語は検索条件のすべての要素に適用されます。 値を指定しなかった場合は、列のフルテキストの言語が使用されます。  
   
- 1 つの列に言語の異なる複数のドキュメントが BLOB (Binary Large Object) として格納されている場合、そのインデックスの作成に使用される言語は、そのドキュメントのロケール識別子 (LCID) によって決まります。 このような列のクエリを実行する場合を指定して*言語 * * language_term*とよく一致の確率を高めることができます。  
+ 1 つの列に言語の異なる複数のドキュメントが BLOB (Binary Large Object) として格納されている場合、そのインデックスの作成に使用される言語は、そのドキュメントのロケール識別子 (LCID) によって決まります。 そのような列に対してクエリを実行する場合は、*LANGUAGE**language_term* を指定すると検索結果の一致率が高まります。  
   
- 文字列として指定すると*language_term*に対応する、**エイリアス**列の値、 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)互換性ビューです。  文字列は、ように、単一引用符で囲む必要があります '*language_term*' です。 整数として指定すると*language_term*言語を識別する実際の LCID です。 16 進数の値として指定する*language_term*は 0 x 後に LCID の 16 進数の値。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
+ 文字列として指定すると*language_term*に対応する、**エイリアス**列の値、 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)互換性ビューです。  文字列の場合は、'*language_term*' のように引用符 (') で囲む必要があります。 *language_term* を整数で指定する場合は、その言語を表す実際の LCID を指定します。 *language_term* を 16 進数の値で指定する場合は、「0x」の後に LCID の 16 進数の値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
   
- 値が 2 バイト文字セット (DBCS) の形式である場合[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Unicode に変換されます。  
+ 値を 2 バイト文字セット (DBCS) の形式で指定すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で Unicode に変換されます。  
   
- 無効であるかが、指定された言語がない場合リソースがインストールされていません、その言語に対応している[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はエラーを返します。 ニュートラル言語リソースを使用するには、「0x0」を指定*language_term*です。  
+ 指定した言語が無効であるか、その言語に該当するリソースがインストールされていない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によりエラーが返されます。 ニュートラル言語リソースを使用するには、*language_term* に「0x0」を指定してください。  
   
  *top_n_by_rank*  
- だけを *n* 降順で最高順位の一致が返されます。 整数値、場合にのみ適用されます *n*を指定します。 *top_n_by_rank* を他のパラメーターと組み合わせた場合、クエリから返される行数は、実際にすべての述語に一致する行数より少なくなります。 *top_n_by_rank*最も重要なヒットだけを再度呼び出すことによってクエリ パフォーマンスを向上することができます。  
+ だけを*n*降順で最高順位の一致が返されます。 整数値、場合にのみ適用されます*n*を指定します。 *top_n_by_rank* を他のパラメーターと組み合わせた場合、クエリから返される行数は、実際にすべての述語に一致する行数より少なくなります。 *top_n_by_rank*最も重要なヒットだけを再度呼び出すことによってクエリ パフォーマンスを向上することができます。  
   
  <contains_search_condition>  
- 内で検索するテキストを示す*column_name*と一致するための条件。 検索条件については、次を参照してください。 [CONTAINS &#40;です。TRANSACT-SQL と #41 です](../../t-sql/queries/contains-transact-sql.md)。  
+ *column_name* で検索するテキストと、その一致条件を指定します。 検索条件については、次を参照してください。 [CONTAINS &#40;TRANSACT-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)です。  
   
 ## <a name="remarks"></a>解説  
  フルテキストの述語と関数の対象は、FROM 述語で示される 1 つのテーブルです。 複数のテーブルを検索するには、FROM 句で結合テーブルを使用して、複数のテーブルが組み合わされた結果セットを検索します。  
   
- 返されるテーブルがという名前の列を持つ**キー**フルテキスト キー値を格納しています。 各フルテキスト インデックス付きテーブルがあり、値を持つことが保証されます、一意である列で返される値、**キー**列で指定した選択条件に一致する行のフルテキスト キー値は、検索が含まれています条件です。 **TableFulltextKeyColumn** OBJECTPROPERTYEX 関数から取得したプロパティは、この一意のキー列の id を提供します。 フルテキスト インデックスのフルテキスト キーに関連付けられている列の ID を取得するには使用**sys.fulltext_indexes**です。 詳細については、次を参照してください。 [sys.fulltext_indexes &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
+ 返されるテーブルがという名前の列を持つ**キー**フルテキスト キー値を格納しています。 各フルテキスト インデックス付きテーブルがあり、値を持つことが保証されます、一意である列で返される値、**キー**列で指定した選択条件に一致する行のフルテキスト キー値は、検索が含まれています条件です。 **TableFulltextKeyColumn** OBJECTPROPERTYEX 関数から取得したプロパティは、この一意のキー列の id を提供します。 フルテキスト インデックスのフルテキスト キーに関連付けられている列の ID を取得するには使用**sys.fulltext_indexes**です。 詳細については、次を参照してください。 [sys.fulltext_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)です。  
   
  元のテーブルから目的の行を取得するには、CONTAINSTABLE 行との結合を指定してください。 CONTAINSTABLE を使用する場合、通常は次の形式で FROM 句を SELECT ステートメントに指定します。  
   

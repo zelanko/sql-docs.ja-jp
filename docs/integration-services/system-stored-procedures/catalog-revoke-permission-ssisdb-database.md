@@ -1,31 +1,31 @@
 ---
-title: "catalog.revoke_permission (SSISDB データベース) | Microsoft Docs"
-ms.custom: 
+title: catalog.revoke_permission (SSISDB データベース) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a2c71f38fd26b56cedc2b3309067b26b1a161966
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,10 +70,10 @@ catalog.revoke_permission [ @object_type = ] object_type
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  なし  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  このストアド プロシージャには、次の権限のいずれかが必要です。  
   
 -   オブジェクトに対する ASSIGN_PERMISSIONS 権限  
@@ -82,7 +82,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   **sysadmin** サーバー ロールのメンバーシップ  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  Permission_type が指定されている場合、ストアド プロシージャは、オブジェクトのプリンシパルに明示的に割り当てられているアクセス許可を削除します。 このようなインスタンスがない場合でも、プロシージャは成功コード値 (`0`) を返します。 Permission_type を省略すると、ストアド プロシージャは、プリンシパル オブジェクトへのすべてのアクセス許可を削除します。  
   
 > [!NOTE]  

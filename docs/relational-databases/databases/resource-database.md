@@ -1,16 +1,16 @@
 ---
-title: "Resource データベース | Microsoft Docs"
-ms.custom: 
+title: Resource データベース | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - system objects [SQL Server]
@@ -18,19 +18,20 @@ helpviewer_keywords:
 - mssqlsystemresource.mdf file
 - Resource database [SQL Server]
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
-caps.latest.revision: 
+caps.latest.revision: 71
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 83f2db0cd4e4b046eb6b5dc1a6fa7b1557420df4
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="resource-database"></a>Resource データベース
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Resource データベースは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に搭載されているすべてのシステム オブジェクトを格納する読み取り専用のデータベースです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム オブジェクト (sys.objects など) は、物理的には Resource データベースに保存されていますが、すべてのデータベースの sys スキーマに論理的に表示されます。 Resource データベースには、ユーザーのデータやユーザーのメタデータは保持されません。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Resource データベースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に搭載されているすべてのシステム オブジェクトを格納する読み取り専用のデータベースです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム オブジェクト (sys.objects など) は、物理的には Resource データベースに保存されていますが、すべてのデータベースの sys スキーマに論理的に表示されます。 Resource データベースには、ユーザーのデータやユーザーのメタデータは保持されません。  
   
  Resource データベースが実装されたことで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいバージョンへのアップグレードを簡単かつ迅速に実行できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の以前のバージョンでは、アップグレードを行う場合、システム オブジェクトを削除してから再度作成する必要がありました。 現在は、すべてのシステム オブジェクトが Resource データベース ファイルに格納されるため、Resource データベース ファイルをローカル サーバーにコピーするだけで、アップグレードを完了できます。  
   

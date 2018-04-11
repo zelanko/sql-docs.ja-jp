@@ -24,14 +24,14 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 8d92fc9873ffd3fded2e0f614b0f633895d6a715
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>external scripts enabled サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-**適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] および [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]と [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 **external scripts enabled** オプションを使用して、特定のリモート言語拡張機能を使用したスクリプトの実行を有効します。 このプロパティは既定で無効になっています。 **Advanced Analytics Services** をインストールするとき、必要に応じてセットアップでこのプロパティを true に設定できます。
 
@@ -68,8 +68,8 @@ RECONFIGURE WITH OVERRIDE;
 
 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 
-[RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
+[RECONFIGURE と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/reconfigure-transact-sql.md)
 
 [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-[SQL Server コンピューターのサービスの学習](../../advanced-analytics/r/sql-server-r-services.md)
+[SQL Server Machine Learning Services](../../advanced-analytics/r/sql-server-r-services.md)

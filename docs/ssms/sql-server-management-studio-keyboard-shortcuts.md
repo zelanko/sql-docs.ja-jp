@@ -1,15 +1,16 @@
 ---
-title: "SQL Server Management Studio のキーボード ショートカット | Microsoft Docs"
-ms.custom: 
+title: SQL Server Management Studio のキーボード ショートカット | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - shortcuts [SQL Server Management Studio]
 - accelerator keys
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
-caps.latest.revision: "82"
+caps.latest.revision: 82
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 8d206355149899d1e8f9df816d45b2f64fe2c4cb
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio のキーボード ショートカット
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、2 つのキーボード スキームが用意されています。 既定のスキームは [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] スキームであり、そのキーボード ショートカットの基になっているのは [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 です。 また、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] では、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] の標準スキームに似たキーボード スキームも提供されています。 キーボード スキームの変更やキーボード ショートカットの追加を行うには、 **[ツール]** メニューの **[オプション]**をクリックします。 **[環境]**の **[キーボード]** ページで目的のキーボード スキームを選択できます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、2 つのキーボード スキームが用意されています。 既定のスキームは [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] スキームであり、そのキーボード ショートカットの基になっているのは [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 です。 また、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] では、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] の標準スキームに似たキーボード スキームも提供されています。 キーボード スキームの変更やキーボード ショートカットの追加を行うには、 **[ツール]** メニューの **[オプション]**をクリックします。 **[環境]**の **[キーボード]** ページで目的のキーボード スキームを選択できます。  
   
 > [!NOTE]  
 >  見出しだけを表示するには、このページの上部の **[すべて折りたたみ]** をクリックします。  
@@ -48,7 +50,7 @@ ms.lasthandoff: 01/17/2018
 |コンテキスト メニューを表示する|Shift + F10|Shift + F10|  
 |ファイルを作成するための **[新しいファイル]** ダイアログ ボックスを表示する|Ctrl + N|Ctrl + N|  
 |新しいプロジェクトを作成するための **[新しいプロジェクト]** ダイアログ ボックスを表示する|Ctrl + Shift + N|Ctrl + Shift + N|  
-|既存のファイルを開くための **[ファイルを開く]** ダイアログ ボックスを表示する|Ctrl + O<br /><br /> 内の複数の<br /><br /> Ctrl + Shift + G|Ctrl + O|  
+|既存のファイルを開くための **[ファイルを開く]** ダイアログ ボックスを表示する|Ctrl + O<br /><br /> または<br /><br /> Ctrl + Shift + G|Ctrl + O|  
 |既存のプロジェクトを開くための **[プロジェクトを開く]** ダイアログ ボックスを表示する|Ctrl + Shift + O|Ctrl + Shift + O|  
 |現在のプロジェクトに新しいファイルを追加するための **[新しい項目の追加]** ダイアログ ボックスを表示する|Ctrl + Shift + A|Ctrl + Shift + A|  
 |現在のプロジェクトに既存のファイルを追加するための **[既存項目の追加]** ダイアログ ボックスを表示する|Shift + Alt + A|Shift + Alt + A|  
@@ -71,10 +73,10 @@ ms.lasthandoff: 01/17/2018
 |エディターがコード ビューまたはサーバー コード ビューのとき、コード エディターの先頭にあるドロップダウン バーに挿入ポイントを移動する|Ctrl + F2|該当するショートカットはありません|  
 |現在のツール ウィンドウのツール バーに移動する|Shift + Alt|Shift + Alt|  
 |最初のツール ウィンドウが選択された状態で IDE ナビゲーターを表示する|Alt + F7|該当するショートカットはありません|  
-|次のツール ウィンドウに移動する|Alt + F6<br /><br /> 内の複数の<br /><br /> [!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディターで F6|Alt + F6|  
+|次のツール ウィンドウに移動する|Alt + F6<br /><br /> または<br /><br /> [!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディターで F6|Alt + F6|  
 |前のツール ウィンドウに移動する|Shift + Alt + F7|Shift + Alt + F7|  
 |単一ドキュメントの分割ペイン ビューの次のペインに移動する|F6|F6|  
-|前に選択していたウィンドウに移動する|Shift + Alt + F6<br /><br /> 内の複数の<br /><br /> [!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディターで Shift + F6|Shift + Alt + F6|  
+|前に選択していたウィンドウに移動する|Shift + Alt + F6<br /><br /> または<br /><br /> [!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディターで Shift + F6|Shift + Alt + F6|  
 |単一ドキュメントの分割ペイン ビューの前のペインに移動する|Shift + F6|F6|  
 |ドック メニューを表示する|Ctrl + マイナス記号 (-)|該当するショートカットはありません|  
 |開いているすべてのウィンドウの一覧が含まれるポップアップを表示する|Ctrl + Alt + ↓|該当するショートカットはありません|  
@@ -86,14 +88,14 @@ ms.lasthandoff: 01/17/2018
 |概要ウィンドウを表示する|F7|F7|  
 |[プロパティ] ウィンドウを表示する|F4|F4|  
 |**[出力]** ウィンドウを表示する|Ctrl + Alt + O|該当するショートカットはありません|  
-|**[タスク一覧]** ウィンドウを表示する|CTRL+\\、T<br /><br /> 内の複数の<br /><br /> CTRL+\\、CTRL+T|Ctrl + Alt + K|  
+|**[タスク一覧]** ウィンドウを表示する|CTRL+\\、T<br /><br /> または<br /><br /> CTRL+\\、CTRL+T|Ctrl + Alt + K|  
 |[オブジェクト エクスプローラーの詳細] リスト ビューと [オブジェクト エクスプローラーの詳細] プロパティ ペインとを切り替える|F6|F6|  
 |[オブジェクト エクスプローラーの詳細] リスト ビューと [オブジェクト エクスプローラーの詳細] プロパティ ペインとを区切る分割バーを制御して、表示ペインのサイズを調整する|Tab + ↑ または ↓|Tab + ↑ または ↓|  
 |ツールボックスを表示する|Ctrl + Alt + X|Ctrl + Alt + X|  
 |[ブックマーク] ウィンドウを表示する|Ctrl + K、Ctrl + W|Ctrl + K、Ctrl + W|  
 |ブラウザー ウィンドウを表示する|Ctrl + Alt + R|Ctrl + Alt + R|  
 |HTML デザイナーの Web サーバー コントロールの共通コマンドのスマート タグ メニューを表示する|Shift + Alt + F10|該当するショートカットはありません|  
-|[エラー一覧] ウィンドウを表示する ([!INCLUDE[tsql](../includes/tsql-md.md)] エディターのみ)|CRTL+\\、CTRL+E<br /><br /> 内の複数の<br /><br /> CTRL+\\、E|CRTL+\\、CTRL+E|  
+|[エラー一覧] ウィンドウを表示する ([!INCLUDE[tsql](../includes/tsql-md.md)] エディターのみ)|CRTL+\\、CTRL+E<br /><br /> または<br /><br /> CTRL+\\、E|CRTL+\\、CTRL+E|  
 |[エラー一覧] ウィンドウの次のエントリに移動する ([!INCLUDE[tsql](../includes/tsql-md.md)] エディターのみ)|Ctrl + Shift + F12|Ctrl + Shift + F12|  
 |表示履歴内の前のページを表示する。 Web ブラウザー ウィンドウのみで使用可能。|Alt + ←|該当するショートカットはありません|  
 |表示履歴内の次のページを表示する。 Web ブラウザー ウィンドウのみで使用可能。|Alt + →|該当するショートカットはありません|  
@@ -108,8 +110,8 @@ ms.lasthandoff: 01/17/2018
 |カーソルを下に移動する|下方向キー|下方向キー|  
 |カーソルを行の先頭に移動する|Home|Home|  
 |カーソルを行の末尾に移動する|END|END|  
-|カーソルをドキュメントの先頭に移動する|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;Home|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;Home|  
-|カーソルをドキュメントの末尾に移動する|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;End|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;End|  
+|カーソルをドキュメントの先頭に移動する|Ctrl + Home|Ctrl + Home|  
+|カーソルをドキュメントの末尾に移動する|Ctrl + End|Ctrl + End|  
 |カーソルを 1 画面上に移動する|PageUp|PageUp|  
 |カーソルを 1 画面下に移動する|PageDown|PageDown|  
 |カーソルを 1 ワード右に移動する|Ctrl + →|Ctrl + →|  
@@ -125,10 +127,10 @@ ms.lasthandoff: 01/17/2018
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |カーソルからドキュメントの先頭までのテキストを選択する|Ctrl + Shift + Home|Ctrl + Shift + Home|  
-|カーソルからドキュメントの末尾までのテキストを選択する|Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>End|Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>End|  
-|カーソルから現在の行の先頭までのテキストを選択する|Shift</localizedText> + <localizedText>Home|Shift</localizedText> + <localizedText>Home|  
+|カーソルからドキュメントの末尾までのテキストを選択する|Ctrl + Shift + End|Ctrl + Shift + End|  
+|カーソルから現在の行の先頭までのテキストを選択する|Shift + Home|Shift + Home|  
 |カーソルを現在の行の先頭に移動し、列選択範囲を拡大する|Shift + Alt + Home|該当するショートカットはありません|  
-|カーソルから現在の行の末尾までのテキストを選択する|Shift</localizedText> + <localizedText>End|Shift</localizedText> + <localizedText>End|  
+|カーソルから現在の行の末尾までのテキストを選択する|Shift + End|Shift + End|  
 |カーソルを行の末尾に移動し、列選択範囲を拡大する|Shift + Alt + End|該当するショートカットはありません|  
 |カーソル位置から下へテキストを 1 行ずつ選択する|Shift + ↓|Shift + ↓|  
 |カーソルを 1 行下に移動し、列選択範囲を拡大する|Shift + Ctrl + Shift + Del||  
@@ -186,8 +188,8 @@ ms.lasthandoff: 01/17/2018
 |全画面表示を切り替える|Shift + Alt + Enter|Shift + Alt + Enter|  
 |テキストを 1 つ上の行にスクロールする|Ctrl + ↑|Ctrl + ↑|  
 |テキストを 1 つ下の行にスクロールする|Ctrl + ↓|Ctrl + ↓|  
-|最後の編集操作を元に戻す|Ctrl + Z<br /><br /> 内の複数の<br /><br /> Alt + BackSpace|Ctrl + Z|  
-|最後に元に戻した編集を復元する|Ctrl + Shift + Z<br /><br /> 内の複数の<br /><br /> Ctrl + Y<br /><br /> 内の複数の<br /><br /> Alt + Shift + BackSpace|Ctrl + Shift + Z<br /><br /> 内の複数の<br /><br /> Ctrl + Y<br /><br /> 内の複数の<br /><br /> Alt + Shift + BackSpace|  
+|最後の編集操作を元に戻す|Ctrl + Z<br /><br /> または<br /><br /> Alt + BackSpace|Ctrl + Z|  
+|最後に元に戻した編集を復元する|Ctrl + Shift + Z<br /><br /> または<br /><br /> Ctrl + Y<br /><br /> または<br /><br /> Alt + Shift + BackSpace|Ctrl + Shift + Z<br /><br /> または<br /><br /> Ctrl + Y<br /><br /> または<br /><br /> Alt + Shift + BackSpace|  
 |選択した項目を保存する|Ctrl + S|Ctrl + S|  
 |すべて保存する|Ctrl + Shift + S|Ctrl + Shift + S|  
 |閉じる|Ctrl + F4|Ctrl + F4|  
@@ -206,7 +208,7 @@ ms.lasthandoff: 01/17/2018
 |現在の接続で新しいクエリを開く|Ctrl + N|Ctrl + N|  
 |オブジェクト エクスプローラーでデータベースを開く|Alt + F8|Alt + F8|  
 |テンプレート パラメーターの値を指定する|Ctrl + Shift + M|Ctrl + Shift + M|  
-|クエリ エディターの選択部分、または選択部分がない場合はクエリ エディター全体を実行する|F5<br /><br /> 内の複数の<br /><br /> Ctrl + Shift + E|F5<br /><br /> 内の複数の<br /><br /> Ctrl + E<br /><br /> 内の複数の<br /><br /> Alt + X|  
+|クエリ エディターの選択部分、または選択部分がない場合はクエリ エディター全体を実行する|F5<br /><br /> または<br /><br /> Ctrl + Shift + E|F5<br /><br /> または<br /><br /> Ctrl + E<br /><br /> または<br /><br /> Alt + X|  
 |クエリ エディターの選択部分、または選択部分がない場合はクエリ エディター全体を解析する|Ctrl + F5|Ctrl + F5|  
 |推定実行プランを表示する|Ctrl + Shift + Atl + L|Ctrl + L|  
 |クエリの実行を取り消す|Alt + Break|Alt + Break|  
@@ -219,7 +221,7 @@ ms.lasthandoff: 01/17/2018
 |クエリと結果ペインを切り替える|F6|F6|  
 |結果グリッドとヘッダーをクリップボードにコピーする|Ctrl + Shift + C|該当するショートカットはありません|  
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] で次のアクティブ ウィンドウに移動する|Alt + F6|Alt + F6|  
-|開く [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|Ctrl + Alt + P|Ctrl + Alt + P|  
+|開いています。[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|Ctrl + Alt + P|Ctrl + Alt + P|  
 |クエリ エディター ウィンドウからクエリ デザイナー ダイアログ ボックスを表示する|Ctrl + Shift + Q|該当するショートカットはありません|  
 |**sp_help** システム ストアド プロシージャを実行する|Alt + F1|Alt + F1|  
 |**sp_who** システム ストアド プロシージャを実行する|Ctrl + 1|Ctrl + 1|  
@@ -240,8 +242,8 @@ ms.lasthandoff: 01/17/2018
 |------------|-----------------------------|---------------------------------|  
 |新しい行を挿入する|Enter または Shift + Enter|Enter または Shift + Enter|  
 |カーソルの両側の文字を入れ替える (SQL エディターは適用外)|Ctrl + T|Ctrl + T|  
-|カーソルの右側の 1 文字を削除する|Del|Del|  
-|カーソルの左側の 1 文字を削除する|BackSpace<br /><br /> 内の複数の<br /><br /> Shift +<br /><br /> BackSpace|BackSpace<br /><br /> 内の複数の<br /><br /> Shift +<br /><br /> BackSpace|  
+|カーソルの右側の 1 文字を削除する|DELETE|DELETE|  
+|カーソルの左側の 1 文字を削除する|BackSpace<br /><br /> または<br /><br /> Shift +<br /><br /> BackSpace|BackSpace<br /><br /> または<br /><br /> Shift +<br /><br /> BackSpace|  
 |選択範囲内の空白文字を削除する。選択範囲がない場合は、カーソルの隣の空白文字を削除する。|Ctrl + K、C|該当するショートカットはありません|  
 |エディターで指定されている数のスペースを挿入する|Tab|Tab|  
 |カーソルの上に空の 1 行を挿入する|Ctrl + Enter|Ctrl + Enter|  
@@ -284,7 +286,7 @@ ms.lasthandoff: 01/17/2018
 |次のステートメントを設定する|Ctrl + 3 0|該当するショートカットはありません|  
 |次のステートメントを表示する|Alt + Num|該当するショートカットはありません|  
 |**[カーソルまで実行]** コマンドを実装する|Ctrl + F10|Ctrl + F10|  
-|**[クイック ウォッチ]** ダイアログ ボックスを表示する|Ctrl + Alt + Q<br /><br /> 内の複数の<br /><br /> Shift + F9|Ctrl + Alt + Q|  
+|**[クイック ウォッチ]** ダイアログ ボックスを表示する|Ctrl + Alt + Q<br /><br /> または<br /><br /> Shift + F9|Ctrl + Alt + Q|  
 |ブレークポイントを設定/解除する|F9|F9|  
 |ブレークポイントを有効にする|Ctrl + F9|該当するショートカットはありません|  
 |ブレークポイントを削除する。 **[ブレークポイント]** ウィンドウでのみ使用可能。|Alt + F9、D|該当するショートカットはありません|  
@@ -294,8 +296,8 @@ ms.lasthandoff: 01/17/2018
 |すべて中断する|Ctrl + Alt + Break|Ctrl + Alt + Break|  
 |関数でブレークする|Ctrl + B|該当するショートカットはありません|  
 |**[ウォッチ 1]** ウィンドウを表示する|Ctrl + Alt + W、1|該当するショートカットはありません|  
-|**[ウォッチ 2]** ウィンドウを表示する|Ctrl</localizedText> + <localizedText>Alt</localizedText> + <localizedText>W</localizedText>、<localizedText>2|Ctrl + Alt + W、1|  
-|**[ウォッチ 3]** ウィンドウを表示する|Ctrl</localizedText> + <localizedText>Alt</localizedText> + <localizedText>W</localizedText>、<localizedText>3|Ctrl</localizedText> + <localizedText>Alt</localizedText> + <localizedText>W</localizedText>、<localizedText>3|  
+|**[ウォッチ 2]** ウィンドウを表示する|Ctrl + Alt + W、2|Ctrl + Alt + W、1|  
+|**[ウォッチ 3]** ウィンドウを表示する|Ctrl + Alt + W、3|Ctrl + Alt + W、3|  
 |**[ウォッチ 4]** ウィンドウを表示する|Ctrl + Alt + W、4|Ctrl + Alt + W、4|  
 |**[自動変数]** ウィンドウを表示する|Ctrl + Alt + V、A|Ctrl + Alt + V、A|  
 |**[ローカル]** ウィンドウを表示する|Ctrl + Alt + V、L|Ctrl + Alt + V、L|  
@@ -309,8 +311,8 @@ ms.lasthandoff: 01/17/2018
   
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|メンバーの一覧を表示する|Ctrl + J|Ctrl + Space<br /><br /> 内の複数の<br /><br /> Ctrl + J|  
-|ワードを完成する|Ctrl + Space<br /><br /> 内の複数の<br /><br /> Alt + →|Alt + →|  
+|メンバーの一覧を表示する|Ctrl + J|Ctrl + Space<br /><br /> または<br /><br /> Ctrl + J|  
+|ワードを完成する|Ctrl + Space<br /><br /> または<br /><br /> Alt + →|Alt + →|  
 |クイック情報を表示する|Ctrl + K、Ctrl + I|該当するショートカットはありません|  
 |パラメーター情報を表示する|Ctrl + Shift + Space|Ctrl + Shift + Space|  
 |パラメーター ヒントをコピーする|Ctrl + Shift + Alt + C|該当するショートカットはありません|  
@@ -349,7 +351,7 @@ ms.lasthandoff: 01/17/2018
   
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|ヘルプ|F1<br /><br /> 内の複数の<br /><br /> Shift + F1|F1|  
+|ヘルプ|F1<br /><br /> または<br /><br /> Shift + F1|F1|  
 |SQL Server オンライン ブックを表示する|Ctrl + F1|該当するショートカットはありません|  
 |ヘルプ ライブラリ マネージャーを開く|Ctrl + Alt + F1|該当するショートカットはありません|  
 |SQL Server リソース センター Web ページを表示する|Ctrl + Alt + F2|該当するショートカットはありません|  
@@ -387,11 +389,11 @@ ms.lasthandoff: 01/17/2018
   
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|切り取る (現在選択している項目を削除してクリップボードに配置する)|Ctrl + X<br /><br /> 内の複数の<br /><br /> Shift + Delete|Ctrl + X<br /><br /> 内の複数の<br /><br /> Shift + Del|  
-|選択された行をすべて切り取る。何も選択されていない場合は現在の行を切り取る。|Ctrl + L<br /><br /> 内の複数の<br /><br /> Ctrl + Shift + L|該当するショートカットはありません|  
-|クリップボードにコピーする|Ctrl + C<br /><br /> 内の複数の<br /><br /> Ctrl + Ins|Ctrl + C<br /><br /> 内の複数の<br /><br /> Ctrl + Ins|  
-|クリップボードから挿入ポイントに貼り付ける|Ctrl + V<br /><br /> 内の複数の<br /><br /> Shift + Ins|Ctrl + V<br /><br /> 内の複数の<br /><br /> Shift + Ins|  
-|挿入ポイントにクリップボード リングから項目を貼り付け、貼り付けた項目を自動的に選択する|Ctrl + Shift + V<br /><br /> 内の複数の<br /><br /> Ctrl + Shift + Insert|該当するショートカットはありません|  
+|切り取る (現在選択している項目を削除してクリップボードに配置する)|Ctrl + X<br /><br /> または<br /><br /> Shift + Delete|Ctrl + X<br /><br /> または<br /><br /> Shift + Del|  
+|選択された行をすべて切り取る。何も選択されていない場合は現在の行を切り取る。|Ctrl + L<br /><br /> または<br /><br /> Ctrl + Shift + L|該当するショートカットはありません|  
+|クリップボードにコピーする|Ctrl + C<br /><br /> または<br /><br /> Ctrl + Ins|Ctrl + C<br /><br /> または<br /><br /> Ctrl + Ins|  
+|クリップボードから挿入ポイントに貼り付ける|Ctrl + V<br /><br /> または<br /><br /> Shift + Ins|Ctrl + V<br /><br /> または<br /><br /> Shift + Ins|  
+|挿入ポイントにクリップボード リングから項目を貼り付け、貼り付けた項目を自動的に選択する|Ctrl + Shift + V<br /><br /> または<br /><br /> Ctrl + Shift + Insert|該当するショートカットはありません|  
   
 ## <a name="log-viewer-keyboard-shortcuts"></a>ログ ビューアーのキーボード ショートカット  
   

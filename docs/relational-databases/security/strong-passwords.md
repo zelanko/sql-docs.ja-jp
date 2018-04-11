@@ -1,16 +1,16 @@
 ---
-title: "強力なパスワード | Microsoft Docs"
-ms.custom: 
+title: 強力なパスワード | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - logins [SQL Server], passwords
@@ -21,19 +21,20 @@ helpviewer_keywords:
 - characters [SQL Server], password policies
 - strong passwords [SQL Server]
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7c5b783d4899479523d0e54fda7620ad0145b642
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="strong-passwords"></a>強力なパスワード
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] パスワードは、サーバーのセキュリティ上で最も弱い箇所になる可能性があります。 パスワードを選択するときは、常に最大限の注意が必要です。 強力なパスワードの特徴は次のとおりです。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  パスワードは、サーバーのセキュリティ上で最も弱点になる可能性があります。 パスワードを選択するときは、常に最大限の注意が必要です。 強力なパスワードの特徴は次のとおりです。  
   
 -   8 文字以上である  
   

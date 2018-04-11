@@ -1,16 +1,16 @@
 ---
-title: "sp_help_peerconflictdetection (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_help_peerconflictdetection (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_peerconflictdetection
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 43221792e6f2b29ac86fc6d4ef70376ba4896c49
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sphelppeerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @publication=] '*パブリケーション*'  
+ [ @publication= ] '*publication*'  
  情報を返すパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [ @timeout=]*タイムアウト*  
+ [ @timeout= ] *timeout*  
  トポロジ内の各ノードからの応答の待機中にプロシージャがタイムアウトになるまでの時間を秒数で指定します。 トポロジ内に読み取り専用サブスクライバーがある場合は、タイムアウト値を指定しても無効になります。 読み取り専用のサブスクライバーは、このプロシージャからの呼び出しに応答しません。 *タイムアウト*は**int**、既定値は 60 です。  
   
 ## <a name="result-sets"></a>結果セット  
@@ -68,12 +68,12 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="remarks"></a>解説  
  sp_help_peerconflictdetection は、ピア ツー ピア トランザクション レプリケーションで使用されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  固定サーバー ロール sysadmin または固定データベース ロール db_owner のメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  
  [ピア ツー ピア レプリケーションにおける競合検出](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

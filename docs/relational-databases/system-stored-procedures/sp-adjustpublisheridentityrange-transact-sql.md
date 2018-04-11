@@ -1,16 +1,16 @@
 ---
-title: "sp_adjustpublisheridentityrange (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_adjustpublisheridentityrange (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adjustpublisheridentityrange
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c2f0214309eb060bbc02c7c05bf5243444ed5796
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'***パブリケーション***'**  
+ [ **@publication=**] **'***publication***'**  
  新しい ID 範囲が再割り当てされるパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は NULL です。  
   
- [  **@table_name=**] **'***table_name***'**  
+ [ **@table_name=**] **'***table_name***'**  
  新しい ID 範囲が再割り当てされるテーブルの名前を指定します。 *table_name*は**sysname**、既定値は NULL です。  
   
- [  **@table_owner=**] **'***table_owner***'**  
+ [ **@table_owner=**] **'***table_owner***'**  
  パブリッシャーのテーブルの所有者を指定します。 *table_owner*は**sysname**、既定値は NULL です。 場合*table_owner*が指定されていない、現在のユーザーの名前を使用します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -67,7 +67,7 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
   
  実行時に**sp_adjustpublisheridentityrange**か、*パブリケーション*または*table_name*指定する必要があります。 両方を指定した場合、または両方とも指定しなかった場合は、エラーが返されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_adjustpublisheridentityrange**です。  
   
 ## <a name="see-also"></a>参照  

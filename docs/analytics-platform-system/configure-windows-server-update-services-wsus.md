@@ -17,10 +17,10 @@ ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
 caps.latest.revision: 41
 ms.openlocfilehash: 31427bc55017cf9c069e8cd4a467dfdb9608ca3f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>Windows Server Update Services (WSUS) を構成します。
 これらの手順では、Windows Server Update Services (WSUS) の構成ウィザードを使用して、Analytics Platform System の WSUS を構成するための手順について説明します。 アプライアンスにソフトウェア更新プログラムを適用する前に、WSUS を構成する必要があります。 WSUS は、アプライアンスの VMM のバーチャル マシンに既にインストールされています。  
@@ -81,7 +81,7 @@ WSUS を構成する必要があります。
   
     すると、**上流サーバーの選択**ページ。 次のスクリーン ショットは、構成ウィザードの開始ポイントです。  
   
-    ![WSUS: 上流サーバーの同期](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
+    ![WSUS Upstream Server Sync](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
 4.  アップ ストリーム サーバーを選択します。  
   
@@ -91,7 +91,7 @@ WSUS を構成する必要があります。
   
     1.  Microsoft Update と同期するために選択する場合は何も変更する必要はありません、**上流サーバーの選択**ページ。 **[次へ]**をクリックします。  
   
-        ![WSUS: 上流サーバーの同期](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
+        ![WSUS Upstream Server Sync](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
     #### <a name="to-update-from-another-wsus-server"></a>別の WSUS サーバーから更新するには  
   

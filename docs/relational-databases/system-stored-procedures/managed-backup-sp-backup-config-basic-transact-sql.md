@@ -1,16 +1,16 @@
 ---
-title: "managed_backup.sp_backup_config_basic (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: managed_backup.sp_backup_config_basic (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_backup_config_basic_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_basic
 - sp_backup_config_basic
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 51507869caef7a8738381881f22f6cf9f1005144
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/03/2018
   構成、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]基本設定の特定のデータベースまたはのインスタンスに対して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
 > [!NOTE]  
->  この手順呼び出せるで基本的なマネージ バックアップの構成を作成するための独自です。 ただし、高度な機能またはカスタム スケジュールを追加する場合は、最初の構成を使用してこれらの設定[managed_backup.sp_backup_config_advanced &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)と[managed_backup.sp_backup_config_schedule &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)この手順でマネージ バックアップを有効にしてください。  
+>  この手順呼び出せるで基本的なマネージ バックアップの構成を作成するための独自です。 ただし、高度な機能またはカスタム スケジュールを追加する場合は、最初の構成を使用してこれらの設定[managed_backup.sp_backup_config_advanced &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)と[managed_backup.sp_backup_config_schedule &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)この手順でマネージ バックアップを有効にしてください。  
    
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,10 +69,10 @@ EXEC managed_backup.sp_backup_config_basic
  バックアップ ファイルの保有期間 (日数)。 @storage_urlは int です。 これは、構成する場合の必須パラメーター[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]のインスタンスで最初に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 変更中に、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]構成では、このパラメーターは省略可能です。 指定しない場合は、既存の構成値が保持されます。  
   
  @credential_name  
- Windows Azure ストレージ アカウントへの認証に使用する SQL 資格情報の名前。 @credentail_name**SYSNAME**です。 指定した場合、バックアップは、ページ blob に格納されます。 このパラメーターが NULL の場合、バックアップは、ブロック blob として格納されます。 ページ blob へのバックアップには推奨されていませんので、新しいブロック blob のバックアップ機能を使用することをお勧めします。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の構成を変更するために使用する場合、このパラメーターは省略可能です。 指定しない場合、既存の構成値は保持されます。  
+ Windows Azure ストレージ アカウントへの認証に使用する SQL 資格情報の名前。 @credentail_name **SYSNAME**です。 指定した場合、バックアップは、ページ blob に格納されます。 このパラメーターが NULL の場合、バックアップは、ブロック blob として格納されます。 ページ blob へのバックアップには推奨されていませんので、新しいブロック blob のバックアップ機能を使用することをお勧めします。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の構成を変更するために使用する場合、このパラメーターは省略可能です。 指定しない場合、既存の構成値は保持されます。  
   
 > [!WARNING]  
->  **@credential_name** パラメーターは、この時点ではサポートされません。 ブロック blob のみのバックアップはサポートされて、このパラメーターを NULL にする必要があります。  
+>  **@credential_name**パラメーターは、この時点ではサポートされません。 ブロック blob のみのバックアップはサポートされて、このパラメーターを NULL にする必要があります。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
@@ -116,7 +116,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
+ [managed_backup.sp_backup_config_advanced &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
  [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   
   

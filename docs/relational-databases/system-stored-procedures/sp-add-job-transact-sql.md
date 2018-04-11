@@ -1,16 +1,16 @@
 ---
-title: "sp_add_job (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_add_job (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_job_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_job
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 9f83b2b206b38783e53d2fb0ccdbf724a78b17d7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +64,10 @@ sp_add_job [ @job_name = ] 'job_name'
  [ **@job_name =** ] **'***job_name***'**  
  ジョブの名前を指定します。 名前が一意であり、割合を含めることはできません (**%**) 文字です。 *job_name*は**nvarchar (128)**、既定値はありません。  
   
- [  **@enabled =** ]*有効になっています。*  
+ [ **@enabled =** ] *enabled*  
  追加されるジョブの状態を指定します。 *有効になっている*は**tinyint**の既定値は 1 (有効) です。 場合**0**ジョブが有効でないと、そのスケジュールに従って実行されません。 ただし、これを手動で実行します。  
   
- [  **@description =** ] **'***説明***'**  
+ [ **@description =** ] **'***description***'**  
  ジョブの説明を指定します。 *説明*は**nvarchar (512)**、既定値は NULL です。 場合*説明*は省略すると、「使用可能な説明はありません」が使用されます。  
   
  [ **@start_step_id =** ] *step_id*  
@@ -79,13 +79,13 @@ sp_add_job [ @job_name = ] 'job_name'
  [ **@category_id =** ] *category_id*  
  ジョブ カテゴリを指定するための、言語に依存しないメカニズムを指定します。 *category_id*は**int**、既定値は NULL です。  
   
- [  **@owner_login_name =** ] **'***ログイン***'**  
- ジョブを所有するログインの名前です。 *ログイン*は**sysname**の既定値は NULL には、現在のログイン名として解釈されます。 メンバーにのみ、 **sysadmin**固定サーバー ロールの設定またはの値を変更できます **@owner_login_name**です。 場合のメンバーでもないユーザーの**sysadmin**ロールを設定またはの値を変更 **@owner_login_name** 、このストアド プロシージャの実行は失敗し、エラーが返されます。  
+ [ **@owner_login_name =** ] **'***login***'**  
+ ジョブを所有するログインの名前です。 *ログイン*は**sysname**の既定値は NULL には、現在のログイン名として解釈されます。 メンバーにのみ、 **sysadmin**固定サーバー ロールの設定またはの値を変更できます **@owner_login_name**です。 場合のメンバーでもないユーザーの**sysadmin**ロールを設定またはの値を変更**@owner_login_name**、このストアド プロシージャの実行は失敗し、エラーが返されます。  
   
  [ **@notify_level_eventlog =** ] *eventlog_level*  
  対象となるジョブのエントリをいつ Microsoft Windows アプリケーション ログに記録するかを示す値を指定します。 *eventlog_level*は**int**、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|Never|  
 |**1**|成功時|  
@@ -126,7 +126,7 @@ sp_add_job [ @job_name = ] 'job_name'
  なし  
   
 ## <a name="remarks"></a>解説  
- **@originating_server**内に存在する**sp_add_job**は引数の下に記載されていません。 **@originating_server**内部使用のために予約されています。  
+ **@originating_server** 内に存在する**sp_add_job**は引数の下に記載されていません。 **@originating_server** 内部使用のために予約されています。  
   
  後に**sp_add_job** 、ジョブを追加するのには実行されて**sp_add_jobstep**ジョブの処理を実行するステップを追加するために使用できます。 **sp_add_jobschedule**に使用できるスケジュールを作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスが、ジョブの実行に使用します。 使用して**sp_add_jobserver**を設定する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス ジョブを実行、および**sp_delete_jobserver**からジョブを削除する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。  
   
@@ -145,7 +145,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  これらの各固定に関連付けられている特定の権限については、データベース ロールを参照してください[SQL Server エージェント固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)です。  
   
- メンバーにのみ、 **sysadmin**固定サーバー ロールの設定またはの値を変更できます **@owner_login_name**です。 場合のメンバーでもないユーザーの**sysadmin**ロールを設定またはの値を変更 **@owner_login_name** 、このストアド プロシージャの実行は失敗し、エラーが返されます。  
+ メンバーにのみ、 **sysadmin**固定サーバー ロールの設定またはの値を変更できます **@owner_login_name**です。 場合のメンバーでもないユーザーの**sysadmin**ロールを設定またはの値を変更**@owner_login_name**、このストアド プロシージャの実行は失敗し、エラーが返されます。  
   
 ## <a name="examples"></a>使用例  
   
@@ -188,16 +188,16 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_add_schedule &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_add_jobstep &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_add_jobserver &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_apply_job_to_targets &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [sp_delete_job &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_delete_jobserver &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [sp_remove_job_from_targets &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
- [sp_help_job &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_help_jobstep &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [sp_update_job &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_add_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_add_jobserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_apply_job_to_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_delete_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_jobserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_remove_job_from_targets &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
+ [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_help_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_update_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
