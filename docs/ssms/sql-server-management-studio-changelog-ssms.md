@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/20/2018
+ms.date: 04/06/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: ''
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
-caps.latest.revision: ''
+caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9865ff96b084d70b3dcd067ad8d57c7cece01a62
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 75e8afe2561b49b2479d7b65d1c7aff9854fa420
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -109,7 +109,7 @@ SMO:
 
 ### <a name="known-issues"></a>既知の問題
 
-現在、このリリースに既知の問題はありません。
+- メンテナンス プランのスケジュールを構成するときに SSMS 17.6 がクラッシュする、という現在既知の問題があります。
 
 ## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
 
@@ -159,7 +159,7 @@ Showplan:
 SMO:
 
 - サーバーの照合順序で大文字と小文字が区別される場合に SMO が AvailabilityReplica プロパティをフェッチできない (その結果、SSMS で "マルチパート識別子 "a.delimited" をバインドできませんでした" というようなエラー メッセージが表示される場合がある) という問題が修正されました。
-- 照合順序が処理されない (その結果、照合順序の大文字と小文字が区別されるサーバーで実行されているデータベースで右クリックしたときに、トルコ語のロケールの ma マシン上で実行されている SSMS で "レガシ基数推定が有効なスコープ構成ではありません" というようなエラーが表示される場合がある) という、DatabaseScopedConfigurationCollection クラスの問題が修正されました。
+- 照合順序が処理されない (その結果、照合順序の大文字と小文字が区別されるサーバーで実行されているデータベースで右クリックしたときに、トルコ語のロケールの ma マシン上で実行されている SSMS で "レガシカーディナリティ推定が有効なスコープ構成ではありません" というようなエラーが表示される場合がある) という、DatabaseScopedConfigurationCollection クラスの問題が修正されました。
 - SMO が SQL 2005 サーバーで SQL エージェント プロパティをフェッチできない (その結果、SSMS が "ローカル変数に既定値を代入できません。 スカラー変数 "@ServiceStartMode" を宣言してください" というようなエラーをスローし、最終的にオブジェクト エクスプローラーで SQL エージェント ノードが表示されない) という、JobServer クラスの問題が修正されました。
 
 テンプレート: 
@@ -571,7 +571,7 @@ The connection is broken and recovery is not possible. The client driver attempt
     - インターリーブ実行のサポート
   - [実際の実行プランの分析] の新しいオプション
   - プラン表示の比較に対する全般的改良
-  - プラン表示の比較機能に、2 つのクエリ プランの一致するノード間の基数推定での大きな違いを見つけて、考えられる根本原因の基本分析を実行する機能が導入されました。
+  - プラン表示の比較機能に、2 つのクエリ プランの一致するノード間のカーディナリティ推定での大きな違いを見つけて、考えられる根本原因の基本分析を実行する機能が導入されました。
 - 登録済みサーバー エクスプローラーから Configuration Manager を削除しました。
 - Azure Blob ストレージから監査ログを読み取り可能
 - Always Encrypted にパラメーター化機能が追加されました。詳細については、[このページ](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/)を参照してください。 
