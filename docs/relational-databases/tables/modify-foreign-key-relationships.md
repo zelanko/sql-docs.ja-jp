@@ -1,16 +1,16 @@
 ---
-title: "外部キー リレーションシップの変更 | Microsoft Docs"
-ms.custom: 
+title: 外部キー リレーションシップの変更 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/25/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vdtsql.chm:65538
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - foreign keys [SQL Server], modifying
 - modifying foreign keys
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b667598024f6df19d7543cf9e59f4c646706c776
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="modify-foreign-key-relationships"></a>外部キー リレーションシップの変更
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.lasthandoff: 02/23/2018
   
  **このトピックの内容**  
   
--   **作業を開始する準備:**  
+-   **開始する前に。**  
   
-     [制限事項と制約事項](#Restrictions)  
+     [制限事項と制約](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して外部キーを変更するには:**  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/23/2018
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  新しい外部キー列は、関連付けられる主キー列のデータ型およびサイズと一致する必要があります。ただし、次の例外があります。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/23/2018
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  テーブルに対する ALTER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -108,7 +108,7 @@ ms.lasthandoff: 02/23/2018
      **[IDENTITY] カテゴリ**  
      展開して **[オブジェクト名]** および **[説明]**のプロパティ フィールドを表示します。  
   
-     **名前**  
+     **[オブジェクト名]**  
      リレーションシップの名前を表示します。 新しいリレーションシップを作成した場合、このプロパティには、 **テーブル デザイナー**のアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
      **[説明]**  
@@ -129,9 +129,9 @@ ms.lasthandoff: 02/23/2018
      **[DeleteRule の設定]**  
      外部キー リレーションシップに関連するデータを持つ行をユーザーが削除しようとした場合の処理を指定します。  
   
-    -   **[動作なし]** &#xA0;&#xA0;&#xA0;削除操作が許可されていないことをユーザーに通知するエラー メッセージが出力され、DELETE がロールバックされます。  
+    -   **[動作なし]** &nbsp;&nbsp;&nbsp;削除操作が許可されていないことをユーザーに通知するエラー メッセージが出力され、DELETE がロールバックされます。  
   
-    -   **[重ねて表示]** &#xA0;&#xA0;&#xA0;外部キー リレーションシップに関係するデータを含む行がすべて削除されます。 論理レコードを使用するマージ パブリケーションにテーブルを含める場合、CASCADE は使用しないでください。  
+    -   **[重ねて表示]** &nbsp;&nbsp;&nbsp;外部キー リレーションシップに関係するデータを含む行がすべて削除されます。 論理レコードを使用するマージ パブリケーションにテーブルを含める場合、CASCADE は使用しないでください。  
   
     -   **[Null に設定]** テーブルのすべての外部キー列が null 値を使用できる場合、null 値が設定されます。  
   
@@ -140,13 +140,13 @@ ms.lasthandoff: 02/23/2018
      **[UpdateRule の設定]**  
      外部キー リレーションシップに関連するデータを持つ行をユーザーが更新しようとした場合の処理を指定します。  
   
-    -   **[動作なし]** &#xA0;&#xA0;&#xA0;更新操作が許可されていないことをユーザーに通知するエラー メッセージを出力し、UPDATE がロールバックします。  
+    -   **[動作なし]** &nbsp;&nbsp;&nbsp;更新操作が許可されていないことをユーザーに通知するエラー メッセージを出力し、UPDATE がロールバックします。  
   
-    -   **[重ねて表示]** &#xA0;&#xA0;&#xA0;外部キー リレーションシップに関係するデータを含む行がすべて更新されます。 論理レコードを使用するマージ パブリケーションにテーブルを含める場合、CASCADE は使用しないでください。  
+    -   **[重ねて表示]** &nbsp;&nbsp;&nbsp;外部キー リレーションシップに関係するデータを含む行がすべて更新されます。 論理レコードを使用するマージ パブリケーションにテーブルを含める場合、CASCADE は使用しないでください。  
   
     -   **[Null に設定]** テーブルのすべての外部キー列が null 値を使用できる場合、null 値が設定されます。  
   
-    -   **[既定値の設定]** &#xA0;&#xA0;テーブルのすべての外部キー列に既定値が定義されている場合、その列に定義されている既定値が設定されます。  
+    -   **[既定値の設定]** &nbsp;&nbsp;テーブルのすべての外部キー列に既定値が定義されている場合、その列に定義されている既定値が設定されます。  
   
 4.  **[ファイル]** メニューの *[<テーブル名> を保存]* をクリックします。  
   

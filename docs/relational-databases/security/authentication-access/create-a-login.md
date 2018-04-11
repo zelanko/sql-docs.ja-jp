@@ -1,16 +1,16 @@
 ---
-title: "ログインの作成 | Microsoft Docs"
-ms.custom: 
+title: ログインの作成 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.login.status.f1
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
-ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-a-login"></a>ログインの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/06/2017
   
     4.  詳細検索オプションを表示するには **[詳細]** をクリックします。 詳細については、「 [[ユーザー、コンピューターまたはグループの選択] ダイアログ ボックス - [詳細設定] ページ](http://technet.microsoft.com/library/cc733110.aspx)」を参照してください。  
   
-    5.  クリックして **OK**です。  
+    5.  **[OK]**をクリックします。  
   
 4.  Windows プリンシパル上に基づいてログインを作成するには、 **[Windows 認証]**を選択します。 これは既定値です。  
   
@@ -170,9 +170,9 @@ ms.lasthandoff: 12/06/2017
   
 1.  **[検索]**をクリックします。  
   
-2.  **[オブジェクトの追加]** ダイアログ ボックスで、 **[特定のオブジェクト]**、 **[この種類のすべてのオブジェクト…]**、 **[サーバー***server_name]*のいずれかのオプションを選択します。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  **オブジェクトの追加**ダイアログ ボックスで、次のオプションのいずれかを選択:**固有のオブジェクトをしています.**、**型のすべてのオブジェクト。**、または **サーバー * * * server_name*です。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **注:** **[サーバー***server_name]* を選択すると、そのサーバーのセキュリティ保護可能なすべてのオブジェクトが上のグリッドに自動的に入力されます。  
+    > **注:**を選ぶと **サーバー * * * server_name*上のグリッドをそのサーバーのセキュリティ保護可能なオブジェクトのすべてに自動的に入力します。  
   
 3.  **[特定のオブジェクト]**を選択した場合:  
   
@@ -197,7 +197,7 @@ ms.lasthandoff: 12/06/2017
  **[明示的] タブ**  
  上のグリッドで選択されているセキュリティ保護可能なリソースに適用できる権限が表示されます。 すべての明示的な権限に対してすべてのオプションを使用できるわけではありません。  
   
- **アクセス許可**  
+ **権限**  
  権限の名前です。  
   
  **Grantor**  

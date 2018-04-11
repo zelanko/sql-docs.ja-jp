@@ -17,16 +17,16 @@ helpviewer_keywords:
 - startup accounts [SQL Server]
 - service startup accounts [SQL Server Agent]
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 37582f52b59a254c12b7b8981b1298d525fa31fa
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,11 +38,11 @@ ms.lasthandoff: 03/22/2018
   
 **このトピックの内容**  
   
--   **作業を開始する準備:**  
+-   **開始する前に。**  
   
-    [制限事項と制約事項](#Restrictions)  
+    [制限事項と制約](#Restrictions)  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   [SQL Server Management Studio を使用して SQL Server エージェントのサービス開始アカウントを設定するには](#SSMSProcedure)  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 03/22/2018
   
         2.  **[パスワード]** ボックスに、アカウントのパスワードを入力します。 **[パスワードの確認入力]** ボックスに、パスワードを再度入力します。  
   
-8.  **[OK]** をクリックします。  
+8.  **[OK]**をクリックします。  
   
 9. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 構成マネージャーで、 **[閉じる]** ボタンをクリックします。  
   

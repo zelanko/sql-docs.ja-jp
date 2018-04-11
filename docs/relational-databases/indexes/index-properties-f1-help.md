@@ -21,16 +21,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: ''
+caps.latest.revision: 38
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c04983b7d37f71d7b74072b5c673fc4696ebc895
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="index-properties-f1-help"></a>[インデックスのプロパティ] の F1 ヘルプ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/23/2018
   
  [[インデックスのプロパティ] の [全般] ページ](#General)  
   
- [から (インデックス) 列を選択 ダイアログ ボックス](#Columns)  
+ [[&lt;table name&gt; から (インデックス) 列を選択] ダイアログ ボックス](#Columns)  
   
  [[インデックスのプロパティ] の [ストレージ] ページ](#Storage)  
   
@@ -86,13 +86,13 @@ ms.lasthandoff: 02/23/2018
 > [!NOTE]  
 >  インデックスの種類が **[プライマリ XML]** または **[空間]**の場合、この列はテーブルに表示されません。  
   
- **[データ型]**  
+ **データ型**  
  データ型情報を表示します。  
   
 > [!NOTE]  
 >  テーブル列が計算列の場合、 **[データ型]** に "計算列" と表示されます。  
   
- **[サイズ]**  
+ **サイズ**  
  列データ型を格納するために必要な最大バイト数を表示します。 空間列または XML 列の場合は、ゼロ (0) が表示されます。  
   
  **Identity**  
@@ -119,7 +119,7 @@ ms.lasthandoff: 02/23/2018
  **[付加列]**  
  非キー列を非クラスター化インデックスに含めます。 このオプションを選択すると、列を非キー列として非クラスター化インデックスのリーフ レベルに追加することにより、インデックス キーの合計サイズに対する現在のインデックス制限、およびインデックス キーを構成する列の最大数の制限を無視できます。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。  
   
-##  <a name="Columns"></a> [<table name> から (インデックス) 列を選択] ダイアログ ボックス  
+##  <a name="Columns"></a> [&lt;table name&gt; から (インデックス) 列を選択] ダイアログ ボックス  
  このページを使用すると、インデックスを作成または変更するときに **[インデックスのプロパティ]\([全般] ページ)** に列を追加できます。  
   
  **チェック ボックス**  
@@ -128,7 +128,7 @@ ms.lasthandoff: 02/23/2018
  **名前**  
  列の名前です。  
   
- **[データ型]**  
+ **データ型**  
  列のデータ型。  
   
  **バイト**  
@@ -143,7 +143,7 @@ ms.lasthandoff: 02/23/2018
 ##  <a name="Storage"></a> [ストレージ] ページのオプション  
  このページを使用すると、選択したインデックスのファイル グループ プロパティやパーティション構成プロパティを表示または変更できます。 インデックスの種類に関連するオプションだけが表示されます。  
   
- **[ファイル グループ]**  
+ **ファイル グループ**  
  指定したファイル グループのインデックスを格納します。 一覧には、標準 (ROW) ファイル グループのみが表示されます。 既定で選択されているのは、データベースのプライマリ ファイル グループです。 詳細については、「 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)」を参照してください。  
   
  **[Filestream ファイル グループ]**  
@@ -178,7 +178,7 @@ ms.lasthandoff: 02/23/2018
 >  XML インデックスの場合、またはインデックスが無効なクラスター化インデックスの場合、このオプションは使用できません。  
   
  **[並列処理の最大限度の設定]**  
- 並列実行プランの実行中に使用されるプロセッサ数を制限します。 既定値は 0 です。0 の場合、実際に使用可能な CPU 数が使用されます。 値を 1 に設定すると、並列実行プランが生成されなくなります。値を 1 よりも大きな数値に設定すると、1 つのクエリ実行で使用されるプロセッサの最大数が限定されます。 このオプションは、ダイアログ ボックスが **再構築** または **再作成** 状態のときにのみ使用できます。 詳しくは、「 [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)」をご覧ください。  
+ 並列実行プランの実行中に使用されるプロセッサ数を制限します。 既定値は 0 です。0 の場合、実際に使用可能な CPU 数が使用されます。 値を 1 に設定すると、並列実行プランが生成されなくなります。値を 1 よりも大きな数値に設定すると、1 つのクエリ実行で使用されるプロセッサの最大数が限定されます。 このオプションは、ダイアログ ボックスが **再構築** または **再作成** 状態のときにのみ使用できます。 詳しくは、「 [最適なパフォーマンスを実現するための max degree of parallelism オプションの設定](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)」をご覧ください。  
   
 > [!NOTE]  
 >  使用可能な CPU 数よりも多い値を指定すると、実際に使用可能な CPU 数が使用されます。  

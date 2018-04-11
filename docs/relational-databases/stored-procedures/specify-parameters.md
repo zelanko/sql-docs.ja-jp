@@ -1,16 +1,16 @@
 ---
-title: "パラメーターの指定 | Microsoft Docs"
-ms.custom: 
+title: パラメーターの指定 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parameters [SQL Server], stored procedures
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - output parameters [SQL Server]
 - input parameters [SQL Server]
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 029b4f8eab1af6ebbd26c1d8fe877d38420e7f5c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="specify-parameters"></a>パラメーターの指定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-プロシージャのパラメーターを指定することで、呼び出し元のプログラムからプロシージャの本体に値を渡すことができます。 これらの値は、プロシージャの実行中にさまざまな目的で使用できます。 プロシージャ パラメーターも、パラメーターが OUTPUT パラメーターとしてマークされている場合は、呼び出し元のプログラムに値を返すことができます。  
+  プロシージャのパラメーターを指定することで、呼び出し元のプログラムからプロシージャの本体に値を渡すことができます。 これらの値は、プロシージャの実行中にさまざまな目的で使用できます。 プロシージャ パラメーターも、パラメーターが OUTPUT パラメーターとしてマークされている場合は、呼び出し元のプログラムに値を返すことができます。  
   
  プロシージャには最大 2,100 個のパラメーターを指定できます。各パラメーターには、名前、データ型、および方向が割り当てられます。 パラメーターには、必要に応じて既定値を割り当てることもできます。  
   

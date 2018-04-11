@@ -1,16 +1,16 @@
 ---
 title: TOP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TOP_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - TOP clause, about TOP clause
 - queries [SQL Server], results
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 926de1152e7c1223441d9ac85da11246049e31ea
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/19/2018
 ## <a name="interoperability"></a>相互運用性  
  TOP 式は、トリガーが起動されたときに実行されるステートメントには影響しません。 トリガーによって**挿入**および**削除**の状態となったテーブルからは、INSERT、UPDATE、MERGE、または DELETE ステートメントによって実際に影響を受けた行のみが返されます。 たとえば、TOP 句が含まれる INSERT ステートメントの結果として INSERT TRIGGER が起動された場合、  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ビューを使用した行の更新が可能です。 TOP 句はビュー定義に含めることができるため、行が TOP 式の要件を満たさなくなると、更新したときに特定の行がビューから削除される場合があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ビューを介して行を更新をできます。 TOP 句はビュー定義に含めることができるため、行が TOP 式の要件を満たさなくなると、更新したときに特定の行がビューから削除される場合があります。  
   
  MERGE ステートメントで指定した TOP 句は、ソース テーブル全体と対象テーブル全体が結合され、挿入、更新、または削除操作の対象とならない結合された行が削除された*後* に適用されます。 TOP 句を使用すると、結合された行の数が指定の値まで減少し、挿入、更新、または削除操作が残りの結合された行に順序付けなしで適用されます。 つまり、WHEN 句で定義された各操作に行を割り当てる順序に決まりはありません。 たとえば、TOP (10) と指定すると 10 行に影響し、そのうち 7 行が更新されて 3 行が挿入されたり、1 行が削除され、5 行が更新され、4 行が挿入されたりします。 MERGE ステートメントはソース テーブルと対象テーブルの両方のフル テーブル スキャンを実行するので、TOP 句を使用し、複数のバッチを作成して大きなテーブルを変更すると、I/O パフォーマンスが影響を受ける場合があります。 この場合は、一連のすべてのバッチが新しい行を対象としていることを確認してください。  
   
@@ -234,7 +234,7 @@ GO
 ###  <a name="DML"></a> DELETE、INSERT、または UPDATE の影響を受ける行の制限  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. TOP を使用して削除する行数を制限する  
- DELETE で TOP (*n*) 句を使用した場合、任意に選択される *n* 行に対して削除操作が実行されます。 つまり、DELETE ステートメントは WHERE 句で定義した条件を満たす任意の数 (*n*) の行を選択します。 次の例では、納期が 2002 年 7 月 1 日より早い `20` 行を `PurchaseOrderDetail` テーブルから選択して削除します。  
+ ときに、TOP (*n*) 句を DELETE と共に使用の未定義の選択で、削除操作が実行される*n*行の数。 DELETE ステートメントがいずれかを選択するは、(*n*) WHERE 句で定義された条件を満たす行の数。 次の例では、納期が 2002 年 7 月 1 日より早い `20` 行を `PurchaseOrderDetail` テーブルから選択して削除します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -300,7 +300,7 @@ GO
 ```  
   
 #### <a name="c-using-top-to-limit-the-number-of-rows-updated"></a>C. TOP を使用して更新する行数を制限する  
- 次の例では、TOP 句を使用してテーブルの行を更新します。 UPDATE で TOP (*n*) 句を使用した場合、任意の数の行に対して更新操作が実行されます。 つまり、UPDATE ステートメントは WHERE 句で定義した条件を満たす任意の数 (*n*) の行を選択します。 次の例では、ある販売員の顧客から 10 人を抽出して別の販売員に割り当てています。  
+ 次の例では、TOP 句を使用してテーブルの行を更新します。 ときに、TOP (*n*) UPDATE 句を使用、任意の数の行に対して更新操作を実行します。 つまり、いずれかの選択、UPDATE ステートメント (*n*) WHERE 句で定義された条件を満たす行の数。 次の例では、ある販売員の顧客から 10 人を抽出して別の販売員に割り当てています。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -344,7 +344,7 @@ FROM DimEmployee ORDER BY LastName;
   
 ## <a name="see-also"></a>参照  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [挿入 &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [ORDER BY 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)   

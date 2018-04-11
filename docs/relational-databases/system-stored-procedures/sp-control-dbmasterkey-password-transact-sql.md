@@ -1,16 +1,16 @@
 ---
-title: "sp_control_dbmasterkey_password (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_control_dbmasterkey_password (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_control_dbmasterkey_password
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_dbmasterkey_password
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8564e7fc3ab9f9e6419ebe7ff140408cb1940b29
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 ```  
   
 ## <a name="arguments"></a>引数  
- @db_name= N'*database_name*'  
+ @db_name=N'*database_name*'  
  資格情報に関連付けられているデータベースの名前を指定します。 システム データベースは指定できません。 *database_name*は**nvarchar**です。  
   
- @password= N'*パスワード*'  
+ @password=N'*password*'  
  マスター キーのパスワードを指定します。 *パスワード*は**nvarchar**です。  
   
  @action= N'add'  
  指定したデータベースの資格情報を、資格情報ストアに追加します。 資格情報には、データベースのマスター キーのパスワードが格納されます。 渡された値@actionは**nvarchar**です。  
   
- @action= N'drop'  
+ @action=N'drop'  
  指定したデータベースの資格情報を、資格情報ストアから削除します。 渡された値@actionは**nvarchar**です。  
   
 ## <a name="remarks"></a>解説  
@@ -83,7 +83,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
   
  **下位互換性問題の潜在的な:**現時点では、ストアド プロシージャは確認されないかどうか、マスター _ キー。 これは下位互換性を確保するために許容されていますが、警告が表示されます。 ただし、この動作は廃止予定となっています。 マスター _ キーが存在する必要があります、将来のリリースと、ストアド プロシージャで使用されるパスワードで**sp_control_dbmasterkey_password**データベース マスター _ キーの暗号化に使用されるパスワードのいずれかと同じパスワードをする必要があります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  データベースに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -108,7 +108,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [暗号化されたミラー データベースの設定](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
- [セキュリティのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [資格情報 &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)  

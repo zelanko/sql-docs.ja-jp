@@ -1,16 +1,16 @@
 ---
-title: "sp_update_jobstep (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_update_jobstep (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_jobstep
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_jobstep
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c81c22e3fb6de374b378df4ef52b316efe65fdb6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ sp_update_jobstep
  [ **@step_name =**] **'***step_name***'**  
  ステップの新しい名前を指定します。 *step_name*は**sysname**、既定値は NULL です。  
   
- [  **@subsystem =**] **'***サブシステム***'**  
+ [ **@subsystem =**] **'***subsystem***'**  
  実行する Microsoft SQL Server エージェントによって使用されるサブシステム*コマンド*です。 *サブシステム*は**nvarchar (40)**、既定値は NULL です。  
   
  [ **@command =**] **'***command***'**  
@@ -95,7 +95,7 @@ sp_update_jobstep
  [ **@on_success_action =**] *success_action*  
  ステップが成功した場合に実行するアクション。*success_action*は**tinyint**、既定値は NULL、これらの値のいずれかを指定できます。  
   
-|[値]|説明 (動作)|  
+|値|説明 (動作)|  
 |-----------|----------------------------|  
 |**1**|正常に終了します。|  
 |**2**|失敗した状態で終了|  
@@ -108,7 +108,7 @@ sp_update_jobstep
  [ **@on_fail_action =**] *fail_action*  
  ステップが失敗した場合に実行する動作を指定します。 *fail_action*は**tinyint**、既定値は NULL でこれらの値のいずれかを持つことができます。  
   
-|[値]|説明 (動作)|  
+|値|説明 (動作)|  
 |-----------|----------------------------|  
 |**1**|正常に終了します。|  
 |**2**|失敗した状態で終了|  
@@ -146,7 +146,7 @@ sp_update_jobstep
  [ **@flags =**] *flags*  
  動作を制御するオプションを指定します。 *フラグ*は**int**、これらの値のいずれかを指定できます。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |**0** (既定値)|出力ファイルを上書き|  
 |**2**|出力ファイルに追加|  
@@ -199,8 +199,8 @@ GO
   
 ## <a name="see-also"></a>参照  
  [表示またはジョブを変更します。](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
- [sp_delete_jobstep &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

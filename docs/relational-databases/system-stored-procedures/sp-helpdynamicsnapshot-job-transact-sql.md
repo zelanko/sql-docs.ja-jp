@@ -1,16 +1,16 @@
 ---
-title: "sp_helpdynamicsnapshot_job (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helpdynamicsnapshot_job (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -26,16 +26,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdynamicsnapshot_job
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8f9accc8ae7ffb64d82fa10c3b60a2f8fec44b8a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,22 +54,22 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication =** ] **'***パブリケーション***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** 、指定された一致するすべてのフィルター選択されたデータ スナップショット ジョブに関する情報を返します*dynamic_snapshot_jobid*と*dynamic_snapshot_jobname*すべてのパブリケーション。  
+ [ **@publication =** ] **'***publication***'**  
+ パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は**%**、指定された一致するすべてのフィルター選択されたデータ スナップショット ジョブに関する情報を返します*dynamic_snapshot_jobid*と*dynamic_snapshot_jobname*すべてのパブリケーション。  
   
- [  **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
- フィルター選択されたデータ スナップショット ジョブの名前を指定します。 *dynamic_snapshot_jobname*は**sysname**、既定値は **%** '、指定したパブリケーションのすべての動的ジョブが返されます*dynamic_snapshot_jobid*です。 ジョブの作成時にジョブ名が明示的に指定されなかった場合、ジョブ名は次の形式になります。  
+ [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
+ フィルター選択されたデータ スナップショット ジョブの名前を指定します。 *dynamic_snapshot_jobname*は**sysname**、既定値は**%**'、指定したパブリケーションのすべての動的ジョブが返されます*dynamic_snapshot_jobid*です。 ジョブの作成時にジョブ名が明示的に指定されなかった場合、ジョブ名は次の形式になります。  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
- [  **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
+ [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
  フィルター選択されたデータ スナップショット ジョブの識別子を指定します。 *dynamic_snapshot_jobid*は**uniqueidentifier**、NULL の既定値は、指定された一致するすべてのスナップショット ジョブが返されます*dynamic_snapshot_jobname*です。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|説明|  
+|列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|フィルター処理されたデータ スナップショット ジョブの識別子。|  
 |**job_name**|**sysname**|フィルター処理されたスナップショット ジョブの名前。|  
@@ -96,7 +96,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
   
  すべて既定のパラメーター値を使用する場合は、パブリケーション データベース全体が対象となり、すべてのパーティション データ スナップショット ジョブに関する情報が返されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロール、 **db_owner**パブリケーションが実行できるは、データベース ロール、およびパブリケーション アクセス リストを固定**sp_helpdynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>参照  

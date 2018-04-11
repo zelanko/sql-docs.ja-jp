@@ -1,31 +1,31 @@
 ---
-title: "メモリ管理アーキテクチャ ガイド | Microsoft Docs"
-ms.custom: 
+title: メモリ管理アーキテクチャ ガイド | Microsoft Docs
+ms.custom: ''
 ms.date: 11/23/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: 
+caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 06721e22794de1ed9e7661d8606759e2035f710f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="memory-management-architecture-guide"></a>メモリ管理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,8 +62,8 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 | |32 ビット <sup>1</sup> |64 ビット|
 |-------|-------|-------| 
 |コンベンショナル メモリ |すべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション。 プロセス仮想アドレス空間制限まで: <br>- 2 GB<br>- 3 GB (/3 gb のブート パラメーターを使用する場合) <sup>2</sup> <br>- 4 GB (WOW64 の場合) <sup>3</sup> |すべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション。 プロセス仮想アドレス空間制限まで: <br>- 7 TB (IA64 アーキテクチャを使用する場合) (IA64 は [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降ではサポートされません)<br>- オペレーティング システムの最大容量 (x64 アーキテクチャを使用する場合) <sup>4</sup>
-|AWE メカニズム ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で 32 ビット プラットフォームのプロセス仮想アドレス空間制限を超えることを許可する) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard、Enterprise、および Developer エディション: バッファー プールは、最大 64 GB のメモリにアクセスできます。|該当なし <sup>5</sup> |
-|Lock Pages in Memory オペレーティング システム (OS) 特権 (物理メモリのロックを許可し、ロックされたメモリの OS ページングを回避する)<sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard、Enterprise、および Developer エディション: AWE メカニズムを使用する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスで必要です。 AWE メカニズムによって割り当てられたメモリは、ページ アウトできません。 <br> AWE を有効にせずにこの特権を許可しても、サーバーに対する影響はありません。 | 必要なときにのみ、具体的には、sqlservr プロセスがページ アウトされているという兆候があるときにのみ使用します。その場合、次のようなエラー 17890 がエラー ログに報告されます。`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
+|AWE メカニズム ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で 32 ビット プラットフォームのプロセス仮想アドレス空間制限を超えることを許可する) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard、Enterprise、および Developer エディション : バッファー プールは、最大 64 GB のメモリにアクセスできます。|該当なし <sup>5</sup> |
+|Lock Pages in Memory オペレーティング システム (OS) 特権 (物理メモリのロックを許可し、ロックされたメモリの OS ページングを回避する)<sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard、Enterprise、および Developer エディション : AWE メカニズムを使用する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスで必要です。 AWE メカニズムによって割り当てられたメモリは、ページ アウトできません。 <br> AWE を有効にせずにこの特権を許可しても、サーバーに対する影響はありません。 | 必要なときにのみ、具体的には、sqlservr プロセスがページ アウトされているという兆候があるときにのみ使用します。その場合、次のようなエラー 17890 がエラー ログに報告されます。`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]から続けて 32 ビット バージョンを利用することはできません。  
 <sup>2</sup> /3gb は、オペレーティング システムのブート パラメーターです。 詳細については、MSDN ライブラリを参照してください。  
@@ -91,7 +91,7 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 
 次の表は、メモリ割り当ての種類とそれを制御する構成オプションである *max server memory (MB)* と *min server memory (MB)* についてまとめたものです。
 
-|メモリ割り当ての種類| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| 次のバージョン以降 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
+|メモリ割り当ての種類| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降|
 |-------|-------|-------|
 |単一ページ割り当て|はい|はい。"あらゆるサイズの" ページ割り当てに統合。|
 |複数ページ割り当て|いいえ|はい。"あらゆるサイズの" ページ割り当てに統合。|
@@ -119,7 +119,7 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 
 次の表は、メモリ割り当ての種類とそれが適用される、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスの仮想アドレス空間の *memory_to_reserve* 領域についてまとめたものです。
 
-|メモリ割り当ての種類| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| 次のバージョン以降 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
+|メモリ割り当ての種類| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降|
 |-------|-------|-------|
 |単一ページ割り当て|いいえ|いいえ。"あらゆるサイズの" ページ割り当てに統合。|
 |複数ページ割り当て|はい|いいえ。"あらゆるサイズの" ページ割り当てに統合。|
@@ -180,7 +180,7 @@ FROM sys.dm_os_process_memory;
 構成オプションの min server memory と max server memory によって、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース エンジンのバッファー プールとその他のキャッシュで使用されるメモリ量の上限と下限が決められます。 バッファー プールは、min server memory に指定されたメモリ容量をすぐには獲得しません。 バッファー プールは、初期化に必要なメモリのみで起動します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のワークロードが増えるにしたがって、そのワークロードに対応するために必要なメモリを獲得し続けます。 バッファー プールは、min server memory で指定しされたメモリ容量に達するまでは獲得したメモリを解放しません。 メモリ容量が min server memory に達すると、バッファー プールは標準アルゴリズムを使用して、必要に応じてメモリ容量を獲得または解放します。 唯一の違いは、バッファー プールはそのメモリ割り当てを min server memory の値より少ないメモリ容量にはせず、max server memory の値より多いメモリ容量は獲得しないということです。
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はプロセスとして、max server memory オプションで指定された容量を超えるメモリを獲得します。 内部コンポーネントも外部コンポーネントも、バッファー プール外にメモリ容量を割り当てることができます。この場合は、メモリ容量が余分に消費されますが、通常、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によって消費されるメモリ容量の最大部分は、バッファー プールに割り当てられたメモリ容量が占めます。
+> プロセスとしての[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、max server memory オプションで指定された容量を超えるメモリを獲得します。 内部コンポーネントも外部コンポーネントも、バッファー プール外にメモリ容量を割り当てることができます。この場合は、メモリ容量が余分に消費されますが、通常、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によって消費されるメモリ容量の最大部分は、バッファー プールに割り当てられたメモリ容量が占めます。
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]が獲得するメモリ容量は、そのインスタンスのワークロードに完全に依存します。 あまり多くの要求を処理しない [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスでは、まったく min server memory に達しないこともあります。
 

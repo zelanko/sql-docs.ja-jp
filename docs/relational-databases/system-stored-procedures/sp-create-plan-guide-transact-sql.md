@@ -1,16 +1,16 @@
 ---
-title: "sp_create_plan_guide (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_create_plan_guide (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_plan_guide
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_plan_guide
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
-caps.latest.revision: 
+caps.latest.revision: 82
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 70caae94a352f014757bd00099b43019c08f4a2c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,41 +61,41 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [ @name =] N'*plan_guide_name*'  
  プラン ガイドの名前を指定します。 プラン ガイド名は現在のデータベースに対して有効です。 *plan_guide_name* 、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)番号記号で始めることもできません (#)。 最大長*plan_guide_name* 124 文字です。  
   
- [ @stmt =] N'*statement_text*'  
+ [ @stmt = ] N'*statement_text*'  
  [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントに対してプラン ガイドを作成します。 ときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クエリ オプティマイザーがクエリに一致する*statement_text*、 *plan_guide_name*は有効になります。 成功するプラン ガイドを作成するため*statement_text*で指定されたコンテキストに存在する必要があります、 @type、 @module_or_batch、および@paramsパラメーター。  
   
  *statement_text*ことによって識別されるモジュールと、バッチ内で対応するステートメントと一致するようにクエリ オプティマイザーの方法で指定する必要があります@module_or_batchと@paramsです。 詳細については、「解説」セクションを参照してください。 サイズ*statement_text*サーバーの使用可能なメモリによってのみ制限されます。  
   
- [@type =] N'{オブジェクト |SQL |テンプレート}'  
+ [@type = ]N'{ OBJECT | SQL | TEMPLATE }'  
  エンティティの型は、 *statement_text*が表示されます。 照合するコンテキストを示すこの*statement_text*に*plan_guide_name*です。  
   
  OBJECT  
  示す*statement_text*のコンテキストで表示されます、[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャ、スカラー関数、複数ステートメント テーブル値関数、または[!INCLUDE[tsql](../../includes/tsql-md.md)]現在のデータベース内の DML トリガーです。  
   
  SQL  
- 示す*statement_text*のスタンドアロンのステートメントまたはバッチを送信できるコンテキストでの表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]任意のメカニズムを通じてします。 [!INCLUDE[tsql](../../includes/tsql-md.md)]共通言語ランタイム (CLR) オブジェクトまたは拡張ストアド プロシージャ、または EXEC N を使用して送信されるステートメント '*sql_string*'、サーバー上のバッチとして処理されとに特定する必要がある、 @type  **=**  'SQL' です。 クエリがパラメーター化をヒント SQL が指定されている場合 {FORCED |単純な} を指定することはできません、@hintsパラメーター。  
+ 示す*statement_text*のスタンドアロンのステートメントまたはバッチを送信できるコンテキストでの表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]任意のメカニズムを通じてします。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 共通言語ランタイム (CLR) オブジェクトまたは拡張ストアド プロシージャ、または EXEC N を使用して送信されるステートメント '*sql_string*'、サーバー上のバッチとして処理されとに特定する必要がある、 @type **=** 'SQL' です。 クエリがパラメーター化をヒント SQL が指定されている場合 {FORCED |単純な} を指定することはできません、@hintsパラメーター。  
   
  TEMPLATE  
  示されたフォームにパラメーター化されるクエリに対してプラン ガイドが適用されることを示します*statement_text*です。 テンプレートが指定されている場合のみ PARAMETERIZATION {FORCED |単純な} クエリ ヒントで指定できる、@hintsパラメーター。 TEMPLATE プラン ガイドの詳細については、次を参照してください。[を指定するパラメーター化クエリの動作を使用してプラン ガイドによって](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)です。  
   
- [@module_or_batch =] {N'[ *schema_name*です。 *object_name*' |N'*batch_text*' |NULL}  
+ [@module_or_batch =]{ N'[ *schema_name*. ] *object_name*' | N'*batch_text*' | NULL }  
  オブジェクトの名前を指定*statement_text*が表示されたら、またはバッチのテキストを*statement_text*が表示されます。 バッチのテキストは、使用を含めることはできません*データベース*ステートメントです。  
   
  アプリケーションから送信されたバッチと一致するプラン ガイドの*batch_tex*t は、同じ形式で指定する必要がありますの文字を送信するときと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 この適合を容易にするために内部変換は実行されません。 詳細については、「解説」を参照してください。  
   
  [*schema_name*]。*object_name*の名前を指定、[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャ、スカラー関数、複数ステートメント テーブル値関数、または[!INCLUDE[tsql](../../includes/tsql-md.md)]DML トリガーを含む*statement_text*. 場合*schema_name*が指定されていない*schema_name*は現在のユーザーのスキーマを使用します。 NULL が指定されている場合と@type= の値 ' SQL'@module_or_batchの値に設定されている@stmtです。場合@type= 'テンプレート**'**、 @module_or_batch NULL にする必要があります。  
   
- [ @params =] {N' *@parameter_name data_type* [、*.. .n* ]' |NULL}  
- 埋め込まれているすべてのパラメーターの定義を指定します*statement_text*です。 @params場合にのみ、次のいずれかの場合は true が適用されます。  
+ [ @params = ]{ N'*@parameter_name data_type* [ ,*...n* ]' | NULL }  
+ 埋め込まれているすべてのパラメーターの定義を指定します*statement_text*です。 @params 場合にのみ、次のいずれかの場合は true が適用されます。  
   
--   @type= 'SQL' または 'TEMPLATE' です。 場合 'TEMPLATE' @params NULL は指定できません。  
+-   @type = 'SQL' または 'TEMPLATE' です。 場合 'TEMPLATE' @params NULL は指定できません。  
   
 -   *statement_text* sp_executesql と値を使用して、送信、@paramsパラメーターを指定すると、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内部でパラメーター化することの後にステートメントを送信します。 データベース API (ODBC、OLE DB、ADO.NET など) からのパラメーター化クエリの送信は、sp_executesql または API サーバー カーソル ルーチンの呼び出しとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に示されるため、SQL または TEMPLATE プラン ガイドでも適合させることができます。  
   
- *@parameter_namedata_type*送信するときとまったく同じ形式で指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_executesql を使用していずれかのパラメーター化してから内部的に送信します。 詳細については、「解説」を参照してください。 バッチにパラメーターが含まれていない場合は、NULL を指定する必要があります。 サイズ@params利用可能なサーバー メモリによってのみ制限されます。  
+ *@parameter_name data_type*送信するときとまったく同じ形式で指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_executesql を使用していずれかのパラメーター化してから内部的に送信します。 詳細については、「解説」を参照してください。 バッチにパラメーターが含まれていない場合は、NULL を指定する必要があります。 サイズ@params利用可能なサーバー メモリによってのみ制限されます。  
   
- [@hints =] {N ' OPTION (*query_hint* [、*.. .n* ])' |N'*XML_showplan*' |NULL}  
- N ' OPTION (*query_hint* [、*.. .n* ])  
+ [@hints = ]{ N'OPTION (*query_hint* [ ,*...n* ] )' | N'*XML_showplan*' | NULL }  
+ N'OPTION (*query_hint* [ ,*...n* ] )  
  一致するクエリにアタッチする OPTION 句を指定@stmtです。@hints構文的に、SELECT ステートメントの OPTION 句と同じでは、任意の有効な一連のクエリ ヒントを含めることができます。  
   
  N'*XML_showplan*'  
@@ -104,7 +104,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  XML プラン表示を変数に割り当てることをお勧めします。XML プラン表示を変数に割り当てない場合は、XML プラン表示内の単一引用符をエスケープする必要があります。これを行うには、単一引用符の前にもう 1 つ単一引用符を追加します。 例 E を参照してください。  
   
  NULL  
- クエリの OPTION 句で指定した既存のヒントがクエリに適用されないことを示します。 詳細については、次を参照してください。 [OPTION 句と&#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
+ クエリの OPTION 句で指定した既存のヒントがクエリに適用されないことを示します。 詳細については、次を参照してください。 [OPTION 句&#40;TRANSACT-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)です。  
   
 ## <a name="remarks"></a>解説  
  sp_create_plan_guide の引数は、表示される順序で指定する必要があります。 **sp_create_plan_guide**のパラメーターに値を指定する場合、パラメーター名はすべて明示的に指定するか、すべて指定しないかのいずれかにする必要があります。 たとえば、**@name =** を指定する場合は、**@stmt =**、**@type =** なども指定する必要があります。 同様に、**@name =** を省略してパラメーター値だけを指定する場合は、その他のパラメーター名も省略し、値だけを指定する必要があります。 引数の名前は、構文を理解しやすくするための説明目的のものです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定したパラメーター名と、その名前が使用されている位置にあるパラメーターの名前が一致しているかどうかは確認されません。  
@@ -127,7 +127,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
 -   文字列内の空白文字 (タブ、スペース、復帰、改行)  
   
--   コメント ( **--** または **/ \* \* /** )。  
+-   コメント (**--**または**/ \* \* /**)。  
   
 -   末尾のセミコロン  
   
@@ -143,12 +143,12 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  `N'SELECT * FROM T WHERE b = 10'`  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キャリッジ リターン、ライン フィード、および最初のクエリ内の空白文字は無視されます。 2 つ目のクエリのシーケンス `WHERE b = 10` は、`WHERE a = 10` とは異なるものと解釈されます。 照合処理では、大文字小文字が区別されないキーワードを除き、(データベースの照合順序で大文字小文字が区別されない場合でも) 大文字小文字およびアクセントが区別されます。 キーワードの省略形は区別されません。 たとえば、キーワード `EXECUTE`、`EXEC`、および `execute` は同じものと解釈されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] キャリッジ リターン、ライン フィード、および最初のクエリ内の空白文字は無視されます。 2 つ目のクエリのシーケンス `WHERE b = 10` は、`WHERE a = 10` とは異なるものと解釈されます。 照合処理では、大文字小文字が区別されないキーワードを除き、(データベースの照合順序で大文字小文字が区別されない場合でも) 大文字小文字およびアクセントが区別されます。 キーワードの省略形は区別されません。 たとえば、キーワード `EXECUTE`、`EXEC`、および `execute` は同じものと解釈されます。  
   
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>プラン キャッシュに対するプラン ガイドの効果  
  モジュールにプラン ガイドを作成すると、そのモジュールのクエリ プランがプラン キャッシュから削除されます。 バッチに OBJECT 型または SQL 型のプラン ガイドを作成すると、同じハッシュ値を持つバッチのクエリ プランが削除されます。 TEMPLATE 型のプラン ガイドを作成すると、単一ステートメントのバッチがデータベース内のプラン キャッシュからすべて削除されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  OBJECT 型のプラン ガイドを作成するには、参照先オブジェクトに対する ALTER 権限が必要です。 SQL または TEMPLATE タイプのプラン ガイドを作成するには、現在のデータベースに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -336,13 +336,13 @@ GO
  [プラン ガイド](../../relational-databases/performance/plan-guides.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
  [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
- [sys.dm_exec_query_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_exec_cached_plans & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   
- [sp_get_query_template &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
+ [sp_get_query_template &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
   
   
