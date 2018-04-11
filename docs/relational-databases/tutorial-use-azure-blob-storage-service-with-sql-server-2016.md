@@ -1,30 +1,30 @@
 ---
-title: "チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用 | Microsoft Docs"
-ms.custom: 
+title: 'チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用 | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26c6376594efc1b34e50f2c058578387b6f8b7f0
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 132e4242b7d9484fb0ce22e6628e07fc77adc8b3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,9 +74,6 @@ SQL Server による Microsoft Azure Blob Storage サービスの統合のサポ
   
 **[レッスン 9: バックアップ セットとファイル スナップショット バックアップを管理する](../relational-databases/lesson-9-manage-backup-sets-and-file-snapshot-backups.md)**  
 このレッスンでは、不要なバックアップ セットを削除し、孤立したファイル スナップショット バックアップを (必要に応じて) 削除する方法について説明します。  
-  
-## <a name="did-this-article-help-you-were-listening"></a>この記事は役に立ちましたか? フィードバックをお待ちしております。  
-どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases%20page) にコメントをお送りください  
   
 ## <a name="see-also"></a>参照  
 [Microsoft Azure 内の SQL Server データ ファイル](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  

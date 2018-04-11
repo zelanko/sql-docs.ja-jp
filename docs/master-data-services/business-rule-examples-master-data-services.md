@@ -1,28 +1,28 @@
 ---
-title: "ビジネス ルールの例 (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: ビジネス ルールの例 (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/05/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
-caps.latest.revision: 
+caps.latest.revision: 21
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e01b4c5141011209f5fdf314711e9cc26595c5f5
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 3e10456b5254bc007420eb6850f00ede131f31aa
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="business-rule-examples-master-data-services"></a>ビジネス ルールの例 (マスター データ サービス)
 この記事では、 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]のビジネス ルールの例を示します。 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]のインストールに含まれるサンプル モデルに、これらの例が見つかります。   
@@ -160,8 +160,7 @@ Web サイトを設定する手順については、「[マスター データ �
 3. 上記の表に一覧されているルールを適用するエンティティをクリックして、 **[ビジネス ルール]**をクリックします。  
 4. 表示するビジネス ルールの名前をクリックします。 UI を展開すると、 **If**、 **Then** 、および **Else** ステートメントが表示されます。  
   
-## <a name="did-this-article-help-you-were-listening"></a>この記事は役に立ちましたか? フィードバックをお待ちしております。   
-どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com) にコメントをお送りください。   
+ 
   
   
   

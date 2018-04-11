@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 07f71e7efd6d2c43160cb7d6a0066ad8e57e5c69
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 30fee63cd25509d56bd2c55cd682ae31fc801691
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 データベース エンジンの非推奨機能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |リモート サーバー|SET REMOTE_PROC_TRANSACTIONS|リンク サーバーを使用してリモート サーバーを置き換えてください。|SET REMOTE_PROC_TRANSACTIONS|110|  
 |SET オプション|**SET ROWCOUNT** 、 **INSERT**、および **UPDATE**ステートメントの **DELETE**|TOP キーワード|SET ROWCOUNT|109|  
 |テーブル ヒント|HOLDLOCK table hint without parenthesis|かっこ付きの HOLDLOCK を使用します。|HOLDLOCK table hint without parenthesis|167|  
-|ツール|sqlmaint ユーティリティ|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メンテナンス プラン機能を使用してください。|なし|なし|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>SQL Server の今後のバージョンでサポートされない機能  
  以下の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の次のバージョンではサポートされますが、その後のバージョンでは削除されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のどのバージョンであるかは決定していません。  

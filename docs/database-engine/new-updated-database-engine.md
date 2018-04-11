@@ -1,6 +1,6 @@
 ---
-title: "更新 - データベース エンジン ドキュメント | Microsoft Docs"
-description: "最近変更されたデータベース エンジンに関するドキュメントで更新されたコンテンツのスニペットを示します。"
+title: 更新 - データベース エンジン ドキュメント | Microsoft Docs
+description: 最近変更されたデータベース エンジンに関するドキュメントで更新されたコンテンツのスニペットを示します。
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -10,11 +10,11 @@ ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: database-engine
 ms.date: 02/03/2018
-ms.openlocfilehash: d01d9fa13342709a74d98033d093d9856ab5d680
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 41c188fd99e273c475e2cc1c2335f59ba710f083
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="new-and-recently-updated-database-engine-docs"></a>新規ドキュメントと最近更新されたドキュメント: データベース エンジン ドキュメント
 
@@ -157,7 +157,7 @@ ms.lasthandoff: 02/09/2018
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
 - [新規 + 更新 (0 + 0): **SQL の多次元式 (MDX)** に関するドキュメント](../mdx/new-updated-mdx.md)
 - [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
-- [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
+- [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../samples/new-updated-samples.md)
 - [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
 - [新規 + 更新 (0 + 0): **Tools for SQL**  に関するドキュメント](../tools/new-updated-tools.md)
 - [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)

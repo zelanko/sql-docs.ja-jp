@@ -1,16 +1,16 @@
 ---
-title: "ファイルおよびファイル グループのバックアップ (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: ファイルおよびファイル グループのバックアップ (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - backing up filegroups [SQL Server]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
-caps.latest.revision: 
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 65b1141e3d47a947f9b1c90b25c6ba875373c266
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: f509b9092119e07a91746a35c6cad5db50898881
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>ファイルおよびファイル グループのバックアップ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でファイルとファイル グループをバックアップする方法について説明します。 データベースのサイズやパフォーマンスの要件によりデータベースの完全バックアップが不可能な場合は、代わりに、ファイル バックアップを作成できます。 *ファイル バックアップ* には、1 つ以上のファイル (またはファイル グループ) 内のすべてのデータが含まれます。 ファイルのバックアップの詳細については、「 [ファイルの完全バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 」および「 [差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)」を参照してください。  
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でファイルとファイル グループをバックアップする方法について説明します。 データベースのサイズやパフォーマンスの要件によりデータベースの完全バックアップが不可能な場合は、代わりに、ファイル バックアップを作成できます。 *ファイル バックアップ* には、1 つ以上のファイル (またはファイル グループ) 内のすべてのデータが含まれます。 ファイルのバックアップの詳細については、「 [ファイルの完全バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 」および「 [差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)」を参照してください。  
 
   
 ##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
@@ -114,9 +114,9 @@ ms.lasthandoff: 02/23/2018
   
 15. **[全般]** ページの **[バックアップ先]** セクションで、テープ ドライブにバックアップするように指定した場合は、 **[バックアップ後にテープをアンロードする]** チェック ボックスがアクティブになります。 このオプションをオンにすると、 **[アンロードの前にテープを巻き戻す]** オプションが有効になります。  
   
-    > **注:** **[全般]** ページの **[バックアップの種類]** で、トランザクション ログをバックアップするように指定しなかった場合、**[トランザクション ログ]** セクションの各オプションは無効になっています。  
+    > **注:** **[全般]** ページの **[バックアップの種類]** で、トランザクション ログをバックアップするように指定しなかった場合、 **[トランザクション ログ]** セクションの各オプションは無効になっています。  
   
-16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降のバージョンでは、 [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)がサポートされています。 既定では、バックアップが圧縮されるかどうかは、**[バックアップ圧縮の既定]** サーバー構成オプションの値によって決まります。 ただし、現在のサーバー レベルの既定の設定にかかわらず、 **[バックアップを圧縮する]**をオンにしてバックアップを圧縮することも、 **[バックアップを圧縮しない]**をオンにして圧縮しないようにすることもできます。  
+16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降のバージョンでは、 [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)がサポートされています。 既定では、バックアップが圧縮されるかどうかは、 **[バックアップ圧縮の既定]** サーバー構成オプションの値によって決まります。 ただし、現在のサーバー レベルの既定の設定にかかわらず、 **[バックアップを圧縮する]**をオンにしてバックアップを圧縮することも、 **[バックアップを圧縮しない]**をオンにして圧縮しないようにすることもできます。  
   
      **現在の backup compression default 値を表示するには**  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 02/23/2018
   
      { FILE **=***logical_file_name* | FILEGROUP **=***logical_filegroup_name* } [ **,**...*f* ]  
   
-     TO *backup_device* [ **、**...*n* ]  
+     TO *backup_device* [ **,**...*n* ]  
   
      [ WITH *with_options* [ **,**...*o* ] ] ;  
   
@@ -149,7 +149,7 @@ ms.lasthandoff: 02/23/2018
     |FILE **=***logical_file_name*|ファイル バックアップに含めるファイルの論理名を指定します。|  
     |FILEGROUP **=***logical_filegroup_name*|ファイル バックアップに含めるファイル グループの論理名を指定します。 単純復旧モデルでは、ファイル グループのバックアップは、読み取り専用のファイル グループに対してのみ使用できます。|  
     |[ **,**...*f* ]|複数のファイルおよびファイル グループを指定できることを示すプレースホルダーです。 ファイルまたはファイル グループの数は無制限です。|  
-    |*backup_device* [ **、または PowerShell を使用して、**...*n* ]|バックアップ操作に使用する 1 ～ 64 個のバックアップ デバイスの一覧を指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (既に定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)の別のインスタンスで作成された場合、これは必須です。|  
+    |*backup_device* [ **,**...*n* ]|バックアップ操作に使用する 1 ～ 64 個のバックアップ デバイスの一覧を指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (既に定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)の別のインスタンスで作成された場合、これは必須です。|  
     |WITH *with_options* [ **,**...*o* ]|必要に応じて、1 つ以上の追加オプション (DIFFERENTIAL など) を指定します。<br /><br /> 注: ファイルの差分バックアップを行うには、差分のベースとなる完全ファイル バックアップが必要です。 詳細については、「[データベースの差分バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)」を参照してください。|  
   
 2.  完全復旧モデルでは、トランザクション ログもバックアップする必要があります。 ファイルの完全バックアップの完全なセットを使用してデータベースを復元するには、最初のファイル バックアップの先頭から、すべてのファイル バックアップにわたって十分なログ バックアップが必要です。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)でミラー データベースを準備する方法について説明します。  
@@ -209,7 +209,7 @@ GO
   
      次の例では、 `MyDB` データベースのセカンダリ ファイル グループである FileGroup1 および FileGroup2 のすべてのファイルの完全ファイル バックアップを作成します。 バックアップは、サーバー インスタンス `Computer\Instance`の既定のバックアップ先に作成されます。  
   
-    ```  
+    ```sql  
     --Enter this command at the PowerShell command prompt, C:\PS>  
     Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Files -DatabaseFileGroup "FileGroup1","FileGroup2"  
     ```  

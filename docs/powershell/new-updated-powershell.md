@@ -1,6 +1,6 @@
 ---
-title: "更新済み - PowerShell ドキュメント | Microsoft Docs"
-description: "最近変更された PowerShell に関するドキュメントで更新されたコンテンツのスニペットを示します。"
+title: 更新済み - PowerShell ドキュメント | Microsoft Docs
+description: 最近変更された PowerShell に関するドキュメントで更新されたコンテンツのスニペットを示します。
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -10,11 +10,11 @@ ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: powershell
 ms.date: 02/03/2018
-ms.openlocfilehash: 4c14ff7713b6ca4138407cd105bb010e004e781c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8967deea4eb4a64b58166d859fabcf0db44a01c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="new-and-recently-updated-powershell-docs"></a>新規および最近の更新: PowerShell ドキュメント
 
@@ -130,7 +130,7 @@ ms.lasthandoff: 02/15/2018
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
 - [新規 + 更新 (0 + 0): **SQL の多次元式 (MDX)** に関するドキュメント](../mdx/new-updated-mdx.md)
 - [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
-- [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
+- [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../samples/new-updated-samples.md)
 - [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
 - [新規 + 更新 (0 + 0): **Tools for SQL**  に関するドキュメント](../tools/new-updated-tools.md)
 - [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)

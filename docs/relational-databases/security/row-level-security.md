@@ -1,16 +1,14 @@
 ---
-title: "行レベルのセキュリティ | Microsoft Docs"
-ms.custom: 
+title: 行レベルのセキュリティ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: security
-ms.reviewer: 
+ms.service: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: security
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - access control predicates
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - row level security described
 - predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
-caps.latest.revision: 
+caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d039c1e5bb76fb9b994e9d5fc2a89df64e320c3b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b150fa58725e157834c202224c679ee5119cdb8a
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="row-level-security"></a>行レベルのセキュリティ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -106,7 +104,7 @@ ms.lasthandoff: 11/21/2017
  より形式的に表現すると、RLS はアクセス制御に基づく述語を採用しています。 RLS では、管理者が適切に決定したメタデータや他の条件を考慮に入れることができる、柔軟で、集中管理された、述語ベースの評価を備えています。 述語は、ユーザーがその属性に基づいて適切にデータにアクセスできるかどうかを決定する条件として使用されます。 ラベルに基づくアクセス制御は、述語に基づくアクセス制御を使用して実装できます。  
   
   
-##  <a name="Permissions"></a> アクセス許可  
+##  <a name="Permissions"></a> Permissions  
  セキュリティ ポリシーの作成、変更、削除には、 **ALTER ANY SECURITY POLICY** 権限が必要です。 セキュリティ ポリシーの作成か削除には、スキーマ上で **ALTER** 権限が必要です。  
   
  また、追加される各述語に関しては次のアクセス許可も必要になります。  

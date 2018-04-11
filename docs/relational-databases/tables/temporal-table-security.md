@@ -1,28 +1,28 @@
 ---
-title: "テンポラル テーブル セキュリティ | Microsoft Docs"
-ms.custom: 
+title: テンポラル テーブル セキュリティ | Microsoft Docs
+ms.custom: ''
 ms.date: 02/21/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
-caps.latest.revision: 
+caps.latest.revision: 9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c86f951c3e6f8d553ea61ed959cac6ade235b54
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 089e718385b028ff81c021ba1b3759fc9e424a58
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="temporal-table-security"></a>テンポラル テーブル セキュリティ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -75,9 +75,6 @@ ms.lasthandoff: 01/18/2018
   
 ## <a name="security-of-select-statement"></a>SELECT ステートメントのセキュリティ  
  履歴テーブルに影響を与えない**SELECT** ステートメントの **SELECT** 権限は変更されません。 履歴テーブルに影響を与える **SELECT** ステートメントについては、現行テーブルと履歴テーブルの両方で **SELECT** 権限が必要になります。  
-  
-## <a name="did-this-article-help-you-were-listening"></a>この記事は役に立ちましたか? フィードバックをお待ちしております。  
- どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20Security%20page) にコメントをお送りください  
   
 ## <a name="see-also"></a>参照  
  [テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)   

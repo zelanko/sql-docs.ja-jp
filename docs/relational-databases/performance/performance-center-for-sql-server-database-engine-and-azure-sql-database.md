@@ -1,16 +1,16 @@
 ---
-title: "SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター | Microsoft Docs"
-ms.custom: 
+title: SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター | Microsoft Docs
+ms.custom: ''
 ms.date: 04/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.reviewer: 
-ms.service: 
+ms.reviewer: ''
+ms.service: ''
 ms.component: performance
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - Performance (SQL Server)
@@ -23,27 +23,24 @@ helpviewer_keywords:
 - performance (SQL Database)
 - database performance (SQL Database)
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
-caps.latest.revision: 
+caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f17dd20a0a6c3ffd93cc89dd97140341ed893383
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
+ms.openlocfilehash: 1e3b52ab64122fab76182d355cbd5c54d2b72c39
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-このページでは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]でのパフォーマンスに関して必要になる情報の検索に役立つリンクを示します。  
+  このページでは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]でのパフォーマンスに関して必要になる情報の検索に役立つリンクを示します。  
   
  **凡例**  
   
  ![security-center-legend](../../relational-databases/performance/media/security-center-legend.PNG "security-center-legend")  
-  
-## <a name="this-is-a-work-in-process-does-this-performance-center-help-you-how-can-we-improve-it"></a>まだ開発中です。 このパフォーマンス センターはお役に立ちますか。 どうすればもっとよくなりますか。  
- どのような情報をお探しでしたか? お探しの情報は見つかりましたか? 何が抜けていますか。 どのような情報を見たいですか。 コンテンツ改善のため、フィードバックをお待ちしています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page) にコメントをお送りください  
   
 ## <a name="configuration-options-for-performance"></a>パフォーマンスの構成オプション  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] レベルのさまざまな構成オプションを使用してデータベース エンジンのパフォーマンスを制御できます。 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]、これらの最適化のすべてではありませんがほとんどが自動的に行われます。  
@@ -78,7 +75,8 @@ ms.lasthandoff: 02/21/2018
  [関連するビュー、関数、プロシージャ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [単一データベースの Azure SQL Database パフォーマンス ガイダンス](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)   
  [エラスティック プールを使用した Azure SQL Database のパフォーマンスの最適化](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-guidance/)   
- [Azure Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)  
+ 
+  [Azure Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)  
  [インデックスのデザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)  
  [メモリ管理アーキテクチャ ガイド](../../relational-databases/memory-management-architecture-guide.md)  
  [ページとエクステントのアーキテクチャ ガイド](../../relational-databases/pages-and-extents-architecture-guide.md)  
