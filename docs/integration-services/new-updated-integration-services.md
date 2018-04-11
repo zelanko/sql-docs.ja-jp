@@ -1,6 +1,6 @@
 ---
-title: "更新済み - SQL Server 用 Integration Services のドキュメント | Microsoft Docs"
-description: "Microsoft SQL Server 用 Integration Services の最近変更されたドキュメントで更新されたコンテンツのスニペットを示します。"
+title: 更新済み - SQL Server 用 Integration Services のドキュメント | Microsoft Docs
+description: Microsoft SQL Server 用 Integration Services の最近変更されたドキュメントで更新されたコンテンツのスニペットを示します。
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -10,11 +10,11 @@ ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: ssis
 ms.date: 02/03/2018
-ms.openlocfilehash: 8bfcdc3fb1033620d351ecaee2c79910c475dd94
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e63ff48699b74ac59f6f328bac24f882c481e320
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="new-and-recently-updated-integration-services-for-sql-server"></a>新規または最近更新: SQL Server 用 Integration Services
 
@@ -179,7 +179,7 @@ ms.lasthandoff: 02/09/2018
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
 - [新規 + 更新 (0 + 0): **SQL の多次元式 (MDX)** に関するドキュメント](../mdx/new-updated-mdx.md)
 - [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
-- [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
+- [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../samples/new-updated-samples.md)
 - [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
 - [新規 + 更新 (0 + 0): **Tools for SQL**  に関するドキュメント](../tools/new-updated-tools.md)
 - [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)

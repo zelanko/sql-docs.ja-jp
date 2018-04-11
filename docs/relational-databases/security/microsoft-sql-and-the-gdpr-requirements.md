@@ -1,30 +1,29 @@
 ---
-title: "Microsoft SQL と GDPR の要件 |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft SQL と GDPR の要件 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
-ms.component: security
-ms.reviewer: 
+ms.service: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-security
-ms.tgt_pltfrm: 
+ms.technology: security
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
-author: barbkess
-ms.author: ronitr
+caps.latest.revision: 2
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: a98e19f8bea8b8a1d1679cee6bb7a86215c48450
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 228cc003bfdd61bd0ead16e34810e52caf143438
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="guide-to-enhancing-privacy-and-addressing-gdpr-requirements-with-the-microsoft-sql-platform"></a>Microsoft SQL プラットフォームでのプライバシーの強化と GDPR 要件への対応に関するガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-## <a name="summary"></a>概要
+## <a name="summary"></a>[概要]
 2018 年 5 月 25 日、プライバシー権利、セキュリティ、およびコンプライアンスに対する新しいグローバル制限を設定するヨーロッパのプライバシー法が発効します。 General Data Protection Regulation (GDPR) は、根本的に、個人のプライバシー権利を保護して有効にし、個々の選択を考慮しながら個人データを管理して保護する方法を管理する厳格なグローバル プライバシー要件を確立することに関係するものです。 
 
 GDPR の対象となる Microsoft SQL のお客様は、管理対象がクラウド ベースのデータベースまたはオンプレミスのデータベースのどちらか一方か両方かに関わらず、データベース システム内の該当データが GDPR の原則に従って適切に処理および保護されていることを確認する必要があります。 つまり、お客様の多くが、特に GDPR で規定されているデータ処理のセキュリティにおいて、データベース管理およびデータ処理の手順を確認または変更する必要があります。

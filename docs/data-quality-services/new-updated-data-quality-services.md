@@ -1,6 +1,6 @@
 ---
-title: "更新済み - SQL Server 用 Data Quality Services のドキュメント | Microsoft Docs"
-description: "Microsoft SQL Server 用 Data Quality Services の最近変更されたドキュメントで更新されたコンテンツのスニペットを示します。"
+title: 更新済み - SQL Server 用 Data Quality Services のドキュメント | Microsoft Docs
+description: Microsoft SQL Server 用 Data Quality Services の最近変更されたドキュメントで更新されたコンテンツのスニペットを示します。
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -10,11 +10,11 @@ ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: dqs
 ms.date: 02/03/2018
-ms.openlocfilehash: e5d82b7e42b7a33edb9ff09acb891933a9fa1b31
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c90dbd42d77d7654a24f96076221f9d37fabf426
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>新規および最近の更新: SQL Server 用 Data Quality Services
 
@@ -116,7 +116,7 @@ ms.lasthandoff: 02/15/2018
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
 - [新規 + 更新 (0 + 0): **SQL の多次元式 (MDX)** に関するドキュメント](../mdx/new-updated-mdx.md)
 - [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
-- [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
+- [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../samples/new-updated-samples.md)
 - [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
 - [新規 + 更新 (0 + 0): **Tools for SQL**  に関するドキュメント](../tools/new-updated-tools.md)
 - [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)

@@ -1,28 +1,28 @@
 ---
-title: "テンポラル テーブルでのパーティション分割 | Microsoft Docs"
-ms.custom: 
+title: テンポラル テーブルでのパーティション分割 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/26/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 313714b8-4ad1-4c14-93a3-7f628a334a51
-caps.latest.revision: 
+caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a231d7b2b3290747d37faf4eb6fe4c46f0d1f174
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: e072b55707cc1aa80d24b92e56dacf01b0552dff
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="partitioning-with-temporal-tables"></a>テンポラル テーブルでのパーティション分割
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,9 +43,6 @@ ms.lasthandoff: 01/18/2018
     -   **SYSTEM_VERSIONING** が **ON** の場合、履歴テーブルからの **SWITCH OUT** を実行して、関連性がなくなった一部のデータを消去します。  
   
     -   **SYSTEM_VERSIONING** が **ON** の場合、 **SWITCH IN** は許可されません。これは、テンポラル データの整合性が無効になる場合があるためです。  
-  
-## <a name="did-this-article-help-you-were-listening"></a>この記事は役に立ちましたか? フィードバックをお待ちしております。  
- どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Partitioning%20with%20Temporal%20Tables%20page) にコメントをお送りください  
   
 ## <a name="see-also"></a>参照  
  [テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)   
