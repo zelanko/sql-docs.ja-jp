@@ -1,33 +1,34 @@
 ---
-title: "[ジョブの利用状況モニター]([フィルターの設定]) | Microsoft Docs"
-ms.custom: 
+title: '[ジョブの利用状況モニター]([フィルターの設定]) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.jobactivitymon.filter.f1
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b03932c680b2f46485ec633ba31149b3e5d41235
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/10/2018
 ---
-# <a name="job-activity-monitor-filter-settings"></a>[ジョブの利用状況モニター] ([フィルターの設定])
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、ジョブの利用状況モニターに表示される行数を削減できます。 1 つまたは複数の利用可能なボックスに基準を入力すると、指定した値に一致する行のみが表示されます。 一部のボックス ( **[状態]** や **[ブロッキングの種類]** ) は指定できる有効な値が決まっており、ドロップダウン リストによって提供されます。 他のボックス ( **[アプリケーション]** など) は、任意の値をコンマ区切りのリストにして必要な数だけ入力できます。 ツール バーのアイコンを使用すると、利用可能なボックスをカテゴリ別またはアルファベット順に並べ替えることができます。 基準をクリックすると、それぞれの簡単な説明が表示されます。  
+# <a name="job-activity-monitor-filter-settings"></a>[ジョブの利用状況モニター] \([フィルターの設定])
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このページを使用すると、ジョブの利用状況モニターに表示される行数を削減できます。 1 つまたは複数の利用可能なボックスに基準を入力すると、指定した値に一致する行のみが表示されます。 一部のボックス ( **[状態]** や **[ブロッキングの種類]** ) は指定できる有効な値が決まっており、ドロップダウン リストによって提供されます。 他のボックス ( **[アプリケーション]** など) は、任意の値をコンマ区切りのリストにして必要な数だけ入力できます。 ツール バーのアイコンを使用すると、利用可能なボックスをカテゴリ別またはアルファベット順に並べ替えることができます。 基準をクリックすると、それぞれの簡単な説明が表示されます。  
   
  ジョブの利用状況モニターをフィルタリングするには、必要な数のフィルター基準を指定し、 **[フィルターの適用]**をクリックしてから **[OK]**をクリックします。  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 01/18/2018
  **[スケジュール]**  
  スケジュールを使用するジョブ、またはスケジュールを使用しないジョブをすべて表示します。  
   
- **ステータス**  
+ **[状態]**  
  状態でジョブをフィルタリングします。  
   
 ## <a name="description-area"></a>説明領域  
