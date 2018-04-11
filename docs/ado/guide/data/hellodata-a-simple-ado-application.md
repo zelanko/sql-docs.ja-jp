@@ -1,31 +1,31 @@
 ---
-title: "HelloData: 単純な ADO アプリケーション |Microsoft ドキュメント"
+title: 'HelloData: 単純な ADO アプリケーション |Microsoft ドキュメント'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 007f2842279607c722f6216d771751209ff723bc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: 単純な ADO アプリケーション
 この単純なアプリケーションをステップ実行の 4 つの主要な ADO 操作: を取得する、検査、編集、およびデータを更新します。 これらの操作は、Microsoft® SQL Server に含まれている、Northwind サンプル データベースに対して実行されます。 ADO の基礎に集中し、コードの煩雑さを防ぐためには、エラー処理の例では最小限です。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/09/2018
   
 3.  ボタンの下に、追加、 **Microsoft DataGrid コントロール**(Msdatgrd.ocx)。 Msdatgrd.ocx ファイルは、Visual Basic に付属しているしは \windows\system32 または \winnt\system32 ディレクトリにあります。 DataGrid コントロールを Visual Basic [ツールボックス] ウィンドウに追加するには、選択**コンポーネント.**から、**プロジェクト**メニュー。 チェック ボックスをオン の横に"Microsoft データ グリッド コントロール 6.0 (SP3) (OLEDB)"をクリックし、 **ok**です。 コントロールをプロジェクトに追加するには、Visual Basic フォームをツールボックスから DataGrid コントロールをドラッグします。  
   
-4.  作成、  **テキスト ボックス**グリッドの下のフォーム上の表に示すように、そのプロパティを設定します。 フォームが完了したら、次の図のようになります。  
+4.  作成、 **テキスト ボックス**グリッドの下のフォーム上の表に示すように、そのプロパティを設定します。 フォームが完了したら、次の図のようになります。  
   
 5.  最後に記載されているコードをコピー [HelloData コード](../../../ado/guide/data/hellodata-code.md)、し、フォームのコード エディター ウィンドウに貼り付けます。 キーを押して**f5 キーを押して**コードを実行します。  
   
@@ -49,13 +49,13 @@ ms.lasthandoff: 02/09/2018
   
  ![HelloData VB アプリケーションの Form1 を示しています](../../../ado/guide/data/media/hellodata.gif "HelloData。")  
   
-|コントロール型|プロパティ|[値]|  
+|コントロール型|プロパティ|値|  
 |------------------|--------------|-----------|  
 |Form|名前|Form1|  
 ||[高さ]|6500|  
 ||[幅]|6500|  
 |MS DataGrid|名前|grdDisplay1|  
-|テキスト ボックス|名前|txtDisplay1|  
+|TextBox|名前|txtDisplay1|  
 ||複数行|true|  
 |コマンド ボタン|名前|cmdGetData|  
 ||Caption|Get Data|  
