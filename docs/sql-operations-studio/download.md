@@ -24,7 +24,7 @@ ms.lasthandoff: 04/08/2018
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] Windows、macOS、および Linux で実行されます。
 
-ダウンロードし、最新のリリースをインストール、*年 3 月のパブリック プレビュー*:
+下載並安裝最新版本，*3 月公開預覽*:
 
 |プラットフォーム|ダウンロード|リリース日| バージョン |
 |:---|:---|:---|:---|
@@ -41,30 +41,30 @@ ms.lasthandoff: 04/08/2018
 **インストーラー**
 
 1. [Windows 用の [!INCLUDE[name-sos](../includes/name-sos-short.md)] インストーラー](https://go.microsoft.com/fwlink/?linkid=870837) ダウンロードして実行します。
-1. 開始、[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]アプリ。
+1. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]のアプリを開始します。
 
 
 **.zip file**
 
-1. ダウンロード[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows .zip](https://go.microsoft.com/fwlink/?linkid=870838)です。
-2. ダウンロードしたファイルを参照し、抽出しています。
-3. 実行します。 `\sqlops-windows\sqlops.exe`
+1. [[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Windows .zip](https://go.microsoft.com/fwlink/?linkid=870838) をダウンロードします。
+2. ダウンロードしたファイルを参照し、展開します。
+3. `\sqlops-windows\sqlops.exe`を実行します。
 
 
-## <a name="get-sql-operations-studio-preview-for-macos"></a>MacOS の SQL Operations Studio (preview) を取得します。
+## <a name="get-sql-operations-studio-preview-for-macos"></a>SQL Operations Studio (プレビュー) for MacOS の取得
 
 1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=870839) をダウンロードします。
 2. zip のコンテンツを展開するには、ダブルクリックします。
-3. させる[!INCLUDE[name-sos](../includes/name-sos-short.md)]で使用できる、*スタート パッド*、ドラッグ*sqlops.app*を*アプリケーション*フォルダーです。
+3. [!INCLUDE[name-sos](../includes/name-sos-short.md)] を *Launchpad* で有効にするため *sqlops.app* を *アプリケーション* フォルダーへドラッグします。
 
 
-## <a name="get-sql-operations-studio-preview-for-linux"></a>Linux 用の SQL Operations Studio (preview) の取得します。
+## <a name="get-sql-operations-studio-preview-for-linux"></a>SQL Operations Studio (プレビュー) for Linux の取得
 
 1. ダウンロード [!含める[名前 sos](../includes/name-sos-short.md)インストーラーまたは tar.gz アーカイブのいずれかを使用して Linux 用。
     - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=870841)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)
-1. ファイルと起動を抽出する[!INCLUDE[name-sos](../includes/name-sos-short.md)]新しいターミナル ウィンドウを開きを次のコマンドを入力します。
+1. ファイルを展開し、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を起動するため、新しいターミナル ウィンドウを開いて次のコマンドを入力します。
 
    **Debian のインストール:**
    ```bash
@@ -93,7 +93,7 @@ ms.lasthandoff: 04/08/2018
    ``` 
 
    > [!NOTE]
-   > Debian、red Hat、および Ubuntu で見つからない依存関係があります。 Linux のバージョンに応じてこれらの依存関係をインストールするのにには、次のコマンドを使用します。
+   > Debian、Redhat、および Ubuntu で、依存関係が見つからないことがあります。 これらの依存関係をインストールするために、Linux のバージョンに応じて、次のコマンドを使用してください。
    
 
    **Debian:** 
@@ -118,26 +118,26 @@ ms.lasthandoff: 04/08/2018
 
 ## <a name="uninstall-sql-operations-studio-preview"></a>SQL Operations Studio (preview)</a> のアンインストール
 
-インストールした場合[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]すべての Windows アプリケーションを削除するのと同じ方法をアンインストールし、Windows インストーラーを使用します。
+Windows インストーラーを使用して[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]をインストールした場合、他の Windows アプリケーションの削除と同じ方法でアンインストールしてください。
 
-インストールした場合[!INCLUDE[name-sos-short](../includes/name-sos-short.md)].zip やその他のアーカイブは、単にファイルを削除します。
+.zip またはその他のアーカイブから [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] をインストールした場合、ファイルを削除してください。
 
 ## <a name="supported-operating-systems"></a>サポートされるオペレーティング システム
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows、macOS など、Linux で実行され、次のプラットフォームではサポートされています。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] は Windows、macOS、そして Linux で動作し、次のプラットフォームでサポートされています。
 
 ### <a name="windows"></a>Windows
 - Windows 10 (64 ビット)
 - Windows 8.1 (64 ビット)
 - Windows 8 (64 ビット)
-- Windows 7 (SP1) (64 ビット) - 必要があります[KB2533623](https://www.microsoft.com/en-us/download/details.aspx?id=26767)
+- Windows 7 (SP1) (64 ビット) - [KB2533623](https://www.microsoft.com/en-us/download/details.aspx?id=26767) が必要です
 - Windows Server 2016
 - Windows Server 2012 R2 (64 ビット)
 - Windows Server 2012 (64 ビット)
 - Windows Server 2008 R2 (64 ビット)
 
 ### <a name="macos"></a>macOS
-- macOS 10.13 高 Sierra
+- macOS 10.13 High Sierra
 - macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux
