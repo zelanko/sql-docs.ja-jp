@@ -1,6 +1,6 @@
 ---
-title: "Insights と SQL 操作 Studio (プレビュー) での一般的なタスクを簡単にアクセス |Microsoft ドキュメント"
-description: "SQL 操作 Studio (プレビュー) で洞察に富んだウィジェットを表示する方法について説明します。"
+title: Insights と SQL Operations Studio (preview) での一般的なタスクを簡単にアクセス |Microsoft ドキュメント
+description: SQL Operations Studio (preview) で洞察に富んだウィジェットを表示する方法について説明します。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: yualan
 ms.author: alayu

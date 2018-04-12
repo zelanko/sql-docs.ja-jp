@@ -1,6 +1,6 @@
 ---
-title: "ソース SQL 操作 Studio (プレビュー) の管理 |Microsoft ドキュメント"
-description: "SQL 操作 Studio (プレビュー) でソース管理を構成する方法を説明します。"
+title: ソース SQL Operations Studio (preview) の管理 |Microsoft ドキュメント
+description: SQL Operations Studio (preview) でソース管理を構成する方法を説明します。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

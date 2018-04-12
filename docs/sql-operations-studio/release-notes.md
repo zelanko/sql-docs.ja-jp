@@ -1,6 +1,6 @@
 ---
-title: Microsoft SQL 操作 Studio (プレビュー) のリリース ノート |Microsoft ドキュメント
-description: Microsoft SQL 操作 Studio (プレビュー) のリリース ノート
+title: Microsoft SQL Operations Studio (preview) のリリース ノート |Microsoft ドキュメント
+description: Microsoft SQL Operations Studio (preview) のリリース ノート
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/28/2018
 ---
-# <a name="sql-operations-studio-preview-release-notes"></a>SQL 操作 Studio (プレビュー) のリリース ノート
+# <a name="sql-operations-studio-preview-release-notes"></a>SQL Operations Studio (preview) のリリース ノート
 
 **[年 3 月のパブリック プレビューをダウンロードします。](download.md)**
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/28/2018
 - タブ付き insights と構成ウィンドウをサポートするために、ダッシュ ボードの機能拡張モデルを拡張します。
    - 拡張機能マネージャーでは、拡張機能の簡単な取得できるようにします。
    - ダッシュ ボードから sp_whoisactive 拡張[whoisactive.com](http://www.whoisactive.com)です。
-   - 詳細については、「 [SQL 操作 Studio の機能拡張](extensions.md)です。
+   - 詳細については、「 [SQL Operations Studio の機能拡張](extensions.md)です。
 - さらに追加[接続およびオブジェクト エクスプ ローラーの機能拡張 Api](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API)管理します。
 - 解決に影響する重要な顧客を継続[GitHub の問題](https://github.com/Microsoft/sqlopsstudio/issues)です。
 

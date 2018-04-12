@@ -1,4 +1,4 @@
-# [SQL Operations Studio (プレビュー)](what-is.md)
+# [SQL Operations Studio (preview)](what-is.md)
 # [インストール](download.md)
 # [リリース ノート](release-notes.md)
 # クイック スタート
@@ -24,7 +24,7 @@
 ## [使用状況データ収集](usage-data-collection.md)
 # リソース
 ## [Transact-SQL リファレンス](../t-sql/language-reference.md)
-## [SQL Operations Studio (プレビュー) GitHub リポジトリ](https://www.github.com/Microsoft/SqlOpsStudio)
+## [SQL Operations Studio (preview) GitHub リポジトリ](https://www.github.com/Microsoft/SqlOpsStudio)
 ## [SQL Server ブログ](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ## [新規および更新のアーティクル](new-updated-sql-operations-studio.md)
 # [よくあるご質問](faq.md)

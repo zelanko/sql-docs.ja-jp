@@ -1,6 +1,6 @@
 ---
-title: "チュートリアル: 5 つを有効にする速度が遅かったクエリ サンプル ウィジェット - SQL 操作 Studio (プレビュー) |Microsoft ドキュメント"
-description: "このチュートリアルは、5 つ最も低速なクエリのサンプル ダッシュ ボードのウィジェット、データベースを有効にする方法を示します。"
+title: 'チュートリアル: 5 つを有効にする速度が遅かったクエリ サンプル ウィジェット - SQL Operations Studio (preview) |Microsoft ドキュメント'
+description: このチュートリアルは、5 つ最も低速なクエリのサンプル ダッシュ ボードのウィジェット、データベースを有効にする方法を示します。
 ms.custom: tools|sos
 ms.date: 03/15/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

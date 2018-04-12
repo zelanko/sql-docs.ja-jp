@@ -1,6 +1,6 @@
 ---
-title: "クイック スタート: 接続し、クエリの SQL 操作 Studio (プレビュー) を使用して SQL Server |Microsoft ドキュメント"
-description: "このクイック スタートは、Studio を使用して SQL の操作 (プレビュー) を SQL Server に接続してクエリを実行する方法を示しています。"
+title: 'クイック スタート: 接続し、クエリの SQL Operations Studio (preview) を使用して SQL Server |Microsoft ドキュメント'
+description: このクイック スタートは、を使用して SQL Operations Studio (preview) を SQL Server に接続してクエリを実行する方法を示しています。
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -39,7 +39,7 @@ SQL Server へのアクセスを持っていない場合は、次のリンクか
 
    
 1. 開始 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**です。
-1. 初めて実行する *[!INCLUDE[name-sos](../includes/name-sos-short.md)]*  、**接続**ダイアログ ボックスが開きます。 場合、**接続**ダイアログが開き、、**新しい接続**のアイコン、**サーバー**ページ。
+1. 初めて実行する*[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 、**接続**ダイアログ ボックスが開きます。 場合、**接続**ダイアログが開き、、**新しい接続**のアイコン、**サーバー**ページ。
    
    ![新しい接続のアイコン](media/quickstart-sql-server/new-connection-icon.png)
 

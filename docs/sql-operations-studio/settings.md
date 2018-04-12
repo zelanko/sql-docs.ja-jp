@@ -1,6 +1,6 @@
 ---
-title: "SQL 操作 Studio (プレビュー) のユーザーとワークスペースの設定 |Microsoft ドキュメント"
-description: "SQL 操作 Studio (プレビュー) のユーザーとワークスペースの設定を変更する方法。"
+title: SQL Operations Studio (preview) のユーザーとワークスペースの設定 |Microsoft ドキュメント
+description: SQL Operations Studio (preview) のユーザーとワークスペースの設定を変更する方法。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: yualan
 ms.author: alayu
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/17/2018
 
 ## <a name="hot-exit"></a>ホット終了
 
-SQL 操作の Studio を忘れずに未保存の変更ファイル既定で終了するとします。 これは、Visual Studio のコードでホット終了機能と同じです。
+SQL Operations Studio を忘れずに未保存の変更ファイル既定で終了するとします。 これは、Visual Studio のコードでホット終了機能と同じです。
 
 既定では、ホット終了は off です。 ホットを有効にする終了を編集して、`files.hotExit`設定します。 詳細については、「 [(Visual Studio コードのドキュメント) にホットの終了](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)です。
 

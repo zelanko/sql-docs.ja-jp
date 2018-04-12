@@ -1,6 +1,6 @@
 ---
-title: "クイック スタート: 接続し、SQL 操作 Studio (プレビュー) を使用して Azure SQL データベースを照会 |Microsoft ドキュメント"
-description: "このクイック スタートは、SQL 操作 Studio (プレビュー) を使用して SQL データベースに接続し、クエリを実行する方法を示しています。"
+title: 'クイック スタート: 接続し、SQL Operations Studio (preview) を使用して Azure SQL データベースを照会 |Microsoft ドキュメント'
+description: このクイック スタートは、SQL Operations Studio (preview) を使用して SQL データベースに接続し、クエリを実行する方法を示しています。
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -22,7 +22,7 @@ ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>クイック スタート: を使用して[!INCLUDE[name-sos](../includes/name-sos-short.md)]接続し、Azure SQL データベースを照会するには
 
-このクイック スタートを使用する方法を示しています *[!INCLUDE[name-sos](../includes/name-sos-short.md)]*  、Azure SQL database に接続し、TRANSACT-SQL (T-SQL) ステートメントを使用して、作成、 *TutorialDB*で使用される[!INCLUDE[name-sos](../includes/name-sos-short.md)]チュートリアルです。
+このクイック スタートを使用する方法を示しています*[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 、Azure SQL database に接続し、TRANSACT-SQL (T-SQL) ステートメントを使用して、作成、 *TutorialDB*で使用される[!INCLUDE[name-sos](../includes/name-sos-short.md)]チュートリアルです。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -59,7 +59,7 @@ Azure SQL サーバーがない場合は、次の Azure SQL Database のクイ�
 
    ![新しい接続のアイコン](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. サーバーに接続する、SQL 操作 Studio を許可するファイアウォール規則を持っていない場合、**新しいファイアウォール ルールを作成**フォームが開きます。 新しいファイアウォール ルールを作成するフォームを完了します。 詳細については、「[のファイアウォール ルール](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)です。
+3. サーバーに接続する、SQL Operations Studio を許可するファイアウォール規則を持っていない場合、**新しいファイアウォール ルールを作成**フォームが開きます。 新しいファイアウォール ルールを作成するフォームを完了します。 詳細については、「[のファイアウォール ルール](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)です。
 
    ![新しいファイアウォール規則](media/quickstart-sql-database/firewall.png)  
 
