@@ -1,6 +1,6 @@
 ---
-title: "クイック スタート: は接続し、クエリの SQL 操作 Studio (プレビュー) を使用して Azure SQL Data Warehouse |Microsoft ドキュメント"
-description: "このクイック スタートは、SQL 操作 Studio (プレビュー) を使用して SQL データベースに接続し、クエリを実行する方法を示しています。"
+title: 'クイック スタート: は接続し、クエリの SQL Operations Studio (preview) を使用して Azure SQL Data Warehouse |Microsoft ドキュメント'
+description: このクイック スタートは、SQL Operations Studio (preview) を使用して SQL データベースに接続し、クエリを実行する方法を示しています。
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -56,7 +56,7 @@ SQL データ ウェアハウスがない場合は、次を参照してくださ
 
    ![新しい接続のアイコン](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. サーバーに接続する、SQL 操作 Studio を許可するファイアウォール規則を持っていない場合、**新しいファイアウォール ルールを作成**フォームが開きます。 新しいファイアウォール ルールを作成するフォームを完了します。 詳細については、「[のファイアウォール ルール](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)です。
+3. サーバーに接続する、SQL Operations Studio を許可するファイアウォール規則を持っていない場合、**新しいファイアウォール ルールを作成**フォームが開きます。 新しいファイアウォール ルールを作成するフォームを完了します。 詳細については、「[のファイアウォール ルール](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)です。
 
    ![新しいファイアウォール規則](media/quickstart-sql-dw/firewall.png)  
 

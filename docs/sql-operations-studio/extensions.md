@@ -1,6 +1,6 @@
 ---
-title: SQL 操作 Studio (プレビュー) の機能を拡張 |Microsoft ドキュメント
-description: SQL 操作 Studio (プレビュー) に拡張機能を追加します。
+title: SQL Operations Studio (preview) の機能を拡張 |Microsoft ドキュメント
+description: SQL Operations Studio (preview) に拡張機能を追加します。
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.reviewer: alayu; erickang; sstein
@@ -24,10 +24,10 @@ ms.lasthandoff: 03/28/2018
 
 拡張機能で[!INCLUDE[name-sos](../includes/name-sos-short.md)]より多くの機能をベースに追加する簡単な方法を提供[!INCLUDE[name-sos](../includes/name-sos-short.md)]インストールします。 
 
-拡張機能は、サード パーティ コミュニティ (あなた)! だけでなく、SQL 操作 Studio チーム (Microsoft) によって提供されます。 拡張機能を作成する方法については、次を参照してください。[拡張機能の概要](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility)です。
+拡張機能は、サード パーティ コミュニティ (あなた)! だけでなく、SQL Operations Studio チーム (Microsoft) によって提供されます。 拡張機能を作成する方法については、次を参照してください。[拡張機能の概要](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility)です。
 
 
-## <a name="add-sql-operations-studio-extensions"></a>SQL 操作 Studio の拡張機能を追加します。
+## <a name="add-sql-operations-studio-extensions"></a>SQL Operations Studio の拡張機能を追加します。
 
 1. 拡張機能マネージャーを開き、使用可能な拡張機能にアクセスするには、拡張機能 アイコンを選択するか選択**拡張**で、**ビュー**メニュー。
 2. 詳細を表示する使用可能な拡張機能を選択します。

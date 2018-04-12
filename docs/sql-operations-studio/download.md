@@ -1,6 +1,6 @@
 ---
-title: ダウンロードし、インストールの Microsoft SQL 操作 Studio (プレビュー) |Microsoft ドキュメント
-description: ダウンロードおよびインストール Microsoft SQL 操作 (プレビュー) 対応の Studio Windows、macOS、または Linux
+title: ダウンロードし、インストールの Microsoft SQL Operations Studio (preview) |Microsoft ドキュメント
+description: ダウンロードおよびインストール Microsoft SQL Operations Studio (preview) 対応の Windows、macOS、または Linux
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="download-and-install-sql-operations-studio-preview"></a>ダウンロードして SQL 操作 Studio (プレビュー) のインストール
+# <a name="download-and-install-sql-operations-studio-preview"></a>ダウンロードして SQL Operations Studio (preview) のインストール
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] Windows、macOS、および Linux で実行されます。
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 04/08/2018
 
 最新のリリースに関する詳細については、次を参照してください。、[リリース ノート](release-notes.md)です。
 
-## <a name="get-sql-operations-studio-preview-for-windows"></a>Windows 用の SQL 操作 Studio (プレビュー) の取得します。
+## <a name="get-sql-operations-studio-preview-for-windows"></a>Windows 用の SQL Operations Studio (preview) の取得します。
 
 このリリースの[!INCLUDE[name-sos](../includes/name-sos-short.md)]標準的な Windows インストーラーのエクスペリエンスと .zip が含まれます。 
 
@@ -51,14 +51,14 @@ ms.lasthandoff: 04/08/2018
 3. 実行します。 `\sqlops-windows\sqlops.exe`
 
 
-## <a name="get-sql-operations-studio-preview-for-macos"></a>MacOS の SQL 操作 Studio (プレビュー) を取得します。
+## <a name="get-sql-operations-studio-preview-for-macos"></a>MacOS の SQL Operations Studio (preview) を取得します。
 
 1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=870839) をダウンロードします。
 2. zip のコンテンツを展開するには、ダブルクリックします。
 3. させる[!INCLUDE[name-sos](../includes/name-sos-short.md)]で使用できる、*スタート パッド*、ドラッグ*sqlops.app*を*アプリケーション*フォルダーです。
 
 
-## <a name="get-sql-operations-studio-preview-for-linux"></a>Linux 用の SQL 操作 Studio (プレビュー) の取得します。
+## <a name="get-sql-operations-studio-preview-for-linux"></a>Linux 用の SQL Operations Studio (preview) の取得します。
 
 1. ダウンロード [!含める[名前 sos](../includes/name-sos-short.md)インストーラーまたは tar.gz アーカイブのいずれかを使用して Linux 用。
     - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
@@ -116,7 +116,7 @@ ms.lasthandoff: 04/08/2018
    ```
 
 
-## <a name="uninstall-sql-operations-studio-preview"></a>SQL Operations Studio (プレビュー)</a> のアンインストール
+## <a name="uninstall-sql-operations-studio-preview"></a>SQL Operations Studio (preview)</a> のアンインストール
 
 インストールした場合[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]すべての Windows アプリケーションを削除するのと同じ方法をアンインストールし、Windows インストーラーを使用します。
 

@@ -1,6 +1,6 @@
 ---
-title: "チュートリアル: SQL 操作 Studio (プレビュー) により、TRANSACT-SQL エディターを使用してデータベース オブジェクトを作成 |Microsoft ドキュメント"
-description: "このチュートリアルでは、SQL 操作 Studio (プレビュー) で T-SQL を使用して簡略化する主要な機能について説明します。"
+title: 'チュートリアル: SQL Operations Studio (preview) により、TRANSACT-SQL エディターを使用してデータベース オブジェクトを作成 |Microsoft ドキュメント'
+description: このチュートリアルでは、SQL Operations Studio (preview) で T-SQL を使用して簡略化する主要な機能について説明します。
 ms.custom: tools|sos
 ms.date: 03/13/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang
@@ -63,7 +63,7 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>T-SQL スニペットを使用してストアド プロシージャを作成するには
 
-SQL 操作 Studio は、ステートメントをすばやく作成するため、多くの組み込みの T-SQL でスニペットを提供します。
+SQL Operations Studio は、ステートメントをすばやく作成するため、多くの組み込みの T-SQL でスニペットを提供します。
 
 
 1. キーを押して新しいクエリ エディターを開く**Ctrl + N**です。
@@ -117,7 +117,7 @@ SQL 操作 Studio は、ステートメントをすばやく作成するため�
 
 ## <a name="use-peek-definition"></a>ピークの定義を使用 
 
-SQL 操作 Studio には、ピークの定義機能を使用して、オブジェクト定義を表示する機能が用意されています。 このセクションでは、2 番目のストアド プロシージャを作成し、ピークの定義が使用すると、どのような列は、テーブル、ストアド プロシージャの本体をすばやく作成します。
+SQL Operations Studio には、ピークの定義機能を使用して、オブジェクト定義を表示する機能が用意されています。 このセクションでは、2 番目のストアド プロシージャを作成し、ピークの定義が使用すると、どのような列は、テーブル、ストアド プロシージャの本体をすばやく作成します。
 
 1. キーを押して新しいエディターを開きます**Ctrl + N**です。 
 
@@ -185,7 +185,7 @@ SQL 操作 Studio には、ピークの定義機能を使用して、オブジ�
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>使用して、setCustomer ストアド プロシージャをテストする JSON としてクエリ結果を保存します。
 
-*SetCustomer*前のセクションで作成したストアド プロシージャに必要と JSON データに渡す、  *@json_val* パラメーター。 このセクションでは、ストアド プロシージャをテストできるように、パラメーターに渡すための JSON の正しく書式設定されたビットを取得する方法を示します。
+*SetCustomer*前のセクションで作成したストアド プロシージャに必要と JSON データに渡す、 *@json_val*パラメーター。 このセクションでは、ストアド プロシージャをテストできるように、パラメーターに渡すための JSON の正しく書式設定されたビットを取得する方法を示します。
 
 1. **サーバー**サイド バーを右クリックし、 *dbo します。顧客*テーブルし、クリックして**上位 1000 行**です。
 
