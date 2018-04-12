@@ -1,16 +1,16 @@
 ---
-title: "XQuery 言語リファレンス (SQL Server) |Microsoft ドキュメント"
-ms.custom: 
+title: XQuery 言語リファレンス (SQL Server) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server 2016 Preview
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - XML [SQL Server], XQuery
 - queries [XML in SQL Server], XQuery
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
-caps.latest.revision: 
+caps.latest.revision: 51
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -82,7 +82,7 @@ WHERE ProductModelID=7
 |-----------|-----------------|  
 |[XQuery の基礎](../xquery/xquery-basics.md)|XQuery の概念の基本的な概要について説明し、式の評価 (静的コンテキストと動的コンテキスト)、アトミック化、有効なブール値、XQuery 型システム、シーケンス型の照合、およびエラー処理についても説明します。|  
 |[XQuery 式](../xquery/xquery-expressions.md)|XQuery 原始式、パス式、シーケンス式、算術式、比較式、論理式、XQuery の構築、FLWOR 式、条件式、量化式、およびシーケンス型のさまざまな式について説明します。|  
-|[モジュールとプロローグ &#40;です。XQuery と #41 です。](../xquery/modules-and-prologs-xquery.md)|XQuery プロローグについて説明します。|  
+|[モジュールとプロローグ&#40;XQuery&#41;](../xquery/modules-and-prologs-xquery.md)|XQuery プロローグについて説明します。|  
 |[xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)|サポートされている XQuery 関数の一覧について説明します。|  
 |[xml データ型に対する XQuery の演算子](../xquery/xquery-operators-against-the-xml-data-type.md)|サポートされている XQuery 演算子について説明します。|  
 |[xml データ型に対する XQuery のその他のサンプル](../xquery/additional-sample-xqueries-against-the-xml-data-type.md)|XQuery の追加サンプルを提供します。|  
