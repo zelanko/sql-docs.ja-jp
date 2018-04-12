@@ -1,16 +1,16 @@
 ---
 title: ROUND (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ROUND_TSQL
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - rounding expressions
 - ROUND function [Transact-SQL]
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -48,12 +48,12 @@ ROUND ( numeric_expression , length [ ,function ] )
   
 ## <a name="arguments"></a>引数  
  *numeric_expression*  
- **bit** データ型を除く、真数データ型または概数データ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+ **bit** データ型を除く、真数または概数データ型カテゴリの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
  *length*  
- *numeric_expression* の丸め結果とする有効桁数です。 *length* には、**tinyint**、**smallint**、または **int** 型の式を指定する必要があります。*length* に正の値を指定した場合、*numeric_expression* は *length* で指定した小数点以下桁数に丸められます。 *length* に負の値を指定した場合、*numeric_expression* は *length* で指定した小数点以下桁数に丸められます。  
+ *numeric_expression* を丸める際の有効桁数です。 *length* には、**tinyint**、**smallint**、または **int** 型の式を指定する必要があります。*length* に正の値を指定した場合、*numeric_expression* は *length* で指定した小数点以下桁数に丸められます。 *length* に負の値を指定した場合、*numeric_expression* の小数点の左側が *length* で指定した桁数に丸められます。  
   
- *関数 (function)*  
+ *function*  
  実行する操作の種類です。 *function* には、**tinyint**、**smallint**、または **int** を指定する必要があります。*function* が省略されているか値が 0 (既定) の場合、*numeric_expression* は丸められます。 0 以外の値を指定した場合、*numeric_expression* は切り捨てられます。  
   
 ## <a name="return-types"></a>戻り値の型  
@@ -69,16 +69,16 @@ ROUND ( numeric_expression , length [ ,function ] )
 |**money** および **smallmoney** カテゴリ|**money**|  
 |**float** および **real** カテゴリ|**float**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ROUND は常に値を返します。 *length* が負の値で、整数部の桁数より大きい場合、ROUND は 0 を返します。  
   
-|例|[結果]|  
+|例|結果|  
 |-------------|------------|  
 |ROUND (748.58、-4)|0|  
   
  ROUND は、*length* が負の値であるときは、データ型に関係なく、*numeric_expression* を丸めて返します。  
   
-|使用例|[結果]|  
+|使用例|結果|  
 |--------------|------------|  
 |ROUND (748.58,-1)|750.00|  
 |ROUND (748.58、-2)|700.00|  
