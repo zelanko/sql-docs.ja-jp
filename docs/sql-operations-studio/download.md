@@ -1,4 +1,4 @@
----
+﻿---
 title: ダウンロードし、インストールの Microsoft SQL Operations Studio (preview) |Microsoft ドキュメント
 description: ダウンロードおよびインストール Microsoft SQL Operations Studio (preview) 対応の Windows、macOS、または Linux
 ms.custom: tools|sos
@@ -22,7 +22,7 @@ ms.lasthandoff: 04/08/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>ダウンロードして SQL Operations Studio (preview) のインストール
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] Windows、macOS、および Linux で実行されます。
+[!INCLUDE[name-sos](../includes/name-sos.md)] Windows、macOS、および Linux で動作します。
 
 下載並安裝最新版本，*3 月公開預覽*:
 
@@ -32,11 +32,11 @@ ms.lasthandoff: 04/08/2018
 |macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=870839)|2018 年 3 月 28日 |0.27.3|
 |Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=870842)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=870841)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)|2018 年 3 月 28日 |0.27.3|
 
-最新のリリースに関する詳細については、次を参照してください。、[リリース ノート](release-notes.md)です。
+最新のリリースに関する詳細は、次の [リリース ノート](release-notes.md) を参照してください。
 
 ## <a name="get-sql-operations-studio-preview-for-windows"></a>Windows 用の SQL Operations Studio (preview) の取得します。
 
-このリリースの[!INCLUDE[name-sos](../includes/name-sos-short.md)]標準的な Windows インストーラーのエクスペリエンスと .zip が含まれます。 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] のこのリリースは標準的な Windows インストーラーと .zip を含んでいます。
 
 **インストーラー**
 
@@ -94,7 +94,7 @@ ms.lasthandoff: 04/08/2018
 
    > [!NOTE]
    > Debian、Redhat、および Ubuntu で、依存関係が見つからないことがあります。 これらの依存関係をインストールするために、Linux のバージョンに応じて、次のコマンドを使用してください。
-   
+
 
    **Debian:** 
    ```bash
@@ -146,7 +146,7 @@ Windows インストーラーを使用して[!INCLUDE[name-sos-short](../include
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
-## <a name="check-for-updates"></a>更新を確認する
+## <a name="check-for-updates">更新を確認する</a>
 最新の更新を確認するには、ウィンドウの左下にある歯車アイコンをクリックして **更新を確認する** をクリックしてください。
 
 ## <a name="next-steps"></a>次の手順
