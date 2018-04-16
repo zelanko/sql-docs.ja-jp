@@ -1,21 +1,22 @@
 ---
-title: "[バージョン情報] ダイアログ ボックス | Microsoft Docs"
-ms.custom: 
+title: '[バージョン情報] ダイアログ ボックス | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - status information [SQL Server Management Studio]
 - About dialog box
 ms.assetid: 5fb6f3e9-c511-419b-b0b6-173c057e3a54
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -27,7 +28,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="about-dialog-box"></a>[バージョン情報] ダイアログ ボックス
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[バージョン情報]** ダイアログ ボックスには、製品情報が記載されており、このダイアログ ボックスから製品を実行しているコンピューターに関する情報にアクセスできます。 評価版の場合、 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] のエントリにはインストールの期限切れまでの日数が表示されます。 このダイアログ ボックスは、 **[ヘルプ]** メニューから利用できます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[バージョン情報]** ダイアログ ボックスには、製品情報が記載されており、このダイアログ ボックスから製品を実行しているコンピューターに関する情報にアクセスできます。 評価版の場合、 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] のエントリにはインストールの期限切れまでの日数が表示されます。 このダイアログ ボックスは、 **[ヘルプ]** メニューから利用できます。   
   
 ## <a name="options"></a>および  
 **[コンポーネント名]**  
