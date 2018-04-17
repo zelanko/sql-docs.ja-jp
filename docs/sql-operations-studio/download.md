@@ -1,4 +1,4 @@
----
+﻿---
 title: Microsoft SQL Operations Studio (プレビュー) のダウンロードおよびインストール | Microsoft ドキュメント
 description: Windows、macOS、そして Linux に対応する Microsoft SQL Operations Studio (プレビュー) のダウンロードおよびインストール
 ms.custom: tools|sos
@@ -94,7 +94,7 @@ ms.lasthandoff: 04/08/2018
 
    > [!NOTE]
    > Debian、Redhat、および Ubuntu で、依存関係が見つからないことがあります。 これらの依存関係をインストールするために、Linux のバージョンに応じて、次のコマンドを使用してください。
-   
+
 
    **Debian:** 
    ```bash
@@ -146,7 +146,7 @@ Windows インストーラーを使用して[!INCLUDE[name-sos-short](../include
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
-## <a name="check-for-updates"></a>更新を確認する
+## <a name="check-for-updates">更新を確認する</a>
 最新の更新を確認するには、ウィンドウの左下にある歯車アイコンをクリックして **更新を確認する** をクリックしてください。
 
 ## <a name="next-steps"></a>次の手順

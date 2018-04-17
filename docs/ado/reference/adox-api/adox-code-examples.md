@@ -1,4 +1,4 @@
----
+﻿---
 title: ADOX のコード例 |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: drivers
@@ -28,10 +28,10 @@ ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-code-examples"></a>ADOX のコード例
 ADOX オブジェクト、メソッド、プロパティ、およびイベントを使用する方法を学ぶためには、次のコード例を使用してください。  
-  
+
 > [!NOTE]
 >  コード例の全体をコード エディターに貼り付けてください。 例を部分的に使用した場合や段落のフォーマットが失われた場合、この例は正しく動作しない可能性があります。  
-  
+
 -   [Microsoft Visual Basic での ADOX コードの例](../../../ado/reference/adox-api/adox-code-examples-in-microsoft-visual-basic.md)  
   
 -   [Microsoft Visual C++ での ADOX のコード例](../../../ado/reference/adox-api/adox-code-examples-in-microsoft-visual-c.md)  

@@ -1,4 +1,4 @@
----
+﻿---
 title: SQL Server Profiler の実行 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 7/7/2017
@@ -32,10 +32,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="run-sql-server-profiler"></a>SQL Server Profiler の実行
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-さまざまなシナリオにおけるトレース出力の収集をサポートするために、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] はいくつかの異なる方法で実行することができます。 Windows 10 の **開始** メニューまたは[!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザー の **ツール** メニューから、そして、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の複数の場所からも [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を開始することができます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 
+さまざまなシナリオにおけるトレース出力の収集をサポートするために、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] はいくつかの異なる方法で実行することができます。Windows 10 の **開始** メニューまたは [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザー の **ツール** メニューから、そして、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の複数の場所からも [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を開始することができます。
   
-[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を初めて起動し、**ファイル** メニューから **新しいトレース** を選択すると、アプリケーションは **サーバーへの接続** のダイアログ ボックスを表示しますので、その画面から接続先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを指定することができます。  
+[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を初めて起動し、**ファイル** メニューから **新しいトレース** を選択すると、アプリケーションは **サーバーへの接続** のダイアログ ボックスを表示しますので、その画面から接続先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを指定することができます。
+
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>Windows 10 の [スタート] メニューから SQL Server Profiler を起動するには  
 -  [Windows] をクリックして**開始**アイコンまたはキーを押して、Windows キーおよび"SQL Server Profiler 17"の入力を開始します。 ときに、 **SQL Server Profiler 17**にタイルが表示されたら、 をクリックします。   
 
