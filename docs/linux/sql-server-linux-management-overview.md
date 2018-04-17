@@ -1,6 +1,6 @@
 ---
-title: "SQL Server on Linux の管理 |Microsoft ドキュメント"
-description: "この記事は、Linux で実行されている SQL Server の一般的な管理タスクとツールへのリンクを提供します。"
+title: SQL Server on Linux の管理 |Microsoft ドキュメント
+description: この記事は、Linux で実行されている SQL Server の一般的な管理タスクとツールへのリンクを提供します。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
@@ -36,7 +36,7 @@ TRANSACT-SQL ステートメントのほとんどのクライアント ツール
 
 ## <a name="sql-server-operations-studio-preview"></a>SQL Server 操作 Studio (プレビュー)
 
-新しい Microsoft SQL 操作 Studio (プレビュー) は、SQL Server を管理するためのクロスプラット フォーム ツールです。 詳細については、次を参照してください。 [Microsoft SQL 操作 Studio (プレビュー)](../sql-operations-studio/what-is.md)です。
+新しい Microsoft SQL Operations Studio (preview) は、SQL Server を管理するためのクロスプラット フォーム ツールです。 詳細については、次を参照してください。 [Microsoft SQL Operations Studio (preview)](../sql-operations-studio/what-is.md)です。
 
 ## <a name="sql-server-management-studio-on-windows"></a>Windows 上の SQL Server Management Studio
 

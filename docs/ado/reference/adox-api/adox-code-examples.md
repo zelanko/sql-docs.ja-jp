@@ -1,21 +1,21 @@
----
-title: "ADOX のコード例 |Microsoft ドキュメント"
+﻿---
+title: ADOX のコード例 |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ADOX code examples
 ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -27,10 +27,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-code-examples"></a>ADOX のコード例
-ADOX オブジェクト、メソッド、プロパティ、およびイベントを使用する方法を学ぶためには、次のコード例を使用してください。
+ADOX オブジェクト、メソッド、プロパティ、およびイベントを使用する方法を学ぶためには、次のコード例を使用してください。  
 
 > [!NOTE]
->  コード例の全体をコード エディターに貼り付けてください。例を部分的に使用した場合や段落のフォーマットが失われた場合、この例は正しく動作しない可能性があります。
+>  コード例の全体をコード エディターに貼り付けてください。 例を部分的に使用した場合や段落のフォーマットが失われた場合、この例は正しく動作しない可能性があります。  
 
 -   [Microsoft Visual Basic での ADOX コードの例](../../../ado/reference/adox-api/adox-code-examples-in-microsoft-visual-basic.md)  
   

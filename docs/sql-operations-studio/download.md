@@ -1,6 +1,6 @@
 ﻿---
-title: ダウンロードし、インストールの Microsoft SQL Operations Studio (preview) |Microsoft ドキュメント
-description: ダウンロードおよびインストール Microsoft SQL Operations Studio (preview) 対応の Windows、macOS、または Linux
+title: Microsoft SQL Operations Studio (プレビュー) のダウンロードおよびインストール | Microsoft ドキュメント
+description: Windows、macOS、そして Linux に対応する Microsoft SQL Operations Studio (プレビュー) のダウンロードおよびインストール
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -16,11 +16,11 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5bf4e79bc1f7092ebe95ff29079f3412306cf7b1
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="download-and-install-sql-operations-studio-preview"></a>ダウンロードして SQL Operations Studio (preview) のインストール
+# <a name="download-and-install-sql-operations-studio-preview"></a>SQL Operations Studio (プレビュー) のダウンロードおよびインストール
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] Windows、macOS、および Linux で動作します。
 
@@ -34,9 +34,9 @@ ms.lasthandoff: 04/08/2018
 
 最新のリリースに関する詳細は、次の [リリース ノート](release-notes.md) を参照してください。
 
-## <a name="get-sql-operations-studio-preview-for-windows"></a>Windows 用の SQL Operations Studio (preview) の取得します。
+## <a name="get-sql-operations-studio-preview-for-windows"></a>SQL Operations Studio (プレビュー) for Windows の取得
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] のこのリリースは標準的な Windows インストーラーと .zip を含んでいます。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]のこのリリースは標準的な Windows インストーラーと .zip を含んでいます。 
 
 **インストーラー**
 
