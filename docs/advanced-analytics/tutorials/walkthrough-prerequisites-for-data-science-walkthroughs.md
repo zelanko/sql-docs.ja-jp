@@ -1,27 +1,17 @@
 ---
 title: SQL Server と R のデータ サイエンスのチュートリアルの前提条件 |Microsoft ドキュメント
-ms.date: 11/10/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: c8f3c74bb38ea358de0342126038b51e4404657b
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: c97f45375464561e8080e5de24201c80fa213c7e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>SQL Server と R のデータ サイエンスのチュートリアルの前提条件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +25,7 @@ ms.lasthandoff: 04/04/2018
 インストールされている R のサポートを持つ SQL Server のインスタンスへのアクセスが必要です。 このチュートリアルが当初 SQL erver 2016 用に開発され、次の SQL Server のバージョンのいずれかを使用することができますので、2017年でテストします。 (がいくつかの相違は小さい RevoScaleR 関数でリリース。)
 
 + SQL Server 2017 の機械学習の Services (In-database)
-+ SQL Server 2016 R Services
++ SQL Server 2016 R サービス
 
 詳細については、次を参照してください。 [SQL Server 2017 Machine Learning Services のインストール](../install/sql-machine-learning-services-windows-install.md)または[SQL Server の 2016 R Services をインストール](../install/sql-r-services-windows-install.md)です。
 

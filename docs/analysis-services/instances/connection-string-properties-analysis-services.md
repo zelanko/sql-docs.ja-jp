@@ -1,51 +1,35 @@
 ---
-title: "接続文字列プロパティ (Analysis Services) |Microsoft ドキュメント"
-ms.custom: 
+title: 接続文字列プロパティ (Analysis Services) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9c2daf9234b44f7108339d9a743118373b9b42c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>接続文字列プロパティ (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-このトピックでは、接続文字列プロパティについて説明します。接続文字列プロパティは、いずれかのデザイナー ツールまたは管理ツールで設定できます。また、Analysis Services データに接続および照会するクライアント アプリケーションによって作成された接続文字に表示されることもあります。 そのため、使用できるプロパティのサブセットについてのみ説明します。 完全な一覧には、多くのサーバー プロパティおよびデータベース プロパティが含まれます。それらを使用すると、サーバーでインスタンスまたはデータベースを構成している方法に関係なく、特定のアプリケーションの接続をカスタマイズできます。  
+  このトピックでは、接続文字列プロパティについて説明します。接続文字列プロパティは、いずれかのデザイナー ツールまたは管理ツールで設定できます。また、Analysis Services データに接続および照会するクライアント アプリケーションによって作成された接続文字に表示されることもあります。 そのため、使用できるプロパティのサブセットについてのみ説明します。 完全な一覧には、多くのサーバー プロパティおよびデータベース プロパティが含まれます。それらを使用すると、サーバーでインスタンスまたはデータベースを構成している方法に関係なく、特定のアプリケーションの接続をカスタマイズできます。  
   
  アプリケーション コードでカスタム接続文字列を作成する開発者は、ADOMD.NET クライアントの API ドキュメントを参照して、詳しい一覧「 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
- このトピックで説明するプロパティは、Analysis Services クライアント ライブラリ、ADOMD.NET、AMO、および OLE DB Provider for Analysis Services で使用されます。 接続文字列プロパティの大部分は、3 つすべてのクライアント ライブラリで使用できます。 例外については、説明に記載しています。  
-  
- このトピックのセクションは次のとおりです。  
-  
- [よく使用される接続パラメーター](#bkmk_common)  
-  
- [認証およびセキュリティ](#bkmk_auth)  
-  
- [特別な用途のパラメーター](#bkmk_special)  
-  
- [予約済み](#bkmk_reserved)  
-  
- [接続文字列の例](#bkmk_examples)  
-  
- [Analysis Services で使用される接続文字列の形式](#bkmk_supportedstrings)  
-  
- [接続文字列の暗号化](#bkmk_encrypt)  
+ このトピックで説明するプロパティは、Analysis Services クライアント ライブラリ、ADOMD.NET、AMO、および OLE DB Provider for Analysis Services で使用されます。 接続文字列プロパティの大部分は、3 つすべてのクライアント ライブラリで使用できます。 例外については、説明に記載しています。
   
 > [!NOTE]  
 >  プロパティを設定する際に、誤って同じプロパティを 2 回設定した場合は、接続文字列内の最後のプロパティが使用されます。  

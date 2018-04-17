@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services のチュートリアル レッスン 7: 主要業績評価指標の作成 |Microsoft ドキュメント"
-description: "Analysis Services tutorial プロジェクトで主要業績評価指標を作成する方法について説明します。"
+title: 'Analysis Services のチュートリアル レッスン 7: 主要業績評価指標の作成 |Microsoft ドキュメント'
+description: Analysis Services tutorial プロジェクトで主要業績評価指標を作成する方法について説明します。
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: d4036297bdfc8d2c75061951ff329d20378a57a2
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 64159fee697d6437d685743f2a1e3d824fcaeced
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-key-performance-indicators"></a>主要業績評価指標の作成
 

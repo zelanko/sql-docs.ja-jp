@@ -1,28 +1,17 @@
 ---
 title: R モデルを配置し、SQL (チュートリアル) で使用 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 07/26/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: de43bd77f7a5537265fb7cb74a59e326010a9f71
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 8476381c60a63d85ce6d3cb0153578416856f8fb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>SQL で使用して、R モデルの配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -201,7 +190,7 @@ ms.lasthandoff: 04/04/2018
     >[!TIP]
     > SQL Server と R. の両方の優れた統合を提供する R ツールの Visual Studio (RTVS)SQL Server 接続 RODBC の併用の例については、この記事を参照してください: [SQL Server と R を使用します。](https://docs.microsoft.com/en-us/visualstudio/rtvs/sql-server)
 
-## <a name="summary"></a>概要
+## <a name="summary"></a>[概要]
 
 操作する方法を習得する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データをトレーニング済みの R モデルを永続化と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、このデータ セットに基づく新しいモデルを作成するには比較的簡単にする必要があります。 たとえば、これらの追加のモデルを作成してみてください可能性があります。
 

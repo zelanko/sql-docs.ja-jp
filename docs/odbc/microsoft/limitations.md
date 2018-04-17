@@ -1,30 +1,31 @@
 ---
-title: "制限事項 |Microsoft ドキュメント"
-ms.custom: 
+title: 制限事項 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - desktop database drivers [ODBC], limitations
 - ODBC desktop database drivers [ODBC], limitations
 ms.assetid: b8d71c2a-23c8-4e9b-b5f7-aca51c5a4721
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 784e99e2b0d3885956d31744261345169239dc10
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 65a3ea429a862c15bb9588ddf50b805062205766
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="limitations"></a>制限事項
 このセクションでは、に関して、次のトピックには、ODBC デスクトップ データベース ドライバーの制限事項について説明します。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 |関数|ステートメント|句、型、およびなど|  
 |---------------|----------------|-------------------------------|  
 |[集計関数](../../odbc/microsoft/aggregate-function-limitations.md)|[ALTER TABLE ステートメント](../../odbc/microsoft/alter-table-statement-limitations.md)|[列名](../../odbc/microsoft/column-name-limitations.md)|  
-|[スカラー関数](../../odbc/microsoft/scalar-function-limitations.md)|[CALL ステートメント](../../odbc/microsoft/call-statement-limitations.md)|[[データ型]](../../odbc/microsoft/data-type-limitations.md)|  
+|[スカラー関数](../../odbc/microsoft/scalar-function-limitations.md)|[CALL ステートメント](../../odbc/microsoft/call-statement-limitations.md)|[データ型](../../odbc/microsoft/data-type-limitations.md)|  
 |[集合関数](../../odbc/microsoft/set-functions-limitations.md)|[CREATE INDEX ステートメント](../../odbc/microsoft/create-index-statement-limitations.md)|[日付の算術演算子](../../odbc/microsoft/date-arithmetic-limitations.md)|  
 |[並べ替え](../../odbc/microsoft/sorting-limitations.md)|[テーブル作成ステートメント](../../odbc/microsoft/create-table-statement-limitations.md)|[識別子](../../odbc/microsoft/identifiers-limitations.md)|  
 |[CONVERT 関数](../../odbc/microsoft/convert-function-limitations.md)|[DELETE ステートメント](../../odbc/microsoft/delete-statement-limitations.md)|[Index Name](../../odbc/microsoft/index-name-limitations.md)|  

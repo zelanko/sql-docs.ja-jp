@@ -1,27 +1,19 @@
 ---
-title: Machine Learning のサービスの構成オプションの詳細 |Microsoft ドキュメント
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/31/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: SQL Server の Machine Learning のサービスの高度な構成 |Microsoft ドキュメント
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 6001d30a38b1362db8b259d29fffbfcc268f706c
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 5fc4e661f68a23ff2a954b832463eb60c7449057
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="advanced-configuration-options-for-machine-learning-services"></a>Machine Learning のサービスの高度な構成オプション
+# <a name="advanced-configuration-options-for-sql-server-machine-learning-services"></a>SQL Server の Machine Learning のサービスの高度な構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、外部スクリプトの実行時と SQL Server での機械学習に関連付けられているその他のサービスの構成を変更するのセットアップ後に実行できる変更について説明します。
@@ -99,7 +91,7 @@ SQL Server サービスの実行に必要なアクセス許可の詳細につい
 
 |**設定名**|**型**|**Description**|
 |----|----|----|
-|JOB\_CLEANUP\_ON\_EXIT|Integer |これは内部でのみ設定 – この値は変更しないでください。 </br></br>セッションが完了した後はかどうか外部のランタイム セッションごとに作成された一時作業フォルダーをクリーンアップにする必要がありますを指定します。 この設定はデバッグに便利です。 </br></br>サポートされる値は**0** (無効) または**1** (有効) です。 </br></br>既定値は 1、意味のログ ファイルは、終了時に削除されます。|
+|ジョブ\_クリーンアップ\_ON\_終了|Integer |これは内部でのみ設定 – この値は変更しないでください。 </br></br>セッションが完了した後はかどうか外部のランタイム セッションごとに作成された一時作業フォルダーをクリーンアップにする必要がありますを指定します。 この設定はデバッグに便利です。 </br></br>サポートされる値は**0** (無効) または**1** (有効) です。 </br></br>既定値は 1、意味のログ ファイルは、終了時に削除されます。|
 |トレース\_レベル|Integer |デバッグの目的で、MSSQLLAUNCHPAD のトレースの詳細レベルを構成します。 これにより、LOG_DIRECTORY 設定で指定されたパス内のトレース ファイルが影響します。 </br></br>サポートされる値: **1** (エラー)、 **2** (パフォーマンス)、 **3** (警告)、 **4** (情報)。 </br></br>既定値は 1、出力警告のみを意味します。|
 
 すべての設定が、キーと値のペアの形をとり、各設定は個別の行に表示されます。 たとえば、トレース レベルを変更するには行を追加する`Default: TRACE_LEVEL=4`です。

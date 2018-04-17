@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services のチュートリアル レッスン 8 作成パースペクティブ |Microsoft ドキュメント"
-description: "Analysis Services tutorial プロジェクトでパースペクティブを作成する方法について説明します。"
+title: Analysis Services のチュートリアル レッスン 8 作成パースペクティブ |Microsoft ドキュメント
+description: Analysis Services tutorial プロジェクトでパースペクティブを作成する方法について説明します。
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 3b28d60cd5e1fc4050e72cd4ac56b2db882cbafa
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7b6d5dd474719f33d285ac04f1643f330a618a7a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-perspectives"></a>パースペクティブを作成する
 
@@ -51,7 +52,7 @@ ms.lasthandoff: 02/20/2018
   
 4.  すべてのテーブル選択*を除く* **DimCustomer**です。  
   
-    ![as-lesson8-perspectives](../tutorial-tabular-1400/media/as-lesson8-perspectives.png)
+    ![lesson8-パースペクティブとして](../tutorial-tabular-1400/media/as-lesson8-perspectives.png)
   
     後のレッスンではこのパースペクティブをテストするのに Excel の機能で分析を使用します。 Excel のピボット テーブル フィールド リストには、DimCustomer テーブルを除く各テーブルが含まれています。  
 

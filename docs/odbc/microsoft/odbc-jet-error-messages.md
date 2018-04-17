@@ -2,7 +2,7 @@
 title: ODBC Jet エラー メッセージ |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: f8d2a8f2-0316-42c4-bc34-5367661634ae
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 206ebbdc1dd8a121f3c41f95cd305de6f4ef3d10
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b62b26425c1e9126ea5d6ad5a3a4c3d944a5b79a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-jet-error-messages"></a>ODBC Jet エラー メッセージ
 データ ソースで発生したエラーの場合は、ODBC ドライバーは、ODBC ファイル ライブラリによって返されたエラー メッセージを返します。 ODBC ドライバーまたはドライバー マネージャーで発生したエラー、SQLSTATE と関連付けられたエラー メッセージがテキストに基づくドライバーを返します。  

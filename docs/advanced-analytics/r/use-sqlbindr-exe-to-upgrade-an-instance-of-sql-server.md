@@ -1,36 +1,28 @@
 ---
 title: Machine learning のコンポーネントを SQL Server で Microsoft Machine Learning のサーバーにバインド |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/15/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-applies_to:
-- SQL Server (starting with 2016 CTP3)
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: c82a1788f7c2c5cf4bca43c4fb03ff5c9eba0e28
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 3f0818d67bb866326786598f67bb2caac368dda6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bind-machine-learning-components-on-sql-server-to-microsoft-machine-learning-server"></a>Machine learning のコンポーネントを SQL Server で Microsoft Machine Learning のサーバーにバインドします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事のプロセス説明_バインディング_コンピューターをアップグレードする SQL Server で使用されるコンポーネントの学習に使用できます。 バインドするプロセスのリリースの Machine Learning Server に基づいて更新リズムにサーバーをロックする、SQL Server を使用するのではなくリリースおよびスケジュールを更新します。
+この記事のプロセス説明*バインディング*の SQL Server マシン ラーニング Services または Microsoft Machine Learning のサーバーに SQL Server R Services (In-database) インスタンスで R、Python のパッケージをアップグレードするために、高速なリリース パターン。 
 
-> [!IMPORTANT]
-> SQL Server 更新プログラムの一環としてアップグレードを取得する場合は、このアップグレード プロセスを使用する必要はありません。 新しいサービス パックまたはサービス リリースをインストールするときに、マシン学習コンポーネントは最新バージョンに常に自動的にアップグレードされます。 のみを使用して、_バインディング_SQL Server サービスのリリースによって提供されるよりも速いペースでコンポーネントをアップグレードする場合を処理します。
+バインディングの処理は、サービスの更新メカニズムを変更します。 バインド、せずに、サービス パックや累積更新プログラム (CU) をインストールする場合にのみ、R、Python のパッケージのバージョンが更新されます。 バインディングでは、新しいパッケージのバージョンは、CU リリース スケジュールとは無関係に、インスタンスに適用できます。
 
-場合は、いつで Machine Learning のサーバーのスケジュールでアップグレードを停止する必要があります_バインド解除_」の説明に従ってインスタンス[このセクションで](#bkmk_Unbind)と Machine Learning のサーバーをアンインストールします。
+バインディングでは、データベース エンジンのインスタンス、データベース エンジン インスタンスではなく自体の Machine Learning または R コンポーネントだけに影響します。 (In-database) インスタンスにのみ適用されます。 (スタンドアロン) のインストールは、スコープ内にない。
+
+場合は、SQL Server のサービスの機械学習のコンポーネントを戻す対象にいつでもすることができます_のバインドを解除_」の説明に従ってインスタンス[ここ](#bkmk_Unbind)と Machine Learning のサーバーをアンインストールします。
 
 **適用されます:** SQL Server 2016 の R Services、SQL Server 2017 機械学習のサービス
 

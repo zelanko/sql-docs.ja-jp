@@ -1,30 +1,31 @@
 ---
-title: "接続で、日付の書式を設定 |Microsoft ドキュメント"
-ms.custom: 
+title: 接続で、日付の書式を設定 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - date formats [ODBC]
 - ODBC driver for Oracle [ODBC], date formats
 ms.assetid: ba0d5123-db52-448b-8e19-b7647ce4b361
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: baf5590aca14faf6d71265743d68ada143b5fd16
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dde962f005ac64259d5c00656972e5a84f6c46b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-the-date-format-on-connection"></a>接続で、日付の書式を設定します。
 > [!IMPORTANT]  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  新しいバージョンの Microsoft ODBC Driver for Oracle では、Oracle の日付フィールドの日付形式は自動的に設定しません。 ドライバーが接続しているときに使用していた`ALTER SESSION SET NLS_DATE_FORMAT ='YYYY-MM-DD HH:MI:SS'`です。  
   
- 日付の書式を設定するに ALTER セッションの SET を呼び出すし、挿入を実行します。 例 :  
+ 日付の書式を設定するに ALTER セッションの SET を呼び出すし、挿入を実行します。 以下に例を示します。  
   
 ```  
 conn.Execute "ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD HH:MI:SS' "  

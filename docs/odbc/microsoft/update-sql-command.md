@@ -2,7 +2,7 @@
 title: SQL コマンドの更新プログラム - |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fb2e4d3e3010eaba53b36de383c3365d82db289
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c8c1189955ee62fd14484816358feffc38e002c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="update---sql-command"></a>更新プログラム - SQL コマンドします。
 新しい値では、テーブル内のレコードを更新します。  
@@ -50,7 +50,7 @@ SET Column_Name1 = eExpression1
  設定*Column_Name1*= *eExpression1*[、 *Column_Name2*= *eExpression2*  
  更新される列とその新しい値を指定します。 WHERE 句を省略した場合は、同じ値を持つ列のすべての行が更新されます。  
   
- ここで*FilterCondition1*[と &#124;です。または*FilterCondition2*...]  
+ ここで*FilterCondition1*[AND&#124;または*FilterCondition2*...]  
  新しい値で更新するレコードを指定します。  
   
  *FilterCondition*を新しい値で更新するレコードが満たす必要がある条件を指定します。 必要な場合、それらを AND で接続数のフィルター条件を含めることができますか、OR 演算子。 NOT 演算子を使用して、論理式の値を反転するまたは使用することができます**空**フィールドが空の確認に関するページ ()。  

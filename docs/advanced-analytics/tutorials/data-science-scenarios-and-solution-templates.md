@@ -1,26 +1,17 @@
 ---
-title: データ サイエンスのシナリオとソリューション テンプレート |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 08/22/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+title: データ サイエンスのシナリオとソリューション テンプレート (SQL Server の Machine Learning) |Microsoft ドキュメント
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: d7fb0e16b20089d9d84ef8df66c8b97cc254cda4
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d67fd15c44d188870989f2ad6498733c5901fb9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>データ サイエンスのシナリオとソリューション テンプレート
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +30,7 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="fraud-detection"></a>不正行為の検出
 
-[オンライン不正検出テンプレート (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
+[オンライン不正検出テンプレート (SQL Server R Services)](https://github.com/Microsoft/r-server-fraud-detection)
 
 **新機能:**不正な処理を検出する機能は、オンライン ビジネスにとって重要です。 チャージ バックの損失を減らすためには、企業は迅速に盗まれた支払い方法または資格情報を使用して作成されたトランザクションを識別する必要があります。 不正な取引が検出された場合、通常、それ以上の損失を防ぐために、できるだけ早く特定のアカウントをブロックする措置を取ります。 このシナリオでは、オンラインで購入トランザクションからのデータを使用して、可能性の高い不正行為を特定する方法を学習します。
 

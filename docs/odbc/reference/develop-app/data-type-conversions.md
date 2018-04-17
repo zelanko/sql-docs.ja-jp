@@ -1,15 +1,16 @@
 ---
-title: "データ型の変換 |Microsoft ドキュメント"
-ms.custom: 
+title: データ型の変換 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], conversions
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - converting data types [ODBC]
 - C data types [ODBC], conversions
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78edde90cc7103f87039bc1a357ea1d0357366a6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2af1af29f9fa9f4d43b5b56e9dfe55c8c67fcea8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-conversions"></a>データ型変換
 データに変換できる 1 つの型から別に 4 回のいずれかの: 転送するときにデータが 1 つのアプリケーションの変数から間 (C に C)、ステートメントのパラメーター (C から SQL へ) をアプリケーション変数にデータを送信するときに結果セット列のデータが返される場合アプリケーション変数 (SQL から C へ) とときにデータを転送 1 つのデータ ソースの列から (SQL to SQL) のもう 1 つです。  

@@ -1,15 +1,16 @@
 ---
-title: "Visual FoxPro コマンドと関数がサポートされていません |Microsoft ドキュメント"
-ms.custom: 
+title: Visual FoxPro コマンドと関数がサポートされていません |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], commands and functions
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85d11ebb5fd4245a7c6b5cf7c277e45d8df90011
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 37231b78815901678b1956d89e9bc3720ae1590d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>サポートされていない Visual FoxPro コマンドと関数 (Visual FoxPro ODBC ドライバー)
 次の表には、FoxPro コマンドとは、Visual FoxPro ODBC ドライバーではサポートされていませんが、Microsoft® Visual FoxPro® でサポートされている関数が一覧表示します。  
@@ -38,9 +39,9 @@ ms.lasthandoff: 12/21/2017
   
 ||||  
 |-|-|-|  
-|# #UNDEF を DEFINE.|#IF... #ENDIF プリプロセッサ ディレクティブ|#IFDEF &#124;です。#IFNDEF|  
-|#INCLUDE プリプロセッサ ディレクティブ|: スコープ解決演算子|! コマンド (実行 &#124; を参照してください。 コマンドを使用)|  
-|? &#124; ?? コマンド|??? コマンド|\ &#124;です。\\\ コマンド|  
+|# #UNDEF を DEFINE.|#IF... #ENDIF プリプロセッサ ディレクティブ|#IFDEF &AMP;#124; #IFNDEF|  
+|#INCLUDE プリプロセッサ ディレクティブ|: スコープ解決演算子|! コマンド (実行を参照してください&#124;! コマンドを使用)|  
+|? &#124; ?? コマンド|??? コマンド|\ &#124; \\\ コマンド|  
 |@ ...ボックス コマンド|@ ...クラスのコマンド|@ ...クリア コマンド|  
 |@ ...編集 - [編集] ボックスのコマンド|@ ...コマンドを入力します。|@ ...GET|  
 |@ ...メニュー コマンド|@ ...コマンド プロンプト|@ ...コマンドを言う|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 12/21/2017
 |システム メモリの変数を _BROWSER|アプリのコマンドをビルドします。|ビルドの EXE コマンド|  
 |ビルド プロジェクト コマンド|システム メモリの変数を _BUILDER||  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
@@ -242,7 +243,7 @@ ms.lasthandoff: 12/21/2017
 |接続コマンドの名前を変更します。|TABLE コマンドの名前を変更します。|コマンドからの復元します。|  
 |レポート コマンド|() 関数を再実行します。|RESTORE コマンドのウィンドウ|  
 |RESTORE コマンドのマクロ|RESTORE コマンドの画面|RGBSCHEME に関するページ () 関数|  
-|RESUME コマンド|RGB () 関数|実行 &#124; です。 コマンド|  
+|RESUME コマンド|RGB () 関数|実行&AMP;#124;! コマンド|  
 |RMDIR コマンド|行 () 関数||  
 |RUNSCRIPT コマンド|RDLEVEL に関するページ () 関数||  
   

@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services tutorial 補足のレッスン: 詳細行 |Microsoft ドキュメント"
-description: "Analysis Services チュートリアルでは詳細行の式を作成する方法について説明します。"
+title: 'Analysis Services tutorial 補足のレッスン: 詳細行 |Microsoft ドキュメント'
+description: Analysis Services チュートリアルでは詳細行の式を作成する方法について説明します。
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 7efcdc724792656a917b95892ed699bc57590ce7
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: bd138f17df94b94cbe51869b9e364bbd544509f2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supplemental-lesson---detail-rows"></a>補足のレッスンでは、詳細行
 

@@ -1,24 +1,17 @@
 ---
-title: 有効にするにまたは SQL Server のリモート パッケージの管理を無効にする |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 02/20/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: 有効にするにまたはリモートの SQL Server の Machine Learning の R パッケージの管理を無効にする |Microsoft ドキュメント
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 5b0039736102af09fe12e296c85cd57a83509a6b
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: fc51428a4e6bd214fee8c4889eb218f3664ba118
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>有効にするにまたは SQL Server のリモート パッケージの管理を無効にします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

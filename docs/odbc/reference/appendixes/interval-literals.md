@@ -1,31 +1,32 @@
 ---
-title: "間隔のリテラル |Microsoft ドキュメント"
-ms.custom: 
+title: 間隔のリテラル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - interval literals [ODBC]
 - interval data type [ODBC], literals
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ee22a6f808dd1b97d0d865229c78cbf26808fba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f119398650dc537ce553268c99ed34b0788b6601
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="interval-literals"></a>間隔のリテラル
 ODBC では、すべてのドライバーが、SQL_CHAR 型または SQL_VARCHAR データ型のすべての C interval データ型への変換をサポートする必要があります。 基になるデータ ソースが interval データ型をサポートしていない場合はただし、ドライバーをこれらの変換をサポートするために、正しい形式の SQL_CHAR フィールドの値を知る必要があります。 同様に、ODBC では、ドライバーは、どのような形式の文字のフィールドに格納されている間隔を知る必要があるために、型が SQL_CHAR、SQL_VARCHAR、またはに変換できる任意の ODBC C を使用する必要があります。 このセクションでは、ドライバーの作成者を使用するか、C interval データ型からの変換中に、SQL_CHAR フィールドを検証する必要がある間隔リテラルの構文について説明します。  

@@ -1,28 +1,22 @@
 ---
-title: Introducing revoscalepy |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 10/05/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: SQL Server の Machine Learning で revoscalepy Python パッケージの概要 |Microsoft ドキュメント
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: fc59cbc5a34e79a98a787dea34f5ff1440fbe8c3
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 450aa7cc002da9b42379330141f34ee33eedbde6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="introducing-revoscalepy"></a>Revoscalepy の概要
+# <a name="introducing-revoscalepy-in-sql-server-machine-learning"></a>SQL Server の Machine Learning で revoscalepy の概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-**revoscalepy**新しいライブラリが分散コンピューティングをサポートするために Microsoft によってリモート計算コンテキスト、および高パフォーマンス アルゴリズム Python の用意されています。
+**revoscalepy**新しい Python ライブラリは、分散コンピューティングをサポートするために Microsoft によってリモート計算コンテキスト、および高パフォーマンス アルゴリズム Python 開発者のため指定します。
 
 基にして、 **RevoScaleR** Microsoft R Server と SQL Server R Services と同じ機能を提供する目的で提供された r パッケージ。
 
@@ -53,7 +47,7 @@ Revoscalepy の最新バージョンを入手するには、SQL Server 2017 の 
 
 + [Python の revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)
 
-+ [Python の microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
++ [Python の Microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
 
 ### <a name="data-types-data-sources-and-compute-contexts"></a>データ型、データ ソース、および計算コンテキスト
 
@@ -163,7 +157,7 @@ SQL Server での Python コードを実行する必要がありますがイン�
 
 製品がリリースされたときに、これらの Api に関する完全なドキュメントは使用可能になります。 その間は、RevoScaleR または MicrosoftML ライブラリ内の対応する関数を参照していることをお勧めします。
 
-+ [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
++ [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler)です。
 + [MicrosoftML](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml)
 
 インポートして、モジュールを呼び出すことで、任意の Python 関数に関するヘルプを表示できる`help()`です。 たとえば、実行している`help(revoscalepy)`Python IDE から revoscalepy モジュールでの署名付きで、すべての関数の一覧を返します。

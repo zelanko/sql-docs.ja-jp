@@ -1,31 +1,32 @@
 ---
-title: "ODBC Driver for Oracle |Microsoft ドキュメント"
-ms.custom: 
+title: ODBC Driver for Oracle |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC]
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 70ae9b447f0f3bcc6e70060b2f46f994ef3ea773
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1745942fff2488fe97d2860f17fc7b5239ba3942
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-driver-for-oracle"></a>ODBC Driver for Oracle
 > [!IMPORTANT]  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  Oracle 用の ODBC ドライバーにより、アプリケーションを ODBC インターフェイスを通じて Oracle データベースでデータにアクセスします。 ドライバーがローカルの Oracle データベースにアクセスできるか、SQL を使用するネットワークと通信できる * Net です。 次の図では、このアプリケーションとドライバーのアーキテクチャについて説明します。  
   
- ![ODBC ドライバー用 Oracle アプリ &#47; ドライバーのアーキテクチャ](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
+ ![Oracle アプリケーション用の ODBC ドライバー&#47;ドライバーのアーキテクチャ](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
  ODBC Driver for Oracle は、API への準拠レベル 1 および SQL への準拠レベル コアに準拠します。 API への準拠レベル 2 とほとんどのコアと拡張 SQL への準拠レベル文法の一部の関数もサポートしています。 ドライバーは ODBC 2.5 に準拠し、32 ビット システムをサポートしています。 Oracle 7.3 x はサポートされている完全;Oracle8 には、サポートが制限されています。 For Oracle ODBC ドライバーには新しい Oracle8 データ型はサポートされません: Unicode データ型、Blob、Clob、具合 — もサポート Oracle の新規のリレーショナル オブジェクト モデルです。 サポートされるデータ型の詳細については、次を参照してください。 [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)このガイドでします。  
   

@@ -1,29 +1,17 @@
 ---
-title: 'レッスン 5: トレーニングおよび T-SQL を使用して、モデルを保存 |Microsoft ドキュメント'
-ms.custom: ''
-ms.date: 07/26/2016
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-- TSQL
-ms.author: heidist
+title: レッスン 5 のトレーニングと T-SQL を使用して、モデルを保存 |Microsoft ドキュメント
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: tutorial
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 7684ee7d8135b00a02cae6c1fdbe9c74da3a041c
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 4d8bedd65e150d94c6030ea6c9c9fc6483bdaafd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-5-train-and-save-a-model-using-t-sql"></a>レッスン 5: トレーニングおよび T-SQL を使用してモデルを保存します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -94,7 +82,7 @@ ms.lasthandoff: 04/04/2018
 
 2. ウォッチ、**メッセージ**のウィンドウ[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]r のパイプ、メッセージの**stdout**このが正しくありませんと同様に、ストリーム。 
 
-    "STDOUT message(s) from external script: Rows Read: 1193025, Total Rows Processed: 1193025, Total Chunk Time: 0.093 seconds"
+    "外部スクリプトからの STDOUT メッセージ: Rows Read: 1193025、合計行が処理: 1193025、チャンク時間の合計: 0.093 秒"
 
     また、個々 の関数に固有のメッセージを表示することも可能性があります。`rxLogit`変数を表示し、モデルの作成の一部として生成されたメトリックをテストします。
 

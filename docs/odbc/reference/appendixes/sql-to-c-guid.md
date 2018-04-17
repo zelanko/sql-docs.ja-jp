@@ -1,31 +1,32 @@
 ---
-title: "SQL には、c: GUID |Microsoft ドキュメント"
-ms.custom: 
+title: 'SQL には、c: GUID |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data from SQL to C types [ODBC], GUID
 - data conversions from SQL to C types [ODBC], guid
 - GUID data type [ODBC]
 ms.assetid: cf56c684-c261-4b89-994a-db14ab2241d6
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a33d7e2ada5aa13bbd2bf42f85a9aa7e4bbdc44b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0a0e4d11048f532f91cc4fc06f85f6c1e355d1d4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-guid"></a>SQL には、c: GUID
 GUID の ODBC SQL データ型の識別子です。  
@@ -36,13 +37,13 @@ GUID の ODBC SQL データ型の識別子です。
   
 |C 型識別子|テスト|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > バイトの長さを文字|data|36|n/a|  
+|SQL_C_CHAR|*BufferLength* > バイトの長さを文字|Data|36|n/a|  
 ||*BufferLength* < 37|未定義。|未定義。|22003|  
-|SQL_C_WCHAR|*BufferLength* > 文字長|data|36|n/a|  
+|SQL_C_WCHAR|*BufferLength* > 文字長|Data|36|n/a|  
 ||*BufferLength* < 37|未定義。|未定義。|22003|  
-|SQL_C_BINARY|データのバイト長\< =  *BufferLength*|data|バイト単位でデータの長さ|n/a|  
+|SQL_C_BINARY|データのバイト長\< =  *BufferLength*|Data|バイト単位でデータの長さ|n/a|  
 ||データのバイト長 > *BufferLength*|未定義。|未定義。|22003|  
-|SQL_C_GUID|[A] [なし]|data|16 [b]|n/a|  
+|SQL_C_GUID|[A] [なし]|Data|16 [b]|n/a|  
   
  [a] の値*BufferLength*この変換では無視されます。 ドライバーでのサイズ **TargetValuePtr* C データ型のサイズです。  
   

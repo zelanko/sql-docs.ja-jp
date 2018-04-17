@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services と SQL Server 拡張イベントの監視 |Microsoft ドキュメント"
-ms.custom: 
+title: Analysis Services と SQL Server 拡張イベントの監視 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - XEvents
@@ -18,20 +18,20 @@ f1_keywords:
 - Sql13.ssms.XeASNewEventSession.Targets.f1
 - Sql13.ssms.XeASNewEventSession.Advanced.f1
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
-caps.latest.revision: 
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: abe5ce23dfb6f16fcc8fb27f16918895f6a51650
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 273ee749ecdb35c2f69331898f643b914fd52360
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>SQL Server 拡張イベントを使用した Analysis Services の監視
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-拡張イベント (*xEvents*) は、わずかなシステム リソースを運用サーバーとテスト サーバーの両方の問題を診断するための理想的なツールに変える、軽量のトレースおよびパフォーマンス監視システムです。 また、拡張性が高く、詳細な構成が可能で、SQL Server 2016 では、新しい組み込みのツール サポートにより使用が簡単です。 SQL Server Management Studio で Analysis Services インスタンスに接続すると、SQL Server Profiler を使用するようにライブ トレースを構成、実行、および監視することができます。 優れたツールを追加することで、SQL Server Profiler から xEvent に置き換える合理性が高まり、データベース エンジンと Analysis Services ワークロードの問題を同等に診断できるようになります。  
+  拡張イベント (*xEvents*) は、わずかなシステム リソースを運用サーバーとテスト サーバーの両方の問題を診断するための理想的なツールに変える、軽量のトレースおよびパフォーマンス監視システムです。 また、拡張性が高く、詳細な構成が可能で、SQL Server 2016 では、新しい組み込みのツール サポートにより使用が簡単です。 SQL Server Management Studio で Analysis Services インスタンスに接続すると、SQL Server Profiler を使用するようにライブ トレースを構成、実行、および監視することができます。 優れたツールを追加することで、SQL Server Profiler から xEvent に置き換える合理性が高まり、データベース エンジンと Analysis Services ワークロードの問題を同等に診断できるようになります。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]だけでなく  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 拡張イベントのセッションも、以前のリリースでサポートされていたように XMLA スクリプトで構成することができます。  
   
@@ -40,11 +40,6 @@ ms.lasthandoff: 02/15/2018
 > [!NOTE]  
 >  SQL Server 2016 Analysis Services の xEvent の詳細については、この [早わかりビデオ](https://www.youtube.com/watch?v=ja2mOHWRVC0&index=1&list=PLv2BtOtLblH1YvzQ5YnjfQFr_oKEvMk19) を見るか、 [ブログ投稿](http://blogs.msdn.com/b/analysisservices/archive/2015/09/22/using-extended-events-with-sql-server-analysis-services-2016-cpt-2-3.aspx) を参照してください。  
   
-##  <a name="bkmk_top"></a> このトピックの内容  
-  
--   [Management Studio を使用して Analysis Services を構成する](#bkmk_ssas_extended_events_ssms)  
-  
--   [Analysis Services で拡張イベントを開始する XMLA スクリプト](#bkmk_script_start)  
   
 ##  <a name="bkmk_ssas_extended_events_ssms"></a> Management Studio を使用して Analysis Services を構成する  
  Management Studio は、表形式インスタンスと多次元インスタンスの両方で、ユーザーが開始した xEvent セッションを格納する新しい管理フォルダーを提供します。 一度に複数のセッションを実行することができます。 ただし、現在の実装では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 拡張イベント ユーザー インターフェイスが既存のセッションの更新または再生をサポートしていません。  
@@ -139,9 +134,6 @@ ms.lasthandoff: 02/15/2018
  *metadata_filename*  
  イベント メタデータを含むファイルの名前を指定します。 この名前には、トレースを繰り返し送信する場合にデータが上書きされないように、タイムスタンプを使用したサフィックスが付けられます。  
   
-||  
-|-|  
-|![トップにリンク バックに使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン")[このトピックの内容](#bkmk_top)|  
   
 ##  <a name="bkmk_script_stop"></a> Analysis Services で拡張イベントを停止する XMLA スクリプト  
  拡張イベントのトレース オブジェクトを停止するには、以下のような XMLA のオブジェクト削除スクリプト コマンドを使用して、そのオブジェクトを削除する必要があります。  
@@ -167,9 +159,6 @@ ms.lasthandoff: 02/15/2018
  *trace_id*  
  削除するトレースの一意識別子を定義します。  
   
-||  
-|-|  
-|![トップにリンク バックに使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン")[このトピックの内容](#bkmk_top)|  
   
 ## <a name="see-also"></a>参照  
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)  

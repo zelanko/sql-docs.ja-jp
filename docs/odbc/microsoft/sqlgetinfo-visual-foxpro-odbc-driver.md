@@ -2,7 +2,7 @@
 title: SQLGetInfo (Visual FoxPro ODBC ドライバー) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4c1d3356b91e3cb311c1dbf5ee7246bbb4baaa8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 136d3eabc7ef35105204ec3b0332f5a1df3a2a91
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="b"></a>B  
  SQL_BOOKMARK_PERSISTENCE SQL_BP_SCROLL を返します。  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
  SQL_COLUMN_ALIAS では、'Y' を返します。  
   
  SQL_CONCAT_NULL_BEHAVIOR SQL_CB_ を返します。  

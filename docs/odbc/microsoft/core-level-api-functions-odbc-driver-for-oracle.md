@@ -1,15 +1,16 @@
 ---
-title: "コア レベルの API 関数 (ODBC Driver for Oracle) |Microsoft ドキュメント"
-ms.custom: 
+title: コア レベルの API 関数 (ODBC Driver for Oracle) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], ODBC driver for Oracle
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - core level API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 118ea5f86f89e73eadd5c0bef79770b438d53f9b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3b04102f149c96792f769a84535783c235832e2b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>コア レベルの API 関数 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 |**SQLCancel**|Hstmt、ステートメント ハンドルでの処理をキャンセルします。 場合によっては、Oracle では実行中のステートメントの取り消しを使用することはできません。 つまり、Oracle には、その時点、ステートメントからの結果はすべて取り消されます for Oracle ODBC ドライバーで、プロセスが完了するまで実行中のステートメントが続行されます。|  
 |**SQLColAttributes**|結果セット内の列の記述子の情報を返します。 記述子の情報は、文字の文字列、32 ビットの記述子に依存する値、または整数値として返されます。|  
 |**SQLConnect**|データ ソースに接続します。 Oracle オペレーティング システムの認証を使用するには指定として「/」、 *szUID*パラメーターと""として、 *szAuthStr*パラメーター。|  
-|**SQLDescribeCol**|名前、型、有効桁数、小数点以下桁数、および指定された結果列の null 値許容属性を返します。 **注:****SQLDescribeCol** SQL_VARCHAR として計算列をレポートします。|  
+|**SQLDescribeCol**|名前、型、有効桁数、小数点以下桁数、および指定された結果列の null 値許容属性を返します。 **注:****SQLDescribeCol** SQL_VARCHAR として計算列をレポートします。  |  
 |**SQLDisconnect**|接続を閉じます。 共有環境の接続プールが有効になっているし、アプリケーションを呼び出すかどうか**SQLDisconnect**環境で、接続で接続が接続プールに返されますが使用可能でを使用して他のコンポーネント同じ共有環境です。|  
 |**SQLError**|最後のエラーについてのエラー状態や状態の情報を返します。 このドライバーは、スタックまたはを返すことのできるエラーの一覧、 *hstmt*、 *hdbc*、および*henv*方法に応じて、引数への呼び出し**SQLError**が行われます。 エラー キューは、各ステートメントの後にフラッシュされます。 通常、Oracle のエラー メッセージを取得、それ以外の場合空です。|  
 |**SQLExecDirect**|新しい、準備されていない SQL ステートメントを実行します。 ドライバーは、ステートメントにパラメーターが存在しない場合、変数の現在値、パラメーター マーカーを使用します。 テーブル、ビュー、またはフィールド名にスペースが含まれる場合を囲む名前背面に引用符記号。 たとえば、データベースには、という名前のテーブルが含まれています。 *My Table*とフィールドの*My Field*、識別子の各要素を囲む次のように。<br /><br /> 選択\`表\`です。 \`マイ Field1\`、です。\`表\`.\`マイ Field2\` FROM\`行をテーブル '|  

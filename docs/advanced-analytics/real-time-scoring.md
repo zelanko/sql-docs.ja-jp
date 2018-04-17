@@ -1,25 +1,17 @@
 ---
 title: リアルタイムのスコアリング |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 11/03/2017
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: f8473280725732f92d1156a65ea087677b3af170
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: eda95bf4cd16c5c38277e6d139c224f225c9b10a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="realtime-scoring"></a>リアルタイムのスコアリング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,7 +51,7 @@ RxPredict する方法の例は、スコア付けの使用を参照してくだ�
 + SQL Server R Services 2016、Microsoft R Server 9.1.0 に R Services のインスタンスのアップグレードまたはそれ以降
 + Machine Learning Server (スタンドアロン)
 
-SQL Server の機能を事前にスコア付けリアルタイムを有効にする必要があります。 これは、機能には、SQL Server に [ライブラリの CLR ベースのインストールが必要とするためです。
+SQL Server の機能を事前にスコア付けリアルタイムを有効にする必要があります。 これは、機能には、SQL Server に ライブラリの CLR ベースのインストールが必要とするためです。
 
 リアルタイムに関する情報、Microsoft R Server に基づく分散環境でスコアリングを参照してください、 [publishService](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)関数で使用できる、 [mrsDeploy パッケージ](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)、サポートします。R Server で実行されている web サービスを新しいスコアリング リアルタイムのモデルを公開します。
 

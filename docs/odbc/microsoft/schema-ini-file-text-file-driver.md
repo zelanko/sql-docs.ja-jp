@@ -1,30 +1,31 @@
 ---
-title: "Schema.ini ファイル (テキスト ファイル ドライバー) |Microsoft ドキュメント"
-ms.custom: 
+title: Schema.ini ファイル (テキスト ファイル ドライバー) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - schema.ini file [ODBC]
 - text file driver [ODBC], schema.ini file
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b71b742ff9c0833bd36deb256dda5169f2a51c7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 602582886c1eb02e34bad9127e5ab1e55a22a86b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini ファイル (テキスト ファイル ドライバー)
 テキストのドライバーを使用すると、スキーマ情報ファイルを使用してテキスト ファイルの形式が決まります。 スキーマ情報ファイルが常に Schema.ini という名前し、常にテキスト データ ソースと同じディレクトリ内に保持します。 スキーマ情報ファイルでは、ファイル、列の名前とデータ型情報、およびその他のいくつかのデータの特性の一般的な形式に関する情報を IISAM を提供します。 Schema.ini ファイルは、固定長データにアクセスするために必要では常にします。 文字列テーブルには、DateTime、通貨、または 10 進数データ、またはいつでも、テーブル内のデータの処理より詳細に制御することが含まれている場合、Schema.ini ファイルを使用する必要があります。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 |----------------------|------------------|---------------------------------|  
 |**タブ区切り**|ファイル内のフィールドは、タブで区切られます。|形式 TabDelimited を =|  
 |**CSV の区切り**|ファイル内のフィールドはコンマ (コンマ区切り値) で区切られます。|形式 = CSVDelimited|  
-|**カスタム区切り**|ファイル内のフィールドは、ダイアログ ボックスへの入力に選択する任意の文字で区切られます。 二重引用符 (") 以外のすべてが許可されている、空白を含むです。|形式区切り記号の = (*カスタム文字*)<br /><br /> - または -<br /><br /> 区切り記号が次のように指定します。<br /><br /> 形式で区切られたに関するページ () を =|  
+|**カスタム区切り**|ファイル内のフィールドは、ダイアログ ボックスへの入力に選択する任意の文字で区切られます。 二重引用符 (") 以外のすべてが許可されている、空白を含むです。|形式区切り記号の = (*カスタム文字*)<br /><br /> -または-<br /><br /> 区切り記号が次のように指定します。<br /><br /> 形式で区切られたに関するページ () を =|  
 |**固定長**|ファイル内のフィールドでは、固定長です。|形式 FixedLength を =|  
   
 ## <a name="specifying-the-fields"></a>フィールドの指定  
@@ -85,14 +86,14 @@ ColNameHeader=True
 MaxScanRows=0  
 ```  
   
- 次のエントリは、列番号を使用してテーブル内のフィールドを指定 (**Col***n*) 文字で区切られたファイルの省略可能なと固定長のファイルに必要なのオプションです。 例では、2 つのフィールド、10 文字 CustomerNumber テキスト フィールド、および 30 文字 CustomerName テキスト フィールド、Schema.ini のエントリを示しています。  
+ 次のエントリは、列番号を使用してテーブル内のフィールドを指定 (**Col * * * n*) 文字で区切られたファイルの省略可能なと固定長のファイルに必要なのオプションです。 例では、2 つのフィールド、10 文字 CustomerNumber テキスト フィールド、および 30 文字 CustomerName テキスト フィールド、Schema.ini のエントリを示しています。  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- 構文**Col**  *n* は。  
+ 構文 **Col * * * n*は。  
   
 ```  
   
@@ -100,13 +101,13 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>解説  
- 次の表の各部分の説明、 **Col**  *n* エントリです。  
+ 次の表の各部分の説明、**Col * * * n*エントリです。  
   
 |パラメーター|Description|  
 |---------------|-----------------|  
-|*ColumnName*|列のテキストの名前。 列名にスペースが含まれている場合は、二重引用符で囲む必要があります。|  
-|*型*|データ型は次のとおりです。<br /><br /> **Microsoft Jet データ型**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> 通貨<br /><br /> 単一<br /><br /> Double<br /><br /> DateTime<br /><br /> Text<br /><br /> メモ<br /><br /> **ODBC データ型**Char (テキストと同じ)<br /><br /> Float 型 (Double と同じ)<br /><br /> 整数 (短い形式と同じ)<br /><br /> LongChar (メモ型と同じ)<br /><br /> 日付*日付形式*|  
-|**Width**|リテラル文字列値`Width`です。 次の数が、列の幅を指定することを示します (文字で区切られたファイルの省略可能な固定長のファイルに必要)。|  
+|*[ColumnName]*|列のテキストの名前。 列名にスペースが含まれている場合は、二重引用符で囲む必要があります。|  
+|*type*|データ型は次のとおりです。<br /><br /> **Microsoft Jet データ型**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> 通貨<br /><br /> 単一<br /><br /> Double<br /><br /> DateTime<br /><br /> テキスト<br /><br /> メモ<br /><br /> **ODBC データ型**Char (テキストと同じ)<br /><br /> Float 型 (Double と同じ)<br /><br /> 整数 (短い形式と同じ)<br /><br /> LongChar (メモ型と同じ)<br /><br /> 日付*日付形式*|  
+|**幅**|リテラル文字列値`Width`です。 次の数が、列の幅を指定することを示します (文字で区切られたファイルの省略可能な固定長のファイルに必要)。|  
 |*#*|列の幅を指定する整数値 (必要な場合**幅**が指定されている)。|  
   
 ## <a name="selecting-a-character-set"></a>文字セットの選択  

@@ -1,31 +1,31 @@
 ---
-title: "IIS 8.0 で Analysis Services への HTTP アクセスの構成 |Microsoft ドキュメント"
-ms.custom: 
+title: IIS 8.0 で Analysis Services への HTTP アクセスの構成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5d2ac4e4346e51614787cabdf9eb6956a7c8012f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f178be3c4cdd74d0ea1a5aadbb4106a1bf7b285e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0 で Analysis Services への HTTP アクセスの構成します。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-この記事では、Analysis Services インスタンスにアクセスするために HTTP エンドポイントを設定する方法について説明します。 HTTP アクセスを有効にするには、MSMDPUMP.dll を構成します。MSMDPUMP.dll は、インターネット インフォメーション サービス (IIS) で実行され、クライアント アプリケーションと Analysis Services サーバーの間で双方向にデータをポンプする ISAPI 拡張機能です。 この方法は、BI ソリューションが次の機能を必要とする場合に、Analysis Services への接続の代わりに使用できます。  
+  この記事では、Analysis Services インスタンスにアクセスするために HTTP エンドポイントを設定する方法について説明します。 HTTP アクセスを有効にするには、MSMDPUMP.dll を構成します。MSMDPUMP.dll は、インターネット インフォメーション サービス (IIS) で実行され、クライアント アプリケーションと Analysis Services サーバーの間で双方向にデータをポンプする ISAPI 拡張機能です。 この方法は、BI ソリューションが次の機能を必要とする場合に、Analysis Services への接続の代わりに使用できます。  
   
 -   クライアント アクセスが、有効にできるポートに制限があるインターネット接続またはエクストラネット接続を経由して接続する。  
   
@@ -42,22 +42,6 @@ ms.lasthandoff: 02/15/2018
  HTTP アクセスの設定は、インストール後のタスクです。 HTTP アクセス用に構成する前に、Analysis Services をインストールする必要があります。 Analysis Services 管理者として、HTTP アクセスを可能にする前に、Windows アカウントへのアクセス許可を付与する必要があります。 また、それ以上サーバーを構成する前に、インストールを検証すること (完全に機能することの確認) をお勧めします。 HTTP アクセスを構成したら、HTTP エンドポイントと、TCP/IP 上のサーバーの通常のネットワーク名の両方を使用できます。 HTTP アクセスを設定しても、データ アクセスのためのその他のアプローチは無効にされません。  
   
  MSMDPUMP 構成で先に進む際、client-to-IIS と IIS-to-SSAS の 2 つの接続を考慮する必要があることに注意してください。 この記事の手順では、IIS と SSAS の間の接続を扱います。 IIS に接続するには、クライアント アプリケーションで追加の構成が必要になる場合があります。 SSL を使用するかどうか、バインドをどのように構成するかなどの決定については、この記事では扱いません。 IIS の詳細については、「 [Web サーバー (IIS) の概要](http://technet.microsoft.com/library/hh831725.aspx) 」を参照してください。  
-  
- このトピックのセクションは次のとおりです。  
-  
--   [概要](#bkmk_overview)  
-  
--   [前提条件](#bkmk_prereq)  
-  
--   [MSMDPUMP.dll の Web サーバー上のフォルダーへのコピー](#bkmk_copy)  
-  
--   [IIS へのアプリケーション プールと仮想ディレクトリの作成](#bkmk_appPool)  
-  
--   [IIS 認証の構成と拡張機能の追加](#bkmk_auth)  
-  
--   [MSMDPUMP.INI ファイルの編集による対象サーバーの設定](#bkmk_edit)  
-  
--   [構成のテスト](#bkmk_test)  
   
 ##  <a name="bkmk_overview"></a> 概要  
  MSMDPUMP は、IIS に読み込まれ、ローカルまたはリモートの Analysis Services インスタンスへのリダイレクトを提供する ISAPI 拡張機能です。 この ISAPI 拡張機能を構成して、Analysis Services インスタンスへの HTTP エンドポイントを作成します。  
@@ -129,9 +113,9 @@ ms.lasthandoff: 02/15/2018
   
 4.  Web サーバー上の \inetpub\wwwroot\OLAP フォルダーに、MSMDPUMP.DLL、MSMDPUMP.INI、および Resources フォルダーがあることを確認します。 フォルダー構造は次のようになります。  
   
-    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
+    -   \<ドライブ >: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<ドライブ >: \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
@@ -261,7 +245,7 @@ ms.lasthandoff: 02/15/2018
 |-|-|  
 |匿名|IIS の **[匿名認証資格情報の編集]** で指定されたアカウントをメンバーシップ一覧に追加します。 詳細については、「 [匿名認証](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication)」を参照してください。|  
 |Windows 認証|借用または委任によって Analysis Services データを要求する Windows ユーザー アカウントまたはグループ アカウントをメンバーシップ一覧に追加します。<br /><br /> Kerberos の制約付き委任を使用し、権限が必要なアカウントは、アクセスを要求する Windows ユーザー アカウントとグループ アカウントのみであることを想定しています。 アプリケーション プール ID のために必要な権限はありません。|  
-|[基本認証]|接続文字列で渡される Windows ユーザー アカウントまたはグループ アカウントをメンバーシップ一覧に追加します。<br /><br /> また、接続文字列で **EffectiveUserName** を使用して資格情報を渡している場合、アプリケーション プール ID には、Analysis Services インスタンスでの管理者権限が必要になります。 SSMS では、インスタンス &#124; を右クリックします。**プロパティ**&#124;です。**セキュリティ**&#124;です。**追加**です。 アプリケーション プール ID を入力します。 組み込みの既定の id を使用した場合、アカウント名を指定は**IIS apppool \defaultapppool**です。<br /><br /> ![AppPoolIdentity アカウントを入力する方法を示します](../../analysis-services/instances/media/ssas-httpaccess-iisapppoolidentity.png "AppPoolIdentity アカウントを入力する方法を示します")|  
+|[基本認証]|接続文字列で渡される Windows ユーザー アカウントまたはグループ アカウントをメンバーシップ一覧に追加します。<br /><br /> また、接続文字列で **EffectiveUserName** を使用して資格情報を渡している場合、アプリケーション プール ID には、Analysis Services インスタンスでの管理者権限が必要になります。 SSMS では、インスタンスを右クリックして&#124;**プロパティ** &#124; **セキュリティ** &#124; **追加**です。 アプリケーション プール ID を入力します。 組み込みの既定の id を使用した場合、アカウント名を指定は**IIS apppool \defaultapppool**です。<br /><br /> ![AppPoolIdentity アカウントを入力する方法を示します](../../analysis-services/instances/media/ssas-httpaccess-iisapppoolidentity.png "AppPoolIdentity アカウントを入力する方法を示します")|  
   
  アクセス許可の設定の詳細については、「 [オブジェクトと操作へのアクセスの承認 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)」を参照してください。  
   

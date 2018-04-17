@@ -1,35 +1,24 @@
 ---
 title: PowerShell (チュートリアル) を使用してデータを準備する |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 11/10/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: a9edd0ba1b6a52dd7ce6ed36b8528283b42d8914
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: af8c03d33fe0e0b42fe09fbe1b900166d50e25cd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>PowerShell (チュートリアル) を使用してデータを準備します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この時点で、インストールされている次のいずれかがある必要があります。
 
-+ SQL Server 2016 R Services
++ SQL Server 2016 R サービス
 + SQL Server 2017 マシン ラーニング サービス、有効な R 言語を使用
 
 このレッスンでは、データ、R パッケージ、および Github リポジトリから、このチュートリアルで使用される R スクリプトをダウンロードします。 利便性のため PowerShell スクリプトを使用してすべてのものをダウンロードすることができます。

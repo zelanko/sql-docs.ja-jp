@@ -1,27 +1,17 @@
 ---
 title: R と SQL データ型とデータ オブジェクト (SQL のクイック スタートで R) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 07/26/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-dev_langs:
-- R
-- SQL
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: b763fd5b7c5707d5cc4f49c1ec93b10a0b53c321
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: eeed977c3b942f0c23e4036f514018f54b966b70
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="r-and-sql-data-types-and-data-objects-r-in-sql-quickstart"></a>R と SQL データ型とデータ オブジェクト (SQL のクイック スタートで R)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -265,7 +255,7 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 + 日時列は R データ型 **POSIXct** を使用して処理されました。
 + "ProductSeries"として識別された text 列、**係数**、カテゴリ変数を意味します。 文字列値は、既定では因子として処理されます。 R に渡した文字列は、内部で使用するために整数に変換され、出力時に再度文字列にマップされます。
 
-### <a name="summary"></a>概要
+### <a name="summary"></a>[概要]
 
 でもこれらの簡単な例をからは、SQL を渡す入力としてクエリを実行するときに、データ変換の効果を確認する必要性を確認できます。 一部の SQL Server データ型が R でサポートされていないために、次のエラーを回避する方法を考慮してください。
 

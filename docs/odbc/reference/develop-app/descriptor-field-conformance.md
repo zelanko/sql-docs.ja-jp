@@ -1,15 +1,16 @@
 ---
-title: "記述子フィールドへの準拠 |Microsoft ドキュメント"
-ms.custom: 
+title: 記述子フィールドへの準拠 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - descriptor field conformance levels [ODBC]
@@ -17,21 +18,21 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd0e507985de3840d38e15753036cfd3899ebed3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ae086302a922824036d76f002eaf70c994a41fe2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="descriptor-field-conformance"></a>記述子フィールドへの準拠
 次の表では、各 ODBC 記述子のヘッダー フィールド、これは、定義済みの準拠レベルを示します。  
   
-|機能|準拠レベル|  
+|関数|準拠レベル|  
 |--------------|-----------------------|  
 |SQL_DESC_ALLOC_TYPE|コア|  
 |SQL_DESC_ARRAY_SIZE|コア|  
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  次の表では、各 ODBC 記述子レコード フィールドのこれは適切に定義された準拠レベルを示します。  
   
-|機能|準拠レベル|  
+|関数|準拠レベル|  
 |--------------|-----------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|[レベル 2]|  
 |SQL_DESC_BASE_COLUMN_NAME|コア|  

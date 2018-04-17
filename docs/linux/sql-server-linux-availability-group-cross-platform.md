@@ -1,6 +1,6 @@
 ---
-title: "Windows と Linux 上の可用性グループで常に SQL Server の構成 |Microsoft ドキュメント"
-description: "Windows と Linux 上のレプリカでは、SQL Server の可用性グループ構成します。"
+title: Windows と Linux 上の可用性グループで常に SQL Server の構成 |Microsoft ドキュメント
+description: Windows と Linux 上のレプリカでは、SQL Server の可用性グループ構成します。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -8,18 +8,19 @@ ms.date: 01/31/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: On Demand
-ms.openlocfilehash: 58eb51a5a3ad174e9cd785a7da3ecb482b2f9f28
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 280e0e9534fa29042e20c0a8a965abe62f0d2d51
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>構成する SQL Server Always On 可用性グループを Windows および Linux (プラットフォーム) 間に
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 02/13/2018
    >[!TIP]
    >Azure では、このソリューションを検証している場合は、同じ可用性セットのデータ センターで分離されていることを確認するに両方のサーバーを配置します。 
 
-   可用性グループを有効にします。
+   **可用性グループを有効にします。**
 
    手順については、次を参照してください。[を有効にすると、Always On 可用性グループ (SQL Server) を無効にする](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)です。
 

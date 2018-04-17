@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services のチュートリアル レッスン 10: パーティションの作成 |Microsoft ドキュメント"
-description: "Analysis Services tutorial プロジェクトのパーティションを作成する方法について説明します。"
+title: 'Analysis Services のチュートリアル レッスン 10: パーティションの作成 |Microsoft ドキュメント'
+description: Analysis Services tutorial プロジェクトのパーティションを作成する方法について説明します。
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 417bcbe36a49c44bcb5c8297968e6595d1ed3d91
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9f393e0f7100236df428dcceacf55444048fddef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-partitions"></a>パーティションの作成
 
@@ -114,7 +115,7 @@ ms.lasthandoff: 02/20/2018
   
 4.  作成した 5 つのパーティションのそれぞれについて、 **[処理]** 列のチェック ボックスをオンにし、 **[OK]**をクリックします。  
 
-    ![as-lesson10-process-partitions](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
+    ![として-lesson10--パーティションの処理](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
   
     権限借用の資格情報の入力を求められたら、Windows ユーザー名とレッスン 2 で指定したパスワードを入力します。  
   

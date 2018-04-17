@@ -1,7 +1,7 @@
 ---
 title: (SQL Server データ Migration Assistant) 評価レポートの統合 |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 09/07/2017
+ms.date: 04/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: ''
@@ -21,15 +21,15 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d0dd690a34cf2e4bf5df2d758f65da9b1123506
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f13ca7479abf67c63bdb2d1de53523737d975180
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="consolidate-assessment-reports-data-migration-assistant"></a>(データ Migration Assistant) 評価レポートを統合します。
 
-コマンドラインを使用して、データ Migration Assistant v2.1 で始まる無人モードでの移行の評価を実行することができます。 この機能では、大規模で、評価を実行することができます。  JSON または CSV ファイルの形式で評価の結果。
+コマンドラインを使用して、データ Migration Assistant v2.1 で始まる無人モードでの移行の評価を実行することができます。 この機能では、大規模で、評価を実行することができます。 JSON または CSV ファイルの形式で評価の結果。
 
 データ Migration Assistant のコマンド ライン ユーティリティの単一のインスタンス化で複数のデータベースを評価し、1 つの JSON ファイルにすべての評価結果をエクスポートすることができます。 または、一度に 1 つのデータベースを評価し、後で、SQL データベースにこれらの複数の JSON ファイルからの結果を統合することができます。
 
@@ -39,6 +39,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="import-assessment-results-into-a-sql-server-database"></a>評価の結果を SQL Server データベースにインポートします。
 
 これで使用できる PowerShell スクリプトを使用して[Github リポジトリ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant)評価の結果を JSON ファイルから SQL Server データベースにインポートします。
+
+> [!NOTE]
+> PowerShell v5 以上が必要です。
 
 スクリプトを実行するときに、次の情報を提供する必要があります。 
 
@@ -71,7 +74,7 @@ PowerShell スクリプトは、オブジェクトがまだ存在しない場合
 
 - **テーブル**-BreakingChangeWeighting
 
-  - すべての重大な変更についての参照テーブル。  ここでより正確な割合 (%) のアップグレードの成功の順位付けに影響を与える、独自の重み付け値を定義できます。
+  - すべての重大な変更についての参照テーブル。 ここでより正確な割合 (%) のアップグレードの成功の順位付けに影響を与える、独自の重み付け値を定義できます。
 
 - **ビュー** – UpgradeSuccessRanking\_と内部設置型
 
@@ -103,7 +106,7 @@ PowerShell スクリプトを作成、**処理**が処理される JSON ファ�
 
 ### <a name="viewing-the-results-in-sql-server"></a>SQL Server で結果を表示します。
 
-データが読み込まれた後は、SQL Server インスタンスに接続します。 以下が表示されます。
+データが読み込まれた後は、SQL Server インスタンスに接続します。 次の図に示すように、画面が表示されます。
 
 ![SQL Server データベースに統合されたレポート](../dma/media/DMAReportingDatabase.png)
 
@@ -115,13 +118,13 @@ Dbo します。・ レポートデータ ・ テーブルには、その生の�
 
 ![UpgradeSuccessRaning_OnPrem ビュー内のデータ](../dma/media/UpgradeSuccessRankingView.png)
 
-ここで別の互換性レベルのアップグレードが成功する可能性は、特定のデータベースの確認できます。  したがって、たとえば、HR データベースは 100、110、120 と 130 の互換性レベルに対して評価されたされます。  この評価では、データベースが現在実行している現在のバージョンからそれ以降のバージョンの SQL Server への移行に多大な労力が必要なを視覚的に確認できます。
+ここで確認できます、特定のデータベースを別の互換性レベルのアップグレードが成功する可能性は何です。 したがって、たとえば、HR データベースは 100、110、120 と 130 の互換性レベルに対して評価されたされます。 この評価では、データベースが現在実行している現在のバージョンからそれ以降のバージョンの SQL Server への移行に多大な労力が必要なを視覚的に確認できます。
 
-通常メトリック考慮すべきは、ある重大な変更の数は、特定のデータベースです。  前の例では、HR データベースに 100、110、120 と 130 の互換性レベルを 50% のアップグレードの成功率は確認できます。
+通常メトリック関心のあるは、ある重大な変更の数は、特定のデータベースです。 前の例では、100、110、120 と 130 の互換性レベルを 50% のアップグレードの成功率が HR データベースに含まれるがわかります。
 
 このメトリックは、dbo で重み付け値を変更することにより影響を受けることができます。BreakingChangeWeighting テーブルです。
 
-次の例では、HR データベースでの構文の問題の解決に必要な作業と見なされる高ために 3 の値を割り当てる**労力**です。 値 1 が割り当てられている構文の問題を修正するのに時間がかかるはありません、ため**FixTime**です。 値 2 が割り当てられているいくつかのコストを変更を行ったに関係できるようになります、ため**コスト**です。  これにより、ブレンド Changerank が 2 に変更します。
+次の例では、HR データベースでの構文の問題の解決に必要な作業と見なされる高ために 3 の値を割り当てる**労力**です。 値 1 が割り当てられている構文の問題を修正するのに時間がかかるはありません、ため**FixTime**です。 値 2 が割り当てられているいくつかのコストを変更を行ったに関係できるようになります、ため**コスト**です。 この値を使用して、ブレンド Changerank が 2 に変更します。
 
 > [!NOTE]
 > 1 ~ 5 のスケールでは、スコア付けします。  1 が不足していると、5 が高いです。 また、ChangeRank は、計算列です。
@@ -138,10 +141,8 @@ Azure SQL DB、および割合成功ランクに移行するデータベース�
 
 ![UpgradeSuccessRanking_Azure ビュー内のデータ](../dma/media/UpgradeSuccessRankingView_Azure.png)
 
-ここで興味のある MigrationBlocker 値。  100.00 では、Azure SQL Database v12 にデータベースを移動するための 100% の成功のランクがあることを意味します。
+ここで、興味のある MigrationBlocker 値。 100.00 では、Azure SQL Database v12 にデータベースを移動するための 100% の成功のランクがあることを意味します。
 
 このビューとの違いがない現在移行ブロック規則に対する重み付けを変更するためのオーバーライドです。
 
 Power BI を使用してこのデータをレポートする方法の詳細については、次を参照してください。 [PowerBI との統合、評価の報告](../dma/dma-powerbiassesreport.md)です。
-
-

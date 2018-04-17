@@ -1,15 +1,16 @@
 ---
-title: "環境ハンドルの割り当て |Microsoft ドキュメント"
-ms.custom: 
+title: 環境ハンドルの割り当て |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], environment handles
@@ -20,23 +21,23 @@ helpviewer_keywords:
 - connecting to data source [ODBC], environment handles
 - handles [ODBC], environment
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ac926c39f1390431b35b49b27e7302fe789ca4a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bcbfc5e9a8be2bf1fc543e9d458658a918e40b6d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="allocating-the-environment-handle"></a>環境ハンドルの割り当てください。
 ODBC アプリケーションの最初のタスクが、ドライバー マネージャーの読み込みにはこれを行う方法は、オペレーティング システムに依存します。 たとえば、Microsoft® Windows NT® Server または Windows 2000 Server、Windows NT ワークステーション/Windows 2000 Professional、または Microsoft Windows® 95/98 を実行するコンピューターで、アプリケーションかへのリンク ドライバー マネージャーのライブラリまたは呼び出し**LoadLibrary**ドライバー マネージャーの DLL を読み込めません。  
   
  次のタスクは、アプリケーションが他の ODBC 関数を呼び出す前に行う必要がありますは、ODBC 環境を初期化し、次のように、環境ハンドルを割り当てるには。  
   
-1.  アプリケーションでは、型 SQLHENV の変数を宣言します。 呼び出して**SQLAllocHandle**し、この変数と SQL_HANDLE_ENV オプションのアドレスを渡します。 例 :  
+1.  アプリケーションでは、型 SQLHENV の変数を宣言します。 呼び出して**SQLAllocHandle**し、この変数と SQL_HANDLE_ENV オプションのアドレスを渡します。 以下に例を示します。  
   
     ```  
     SQLHENV henv1;  

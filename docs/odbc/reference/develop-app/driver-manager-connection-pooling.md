@@ -1,15 +1,16 @@
 ---
-title: "ドライバー マネージャーの接続がプール |Microsoft ドキュメント"
-ms.custom: 
+title: ドライバー マネージャーの接続がプール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connection pooling [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], connection pooling
 - connecting to data source [ODBC], connection pooling
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2883c374768723eeff4100113873130eeea6da7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c18e4e09d620221541bea32dc80391a7e4b5ddd9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-manager-connection-pooling"></a>ドライバー マネージャーの接続プール
 接続プールを使用するたびに再確立する必要がない接続プールからの接続を使用するアプリケーションを有効にします。 接続が作成され、プールに格納されて、アプリケーションは、完全な接続プロセスを実行しないで、その接続を再利用できます。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/21/2017
  パフォーマンスの向上だけでなく、接続プールのアーキテクチャにより、環境とその関連付けられている接続を 1 つのプロセスで複数のコンポーネントで使用します。 これは、互いを認識せず、同じプロセス内のスタンドアロンのコンポーネントが相互にやり取りできることを意味します。 接続プール内の接続は、複数のコンポーネントで繰り返し使用できます。  
   
 > [!NOTE]  
->  接続プールは、ODBC 2 が発生している ODBC アプリケーションによって使用できます。*x*動作、アプリケーションが呼び出すことができますとならない限り*SQLSetEnvAttr*です。 アプリケーションがデータベースまたは変更するなどのデータベースのコンテキストを変更する SQL ステートメントを実行する必要がありますされません接続プールを使用する場合、 \<*データベース**名前*>、データ ソースによって使用されるカタログを変更します。  
+>  接続プールは、ODBC 2 が発生している ODBC アプリケーションによって使用できます。*x*動作、アプリケーションが呼び出すことができますとならない限り*SQLSetEnvAttr*です。 アプリケーションがデータベースまたは変更するなどのデータベースのコンテキストを変更する SQL ステートメントを実行する必要がありますされません接続プールを使用する場合、 \<*データベース * * 名前*>、によって使用されるカタログを変更する、データ ソースです。  
   
  ODBC ドライバー完全にスレッド セーフでは、接続が接続プールをサポートするスレッドの関係にはできません。 つまり、ドライバーはいつでも任意のスレッドで呼び出しを処理できるとは別のスレッドでの接続を使用して、3 番目のスレッドで切断する 1 つのスレッドで接続できます。  
   

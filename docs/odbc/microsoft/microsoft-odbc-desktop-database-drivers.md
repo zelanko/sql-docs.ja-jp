@@ -1,15 +1,16 @@
 ---
-title: "Microsoft ODBC のデスクトップ データベース ドライバー |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft ODBC のデスクトップ データベース ドライバー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], about Jet-based ODBC drivers
 - desktop database drivers [ODBC], about desktop database drivers
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0a57a4fca26e40a5c83d79f4a952e1c9ccbfa1cc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d1d35ce2ec2ebd37cf9718a85e07e27ec1348ca2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>デスクトップのデータベースの Microsoft ODBC ドライバー
 ODBC は、データベース アクセスの言語として構造化照会言語 (SQL) を使用する API です。 アプリケーションのソース コードに直接組み込まれている同じ ODBC ソース コードにさまざまなデータベース管理システム (Dbms) にアクセスできます。 Microsoft ODBC のデスクトップ データベース ドライバーと ODBC 対応アプリケーションのユーザーが開くには、クエリ、および ODBC インターフェイスを使用してデスクトップ データベースを更新します。  
@@ -43,7 +44,7 @@ ODBC は、データベース アクセスの言語として構造化照会言�
   
 -   DBASE  
   
--   Text  
+-   テキスト  
   
  参照してください[Visual FoxPro ODBC ドライバー](../../odbc/microsoft/visual-foxpro-odbc-driver.md)の Microsoft Visual FoxPro® ODBC Driver に関する詳細なドキュメントです。  
   

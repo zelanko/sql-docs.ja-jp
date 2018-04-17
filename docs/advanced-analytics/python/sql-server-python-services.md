@@ -1,25 +1,19 @@
 ---
-title: Machine Learning Python のサービス |Microsoft ドキュメント
-ms.date: 03/16/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+title: 学習の Python のサービスの SQL Server マシン |Microsoft ドキュメント
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 275eedc011367e51e97c6bddae03858cdda932ee
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: b8ef234b0e8c09e3d4be9488b7ac628c225e67f6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="machine-learning-services-with-python"></a>Machine Learning Python のサービス
+# <a name="sql-server-machine-learning-services-with-python"></a>SQL Server コンピューターの Python のサービスの学習
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Python は、優れた柔軟性とさまざまな機械学習タスクの機能を提供する言語です。 Python のオープン ソース ライブラリには、カスタマイズ可能なニューラル ネットワークでは、いくつかのプラットフォームおよび自然言語処理のための一般的なライブラリが含まれます。 ここで、この広く使用されている言語は、SQL Server 2017 機械学習でサポートされます。

@@ -1,15 +1,16 @@
 ---
-title: "宣言アプリケーション &#39; s ODBC のバージョン |Microsoft ドキュメント"
-ms.custom: 
+title: アプリケーションを宣言する&#39;s ODBC のバージョン |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - declaring ODBC version [ODBC]
@@ -19,18 +20,18 @@ helpviewer_keywords:
 - connecting to data source [ODBC], declaring ODBC version
 - version declaration [ODBC]
 ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c021fb123e0a8cf861fa91fe78d3882ba16111e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2753c4b75f92c2ca48e3e87b25f8c92124ddd4c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="declaring-the-application39s-odbc-version"></a>宣言アプリケーション &#39; s ODBC のバージョン
+# <a name="declaring-the-application39s-odbc-version"></a>アプリケーションを宣言する&#39;s ODBC のバージョン
 アプリケーションにより、接続を割り当てる前にまた環境属性を設定する必要があります。 この属性は、アプリケーションが、ODBC 2 を準拠していることを示しています。*x*または ODBC 3 *。x*仕様、次の項目を使用する場合。  
   
 -   **SQLSTATEs**です。 多くの SQLSTATE 値は、ODBC 2 で異なります。*x*および ODBC 3 *。x*です。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/21/2017
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   *CatalogName***SQLTables 引数**です。 ODBC 2 です。*x*中のワイルドカード文字 (「%」および「_」)、 *CatalogName*引数はリテラル扱われます。 ODBC 3 です。*x*、ワイルドカード文字として扱われます。 したがって、ODBC 2 に依存するアプリケーション。*x*仕様とワイルドカード文字をエスケープしませんにリテラルとして使用するときに使用これらにできません。 ODBC 3 に依存するアプリケーション。*x*仕様はまたはワイルドカード文字として使用して、エスケープする、およびリテラルとして使用します。 詳細については、次を参照してください。[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)です。  
+-   *CatalogName***SQLTables 引数**です。   ODBC 2 です。*x*中のワイルドカード文字 (「%」および「_」)、 *CatalogName*引数はリテラル扱われます。 ODBC 3 です。*x*、ワイルドカード文字として扱われます。 したがって、ODBC 2 に依存するアプリケーション。*x*仕様とワイルドカード文字をエスケープしませんにリテラルとして使用するときに使用これらにできません。 ODBC 3 に依存するアプリケーション。*x*仕様はまたはワイルドカード文字として使用して、エスケープする、およびリテラルとして使用します。 詳細については、次を参照してください。[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)です。  
   
  ODBC 3*.x*ドライバー マネージャーと ODBC 3*.x*ドライバーは、アプリケーションの書き込み先となる、ODBC 仕様のバージョンを確認し、適宜対応します。 たとえば、次のように、アプリケーション、ODBC 2 に従う場合です。*x*仕様と呼び出し**SQLExecute**呼び出す前に**SQLPrepare**、ODBC 3*.x*ドライバー マネージャーは、SQLSTATE S1010 (を返します関数のシーケンス エラー)。 アプリケーションが ODBC 3 に従う場合*.x*仕様、ドライバー マネージャーが含む SQLSTATE HY010 を返します (関数のシーケンス エラーです)。 詳細については、次を参照してください。[旧バージョンとの互換性と標準の順守](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)です。  
   

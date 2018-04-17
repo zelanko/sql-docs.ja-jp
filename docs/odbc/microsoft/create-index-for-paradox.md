@@ -1,30 +1,31 @@
 ---
-title: "Paradox のインデックスを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: Paradox のインデックスを作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CREATE INDEX [ODBC]
 - Paradox driver [ODBC], create index
 ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a64feb77cc0562635b5e432174c58503e459e8ba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef256444ea5fe613b92c6d504e9fb972325803ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-index-for-paradox"></a>Paradox のインデックスを作成します。
 ODBC Paradox ドライバーの CREATE INDEX ステートメントの構文です。  
@@ -51,7 +52,7 @@ ODBC Paradox ドライバーの CREATE INDEX ステートメントの構文で�
   
 -   *インデックス名*プライマリ インデックスの引数には、Paradox、必要に応じて、テーブルの基本名と同じである必要があります。  
   
- 場合、キーワード**UNIQUE**は省略すると、ODBC Paradox ドライバーは一意でないインデックスが作成されます。 これは、2 つの Paradox セカンダリ インデックス ファイルという名前で構成されます*テーブル名*です。X *nn* と*テーブル名*です。Y*nn*ここで、  *nn* テーブル内の列の数です。 非一意のインデックスは、次の制限が適用されます。  
+ 場合、キーワード**UNIQUE**は省略すると、ODBC Paradox ドライバーは一意でないインデックスが作成されます。 これは、2 つの Paradox セカンダリ インデックス ファイルという名前で構成されます*テーブル名*です。X*nn*と*テーブル名*です。Y*nn*ここで、 *nn*テーブル内の列の数です。 非一意のインデックスは、次の制限が適用されます。  
   
 -   テーブルの非一意のインデックスを作成することができます、前に、プライマリ インデックスがそのテーブルの存在する必要があります。  
   

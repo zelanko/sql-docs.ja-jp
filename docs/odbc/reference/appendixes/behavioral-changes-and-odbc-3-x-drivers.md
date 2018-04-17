@@ -1,31 +1,32 @@
 ---
-title: "動作の変更と ODBC 3.x ドライバー |Microsoft ドキュメント"
-ms.custom: 
+title: 動作の変更と ODBC 3.x ドライバー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - sql_attr_odbc_version [ODBC]
 - backward compatibility [ODBC], behavioral changes
 - compatibility [ODBC], behavioral changes
 ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc06520b8dcf2fe5686d041e1c48e50cf5555b79
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2fe50cf12ce72ad3da5f9f2cb1f180d5875ef875
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>動作の変更と ODBC 3.x ドライバー
 環境属性 ODBC 2 が発生する必要があるかどうかがドライバーにまたを示します。*x*動作または ODBC 3*.x*動作します。 また環境属性を設定する方法は、アプリケーションによって異なります。 ODBC 3*.x*アプリケーションを呼び出す必要があります**SQLSetEnvAttr**を呼び出すことが後に、この属性を設定する**SQLAllocHandle**環境ハンドルの割り当てに呼び出しの前に、**SQLAllocHandle**接続ハンドルを割り当てられません。 ドライバー マネージャーを含む SQLSTATE HY010 を返しますこれに失敗した場合 (関数のシーケンス エラー) 後者の呼び出しに**SQLAllocHandle**です。  

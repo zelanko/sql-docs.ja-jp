@@ -1,29 +1,17 @@
 ---
 title: R コードを使用して、transact-sql (SQL のクイック スタートで R) |Microsoft ドキュメント
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 08/20/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Active
-ms.openlocfilehash: 92c3b1aab8b1d9ceb4f301e0d53f0aa5a9ce495e
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: c11e2bba73cef8a8b6f59d5a92de22cddb19ccd9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>TRANSACT-SQL (SQL のクイック スタートで R) での R コードの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +34,7 @@ ms.lasthandoff: 04/04/2018
 既にインストールされている、次のいずれかの SQL Server のインスタンスへのアクセスが必要です。
 
 + SQL Server 2017 マシン ラーニング サービス、インストールされている R 言語を使用
-+ SQL Server 2016 R Services
++ SQL Server 2016 R サービス
 
 SQL Server のインスタンスは、Azure の仮想マシンまたは内部設置型にできます。 だけ、外部のスクリプト機能が無効である既定では、正常に動作させるための追加手順を実行する必要がありますので注意してください。
 

@@ -1,23 +1,17 @@
 ---
 title: SQL Server の機械学習のユーザー アカウント プールを変更する |Microsoft ドキュメント
-ms.date: 11/03/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 7c1efa87fef881a8b88b0967716ec062cf95e64f
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 77b84e3117b0a1366f3d0b5f9d74802d938bc86b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>SQL Server の機械学習のユーザー アカウント プールを変更します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +29,7 @@ ms.lasthandoff: 04/04/2018
 -   既定のインスタンスでは、グループ名は **SQLRUserGroup** です。 名前は、R、Python またはその両方を使用するかどうかは同じです。
 -   名前付きインスタンスでは、既定のグループ名にインスタンス名が付加されます: たとえば、 **SQLRUserGroupMyInstanceName**。
 
-既定では、ユーザー アカウント プールには 20 個のユーザー アカウントが含まれています。 ほとんどの場合、20 以上の機械学習タスクをサポートするために十分ながアカウントの数を変更することができます。
+既定では、ユーザー アカウント プールには 20 個のユーザー アカウントが含まれています。 ほとんどの場合、20 以上の機械学習タスクをサポートするために十分ながアカウントの数を変更することができます。 アカウントの最大数は 100 です。
 -  既定のインスタンスでは、個々のアカウントは **MSSQLSERVER01** ～ **MSSQLSERVER20** と命名されます。
 -   名前付きインスタンスの場合、個々のアカウントはインスタンス名に基づいて命名されます。たとえば、 **MyInstanceName01** ～ **MyInstanceName20**。
 
@@ -50,7 +44,7 @@ ms.lasthandoff: 04/04/2018
 1. SQL Server 構成マネージャーを開き、**[SQL Server のサービス]** をクリックします。
 2. SQL Server スタート パッド サービスをダブルクリックし、サービスが実行されている場合は、サービスを停止します。
 3.  **[サービス]** タブで、[開始モード] が [自動] に設定されていることを確認します。 スタート パッドが実行されていない場合、外部スクリプトを開始できません。
-4.  **[詳細設定]** タブをクリックし、必要であれば、**[外部ユーザーの数]** の値を編集します。 この設定で制御さまざまな SQL ユーザーの数ことができます外部スクリプト実行セッションを同時にします。 既定では 20 アカウントです。
+4.  **[詳細設定]** タブをクリックし、必要であれば、**[外部ユーザーの数]** の値を編集します。 この設定で制御さまざまな SQL ユーザーの数ことができます外部スクリプト実行セッションを同時にします。 既定では 20 アカウントです。 ユーザーの最大数は 100 です。
 5. パスワードを定期的に変更するポリシーが組織で実施されている場合は、オプションで、**[外部ユーザーのパスワードのリセット]** を _[はい]_ に設定できます。 これを行うと、ユーザー アカウントに対してスタート パッドが保持している暗号化パスワードが再生成されます。 詳しくは、「[パスワード ポリシーの実施](#bkmk_EnforcePolicy)」をご覧ください。
 6.  スタート パッド サービスを再起動します。
 

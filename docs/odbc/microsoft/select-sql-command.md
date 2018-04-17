@@ -2,7 +2,7 @@
 title: SQL コマンドの選択 - |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e7295a800b3cc84f6eb64f5dfa762573fe80b6b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9f300cfb998c0d35aa6c853774fc029445da1015
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="select---sql-command"></a>SQL コマンドを選択します。
 1 つまたは複数のテーブルからデータを取得します。  
@@ -54,7 +54,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 > [!NOTE]  
 >  A*サブクエリ*、次の引数で参照される、SELECT 内の SELECT は、かっこで囲む必要があります。 同じレベルに最大 2 つのサブクエリを持つことができます (入れ子になっていない) WHERE 句でします。 (引数の特定のセクションを参照してください)。サブクエリでは、複数の結合条件を含めることができます。  
   
- [すべて (&) #124 です。DISTINCT] [*エイリアス*]。*Select_Item* [AS *Column_Name*] [、[*エイリアス*]。*Select_Item* [AS *Column_Name*]...]  
+ [すべて&#124;DISTINCT]  [*エイリアス*]。*Select_Item* [AS *Column_Name*] [、[*エイリアス*]。*Select_Item* [AS *Column_Name*]...]  
  SELECT 句では、フィールド、定数、およびクエリの結果に表示される式を指定します。  
   
  既定は、クエリ結果内のすべての行すべて表示します。  
@@ -110,7 +110,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  *Local_Alias*で指定したテーブルの一時的な名前を指定*テーブル*です。 ローカルのエイリアスを指定する場合は、SELECT ステートメントでテーブル名の代わりにローカルのエイリアスを使用する必要があります。 ローカルのエイリアスでは、Visual FoxPro 環境は影響しません。  
   
- ここで*JoinCondition* [AND *JoinCondition* ...]   [と &#124;です。または*FilterCondition* [と &#124;です。または*FilterCondition* ...]  
+ ここで*JoinCondition* [AND *JoinCondition* ...]   [AND&#124;または*FilterCondition* [AND&#124;または*FilterCondition* ...]  
  Visual FoxPro、クエリの結果に特定のレコードだけを含めるように指示します。 複数のテーブルからデータを取得するために必要な場所です。  
   
  *JoinCondition* FROM 句でテーブルをリンクするフィールドを指定します。 クエリで複数のテーブルを含める場合、最初より後のすべてのテーブルの結合条件を指定する必要があります。  
@@ -159,7 +159,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  フィルター条件には、すべてが含まれている場合、フィールドは、そのレコードは、クエリの結果に追加する前に、サブクエリによって生成されたすべての値の比較条件を満たす必要があります。  
   
- **例 4** *FieldName 比較*任意 &#124;です。いくつか (*サブクエリ*)  
+ **例 4** *FieldName 比較*ANY &#124; SOME (*サブクエリ*)  
   
  `company < ANY ;`  
   
@@ -265,7 +265,7 @@ WHERE customer.cust_id NOT IN ;
     > [!NOTE]  
     >  プレース ホルダーは、それらを表すフィールドと同じ型である必要があります。 プレース ホルダーをする必要があります、フィールドが日付型の場合は、{//}。 フィールドが文字のフィールドの場合は、プレース ホルダーは、空の文字列をする必要があります ("") です。  
   
- ORDER BY *Order_Item* [ASC &#124;です。DESC] [、 *Order_Item* [ASC &#124;です。DESC]...]  
+ ORDER BY *Order_Item* [ASC &#124; DESC] [、 *Order_Item* [ASC &#124; DESC]...]  
  1 つまたは複数の列のデータをに基づいて、クエリの結果を並べ替える。 各*Order_Item*クエリ結果内の列に対応して、次のいずれかになります。  
   
 -   テーブルのフィールドに、FROM (サブクエリ) ではなくメイン SELECT 句で select 項目になっています。  

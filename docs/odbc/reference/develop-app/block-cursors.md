@@ -1,31 +1,32 @@
 ---
-title: "ブロック カーソル |Microsoft ドキュメント"
-ms.custom: 
+title: ブロック カーソル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cursors [ODBC], block
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb5e136741491e644a223eb4f9294179893121d2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fdda088594fcad53b1d53093e2ef4a39adb5cf75
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="block-cursors"></a>ブロック カーソル
 多くのアプリケーションでは、かなりのネットワーク経由でデータを取り込む時間が短縮されます。 この時間の部分は実際には、ネットワーク経由でデータを取り込むに費やされたし、1 行のデータを要求する、ドライバーによって行われた呼び出しなどの一部がネットワーク オーバーヘッドで消費されします。 アプリケーションにより効率的に使用する場合、後者の時間を短縮できます。*ブロック、*または*fat、* *カーソル、*を一度に 1 つ以上の行を返すことができます。  

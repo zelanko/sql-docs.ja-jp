@@ -2,7 +2,7 @@
 title: ALTER TABLE の SQL コマンド |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bf0849ee91170b09ab927363dafda28bff474c2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9897be4d0e594c82aa872f904d500bd1216d40f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE の SQL コマンド
 プログラムによって、テーブルの構造を変更します。  
@@ -83,7 +83,7 @@ ALTER TABLE TableName1
   
  *nFieldWidth*と*nPrecision* D、G、I、L、M、P、T、および Y を無視する型。 既定では、 *nPrecision*場合は 0 (数値) は、 *nPrecision*は、B、F、または N 型に含まれません。  
   
- NULL &#124;です。NOT NULL します。  
+ NULL &#124; NOT NULL  
  許可または、フィールドの値は null を防止します。  
   
  NULL を省略して NOT NULL、SET NULL の現在の設定は、フィールドで null 値を許容するかどうかを決定します。 ただし、NOT NULL しし、主キーまたは一意の句を含める省略 NULL、SET NULL の現在の設定は無視されフィールドではありません既定では NULL です。  

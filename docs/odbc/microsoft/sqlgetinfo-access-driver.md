@@ -1,30 +1,31 @@
 ---
-title: "SQLGetInfo (Access ドライバー) |Microsoft ドキュメント"
-ms.custom: 
+title: SQLGetInfo (Access ドライバー) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLGetInfo function [ODBC], Access Driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8d9d611167f332e4d84cb22a759acafae020343
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cbf53fe8d380e7d9a98bf5b8e2e7c2d95206f974
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (Access ドライバー)
 > [!NOTE]  
@@ -98,7 +99,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="sqldbmsver"></a>SQL_DBMS_VER  
   
-|ISAM|[バージョンのオプション]|バージョン番号の形式|  
+|ISAM|バージョン|バージョン番号の形式|  
 |----------|-------------|-------------------------------|  
 |Microsoft Access|2.0|02.00.0000|  
 ||3.0|03.00.0000|  
@@ -201,7 +202,7 @@ ms.lasthandoff: 12/21/2017
   
  [STDEV]  
   
- [STDEVP]  
+ STDEVP  
   
  文字列  
   
@@ -215,7 +216,7 @@ ms.lasthandoff: 12/21/2017
   
  UNSIGNEDBYTE  
   
- [VAR]  
+ VAR  
   
  VARBINARY  
   

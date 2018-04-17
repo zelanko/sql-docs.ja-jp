@@ -1,31 +1,32 @@
 ---
-title: "インターフェイスへの準拠レベル 1 |Microsoft ドキュメント"
-ms.custom: 
+title: インターフェイスへの準拠レベル 1 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
 - level 1 interface conformance levels [ODBC]
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3889b64da6484b7aac8adfb0b643467fc716e560
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: faae1bf56dd28f83fa3fec5c340bcf67c302def3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="level-1-interface-conformance"></a>レベル 1 インターフェイスへの準拠
 レベル 1 のインターフェイスへの準拠レベルには、コア インターフェイスへの準拠の機能レベルと、OLTP リレーショナル DBMS で通常利用できるトランザクションなどの追加機能が含まれています。 レベル 1 – インターフェイスに準拠するドライバーは、コア インターフェイスへの準拠レベルの機能に加えて、次の操作をアプリケーションを使用できます。  

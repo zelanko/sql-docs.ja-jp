@@ -8,11 +8,12 @@ ms.assetid: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: d153a2ca638c2ab70e147d22d5755e70ab5aba06
-ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: c32b715ac73fd69e63bad8487950ff1e4df003c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>データ ソースが SQL Server Analysis Services で 1400 の表形式モデルをサポート
 
@@ -70,7 +71,7 @@ Azure Analysis Services では、次を参照してください。 [Azure Analys
 |PostgreSQL データベース    | はい | いいえ
 |SAP HANA   | はい | いいえ
 |SAP Business Warehouse    | はい | いいえ
-|Sybase Database     | はい | いいえ
+|Sybase データベース     | はい | いいえ
 |||
 
 |ファイル  |  
@@ -88,7 +89,7 @@ Azure Analysis Services では、次を参照してください。 [Azure Analys
 |オンラインのやり取り     |
 |Saleforce オブジェクト    | 
 |Salesforce レポート     |
-|SharePoint Online List     |
+|SharePoint Online リスト     |
 |||
 
 |その他  |  

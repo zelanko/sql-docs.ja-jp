@@ -2,7 +2,7 @@
 title: スカラー関数の呼び出し |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e69cc7382c73aaedda31a902cc8ed8daff5cff8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 45ba78e4a7533691c6346dad131b9c3e3fefee73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scalar-function-calls"></a>スカラー関数の呼び出し
 スカラー関数は、各行の値を返します。 たとえば、絶対値スカラー関数は数値列を引数としてし、列の各値の絶対値を返します。 スカラー関数を呼び出すためのエスケープ シーケンスは、します。  
@@ -49,7 +49,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) – 1)} FROM Customers
   
  相互運用性を最大にするため、アプリケーションを使用する必要があります、**変換**スカラー関数、スカラー関数の出力が必要な型であるかどうかを確認します。 **変換**関数は、1 つの SQL データ型のデータを指定した SQL データ型に変換します。 構文、**変換**関数  
   
- **変換 (** *value_exp* **、** *data_type***)**  
+ **変換 (** *value_exp* **、** *data_type * * *)**  
   
  ここで*value_exp*列名、もう 1 つのスカラー関数、またはリテラルの値の結果と*data_type*キーワードと一致する、 **#define**によって使用される名前、定義されている、SQL データ型識別子[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)です。 たとえば、次の SQL ステートメントを使用して、**変換**ことを確認する関数の出力、 **CURDATE**関数は、タイムスタンプ列または文字データではなく、日付。  
   

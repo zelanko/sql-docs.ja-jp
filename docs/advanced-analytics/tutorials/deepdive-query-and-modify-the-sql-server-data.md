@@ -1,29 +1,17 @@
 ---
 title: SQL Server データ (SQL と R deep dive) クエリや変更 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 12/14/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-- SQL Server 2017
-dev_langs:
-- R
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: f860eeaee25f76f4267f1bbee865ed74c12febd9
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 90b836cd09fd0c6f130ff65c531f6077a28c2014
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>クエリおよび SQL Server のデータ (SQL と R deep dive) の変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -133,7 +121,7 @@ ms.lasthandoff: 04/04/2018
     
     *Var 2: 2 つの要素レベルの性別: 男性女性*
     
-    *Var 3: state   51 factor levels: AK AL AR AZ CA ...VT WA WI WV WY*
+    *Var 3: 51 要素レベルの状態: AK AL AR AZ CA しています.VT WA WI WV WY*
     
     *Var 4: カード会員 2 要素のレベル: プリンシパル セカンダリ*
     

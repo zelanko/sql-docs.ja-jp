@@ -2,7 +2,7 @@
 title: DELETE - SQL コマンド |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a2c62dc7ec2da7c8df5683feab469ecd99a22c3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8c7f9e8124146bc2e1c9e966ab0794cba0aea2a0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="delete---sql-command"></a>SQL コマンドを削除します。
 削除対象のレコードをマークします。  
@@ -45,7 +45,7 @@ DELETE FROM [DatabaseName!]TableName
   
  *DatabaseName!* 包含データベースは、データ ソースで指定されたデータベースではない場合は、テーブルを含むデータベースの名前を指定します。 データベースが、データ ソースで指定されたデータベースではない場合は、テーブルを含むデータベースの名前を含める必要があります。 データベース名の後に感嘆符 (!) 区切り記号は、テーブル名の前にあります。  
   
- ここで*FilterCondition1*[と &#124;です。または*FilterCondition2*...]  
+ ここで*FilterCondition1*[AND&#124;または*FilterCondition2*...]  
  Visual FoxPro が特定のレコードの削除だけをマークすることを指定します。  
   
  *FilterCondition*レコードが削除用のマークを満たす必要がある条件を指定します。 AND で接続すること、必要な数のフィルター条件を含めることができますか、OR 演算子。 NOT 演算子を使用して、論理式の値を反転するまたは使用することができます**空**フィールドが空の確認に関するページ ()。  

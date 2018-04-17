@@ -1,28 +1,17 @@
 ---
-title: '手順 5: トレーニングおよび T-SQL を使用して、Python モデルを保存 |Microsoft ドキュメント'
-ms.custom: ''
-ms.date: 10/17/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+title: 手順 5 のトレーニングと T-SQL を使用して、Python モデルを保存 |Microsoft ドキュメント
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2017
-dev_langs:
-- Python
-- TSQL
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1511be6615805e7842ace3e0065591c41f3b40eb
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 173df47b5862a892efcd0c5e7064349daedf7efb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>手順 5: トレーニングおよび T-SQL を使用して、Python モデルを保存
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -131,7 +120,7 @@ ms.lasthandoff: 04/04/2018
 
 3. テーブルを開く*nyc\_taxi_models*です。 _model_列にシリアル化されたモデルを含む新しい行が 1 つ追加されます。
 
-    *linear_model* *0x800363736B6C6561726E2E6C696E6561....*
+    *linear_model* *0x800363736B6C6561726E2E6C696E6561 しています.*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 

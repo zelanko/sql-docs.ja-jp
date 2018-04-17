@@ -1,24 +1,17 @@
 ---
-title: SQL Server の Machine Learning のサービスの Dmv |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 07/31/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: SQL Server のデータ管理ビュー (Dmv) は機械学習のサービス |Microsoft ドキュメント
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 269b40244faca6bd76e1245f8771ed4bf26ae594
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e2180794ca96fc6387105745e346802725afe1dd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dmvs-for-sql-server-machine-learning-services"></a>SQL Server の Machine Learning のサービスの Dmv
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +21,7 @@ ms.lasthandoff: 04/04/2018
 拡張イベントについては、次を参照してください。[機械学習の拡張イベント](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)です。
 
 > [!TIP]
-> 製品チームは、machine learning のセッションおよびパッケージの使用率を監視に使用できるカスタムのレポートが用意されています。 詳細については、次を参照してください。 [Management Studio でカスタム レポートを使用する機械学習の監視](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)です。
+> モニターの機械学習のセッションとパッケージの使用率に組み込みのレポートを使用します。 詳細については、次を参照してください。 [Management Studio でカスタム レポートを使用する機械学習の監視](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)です。
 
 ## <a name="system-configuration-and-system-resources"></a>システム構成とシステム リソース
 

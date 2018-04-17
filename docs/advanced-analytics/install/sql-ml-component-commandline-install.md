@@ -1,26 +1,17 @@
 ---
-title: "コマンド プロンプトの SQL Server マシン ラーニング コンポーネントのインストール |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/15/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+title: コマンド プロンプトの SQL Server マシン ラーニング コンポーネントのインストール |Microsoft ドキュメント
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: c51d8299837f0eda02a07afe1ea4d34d3ecd5e31
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 1bc0cda53059b715a04d6e9a350e40d3a265d5e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>コマンドラインから machine learning の SQL Server コンポーネントをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,9 +48,9 @@ ms.lasthandoff: 03/21/2018
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | データベースのバージョンがインストールされます。 SQL Server 2017 Machine Learning Services (In-database) または SQL Server 2016 R Services (In-database)。  |
 | /FEATURES = SQL_INST_MR | SQL Server 2017 のみに適用されます。 これは、AdvancedAnalytics とペアします。 Microsoft R オープンおよび独自の R パッケージを含む、(In-database) R の機能をインストールします。 SQL Server 2016 の R Services の機能は R 専用で、そのリリースのパラメーターがないようにします。|
-| /FEATURES = SQL_INST_MPY | SQL Server 2017 のみに適用されます。 これは、AdvancedAnalytics とペアします。 Anaconda、独自の Python パッケージなど、(In-database) Python 機能をインストールします。 |
+| /機能 SQL_INST_MPY を = | SQL Server 2017 のみに適用されます。 これは、AdvancedAnalytics とペアします。 Anaconda、独自の Python パッケージなど、(In-database) Python 機能をインストールします。 |
 | /FEATURES = SQL_SHARED_MR | スタンドアロン バージョンの R の機能をインストールします。 SQL Server 2017 Machine Learning サーバー (スタンドアロン) または SQL Server 2016 R Server (スタンドアロン)。 スタンドアロン サーバーは、データベース エンジンのインスタンスにバインドされていない「共有機能」です。|
-| /FEATURES = SQL_SHARED_MPY | SQL Server 2017 のみに適用されます。 スタンドアロン バージョンの Python 機能をインストールします。 SQL Server 2017 Machine Learning サーバー (スタンドアロン)。 スタンドアロン サーバーは、データベース エンジンのインスタンスにバインドされていない「共有機能」です。|
+| /機能 SQL_SHARED_MPY を = | SQL Server 2017 のみに適用されます。 スタンドアロン バージョンの Python 機能をインストールします。 SQL Server 2017 Machine Learning サーバー (スタンドアロン)。 スタンドアロン サーバーは、データベース エンジンのインスタンスにバインドされていない「共有機能」です。|
 | /IACCEPTROPENLICENSETERMS  | オープン ソース R コンポーネントを使用するライセンス条項に同意を受け入れたことを示します。 |
 | /IACCEPTPYTHONLICENSETERMS | Python コンポーネントを使用するライセンス条項に同意を受け入れたことを示します。 |
 | /IACCEPTSQLSERVERLICENSETERMS | SQL Server を使用してライセンス条項に同意を受け入れたことを示します。|

@@ -1,15 +1,16 @@
 ---
-title: "Microsoft Access データの種類 |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft Access データの種類 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Access driver
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - access data types [ODBC]
 - data types [ODBC], Access driver
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bee1801eb581272762b2f80d25eeb64d0220a256
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8faac619846998c1be7bc0577761b94bf6dc27ba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access データ型
 次の表は、Microsoft Access データの型、テーブルを作成するために使用されるデータ型および ODBC SQL データ型を示します。  
@@ -71,7 +72,7 @@ ARBINARY|VARBINARY|SQL_VARBINARY|
 |BINARY、VARBINARY、および VARCHAR|ゼロの BINARY、VARBINARY、または VARCHAR 列を作成するか、未指定の長さが実際に 510 バイトの列を返します。|  
 |BYTE|フィールド サイズをバイトと同じ Microsoft アクセス番号のフィールドが符号付きでない場合でも、Microsoft Access ドライバーを使用する場合は負の数値は、フィールドに挿入できます。|  
 |CHAR、VARCHAR、LONGVARCHAR、|文字の文字列リテラルには、(1 ~ 255 の 10 進数) の任意の ANSI 文字を含めることができます。 2 つの連続する単一引用符 (") を使用して、1 つの単一引用符 (') を表します。<br /><br /> 文字データ型の列で特殊文字を使用するときに、文字データを渡すには、プロシージャを使用してください。|  
-|[DATE]|日付の値では、する、ODBC 標準の日付形式に従って区切られたか、または datetime の区切り記号 (「#」) で区切られた必要があります。 それ以外の場合、Microsoft Access を使用して、算術式として値を処理は、警告またはエラーは発生しません。<br /><br /> たとえば、日付として「1996 年 3 月 5 日」を表す必要がある {d ' 1996-03-05'} または #03/05/&#1996; です。それ以外の場合のみ 03/05/1993 が送信されると、Microsoft Access はこれを 1996年で割った値 5 で割ると 3 として評価されます。 この値が 0、整数へ丸めます、これには、使用される日付をゼロ日は、1899-12-31 をマップするためです。<br /><br /> パイプ文字 (&#124;) に戻るの引用符に囲まれている場合でも、日付の値では使用できません。|  
+|[DATE]|日付の値では、する、ODBC 標準の日付形式に従って区切られたか、または datetime の区切り記号 (「#」) で区切られた必要があります。 それ以外の場合、Microsoft Access を使用して、算術式として値を処理は、警告またはエラーは発生しません。<br /><br /> たとえば、日付として「1996 年 3 月 5 日」を表す必要がある {d ' 1996-03-05'} または #03/05/1996 # です。それ以外の場合のみ 03/05/1993 が送信されると、Microsoft Access はこれを 1996年で割った値 5 で割ると 3 として評価されます。 この値が 0、整数へ丸めます、これには、使用される日付をゼロ日は、1899-12-31 をマップするためです。<br /><br /> パイプ文字 (&#124;) 引用符で囲んだ戻る場合でも、日付の値では使用できません。|  
 |GUID|データ型が Microsoft Access 4.0 に制限されます。|  
 |NUMERIC|データ型が Microsoft Access 4.0 に制限されます。|  
   

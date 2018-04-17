@@ -1,32 +1,22 @@
 ---
-title: Python ライブラリ |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/30/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: SQL Server の Machine Learning で Python ライブラリおよびデータ タイプ |Microsoft ドキュメント
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 70156a6b4d443c54f9b6244e5491da63ce345198
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: f8dfa7f343a3a179b05b624a083238e08011c4a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="python-libraries-and-data-types"></a>Python ライブラリとデータ型
+# <a name="python-libraries-and-data-types"></a>Python のライブラリとデータ型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、次の製品に含まれている Python ライブラリについて説明します。
-
-+ SQL Server コンピューターのサービス (In-database) を学習
-+ マイクロソフトの機械学習のサーバー (スタンドアロン)
+この記事では、SQL Server マシン ラーニング Services (In-database) と (スタンドアロン) のインストールに含まれている Python ライブラリについて説明します。
 
 この記事では、サポートされていないデータ型も一覧表示し、リスト、データ型の Python と SQL Server の間でデータが渡されるときに暗黙的に実行することが変換します。
 

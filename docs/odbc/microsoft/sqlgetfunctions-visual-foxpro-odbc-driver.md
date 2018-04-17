@@ -2,7 +2,7 @@
 title: SQLGetFunctions (Visual FoxPro ODBC ドライバー) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: feae201ca72f241fe2ad18023d4686985203c89d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 46227b813a6798a2fac36e87a91e0e8dc8061a50
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
@@ -40,22 +40,22 @@ ms.lasthandoff: 12/21/2017
   
 |*関数*|Supported|  
 |----------------|---------------|  
-|SQL_API_SQLBROWSECONNECT|不可|  
-|SQL_API_SQLCOLUMNPRIVELEGES|不可|  
-|SQL_API_SQLDATASOURCES|可|  
-|SQL_API_SQLDESCRIBEPARAM|不可|  
-|SQL_API_SQLDRIVERS|可|  
-|SQL_API_SQLEXTENDEDFETCH|可|  
-|SQL_API_SQLFOREIGNKEYS|不可|  
-|SQL_API_SQLMORERESULTS|可|  
-|SQL_API_SQLNATIVESQL|不可|  
-|SQL_API_SQLNUMPARAMS|可|  
-|SQL_API_SQLPARAMOPTIONS|可|  
-|SQL_API_SQLPRIMARYKEYS|可|  
-|SQL_API_SQLPROCEDURECOLUMNS|不可|  
-|SQL_API_SQLPROCEDURES|不可|  
-|SQL_API_SQLSETPOS|可|  
-|SQL_API_SQLSETSCROLLOPTIONS|可|  
-|SQL_API_SQLTABLEPRIVILEGES|不可|  
+|SQL_API_SQLBROWSECONNECT|いいえ|  
+|SQL_API_SQLCOLUMNPRIVELEGES|いいえ|  
+|SQL_API_SQLDATASOURCES|はい|  
+|SQL_API_SQLDESCRIBEPARAM|いいえ|  
+|SQL_API_SQLDRIVERS|はい|  
+|SQL_API_SQLEXTENDEDFETCH|はい|  
+|SQL_API_SQLFOREIGNKEYS|いいえ|  
+|SQL_API_SQLMORERESULTS|はい|  
+|SQL_API_SQLNATIVESQL|いいえ|  
+|SQL_API_SQLNUMPARAMS|はい|  
+|SQL_API_SQLPARAMOPTIONS|はい|  
+|SQL_API_SQLPRIMARYKEYS|はい|  
+|SQL_API_SQLPROCEDURECOLUMNS|いいえ|  
+|SQL_API_SQLPROCEDURES|いいえ|  
+|SQL_API_SQLSETPOS|はい|  
+|SQL_API_SQLSETSCROLLOPTIONS|はい|  
+|SQL_API_SQLTABLEPRIVILEGES|いいえ|  
   
  詳細については、次を参照してください。 [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md)で、 *ODBC プログラマ リファレンス*です。

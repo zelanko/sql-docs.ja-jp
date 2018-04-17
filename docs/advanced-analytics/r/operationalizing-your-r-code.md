@@ -1,25 +1,17 @@
 ---
-title: R コード (Machine Learning サービス) を使用できるように |Microsoft ドキュメント
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/26/2016
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: SQL Server の Machine Learning のサービスでの R コードを使用できるように |Microsoft ドキュメント
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 460605c8cd9040cbf9586ab91227c5e09ec526cf
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: f5fa7806ad70c37c7d51c5ae2cc9606191560e58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>R コード (Machine Learning サービス) を使用できるように
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +22,7 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="get-started-with-r-code-in-sql-server"></a>SQL Server での R コードを概要します。
 
-従来、マシン学習ソリューションの統合が意図したものでパフォーマンスとの統合をサポートするために広範な再コーディングします。 ただし、実稼働環境への R、Python コードが、SQL Server でコードを実行できるため、Microsoft Machine Learning サービスにはるかに簡単に移動を使用して呼び出すストアド プロシージャです。 使い慣れたツールを使用して続行でき、R 開発環境をインストールする必要はありません。 
+従来、マシン学習ソリューションの統合が意図したものでパフォーマンスとの統合をサポートするために広範な再コーディングします。 ただし、実稼働環境への R、Python コードが、SQL Server でコードを実行できるため、SQL Server の Machine Learning services、はるかに簡単に移動を使用して呼び出すストアド プロシージャです。 使い慣れたツールを使用して続行でき、R 開発環境をインストールする必要はありません。 
 
 基本的な構文の詳細についてを参照してください。
 

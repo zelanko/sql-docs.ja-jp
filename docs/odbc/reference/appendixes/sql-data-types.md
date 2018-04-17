@@ -1,31 +1,32 @@
 ---
-title: "SQL データ型 |Microsoft ドキュメント"
-ms.custom: 
+title: SQL データ型 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
 - data types [ODBC], SQL data types
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d63ef11103b88f70233f269914c54425402b1def
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2c1bb7ad5ce2523f4ee4e5404608e1359b216178
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-data-types"></a>SQL データ型
 各 DBMS では、独自の SQL 型を定義します。 各 ODBC ドライバーでは、関連付けられた DBMS 定義 SQL データ型のみを公開します。 ODBC で定義された SQL 型識別子をドライバーがどのようにマップについて DBMS SQL 型し、を呼び出すことによって、ドライバーがドライバー固有の SQL 型識別子には独自に DBMS SQL 型をマップする方法が返されます**SQLGetTypeInfo**です。 ドライバーは、列とを呼び出すことでパラメーターのデータ型を記述するときにも、SQL データ型を返します**SQLColAttribute**、 **SQLColumns**、 **SQLDescribeCol**、**SQLDescribeParam**、 **SQLProcedureColumns**、および**SQLSpecialColumns**です。  
@@ -42,24 +43,24 @@ ms.lasthandoff: 12/21/2017
   
 |SQL 型識別子 [1]|一般的な SQL データ<br /><br /> [2] の種類|一般的な種類の説明|  
 |------------------------------|------------------------------------|------------------------------|  
-|SQL_CHAR|CHAR (*n*)|文字の固定文字列の長さの文字列 *n*です。|  
-|SQL_VARCHAR|VARCHAR (*n*)|文字列の最大長を持つ可変長文字の文字列 *n*です。|  
+|SQL_CHAR|CHAR (*n*)|文字の固定文字列の長さの文字列*n*です。|  
+|SQL_VARCHAR|VARCHAR (*n*)|文字列の最大長を持つ可変長文字の文字列*n*です。|  
 |SQL_LONGVARCHAR|LONG VARCHAR|可変長文字データ。 最大長は、データ ソースに依存します。[9]|  
 |SQL_WCHAR|WCHAR (*n*)|固定文字列長の Unicode 文字の文字列*n*|  
-|SQL_WVARCHAR|VARWCHAR (*n*)|文字列の最大長の Unicode 可変長文字の文字列*n*|  
+|SQL_WVARCHAR|VARWCHAR (*n*)|文字列の最大長を持つ可変長文字の文字列を Unicode *n*|  
 |SQL_WLONGVARCHAR|LONGWVARCHAR|Unicode の可変長の文字データです。 最大長はデータ ソースに依存しますです。|  
 |SQL_DECIMAL|10 進数 (*p*、*s*)|符号付き、正確な数値の有効桁数を持つには、少なくとも*p*有効桁数と小数点*s。* (最大有効桁数はドライバーで定義されます。)(1 < = *p* < = 15 です。*s* <= *p*) です [。4]|  
 |SQL_NUMERIC|数値 (*p*、*s*)|符号付き、正確な数値有効桁数を持つ*p*有効桁数と小数点*s* (1 < = *p* < = 15 です。*s* <= *p*) です [。4]|  
-|SQL_SMALLINT|SMALLINT|固定精度が 5 で数値および 0 をスケール (署名: –32,768 < =  *n*  < 符号なし、32,767 を =: 0 < =  *n*  < 65,535 を =) [3]。|  
-_INTEGER|INTEGER|固定精度が 10 で数値および 0 のスケール (署名: – 2 [31] < =  *n*  < = 2 [31] – 1、符号なし: 0 < =  *n*  < = 2 [32] – 1) [3]。|  
-|SQL_REAL|real|署名済み、バイナリ有効桁数 24 を持つ概数の数値の値 (0 または絶対値 10 [–38] 10[38]) にします。|  
+|SQL_SMALLINT|SMALLINT|固定精度が 5 で数値および 0 をスケール (署名: –32,768 < = *n* < 符号なし、32,767 を =: 0 < = *n* < 65,535 を =) [3]。|  
+_INTEGER|INTEGER|固定精度が 10 で数値および 0 のスケール (署名: – 2 [31] < = *n* < = 2 [31] – 1、符号なし: 0 < = *n* < = 2 [32] – 1) [3]。|  
+|SQL_REAL|REAL|署名済み、バイナリ有効桁数 24 を持つ概数の数値の値 (0 または絶対値 10 [–38] 10[38]) にします。|  
 |SQL_FLOAT|FLOAT (*p*)|署名済み、バイナリ有効桁数の概数の数値の値には、少なくとも*p*です。 (最大有効桁数はドライバーで定義されます。)[5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|署名済み、バイナリ有効桁数が 53 概数の数値の値 (0 または絶対値 10 [– 308] 10[308]) にします。|  
 |SQL_BIT|BIT|1 つのビットのバイナリ データ。[8]|  
-|SQL_TINYINT|TINYINT|固定精度が 3 で数値および 0 のスケール (署名: – 128 < =  *n*  < = 127 文字で、符号なし: 0 < =  *n*  < = 255) [3]。|  
-_BIGINT|bigint|正確な数値有効桁数 19 (署名) の場合または 20 (符号なし) の場合、0 を拡張 (署名: – 2 [63] < =  *n*  < = 2 [63] – の符号なし、1: 0 < =  *n*  < = 2 [64] – 1) [3]、[9] です。|  
-|SQL_BINARY|バイナリ (*n*)|固定長のバイナリ データ *n* [。9]|  
-|SQL_VARBINARY|VARBINARY (*n*)|最大長の可変長のバイナリ データ *n*です。 最大値は、ユーザーによって設定されます。[9]|  
+|SQL_TINYINT|TINYINT|固定精度が 3 で数値および 0 のスケール (署名: – 128 < = *n* < = 127 文字で、符号なし: 0 < = *n* < = 255) [3]。|  
+_BIGINT|bigint|正確な数値有効桁数 19 (署名) の場合または 20 (符号なし) の場合、0 を拡張 (署名: – 2 [63] < = *n* < = 2 [63] – の符号なし、1: 0 < = *n* < = 2 [64] – 1) [3]、[9] です。|  
+|SQL_BINARY|バイナリ (*n*)|固定長のバイナリ データ*n*[。9]|  
+|SQL_VARBINARY|VARBINARY (*n*)|最大長の可変長のバイナリ データ*n*です。 最大値は、ユーザーによって設定されます。[9]|  
 |SQL_LONGVARBINARY|長い VARBINARY|可変長バイナリ データ。 最大長は、データ ソースに依存します。[9]|  
 |SQL_TYPE_DATE [6]|[DATE]|年、月、および日のフィールド、グレゴリオ暦の規則に準拠します。 (を参照してください[グレゴリオ暦の制約](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)、後の「します。)|  
 |SQL_TYPE_TIME [6]|時間 (*p*)|時間、分、および 00 ~ 59 の分を 00 ~ 23 の有効な値の時間の有効な値と 00 に 61 の秒の有効な値で、2 番目のフィールドです。 有効桁数*p*秒の有効桁数を示します。|  

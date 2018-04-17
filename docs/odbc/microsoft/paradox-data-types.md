@@ -1,15 +1,16 @@
 ---
-title: "Paradox データ タイプ |Microsoft ドキュメント"
-ms.custom: 
+title: Paradox データ タイプ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Paradox driver
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - data types [ODBC], Paradox driver
 - Paradox driver [ODBC], data types
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40266f580e162ed021c069c1b583748906b3b336
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cee6fd6f7b13b10a59047964ba0d344ba13b8381
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="paradox-data-types"></a>Paradox データ型
 ODBC Paradox ドライバーは、Paradox データ型を ODBC SQL データ型にマップします。 次の表では、Paradox のすべてのデータ型を一覧表示して、ODBC SQL データ型にマップされますを表示します。  
@@ -64,6 +65,6 @@ ODBC Paradox ドライバーは、Paradox データ型を ODBC SQL データ型�
 |英数字|ゼロの英数字の列を作成するか、未指定の長さが実際に 255 バイトの列を返します。|  
 |BYTES|Paradox5 ドライバーとバイナリ列に NULL を挿入する場合は、0 に変更されます。|  
 |LONG|Paradox 5 で長い形式のデータ型の Paradox ドライバーでサポートされる負の値の最大値。*x*は-2 ^31 (-2147483648) 必要があります、ODBC のデータを長いマップから入力 SQL_INTEGER です。 長期間サポートされる最大の負の値が実際には-2 ^31 + 1 (-2147483647)。|  
-|timestamp|値が、Paradox ドライバーによって TIMESTAMP 列に挿入し、列から取得した後で、取得した値によって異なる場合が値が挿入される 1 秒程度で丸め処理を行うためです。|  
+|TIMESTAMP|値が、Paradox ドライバーによって TIMESTAMP 列に挿入し、列から取得した後で、取得した値によって異なる場合が値が挿入される 1 秒程度で丸め処理を行うためです。|  
   
  データ型に複数の制限事項は含まれて[データ型の制限事項](../../odbc/microsoft/data-type-limitations.md)です。

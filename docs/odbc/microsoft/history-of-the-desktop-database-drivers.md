@@ -1,36 +1,37 @@
 ---
-title: "デスクトップ データベース ドライバーの履歴 |Microsoft ドキュメント"
-ms.custom: 
+title: デスクトップ データベース ドライバーの履歴 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], history
 - ODBC desktop database drivers [ODBC], history
 - desktop database drivers [ODBC], history
 ms.assetid: b4a2aff8-bde7-4bd5-8580-bc50f27311c8
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dfa1dc1b533c9e40175e9a3d29dc872344bd664
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f753260ad83582e3b9dfa7f9901af72082a3abe9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>デスクトップ データベース ドライバーの履歴
 次の表は、デスクトップ データベース ドライバーのバージョン履歴を表示します。  
   
-|[バージョンのオプション]|リリース日|Description|  
+|バージョン|リリース日|Description|  
 |-------------|------------------|-----------------|  
 |1.0|年 8 月 1993|PageAhead ソフトウェアによって生成される SIMBA クエリ プロセッサを使用します。 SIMBA は、ODBC 呼び出しと SQL ステートメントを受信するには、Microsoft Jet インストール可能な ISAM 呼び出しにそれらを処理し、Microsoft Jet ISAM ディスパッチ レイヤーをロードし、インストール可能な ISAM に適したドライバーを呼び出すと呼ばれます。|  
 |2.0|1994 年 12 月|ODBC の機能を大幅に拡張する ODBC 2.0 と共に使用します。 バージョン 2.0 では、重大な変更は、Microsoft Jet データベース エンジンに SIMBA クエリ プロセッサが置き換えられたことでした。 Microsoft Jet データベース エンジンとデスクトップ データベース ドライバーは ISAM ドライバーのインストール可能な Microsoft Jet および Microsoft Access 技術とより緊密に統合します。 多くの機能強化は次のとおりです。<br /><br /> -スクロール可能なカーソルのネイティブ サポート。<br />-外部結合、および更新可能な異種結合、およびトランザクションのネイティブ サポート。<br />32 ビット バージョンの Microsoft Windows NT のドライバーです。|  

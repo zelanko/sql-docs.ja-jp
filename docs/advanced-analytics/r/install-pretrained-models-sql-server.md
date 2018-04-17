@@ -1,28 +1,22 @@
 ---
 title: 事前トレーニング済みの機械学習モデルを SQL Server のインストール |Microsoft ドキュメント
-ms.date: 03/14/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: c9895584e53f488c0db15ad533ba4a2230ae60c4
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: b21245bd74f59f4ad7fe2370ad3587053e756a03
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>事前トレーニング済みの機械学習の SQL Server 上のモデルをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、事前トレーニング済みモデルを SQL Server のインスタンスに追加済みの R Services または SQL Server の Machine Learning のサービスのインストール方法について説明します。 
+この記事では、事前トレーニング済みモデル (In-database) SQL Server のインスタンスに追加済みの R Services または SQL Server の Machine Learning のサービスがインストールされている方法について説明します。 
 
 センチメント分析またはイメージの特性付けなどのタスクを実行する必要があり、大規模なデータセットを取得するか、複雑なモデルをトレーニングするためのリソースは持っていないユーザーを支援する事前トレーニング済みのモデルが存在します。 Machine Learning サーバー チームが作成され、テキストおよびイメージの処理を効率的に作業を開始するため、これらのモデルをトレーニングします。 詳細については、次を参照してください。、[リソース](#bkmk_resources)この記事のセクションです。
 
@@ -195,8 +189,8 @@ SQL Server 2017 セットアップを使用して、マシン学習サーバー�
 各ネットワークの構成が次の参照の実装に基づいています。
 
 + ResNet-18
-+ ResNet-50
-+ ResNet-101
++ ResNet 50
++ ResNet 101
 + AlexNet
 
 これらの深層学習モデルでは、その実装方法で使用されるアルゴリズムの詳細については、トレーニング CNTK を使用して、これらの記事を参照してください。
