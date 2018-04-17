@@ -1,6 +1,6 @@
 ---
-title: ダウンロードし、インストールの Microsoft SQL Operations Studio (preview) |Microsoft ドキュメント
-description: ダウンロードおよびインストール Microsoft SQL Operations Studio (preview) 対応の Windows、macOS、または Linux
+title: Microsoft SQL Operations Studio (プレビュー) のダウンロードおよびインストール | Microsoft ドキュメント
+description: Windows、macOS、そして Linux に対応する Microsoft SQL Operations Studio (プレビュー) のダウンロードおよびインストール
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -16,13 +16,13 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5bf4e79bc1f7092ebe95ff29079f3412306cf7b1
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="download-and-install-sql-operations-studio-preview"></a>ダウンロードして SQL Operations Studio (preview) のインストール
+# <a name="download-and-install-sql-operations-studio-preview"></a>SQL Operations Studio (プレビュー) のダウンロードおよびインストール
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] Windows、macOS、および Linux で実行されます。
+[!INCLUDE[name-sos](../includes/name-sos.md)] Windows、macOS、および Linux で動作します。
 
 下載並安裝最新版本，*3 月公開預覽*:
 
@@ -32,11 +32,11 @@ ms.lasthandoff: 04/08/2018
 |macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=870839)|2018 年 3 月 28日 |0.27.3|
 |Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=870842)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=870841)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)|2018 年 3 月 28日 |0.27.3|
 
-最新のリリースに関する詳細については、次を参照してください。、[リリース ノート](release-notes.md)です。
+最新のリリースに関する詳細は、次の [リリース ノート](release-notes.md) を参照してください。
 
-## <a name="get-sql-operations-studio-preview-for-windows"></a>Windows 用の SQL Operations Studio (preview) の取得します。
+## <a name="get-sql-operations-studio-preview-for-windows"></a>SQL Operations Studio (プレビュー) for Windows の取得
 
-このリリースの[!INCLUDE[name-sos](../includes/name-sos-short.md)]標準的な Windows インストーラーのエクスペリエンスと .zip が含まれます。 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]のこのリリースは標準的な Windows インストーラーと .zip を含んでいます。 
 
 **インストーラー**
 
